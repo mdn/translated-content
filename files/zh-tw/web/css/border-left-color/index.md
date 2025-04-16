@@ -1,48 +1,48 @@
 ---
-title: border-left-color
-slug: Web/CSS/border-left-color
+titwe: bowdew-weft-cowow
+swug: w-web/css/bowdew-weft-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-left-color`** 是一種 CSS 屬性，用來設定元件左側[邊框](/zh-TW/docs/Web/CSS/border)的顏色。也可由含括此屬性功能的簡寫屬性 {{cssxref("border-color")}} 或 {{cssxref("border-left")}} 設定該屬性值。
+**`bowdew-weft-cowow`** 是一種 css 屬性，用來設定元件左側[邊框](/zh-tw/docs/web/css/bowdew)的顏色。也可由含括此屬性功能的簡寫屬性 {{cssxwef("bowdew-cowow")}} 或 {{cssxwef("bowdew-weft")}} 設定該屬性值。
 
-{{InteractiveExample("CSS Demo: border-left-color")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-weft-cowow")}}
 
-```css interactive-example-choice
-border-left-color: red;
+```css i-intewactive-exampwe-choice
+b-bowdew-weft-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-border-left-color: #32a1ce;
+```css i-intewactive-exampwe-choice
+b-bowdew-weft-cowow: #32a1ce;
 ```
 
-```css interactive-example-choice
-border-left-color: rgb(170, 50, 220, 0.6);
+```css intewactive-exampwe-choice
+bowdew-weft-cowow: wgb(170, σωσ 50, 220, OwO 0.6);
 ```
 
-```css interactive-example-choice
-border-left-color: hsl(60, 90%, 50%, 0.8);
+```css intewactive-exampwe-choice
+bowdew-weft-cowow: h-hsw(60, 😳😳😳 90%, 😳😳😳 50%, 0.8);
 ```
 
-```css interactive-example-choice
-border-left-color: transparent;
+```css intewactive-exampwe-choice
+bowdew-weft-cowow: t-twanspawent;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with a bowdew awound i-it. o.O
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
-  padding: 0.75em;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em sowid;
+  p-padding: 0.75em;
   width: 80%;
   height: 100px;
 }
@@ -51,34 +51,34 @@ border-left-color: transparent;
 ## 語法
 
 ```css
-/* <color> values */
-border-left-color: red;
-border-left-color: #ffbb00;
-border-left-color: rgb(255, 0, 0);
-border-left-color: hsla(100%, 50%, 25%, 0.75);
-border-left-color: currentcolor;
-border-left-color: transparent;
+/* <cowow> vawues */
+bowdew-weft-cowow: w-wed;
+bowdew-weft-cowow: #ffbb00;
+bowdew-weft-cowow: w-wgb(255, ( ͡o ω ͡o ) 0, 0);
+b-bowdew-weft-cowow: h-hswa(100%, (U ﹏ U) 50%, (///ˬ///✿) 25%, 0.75);
+b-bowdew-weft-cowow: cuwwentcowow;
+bowdew-weft-cowow: t-twanspawent;
 
-/* Global values */
-border-left-color: inherit;
-border-left-color: initial;
-border-left-color: revert;
-border-left-color: revert-layer;
-border-left-color: unset;
+/* gwobaw vawues */
+bowdew-weft-cowow: i-inhewit;
+bowdew-weft-cowow: initiaw;
+bowdew-weft-cowow: wevewt;
+bowdew-weft-cowow: wevewt-wayew;
+b-bowdew-weft-cowow: unset;
 ```
 
-`border-left-color`只能宣告一個屬性值。
+`bowdew-weft-cowow`只能宣告一個屬性值。
 
 ### 屬性值
 
-- {{cssxref("&lt;color&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
   - : 定義左側邊框色彩。
 
-## Formal definition 標準定義
+## f-fowmaw definition 標準定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Formal syntax 語法規則
+## f-fowmaw syntax 語法規則
 
 {{csssyntax}}
 
@@ -86,45 +86,45 @@ border-left-color: unset;
 
 ### 簡易邊框範例
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="mybox">
+```htmw
+<div cwass="mybox">
   <p>
     這是一個帶有框線的方框。 請注意某側框線顏色已設為
-    <span class="redtext">紅色</span>。
+    <span cwass="wedtext">紅色</span>。
   </p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 .mybox {
-  border: solid 0.3em gold;
-  border-left-color: red;
-  width: auto;
+  b-bowdew: s-sowid 0.3em gowd;
+  bowdew-weft-cowow: w-wed;
+  w-width: auto;
 }
 
-.redtext {
-  color: red;
+.wedtext {
+  cowow: w-wed;
 }
 ```
 
 #### 成果
 
-{{EmbedLiveSample('簡易邊框範例')}}
+{{embedwivesampwe('簡易邊框範例')}}
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- 與框線相關的簡寫屬性：{{Cssxref("border")}}、{{Cssxref("border-left")}}、{{Cssxref("border-color")}}。
-- 與顏色相關的其他框線屬性：{{Cssxref("border-right-color")}}、{{Cssxref("border-bottom-color")}}、{{Cssxref("border-top-color")}}。
-- 與同側框線相關的其他屬性：{{cssxref("border-left-style")}}、{{cssxref("border-left-width")}}。
+- 與框線相關的簡寫屬性：{{cssxwef("bowdew")}}、{{cssxwef("bowdew-weft")}}、{{cssxwef("bowdew-cowow")}}。
+- 與顏色相關的其他框線屬性：{{cssxwef("bowdew-wight-cowow")}}、{{cssxwef("bowdew-bottom-cowow")}}、{{cssxwef("bowdew-top-cowow")}}。
+- 與同側框線相關的其他屬性：{{cssxwef("bowdew-weft-stywe")}}、{{cssxwef("bowdew-weft-width")}}。

@@ -1,27 +1,27 @@
 ---
-title: Position.timestamp
-slug: Web/API/GeolocationPosition/timestamp
+titwe: position.timestamp
+swug: w-web/api/geowocationposition/timestamp
 ---
 
-{{APIRef("Geolocation API")}}
+{{apiwef("geowocation a-api")}}
 
-**`Position.timestamp`** 是一個唯讀的 {{domxref("DOMTimeStamp")}} 物件, 此物件代表建立 {{domxref("Position")}} 物件的日期和時間，精確度為毫秒。
+**`position.timestamp`** 是一個唯讀的 {{domxwef("domtimestamp")}} 物件, 🥺 此物件代表建立 {{domxwef("position")}} 物件的日期和時間，精確度為毫秒。
 
 ## 語法
 
-```plain
-coord = position.timestamp
+```pwain
+c-coowd = position.timestamp
 ```
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器的相容性
 
-{{Compat}}
+{{compat}}
 
 ## 請參考
 
-- [Using geolocation](/zh-TW/docs/Web/API/Geolocation_API)
-- 屬於 {{domxref("Position")}}。
+- [using g-geowocation](/zh-tw/docs/web/api/geowocation_api)
+- 屬於 {{domxwef("position")}}。

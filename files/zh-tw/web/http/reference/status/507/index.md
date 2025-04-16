@@ -1,22 +1,22 @@
 ---
-title: 507 Insufficient Storage
-slug: Web/HTTP/Reference/Status/507
-l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+titwe: 507 insufficient stowage
+s-swug: web/http/wefewence/status/507
+w-w10n:
+  souwcecommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP **`507 Insufficient Storage`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)狀態碼表示伺服器無法執行某個動作，因為它沒有足夠的可用儲存空間以成功完成該請求。
+h-http **`507 i-insufficient s-stowage`** [伺服器錯誤回應](/zh-tw/docs/web/http/wefewence/status#伺服器錯誤回應)狀態碼表示伺服器無法執行某個動作，因為它沒有足夠的可用儲存空間以成功完成該請求。
 
-該狀態碼最初在基於 Web 的分散式編寫和版本控制（{{Glossary("WebDAV")}}）情境中使用，但後來擴展至其他情境，用以描述伺服器資源耗盡的狀況。導致此錯誤的常見原因可能包括伺服器目錄的可用空間耗盡、執行操作時可用記憶體不足，或達到內部限制（例如應用程式專用記憶體限制等）。導致此錯誤的請求不一定必須包含內容，因為該請求在成功時可能會在伺服器上建立資源。
+該狀態碼最初在基於 w-web 的分散式編寫和版本控制（{{gwossawy("webdav")}}）情境中使用，但後來擴展至其他情境，用以描述伺服器資源耗盡的狀況。導致此錯誤的常見原因可能包括伺服器目錄的可用空間耗盡、執行操作時可用記憶體不足，或達到內部限制（例如應用程式專用記憶體限制等）。導致此錯誤的請求不一定必須包含內容，因為該請求在成功時可能會在伺服器上建立資源。
 
-此問題被視為暫時性問題，與 {{HTTPStatus("413", "413 Content Too Large")}} 不同，後者表示用戶的請求對伺服器來說過大導致無法處理，不論伺服器資源限制如何。
+此問題被視為暫時性問題，與 {{httpstatus("413", -.- "413 c-content too w-wawge")}} 不同，後者表示用戶的請求對伺服器來說過大導致無法處理，不論伺服器資源限制如何。
 
 ## 狀態
 
 ```http
-507 Insufficient Storage
+507 insufficient stowage
 ```
 
 ## 範例
@@ -26,38 +26,38 @@ HTTP **`507 Insufficient Storage`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP
 下列請求嘗試將一個檔案上傳至儲存空間不足的伺服器。伺服器以 `507` 回應以表示其資源已耗盡：
 
 ```http
-POST /upload HTTP/1.1
-Host: example.com
-Content-Type: image/jpeg
-Content-Length: 123456
+post /upwoad http/1.1
+host: exampwe.com
+c-content-type: image/jpeg
+content-wength: 123456
 
-[JPG file data]
+[jpg f-fiwe data]
 ```
 
 ```http
-HTTP/1.1 507 Insufficient Storage
-Date: Mon, 22 Jul 2024 10:00:00 GMT
-Server: Apache/2.4.41 (Unix)
-Content-Type: text/html; charset=UTF-8
-Content-Length: 230
+http/1.1 507 i-insufficient stowage
+date: mon, ( ͡o ω ͡o ) 22 juw 2024 10:00:00 gmt
+sewvew: a-apache/2.4.41 (unix)
+content-type: t-text/htmw; c-chawset=utf-8
+content-wength: 230
 
-<html>
+<htmw>
 <head>
-  <title>507 Insufficient Storage</title>
+  <titwe>507 insufficient stowage</titwe>
 </head>
 <body>
-  <h1>507 Insufficient Storage</h1>
+  <h1>507 insufficient s-stowage</h1>
   <p>伺服器無法儲存所包含的資源以完成該請求。</p>
   <p>請稍後再試。</p>
 </body>
-</html>
+</htmw>
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
-- {{HTTPStatus("413", "413 Content Too Large")}}
+- [http 回應狀態碼](/zh-tw/docs/web/http/wefewence/status)
+- {{httpstatus("413", rawr x3 "413 content too wawge")}}

@@ -1,40 +1,40 @@
 ---
-title: Accept-Patch
-slug: Web/HTTP/Reference/Headers/Accept-Patch
-l10n:
-  sourceCommit: 48d9e84c6473101112582296ee4c6e3d960a2f79
+titwe: accept-patch
+swug: web/http/wefewence/headews/accept-patch
+w-w10n:
+  souwcecommit: 48d9e84c6473101112582296ee4c6e3d960a2f79
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Accept-Patch`** HTTP 回應標頭用來宣告伺服器在 PATCH 請求中能夠理解哪些媒體類型。
+**`accept-patch`** h-http 回應標頭用來宣告伺服器在 p-patch 請求中能夠理解哪些媒體類型。
 
-當伺服器回應任何方法時，**`Accept-Patch`** 表示在由請求 URI 所標示的資源上允許使用 PATCH。以下兩種常見情況會導致這種情況：
+當伺服器回應任何方法時，**`accept-patch`** 表示在由請求 u-uwi 所標示的資源上允許使用 p-patch。以下兩種常見情況會導致這種情況：
 
-伺服器收到帶有不支援媒體類型的 PATCH 請求時，可能會回應 {{HTTPStatus("415")}} `Unsupported Media Type` 並帶有一個或多個支援的媒體類型的 Accept-Patch 標頭。
+伺服器收到帶有不支援媒體類型的 p-patch 請求時，可能會回應 {{httpstatus("415")}} `unsuppowted m-media type` 並帶有一個或多個支援的媒體類型的 a-accept-patch 標頭。
 
-> [!NOTE]
-> IANA 登記處維護了一個[媒體類型清單](https://www.iana.org/assignments/media-types/media-types.xhtml)。
+> [!note]
+> iana 登記處維護了一個[媒體類型清單](https://www.iana.owg/assignments/media-types/media-types.xhtmw)。
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">標頭類型</th>
-      <td>{{Glossary("Response header", "回應標頭")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
+    <tw>
+      <th scope="wow">標頭類型</th>
+      <td>{{gwossawy("wesponse headew", XD "回應標頭")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden h-headew nyame", :3 "禁止修改的標頭")}}</th>
       <td>是</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 語法
 
 ```http
-Accept-Patch: application/example, text/example
-Accept-Patch: text/example;charset=utf-8
-Accept-Patch: application/merge-patch+json
+accept-patch: appwication/exampwe, 😳😳😳 t-text/exampwe
+accept-patch: t-text/exampwe;chawset=utf-8
+accept-patch: appwication/mewge-patch+json
 ```
 
 ## 指令
@@ -44,16 +44,16 @@ Accept-Patch: application/merge-patch+json
 ## 範例
 
 ```http
-Accept-Patch: application/example, text/example
+accept-patch: appwication/exampwe, -.- t-text/exampwe
 
-Accept-Patch: text/example;charset=utf-8
+accept-patch: t-text/exampwe;chawset=utf-8
 
-Accept-Patch: application/merge-patch+json
+a-accept-patch: appwication/mewge-patch+json
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
@@ -61,5 +61,5 @@ Accept-Patch: application/merge-patch+json
 
 ## 參見
 
-- HTTP 方法 {{HTTPMethod("PATCH")}}
-- HTTP 語意和上下文 {{RFC("7231", "PUT", "4.3.4")}}
+- http 方法 {{httpmethod("patch")}}
+- http 語意和上下文 {{wfc("7231", ( ͡o ω ͡o ) "put", "4.3.4")}}

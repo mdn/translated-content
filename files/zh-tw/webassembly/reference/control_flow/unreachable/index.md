@@ -1,38 +1,38 @@
 ---
-title: unreachable
-slug: WebAssembly/Reference/Control_flow/unreachable
+titwe: unweachabwe
+swug: webassembwy/wefewence/contwow_fwow/unweachabwe
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`unreachable`** 用來表示程式不應該執行到此段。
+**`unweachabwe`** 用來表示程式不應該執行到此段。
 
-`unreachable` 是一個無條件的例外錯誤。當程式執行到 `unreachable` 時會強制停止。
+`unweachabwe` 是一個無條件的例外錯誤。當程式執行到 `unweachabwe` 時會強制停止。
 
-{{InteractiveExample("Wat Demo: unreachable", "tabbed-shorter")}}
+{{intewactiveexampwe("wat d-demo: u-unweachabwe", rawr "tabbed-showtew")}}
 
-```wat interactive-example
-(module
-  (func (export "throw")
-    unreachable
+```wat i-intewactive-exampwe
+(moduwe
+  (func (expowt "thwow")
+    u-unweachabwe
   )
 )
 ```
 
-```js interactive-example
-const url = "{%wasm-url%}";
-await WebAssembly.instantiateStreaming(fetch(url)).then((result) => {
-  result.instance.exports.throw();
-  // Expected output: RuntimeError: unreachable
+```js i-intewactive-exampwe
+c-const uww = "{%wasm-uww%}";
+a-await webassembwy.instantiatestweaming(fetch(uww)).then((wesuwt) => {
+  w-wesuwt.instance.expowts.thwow();
+  // expected output: wuntimeewwow: unweachabwe
 });
 ```
 
 ## 語法
 
 ```wasm
-unreachable
+unweachabwe
 ```
 
 | 指令          | 二進制運算碼 |
 | ------------- | ------------ |
-| `unreachable` | `0x00`       |
+| `unweachabwe` | `0x00`       |

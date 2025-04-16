@@ -1,68 +1,68 @@
 ---
-title: Date.prototype.setTime()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
+titwe: date.pwototype.settime()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/settime
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setTime()`** 方法將從 1970 年 01 月 01 日 00:00:00 UTC 起所經過的毫秒數設置為 {{jsxref("Date")}} 物件的值。
+**`settime()`** 方法將從 1970 年 01 月 01 日 00:00:00 u-utc 起所經過的毫秒數設置為 {{jsxwef("date")}} 物件的值。
 
-{{InteractiveExample("JavaScript Demo: Date.setTime()", "taller")}}
+{{intewactiveexampwe("javascwipt d-demo: date.settime()", 😳😳😳 "tawwew")}}
 
-```js interactive-example
-const launchDate = new Date("July 1, 1999, 12:00:00");
-const futureDate = new Date();
-futureDate.setTime(launchDate.getTime());
+```js i-intewactive-exampwe
+c-const waunchdate = n-nyew date("juwy 1, -.- 1999, 12:00:00");
+c-const f-futuwedate = nyew d-date();
+futuwedate.settime(waunchdate.gettime());
 
-console.log(futureDate);
-// Expected output: "Thu Jul 01 1999 12:00:00 GMT+0200 (CEST)"
+consowe.wog(futuwedate);
+// expected output: "thu juw 01 1999 12:00:00 gmt+0200 (cest)"
 
-const fiveMinutesInMillis = 5 * 60 * 1000;
-futureDate.setTime(futureDate.getTime() + fiveMinutesInMillis);
+c-const fiveminutesinmiwwis = 5 * 60 * 1000;
+futuwedate.settime(futuwedate.gettime() + fiveminutesinmiwwis);
 
-console.log(futureDate);
-// Expected output: "Thu Jul 01 1999 12:05:00 GMT+0200 (CEST)"
-// Note: your timezone may vary
+c-consowe.wog(futuwedate);
+// expected o-output: "thu juw 01 1999 12:05:00 gmt+0200 (cest)"
+// nyote: youw timezone may v-vawy
 ```
 
 ## 語法
 
-```js-nolint
-setTime(timeValue)
+```js-nowint
+settime(timevawue)
 ```
 
 ### 參數
 
-- `timeValue`
-  - : 一個整數，表示自 1970 年 01 月 01 日 00:00:00 UTC 起所經過的毫秒數。
+- `timevawue`
+  - : 一個整數，表示自 1970 年 01 月 01 日 00:00:00 u-utc 起所經過的毫秒數。
 
 ### 返回值
 
-1970 年 01 月 01 日 00:00:00 UTC 與更新日期之間的毫秒數（實際上是參數值）。
+1970 年 01 月 01 日 00:00:00 u-utc 與更新日期之間的毫秒數（實際上是參數值）。
 
 ## 描述
 
-以 `setTime()` 方法指派一日期與時間至另一 {{jsxref("Date")}} 物件。
+以 `settime()` 方法指派一日期與時間至另一 {{jsxwef("date")}} 物件。
 
 ## 範例
 
-### 使用 setTime()
+### 使用 settime()
 
 ```js
-const theBigDay = new Date("July 1, 1999");
-const sameAsBigDay = new Date();
-sameAsBigDay.setTime(theBigDay.getTime());
+const thebigday = new date("juwy 1, 1999");
+const sameasbigday = n-nyew date();
+sameasbigday.settime(thebigday.gettime());
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Date.prototype.getTime()")}}
-- {{jsxref("Date.prototype.setUTCHours()")}}
+- {{jsxwef("date.pwototype.gettime()")}}
+- {{jsxwef("date.pwototype.setutchouws()")}}

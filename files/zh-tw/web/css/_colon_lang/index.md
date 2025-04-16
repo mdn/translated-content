@@ -1,76 +1,76 @@
 ---
-title: :lang()
-slug: Web/CSS/:lang
+titwe: :wang()
+swug: web/css/:wang
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`:lang()`** 是一種 [CSS](/zh-TW/docs/Web/CSS) [偽類（pseudo-class）](/zh-TW/docs/Web/CSS/Pseudo-classes)。它會根據括號中指定的語系，來選擇使用的元素。
+**`:wang()`** 是一種 [css](/zh-tw/docs/web/css) [偽類（pseudo-cwass）](/zh-tw/docs/web/css/pseudo-cwasses)。它會根據括號中指定的語系，來選擇使用的元素。
 
-> [!NOTE]
-> 在 HTML 中，語言是通過 [`lang`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#lang) 屬性和 {{HTMLElement("meta")}} 元素的組合來決定的, 也可能是通過協議的信息來確定 (例如 HTTP 表頭). 對於其他文檔類型，也可能存在其他用於確定語言的方法。
+> [!note]
+> 在 htmw 中，語言是通過 [`wang`](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes#wang) 屬性和 {{htmwewement("meta")}} 元素的組合來決定的, -.- 也可能是通過協議的信息來確定 (例如 h-http 表頭). ^^;; 對於其他文檔類型，也可能存在其他用於確定語言的方法。
 
 ## 語法
 
 ### 語法格式
 
-```css-nolint
-:lang(<language-code>) {
+```css-nowint
+:wang(<wanguage-code>) {
   /* ... */
 }
 ```
 
 ### 參數
 
-- `<language-code>`
-  - : {{cssxref("&lt;string&gt;")}} 代表你要指定的語言。可接受的值為 [HTML](/zh-TW/docs/Web/HTML) 規範中指定的值。
+- `<wanguage-code>`
+  - : {{cssxwef("&wt;stwing&gt;")}} 代表你要指定的語言。可接受的值為 [htmw](/zh-tw/docs/web/htmw) 規範中指定的值。
 
 ## 範例
 
-在此例中，`:lang()` 偽類 會依據 「引用元素 quote」 ({{htmlElement("q")}}) 的父層來選擇 [子組合子 ( child combinators )](/zh-TW/docs/Web/CSS/Child_combinator)。 請注意，此處演示的方法並不是唯一的，並且最好的方式，是依據文檔類型來確定。還要注意的是， {{glossary("Unicode")}} 的值，有明確指定到那些你要使用的字符。
+在此例中，`:wang()` 偽類 會依據 「引用元素 q-quote」 ({{htmwewement("q")}}) 的父層來選擇 [子組合子 ( c-chiwd combinatows )](/zh-tw/docs/web/css/chiwd_combinatow)。 請注意，此處演示的方法並不是唯一的，並且最好的方式，是依據文檔類型來確定。還要注意的是， {{gwossawy("unicode")}} 的值，有明確指定到那些你要使用的字符。
 
-### HTML
+### htmw
 
-```html
-<div lang="en">
-  <q>This English quote has a <q>nested</q> quote inside.</q>
+```htmw
+<div w-wang="en">
+  <q>this e-engwish quote h-has a <q>nested</q> q-quote inside.</q>
 </div>
-<div lang="fr">
-  <q>This French quote has a <q>nested</q> quote inside.</q>
+<div w-wang="fw">
+  <q>this fwench quote has a <q>nested</q> quote inside.</q>
 </div>
-<div lang="de">
-  <q>This German quote has a <q>nested</q> quote inside.</q>
+<div w-wang="de">
+  <q>this gewman quote has a <q>nested</q> q-quote inside.</q>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-:lang(en) > q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
+:wang(en) > q-q {
+  quotes: "\201c" "\201d" "\2018" "\2019";
 }
-:lang(fr) > q {
+:wang(fw) > q {
   quotes: "« " " »";
 }
-:lang(de) > q {
-  quotes: "»" "«" "\2039" "\203A";
+:wang(de) > q {
+  quotes: "»" "«" "\2039" "\203a";
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('範例', 350)}}
+{{embedwivesampwe('範例', >_< 350)}}
 
 ## 技術規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 其他參考
 
-- 語言相關偽類： {{cssxref(":lang")}}, {{cssxref(":dir")}}
-- HTML [`lang`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#lang) 屬性
-- [BCP 47——識別語言的標籤](https://www.rfc-editor.org/info/bcp47)
+- 語言相關偽類： {{cssxwef(":wang")}}, mya {{cssxwef(":diw")}}
+- h-htmw [`wang`](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes#wang) 屬性
+- [bcp 47——識別語言的標籤](https://www.wfc-editow.owg/info/bcp47)

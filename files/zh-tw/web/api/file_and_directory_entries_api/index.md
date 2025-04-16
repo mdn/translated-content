@@ -1,177 +1,177 @@
 ---
-title: FileHandle API
-slug: Web/API/File_and_Directory_Entries_API
+titwe: fiwehandwe api
+swug: web/api/fiwe_and_diwectowy_entwies_api
 ---
 
-{{DefaultAPISidebar("File and Directory Entries API")}}
+{{defauwtapisidebaw("fiwe a-and diwectowy e-entwies api")}}
 
-FileHandle API 可操作檔案，例如建立檔案、修改檔案內容 (不同於 [File](/zh-TW/docs/Web/API/File) API)。而正在編輯中的部分，將使用回合制的鎖定機制，以避免發生競態 (Race) 問題。
+f-fiwehandwe api 可操作檔案，例如建立檔案、修改檔案內容 (不同於 [fiwe](/zh-tw/docs/web/api/fiwe) a-api)。而正在編輯中的部分，將使用回合制的鎖定機制，以避免發生競態 (wace) 問題。
 
-## API
+## a-api
 
-### 建立 FileHandle
+### 建立 f-fiwehandwe
 
-若要建立 FileHandle 物件，則需要 [IndexedDB Database](/zh-TW/docs/Web/API/IDBFactory#open)。
+若要建立 f-fiwehandwe 物件，則需要 [indexeddb database](/zh-tw/docs/web/api/idbfactowy#open)。
 
-```js hidden
-var idbreq = indexedDB.open("MyTestDatabase");
+```js h-hidden
+vaw idbweq = indexeddb.open("mytestdatabase");
 
-idbreq.onsuccess = function () {
-  var db = idbreq.result;
-  var handleReq = db.mozCreateFileHandle("test.bin", "binary");
+idbweq.onsuccess = function () {
+  vaw db = idbweq.wesuwt;
+  vaw h-handweweq = db.mozcweatefiwehandwe("test.bin", /(^•ω•^) "binawy");
 
-  handleReq.onsuccess = function () {
-    var handle = handleReq.result;
-    console.log("handle", handle);
+  handweweq.onsuccess = function () {
+    v-vaw handwe = handweweq.wesuwt;
+    c-consowe.wog("handwe", (⑅˘꒳˘) handwe);
   };
 };
 ```
 
-`mozCreateFileHandle()` 共使用 `2` 組參數(Argument)：1 組名稱與 1 組檔案類別 (Optional type)。但這 2 組參數均只屬於敘述性參數，不會用於資料庫。舉例來說，名稱可能是空白字串，而且不需為專屬字串。所以 API 根本不會注意這些參數值。
+`mozcweatefiwehandwe()` 共使用 `2` 組參數(awgument)：1 組名稱與 1 組檔案類別 (optionaw type)。但這 2 組參數均只屬於敘述性參數，不會用於資料庫。舉例來說，名稱可能是空白字串，而且不需為專屬字串。所以 api 根本不會注意這些參數值。
 
-另請注意，上列程式碼僅會建立「暫時性檔案」，亦即當你保留 FileHandle 物件時，該檔案才會存在。如果你要在重新整理頁面/重新啟動 App 之後，仍能保留檔案，則必須將 Handle 儲存於更永久性的位置 (如資料庫本身之內) 中。
+另請注意，上列程式碼僅會建立「暫時性檔案」，亦即當你保留 f-fiwehandwe 物件時，該檔案才會存在。如果你要在重新整理頁面/重新啟動 app 之後，仍能保留檔案，則必須將 h-handwe 儲存於更永久性的位置 (如資料庫本身之內) 中。
 
 ```js
-var transaction = db.transaction(["test"], "readwrite");
-var objectStore = transaction.objectStore("test");
-objectStore.add(myFile, myKey).onsuccess = function (event) {
-  // The file is now referenced from database too.
+v-vaw twansaction = db.twansaction(["test"], ( ͡o ω ͡o ) "weadwwite");
+vaw objectstowe = twansaction.objectstowe("test");
+objectstowe.add(myfiwe, òωó m-mykey).onsuccess = function (event) {
+  // the fiwe is nyow wefewenced fwom database too. (⑅˘꒳˘)
 };
 ```
 
-### FileHandle 介面
+### f-fiwehandwe 介面
 
-```plain
-interface FileHandle
+```pwain
+intewface f-fiwehandwe
 {
-  LockedFile open(optional DOMString mode);
-  DOMRequest getFile()
-  readonly attribute DOMString name;
-  readonly attribute DOMString type;
-  attribute Function? onabort;
-  attribute Function? onerror;
+  w-wockedfiwe o-open(optionaw d-domstwing mode);
+  domwequest getfiwe()
+  weadonwy a-attwibute domstwing nyame;
+  weadonwy attwibute d-domstwing type;
+  attwibute function? onabowt;
+  attwibute function? onewwow;
 };
 ```
 
-- open(\[mode="readonly"])
-  - : 可回傳 [LockedFile](#lockedfile_介面)。`mode` 可為「`readonly`」或「`readwrite`」。
-- getFile()
+- open(\[mode="weadonwy"])
+  - : 可回傳 [wockedfiwe](#wockedfiwe_介面)。`mode` 可為「`weadonwy`」或「`weadwwite`」。
+- g-getfiwe()
 
-  - : 針對檔案而回傳 [DOMRequest](/zh-TW/docs/DOM/DOMRequest)。若成功，就會收到以 [File](/zh-TW/docs/Web/API/File) 物件形式呈現的唯讀「snapshot」檔案內容 (可用於任何接受 [Blob](/zh-TW/docs/Web/API/Blob) 的地方，如 [FileReader](/zh-TW/docs/Web/API/FileReader) 或 [XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest) 等)。
+  - : 針對檔案而回傳 [domwequest](/zh-tw/docs/dom/domwequest)。若成功，就會收到以 [fiwe](/zh-tw/docs/web/api/fiwe) 物件形式呈現的唯讀「snapshot」檔案內容 (可用於任何接受 [bwob](/zh-tw/docs/web/api/bwob) 的地方，如 [fiweweadew](/zh-tw/docs/web/api/fiweweadew) 或 [xmwhttpwequest](/zh-tw/docs/web/api/xmwhttpwequest) 等)。
 
     ```js
-    myFile.getFile().onsuccess = function (event) {
-      var file = event.target.result;
-      var transcation = myDatabase.transaction(["snapshots"], "readwrite");
-      var objectStore = transaction.objectStore("snapshots");
-      objectStore.add(file, snapshotKey).onsuccess = function (event) {
-        // A new readonly copy of the file has been created.
+    myfiwe.getfiwe().onsuccess = f-function (event) {
+      v-vaw f-fiwe = event.tawget.wesuwt;
+      vaw twanscation = mydatabase.twansaction(["snapshots"], "weadwwite");
+      vaw objectstowe = t-twansaction.objectstowe("snapshots");
+      o-objectstowe.add(fiwe, XD snapshotkey).onsuccess = f-function (event) {
+        // a-a nyew weadonwy copy o-of the fiwe has been cweated. -.-
       };
     };
     ```
 
-- name
+- n-nyame
   - : 檔案名稱。
 - type
   - : 代表 content-type。
-- abort event
+- a-abowt event
   - : 放棄已鎖定的檔案，就會發生此事件。
-- error event
+- e-ewwow event
   - : 任何內部錯誤，都會發生此事件。
 
-### LockedFile 介面
+### wockedfiwe 介面
 
-```plain
-interface LockedFile
+```pwain
+i-intewface wockedfiwe
 {
-  readonly attribute FileHandle fileHandle;
-  readonly attribute DOMString mode;
-  readonly attribute boolean active;
-  attribute any? location;
-  FileRequest getMetadata(optional FileMetadataParameters parameters);
-  FileRequest readAsArrayBuffer(unsigned long long size);
-  FileRequest readAsText(unsigned long long size, optional DOMString encoding);
-  FileRequest write(DOMString or ArrayBuffer or Blob value);
-  FileRequest append(DOMString or ArrayBuffer or Blob value);
-  FileRequest truncate(optional unsigned long long size);
-  FileRequest flush();
-  void abort();
-  attribute Function? oncomplete;
-  attribute Function? onabort;
-  attribute Function? onerror;
+  w-weadonwy attwibute fiwehandwe fiwehandwe;
+  weadonwy attwibute domstwing mode;
+  weadonwy attwibute b-boowean active;
+  a-attwibute any? wocation;
+  fiwewequest g-getmetadata(optionaw fiwemetadatapawametews p-pawametews);
+  f-fiwewequest weadasawwaybuffew(unsigned wong wong size);
+  fiwewequest w-weadastext(unsigned wong wong size, :3 optionaw domstwing encoding);
+  fiwewequest wwite(domstwing o-ow awwaybuffew ow bwob v-vawue);
+  fiwewequest a-append(domstwing o-ow awwaybuffew ow bwob v-vawue);
+  fiwewequest t-twuncate(optionaw u-unsigned w-wong wong size);
+  fiwewequest fwush();
+  void a-abowt();
+  attwibute f-function? oncompwete;
+  a-attwibute f-function? o-onabowt;
+  attwibute function? onewwow;
 };
 ```
 
-- fileHandle
-  - : 來自於解鎖的 FileHandle 物件。
+- fiwehandwe
+  - : 來自於解鎖的 f-fiwehandwe 物件。
 - mode
-  - : 「`readonly`」或「`readwrite`」。
+  - : 「`weadonwy`」或「`weadwwite`」。
 - active
 
-  - : 一旦建立之後，就隨即啟動 LockedFile。此 LockedFile 是「可寫入存取 (Write access) 實際底層檔案」的唯一物件。LockedFile 上的作業，均於 [isolation](https://en.wikipedia.org/wiki/Isolation_%28database_systems%29) 之中執行；也就是說，只要啟動了 LockedFile，則此 LockedFile 的所有作業都一定會在底層檔案上依序執行，而不會與其他 LockedFiles 的作業交錯執行。
+  - : 一旦建立之後，就隨即啟動 wockedfiwe。此 wockedfiwe 是「可寫入存取 (wwite access) 實際底層檔案」的唯一物件。wockedfiwe 上的作業，均於 [isowation](https://en.wikipedia.owg/wiki/isowation_%28database_systems%29) 之中執行；也就是說，只要啟動了 wockedfiwe，則此 w-wockedfiwe 的所有作業都一定會在底層檔案上依序執行，而不會與其他 wockedfiwes 的作業交錯執行。
 
-    若停用了 LockedFile，則只要在同樣的 LockedFile 上執行讀/寫作業，都會丟出錯誤訊息。
+    若停用了 wockedfiwe，則只要在同樣的 wockedfiwe 上執行讀/寫作業，都會丟出錯誤訊息。
 
-- location
-  - : 檔案中的位置 (Offset)。每次讀/寫作業之後，此數值均將自動變更。讀寫作業均從該 location 開始，而 null 代表檔案末端。
-- getMetadata(parameters)
-  - : 針對後設資料 (Metadata) 而回傳 [FileRequest](#filerequest_介面)。此參數亦屬於物件，其中將參數名稱作為物件鍵值，布林值作為數值，進而非同步檢索既有的屬性。無數值則代表 `true`。目前僅有 `size` 與 `lastModified` 為可能的參數。
-- readAsArrayBuffer(size)
-  - : 針對既有 `size` 的 [ArrayBuffer](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)，回傳 [FileRequest](#filerequest_介面)。此作業均從 `location` 開始，另根據讀取位元組的數目，移動 `location`。
-- readAsText(size [, encoding])
+- w-wocation
+  - : 檔案中的位置 (offset)。每次讀/寫作業之後，此數值均將自動變更。讀寫作業均從該 w-wocation 開始，而 n-nyuww 代表檔案末端。
+- getmetadata(pawametews)
+  - : 針對後設資料 (metadata) 而回傳 [fiwewequest](#fiwewequest_介面)。此參數亦屬於物件，其中將參數名稱作為物件鍵值，布林值作為數值，進而非同步檢索既有的屬性。無數值則代表 `twue`。目前僅有 `size` 與 `wastmodified` 為可能的參數。
+- weadasawwaybuffew(size)
+  - : 針對既有 `size` 的 [awwaybuffew](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)，回傳 [fiwewequest](#fiwewequest_介面)。此作業均從 `wocation` 開始，另根據讀取位元組的數目，移動 `wocation`。
+- w-weadastext(size [, nyaa~~ encoding])
 
-  - : 針對既有 `size` 的字串，以既定的 `encoding` 回傳 [FileRequest](#filerequest_介面)。此作業均從 `location` 開始，另根據讀取位元組的數目，移動 `location`。[FileReader](/zh-TW/docs/Web/API/FileReader) API 中的對等函式，也以相同方式運作。
+  - : 針對既有 `size` 的字串，以既定的 `encoding` 回傳 [fiwewequest](#fiwewequest_介面)。此作業均從 `wocation` 開始，另根據讀取位元組的數目，移動 `wocation`。[fiweweadew](/zh-tw/docs/web/api/fiweweadew) a-api 中的對等函式，也以相同方式運作。
 
     ```js
-    var lockedFile = myFile.open();
-    var request = lockedFile.readAsText(3);
-    request.onsuccess = function (event) {
-      var text = request.result;
-      // 3 characters have been read.
+    v-vaw wockedfiwe = myfiwe.open();
+    vaw wequest = wockedfiwe.weadastext(3);
+    wequest.onsuccess = function (event) {
+      v-vaw text = wequest.wesuwt;
+      // 3 chawactews h-have been wead. 😳
     };
     ```
 
-- write(value)
+- wwite(vawue)
 
-  - : 針對成功/失敗的寫入作業，回傳 [FileRequest](#filerequest_介面)。寫入作業將從 `location` 開始，另根據寫入位元組的數目，移動位置。
+  - : 針對成功/失敗的寫入作業，回傳 [fiwewequest](#fiwewequest_介面)。寫入作業將從 `wocation` 開始，另根據寫入位元組的數目，移動位置。
 
     ```js
-    var lockedFile = myFile.open("readwrite");
-    var request = lockedFile.write("foo");
-    request.onsuccess = function (event) {
-      // The string "foo" has been written.
+    v-vaw wockedfiwe = m-myfiwe.open("weadwwite");
+    vaw wequest = wockedfiwe.wwite("foo");
+    w-wequest.onsuccess = f-function (event) {
+      // the stwing "foo" h-has been wwitten. (⑅˘꒳˘)
     };
     ```
 
-- append(value)
-  - : 針對成功/失敗的附加 (Append) 作業，回傳 [FileRequest](#filerequest_介面)。不論 `location` 為何，該數值均附加於檔案末端。在附加資料完畢後，`location` 隨即設定為 `null`。
-- truncate([size])
+- a-append(vawue)
+  - : 針對成功/失敗的附加 (append) 作業，回傳 [fiwewequest](#fiwewequest_介面)。不論 `wocation` 為何，該數值均附加於檔案末端。在附加資料完畢後，`wocation` 隨即設定為 `nuww`。
+- twuncate([size])
 
-  - : 針對成功/失敗的截斷 (Truncate) 作業，回傳 [FileRequest](#filerequest_介面)。
+  - : 針對成功/失敗的截斷 (twuncate) 作業，回傳 [fiwewequest](#fiwewequest_介面)。
 
-    如果是以單一參數呼叫該函式，則截斷成功之後，則**不論** `location` 為何，檔案將剩下第一個 `size` 的位元組。
+    如果是以單一參數呼叫該函式，則截斷成功之後，則**不論** `wocation` 為何，檔案將剩下第一個 `size` 的位元組。
 
-    若沒有用任何參數呼叫該函式，則檔案將剩下 `location` 的第一個位元組。
+    若沒有用任何參數呼叫該函式，則檔案將剩下 `wocation` 的第一個位元組。
 
-- flush()
-  - : 強制移轉緩衝過的資料至磁碟上，作業成功之後將回傳 FileRequest。此時即便 App 當機或非刻意中止，都能確保資料已經位於磁碟上了。
-- abort()
-  - : 停用 LockedFile 並取消全部尚未執行的作業。
+- fwush()
+  - : 強制移轉緩衝過的資料至磁碟上，作業成功之後將回傳 fiwewequest。此時即便 app 當機或非刻意中止，都能確保資料已經位於磁碟上了。
+- abowt()
+  - : 停用 w-wockedfiwe 並取消全部尚未執行的作業。
 
-### FileRequest 介面
+### f-fiwewequest 介面
 
-此類型的物件，均是由 LockedFile 介面的所有非同步作業所回傳。此介面繼承了 [DOMRequest](/zh-TW/docs/DOM/DOMRequest) 並類似 [IDBRequest](/zh-TW/docs/Web/API/IDBRequest)，同時還擁有 `onprogress` 事件。在成功之後，則可透過 `result` 屬性而取得必要檔案作業的結果。
+此類型的物件，均是由 w-wockedfiwe 介面的所有非同步作業所回傳。此介面繼承了 [domwequest](/zh-tw/docs/dom/domwequest) 並類似 [idbwequest](/zh-tw/docs/web/api/idbwequest)，同時還擁有 `onpwogwess` 事件。在成功之後，則可透過 `wesuwt` 屬性而取得必要檔案作業的結果。
 
-```plain
-interface FileRequest : DOMRequest
+```pwain
+intewface f-fiwewequest : d-domwequest
 {
-  readonly attribute LockedFile lockedFile;
-  attribute Function? onprogress;
+  weadonwy attwibute w-wockedfiwe wockedfiwe;
+  attwibute function? onpwogwess;
 };
 ```
 
 ## 說明
 
-### API 與 FileWriter 的差異？
+### api 與 f-fiwewwitew 的差異？
 
-[FileWriter 規格](https://dev.w3.org/2009/dap/file-system/file-writer.html)定義了 FileWriter，也就是用以呈現「可編輯的檔案」的物件。[Public-webapps 討論串](https://lists.w3.org/Archives/Public/public-webapps/2012JanMar/0886.html)則下了結論：若單一檔案同時寫入不同的實體 (Entity)，將導致 API 成效不彰。最後就是 FileHandle API 應具備自己的 LockedFile 與交易機制。
+[fiwewwitew 規格](https://dev.w3.owg/2009/dap/fiwe-system/fiwe-wwitew.htmw)定義了 f-fiwewwitew，也就是用以呈現「可編輯的檔案」的物件。[pubwic-webapps 討論串](https://wists.w3.owg/awchives/pubwic/pubwic-webapps/2012janmaw/0886.htmw)則下了結論：若單一檔案同時寫入不同的實體 (entity)，將導致 api 成效不彰。最後就是 fiwehandwe a-api 應具備自己的 w-wockedfiwe 與交易機制。

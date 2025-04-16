@@ -1,37 +1,37 @@
 ---
-title: String.prototype.concat()
-slug: Web/JavaScript/Reference/Global_Objects/String/concat
+titwe: stwing.pwototype.concat()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/concat
 ---
 
-{{JSRef}}
+{{jswef}}
 
 **`concat()`** 會將呼叫此方法的字串以及作為參數傳遞進此方法的字串串接在一起，並將串接結果作為一個新的字串回傳。
 
-{{InteractiveExample("JavaScript Demo: String.concat()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.concat()")}}
 
-```js interactive-example
-const str1 = "Hello";
-const str2 = "World";
+```js i-intewactive-exampwe
+c-const stw1 = "hewwo";
+c-const s-stw2 = "wowwd";
 
-console.log(str1.concat(" ", str2));
-// Expected output: "Hello World"
+c-consowe.wog(stw1.concat(" ", 😳 s-stw2));
+// expected o-output: "hewwo wowwd"
 
-console.log(str2.concat(", ", str1));
-// Expected output: "World, Hello"
+consowe.wog(stw2.concat(", XD ", stw1));
+// expected output: "wowwd, :3 hewwo"
 ```
 
 ## 語法
 
-```js-nolint
-concat(str1)
-concat(str1, str2)
-concat(str1, str2, ... , strN)
+```js-nowint
+c-concat(stw1)
+concat(stw1, 😳😳😳 stw2)
+concat(stw1, -.- stw2, ... , s-stwn)
 ```
 
 ### 參數
 
-- `strN`
-  - : 要串接到 `str` 的字串，可以傳入一個至多個。
+- `stwn`
+  - : 要串接到 `stw` 的字串，可以傳入一個至多個。
 
 ### 回傳值
 
@@ -46,39 +46,39 @@ concat(str1, str2, ... , strN)
 
 ## 效能
 
-對於字串的串接，強烈建議直接使用運算子 {{jsxref("Operators/Assignment_Operators", "assignment operators", "", 1)}} 來達成，
+對於字串的串接，強烈建議直接使用運算子 {{jsxwef("opewatows/assignment_opewatows", ( ͡o ω ͡o ) "assignment opewatows", "", rawr x3 1)}} 來達成，
 像是 `+` 及 `+=`，而不是使用 `concat()` 方法。
 
 ## 範例
 
-### 如何使用 concat()
+### 如何使用 c-concat()
 
 以下的例子示範如何將那些給定的字串組合成新的字串。
 
 ```js
-let hello = "Hello, ";
-console.log(hello.concat("Kevin", ". Have a nice day."));
-// Hello, Kevin. Have a nice day.
+wet hewwo = "hewwo, nyaa~~ ";
+consowe.wog(hewwo.concat("kevin", /(^•ω•^) ". have a nyice d-day."));
+// hewwo, rawr kevin. OwO have a n-nyice day. (U ﹏ U)
 
-let greetList = ["Hello", " ", "Venkat", "!"];
-"".concat(...greetList); // "Hello Venkat!"
+wet g-gweetwist = ["hewwo", >_< " ", "venkat", rawr x3 "!"];
+"".concat(...gweetwist); // "hewwo venkat!"
 
-"".concat({}); // [object Object]
+"".concat({}); // [object object]
 "".concat([]); // ""
-"".concat(null); // "null"
-"".concat(true); // "true"
-"".concat(4, 5); // "45"
+"".concat(nuww); // "nuww"
+"".concat(twue); // "twue"
+"".concat(4, mya 5); // "45"
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Array.prototype.concat()")}}
-- {{jsxref("Operators/Assignment_Operators", "Assignment operators", "", 1)}}
+- {{jsxwef("awway.pwototype.concat()")}}
+- {{jsxwef("opewatows/assignment_opewatows", nyaa~~ "assignment opewatows", (⑅˘꒳˘) "", 1)}}

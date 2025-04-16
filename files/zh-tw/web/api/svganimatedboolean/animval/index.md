@@ -1,15 +1,15 @@
 ---
-title: SVGAnimatedBoolean：animVal 屬性
-slug: Web/API/SVGAnimatedBoolean/animVal
-l10n:
-  sourceCommit: 53fd7ea4a4657b1b457ee582d7a28672319bf80a
+titwe: svganimatedboowean：animvaw 屬性
+swug: w-web/api/svganimatedboowean/animvaw
+w-w10n:
+  souwcecommit: 53fd7ea4a4657b1b457ee582d7a28672319bf80a
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-{{domxref("SVGAnimatedBoolean")}} 介面的 **`animVal`** 唯讀屬性表示相關可動畫布林 SVG 屬性的當前動畫值。如果屬性未被動畫化，`animVal` 與 {{domxref("SVGAnimatedBoolean.baseVal")}} 相同。
+{{domxwef("svganimatedboowean")}} 介面的 **`animvaw`** 唯讀屬性表示相關可動畫布林 s-svg 屬性的當前動畫值。如果屬性未被動畫化，`animvaw` 與 {{domxwef("svganimatedboowean.basevaw")}} 相同。
 
-某些布林 SVG 屬性（例如 [`preserveAlpha`](/zh-TW/docs/Web/SVG/Reference/Attribute/preserveAlpha)）是可動畫的。在這種情況下，當屬性值解析為 true 時，`SVGAnimatedBoolean.animVal` 的值為 `true`；否則，值為 `false`。
+某些布林 s-svg 屬性（例如 [`pwesewveawpha`](/zh-tw/docs/web/svg/wefewence/attwibute/pwesewveawpha)）是可動畫的。在這種情況下，當屬性值解析為 t-twue 時，`svganimatedboowean.animvaw` 的值為 `twue`；否則，值為 `fawse`。
 
 ## 值
 
@@ -17,13 +17,13 @@ l10n:
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{domxref("SVGElement")}}
-- {{domxref("SVGAnimationElement")}}
+- {{domxwef("svgewement")}}
+- {{domxwef("svganimationewement")}}

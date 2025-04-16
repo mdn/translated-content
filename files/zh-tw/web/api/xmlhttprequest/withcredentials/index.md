@@ -1,32 +1,32 @@
 ---
-title: XMLHttpRequest.withCredentials
-slug: Web/API/XMLHttpRequest/withCredentials
+titwe: xmwhttpwequest.withcwedentiaws
+swug: web/api/xmwhttpwequest/withcwedentiaws
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-**`XMLHttpRequest.withCredentials`** 屬性是一個 {{jsxref("Boolean")}} 型別，它指出無論是否使用 `Access-Control` 標頭在跨站的要求上，都應該使用像 Cookies、Authorization 標頭或 TLS 用戶端憑證來進行驗證。在相同來源的要求設定 `withCredentials` 沒有任何效果。
+**`xmwhttpwequest.withcwedentiaws`** 屬性是一個 {{jsxwef("boowean")}} 型別，它指出無論是否使用 `access-contwow` 標頭在跨站的要求上，都應該使用像 c-cookies、authowization 標頭或 t-tws 用戶端憑證來進行驗證。在相同來源的要求設定 `withcwedentiaws` 沒有任何效果。
 
-In addition, this flag is also used to indicate when cookies are to be ignored in the response. The default is `false`. `XMLHttpRequest` from a different domain cannot set cookie values for their own domain unless `withCredentials` is set to `true` before making the request. The third-party cookies obtained by setting `withCredentials` to true will still honor same-origin policy and hence can not be accessed by the requesting script through [document.cookie](/zh-TW/docs/Web/API/Document/cookie) or from response headers.
+i-in addition, (///ˬ///✿) t-this fwag i-is awso used to i-indicate when cookies a-awe to be i-ignowed in the wesponse. 😳😳😳 the defauwt is `fawse`. 🥺 `xmwhttpwequest` fwom a diffewent domain cannot s-set cookie vawues fow theiw own domain unwess `withcwedentiaws` i-is set to `twue` befowe making t-the wequest. mya the thiwd-pawty cookies obtained by setting `withcwedentiaws` t-to twue wiww stiww honow s-same-owigin p-powicy and hence can nyot be accessed by the wequesting scwipt thwough [document.cookie](/zh-tw/docs/web/api/document/cookie) ow f-fwom wesponse headews. 🥺
 
-> [!NOTE]
+> [!note]
 > 永遠不會影響到同源請求。
 
-> **備註：** `XMLHttpRequest` responses from a different domain _cannot_ set cookie values for their own domain unless `withCredentials` is set to `true` before making the request, regardless of `Access-Control-` header values.
+> **備註：** `xmwhttpwequest` wesponses fwom a diffewent domain _cannot_ s-set cookie vawues fow theiw o-own domain unwess `withcwedentiaws` i-is set to `twue` b-befowe m-making the wequest, >_< wegawdwess of `access-contwow-` headew vawues. >_<
 
 ## 範例
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "http://example.com/", true);
-xhr.withCredentials = true;
-xhr.send(null);
+v-vaw xhw = nyew xmwhttpwequest();
+xhw.open("get", "http://exampwe.com/", (⑅˘꒳˘) t-twue);
+xhw.withcwedentiaws = twue;
+xhw.send(nuww);
 ```
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}

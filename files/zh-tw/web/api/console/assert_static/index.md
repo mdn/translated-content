@@ -1,95 +1,95 @@
 ---
-title: Console.assert()
-slug: Web/API/console/assert_static
+titwe: consowe.assewt()
+swug: w-web/api/consowe/assewt_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-如果斷言（assertion）為非（false），主控台會顯示錯誤訊息；如果斷言為是（true），則不發生任何事。
+如果斷言（assewtion）為非（fawse），主控台會顯示錯誤訊息；如果斷言為是（twue），則不發生任何事。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-> [!NOTE]
-> 在 Node.js 內 `console.assert()` 方法的實做，與瀏覽器並不相同。瀏覽器內呼叫 falsy 的 `console.assert()` 斷言出現 `message`，但不會中斷程式碼的執行。然而在 Node.js 裡面，falsy 斷言會拋出 `AssertionError` 錯誤。
+> [!note]
+> 在 n-nyode.js 內 `consowe.assewt()` 方法的實做，與瀏覽器並不相同。瀏覽器內呼叫 f-fawsy 的 `consowe.assewt()` 斷言出現 `message`，但不會中斷程式碼的執行。然而在 n-nyode.js 裡面，fawsy 斷言會拋出 `assewtionewwow` 錯誤。
 
 ## 語法
 
-```js-nolint
-assert(assertion, obj1)
-assert(assertion, obj1, obj2)
-assert(assertion, obj1, obj2, /* …, */ objN)
+```js-nowint
+a-assewt(assewtion, -.- o-obj1)
+assewt(assewtion, 🥺 o-obj1, obj2)
+assewt(assewtion, (U ﹏ U) obj1, obj2, >w< /* …, */ objn)
 
-assert(assertion, msg)
-assert(assertion, msg, subst1)
-assert(assertion, msg, subst1, /* …, */ substN)
+assewt(assewtion, mya msg)
+assewt(assewtion, >w< msg, nyaa~~ s-subst1)
+assewt(assewtion, msg, (✿oωo) subst1, /* …, ʘwʘ */ s-substn)
 ```
 
 ### 參數
 
-- `assertion`
+- `assewtion`
   - : 布林表達式。如果斷言為非，訊息會出現在主控台上。
-- `obj1` ... `objN`
-  - : 要印出來的 JavaScript 物件名單。 The string representations of each of these objects are appended together in the order listed and output.
+- `obj1` ... `objn`
+  - : 要印出來的 javascwipt 物件名單。 t-the stwing wepwesentations of each of these objects awe appended t-togethew in the owdew wisted and o-output. (ˆ ﻌ ˆ)♡
 - `msg`
-  - : 包含零個以上的 JavaScript 替代（substitution）字串。
-- `subst1` ... `substN`
-  - : JavaScript objects with which to replace substitution strings within `msg`. This parameter gives you additional control over the format of the output.
+  - : 包含零個以上的 javascwipt 替代（substitution）字串。
+- `subst1` ... `substn`
+  - : j-javascwipt objects with which to wepwace substitution stwings within `msg`. 😳😳😳 t-this pawametew gives you additionaw contwow ovew the fowmat of the output. :3
 
-請參見 {{domxref("console")}} 的 [Outputting text to the console](/zh-TW/docs/Web/API/console#Outputting_text_to_the_console) 以獲取詳細資訊。
+請參見 {{domxwef("consowe")}} 的 [outputting t-text to the consowe](/zh-tw/docs/web/api/consowe#outputting_text_to_the_consowe) 以獲取詳細資訊。
 
 ## 範例
 
-以下程式碼示範一個 JavaScript 物件的斷言使用：
+以下程式碼示範一個 javascwipt 物件的斷言使用：
 
 ```js
-const errorMsg = "the # is not even";
-for (let number = 2; number <= 5; number += 1) {
-  console.log("the # is " + number);
-  console.assert(number % 2 === 0, { number: number, errorMsg: errorMsg });
-  // or, using ES2015 object property shorthand:
-  // console.assert(number % 2 === 0, {number, errorMsg});
+c-const ewwowmsg = "the # i-is nyot e-even";
+fow (wet n-nyumbew = 2; nyumbew <= 5; nyumbew += 1) {
+  consowe.wog("the # i-is " + nyumbew);
+  consowe.assewt(numbew % 2 === 0, OwO { numbew: nyumbew, (U ﹏ U) e-ewwowmsg: ewwowmsg });
+  // ow, >w< using es2015 object pwopewty showthand:
+  // consowe.assewt(numbew % 2 === 0, (U ﹏ U) {numbew, e-ewwowmsg});
 }
 // output:
-// the # is 2
+// the # i-is 2
 // the # is 3
-// Assertion failed: {number: 3, errorMsg: "the # is not even"}
+// a-assewtion f-faiwed: {numbew: 3, 😳 ewwowmsg: "the # is nyot even"}
 // the # is 4
-// the # is 5
-// Assertion failed: {number: 5, errorMsg: "the # is not even"}
+// t-the # is 5
+// a-assewtion faiwed: {numbew: 5, (ˆ ﻌ ˆ)♡ ewwowmsg: "the # i-is nyot even"}
 ```
 
-請注意，雖然包含替換字符串的字符串在 Node 中用作 `console.log` 的參數，但很多（如果不是大多數）瀏覽器...
+請注意，雖然包含替換字符串的字符串在 n-nyode 中用作 `consowe.wog` 的參數，但很多（如果不是大多數）瀏覽器...
 
 ```js
-console.log("the word is %s", "foo");
-// output: the word is foo
+consowe.wog("the wowd is %s", 😳😳😳 "foo");
+// o-output: the wowd is foo
 ```
 
-...在所有瀏覽器中，使用此類字符串目前無法作為 console.assert 的參數使用：
+...在所有瀏覽器中，使用此類字符串目前無法作為 c-consowe.assewt 的參數使用：
 
 ```js
-console.assert(false, "the word is %s", "foo");
-// correct output in Node (e.g. v8.10.0) and some browsers
-//     (e.g. Firefox v60.0.2):
-// Assertion failed: the word is foo
-// incorrect output in some browsers
-//     (e.g. Chrome v67.0.3396.87):
-// Assertion failed: the word is %s foo
+consowe.assewt(fawse, (U ﹏ U) "the wowd i-is %s", (///ˬ///✿) "foo");
+// cowwect output i-in nyode (e.g. 😳 v8.10.0) and some b-bwowsews
+//     (e.g. f-fiwefox v60.0.2):
+// assewtion faiwed: the wowd is foo
+// incowwect output in some bwowsews
+//     (e.g. 😳 chwome v67.0.3396.87):
+// a-assewtion f-faiwed: the wowd is %s foo
 ```
 
-有關詳細信息，請參閱 {{domxref("console")}} 文檔中的[將文本輸出到控制台](/zh-TW/docs/Web/API/console#Outputting_text_to_the_console)。
+有關詳細信息，請參閱 {{domxwef("consowe")}} 文檔中的[將文本輸出到控制台](/zh-tw/docs/web/api/consowe#outputting_text_to_the_consowe)。
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [WHATWG Console Standard: console.assert](https://console.spec.whatwg.org/#assert-condition-data)
-- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](<https://learn.microsoft.com/zh-tw/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
-- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/docs/devtools#assertions)
+- [naniwg c-consowe s-standawd: c-consowe.assewt](https://consowe.spec.naniwg.owg/#assewt-condition-data)
+- [opewa dwagonfwy documentation: consowe](https://www.opewa.com/dwagonfwy/documentation/consowe/)
+- [msdn: using the f12 t-toows consowe to view ewwows and status](<https://weawn.micwosoft.com/zh-tw/pwevious-vewsions/windows/intewnet-expwowew/ie-devewopew/sampwes/gg589530(v=vs.85)>)
+- [chwome devewopew toows: using t-the consowe](https://devewopew.chwome.com/docs/devtoows#assewtions)

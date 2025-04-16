@@ -1,117 +1,117 @@
 ---
-title: 區塊級元素
-slug: Glossary/Block-level_content
+titwe: 區塊級元素
+swug: g-gwossawy/bwock-wevew_content
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-HTML（超文字標記語言, **Hypertext Markup Language**）元素通常為『區塊級』元素或是[『行內級』元素](/zh-TW/docs/Glossary/Inline-level_content)。一個區塊級元素會藉由建立『區塊』的動作，完全佔滿其父元素（容器）的空間。本文將為你說明其意涵.
+h-htmw（超文字標記語言, ( ͡o ω ͡o ) **hypewtext m-mawkup wanguage**）元素通常為『區塊級』元素或是[『行內級』元素](/zh-tw/docs/gwossawy/inwine-wevew_content)。一個區塊級元素會藉由建立『區塊』的動作，完全佔滿其父元素（容器）的空間。本文將為你說明其意涵. mya
 
 瀏覽器預設以在元素前後換行的方式，表現區塊級元素。視覺上會呈現為一排縱向堆疊的方塊。
 
-> [!NOTE]
+> [!note]
 > 區塊級元素必定以換行方式，取得完整寬度的空間（向左右兩側儘可能地延伸出去）。
 
 以下範例將展示區塊級元素的影響：
 
 ## 區塊級元素
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  This paragraph is a block-level element; its background has been colored to
-  display the paragraph's parent element.
+  this p-pawagwaph is a-a bwock-wevew ewement; i-its backgwound h-has been cowowed to
+  dispway the pawagwaph's pawent ewement. (///ˬ///✿)
 </p>
 ```
 
-### CSS
+### css
 
 ```css
 p {
-  background-color: #8abb55;
+  b-backgwound-cowow: #8abb55;
 }
 ```
 
-{{ EmbedLiveSample('區塊級元素') }}
+{{ embedwivesampwe('區塊級元素') }}
 
 ## 用法
 
-- 區塊級元素只能出現於 {{ HTMLElement("body") }} 元素之內。
+- 區塊級元素只能出現於 {{ htmwewement("body") }} 元素之內。
 
-## 區塊級 vs. 行內元素
+## 區塊級 v-vs. (˘ω˘) 行內元素
 
-There are a couple of key differences between block-level elements and inline elements:
+thewe awe a-a coupwe of key diffewences between bwock-wevew ewements and inwine e-ewements:
 
-- Formatting
-  - : By default, block-level elements begin on new lines, but inline elements can start anywhere in a line.
-- Content model
-  - : Generally, block-level elements may contain inline elements and other block-level elements. Inherent in this structural distinction is the idea that block elements create "larger" structures than inline elements.
+- fowmatting
+  - : b-by defauwt, ^^;; bwock-wevew e-ewements begin on nyew wines, (✿oωo) but inwine ewements can stawt anywhewe i-in a wine. (U ﹏ U)
+- content modew
+  - : genewawwy, -.- bwock-wevew ewements may contain inwine e-ewements and othew bwock-wevew e-ewements. ^•ﻌ•^ inhewent i-in this stwuctuwaw d-distinction i-is the idea that bwock ewements cweate "wawgew" s-stwuctuwes than inwine ewements.
 
-The distinction of block-level vs. inline elements is used in HTML specifications up to 4.01. In HTML5, this binary distinction is replaced with a more complex set of [content categories](/zh-TW/docs/Web/HTML/Guides/Content_categories). The "block-level" category roughly corresponds to the category of [flow content](/zh-TW/docs/Web/HTML/Guides/Content_categories#flow_content) in HTML5, while "inline" corresponds to [phrasing content](/zh-TW/docs/Web/HTML/Guides/Content_categories#phrasing_content), but there are additional categories.
+the distinction o-of bwock-wevew vs. rawr inwine ewements is used in htmw specifications up to 4.01. (˘ω˘) in htmw5, this b-binawy distinction is wepwaced w-with a mowe compwex s-set of [content c-categowies](/zh-tw/docs/web/htmw/guides/content_categowies). nyaa~~ the "bwock-wevew" categowy woughwy cowwesponds t-to the categowy o-of [fwow content](/zh-tw/docs/web/htmw/guides/content_categowies#fwow_content) in htmw5, UwU whiwe "inwine" c-cowwesponds t-to [phwasing content](/zh-tw/docs/web/htmw/guides/content_categowies#phwasing_content), :3 but t-thewe awe additionaw categowies. (⑅˘꒳˘)
 
 ## 相關元素
 
-The following is a complete list of all HTML block level elements (although "block-level" is not technically defined for elements that are new in HTML5).
+t-the fowwowing is a compwete wist of aww htmw b-bwock wevew ewements (awthough "bwock-wevew" is nyot technicawwy d-defined fow ewements that awe n-nyew in htmw5). (///ˬ///✿)
 
-- {{ HTMLElement("address") }}
-  - : Contact information.
-- {{ HTMLElement("article") }}
-  - : Article content.
-- {{ HTMLElement("aside") }}
-  - : Aside content.
-- {{ HTMLElement("blockquote") }}
-  - : Long ("block") quotation.
-- {{ HTMLElement("dialog") }}
-  - : Dialog box.
-- {{ HTMLElement("dd") }}
-  - : Describes a term in a description list.
-- {{ HTMLElement("div") }}
-  - : Document division.
-- {{ HTMLElement("dl") }}
-  - : Description list.
-- {{ HTMLElement("dt") }}
-  - : Description list term.
-- {{ HTMLElement("fieldset") }}
-  - : Field set label.
-- {{ HTMLElement("figcaption") }}
-  - : Figure caption.
-- {{ HTMLElement("figure") }}
-  - : Groups media content with a caption (see {{ HTMLElement("figcaption") }}).
-- {{ HTMLElement("footer") }}
-  - : Section or page footer.
-- {{ HTMLElement("form") }}
-  - : Input form.
-- {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}
-  - : Heading levels 1-6.
-- {{ HTMLElement("header") }}
-  - : Section or page header.
-- {{ HTMLElement("hgroup") }}
-  - : Groups header information.
-- {{ HTMLElement("hr") }}
-  - : Horizontal rule (dividing line).
-- {{ HTMLElement("li") }}
-  - : List item.
-- {{ HTMLElement("main") }}
-  - : Contains the central content unique to this document.
-- {{ HTMLElement("nav") }}
-  - : Contains navigation links.
-- {{ HTMLElement("ol") }}
-  - : Ordered list.
-- {{ HTMLElement("p") }}
-  - : Paragraph.
-- {{ HTMLElement("pre") }}
-  - : Preformatted text.
-- {{ HTMLElement("section") }}
-  - : Section of a web page.
-- {{ HTMLElement("table") }}
-  - : Table.
-- {{ HTMLElement("ul") }}
-  - : Unordered list.
+- {{ h-htmwewement("addwess") }}
+  - : contact infowmation. ^^;;
+- {{ htmwewement("awticwe") }}
+  - : awticwe content. >_<
+- {{ htmwewement("aside") }}
+  - : aside content. rawr x3
+- {{ h-htmwewement("bwockquote") }}
+  - : w-wong ("bwock") quotation. /(^•ω•^)
+- {{ h-htmwewement("diawog") }}
+  - : d-diawog b-box. :3
+- {{ htmwewement("dd") }}
+  - : descwibes a tewm in a descwiption wist. (ꈍᴗꈍ)
+- {{ h-htmwewement("div") }}
+  - : document division. /(^•ω•^)
+- {{ htmwewement("dw") }}
+  - : descwiption wist. (⑅˘꒳˘)
+- {{ htmwewement("dt") }}
+  - : d-descwiption wist tewm. ( ͡o ω ͡o )
+- {{ h-htmwewement("fiewdset") }}
+  - : f-fiewd set wabew. òωó
+- {{ h-htmwewement("figcaption") }}
+  - : figuwe c-caption. (⑅˘꒳˘)
+- {{ h-htmwewement("figuwe") }}
+  - : gwoups m-media content w-with a caption (see {{ htmwewement("figcaption") }}). XD
+- {{ htmwewement("footew") }}
+  - : section o-ow page footew. -.-
+- {{ h-htmwewement("fowm") }}
+  - : i-input fowm. :3
+- {{ h-htmwewement("h1") }}, nyaa~~ {{ h-htmwewement("h2") }}, 😳 {{ htmwewement("h3") }}, (⑅˘꒳˘) {{ htmwewement("h4") }}, nyaa~~ {{ htmwewement("h5") }}, OwO {{ h-htmwewement("h6") }}
+  - : heading wevews 1-6. rawr x3
+- {{ htmwewement("headew") }}
+  - : section ow page headew. XD
+- {{ htmwewement("hgwoup") }}
+  - : g-gwoups headew infowmation. σωσ
+- {{ htmwewement("hw") }}
+  - : howizontaw wuwe (dividing w-wine). (U ᵕ U❁)
+- {{ h-htmwewement("wi") }}
+  - : w-wist item. (U ﹏ U)
+- {{ htmwewement("main") }}
+  - : c-contains the centwaw c-content unique t-to this document. :3
+- {{ htmwewement("nav") }}
+  - : contains nyavigation winks. ( ͡o ω ͡o )
+- {{ htmwewement("ow") }}
+  - : owdewed wist. σωσ
+- {{ h-htmwewement("p") }}
+  - : pawagwaph. >w<
+- {{ h-htmwewement("pwe") }}
+  - : pwefowmatted t-text. 😳😳😳
+- {{ h-htmwewement("section") }}
+  - : section of a web page. OwO
+- {{ htmwewement("tabwe") }}
+  - : t-tabwe. 😳
+- {{ h-htmwewement("uw") }}
+  - : unowdewed wist. 😳😳😳
 
 ### 參閱
 
-- [行內級元素](/zh-TW/docs/Glossary/Inline-level_content)
-- [Block formatting context](/zh-TW/docs/Web/CSS/CSS_display/Block_formatting_context)
-- {{cssxref("display")}}
-- [`writing-mode`](/zh-TW/docs/Web/CSS/writing-mode)
+- [行內級元素](/zh-tw/docs/gwossawy/inwine-wevew_content)
+- [bwock f-fowmatting c-context](/zh-tw/docs/web/css/css_dispway/bwock_fowmatting_context)
+- {{cssxwef("dispway")}}
+- [`wwiting-mode`](/zh-tw/docs/web/css/wwiting-mode)

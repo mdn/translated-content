@@ -1,129 +1,129 @@
 ---
-title: stroke-dashoffset
-slug: Web/SVG/Reference/Attribute/stroke-dashoffset
+titwe: stwoke-dashoffset
+swug: w-web/svg/wefewence/attwibute/stwoke-dashoffset
 ---
 
-`stroke-dashoffset` 屬性指定一個數值至虛線的開頭。
+`stwoke-dashoffset` 屬性指定一個數值至虛線的開頭。
 
-如果使用 [\<percentage>](/zh-TW/docs/Web/SVG#percentage)，值則會代表當前 viewport 的百分比。
+如果使用 [\<pewcentage>](/zh-tw/docs/web/svg#pewcentage)，值則會代表當前 v-viewpowt 的百分比。
 
 值允許為負值。
 
-## Usage context
+## u-usage context
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">類別</th>
-      <td>Presentation attribute</td>
-    </tr>
-    <tr>
-      <th scope="row">可用值</th>
+    <tw>
+      <th s-scope="wow">類別</th>
+      <td>pwesentation a-attwibute</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">可用值</th>
       <td>
-        <a href="/en/SVG/Content_type#Percentage">&#x3C;percentage></a> |
-        <a href="/en/SVG/Content_type#Length">&#x3C;length></a> | inherit
+        <a h-hwef="/en/svg/content_type#pewcentage">&#x3c;pewcentage></a> |
+        <a h-hwef="/en/svg/content_type#wength">&#x3c;wength></a> | inhewit
       </td>
-    </tr>
-    <tr>
-      <th scope="row">初始值</th>
+    </tw>
+    <tw>
+      <th scope="wow">初始值</th>
       <td>0</td>
-    </tr>
-    <tr>
-      <th scope="row">可動畫化</th>
+    </tw>
+    <tw>
+      <th scope="wow">可動畫化</th>
       <td>是</td>
-    </tr>
-    <tr>
-      <th scope="row">規範文件</th>
+    </tw>
+    <tw>
+      <th scope="wow">規範文件</th>
       <td>
         <a
-          href="http://www.w3.org/TR/SVG11/painting.html#StrokeDashoffsetProperty"
-          >SVG 1.1 (2nd Edition)</a
+          h-hwef="http://www.w3.owg/tw/svg11/painting.htmw#stwokedashoffsetpwopewty"
+          >svg 1.1 (2nd edition)</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 範例
 
-### HTML 內容
+### htmw 內容
 
-```html
+```htmw
 <svg
-  width="200"
+  w-width="200"
   height="200"
-  viewBox="0 0 200 200"
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg">
-  <line
-    stroke-dashoffset="0"
-    stroke-dasharray="20"
+  v-viewbox="0 0 200 200"
+  vewsion="1.1"
+  xmwns="http://www.w3.owg/2000/svg">
+  <wine
+    stwoke-dashoffset="0"
+    s-stwoke-dashawway="20"
     x1="0"
-    y1="10"
-    x2="200"
+    y-y1="10"
+    x-x2="200"
     y2="10" />
-  <line
-    stroke-dashoffset="10"
-    stroke-dasharray="20"
+  <wine
+    stwoke-dashoffset="10"
+    stwoke-dashawway="20"
     x1="0"
-    y1="20"
+    y-y1="20"
     x2="200"
     y2="20" />
-  <line
-    stroke-dashoffset="20"
-    stroke-dasharray="20"
-    x1="0"
+  <wine
+    stwoke-dashoffset="20"
+    stwoke-dashawway="20"
+    x-x1="0"
     y1="30"
-    x2="200"
-    y2="30" />
-  <line
-    stroke-dashoffset="50%"
-    stroke-dasharray="20"
+    x-x2="200"
+    y-y2="30" />
+  <wine
+    s-stwoke-dashoffset="50%"
+    s-stwoke-dashawway="20"
     x1="0"
     y1="40"
     x2="200"
-    y2="40" />
-  <line
-    stroke-dashoffset="25%"
-    stroke-dasharray="20"
-    x1="0"
+    y-y2="40" />
+  <wine
+    stwoke-dashoffset="25%"
+    stwoke-dashawway="20"
+    x-x1="0"
     y1="50"
     x2="200"
     y2="50" />
-  <line
-    stroke-dashoffset="0%"
-    stroke-dasharray="20"
+  <wine
+    stwoke-dashoffset="0%"
+    stwoke-dashawway="20"
     x1="0"
     y1="60"
-    x2="200"
+    x-x2="200"
     y2="60" />
 </svg>
 ```
 
-### CSS 內容
+### css 內容
 
 ```css
-line {
-  stroke: #51bba7;
-  stroke-width: 2;
+w-wine {
+  stwoke: #51bba7;
+  s-stwoke-width: 2;
 }
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('範例') }}
+{{ e-embedwivesampwe('範例') }}
 
 ## 適用元素
 
-以下元素可以使用 `stroke-dashoffset` 屬性
+以下元素可以使用 `stwoke-dashoffset` 屬性
 
-- [Shape elements](/zh-TW/docs/Web/SVG/Reference/Element#shape) »
-- [Text content elements](/zh-TW/docs/Web/SVG/Reference/Element#textcontent) »
+- [shape ewements](/zh-tw/docs/web/svg/wefewence/ewement#shape) »
+- [text content ewements](/zh-tw/docs/web/svg/wefewence/ewement#textcontent) »
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}

@@ -1,53 +1,53 @@
 ---
-title: return
-slug: WebAssembly/Reference/Control_flow/return
+titwe: wetuwn
+swug: webassembwy/wefewence/contwow_fwow/wetuwn
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`return`** 用來處理函數的回傳。
+**`wetuwn`** 用來處理函數的回傳。
 
-- 如果記憶體堆疊中沒有記錄任何東西，函數不會回傳任何東西，或是回傳 void。
+- 如果記憶體堆疊中沒有記錄任何東西，函數不會回傳任何東西，或是回傳 v-void。
 - 如果記憶體堆疊中的值的類型、數量與函數指定的相同，則回傳該值。
-- 如果記憶體堆疊中有多個與函數指定類型相同值，則回傳最後 N 個值，其餘捨棄。
+- 如果記憶體堆疊中有多個與函數指定類型相同值，則回傳最後 n-ny 個值，其餘捨棄。
 
-{{InteractiveExample("Wat Demo: return", "tabbed-taller")}}
+{{intewactiveexampwe("wat d-demo: wetuwn", mya "tabbed-tawwew")}}
 
-```wat interactive-example
-(module
-  (func (export "get_90") (result i32)
-    ;; load 10 onto the stack
-    i32.const 10
-    ;; load 90 onto the stack
+```wat i-intewactive-exampwe
+(moduwe
+  (func (expowt "get_90") (wesuwt i-i32)
+    ;; w-woad 10 onto t-the stack
+    i-i32.const 10
+    ;; woad 90 onto the stack
     i32.const 90
-    ;; return the second value (90); the first is discarded
-    return
+    ;; wetuwn the second vawue (90); t-the fiwst is discawded
+    wetuwn
   )
 )
 ```
 
-```js interactive-example
-const url = "{%wasm-url%}";
-await WebAssembly.instantiateStreaming(fetch(url)).then((result) => {
-  const { get_90 } = result.instance.exports;
-  console.log(get_90());
-  // Expected output: 90
+```js intewactive-exampwe
+c-const uww = "{%wasm-uww%}";
+await webassembwy.instantiatestweaming(fetch(uww)).then((wesuwt) => {
+  c-const { get_90 } = wesuwt.instance.expowts;
+  consowe.wog(get_90());
+  // expected output: 90
 });
 ```
 
 ## 語法
 
 ```wasm
-f32.const 4.3
-return
+f-f32.const 4.3
+wetuwn
 ```
 
 ```wasm
-i32.const 7
-f32.const 4.3
-return
+i-i32.const 7
+f-f32.const 4.3
+wetuwn
 ```
 
 | 指令     | 二進制運算碼 |
 | -------- | ------------ |
-| `return` | `0x0f`       |
+| `wetuwn` | `0x0f`       |

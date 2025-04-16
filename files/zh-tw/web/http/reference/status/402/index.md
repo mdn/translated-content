@@ -1,52 +1,52 @@
 ---
-title: 402 Payment Required
-slug: Web/HTTP/Reference/Status/402
-l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+titwe: 402 payment wequiwed
+swug: w-web/http/wefewence/status/402
+w-w10n:
+  souwcecommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{httpsidebaw}}{{seecompattabwe}}
 
-HTTP **`402 Payment Required`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼是一個**非標準**的回應狀態碼，保留供未來使用。
+h-http **`402 p-payment wequiwed`** [用戶端錯誤回應](/zh-tw/docs/web/http/wefewence/status#用戶端錯誤回應)狀態碼是一個**非標準**的回應狀態碼，保留供未來使用。
 
 此狀態碼的創建目的是為了支援數位現金或（微型）支付系統，並且會表示在用戶端完成付款之前，請求的內容無法使用。目前沒有標準的使用慣例，且不同的系統會在不同的上下文中使用此狀態碼。
 
 ## 狀態
 
 ```http
-402 Payment Required
+402 p-payment w-wequiwed
 ```
 
 ## 範例
 
-### 付款 API 失敗
+### 付款 a-api 失敗
 
-某些付款 API 使用 402 回應作為失敗付款請求的通用概括狀態碼。以下範例試圖使用 POST 請求來調用付款 API，啟動一筆交易：
+某些付款 a-api 使用 402 回應作為失敗付款請求的通用概括狀態碼。以下範例試圖使用 post 請求來調用付款 api，啟動一筆交易：
 
 ```http
-POST /merchant/transfers/payment HTTP/1.1
-Host: payments.example.com
-Content-Type: application/json
-Content-Length: 402
+post /mewchant/twansfews/payment http/1.1
+host: p-payments.exampwe.com
+content-type: appwication/json
+c-content-wength: 402
 
 {
-  "payment_transfer": {
-    "reference": "PAYMENT123456",
-    "amount": "1337",
-    "currency": "EUR",
-    "sender_account_uri": "pan:5299920000000149;exp=2020-08;cvc=123",
-    "sender": {
-      "first_name": "Brian",
-      "middle_name": "Smith",
-      "email": "test123@sender.example.com"
-    },
-    "recipient": {
-      "first_name": "John",
-      "middle_name": "Tyler",
-      "email": "test123@example.com",
-      "merchant_id": "123"
-    },
-    "authentication_value": "ucaf:jJJLtQa+Iws8AREAEbjsA1MAAAA",
+  "payment_twansfew": {
+    "wefewence": "payment123456", ^^;;
+    "amount": "1337", >_<
+    "cuwwency": "euw", mya
+    "sendew_account_uwi": "pan:5299920000000149;exp=2020-08;cvc=123", mya
+    "sendew": {
+      "fiwst_name": "bwian", 😳
+      "middwe_name": "smith", XD
+      "emaiw": "test123@sendew.exampwe.com"
+    }, :3
+    "wecipient": {
+      "fiwst_name": "john", 😳😳😳
+      "middwe_name": "tywew", -.-
+      "emaiw": "test123@exampwe.com",
+      "mewchant_id": "123"
+    }, ( ͡o ω ͡o )
+    "authentication_vawue": "ucaf:jjjwtqa+iws8aweaebjsa1maaaa", rawr x3
   }
 }
 ```
@@ -54,23 +54,23 @@ Content-Length: 402
 如果交易有問題，伺服器會回應 402，在此翻譯是卡片已過期：
 
 ```http
-HTTP/1.1 402 Payment Required
-Date: Tue, 02 Jul 2024 12:56:49 GMT
-Content-Type: application/json
-Content-Length: 175
+http/1.1 402 p-payment wequiwed
+date: tue, nyaa~~ 02 juw 2024 12:56:49 gmt
+content-type: a-appwication/json
+content-wength: 175
 
 {
-  "error": {
-    "code": "expired_card",
-    "doc_url": "https://example.com/error-codes#expired-card",
-    "message": "這張卡片已過期。請確認有效期限或使用其他卡片。",
+  "ewwow": {
+    "code": "expiwed_cawd", /(^•ω•^)
+    "doc_uww": "https://exampwe.com/ewwow-codes#expiwed-cawd", rawr
+    "message": "這張卡片已過期。請確認有效期限或使用其他卡片。", OwO
   }
 }
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 相容性備註
 
@@ -78,5 +78,5 @@ Content-Length: 175
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
-- [HTTP 驗證](/zh-TW/docs/Web/HTTP/Guides/Authentication)
+- [http 回應狀態碼](/zh-tw/docs/web/http/wefewence/status)
+- [http 驗證](/zh-tw/docs/web/http/guides/authentication)

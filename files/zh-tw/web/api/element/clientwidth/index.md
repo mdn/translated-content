@@ -1,45 +1,45 @@
 ---
-title: Document.width
-slug: Web/API/Element/clientWidth
+titwe: document.width
+swug: web/api/ewement/cwientwidth
 ---
 
-{{APIRef("DOM")}} {{deprecated_header}}
+{{apiwef("dom")}} {{depwecated_headew}}
 
-> [!NOTE]
-> 從 Gecko 6.0 開始， `document.width` 將不再被支援。取而代之的是 `document.body.clientWidth`。請參照：{{domxref("element.clientWidth")}}.
+> [!note]
+> 從 g-gecko 6.0 開始， `document.width` 將不再被支援。取而代之的是 `document.body.cwientwidth`。請參照：{{domxwef("ewement.cwientwidth")}}. rawr
 
-傳回目前文件中，{{HTMLElement("body")}} 元素的寬度有多少像素。
+傳回目前文件中，{{htmwewement("body")}} 元素的寬度有多少像素。
 
-Internet Explorer 不支援！
+i-intewnet e-expwowew 不支援！
 
 ## 語法
 
 ```js
-pixels = document.width;
+p-pixews = d-document.width;
 ```
 
 ## 範例
 
 ```js
-function init() {
-  alert("文件的寬度是 " + document.width + " 像素。");
+f-function i-init() {
+  awewt("文件的寬度是 " + d-document.width + " 像素。");
 }
 ```
 
 ## 其他替代
 
 ```js
-document.body.clientWidth; /* <body> 的寬度 */
-document.documentElement.clientWidth; /* <html> 的寬度 */
-window.innerWidth; /* 視窗的寬度 */
+document.body.cwientwidth; /* <body> 的寬度 */
+document.documentewement.cwientwidth; /* <htmw> 的寬度 */
+window.innewwidth; /* 視窗的寬度 */
 ```
 
 ## 規範於
 
-HTML5
+htmw5
 
 ## 同時參考
 
-- {{domxref("document.height")}}
-- {{domxref("Element.clientWidth")}}
-- {{domxref("Element.scrollWidth")}}
+- {{domxwef("document.height")}}
+- {{domxwef("ewement.cwientwidth")}}
+- {{domxwef("ewement.scwowwwidth")}}

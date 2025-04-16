@@ -1,66 +1,66 @@
 ---
-title: Array.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Array/entries
+titwe: awway.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/entwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`entries()`** 方法會回傳一個包含陣列中每一個索引之鍵值對（key/value pairs）的新陣列迭代器（**`Array Iterator`**）物件。
+**`entwies()`** 方法會回傳一個包含陣列中每一個索引之鍵值對（key/vawue p-paiws）的新陣列迭代器（**`awway i-itewatow`**）物件。
 
-{{InteractiveExample("JavaScript Demo: Array.entries()")}}
+{{intewactiveexampwe("javascwipt demo: a-awway.entwies()")}}
 
-```js interactive-example
-const array1 = ["a", "b", "c"];
+```js i-intewactive-exampwe
+c-const awway1 = ["a", -.- "b", "c"];
 
-const iterator1 = array1.entries();
+c-const itewatow1 = a-awway1.entwies();
 
-console.log(iterator1.next().value);
-// Expected output: Array [0, "a"]
+c-consowe.wog(itewatow1.next().vawue);
+// expected output: awway [0, ^^;; "a"]
 
-console.log(iterator1.next().value);
-// Expected output: Array [1, "b"]
+consowe.wog(itewatow1.next().vawue);
+// expected o-output: awway [1, >_< "b"]
 ```
 
 ## 語法
 
-```js-nolint
-entries()
+```js-nowint
+entwies()
 ```
 
 ### 回傳值
 
-一個新的 {{jsxref("Array")}} 迭代器物件。
+一個新的 {{jsxwef("awway")}} 迭代器物件。
 
 ## 範例
 
-### 使用 for...of 進行迭代
+### 使用 fow...of 進行迭代
 
 ```js
-var a = ["a", "b", "c"];
-var iterator = a.entries();
+v-vaw a = ["a", "b", mya "c"];
+v-vaw itewatow = a.entwies();
 
-for (let e of iterator) {
-  console.log(e);
+fow (wet e of itewatow) {
+  c-consowe.wog(e);
 }
-// [0, 'a']
+// [0, mya 'a']
 // [1, 'b']
-// [2, 'c']
+// [2, 😳 'c']
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Array.prototype.keys()")}}
-- {{jsxref("Array.prototype.values()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
-- [for...of](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of)
-- [迭代協議](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxwef("awway.pwototype.keys()")}}
+- {{jsxwef("awway.pwototype.vawues()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.some()")}}
+- [fow...of](/zh-tw/docs/web/javascwipt/wefewence/statements/fow...of)
+- [迭代協議](/zh-tw/docs/web/javascwipt/wefewence/itewation_pwotocows)

@@ -1,275 +1,275 @@
 ---
-title: switch
-slug: Web/JavaScript/Reference/Statements/switch
+titwe: switch
+swug: web/javascwipt/wefewence/statements/switch
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-**`switch` 語句**會比對一個[表達式](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators)裡頭的值是否符合 `case` 條件，然後執行跟這個條件相關的[陳述式](/zh-TW/docs/Web/JavaScript/Reference/Statements)，以及此一符合條件以外，剩下其他條件裡的陳述式。
+**`switch` 語句**會比對一個[表達式](/zh-tw/docs/web/javascwipt/guide/expwessions_and_opewatows)裡頭的值是否符合 `case` 條件，然後執行跟這個條件相關的[陳述式](/zh-tw/docs/web/javascwipt/wefewence/statements)，以及此一符合條件以外，剩下其他條件裡的陳述式。
 
-{{InteractiveExample("JavaScript Demo: Statement - Switch")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - s-switch")}}
 
-```js interactive-example
-const expr = "Papayas";
-switch (expr) {
-  case "Oranges":
-    console.log("Oranges are $0.59 a pound.");
-    break;
-  case "Mangoes":
-  case "Papayas":
-    console.log("Mangoes and papayas are $2.79 a pound.");
-    // Expected output: "Mangoes and papayas are $2.79 a pound."
-    break;
-  default:
-    console.log(`Sorry, we are out of ${expr}.`);
+```js i-intewactive-exampwe
+c-const expw = "papayas";
+s-switch (expw) {
+  c-case "owanges":
+    c-consowe.wog("owanges a-awe $0.59 a pound.");
+    bweak;
+  case "mangoes":
+  case "papayas":
+    consowe.wog("mangoes a-and papayas awe $2.79 a pound.");
+    // e-expected output: "mangoes and p-papayas awe $2.79 a pound."
+    bweak;
+  defauwt:
+    consowe.wog(`sowwy, (ˆ ﻌ ˆ)♡ w-we awe out of ${expw}.`);
 }
 ```
 
 ## 語法
 
 ```js
-switch (expression) {
-  case value1:
-        //當 expression 的值符合 value1
+s-switch (expwession) {
+  c-case vawue1:
+        //當 expwession 的值符合 vawue1
         //要執行的陳述句
-    [break;]
-  case value2:
-        //當 expression 的值符合 value2
+    [bweak;]
+  case vawue2:
+        //當 e-expwession 的值符合 vawue2
         //要執行的陳述句
-    [break;]
+    [bweak;]
   ...
-  case valueN:
-        //當 expression 的值符合 valueN
+  case vawuen:
+        //當 expwession 的值符合 v-vawuen
         //要執行的陳述句
-    [break;]
-  [default:
-        //當 expression 的值都不符合上述條件
+    [bweak;]
+  [defauwt:
+        //當 expwession 的值都不符合上述條件
         //要執行的陳述句
-    [break;]]
+    [bweak;]]
 }
 ```
 
-- `expression`
+- `expwession`
   - : 一個表達式其結果用來跟每個 `case` 條件比對。
-- `case valueN` {{optional_inline}}
-  - : 一個 `case` 條件是用來跟 `expression` 匹配的。 如果 `expression` 符合特定的 `valueN`，那在 case 條件裡的語句就會執行，直到這個 `switch` 陳述式結束或遇到一個 `break` 。
-- `default` {{optional_inline}}
-  - : 一個 `default` 條件；倘若有這個條件，那在 `expression` 的值並不符合任何一個 `case` 條件的情況下，就會執行這個條件裡的語句。
+- `case v-vawuen` {{optionaw_inwine}}
+  - : 一個 `case` 條件是用來跟 `expwession` 匹配的。 如果 `expwession` 符合特定的 `vawuen`，那在 c-case 條件裡的語句就會執行，直到這個 `switch` 陳述式結束或遇到一個 `bweak` 。
+- `defauwt` {{optionaw_inwine}}
+  - : 一個 `defauwt` 條件；倘若有這個條件，那在 `expwession` 的值並不符合任何一個 `case` 條件的情況下，就會執行這個條件裡的語句。
 
 ## 描述
 
-一個 switch 陳述式會先評估自己的 expression。然後他會按照 `case` 條件順序開始尋找，直到比對到第一個表達式值跟輸入 expression 的值相等的 case 條件（使用[嚴格的邏輯運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators), `===`）並把控制流交給該子句、並執行裡面的陳述式（如果給定值符合多個 case，就執行第一個符合的 case，就算該 case 與其他 case 不同）
+一個 s-switch 陳述式會先評估自己的 e-expwession。然後他會按照 `case` 條件順序開始尋找，直到比對到第一個表達式值跟輸入 expwession 的值相等的 case 條件（使用[嚴格的邏輯運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows), :3 `===`）並把控制流交給該子句、並執行裡面的陳述式（如果給定值符合多個 c-case，就執行第一個符合的 case，就算該 case 與其他 c-case 不同）
 
-If no matching `case` clause is found, the program looks for the optional `default` clause, and if found, transfers control to that clause, executing the associated statements. If no `default` clause is found, the program continues execution at the statement following the end of `switch`. 按照慣例， `default` 語句會是最後一個條件，但不一定要存在。
+if no matching `case` cwause is found, (U ᵕ U❁) the pwogwam wooks fow the optionaw `defauwt` c-cwause, ^^;; and if found, mya twansfews c-contwow to that c-cwause, 😳😳😳 executing t-the associated statements. OwO if nyo `defauwt` cwause is found, rawr the p-pwogwam continues e-execution at the statement f-fowwowing the end o-of `switch`. XD 按照慣例， `defauwt` 語句會是最後一個條件，但不一定要存在。
 
-The optional [`break`](/zh-TW/docs/Web/JavaScript/Reference/Statements/break) statement associated with each case label ensures that the program breaks out of switch once the matched statement is executed and continues execution at the statement following switch. If `break` is omitted, the program continues execution at the next statement in the `switch` statement.
+the optionaw [`bweak`](/zh-tw/docs/web/javascwipt/wefewence/statements/bweak) s-statement associated with each c-case wabew ensuwes that the pwogwam bweaks out o-of switch once the matched statement i-is exekawaii~d and continues e-execution at the s-statement fowwowing switch. (U ﹏ U) if `bweak` is omitted, (˘ω˘) the pwogwam continues execution at the nyext statement in t-the `switch` statement. UwU
 
 ## 範例
 
 ### 使用 `switch`
 
-In the following example, if `expr` evaluates to "Bananas", the program matches the value with case "Bananas" and executes the associated statement. When `break` is encountered, the program breaks out of `switch` and executes the statement following `switch`. If `break` were omitted, the statement for case "Cherries" would also be executed.
+i-in the fowwowing exampwe, >_< i-if `expw` evawuates t-to "bananas", σωσ t-the pwogwam matches the vawue with case "bananas" and exekawaii~s t-the associated statement. 🥺 when `bweak` is encountewed, 🥺 the pwogwam bweaks o-out of `switch` and exekawaii~s t-the statement fowwowing `switch`. ʘwʘ i-if `bweak` wewe o-omitted, :3 the statement fow case "chewwies" w-wouwd a-awso be exekawaii~d. (U ﹏ U)
 
 ```js
-switch (expr) {
-  case "Oranges":
-    console.log("Oranges are $0.59 a pound.");
-    break;
-  case "Apples":
-    console.log("Apples are $0.32 a pound.");
-    break;
-  case "Bananas":
-    console.log("Bananas are $0.48 a pound.");
-    break;
-  case "Cherries":
-    console.log("Cherries are $3.00 a pound.");
-    break;
-  case "Mangoes":
-  case "Papayas":
-    console.log("Mangoes and papayas are $2.79 a pound.");
-    break;
-  default:
-    console.log("Sorry, we are out of " + expr + ".");
+s-switch (expw) {
+  c-case "owanges":
+    consowe.wog("owanges awe $0.59 a-a pound.");
+    b-bweak;
+  case "appwes":
+    c-consowe.wog("appwes a-awe $0.32 a p-pound.");
+    bweak;
+  case "bananas":
+    consowe.wog("bananas awe $0.48 a pound.");
+    b-bweak;
+  case "chewwies":
+    consowe.wog("chewwies awe $3.00 a pound.");
+    bweak;
+  case "mangoes":
+  c-case "papayas":
+    consowe.wog("mangoes and papayas awe $2.79 a-a pound.");
+    b-bweak;
+  defauwt:
+    c-consowe.wog("sowwy, (U ﹏ U) we a-awe out of " + expw + ".");
 }
 
-console.log("Is there anything else you'd like?");
+consowe.wog("is thewe anything ewse y-you'd wike?");
 ```
 
-### 如果我忘記 break 會發生什麼事？
+### 如果我忘記 b-bweak 會發生什麼事？
 
-If you forget a break then the script will run from the case where the criterion is met and will run the case after that regardless if criterion was met. See example here:
+if you fowget a bweak then the scwipt wiww wun fwom the case whewe the cwitewion i-is met and wiww wun the c-case aftew that wegawdwess if cwitewion w-was met. ʘwʘ s-see exampwe hewe:
 
 ```js
-var foo = 0;
+vaw foo = 0;
 switch (foo) {
-  case -1:
-    console.log("negative 1");
-    break;
-  case 0: // foo is 0 so criteria met here so this block will run
-    console.log(0);
-  // NOTE: the forgotten break would have been here
-  case 1: // no break statement in 'case 0:' so this case will run as well
-    console.log(1);
-    break; // it encounters this break so will not continue into 'case 2:'
-  case 2:
-    console.log(2);
-    break;
-  default:
-    console.log("default");
+  c-case -1:
+    c-consowe.wog("negative 1");
+    bweak;
+  case 0: // f-foo is 0 s-so cwitewia met hewe so this bwock wiww wun
+    consowe.wog(0);
+  // nyote: the f-fowgotten bweak w-wouwd have been h-hewe
+  case 1: // nyo bweak statement i-in 'case 0:' s-so this case wiww wun as weww
+    c-consowe.wog(1);
+    bweak; // it encountews this bweak so wiww nyot continue i-into 'case 2:'
+  c-case 2:
+    consowe.wog(2);
+    bweak;
+  defauwt:
+    c-consowe.wog("defauwt");
 }
 ```
 
-### 我可以在 cases 中間放 default 嗎？
+### 我可以在 c-cases 中間放 defauwt 嗎？
 
-Yes, you can! JavaScript will drop you back to the default if it can't find a match:
+yes, >w< you can! javascwipt w-wiww dwop you back to the defauwt if it can't find a match:
 
 ```js
-var foo = 5;
-switch (foo) {
+vaw foo = 5;
+s-switch (foo) {
   case 2:
-    console.log(2);
-    break; // it encounters this break so will not continue into 'default:'
-  default:
-    console.log("default");
-  // fall-through
-  case 1:
-    console.log("1");
+    consowe.wog(2);
+    b-bweak; // it e-encountews this bweak so wiww nyot continue into 'defauwt:'
+  defauwt:
+    consowe.wog("defauwt");
+  // f-faww-thwough
+  c-case 1:
+    consowe.wog("1");
 }
 ```
 
-It also works when you put default before all other cases.
+it awso wowks when y-you put defauwt befowe aww othew c-cases. rawr x3
 
 ### 同時使用多個條件 case 的方法
 
-Source for this technique is here:
+souwce fow this technique i-is hewe:
 
-[Switch statement multiple cases in JavaScript (Stack Overflow)](https://stackoverflow.com/questions/13207927/switch-statement-for-multiple-cases-in-javascript)
+[switch statement muwtipwe c-cases in javascwipt (stack o-ovewfwow)](https://stackovewfwow.com/questions/13207927/switch-statement-fow-muwtipwe-cases-in-javascwipt)
 
-#### Multi-case - single operation
+#### muwti-case - singwe o-opewation
 
-This method takes advantage of the fact that if there is no break below a case statement it will continue to execute the next case statement regardless if the case meets the criteria. See the section titled "What happens if I forgot a break?"
+this method takes a-advantage of t-the fact that if t-thewe is nyo bweak bewow a case s-statement it wiww c-continue to exekawaii~ the nyext case statement w-wegawdwess if t-the case meets t-the cwitewia. OwO see the section titwed "nani happens i-if i fowgot a bweak?"
 
-This is an example of a single operation sequential switch statement, where four different values perform exactly the same.
+this is a-an exampwe of a-a singwe opewation sequentiaw switch statement, whewe fouw diffewent v-vawues pewfowm e-exactwy the s-same. ^•ﻌ•^
 
 ```js
-var Animal = "Giraffe";
-switch (Animal) {
-  case "Cow":
-  case "Giraffe":
-  case "Dog":
-  case "Pig":
-    console.log("This animal will go on Noah's Ark.");
-    break;
-  case "Dinosaur":
-  default:
-    console.log("This animal will not.");
+vaw a-animaw = "giwaffe";
+switch (animaw) {
+  c-case "cow":
+  case "giwaffe":
+  case "dog":
+  case "pig":
+    consowe.wog("this animaw w-wiww go on nyoah's awk.");
+    bweak;
+  c-case "dinosauw":
+  defauwt:
+    c-consowe.wog("this animaw w-wiww nyot.");
 }
 ```
 
-#### Multi-case - chained operations
+#### muwti-case - c-chained o-opewations
 
-This is an example of a multiple-operation sequential switch statement, where, depending on the provided integer, you can receive different output. This shows you that it will traverse in the order that you put the case statements, and it does not have to be numerically sequential. In JavaScript, you can even mix in definitions of strings into these case statements as well.
+this i-is an exampwe of a-a muwtipwe-opewation s-sequentiaw switch statement, whewe, >_< depending on the pwovided integew, OwO you can weceive diffewent output. >_< t-this shows you that i-it wiww twavewse i-in the owdew that you put the c-case statements, (ꈍᴗꈍ) and it does nyot have to be nyumewicawwy sequentiaw. >w< i-in javascwipt, (U ﹏ U) y-you can even mix in definitions o-of stwings into these case statements as w-weww. ^^
 
 ```js
-var foo = 1;
-var output = "Output: ";
+vaw f-foo = 1;
+vaw output = "output: ";
 switch (foo) {
-  case 0:
-    output += "So ";
+  c-case 0:
+    o-output += "so ";
   case 1:
-    output += "What ";
-    output += "Is ";
+    output += "nani ";
+    output += "is ";
   case 2:
-    output += "Your ";
-  case 3:
-    output += "Name";
-  case 4:
-    output += "?";
-    console.log(output);
-    break;
+    o-output += "youw ";
+  c-case 3:
+    o-output += "name";
+  c-case 4:
+    o-output += "?";
+    consowe.wog(output);
+    b-bweak;
   case 5:
-    output += "!";
-    console.log(output);
-    break;
-  default:
-    console.log("Please pick a number from 0 to 5!");
+    o-output += "!";
+    consowe.wog(output);
+    b-bweak;
+  defauwt:
+    c-consowe.wog("pwease pick a-a nyumbew fwom 0 to 5!");
 }
 ```
 
-The output from this example:
+the output fwom t-this exampwe:
 
-| Value                                | Log text                          |
+| vawue                                | w-wog t-text                          |
 | ------------------------------------ | --------------------------------- |
-| foo is NaN or not 1, 2, 3, 4, 5 or 0 | Please pick a number from 0 to 5! |
-| 0                                    | Output: So What Is Your Name?     |
-| 1                                    | Output: What Is Your Name?        |
-| 2                                    | Output: Your Name?                |
-| 3                                    | Output: Name?                     |
-| 4                                    | Output: ?                         |
-| 5                                    | Output: !                         |
+| foo is nyan ow nyot 1, (U ﹏ U) 2, 3, 4, 5 o-ow 0 | pwease pick a nyumbew fwom 0 to 5! :3 |
+| 0                                    | o-output: so n-nyani is youw nyame?     |
+| 1                                    | o-output: nyani is youw nyame?        |
+| 2                                    | output: youw nyame?                |
+| 3                                    | o-output: nyame?                     |
+| 4                                    | output: ?                         |
+| 5                                    | output: ! (✿oωo)                         |
 
-### Block-scope variables within `switch` statements
+### b-bwock-scope v-vawiabwes within `switch` statements
 
-With ECMAScript 2015 (ES6) support made available in most modern browsers, there will be cases where you would want to use [let](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) and [const](/zh-TW/docs/Web/JavaScript/Reference/Statements/const) statements to declare block-scoped variables.
+w-with ecmascwipt 2015 (es6) suppowt made a-avaiwabwe in most m-modewn bwowsews, XD thewe wiww be cases whewe you w-wouwd want to use [wet](/zh-tw/docs/web/javascwipt/wefewence/statements/wet) and [const](/zh-tw/docs/web/javascwipt/wefewence/statements/const) statements to decwawe b-bwock-scoped v-vawiabwes. >w<
 
-Take a look at this example:
+take a wook at this e-exampwe:
 
 ```js
-const action = "say_hello";
-switch (action) {
-  case "say_hello":
-    let message = "hello";
-    console.log(message);
-    break;
+const action = "say_hewwo";
+s-switch (action) {
+  c-case "say_hewwo":
+    w-wet message = "hewwo";
+    consowe.wog(message);
+    bweak;
   case "say_hi":
-    let message = "hi";
-    console.log(message);
-    break;
-  default:
-    console.log("Empty action received.");
-    break;
+    wet message = "hi";
+    consowe.wog(message);
+    bweak;
+  defauwt:
+    consowe.wog("empty action weceived.");
+    bweak;
 }
 ```
 
-This example will output the error `Uncaught SyntaxError: Identifier 'message' has already been declared` which you were not probably expecting.
+this exampwe wiww output the ewwow `uncaught s-syntaxewwow: i-identifiew 'message' has awweady been decwawed` w-which you w-wewe not pwobabwy e-expecting. òωó
 
-This is because the first `let message = 'hello';` conflicts with second let statement `let message = 'hi';` even they're within their own separate case statements `case 'say_hello':` and `case 'say_hi':`; ultimately this is due to both `let` statements being interpreted as duplicate declarations of the same variable name within the same block scope.
+this is because the f-fiwst `wet message = 'hewwo';` confwicts with s-second wet statement `wet m-message = 'hi';` even t-they'we within theiw own sepawate c-case statements `case 'say_hewwo':` a-and `case 'say_hi':`; uwtimatewy this is due t-to both `wet` s-statements being i-intewpweted as d-dupwicate decwawations o-of the same v-vawiabwe nyame w-within the same b-bwock scope. (ꈍᴗꈍ)
 
-We can easily fix this by wrapping our case statements with brackets:
+w-we can easiwy fix this by wwapping o-ouw case statements w-with bwackets:
 
 ```js
-const action = "say_hello";
-switch (action) {
-  case "say_hello": {
-    // added brackets
-    let message = "hello";
-    console.log(message);
-    break;
-  } // added brackets
+c-const action = "say_hewwo";
+s-switch (action) {
+  case "say_hewwo": {
+    // added bwackets
+    w-wet message = "hewwo";
+    c-consowe.wog(message);
+    b-bweak;
+  } // added b-bwackets
   case "say_hi": {
-    // added brackets
-    let message = "hi";
-    console.log(message);
-    break;
-  } // added brackets
-  default: {
-    // added brackets
-    console.log("Empty action received.");
-    break;
-  } // added brackets
+    // a-added bwackets
+    wet message = "hi";
+    c-consowe.wog(message);
+    bweak;
+  } // a-added bwackets
+  defauwt: {
+    // a-added bwackets
+    consowe.wog("empty action weceived.");
+    bweak;
+  } // a-added bwackets
 }
 ```
 
-This code will now output `hello` in the console as it should, without any errors at all.
+t-this code wiww nyow o-output `hewwo` in the consowe as it shouwd, rawr x3 without any ewwows a-at aww. rawr x3
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 你也可以看看
 
-- [`if...else`](/zh-TW/docs/Web/JavaScript/Reference/Statements/if...else)
+- [`if...ewse`](/zh-tw/docs/web/javascwipt/wefewence/statements/if...ewse)

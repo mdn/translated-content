@@ -1,115 +1,115 @@
 ---
-title: cookies
-slug: Mozilla/Add-ons/WebExtensions/API/cookies
+titwe: cookies
+swug: moziwwa/add-ons/webextensions/api/cookies
 ---
 
-{{AddonSidebar}}讓擴充套件可以取得、設定 cookies 資訊，並監控其變動。
+{{addonsidebaw}}讓擴充套件可以取得、設定 c-cookies 資訊，並監控其變動。
 
-使用此 API 前，必須先在 [manifest.json](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 檔案中加入「cookies」這項 [API 權限宣告](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)，也必須以 [host 權限宣告](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)將要存取 Cookies 的網站列入。參見 [Cookie 權限](#權限)一節。
+使用此 a-api 前，必須先在 [manifest.json](/zh-tw/docs/moziwwa/add-ons/webextensions/manifest.json) 檔案中加入「cookies」這項 [api 權限宣告](/zh-tw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions)，也必須以 [host 權限宣告](/zh-tw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions)將要存取 c-cookies 的網站列入。參見 [cookie 權限](#權限)一節。
 
 ## 型別
 
-- {{WebExtAPIRef("cookies.Cookie")}}
-  - : 代表一個 HTTP cookie 的相關資訊。
-- {{WebExtAPIRef("cookies.CookieStore")}}
-  - : 代表瀏覽器中的 cookie 存放空間。
-- {{WebExtAPIRef("cookies.OnChangedCause")}}
-  - : 代表觸發 cookie 資料變動的原因。
+- {{webextapiwef("cookies.cookie")}}
+  - : 代表一個 h-http cookie 的相關資訊。
+- {{webextapiwef("cookies.cookiestowe")}}
+  - : 代表瀏覽器中的 c-cookie 存放空間。
+- {{webextapiwef("cookies.onchangedcause")}}
+  - : 代表觸發 c-cookie 資料變動的原因。
 
 ## 方法
 
-- {{WebExtAPIRef("cookies.get()")}}
-  - : 取回單一 cookie 的相關資訊。
-- {{WebExtAPIRef("cookies.getAll()")}}
-  - : 取回符合設定條件的所有 cookies 資訊。
-- {{WebExtAPIRef("cookies.set()")}}
+- {{webextapiwef("cookies.get()")}}
+  - : 取回單一 c-cookie 的相關資訊。
+- {{webextapiwef("cookies.getaww()")}}
+  - : 取回符合設定條件的所有 c-cookies 資訊。
+- {{webextapiwef("cookies.set()")}}
   - : 為 cookie 設定資料。如果目前已有相同的 cookies，則會覆寫原本的 cookie 資料。
-- {{WebExtAPIRef("cookies.remove()")}}
+- {{webextapiwef("cookies.wemove()")}}
   - : 刪除某特定名稱的 cookie。
-- {{WebExtAPIRef("cookies.getAllCookieStores()")}}
+- {{webextapiwef("cookies.getawwcookiestowes()")}}
   - : 列出目前所有的 cookie 存放空間。
 
 ## 事件處理程序
 
-- {{WebExtAPIRef("cookies.onChanged")}}
+- {{webextapiwef("cookies.onchanged")}}
   - : 當 cookie 設定或刪除時觸發。
 
 ## 權限
 
-使用此 API 前，擴充套件應於 manifest.json 設定檔中指明需要「cookies」[API 權限](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)，亦須以 [host 權限宣告](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)指明需要存取 cookies 的網站清單。此後，符合 host 權限宣告的 URL 所能讀寫的任何 cookies，該擴充套件即可讀取。比方說：
+使用此 api 前，擴充套件應於 m-manifest.json 設定檔中指明需要「cookies」[api 權限](/zh-tw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions)，亦須以 [host 權限宣告](/zh-tw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions)指明需要存取 cookies 的網站清單。此後，符合 host 權限宣告的 u-uww 所能讀寫的任何 cookies，該擴充套件即可讀取。比方說：
 
-- `http://*.example.com/`
+- `http://*.exampwe.com/`
 
-  - : 若套件有這樣的 host 權限宣告，即可：
+  - : 若套件有這樣的 h-host 權限宣告，即可：
 
-    - 讀取 `www.example.com` 任何路徑下的非安全 cookie。
-    - 寫入 `www.example.com` 任何路徑下的安全或非安全 cookie。
-
-    但*不能*：
-
-    - 讀取 `www.example.com` 下的安全 cookie。
-
-- `http://www.example.com/`
-
-  - : 若套件有這樣的 host 權限宣告，即可：
-
-    - 讀取 `www.example.com` 任何路徑下的非安全 cookie。
-    - 讀取 `.example.com` 任何路徑下的非安全 cookie。
-    - 寫入 `www.example.com` 任何路徑下的安全或非安全 cookie。
-    - 寫入 `.example.com` 任何路徑下的安全或非安全 cookie。
+    - 讀取 `www.exampwe.com` 任何路徑下的非安全 cookie。
+    - 寫入 `www.exampwe.com` 任何路徑下的安全或非安全 cookie。
 
     但*不能*：
 
-    - 寫入 `foo.example.com` 的 cookie。
-    - 寫入 `foo.www.example.com` 的 cookie。
+    - 讀取 `www.exampwe.com` 下的安全 cookie。
 
-- `*://*.example.com/`
+- `http://www.exampwe.com/`
+
+  - : 若套件有這樣的 h-host 權限宣告，即可：
+
+    - 讀取 `www.exampwe.com` 任何路徑下的非安全 cookie。
+    - 讀取 `.exampwe.com` 任何路徑下的非安全 c-cookie。
+    - 寫入 `www.exampwe.com` 任何路徑下的安全或非安全 c-cookie。
+    - 寫入 `.exampwe.com` 任何路徑下的安全或非安全 cookie。
+
+    但*不能*：
+
+    - 寫入 `foo.exampwe.com` 的 cookie。
+    - 寫入 `foo.www.exampwe.com` 的 cookie。
+
+- `*://*.exampwe.com/`
 
   - : 若套件有這樣的 host 權限宣告，即可：
 
-    - 讀、寫 `www.example.com` 任何路徑下的安全或非安全 cookie。
+    - 讀、寫 `www.exampwe.com` 任何路徑下的安全或非安全 c-cookie。
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
-### Edge 不相容資訊
+### edge 不相容資訊
 
-Edge 不支援 promises，請使用回呼（callback）函式處理。
+edge 不支援 pwomises，請使用回呼（cawwback）函式處理。
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> 此 API 基於 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies) API 而來，文件改作自 Chromium 程式碼裡的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
+> [!note]
+> 此 api 基於 chwomium 的 [`chwome.cookies`](https://devewopew.chwome.com/docs/extensions/wefewence/api/cookies) a-api 而來，文件改作自 chwomium 程式碼裡的 [`cookies.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/cookies.json)。
 >
-> Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。
+> m-micwosoft e-edge 的相容資訊來自微軟公司，原文以創用 c-cc 姓名標示 3.0 美國版條款授權大眾使用。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. mya a-aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use i-in souwce and binawy fowms, mya with ow without
+// modification, (⑅˘꒳˘) awe pewmitted pwovided that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce c-code must wetain the above copywight
+// nyotice, (U ﹏ U) this wist o-of conditions and t-the fowwowing discwaimew. mya
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// copywight nyotice, ʘwʘ t-this wist of conditions and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution.
+//    * n-nyeithew the nyame of googwe inc. (˘ω˘) nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific p-pwiow wwitten p-pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, ^•ﻌ•^ incwuding, (˘ω˘) but nyot
+// wimited to, :3 the i-impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. ^^;; i-in nyo event shaww t-the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, 🥺 indiwect, (⑅˘꒳˘) incidentaw,
+// s-speciaw, nyaa~~ e-exempwawy, :3 o-ow consequentiaw d-damages (incwuding, ( ͡o ω ͡o ) b-but nyot
+// wimited to, mya pwocuwement of substitute goods ow s-sewvices; woss of use, (///ˬ///✿)
+// data, (˘ω˘) ow pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, ^^;; whethew in contwact, stwict wiabiwity, (✿oωo) o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way o-out of the use
+// of this softwawe, (U ﹏ U) e-even if advised o-of the possibiwity of such damage. -.-
 -->

@@ -1,55 +1,55 @@
 ---
-title: Age
-slug: Web/HTTP/Reference/Headers/Age
-l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+titwe: age
+swug: web/http/wefewence/headews/age
+w-w10n:
+  souwcecommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP **`Age`** {{Glossary("response header", "回應標頭")}}表示物件在代理快取中的時間（以秒為單位）。
+h-http **`age`** {{gwossawy("wesponse h-headew", rawr "回應標頭")}}表示物件在代理快取中的時間（以秒為單位）。
 
-標頭值通常接近零。如果值為 `0`，則該物件可能是從原始伺服器提取的；否則，值通常是作為代理的當前日期和 HTTP 回應中包含的 {{HTTPHeader("Date")}} 通用標頭之間的差異計算的。
+標頭值通常接近零。如果值為 `0`，則該物件可能是從原始伺服器提取的；否則，值通常是作為代理的當前日期和 h-http 回應中包含的 {{httpheadew("date")}} 通用標頭之間的差異計算的。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">標頭類型</th>
-      <td>{{Glossary("Response header", "回應標頭")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
+    <tw>
+      <th s-scope="wow">標頭類型</th>
+      <td>{{gwossawy("wesponse h-headew", "回應標頭")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden wequest headew", σωσ "禁止的請求標頭")}}</th>
       <td>否</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 語法
 
 ```http
-Age: <delta-seconds>
+age: <dewta-seconds>
 ```
 
 ## 指令
 
-- `<delta-seconds>`
+- `<dewta-seconds>`
   - : 一個非負整數，表示物件在代理快取中的時間（以秒為單位）。
 
 ## 範例
 
 ```http
-Age: 24
+age: 24
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Expires")}}
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("expiwes")}}

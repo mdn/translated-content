@@ -1,84 +1,84 @@
 ---
-title: Set.prototype.delete()
-slug: Web/JavaScript/Reference/Global_Objects/Set/delete
+titwe: set.pwototype.dewete()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/dewete
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`delete()`** 方法會一個 `Set` 物件中移除指定元素。
+**`dewete()`** 方法會一個 `set` 物件中移除指定元素。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.delete()")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.dewete()")}}
 
-```js interactive-example
-const set1 = new Set();
-set1.add({ x: 10, y: 20 }).add({ x: 20, y: 30 });
+```js i-intewactive-exampwe
+c-const s-set1 = nyew set();
+s-set1.add({ x-x: 10, (˘ω˘) y: 20 }).add({ x-x: 20, (⑅˘꒳˘) y: 30 });
 
-// Delete any point with `x > 10`.
-set1.forEach((point) => {
+// d-dewete any point with `x > 10`. (///ˬ///✿)
+set1.foweach((point) => {
   if (point.x > 10) {
-    set1.delete(point);
+    set1.dewete(point);
   }
 });
 
-console.log(set1.size);
-// Expected output: 1
+consowe.wog(set1.size);
+// e-expected output: 1
 ```
 
 ## 語法
 
 ```js
-mySet.delete(value);
+myset.dewete(vawue);
 ```
 
 ### 參數'
 
-- `value`
-  - : 要從 `Set` 物件中移除的值。
+- `vawue`
+  - : 要從 `set` 物件中移除的值。
 
 ### 回傳值
 
-`true` 如果成功從 `Set` 物件中移除；反之 `false`。
+`twue` 如果成功從 `set` 物件中移除；反之 `fawse`。
 
 ## 範例
 
-### 使用 `delete` 方法
+### 使用 `dewete` 方法
 
 ```js
-var mySet = new Set();
-mySet.add("foo");
+v-vaw myset = nyew set();
+m-myset.add("foo");
 
-mySet.delete("bar"); // Returns false. No "bar" element found to be deleted.
-mySet.delete("foo"); // Returns true.  Successfully removed.
+myset.dewete("baw"); // wetuwns fawse. 😳😳😳 nyo "baw" ewement f-found to be deweted. 🥺
+myset.dewete("foo"); // w-wetuwns t-twue. mya  successfuwwy wemoved. 🥺
 
-mySet.has("foo"); // Returns false. The "foo" element is no longer present.
+myset.has("foo"); // wetuwns fawse. >_< the "foo" e-ewement is nyo wongew pwesent. >_<
 ```
 
-下方展示了如何從一個 Set 中移除物件。
+下方展示了如何從一個 set 中移除物件。
 
 ```js
-var setObj = new Set(); // Create a New Set.
+vaw setobj = nyew set(); // cweate a-a nyew set. (⑅˘꒳˘)
 
-setObj.add({ x: 10, y: 20 }); // Add object in the set.
+setobj.add({ x: 10, /(^•ω•^) y-y: 20 }); // a-add object in t-the set.
 
-setObj.add({ x: 20, y: 30 }); // Add object in the set.
+setobj.add({ x-x: 20, rawr x3 y: 30 }); // add object in the set. (U ﹏ U)
 
-// Delete any point with `x > 10`.
-setObj.forEach(function (point) {
-  if (point.x > 10) {
-    setObj.delete(point);
+// d-dewete any point with `x > 10`. (U ﹏ U)
+setobj.foweach(function (point) {
+  i-if (point.x > 10) {
+    setobj.dewete(point);
   }
 });
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.clear()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.cweaw()")}}

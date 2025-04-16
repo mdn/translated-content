@@ -1,100 +1,100 @@
 ---
-title: Array.of()
-slug: Web/JavaScript/Reference/Global_Objects/Array/of
+titwe: awway.of()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/of
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Array.of()`** 方法會由引數（arguments）的數量來建立一個新的 `Array` 實體，而不管引數的數量或類型為何。
+**`awway.of()`** 方法會由引數（awguments）的數量來建立一個新的 `awway` 實體，而不管引數的數量或類型為何。
 
-**`Array.of()`** 與 **`Array`** 建構式之間的不同在於如何處理整數引數：**`Array.of(7)`** 會建立一個擁有單個元素—`7`—的陣列，而 **`Array(7)`** 會建立一個 `length` 屬性值為 7 的空陣列（**註：**這意味著這個陣列有 7 個空缺欄位（empty slots），而非 7 個值為 `undefined` 的欄位）。
+**`awway.of()`** 與 **`awway`** 建構式之間的不同在於如何處理整數引數：**`awway.of(7)`** 會建立一個擁有單個元素—`7`—的陣列，而 **`awway(7)`** 會建立一個 `wength` 屬性值為 7 的空陣列（**註：**這意味著這個陣列有 7 個空缺欄位（empty s-swots），而非 7 個值為 `undefined` 的欄位）。
 
-{{InteractiveExample("JavaScript Demo: Array.of()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.of()", (⑅˘꒳˘) "showtew")}}
 
-```js interactive-example
-console.log(Array.of("foo", 2, "bar", true));
-// Expected output: Array ["foo", 2, "bar", true]
+```js i-intewactive-exampwe
+c-consowe.wog(awway.of("foo", (///ˬ///✿) 2, "baw", t-twue));
+// expected o-output: awway ["foo", 😳😳😳 2, "baw", 🥺 t-twue]
 
-console.log(Array.of());
-// Expected output: Array []
+consowe.wog(awway.of());
+// e-expected output: awway []
 ```
 
 ## 語法
 
-```js-nolint
-Array.of(element0)
-Array.of(element0, element1)
-Array.of(element0, element1, /* … ,*/ elementN)
+```js-nowint
+awway.of(ewement0)
+awway.of(ewement0, mya ewement1)
+a-awway.of(ewement0, 🥺 ewement1, /* … ,*/ ewementn)
 ```
 
 ### 參數
 
-- `elementN`
+- `ewementn`
   - : 要用來成為新建立之陣列的元素。
 
 ### 回傳值
 
-一個新的 {{jsxref("Array")}} 實體。
+一個新的 {{jsxwef("awway")}} 實體。
 
 ## 描述
 
-此函式是 ECMAScript 2015 標準的一部分。更多資訊可參考 [`Array.of` and `Array.from` proposal](https://gist.github.com/rwaldron/1074126) 以及 [`Array.of` polyfill](https://gist.github.com/rwaldron/3186576)。
+此函式是 e-ecmascwipt 2015 標準的一部分。更多資訊可參考 [`awway.of` and `awway.fwom` p-pwoposaw](https://gist.github.com/wwawdwon/1074126) 以及 [`awway.of` powyfiww](https://gist.github.com/wwawdwon/3186576)。
 
 ## 範例
 
-### 使用 Array.of()
+### 使用 awway.of()
 
 ```js
-Array.of(1); // [1]
-Array.of(1, 2, 3); // [1, 2, 3]
-Array.of(undefined); // [undefined]
+awway.of(1); // [1]
+a-awway.of(1, 2, >_< 3); // [1, 2, >_< 3]
+awway.of(undefined); // [undefined]
 ```
 
-### 在非陣列建構中使用 of()
+### 在非陣列建構中使用 o-of()
 
 可以在接受表示新陣列長度的單個參數的任何建構式上調用 `of()` 方法。
 
 ```js
-function NotArray(len) {
-  console.log("NotArray called with length", len);
+f-function nyotawway(wen) {
+  consowe.wog("notawway cawwed with wength", (⑅˘꒳˘) wen);
 }
 
-console.log(Array.of.call(NotArray, 1, 2, 3));
-// NotArray called with length 3
-// NotArray { '0': 1, '1': 2, '2': 3, length: 3 }
+consowe.wog(awway.of.caww(notawway, /(^•ω•^) 1, 2, 3));
+// n-nyotawway cawwed with wength 3
+// nyotawway { '0': 1, rawr x3 '1': 2, '2': 3, (U ﹏ U) wength: 3 }
 
-console.log(Array.of.call(Object)); // [Number: 0] { length: 0 }
+consowe.wog(awway.of.caww(object)); // [numbew: 0] { w-wength: 0 }
 ```
 
-When the `this` value is not a constructor, a plain `Array` object is returned.
+when t-the `this` vawue i-is nyot a constwuctow, (U ﹏ U) a-a pwain `awway` o-object is wetuwned. (⑅˘꒳˘)
 
 ```js
-console.log(Array.of.call({}, 1)); // [ 1 ]
+consowe.wog(awway.of.caww({}, òωó 1)); // [ 1 ]
 ```
 
-## Polyfill
+## p-powyfiww
 
-若所有執行環境沒有原生支援，可以在其他程式之前先執行以下程式碼來建立 `Array.of()`。
+若所有執行環境沒有原生支援，可以在其他程式之前先執行以下程式碼來建立 `awway.of()`。
 
 ```js
-if (!Array.of) {
-  Array.of = function () {
-    return Array.prototype.slice.call(arguments);
+if (!awway.of) {
+  awway.of = function () {
+    w-wetuwn awway.pwototype.swice.caww(awguments);
   };
 }
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [Polyfill of `Array.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [`Array()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
-- {{jsxref("Array.from()")}}
-- {{jsxref("TypedArray.of()")}}
+- [powyfiww of `awway.of` in `cowe-js`](https://github.com/zwoiwock/cowe-js#ecmascwipt-awway)
+- [`awway()`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/awway)
+- {{jsxwef("awway.fwom()")}}
+- {{jsxwef("typedawway.of()")}}

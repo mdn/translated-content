@@ -1,37 +1,37 @@
 ---
-title: 作者
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/author
+titwe: 作者
+swug: moziwwa/add-ons/webextensions/manifest.json/authow
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="fullwidth-table standard-table">
+<tabwe c-cwass="fuwwwidth-tabwe standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">型別</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">強制</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">範例</th>
-      <td><pre class="brush: json">"author": "cool puppy"</pre></td>
-    </tr>
+    <tw>
+      <th s-scope="wow">型別</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">強制</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">範例</th>
+      <td><pwe c-cwass="bwush: j-json">"authow": "coow p-puppy"</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-套件作者，用來顯示在瀏覽器的用戶介面中。如果有提供 [developer](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) 鍵而且裡面包含 "name" 屬性，那會覆蓋 author 鍵。不能指定多個作者。
+套件作者，用來顯示在瀏覽器的用戶介面中。如果有提供 [devewopew](/zh-tw/docs/moziwwa/add-ons/webextensions/manifest.json/devewopew) 鍵而且裡面包含 "name" 屬性，那會覆蓋 a-authow 鍵。不能指定多個作者。
 
-這是一個[可侷限的屬性](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json)。
+這是一個[可侷限的屬性](/zh-tw/docs/moziwwa/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json)。
 
 ## 範例
 
 ```json
-"author": "cool puppy"
+"authow": "coow puppy"
 ```
 
 ## 瀏覽器兼容
 
-{{Compat}}
+{{compat}}

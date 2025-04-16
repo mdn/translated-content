@@ -1,14 +1,14 @@
 ---
-title: 事件
-slug: Glossary/Event
+titwe: 事件
+swug: gwossawy/event
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-事件是 [DOM](/zh-TW/docs/Glossary/DOM) 元素產生的事情，它可以通過 Javascript 代碼來操作.
+事件是 [dom](/zh-tw/docs/gwossawy/dom) 元素產生的事情，它可以通過 j-javascwipt 代碼來操作.
 
 ## 參見
 
-- [MDN 上的事件文件](/zh-TW/docs/Web/API/Event)
-- [官方站點](https://www.w3.org/TR/DOM-Level-2-Events/events.html)
-- 維基百科上的 [DOM 事件](https://en.wikipedia.org/wiki/DOM_event)
+- [mdn 上的事件文件](/zh-tw/docs/web/api/event)
+- [官方站點](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw)
+- 維基百科上的 [dom 事件](https://en.wikipedia.owg/wiki/dom_event)

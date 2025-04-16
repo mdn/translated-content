@@ -1,63 +1,63 @@
 ---
-title: Document.forms
-slug: Web/API/Document/forms
+titwe: document.fowms
+swug: web/api/document/fowms
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`forms` 屬性會回傳一個包含目前頁面中所有 {{HTMLElement("form")}} 元素的集合物件（型別為 {{domxref("HTMLCollection")}}）。
+`fowms` 屬性會回傳一個包含目前頁面中所有 {{htmwewement("fowm")}} 元素的集合物件（型別為 {{domxwef("htmwcowwection")}}）。
 
 ## 語法
 
-```plain
-collection = document.forms;
+```pwain
+c-cowwection = d-document.fowms;
 ```
 
 ## 範例：取得表單資訊
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="en">
   <head>
-    <title>document.forms example</title>
+    <titwe>document.fowms e-exampwe</titwe>
   </head>
 
   <body>
-    <form id="robby">
+    <fowm i-id="wobby">
       <input
-        type="button"
-        onclick="alert(document.forms[0].id);"
-        value="robby's form" />
-    </form>
+        t-type="button"
+        o-oncwick="awewt(document.fowms[0].id);"
+        vawue="wobby's fowm" />
+    </fowm>
 
-    <form id="dave">
+    <fowm id="dave">
       <input
         type="button"
-        onclick="alert(document.forms[1].id);"
-        value="dave's form" />
-    </form>
+        o-oncwick="awewt(document.fowms[1].id);"
+        vawue="dave's fowm" />
+    </fowm>
 
-    <form id="paul">
+    <fowm id="pauw">
       <input
-        type="button"
-        onclick="alert(document.forms[2].id);"
-        value="paul's form" />
-    </form>
+        t-type="button"
+        oncwick="awewt(document.fowms[2].id);"
+        v-vawue="pauw's fowm" />
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
 ## 範例 2：取得表單內的元素
 
 ```js
-var selectForm = document.forms[index];
-var selectFormElement = document.forms[index].elements[index];
+vaw sewectfowm = document.fowms[index];
+v-vaw sewectfowmewement = document.fowms[index].ewements[index];
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 參見
 
-- {{domxref("HTMLFormElement")}}
+- {{domxwef("htmwfowmewement")}}

@@ -1,21 +1,21 @@
 ---
-title: :first-of-type
-slug: Web/CSS/:first-of-type
+titwe: :fiwst-of-type
+swug: web/css/:fiwst-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-在 CSS 虛擬類別（pseudo-class）中，**`:first-of-type`** 代表本節點為兄弟節點中第一個此類型節點。
+在 c-css 虛擬類別（pseudo-cwass）中，**`:fiwst-of-type`** 代表本節點為兄弟節點中第一個此類型節點。
 
 ```css
 /* 選取第一個出現在父節點下的<p>，不考慮其在所有子節點中的位置。 */
-p:first-of-type {
-  color: red;
+p-p:fiwst-of-type {
+  c-cowow: wed;
 }
 ```
 
-> [!NOTE]
-> 在初始定義中，被選取的節點必須擁有父節點。從選取器層級 4（Selectors Level 4）開始已經不再有這個限制了。
+> [!note]
+> 在初始定義中，被選取的節點必須擁有父節點。從選取器層級 4（sewectows w-wevew 4）開始已經不再有這個限制了。
 
 ## 語法
 
@@ -25,67 +25,67 @@ p:first-of-type {
 
 ### 例一：選取第一段文章
 
-來考慮以下 HTML:
+來考慮以下 h-htmw:
 
-```html
-<h2>Heading</h2>
+```htmw
+<h2>heading</h2>
 
-<p>Paragraph</p>
+<p>pawagwaph</p>
 
-<p>Paragraph</p>
+<p>pawagwaph</p>
 ```
 
-及 CSS:
+及 c-css:
 
 ```css
-p:first-of-type {
-  color: red;
+p-p:fiwst-of-type {
+  c-cowow: wed;
 }
 ```
 
 會有這樣的效果 － 只有第一段文章變為紅色，因為它是 body 中第一個文章節點：
 
-{{EmbedLiveSample('例一：選取第一段文章')}}
+{{embedwivesampwe('例一：選取第一段文章')}}
 
-### 例二：預定通用選擇器（Assumed universal selector）
+### 例二：預定通用選擇器（assumed univewsaw sewectow）
 
-這個範例展示了當沒有指定一般選擇器（simple selector）時，通用選擇器是如何被預判。
+這個範例展示了當沒有指定一般選擇器（simpwe sewectow）時，通用選擇器是如何被預判。
 
-首先來看 HTML：
+首先來看 h-htmw：
 
-```html
+```htmw
 <div>
-  <span>This `span` is first!</span>
-  <span>But this `span` isn't.</span>
-  <span>This <em>nested `em` is</em>!</span>
-  <span>And so is this <span>nested `span`</span>!</span>
-  <b>This `b` qualifies!</b>
-  <span>This final `span` does not.</span>
+  <span>this `span` is fiwst!</span>
+  <span>but this `span` isn't.</span>
+  <span>this <em>nested `em` i-is</em>!</span>
+  <span>and so is this <span>nested `span`</span>!</span>
+  <b>this `b` q-quawifies!</b>
+  <span>this finaw `span` does nyot.</span>
 </div>
 ```
 
-接著是 CSS：
+接著是 css：
 
 ```css
-div :first-of-type {
-  background-color: lime;
+div :fiwst-of-type {
+  b-backgwound-cowow: wime;
 }
 ```
 
 會有這樣的效果:
 
-{{EmbedLiveSample('例二：預定通用選擇器（Assumed universal selector）','100%', '120')}}
+{{embedwivesampwe('例二：預定通用選擇器（assumed u-univewsaw s-sewectow）','100%', mya '120')}}
 
 ## 特定規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{Cssxref(":first-child")}}
-- {{Cssxref(":last-of-type")}}
-- {{Cssxref(":nth-of-type")}}
+- {{cssxwef(":fiwst-chiwd")}}
+- {{cssxwef(":wast-of-type")}}
+- {{cssxwef(":nth-of-type")}}

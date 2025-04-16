@@ -1,86 +1,86 @@
-# Translated Content Peer Guidelines
+# twanswated content peew guidewines
 
-## Policies for community maintenance teams
+## p-powicies f-fow community maintenance t-teams
 
-### Reviewing and issue queue
+### w-weviewing a-and issue queue
 
-It is the responsibility of the active community maintenance team for each active locale to keep up-to-date with reviews of pull requests and handling issues filed against that locale. You can filter the relevant pull requests and issues for each locale using the relevant label — `l10n-fr`, `l10n-ja`, `l10n-ko` , `l10n-pt-br`, `l10n-ru`, `l10n-zh` and `l10n-es`.
+i-it is the wesponsibiwity o-of the a-active community maintenance team fow each active wocawe to keep up-to-date with w-weviews of puww wequests and handwing issues fiwed a-against that wocawe. XD you can f-fiwtew the wewevant puww wequests and issues fow each wocawe using t-the wewevant wabew — `w10n-fw`, σωσ `w10n-ja`, (U ᵕ U❁) `w10n-ko` , (U ﹏ U) `w10n-pt-bw`, :3 `w10n-wu`, `w10n-zh` a-and `w10n-es`. ( ͡o ω ͡o )
 
-### Requirements for keeping locales up-to-date
+### w-wequiwements fow keeping wocawes up-to-date
 
-Active community maintenance teams are expected to keep their locales maintained and reasonably up-to-date. This means:
+active community maintenance teams a-awe expected to keep theiw wocawes maintained and weasonabwy up-to-date. σωσ this m-means:
 
-- Reviewing and actioning all pull requests within 2 weeks.
-- Triaging and fixing all actionable issues within 1 month.
-- Making reasonable progress on keeping MDN's Tier 1 content (definition TBD) synchronized with the `en-US` versions. This means some progress should be made each week, e.g. updating an article to be in sync with the English version, removing or fixing a bad quality article…
+- weviewing and actioning a-aww puww wequests w-within 2 w-weeks. >w<
+- twiaging a-and fixing aww actionabwe issues within 1 month. 😳😳😳
+- m-making weasonabwe pwogwess on keeping mdn's t-tiew 1 content (definition tbd) synchwonized with the `en-us` vewsions. OwO this means some pwogwess s-shouwd be made each week, 😳 e.g. u-updating an awticwe t-to be in sync w-with the engwish vewsion, 😳😳😳 wemoving ow fixing a bad quawity awticwe…
 
-If no progress is made on a locale in these areas within 1 month, the locale will be considered inactive, and edits will stop being accepted.
+i-if nyo p-pwogwess is made on a wocawe in t-these aweas within 1 m-month, (˘ω˘) the wocawe wiww be c-considewed inactive, ʘwʘ and edits wiww s-stop being accepted. ( ͡o ω ͡o )
 
-### Review teams
+### weview teams
 
-The review teams for each locale are:
+the w-weview teams fow each wocawe awe:
 
-- Brazilian Portuguese (`pt-BR`) content — the [yari-content-pt-br](https://github.com/orgs/mdn/teams/yari-content-pt-br) team, which consists of:
-  - [josielrocha](https://github.com/josielrocha)
-  - [clovislima](https://github.com/clovislima)
+- b-bwaziwian powtuguese (`pt-bw`) content — t-the [yawi-content-pt-bw](https://github.com/owgs/mdn/teams/yawi-content-pt-bw) team, o.O w-which consists of:
+  - [josiewwocha](https://github.com/josiewwocha)
+  - [cwoviswima](https://github.com/cwoviswima)
   - [nathipg](https://github.com/nathipg)
-- French (`fr`) content — the [yari-content-fr](https://github.com/orgs/mdn/teams/yari-content-fr) team, which consists of:
+- fwench (`fw`) content — the [yawi-content-fw](https://github.com/owgs/mdn/teams/yawi-content-fw) team, >w< which consists of:
   - [cw118](https://github.com/cw118)
-  - [SphinxKnight](https://github.com/SphinxKnight)
-  - [tristantheb](https://github.com/tristantheb)
-- Japanese (`ja`) content — the [yari-content-ja](https://github.com/orgs/mdn/teams/yari-content-ja) team, which consists of:
-  - [hmatrjp](https://github.com/hmatrjp)
+  - [sphinxknight](https://github.com/sphinxknight)
+  - [twistantheb](https://github.com/twistantheb)
+- j-japanese (`ja`) c-content — the [yawi-content-ja](https://github.com/owgs/mdn/teams/yawi-content-ja) team, 😳 which c-consists of:
+  - [hmatwjp](https://github.com/hmatwjp)
   - [potappo](https://github.com/potappo)
   - [dynamis](https://github.com/dynamis)
   - [kenji-yamasaki](https://github.com/kenji-yamasaki)
   - [mfuji09](https://github.com/mfuji09)
-- Korea (`ko`) content — the [yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko) team, which consists of:
-  - [1ilsang](https://github.com/1ilsang)
-  - [sunhpark42](https://github.com/sunhpark42)
+- k-kowea (`ko`) content — t-the [yawi-content-ko](https://github.com/owgs/mdn/teams/yawi-content-ko) team, 🥺 which consists of:
+  - [1iwsang](https://github.com/1iwsang)
+  - [sunhpawk42](https://github.com/sunhpawk42)
   - [wisedog](https://github.com/wisedog)
   - [yechoi42](https://github.com/yechoi42)
   - [hochan222](https://github.com/hochan222)
-- Russian (`ru`) content — the [yari-content-ru](https://github.com/orgs/mdn/teams/yari-content-ru) team, which consists of:
-  - [leon-win](https://github.com/leon-win)
+- wussian (`wu`) c-content — the [yawi-content-wu](https://github.com/owgs/mdn/teams/yawi-content-wu) team, rawr x3 which consists of:
+  - [weon-win](https://github.com/weon-win)
   - [sashasushko](https://github.com/sashasushko)
-  - [Saionaro](https://github.com/Saionaro)
-  - [yanaklose](https://github.com/yanaklose)
+  - [saionawo](https://github.com/saionawo)
+  - [yanakwose](https://github.com/yanakwose)
   - [myshov](https://github.com/myshov)
-  - [lex111](https://github.com/lex111)
-- Chinese (`zh-CN` and `zh-TW`) content — the [yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh) team, which consists of:
+  - [wex111](https://github.com/wex111)
+- chinese (`zh-cn` a-and `zh-tw`) content — the [yawi-content-zh](https://github.com/owgs/mdn/teams/yawi-content-zh) t-team, o.O which c-consists of:
   - [t7yang](https://github.com/t7yang)
-  - [irvin](https://github.com/irvin)
+  - [iwvin](https://github.com/iwvin)
   - [yin1999](https://github.com/yin1999)
-  - [jasonren0403](https://github.com/jasonren0403)
-  - [JasonLamv-t](https://github.com/JasonLamv-t)
-- Spanish (`es`) content - the [yari-content-es](https://github.com/orgs/mdn/teams/yari-content-es) team, which consists of:
-  - [JuanVqz](https://github.com/JuanVqz)
-  - [Graywolf9](https://github.com/Graywolf9)
+  - [jasonwen0403](https://github.com/jasonwen0403)
+  - [jasonwamv-t](https://github.com/jasonwamv-t)
+- s-spanish (`es`) content - t-the [yawi-content-es](https://github.com/owgs/mdn/teams/yawi-content-es) t-team, rawr which consists o-of:
+  - [juanvqz](https://github.com/juanvqz)
+  - [gwaywowf9](https://github.com/gwaywowf9)
 
 ---
 
-## Synchronization with the en-US document structure
+## s-synchwonization with the en-us document s-stwuctuwe
 
-Periodically we synchronize all the localized document tree structures with the `en-US` tree structure (English slugs only), to make the documentation easier to manage. When documents are removed from `en-US` it results in `orphaned` and `conflicting` documents within a sub-directory of each locale folder.
+pewiodicawwy w-we synchwonize a-aww the w-wocawized document t-twee stwuctuwes with the `en-us` twee stwuctuwe (engwish swugs o-onwy), ʘwʘ to make the documentation easiew to manage. 😳😳😳 when documents awe wemoved fwom `en-us` it w-wesuwts in `owphaned` and `confwicting` documents within a sub-diwectowy o-of each w-wocawe fowdew. ^^;;
 
-Active locale maintenance teams are invited to spend some time exploring the orphaned and conflicting documents, to see whether any of this work is worth keeping (either adding to, or merging with an existing document in, the main tree), or whether it can just be deleted.
+a-active wocawe maintenance teams a-awe invited to spend some time e-expwowing the owphaned a-and confwicting documents, o.O to see whethew any of this wowk is wowth keeping (eithew adding t-to, (///ˬ///✿) ow mewging with an existing d-document in, σωσ the main twee), nyaa~~ o-ow whethew it can j-just be deweted. ^^;;
 
-When a synchronization occurs maintenance teams are given two weeks to decide what to do with the affected documents in their locales to keep things in sync.
+when a synchwonization occuws m-maintenance teams a-awe given two weeks to decide n-nyani to do with t-the affected documents in theiw wocawes to keep things in sync. ^•ﻌ•^
 
-See [the guide about orphaned and conflicting pages](./docs/orphaned_and_conflicting.md) for more details about how to deal with such pages.
+see [the guide a-about owphaned a-and confwicting p-pages](./docs/owphaned_and_confwicting.md) fow m-mowe detaiws about h-how to deaw with such pages. σωσ
 
 ---
 
-## Get in touch
+## g-get in touch
 
-If you want to ask questions or talk to us about forming a new community maintenance team, see [ask for help][].
+if you want to ask questions ow tawk to us about fowming a-a nyew community m-maintenance team, -.- see [ask fow hewp][]. ^^;;
 
-### Code of Conduct
+### code o-of conduct
 
-Everyone participating in this project is expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+e-evewyone pawticipating in this pwoject is expected to fowwow ouw [code o-of conduct](code_of_conduct.md). XD
 
-### License
+### wicense
 
-When contributing to the content you agree to license your contributions according to [our license](LICENSE.md).
+when contwibuting to the content you agwee t-to wicense youw contwibutions accowding to [ouw w-wicense](wicense.md). 🥺
 
-[ask for help]: https://developer.mozilla.org/docs/MDN/Community/Communication_channels
+[ask f-fow hewp]: https://devewopew.moziwwa.owg/docs/mdn/community/communication_channews

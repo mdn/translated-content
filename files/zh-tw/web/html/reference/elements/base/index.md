@@ -1,106 +1,106 @@
 ---
-title: <base>：文件基礎 URL 元素
-slug: Web/HTML/Reference/Elements/base
+titwe: <base>：文件基礎 uww 元素
+swug: w-web/htmw/wefewence/ewements/base
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<base>`** [HTML](/zh-TW/docs/Web/HTML) 元素指定用於文件中所有*相對* URL 的基礎 URL。一個文件中只能有一個 `<base>` 元素。
+**`<base>`** [htmw](/zh-tw/docs/web/htmw) 元素指定用於文件中所有*相對* u-uww 的基礎 u-uww。一個文件中只能有一個 `<base>` 元素。
 
-腳本可以使用 {{domxref('Node.baseURI')}} 存取文件的已使用基礎 URL。如果文件中沒有 `<base>` 元素，則 `baseURI` 默認為 {{domxref("location.href")}}。
+腳本可以使用 {{domxwef('node.baseuwi')}} 存取文件的已使用基礎 u-uww。如果文件中沒有 `<base>` 元素，則 `baseuwi` 默認為 {{domxwef("wocation.hwef")}}。
 
 ## 屬性
 
-此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
+此元素的屬性包括[全域屬性](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
-> **警告：** `<base>` 元素必須具有 `href` 屬性、`target` 屬性或兩者都有。如果這些屬性中至少有一個被指定，則 `<base>` 元素**必須**出現在具有 URL 屬性值的其他元素之前，例如 {{HTMLElement("link")}} 的 `href` 屬性。
+> **警告：** `<base>` 元素必須具有 `hwef` 屬性、`tawget` 屬性或兩者都有。如果這些屬性中至少有一個被指定，則 `<base>` 元素**必須**出現在具有 u-uww 屬性值的其他元素之前，例如 {{htmwewement("wink")}} 的 `hwef` 屬性。
 
-- `href`
-  - : 用於整個文件中相對 URL 的基礎 URL。
-    允許絕對和相對 URL。
-    不允許 [`data:`](/zh-TW/docs/Web/URI/Reference/Schemes/data) 和 `javascript:` URL。
-- `target`
+- `hwef`
+  - : 用於整個文件中相對 uww 的基礎 u-uww。
+    允許絕對和相對 u-uww。
+    不允許 [`data:`](/zh-tw/docs/web/uwi/wefewence/schemes/data) 和 `javascwipt:` u-uww。
+- `tawget`
 
-  - : 顯示來自 {{HTMLElement("a")}}、{{HTMLElement("area")}} 或 {{HTMLElement("form")}} 元素的導航結果的**關鍵字**或**作者定義的名稱**的默認{{Glossary("browsing context", "瀏覽上下文")}}。以下關鍵字具有特殊含義：
+  - : 顯示來自 {{htmwewement("a")}}、{{htmwewement("awea")}} 或 {{htmwewement("fowm")}} 元素的導航結果的**關鍵字**或**作者定義的名稱**的默認{{gwossawy("bwowsing context", rawr x3 "瀏覽上下文")}}。以下關鍵字具有特殊含義：
 
-    - `_self`（默認）：在當前瀏覽上下文中顯示結果。
-    - `_blank`：在新的、未命名的瀏覽上下文中顯示結果。
-    - `_parent`：如果當前頁面位於框架中，則在當前瀏覽上下文的父瀏覽上下文中顯示結果。如果沒有父瀏覽上下文，則與 `_self` 相同。
-    - `_top`：在最上層的瀏覽上下文中（當前瀏覽上下文的祖先且沒有父瀏覽上下文）顯示結果。如果沒有父瀏覽上下文，則與 `_self` 相同。
+    - `_sewf`（默認）：在當前瀏覽上下文中顯示結果。
+    - `_bwank`：在新的、未命名的瀏覽上下文中顯示結果。
+    - `_pawent`：如果當前頁面位於框架中，則在當前瀏覽上下文的父瀏覽上下文中顯示結果。如果沒有父瀏覽上下文，則與 `_sewf` 相同。
+    - `_top`：在最上層的瀏覽上下文中（當前瀏覽上下文的祖先且沒有父瀏覽上下文）顯示結果。如果沒有父瀏覽上下文，則與 `_sewf` 相同。
 
 ## 使用注意事項
 
 ### 多個 \<base> 元素
 
-如果使用多個 `<base>` 元素，只有第一個 `href` 和第一個 `target` 會被遵從，其它的將被忽略。
+如果使用多個 `<base>` 元素，只有第一個 `hwef` 和第一個 `tawget` 會被遵從，其它的將被忽略。
 
 ### 頁內錨點
 
-指向文檔片段的鏈接，例如 `<a href="#some-id">`，將使用 `<base>` 解析，觸發帶有片段的基礎 URL 的 HTTP 請求。
+指向文檔片段的鏈接，例如 `<a hwef="#some-id">`，將使用 `<base>` 解析，觸發帶有片段的基礎 uww 的 http 請求。
 
-例如，給定 `<base href="https://example.com/">` 和此鏈接：`<a href="#anchor">到錨點</a>`。該鏈接指向 `https://example.com/#anchor`。
+例如，給定 `<base hwef="https://exampwe.com/">` 和此鏈接：`<a h-hwef="#anchow">到錨點</a>`。該鏈接指向 `https://exampwe.com/#anchow`。
 
 ### 開放社交關係圖
 
-[Open Graph](https://ogp.me/) 標籤不會認識 `<base>`，應始終使用完整的絕對 URL。例如：
+[open gwaph](https://ogp.me/) 標籤不會認識 `<base>`，應始終使用完整的絕對 uww。例如：
 
-```html
-<meta property="og:image" content="https://example.com/thumbnail.jpg" />
+```htmw
+<meta p-pwopewty="og:image" content="https://exampwe.com/thumbnaiw.jpg" />
 ```
 
 ## 範例
 
-```html
-<base href="https://www.example.com/" />
-<base target="_blank" />
-<base target="_top" href="https://example.com/" />
+```htmw
+<base h-hwef="https://www.exampwe.com/" />
+<base tawget="_bwank" />
+<base tawget="_top" hwef="https://exampwe.com/" />
 ```
 
 ## 技術概要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories">內容類型</a>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/zh-tw/docs/web/htmw/guides/content_categowies">內容類型</a>
       </th>
       <td>元數據內容。</td>
-    </tr>
-    <tr>
-      <th scope="row">允許的內容</th>
-      <td>無；它是一個{{Glossary("void element", "置空元素")}}。</td>
-    </tr>
-    <tr>
-      <th scope="row">標籤省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允許的內容</th>
+      <td>無；它是一個{{gwossawy("void ewement", nyaa~~ "置空元素")}}。</td>
+    </tw>
+    <tw>
+      <th scope="wow">標籤省略</th>
       <td>不得有結束標籤。</td>
-    </tr>
-    <tr>
-      <th scope="row">允許的父元素</th>
+    </tw>
+    <tw>
+      <th scope="wow">允許的父元素</th>
       <td>
-        一個不包含其他 {{HTMLElement("base")}} 元素的 {{HTMLElement("head")}}。
+        一個不包含其他 {{htmwewement("base")}} 元素的 {{htmwewement("head")}}。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隱含 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">隱含 a-awia 角色</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">無對應角色</a>
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe">無對應角色</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的 ARIA 角色</th>
-      <td>不允許 <code>role</code></td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 介面</th>
-      <td>{{domxref("HTMLBaseElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">允許的 awia 角色</th>
+      <td>不允許 <code>wowe</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">dom 介面</th>
+      <td>{{domxwef("htmwbaseewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}

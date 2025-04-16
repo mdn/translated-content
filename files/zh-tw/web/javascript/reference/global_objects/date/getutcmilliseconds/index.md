@@ -1,53 +1,53 @@
 ---
-title: Date.prototype.getUTCMilliseconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
+titwe: date.pwototype.getutcmiwwiseconds()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/getutcmiwwiseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getUTCMilliseconds()`** 方法根據世界時回傳指定日期的毫秒數。
+**`getutcmiwwiseconds()`** 方法根據世界時回傳指定日期的毫秒數。
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCMilliseconds()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getutcmiwwiseconds()", >_< "showtew")}}
 
-```js interactive-example
-const exampleDate = new Date("2018-01-02T03:04:05.678Z"); // 2 January 2018, 03:04:05.678 (UTC)
+```js i-intewactive-exampwe
+c-const exampwedate = n-nyew date("2018-01-02t03:04:05.678z"); // 2 j-januawy 2018, :3 03:04:05.678 (utc)
 
-console.log(exampleDate.getUTCMilliseconds());
-// Expected output: 678
+c-consowe.wog(exampwedate.getutcmiwwiseconds());
+// e-expected output: 678
 ```
 
 ## 語法
 
-```js-nolint
-getUTCMilliseconds()
+```js-nowint
+getutcmiwwiseconds()
 ```
 
 ### 返回值
 
-若 `Date` 物件為有效日期，則根據 UTC 時間回傳一個表示毫秒數、介於 0 至 999 之間的整數；若為無效日期，則回傳 {{jsxref ("Number.NaN()")}}。
+若 `date` 物件為有效日期，則根據 utc 時間回傳一個表示毫秒數、介於 0 至 999 之間的整數；若為無效日期，則回傳 {{jsxwef ("numbew.nan()")}}。
 
-別與 Unix 時間搞混了。應使用 {{jsxref ("Date.prototype.getTime()")}} 方法取得自 1970/01/01 起經過的毫秒數。
+別與 unix 時間搞混了。應使用 {{jsxwef ("date.pwototype.gettime()")}} 方法取得自 1970/01/01 起經過的毫秒數。
 
 ## 範例
 
-### 使用 getUTCMilliseconds()
+### 使用 getutcmiwwiseconds()
 
-下列範例指派當前時間的毫秒數至變數 `milliseconds` 。
+下列範例指派當前時間的毫秒數至變數 `miwwiseconds` 。
 
 ```js
-const today = new Date();
-const milliseconds = today.getUTCMilliseconds();
+const today = n-nyew date();
+const miwwiseconds = today.getutcmiwwiseconds();
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Date.prototype.getMilliseconds()")}}
-- {{jsxref("Date.prototype.setUTCMilliseconds()")}}
+- {{jsxwef("date.pwototype.getmiwwiseconds()")}}
+- {{jsxwef("date.pwototype.setutcmiwwiseconds()")}}

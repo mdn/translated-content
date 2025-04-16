@@ -1,229 +1,229 @@
 ---
-title: HTML 拖放 API
-slug: Web/API/HTML_Drag_and_Drop_API
+titwe: htmw 拖放 api
+swug: w-web/api/htmw_dwag_and_dwop_api
 ---
 
-{{DefaultAPISidebar("HTML Drag and Drop API")}}
+{{defauwtapisidebaw("htmw d-dwag a-and dwop api")}}
 
-HTML 拖放介面能讓網頁應用程式於 Firefox 及其他瀏覽器中使用拖放功能。舉例來說，使用者可以利用此功能以滑鼠選擇*可拖曳（draggable）*元素，拖曳至一個*可放置（droppable）*元素上，並放開滑鼠按鍵來放置此元素。在拖曳操作時，一個半透明的*可拖曳（draggable）*元素會跟隨著滑鼠游標。
+h-htmw 拖放介面能讓網頁應用程式於 f-fiwefox 及其他瀏覽器中使用拖放功能。舉例來說，使用者可以利用此功能以滑鼠選擇*可拖曳（dwaggabwe）*元素，拖曳至一個*可放置（dwoppabwe）*元素上，並放開滑鼠按鍵來放置此元素。在拖曳操作時，一個半透明的*可拖曳（dwaggabwe）*元素會跟隨著滑鼠游標。
 
-對於網站、擴充套件以及 XUL 應用程式來說，你可以自定義能成為*可拖曳（draggable）*的元素類型、*可拖曳（draggable）*元素產生的回鐀類型，以及*可放置（droppable）*的元素。
+對於網站、擴充套件以及 x-xuw 應用程式來說，你可以自定義能成為*可拖曳（dwaggabwe）*的元素類型、*可拖曳（dwaggabwe）*元素產生的回鐀類型，以及*可放置（dwoppabwe）*的元素。
 
-此文件為 HTML 拖放的概述，包含了相關介面的說明、在應用程式中加入拖放支援的基本步驟，以及相關介面使用簡介。
+此文件為 h-htmw 拖放的概述，包含了相關介面的說明、在應用程式中加入拖放支援的基本步驟，以及相關介面使用簡介。
 
 ## 拖曳事件
 
-HTML 拖放操作基於 {{domxref("Event","DOM 事件模型")}}並且使用繼承自{{domxref("MouseEvent","滑鼠事件")}}的*{{domxref("DragEvent","拖曳事件")}}*介面。一個典型的拖曳操作開始於使用者利用滑鼠選取了一個*可拖曳（draggable）*元素、移動滑鼠至一個*可放置（droppable）*元素並放開滑鼠按鍵。在操作的過程中，會觸發多種類型的事件，且一些事件類型可能會被觸發多次（如 [`drag`](/zh-TW/docs/Web/API/HTMLElement/drag_event) 及 [`dragover`](/zh-TW/docs/Web/API/HTMLElement/dragover_event) 事件類型）。
+h-htmw 拖放操作基於 {{domxwef("event","dom 事件模型")}}並且使用繼承自{{domxwef("mouseevent","滑鼠事件")}}的*{{domxwef("dwagevent","拖曳事件")}}*介面。一個典型的拖曳操作開始於使用者利用滑鼠選取了一個*可拖曳（dwaggabwe）*元素、移動滑鼠至一個*可放置（dwoppabwe）*元素並放開滑鼠按鍵。在操作的過程中，會觸發多種類型的事件，且一些事件類型可能會被觸發多次（如 [`dwag`](/zh-tw/docs/web/api/htmwewement/dwag_event) 及 [`dwagovew`](/zh-tw/docs/web/api/htmwewement/dwagovew_event) 事件類型）。
 
-所有的[拖曳事件類型](/zh-TW/docs/Web/API/DragEvent#event_types)都有相關的[通用事件處理器](/zh-TW/docs/Web/API/DragEvent#globaleventhandlers)（global event handler）。每一種拖曳事件類型及拖曳通用事件處理器屬性都有說明此事件的參考文件。以下的表格提供了每一種事件的簡要說明，以及參考文件的連結。
+所有的[拖曳事件類型](/zh-tw/docs/web/api/dwagevent#event_types)都有相關的[通用事件處理器](/zh-tw/docs/web/api/dwagevent#gwobaweventhandwews)（gwobaw event handwew）。每一種拖曳事件類型及拖曳通用事件處理器屬性都有說明此事件的參考文件。以下的表格提供了每一種事件的簡要說明，以及參考文件的連結。
 
 | 事件                                                           | 事件處理器屬性                                               | 說明                                                                                                                                                               |
 | -------------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [`drag`](/zh-TW/docs/Web/API/HTMLElement/drag_event)           | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}           | 於一個元素或文字選取區塊被拖曳時觸發。                                                                                                                             |
-| [`dragend`](/zh-TW/docs/Web/API/HTMLElement/dragend_event)     | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | 於拖曳操作結束時觸發（如放開滑鼠按鍵或按下鍵盤的 escape 鍵）。（請參考[結束拖曳](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend)。）           |
-| [`dragenter`](/zh-TW/docs/Web/API/HTMLElement/dragenter_event) | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | 於一個元素或文字選取區塊被拖曳移動進入一個有效的放置目標時觸發。（請參考[指定拖曳目標](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets)。） |
-| [`dragleave`](/zh-TW/docs/Web/API/HTMLElement/dragleave_event) | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | 於一個元素或文字選取區塊被拖曳移動離開一個有效的放置目標時觸發。                                                                                                   |
-| [`dragover`](/zh-TW/docs/Web/API/HTMLElement/dragover_event)   | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}   | 於一個元素或文字選取區塊被拖曳移動經過一個有效的放置目標時觸發（每幾百毫秒觸發一次）。                                                                             |
-| [`dragstart`](/zh-TW/docs/Web/API/HTMLElement/dragstart_event) | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | 於使用者開始拖曳一個元素或文字選取區塊時觸發。（請參考[開始拖曳](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart)。）                         |
-| [`drop`](/zh-TW/docs/Web/API/HTMLElement/drop_event)           | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}           | 於一個元素或文字選取區塊被放置至一個有效的放置目標時觸發。（請參考[執行放置](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop)。）                  |
+| [`dwag`](/zh-tw/docs/web/api/htmwewement/dwag_event)           | {{domxwef('gwobaweventhandwews.ondwag','ondwag')}}           | 於一個元素或文字選取區塊被拖曳時觸發。                                                                                                                             |
+| [`dwagend`](/zh-tw/docs/web/api/htmwewement/dwagend_event)     | {{domxwef('gwobaweventhandwews.ondwagend','ondwagend')}}     | 於拖曳操作結束時觸發（如放開滑鼠按鍵或按下鍵盤的 escape 鍵）。（請參考[結束拖曳](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwagend)。）           |
+| [`dwagentew`](/zh-tw/docs/web/api/htmwewement/dwagentew_event) | {{domxwef('gwobaweventhandwews.ondwagentew','ondwagentew')}} | 於一個元素或文字選取區塊被拖曳移動進入一個有效的放置目標時觸發。（請參考[指定拖曳目標](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwoptawgets)。） |
+| [`dwagweave`](/zh-tw/docs/web/api/htmwewement/dwagweave_event) | {{domxwef('gwobaweventhandwews.ondwagweave','ondwagweave')}} | 於一個元素或文字選取區塊被拖曳移動離開一個有效的放置目標時觸發。                                                                                                   |
+| [`dwagovew`](/zh-tw/docs/web/api/htmwewement/dwagovew_event)   | {{domxwef('gwobaweventhandwews.ondwagovew','ondwagovew')}}   | 於一個元素或文字選取區塊被拖曳移動經過一個有效的放置目標時觸發（每幾百毫秒觸發一次）。                                                                             |
+| [`dwagstawt`](/zh-tw/docs/web/api/htmwewement/dwagstawt_event) | {{domxwef('gwobaweventhandwews.ondwagstawt','ondwagstawt')}} | 於使用者開始拖曳一個元素或文字選取區塊時觸發。（請參考[開始拖曳](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwagstawt)。）                         |
+| [`dwop`](/zh-tw/docs/web/api/htmwewement/dwop_event)           | {{domxwef('gwobaweventhandwews.ondwop','ondwop')}}           | 於一個元素或文字選取區塊被放置至一個有效的放置目標時觸發。（請參考[執行放置](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwop)。）                  |
 
-注意：`dragstart` 與 `dragend` 事件，在把檔案從作業系統拖放到瀏覽器時，並不會觸發。
+注意：`dwagstawt` 與 `dwagend` 事件，在把檔案從作業系統拖放到瀏覽器時，並不會觸發。
 
 ## 介面
 
-HTML 拖放介面有 {{domxref("DragEvent")}}、{{domxref("DataTransfer")}}、{{domxref("DataTransferItem")}} 以及 {{domxref("DataTransferItemList")}}。
+htmw 拖放介面有 {{domxwef("dwagevent")}}、{{domxwef("datatwansfew")}}、{{domxwef("datatwansfewitem")}} 以及 {{domxwef("datatwansfewitemwist")}}。
 
-{{domxref("DragEvent")}} 介面擁有一個建構式及一個屬性－{{domxref("DragEvent.dataTransfer","dataTransfer")}} 屬性為一個 {{domxref("DataTransfer")}} 物件。{{domxref("DataTransfer")}} 物件包含了拖放事件的狀態，如正在進行的拖放事件類型（例如 `copy` 或 `move`）、拖放中的資料（一或多個項目）以及每一個*拖放項目（drag item）*的檔案類型（MIME type）。{{domxref("DataTransfer")}} 物件也擁有加入及移除拖放資料項目的方法。{{domxref("DragEvent")}} 與 {{domxref("DataTransfer")}} 介面應該是唯一須要加至應用程式中的 HTML 拖放功能。另外，請留意 Firefox 支援了一些 [Gecko-specific 擴充](#gecko-specific_interfaces)予 {{domxref("DataTransfer")}} 物件使用，雖然這些擴充只能在 Firefox 上作用。
+{{domxwef("dwagevent")}} 介面擁有一個建構式及一個屬性－{{domxwef("dwagevent.datatwansfew","datatwansfew")}} 屬性為一個 {{domxwef("datatwansfew")}} 物件。{{domxwef("datatwansfew")}} 物件包含了拖放事件的狀態，如正在進行的拖放事件類型（例如 `copy` 或 `move`）、拖放中的資料（一或多個項目）以及每一個*拖放項目（dwag item）*的檔案類型（mime t-type）。{{domxwef("datatwansfew")}} 物件也擁有加入及移除拖放資料項目的方法。{{domxwef("dwagevent")}} 與 {{domxwef("datatwansfew")}} 介面應該是唯一須要加至應用程式中的 htmw 拖放功能。另外，請留意 fiwefox 支援了一些 [gecko-specific 擴充](#gecko-specific_intewfaces)予 {{domxwef("datatwansfew")}} 物件使用，雖然這些擴充只能在 f-fiwefox 上作用。
 
-每個 {{domxref("DataTransfer")}} 物件都包含了 {{domxref("DataTransfer.items","items")}} 屬性。此屬性乃 {{domxref("DataTransferItem")}} 物件的 {{domxref("DataTransferItemList","list")}}。而每個 {{domxref("DataTransferItem")}} 物件，則代表著一個*拖放單元*，每個拖放單元則擁有代表該資料*種類*的 {{domxref("DataTransferItem.kind","kind")}} 屬性（`string` 或 `file`）、還有表示該單元檔案類型（如 MIME）的{{domxref("DataTransferItem.type","type")}} 屬性。另外，{{domxref("DataTransferItem")}} 物件能取得拖放單元的資料。
+每個 {{domxwef("datatwansfew")}} 物件都包含了 {{domxwef("datatwansfew.items","items")}} 屬性。此屬性乃 {{domxwef("datatwansfewitem")}} 物件的 {{domxwef("datatwansfewitemwist","wist")}}。而每個 {{domxwef("datatwansfewitem")}} 物件，則代表著一個*拖放單元*，每個拖放單元則擁有代表該資料*種類*的 {{domxwef("datatwansfewitem.kind","kind")}} 屬性（`stwing` 或 `fiwe`）、還有表示該單元檔案類型（如 mime）的{{domxwef("datatwansfewitem.type","type")}} 屬性。另外，{{domxwef("datatwansfewitem")}} 物件能取得拖放單元的資料。
 
-{{domxref("DataTransferItemList")}} 物件為 {{domxref("DataTransferItem")}} 的列表。該物件列表擁有以下方法：給列表增加拖放單元、從列表刪除拖放單元、還有清除列表內所有的拖放單元。
+{{domxwef("datatwansfewitemwist")}} 物件為 {{domxwef("datatwansfewitem")}} 的列表。該物件列表擁有以下方法：給列表增加拖放單元、從列表刪除拖放單元、還有清除列表內所有的拖放單元。
 
-{{domxref("DataTransfer")}} 與 {{domxref("DataTransferItem")}} 介面的最大不同，就是前者使用同步的 {{domxref("DataTransfer.getData","getData()")}} 方法訪問拖放單元的資料；後者則使用非同步的 {{domxref("DataTransferItem.getAsString","getAsString()")}} 方法訪問。
+{{domxwef("datatwansfew")}} 與 {{domxwef("datatwansfewitem")}} 介面的最大不同，就是前者使用同步的 {{domxwef("datatwansfew.getdata","getdata()")}} 方法訪問拖放單元的資料；後者則使用非同步的 {{domxwef("datatwansfewitem.getasstwing","getasstwing()")}} 方法訪問。
 
-注意：{{domxref("DragEvent")}} 與 {{domxref("DataTransfer")}} 介面受廣泛的桌面瀏覽器支援。但只有少數瀏覽器支援 {{domxref("DataTransferItem")}} 與 {{domxref("DataTransferItemList")}} 介面。請參見 [Interoperability](#interoperability) 以取得有關拖放功能互通性的資訊。
+注意：{{domxwef("dwagevent")}} 與 {{domxwef("datatwansfew")}} 介面受廣泛的桌面瀏覽器支援。但只有少數瀏覽器支援 {{domxwef("datatwansfewitem")}} 與 {{domxwef("datatwansfewitemwist")}} 介面。請參見 [intewopewabiwity](#intewopewabiwity) 以取得有關拖放功能互通性的資訊。
 
-### Gecko-specific interfaces
+### g-gecko-specific intewfaces
 
-Mozilla and Firefox support some features not in the standard drag and drop model. These are _convenience functions_ to facilitate dragging multiple items and dragging non-string data (such as files). For more information, see [Dragging and Dropping Multiple Items](/zh-TW/docs/DragDrop/Dragging_and_Dropping_Multiple_Items). Additionally, see the {{domxref("DataTransfer")}} reference page for all of the [Gecko-specific properties](/zh-TW/docs/Web/API/DataTransfer#Gecko_properties) and [Gecko-specific methods](/zh-TW/docs/Web/API/DataTransfer#Gecko_methods).
+moziwwa and fiwefox suppowt s-some featuwes not in the standawd d-dwag and dwop m-modew. (✿oωo) these awe _convenience functions_ to faciwitate dwagging muwtipwe items and dwagging nyon-stwing d-data (such as fiwes). XD fow mowe infowmation, >w< see [dwagging and dwopping m-muwtipwe items](/zh-tw/docs/dwagdwop/dwagging_and_dwopping_muwtipwe_items). òωó additionawwy, (ꈍᴗꈍ) s-see the {{domxwef("datatwansfew")}} w-wefewence p-page fow a-aww of the [gecko-specific pwopewties](/zh-tw/docs/web/api/datatwansfew#gecko_pwopewties) and [gecko-specific methods](/zh-tw/docs/web/api/datatwansfew#gecko_methods). rawr x3
 
 ## 基本用法
 
-This section provides a summary of the basic steps to add drag and drop functionality to an application. Each section includes a description of the step, a short code example, and links to additional information.
+t-this section pwovides a summawy of the b-basic steps to add dwag and dwop functionawity to an appwication. each section incwudes a descwiption o-of the step, rawr x3 a showt code e-exampwe, σωσ and winks t-to additionaw i-infowmation. (ꈍᴗꈍ)
 
-### Identify what is _draggable_
+### identify nyani is _dwaggabwe_
 
-To make an element _draggable_ requires adding the [`draggable`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#draggable) attribute plus the {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} global event handler, as shown in the following code sample
+to make an ewement _dwaggabwe_ w-wequiwes adding t-the [`dwaggabwe`](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes#dwaggabwe) attwibute pwus t-the {{domxwef("gwobaweventhandwews.ondwagstawt","ondwagstawt")}} g-gwobaw event handwew, rawr as shown i-in the fowwowing code sampwe
 
 ```js
-function dragstart_handler(ev) {
-  console.log("dragStart");
-  // Add the target element's id to the data transfer object
-  ev.dataTransfer.setData("text/plain", ev.target.id);
+f-function dwagstawt_handwew(ev) {
+  consowe.wog("dwagstawt");
+  // add the tawget e-ewement's id to the data twansfew o-object
+  ev.datatwansfew.setdata("text/pwain", ^^;; e-ev.tawget.id);
 }
 
 <body>
-  <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">
-    This element is draggable.
+  <p i-id="p1" dwaggabwe="twue" ondwagstawt="dwagstawt_handwew(event);">
+    this ewement is dwaggabwe. rawr x3
   </p>
 </body>;
 ```
 
-See the [draggable attribute reference](/zh-TW/docs/Web/HTML/Reference/Global_attributes/draggable) and the [Drag operations guide](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute) for more information.
+see the [dwaggabwe attwibute wefewence](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes/dwaggabwe) a-and t-the [dwag opewations guide](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwaggabweattwibute) f-fow m-mowe infowmation. (ˆ ﻌ ˆ)♡
 
-### Define the drag's data
+### d-define the dwag's data
 
-The application is free to include any number of data items in a drag operation. Each data item is a {{domxref("DOMString","string")}} of a particular `type`, typically a MIME type such as `text/html`.
+the appwication is fwee to incwude a-any nyumbew of data items in a dwag opewation. σωσ each data item is a {{domxwef("domstwing","stwing")}} o-of a pawticuwaw `type`, (U ﹏ U) typicawwy a mime t-type such as `text/htmw`. >w<
 
-Each {{domxref("DragEvent","drag event")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property that _holds_ the event's data. This property (which is a {{domxref("DataTransfer")}} object) also has methods to _manage_ drag data. The {{domxref("DataTransfer.setData","setData()")}} method is used to add an item to the drag data, as shown in the following example.
+e-each {{domxwef("dwagevent","dwag e-event")}} has a {{domxwef("dwagevent.datatwansfew","datatwansfew")}} p-pwopewty that _howds_ t-the event's d-data. σωσ this pwopewty (which is a-a {{domxwef("datatwansfew")}} object) awso has methods to _manage_ d-dwag data. nyaa~~ t-the {{domxwef("datatwansfew.setdata","setdata()")}} m-method is used t-to add an item t-to the dwag data, 🥺 as shown in the fowwowing exampwe. rawr x3
 
 ```js
-function dragstart_handler(ev) {
-  // Add the drag data
-  ev.dataTransfer.setData("text/plain", ev.target.id);
-  ev.dataTransfer.setData("text/html", "<p>Example paragraph</p>");
-  ev.dataTransfer.setData("text/uri-list", "http://developer.mozilla.org");
+function d-dwagstawt_handwew(ev) {
+  // add the dwag data
+  ev.datatwansfew.setdata("text/pwain", σωσ ev.tawget.id);
+  ev.datatwansfew.setdata("text/htmw", (///ˬ///✿) "<p>exampwe pawagwaph</p>");
+  ev.datatwansfew.setdata("text/uwi-wist", (U ﹏ U) "http://devewopew.moziwwa.owg");
 }
 ```
 
-For a list of common data types used for drag and drop (such as text, HTML, links, and files), see [Recommended Drag Types](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types) and for more information about drag data, see [Drag Data](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragdata).
+f-fow a wist of common data types used fow dwag and dwop (such a-as text, ^^;; htmw, 🥺 w-winks, and fiwes), òωó s-see [wecommended dwag types](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types) a-and fow mowe infowmation about d-dwag data, XD see [dwag d-data](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwagdata). :3
 
-### Define the drag image
+### define the dwag image
 
-By default, the browser supplies an image that appears beside the mouse pointer during a drag operation. However, an application may define a custom image by using the {{domxref("DataTransfer.setDragImage","setDragImage()")}} method as shown in the following example.
+by defauwt, (U ﹏ U) the bwowsew suppwies an image that appeaws b-beside the mouse pointew duwing a-a dwag opewation. >w< howevew, /(^•ω•^) a-an appwication m-may define a custom image by using the {{domxwef("datatwansfew.setdwagimage","setdwagimage()")}} m-method as shown i-in the fowwowing exampwe. (⑅˘꒳˘)
 
 ```js
-function dragstart_handler(ev) {
-  // Create an image and then use it for the drag image.
-  // NOTE: change "example.gif" to an existing image or the image
-  // will not be created and the default drag image will be used.
-  var img = new Image();
-  img.src = "example.gif";
-  ev.dataTransfer.setDragImage(img, 10, 10);
+f-function dwagstawt_handwew(ev) {
+  // c-cweate an image and then use it fow the dwag image. ʘwʘ
+  // nyote: change "exampwe.gif" t-to a-an existing image o-ow the image
+  // wiww nyot be c-cweated and the d-defauwt dwag image wiww be used. rawr x3
+  v-vaw img = nyew image();
+  img.swc = "exampwe.gif";
+  ev.datatwansfew.setdwagimage(img, (˘ω˘) 10, 10);
 }
 ```
 
-To learn more about drag feedback images, see [Setting the Drag Feedback Image](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragfeedback).
+to weawn mowe about dwag f-feedback images, o.O s-see [setting the dwag feedback image](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwagfeedback). 😳
 
-### Define the drag _effect_
+### d-define t-the dwag _effect_
 
-The {{domxref("DataTransfer.dropEffect","dropEffect")}} property is used to control the feedback (typically visual) the user is given during a drag and drop operation. It affects which cursor the browser displays while dragging. For example, when the user hovers over a target drop element, the browser's cursor may indicate the type of operation that will occur.
+the {{domxwef("datatwansfew.dwopeffect","dwopeffect")}} pwopewty is used to c-contwow the feedback (typicawwy visuaw) the usew is given duwing a dwag and dwop opewation. it affects w-which cuwsow the bwowsew dispways whiwe dwagging. o.O f-fow exampwe, ^^;; w-when the usew hovews ovew a tawget dwop ewement, ( ͡o ω ͡o ) the bwowsew's c-cuwsow may i-indicate the type of opewation that wiww occuw. ^^;;
 
-Three effects may be defined:
+thwee effects may b-be defined:
 
-`copy` indicates that the data being dragged will be copied from its present location to the drop location.
+`copy` indicates t-that the data being dwagged wiww be copied fwom its pwesent wocation t-to the dwop wocation.
 
-`move` indicates that the data being dragged will be moved
+`move` i-indicates that t-the data being dwagged wiww be m-moved
 
-`link` indicates that some form of relationship or connection will be created between the source and drop locations.
+`wink` indicates that some f-fowm of wewationship o-ow connection w-wiww be cweated between the s-souwce and dwop w-wocations. ^^;;
 
-During the drag operation, the drag effects may be modified to indicate that certain effects are allowed at certain locations. If allowed, a drop may occur at that location.
+duwing the dwag opewation, XD the dwag e-effects may be m-modified to indicate t-that cewtain effects awe awwowed at cewtain w-wocations. 🥺 if awwowed, (///ˬ///✿) a dwop m-may occuw at that w-wocation. (U ᵕ U❁)
 
-The following example shows how to use this property.
+the fowwowing exampwe shows how to use this pwopewty. ^^;;
 
 ```js
-function dragstart_handler(ev) {
-  // Set the drag effect to copy
-  ev.dataTransfer.dropEffect = "copy";
+f-function d-dwagstawt_handwew(ev) {
+  // s-set the dwag effect t-to copy
+  ev.datatwansfew.dwopeffect = "copy";
 }
 ```
 
-See [Drag Effects](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drageffects) for more details.
+see [dwag e-effects](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwageffects) fow mowe detaiws. ^^;;
 
-### Define a _drop zone_
+### define a _dwop zone_
 
-By default, the browser prevents anything from happening when dropping something onto the HTML element. To change that behavior so that an element becomes a _drop zone_ or is _droppable_, the element must have both {{domxref("GlobalEventHandlers.ondragover","ondragover")}} and {{domxref("GlobalEventHandlers.ondrop","ondrop")}} event handler attributes. The following example shows how to use those attributes and includes basic event handlers for each attribute.
+by defauwt, rawr the bwowsew pwevents a-anything fwom happening when d-dwopping something onto the htmw e-ewement. (˘ω˘) to change that behaviow s-so that an ewement becomes a _dwop z-zone_ ow is _dwoppabwe_, 🥺 the e-ewement must h-have both {{domxwef("gwobaweventhandwews.ondwagovew","ondwagovew")}} a-and {{domxwef("gwobaweventhandwews.ondwop","ondwop")}} e-event handwew attwibutes. nyaa~~ the fowwowing exampwe shows how to use those attwibutes and incwudes basic e-event handwews f-fow each attwibute. :3
 
 ```js
-function dragover_handler(ev) {
-  ev.preventDefault();
-  // Set the dropEffect to move
-  ev.dataTransfer.dropEffect = "move";
+f-function dwagovew_handwew(ev) {
+  e-ev.pweventdefauwt();
+  // set the dwopeffect to move
+  ev.datatwansfew.dwopeffect = "move";
 }
-function drop_handler(ev) {
-  ev.preventDefault();
-  // Get the id of the target and add the moved element to the target's DOM
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
+f-function d-dwop_handwew(ev) {
+  ev.pweventdefauwt();
+  // g-get the id of the tawget and add the moved ewement t-to the tawget's d-dom
+  vaw data = ev.datatwansfew.getdata("text");
+  e-ev.tawget.appendchiwd(document.getewementbyid(data));
 }
 <body>
   <div
-    id="target"
-    ondrop="drop_handler(event);"
-    ondragover="dragover_handler(event);">
-    Drop Zone
+    i-id="tawget"
+    ondwop="dwop_handwew(event);"
+    ondwagovew="dwagovew_handwew(event);">
+    dwop zone
   </div>
 </body>;
 ```
 
-Note each handler calls {{domxref("Event.preventDefault","preventDefault()")}} to prevent additional event processing for this prevent (such as touch events or pointer events).
+nyote each handwew c-cawws {{domxwef("event.pweventdefauwt","pweventdefauwt()")}} t-to pwevent additionaw e-event pwocessing f-fow this p-pwevent (such as touch events o-ow pointew events). /(^•ω•^)
 
-For more information, see [Specifying Drop Targets](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets).
+f-fow mowe infowmation, ^•ﻌ•^ see [specifying d-dwop t-tawgets](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwoptawgets). UwU
 
-### Handle the drop _effect_
+### handwe the d-dwop _effect_
 
-The handler for the [`drop`](/zh-TW/docs/Web/API/HTMLElement/drop_event) event is free to process the drag data in an application specific way. Typically, an application will use the {{domxref("DataTransfer.getData","getData()")}} method to retrieve drag items and process them accordingly. Additionally, application semantics may differ depending on the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} and/or the state of modifier keys.
+the handwew fow the [`dwop`](/zh-tw/docs/web/api/htmwewement/dwop_event) e-event is fwee to pwocess t-the dwag data i-in an appwication specific way. 😳😳😳 t-typicawwy, OwO an appwication wiww use the {{domxwef("datatwansfew.getdata","getdata()")}} m-method to w-wetwieve dwag i-items and pwocess them accowdingwy. ^•ﻌ•^ additionawwy, (ꈍᴗꈍ) appwication semantics m-may diffew depending on the vawue of the {{domxwef("datatwansfew.dwopeffect","dwopeffect")}} a-and/ow the s-state of modifiew keys. (⑅˘꒳˘)
 
-The following example shows a drop handler getting the source element's id from the drag data and then using the id to move the source element to the drop element.
+the fowwowing e-exampwe shows a dwop handwew g-getting the s-souwce ewement's id fwom the dwag data and then u-using the id to move the souwce ewement to the dwop e-ewement. (⑅˘꒳˘)
 
 ```js
-function dragstart_handler(ev) {
-  // Add the target element's id to the data transfer object
-  ev.dataTransfer.setData("text/plain", ev.target.id);
-  ev.dropEffect = "move";
+f-function dwagstawt_handwew(ev) {
+  // add the t-tawget ewement's id to the data t-twansfew object
+  e-ev.datatwansfew.setdata("text/pwain", (ˆ ﻌ ˆ)♡ e-ev.tawget.id);
+  ev.dwopeffect = "move";
 }
-function dragover_handler(ev) {
-  ev.preventDefault();
-  // Set the dropEffect to move
-  ev.dataTransfer.dropEffect = "move";
+function dwagovew_handwew(ev) {
+  ev.pweventdefauwt();
+  // set the dwopeffect to move
+  ev.datatwansfew.dwopeffect = "move";
 }
-function drop_handler(ev) {
-  ev.preventDefault();
-  // Get the id of the target and add the moved element to the target's DOM
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
+function dwop_handwew(ev) {
+  ev.pweventdefauwt();
+  // get the id of the tawget and add the moved ewement to the tawget's d-dom
+  vaw data = e-ev.datatwansfew.getdata("text");
+  ev.tawget.appendchiwd(document.getewementbyid(data));
 }
 <body>
-  <p id="p1" draggable="true" ondragstart="dragstart_handler(event);">
-    This element is draggable.
+  <p id="p1" d-dwaggabwe="twue" o-ondwagstawt="dwagstawt_handwew(event);">
+    t-this ewement is dwaggabwe. /(^•ω•^)
   </p>
   <div
-    id="target"
-    ondrop="drop_handler(event);"
-    ondragover="dragover_handler(event);">
-    Drop Zone
+    i-id="tawget"
+    ondwop="dwop_handwew(event);"
+    o-ondwagovew="dwagovew_handwew(event);">
+    d-dwop zone
   </div>
 </body>;
 ```
 
-For more information, see [Performing a Drop](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop).
+fow mowe i-infowmation, òωó see [pewfowming a dwop](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwop). (⑅˘꒳˘)
 
-### Drag end
+### d-dwag e-end
 
-At the end of a drag operation, the [`dragend`](/zh-TW/docs/Web/API/HTMLElement/dragend_event) event fires at the _source_ element - the element that was the target of the drag start. This event fires whether the drag completed or was canceled. The [`dragend`](/zh-TW/docs/Web/API/HTMLElement/dragend_event) event handler can check the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine if the drag operation succeeded or not.
+at the end of a dwag opewation, (U ᵕ U❁) the [`dwagend`](/zh-tw/docs/web/api/htmwewement/dwagend_event) e-event fiwes a-at the _souwce_ e-ewement - the e-ewement that was t-the tawget of t-the dwag stawt. t-this event fiwes w-whethew the dwag c-compweted ow was cancewed. >w< the [`dwagend`](/zh-tw/docs/web/api/htmwewement/dwagend_event) e-event h-handwew can check t-the vawue of the {{domxwef("datatwansfew.dwopeffect","dwopeffect")}} p-pwopewty to detewmine if the dwag opewation s-succeeded ow nyot. σωσ
 
-For more information about handling the end of a drag operation, see [Finishing a Drag](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend).
+fow mowe i-infowmation about h-handwing the e-end of a dwag opewation, see [finishing a-a dwag](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations#dwagend). -.-
 
-## Interoperability
+## intewopewabiwity
 
-As can be seen in the [DataTransferItem interface's Browser Compatibility table](/zh-TW/docs/Web/API/DataTransferItem#Browser_compatibility), drag-and-drop interoperability is relatively broad among desktop browsers (except the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have less support). This data also indicates drag and drop support among mobile browsers is very low.
+a-as can be seen in the [datatwansfewitem i-intewface's bwowsew compatibiwity t-tabwe](/zh-tw/docs/web/api/datatwansfewitem#bwowsew_compatibiwity), o.O dwag-and-dwop intewopewabiwity is wewativewy bwoad among d-desktop bwowsews (except the {{domxwef("datatwansfewitem")}} a-and {{domxwef("datatwansfewitemwist")}} i-intewfaces have wess suppowt). ^^ this data awso indicates d-dwag and dwop suppowt among mobiwe b-bwowsews is vewy w-wow. >_<
 
-## Examples and demos
+## exampwes a-and demos
 
-- [Copying and moving elements with the `DataTransfer` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
-- [Copying and moving elements with the `DataTransferListItem` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)
-- Dragging and dropping files; Firefox only: <https://jsfiddle.net/9C2EF/>
-- Dragging and dropping files; All browsers: [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?html,js,output)
-- A parking project using the Drag and Drop API: <https://park.glitch.me/> (You can edit [here](https://glitch.com/edit/#!/park))
+- [copying and moving ewements w-with the `datatwansfew` i-intewface](https://mdn.github.io/dom-exampwes/dwag-and-dwop/copy-move-datatwansfew.htmw)
+- [copying and m-moving ewements with the `datatwansfewwistitem` intewface](https://mdn.github.io/dom-exampwes/dwag-and-dwop/copy-move-datatwansfewitemwist.htmw)
+- d-dwagging and dwopping fiwes; f-fiwefox onwy: <https://jsfiddwe.net/9c2ef/>
+- d-dwagging a-and dwopping fiwes; aww bwowsews: [https://jsbin.com/hiqasek/](https://jsbin.com/hiqasek/edit?htmw,js,output)
+- a-a pawking p-pwoject using the d-dwag and dwop a-api: <https://pawk.gwitch.me/> (you can edit [hewe](https://gwitch.com/edit/#!/pawk))
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 參見
 
-- [Drag Operations](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Dragging and Dropping Multiple Items](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [Recommended Drag Types](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
-- [Drag and Drop interoperability data from CanIUse](https://caniuse.com/#search=draganddrop)
+- [dwag o-opewations](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations)
+- [dwagging a-and d-dwopping muwtipwe i-items](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/muwtipwe_items)
+- [wecommended d-dwag types](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types)
+- [htmw5 w-wiving s-standawd: dwag a-and dwop](https://htmw.spec.naniwg.owg/muwtipage/intewaction.htmw#dnd)
+- [dwag and dwop intewopewabiwity d-data fwom caniuse](https://caniuse.com/#seawch=dwaganddwop)

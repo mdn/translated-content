@@ -1,163 +1,163 @@
 ---
-title: super
-slug: Web/JavaScript/Reference/Operators/super
+titwe: supew
+swug: web/javascwipt/wefewence/opewatows/supew
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-super 關鍵字被使用於通過函式存取父層
+s-supew 關鍵字被使用於通過函式存取父層
 
-`super.prop` 與 `super[expr]` 表達有效在 [method definition](/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions) 與 [classes](/zh-TW/docs/Web/JavaScript/Reference/Classes) 與 [object literals](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer).
+`supew.pwop` 與 `supew[expw]` 表達有效在 [method d-definition](/zh-tw/docs/web/javascwipt/wefewence/functions/method_definitions) 與 [cwasses](/zh-tw/docs/web/javascwipt/wefewence/cwasses) 與 [object w-witewaws](/zh-tw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew). rawr x3
 
 ## 語法
 
-```plain
-super([arguments]); // calls the parent constructor.
-super.functionOnParent([arguments]);
+```pwain
+s-supew([awguments]); // c-cawws t-the pawent constwuctow. OwO
+s-supew.functiononpawent([awguments]);
 ```
 
 ## 描述
 
-當使用建構子，`super` 關鍵字必須出現在`this` 關鍵字之前使用，`super` 關鍵字也可以使用在呼叫函式與父對象
+當使用建構子，`supew` 關鍵字必須出現在`this` 關鍵字之前使用，`supew` 關鍵字也可以使用在呼叫函式與父對象
 
 ## 範例
 
-### 在類別中使用 `super`
+### 在類別中使用 `supew`
 
-這個程式碼片段從 [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)). 這裏的 `super()` 被呼叫去避免複製到建構子的 `Rectangle` 與 `Square` 的共通部分。
+這個程式碼片段從 [cwasses s-sampwe](https://github.com/googwechwome/sampwes/bwob/gh-pages/cwasses-es6/index.htmw) ([wive demo](https://googwechwome.github.io/sampwes/cwasses-es6/index.htmw)). /(^•ω•^) 這裏的 `supew()` 被呼叫去避免複製到建構子的 `wectangwe` 與 `squawe` 的共通部分。
 
 ```js
-class Rectangle {
-  constructor(height, width) {
-    this.name = "Rectangle";
+cwass wectangwe {
+  constwuctow(height, 😳😳😳 width) {
+    t-this.name = "wectangwe";
     this.height = height;
-    this.width = width;
+    this.width = w-width;
   }
-  sayName() {
-    console.log("Hi, I am a ", this.name + ".");
+  sayname() {
+    c-consowe.wog("hi, ( ͡o ω ͡o ) i am a ", >_< this.name + ".");
   }
-  get area() {
-    return this.height * this.width;
+  get awea() {
+    w-wetuwn this.height * t-this.width;
   }
-  set area(value) {
-    this.area = value;
+  s-set awea(vawue) {
+    this.awea = vawue;
   }
 }
 
-class Square extends Rectangle {
-  constructor(length) {
-    this.height; // ReferenceError, super needs to be called first!
+cwass squawe extends wectangwe {
+  c-constwuctow(wength) {
+    this.height; // wefewenceewwow, >w< supew nyeeds to be cawwed fiwst! rawr
 
-    // Here, it calls the parent class's constructor with lengths
-    // provided for the Rectangle's width and height
-    super(length, length);
+    // hewe, 😳 it cawws the pawent c-cwass's constwuctow with wengths
+    // p-pwovided f-fow the wectangwe's w-width and h-height
+    supew(wength, >w< wength);
 
-    // Note: In derived classes, super() must be called before you
-    // can use 'this'. Leaving this out will cause a reference error.
-    this.name = "Square";
+    // nyote: i-in dewived cwasses, supew() must be cawwed befowe y-you
+    // can use 'this'. (⑅˘꒳˘) weaving this out wiww cause a wefewence ewwow. OwO
+    this.name = "squawe";
   }
 }
 ```
 
-### Super-calling 靜態方法
+### s-supew-cawwing 靜態方法
 
-你也可以使用在[靜態](/zh-TW/docs/Web/JavaScript/Reference/Classes/static)方法.
+你也可以使用在[靜態](/zh-tw/docs/web/javascwipt/wefewence/cwasses/static)方法. (ꈍᴗꈍ)
 
 ```js
-class Rectangle {
-  constructor() {}
-  static logNbSides() {
-    return "I have 4 sides";
+cwass wectangwe {
+  c-constwuctow() {}
+  s-static w-wognbsides() {
+    wetuwn "i have 4 sides";
   }
 }
 
-class Square extends Rectangle {
-  constructor() {}
-  static logDescription() {
-    return super.logNbSides() + " which are all equal";
+cwass squawe e-extends wectangwe {
+  c-constwuctow() {}
+  static w-wogdescwiption() {
+    w-wetuwn supew.wognbsides() + " w-which awe aww equaw";
   }
 }
-Square.logDescription(); // 'I have 4 sides which are all equal'
+s-squawe.wogdescwiption(); // 'i have 4 sides which awe aww equaw'
 ```
 
-### 刪除 super 屬性將拋出錯誤
+### 刪除 s-supew 屬性將拋出錯誤
 
-你不能使用 [delete operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/delete) 以及 `super.prop` 以及 `super[expr]` 去刪除父層的類別屬性, 不然他會丟出一個錯誤 {{jsxref("ReferenceError")}}.
+你不能使用 [dewete opewatow](/zh-tw/docs/web/javascwipt/wefewence/opewatows/dewete) 以及 `supew.pwop` 以及 `supew[expw]` 去刪除父層的類別屬性, 😳 不然他會丟出一個錯誤 {{jsxwef("wefewenceewwow")}}. 😳😳😳
 
 ```js
-class Base {
-  constructor() {}
-  foo() {}
+c-cwass base {
+  constwuctow() {}
+  f-foo() {}
 }
-class Derived extends Base {
-  constructor() {}
-  delete() {
-    delete super.foo; // this is bad
+c-cwass dewived extends base {
+  constwuctow() {}
+  dewete() {
+    dewete supew.foo; // this is bad
   }
 }
 
-new Derived().delete(); // ReferenceError: invalid delete involving 'super'.
+nyew d-dewived().dewete(); // w-wefewenceewwow: invawid d-dewete invowving 'supew'. mya
 ```
 
-### `super.prop` 不能複寫在不能複寫的屬性
+### `supew.pwop` 不能複寫在不能複寫的屬性
 
-當定義不可寫屬性，例如 {{jsxref("Object.defineProperty")}}, `super` 不能複寫這個屬性的值.
+當定義不可寫屬性，例如 {{jsxwef("object.definepwopewty")}}, mya `supew` 不能複寫這個屬性的值. (⑅˘꒳˘)
 
 ```js
-class X {
-  constructor() {
-    Object.defineProperty(this, "prop", {
-      configurable: true,
-      writable: false,
-      value: 1,
+c-cwass x-x {
+  constwuctow() {
+    object.definepwopewty(this, (U ﹏ U) "pwop", mya {
+      configuwabwe: twue, ʘwʘ
+      w-wwitabwe: fawse, (˘ω˘)
+      vawue: 1, (U ﹏ U)
     });
   }
 }
 
-class Y extends X {
-  constructor() {
-    super();
+cwass y extends x {
+  constwuctow() {
+    supew();
   }
-  foo() {
-    super.prop = 2; // Cannot overwrite the value.
+  f-foo() {
+    supew.pwop = 2; // c-cannot o-ovewwwite the v-vawue. ^•ﻌ•^
   }
 }
 
-var y = new Y();
-y.foo(); // TypeError: "prop" is read-only
-console.log(y.prop); // 1
+vaw y = nyew y();
+y-y.foo(); // typeewwow: "pwop" i-is w-wead-onwy
+consowe.wog(y.pwop); // 1
 ```
 
-### 使用 `super.prop` 在對象符號
+### 使用 `supew.pwop` 在對象符號
 
-Super 可以使用在 [object initializer / literal](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer) 符號. 在這個範例, 有兩個對象定義在一個方法. 在第二個對象裡面, `super` 呼叫了第一個對象的方法. 這個動作幫助 {{jsxref("Object.setPrototypeOf()")}} 讓我們可以設定原型 `obj2` to `obj1`, 所以 `super` 可以發現 `method1` 在 `obj1`裡被找到.
+s-supew 可以使用在 [object initiawizew / witewaw](/zh-tw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew) 符號. (˘ω˘) 在這個範例, :3 有兩個對象定義在一個方法. ^^;; 在第二個對象裡面, 🥺 `supew` 呼叫了第一個對象的方法. (⑅˘꒳˘) 這個動作幫助 {{jsxwef("object.setpwototypeof()")}} 讓我們可以設定原型 `obj2` to `obj1`, nyaa~~ 所以 `supew` 可以發現 `method1` 在 `obj1`裡被找到. :3
 
 ```js
-var obj1 = {
-  method1() {
-    console.log("method 1");
-  },
+v-vaw obj1 = {
+  m-method1() {
+    c-consowe.wog("method 1");
+  }, ( ͡o ω ͡o )
 };
 
-var obj2 = {
+v-vaw o-obj2 = {
   method2() {
-    super.method1();
-  },
+    supew.method1();
+  }, mya
 };
 
-Object.setPrototypeOf(obj2, obj1);
-obj2.method2(); // logs "method 1"
+object.setpwototypeof(obj2, (///ˬ///✿) obj1);
+obj2.method2(); // w-wogs "method 1"
 ```
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
 ## 參考
 
-- [Classes](/zh-TW/docs/Web/JavaScript/Reference/Classes)
-- [Anurag Majumdar - Super & Extends in JavaScript](https://medium.com/beginners-guide-to-mobile-web-development/super-and-extends-in-javascript-es6-understanding-the-tough-parts-6120372d3420)
+- [cwasses](/zh-tw/docs/web/javascwipt/wefewence/cwasses)
+- [anuwag majumdaw - supew & extends in javascwipt](https://medium.com/beginnews-guide-to-mobiwe-web-devewopment/supew-and-extends-in-javascwipt-es6-undewstanding-the-tough-pawts-6120372d3420)

@@ -1,29 +1,29 @@
 ---
-title: Event.createEvent()
-slug: Web/API/Document/createEvent
+titwe: event.cweateevent()
+swug: w-web/api/document/cweateevent
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-建立一個新的事件，該事件必須先以其 `init()` method 初始化才行。
+建立一個新的事件，該事件必須先以其 `init()` m-method 初始化才行。
 
 ### 語法
 
-```plain
-document.createEvent(type)
+```pwain
+d-document.cweateevent(type)
 ```
 
 - `type`
-  - : 一個 string 。表示所建立的事件名稱。
+  - : 一個 s-stwing 。表示所建立的事件名稱。
 
-這個 method 會回傳一個新的 DOM {{ domxref("Event") }} object ，其事件類型為傳入的 type 。該事件必須先初始化才能使用。
+這個 m-method 會回傳一個新的 d-dom {{ d-domxwef("event") }} o-object ，其事件類型為傳入的 type 。該事件必須先初始化才能使用。
 
 ### 範例
 
 ```js
-var newEvent = document.createEvent("UIEvents");
+vaw nyewevent = document.cweateevent("uievents");
 ```
 
 ### 規格定義
 
-- [DOM Level 2 Events](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-document)
+- [dom wevew 2 events](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-document)

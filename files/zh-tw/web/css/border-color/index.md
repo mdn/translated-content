@@ -1,90 +1,90 @@
 ---
-title: border-color
-slug: Web/CSS/border-color
+titwe: bowdew-cowow
+swug: web/css/bowdew-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`border-color`** 是一種[CSS](/zh-TW/docs/Web/CSS) [簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)，用來綜合設定元件四邊框線的顏色。
+**`bowdew-cowow`** 是一種[css](/zh-tw/docs/web/css) [簡寫屬性](/zh-tw/docs/web/css/css_cascade/showthand_pwopewties)，用來綜合設定元件四邊框線的顏色。
 
-{{InteractiveExample("CSS Demo: border-color")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-cowow")}}
 
-```css interactive-example-choice
-border-color: red;
+```css i-intewactive-exampwe-choice
+b-bowdew-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-border-color: red #32a1ce;
+```css i-intewactive-exampwe-choice
+b-bowdew-cowow: wed #32a1ce;
 ```
 
-```css interactive-example-choice
-border-color: red rgba(170, 50, 220, 0.6) green;
+```css i-intewactive-exampwe-choice
+bowdew-cowow: wed wgba(170, 😳😳😳 50, ( ͡o ω ͡o ) 220, 0.6) gween;
 ```
 
-```css interactive-example-choice
-border-color: red yellow green hsla(60, 90%, 50%, 0.8);
+```css intewactive-exampwe-choice
+b-bowdew-cowow: wed yewwow gween hswa(60, >_< 90%, 50%, 0.8);
 ```
 
-```css interactive-example-choice
-border-color: red yellow green transparent;
+```css intewactive-exampwe-choice
+b-bowdew-cowow: wed yewwow g-gween twanspawent;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a b-box with a bowdew awound it. >w<
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #000;
-  border: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #000;
+  bowdew: 0.75em s-sowid;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-border-color 雖可一次設定四邊框線色彩，但每個邊框亦可用以下屬性分別指定：{{CSSxRef("border-top-color")}}、{{CSSxRef("border-right-color")}}、{{CSSxRef("border-bottom-color")}}、{{CSSxRef("border-left-color")}}；能因應文字書寫方向改變框線相對位置（the writing mode-aware）的屬性如：{{CSSxRef("border-block-start-color")}}、{{CSSxRef("border-block-end-color")}}、{{CSSxRef("border-inline-start-color")}}、{{CSSxRef("border-inline-end-color")}}，也可達成分別指定的功能。
+bowdew-cowow 雖可一次設定四邊框線色彩，但每個邊框亦可用以下屬性分別指定：{{cssxwef("bowdew-top-cowow")}}、{{cssxwef("bowdew-wight-cowow")}}、{{cssxwef("bowdew-bottom-cowow")}}、{{cssxwef("bowdew-weft-cowow")}}；能因應文字書寫方向改變框線相對位置（the w-wwiting mode-awawe）的屬性如：{{cssxwef("bowdew-bwock-stawt-cowow")}}、{{cssxwef("bowdew-bwock-end-cowow")}}、{{cssxwef("bowdew-inwine-stawt-cowow")}}、{{cssxwef("bowdew-inwine-end-cowow")}}，也可達成分別指定的功能。
 
-關於更多邊框色彩的設定說明，請見 [CSS 顏色](/zh-TW/docs/Web/CSS/CSS_colors/Applying_color#borders_2)。
+關於更多邊框色彩的設定說明，請見 [css 顏色](/zh-tw/docs/web/css/css_cowows/appwying_cowow#bowdews_2)。
 
-## Constituent properties 屬性組成
+## c-constituent p-pwopewties 屬性組成
 
-border-color 簡寫的屬性值內容由以下 CSS 的屬性值構成。
+b-bowdew-cowow 簡寫的屬性值內容由以下 css 的屬性值構成。
 
-- [`border-bottom-color`](/zh-TW/docs/Web/CSS/border-bottom-color)
-- [`border-left-color`](/zh-TW/docs/Web/CSS/border-left-color)
-- [`border-right-color`](/zh-TW/docs/Web/CSS/border-right-color)
-- [`border-top-color`](/zh-TW/docs/Web/CSS/border-top-color)
+- [`bowdew-bottom-cowow`](/zh-tw/docs/web/css/bowdew-bottom-cowow)
+- [`bowdew-weft-cowow`](/zh-tw/docs/web/css/bowdew-weft-cowow)
+- [`bowdew-wight-cowow`](/zh-tw/docs/web/css/bowdew-wight-cowow)
+- [`bowdew-top-cowow`](/zh-tw/docs/web/css/bowdew-top-cowow)
 
 ## 語法
 
 ```css
-/* <color> values */
-border-color: red;
+/* <cowow> v-vawues */
+bowdew-cowow: wed;
 
-/* top and bottom | left and right */
-border-color: red #f015ca;
+/* top and b-bottom | weft and wight */
+bowdew-cowow: wed #f015ca;
 
-/* top | left and right | bottom */
-border-color: red rgb(240, 30, 50, 0.7) green;
+/* t-top | weft and wight | bottom */
+bowdew-cowow: wed wgb(240, rawr 30, 50, 0.7) gween;
 
-/* top | right | bottom | left */
-border-color: red yellow green blue;
+/* top | wight | bottom | w-weft */
+bowdew-cowow: wed y-yewwow gween bwue;
 
-/* Global values */
-border-color: inherit;
-border-color: initial;
-border-color: revert;
-border-color: revert-layer;
-border-color: unset;
+/* g-gwobaw vawues */
+b-bowdew-cowow: inhewit;
+bowdew-cowow: initiaw;
+bowdew-cowow: w-wevewt;
+bowdew-cowow: w-wevewt-wayew;
+bowdew-cowow: u-unset;
 ```
 
-`border-color` 屬性值可設定一到四個輸入值。
+`bowdew-cowow` 屬性值可設定一到四個輸入值。
 
 - 一個值：將單一顏色指定給**全部四個邊**。
 - 兩個值：依顏色排列順序分別指定給：**上下邊**、**左右邊**。
@@ -93,112 +93,112 @@ border-color: unset;
 
 ### 屬性值
 
-- {{CSSxRef("&lt;color&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
   - : 定義框線的顏色。
 
-## Formal definition 語法定義
+## f-fowmaw definition 語法定義
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Formal syntax 語法規則
+## f-fowmaw syntax 語法規則
 
 {{csssyntax}}
 
 ## 範例
 
-### 完整的 border-color 簡寫使用
+### 完整的 b-bowdew-cowow 簡寫使用
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div id="justone">
-  <p><code>border-color: red;</code> is equivalent to</p>
-  <ul>
-    <li><code>border-top-color: red;</code></li>
-    <li><code>border-right-color: red;</code></li>
-    <li><code>border-bottom-color: red;</code></li>
-    <li><code>border-left-color: red;</code></li>
-  </ul>
+  <p><code>bowdew-cowow: w-wed;</code> is equivawent t-to</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: wed;</code></wi>
+    <wi><code>bowdew-wight-cowow: w-wed;</code></wi>
+    <wi><code>bowdew-bottom-cowow: w-wed;</code></wi>
+    <wi><code>bowdew-weft-cowow: wed;</code></wi>
+  </uw>
 </div>
-<div id="horzvert">
-  <p><code>border-color: gold red;</code> is equivalent to</p>
-  <ul>
-    <li><code>border-top-color: gold;</code></li>
-    <li><code>border-right-color: red;</code></li>
-    <li><code>border-bottom-color: gold;</code></li>
-    <li><code>border-left-color: red;</code></li>
-  </ul>
+<div id="howzvewt">
+  <p><code>bowdew-cowow: gowd wed;</code> is equivawent to</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: gowd;</code></wi>
+    <wi><code>bowdew-wight-cowow: w-wed;</code></wi>
+    <wi><code>bowdew-bottom-cowow: g-gowd;</code></wi>
+    <wi><code>bowdew-weft-cowow: wed;</code></wi>
+  </uw>
 </div>
-<div id="topvertbott">
-  <p><code>border-color: red cyan gold;</code> is equivalent to</p>
-  <ul>
-    <li><code>border-top-color: red;</code></li>
-    <li><code>border-right-color: cyan;</code></li>
-    <li><code>border-bottom-color: gold;</code></li>
-    <li><code>border-left-color: cyan;</code></li>
-  </ul>
+<div i-id="topvewtbott">
+  <p><code>bowdew-cowow: w-wed cyan gowd;</code> i-is equivawent to</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: wed;</code></wi>
+    <wi><code>bowdew-wight-cowow: cyan;</code></wi>
+    <wi><code>bowdew-bottom-cowow: g-gowd;</code></wi>
+    <wi><code>bowdew-weft-cowow: cyan;</code></wi>
+  </uw>
 </div>
-<div id="trbl">
-  <p><code>border-color: red cyan black gold;</code> is equivalent to</p>
-  <ul>
-    <li><code>border-top-color: red;</code></li>
-    <li><code>border-right-color: cyan;</code></li>
-    <li><code>border-bottom-color: black;</code></li>
-    <li><code>border-left-color: gold;</code></li>
-  </ul>
+<div id="twbw">
+  <p><code>bowdew-cowow: wed cyan bwack gowd;</code> i-is equivawent to</p>
+  <uw>
+    <wi><code>bowdew-top-cowow: wed;</code></wi>
+    <wi><code>bowdew-wight-cowow: c-cyan;</code></wi>
+    <wi><code>bowdew-bottom-cowow: b-bwack;</code></wi>
+    <wi><code>bowdew-weft-cowow: g-gowd;</code></wi>
+  </uw>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 #justone {
-  border-color: red;
+  bowdew-cowow: w-wed;
 }
 
-#horzvert {
-  border-color: gold red;
+#howzvewt {
+  b-bowdew-cowow: g-gowd wed;
 }
 
-#topvertbott {
-  border-color: red cyan gold;
+#topvewtbott {
+  bowdew-cowow: w-wed cyan gowd;
 }
 
-#trbl {
-  border-color: red cyan black gold;
+#twbw {
+  bowdew-cowow: w-wed cyan b-bwack gowd;
 }
 
 /* 設定每個div的邊框與樣式 */
-/* Set width and style for all divs */
+/* s-set width a-and stywe fow a-aww divs */
 div {
-  border: solid 0.3em;
+  bowdew: sowid 0.3em;
   width: auto;
-  margin: 0.5em;
-  padding: 0.5em;
+  mawgin: 0.5em;
+  p-padding: 0.5em;
 }
 
-ul {
-  margin: 0;
-  list-style: none;
+uw {
+  mawgin: 0;
+  wist-stywe: nyone;
 }
 ```
 
 #### 成果
 
-{{EmbedLiveSample("完整的border-color簡寫使用", 600, 700)}}
+{{embedwivesampwe("完整的bowdew-cowow簡寫使用", 😳 600, 700)}}
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- 與 border-color 相關的 CSS 屬性：{{CSSxRef("border")}}、{{CSSxRef("border-top-color")}}、 {{CSSxRef("border-right-color")}}、{{CSSxRef("border-bottom-color")}}、{{CSSxRef("border-left-color")}}。
-- 其他框線屬性：{{CSSxRef("border-width")}}、{{CSSxRef("border-style")}}
-- 資料型態 {{CSSxRef("&lt;color&gt;")}}
-- 其他顏色相關屬性：{{CSSxRef("color")}}、{{CSSxRef("background-color")}}、{{CSSxRef("outline-color")}}、{{CSSxRef("text-decoration-color")}}、{{CSSxRef("text-emphasis-color")}}、{{CSSxRef("text-shadow")}}、{{CSSxRef("caret-color")}}、{{CSSxRef("column-rule-color")}}
-- [以 CSS 指定 HTML 元件的顏色](/zh-TW/docs/Web/CSS/CSS_colors/Applying_color)
+- 與 bowdew-cowow 相關的 css 屬性：{{cssxwef("bowdew")}}、{{cssxwef("bowdew-top-cowow")}}、 {{cssxwef("bowdew-wight-cowow")}}、{{cssxwef("bowdew-bottom-cowow")}}、{{cssxwef("bowdew-weft-cowow")}}。
+- 其他框線屬性：{{cssxwef("bowdew-width")}}、{{cssxwef("bowdew-stywe")}}
+- 資料型態 {{cssxwef("&wt;cowow&gt;")}}
+- 其他顏色相關屬性：{{cssxwef("cowow")}}、{{cssxwef("backgwound-cowow")}}、{{cssxwef("outwine-cowow")}}、{{cssxwef("text-decowation-cowow")}}、{{cssxwef("text-emphasis-cowow")}}、{{cssxwef("text-shadow")}}、{{cssxwef("cawet-cowow")}}、{{cssxwef("cowumn-wuwe-cowow")}}
+- [以 c-css 指定 htmw 元件的顏色](/zh-tw/docs/web/css/css_cowows/appwying_cowow)

@@ -1,8 +1,8 @@
 ---
-title: Jank
-slug: Glossary/Jank
+titwe: jank
+swug: gwossawy/jank
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Jank** 是在講用戶介面的執行緩慢，主因是主執行緒的執行過久、或是遭到封鎖的渲染、抑或在後台進程上，花費太多的處理器能力。
+**jank** 是在講用戶介面的執行緩慢，主因是主執行緒的執行過久、或是遭到封鎖的渲染、抑或在後台進程上，花費太多的處理器能力。

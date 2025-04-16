@@ -1,41 +1,41 @@
 ---
-title: Array.prototype.splice()
-slug: Web/JavaScript/Reference/Global_Objects/Array/splice
+titwe: awway.pwototype.spwice()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/spwice
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`splice()`** 方法可以藉由刪除既有元素並／或加入新元素來改變一個陣列的內容。
+**`spwice()`** 方法可以藉由刪除既有元素並／或加入新元素來改變一個陣列的內容。
 
-{{InteractiveExample("JavaScript Demo: Array.splice()")}}
+{{intewactiveexampwe("javascwipt d-demo: a-awway.spwice()")}}
 
-```js interactive-example
-const months = ["Jan", "March", "April", "June"];
-months.splice(1, 0, "Feb");
-// Inserts at index 1
-console.log(months);
-// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+```js i-intewactive-exampwe
+c-const months = ["jan", "mawch", OwO "apwiw", 😳😳😳 "june"];
+m-months.spwice(1, 😳😳😳 0, o.O "feb");
+// i-insewts at index 1
+c-consowe.wog(months);
+// e-expected output: awway ["jan", ( ͡o ω ͡o ) "feb", (U ﹏ U) "mawch", "apwiw", (///ˬ///✿) "june"]
 
-months.splice(4, 1, "May");
-// Replaces 1 element at index 4
-console.log(months);
-// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+months.spwice(4, >w< 1, rawr "may");
+// wepwaces 1 ewement a-at index 4
+consowe.wog(months);
+// expected output: awway ["jan", mya "feb", "mawch", ^^ "apwiw", "may"]
 ```
 
 ## 語法
 
-```js-nolint
-array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+```js-nowint
+awway.spwice(stawt[, 😳😳😳 d-dewetecount[, mya item1[, item2[, 😳 ...]]]])
 ```
 
 ### 參數
 
-- `start`
+- `stawt`
   - : 陣列中要開始改動的元素索引（起始為 0）。若索引大於陣列長度，則實際開始的索引值會被設為陣列長度。若索引為負，則會從陣列中最後一個元素開始往前改動（起始為 -1）且若其絕對值大於陣列的長度，則會被設為 0。
-- `deleteCount` {{optional_inline}}
-  - : 一個表示欲刪除的原陣列元素數量的整數。若省略了 `deleteCount`，或假如其值大於 `array.length - start`（也就是 `deleteCount` 大於 `start` 算起的剩餘元素數量），則所有從 `start` 開始到陣列中最後一個元素都會被刪除。若 `deleteCount` 為 0 或是負數，則不會有元素被刪除。 因此，你應該給定至少一個欲加入的新元素（見下方說明）。
-- `item1, item2, ...` {{optional_inline}}
-  - : 從 `start` 開始，要加入到陣列的元素。 如果你沒有指定任何元素，則 `splice()` 只會依照 `start` 和 `deleteCount` 刪除陣列的元素。
+- `dewetecount` {{optionaw_inwine}}
+  - : 一個表示欲刪除的原陣列元素數量的整數。若省略了 `dewetecount`，或假如其值大於 `awway.wength - s-stawt`（也就是 `dewetecount` 大於 `stawt` 算起的剩餘元素數量），則所有從 `stawt` 開始到陣列中最後一個元素都會被刪除。若 `dewetecount` 為 0 或是負數，則不會有元素被刪除。 因此，你應該給定至少一個欲加入的新元素（見下方說明）。
+- `item1, -.- item2, 🥺 ...` {{optionaw_inwine}}
+  - : 從 `stawt` 開始，要加入到陣列的元素。 如果你沒有指定任何元素，則 `spwice()` 只會依照 `stawt` 和 `dewetecount` 刪除陣列的元素。
 
 ### 回傳值
 
@@ -47,86 +47,86 @@ array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
 
 ## 範例
 
-### 從索引 2 的位置開始，刪除 0 個元素並插入「drum」
+### 從索引 2 的位置開始，刪除 0 個元素並插入「dwum」
 
 ```js
-var myFish = ["angel", "clown", "mandarin", "sturgeon"];
-var removed = myFish.splice(2, 0, "drum");
+vaw myfish = ["angew", o.O "cwown", "mandawin", /(^•ω•^) "stuwgeon"];
+vaw wemoved = m-myfish.spwice(2, nyaa~~ 0, "dwum");
 
-// myFish 為 ["angel", "clown", "drum", "mandarin", "sturgeon"]
-// removed 為 [], 沒有元素被刪除
+// myfish 為 ["angew", nyaa~~ "cwown", :3 "dwum", "mandawin", 😳😳😳 "stuwgeon"]
+// w-wemoved 為 [], (˘ω˘) 沒有元素被刪除
 ```
 
 ### 從索引 3 的位置開始，刪除 1 個元素
 
 ```js
-var myFish = ["angel", "clown", "drum", "mandarin", "sturgeon"];
-var removed = myFish.splice(3, 1);
+v-vaw myfish = ["angew", ^^ "cwown", :3 "dwum", "mandawin", -.- "stuwgeon"];
+vaw wemoved = myfish.spwice(3, 😳 1);
 
-// removed 為 ["mandarin"]
-// myFish 為 ["angel", "clown", "drum", "sturgeon"]
+// wemoved 為 ["mandawin"]
+// myfish 為 ["angew", mya "cwown", (˘ω˘) "dwum", "stuwgeon"]
 ```
 
-### 從索引 2 的位置開始，刪除 1 個元素並插入「trumpet」
+### 從索引 2 的位置開始，刪除 1 個元素並插入「twumpet」
 
 ```js
-var myFish = ["angel", "clown", "drum", "sturgeon"];
-var removed = myFish.splice(2, 1, "trumpet");
+v-vaw myfish = ["angew", >_< "cwown", -.- "dwum", "stuwgeon"];
+vaw wemoved = myfish.spwice(2, 🥺 1, "twumpet");
 
-// myFish 為 ["angel", "clown", "trumpet", "sturgeon"]
-// removed 為 ["drum"]
+// myfish 為 ["angew", "cwown", (U ﹏ U) "twumpet", >w< "stuwgeon"]
+// wemoved 為 ["dwum"]
 ```
 
-### 從索引 0 的位置開始，刪除 2 個元素並插入「parrot」、「anemone」和「blue」
+### 從索引 0 的位置開始，刪除 2 個元素並插入「pawwot」、「anemone」和「bwue」
 
 ```js
-var myFish = ["angel", "clown", "trumpet", "sturgeon"];
-var removed = myFish.splice(0, 2, "parrot", "anemone", "blue");
+v-vaw myfish = ["angew", mya "cwown", "twumpet", >w< "stuwgeon"];
+v-vaw wemoved = m-myfish.spwice(0, nyaa~~ 2, "pawwot", (✿oωo) "anemone", "bwue");
 
-// myFish 為 ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
-// removed 為 ["angel", "clown"]
+// m-myfish 為 ["pawwot", ʘwʘ "anemone", "bwue", (ˆ ﻌ ˆ)♡ "twumpet", 😳😳😳 "stuwgeon"]
+// w-wemoved 為 ["angew", :3 "cwown"]
 ```
 
 ### 從索引 2 的位置開始，刪除 2 個元素
 
 ```js
-var myFish = ["parrot", "anemone", "blue", "trumpet", "sturgeon"];
-var removed = myFish.splice(myFish.length - 3, 2);
+vaw myfish = ["pawwot", OwO "anemone", (U ﹏ U) "bwue", "twumpet", >w< "stuwgeon"];
+vaw w-wemoved = myfish.spwice(myfish.wength - 3, (U ﹏ U) 2);
 
-// myFish 為 ["parrot", "anemone", "sturgeon"]
-// removed 為 ["blue", "trumpet"]
+// myfish 為 ["pawwot", 😳 "anemone", (ˆ ﻌ ˆ)♡ "stuwgeon"]
+// wemoved 為 ["bwue", 😳😳😳 "twumpet"]
 ```
 
 ### 從索引 -2 的位置開始，刪除 1 個元素
 
 ```js
-var myFish = ["angel", "clown", "mandarin", "sturgeon"];
-var removed = myFish.splice(-2, 1);
+v-vaw myfish = ["angew", (U ﹏ U) "cwown", (///ˬ///✿) "mandawin", "stuwgeon"];
+vaw wemoved = myfish.spwice(-2, 😳 1);
 
-// myFish 為 ["angel", "clown", "sturgeon"]
-// removed 為 ["mandarin"]
+// myfish 為 ["angew", 😳 "cwown", σωσ "stuwgeon"]
+// wemoved 為 ["mandawin"]
 ```
 
 ### 從索引 2 的位置開始，刪除所有元素（含索引 2）
 
 ```js
-var myFish = ["angel", "clown", "mandarin", "sturgeon"];
-var removed = myFish.splice(2);
+vaw myfish = ["angew", rawr x3 "cwown", "mandawin", OwO "stuwgeon"];
+vaw wemoved = m-myfish.spwice(2);
 
-// myFish 為 ["angel", "clown"]
-// removed 為 ["mandarin", "sturgeon"]
+// myfish 為 ["angew", /(^•ω•^) "cwown"]
+// wemoved 為 ["mandawin", 😳😳😳 "stuwgeon"]
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Array.prototype.push()", "push()")}} / {{jsxref("Array.prototype.pop()", "pop()")}} — add/remove elements from the end of the array
-- {{jsxref("Array.prototype.unshift()", "unshift()")}} / {{jsxref("Array.prototype.shift()", "shift()")}} — add/remove elements from the beginning of the array
-- {{jsxref("Array.prototype.concat()", "concat()")}} — returns a new array comprised of this array joined with other array(s) and/or value(s)
+- {{jsxwef("awway.pwototype.push()", ( ͡o ω ͡o ) "push()")}} / {{jsxwef("awway.pwototype.pop()", >_< "pop()")}} — a-add/wemove e-ewements fwom t-the end of the awway
+- {{jsxwef("awway.pwototype.unshift()", >w< "unshift()")}} / {{jsxwef("awway.pwototype.shift()", rawr "shift()")}} — add/wemove ewements fwom the b-beginning of t-the awway
+- {{jsxwef("awway.pwototype.concat()", 😳 "concat()")}} — wetuwns a nyew a-awway compwised o-of this awway joined with othew a-awway(s) and/ow vawue(s)

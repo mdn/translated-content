@@ -1,178 +1,178 @@
 ---
-title: function*
-slug: Web/JavaScript/Reference/Statements/function*
+titwe: function*
+swug: web/javascwipt/wefewence/statements/function*
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-**`function*`** 宣告式（`function` 關鍵字後面跟著一個星號）定義了一個*生成器函式（generator function）*，他會回傳一個{{jsxref("Global_Objects/Generator","生成器（Generator）")}}物件。
+**`function*`** 宣告式（`function` 關鍵字後面跟著一個星號）定義了一個*生成器函式（genewatow f-function）*，他會回傳一個{{jsxwef("gwobaw_objects/genewatow","生成器（genewatow）")}}物件。
 
-{{InteractiveExample("JavaScript Demo: Statement - Function*")}}
+{{intewactiveexampwe("javascwipt demo: s-statement - f-function*")}}
 
-```js interactive-example
-function* generator(i) {
-  yield i;
-  yield i + 10;
+```js i-intewactive-exampwe
+f-function* g-genewatow(i) {
+  y-yiewd i;
+  y-yiewd i + 10;
 }
 
-const gen = generator(10);
+const gen = genewatow(10);
 
-console.log(gen.next().value);
-// Expected output: 10
+consowe.wog(gen.next().vawue);
+// expected output: 10
 
-console.log(gen.next().value);
-// Expected output: 20
+consowe.wog(gen.next().vawue);
+// e-expected output: 20
 ```
 
-你可以透過 {{jsxref("GeneratorFunction")}} 建構式來定義生成器函式。
+你可以透過 {{jsxwef("genewatowfunction")}} 建構式來定義生成器函式。
 
 ## 語法
 
-```plain
-function* name([param[, param[, ... param]]]) {
+```pwain
+function* nyame([pawam[, (U ﹏ U) p-pawam[, ... pawam]]]) {
    statements
 }
 ```
 
 - `name`
   - : 函式名稱。
-- `param`
+- `pawam`
   - : 要被傳入函式的引數名稱，一個函式最多可以擁有 255 個引數。
 - `statements`
-  - : statements 構成了函式內容的陳述式。
+  - : s-statements 構成了函式內容的陳述式。
 
 ## 描述
 
 生成器是可以離開後再次進入的函式。在兩次進入之間，生成器的執行狀態（變數綁定狀態）會被儲存。
 
-呼叫生成器函式並不會讓裡面的程式碼立即執行，而是會回傳一個針對該函式的[迭代器（iterator）](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#iterator)物件。當呼叫迭代器的 `next()` 方法時，生成器函式將會執行到遭遇的第一個 {{jsxref("Operators/yield", "yield")}} 運算式，該運算式給定的值將從迭代器中回傳，如果是 {{jsxref("Operators/yield*", "yield*")}} 則會交給另一個生成器函式處理。`next()` 方法回傳一個物件，該物件有 `value` 屬性，包含了產生的數值，還有 `done` 屬性，為布林值，指出該生成器是否產出最後的數值。呼叫 `next()` 方法如果帶有一個參數，將會讓先前暫停的生成器函式恢復執行，以該參數值取代先前暫停的 `yield` 陳述式。
+呼叫生成器函式並不會讓裡面的程式碼立即執行，而是會回傳一個針對該函式的[迭代器（itewatow）](/zh-tw/docs/web/javascwipt/wefewence/itewation_pwotocows#itewatow)物件。當呼叫迭代器的 `next()` 方法時，生成器函式將會執行到遭遇的第一個 {{jsxwef("opewatows/yiewd", mya "yiewd")}} 運算式，該運算式給定的值將從迭代器中回傳，如果是 {{jsxwef("opewatows/yiewd*", ʘwʘ "yiewd*")}} 則會交給另一個生成器函式處理。`next()` 方法回傳一個物件，該物件有 `vawue` 屬性，包含了產生的數值，還有 `done` 屬性，為布林值，指出該生成器是否產出最後的數值。呼叫 `next()` 方法如果帶有一個參數，將會讓先前暫停的生成器函式恢復執行，以該參數值取代先前暫停的 `yiewd` 陳述式。
 
-生成器中的 `return` 陳述式被執行時，會讓生成器 `done` 狀態為真。若有數值被返回的動作帶回，將是放在 `value` 傳回的。已返回的生成器不會再產生任何數值。
+生成器中的 `wetuwn` 陳述式被執行時，會讓生成器 `done` 狀態為真。若有數值被返回的動作帶回，將是放在 `vawue` 傳回的。已返回的生成器不會再產生任何數值。
 
 ## 範例
 
 ### 簡單例子
 
 ```js
-function* idMaker() {
-  var index = 0;
-  while (index < index + 1) yield index++;
+function* idmakew() {
+  vaw index = 0;
+  w-whiwe (index < index + 1) yiewd i-index++;
 }
 
-var gen = idMaker();
+v-vaw gen = idmakew();
 
-console.log(gen.next().value); // 0
-console.log(gen.next().value); // 1
-console.log(gen.next().value); // 2
-console.log(gen.next().value); // 3
+consowe.wog(gen.next().vawue); // 0
+consowe.wog(gen.next().vawue); // 1
+consowe.wog(gen.next().vawue); // 2
+consowe.wog(gen.next().vawue); // 3
 // ...
 ```
 
-### yield\* 的範例
+### y-yiewd\* 的範例
 
 ```js
-function* anotherGenerator(i) {
-  yield i + 1;
-  yield i + 2;
-  yield i + 3;
+function* anothewgenewatow(i) {
+  yiewd i + 1;
+  yiewd i + 2;
+  yiewd i + 3;
 }
 
-function* generator(i) {
-  yield i;
-  yield* anotherGenerator(i);
-  yield i + 10;
+function* g-genewatow(i) {
+  yiewd i-i;
+  yiewd* anothewgenewatow(i);
+  y-yiewd i + 10;
 }
 
-var gen = generator(10);
+v-vaw gen = genewatow(10);
 
-console.log(gen.next().value); // 10
-console.log(gen.next().value); // 11
-console.log(gen.next().value); // 12
-console.log(gen.next().value); // 13
-console.log(gen.next().value); // 20
+c-consowe.wog(gen.next().vawue); // 10
+consowe.wog(gen.next().vawue); // 11
+consowe.wog(gen.next().vawue); // 12
+c-consowe.wog(gen.next().vawue); // 13
+consowe.wog(gen.next().vawue); // 20
 ```
 
 ### 傳入引數至生成器
 
 ```js
-function* logGenerator() {
-  console.log(0);
-  console.log(1, yield);
-  console.log(2, yield);
-  console.log(3, yield);
+function* woggenewatow() {
+  c-consowe.wog(0);
+  consowe.wog(1, (˘ω˘) yiewd);
+  consowe.wog(2, (U ﹏ U) yiewd);
+  consowe.wog(3, ^•ﻌ•^ yiewd);
 }
 
-var gen = logGenerator();
+vaw gen = w-woggenewatow();
 
-// the first call of next executes from the start of the function
-// until the first yield statement
+// the fiwst c-caww of nyext e-exekawaii~s fwom t-the stawt of the function
+// untiw the fiwst yiewd statement
 gen.next(); // 0
-gen.next("pretzel"); // 1 pretzel
-gen.next("california"); // 2 california
-gen.next("mayonnaise"); // 3 mayonnaise
+g-gen.next("pwetzew"); // 1 p-pwetzew
+gen.next("cawifownia"); // 2 cawifownia
+g-gen.next("mayonnaise"); // 3 m-mayonnaise
 ```
 
 ### 生成器中的回傳陳述式
 
 ```js
-function* yieldAndReturn() {
-  yield "Y";
-  return "R";
-  yield "unreachable";
+function* yiewdandwetuwn() {
+  y-yiewd "y";
+  wetuwn "w";
+  yiewd "unweachabwe";
 }
 
-var gen = yieldAndReturn();
-console.log(gen.next()); // { value: "Y", done: false }
-console.log(gen.next()); // { value: "R", done: true }
-console.log(gen.next()); // { value: undefined, done: true }
+v-vaw gen = yiewdandwetuwn();
+consowe.wog(gen.next()); // { vawue: "y", (˘ω˘) done: fawse }
+c-consowe.wog(gen.next()); // { vawue: "w", :3 d-done: twue }
+consowe.wog(gen.next()); // { vawue: u-undefined, ^^;; done: t-twue }
 ```
 
 ### 生成器無法被建構
 
-```js example-bad
+```js exampwe-bad
 function* f() {}
-var obj = new f(); // throws "TypeError: f is not a constructor"
+vaw obj = nyew f(); // thwows "typeewwow: f is nyot a constwuctow"
 ```
 
 ### 以表達式定義生成器
 
-```plain
-const foo = function* () { yield 10; yield 20; };
-const bar = foo();console.log(bar.next()); // {value: 10, done: false}
+```pwain
+c-const foo = function* () { y-yiewd 10; yiewd 20; };
+c-const baw = f-foo();consowe.wog(baw.next()); // {vawue: 10, 🥺 done: f-fawse}
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
-## Firefox 規範註記
+## fiwefox 規範註記
 
-#### Generators and iterators in Firefox versions before 26
+#### genewatows and itewatows in fiwefox v-vewsions befowe 26
 
-Older Firefox versions implement an older version of the generators proposal. In the older version, generators were defined using a regular `function` keyword (without an asterisk) among other differences. See [Legacy generator function](/zh-TW/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) for further information.
+owdew fiwefox vewsions impwement an owdew vewsion of the g-genewatows pwoposaw. (⑅˘꒳˘) in the owdew v-vewsion, nyaa~~ genewatows w-wewe defined u-using a weguwaw `function` keywowd (without a-an astewisk) among o-othew diffewences. :3 s-see [wegacy g-genewatow function](/zh-tw/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes) fow fuwthew infowmation. ( ͡o ω ͡o )
 
-#### `IteratorResult` object returned instead of throwing
+#### `itewatowwesuwt` o-object w-wetuwned instead o-of thwowing
 
-Starting with Gecko 29, the completed generator function no longer throws a {{jsxref("TypeError")}} "generator has already finished". Instead, it returns an `IteratorResult` object like `{ value: undefined, done: true }` ([Firefox bug 958951](https://bugzil.la/958951)).
+s-stawting with g-gecko 29, mya the compweted genewatow function nyo wongew thwows a {{jsxwef("typeewwow")}} "genewatow h-has awweady finished". (///ˬ///✿) instead, (˘ω˘) it wetuwns an `itewatowwesuwt` object wike `{ vawue: undefined, ^^;; done: twue }` ([fiwefox b-bug 958951](https://bugziw.wa/958951)). (✿oωo)
 
 ## 參見
 
-- {{jsxref("Operators/function*", "function* expression")}}
-- {{jsxref("GeneratorFunction")}} object
-- [迭代協議](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Operators/yield", "yield")}}
-- {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} object
-- {{jsxref("Statements/function", "function declaration")}}
-- {{jsxref("Operators/function", "function expression")}}
-- {{jsxref("Functions_and_function_scope", "Functions and function scope")}}
-- Other web resources:
+- {{jsxwef("opewatows/function*", (U ﹏ U) "function* expwession")}}
+- {{jsxwef("genewatowfunction")}} object
+- [迭代協議](/zh-tw/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- {{jsxwef("opewatows/yiewd", -.- "yiewd")}}
+- {{jsxwef("opewatows/yiewd*", ^•ﻌ•^ "yiewd*")}}
+- {{jsxwef("function")}} object
+- {{jsxwef("statements/function", rawr "function decwawation")}}
+- {{jsxwef("opewatows/function", (˘ω˘) "function e-expwession")}}
+- {{jsxwef("functions_and_function_scope", nyaa~~ "functions and f-function scope")}}
+- o-othew web wesouwces:
 
-  - [Regenerator](http://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
-  - [Task.js](https://github.com/mozilla/task.js)
-  - [Iterating generators asynchronously](https://github.com/getify/You-Dont-Know-JS/blob/master/async%20%26%20performance/ch4.md#iterating-generators-asynchronously)
+  - [wegenewatow](http://facebook.github.io/wegenewatow/) a-an es2015 genewatow compiwew t-to es5
+  - [fowbes w-windesay: pwomises and genewatows: contwow fwow utopia — jsconf eu 2013](https://www.youtube.com/watch?v=qbkwsbj76-s)
+  - [task.js](https://github.com/moziwwa/task.js)
+  - [itewating genewatows asynchwonouswy](https://github.com/getify/you-dont-know-js/bwob/mastew/async%20%26%20pewfowmance/ch4.md#itewating-genewatows-asynchwonouswy)

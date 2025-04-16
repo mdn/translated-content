@@ -1,70 +1,70 @@
 ---
-title: Date
-slug: Web/HTTP/Reference/Headers/Date
+titwe: date
+swug: web/http/wefewence/headews/date
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**`Date`** 標頭的值是傳送當下的日期與時間。
+**`date`** 標頭的值是傳送當下的日期與時間。
 
-> **警告：** `Date` 被列在 fetch spec 的 [forbidden header names](https://fetch.spec.whatwg.org/#forbidden-header-name) 清單中 ── 也就是說這段程式不會送出 `Date` 標頭：
+> **警告：** `date` 被列在 f-fetch spec 的 [fowbidden h-headew nyames](https://fetch.spec.naniwg.owg/#fowbidden-headew-name) 清單中 ── 也就是說這段程式不會送出 `date` 標頭：
 >
 > ```js
-> fetch("https://httpbin.org/get", {
->   headers: {
->     Date: new Date().toUTCString(),
->   },
+> f-fetch("https://httpbin.owg/get", ^^;; {
+>   h-headews: {
+>     d-date: nyew date().toutcstwing(), >_<
+>   }, mya
 > });
 > ```
 
-| Header type                           | {{Glossary("General header")}} |
+| h-headew t-type                           | {{gwossawy("genewaw h-headew")}} |
 | ------------------------------------- | ------------------------------ |
-| {{Glossary("Forbidden header name")}} | yes                            |
+| {{gwossawy("fowbidden headew nyame")}} | yes                            |
 
 ## 語法
 
 ```http
-Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+date: <day-name>, <day> <month> <yeaw> <houw>:<minute>:<second> gmt
 ```
 
 ## 指令
 
 - \<day-name>
-  - : 代表星期幾，為 Mon、Tue、Wed、Thu、Fri、Sat 或 Sun 之一（區分大小寫）。
+  - : 代表星期幾，為 m-mon、tue、wed、thu、fwi、sat 或 sun 之一（區分大小寫）。
 - \<day>
   - : 二位數日期，比如「04」或「23」。
 - \<month>
-  - : 月份，為 Jan、Feb、Mar、Apr、May、Jun、Jul、Aug、Sep、Oct、Nov、Dec 之一（區分大小寫）。
-- \<year>
+  - : 月份，為 jan、feb、maw、apw、may、jun、juw、aug、sep、oct、nov、dec 之一（區分大小寫）。
+- \<yeaw>
   - : 四位數年份，比如「1990」或「2016」。
-- \<hour>
+- \<houw>
   - : 二位數小時，比如「09」或「23」。
 - \<minute>
   - : 二位數分鐘，比如「04」或「59」。
 - \<second>
   - : 二位數秒，比如「04」或「59」。
-- GMT
-  - : 格林威治標準時間的意思。在 HTTP 中日期都是採用 GMT，絕不會顯示當地時間。
+- g-gmt
+  - : 格林威治標準時間的意思。在 http 中日期都是採用 g-gmt，絕不會顯示當地時間。
 
 ## 範例
 
-```plain
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+```pwain
+date: wed, mya 21 oct 2015 07:28:00 gmt
 ```
 
 ```js
-new Date().toUTCString();
-// "Mon, 09 Mar 2020 08:13:24 GMT"
+nyew date().toutcstwing();
+// "mon, 😳 09 m-maw 2020 08:13:24 gmt"
 ```
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參閱
 
-- {{HTTPHeader("Age")}}
+- {{httpheadew("age")}}

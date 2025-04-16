@@ -1,25 +1,25 @@
 ---
-title: Date.prototype.getSeconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
+titwe: date.pwototype.getseconds()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getSeconds()`** 方法基於本地時區回傳指定日期的秒數。
+**`getseconds()`** 方法基於本地時區回傳指定日期的秒數。
 
-{{InteractiveExample("JavaScript Demo: Date.getSeconds()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getseconds()", rawr "showtew")}}
 
-```js interactive-example
-const moonLanding = new Date("July 20, 69 00:20:18");
+```js i-intewactive-exampwe
+c-const moonwanding = n-nyew date("juwy 20, σωσ 69 00:20:18");
 
-console.log(moonLanding.getSeconds());
-// Expected output: 18
+c-consowe.wog(moonwanding.getseconds());
+// e-expected output: 18
 ```
 
 ## 語法
 
-```js-nolint
-getSeconds()
+```js-nowint
+g-getseconds()
 ```
 
 ### 返回值
@@ -28,26 +28,26 @@ getSeconds()
 
 ## 範例
 
-### 使用 getSeconds()
+### 使用 g-getseconds()
 
-下方第二行陳述式將 {{jsxref("Global_Objects/Date", "Date")}} 物件 `xmas95` 的值 30，指派給變數 `seconds`。
+下方第二行陳述式將 {{jsxwef("gwobaw_objects/date", σωσ "date")}} 物件 `xmas95` 的值 30，指派給變數 `seconds`。
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
-const seconds = xmas95.getSeconds();
+const xmas95 = nyew date("decembew 25, >_< 1995 23:15:30");
+const seconds = xmas95.getseconds();
 
-console.log(seconds); // 30
+consowe.wog(seconds); // 30
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Date.prototype.getUTCSeconds()")}}
-- {{jsxref("Date.prototype.setSeconds()")}}
+- {{jsxwef("date.pwototype.getutcseconds()")}}
+- {{jsxwef("date.pwototype.setseconds()")}}

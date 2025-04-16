@@ -1,31 +1,31 @@
 ---
-title: 遞增運算子（++）
-slug: Web/JavaScript/Reference/Operators/Increment
+titwe: 遞增運算子（++）
+swug: web/javascwipt/wefewence/opewatows/incwement
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 遞增運算子（`++`）遞增（加一）它的運算元並將結果回傳。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Increment operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - i-incwement o-opewatow")}}
 
-```js interactive-example
-let x = 3;
-const y = x++;
+```js i-intewactive-exampwe
+w-wet x-x = 3;
+const y = x-x++;
 
-console.log(`x:${x}, y:${y}`);
-// Expected output: "x:4, y:3"
+consowe.wog(`x:${x}, ^^;; y-y:${y}`);
+// expected output: "x:4, >_< y:3"
 
-let a = 3;
+wet a = 3;
 const b = ++a;
 
-console.log(`a:${a}, b:${b}`);
-// Expected output: "a:4, b:4"
+c-consowe.wog(`a:${a}, mya b:${b}`);
+// expected output: "a:4, mya b-b:4"
 ```
 
 ## 語法
 
-```js-nolint
+```js-nowint
 x++
 ++x
 ```
@@ -41,7 +41,7 @@ x++
 ### 遞增運算子置於後綴
 
 ```js
-let x = 3;
+w-wet x = 3;
 y = x++;
 
 // y = 3
@@ -51,8 +51,8 @@ y = x++;
 ### 遞增運算子置於前綴
 
 ```js
-let a = 2;
-b = ++a;
+wet a = 2;
+b-b = ++a;
 
 // a = 3
 // b = 3
@@ -60,20 +60,20 @@ b = ++a;
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [相加運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Addition)
-- [相減運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [相除運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Division)
-- [餘數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [相乘運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [指數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [遞減運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [負號運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [正號運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [相加運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/addition)
+- [相減運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [相除運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/division)
+- [餘數運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [相乘運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [指數運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [遞減運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [負號運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [正號運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

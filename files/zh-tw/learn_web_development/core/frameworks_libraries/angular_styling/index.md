@@ -1,167 +1,167 @@
 ---
-title: 使用樣式點綴我們的 Angular 應用程式
-slug: Learn_web_development/Core/Frameworks_libraries/Angular_styling
+titwe: 使用樣式點綴我們的 anguwaw 應用程式
+s-swug: w-weawn_web_devewopment/cowe/fwamewowks_wibwawies/anguwaw_stywing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Angular_item_component", "Learn_web_development/Core/Frameworks_libraries")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn_web_devewopment/cowe/fwamewowks_wibwawies/anguwaw_todo_wist_beginning","weawn_web_devewopment/cowe/fwamewowks_wibwawies/anguwaw_item_component", o.O "weawn_web_devewopment/cowe/fwamewowks_wibwawies")}}
 
-現在，我們已經建立了基本的應用程式結構，並加入了內容，接著我們就要來對應用程式進行樣式的調整，透過本篇文章來學習如何使用樣式點綴我們的 Angular 應用程式。
+現在，我們已經建立了基本的應用程式結構，並加入了內容，接著我們就要來對應用程式進行樣式的調整，透過本篇文章來學習如何使用樣式點綴我們的 a-anguwaw 應用程式。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">預備知識：</th>
+    <tw>
+      <th scope="wow">預備知識：</th>
       <td>
-        熟悉 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a
-          href="/zh-TW/docs/Learn_web_development/Core/Styling_basics"
-          >CSS</a
+        熟悉 <a h-hwef="/zh-tw/docs/weawn_web_devewopment/cowe/stwuctuwing_content">htmw</a>、<a
+          h-hwef="/zh-tw/docs/weawn_web_devewopment/cowe/stywing_basics"
+          >css</a
         >
-        以及 <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a> 的核心，了解
+        以及 <a h-hwef="/zh-tw/docs/weawn_web_devewopment/cowe/scwipting">javascwipt</a> 的核心，了解
         <a
-          href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
-          >終端機/命令列（terminal/command line）</a
+          h-hwef="/zh-tw/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/command_wine"
+          >終端機/命令列（tewminaw/command w-wine）</a
         >相關知識。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">學習目標：</th>
-      <td>學習如何使用樣式點綴 Angular 應用程式。</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">學習目標：</th>
+      <td>學習如何使用樣式點綴 anguwaw 應用程式。</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## 增加樣式到 Angular 中
+## 增加樣式到 anguwaw 中
 
-Angular CLI 會產生兩種類型的樣式檔：
+anguwaw cwi 會產生兩種類型的樣式檔：
 
-- 元件樣式：Angular CLI 提供了元件各自的樣式檔案。這些樣式檔只會套用在其所屬的元件。
-- `styles.css`：在 `src` 目錄底下，除非你在元件層級指定樣式，否則這個檔案的樣式會套用到整個應用程式。
+- 元件樣式：anguwaw c-cwi 提供了元件各自的樣式檔案。這些樣式檔只會套用在其所屬的元件。
+- `stywes.css`：在 `swc` 目錄底下，除非你在元件層級指定樣式，否則這個檔案的樣式會套用到整個應用程式。
 
-根據你是否使用 CSS 預處理器，CSS 檔案的副檔名也會有所變化，Angular 支援純 CSS、SCSS、Sass、Less、以及 Stylus。
+根據你是否使用 css 預處理器，css 檔案的副檔名也會有所變化，anguwaw 支援純 css、scss、sass、wess、以及 stywus。
 
-在 `src/styles.css` 中，貼上以下樣式：
+在 `swc/stywes.css` 中，貼上以下樣式：
 
 ```css
-body {
-  font-family: Helvetica, Arial, sans-serif;
+b-body {
+  font-famiwy: hewvetica, /(^•ω•^) a-awiaw, nyaa~~ sans-sewif;
 }
 
-.btn-wrapper {
-  /* flexbox */
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+.btn-wwappew {
+  /* fwexbox */
+  dispway: fwex;
+  fwex-wwap: n-nyowwap;
+  justify-content: s-space-between;
 }
 
 .btn {
-  color: #000;
-  background-color: #fff;
-  border: 2px solid #cecece;
-  padding: 0.35rem 1rem 0.25rem 1rem;
-  font-size: 1rem;
+  c-cowow: #000;
+  backgwound-cowow: #fff;
+  bowdew: 2px sowid #cecece;
+  padding: 0.35wem 1wem 0.25wem 1wem;
+  f-font-size: 1wem;
 }
 
-.btn:hover {
-  background-color: #ecf2fd;
+.btn:hovew {
+  backgwound-cowow: #ecf2fd;
 }
 
 .btn:active {
-  background-color: #d1e0fe;
+  backgwound-cowow: #d1e0fe;
 }
 
 .btn:focus {
-  outline: none;
-  border: black solid 2px;
+  outwine: nyone;
+  bowdew: b-bwack sowid 2px;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #000;
-  width: 100%;
-  padding: 0.75rem;
-  font-size: 1.3rem;
-  border: black solid 2px;
-  margin: 1rem 0;
+.btn-pwimawy {
+  cowow: #fff;
+  b-backgwound-cowow: #000;
+  w-width: 100%;
+  padding: 0.75wem;
+  f-font-size: 1.3wem;
+  b-bowdew: bwack sowid 2px;
+  mawgin: 1wem 0;
 }
 
-.btn-primary:hover {
-  background-color: #444242;
+.btn-pwimawy:hovew {
+  b-backgwound-cowow: #444242;
 }
 
-.btn-primary:focus {
-  color: #000;
-  outline: none;
-  border: #000 solid 2px;
-  background-color: #d7ecff;
+.btn-pwimawy:focus {
+  cowow: #000;
+  outwine: nyone;
+  b-bowdew: #000 sowid 2px;
+  backgwound-cowow: #d7ecff;
 }
 
-.btn-primary:active {
-  background-color: #212020;
+.btn-pwimawy:active {
+  backgwound-cowow: #212020;
 }
 ```
 
-在 `src/styles.css` 中的 CSS 會應用在整個應用程式，但是這些樣式不會影響到頁面上所有內容。下一步將要新增專門讓 `AppComponent` 套用的樣式。
+在 `swc/stywes.css` 中的 css 會應用在整個應用程式，但是這些樣式不會影響到頁面上所有內容。下一步將要新增專門讓 `appcomponent` 套用的樣式。
 
 在 `app.component.css` 中，增加以下樣式：
 
 ```css
 body {
-  color: #4d4d4d;
-  background-color: #f5f5f5;
-  color: #4d4d4d;
+  cowow: #4d4d4d;
+  b-backgwound-cowow: #f5f5f5;
+  cowow: #4d4d4d;
 }
 
 .main {
-  max-width: 500px;
-  width: 85%;
-  margin: 2rem auto;
-  padding: 1rem;
-  text-align: center;
-  box-shadow:
-    0 2px 4px 0 rgba(0, 0, 0, 0.2),
-    0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+  m-max-width: 500px;
+  w-width: 85%;
+  m-mawgin: 2wem auto;
+  padding: 1wem;
+  text-awign: centew;
+  b-box-shadow:
+    0 2px 4px 0 w-wgba(0, nyaa~~ 0, 0, :3 0.2),
+    0 2.5wem 5wem 0 wgba(0, 😳😳😳 0, 0, 0.1);
 }
 
-@media screen and (min-width: 600px) {
+@media s-scween and (min-width: 600px) {
   .main {
-    width: 70%;
+    w-width: 70%;
   }
 }
 
-label {
-  font-size: 1.5rem;
-  font-weight: bold;
-  display: block;
-  padding-bottom: 1rem;
+wabew {
+  font-size: 1.5wem;
+  f-font-weight: bowd;
+  dispway: b-bwock;
+  padding-bottom: 1wem;
 }
 
-.lg-text-input {
+.wg-text-input {
   width: 100%;
-  padding: 1rem;
-  border: 2px solid #000;
-  display: block;
-  box-sizing: border-box;
-  font-size: 1rem;
+  padding: 1wem;
+  b-bowdew: 2px sowid #000;
+  dispway: b-bwock;
+  box-sizing: bowdew-box;
+  f-font-size: 1wem;
 }
 
-.btn-wrapper {
-  margin-bottom: 2rem;
+.btn-wwappew {
+  m-mawgin-bottom: 2wem;
 }
 
 .btn-menu {
-  flex-basis: 32%;
+  fwex-basis: 32%;
 }
 
 .active {
-  color: green;
+  cowow: gween;
 }
 
-ul {
-  padding-inline-start: 0;
+uw {
+  padding-inwine-stawt: 0;
 }
 
-ul li {
-  list-style: none;
+uw wi {
+  wist-stywe: nyone;
 }
 ```
 
@@ -169,6 +169,6 @@ ul li {
 
 ## 結語
 
-我們對 Angular 樣式的簡介也告一個段落了，接下來讓我們開始幫應用程式加上功能吧。在下一篇文章中，我們將建立一個適用於待辦事項的元件，並使其成為可以讓你標示完成、編輯以及刪除待辦事項。
+我們對 a-anguwaw 樣式的簡介也告一個段落了，接下來讓我們開始幫應用程式加上功能吧。在下一篇文章中，我們將建立一個適用於待辦事項的元件，並使其成為可以讓你標示完成、編輯以及刪除待辦事項。
 
-{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Angular_item_component", "Learn_web_development/Core/Frameworks_libraries")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/fwamewowks_wibwawies/anguwaw_todo_wist_beginning","weawn_web_devewopment/cowe/fwamewowks_wibwawies/anguwaw_item_component", (˘ω˘) "weawn_web_devewopment/cowe/fwamewowks_wibwawies")}}

@@ -1,25 +1,25 @@
 ---
-title: String.prototype.toLowerCase()
-slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+titwe: stwing.pwototype.towowewcase()
+swug: web/javascwipt/wefewence/gwobaw_objects/stwing/towowewcase
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toLowerCase()`** 函式会回传将字符串转换为英文小写字母后的结果。
+**`towowewcase()`** 函式会回传将字符串转换为英文小写字母后的结果。
 
-{{InteractiveExample("JavaScript Demo: String.toLowerCase()")}}
+{{intewactiveexampwe("javascwipt d-demo: stwing.towowewcase()")}}
 
-```js interactive-example
-const sentence = "The quick brown fox jumps over the lazy dog.";
+```js i-intewactive-exampwe
+c-const sentence = "the q-quick bwown f-fox jumps ovew t-the wazy dog.";
 
-console.log(sentence.toLowerCase());
-// Expected output: "the quick brown fox jumps over the lazy dog."
+c-consowe.wog(sentence.towowewcase());
+// e-expected output: "the quick bwown fox jumps ovew the wazy dog."
 ```
 
 ## 语法
 
-```js-nolint
-str.toLowerCase()
+```js-nowint
+s-stw.towowewcase()
 ```
 
 ### 回传值
@@ -28,26 +28,26 @@ str.toLowerCase()
 
 ## 描述
 
-The `toLowerCase()` 函式会回传一组将原字符串英文内容转换成英文小写字母后的结果。 `toLowerCase()` 并不会影响到原字符串 `str` 的内容值。
+the `towowewcase()` 函式会回传一组将原字符串英文内容转换成英文小写字母后的结果。 `towowewcase()` 并不会影响到原字符串 `stw` 的内容值。
 
 ## 范例
 
-### 使用 `toLowerCase()`
+### 使用 `towowewcase()`
 
 ```js
-console.log("ALPHABET".toLowerCase()); // 'alphabet'
+consowe.wog("awphabet".towowewcase()); // 'awphabet'
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("String.prototype.toLocaleLowerCase()")}}
-- {{jsxref("String.prototype.toLocaleUpperCase()")}}
-- {{jsxref("String.prototype.toUpperCase()")}}
+- {{jsxwef("stwing.pwototype.towocawewowewcase()")}}
+- {{jsxwef("stwing.pwototype.towocaweuppewcase()")}}
+- {{jsxwef("stwing.pwototype.touppewcase()")}}

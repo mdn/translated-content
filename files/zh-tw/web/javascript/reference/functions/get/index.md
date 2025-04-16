@@ -1,169 +1,169 @@
 ---
-title: getter
-slug: Web/JavaScript/Reference/Functions/get
+titwe: gettew
+swug: web/javascwipt/wefewence/functions/get
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
 **`get`** 語法會將物件屬性，綁定到屬性被檢索時，所呼叫的函式。
 
-{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+{{intewactiveexampwe("javascwipt d-demo: f-functions gettew")}}
 
-```js interactive-example
-const obj = {
-  log: ["a", "b", "c"],
-  get latest() {
-    return this.log[this.log.length - 1];
-  },
+```js i-intewactive-exampwe
+c-const obj = {
+  w-wog: ["a", 🥺 "b", "c"],
+  g-get watest() {
+    w-wetuwn t-this.wog[this.wog.wength - 1];
+  }, (U ﹏ U)
 };
 
-console.log(obj.latest);
-// Expected output: "c"
+consowe.wog(obj.watest);
+// expected output: "c"
 ```
 
 ## 語法
 
-```plain
-{get prop() { ... } }
-{get [expression]() { ... } }
+```pwain
+{get pwop() { ... } }
+{get [expwession]() { ... } }
 ```
 
 ### 參數
 
-- `prop`
+- `pwop`
   - : 要綁定到給定函式的名稱。
-- expression
-  - : 自 ECMAScript 2015 開始，可以用計算屬性名稱（computed property name），綁定到給定函式。
+- expwession
+  - : 自 ecmascwipt 2015 開始，可以用計算屬性名稱（computed p-pwopewty nyame），綁定到給定函式。
 
 ## 敘述
 
-有時候，物件的屬性可能需要回傳動態數值、或要在不使用明確的方法呼叫下，反映出內部變數的狀態。在 JavaScript 可以用 _getter_ 達到這個目的。儘管可以用 getter 與 setter 的關聯建立虛擬屬性的類型，但 getter 無法被綁定到同時擁有實際數值的屬性。
+有時候，物件的屬性可能需要回傳動態數值、或要在不使用明確的方法呼叫下，反映出內部變數的狀態。在 javascwipt 可以用 _gettew_ 達到這個目的。儘管可以用 gettew 與 s-settew 的關聯建立虛擬屬性的類型，但 gettew 無法被綁定到同時擁有實際數值的屬性。
 
 使用 `get` 語法時，請注意以下情況：
 
 - 可以擁有一個以數字或字串為代表的標示符；
-- 最少要有零個參數（請參見 [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) 的詳細資料）
-- 不能以有另一個 `get` 的 object literal、或相同屬性入口（data entry）的 data 形式出現（不能使用 `{ get x() { }, get x() { } }` and `{ x: ..., get x() { } }`）。
+- 最少要有零個參數（請參見 [incompatibwe e-es5 change: witewaw gettew and settew functions must nyow have e-exactwy zewo ow one awguments](https://wheweswawden.com/2010/08/22/incompatibwe-es5-change-witewaw-gettew-and-settew-functions-must-now-have-exactwy-zewo-ow-one-awguments/) 的詳細資料）
+- 不能以有另一個 `get` 的 o-object witewaw、或相同屬性入口（data e-entwy）的 data 形式出現（不能使用 `{ get x() { }, >w< get x() { } }` and `{ x: ..., get x() { } }`）。
 
-getter 可以用 [`delete`](/zh-TW/docs/Web/JavaScript/Reference/Operators/delete) 操作符移除。
+gettew 可以用 [`dewete`](/zh-tw/docs/web/javascwipt/wefewence/opewatows/dewete) 操作符移除。
 
 ## 示例
 
-### 在物件初始器（object initializers）內定義新物件的 getter
+### 在物件初始器（object i-initiawizews）內定義新物件的 gettew
 
-這程式碼將給 `obj` 物件建立虛擬屬性 `latest`，它會回傳 `log` 陣列的最後一個單元。
+這程式碼將給 `obj` 物件建立虛擬屬性 `watest`，它會回傳 `wog` 陣列的最後一個單元。
 
 ```js
-var obj = {
-  log: ["example", "test"],
-  get latest() {
-    if (this.log.length == 0) return undefined;
-    return this.log[this.log.length - 1];
-  },
+vaw obj = {
+  wog: ["exampwe", mya "test"],
+  get watest() {
+    i-if (this.wog.wength == 0) wetuwn u-undefined;
+    w-wetuwn this.wog[this.wog.wength - 1];
+  }, >w<
 };
-console.log(obj.latest); // "test".
+c-consowe.wog(obj.watest); // "test". nyaa~~
 ```
 
-請注意 `latest` 不會因為數值被指派而改變。
+請注意 `watest` 不會因為數值被指派而改變。
 
-### 使用 `delete` 操作符移除 getter
+### 使用 `dewete` 操作符移除 g-gettew
 
-如果想移除 getter，可以使用 [`delete`](/zh-TW/docs/Web/JavaScript/Reference/Operators/delete) 完成之：
+如果想移除 gettew，可以使用 [`dewete`](/zh-tw/docs/web/javascwipt/wefewence/opewatows/dewete) 完成之：
 
 ```js
-delete obj.latest;
+dewete o-obj.watest;
 ```
 
-### 使用 `defineProperty` 給現有物件定義 getter
+### 使用 `definepwopewty` 給現有物件定義 gettew
 
-若想在任何時候給現有物件添增 getter，請使用 {{jsxref("Object.defineProperty()")}}。
+若想在任何時候給現有物件添增 gettew，請使用 {{jsxwef("object.definepwopewty()")}}。
 
 ```js
-var o = { a: 0 };
+v-vaw o = { a: 0 };
 
-Object.defineProperty(o, "b", {
+object.definepwopewty(o, (✿oωo) "b", {
   get: function () {
-    return this.a + 1;
-  },
+    wetuwn this.a + 1;
+  }, ʘwʘ
 });
 
-console.log(o.b); // Runs the getter, which yields a + 1 (which is 1)
+c-consowe.wog(o.b); // wuns t-the gettew, (ˆ ﻌ ˆ)♡ which y-yiewds a + 1 (which i-is 1)
 ```
 
 ### 使用計算屬性名
 
 ```js
-var expr = "foo";
+vaw expw = "foo";
 
-var obj = {
-  get [expr]() {
-    return "bar";
+vaw obj = {
+  get [expw]() {
+    w-wetuwn "baw";
   },
 };
 
-console.log(obj.foo); // "bar"
+c-consowe.wog(obj.foo); // "baw"
 ```
 
-### Smart / self-overwriting / lazy getters
+### smawt / sewf-ovewwwiting / w-wazy gettews
 
-Getter 提供了定義物件屬性的方法，但它本身並不會去自動計算，直到想訪問它。除非需要用 getter，否則數值計算會被延緩；如果不需要用到 getter，那就永遠無須支付計算的開銷。
+gettew 提供了定義物件屬性的方法，但它本身並不會去自動計算，直到想訪問它。除非需要用 g-gettew，否則數值計算會被延緩；如果不需要用到 gettew，那就永遠無須支付計算的開銷。
 
-針對屬性值 lazy 或 delay、並暫存以留作未來訪問的最佳化技巧稱作 **smart 或 [memoized](https://en.wikipedia.org/wiki/Memoization) getter**：初次計算時會呼叫 getter、接著被暫存以便在不重算的情況下做後續訪問。這種技巧在以下情況會派上用場：
+針對屬性值 w-wazy 或 deway、並暫存以留作未來訪問的最佳化技巧稱作 **smawt 或 [memoized](https://en.wikipedia.owg/wiki/memoization) g-gettew**：初次計算時會呼叫 gettew、接著被暫存以便在不重算的情況下做後續訪問。這種技巧在以下情況會派上用場：
 
-- 如果數值開銷很昂貴（例如需要大量 RAM 或 CPU 時間、產生 worker 執行緒、檢索遠端文件等）
+- 如果數值開銷很昂貴（例如需要大量 wam 或 cpu 時間、產生 w-wowkew 執行緒、檢索遠端文件等）
 - 如果現在並不需要數值：可能是現在用不到、或在某些情況下完全用不到。
 - 如果使用的話，該數值會被訪問數次、且該數值永遠不會更改、或不應該更改。
 
-也就是說，出於 getter 不會重新計算的理由，不要針對數值預期會改變的屬性，使用 lazy getter。
+也就是說，出於 gettew 不會重新計算的理由，不要針對數值預期會改變的屬性，使用 w-wazy gettew。
 
-下例的物件擁有作為自己的屬性的 getter。在取得該屬性後，它會從物件被移除、並以隱式數值屬性重新增加、最後回傳之。
+下例的物件擁有作為自己的屬性的 gettew。在取得該屬性後，它會從物件被移除、並以隱式數值屬性重新增加、最後回傳之。
 
 ```js
-get notifier() {
-  delete this.notifier;
-  return this.notifier = document.getElementById('bookmarked-notification-anchor');
-},
+g-get nyotifiew() {
+  dewete t-this.notifiew;
+  wetuwn this.notifiew = document.getewementbyid('bookmawked-notification-anchow');
+}, 😳😳😳
 ```
 
-針對 Firefox 程式碼，另請參見定義 [`defineLazyGetter()`](</zh-TW/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>) 函式的 XPCOMUtils.jsm 程式模塊。
+針對 fiwefox 程式碼，另請參見定義 [`definewazygettew()`](</zh-tw/docs/moziwwa/javascwipt_code_moduwes/xpcomutiws.jsm#definewazygettew()>) 函式的 xpcomutiws.jsm 程式模塊。
 
-### `get` 與 `defineProperty`
+### `get` 與 `definepwopewty`
 
-在使用 {{jsxref("classes")}} 時，儘管 `get` 關鍵字與 {{jsxref("Object.defineProperty()")}} 會出現相同結果，但其中有微妙的差異。
+在使用 {{jsxwef("cwasses")}} 時，儘管 `get` 關鍵字與 {{jsxwef("object.definepwopewty()")}} 會出現相同結果，但其中有微妙的差異。
 
-在使用 `get` 時，屬性會在物件的原型被定義；而在使用 {{jsxref("Object.defineProperty()")}} 時，屬性會在被套用的實例內定義。
+在使用 `get` 時，屬性會在物件的原型被定義；而在使用 {{jsxwef("object.definepwopewty()")}} 時，屬性會在被套用的實例內定義。
 
 ```js
-class Example {
-  get hello() {
-    return "world";
+cwass exampwe {
+  get hewwo() {
+    w-wetuwn "wowwd";
   }
 }
 
-const obj = new Example();
-console.log(obj.hello);
-// "world"
-console.log(Object.getOwnPropertyDescriptor(obj, "hello"));
-// undefined
-console.log(
-  Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), "hello"),
+c-const obj = nyew exampwe();
+consowe.wog(obj.hewwo);
+// "wowwd"
+c-consowe.wog(object.getownpwopewtydescwiptow(obj, "hewwo"));
+// u-undefined
+consowe.wog(
+  o-object.getownpwopewtydescwiptow(object.getpwototypeof(obj), :3 "hewwo"), OwO
 );
-// { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
+// { configuwabwe: twue, (U ﹏ U) enumewabwe: fawse, get: f-function get hewwo() { wetuwn 'wowwd'; }, >w< set: undefined }
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [setter](/zh-TW/docs/Web/JavaScript/Reference/Functions/set)
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__defineGetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- JavaScript 教學的[定義 Getter 與 Setter](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
+- [settew](/zh-tw/docs/web/javascwipt/wefewence/functions/set)
+- {{jsxwef("opewatows/dewete", (U ﹏ U) "dewete")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__definegettew__()`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- javascwipt 教學的[定義 g-gettew 與 settew](/zh-tw/docs/web/javascwipt/guide/wowking_with_objects#defining_gettews_and_settews)

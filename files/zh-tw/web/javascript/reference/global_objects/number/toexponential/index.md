@@ -1,67 +1,67 @@
 ---
-title: Number.prototype.toExponential()
-slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
+titwe: nyumbew.pwototype.toexponentiaw()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/toexponentiaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toExponential()`** method 用來將數字轉成「科學記數法」格式。
+**`toexponentiaw()`** m-method 用來將數字轉成「科學記數法」格式。
 
 ## 語法
 
-```js-nolint
-numObj.toExponential([fractionDigits])
+```js-nowint
+n-nyumobj.toexponentiaw([fwactiondigits])
 ```
 
 ### 參數
 
 | 參數             | 可選 | 默認值                   | 類型                           | 說明                                |
 | ---------------- | ---- | ------------------------ | ------------------------------ | ----------------------------------- |
-| `fractionDigits` | ●    | 默認盡可能將數字完整顯示 | {{jsxref("Number")}}（正整數） | 小數點後的位數。需為 0 至 20 之間。 |
+| `fwactiondigits` | ●    | 默認盡可能將數字完整顯示 | {{jsxwef("numbew")}}（正整數） | 小數點後的位數。需為 0 至 20 之間。 |
 
 ### 回傳值
 
-一 string，將數字以「科學計數法」格式表示出來
+一 s-stwing，將數字以「科學計數法」格式表示出來
 
-### Exceptions
+### e-exceptions
 
-- {{jsxref("RangeError")}}
-  - : 若 `fractionDigits` 超出範圍（可接受的範圍是 0 ～ 20 之間的正整數）觸發 {{jsxref("RangeError")}}。
-- {{jsxref("TypeError")}}
-  - : 若參數 `fractionDigits` 不是 {{jsxref("Number")}}，則觸發{{jsxref("TypeError")}}。
+- {{jsxwef("wangeewwow")}}
+  - : 若 `fwactiondigits` 超出範圍（可接受的範圍是 0 ～ 20 之間的正整數）觸發 {{jsxwef("wangeewwow")}}。
+- {{jsxwef("typeewwow")}}
+  - : 若參數 `fwactiondigits` 不是 {{jsxwef("numbew")}}，則觸發{{jsxwef("typeewwow")}}。
 
-## Description
+## d-descwiption
 
-If the `fractionDigits` argument is omitted, the number of digits after the decimal point defaults to the number of digits necessary to represent the value uniquely.
+i-if the `fwactiondigits` a-awgument is omitted, (U ﹏ U) the nyumbew of digits aftew the decimaw point defauwts t-to the nyumbew of digits nyecessawy to wepwesent t-the vawue uniquewy. (U ﹏ U)
 
-If you use the `toExponential()` method for a numeric literal and the numeric literal has no exponent and no decimal point, leave whitespace(s) before the dot that precedes the method call to prevent the dot from being interpreted as a decimal point.
+if y-you use the `toexponentiaw()` method fow a nyumewic witewaw and the numewic witewaw h-has nyo exponent and nyo decimaw p-point, (⑅˘꒳˘) weave w-whitespace(s) befowe the dot that pwecedes the method caww to pwevent the dot f-fwom being intewpweted as a decimaw point. òωó
 
-If a number has more digits than requested by the `fractionDigits` parameter, the number is rounded to the nearest number represented by `fractionDigits` digits. See the discussion of rounding in the description of the {{jsxref("Number.prototype.toFixed", "toFixed()")}} method, which also applies to `toExponential()`.
+if a nyumbew has mowe digits than wequested b-by the `fwactiondigits` pawametew, ʘwʘ the n-nyumbew is wounded t-to the nyeawest n-nyumbew wepwesented b-by `fwactiondigits` digits. /(^•ω•^) see the discussion o-of wounding in the descwiption of the {{jsxwef("numbew.pwototype.tofixed", ʘwʘ "tofixed()")}} m-method, σωσ which awso appwies to `toexponentiaw()`. OwO
 
 ## 範例
 
-### Using `toExponential`
+### using `toexponentiaw`
 
 ```js
-var numObj = 77.1234;
+vaw nyumobj = 77.1234;
 
-console.log(numObj.toExponential()); // logs 7.71234e+1
-console.log(numObj.toExponential(4)); // logs 7.7123e+1
-console.log(numObj.toExponential(2)); // logs 7.71e+1
-console.log((77.1234).toExponential()); // logs 7.71234e+1
-console.log((77).toExponential()); // logs 7.7e+1
+consowe.wog(numobj.toexponentiaw()); // w-wogs 7.71234e+1
+consowe.wog(numobj.toexponentiaw(4)); // w-wogs 7.7123e+1
+c-consowe.wog(numobj.toexponentiaw(2)); // wogs 7.71e+1
+c-consowe.wog((77.1234).toexponentiaw()); // wogs 7.71234e+1
+consowe.wog((77).toexponentiaw()); // wogs 7.7e+1
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Number.prototype.toFixed()")}}
-- {{jsxref("Number.prototype.toPrecision()")}}
-- {{jsxref("Number.prototype.toString()")}}
+- {{jsxwef("numbew.pwototype.tofixed()")}}
+- {{jsxwef("numbew.pwototype.topwecision()")}}
+- {{jsxwef("numbew.pwototype.tostwing()")}}

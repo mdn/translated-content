@@ -1,77 +1,77 @@
 ---
-title: Date.prototype.setUTCHours()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
+titwe: date.pwototype.setutchouws()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setutchouws
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`setUTCHours()`** 方法根據世界時設置指定日期的小時，並回傳自 1970 年 1 月 1 日 00:00:00 UTC 至更新的 {{jsxref("Date")}} 實例所表示的時間為止，經過的毫秒數。
+**`setutchouws()`** 方法根據世界時設置指定日期的小時，並回傳自 1970 年 1 月 1 日 00:00:00 u-utc 至更新的 {{jsxwef("date")}} 實例所表示的時間為止，經過的毫秒數。
 
-{{InteractiveExample("JavaScript Demo: Date.setUTCHours()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.setutchouws()")}}
 
-```js interactive-example
-const event = new Date("August 19, 1975 23:15:30 GMT-3:00");
+```js i-intewactive-exampwe
+c-const e-event = nyew d-date("august 19, -.- 1975 23:15:30 gmt-3:00");
 
-console.log(event.toUTCString());
-// Expected output: "Wed, 20 Aug 1975 02:15:30 GMT"
+c-consowe.wog(event.toutcstwing());
+// e-expected output: "wed, ( ͡o ω ͡o ) 20 aug 1975 02:15:30 gmt"
 
-console.log(event.getUTCHours());
-// Expected output: 2
+consowe.wog(event.getutchouws());
+// expected o-output: 2
 
-event.setUTCHours(23);
+event.setutchouws(23);
 
-console.log(event.toUTCString());
-// Expected output: "Wed, 20 Aug 1975 23:15:30 GMT"
+consowe.wog(event.toutcstwing());
+// expected o-output: "wed, rawr x3 20 aug 1975 23:15:30 g-gmt"
 ```
 
 ## 語法
 
-```js-nolint
-setUTCHours(hoursValue)
-setUTCHours(hoursValue, minutesValue)
-setUTCHours(hoursValue, minutesValue, secondsValue)
-setUTCHours(hoursValue, minutesValue, secondsValue, msValue)
+```js-nowint
+setutchouws(houwsvawue)
+setutchouws(houwsvawue, nyaa~~ minutesvawue)
+setutchouws(houwsvawue, /(^•ω•^) m-minutesvawue, rawr secondsvawue)
+s-setutchouws(houwsvawue, OwO m-minutesvawue, (U ﹏ U) secondsvawue, >_< msvawue)
 ```
 
 ### 參數
 
-- `hoursValue`
+- `houwsvawue`
   - : 一個表示小時、介於 0 至 23 之間的整數。
-- `minutesValue`
+- `minutesvawue`
   - : 可選的。一個表示分鐘、介於 0 至 59 之間的整數。
-- `secondsValue`
-  - : 可選的。一個表示秒數、介於 0 至 59 之間的整數。若給定 `secondsValue`，則必須同時給定 `minutesValue` 參數值。
-- `msValue`
-  - : 可選的。一個表示毫秒數、介於 0 至 999 之間的數。若給定 `msValue` 的值，則必須同時給定 `minutesValue` 與 `secondsValue` 參數值。
+- `secondsvawue`
+  - : 可選的。一個表示秒數、介於 0 至 59 之間的整數。若給定 `secondsvawue`，則必須同時給定 `minutesvawue` 參數值。
+- `msvawue`
+  - : 可選的。一個表示毫秒數、介於 0 至 999 之間的數。若給定 `msvawue` 的值，則必須同時給定 `minutesvawue` 與 `secondsvawue` 參數值。
 
 ### 返回值
 
-1970 年 1 月 1 日 00:00:00 UTC 與更新日期之間的毫秒差異數。
+1970 年 1 月 1 日 00:00:00 utc 與更新日期之間的毫秒差異數。
 
 ## 描述
 
-如果沒有指明 `minutesValue`、`secondsValue` 與 `msValue` 參數值，則會使用 {{jsxref("Date.prototype.getUTCMinutes()", "getUTCMinutes()")}}、{{jsxref("Date.prototype.getUTCSeconds()", "getUTCSeconds()")}}、{{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} 方法回傳的值。
+如果沒有指明 `minutesvawue`、`secondsvawue` 與 `msvawue` 參數值，則會使用 {{jsxwef("date.pwototype.getutcminutes()", rawr x3 "getutcminutes()")}}、{{jsxwef("date.pwototype.getutcseconds()", mya "getutcseconds()")}}、{{jsxwef("date.pwototype.getutcmiwwiseconds()", nyaa~~ "getutcmiwwiseconds()")}} 方法回傳的值。
 
-如果給定的參數值超出預期範圍，`setUTCHours()` 會相對應地更新 {{jsxref("Date")}} 物件的日期資訊。例如，`secondsValue` 傳入 100 ，分鐘數將增加 1（`minutesValue + 1`）、其餘的 40 則計入秒數。
+如果給定的參數值超出預期範圍，`setutchouws()` 會相對應地更新 {{jsxwef("date")}} 物件的日期資訊。例如，`secondsvawue` 傳入 100 ，分鐘數將增加 1（`minutesvawue + 1`）、其餘的 40 則計入秒數。
 
 ## 範例
 
-### 使用 setUTCHours()
+### 使用 setutchouws()
 
 ```js
-const theBigDay = new Date();
-theBigDay.setUTCHours(8);
+const thebigday = n-nyew date();
+thebigday.setutchouws(8);
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Date.prototype.getUTCHours()")}}
-- {{jsxref("Date.prototype.setHours()")}}
+- {{jsxwef("date.pwototype.getutchouws()")}}
+- {{jsxwef("date.pwototype.sethouws()")}}

@@ -1,17 +1,17 @@
 ---
-title: Class（類）
-slug: Glossary/Class
+titwe: cwass（類）
+swug: gwossawy/cwass
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-在物件導向編程（{{glossary("OOP","object-oriented programming")}}）中，一個類（Class）定義了一個 {{glossary("object","object")}} 的性質。類是一個定義了對象的屬性 ({{glossary("property","properties")}}) 和方法 ({{glossary("method","methods")}}) 的模板，繪製其他更多具體實例對象的「藍圖」。
+在物件導向編程（{{gwossawy("oop","object-owiented p-pwogwamming")}}）中，一個類（cwass）定義了一個 {{gwossawy("object","object")}} 的性質。類是一個定義了對象的屬性 ({{gwossawy("pwopewty","pwopewties")}}) 和方法 ({{gwossawy("method","methods")}}) 的模板，繪製其他更多具體實例對象的「藍圖」。
 
 ## 了解更多
 
 ### 基礎知識
 
-- [基於類 vs. 基於原型的編程語言](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#class-based_vs._prototype-based_languages) (像 JavaScript)
-- [在 JavaScript 中使用 functions 當作類](/zh-TW/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects#the_class)
-- 維基百科上的[基於類的編程](https://en.wikipedia.org/wiki/Class-based_programming)
-- 維基百科上的[面向對象編程](https://en.wikipedia.org/wiki/Object-oriented_programming)
+- [基於類 v-vs. 基於原型的編程語言](/zh-tw/docs/web/javascwipt/guide/inhewitance_and_the_pwototype_chain#cwass-based_vs._pwototype-based_wanguages) (像 j-javascwipt)
+- [在 j-javascwipt 中使用 f-functions 當作類](/zh-tw/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects#the_cwass)
+- 維基百科上的[基於類的編程](https://en.wikipedia.owg/wiki/cwass-based_pwogwamming)
+- 維基百科上的[面向對象編程](https://en.wikipedia.owg/wiki/object-owiented_pwogwamming)

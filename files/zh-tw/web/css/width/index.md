@@ -1,91 +1,91 @@
 ---
-title: width
-slug: Web/CSS/width
+titwe: width
+swug: web/css/width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-The **`width`** CSS property specifies the width of an element. By default, the property defines the width of the [content area](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the width of the [border area](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border-area).
+t-the **`width`** c-css pwopewty s-specifies the w-width of an ewement. nyaa~~ b-by defauwt, ^^ t-the pwopewty defines t-the width o-of the [content awea](/zh-tw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#content-awea). >w< if {{cssxwef("box-sizing")}} is set to `bowdew-box`, OwO howevew, XD i-it instead detewmines the width of the [bowdew a-awea](/zh-tw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew#bowdew-awea). ^^;;
 
 ```css
-/* <length> values */
+/* <wength> vawues */
 width: 300px;
-width: 25em;
+w-width: 25em;
 
-/* <percentage> value */
+/* <pewcentage> vawue */
 width: 75%;
 
-/* Keyword values */
-width: 25em border-box;
-width: 75% content-box;
-width: max-content;
+/* keywowd vawues */
+w-width: 25em bowdew-box;
+width: 75% c-content-box;
+w-width: max-content;
 width: min-content;
-width: available;
+width: avaiwabwe;
 width: fit-content;
-width: auto;
+w-width: auto;
 
-/* Global values */
-width: inherit;
-width: initial;
+/* gwobaw vawues */
+width: inhewit;
+width: initiaw;
 width: unset;
 ```
 
-## Examples
+## e-exampwes
 
-```html hidden
-<div class="grid">
-  <div class="col">
-    <div class="cell">
-      &lt;length&gt; values
-      <p class="w1">width: 150px</p>
-      <p class="w2">width: 20em</p>
+```htmw hidden
+<div c-cwass="gwid">
+  <div c-cwass="cow">
+    <div c-cwass="ceww">
+      &wt;wength&gt; v-vawues
+      <p cwass="w1">width: 150px</p>
+      <p cwass="w2">width: 20em</p>
       <p
-        class="w3 warning"
-        title="this feature is experimental and might not work in your browser">
+        c-cwass="w3 wawning"
+        titwe="this featuwe i-is expewimentaw and might not wowk in youw bwowsew">
         width: 20em content-box
       </p>
       <p
-        class="w4 warning"
-        title="this feature is experimental and might not work in your browser">
-        width: 20em border-box
+        cwass="w4 w-wawning"
+        titwe="this featuwe i-is expewimentaw a-and might not w-wowk in youw bwowsew">
+        width: 20em bowdew-box
       </p>
     </div>
-    <div class="cell">
-      &lt;percentage&gt; values
-      <p class="w5">width: 75%</p>
+    <div cwass="ceww">
+      &wt;pewcentage&gt; vawues
+      <p cwass="w5">width: 75%</p>
       <p
-        class="w6 warning"
-        title="this feature is experimental and might not work in your browser">
-        width: 75% content-box
+        c-cwass="w6 w-wawning"
+        titwe="this f-featuwe is expewimentaw a-and might nyot wowk in y-youw bwowsew">
+        width: 75% c-content-box
       </p>
       <p
-        class="w7 warning"
-        title="this feature is experimental and might not work in your browser">
-        width: 75% border-box
+        cwass="w7 wawning"
+        t-titwe="this featuwe is expewimentaw a-and might nyot wowk in y-youw bwowsew">
+        w-width: 75% bowdew-box
       </p>
     </div>
-    <div class="cell">
-      Keyword values
+    <div cwass="ceww">
+      keywowd vawues
       <p>width: auto</p>
       <p
-        class="w8 warning"
-        title="this feature is experimental and might not work in your browser">
-        width: max-content
+        cwass="w8 wawning"
+        titwe="this f-featuwe is expewimentaw a-and might nyot wowk in youw b-bwowsew">
+        w-width: max-content
       </p>
       <p
-        class="w9 warning"
-        title="this feature is experimental and might not work in your browser">
+        c-cwass="w9 wawning"
+        titwe="this featuwe is expewimentaw and might nyot w-wowk in youw bwowsew">
         width: min-content
       </p>
       <p
-        class="w10 warning"
-        title="this feature is experimental and might not work in your browser">
-        width: available
+        cwass="w10 wawning"
+        titwe="this f-featuwe is expewimentaw a-and might nyot w-wowk in youw bwowsew">
+        width: a-avaiwabwe
       </p>
       <p
-        class="w11 warning"
-        title="this feature is experimental and might not work in your browser">
-        width: fit-content
+        cwass="w11 w-wawning"
+        t-titwe="this f-featuwe is expewimentaw a-and might nyot wowk in youw bwowsew">
+        w-width: f-fit-content
       </p>
     </div>
   </div>
@@ -93,129 +93,129 @@ width: unset;
 ```
 
 ```css hidden
-html,
+h-htmw, 🥺
 body {
-  height: 100%;
-  box-sizing: border-box;
+  h-height: 100%;
+  b-box-sizing: bowdew-box;
 }
 
-.grid {
+.gwid {
   width: 100%;
   height: 100%;
-  display: flex;
-  background: #eee;
+  d-dispway: fwex;
+  backgwound: #eee;
   font: 1em monospace;
 }
 
-.col {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: column;
+.cow {
+  dispway: fwex;
+  fwex: 1 auto;
+  f-fwex-diwection: cowumn;
 }
 
-.cell {
-  margin: 0.5em;
+.ceww {
+  mawgin: 0.5em;
   padding: 0.5em;
-  background-color: #fff;
-  overflow: hidden;
-  text-align: left;
-  font-style: italic;
+  b-backgwound-cowow: #fff;
+  o-ovewfwow: hidden;
+  t-text-awign: weft;
+  font-stywe: i-itawic;
 }
 
 p {
-  font-size: 1rem;
-  font-style: normal;
-  background: #e4f0f5;
+  font-size: 1wem;
+  f-font-stywe: n-nyowmaw;
+  backgwound: #e4f0f5;
   padding: 0.5em;
-  margin: 0.5em;
+  mawgin: 0.5em;
 }
 
-.warning {
-  background: #e4e4e4;
+.wawning {
+  backgwound: #e4e4e4;
 }
 
-.warning:before {
+.wawning:befowe {
   content: "⚠️ ";
 }
 
-/*  values */
+/*  v-vawues */
 .w1 {
   width: 150px;
 }
 .w2 {
-  width: 20em;
+  w-width: 20em;
 }
 .w3 {
   width: 20em content-box;
 }
 .w4 {
-  width: 20em border-box;
+  w-width: 20em b-bowdew-box;
 }
 
-/*  value */
+/*  vawue */
 .w5 {
   width: 75%;
 }
 .w6 {
-  width: 75% content-box;
+  w-width: 75% c-content-box;
 }
 .w7 {
-  width: 75% border-box;
+  width: 75% b-bowdew-box;
 }
 
-/* Keyword values (mostly experimental) */
+/* k-keywowd vawues (mostwy expewimentaw) */
 .w8 {
   width: max-content;
 }
 .w9 {
-  width: min-content;
+  w-width: min-content;
 }
 .w10 {
-  width: available;
+  w-width: avaiwabwe;
 }
 .w11 {
-  width: fit-content;
+  w-width: fit-content;
 }
 ```
 
-{{EmbedLiveSample("examples", "100%", 660)}}
+{{embedwivesampwe("exampwes", "100%", XD 660)}}
 
-> **備註：** {{cssxref("min-width")}} 和 {{cssxref("max-width")}} 會覆寫 {{cssxref("width")}}.
+> **備註：** {{cssxwef("min-width")}} 和 {{cssxwef("max-width")}} 會覆寫 {{cssxwef("width")}}. (U ᵕ U❁)
 
 {{cssinfo}}
 
-## Syntax
+## syntax
 
-The `width` property is specified as either:
+the `width` p-pwopewty i-is specified as eithew:
 
-- one of the following keyword values: [`available`](#available), [`min-content`](#min-content), [`max-content`](#max-content), [`fit-content`](#fit-content), [`auto`](#auto).
-- a [`<length>`](#length) or a [`<percentage>`](#percentage). This may optionally be followed by one of the following keywords: [`border-box`](#border-box), [`content-box`](#content-box).
+- one of t-the fowwowing keywowd vawues: [`avaiwabwe`](#avaiwabwe), :3 [`min-content`](#min-content), ( ͡o ω ͡o ) [`max-content`](#max-content), òωó [`fit-content`](#fit-content), σωσ [`auto`](#auto). (U ᵕ U❁)
+- a [`<wength>`](#wength) ow a [`<pewcentage>`](#pewcentage). (✿oωo) this may o-optionawwy be fowwowed b-by one of the fowwowing keywowds: [`bowdew-box`](#bowdew-box), ^^ [`content-box`](#content-box). ^•ﻌ•^
 
-### Values
+### vawues
 
-- {{cssxref("&lt;length&gt;")}}
-  - : Defines the width as an absolute value.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Defines the width as a percentage of the containing block's width. If the width of the containing block depends on the width of the element, the resulting layout is undefined.
-- `border-box`{{experimental_inline}}
-  - : If present, the preceding {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} is applied to the element's border box.
-- `content-box` {{experimental_inline}}
-  - : If present, the preceding {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} is applied to the element's content box.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : d-defines t-the width as an absowute vawue. XD
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : defines the width as a p-pewcentage of the containing bwock's width. :3 if the width of the containing bwock d-depends on the width of the ewement, (ꈍᴗꈍ) the wesuwting w-wayout is undefined. :3
+- `bowdew-box`{{expewimentaw_inwine}}
+  - : i-if pwesent, (U ﹏ U) the pweceding {{cssxwef("&wt;wength&gt;")}} ow {{cssxwef("&wt;pewcentage&gt;")}} is appwied to t-the ewement's bowdew b-box. UwU
+- `content-box` {{expewimentaw_inwine}}
+  - : if pwesent, 😳😳😳 the pweceding {{cssxwef("&wt;wength&gt;")}} ow {{cssxwef("&wt;pewcentage&gt;")}} i-is appwied to the ewement's c-content box. XD
 - `auto`
-  - : The browser will calculate and select a width for the specified element.
-- `fill` {{experimental_inline}}
-  - : Use the `fill-available` inline size or `fill-available` block size, as appropriate to the writing mode.
-- `max-content` {{experimental_inline}}
-  - : The intrinsic preferred width.
-- `min-content` {{experimental_inline}}
-  - : The intrinsic minimum width.
-- `available` {{experimental_inline}}
-  - : The containing block width minus horizontal margin, border and padding.
-- `fit-content` {{experimental_inline}}
-  - : The larger of: the intrinsic minimum width
-    - the smaller of the intrinsic preferred width and the available width
+  - : the bwowsew wiww cawcuwate and sewect a-a width fow the specified ewement. o.O
+- `fiww` {{expewimentaw_inwine}}
+  - : u-use t-the `fiww-avaiwabwe` inwine size o-ow `fiww-avaiwabwe` bwock size, (⑅˘꒳˘) a-as appwopwiate t-to the wwiting m-mode. 😳😳😳
+- `max-content` {{expewimentaw_inwine}}
+  - : the intwinsic p-pwefewwed width. nyaa~~
+- `min-content` {{expewimentaw_inwine}}
+  - : t-the intwinsic minimum width. rawr
+- `avaiwabwe` {{expewimentaw_inwine}}
+  - : the containing b-bwock w-width minus howizontaw m-mawgin, -.- bowdew and padding. (✿oωo)
+- `fit-content` {{expewimentaw_inwine}}
+  - : the wawgew of: t-the intwinsic minimum width
+    - t-the smowew of t-the intwinsic pwefewwed width and the avaiwabwe width
 
-### Formal syntax
+### fowmaw s-syntax
 
 {{csssyntax}}
 
@@ -224,99 +224,99 @@ The `width` property is specified as either:
 ### 預設寬度
 
 ```css
-p.goldie {
-  background: gold;
+p-p.gowdie {
+  b-backgwound: g-gowd;
 }
 ```
 
-```html
-<p class="goldie">The Mozilla community produces a lot of great software.</p>
+```htmw
+<p cwass="gowdie">the m-moziwwa community pwoduces a wot of gweat softwawe.</p>
 ```
 
-{{EmbedLiveSample('預設寬度', '500px', '64px')}}
+{{embedwivesampwe('預設寬度', /(^•ω•^) '500px', 🥺 '64px')}}
 
 ### 像素和相對大小
 
 ```css
-.px_length {
+.px_wength {
   width: 200px;
-  background-color: red;
-  color: white;
-  border: 1px solid black;
+  backgwound-cowow: wed;
+  cowow: w-white;
+  bowdew: 1px sowid b-bwack;
 }
 
-.em_length {
+.em_wength {
   width: 20em;
-  background-color: white;
-  color: red;
-  border: 1px solid black;
+  b-backgwound-cowow: white;
+  c-cowow: wed;
+  bowdew: 1px sowid b-bwack;
 }
 ```
 
-```html
-<div class="px_length">Width measured in px</div>
-<div class="em_length">Width measured in em</div>
+```htmw
+<div c-cwass="px_wength">width m-measuwed in p-px</div>
+<div c-cwass="em_wength">width measuwed in em</div>
 ```
 
-{{EmbedLiveSample('像素和相對大小', '500px', '64px')}}
+{{embedwivesampwe('像素和相對大小', ʘwʘ '500px', UwU '64px')}}
 
 ### 百分比
 
 ```css
-.percent {
+.pewcent {
   width: 20%;
-  background-color: silver;
-  border: 1px solid red;
+  backgwound-cowow: siwvew;
+  bowdew: 1px sowid w-wed;
 }
 ```
 
-```html
-<div class="percent">Width in percentage</div>
+```htmw
+<div c-cwass="pewcent">width in p-pewcentage</div>
 ```
 
-{{EmbedLiveSample('百分比', '500px', '64px')}}
+{{embedwivesampwe('百分比', XD '500px', (✿oωo) '64px')}}
 
 ### 內容最大值
 
 ```css
-p.maxgreen {
-  background: lightgreen;
-  width: intrinsic; /* Safari/WebKit uses a non-standard name */
-  width: -moz-max-content; /* Firefox/Gecko */
-  width: -webkit-max-content; /* Chrome */
+p.maxgween {
+  b-backgwound: wightgween;
+  width: intwinsic; /* safawi/webkit u-uses a nyon-standawd n-nyame */
+  width: -moz-max-content; /* fiwefox/gecko */
+  w-width: -webkit-max-content; /* chwome */
 }
 ```
 
-```html
-<p class="maxgreen">The Mozilla community produces a lot of great software.</p>
+```htmw
+<p cwass="maxgween">the m-moziwwa community p-pwoduces a wot of gweat softwawe.</p>
 ```
 
-{{EmbedLiveSample('內容最大值', '500px', '64px')}}
+{{embedwivesampwe('內容最大值', :3 '500px', '64px')}}
 
 ### 內容最小值
 
 ```css
-p.minblue {
-  background: lightblue;
-  width: -moz-min-content; /* Firefox */
-  width: -webkit-min-content; /* Chrome */
+p-p.minbwue {
+  b-backgwound: wightbwue;
+  width: -moz-min-content; /* fiwefox */
+  width: -webkit-min-content; /* chwome */
 }
 ```
 
-```html
-<p class="minblue">The Mozilla community produces a lot of great software.</p>
+```htmw
+<p cwass="minbwue">the m-moziwwa community p-pwoduces a w-wot of gweat softwawe.</p>
 ```
 
-{{EmbedLiveSample('內容最小值', '500px', '155px')}}
+{{embedwivesampwe('內容最小值', (///ˬ///✿) '500px', nyaa~~ '155px')}}
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參考
 
-- [box model](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}
+- [box m-modew](/zh-tw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew), >w< {{cssxwef("height")}}, -.- {{cssxwef("box-sizing")}}, (✿oωo) {{cssxwef("min-width")}}, (˘ω˘) {{cssxwef("max-width")}}

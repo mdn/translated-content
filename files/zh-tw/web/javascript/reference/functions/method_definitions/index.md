@@ -1,209 +1,209 @@
 ---
-title: 方法定義
-slug: Web/JavaScript/Reference/Functions/Method_definitions
+titwe: 方法定義
+swug: web/javascwipt/wefewence/functions/method_definitions
 ---
 
-{{JsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-自 ECMAScript 2015 開始，引入了一種於物件初始器（objects initializers）中定義方法的簡短語法。是一個將函式指派予方法名稱的簡便方式。
+自 e-ecmascwipt 2015 開始，引入了一種於物件初始器（objects i-initiawizews）中定義方法的簡短語法。是一個將函式指派予方法名稱的簡便方式。
 
-{{InteractiveExample("JavaScript Demo: Functions Definitions")}}
+{{intewactiveexampwe("javascwipt d-demo: functions d-definitions")}}
 
-```js interactive-example
-const obj = {
-  foo() {
-    return "bar";
-  },
+```js i-intewactive-exampwe
+c-const obj = {
+  f-foo() {
+    w-wetuwn "baw";
+  }, (ꈍᴗꈍ)
 };
 
-console.log(obj.foo());
-// Expected output: "bar"
+consowe.wog(obj.foo());
+// expected output: "baw"
 ```
 
 ## 語法
 
-```plain
-var obj = {
-  property( parameters… ) {},
-  *generator( parameters… ) {},
-  async property( parameters… ) {},
-  async* generator( parameters… ) {},
+```pwain
+vaw obj = {
+  pwopewty( pawametews… ) {}, 😳
+  *genewatow( p-pawametews… ) {}, 😳😳😳
+  async pwopewty( pawametews… ) {}, mya
+  a-async* genewatow( pawametews… ) {}, mya
 
-  // with computed keys:
-  [property]( parameters… ) {},
-  *[generator]( parameters… ) {},
-  async [property]( parameters… ) {},
+  // w-with computed keys:
+  [pwopewty]( pawametews… ) {},
+  *[genewatow]( pawametews… ) {}, (⑅˘꒳˘)
+  a-async [pwopewty]( pawametews… ) {}, (U ﹏ U)
 
-  // compare getter/setter syntax:
-  get property() {},
-  set property(value) {}
+  // c-compawe g-gettew/settew syntax:
+  get pwopewty() {}, mya
+  set pwopewty(vawue) {}
 };
 ```
 
 ## 說明
 
-這個簡短的語法和在 ECMAScript 2015 引入 [getter](/zh-TW/docs/Web/JavaScript/Reference/Functions/get) 以及 [setter](/zh-TW/docs/Web/JavaScript/Reference/Functions/set) 類似。
+這個簡短的語法和在 ecmascwipt 2015 引入 [gettew](/zh-tw/docs/web/javascwipt/wefewence/functions/get) 以及 [settew](/zh-tw/docs/web/javascwipt/wefewence/functions/set) 類似。
 
 請看以下程式碼：
 
 ```js
-var obj = {
+v-vaw obj = {
   foo: function () {
     /* code */
-  },
-  bar: function () {
+  }, ʘwʘ
+  baw: function () {
     /* code */
-  },
+  }, (˘ω˘)
 };
 ```
 
 你可以把它縮減為：
 
 ```js
-var obj = {
+v-vaw obj = {
   foo() {
-    /* code */
-  },
-  bar() {
-    /* code */
-  },
+    /* c-code */
+  }, (U ﹏ U)
+  baw() {
+    /* c-code */
+  }, ^•ﻌ•^
 };
 ```
 
 ### 產生器方法
 
-[產生器方法](/zh-TW/docs/Web/JavaScript/Reference/Statements/function*)（Generator method）也可以透過簡短語法定義之。用的時候：
+[產生器方法](/zh-tw/docs/web/javascwipt/wefewence/statements/function*)（genewatow m-method）也可以透過簡短語法定義之。用的時候：
 
-- 簡短語法的星號（\*）必須放在產生器方法的屬性名前面。也就是說 `* g(){}` 能動但 `g *(){}` 不行；
-- 非產生器方法的定義可能不會有 `yield` 關鍵字。也就是說[過往的產生器函式](/zh-TW/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)動不了、並拋出{{jsxref("SyntaxError")}}。Always use `yield` in conjunction with the asterisk (\*).
+- 簡短語法的星號（\*）必須放在產生器方法的屬性名前面。也就是說 `* g-g(){}` 能動但 `g *(){}` 不行；
+- 非產生器方法的定義可能不會有 `yiewd` 關鍵字。也就是說[過往的產生器函式](/zh-tw/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes)動不了、並拋出{{jsxwef("syntaxewwow")}}。awways use `yiewd` in conjunction w-with the astewisk (\*). (˘ω˘)
 
 ```js
-// Using a named property
-var obj2 = {
+// using a n-nyamed pwopewty
+vaw obj2 = {
   g: function* () {
-    var index = 0;
-    while (true) yield index++;
-  },
+    vaw index = 0;
+    whiwe (twue) yiewd index++;
+  }, :3
 };
 
-// The same object using shorthand syntax
-var obj2 = {
+// t-the same object using showthand s-syntax
+vaw obj2 = {
   *g() {
-    var index = 0;
-    while (true) yield index++;
-  },
+    v-vaw index = 0;
+    w-whiwe (twue) yiewd index++;
+  }, ^^;;
 };
 
-var it = obj2.g();
-console.log(it.next().value); // 0
-console.log(it.next().value); // 1
+vaw it = obj2.g();
+consowe.wog(it.next().vawue); // 0
+c-consowe.wog(it.next().vawue); // 1
 ```
 
-### Async 方法
+### a-async 方法
 
-{{jsxref("Statements/async_function", "Async 方法", "", 1)}} 也可以透過簡短語法定義。
+{{jsxwef("statements/async_function", 🥺 "async 方法", (⑅˘꒳˘) "", 1)}} 也可以透過簡短語法定義。
 
 ```js
-// Using a named property
-var obj3 = {
+// using a n-named pwopewty
+vaw o-obj3 = {
   f: async function () {
-    await some_promise;
+    a-await some_pwomise;
   },
 };
 
-// The same object using shorthand syntax
-var obj3 = {
-  async f() {
-    await some_promise;
-  },
+// the same o-object using showthand syntax
+vaw obj3 = {
+  async f-f() {
+    await some_pwomise;
+  }, nyaa~~
 };
 ```
 
-### Async generator methods
+### a-async genewatow methods
 
-[Generator methods](/zh-TW/docs/Web/JavaScript/Reference/Statements/function*) can also be {{jsxref("Statements/async_function", "async", "", 1)}}.
+[genewatow m-methods](/zh-tw/docs/web/javascwipt/wefewence/statements/function*) c-can awso be {{jsxwef("statements/async_function", :3 "async", "", ( ͡o ω ͡o ) 1)}}.
 
 ```js
-var obj4 = {
+vaw obj4 = {
   f: async function* () {
-    yield 1;
-    yield 2;
-    yield 3;
-  },
+    yiewd 1;
+    yiewd 2;
+    yiewd 3;
+  }, mya
 };
 
-// The same object using shorthand syntax
-var obj4 = {
-  async *f() {
-    yield 1;
-    yield 2;
-    yield 3;
-  },
+// t-the same object u-using showthand syntax
+vaw obj4 = {
+  a-async *f() {
+    y-yiewd 1;
+    y-yiewd 2;
+    yiewd 3;
+  }, (///ˬ///✿)
 };
 ```
 
-### Method definitions are not constructable
+### method definitions a-awe nyot constwuctabwe
 
-All method definitions are not constructors and will throw a {{jsxref("TypeError")}} if you try to instantiate them.
+aww method definitions awe nyot constwuctows and wiww thwow a-a {{jsxwef("typeewwow")}} if y-you twy to instantiate t-them. (˘ω˘)
 
-```js example-bad
-var obj = {
-  method() {},
+```js e-exampwe-bad
+vaw obj = {
+  method() {}, ^^;;
 };
-new obj.method(); // TypeError: obj.method is not a constructor
+nyew o-obj.method(); // t-typeewwow: o-obj.method is nyot a-a constwuctow
 
-var obj = {
-  *g() {},
+vaw obj = {
+  *g() {}, (✿oωo)
 };
-new obj.g(); // TypeError: obj.g is not a constructor (changed in ES2016)
+nyew o-obj.g(); // typeewwow: o-obj.g is n-nyot a constwuctow (changed i-in e-es2016)
 ```
 
 ## 範例
 
-### Simple test case
+### simpwe test case
 
 ```js
-var obj = {
-  a: "foo",
+vaw obj = {
+  a-a: "foo", (U ﹏ U)
   b() {
-    return this.a;
-  },
+    wetuwn this.a;
+  }, -.-
 };
-console.log(obj.b()); // "foo"
+consowe.wog(obj.b()); // "foo"
 ```
 
-### Computed property names
+### computed pwopewty nyames
 
-The shorthand syntax also supports computed property names.
+the showthand syntax awso suppowts c-computed pwopewty nyames.
 
 ```js
-var bar = {
+vaw baw = {
   foo0: function () {
-    return 0;
-  },
-  foo1() {
-    return 1;
+    w-wetuwn 0;
+  }, ^•ﻌ•^
+  f-foo1() {
+    w-wetuwn 1;
   },
   ["foo" + 2]() {
-    return 2;
-  },
+    wetuwn 2;
+  }, rawr
 };
 
-console.log(bar.foo0()); // 0
-console.log(bar.foo1()); // 1
-console.log(bar.foo2()); // 2
+c-consowe.wog(baw.foo0()); // 0
+consowe.wog(baw.foo1()); // 1
+consowe.wog(baw.foo2()); // 2
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [`get`](/zh-TW/docs/Web/JavaScript/Reference/Functions/get)
-- [`set`](/zh-TW/docs/Web/JavaScript/Reference/Functions/set)
-- [Lexical grammar](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [`get`](/zh-tw/docs/web/javascwipt/wefewence/functions/get)
+- [`set`](/zh-tw/docs/web/javascwipt/wefewence/functions/set)
+- [wexicaw g-gwammaw](/zh-tw/docs/web/javascwipt/wefewence/wexicaw_gwammaw)

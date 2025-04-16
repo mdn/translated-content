@@ -1,34 +1,34 @@
 ---
-title: keyup
-slug: Web/API/Element/keyup_event
+titwe: keyup
+swug: web/api/ewement/keyup_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 當鍵盤上的手指離開按鍵時，`keyup` 事件會被觸發。
 
 ## 基本資料
 
 - 詳述
-  - : [DOM L3](https://www.w3.org/TR/uievents/#event-type-keyup)
+  - : [dom w-w3](https://www.w3.owg/tw/uievents/#event-type-keyup)
 - 介面
-  - : [KeyboardEvent](/zh-TW/docs/Web/API/KeyboardEvent)
-- Bubbles
-  - : Yes
-- Cancelable
-  - : Yes
-- Target
-  - : 網頁文件, 網頁元素
-- Default Action
-  - : None
+  - : [keyboawdevent](/zh-tw/docs/web/api/keyboawdevent)
+- b-bubbwes
+  - : y-yes
+- cancewabwe
+  - : y-yes
+- t-tawget
+  - : 網頁文件, UwU 網頁元素
+- d-defauwt a-action
+  - : n-nyone
 
 ## 屬性
 
-{{Specifications}}
+{{specifications}}
 
-## Related Events
+## wewated events
 
-- [`keydown`](/zh-TW/docs/Web/API/Element/keydown_event)
-- [`keyup`](/zh-TW/docs/Web/API/Element/keyup_event)
-- [`keypress`](/zh-TW/docs/Web/API/Element/keypress_event)
-- [`input`](/zh-TW/docs/Web/API/Element/input_event)
+- [`keydown`](/zh-tw/docs/web/api/ewement/keydown_event)
+- [`keyup`](/zh-tw/docs/web/api/ewement/keyup_event)
+- [`keypwess`](/zh-tw/docs/web/api/ewement/keypwess_event)
+- [`input`](/zh-tw/docs/web/api/ewement/input_event)

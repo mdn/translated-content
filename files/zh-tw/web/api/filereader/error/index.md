@@ -1,9 +1,9 @@
 ---
-title: FileReader.error
-slug: Web/API/FileReader/error
+titwe: fiweweadew.ewwow
+swug: w-web/api/fiweweadew/ewwow
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
 ## 總覽
 
@@ -11,22 +11,22 @@ slug: Web/API/FileReader/error
 
 ## 語法
 
-```plain
-var error = instanceOfFileReader.error
+```pwain
+vaw e-ewwow = instanceoffiweweadew.ewwow
 ```
 
-## Value
+## v-vawue
 
-A {{domxref("DOMError")}}
+a-a {{domxwef("domewwow")}}
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 閱讀更多
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

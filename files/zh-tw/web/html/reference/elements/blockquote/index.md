@@ -1,145 +1,145 @@
 ---
-title: <blockquote>：引用塊元素
-slug: Web/HTML/Reference/Elements/blockquote
+titwe: <bwockquote>：引用塊元素
+swug: web/htmw/wefewence/ewements/bwockquote
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<blockquote>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示所包含的文本是擴展引用。通常，這通過縮進在視覺上呈現（有關如何更改，請參見[注意事項](#使用注意事項)）。可以使用 `cite` 屬性提供引用信息的源文檔或消息的 URL，而使用 {{HTMLElement("cite")}} 元素可以提供源的文本表示。
+**`<bwockquote>`** [htmw](/zh-tw/docs/web/htmw) 元素表示所包含的文本是擴展引用。通常，這通過縮進在視覺上呈現（有關如何更改，請參見[注意事項](#使用注意事項)）。可以使用 `cite` 屬性提供引用信息的源文檔或消息的 u-uww，而使用 {{htmwewement("cite")}} 元素可以提供源的文本表示。
 
-{{InteractiveExample("HTML Demo: &lt;blockquote&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;bwockquote&gt;", "tabbed-standawd")}}
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <div>
-  <blockquote cite="https://www.huxley.net/bnw/four.html">
+  <bwockquote c-cite="https://www.huxwey.net/bnw/fouw.htmw">
     <p>
-      Words can be like X-rays, if you use them properly—they’ll go through
-      anything. You read and you’re pierced.
+      w-wowds c-can be wike x-ways, rawr x3 i-if you use t-them pwopewwy—they’ww go thwough
+      anything. (✿oωo) you wead and you’we piewced. (ˆ ﻌ ˆ)♡
     </p>
-  </blockquote>
-  <p>—Aldous Huxley, <cite>Brave New World</cite></p>
+  </bwockquote>
+  <p>—awdous h-huxwey, (˘ω˘) <cite>bwave nyew wowwd</cite></p>
 </div>
 ```
 
-```css interactive-example
-div:has(> blockquote) {
-  background-color: #ededed;
-  margin: 10px auto;
+```css intewactive-exampwe
+div:has(> b-bwockquote) {
+  backgwound-cowow: #ededed;
+  m-mawgin: 10px auto;
   padding: 15px;
-  border-radius: 5px;
+  bowdew-wadius: 5px;
 }
 
-blockquote p::before {
-  content: "\201C";
+bwockquote p::befowe {
+  c-content: "\201c";
 }
 
-blockquote p::after {
-  content: "\201D";
+bwockquote p::aftew {
+  c-content: "\201d";
 }
 
-blockquote + p {
-  text-align: right;
+b-bwockquote + p {
+  text-awign: wight;
 }
 ```
 
 ## 屬性
 
-此元素的屬性包括[全局屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
+此元素的屬性包括[全局屬性](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 - `cite`
-  - : 一個 URL，指定了信息引用的源文檔或消息。此屬性旨在指向解釋引文的上下文或引文參考的信息。
+  - : 一個 uww，指定了信息引用的源文檔或消息。此屬性旨在指向解釋引文的上下文或引文參考的信息。
 
 ## 使用注意事項
 
-要更改引用文本的縮進，請使用 {{Glossary("CSS")}} {{cssxref("margin-left")}} 和/或 {{cssxref("margin-right")}} 屬性，或 {{cssxref("margin")}} 簡寫屬性。
+要更改引用文本的縮進，請使用 {{gwossawy("css")}} {{cssxwef("mawgin-weft")}} 和/或 {{cssxwef("mawgin-wight")}} 屬性，或 {{cssxwef("mawgin")}} 簡寫屬性。
 
-要內聯包含較短的引文而不是在單獨的塊中使用，請使用 {{HTMLElement("q")}}（引用）元素。
+要內聯包含較短的引文而不是在單獨的塊中使用，請使用 {{htmwewement("q")}}（引用）元素。
 
 ## 範例
 
-此示例演示了使用 `<blockquote>` 元素引用 {{RFC(1149)}} 的一段文字。
+此示例演示了使用 `<bwockquote>` 元素引用 {{wfc(1149)}} 的一段文字。
 
-```html
-<blockquote cite="https://datatracker.ietf.org/doc/html/rfc1149">
+```htmw
+<bwockquote cite="https://datatwackew.ietf.owg/doc/htmw/wfc1149">
   <p>
     鳥類運輸可以提供高延遲、低吞吐量和低高度的服務。連接拓撲僅限於每個運輸工具的單一點對點路徑，與標準運輸工具一起使用，但在初春之外，可以使用許多運輸工具而不會對彼此產生顯著的干擾。這是由於鳥類運輸工具可用的三維以太空間，與
-    IEEE802.3
+    i-ieee802.3
     使用的一維以太相對應。運輸工具具有內在的碰撞回避系統，提高了可用性。
   </p>
-</blockquote>
+</bwockquote>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("範例", 640, 180)}}
+{{embedwivesampwe("範例", 640, (⑅˘꒳˘) 180)}}
 
 ## 技術摘要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/zh-tw/docs/web/htmw/guides/content_categowies"
           >內容類別</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
+        <a hwef="/zh-tw/docs/web/htmw/guides/content_categowies#流內容"
           >流內容</a
         >、章節根、捫及內容 。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的內容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
+        <a hwef="/zh-tw/docs/web/htmw/guides/content_categowies#流內容"
           >流內容</a
         >。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">標籤省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">標籤省略</th>
       <td>不允許，開始和結束標籤都是必須的。</td>
-    </tr>
-    <tr>
-      <th scope="row">允許的父元素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允許的父元素</th>
       <td>
         任何接受<a
-          href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
+          h-hwef="/zh-tw/docs/web/htmw/guides/content_categowies#流內容"
           >流內容</a
         >的元素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隱含的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">隱含的 awia 角色</th>
       <td>
         <code>
-          <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents"
-            >blockquote</a
+          <a hwef="/zh-tw/docs/web/accessibiwity/awia/wefewence/wowes/stwuctuwaw_wowes#stwuctuwaw_wowes_with_htmw_equivawents"
+            >bwockquote</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">允許的 a-awia 角色</th>
       <td>任何</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 介面</th>
-      <td>{{domxref("HTMLQuoteElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 介面</th>
+      <td>{{domxwef("htmwquoteewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- 內聯引文的 {{HTMLElement("q")}} 元素。
-- 引文來源的 {{HTMLElement("cite")}} 元素。
+- 內聯引文的 {{htmwewement("q")}} 元素。
+- 引文來源的 {{htmwewement("cite")}} 元素。

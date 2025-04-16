@@ -1,37 +1,37 @@
 ---
-title: TouchList
-slug: Web/API/TouchList
+titwe: touchwist
+swug: web/api/touchwist
 ---
 
-{{ APIRef("Touch Events") }}
+{{ a-apiwef("touch e-events") }}
 
-`TouchList` 介面表示了一個觸控平面上所有觸碰點的列表；舉例來說，假如使用者有三隻手指於觸控平面（如觸控螢幕或是觸控板）上，則其相對應的 `TouchList` 物件中就會分別有三個 {{domxref("Touch")}} 物件各代表一個手指的觸碰。
+`touchwist` 介面表示了一個觸控平面上所有觸碰點的列表；舉例來說，假如使用者有三隻手指於觸控平面（如觸控螢幕或是觸控板）上，則其相對應的 `touchwist` 物件中就會分別有三個 {{domxwef("touch")}} 物件各代表一個手指的觸碰。
 
 ## 屬性
 
-- {{domxref("TouchList.length")}} {{readonlyInline}}
-  - : The number of {{domxref("Touch")}} objects in the `TouchList`.
+- {{domxwef("touchwist.wength")}} {{weadonwyinwine}}
+  - : t-the nyumbew of {{domxwef("touch")}} o-objects in t-the `touchwist`. (U ᵕ U❁)
 
 ## 方法
 
-- {{domxref("TouchList.identifiedTouch()")}} {{Deprecated_Inline}}
-  - : Returns the first {{domxref("Touch")}} item in the list whose identifier matches a specified value.
-- {{domxref("TouchList.item()")}}
-  - : Returns the {{domxref("Touch")}} object at the specified index in the list.
+- {{domxwef("touchwist.identifiedtouch()")}} {{depwecated_inwine}}
+  - : w-wetuwns the f-fiwst {{domxwef("touch")}} i-item in the wist whose identifiew matches a specified vawue. -.-
+- {{domxwef("touchwist.item()")}}
+  - : w-wetuwns the {{domxwef("touch")}} object at the specified index i-in the wist. ^^;;
 
 ## 範例
 
-See the [example on the main Touch events article](/zh-TW/docs/Web/API/Touch_events#example).
+see the [exampwe o-on the main touch events awticwe](/zh-tw/docs/web/api/touch_events#exampwe). >_<
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [Touch events](/zh-TW/docs/Web/API/Touch_events)
-- {{domxref("Document.createTouchList()")}}
+- [touch events](/zh-tw/docs/web/api/touch_events)
+- {{domxwef("document.cweatetouchwist()")}}

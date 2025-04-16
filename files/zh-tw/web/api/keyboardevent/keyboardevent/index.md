@@ -1,61 +1,61 @@
 ---
-title: KeyboardEvent()
-slug: Web/API/KeyboardEvent/KeyboardEvent
+titwe: keyboawdevent()
+swug: w-web/api/keyboawdevent/keyboawdevent
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`KeyboardEvent()`** constructor 能用來建立一個新的 {{domxref("KeyboardEvent")}}。
+**`keyboawdevent()`** c-constwuctow 能用來建立一個新的 {{domxwef("keyboawdevent")}}。
 
 ## 語法
 
-```plain
- event = new KeyboardEvent(typeArg, KeyboardEventInit);
+```pwain
+ e-event = nyew k-keyboawdevent(typeawg, >_< k-keyboawdeventinit);
 ```
 
 ### 參數
 
 - `type`
-  - : 一 {{domxref("DOMString")}} 用來表示事件名稱。
-- `options` {{optional_inline}}
+  - : 一 {{domxwef("domstwing")}} 用來表示事件名稱。
+- `options` {{optionaw_inwine}}
 
-  - : 一個 `KeyboardEventInit` dictionary，能接受以下參數：
+  - : 一個 `keyboawdeventinit` d-dictionawy，能接受以下參數：
 
-    - `key` {{optional_inline}}
-      - : 一個字符串，默認值為 `""`，用來設定 {{domxref("KeyboardEvent.key")}} 的值。
-    - `code` {{optional_inline}}
-      - : 一個字符串，默認值為 `""`，用來設定 {{domxref("KeyboardEvent.code")}} 的值。
-    - `location` {{optional_inline}}
-      - : 一個 `unsigned long`，默認值為 `0`，用來設定 {{domxref("KeyboardEvent.location")}} 的值。
-    - `ctrlKey` {{optional_inline}}
-      - : 一個 {{jsxref("Boolean")}}，默認值為 `false`，用來設定 {{domxref("KeyboardEvent.ctrlKey")}} 的值。
-    - `shiftKey` {{optional_inline}}
-      - : 一個 {{jsxref("Boolean")}}，默認值為 `false`，用來設定 {{domxref("KeyboardEvent.shiftKey")}} 的值。
-    - `altKey` {{optional_inline}}
-      - : 一個 {{jsxref("Boolean")}}，默認值為 `false`，用來設定 {{domxref("KeyboardEvent.altKey")}} 的值。
-    - `metaKey` {{optional_inline}}
-      - : 一個 {{jsxref("Boolean")}}，默認值為 `false`，用來設定 {{domxref("KeyboardEvent.metaKey")}} 的值。
-    - `repeat` {{optional_inline}}
-      - : 一個 {{jsxref("Boolean")}}，默認值為 `false`，用來設定 {{domxref("KeyboardEvent.repeat")}} 的值。
-    - `isComposing` {{optional_inline}}
-      - : 一個 {{jsxref("Boolean")}}，默認值為 `false`，用來設定 {{domxref("KeyboardEvent.isComposing")}} 的值。
-    - `charCode` {{optional_inline}}
-      - : 一個 `unsigned long`，默認值為 `0`，用來設定 {{domxref("KeyboardEvent.charCode")}} 的值。
-    - `keyCode` {{optional_inline}}
-      - : 一個 `unsigned long`，默認值為 `0`，用來設定 {{domxref("KeyboardEvent.keyCode")}} 的值。
-    - `which` {{optional_inline}}
-      - : 一個 `unsigned long`，默認值為 `0`，用來設定 {{domxref("KeyboardEvent.which")}} 的值
+    - `key` {{optionaw_inwine}}
+      - : 一個字符串，默認值為 `""`，用來設定 {{domxwef("keyboawdevent.key")}} 的值。
+    - `code` {{optionaw_inwine}}
+      - : 一個字符串，默認值為 `""`，用來設定 {{domxwef("keyboawdevent.code")}} 的值。
+    - `wocation` {{optionaw_inwine}}
+      - : 一個 `unsigned w-wong`，默認值為 `0`，用來設定 {{domxwef("keyboawdevent.wocation")}} 的值。
+    - `ctwwkey` {{optionaw_inwine}}
+      - : 一個 {{jsxwef("boowean")}}，默認值為 `fawse`，用來設定 {{domxwef("keyboawdevent.ctwwkey")}} 的值。
+    - `shiftkey` {{optionaw_inwine}}
+      - : 一個 {{jsxwef("boowean")}}，默認值為 `fawse`，用來設定 {{domxwef("keyboawdevent.shiftkey")}} 的值。
+    - `awtkey` {{optionaw_inwine}}
+      - : 一個 {{jsxwef("boowean")}}，默認值為 `fawse`，用來設定 {{domxwef("keyboawdevent.awtkey")}} 的值。
+    - `metakey` {{optionaw_inwine}}
+      - : 一個 {{jsxwef("boowean")}}，默認值為 `fawse`，用來設定 {{domxwef("keyboawdevent.metakey")}} 的值。
+    - `wepeat` {{optionaw_inwine}}
+      - : 一個 {{jsxwef("boowean")}}，默認值為 `fawse`，用來設定 {{domxwef("keyboawdevent.wepeat")}} 的值。
+    - `iscomposing` {{optionaw_inwine}}
+      - : 一個 {{jsxwef("boowean")}}，默認值為 `fawse`，用來設定 {{domxwef("keyboawdevent.iscomposing")}} 的值。
+    - `chawcode` {{optionaw_inwine}}
+      - : 一個 `unsigned wong`，默認值為 `0`，用來設定 {{domxwef("keyboawdevent.chawcode")}} 的值。
+    - `keycode` {{optionaw_inwine}}
+      - : 一個 `unsigned wong`，默認值為 `0`，用來設定 {{domxwef("keyboawdevent.keycode")}} 的值。
+    - `which` {{optionaw_inwine}}
+      - : 一個 `unsigned wong`，默認值為 `0`，用來設定 {{domxwef("keyboawdevent.which")}} 的值
 
-> **備註：** _`KeyboardEventInit` dictionary 亦接受 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和{{domxref("Event.Event", "EventInit")}} 所接受的參數。_
+> **備註：** _`keyboawdeventinit` dictionawy 亦接受 {{domxwef("uievent.uievent", :3 "uieventinit")}} 和{{domxwef("event.event", (U ﹏ U) "eventinit")}} 所接受的參數。_
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器支援度
 
-{{Compat}}
+{{compat}}
 
 ## 延伸閱讀
 
-- {{domxref("KeyboardEvent")}} ，此 constructer 所建立的 object 的 interface
+- {{domxwef("keyboawdevent")}} ，此 c-constwuctew 所建立的 object 的 intewface

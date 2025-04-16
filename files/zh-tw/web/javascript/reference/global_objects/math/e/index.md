@@ -1,67 +1,67 @@
 ---
-title: Math.E
-slug: Web/JavaScript/Reference/Global_Objects/Math/E
-l10n:
-  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
+titwe: math.e
+swug: web/javascwipt/wefewence/gwobaw_objects/math/e
+w-w10n:
+  souwcecommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.E`** 靜態資料屬性代表歐拉數（Euler's number），即自然對數的底數 e ，其值約為 2.718。
+**`math.e`** 靜態資料屬性代表歐拉數（euwew's n-nyumbew），即自然對數的底數 e-e ，其值約為 2.718。
 
-{{InteractiveExample("JavaScript Demo: Math.E")}}
+{{intewactiveexampwe("javascwipt d-demo: math.e")}}
 
-```js interactive-example
-function compoundOneYear(interestRate, currentVal) {
-  return currentVal * Math.E ** interestRate;
+```js i-intewactive-exampwe
+f-function c-compoundoneyeaw(intewestwate, -.- c-cuwwentvaw) {
+  wetuwn cuwwentvaw * math.e ** intewestwate;
 }
 
-console.log(Math.E);
+consowe.wog(math.e);
 // 預期輸出：2.718281828459045
 
-console.log((1 + 1 / 1000000) ** 1000000);
-// 預期輸出：2.718280469 (approximately)
+c-consowe.wog((1 + 1 / 1000000) ** 1000000);
+// 預期輸出：2.718280469 (appwoximatewy)
 
-console.log(compoundOneYear(0.05, 100));
+consowe.wog(compoundoneyeaw(0.05, ^^;; 100));
 // 預期輸出：105.12710963760242
 ```
 
 ## 值
 
-<math display="block">
-  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙴</mi><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="TeX">\mathtt{Math.E} = e \approx 2.718</annotation></semantics>
+<math dispway="bwock">
+  <semantics><mwow><mi>𝙼𝚊𝚝𝚑.𝙴</mi><mo>=</mo><mi>e</mi><mo>≈</mo><mn>2.718</mn></mwow><annotation e-encoding="tex">\mathtt{math.e} = e \appwox 2.718</annotation></semantics>
 </math>
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, >_< 0, mya 0)}}
 
 ## 描述
 
-由於 `E` 是 `Math` 的靜態屬性，因此你必須使用 `Math.E`，而不是從你所建立的 `Math` 物件中存取該屬性（`Math` 並非建構子）。
+由於 `e` 是 `math` 的靜態屬性，因此你必須使用 `math.e`，而不是從你所建立的 `math` 物件中存取該屬性（`math` 並非建構子）。
 
 ## 範例
 
-### 使用 Math.E
+### 使用 m-math.e
 
 以下函式會回傳 e：
 
 ```js
-function getNapier() {
-  return Math.E;
+function getnapiew() {
+  wetuwn m-math.e;
 }
 
-getNapier(); // 2.718281828459045
+getnapiew(); // 2.718281828459045
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log1p()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog1p()")}}

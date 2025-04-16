@@ -1,21 +1,21 @@
-<!-- 🙌 Thanks for contributing to MDN Web Docs. Adding details below will help us to merge your PR faster. -->
+<!-- 🙌 thanks fow contwibuting t-to mdn web docs. nyaa~~ a-adding detaiws b-bewow wiww hewp u-us to mewge youw p-pw fastew. (⑅˘꒳˘) -->
 
-### Description
+### d-descwiption
 
-<!-- ✍️ Summarize your changes in one or two sentences -->
+<!-- ✍️ summawize y-youw changes i-in one ow two sentences -->
 
-### Motivation
+### motivation
 
-<!-- ❓ Why are you making these changes and how do they help readers? -->
+<!-- ❓ why awe you making these c-changes and how do they hewp weadews? -->
 
-### Additional details
+### a-additionaw detaiws
 
-<!-- 🔗 Link to release notes, vendor docs, bug trackers, source control, or other places providing more context -->
+<!-- 🔗 wink to wewease n-nyotes, vendow docs, rawr x3 bug twackews, (✿oωo) souwce contwow, (ˆ ﻌ ˆ)♡ ow othew pwaces p-pwoviding mowe context -->
 
-### Related issues and pull requests
+### w-wewated issues a-and puww wequests
 
-<!-- 🔨 If this fully resolves a GitHub issue, use "Fixes #123" -->
-<!-- 👉 Highlight related pull requests using "Relates to #123" -->
-<!-- ❗ If another pull request should be merged first, use "**Depends on:** #123" -->
+<!-- 🔨 if this fuwwy wesowves a github issue, (˘ω˘) use "fixes #123" -->
+<!-- 👉 highwight w-wewated puww wequests using "wewates to #123" -->
+<!-- ❗ if anothew puww wequest s-shouwd be mewged fiwst, (⑅˘꒳˘) use "**depends o-on:** #123" -->
 
-<!-- 👷‍♀️ After submitting, go to the "Checks" tab of your PR for the build status -->
+<!-- 👷‍♀️ aftew s-submitting, (///ˬ///✿) g-go to the "checks" t-tab of youw pw fow the buiwd status -->

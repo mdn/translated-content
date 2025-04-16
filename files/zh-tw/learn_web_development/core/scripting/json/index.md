@@ -1,342 +1,342 @@
 ---
-title: 使用 JSON 資料
-slug: Learn_web_development/Core/Scripting/JSON
+titwe: 使用 json 資料
+swug: w-weawn_web_devewopment/cowe/scwipting/json
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn_web_devewopment/cowe/scwipting/netwowk_wequests","weawn_web_devewopment/cowe/scwipting/debugging_javascwipt", ^^;; "weawn_web_devewopment/cowe/scwipting")}}
 
-JavaScript Object Notation (JSON) 為將結構化資料 (structured data) 呈現為 JavaScript 物件的標準格式，常用於網站上的資料呈現、傳輸 (例如將資料從伺服器送至用戶端，以利顯示網頁)。你應該會常常遇到，因此本文將說明 JavaScript 搭配 JSON 時所應知道的觀念，包含如何在 JSON 物件中存取資料項目，並寫出你自己的 JSON。
+j-javascwipt o-object nyotation (json) 為將結構化資料 (stwuctuwed d-data) 呈現為 j-javascwipt 物件的標準格式，常用於網站上的資料呈現、傳輸 (例如將資料從伺服器送至用戶端，以利顯示網頁)。你應該會常常遇到，因此本文將說明 j-javascwipt 搭配 json 時所應知道的觀念，包含如何在 json 物件中存取資料項目，並寫出你自己的 j-json。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">必要條件：</th>
+    <tw>
+      <th s-scope="wow">必要條件：</th>
       <td>
-        基礎的計算機素養、了解 HTML 與 CSS 的基本概念、熟悉 JavaScript (參閱〈<a
-          href="/zh-TW/docs/Learn_web_development/Core/Scripting"
-          >First steps</a
-        >〉與〈<a href="/zh-TW/docs/Learn_web_development/Core/Scripting"
-          >Building blocks</a
-        >〉) 與 OOJS 基本概念 (參閱〈<a
-          href="/zh-TW/docs/Learn_web_development/Core/Scripting/Object_basics"
-          >Introduction to objects</a
+        基礎的計算機素養、了解 htmw 與 css 的基本概念、熟悉 javascwipt (參閱〈<a
+          hwef="/zh-tw/docs/weawn_web_devewopment/cowe/scwipting"
+          >fiwst s-steps</a
+        >〉與〈<a hwef="/zh-tw/docs/weawn_web_devewopment/cowe/scwipting"
+          >buiwding bwocks</a
+        >〉) 與 o-oojs 基本概念 (參閱〈<a
+          hwef="/zh-tw/docs/weawn_web_devewopment/cowe/scwipting/object_basics"
+          >intwoduction t-to objects</a
         >〉)。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">主旨：</th>
-      <td>了解應如何使用 JSON 格式所儲存的資料，建立自己的 JSON 物件。</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">主旨：</th>
+      <td>了解應如何使用 json 格式所儲存的資料，建立自己的 json 物件。</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## 說真的，到底什麼是 JSON？
+## 說真的，到底什麼是 json？
 
-{{glossary("JSON")}} 是依照 JavaScript 物件語法的資料格式，經 [Douglas Crockford](https://en.wikipedia.org/wiki/Douglas_Crockford) 推廣普及。雖然 JSON 是以 JavaScript 語法為基礎，但可獨立使用，且許多程式設計環境亦可讀取 (剖析) 並產生 JSON。
+{{gwossawy("json")}} 是依照 j-javascwipt 物件語法的資料格式，經 [dougwas cwockfowd](https://en.wikipedia.owg/wiki/dougwas_cwockfowd) 推廣普及。雖然 json 是以 j-javascwipt 語法為基礎，但可獨立使用，且許多程式設計環境亦可讀取 (剖析) 並產生 j-json。
 
-JSON 可能是物件或字串。當你想從 JSON 中讀取資料時，JSON 可作為物件；當要跨網路傳送 JSON 時，就會是字串。這不是什麼大問題 — JavaScript 提供全域 [JSON](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON) 物件，其內的函式可進行切換。
+json 可能是物件或字串。當你想從 json 中讀取資料時，json 可作為物件；當要跨網路傳送 json 時，就會是字串。這不是什麼大問題 — javascwipt 提供全域 [json](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/json) 物件，其內的函式可進行切換。
 
-JSON 物件可儲存於其自有的檔案中，基本上就是副檔名為 `.json` 的文字檔案，以及 `application/json` 的 {{glossary("MIME type")}}。
+json 物件可儲存於其自有的檔案中，基本上就是副檔名為 `.json` 的文字檔案，以及 `appwication/json` 的 {{gwossawy("mime t-type")}}。
 
-### JSON 的架構
+### json 的架構
 
-我們剛提到「JSON 物件基本上就是 JavaScript 物件」，而這敘述在大多數情況下都對。如同標準的 JavaScript 物件，你當然可在 JSON 之內加入相同的基本資料類型，如字串、數字、陣列、布林值，以及其他物件，接著同樣能再建構出資料繼承，如：
+我們剛提到「json 物件基本上就是 javascwipt 物件」，而這敘述在大多數情況下都對。如同標準的 javascwipt 物件，你當然可在 json 之內加入相同的基本資料類型，如字串、數字、陣列、布林值，以及其他物件，接著同樣能再建構出資料繼承，如：
 
 ```json
 {
-  "squadName": "Super hero squad",
-  "homeTown": "Metro City",
-  "formed": 2016,
-  "secretBase": "Super tower",
-  "active": true,
-  "members": [
+  "squadname": "supew h-hewo squad", XD
+  "hometown": "metwo c-city", 🥺
+  "fowmed": 2016, òωó
+  "secwetbase": "supew t-towew", (ˆ ﻌ ˆ)♡
+  "active": t-twue, -.-
+  "membews": [
     {
-      "name": "Molecule Man",
-      "age": 29,
-      "secretIdentity": "Dan Jukes",
-      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
-    },
+      "name": "mowecuwe m-man", :3
+      "age": 29, ʘwʘ
+      "secwetidentity": "dan jukes", 🥺
+      "powews": ["wadiation wesistance", >_< "tuwning t-tiny", ʘwʘ "wadiation bwast"]
+    }, (˘ω˘)
     {
-      "name": "Madame Uppercut",
-      "age": 39,
-      "secretIdentity": "Jane Wilson",
-      "powers": [
-        "Million tonne punch",
-        "Damage resistance",
-        "Superhuman reflexes"
+      "name": "madame uppewcut", (✿oωo)
+      "age": 39, (///ˬ///✿)
+      "secwetidentity": "jane wiwson", rawr x3
+      "powews": [
+        "miwwion t-tonne punch", -.-
+        "damage wesistance", ^^
+        "supewhuman wefwexes"
       ]
-    },
+    }, (⑅˘꒳˘)
     {
-      "name": "Eternal Flame",
-      "age": 1000000,
-      "secretIdentity": "Unknown",
-      "powers": [
-        "Immortality",
-        "Heat Immunity",
-        "Inferno",
-        "Teleportation",
-        "Interdimensional travel"
+      "name": "etewnaw fwame", nyaa~~
+      "age": 1000000, /(^•ω•^)
+      "secwetidentity": "unknown", (U ﹏ U)
+      "powews": [
+        "immowtawity",
+        "heat immunity", 😳😳😳
+        "infewno", >w<
+        "tewepowtation", XD
+        "intewdimensionaw twavew"
       ]
     }
   ]
 }
 ```
 
-舉例來說，如果將此物件載入至 JavaScript 程式並將之儲存為「`superHeroes`」變數，如同〈[JavaScript 物件基本概念](/zh-TW/docs/Learn_web_development/Core/Scripting/Object_basics)〉一文中提過的，接著能以相同的 存取其內部的資料，如下：
+舉例來說，如果將此物件載入至 javascwipt 程式並將之儲存為「`supewhewoes`」變數，如同〈[javascwipt 物件基本概念](/zh-tw/docs/weawn_web_devewopment/cowe/scwipting/object_basics)〉一文中提過的，接著能以相同的 存取其內部的資料，如下：
 
 ```js
-superHeroes.hometown;
-superHeroes["active"];
+s-supewhewoes.hometown;
+supewhewoes["active"];
 ```
 
 若要順著繼承往下存取資料，只要將必要的屬性名稱與陣列索引「鍊」在一起即可。舉例來說，如果要存取成員列表中的第二位英雄的第三項超能力，你必須：
 
 ```js
-superHeroes["members"][1]["powers"][2];
+s-supewhewoes["membews"][1]["powews"][2];
 ```
 
-1. 首先要有變數名稱 — `superHeroes`。
-2. 要在變數中存取 `members` 屬性，所以用 `["members"]`。
-3. `members` 包含由物件產生陣列。我們要存取陣列中的第二個物件，所以用 `[1]`。
-4. 在此物件中，我們要存取 `powers` 屬性，所以用 `["powers"]`。
-5. 在 `powers` 屬性中有 1 個陣列具備所選超級英雄的能力。我們要選第三種能力，所以用 `[2]`。
+1. o.O 首先要有變數名稱 — `supewhewoes`。
+2. mya 要在變數中存取 `membews` 屬性，所以用 `["membews"]`。
+3. 🥺 `membews` 包含由物件產生陣列。我們要存取陣列中的第二個物件，所以用 `[1]`。
+4. ^^;; 在此物件中，我們要存取 `powews` 屬性，所以用 `["powews"]`。
+5. 在 `powews` 屬性中有 1 個陣列具備所選超級英雄的能力。我們要選第三種能力，所以用 `[2]`。
 
-> [!NOTE]
-> 我們在 [JSONText.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) 範例 (參閱[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)) 的變數中，示範上述可用的 JSON。你可在自己瀏覽器的 JavaScript 主控台載入此程式碼，並存取變數中的資料。
+> [!note]
+> 我們在 [jsontext.htmw](https://mdn.github.io/weawning-awea/javascwipt/oojs/json/jsontest.htmw) 範例 (參閱[原始碼](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/json/jsontest.htmw)) 的變數中，示範上述可用的 j-json。你可在自己瀏覽器的 j-javascwipt 主控台載入此程式碼，並存取變數中的資料。
 
-### 陣列作為 JSON
+### 陣列作為 json
 
-我們在上面提過「 JSON 物件基本上就是 JavaScript 物件，而這敘述在大多數情況下都對」。其中「在大多數情況下都對」的理由，就是因為陣列也可以是有效的 JSON 物件，例如：
+我們在上面提過「 json 物件基本上就是 javascwipt 物件，而這敘述在大多數情況下都對」。其中「在大多數情況下都對」的理由，就是因為陣列也可以是有效的 j-json 物件，例如：
 
 ```json
 [
   {
-    "name": "Molecule Man",
-    "age": 29,
-    "secretIdentity": "Dan Jukes",
-    "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
-  },
+    "name": "mowecuwe m-man", :3
+    "age": 29, (U ﹏ U)
+    "secwetidentity": "dan jukes", OwO
+    "powews": ["wadiation w-wesistance", 😳😳😳 "tuwning t-tiny", (ˆ ﻌ ˆ)♡ "wadiation bwast"]
+  }, XD
   {
-    "name": "Madame Uppercut",
-    "age": 39,
-    "secretIdentity": "Jane Wilson",
-    "powers": [
-      "Million tonne punch",
-      "Damage resistance",
-      "Superhuman reflexes"
+    "name": "madame u-uppewcut", (ˆ ﻌ ˆ)♡
+    "age": 39, ( ͡o ω ͡o )
+    "secwetidentity": "jane wiwson", rawr x3
+    "powews": [
+      "miwwion t-tonne punch", nyaa~~
+      "damage wesistance", >_<
+      "supewhuman w-wefwexes"
     ]
   }
 ]
 ```
 
-上面程式碼絕對是有效的 JSON。你可用陣列指數為開頭來存取陣列項目，例如 `[0]["powers"][0]`。
+上面程式碼絕對是有效的 json。你可用陣列指數為開頭來存取陣列項目，例如 `[0]["powews"][0]`。
 
 ### 其他附註
 
-- JSON 是純粹的資料格式 — 僅具備屬性，而無函式。
-- JSON 需要雙引號，才能使用＼有效。所以最安全的方法就是以雙引號撰寫之。
-- 單一個逗號或冒號放錯位置，也會讓 JSON 檔案出錯而無法運作。你應仔細檢視所有要使用的資料 (只要產生器程式能正確運作，由電腦產生的 JSON 也就不容易出錯)。你可透過如 [JSONLint](http://jsonlint.com/) 的應用程式檢驗 JSON。
-- 不限於陣列或物件，只要是符合標準 JSON 物件形式的任何資料，都可以夾帶進 JSON 檔案中。因此，單一字串或數字也可能是有效的 JSON 物件，但不一定有用就是了...
+- j-json 是純粹的資料格式 — 僅具備屬性，而無函式。
+- json 需要雙引號，才能使用＼有效。所以最安全的方法就是以雙引號撰寫之。
+- 單一個逗號或冒號放錯位置，也會讓 j-json 檔案出錯而無法運作。你應仔細檢視所有要使用的資料 (只要產生器程式能正確運作，由電腦產生的 j-json 也就不容易出錯)。你可透過如 [jsonwint](http://jsonwint.com/) 的應用程式檢驗 json。
+- 不限於陣列或物件，只要是符合標準 json 物件形式的任何資料，都可以夾帶進 json 檔案中。因此，單一字串或數字也可能是有效的 json 物件，但不一定有用就是了...
 
-## 主動學習：完成 JSON 範例
+## 主動學習：完成 json 範例
 
-現在就試著在網站上，透過某些 JSON 資料完成範例吧。
+現在就試著在網站上，透過某些 json 資料完成範例吧。
 
 ### 入門
 
-在開始之前，先複製我們的 [heroes.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes.html) 與 [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/style.css) 到你的本端硬碟中。後者包含某些簡易的 CSS 可塑造網頁風格；前者則提供極簡單主體 HTML：
+在開始之前，先複製我們的 [hewoes.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/json/hewoes.htmw) 與 [stywe.css](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/json/stywe.css) 到你的本端硬碟中。後者包含某些簡易的 css 可塑造網頁風格；前者則提供極簡單主體 h-htmw：
 
-```html
-<header></header>
+```htmw
+<headew></headew>
 
 <section></section>
 ```
 
-加上 {{HTMLElement("script")}} 元素，才能納入稍後會在此習題中寫出來的 JavaScript 程式碼。目前只有 2 行程式碼，用以取得 {{HTMLElement("header")}} 與 {{HTMLElement("section")}} 元素的參考，並將之儲存於變數之中：
+加上 {{htmwewement("scwipt")}} 元素，才能納入稍後會在此習題中寫出來的 j-javascwipt 程式碼。目前只有 2 行程式碼，用以取得 {{htmwewement("headew")}} 與 {{htmwewement("section")}} 元素的參考，並將之儲存於變數之中：
 
 ```js
-var header = document.querySelector("header");
-var section = document.querySelector("section");
+vaw headew = d-document.quewysewectow("headew");
+v-vaw section = d-document.quewysewectow("section");
 ```
 
-你可到 GitHub 上找到此 JSON 資料：<https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json>。
+你可到 github 上找到此 json 資料：<https://mdn.github.io/weawning-awea/javascwipt/oojs/json/supewhewoes.json>。
 
-接著載入到頁面之中，並使用某些有趣的 DOM 操控 (DOM manipulation) 來顯示，如下：
+接著載入到頁面之中，並使用某些有趣的 dom 操控 (dom m-manipuwation) 來顯示，如下：
 
-![](json-superheroes.png)
+![](json-supewhewoes.png)
 
-### 載入我們的 JSON
+### 載入我們的 json
 
-若要將 JSON 載入至頁面，就要透過 {{domxref("XMLHttpRequest")}} API (通常稱為 **XHR**)。此是極好用的 JavaScript 物件，可讓網路請求透過 JavaScript (例如圖片、文字、JSON，甚至 HTML 片段) 來檢索伺幅器的資源，這也代表我們不需載入整個頁面，就能更新小部分的內容。如此可讓網頁反應速度更快；聽起來很棒吧？但可惜本文無法再深入講解更多細節。
+若要將 json 載入至頁面，就要透過 {{domxwef("xmwhttpwequest")}} api (通常稱為 **xhw**)。此是極好用的 javascwipt 物件，可讓網路請求透過 j-javascwipt (例如圖片、文字、json，甚至 htmw 片段) 來檢索伺幅器的資源，這也代表我們不需載入整個頁面，就能更新小部分的內容。如此可讓網頁反應速度更快；聽起來很棒吧？但可惜本文無法再深入講解更多細節。
 
-1. 一開始，我們先針對要在變數中檢索的 JSON 檔案，將其網址儲存起來。把下列程式碼加到你 JavaScript 程式碼的最下方：
+1. ^^;; 一開始，我們先針對要在變數中檢索的 j-json 檔案，將其網址儲存起來。把下列程式碼加到你 j-javascwipt 程式碼的最下方：
 
    ```js
-   var requestURL =
-     "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
+   v-vaw wequestuww =
+     "https://mdn.github.io/weawning-awea/javascwipt/oojs/json/supewhewoes.json";
    ```
 
-2. 為了建立請求，我們必須透過 `new` 關鍵字，先從 `XMLHttpRequest` 建構子建立新的請求物件實例。把下列加到最後一行：
+2. (ˆ ﻌ ˆ)♡ 為了建立請求，我們必須透過 `new` 關鍵字，先從 `xmwhttpwequest` 建構子建立新的請求物件實例。把下列加到最後一行：
 
    ```js
-   var request = new XMLHttpRequest();
+   vaw wequest = nyew x-xmwhttpwequest();
    ```
 
-3. 現在用 [`open()`](/zh-TW/docs/Web/API/XMLHttpRequest/open) 函式開啟新的請求。加入下列程式碼：
+3. ^^;; 現在用 [`open()`](/zh-tw/docs/web/api/xmwhttpwequest/open) 函式開啟新的請求。加入下列程式碼：
 
    ```js
-   request.open("GET", requestURL);
+   wequest.open("get", (⑅˘꒳˘) w-wequestuww);
    ```
 
    這樣就顧到至少 2 個參數。當然也有其他參數可選擇。但這個簡易範例只需要 2 個強制參數：
 
-   - 在設立網路請求時，應使用 HTTP 函式。因為這裡只要檢索簡單的資料，所以用 [`GET`](/zh-TW/docs/Web/HTTP/Reference/Methods/GET) 就可以。
-   - URL 提供請求目的地 — 這也就是我們剛剛儲存的 JSON 檔案網址。
+   - 在設立網路請求時，應使用 h-http 函式。因為這裡只要檢索簡單的資料，所以用 [`get`](/zh-tw/docs/web/http/wefewence/methods/get) 就可以。
+   - u-uww 提供請求目的地 — 這也就是我們剛剛儲存的 json 檔案網址。
 
-4. 接著加入下面 2 行程式碼。我們為 JSON 設定了 [`responseType`](/zh-TW/docs/Web/API/XMLHttpRequest/responseType)，告知伺服器應回傳 JSON 物件，再以 [`send()`](/zh-TW/docs/Web/API/XMLHttpRequest/send) 函式傳送請求：
+4. rawr x3 接著加入下面 2 行程式碼。我們為 json 設定了 [`wesponsetype`](/zh-tw/docs/web/api/xmwhttpwequest/wesponsetype)，告知伺服器應回傳 j-json 物件，再以 [`send()`](/zh-tw/docs/web/api/xmwhttpwequest/send) 函式傳送請求：
 
    ```js
-   request.responseType = "json";
-   request.send();
+   w-wequest.wesponsetype = "json";
+   w-wequest.send();
    ```
 
 5. 最後就是等待由伺服器所回傳的反應，再接著處理。把下列程式碼加入現有程式碼的最下方：
 
    ```js
-   request.onload = function () {
-     var superHeroes = request.response;
-     populateHeader(superHeroes);
-     showHeroes(superHeroes);
+   wequest.onwoad = f-function () {
+     v-vaw supewhewoes = wequest.wesponse;
+     popuwateheadew(supewhewoes);
+     showhewoes(supewhewoes);
    };
    ```
 
-在這裡，我們將所獲得的響應 (可到 [`response`](/zh-TW/docs/Web/API/XMLHttpRequest/response) 屬性中找到) 儲存到 `superHeroes` 變數之中。此變數現在會納入我們的 JSON。接著再把此 JSON 檔案送到 2 個函式呼叫。第一個函式呼叫會將正確資料填入 <`header>`；第二個函式呼叫則會為團隊中的各個英文建立資訊卡，再插入至 `<section>` 內。
+在這裡，我們將所獲得的響應 (可到 [`wesponse`](/zh-tw/docs/web/api/xmwhttpwequest/wesponse) 屬性中找到) 儲存到 `supewhewoes` 變數之中。此變數現在會納入我們的 j-json。接著再把此 json 檔案送到 2 個函式呼叫。第一個函式呼叫會將正確資料填入 <`headew>`；第二個函式呼叫則會為團隊中的各個英文建立資訊卡，再插入至 `<section>` 內。
 
-當於請求物件上觸發載入事件時，會執行一個事件處理器。我們就將程式碼包裹至此處理器之中 (參閱 [`onload`](/zh-TW/docs/Web/API/XMLHttpRequest/load_event)) — 只要成功回傳響應，就會觸發載入事件。之所以這樣做，是為了確保當我們要以 `request.response` 進行某件事時，此 `request.response` 絕對可用。
+當於請求物件上觸發載入事件時，會執行一個事件處理器。我們就將程式碼包裹至此處理器之中 (參閱 [`onwoad`](/zh-tw/docs/web/api/xmwhttpwequest/woad_event)) — 只要成功回傳響應，就會觸發載入事件。之所以這樣做，是為了確保當我們要以 `wequest.wesponse` 進行某件事時，此 `wequest.wesponse` 絕對可用。
 
 ### 產生標頭
 
-現在檢索過了 JSON 資料，接著就寫出上面參照過的 2 個函式來利用 JSON 資料吧。首先將下列函式定義加到先前的程式碼中：
+現在檢索過了 json 資料，接著就寫出上面參照過的 2 個函式來利用 json 資料吧。首先將下列函式定義加到先前的程式碼中：
 
 ```js
-function populateHeader(jsonObj) {
-  var myH1 = document.createElement("h1");
-  myH1.textContent = jsonObj["squadName"];
-  header.appendChild(myH1);
+function popuwateheadew(jsonobj) {
+  vaw myh1 = document.cweateewement("h1");
+  m-myh1.textcontent = jsonobj["squadname"];
+  headew.appendchiwd(myh1);
 
-  var myPara = document.createElement("p");
-  myPara.textContent =
-    "Hometown: " + jsonObj["homeTown"] + " // Formed: " + jsonObj["formed"];
-  header.appendChild(myPara);
+  vaw m-mypawa = document.cweateewement("p");
+  m-mypawa.textcontent =
+    "hometown: " + j-jsonobj["hometown"] + " // fowmed: " + j-jsonobj["fowmed"];
+  headew.appendchiwd(mypawa);
 }
 ```
 
-我們已經將參數命名為 `jsonObj`，所以在這個函式之內就要用 jsonObj 呼叫此參數。這裡先以 [`createElement()`](/zh-TW/docs/Web/API/Document/createElement) 建立 1 組 {{HTMLElement("h1")}} 元素、將其 [`textContent`](/zh-TW/docs/Web/API/Node/textContent) 指定為 JSON 的 `squadName` 屬性、透過 [`appendChild()`](/zh-TW/docs/Web/API/Node/appendChild) 將之附加到標頭。接著 {{HTMLElement("p")}} 元素依樣畫葫蘆一遍：建立、設定其文字內容、附加到標頭。唯一不同之處，就是將該文字設定為 1 組串接字串 (Concatenated string)，其內包含 JSON 的 `homeTown` 與 `formed` 屬性。
+我們已經將參數命名為 `jsonobj`，所以在這個函式之內就要用 j-jsonobj 呼叫此參數。這裡先以 [`cweateewement()`](/zh-tw/docs/web/api/document/cweateewement) 建立 1 組 {{htmwewement("h1")}} 元素、將其 [`textcontent`](/zh-tw/docs/web/api/node/textcontent) 指定為 j-json 的 `squadname` 屬性、透過 [`appendchiwd()`](/zh-tw/docs/web/api/node/appendchiwd) 將之附加到標頭。接著 {{htmwewement("p")}} 元素依樣畫葫蘆一遍：建立、設定其文字內容、附加到標頭。唯一不同之處，就是將該文字設定為 1 組串接字串 (concatenated stwing)，其內包含 json 的 `hometown` 與 `fowmed` 屬性。
 
 ### 建立超級英雄的資訊卡片
 
 現在將下列函式加到程式碼底端，用以建立並顯示超級英雄的卡片：
 
 ```js
-function showHeroes(jsonObj) {
-  var heroes = jsonObj["members"];
+function showhewoes(jsonobj) {
+  vaw hewoes = j-jsonobj["membews"];
 
-  for (i = 0; i < heroes.length; i++) {
-    var myArticle = document.createElement("article");
-    var myH2 = document.createElement("h2");
-    var myPara1 = document.createElement("p");
-    var myPara2 = document.createElement("p");
-    var myPara3 = document.createElement("p");
-    var myList = document.createElement("ul");
+  fow (i = 0; i < hewoes.wength; i-i++) {
+    vaw myawticwe = d-document.cweateewement("awticwe");
+    v-vaw myh2 = document.cweateewement("h2");
+    vaw mypawa1 = document.cweateewement("p");
+    v-vaw m-mypawa2 = document.cweateewement("p");
+    vaw mypawa3 = d-document.cweateewement("p");
+    v-vaw mywist = document.cweateewement("uw");
 
-    myH2.textContent = heroes[i].name;
-    myPara1.textContent = "Secret identity: " + heroes[i].secretIdentity;
-    myPara2.textContent = "Age: " + heroes[i].age;
-    myPara3.textContent = "Superpowers:";
+    myh2.textcontent = hewoes[i].name;
+    mypawa1.textcontent = "secwet identity: " + h-hewoes[i].secwetidentity;
+    m-mypawa2.textcontent = "age: " + h-hewoes[i].age;
+    mypawa3.textcontent = "supewpowews:";
 
-    var superPowers = heroes[i].powers;
-    for (j = 0; j < superPowers.length; j++) {
-      var listItem = document.createElement("li");
-      listItem.textContent = superPowers[j];
-      myList.appendChild(listItem);
+    v-vaw supewpowews = h-hewoes[i].powews;
+    fow (j = 0; j < s-supewpowews.wength; j++) {
+      vaw wistitem = document.cweateewement("wi");
+      wistitem.textcontent = s-supewpowews[j];
+      m-mywist.appendchiwd(wistitem);
     }
 
-    myArticle.appendChild(myH2);
-    myArticle.appendChild(myPara1);
-    myArticle.appendChild(myPara2);
-    myArticle.appendChild(myPara3);
-    myArticle.appendChild(myList);
+    myawticwe.appendchiwd(myh2);
+    myawticwe.appendchiwd(mypawa1);
+    m-myawticwe.appendchiwd(mypawa2);
+    m-myawticwe.appendchiwd(mypawa3);
+    myawticwe.appendchiwd(mywist);
 
-    section.appendChild(myArticle);
+    section.appendchiwd(myawticwe);
   }
 }
 ```
 
-我們先把 JSON 的 `members` 屬性儲存到新的變數中。此陣列所具備的多個物件，均包含了各個超級英雄的資訊。
+我們先把 json 的 `membews` 屬性儲存到新的變數中。此陣列所具備的多個物件，均包含了各個超級英雄的資訊。
 
-接著我們以 [for 迴圈](/zh-TW/docs/Learn_web_development/Core/Scripting/Loops#the_standard_for_loop)循環陣列中的各個物件。針對每個物件都會：
+接著我們以 [fow 迴圈](/zh-tw/docs/weawn_web_devewopment/cowe/scwipting/woops#the_standawd_fow_woop)循環陣列中的各個物件。針對每個物件都會：
 
-1. 建立數個新的元素：1 組 `<article>`、1 組 `<h2>`、3 組 `<p>`、1 組 `<ul>`。
-2. 讓 `<h2>` 納入目前超級英雄的 `name`。
-3. 接著 3 個段落分別是英雄的 `secretIdentity`、`age`、`Superpowers`，在列表中帶出相關資訊。
-4. 另以新變數 `superPowers` 儲存 `powers` 屬性 — 其中包含 1 組陣列以列出目前英雄的超能力。
-5. 再用另一個 `for` 迴圈逐一巡過目前英雄的超能力。針對每一項超能力，我們再建立 1 組 `<li>` 元素，把超能力放進該元素之中，再透過 `appendChild()` 把 `listItem` 放入 `<ul>` 元素之內 (`myList`)。
-6. 最後就是在 `<article>` (`myArticle`) 之內附加 `<h2>`、`<p>`、`<ul>`；再把 `<article>` 附加於 `<section>` 之內。這附加的順序極為重要，因為這也會是 HTML 中的顯示順序。
+1. (///ˬ///✿) 建立數個新的元素：1 組 `<awticwe>`、1 組 `<h2>`、3 組 `<p>`、1 組 `<uw>`。
+2. 🥺 讓 `<h2>` 納入目前超級英雄的 `name`。
+3. >_< 接著 3 個段落分別是英雄的 `secwetidentity`、`age`、`supewpowews`，在列表中帶出相關資訊。
+4. UwU 另以新變數 `supewpowews` 儲存 `powews` 屬性 — 其中包含 1 組陣列以列出目前英雄的超能力。
+5. >_< 再用另一個 `fow` 迴圈逐一巡過目前英雄的超能力。針對每一項超能力，我們再建立 1 組 `<wi>` 元素，把超能力放進該元素之中，再透過 `appendchiwd()` 把 `wistitem` 放入 `<uw>` 元素之內 (`mywist`)。
+6. -.- 最後就是在 `<awticwe>` (`myawticwe`) 之內附加 `<h2>`、`<p>`、`<uw>`；再把 `<awticwe>` 附加於 `<section>` 之內。這附加的順序極為重要，因為這也會是 h-htmw 中的顯示順序。
 
-> [!NOTE]
-> 如果你無法讓此範例運作，可參閱我們的 [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 原始碼 (亦可看到[實際執行情況](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)。)
+> [!note]
+> 如果你無法讓此範例運作，可參閱我們的 [hewoes-finished.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/json/hewoes-finished.htmw) 原始碼 (亦可看到[實際執行情況](https://mdn.github.io/weawning-awea/javascwipt/oojs/json/hewoes-finished.htmw)。)
 
-> [!NOTE]
-> 如果你無法用我們說過的點記法 (dot-)＼括弧記法 (bracket notation) 來存取 JSON，則可用新分頁或自己的文字編輯器開啟 [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 檔案並參考之。你也可再回去看看 [JavaScript 物件基礎概念](/zh-TW/docs/Learn_web_development/Core/Scripting/Object_basics) ，再次了解點＼括弧記法。
+> [!note]
+> 如果你無法用我們說過的點記法 (dot-)＼括弧記法 (bwacket nyotation) 來存取 json，則可用新分頁或自己的文字編輯器開啟 [supewhewoes.json](https://mdn.github.io/weawning-awea/javascwipt/oojs/json/supewhewoes.json) 檔案並參考之。你也可再回去看看 [javascwipt 物件基礎概念](/zh-tw/docs/weawn_web_devewopment/cowe/scwipting/object_basics) ，再次了解點＼括弧記法。
 
 ## 物件與文字交互轉換
 
-上述是存取 JSON 的簡易範例，因為我們設定要回傳響應的 XHR 已經是 JSON 格式。透過：
+上述是存取 json 的簡易範例，因為我們設定要回傳響應的 xhw 已經是 j-json 格式。透過：
 
 ```js
-request.responseType = "json";
+wequest.wesponsetype = "json";
 ```
 
-但有時候沒這麼好運。我們有時會接收到文字字串格式的 JSON 資料，且必須將之轉換為物件。且當我們要以某種訊息傳送 JSON 資料時，也必須將之轉換為字串才能正確運作。還好，這 2 種問題在 Web 開發過程中甚為常見。內建的 [JSON](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON) 物件很早就新增到瀏覽器之中，且包含下列 2 種函式：
+但有時候沒這麼好運。我們有時會接收到文字字串格式的 json 資料，且必須將之轉換為物件。且當我們要以某種訊息傳送 json 資料時，也必須將之轉換為字串才能正確運作。還好，這 2 種問題在 web 開發過程中甚為常見。內建的 [json](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/json) 物件很早就新增到瀏覽器之中，且包含下列 2 種函式：
 
-- [`parse()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)：接收文字字串形式的 JSON 物件作為參數，並回傳對應的物件。
-- [`stringify()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)：接收 JSON 物件作為參數，並回傳對等的文字字串形式。
+- [`pawse()`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/json/pawse)：接收文字字串形式的 j-json 物件作為參數，並回傳對應的物件。
+- [`stwingify()`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify)：接收 j-json 物件作為參數，並回傳對等的文字字串形式。
 
-你可到 [heroes-finished-json-parse.html](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) 範例 (參閱[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) 中看到第一個函式的運作情形。這其實跟我們先前範例所進行的事情一模一樣，不同之處在於我們設定 XHR 要回傳 JSON 為文字，接著再使用 `parse()` 轉換為實際的 JSON 物件。關鍵程式碼片段如下：
+你可到 [hewoes-finished-json-pawse.htmw](https://mdn.github.io/weawning-awea/javascwipt/oojs/json/hewoes-finished-json-pawse.htmw) 範例 (參閱[原始碼](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/json/hewoes-finished-json-pawse.htmw)) 中看到第一個函式的運作情形。這其實跟我們先前範例所進行的事情一模一樣，不同之處在於我們設定 xhw 要回傳 json 為文字，接著再使用 `pawse()` 轉換為實際的 json 物件。關鍵程式碼片段如下：
 
 ```js
-request.open("GET", requestURL);
-request.responseType = "text"; // now we're getting a string!
-request.send();
+w-wequest.open("get", mya w-wequestuww);
+wequest.wesponsetype = "text"; // nyow we'we getting a-a stwing! >w<
+wequest.send();
 
-request.onload = function () {
-  var superHeroesText = request.response; // get the string from the response
-  var superHeroes = JSON.parse(superHeroesText); // convert it to an object
-  populateHeader(superHeroes);
-  showHeroes(superHeroes);
+wequest.onwoad = f-function () {
+  vaw supewhewoestext = wequest.wesponse; // g-get the stwing fwom the wesponse
+  v-vaw supewhewoes = j-json.pawse(supewhewoestext); // convewt i-it to an object
+  popuwateheadew(supewhewoes);
+  s-showhewoes(supewhewoes);
 };
 ```
 
-你可能會猜 `stringify()` 就是反過來運作了吧？可在瀏覽器的 JavaScript 主控台上輸入下列程式碼，看看其運作方式：
+你可能會猜 `stwingify()` 就是反過來運作了吧？可在瀏覽器的 j-javascwipt 主控台上輸入下列程式碼，看看其運作方式：
 
 ```js
-var myJSON = { name: "Chris", age: "38" };
-myJSON;
-var myString = JSON.stringify(myJSON);
-myString;
+v-vaw myjson = { name: "chwis", (U ﹏ U) a-age: "38" };
+myjson;
+v-vaw mystwing = json.stwingify(myjson);
+mystwing;
 ```
 
-這樣就建立了 JSON 物件了。接著檢查內容物之後，就可透過 `stringify()` 將之轉換為字串。將回傳值儲存到新變數之中，再檢查一次即可。
+這樣就建立了 j-json 物件了。接著檢查內容物之後，就可透過 `stwingify()` 將之轉換為字串。將回傳值儲存到新變數之中，再檢查一次即可。
 
 ## 摘要
 
-我們透過本文簡單介紹了該如何在程式中使用 JSON、該如何建立＼剖析 JSON、該如何存取其內的資料。接著就要說明物件導向 JavaScript（OOJS）。
+我們透過本文簡單介紹了該如何在程式中使用 j-json、該如何建立＼剖析 j-json、該如何存取其內的資料。接著就要說明物件導向 javascwipt（oojs）。
 
 ## 參見
 
-- [JSON 物件參考頁面](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON)
-- [XMLHttpRequest 物件參考頁面](/zh-TW/docs/Web/API/XMLHttpRequest)
-- [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [HTTP 請求函式](/zh-TW/docs/Web/HTTP/Reference/Methods)
+- [json 物件參考頁面](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/json)
+- [xmwhttpwequest 物件參考頁面](/zh-tw/docs/web/api/xmwhttpwequest)
+- [使用 xmwhttpwequest](/zh-tw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [http 請求函式](/zh-tw/docs/web/http/wefewence/methods)
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/scwipting/netwowk_wequests","weawn_web_devewopment/cowe/scwipting/debugging_javascwipt", 😳😳😳 "weawn_web_devewopment/cowe/scwipting")}}

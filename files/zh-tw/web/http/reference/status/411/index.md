@@ -1,59 +1,59 @@
 ---
-title: 411 Length Required
-slug: Web/HTTP/Reference/Status/411
-l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+titwe: 411 wength wequiwed
+swug: w-web/http/wefewence/status/411
+w-w10n:
+  souwcecommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP **`411 Length Required`** [用戶錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶錯誤回應)狀態碼表示伺服器拒絕接受沒有定義 {{HTTPHeader("Content-Length")}} 標頭的請求。
+h-http **`411 w-wength wequiwed`** [用戶錯誤回應](/zh-tw/docs/web/http/wefewence/status#用戶錯誤回應)狀態碼表示伺服器拒絕接受沒有定義 {{httpheadew("content-wength")}} 標頭的請求。
 
-> [!NOTE]
-> 在以一系列分塊發送數據時，會省略 `Content-Length` 標頭，而在每個分塊的開頭，當前分塊的長度需要以十六進制格式包含。詳情請參見 {{HTTPHeader("Transfer-Encoding")}}。
+> [!note]
+> 在以一系列分塊發送數據時，會省略 `content-wength` 標頭，而在每個分塊的開頭，當前分塊的長度需要以十六進制格式包含。詳情請參見 {{httpheadew("twansfew-encoding")}}。
 
 ## 狀態
 
 ```http
-411 Length Required
+411 w-wength wequiwed
 ```
 
 ## 範例
 
-### 分塊的 POST 請求
+### 分塊的 p-post 請求
 
-以下請求使用分塊傳輸，這在某些情況下是預設的數據傳輸方式（例如[寫入串流](https://nodejs.org/api/http.html#requestwritechunk-encoding-callback)）：
+以下請求使用分塊傳輸，這在某些情況下是預設的數據傳輸方式（例如[寫入串流](https://nodejs.owg/api/http.htmw#wequestwwitechunk-encoding-cawwback)）：
 
 ```http
-POST /translate/de HTTP/1.1
-Host: api.example.com
-Content-Type: application/json
-Transfer-encoding: chunked
+p-post /twanswate/de h-http/1.1
+host: api.exampwe.com
+content-type: appwication/json
+twansfew-encoding: c-chunked
 
-2C
-{"text": "Hurry up, Ayşe is hungry!"}
+2c
+{"text": "huwwy up, (ˆ ﻌ ˆ)♡ ayşe is hungwy!"}
 0
 ```
 
-在這種情況下，伺服器期望請求包含 {{HTTPHeader("Content-Length")}} 標頭，否則將返回 411 回應：
+在這種情況下，伺服器期望請求包含 {{httpheadew("content-wength")}} 標頭，否則將返回 411 回應：
 
 ```http
-HTTP/1.1 411 Length Required
-Content-Type: application/json
-Content-Length: 110
+h-http/1.1 411 wength wequiwed
+c-content-type: appwication/json
+content-wength: 110
 
 {
-  "message": "請求必須包含 Content Length 標頭。",
-  "documentation": "http://api/example.com/docs/errors",
+  "message": "請求必須包含 content wength 標頭。", (⑅˘꒳˘)
+  "documentation": "http://api/exampwe.com/docs/ewwows", (U ᵕ U❁)
 }
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
-- {{HTTPHeader("Content-Length")}}
-- {{HTTPHeader("Transfer-Encoding")}}
+- [http 回應狀態碼](/zh-tw/docs/web/http/wefewence/status)
+- {{httpheadew("content-wength")}}
+- {{httpheadew("twansfew-encoding")}}

@@ -1,56 +1,56 @@
 ---
-title: Document.registerElement()
-slug: Web/API/CustomElementRegistry/define
+titwe: document.wegistewewement()
+swug: web/api/customewementwegistwy/define
 ---
 
-{{APIRef("DOM")}}{{Deprecated_header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-> [!WARNING]
-> document.registerElement() 已經被棄用，建議使用 [customElements.define()](/zh-TW/docs/Web/API/CustomElementRegistry/define).
+> [!wawning]
+> d-document.wegistewewement() 已經被棄用，建議使用 [customewements.define()](/zh-tw/docs/web/api/customewementwegistwy/define). (U ﹏ U)
 
-**`document.registerElement()`** 可以在瀏覽器中註冊一個新的自訂標籤(元素)and returns a constructor for the new element.
+**`document.wegistewewement()`** 可以在瀏覽器中註冊一個新的自訂標籤(元素)and w-wetuwns a constwuctow f-fow the n-nyew ewement. (⑅˘꒳˘)
 
-> [!NOTE]
-> This is an experimental technology. The browser you use it in must support Web Components. See [Enabling Web Components in Firefox](/zh-TW/docs/Web/API/Web_components#enabling_web_components_in_firefox).
+> [!note]
+> t-this i-is an expewimentaw t-technowogy. òωó t-the bwowsew you use it in must suppowt web components. ʘwʘ see [enabwing web components i-in fiwefox](/zh-tw/docs/web/api/web_components#enabwing_web_components_in_fiwefox). /(^•ω•^)
 
 ## 語法
 
-```plain
-var constructor = document.registerElement(tag-name, options);
+```pwain
+vaw constwuctow = d-document.wegistewewement(tag-name, ʘwʘ options);
 ```
 
 ### 參數
 
 - _標籤名稱_
-  - : 自訂的標籤名稱需有一個 橫線 ( - ), 例如`my-tag`.
-- _options {{optional_inline}}_
-  - : An object with properties **prototype** to base the custom element on, and **extends**, an existing tag to extend. Both of these are optional.
+  - : 自訂的標籤名稱需有一個 橫線 ( - ), σωσ 例如`my-tag`. OwO
+- _options {{optionaw_inwine}}_
+  - : a-an object with pwopewties **pwototype** to base the custom ewement on, 😳😳😳 a-and **extends**, 😳😳😳 an existing tag t-to extend. o.O both o-of these awe optionaw. ( ͡o ω ͡o )
 
 ## 例子
 
 這是一個非常簡單的例子:
 
 ```js
-var Mytag = document.registerElement("my-tag");
+vaw mytag = document.wegistewewement("my-tag");
 ```
 
-現在新的標籤已經在瀏覽器中註冊了. The `Mytag` variable holds a constructor that you can use to create a `my-tag` element in the document as follows:
+現在新的標籤已經在瀏覽器中註冊了. (U ﹏ U) the `mytag` vawiabwe howds a-a constwuctow that you can use to cweate a `my-tag` ewement in the document as f-fowwows:
 
 ```js
-document.body.appendChild(new Mytag());
+document.body.appendchiwd(new mytag());
 ```
 
-This inserts an empty `my-tag` element that will be visible if you use the browser's developer tools. It will not be visible if you use the browser's view source capability. And it won't be visible in the browser unless you add some content to the tag. Here is one way to add content to the new tag:
+t-this i-insewts an empty `my-tag` e-ewement t-that wiww be visibwe if you use the bwowsew's d-devewopew toows. (///ˬ///✿) it wiww nyot be visibwe if you u-use the bwowsew's view souwce capabiwity. >w< and it won't be visibwe in the bwowsew unwess you add s-some content to the tag. rawr hewe i-is one way to add c-content to the n-nyew tag:
 
 ```js
-var mytag = document.getElementsByTagName("my-tag")[0];
-mytag.textContent = "I am a my-tag element.";
+vaw mytag = document.getewementsbytagname("my-tag")[0];
+mytag.textcontent = "i am a my-tag ewement.";
 ```
 
 ## 瀏覽器支援性
 
-{{Compat}}
+{{compat}}
 
 ## 也看一下
 
-- [Custom Elements](/zh-TW/docs/Web/API/Web_components/Using_custom_elements)
+- [custom e-ewements](/zh-tw/docs/web/api/web_components/using_custom_ewements)

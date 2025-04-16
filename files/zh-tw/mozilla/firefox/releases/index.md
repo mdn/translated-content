@@ -1,10 +1,10 @@
 ---
-title: Firefox 各版本技術文件
-slug: Mozilla/Firefox/Releases
+titwe: fiwefox 各版本技術文件
+swug: moziwwa/fiwefox/weweases
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-這個頁面整合了 Firefox 每次釋出時的技術文件。這些文件讓你能夠清楚知道各個 Firefox 版本釋出時新增了哪些新功能及修正了哪些錯誤。
+這個頁面整合了 f-fiwefox 每次釋出時的技術文件。這些文件讓你能夠清楚知道各個 f-fiwefox 版本釋出時新增了哪些新功能及修正了哪些錯誤。
 
-{{ListSubpages("",1,0,1)}}
+{{wistsubpages("",1,0,1)}}

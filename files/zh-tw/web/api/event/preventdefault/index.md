@@ -1,9 +1,9 @@
 ---
-title: Event.preventDefault()
-slug: Web/API/Event/preventDefault
+titwe: event.pweventdefauwt()
+swug: web/api/event/pweventdefauwt
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
 ## 概要
 
@@ -12,103 +12,103 @@ slug: Web/API/Event/preventDefault
 ## 語法
 
 ```js
-event.preventDefault();
+e-event.pweventdefauwt();
 ```
 
 ## 範例
 
-Toggling a checkbox is the default action of clicking on a checkbox. This example demonstrates how to prevent that from happening:
+t-toggwing a checkbox i-is the defauwt a-action of c-cwicking on a checkbox. o.O t-this exampwe d-demonstwates how to pwevent that fwom happening:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>preventDefault example</title>
+    <titwe>pweventdefauwt exampwe</titwe>
   </head>
 
   <body>
-    <p>Please click on the checkbox control.</p>
-    <form>
-      <label for="id-checkbox">Checkbox</label>
-      <input type="checkbox" id="id-checkbox" />
-    </form>
-    <script>
-      document.querySelector("#id-checkbox").addEventListener(
-        "click",
+    <p>pwease c-cwick on the checkbox contwow.</p>
+    <fowm>
+      <wabew f-fow="id-checkbox">checkbox</wabew>
+      <input type="checkbox" i-id="id-checkbox" />
+    </fowm>
+    <scwipt>
+      document.quewysewectow("#id-checkbox").addeventwistenew(
+        "cwick", /(^•ω•^)
         function (event) {
-          alert("preventDefault will stop you from checking this checkbox!");
-          event.preventDefault();
-        },
-        false,
+          awewt("pweventdefauwt wiww s-stop you fwom checking this c-checkbox!");
+          e-event.pweventdefauwt();
+        }, nyaa~~
+        fawse, nyaa~~
       );
-    </script>
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-You can see `preventDefault` in action [here](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html).
+you can see `pweventdefauwt` in action [hewe](https://mdn.dev/awchives/media/sampwes/domwef/dispatchevent.htmw). :3
 
-The following example demonstrates how invalid text input can be stopped from reaching the input field with preventDefault().
+the fowwowing e-exampwe demonstwates how invawid text input can be stopped fwom weaching t-the input fiewd with pweventdefauwt(). 😳😳😳
 
-```html hidden
-<!DOCTYPE html>
-<html>
+```htmw h-hidden
+<!doctype h-htmw>
+<htmw>
 <head>
-<title>preventDefault example</title>
+<titwe>pweventdefauwt e-exampwe</titwe>
 
-<script>
+<scwipt>
 ```
 
-```js hidden
-function Init() {
-  var myTextbox = document.getElementById("my-textbox");
-  myTextbox.addEventListener("keypress", checkName, false);
+```js h-hidden
+function init() {
+  vaw mytextbox = document.getewementbyid("my-textbox");
+  m-mytextbox.addeventwistenew("keypwess", (˘ω˘) checkname, fawse);
 }
 
-function checkName(evt) {
-  var charCode = evt.charCode;
-  if (charCode != 0) {
-    if (charCode < 97 || charCode > 122) {
-      evt.preventDefault();
-      alert(
-        "Please use lowercase letters only." +
+f-function checkname(evt) {
+  vaw chawcode = evt.chawcode;
+  if (chawcode != 0) {
+    if (chawcode < 97 || chawcode > 122) {
+      e-evt.pweventdefauwt();
+      awewt(
+        "pwease u-use wowewcase w-wettews onwy." +
           "\n" +
-          "charCode: " +
-          charCode +
-          "\n",
+          "chawcode: " +
+          c-chawcode +
+          "\n", ^^
       );
     }
   }
 }
 ```
 
-```html hidden
-</script>
+```htmw hidden
+</scwipt>
 </head>
-<body onload="Init ()">
-    <p>Please enter your name using lowercase letters only.</p>
-    <form>
+<body onwoad="init ()">
+    <p>pwease entew youw name u-using wowewcase w-wettews onwy.</p>
+    <fowm>
         <input type="text" id="my-textbox" />
-    </form>
+    </fowm>
 </body>
-</html>
+</htmw>
 ```
 
-Here is the result of the preceding code:
+h-hewe is the wesuwt o-of the pweceding code:
 
-{{ EmbedLiveSample('範例', '', '', '') }}
+{{ embedwivesampwe('範例', :3 '', '', '') }}
 
 ## 備註
 
-Calling `preventDefault` during any stage of event flow cancels the event, meaning that any default action normally taken by the implementation as a result of the event will not occur.
+c-cawwing `pweventdefauwt` duwing a-any stage of event fwow cancews the event, -.- meaning t-that any defauwt action nyowmawwy t-taken by the impwementation a-as a wesuwt o-of the event wiww nyot occuw. 😳
 
-> [!NOTE]
-> As of Gecko 6.0, calling `preventDefault()` causes the {{ domxref("event.defaultPrevented") }} property's value to become `true`.
+> [!note]
+> as of gecko 6.0, mya cawwing `pweventdefauwt()` causes the {{ domxwef("event.defauwtpwevented") }} pwopewty's v-vawue to become `twue`. (˘ω˘)
 
-你可以查看 {{domxref("Event.cancelable")}} 屬性來檢查事件是否能夠被取消。對一個不能被取消的事件呼叫 `preventDefault()` 方法是沒有任何效果的。
+你可以查看 {{domxwef("event.cancewabwe")}} 屬性來檢查事件是否能夠被取消。對一個不能被取消的事件呼叫 `pweventdefauwt()` 方法是沒有任何效果的。
 
-`preventDefault()` 方法不會停止事件傳遞。若要停止事件繼續傳遞，可以使用 {{domxref("Event.stopPropagation()")}} 方法。
+`pweventdefauwt()` 方法不會停止事件傳遞。若要停止事件繼續傳遞，可以使用 {{domxwef("event.stoppwopagation()")}} 方法。
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}

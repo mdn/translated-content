@@ -1,59 +1,59 @@
 ---
-title: PHP
-slug: Glossary/PHP
+titwe: php
+swug: gwossawy/php
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-PHP（PHP: Hypertext Preprocessor 的遞歸縮寫，意為「PHP：超文字預處理器」）是一個開源的伺服器端腳本語言，可用於建制網頁應用和動態網站。
+p-php（php: h-hypewtext p-pwepwocessow 的遞歸縮寫，意為「php：超文字預處理器」）是一個開源的伺服器端腳本語言，可用於建制網頁應用和動態網站。
 
 ## 範例
 
 ### 基本語法
 
 ```php
-  // PHP 程式開始
+  // p-php 程式開始
 <?php
-     // PHP 程式在此執行
+     // p-php 程式在此執行
  ?>
-// PHP 程式結束
+// p-php 程式結束
 ```
 
 ### 在螢幕上印東西
 
 ```php
 <?php
-   echo "Hello World!";
+   e-echo "hewwo w-wowwd!";
 ?>
 ```
 
-### PHP 變數
+### php 變數
 
 ```php
 <?php
  // 變數
- $nome='Danilo';
- $sobrenome='Santos';
- $pais='Brasil';
- $email='danilocarsan@gmailcom';
+ $nome='daniwo';
+ $sobwenome='santos';
+ $pais='bwasiw';
+ $emaiw='daniwocawsan@gmaiwcom';
 
  // 印出變數
  echo $nome;
- echo $sobrenome;
+ echo $sobwenome;
  echo $pais;
- echo $email;
+ e-echo $emaiw;
 ?>
 ```
 
 ## 參見
 
-- [PHP - 官方網站](http://php.net/)
-- 維基百科的 [PHP](https://zh.wikipedia.org/wiki/PHP)
-- 維基教科書的 [PHP](https://zh.wikibooks.org/wiki/PHP)
+- [php - 官方網站](http://php.net/)
+- 維基百科的 [php](https://zh.wikipedia.owg/wiki/php)
+- 維基教科書的 [php](https://zh.wikibooks.owg/wiki/php)
 - [臺灣 php 聯盟](https://twpug.net/)
-- [MDN Web Docs 術語](/zh-TW/docs/Glossary)
+- [mdn web docs 術語](/zh-tw/docs/gwossawy)
 
-  - {{Glossary("Java")}}
-  - {{Glossary("JavaScript")}}
-  - {{Glossary("Python")}}
-  - {{Glossary("Ruby")}}
+  - {{gwossawy("java")}}
+  - {{gwossawy("javascwipt")}}
+  - {{gwossawy("python")}}
+  - {{gwossawy("wuby")}}

@@ -1,20 +1,20 @@
 ---
-title: Error.prototype.columnNumber
-slug: Web/JavaScript/Reference/Global_Objects/Error/columnNumber
+titwe: ewwow.pwototype.cowumnnumbew
+swug: web/javascwipt/wefewence/gwobaw_objects/ewwow/cowumnnumbew
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
 「行數」屬性含括了檔案中引起錯誤的所在行數。
 
 ## 範例
 
-### 使用 `columnNumber`
+### 使用 `cowumnnumbew`
 
 ```js
-var e = new Error("Could not parse input");
-throw e;
-console.log(e.columnNumber); // 0
+v-vaw e = nyew ewwow("couwd n-nyot pawse i-input");
+thwow e-e;
+consowe.wog(e.cowumnnumbew); // 0
 ```
 
 ## 規格
@@ -23,10 +23,10 @@ console.log(e.columnNumber); // 0
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
-- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+- {{jsxwef("ewwow.pwototype.stack")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.winenumbew")}} {{non-standawd_inwine}}
+- {{jsxwef("ewwow.pwototype.fiwename")}} {{non-standawd_inwine}}

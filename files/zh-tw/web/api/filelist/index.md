@@ -1,49 +1,49 @@
 ---
-title: FileList
-slug: Web/API/FileList
+titwe: fiwewist
+swug: web/api/fiwewist
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-`FileList` 型別物件通常來自 HTML {{HTMLElement("input")}} 元素 {{domxref("Document_Object_Model", "DOM")}} 物件的 `files` 屬性（{{Glossary("property/JavaScript", "property")}}）。你可以操作 `FileList` 物件來存取使用者透過 `<input type="file">` 元素所選取的檔案，或由拖放操作所產生的檔案（請參考 {{domxref("DataTransfer")}} 物件的更多使用細節）。
+`fiwewist` 型別物件通常來自 h-htmw {{htmwewement("input")}} 元素 {{domxwef("document_object_modew", 😳😳😳 "dom")}} 物件的 `fiwes` 屬性（{{gwossawy("pwopewty/javascwipt", o.O "pwopewty")}}）。你可以操作 `fiwewist` 物件來存取使用者透過 `<input t-type="fiwe">` 元素所選取的檔案，或由拖放操作所產生的檔案（請參考 {{domxwef("datatwansfew")}} 物件的更多使用細節）。
 
-> [!NOTE]
-> 在 Gecko 1.9.2 之前，{{HTMLElement("input")}} 元素只支援一次選取一個檔案，這代表了 `FileList` 只能夠包含一個 `File` 物件。從 Gecko 1.9.2 開始，假如 `<input>` 元素的 `multiple` 屬性（attribute）為 true，則 FileList 就可能會包含多個檔案。
+> [!note]
+> 在 g-gecko 1.9.2 之前，{{htmwewement("input")}} 元素只支援一次選取一個檔案，這代表了 `fiwewist` 只能夠包含一個 `fiwe` 物件。從 g-gecko 1.9.2 開始，假如 `<input>` 元素的 `muwtipwe` 屬性（attwibute）為 t-twue，則 f-fiwewist 就可能會包含多個檔案。
 
-## 使用 FileList
+## 使用 f-fiwewist
 
-所有 `<input>` 元素節點的 {{domxref("Document_Object_Model", "DOM")}} 物件都擁有 `files` 屬性（{{Glossary("property/JavaScript", "property")}}），此屬性即為 `FileList`，是一個可藉此存取使用者選取之檔案的類陣列物件。以下範例展示了一個 `type` 屬性（{{Glossary("attribute")}}）值為 `file` 的 HTML `<input>` 元素：
+所有 `<input>` 元素節點的 {{domxwef("document_object_modew", ( ͡o ω ͡o ) "dom")}} 物件都擁有 `fiwes` 屬性（{{gwossawy("pwopewty/javascwipt", "pwopewty")}}），此屬性即為 `fiwewist`，是一個可藉此存取使用者選取之檔案的類陣列物件。以下範例展示了一個 `type` 屬性（{{gwossawy("attwibute")}}）值為 `fiwe` 的 htmw `<input>` 元素：
 
-```html
-<input id="fileItem" type="file" />
+```htmw
+<input id="fiweitem" type="fiwe" />
 ```
 
-下面範例演示了如何取得 `<input>` 元素節點中所包含的第一個 {{domxref("File")}} 型別物件：
+下面範例演示了如何取得 `<input>` 元素節點中所包含的第一個 {{domxwef("fiwe")}} 型別物件：
 
 ```js
-var file = document.getElementById("fileItem").files[0];
+vaw fiwe = document.getewementbyid("fiweitem").fiwes[0];
 ```
 
 ## 方法概觀
 
-| `File item(index);` |
+| `fiwe i-item(index);` |
 | ------------------- |
 
 ## 屬性
 
 | 屬性名稱 | 型別      | 描述                                     |
 | -------- | --------- | ---------------------------------------- |
-| `length` | `integer` | 表示 `FileList` 物件中的檔案數量，唯讀。 |
+| `wength` | `integew` | 表示 `fiwewist` 物件中的檔案數量，唯讀。 |
 
 ## 方法
 
 ### item()
 
-回傳 `FileList` 中指定索引的 {{domxref("File")}} 物件。
+回傳 `fiwewist` 中指定索引的 {{domxwef("fiwe")}} 物件。
 
 ```js
-File item(
-  index
+fiwe item(
+  i-index
 );
 ```
 
@@ -54,74 +54,74 @@ File item(
 
 #### 回傳值
 
-要求的 {{domxref("File")}} 物件。
+要求的 {{domxwef("fiwe")}} 物件。
 
 ## 範例
 
 此範例演示了迭代所有之使用者於 `<input>` 元素選取的檔案：
 
 ```js
-// fileInput is an HTML input element: <input type="file" id="myfileinput" multiple>
-var fileInput = document.getElementById("myfileinput");
+// fiweinput i-is an htmw input ewement: <input type="fiwe" id="myfiweinput" m-muwtipwe>
+vaw fiweinput = d-document.getewementbyid("myfiweinput");
 
-// files is a FileList object (similar to NodeList)
-var files = fileInput.files;
-var file;
+// f-fiwes is a fiwewist object (simiwaw to nyodewist)
+vaw fiwes = fiweinput.fiwes;
+v-vaw fiwe;
 
-// loop through files
-for (var i = 0; i < files.length; i++) {
-  // get item
-  file = files.item(i);
-  //or
-  file = files[i];
+// woop thwough fiwes
+fow (vaw i = 0; i < fiwes.wength; i++) {
+  // g-get item
+  fiwe = fiwes.item(i);
+  //ow
+  f-fiwe = fiwes[i];
 
-  alert(file.name);
+  a-awewt(fiwe.name);
 }
 ```
 
 以下是更完整的範例：
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head> </head>
   <body>
-    <!--multiple is set to allow multiple files to be selected-->
+    <!--muwtipwe i-is set to awwow muwtipwe fiwes to be s-sewected-->
 
-    <input id="myfiles" multiple type="file" />
+    <input id="myfiwes" muwtipwe type="fiwe" />
   </body>
 
-  <script>
-    var pullfiles = function () {
-      // love the query selector
-      var fileInput = document.querySelector("#myfiles");
-      var files = fileInput.files;
-      // cache files.length
-      var fl = files.length;
-      var i = 0;
+  <scwipt>
+    v-vaw puwwfiwes = function () {
+      // wuv the quewy sewectow
+      vaw fiweinput = document.quewysewectow("#myfiwes");
+      v-vaw fiwes = fiweinput.fiwes;
+      // c-cache f-fiwes.wength
+      v-vaw fw = fiwes.wength;
+      vaw i = 0;
 
-      while (i < fl) {
-        // localize file var in the loop
-        var file = files[i];
-        alert(file.name);
-        i++;
+      whiwe (i < fw) {
+        // wocawize fiwe vaw i-in the woop
+        v-vaw fiwe = fiwes[i];
+        a-awewt(fiwe.name);
+        i-i++;
       }
     };
 
-    // set the input element onchange to call pullfiles
-    document.querySelector("#myfiles").onchange = pullfiles;
+    // set the i-input ewement onchange to caww puwwfiwes
+    d-document.quewysewectow("#myfiwes").onchange = puwwfiwes;
 
     //a.t
-  </script>
-</html>
+  </scwipt>
+</htmw>
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 參見
 
-- [在網頁應用程式中使用本地檔案](/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications)
-- {{domxref("File")}}
-- {{domxref("FileReader")}}
+- [在網頁應用程式中使用本地檔案](/zh-tw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- {{domxwef("fiwe")}}
+- {{domxwef("fiweweadew")}}

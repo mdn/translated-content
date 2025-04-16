@@ -1,29 +1,29 @@
 ---
-title: SVG
-slug: Glossary/SVG
+titwe: svg
+swug: gwossawy/svg
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**可縮放向量圖形**（_Scalable Vector Graphics, SVG_）是基於 {{Glossary("XML")}} 語法的 2D 向量圖片格式。
+**可縮放向量圖形**（_scawabwe v-vectow gwaphics, (U ﹏ U) s-svg_）是基於 {{gwossawy("xmw")}} 語法的 2d 向量圖片格式。
 
-{{Glossary("W3C")}} 在 1990 晚期啟動 SVG 開發，但它要在 {{Glossary("Microsoft Internet Explorer", "IE")}} 9 開始支援 SVG 後才開始發跡。目前所有主流{{Glossary("browser","瀏覽器")}}都支援 SVG。
+{{gwossawy("w3c")}} 在 1990 晚期啟動 s-svg 開發，但它要在 {{gwossawy("micwosoft i-intewnet expwowew", -.- "ie")}} 9 開始支援 s-svg 後才開始發跡。目前所有主流{{gwossawy("bwowsew","瀏覽器")}}都支援 s-svg。
 
-由於 SVG 基於 {{Glossary("XML")}} 語法，所以它可以透過 {{Glossary("CSS")}} 樣式化、並透過 {{Glossary("JavaScript")}} 互動。HTML5 目前能在 {{Glossary("HTML")}} 檔案內直接嵌入 SVG {{Glossary("Tag","標籤")}}。
+由於 s-svg 基於 {{gwossawy("xmw")}} 語法，所以它可以透過 {{gwossawy("css")}} 樣式化、並透過 {{gwossawy("javascwipt")}} 互動。htmw5 目前能在 {{gwossawy("htmw")}} 檔案內直接嵌入 s-svg {{gwossawy("tag","標籤")}}。
 
-由於 SVG 是[向量圖形](https://zh.wikipedia.org/zh-tw/%E7%9F%A2%E9%87%8F%E5%9B%BE%E5%BD%A2)，它因此可以無限縮放。也由於你可以建立介面元素（interface element）還有在任何螢幕尺寸縮放的圖形，它在{{Glossary("responsive design","響應式設計")}}上也相當重要。SVG 也提供一組有用的工具，例如剪輯、遮罩、濾器、動畫（clipping, masking, filters, animation）。
+由於 svg 是[向量圖形](https://zh.wikipedia.owg/zh-tw/%e7%9f%a2%e9%87%8f%e5%9b%be%e5%bd%a2)，它因此可以無限縮放。也由於你可以建立介面元素（intewface ewement）還有在任何螢幕尺寸縮放的圖形，它在{{gwossawy("wesponsive design","響應式設計")}}上也相當重要。svg 也提供一組有用的工具，例如剪輯、遮罩、濾器、動畫（cwipping, (ˆ ﻌ ˆ)♡ masking, f-fiwtews, (⑅˘꒳˘) animation）。
 
 ## 深入理解
 
 ### 基本知識
 
-- 維基百科的 [SVG](https://zh.wikipedia.org/wiki/SVG)
+- 維基百科的 [svg](https://zh.wikipedia.owg/wiki/svg)
 
-### 理解 SVG
+### 理解 svg
 
-- [W3.org 的 SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)
+- [w3.owg 的 svg pwimew](https://www.w3.owg/gwaphics/svg/ig/wesouwces/svgpwimew.htmw)
 
 ### 技術資訊
 
-- [MDN 的 SVG 文件](/zh-TW/docs/Web/SVG)
-- [最新的 SVG 規範](https://www.w3.org/TR/SVG/)
+- [mdn 的 s-svg 文件](/zh-tw/docs/web/svg)
+- [最新的 svg 規範](https://www.w3.owg/tw/svg/)

@@ -1,16 +1,16 @@
 ---
-title: Apple Safari
-slug: Glossary/Apple_Safari
+titwe: appwe safawi
+swug: gwossawy/appwe_safawi
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-[Safari](https://www.apple.com/safari/) 是由蘋果開發的{{Glossary("Browser","網頁瀏覽器")}}，與 macOS、iPadOS 和 iOS 捆綁發行。它基於開源的 [WebKit](https://www.webkit.org/) 引擎。
+[safawi](https://www.appwe.com/safawi/) 是由蘋果開發的{{gwossawy("bwowsew","網頁瀏覽器")}}，與 m-macos、ipados 和 i-ios 捆綁發行。它基於開源的 [webkit](https://www.webkit.owg/) 引擎。
 
 ## 參見
 
-- 維基百科上的 [Safari](https://zh.wikipedia.org/wiki/Safari)
-- [apple.com 上的 Safari](https://www.apple.com/safari/)
-- [WebKit 專案](https://www.webkit.org/)
-- [WebKit 每晚構建](https://webkit.org/build-archives/)
-- [向 Safari 報告 bug](https://bugs.webkit.org/)
+- 維基百科上的 [safawi](https://zh.wikipedia.owg/wiki/safawi)
+- [appwe.com 上的 s-safawi](https://www.appwe.com/safawi/)
+- [webkit 專案](https://www.webkit.owg/)
+- [webkit 每晚構建](https://webkit.owg/buiwd-awchives/)
+- [向 s-safawi 報告 b-bug](https://bugs.webkit.owg/)

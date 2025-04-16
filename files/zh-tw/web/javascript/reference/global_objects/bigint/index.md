@@ -1,174 +1,174 @@
 ---
-title: BigInt
-slug: Web/JavaScript/Reference/Global_Objects/BigInt
+titwe: bigint
+swug: web/javascwipt/wefewence/gwobaw_objects/bigint
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{jswef}}{{seecompattabwe}}
 
-`BigInt` 是一個內建的物件，提供了表示大於 2^53 的整數的功能 (2^53 是 JavaScript 原生的{{JSxRef("Number")}}能夠表示的最大值)
+`bigint` 是一個內建的物件，提供了表示大於 2^53 的整數的功能 (2^53 是 j-javascwipt 原生的{{jsxwef("numbew")}}能夠表示的最大值)
 
 ## 語法
 
 ```js
-BigInt(value);
+b-bigint(vawue);
 ```
 
 ### 參數
 
-- `value`
+- `vawue`
   - : 欲創建的數值，可以為整數或字串。
 
-> **備註：** `BigInt()` 不和 {{JSxRef("Operators/new", "new")}} 一起使用。
+> **備註：** `bigint()` 不和 {{jsxwef("opewatows/new", (⑅˘꒳˘) "new")}} 一起使用。
 
 ## 說明
 
-`BigInt` 是透過在一個數值後加上 `n` ，例如 `10n` ，或呼叫 `BigInt()` 所生成的。
+`bigint` 是透過在一個數值後加上 `n` ，例如 `10n` ，或呼叫 `bigint()` 所生成的。
 
 ```js
-const theBiggestInt = 9007199254740991n;
+c-const thebiggestint = 9007199254740991n;
 
-const alsoHuge = BigInt(9007199254740991);
+c-const awsohuge = b-bigint(9007199254740991);
 // ↪ 9007199254740991n
 
-const hugeString = BigInt("9007199254740991");
+c-const hugestwing = b-bigint("9007199254740991");
 // ↪ 9007199254740991n
 
-const hugeHex = BigInt("0x1fffffffffffff");
+c-const hugehex = bigint("0x1fffffffffffff");
 // ↪ 9007199254740991n
 
-const hugeBin = BigInt(
-  "0b11111111111111111111111111111111111111111111111111111",
+const hugebin = bigint(
+  "0b11111111111111111111111111111111111111111111111111111", nyaa~~
 );
 // ↪ 9007199254740991n
 ```
 
-`BigInt` 跟 {{JSxRef("Number")}} 很像，但在某些部分有些許不同 — 它不可以被用在內建的 {{JSxRef("Math")}} 物件方法中、而且不可以跟 `Number` 的實體混用運算子。
+`bigint` 跟 {{jsxwef("numbew")}} 很像，但在某些部分有些許不同 — 它不可以被用在內建的 {{jsxwef("math")}} 物件方法中、而且不可以跟 `numbew` 的實體混用運算子。
 
-> **警告：** {{JSxRef("Number")}} 和 `BigInt` 不能混和計算 — 他們必須被轉換到同一個型態。
+> **警告：** {{jsxwef("numbew")}} 和 `bigint` 不能混和計算 — 他們必須被轉換到同一個型態。
 >
-> 然而，在相互轉換時要注意， `BigInt` 在被轉換成 `Number` 時可能會遺失部分精度的資訊。
+> 然而，在相互轉換時要注意， `bigint` 在被轉換成 `numbew` 時可能會遺失部分精度的資訊。
 
 ### 類別資訊
 
-當使用 `typeof` 測試時，一個 `BigInt` 會回傳 "bigint"：
+當使用 `typeof` 測試時，一個 `bigint` 會回傳 "bigint"：
 
 ```js
-typeof 1n === "bigint"; // true
-typeof BigInt("1") === "bigint"; // true
+typeof 1n === "bigint"; // t-twue
+typeof bigint("1") === "bigint"; // twue
 ```
 
-當使用 `Object` 來包裹時，`BigInt` 會被看成是普通的 "object" 型態：
+當使用 `object` 來包裹時，`bigint` 會被看成是普通的 "object" 型態：
 
 ```js
-typeof Object(1n) === "object"; // true
+typeof object(1n) === "object"; // t-twue
 ```
 
-### Operator
+### opewatow
 
-下列的運算子可以被用在 `BigInt` 上 (或由 object 包裹的 `BigInt`): `+`, `*`, `-`, `**`, `%`.
+下列的運算子可以被用在 `bigint` 上 (或由 o-object 包裹的 `bigint`): `+`, :3 `*`, ( ͡o ω ͡o ) `-`, `**`, `%`. mya
 
 ```js
-const previousMaxSafe = BigInt(Number.MAX_SAFE_INTEGER);
+const pweviousmaxsafe = bigint(numbew.max_safe_integew);
 // ↪ 9007199254740991
 
-const maxPlusOne = previousMaxSafe + 1n;
+const maxpwusone = p-pweviousmaxsafe + 1n;
 // ↪ 9007199254740992n
 
-const theFuture = previousMaxSafe + 2n;
-// ↪ 9007199254740993n, this works now!
+const thefutuwe = p-pweviousmaxsafe + 2n;
+// ↪ 9007199254740993n, (///ˬ///✿) t-this wowks nyow! (˘ω˘)
 
-const multi = previousMaxSafe * 2n;
+const muwti = pweviousmaxsafe * 2n;
 // ↪ 18014398509481982n
 
-const subtr = multi – 10n;
+const subtw = muwti – 10n;
 // ↪ 18014398509481972n
 
-const mod = multi % 10n;
+c-const mod = muwti % 10n;
 // ↪ 2n
 
-const bigN = 2n ** 54n;
+const bign = 2n ** 54n;
 // ↪ 18014398509481984n
 
-bigN * -1n
+bign * -1n
 // ↪ –18014398509481984n
 ```
 
-`/` 運算子也同樣的能夠運行。然而，因為型態是 `BigInt` 而不是 `BigDecimal` ，除法運算會無條件捨去小數。也就是說，回傳值不會包含小數部分。
+`/` 運算子也同樣的能夠運行。然而，因為型態是 `bigint` 而不是 `bigdecimaw` ，除法運算會無條件捨去小數。也就是說，回傳值不會包含小數部分。
 
-> [!WARNING]
-> 回傳值帶小數的運算在使用`BigInt` 時小數部分會被捨去。
+> [!wawning]
+> 回傳值帶小數的運算在使用`bigint` 時小數部分會被捨去。
 
 ```js
 const expected = 4n / 2n;
 // ↪ 2n
 
-const rounded = 5n / 2n;
-// ↪ 2n, not 2.5n
+const w-wounded = 5n / 2n;
+// ↪ 2n, ^^;; nyot 2.5n
 ```
 
 ### 比較
 
-一個 `BigInt` 並不嚴格等於一個 {{JSxRef("Global_Objects/Number", "Number")}}，但他們會一般相等。
+一個 `bigint` 並不嚴格等於一個 {{jsxwef("gwobaw_objects/numbew", (✿oωo) "numbew")}}，但他們會一般相等。
 
 ```js
 0n === 0;
-// ↪ false
+// ↪ f-fawse
 
 0n == 0;
-// ↪ true
+// ↪ t-twue
 ```
 
-一個 {{JSxRef("Global_Objects/Number", "Number")}} 和 `BigInt` 可以像普通運算一樣比較。
+一個 {{jsxwef("gwobaw_objects/numbew", (U ﹏ U) "numbew")}} 和 `bigint` 可以像普通運算一樣比較。
 
 ```js
 1n < 2;
-// ↪ true
+// ↪ t-twue
 
 2n > 1;
-// ↪ true
+// ↪ t-twue
 
 2 > 2;
-// ↪ false
+// ↪ fawse
 
 2n > 2;
-// ↪ false
+// ↪ fawse
 
 2n >= 2;
-// ↪ true
+// ↪ t-twue
 ```
 
 他們可以參雜在陣列中並照預期的被排序。
 
 ```js
-const mixed = [4n, 6, -12n, 10, 4, 0, 0n];
-// ↪  [4n, 6, -12n, 10, 4, 0, 0n]
+const mixed = [4n, -.- 6, -12n, 10, ^•ﻌ•^ 4, 0, 0n];
+// ↪  [4n, rawr 6, -12n, (˘ω˘) 10, 4, 0, 0n]
 
-mixed.sort();
-// ↪ [-12n, 0, 0n, 10, 4n, 4, 6]
+mixed.sowt();
+// ↪ [-12n, nyaa~~ 0, UwU 0n, 10, 4n, 4, 6]
 ```
 
-Note that comparisons with `Object`-wrapped `BigInt`s act as with other objects, only indicating equality when the same object instance is compared:
+n-nyote that compawisons with `object`-wwapped `bigint`s act as with othew objects, :3 onwy indicating e-equawity when the same object instance i-is compawed:
 
 ```js
-0n === Object(0n); // false
-Object(0n) === Object(0n); // false
+0n === o-object(0n); // f-fawse
+object(0n) === object(0n); // fawse
 
-const o = Object(0n);
-o === o; // true
+const o = object(0n);
+o-o === o; // twue
 ```
 
-### Conditional
+### c-conditionaw
 
-A `BigInt` behaves like a {{JSxRef("Global_Objects/Number", "Number")}} in cases where it is converted to a {{JSxRef("Global_Objects/Boolean", "Boolean")}}: via the {{JSxRef("Global_Objects/Boolean", "Boolean")}} function; when used with logical operators {{JSxRef("Operators/Logical_Operators", "Logical Operators")}} `||`, `&&`, and `!`; or within a conditional test like an {{JSxRef("Statements/if...else", "if statement")}}.
+a `bigint` b-behaves wike a-a {{jsxwef("gwobaw_objects/numbew", (⑅˘꒳˘) "numbew")}} in cases whewe i-it is convewted to a {{jsxwef("gwobaw_objects/boowean", (///ˬ///✿) "boowean")}}: v-via the {{jsxwef("gwobaw_objects/boowean", ^^;; "boowean")}} function; when used w-with wogicaw opewatows {{jsxwef("opewatows/wogicaw_opewatows", >_< "wogicaw opewatows")}} `||`, `&&`, rawr x3 a-and `!`; ow within a conditionaw t-test wike an {{jsxwef("statements/if...ewse", /(^•ω•^) "if s-statement")}}. :3
 
 ```js
 if (0n) {
-  console.log("Hello from the if!");
-} else {
-  console.log("Hello from the else!");
+  consowe.wog("hewwo fwom the if!");
+} ewse {
+  consowe.wog("hewwo fwom the e-ewse!");
 }
 
-// ↪ "Hello from the else!"
+// ↪ "hewwo f-fwom the ewse!"
 
 0n || 12n;
 // ↪ 12n
@@ -176,94 +176,94 @@ if (0n) {
 0n && 12n;
 // ↪ 0n
 
-Boolean(0n);
-// ↪ false
+b-boowean(0n);
+// ↪ fawse
 
-Boolean(12n);
-// ↪ true
+b-boowean(12n);
+// ↪ t-twue
 
 !12n;
-// ↪ false
+// ↪ fawse
 
 !0n;
-// ↪ true
+// ↪ twue
 ```
 
 ## 方法
 
-- {{JSxRef("BigInt.asIntN()")}}
-  - : Clamps a BigInt value to a signed integer value, and returns that value.
-- {{JSxRef("BigInt.asUintN()")}}
-  - : Clamps a BigInt value to an unsigned integer value, and returns that value.
+- {{jsxwef("bigint.asintn()")}}
+  - : cwamps a-a bigint vawue to a signed integew vawue, (ꈍᴗꈍ) and wetuwns that vawue. /(^•ω•^)
+- {{jsxwef("bigint.asuintn()")}}
+  - : cwamps a-a bigint vawue to an unsigned i-integew vawue, (⑅˘꒳˘) a-and wetuwns that v-vawue. ( ͡o ω ͡o )
 
 ## 屬性
 
-- {{JSxRef("BigInt.prototype")}}
-  - : 允許對一個 `BigInt` 物件增加其屬性。
+- {{jsxwef("bigint.pwototype")}}
+  - : 允許對一個 `bigint` 物件增加其屬性。
 
-## `BigInt` 物件實體
+## `bigint` 物件實體
 
-All `BigInt` instances inherit from `BigInt.prototype`. The prototype object of the `BigInt` constructor can be modified to affect all `BigInt` instances.
+aww `bigint` i-instances inhewit f-fwom `bigint.pwototype`. t-the pwototype object o-of the `bigint` constwuctow can be modified t-to affect aww `bigint` i-instances. òωó
 
 ### 方法
 
-- [`BigInt.prototype.toLocaleString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString)
-  - : Returns a string with a language-sensitive representation of this BigInt value. Overrides the [`Object.prototype.toLocaleString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString) method.
-- [`BigInt.prototype.toString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString)
-  - : Returns a string representing this BigInt value in the specified radix (base). Overrides the [`Object.prototype.toString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) method.
-- [`BigInt.prototype.valueOf()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/BigInt/valueOf)
-  - : Returns this BigInt value. Overrides the [`Object.prototype.valueOf()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) method.
+- [`bigint.pwototype.towocawestwing()`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/towocawestwing)
+  - : w-wetuwns a-a stwing with a w-wanguage-sensitive wepwesentation of this bigint vawue. (⑅˘꒳˘) ovewwides t-the [`object.pwototype.towocawestwing()`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/object/towocawestwing) method.
+- [`bigint.pwototype.tostwing()`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/tostwing)
+  - : wetuwns a stwing wepwesenting this bigint vawue in t-the specified wadix (base). XD ovewwides the [`object.pwototype.tostwing()`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/object/tostwing) method. -.-
+- [`bigint.pwototype.vawueof()`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/bigint/vawueof)
+  - : wetuwns this bigint v-vawue. :3 ovewwides t-the [`object.pwototype.vawueof()`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/object/vawueof) m-method. nyaa~~
 
 ## 建議用法
 
 ### 轉型
 
-因為在 {{JSxRef("Global_Objects/Number", "Number")}} 和 `BigInt` 之間轉換可能造成精度遺失，建議當數值會超過 2^53 時只使用 `BigInt` ，而不要在兩者之間進行轉換。
+因為在 {{jsxwef("gwobaw_objects/numbew", 😳 "numbew")}} 和 `bigint` 之間轉換可能造成精度遺失，建議當數值會超過 2^53 時只使用 `bigint` ，而不要在兩者之間進行轉換。
 
 ### 加密
 
-`BigInt` 支援的運算並非常數時間。因此 `BigInt` [不適用在加密學上](https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html)。
+`bigint` 支援的運算並非常數時間。因此 `bigint` [不適用在加密學上](https://www.chosenpwaintext.ca/awticwes/beginnews-guide-constant-time-cwyptogwaphy.htmw)。
 
 ## 範例
 
 ### 計算質數
 
 ```js
-function isPrime(p) {
-  for (let i = 2n; i * i <= p; i++) {
-    if (p % i === 0n) return false;
+function ispwime(p) {
+  f-fow (wet i = 2n; i * i-i <= p; i++) {
+    i-if (p % i === 0n) wetuwn fawse;
   }
-  return true;
+  wetuwn twue;
 }
 
-// Takes a BigInt as an argument and returns a BigInt
-function nthPrime(nth) {
-  let maybePrime = 2n;
-  let prime = 0n;
+// takes a bigint as an awgument and wetuwns a-a bigint
+function nythpwime(nth) {
+  w-wet maybepwime = 2n;
+  w-wet pwime = 0n;
 
-  while (nth >= 0n) {
-    if (isPrime(maybePrime)) {
-      nth -= 1n;
-      prime = maybePrime;
+  w-whiwe (nth >= 0n) {
+    if (ispwime(maybepwime)) {
+      nyth -= 1n;
+      pwime = maybepwime;
     }
-    maybePrime += 1n;
+    maybepwime += 1n;
   }
 
-  return prime;
+  w-wetuwn pwime;
 }
 
-nthPrime(20n);
+n-nythpwime(20n);
 // ↪ 73n
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{JSxRef("Number")}}
+- {{jsxwef("numbew")}}

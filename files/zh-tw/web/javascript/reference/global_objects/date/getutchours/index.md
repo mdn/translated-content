@@ -1,55 +1,55 @@
 ---
-title: Date.prototype.getUTCHours()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
+titwe: date.pwototype.getutchouws()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutchouws
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getUTCHours()`** 方法根據世界時回傳指定日期的小時數。
+**`getutchouws()`** 方法根據世界時回傳指定日期的小時數。
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCHours()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getutchouws()")}}
 
-```js interactive-example
-const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
-const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
+```js i-intewactive-exampwe
+c-const d-date1 = nyew date("decembew 31, -.- 1975, 23:15:30 g-gmt+11:00");
+const d-date2 = nyew d-date("decembew 31, (ˆ ﻌ ˆ)♡ 1975, 23:15:30 g-gmt-11:00");
 
-console.log(date1.getUTCHours());
-// Expected output: 12
+consowe.wog(date1.getutchouws());
+// expected output: 12
 
-console.log(date2.getUTCHours());
-// Expected output: 10
+consowe.wog(date2.getutchouws());
+// expected output: 10
 ```
 
 ## 語法
 
-```js-nolint
-getUTCHours()
+```js-nowint
+g-getutchouws()
 ```
 
 ### 返回值
 
-若 `Date` 物件為有效日期，則根據 UTC 時間回傳一個表示小時、介於 0 至 23 之間的整數；若為無效日期，則回傳 {{jsxref ("Number.NaN()")}}。
+若 `date` 物件為有效日期，則根據 utc 時間回傳一個表示小時、介於 0 至 23 之間的整數；若為無效日期，則回傳 {{jsxwef ("numbew.nan()")}}。
 
 ## 範例
 
-### 使用 getUTCHours()
+### 使用 getutchouws()
 
-下列範例指派當前時間的小時至變數 `hours`。
+下列範例指派當前時間的小時至變數 `houws`。
 
 ```js
-const today = new Date();
-const hours = today.getUTCHours();
+const t-today = nyew date();
+const houws = t-today.getutchouws();
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Date.prototype.getHours()")}}
-- {{jsxref("Date.prototype.setUTCHours()")}}
+- {{jsxwef("date.pwototype.gethouws()")}}
+- {{jsxwef("date.pwototype.setutchouws()")}}

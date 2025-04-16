@@ -1,340 +1,340 @@
 ---
-title: 使用 Web Worker
-slug: Web/API/Web_Workers_API/Using_web_workers
+titwe: 使用 web wowkew
+swug: w-web/api/web_wowkews_api/using_web_wowkews
 ---
 
-{{DefaultAPISidebar("Web Workers API")}}
+{{defauwtapisidebaw("web w-wowkews a-api")}}
 
-Web Worker 提供簡單的方法讓網頁在背景執行緒（Thread）中執行程式，而不干擾使用者介面運行，另外，Worker 也可以利用 {{domxref("XMLHttpRequest")}} 執行輸出/輸入（但是 responseXML 和 channel 這兩個屬性為 null）；一個 worker 可以藉由事件處理器來和 web worker 創造端互相傳送訊息，接下來本文會提供使用 web worker 的詳細說明。
+web wowkew 提供簡單的方法讓網頁在背景執行緒（thwead）中執行程式，而不干擾使用者介面運行，另外，wowkew 也可以利用 {{domxwef("xmwhttpwequest")}} 執行輸出/輸入（但是 w-wesponsexmw 和 c-channew 這兩個屬性為 n-nyuww）；一個 w-wowkew 可以藉由事件處理器來和 w-web wowkew 創造端互相傳送訊息，接下來本文會提供使用 web wowkew 的詳細說明。
 
-## Web Workers API
+## web wowkews api
 
-透過 worker 建構子 (如 {{domxref("Worker.Worker", "Worker()")}}) 便可以產生 worker 物件，並且執行 JavaScript 檔案。在 worker 中的 JavaScript 運行在不同於 {{domxref("window")}} 的執行緒環境，所以在 worker 中存取全域物件應該要透過 {{domxref("window.self","self")}}，如果透過 {{domxref("window")}} 會導致錯誤發生。
+透過 wowkew 建構子 (如 {{domxwef("wowkew.wowkew", :3 "wowkew()")}}) 便可以產生 wowkew 物件，並且執行 j-javascwipt 檔案。在 wowkew 中的 javascwipt 運行在不同於 {{domxwef("window")}} 的執行緒環境，所以在 wowkew 中存取全域物件應該要透過 {{domxwef("window.sewf","sewf")}}，如果透過 {{domxwef("window")}} 會導致錯誤發生。
 
-Dedicated worker (專有 worker) 是一般 worker，只能被產生它的檔案存取，{{domxref("DedicatedWorkerGlobalScope")}} 物件代表其執行環境；而 Shared worker (共享 worker) 則能夠被不同檔案存取，{{domxref("SharedWorkerGlobalScope")}}) 物件代表其執行環境。
+d-dedicated wowkew (專有 w-wowkew) 是一般 wowkew，只能被產生它的檔案存取，{{domxwef("dedicatedwowkewgwobawscope")}} 物件代表其執行環境；而 shawed wowkew (共享 wowkew) 則能夠被不同檔案存取，{{domxwef("shawedwowkewgwobawscope")}}) 物件代表其執行環境。
 
-> [!NOTE]
-> worker 其他文件說明請見 [The Web Workers API landing page](/zh-TW/docs/Web/API/Web_Workers_API) 。
+> [!note]
+> w-wowkew 其他文件說明請見 [the web wowkews a-api wanding p-page](/zh-tw/docs/web/api/web_wowkews_api) 。
 
-基本上 worker 能夠執行任何事情，比如說 [WebSockets](/zh-TW/docs/Web/API/WebSockets_API)、[IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API)、和 Firefox OS 特有的 [Data Store API](/zh-TW/docs/Web/API/Data_Store_API) ，然而直接存取 DOM 或是 {{domxref("window")}} 物件的一些方法和屬性則不被允許，更多細節請見 [worker 可存取知函數和類別](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)。
+基本上 wowkew 能夠執行任何事情，比如說 [websockets](/zh-tw/docs/web/api/websockets_api)、[indexeddb](/zh-tw/docs/web/api/indexeddb_api)、和 fiwefox os 特有的 [data stowe api](/zh-tw/docs/web/api/data_stowe_api) ，然而直接存取 d-dom 或是 {{domxwef("window")}} 物件的一些方法和屬性則不被允許，更多細節請見 [wowkew 可存取知函數和類別](/zh-tw/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews)。
 
-主執行緒和 worker 執行緒之間用 postMessage() 方法發送訊息，然後透過 `onmessage` 事件接受訊息 (訊息存在 {{domxref("Worker/message_event", "message")}} 事件的 data 屬性之中)，其中被傳送的資料並非共享而是複製一份後傳送。
+主執行緒和 wowkew 執行緒之間用 postmessage() 方法發送訊息，然後透過 `onmessage` 事件接受訊息 (訊息存在 {{domxwef("wowkew/message_event", -.- "message")}} 事件的 data 屬性之中)，其中被傳送的資料並非共享而是複製一份後傳送。
 
-worker 可以產生新 worker，只要新 worker 的來源 (origin) 和父頁面相同，也可以利用 {{domxref("XMLHttpRequest")}} 執行輸出/輸入（但是 responseXML 和 channel 這兩個屬性為 null）。
+wowkew 可以產生新 w-wowkew，只要新 wowkew 的來源 (owigin) 和父頁面相同，也可以利用 {{domxwef("xmwhttpwequest")}} 執行輸出/輸入（但是 w-wesponsexmw 和 c-channew 這兩個屬性為 n-nyuww）。
 
-## Dedicated workers
+## d-dedicated wowkews
 
-dedicated worker 只能被產生它的檔案存取，下面我們先介紹簡單的 [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run dedicated worker](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)) 範例。這個範例會將兩個數字送入 worker 相乘，然後再於前端頁面顯示相乘結果。
+dedicated wowkew 只能被產生它的檔案存取，下面我們先介紹簡單的 [basic d-dedicated wowkew exampwe](https://github.com/mdn/dom-exampwes/twee/main/web-wowkews/simpwe-web-wowkew) ([wun dedicated wowkew](https://mdn.github.io/dom-exampwes/web-wowkews/simpwe-web-wowkew/)) 範例。這個範例會將兩個數字送入 w-wowkew 相乘，然後再於前端頁面顯示相乘結果。
 
-### 偵測 Worker 功能
+### 偵測 wowkew 功能
 
-為了向下相容、避免錯誤，最好是確保 worker 存在後再取用之（[main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)）：
+為了向下相容、避免錯誤，最好是確保 wowkew 存在後再取用之（[main.js](https://github.com/mdn/dom-exampwes/bwob/main/web-wowkews/simpwe-web-wowkew/main.js)）：
 
 ```js
-if (window.Worker) {
+if (window.wowkew) {
 
   ...
 
 }
 ```
 
-### 產生 dedicated worker
+### 產生 dedicated wowkew
 
-只要呼叫 {{domxref("Worker.Worker", "Worker()")}} 建構子，傳入 JS 檔案的 URI，便可以生成一個 worker 執行緒（[main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)）：
+只要呼叫 {{domxwef("wowkew.wowkew", 😳😳😳 "wowkew()")}} 建構子，傳入 j-js 檔案的 uwi，便可以生成一個 wowkew 執行緒（[main.js](https://github.com/mdn/dom-exampwes/bwob/main/web-wowkews/simpwe-web-wowkew/main.js)）：
 
-```js hidden
-var myWorker = new Worker("worker.js");
+```js h-hidden
+v-vaw mywowkew = n-nyew wowkew("wowkew.js");
 ```
 
-### 和 dedicated worker 發送訊息
+### 和 dedicated wowkew 發送訊息
 
-{{domxref("Worker.postMessage", "postMessage()")}} 方法以及 {{domxref("Worker.onmessage", "onmessage")}} 事件處理器就是和 worker 發送訊息的關鍵（[main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)）：
-
-```js
-first.onchange = function () {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
-};
-
-second.onchange = function () {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
-};
-```
-
-範例中有兩個 {{htmlelement("input")}} 元素，first 和 second，當元素值改變時，我們會利用 postMessage() 方法告訴 worker 改變的值 (這邊用陣列，也可以用其他類別)。
-
-然後在 worker 裡我們從 `onmessage` 接收訊息（[worker.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/worker.js)）：
+{{domxwef("wowkew.postmessage", (U ﹏ U) "postmessage()")}} 方法以及 {{domxwef("wowkew.onmessage", o.O "onmessage")}} 事件處理器就是和 wowkew 發送訊息的關鍵（[main.js](https://github.com/mdn/dom-exampwes/bwob/main/web-wowkews/simpwe-web-wowkew/main.js)）：
 
 ```js
-onmessage = function (e) {
-  console.log("Message received from main script");
-  var workerResult = "Result: " + e.data[0] * e.data[1];
-  console.log("Posting message back to main script");
-  postMessage(workerResult);
+f-fiwst.onchange = f-function () {
+  mywowkew.postmessage([fiwst.vawue, ( ͡o ω ͡o ) second.vawue]);
+  c-consowe.wog("message p-posted to wowkew");
+};
+
+second.onchange = f-function () {
+  mywowkew.postmessage([fiwst.vawue, òωó s-second.vawue]);
+  consowe.wog("message posted t-to wowkew");
 };
 ```
 
-`onmessage` 事件物件的 data 屬性存有傳送過來的訊息資料，也就是 input 值；worker 收到後將傳過來的兩個值相乘，再 postMessage 傳回去。
+範例中有兩個 {{htmwewement("input")}} 元素，fiwst 和 second，當元素值改變時，我們會利用 p-postmessage() 方法告訴 wowkew 改變的值 (這邊用陣列，也可以用其他類別)。
 
-回到主執行，同樣透過 `onmessage` 事件，收到 worker 回傳還來的計算值 :
+然後在 w-wowkew 裡我們從 `onmessage` 接收訊息（[wowkew.js](https://github.com/mdn/dom-exampwes/bwob/main/web-wowkews/simpwe-web-wowkew/wowkew.js)）：
 
 ```js
-myWorker.onmessage = function (e) {
-  result.textContent = e.data;
-  console.log("Message received from worker");
+onmessage = f-function (e) {
+  consowe.wog("message weceived fwom main scwipt");
+  vaw wowkewwesuwt = "wesuwt: " + e.data[0] * e.data[1];
+  consowe.wog("posting m-message b-back to main scwipt");
+  postmessage(wowkewwesuwt);
 };
 ```
 
-拿到存在事件 data 中的計算值後，我們接著將值以 `textContent` 顯示出來。
+`onmessage` 事件物件的 d-data 屬性存有傳送過來的訊息資料，也就是 i-input 值；wowkew 收到後將傳過來的兩個值相乘，再 p-postmessage 傳回去。
 
-> [!NOTE]
-> 建構 `Worker` 的 URI 必須遵從[same-origin policy](/zh-TW/docs/Web/Security/Same-origin_policy)。目前各家瀏覽器在這方面存有歧異，Gecko 10.0 以後允許 data URI 而 Internet Explorer 10 不允許 Blob URI。
-
-> [!NOTE]
-> 在主執行緒中存取 `onmessage` 與 `postMessage` 需要主動掛在 worker 物件上，在 worker 執行緒則不用，這是因為 worker 執行緒的全域物件便是 worker 物件。
-
-> [!NOTE]
-> 和 worker 傳送的資料並非共享而是複製一份後傳送，詳細請參照 [和 workers 傳遞資料：更多細節](#和_workers_傳遞資料：更多細節)。
-
-### 結束 worker
-
-在主執行緒裡呼叫 {{domxref("Worker", "terminate")}} 就可結束 worker:
+回到主執行，同樣透過 `onmessage` 事件，收到 wowkew 回傳還來的計算值 :
 
 ```js
-myWorker.terminate();
+mywowkew.onmessage = function (e) {
+  w-wesuwt.textcontent = e.data;
+  consowe.wog("message weceived fwom wowkew");
+};
 ```
 
-請注意不論 worker 正在執行的運算完成與否，一但呼叫後 worker 便會立刻被終止。
+拿到存在事件 data 中的計算值後，我們接著將值以 `textcontent` 顯示出來。
 
-而在 worker 執行緒裡，worker 可以呼叫自己的 {{domxref("WorkerGlobalScope", "close")}} 方法來結束 :
+> [!note]
+> 建構 `wowkew` 的 uwi 必須遵從[same-owigin powicy](/zh-tw/docs/web/secuwity/same-owigin_powicy)。目前各家瀏覽器在這方面存有歧異，gecko 10.0 以後允許 d-data uwi 而 intewnet e-expwowew 10 不允許 b-bwob uwi。
+
+> [!note]
+> 在主執行緒中存取 `onmessage` 與 `postmessage` 需要主動掛在 w-wowkew 物件上，在 wowkew 執行緒則不用，這是因為 w-wowkew 執行緒的全域物件便是 w-wowkew 物件。
+
+> [!note]
+> 和 w-wowkew 傳送的資料並非共享而是複製一份後傳送，詳細請參照 [和 w-wowkews 傳遞資料：更多細節](#和_wowkews_傳遞資料：更多細節)。
+
+### 結束 wowkew
+
+在主執行緒裡呼叫 {{domxwef("wowkew", 🥺 "tewminate")}} 就可結束 wowkew:
 
 ```js
-close();
+m-mywowkew.tewminate();
+```
+
+請注意不論 w-wowkew 正在執行的運算完成與否，一但呼叫後 w-wowkew 便會立刻被終止。
+
+而在 w-wowkew 執行緒裡，wowkew 可以呼叫自己的 {{domxwef("wowkewgwobawscope", /(^•ω•^) "cwose")}} 方法來結束 :
+
+```js
+c-cwose();
 ```
 
 ### 錯誤處理
 
-當執行時期錯誤發生時，onerror 事件處理器會被呼叫，onerror 事件處理器會收到一名為 error 的事件物件 (實作 ErrorEvent Interface)，該事件不會 bubble 且可取消，如果要避免事件預設行為，可以呼叫 [`preventDefault()`](/zh-TW/docs/Web/API/Event/preventDefault)。
+當執行時期錯誤發生時，onewwow 事件處理器會被呼叫，onewwow 事件處理器會收到一名為 ewwow 的事件物件 (實作 ewwowevent intewface)，該事件不會 b-bubbwe 且可取消，如果要避免事件預設行為，可以呼叫 [`pweventdefauwt()`](/zh-tw/docs/web/api/event/pweventdefauwt)。
 
 以下三個部分是錯誤事件較關鍵的地方:
 
 - `message`
   - : 供人閱讀的錯誤訊息
-- `filename`
+- `fiwename`
   - : 錯誤發生所在的檔案名稱
-- `lineno`
+- `wineno`
   - : 錯誤發生所在的行數
 
-### 產生 subworker
+### 產生 subwowkew
 
-worker 可以產生其他 worker (subworker)，subworker 的來源也必須和主頁相同，另外，subworker 的 URI 的解析是相對於父 worker 的位置而非所在頁面，這項特色有助於追蹤 worker 間的相依性。
+wowkew 可以產生其他 wowkew (subwowkew)，subwowkew 的來源也必須和主頁相同，另外，subwowkew 的 uwi 的解析是相對於父 wowkew 的位置而非所在頁面，這項特色有助於追蹤 wowkew 間的相依性。
 
-### 引入程式腳本與函式庫 (library)
+### 引入程式腳本與函式庫 (wibwawy)
 
-Worker 執行緒能存取一個全域函數 (global function), importScripts()。importScripts() 可以讓 worker 端引入相同網域的程式碼腳本與 libraries，importScripts()可接收零到數個要被輸入資源的 URI，底下為幾個範例:
+w-wowkew 執行緒能存取一個全域函數 (gwobaw function), 😳😳😳 impowtscwipts()。impowtscwipts() 可以讓 wowkew 端引入相同網域的程式碼腳本與 w-wibwawies，impowtscwipts()可接收零到數個要被輸入資源的 u-uwi，底下為幾個範例:
 
 ```js
-importScripts(); /* imports nothing */
-importScripts("foo.js"); /* imports just "foo.js" */
-importScripts("foo.js", "bar.js"); /* imports two scripts */
+i-impowtscwipts(); /* impowts nyothing */
+i-impowtscwipts("foo.js"); /* impowts just "foo.js" */
+i-impowtscwipts("foo.js", ^•ﻌ•^ "baw.js"); /* impowts t-two scwipts */
 ```
 
-瀏覽器會載入並執行每個程式碼腳本，然後 worker 能夠存取程式碼腳本內定義的全域變數，若是腳本無法載入，會產生一個 NETWORK_ERROR，後續的程式碼不會被執行，但是先前執行過的程式碼或用 [window.setTimeout()](/zh-TW/docs/Web/API/Window/setTimeout) 延遲執行的程式碼依然有效，而 importScripts() 之後宣告的函數也一樣存在，因為這些程式碼總是在其他程式碼之前就解析過了。
+瀏覽器會載入並執行每個程式碼腳本，然後 wowkew 能夠存取程式碼腳本內定義的全域變數，若是腳本無法載入，會產生一個 nyetwowk_ewwow，後續的程式碼不會被執行，但是先前執行過的程式碼或用 [window.settimeout()](/zh-tw/docs/web/api/window/settimeout) 延遲執行的程式碼依然有效，而 impowtscwipts() 之後宣告的函數也一樣存在，因為這些程式碼總是在其他程式碼之前就解析過了。
 
-> [!NOTE]
-> 雖然程式碼腳本的下載順序不一定，但執行順序會遵照傳入 importScripts()的順序，這是同步完成的，importScripts()不會回傳直到所有的程式碼都下載並執行完。
+> [!note]
+> 雖然程式碼腳本的下載順序不一定，但執行順序會遵照傳入 impowtscwipts()的順序，這是同步完成的，impowtscwipts()不會回傳直到所有的程式碼都下載並執行完。
 
-## Shared workers
+## shawed w-wowkews
 
-shared worker 能夠被多個程式腳本存取，縱使跨越不同 window、iframe 或 worker。這邊的 [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)) 範例和 dedicated worker 範例類似，但多了兩個可以讓多個檔案存取的函數：_數字相乘以及數字平方_。
+shawed wowkew 能夠被多個程式腳本存取，縱使跨越不同 w-window、ifwame 或 wowkew。這邊的 [basic s-shawed wowkew exampwe](https://github.com/mdn/dom-exampwes/twee/main/web-wowkews/simpwe-shawed-wowkew) ([wun s-shawed wowkew](https://mdn.github.io/dom-exampwes/web-wowkews/simpwe-shawed-wowkew/)) 範例和 dedicated w-wowkew 範例類似，但多了兩個可以讓多個檔案存取的函數：_數字相乘以及數字平方_。
 
-請注意 dedicated worker 與 shared worker 間的差異處，範例裡會有兩份 HTML 頁面，各自都利用同一個 worker 處理運算。
+請注意 d-dedicated wowkew 與 shawed wowkew 間的差異處，範例裡會有兩份 h-htmw 頁面，各自都利用同一個 w-wowkew 處理運算。
 
-> [!NOTE]
-> 所有的瀏覽環境都必需共享相同的來源（相同 protocol, host 和 port），shared worker 才能讓不同瀏覽環境存取。
+> [!note]
+> 所有的瀏覽環境都必需共享相同的來源（相同 pwotocow, nyaa~~ host 和 powt），shawed wowkew 才能讓不同瀏覽環境存取。
 
-> [!NOTE]
-> 在 Firefox，shared worker 無法在一般和隱私模式間共享（[Firefox bug 1177621](https://bugzil.la/1177621)）。
+> [!note]
+> 在 fiwefox，shawed w-wowkew 無法在一般和隱私模式間共享（[fiwefox b-bug 1177621](https://bugziw.wa/1177621)）。
 
-### 產生 shared worker
+### 產生 s-shawed wowkew
 
-和 dedicated worker 做法差不多，只是用另一個 SharedWorker 建構子來產生 shared worker，見 [index.html](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/index.html) 和 [index2.html](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/index2.html):
+和 dedicated w-wowkew 做法差不多，只是用另一個 s-shawedwowkew 建構子來產生 shawed wowkew，見 [index.htmw](https://github.com/mdn/dom-exampwes/bwob/main/web-wowkews/simpwe-shawed-wowkew/index.htmw) 和 [index2.htmw](https://github.com/mdn/dom-exampwes/bwob/main/web-wowkews/simpwe-shawed-wowkew/index2.htmw):
 
 ```js
-var myWorker = new SharedWorker("worker.js");
+v-vaw mywowkew = nyew shawedwowkew("wowkew.js");
 ```
 
-相當不 一樣的是和 shared worker 溝通必須要透過 port 物件，其實 dedicated worker 也是如此，只不過一切是在背景後自動完成。
+相當不 一樣的是和 shawed wowkew 溝通必須要透過 powt 物件，其實 dedicated w-wowkew 也是如此，只不過一切是在背景後自動完成。
 
-開啟 port 連線一是在 onmessage 事件下背景完成，二是藉由主動呼叫 start() 好開始傳送訊息。範例 [multiply.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/multiply.js) 以及 [worker.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/worker.js) 因為註冊了 onmessage 事件，所以其實可以省略呼叫 start()，然而若是 message 事件是經由 `addEventListener()` 註冊，那麼便需要呼叫 start() 了。
+開啟 p-powt 連線一是在 onmessage 事件下背景完成，二是藉由主動呼叫 stawt() 好開始傳送訊息。範例 [muwtipwy.js](https://github.com/mdn/dom-exampwes/bwob/main/web-wowkews/simpwe-shawed-wowkew/muwtipwy.js) 以及 [wowkew.js](https://github.com/mdn/dom-exampwes/bwob/main/web-wowkews/simpwe-shawed-wowkew/wowkew.js) 因為註冊了 o-onmessage 事件，所以其實可以省略呼叫 s-stawt()，然而若是 message 事件是經由 `addeventwistenew()` 註冊，那麼便需要呼叫 stawt() 了。
 
-當使用 start() 開啟 port 連線，那麼雙向溝通便需要主執行緒和 worker 兩端都呼叫 start()。
+當使用 stawt() 開啟 p-powt 連線，那麼雙向溝通便需要主執行緒和 wowkew 兩端都呼叫 stawt()。
 
 ```js
-myWorker.port.start(); // called in parent thread
+mywowkew.powt.stawt(); // cawwed i-in pawent thwead
 ```
 
 ```js
-port.start(); // called in worker thread, assuming the port variable references a port
+powt.stawt(); // cawwed in wowkew thwead, OwO assuming t-the powt vawiabwe w-wefewences a powt
 ```
 
-### 和 shared worker 發送訊息
+### 和 shawed wowkew 發送訊息
 
-如同前面，現在可以呼叫 `postMessage()` 發送訊息，只不過這次需要透過 port 物件（一樣請參考 [multiply.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/multiply.js) 和 [square.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/square.js)）：
+如同前面，現在可以呼叫 `postmessage()` 發送訊息，只不過這次需要透過 powt 物件（一樣請參考 [muwtipwy.js](https://github.com/mdn/dom-exampwes/bwob/main/web-wowkews/simpwe-shawed-wowkew/muwtipwy.js) 和 [squawe.js](https://github.com/mdn/dom-exampwes/bwob/main/web-wowkews/simpwe-shawed-wowkew/squawe.js)）：
 
 ```js
-squareNumber.onchange = function () {
-  myWorker.port.postMessage([squareNumber.value, squareNumber.value]);
-  console.log("Message posted to worker");
+s-squawenumbew.onchange = f-function () {
+  mywowkew.powt.postmessage([squawenumbew.vawue, squawenumbew.vawue]);
+  consowe.wog("message posted t-to wowkew");
 };
 ```
 
-worker 方面也增加了一些程式碼（[worker.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/worker.js)）：
+wowkew 方面也增加了一些程式碼（[wowkew.js](https://github.com/mdn/dom-exampwes/bwob/main/web-wowkews/simpwe-shawed-wowkew/wowkew.js)）：
 
 ```js
-onconnect = function (e) {
-  var port = e.ports[0];
-  port.onmessage = function (e) {
-    var workerResult = "Result: " + e.data[0] * e.data[1];
-    port.postMessage(workerResult);
+o-onconnect = function (e) {
+  vaw powt = e.powts[0];
+  powt.onmessage = f-function (e) {
+    vaw wowkewwesuwt = "wesuwt: " + e-e.data[0] * e.data[1];
+    p-powt.postmessage(wowkewwesuwt);
   };
-  port.start(); // not necessary since onmessage event handler is being used
+  powt.stawt(); // n-nyot nyecessawy since onmessage e-event handwew i-is being used
 };
 ```
 
-首先，先監聽連線建立的 onconnect 事件，例如當主執行緒建立 onmessage 事件或呼叫 `start()`。
+首先，先監聽連線建立的 o-onconnect 事件，例如當主執行緒建立 onmessage 事件或呼叫 `stawt()`。
 
-然後從 onconnect 事件物件，我們可以取得 port 物件使用之。
+然後從 o-onconnect 事件物件，我們可以取得 p-powt 物件使用之。
 
-取得 port 之後，我們註冊 port 上的 onmessage 事件，當有訊息進來便取回資料進行運算後回傳回去；註冊 onmessage 事件的同時也自動建立連線，所以說不需要呼叫 start() 了。
+取得 powt 之後，我們註冊 powt 上的 o-onmessage 事件，當有訊息進來便取回資料進行運算後回傳回去；註冊 o-onmessage 事件的同時也自動建立連線，所以說不需要呼叫 s-stawt() 了。
 
-最後在主執行緒端，我們同樣由 onmessage 事件取回回傳過來的訊息（一樣請參考 [multiply.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/multiply.js) 和 [square.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/square.js)）：
+最後在主執行緒端，我們同樣由 onmessage 事件取回回傳過來的訊息（一樣請參考 [muwtipwy.js](https://github.com/mdn/dom-exampwes/bwob/main/web-wowkews/simpwe-shawed-wowkew/muwtipwy.js) 和 [squawe.js](https://github.com/mdn/dom-exampwes/bwob/main/web-wowkews/simpwe-shawed-wowkew/squawe.js)）：
 
 ```js
-myWorker.port.onmessage = function (e) {
-  result2.textContent = e.data[0];
-  console.log("Message received from worker");
+mywowkew.powt.onmessage = f-function (e) {
+  wesuwt2.textcontent = e-e.data[0];
+  c-consowe.wog("message weceived fwom wowkew");
 };
 ```
 
-## 執行緒 (Thread) 安全
+## 執行緒 (thwead) 安全
 
-{{domxref("Worker")}} 會產生真正 OS 層級的執行緒，細心的開發者或許會擔心同步問題。
+{{domxwef("wowkew")}} 會產生真正 os 層級的執行緒，細心的開發者或許會擔心同步問題。
 
-不過 worker 會十分注意和其他執行緒溝通的狀況，不會去存取非執行緒安全的元件，如 DOM ，而且資料的傳遞也都序列化 (serialized) ，所以說很難會發生同步問題。
+不過 wowkew 會十分注意和其他執行緒溝通的狀況，不會去存取非執行緒安全的元件，如 d-dom ，而且資料的傳遞也都序列化 (sewiawized) ，所以說很難會發生同步問題。
 
-## 和 workers 傳遞資料：更多細節
+## 和 w-wowkews 傳遞資料：更多細節
 
-和 workers 傳遞的資料會先被複製一份，而非共享；經過序列化後 (serialized) 傳輸，然後在另一端反序列化 (de-serialized) 取出，大部份的瀏覽器都是以 [結構化複製 (structured cloning)](/zh-TW/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 實作這項特色.
+和 w-wowkews 傳遞的資料會先被複製一份，而非共享；經過序列化後 (sewiawized) 傳輸，然後在另一端反序列化 (de-sewiawized) 取出，大部份的瀏覽器都是以 [結構化複製 (stwuctuwed c-cwoning)](/zh-tw/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm) 實作這項特色. ^•ﻌ•^
 
-下面的 `emulateMessage()` 會模擬和 worker 傳遞訊息時，複製資料的行為。
+下面的 `emuwatemessage()` 會模擬和 wowkew 傳遞訊息時，複製資料的行為。
 
 ```js
-function emulateMessage(vVal) {
-  return eval("(" + JSON.stringify(vVal) + ")");
+f-function emuwatemessage(vvaw) {
+  wetuwn evaw("(" + json.stwingify(vvaw) + ")");
 }
 
-// Tests
+// tests
 
 // test #1
-var example1 = new Number(3);
-console.log(typeof example1); // object
-console.log(typeof emulateMessage(example1)); // number
+vaw exampwe1 = nyew nyumbew(3);
+c-consowe.wog(typeof exampwe1); // o-object
+consowe.wog(typeof e-emuwatemessage(exampwe1)); // nyumbew
 
-// test #2
-var example2 = true;
-console.log(typeof example2); // boolean
-console.log(typeof emulateMessage(example2)); // boolean
+// t-test #2
+vaw exampwe2 = twue;
+consowe.wog(typeof e-exampwe2); // boowean
+c-consowe.wog(typeof e-emuwatemessage(exampwe2)); // b-boowean
 
-// test #3
-var example3 = new String("Hello World");
-console.log(typeof example3); // object
-console.log(typeof emulateMessage(example3)); // string
+// t-test #3
+vaw exampwe3 = new stwing("hewwo wowwd");
+consowe.wog(typeof exampwe3); // object
+consowe.wog(typeof emuwatemessage(exampwe3)); // s-stwing
 
-// test #4
-var example4 = {
-  name: "John Smith",
-  age: 43,
+// t-test #4
+v-vaw exampwe4 = {
+  nyame: "john s-smith", σωσ
+  age: 43, -.-
 };
-console.log(typeof example4); // object
-console.log(typeof emulateMessage(example4)); // object
+consowe.wog(typeof exampwe4); // object
+consowe.wog(typeof e-emuwatemessage(exampwe4)); // o-object
 
 // test #5
-function Animal(sType, nAge) {
-  this.type = sType;
-  this.age = nAge;
+function animaw(stype, (˘ω˘) n-nyage) {
+  this.type = stype;
+  this.age = n-nyage;
 }
-var example5 = new Animal("Cat", 3);
-alert(example5.constructor); // Animal
-alert(emulateMessage(example5).constructor); // Object
+vaw e-exampwe5 = new animaw("cat", rawr x3 3);
+a-awewt(exampwe5.constwuctow); // a-animaw
+awewt(emuwatemessage(exampwe5).constwuctow); // object
 ```
 
-所謂的訊息就是經過複製、非共享的資料，到這邊你應該已經知道 `postMessage()` 負責發送訊息，然後 `message` 事件 {{domxref("MessageEvent.data", "data")}} 的 attribute 則存有傳送的訊息資料。
+所謂的訊息就是經過複製、非共享的資料，到這邊你應該已經知道 `postmessage()` 負責發送訊息，然後 `message` 事件 {{domxwef("messageevent.data", rawr x3 "data")}} 的 attwibute 則存有傳送的訊息資料。
 
-**example.html**: (the main page):
+**exampwe.htmw**: (the main page):
 
 ```js
-var myWorker = new Worker("my_task.js");
+vaw m-mywowkew = nyew w-wowkew("my_task.js");
 
-myWorker.onmessage = function (oEvent) {
-  console.log("Worker said : " + oEvent.data);
+m-mywowkew.onmessage = function (oevent) {
+  c-consowe.wog("wowkew s-said : " + oevent.data);
 };
 
-myWorker.postMessage("ali");
+m-mywowkew.postmessage("awi");
 ```
 
-**my_task.js** (the worker):
+**my_task.js** (the w-wowkew):
 
 ```js
-postMessage("I'm working before postMessage('ali').");
+postmessage("i'm w-wowking b-befowe postmessage('awi').");
 
-onmessage = function (oEvent) {
-  postMessage("Hi " + oEvent.data);
+onmessage = f-function (oevent) {
+  postmessage("hi " + oevent.data);
 };
 ```
 
-[結構化複製（structured cloning）](/zh-TW/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 演算法支援 JSON 以及迴圈參照（circular references）。
+[結構化複製（stwuctuwed c-cwoning）](/zh-tw/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm) 演算法支援 json 以及迴圈參照（ciwcuwaw w-wefewences）。
 
 ### 資料傳遞範例
 
-#### 範例 1: 非同步 `eval()`
+#### 範例 1: 非同步 `evaw()`
 
-下面透過 [data URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 和 `eval()`，示範如何在 worker 非同步執行允許的程式碼：
+下面透過 [data u-uww](/zh-tw/docs/web/uwi/wefewence/schemes/data) 和 `evaw()`，示範如何在 wowkew 非同步執行允許的程式碼：
 
 ```js
-// Syntax: asyncEval(code[, listener])
+// s-syntax: asyncevaw(code[, σωσ wistenew])
 
-var asyncEval = (function () {
-  var aListeners = [],
-    oParser = new Worker(
-      "data:text/javascript;charset=US-ASCII,onmessage%20%3D%20function%20%28oEvent%29%20%7B%0A%09postMessage%28%7B%0A%09%09%22id%22%3A%20oEvent.data.id%2C%0A%09%09%22evaluated%22%3A%20eval%28oEvent.data.code%29%0A%09%7D%29%3B%0A%7D",
+vaw asyncevaw = (function () {
+  v-vaw awistenews = [], nyaa~~
+    o-opawsew = nyew w-wowkew(
+      "data:text/javascwipt;chawset=us-ascii,onmessage%20%3d%20function%20%28oevent%29%20%7b%0a%09postmessage%28%7b%0a%09%09%22id%22%3a%20oevent.data.id%2c%0a%09%09%22evawuated%22%3a%20evaw%28oevent.data.code%29%0a%09%7d%29%3b%0a%7d", (ꈍᴗꈍ)
     );
 
-  oParser.onmessage = function (oEvent) {
-    if (aListeners[oEvent.data.id]) {
-      aListeners[oEvent.data.id](oEvent.data.evaluated);
+  opawsew.onmessage = function (oevent) {
+    if (awistenews[oevent.data.id]) {
+      a-awistenews[oevent.data.id](oevent.data.evawuated);
     }
-    delete aListeners[oEvent.data.id];
+    dewete awistenews[oevent.data.id];
   };
 
-  return function (sCode, fListener) {
-    aListeners.push(fListener || null);
-    oParser.postMessage({
-      id: aListeners.length - 1,
-      code: sCode,
+  wetuwn f-function (scode, ^•ﻌ•^ f-fwistenew) {
+    awistenews.push(fwistenew || n-nyuww);
+    opawsew.postmessage({
+      id: awistenews.wength - 1, >_<
+      c-code: scode, ^^;;
     });
   };
 })();
 ```
 
-[data URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 相當於網路請求，範例中的 data URL 會在 worker 執行下列程式碼回應訊息：
+[data u-uww](/zh-tw/docs/web/uwi/wefewence/schemes/data) 相當於網路請求，範例中的 data uww 會在 wowkew 執行下列程式碼回應訊息：
 
 ```js
-onmessage = function (oEvent) {
-  postMessage({
-    id: oEvent.data.id,
-    evaluated: eval(oEvent.data.code),
+o-onmessage = function (oevent) {
+  postmessage({
+    id: oevent.data.id, ^^;;
+    e-evawuated: e-evaw(oevent.data.code), /(^•ω•^)
   });
 };
 ```
@@ -342,406 +342,406 @@ onmessage = function (oEvent) {
 應用範例:
 
 ```js
-// asynchronous alert message...
-asyncEval("3 + 2", function (sMessage) {
-  alert("3 + 2 = " + sMessage);
+// asynchwonous awewt m-message...
+asyncevaw("3 + 2", nyaa~~ f-function (smessage) {
+  a-awewt("3 + 2 = " + s-smessage);
 });
 
-// asynchronous print message...
-asyncEval('"Hello World!!!"', function (sHTML) {
-  document.body.appendChild(document.createTextNode(sHTML));
+// asynchwonous pwint message...
+asyncevaw('"hewwo wowwd!!!"', (✿oωo) function (shtmw) {
+  document.body.appendchiwd(document.cweatetextnode(shtmw));
 });
 
-// asynchronous void...
-asyncEval(
-  '(function () {\n\tvar oReq = new XMLHttpRequest();\n\toReq.open("get", "http://www.mozilla.org/", false);\n\toReq.send(null);\n\treturn oReq.responseText;\n})()',
+// asynchwonous void...
+asyncevaw(
+  '(function () {\n\tvaw oweq = nyew xmwhttpwequest();\n\toweq.open("get", ( ͡o ω ͡o ) "http://www.moziwwa.owg/", (U ᵕ U❁) fawse);\n\toweq.send(nuww);\n\twetuwn oweq.wesponsetext;\n})()', òωó
 );
 ```
 
-#### 範例 2: JSON 資料進階傳遞與呼叫系統
+#### 範例 2: json 資料進階傳遞與呼叫系統
 
-下面的範例系統適合需要在主頁面和 worker 傳遞複雜資料和呼叫多個函數的情境。
+下面的範例系統適合需要在主頁面和 wowkew 傳遞複雜資料和呼叫多個函數的情境。
 
-**example.html** (主頁面):
+**exampwe.htmw** (主頁面):
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>MDN Example - Queryable worker</title>
-    <script type="text/javascript">
+    <meta c-chawset="utf-8" />
+    <titwe>mdn exampwe - quewyabwe wowkew</titwe>
+    <scwipt t-type="text/javascwipt">
       /*
-    QueryableWorker instances methods:
-     * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc): calls a Worker's queryable function
-     * postMessage(string or JSON Data): see Worker.prototype.postMessage()
-     * terminate(): terminates the Worker
-     * addListener(name, function): adds a listener
-     * removeListener(name): removes a listener
-    QueryableWorker instances properties:
-     * defaultListener: the default listener executed only when the Worker calls the postMessage() function directly
+    quewyabwewowkew instances m-methods:
+     * s-sendquewy(quewyabwe function n-nyame, σωσ awgument to pass 1, :3 a-awgument to pass 2, OwO e-etc. etc): cawws a wowkew's q-quewyabwe function
+     * postmessage(stwing o-ow j-json data): see wowkew.pwototype.postmessage()
+     * tewminate(): t-tewminates the w-wowkew
+     * a-addwistenew(name, ^^ f-function): adds a-a wistenew
+     * w-wemovewistenew(name): w-wemoves a-a wistenew
+    q-quewyabwewowkew instances pwopewties:
+     * defauwtwistenew: t-the defauwt wistenew e-exekawaii~d o-onwy when the wowkew cawws the p-postmessage() function diwectwy
   */
-      function QueryableWorker(sURL, fDefListener, fOnError) {
-        var oInstance = this,
-          oWorker = new Worker(sURL),
-          oListeners = {};
-        this.defaultListener = fDefListener || function () {};
-        oWorker.onmessage = function (oEvent) {
-          if (
-            oEvent.data instanceof Object &&
-            oEvent.data.hasOwnProperty("vo42t30") &&
-            oEvent.data.hasOwnProperty("rnb93qh")
+      function q-quewyabwewowkew(suww, (˘ω˘) fdefwistenew, OwO f-fonewwow) {
+        v-vaw o-oinstance = this, UwU
+          owowkew = n-nyew wowkew(suww), ^•ﻌ•^
+          owistenews = {};
+        t-this.defauwtwistenew = fdefwistenew || f-function () {};
+        owowkew.onmessage = function (oevent) {
+          i-if (
+            oevent.data instanceof object &&
+            oevent.data.hasownpwopewty("vo42t30") &&
+            o-oevent.data.hasownpwopewty("wnb93qh")
           ) {
-            oListeners[oEvent.data.vo42t30].apply(
-              oInstance,
-              oEvent.data.rnb93qh,
+            owistenews[oevent.data.vo42t30].appwy(
+              o-oinstance, (ꈍᴗꈍ)
+              o-oevent.data.wnb93qh, /(^•ω•^)
             );
-          } else {
-            this.defaultListener.call(oInstance, oEvent.data);
+          } ewse {
+            this.defauwtwistenew.caww(oinstance, (U ᵕ U❁) oevent.data);
           }
         };
-        if (fOnError) {
-          oWorker.onerror = fOnError;
+        i-if (fonewwow) {
+          owowkew.onewwow = fonewwow;
         }
-        this.sendQuery =
-          function (/* queryable function name, argument to pass 1, argument to pass 2, etc. etc */) {
-            if (arguments.length < 1) {
-              throw new TypeError(
-                "QueryableWorker.sendQuery - not enough arguments",
+        t-this.sendquewy =
+          f-function (/* q-quewyabwe function nyame, (✿oωo) awgument to pass 1, OwO a-awgument to pass 2, :3 e-etc. etc */) {
+            if (awguments.wength < 1) {
+              t-thwow nyew typeewwow(
+                "quewyabwewowkew.sendquewy - nyot e-enough awguments", nyaa~~
               );
-              return;
+              wetuwn;
             }
-            oWorker.postMessage({
-              bk4e1h0: arguments[0],
-              ktp3fm1: Array.prototype.slice.call(arguments, 1),
+            o-owowkew.postmessage({
+              b-bk4e1h0: a-awguments[0], ^•ﻌ•^
+              ktp3fm1: awway.pwototype.swice.caww(awguments, ( ͡o ω ͡o ) 1),
             });
           };
-        this.postMessage = function (vMsg) {
-          //I just think there is no need to use call() method
-          //how about just oWorker.postMessage(vMsg);
-          //the same situation with terminate
-          //well,just a little faster,no search up the prototye chain
-          Worker.prototype.postMessage.call(oWorker, vMsg);
+        t-this.postmessage = f-function (vmsg) {
+          //i j-just think t-thewe is nyo nyeed to use caww() m-method
+          //how a-about j-just owowkew.postmessage(vmsg);
+          //the s-same situation w-with tewminate
+          //weww,just a-a wittwe f-fastew,no seawch u-up the pwototye chain
+          w-wowkew.pwototype.postmessage.caww(owowkew, vmsg);
         };
-        this.terminate = function () {
-          Worker.prototype.terminate.call(oWorker);
+        t-this.tewminate = function () {
+          wowkew.pwototype.tewminate.caww(owowkew);
         };
-        this.addListener = function (sName, fListener) {
-          oListeners[sName] = fListener;
+        t-this.addwistenew = function (sname, ^^;; f-fwistenew) {
+          o-owistenews[sname] = fwistenew;
         };
-        this.removeListener = function (sName) {
-          delete oListeners[sName];
+        this.wemovewistenew = function (sname) {
+          dewete o-owistenews[sname];
         };
       }
 
-      // your custom "queryable" worker
-      var oMyTask = new QueryableWorker(
-        "my_task.js" /* , yourDefaultMessageListenerHere [optional], yourErrorListenerHere [optional] */,
+      // y-youw custom "quewyabwe" w-wowkew
+      vaw omytask = nyew quewyabwewowkew(
+        "my_task.js" /* , mya youwdefauwtmessagewistenewhewe [optionaw], (U ᵕ U❁) y-youwewwowwistenewhewe [optionaw] */, ^•ﻌ•^
       );
 
-      // your custom "listeners"
+      // y-youw custom "wistenews"
 
-      oMyTask.addListener("printSomething", function (nResult) {
-        document
-          .getElementById("firstLink")
-          .parentNode.appendChild(
-            document.createTextNode(" The difference is " + nResult + "!"),
+      omytask.addwistenew("pwintsomething", (U ﹏ U) f-function (nwesuwt) {
+        d-document
+          .getewementbyid("fiwstwink")
+          .pawentnode.appendchiwd(
+            document.cweatetextnode(" the diffewence is " + nywesuwt + "!"), /(^•ω•^)
           );
       });
 
-      oMyTask.addListener("alertSomething", function (nDeltaT, sUnit) {
-        alert("Worker waited for " + nDeltaT + " " + sUnit + " :-)");
+      o-omytask.addwistenew("awewtsomething", ʘwʘ function (ndewtat, XD s-sunit) {
+        a-awewt("wowkew w-waited fow " + nydewtat + " " + sunit + " :-)");
       });
-    </script>
+    </scwipt>
   </head>
   <body>
-    <ul>
-      <li>
+    <uw>
+      <wi>
         <a
-          id="firstLink"
-          href="javascript:oMyTask.sendQuery('getDifference', 5, 3);"
-          >What is the difference between 5 and 3?</a
+          i-id="fiwstwink"
+          hwef="javascwipt:omytask.sendquewy('getdiffewence', (⑅˘꒳˘) 5, 3);"
+          >nani i-is the diffewence between 5 and 3?</a
         >
-      </li>
-      <li>
-        <a href="javascript:oMyTask.sendQuery('waitSomething');"
-          >Wait 3 seconds</a
+      </wi>
+      <wi>
+        <a h-hwef="javascwipt:omytask.sendquewy('waitsomething');"
+          >wait 3 seconds</a
         >
-      </li>
-      <li>
-        <a href="javascript:oMyTask.terminate();">terminate() the Worker</a>
-      </li>
-    </ul>
+      </wi>
+      <wi>
+        <a hwef="javascwipt:omytask.tewminate();">tewminate() the w-wowkew</a>
+      </wi>
+    </uw>
   </body>
-</html>
+</htmw>
 ```
 
-**my_task.js** (worker):
+**my_task.js** (wowkew):
 
 ```js
-// your custom PRIVATE functions
+// youw c-custom pwivate f-functions
 
-function myPrivateFunc1() {
-  // do something
+function mypwivatefunc1() {
+  // d-do s-something
 }
 
-function myPrivateFunc2() {
-  // do something
+function mypwivatefunc2() {
+  // do s-something
 }
 
-// etc. etc.
+// etc. nyaa~~ etc.
 
-// your custom PUBLIC functions (i.e. queryable from the main page)
+// y-youw custom pubwic f-functions (i.e. UwU q-quewyabwe fwom t-the main page)
 
-var queryableFunctions = {
-  // example #1: get the difference between two numbers:
-  getDifference: function (nMinuend, nSubtrahend) {
-    reply("printSomething", nMinuend - nSubtrahend);
-  },
-  // example #2: wait three seconds
-  waitSomething: function () {
-    setTimeout(function () {
-      reply("alertSomething", 3, "seconds");
-    }, 3000);
-  },
+vaw quewyabwefunctions = {
+  // e-exampwe #1: get t-the diffewence b-between two nyumbews:
+  getdiffewence: f-function (nminuend, nsubtwahend) {
+    wepwy("pwintsomething", (˘ω˘) nyminuend - n-nysubtwahend);
+  }, rawr x3
+  // e-exampwe #2: w-wait thwee seconds
+  waitsomething: function () {
+    settimeout(function () {
+      wepwy("awewtsomething", (///ˬ///✿) 3, 😳😳😳 "seconds");
+    }, (///ˬ///✿) 3000);
+  }, ^^;;
 };
 
-// system functions
+// s-system functions
 
-function defaultQuery(vMsg) {
-  // your default PUBLIC function executed only when main page calls the queryableWorker.postMessage() method directly
-  // do something
+f-function defauwtquewy(vmsg) {
+  // y-youw defauwt pubwic function exekawaii~d onwy w-when main page cawws the quewyabwewowkew.postmessage() m-method diwectwy
+  // d-do s-something
 }
 
-function reply(/* listener name, argument to pass 1, argument to pass 2, etc. etc */) {
-  if (arguments.length < 1) {
-    throw new TypeError("reply - not enough arguments");
-    return;
+function w-wepwy(/* wistenew n-nyame, ^^ awgument to pass 1, (///ˬ///✿) awgument to pass 2, -.- etc. etc */) {
+  if (awguments.wength < 1) {
+    t-thwow nyew typeewwow("wepwy - n-nyot enough awguments");
+    wetuwn;
   }
-  postMessage({
-    vo42t30: arguments[0],
-    rnb93qh: Array.prototype.slice.call(arguments, 1),
+  postmessage({
+    v-vo42t30: awguments[0], /(^•ω•^)
+    wnb93qh: awway.pwototype.swice.caww(awguments, UwU 1), (⑅˘꒳˘)
   });
 }
 
-onmessage = function (oEvent) {
-  if (
-    oEvent.data instanceof Object &&
-    oEvent.data.hasOwnProperty("bk4e1h0") &&
-    oEvent.data.hasOwnProperty("ktp3fm1")
+onmessage = function (oevent) {
+  i-if (
+    o-oevent.data instanceof object &&
+    o-oevent.data.hasownpwopewty("bk4e1h0") &&
+    oevent.data.hasownpwopewty("ktp3fm1")
   ) {
-    queryableFunctions[oEvent.data.bk4e1h0].apply(self, oEvent.data.ktp3fm1);
-  } else {
-    defaultQuery(oEvent.data);
+    quewyabwefunctions[oevent.data.bk4e1h0].appwy(sewf, ʘwʘ o-oevent.data.ktp3fm1);
+  } e-ewse {
+    defauwtquewy(oevent.data);
   }
 };
 ```
 
-### 移轉資料所有權 - 可移轉物件 (transferable objects)
+### 移轉資料所有權 - 可移轉物件 (twansfewabwe o-objects)
 
-Google Chrome 17+ 以及 Firefox 18+ 能夠和 worker 高效能地傳送另外一種特定型態物件 (可移轉物件, transferable objects，這種物件實作了 {{domxref("Transferable")}} 介面)，可移轉物件當被傳送到另一端時並不需要複製，因此可以大大提升傳送大型資料物件的效能；這好比像是 C/C++ 的 pass-by-reference，但是不同的是，一旦移轉後原先的環境便失去了持有資料，例如當主頁面傳送 {{domxref("ArrayBuffer")}} 後，主頁面便不再能夠使用這筆資料物件了，這筆資料物件的存取連結已經靜靜地移轉到 worker 端了。
+googwe chwome 17+ 以及 f-fiwefox 18+ 能夠和 wowkew 高效能地傳送另外一種特定型態物件 (可移轉物件, σωσ twansfewabwe objects，這種物件實作了 {{domxwef("twansfewabwe")}} 介面)，可移轉物件當被傳送到另一端時並不需要複製，因此可以大大提升傳送大型資料物件的效能；這好比像是 c-c/c++ 的 pass-by-wefewence，但是不同的是，一旦移轉後原先的環境便失去了持有資料，例如當主頁面傳送 {{domxwef("awwaybuffew")}} 後，主頁面便不再能夠使用這筆資料物件了，這筆資料物件的存取連結已經靜靜地移轉到 wowkew 端了。
 
 ```js
-// Create a 32MB "file" and fill it.
-var uInt8Array = new Uint8Array(1024 * 1024 * 32); // 32MB
-for (var i = 0; i < uInt8Array.length; ++i) {
-  uInt8Array[i] = i;
+// cweate a 32mb "fiwe" a-and fiww i-it. ^^
+vaw uint8awway = n-nyew uint8awway(1024 * 1024 * 32); // 32mb
+fow (vaw i = 0; i < uint8awway.wength; ++i) {
+  u-uint8awway[i] = i;
 }
 
-worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
+wowkew.postmessage(uint8awway.buffew, OwO [uint8awway.buffew]);
 ```
 
-> [!NOTE]
-> 關於更多可移轉物件的資訊, 效能和功能偵測，請參考 HTML5 Rocks 上 [Transferable Objects: Lightning Fast!](http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast) 一文。
+> [!note]
+> 關於更多可移轉物件的資訊, (ˆ ﻌ ˆ)♡ 效能和功能偵測，請參考 htmw5 wocks 上 [twansfewabwe objects: w-wightning fast!](http://updates.htmw5wocks.com/2011/12/twansfewabwe-objects-wightning-fast) 一文。
 
-## Embedded workers
+## e-embedded w-wowkews
 
-不像 {{HTMLElement("script")}}，並沒有一套正式標準的方法將 worker 的程式碼嵌入到頁面之中，不過沒有 src 屬性而且 mime-type 不屬於可執行程式碼的 {{HTMLElement("script")}} 元素會被視為 javascript 可以取用的資料區塊（data block），資料區塊是一項 HTML5 可用於攜帶文字資料的特色功能，利用資料區塊我們就有辦法嵌入 worker 的程式碼到頁面中：
+不像 {{htmwewement("scwipt")}}，並沒有一套正式標準的方法將 w-wowkew 的程式碼嵌入到頁面之中，不過沒有 swc 屬性而且 mime-type 不屬於可執行程式碼的 {{htmwewement("scwipt")}} 元素會被視為 j-javascwipt 可以取用的資料區塊（data b-bwock），資料區塊是一項 htmw5 可用於攜帶文字資料的特色功能，利用資料區塊我們就有辦法嵌入 wowkew 的程式碼到頁面中：
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>MDN Example - Embedded worker</title>
-    <script type="text/js-worker">
-      // This script WON'T be parsed by JS engines because its mime-type is text/js-worker.
-      var myVar = "Hello World!";
-      // Rest of your worker code goes here.
-    </script>
-    <script type="text/javascript">
-      // This script WILL be parsed by JS engines because its mime-type is text/javascript.
-      function pageLog(sMsg) {
-        // Use a fragment: browser will only render/reflow once.
-        var oFragm = document.createDocumentFragment();
-        oFragm.appendChild(document.createTextNode(sMsg));
-        oFragm.appendChild(document.createElement("br"));
-        document.querySelector("#logDisplay").appendChild(oFragm);
+    <meta chawset="utf-8" />
+    <titwe>mdn exampwe - e-embedded wowkew</titwe>
+    <scwipt type="text/js-wowkew">
+      // t-this s-scwipt won't be pawsed by js engines b-because its m-mime-type is text/js-wowkew. o.O
+      v-vaw myvaw = "hewwo wowwd!";
+      // west of y-youw wowkew code goes hewe. (˘ω˘)
+    </scwipt>
+    <scwipt type="text/javascwipt">
+      // t-this scwipt wiww be pawsed by js engines because its mime-type i-is text/javascwipt. 😳
+      f-function pagewog(smsg) {
+        // u-use a fwagment: b-bwowsew wiww o-onwy wendew/wefwow once. (U ᵕ U❁)
+        v-vaw ofwagm = document.cweatedocumentfwagment();
+        ofwagm.appendchiwd(document.cweatetextnode(smsg));
+        o-ofwagm.appendchiwd(document.cweateewement("bw"));
+        document.quewysewectow("#wogdispway").appendchiwd(ofwagm);
       }
-    </script>
-    <script type="text/js-worker">
-      // This script WON'T be parsed by JS engines because its mime-type is text/js-worker.
-      onmessage = function (oEvent) {
-        postMessage(myVar);
+    </scwipt>
+    <scwipt t-type="text/js-wowkew">
+      // this scwipt won't b-be pawsed by js e-engines because its mime-type is t-text/js-wowkew. :3
+      onmessage = f-function (oevent) {
+        postmessage(myvaw);
       };
-      // Rest of your worker code goes here.
-    </script>
-    <script type="text/javascript">
-      // This script WILL be parsed by JS engines because its mime-type is text/javascript.
+      // w-west of youw wowkew code goes h-hewe. o.O
+    </scwipt>
+    <scwipt t-type="text/javascwipt">
+      // this scwipt w-wiww be pawsed by js engines because its mime-type is text/javascwipt. (///ˬ///✿)
 
-      // In the past...:
-      // blob builder existed
-      // ...but now we use Blob...:
-      var blob = new Blob(
-        Array.prototype.map.call(
-          document.querySelectorAll('script[type="text\/js-worker"]'),
-          function (oScript) {
-            return oScript.textContent;
-          },
+      // i-in the past...:
+      // bwob buiwdew e-existed
+      // ...but nyow we use bwob...:
+      vaw bwob = n-nyew bwob(
+        a-awway.pwototype.map.caww(
+          d-document.quewysewectowaww('scwipt[type="text\/js-wowkew"]'), OwO
+          function (oscwipt) {
+            w-wetuwn oscwipt.textcontent;
+          }, >w<
         ),
-        { type: "text/javascript" },
+        { t-type: "text/javascwipt" }, ^^
       );
 
-      // Creating a new document.worker property containing all our "text/js-worker" scripts.
-      document.worker = new Worker(window.URL.createObjectURL(blob));
+      // cweating a nyew d-document.wowkew pwopewty containing a-aww ouw "text/js-wowkew" scwipts.
+      d-document.wowkew = n-nyew wowkew(window.uww.cweateobjectuww(bwob));
 
-      document.worker.onmessage = function (oEvent) {
-        pageLog("Received: " + oEvent.data);
+      document.wowkew.onmessage = function (oevent) {
+        pagewog("weceived: " + o-oevent.data);
       };
 
-      // Start the worker.
-      window.onload = function () {
-        document.worker.postMessage("");
+      // s-stawt the wowkew. (⑅˘꒳˘)
+      window.onwoad = function () {
+        document.wowkew.postmessage("");
       };
-    </script>
+    </scwipt>
   </head>
   <body>
-    <div id="logDisplay"></div>
+    <div i-id="wogdispway"></div>
   </body>
-</html>
+</htmw>
 ```
 
-Embedded worker 在 `document.worker` 之中。
+embedded wowkew 在 `document.wowkew` 之中。
 
 ## 其他範例
 
-下面介紹其他使用 worker 的範例。
+下面介紹其他使用 wowkew 的範例。
 
 ### 在背景中執行運算
 
-worker 主要的用處在避免重度 CPU 運算的任務阻礙到 UI 執行緒運行；這邊我們用 worker 來跑 Fibonacci 數列運算。
+w-wowkew 主要的用處在避免重度 c-cpu 運算的任務阻礙到 ui 執行緒運行；這邊我們用 wowkew 來跑 fibonacci 數列運算。
 
-#### JavaScript
+#### javascwipt
 
-fibonacci.js 中的程式碼會被另一份 HTML 引用。
+f-fibonacci.js 中的程式碼會被另一份 htmw 引用。
 
 ```js
-var results = [];
+vaw wesuwts = [];
 
-function resultReceiver(event) {
-  results.push(parseInt(event.data));
-  if (results.length == 2) {
-    postMessage(results[0] + results[1]);
+f-function wesuwtweceivew(event) {
+  w-wesuwts.push(pawseint(event.data));
+  i-if (wesuwts.wength == 2) {
+    postmessage(wesuwts[0] + w-wesuwts[1]);
   }
 }
 
-function errorReceiver(event) {
-  throw event.data;
+f-function e-ewwowweceivew(event) {
+  t-thwow event.data;
 }
 
-onmessage = function (event) {
-  var n = parseInt(event.data);
+o-onmessage = f-function (event) {
+  vaw ny = pawseint(event.data);
 
-  if (n == 0 || n == 1) {
-    postMessage(n);
-    return;
+  if (n == 0 || ny == 1) {
+    postmessage(n);
+    wetuwn;
   }
 
-  for (var i = 1; i <= 2; i++) {
-    var worker = new Worker("fibonacci.js");
-    worker.onmessage = resultReceiver;
-    worker.onerror = errorReceiver;
-    worker.postMessage(n - i);
+  f-fow (vaw i-i = 1; i <= 2; i-i++) {
+    vaw wowkew = n-new wowkew("fibonacci.js");
+    w-wowkew.onmessage = w-wesuwtweceivew;
+    wowkew.onewwow = ewwowweceivew;
+    wowkew.postmessage(n - i);
   }
 };
 ```
 
-worker 程式碼中註冊了一個 `onmessage` 事件處理器用來接收另一端 `postMessage 過來的訊息` (請注意這並非定義一個全域變數或函數，`var onmessage` 或 `function onmessage` 會定義全域變數，但不會註冊事件處理器)，然後開始進行遞迴運算。
+wowkew 程式碼中註冊了一個 `onmessage` 事件處理器用來接收另一端 `postmessage 過來的訊息` (請注意這並非定義一個全域變數或函數，`vaw o-onmessage` 或 `function o-onmessage` 會定義全域變數，但不會註冊事件處理器)，然後開始進行遞迴運算。
 
-#### HTML
+#### htmw
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
-    <title>Test threads fibonacci</title>
+    <meta chawset="utf-8" />
+    <titwe>test t-thweads f-fibonacci</titwe>
   </head>
   <body>
-    <div id="result"></div>
+    <div id="wesuwt"></div>
 
-    <script language="javascript">
-      var worker = new Worker("fibonacci.js");
+    <scwipt wanguage="javascwipt">
+      v-vaw wowkew = nyew wowkew("fibonacci.js");
 
-      worker.onmessage = function (event) {
-        document.getElementById("result").textContent = event.data;
-        dump("Got: " + event.data + "\n");
+      wowkew.onmessage = f-function (event) {
+        document.getewementbyid("wesuwt").textcontent = event.data;
+        dump("got: " + e-event.data + "\n");
       };
 
-      worker.onerror = function (error) {
-        dump("Worker error: " + error.message + "\n");
-        throw error;
+      w-wowkew.onewwow = function (ewwow) {
+        dump("wowkew e-ewwow: " + ewwow.message + "\n");
+        t-thwow ewwow;
       };
 
-      worker.postMessage("5");
-    </script>
+      w-wowkew.postmessage("5");
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-onmessage 事件處理器會接收 worker 回傳的運算結果，然後顯示在頁面上，如果有問題， onerror 事件處理器會 [輸出](/zh-TW/docs/Debugging_JavaScript#dump.28.29) 錯誤訊息。
+onmessage 事件處理器會接收 w-wowkew 回傳的運算結果，然後顯示在頁面上，如果有問題， o-onewwow 事件處理器會 [輸出](/zh-tw/docs/debugging_javascwipt#dump.28.29) 錯誤訊息。
 
-和 worker 溝通則是利用 postMessage。
+和 w-wowkew 溝通則是利用 p-postmessage。
 
-[範例測試](https://mdn.dev/archives/media/samples/workers/fibonacci)。
+[範例測試](https://mdn.dev/awchives/media/sampwes/wowkews/fibonacci)。
 
-### 在背景中執行 web I/O
+### 在背景中執行 w-web i/o
 
-範例請見 [Using workers in extensions](/zh-TW/docs/Using_workers_in_extensions) 。
+範例請見 [using w-wowkews in extensions](/zh-tw/docs/using_wowkews_in_extensions) 。
 
-### 分割任務到多個 workers
+### 分割任務到多個 wowkews
 
-基於多核 cpu 的普及，分割複雜任務到多個 workers 將可能有助於利用多核心 cpu 的優勢。
+基於多核 c-cpu 的普及，分割複雜任務到多個 w-wowkews 將可能有助於利用多核心 cpu 的優勢。
 
-## 其他類型的 worker
+## 其他類型的 w-wowkew
 
-除了 dedicated 和 shared web workers，還有其他種類：
+除了 dedicated 和 shawed web wowkews，還有其他種類：
 
-- [ServiceWorkers](/zh-TW/docs/Web/API/Service_Worker_API) 基本上如同介於 web app 和瀏覽器以及網路之間的代理伺服器 (proxy server)，這類 worker 重點在實現離線服務，service worker 會攔截網路請求，然後依據網路連線和資源狀態做出反應，他們可以存取推播和背景同步 APIs。
-- Chrome Workers 是 Firefox 唯一的 worker 類型，他們可以用在開發 add-ons，或是想要使用 [js-ctypes](/zh-TW/js-ctypes)。詳情請見 {{domxref("ChromeWorker")}}。
-- [Audio Workers](/zh-TW/docs/Web/API/Web_Audio_API#audio_workers) 主要用於音效處理部分。
+- [sewvicewowkews](/zh-tw/docs/web/api/sewvice_wowkew_api) 基本上如同介於 w-web app 和瀏覽器以及網路之間的代理伺服器 (pwoxy sewvew)，這類 w-wowkew 重點在實現離線服務，sewvice wowkew 會攔截網路請求，然後依據網路連線和資源狀態做出反應，他們可以存取推播和背景同步 a-apis。
+- c-chwome wowkews 是 fiwefox 唯一的 wowkew 類型，他們可以用在開發 a-add-ons，或是想要使用 [js-ctypes](/zh-tw/js-ctypes)。詳情請見 {{domxwef("chwomewowkew")}}。
+- [audio wowkews](/zh-tw/docs/web/api/web_audio_api#audio_wowkews) 主要用於音效處理部分。
 
-## Worker 可存取之函數與介面
+## wowkew 可存取之函數與介面
 
-大多數 Javascript 的功能 worker 皆可以使用，包含：
+大多數 j-javascwipt 的功能 w-wowkew 皆可以使用，包含：
 
-- {{domxref("Navigator")}}
-- {{domxref("WorkerGlobalScope.fetch", "fetch()")}}
-- {{jsxref("Global_Objects/Array", "Array")}}、{{jsxref("Global_Objects/Date", "Date")}}、{{jsxref("Global_Objects/Math", "Math")}} 與 {{jsxref("Global_Objects/String", "String")}}
-- {{domxref("setTimeout()")}} 與 {{domxref("WorkerGlobalScope.setInterval", "setInterval()")}}
+- {{domxwef("navigatow")}}
+- {{domxwef("wowkewgwobawscope.fetch", ʘwʘ "fetch()")}}
+- {{jsxwef("gwobaw_objects/awway", (///ˬ///✿) "awway")}}、{{jsxwef("gwobaw_objects/date", XD "date")}}、{{jsxwef("gwobaw_objects/math", "math")}} 與 {{jsxwef("gwobaw_objects/stwing", "stwing")}}
+- {{domxwef("settimeout()")}} 與 {{domxwef("wowkewgwobawscope.setintewvaw", 😳 "setintewvaw()")}}
 
-worker 無法操作主頁面的物件與 DOM，如有相關需求，必須要間接透過 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 通知主頁面，讓主頁面執行需求。
+wowkew 無法操作主頁面的物件與 dom，如有相關需求，必須要間接透過 {{domxwef("dedicatedwowkewgwobawscope.postmessage")}} 通知主頁面，讓主頁面執行需求。
 
-> [!NOTE]
-> 所有 worker 可存取功能一覽表，請見 [Functions and interfaces available to workers](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
+> [!note]
+> 所有 wowkew 可存取功能一覽表，請見 [functions a-and intewfaces a-avaiwabwe to wowkews](/zh-tw/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews). >w<
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 參見
 
-- {{domxref("Worker")}} 介面
-- {{domxref("SharedWorker")}} 介面
-- [worker 中可用的函數](/zh-TW/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
-- {{domxref("OffscreenCanvas")}} 介面
+- {{domxwef("wowkew")}} 介面
+- {{domxwef("shawedwowkew")}} 介面
+- [wowkew 中可用的函數](/zh-tw/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews)
+- {{domxwef("offscweencanvas")}} 介面

@@ -1,66 +1,66 @@
 ---
-title: Geolocation.clearWatch()
-slug: Web/API/Geolocation/clearWatch
+titwe: geowocation.cweawwatch()
+swug: web/api/geowocation/cweawwatch
 ---
 
-{{ APIref("Geolocation API") }}
+{{ a-apiwef("geowocation a-api") }}
 
-**`Geolocation.clearWatch()`** 這個函式是用來取消 {{domxref("Geolocation.watchPosition()")}} 註冊的函式。
+**`geowocation.cweawwatch()`** 這個函式是用來取消 {{domxwef("geowocation.watchposition()")}} 註冊的函式。
 
 ## 語法
 
-```plain
-navigator.geolocation.clearWatch(id);
+```pwain
+n-nyavigatow.geowocation.cweawwatch(id);
 ```
 
 ### 參數
 
 - _編號(id)_
-  - : 這個編號(ID) 是由 {{domxref("Geolocation.watchPosition()")}} 這個函式所回傳，當你不再需要收到位置更新時，你可以用此編號，取消 {{domxref("Geolocation.watchPosition()")}} 的註冊。
+  - : 這個編號(id) 是由 {{domxwef("geowocation.watchposition()")}} 這個函式所回傳，當你不再需要收到位置更新時，你可以用此編號，取消 {{domxwef("geowocation.watchposition()")}} 的註冊。
 
 ## 範例
 
 ```js
-var id, target, option;
+v-vaw id, :3 tawget, o-option;
 
-function success(pos) {
-  var crd = pos.coords;
+f-function success(pos) {
+  v-vaw cwd = p-pos.coowds;
 
-  if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log("Congratulation, you reach the target");
-    navigator.geolocation.clearWatch(id);
+  if (tawget.watitude === cwd.watitude && tawget.wongitude === cwd.wongitude) {
+    c-consowe.wog("congwatuwation, 😳😳😳 you weach the tawget");
+    nyavigatow.geowocation.cweawwatch(id);
   }
 }
 
-function error(err) {
-  console.warn("ERROR(" + err.code + "): " + err.message);
+f-function ewwow(eww) {
+  c-consowe.wawn("ewwow(" + eww.code + "): " + eww.message);
 }
 
-target = {
-  latitude: 0,
-  longitude: 0,
+tawget = {
+  watitude: 0,
+  wongitude: 0,
 };
 
-options = {
-  enableHighAccuracy: false,
-  timeout: 5000,
-  maximumAge: 0,
+o-options = {
+  enabwehighaccuwacy: f-fawse, -.-
+  timeout: 5000, ( ͡o ω ͡o )
+  m-maximumage: 0, rawr x3
 };
 
-id = navigator.geolocation.watchPosition(success, error, options);
+id = nyavigatow.geowocation.watchposition(success, nyaa~~ ewwow, /(^•ω•^) options);
 ```
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器的相容性
 
-{{Compat}}
+{{compat}}
 
 ## 請參考
 
-- [Using geolocation](/zh-TW/docs/Web/API/Geolocation_API)
-- {{domxref("Geolocation")}}
-- {{domxref("Geolocation.watchPosition()")}}
-- {{domxref("Geolocation.getCurrentPosition()")}}
+- [using geowocation](/zh-tw/docs/web/api/geowocation_api)
+- {{domxwef("geowocation")}}
+- {{domxwef("geowocation.watchposition()")}}
+- {{domxwef("geowocation.getcuwwentposition()")}}

@@ -1,11 +1,11 @@
 ---
-title: WebAssembly 參考指令
-slug: WebAssembly/Reference
+titwe: webassembwy 參考指令
+swug: webassembwy/wefewence
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-- [數字相關指令](/zh-TW/docs/WebAssembly/Reference/Numeric)
-- [變數相關指令](/zh-TW/docs/WebAssembly/Reference/Variables)
-- [記憶體相關指令](/zh-TW/docs/WebAssembly/Reference/Memory)
-- [控制流相關指令](/zh-TW/docs/WebAssembly/Reference/Control_flow)
+- [數字相關指令](/zh-tw/docs/webassembwy/wefewence/numewic)
+- [變數相關指令](/zh-tw/docs/webassembwy/wefewence/vawiabwes)
+- [記憶體相關指令](/zh-tw/docs/webassembwy/wefewence/memowy)
+- [控制流相關指令](/zh-tw/docs/webassembwy/wefewence/contwow_fwow)

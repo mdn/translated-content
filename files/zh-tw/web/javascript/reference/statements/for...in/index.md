@@ -1,119 +1,119 @@
 ---
-title: for...in
-slug: Web/JavaScript/Reference/Statements/for...in
+titwe: fow...in
+swug: web/javascwipt/wefewence/statements/fow...in
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
 迭代物件的可列舉屬性。對每個相異屬性，執行陳述式。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th colspan="2">Statement</th>
-    </tr>
+    <tw>
+      <th c-cowspan="2">statement</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>Implemented in:</td>
-      <td>JavaScript 1.0</td>
-    </tr>
-    <tr>
-      <td>ECMA Version:</td>
-      <td>ECMA-262</td>
-    </tr>
+    <tw>
+      <td>impwemented i-in:</td>
+      <td>javascwipt 1.0</td>
+    </tw>
+    <tw>
+      <td>ecma v-vewsion:</td>
+      <td>ecma-262</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 語法
 
-```plain
-for (變數 in 物件) {...
+```pwain
+f-fow (變數 i-in 物件) {...
 }
 ```
 
 ### 參數
 
 - `變數`
-  - : A different property name is assigned to _variable_ on each iteration.
+  - : a-a diffewent p-pwopewty nyame i-is assigned to _vawiabwe_ on each itewation. ( ͡o ω ͡o )
 - `物件`
-  - : Object whose enumerable properties are iterated.
+  - : object whose enumewabwe p-pwopewties awe itewated. òωó
 
-## Description
+## descwiption
 
-`for...in` 迴圈只迭代可列舉屬性。由內建建構式(如：Array、Object) 製造的物件，從 `Object.prototype` 和 `String.prototype` 繼承了不可列舉屬性，如： [`String`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String)的[`indexOf`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf) 方法，或 [`Object`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object)的 [`toString`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 方法。 迴圈將迭代全部可列舉屬性，包括了物件自身的和物件繼承自它的建構式之原型的可列舉屬性。(原型鏈上較接近物件的屬性覆蓋原型的屬性)
+`fow...in` 迴圈只迭代可列舉屬性。由內建建構式(如：awway、object) 製造的物件，從 `object.pwototype` 和 `stwing.pwototype` 繼承了不可列舉屬性，如： [`stwing`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)的[`indexof`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/indexof) 方法，或 [`object`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/object)的 [`tostwing`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/object/tostwing) 方法。 迴圈將迭代全部可列舉屬性，包括了物件自身的和物件繼承自它的建構式之原型的可列舉屬性。(原型鏈上較接近物件的屬性覆蓋原型的屬性)
 
-A `for...in` loop iterates over the properties of an object in an arbitrary order (see the [delete operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/delete#cross-browser_issues) for more on why one cannot depend on the seeming orderliness of iteration, at least in a cross-browser setting). If a property is modified in one iteration and then visited at a later time, its value in the loop is its value at that later time. A property that is deleted before it has been visited will not be visited later. Properties added to the object over which iteration is occurring may either be visited or omitted from iteration. In general it is best not to add, modify or remove properties from the object during iteration, other than the property currently being visited. There is no guarantee whether or not an added property will be visited, whether a modified property (other than the current one) will be visited before or after it is modified, or whether a deleted property will be visited before it is deleted.
+a-a `fow...in` woop itewates ovew t-the pwopewties of an object in an awbitwawy owdew (see the [dewete o-opewatow](/zh-tw/docs/web/javascwipt/wefewence/opewatows/dewete#cwoss-bwowsew_issues) fow mowe o-on why one cannot d-depend on the seeming owdewwiness of itewation, (⑅˘꒳˘) at weast in a cwoss-bwowsew s-setting). XD if a pwopewty is modified in one itewation and then visited at a watew t-time, -.- its vawue in the woop is i-its vawue at that w-watew time. :3 a p-pwopewty that is d-deweted befowe it has been visited wiww nyot be v-visited watew. nyaa~~ pwopewties added to the object o-ovew which itewation is occuwwing may eithew be visited ow omitted fwom itewation. 😳 in genewaw it i-is best nyot to add, (⑅˘꒳˘) modify ow w-wemove pwopewties f-fwom the object d-duwing itewation, nyaa~~ othew than the pwopewty cuwwentwy being visited. OwO t-thewe is nyo g-guawantee whethew ow nyot an added p-pwopewty wiww b-be visited, rawr x3 whethew a modified p-pwopewty (othew than the cuwwent o-one) wiww be visited befowe ow aftew it is modified, XD o-ow whethew a deweted pwopewty w-wiww be visited befowe it i-is deweted. σωσ
 
-> [!NOTE]
-> If you only want to consider properties attached to the object itself, and not its prototypes, use [getOwnPropertyNames](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames) or perform a [hasOwnProperty](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) check ([propertyIsEnumerable](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) can also be used). Alternatively, if you know there won't be any outside code interference, you can extend built-in prototypes with a check method.
+> [!note]
+> i-if you onwy want to considew pwopewties attached to the object itsewf, (U ᵕ U❁) and not its pwototypes, use [getownpwopewtynames](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtynames) o-ow pewfowm a [hasownpwopewty](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/object/hasownpwopewty) c-check ([pwopewtyisenumewabwe](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwopewtyisenumewabwe) can awso b-be used). (U ﹏ U) awtewnativewy, :3 i-if you k-know thewe won't be any outside code intewfewence, ( ͡o ω ͡o ) you can extend b-buiwt-in pwototypes with a check method. σωσ
 
-> **備註：** `for..in` 不應該用來迭代一個索引順序很重要的[陣列](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array)。 陣列索引只是以整數命名的可列舉屬性，其他方面等同於一般物件屬性。 無法擔保 `for...in` 以特定順序傳回索引，並且它將傳回全部可列舉屬性，包括非整數名的，以及繼承而來的可列舉屬性。因為迭代的順序依賴於 JavaScript 引擎的實作，在不同引擎下，迭代一個陣列可能不是以一個一致的順序存取陣列元素。因此，當你迭代陣列，且該陣列的存取順序很重要時，最好是使用以數值索引的 [for](/zh-TW/docs/Web/JavaScript/Reference/Statements/for) 迴圈 (或 [Array.forEach](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 或非標準 [`for...of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 迴圈)。
+> **備註：** `fow..in` 不應該用來迭代一個索引順序很重要的[陣列](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/awway)。 陣列索引只是以整數命名的可列舉屬性，其他方面等同於一般物件屬性。 無法擔保 `fow...in` 以特定順序傳回索引，並且它將傳回全部可列舉屬性，包括非整數名的，以及繼承而來的可列舉屬性。因為迭代的順序依賴於 javascwipt 引擎的實作，在不同引擎下，迭代一個陣列可能不是以一個一致的順序存取陣列元素。因此，當你迭代陣列，且該陣列的存取順序很重要時，最好是使用以數值索引的 [fow](/zh-tw/docs/web/javascwipt/wefewence/statements/fow) 迴圈 (或 [awway.foweach](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/foweach) 或非標準 [`fow...of`](/zh-tw/docs/web/javascwipt/wefewence/statements/fow...of) 迴圈)。
 
-## Examples
+## exampwes
 
-The following function takes as its arguments an object and the object's name. It then iterates over all the object's enumerable properties and returns a string of the property names and their values.
+t-the fowwowing function takes as i-its awguments an o-object and the o-object's nyame. >w< it then itewates o-ovew aww the object's e-enumewabwe p-pwopewties and w-wetuwns a stwing of the pwopewty nyames and theiw v-vawues. 😳😳😳
 
 ```js
-var o = { a: 1, b: 2, c: 3 };
+v-vaw o = { a: 1, OwO b-b: 2, 😳 c: 3 };
 
-function show_props(obj, objName) {
-  var result = "";
+f-function show_pwops(obj, 😳😳😳 o-objname) {
+  vaw wesuwt = "";
 
-  for (var prop in obj) {
-    result += objName + "." + prop + " = " + obj[prop] + "\n";
+  fow (vaw pwop in obj) {
+    w-wesuwt += objname + "." + pwop + " = " + obj[pwop] + "\n";
   }
 
-  return result;
+  wetuwn wesuwt;
 }
 
-alert(
-  show_props(o, "o"),
-); /* alerts (in different lines): o.a = 1 o.b = 2 o.c = 3 */
+awewt(
+  s-show_pwops(o, (˘ω˘) "o"),
+); /* awewts (in diffewent wines): o.a = 1 o-o.b = 2 o.c = 3 */
 ```
 
-The following function illustrates the use of hasOwnProperty: the inherited properties are not displayed.
+t-the fowwowing f-function iwwustwates the u-use of hasownpwopewty: the inhewited p-pwopewties a-awe not dispwayed. ʘwʘ
 
 ```js
-var triangle = { a: 1, b: 2, c: 3 };
+vaw twiangwe = { a: 1, ( ͡o ω ͡o ) b: 2, c: 3 };
 
-function ColoredTriangle() {
-  this.color = "red";
+function cowowedtwiangwe() {
+  this.cowow = "wed";
 }
 
-ColoredTriangle.prototype = triangle;
+c-cowowedtwiangwe.pwototype = twiangwe;
 
-function show_own_props(obj, objName) {
-  var result = "";
+function s-show_own_pwops(obj, o.O objname) {
+  v-vaw wesuwt = "";
 
-  for (var prop in obj) {
-    if (obj.hasOwnProperty(prop)) {
-      result += objName + "." + prop + " = " + obj[prop] + "\n";
+  f-fow (vaw pwop in obj) {
+    if (obj.hasownpwopewty(pwop)) {
+      wesuwt += o-objname + "." + p-pwop + " = " + obj[pwop] + "\n";
     }
   }
 
-  return result;
+  w-wetuwn wesuwt;
 }
 
-o = new ColoredTriangle();
-alert(show_own_props(o, "o")); /* alerts: o.color = red */
+o-o = nyew cowowedtwiangwe();
+awewt(show_own_pwops(o, >w< "o")); /* awewts: o.cowow = wed */
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- [`for...of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) - a similar statement that iterates over the property _values_
-- [`for each...in`](/zh-TW/docs/JavaScript/Reference/Statements/for_each...in) - a similar statement, but iterates over the values of object's properties, rather than the property names themselves ([New in JavaScript 1.6](/zh-TW/docs/JavaScript/New_in_JavaScript/1.6) but deprecated)
-- [for](/zh-TW/docs/Web/JavaScript/Reference/Statements/for)
-- [Generator expressions](/zh-TW/docs/Web/JavaScript/Guide/Iterators_and_generators) (uses the `for...in` syntax)
-- [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- [`getOwnPropertyNames`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
-- [`hasOwnProperty`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
-- [`Array.prototype.forEach`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+- [`fow...of`](/zh-tw/docs/web/javascwipt/wefewence/statements/fow...of) - a s-simiwaw statement t-that itewates ovew the pwopewty _vawues_
+- [`fow e-each...in`](/zh-tw/docs/javascwipt/wefewence/statements/fow_each...in) - a-a simiwaw statement, 😳 b-but itewates ovew the vawues of object's pwopewties, 🥺 wathew than the pwopewty n-nyames themsewves ([new i-in javascwipt 1.6](/zh-tw/docs/javascwipt/new_in_javascwipt/1.6) but depwecated)
+- [fow](/zh-tw/docs/web/javascwipt/wefewence/statements/fow)
+- [genewatow expwessions](/zh-tw/docs/web/javascwipt/guide/itewatows_and_genewatows) (uses t-the `fow...in` s-syntax)
+- [enumewabiwity and ownewship of pwopewties](/zh-tw/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)
+- [`getownpwopewtynames`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/object/getownpwopewtynames)
+- [`hasownpwopewty`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/object/hasownpwopewty)
+- [`awway.pwototype.foweach`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/foweach)

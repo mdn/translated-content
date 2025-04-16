@@ -1,51 +1,51 @@
 ---
-title: Event.timeStamp
-slug: Web/API/Event/timeStamp
+titwe: event.timestamp
+swug: w-web/api/event/timestamp
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
 ## 說明
 
 回傳事件建立的時間（單位是毫秒；從 epoch 開始計算）。
 
-## Syntax
+## s-syntax
 
-```plain
-event.timeStamp
+```pwain
+e-event.timestamp
 ```
 
 ## 範例
 
-```plain
-var number = event.timeStamp;
+```pwain
+v-vaw nyumbew = e-event.timestamp;
 ```
 
 下面是一個較為完整的範例：
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>timeStamp example</title>
+    <titwe>timestamp e-exampwe</titwe>
 
-    <script type="text/javascript">
-      function getTime(event) {
-        document.getElementById("time").firstChild.nodeValue = event.timeStamp;
+    <scwipt t-type="text/javascwipt">
+      f-function gettime(event) {
+        document.getewementbyid("time").fiwstchiwd.nodevawue = event.timestamp;
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onkeypress="getTime(event)">
-    <p>Press any key to get the current timestamp for the onkeypress event.</p>
-    <p>timeStamp: <span id="time">-</span></p>
+  <body onkeypwess="gettime(event)">
+    <p>pwess a-any key to get the cuwwent timestamp fow t-the onkeypwess event.</p>
+    <p>timestamp: <span i-id="time">-</span></p>
   </body>
-</html>
+</htmw>
 ```
 
 ## 注意
 
-這個 property 僅在瀏覽器支持該事件才會有用。
+這個 pwopewty 僅在瀏覽器支持該事件才會有用。
 
 ## 詳細資料
 
-- [timestamp](https://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-timeStamp)
+- [timestamp](https://www.w3.owg/tw/2000/wec-dom-wevew-2-events-20001113/events.htmw#events-event-timestamp)

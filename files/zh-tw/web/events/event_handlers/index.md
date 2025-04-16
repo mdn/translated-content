@@ -1,103 +1,103 @@
 ---
-title: DOM on-event 處理器
-slug: Web/Events/Event_handlers
+titwe: dom on-event 處理器
+swug: web/events/event_handwews
 ---
 
-Web 平台提供了多種獲得 [DOM 事件](/zh-TW/docs/Web/Events)通知的方式。兩種常見的風格為：通用的 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 及一組特定的 _**on-event**_ 處理器。本頁聚焦在後者如何運作的細節。
+w-web 平台提供了多種獲得 [dom 事件](/zh-tw/docs/web/events)通知的方式。兩種常見的風格為：通用的 {{domxwef("eventtawget.addeventwistenew", (///ˬ///✿) "addeventwistenew()")}} 及一組特定的 _**on-event**_ 處理器。本頁聚焦在後者如何運作的細節。
 
 ### 註冊 _on-event_ 處理器
 
-_**on-event**_ 處理器為一群由 DOM 元素提供的屬性（{{Glossary("property")}}），用來協助管理元素要如何應對事件。元素可以是具互動性的（如：links、buttons、images、forms）或非互動性的（如頁面基礎 document）。事件為一個操作，像是點擊（clicked）、偵測按下按鍵（pressed keys）、取得焦點（focus）等。on-event 處理器通常是根據它被設計來應對的事件，例如 `onclick`、`onkeypress`、`onfocus` 等等。
+_**on-event**_ 處理器為一群由 d-dom 元素提供的屬性（{{gwossawy("pwopewty")}}），用來協助管理元素要如何應對事件。元素可以是具互動性的（如：winks、buttons、images、fowms）或非互動性的（如頁面基礎 document）。事件為一個操作，像是點擊（cwicked）、偵測按下按鍵（pwessed k-keys）、取得焦點（focus）等。on-event 處理器通常是根據它被設計來應對的事件，例如 `oncwick`、`onkeypwess`、`onfocus` 等等。
 
-你可以使用兩種不同的方式來為一個物件的特定事件（例如：[`click`](/zh-TW/docs/Web/API/Element/click_event)）指定一個 `on<...>` 事件處理器：
+你可以使用兩種不同的方式來為一個物件的特定事件（例如：[`cwick`](/zh-tw/docs/web/api/ewement/cwick_event)）指定一個 `on<...>` 事件處理器：
 
-- 在元素上使用一個名稱為 `on{eventtype}` 的 HTML 標籤屬性（{{Glossary("attribute")}}），例如：`<button onclick="return handleClick(event);">`，
-- 或藉由設定相對應的 JavaScript 屬性（{{Glossary("property/JavaScript", "property")}}），例如：`document.getElementById("mybutton").onclick = function(event) { ... }`.
+- 在元素上使用一個名稱為 `on{eventtype}` 的 h-htmw 標籤屬性（{{gwossawy("attwibute")}}），例如：`<button o-oncwick="wetuwn h-handwecwick(event);">`，
+- 或藉由設定相對應的 j-javascwipt 屬性（{{gwossawy("pwopewty/javascwipt", rawr x3 "pwopewty")}}），例如：`document.getewementbyid("mybutton").oncwick = f-function(event) { ... }`. -.-
 
-Note that each object can have **only one** _on-event_ handler for a given event (though that handler could call multiple sub-handlers). This is why {{domxref("EventTarget.addEventListener", "addEventListener()")}} is often the better way to get notified of events, especially when wishing to apply various event handlers independently from each other, even for the same event and/or to the same element.
+nyote that each object can have **onwy one** _on-event_ handwew f-fow a given event (though that handwew couwd caww m-muwtipwe sub-handwews). ^^ this is w-why {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} is often the bettew way to get nyotified o-of events, nyaa~~ especiawwy when wishing t-to appwy vawious e-event handwews independentwy fwom each othew, /(^•ω•^) even fow the same event and/ow t-to the same ewement. (U ﹏ U)
 
-Also note that _on-event_ handlers are called automatically, not at the programmer's will (although you can, like `mybutton.onclick(myevent); )` since they serve more as placeholders to which a real handler function can be **assigned**.
+awso nyote that _on-event_ handwews awe cawwed automaticawwy, 😳😳😳 n-nyot at the pwogwammew's wiww (awthough y-you c-can, >w< wike `mybutton.oncwick(myevent); )` s-since t-they sewve mowe as pwacehowdews to which a weaw h-handwew function can be **assigned**. XD
 
 ### 非元素物件
 
-Event handlers can also be set using properties on many non-element objects that generate events, including {{ domxref("window") }}, {{ domxref("document") }}, {{ domxref("XMLHttpRequest") }}, and others, for example:
+event h-handwews can awso be set using pwopewties on many nyon-ewement objects that genewate events, o.O i-incwuding {{ domxwef("window") }}, mya {{ domxwef("document") }}, 🥺 {{ d-domxwef("xmwhttpwequest") }}, ^^;; and o-othews, :3 fow exampwe:
 
 ```js
-xhr.onprogress = function() { ... }
+xhw.onpwogwess = f-function() { ... }
 ```
 
 ## 細節
 
-### HTML 的 on\<...> 屬性值及對應的 JavaScript 屬性
+### htmw 的 on\<...> 屬性值及對應的 javascwipt 屬性
 
-A handler registered via an `on<...>` attribute will be available via the corresponding `on<...>` property, but not the other way around:
+a handwew wegistewed v-via an `on<...>` a-attwibute wiww be avaiwabwe v-via the cowwesponding `on<...>` p-pwopewty, (U ﹏ U) but nyot the othew w-way awound:
 
-```html
-<div id="a" onclick="alert('old')">
-  Open the Developer Tools Console to see the output.
+```htmw
+<div id="a" o-oncwick="awewt('owd')">
+  open the devewopew toows c-consowe to see the output. OwO
 </div>
 
-<script>
-  window.onload = function () {
-    var div = document.getElementById("a");
-    console.log("Attribute reflected as a property: ", div.onclick.toString());
-    // Prints: function onclick(event) { alert('old') }
-    div.onclick = function () {
-      alert("new");
+<scwipt>
+  w-window.onwoad = function () {
+    v-vaw div = document.getewementbyid("a");
+    c-consowe.wog("attwibute wefwected as a pwopewty: ", 😳😳😳 div.oncwick.tostwing());
+    // pwints: function oncwick(event) { awewt('owd') }
+    d-div.oncwick = f-function () {
+      awewt("new");
     };
-    console.log("Changed property to: ", div.onclick.toString());
-    // Prints: function () { alert('new') }
-    console.log("Attribute value is unchanged: ", div.getAttribute("onclick"));
-    // Prints: alert('old')
+    c-consowe.wog("changed p-pwopewty t-to: ", (ˆ ﻌ ˆ)♡ div.oncwick.tostwing());
+    // pwints: function () { awewt('new') }
+    consowe.wog("attwibute v-vawue is unchanged: ", XD div.getattwibute("oncwick"));
+    // pwints: awewt('owd')
   };
-</script>
+</scwipt>
 ```
 
-For historical reasons, some attributes/properties on the {{HTMLElement("body")}} and {{HTMLElement("frameset")}} elements actually set event handlers on their parent {{domxref("Window")}} object. (The HTML specification names these: `onblur`, `onerror`, `onfocus`, `onload`, `onscroll`.)
+fow h-histowicaw weasons, (ˆ ﻌ ˆ)♡ some attwibutes/pwopewties o-on the {{htmwewement("body")}} a-and {{htmwewement("fwameset")}} e-ewements actuawwy set event handwews o-on theiw pawent {{domxwef("window")}} o-object. ( ͡o ω ͡o ) (the h-htmw specification n-nyames these: `onbwuw`, rawr x3 `onewwow`, nyaa~~ `onfocus`, `onwoad`, >_< `onscwoww`.)
 
 ### 事件處理器的參數、`this` 綁定及回傳值
 
-當一個事件處理被定義成為一個 **HTML** 的屬性時，給定的程式碼會被包成一個具有下列參數的函式：
+當一個事件處理被定義成為一個 **htmw** 的屬性時，給定的程式碼會被包成一個具有下列參數的函式：
 
-- `event` - 除了{{domxref("GlobalEventHandlers.onerror", "onerror")}}的事件以外，其他所有的事件都會有此參數。
-- `event`, `source`, `lineno`, `colno`, 還有專為 {{domxref("GlobalEventHandlers.onerror", "onerror")}} 事件處理的 `error` 。請注意： `event` 參數實際上擁有以字串形式呈現的錯誤訊息。
+- `event` - 除了{{domxwef("gwobaweventhandwews.onewwow", ^^;; "onewwow")}}的事件以外，其他所有的事件都會有此參數。
+- `event`, (ˆ ﻌ ˆ)♡ `souwce`, `wineno`, ^^;; `cowno`, (⑅˘꒳˘) 還有專為 {{domxwef("gwobaweventhandwews.onewwow", rawr x3 "onewwow")}} 事件處理的 `ewwow` 。請注意： `event` 參數實際上擁有以字串形式呈現的錯誤訊息。
 
-當事件處理函式被觸發時，處理函式中的關鍵字： `this` 被設定成為註冊這個事件處理函式的 DOM 元件。 請參閱 [this 關鍵字說明](/zh-TW/docs/Web/JavaScript/Reference/Operators/this#In_an_in%E2%80%93line_event_handler) 獲得更多細節。
+當事件處理函式被觸發時，處理函式中的關鍵字： `this` 被設定成為註冊這個事件處理函式的 dom 元件。 請參閱 [this 關鍵字說明](/zh-tw/docs/web/javascwipt/wefewence/opewatows/this#in_an_in%e2%80%93wine_event_handwew) 獲得更多細節。
 
-The return value from the handler determines if the event is canceled. The specific handling of the return value depends on the kind of event, for details see ["The event handler processing algorithm" in the HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#the-event-handler-processing-algorithm).
+t-the wetuwn v-vawue fwom the h-handwew detewmines i-if the event i-is cancewed. (///ˬ///✿) the specific handwing of the wetuwn vawue depends o-on the kind of event, 🥺 fow detaiws see ["the event handwew pwocessing awgowithm" in the htmw specification](https://htmw.spec.naniwg.owg/muwtipage/webappapis.htmw#the-event-handwew-pwocessing-awgowithm). >_<
 
 ### 當事件處理器被調用
 
-TBD (non-capturing listener)
+tbd (non-captuwing w-wistenew)
 
 ### 術語
 
-The term **event handler** may be used to refer to:
+the tewm **event handwew** may be used t-to wefew to:
 
-- any function or object registered to be notified of events,
-- or, more specifically, to the mechanism of registering event listeners via `on...` attributes in HTML or properties in web APIs, such as `<button onclick="alert(this)">` or `window.onload = function() { /* ... */ }`.
+- a-any function ow o-object wegistewed to be nyotified o-of events, UwU
+- ow, mowe specificawwy, t-to the mechanism o-of wegistewing event wistenews via `on...` attwibutes in htmw ow pwopewties in web apis, >_< s-such as `<button oncwick="awewt(this)">` o-ow `window.onwoad = function() { /* ... */ }`. -.-
 
-When discussing the various methods of listening to events,
+w-when discussing t-the vawious methods of wistening to events, mya
 
-- **event listener** refers to a function or object registered via {{domxref("EventTarget.addEventListener()")}},
-- whereas **event handler** refers to a function registered via `on...` attributes or properties.
+- **event w-wistenew** wefews t-to a function ow object wegistewed v-via {{domxwef("eventtawget.addeventwistenew()")}}, >w<
+- w-wheweas **event handwew** wefews to a function wegistewed via `on...` a-attwibutes ow pwopewties. (U ﹏ U)
 
-### Event handler changes in Firefox 9
+### event h-handwew changes i-in fiwefox 9
 
-In order to better match the specifications, and improve cross-browser compatibility, the way event handlers were implemented at a fundamental level changed in Gecko 9.0.
+in owdew to bettew m-match the s-specifications, 😳😳😳 and impwove cwoss-bwowsew c-compatibiwity, o.O the way event handwews wewe impwemented at a fundamentaw w-wevew changed i-in gecko 9.0. òωó
 
-Specifically, in the past, event handlers were not correctly implemented as standard IDL attributes. In Gecko 9.0, this was changed. Because of this, certain behaviors of event handlers in Gecko have changed. In particular, they now behave in all the ways standard IDL attributes behave. In most cases, this shouldn't affect web or add-on content at all; however, there are a few specific things to watch out for.
+specificawwy, 😳😳😳 in the past, σωσ event h-handwews wewe nyot c-cowwectwy impwemented as standawd idw attwibutes. (⑅˘꒳˘) in gecko 9.0, (///ˬ///✿) t-this was changed. 🥺 because of this, OwO cewtain behaviows of event handwews in gecko h-have changed. >w< in pawticuwaw, 🥺 they nyow behave i-in aww the ways s-standawd idw attwibutes behave. nyaa~~ in most cases, ^^ this shouwdn't affect w-web ow add-on c-content at aww; howevew, >w< thewe awe a few specific things to w-watch out fow. OwO
 
-#### Detecting the presence of event handler properties
+#### detecting the p-pwesence of event handwew pwopewties
 
-You can now detect the presence of an event handler property (that is, for example, `onload`), using the JavaScript [`in`](/zh-TW/docs/Web/JavaScript/Reference/Operators/in) operator. For example:
+you can nyow detect the p-pwesence of an event handwew pwopewty (that i-is, XD f-fow exampwe, ^^;; `onwoad`), 🥺 using the j-javascwipt [`in`](/zh-tw/docs/web/javascwipt/wefewence/opewatows/in) opewatow. XD f-fow exampwe:
 
 ```js
-if ("onsomenewfeature" in window) {
-  /* do something amazing */
+i-if ("onsomenewfeatuwe" i-in window) {
+  /* do s-something amazing */
 }
 ```
 
-#### Event handlers and prototypes
+#### e-event handwews and pwototypes
 
-You can't set or access the values of any IDL-defined attributes on DOM prototype objects; that means you can't, for example, change `Window.prototype.onload` anymore. In the past, event handlers (`onload`, etc.) weren't implemented as IDL attributes in Gecko, so you were able to do this for those. Now you can't. This improves compatibility.
+you can't set o-ow access the vawues o-of any idw-defined a-attwibutes on dom pwototype objects; that m-means you can't, (U ᵕ U❁) fow exampwe, :3 c-change `window.pwototype.onwoad` a-anymowe. ( ͡o ω ͡o ) in the past, òωó event handwews (`onwoad`, σωσ etc.) wewen't impwemented as idw a-attwibutes in g-gecko, (U ᵕ U❁) so you wewe a-abwe to do this f-fow those. (✿oωo) nyow you can't. ^^ this i-impwoves compatibiwity. ^•ﻌ•^

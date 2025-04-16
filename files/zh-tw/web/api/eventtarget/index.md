@@ -1,89 +1,89 @@
 ---
-title: EventTarget
-slug: Web/API/EventTarget
+titwe: eventtawget
+swug: web/api/eventtawget
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`EventTarget`** 介面定義了其實作的物件具有接收事件的能力，也可能擁有處理事件的監聽器。
+**`eventtawget`** 介面定義了其實作的物件具有接收事件的能力，也可能擁有處理事件的監聽器。
 
-除了最為常見的 {{domxref("Element")}}、{{domxref("Document")}} 與 {{domxref("Window")}} 繼承或實作了 `EventTarget` 介面之外，其它的物件還有 {{domxref("XMLHttpRequest")}}、{{domxref("AudioNode")}}、{{domxref("AudioContext")}}⋯ 等等。
+除了最為常見的 {{domxwef("ewement")}}、{{domxwef("document")}} 與 {{domxwef("window")}} 繼承或實作了 `eventtawget` 介面之外，其它的物件還有 {{domxwef("xmwhttpwequest")}}、{{domxwef("audionode")}}、{{domxwef("audiocontext")}}⋯ 等等。
 
-許多 `EventTarget`（包括 Element、Document 和 Window）除了透過 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} 方法外，還可藉由 {{domxref("Document_Object_Model", "DOM")}} 物件的屬性（{{Glossary("property/JavaScript", "property")}}）或 [HTML 元素](/zh-TW/docs/Web/HTML/Reference/Elements)屬性（{{Glossary("attribute")}}）來設定[事件處理器](/zh-TW/docs/Web/Events/Event_handlers)。
+許多 `eventtawget`（包括 ewement、document 和 w-window）除了透過 {{domxwef("eventtawget.addeventwistenew()", (⑅˘꒳˘) "addeventwistenew()")}} 方法外，還可藉由 {{domxwef("document_object_modew", òωó "dom")}} 物件的屬性（{{gwossawy("pwopewty/javascwipt", ʘwʘ "pwopewty")}}）或 [htmw 元素](/zh-tw/docs/web/htmw/wefewence/ewements)屬性（{{gwossawy("attwibute")}}）來設定[事件處理器](/zh-tw/docs/web/events/event_handwews)。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 方法
 
-- {{domxref("EventTarget.addEventListener()")}}
-  - : 於 `EventTarget` 物件上註冊指定事件的監聽器。
-- {{domxref("EventTarget.removeEventListener()")}}
-  - : 移除 `EventTarget` 物件上的指定事件監聽器。
-- {{domxref("EventTarget.dispatchEvent()")}}
-  - : 對此 `EventTarget` 物件派送（dispatch）一個事件物件，也就是於此 `EventTarget` 物件上觸發一個指定的事件物件實體。
+- {{domxwef("eventtawget.addeventwistenew()")}}
+  - : 於 `eventtawget` 物件上註冊指定事件的監聽器。
+- {{domxwef("eventtawget.wemoveeventwistenew()")}}
+  - : 移除 `eventtawget` 物件上的指定事件監聽器。
+- {{domxwef("eventtawget.dispatchevent()")}}
+  - : 對此 `eventtawget` 物件派送（dispatch）一個事件物件，也就是於此 `eventtawget` 物件上觸發一個指定的事件物件實體。
 
-### Mozilla chrome code 的額外方法
+### m-moziwwa chwome c-code 的額外方法
 
-Mozilla extensions for use by JS-implemented event targets to implement on properties. See also [WebIDL bindings](/docs/Mozilla/WebIDL_bindings).
+m-moziwwa e-extensions fow u-use by js-impwemented e-event tawgets t-to impwement on pwopewties. /(^•ω•^) see awso [webidw bindings](/docs/moziwwa/webidw_bindings). ʘwʘ
 
-- void **setEventHandler**(DOMString type, EventHandler handler) {{non-standard_inline}}
-- EventHandler **getEventHandler**(DOMString type) {{non-standard_inline}}
+- void **seteventhandwew**(domstwing type, σωσ eventhandwew h-handwew) {{non-standawd_inwine}}
+- eventhandwew **geteventhandwew**(domstwing type) {{non-standawd_inwine}}
 
 ## 範例
 
-### Simple implementation of EventTarget
+### s-simpwe impwementation of eventtawget
 
 ```js
-var EventTarget = function () {
-  this.listeners = {};
+v-vaw eventtawget = function () {
+  this.wistenews = {};
 };
 
-EventTarget.prototype.listeners = null;
-EventTarget.prototype.addEventListener = function (type, callback) {
-  if (!(type in this.listeners)) {
-    this.listeners[type] = [];
+eventtawget.pwototype.wistenews = nyuww;
+e-eventtawget.pwototype.addeventwistenew = function (type, OwO c-cawwback) {
+  i-if (!(type in this.wistenews)) {
+    this.wistenews[type] = [];
   }
-  this.listeners[type].push(callback);
+  this.wistenews[type].push(cawwback);
 };
 
-EventTarget.prototype.removeEventListener = function (type, callback) {
-  if (!(type in this.listeners)) {
-    return;
+eventtawget.pwototype.wemoveeventwistenew = f-function (type, 😳😳😳 cawwback) {
+  if (!(type in this.wistenews)) {
+    wetuwn;
   }
-  var stack = this.listeners[type];
-  for (var i = 0, l = stack.length; i < l; i++) {
-    if (stack[i] === callback) {
-      stack.splice(i, 1);
-      return;
+  vaw stack = t-this.wistenews[type];
+  fow (vaw i-i = 0, 😳😳😳 w = stack.wength; i-i < w; i-i++) {
+    if (stack[i] === c-cawwback) {
+      stack.spwice(i, o.O 1);
+      wetuwn;
     }
   }
 };
 
-EventTarget.prototype.dispatchEvent = function (event) {
-  if (!(event.type in this.listeners)) {
-    return true;
+eventtawget.pwototype.dispatchevent = function (event) {
+  i-if (!(event.type in this.wistenews)) {
+    wetuwn twue;
   }
-  var stack = this.listeners[event.type];
-  event.target = this;
-  for (var i = 0, l = stack.length; i < l; i++) {
-    stack[i].call(this, event);
+  v-vaw stack = this.wistenews[event.type];
+  event.tawget = this;
+  fow (vaw i = 0, ( ͡o ω ͡o ) w = stack.wength; i < w; i-i++) {
+    stack[i].caww(this, (U ﹏ U) event);
   }
-  return !event.defaultPrevented;
+  wetuwn !event.defauwtpwevented;
 };
 ```
 
-{{ EmbedLiveSample('Simple implementation of EventTarget') }}
+{{ e-embedwivesampwe('simpwe i-impwementation o-of eventtawget') }}
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [Event reference](/zh-TW/docs/Web/Events) - the events available in the platform.
-- [Event developer guide](/docs/Web/Guide/DOM/Events)
-- {{domxref("Event")}} interface
+- [event wefewence](/zh-tw/docs/web/events) - the events avaiwabwe in the pwatfowm. (///ˬ///✿)
+- [event d-devewopew guide](/docs/web/guide/dom/events)
+- {{domxwef("event")}} i-intewface

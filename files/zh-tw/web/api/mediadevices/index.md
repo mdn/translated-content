@@ -1,103 +1,103 @@
 ---
-title: MediaDevices
-slug: Web/API/MediaDevices
+titwe: mediadevices
+swug: web/api/mediadevices
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe and s-stweams")}}
 
-<code>MediaDevices</code>介面可以存取連接的媒體輸入設備，像是相機、麥克風，以及螢幕分享。它可以存取任何硬體資源的媒體數據。
+<code>mediadevices</code>介面可以存取連接的媒體輸入設備，像是相機、麥克風，以及螢幕分享。它可以存取任何硬體資源的媒體數據。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 屬性
 
-_繼承父類{{domxref("EventTarget")}}的屬性。_
+_繼承父類{{domxwef("eventtawget")}}的屬性。_
 
 ## 方法
 
-_繼承父類{{domxref("EventTarget")}}的方法。_
+_繼承父類{{domxwef("eventtawget")}}的方法。_
 
-- {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}
+- {{domxwef("mediadevices.enumewatedevices", (✿oωo) "enumewatedevices()")}}
   - : 取得一系列關於系統中可用的媒體輸入和媒體輸出設備的資訊。
-- {{domxref("MediaDevices.getSupportedConstraints", "getSupportedConstraints()")}}
-  - : 返回一個符合 {{domxref("MediaTrackSupportedConstraints")}} 的物件，該物件標示出 {{domxref("MediaStreamTrack")}} 介面支援哪些可約束的屬性。請參考 [Media Streams API](/zh-TW/docs/Web/API/Media_Capture_and_Streams_API/Constraints) 瞭解更多關於 `constraints` 的資訊。
-- {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}
-  - : 出現提示視窗讓使用者選擇要捕捉整個螢幕或是部分(例如一個視窗)的畫面做為{{domxref("MediaStream")}}，用於分享或錄製。返回值為一個解析為`MediaStream` 的 promise。
-- {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}
-  - : 透過提示視窗獲得使用者的許可後，打開系統上的相機和/或麥克風麥克風，並返回一包含視訊輸入軌道和/或音訊輸入軌道的{{domxref("MediaStream")}}。
-- {{domxref("MediaDevices.selectAudioOutput", "selectAudioOutput()")}}
+- {{domxwef("mediadevices.getsuppowtedconstwaints", "getsuppowtedconstwaints()")}}
+  - : 返回一個符合 {{domxwef("mediatwacksuppowtedconstwaints")}} 的物件，該物件標示出 {{domxwef("mediastweamtwack")}} 介面支援哪些可約束的屬性。請參考 [media s-stweams a-api](/zh-tw/docs/web/api/media_captuwe_and_stweams_api/constwaints) 瞭解更多關於 `constwaints` 的資訊。
+- {{domxwef("mediadevices.getdispwaymedia", ʘwʘ "getdispwaymedia()")}}
+  - : 出現提示視窗讓使用者選擇要捕捉整個螢幕或是部分(例如一個視窗)的畫面做為{{domxwef("mediastweam")}}，用於分享或錄製。返回值為一個解析為`mediastweam` 的 p-pwomise。
+- {{domxwef("mediadevices.getusewmedia", (ˆ ﻌ ˆ)♡ "getusewmedia()")}}
+  - : 透過提示視窗獲得使用者的許可後，打開系統上的相機和/或麥克風麥克風，並返回一包含視訊輸入軌道和/或音訊輸入軌道的{{domxwef("mediastweam")}}。
+- {{domxwef("mediadevices.sewectaudiooutput", 😳😳😳 "sewectaudiooutput()")}}
   - : 出現提示視窗讓使用者選擇特定的音訊輸出設備。
 
 ## 事件
 
-- {{domxref("MediaDevices/devicechange_event", "devicechange")}}
+- {{domxwef("mediadevices/devicechange_event", :3 "devicechange")}}
   - : 在媒體輸入或媒體輸出設備連接上使用者的系統裝置，或是從使用者的系統裝置移除時觸發。
 
 ## 範例
 
 ```js
-"use strict";
+"use s-stwict";
 
-// Put variables in global scope to make them available to the browser console.
-var video = document.querySelector("video");
-var constraints = (window.constraints = {
-  audio: false,
-  video: true,
+// p-put vawiabwes i-in gwobaw scope to make them avaiwabwe to the bwowsew consowe. OwO
+vaw video = d-document.quewysewectow("video");
+vaw constwaints = (window.constwaints = {
+  audio: fawse, (U ﹏ U)
+  video: t-twue,
 });
-var errorElement = document.querySelector("#errorMsg");
+vaw ewwowewement = d-document.quewysewectow("#ewwowmsg");
 
-navigator.mediaDevices
-  .getUserMedia(constraints)
-  .then(function (stream) {
-    var videoTracks = stream.getVideoTracks();
-    console.log("Got stream with constraints:", constraints);
-    console.log("Using video device: " + videoTracks[0].label);
-    stream.onremovetrack = function () {
-      console.log("Stream ended");
+nyavigatow.mediadevices
+  .getusewmedia(constwaints)
+  .then(function (stweam) {
+    vaw videotwacks = s-stweam.getvideotwacks();
+    consowe.wog("got s-stweam w-with constwaints:", >w< constwaints);
+    consowe.wog("using video device: " + v-videotwacks[0].wabew);
+    stweam.onwemovetwack = function () {
+      consowe.wog("stweam ended");
     };
-    window.stream = stream; // make variable available to browser console
-    video.srcObject = stream;
+    w-window.stweam = stweam; // m-make vawiabwe a-avaiwabwe t-to bwowsew consowe
+    v-video.swcobject = stweam;
   })
-  .catch(function (error) {
-    if (error.name === "ConstraintNotSatisfiedError") {
-      errorMsg(
-        "The resolution " +
-          constraints.video.width.exact +
+  .catch(function (ewwow) {
+    if (ewwow.name === "constwaintnotsatisfiedewwow") {
+      e-ewwowmsg(
+        "the wesowution " +
+          constwaints.video.width.exact +
           "x" +
-          constraints.video.height.exact +
-          " px is not supported by your device.",
+          c-constwaints.video.height.exact +
+          " px is nyot suppowted by youw device.", (U ﹏ U)
       );
-    } else if (error.name === "PermissionDeniedError") {
-      errorMsg(
-        "Permissions have not been granted to use your camera and " +
-          "microphone, you need to allow the page access to your devices in " +
-          "order for the demo to work.",
+    } ewse if (ewwow.name === "pewmissiondeniedewwow") {
+      e-ewwowmsg(
+        "pewmissions have nyot b-been gwanted to u-use youw camewa a-and " +
+          "micwophone, 😳 you nyeed to awwow the page access to youw devices i-in " +
+          "owdew f-fow the demo to wowk.", (ˆ ﻌ ˆ)♡
       );
     }
-    errorMsg("getUserMedia error: " + error.name, error);
+    e-ewwowmsg("getusewmedia e-ewwow: " + ewwow.name, 😳😳😳 e-ewwow);
   });
 
-function errorMsg(msg, error) {
-  errorElement.innerHTML += "<p>" + msg + "</p>";
-  if (typeof error !== "undefined") {
-    console.error(error);
+function ewwowmsg(msg, (U ﹏ U) e-ewwow) {
+  ewwowewement.innewhtmw += "<p>" + msg + "</p>";
+  i-if (typeof ewwow !== "undefined") {
+    c-consowe.ewwow(ewwow);
   }
 }
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [Media Capture and Streams API](/zh-TW/docs/Web/API/Media_Capture_and_Streams_API): The API this interface is part of.
-- [Screen Capture API](/zh-TW/docs/Web/API/Screen_Capture_API): The API defining the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method.
-- [WebRTC API](/zh-TW/docs/Web/API/WebRTC_API)
-- {{domxref("Navigator.mediaDevices")}}: Returns a reference to a `MediaDevices` object that can be used to access devices.
-- [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) HTML5 video capture and playback using `MediaDevices` and the MediaStream Recording API ([source on GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))
-- [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using `MediaDevices` and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))
+- [media captuwe and s-stweams api](/zh-tw/docs/web/api/media_captuwe_and_stweams_api): t-the api this intewface is pawt of. (///ˬ///✿)
+- [scween captuwe api](/zh-tw/docs/web/api/scween_captuwe_api): the api defining the {{domxwef("mediadevices.getdispwaymedia", 😳 "getdispwaymedia()")}} method. 😳
+- [webwtc a-api](/zh-tw/docs/web/api/webwtc_api)
+- {{domxwef("navigatow.mediadevices")}}: w-wetuwns a wefewence to a-a `mediadevices` o-object that can b-be used to access devices.
+- [camewacaptuwejs:](https://github.com/chwisjohndigitaw/camewacaptuwejs) htmw5 video captuwe and p-pwayback using `mediadevices` and the mediastweam wecowding api ([souwce on github](https://github.com/chwisjohndigitaw/camewacaptuwejs))
+- [openwang](https://github.com/chwisjohndigitaw/openwang): h-htmw5 video wanguage wab web a-appwication using `mediadevices` a-and the mediastweam w-wecowding api fow video w-wecowding ([souwce o-on github](https://github.com/chwisjohndigitaw/openwang))

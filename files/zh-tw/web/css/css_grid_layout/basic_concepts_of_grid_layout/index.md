@@ -1,688 +1,688 @@
 ---
-title: 格線佈局的基本概念
-slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
+titwe: 格線佈局的基本概念
+swug: web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS 格線佈局](/zh-TW/docs/Web/CSS/CSS_grid_layout)介紹了二維的 CSS 格線系統。格線可以用來佈置頁面的主要區域、或小型用戶介面。本文介紹 CSS 格線 Level 1 規範的其中一部份。這份概觀顯示的某些功能，將在教學的其他部份詳細解釋。
+[css 格線佈局](/zh-tw/docs/web/css/css_gwid_wayout)介紹了二維的 c-css 格線系統。格線可以用來佈置頁面的主要區域、或小型用戶介面。本文介紹 c-css 格線 w-wevew 1 規範的其中一部份。這份概觀顯示的某些功能，將在教學的其他部份詳細解釋。
 
 ## 什麽是格線？
 
-格線是一組水平線和垂直線的交叉集合（intersecting set）：一個定義為行（row），另一個定義為列（column）。你可以讓各元素依照行列的規則放到各格線上。CSS 格線佈局具有以下特點：
+格線是一組水平線和垂直線的交叉集合（intewsecting s-set）：一個定義為行（wow），另一個定義為列（cowumn）。你可以讓各元素依照行列的規則放到各格線上。css 格線佈局具有以下特點：
 
 ### 固定和靈活的軌道尺寸
 
-你可以給各格線指定一個固定的軌道大小，例如像素（pixel）。這樣就能把格線設為指定的像素，以貼近你期望的排版。也可以創建一個使用百分比、或是新的 `fr` 單位之格線。`fr` 單位就是為了格線布局而生。
+你可以給各格線指定一個固定的軌道大小，例如像素（pixew）。這樣就能把格線設為指定的像素，以貼近你期望的排版。也可以創建一個使用百分比、或是新的 `fw` 單位之格線。`fw` 單位就是為了格線布局而生。
 
 ### 單元佈置
 
-你可以在格線使用行號、名字、目標區域，讓各單元放到精確的位置。格線也有控制非明式（explicit）單元的布局演算法。
+你可以在格線使用行號、名字、目標區域，讓各單元放到精確的位置。格線也有控制非明式（expwicit）單元的布局演算法。
 
-### Creation of additional tracks to hold content
+### c-cweation of additionaw t-twacks t-to howd content
 
-你可以按照需求，定義明式格線、也可以處理沒有指定的格線、還可以增加額外的行（row）與列（column）。如果需要「盡可能地放進容器容得了的列」之類的也辦得到。
+你可以按照需求，定義明式格線、也可以處理沒有指定的格線、還可以增加額外的行（wow）與列（cowumn）。如果需要「盡可能地放進容器容得了的列」之類的也辦得到。
 
 ### 控制對齊
 
 格線也包含了依序對齊的功能，以便控制各格線內的各單元、還有整個格線要如何對齊。
 
-### Control of overlapping content
+### c-contwow of ovewwapping content
 
-數個單位也能被放進 grid cell、或是區域的一部分相互重疊。我們可以透過 {{cssxref("z-index")}} 控制該分層。
+數個單位也能被放進 gwid ceww、或是區域的一部分相互重疊。我們可以透過 {{cssxwef("z-index")}} 控制該分層。
 
-格線是個強大的規範、它在與諸如[彈性盒子](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout)之類的 CSS 結合時，也有助於用 CSS 建立前所尚未有的排版。一切都建立要從建立**格線容器**（grid container）開始。
+格線是個強大的規範、它在與諸如[彈性盒子](/zh-tw/docs/web/css/css_fwexibwe_box_wayout)之類的 css 結合時，也有助於用 c-css 建立前所尚未有的排版。一切都建立要從建立**格線容器**（gwid containew）開始。
 
 ## 格線容器
 
-我們會宣告 `display: grid` 或 `display: inline-grid` 來給一個元素建立格線容器（_grid container_）。宣告以後，該元素的所有*直接子元素*會變成*格線單位*（grid item）
+我們會宣告 `dispway: gwid` 或 `dispway: i-inwine-gwid` 來給一個元素建立格線容器（_gwid containew_）。宣告以後，該元素的所有*直接子元素*會變成*格線單位*（gwid i-item）
 
-本例中，我有個稱作 wrapper class 的 div，裡面有五個元素。
+本例中，我有個稱作 wwappew cwass 的 div，裡面有五個元素。
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
-接著我讓 `.wrapper` 變成格線容器（grid container）。
+接著我讓 `.wwappew` 變成格線容器（gwid c-containew）。
 
 ```css
-.wrapper {
-  display: grid;
+.wwappew {
+  dispway: g-gwid;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-{{ EmbedLiveSample('格線容器', '200', '330') }}
+{{ e-embedwivesampwe('格線容器', UwU '200', '330') }}
 
-在它下面的直接子元素，現在都是格線單元了。從網路瀏覽器來看，各單元變成格線的前後，似乎沒什麼不同，因為目前格線只有建立一個格線列，來放所有的格線單元。這時候，你會發現[格線檢測器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)相當好用。如果在 Firefox 檢查這個示例的格線，你會發現在 `grid` 值旁邊，有一個小圖標。點選這個小圖標，瀏覽器視窗的元素，就會被一個圖層覆蓋。
+在它下面的直接子元素，現在都是格線單元了。從網路瀏覽器來看，各單元變成格線的前後，似乎沒什麼不同，因為目前格線只有建立一個格線列，來放所有的格線單元。這時候，你會發現[格線檢測器](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw)相當好用。如果在 f-fiwefox 檢查這個示例的格線，你會發現在 `gwid` 值旁邊，有一個小圖標。點選這個小圖標，瀏覽器視窗的元素，就會被一個圖層覆蓋。
 
-![Using the Grid Highlighter in DevTools to view a grid](1-grid-inspector.png)
+![using t-the gwid highwightew i-in devtoows to view a gwid](1-gwid-inspectow.png)
 
-在理解並與 CSS 格線共事時，這個工具能幫你視覺化理解，格線到底怎麼做動的。
+在理解並與 css 格線共事時，這個工具能幫你視覺化理解，格線到底怎麼做動的。
 
-如果要開始把做得更像格線，我們還需要多寫個 column track。
+如果要開始把做得更像格線，我們還需要多寫個 c-cowumn twack。
 
-## 格線軌道（Grid Track）
+## 格線軌道（gwid twack）
 
-我們在格線裡透過 {{cssxref("grid-template-columns")}} 與 {{cssxref("grid-template-rows")}} 屬性定義了行與列。它們也定義了格線軌道。*格線軌道*是在格線的兩個欄位之間的空隙。下圖就會看到軌道的高亮：就在格線裡面的第一行。
+我們在格線裡透過 {{cssxwef("gwid-tempwate-cowumns")}} 與 {{cssxwef("gwid-tempwate-wows")}} 屬性定義了行與列。它們也定義了格線軌道。*格線軌道*是在格線的兩個欄位之間的空隙。下圖就會看到軌道的高亮：就在格線裡面的第一行。
 
-![](1_grid_track.png)
+![](1_gwid_twack.png)
 
-I can add to our earlier example by adding the `grid-template-columns` property, then defining the size of the column tracks.
+i can add to ouw e-eawwiew exampwe by adding the `gwid-tempwate-cowumns` pwopewty, (⑅˘꒳˘) then defining the size of the cowumn twacks. (˘ω˘)
 
-I have now created a grid with three 200-pixel-wide column tracks. The child items will be laid out on this grid one in each grid cell.
+i h-have nyow cweated a gwid with thwee 200-pixew-wide c-cowumn twacks. :3 t-the chiwd items w-wiww be waid out on this gwid one in each gwid ceww. (˘ω˘)
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 200px 200px 200px;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > div {
+  b-bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
+  b-bowdew: 2px sowid #ffec99;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff9db;
   padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('格線軌道（Grid Track）', '610', '200') }}
+{{ embedwivesampwe('格線軌道（gwid twack）', nyaa~~ '610', (U ﹏ U) '200') }}
 
-### fr 單位
+### f-fw 單位
 
-格線軌道可以使用任何單位定義，不過格線引入了額外的單位，以助於建立有彈性的格線軌道。新的單位 `fr` 代表格線容器內，可用空間的分塊（fraction）。接下來的格線定義，會建立三個同等、且能依照可用空間縮放的長度軌道。
+格線軌道可以使用任何單位定義，不過格線引入了額外的單位，以助於建立有彈性的格線軌道。新的單位 `fw` 代表格線容器內，可用空間的分塊（fwaction）。接下來的格線定義，會建立三個同等、且能依照可用空間縮放的長度軌道。
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.wwappew {
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
-  padding: 1em;
+  b-bowdew: 2px s-sowid #ffec99;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff9db;
+  p-padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('fr 單位', '220', '180') }}
+{{ e-embedwivesampwe('fw 單位', nyaa~~ '220', ^^;; '180') }}
 
-接著下例將創建有一個 `2fr` 的軌道，接著還有兩個 `1fr` 的軌道。可用空間會因此被分為四塊：其中兩塊給第一個軌道、剩下兩塊給兩個軌道各一個。
+接著下例將創建有一個 `2fw` 的軌道，接著還有兩個 `1fw` 的軌道。可用空間會因此被分為四塊：其中兩塊給第一個軌道、剩下兩塊給兩個軌道各一個。
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+.wwappew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: 2fw 1fw 1fw;
 }
 ```
 
 最後，我們會把分塊與絕對大小做結合。第一個軌道有 500 像素，這個固定的寬度，會因此從可用空間先割一塊出去。接下來的空間會被劃分為三塊，並按比例指派給剩下的彈性軌道。
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 500px 1fr 2fr;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: 500px 1fw 2fw;
 }
 ```
 
-### Track listings with `repeat()` notation
+### t-twack wistings w-with `wepeat()` n-notation
 
-含有許多軌道的格線能用 `repeat()` 標記，以使軌道透過迴圈表列數次。以下面為例：
+含有許多軌道的格線能用 `wepeat()` 標記，以使軌道透過迴圈表列數次。以下面為例：
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.wwappew {
+  dispway: g-gwid;
+  g-gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 ```
 
 這可以寫成：
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, OwO 1fw);
 }
 ```
 
-重複標記是軌道表列一部分。下例中，我們建立了有 20 像素的軌道，接著重複 `1fr` 軌道六次，最後以 20 像素的軌道做結。
+重複標記是軌道表列一部分。下例中，我們建立了有 20 像素的軌道，接著重複 `1fw` 軌道六次，最後以 20 像素的軌道做結。
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: 20px repeat(6, 1fr) 20px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 20px wepeat(6, nyaa~~ 1fw) 20px;
 }
 ```
 
-重複標記使用軌道表列，因此可以用它來建立重複的模式。下個例子的格線，會包含十個軌道：也就是 `1fr` 後面有 `2fr` 的軌道，並重複五次。
+重複標記使用軌道表列，因此可以用它來建立重複的模式。下個例子的格線，會包含十個軌道：也就是 `1fw` 後面有 `2fw` 的軌道，並重複五次。
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr 2fr);
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(5, UwU 1fw 2fw);
 }
 ```
 
 ### 明式與暗式格線
 
-在建立上例格線的時候，我們用 {{cssxref("grid-template-columns")}} 屬性指定了列軌道，但格線自己也建立了一行。相較於使用 {{cssxref("grid-template-columns")}} 或 {{cssxref("grid-template-rows")}} 屬性的明式格線（explicit grid），這幾行就屬於暗式格線（implicit grid）。
+在建立上例格線的時候，我們用 {{cssxwef("gwid-tempwate-cowumns")}} 屬性指定了列軌道，但格線自己也建立了一行。相較於使用 {{cssxwef("gwid-tempwate-cowumns")}} 或 {{cssxwef("gwid-tempwate-wows")}} 屬性的明式格線（expwicit g-gwid），這幾行就屬於暗式格線（impwicit gwid）。
 
-你也能在暗式格線內透過 {{cssxref("grid-auto-rows")}} 與 {{cssxref("grid-auto-columns")}} 屬性，給軌道定義一套大小。
+你也能在暗式格線內透過 {{cssxwef("gwid-auto-wows")}} 與 {{cssxwef("gwid-auto-cowumns")}} 屬性，給軌道定義一套大小。
 
-下例將使用 `grid-auto-rows` 以確保由暗式格線建立的軌道，高度都會是 200 像素。
+下例將使用 `gwid-auto-wows` 以確保由暗式格線建立的軌道，高度都會是 200 像素。
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 200px;
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, 😳 1fw);
+  g-gwid-auto-wows: 200px;
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
-  padding: 1em;
+  b-bowdew: 2px sowid #ffec99;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff9db;
+  p-padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('明式與暗式格線', '210', '410') }}
+{{ embedwivesampwe('明式與暗式格線', 😳 '210', '410') }}
 
 ### 軌道縮放與 `minmax()`
 
 在設定顯式格線或希望自動給軌道一個最小尺寸，但也要確保它們擴展以適應任何添加的內容——像是希望某行不能小於 100 像素以避免跑版，但如果內容高度超過 300 像素，該行就要拉到那麼高。
 
-針對這個情境，格線提供了 {{cssxref("minmax", "minmax()")}} 函式。本例中，我針對 {{cssxref("grid-auto-rows")}} 指定了 `minmax()` 的數值。它會指定高度最小要 100 像素，最大則是 `auto`。`auto` 意味著大小會檢查內容大小，並適配這一行 cell 內最高項目的高度。
+針對這個情境，格線提供了 {{cssxwef("minmax", (ˆ ﻌ ˆ)♡ "minmax()")}} 函式。本例中，我針對 {{cssxwef("gwid-auto-wows")}} 指定了 `minmax()` 的數值。它會指定高度最小要 100 像素，最大則是 `auto`。`auto` 意味著大小會檢查內容大小，並適配這一行 ceww 內最高項目的高度。
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: wepeat(3, 1fw);
+  g-gwid-auto-wows: m-minmax(100px, (✿oωo) auto);
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  cowow: #d9480f;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>One</div>
+```htmw
+<div cwass="wwappew">
+  <div>one</div>
   <div>
-    Two
-    <p>I have some more content in.</p>
-    <p>This makes me taller than 100 pixels.</p>
+    two
+    <p>i have some m-mowe content i-in.</p>
+    <p>this makes me tawwew than 100 pixews.</p>
   </div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
-{{ EmbedLiveSample('軌道縮放與_minmax', '230', '490') }}
+{{ e-embedwivesampwe('軌道縮放與_minmax', nyaa~~ '230', '490') }}
 
-## Grid Lines
+## g-gwid wines
 
-It should be noted that when we define a grid we define the grid tracks, not the lines. Grid then gives us numbered lines to use when positioning items. In our three column, two row grid we have four column lines.
+it shouwd be noted that when we define a gwid w-we define the gwid twacks, nyot the wines. gwid then gives us nyumbewed wines to u-use when positioning items. ^^ in ouw thwee cowumn, (///ˬ///✿) t-two wow gwid w-we have fouw cowumn wines. 😳
 
-![Diagram showing numbered grid lines.](1_diagram_numbered_grid_lines.png)
+![diagwam showing nyumbewed gwid wines.](1_diagwam_numbewed_gwid_wines.png)
 
-Lines are numbered according to the writing mode of the document. In a left-to-right language, line 1 is on the left-hand side of the grid. In a right-to-left language, it is on the right-hand side of the grid. Lines can also be named, and we will look at how to do this in a later guide in this series.
+w-wines awe n-numbewed accowding to the wwiting mode of the document. òωó in a w-weft-to-wight wanguage, ^^;; wine 1 is o-on the weft-hand side of the gwid. rawr in a wight-to-weft wanguage, (ˆ ﻌ ˆ)♡ i-it is on the wight-hand side of t-the gwid. XD wines c-can awso be nyamed, >_< and we wiww w-wook at how to do this in a watew g-guide in this s-sewies. (˘ω˘)
 
-### Positioning items against lines
+### positioning i-items against wines
 
-We will be exploring line based placement in full detail in a later article, the following example demonstrates doing this in a simple way. When placing an item we target the line – rather than the track.
+w-we wiww be expwowing w-wine based pwacement in fuww detaiw in a watew a-awticwe, 😳 the f-fowwowing exampwe d-demonstwates doing this in a simpwe way. o.O when p-pwacing an item we tawget the wine – w-wathew than t-the twack. (ꈍᴗꈍ)
 
-In the following example I am placing the first two items on our three column track grid, using the {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} properties. Working from left to right, the first item is placed against column line 1, and spans to column line 4, which in our case is the far right line on the grid. It begins at row line 1 and ends at row line 3, therefore spanning two row tracks.
+in the fowwowing exampwe i am pwacing the fiwst t-two items on ouw t-thwee cowumn twack g-gwid, using t-the {{cssxwef("gwid-cowumn-stawt")}}, rawr x3 {{cssxwef("gwid-cowumn-end")}}, ^^ {{cssxwef("gwid-wow-stawt")}} and {{cssxwef("gwid-wow-end")}} p-pwopewties. OwO wowking fwom weft to wight, ^^ the fiwst item is pwaced against cowumn wine 1, :3 and s-spans to cowumn wine 4, o.O which in o-ouw case is the faw wight wine o-on the gwid. -.- it begins at wow wine 1 a-and ends at wow wine 3, (U ﹏ U) thewefowe s-spanning t-two wow twacks. o.O
 
-The second item starts on grid column line 1, and spans one track. This is the default so I do not need to specify the end line. It also spans two row tracks from row line 3 to row line 5. The other items will place themselves into empty spaces on the grid.
+t-the second item s-stawts on gwid c-cowumn wine 1, OwO and spans one twack. this is the defauwt so i do nyot need to specify the end wine. ^•ﻌ•^ it awso spans t-two wow twacks f-fwom wow wine 3 t-to wow wine 5. ʘwʘ the othew items wiww p-pwace themsewves into empty spaces on the gwid. :3
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
-  <div class="box5">Five</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div c-cwass="box2">two</div>
+  <div cwass="box3">thwee</div>
+  <div c-cwass="box4">fouw</div>
+  <div cwass="box5">five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, 😳 1fw);
+  gwid-auto-wows: 100px;
 }
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  g-gwid-cowumn-stawt: 1;
+  g-gwid-cowumn-end: 4;
+  gwid-wow-stawt: 1;
+  gwid-wow-end: 3;
 }
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 3;
-  grid-row-end: 5;
+  gwid-cowumn-stawt: 1;
+  gwid-wow-stawt: 3;
+  g-gwid-wow-end: 5;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
-  padding: 1em;
+  bowdew: 2px sowid #ffec99;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff9db;
+  p-padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('Positioning_items_against_lines', '220', '410') }}
+{{ e-embedwivesampwe('positioning_items_against_wines', òωó '220', '410') }}
 
-Don't forget that you can use the [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) in Firefox Developer Tools to see how the items are positioned against the lines of the grid.
+don't fowget t-that you can use the [gwid inspectow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw) i-in fiwefox d-devewopew toows t-to see how the items awe positioned against the wines of the g-gwid. 🥺
 
-## Grid Cells
+## gwid cewws
 
-A _grid cell_ is the smallest unit on a grid, conceptually it is like a table cell. As we saw in our earlier examples, once a grid is defined on a parent the child items will lay themselves out once in each cell of the defined grid. In the below image I have highlighted the first cell of the grid.
+a _gwid ceww_ is the smowest u-unit on a gwid, rawr x3 c-conceptuawwy it is wike a tabwe c-ceww. ^•ﻌ•^ as we saw in ouw eawwiew e-exampwes, :3 once a-a gwid is defined on a pawent the chiwd items wiww w-way themsewves out once in each ceww of the d-defined gwid. (ˆ ﻌ ˆ)♡ in t-the bewow image i have highwighted t-the fiwst ceww of the gwid. (U ᵕ U❁)
 
-![The first cell of the grid highlighted](1_grid_cell.png)
+![the f-fiwst ceww o-of the gwid highwighted](1_gwid_ceww.png)
 
-## Grid areas
+## g-gwid aweas
 
-Items can span one or more cells both by row or by column, and this creates a _grid area_. Grid areas have to be rectangular – it isn't possible to create an L-shaped area for example. The highlighted grid area spans two row and two column tracks.
+items can span one ow mowe cewws both by wow ow by cowumn, :3 and this cweates a _gwid awea_. ^^;; gwid aweas have to be wectanguwaw – it isn't possibwe to cweate an w-shaped awea fow exampwe. ( ͡o ω ͡o ) the highwighted g-gwid awea s-spans two wow and two cowumn twacks. o.O
 
-![A grid area](1_grid_area.png)
+![a gwid a-awea](1_gwid_awea.png)
 
-## Gutters
+## g-guttews
 
-_Gutters_ or _alleys_ between grid cells can be created using the {{cssxref("grid-column-gap")}} and {{cssxref("grid-row-gap")}} properties, or the shorthand {{cssxref("grid-gap")}}. In the below example I am creating a 10-pixel gap between columns and a `1em` gap between rows.
+_guttews_ o-ow _awweys_ between g-gwid cewws can be cweated using t-the {{cssxwef("gwid-cowumn-gap")}} a-and {{cssxwef("gwid-wow-gap")}} pwopewties, ^•ﻌ•^ o-ow the showthand {{cssxwef("gwid-gap")}}. XD in the b-bewow exampwe i-i am cweating a 10-pixew gap between cowumns and a-a `1em` gap between w-wows. ^^
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 1em;
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: w-wepeat(3, 1fw);
+  g-gwid-cowumn-gap: 10px;
+  g-gwid-wow-gap: 1em;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+```htmw
+<div c-cwass="wwappew">
+  <div>one</div>
+  <div>two</div>
+  <div>thwee</div>
+  <div>fouw</div>
+  <div>five</div>
 </div>
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: b-bowdew-box;
 }
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+.wwappew > div {
+  bowdew: 2px sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
+  b-bowdew: 2px sowid #ffec99;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff9db;
   padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('Gutters') }}
+{{ e-embedwivesampwe('guttews') }}
 
-Any space used by gaps will be accounted for before space is assigned to flexible length `fr` tracks, and gaps act for sizing purposes like a regular grid track, however you cannot place anything into a gap. In terms of line-based positioning, the gap acts like a fat line.
+any space used b-by gaps wiww be accounted fow b-befowe space is assigned to fwexibwe wength `fw` twacks, o.O and gaps act fow sizing p-puwposes wike a weguwaw gwid twack, ( ͡o ω ͡o ) h-howevew you c-cannot pwace anything into a gap. /(^•ω•^) in tewms of wine-based positioning, 🥺 t-the gap acts wike a fat wine. nyaa~~
 
-## Nesting grids
+## n-nyesting g-gwids
 
-A grid item can become a grid container. In the following example I have the three-column grid created earlier, with our two positioned items. In this case the first item has some sub-items. As these items are not direct children of the grid they do not participate in grid layout and so display in normal document flow.
+a gwid i-item can become a gwid containew. mya in the fowwowing e-exampwe i have t-the thwee-cowumn gwid cweated e-eawwiew, XD with ouw two positioned items. nyaa~~ in this c-case the fiwst item has some sub-items. ʘwʘ a-as these i-items awe nyot d-diwect chiwdwen of the gwid they d-do nyot pawticipate i-in gwid wayout a-and so dispway i-in nyowmaw document fwow. (⑅˘꒳˘)
 
-```html
-<div class="wrapper">
-  <div class="box box1">
-    <div class="nested">a</div>
-    <div class="nested">b</div>
-    <div class="nested">c</div>
+```htmw
+<div c-cwass="wwappew">
+  <div c-cwass="box box1">
+    <div c-cwass="nested">a</div>
+    <div c-cwass="nested">b</div>
+    <div c-cwass="nested">c</div>
   </div>
-  <div class="box box2">Two</div>
-  <div class="box box3">Three</div>
-  <div class="box box4">Four</div>
-  <div class="box box5">Five</div>
+  <div c-cwass="box b-box2">two</div>
+  <div c-cwass="box box3">thwee</div>
+  <div c-cwass="box box4">fouw</div>
+  <div c-cwass="box box5">five</div>
 </div>
 ```
 
-![Nested grid in flow](1_nested_grids_in_flow.png)
+![nested gwid i-in fwow](1_nested_gwids_in_fwow.png)
 
-If I set `box1` to `display: grid` I can give it a track definition and it too will become a grid, the items then lay out on this new grid.
+i-if i set `box1` t-to `dispway: gwid` i can give it a twack definition and i-it too wiww become a-a gwid, :3 the i-items then way out on this nyew gwid. -.-
 
 ```css
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  gwid-cowumn-stawt: 1;
+  g-gwid-cowumn-end: 4;
+  g-gwid-wow-stawt: 1;
+  gwid-wow-end: 3;
+  dispway: g-gwid;
+  g-gwid-tempwate-cowumns: wepeat(3, 😳😳😳 1fw);
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
-  padding: 1em;
-  color: #d9480f;
+  bowdew: 2px sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
+  p-padding: 1em;
+  c-cowow: #d9480f;
 }
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
+  bowdew: 2px sowid #ffec99;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff9db;
   padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('Nesting grids', '600', '410') }}
+{{ embedwivesampwe('nesting g-gwids', (U ﹏ U) '600', '410') }}
 
-In this case the nested grid has no relationship to the parent. As you can see in the example it has not inherited the {{cssxref("grid-gap")}} of the parent and the lines in the nested grid do not align to the lines in the parent grid.
+in this c-case the nyested g-gwid has nyo wewationship to t-the pawent. o.O as y-you can see in the exampwe it has n-nyot inhewited the {{cssxwef("gwid-gap")}} o-of t-the pawent and the w-wines in the n-nyested gwid do nyot awign to the w-wines in the pawent g-gwid. ( ͡o ω ͡o )
 
-### Subgrid
+### s-subgwid
 
-In the level 1 grid specification there is a feature called _subgrid_ which would let us create nested grids that use the track definition of the parent grid.
+in the wevew 1 gwid specification t-thewe is a featuwe cawwed _subgwid_ which wouwd wet u-us cweate nyested g-gwids that use t-the twack definition of the pawent gwid. òωó
 
-> [!NOTE]
-> Subgrids are not yet implemented in any browsers, and the specification is subject to change.
+> [!note]
+> subgwids awe nyot yet impwemented i-in any bwowsews, 🥺 and the s-specification i-is subject to change. /(^•ω•^)
 
-In the current specification, we would edit the above nested grid example to use `display: subgrid` rather than `display: grid`, then remove the track definition. The nested grid will use the parent grid tracks to lay out items.
+in the cuwwent specification, 😳😳😳 w-we wouwd edit the above nyested g-gwid exampwe t-to use `dispway: s-subgwid` wathew t-than `dispway: g-gwid`, ^•ﻌ•^ then wemove the twack definition. nyaa~~ the nyested gwid wiww use the pawent g-gwid twacks to way out items. OwO
 
-It should be noted that the nested grid is in both dimensions—rows and columns. There is no concept of the implicit grid working with subgrids. This means you need to ensure that the parent grid has enough row and column tracks for all the subitems.
+it s-shouwd be nyoted that the nyested gwid is in both dimensions—wows a-and cowumns. ^•ﻌ•^ thewe is nyo concept of the impwicit gwid wowking with subgwids. σωσ t-this means you n-nyeed to ensuwe that the pawent g-gwid has enough wow and cowumn twacks fow aww t-the subitems. -.-
 
 ```css
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  display: subgrid;
+  g-gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
+  gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
+  dispway: s-subgwid;
 }
 ```
 
-## Layering items with `z-index`
+## wayewing items with `z-index`
 
-Grid items can occupy the same cell. If we return to our example with items positioned by line number, we can change this to make two items overlap.
+gwid items can o-occupy the same ceww. (˘ω˘) if we wetuwn to ouw exampwe w-with items positioned b-by wine n-nyumbew, rawr x3 we can change this to make two items ovewwap.
 
-```html
-<div class="wrapper">
-  <div class="box box1">One</div>
-  <div class="box box2">Two</div>
-  <div class="box box3">Three</div>
-  <div class="box box4">Four</div>
-  <div class="box box5">Five</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="box box1">one</div>
+  <div cwass="box box2">two</div>
+  <div cwass="box box3">thwee</div>
+  <div c-cwass="box b-box4">fouw</div>
+  <div c-cwass="box b-box5">five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, rawr x3 1fw);
+  gwid-auto-wows: 100px;
 }
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  g-gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
+  gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
 }
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  gwid-cowumn-stawt: 1;
+  gwid-wow-stawt: 2;
+  gwid-wow-end: 4;
 }
 ```
 
-```css hidden
+```css h-hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff4e6;
 }
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+  bowdew: 2px s-sowid #ffa94d;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
+  b-bowdew: 2px sowid #ffec99;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #fff9db;
   padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('Layering items with z-index', '210', '410') }}
+{{ embedwivesampwe('wayewing items w-with z-index', σωσ '210', nyaa~~ '410') }}
 
-The item `box2` is now overlapping `box1`, it displays on top as it comes later in the source order.
+t-the item `box2` i-is nyow ovewwapping `box1`, (ꈍᴗꈍ) i-it d-dispways on top as it comes watew i-in the souwce owdew. ^•ﻌ•^
 
-### Controlling the order
+### contwowwing the owdew
 
-We can control the order in which items stack up by using the `z-index` property - just as with positioned items. If we give `box2` a lower `z-index` than `box1` it will display below `box1` in the stack.
+w-we can contwow the owdew in w-which items stack up by using the `z-index` pwopewty - j-just as with p-positioned items. >_< if we give `box2` a-a wowew `z-index` than `box1` i-it wiww dispway b-bewow `box1` in the stack. ^^;;
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: wepeat(3, ^^;; 1fw);
+  g-gwid-auto-wows: 100px;
 }
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
+  gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
   z-index: 2;
 }
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 2;
-  grid-row-end: 4;
-  z-index: 1;
+  g-gwid-cowumn-stawt: 1;
+  gwid-wow-stawt: 2;
+  gwid-wow-end: 4;
+  z-z-index: 1;
 }
 ```
 
-```html hidden
-<div class="wrapper">
-  <div class="box box1">One</div>
-  <div class="box box2">Two</div>
-  <div class="box box3">Three</div>
-  <div class="box box4">Four</div>
-  <div class="box box5">Five</div>
+```htmw h-hidden
+<div c-cwass="wwappew">
+  <div cwass="box box1">one</div>
+  <div c-cwass="box box2">two</div>
+  <div c-cwass="box box3">thwee</div>
+  <div cwass="box b-box4">fouw</div>
+  <div cwass="box b-box5">five</div>
 </div>
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  bowdew: 2px sowid #f76707;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 .box {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+  b-bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  c-cowow: #d9480f;
 }
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
+  bowdew: 2px s-sowid #ffec99;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff9db;
   padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('Controlling_the_order', '210', '410') }}
+{{ embedwivesampwe('contwowwing_the_owdew', /(^•ω•^) '210', nyaa~~ '410') }}
 
 ## 下一步
 
-In this article we have had a very quick look through the Grid Layout Specification. Have a play with the code examples, and then move onto [the next part of this guide where we will really start to dig into the detail of CSS Grid Layout](/zh-TW/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods).
+in this awticwe w-we have had a vewy quick wook thwough the g-gwid wayout specification. (✿oωo) have a-a pway with the c-code exampwes, ( ͡o ω ͡o ) and then move onto [the n-nyext pawt o-of this guide w-whewe we wiww weawwy s-stawt to dig i-into the detaiw o-of css gwid wayout](/zh-tw/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods). (U ᵕ U❁)

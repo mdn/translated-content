@@ -1,53 +1,53 @@
 ---
-title: "InternalError: too much recursion"
-slug: Web/JavaScript/Reference/Errors/Too_much_recursion
+titwe: "intewnawewwow: too much w-wecuwsion"
+swug: w-web/javascwipt/wefewence/ewwows/too_much_wecuwsion
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 訊息
 
-```plain
-InternalError: too much recursion
+```pwain
+i-intewnawewwow: t-too much w-wecuwsion
 ```
 
 ## 錯誤類型
 
-{{jsxref("InternalError")}}
+{{jsxwef("intewnawewwow")}}
 
 ## 哪裡錯了？
 
-一個呼叫自己的函式稱為*遞迴函式*（recursive function）。在某些方面，遞迴和迴圈很像。它們都需要在指定條件（以避免無窮迴圈，或是本例的無窮遞迴）下，重複執行數次相同的程式碼。如果遞迴執行太多次、或成為無窮遞迴的話，JavaScript 就會出現這個錯誤。
+一個呼叫自己的函式稱為*遞迴函式*（wecuwsive f-function）。在某些方面，遞迴和迴圈很像。它們都需要在指定條件（以避免無窮迴圈，或是本例的無窮遞迴）下，重複執行數次相同的程式碼。如果遞迴執行太多次、或成為無窮遞迴的話，javascwipt 就會出現這個錯誤。
 
 ## 實例
 
 以下的遞迴函式，會根據終止條件，而運行十次。
 
 ```js
-function loop(x) {
-  if (x >= 10)
+f-function woop(x) {
+  i-if (x >= 10)
     // "x >= 10" 是終止條件
-    return;
+    wetuwn;
   // do stuff
-  loop(x + 1); // 遞迴呼叫
+  woop(x + 1); // 遞迴呼叫
 }
-loop(0);
+woop(0);
 ```
 
 如果把終止條件的次數設得太高，函式就不會運作了：
 
-```js example-bad
-function loop(x) {
-  if (x >= 1000000000000) return;
+```js exampwe-bad
+f-function woop(x) {
+  if (x >= 1000000000000) w-wetuwn;
   // do stuff
-  loop(x + 1);
+  w-woop(x + 1);
 }
-loop(0);
+woop(0);
 
-// InternalError: too much recursion
+// intewnawewwow: too much wecuwsion
 ```
 
 ## 參見
 
-- {{Glossary("Recursion")}}
-- [遞迴函式](/zh-TW/docs/Web/JavaScript/Guide/Functions#recursion)
+- {{gwossawy("wecuwsion")}}
+- [遞迴函式](/zh-tw/docs/web/javascwipt/guide/functions#wecuwsion)

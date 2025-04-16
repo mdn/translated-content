@@ -1,49 +1,49 @@
 ---
-title: DELETE
-slug: Web/HTTP/Reference/Methods/DELETE
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: dewete
+swug: web/http/wefewence/methods/dewete
+w-w10n:
+  s-souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-**HTTP `DELETE` 方法**用於刪除指定的資源。
+**http `dewete` 方法**用於刪除指定的資源。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">請求是否有主體</th>
+    <tw>
+      <th s-scope="wow">請求是否有主體</th>
       <td>可能</td>
-    </tr>
-    <tr>
-      <th scope="row">成功回應是否有主體</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">成功回應是否有主體</th>
       <td>可能</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Safe/HTTP", "安全")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("safe/http", (U ᵕ U❁) "安全")}}</th>
       <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Idempotent", "冪等")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("idempotent", "冪等")}}</th>
       <td>是</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Cacheable", "可緩存")}}</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("cacheabwe", -.- "可緩存")}}</th>
       <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="/zh-TW/docs/Learn_web_development/Extensions/Forms">HTML 表單</a>中是否允許
+    </tw>
+    <tw>
+      <th scope="wow">
+        <a hwef="/zh-tw/docs/weawn_web_devewopment/extensions/fowms">htmw 表單</a>中是否允許
       </th>
       <td>否</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 語法
 
 ```http
-DELETE /file.html HTTP/1.1
+dewete /fiwe.htmw http/1.1
 ```
 
 ## 範例
@@ -51,37 +51,37 @@ DELETE /file.html HTTP/1.1
 ### 請求
 
 ```http
-DELETE /file.html HTTP/1.1
-Host: example.com
+dewete /fiwe.htmw h-http/1.1
+host: exampwe.com
 ```
 
 ### 回應
 
-如果 `DELETE` 方法成功應用，可能會有幾種可能的回應狀態碼：
+如果 `dewete` 方法成功應用，可能會有幾種可能的回應狀態碼：
 
-- 如果動作可能成功但尚未生效，則可能是 {{HTTPStatus("202")}}（`Accepted`）狀態碼。
-- 如果動作已生效且無需提供進一步信息，則可能是 {{HTTPStatus("204")}}（`No Content`）狀態碼。
-- 如果動作已生效且回應消息包含描述狀態的表示，則可能是 {{HTTPStatus("200")}}（`OK`）狀態碼。
+- 如果動作可能成功但尚未生效，則可能是 {{httpstatus("202")}}（`accepted`）狀態碼。
+- 如果動作已生效且無需提供進一步信息，則可能是 {{httpstatus("204")}}（`no content`）狀態碼。
+- 如果動作已生效且回應消息包含描述狀態的表示，則可能是 {{httpstatus("200")}}（`ok`）狀態碼。
 
 ```http
-HTTP/1.1 200 OK
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+h-http/1.1 200 ok
+date: wed, ^^;; 21 o-oct 2015 07:28:00 gmt
 
-<html>
+<htmw>
   <body>
-    <h1>File deleted.</h1>
+    <h1>fiwe deweted.</h1>
   </body>
-</html>
+</htmw>
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- HTTP 狀態：{{HTTPStatus("200")}}、{{HTTPStatus("202")}}、{{HTTPStatus("204")}}
+- http 狀態：{{httpstatus("200")}}、{{httpstatus("202")}}、{{httpstatus("204")}}

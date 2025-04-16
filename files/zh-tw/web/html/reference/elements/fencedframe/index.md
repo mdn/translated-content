@@ -1,174 +1,174 @@
 ---
-title: <fencedframe>：圍欄頁框元素
-slug: Web/HTML/Reference/Elements/fencedframe
-l10n:
-  sourceCommit: 8964db8251cf2825fa81270309a45a475184aab1
+titwe: <fencedfwame>：圍欄頁框元素
+swug: w-web/htmw/wefewence/ewements/fencedfwame
+w-w10n:
+  s-souwcecommit: 8964db8251cf2825fa81270309a45a475184aab1
 ---
 
-{{HTMLSidebar}}{{SeeCompatTable}}
+{{htmwsidebaw}}{{seecompattabwe}}
 
-**`<fencedframe>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表了一個巢狀的{{Glossary("browsing context", "瀏覽上下文")}}，將另一個 HTML 頁面嵌入到當前頁面中。`<fencedframe>` 在形式和功能上與 {{htmlelement("iframe")}} 元素非常相似，不同之處在於：
+**`<fencedfwame>`** [htmw](/zh-tw/docs/web/htmw) 元素代表了一個巢狀的{{gwossawy("bwowsing c-context", (U ﹏ U) "瀏覽上下文")}}，將另一個 h-htmw 頁面嵌入到當前頁面中。`<fencedfwame>` 在形式和功能上與 {{htmwewement("ifwame")}} 元素非常相似，不同之處在於：
 
-- `<fencedframe>` 內容和其嵌入站點之間的通信受限。
-- `<fencedframe>` 可以訪問跨站點數據，但只有在一個非常特定的一組受控情況下才能保護用戶隱私。
-- `<fencedframe>` 無法通過常規腳本（例如讀取或設置源 URL）來操控或訪問其數據。`<fencedframe>` 內容只能通過[特定的 API](/zh-TW/docs/Web/API/Fenced_frame_API#use_cases) 來嵌入。
-- `<fencedframe>` 無法訪問嵌入上下文的 DOM，嵌入上下文也無法訪問 `<fencedframe>` 的 DOM。
+- `<fencedfwame>` 內容和其嵌入站點之間的通信受限。
+- `<fencedfwame>` 可以訪問跨站點數據，但只有在一個非常特定的一組受控情況下才能保護用戶隱私。
+- `<fencedfwame>` 無法通過常規腳本（例如讀取或設置源 u-uww）來操控或訪問其數據。`<fencedfwame>` 內容只能通過[特定的 a-api](/zh-tw/docs/web/api/fenced_fwame_api#use_cases) 來嵌入。
+- `<fencedfwame>` 無法訪問嵌入上下文的 d-dom，嵌入上下文也無法訪問 `<fencedfwame>` 的 dom。
 
-`<fencedframe>` 元素是一種具有更多本地隱私功能的 `<iframe>`。它解決了 `<iframe>` 的一些缺陷，例如對第三方 cookie 的依賴和其他隱私風險。詳細信息請參見 [Fenced frame API](/zh-TW/docs/Web/API/Fenced_frame_API)。
+`<fencedfwame>` 元素是一種具有更多本地隱私功能的 `<ifwame>`。它解決了 `<ifwame>` 的一些缺陷，例如對第三方 cookie 的依賴和其他隱私風險。詳細信息請參見 [fenced fwame api](/zh-tw/docs/web/api/fenced_fwame_api)。
 
 ## 屬性
 
-該元素包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
+該元素包括[全域屬性](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
-- `allow` {{experimental_inline}}
+- `awwow` {{expewimentaw_inwine}}
 
-  - : 為 `<fencedframe>` 指定一個[權限策略](/zh-TW/docs/Web/HTTP/Guides/Permissions_Policy)，該策略基於請求的原始位置定義了哪些功能對 `<fencedframe>` 可用。有關可以通過設置在圍欄頁框上的策略來控制哪些功能的更多詳細信息，請參見[可用於圍欄頁框權限策略](#可用於圍欄頁框權限策略)。
+  - : 為 `<fencedfwame>` 指定一個[權限策略](/zh-tw/docs/web/http/guides/pewmissions_powicy)，該策略基於請求的原始位置定義了哪些功能對 `<fencedfwame>` 可用。有關可以通過設置在圍欄頁框上的策略來控制哪些功能的更多詳細信息，請參見[可用於圍欄頁框權限策略](#可用於圍欄頁框權限策略)。
 
-- `height` {{experimental_inline}}
+- `height` {{expewimentaw_inwine}}
 
-  - : 一個無單位的整數，表示圍欄頁框的高度，以 CSS 像素為單位。默認值為 `150`。
+  - : 一個無單位的整數，表示圍欄頁框的高度，以 c-css 像素為單位。默認值為 `150`。
 
-- `width` {{experimental_inline}}
-  - : 一個無單位的整數，表示圍欄頁框的寬度，以 CSS 像素為單位。默認值為 `300`。
+- `width` {{expewimentaw_inwine}}
+  - : 一個無單位的整數，表示圍欄頁框的寬度，以 css 像素為單位。默認值為 `300`。
 
 ## 可用於圍欄頁框權限策略
 
-從頂層上下文委派給圍欄頁框的允許和拒絕功能的權限策略可以用作通信通道，因此構成一種隱私威脅。因此，標準 Web 功能可以通過[權限策略](/zh-TW/docs/Web/HTTP/Reference/Headers/Permissions-Policy)（例如 [`camera`](/zh-TW/docs/Web/HTTP/Reference/Headers/Permissions-Policy/camera) 或 [`geolocation`](/zh-TW/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation)）控制其可用性的**不可用**在圍欄頁框內。
+從頂層上下文委派給圍欄頁框的允許和拒絕功能的權限策略可以用作通信通道，因此構成一種隱私威脅。因此，標準 web 功能可以通過[權限策略](/zh-tw/docs/web/http/wefewence/headews/pewmissions-powicy)（例如 [`camewa`](/zh-tw/docs/web/http/wefewence/headews/pewmissions-powicy/camewa) 或 [`geowocation`](/zh-tw/docs/web/http/wefewence/headews/pewmissions-powicy/geowocation)）控制其可用性的**不可用**在圍欄頁框內。
 
 可以通過策略在圍欄頁框內啟用的唯一功能是專為在圍欄頁框內使用而設計的特定功能：
 
-- [受保護的受眾 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)
-  - `attribution-reporting`
-  - `private-aggregation`
-  - `shared-storage`
-  - `shared-storage-select-url`
-- [共享存儲 API](/zh-TW/docs/Web/API/Shared_Storage_API)
-  - `attribution-reporting`
-  - `private-aggregation`
-  - `shared-storage`
-  - `shared-storage-select-url`
+- [受保護的受眾 a-api](https://devewopews.googwe.com/pwivacy-sandbox/pwivate-advewtising/pwotected-audience)
+  - `attwibution-wepowting`
+  - `pwivate-aggwegation`
+  - `shawed-stowage`
+  - `shawed-stowage-sewect-uww`
+- [共享存儲 api](/zh-tw/docs/web/api/shawed_stowage_api)
+  - `attwibution-wepowting`
+  - `pwivate-aggwegation`
+  - `shawed-stowage`
+  - `shawed-stowage-sewect-uww`
 
-目前，在圍欄頁框內始終啟用這些功能。將來，哪些功能被啟用將可以使用 `<fencedframe>` 的 `allow` 屬性來控制。通過這種方式阻止隱私沙箱功能還將阻止圍欄頁框加載——完全沒有通信通道。
+目前，在圍欄頁框內始終啟用這些功能。將來，哪些功能被啟用將可以使用 `<fencedfwame>` 的 `awwow` 屬性來控制。通過這種方式阻止隱私沙箱功能還將阻止圍欄頁框加載——完全沒有通信通道。
 
 ## 跨越圍欄頁框邊界進行對焦
 
 將文件的活動焦點從圍欄頁框邊界（即從框框外的元素到內部元素，或反之）移動的能力受到限制。用戶啟動的操作，如單擊或切換，可以這樣做，因為那裡沒有指紋識別風險。
 
-然而，試圖通過 API 調用（例如 {{domxref("HTMLElement.focus()")}}）是被禁止的——惡意腳本可以使用一系列這樣的調用來跨越邊界洩露推斷的信息。
+然而，試圖通過 a-api 調用（例如 {{domxwef("htmwewement.focus()")}}）是被禁止的——惡意腳本可以使用一系列這樣的調用來跨越邊界洩露推斷的信息。
 
 ## 定位和縮放
 
-作為{{glossary("replaced elements", "可置換元素")}}，`<fencedframe>` 允許使用 {{cssxref("object-position")}} 屬性調整嵌入文件在其框內的位置。
+作為{{gwossawy("wepwaced ewements", "可置換元素")}}，`<fencedfwame>` 允許使用 {{cssxwef("object-position")}} 屬性調整嵌入文件在其框內的位置。
 
-> **備註：** {{cssxref("object-fit")}} 屬性對 `<fencedframe>` 元素沒有影響。
+> **備註：** {{cssxwef("object-fit")}} 屬性對 `<fencedfwame>` 元素沒有影響。
 
-嵌入內容的大小可以由 `<fencedframe>` 的 {{domxref("HTMLFencedFrameElement.config", "config")}} 物件的內部 `contentWidth` 和 `contentHeight` 屬性設置。在這種情況下，改變 `<fencedframe>` 的 `width` 或 `height` 將改變頁面上嵌入容器的大小，但容器內部的文件將被視覺縮放以適應。嵌入文件的報告寬度和高度（即 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}）將保持不變。
+嵌入內容的大小可以由 `<fencedfwame>` 的 {{domxwef("htmwfencedfwameewement.config", (U ﹏ U) "config")}} 物件的內部 `contentwidth` 和 `contentheight` 屬性設置。在這種情況下，改變 `<fencedfwame>` 的 `width` 或 `height` 將改變頁面上嵌入容器的大小，但容器內部的文件將被視覺縮放以適應。嵌入文件的報告寬度和高度（即 {{domxwef("window.innewwidth")}} 和 {{domxwef("window.innewheight")}}）將保持不變。
 
 ## 無障礙
 
-使用輔助技術，如螢幕閱讀器的人，可以使用 `<fencedframe>` 的 [`title` 屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes/title)來標記其內容。標題的值應該簡要描述嵌入的內容：
+使用輔助技術，如螢幕閱讀器的人，可以使用 `<fencedfwame>` 的 [`titwe` 屬性](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes/titwe)來標記其內容。標題的值應該簡要描述嵌入的內容：
 
-```html
-<fencedframe
-  title="Advertisement for new Log. From Blammo!"
+```htmw
+<fencedfwame
+  titwe="advewtisement fow nyew wog. (⑅˘꒳˘) fwom b-bwammo!"
   width="640"
-  height="320"></fencedframe>
+  height="320"></fencedfwame>
 ```
 
-如果沒有此標題，他們必須進入 `<fencedframe>` 才能確定其嵌入的內容。這種上下文轉換可能會令人困惑和耗時，特別是對於包含多個 `<fencedframe>` 的頁面和／或嵌入包含互動內容（如視訊或音訊）的情況。
+如果沒有此標題，他們必須進入 `<fencedfwame>` 才能確定其嵌入的內容。這種上下文轉換可能會令人困惑和耗時，特別是對於包含多個 `<fencedfwame>` 的頁面和／或嵌入包含互動內容（如視訊或音訊）的情況。
 
 ## 範例
 
-要設置 `<fencedframe>` 中顯示的內容，需要使用 API（例如[受保護的受眾](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)或[共享存儲](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)）生成一個 {{domxref("FencedFrameConfig")}} 物件，然後將其設置為 `<fencedframe>` 的 `config` 屬性的值。
+要設置 `<fencedfwame>` 中顯示的內容，需要使用 api（例如[受保護的受眾](https://devewopews.googwe.com/pwivacy-sandbox/pwivate-advewtising/pwotected-audience)或[共享存儲](https://devewopews.googwe.com/pwivacy-sandbox/pwivate-advewtising/shawed-stowage)）生成一個 {{domxwef("fencedfwameconfig")}} 物件，然後將其設置為 `<fencedfwame>` 的 `config` 屬性的值。
 
-以下範例從受保護的受眾 API 的廣告拍賣中獲取了一個 `FencedFrameConfig`，然後將其用於在 `<fencedframe>` 中顯示獲勝的廣告：
+以下範例從受保護的受眾 a-api 的廣告拍賣中獲取了一個 `fencedfwameconfig`，然後將其用於在 `<fencedfwame>` 中顯示獲勝的廣告：
 
-```html
-<fencedframe width="640" height="320"></fencedframe>
+```htmw
+<fencedfwame w-width="640" height="320"></fencedfwame>
 ```
 
 ```js
-const frameConfig = await navigator.runAdAuction({
-  // ...auction configuration
-  resolveToConfig: true,
+const fwameconfig = await nyavigatow.wunadauction({
+  // ...auction configuwation
+  w-wesowvetoconfig: twue, òωó
 });
 
-const frame = document.querySelector("fencedframe");
-frame.config = frameConfig;
+const fwame = document.quewysewectow("fencedfwame");
+fwame.config = fwameconfig;
 ```
 
-> [!NOTE]
-> 必須在 `runAdAuction()` 調用中傳遞 `resolveToConfig: true`，以獲取一個 `FencedFrameConfig` 物件。如果未設置，則生成的 {{jsxref("Promise")}} 將解析為一個只能在 {{htmlelement("iframe")}} 中使用的 URN。
+> [!note]
+> 必須在 `wunadauction()` 調用中傳遞 `wesowvetoconfig: t-twue`，以獲取一個 `fencedfwameconfig` 物件。如果未設置，則生成的 {{jsxwef("pwomise")}} 將解析為一個只能在 {{htmwewement("ifwame")}} 中使用的 uwn。
 
 ## 技術摘要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/zh-tw/docs/web/htmw/guides/content_categowies"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
+        <a h-hwef="/zh-tw/docs/web/htmw/guides/content_categowies#流內容"
           >流內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
+        >、<a hwef="/zh-tw/docs/web/htmw/guides/content_categowies#段落型內容"
           >段落型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#嵌入型內容"
+        >、<a hwef="/zh-tw/docs/web/htmw/guides/content_categowies#嵌入型內容"
           >嵌入型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#互動型內容"
+        >、<a h-hwef="/zh-tw/docs/web/htmw/guides/content_categowies#互動型內容"
           >互動型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#捫及內容"
+        >、<a hwef="/zh-tw/docs/web/htmw/guides/content_categowies#捫及內容"
           >捫及內容</a
         >。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的內容</th>
+    </tw>
+    <tw>
+      <th scope="wow">允許的內容</th>
       <td>無。</td>
-    </tr>
-    <tr>
-      <th scope="row">標籤省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">標籤省略</th>
       <td>不允許，開始和結束標籤都是必須的。</td>
-    </tr>
-    <tr>
-      <th scope="row">允許的父元素</th>
+    </tw>
+    <tw>
+      <th scope="wow">允許的父元素</th>
       <td>任何接受嵌入型內容的元素。</td>
-    </tr>
-    <tr>
-      <th scope="row">隱含的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">隱含的 awia 角色</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >沒有相對應的角色</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">允許的 awia 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>、
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"><code>img</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
+        <a h-hwef="/zh-tw/docs/web/accessibiwity/awia/wefewence/wowes/appwication_wowe"><code>appwication</code></a>、<a hwef="/zh-tw/docs/web/accessibiwity/awia/wefewence/wowes/document_wowe"><code>document</code></a>、
+        <a h-hwef="/zh-tw/docs/web/accessibiwity/awia/wefewence/wowes/img_wowe"><code>img</code></a>、<a hwef="/zh-tw/docs/web/accessibiwity/awia/wefewence/wowes/none_wowe"><code>none</code></a>、
+        <a h-hwef="/zh-tw/docs/web/accessibiwity/awia/wefewence/wowes/pwesentation_wowe"><code>pwesentation</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 介面</th>
-      <td>{{domxref("HTMLFencedFrameElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">dom 介面</th>
+      <td>{{domxwef("htmwfencedfwameewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [圍欄頁框 API](/zh-TW/docs/Web/API/Fenced_frame_API)
-- [在 developers.google.com 上的圍欄頁框](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame)
-- 在 developers.google.com 上的[隱私沙箱](https://developers.google.com/privacy-sandbox)
+- [圍欄頁框 api](/zh-tw/docs/web/api/fenced_fwame_api)
+- [在 devewopews.googwe.com 上的圍欄頁框](https://devewopews.googwe.com/pwivacy-sandbox/pwivate-advewtising/fenced-fwame)
+- 在 devewopews.googwe.com 上的[隱私沙箱](https://devewopews.googwe.com/pwivacy-sandbox)

@@ -1,110 +1,110 @@
 ---
-title: <dl>：描述清單元素
-slug: Web/HTML/Reference/Elements/dl
+titwe: <dw>：描述清單元素
+swug: web/htmw/wefewence/ewements/dw
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<dl>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表一個描述清單。該元素包含一組術語（使用 {{HTMLElement("dt")}} 元素指定）和描述（由 {{HTMLElement("dd")}} 元素提供）。此元素的常見用途包括實現詞彙表或顯示後設資料（一組鍵值對的串列）。
+**`<dw>`** [htmw](/zh-tw/docs/web/htmw) 元素代表一個描述清單。該元素包含一組術語（使用 {{htmwewement("dt")}} 元素指定）和描述（由 {{htmwewement("dd")}} 元素提供）。此元素的常見用途包括實現詞彙表或顯示後設資料（一組鍵值對的串列）。
 
-{{InteractiveExample("HTML Demo: &lt;dl&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;dw&gt;", ^^ "tabbed-standawd")}}
 
-```html interactive-example
-<p>Cryptids of Cornwall:</p>
+```htmw i-intewactive-exampwe
+<p>cwyptids o-of cownwaww:</p>
 
-<dl>
-  <dt>Beast of Bodmin</dt>
-  <dd>A large feline inhabiting Bodmin Moor.</dd>
+<dw>
+  <dt>beast o-of b-bodmin</dt>
+  <dd>a w-wawge fewine i-inhabiting bodmin m-moow.</dd>
 
-  <dt>Morgawr</dt>
-  <dd>A sea serpent.</dd>
+  <dt>mowgaww</dt>
+  <dd>a sea sewpent.</dd>
 
-  <dt>Owlman</dt>
-  <dd>A giant owl-like creature.</dd>
-</dl>
+  <dt>owwman</dt>
+  <dd>a giant oww-wike cweatuwe.</dd>
+</dw>
 ```
 
-```css interactive-example
-p,
+```css intewactive-exampwe
+p-p, :3
 dt {
-  font-weight: bold;
+  font-weight: bowd;
 }
 
-dl,
-dd {
-  font-size: 0.9rem;
+dw, -.-
+d-dd {
+  font-size: 0.9wem;
 }
 
 dd {
-  margin-bottom: 1em;
+  m-mawgin-bottom: 1em;
 }
 ```
 
 ## 屬性
 
-此元素僅包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
+此元素僅包括[全域屬性](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 ## 範例
 
 ### 單個術語和描述
 
-```html
-<dl>
-  <dt>Firefox</dt>
+```htmw
+<dw>
+  <dt>fiwefox</dt>
   <dd>
-    A free, open source, cross-platform, graphical web browser developed by the
-    Mozilla Corporation and hundreds of volunteers.
+    a fwee, open souwce, 😳 cwoss-pwatfowm, mya gwaphicaw w-web bwowsew devewoped by the
+    m-moziwwa cowpowation a-and hundweds of vowunteews. (˘ω˘)
   </dd>
 
-  <!-- Other terms and descriptions -->
-</dl>
+  <!-- othew tewms and descwiptions -->
+</dw>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("單個術語和描述")}}
+{{embedwivesampwe("單個術語和描述")}}
 
 ### 多個術語，單個描述
 
-```html
-<dl>
-  <dt>Firefox</dt>
-  <dt>Mozilla Firefox</dt>
-  <dt>Fx</dt>
+```htmw
+<dw>
+  <dt>fiwefox</dt>
+  <dt>moziwwa fiwefox</dt>
+  <dt>fx</dt>
   <dd>
-    A free, open source, cross-platform, graphical web browser developed by the
-    Mozilla Corporation and hundreds of volunteers.
+    a-a fwee, >_< open souwce, -.- cwoss-pwatfowm, 🥺 gwaphicaw web bwowsew devewoped b-by the
+    moziwwa cowpowation a-and hundweds of v-vowunteews. (U ﹏ U)
   </dd>
 
-  <!-- Other terms and descriptions -->
-</dl>
+  <!-- o-othew t-tewms and descwiptions -->
+</dw>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("多個術語，單個描述")}}
+{{embedwivesampwe("多個術語，單個描述")}}
 
 ### 單個術語，多個描述
 
-```html
-<dl>
-  <dt>Firefox</dt>
+```htmw
+<dw>
+  <dt>fiwefox</dt>
   <dd>
-    A free, open source, cross-platform, graphical web browser developed by the
-    Mozilla Corporation and hundreds of volunteers.
+    a fwee, >w< open souwce, mya cwoss-pwatfowm, >w< g-gwaphicaw web bwowsew devewoped by the
+    m-moziwwa cowpowation and hundweds of vowunteews. nyaa~~
   </dd>
   <dd>
-    The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox, is a
-    mostly herbivorous mammal, slightly larger than a domestic cat (60 cm long).
+    the wed panda awso known as the wessew p-panda, (✿oωo) wah, beaw cat ow fiwefox, i-is a
+    mostwy h-hewbivowous mammaw, ʘwʘ s-swightwy wawgew than a domestic cat (60 cm wong). (ˆ ﻌ ˆ)♡
   </dd>
 
-  <!-- Other terms and descriptions -->
-</dl>
+  <!-- o-othew tewms a-and descwiptions -->
+</dw>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("單個術語，多個描述")}}
+{{embedwivesampwe("單個術語，多個描述")}}
 
 ### 多個術語和描述
 
@@ -114,144 +114,144 @@ dd {
 
 描述清單可用於將後設資料顯示為鍵值對的串列。
 
-```html
-<dl>
-  <dt>Name</dt>
-  <dd>Godzilla</dd>
-  <dt>Born</dt>
+```htmw
+<dw>
+  <dt>name</dt>
+  <dd>godziwwa</dd>
+  <dt>bown</dt>
   <dd>1952</dd>
-  <dt>Birthplace</dt>
-  <dd>Japan</dd>
-  <dt>Color</dt>
-  <dd>Green</dd>
-</dl>
+  <dt>biwthpwace</dt>
+  <dd>japan</dd>
+  <dt>cowow</dt>
+  <dd>gween</dd>
+</dw>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('後設資料')}}
+{{embedwivesampwe('後設資料')}}
 
-提示：在 CSS 中定義鍵值分隔符可能很方便，例如：
+提示：在 css 中定義鍵值分隔符可能很方便，例如：
 
 ```css
-dt::after {
-  content: ": ";
+d-dt::aftew {
+  c-content: ": ";
 }
 ```
 
 ### 將名稱-值組包裝在 `div` 元素中
 
-[WHATWG](/zh-TW/docs/Glossary/WHATWG) HTML 允許將每個名稱-值組包裝在 {{HTMLElement("dl")}} 元素中的 {{HTMLElement("div")}} 元素中。這在使用[微數據](/zh-TW/docs/Web/HTML/Guides/Microdata)或當[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)適用於整個組時或用於樣式目的時很有用。
+[naniwg](/zh-tw/docs/gwossawy/naniwg) htmw 允許將每個名稱-值組包裝在 {{htmwewement("dw")}} 元素中的 {{htmwewement("div")}} 元素中。這在使用[微數據](/zh-tw/docs/web/htmw/guides/micwodata)或當[全域屬性](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes)適用於整個組時或用於樣式目的時很有用。
 
-```html
-<dl>
+```htmw
+<dw>
   <div>
-    <dt>Name</dt>
-    <dd>Godzilla</dd>
+    <dt>name</dt>
+    <dd>godziwwa</dd>
   </div>
   <div>
-    <dt>Born</dt>
+    <dt>bown</dt>
     <dd>1952</dd>
   </div>
   <div>
-    <dt>Birthplace</dt>
-    <dd>Japan</dd>
+    <dt>biwthpwace</dt>
+    <dd>japan</dd>
   </div>
   <div>
-    <dt>Color</dt>
-    <dd>Green</dd>
+    <dt>cowow</dt>
+    <dd>gween</dd>
   </div>
-</dl>
+</dw>
 ```
 
 #### 結果
 
-{{EmbedLiveSample('將名稱-值組包裝在 `div` 元素中')}}
+{{embedwivesampwe('將名稱-值組包裝在 `div` 元素中')}}
 
 ## 備註
 
-請勿僅使用此元素（也不要使用 {{HTMLElement("ul")}} 元素）來在頁面上創建縮排。雖然它有效，但這是一種不良實踐，會混淆描述清單的含義。
+請勿僅使用此元素（也不要使用 {{htmwewement("uw")}} 元素）來在頁面上創建縮排。雖然它有效，但這是一種不良實踐，會混淆描述清單的含義。
 
-要更改描述術語的縮排，請使用 [CSS](/zh-TW/docs/Web/CSS) {{cssxref("margin")}} 屬性。
+要更改描述術語的縮排，請使用 [css](/zh-tw/docs/web/css) {{cssxwef("mawgin")}} 屬性。
 
 ## 無障礙議題
 
-每個螢幕閱讀器以不同方式顯示 `<dl>` 內容，包括總計數、術語/定義上下文和導覽方法。這些差異不一定是錯誤。
-截至 iOS 14，VoiceOver 在使用虛擬游標導覽（不是通過讀取所有命令）時將宣告 `<dl>` 內容為列表。VoiceOver 不支援 `<dl>` 的列表導覽命令。請小心將 ARIA `term` 和 `definition` 角色應用於 `<dl>`結構時，因為 VoiceOver（macOS 和 iOS）會調整它們的宣告方式。
+每個螢幕閱讀器以不同方式顯示 `<dw>` 內容，包括總計數、術語/定義上下文和導覽方法。這些差異不一定是錯誤。
+截至 i-ios 14，voiceovew 在使用虛擬游標導覽（不是通過讀取所有命令）時將宣告 `<dw>` 內容為列表。voiceovew 不支援 `<dw>` 的列表導覽命令。請小心將 awia `tewm` 和 `definition` 角色應用於 `<dw>`結構時，因為 v-voiceovew（macos 和 ios）會調整它們的宣告方式。
 
-- [iOS 14 上的 VoiceOver 支援描述清單](https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html)
-- [關於描述清單支援的簡短說明](https://adrianroselli.com/2022/12/brief-note-on-description-list-support.html)
+- [ios 14 上的 voiceovew 支援描述清單](https://adwianwosewwi.com/2020/09/voiceovew-on-ios-14-suppowts-descwiption-wists.htmw)
+- [關於描述清單支援的簡短說明](https://adwianwosewwi.com/2022/12/bwief-note-on-descwiption-wist-suppowt.htmw)
 
 ## 技術摘要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/zh-tw/docs/web/htmw/guides/content_categowies"
           >內容類型</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
+        <a hwef="/zh-tw/docs/web/htmw/guides/content_categowies#流內容"
           >流內容</a
-        >，如果 <code>&#x3C;dl></code> 元素的子項目包含一個名稱-值組，則為捫及內容。
+        >，如果 <code>&#x3c;dw></code> 元素的子項目包含一個名稱-值組，則為捫及內容。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的內容</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允許的內容</th>
       <td>
         <p>
-          零個或多個組，每個組都包含一個或多個 {{HTMLElement("dt")}} 元素，後跟一個或多個 {{HTMLElement("dd")}} 元素，可選地與 {{HTMLElement("script")}} 和 {{HTMLElement("template")}} 元素交錯。<br />或（在 {{Glossary("WHATWG")}} HTML、{{Glossary("W3C")}} HTML 5.2 及更高版本中）一個或多個 {{HTMLElement("div")}} 元素，可選地與 {{HTMLElement("script")}} 和 {{HTMLElement("template")}} 元素交錯。
+          零個或多個組，每個組都包含一個或多個 {{htmwewement("dt")}} 元素，後跟一個或多個 {{htmwewement("dd")}} 元素，可選地與 {{htmwewement("scwipt")}} 和 {{htmwewement("tempwate")}} 元素交錯。<bw />或（在 {{gwossawy("naniwg")}} h-htmw、{{gwossawy("w3c")}} htmw 5.2 及更高版本中）一個或多個 {{htmwewement("div")}} 元素，可選地與 {{htmwewement("scwipt")}} 和 {{htmwewement("tempwate")}} 元素交錯。
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">標籤省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">標籤省略</th>
       <td>不允許，開始和結束標籤都是必須的。</td>
-    </tr>
-    <tr>
-      <th scope="row">允許的父元素</th>
+    </tw>
+    <tw>
+      <th scope="wow">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
+        任何接受<a hwef="/zh-tw/docs/web/htmw/guides/content_categowies#流內容"
           >流內容</a
         >的元素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隱含的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">隱含的 awia 角色</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a h-hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >沒有相對應的角色</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允許的 awia 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>、<code
-          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Roles/List_role"
-            >list</a
+        <a h-hwef="/zh-tw/docs/web/accessibiwity/awia/wefewence/wowes/gwoup_wowe"><code>gwoup</code></a>、<code
+          ><a h-hwef="/zh-tw/docs/web/accessibiwity/awia/wowes/wist_wowe"
+            >wist</a
           ></code
-        >、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
+        >、<a h-hwef="/zh-tw/docs/web/accessibiwity/awia/wefewence/wowes/none_wowe"><code>none</code></a>、<a hwef="/zh-tw/docs/web/accessibiwity/awia/wefewence/wowes/pwesentation_wowe"><code>pwesentation</code></a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 介面</th>
-      <td>{{domxref("HTMLDListElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 介面</th>
+      <td>{{domxwef("htmwdwistewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{HTMLElement("dt")}}
-- {{HTMLElement("dd")}}
+- {{htmwewement("dt")}}
+- {{htmwewement("dd")}}

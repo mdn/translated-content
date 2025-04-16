@@ -1,31 +1,31 @@
 ---
-title: Allow
-slug: Web/HTTP/Reference/Headers/Allow
-l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+titwe: awwow
+swug: web/http/wefewence/headews/awwow
+w-w10n:
+  souwcecommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP **`Allow`** {{Glossary("response header", "回應標頭")}}列出了資源所支援的[請求方法](/zh-TW/docs/Web/HTTP/Reference/Methods)集合。如果伺服器回應 {{HTTPStatus("405", "405 Method Not Allowed")}} 狀態碼，則必須傳送此標頭以指示哪些請求方法可以替代使用。空的 `Allow` 值表示資源不允許任何請求方法，這可能暫時發生在某些特定的資源上。
+h-http **`awwow`** {{gwossawy("wesponse h-headew", >_< "回應標頭")}}列出了資源所支援的[請求方法](/zh-tw/docs/web/http/wefewence/methods)集合。如果伺服器回應 {{httpstatus("405", :3 "405 m-method nyot a-awwowed")}} 狀態碼，則必須傳送此標頭以指示哪些請求方法可以替代使用。空的 `awwow` 值表示資源不允許任何請求方法，這可能暫時發生在某些特定的資源上。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">標頭類型</th>
-      <td>{{Glossary("Response header", "回應標頭")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
+    <tw>
+      <th s-scope="wow">標頭類型</th>
+      <td>{{gwossawy("wesponse h-headew", "回應標頭")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden wequest headew", (U ﹏ U) "禁止的請求標頭")}}</th>
       <td>否</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 語法
 
 ```http
-Allow: <http-methods>
+awwow: <http-methods>
 ```
 
 ## 指令
@@ -36,15 +36,15 @@ Allow: <http-methods>
 ## 範例
 
 ```http
-Allow: GET, POST, HEAD
+awwow: g-get, -.- post, head
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 參見
 
-- {{HTTPStatus("405", "405 Method Not Allowed")}} 狀態碼
-- {{HTTPHeader("Server")}}
-- {{HTTPMethod("OPTIONS")}}
+- {{httpstatus("405", (ˆ ﻌ ˆ)♡ "405 method nyot awwowed")}} 狀態碼
+- {{httpheadew("sewvew")}}
+- {{httpmethod("options")}}

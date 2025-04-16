@@ -1,104 +1,104 @@
 ---
-title: ArrayBuffer
-slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
+titwe: awwaybuffew
+swug: web/javascwipt/wefewence/gwobaw_objects/awwaybuffew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`ArrayBuffer`** 物件是一種表示通用、固定大小的原始二進制資料緩衝。想要直接操作一個 `ArrayBuffer` 物件的內容是不可能的。若要讀寫該緩衝的內容則必須透過視圖，可以選擇建立一個 {{jsxref("DataView")}} 視圖物件或是一個限定其成員為某種型別的 {{jsxref("TypedArray")}} 視圖物件，它們皆能以特定的型別解讀、修改 `ArrayBuffer`。
+**`awwaybuffew`** 物件是一種表示通用、固定大小的原始二進制資料緩衝。想要直接操作一個 `awwaybuffew` 物件的內容是不可能的。若要讀寫該緩衝的內容則必須透過視圖，可以選擇建立一個 {{jsxwef("dataview")}} 視圖物件或是一個限定其成員為某種型別的 {{jsxwef("typedawway")}} 視圖物件，它們皆能以特定的型別解讀、修改 `awwaybuffew`。
 
 ## 語法
 
-```js-nolint
-new ArrayBuffer(length)
+```js-nowint
+n-nyew awwaybuffew(wength)
 ```
 
 ### 參數
 
-- `length`
+- `wength`
   - : 要建立的緩衝陣列大小，以位元組（byte）計算。
 
 ### 回傳值
 
-為一個新建立的指定大小 `ArrayBuffer` 物件，其內容皆初始化為 0。
+為一個新建立的指定大小 `awwaybuffew` 物件，其內容皆初始化為 0。
 
-### Exceptions
+### e-exceptions
 
-A {{jsxref("RangeError")}} is thrown if the `length` is larger than {{jsxref("Number.MAX_SAFE_INTEGER")}} (>= 2 \*\* 53) or negative.
+a-a {{jsxwef("wangeewwow")}} i-is thwown if t-the `wength` is w-wawgew than {{jsxwef("numbew.max_safe_integew")}} (>= 2 \*\* 53) o-ow nyegative. 😳😳😳
 
 ## 說明
 
-The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in bytes.
+t-the `awwaybuffew` constwuctow cweates a nyew `awwaybuffew` of the given w-wength in bytes. :3
 
-### 從既有的資料取得 ArrayBuffer
+### 從既有的資料取得 awwaybuffew
 
-- [From a Base64 string](/zh-TW/docs/Glossary/Base64#appendix.3a_decode_a_base64_string_to_uint8array_or_arraybuffer)
-- [從本地端檔案](</zh-TW/docs/Web/API/FileReader#readAsArrayBuffer()>)
+- [fwom a base64 s-stwing](/zh-tw/docs/gwossawy/base64#appendix.3a_decode_a_base64_stwing_to_uint8awway_ow_awwaybuffew)
+- [從本地端檔案](</zh-tw/docs/web/api/fiweweadew#weadasawwaybuffew()>)
 
 ## 屬性
 
-- `ArrayBuffer.length`
-  - : The `ArrayBuffer` constructor's length property whose value is 1.
-- [`ArrayBuffer[Symbol.species]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
-  - : The constructor function that is used to create derived objects.
-- {{jsxref("ArrayBuffer.prototype")}}
-  - : Allows the addition of properties to all `ArrayBuffer` objects.
+- `awwaybuffew.wength`
+  - : the `awwaybuffew` c-constwuctow's wength pwopewty whose vawue is 1. OwO
+- [`awwaybuffew[symbow.species]`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew/symbow.species)
+  - : t-the constwuctow function that i-is used to cweate d-dewived objects. (U ﹏ U)
+- {{jsxwef("awwaybuffew.pwototype")}}
+  - : awwows the addition of pwopewties to aww `awwaybuffew` objects. >w<
 
 ## 方法
 
-- {{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(arg)")}}
-  - : Returns `true` if `arg` is one of the ArrayBuffer views, such as [typed array objects](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or a {{jsxref("DataView")}}. Returns `false` otherwise.
-- {{jsxref("ArrayBuffer.transfer", "ArrayBuffer.transfer(oldBuffer [, newByteLength])")}} {{experimental_inline}}
-  - : Returns a new `ArrayBuffer` whose contents are taken from the `oldBuffer`'s data and then is either truncated or zero-extended by `newByteLength`.
+- {{jsxwef("awwaybuffew.isview", (U ﹏ U) "awwaybuffew.isview(awg)")}}
+  - : w-wetuwns `twue` if `awg` is one of the awwaybuffew views, 😳 such as [typed awway o-objects](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway) ow a {{jsxwef("dataview")}}. (ˆ ﻌ ˆ)♡ w-wetuwns `fawse` o-othewwise. 😳😳😳
+- {{jsxwef("awwaybuffew.twansfew", (U ﹏ U) "awwaybuffew.twansfew(owdbuffew [, (///ˬ///✿) n-nyewbytewength])")}} {{expewimentaw_inwine}}
+  - : w-wetuwns a nyew `awwaybuffew` whose contents a-awe taken fwom the `owdbuffew`'s data and t-then is eithew twuncated ow zewo-extended by `newbytewength`. 😳
 
-## `ArrayBuffer` 實例
+## `awwaybuffew` 實例
 
-所有的 `ArrayBuffer` 物件實例皆繼承自 {{jsxref("ArrayBuffer.prototype")}}.
+所有的 `awwaybuffew` 物件實例皆繼承自 {{jsxwef("awwaybuffew.pwototype")}}. 😳
 
 ### 屬性
 
-- `ArrayBuffer.prototype[Symbol.toStringTag]`
-  - : The initial value of the [`Symbol.toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
-- {{jsxref("ArrayBuffer.prototype.byteLength")}}
-  - : The read-only size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and cannot be changed.
+- `awwaybuffew.pwototype[symbow.tostwingtag]`
+  - : the initiaw vawue of the [`symbow.tostwingtag`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) pwopewty i-is the stwing `"awwaybuffew"`. σωσ this pwopewty is u-used in {{jsxwef("object.pwototype.tostwing()")}}. rawr x3
+- {{jsxwef("awwaybuffew.pwototype.bytewength")}}
+  - : t-the wead-onwy s-size, OwO in bytes, of the `awwaybuffew`. /(^•ω•^) this is estabwished when the awway i-is constwucted a-and cannot be changed.
 
 ### 方法
 
-- {{jsxref("ArrayBuffer.prototype.slice()")}}
-  - : Returns a new `ArrayBuffer` whose contents are a copy of this `ArrayBuffer`'s bytes from `begin` (inclusive) up to `end` (exclusive). If either `begin` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
+- {{jsxwef("awwaybuffew.pwototype.swice()")}}
+  - : wetuwns a-a nyew `awwaybuffew` w-whose contents awe a copy o-of this `awwaybuffew`'s bytes fwom `begin` (incwusive) u-up to `end` (excwusive). if eithew `begin` ow `end` is nyegative, 😳😳😳 i-it wefews to an index fwom t-the end of the awway, ( ͡o ω ͡o ) as opposed t-to fwom the b-beginning. >_<
 
 ## 範例
 
-In this example, we create a 8-byte buffer with a {{jsxref("Global_Objects/Int32Array", "Int32Array")}} view referring to the buffer:
+in this exampwe, >w< we cweate a 8-byte buffew with a {{jsxwef("gwobaw_objects/int32awway", rawr "int32awway")}} view wefewwing to the buffew:
 
 ```js
-var buffer = new ArrayBuffer(8);
-var view = new Int32Array(buffer);
+v-vaw buffew = n-nyew awwaybuffew(8);
+vaw view = n-nyew int32awway(buffew);
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 相容性備註
 
-Starting with ECMAScript 2015, `ArrayBuffer` constructors require to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling an `ArrayBuffer` constructor as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
+s-stawting with e-ecmascwipt 2015, 😳 `awwaybuffew` constwuctows wequiwe to be constwucted with a {{jsxwef("opewatows/new", >w< "new")}} o-opewatow. (⑅˘꒳˘) cawwing an `awwaybuffew` constwuctow as a function without `new`, OwO w-wiww thwow a {{jsxwef("typeewwow")}} fwom nyow on. (ꈍᴗꈍ)
 
-```js example-bad
-var dv = ArrayBuffer(10);
-// TypeError: calling a builtin ArrayBuffer constructor
-// without new is forbidden
+```js e-exampwe-bad
+v-vaw dv = awwaybuffew(10);
+// t-typeewwow: cawwing a buiwtin a-awwaybuffew constwuctow
+// w-without n-nyew is fowbidden
 ```
 
-```js example-good
-var dv = new ArrayBuffer(10);
+```js e-exampwe-good
+vaw dv = nyew awwaybuffew(10);
 ```
 
 ## 參見
 
-- {{jsxref("TypedArray")}}
-- {{jsxref("SharedArrayBuffer")}}
+- {{jsxwef("typedawway")}}
+- {{jsxwef("shawedawwaybuffew")}}

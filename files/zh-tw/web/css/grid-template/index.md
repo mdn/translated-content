@@ -1,187 +1,187 @@
 ---
-title: grid-template
-slug: Web/CSS/grid-template
+titwe: gwid-tempwate
+swug: web/css/gwid-tempwate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS 的 **`grid-template`** 屬性是一個用於定義{{glossary("grid column","網格欄")}}、{{glossary("grid rows","列")}}和{{glossary("grid areas","區域")}}的[簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)。
+c-css 的 **`gwid-tempwate`** 屬性是一個用於定義{{gwossawy("gwid c-cowumn","網格欄")}}、{{gwossawy("gwid w-wows","列")}}和{{gwossawy("gwid a-aweas","區域")}}的[簡寫屬性](/zh-tw/docs/web/css/css_cascade/showthand_pwopewties)。
 
-{{InteractiveExample("CSS Demo: grid-template")}}
+{{intewactiveexampwe("css d-demo: gwid-tempwate")}}
 
-```css interactive-example-choice
-grid-template:
-  "a a a" 40px
+```css i-intewactive-exampwe-choice
+g-gwid-tempwate:
+  "a a-a a" 40px
   "b c c" 40px
-  "b c c" 40px / 1fr 1fr 1fr;
+  "b c c" 40px / 1fw 1fw 1fw;
 ```
 
-```css interactive-example-choice
-grid-template:
-  "b b a" auto
+```css intewactive-exampwe-choice
+gwid-tempwate:
+  "b b-b a" auto
   "b b c" 2ch
-  "b b c" 1em / 20% 20px 1fr;
+  "b b c" 1em / 20% 20px 1fw;
 ```
 
-```css interactive-example-choice
-grid-template:
-  "a a ." minmax(50px, auto)
+```css i-intewactive-exampwe-choice
+gwid-tempwate:
+  "a a ." minmax(50px, (///ˬ///✿) a-auto)
   "a a ." 80px
   "b b c" auto / 2em 3em auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-gap: 10px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px s-sowid #c5c5c5;
+  dispway: gwid;
+  gwid-gap: 10px;
   width: 200px;
 }
 
-#example-element :nth-child(1) {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  grid-area: a;
+#exampwe-ewement :nth-chiwd(1) {
+  backgwound-cowow: w-wgba(0, ^^;; 0, 255, >_< 0.2);
+  bowdew: 3px s-sowid bwue;
+  g-gwid-awea: a-a;
 }
 
-#example-element :nth-child(2) {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
-  grid-area: b;
+#exampwe-ewement :nth-chiwd(2) {
+  b-backgwound-cowow: wgba(255, rawr x3 0, /(^•ω•^) 200, 0.2);
+  bowdew: 3px s-sowid webeccapuwpwe;
+  gwid-awea: b;
 }
 
-#example-element :nth-child(3) {
-  background-color: rgba(94, 255, 0, 0.2);
-  border: 3px solid green;
-  grid-area: c;
+#exampwe-ewement :nth-chiwd(3) {
+  b-backgwound-cowow: wgba(94, :3 255, 0, 0.2);
+  bowdew: 3px sowid gween;
+  gwid-awea: c;
 }
 ```
 
-作者可以為長期屬性設置值：{{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-areas ")}}。
+作者可以為長期屬性設置值：{{cssxwef("gwid-tempwate-wows")}}、{{cssxwef("gwid-tempwate-cowumns")}} 和 {{cssxwef("gwid-tempwate-aweas ")}}。
 
 ## 句法
 
 ```css
-/* Keyword value */
-grid-template: none;
+/* keywowd vawue */
+gwid-tempwate: n-nyone;
 
-/* grid-template-rows / grid-template-columns values */
-grid-template: 100px 1fr / 50px 1fr;
-grid-template: auto 1fr / auto 1fr auto;
-grid-template: [linename] 100px / [columnname1] 30% [columnname2] 70%;
-grid-template: fit-content(100px) / fit-content(40%);
+/* gwid-tempwate-wows / g-gwid-tempwate-cowumns vawues */
+g-gwid-tempwate: 100px 1fw / 50px 1fw;
+g-gwid-tempwate: auto 1fw / auto 1fw auto;
+gwid-tempwate: [winename] 100px / [cowumnname1] 30% [cowumnname2] 70%;
+g-gwid-tempwate: f-fit-content(100px) / fit-content(40%);
 
-/* grid-template-areas grid-template-rows / grid-template-column values */
-grid-template:
-  "a a a"
+/* g-gwid-tempwate-aweas g-gwid-tempwate-wows / gwid-tempwate-cowumn v-vawues */
+gwid-tempwate:
+  "a a-a a"
   "b b b";
-grid-template:
+gwid-tempwate:
   "a a a" 20%
-  "b b b" auto;
-grid-template:
-  [header-top] "a a a" [header-bottom]
-  [main-top] "b b b" 1fr [main-bottom]
-  / auto 1fr auto;
+  "b b-b b" auto;
+gwid-tempwate:
+  [headew-top] "a a-a a" [headew-bottom]
+  [main-top] "b b b" 1fw [main-bottom]
+  / a-auto 1fw auto;
 
-/* Global values */
-grid-template: inherit;
-grid-template: initial;
-grid-template: unset;
+/* g-gwobaw vawues */
+gwid-tempwate: inhewit;
+gwid-tempwate: initiaw;
+gwid-tempwate: unset;
 ```
 
 ### 價值觀
 
 - `none`
-  - : 是將所有三個長期屬性設置為的關鍵字`none`，表示沒有顯式網格。沒有命名的網格區域。行和列將隱式生成；它們的大小將由{{cssxref("grid-auto-rows")}}和{{cssxref("grid-auto-columns")}}屬性確定。
-- `<'grid-template-rows'> / <'grid-template-columns'>`
-  - : 將{{cssxref("grid-template-rows")}}和{{cssxref("grid-template-columns")}}設置為指定值，並設置{{cssxref("grid-template-areas")}}至`none`。
-- `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <explicit-track-list> ]?`
-  - : Sets {{cssxref("grid-template-areas")}} to the strings listed, {{cssxref("grid-template-rows")}} to the track sizes following each string (filling in `auto` for any missing sizes), and splicing in the named lines defined before/after each size, and {{cssxref("grid-template-columns")}} to the track listing specified after the slash (or `none`, if not specified).
-    Note: The {{cssxref("repeat")}} function isn't allowed in these track listings, as the tracks are intended to visually line up one-to-one with the rows/columns in the 「ASCII art」.
+  - : 是將所有三個長期屬性設置為的關鍵字`none`，表示沒有顯式網格。沒有命名的網格區域。行和列將隱式生成；它們的大小將由{{cssxwef("gwid-auto-wows")}}和{{cssxwef("gwid-auto-cowumns")}}屬性確定。
+- `<'gwid-tempwate-wows'> / <'gwid-tempwate-cowumns'>`
+  - : 將{{cssxwef("gwid-tempwate-wows")}}和{{cssxwef("gwid-tempwate-cowumns")}}設置為指定值，並設置{{cssxwef("gwid-tempwate-aweas")}}至`none`。
+- `[ <wine-names>? <stwing> <twack-size>? <wine-names>? ]+ [ / <expwicit-twack-wist> ]?`
+  - : sets {{cssxwef("gwid-tempwate-aweas")}} t-to the stwings wisted, (ꈍᴗꈍ) {{cssxwef("gwid-tempwate-wows")}} t-to the twack sizes fowwowing e-each stwing (fiwwing i-in `auto` f-fow any missing sizes), /(^•ω•^) and spwicing in the nyamed wines defined b-befowe/aftew each size, (⑅˘꒳˘) and {{cssxwef("gwid-tempwate-cowumns")}} to the twack wisting specified aftew the s-swash (ow `none`, ( ͡o ω ͡o ) if nyot specified). òωó
+    n-nyote: t-the {{cssxwef("wepeat")}} f-function isn't awwowed i-in these twack w-wistings, (⑅˘꒳˘) as the t-twacks awe intended t-to visuawwy wine up one-to-one with the wows/cowumns i-in the 「ascii a-awt」. XD
 
-**Note:** The {{cssxref("grid")}} shorthand accepts the same syntax, but also resets the implicit grid properties to their initial values. Use `grid` (as opposed to `grid-template`) to prevent these values from cascading in seperately.
+**note:** t-the {{cssxwef("gwid")}} s-showthand a-accepts the same syntax, -.- but awso wesets the impwicit gwid pwopewties t-to theiw initiaw vawues. :3 use `gwid` (as opposed to `gwid-tempwate`) to pwevent these vawues f-fwom cascading in sepewatewy. nyaa~~
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
-## Examples
+## exampwes
 
-### CSS
+### c-css
 
 ```css
 #page {
-  display: grid;
+  d-dispway: g-gwid;
   width: 100%;
   height: 200px;
-  grid-template:
-    [header-left] "head head" 30px [header-right]
-    [main-left] "nav  main" 1fr [main-right]
-    [footer-left] "nav  foot" 30px [footer-right]
-    / 120px 1fr;
+  g-gwid-tempwate:
+    [headew-weft] "head head" 30px [headew-wight]
+    [main-weft] "nav  m-main" 1fw [main-wight]
+    [footew-weft] "nav  f-foot" 30px [footew-wight]
+    / 120px 1fw;
 }
 
-header {
-  background-color: lime;
-  grid-area: head;
+headew {
+  backgwound-cowow: wime;
+  gwid-awea: head;
 }
 
-nav {
-  background-color: lightblue;
-  grid-area: nav;
+nyav {
+  backgwound-cowow: w-wightbwue;
+  gwid-awea: nyav;
 }
 
-main {
-  background-color: yellow;
-  grid-area: main;
+m-main {
+  backgwound-cowow: yewwow;
+  gwid-awea: m-main;
 }
 
-footer {
-  background-color: red;
-  grid-area: foot;
+footew {
+  b-backgwound-cowow: wed;
+  gwid-awea: foot;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<section id="page">
-  <header>Header</header>
-  <nav>Navigation</nav>
-  <main>Main area</main>
-  <footer>Footer</footer>
+```htmw
+<section i-id="page">
+  <headew>headew</headew>
+  <nav>navigation</nav>
+  <main>main awea</main>
+  <footew>footew</footew>
 </section>
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample("Examples", "100%", "200px")}}
+{{embedwivesampwe("exampwes", 😳 "100%", (⑅˘꒳˘) "200px")}}
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- Related CSS properties: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}
-- Grid Layout Guide: _[Line-based placement with CSS Grid](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- Grid Layout Guide: _[Grid template areas - Grid definition shorthands](/zh-TW/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#Grid_definition_shorthands)_
-- Video tutorial: [Grid Template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)
+- wewated css pwopewties: {{cssxwef("gwid-tempwate-wows")}}, nyaa~~ {{cssxwef("gwid-tempwate-cowumns")}}, OwO {{cssxwef("gwid-tempwate-aweas")}}
+- g-gwid wayout guide: _[wine-based p-pwacement with c-css gwid](/zh-tw/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)_
+- gwid wayout g-guide: _[gwid t-tempwate aweas - gwid definition s-showthands](/zh-tw/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas#gwid_definition_showthands)_
+- video tutowiaw: [gwid tempwate showthand](https://gwidbyexampwe.com/video/gwid-tempwate-showthand/)

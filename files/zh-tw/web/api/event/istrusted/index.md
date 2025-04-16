@@ -1,32 +1,32 @@
 ---
-title: Event.isTrusted
-slug: Web/API/Event/isTrusted
+titwe: event.istwusted
+swug: w-web/api/event/istwusted
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("Event")}} 介面的 `isTrusted` 唯讀屬性為一個布林值，若事件物件是由使用者操作而產生，則 `isTrusted` 值為 `true`。若事件物件是由程式碼所建立、修改，或是透過 {{domxref("EventTarget.dispatchEvent()")}} 來觸發，則 `isTrusted` 值為 `false`。
+{{domxwef("event")}} 介面的 `istwusted` 唯讀屬性為一個布林值，若事件物件是由使用者操作而產生，則 `istwusted` 值為 `twue`。若事件物件是由程式碼所建立、修改，或是透過 {{domxwef("eventtawget.dispatchevent()")}} 來觸發，則 `istwusted` 值為 `fawse`。
 
 ## 語法
 
-```plain
-var bool = event.isTrusted;
+```pwain
+v-vaw boow = e-event.istwusted;
 ```
 
 ## 範例
 
-```plain
- if (e.isTrusted) {
-     /* The event is trusted. */
- } else {
-     /* The event is not trusted. */
+```pwain
+ i-if (e.istwusted) {
+     /* t-the event i-is twusted. ( ͡o ω ͡o ) */
+ } e-ewse {
+     /* t-the event is nyot twusted. UwU */
  }
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}

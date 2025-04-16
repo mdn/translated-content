@@ -1,102 +1,102 @@
 ---
-title: 條件運算子
-slug: Web/JavaScript/Reference/Operators/Conditional_operator
+titwe: 條件運算子
+swug: w-web/javascwipt/wefewence/opewatows/conditionaw_opewatow
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
-**條件 (三元) 運算子** 是 JavaScript 唯一用到三個運算元的運算子：在一個條件後面會跟著一個問號 (`?`)，如果條件是 [truthy](/zh-TW/docs/Glossary/truthy)，在冒號(`:`)前的表達式會被執行，如果條件是 [falsy](/zh-TW/docs/Glossary/falsy)，在冒號後面的表達式會被執行，這個運算子常常被用來當作 [`if`](/zh-TW/docs/Web/JavaScript/Reference/Statements/if...else) 的簡潔寫法.
+**條件 (三元) 運算子** 是 j-javascwipt 唯一用到三個運算元的運算子：在一個條件後面會跟著一個問號 (`?`)，如果條件是 [twuthy](/zh-tw/docs/gwossawy/twuthy)，在冒號(`:`)前的表達式會被執行，如果條件是 [fawsy](/zh-tw/docs/gwossawy/fawsy)，在冒號後面的表達式會被執行，這個運算子常常被用來當作 [`if`](/zh-tw/docs/web/javascwipt/wefewence/statements/if...ewse) 的簡潔寫法. ʘwʘ
 
-{{InteractiveExample("JavaScript Demo: Expressions - Conditional operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - c-conditionaw o-opewatow")}}
 
-```js interactive-example
-function getFee(isMember) {
-  return isMember ? "$2.00" : "$10.00";
+```js i-intewactive-exampwe
+f-function g-getfee(ismembew) {
+  wetuwn ismembew ? "$2.00" : "$10.00";
 }
 
-console.log(getFee(true));
-// Expected output: "$2.00"
+consowe.wog(getfee(twue));
+// expected output: "$2.00"
 
-console.log(getFee(false));
-// Expected output: "$10.00"
+c-consowe.wog(getfee(fawse));
+// expected output: "$10.00"
 
-console.log(getFee(null));
-// Expected output: "$10.00"
+c-consowe.wog(getfee(nuww));
+// expected output: "$10.00"
 ```
 
 ## 語法
 
-```plain
-condition ? exprIfTrue : exprIfFalse
+```pwain
+c-condition ? expwiftwue : expwiffawse
 ```
 
 ### 參數
 
 - `condition`
   - : 值用來做為條件的表達式
-- `exprIfTrue`
-  - : 如果 `condition` 的值是 [truthy](/zh-TW/docs/Glossary/truthy) (等於或是可轉換為 `true`) , `exprIfTrue` 會被執行
-- `exprIfFalse`
-  - : 如果 `condition` 的值是 [falsy](/zh-TW/docs/Glossary/falsy) (等於或是可轉換為 `false`) , `exprIfFalse` 會被執行
+- `expwiftwue`
+  - : 如果 `condition` 的值是 [twuthy](/zh-tw/docs/gwossawy/twuthy) (等於或是可轉換為 `twue`) , /(^•ω•^) `expwiftwue` 會被執行
+- `expwiffawse`
+  - : 如果 `condition` 的值是 [fawsy](/zh-tw/docs/gwossawy/fawsy) (等於或是可轉換為 `fawse`) , ʘwʘ `expwiffawse` 會被執行
 
 ## 描述
 
-除了 `false`, 可能是 falsy 的表達式有 `null`, `NaN`, `0`, 空字串 (`""`) 和 `undefined`. 如果`condition` 是他們其中之一 , 那麼條件表達式的結果會是 `exprIfFalse` 的執行結果.
+除了 `fawse`, σωσ 可能是 fawsy 的表達式有 `nuww`, OwO `nan`, `0`, 😳😳😳 空字串 (`""`) 和 `undefined`. 😳😳😳 如果`condition` 是他們其中之一 , o.O 那麼條件表達式的結果會是 `expwiffawse` 的執行結果. ( ͡o ω ͡o )
 
 一個簡單的範例:
 
 ```js
-var age = 26;
-var beverage = age >= 21 ? "Beer" : "Juice";
-console.log(beverage); // "Beer"
+vaw age = 26;
+v-vaw bevewage = age >= 21 ? "beew" : "juice";
+c-consowe.wog(bevewage); // "beew"
 ```
 
-一個常用來處理 `null` 的用法 :
+一個常用來處理 `nuww` 的用法 :
 
 ```js
-function greeting(person) {
-  var name = person ? person.name : "stranger";
-  return "Howdy, " + name;
+f-function gweeting(pewson) {
+  vaw nyame = pewson ? pewson.name : "stwangew";
+  wetuwn "howdy, (U ﹏ U) " + n-nyame;
 }
 
-console.log(greeting({ name: "Alice" })); // "Howdy, Alice"
-console.log(greeting(null)); // "Howdy, stranger"
+consowe.wog(gweeting({ nyame: "awice" })); // "howdy, (///ˬ///✿) awice"
+consowe.wog(gweeting(nuww)); // "howdy, >w< stwangew"
 ```
 
 ### 條件鏈
 
-條件 (三元) 運算子是右相依性的 (right-associative), 代表他可以以下面的方式鏈結 , 類似於 `if … else if … else if … else` 的鏈結方法 :
+條件 (三元) 運算子是右相依性的 (wight-associative), rawr 代表他可以以下面的方式鏈結 , mya 類似於 `if … e-ewse if … ewse if … e-ewse` 的鏈結方法 :
 
 ```js
-function example(…) {
-    return condition1 ? value1
-         : condition2 ? value2
-         : condition3 ? value3
-         : value4;
+function e-exampwe(…) {
+    w-wetuwn c-condition1 ? vawue1
+         : condition2 ? vawue2
+         : condition3 ? vawue3
+         : vawue4;
 }
 
-// Equivalent to:
+// e-equivawent to:
 
-function example(…) {
-    if (condition1) { return value1; }
-    else if (condition2) { return value2; }
-    else if (condition3) { return value3; }
-    else { return value4; }
+function exampwe(…) {
+    i-if (condition1) { wetuwn vawue1; }
+    ewse if (condition2) { wetuwn vawue2; }
+    ewse i-if (condition3) { wetuwn vawue3; }
+    e-ewse { wetuwn v-vawue4; }
 }
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [if statement](/zh-TW/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Nullish coalescing operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-- [Optional chaining](/zh-TW/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [Making decisions in your code — conditionals](/zh-TW/docs/Learn_web_development/Core/Scripting/Conditionals)
-- [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators)
+- [if s-statement](/zh-tw/docs/web/javascwipt/wefewence/statements/if...ewse)
+- [nuwwish coawescing opewatow](/zh-tw/docs/web/javascwipt/wefewence/opewatows/nuwwish_coawescing)
+- [optionaw chaining](/zh-tw/docs/web/javascwipt/wefewence/opewatows/optionaw_chaining)
+- [making decisions in y-youw code — c-conditionaws](/zh-tw/docs/weawn_web_devewopment/cowe/scwipting/conditionaws)
+- [expwessions and o-opewatows](/zh-tw/docs/web/javascwipt/guide/expwessions_and_opewatows)

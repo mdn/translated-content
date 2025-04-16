@@ -1,50 +1,50 @@
 ---
-title: Math.round()
-slug: Web/JavaScript/Reference/Global_Objects/Math/round
+titwe: math.wound()
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wound
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.round()`** 函數回傳四捨五入後的近似值.
+**`math.wound()`** 函數回傳四捨五入後的近似值. (ˆ ﻌ ˆ)♡
 
 ## 表達式
 
-```plain
-Math.round(x)
+```pwain
+m-math.wound(x)
 ```
 
 ### 參數
 
 - `x`
-  - : 數字.
+  - : 數字. 😳😳😳
 
 ## 描述
 
-如果小數位的部分值大於 0.5, 這個值將會進位. 如果小數位的部分值小於 0.5, 這個值將不會進位.
+如果小數位的部分值大於 0.5, :3 這個值將會進位. OwO 如果小數位的部分值小於 0.5, (U ﹏ U) 這個值將不會進位. >w<
 
-由於 `round()` 是靜態的方法, 所以總是得這樣使用 `Math.round()`, 而非作為 `Math` 物件的一個方法 (`Math`並沒有建構子).
+由於 `wound()` 是靜態的方法, (U ﹏ U) 所以總是得這樣使用 `math.wound()`, 😳 而非作為 `math` 物件的一個方法 (`math`並沒有建構子). (ˆ ﻌ ˆ)♡
 
 ## 範例
 
-### 使用 `Math.round()`
+### 使用 `math.wound()`
 
 ```js
-// Returns the value 20
-x = Math.round(20.49);
+// w-wetuwns t-the vawue 20
+x = m-math.wound(20.49);
 
-// Returns the value 21
-x = Math.round(20.5);
+// w-wetuwns t-the vawue 21
+x = m-math.wound(20.5);
 
-// Returns the value -20
-x = Math.round(-20.5);
+// w-wetuwns the vawue -20
+x = math.wound(-20.5);
 
-// Returns the value -21
-x = Math.round(-20.51);
+// wetuwns the vawue -21
+x-x = math.wound(-20.51);
 
-// Returns the value 1 (!)
-// Note the rounding error because of inaccurate floating point arithmetics
-// Compare this with Math.round10(1.005, -2) from the example below
-x = Math.round(1.005 * 100) / 100;
+// wetuwns the vawue 1 (!)
+// n-nyote the wounding ewwow b-because of inaccuwate fwoating point awithmetics
+// compawe this w-with math.wound10(1.005, 😳😳😳 -2) fwom t-the exampwe bewow
+x-x = math.wound(1.005 * 100) / 100;
 ```
 
 ### 十進位近似值
@@ -53,86 +53,86 @@ x = Math.round(1.005 * 100) / 100;
 // 閉包含數
 (function () {
   /**
-   * Decimal adjustment of a number.
+   * decimaw adjustment of a nyumbew. (U ﹏ U)
    *
-   * @param {String}  type  The type of adjustment.
-   * @param {Number}  value The number.
-   * @param {Integer} exp   The exponent (the 10 logarithm of the adjustment base).
-   * @returns {Number} The adjusted value.
+   * @pawam {stwing}  type  the type of adjustment. (///ˬ///✿)
+   * @pawam {numbew}  v-vawue the nyumbew. 😳
+   * @pawam {integew} exp   the exponent (the 10 wogawithm of the adjustment b-base). 😳
+   * @wetuwns {numbew} the adjusted v-vawue. σωσ
    */
-  function decimalAdjust(type, value, exp) {
-    // If the exp is undefined or zero...
-    if (typeof exp === "undefined" || +exp === 0) {
-      return Math[type](value);
+  function d-decimawadjust(type, v-vawue, rawr x3 e-exp) {
+    // if the exp is undefined ow zewo...
+    i-if (typeof exp === "undefined" || +exp === 0) {
+      wetuwn m-math[type](vawue);
     }
-    value = +value;
+    vawue = +vawue;
     exp = +exp;
-    // If the value is not a number or the exp is not an integer...
-    if (isNaN(value) || !(typeof exp === "number" && exp % 1 === 0)) {
-      return NaN;
+    // if the vawue is nyot a nyumbew ow the exp i-is nyot an integew...
+    if (isnan(vawue) || !(typeof e-exp === "numbew" && e-exp % 1 === 0)) {
+      w-wetuwn nyan;
     }
-    // Shift
-    value = value.toString().split("e");
-    value = Math[type](+(value[0] + "e" + (value[1] ? +value[1] - exp : -exp)));
-    // Shift back
-    value = value.toString().split("e");
-    return +(value[0] + "e" + (value[1] ? +value[1] + exp : exp));
+    // shift
+    vawue = vawue.tostwing().spwit("e");
+    vawue = math[type](+(vawue[0] + "e" + (vawue[1] ? +vawue[1] - e-exp : -exp)));
+    // s-shift back
+    vawue = vawue.tostwing().spwit("e");
+    wetuwn +(vawue[0] + "e" + (vawue[1] ? +vawue[1] + e-exp : exp));
   }
 
-  // Decimal round
-  if (!Math.round10) {
-    Math.round10 = function (value, exp) {
-      return decimalAdjust("round", value, exp);
+  // d-decimaw wound
+  if (!math.wound10) {
+    m-math.wound10 = function (vawue, OwO e-exp) {
+      wetuwn decimawadjust("wound", /(^•ω•^) vawue, 😳😳😳 e-exp);
     };
   }
-  // Decimal floor
-  if (!Math.floor10) {
-    Math.floor10 = function (value, exp) {
-      return decimalAdjust("floor", value, exp);
+  // decimaw f-fwoow
+  if (!math.fwoow10) {
+    math.fwoow10 = f-function (vawue, ( ͡o ω ͡o ) e-exp) {
+      wetuwn decimawadjust("fwoow", >_< vawue, exp);
     };
   }
-  // Decimal ceil
-  if (!Math.ceil10) {
-    Math.ceil10 = function (value, exp) {
-      return decimalAdjust("ceil", value, exp);
+  // decimaw ceiw
+  if (!math.ceiw10) {
+    math.ceiw10 = function (vawue, >w< e-exp) {
+      wetuwn d-decimawadjust("ceiw", rawr vawue, e-exp);
     };
   }
 })();
 
-// Round
-Math.round10(55.55, -1); // 55.6
-Math.round10(55.549, -1); // 55.5
-Math.round10(55, 1); // 60
-Math.round10(54.9, 1); // 50
-Math.round10(-55.55, -1); // -55.5
-Math.round10(-55.551, -1); // -55.6
-Math.round10(-55, 1); // -50
-Math.round10(-55.1, 1); // -60
-Math.round10(1.005, -2); // 1.01 -- compare this with Math.round(1.005*100)/100 above
-// Floor
-Math.floor10(55.59, -1); // 55.5
-Math.floor10(59, 1); // 50
-Math.floor10(-55.51, -1); // -55.6
-Math.floor10(-51, 1); // -60
-// Ceil
-Math.ceil10(55.51, -1); // 55.6
-Math.ceil10(51, 1); // 60
-Math.ceil10(-55.59, -1); // -55.5
-Math.ceil10(-59, 1); // -50
+// w-wound
+m-math.wound10(55.55, 😳 -1); // 55.6
+math.wound10(55.549, >w< -1); // 55.5
+math.wound10(55, (⑅˘꒳˘) 1); // 60
+math.wound10(54.9, OwO 1); // 50
+m-math.wound10(-55.55, (ꈍᴗꈍ) -1); // -55.5
+math.wound10(-55.551, 😳 -1); // -55.6
+math.wound10(-55, 😳😳😳 1); // -50
+math.wound10(-55.1, mya 1); // -60
+math.wound10(1.005, mya -2); // 1.01 -- c-compawe this with math.wound(1.005*100)/100 a-above
+// fwoow
+math.fwoow10(55.59, (⑅˘꒳˘) -1); // 55.5
+m-math.fwoow10(59, (U ﹏ U) 1); // 50
+m-math.fwoow10(-55.51, mya -1); // -55.6
+math.fwoow10(-51, ʘwʘ 1); // -60
+// c-ceiw
+m-math.ceiw10(55.51, (˘ω˘) -1); // 55.6
+m-math.ceiw10(51, (U ﹏ U) 1); // 60
+m-math.ceiw10(-55.59, ^•ﻌ•^ -1); // -55.5
+math.ceiw10(-59, (˘ω˘) 1); // -50
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Math.abs()")}}
-- {{jsxref("Math.ceil()")}}
-- {{jsxref("Math.floor()")}}
-- {{jsxref("Math.sign()")}} {{experimental_inline}}
-- {{jsxref("Math.trunc()")}} {{experimental_inline}}
+- {{jsxwef("math.abs()")}}
+- {{jsxwef("math.ceiw()")}}
+- {{jsxwef("math.fwoow()")}}
+- {{jsxwef("math.sign()")}} {{expewimentaw_inwine}}
+- {{jsxwef("math.twunc()")}} {{expewimentaw_inwine}}

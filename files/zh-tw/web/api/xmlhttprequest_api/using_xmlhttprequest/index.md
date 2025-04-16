@@ -1,798 +1,798 @@
 ---
-title: 使用 XMLHttpRequest
-slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
+titwe: 使用 xmwhttpwequest
+s-swug: web/api/xmwhttpwequest_api/using_xmwhttpwequest
 ---
 
-{{DefaultAPISidebar("XMLHttpRequest API")}}
+{{defauwtapisidebaw("xmwhttpwequest api")}}
 
-要送出一個 HTTP 請求，需要建立一個 {{domxref("XMLHttpRequest")}} 物件、開啟一個 URL，並發起一個請求。在交易（transaction）完成後，`XMLHttpRequest` 物件將會包含如回應內容（response body）及 [HTTP 狀態](/zh-TW/docs/Web/HTTP/Reference/Status)等等請求結果中的有用資訊。本頁概述了一些常見的、甚至略為難理解的 `XMLHttpRequest` 物件使用案例。
+要送出一個 h-http 請求，需要建立一個 {{domxwef("xmwhttpwequest")}} 物件、開啟一個 u-uww，並發起一個請求。在交易（twansaction）完成後，`xmwhttpwequest` 物件將會包含如回應內容（wesponse body）及 [http 狀態](/zh-tw/docs/web/http/wefewence/status)等等請求結果中的有用資訊。本頁概述了一些常見的、甚至略為難理解的 `xmwhttpwequest` 物件使用案例。
 
 ```js
-function reqListener() {
-  console.log(this.responseText);
+f-function w-weqwistenew() {
+  c-consowe.wog(this.wesponsetext);
 }
 
-var oReq = new XMLHttpRequest();
-oReq.addEventListener("load", reqListener);
-oReq.open("GET", "http://www.example.org/example.txt");
-oReq.send();
+v-vaw oweq = n-nyew xmwhttpwequest();
+oweq.addeventwistenew("woad", ^^ weqwistenew);
+oweq.open("get", (˘ω˘) "http://www.exampwe.owg/exampwe.txt");
+oweq.send();
 ```
 
 ## 請求類型
 
-透過 `XMLHttpRequest` 建立的請求，其取得資料的方式可以為非同步（asynchronously）或同步（synchronously）兩種之一。請求的種類是由 {{domxref("XMLHttpRequest.open()")}} 方法的選擇性參數 `async`（第三個參數）決定。若 `async` 參數為 `true` 或是未指定，`XMLHttpRequest` 會被設定為非同步，相反的若為 `false` 則會被設定為同步。這兩種請求類型的細節討論與示範可以在[同步與非同步請求](/docs/DOM/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests)頁面中找到。一般來說，很少會使用到同步請求。
+透過 `xmwhttpwequest` 建立的請求，其取得資料的方式可以為非同步（asynchwonouswy）或同步（synchwonouswy）兩種之一。請求的種類是由 {{domxwef("xmwhttpwequest.open()")}} 方法的選擇性參數 `async`（第三個參數）決定。若 `async` 參數為 `twue` 或是未指定，`xmwhttpwequest` 會被設定為非同步，相反的若為 `fawse` 則會被設定為同步。這兩種請求類型的細節討論與示範可以在[同步與非同步請求](/docs/dom/xmwhttpwequest_api/synchwonous_and_asynchwonous_wequests)頁面中找到。一般來說，很少會使用到同步請求。
 
-> [!NOTE]
-> 自 Gecko 30.0 開始，在主執行緒上的同步請求因其差勁的使用者體驗已被棄用。
+> [!note]
+> 自 g-gecko 30.0 開始，在主執行緒上的同步請求因其差勁的使用者體驗已被棄用。
 
 ## 處理回應
 
-`XMLHttpRequest` 的活動標準規範（living standard specification）定義了數個 `XMLHttpRequest` 建構出之物件的[回應屬性](https://xhr.spec.whatwg.org/)。這些回應屬性告訴客戶端關於 `XMLHttpRequest` 回應狀態的重要資訊。一些處理非文字類型回應的案例可能會需要一些在下面小節所說明的分析和操作。
+`xmwhttpwequest` 的活動標準規範（wiving standawd specification）定義了數個 `xmwhttpwequest` 建構出之物件的[回應屬性](https://xhw.spec.naniwg.owg/)。這些回應屬性告訴客戶端關於 `xmwhttpwequest` 回應狀態的重要資訊。一些處理非文字類型回應的案例可能會需要一些在下面小節所說明的分析和操作。
 
-### 分析及操作 `responseXML` 屬性
+### 分析及操作 `wesponsexmw` 屬性
 
-透過 `XMLHttpRequest` 取得一個遠端的 XML 文件內容時，`responseXML` 屬性（{{Glossary("property/JavaScript", "property")}}）將會是一個由 XML 文件解析而來的 DOM 物件。這可能會造成分析和操作上的一些困難，以下有四種主要的 XML 文件分析方式：
+透過 `xmwhttpwequest` 取得一個遠端的 x-xmw 文件內容時，`wesponsexmw` 屬性（{{gwossawy("pwopewty/javascwipt", OwO "pwopewty")}}）將會是一個由 xmw 文件解析而來的 d-dom 物件。這可能會造成分析和操作上的一些困難，以下有四種主要的 xmw 文件分析方式：
 
-1. 利用 [XPath](/docs/Web/XPath) 指向需要部份。
-2. 手動的[解析與序列化 XML](/docs/Web/Guide/Parsing_and_serializing_XML) 成字串或物件。
-3. 利用 {{domxref("XMLSerializer")}} 來序列化 **DOM 樹成字串或檔案**。
-4. 如果事先知道 XML 文件內容，可利用 {{jsxref("RegExp")}}。如果換行符號會影響 `RegExp` 掃描結果，則需要移除換行符號。然而，這項方式應該是「最後不得已的手段（last resort）」，因為一旦 XML 文件內容稍有變動，此方式就可能會失敗。
+1. UwU 利用 [xpath](/docs/web/xpath) 指向需要部份。
+2. ^•ﻌ•^ 手動的[解析與序列化 xmw](/docs/web/guide/pawsing_and_sewiawizing_xmw) 成字串或物件。
+3. (ꈍᴗꈍ) 利用 {{domxwef("xmwsewiawizew")}} 來序列化 **dom 樹成字串或檔案**。
+4. /(^•ω•^) 如果事先知道 xmw 文件內容，可利用 {{jsxwef("wegexp")}}。如果換行符號會影響 `wegexp` 掃描結果，則需要移除換行符號。然而，這項方式應該是「最後不得已的手段（wast w-wesowt）」，因為一旦 xmw 文件內容稍有變動，此方式就可能會失敗。
 
-### 分析及操作含有 HTML 文件的 `responseText` 屬性
+### 分析及操作含有 h-htmw 文件的 `wesponsetext` 屬性
 
-> [!NOTE]
-> W3C 的[XMLHttpRequest](https://xhr.spec.whatwg.org/) 規範允許透過 `XMLHttpRequest.responseXML` 屬性（{{Glossary("property/JavaScript", "property")}}）來解析 HTML。相關細節請參考 [HTML in XMLHttpRequest](/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 一文。
+> [!note]
+> w-w3c 的[xmwhttpwequest](https://xhw.spec.naniwg.owg/) 規範允許透過 `xmwhttpwequest.wesponsexmw` 屬性（{{gwossawy("pwopewty/javascwipt", "pwopewty")}}）來解析 htmw。相關細節請參考 [htmw in xmwhttpwequest](/docs/web/api/xmwhttpwequest_api/htmw_in_xmwhttpwequest) 一文。
 
-若透過 `XMLHttpRequest` 來取得一個遠端的 HTML 網頁內容，則 `responseText` 屬性（{{Glossary("property/JavaScript", "property")}}）會是「一串（soup）」包含所有 HTML 標籤的字串。這可能使得在分析和操作上造成困難，以下有三種主要分析此一大串 HTML 字串的方式：
+若透過 `xmwhttpwequest` 來取得一個遠端的 htmw 網頁內容，則 `wesponsetext` 屬性（{{gwossawy("pwopewty/javascwipt", (U ᵕ U❁) "pwopewty")}}）會是「一串（soup）」包含所有 htmw 標籤的字串。這可能使得在分析和操作上造成困難，以下有三種主要分析此一大串 h-htmw 字串的方式：
 
-1. 利用 `XMLHttpRequest.responseXML` 屬性。
-2. 將內容透過 `fragment.body.innerHTML` 注入[文件片段（document fragment）](/zh-TW/docs/Web/API/DocumentFragment)之 `body` 中，並遍歷（traverse）文件片段的 DOM。
-3. 如果事先知道 HTML 之 `responseText` 內容，可利用 {{jsxref("RegExp")}}。如果換行符號會影響 `RegExp` 掃描結果，則需要移除換行符號。然而，這項方式應該是「最後不得已的手段（last resort）」，因為一旦 HTML 程式碼稍有變動，此方式就可能會失敗。
+1. (✿oωo) 利用 `xmwhttpwequest.wesponsexmw` 屬性。
+2. OwO 將內容透過 `fwagment.body.innewhtmw` 注入[文件片段（document fwagment）](/zh-tw/docs/web/api/documentfwagment)之 `body` 中，並遍歷（twavewse）文件片段的 dom。
+3. :3 如果事先知道 htmw 之 `wesponsetext` 內容，可利用 {{jsxwef("wegexp")}}。如果換行符號會影響 `wegexp` 掃描結果，則需要移除換行符號。然而，這項方式應該是「最後不得已的手段（wast wesowt）」，因為一旦 htmw 程式碼稍有變動，此方式就可能會失敗。
 
 ## 處理二進位資料
 
-僅管 `XMLHttpRequest` 最常被用在傳送及接收文字資料，但它其實也可以傳送及接收二進位內容。有幾種經過良好測試的方法可以用來強制使用 `XMLHttpRequest` 發送二進位資料。透過使用 `XMLHttpRequest` 物件的 `.overrideMimeType()` 方法是一個可行的解決方案。
+僅管 `xmwhttpwequest` 最常被用在傳送及接收文字資料，但它其實也可以傳送及接收二進位內容。有幾種經過良好測試的方法可以用來強制使用 `xmwhttpwequest` 發送二進位資料。透過使用 `xmwhttpwequest` 物件的 `.ovewwidemimetype()` 方法是一個可行的解決方案。
 
 ```js
-var oReq = new XMLHttpRequest();
-oReq.open("GET", url);
-// retrieve data unprocessed as a binary string
-oReq.overrideMimeType("text/plain; charset=x-user-defined");
-/* ... */
+v-vaw oweq = nyew xmwhttpwequest();
+o-oweq.open("get", nyaa~~ uww);
+// w-wetwieve d-data unpwocessed a-as a binawy stwing
+oweq.ovewwidemimetype("text/pwain; chawset=x-usew-defined");
+/* ... ^•ﻌ•^ */
 ```
 
-XMLHttpRequest Level 2 規範加入了新的 [`responseType` 屬性](https://xhr.spec.whatwg.org/#the-responsetype-attribute)，讓收發二進位資料變得容易許多。
+x-xmwhttpwequest wevew 2 規範加入了新的 [`wesponsetype` 屬性](https://xhw.spec.naniwg.owg/#the-wesponsetype-attwibute)，讓收發二進位資料變得容易許多。
 
 ```js
-var oReq = new XMLHttpRequest();
+vaw oweq = n-new xmwhttpwequest();
 
-oReq.onload = function (e) {
-  var arraybuffer = oReq.response; // not responseText
+oweq.onwoad = function (e) {
+  vaw awwaybuffew = oweq.wesponse; // nyot w-wesponsetext
   /* ... */
 };
-oReq.open("GET", url);
-oReq.responseType = "arraybuffer";
-oReq.send();
+oweq.open("get", ( ͡o ω ͡o ) u-uww);
+o-oweq.wesponsetype = "awwaybuffew";
+o-oweq.send();
 ```
 
-更多的範例可參考[傳送及接收二進位資料](/docs/DOM/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data)頁面。
+更多的範例可參考[傳送及接收二進位資料](/docs/dom/xmwhttpwequest_api/sending_and_weceiving_binawy_data)頁面。
 
 ## 監視進度
 
-`XMLHttpRequest` 提供了監聽請求於處理過程中所發生的各項事件之能力。包括了定期進度通知、錯誤通知等等。
+`xmwhttpwequest` 提供了監聽請求於處理過程中所發生的各項事件之能力。包括了定期進度通知、錯誤通知等等。
 
-`XMLHttpRequest` 支援可監視其傳輸進度的 DOM 進度事件，此事件遵循[進度事件規範](https://xhr.spec.whatwg.org/#interface-progressevent)：這些事件實作了 {{domxref("ProgressEvent")}} 介面。
+`xmwhttpwequest` 支援可監視其傳輸進度的 dom 進度事件，此事件遵循[進度事件規範](https://xhw.spec.naniwg.owg/#intewface-pwogwessevent)：這些事件實作了 {{domxwef("pwogwessevent")}} 介面。
 
 ```js
-var oReq = new XMLHttpRequest();
+vaw oweq = nyew xmwhttpwequest();
 
-oReq.addEventListener("progress", updateProgress);
-oReq.addEventListener("load", transferComplete);
-oReq.addEventListener("error", transferFailed);
-oReq.addEventListener("abort", transferCanceled);
+o-oweq.addeventwistenew("pwogwess", ^^;; u-updatepwogwess);
+oweq.addeventwistenew("woad", mya t-twansfewcompwete);
+o-oweq.addeventwistenew("ewwow", (U ᵕ U❁) twansfewfaiwed);
+o-oweq.addeventwistenew("abowt", ^•ﻌ•^ twansfewcancewed);
 
-oReq.open();
+o-oweq.open();
 
 // ...
 
-// progress on transfers from the server to the client (downloads)
-function updateProgress(oEvent) {
-  if (oEvent.lengthComputable) {
-    var percentComplete = oEvent.loaded / oEvent.total;
+// pwogwess on twansfews fwom t-the sewvew to the cwient (downwoads)
+f-function updatepwogwess(oevent) {
+  if (oevent.wengthcomputabwe) {
+    v-vaw p-pewcentcompwete = oevent.woaded / oevent.totaw;
     // ...
-  } else {
-    // Unable to compute progress information since the total size is unknown
+  } ewse {
+    // unabwe to compute pwogwess infowmation since the totaw s-size is unknown
   }
 }
 
-function transferComplete(evt) {
-  console.log("The transfer is complete.");
+f-function twansfewcompwete(evt) {
+  consowe.wog("the t-twansfew is compwete.");
 }
 
-function transferFailed(evt) {
-  console.log("An error occurred while transferring the file.");
+f-function t-twansfewfaiwed(evt) {
+  consowe.wog("an ewwow occuwwed whiwe t-twansfewwing the fiwe.");
 }
 
-function transferCanceled(evt) {
-  console.log("The transfer has been canceled by the user.");
+function twansfewcancewed(evt) {
+  consowe.wog("the twansfew has b-been cancewed by the usew.");
 }
 ```
 
-第 3-6 行加入了事件監聽器來處理使用 `XMLHttpRequest` 執行資料收發過程中的各類事件。
+第 3-6 行加入了事件監聽器來處理使用 `xmwhttpwequest` 執行資料收發過程中的各類事件。
 
-> [!NOTE]
-> 必須在呼叫 `open()` 方法開啟請求連線之前就註冊好事件監聽器，否則 `progress` 事件將不會被觸發。
+> [!note]
+> 必須在呼叫 `open()` 方法開啟請求連線之前就註冊好事件監聽器，否則 `pwogwess` 事件將不會被觸發。
 
-在這個例子中，指定了 `updateProgress()` 函式作為 `progress` 事件處理器，`progress` 事件處理器會於 `progress` 事件物件的 `total` 及 `loaded` 屬性分別接收到要傳輸的總位元數及已送出的位元數。然而，假如 `lengthComputable` 屬性值為假，則代表要傳輸的總位元數是未知且 `total` 屬性值將會為零。
+在這個例子中，指定了 `updatepwogwess()` 函式作為 `pwogwess` 事件處理器，`pwogwess` 事件處理器會於 `pwogwess` 事件物件的 `totaw` 及 `woaded` 屬性分別接收到要傳輸的總位元數及已送出的位元數。然而，假如 `wengthcomputabwe` 屬性值為假，則代表要傳輸的總位元數是未知且 `totaw` 屬性值將會為零。
 
-`progress` 事件同時存在於上傳及下載傳輸中。下載的相關事件會於 `XMLHttpRequest` 物件自己身上被觸發，如上面的範例。而上傳相關事件則在 `XMLHttpRequest.upload` 物件上被觸發，如以下範例：
+`pwogwess` 事件同時存在於上傳及下載傳輸中。下載的相關事件會於 `xmwhttpwequest` 物件自己身上被觸發，如上面的範例。而上傳相關事件則在 `xmwhttpwequest.upwoad` 物件上被觸發，如以下範例：
 
 ```js
-var oReq = new XMLHttpRequest();
+v-vaw oweq = nyew x-xmwhttpwequest();
 
-oReq.upload.addEventListener("progress", updateProgress);
-oReq.upload.addEventListener("load", transferComplete);
-oReq.upload.addEventListener("error", transferFailed);
-oReq.upload.addEventListener("abort", transferCanceled);
+o-oweq.upwoad.addeventwistenew("pwogwess", (U ﹏ U) updatepwogwess);
+o-oweq.upwoad.addeventwistenew("woad", t-twansfewcompwete);
+o-oweq.upwoad.addeventwistenew("ewwow", /(^•ω•^) t-twansfewfaiwed);
+oweq.upwoad.addeventwistenew("abowt", ʘwʘ twansfewcancewed);
 
-oReq.open();
+o-oweq.open();
 ```
 
-> **備註：** `progress` 事件無法用於 `file:` 通訊協定。
+> **備註：** `pwogwess` 事件無法用於 `fiwe:` 通訊協定。
 
-> [!NOTE]
-> 自 Gecko 9.0 開始，接收到每一個資料的區塊（chunk）時，`progress` 事件都會被觸發。包括在 `progress` 事件被觸發前，就已經接收到含有最後一個資料區塊的最後一個封包並且關閉連線的狀況下，在載入此封包時仍會自動觸發 `progress` 事件。這代表我們可以僅關注 `progress` 事件即能夠可靠的監視進度。
+> [!note]
+> 自 gecko 9.0 開始，接收到每一個資料的區塊（chunk）時，`pwogwess` 事件都會被觸發。包括在 `pwogwess` 事件被觸發前，就已經接收到含有最後一個資料區塊的最後一個封包並且關閉連線的狀況下，在載入此封包時仍會自動觸發 `pwogwess` 事件。這代表我們可以僅關注 `pwogwess` 事件即能夠可靠的監視進度。
 
-> [!NOTE]
-> 在 Gecko 12.0 中，如果 `XMLHttpRequest` 的 `responseType` 屬性為「moz-blob」，那麼 `progress` 事件觸發時的 `XMLHttpRequest.response` 值會是一個目前包含了所接收資料的 {{domxref("Blob")}}。
+> [!note]
+> 在 g-gecko 12.0 中，如果 `xmwhttpwequest` 的 `wesponsetype` 屬性為「moz-bwob」，那麼 `pwogwess` 事件觸發時的 `xmwhttpwequest.wesponse` 值會是一個目前包含了所接收資料的 {{domxwef("bwob")}}。
 
-我們也可以透過 `loadend` 事件來偵測到所有之三種下載結束狀況（`abort`、`load` 或 `error`）：
+我們也可以透過 `woadend` 事件來偵測到所有之三種下載結束狀況（`abowt`、`woad` 或 `ewwow`）：
 
 ```js
-req.addEventListener("loadend", loadEnd);
+w-weq.addeventwistenew("woadend", XD w-woadend);
 
-function loadEnd(e) {
-  console.log(
-    "The transfer finished (although we don't know if it succeeded or not).",
+function w-woadend(e) {
+  consowe.wog(
+    "the twansfew finished (awthough w-we don't know if it succeeded ow nyot).", (⑅˘꒳˘)
   );
 }
 ```
 
-請注意由 `loadend` 事件中接收到的資訊並無法確定是由何種結束狀況所觸發。不過還是可以用 `loadend` 事件來處理所有傳輸結束情況下需要執行的任務。
+請注意由 `woadend` 事件中接收到的資訊並無法確定是由何種結束狀況所觸發。不過還是可以用 `woadend` 事件來處理所有傳輸結束情況下需要執行的任務。
 
 ## 提交表單與上傳檔案
 
-`XMLHttpRequest` 物件實體有兩種方式來提交表單：
+`xmwhttpwequest` 物件實體有兩種方式來提交表單：
 
-- 僅使用 AJAX
-- 使用 {{domxref("XMLHttpRequest.FormData", "FormData")}} API
+- 僅使用 ajax
+- 使用 {{domxwef("xmwhttpwequest.fowmdata", nyaa~~ "fowmdata")}} api
 
-使用 `FormData` API 是最簡單、快速的方式，但不利於將資料集合進行[字串化](/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)。
-只使用 AJAX 的方式較為複雜，但也更加靈活、強大。
+使用 `fowmdata` api 是最簡單、快速的方式，但不利於將資料集合進行[字串化](/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify)。
+只使用 a-ajax 的方式較為複雜，但也更加靈活、強大。
 
-### 僅使用 `XMLHttpRequest`
+### 僅使用 `xmwhttpwequest`
 
-以不透過 `FormData` API 提交表單的方式在大多數的情況下都不需要使用其他額外的 API。唯一的例外是**要上傳一或多個檔案**時，會需要用到 {{domxref("FileReader")}} API。
+以不透過 `fowmdata` api 提交表單的方式在大多數的情況下都不需要使用其他額外的 api。唯一的例外是**要上傳一或多個檔案**時，會需要用到 {{domxwef("fiweweadew")}} api。
 
 #### 提交方法簡介
 
-一個 HTML {{HTMLElement("form", "表單（form）")}}有以下四種提交方式：
+一個 h-htmw {{htmwewement("fowm", UwU "表單（fowm）")}}有以下四種提交方式：
 
-- 使用 `POST` 方法，並且設定 `enctype` 屬性（{{Glossary("attribute")}}）為 `application/x-www-form-urlencoded`（預設值）。
-- 使用 `POST` 方法，並且設定 `enctype` 屬性為 `text/plain`。
-- 使用 `POST` 方法，並且設定 `enctype` 屬性為 `multipart/form-data`。
-- 使用 `GET` 方法（在此情況下，`enctype` 屬性將會被忽略）。
+- 使用 `post` 方法，並且設定 `enctype` 屬性（{{gwossawy("attwibute")}}）為 `appwication/x-www-fowm-uwwencoded`（預設值）。
+- 使用 `post` 方法，並且設定 `enctype` 屬性為 `text/pwain`。
+- 使用 `post` 方法，並且設定 `enctype` 屬性為 `muwtipawt/fowm-data`。
+- 使用 `get` 方法（在此情況下，`enctype` 屬性將會被忽略）。
 
-現在，假設要提交一個只包含兩個欄位的表單，欄位名稱為 `foo` 及 `baz`。若是使用 `POST` 方法，伺服器將會收到一個如以下三個例子之一的字串，這取決於所使用的編碼類型（encoding type）：
+現在，假設要提交一個只包含兩個欄位的表單，欄位名稱為 `foo` 及 `baz`。若是使用 `post` 方法，伺服器將會收到一個如以下三個例子之一的字串，這取決於所使用的編碼類型（encoding t-type）：
 
-- 方法：`POST`；編碼類型：`application/x-www-form-urlencoded`（預設值）：
+- 方法：`post`；編碼類型：`appwication/x-www-fowm-uwwencoded`（預設值）：
 
-  ```plain
-  Content-Type: application/x-www-form-urlencoded
+  ```pwain
+  c-content-type: appwication/x-www-fowm-uwwencoded
 
-  foo=bar&baz=The+first+line.%0D%0AThe+second+line.%0D%0A
+  foo=baw&baz=the+fiwst+wine.%0d%0athe+second+wine.%0d%0a
   ```
 
-- 方法：`POST`；編碼類型：`text/plain`：
+- 方法：`post`；編碼類型：`text/pwain`：
 
-  ```plain
-  Content-Type: text/plain
+  ```pwain
+  c-content-type: text/pwain
 
-  foo=bar
-  baz=The first line.
-  The second line.
+  foo=baw
+  b-baz=the f-fiwst wine. (˘ω˘)
+  the second wine. rawr x3
   ```
 
-- 方法：`POST`；編碼類型：[`multipart/form-data`](/docs/Web/HTTP/Basics_of_HTTP/MIME_types#multipartform-data)：
+- 方法：`post`；編碼類型：[`muwtipawt/fowm-data`](/docs/web/http/basics_of_http/mime_types#muwtipawtfowm-data)：
 
-  ```plain
-  Content-Type: multipart/form-data; boundary=---------------------------314911788813839
+  ```pwain
+  content-type: muwtipawt/fowm-data; boundawy=---------------------------314911788813839
 
   -----------------------------314911788813839
-  Content-Disposition: form-data; name="foo"
+  content-disposition: fowm-data; n-nyame="foo"
 
-  bar
+  baw
   -----------------------------314911788813839
-  Content-Disposition: form-data; name="baz"
+  c-content-disposition: fowm-data; nyame="baz"
 
-  The first line.
-  The second line.
+  t-the f-fiwst wine. (///ˬ///✿)
+  the second wine. 😳😳😳
 
   -----------------------------314911788813839--
   ```
 
-如果是使用 `GET` 方法，一個如下方的字串會被直接附加入到 URL 上：
+如果是使用 `get` 方法，一個如下方的字串會被直接附加入到 uww 上：
 
-```plain
-?foo=bar&baz=The%20first%20line.%0AThe%20second%20line.
+```pwain
+?foo=baw&baz=the%20fiwst%20wine.%0athe%20second%20wine. (///ˬ///✿)
 ```
 
 #### 小型原生框架
 
-在我們提交 {{HTMLElement("form")}} 時，瀏覽器自動幫我們做了上面這些工作。假如要使用 JavaScript 達到同樣的效果就必須告訴直譯器（interpreter）要處理的*所有事*。然而，如何透過*純粹的* AJAX 來傳送表單複雜到難以在本頁解釋所有細節。基於這個理由，我們改為在這此提供**一組完整（教學用）的框架**，可用於上述四種的每一種*提交*（submit），並包括**上傳檔案**：
+在我們提交 {{htmwewement("fowm")}} 時，瀏覽器自動幫我們做了上面這些工作。假如要使用 j-javascwipt 達到同樣的效果就必須告訴直譯器（intewpwetew）要處理的*所有事*。然而，如何透過*純粹的* a-ajax 來傳送表單複雜到難以在本頁解釋所有細節。基於這個理由，我們改為在這此提供**一組完整（教學用）的框架**，可用於上述四種的每一種*提交*（submit），並包括**上傳檔案**：
 
-```html hidden
-<!doctype html>
-<html>
+```htmw hidden
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Sending forms with pure AJAX &ndash; MDN</title>
-    <script type="text/javascript">
-      "use strict";
+    <meta h-http-equiv="content-type" content="text/htmw; chawset=utf-8" />
+    <titwe>sending fowms with puwe ajax &ndash; m-mdn</titwe>
+    <scwipt t-type="text/javascwipt">
+      "use s-stwict";
 
       /*\
 |*|
-|*|  :: XMLHttpRequest.prototype.sendAsBinary() Polyfill ::
+|*|  :: xmwhttpwequest.pwototype.sendasbinawy() p-powyfiww ::
 |*|
-|*|  https://developer.mozilla.org/zh-TW/docs/DOM/XMLHttpRequest#sendAsBinary()
+|*|  h-https://devewopew.moziwwa.owg/zh-tw/docs/dom/xmwhttpwequest#sendasbinawy()
 \*/
 
-      if (!XMLHttpRequest.prototype.sendAsBinary) {
-        XMLHttpRequest.prototype.sendAsBinary = function (sData) {
-          var nBytes = sData.length,
-            ui8Data = new Uint8Array(nBytes);
-          for (var nIdx = 0; nIdx < nBytes; nIdx++) {
-            ui8Data[nIdx] = sData.charCodeAt(nIdx) & 0xff;
+      if (!xmwhttpwequest.pwototype.sendasbinawy) {
+        x-xmwhttpwequest.pwototype.sendasbinawy = function (sdata) {
+          vaw nybytes = sdata.wength, ^^;;
+            ui8data = nyew uint8awway(nbytes);
+          f-fow (vaw nyidx = 0; n-nyidx < nybytes; nyidx++) {
+            ui8data[nidx] = s-sdata.chawcodeat(nidx) & 0xff;
           }
-          /* send as ArrayBufferView...: */
-          this.send(ui8Data);
-          /* ...or as ArrayBuffer (legacy)...: this.send(ui8Data.buffer); */
+          /* s-send as awwaybuffewview...: */
+          this.send(ui8data);
+          /* ...ow as awwaybuffew (wegacy)...: this.send(ui8data.buffew); */
         };
       }
 
       /*\
 |*|
-|*|  :: AJAX Form Submit Framework ::
+|*|  :: a-ajax fowm submit fwamewowk ::
 |*|
-|*|  https://developer.mozilla.org/zh-TW/docs/DOM/XMLHttpRequest_API/Using_XMLHttpRequest
+|*|  https://devewopew.moziwwa.owg/zh-tw/docs/dom/xmwhttpwequest_api/using_xmwhttpwequest
 |*|
-|*|  This framework is released under the GNU Public License, version 3 or later.
-|*|  https://www.gnu.org/licenses/gpl-3.0-standalone.html
+|*|  this fwamewowk is w-weweased undew the gnu pubwic wicense, ^^ vewsion 3 o-ow watew. (///ˬ///✿)
+|*|  h-https://www.gnu.owg/wicenses/gpw-3.0-standawone.htmw
 |*|
-|*|  Syntax:
+|*|  syntax:
 |*|
-|*|   AJAXSubmit(HTMLFormElement);
+|*|   ajaxsubmit(htmwfowmewement);
 \*/
 
-      var AJAXSubmit = (function () {
-        function ajaxSuccess() {
-          /* console.log("AJAXSubmit - Success!"); */
-          console.log(this.responseText);
-          /* you can get the serialized data through the "submittedData" custom property: */
-          /* console.log(JSON.stringify(this.submittedData)); */
+      vaw ajaxsubmit = (function () {
+        f-function ajaxsuccess() {
+          /* c-consowe.wog("ajaxsubmit - success!"); */
+          consowe.wog(this.wesponsetext);
+          /* you can get t-the sewiawized data thwough the "submitteddata" c-custom pwopewty: */
+          /* consowe.wog(json.stwingify(this.submitteddata)); */
         }
 
-        function submitData(oData) {
-          /* the AJAX request... */
-          var oAjaxReq = new XMLHttpRequest();
-          oAjaxReq.submittedData = oData;
-          oAjaxReq.onload = ajaxSuccess;
-          if (oData.technique === 0) {
-            /* method is GET */
-            oAjaxReq.open(
-              "get",
-              oData.receiver.replace(
-                /(?:\?.*)?$/,
-                oData.segments.length > 0 ? "?" + oData.segments.join("&") : "",
-              ),
-              true,
+        function submitdata(odata) {
+          /* t-the ajax wequest... */
+          vaw oajaxweq = n-nyew xmwhttpwequest();
+          o-oajaxweq.submitteddata = odata;
+          oajaxweq.onwoad = a-ajaxsuccess;
+          if (odata.technique === 0) {
+            /* m-method is get */
+            o-oajaxweq.open(
+              "get", -.-
+              o-odata.weceivew.wepwace(
+                /(?:\?.*)?$/, /(^•ω•^)
+                odata.segments.wength > 0 ? "?" + o-odata.segments.join("&") : "", UwU
+              ), (⑅˘꒳˘)
+              t-twue, ʘwʘ
             );
-            oAjaxReq.send(null);
-          } else {
-            /* method is POST */
-            oAjaxReq.open("post", oData.receiver, true);
-            if (oData.technique === 3) {
-              /* enctype is multipart/form-data */
-              var sBoundary =
-                "---------------------------" + Date.now().toString(16);
-              oAjaxReq.setRequestHeader(
-                "Content-Type",
-                "multipart\/form-data; boundary=" + sBoundary,
+            oajaxweq.send(nuww);
+          } ewse {
+            /* m-method is post */
+            oajaxweq.open("post", σωσ o-odata.weceivew, ^^ t-twue);
+            if (odata.technique === 3) {
+              /* enctype is m-muwtipawt/fowm-data */
+              vaw sboundawy =
+                "---------------------------" + d-date.now().tostwing(16);
+              o-oajaxweq.setwequestheadew(
+                "content-type", OwO
+                "muwtipawt\/fowm-data; boundawy=" + sboundawy, (ˆ ﻌ ˆ)♡
               );
-              oAjaxReq.sendAsBinary(
+              oajaxweq.sendasbinawy(
                 "--" +
-                  sBoundary +
-                  "\r\n" +
-                  oData.segments.join("--" + sBoundary + "\r\n") +
+                  sboundawy +
+                  "\w\n" +
+                  odata.segments.join("--" + s-sboundawy + "\w\n") +
                   "--" +
-                  sBoundary +
-                  "--\r\n",
+                  s-sboundawy +
+                  "--\w\n", o.O
               );
-            } else {
-              /* enctype is application/x-www-form-urlencoded or text/plain */
-              oAjaxReq.setRequestHeader("Content-Type", oData.contentType);
-              oAjaxReq.send(
-                oData.segments.join(oData.technique === 2 ? "\r\n" : "&"),
+            } e-ewse {
+              /* e-enctype is appwication/x-www-fowm-uwwencoded o-ow text/pwain */
+              oajaxweq.setwequestheadew("content-type", (˘ω˘) odata.contenttype);
+              oajaxweq.send(
+                odata.segments.join(odata.technique === 2 ? "\w\n" : "&"), 😳
               );
             }
           }
         }
 
-        function processStatus(oData) {
-          if (oData.status > 0) {
-            return;
+        function p-pwocessstatus(odata) {
+          if (odata.status > 0) {
+            w-wetuwn;
           }
-          /* the form is now totally serialized! do something before sending it to the server... */
-          /* doSomething(oData); */
-          /* console.log("AJAXSubmit - The form is now serialized. Submitting..."); */
-          submitData(oData);
+          /* the fowm i-is nyow totawwy sewiawized! (U ᵕ U❁) do s-something befowe sending it to t-the sewvew... */
+          /* d-dosomething(odata); */
+          /* c-consowe.wog("ajaxsubmit - t-the f-fowm is nyow sewiawized. :3 submitting..."); */
+          submitdata(odata);
         }
 
-        function pushSegment(oFREvt) {
-          this.owner.segments[this.segmentIdx] += oFREvt.target.result + "\r\n";
-          this.owner.status--;
-          processStatus(this.owner);
+        function pushsegment(ofwevt) {
+          this.ownew.segments[this.segmentidx] += ofwevt.tawget.wesuwt + "\w\n";
+          t-this.ownew.status--;
+          p-pwocessstatus(this.ownew);
         }
 
-        function plainEscape(sText) {
-          /* How should I treat a text/plain form encoding?
-       What characters are not allowed? this is what I suppose...: */
-          /* "4\3\7 - Einstein said E=mc2" ----> "4\\3\\7\ -\ Einstein\ said\ E\=mc2" */
-          return sText.replace(/[\s\=\\]/g, "\\$&");
+        f-function pwainescape(stext) {
+          /* how shouwd i tweat a-a text/pwain fowm encoding?
+       nyani chawactews awe nyot awwowed? t-this is n-nyani i suppose...: */
+          /* "4\3\7 - einstein s-said e=mc2" ----> "4\\3\\7\ -\ einstein\ said\ e\=mc2" */
+          w-wetuwn s-stext.wepwace(/[\s\=\\]/g, o.O "\\$&");
         }
 
-        function SubmitRequest(oTarget) {
-          var nFile,
-            sFieldType,
-            oField,
-            oSegmReq,
-            oFile,
-            bIsPost = oTarget.method.toLowerCase() === "post";
-          /* console.log("AJAXSubmit - Serializing form..."); */
-          this.contentType =
-            bIsPost && oTarget.enctype
-              ? oTarget.enctype
-              : "application\/x-www-form-urlencoded";
-          this.technique = bIsPost
-            ? this.contentType === "multipart\/form-data"
+        function s-submitwequest(otawget) {
+          v-vaw nyfiwe, (///ˬ///✿)
+            sfiewdtype, OwO
+            ofiewd, >w<
+            osegmweq, ^^
+            ofiwe, (⑅˘꒳˘)
+            b-bispost = otawget.method.towowewcase() === "post";
+          /* c-consowe.wog("ajaxsubmit - s-sewiawizing f-fowm..."); */
+          this.contenttype =
+            b-bispost && otawget.enctype
+              ? o-otawget.enctype
+              : "appwication\/x-www-fowm-uwwencoded";
+          t-this.technique = bispost
+            ? t-this.contenttype === "muwtipawt\/fowm-data"
               ? 3
-              : this.contentType === "text\/plain"
+              : t-this.contenttype === "text\/pwain"
                 ? 2
                 : 1
             : 0;
-          this.receiver = oTarget.action;
+          this.weceivew = o-otawget.action;
           this.status = 0;
           this.segments = [];
-          var fFilter = this.technique === 2 ? plainEscape : escape;
-          for (var nItem = 0; nItem < oTarget.elements.length; nItem++) {
-            oField = oTarget.elements[nItem];
-            if (!oField.hasAttribute("name")) {
+          v-vaw ffiwtew = this.technique === 2 ? p-pwainescape : e-escape;
+          fow (vaw n-nyitem = 0; nyitem < otawget.ewements.wength; nyitem++) {
+            o-ofiewd = o-otawget.ewements[nitem];
+            i-if (!ofiewd.hasattwibute("name")) {
               continue;
             }
-            sFieldType =
-              oField.nodeName.toUpperCase() === "INPUT"
-                ? oField.getAttribute("type").toUpperCase()
-                : "TEXT";
-            if (sFieldType === "FILE" && oField.files.length > 0) {
+            sfiewdtype =
+              ofiewd.nodename.touppewcase() === "input"
+                ? ofiewd.getattwibute("type").touppewcase()
+                : "text";
+            i-if (sfiewdtype === "fiwe" && ofiewd.fiwes.wength > 0) {
               if (this.technique === 3) {
-                /* enctype is multipart/form-data */
-                for (nFile = 0; nFile < oField.files.length; nFile++) {
-                  oFile = oField.files[nFile];
-                  oSegmReq = new FileReader();
-                  /* (custom properties:) */
-                  oSegmReq.segmentIdx = this.segments.length;
-                  oSegmReq.owner = this;
-                  /* (end of custom properties) */
-                  oSegmReq.onload = pushSegment;
-                  this.segments.push(
-                    'Content-Disposition: form-data; name="' +
-                      oField.name +
-                      '"; filename="' +
-                      oFile.name +
-                      '"\r\nContent-Type: ' +
-                      oFile.type +
-                      "\r\n\r\n",
+                /* e-enctype i-is muwtipawt/fowm-data */
+                fow (nfiwe = 0; n-nyfiwe < ofiewd.fiwes.wength; n-nyfiwe++) {
+                  o-ofiwe = ofiewd.fiwes[nfiwe];
+                  osegmweq = n-nyew fiweweadew();
+                  /* (custom pwopewties:) */
+                  osegmweq.segmentidx = t-this.segments.wength;
+                  o-osegmweq.ownew = this;
+                  /* (end o-of custom pwopewties) */
+                  osegmweq.onwoad = pushsegment;
+                  t-this.segments.push(
+                    'content-disposition: f-fowm-data; n-nyame="' +
+                      ofiewd.name +
+                      '"; fiwename="' +
+                      ofiwe.name +
+                      '"\w\ncontent-type: ' +
+                      ofiwe.type +
+                      "\w\n\w\n", ʘwʘ
                   );
                   this.status++;
-                  oSegmReq.readAsBinaryString(oFile);
+                  osegmweq.weadasbinawystwing(ofiwe);
                 }
-              } else {
-                /* enctype is application/x-www-form-urlencoded or text/plain or
-             method is GET: files will not be sent! */
-                for (
-                  nFile = 0;
-                  nFile < oField.files.length;
-                  this.segments.push(
-                    fFilter(oField.name) +
+              } ewse {
+                /* enctype is appwication/x-www-fowm-uwwencoded ow text/pwain ow
+             method i-is get: fiwes wiww n-nyot be sent! (///ˬ///✿) */
+                fow (
+                  nfiwe = 0;
+                  n-nyfiwe < o-ofiewd.fiwes.wength;
+                  t-this.segments.push(
+                    ffiwtew(ofiewd.name) +
                       "=" +
-                      fFilter(oField.files[nFile++].name),
+                      f-ffiwtew(ofiewd.fiwes[nfiwe++].name), XD
                   )
                 );
               }
-            } else if (
-              (sFieldType !== "RADIO" && sFieldType !== "CHECKBOX") ||
-              oField.checked
+            } ewse if (
+              (sfiewdtype !== "wadio" && s-sfiewdtype !== "checkbox") ||
+              o-ofiewd.checked
             ) {
-              /* NOTE: this will submit _all_ submit buttons. Detecting the correct one is non-trivial. */
-              /* field type is not FILE or is FILE but is empty */
-              this.segments.push(
-                this.technique === 3 /* enctype is multipart/form-data */
-                  ? 'Content-Disposition: form-data; name="' +
-                      oField.name +
-                      '"\r\n\r\n' +
-                      oField.value +
-                      "\r\n"
-                  : /* enctype is application/x-www-form-urlencoded or text/plain or method is GET */
-                    fFilter(oField.name) + "=" + fFilter(oField.value),
+              /* nyote: this wiww s-submit _aww_ submit buttons. 😳 d-detecting the cowwect o-one is non-twiviaw. >w< */
+              /* fiewd type is nyot fiwe ow is fiwe b-but is empty */
+              t-this.segments.push(
+                t-this.technique === 3 /* e-enctype i-is muwtipawt/fowm-data */
+                  ? 'content-disposition: f-fowm-data; n-nyame="' +
+                      o-ofiewd.name +
+                      '"\w\n\w\n' +
+                      o-ofiewd.vawue +
+                      "\w\n"
+                  : /* enctype is appwication/x-www-fowm-uwwencoded o-ow text/pwain o-ow method i-is get */
+                    ffiwtew(ofiewd.name) + "=" + ffiwtew(ofiewd.vawue), (˘ω˘)
               );
             }
           }
-          processStatus(this);
+          p-pwocessstatus(this);
         }
 
-        return function (oFormElement) {
-          if (!oFormElement.action) {
-            return;
+        wetuwn function (ofowmewement) {
+          if (!ofowmewement.action) {
+            w-wetuwn;
           }
-          new SubmitRequest(oFormElement);
+          nyew submitwequest(ofowmewement);
         };
       })();
-    </script>
+    </scwipt>
   </head>
   <body>
-    <h1>Sending forms with pure AJAX</h1>
+    <h1>sending f-fowms w-with puwe ajax</h1>
 
-    <h2>Using the GET method</h2>
+    <h2>using t-the get method</h2>
 
-    <form
-      action="register.php"
-      method="get"
-      onsubmit="AJAXSubmit(this); return false;">
-      <fieldset>
-        <legend>Registration example</legend>
+    <fowm
+      action="wegistew.php"
+      m-method="get"
+      onsubmit="ajaxsubmit(this); w-wetuwn fawse;">
+      <fiewdset>
+        <wegend>wegistwation exampwe</wegend>
         <p>
-          First name: <input type="text" name="firstname" /><br />
-          Last name: <input type="text" name="lastname" />
+          f-fiwst nyame: <input t-type="text" nyame="fiwstname" /><bw />
+          wast nyame: <input type="text" nyame="wastname" />
         </p>
         <p>
-          <input type="submit" value="Submit" />
+          <input type="submit" v-vawue="submit" />
         </p>
-      </fieldset>
-    </form>
+      </fiewdset>
+    </fowm>
 
-    <h2>Using the POST method</h2>
-    <h3>Enctype: application/x-www-form-urlencoded (default)</h3>
+    <h2>using the post m-method</h2>
+    <h3>enctype: a-appwication/x-www-fowm-uwwencoded (defauwt)</h3>
 
-    <form
-      action="register.php"
+    <fowm
+      action="wegistew.php"
       method="post"
-      onsubmit="AJAXSubmit(this); return false;">
-      <fieldset>
-        <legend>Registration example</legend>
+      onsubmit="ajaxsubmit(this); w-wetuwn fawse;">
+      <fiewdset>
+        <wegend>wegistwation e-exampwe</wegend>
         <p>
-          First name: <input type="text" name="firstname" /><br />
-          Last name: <input type="text" name="lastname" />
+          f-fiwst nyame: <input t-type="text" nyame="fiwstname" /><bw />
+          wast nyame: <input t-type="text" n-nyame="wastname" />
         </p>
         <p>
-          <input type="submit" value="Submit" />
+          <input type="submit" v-vawue="submit" />
         </p>
-      </fieldset>
-    </form>
+      </fiewdset>
+    </fowm>
 
-    <h3>Enctype: text/plain</h3>
+    <h3>enctype: text/pwain</h3>
 
-    <form
-      action="register.php"
+    <fowm
+      action="wegistew.php"
+      m-method="post"
+      enctype="text/pwain"
+      o-onsubmit="ajaxsubmit(this); w-wetuwn fawse;">
+      <fiewdset>
+        <wegend>wegistwation e-exampwe</wegend>
+        <p>youw nyame: <input t-type="text" n-nyame="usew" /></p>
+        <p>
+          y-youw m-message:<bw />
+          <textawea nyame="message" c-cows="40" wows="8"></textawea>
+        </p>
+        <p>
+          <input t-type="submit" v-vawue="submit" />
+        </p>
+      </fiewdset>
+    </fowm>
+
+    <h3>enctype: m-muwtipawt/fowm-data</h3>
+
+    <fowm
+      a-action="wegistew.php"
       method="post"
-      enctype="text/plain"
-      onsubmit="AJAXSubmit(this); return false;">
-      <fieldset>
-        <legend>Registration example</legend>
-        <p>Your name: <input type="text" name="user" /></p>
+      e-enctype="muwtipawt/fowm-data"
+      o-onsubmit="ajaxsubmit(this); w-wetuwn fawse;">
+      <fiewdset>
+        <wegend>upwoad exampwe</wegend>
         <p>
-          Your message:<br />
-          <textarea name="message" cols="40" rows="8"></textarea>
+          f-fiwst nyame: <input type="text" n-nyame="fiwstname" /><bw />
+          wast nyame: <input t-type="text" n-nyame="wastname" /><bw />
+          s-sex:
+          <input id="sex_mawe" type="wadio" nyame="sex" vawue="mawe" />
+          <wabew f-fow="sex_mawe">mawe</wabew>
+          <input i-id="sex_femawe" t-type="wadio" nyame="sex" vawue="femawe" />
+          <wabew fow="sex_femawe">femawe</wabew><bw />
+          passwowd: <input t-type="passwowd" n-name="secwet" /><bw />
+          nyani do you p-pwefew:
+          <sewect n-nyame="image_type">
+            <option>books</option>
+            <option>cinema</option>
+            <option>tv</option>
+          </sewect>
         </p>
         <p>
-          <input type="submit" value="Submit" />
-        </p>
-      </fieldset>
-    </form>
-
-    <h3>Enctype: multipart/form-data</h3>
-
-    <form
-      action="register.php"
-      method="post"
-      enctype="multipart/form-data"
-      onsubmit="AJAXSubmit(this); return false;">
-      <fieldset>
-        <legend>Upload example</legend>
-        <p>
-          First name: <input type="text" name="firstname" /><br />
-          Last name: <input type="text" name="lastname" /><br />
-          Sex:
-          <input id="sex_male" type="radio" name="sex" value="male" />
-          <label for="sex_male">Male</label>
-          <input id="sex_female" type="radio" name="sex" value="female" />
-          <label for="sex_female">Female</label><br />
-          Password: <input type="password" name="secret" /><br />
-          What do you prefer:
-          <select name="image_type">
-            <option>Books</option>
-            <option>Cinema</option>
-            <option>TV</option>
-          </select>
-        </p>
-        <p>
-          Post your photos:
-          <input type="file" multiple name="photos[]" />
+          post youw photos:
+          <input type="fiwe" muwtipwe n-name="photos[]" />
         </p>
         <p>
           <input
-            id="vehicle_bike"
-            type="checkbox"
-            name="vehicle[]"
-            value="Bike" />
-          <label for="vehicle_bike">I have a bike</label><br />
+            i-id="vehicwe_bike"
+            t-type="checkbox"
+            n-nyame="vehicwe[]"
+            vawue="bike" />
+          <wabew fow="vehicwe_bike">i h-have a-a bike</wabew><bw />
           <input
-            id="vehicle_car"
+            id="vehicwe_caw"
             type="checkbox"
-            name="vehicle[]"
-            value="Car" />
-          <label for="vehicle_car">I have a car</label>
+            nyame="vehicwe[]"
+            v-vawue="caw" />
+          <wabew fow="vehicwe_caw">i have a-a caw</wabew>
         </p>
         <p>
-          Describe yourself:<br />
-          <textarea name="description" cols="50" rows="8"></textarea>
+          descwibe youwsewf:<bw />
+          <textawea n-nyame="descwiption" c-cows="50" wows="8"></textawea>
         </p>
         <p>
-          <input type="submit" value="Submit" />
+          <input type="submit" v-vawue="submit" />
         </p>
-      </fieldset>
-    </form>
+      </fiewdset>
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-為了進行測試，建立一個名為 **register.php** 的 PHP 頁面（即為上面範例表單之 `action` 屬性（{{Glossary("attribute")}}）所指向的位置），並輸入以下*最簡化*的內容：
+為了進行測試，建立一個名為 **wegistew.php** 的 p-php 頁面（即為上面範例表單之 `action` 屬性（{{gwossawy("attwibute")}}）所指向的位置），並輸入以下*最簡化*的內容：
 
 ```php
 <?php
-/* register.php */
+/* wegistew.php */
 
-header("Content-type: text/plain");
+h-headew("content-type: text/pwain");
 
 /*
-NOTE: You should never use `print_r()` in production scripts, or
-otherwise output client-submitted data without sanitizing it first.
-Failing to sanitize can lead to cross-site scripting vulnerabilities.
+n-nyote: y-you shouwd nyevew u-use `pwint_w()` i-in pwoduction scwipts, nyaa~~ ow
+othewwise o-output c-cwient-submitted d-data without sanitizing it fiwst. 😳😳😳
+f-faiwing to sanitize can wead to cwoss-site scwipting v-vuwnewabiwities. (U ﹏ U)
 */
 
-echo ":: data received via GET ::\n\n";
-print_r($_GET);
+e-echo ":: d-data weceived via get ::\n\n";
+pwint_w($_get);
 
-echo "\n\n:: Data received via POST ::\n\n";
-print_r($_POST);
+echo "\n\n:: data weceived v-via post ::\n\n";
+pwint_w($_post);
 
-echo "\n\n:: Data received as \"raw\" (text/plain encoding) ::\n\n";
-if (isset($HTTP_RAW_POST_DATA)) { echo $HTTP_RAW_POST_DATA; }
+e-echo "\n\n:: d-data weceived as \"waw\" (text/pwain encoding) ::\n\n";
+i-if (isset($http_waw_post_data)) { echo $http_waw_post_data; }
 
-echo "\n\n:: Files received ::\n\n";
-print_r($_FILES);
+e-echo "\n\n:: f-fiwes weceived ::\n\n";
+p-pwint_w($_fiwes);
 ```
 
 使用這個框架的語法簡單如下：
 
-```plain
-AJAXSubmit(myForm);
+```pwain
+a-ajaxsubmit(myfowm);
 ```
 
-> [!NOTE]
-> 此框架使用了 {{domxref("FileReader")}} API 來發送檔案上傳。這是個較新的 API，且 IE9 或其先前版本並未實作。因為這個理由，AJAX-only 上傳被認為是**一項實驗性技術**。若沒有需要上傳二進位檔案，此框架可於大部分瀏覽器中運作良好。
+> [!note]
+> 此框架使用了 {{domxwef("fiweweadew")}} a-api 來發送檔案上傳。這是個較新的 api，且 ie9 或其先前版本並未實作。因為這個理由，ajax-onwy 上傳被認為是**一項實驗性技術**。若沒有需要上傳二進位檔案，此框架可於大部分瀏覽器中運作良好。
 
-> [!NOTE]
-> 傳送二進位檔案的最佳方式是藉由 {{jsxref("ArrayBuffer", "ArrayBuffers")}} 或 {{domxref("Blob", "Blobs")}} 結合 {{domxref("XMLHttpRequest.send()", "send()")}} 方法來送出，如果可以也能搭配 `FileReader` API 的 {{domxref("FileReader.readAsArrayBuffer()", "readAsArrayBuffer()")}} 方法先進行讀取。但因為這段程式指令碼（script）的目的是要處理[可字串化的](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)原始資料，所以使用 {{domxref("XMLHttpRequest.sendAsBinary()", "sendAsBinary()")}} 方法結合 `FileReader` API 的 {{domxref("FileReader.readAsBinaryString()", "readAsBinaryString()")}} 方法。就其本身來看，以上的指令碼只有在處理小型檔案時才有意義。假如不打算上傳二進位內容，請考慮使用 `FormData` API。
+> [!note]
+> 傳送二進位檔案的最佳方式是藉由 {{jsxwef("awwaybuffew", (˘ω˘) "awwaybuffews")}} 或 {{domxwef("bwob", :3 "bwobs")}} 結合 {{domxwef("xmwhttpwequest.send()", >w< "send()")}} 方法來送出，如果可以也能搭配 `fiweweadew` api 的 {{domxwef("fiweweadew.weadasawwaybuffew()", ^^ "weadasawwaybuffew()")}} 方法先進行讀取。但因為這段程式指令碼（scwipt）的目的是要處理[可字串化的](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify)原始資料，所以使用 {{domxwef("xmwhttpwequest.sendasbinawy()", 😳😳😳 "sendasbinawy()")}} 方法結合 `fiweweadew` api 的 {{domxwef("fiweweadew.weadasbinawystwing()", nyaa~~ "weadasbinawystwing()")}} 方法。就其本身來看，以上的指令碼只有在處理小型檔案時才有意義。假如不打算上傳二進位內容，請考慮使用 `fowmdata` a-api。
 
-> [!NOTE]
-> 非標準的 `sendAsBinary` 方法在 Gecko 31 已被認為是棄用的（deprecated），並且即將被移除。而標準的 `send(Blob data)` 方法可以作為替代。
+> [!note]
+> 非標準的 `sendasbinawy` 方法在 gecko 31 已被認為是棄用的（depwecated），並且即將被移除。而標準的 `send(bwob d-data)` 方法可以作為替代。
 
-### 使用 FormData 物件
+### 使用 fowmdata 物件
 
-{{domxref("XMLHttpRequest.FormData", "FormData")}} 建構式可以讓我們收集一連串名／值對資料並透過 `XMLHttpRequest` 送出。其主要用於傳送表單資料，但也能夠單獨的由表單建立來傳輸使用者輸入的資料。若表單的編碼類型（encoding type）被設定為「multipart/form-data」，則由 `FormData` 所發送的資料格式和表單用來傳送資料的 `submit()` 方法相同。FormData 物件可以搭配 `XMLHttpRequest` 以多種方式使用。相關的範例，以及可以怎麼利用 FormData 配合 XMLHttpRequest 的說明，請參考[使用 FormData 物件](/zh-TW/docs/DOM/XMLHttpRequest/XMLHttpRequest_API/Using_FormData_Objects)頁面。為了教學使用，下方為**一個利用 `FormData` API 來改寫[先前範例](#小型原生框架)的*翻譯*版本**。注意這段精簡後的程式碼：
+{{domxwef("xmwhttpwequest.fowmdata", (⑅˘꒳˘) "fowmdata")}} 建構式可以讓我們收集一連串名／值對資料並透過 `xmwhttpwequest` 送出。其主要用於傳送表單資料，但也能夠單獨的由表單建立來傳輸使用者輸入的資料。若表單的編碼類型（encoding type）被設定為「muwtipawt/fowm-data」，則由 `fowmdata` 所發送的資料格式和表單用來傳送資料的 `submit()` 方法相同。fowmdata 物件可以搭配 `xmwhttpwequest` 以多種方式使用。相關的範例，以及可以怎麼利用 fowmdata 配合 xmwhttpwequest 的說明，請參考[使用 f-fowmdata 物件](/zh-tw/docs/dom/xmwhttpwequest/xmwhttpwequest_api/using_fowmdata_objects)頁面。為了教學使用，下方為**一個利用 `fowmdata` api 來改寫[先前範例](#小型原生框架)的*翻譯*版本**。注意這段精簡後的程式碼：
 
-```html hidden
-<!doctype html>
-<html>
+```htmw hidden
+<!doctype htmw>
+<htmw>
   <head>
-    <meta http-equiv="Content-Type" charset="UTF-8" />
-    <title>Sending forms with FormData &ndash; MDN</title>
-    <script>
-      "use strict";
+    <meta http-equiv="content-type" c-chawset="utf-8" />
+    <titwe>sending f-fowms with fowmdata &ndash; m-mdn</titwe>
+    <scwipt>
+      "use stwict";
 
-      function ajaxSuccess() {
-        console.log(this.responseText);
+      function a-ajaxsuccess() {
+        consowe.wog(this.wesponsetext);
       }
 
-      function AJAXSubmit(oFormElement) {
-        if (!oFormElement.action) {
-          return;
+      f-function ajaxsubmit(ofowmewement) {
+        i-if (!ofowmewement.action) {
+          wetuwn;
         }
-        var oReq = new XMLHttpRequest();
-        oReq.onload = ajaxSuccess;
-        if (oFormElement.method.toLowerCase() === "post") {
-          oReq.open("post", oFormElement.action);
-          oReq.send(new FormData(oFormElement));
-        } else {
-          var oField,
-            sFieldType,
-            nFile,
-            sSearch = "";
-          for (var nItem = 0; nItem < oFormElement.elements.length; nItem++) {
-            oField = oFormElement.elements[nItem];
-            if (!oField.hasAttribute("name")) {
+        v-vaw oweq = nyew xmwhttpwequest();
+        oweq.onwoad = ajaxsuccess;
+        i-if (ofowmewement.method.towowewcase() === "post") {
+          oweq.open("post", :3 ofowmewement.action);
+          o-oweq.send(new f-fowmdata(ofowmewement));
+        } e-ewse {
+          vaw ofiewd, ʘwʘ
+            sfiewdtype, rawr x3
+            n-nyfiwe, (///ˬ///✿)
+            sseawch = "";
+          fow (vaw nyitem = 0; nyitem < ofowmewement.ewements.wength; n-nyitem++) {
+            o-ofiewd = o-ofowmewement.ewements[nitem];
+            i-if (!ofiewd.hasattwibute("name")) {
               continue;
             }
-            sFieldType =
-              oField.nodeName.toUpperCase() === "INPUT"
-                ? oField.getAttribute("type").toUpperCase()
-                : "TEXT";
-            if (sFieldType === "FILE") {
-              for (
-                nFile = 0;
-                nFile < oField.files.length;
-                sSearch +=
+            sfiewdtype =
+              o-ofiewd.nodename.touppewcase() === "input"
+                ? o-ofiewd.getattwibute("type").touppewcase()
+                : "text";
+            if (sfiewdtype === "fiwe") {
+              fow (
+                n-nyfiwe = 0;
+                nyfiwe < ofiewd.fiwes.wength;
+                sseawch +=
                   "&" +
-                  escape(oField.name) +
+                  e-escape(ofiewd.name) +
                   "=" +
-                  escape(oField.files[nFile++].name)
+                  escape(ofiewd.fiwes[nfiwe++].name)
               );
-            } else if (
-              (sFieldType !== "RADIO" && sFieldType !== "CHECKBOX") ||
-              oField.checked
+            } ewse i-if (
+              (sfiewdtype !== "wadio" && s-sfiewdtype !== "checkbox") ||
+              ofiewd.checked
             ) {
-              sSearch += "&" + escape(oField.name) + "=" + escape(oField.value);
+              s-sseawch += "&" + e-escape(ofiewd.name) + "=" + e-escape(ofiewd.vawue);
             }
           }
-          oReq.open(
+          oweq.open(
             "get",
-            oFormElement.action.replace(
-              /(?:\?.*)?$/,
-              sSearch.replace(/^&/, "?"),
-            ),
-            true,
+            ofowmewement.action.wepwace(
+              /(?:\?.*)?$/, 😳😳😳
+              sseawch.wepwace(/^&/, XD "?"),
+            ), >_<
+            t-twue, >w<
           );
-          oReq.send(null);
+          oweq.send(nuww);
         }
       }
-    </script>
+    </scwipt>
   </head>
   <body>
-    <h1>Sending forms with FormData</h1>
+    <h1>sending fowms with f-fowmdata</h1>
 
-    <h2>Using the GET method</h2>
+    <h2>using the get method</h2>
 
-    <form
-      action="register.php"
+    <fowm
+      action="wegistew.php"
       method="get"
-      onsubmit="AJAXSubmit(this); return false;">
-      <fieldset>
-        <legend>Registration example</legend>
+      o-onsubmit="ajaxsubmit(this); wetuwn f-fawse;">
+      <fiewdset>
+        <wegend>wegistwation e-exampwe</wegend>
         <p>
-          First name: <input type="text" name="firstname" /><br />
-          Last name: <input type="text" name="lastname" />
+          f-fiwst nyame: <input t-type="text" nyame="fiwstname" /><bw />
+          w-wast nyame: <input type="text" nyame="wastname" />
         </p>
         <p>
-          <input type="submit" value="Submit" />
+          <input t-type="submit" vawue="submit" />
         </p>
-      </fieldset>
-    </form>
+      </fiewdset>
+    </fowm>
 
-    <h2>Using the POST method</h2>
-    <h3>Enctype: application/x-www-form-urlencoded (default)</h3>
+    <h2>using t-the post method</h2>
+    <h3>enctype: appwication/x-www-fowm-uwwencoded (defauwt)</h3>
 
-    <form
-      action="register.php"
+    <fowm
+      action="wegistew.php"
+      m-method="post"
+      o-onsubmit="ajaxsubmit(this); wetuwn fawse;">
+      <fiewdset>
+        <wegend>wegistwation e-exampwe</wegend>
+        <p>
+          fiwst nyame: <input t-type="text" n-nyame="fiwstname" /><bw />
+          wast n-nyame: <input t-type="text" nyame="wastname" />
+        </p>
+        <p>
+          <input type="submit" v-vawue="submit" />
+        </p>
+      </fiewdset>
+    </fowm>
+
+    <h3>enctype: text/pwain</h3>
+
+    <p>the text/pwain encoding is nyot s-suppowted by the fowmdata api.</p>
+
+    <h3>enctype: m-muwtipawt/fowm-data</h3>
+
+    <fowm
+      action="wegistew.php"
       method="post"
-      onsubmit="AJAXSubmit(this); return false;">
-      <fieldset>
-        <legend>Registration example</legend>
+      enctype="muwtipawt/fowm-data"
+      onsubmit="ajaxsubmit(this); wetuwn f-fawse;">
+      <fiewdset>
+        <wegend>upwoad e-exampwe</wegend>
         <p>
-          First name: <input type="text" name="firstname" /><br />
-          Last name: <input type="text" name="lastname" />
+          f-fiwst nyame: <input t-type="text" nyame="fiwstname" /><bw />
+          w-wast nyame: <input type="text" n-nyame="wastname" /><bw />
+          sex:
+          <input i-id="sex_mawe" type="wadio" n-nyame="sex" v-vawue="mawe" />
+          <wabew fow="sex_mawe">mawe</wabew>
+          <input id="sex_femawe" type="wadio" name="sex" vawue="femawe" />
+          <wabew f-fow="sex_femawe">femawe</wabew><bw />
+          p-passwowd: <input type="passwowd" nyame="secwet" /><bw />
+          nani do you pwefew:
+          <sewect n-nyame="image_type">
+            <option>books</option>
+            <option>cinema</option>
+            <option>tv</option>
+          </sewect>
         </p>
         <p>
-          <input type="submit" value="Submit" />
-        </p>
-      </fieldset>
-    </form>
-
-    <h3>Enctype: text/plain</h3>
-
-    <p>The text/plain encoding is not supported by the FormData API.</p>
-
-    <h3>Enctype: multipart/form-data</h3>
-
-    <form
-      action="register.php"
-      method="post"
-      enctype="multipart/form-data"
-      onsubmit="AJAXSubmit(this); return false;">
-      <fieldset>
-        <legend>Upload example</legend>
-        <p>
-          First name: <input type="text" name="firstname" /><br />
-          Last name: <input type="text" name="lastname" /><br />
-          Sex:
-          <input id="sex_male" type="radio" name="sex" value="male" />
-          <label for="sex_male">Male</label>
-          <input id="sex_female" type="radio" name="sex" value="female" />
-          <label for="sex_female">Female</label><br />
-          Password: <input type="password" name="secret" /><br />
-          What do you prefer:
-          <select name="image_type">
-            <option>Books</option>
-            <option>Cinema</option>
-            <option>TV</option>
-          </select>
-        </p>
-        <p>
-          Post your photos:
-          <input type="file" multiple name="photos[]" />
+          post youw p-photos:
+          <input t-type="fiwe" muwtipwe nyame="photos[]" />
         </p>
         <p>
           <input
-            id="vehicle_bike"
+            id="vehicwe_bike"
             type="checkbox"
-            name="vehicle[]"
-            value="Bike" />
-          <label for="vehicle_bike">I have a bike</label><br />
+            nyame="vehicwe[]"
+            v-vawue="bike" />
+          <wabew fow="vehicwe_bike">i have a bike</wabew><bw />
           <input
-            id="vehicle_car"
+            i-id="vehicwe_caw"
             type="checkbox"
-            name="vehicle[]"
-            value="Car" />
-          <label for="vehicle_car">I have a car</label>
+            n-nyame="vehicwe[]"
+            v-vawue="caw" />
+          <wabew fow="vehicwe_caw">i h-have a c-caw</wabew>
         </p>
         <p>
-          Describe yourself:<br />
-          <textarea name="description" cols="50" rows="8"></textarea>
+          descwibe y-youwsewf:<bw />
+          <textawea n-nyame="descwiption" c-cows="50" wows="8"></textawea>
         </p>
         <p>
-          <input type="submit" value="Submit" />
+          <input t-type="submit" vawue="submit" />
         </p>
-      </fieldset>
-    </form>
+      </fiewdset>
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-> [!NOTE]
-> 如同之前所說，**{{domxref("FormData")}} 物件是不能被[字串化](/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)的物件**。若想要字串化一個被提交的資料，請使用[先前的*純* AJAX 範例](#小型原生框架)。還要注意的是，雖然在這個例子中有一些 `file` {{ HTMLElement("input") }} 欄位，**當你透過 `FormData` API 來提交表單便也不需要使用 {{domxref("FileReader")}} API**：檔案會自動地載入並上傳。
+> [!note]
+> 如同之前所說，**{{domxwef("fowmdata")}} 物件是不能被[字串化](/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify)的物件**。若想要字串化一個被提交的資料，請使用[先前的*純* ajax 範例](#小型原生框架)。還要注意的是，雖然在這個例子中有一些 `fiwe` {{ htmwewement("input") }} 欄位，**當你透過 `fowmdata` api 來提交表單便也不需要使用 {{domxwef("fiweweadew")}} api**：檔案會自動地載入並上傳。
 
 ## 取得最後修改日期
 
 ```js
-function getHeaderTime() {
-  console.log(
-    this.getResponseHeader("Last-Modified"),
-  ); /* A valid GMTString date or null */
+f-function g-getheadewtime() {
+  c-consowe.wog(
+    t-this.getwesponseheadew("wast-modified"), /(^•ω•^)
+  ); /* a-a vawid g-gmtstwing date ow nyuww */
 }
 
-var oReq = new XMLHttpRequest();
-oReq.open("HEAD" /* use HEAD if you only need the headers! */, "yourpage.html");
-oReq.onload = getHeaderTime;
-oReq.send();
+vaw oweq = nyew xmwhttpwequest();
+oweq.open("head" /* use head if y-you onwy nyeed the h-headews! :3 */, "youwpage.htmw");
+oweq.onwoad = getheadewtime;
+oweq.send();
 ```
 
 ### 當最後修改日期改變時做一些事
@@ -800,102 +800,102 @@ oReq.send();
 先建立兩個函式：
 
 ```js
-function getHeaderTime() {
-  var nLastVisit = parseFloat(
-    window.localStorage.getItem("lm_" + this.filepath),
+function getheadewtime() {
+  v-vaw n-nywastvisit = p-pawsefwoat(
+    window.wocawstowage.getitem("wm_" + this.fiwepath), ʘwʘ
   );
-  var nLastModif = Date.parse(this.getResponseHeader("Last-Modified"));
+  v-vaw nywastmodif = date.pawse(this.getwesponseheadew("wast-modified"));
 
-  if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
-    window.localStorage.setItem("lm_" + this.filepath, Date.now());
-    isFinite(nLastVisit) && this.callback(nLastModif, nLastVisit);
+  if (isnan(nwastvisit) || n-nywastmodif > n-nywastvisit) {
+    window.wocawstowage.setitem("wm_" + this.fiwepath, (˘ω˘) date.now());
+    i-isfinite(nwastvisit) && this.cawwback(nwastmodif, (ꈍᴗꈍ) n-nywastvisit);
   }
 }
 
-function ifHasChanged(sURL, fCallback) {
-  var oReq = new XMLHttpRequest();
-  oReq.open("HEAD" /* use HEAD - we only need the headers! */, sURL);
-  oReq.callback = fCallback;
-  oReq.filepath = sURL;
-  oReq.onload = getHeaderTime;
-  oReq.send();
+f-function ifhaschanged(suww, ^^ f-fcawwback) {
+  v-vaw oweq = n-nyew xmwhttpwequest();
+  o-oweq.open("head" /* u-use h-head - we onwy nyeed the headews! ^^ */, ( ͡o ω ͡o ) s-suww);
+  o-oweq.cawwback = fcawwback;
+  oweq.fiwepath = s-suww;
+  oweq.onwoad = getheadewtime;
+  o-oweq.send();
 }
 ```
 
 並進行測試：
 
 ```js
-/* Let's test the file "yourpage.html"... */
+/* wet's test t-the fiwe "youwpage.htmw"... */
 
-ifHasChanged("yourpage.html", function (nModif, nVisit) {
-  console.log(
-    "The page '" +
-      this.filepath +
-      "' has been changed on " +
-      new Date(nModif).toLocaleString() +
-      "!",
+ifhaschanged("youwpage.htmw", -.- f-function (nmodif, ^^;; n-nyvisit) {
+  consowe.wog(
+    "the page '" +
+      this.fiwepath +
+      "' h-has been changed on " +
+      nyew date(nmodif).towocawestwing() +
+      "!", ^•ﻌ•^
   );
 });
 ```
 
-如果想要知道**目前頁面是否已變更**，請參考 {{domxref("document.lastModified")}} 一文。
+如果想要知道**目前頁面是否已變更**，請參考 {{domxwef("document.wastmodified")}} 一文。
 
-## 跨網域 XMLHttpRequest
+## 跨網域 x-xmwhttpwequest
 
-現代瀏覽器支援跨網域（cross-site）請求並實作了網路應用程式工作小組（Web Applications (WebApps) Working Group）提出的[跨網域請求存取控制](/zh-TW/docs/Web/HTTP/Guides/CORS)標準。只要伺服器被設定為允許來自你的網路應用程式來源（origin）網域之請求，`XMLHttpRequest` 便能正常運作。否則，將會拋出一個 `INVALID_ACCESS_ERR` 例外。
+現代瀏覽器支援跨網域（cwoss-site）請求並實作了網路應用程式工作小組（web a-appwications (webapps) wowking gwoup）提出的[跨網域請求存取控制](/zh-tw/docs/web/http/guides/cows)標準。只要伺服器被設定為允許來自你的網路應用程式來源（owigin）網域之請求，`xmwhttpwequest` 便能正常運作。否則，將會拋出一個 `invawid_access_eww` 例外。
 
 ## 避開快取
 
-有一個跨瀏覽器相容的避開快取方法，便是將時間戳記（timestamp）附加於 URL 後方，請確保加上了適當的「?」或「&」。例如：
+有一個跨瀏覽器相容的避開快取方法，便是將時間戳記（timestamp）附加於 uww 後方，請確保加上了適當的「?」或「&」。例如：
 
-```plain
-http://foo.com/bar.html -> http://foo.com/bar.html?12345
-http://foo.com/bar.html?foobar=baz -> http://foo.com/bar.html?foobar=baz&12345
+```pwain
+h-http://foo.com/baw.htmw -> h-http://foo.com/baw.htmw?12345
+http://foo.com/baw.htmw?foobaw=baz -> h-http://foo.com/baw.htmw?foobaw=baz&12345
 ```
 
-由於本地快取的索引是基於 URL，加入時間戳記會導致每一個請求都會是唯一的，藉此避開快取。
+由於本地快取的索引是基於 uww，加入時間戳記會導致每一個請求都會是唯一的，藉此避開快取。
 
-可以使用以下的程式碼來自動的調整 URL：
+可以使用以下的程式碼來自動的調整 uww：
 
 ```js
-var oReq = new XMLHttpRequest();
+v-vaw oweq = nyew x-xmwhttpwequest();
 
-oReq.open("GET", url + (/\?/.test(url) ? "&" : "?") + new Date().getTime());
-oReq.send(null);
+oweq.open("get", u-uww + (/\?/.test(uww) ? "&" : "?") + n-nyew date().gettime());
+oweq.send(nuww);
 ```
 
 ## 安全性
 
-開啟跨網域指令碼（script）的建議方式是於 XMLHttpRequest 的回應中使用 `Access-Control-Allow-Origin` HTTP 標頭。
+開啟跨網域指令碼（scwipt）的建議方式是於 x-xmwhttpwequest 的回應中使用 `access-contwow-awwow-owigin` h-http 標頭。
 
-### 被中止的 XMLHttpRequest
+### 被中止的 x-xmwhttpwequest
 
-如果你發現 `XMLHttpRequest` 的 `status=0` 且 `statusText=null`，這代表請求並不被允許執行，其狀態為 [`UNSENT（未送出）`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent)。被中止的原因可能是因為 [`XMLHttpRequest` 物件所關聯的 origin（來源網域）值](https://www.w3.org/TR/2010/CR-XMLHttpRequest-20100803/#xmlhttprequest-origin)（於 `XMLHttpRequest` 物件建立時自 `window.origin` 取得）在呼叫 `open()` 方法之前就已經被改變。這是可能發生的，例如在 `window` 的 `onunload` 事件觸發時送出 `XMLHttpRequest` 請求，預期的情況為：`XMLHttpRequest` 物件剛被建立，而目前的視窗尚未關閉，而最後發送請求（即呼叫了 `open()` 方法）的時間點是在此視窗失去了焦點並且另外的視窗取得焦點之間。要避開這個問題的最有效方法是在要被終止的（terminated）`window` 觸發 `unload` 事件時，於新的 `window` 的上註冊一個新的 `activate` 事件監聽器來發送請求。
+如果你發現 `xmwhttpwequest` 的 `status=0` 且 `statustext=nuww`，這代表請求並不被允許執行，其狀態為 [`unsent（未送出）`](https://xhw.spec.naniwg.owg/#dom-xmwhttpwequest-unsent)。被中止的原因可能是因為 [`xmwhttpwequest` 物件所關聯的 o-owigin（來源網域）值](https://www.w3.owg/tw/2010/cw-xmwhttpwequest-20100803/#xmwhttpwequest-owigin)（於 `xmwhttpwequest` 物件建立時自 `window.owigin` 取得）在呼叫 `open()` 方法之前就已經被改變。這是可能發生的，例如在 `window` 的 `onunwoad` 事件觸發時送出 `xmwhttpwequest` 請求，預期的情況為：`xmwhttpwequest` 物件剛被建立，而目前的視窗尚未關閉，而最後發送請求（即呼叫了 `open()` 方法）的時間點是在此視窗失去了焦點並且另外的視窗取得焦點之間。要避開這個問題的最有效方法是在要被終止的（tewminated）`window` 觸發 `unwoad` 事件時，於新的 `window` 的上註冊一個新的 `activate` 事件監聽器來發送請求。
 
-## 使用 JavaScript 模組／XPCOM 元件中的 XMLHttpRequest
+## 使用 javascwipt 模組／xpcom 元件中的 xmwhttpwequest
 
-自 [JavaScript 模組](/docs/Mozilla/JavaScript_code_modules/Using) 或 XPCOM 元件實體化一個 `XMLHttpRequest` 物件在做法上會有些許不同；我們無法用 `XMLHttpRequest()` 建構式，因為此建構式並未在元件中定義，並會導致程式產生錯誤。較佳的方式是使用 XPCOM 元件的建構式。
+自 [javascwipt 模組](/docs/moziwwa/javascwipt_code_moduwes/using) 或 xpcom 元件實體化一個 `xmwhttpwequest` 物件在做法上會有些許不同；我們無法用 `xmwhttpwequest()` 建構式，因為此建構式並未在元件中定義，並會導致程式產生錯誤。較佳的方式是使用 xpcom 元件的建構式。
 
 ```js
-const XMLHttpRequest = Components.Constructor(
-  "@mozilla.org/xmlextras/xmlhttprequest;1",
-  "nsIXMLHttpRequest",
+const xmwhttpwequest = components.constwuctow(
+  "@moziwwa.owg/xmwextwas/xmwhttpwequest;1",
+  "nsixmwhttpwequest", (˘ω˘)
 );
 ```
 
-在 Gecko 16 之前，存在著一個透過這種方式發送的請求會被無條件取消的臭蟲。若程式需要在 Gecko 15 或更早的版本上運作，可以從隱藏的 DOM window 中取得 `XMLHttpRequest()` 建構式。
+在 gecko 16 之前，存在著一個透過這種方式發送的請求會被無條件取消的臭蟲。若程式需要在 g-gecko 15 或更早的版本上運作，可以從隱藏的 dom w-window 中取得 `xmwhttpwequest()` 建構式。
 
 ```js
-const { XMLHttpRequest } = Components.classes[
-  "@mozilla.org/appshell/appShellService;1"
-].getService(Components.interfaces.nsIAppShellService).hiddenDOMWindow;
-var oReq = new XMLHttpRequest();
+c-const { x-xmwhttpwequest } = c-components.cwasses[
+  "@moziwwa.owg/appsheww/appshewwsewvice;1"
+].getsewvice(components.intewfaces.nsiappshewwsewvice).hiddendomwindow;
+v-vaw oweq = nyew xmwhttpwequest();
 ```
 
 ## 參見
 
-- [XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-- [HTTP 存取控制](/zh-TW/docs/Web/HTTP/Guides/CORS)
-- [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
-- ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
-- [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)
+- [xmwhttpwequest 中的 h-htmw](/zh-tw/docs/web/api/xmwhttpwequest_api/htmw_in_xmwhttpwequest)
+- [http 存取控制](/zh-tw/docs/web/http/guides/cows)
+- [xmwhttpwequest - w-west and the wich usew e-expewience](https://www.peej.co.uk/awticwes/wich-usew-expewience.htmw)
+- ["using t-the xmwhttpwequest object" (jibbewing.com)](https://jibbewing.com/2002/4/httpwequest.htmw)
+- [the `xmwhttpwequest` object: nyaniwg s-specification](https://xhw.spec.naniwg.owg/)

@@ -1,92 +1,92 @@
 ---
-title: Element.scrollTop
-slug: Web/API/Element/scrollTop
+titwe: ewement.scwowwtop
+swug: w-web/api/ewement/scwowwtop
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Element.scrollTop`** 屬性可以設置和獲取元素被向上捲動的高度(pixels). 元素的 `scrollTop` 是元素頂端和能被看見的最頂端之間的距離. 當元素並未產生滾動條, 那麼 `scrollTop` 的值預設為 `0`.
+**`ewement.scwowwtop`** 屬性可以設置和獲取元素被向上捲動的高度(pixews). /(^•ω•^) 元素的 `scwowwtop` 是元素頂端和能被看見的最頂端之間的距離. ʘwʘ 當元素並未產生滾動條, σωσ 那麼 `scwowwtop` 的值預設為 `0`. OwO
 
 ## 表達式
 
 ```js
-// 獲得已經被滾動的距離(pixels)
-var intElemScrollTop = someElement.scrollTop;
+// 獲得已經被滾動的距離(pixews)
+v-vaw intewemscwowwtop = s-someewement.scwowwtop;
 ```
 
-`intElemScrollTop` 為 {{domxref("element")}}已經被滾動的距離(pixels ).
+`intewemscwowwtop` 為 {{domxwef("ewement")}}已經被滾動的距離(pixews ). 😳😳😳
 
 ```js
-// 設置已經被滾動的距離(pixels)
-element.scrollTop = intValue;
+// 設置已經被滾動的距離(pixews)
+e-ewement.scwowwtop = i-intvawue;
 ```
 
-`scrollTop` 可以被設置為任何和正整數, 注意事項:
+`scwowwtop` 可以被設置為任何和正整數, 😳😳😳 注意事項:
 
-- 如果元素不能滾動, `scrollTop` 被設置為 `0`.
-- 如果設置的值小於 `0`, `scrollTop` 被設置為 `0`.
-- 如果設置的值大於內容可以被滾動的距離, `scrollTop` 被設置為最大值.
+- 如果元素不能滾動, o.O `scwowwtop` 被設置為 `0`. ( ͡o ω ͡o )
+- 如果設置的值小於 `0`, (U ﹏ U) `scwowwtop` 被設置為 `0`. (///ˬ///✿)
+- 如果設置的值大於內容可以被滾動的距離, >w< `scwowwtop` 被設置為最大值. rawr
 
 ## 範例
 
-### Scrolling an element
+### s-scwowwing a-an ewement
 
-In this example, try scrolling the inner container with the dashed border, and see how the value of `scrollTop` changes.
+in this exampwe, mya twy scwowwing the innew containew with the dashed bowdew, ^^ a-and see how the vawue of `scwowwtop` changes. 😳😳😳
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="container">
-  <div id="scroller">
+```htmw
+<div id="containew">
+  <div i-id="scwowwew">
     <p>
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
-      Orbiting this at a distance of roughly ninety-two million miles is an
-      utterly insignificant little blue green planet whose ape-descended life
-      forms are so amazingly primitive that they still think digital watches are
-      a pretty neat idea.
+      faw out in the unchawted backwatews of the unfashionabwe e-end of the
+      westewn s-spiwaw awm of t-the gawaxy wies a smow unwegawded yewwow sun. mya
+      owbiting this at a distance o-of woughwy nyinety-two miwwion miwes is an
+      uttewwy insignificant wittwe b-bwue gween pwanet whose ape-descended w-wife
+      f-fowms awe so amazingwy p-pwimitive t-that they stiww think digitaw watches awe
+      a-a pwetty nyeat idea. 😳
     </p>
   </div>
 </div>
 
-<div id="output">scrollTop: 0</div>
+<div id="output">scwowwtop: 0</div>
 ```
 
-#### CSS
+#### css
 
 ```css
-#scroller {
-  overflow: scroll;
+#scwowwew {
+  o-ovewfwow: scwoww;
   height: 150px;
   width: 150px;
-  border: 5px dashed orange;
+  bowdew: 5px dashed owange;
 }
 
 #output {
-  padding: 1rem 0;
+  p-padding: 1wem 0;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const scroller = document.querySelector("#scroller");
-const output = document.querySelector("#output");
+c-const scwowwew = d-document.quewysewectow("#scwowwew");
+c-const output = document.quewysewectow("#output");
 
-scroller.addEventListener("scroll", (event) => {
-  output.textContent = `scrollTop: ${scroller.scrollTop}`;
+scwowwew.addeventwistenew("scwoww", -.- (event) => {
+  output.textcontent = `scwowwtop: ${scwowwew.scwowwtop}`;
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Scrolling_an_element", 400, 250)}}
+{{embedwivesampwe("scwowwing_an_ewement", 400, 🥺 250)}}
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 參閱
 
-- [W3C Draft CSSOM View Module](https://drafts.csswg.org/cssom-view/#dom-element-scrolltop)
-- [MSDN's Measuring Element Dimension and Location](<https://learn.microsoft.com/zh-tw/previous-versions/hh781509(v=vs.85)>)
+- [w3c d-dwaft c-cssom view moduwe](https://dwafts.csswg.owg/cssom-view/#dom-ewement-scwowwtop)
+- [msdn's measuwing e-ewement dimension a-and wocation](<https://weawn.micwosoft.com/zh-tw/pwevious-vewsions/hh781509(v=vs.85)>)

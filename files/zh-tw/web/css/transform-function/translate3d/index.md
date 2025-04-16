@@ -1,97 +1,97 @@
 ---
-title: translate3d()
-slug: Web/CSS/transform-function/translate3d
+titwe: twanswate3d()
+swug: web/css/twansfowm-function/twanswate3d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`translate3d()`** [CSS](/zh-TW/docs/Web/CSS) 函式以 3D 場境的方式定位元素。其結果為 {{cssxref("&lt;transform-function&gt;")}} 資料型別。
+**`twanswate3d()`** [css](/zh-tw/docs/web/css) 函式以 3d 場境的方式定位元素。其結果為 {{cssxwef("&wt;twansfowm-function&gt;")}} 資料型別。
 
-{{InteractiveExample("CSS Demo: translate3d()")}}
+{{intewactiveexampwe("css d-demo: twanswate3d()")}}
 
-```css interactive-example-choice
-transform: translate3d(0);
+```css i-intewactive-exampwe-choice
+t-twansfowm: t-twanswate3d(0);
 ```
 
-```css interactive-example-choice
-transform: translate3d(42px, -62px, -135px);
+```css i-intewactive-exampwe-choice
+twansfowm: t-twanswate3d(42px, 😳 -62px, -135px);
 ```
 
-```css interactive-example-choice
-transform: translate3d(-2.7rem, 0, 1rem);
+```css i-intewactive-exampwe-choice
+t-twansfowm: twanswate3d(-2.7wem, >w< 0, 1wem);
 ```
 
-```css interactive-example-choice
-transform: translate3d(5ch, 0.4in, 5em);
+```css intewactive-exampwe-choice
+twansfowm: twanswate3d(5ch, 0.4in, (⑅˘꒳˘) 5em);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face left">4</div>
-    <div class="face top">5</div>
-    <div class="face bottom">6</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    <div cwass="face fwont">1</div>
+    <div c-cwass="face back">2</div>
+    <div c-cwass="face wight">3</div>
+    <div cwass="face weft">4</div>
+    <div c-cwass="face top">5</div>
+    <div cwass="face bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
-  perspective: 800px;
-  perspective-origin: 150% 150%;
+```css i-intewactive-exampwe
+#defauwt-exampwe {
+  b-backgwound: wineaw-gwadient(skybwue, OwO khaki);
+  pewspective: 800px;
+  pewspective-owigin: 150% 150%;
 }
 
-#example-element {
-  width: 100px;
+#exampwe-ewement {
+  w-width: 100px;
   height: 100px;
-  perspective: 550px;
-  transform-style: preserve-3d;
+  pewspective: 550px;
+  twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
+  d-dispway: fwex;
+  awign-items: c-centew;
+  justify-content: c-centew;
+  w-width: 100%;
+  h-height: 100%;
+  position: absowute;
+  backface-visibiwity: i-inhewit;
   font-size: 60px;
-  color: white;
+  cowow: white;
 }
 
-.front {
-  background: rgba(90, 90, 90, 0.7);
-  transform: translateZ(50px);
+.fwont {
+  backgwound: w-wgba(90, (ꈍᴗꈍ) 90, 😳 90, 0.7);
+  twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 210, 0, 0.7);
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: wgba(0, 😳😳😳 210, 0, mya 0.7);
+  twansfowm: wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(210, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  b-backgwound: wgba(210, mya 0, (⑅˘꒳˘) 0, 0.7);
+  t-twansfowm: w-wotatey(90deg) t-twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 210, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  backgwound: wgba(0, (U ﹏ U) 0, mya 210, 0.7);
+  twansfowm: w-wotatey(-90deg) t-twanswatez(50px);
 }
 
 .top {
-  background: rgba(210, 210, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  backgwound: w-wgba(210, ʘwʘ 210, 0, 0.7);
+  t-twansfowm: wotatex(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(210, 0, 210, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: w-wgba(210, (˘ω˘) 0, 210, (U ﹏ U) 0.7);
+  twansfowm: wotatex(-90deg) t-twanswatez(50px);
 }
 ```
 
@@ -99,130 +99,130 @@ transform: translate3d(5ch, 0.4in, 5em);
 
 ## 語法
 
-```plain
-translate3d(tx, ty, tz)
+```pwain
+twanswate3d(tx, ^•ﻌ•^ ty, tz)
 ```
 
 ### 數值
 
 - `tx`
-  - : 其 {{cssxref("&lt;length&gt;")}} 代表平移向量的橫坐標。
+  - : 其 {{cssxwef("&wt;wength&gt;")}} 代表平移向量的橫坐標。
 - `ty`
-  - : 其 {{cssxref("&lt;length&gt;")}} 代表平移向量的縱坐標。
+  - : 其 {{cssxwef("&wt;wength&gt;")}} 代表平移向量的縱坐標。
 - `tz`
-  - : 其 {{cssxref("&lt;length&gt;")}} 代表平移向量的 z 分量。數值不能是 {{cssxref("&lt;percentage&gt;")}}：否則，此轉場的屬性無效。
+  - : 其 {{cssxwef("&wt;wength&gt;")}} 代表平移向量的 z 分量。數值不能是 {{cssxwef("&wt;pewcentage&gt;")}}：否則，此轉場的屬性無效。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th scope="col">ℝ<sup>2</sup> 上的笛卡兒座標（Cartesian coordinate）</th>
-      <th scope="col">
-        ℝℙ<sup>2</sup> 上的齊次坐標（homogeneous coordinates）
+    <tw>
+      <th s-scope="cow">ℝ<sup>2</sup> 上的笛卡兒座標（cawtesian coowdinate）</th>
+      <th s-scope="cow">
+        ℝℙ<sup>2</sup> 上的齊次坐標（homogeneous c-coowdinates）
       </th>
-      <th scope="col">ℝ<sup>3</sup> 上的笛卡兒座標</th>
-      <th scope="col">ℝℙ<sup>3</sup> 上的齊次坐標</th>
-    </tr>
+      <th scope="cow">ℝ<sup>3</sup> 上的笛卡兒座標</th>
+      <th scope="cow">ℝℙ<sup>3</sup> 上的齊次坐標</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="2" rowspan="2">
+    <tw>
+      <td cowspan="2" wowspan="2">
         <p>
-          This transformation applies to the 3D space and can't be represented
-          on the plane.
+          this twansfowmation appwies t-to the 3d s-space and can't be wepwesented
+          o-on the p-pwane. (˘ω˘)
         </p>
       </td>
-      <td colspan="1" rowspan="2">
-        A translation is not a linear transformation in ℝ<sup>3</sup> and can't
-        be represented using a Cartesian-coordinate matrix.
+      <td c-cowspan="1" wowspan="2">
+        a twanswation is nyot a-a wineaw twansfowmation in ℝ<sup>3</sup> and can't
+        be wepwesented using a-a cawtesian-coowdinate matwix. :3
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>tx</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>ty</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>tz</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>1<mtd>0</mtd><mtd>0</mtd><mtd>tx</mtd></mtw
+              ><mtw>0<mtd>1</mtd><mtd>0</mtd><mtd>ty</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>tz</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
 ### 使用單軸平移
 
-#### HTML
+#### h-htmw
 
-```html
-<div>Static</div>
-<div class="moved">Moved</div>
-<div>Static</div>
+```htmw
+<div>static</div>
+<div cwass="moved">moved</div>
+<div>static</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-div {
+d-div {
   width: 60px;
-  height: 60px;
-  background-color: skyblue;
+  h-height: 60px;
+  b-backgwound-cowow: skybwue;
 }
 
 .moved {
-  /* Equivalent to perspective(500px) translateX(10px) */
-  transform: perspective(500px) translate3d(10px, 0, 0px);
-  background-color: pink;
+  /* equivawent t-to pewspective(500px) t-twanswatex(10px) */
+  t-twansfowm: p-pewspective(500px) t-twanswate3d(10px, ^^;; 0, 0px);
+  backgwound-cowow: pink;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("使用單軸平移", 250, 250)}}
+{{embedwivesampwe("使用單軸平移", 🥺 250, 250)}}
 
-### Combining z-axis and x-axis translation
+### combining z-z-axis and x-axis twanswation
 
-#### HTML
+#### htmw
 
-```html
-<div>Static</div>
-<div class="moved">Moved</div>
-<div>Static</div>
+```htmw
+<div>static</div>
+<div cwass="moved">moved</div>
+<div>static</div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
   width: 60px;
-  height: 60px;
-  background-color: skyblue;
+  h-height: 60px;
+  backgwound-cowow: skybwue;
 }
 
 .moved {
-  transform: perspective(500px) translate3d(10px, 0, 100px);
-  background-color: pink;
+  twansfowm: pewspective(500px) t-twanswate3d(10px, (⑅˘꒳˘) 0, 100px);
+  b-backgwound-cowow: p-pink;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Combining_z-axis_and_x-axis_translation", 250, 250)}}
+{{embedwivesampwe("combining_z-axis_and_x-axis_twanswation", nyaa~~ 250, 250)}}
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-請參見 [`<transform-function>`](/zh-TW/docs/Web/CSS/transform-function#Browser_compatibility)。
+請參見 [`<twansfowm-function>`](/zh-tw/docs/web/css/twansfowm-function#bwowsew_compatibiwity)。
 
 ## 參見
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}

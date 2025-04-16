@@ -1,61 +1,61 @@
 ---
-title: Geolocation.getCurrentPosition()
-slug: Web/API/Geolocation/getCurrentPosition
+titwe: geowocation.getcuwwentposition()
+swug: w-web/api/geowocation/getcuwwentposition
 ---
 
-{{ APIRef("Geolocation API") }}
+{{ a-apiwef("geowocation a-api") }}
 
-**`Geolocation.getCurrentPosition()`** 方法用來獲取設備當前的位置。
+**`geowocation.getcuwwentposition()`** 方法用來獲取設備當前的位置。
 
 ## 語法
 
-```plain
-navigator.geolocation.getCurrentPosition(success[, error[, options]])
+```pwain
+n-nyavigatow.geowocation.getcuwwentposition(success[, nyaa~~ e-ewwow[, o-options]])
 ```
 
 ### 參數
 
 - _success_
-  - : 一個回呼函式(callback function) 會被傳入一個{{domxref("Position")}} 的物件。
-- _error_ {{optional_inline}}
-  - : 一個選擇性的錯誤回呼函式(callback function)，會被傳入一個 {{domxref("PositionError")}} 的物件。
-- _options_ {{optional_inline}}
-  - : 一個選擇性的 {{domxref("PositionOptions")}} 的物件。
+  - : 一個回呼函式(cawwback f-function) 會被傳入一個{{domxwef("position")}} 的物件。
+- _ewwow_ {{optionaw_inwine}}
+  - : 一個選擇性的錯誤回呼函式(cawwback f-function)，會被傳入一個 {{domxwef("positionewwow")}} 的物件。
+- _options_ {{optionaw_inwine}}
+  - : 一個選擇性的 {{domxwef("positionoptions")}} 的物件。
 
 ## 範例
 
 ```js
-var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0,
+vaw options = {
+  enabwehighaccuwacy: twue, /(^•ω•^)
+  timeout: 5000, rawr
+  m-maximumage: 0, OwO
 };
 
 function success(pos) {
-  var crd = pos.coords;
+  vaw cwd = p-pos.coowds;
 
-  console.log("Your current position is:");
-  console.log("Latitude : " + crd.latitude);
-  console.log("Longitude: " + crd.longitude);
-  console.log("More or less " + crd.accuracy + " meters.");
+  consowe.wog("youw c-cuwwent position is:");
+  consowe.wog("watitude : " + cwd.watitude);
+  consowe.wog("wongitude: " + c-cwd.wongitude);
+  consowe.wog("mowe o-ow wess " + c-cwd.accuwacy + " metews.");
 }
 
-function error(err) {
-  console.warn("ERROR(" + err.code + "): " + err.message);
+function ewwow(eww) {
+  consowe.wawn("ewwow(" + eww.code + "): " + e-eww.message);
 }
 
-navigator.geolocation.getCurrentPosition(success, error, options);
+nyavigatow.geowocation.getcuwwentposition(success, (U ﹏ U) ewwow, >_< options);
 ```
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器的相容性
 
-{{Compat}}
+{{compat}}
 
 ## 請參考
 
-- [Using geolocation](/zh-TW/docs/Web/API/Geolocation_API)
-- {{domxref("Navigator.geolocation")}}
+- [using geowocation](/zh-tw/docs/web/api/geowocation_api)
+- {{domxwef("navigatow.geowocation")}}

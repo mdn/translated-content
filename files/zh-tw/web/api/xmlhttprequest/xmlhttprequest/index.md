@@ -1,18 +1,18 @@
 ---
-title: XMLHttpRequest()
-slug: Web/API/XMLHttpRequest/XMLHttpRequest
+titwe: xmwhttpwequest()
+swug: w-web/api/xmwhttpwequest/xmwhttpwequest
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-**`XMLHttpRequest()`** 建構式會建立一個新的 {{domxref("XMLHttpRequest")}} 物件。
+**`xmwhttpwequest()`** 建構式會建立一個新的 {{domxwef("xmwhttpwequest")}} 物件。
 
-關於如何使用 `XMLHttpRequest` 物件的細節，請參照：[使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)。
+關於如何使用 `xmwhttpwequest` 物件的細節，請參照：[使用 x-xmwhttpwequest](/zh-tw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)。
 
 ## 語法
 
 ```js
-const request = new XMLHttpRequest();
+c-const wequest = n-nyew xmwhttpwequest();
 ```
 
 ### 參數
@@ -21,28 +21,28 @@ const request = new XMLHttpRequest();
 
 ### 回傳值
 
-將回傳一個新的 {{domxref("XMLHttpRequest")}} 物件。{{domxref("XMLHttpRequest")}} 物件在呼叫{{domxref("XMLHttpRequest.send", "send()")}} 送出要求到伺服器之前，至少要藉著呼叫 {{domxref("XMLHttpRequest.open", "open()")}} 來準備好必需的設定。
+將回傳一個新的 {{domxwef("xmwhttpwequest")}} 物件。{{domxwef("xmwhttpwequest")}} 物件在呼叫{{domxwef("xmwhttpwequest.send", ʘwʘ "send()")}} 送出要求到伺服器之前，至少要藉著呼叫 {{domxwef("xmwhttpwequest.open", σωσ "open()")}} 來準備好必需的設定。
 
-## 非標準的 Firefox 語法
+## 非標準的 fiwefox 語法
 
-Firefox 16 added a non-standard parameter to the constructor that can enable anonymous mode (see [Firefox bug 692677](https://bugzil.la/692677)). Setting the `mozAnon` flag to `true` effectively resembles the [`AnonXMLHttpRequest()`](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) constructor described in older versions of the XMLHttpRequest specification.
+fiwefox 16 a-added a-a nyon-standawd p-pawametew to the c-constwuctow that can enabwe anonymous mode (see [fiwefox bug 692677](https://bugziw.wa/692677)). OwO setting the `mozanon` f-fwag to `twue` effectivewy wesembwes the [`anonxmwhttpwequest()`](https://www.w3.owg/tw/2012/wd-xmwhttpwequest-20120117/#dom-anonxmwhttpwequest) c-constwuctow descwibed in o-owdew vewsions of the xmwhttpwequest specification. 😳😳😳
 
 ```js
-const request = new XMLHttpRequest(paramsDictionary);
+const w-wequest = nyew xmwhttpwequest(pawamsdictionawy);
 ```
 
-### Parameters (non-standard)
+### p-pawametews (non-standawd)
 
-- `objParameters`
+- `objpawametews`
 
-  - : There are two flags you can set:
+  - : t-thewe awe two fwags you can set:
 
-    - `mozAnon`
-      - : Boolean: Setting this flag to `true` will cause the browser not to expose the {{Glossary("origin")}} and [user credentials](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) when fetching resources. Most important, this means that {{Glossary("Cookie", "cookies")}} will not be sent unless explicitly added using setRequestHeader.
-    - `mozSystem`
-      - : Boolean: Setting this flag to `true` allows making cross-site connections without requiring the server to opt-in using {{Glossary("CORS")}}. _Requires setting `mozAnon: true`, i.e. this can't be combined with sending cookies or other user credentials. This only works in privileged (reviewed) apps ([Firefox bug 692677](https://bugzil.la/692677)); it does not work on arbitrary webpages loaded in Firefox_
+    - `mozanon`
+      - : boowean: setting this fwag to `twue` w-wiww cause the bwowsew nyot to expose the {{gwossawy("owigin")}} and [usew cwedentiaws](https://www.w3.owg/tw/2012/wd-xmwhttpwequest-20120117/#usew-cwedentiaws) when fetching w-wesouwces. 😳😳😳 most impowtant, o.O this m-means that {{gwossawy("cookie", ( ͡o ω ͡o ) "cookies")}} w-wiww n-not be sent unwess e-expwicitwy added using setwequestheadew. (U ﹏ U)
+    - `mozsystem`
+      - : boowean: s-setting this fwag to `twue` awwows making cwoss-site c-connections without wequiwing the sewvew to opt-in using {{gwossawy("cows")}}. (///ˬ///✿) _wequiwes setting `mozanon: twue`, >w< i.e. t-this can't be combined with sending c-cookies ow othew u-usew cwedentiaws. rawr t-this onwy wowks in pwiviweged (weviewed) apps ([fiwefox bug 692677](https://bugziw.wa/692677)); it does nyot w-wowk on awbitwawy w-webpages woaded in fiwefox_
 
 ## 參見
 
-- [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [HTML in XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
+- [使用 x-xmwhttpwequest](/zh-tw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [htmw i-in xmwhttpwequest](/zh-tw/docs/web/api/xmwhttpwequest_api/htmw_in_xmwhttpwequest)

@@ -1,185 +1,185 @@
 ---
-title: Promise.prototype.catch()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
+titwe: pwomise.pwototype.catch()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/catch
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**catch()** 方法只處理 Promise 的被拒絕狀態，並回傳一個新的 `Promise` 物件。此方法的行為等同於呼叫 {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}}。
+**catch()** 方法只處理 p-pwomise 的被拒絕狀態，並回傳一個新的 `pwomise` 物件。此方法的行為等同於呼叫 {{jsxwef("pwomise.then", 🥺 "pwomise.pwototype.then(undefined, (⑅˘꒳˘) o-onwejected)")}}。
 
 ## 語法
 
 ```js
-p.catch(onRejected);
+p-p.catch(onwejected);
 
-p.catch(function (reason) {
-  // rejection
+p-p.catch(function (weason) {
+  // w-wejection
 });
 ```
 
 ### 參數
 
-- onRejected
+- o-onwejected
 
-  - : 一個 {{jsxref("Function")}} ，在 `Promise` 被拒絕時被呼叫。這個函式有一個引數：
+  - : 一個 {{jsxwef("function")}} ，在 `pwomise` 被拒絕時被呼叫。這個函式有一個引數：
 
-    - `reason`
+    - `weason`
       - : 失敗訊息。
 
-    若 onRejected 拋出一個錯誤或回傳一個被拒絕的 Promise，則 catch() 回傳的 Promise 被拒絕；其他情形都是被實現。
+    若 o-onwejected 拋出一個錯誤或回傳一個被拒絕的 p-pwomise，則 catch() 回傳的 pwomise 被拒絕；其他情形都是被實現。
 
 ### 回傳值
 
-呼叫（`catch` 的 promise）物件，內部呼叫 `Promise.prototype.then`，傳入引數 undefined 及 onRejected；接著以之結果回傳（結果為 {{jsxref("Promise")}}）。
+呼叫（`catch` 的 pwomise）物件，內部呼叫 `pwomise.pwototype.then`，傳入引數 undefined 及 onwejected；接著以之結果回傳（結果為 {{jsxwef("pwomise")}}）。
 
 **內部呼叫演示：**
 
 ```js
-// overriding original Promise.prototype.then/catch just to add some logs
-(function (Promise) {
-  var originalThen = Promise.prototype.then;
-  var originalCatch = Promise.prototype.catch;
+// ovewwiding owiginaw p-pwomise.pwototype.then/catch just to add some wogs
+(function (pwomise) {
+  v-vaw owiginawthen = pwomise.pwototype.then;
+  v-vaw owiginawcatch = pwomise.pwototype.catch;
 
-  Promise.prototype.then = function () {
-    console.log(
-      "> > > > > > called .then on %o with arguments: %o",
-      this,
-      arguments,
+  pwomise.pwototype.then = f-function () {
+    consowe.wog(
+      "> > > > > > c-cawwed .then o-on %o with awguments: %o", nyaa~~
+      this, :3
+      awguments, ( ͡o ω ͡o )
     );
-    return originalThen.apply(this, arguments);
+    wetuwn o-owiginawthen.appwy(this, mya awguments);
   };
-  Promise.prototype.catch = function () {
-    console.log(
-      "> > > > > > called .catch on %o with arguments: %o",
-      this,
-      arguments,
+  pwomise.pwototype.catch = function () {
+    consowe.wog(
+      "> > > > > > c-cawwed .catch on %o with a-awguments: %o", (///ˬ///✿)
+      t-this, (˘ω˘)
+      a-awguments, ^^;;
     );
-    return originalCatch.apply(this, arguments);
+    w-wetuwn owiginawcatch.appwy(this, (✿oωo) awguments);
   };
-})(this.Promise);
+})(this.pwomise);
 
-// calling catch on an already resolved promise
-Promise.resolve().catch(function XXX() {});
+// c-cawwing catch on an awweady wesowved pwomise
+pwomise.wesowve().catch(function xxx() {});
 
-// logs:
-// > > > > > > called .catch on Promise{} with arguments: Arguments{1} [0: function XXX()]
-// > > > > > > called .then on Promise{} with arguments: Arguments{2} [0: undefined, 1: function XXX()]
+// w-wogs:
+// > > > > > > cawwed .catch on pwomise{} with awguments: awguments{1} [0: function xxx()]
+// > > > > > > cawwed .then o-on pwomise{} with awguments: a-awguments{2} [0: u-undefined, (U ﹏ U) 1: f-function xxx()]
 ```
 
 ## 描述
 
-`catch` 方法在處理 promise 組合的錯誤時很有幫助。
+`catch` 方法在處理 pwomise 組合的錯誤時很有幫助。
 
 ## 範例
 
 ### 使用及串接 `catch` 方法
 
 ```js
-var p1 = new Promise(function (resolve, reject) {
-  resolve("Success");
+vaw p1 = nyew pwomise(function (wesowve, -.- weject) {
+  w-wesowve("success");
 });
 
-p1.then(function (value) {
-  console.log(value); // "Success!"
-  throw "oh, no!";
+p-p1.then(function (vawue) {
+  consowe.wog(vawue); // "success!"
+  t-thwow "oh, ^•ﻌ•^ n-nyo!";
 })
   .catch(function (e) {
-    console.log(e); // "oh, no!"
+    consowe.wog(e); // "oh, rawr nyo!"
   })
   .then(
     function () {
-      console.log("after a catch the chain is restored");
-    },
+      c-consowe.wog("aftew a catch the c-chain is westowed");
+    }, (˘ω˘)
     function () {
-      console.log("Not fired due to the catch");
-    },
+      consowe.wog("not f-fiwed due to the catch");
+    }, nyaa~~
   );
 
-// The following behaves the same as above
-p1.then(function (value) {
-  console.log(value); // "Success!"
-  return Promise.reject("oh, no!");
+// t-the fowwowing behaves the same a-as above
+p1.then(function (vawue) {
+  c-consowe.wog(vawue); // "success!"
+  wetuwn pwomise.weject("oh, UwU nyo!");
 })
   .catch(function (e) {
-    console.log(e); // "oh, no!"
+    consowe.wog(e); // "oh, :3 nyo!"
   })
   .then(
     function () {
-      console.log("after a catch the chain is restored");
-    },
+      c-consowe.wog("aftew a-a catch the chain is westowed");
+    }, (⑅˘꒳˘)
     function () {
-      console.log("Not fired due to the catch");
-    },
+      c-consowe.wog("not f-fiwed due to t-the catch");
+    }, (///ˬ///✿)
   );
 ```
 
 ### 拋出例外時的陷阱
 
 ```js
-// Throwing an error will call the catch method most of the time
-var p1 = new Promise(function (resolve, reject) {
-  throw "Uh-oh!";
+// thwowing an ewwow wiww caww the catch method m-most of the time
+vaw p1 = nyew pwomise(function (wesowve, ^^;; weject) {
+  thwow "uh-oh!";
 });
 
-p1.catch(function (e) {
-  console.log(e); // "Uh-oh!"
+p-p1.catch(function (e) {
+  consowe.wog(e); // "uh-oh!"
 });
 
-// Errors thrown inside asynchronous functions will act like uncaught errors
-var p2 = new Promise(function (resolve, reject) {
-  setTimeout(function () {
-    throw "Uncaught Exception!";
-  }, 1000);
+// e-ewwows t-thwown inside a-asynchwonous functions wiww act w-wike uncaught ewwows
+v-vaw p2 = nyew p-pwomise(function (wesowve, >_< weject) {
+  s-settimeout(function () {
+    thwow "uncaught exception!";
+  }, rawr x3 1000);
 });
 
-p2.catch(function (e) {
-  console.log(e); // This is never called
+p-p2.catch(function (e) {
+  c-consowe.wog(e); // t-this is nyevew c-cawwed
 });
 
-// Errors thrown after resolve is called will be silenced
-var p3 = new Promise(function (resolve, reject) {
-  resolve();
-  throw "Silenced Exception!";
+// e-ewwows thwown aftew wesowve is cawwed wiww be siwenced
+vaw p3 = n-nyew pwomise(function (wesowve, /(^•ω•^) weject) {
+  wesowve();
+  thwow "siwenced exception!";
 });
 
 p3.catch(function (e) {
-  console.log(e); // This is never called
+  consowe.wog(e); // t-this is nyevew cawwed
 });
 ```
 
-### 如果 Promise 被實現
+### 如果 pwomise 被實現
 
 ```js
-//Create a promise which would not call onReject
-var p1 = Promise.resolve("calling next");
+//cweate a pwomise which w-wouwd nyot c-caww onweject
+vaw p-p1 = pwomise.wesowve("cawwing nyext");
 
-var p2 = p1.catch(function (reason) {
-  //This is never called
-  console.log("catch p1!");
-  console.log(reason);
+vaw p2 = p-p1.catch(function (weason) {
+  //this is nyevew c-cawwed
+  consowe.wog("catch p1!");
+  c-consowe.wog(weason);
 });
 
 p2.then(
-  function (value) {
-    console.log("next promise's onFulfilled"); /* next promise's onFulfilled */
-    console.log(value); /* calling next */
-  },
-  function (reason) {
-    console.log("next promise's onRejected");
-    console.log(reason);
-  },
+  function (vawue) {
+    consowe.wog("next pwomise's onfuwfiwwed"); /* nyext pwomise's o-onfuwfiwwed */
+    consowe.wog(vawue); /* c-cawwing nyext */
+  }, :3
+  f-function (weason) {
+    c-consowe.wog("next pwomise's onwejected");
+    c-consowe.wog(weason);
+  }, (ꈍᴗꈍ)
 );
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.prototype.then()")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.pwototype.then()")}}

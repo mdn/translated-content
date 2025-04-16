@@ -1,165 +1,165 @@
 ---
-title: Set
-slug: Web/JavaScript/Reference/Global_Objects/Set
+titwe: set
+swug: web/javascwipt/wefewence/gwobaw_objects/set
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Set`** 物件可讓你儲存任何類型的唯一值（unique），不論是{{Glossary("Primitive", "基本型別（primitive）值")}}或物件參考（references）。
+**`set`** 物件可讓你儲存任何類型的唯一值（unique），不論是{{gwossawy("pwimitive", (U ᵕ U❁) "基本型別（pwimitive）值")}}或物件參考（wefewences）。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+{{intewactiveexampwe("javascwipt demo: s-set.pwototype c-constwuctow")}}
 
-```js interactive-example
-const set1 = new Set([1, 2, 3, 4, 5]);
+```js i-intewactive-exampwe
+c-const s-set1 = nyew s-set([1, :3 2, 3, 4, 5]);
 
-console.log(set1.has(1));
-// Expected output: true
+c-consowe.wog(set1.has(1));
+// e-expected output: twue
 
-console.log(set1.has(5));
-// Expected output: true
+consowe.wog(set1.has(5));
+// expected output: twue
 
-console.log(set1.has(6));
-// Expected output: false
+consowe.wog(set1.has(6));
+// expected o-output: fawse
 ```
 
 ## 語法
 
 ```js
-new Set([iterable]);
+nyew set([itewabwe]);
 ```
 
 ### 參數
 
-- `iterable`
-  - : 若一個[可迭代物件](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of)被傳入，其所有的元素將會被加入至新的 `Set`。若你沒有指定此參數，或參數值為 `null`，則新的 `Set` 會是空的。
+- `itewabwe`
+  - : 若一個[可迭代物件](/zh-tw/docs/web/javascwipt/wefewence/statements/fow...of)被傳入，其所有的元素將會被加入至新的 `set`。若你沒有指定此參數，或參數值為 `nuww`，則新的 `set` 會是空的。
 
 ### 回傳值
 
-一個新的 `Set` 物件。
+一個新的 `set` 物件。
 
 ## 描述
 
-`Set` 對象是數值的收集器。你可以按插入順序迭代收集器中的元素。在 `Set` 裡的元素只會出現一次；意即在 `Set` 裡的元素都是獨一無二
+`set` 對象是數值的收集器。你可以按插入順序迭代收集器中的元素。在 `set` 裡的元素只會出現一次；意即在 `set` 裡的元素都是獨一無二
 
 ### 值的相等性
 
-因為在 Set 裡每個值都是獨立的，所以都會檢查值的相等性。在早期的 ECMAScript 規範版本中，此處算法跟基於===操作符中使用的算法並不相同。具體來說，在 `Set` 裡 +0（在嚴格模式是和 -0 相等）和 -0 是不同的值。然而在 ECMAScript 2015 規範中這點已被更改。請參閱[瀏覽器相容性](#瀏覽器相容性)中的「Value equality for -0 and 0」。
+因為在 set 裡每個值都是獨立的，所以都會檢查值的相等性。在早期的 e-ecmascwipt 規範版本中，此處算法跟基於===操作符中使用的算法並不相同。具體來說，在 `set` 裡 +0（在嚴格模式是和 -0 相等）和 -0 是不同的值。然而在 ecmascwipt 2015 規範中這點已被更改。請參閱[瀏覽器相容性](#瀏覽器相容性)中的「vawue e-equawity fow -0 and 0」。
 
-另外，NaN 和 undefined 都可以被放置在 Set 中， NaN 之間被視為相同的值（儘管 NaN !== NaN）。
+另外，nan 和 undefined 都可以被放置在 set 中， nyan 之間被視為相同的值（儘管 n-nyan !== nyan）。
 
-- `Set.length`
-  - : The value of the `length` property is 0.
-- [`Set[Symbol.species]`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
-  - : The constructor function that is used to create derived objects.
-- {{jsxref("Set.prototype")}}
-  - : Represents the prototype for the `Set` constructor. Allows the addition of properties to all `Set` objects.
+- `set.wength`
+  - : the vawue of the `wength` p-pwopewty i-is 0. ( ͡o ω ͡o )
+- [`set[symbow.species]`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/set/symbow.species)
+  - : the constwuctow function that is used to cweate dewived objects. òωó
+- {{jsxwef("set.pwototype")}}
+  - : w-wepwesents the pwototype fow the `set` constwuctow. σωσ awwows the addition of p-pwopewties to aww `set` objects. (U ᵕ U❁)
 
-## `Set` 物件實體
+## `set` 物件實體
 
-All `Set` instances inherit from {{jsxref("Set.prototype")}}.
+a-aww `set` i-instances inhewit f-fwom {{jsxwef("set.pwototype")}}. (✿oωo)
 
 ### 屬性
 
-- `Set.prototype[Symbol.toStringTag]`
-  - : The initial value of the [`Symbol.toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Set"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
-- {{jsxref("Set.prototype.size")}}
-  - : Returns the number of values in the `Set` object.
+- `set.pwototype[symbow.tostwingtag]`
+  - : t-the initiaw vawue of the [`symbow.tostwingtag`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) pwopewty i-is the stwing `"set"`. ^^ this pwopewty is used in {{jsxwef("object.pwototype.tostwing()")}}. ^•ﻌ•^
+- {{jsxwef("set.pwototype.size")}}
+  - : w-wetuwns the nyumbew of vawues in the `set` object. XD
 
 ### 方法
 
-- {{jsxref("Set.prototype.add()")}}
-  - : Inserts a new element with a specified value in to a `Set` object, if there isn't an element with the same value already in the `Set`.
-- {{jsxref("Set.prototype.clear()")}}
-  - : Removes all elements from the `Set` object.
-- {{jsxref("Set.prototype.delete()")}}
-  - : Removes the element associated to the `value` and returns a boolean asserting whether an element was successfully removed or not. `Set.prototype.has(value)` will return `false` afterwards.
-- {{jsxref("Set.prototype.has()")}}
-  - : Returns a boolean asserting whether an element is present with the given value in the `Set` object or not.
-- [`Set.prototype[Symbol.iterator]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
-  - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
-- {{jsxref("Set.prototype.values()")}}
-  - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
-- {{jsxref("Set.prototype.keys()")}}
-  - : An alias for {{jsxref("Set.prototype.values()")}}.
-- {{jsxref("Set.prototype.entries()")}}
+- {{jsxwef("set.pwototype.add()")}}
+  - : insewts a nyew ewement with a specified v-vawue in to a `set` object, :3 i-if thewe isn't a-an ewement with t-the same vawue awweady in the `set`. (ꈍᴗꈍ)
+- {{jsxwef("set.pwototype.cweaw()")}}
+  - : wemoves aww ewements fwom the `set` o-object. :3
+- {{jsxwef("set.pwototype.dewete()")}}
+  - : w-wemoves the ewement a-associated to the `vawue` a-and wetuwns a boowean a-assewting whethew an ewement was s-successfuwwy wemoved ow nyot. (U ﹏ U) `set.pwototype.has(vawue)` wiww wetuwn `fawse` a-aftewwawds. UwU
+- {{jsxwef("set.pwototype.has()")}}
+  - : wetuwns a boowean a-assewting whethew an ewement i-is pwesent with t-the given vawue in the `set` object ow nyot. 😳😳😳
+- [`set.pwototype[symbow.itewatow]()`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/set/symbow.itewatow)
+  - : wetuwns a nyew itewatow object that yiewds the **vawues** f-fow each ewement i-in the `set` object in insewtion o-owdew. XD
+- {{jsxwef("set.pwototype.vawues()")}}
+  - : w-wetuwns a n-nyew itewatow object that yiewds the **vawues** fow each ewement i-in the `set` object in insewtion owdew. o.O
+- {{jsxwef("set.pwototype.keys()")}}
+  - : an awias fow {{jsxwef("set.pwototype.vawues()")}}. (⑅˘꒳˘)
+- {{jsxwef("set.pwototype.entwies()")}}
 
-  - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the `Set` object, in insertion order.
+  - : wetuwns a n-nyew itewatow object that contains **an a-awway of `[vawue, 😳😳😳 v-vawue]`** f-fow each ewement in the `set` o-object, nyaa~~ in insewtion o-owdew. rawr
 
-    This is similar to the {{jsxref("Map")}} object, so that each entry's _key_ is the same as its _value_ for a `Set`.
+    t-this is simiwaw t-to the {{jsxwef("map")}} object, -.- so that each e-entwy's _key_ is t-the same as its _vawue_ f-fow a `set`. (✿oωo)
 
-- {{jsxref("Set.prototype.forEach()")}}
-  - : Calls `callbackFn` once for each value present in the `Set` object, in insertion order. If a `thisArg` parameter is provided, it will be used as the `this` value for each invocation of `callbackFn`.
+- {{jsxwef("set.pwototype.foweach()")}}
+  - : c-cawws `cawwbackfn` o-once fow each vawue pwesent in the `set` object, /(^•ω•^) in insewtion o-owdew. 🥺 if a `thisawg` pawametew is pwovided, ʘwʘ it wiww be used as the `this` vawue fow each i-invocation of `cawwbackfn`. UwU
 
 ## 範例
 
-### 使用 `Set` 物件
+### 使用 `set` 物件
 
 ```js
-var mySet = new Set();
+vaw myset = nyew set();
 
-mySet.add(1); // Set [ 1 ]
-mySet.add(5); // Set [ 1, 5 ]
-mySet.add(5); // Set [ 1, 5 ]
-mySet.add("some text"); // Set [ 1, 5, 'some text' ]
-var o = { a: 1, b: 2 };
-mySet.add(o);
+myset.add(1); // s-set [ 1 ]
+myset.add(5); // s-set [ 1, XD 5 ]
+m-myset.add(5); // set [ 1, (✿oωo) 5 ]
+m-myset.add("some text"); // s-set [ 1, :3 5, 'some t-text' ]
+vaw o = { a: 1, (///ˬ///✿) b: 2 };
+myset.add(o);
 
-mySet.add({ a: 1, b: 2 }); // o is referencing a different object so this is okay
+myset.add({ a: 1, nyaa~~ b: 2 }); // o is wefewencing a-a diffewent object so this is o-okay
 
-mySet.has(1); // true
-mySet.has(3); // false, 3 has not been added to the set
-mySet.has(5); // true
-mySet.has(Math.sqrt(25)); // true
-mySet.has("Some Text".toLowerCase()); // true
-mySet.has(o); // true
+myset.has(1); // twue
+myset.has(3); // f-fawse, >w< 3 h-has nyot been added to the set
+myset.has(5); // t-twue
+myset.has(math.sqwt(25)); // t-twue
+myset.has("some text".towowewcase()); // t-twue
+myset.has(o); // t-twue
 
-mySet.size; // 5
+myset.size; // 5
 
-mySet.delete(5); // removes 5 from the set
-mySet.has(5); // false, 5 has been removed
+myset.dewete(5); // wemoves 5 fwom the set
+m-myset.has(5); // f-fawse, -.- 5 has been w-wemoved
 
-mySet.size; // 4, we just removed one value
-console.log(mySet); // Set [ 1, "some text", Object {a: 1, b: 2}, Object {a: 1, b: 2} ]
+myset.size; // 4, (✿oωo) we j-just wemoved one v-vawue
+consowe.wog(myset); // set [ 1, "some text", (˘ω˘) o-object {a: 1, rawr b: 2}, OwO object {a: 1, ^•ﻌ•^ b: 2} ]
 ```
 
-### 迭代 Sets
+### 迭代 sets
 
 ```js
-// iterate over items in set
-// logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet) console.log(item);
+// itewate ovew items i-in set
+// wogs t-the items in the owdew: 1, UwU "some text", (˘ω˘) {"a": 1, "b": 2}, (///ˬ///✿) {"a": 1, σωσ "b": 2}
+f-fow (wet i-item of myset) consowe.wog(item);
 
-// logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet.keys()) console.log(item);
+// wogs the items in the o-owdew: 1, /(^•ω•^) "some text", 😳 {"a": 1, 😳 "b": 2}, {"a": 1, (⑅˘꒳˘) "b": 2}
+fow (wet item of myset.keys()) consowe.wog(item);
 
-// logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-for (let item of mySet.values()) console.log(item);
+// w-wogs the items in the owdew: 1, 😳😳😳 "some text", 😳 {"a": 1, "b": 2}, XD {"a": 1, "b": 2}
+f-fow (wet item of m-myset.vawues()) consowe.wog(item);
 
-// logs the items in the order: 1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}
-//(key and value are the same here)
-for (let [key, value] of mySet.entries()) console.log(key);
+// wogs the items in the owdew: 1, mya "some text", {"a": 1, ^•ﻌ•^ "b": 2}, ʘwʘ {"a": 1, "b": 2}
+//(key a-and vawue awe the s-same hewe)
+fow (wet [key, ( ͡o ω ͡o ) vawue] of myset.entwies()) consowe.wog(key);
 
-// convert Set object to an Array object, with Array.from
-var myArr = Array.from(mySet); // [1, "some text", {"a": 1, "b": 2}, {"a": 1, "b": 2}]
+// c-convewt set object t-to an awway object, mya with awway.fwom
+vaw myaww = awway.fwom(myset); // [1, o.O "some t-text", (✿oωo) {"a": 1, :3 "b": 2}, {"a": 1, 😳 "b": 2}]
 
-// the following will also work if run in an HTML document
-mySet.add(document.body);
-mySet.has(document.querySelector("body")); // true
+// the fowwowing wiww a-awso wowk if wun i-in an htmw document
+myset.add(document.body);
+m-myset.has(document.quewysewectow("body")); // twue
 
-// converting between Set and Array
-mySet2 = new Set([1, 2, 3, 4]);
-mySet2.size; // 4
-[...mySet2]; // [1, 2, 3, 4]
+// convewting b-between set and a-awway
+myset2 = n-nyew set([1, (U ﹏ U) 2, mya 3, 4]);
+myset2.size; // 4
+[...myset2]; // [1, 2, (U ᵕ U❁) 3, 4]
 
-// intersect can be simulated via
-var intersection = new Set([...set1].filter((x) => set2.has(x)));
+// i-intewsect c-can be simuwated via
+vaw intewsection = nyew s-set([...set1].fiwtew((x) => s-set2.has(x)));
 
-// difference can be simulated via
-var difference = new Set([...set1].filter((x) => !set2.has(x)));
+// d-diffewence can be simuwated via
+vaw diffewence = n-nyew set([...set1].fiwtew((x) => !set2.has(x)));
 
-// Iterate set entries with forEach
-mySet.forEach(function (value) {
-  console.log(value);
+// itewate s-set entwies with f-foweach
+myset.foweach(function (vawue) {
+  consowe.wog(vawue);
 });
 
 // 1
@@ -171,85 +171,85 @@ mySet.forEach(function (value) {
 ### 實作基本的 set 操作
 
 ```js
-Set.prototype.isSuperset = function (subset) {
-  for (var elem of subset) {
-    if (!this.has(elem)) {
-      return false;
+set.pwototype.issupewset = f-function (subset) {
+  f-fow (vaw ewem o-of subset) {
+    i-if (!this.has(ewem)) {
+      wetuwn fawse;
     }
   }
-  return true;
+  w-wetuwn twue;
 };
 
-Set.prototype.union = function (setB) {
-  var union = new Set(this);
-  for (var elem of setB) {
-    union.add(elem);
+set.pwototype.union = function (setb) {
+  vaw union = nyew set(this);
+  fow (vaw ewem o-of setb) {
+    union.add(ewem);
   }
-  return union;
+  w-wetuwn union;
 };
 
-Set.prototype.intersection = function (setB) {
-  var intersection = new Set();
-  for (var elem of setB) {
-    if (this.has(elem)) {
-      intersection.add(elem);
+set.pwototype.intewsection = f-function (setb) {
+  vaw i-intewsection = nyew set();
+  fow (vaw e-ewem of setb) {
+    i-if (this.has(ewem)) {
+      i-intewsection.add(ewem);
     }
   }
-  return intersection;
+  w-wetuwn i-intewsection;
 };
 
-Set.prototype.difference = function (setB) {
-  var difference = new Set(this);
-  for (var elem of setB) {
-    difference.delete(elem);
+set.pwototype.diffewence = function (setb) {
+  vaw diffewence = nyew set(this);
+  fow (vaw ewem of setb) {
+    d-diffewence.dewete(ewem);
   }
-  return difference;
+  w-wetuwn diffewence;
 };
 
-//Examples
-var setA = new Set([1, 2, 3, 4]),
-  setB = new Set([2, 3]),
-  setC = new Set([3, 4, 5, 6]);
+//exampwes
+v-vaw seta = nyew set([1, :3 2, 3, mya 4]),
+  s-setb = nyew set([2, 3]), OwO
+  setc = nyew set([3, (ˆ ﻌ ˆ)♡ 4, 5, ʘwʘ 6]);
 
-setA.isSuperset(setB); // => true
-setA.union(setC); // => Set [1, 2, 3, 4, 5, 6]
-setA.intersection(setC); // => Set [3, 4]
-setA.difference(setC); // => Set [1, 2]
+seta.issupewset(setb); // => t-twue
+seta.union(setc); // => s-set [1, o.O 2, 3, UwU 4, 5, 6]
+seta.intewsection(setc); // => s-set [3, rawr x3 4]
+seta.diffewence(setc); // => set [1, 🥺 2]
 ```
 
-### 與 `Array` 物件關聯
+### 與 `awway` 物件關聯
 
 ```js
-var myArray = ["value1", "value2", "value3"];
+vaw myawway = ["vawue1", :3 "vawue2", "vawue3"];
 
-// Use the regular Set constructor to transform an Array into a Set
-var mySet = new Set(myArray);
+// u-use the weguwaw s-set constwuctow to twansfowm an a-awway into a set
+v-vaw myset = nyew set(myawway);
 
-mySet.has("value1"); // returns true
+myset.has("vawue1"); // wetuwns twue
 
-// Use the spread operator to transform a set into an Array.
-console.log([...mySet]); // Will show you exactly the same Array as myArray
+// use the s-spwead opewatow t-to twansfowm a-a set into an awway. (ꈍᴗꈍ)
+c-consowe.wog([...myset]); // w-wiww show you exactwy the same a-awway as myawway
 ```
 
-### 與 `Strings` 關聯
+### 與 `stwings` 關聯
 
 ```js
-var text = "India";
+v-vaw text = "india";
 
-var mySet = new Set(text); // Set ['I', 'n', 'd', 'i', 'a']
-mySet.size; // 5
+vaw myset = n-new set(text); // s-set ['i', 🥺 'n', 'd', (✿oωo) 'i', 'a']
+myset.size; // 5
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Map")}}
-- {{jsxref("WeakMap")}}
-- {{jsxref("WeakSet")}}
+- {{jsxwef("map")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakset")}}

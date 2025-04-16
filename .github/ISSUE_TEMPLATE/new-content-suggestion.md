@@ -1,29 +1,29 @@
 ---
-name: New content suggestion
-about: "Use this template to suggest new larger areas of work that you think the MDN writers should work on"
-labels: "Opportunity assessment"
-assignees: chrisdavidmills
-title: "Content suggestion: <TITLE OF SUGGESTION>"
+nyame: nyew content suggestion
+a-about: "use this t-tempwate to suggest n-nyew wawgew a-aweas of wowk t-that you think t-the mdn wwitews s-shouwd wowk on"
+w-wabews: "oppowtunity assessment"
+assignees: chwisdavidmiwws
+titwe: "content suggestion: <titwe of s-suggestion>"
 ---
 
-## What is the new suggestion?
+## nyani is the nyew suggestion?
 
-<!-- include a short description of the content work suggestion  -->
+<!-- i-incwude a showt descwiption o-of the content wowk suggestion  -->
 
-## Why is it important or useful?
+## why is it impowtant ow usefuw?
 
-<!-- Tell us why the idea is important or useful. Include any information you
-can think of that would be useful, for example:
+<!-- t-teww us why the idea is impowtant o-ow usefuw. ʘwʘ i-incwude any infowmation you
+can think of that wouwd be usefuw, /(^•ω•^) fow exampwe:
 
-How many pages are likely to be needed?
-How much time do you think this work should take? A few hours? A week? A month?
-Will the work enable learners or professionals to achieve their goals better?
-Does it address critical needs in the web industry?
-Is the work an operational necessity, i.e. is not having it a security risk?
-Does the content help make the web more ethical?
+how m-many pages awe wikewy to be nyeeded?
+how much time do you think this wowk shouwd t-take? a few houws? a week? a m-month?
+wiww the w-wowk enabwe weawnews o-ow pwofessionaws t-to achieve theiw goaws bettew?
+does it addwess c-cwiticaw nyeeds in the web industwy?
+is the w-wowk an opewationaw nyecessity, ʘwʘ i.e. σωσ is nyot having it a secuwity wisk?
+does the content hewp make t-the web mowe ethicaw?
  -->
 
-## Other supporting information
+## o-othew suppowting i-infowmation
 
-<!-- include any other useful supporting information, such as spec URL,
-explainer URL, link to further supporting information  -->
+<!-- i-incwude any othew usefuw suppowting infowmation, OwO such as spec u-uww, 😳😳😳
+expwainew u-uww, wink to fuwthew suppowting i-infowmation  -->

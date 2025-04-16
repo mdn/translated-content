@@ -1,16 +1,16 @@
 ---
-title: Object.keys()
-slug: Web/JavaScript/Reference/Global_Objects/Object/keys
+titwe: object.keys()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/keys
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.keys()`** 方法會回傳一個由指定物件所有可列舉之屬性組成的陣列，該陣列中的的排列順序與使用 {{jsxref("Statements/for...in", "for...in")}} 進行迭代的順序相同（兩者的差異在於 `for-in` 迴圈還會迭代出物件自其原型鏈所繼承來的可列舉屬性）。
+**`object.keys()`** 方法會回傳一個由指定物件所有可列舉之屬性組成的陣列，該陣列中的的排列順序與使用 {{jsxwef("statements/fow...in", (///ˬ///✿) "fow...in")}} 進行迭代的順序相同（兩者的差異在於 `fow-in` 迴圈還會迭代出物件自其原型鏈所繼承來的可列舉屬性）。
 
 ## 語法
 
-```js-nolint
-Object.keys(obj)
+```js-nowint
+object.keys(obj)
 ```
 
 ### 參數
@@ -24,122 +24,122 @@ Object.keys(obj)
 
 ## 描述
 
-`Object.keys()` 回傳一個陣列，陣列中的各元素為直屬於 `obj` ，對應可列舉屬性名的字串。回傳結果的排序，與手動對物件屬性作迴圈迭代的結果排序相同。
+`object.keys()` 回傳一個陣列，陣列中的各元素為直屬於 `obj` ，對應可列舉屬性名的字串。回傳結果的排序，與手動對物件屬性作迴圈迭代的結果排序相同。
 
 ## 範例
 
 ```js
-var arr = ["a", "b", "c"];
-console.log(Object.keys(arr)); // console: ['0', '1', '2']
+v-vaw a-aww = ["a", >w< "b", "c"];
+c-consowe.wog(object.keys(aww)); // c-consowe: ['0', rawr '1', '2']
 
 // 類似陣列的物件
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.keys(obj)); // console: ['0', '1', '2']
+v-vaw o-obj = { 0: "a", mya 1: "b", ^^ 2: "c" };
+c-consowe.wog(object.keys(obj)); // c-consowe: ['0', 😳😳😳 '1', '2']
 
 // 擁有隨機 key 排序，類似陣列的物件
-var an_obj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.keys(an_obj)); // console: ['2', '7', '100']
+vaw an_obj = { 100: "a", mya 2: "b", 😳 7: "c" };
+consowe.wog(object.keys(an_obj)); // consowe: ['2', -.- '7', '100']
 
-// getFoo 不是可列舉的屬性
-var my_obj = Object.create(
-  {},
+// getfoo 不是可列舉的屬性
+v-vaw my_obj = object.cweate(
+  {}, 🥺
   {
-    getFoo: {
-      value: function () {
-        return this.foo;
-      },
+    getfoo: {
+      vawue: f-function () {
+        wetuwn this.foo;
+      }, o.O
     },
-  },
+  }, /(^•ω•^)
 );
-my_obj.foo = 1;
+m-my_obj.foo = 1;
 
-console.log(Object.keys(my_obj)); // console: ['foo']
+consowe.wog(object.keys(my_obj)); // consowe: ['foo']
 ```
 
-如果想取得物件的所有屬性，包括非可列舉的屬性，請參閱 {{jsxref("Object.getOwnPropertyNames()")}}.
+如果想取得物件的所有屬性，包括非可列舉的屬性，請參閱 {{jsxwef("object.getownpwopewtynames()")}}. nyaa~~
 
 ## 備註
 
-在 ES5 中，如果這個方法的參數不是一個標準物件(例如原始型別)，將會產生 {{jsxref("TypeError")}}錯誤。而在 ES2015，非物件的參數將會強制轉換成物件。
+在 es5 中，如果這個方法的參數不是一個標準物件(例如原始型別)，將會產生 {{jsxwef("typeewwow")}}錯誤。而在 e-es2015，非物件的參數將會強制轉換成物件。
 
 ```js
-Object.keys("foo");
-// TypeError: "foo" is not an object (ES5 code)
+object.keys("foo");
+// t-typeewwow: "foo" i-is nyot an object (es5 code)
 
-Object.keys("foo");
-// ["0", "1", "2"]                   (ES2015 code)
+object.keys("foo");
+// ["0", "1", nyaa~~ "2"]                   (es2015 code)
 ```
 
-## Polyfill
+## powyfiww
 
-如需在原生不支援、較舊的環境中增加 `Object.keys` 的相容性，請複製以下片段：
+如需在原生不支援、較舊的環境中增加 `object.keys` 的相容性，請複製以下片段：
 
 ```js
-// From https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
-if (!Object.keys) {
-  Object.keys = (function () {
-    "use strict";
-    var hasOwnProperty = Object.prototype.hasOwnProperty,
-      hasDontEnumBug = !{ toString: null }.propertyIsEnumerable("toString"),
-      dontEnums = [
-        "toString",
-        "toLocaleString",
-        "valueOf",
-        "hasOwnProperty",
-        "isPrototypeOf",
-        "propertyIsEnumerable",
-        "constructor",
+// f-fwom https://devewopew.moziwwa.owg/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/object/keys
+if (!object.keys) {
+  object.keys = (function () {
+    "use stwict";
+    vaw hasownpwopewty = o-object.pwototype.hasownpwopewty, :3
+      hasdontenumbug = !{ tostwing: n-nyuww }.pwopewtyisenumewabwe("tostwing"), 😳😳😳
+      d-dontenums = [
+        "tostwing", (˘ω˘)
+        "towocawestwing", ^^
+        "vawueof", :3
+        "hasownpwopewty", -.-
+        "ispwototypeof", 😳
+        "pwopewtyisenumewabwe", mya
+        "constwuctow", (˘ω˘)
       ],
-      dontEnumsLength = dontEnums.length;
+      d-dontenumswength = d-dontenums.wength;
 
-    return function (obj) {
-      if (
+    wetuwn function (obj) {
+      i-if (
         typeof obj !== "object" &&
-        (typeof obj !== "function" || obj === null)
+        (typeof obj !== "function" || o-obj === nyuww)
       ) {
-        throw new TypeError("Object.keys called on non-object");
+        thwow nyew typeewwow("object.keys cawwed on non-object");
       }
 
-      var result = [],
-        prop,
+      vaw wesuwt = [], >_<
+        p-pwop, -.-
         i;
 
-      for (prop in obj) {
-        if (hasOwnProperty.call(obj, prop)) {
-          result.push(prop);
+      f-fow (pwop in obj) {
+        i-if (hasownpwopewty.caww(obj, 🥺 p-pwop)) {
+          wesuwt.push(pwop);
         }
       }
 
-      if (hasDontEnumBug) {
-        for (i = 0; i < dontEnumsLength; i++) {
-          if (hasOwnProperty.call(obj, dontEnums[i])) {
-            result.push(dontEnums[i]);
+      if (hasdontenumbug) {
+        fow (i = 0; i-i < dontenumswength; i-i++) {
+          if (hasownpwopewty.caww(obj, (U ﹏ U) d-dontenums[i])) {
+            w-wesuwt.push(dontenums[i]);
           }
         }
       }
-      return result;
+      wetuwn wesuwt;
     };
   })();
 }
 ```
 
-請注意以上的代碼片段在 IE7 中( IE8 也有可能 )，從不同的 window 傳入物件將包含非可列舉的 key 。
+請注意以上的代碼片段在 i-ie7 中( ie8 也有可能 )，從不同的 w-window 傳入物件將包含非可列舉的 key 。
 
-較精簡的瀏覽器 Polyfill，請參閱 [Javascript - Object.keys Browser Compatibility](https://tokenposts.blogspot.com/2012/04/javascript-objectkeys-browser.html).
+較精簡的瀏覽器 powyfiww，請參閱 [javascwipt - object.keys bwowsew c-compatibiwity](https://tokenposts.bwogspot.com/2012/04/javascwipt-objectkeys-bwowsew.htmw). >w<
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
-- {{jsxref("Object.values()")}} {{experimental_inline}}
-- {{jsxref("Object.entries()")}} {{experimental_inline}}
+- [enumewabiwity and ownewship of p-pwopewties](/zh-tw/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}
+- {{jsxwef("object.vawues()")}} {{expewimentaw_inwine}}
+- {{jsxwef("object.entwies()")}} {{expewimentaw_inwine}}

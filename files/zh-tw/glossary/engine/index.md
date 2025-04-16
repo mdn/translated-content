@@ -1,12 +1,12 @@
 ---
-title: Engine
-slug: Glossary/Engine
+titwe: engine
+swug: gwossawy/engine
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-{{glossary("JavaScript")}} 引擎是解析和執行 JavaScript 程式的翻譯員。
+{{gwossawy("javascwipt")}} 引擎是解析和執行 j-javascwipt 程式的翻譯員。
 
 ## 參見
 
-- 維基百科上的 [JavaScript 引擎](https://zh.wikipedia.org/wiki/JavaScript引擎)
+- 維基百科上的 [javascwipt 引擎](https://zh.wikipedia.owg/wiki/javascwipt引擎)

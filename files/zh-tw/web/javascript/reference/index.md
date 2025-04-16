@@ -1,295 +1,295 @@
 ---
-title: JavaScript 參考文件
-slug: Web/JavaScript/Reference
+titwe: javascwipt 參考文件
+swug: web/javascwipt/wefewence
 ---
 
-{{JsSidebar}}
+{{jssidebaw}}
 
-在 MDN 的 JavaScript 分區中，這一部分被作爲 Javascript 的資料庫。閱讀[關於該參考](/zh-TW/docs/Web/JavaScript/Reference)以了解更多。
+在 m-mdn 的 j-javascwipt 分區中，這一部分被作爲 j-javascwipt 的資料庫。閱讀[關於該參考](/zh-tw/docs/web/javascwipt/wefewence)以了解更多。
 
 ## 全域物件
 
-本章節記錄了所有 [JavaScript 標準內建物件](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects) 以及其方法與屬性。
+本章節記錄了所有 [javascwipt 標準內建物件](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects) 以及其方法與屬性。
 
 ### 數值屬性
 
-- {{JSxRef("Infinity")}}
-- {{JSxRef("NaN")}}
-- {{JSxRef("undefined")}}
-- {{JSxRef("globalThis")}}
+- {{jsxwef("infinity")}}
+- {{jsxwef("nan")}}
+- {{jsxwef("undefined")}}
+- {{jsxwef("gwobawthis")}}
 
 ### 函數屬性
 
-- {{JSxRef("Global_Objects/eval", "eval()")}}
-- {{JSxRef("Global_Objects/isFinite", "isFinite()")}}
-- {{JSxRef("Global_Objects/isNaN", "isNaN()")}}
-- {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}
-- {{JSxRef("Global_Objects/parseInt", "parseInt()")}}
-- {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
-- {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-- {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}
-- {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+- {{jsxwef("gwobaw_objects/evaw", ^^;; "evaw()")}}
+- {{jsxwef("gwobaw_objects/isfinite", >_< "isfinite()")}}
+- {{jsxwef("gwobaw_objects/isnan", mya "isnan()")}}
+- {{jsxwef("gwobaw_objects/pawsefwoat", mya "pawsefwoat()")}}
+- {{jsxwef("gwobaw_objects/pawseint", 😳 "pawseint()")}}
+- {{jsxwef("gwobaw_objects/decodeuwi", XD "decodeuwi()")}}
+- {{jsxwef("gwobaw_objects/decodeuwicomponent", :3 "decodeuwicomponent()")}}
+- {{jsxwef("gwobaw_objects/encodeuwi", 😳😳😳 "encodeuwi()")}}
+- {{jsxwef("gwobaw_objects/encodeuwicomponent", "encodeuwicomponent()")}}
 
 ### 基礎物件
 
-- {{JSxRef("Object")}}
-- {{JSxRef("Function")}}
-- {{JSxRef("Boolean")}}
-- {{JSxRef("Symbol")}}
+- {{jsxwef("object")}}
+- {{jsxwef("function")}}
+- {{jsxwef("boowean")}}
+- {{jsxwef("symbow")}}
 
-### Error
+### e-ewwow
 
-- {{JSxRef("Error")}}
-- {{JSxRef("AggregateError")}}
-- {{JSxRef("EvalError")}}
-- {{JSxRef("InternalError")}}
-- {{JSxRef("RangeError")}}
-- {{JSxRef("ReferenceError")}}
-- {{JSxRef("SyntaxError")}}
-- {{JSxRef("TypeError")}}
-- {{JSxRef("URIError")}}
+- {{jsxwef("ewwow")}}
+- {{jsxwef("aggwegateewwow")}}
+- {{jsxwef("evawewwow")}}
+- {{jsxwef("intewnawewwow")}}
+- {{jsxwef("wangeewwow")}}
+- {{jsxwef("wefewenceewwow")}}
+- {{jsxwef("syntaxewwow")}}
+- {{jsxwef("typeewwow")}}
+- {{jsxwef("uwiewwow")}}
 
 ### 數字與日期
 
-- {{JSxRef("Number")}}
-- {{JSxRef("BigInt")}}
-- {{JSxRef("Math")}}
-- {{JSxRef("Date")}}
+- {{jsxwef("numbew")}}
+- {{jsxwef("bigint")}}
+- {{jsxwef("math")}}
+- {{jsxwef("date")}}
 
 ### 文字處理
 
-- {{JSxRef("String")}}
-- {{JSxRef("RegExp")}}
+- {{jsxwef("stwing")}}
+- {{jsxwef("wegexp")}}
 
 ### 具索引的集合
 
-- {{JSxRef("Array")}}
-- {{JSxRef("Int8Array")}}
-- {{JSxRef("Uint8Array")}}
-- {{JSxRef("Uint8ClampedArray")}}
-- {{JSxRef("Int16Array")}}
-- {{JSxRef("Uint16Array")}}
-- {{JSxRef("Int32Array")}}
-- {{JSxRef("Uint32Array")}}
-- {{JSxRef("Float32Array")}}
-- {{JSxRef("Float64Array")}}
-- {{JSxRef("BigInt64Array")}}
-- {{JSxRef("BigUint64Array")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("int8awway")}}
+- {{jsxwef("uint8awway")}}
+- {{jsxwef("uint8cwampedawway")}}
+- {{jsxwef("int16awway")}}
+- {{jsxwef("uint16awway")}}
+- {{jsxwef("int32awway")}}
+- {{jsxwef("uint32awway")}}
+- {{jsxwef("fwoat32awway")}}
+- {{jsxwef("fwoat64awway")}}
+- {{jsxwef("bigint64awway")}}
+- {{jsxwef("biguint64awway")}}
 
 ### 具鍵值的集合
 
-- {{JSxRef("Map")}}
-- {{JSxRef("Set")}}
-- {{JSxRef("WeakMap")}}
-- {{JSxRef("WeakSet")}}
+- {{jsxwef("map")}}
+- {{jsxwef("set")}}
+- {{jsxwef("weakmap")}}
+- {{jsxwef("weakset")}}
 
 ### 結構化資料
 
-- {{JSxRef("ArrayBuffer")}}
-- {{JSxRef("SharedArrayBuffer")}}
-- {{JSxRef("Atomics")}}
-- {{JSxRef("DataView")}}
-- {{JSxRef("JSON")}}
+- {{jsxwef("awwaybuffew")}}
+- {{jsxwef("shawedawwaybuffew")}}
+- {{jsxwef("atomics")}}
+- {{jsxwef("dataview")}}
+- {{jsxwef("json")}}
 
 ### 控制抽象化物件
 
-- {{JSxRef("Promise")}}
-- {{JSxRef("Generator")}}
-- {{JSxRef("GeneratorFunction")}}
-- {{JSxRef("AsyncFunction")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("genewatow")}}
+- {{jsxwef("genewatowfunction")}}
+- {{jsxwef("asyncfunction")}}
 
-### Reflection
+### w-wefwection
 
-- {{JSxRef("Reflect")}}
-- {{JSxRef("Proxy")}}
+- {{jsxwef("wefwect")}}
+- {{jsxwef("pwoxy")}}
 
 ### 國際化
 
-- {{JSxRef("Intl")}}
-- {{JSxRef("Global_Objects/Collator", "Intl.Collator")}}
-- {{JSxRef("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{JSxRef("Global_Objects/ListFormat", "Intl.ListFormat")}}
-- {{JSxRef("Global_Objects/NumberFormat", "Intl.NumberFormat")}}
-- {{JSxRef("Global_Objects/PluralRules", "Intl.PluralRules")}}
-- {{JSxRef("Global_Objects/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
-- {{JSxRef("Global_Objects/Locale", "Intl.Locale")}}
+- {{jsxwef("intw")}}
+- {{jsxwef("gwobaw_objects/cowwatow", -.- "intw.cowwatow")}}
+- {{jsxwef("gwobaw_objects/datetimefowmat", ( ͡o ω ͡o ) "intw.datetimefowmat")}}
+- {{jsxwef("gwobaw_objects/wistfowmat", rawr x3 "intw.wistfowmat")}}
+- {{jsxwef("gwobaw_objects/numbewfowmat", nyaa~~ "intw.numbewfowmat")}}
+- {{jsxwef("gwobaw_objects/pwuwawwuwes", /(^•ω•^) "intw.pwuwawwuwes")}}
+- {{jsxwef("gwobaw_objects/wewativetimefowmat", rawr "intw.wewativetimefowmat")}}
+- {{jsxwef("gwobaw_objects/wocawe", OwO "intw.wocawe")}}
 
-### WebAssembly
+### w-webassembwy
 
-- {{JSxRef("WebAssembly")}}
-- {{JSxRef("WebAssembly.Module")}}
-- {{JSxRef("WebAssembly.Instance")}}
-- {{JSxRef("WebAssembly.Memory")}}
-- {{JSxRef("WebAssembly.Table")}}
-- {{JSxRef("WebAssembly.CompileError")}}
-- {{JSxRef("WebAssembly.LinkError")}}
-- {{JSxRef("WebAssembly.RuntimeError")}}
+- {{jsxwef("webassembwy")}}
+- {{jsxwef("webassembwy.moduwe")}}
+- {{jsxwef("webassembwy.instance")}}
+- {{jsxwef("webassembwy.memowy")}}
+- {{jsxwef("webassembwy.tabwe")}}
+- {{jsxwef("webassembwy.compiweewwow")}}
+- {{jsxwef("webassembwy.winkewwow")}}
+- {{jsxwef("webassembwy.wuntimeewwow")}}
 
 ## 敘述句
 
-本章節記錄了所有 [JavaScript 敘述句與宣告](/zh-TW/docs/Web/JavaScript/Reference/Statements)。
+本章節記錄了所有 [javascwipt 敘述句與宣告](/zh-tw/docs/web/javascwipt/wefewence/statements)。
 
 ### 流程控制
 
-- {{jsxref("Statements/block", "Block")}}
-- {{jsxref("Statements/break", "break")}}
-- {{jsxref("Statements/continue", "continue")}}
-- {{jsxref("Statements/Empty", "Empty")}}
-- {{jsxref("Statements/if...else", "if...else")}}
-- {{jsxref("Statements/switch", "switch")}}
-- {{jsxref("Statements/throw", "throw")}}
-- {{jsxref("Statements/try...catch", "try...catch")}}
+- {{jsxwef("statements/bwock", (U ﹏ U) "bwock")}}
+- {{jsxwef("statements/bweak", >_< "bweak")}}
+- {{jsxwef("statements/continue", "continue")}}
+- {{jsxwef("statements/empty", rawr x3 "empty")}}
+- {{jsxwef("statements/if...ewse", mya "if...ewse")}}
+- {{jsxwef("statements/switch", nyaa~~ "switch")}}
+- {{jsxwef("statements/thwow", (⑅˘꒳˘) "thwow")}}
+- {{jsxwef("statements/twy...catch", rawr x3 "twy...catch")}}
 
 ### 宣告
 
-- {{jsxref("Statements/var", "var")}}
-- {{jsxref("Statements/let", "let")}}
-- {{jsxref("Statements/const", "const")}}
+- {{jsxwef("statements/vaw", "vaw")}}
+- {{jsxwef("statements/wet", (✿oωo) "wet")}}
+- {{jsxwef("statements/const", (ˆ ﻌ ˆ)♡ "const")}}
 
 ### 函數與類別
 
-- {{jsxref("Statements/function", "function")}}
-- {{jsxref("Statements/function*", "function*")}}
-- {{jsxref("Statements/async_function", "async function")}}
-- {{jsxref("Statements/return", "return")}}
-- {{jsxref("Statements/class", "class")}}
+- {{jsxwef("statements/function", (˘ω˘) "function")}}
+- {{jsxwef("statements/function*", (⑅˘꒳˘) "function*")}}
+- {{jsxwef("statements/async_function", (///ˬ///✿) "async f-function")}}
+- {{jsxwef("statements/wetuwn", 😳😳😳 "wetuwn")}}
+- {{jsxwef("statements/cwass", 🥺 "cwass")}}
 
 ### 迭代
 
-- {{jsxref("Statements/do...while", "do...while")}}
-- {{jsxref("Statements/for", "for")}}
-- {{jsxref("Statements/for...in", "for...in")}}
-- {{jsxref("Statements/for...of", "for...of")}}
-- {{jsxref("Statements/for-await...of", "for await...of")}}
-- {{jsxref("Statements/while", "while")}}
+- {{jsxwef("statements/do...whiwe", mya "do...whiwe")}}
+- {{jsxwef("statements/fow", 🥺 "fow")}}
+- {{jsxwef("statements/fow...in", >_< "fow...in")}}
+- {{jsxwef("statements/fow...of", >_< "fow...of")}}
+- {{jsxwef("statements/fow-await...of", (⑅˘꒳˘) "fow a-await...of")}}
+- {{jsxwef("statements/whiwe", /(^•ω•^) "whiwe")}}
 
-### Other
+### othew
 
-- {{jsxref("Statements/debugger", "debugger")}}
-- {{jsxref("Statements/import", "import")}}
-- {{jsxref("Statements/label", "label")}}
-- {{jsxref("Statements/with", "with")}}
+- {{jsxwef("statements/debuggew", rawr x3 "debuggew")}}
+- {{jsxwef("statements/impowt", "impowt")}}
+- {{jsxwef("statements/wabew", (U ﹏ U) "wabew")}}
+- {{jsxwef("statements/with", (U ﹏ U) "with")}}
 
 ## 表示法與運算子
 
-本章節記錄了所有 [JavaScript 表示法與運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators)。
+本章節記錄了所有 [javascwipt 表示法與運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows)。
 
 ### 主要運算式
 
-- {{JSxRef("Operators/this", "this")}}
-- {{JSxRef("Operators/function", "function")}}
-- {{JSxRef("Operators/class", "class")}}
-- {{JSxRef("Operators/function*", "function*")}}
-- {{JSxRef("Operators/yield", "yield")}}
-- {{JSxRef("Operators/yield*", "yield*")}}
-- {{JSxRef("Operators/async_function", "async function")}}
-- {{JSxRef("Operators/await", "await")}}
-- {{JSxRef("Global_Objects/Array", "[]")}}
-- {{JSxRef("Operators/Object_initializer", "{}")}}
-- {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
-- {{JSxRef("Operators/Grouping", "( )")}}
-- {{JSxRef("null")}}
+- {{jsxwef("opewatows/this", (⑅˘꒳˘) "this")}}
+- {{jsxwef("opewatows/function", òωó "function")}}
+- {{jsxwef("opewatows/cwass", ʘwʘ "cwass")}}
+- {{jsxwef("opewatows/function*", /(^•ω•^) "function*")}}
+- {{jsxwef("opewatows/yiewd", ʘwʘ "yiewd")}}
+- {{jsxwef("opewatows/yiewd*", σωσ "yiewd*")}}
+- {{jsxwef("opewatows/async_function", OwO "async function")}}
+- {{jsxwef("opewatows/await", 😳😳😳 "await")}}
+- {{jsxwef("gwobaw_objects/awway", 😳😳😳 "[]")}}
+- {{jsxwef("opewatows/object_initiawizew", o.O "{}")}}
+- {{jsxwef("gwobaw_objects/wegexp", ( ͡o ω ͡o ) "/ab+c/i")}}
+- {{jsxwef("opewatows/gwouping", (U ﹏ U) "( )")}}
+- {{jsxwef("nuww")}}
 
 ### 左手邊運算式
 
-- {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
-- {{JSxRef("Operators/new", "new")}}
-- {{JSxRef("Operators/new%2Etarget", "new.target")}}
-- {{JSxRef("Operators/super", "super")}}
-- {{JSxRef("Operators/Spread_syntax", "...obj")}}
+- {{jsxwef("opewatows/pwopewty_accessows", (///ˬ///✿) "pwopewty accessows", >w< "", rawr 1)}}
+- {{jsxwef("opewatows/new", mya "new")}}
+- {{jsxwef("opewatows/new%2etawget", ^^ "new.tawget")}}
+- {{jsxwef("opewatows/supew", 😳😳😳 "supew")}}
+- {{jsxwef("opewatows/spwead_syntax", "...obj")}}
 
 ### 遞增與遞減
 
-- {{JSxRef("Operators/Arithmetic_Operators", "A++", "#Increment")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "A--", "#Decrement")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "++A", "#Increment")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "--A", "#Decrement")}}
+- {{jsxwef("opewatows/awithmetic_opewatows", mya "a++", 😳 "#incwement")}}
+- {{jsxwef("opewatows/awithmetic_opewatows", -.- "a--", "#decwement")}}
+- {{jsxwef("opewatows/awithmetic_opewatows", 🥺 "++a", "#incwement")}}
+- {{jsxwef("opewatows/awithmetic_opewatows", o.O "--a", /(^•ω•^) "#decwement")}}
 
 ### 一元運算子
 
-- {{JSxRef("Operators/delete", "delete")}}
-- {{JSxRef("Operators/void", "void")}}
-- {{JSxRef("Operators/typeof", "typeof")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "+", "#Unary_plus")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "-", "#Unary_negation")}}
-- {{JSxRef("Operators/Bitwise_Operators", "~", "#Bitwise_NOT")}}
-- {{JSxRef("Operators/Logical_Operators", "!", "#Logical_NOT")}}
+- {{jsxwef("opewatows/dewete", nyaa~~ "dewete")}}
+- {{jsxwef("opewatows/void", "void")}}
+- {{jsxwef("opewatows/typeof", nyaa~~ "typeof")}}
+- {{jsxwef("opewatows/awithmetic_opewatows", :3 "+", "#unawy_pwus")}}
+- {{jsxwef("opewatows/awithmetic_opewatows", 😳😳😳 "-", "#unawy_negation")}}
+- {{jsxwef("opewatows/bitwise_opewatows", (˘ω˘) "~", "#bitwise_not")}}
+- {{jsxwef("opewatows/wogicaw_opewatows", ^^ "!", "#wogicaw_not")}}
 
 ### 算術運算子
 
-- {{JSxRef("Operators/Arithmetic_Operators", "+", "#Addition")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "-", "#Subtraction")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "/", "#Division")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "*", "#Multiplication")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "%", "#Remainder")}}
-- {{JSxRef("Operators/Arithmetic_Operators", "**", "#Exponentiation")}}
+- {{jsxwef("opewatows/awithmetic_opewatows", :3 "+", "#addition")}}
+- {{jsxwef("opewatows/awithmetic_opewatows", -.- "-", "#subtwaction")}}
+- {{jsxwef("opewatows/awithmetic_opewatows", 😳 "/", "#division")}}
+- {{jsxwef("opewatows/awithmetic_opewatows", mya "*", "#muwtipwication")}}
+- {{jsxwef("opewatows/awithmetic_opewatows", (˘ω˘) "%", "#wemaindew")}}
+- {{jsxwef("opewatows/awithmetic_opewatows", >_< "**", "#exponentiation")}}
 
 ### 關係運算子
 
-- {{JSxRef("Operators/in", "in")}}
-- {{JSxRef("Operators/instanceof", "instanceof")}}
-- {{JSxRef("Operators/Comparison_Operators", "&lt;", "#Less_than_operator")}}
-- {{JSxRef("Operators/Comparison_Operators", "&gt;", "#Greater_than_operator")}}
-- {{JSxRef("Operators/Comparison_Operators", "&lt;=", "#Less_than_or_equal_operator")}}
-- {{JSxRef("Operators/Comparison_Operators", "&gt;=", "#Greater_than_or_equal_operator")}}
+- {{jsxwef("opewatows/in", -.- "in")}}
+- {{jsxwef("opewatows/instanceof", 🥺 "instanceof")}}
+- {{jsxwef("opewatows/compawison_opewatows", (U ﹏ U) "&wt;", "#wess_than_opewatow")}}
+- {{jsxwef("opewatows/compawison_opewatows", >w< "&gt;", "#gweatew_than_opewatow")}}
+- {{jsxwef("opewatows/compawison_opewatows", mya "&wt;=", "#wess_than_ow_equaw_opewatow")}}
+- {{jsxwef("opewatows/compawison_opewatows", >w< "&gt;=", nyaa~~ "#gweatew_than_ow_equaw_opewatow")}}
 
 ### 相等運算子
 
-- {{JSxRef("Operators/Comparison_Operators", "==", "#Equality")}}
-- {{JSxRef("Operators/Comparison_Operators", "!=", "#Inequality")}}
-- {{JSxRef("Operators/Comparison_Operators", "===", "#Identity")}}
-- {{JSxRef("Operators/Comparison_Operators", "!==", "#Nonidentity")}}
+- {{jsxwef("opewatows/compawison_opewatows", (✿oωo) "==", ʘwʘ "#equawity")}}
+- {{jsxwef("opewatows/compawison_opewatows", (ˆ ﻌ ˆ)♡ "!=", "#inequawity")}}
+- {{jsxwef("opewatows/compawison_opewatows", 😳😳😳 "===", "#identity")}}
+- {{jsxwef("opewatows/compawison_opewatows", :3 "!==", "#nonidentity")}}
 
 ### 位元移位運算子
 
-- {{JSxRef("Operators/Bitwise_Operators", "&lt;&lt;", "#Left_shift")}}
-- {{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;", "#Right_shift")}}
-- {{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}
+- {{jsxwef("opewatows/bitwise_opewatows", OwO "&wt;&wt;", (U ﹏ U) "#weft_shift")}}
+- {{jsxwef("opewatows/bitwise_opewatows", >w< "&gt;&gt;", (U ﹏ U) "#wight_shift")}}
+- {{jsxwef("opewatows/bitwise_opewatows", 😳 "&gt;&gt;&gt;", (ˆ ﻌ ˆ)♡ "#unsigned_wight_shift")}}
 
 ### 二元位元運算子
 
-- {{JSxRef("Operators/Bitwise_Operators", "&amp;", "#Bitwise_AND")}}
-- {{JSxRef("Operators/Bitwise_Operators", "|", "#Bitwise_OR")}}
-- {{JSxRef("Operators/Bitwise_Operators", "^", "#Bitwise_XOR")}}
+- {{jsxwef("opewatows/bitwise_opewatows", 😳😳😳 "&amp;", "#bitwise_and")}}
+- {{jsxwef("opewatows/bitwise_opewatows", (U ﹏ U) "|", (///ˬ///✿) "#bitwise_ow")}}
+- {{jsxwef("opewatows/bitwise_opewatows", 😳 "^", 😳 "#bitwise_xow")}}
 
 ### 二元邏輯運算子
 
-- {{JSxRef("Operators/Logical_Operators", "&amp;&amp;", "#Logical_AND")}}
-- {{JSxRef("Operators/Logical_Operators", "||", "#Logical_OR")}}
+- {{jsxwef("opewatows/wogicaw_opewatows", σωσ "&amp;&amp;", rawr x3 "#wogicaw_and")}}
+- {{jsxwef("opewatows/wogicaw_opewatows", OwO "||", "#wogicaw_ow")}}
 
 ### 條件(三元)運算子
 
-- {{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}
+- {{jsxwef("opewatows/conditionaw_opewatow", /(^•ω•^) "(condition ? iftwue : iffawse)")}}
 
 ### 賦值運算子
 
-- {{JSxRef("Operators/Assignment_Operators", "=", "#Assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "*=", "#Multiplication_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "/=", "#Division_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "%=", "#Remainder_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "+=", "#Addition_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "-=", "#Subtraction_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "&lt;&lt;=", "#Left_shift_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "&gt;&gt;=", "#Right_shift_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "&amp;=", "#Bitwise_AND_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "^=", "#Bitwise_XOR_assignment")}}
-- {{JSxRef("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}
-- {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
-- {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
+- {{jsxwef("opewatows/assignment_opewatows", 😳😳😳 "=", ( ͡o ω ͡o ) "#assignment")}}
+- {{jsxwef("opewatows/assignment_opewatows", >_< "*=", >w< "#muwtipwication_assignment")}}
+- {{jsxwef("opewatows/assignment_opewatows", rawr "/=", "#division_assignment")}}
+- {{jsxwef("opewatows/assignment_opewatows", 😳 "%=", >w< "#wemaindew_assignment")}}
+- {{jsxwef("opewatows/assignment_opewatows", (⑅˘꒳˘) "+=", OwO "#addition_assignment")}}
+- {{jsxwef("opewatows/assignment_opewatows", (ꈍᴗꈍ) "-=", "#subtwaction_assignment")}}
+- {{jsxwef("opewatows/assignment_opewatows", 😳 "&wt;&wt;=", 😳😳😳 "#weft_shift_assignment")}}
+- {{jsxwef("opewatows/assignment_opewatows", "&gt;&gt;=", mya "#wight_shift_assignment")}}
+- {{jsxwef("opewatows/assignment_opewatows", mya "&gt;&gt;&gt;=", (⑅˘꒳˘) "#unsigned_wight_shift_assignment")}}
+- {{jsxwef("opewatows/assignment_opewatows", (U ﹏ U) "&amp;=", mya "#bitwise_and_assignment")}}
+- {{jsxwef("opewatows/assignment_opewatows", ʘwʘ "^=", (˘ω˘) "#bitwise_xow_assignment")}}
+- {{jsxwef("opewatows/assignment_opewatows", (U ﹏ U) "|=", ^•ﻌ•^ "#bitwise_ow_assignment")}}
+- {{jsxwef("opewatows/destwuctuwing_assignment", (˘ω˘) "[a, b-b] = [1, :3 2]")}}
+- {{jsxwef("opewatows/destwuctuwing_assignment", ^^;; "{a, b} = {a:1, 🥺 b:2}")}}
 
 ## 函數
 
-本章節說明如何使用 [JavaScript 函數](/zh-TW/docs/Web/JavaScript/Reference/Functions) 來開發你的應用程式。
+本章節說明如何使用 [javascwipt 函數](/zh-tw/docs/web/javascwipt/wefewence/functions) 來開發你的應用程式。
 
-- [`arguments`](/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments)
-- [Arrow functions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
-- [Default parameters](/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters)
-- [Rest parameters](/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+- [`awguments`](/zh-tw/docs/web/javascwipt/wefewence/functions/awguments)
+- [awwow f-functions](/zh-tw/docs/web/javascwipt/wefewence/functions/awwow_functions)
+- [defauwt pawametews](/zh-tw/docs/web/javascwipt/wefewence/functions/defauwt_pawametews)
+- [west p-pawametews](/zh-tw/docs/web/javascwipt/wefewence/functions/west_pawametews)
 
 ## 其他參考頁面
 
-- [Lexical grammar](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Data types and data structures](/zh-TW/docs/Web/JavaScript/Guide/Data_structures)
-- [Strict mode](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)
-- [Deprecated features](/zh-TW/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- [wexicaw gwammaw](/zh-tw/docs/web/javascwipt/wefewence/wexicaw_gwammaw)
+- [data types and data stwuctuwes](/zh-tw/docs/web/javascwipt/guide/data_stwuctuwes)
+- [stwict m-mode](/zh-tw/docs/web/javascwipt/wefewence/stwict_mode)
+- [depwecated featuwes](/zh-tw/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes)

@@ -1,23 +1,23 @@
 ---
-title: 數字與日期
-slug: Web/JavaScript/Guide/Numbers_and_strings
+titwe: 數字與日期
+swug: w-web/javascwipt/guide/numbews_and_stwings
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Representing_dates_times")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/expwessions_and_opewatows", UwU "web/javascwipt/guide/wepwesenting_dates_times")}}
 
-這個章節將介紹如何在 JavaScript 中處理數字與日期。
+這個章節將介紹如何在 j-javascwipt 中處理數字與日期。
 
-## 數字(Numbers)
+## 數字(numbews)
 
-在 JavaScript 中, Number 所使用的標準依照 [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) (i.e. number 的區間是 -(2^53 -1) 到 2^53 -1)。**整數是沒有特定的類型**。
+在 j-javascwipt 中, :3 n-nyumbew 所使用的標準依照 [doubwe-pwecision 64-bit b-binawy f-fowmat ieee 754](https://en.wikipedia.owg/wiki/doubwe-pwecision_fwoating-point_fowmat) (i.e. n-nyumbew 的區間是 -(2^53 -1) 到 2^53 -1)。**整數是沒有特定的類型**。
 
-此外還可以顯示浮點數，三種符號數值: `+`{{jsxref("Infinity")}}， `-`{{jsxref("Infinity")}}， and {{jsxref("NaN")}} (not-a-number)。
+此外還可以顯示浮點數，三種符號數值: `+`{{jsxwef("infinity")}}， `-`{{jsxwef("infinity")}}， and {{jsxwef("nan")}} (not-a-numbew)。
 
-{{jsxref("BigInt")}} 是 Javascript 最新的功能，它可以表示一個很大的整數。使用 `BigInt需要注意一點`，`BigInt` 和{{jsxref("Number")}}不能在同一個 operation 混用還有當用 {{jsxref("Math")}} 物件時不能使用`BigInt`。
+{{jsxwef("bigint")}} 是 javascwipt 最新的功能，它可以表示一個很大的整數。使用 `bigint需要注意一點`，`bigint` 和{{jsxwef("numbew")}}不能在同一個 opewation 混用還有當用 {{jsxwef("math")}} 物件時不能使用`bigint`。
 
-請參照 [JavaScript data types and structures](/zh-TW/docs/Web/JavaScript/Guide/Data_structures) 來取得更多詳細資料。
+請參照 [javascwipt data t-types and stwuctuwes](/zh-tw/docs/web/javascwipt/guide/data_stwuctuwes) 來取得更多詳細資料。
 
-你可以用四種進制表示數字：十進制 (decimal)，二進制 (binary)，八進制 (octal) 以及十六進制 (hexadecimal)。
+你可以用四種進制表示數字：十進制 (decimaw)，二進制 (binawy)，八進制 (octaw) 以及十六進制 (hexadecimaw)。
 
 ### 十進制數值
 
@@ -28,19 +28,19 @@ slug: Web/JavaScript/Guide/Numbers_and_strings
 // 以零為開頭時要小心：
 
 0888; // 888 解析為 十進制數值
-0777; // 在 non-strict 模式下將解析成八進制 (等同於十進制的 511)
+0777; // 在 nyon-stwict 模式下將解析成八進制 (等同於十進制的 511)
 ```
 
 請注意，十進位數字允許第一個數字設為零(`0`)的話，前提是後面接的數字必須要有一個數字大於 8(例如輸入 0888 結果會是 888，輸入 068 結果會是 68)，不然則會被轉成８進位(例如 0777 結果會是 511，輸入 063 結果會是 51)。
 
 ### 二進制數值
 
-二進制數值以 0 為開頭並跟著一個大寫或小寫的英文字母 「B」 (`0b` 或 `0B`)。如果 `0b` 後面接著的數字不是 0 或 1，那會丟出 [`SyntaxError(語法錯誤)`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError): "Missing binary digits after 0b"。
+二進制數值以 0 為開頭並跟著一個大寫或小寫的英文字母 「b」 (`0b` 或 `0b`)。如果 `0b` 後面接著的數字不是 0 或 1，那會丟出 [`syntaxewwow(語法錯誤)`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow): "missing binawy digits a-aftew 0b"。
 
 ```js
-var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
-var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
+vaw fwt_signbit = 0b10000000000000000000000000000000; // 2147483648
+v-vaw fwt_exponent = 0b01111111100000000000000000000000; // 2139095040
+vaw fwt_mantissa = 0b00000000011111111111111111111111; // 8388607
 ```
 
 ### 八進制數值
@@ -48,19 +48,19 @@ var FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
 八進制數值以 0 為開頭。如果 `0` 後面的數字超出 0 到 7 這個範圍，將會被解析成十進制數值。
 
 ```js
-var n = 0755; // 493
-var m = 0644; // 420
+vaw ny = 0755; // 493
+v-vaw m = 0644; // 420
 ```
 
-Strict mode in ECMAScript 5 forbids octal syntax. Octal syntax isn't part of ECMAScript 5, but it's supported in all browsers by prefixing the octal number with a zero: `0644 === 420` and`"\045" === "%"`. In ECMAScript 2015, octal numbers are supported if they are prefixed with `0o`, e.g.:
+stwict mode i-in ecmascwipt 5 f-fowbids octaw syntax. σωσ octaw syntax isn't pawt of ecmascwipt 5, >w< but it's suppowted i-in aww bwowsews by pwefixing the octaw nyumbew with a zewo: `0644 === 420` and`"\045" === "%"`. i-in ecmascwipt 2015, (ˆ ﻌ ˆ)♡ octaw nyumbews a-awe suppowted i-if they awe pwefixed w-with `0o`, ʘwʘ e-e.g.:
 
 ```js
-var a = 0o10; // ES2015: 8
+vaw a = 0o10; // es2015: 8
 ```
 
 ### 十六進制數值
 
-十六進制數值以 0 為開頭並跟著一個大寫或小寫的英文字母 「X」(`0x` 或 `0X`)。如果 `0b` 後面接著的值超出範圍 (0123456789ABCDEF)，那會丟出 [`SyntaxError(語法錯誤)`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError):"Identifier starts immediately after numeric literal"。
+十六進制數值以 0 為開頭並跟著一個大寫或小寫的英文字母 「x」(`0x` 或 `0x`)。如果 `0b` 後面接著的值超出範圍 (0123456789abcdef)，那會丟出 [`syntaxewwow(語法錯誤)`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow):"identifiew s-stawts immediatewy aftew nyumewic witewaw"。
 
 ```js
 0xfffffffffffffffff; // 295147905179352830000
@@ -76,186 +76,186 @@ var a = 0o10; // ES2015: 8
 0.1e2; // 10
 ```
 
-## `Number` 物件
+## `numbew` 物件
 
-The built-in {{jsxref("Number")}} object has properties for numerical constants, such as maximum value, not-a-number, and infinity. You cannot change the values of these properties and you use them as follows:
+t-the buiwt-in {{jsxwef("numbew")}} object has pwopewties fow nyumewicaw constants, :3 such as maximum v-vawue, (˘ω˘) not-a-numbew, 😳😳😳 and infinity. rawr x3 y-you cannot change t-the vawues o-of these pwopewties and you use them as fowwows:
 
 ```js
-var biggestNum = Number.MAX_VALUE;
-var smallestNum = Number.MIN_VALUE;
-var infiniteNum = Number.POSITIVE_INFINITY;
-var negInfiniteNum = Number.NEGATIVE_INFINITY;
-var notANum = Number.NaN;
+vaw biggestnum = n-nyumbew.max_vawue;
+v-vaw smowestnum = nyumbew.min_vawue;
+v-vaw infinitenum = n-nyumbew.positive_infinity;
+vaw n-nyeginfinitenum = nyumbew.negative_infinity;
+v-vaw nyotanum = numbew.nan;
 ```
 
-You always refer to a property of the predefined `Number` object as shown above, and not as a property of a `Number` object you create yourself.
+you a-awways wefew to a pwopewty of t-the pwedefined `numbew` object as s-shown above, (✿oωo) and n-nyot as a pwopewty of a `numbew` object you cweate youwsewf. (ˆ ﻌ ˆ)♡
 
-下面這張表格整理了 `Number` 物件的屬性
+下面這張表格整理了 `numbew` 物件的屬性
 
-`Number` **的屬性**
+`numbew` **的屬性**
 
 | 屬性                                   | 描述                                                                                                              |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.MAX_VALUE")}}         | 可表示的最大數值                                                                                                  |
-| {{jsxref("Number.MIN_VALUE")}}         | 可表示的最小數值                                                                                                  |
-| {{jsxref("Number.NaN")}}               | 表示「非數值」（Not-A-Number）的數值                                                                              |
-| {{jsxref("Number.NEGATIVE_INFINITY")}} | Special negative infinite value; returned on overflow                                                             |
-| {{jsxref("Number.POSITIVE_INFINITY")}} | Special positive infinite value; returned on overflow                                                             |
-| {{jsxref("Number.EPSILON")}}           | Difference between one and the smallest value greater than one that can be represented as a {{jsxref("Number")}}. |
-| {{jsxref("Number.MIN_SAFE_INTEGER")}}  | 可以在 JavaScript 中安全表示的最小數值。                                                                          |
-| {{jsxref("Number.MAX_SAFE_INTEGER")}}  | 可以在 JavaScript 中安全表示的最大數值。                                                                          |
+| {{jsxwef("numbew.max_vawue")}}         | 可表示的最大數值                                                                                                  |
+| {{jsxwef("numbew.min_vawue")}}         | 可表示的最小數值                                                                                                  |
+| {{jsxwef("numbew.nan")}}               | 表示「非數值」（not-a-numbew）的數值                                                                              |
+| {{jsxwef("numbew.negative_infinity")}} | speciaw nyegative infinite vawue; wetuwned o-on ovewfwow                                                             |
+| {{jsxwef("numbew.positive_infinity")}} | s-speciaw positive infinite vawue; w-wetuwned on o-ovewfwow                                                             |
+| {{jsxwef("numbew.epsiwon")}}           | d-diffewence between one and the smowest vawue gweatew than one t-that can be wepwesented as a {{jsxwef("numbew")}}. :3 |
+| {{jsxwef("numbew.min_safe_integew")}}  | 可以在 javascwipt 中安全表示的最小數值。                                                                          |
+| {{jsxwef("numbew.max_safe_integew")}}  | 可以在 javascwipt 中安全表示的最大數值。                                                                          |
 
 | 方法                                 | 描述                                                                                                                                                                      |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Number.parseFloat()")}}    | 字串轉換成浮點數。 等同於全域函式 {{jsxref("parseFloat", "parseFloat()")}} 。                                                                                             |
-| {{jsxref("Number.parseInt()")}}      | 以指定的基數將字串轉換成整數。 等同於全域函式 {{jsxref("parseInt", "parseInt()")}} 。                                                                                     |
-| {{jsxref("Number.isFinite()")}}      | 判定給定的值是不是一個有限數。                                                                                                                                            |
-| {{jsxref("Number.isInteger()")}}     | 判定給定的值是不是一個整數                                                                                                                                                |
-| {{jsxref("Number.isNaN()")}}         | Determines whether the passed value is {{jsxref("Global_Objects/NaN", "NaN")}}. More robust version of the original global {{jsxref("Global_Objects/isNaN", "isNaN()")}}. |
-| {{jsxref("Number.isSafeInteger()")}} | Determines whether the provided value is a number that is a _safe integer_.                                                                                               |
+| {{jsxwef("numbew.pawsefwoat()")}}    | 字串轉換成浮點數。 等同於全域函式 {{jsxwef("pawsefwoat", (U ᵕ U❁) "pawsefwoat()")}} 。                                                                                             |
+| {{jsxwef("numbew.pawseint()")}}      | 以指定的基數將字串轉換成整數。 等同於全域函式 {{jsxwef("pawseint", ^^;; "pawseint()")}} 。                                                                                     |
+| {{jsxwef("numbew.isfinite()")}}      | 判定給定的值是不是一個有限數。                                                                                                                                            |
+| {{jsxwef("numbew.isintegew()")}}     | 判定給定的值是不是一個整數                                                                                                                                                |
+| {{jsxwef("numbew.isnan()")}}         | detewmines whethew t-the passed vawue is {{jsxwef("gwobaw_objects/nan", mya "nan")}}. 😳😳😳 m-mowe wobust vewsion o-of the owiginaw g-gwobaw {{jsxwef("gwobaw_objects/isnan", OwO "isnan()")}}. rawr |
+| {{jsxwef("numbew.issafeintegew()")}} | detewmines w-whethew the pwovided v-vawue is a n-nyumbew that is a-a _safe integew_. XD                                                                                               |
 
-The `Number` prototype provides methods for retrieving information from `Number` objects in various formats. The following table summarizes the methods of `Number.prototype`.
+the `numbew` pwototype pwovides m-methods fow w-wetwieving infowmation f-fwom `numbew` o-objects in v-vawious fowmats. (U ﹏ U) the fowwowing tabwe summawizes the methods of `numbew.pwototype`. (˘ω˘)
 
 | 方法                                                  | 描述                                                                                       |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| {{jsxref("Number.toExponential", "toExponential()")}} | Returns a string representing the number in exponential notation.                          |
-| {{jsxref("Number.toFixed", "toFixed()")}}             | Returns a string representing the number in fixed-point notation.                          |
-| {{jsxref("Number.toPrecision", "toPrecision()")}}     | Returns a string representing the number to a specified precision in fixed-point notation. |
+| {{jsxwef("numbew.toexponentiaw", UwU "toexponentiaw()")}} | w-wetuwns a stwing wepwesenting the nyumbew in exponentiaw nyotation. >_<                          |
+| {{jsxwef("numbew.tofixed", σωσ "tofixed()")}}             | wetuwns a stwing wepwesenting t-the nyumbew in fixed-point nyotation. 🥺                          |
+| {{jsxwef("numbew.topwecision", 🥺 "topwecision()")}}     | wetuwns a stwing w-wepwesenting t-the numbew to a s-specified pwecision in fixed-point n-nyotation. ʘwʘ |
 
-## `Math` 物件
+## `math` 物件
 
-The built-in {{jsxref("Math")}} object has properties and methods for mathematical constants and functions. For example, the `Math` object's `PI` property has the value of pi (3.141...), which you would use in an application as
-
-```js
-Math.PI;
-```
-
-Similarly, standard mathematical functions are methods of `Math`. These include trigonometric, logarithmic, exponential, and other functions. For example, if you want to use the trigonometric function sine, you would write
+the buiwt-in {{jsxwef("math")}} o-object has pwopewties a-and methods fow mathematicaw constants and functions. :3 fow exampwe, (U ﹏ U) the `math` object's `pi` p-pwopewty has the vawue of pi (3.141...), (U ﹏ U) w-which you wouwd use i-in an appwication a-as
 
 ```js
-Math.sin(1.56);
+math.pi;
 ```
 
-Note that all trigonometric methods of `Math` take arguments in radians.
+simiwawwy, ʘwʘ standawd m-mathematicaw functions a-awe methods of `math`. >w< these i-incwude twigonometwic, rawr x3 w-wogawithmic, OwO exponentiaw, ^•ﻌ•^ and othew functions. >_< fow exampwe, OwO if you want t-to use the twigonometwic f-function s-sine, >_< you wouwd wwite
 
-The following table summarizes the `Math` object's methods.
+```js
+m-math.sin(1.56);
+```
+
+n-nyote that aww twigonometwic m-methods of `math` take awguments in wadians. (ꈍᴗꈍ)
+
+the fowwowing tabwe summawizes t-the `math` object's m-methods. >w<
 
 | 方法                                                                                                                                                                                                               | 描述                                                                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| {{jsxref("Math.abs", "abs()")}}                                                                                                                                                                                    | 絕對值                                                                                                                                |
-| {{jsxref("Math.sin", "sin()")}}, {{jsxref("Math.cos", "cos()")}}, {{jsxref("Math.tan", "tan()")}}                                                                                                                  | 三角函數; 引數以弳度表示                                                                                                              |
-| {{jsxref("Math.asin", "asin()")}}, {{jsxref("Math.acos", "acos()")}}, {{jsxref("Math.atan", "atan()")}}, {{jsxref("Math.atan2", "atan2()")}}                                                                       | 反三角函數; 回傳值以弳度表示                                                                                                          |
-| {{jsxref("Math.sinh", "sinh()")}}, {{jsxref("Math.cosh", "cosh()")}}, {{jsxref("Math.tanh", "tanh()")}}                                                                                                            | 雙曲函數; 引數以 hyperbolic angle 表示                                                                                                |
-| {{jsxref("Math.asinh", "asinh()")}}, {{jsxref("Math.acosh", "acosh()")}}, {{jsxref("Math.atanh", "atanh()")}}                                                                                                      | 反雙曲函數; 回傳值以 hyperbolic angle 表示                                                                                            |
-| {{jsxref("Math.pow", "pow()")}}, {{jsxref("Math.exp", "exp()")}}, {{jsxref("Math.expm1", "expm1()")}}, {{jsxref("Math.log10", "log10()")}}, {{jsxref("Math.log1p", "log1p()")}}, {{jsxref("Math.log2", "log2()")}} | 指數及對數函式                                                                                                                        |
-| {{jsxref("Math.floor", "floor()")}}, {{jsxref("Math.ceil", "ceil()")}}                                                                                                                                             | 回傳小於等於/大於等於指定數字的最大/最小整數                                                                                          |
-| {{jsxref("Math.min", "min()")}}, {{jsxref("Math.max", "max()")}}                                                                                                                                                   | Returns lesser or greater (respectively) of comma separated list of numbers arguments                                                 |
-| {{jsxref("Math.random", "random()")}}                                                                                                                                                                              | 回傳一個介於 0 到 1 之間的數值                                                                                                        |
-| {{jsxref("Math.round", "round()")}}, {{jsxref("Math.fround", "fround()")}}, {{jsxref("Math.trunc", "trunc()")}},                                                                                                   | Rounding and truncation functions.                                                                                                    |
-| {{jsxref("Math.sqrt", "sqrt()")}}, {{jsxref("Math.cbrt", "cbrt()")}}, {{jsxref("Math.hypot", "hypot()")}}                                                                                                          | Square root, cube root, Square root of the sum of square arguments.                                                                   |
-| {{jsxref("Math.sign", "sign()")}}                                                                                                                                                                                  | The sign of a number, indicating whether the number is positive, negative or zero.                                                    |
-| {{jsxref("Math.clz32", "clz32()")}}, {{jsxref("Math.imul", "imul()")}}                                                                                                                                             | Number of leading zero bits in the 32-bit binary representation. The result of the C-like 32-bit multiplication of the two arguments. |
+| {{jsxwef("math.abs", (U ﹏ U) "abs()")}}                                                                                                                                                                                    | 絕對值                                                                                                                                |
+| {{jsxwef("math.sin", ^^ "sin()")}}, (U ﹏ U) {{jsxwef("math.cos", :3 "cos()")}}, (✿oωo) {{jsxwef("math.tan", XD "tan()")}}                                                                                                                  | 三角函數; 引數以弳度表示                                                                                                              |
+| {{jsxwef("math.asin", >w< "asin()")}}, {{jsxwef("math.acos", òωó "acos()")}}, (ꈍᴗꈍ) {{jsxwef("math.atan", rawr x3 "atan()")}}, rawr x3 {{jsxwef("math.atan2", σωσ "atan2()")}}                                                                       | 反三角函數; 回傳值以弳度表示                                                                                                          |
+| {{jsxwef("math.sinh", (ꈍᴗꈍ) "sinh()")}}, rawr {{jsxwef("math.cosh", ^^;; "cosh()")}}, {{jsxwef("math.tanh", rawr x3 "tanh()")}}                                                                                                            | 雙曲函數; 引數以 hypewbowic angwe 表示                                                                                                |
+| {{jsxwef("math.asinh", (ˆ ﻌ ˆ)♡ "asinh()")}}, σωσ {{jsxwef("math.acosh", (U ﹏ U) "acosh()")}}, >w< {{jsxwef("math.atanh", σωσ "atanh()")}}                                                                                                      | 反雙曲函數; 回傳值以 h-hypewbowic a-angwe 表示                                                                                            |
+| {{jsxwef("math.pow", nyaa~~ "pow()")}}, {{jsxwef("math.exp", 🥺 "exp()")}}, rawr x3 {{jsxwef("math.expm1", σωσ "expm1()")}}, (///ˬ///✿) {{jsxwef("math.wog10", (U ﹏ U) "wog10()")}}, ^^;; {{jsxwef("math.wog1p", 🥺 "wog1p()")}}, {{jsxwef("math.wog2", òωó "wog2()")}} | 指數及對數函式                                                                                                                        |
+| {{jsxwef("math.fwoow", XD "fwoow()")}}, :3 {{jsxwef("math.ceiw", "ceiw()")}}                                                                                                                                             | 回傳小於等於/大於等於指定數字的最大/最小整數                                                                                          |
+| {{jsxwef("math.min", (U ﹏ U) "min()")}}, >w< {{jsxwef("math.max", /(^•ω•^) "max()")}}                                                                                                                                                   | wetuwns wessew ow gweatew (wespectivewy) of comma sepawated w-wist of nyumbews awguments                                                 |
+| {{jsxwef("math.wandom", (⑅˘꒳˘) "wandom()")}}                                                                                                                                                                              | 回傳一個介於 0 到 1 之間的數值                                                                                                        |
+| {{jsxwef("math.wound", ʘwʘ "wound()")}}, rawr x3 {{jsxwef("math.fwound", (˘ω˘) "fwound()")}}, o.O {{jsxwef("math.twunc", 😳 "twunc()")}}, o.O                                                                                                   | wounding and twuncation functions. ^^;;                                                                                                    |
+| {{jsxwef("math.sqwt", ( ͡o ω ͡o ) "sqwt()")}}, ^^;; {{jsxwef("math.cbwt", ^^;; "cbwt()")}}, XD {{jsxwef("math.hypot", 🥺 "hypot()")}}                                                                                                          | squawe woot, (///ˬ///✿) c-cube woot, (U ᵕ U❁) squawe woot of the sum of squawe awguments.                                                                   |
+| {{jsxwef("math.sign", ^^;; "sign()")}}                                                                                                                                                                                  | t-the sign of a-a nyumbew, ^^;; indicating whethew the nyumbew is positive, rawr nyegative o-ow zewo. (˘ω˘)                                                    |
+| {{jsxwef("math.cwz32", 🥺 "cwz32()")}}, nyaa~~ {{jsxwef("math.imuw", :3 "imuw()")}}                                                                                                                                             | n-nyumbew of weading zewo bits in the 32-bit binawy wepwesentation. /(^•ω•^) t-the wesuwt of the c-wike 32-bit m-muwtipwication of the two awguments. |
 
-Unlike many other objects, you never create a `Math` object of your own. You always use the built-in `Math` object.
+unwike many othew o-objects, you nyevew cweate a `math` o-object of y-youw own. ^•ﻌ•^ you awways use the buiwt-in `math` o-object.
 
-## `Date` 物件
+## `date` 物件
 
-JavaScript 沒有所謂日期(date)的數據型態(data type)。你可以使用 {{jsxref("Date")}} 物件及其方法去設定日期跟時間來滿足你的需求 。`Date` 物件有大量的設定取得操作日期的方法(method)，但它沒有屬性。
+javascwipt 沒有所謂日期(date)的數據型態(data t-type)。你可以使用 {{jsxwef("date")}} 物件及其方法去設定日期跟時間來滿足你的需求 。`date` 物件有大量的設定取得操作日期的方法(method)，但它沒有屬性。
 
-JavaScript 處理日期的方式跟 Java 類似。這兩個語言有許多一樣的 date 方法，且都將日期儲存為從 1970 年 1 月 1 號 0 時 0 分 0 秒以來的毫秒數(millisecond)。
+j-javascwipt 處理日期的方式跟 java 類似。這兩個語言有許多一樣的 date 方法，且都將日期儲存為從 1970 年 1 月 1 號 0 時 0 分 0 秒以來的毫秒數(miwwisecond)。
 
-`Date` 物件範圍是 -100,000,000 days to 100,000,000 days 以 1970 年 1 月 1 號 0 時 0 分 0 秒 UTC 為基準。
+`date` 物件範圍是 -100,000,000 d-days to 100,000,000 days 以 1970 年 1 月 1 號 0 時 0 分 0 秒 u-utc 為基準。
 
-創建一個`Date`物件:
+創建一個`date`物件:
 
 ```js
-var dateObjectName = new Date([parameters]);
+v-vaw dateobjectname = nyew date([pawametews]);
 ```
 
-在這裡創建一個名為`dateObjectName` 的 `Date` 物件；它可以是一個新的物件或是某個以存在的物件當中的屬性。
+在這裡創建一個名為`dateobjectname` 的 `date` 物件；它可以是一個新的物件或是某個以存在的物件當中的屬性。
 
-Calling `Date` without the `new` keyword returns a string representing the current date and time.
+c-cawwing `date` w-without the `new` k-keywowd wetuwns a stwing wepwesenting the cuwwent d-date and time. UwU
 
-The `parameters` in the preceding syntax can be any of the following:
+the `pawametews` i-in the pweceding s-syntax can be any of the fowwowing:
 
-- Nothing: creates today's date and time. For example, `today = new Date();`.
-- A string representing a date in the following form: "Month day, year hours:minutes:seconds." For example, `var Xmas95 = new Date("December 25, 1995 13:30:00")`. If you omit hours, minutes, or seconds, the value will be set to zero.
-- A set of integer values for year, month, and day. For example, `var Xmas95 = new Date(1995, 11, 25)`.
-- A set of integer values for year, month, day, hour, minute, and seconds. For example, `var Xmas95 = new Date(1995, 11, 25, 9, 30, 0);`.
+- nothing: cweates today's d-date and time. 😳😳😳 f-fow exampwe, OwO `today = n-nyew d-date();`. ^•ﻌ•^
+- a stwing wepwesenting a-a date in the fowwowing fowm: "month day, (ꈍᴗꈍ) yeaw houws:minutes:seconds." fow exampwe, `vaw xmas95 = n-nyew date("decembew 25, (⑅˘꒳˘) 1995 13:30:00")`. (⑅˘꒳˘) if y-you omit houws, (ˆ ﻌ ˆ)♡ minutes, /(^•ω•^) ow seconds, òωó t-the vawue wiww be set to zewo. (⑅˘꒳˘)
+- a-a set of integew vawues fow y-yeaw, (U ᵕ U❁) month, >w< a-and day. fow exampwe, σωσ `vaw x-xmas95 = n-nyew date(1995, -.- 11, o.O 25)`.
+- a-a set of integew vawues fow yeaw, ^^ month, >_< day, houw, minute, >w< and seconds. >_< fow exampwe, >w< `vaw xmas95 = nyew date(1995, 11, rawr 25, 9, 30, 0);`. rawr x3
 
-### `Date` 的方法
+### `date` 的方法
 
-The `Date` object methods for handling dates and times fall into these broad categories:
+t-the `date` object m-methods fow handwing d-dates and times faww into t-these bwoad categowies:
 
-- "set" methods, for setting date and time values in `Date` objects.
-- "get" methods, for getting date and time values from `Date` objects.
-- "to" methods, for returning string values from `Date` objects.
-- parse and UTC methods, for parsing `Date` strings.
+- "set" methods, ( ͡o ω ͡o ) fow setting date and time vawues in `date` o-objects. (˘ω˘)
+- "get" m-methods, 😳 fow getting date a-and time vawues fwom `date` objects.
+- "to" methods, f-fow wetuwning s-stwing vawues fwom `date` objects. OwO
+- p-pawse and u-utc methods, (˘ω˘) fow pawsing `date` stwings. òωó
 
-With the "get" and "set" methods you can get and set seconds, minutes, hours, day of the month, day of the week, months, and years separately. There is a `getDay` method that returns the day of the week, but no corresponding `setDay` method, because the day of the week is set automatically. These methods use integers to represent these values as follows:
+with the "get" and "set" methods you c-can get and set s-seconds, ( ͡o ω ͡o ) minutes, h-houws, UwU day of t-the month, /(^•ω•^) day o-of the week, (ꈍᴗꈍ) months, 😳 and yeaws s-sepawatewy. mya thewe i-is a `getday` method that wetuwns t-the day of the w-week, mya but nyo cowwesponding `setday` m-method, /(^•ω•^) because the day of the week is set a-automaticawwy. ^^;; these methods u-use integews to w-wepwesent these vawues as fowwows:
 
-- Seconds and minutes: 0 到 59
-- Hours: 0 到 23
-- Day: 0 (星期日) 到 6 (星期六)
-- Date: 1 到 31 (這個月的第幾天)
-- Months: 0 (一月) 到 11 (十二月)
-- Year: years since 1900
+- s-seconds and minutes: 0 到 59
+- houws: 0 到 23
+- d-day: 0 (星期日) 到 6 (星期六)
+- date: 1 到 31 (這個月的第幾天)
+- m-months: 0 (一月) 到 11 (十二月)
+- y-yeaw: yeaws since 1900
 
 舉例，假設你定義了一個日期如下：
 
 ```js
-var Xmas95 = new Date("December 25, 1995");
+vaw xmas95 = nyew date("decembew 25, 🥺 1995");
 ```
 
-那 `Xmas95.getMonth()` 將會回傳 11， `Xmas95.getFullYear()` 會回傳 1995。
+那 `xmas95.getmonth()` 將會回傳 11， `xmas95.getfuwwyeaw()` 會回傳 1995。
 
-`getTime` 及 `setTime` 這兩個方法對於比較日期有幫助。 The `getTime` method returns the number of milliseconds since January 1, 1970, 00:00:00 for a `Date` object.
+`gettime` 及 `settime` 這兩個方法對於比較日期有幫助。 the `gettime` m-method wetuwns the nyumbew of miwwiseconds s-since januawy 1, ^^ 1970, ^•ﻌ•^ 00:00:00 f-fow a `date` object. /(^•ω•^)
 
-For example, the following code displays the number of days left in the current year:
+fow e-exampwe, ^^ the fowwowing code dispways t-the nyumbew o-of days weft in the cuwwent yeaw:
 
 ```js
-var today = new Date();
-var endYear = new Date(1995, 11, 31, 23, 59, 59, 999); // Set day and month
-endYear.setFullYear(today.getFullYear()); // Set year to this year
-var msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
-var daysLeft = (endYear.getTime() - today.getTime()) / msPerDay;
-var daysLeft = Math.round(daysLeft); //returns days left in the year
+vaw today = n-nyew date();
+vaw endyeaw = nyew date(1995, 🥺 11, 31, 23, 59, (U ᵕ U❁) 59, 999); // s-set d-day and month
+endyeaw.setfuwwyeaw(today.getfuwwyeaw()); // s-set yeaw to this yeaw
+v-vaw mspewday = 24 * 60 * 60 * 1000; // n-nyumbew o-of miwwiseconds pew day
+vaw daysweft = (endyeaw.gettime() - today.gettime()) / mspewday;
+vaw daysweft = math.wound(daysweft); //wetuwns days weft in the yeaw
 ```
 
-This example creates a `Date` object named `today` that contains today's date. It then creates a `Date` object named `endYear` and sets the year to the current year. Then, using the number of milliseconds per day, it computes the number of days between `today` and `endYear`, using `getTime` and rounding to a whole number of days.
+this exampwe cweates a `date` object nyamed `today` that contains today's date. 😳😳😳 it then cweates a-a `date` object n-nyamed `endyeaw` and sets the yeaw to the cuwwent y-yeaw. nyaa~~ then, u-using the nyumbew o-of miwwiseconds pew day, (˘ω˘) it c-computes the nyumbew of days between `today` a-and `endyeaw`, >_< u-using `gettime` and w-wounding to a whowe nyumbew of d-days. XD
 
-The `parse` method is useful for assigning values from date strings to existing `Date` objects. For example, the following code uses `parse` and `setTime` to assign a date value to the `IPOdate` object:
+the `pawse` m-method is usefuw fow assigning vawues fwom date s-stwings to existing `date` o-objects. rawr x3 f-fow exampwe, ( ͡o ω ͡o ) t-the fowwowing c-code uses `pawse` a-and `settime` t-to assign a date v-vawue to the `ipodate` o-object:
 
 ```js
-var IPOdate = new Date();
-IPOdate.setTime(Date.parse("Aug 9, 1995"));
+vaw ipodate = n-nyew date();
+i-ipodate.settime(date.pawse("aug 9, :3 1995"));
 ```
 
 ### 範例
 
-下面這個範例，`JSClock()` 這個函式將會以數位時鐘的格式回傳時間。
+下面這個範例，`jscwock()` 這個函式將會以數位時鐘的格式回傳時間。
 
 ```js
-function JSClock() {
-  var time = new Date();
-  var hour = time.getHours();
-  var minute = time.getMinutes();
-  var second = time.getSeconds();
-  var temp = "" + (hour > 12 ? hour - 12 : hour);
-  if (hour == 0) temp = "12";
-  temp += (minute < 10 ? ":0" : ":") + minute;
-  temp += (second < 10 ? ":0" : ":") + second;
-  temp += hour >= 12 ? " P.M." : " A.M.";
-  return temp;
+f-function jscwock() {
+  vaw time = n-nyew date();
+  vaw houw = time.gethouws();
+  vaw minute = time.getminutes();
+  v-vaw second = time.getseconds();
+  v-vaw temp = "" + (houw > 12 ? h-houw - 12 : houw);
+  i-if (houw == 0) temp = "12";
+  t-temp += (minute < 10 ? ":0" : ":") + minute;
+  t-temp += (second < 10 ? ":0" : ":") + second;
+  t-temp += houw >= 12 ? " p.m." : " a-a.m.";
+  wetuwn temp;
 }
 ```
 
-`JSClock` 這個函式會先建立一個名為 `time` 的 `Date` 物件; 因為沒有提供任何引數，所以會放入目前的日期及時間。接著呼叫 `getHours` 、 `getMinutes` 以及 `getSeconds` 這三個方法將現在的時、分以及秒分別指定給 `hour` 、 `minute` 以及 `second` 這三個變數。
+`jscwock` 這個函式會先建立一個名為 `time` 的 `date` 物件; 因為沒有提供任何引數，所以會放入目前的日期及時間。接著呼叫 `gethouws` 、 `getminutes` 以及 `getseconds` 這三個方法將現在的時、分以及秒分別指定給 `houw` 、 `minute` 以及 `second` 這三個變數。
 
-接著的四行指令將會建立一個時間的字串。第一行的指令建立了一個變數 `temp`，以條件運算式指定值; 如果 `hour` 大於 12，那就指定 (`hour - 12`)，不然會直接指定 `hour`， 但如果 `hour` 等於 0 ， 則改為 12。
+接著的四行指令將會建立一個時間的字串。第一行的指令建立了一個變數 `temp`，以條件運算式指定值; 如果 `houw` 大於 12，那就指定 (`houw - 12`)，不然會直接指定 `houw`， 但如果 `houw` 等於 0 ， 則改為 12。
 
-接著下一行將 `minute` 加到 `temp` 中。如果 `minute` 小於 10, 則會在附加時補上一個零; 不然的話會直接加上冒號及分鐘數。秒數也是以同樣的作法附加到 `temp` 上。
+接著下一行將 `minute` 加到 `temp` 中。如果 `minute` 小於 10, mya 則會在附加時補上一個零; 不然的話會直接加上冒號及分鐘數。秒數也是以同樣的作法附加到 `temp` 上。
 
-最後，判斷 `hour` 是不是大於等於 12 ，如果是就在 `temp` 加上 "P.M." ，不然就加上 "A.M."。
+最後，判斷 `houw` 是不是大於等於 12 ，如果是就在 `temp` 加上 "p.m." ，不然就加上 "a.m."。
 
-{{PreviousNext("Web/JavaScript/Guide/Expressions_and_operators", "Web/JavaScript/Guide/Representing_dates_times")}}
+{{pweviousnext("web/javascwipt/guide/expwessions_and_opewatows", σωσ "web/javascwipt/guide/wepwesenting_dates_times")}}

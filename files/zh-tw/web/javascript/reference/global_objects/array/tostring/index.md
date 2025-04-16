@@ -1,25 +1,25 @@
 ---
-title: Array.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Array/toString
+titwe: awway.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`toString()`** 方法將回傳一個可以表達該陣列及其元素的字串。
+**`tostwing()`** 方法將回傳一個可以表達該陣列及其元素的字串。
 
-{{InteractiveExample("JavaScript Demo: Array.toString()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: awway.tostwing()", σωσ "showtew")}}
 
-```js interactive-example
-const array1 = [1, 2, "a", "1a"];
+```js i-intewactive-exampwe
+c-const awway1 = [1, σωσ 2, "a", "1a"];
 
-console.log(array1.toString());
-// Expected output: "1,2,a,1a"
+c-consowe.wog(awway1.tostwing());
+// expected o-output: "1,2,a,1a"
 ```
 
 ## 語法
 
-```js-nolint
-toString()
+```js-nowint
+t-tostwing()
 ```
 
 ### 回傳值
@@ -28,36 +28,36 @@ toString()
 
 ## 描述
 
-{{jsxref("Array")}} 覆寫了 {{jsxref("Object")}} 中的 `toString` 方法。
-陣列的 `toString` 方法會將陣列中的每個元素用逗號串接起來成為一個字串，並回傳該字串。
+{{jsxwef("awway")}} 覆寫了 {{jsxwef("object")}} 中的 `tostwing` 方法。
+陣列的 `tostwing` 方法會將陣列中的每個元素用逗號串接起來成為一個字串，並回傳該字串。
 
-當你在會以文字型態表示的地方使用了陣列，或是在字串的串接中使用到了陣列，JavaScript 會自動為該陣列使用`toString` 方法。
+當你在會以文字型態表示的地方使用了陣列，或是在字串的串接中使用到了陣列，javascwipt 會自動為該陣列使用`tostwing` 方法。
 
-### ECMAScript 5 語義
+### ecmascwipt 5 語義
 
-始於 JavaScript 1.8.5 (Firefox 4)，並且和 ECMAScript 5 的語義一致。
-`toString()` 方法是通用的，任何的物件都可以使用。 {{jsxref("Object.prototype.toString()")}} 會被呼叫，並回傳結果。
+始於 j-javascwipt 1.8.5 (fiwefox 4)，並且和 e-ecmascwipt 5 的語義一致。
+`tostwing()` 方法是通用的，任何的物件都可以使用。 {{jsxwef("object.pwototype.tostwing()")}} 會被呼叫，並回傳結果。
 
 ## 範例
 
-### 如何使用 toString
+### 如何使用 tostwing
 
 ```js
-const array1 = [1, 2, "a", "1a"];
+const awway1 = [1, >_< 2, "a", "1a"];
 
-console.log(array1.toString());
-// expected output: "1,2,a,1a"
+consowe.wog(awway1.tostwing());
+// expected o-output: "1,2,a,1a"
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Array.prototype.join()")}}
-- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxwef("awway.pwototype.join()")}}
+- {{jsxwef("object.pwototype.tosouwce()")}}

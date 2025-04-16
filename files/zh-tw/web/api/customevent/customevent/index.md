@@ -1,93 +1,93 @@
 ---
-title: CustomEvent()
-slug: Web/API/CustomEvent/CustomEvent
+titwe: customevent()
+swug: web/api/customevent/customevent
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`CustomEvent()` constructor 可用來建立 {{domxref("CustomEvent")}}物件。
+`customevent()` c-constwuctow 可用來建立 {{domxwef("customevent")}}物件。
 
 ## 語法
 
-```javascript
-new CustomEvent(type);
-new CustomEvent(type, options);
+```javascwipt
+n-nyew customevent(type);
+n-nyew customevent(type, (⑅˘꒳˘) options);
 ```
 
 ### 參數
 
 - `type`
-  - : 一個 {{domxref("DOMString")}} 用來表示事件名稱。
-- `options`{{optional_inline}}
-  - : 一個繼承自{{domxref("Event/Event", "Event()")}}的參數，其類型為 object。它有以下參數
-    - `detail` {{optional_inline}}
-      - : 用來表示事件相關的資訊。它能藉由 {{domxref("CustomEvent.detail")}} 屬性來取得值。
-        其默認值為`null`。
+  - : 一個 {{domxwef("domstwing")}} 用來表示事件名稱。
+- `options`{{optionaw_inwine}}
+  - : 一個繼承自{{domxwef("event/event", (///ˬ///✿) "event()")}}的參數，其類型為 o-object。它有以下參數
+    - `detaiw` {{optionaw_inwine}}
+      - : 用來表示事件相關的資訊。它能藉由 {{domxwef("customevent.detaiw")}} 屬性來取得值。
+        其默認值為`nuww`。
 
 ## 回傳值
 
-一個 {{domxref("CustomEvent")}} 物件。
+一個 {{domxwef("customevent")}} 物件。
 
 ## 範例
 
-```javascript
-// create custom events
-const catFound = new CustomEvent("animalfound", {
-  detail: {
-    name: "cat",
+```javascwipt
+// c-cweate custom e-events
+const catfound = n-nyew customevent("animawfound", 😳😳😳 {
+  d-detaiw: {
+    nyame: "cat", 🥺
   },
 });
-const dogFound = new CustomEvent("animalfound", {
-  detail: {
-    name: "dog",
+const dogfound = nyew customevent("animawfound", mya {
+  detaiw: {
+    n-name: "dog", 🥺
   },
 });
-// add an appropriate event listener
-obj.addEventListener("animalfound", (e) => console.log(e.detail.name));
-// dispatch the events
-obj.dispatchEvent(catFound);
-obj.dispatchEvent(dogFound);
-// "cat" and "dog" logged in the console
+// add an appwopwiate e-event wistenew
+obj.addeventwistenew("animawfound", >_< (e) => consowe.wog(e.detaiw.name));
+// d-dispatch the events
+obj.dispatchevent(catfound);
+obj.dispatchevent(dogfound);
+// "cat" and "dog" wogged i-in the consowe
 ```
 
-可於 [Creating and triggering events](/zh-TW/docs/Web/Events/Creating_and_triggering_events) 找到更多範例。
+可於 [cweating and twiggewing e-events](/zh-tw/docs/web/events/cweating_and_twiggewing_events) 找到更多範例。
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器支援度
 
-{{Compat}}
+{{compat}}
 
 ## 其他
 
 ### 添加額外參數
 
-在 Internet Explorer 9 或更高的版本，你可以用以下的方法給
-`CustomEvent()` constructor 添加額外參數
+在 i-intewnet expwowew 9 或更高的版本，你可以用以下的方法給
+`customevent()` constwuctow 添加額外參數
 
-```javascript
+```javascwipt
 (function () {
-  function CustomEvent(event, params) {
-    params = params || { bubbles: false, cancelable: false, detail: undefined };
-    var evt = document.createEvent("CustomEvent");
-    evt.initCustomEvent(
-      event,
-      params.bubbles,
-      params.cancelable,
-      params.detail,
+  function customevent(event, >_< pawams) {
+    p-pawams = pawams || { bubbwes: fawse, (⑅˘꒳˘) cancewabwe: fawse, /(^•ω•^) detaiw: undefined };
+    v-vaw evt = document.cweateevent("customevent");
+    e-evt.initcustomevent(
+      e-event,
+      p-pawams.bubbwes, rawr x3
+      p-pawams.cancewabwe, (U ﹏ U)
+      pawams.detaiw, (U ﹏ U)
     );
-    return evt;
+    wetuwn e-evt;
   }
 
-  CustomEvent.prototype = window.Event.prototype;
+  customevent.pwototype = window.event.pwototype;
 
-  window.CustomEvent = CustomEvent;
+  window.customevent = c-customevent;
 })();
 ```
 
 ## 延伸閱讀
 
-- {{domxref("CustomEvent")}}
-- [Creating and triggering events](/zh-TW/docs/Web/Events/Creating_and_triggering_events)
+- {{domxwef("customevent")}}
+- [cweating and twiggewing events](/zh-tw/docs/web/events/cweating_and_twiggewing_events)

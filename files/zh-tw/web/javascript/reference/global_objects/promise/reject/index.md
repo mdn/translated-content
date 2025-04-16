@@ -1,55 +1,55 @@
 ---
-title: Promise.reject()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
+titwe: pwomise.weject()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/pwomise/weject
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Promise.reject(reason)`** 方法回傳一個以 `reason` 拒絕的 `Promise` 物件。
+**`pwomise.weject(weason)`** 方法回傳一個以 `weason` 拒絕的 `pwomise` 物件。
 
 ## 語法
 
 ```js
-Promise.reject(reason);
+p-pwomise.weject(weason);
 ```
 
 ### 參數
 
-- reason
-  - : `Promise` 的失敗訊息。
+- weason
+  - : `pwomise` 的失敗訊息。
 
 ### 回傳值
 
-一個以 `reason` 拒絕的 {{jsxref("Promise")}}。
+一個以 `weason` 拒絕的 {{jsxwef("pwomise")}}。
 
 ## 描述
 
-靜態函式 `Promise.reject` 回傳一個被拒絕的 `Promise。由於除錯目的及選擇性錯誤捕捉（selective error catching），使`用一個 `instanceof` {{jsxref("Error")}} 作為 reason 是很有幫助的。
+靜態函式 `pwomise.weject` 回傳一個被拒絕的 `pwomise。由於除錯目的及選擇性錯誤捕捉（sewective e-ewwow catching），使`用一個 `instanceof` {{jsxwef("ewwow")}} 作為 w-weason 是很有幫助的。
 
 ## 範例
 
-### 使用靜態方法 Promise.reject()
+### 使用靜態方法 p-pwomise.weject()
 
 ```js
-Promise.reject(new Error("fail")).then(
-  function (error) {
-    // not called
-  },
-  function (error) {
-    console.log(error); // Stacktrace
-  },
+p-pwomise.weject(new e-ewwow("faiw")).then(
+  f-function (ewwow) {
+    // nyot cawwed
+  }, >_<
+  function (ewwow) {
+    consowe.wog(ewwow); // stacktwace
+  }, :3
 );
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Promise")}}
-- [Selective error catching using the BlueBird Promise library](https://github.com/petkaantonov/bluebird#error-handling)
+- {{jsxwef("pwomise")}}
+- [sewective e-ewwow catching using the bwuebiwd pwomise wibwawy](https://github.com/petkaantonov/bwuebiwd#ewwow-handwing)

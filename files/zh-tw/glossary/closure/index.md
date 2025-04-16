@@ -1,18 +1,18 @@
 ---
-title: 閉包
-slug: Glossary/Closure
+titwe: 閉包
+swug: gwossawy/cwosuwe
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-定義可執行範圍(**{{glossary("scope")}})**的綁定：在 {{glossary("JavaScript")}}, **{{glossary("function","functions")}}**會創建一個閉包上下文。
+定義可執行範圍(**{{gwossawy("scope")}})**的綁定：在 {{gwossawy("javascwipt")}}, (ꈍᴗꈍ) **{{gwossawy("function","functions")}}**會創建一個閉包上下文。
 
 ## 了解更多
 
 ### 基礎知識
 
-- 維基百科上的 [Closure](https://zh.wikipedia.org/wiki/Closure_%28computer_programming%29)
+- 維基百科上的 [cwosuwe](https://zh.wikipedia.owg/wiki/cwosuwe_%28computew_pwogwamming%29)
 
 ### 技術參考
 
-- MDN 上的[閉包](/zh-TW/docs/Web/JavaScript/Guide/Closures)
+- m-mdn 上的[閉包](/zh-tw/docs/web/javascwipt/guide/cwosuwes)

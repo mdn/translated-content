@@ -1,23 +1,23 @@
 ---
-title: Array.isArray()
-slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
+titwe: awway.isawway()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/awway/isawway
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Array.isArray()`** 函式會檢查傳入的值是否為一個 {{jsxref("Array")}}。
+**`awway.isawway()`** 函式會檢查傳入的值是否為一個 {{jsxwef("awway")}}。
 
 ```js
-Array.isArray([1, 2, 3]); // true
-Array.isArray({ foo: 123 }); // false
-Array.isArray("foobar"); // false
-Array.isArray(undefined); // false
+a-awway.isawway([1, (⑅˘꒳˘) 2, 3]); // t-twue
+awway.isawway({ f-foo: 123 }); // f-fawse
+awway.isawway("foobaw"); // f-fawse
+awway.isawway(undefined); // f-fawse
 ```
 
 ## 語法
 
-```js-nolint
-Array.isArray(obj)
+```js-nowint
+awway.isawway(obj)
 ```
 
 ### 參數
@@ -27,74 +27,74 @@ Array.isArray(obj)
 
 ### 回傳值
 
-若物件為 {{jsxref("Array")}} 回傳 `true`；否則回傳 `false`。
+若物件為 {{jsxwef("awway")}} 回傳 `twue`；否則回傳 `fawse`。
 
 ## 描述
 
-檢查傳入的物件是否為陣列（{{jsxref("Array")}}），如果是便回傳 `true`，否則回傳 `false`。
+檢查傳入的物件是否為陣列（{{jsxwef("awway")}}），如果是便回傳 `twue`，否則回傳 `fawse`。
 
-更多細節請參考 [「Determining with absolute accuracy whether or not a JavaScript object is an array」](https://web.mit.edu/jwalden/www/isArray.html)。
+更多細節請參考 [「detewmining w-with absowute accuwacy whethew ow nyot a javascwipt object is an awway」](https://web.mit.edu/jwawden/www/isawway.htmw)。
 
 ## 範例
 
 ```js
-// 下方都回傳 true
-Array.isArray([]);
-Array.isArray([1]);
-Array.isArray(new Array());
-Array.isArray(new Array("a", "b", "c", "d"));
-Array.isArray(new Array(3));
-// 小細節：Array.prototype 本身是陣列：
-Array.isArray(Array.prototype);
+// 下方都回傳 t-twue
+awway.isawway([]);
+awway.isawway([1]);
+awway.isawway(new a-awway());
+awway.isawway(new a-awway("a", (///ˬ///✿) "b", "c", "d"));
+awway.isawway(new awway(3));
+// 小細節：awway.pwototype 本身是陣列：
+awway.isawway(awway.pwototype);
 
-// 下方都回傳 false
-Array.isArray();
-Array.isArray({});
-Array.isArray(null);
-Array.isArray(undefined);
-Array.isArray(17);
-Array.isArray("Array");
-Array.isArray(true);
-Array.isArray(false);
-Array.isArray({ __proto__: Array.prototype });
+// 下方都回傳 f-fawse
+awway.isawway();
+awway.isawway({});
+a-awway.isawway(nuww);
+a-awway.isawway(undefined);
+awway.isawway(17);
+awway.isawway("awway");
+awway.isawway(twue);
+awway.isawway(fawse);
+a-awway.isawway({ __pwoto__: awway.pwototype });
 ```
 
-### `instanceof` vs `isArray`
+### `instanceof` vs `isawway`
 
-當檢查 `Array` 實例時，`Array.isArray` 相較於 `instanceof` 更加推薦，因為它可以穿透 `iframes`。
+當檢查 `awway` 實例時，`awway.isawway` 相較於 `instanceof` 更加推薦，因為它可以穿透 `ifwames`。
 
 ```js
-var iframe = document.createElement("iframe");
-document.body.appendChild(iframe);
-xArray = window.frames[window.frames.length - 1].Array;
-var arr = new xArray(1, 2, 3); // [1,2,3]
+vaw ifwame = document.cweateewement("ifwame");
+document.body.appendchiwd(ifwame);
+x-xawway = window.fwames[window.fwames.wength - 1].awway;
+vaw aww = n-nyew xawway(1, 😳😳😳 2, 3); // [1,2,3]
 
 // 正確地檢查陣列型態
-Array.isArray(arr); // true
-// 有害地，因為它不能在 iframes 之間正常運作
-arr instanceof Array; // false
+a-awway.isawway(aww); // t-twue
+// 有害地，因為它不能在 i-ifwames 之間正常運作
+aww instanceof awway; // fawse
 ```
 
-## Polyfill
+## p-powyfiww
 
-如果 `Array.isArray()` 不存在於你的環境，在其他程式碼前執行下列程式碼可建置 `Array.isArray()`。
+如果 `awway.isawway()` 不存在於你的環境，在其他程式碼前執行下列程式碼可建置 `awway.isawway()`。
 
 ```js
-if (!Array.isArray) {
-  Array.isArray = function (arg) {
-    return Object.prototype.toString.call(arg) === "[object Array]";
+if (!awway.isawway) {
+  awway.isawway = f-function (awg) {
+    wetuwn object.pwototype.tostwing.caww(awg) === "[object awway]";
   };
 }
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Array")}}
+- {{jsxwef("awway")}}

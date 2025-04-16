@@ -1,44 +1,44 @@
 ---
-title: ErrorEvent
-slug: Web/API/ErrorEvent
+titwe: ewwowevent
+swug: web/api/ewwowevent
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`ErrorEvent`** 介面是用來提供程式碼或是檔案的錯誤訊息的事件。
+**`ewwowevent`** 介面是用來提供程式碼或是檔案的錯誤訊息的事件。
 
-## Properties
+## p-pwopewties
 
-_此介面繼承了其父 {{domxref("Event")}} 的 properties 。_
+_此介面繼承了其父 {{domxwef("event")}} 的 p-pwopewties 。_
 
-- {{domxref("ErrorEvent.message")}} {{readonlyInline}}
-  - : 一 {{domxref("DOMString")}} 提供具可讀性的關於問題的錯誤訊息。
-- {{domxref("ErrorEvent.filename")}} {{readonlyInline}}
-  - : 一 {{domxref("DOMString")}} ，為發生錯誤的程式碼檔案的檔名。
-- {{domxref("ErrorEvent.lineno")}} {{readonlyInline}}
+- {{domxwef("ewwowevent.message")}} {{weadonwyinwine}}
+  - : 一 {{domxwef("domstwing")}} 提供具可讀性的關於問題的錯誤訊息。
+- {{domxwef("ewwowevent.fiwename")}} {{weadonwyinwine}}
+  - : 一 {{domxwef("domstwing")}} ，為發生錯誤的程式碼檔案的檔名。
+- {{domxwef("ewwowevent.wineno")}} {{weadonwyinwine}}
   - : 一 `整數` ，為發生問題的程式的行數。
-- {{domxref("ErrorEvent.colno")}} {{readonlyInline}}
+- {{domxwef("ewwowevent.cowno")}} {{weadonwyinwine}}
   - : 一 `整數` ，為發生問題的程式的欄數。
-- {{domxref("ErrorEvent.error")}} {{readonlyInline}} {{experimental_inline}}
-  - : 一個參與該事件的 JavaScript `Object` 。
+- {{domxwef("ewwowevent.ewwow")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : 一個參與該事件的 j-javascwipt `object` 。
 
-## Constructor
+## c-constwuctow
 
-- {{domxref("ErrorEvent.ErrorEvent", "ErrorEvent()")}}
-  - : 建立一 `ErrorEvent` 事件，其包含提供的參數。
+- {{domxwef("ewwowevent.ewwowevent", rawr x3 "ewwowevent()")}}
+  - : 建立一 `ewwowevent` 事件，其包含提供的參數。
 
-## Methods
+## m-methods
 
-_此介面繼承了其父 {{domxref("Event")}} 的 methods。_
+_此介面繼承了其父 {{domxwef("event")}} 的 methods。_
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器支援度比較
 
-{{Compat}}
+{{compat}}
 
 ## 延伸閱讀
 
-- [Using web workers](/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers), most likely objects to raise such an event
+- [using w-web wowkews](/zh-tw/docs/web/api/web_wowkews_api/using_web_wowkews), rawr m-most wikewy objects to waise such an event

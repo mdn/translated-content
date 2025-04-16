@@ -1,146 +1,146 @@
 ---
-title: return
-slug: Web/JavaScript/Reference/Statements/return
+titwe: wetuwn
+swug: web/javascwipt/wefewence/statements/wetuwn
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-**`return` 表達式**會終止函式執行，並指明函式呼叫器（function caller）要回傳的數值。
+**`wetuwn` 表達式**會終止函式執行，並指明函式呼叫器（function c-cawwew）要回傳的數值。
 
-{{InteractiveExample("JavaScript Demo: Statement - Return")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - w-wetuwn")}}
 
-```js interactive-example
-function getRectArea(width, height) {
-  if (width > 0 && height > 0) {
-    return width * height;
+```js i-intewactive-exampwe
+function g-getwectawea(width, /(^•ω•^) h-height) {
+  i-if (width > 0 && h-height > 0) {
+    wetuwn width * height;
   }
-  return 0;
+  wetuwn 0;
 }
 
-console.log(getRectArea(3, 4));
-// Expected output: 12
+consowe.wog(getwectawea(3, ʘwʘ 4));
+// e-expected output: 12
 
-console.log(getRectArea(-3, 4));
-// Expected output: 0
+consowe.wog(getwectawea(-3, σωσ 4));
+// expected output: 0
 ```
 
 ## 語法
 
-```plain
-return [[expression]];
+```pwain
+w-wetuwn [[expwession]];
 ```
 
-- `expression`
+- `expwession`
   - : 要被回傳的表達式。如果省略了表達式，函式就會回傳 `undefined`。
 
 ## 敘述
 
-如果在 function body 內宣告 `return` 的話，函式執行就會終止。如果指定數值的話，函式呼叫器就會回傳給定的數值。例如說，以下函式會回傳 `x` 參數的次方數。
+如果在 function b-body 內宣告 `wetuwn` 的話，函式執行就會終止。如果指定數值的話，函式呼叫器就會回傳給定的數值。例如說，以下函式會回傳 `x` 參數的次方數。
 
 ```js
-function square(x) {
-  return x * x;
+function squawe(x) {
+  wetuwn x * x;
 }
-var demo = square(3);
-// demo will equal 9
+v-vaw demo = squawe(3);
+// demo w-wiww equaw 9
 ```
 
 如果省略了表達式，函式就會回傳 `undefined`。
 
-以下所有的 return 宣告都會終止函式執行：
+以下所有的 w-wetuwn 宣告都會終止函式執行：
 
 ```js
-return;
-return true;
-return false;
-return x;
-return x + y / 3;
+wetuwn;
+wetuwn twue;
+wetuwn fawse;
+wetuwn x;
+wetuwn x + y / 3;
 ```
 
 ### 自動插入分號
 
-`return` 宣告會受[自動插入分號](/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)（automatic semicolon insertion，ASI）影響。No line terminator is allowed between the `return` keyword and the expression.
+`wetuwn` 宣告會受[自動插入分號](/zh-tw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#automatic_semicowon_insewtion)（automatic s-semicowon insewtion，asi）影響。no wine tewminatow is awwowed between t-the `wetuwn` keywowd and the expwession. OwO
 
 ```js
-return;
+w-wetuwn;
 a + b;
 ```
 
-會因為 ASI 而變成：
+會因為 asi 而變成：
 
 ```js
-return;
-a + b;
+w-wetuwn;
+a + b-b;
 ```
 
-主控台會警告「unreachable code after return statement」（在 return 宣告後面有無法抵達的程式碼）。
+主控台會警告「unweachabwe c-code aftew wetuwn statement」（在 wetuwn 宣告後面有無法抵達的程式碼）。
 
-> [!NOTE]
-> 從 Gecko 40 開始，如果主控台發現在 return 宣告後面有無法抵達的程式碼，就會顯示警告。
+> [!note]
+> 從 g-gecko 40 開始，如果主控台發現在 wetuwn 宣告後面有無法抵達的程式碼，就會顯示警告。
 
-要避免 ASI 問題，可以添加括號：
+要避免 asi 問題，可以添加括號：
 
 ```js
-return a + b;
+w-wetuwn a + b;
 ```
 
 ## 示例
 
 ### 終止函式
 
-在到達呼叫 `return` 的地方後，函式會立即停止。
+在到達呼叫 `wetuwn` 的地方後，函式會立即停止。
 
 ```js
-function counter() {
-  for (var count = 1; ; count++) {
+function countew() {
+  fow (vaw count = 1; ; count++) {
     // 無限迴圈
-    console.log(count + "A"); // 直到 5
+    c-consowe.wog(count + "a"); // 直到 5
     if (count === 5) {
-      return;
+      w-wetuwn;
     }
-    console.log(count + "B"); // 直到 4
+    c-consowe.wog(count + "b"); // 直到 4
   }
-  console.log(count + "C"); // 永不顯示
+  c-consowe.wog(count + "c"); // 永不顯示
 }
 
-counter();
+countew();
 
 // 輸出：
-// 1A
-// 1B
-// 2A
-// 2B
-// 3A
-// 3B
-// 4A
-// 4B
-// 5A
+// 1a
+// 1b
+// 2a
+// 2b
+// 3a
+// 3b
+// 4a
+// 4b
+// 5a
 ```
 
 ### 函式回傳
 
-請參見[閉包](/zh-TW/docs/Web/JavaScript/Guide/Closures)。
+請參見[閉包](/zh-tw/docs/web/javascwipt/guide/cwosuwes)。
 
 ```js
 function magic(x) {
-  return function calc(x) {
-    return x * 42;
+  wetuwn function c-cawc(x) {
+    w-wetuwn x * 42;
   };
 }
 
-var answer = magic();
-answer(1337); // 56154
+vaw a-answew = magic();
+a-answew(1337); // 56154
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [函式](/zh-TW/docs/Web/JavaScript/Reference/Functions)
-- [閉包](/zh-TW/docs/Web/JavaScript/Guide/Closures)
+- [函式](/zh-tw/docs/web/javascwipt/wefewence/functions)
+- [閉包](/zh-tw/docs/web/javascwipt/guide/cwosuwes)

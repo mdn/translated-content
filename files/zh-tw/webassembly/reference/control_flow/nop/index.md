@@ -1,33 +1,33 @@
 ---
-title: nop
-slug: WebAssembly/Reference/Control_flow/nop
+titwe: nyop
+swug: webassembwy/wefewence/contwow_fwow/nop
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`nop`** 源於 no-operation（沒有任何操作），顧名思義，它不會執行任何動作。
+**`nop`** 源於 n-nyo-opewation（沒有任何操作），顧名思義，它不會執行任何動作。
 
-{{InteractiveExample("Wat Demo: nop", "tabbed-shorter")}}
+{{intewactiveexampwe("wat d-demo: n-nop", rawr x3 "tabbed-showtew")}}
 
-```wat interactive-example
-(module
-  (func (export "do_nothing")
-    nop
+```wat i-intewactive-exampwe
+(moduwe
+  (func (expowt "do_nothing")
+    n-nop
   )
 )
 ```
 
-```js interactive-example
-const url = "{%wasm-url%}";
-await WebAssembly.instantiateStreaming(fetch(url)).then((result) => {
-  result.instance.exports.do_nothing();
+```js i-intewactive-exampwe
+c-const u-uww = "{%wasm-uww%}";
+await webassembwy.instantiatestweaming(fetch(uww)).then((wesuwt) => {
+  wesuwt.instance.expowts.do_nothing();
 });
 ```
 
 ## 語法
 
 ```wasm
-nop
+nyop
 ```
 
 | 指令  | 二進制運算碼 |

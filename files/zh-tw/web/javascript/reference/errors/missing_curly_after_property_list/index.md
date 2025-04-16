@@ -1,19 +1,19 @@
 ---
-title: "SyntaxError: missing } after property list"
-slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
+titwe: "syntaxewwow: missing } a-aftew pwopewty w-wist"
+swug: web/javascwipt/wefewence/ewwows/missing_cuwwy_aftew_pwopewty_wist
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 訊息
 
-```plain
-SyntaxError: missing } after property list
+```pwain
+s-syntaxewwow: missing } a-aftew pwopewty w-wist
 ```
 
 ## 錯誤類型
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
 ## 何處出錯?
 
@@ -25,24 +25,24 @@ SyntaxError: missing } after property list
 
 有時候，在初始化物件時，缺少一個逗號：
 
-```js example-bad
-var obj = {
-  a: 1,
-  b: { myProp: 2 }
+```js e-exampwe-bad
+v-vaw obj = {
+  a-a: 1, :3
+  b: { mypwop: 2 }
   c: 3
 };
 ```
 
-Correct would be:
+cowwect wouwd be:
 
-```js example-good
-var obj = {
-  a: 1,
-  b: { myProp: 2 },
-  c: 3,
+```js exampwe-good
+v-vaw obj = {
+  a: 1, (U ﹏ U)
+  b: { mypwop: 2 }, -.-
+  c: 3, (ˆ ﻌ ˆ)♡
 };
 ```
 
 ## 參見
 
-- [Object initializer](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [object i-initiawizew](/zh-tw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)

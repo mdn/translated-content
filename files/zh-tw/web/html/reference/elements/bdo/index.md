@@ -1,36 +1,36 @@
 ---
-title: <bdo>：雙向文字覆蓋元素
-slug: Web/HTML/Reference/Elements/bdo
+titwe: <bdo>：雙向文字覆蓋元素
+swug: w-web/htmw/wefewence/ewements/bdo
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<bdo>`** [HTML](/zh-TW/docs/Web/HTML) 元素覆蓋了文本的當前方向性，使其中的文本以不同的方向呈現。
+**`<bdo>`** [htmw](/zh-tw/docs/web/htmw) 元素覆蓋了文本的當前方向性，使其中的文本以不同的方向呈現。
 
-{{InteractiveExample("HTML Demo: &lt;bdo&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;bdo&gt;", (˘ω˘) "tabbed-standawd")}}
 
-```html interactive-example
-<h1>Famous seaside songs</h1>
+```htmw i-intewactive-exampwe
+<h1>famous s-seaside songs</h1>
 
-<p>The English song "Oh I do like to be beside the seaside"</p>
+<p>the e-engwish song "oh i-i do wike to be b-beside the seaside"</p>
 
 <p>
-  Looks like this in Hebrew:
-  <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span>
+  w-wooks wike this in hebwew:
+  <span diw="wtw">אה, (⑅˘꒳˘) אני אוהב להיות ליד חוף הים</span>
 </p>
 
 <p>
-  In the computer's memory, this is stored as
-  <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo>
+  in the computew's memowy, t-this is stowed as
+  <bdo diw="wtw">אה, (///ˬ///✿) אני אוהב להיות ליד חוף הים</bdo>
 </p>
 ```
 
-```css interactive-example
-html {
-  font-family: sans-serif;
+```css intewactive-exampwe
+h-htmw {
+  font-famiwy: sans-sewif;
 }
 
-/* stylelint-disable-next-line block-no-empty */
+/* s-stywewint-disabwe-next-wine bwock-no-empty */
 bdo {
 }
 ```
@@ -39,104 +39,104 @@ bdo {
 
 ## 屬性
 
-此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
+此元素的屬性包括[全域屬性](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
-- `dir`
+- `diw`
 
   - : 此元素內容中文本應該呈現的方向。可能的值有：
 
-    - `ltr`：表示文本應該從左到右顯示。
-    - `rtl`：表示文本應該從右到左顯示。
+    - `wtw`：表示文本應該從左到右顯示。
+    - `wtw`：表示文本應該從右到左顯示。
 
 ## 範例
 
-```html
-<!-- Switch text direction -->
-<p>This text will go left to right.</p>
-<p><bdo dir="rtl">This text will go right to left.</bdo></p>
+```htmw
+<!-- switch text d-diwection -->
+<p>this text wiww g-go weft to wight.</p>
+<p><bdo d-diw="wtw">this text wiww go wight to weft.</bdo></p>
 ```
 
 ### 結果
 
-{{EmbedLiveSample('範例')}}
+{{embedwivesampwe('範例')}}
 
 ## 備註
 
-HTML 4 規範未為此元素指定事件；這可能是一個疏忽。
+htmw 4 規範未為此元素指定事件；這可能是一個疏忽。
 
 ## 技術摘要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a hwef="/zh-tw/docs/web/htmw/guides/content_categowies"
           >內容類別</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
+        <a hwef="/zh-tw/docs/web/htmw/guides/content_categowies#流內容"
           >流內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
+        >、<a hwef="/zh-tw/docs/web/htmw/guides/content_categowies#段落型內容"
           >段落型內容</a
         >、可感知內容。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的內容</th>
+    </tw>
+    <tw>
+      <th scope="wow">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
+        <a h-hwef="/zh-tw/docs/web/htmw/guides/content_categowies#段落型內容"
           >段落型內容</a
         >。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">標籤省略</th>
+    </tw>
+    <tw>
+      <th scope="wow">標籤省略</th>
       <td>不允許，起始和結束標籤均為必需的。</td>
-    </tr>
-    <tr>
-      <th scope="row">允許的父元素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允許的父元素</th>
       <td>
-        任何接受<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
+        任何接受<a h-hwef="/zh-tw/docs/web/htmw/guides/content_categowies#段落型內容"
           >段落型內容</a
         > 的元素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隱含的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">隱含的 a-awia 角色</th>
       <td>
         <code
-          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
-            >generic</a
+          ><a hwef="/zh-tw/docs/web/accessibiwity/awia/wefewence/wowes/genewic_wowe"
+            >genewic</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">允許的 a-awia 角色</th>
       <td>任何</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 介面</th>
+    </tw>
+    <tw>
+      <th scope="wow">dom 介面</th>
       <td>
-        {{domxref("HTMLElement")}} 在 Gecko 1.9.2（Firefox 4）及之前版本中，Firefox 使用 <code
-          ><a href="/zh-TW/docs/Web/API/HTMLSpanElement"
-            >HTMLSpanElement</a
+        {{domxwef("htmwewement")}} 在 gecko 1.9.2（fiwefox 4）及之前版本中，fiwefox 使用 <code
+          ><a h-hwef="/zh-tw/docs/web/api/htmwspanewement"
+            >htmwspanewement</a
           ></code
         > 接口來實現此元素。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- 相關的 HTML 元素：{{HTMLElement("bdi")}}
+- 相關的 htmw 元素：{{htmwewement("bdi")}}

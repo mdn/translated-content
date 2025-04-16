@@ -1,116 +1,116 @@
 ---
-title: DOMParser
-slug: Web/API/DOMParser
+titwe: dompawsew
+swug: web/api/dompawsew
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-`DOMParser` 可以將XML或是HTML格式的字串轉成 DOM [文件](/zh-TW/docs/Web/API/Document)。`DOMParser`的規格請參閱 [DOM 解譯與串流化](https://w3c.github.io/DOM-Parsing/)。
+`dompawsew` 可以將xmw或是htmw格式的字串轉成 d-dom [文件](/zh-tw/docs/web/api/document)。`dompawsew`的規格請參閱 [dom 解譯與串流化](https://w3c.github.io/dom-pawsing/)。
 
-請注意[XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest)解譯的是 URL 連結內容裡的 XML 與 HTML 文件。
+請注意[xmwhttpwequest](/zh-tw/docs/web/api/xmwhttpwequest)解譯的是 u-uww 連結內容裡的 x-xmw 與 h-htmw 文件。
 
-## 產生一個 DOMParser
+## 產生一個 d-dompawsew
 
-「`new DOMParser()`」可產生 DOMParser。
+「`new d-dompawsew()`」可產生 dompawsew。
 
-關於如何在 Firefox 外掛程式中產生 DOMParser，請參考 `nsIDOMParser` 文件
+關於如何在 f-fiwefox 外掛程式中產生 d-dompawsew，請參考 `nsidompawsew` 文件
 
-## 解譯 XML
+## 解譯 xmw
 
-產生解譯物件後，請呼叫`parseFromString方法函式來將XML字串轉換成DOM物件`:
+產生解譯物件後，請呼叫`pawsefwomstwing方法函式來將xmw字串轉換成dom物件`:
 
 ```js
-var parser = new DOMParser();
-var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
+vaw pawsew = nyew dompawsew();
+vaw doc = pawsew.pawsefwomstwing(stwingcontainingxmwsouwce, -.- "appwication/xmw");
 ```
 
 ### 錯誤處理
 
-請注意如果解譯過程出錯,目前的 `DOMParser` 不會丟出異常物件（exception），但是會回傳一個錯誤文件（請看 [Firefox bug 45566](https://bugzil.la/45566)）：
+請注意如果解譯過程出錯,目前的 `dompawsew` 不會丟出異常物件（exception），但是會回傳一個錯誤文件（請看 [fiwefox b-bug 45566](https://bugziw.wa/45566)）：
 
-```xml
-<parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml">
-(error description)
-<sourcetext>(a snippet of the source XML)</sourcetext>
-</parsererror>
+```xmw
+<pawsewewwow xmwns="http://www.moziwwa.owg/newwayout/xmw/pawsewewwow.xmw">
+(ewwow descwiption)
+<souwcetext>(a snippet o-of the souwce xmw)</souwcetext>
+</pawsewewwow>
 ```
 
-解譯錯誤也會記錄在錯誤終端機中（[Error Console](/zh-TW/docs/Error_Console)）, 紀錄裡頭的文件 URI (如下) 則為錯誤來源.
+解譯錯誤也會記錄在錯誤終端機中（[ewwow c-consowe](/zh-tw/docs/ewwow_consowe)）, 🥺 紀錄裡頭的文件 uwi (如下) 則為錯誤來源. (U ﹏ U)
 
-## 解譯 SVG 或 HTML 文件
+## 解譯 svg 或 htmw 文件
 
-`DOMParser` 也可以用來解譯 SVG 文件或是 HTML 文件。可以依 MIME 格式，輸出三種不同格式. 如果 MIME 格式是 `text/xml`,輸出的格式為 `XMLDocument`, 如果 MIME 格式是 `image/svg+xml`, 輸出格式為 `SVGDocument,` 如果 MIME 格式是 `text/html`, 輸出格式則為 `HTMLDocument`.
+`dompawsew` 也可以用來解譯 svg 文件或是 h-htmw 文件。可以依 mime 格式，輸出三種不同格式. >w< 如果 m-mime 格式是 `text/xmw`,輸出的格式為 `xmwdocument`, mya 如果 m-mime 格式是 `image/svg+xmw`, >w< 輸出格式為 `svgdocument,` 如果 mime 格式是 `text/htmw`, nyaa~~ 輸出格式則為 `htmwdocument`. (✿oωo)
 
 ```js
-var parser = new DOMParser();
-var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
-// returns a Document, but not a SVGDocument nor a HTMLDocument
+vaw pawsew = nyew dompawsew();
+vaw doc = pawsew.pawsefwomstwing(stwingcontainingxmwsouwce, ʘwʘ "appwication/xmw");
+// w-wetuwns a document, (ˆ ﻌ ˆ)♡ but nyot a svgdocument nyow a htmwdocument
 
-parser = new DOMParser();
-doc = parser.parseFromString(stringContainingXMLSource, "image/svg+xml");
-// returns a SVGDocument, which also is a Document.
+pawsew = n-nyew dompawsew();
+doc = pawsew.pawsefwomstwing(stwingcontainingxmwsouwce, 😳😳😳 "image/svg+xmw");
+// w-wetuwns a svgdocument, :3 w-which awso i-is a document. OwO
 
-parser = new DOMParser();
-doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
-// returns a HTMLDocument, which also is a Document.
+p-pawsew = nyew dompawsew();
+doc = pawsew.pawsefwomstwing(stwingcontaininghtmwsouwce, (U ﹏ U) "text/htmw");
+// w-wetuwns a htmwdocument, >w< which awso is a document. (U ﹏ U)
 ```
 
-### 其他瀏覽器可用的 DOMParser HTML 外掛程式
+### 其他瀏覽器可用的 d-dompawsew htmw 外掛程式
 
 ```js
 /*
- * DOMParser HTML extension
+ * dompawsew htmw extension
  * 2012-09-04
  *
- * By Eli Grey, http://eligrey.com
- * Public domain.
- * NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
+ * by ewi gwey, 😳 http://ewigwey.com
+ * pubwic domain. (ˆ ﻌ ˆ)♡
+ * n-nyo wawwanty expwessed ow i-impwied. 😳😳😳 use at y-youw own wisk. (U ﹏ U)
  */
 
-/*! @source https://gist.github.com/1129031 */
-/*global document, DOMParser*/
+/*! @souwce h-https://gist.github.com/1129031 */
+/*gwobaw document, (///ˬ///✿) dompawsew*/
 
-(function (DOMParser) {
-  "use strict";
+(function (dompawsew) {
+  "use stwict";
 
-  var proto = DOMParser.prototype,
-    nativeParse = proto.parseFromString;
-  // Firefox/Opera/IE throw errors on unsupported types
-  try {
-    // WebKit returns null on unsupported types
-    if (new DOMParser().parseFromString("", "text/html")) {
-      // text/html parsing is natively supported
-      return;
+  vaw p-pwoto = dompawsew.pwototype, 😳
+    n-nyativepawse = pwoto.pawsefwomstwing;
+  // f-fiwefox/opewa/ie thwow e-ewwows on unsuppowted types
+  t-twy {
+    // webkit wetuwns nyuww o-on unsuppowted types
+    if (new dompawsew().pawsefwomstwing("", 😳 "text/htmw")) {
+      // text/htmw p-pawsing is nyativewy suppowted
+      w-wetuwn;
     }
   } catch (ex) {}
 
-  proto.parseFromString = function (markup, type) {
-    if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
-      var doc = document.implementation.createHTMLDocument("");
-      if (markup.toLowerCase().indexOf("<!doctype") > -1) {
-        doc.documentElement.innerHTML = markup;
-      } else {
-        doc.body.innerHTML = markup;
+  p-pwoto.pawsefwomstwing = f-function (mawkup, σωσ type) {
+    if (/^\s*text\/htmw\s*(?:;|$)/i.test(type)) {
+      vaw doc = document.impwementation.cweatehtmwdocument("");
+      if (mawkup.towowewcase().indexof("<!doctype") > -1) {
+        doc.documentewement.innewhtmw = m-mawkup;
+      } e-ewse {
+        doc.body.innewhtmw = m-mawkup;
       }
-      return doc;
-    } else {
-      return nativeParse.apply(this, arguments);
+      w-wetuwn doc;
+    } e-ewse {
+      wetuwn nativepawse.appwy(this, rawr x3 awguments);
     }
   };
-})(DOMParser);
+})(dompawsew);
 ```
 
-### DOMParser from Chrome/JSM/XPCOM/Privileged Scope
+### dompawsew fwom chwome/jsm/xpcom/pwiviweged s-scope
 
-See article here: [nsIDOMParser](/zh-TW/docs/nsIDOMParser)
+see awticwe hewe: [nsidompawsew](/zh-tw/docs/nsidompawsew)
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參考資料
 
-- [Parsing and serializing XML](/zh-TW/docs/Web/XML/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest)
-- [XMLSerializer](/zh-TW/docs/Web/API/XMLSerializer)
-- [Parsing HTML to DOM](/zh-TW/docs/Mozilla/Add-ons/Code_snippets/HTML_to_DOM)
+- [pawsing and sewiawizing xmw](/zh-tw/docs/web/xmw/pawsing_and_sewiawizing_xmw)
+- [xmwhttpwequest](/zh-tw/docs/web/api/xmwhttpwequest)
+- [xmwsewiawizew](/zh-tw/docs/web/api/xmwsewiawizew)
+- [pawsing htmw to d-dom](/zh-tw/docs/moziwwa/add-ons/code_snippets/htmw_to_dom)

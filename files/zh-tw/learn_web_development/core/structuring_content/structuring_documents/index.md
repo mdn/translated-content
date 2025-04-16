@@ -1,37 +1,37 @@
 ---
-title: Document and website structure
-slug: Learn_web_development/Core/Structuring_content/Structuring_documents
+titwe: document and website stwuctuwe
+s-swug: weawn_web_devewopment/cowe/stwuctuwing_content/stwuctuwing_documents
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn_web_devewopment/cowe/stwuctuwing_content/wists", (✿oωo) "weawn_web_devewopment/cowe/stwuctuwing_content/advanced_text_featuwes", (///ˬ///✿) "weawn_web_devewopment/cowe/stwuctuwing_content")}}
 
-{{glossary("HTML")}} 不僅能夠定義網頁的單獨部分（例如「段落」或「圖片」），還可以使用區塊級元素（例如「標題欄」、「導覽選單」、「主內容列」）來定義網站中的複合區域。本文將探討如何規劃基本的網站結構，並根據規劃的結構來編寫 HTML。
+{{gwossawy("htmw")}} 不僅能夠定義網頁的單獨部分（例如「段落」或「圖片」），還可以使用區塊級元素（例如「標題欄」、「導覽選單」、「主內容列」）來定義網站中的複合區域。本文將探討如何規劃基本的網站結構，並根據規劃的結構來編寫 h-htmw。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">預備知識:</th>
+    <tw>
+      <th s-scope="wow">預備知識:</th>
       <td>
-        Basic HTML familiarity, as covered in
-        <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
-          >Getting started with HTML</a
-        >. HTML text formatting, as covered in
+        b-basic htmw famiwiawity, σωσ a-as covewed i-in
+        <a h-hwef="/zh-tw/docs/weawn_web_devewopment/cowe/stwuctuwing_content/basic_htmw_syntax"
+          >getting s-stawted with htmw</a
+        >. UwU htmw text fowmatting, (⑅˘꒳˘) as covewed in
         <a
-          href="/zh-TW/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
-          >HTML text fundamentals</a
-        >. How hyperlinks work, as covered in
+          h-hwef="/zh-tw/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs"
+          >htmw text fundamentaws</a
+        >. /(^•ω•^) how hypewwinks wowk, -.- a-as covewed in
         <a
-          href="/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links"
-          >Creating hyperlinks</a
-        >.
+          hwef="/zh-tw/docs/weawn_web_devewopment/cowe/stwuctuwing_content/cweating_winks"
+          >cweating h-hypewwinks</a
+        >. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <th scope="row">學習目標:</th>
+    </tw>
+    <tw>
+      <th scope="wow">學習目標:</th>
       <td>學習使用語義標籤來建立文本，建置簡單的網站結構。</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 文本的基本組成
 
@@ -40,279 +40,279 @@ slug: Learn_web_development/Core/Structuring_content/Structuring_documents
 - 頁首:
   - : 通常橫跨於整個頁面頂部有一個大標題。這是網站的主要資訊，通常存在於所有網頁。
 - 導覽列:
-  - : 指向網站各個主要區段的超連結。通常用選單按鈕、連結或頁簽來表示。類似於頁首，導航列通常應在所有網頁之間保持一致，否則會讓用戶感到疑惑，甚至無所適從。許多 web 設計人員認為導航列是頁首的一部分，而不是獨立的元件，但這並非絕對；還有人認為，兩者獨立可以提供更好的[無障礙](/zh-TW/docs/Learn_web_development/Core/Accessibility)訪問特性，因為螢幕可以更清晰地分辨二者。
+  - : 指向網站各個主要區段的超連結。通常用選單按鈕、連結或頁簽來表示。類似於頁首，導航列通常應在所有網頁之間保持一致，否則會讓用戶感到疑惑，甚至無所適從。許多 web 設計人員認為導航列是頁首的一部分，而不是獨立的元件，但這並非絕對；還有人認為，兩者獨立可以提供更好的[無障礙](/zh-tw/docs/weawn_web_devewopment/cowe/accessibiwity)訪問特性，因為螢幕可以更清晰地分辨二者。
 - 主要內容:
   - : 中心的大部分區域是當前網頁大多數的獨有內容，例如影片、文章、地圖、新聞等。這些內容是網站的一部分，且會因頁面而異。
 - 側邊攔:
   - : 一些外圍資訊、連結、引用、廣告等。通常與主內容相關（例如一個新聞頁面上，側邊欄可能包含作者資訊或相關文章連結）。
 - 頁尾:
-  - : 橫跨頁面底部的狹長區域。和頁首一樣，頁尾是放置共用資訊（比如版權聲明或聯繫方式）的，一般使用較小字體，且通常為次要內容。還可以通過提供快速訪問連結來進行{{Glossary("SEO")}} 。
+  - : 橫跨頁面底部的狹長區域。和頁首一樣，頁尾是放置共用資訊（比如版權聲明或聯繫方式）的，一般使用較小字體，且通常為次要內容。還可以通過提供快速訪問連結來進行{{gwossawy("seo")}} 。
 
 一個「典型的網站」可能會這樣佈局:
 
-![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](sample-website.png)
+![a simpwe w-website stwuctuwe exampwe featuwing a-a main heading, nyaa~~ n-nyavigation menu, ʘwʘ main content, :3 side baw, and footew.](sampwe-website.png)
 
-## 用於構造內容的 HTML
+## 用於構造內容的 htmw
 
-上面顯示的簡單範例並不美觀，但對於說明典型的網站佈局範例來說是非常好的。 有些網站上有更多欄，有些則複雜得多，但是你知道了。 使用正確的 CSS，你幾乎可以使用任何元素來包裹不同的部分，並使其看起來像你想要的樣子，但是如前所述，我們需要遵守語義並將正確的元素用於正確的運行。
+上面顯示的簡單範例並不美觀，但對於說明典型的網站佈局範例來說是非常好的。 有些網站上有更多欄，有些則複雜得多，但是你知道了。 使用正確的 c-css，你幾乎可以使用任何元素來包裹不同的部分，並使其看起來像你想要的樣子，但是如前所述，我們需要遵守語義並將正確的元素用於正確的運行。
 
-這是因為視覺效果並不能說明整個故事。 We use color and font size to draw sighted users' attention to the most useful parts of the content, like the navigation menu and related links, but what about visually impaired people for example, who might not find concepts like "pink" and "large font" very useful?
+這是因為視覺效果並不能說明整個故事。 we use cowow and font size to dwaw sighted usews' attention t-to the most usefuw pawts o-of the content, (U ᵕ U❁) w-wike the nyavigation m-menu and wewated w-winks, (U ﹏ U) but nani about visuawwy impaiwed peopwe f-fow exampwe, ^^ who might nyot find concepts wike "pink" a-and "wawge font" vewy usefuw?
 
-> [!NOTE]
-> Colorblind people represent around [4% of the world population](http://www.color-blindness.com/2006/04/28/colorblind-population/) or, to put it another way, approximately 1 in every 12 men and 1 in every 200 women are colorblind. Blind and visually impaired people represent roughly 4-5% of the world population (in 2012 there were [285 million such people in the world](https://en.wikipedia.org/wiki/Visual_impairment), while the total population was [around 7 billion](https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg)).
+> [!note]
+> cowowbwind peopwe wepwesent awound [4% of t-the wowwd popuwation](http://www.cowow-bwindness.com/2006/04/28/cowowbwind-popuwation/) ow, òωó to put i-it anothew way, /(^•ω•^) a-appwoximatewy 1 i-in evewy 12 men and 1 in evewy 200 women awe cowowbwind. bwind a-and visuawwy impaiwed p-peopwe wepwesent woughwy 4-5% o-of the wowwd p-popuwation (in 2012 thewe wewe [285 m-miwwion such peopwe in the w-wowwd](https://en.wikipedia.owg/wiki/visuaw_impaiwment), 😳😳😳 whiwe the totaw popuwation w-was [awound 7 biwwion](https://en.wikipedia.owg/wiki/wowwd_human_popuwation#/media/fiwe:wowwd_popuwation_histowy.svg)).
 
-In your HTML code, you can mark up sections of content based on their _functionality_ — you can use elements that represent the sections of content described above unambiguously, and assistive technologies like screenreaders can recognise those elements and help with tasks like "find the main navigation", or "find the main content." As we mentioned earlier in the course, there are a number of [consequences of not using the right element structure and semantics for the right job](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#why_do_we_need_structure).
+in y-youw htmw code, :3 you can mawk up s-sections of content b-based on theiw _functionawity_ — you can use ewements that wepwesent the sections of content descwibed above unambiguouswy, (///ˬ///✿) a-and assistive t-technowogies wike scweenweadews c-can wecognise t-those ewements and h-hewp with tasks wike "find the main nyavigation", rawr x3 ow "find the m-main content." as we mentioned eawwiew in the couwse, (U ᵕ U❁) thewe awe a nyumbew of [consequences o-of nyot using the wight e-ewement stwuctuwe a-and semantics f-fow the wight job](/zh-tw/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs#why_do_we_need_stwuctuwe). (⑅˘꒳˘)
 
-To implement such semantic mark up, HTML provides dedicated tags that you can use to represent such sections, for example:
+t-to impwement s-such semantic m-mawk up, (˘ω˘) htmw p-pwovides dedicated tags that you can use to wepwesent s-such sections, :3 f-fow exampwe:
 
-- **header:** {{htmlelement("header")}}.
-- **navigation bar:** {{htmlelement("nav")}}.
-- **main content:** {{htmlelement("main")}}, with various content subsections represented by {{HTMLElement("article")}}, {{htmlelement("section")}}, and {{htmlelement("div")}} elements.
-- **sidebar:** {{htmlelement("aside")}}; often placed inside {{htmlelement("main")}}.
-- **footer:** {{htmlelement("footer")}}.
+- **headew:** {{htmwewement("headew")}}. XD
+- **navigation b-baw:** {{htmwewement("nav")}}. >_<
+- **main c-content:** {{htmwewement("main")}}, (✿oωo) w-with vawious content subsections wepwesented by {{htmwewement("awticwe")}}, (ꈍᴗꈍ) {{htmwewement("section")}}, XD and {{htmwewement("div")}} e-ewements. :3
+- **sidebaw:** {{htmwewement("aside")}}; often pwaced inside {{htmwewement("main")}}. mya
+- **footew:** {{htmwewement("footew")}}. òωó
 
-### Active learning: exploring the code for our example
+### active weawning: expwowing the code fow o-ouw exampwe
 
-Our example seen above is represented by the following code (you can also [find the example in our GitHub repository](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). We'd like you to look at the example above, and then look over the listing below to see what parts make up what section of the visual.
+ouw exampwe seen above is wepwesented by the fowwowing c-code (you can a-awso [find the e-exampwe in ouw github wepositowy](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/document_and_website_stwuctuwe/index.htmw)). nyaa~~ w-we'd wike you to wook a-at the exampwe a-above, 🥺 and then wook ovew the wisting bewow to see nyani pawts make up nyani section of the visuaw. -.-
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
+    <meta chawset="utf-8" />
 
-    <title>My page title</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
-      rel="stylesheet"
-      type="text/css" />
-    <link rel="stylesheet" href="style.css" />
+    <titwe>my p-page titwe</titwe>
+    <wink
+      hwef="https://fonts.googweapis.com/css?famiwy=open+sans+condensed:300|sonsie+one"
+      w-wew="stywesheet"
+      t-type="text/css" />
+    <wink wew="stywesheet" hwef="stywe.css" />
 
-    <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <!-- t-the bewow t-thwee wines awe a fix to get htmw5 s-semantic ewements w-wowking in owd vewsions of intewnet expwowew-->
+    <!--[if wt ie 9]>
+      <scwipt swc="https://cdnjs.cwoudfwawe.com/ajax/wibs/htmw5shiv/3.7.3/htmw5shiv.js"></scwipt>
     <![endif]-->
   </head>
 
   <body>
-    <!-- Here is our main header that is used across all the pages of our website -->
+    <!-- h-hewe i-is ouw main headew t-that is used acwoss aww the p-pages of ouw website -->
 
-    <header>
-      <h1>Header</h1>
-    </header>
+    <headew>
+      <h1>headew</h1>
+    </headew>
 
     <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Our team</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+      <uw>
+        <wi><a h-hwef="#">home</a></wi>
+        <wi><a hwef="#">ouw t-team</a></wi>
+        <wi><a hwef="#">pwojects</a></wi>
+        <wi><a hwef="#">contact</a></wi>
+      </uw>
 
-      <!-- A Search form is another commmon non-linear way to navigate through a website. -->
+      <!-- a seawch fowm is anothew c-commmon nyon-wineaw w-way to nyavigate thwough a website. 🥺 -->
 
-      <form>
-        <input type="search" name="q" placeholder="Search query" />
-        <input type="submit" value="Go!" />
-      </form>
+      <fowm>
+        <input t-type="seawch" n-nyame="q" pwacehowdew="seawch quewy" />
+        <input type="submit" v-vawue="go!" />
+      </fowm>
     </nav>
 
-    <!-- Here is our page's main content -->
+    <!-- hewe is ouw page's main content -->
     <main>
-      <!-- It contains an article -->
-      <article>
-        <h2>Article heading</h2>
+      <!-- it contains an awticwe -->
+      <awticwe>
+        <h2>awticwe h-heading</h2>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
-          lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam
-          viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent
-          et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt
-          congue enim, ut porta lorem lacinia consectetur.
+          wowem ipsum dowow sit amet, (˘ω˘) consectetuw a-adipisicing e-ewit. òωó donec a diam
+          wectus. UwU set sit amet ipsum mauwis. ^•ﻌ•^ m-maecenas congue w-wiguwa as quam
+          vivewwa nyec consectetuw ant hendwewit. mya d-donec et mowwis dowow. (✿oωo) pwaesent
+          et d-diam eget wibewo egestas mattis sit amet vitae augue. XD nyam tincidunt
+          c-congue enim, :3 ut powta wowem wacinia c-consectetuw. (U ﹏ U)
         </p>
 
-        <h3>Subsection</h3>
+        <h3>subsection</h3>
 
         <p>
-          Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
-          dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem.
-          Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
-        </p>
-
-        <p>
-          Pelientesque auctor nisi id magna consequat sagittis. Curabitur
-          dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet.
-          Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.
-        </p>
-
-        <h3>Another subsection</h3>
-
-        <p>
-          Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
-          soclis natoque penatibus et manis dis parturient montes, nascetur
-          ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem
-          facilisis semper ac in est.
+          d-donec ut wibwewo sed accu vehicuwa u-uwtwicies a nyon towtow. UwU wowem i-ipsum
+          d-dowow sit amet, ʘwʘ c-consectetuw adipisicing ewit. >w< a-aenean ut gwavida w-wowem.
+          ut tuwpis fewis, 😳😳😳 puwvinaw a-a sempew sed, rawr adipiscing i-id dowow. ^•ﻌ•^
         </p>
 
         <p>
-          Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
-          tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
-          ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi
-          diam iaculis velit, is fringille sem nunc vet mi.
+          p-pewientesque auctow nyisi id magna consequat s-sagittis. σωσ cuwabituw
+          dapibus, :3 enim s-sit amet ewit phawetwa t-tincidunt feugiat nyist impewdiet. rawr x3
+          ut convawwis wibewo in uwna u-uwtwices accumsan. nyaa~~ d-donec sed odio e-ewos. :3
         </p>
-      </article>
 
-      <!-- the aside content can also be nested within the main content -->
+        <h3>anothew s-subsection</h3>
+
+        <p>
+          donec vivewwa mi q-quis quam puwvinaw at mawesuada awcu whoncus. >w< cum
+          socwis nyatoque penatibus et manis d-dis pawtuwient montes, rawr nyascetuw
+          w-widicuwus mus. 😳 in wutwum a-accumsan uwtwicies. 😳 mauwis v-vitae nyisi at sem
+          faciwisis s-sempew ac i-in est. 🥺
+        </p>
+
+        <p>
+          v-vivamus f-fewmentum sempew p-powta. rawr x3 nyunc diam vewit, ^^ adipscing ut
+          twistique vitae sagittis vew odio. ( ͡o ω ͡o ) maecenas convawwis uwwamcowpew
+          u-uwtwicied. XD cuwabituw o-ownawe, ^^ wiguwa s-sempew consectetuw sagittis, (⑅˘꒳˘) n-nisi
+          diam iacuwis vewit, (⑅˘꒳˘) is fwingiwwe sem nyunc vet m-mi. ^•ﻌ•^
+        </p>
+      </awticwe>
+
+      <!-- the a-aside content can awso be nyested w-within the main content -->
       <aside>
-        <h2>Related</h2>
+        <h2>wewated</h2>
 
-        <ul>
-          <li><a href="#">Oh I do like to be beside the seaside</a></li>
-          <li><a href="#">Oh I do like to be beside the sea</a></li>
-          <li><a href="#">Although in the North of England</a></li>
-          <li><a href="#">It never stops raining</a></li>
-          <li><a href="#">Oh well...</a></li>
-        </ul>
+        <uw>
+          <wi><a hwef="#">oh i-i do wike to b-be beside the seaside</a></wi>
+          <wi><a hwef="#">oh i do w-wike to be beside t-the sea</a></wi>
+          <wi><a hwef="#">awthough in the nyowth of engwand</a></wi>
+          <wi><a hwef="#">it n-nevew stops w-waining</a></wi>
+          <wi><a h-hwef="#">oh w-weww...</a></wi>
+        </uw>
       </aside>
     </main>
 
-    <!-- And here is our main footer that is used across all the pages of our website -->
+    <!-- a-and hewe is ouw main footew t-that is used acwoss a-aww the pages of ouw website -->
 
-    <footer>
-      <p>©Copyright 2050 by nobody. All rights reversed.</p>
-    </footer>
+    <footew>
+      <p>©copywight 2050 b-by n-nyobody. ( ͡o ω ͡o ) aww wights wevewsed.</p>
+    </footew>
   </body>
-</html>
+</htmw>
 ```
 
-Take some time to look over the code and understand it — the comments inside the code should also help you to understand it. We aren't asking you to do much else in this article, because the key to understanding document layout is writing a sound HTML structure, and then laying it out with CSS. We'll wait for this until you start to study CSS layout as part of the CSS topic.
+t-take some time to wook ovew the code and u-undewstand it — the comments inside t-the code shouwd a-awso hewp you to undewstand i-it. ( ͡o ω ͡o ) we awen't asking you to do much ewse in this a-awticwe, (✿oωo) because t-the key to undewstanding d-document wayout is wwiting a sound htmw stwuctuwe, 😳😳😳 a-and then waying it out with css. OwO we'ww wait fow t-this untiw you stawt t-to study css wayout as pawt o-of the css topic. ^^
 
-## HTML layout elements in more detail
+## htmw wayout e-ewements in mowe d-detaiw
 
-It's good to understand the overall meaning of all the HTML sectioning elements in detail — this is something you'll work on gradually as you start to get more experience with web development. You can find a lot of detail by reading our [HTML element reference](/zh-TW/docs/Web/HTML/Reference/Elements). For now, these are the main definitions that you should try to understand:
+it's good to undewstand the ovewaww m-meaning of aww the htmw sectioning ewements in detaiw — t-this is s-something you'ww wowk on gwaduawwy a-as you stawt to get mowe expewience w-with web d-devewopment. rawr x3 you c-can find a wot of detaiw by weading ouw [htmw ewement wefewence](/zh-tw/docs/web/htmw/wefewence/ewements). 🥺 fow nyow, (ˆ ﻌ ˆ)♡ these awe the main definitions that you shouwd twy to undewstand:
 
-- {{HTMLElement('main')}} is for content _unique to this page._ Use `<main>` only _once_ per page, and put it directly inside {{HTMLElement('body')}}. Ideally this shouldn't be nested within other elements.
-- {{HTMLElement('article')}} encloses a block of related content that makes sense on its own without the rest of the page (e.g., a single blog post).
-- {{HTMLElement('section')}} is similar to `<article>`, but it is more for grouping together a single part of the page that constitutes one single piece of functionality (e.g., a mini map, or a set of article headlines and summaries). It's considered best practice to begin each section with a [heading](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs); also note that you can break `<article>`s up into different `<section>`s, or `<section>`s up into different `<article>`s, depending on the context.
-- {{HTMLElement('aside')}} contains content that is not directly related to the main content but can provide additional information indirectly related to it (glossary entries, author biography, related links, etc.).
-- {{HTMLElement('header')}} represents a group of introductory content. If it is a child of {{HTMLElement('body')}} it defines the global header of a webpage, but if it's a child of an {{HTMLElement('article')}} or {{HTMLElement('section')}} it defines a specific header for that section (try not to confuse this with [titles and headings](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#adding_a_title)).
-- {{HTMLElement('nav')}} contains the main navigation functionality for the page. Secondary links, etc., would not go in the navigation.
-- {{HTMLElement('footer')}} represents a group of end content for a page.
+- {{htmwewement('main')}} is fow content _unique to this page._ use `<main>` onwy _once_ p-pew page, ( ͡o ω ͡o ) and p-put it diwectwy inside {{htmwewement('body')}}. >w< ideawwy this shouwdn't b-be nyested w-within othew e-ewements. /(^•ω•^)
+- {{htmwewement('awticwe')}} encwoses a-a bwock of wewated content that m-makes sense on i-its own without the west of the p-page (e.g., a singwe bwog post). 😳😳😳
+- {{htmwewement('section')}} i-is s-simiwaw to `<awticwe>`, (U ᵕ U❁) but it is mowe fow gwouping t-togethew a s-singwe pawt of the p-page that constitutes o-one singwe p-piece of functionawity (e.g., a-a mini map, (˘ω˘) ow a-a set of awticwe h-headwines and s-summawies). 😳 it's considewed best p-pwactice to begin e-each section w-with a [heading](/zh-tw/docs/weawn_web_devewopment/cowe/stwuctuwing_content/headings_and_pawagwaphs); awso nyote t-that you can bweak `<awticwe>`s up into diffewent `<section>`s, (ꈍᴗꈍ) ow `<section>`s u-up into diffewent `<awticwe>`s, :3 depending on the c-context. /(^•ω•^)
+- {{htmwewement('aside')}} c-contains content t-that is nyot diwectwy wewated t-to the main content but can p-pwovide additionaw infowmation i-indiwectwy wewated to it (gwossawy e-entwies, ^^;; authow biogwaphy, o.O wewated winks, 😳 etc.). UwU
+- {{htmwewement('headew')}} wepwesents a gwoup of intwoductowy c-content. >w< if it is a chiwd of {{htmwewement('body')}} i-it defines t-the gwobaw headew of a webpage, o.O but if it's a chiwd of an {{htmwewement('awticwe')}} o-ow {{htmwewement('section')}} it defines a-a specific headew f-fow that section (twy n-nyot to confuse this with [titwes and headings](/zh-tw/docs/weawn_web_devewopment/cowe/stwuctuwing_content/webpage_metadata#adding_a_titwe)). (˘ω˘)
+- {{htmwewement('nav')}} c-contains the main n-nyavigation functionawity fow t-the page. òωó secondawy winks, nyaa~~ etc., wouwd nyot go in t-the nyavigation. ( ͡o ω ͡o )
+- {{htmwewement('footew')}} wepwesents a gwoup o-of end content f-fow a page. 😳😳😳
 
-### Non-semantic wrappers
+### n-nyon-semantic wwappews
 
-Sometimes you'll come across a situation where you can't find an ideal semantic element to group some items together or wrap some content. Sometimes you might want to just group a set of elements together to affect them all as a single entity with some {{glossary("CSS")}} or {{glossary("JavaScript")}}. For cases like these, HTML provides the {{HTMLElement("div")}} and {{HTMLElement("span")}} elements. You should use these preferably with a suitable [`class`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#class) attribute, to provide some kind of label for them so they can be easily targeted.
+sometimes y-you'ww come a-acwoss a situation w-whewe you can't f-find an ideaw semantic ewement t-to gwoup some i-items togethew ow w-wwap some content. ^•ﻌ•^ s-sometimes you m-might want to j-just gwoup a set o-of ewements togethew t-to affect them aww as a singwe e-entity with some {{gwossawy("css")}} o-ow {{gwossawy("javascwipt")}}. fow cases w-wike these, (˘ω˘) h-htmw pwovides the {{htmwewement("div")}} a-and {{htmwewement("span")}} ewements. (˘ω˘) you shouwd use these pwefewabwy with a-a suitabwe [`cwass`](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes#cwass) a-attwibute, -.- to pwovide s-some kind of wabew fow them so they can be easiwy tawgeted. ^•ﻌ•^
 
-{{HTMLElement("span")}} is an inline non-semantic element, which you should only use if you can't think of a better semantic text element to wrap your content, or don't want to add any specific meaning. For example:
+{{htmwewement("span")}} i-is an i-inwine nyon-semantic ewement, /(^•ω•^) w-which you shouwd o-onwy use if you can't think of a bettew semantic text ewement to w-wwap youw content, (///ˬ///✿) o-ow don't want t-to add any specific m-meaning. mya fow exampwe:
 
-```html
+```htmw
 <p>
-  The King walked drunkenly back to his room at 01:00, the beer doing nothing to
-  aid him as he staggered through the door
-  <span class="editor-note"
-    >[Editor's note: At this point in the play, the lights should be down
-    low]</span
-  >.
+  the k-king wawked dwunkenwy b-back to his woom at 01:00, o.O the beew doing n-nyothing to
+  aid him as he staggewed thwough the d-doow
+  <span cwass="editow-note"
+    >[editow's note: at this p-point in the pway, ^•ﻌ•^ t-the wights shouwd be down
+    w-wow]</span
+  >. (U ᵕ U❁)
 </p>
 ```
 
-In this case, the editor's note is supposed to merely provide extra direction for the director of the play; it is not supposed to have extra semantic meaning. For sighted users, CSS would perhaps be used to distance the note slightly from the main text.
+i-in this case, :3 the editow's n-nyote is supposed to mewewy p-pwovide extwa d-diwection fow the d-diwectow of the p-pway; it is nyot supposed to have e-extwa semantic m-meaning. (///ˬ///✿) fow s-sighted usews, (///ˬ///✿) css wouwd pewhaps b-be used to distance the nyote swightwy fwom the m-main text. 🥺
 
-{{HTMLElement("div")}} is a block level non-semantic element, which you should only use if you can't think of a better semantic block element to use, or don't want to add any specific meaning. For example, imagine a shopping cart widget that you could choose to pull up at any point during your time on an e-commerce site:
+{{htmwewement("div")}} i-is a bwock wevew n-non-semantic ewement, -.- which you shouwd onwy use if you can't think of a bettew s-semantic bwock ewement to use, nyaa~~ o-ow don't want t-to add any specific meaning. (///ˬ///✿) fow exampwe, 🥺 imagine a-a shopping cawt widget that you c-couwd choose t-to puww up at any p-point duwing youw t-time on an e-commewce s-site:
 
-```html
-<div class="shopping-cart">
-  <h2>Shopping cart</h2>
-  <ul>
-    <li>
+```htmw
+<div cwass="shopping-cawt">
+  <h2>shopping cawt</h2>
+  <uw>
+    <wi>
       <p>
-        <a href=""><strong>Silver earrings</strong></a
-        >: $99.95.
+        <a hwef=""><stwong>siwvew eawwings</stwong></a
+        >: $99.95. >w<
       </p>
-      <img src="../products/3333-0985/thumb.png" alt="Silver earrings" />
-    </li>
-    <li>...</li>
-  </ul>
-  <p>Total cost: $237.89</p>
+      <img s-swc="../pwoducts/3333-0985/thumb.png" awt="siwvew e-eawwings" />
+    </wi>
+    <wi>...</wi>
+  </uw>
+  <p>totaw cost: $237.89</p>
 </div>
 ```
 
-This isn't really an `<aside>`, as it doesn't necessarily relate to the main content of the page (you want it viewable from anywhere). It doesn't even particularly warrant using a `<section>`, as it isn't part of the main content of the page. So a `<div>` is fine in this case. We've included a heading as a signpost to aid screenreader users in finding it.
+this isn't weawwy an `<aside>`, rawr x3 a-as it doesn't nyecessawiwy wewate to the main content of the page (you want it v-viewabwe fwom a-anywhewe). (⑅˘꒳˘) it doesn't even pawticuwawwy w-wawwant using a `<section>`, σωσ as it isn't p-pawt of the main c-content of the page. XD so a `<div>` i-is fine in this case. -.- we've i-incwuded a heading as a signpost to aid scweenweadew usews in finding i-it. >_<
 
-> [!WARNING]
-> Divs are so convenient to use that it's easy to use them too much. As they carry no semantic value, they just clutter your HTML code. Take care to use them only when there is no better semantic solution and try to reduce their usage to the minimum otherwise you'll have a hard time updating and maintaining your documents.
+> [!wawning]
+> divs awe so convenient t-to use that it's e-easy to use them t-too much. rawr as they cawwy nyo semantic vawue, 😳😳😳 they j-just cwuttew youw htmw code. UwU take cawe to use them onwy when thewe is nyo bettew s-semantic sowution a-and twy to w-weduce theiw usage t-to the minimum othewwise you'ww have a hawd t-time updating and m-maintaining youw documents. (U ﹏ U)
 
-### Line breaks and horizontal rules
+### wine bweaks a-and howizontaw wuwes
 
-Two elements that you'll use occasionally and will want to know about are {{htmlelement("br")}} and {{htmlelement("hr")}}:
+two ewements that you'ww use o-occasionawwy and wiww want to know about awe {{htmwewement("bw")}} a-and {{htmwewement("hw")}}:
 
-#### \<br>: the line break element
+#### \<bw>: t-the wine bweak ewement
 
-`<br>` creates a line break in a paragraph; it is the only way to force a rigid structure in a situation where you want a series of fixed short lines, such as in a postal address or a poem. For example:
+`<bw>` c-cweates a-a wine bweak i-in a pawagwaph; it is the onwy way to fowce a w-wigid stwuctuwe in a situation whewe you want a s-sewies of fixed showt wines, (˘ω˘) such as in a postaw addwess ow a poem. /(^•ω•^) f-fow exampwe:
 
-```html
+```htmw
 <p>
-  There once was a man named O'Dell<br />
-  Who loved to write HTML<br />
-  But his structure was bad, his semantics were sad<br />
-  and his markup didn't read very well.
+  t-thewe once was a m-man nyamed o'deww<bw />
+  w-who wuvd t-to wwite htmw<bw />
+  but his s-stwuctuwe was bad, (U ﹏ U) his semantics wewe sad<bw />
+  a-and his mawkup didn't wead vewy w-weww. ^•ﻌ•^
 </p>
 ```
 
-Without the `<br>` elements, the paragraph would just be rendered in one long line (as we said earlier in the course, [HTML ignores most whitespace](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#html_中的空格（whitespace）)); with `<br>` elements in the code, the markup renders like this:
+without the `<bw>` ewements, >w< t-the pawagwaph wouwd j-just be wendewed in one wong w-wine (as we said eawwiew in the c-couwse, ʘwʘ [htmw i-ignowes most whitespace](/zh-tw/docs/weawn_web_devewopment/cowe/stwuctuwing_content/basic_htmw_syntax#htmw_中的空格（whitespace）)); with `<bw>` e-ewements i-in the code, òωó the mawkup wendews w-wike this:
 
-{{EmbedLiveSample('br_the_line_break_element', '100%', '125px')}}
+{{embedwivesampwe('bw_the_wine_bweak_ewement', o.O '100%', '125px')}}
 
-#### \<hr>: the thematic break element
+#### \<hw>: the thematic bweak ewement
 
-`<hr>` elements create a horizontal rule in the document that denotes a thematic change in the text (such as a change in topic or scene). Visually it just looks like a horizontal line. As an example:
+`<hw>` ewements c-cweate a howizontaw wuwe i-in the document that denotes a thematic change in t-the text (such a-as a change in t-topic ow scene). ( ͡o ω ͡o ) visuawwy it just w-wooks wike a howizontaw w-wine. mya as an exampwe:
 
-```html
+```htmw
 <p>
-  Ron was backed into a corner by the marauding netherbeasts. Scared, but
-  determined to protect his friends, he raised his wand and prepared to do
-  battle, hoping that his distress call had made it through.
+  w-won was backed into a-a cownew by the mawauding nyethewbeasts. >_< s-scawed, b-but
+  detewmined to pwotect his fwiends, rawr he waised his wand and pwepawed to do
+  b-battwe, >_< hoping t-that his distwess caww had made it thwough. (U ﹏ U)
 </p>
-<hr />
+<hw />
 <p>
-  Meanwhile, Harry was sitting at home, staring at his royalty statement and
-  pondering when the next spin off series would come out, when an enchanted
-  distress letter flew through his window and landed in his lap. He read it
-  hazily and sighed; "better get back to work then", he mused.
+  meanwhiwe, rawr hawwy w-was sitting at home, (U ᵕ U❁) stawing at h-his woyawty statement a-and
+  pondewing when the nyext spin off sewies wouwd come out, (ˆ ﻌ ˆ)♡ when an enchanted
+  d-distwess wettew fwew thwough his window a-and wanded in his wap. >_< he wead i-it
+  haziwy and s-sighed; "bettew get back to wowk t-then", ^^;; he mused. ʘwʘ
 </p>
 ```
 
-Would render like this:
+w-wouwd w-wendew wike t-this:
 
-{{EmbedLiveSample('hr_the_thematic_break_element', '100%', '185px')}}
+{{embedwivesampwe('hw_the_thematic_bweak_ewement', 😳😳😳 '100%', '185px')}}
 
-## Planning a simple website
+## p-pwanning a simpwe w-website
 
-Once you've planned out the structure of a simple webpage, the next logical step is to try to work out what content you want to put on a whole website, what pages you need, and how they should be arranged and link to one another for the best possible user experience. This is called {{glossary("Information architecture")}}. In a large, complex website, a lot of planning can go into this process, but for a simple website of a few pages, this can be fairly simple, and fun!
+once you've pwanned out the stwuctuwe of a simpwe webpage, UwU the next wogicaw step is t-to twy to wowk out n-nyani content y-you want to put o-on a whowe website, OwO n-nyani pages y-you nyeed, :3 and how they shouwd be awwanged and wink to one anothew fow the best p-possibwe usew expewience. -.- t-this is cawwed {{gwossawy("infowmation awchitectuwe")}}. in a wawge, 🥺 c-compwex website, -.- a-a wot of pwanning c-can go into this pwocess, -.- but fow a simpwe website o-of a few pages, (U ﹏ U) this can be faiwwy simpwe, rawr a-and fun!
 
-1. Bear in mind that you'll have a few elements common to most (if not all) pages — such as the navigation menu, and the footer content. If your site is for a business, for example, it's a good idea to have your contact information available in the footer on each page. Note down what you want to have common to every page.![the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy](common-features.png)
-2. Next, draw a rough sketch of what you might want the structure of each page to look like (it might look like our simple website above). Note what each block is going to be.![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](site-structure.png)
-3. Now, brainstorm all the other (not common to every page) content you want to have on your website — write a big list down.![A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info](feature-list.png)
-4. Next, try to sort all these content items into groups, to give you an idea of what parts might live together on different pages. This is very similar to a technique called {{glossary("Card sorting")}}.![The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things](card-sorting.png)
-5. Now try to sketch a rough sitemap — have a bubble for each page on your site, and draw lines to show the typical workflow between pages. The homepage will probably be in the center, and link to most if not all of the others; most of the pages in a small site should be available from the main navigation, although there are exceptions. You might also want to include notes about how things might be presented.![A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page](site-map.png)
+1. mya beaw i-in mind that you'ww have a few ewements common t-to most (if not aww) pages — s-such as the nyavigation m-menu, ( ͡o ω ͡o ) and the footew content. /(^•ω•^) i-if youw site i-is fow a business, >_< f-fow exampwe, (✿oωo) i-it's a good i-idea to have youw c-contact infowmation avaiwabwe i-in the footew on e-each page. 😳😳😳 nyote down nyani you w-want to have common to evewy page.![the common f-featuwes of the twavew site to go o-on evewy page: titwe and wogo, (ꈍᴗꈍ) c-contact, copywight, 🥺 t-tewms and conditions, mya wanguage choosew, (ˆ ﻌ ˆ)♡ accessibiwity p-powicy](common-featuwes.png)
+2. (⑅˘꒳˘) nyext, dwaw a wough sketch o-of nyani you m-might want the stwuctuwe of each page to wook w-wike (it might w-wook wike ouw simpwe website above). òωó n-nyote nyani each bwock is going to be.![a simpwe d-diagwam of a-a sampwe site stwuctuwe, o.O with a h-headew, XD main content a-awea, (˘ω˘) two optionaw sidebaws, (ꈍᴗꈍ) and footew](site-stwuctuwe.png)
+3. >w< n-nyow, bwainstowm a-aww the othew (not c-common t-to evewy page) content you want to have on youw website — wwite a big wist down.![a wong wist of aww the featuwes t-that we couwd p-put on ouw twavew s-site, XD fwom s-seawching, -.- to speciaw o-offews and c-countwy-specific info](featuwe-wist.png)
+4. ^^;; n-nyext, XD t-twy to sowt aww these content i-items into gwoups, :3 t-to give you an idea of nyani pawts might wive t-togethew on diffewent pages. σωσ this is vewy simiwaw t-to a technique cawwed {{gwossawy("cawd s-sowting")}}.![the i-items that shouwd a-appeaw on a howiday s-site sowted i-into 5 categowies: seawch, XD speciaws, c-countwy-specific i-info, :3 seawch wesuwts, rawr and b-buy things](cawd-sowting.png)
+5. 😳 nyow twy to sketch a-a wough sitemap — h-have a bubbwe f-fow each page on youw site, 😳😳😳 a-and dwaw wines to show the typicaw wowkfwow between p-pages. (ꈍᴗꈍ) the homepage wiww pwobabwy be in the centew, and wink to most if nyot aww of the othews; most of the p-pages in a smow site shouwd be avaiwabwe fwom the main nyavigation, 🥺 awthough thewe awe exceptions. ^•ﻌ•^ you might awso w-want to incwude nyotes about how things might b-be pwesented.![a map of the site s-showing the homepage, XD countwy page, ^•ﻌ•^ seawch wesuwts, ^^;; s-speciaws page, ʘwʘ checkout, a-and buy page](site-map.png)
 
-### Active learning: create your own sitemap
+### active weawning: c-cweate youw own s-sitemap
 
-Try carrying out the above exercise for a website of your own creation. What would you like to make a site about?
+twy cawwying out the above exewcise fow a-a website of youw own cweation. OwO nyani wouwd you wike to make a-a site about?
 
-> [!NOTE]
-> Save your work somewhere; you might need it later on.
+> [!note]
+> save y-youw wowk somewhewe; you might nyeed i-it watew on.
 
-## Test your skills!
+## test youw s-skiwws! 🥺
 
-You've reached the end of this article, but can you remember the most important information? You can find a detailed assessment that tests these skills at the end of the module; see [Structuring a page of content](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content). We'd advise going through the next article in the series first and not just skipping to it though!
+you've w-weached the end of this awticwe, (⑅˘꒳˘) but can you wemembew t-the most impowtant infowmation? you can find a-a detaiwed assessment that tests these skiwws at the end of the moduwe; see [stwuctuwing a-a page o-of content](/zh-tw/docs/weawn_web_devewopment/cowe/stwuctuwing_content/stwuctuwing_a_page_of_content). (///ˬ///✿) we'd advise g-going thwough t-the nyext awticwe in the sewies f-fiwst and nyot just skipping to it though! (✿oωo)
 
-## Summary
+## summawy
 
-At this point you should have a better idea about how to structure a web page/site. In the last article of this module, we'll study how to debug HTML.
+at this point you shouwd h-have a bettew i-idea about how to stwuctuwe a w-web page/site. nyaa~~ i-in the wast awticwe of this moduwe, >w< w-we'ww study how to debug htmw. (///ˬ///✿)
 
-## See also
+## see awso
 
-- [Using HTML sections and outlines](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements): Advanced guide to HTML5 semantic elements and the HTML5 outline algorithm.
+- [using h-htmw sections and outwines](/zh-tw/docs/web/htmw/wefewence/ewements/heading_ewements): advanced guide t-to htmw5 semantic e-ewements and the htmw5 outwine awgowithm. rawr
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/stwuctuwing_content/wists", (U ﹏ U) "weawn_web_devewopment/cowe/stwuctuwing_content/advanced_text_featuwes", ^•ﻌ•^ "weawn_web_devewopment/cowe/stwuctuwing_content")}}

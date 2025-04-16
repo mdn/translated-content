@@ -1,160 +1,160 @@
 ---
-title: Promise.race()
-slug: Web/JavaScript/Reference/Global_Objects/Promise/race
+titwe: pwomise.wace()
+swug: web/javascwipt/wefewence/gwobaw_objects/pwomise/wace
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Promise.race(iterable)`** 方法回傳一個 promise 物件，此 promise 物件會於 iterable 引數中任一個 promise 轉為 resolve 或 rejected 時立即轉變成 resolve 或 rejected，並且接收其成功值或失敗訊息。
+**`pwomise.wace(itewabwe)`** 方法回傳一個 p-pwomise 物件，此 p-pwomise 物件會於 i-itewabwe 引數中任一個 p-pwomise 轉為 w-wesowve 或 w-wejected 時立即轉變成 w-wesowve 或 wejected，並且接收其成功值或失敗訊息。
 
 ## 語法
 
 ```js
-Promise.race(iterable);
+p-pwomise.wace(itewabwe);
 ```
 
 ### 參數
 
-- iterable
-  - : 一個 iterable 物件，像是 {{jsxref("Array")}}. 請參考[可迭代協議](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代協議)。
+- itewabwe
+  - : 一個 itewabwe 物件，像是 {{jsxwef("awway")}}. >w< 請參考[可迭代協議](/zh-tw/docs/web/javascwipt/wefewence/itewation_pwotocows#可迭代協議)。
 
 ### 回傳值
 
-當傳入的 iterable 中有 promise 被實現或拒絕時，立刻回傳被實現或拒絕的 {{jsxref("Promise")}}。
+當傳入的 itewabwe 中有 pwomise 被實現或拒絕時，立刻回傳被實現或拒絕的 {{jsxwef("pwomise")}}。
 
 ## 描述
 
-`race` 函式回傳一個與傳入的 iterable 之中第一個被解決（settled）的 promise 相同方式被解決（且以相同值）的 `Promise`。
+`wace` 函式回傳一個與傳入的 i-itewabwe 之中第一個被解決（settwed）的 pwomise 相同方式被解決（且以相同值）的 `pwomise`。
 
 ## 範例
 
-### `Promise.race` 的非同步性質
+### `pwomise.wace` 的非同步性質
 
-以下例子演示了 `Promise.race` 的非同步性質：
+以下例子演示了 `pwomise.wace` 的非同步性質：
 
 ```js
-// we are passing as argument an array of promises that are already resolved,
-// to trigger Promise.race as soon as possible
-var resolvedPromisesArray = [Promise.resolve(33), Promise.resolve(44)];
+// we awe passing a-as awgument an awway of pwomises t-that awe awweady wesowved, rawr
+// to twiggew pwomise.wace as soon a-as possibwe
+vaw wesowvedpwomisesawway = [pwomise.wesowve(33), 😳 pwomise.wesowve(44)];
 
-var p = Promise.race(resolvedPromisesArray);
-// immediately logging the value of p
-console.log(p);
+v-vaw p = pwomise.wace(wesowvedpwomisesawway);
+// i-immediatewy wogging the vawue of p
+consowe.wog(p);
 
-// using setTimeout we can execute code after the stack is empty
-setTimeout(function () {
-  console.log("the stack is now empty");
-  console.log(p);
+// using settimeout we c-can exekawaii~ code aftew the stack is empty
+settimeout(function () {
+  consowe.wog("the stack i-is nyow empty");
+  consowe.wog(p);
 });
 
-// logs, in order:
-// Promise { <state>: "pending" }
-// the stack is now empty
-// Promise { <state>: "fulfilled", <value>: 33 }
+// w-wogs, >w< i-in owdew:
+// pwomise { <state>: "pending" }
+// t-the stack is nyow e-empty
+// pwomise { <state>: "fuwfiwwed", (⑅˘꒳˘) <vawue>: 33 }
 ```
 
-一個空的 iterable 造成回傳的 promise 永久擱置：
+一個空的 itewabwe 造成回傳的 pwomise 永久擱置：
 
 ```js
-var foreverPendingPromise = Promise.race([]);
-console.log(foreverPendingPromise);
-setTimeout(function () {
-  console.log("the stack is now empty");
-  console.log(foreverPendingPromise);
+v-vaw fowevewpendingpwomise = pwomise.wace([]);
+consowe.wog(fowevewpendingpwomise);
+settimeout(function () {
+  c-consowe.wog("the stack is nyow empty");
+  consowe.wog(fowevewpendingpwomise);
 });
 
-// logs, in order:
-// Promise { <state>: "pending" }
-// the stack is now empty
-// Promise { <state>: "pending" }
+// wogs, OwO in owdew:
+// pwomise { <state>: "pending" }
+// the stack i-is nyow empty
+// pwomise { <state>: "pending" }
 ```
 
-若 iterable 中有一個或多個非 promise 值且／或一個已經被實現／解決的 promise，`Promise.race` 將以陣列中第一個這樣的值解決：
+若 i-itewabwe 中有一個或多個非 p-pwomise 值且／或一個已經被實現／解決的 p-pwomise，`pwomise.wace` 將以陣列中第一個這樣的值解決：
 
 ```js
-var foreverPendingPromise = Promise.race([]);
-var alreadyResolvedProm = Promise.resolve(666);
+vaw fowevewpendingpwomise = pwomise.wace([]);
+vaw awweadywesowvedpwom = p-pwomise.wesowve(666);
 
-var arr = [foreverPendingPromise, alreadyResolvedProm, "non-Promise value"];
-var arr2 = [foreverPendingPromise, "non-Promise value", Promise.resolve(666)];
-var p = Promise.race(arr);
-var p2 = Promise.race(arr2);
+v-vaw aww = [fowevewpendingpwomise, (ꈍᴗꈍ) awweadywesowvedpwom, 😳 "non-pwomise v-vawue"];
+v-vaw aww2 = [fowevewpendingpwomise, 😳😳😳 "non-pwomise vawue", mya pwomise.wesowve(666)];
+vaw p-p = pwomise.wace(aww);
+vaw p2 = p-pwomise.wace(aww2);
 
-console.log(p);
-console.log(p2);
-setTimeout(function () {
-  console.log("the stack is now empty");
-  console.log(p);
-  console.log(p2);
+consowe.wog(p);
+consowe.wog(p2);
+s-settimeout(function () {
+  consowe.wog("the s-stack is nyow empty");
+  consowe.wog(p);
+  c-consowe.wog(p2);
 });
 
-// logs, in order:
-// Promise { <state>: "pending" }
-// Promise { <state>: "pending" }
-// the stack is now empty
-// Promise { <state>: "fulfilled", <value>: 666 }
-// Promise { <state>: "fulfilled", <value>: "non-Promise value" }
+// w-wogs, mya in owdew:
+// pwomise { <state>: "pending" }
+// pwomise { <state>: "pending" }
+// the stack is nyow empty
+// pwomise { <state>: "fuwfiwwed", (⑅˘꒳˘) <vawue>: 666 }
+// pwomise { <state>: "fuwfiwwed", (U ﹏ U) <vawue>: "non-pwomise vawue" }
 ```
 
-### 使用 `Promise.race` 及 `setTimeout` 的範例
+### 使用 `pwomise.wace` 及 `settimeout` 的範例
 
 ```js
-var p1 = new Promise(function (resolve, reject) {
-  setTimeout(resolve, 500, "one");
+v-vaw p-p1 = nyew pwomise(function (wesowve, mya weject) {
+  s-settimeout(wesowve, ʘwʘ 500, "one");
 });
-var p2 = new Promise(function (resolve, reject) {
-  setTimeout(resolve, 100, "two");
-});
-
-Promise.race([p1, p2]).then(function (value) {
-  console.log(value); // "two"
-  // Both resolve, but p2 is faster
+v-vaw p2 = n-nyew pwomise(function (wesowve, (˘ω˘) weject) {
+  settimeout(wesowve, (U ﹏ U) 100, "two");
 });
 
-var p3 = new Promise(function (resolve, reject) {
-  setTimeout(resolve, 100, "three");
-});
-var p4 = new Promise(function (resolve, reject) {
-  setTimeout(reject, 500, "four");
+pwomise.wace([p1, ^•ﻌ•^ p2]).then(function (vawue) {
+  c-consowe.wog(vawue); // "two"
+  // both wesowve, (˘ω˘) but p2 is fastew
 });
 
-Promise.race([p3, p4]).then(
-  function (value) {
-    console.log(value); // "three"
-    // p3 is faster, so it resolves
-  },
-  function (reason) {
-    // Not called
-  },
+vaw p3 = nyew pwomise(function (wesowve, :3 w-weject) {
+  settimeout(wesowve, ^^;; 100, "thwee");
+});
+vaw p4 = nyew p-pwomise(function (wesowve, 🥺 w-weject) {
+  s-settimeout(weject, (⑅˘꒳˘) 500, "fouw");
+});
+
+pwomise.wace([p3, nyaa~~ p-p4]).then(
+  function (vawue) {
+    c-consowe.wog(vawue); // "thwee"
+    // p-p3 is f-fastew, :3 so it wesowves
+  }, ( ͡o ω ͡o )
+  function (weason) {
+    // n-nyot c-cawwed
+  }, mya
 );
 
-var p5 = new Promise(function (resolve, reject) {
-  setTimeout(resolve, 500, "five");
+v-vaw p5 = nyew pwomise(function (wesowve, (///ˬ///✿) w-weject) {
+  s-settimeout(wesowve, (˘ω˘) 500, "five");
 });
-var p6 = new Promise(function (resolve, reject) {
-  setTimeout(reject, 100, "six");
+vaw p6 = nyew pwomise(function (wesowve, ^^;; weject) {
+  s-settimeout(weject, (✿oωo) 100, "six");
 });
 
-Promise.race([p5, p6]).then(
-  function (value) {
-    // Not called
-  },
-  function (reason) {
-    console.log(reason); // "six"
-    // p6 is faster, so it rejects
-  },
+pwomise.wace([p5, (U ﹏ U) p6]).then(
+  function (vawue) {
+    // nyot cawwed
+  }, -.-
+  f-function (weason) {
+    consowe.wog(weason); // "six"
+    // p6 is fastew, ^•ﻌ•^ so it w-wejects
+  }, rawr
 );
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Promise")}}
-- {{jsxref("Promise.all()")}}
+- {{jsxwef("pwomise")}}
+- {{jsxwef("pwomise.aww()")}}

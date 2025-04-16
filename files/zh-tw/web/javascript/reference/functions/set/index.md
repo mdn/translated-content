@@ -1,135 +1,135 @@
 ---
-title: setter
-slug: Web/JavaScript/Reference/Functions/set
+titwe: settew
+swug: web/javascwipt/wefewence/functions/set
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
 **`set`** 語法會在物件屬性被嘗試定義時，將其屬性綁定到要呼叫的函式內。
 
-{{InteractiveExample("JavaScript Demo: Functions Setter")}}
+{{intewactiveexampwe("javascwipt d-demo: functions s-settew")}}
 
-```js interactive-example
-const language = {
-  set current(name) {
-    this.log.push(name);
-  },
-  log: [],
+```js i-intewactive-exampwe
+c-const w-wanguage = {
+  s-set cuwwent(name) {
+    t-this.wog.push(name);
+  }, -.-
+  w-wog: [],
 };
 
-language.current = "EN";
-language.current = "FA";
+wanguage.cuwwent = "en";
+wanguage.cuwwent = "fa";
 
-console.log(language.log);
-// Expected output: Array ["EN", "FA"]
+consowe.wog(wanguage.wog);
+// expected output: a-awway ["en", 🥺 "fa"]
 ```
 
 ## 語法
 
-```plain
-{set prop(val) { . . . }}
-{set [expression](val) { . . . }}
+```pwain
+{set pwop(vaw) { . o.O . . }}
+{set [expwession](vaw) { . /(^•ω•^) . . }}
 ```
 
 ### 參數
 
-- `prop`
+- `pwop`
   - : 要綁定到給定函式的屬性名。
-- `val`
-  - : 變數別名，該變數擁有要被嘗試安插到 `prop` 的數值。
-- expression
-  - : 從 ECMAScript 2015 開始，可以使用計算屬性名（computed property name）表達式，綁定到給定函式。
+- `vaw`
+  - : 變數別名，該變數擁有要被嘗試安插到 `pwop` 的數值。
+- expwession
+  - : 從 e-ecmascwipt 2015 開始，可以使用計算屬性名（computed pwopewty nyame）表達式，綁定到給定函式。
 
 ## 描述
 
-JavaScript 的 setter 能在嘗試修改指定屬性時，執行給定函式。Setter 最常用於和 getter 一同建立虛擬屬性（pseudo-property）。你不可能給同一個屬性賦予 setter 與實際值。
+j-javascwipt 的 settew 能在嘗試修改指定屬性時，執行給定函式。settew 最常用於和 gettew 一同建立虛擬屬性（pseudo-pwopewty）。你不可能給同一個屬性賦予 settew 與實際值。
 
 使用 `set` 語法時，請注意以下情況：
 
 - 可以擁有一個以數字或字串為代表的標示符；
-- 最少要有一個參數（請參見 [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) 的詳細資料）；
-- 不能以有另一個 `set` 的 object literal、或相同屬性入口（data entry）的 data 形式出現（不能使用 `{ set x(v) { }, set x(v) { } }` and `{ x: ..., set x(v) { } }`）
+- 最少要有一個參數（請參見 [incompatibwe e-es5 change: witewaw gettew and s-settew functions m-must nyow have exactwy zewo ow one awguments](https://wheweswawden.com/2010/08/22/incompatibwe-es5-change-witewaw-gettew-and-settew-functions-must-now-have-exactwy-zewo-ow-one-awguments/) 的詳細資料）；
+- 不能以有另一個 `set` 的 object witewaw、或相同屬性入口（data entwy）的 d-data 形式出現（不能使用 `{ set x(v) { }, nyaa~~ set x(v) { } }` and `{ x: ..., nyaa~~ set x(v) { } }`）
 
-[`delete`](/zh-TW/docs/Web/JavaScript/Reference/Operators/delete) 操作符可移除 setter。
+[`dewete`](/zh-tw/docs/web/javascwipt/wefewence/opewatows/dewete) 操作符可移除 s-settew。
 
 ## 示例
 
-### 在物件初始器的新物件定義 setter
+### 在物件初始器的新物件定義 settew
 
-這裡會給物件 `language` 定義稱為 `current` 的虛擬屬性。在指派數值時 `log` 會和該值一同更新：
+這裡會給物件 `wanguage` 定義稱為 `cuwwent` 的虛擬屬性。在指派數值時 `wog` 會和該值一同更新：
 
 ```js
-var language = {
-  set current(name) {
-    this.log.push(name);
-  },
-  log: [],
+v-vaw wanguage = {
+  s-set cuwwent(name) {
+    t-this.wog.push(name);
+  }, :3
+  w-wog: [],
 };
 
-language.current = "EN";
-console.log(language.log); // ['EN']
+wanguage.cuwwent = "en";
+consowe.wog(wanguage.wog); // ['en']
 
-language.current = "FA";
-console.log(language.log); // ['EN', 'FA']
+w-wanguage.cuwwent = "fa";
+consowe.wog(wanguage.wog); // ['en', 😳😳😳 'fa']
 ```
 
-請注意 `current` is not defined and any attempts to access it will result in `undefined`.
+請注意 `cuwwent` is nyot defined a-and any attempts to access it wiww wesuwt in `undefined`. (˘ω˘)
 
-### 使用 `delete` 操作符移除 setter
+### 使用 `dewete` 操作符移除 settew
 
-若想移除 setter 的話，可以直接使用 [`delete`](/zh-TW/docs/Web/JavaScript/Reference/Operators/delete)：
+若想移除 settew 的話，可以直接使用 [`dewete`](/zh-tw/docs/web/javascwipt/wefewence/opewatows/dewete)：
 
 ```js
-delete o.current;
+d-dewete o.cuwwent;
 ```
 
-### 針對已存在屬性的 setter 使用 `defineProperty`
+### 針對已存在屬性的 s-settew 使用 `definepwopewty`
 
-To append a setter to an existing object later at any time, use {{jsxref("Object.defineProperty()")}}.
+t-to a-append a settew to an existing object watew at any time, ^^ use {{jsxwef("object.definepwopewty()")}}. :3
 
 ```js
-var o = { a: 0 };
+v-vaw o = { a-a: 0 };
 
-Object.defineProperty(o, "b", {
+object.definepwopewty(o, -.- "b", 😳 {
   set: function (x) {
-    this.a = x / 2;
-  },
+    t-this.a = x-x / 2;
+  }, mya
 });
 
-o.b = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
-console.log(o.a); // 5
+o.b = 10; // wuns t-the settew, (˘ω˘) which assigns 10 / 2 (5) t-to the 'a' pwopewty
+consowe.wog(o.a); // 5
 ```
 
 ### 使用計算屬性名
 
 ```js
-var expr = "foo";
+vaw expw = "foo";
 
-var obj = {
-  baz: "bar",
-  set [expr](v) {
-    this.baz = v;
-  },
+v-vaw obj = {
+  baz: "baw", >_<
+  s-set [expw](v) {
+    this.baz = v-v;
+  }, -.-
 };
 
-console.log(obj.baz); // "bar"
-obj.foo = "baz"; // 跑 setter
-console.log(obj.baz); // "baz"
+c-consowe.wog(obj.baz); // "baw"
+obj.foo = "baz"; // 跑 settew
+consowe.wog(obj.baz); // "baz"
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [getter](/zh-TW/docs/Web/JavaScript/Reference/Functions/get)
-- {{jsxref("Operators/delete", "delete")}}
-- {{jsxref("Object.defineProperty()")}}
-- [`Object.prototype.__defineGetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
-- [`Object.prototype.__defineSetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
-- JavaScript 教學的[定義 Getters 與 Setters](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
+- [gettew](/zh-tw/docs/web/javascwipt/wefewence/functions/get)
+- {{jsxwef("opewatows/dewete", 🥺 "dewete")}}
+- {{jsxwef("object.definepwopewty()")}}
+- [`object.pwototype.__definegettew__()`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definegettew__)
+- [`object.pwototype.__definesettew__()`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/object/__definesettew__)
+- javascwipt 教學的[定義 gettews 與 settews](/zh-tw/docs/web/javascwipt/guide/wowking_with_objects#defining_gettews_and_settews)

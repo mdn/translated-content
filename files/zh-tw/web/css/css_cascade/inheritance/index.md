@@ -1,80 +1,80 @@
 ---
-title: 繼承
-slug: Web/CSS/CSS_cascade/Inheritance
+titwe: 繼承
+swug: web/css/css_cascade/inhewitance
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-每個 [CSS property definition](/zh-TW/docs/Web/CSS/Reference) 都寫道是否這個屬性預設有繼承: ("Inherited: Yes") 或是 預設沒有繼承: ("Inherited: no"). 這個設定將會在沒有位屬性標註值時發生.
+每個 [css p-pwopewty definition](/zh-tw/docs/web/css/wefewence) 都寫道是否這個屬性預設有繼承: ("inhewited: y-yes") 或是 預設沒有繼承: ("inhewited: no"). 😳😳😳 這個設定將會在沒有位屬性標註值時發生. (˘ω˘)
 
 ## 繼承屬性
 
-When no value for an **inherited property** has been specified on an element, the element gets the [computed value](/zh-TW/docs/Web/CSS/CSS_cascade/computed_value) of that property on its parent element. Only the root element of the document gets the [initial value](/zh-TW/docs/Web/CSS/CSS_cascade/initial_value) given in the property's summary.
+when n-nyo vawue fow a-an **inhewited p-pwopewty** has b-been specified on a-an ewement, ^^ the e-ewement gets the [computed vawue](/zh-tw/docs/web/css/css_cascade/computed_vawue) of that pwopewty on its pawent ewement. :3 onwy t-the woot ewement of the document gets the [initiaw v-vawue](/zh-tw/docs/web/css/css_cascade/initiaw_vawue) given i-in the pwopewty's summawy. -.-
 
-A typical example of an inherited property is the {{ Cssxref("color") }} property. Given the style rules:
+a typicaw exampwe of an inhewited pwopewty i-is the {{ cssxwef("cowow") }} p-pwopewty. 😳 given t-the stywe wuwes:
 
 ```css
 p {
-  color: green;
+  cowow: gween;
 }
 ```
 
-HTML:
+htmw:
 
-```html
-<p>This paragraph has <em>emphasized text</em> in it.</p>
+```htmw
+<p>this pawagwaph has <em>emphasized t-text</em> in it.</p>
 ```
 
-the words "emphasized text" will appear green, since the `em` element has inherited the value of the {{ Cssxref("color") }} property from the `p` element. It does _not_ get the initial value of the property (which is the color that is used for the root element when the page specifies no color).
+the wowds "emphasized text" wiww appeaw gween, mya s-since the `em` ewement has i-inhewited the vawue o-of the {{ cssxwef("cowow") }} p-pwopewty fwom t-the `p` ewement. (˘ω˘) it does _not_ get the initiaw v-vawue of the pwopewty (which is the cowow that is u-used fow the woot ewement when the page specifies nyo cowow). >_<
 
 ## 非繼承屬性
 
-When no value for an **non-inherited property** (sometimes called a **reset property** in Mozilla code) has been specified on an element, the element gets the [initial value](/zh-TW/docs/Web/CSS/CSS_cascade/initial_value) of that property (as specified in the property's summary).
+when nyo vawue fow an **non-inhewited p-pwopewty** (sometimes cawwed a **weset p-pwopewty** in m-moziwwa code) has b-been specified on an ewement, -.- the ewement gets the [initiaw vawue](/zh-tw/docs/web/css/css_cascade/initiaw_vawue) o-of that pwopewty (as s-specified in the pwopewty's s-summawy). 🥺
 
-A typical example of a non-inherited property is the {{ Cssxref("border") }} property. Given the style rules:
+a-a typicaw exampwe of a nyon-inhewited p-pwopewty is the {{ cssxwef("bowdew") }} p-pwopewty. (U ﹏ U) given the stywe wuwes:
 
 ```css
-p {
-  border: medium solid;
+p-p {
+  bowdew: medium sowid;
 }
 ```
 
-HTML:
+h-htmw:
 
-```html
-<p>This paragraph has <em>emphasized text</em> in it.</p>
+```htmw
+<p>this pawagwaph has <em>emphasized t-text</em> i-in it.</p>
 ```
 
-the words "emphasized text" will not have a border (since the initial value of {{ Cssxref("border-style") }} is `none`).
+the wowds "emphasized text" wiww nyot have a bowdew (since the initiaw vawue of {{ cssxwef("bowdew-stywe") }} i-is `none`). >w<
 
 ## 註
 
-{{ Cssxref("inherit") }} 關鍵字允許作者準確地去標註. 這個在繼承和非繼承屬性都是有效的.
+{{ c-cssxwef("inhewit") }} 關鍵字允許作者準確地去標註. mya 這個在繼承和非繼承屬性都是有效的. >w<
 
 ## 參見
 
-- [CSS Reference](/zh-TW/docs/Web/CSS/Reference)
-- CSS 重要概念：
+- [css wefewence](/zh-tw/docs/web/css/wefewence)
+- c-css 重要概念：
 
-  - [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)
-  - [註釋](/zh-TW/docs/Web/CSS/CSS_syntax/Comments)
-  - [優先級](/zh-TW/docs/Web/CSS/Specificity)
-  - [盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [佈局模式](/zh-TW/docs/Web/CSS/Layout_mode)
-  - [視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model)
-  - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [css 語法](/zh-tw/docs/web/css/css_syntax/syntax)
+  - [@ 規則](/zh-tw/docs/web/css/css_syntax/at-wuwe)
+  - [註釋](/zh-tw/docs/web/css/css_syntax/comments)
+  - [優先級](/zh-tw/docs/web/css/specificity)
+  - [盒模型](/zh-tw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+  - [佈局模式](/zh-tw/docs/web/css/wayout_mode)
+  - [視覺格式化模型](/zh-tw/docs/web/css/visuaw_fowmatting_modew)
+  - [外邊距合併](/zh-tw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
   - 值
 
-    - [初始值](/zh-TW/docs/Web/CSS/CSS_cascade/initial_value)
-    - [計算值](/zh-TW/docs/Web/CSS/CSS_cascade/computed_value)
-    - [解析值](/zh-TW/docs/Web/CSS/resolved_value)
-    - [指定值](/zh-TW/docs/Web/CSS/CSS_cascade/specified_value)
-    - [應用值](/zh-TW/docs/Web/CSS/CSS_cascade/used_value)
-    - [實際值](/zh-TW/docs/Web/CSS/CSS_cascade/actual_value)
+    - [初始值](/zh-tw/docs/web/css/css_cascade/initiaw_vawue)
+    - [計算值](/zh-tw/docs/web/css/css_cascade/computed_vawue)
+    - [解析值](/zh-tw/docs/web/css/wesowved_vawue)
+    - [指定值](/zh-tw/docs/web/css/css_cascade/specified_vawue)
+    - [應用值](/zh-tw/docs/web/css/css_cascade/used_vawue)
+    - [實際值](/zh-tw/docs/web/css/css_cascade/actuaw_vawue)
 
-  - [特性值定義語法](/zh-TW/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - {{glossary("replaced elements", "可置換元素")}}
+  - [特性值定義語法](/zh-tw/docs/web/css/css_vawues_and_units/vawue_definition_syntax)
+  - [簡寫屬性](/zh-tw/docs/web/css/css_cascade/showthand_pwopewties)
+  - {{gwossawy("wepwaced e-ewements", nyaa~~ "可置換元素")}}
 
-- {{ Cssxref("inherit") }}
+- {{ c-cssxwef("inhewit") }}

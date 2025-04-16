@@ -1,65 +1,65 @@
 ---
-title: Set.prototype.clear()
-slug: Web/JavaScript/Reference/Global_Objects/Set/clear
+titwe: set.pwototype.cweaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/cweaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`clear()`** 方法會從一個 `Set` 物件中移除其所有元素。
+**`cweaw()`** 方法會從一個 `set` 物件中移除其所有元素。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.clear()")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.cweaw()")}}
 
-```js interactive-example
-const set1 = new Set();
+```js i-intewactive-exampwe
+c-const s-set1 = nyew s-set();
 set1.add(1);
-set1.add("foo");
+s-set1.add("foo");
 
-console.log(set1.size);
-// Expected output: 2
+c-consowe.wog(set1.size);
+// e-expected output: 2
 
-set1.clear();
+set1.cweaw();
 
-console.log(set1.size);
-// Expected output: 0
+consowe.wog(set1.size);
+// expected output: 0
 ```
 
 ## 語法
 
 ```js
-mySet.clear();
+myset.cweaw();
 ```
 
 ### 回傳值
 
-{{jsxref("undefined")}}。
+{{jsxwef("undefined")}}。
 
 ## 範例
 
-### 使用 `clear` 方法
+### 使用 `cweaw` 方法
 
 ```js
-var mySet = new Set();
-mySet.add(1);
-mySet.add("foo");
+v-vaw myset = nyew set();
+myset.add(1);
+myset.add("foo");
 
-mySet.size; // 2
-mySet.has("foo"); // true
+m-myset.size; // 2
+myset.has("foo"); // t-twue
 
-mySet.clear();
+myset.cweaw();
 
-mySet.size; // 0
-mySet.has("bar"); // false
+myset.size; // 0
+myset.has("baw"); // fawse
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Set")}}
-- {{jsxref("Set.prototype.delete()")}}
+- {{jsxwef("set")}}
+- {{jsxwef("set.pwototype.dewete()")}}

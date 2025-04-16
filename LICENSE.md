@@ -1,238 +1,238 @@
-# Licenses for MDN content
+# wicenses fow mdn content
 
-MDN's content (including prose and code examples) is entirely available
-under various open source licenses. This file covers the types of
-content we provide and what licenses are in effect for each.
+mdn's c-content (incwuding p-pwose and code e-exampwes) is e-entiwewy avaiwabwe
+u-undew vawious o-open souwce wicenses. 😳 t-this fiwe c-covews the types of
+content we pwovide and nyani wicenses awe in effect fow each. 🥺
 
-## License for all prose content
+## w-wicense fow aww pwose content
 
-All prose content is available under
-([CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/)).
+aww pwose c-content is avaiwabwe undew
+([cc-by-sa 2.5](https://cweativecommons.owg/wicenses/by-sa/2.5/)). (///ˬ///✿)
 
-### Text of CC-BY-SA-2.5 license
-
-```
-Creative Commons Attribution-ShareAlike 2.5
-
-CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL SERVICES. DISTRIBUTION OF THIS LICENSE DOES NOT CREATE AN ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS. CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE INFORMATION PROVIDED, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM ITS USE.
-
-License
-
-THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
-
-BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
-
-    1. Definitions
-        a. "Collective Work" means a work, such as a periodical issue, anthology or encyclopedia, in which the Work in its entirety in unmodified form, along with a number of other contributions, constituting separate and independent works in themselves, are assembled into a collective whole. A work that constitutes a Collective Work will not be considered a Derivative Work (as defined below) for the purposes of this License.
-        b. "Derivative Work" means a work based upon the Work or upon the Work and other pre-existing works, such as a translation, musical arrangement, dramatization, fictionalization, motion picture version, sound recording, art reproduction, abridgment, condensation, or any other form in which the Work may be recast, transformed, or adapted, except that a work that constitutes a Collective Work will not be considered a Derivative Work for the purpose of this License. For the avoidance of doubt, where the Work is a musical composition or sound recording, the synchronization of the Work in timed-relation with a moving image ("synching") will be considered a Derivative Work for the purpose of this License.
-        c. "Licensor" means the individual or entity that offers the Work under the terms of this License.
-        d. "Original Author" means the individual or entity who created the Work.
-        e. "Work" means the copyrightable work of authorship offered under the terms of this License.
-        f. "You" means an individual or entity exercising rights under this License who has not previously violated the terms of this License with respect to the Work, or who has received express permission from the Licensor to exercise rights under this License despite a previous violation.
-        g. "License Elements" means the following high-level license attributes as selected by Licensor and indicated in the title of this License: Attribution, ShareAlike.
-    2. Fair Use Rights. Nothing in this license is intended to reduce, limit, or restrict any rights arising from fair use, first sale or other limitations on the exclusive rights of the copyright owner under copyright law or other applicable laws.
-    3. License Grant. Subject to the terms and conditions of this License, Licensor hereby grants You a worldwide, royalty-free, non-exclusive, perpetual (for the duration of the applicable copyright) license to exercise the rights in the Work as stated below:
-        a. to reproduce the Work, to incorporate the Work into one or more Collective Works, and to reproduce the Work as incorporated in the Collective Works;
-        b. to create and reproduce Derivative Works;
-        c. to distribute copies or phonorecords of, display publicly, perform publicly, and perform publicly by means of a digital audio transmission the Work including as incorporated in Collective Works;
-        d. to distribute copies or phonorecords of, display publicly, perform publicly, and perform publicly by means of a digital audio transmission Derivative Works.
-        e. For the avoidance of doubt, where the work is a musical composition:
-            i. Performance Royalties Under Blanket Licenses. Licensor waives the exclusive right to collect, whether individually or via a performance rights society (e.g. ASCAP, BMI, SESAC), royalties for the public performance or public digital performance (e.g. webcast) of the Work.
-            ii. Mechanical Rights and Statutory Royalties. Licensor waives the exclusive right to collect, whether individually or via a music rights society or designated agent (e.g. Harry Fox Agency), royalties for any phonorecord You create from the Work ("cover version") and distribute, subject to the compulsory license created by 17 USC Section 115 of the US Copyright Act (or the equivalent in other jurisdictions).
-        f. Webcasting Rights and Statutory Royalties. For the avoidance of doubt, where the Work is a sound recording, Licensor waives the exclusive right to collect, whether individually or via a performance-rights society (e.g. SoundExchange), royalties for the public digital performance (e.g. webcast) of the Work, subject to the compulsory license created by 17 USC Section 114 of the US Copyright Act (or the equivalent in other jurisdictions).
-
-    The above rights may be exercised in all media and formats whether now known or hereafter devised. The above rights include the right to make such modifications as are technically necessary to exercise the rights in other media and formats. All rights not expressly granted by Licensor are hereby reserved.
-    4. Restrictions. The license granted in Section 3 above is expressly made subject to and limited by the following restrictions:
-        a. You may distribute, publicly display, publicly perform, or publicly digitally perform the Work only under the terms of this License, and You must include a copy of, or the Uniform Resource Identifier for, this License with every copy or phonorecord of the Work You distribute, publicly display, publicly perform, or publicly digitally perform. You may not offer or impose any terms on the Work that alter or restrict the terms of this License or the recipients' exercise of the rights granted hereunder. You may not sublicense the Work. You must keep intact all notices that refer to this License and to the disclaimer of warranties. You may not distribute, publicly display, publicly perform, or publicly digitally perform the Work with any technological measures that control access or use of the Work in a manner inconsistent with the terms of this License Agreement. The above applies to the Work as incorporated in a Collective Work, but this does not require the Collective Work apart from the Work itself to be made subject to the terms of this License. If You create a Collective Work, upon notice from any Licensor You must, to the extent practicable, remove from the Collective Work any credit as required by clause 4(c), as requested. If You create a Derivative Work, upon notice from any Licensor You must, to the extent practicable, remove from the Derivative Work any credit as required by clause 4(c), as requested.
-        b. You may distribute, publicly display, publicly perform, or publicly digitally perform a Derivative Work only under the terms of this License, a later version of this License with the same License Elements as this License, or a Creative Commons iCommons license that contains the same License Elements as this License (e.g. Attribution-ShareAlike 2.5 Japan). You must include a copy of, or the Uniform Resource Identifier for, this License or other license specified in the previous sentence with every copy or phonorecord of each Derivative Work You distribute, publicly display, publicly perform, or publicly digitally perform. You may not offer or impose any terms on the Derivative Works that alter or restrict the terms of this License or the recipients' exercise of the rights granted hereunder, and You must keep intact all notices that refer to this License and to the disclaimer of warranties. You may not distribute, publicly display, publicly perform, or publicly digitally perform the Derivative Work with any technological measures that control access or use of the Work in a manner inconsistent with the terms of this License Agreement. The above applies to the Derivative Work as incorporated in a Collective Work, but this does not require the Collective Work apart from the Derivative Work itself to be made subject to the terms of this License.
-        c. If you distribute, publicly display, publicly perform, or publicly digitally perform the Work or any Derivative Works or Collective Works, You must keep intact all copyright notices for the Work and provide, reasonable to the medium or means You are utilizing: (i) the name of the Original Author (or pseudonym, if applicable) if supplied, and/or (ii) if the Original Author and/or Licensor designate another party or parties (e.g. a sponsor institute, publishing entity, journal) for attribution in Licensor's copyright notice, terms of service or by other reasonable means, the name of such party or parties; the title of the Work if supplied; to the extent reasonably practicable, the Uniform Resource Identifier, if any, that Licensor specifies to be associated with the Work, unless such URI does not refer to the copyright notice or licensing information for the Work; and in the case of a Derivative Work, a credit identifying the use of the Work in the Derivative Work (e.g., "French translation of the Work by Original Author," or "Screenplay based on original Work by Original Author"). Such credit may be implemented in any reasonable manner; provided, however, that in the case of a Derivative Work or Collective Work, at a minimum such credit will appear where any other comparable authorship credit appears and in a manner at least as prominent as such other comparable authorship credit.
-    5. Representations, Warranties and Disclaimer
-
-    UNLESS OTHERWISE AGREED TO BY THE PARTIES IN WRITING, LICENSOR OFFERS THE WORK AS-IS AND MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING THE MATERIALS, EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, WARRANTIES OF TITLE, MERCHANTIBILITY, FITNESS FOR A PARTICULAR PURPOSE, NONINFRINGEMENT, OR THE ABSENCE OF LATENT OR OTHER DEFECTS, ACCURACY, OR THE PRESENCE OF ABSENCE OF ERRORS, WHETHER OR NOT DISCOVERABLE. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO SUCH EXCLUSION MAY NOT APPLY TO YOU.
-    6. Limitation on Liability. EXCEPT TO THE EXTENT REQUIRED BY APPLICABLE LAW, IN NO EVENT WILL LICENSOR BE LIABLE TO YOU ON ANY LEGAL THEORY FOR ANY SPECIAL, INCIDENTAL, CONSEQUENTIAL, PUNITIVE OR EXEMPLARY DAMAGES ARISING OUT OF THIS LICENSE OR THE USE OF THE WORK, EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
-    7. Termination
-        a. This License and the rights granted hereunder will terminate automatically upon any breach by You of the terms of this License. Individuals or entities who have received Derivative Works or Collective Works from You under this License, however, will not have their licenses terminated provided such individuals or entities remain in full compliance with those licenses. Sections 1, 2, 5, 6, 7, and 8 will survive any termination of this License.
-        b. Subject to the above terms and conditions, the license granted here is perpetual (for the duration of the applicable copyright in the Work). Notwithstanding the above, Licensor reserves the right to release the Work under different license terms or to stop distributing the Work at any time; provided, however that any such election will not serve to withdraw this License (or any other license that has been, or is required to be, granted under the terms of this License), and this License will continue in full force and effect unless terminated as stated above.
-    8. Miscellaneous
-        a. Each time You distribute or publicly digitally perform the Work or a Collective Work, the Licensor offers to the recipient a license to the Work on the same terms and conditions as the license granted to You under this License.
-        b. Each time You distribute or publicly digitally perform a Derivative Work, Licensor offers to the recipient a license to the original Work on the same terms and conditions as the license granted to You under this License.
-        c. If any provision of this License is invalid or unenforceable under applicable law, it shall not affect the validity or enforceability of the remainder of the terms of this License, and without further action by the parties to this agreement, such provision shall be reformed to the minimum extent necessary to make such provision valid and enforceable.
-        d. No term or provision of this License shall be deemed waived and no breach consented to unless such waiver or consent shall be in writing and signed by the party to be charged with such waiver or consent.
-        e. This License constitutes the entire agreement between the parties with respect to the Work licensed here. There are no understandings, agreements or representations with respect to the Work not specified here. Licensor shall not be bound by any additional provisions that may appear in any communication from You. This License may not be modified without the mutual written agreement of the Licensor and You.
-
-Creative Commons is not a party to this License, and makes no warranty whatsoever in connection with the Work. Creative Commons will not be liable to You or any party on any legal theory for any damages whatsoever, including without limitation any general, special, incidental or consequential damages arising in connection to this license. Notwithstanding the foregoing two (2) sentences, if Creative Commons has expressly identified itself as the Licensor hereunder, it shall have all rights and obligations of Licensor.
-
-Except for the limited purpose of indicating to the public that the Work is licensed under the CCPL, neither party will use the trademark "Creative Commons" or any related trademark or logo of Creative Commons without the prior written consent of Creative Commons. Any permitted use will be in compliance with Creative Commons' then-current trademark usage guidelines, as may be published on its website or otherwise made available upon request from time to time.
-
-Creative Commons may be contacted at http://creativecommons.org/.
-```
-
-## Licenses for code examples and snippets
-
-### Added on or after August 20, 2010
-
-Code examples and snippets added on or after August 20, 2010 are in the public domain
-([CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode)). No licensing notice
-is necessary, but if you need one, you can use:
+### t-text of cc-by-sa-2.5 wicense
 
 ```
-Any copyright is dedicated to the Public Domain. http://creativecommons.org/publicdomain/zero/1.0/
+cweative commons attwibution-shaweawike 2.5
+
+c-cweative commons cowpowation is n-nyot a waw fiwm a-and does nyot pwovide wegaw sewvices. mya distwibution of this wicense does nyot cweate a-an attowney-cwient wewationship. (✿oωo) cweative commons pwovides this infowmation o-on an "as-is" basis. ^•ﻌ•^ cweative c-commons makes nyo w-wawwanties wegawding t-the infowmation p-pwovided, o.O and discwaims wiabiwity fow damages w-wesuwting fwom its use. o.O
+
+wicense
+
+the wowk (as d-defined bewow) is pwovided undew the tewms of this cweative commons pubwic wicense ("ccpw" ow "wicense"). XD the w-wowk is pwotected by copywight a-and/ow othew appwicabwe w-waw. any u-use of the wowk othew than as authowized undew this wicense ow c-copywight waw is p-pwohibited. ^•ﻌ•^
+
+by exewcising any w-wights to the wowk p-pwovided hewe, ʘwʘ you accept and a-agwee to be bound by the tewms o-of this wicense. (U ﹏ U) the wicensow gwants you the wights c-contained hewe in considewation o-of youw acceptance of such t-tewms and conditions. 😳😳😳
+
+    1. 🥺 d-definitions
+        a. (///ˬ///✿) "cowwective wowk" means a wowk, (˘ω˘) such as a pewiodicaw issue, :3 anthowogy ow encycwopedia, /(^•ω•^) in which t-the wowk in i-its entiwety in unmodified fowm, :3 a-awong with a nyumbew o-of othew c-contwibutions, mya constituting sepawate and independent wowks in themsewves, XD a-awe assembwed into a cowwective whowe. (///ˬ///✿) a wowk that constitutes a cowwective w-wowk wiww nyot be considewed a-a dewivative w-wowk (as defined b-bewow) fow the puwposes of this w-wicense. 🥺
+        b-b. o.O "dewivative w-wowk" means a wowk b-based upon the wowk ow upon the wowk and othew p-pwe-existing w-wowks, mya such as a t-twanswation, rawr x3 musicaw a-awwangement, 😳 d-dwamatization, fictionawization, 😳😳😳 motion pictuwe vewsion, >_< sound w-wecowding, >w< awt wepwoduction, rawr x3 abwidgment, XD condensation, ^^ ow any othew fowm in which the wowk may b-be wecast, (✿oωo) twansfowmed, >w< ow adapted, 😳😳😳 except that a wowk that constitutes a-a cowwective w-wowk wiww n-nyot be considewed a dewivative w-wowk fow the puwpose of this wicense. f-fow the avoidance o-of doubt, whewe the wowk is a musicaw composition ow sound wecowding, (ꈍᴗꈍ) the synchwonization o-of the wowk in timed-wewation w-with a moving image ("synching") wiww be considewed a-a dewivative w-wowk fow the puwpose of this wicense. (✿oωo)
+        c. (˘ω˘) "wicensow" means t-the individuaw o-ow entity that offews the wowk u-undew the tewms o-of this wicense.
+        d. nyaa~~ "owiginaw authow" means the individuaw ow entity who c-cweated the wowk. ( ͡o ω ͡o )
+        e-e. 🥺 "wowk" m-means the copywightabwe wowk o-of authowship o-offewed undew the tewms of this w-wicense. (U ﹏ U)
+        f. "you" means an individuaw ow entity exewcising wights undew t-this wicense who h-has nyot pweviouswy viowated the tewms of this w-wicense with wespect t-to the wowk, ( ͡o ω ͡o ) ow who has weceived expwess pewmission fwom the w-wicensow to exewcise wights undew this wicense despite a pwevious viowation. (///ˬ///✿)
+        g-g. (///ˬ///✿) "wicense ewements" means the fowwowing h-high-wevew wicense a-attwibutes as sewected by wicensow and indicated in the titwe o-of this wicense: a-attwibution, (✿oωo) shaweawike. (U ᵕ U❁)
+    2. ʘwʘ faiw use wights. ʘwʘ nyothing in t-this wicense is intended to weduce, XD w-wimit, ow westwict any wights awising fwom faiw use, (✿oωo) fiwst s-sawe ow othew wimitations on the e-excwusive wights o-of the copywight ownew undew copywight w-waw ow othew appwicabwe w-waws. ^•ﻌ•^
+    3. wicense g-gwant. ^•ﻌ•^ subject t-to the tewms and conditions o-of this wicense, >_< w-wicensow heweby gwants you a wowwdwide, mya woyawty-fwee, σωσ n-nyon-excwusive, rawr p-pewpetuaw (fow t-the duwation of the appwicabwe copywight) w-wicense to exewcise the wights i-in the wowk as stated b-bewow:
+        a. (✿oωo) to wepwoduce the wowk, :3 to incowpowate the w-wowk into one o-ow mowe cowwective w-wowks, and to w-wepwoduce the wowk as incowpowated i-in the cowwective wowks;
+        b. rawr x3 to cweate and wepwoduce dewivative wowks;
+        c. ^^ to d-distwibute copies ow phonowecowds o-of, ^^ dispway pubwicwy, OwO pewfowm p-pubwicwy, ʘwʘ and pewfowm pubwicwy by m-means of a digitaw audio twansmission t-the wowk i-incwuding as incowpowated i-in cowwective w-wowks;
+        d-d. /(^•ω•^) to distwibute copies ow phonowecowds of, dispway pubwicwy, ʘwʘ pewfowm pubwicwy, (⑅˘꒳˘) and pewfowm pubwicwy by m-means of a digitaw a-audio twansmission d-dewivative wowks. UwU
+        e-e. -.- fow the avoidance of doubt, :3 whewe the wowk is a musicaw composition:
+            i-i. >_< pewfowmance w-woyawties undew bwanket wicenses. nyaa~~ w-wicensow waives the excwusive wight to cowwect, ( ͡o ω ͡o ) w-whethew individuawwy o-ow via a pewfowmance wights s-society (e.g. o.O a-ascap, bmi, :3 sesac), woyawties fow the pubwic pewfowmance ow pubwic digitaw pewfowmance (e.g. (˘ω˘) w-webcast) of the w-wowk. rawr x3
+            i-ii. (U ᵕ U❁) mechanicaw w-wights and statutowy w-woyawties. 🥺 wicensow waives t-the excwusive w-wight to cowwect, >_< whethew individuawwy o-ow via a m-music wights society ow designated a-agent (e.g. :3 hawwy fox agency), :3 woyawties fow a-any phonowecowd you cweate fwom t-the wowk ("covew v-vewsion") and distwibute, (ꈍᴗꈍ) subject t-to the compuwsowy wicense cweated by 17 usc section 115 o-of the u-us copywight act (ow t-the equivawent in othew juwisdictions). σωσ
+        f. webcasting wights and s-statutowy woyawties. 😳 fow the avoidance of doubt, mya w-whewe the wowk i-is a sound wecowding, wicensow waives t-the excwusive wight to cowwect, (///ˬ///✿) w-whethew individuawwy o-ow via a pewfowmance-wights society (e.g. ^^ s-soundexchange), (✿oωo) woyawties fow the pubwic digitaw p-pewfowmance (e.g. ( ͡o ω ͡o ) w-webcast) of the wowk, ^^;; subject t-to the compuwsowy wicense c-cweated by 17 usc s-section 114 of t-the us copywight act (ow the equivawent in othew juwisdictions).
+
+    the above wights may be exewcised in aww media and fowmats whethew now known ow heweaftew devised. :3 the above wights incwude the wight to m-make such modifications a-as awe technicawwy nyecessawy to exewcise t-the wights in o-othew media and f-fowmats. 😳 aww wights nyot expwesswy g-gwanted by wicensow awe heweby w-wesewved. XD
+    4. w-westwictions. (///ˬ///✿) the wicense gwanted i-in section 3 above is expwesswy m-made subject t-to and wimited by the fowwowing westwictions:
+        a-a. o.O you may d-distwibute, o.O pubwicwy d-dispway, XD p-pubwicwy pewfowm, ^^;; o-ow pubwicwy digitawwy p-pewfowm t-the wowk onwy undew t-the tewms of t-this wicense, 😳😳😳 and you must incwude a-a copy of, (U ᵕ U❁) o-ow the unifowm wesouwce i-identifiew fow, /(^•ω•^) this wicense w-with evewy copy ow phonowecowd of the wowk y-you distwibute, pubwicwy dispway, 😳😳😳 p-pubwicwy pewfowm, rawr x3 o-ow pubwicwy d-digitawwy pewfowm. ʘwʘ you may nyot o-offew ow impose any tewms on the w-wowk that awtew ow westwict the t-tewms of this wicense ow the wecipients' e-exewcise of the wights gwanted heweundew. UwU you may nyot subwicense the w-wowk. (⑅˘꒳˘) you must keep intact aww nyotices t-that wefew t-to this wicense and to the discwaimew of wawwanties. ^^ you may n-nyot distwibute, 😳😳😳 pubwicwy dispway, òωó p-pubwicwy pewfowm, ^^;; o-ow pubwicwy d-digitawwy pewfowm the wowk with any technowogicaw m-measuwes that c-contwow access ow use of the wowk i-in a mannew inconsistent with the tewms of this w-wicense agweement. (✿oωo) the above a-appwies to the wowk a-as incowpowated i-in a cowwective wowk, rawr but this d-does nyot wequiwe t-the cowwective w-wowk apawt fwom t-the wowk itsewf to be made subject t-to the tewms o-of this wicense. XD i-if you cweate a-a cowwective w-wowk, 😳 upon nyotice f-fwom any wicensow y-you must, (U ᵕ U❁) to t-the extent pwacticabwe, UwU wemove f-fwom the cowwective wowk any cwedit a-as wequiwed by cwause 4(c), OwO a-as wequested. 😳 if y-you cweate a dewivative w-wowk, (˘ω˘) upon nyotice fwom any wicensow you must, òωó to the e-extent pwacticabwe, OwO w-wemove fwom t-the dewivative wowk any cwedit as wequiwed by cwause 4(c), (✿oωo) as wequested. (⑅˘꒳˘)
+        b-b. /(^•ω•^) you may distwibute, 🥺 p-pubwicwy dispway, pubwicwy p-pewfowm, -.- ow pubwicwy d-digitawwy pewfowm a dewivative wowk onwy undew the tewms o-of this wicense, ( ͡o ω ͡o ) a-a watew vewsion o-of this wicense w-with the same wicense ewements as this wicense, 😳😳😳 o-ow a cweative c-commons icommons wicense that contains the same w-wicense ewements as this wicense (e.g. (˘ω˘) attwibution-shaweawike 2.5 j-japan). ^^ you must incwude a copy o-of, σωσ ow the unifowm w-wesouwce identifiew fow, 🥺 this w-wicense ow othew w-wicense specified in the pwevious s-sentence with evewy copy ow p-phonowecowd of e-each dewivative w-wowk you distwibute, p-pubwicwy dispway, 🥺 pubwicwy p-pewfowm, /(^•ω•^) ow pubwicwy d-digitawwy p-pewfowm. (⑅˘꒳˘) you may nyot offew ow impose a-any tewms on the dewivative wowks that awtew o-ow westwict the t-tewms of this w-wicense ow the wecipients' exewcise of the wights gwanted heweundew, and you must k-keep intact aww nyotices that w-wefew to this wicense a-and to the discwaimew of wawwanties. -.- you m-may nyot distwibute, 😳 pubwicwy dispway, 😳😳😳 p-pubwicwy p-pewfowm, >w< ow pubwicwy d-digitawwy pewfowm t-the dewivative w-wowk with any technowogicaw measuwes that contwow access ow use of the wowk i-in a mannew inconsistent with t-the tewms of this wicense agweement. UwU the above appwies to the dewivative w-wowk as incowpowated in a cowwective wowk, /(^•ω•^) but this does nyot wequiwe the c-cowwective wowk a-apawt fwom the dewivative wowk i-itsewf to be made subject to the tewms of this w-wicense. 🥺
+        c-c. >_< if you distwibute, rawr pubwicwy d-dispway, (ꈍᴗꈍ) pubwicwy pewfowm, -.- ow pubwicwy d-digitawwy pewfowm the wowk ow any dewivative wowks ow cowwective w-wowks, ( ͡o ω ͡o ) you must keep intact aww copywight n-nyotices fow t-the wowk and pwovide, (⑅˘꒳˘) w-weasonabwe to the medium ow means you awe u-utiwizing: (i) the nyame of the owiginaw authow (ow pseudonym, mya if appwicabwe) if s-suppwied, rawr x3 and/ow (ii) i-if the owiginaw a-authow and/ow w-wicensow designate anothew pawty ow pawties (e.g. (ꈍᴗꈍ) a-a sponsow i-institute, ʘwʘ pubwishing entity, :3 jouwnaw) fow attwibution i-in wicensow's copywight nyotice, o.O tewms of s-sewvice ow by othew weasonabwe means, /(^•ω•^) the nyame o-of such pawty o-ow pawties; the titwe of the wowk i-if suppwied; to t-the extent weasonabwy p-pwacticabwe, OwO the unifowm wesouwce identifiew, σωσ i-if any, (ꈍᴗꈍ) that wicensow specifies to be associated w-with the wowk, ( ͡o ω ͡o ) unwess such uwi does not wefew to the copywight n-nyotice ow w-wicensing infowmation f-fow the wowk; a-and in the c-case of a dewivative wowk, rawr x3 a cwedit i-identifying the use of the wowk in the dewivative w-wowk (e.g., "fwench twanswation o-of the wowk by owiginaw authow," ow "scweenpway b-based on owiginaw w-wowk by owiginaw authow"). UwU s-such cwedit may be impwemented i-in any weasonabwe m-mannew; pwovided, o.O howevew, OwO that i-in the case o-of a dewivative wowk ow cowwective w-wowk, o.O at a minimum such cwedit wiww appeaw whewe any othew compawabwe a-authowship cwedit appeaws a-and in a mannew at weast as pwominent as such o-othew compawabwe a-authowship cwedit. ^^;;
+    5. w-wepwesentations, (⑅˘꒳˘) wawwanties a-and discwaimew
+
+    u-unwess othewwise agweed t-to by the pawties in wwiting, (ꈍᴗꈍ) w-wicensow offews the wowk as-is a-and makes nyo wepwesentations ow w-wawwanties of any kind concewning the matewiaws, o.O expwess, impwied, (///ˬ///✿) statutowy ow o-othewwise, 😳😳😳 incwuding, UwU w-without wimitation, nyaa~~ wawwanties of titwe, (✿oωo) mewchantibiwity, -.- f-fitness fow a pawticuwaw puwpose, :3 n-nyoninfwingement, (⑅˘꒳˘) o-ow the absence of watent ow othew defects, >_< accuwacy, UwU ow the pwesence of absence o-of ewwows, rawr whethew ow nyot discovewabwe. (ꈍᴗꈍ) some j-juwisdictions do nyot awwow t-the excwusion of i-impwied wawwanties, ^•ﻌ•^ so such excwusion m-may nyot a-appwy to you. ^^
+    6. w-wimitation o-on wiabiwity. XD except t-to the extent w-wequiwed by appwicabwe waw, (///ˬ///✿) in nyo event wiww wicensow be wiabwe to you on any wegaw theowy fow a-any speciaw, σωσ i-incidentaw, :3 consequentiaw, >w< p-punitive o-ow exempwawy d-damages awising o-out of this wicense ow the use of the wowk, (ˆ ﻌ ˆ)♡ even if wicensow has been advised of t-the possibiwity o-of such damages. (U ᵕ U❁)
+    7. :3 tewmination
+        a. ^^ this wicense and t-the wights gwanted h-heweundew wiww t-tewminate automaticawwy upon any bweach by you o-of the tewms of this wicense. ^•ﻌ•^ individuaws ow e-entities who have w-weceived dewivative wowks ow cowwective wowks f-fwom you undew this wicense, (///ˬ///✿) howevew, w-wiww nyot h-have theiw wicenses tewminated pwovided s-such individuaws o-ow entities w-wemain in fuww c-compwiance with t-those wicenses. 🥺 s-sections 1, ʘwʘ 2, 5, 6, (✿oωo) 7, and 8 w-wiww suwvive any t-tewmination of this wicense. rawr
+        b-b. OwO subject to the above tewms and conditions, ^^ t-the wicense gwanted hewe is p-pewpetuaw (fow the duwation of t-the appwicabwe c-copywight in the wowk). nyotwithstanding the above, ʘwʘ w-wicensow wesewves the wight to wewease the wowk u-undew diffewent w-wicense tewms ow to stop distwibuting the wowk a-at any time; p-pwovided, σωσ howevew that any such e-ewection wiww nyot sewve to withdwaw this wicense (ow a-any othew w-wicense that has been, (⑅˘꒳˘) ow is wequiwed t-to be, (ˆ ﻌ ˆ)♡ gwanted u-undew the tewms of this wicense), :3 and this w-wicense wiww continue i-in fuww fowce a-and effect unwess t-tewminated as stated above. ʘwʘ
+    8. miscewwaneous
+        a. (///ˬ///✿) each time you distwibute ow pubwicwy digitawwy pewfowm the wowk o-ow a cowwective w-wowk, the wicensow o-offews to the w-wecipient a wicense t-to the wowk o-on the same tewms and conditions a-as the wicense g-gwanted to you undew this wicense. (ˆ ﻌ ˆ)♡
+        b-b. 🥺 e-each time you distwibute ow pubwicwy digitawwy p-pewfowm a dewivative wowk, rawr wicensow offews to the w-wecipient a wicense to the owiginaw w-wowk on the s-same tewms and conditions as the w-wicense gwanted t-to you undew t-this wicense. (U ﹏ U)
+        c. if any p-pwovision of this w-wicense is invawid ow unenfowceabwe u-undew appwicabwe waw, ^^ it shaww n-not affect t-the vawidity ow e-enfowceabiwity of the wemaindew o-of the tewms of this wicense, σωσ and without fuwthew a-action by the pawties to this agweement, :3 such pwovision shaww be wefowmed to the minimum extent nyecessawy to m-make such pwovision vawid and enfowceabwe. ^^
+        d. no tewm ow pwovision of this wicense shaww be deemed waived and no bweach c-consented to unwess such waivew ow consent shaww b-be in wwiting and signed by the p-pawty to be chawged with such waivew ow consent.
+        e-e. (✿oωo) this wicense constitutes t-the entiwe agweement between t-the pawties with w-wespect to the wowk wicensed hewe. òωó thewe awe n-nyo undewstandings, (U ᵕ U❁) agweements ow wepwesentations with wespect t-to the wowk nyot specified hewe. ʘwʘ w-wicensow shaww nyot be bound by a-any additionaw pwovisions that m-may appeaw in any c-communication fwom you. ( ͡o ω ͡o ) this wicense may nyot b-be modified without the mutuaw wwitten agweement o-of the wicensow and you.
+
+cweative commons is nyot a pawty to this wicense, σωσ and m-makes nyo wawwanty n-nyanisoevew in connection with t-the wowk. (ˆ ﻌ ˆ)♡ cweative c-commons wiww nyot be wiabwe t-to you ow any pawty on any wegaw theowy fow any damages nyanisoevew, (˘ω˘) incwuding w-without wimitation a-any genewaw, 😳 speciaw, incidentaw o-ow consequentiaw d-damages awising in connection t-to this wicense. ^•ﻌ•^ nyotwithstanding the fowegoing t-two (2) sentences, σωσ if cweative commons has expwesswy i-identified i-itsewf as the wicensow heweundew, 😳😳😳 it shaww have a-aww wights and obwigations of wicensow. rawr
+
+except fow the wimited puwpose of indicating to the pubwic that the wowk is wicensed u-undew the ccpw, >_< n-nyeithew pawty wiww use the twademawk "cweative c-commons" ow any w-wewated twademawk ow wogo of cweative c-commons without the pwiow wwitten consent of cweative commons. ʘwʘ any pewmitted use wiww be i-in compwiance with cweative commons' then-cuwwent twademawk usage guidewines, (ˆ ﻌ ˆ)♡ as m-may be pubwished o-on its website o-ow othewwise made avaiwabwe upon wequest fwom time to time. ^^;;
+
+cweative c-commons m-may be contacted a-at http://cweativecommons.owg/. σωσ
 ```
 
-#### Text of CC0 license
+## wicenses f-fow code exampwes and snippets
+
+### a-added on ow aftew august 20, rawr x3 2010
+
+c-code exampwes and snippets a-added on ow aftew august 20, 😳 2010 awe in the p-pubwic domain
+([cc0](https://cweativecommons.owg/pubwicdomain/zewo/1.0/wegawcode)). 😳😳😳 nyo wicensing n-nyotice
+is nyecessawy, b-but if you nyeed one, 😳😳😳 y-you can use:
 
 ```
-Creative Commons Legal Code
-
-CC0 1.0 Universal
-
-    CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE
-    LEGAL SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN
-    ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS
-    INFORMATION ON AN "AS-IS" BASIS. CREATIVE COMMONS MAKES NO WARRANTIES
-    REGARDING THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
-    PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM
-    THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED
-    HEREUNDER.
-
-Statement of Purpose
-
-The laws of most jurisdictions throughout the world automatically confer
-exclusive Copyright and Related Rights (defined below) upon the creator
-and subsequent owner(s) (each and all, an "owner") of an original work of
-authorship and/or a database (each, a "Work").
-
-Certain owners wish to permanently relinquish those rights to a Work for
-the purpose of contributing to a commons of creative, cultural and
-scientific works ("Commons") that the public can reliably and without fear
-of later claims of infringement build upon, modify, incorporate in other
-works, reuse and redistribute as freely as possible in any form whatsoever
-and for any purposes, including without limitation commercial purposes.
-These owners may contribute to the Commons to promote the ideal of a free
-culture and the further production of creative, cultural and scientific
-works, or to gain reputation or greater distribution for their Work in
-part through the use and efforts of others.
-
-For these and/or other purposes and motivations, and without any
-expectation of additional consideration or compensation, the person
-associating CC0 with a Work (the "Affirmer"), to the extent that he or she
-is an owner of Copyright and Related Rights in the Work, voluntarily
-elects to apply CC0 to the Work and publicly distribute the Work under its
-terms, with knowledge of his or her Copyright and Related Rights in the
-Work and the meaning and intended legal effect of CC0 on those rights.
-
-1. Copyright and Related Rights. A Work made available under CC0 may be
-protected by copyright and related or neighboring rights ("Copyright and
-Related Rights"). Copyright and Related Rights include, but are not
-limited to, the following:
-
-  i. the right to reproduce, adapt, distribute, perform, display,
-     communicate, and translate a Work;
- ii. moral rights retained by the original author(s) and/or performer(s);
-iii. publicity and privacy rights pertaining to a person's image or
-     likeness depicted in a Work;
- iv. rights protecting against unfair competition in regards to a Work,
-     subject to the limitations in paragraph 4(a), below;
-  v. rights protecting the extraction, dissemination, use and reuse of data
-     in a Work;
- vi. database rights (such as those arising under Directive 96/9/EC of the
-     European Parliament and of the Council of 11 March 1996 on the legal
-     protection of databases, and under any national implementation
-     thereof, including any amended or successor version of such
-     directive); and
-vii. other similar, equivalent or corresponding rights throughout the
-     world based on applicable law or treaty, and any national
-     implementations thereof.
-
-2. Waiver. To the greatest extent permitted by, but not in contravention
-of, applicable law, Affirmer hereby overtly, fully, permanently,
-irrevocably and unconditionally waives, abandons, and surrenders all of
-Affirmer's Copyright and Related Rights and associated claims and causes
-of action, whether now known or unknown (including existing as well as
-future claims and causes of action), in the Work (i) in all territories
-worldwide, (ii) for the maximum duration provided by applicable law or
-treaty (including future time extensions), (iii) in any current or future
-medium and for any number of copies, and (iv) for any purpose whatsoever,
-including without limitation commercial, advertising or promotional
-purposes (the "Waiver"). Affirmer makes the Waiver for the benefit of each
-member of the public at large and to the detriment of Affirmer's heirs and
-successors, fully intending that such Waiver shall not be subject to
-revocation, rescission, cancellation, termination, or any other legal or
-equitable action to disrupt the quiet enjoyment of the Work by the public
-as contemplated by Affirmer's express Statement of Purpose.
-
-3. Public License Fallback. Should any part of the Waiver for any reason
-be judged legally invalid or ineffective under applicable law, then the
-Waiver shall be preserved to the maximum extent permitted taking into
-account Affirmer's express Statement of Purpose. In addition, to the
-extent the Waiver is so judged Affirmer hereby grants to each affected
-person a royalty-free, non transferable, non sublicensable, non exclusive,
-irrevocable and unconditional license to exercise Affirmer's Copyright and
-Related Rights in the Work (i) in all territories worldwide, (ii) for the
-maximum duration provided by applicable law or treaty (including future
-time extensions), (iii) in any current or future medium and for any number
-of copies, and (iv) for any purpose whatsoever, including without
-limitation commercial, advertising or promotional purposes (the
-"License"). The License shall be deemed effective as of the date CC0 was
-applied by Affirmer to the Work. Should any part of the License for any
-reason be judged legally invalid or ineffective under applicable law, such
-partial invalidity or ineffectiveness shall not invalidate the remainder
-of the License, and in such case Affirmer hereby affirms that he or she
-will not (i) exercise any of his or her remaining Copyright and Related
-Rights in the Work or (ii) assert any associated claims and causes of
-action with respect to the Work, in either case contrary to Affirmer's
-express Statement of Purpose.
-
-4. Limitations and Disclaimers.
-
- a. No trademark or patent rights held by Affirmer are waived, abandoned,
-    surrendered, licensed or otherwise affected by this document.
- b. Affirmer offers the Work as-is and makes no representations or
-    warranties of any kind concerning the Work, express, implied,
-    statutory or otherwise, including without limitation warranties of
-    title, merchantability, fitness for a particular purpose, non
-    infringement, or the absence of latent or other defects, accuracy, or
-    the present or absence of errors, whether or not discoverable, all to
-    the greatest extent permissible under applicable law.
- c. Affirmer disclaims responsibility for clearing rights of other persons
-    that may apply to the Work or any use thereof, including without
-    limitation any person's Copyright and Related Rights in the Work.
-    Further, Affirmer disclaims responsibility for obtaining any necessary
-    consents, permissions or other rights required for any use of the
-    Work.
- d. Affirmer understands and acknowledges that Creative Commons is not a
-    party to this document and has no duty or obligation with respect to
-    this CC0 or use of the Work.
+a-any copywight is dedicated to t-the pubwic domain. ( ͡o ω ͡o ) http://cweativecommons.owg/pubwicdomain/zewo/1.0/
 ```
 
-### Added before August 20, 2010
-
-Code examples and snippets added before August 20, 2010 are available under
-the [MIT license](https://opensource.org/licenses/MIT). You should insert
-the following attribution information into the MIT license template:
+#### text o-of cc0 wicense
 
 ```
-© <date of last page revision> <name of person who created it>
+cweative c-commons wegaw code
+
+c-cc0 1.0 univewsaw
+
+    cweative commons cowpowation i-is nyot a waw fiwm and does nyot pwovide
+    wegaw sewvices. rawr x3 distwibution of this document does nyot cweate an
+    attowney-cwient w-wewationship. σωσ cweative commons pwovides t-this
+    infowmation on an "as-is" b-basis. (˘ω˘) cweative commons makes nyo wawwanties
+    w-wegawding the use of this document ow the i-infowmation ow wowks
+    pwovided heweundew, >w< and d-discwaims wiabiwity fow damages wesuwting fwom
+    t-the use of this document ow the infowmation o-ow wowks pwovided
+    h-heweundew. UwU
+
+statement of puwpose
+
+the waws o-of most juwisdictions t-thwoughout the wowwd automaticawwy c-confew
+e-excwusive copywight and wewated wights (defined b-bewow) upon the cweatow
+and subsequent ownew(s) (each and aww, XD a-an "ownew") of an owiginaw wowk of
+authowship and/ow a database (each, (U ﹏ U) a-a "wowk"). (U ᵕ U❁)
+
+c-cewtain ownews w-wish to pewmanentwy wewinquish those wights to a wowk fow
+the p-puwpose of contwibuting to a commons o-of cweative, (ˆ ﻌ ˆ)♡ cuwtuwaw and
+s-scientific wowks ("commons") t-that the pubwic can wewiabwy and without feaw
+of watew cwaims of infwingement buiwd u-upon, òωó modify, ^•ﻌ•^ i-incowpowate in othew
+wowks, (///ˬ///✿) weuse and wedistwibute a-as fweewy as possibwe in any fowm nyanisoevew
+a-and fow any puwposes, -.- i-incwuding w-without wimitation c-commewciaw puwposes. >w<
+t-these ownews m-may contwibute to the commons to pwomote the i-ideaw of a fwee
+c-cuwtuwe and the f-fuwthew pwoduction o-of cweative, òωó c-cuwtuwaw and s-scientific
+wowks, σωσ ow to gain weputation o-ow gweatew d-distwibution f-fow theiw wowk in
+pawt thwough the use and effowts o-of othews. mya
+
+fow these and/ow othew puwposes and m-motivations, òωó and without any
+expectation of additionaw c-considewation o-ow compensation, 🥺 the pewson
+associating cc0 with a wowk (the "affiwmew"), t-to the extent t-that he ow she
+is an ownew of copywight a-and wewated w-wights in the wowk, (U ﹏ U) vowuntawiwy
+ewects to appwy cc0 to the wowk a-and pubwicwy d-distwibute the wowk undew its
+tewms, with knowwedge o-of his ow hew c-copywight and wewated wights in the
+wowk and t-the meaning and intended wegaw effect of cc0 on those wights. (ꈍᴗꈍ)
+
+1. (˘ω˘) copywight and wewated wights. a-a wowk made avaiwabwe undew cc0 may be
+pwotected b-by copywight and w-wewated ow nyeighbowing w-wights ("copywight and
+w-wewated wights"). (✿oωo) c-copywight and w-wewated wights i-incwude, -.- but awe n-nyot
+wimited to, (ˆ ﻌ ˆ)♡ the fowwowing:
+
+  i. (✿oωo) the wight t-to wepwoduce, ʘwʘ adapt, d-distwibute, (///ˬ///✿) p-pewfowm, rawr dispway,
+     communicate, 🥺 a-and twanswate a-a wowk;
+ ii. mya m-mowaw wights wetained by the owiginaw a-authow(s) a-and/ow pewfowmew(s);
+i-iii. mya pubwicity a-and pwivacy w-wights pewtaining to a pewson's i-image ow
+     wikeness depicted i-in a wowk;
+ iv. mya w-wights pwotecting against unfaiw competition in wegawds to a wowk, (⑅˘꒳˘)
+     s-subject t-to the wimitations in pawagwaph 4(a), (✿oωo) b-bewow;
+  v-v. 😳 wights pwotecting the extwaction, OwO dissemination, (˘ω˘) u-use and weuse o-of data
+     in a-a wowk;
+ vi. (✿oωo) database w-wights (such a-as those awising u-undew diwective 96/9/ec of the
+     euwopean p-pawwiament and of the counciw of 11 mawch 1996 on the wegaw
+     pwotection of d-databases, /(^•ω•^) and u-undew any nyationaw impwementation
+     theweof, rawr x3 incwuding any a-amended ow successow v-vewsion of such
+     diwective); and
+vii. rawr othew s-simiwaw, ( ͡o ω ͡o ) equivawent ow cowwesponding w-wights t-thwoughout the
+     w-wowwd based on appwicabwe waw ow tweaty, ( ͡o ω ͡o ) and any nyationaw
+     i-impwementations theweof. 😳😳😳
+
+2. w-waivew. (U ﹏ U) to the gweatest extent p-pewmitted by, UwU but nyot in contwavention
+of, (U ﹏ U) appwicabwe w-waw, 🥺 affiwmew heweby ovewtwy, ʘwʘ f-fuwwy, pewmanentwy, 😳
+iwwevocabwy and unconditionawwy w-waives, (ˆ ﻌ ˆ)♡ abandons, and s-suwwendews aww of
+affiwmew's copywight and wewated wights and associated cwaims and causes
+of action, >_< whethew nyow k-known ow unknown (incwuding existing a-as weww a-as
+futuwe cwaims a-and causes of action), ^•ﻌ•^ in the wowk (i) in aww tewwitowies
+w-wowwdwide, (✿oωo) (ii) fow the maximum duwation pwovided by a-appwicabwe waw ow
+t-tweaty (incwuding f-futuwe time e-extensions), OwO (iii) in any cuwwent ow futuwe
+medium and fow any nyumbew of copies, (ˆ ﻌ ˆ)♡ a-and (iv) fow any p-puwpose nyanisoevew,
+incwuding without wimitation commewciaw, ^^;; a-advewtising ow pwomotionaw
+puwposes (the "waivew"). nyaa~~ a-affiwmew makes t-the waivew fow t-the benefit of each
+membew of the pubwic at wawge and to the detwiment of affiwmew's heiws and
+s-successows, fuwwy intending that s-such waivew shaww nyot be subject to
+wevocation, o.O wescission, >_< c-cancewwation, (U ﹏ U) tewmination, ^^ ow any o-othew wegaw ow
+equitabwe action to diswupt the q-quiet enjoyment o-of the wowk by t-the pubwic
+as contempwated b-by affiwmew's e-expwess statement of puwpose. UwU
+
+3. p-pubwic w-wicense fawwback. ^^;; shouwd any pawt o-of the waivew fow any weason
+be judged wegawwy i-invawid ow ineffective undew a-appwicabwe waw, òωó t-then the
+waivew shaww be pwesewved t-to the maximum e-extent pewmitted taking into
+account affiwmew's expwess statement o-of puwpose. -.- i-in addition, ( ͡o ω ͡o ) to t-the
+extent the waivew i-is so judged affiwmew heweby gwants to each affected
+pewson a-a woyawty-fwee, o.O nyon twansfewabwe, rawr nyon subwicensabwe, (✿oωo) n-nyon excwusive, σωσ
+iwwevocabwe and unconditionaw w-wicense to exewcise affiwmew's copywight and
+wewated wights i-in the wowk (i) in aww tewwitowies w-wowwdwide, (U ᵕ U❁) (ii) f-fow the
+maximum d-duwation pwovided by appwicabwe w-waw ow tweaty (incwuding futuwe
+t-time extensions), >_< (iii) in a-any cuwwent ow f-futuwe medium and f-fow any nyumbew
+o-of copies, ^^ and (iv) fow any puwpose n-nyanisoevew, rawr i-incwuding without
+w-wimitation commewciaw, >_< advewtising o-ow pwomotionaw puwposes (the
+"wicense"). (⑅˘꒳˘) the wicense shaww be deemed effective as of the date cc0 was
+appwied b-by affiwmew t-to the wowk. >w< shouwd any pawt of t-the wicense fow any
+weason be judged wegawwy invawid o-ow ineffective u-undew appwicabwe w-waw, (///ˬ///✿) such
+p-pawtiaw invawidity ow ineffectiveness s-shaww nyot invawidate the wemaindew
+of the w-wicense, ^•ﻌ•^ and in s-such case affiwmew heweby affiwms that he ow she
+wiww nyot (i) e-exewcise any of his ow hew wemaining c-copywight and wewated
+wights in the wowk ow (ii) a-assewt any associated cwaims a-and causes of
+action with wespect to the wowk, (✿oωo) i-in eithew case contwawy to affiwmew's
+e-expwess statement of puwpose. ʘwʘ
+
+4. w-wimitations a-and discwaimews. >w<
+
+ a. nyo twademawk ow patent w-wights hewd by affiwmew awe waived, :3 abandoned, (ˆ ﻌ ˆ)♡
+    s-suwwendewed, -.- w-wicensed ow o-othewwise affected by this document. rawr
+ b. rawr x3 affiwmew offews the wowk as-is and makes nyo wepwesentations o-ow
+    wawwanties of any kind concewning t-the wowk, (U ﹏ U) expwess, i-impwied, (ˆ ﻌ ˆ)♡
+    statutowy ow othewwise, :3 incwuding w-without wimitation w-wawwanties of
+    titwe, mewchantabiwity, òωó fitness fow a pawticuwaw puwpose, /(^•ω•^) n-nyon
+    infwingement, >w< ow the absence o-of watent ow othew defects, nyaa~~ accuwacy, mya ow
+    t-the pwesent o-ow absence of ewwows, whethew ow n-nyot discovewabwe, a-aww to
+    the gweatest extent p-pewmissibwe undew appwicabwe w-waw. mya
+ c. affiwmew d-discwaims wesponsibiwity f-fow cweawing w-wights of o-othew pewsons
+    that may appwy t-to the wowk ow a-any use theweof, ʘwʘ incwuding without
+    wimitation a-any pewson's copywight and wewated w-wights in the wowk. rawr
+    fuwthew, (˘ω˘) affiwmew discwaims wesponsibiwity fow obtaining any nyecessawy
+    consents, /(^•ω•^) p-pewmissions ow othew wights w-wequiwed fow any use of the
+    w-wowk. (˘ω˘)
+ d. (///ˬ///✿) affiwmew u-undewstands and acknowwedges t-that cweative commons is nyot a
+    p-pawty to this document and h-has nyo duty ow obwigation with wespect to
+    this cc0 ow use of the wowk. (˘ω˘)
 ```
 
-#### Text of MIT license template
+### added befowe august 20, -.- 2010
+
+c-code exampwes and snippets added befowe august 20, -.- 2010 a-awe avaiwabwe undew
+the [mit w-wicense](https://opensouwce.owg/wicenses/mit). ^^ you shouwd insewt
+the fowwowing attwibution infowmation into the mit wicense tempwate:
 
 ```
-Copyright <YEAR> <COPYRIGHT HOLDER>
+© <date of wast page wevision> <name o-of pewson w-who cweated it>
+```
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this
-software and associated documentation files (the "Software"), to deal in the Software
-without restriction, including without limitation the rights to use, copy, modify, merge,
-publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons
-to whom the Software is furnished to do so, subject to the following conditions:
+#### t-text of mit wicense t-tempwate
 
-The above copyright notice and this permission notice shall be included in all copies or
-substantial portions of the Software.
+```
+copywight <yeaw> <copywight h-howdew>
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
-PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
-FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-DEALINGS IN THE SOFTWARE.
+p-pewmission is heweby gwanted, (ˆ ﻌ ˆ)♡ fwee of chawge, UwU t-to any pewson o-obtaining a copy of this
+softwawe a-and associated d-documentation fiwes (the "softwawe"), 🥺 t-to deaw in t-the softwawe
+without w-westwiction, 🥺 incwuding without w-wimitation t-the wights to use, 🥺 c-copy, modify, 🥺 m-mewge, :3
+pubwish, d-distwibute, (˘ω˘) subwicense, ^^;; a-and/ow s-seww copies of t-the softwawe, (ꈍᴗꈍ) and t-to pewmit pewsons
+t-to whom the softwawe is fuwnished to do so, ʘwʘ subject to the fowwowing c-conditions:
+
+the above c-copywight nyotice and this pewmission nyotice shaww b-be incwuded i-in aww copies ow
+s-substantiaw powtions of the softwawe. :3
+
+t-the softwawe i-is pwovided "as is", XD without wawwanty of any kind, UwU expwess ow impwied, rawr x3
+incwuding but nyot wimited t-to the wawwanties of mewchantabiwity, ( ͡o ω ͡o ) fitness fow a pawticuwaw
+p-puwpose and n-nyoninfwingement. :3 in nyo event s-shaww the authows o-ow copywight h-howdews be wiabwe
+f-fow any cwaim, rawr d-damages ow othew w-wiabiwity, ^•ﻌ•^ whethew i-in an action of contwact, 🥺 towt ow
+othewwise, (⑅˘꒳˘) a-awising fwom, :3 out of ow in connection w-with the softwawe ow the u-use ow othew
+deawings i-in the softwawe. (///ˬ///✿)
 ```

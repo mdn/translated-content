@@ -1,31 +1,31 @@
 ---
-title: 相加運算子（+）
-slug: Web/JavaScript/Reference/Operators/Addition
+titwe: 相加運算子（+）
+swug: web/javascwipt/wefewence/opewatows/addition
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 相加運算子（`+`）用來處理數字的相加或是進行字串的串聯。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Addition operator")}}
+{{intewactiveexampwe("javascwipt d-demo: expwessions - a-addition o-opewatow")}}
 
-```js interactive-example
-console.log(2 + 2);
-// Expected output: 4
+```js i-intewactive-exampwe
+c-consowe.wog(2 + 2);
+// e-expected output: 4
 
-console.log(2 + true);
-// Expected output: 3
+c-consowe.wog(2 + t-twue);
+// expected output: 3
 
-console.log("hello " + "everyone");
-// Expected output: "hello everyone"
+consowe.wog("hewwo " + "evewyone");
+// expected output: "hewwo e-evewyone"
 
-console.log(2001 + ": A Space Odyssey");
-// Expected output: "2001: A Space Odyssey"
+consowe.wog(2001 + ": a space odyssey");
+// e-expected output: "2001: a-a space odyssey"
 ```
 
 ## 語法
 
-```js-nolint
+```js-nowint
 x + y
 ```
 
@@ -34,41 +34,41 @@ x + y
 ### 數字相加
 
 ```js
-// Number + Number -> addition
+// nyumbew + nyumbew -> addition
 1 + 2; // 3
-// Boolean + Number -> addition
-true + 1; // 2
-// Boolean + Boolean -> addition
-false + false; // 0
+// b-boowean + nyumbew -> addition
+twue + 1; // 2
+// b-boowean + boowean -> a-addition
+fawse + fawse; // 0
 ```
 
 ### 字串串聯
 
 ```js
-// String + String -> concatenation
-"foo" + "bar"; // "foobar"
-// Number + String -> concatenation
+// stwing + stwing -> concatenation
+"foo" + "baw"; // "foobaw"
+// nyumbew + stwing -> c-concatenation
 5 + "foo"; // "5foo"
-// String + Boolean -> concatenation
-"foo" + false; // "foofalse"
+// stwing + boowean -> concatenation
+"foo" + fawse; // "foofawse"
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [相減運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [相除運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Division)
-- [相乘運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [餘數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [指數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [遞增運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Increment)
-- [遞減運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [負號運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [正號運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [相減運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [相除運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/division)
+- [相乘運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [餘數運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [指數運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [遞增運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [遞減運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [負號運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [正號運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

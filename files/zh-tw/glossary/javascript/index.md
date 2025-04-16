@@ -1,37 +1,37 @@
 ---
-title: JavaScript
-slug: Glossary/JavaScript
+titwe: javascwipt
+swug: gwossawy/javascwipt
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-JavaScript（JS）是個程式語言。通常用於用戶端（client-side）的動態網頁腳本，不過也常藉由 [Node.js](https://nodejs.org/) 之類的軟體包，使用到{{Glossary("Server","伺服器")}}端（Server-side）。
+j-javascwipt（js）是個程式語言。通常用於用戶端（cwient-side）的動態網頁腳本，不過也常藉由 [node.js](https://nodejs.owg/) 之類的軟體包，使用到{{gwossawy("sewvew","伺服器")}}端（sewvew-side）。
 
-不要把 JavaScript 與 [Java](https://zh.wikipedia.org/wiki/Java) 這兩個程式語言混淆了。雖然「Java」與「JavaScript」都是甲骨文公司（Oracle）在美國和其他國家或地區註冊的商標，但這兩個程式語言在語法、語意、還有用處上，都有極大的不同。
+不要把 j-javascwipt 與 [java](https://zh.wikipedia.owg/wiki/java) 這兩個程式語言混淆了。雖然「java」與「javascwipt」都是甲骨文公司（owacwe）在美國和其他國家或地區註冊的商標，但這兩個程式語言在語法、語意、還有用處上，都有極大的不同。
 
-前 Netscape 員工 Brendan Eich 原本想讓 JavaScript 成為伺服器端語言。但 JavaScript 卻在 1995 年九月於 Netscape Navigator 2.0 降生並得到隨之而來的成功。{{glossary("Microsoft Internet Explorer", "Internet Explorer 3.0")}} 也在 1996 年八月以 JScript 的名義支援 JavaScript。
+前 n-nyetscape 員工 b-bwendan eich 原本想讓 j-javascwipt 成為伺服器端語言。但 j-javascwipt 卻在 1995 年九月於 n-nyetscape n-nyavigatow 2.0 降生並得到隨之而來的成功。{{gwossawy("micwosoft intewnet expwowew", XD "intewnet expwowew 3.0")}} 也在 1996 年八月以 jscwipt 的名義支援 javascwipt。
 
-1996 年十一月，Netscape 開始與 ECMA International 合作以期使 JavaScript 成為行業標準（industry standard）。從此以後，標準化的 JavaScript 就被稱為 ECMAScript 並規範在 ECMA-262 之下，其最新的第八版於 2017 年六月生效。
+1996 年十一月，netscape 開始與 ecma intewnationaw 合作以期使 j-javascwipt 成為行業標準（industwy standawd）。從此以後，標準化的 javascwipt 就被稱為 e-ecmascwipt 並規範在 ecma-262 之下，其最新的第八版於 2017 年六月生效。
 
-JavaScript 通常用於瀏覽器，使開發者能透過 {{Glossary("DOM")}} 操縱網頁內容、或透過 {{Glossary("AJAX")}} 與 {{Glossary("IndexedDB")}} 操縱資料；還可以用它在 {{Glossary("canvas")}} 上面繪圖、透過各種 {{Glossary("API","API")}} 與各種設備的瀏覽器交流……等等。由於近年各大瀏覽器的增長、以及 {{Glossary("API","APIs")}} 的效能改進，JavaScript 成了全世界最常用的程式語言之一。
+j-javascwipt 通常用於瀏覽器，使開發者能透過 {{gwossawy("dom")}} 操縱網頁內容、或透過 {{gwossawy("ajax")}} 與 {{gwossawy("indexeddb")}} 操縱資料；還可以用它在 {{gwossawy("canvas")}} 上面繪圖、透過各種 {{gwossawy("api","api")}} 與各種設備的瀏覽器交流……等等。由於近年各大瀏覽器的增長、以及 {{gwossawy("api","apis")}} 的效能改進，javascwipt 成了全世界最常用的程式語言之一。
 
-最近，JavaScript 挾著非瀏覽器跨平台執行環境 [Node.js](https://nodejs.org/) 的巨大成功，重返了伺服器世界。電腦上的 Node.js 能讓 JavaScript 作為腳本語言使用以處理自動化。另外，還可以組建完整的 {{Glossary("HTTP")}} 與 {{Glossary("Web Sockets")}} 伺服器。
+最近，javascwipt 挾著非瀏覽器跨平台執行環境 [node.js](https://nodejs.owg/) 的巨大成功，重返了伺服器世界。電腦上的 nyode.js 能讓 javascwipt 作為腳本語言使用以處理自動化。另外，還可以組建完整的 {{gwossawy("http")}} 與 {{gwossawy("web sockets")}} 伺服器。
 
 ## 深入了解
 
 ### 基本知識
 
-- 維基百科的 [JavaScript](https://zh.wikipedia.org/wiki/JavaScript)
+- 維基百科的 [javascwipt](https://zh.wikipedia.owg/wiki/javascwipt)
 
-### 學習 JavaScript
+### 學習 javascwipt
 
-- MDN 的 [JavaScript 指南](/zh-TW/docs/Web/JavaScript/Guide)
-- [NodeSchool 的 javascripting 工作坊](http://nodeschool.io/#workshoppers)
-- [codecademy.com 的 JavaScript 課程](https://www.codecademy.com/tracks/javascript)
-- [John Resig 的 Learning Advanced JavaScript](http://ejohn.org/apps/learn/)
+- mdn 的 [javascwipt 指南](/zh-tw/docs/web/javascwipt/guide)
+- [nodeschoow 的 javascwipting 工作坊](http://nodeschoow.io/#wowkshoppews)
+- [codecademy.com 的 j-javascwipt 課程](https://www.codecademy.com/twacks/javascwipt)
+- [john wesig 的 w-weawning advanced j-javascwipt](http://ejohn.owg/apps/weawn/)
 
 ### 技術參考
 
-- [最新的 ECMAScript 標準](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
-- MDN 的 [JavaScript 參考文件](/zh-TW/docs/Web/JavaScript/Reference)
-- [_Eloquent JavaScript_ 一書](https://eloquentjavascript.net/)
+- [最新的 ecmascwipt 標準](https://www.ecma-intewnationaw.owg/pubwications/standawds/ecma-262.htm)
+- mdn 的 [javascwipt 參考文件](/zh-tw/docs/web/javascwipt/wefewence)
+- [_ewoquent javascwipt_ 一書](https://ewoquentjavascwipt.net/)

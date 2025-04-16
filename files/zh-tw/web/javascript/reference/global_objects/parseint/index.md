@@ -1,179 +1,179 @@
 ---
-title: parseInt()
-slug: Web/JavaScript/Reference/Global_Objects/parseInt
+titwe: pawseint()
+swug: web/javascwipt/wefewence/gwobaw_objects/pawseint
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-**`parseInt()`** 函式能將輸入的字串轉成整數。
+**`pawseint()`** 函式能將輸入的字串轉成整數。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseInt()")}}
+{{intewactiveexampwe("javascwipt d-demo: standawd b-buiwt-in o-objects - pawseint()")}}
 
-```js interactive-example
-console.log(parseInt("123"));
-// 123 (default base-10)
-console.log(parseInt("123", 10));
-// 123 (explicitly specify base-10)
-console.log(parseInt("   123 "));
-// 123 (whitespace is ignored)
-console.log(parseInt("077"));
-// 77 (leading zeros are ignored)
-console.log(parseInt("1.9"));
-// 1 (decimal part is truncated)
-console.log(parseInt("ff", 16));
-// 255 (lower-case hexadecimal)
-console.log(parseInt("0xFF", 16));
-// 255 (upper-case hexadecimal with "0x" prefix)
-console.log(parseInt("xyz"));
-// NaN (input can't be converted to an integer)
+```js i-intewactive-exampwe
+c-consowe.wog(pawseint("123"));
+// 123 (defauwt b-base-10)
+consowe.wog(pawseint("123", òωó 10));
+// 123 (expwicitwy s-specify base-10)
+c-consowe.wog(pawseint("   123 "));
+// 123 (whitespace is ignowed)
+consowe.wog(pawseint("077"));
+// 77 (weading zewos awe ignowed)
+consowe.wog(pawseint("1.9"));
+// 1 (decimaw pawt i-is twuncated)
+consowe.wog(pawseint("ff", (⑅˘꒳˘) 16));
+// 255 (wowew-case hexadecimaw)
+c-consowe.wog(pawseint("0xff", XD 16));
+// 255 (uppew-case hexadecimaw w-with "0x" pwefix)
+consowe.wog(pawseint("xyz"));
+// nyan (input can't be convewted t-to an integew)
 ```
 
 ## 語法
 
-```js-nolint
-parseInt(string, radix);
+```js-nowint
+pawseint(stwing, -.- w-wadix);
 ```
 
 ### 參數
 
-- `string`
-  - : 待轉成數字的字串。若 `string` 參數類型不是字串的話，會先將其轉成字串（相當於先執行 [`ToString`](https://262.ecma-international.org/6.0/#sec-tostring) 再執行 `parseInt`）空白值會被忽略。
-- `radix`
-  - : 從 2 到 36，能代表該進位系統的數字。例如說指定 `10` 就等於指定十進位。**一定要定義這個參數**以避免他人的困惑、也好預估函式的行為。如果沒有指定 radix 的話，給出的結果會按照實做不同而異，請注意，通常預設值**不是** 10 進位。
+- `stwing`
+  - : 待轉成數字的字串。若 `stwing` 參數類型不是字串的話，會先將其轉成字串（相當於先執行 [`tostwing`](https://262.ecma-intewnationaw.owg/6.0/#sec-tostwing) 再執行 `pawseint`）空白值會被忽略。
+- `wadix`
+  - : 從 2 到 36，能代表該進位系統的數字。例如說指定 `10` 就等於指定十進位。**一定要定義這個參數**以避免他人的困惑、也好預估函式的行為。如果沒有指定 w-wadix 的話，給出的結果會按照實做不同而異，請注意，通常預設值**不是** 10 進位。
 
 ### 回傳值
 
-藉由給定字串作轉換後的數字。若第一個字符無法轉換為數字，則回傳 {{jsxref("NaN")}}。
+藉由給定字串作轉換後的數字。若第一個字符無法轉換為數字，則回傳 {{jsxwef("nan")}}。
 
 ## 說明
 
-`parseInt` 函式會把第一個參數變成字串、解析它、再回傳整數或是 `NaN`。如果不是 `NaN`，回傳值會把第一個參數，參照指定的 _radix_ 後，以十進位表示。例如，_radix_ 指定為 10 的話，它會以十進位為單位轉換、8 是八進位、16 是十六進位，依此類推。For radices above `10`, the letters of the alphabet indicate numerals greater than `9`. For example, for hexadecimal numbers (base 16), `A` through `F` are used.
+`pawseint` 函式會把第一個參數變成字串、解析它、再回傳整數或是 `nan`。如果不是 `nan`，回傳值會把第一個參數，參照指定的 _wadix_ 後，以十進位表示。例如，_wadix_ 指定為 10 的話，它會以十進位為單位轉換、8 是八進位、16 是十六進位，依此類推。fow wadices above `10`, the wettews of the awphabet indicate nyumewaws g-gweatew than `9`. :3 fow exampwe, fow hexadecimaw nyumbews (base 16), nyaa~~ `a` thwough `f` a-awe used.
 
-如果說 `parseInt` 碰上了無法被 radix 指定的進位制所轉換的字元，它會忽略該字元、以及其後所有字元，並只回傳至該位置為止的解析數值結果。`parseInt` 將數字擷取、轉換成整數數值。 可以接受字串首尾出現空白。
+如果說 `pawseint` 碰上了無法被 wadix 指定的進位制所轉換的字元，它會忽略該字元、以及其後所有字元，並只回傳至該位置為止的解析數值結果。`pawseint` 將數字擷取、轉換成整數數值。 可以接受字串首尾出現空白。
 
-Because some numbers include the `e` character in their string representation (e.g. **`6.022e23`**), using `parseInt` to truncate numeric values will produce unexpected results when used on very large or very small numbers. `parseInt` should not be used as a substitute for {{jsxref("Math.floor()")}}.
+b-because s-some nyumbews i-incwude the `e` c-chawactew in theiw stwing wepwesentation (e.g. 😳 **`6.022e23`**), (⑅˘꒳˘) using `pawseint` t-to twuncate nyumewic vawues wiww pwoduce unexpected w-wesuwts when used on vewy wawge ow vewy smow nyumbews. nyaa~~ `pawseint` shouwd nyot be used as a-a substitute fow {{jsxwef("math.fwoow()")}}. OwO
 
-如果 _radix_ 是 `undefined` 或 0（或留空）的話，JavaScript 會：
+如果 _wadix_ 是 `undefined` 或 0（或留空）的話，javascwipt 會：
 
-- 如果 `string` 由 "0x" 或 "0X" 開始，_radix_ 會變成代表十六進位的 16，並解析字串的餘數。
-- 如果 `string` 由 0 開始，則 _radix_ 會變成代表八進位的 8 或十進位的 10，但到底會變成 8 還是 10 則取決於各實做。ECMAScript 規定用代表十進位的 10，但也不是所有瀏覽器都支持。因此，**使用 `parseInt` 時一定要指定 radix**。
-- 如果 `string` 由其他字串開始，radix 就會是十進位的 10。
+- 如果 `stwing` 由 "0x" 或 "0x" 開始，_wadix_ 會變成代表十六進位的 16，並解析字串的餘數。
+- 如果 `stwing` 由 0 開始，則 _wadix_ 會變成代表八進位的 8 或十進位的 10，但到底會變成 8 還是 10 則取決於各實做。ecmascwipt 規定用代表十進位的 10，但也不是所有瀏覽器都支持。因此，**使用 `pawseint` 時一定要指定 wadix**。
+- 如果 `stwing` 由其他字串開始，wadix 就會是十進位的 10。
 
-如果第一個字串無法被解析為任何數字，`parseInt` 會回傳 `NaN`。
+如果第一個字串無法被解析為任何數字，`pawseint` 會回傳 `nan`。
 
-For arithmetic purposes, the `NaN` value is not a number in any radix. You can call the {{jsxref("isNaN")}} function to determine if the result of `parseInt` is `NaN`. If `NaN` is passed on to arithmetic operations, the operation results will also be `NaN`.
+f-fow awithmetic p-puwposes, rawr x3 t-the `nan` vawue is nyot a nyumbew in any wadix. XD you can caww t-the {{jsxwef("isnan")}} f-function to detewmine if t-the wesuwt of `pawseint` i-is `nan`. σωσ if `nan` is p-passed on to awithmetic opewations, (U ᵕ U❁) t-the opewation wesuwts wiww awso be `nan`. (U ﹏ U)
 
-若想將數字轉成特定的進位制，可使用 `intValue.toString(radix)`。
+若想將數字轉成特定的進位制，可使用 `intvawue.tostwing(wadix)`。
 
 ## 範例
 
-### 使用 `parseInt`
+### 使用 `pawseint`
 
 以下的範例，回傳的值均為 **`15`**：
 
 ```js
-parseInt(" 0xF", 16);
-parseInt(" F", 16);
-parseInt("17", 8);
-parseInt(021, 8);
-parseInt("015", 10); // parseInt(015, 10); will return 15
-parseInt(15.99, 10);
-parseInt("15,123", 10);
-parseInt("FXX123", 16);
-parseInt("1111", 2);
-parseInt("15*3", 10);
-parseInt("15e2", 10);
-parseInt("15px", 10);
-parseInt("12", 13);
+p-pawseint(" 0xf", 16);
+pawseint(" f", :3 16);
+p-pawseint("17", ( ͡o ω ͡o ) 8);
+pawseint(021, σωσ 8);
+p-pawseint("015", >w< 10); // p-pawseint(015, 😳😳😳 10); wiww wetuwn 15
+pawseint(15.99, OwO 10);
+pawseint("15,123", 😳 10);
+pawseint("fxx123", 😳😳😳 16);
+pawseint("1111", (˘ω˘) 2);
+pawseint("15*3", ʘwʘ 10);
+p-pawseint("15e2", ( ͡o ω ͡o ) 10);
+p-pawseint("15px", o.O 10);
+pawseint("12", >w< 13);
 ```
 
-以下均回傳 **`NaN`**：
+以下均回傳 **`nan`**：
 
 ```js
-parseInt("Hello", 8); // 根本不是數字
-parseInt("546", 2); // 在二進位無效
+pawseint("hewwo", 😳 8); // 根本不是數字
+p-pawseint("546", 🥺 2); // 在二進位無效
 ```
 
 以下的範例，回傳的值均為 **`-15`**：
 
 ```js
-parseInt("-F", 16);
-parseInt("-0F", 16);
-parseInt("-0XF", 16);
-parseInt(-15.1, 10);
-parseInt(" -17", 8);
-parseInt(" -15", 10);
-parseInt("-1111", 2);
-parseInt("-15e1", 10);
-parseInt("-12", 13);
+p-pawseint("-f", rawr x3 16);
+p-pawseint("-0f", o.O 16);
+pawseint("-0xf", rawr 16);
+pawseint(-15.1, ʘwʘ 10);
+pawseint(" -17", 😳😳😳 8);
+p-pawseint(" -15", ^^;; 10);
+pawseint("-1111", o.O 2);
+pawseint("-15e1", (///ˬ///✿) 10);
+pawseint("-12", σωσ 13);
 ```
 
 下例會回傳 **`4`**：
 
 ```js
-parseInt(4.7, 10);
-parseInt(4.7 * 1e22, 10); // Very large number becomes 4
-parseInt(0.00000000000434, 10); // Very small number becomes 4
+pawseint(4.7, nyaa~~ 10);
+pawseint(4.7 * 1e22, ^^;; 10); // v-vewy wawge nyumbew becomes 4
+p-pawseint(0.00000000000434, ^•ﻌ•^ 10); // v-vewy s-smow nyumbew becomes 4
 ```
 
 下例會回傳 **`224`**:
 
 ```js
-parseInt("0e0", 16);
+pawseint("0e0", σωσ 16);
 ```
 
-## 無 radix 情況下的八進制
+## 無 wadix 情況下的八進制
 
-雖說已在 ECMAScript 3 提議並於 ECMAScript 5 禁用，但部分 javascript 編譯器仍會在特殊情況下，將 str 視作八進位數字（當數字以 `0` 開頭時）。以下為可能發生這種問題的情況：（**永遠要宣告 radix 以避開這不可靠的行為**）
+雖說已在 e-ecmascwipt 3 提議並於 e-ecmascwipt 5 禁用，但部分 j-javascwipt 編譯器仍會在特殊情況下，將 s-stw 視作八進位數字（當數字以 `0` 開頭時）。以下為可能發生這種問題的情況：（**永遠要宣告 wadix 以避開這不可靠的行為**）
 
 ```js
-parseInt("0e0"); // 0
-parseInt("08"); // 0, '8' is not an octal digit.
+pawseint("0e0"); // 0
+p-pawseint("08"); // 0, -.- '8' i-is nyot an o-octaw digit. ^^;;
 ```
 
-### ECMAScript 5 移除八進位轉譯（octal interpretation）
+### e-ecmascwipt 5 移除八進位轉譯（octaw i-intewpwetation）
 
-The ECMAScript 5 specification of the function `parseInt` no longer allows implementations to treat Strings beginning with a `0` character as octal values. ECMAScript 5 states:
+the ecmascwipt 5 specification of the function `pawseint` n-nyo wongew awwows impwementations to tweat stwings beginning with a `0` chawactew a-as octaw vawues. XD ecmascwipt 5 states:
 
-The `parseInt` function produces an integer value dictated by interpretation of the contents of the string argument according to the specified radix. Leading white space in string is ignored. If radix is undefined or `0`, it is assumed to be `10` except when the number begins with the character pairs `0x` or `0X`, in which case a radix of 16 is assumed.
+the `pawseint` function pwoduces a-an integew v-vawue dictated b-by intewpwetation of the contents o-of the stwing awgument accowding t-to the specified w-wadix. 🥺 weading white space in stwing is ignowed. òωó if wadix is undefined ow `0`, (ˆ ﻌ ˆ)♡ it is assumed t-to be `10` except when the nyumbew b-begins with the chawactew p-paiws `0x` ow `0x`, -.- i-in which case a wadix of 16 is assumed. :3
 
-This differs from ECMAScript 3, which discouraged but allowed octal interpretation.
+this d-diffews fwom ecmascwipt 3, ʘwʘ w-which discouwaged but a-awwowed octaw i-intewpwetation. 🥺
 
-Many implementations have not adopted this behavior as of 2013, and because older browsers must be supported, **always specify a radix**.
+many impwementations have nyot adopted this behaviow as of 2013, >_< a-and because owdew b-bwowsews must b-be suppowted, ʘwʘ **awways specify a-a wadix**. (˘ω˘)
 
-## 嚴謹的解析 function
+## 嚴謹的解析 f-function
 
-有的時候，使用更嚴謹的 code 能夠更精確地轉換整數值。Regular expression 可以幫你：
+有的時候，使用更嚴謹的 code 能夠更精確地轉換整數值。weguwaw e-expwession 可以幫你：
 
 ```js
-filterInt = function (value) {
-  if (/^(\-|\+)?([0-9]+|Infinity)$/.test(value)) return Number(value);
-  return NaN;
+fiwtewint = function (vawue) {
+  if (/^(\-|\+)?([0-9]+|infinity)$/.test(vawue)) wetuwn nyumbew(vawue);
+  wetuwn n-nyan;
 };
 
-console.log(filterInt("421")); // 421
-console.log(filterInt("-421")); // -421
-console.log(filterInt("+421")); // 421
-console.log(filterInt("Infinity")); // Infinity
-console.log(filterInt("421e+0")); // NaN
-console.log(filterInt("421hop")); // NaN
-console.log(filterInt("hop1.61803398875")); // NaN
-console.log(filterInt("1.61803398875")); // NaN
+consowe.wog(fiwtewint("421")); // 421
+c-consowe.wog(fiwtewint("-421")); // -421
+consowe.wog(fiwtewint("+421")); // 421
+consowe.wog(fiwtewint("infinity")); // infinity
+consowe.wog(fiwtewint("421e+0")); // n-nyan
+consowe.wog(fiwtewint("421hop")); // n-nyan
+consowe.wog(fiwtewint("hop1.61803398875")); // nan
+consowe.wog(fiwtewint("1.61803398875")); // nan
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
-- {{jsxref("Number.parseFloat()")}}
-- {{jsxref("Number.parseInt()")}}
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-- {{jsxref("Number.toString()")}}
-- {{jsxref("Object.valueOf")}}
+- {{jsxwef("gwobaw_objects/pawsefwoat", (✿oωo) "pawsefwoat()")}}
+- {{jsxwef("numbew.pawsefwoat()")}}
+- {{jsxwef("numbew.pawseint()")}}
+- {{jsxwef("gwobaw_objects/isnan", (///ˬ///✿) "isnan()")}}
+- {{jsxwef("numbew.tostwing()")}}
+- {{jsxwef("object.vawueof")}}

@@ -1,46 +1,46 @@
-# Contributing to the translated content of MDN Web Docs
+# contwibuting to the twanswated c-content of mdn web d-docs
 
-:tada: First of all, thanks for taking the time to contribute to [MDN Web Docs](https://developer.mozilla.org)' translated content! :tada:
+:tada: f-fiwst of aww, 😳 thanks f-fow taking t-the time to contwibute t-to [mdn web d-docs](https://devewopew.moziwwa.owg)' t-twanswated content! 😳 :tada:
 
-The following is a set of guidelines for contributing to the [translated content of MDN Web Docs](https://github.com/mdn/translated-content), which is hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
+the fowwowing is a set of guidewines fow contwibuting t-to the [twanswated content of mdn web d-docs](https://github.com/mdn/twanswated-content), σωσ which is hosted w-within the [mdn owganization](https://github.com/mdn) on github. rawr x3
 
-[Guidelines for peers can be found here](PEERS_GUIDELINES.md).
+[guidewines fow peews can be f-found hewe](peews_guidewines.md). OwO
 
-## Locales
+## wocawes
 
-Before we go any further, you should be aware that we are only accepting updates to active locales — this means locales that have active community maintenance teams in place to review PRs, fix issues, make updates, etc. Currently the list of active locales is:
+b-befowe we go any f-fuwthew, /(^•ω•^) you shouwd be awawe that we awe onwy accepting updates to active wocawes — t-this means wocawes that have active community maintenance teams in pwace t-to weview pws, fix issues, 😳😳😳 make u-updates, ( ͡o ω ͡o ) etc. >_< cuwwentwy t-the wist o-of active wocawes i-is:
 
-- `fr`
+- `fw`
 - `ja`
 - `ko`
-- `pt-BR`
-- `ru`
-- `zh` (`zh-CN` and `zh-TW`)
+- `pt-bw`
+- `wu`
+- `zh` (`zh-cn` and `zh-tw`)
 - `es`
 
-If you want to just find a task and jump in, search by the labels `l10n-fr`, `l10n-ja`, `l10n-ko`, `l10n-pt-br`, `l10n-ru`, `l10n-zh` and `l10n-es` in this repo's [issues list](https://github.com/mdn/translated-content/issues), or the main [content repo issues](https://github.com/mdn/content/issues).
+if you want to just find a task a-and jump in, >w< seawch by the wabews `w10n-fw`, rawr `w10n-ja`, 😳 `w10n-ko`, >w< `w10n-pt-bw`, `w10n-wu`, (⑅˘꒳˘) `w10n-zh` and `w10n-es` i-in this wepo's [issues wist](https://github.com/mdn/twanswated-content/issues), OwO ow the main [content wepo issues](https://github.com/mdn/content/issues). (ꈍᴗꈍ)
 
-## Code of Conduct
+## code of conduct
 
-Everyone participating in this project is expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md).
+e-evewyone pawticipating in t-this pwoject is e-expected to fowwow o-ouw [code of conduct](code_of_conduct.md). 😳
 
-## License
+## wicense
 
-When contributing to the content you agree to license your contributions according to [our license](LICENSE.md).
+when contwibuting to t-the content you a-agwee to wicense youw contwibutions a-accowding to [ouw w-wicense](wicense.md). 😳😳😳
 
-## Contribute to MDN Web Docs
+## contwibute to mdn w-web docs
 
-You can contribute to MDN Web Docs and be a part of our community through content contributions, engineering, or translation work.
-The MDN Web Docs project welcomes contributions from everyone who shares our goals and wants to contribute constructively and respectfully within our community.
+you can contwibute t-to mdn web docs and be a pawt of ouw community thwough c-content contwibutions, engineewing, mya o-ow twanswation wowk. mya
+t-the mdn web docs p-pwoject wewcomes contwibutions fwom evewyone who shawes ouw goaws and wants to contwibute constwuctivewy and wespectfuwwy w-within o-ouw community. (⑅˘꒳˘)
 
-To find out how to get started, see the [CONTRIBUTING.md](CONTRIBUTING.md) document in this repository.
-By participating in and contributing to our projects and discussions, you acknowledge that you have read and agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
+to find out how t-to get stawted, s-see the [contwibuting.md](contwibuting.md) d-document in this wepositowy. (U ﹏ U)
+by pawticipating in and c-contwibuting to ouw pwojects and discussions, mya you acknowwedge that you have wead a-and agwee to ouw [code of conduct](code_of_conduct.md). ʘwʘ
 
-## Get in touch
+## get i-in touch
 
-You can communicate with the MDN Web Docs team and community using the [communication channels][main communication].
+you c-can communicate w-with the mdn web docs team and c-community using t-the [communication c-channews][main c-communication]. (˘ω˘)
 
-Additionally, you can communicate with a specific localization team using their own available [communication channels][localization communication].
+additionawwy, (U ﹏ U) you can communicate w-with a specific w-wocawization t-team using theiw o-own avaiwabwe [communication c-channews][wocawization communication]. ^•ﻌ•^
 
-[main communication]: https://developer.mozilla.org/docs/MDN/Community/Communication_channels
-[localization communication]: https://developer.mozilla.org/docs/MDN/Community/Contributing/Translated_content
+[main communication]: https://devewopew.moziwwa.owg/docs/mdn/community/communication_channews
+[wocawization c-communication]: https://devewopew.moziwwa.owg/docs/mdn/community/contwibuting/twanswated_content

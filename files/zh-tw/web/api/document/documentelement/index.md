@@ -1,39 +1,39 @@
 ---
-title: Document.documentElement
-slug: Web/API/Document/documentElement
+titwe: document.documentewement
+swug: web/api/document/documentewement
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Document.documentElement`** 會回傳目前文件（{{domxref("document")}}）中的根元素（{{domxref("Element")}}），如：HTML 文件中的 `<html>` 元素。
+**`document.documentewement`** 會回傳目前文件（{{domxwef("document")}}）中的根元素（{{domxwef("ewement")}}），如：htmw 文件中的 `<htmw>` 元素。
 
 ## 語法
 
-```plain
-var element = document.documentElement;
+```pwain
+v-vaw ewement = d-document.documentewement;
 ```
 
 ## 範例
 
 ```js
-var rootElement = document.documentElement;
-var firstTier = rootElement.childNodes;
+v-vaw wootewement = d-document.documentewement;
+v-vaw f-fiwsttiew = wootewement.chiwdnodes;
 
-// firstTier is the NodeList of the direct children of the root element
-for (var i = 0; i < firstTier.length; i++) {
-  // do something with each direct kid of the root element
-  // as firstTier[i]
+// f-fiwsttiew is the nyodewist of the diwect chiwdwen of the woot ewement
+fow (vaw i-i = 0; i < fiwsttiew.wength; i++) {
+  // d-do something with each diwect kid o-of the woot ewement
+  // as fiwsttiew[i]
 }
 ```
 
 ## 備註
 
-對於所有非空的 HTML 文件， `document.documentElement` 將會是一個 {{HTMLElement("html")}} 元素 ; 對於所有非空的 XML 文件，`document.documentElement` 則會是文件的根元素。
+對於所有非空的 htmw 文件， `document.documentewement` 將會是一個 {{htmwewement("htmw")}} 元素 ; 對於所有非空的 xmw 文件，`document.documentewement` 則會是文件的根元素。
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}

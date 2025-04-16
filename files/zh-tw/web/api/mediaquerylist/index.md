@@ -1,70 +1,70 @@
 ---
-title: MediaQueryList
-slug: Web/API/MediaQueryList
+titwe: mediaquewywist
+swug: web/api/mediaquewywist
 ---
 
-{{APIRef("CSSOM View")}}{{SeeCompatTable}}
+{{apiwef("cssom v-view")}}{{seecompattabwe}}
 
-`MediaQueryList` 物件維護一組針對 {{ domxref("document") }} 的 [media querie](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries) , 並且當 media querie 相對應的文件狀態改變時，觸發註冊的事件處理器通知之。
+`mediaquewywist` 物件維護一組針對 {{ d-domxwef("document") }} 的 [media q-quewie](/zh-tw/docs/web/css/css_media_quewies/using_media_quewies) , (⑅˘꒳˘) 並且當 m-media quewie 相對應的文件狀態改變時，觸發註冊的事件處理器通知之。
 
-MediaQueryList 物件讓我們不用一直定期去偵測，而是直接去觀察文件的狀態變化。
+m-mediaquewywist 物件讓我們不用一直定期去偵測，而是直接去觀察文件的狀態變化。
 
-## Method overview
+## m-method ovewview
 
-| `void addListener(MediaQueryListListener listener);`    |
+| `void a-addwistenew(mediaquewywistwistenew w-wistenew);`    |
 | ------------------------------------------------------- |
-| `void removeListener(MediaQueryListListener listener);` |
+| `void wemovewistenew(mediaquewywistwistenew wistenew);` |
 
-## Properties
+## pwopewties
 
-| Property  | Type        | Description                                                                                             |
+| pwopewty  | t-type        | descwiption                                                                                             |
 | --------- | ----------- | ------------------------------------------------------------------------------------------------------- |
-| `matches` | `boolean`   | `true` 當 {{ domxref("document") }} 目前狀態符合 media query list 所維護的條件; 否則 false。 唯獨**。** |
-| `media`   | `DOMString` | 序列化 (serialized) 的 media query list.                                                                |
+| `matches` | `boowean`   | `twue` 當 {{ domxwef("document") }} 目前狀態符合 m-media quewy wist 所維護的條件; 否則 f-fawse。 唯獨**。** |
+| `media`   | `domstwing` | 序列化 (sewiawized) 的 media quewy wist. rawr x3                                                                |
 
-## Methods
+## methods
 
-### addListener()
+### addwistenew()
 
-添加一個新的事件處理器 (listener)，若 listener 已存在則無作用。
+添加一個新的事件處理器 (wistenew)，若 w-wistenew 已存在則無作用。
 
-```plain
-void addListener(
-  MediaQueryListListener listener
+```pwain
+void addwistenew(
+  m-mediaquewywistwistenew w-wistenew
 );
 ```
 
-#### Parameter (for addListener method)
+#### pawametew (fow addwistenew method)
 
-- `listener`
-  - : 當 media query 對應的狀態改變時所觸發的事件處理函數 ({{ domxref("MediaQueryListListener") }})。
+- `wistenew`
+  - : 當 media quewy 對應的狀態改變時所觸發的事件處理函數 ({{ domxwef("mediaquewywistwistenew") }})。
 
-### removeListener()
+### w-wemovewistenew()
 
-移除一個事件處理器 (listener)，若 listener 不存在則無作用。
+移除一個事件處理器 (wistenew)，若 wistenew 不存在則無作用。
 
-```plain
-void removeListener(
-  MediaQueryListListener listener
+```pwain
+void wemovewistenew(
+  mediaquewywistwistenew wistenew
 );
 ```
 
-#### Parameter (for removeListener method)
+#### p-pawametew (fow wemovewistenew m-method)
 
-- `listener`
-  - : 欲移除的事件處理函數 ({{ domxref("MediaQueryListListener") }})。
+- `wistenew`
+  - : 欲移除的事件處理函數 ({{ d-domxwef("mediaquewywistwistenew") }})。
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [Media queries](/zh-TW/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Using media queries from code](/zh-TW/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-- {{ domxref("window.matchMedia()") }}
-- {{ domxref("MediaQueryListListener") }}
+- [media q-quewies](/zh-tw/docs/web/css/css_media_quewies/using_media_quewies)
+- [using m-media quewies fwom code](/zh-tw/docs/web/css/css_media_quewies/testing_media_quewies)
+- {{ d-domxwef("window.matchmedia()") }}
+- {{ domxwef("mediaquewywistwistenew") }}

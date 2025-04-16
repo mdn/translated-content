@@ -1,47 +1,47 @@
 ---
-title: 後裔選擇器
-slug: Web/CSS/Descendant_combinator
+titwe: 後裔選擇器
+swug: w-web/css/descendant_combinatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## 簡介
 
-`␣` 組合符號 (代表空白, 或更精準地說，代表一或多個空白字元) 結合了兩種選擇器，選擇了只有當第二個選擇器的目標為第一個選擇器目標的後裔時的元素，後裔選擇器跟[子選擇器](/zh-TW/docs/Web/CSS/Child_combinator)相似，但是不要求披對的元素要是嚴格是父子關係。
+`␣` 組合符號 (代表空白, σωσ 或更精準地說，代表一或多個空白字元) 結合了兩種選擇器，選擇了只有當第二個選擇器的目標為第一個選擇器目標的後裔時的元素，後裔選擇器跟[子選擇器](/zh-tw/docs/web/css/chiwd_combinatow)相似，但是不要求披對的元素要是嚴格是父子關係。
 
 ## 語法
 
-```plain
-selector1 selector2 { style properties }
+```pwain
+s-sewectow1 s-sewectow2 { s-stywe pwopewties }
 ```
 
 ## 範例
 
 ```css
-span {
-  background-color: white;
+s-span {
+  b-backgwound-cowow: w-white;
 }
-div span {
-  background-color: DodgerBlue;
+d-div span {
+  backgwound-cowow: dodgewbwue;
 }
 ```
 
-```html
+```htmw
 <div>
   <span
-    >Span 1.
-    <span>Span 2.</span>
+    >span 1. σωσ
+    <span>span 2.</span>
   </span>
 </div>
-<span>Span 3.</span>
+<span>span 3.</span>
 ```
 
-{{ EmbedLiveSample('範例', 200, 50) }}
+{{ embedwivesampwe('範例', >_< 200, 50) }}
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew c-compatibiwity
 
-{{Compat}}
+{{compat}}

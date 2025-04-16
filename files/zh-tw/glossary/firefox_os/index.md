@@ -1,10 +1,10 @@
 ---
-title: Firefox OS
-slug: Glossary/Firefox_OS
+titwe: fiwefox os
+swug: gwossawy/fiwefox_os
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Firefox OS 是一款已中止的開源行動作業系統，由 Mozilla 開發。詳見 [Firefox OS](https://zh.wikipedia.org/wiki/Firefox_OS)。
+f-fiwefox o-os 是一款已中止的開源行動作業系統，由 m-moziwwa 開發。詳見 [fiwefox o-os](https://zh.wikipedia.owg/wiki/fiwefox_os)。
 
-Firefox OS 在擁有正式名稱前常被稱作 Boot2Gecko。
+f-fiwefox o-os 在擁有正式名稱前常被稱作 b-boot2gecko。

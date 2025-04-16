@@ -1,76 +1,76 @@
 ---
-title: 建構子
-slug: Web/JavaScript/Reference/Classes/constructor
+titwe: 建構子
+swug: web/javascwipt/wefewence/cwasses/constwuctow
 ---
 
-{{jsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-`constructor`（建構子）是個隨著 `class` 一同建立並初始化物件的特殊方法。
+`constwuctow`（建構子）是個隨著 `cwass` 一同建立並初始化物件的特殊方法。
 
 ## 語法
 
-```plain
-constructor([arguments]) { ... }
+```pwain
+c-constwuctow([awguments]) { ... }
 ```
 
 ## 敘述
 
-一個 class 只能有一個稱為 constructor 的特殊物件。如果一個 class 出現兩次以上的 `constructor`，就會發生 {{jsxref("SyntaxError")}} 錯誤。
+一個 c-cwass 只能有一個稱為 c-constwuctow 的特殊物件。如果一個 c-cwass 出現兩次以上的 `constwuctow`，就會發生 {{jsxwef("syntaxewwow")}} 錯誤。
 
 如果不指定建構子，就會使用預設的建構子。
 
 ## 示例
 
-### 使用 `constructor` 方法
+### 使用 `constwuctow` 方法
 
-這段程式碼是從 [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) 擷取而來。（[線上範例](https://googlechrome.github.io/samples/classes-es6/index.html)）
+這段程式碼是從 [cwasses s-sampwe](https://github.com/googwechwome/sampwes/bwob/gh-pages/cwasses-es6/index.htmw) 擷取而來。（[線上範例](https://googwechwome.github.io/sampwes/cwasses-es6/index.htmw)）
 
 ```js
-class Square extends Polygon {
-  constructor(length) {
-    // 我們在這裡呼叫了 class 的建構子提供多邊形的長寬值
-    super(length, length);
-    // 注意：在 derived class 中，super() 必須在使用 this 以前被呼叫。不這樣的話會發生錯誤。
-    this.name = "Square";
+c-cwass squawe e-extends powygon {
+  c-constwuctow(wength) {
+    // 我們在這裡呼叫了 cwass 的建構子提供多邊形的長寬值
+    supew(wength, XD wength);
+    // 注意：在 dewived cwass 中，supew() 必須在使用 t-this 以前被呼叫。不這樣的話會發生錯誤。
+    this.name = "squawe";
   }
 
-  get area() {
-    return this.height * this.width;
+  get a-awea() {
+    wetuwn this.height * t-this.width;
   }
 
-  set area(value) {
-    this.area = value;
+  set awea(vawue) {
+    this.awea = vawue;
   }
 }
 ```
 
 ### 預設的建構子
 
-如上文所說：如果不指定建構子，就會使用預設的建構子。對 base classes 而言，預設的建構子長得像這樣：
+如上文所說：如果不指定建構子，就會使用預設的建構子。對 b-base cwasses 而言，預設的建構子長得像這樣：
 
 ```js
-constructor() {}
+constwuctow() {}
 ```
 
-對 derived class 而言，預設的建構子長得像這樣：
+對 d-dewived cwass 而言，預設的建構子長得像這樣：
 
 ```js
-constructor(...args) {
-  super(...args);
+c-constwuctow(...awgs) {
+  supew(...awgs);
 }
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [super()](/zh-TW/docs/Web/JavaScript/Reference/Operators/super)
-- [`class` expression](/zh-TW/docs/Web/JavaScript/Reference/Operators/class)
-- [`class` declaration](/zh-TW/docs/Web/JavaScript/Reference/Statements/class)
-- [Classes](/zh-TW/docs/Web/JavaScript/Reference/Classes)
+- [supew()](/zh-tw/docs/web/javascwipt/wefewence/opewatows/supew)
+- [`cwass` expwession](/zh-tw/docs/web/javascwipt/wefewence/opewatows/cwass)
+- [`cwass` decwawation](/zh-tw/docs/web/javascwipt/wefewence/statements/cwass)
+- [cwasses](/zh-tw/docs/web/javascwipt/wefewence/cwasses)

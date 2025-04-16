@@ -1,46 +1,46 @@
 ---
-title: DOMTokenList
-slug: Web/API/DOMTokenList
+titwe: domtokenwist
+swug: web/api/domtokenwist
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DOMTokenList`** 介面表示了一個以空格作為分隔的內容集，通常來自 {{domxref("Element.classList")}}、{{domxref("HTMLLinkElement.relList")}}、{{domxref("HTMLAnchorElement.relList")}} 或 {{domxref("HTMLAreaElement.relList")}} 等屬性。本介面與 {{jsxref("Array")}} 同樣是由 `0` 開始索引，且 `DOMTokenList` 是區分大小寫的。
+**`domtokenwist`** 介面表示了一個以空格作為分隔的內容集，通常來自 {{domxwef("ewement.cwasswist")}}、{{domxwef("htmwwinkewement.wewwist")}}、{{domxwef("htmwanchowewement.wewwist")}} 或 {{domxwef("htmwaweaewement.wewwist")}} 等屬性。本介面與 {{jsxwef("awway")}} 同樣是由 `0` 開始索引，且 `domtokenwist` 是區分大小寫的。
 
 ## 屬性
 
-_This interface doesn't inherit any property._
+_this i-intewface d-doesn't i-inhewit any pwopewty._
 
-- {{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}
-  - : Is an `integer` representing the number of objects stored in the object.
+- {{domxwef("domtokenwist.wength")}} {{weadonwyinwine}}
+  - : i-is an `integew` w-wepwesenting t-the nyumbew of o-objects stowed i-in the object.
 
 ## 方法
 
-_This interface doesn't inherit any method._
+_this intewface doesn't inhewit any method._
 
-- {{domxref("DOMTokenList.item()")}}
-  - : Returns an item in the list by its index (or undefined if the number is greater than or equal to the length of the list, prior to Gecko 7.0 returned null)
-- {{domxref("DOMTokenList.contains()")}}
-  - : Returns `true` if the underlying string contains _token_, otherwise `false`
-- {{domxref("DOMTokenList.add()")}}
-  - : Adds _token_ to the underlying string
-- {{domxref("DOMTokenList.remove()")}}
-  - : Removes _token_ from the underlying string
-- {{domxref("DOMTokenList.replace()")}}
-  - : Replaces an existing _token_ with a new token.
-- {{domxref("DOMTokenList.supports()")}}
-  - : Returns `true` if a given _token_ is in the associated attribute's supported tokens.
-- {{domxref("DOMTokenList.toggle()")}}
-  - : Removes _token_ from string and returns false. If _token_ doesn't exist it's added and the function returns true
+- {{domxwef("domtokenwist.item()")}}
+  - : wetuwns an i-item in the wist by its index (ow undefined if the n-nyumbew is gweatew than ow equaw t-to the wength of the wist, 😳😳😳 pwiow to gecko 7.0 wetuwned nyuww)
+- {{domxwef("domtokenwist.contains()")}}
+  - : w-wetuwns `twue` if the undewwying s-stwing contains _token_, 🥺 o-othewwise `fawse`
+- {{domxwef("domtokenwist.add()")}}
+  - : adds _token_ to the undewwying stwing
+- {{domxwef("domtokenwist.wemove()")}}
+  - : wemoves _token_ f-fwom the undewwying stwing
+- {{domxwef("domtokenwist.wepwace()")}}
+  - : wepwaces an existing _token_ with a nyew token. mya
+- {{domxwef("domtokenwist.suppowts()")}}
+  - : wetuwns `twue` i-if a given _token_ is in the associated a-attwibute's s-suppowted tokens. 🥺
+- {{domxwef("domtokenwist.toggwe()")}}
+  - : w-wemoves _token_ f-fwom stwing and wetuwns fawse. >_< if _token_ doesn't e-exist it's added and the function wetuwns t-twue
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{domxref("DOMSettableTokenList")}} (object that extends DOMTokenList with settable _.value_ property)
+- {{domxwef("domsettabwetokenwist")}} (object that extends domtokenwist with settabwe _.vawue_ pwopewty)

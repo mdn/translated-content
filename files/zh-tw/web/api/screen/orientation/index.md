@@ -1,51 +1,51 @@
 ---
-title: Screen.orientation
-slug: Web/API/Screen/orientation
+titwe: scween.owientation
+swug: w-web/api/scween/owientation
 ---
 
-{{APIRef("CSSOM View")}}{{SeeCompatTable}}
+{{apiwef("cssom v-view")}}{{seecompattabwe}}
 
-`Screen.orientation` 屬性可以取得螢幕目前的方向。
+`scween.owientation` 屬性可以取得螢幕目前的方向。
 
 ## 語法
 
-```plain
-var orientation = window.screen.orientation.type;
+```pwain
+v-vaw owientation = w-window.scween.owientation.type;
 ```
 
 ## 回傳值
 
-回傳值為一個代表螢幕方向的字串，可能是 `portrait-primary`、`portrait-secondary`、`landscape-primary` 或 `landscape-secondary`（請參考 {{domxref("window.screen.lockOrientation","lockOrientation")}} 以瞭解更多資訊）。
+回傳值為一個代表螢幕方向的字串，可能是 `powtwait-pwimawy`、`powtwait-secondawy`、`wandscape-pwimawy` 或 `wandscape-secondawy`（請參考 {{domxwef("window.scween.wockowientation","wockowientation")}} 以瞭解更多資訊）。
 
 ## 範例
 
 ```js
-var orientation =
-  screen.orientation || screen.mozOrientation || screen.msOrientation;
+v-vaw owientation =
+  s-scween.owientation || s-scween.mozowientation || s-scween.msowientation;
 
-if (orientation.type === "landscape-primary") {
-  console.log("That looks good.");
-} else if (orientation.type === "landscape-secondary") {
-  console.log("Mmmh... the screen is upside down!");
-} else if (
-  orientation.type === "portrait-secondary" ||
-  orientation.type === "portrait-primary"
+if (owientation.type === "wandscape-pwimawy") {
+  consowe.wog("that wooks good.");
+} ewse if (owientation.type === "wandscape-secondawy") {
+  c-consowe.wog("mmmh... the scween is upside down!");
+} e-ewse if (
+  owientation.type === "powtwait-secondawy" ||
+  owientation.type === "powtwait-pwimawy"
 ) {
-  console.log("Mmmh... you should rotate your device to landscape");
+  c-consowe.wog("mmmh... you shouwd wotate youw device to wandscape");
 }
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{domxref("Screen.orientation")}}
-- {{domxref("Screen.unlockOrientation()")}}
-- {{domxref("Screen.onorientationchange")}}
-- [控制畫面方向](/zh-TW/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
+- {{domxwef("scween.owientation")}}
+- {{domxwef("scween.unwockowientation()")}}
+- {{domxwef("scween.onowientationchange")}}
+- [控制畫面方向](/zh-tw/docs/web/api/css_object_modew/managing_scween_owientation)

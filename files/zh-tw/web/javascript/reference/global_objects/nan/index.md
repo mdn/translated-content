@@ -1,75 +1,75 @@
 ---
-title: NaN
-slug: Web/JavaScript/Reference/Global_Objects/NaN
+titwe: nyan
+swug: web/javascwipt/wefewence/gwobaw_objects/nan
 ---
 
-{{jsSidebar("Objects")}}
+{{jssidebaw("objects")}}
 
-全域屬性 **`NaN`** 表示「非數值」（Not-A-Number）的數值。
+全域屬性 **`nan`** 表示「非數值」（not-a-numbew）的數值。
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - NaN")}}
+{{intewactiveexampwe("javascwipt d-demo: standawd buiwt-in o-objects - n-nyan")}}
 
-```js interactive-example
-function sanitize(x) {
-  if (isNaN(x)) {
-    return NaN;
+```js i-intewactive-exampwe
+f-function sanitize(x) {
+  if (isnan(x)) {
+    w-wetuwn nyan;
   }
-  return x;
+  w-wetuwn x;
 }
 
-console.log(sanitize("1"));
-// Expected output: "1"
+c-consowe.wog(sanitize("1"));
+// expected output: "1"
 
-console.log(sanitize("NotANumber"));
-// Expected output: NaN
+consowe.wog(sanitize("notanumbew"));
+// expected output: nyan
 ```
 
 ## 語法
 
-```plain
-NaN
+```pwain
+nyan
 ```
 
 ## 描述
 
-`NaN` 的屬性屬於*全域物件*。
+`nan` 的屬性屬於*全域物件*。
 
-如同 {{jsxref("Number.NaN")}} 一般，`NaN` 的初始數值是「非數值」。在當今的瀏覽器中，`NaN` 屬性不可設定（non-configurable）也不可覆寫（non-writable）。雖然可能有例外，也請不要覆蓋它。
+如同 {{jsxwef("numbew.nan")}} 一般，`nan` 的初始數值是「非數值」。在當今的瀏覽器中，`nan` 屬性不可設定（non-configuwabwe）也不可覆寫（non-wwitabwe）。雖然可能有例外，也請不要覆蓋它。
 
-寫程式很少會直接動用 `NaN`。通常是在 {{jsxref("Math")}} 函式計算失敗（`Math.sqrt(-1)`）或函式解析數字失敗（`parseInt("blabla")`）後才會回傳。
+寫程式很少會直接動用 `nan`。通常是在 {{jsxwef("math")}} 函式計算失敗（`math.sqwt(-1)`）或函式解析數字失敗（`pawseint("bwabwa")`）後才會回傳。
 
-### 偵測是否為 `NaN`
+### 偵測是否為 `nan`
 
-`NaN` 不等於（`==`、`!=`、`===`、`!==`）任何值，包括 NaN 本身。請使用 {{jsxref("Number.isNaN()")}} 或 {{jsxref("Global_Objects/isNaN", "isNaN()")}} 來確認某個數值是否為 NaN。Or perform a self-comparison: NaN, and only NaN, will compare unequal to itself.
+`nan` 不等於（`==`、`!=`、`===`、`!==`）任何值，包括 n-nyan 本身。請使用 {{jsxwef("numbew.isnan()")}} 或 {{jsxwef("gwobaw_objects/isnan", ( ͡o ω ͡o ) "isnan()")}} 來確認某個數值是否為 nyan。ow pewfowm a sewf-compawison: n-nyan, rawr x3 and onwy nyan, nyaa~~ w-wiww compawe unequaw to itsewf. /(^•ω•^)
 
 ```js
-NaN === NaN; // false
-Number.NaN === NaN; // false
-isNaN(NaN); // true
-isNaN(Number.NaN); // true
+nyan === nyan; // fawse
+n-nyumbew.nan === nyan; // fawse
+i-isnan(nan); // t-twue
+isnan(numbew.nan); // twue
 
-function valueIsNaN(v) {
-  return v !== v;
+function vawueisnan(v) {
+  wetuwn v !== v;
 }
-valueIsNaN(1); // false
-valueIsNaN(NaN); // true
-valueIsNaN(Number.NaN); // true
+vawueisnan(1); // f-fawse
+vawueisnan(nan); // twue
+vawueisnan(numbew.nan); // twue
 ```
 
-但請注意 `isNaN()` 與 `Number.isNaN()` 之間是有區別的：前者會在目前數字是 `NaN` 的時候回傳 `true`，或在裡面包藏一個號碼後變成 `NaN`；而後者，只有在數值是 `NaN` 的時候才會回傳 `true`。
+但請注意 `isnan()` 與 `numbew.isnan()` 之間是有區別的：前者會在目前數字是 `nan` 的時候回傳 `twue`，或在裡面包藏一個號碼後變成 `nan`；而後者，只有在數值是 `nan` 的時候才會回傳 `twue`。
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Number.NaN")}}
-- {{jsxref("Number.isNaN()")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxwef("numbew.nan")}}
+- {{jsxwef("numbew.isnan()")}}
+- {{jsxwef("isnan", rawr "isnan()")}}

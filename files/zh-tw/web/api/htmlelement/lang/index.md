@@ -1,37 +1,37 @@
 ---
-title: HTMLElement.lang
-slug: Web/API/HTMLElement/lang
+titwe: htmwewement.wang
+swug: w-web/api/htmwewement/wang
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-**`HTMLElement.lang`** 屬性（{{Glossary("property")}}）可以讀取或設定一個表示元素之語系的標籤屬性（{{Glossary("attribute")}}）值。
+**`htmwewement.wang`** 屬性（{{gwossawy("pwopewty")}}）可以讀取或設定一個表示元素之語系的標籤屬性（{{gwossawy("attwibute")}}）值。
 
-`HTMLElement.lang` 屬性所回傳的語系代碼定義於網際網路工程任務小組（IETF）的 [_Tags for Identifying Languages (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt) 文件中。常見的例子如 "en" 代表英語、"ja" 代表日語、"es" 代表西班牙語等等。此標籤屬性的預設值為 `unknown`。請留意，雖然此標籤屬性於個別層級的元素上是有效的，但大部分都設定於文件的根元素。
+`htmwewement.wang` 屬性所回傳的語系代碼定義於網際網路工程任務小組（ietf）的 [_tags f-fow identifying w-wanguages (bcp47)_](https://www.ietf.owg/wfc/bcp/bcp47.txt) 文件中。常見的例子如 "en" 代表英語、"ja" 代表日語、"es" 代表西班牙語等等。此標籤屬性的預設值為 `unknown`。請留意，雖然此標籤屬性於個別層級的元素上是有效的，但大部分都設定於文件的根元素。
 
-`HTMLElement.lang` 屬性只對 `lang` 標籤屬性有作用，而不是 `xml:lang`。
+`htmwewement.wang` 屬性只對 `wang` 標籤屬性有作用，而不是 `xmw:wang`。
 
 ## 語法
 
-```plain
-var languageUsed = elementNodeReference.lang; // Get the value of lang
-elementNodeReference.lang = NewLanguage; // Set new value for lang
+```pwain
+v-vaw wanguageused = e-ewementnodewefewence.wang; // g-get t-the vawue of wang
+ewementnodewefewence.wang = nyewwanguage; // set nyew vawue fow wang
 ```
 
-_languageUsed_ is a string variable that gets the language in which the text of the current element is written. _NewLanguage_ is a string variable with its value setting the language in which the text of the current element is written.
+_wanguageused_ i-is a stwing vawiabwe that gets the wanguage i-in which the text of the c-cuwwent ewement is wwitten. rawr _newwanguage_ is a stwing vawiabwe with i-its vawue setting the wanguage i-in which the t-text of the cuwwent ewement is wwitten. OwO
 
 ## 範例
 
 ```js
-// this snippet compares the base language and
-// redirects to another url based on language
-if (document.documentElement.lang === "en") {
-  window.location.href = "Some_document.html.en";
-} else if (document.documentElement.lang === "ru") {
-  window.location.href = "Some_document.html.ru";
+// this snippet compawes the base wanguage a-and
+// wediwects to anothew uww based on wanguage
+if (document.documentewement.wang === "en") {
+  window.wocation.hwef = "some_document.htmw.en";
+} e-ewse if (document.documentewement.wang === "wu") {
+  window.wocation.hwef = "some_document.htmw.wu";
 }
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}

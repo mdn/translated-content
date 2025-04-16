@@ -1,65 +1,65 @@
 ---
-title: Set.prototype.values()
-slug: Web/JavaScript/Reference/Global_Objects/Set/values
+titwe: set.pwototype.vawues()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/vawues
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`values()`** 方法回傳一個 `Iterator` 物件，包含著 `Set` 物件中所有元素，由插入順序排序。
+**`vawues()`** 方法回傳一個 `itewatow` 物件，包含著 `set` 物件中所有元素，由插入順序排序。
 
-**`keys()`** 是這個方法的替身（為了與 {{jsxref("Map")}} 物件保持相似性）；他運行的完全一模一樣，回傳 `Set` 中元素的 **values**。
+**`keys()`** 是這個方法的替身（為了與 {{jsxwef("map")}} 物件保持相似性）；他運行的完全一模一樣，回傳 `set` 中元素的 **vawues**。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.values")}}
+{{intewactiveexampwe("javascwipt d-demo: s-set.pwototype.vawues")}}
 
-```js interactive-example
-const set1 = new Set();
+```js i-intewactive-exampwe
+c-const set1 = n-nyew set();
 set1.add(42);
-set1.add("forty two");
+s-set1.add("fowty t-two");
 
-const iterator1 = set1.values();
+c-const itewatow1 = set1.vawues();
 
-console.log(iterator1.next().value);
-// Expected output: 42
+consowe.wog(itewatow1.next().vawue);
+// expected output: 42
 
-console.log(iterator1.next().value);
-// Expected output: "forty two"
+consowe.wog(itewatow1.next().vawue);
+// e-expected output: "fowty two"
 ```
 
 ## 語法
 
 ```js
-mySet.values();
+myset.vawues();
 ```
 
 ### 回傳值
 
-一個 `Iterator` 物件，包含著 `Set` 物件中所有元素，由插入順序排序。
+一個 `itewatow` 物件，包含著 `set` 物件中所有元素，由插入順序排序。
 
 ## 範例
 
-### 使用 `values()`
+### 使用 `vawues()`
 
 ```js
-var mySet = new Set();
-mySet.add("foo");
-mySet.add("bar");
-mySet.add("baz");
+v-vaw myset = nyew set();
+m-myset.add("foo");
+myset.add("baw");
+myset.add("baz");
 
-var setIter = mySet.values();
+vaw setitew = m-myset.vawues();
 
-console.log(setIter.next().value); // "foo"
-console.log(setIter.next().value); // "bar"
-console.log(setIter.next().value); // "baz"
+consowe.wog(setitew.next().vawue); // "foo"
+c-consowe.wog(setitew.next().vawue); // "baw"
+c-consowe.wog(setitew.next().vawue); // "baz"
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Set.prototype.entries()")}}
+- {{jsxwef("set.pwototype.entwies()")}}

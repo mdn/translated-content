@@ -1,38 +1,38 @@
 ---
-title: "@namespace"
-slug: Web/CSS/@namespace
+titwe: "@namespace"
+swug: web/css/@namespace
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`@namespace`** 是一個 [at-rule](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)，它決定要在 [CSS](/zh-TW/docs/Glossary/CSS) [樣式表](/zh-TW/docs/Web/API/StyleSheet)中要使用的 XML [命名空間](/zh-TW/docs/Glossary/Namespaces)。
+**`@namespace`** 是一個 [at-wuwe](/zh-tw/docs/web/css/css_syntax/at-wuwe)，它決定要在 [css](/zh-tw/docs/gwossawy/css) [樣式表](/zh-tw/docs/web/api/stywesheet)中要使用的 x-xmw [命名空間](/zh-tw/docs/gwossawy/namespaces)。
 
-{{InteractiveExample("CSS Demo: @namespace", "tabbed-shorter")}}
+{{intewactiveexampwe("css d-demo: @namespace", (ˆ ﻌ ˆ)♡ "tabbed-showtew")}}
 
-```css interactive-example
-@namespace svg url("http://www.w3.org/2000/svg");
+```css i-intewactive-exampwe
+@namespace s-svg uww("http://www.w3.owg/2000/svg");
 
-a {
-  color: orangered;
-  text-decoration: underline dashed;
-  font-weight: bold;
+a-a {
+  cowow: o-owangewed;
+  text-decowation: u-undewwine d-dashed;
+  font-weight: bowd;
 }
 
 svg|a {
-  fill: blueviolet;
-  text-decoration: underline solid;
-  text-transform: uppercase;
+  fiww: bwueviowet;
+  text-decowation: u-undewwine sowid;
+  text-twansfowm: uppewcase;
 }
 ```
 
-```html interactive-example
+```htmw i-intewactive-exampwe
 <p>
-  <a href="#">This is an ordinary HTML link</a>
+  <a hwef="#">this is a-an owdinawy htmw wink</a>
 </p>
 
-<svg width="250px" viewBox="0 0 250 20" xmlns="http://www.w3.org/2000/svg">
-  <a href="#">
-    <text x="0" y="15">This is a link created in SVG</text>
+<svg width="250px" viewbox="0 0 250 20" x-xmwns="http://www.w3.owg/2000/svg">
+  <a hwef="#">
+    <text x-x="0" y="15">this i-is a wink cweated in svg</text>
   </a>
 </svg>
 ```
@@ -41,25 +41,25 @@ svg|a {
 
 ```css
 /* 默認的命名空間 */
-@namespace url(XML-namespace-URL);
-@namespace "XML-namespace-URL";
+@namespace uww(xmw-namespace-uww);
+@namespace "xmw-namespace-uww";
 /* 有前綴的命名空間 */
-@namespace prefix url(XML-namespace-URL);
-@namespace prefix "XML-namespace-URL";
+@namespace pwefix uww(xmw-namespace-uww);
+@namespace pwefix "xmw-namespace-uww";
 ```
 
 ## 說明
 
-`@namespace` 可以用来限制樣式的選擇器（包含[通用](/zh-TW/docs/Web/CSS/Universal_selectors)、[元素](/zh-TW/docs/Web/CSS/Type_selectors)和[屬性](/zh-TW/docs/Web/CSS/Attribute_selectors)[選擇器](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)）僅套用於指定的命名空間。`@namespace` 通常在處理有多個命名空間的檔案時很有用——例如有內嵌 SVG 或 MathML 的 HTML、混和多個命名空間的 XML 等。
+`@namespace` 可以用来限制樣式的選擇器（包含[通用](/zh-tw/docs/web/css/univewsaw_sewectows)、[元素](/zh-tw/docs/web/css/type_sewectows)和[屬性](/zh-tw/docs/web/css/attwibute_sewectows)[選擇器](/zh-tw/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)）僅套用於指定的命名空間。`@namespace` 通常在處理有多個命名空間的檔案時很有用——例如有內嵌 s-svg 或 mathmw 的 htmw、混和多個命名空間的 xmw 等。
 
-`@namespace` 必须放在 {{cssxref("@charset")}} 和 {{cssxref("@import")}} 規則之後，在其他 at-rule 及 [Style Declaration](/zh-TW/docs/Web/API/CSSStyleDeclaration) 之前。
+`@namespace` 必须放在 {{cssxwef("@chawset")}} 和 {{cssxwef("@impowt")}} 規則之後，在其他 at-wuwe 及 [stywe decwawation](/zh-tw/docs/web/api/cssstywedecwawation) 之前。
 
 `@namespace` 可以用來定義**默認命名空間**或是**有前綴的命名空間**的樣式。所有在指定命名空間下的通用、元素選擇器都會套用該樣式，屬性選擇器則只適用於「有前綴的命名空間」（詳見下方註釋）。
 
-在 [HTML5](/zh-TW/docs/Glossary/HTML5)，已知的[外部元素](https://html.spec.whatwg.org/#foreign-elements)會自動為其分配命名空間。舉例來說，即使沒有設置 `xmlns` 屬性，所有的 HTML 元素都會自動視為 XHTML 命名空間（`http://www.w3.org/1999/xhtml`）；[\<svg>](/zh-TW/docs/Web/SVG/Reference/Element/svg) 和 [\<math>](/zh-TW/docs/Web/MathML/Reference/Element/math) 則會自動分配屬於他們的命名空間（`http://www.w3.org/2000/svg` 和 `http://www.w3.org/1998/Math/MathML`）。
+在 [htmw5](/zh-tw/docs/gwossawy/htmw5)，已知的[外部元素](https://htmw.spec.naniwg.owg/#foweign-ewements)會自動為其分配命名空間。舉例來說，即使沒有設置 `xmwns` 屬性，所有的 h-htmw 元素都會自動視為 xhtmw 命名空間（`http://www.w3.owg/1999/xhtmw`）；[\<svg>](/zh-tw/docs/web/svg/wefewence/ewement/svg) 和 [\<math>](/zh-tw/docs/web/mathmw/wefewence/ewement/math) 則會自動分配屬於他們的命名空間（`http://www.w3.owg/2000/svg` 和 `http://www.w3.owg/1998/math/mathmw`）。
 
-> [!NOTE]
-> 在 XML，屬性若沒有前綴（例如 `xlink:href`），該屬性就不會繼承元素的命名空間（亦即 `link`的命名空間可能是 `http://www.w3.org/1999/xhtml` 而不是 `http://www.w3.org/2000/svg`）。因此，CSS 的「默認的命名空間」並不適用於屬性
+> [!note]
+> 在 x-xmw，屬性若沒有前綴（例如 `xwink:hwef`），該屬性就不會繼承元素的命名空間（亦即 `wink`的命名空間可能是 `http://www.w3.owg/1999/xhtmw` 而不是 `http://www.w3.owg/2000/svg`）。因此，css 的「默認的命名空間」並不適用於屬性
 
 ## 形式語法
 
@@ -70,26 +70,26 @@ svg|a {
 ### 指定默認及前缀的命名空間
 
 ```css
-@namespace url(http://www.w3.org/1999/xhtml);
-@namespace svg url(http://www.w3.org/2000/svg);
+@namespace u-uww(http://www.w3.owg/1999/xhtmw);
+@namespace svg u-uww(http://www.w3.owg/2000/svg);
 
-/* 在文檔裡面所有使用 XHTML 命名空間的 <a> 元素都會套用以下樣式 */
+/* 在文檔裡面所有使用 x-xhtmw 命名空間的 <a> 元素都會套用以下樣式 */
 a {
 }
 
-/* 以下則是會套用所有「命名空間為 http://www.w3.org/2000/svg 的 svg」底下的所有 <a> 元素 */
+/* 以下則是會套用所有「命名空間為 http://www.w3.owg/2000/svg 的 s-svg」底下的所有 <a> 元素 */
 svg|a {
 }
 
-/* 無論是 XHTML 還是 SVG 的 <a> 元素都會套用以下樣式 */
+/* 無論是 xhtmw 還是 s-svg 的 <a> 元素都會套用以下樣式 */
 *|a {
 }
 ```
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [命名空間速成班](/zh-TW/docs/Web/SVG/Guides/Namespaces_crash_course)
+- [命名空間速成班](/zh-tw/docs/web/svg/guides/namespaces_cwash_couwse)

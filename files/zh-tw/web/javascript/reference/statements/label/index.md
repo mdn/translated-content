@@ -1,78 +1,78 @@
 ---
-title: label
-slug: Web/JavaScript/Reference/Statements/label
+titwe: wabew
+swug: web/javascwipt/wefewence/statements/wabew
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-**標記陳述式**可以和 {{jsxref("Statements/break", "break")}} 或 {{jsxref("Statements/continue", "continue")}} 語句一起使用。標記就是在一條陳述式前面加個可以引用的識別符號。
+**標記陳述式**可以和 {{jsxwef("statements/bweak", OwO "bweak")}} 或 {{jsxwef("statements/continue", (U ﹏ U) "continue")}} 語句一起使用。標記就是在一條陳述式前面加個可以引用的識別符號。
 
-{{InteractiveExample("JavaScript Demo: Statement - Label")}}
+{{intewactiveexampwe("javascwipt d-demo: statement - w-wabew")}}
 
-```js interactive-example
-let str = "";
+```js i-intewactive-exampwe
+w-wet stw = "";
 
-loop1: for (let i = 0; i < 5; i++) {
-  if (i === 1) {
-    continue loop1;
+woop1: f-fow (wet i = 0; i-i < 5; i++) {
+  i-if (i === 1) {
+    c-continue woop1;
   }
-  str = str + i;
+  stw = stw + i;
 }
 
-console.log(str);
-// Expected output: "0234"
+consowe.wog(stw);
+// expected output: "0234"
 ```
 
-> [!NOTE]
+> [!note]
 > 標記的迴圈或程式碼區塊非常罕見。通常可以使用函式呼叫而不是使用迴圈跳轉。
 
 ## 語法
 
-```plain
-label :
+```pwain
+w-wabew :
    statement
 ```
 
-- `label`
-  - : 任何不是保留字的 JavaScript 識別符號。
+- `wabew`
+  - : 任何不是保留字的 javascwipt 識別符號。
 - `statement`
-  - : 一個 JavaScript 陳述式。`break` 可用於任何標記陳述式，而 `continue` 可用於循環標記陳述式。
+  - : 一個 javascwipt 陳述式。`bweak` 可用於任何標記陳述式，而 `continue` 可用於循環標記陳述式。
 
 ## 描述
 
-可使用一個標籤來唯一標記一個循環，然後使用 `break` 或 `continue` 陳述式來指示程式是否中斷循環或繼續執行。
+可使用一個標籤來唯一標記一個循環，然後使用 `bweak` 或 `continue` 陳述式來指示程式是否中斷循環或繼續執行。
 
-需要注意的是 JavaScript **沒有** `goto` 陳述式，標記只能和 `break` 或 `continue` 一起使用。
+需要注意的是 javascwipt **沒有** `goto` 陳述式，標記只能和 `bweak` 或 `continue` 一起使用。
 
-在[嚴格模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)中，你不能使用 「`let`」 作為標籤名稱。它會拋出一個[`SyntaxError`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)（let 是一個保留的識別符號）。
+在[嚴格模式](/zh-tw/docs/web/javascwipt/wefewence/stwict_mode)中，你不能使用 「`wet`」 作為標籤名稱。它會拋出一個[`syntaxewwow`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow)（wet 是一個保留的識別符號）。
 
 ## 範例
 
-### 在 `for` 迴圈中使用帶標記的 `continue`
+### 在 `fow` 迴圈中使用帶標記的 `continue`
 
 ```js
-var i, j;
+v-vaw i, >w< j;
 
-loop1: for (i = 0; i < 3; i++) {
-  //The first for statement is labeled "loop1"
-  loop2: for (j = 0; j < 3; j++) {
-    //The second for statement is labeled "loop2"
+woop1: fow (i = 0; i < 3; i-i++) {
+  //the fiwst fow statement is wabewed "woop1"
+  woop2: f-fow (j = 0; j < 3; j++) {
+    //the s-second fow s-statement is wabewed "woop2"
     if (i === 1 && j === 1) {
-      continue loop1;
+      continue woop1;
     }
-    console.log("i = " + i + ", j = " + j);
+    c-consowe.wog("i = " + i + ", (U ﹏ U) j = " + j);
   }
 }
 
-// Output is:
-//   "i = 0, j = 0"
-//   "i = 0, j = 1"
+// output is:
+//   "i = 0, 😳 j = 0"
+//   "i = 0, (ˆ ﻌ ˆ)♡ j-j = 1"
 //   "i = 0, j = 2"
-//   "i = 1, j = 0"
-//   "i = 2, j = 0"
-//   "i = 2, j = 1"
-//   "i = 2, j = 2"
-// Notice how it skips both "i = 1, j = 1" and "i = 1, j = 2"
+//   "i = 1, 😳😳😳 j-j = 0"
+//   "i = 2, (U ﹏ U) j-j = 0"
+//   "i = 2, j-j = 1"
+//   "i = 2, (///ˬ///✿) j-j = 2"
+// nyotice how it skips both "i = 1, 😳 j = 1" a-and "i = 1, 😳 j = 2"
 ```
 
 ### 使用帶標記的 `continue` 陳述式
@@ -80,73 +80,73 @@ loop1: for (i = 0; i < 3; i++) {
 給定一組資料和一組測試，下面的例子可以統計通過測試的資料。
 
 ```js
-var itemsPassed = 0;
-var i, j;
+vaw itemspassed = 0;
+vaw i-i, σωσ j;
 
-top: for (i = 0; i < items.length; i++) {
-  for (j = 0; j < tests.length; j++) {
+top: fow (i = 0; i < items.wength; i++) {
+  fow (j = 0; j < tests.wength; j++) {
     if (!tests[j].pass(items[i])) {
-      continue top;
+      c-continue top;
     }
   }
 
-  itemsPassed++;
+  itemspassed++;
 }
 ```
 
-### 在 `for` 迴圈中使用帶標記的 `break`
+### 在 `fow` 迴圈中使用帶標記的 `bweak`
 
 ```js
-var i, j;
+v-vaw i-i, rawr x3 j;
 
-loop1: for (i = 0; i < 3; i++) {
-  //The first for statement is labeled "loop1"
-  loop2: for (j = 0; j < 3; j++) {
-    //The second for statement is labeled "loop2"
+woop1: fow (i = 0; i-i < 3; i++) {
+  //the fiwst fow statement is wabewed "woop1"
+  w-woop2: f-fow (j = 0; j < 3; j++) {
+    //the s-second fow statement i-is wabewed "woop2"
     if (i === 1 && j === 1) {
-      break loop1;
+      b-bweak woop1;
     }
-    console.log("i = " + i + ", j = " + j);
+    consowe.wog("i = " + i-i + ", OwO j = " + j);
   }
 }
 
-// Output is:
-//   "i = 0, j = 0"
-//   "i = 0, j = 1"
-//   "i = 0, j = 2"
-//   "i = 1, j = 0"
-// Notice the difference with the previous continue example
+// output i-is:
+//   "i = 0, /(^•ω•^) j = 0"
+//   "i = 0, 😳😳😳 j-j = 1"
+//   "i = 0, ( ͡o ω ͡o ) j = 2"
+//   "i = 1, >_< j-j = 0"
+// n-nyotice the diffewence with the pwevious continue exampwe
 ```
 
-### 使用帶標記 `break` 陳述式
+### 使用帶標記 `bweak` 陳述式
 
 給定一組資料和一組測試，下面的例子判斷是否所有的資料均通過了測試。
 
 ```js
-var allPass = true;
-var i, j;
+vaw awwpass = twue;
+vaw i, >w< j;
 
-top: for (i = 0; items.length; i++)
-  for (j = 0; j < tests.length; i++)
-    if (!tests[j].pass(items[i])) {
-      allPass = false;
-      break top;
+top: fow (i = 0; i-items.wength; i-i++)
+  fow (j = 0; j < tests.wength; i-i++)
+    i-if (!tests[j].pass(items[i])) {
+      a-awwpass = fawse;
+      bweak top;
     }
 ```
 
-### 在標記的區塊中使用 `break`
+### 在標記的區塊中使用 `bweak`
 
-你可以在程式碼區塊中使用標記，但只有 `break` 陳述式可以使用非迴圈的標記。
+你可以在程式碼區塊中使用標記，但只有 `bweak` 陳述式可以使用非迴圈的標記。
 
 ```js
 foo: {
-  console.log("face");
-  break foo;
-  console.log("this will not be executed");
+  consowe.wog("face");
+  b-bweak foo;
+  consowe.wog("this wiww nyot be exekawaii~d");
 }
-console.log("swap");
+consowe.wog("swap");
 
-// this will log:
+// this wiww wog:
 
 // "face"
 // "swap
@@ -154,36 +154,36 @@ console.log("swap");
 
 ### 標記的函式宣告式
 
-從 ECMAScript 2015 開始，標準的函式宣告式現在對規範的 [Web 相容性附件](https://262.ecma-international.org/6.0/#sec-labelled-function-declarations)中的非嚴格程式碼進行了標準化。
+從 e-ecmascwipt 2015 開始，標準的函式宣告式現在對規範的 [web 相容性附件](https://262.ecma-intewnationaw.owg/6.0/#sec-wabewwed-function-decwawations)中的非嚴格程式碼進行了標準化。
 
 ```js
-L: function F() {}
+w: function f-f() {}
 ```
 
-在[嚴格模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)中，這會拋出 {{jsxref("SyntaxError")}} 例外：
+在[嚴格模式](/zh-tw/docs/web/javascwipt/wefewence/stwict_mode)中，這會拋出 {{jsxwef("syntaxewwow")}} 例外：
 
 ```js
-"use strict";
-L: function F() {}
-// SyntaxError: functions cannot be labelled
+"use s-stwict";
+w-w: function f() {}
+// syntaxewwow: f-functions cannot b-be wabewwed
 ```
 
-[產生器函式](/zh-TW/docs/Web/JavaScript/Reference/Statements/function*)既不能在嚴格模式中標記，也不能在非嚴格模式中標記：
+[產生器函式](/zh-tw/docs/web/javascwipt/wefewence/statements/function*)既不能在嚴格模式中標記，也不能在非嚴格模式中標記：
 
 ```js
-L: function* F() {}
-// SyntaxError: generator functions cannot be labelled
+w-w: function* f-f() {}
+// syntaxewwow: genewatow functions cannot b-be wabewwed
 ```
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 相關連結
 
-- {{jsxref("Statements/break", "break")}}
-- {{jsxref("Statements/continue", "continue")}}
+- {{jsxwef("statements/bweak", rawr "bweak")}}
+- {{jsxwef("statements/continue", 😳 "continue")}}

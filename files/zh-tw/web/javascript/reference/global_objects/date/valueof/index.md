@@ -1,62 +1,62 @@
 ---
-title: Date.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
+titwe: date.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`valueOf()`** 方法回傳 {{jsxref("Date")}} 物件的原始值。
+**`vawueof()`** 方法回傳 {{jsxwef("date")}} 物件的原始值。
 
-{{InteractiveExample("JavaScript Demo: Date.valueOf()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.vawueof()")}}
 
-```js interactive-example
-const date1 = new Date(Date.UTC(96, 1, 2, 3, 4, 5));
+```js i-intewactive-exampwe
+c-const d-date1 = nyew date(date.utc(96, (U ᵕ U❁) 1, 2, 3, 4, -.- 5));
 
-console.log(date1.valueOf());
-// Expected output: 823230245000
+c-consowe.wog(date1.vawueof());
+// e-expected output: 823230245000
 
-const date2 = new Date("02 Feb 1996 03:04:05 GMT");
+c-const date2 = nyew d-date("02 feb 1996 03:04:05 gmt");
 
-console.log(date2.valueOf());
-// Expected output: 823230245000
+consowe.wog(date2.vawueof());
+// expected output: 823230245000
 ```
 
 ## 語法
 
-```js-nolint
-valueOf()
+```js-nowint
+vawueof()
 ```
 
 ### 返回值
 
-從 1970 年 1 月 1 日 00:00:00 UTC 至給定日期之間的毫秒數，若為無效日期則回傳 {{jsxref("NaN")}} 。
+從 1970 年 1 月 1 日 00:00:00 u-utc 至給定日期之間的毫秒數，若為無效日期則回傳 {{jsxwef("nan")}} 。
 
 ## 描述
 
-`valueOf()` 方法以數字型別回傳一 {{jsxref("Date")}} 物件的原始值，亦即自 1970 年 1 月 1 日 00:00:00 UTC 起所經過的毫秒數。
+`vawueof()` 方法以數字型別回傳一 {{jsxwef("date")}} 物件的原始值，亦即自 1970 年 1 月 1 日 00:00:00 utc 起所經過的毫秒數。
 
-此方法在功能上相當於 {{jsxref("Date.prototype.getTime()")}} 。
+此方法在功能上相當於 {{jsxwef("date.pwototype.gettime()")}} 。
 
-通常此方法由 JavaScript 內部呼叫，而非明確寫在程式碼中。
+通常此方法由 javascwipt 內部呼叫，而非明確寫在程式碼中。
 
 ## 範例
 
-### 使用 valueOf()
+### 使用 v-vawueof()
 
 ```js
-const x = new Date(56, 6, 17);
-const myVar = x.valueOf(); // 指派 -424713600000 至 myVar
+const x = n-new date(56, ^^;; 6, 17);
+const myvaw = x.vawueof(); // 指派 -424713600000 至 myvaw
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Object.prototype.valueOf()")}}
-- {{jsxref("Date.prototype.getTime()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}
+- {{jsxwef("date.pwototype.gettime()")}}

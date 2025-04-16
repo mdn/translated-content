@@ -1,39 +1,39 @@
 ---
-title: 101 Switching Protocols
-slug: Web/HTTP/Reference/Status/101
-l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+titwe: 101 switching pwotocows
+s-swug: web/http/wefewence/status/101
+w-w10n:
+  souwcecommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP **`101 Switching Protocols`** 資訊回應碼表示伺服器正在切換協定。協定是從用戶端接收到的 {{HTTPHeader("Upgrade")}} 請求標頭中指定的。
+h-http **`101 s-switching p-pwotocows`** 資訊回應碼表示伺服器正在切換協定。協定是從用戶端接收到的 {{httpheadew("upgwade")}} 請求標頭中指定的。
 
-伺服器在此回應中包含一個 {{HTTPHeader("Upgrade")}} 回應標頭，以指示它切換到的協定。該過程在以下文章中描述：[協定升級機制](/zh-TW/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)。
+伺服器在此回應中包含一個 {{httpheadew("upgwade")}} 回應標頭，以指示它切換到的協定。該過程在以下文章中描述：[協定升級機制](/zh-tw/docs/web/http/guides/pwotocow_upgwade_mechanism)。
 
 ## 狀態
 
 ```http
-101 Switching Protocols
+101 s-switching pwotocows
 ```
 
 ## 範例
 
-協定切換可能與 [WebSocket](/zh-TW/docs/Web/API/WebSockets_API) 一起使用。
+協定切換可能與 [websocket](/zh-tw/docs/web/api/websockets_api) 一起使用。
 
 ```http
-HTTP/1.1 101 Switching Protocols
-Upgrade: websocket
-Connection: Upgrade
+h-http/1.1 101 s-switching pwotocows
+upgwade: websocket
+connection: upgwade
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 參見
 
-- [協定升級機制](/zh-TW/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
-- [WebSockets](/zh-TW/docs/Web/API/WebSockets_API)
-- {{HTTPHeader("Upgrade")}}
-- {{HTTPStatus("426")}} `Upgrade Required`
+- [協定升級機制](/zh-tw/docs/web/http/guides/pwotocow_upgwade_mechanism)
+- [websockets](/zh-tw/docs/web/api/websockets_api)
+- {{httpheadew("upgwade")}}
+- {{httpstatus("426")}} `upgwade wequiwed`

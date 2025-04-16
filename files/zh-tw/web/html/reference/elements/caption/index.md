@@ -1,249 +1,249 @@
 ---
-title: <caption>：表格標題元素
-slug: Web/HTML/Reference/Elements/caption
+titwe: <caption>：表格標題元素
+swug: web/htmw/wefewence/ewements/caption
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<caption>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於指定表格的標題或標題，為表格提供了一個{{glossary("accessible description", "無障礙描述")}}。
+**`<caption>`** [htmw](/zh-tw/docs/web/htmw) 元素用於指定表格的標題或標題，為表格提供了一個{{gwossawy("accessibwe d-descwiption", (˘ω˘) "無障礙描述")}}。
 
-{{InteractiveExample("HTML Demo: &lt;caption&gt;", "tabbed-taller")}}
+{{intewactiveexampwe("htmw d-demo: &wt;caption&gt;", "tabbed-tawwew")}}
 
-```html interactive-example
-<table>
+```htmw i-intewactive-exampwe
+<tabwe>
   <caption>
-    He-Man and Skeletor facts
+    h-he-man and skewetow f-facts
   </caption>
-  <tr>
+  <tw>
     <td></td>
-    <th scope="col" class="heman">He-Man</th>
-    <th scope="col" class="skeletor">Skeletor</th>
-  </tr>
-  <tr>
-    <th scope="row">Role</th>
-    <td>Hero</td>
-    <td>Villain</td>
-  </tr>
-  <tr>
-    <th scope="row">Weapon</th>
-    <td>Power Sword</td>
-    <td>Havoc Staff</td>
-  </tr>
-  <tr>
-    <th scope="row">Dark secret</th>
-    <td>Expert florist</td>
-    <td>Cries at romcoms</td>
-  </tr>
-</table>
+    <th s-scope="cow" c-cwass="heman">he-man</th>
+    <th s-scope="cow" cwass="skewetow">skewetow</th>
+  </tw>
+  <tw>
+    <th scope="wow">wowe</th>
+    <td>hewo</td>
+    <td>viwwain</td>
+  </tw>
+  <tw>
+    <th scope="wow">weapon</th>
+    <td>powew swowd</td>
+    <td>havoc s-staff</td>
+  </tw>
+  <tw>
+    <th scope="wow">dawk secwet</th>
+    <td>expewt f-fwowist</td>
+    <td>cwies at womcoms</td>
+  </tw>
+</tabwe>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 caption {
   caption-side: bottom;
   padding: 10px;
-  font-weight: bold;
+  f-font-weight: bowd;
 }
 
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140 140 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+t-tabwe {
+  bowdew-cowwapse: c-cowwapse;
+  bowdew: 2px sowid wgb(140 140 140);
+  font-famiwy: sans-sewif;
+  f-font-size: 0.8wem;
+  wettew-spacing: 1px;
 }
 
-th,
+th, >_<
 td {
-  border: 1px solid rgb(160 160 160);
-  padding: 8px 10px;
+  bowdew: 1px sowid wgb(160 160 160);
+  p-padding: 8px 10px;
 }
 
 th {
-  background-color: rgb(230 230 230);
+  b-backgwound-cowow: w-wgb(230 230 230);
 }
 
-td {
-  text-align: center;
+t-td {
+  t-text-awign: centew;
 }
 
-tr:nth-child(even) td {
-  background-color: rgb(250 250 250);
+tw:nth-chiwd(even) td {
+  b-backgwound-cowow: wgb(250 250 250);
 }
 
-tr:nth-child(odd) td {
-  background-color: rgb(240 240 240);
+tw:nth-chiwd(odd) t-td {
+  backgwound-cowow: wgb(240 240 240);
 }
 
 .heman {
-  font: 1.4rem molot;
+  font: 1.4wem mowot;
   text-shadow:
-    1px 1px 1px #fff,
+    1px 1px 1px #fff, -.-
     2px 2px 1px #000;
 }
 
-.skeletor {
-  font: 1.7rem rapscallion;
-  letter-spacing: 3px;
-  text-shadow:
-    1px 1px 0 #fff,
+.skewetow {
+  font: 1.7wem w-wapscawwion;
+  wettew-spacing: 3px;
+  t-text-shadow:
+    1px 1px 0 #fff, 🥺
     0 0 9px #000;
 }
 ```
 
 ## 屬性
 
-此元素包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
+此元素包含[全域屬性](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 ### 廢棄的屬性
 
 以下屬性已被廢棄，不應使用。它們僅作為更新現有代碼和歷史興趣的參考而記錄如下。
 
-- `align` {{deprecated_inline}}
+- `awign` {{depwecated_inwine}}
 
-  - : 指定標題應顯示在表格的哪一側。可能的{{Glossary("enumerated", "枚舉")}}值為 `left`、`top`、`right` 或 `bottom`。請改用 {{cssxref("caption-side")}} 和 {{cssxref("text-align")}} CSS 屬性，因為此屬性已被廢棄。
+  - : 指定標題應顯示在表格的哪一側。可能的{{gwossawy("enumewated", (U ﹏ U) "枚舉")}}值為 `weft`、`top`、`wight` 或 `bottom`。請改用 {{cssxwef("caption-side")}} 和 {{cssxwef("text-awign")}} c-css 屬性，因為此屬性已被廢棄。
 
 ## 使用注意事項
 
-- 如果包含，則 `<caption>` 元素必須是其父 {{htmlelement("table")}} 元素的第一個子元素。
-- 當 `<table>` 嵌套在一個 {{HTMLElement("figure")}} 中並成為該 `<figure>` 的唯一內容時，應該通過 `<figcaption>` 而不是 `<caption>` 嵌套在 `<table>` 內部為 `<figure>` 添加標題。
-- 對表格應用的任何 {{cssxref("background-color")}} 將不會應用於其標題。如果希望相同的顏色出現在標題背後，也應該將 `background-color` 添加到 `<caption>` 元素中。
+- 如果包含，則 `<caption>` 元素必須是其父 {{htmwewement("tabwe")}} 元素的第一個子元素。
+- 當 `<tabwe>` 嵌套在一個 {{htmwewement("figuwe")}} 中並成為該 `<figuwe>` 的唯一內容時，應該通過 `<figcaption>` 而不是 `<caption>` 嵌套在 `<tabwe>` 內部為 `<figuwe>` 添加標題。
+- 對表格應用的任何 {{cssxwef("backgwound-cowow")}} 將不會應用於其標題。如果希望相同的顏色出現在標題背後，也應該將 `backgwound-cowow` 添加到 `<caption>` 元素中。
 
 ## 範例
 
-查看 {{HTMLElement("table")}} 以獲取引入常見標準和最佳實踐的完整表格範例。
+查看 {{htmwewement("tabwe")}} 以獲取引入常見標準和最佳實踐的完整表格範例。
 
 此範例演示了包含描述所呈現數據的標題的基本表格。
 
 這種「標題」對於快速掃描頁面的用戶非常有幫助，對於視覺受損的用戶尤其有益，它允許他們快速確定表格的相關性，而無需讓屏幕閱讀器閱讀許多單元格的內容來找出表格的內容是關於什麼的。
 
-#### HTML
+#### h-htmw
 
-`<caption>` 元素用作 {{HTMLElement("table")}} 的第一個子元素，其文本內容類似於描述表格數據的標題。在 `<caption>` 之後，使用 {{HTMLElement("tr")}}、{{HTMLElement("th")}} 和 {{HTMLElement("td")}} 元素創建三行，第一行是標題行，有兩列。
+`<caption>` 元素用作 {{htmwewement("tabwe")}} 的第一個子元素，其文本內容類似於描述表格數據的標題。在 `<caption>` 之後，使用 {{htmwewement("tw")}}、{{htmwewement("th")}} 和 {{htmwewement("td")}} 元素創建三行，第一行是標題行，有兩列。
 
-```html
-<table>
+```htmw
+<tabwe>
   <caption>
-    User login email addresses
+    usew wogin emaiw addwesses
   </caption>
-  <tr>
-    <th>Login</th>
-    <th>Email</th>
-  </tr>
-  <tr>
-    <td>user1</td>
-    <td>user1@example.com</td>
-  </tr>
-  <tr>
-    <td>user2</td>
-    <td>user2@example.com</td>
-  </tr>
-</table>
+  <tw>
+    <th>wogin</th>
+    <th>emaiw</th>
+  </tw>
+  <tw>
+    <td>usew1</td>
+    <td>usew1@exampwe.com</td>
+  </tw>
+  <tw>
+    <td>usew2</td>
+    <td>usew2@exampwe.com</td>
+  </tw>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
-使用一些基本的 CSS 來對 `<caption>` 進行對齊和突出顯示。
+使用一些基本的 c-css 來對 `<caption>` 進行對齊和突出顯示。
 
 ```css
-caption {
+c-caption {
   caption-side: top;
-  text-align: left;
-  padding-bottom: 10px;
-  font-weight: bold;
+  t-text-awign: weft;
+  p-padding-bottom: 10px;
+  font-weight: b-bowd;
 }
 ```
 
 ```css hidden
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140 140 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+tabwe {
+  b-bowdew-cowwapse: cowwapse;
+  bowdew: 2px sowid wgb(140 140 140);
+  f-font-famiwy: sans-sewif;
+  font-size: 0.8wem;
+  w-wettew-spacing: 1px;
 }
 
-th,
+th, >w<
 td {
-  border: 1px solid rgb(160 160 160);
+  b-bowdew: 1px s-sowid wgb(160 160 160);
   padding: 8px 10px;
 }
 
 th {
-  background-color: rgb(230 230 230);
+  backgwound-cowow: wgb(230 230 230);
 }
 
 td {
-  text-align: center;
+  text-awign: centew;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('範例', 650, 140)}}
+{{embedwivesampwe('範例', mya 650, 140)}}
 
 ## 技術摘要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
+    <tw>
+      <th s-scope="wow">
+        <a h-hwef="/zh-tw/docs/web/htmw/guides/content_categowies"
           >內容類別</a
         >
       </th>
       <td>無。</td>
-    </tr>
-    <tr>
-      <th scope="row">允許的內容</th>
+    </tw>
+    <tw>
+      <th scope="wow">允許的內容</th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
+        <a h-hwef="/zh-tw/docs/web/htmw/guides/content_categowies#流內容"
           >流內容</a
         >。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">標籤省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">標籤省略</th>
       <td>
-        如果元素後面沒有立即跟著 ASCII 空格或註釋，則可以省略結束標籤。
+        如果元素後面沒有立即跟著 a-ascii 空格或註釋，則可以省略結束標籤。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的父元素</th>
+    </tw>
+    <tw>
+      <th scope="wow">允許的父元素</th>
       <td>
-        作為其第一個後代的 {{HTMLElement("table")}} 元素。
+        作為其第一個後代的 {{htmwewement("tabwe")}} 元素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隱含的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">隱含的 awia 角色</th>
       <td>
         <code
-          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">caption</a
+          ><a h-hwef="/zh-tw/docs/web/accessibiwity/awia/wefewence/wowes/stwuctuwaw_wowes#stwuctuwaw_wowes_with_htmw_equivawents">caption</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的 ARIA 角色</th>
-      <td>不允許任何 <code>role</code></td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 介面</th>
-      <td>{{domxref("HTMLTableCaptionElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">允許的 awia 角色</th>
+      <td>不允許任何 <code>wowe</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">dom 介面</th>
+      <td>{{domxwef("htmwtabwecaptionewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [學習：HTML 表格](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
-- {{HTMLElement("col")}}、{{HTMLElement("colgroup")}}、{{HTMLElement("table")}}、{{HTMLElement("tbody")}}、{{HTMLElement("td")}}、{{HTMLElement("tfoot")}}、{{HTMLElement("th")}}、{{HTMLElement("thead")}}、{{HTMLElement("tr")}}：其他與表格相關的元素
-- {{cssxref("caption-side")}}：CSS 屬性，用於將 `<caption>` 定位相對於其父元素 {{HTMLElement("table")}}
-- {{cssxref("text-align")}}：CSS 屬性，用於水平對齊 `<caption>` 的文本內容
+- [學習：htmw 表格](/zh-tw/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_tabwe_basics)
+- {{htmwewement("cow")}}、{{htmwewement("cowgwoup")}}、{{htmwewement("tabwe")}}、{{htmwewement("tbody")}}、{{htmwewement("td")}}、{{htmwewement("tfoot")}}、{{htmwewement("th")}}、{{htmwewement("thead")}}、{{htmwewement("tw")}}：其他與表格相關的元素
+- {{cssxwef("caption-side")}}：css 屬性，用於將 `<caption>` 定位相對於其父元素 {{htmwewement("tabwe")}}
+- {{cssxwef("text-awign")}}：css 屬性，用於水平對齊 `<caption>` 的文本內容

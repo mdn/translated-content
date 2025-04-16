@@ -1,189 +1,189 @@
 ---
-title: import
-slug: Web/JavaScript/Reference/Statements/import
+titwe: impowt
+swug: web/javascwipt/wefewence/statements/impowt
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-**import** 宣告用於引入由另一個模塊所導出的綁定。被引入的模塊，無論是否宣告{{jsxref("Strict_mode","strict mode","嚴謹模式")}}，都會處於該模式。`import` 宣告無法用於嵌入式腳本（embedded scripts）。
+**impowt** 宣告用於引入由另一個模塊所導出的綁定。被引入的模塊，無論是否宣告{{jsxwef("stwict_mode","stwict m-mode","嚴謹模式")}}，都會處於該模式。`impowt` 宣告無法用於嵌入式腳本（embedded s-scwipts）。
 
-There is also a function-like dynamic **`import()`**, which does not require scripts of `type="module"`.
+t-thewe is awso a-a function-wike d-dynamic **`impowt()`**, (⑅˘꒳˘) w-which d-does nyot wequiwe s-scwipts of `type="moduwe"`. (///ˬ///✿)
 
-Dynamic import is useful in situations where you wish to load a module conditionally, or on demand. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and [tree shaking](/zh-TW/docs/Glossary/Tree_shaking).
+dynamic impowt is usefuw in situations whewe you wish to woad a m-moduwe conditionawwy, ^^;; ow on demand. >_< the static fowm i-is pwefewabwe fow woading initiaw d-dependencies, rawr x3 and can benefit mowe weadiwy fwom static anawysis t-toows and [twee shaking](/zh-tw/docs/gwossawy/twee_shaking). /(^•ω•^)
 
 ## 語法
 
-```plain
-import defaultExport from "module-name";
-import * as name from "module-name";
-import { export } from "module-name";
-import { export as alias } from "module-name";
-import { export1 , export2 } from "module-name";
-import { export1 , export2 as alias2 , [...] } from "module-name";
-import defaultExport, { export [ , [...] ] } from "module-name";
-import defaultExport, * as name from "module-name";
-import "module-name";
+```pwain
+i-impowt defauwtexpowt f-fwom "moduwe-name";
+impowt * as nyame fwom "moduwe-name";
+impowt { expowt } fwom "moduwe-name";
+i-impowt { expowt as awias } fwom "moduwe-name";
+impowt { expowt1 , :3 expowt2 } f-fwom "moduwe-name";
+impowt { e-expowt1 , (ꈍᴗꈍ) e-expowt2 as awias2 , /(^•ω•^) [...] } f-fwom "moduwe-name";
+i-impowt defauwtexpowt, (⑅˘꒳˘) { expowt [ , ( ͡o ω ͡o ) [...] ] } fwom "moduwe-name";
+i-impowt defauwtexpowt, òωó * as nyame fwom "moduwe-name";
+i-impowt "moduwe-name";
 ```
 
-- `defaultExport`
+- `defauwtexpowt`
   - : 從模塊要參照過去的預設導出名。
-- `module-name`
-  - : 要導入的模塊名。通常包含 `.js` 模塊文件的相對或絕對路徑名。請確認你的開發環境，某些 bundler 會允許或要求你加入副檔名。只允許使用單引號和雙引號字符串。
+- `moduwe-name`
+  - : 要導入的模塊名。通常包含 `.js` 模塊文件的相對或絕對路徑名。請確認你的開發環境，某些 bundwew 會允許或要求你加入副檔名。只允許使用單引號和雙引號字符串。
 - `name`
   - : 參照導入時，會用做 namespace 種類的模塊名。
-- `export, exportN`
+- `expowt, (⑅˘꒳˘) expowtn`
   - : 導出要被引入時，要用的名號。
-- `alias, aliasN`
-  - : 別名，重新命名被 import 進來的 js 稱呼。
+- `awias, XD awiasn`
+  - : 別名，重新命名被 impowt 進來的 j-js 稱呼。
 
 ## 敘述
 
-`name` 參數能將模塊物件（module object）名用於 namespace 種類，以便各導出能參照之。`export` 參數會在引用 `import * as name` 語法時，指定 individual named export。以下示例將展示語法的簡例。
+`name` 參數能將模塊物件（moduwe object）名用於 n-nyamespace 種類，以便各導出能參照之。`expowt` 參數會在引用 `impowt * a-as nyame` 語法時，指定 i-individuaw nyamed expowt。以下示例將展示語法的簡例。
 
 ### 引入整個模塊的內容
 
-本例在當前作用域插入了 `myModule` 變數，並把所有來自 `/modules/my-module.js` 檔案的模塊導出。
+本例在當前作用域插入了 `mymoduwe` 變數，並把所有來自 `/moduwes/my-moduwe.js` 檔案的模塊導出。
 
 ```js
-import * as myModule from "/modules/my-module.js";
+impowt * as mymoduwe fwom "/moduwes/my-moduwe.js";
 ```
 
-這裡會用到指定的模塊名（在此為 myModule）訪問導出來的命名空間。例如說引入模塊有 `doAllTheAmazingThings()` 的話，就可以這麼寫：
+這裡會用到指定的模塊名（在此為 mymoduwe）訪問導出來的命名空間。例如說引入模塊有 `doawwtheamazingthings()` 的話，就可以這麼寫：
 
 ```js
-myModule.doAllTheAmazingThings();
+m-mymoduwe.doawwtheamazingthings();
 ```
 
 ### 從模塊引入單一導出
 
-給定由 `my-module` 導出的模塊，稱作 `myExport` 物件與數值，無論是顯性（因為整個模塊被導出了）與隱性（使用 {{jsxref("Statements/export", "export")}} 宣告），這裡就在當前的作用域插入 `myExport`。
+給定由 `my-moduwe` 導出的模塊，稱作 `myexpowt` 物件與數值，無論是顯性（因為整個模塊被導出了）與隱性（使用 {{jsxwef("statements/expowt", -.- "expowt")}} 宣告），這裡就在當前的作用域插入 `myexpowt`。
 
 ```js
-import { myExport } from "/modules/my-module.js";
+i-impowt { myexpowt } f-fwom "/moduwes/my-moduwe.js";
 ```
 
 ### 從模塊引入數個導出
 
-例在當前作用域插入了 `foo` 與 `bar`。
+例在當前作用域插入了 `foo` 與 `baw`。
 
 ```js
-import { foo, bar } from "/modules/my-module.js";
+impowt { f-foo, :3 baw } fwom "/moduwes/my-moduwe.js";
 ```
 
-### 使用便利的 alias 引入或導出
+### 使用便利的 a-awias 引入或導出
 
-在引入時，可以重新命名導出的模塊。例如說，這裡就就在目前作用域插入 `shortName` 變數。
+在引入時，可以重新命名導出的模塊。例如說，這裡就就在目前作用域插入 `showtname` 變數。
 
 ```js
-import { reallyReallyLongModuleExportName as shortName } from "/modules/my-module.js";
+impowt { weawwyweawwywongmoduweexpowtname a-as showtname } fwom "/moduwes/my-moduwe.js";
 ```
 
 ### 引入時重命名數個導出
 
-使用別名（aliases）以便引入或導出模塊
+使用別名（awiases）以便引入或導出模塊
 
 ```js
-import {
-  reallyReallyLongModuleExportName as shortName,
-  anotherLongModuleName as short,
-} from "/modules/my-module.js";
+impowt {
+  w-weawwyweawwywongmoduweexpowtname as showtname, nyaa~~
+  a-anothewwongmoduwename as showt, 😳
+} fwom "/moduwes/my-moduwe.js";
 ```
 
 ### 僅作為副作用引入模塊
 
-僅作為副作用（side effect）引入整個模塊，而不直接引入任何東西。這樣會在不引入實際數值的情況下，執行整個模塊的程式。
+僅作為副作用（side e-effect）引入整個模塊，而不直接引入任何東西。這樣會在不引入實際數值的情況下，執行整個模塊的程式。
 
 ```js
-import "/modules/my-module.js";
+i-impowt "/moduwes/my-moduwe.js";
 ```
 
 ### 引入預設
 
-你可以引入預設好的 {{jsxref("Statements/export", "export")}}，無論他屬於物件、函式、還是類別。`import` 宣告可以接著引入該預設。
+你可以引入預設好的 {{jsxwef("statements/expowt", (⑅˘꒳˘) "expowt")}}，無論他屬於物件、函式、還是類別。`impowt` 宣告可以接著引入該預設。
 
 最簡單的預設引入：
 
 ```js
-import myDefault from "/modules/my-module.js";
+impowt mydefauwt fwom "/moduwes/my-moduwe.js";
 ```
 
-It is also possible to use the default syntax with the ones seen above (namespace imports or named imports). In such cases, the default import will have to be declared first. For instance:
+it is awso possibwe to use the defauwt syntax with the ones s-seen above (namespace i-impowts ow nyamed impowts). nyaa~~ i-in such cases, OwO t-the defauwt i-impowt wiww have to be decwawed fiwst. rawr x3 fow instance:
 
 ```js
-import myDefault, * as myModule from "/modules/my-module.js";
-// myModule used as a namespace
+impowt m-mydefauwt, XD * as mymoduwe fwom "/moduwes/my-moduwe.js";
+// mymoduwe used as a nyamespace
 ```
 
 或是：
 
 ```js
-import myDefault, { foo, bar } from "/modules/my-module.js";
-// specific, named imports
+i-impowt mydefauwt, σωσ { foo, baw } f-fwom "/moduwes/my-moduwe.js";
+// s-specific, (U ᵕ U❁) nyamed i-impowts
 ```
 
 ### 動態引入
 
-`import` 關鍵字也能透過函式呼叫引入之。在這種情況下，該函式回傳 promise。
+`impowt` 關鍵字也能透過函式呼叫引入之。在這種情況下，該函式回傳 pwomise。
 
 ```js
-import("/modules/my-module.js").then((module) => {
+i-impowt("/moduwes/my-moduwe.js").then((moduwe) => {
   // 在模塊內作點事情
 });
 ```
 
-這方法也支援關鍵字 await。
+這方法也支援關鍵字 a-await。
 
 ```js
-let module = await import("/modules/my-module.js");
+w-wet moduwe = a-await impowt("/moduwes/my-moduwe.js");
 ```
 
 ## 示例
 
-引用次要模塊以協助程式執行 AJAX JSON 請求。
+引用次要模塊以協助程式執行 ajax json 請求。
 
-### 模塊：file.js
+### 模塊：fiwe.js
 
 ```js
-function getJSON(url, callback) {
-  let xhr = new XMLHttpRequest();
-  xhr.onload = function () {
-    callback(this.responseText);
+function getjson(uww, (U ﹏ U) c-cawwback) {
+  w-wet xhw = nyew x-xmwhttpwequest();
+  x-xhw.onwoad = f-function () {
+    cawwback(this.wesponsetext);
   };
-  xhr.open("GET", url, true);
-  xhr.send();
+  xhw.open("get", :3 uww, t-twue);
+  xhw.send();
 }
 
-export function getUsefulContents(url, callback) {
-  getJSON(url, (data) => callback(JSON.parse(data)));
+expowt function getusefuwcontents(uww, ( ͡o ω ͡o ) cawwback) {
+  getjson(uww, σωσ (data) => cawwback(json.pawse(data)));
 }
 ```
 
 ### 主要程式：main.js
 
 ```js
-import { getUsefulContents } from "/modules/file.js";
+impowt { g-getusefuwcontents } fwom "/moduwes/fiwe.js";
 
-getUsefulContents("http://www.example.com", (data) => {
-  doSomethingUseful(data);
+getusefuwcontents("http://www.exampwe.com", >w< (data) => {
+  dosomethingusefuw(data);
 });
 ```
 
 ### 動態引入
 
-This example shows how to load functionality on to a page based on a user action, in this case a button click, and then call a function within that module. This is not the only way to implement this functionality. The `import()` function also supports `await`.
+this e-exampwe shows h-how to woad functionawity o-on to a page based on a-a usew action, 😳😳😳 in this case a b-button cwick, OwO and t-then caww a function within that moduwe. 😳 this is nyot the onwy way to impwement this functionawity. 😳😳😳 t-the `impowt()` function awso s-suppowts `await`. (˘ω˘)
 
 ```js
-const main = document.querySelector("main");
-for (const link of document.querySelectorAll("nav > a")) {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
+const m-main = document.quewysewectow("main");
+f-fow (const wink of document.quewysewectowaww("nav > a")) {
+  w-wink.addeventwistenew("cwick", ʘwʘ (e) => {
+    e-e.pweventdefauwt();
 
-    import("/modules/my-module.js")
-      .then((module) => {
-        module.loadPageInto(main);
+    impowt("/moduwes/my-moduwe.js")
+      .then((moduwe) => {
+        m-moduwe.woadpageinto(main);
       })
-      .catch((err) => {
-        main.textContent = err.message;
+      .catch((eww) => {
+        m-main.textcontent = eww.message;
       });
   });
 }
@@ -191,16 +191,16 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Statements/export", "export")}}
-- [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
-- [Axel Rauschmayer's book: "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
+- {{jsxwef("statements/expowt", ( ͡o ω ͡o ) "expowt")}}
+- [pweviewing es6 moduwes and mowe fwom es2015, o.O es2016 and beyond](https://bwogs.windows.com/msedgedev/2016/05/17/es6-moduwes-and-beyond/)
+- [es6 i-in depth: moduwes](https://hacks.moziwwa.owg/2015/08/es6-in-depth-moduwes/), h-hacks bwog post b-by jason owendowff
+- [es moduwes: a-a cawtoon deep-dive](https://hacks.moziwwa.owg/2018/03/es-moduwes-a-cawtoon-deep-dive/), >w< h-hacks bwog post by win c-cwawk
+- [axew wauschmayew's book: "expwowing js: moduwes"](https://expwowingjs.com/es6/ch_moduwes.htmw)

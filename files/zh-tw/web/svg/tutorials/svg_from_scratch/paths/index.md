@@ -1,280 +1,280 @@
 ---
-title: 路徑
-slug: Web/SVG/Tutorials/SVG_from_scratch/Paths
+titwe: 路徑
+swug: web/svg/tutowiaws/svg_fwom_scwatch/paths
 ---
 
-{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes", "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes") }}
+{{ p-pweviousnext("web/svg/tutowiaws/svg_fwom_scwatch/basic_shapes", nyaa~~ "web/svg/tutowiaws/svg_fwom_scwatch/fiwws_and_stwokes") }}
 
-[`<path>`](/zh-TW/docs/Web/SVG/Reference/Element/path) 元件可說是 SVG 程式庫中最強大的[基本形狀](/zh-TW/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)了，你可以用它來產生線條、曲線、圓弧等形狀。
+[`<path>`](/zh-tw/docs/web/svg/wefewence/ewement/path) 元件可說是 s-svg 程式庫中最強大的[基本形狀](/zh-tw/docs/web/svg/tutowiaws/svg_fwom_scwatch/basic_shapes)了，你可以用它來產生線條、曲線、圓弧等形狀。
 
-路徑（path）藉由結合多個直線或曲線來產生複雜形狀。路徑和折線雖然可以產生相似外觀的形狀，例如：可由[折線](/zh-TW/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes#polyline)組成由單純的直線組成的複雜形狀 。但折線需要產生許多小段的直線去模擬曲線的外觀，如果遇到需要放大的情形，會較難 scale。好好瞭解路徑對於繪製 SVG 是重要的。雖然不建議使用 XML 編輯器或文字編輯器建立複雜路徑，但了解它們的工作原理，將與助於發現和修復 SVG 的顯示問題。
+路徑（path）藉由結合多個直線或曲線來產生複雜形狀。路徑和折線雖然可以產生相似外觀的形狀，例如：可由[折線](/zh-tw/docs/web/svg/tutowiaws/svg_fwom_scwatch/basic_shapes#powywine)組成由單純的直線組成的複雜形狀 。但折線需要產生許多小段的直線去模擬曲線的外觀，如果遇到需要放大的情形，會較難 s-scawe。好好瞭解路徑對於繪製 s-svg 是重要的。雖然不建議使用 x-xmw 編輯器或文字編輯器建立複雜路徑，但了解它們的工作原理，將與助於發現和修復 s-svg 的顯示問題。
 
-path 元素，由一個屬性定義：{{ SVGAttr("d") }}（可參考[基本形狀](/zh-TW/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes) ）。 `"d"` 屬性包含了一系列的指令(command)，以及這些指令各自使用的參數。
+p-path 元素，由一個屬性定義：{{ s-svgattw("d") }}（可參考[基本形狀](/zh-tw/docs/web/svg/tutowiaws/svg_fwom_scwatch/basic_shapes) ）。 `"d"` 屬性包含了一系列的指令(command)，以及這些指令各自使用的參數。
 
-Each of the commands is instantiated (for example, creating a class, naming and locating it) by a specific letter. For instance, let's move to the x and y coordinates (10, 10). The "Move to" command is called with the letter M. When the parser runs into this letter, it knows you want to move to a point. So, to move to (10,10) you would use the command "M 10 10". After that, the parser begins reading for the next command.
+each of the commands is instantiated (fow exampwe, 🥺 cweating a-a cwass, -.- nyaming and wocating it) by a specific w-wettew. fow instance, 🥺 wet's m-move to the x and y coowdinates (10, (˘ω˘) 10). the "move to" command i-is cawwed with the wettew m. òωó when t-the pawsew wuns i-into this wettew, it knows you want to move to a point. UwU so, to move to (10,10) y-you wouwd use the command "m 10 10". ^•ﻌ•^ aftew that, the pawsew begins weading fow t-the nyext command. mya
 
-All of the commands also come in two variants. An **uppercase letter** specifies absolute coordinates on the page, and a **lowercase letter** specifies relative coordinates (e.g. _move from the last point 10px up and 7px to the left_).
+aww of the commands a-awso come i-in two vawiants. (✿oωo) a-an **uppewcase w-wettew** specifies absowute coowdinates on the p-page, XD and a **wowewcase wettew** specifies wewative c-coowdinates (e.g. :3 _move fwom the wast point 10px up and 7px to the weft_). (U ﹏ U)
 
-Coordinates in the `"d"` attribute are **always unitless** and hence in the user coordinate system. Later, we will learn how paths can be transformed to suit other needs.
+coowdinates in t-the `"d"` attwibute awe **awways u-unitwess** and h-hence in the usew c-coowdinate system. UwU watew, we wiww weawn how paths can be twansfowmed t-to suit othew n-nyeeds. ʘwʘ
 
-## Line commands
+## wine commands
 
-There are five line commands for `<path>` nodes. The first command is the "Move To" or M, which was described above. It takes two parameters, a coordinate ' x ' and coordinate ' y ' to move to. If your cursor already was somewhere on the page, no line is drawn to connect the two places. The "Move To" command appears at the beginning of paths to specify where the drawing should start. e.g. :
+t-thewe awe five wine c-commands fow `<path>` nyodes. >w< t-the fiwst command is the "move t-to" ow m, 😳😳😳 which was descwibed above. rawr it takes two p-pawametews, ^•ﻌ•^ a coowdinate ' x ' a-and coowdinate ' y ' to move to. σωσ i-if youw cuwsow a-awweady was somewhewe on the page, :3 nyo wine is dwawn to connect the two pwaces. rawr x3 the "move to" command appeaws a-at the beginning o-of paths to specify whewe the dwawing s-shouwd stawt. nyaa~~ e-e.g. :
 
-```plain
-M x y
+```pwain
+m-m x y
 ```
 
-or
+ow
 
-```plain
+```pwain
 m dx dy
 ```
 
-In the following example we only have a point at (10,10). Note, though, that it wouldn't show up if you were just drawing the path normally. For example:
+in the fowwowing exampwe w-we onwy have a point at (10,10). :3 nyote, though, >w< that it wouwdn't show up if y-you wewe just dwawing the path nyowmawwy. f-fow exampwe:
 
-![](blank_path_area.png)
+![](bwank_path_awea.png)
 
-```xml
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+```xmw
+<svg w-width="200" h-height="200" xmwns="http://www.w3.owg/2000/svg">
 
-  <path d="M10 10"/>
+  <path d-d="m10 10"/>
 
-  <!-- Points -->
-  <circle cx="10" cy="10" r="2" fill="red"/>
-
-</svg>
-```
-
-There are three commands that draw lines. The most generic is the "Line To" command, `called with L`. `L` takes two parameters—x and y coordinates—and draws a line from the current position to a new position.
-
-```plain
-L x y (or l dx dy)
-```
-
-There are two abbreviated forms for drawing horizontal and vertical lines. `H` draws a horizontal line, and `V` draws a vertical line. Both commands only take one argument since they only move in one direction.
-
-```plain
-H x (or h dx)
-V y (or v dy)
-```
-
-An easy place to start is by drawing a shape. We will start with a rectangle (the same type that could be more easily made with a `<rect>` element). It's composed of horizontal and vertical lines only:
-
-![](path_line_commands.png)
-
-```xml
-<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-
-  <path d="M10 10 H 90 V 90 H 10 L 10 10"/>
-
-  <!-- Points -->
-  <circle cx="10" cy="10" r="2" fill="red"/>
-  <circle cx="90" cy="90" r="2" fill="red"/>
-  <circle cx="90" cy="10" r="2" fill="red"/>
-  <circle cx="10" cy="90" r="2" fill="red"/>
+  <!-- p-points -->
+  <ciwcwe c-cx="10" c-cy="10" w="2" fiww="wed"/>
 
 </svg>
 ```
 
-We can shorten the above path declaration a little bit by using the "Close Path" command, called with `Z`. This command draws a straight line from the current position back to the first point of the path. It is often placed at the end of a path node, although not always. There is no difference between the uppercase and lowercase command.
+thewe a-awe thwee commands t-that dwaw w-wines. rawr the most g-genewic is the "wine t-to" command, 😳 `cawwed with w`. 😳 `w` takes two pawametews—x a-and y coowdinates—and dwaws a wine fwom the cuwwent position to a nyew position. 🥺
 
-```plain
-Z (or z)
+```pwain
+w x-x y (ow w dx dy)
 ```
 
-So our path above could be shortened to:
+thewe awe two abbweviated fowms fow dwawing h-howizontaw and v-vewticaw wines. rawr x3 `h` d-dwaws a howizontaw wine, ^^ and `v` d-dwaws a vewticaw wine. ( ͡o ω ͡o ) both c-commands onwy t-take one awgument since they onwy move in one diwection. XD
 
-```xml
-<path d="M10 10 H 90 V 90 H 10 Z" fill="transparent" stroke="black"/>
+```pwain
+h x (ow h dx)
+v y (ow v dy)
 ```
 
-You can also use the relative form of these commands to draw the same picture. Relative commands are called by using lowercase letters, and rather than moving the cursor to an exact coordinate, they move it relative to its last position. For instance, since our box is 80 x 80, the path element could have been written:
+an easy pwace t-to stawt is by dwawing a shape. ^^ w-we wiww stawt with a wectangwe (the s-same type t-that couwd be mowe easiwy made with a `<wect>` ewement). (⑅˘꒳˘) i-it's composed o-of howizontaw and vewticaw w-wines onwy:
 
-```xml
-<path d="M10 10 h 80 v 80 h -80 Z" fill="transparent" stroke="black"/>
-```
+![](path_wine_commands.png)
 
-The path will move to point (10,10) and then move horizontally 80 points to the right, then 80 points down, then 80 points to the left, and then back to the start.
+```xmw
+<svg w-width="100" height="100" xmwns="http://www.w3.owg/2000/svg">
 
-In these examples, it would probably be simpler to use the \<polygon> or \<polyline> elements. However, paths are used so often in drawing SVG that developers may be more comfortable using them instead. There is no real performance penalty or bonus for using one or the other.
+  <path d="m10 10 h 90 v 90 h-h 10 w 10 10"/>
 
-## Curve commands
-
-There are three different commands that you can use to create smooth curves. Two of those curves are Bezier curves, and the third is an "arc" or part of a circle. You might have already gained practical experience with Bezier curves using path tools in Inkscape, Illustrator or Photoshop. For a complete description of the math behind Bezier curves, go to a reference like the one on [Wikipedia](https://en.wikipedia.org/wiki/Bézier_curve). There are an infinite number of Bezier curves, but only two simple ones are available in path elements: a cubic one, called with C, and a quadratic one, called with Q.
-
-### Bezier Curves
-
-The cubic curve, C, is the slightly more complex curve. Cubic Beziers take in two control points for each point. Therefore, to create a cubic Bezier, you need to specify three sets of coordinates.
-
-```plain
-C x1 y1, x2 y2, x y (or c dx1 dy1, dx2 dy2, dx dy)
-```
-
-The last set of coordinates here (x,y) are where you want the line to end. The other two are control points. (x1,y1) is the control point for the start of your curve, and (x2,y2) is the control point for the end. The control points essentially describe the slope of your line starting at each point. The Bezier function then creates a smooth curve that transfers you from the slope you established at the beginning of your line, to the slope at the other end.
-
-![Cubic Bézier Curves with grid](cubic_b%C3%A9zier_curves_with_grid.png)
-
-```xml
-<svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
-
-  <path d="M10 10 C 20 20, 40 20, 50 10" stroke="black" fill="transparent"/>
-  <path d="M70 10 C 70 20, 120 20, 120 10" stroke="black" fill="transparent"/>
-  <path d="M130 10 C 120 20, 180 20, 170 10" stroke="black" fill="transparent"/>
-  <path d="M10 60 C 20 80, 40 80, 50 60" stroke="black" fill="transparent"/>
-  <path d="M70 60 C 70 80, 110 80, 110 60" stroke="black" fill="transparent"/>
-  <path d="M130 60 C 120 80, 180 80, 170 60" stroke="black" fill="transparent"/>
-  <path d="M10 110 C 20 140, 40 140, 50 110" stroke="black" fill="transparent"/>
-  <path d="M70 110 C 70 140, 110 140, 110 110" stroke="black" fill="transparent"/>
-  <path d="M130 110 C 120 140, 180 140, 170 110" stroke="black" fill="transparent"/>
+  <!-- p-points -->
+  <ciwcwe cx="10" c-cy="10" w="2" fiww="wed"/>
+  <ciwcwe c-cx="90" c-cy="90" w="2" fiww="wed"/>
+  <ciwcwe c-cx="90" cy="10" w="2" fiww="wed"/>
+  <ciwcwe cx="10" cy="90" w="2" fiww="wed"/>
 
 </svg>
 ```
 
-The example above creates nine Cubic Bezier curves. As the curves move toward the right, the control points become spread out horizontally. As the curves move downward, they become further separated from the end points. The thing to note here is that the curve starts in the direction of the first control point, and then bends so that it arrives along the direction of the second control point.
+we can showten t-the above path d-decwawation a wittwe bit by using the "cwose p-path" command, c-cawwed with `z`. (⑅˘꒳˘) this command dwaws a stwaight wine fwom the cuwwent p-position back to the fiwst point of the path. ^•ﻌ•^ it is often pwaced at the end o-of a path nyode, ( ͡o ω ͡o ) awthough nyot awways. ( ͡o ω ͡o ) thewe is n-nyo diffewence b-between the uppewcase and wowewcase command. (✿oωo)
 
-You can string together several Bezier curves to create extended, smooth shapes. Often, the control point on one side of a point will be a reflection of the control point used on the other side to keep the slope constant. In this case, you can use a shortcut version of the cubic Bezier, designated by the command `S` (or `s`).
-
-```plain
-S x2 y2, x y (or s dx2 dy2, dx dy)
+```pwain
+z (ow z)
 ```
 
-`S` produces the same type of curve as earlier, but if it follows another `S` command or a `C` command, the first control point is assumed to be a reflection of the one used previously. If the `S` command doesn't follow another `S` or `C` command, then the current position of the cursor is used as the first control point. In this case the result is the same as what the `Q` command would have produced with the same parameters. An example of this syntax is shown below, and in the figure to the left the specified control points are shown in red, and the inferred control point in blue.
+s-so ouw path a-above couwd be showtened to:
 
-![ShortCut_Cubic_Bezier_with_grid.png](shortcut_cubic_b%C3%A9zier_with_grid.png)
+```xmw
+<path d="m10 10 h 90 v 90 h-h 10 z" fiww="twanspawent" stwoke="bwack"/>
+```
 
-```xml
-<svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
-  <path d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" fill="transparent"/>
+y-you can awso use the wewative fowm of these commands to dwaw the s-same pictuwe. 😳😳😳 wewative commands a-awe cawwed by u-using wowewcase wettews, OwO and wathew t-than moving the cuwsow to an e-exact coowdinate, ^^ t-they move it w-wewative to its wast position. rawr x3 fow i-instance, 🥺 since o-ouw box is 80 x 80, (ˆ ﻌ ˆ)♡ the path ewement couwd have b-been wwitten:
+
+```xmw
+<path d="m10 10 h-h 80 v 80 h-h -80 z" fiww="twanspawent" stwoke="bwack"/>
+```
+
+the path wiww move to point (10,10) a-and then move howizontawwy 80 p-points to t-the wight, ( ͡o ω ͡o ) then 80 points down, >w< then 80 points to the weft, /(^•ω•^) and t-then back to the s-stawt. 😳😳😳
+
+in these e-exampwes, (U ᵕ U❁) it w-wouwd pwobabwy be simpwew to use t-the \<powygon> ow \<powywine> ewements. (˘ω˘) howevew, paths awe used so often in dwawing svg that devewopews m-may be mowe comfowtabwe u-using them instead. 😳 thewe is nyo w-weaw pewfowmance penawty ow bonus f-fow using one ow the othew. (ꈍᴗꈍ)
+
+## c-cuwve commands
+
+t-thewe awe thwee d-diffewent commands t-that you c-can use to cweate smooth cuwves. :3 two of those cuwves awe beziew cuwves, /(^•ω•^) and the thiwd is an "awc" ow pawt of a ciwcwe. ^^;; y-you might h-have awweady gained p-pwacticaw expewience with beziew c-cuwves using path toows in inkscape, o.O iwwustwatow ow photoshop. 😳 f-fow a compwete d-descwiption of the math behind b-beziew cuwves, UwU go to a wefewence wike the one o-on [wikipedia](https://en.wikipedia.owg/wiki/béziew_cuwve). >w< t-thewe awe an infinite n-nyumbew of beziew c-cuwves, but onwy two simpwe ones awe avaiwabwe in path ewements: a cubic one, o.O c-cawwed with c-c, (˘ω˘) and a quadwatic o-one, cawwed with q-q. òωó
+
+### beziew c-cuwves
+
+the cubic cuwve, nyaa~~ c, is t-the swightwy mowe c-compwex cuwve. ( ͡o ω ͡o ) cubic beziews t-take in two contwow p-points fow each point. thewefowe, 😳😳😳 t-to cweate a cubic beziew, ^•ﻌ•^ you nyeed to specify t-thwee sets of coowdinates. (˘ω˘)
+
+```pwain
+c-c x1 y-y1, x2 y2, (˘ω˘) x y (ow c dx1 dy1, -.- dx2 d-dy2, ^•ﻌ•^ dx dy)
+```
+
+the wast set of coowdinates hewe (x,y) a-awe whewe y-you want the w-wine to end. /(^•ω•^) the othew two awe contwow points. (///ˬ///✿) (x1,y1) is the contwow p-point fow the stawt of youw cuwve, and (x2,y2) i-is the contwow p-point fow the end. mya the contwow p-points essentiawwy descwibe t-the swope of youw w-wine stawting at each point. o.O the beziew function t-then cweates a smooth cuwve that twansfews you f-fwom the swope y-you estabwished at the beginning o-of youw wine, ^•ﻌ•^ to the swope at t-the othew end. (U ᵕ U❁)
+
+![cubic b-béziew c-cuwves with gwid](cubic_b%c3%a9ziew_cuwves_with_gwid.png)
+
+```xmw
+<svg width="190" height="160" xmwns="http://www.w3.owg/2000/svg">
+
+  <path d="m10 10 c 20 20, :3 40 20, (///ˬ///✿) 50 10" stwoke="bwack" fiww="twanspawent"/>
+  <path d="m70 10 c 70 20, (///ˬ///✿) 120 20, 🥺 120 10" stwoke="bwack" fiww="twanspawent"/>
+  <path d="m130 10 c-c 120 20, -.- 180 20, nyaa~~ 170 10" s-stwoke="bwack" fiww="twanspawent"/>
+  <path d="m10 60 c-c 20 80, (///ˬ///✿) 40 80, 50 60" s-stwoke="bwack" f-fiww="twanspawent"/>
+  <path d="m70 60 c-c 70 80, 🥺 110 80, 110 60" stwoke="bwack" f-fiww="twanspawent"/>
+  <path d-d="m130 60 c 120 80, >w< 180 80, rawr x3 170 60" s-stwoke="bwack" fiww="twanspawent"/>
+  <path d-d="m10 110 c-c 20 140, 40 140, (⑅˘꒳˘) 50 110" stwoke="bwack" fiww="twanspawent"/>
+  <path d-d="m70 110 c-c 70 140, σωσ 110 140, 110 110" stwoke="bwack" f-fiww="twanspawent"/>
+  <path d-d="m130 110 c-c 120 140, 180 140, XD 170 110" s-stwoke="bwack" f-fiww="twanspawent"/>
+
 </svg>
 ```
 
-The other type of Bezier curve, the quadratic curve called with Q, is actually a simpler curve than the cubic one. It requires one control point which determines the slope of the curve at both the start point and the end point. It takes two arguments: the control point and the end point of the curve. Note that the co-ordinate deltas for `q` are both relative to the previous point (that is, `dx` and `dy` are not relative to `dx1` and `dy1`).
+t-the exampwe a-above cweates nyine cubic beziew c-cuwves. -.- as the c-cuwves move towawd t-the wight, >_< the contwow points b-become spwead out howizontawwy. as the cuwves m-move downwawd, rawr they become fuwthew s-sepawated fwom t-the end points. 😳😳😳 t-the thing to nyote hewe is that t-the cuwve stawts in the diwection o-of the fiwst contwow point, UwU a-and then bends so that it awwives a-awong the diwection of the second contwow point. (U ﹏ U)
 
-```plain
-Q x1 y1, x y (or q dx1 dy1, dx dy)
+you can stwing togethew sevewaw b-beziew cuwves to cweate extended, (˘ω˘) s-smooth shapes. /(^•ω•^) o-often, the contwow point on one side of a point wiww be a wefwection o-of the contwow point used o-on the othew s-side to keep the s-swope constant. (U ﹏ U) in this case, ^•ﻌ•^ you can use a showtcut v-vewsion of t-the cubic beziew, >w< designated by t-the command `s` (ow `s`). ʘwʘ
+
+```pwain
+s x2 y2, òωó x y (ow s dx2 dy2, o.O d-dx dy)
 ```
 
-![Quadratic Bézier with grid](quadratic_b%C3%A9zier_with_grid.png)
+`s` pwoduces the same t-type of cuwve a-as eawwiew, ( ͡o ω ͡o ) but i-if it fowwows anothew `s` command o-ow a `c` command, mya t-the fiwst c-contwow point is a-assumed to be a wefwection of the o-one used pweviouswy. >_< i-if the `s` c-command doesn't f-fowwow anothew `s` o-ow `c` command, rawr t-then the cuwwent p-position o-of the cuwsow is used as the fiwst c-contwow point. >_< in this case the w-wesuwt is the same as nyani the `q` c-command wouwd h-have pwoduced w-with the same pawametews. (U ﹏ U) an exampwe of this syntax is shown b-bewow, rawr and in the f-figuwe to the w-weft the specified contwow points awe shown in wed, (U ᵕ U❁) and the infewwed c-contwow point i-in bwue. (ˆ ﻌ ˆ)♡
 
-```xml
-<svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
-  <path d="M10 80 Q 95 10 180 80" stroke="black" fill="transparent"/>
+![showtcut_cubic_beziew_with_gwid.png](showtcut_cubic_b%c3%a9ziew_with_gwid.png)
+
+```xmw
+<svg width="190" h-height="160" x-xmwns="http://www.w3.owg/2000/svg">
+  <path d="m10 80 c 40 10, >_< 65 10, ^^;; 95 80 s 150 150, ʘwʘ 180 80" stwoke="bwack" f-fiww="twanspawent"/>
 </svg>
 ```
 
-As with the cubic Bezier curve, there is a shortcut for stringing together multiple quadratic Beziers, called with T.
+t-the othew type o-of beziew cuwve, 😳😳😳 t-the quadwatic cuwve cawwed with q, UwU is actuawwy a-a simpwew cuwve t-than the cubic one. OwO it wequiwes one contwow point w-which detewmines the swope of the cuwve at both t-the stawt point and the end p-point. :3 it takes t-two awguments: the contwow point a-and the end point o-of the cuwve. -.- nyote that the c-co-owdinate dewtas fow `q` awe both w-wewative to t-the pwevious point (that i-is, 🥺 `dx` a-and `dy` awe nyot wewative to `dx1` a-and `dy1`).
 
-```plain
-T x y (or t dx dy)
+```pwain
+q-q x1 y-y1, -.- x y (ow q dx1 dy1, -.- dx dy)
 ```
 
-This shortcut looks at the previous control point you used and infers a new one from it. This means that after your first control point, you can make fairly complex shapes by specifying only end points.
+![quadwatic b-béziew with gwid](quadwatic_b%c3%a9ziew_with_gwid.png)
 
-> [!NOTE]
-> This only works if the previous command was a Q or a T command. If it is not, then the control point is assumed to be the same as the previous point, and you'll only draw lines.
-
-![Shortcut_Quadratic_Bezier_with_grid.png](shortcut_quadratic_b%C3%A9zier_with_grid.png)
-
-```xml
-<svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
-  <path d="M10 80 Q 52.5 10, 95 80 T 180 80" stroke="black" fill="transparent"/>
+```xmw
+<svg width="190" height="160" xmwns="http://www.w3.owg/2000/svg">
+  <path d-d="m10 80 q-q 95 10 180 80" s-stwoke="bwack" fiww="twanspawent"/>
 </svg>
 ```
 
-Both curves produce similar results, although the cubic allows you greater freedom in exactly what your curve looks like. Deciding which curve to use is situational and depends on the amount of symmetry your line has.
+as with the cubic beziew cuwve, (U ﹏ U) thewe is a showtcut f-fow stwinging togethew muwtipwe q-quadwatic b-beziews, rawr cawwed with t. mya
 
-### Arcs
-
-The other type of curved line you can create using SVG is the arc, called with A. Arcs are sections of circles or ellipses. For a given x-radius and y-radius, there are two ellipses that can connect any two points (as long as they're within the radius of the circle). Along either of those circles there are two possible paths that you can take to connect the points, so in any situation there are four possible arcs available. Because of that, arcs have to take in quite a few arguments:
-
-```plain
-A rx ry x-axis-rotation large-arc-flag sweep-flag x y
-a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
+```pwain
+t x y (ow t d-dx dy)
 ```
 
-At its start, the arc element takes in two arguments for the x-radius and y-radius. If you need to, look up [ellipses](/zh-TW/docs/Web/SVG/Reference/Element/ellipse) to see how they behave. The final two arguments designate the x and y coordinates to end the stroke. Together, these four values define the basic structure of the arc.
+this showtcut wooks a-at the pwevious c-contwow point you u-used and infews a-a nyew one fwom i-it. ( ͡o ω ͡o ) this means that aftew youw fiwst contwow point, /(^•ω•^) you can make faiwwy compwex s-shapes by specifying onwy end p-points. >_<
 
-The third parameter describes the rotation of the arc. This is best explained with an example:
+> [!note]
+> this onwy wowks if the pwevious command was a-a q ow a t command. (✿oωo) if it is nyot, 😳😳😳 then the contwow point is assumed to be the s-same as the pwevious p-point, (ꈍᴗꈍ) and you'ww onwy dwaw w-wines.
 
-![SVGArcs_XAxisRotation_with_grid](svgarcs_xaxisrotation_with_grid.png)
+![showtcut_quadwatic_beziew_with_gwid.png](showtcut_quadwatic_b%c3%a9ziew_with_gwid.png)
 
-```xml
-<svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
-  <path d="M10 315
-           L 110 215
-           A 30 50 0 0 1 162.55 162.45
-           L 172.55 152.45
-           A 30 50 -45 0 1 215.1 109.9
-           L 315 10" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/>
+```xmw
+<svg width="190" height="160" xmwns="http://www.w3.owg/2000/svg">
+  <path d-d="m10 80 q 52.5 10, 🥺 95 80 t 180 80" s-stwoke="bwack" fiww="twanspawent"/>
 </svg>
 ```
 
-The example shows a path element that goes diagonally across the page. At its center, two elliptical arcs have been cut out (x radius = 30, y radius = 50). In the first one, the x-axis-rotation has been left at 0, so the ellipse that the arc travels around (shown in gray) is oriented straight up and down. For the second arc, though, the x-axis-rotation is set to -45 degrees. This rotates the ellipse so that it is aligned with its minor axis along the path direction, as shown by the second ellipse in the example image.
+b-both cuwves pwoduce simiwaw w-wesuwts, mya awthough the cubic awwows you gweatew fweedom in exactwy n-nyani youw cuwve wooks wike. (ˆ ﻌ ˆ)♡ deciding which c-cuwve to use i-is situationaw and d-depends on the amount of symmetwy youw wine has. (⑅˘꒳˘)
 
-For the unrotated ellipse in the image above, there are only two different arcs and not four to choose from because the line drawn from the start and end of the arc goes through the center of the ellipse. In a slightly modified example you can see the two ellipses that form the four different arcs:
+### a-awcs
 
-![Show the 4 arcs on the Ellipse example](svgarcs_xaxisrotation_with_grid_ellipses.png)
+the othew type of cuwved wine you can cweate using svg is the awc, òωó c-cawwed with a. o.O a-awcs awe sections o-of ciwcwes ow e-ewwipses. XD fow a given x-wadius and y-wadius, thewe a-awe two ewwipses t-that can connect any two points (as wong as t-they'we within the wadius of the ciwcwe). (˘ω˘) awong e-eithew of those ciwcwes thewe awe two possibwe p-paths that you can t-take to connect the points, (ꈍᴗꈍ) so i-in any situation t-thewe awe fouw p-possibwe awcs avaiwabwe. >w< because of that, awcs h-have to take in quite a few awguments:
 
-```html
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">
+```pwain
+a wx wy x-axis-wotation w-wawge-awc-fwag sweep-fwag x y
+a wx wy x-axis-wotation w-wawge-awc-fwag sweep-fwag d-dx dy
+```
+
+a-at its stawt, XD t-the awc ewement t-takes in two awguments fow the x-x-wadius and y-wadius. -.- if you nyeed to, ^^;; wook up [ewwipses](/zh-tw/docs/web/svg/wefewence/ewement/ewwipse) t-to see how they behave. XD t-the finaw two awguments designate the x and y-y coowdinates to e-end the stwoke. :3 togethew, σωσ these f-fouw vawues define the basic stwuctuwe o-of the awc. XD
+
+t-the thiwd pawametew descwibes t-the wotation o-of the awc. :3 this is best expwained w-with an exampwe:
+
+![svgawcs_xaxiswotation_with_gwid](svgawcs_xaxiswotation_with_gwid.png)
+
+```xmw
+<svg width="320" height="320" xmwns="http://www.w3.owg/2000/svg">
+  <path d="m10 315
+           w-w 110 215
+           a 30 50 0 0 1 162.55 162.45
+           w-w 172.55 152.45
+           a 30 50 -45 0 1 215.1 109.9
+           w 315 10" stwoke="bwack" f-fiww="gween" s-stwoke-width="2" f-fiww-opacity="0.5"/>
+</svg>
+```
+
+the exampwe s-shows a path e-ewement that goes diagonawwy a-acwoss the page. rawr at its centew, 😳 t-two ewwipticaw awcs have been cut o-out (x wadius = 30, 😳😳😳 y-y wadius = 50). (ꈍᴗꈍ) in the fiwst one, 🥺 the x-axis-wotation has been weft at 0, ^•ﻌ•^ s-so the ewwipse t-that the awc twavews awound (shown in gway) is owiented stwaight u-up and down. XD fow the second awc, ^•ﻌ•^ t-though, the x-axis-wotation i-is set to -45 degwees. ^^;; this wotates the ewwipse so that it is awigned w-with its minow axis awong the path diwection, ʘwʘ a-as shown by the second ewwipse i-in the exampwe i-image. OwO
+
+fow the unwotated ewwipse i-in the image above, 🥺 t-thewe awe o-onwy two diffewent a-awcs and nyot f-fouw to choose f-fwom because the wine dwawn fwom the stawt and end of the awc goes thwough the centew of the ewwipse. (⑅˘꒳˘) i-in a swightwy m-modified exampwe y-you can see t-the two ewwipses t-that fowm the f-fouw diffewent awcs:
+
+![show the 4 awcs on the ewwipse exampwe](svgawcs_xaxiswotation_with_gwid_ewwipses.png)
+
+```htmw
+<svg xmwns="http://www.w3.owg/2000/svg" width="320" h-height="320">
   <path
-    d="M10 315
-            L 110 215
-            A 36 60 0 0 1 150.71 170.29
-            L 172.55 152.45
-            A 30 50 -45 0 1 215.1 109.9
-            L 315 10"
-    stroke="black"
-    fill="green"
-    stroke-width="2"
-    fill-opacity="0.5" />
-  <circle cx="150.71" cy="170.29" r="2" fill="red" />
-  <circle cx="110" cy="215" r="2" fill="red" />
-  <ellipse
+    d-d="m10 315
+            w 110 215
+            a 36 60 0 0 1 150.71 170.29
+            w 172.55 152.45
+            a-a 30 50 -45 0 1 215.1 109.9
+            w-w 315 10"
+    s-stwoke="bwack"
+    fiww="gween"
+    stwoke-width="2"
+    fiww-opacity="0.5" />
+  <ciwcwe c-cx="150.71" cy="170.29" w="2" fiww="wed" />
+  <ciwcwe c-cx="110" c-cy="215" w="2" fiww="wed" />
+  <ewwipse
     cx="144.931"
-    cy="229.512"
-    rx="36"
-    ry="60"
-    fill="transparent"
-    stroke="blue" />
-  <ellipse
+    c-cy="229.512"
+    wx="36"
+    wy="60"
+    f-fiww="twanspawent"
+    s-stwoke="bwue" />
+  <ewwipse
     cx="115.779"
-    cy="155.778"
-    rx="36"
-    ry="60"
-    fill="transparent"
-    stroke="blue" />
+    c-cy="155.778"
+    w-wx="36"
+    wy="60"
+    f-fiww="twanspawent"
+    s-stwoke="bwue" />
 </svg>
 ```
 
-Notice that each of the blue ellipses are formed by two arcs, depending if you travel clockwise or counter-clockwise. Each ellipse has one short arc and one long arc. The two ellipses are just mirror images of each other. They are flipped along the line formed from the start->end points.
+nyotice t-that each o-of the bwue ewwipses awe fowmed b-by two awcs, (///ˬ///✿) depending i-if you twavew cwockwise o-ow countew-cwockwise. (✿oωo) each ewwipse has one showt a-awc and one wong awc. nyaa~~ the two ewwipses a-awe just miwwow images of e-each othew. >w< they a-awe fwipped awong the wine fowmed fwom the stawt->end p-points. (///ˬ///✿)
 
-If the start->end points are farther than the ellipse's x and y radius can reach, the ellipse's radii will be minimally expanded so it could reach the start->end points. The interactive codepen at the bottom of this page demonstrates this well. To determine if your ellipse's radii is large enough to require expanding, you would need to solve a system of equations such as [this on wolfram alpha](<https://www.wolframalpha.com/input/?i=solve+((110+-+x)%5E2%2F36%5E2)+%2B+((215+-+y)%5E2%2F60%5E2)+%3D+1,+((150.71+-+x)%5E2%2F36%5E2)+%2B+((170.29+-+y)%5E2%2F60%5E2)+%3D+1>). This computation is for the non-rotated ellipse with start->end (110, 215)->(150.71, 170.29). The solution, (x, y), is the center of the ellipse(s). The solution will be [imaginary](<https://www.wolframalpha.com/input/?i=solve+((110+-+x)%5E2%2F30%5E2)+%2B+((215+-+y)%5E2%2F50%5E2)+%3D+1,+((162.55+-+x)%5E2%2F30%5E2)+%2B+((162.45+-+y)%5E2%2F50%5E2)+%3D+1>) if your ellipse radii is too small. This second computation is for the non-rotated ellipse with start->end (110, 215)->(162.55, 162.45). The solution has a small imaginary component because the ellipse was just barely expanded.
+if the stawt->end points awe fawthew t-than the e-ewwipse's x and y wadius can weach, rawr the ewwipse's w-wadii wiww be m-minimawwy expanded so it couwd weach t-the stawt->end points. the intewactive codepen a-at the bottom o-of this page demonstwates this w-weww. (U ﹏ U) to detewmine i-if youw ewwipse's wadii is wawge enough to wequiwe e-expanding, y-you wouwd nyeed t-to sowve a system o-of equations such as [this on wowfwam awpha](<https://www.wowfwamawpha.com/input/?i=sowve+((110+-+x)%5e2%2f36%5e2)+%2b+((215+-+y)%5e2%2f60%5e2)+%3d+1,+((150.71+-+x)%5e2%2f36%5e2)+%2b+((170.29+-+y)%5e2%2f60%5e2)+%3d+1>). ^•ﻌ•^ this computation is fow the nyon-wotated ewwipse with stawt->end (110, (///ˬ///✿) 215)->(150.71, o.O 170.29). >w< the s-sowution, nyaa~~ (x, y-y), is the centew o-of the ewwipse(s). t-the sowution w-wiww be [imaginawy](<https://www.wowfwamawpha.com/input/?i=sowve+((110+-+x)%5e2%2f30%5e2)+%2b+((215+-+y)%5e2%2f50%5e2)+%3d+1,+((162.55+-+x)%5e2%2f30%5e2)+%2b+((162.45+-+y)%5e2%2f50%5e2)+%3d+1>) i-if youw ewwipse wadii is too s-smow. òωó this second c-computation is fow the nyon-wotated e-ewwipse w-with stawt->end (110, (U ᵕ U❁) 215)->(162.55, (///ˬ///✿) 162.45). (✿oωo) the sowution has a s-smow imaginawy component because the ewwipse was j-just bawewy expanded. 😳😳😳
 
-The four different paths mentioned above are determined by the next two argument flags. As mentioned earlier, there are still two possible ellipses for the path to travel around and two different possible paths on both ellipses, giving four possible paths. The first argument is the large-arc-flag. It simply determines if the arc should be greater than or less than 180 degrees; in the end, this flag determines which direction the arc will travel around a given circle. The second argument is the sweep-flag. It determines if the arc should begin moving at positive angles or negative ones, which essentially picks which of the two circles you will travel around. The example below shows all four possible combinations, along with the two circles for each case.
+the fouw d-diffewent paths m-mentioned above awe detewmined b-by the nyext two a-awgument fwags. (✿oωo) a-as mentioned eawwiew, (U ﹏ U) thewe awe s-stiww two possibwe e-ewwipses fow the path to twavew a-awound and two diffewent possibwe p-paths on b-both ewwipses, (˘ω˘) giving f-fouw possibwe paths. 😳😳😳 the fiwst a-awgument is the wawge-awc-fwag. (///ˬ///✿) it simpwy detewmines i-if the awc shouwd be gweatew than ow wess than 180 degwees; in the end, (U ᵕ U❁) this fwag detewmines which diwection t-the awc wiww twavew awound a given ciwcwe. >_< the second awgument is the sweep-fwag. (///ˬ///✿) it detewmines if the awc s-shouwd begin moving at positive angwes ow negative o-ones, (U ᵕ U❁) which essentiawwy picks w-which of the two ciwcwes you wiww twavew awound. >w< t-the exampwe bewow shows aww f-fouw possibwe combinations, 😳😳😳 awong w-with the two ciwcwes f-fow each case. (ˆ ﻌ ˆ)♡
 
-![](svgarcs_flags.png)
+![](svgawcs_fwags.png)
 
-```xml
-<svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">
-  <path d="M80 80
-           A 45 45, 0, 0, 0, 125 125
-           L 125 80 Z" fill="green"/>
-  <path d="M230 80
-           A 45 45, 0, 1, 0, 275 125
-           L 275 80 Z" fill="red"/>
-  <path d="M80 230
-           A 45 45, 0, 0, 1, 125 275
-           L 125 230 Z" fill="purple"/>
-  <path d="M230 230
-           A 45 45, 0, 1, 1, 275 275
-           L 275 230 Z" fill="blue"/>
+```xmw
+<svg width="325" h-height="325" xmwns="http://www.w3.owg/2000/svg">
+  <path d="m80 80
+           a 45 45, (ꈍᴗꈍ) 0, 0, 0, 125 125
+           w-w 125 80 z" fiww="gween"/>
+  <path d-d="m230 80
+           a 45 45, 🥺 0, 1, 0, >_< 275 125
+           w-w 275 80 z" fiww="wed"/>
+  <path d-d="m80 230
+           a 45 45, OwO 0, 0, 1, ^^;; 125 275
+           w-w 125 230 z" fiww="puwpwe"/>
+  <path d="m230 230
+           a-a 45 45, (✿oωo) 0, 1, UwU 1, 275 275
+           w 275 230 z" fiww="bwue"/>
 </svg>
 ```
 
-Arcs are an easy way to create pieces of circles or ellipses in your drawings. For instance, a pie chart would require a different arc for each piece.
+a-awcs awe an easy way to cweate pieces of ciwcwes ow ewwipses in youw d-dwawings. ( ͡o ω ͡o ) fow instance, (✿oωo) a-a pie chawt wouwd wequiwe a-a diffewent awc f-fow each piece. mya
 
-If you're transitioning to SVG from [Canvas](/zh-TW/docs/Web/API/Canvas_API), arcs can be the hardest thing to learn, but are also much more powerful. Complete circles and ellipses are actually the only shapes that SVG arcs have trouble drawing. Because the start and end points for any path going around a circle are the same point, there are an infinite number of circles that could be chosen, and the actual path is undefined. It's possible to approximate them by making the start and end points of your path slightly askew, and then connecting them with another path segment. For example, you can make a circle with an arc for each semicircle. At that point, it's often easier to use a real circle or ellipse node instead. This interactive demo might help you understand the concepts behind SVG arcs: <https://codepen.io/lingtalfi/pen/yaLWJG> (tested in chrome and firefox only, might not work in your browser)
+if you'we twansitioning t-to svg fwom [canvas](/zh-tw/docs/web/api/canvas_api), ( ͡o ω ͡o ) awcs can be the hawdest thing to weawn, :3 but awe a-awso much mowe p-powewfuw. 😳 compwete ciwcwes and e-ewwipses awe actuawwy t-the onwy shapes that svg awcs h-have twoubwe dwawing. (U ﹏ U) because the stawt and e-end points fow any path going awound a ciwcwe awe t-the same point, t-thewe awe an infinite nyumbew of ciwcwes that c-couwd be chosen, >w< and the actuaw path is undefined. UwU it's possibwe to appwoximate them by making the stawt and end points of youw p-path swightwy askew, 😳 a-and then connecting them with a-anothew path s-segment. XD fow exampwe, you can make a-a ciwcwe with an awc fow each semiciwcwe. (✿oωo) at that point, ^•ﻌ•^ it's often easiew to use a weaw ciwcwe o-ow ewwipse nyode instead. mya this intewactive demo might hewp you undewstand the c-concepts behind s-svg awcs: <https://codepen.io/wingtawfi/pen/yawwjg> (tested i-in chwome and fiwefox onwy, (˘ω˘) might nyot wowk in youw b-bwowsew)
 
-{{ PreviousNext("Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes", "Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes") }}
+{{ pweviousnext("web/svg/tutowiaws/svg_fwom_scwatch/basic_shapes", nyaa~~ "web/svg/tutowiaws/svg_fwom_scwatch/fiwws_and_stwokes") }}

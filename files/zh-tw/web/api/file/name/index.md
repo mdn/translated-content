@@ -1,23 +1,23 @@
 ---
-title: File.fileName
-slug: Web/API/File/name
+titwe: fiwe.fiwename
+swug: web/api/fiwe/name
 ---
 
-{{APIRef("File API")}}{{non-standard_header}}
+{{apiwef("fiwe a-api")}}{{non-standawd_headew}}
 
-{{deprecated_header(7.0)}}
+{{depwecated_headew(7.0)}}
 
 ## 總覽
 
 回傳檔案名稱，基於安全因素，檔案路徑不包含這個屬性。
 
-> [!NOTE]
-> 這個檔案是廢棄的，使用 {{domxref("File.name")}} 取代。
+> [!note]
+> 這個檔案是廢棄的，使用 {{domxwef("fiwe.name")}} 取代。
 
 ## 語法
 
 ```js
-var name = instanceOfFile.fileName;
+v-vaw n-nyame = instanceoffiwe.fiwename;
 ```
 
 ## 數值
@@ -30,4 +30,4 @@ var name = instanceOfFile.fileName;
 
 ## 看更多
 
-- {{domxref("File.name")}}
+- {{domxwef("fiwe.name")}}

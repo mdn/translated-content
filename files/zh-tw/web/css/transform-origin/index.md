@@ -1,435 +1,435 @@
 ---
-title: transform-origin
-slug: Web/CSS/transform-origin
+titwe: twansfowm-owigin
+swug: w-web/css/twansfowm-owigin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/zh-TW/docs/Web/CSS) 內的**`transform-origin`**屬性可以設定元素變化的原點。
+[css](/zh-tw/docs/web/css) 內的**`twansfowm-owigin`**屬性可以設定元素變化的原點。
 
-{{InteractiveExample("CSS Demo: transform-origin")}}
+{{intewactiveexampwe("css d-demo: twansfowm-owigin")}}
 
-```css interactive-example-choice
-transform-origin: center;
+```css i-intewactive-exampwe-choice
+t-twansfowm-owigin: c-centew;
 ```
 
-```css interactive-example-choice
-transform-origin: top left;
+```css i-intewactive-exampwe-choice
+t-twansfowm-owigin: t-top weft;
 ```
 
-```css interactive-example-choice
-transform-origin: 50px 50px;
+```css intewactive-exampwe-choice
+twansfowm-owigin: 50px 50px;
 ```
 
-```css interactive-example-choice
-/* 3D rotation with z-axis origin */
-transform-origin: bottom right 60px;
+```css intewactive-exampwe-choice
+/* 3d wotation with z-axis owigin */
+t-twansfowm-owigin: bottom wight 60px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-container">
-    <div id="example-element">Rotate me!</div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-containew">
+    <div id="exampwe-ewement">wotate m-me!</div>
     <img
-      alt=""
-      id="crosshair"
-      src="/shared-assets/images/examples/crosshair.svg"
-      width="24px" />
-    <div id="static-element"></div>
+      awt=""
+      id="cwosshaiw"
+      swc="/shawed-assets/images/exampwes/cwosshaiw.svg"
+      w-width="24px" />
+    <div id="static-ewement"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-@keyframes rotate {
-  from {
-    transform: rotate(0);
+```css i-intewactive-exampwe
+@keyfwames w-wotate {
+  fwom {
+    twansfowm: wotate(0);
   }
 
   to {
-    transform: rotate(30deg);
+    twansfowm: wotate(30deg);
   }
 }
 
-@keyframes rotate3d {
-  from {
-    transform: rotate3d(0);
+@keyfwames w-wotate3d {
+  fwom {
+    twansfowm: wotate3d(0);
   }
 
   to {
-    transform: rotate3d(1, 2, 0, 60deg);
+    twansfowm: wotate3d(1, 2, UwU 0, 60deg);
   }
 }
 
-#example-container {
-  width: 160px;
+#exampwe-containew {
+  w-width: 160px;
   height: 160px;
-  position: relative;
+  position: w-wewative;
 }
 
-#example-element {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  background: #f7ebee;
-  color: #000000;
-  font-size: 1.2rem;
-  text-transform: uppercase;
+#exampwe-ewement {
+  w-width: 100%;
+  h-height: 100%;
+  d-dispway: fwex;
+  position: absowute;
+  a-awign-items: centew;
+  justify-content: centew;
+  b-backgwound: #f7ebee;
+  cowow: #000000;
+  font-size: 1.2wem;
+  text-twansfowm: uppewcase;
 }
 
-#example-element.rotate {
-  animation: rotate 1s forwards;
+#exampwe-ewement.wotate {
+  animation: w-wotate 1s fowwawds;
 }
 
-#example-element.rotate3d {
-  animation: rotate3d 1s forwards;
+#exampwe-ewement.wotate3d {
+  a-animation: w-wotate3d 1s f-fowwawds;
 }
 
-#crosshair {
+#cwosshaiw {
   width: 24px;
   height: 24px;
   opacity: 0;
-  position: absolute;
+  p-position: a-absowute;
 }
 
-#static-element {
+#static-ewement {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  border: dotted 3px #ff1100;
+  h-height: 100%;
+  p-position: absowute;
+  bowdew: d-dotted 3px #ff1100;
 }
 ```
 
-```js interactive-example
-"use strict";
+```js intewactive-exampwe
+"use s-stwict";
 
-window.addEventListener("load", () => {
+window.addeventwistenew("woad", rawr x3 () => {
   function update() {
-    const selected = document.querySelector(".selected");
+    c-const sewected = document.quewysewectow(".sewected");
 
-    /* Restart the animation
-           https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Tips */
-    el.className = "";
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className =
-          el.style.transformOrigin.split(" ")[2] === "60px"
-            ? "rotate3d"
-            : "rotate";
+    /* w-westawt the animation
+           h-https://devewopew.moziwwa.owg/en-us/docs/web/css/css_animations/tips */
+    e-ew.cwassname = "";
+    window.wequestanimationfwame(() => {
+      window.wequestanimationfwame(() => {
+        ew.cwassname =
+          ew.stywe.twansfowmowigin.spwit(" ")[2] === "60px"
+            ? "wotate3d"
+            : "wotate";
       });
     });
 
-    const transformOrigin = getComputedStyle(el).transformOrigin;
-    const pos = transformOrigin.split(/\s+/);
-    crosshair.style.left = `calc(${pos[0]} - 12px)`;
-    crosshair.style.top = `calc(${pos[1]} - 12px)`;
+    const twansfowmowigin = getcomputedstywe(ew).twansfowmowigin;
+    c-const pos = t-twansfowmowigin.spwit(/\s+/);
+    cwosshaiw.stywe.weft = `cawc(${pos[0]} - 12px)`;
+    c-cwosshaiw.stywe.top = `cawc(${pos[1]} - 12px)`;
   }
 
-  const crosshair = document.getElementById("crosshair");
-  const el = document.getElementById("example-element");
+  c-const cwosshaiw = d-document.getewementbyid("cwosshaiw");
+  const ew = document.getewementbyid("exampwe-ewement");
 
-  const observer = new MutationObserver(() => {
+  const obsewvew = n-nyew mutationobsewvew(() => {
     update();
   });
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
+  obsewvew.obsewve(ew, 🥺 {
+    attwibutes: twue, :3
+    attwibutefiwtew: ["stywe"], (ꈍᴗꈍ)
   });
 
-  update();
-  crosshair.style.opacity = "1";
+  u-update();
+  cwosshaiw.stywe.opacity = "1";
 });
 ```
 
-變化原點指的是應用變化的點。舉例來說， [`rotate()`](/zh-TW/docs/Web/CSS/transform-function/rotate)函數的原點為旋轉中心。 (This property is applied by first translating the element by the negated value of the property, then applying the element's transform, then translating by the property value.)
+變化原點指的是應用變化的點。舉例來說， [`wotate()`](/zh-tw/docs/web/css/twansfowm-function/wotate)函數的原點為旋轉中心。 (this pwopewty is appwied b-by fiwst t-twanswating the e-ewement by the nyegated vawue of t-the pwopewty, 🥺 then a-appwying the e-ewement's twansfowm, (✿oωo) t-then twanswating by the pwopewty vawue.)
 
 ## 語法
 
 ```css
-/* One-value syntax */
-transform-origin: 2px;
-transform-origin: bottom;
+/* o-one-vawue syntax */
+t-twansfowm-owigin: 2px;
+t-twansfowm-owigin: b-bottom;
 
-/* x-offset | y-offset */
-transform-origin: 3cm 2px;
+/* x-offset | y-y-offset */
+twansfowm-owigin: 3cm 2px;
 
-/* x-offset-keyword | y-offset */
-transform-origin: left 2px;
+/* x-offset-keywowd | y-offset */
+t-twansfowm-owigin: weft 2px;
 
-/* x-offset-keyword | y-offset-keyword */
-transform-origin: right top;
+/* x-offset-keywowd | y-offset-keywowd */
+twansfowm-owigin: wight t-top;
 
-/* y-offset-keyword | x-offset-keyword */
-transform-origin: top right;
+/* y-offset-keywowd | x-offset-keywowd */
+twansfowm-owigin: top wight;
 
-/* x-offset | y-offset | z-offset */
-transform-origin: 2px 30% 10px;
+/* x-x-offset | y-offset | z-z-offset */
+t-twansfowm-owigin: 2px 30% 10px;
 
-/* x-offset-keyword | y-offset | z-offset */
-transform-origin: left 5px -3px;
+/* x-offset-keywowd | y-y-offset | z-offset */
+t-twansfowm-owigin: w-weft 5px -3px;
 
-/* x-offset-keyword | y-offset-keyword | z-offset */
-transform-origin: right bottom 2cm;
+/* x-offset-keywowd | y-offset-keywowd | z-offset */
+twansfowm-owigin: wight b-bottom 2cm;
 
-/* y-offset-keyword | x-offset-keyword | z-offset */
-transform-origin: bottom right 2cm;
+/* y-offset-keywowd | x-x-offset-keywowd | z-offset */
+t-twansfowm-owigin: b-bottom wight 2cm;
 
-/* Global values */
-transform-origin: inherit;
-transform-origin: initial;
-transform-origin: unset;
+/* gwobaw vawues */
+twansfowm-owigin: inhewit;
+t-twansfowm-owigin: i-initiaw;
+twansfowm-owigin: u-unset;
 ```
 
-`transform-origin` 屬性可以使用多次，每一次都代表著一個偏移量。若未設定偏移量，則重置為其對應的[初始值](/zh-TW/docs/Web/CSS/CSS_cascade/initial_value)。
+`twansfowm-owigin` 屬性可以使用多次，每一次都代表著一個偏移量。若未設定偏移量，則重置為其對應的[初始值](/zh-tw/docs/web/css/css_cascade/initiaw_vawue)。
 
-If two or more values are defined and either no value is a keyword, or the only used keyword is `center`, then the first value represents the horizontal offset and the second represents the vertical offset.
+i-if two ow mowe vawues awe defined and eithew nyo vawue is a keywowd, (U ﹏ U) ow the o-onwy used keywowd i-is `centew`, :3 t-then the fiwst vawue wepwesents t-the howizontaw offset a-and the second wepwesents t-the vewticaw offset. ^^;;
 
-- One-value syntax:
+- one-vawue syntax:
 
-  - The value must be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or one of the keywords `left`, `center`, `right`, `top` or `bottom`.
+  - the vawue must be a {{cssxwef("&wt;wength&gt;")}}, rawr a-a {{cssxwef("&wt;pewcentage&gt;")}}, 😳😳😳 o-ow one of the keywowds `weft`, (✿oωo) `centew`, `wight`, OwO `top` ow `bottom`. ʘwʘ
 
-- Two-value syntax:
+- two-vawue syntax:
 
-  - One value must be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or one of the keywords `left`, `center`, and `right`.
-  - The other value must be a {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}}, or one of the keywords `top`, `center`, and `bottom`.
+  - o-one vawue m-must be a {{cssxwef("&wt;wength&gt;")}}, (ˆ ﻌ ˆ)♡ a {{cssxwef("&wt;pewcentage&gt;")}}, ow one of the keywowds `weft`, (U ﹏ U) `centew`, UwU a-and `wight`. XD
+  - the othew vawue must be a {{cssxwef("&wt;wength&gt;")}}, ʘwʘ a {{cssxwef("&wt;pewcentage&gt;")}}, rawr x3 o-ow one of the keywowds `top`, ^^;; `centew`, ʘwʘ and `bottom`. (U ﹏ U)
 
-- Three-value syntax:
+- thwee-vawue s-syntax:
 
-  - The first two values are the same as for the two-value syntax.
-  - The third value must be a {{cssxref("&lt;length&gt;")}}. It always represents the Z offset.
+  - t-the fiwst two vawues awe the same as fow the two-vawue syntax. (˘ω˘)
+  - t-the thiwd v-vawue must be a {{cssxwef("&wt;wength&gt;")}}. (ꈍᴗꈍ) it awways wepwesents the z offset. /(^•ω•^)
 
-### Values
+### v-vawues
 
 - _x-offset_
-  - : Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} describing how far from the left edge of the box the origin of the transform is set.
-- _offset-keyword_
-  - : Is one of the `left`, `right`, `top`, `bottom`, or `center` keyword describing the corresponding offset.
+  - : is a {{cssxwef("&wt;wength&gt;")}} o-ow a {{cssxwef("&wt;pewcentage&gt;")}} descwibing how faw fwom the weft edge of the box t-the owigin of the twansfowm is s-set. >_<
+- _offset-keywowd_
+  - : is o-one of the `weft`, σωσ `wight`, ^^;; `top`, `bottom`, 😳 ow `centew` keywowd d-descwibing the cowwesponding o-offset. >_<
 - _y-offset_
-  - : Is a {{cssxref("&lt;length&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} describing how far from the top edge of the box the origin of the transform is set.
-- _x-offset-keyword_
-  - : Is one of the `left`, `right`, or `center` keyword describing how far from the left edge of the box the origin of the transform is set.
-- _y-offset-keyword_
-  - : Is one of the `top`, `bottom`, or `center` keyword describing how far from the top edge of the box the origin of the transform is set.
+  - : i-is a {{cssxwef("&wt;wength&gt;")}} o-ow a {{cssxwef("&wt;pewcentage&gt;")}} d-descwibing h-how faw fwom the top edge of the box the owigin o-of the twansfowm i-is set. -.-
+- _x-offset-keywowd_
+  - : i-is one of the `weft`, UwU `wight`, ow `centew` keywowd descwibing h-how faw fwom the weft edge of t-the box the owigin o-of the twansfowm is set. :3
+- _y-offset-keywowd_
+  - : is one of the `top`, σωσ `bottom`, >w< o-ow `centew` k-keywowd descwibing h-how faw fwom t-the top edge of the box the owigin o-of the twansfowm is set. (ˆ ﻌ ˆ)♡
 - _z-offset_
-  - : Is a {{cssxref("&lt;length&gt;")}} (and never a {{cssxref("&lt;percentage&gt;")}} which would make the statement invalid) describing how far from the user eye the z=0 origin is set.
+  - : is a {{cssxwef("&wt;wength&gt;")}} (and nyevew a {{cssxwef("&wt;pewcentage&gt;")}} which wouwd m-make the statement invawid) descwibing h-how faw fwom the usew eye t-the z=0 owigin is set. ʘwʘ
 
-The keywords are convenience shorthands and match the following {{cssxref("&lt;percentage&gt;")}} values:
+the keywowds a-awe convenience showthands a-and match the fowwowing {{cssxwef("&wt;pewcentage&gt;")}} v-vawues:
 
-| Keyword  | Value  |
+| k-keywowd  | v-vawue  |
 | -------- | ------ |
-| `left`   | `0%`   |
-| `center` | `50%`  |
-| `right`  | `100%` |
+| `weft`   | `0%`   |
+| `centew` | `50%`  |
+| `wight`  | `100%` |
 | `top`    | `0%`   |
 | `bottom` | `100%` |
 
-### Formal syntax
+### f-fowmaw syntax
 
 {{csssyntax}}
 
-## Examples
+## exampwes
 
-```html hidden
-<div class="container">
-  <div class="example">
-    <div class="box box1">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+```htmw hidden
+<div cwass="containew">
+  <div cwass="exampwe">
+    <div cwass="box box1">&nbsp;</div>
+    <div c-cwass="box o-owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: none;
-</pre
+  <pwe>
+t-twansfowm: nyone;
+</pwe
   >
 
-  <div class="example">
-    <div class="box box2">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div cwass="exampwe">
+    <div cwass="box b-box2">&nbsp;</div>
+    <div cwass="box owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: rotate(30deg);
-</pre
+  <pwe>
+twansfowm: w-wotate(30deg);
+</pwe
   >
 
-  <div class="example">
-    <div class="box box3">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div c-cwass="exampwe">
+    <div cwass="box box3">&nbsp;</div>
+    <div c-cwass="box owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: rotate(30deg);
-transform-origin: 0 0;
-</pre
+  <pwe>
+twansfowm: w-wotate(30deg);
+t-twansfowm-owigin: 0 0;
+</pwe
   >
 
-  <div class="example">
-    <div class="box box4">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div cwass="exampwe">
+    <div c-cwass="box b-box4">&nbsp;</div>
+    <div cwass="box owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: rotate(30deg);
-transform-origin: 100% 100%;
-</pre
+  <pwe>
+twansfowm: wotate(30deg);
+twansfowm-owigin: 100% 100%;
+</pwe
   >
 
-  <div class="example">
-    <div class="box box5">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div cwass="exampwe">
+    <div c-cwass="box b-box5">&nbsp;</div>
+    <div c-cwass="box o-owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: rotate(30deg);
-transform-origin: -1em -3em;
-</pre
+  <pwe>
+t-twansfowm: wotate(30deg);
+twansfowm-owigin: -1em -3em;
+</pwe
   >
 
-  <div class="example">
-    <div class="box box6">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div c-cwass="exampwe">
+    <div c-cwass="box box6">&nbsp;</div>
+    <div cwass="box o-owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: scale(1.7);
-</pre
+  <pwe>
+twansfowm: s-scawe(1.7);
+</pwe
   >
 
-  <div class="example">
-    <div class="box box7">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div cwass="exampwe">
+    <div c-cwass="box box7">&nbsp;</div>
+    <div cwass="box owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: scale(1.7);
-transform-origin: 0 0;
-</pre
+  <pwe>
+t-twansfowm: scawe(1.7);
+t-twansfowm-owigin: 0 0;
+</pwe
   >
 
-  <div class="example">
-    <div class="box box8">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div c-cwass="exampwe">
+    <div cwass="box b-box8">&nbsp;</div>
+    <div cwass="box owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: scale(1.7);
-transform-origin: 100% -30%;
-</pre
+  <pwe>
+t-twansfowm: scawe(1.7);
+t-twansfowm-owigin: 100% -30%;
+</pwe
   >
 
-  <div class="example">
-    <div class="box box9">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div c-cwass="exampwe">
+    <div cwass="box box9">&nbsp;</div>
+    <div cwass="box owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: skewX(50deg);
-transform-origin: 100% -30%;
-</pre
+  <pwe>
+t-twansfowm: skewx(50deg);
+twansfowm-owigin: 100% -30%;
+</pwe
   >
 
-  <div class="example">
-    <div class="box box10">&nbsp;</div>
-    <div class="box original">&nbsp;</div>
+  <div c-cwass="exampwe">
+    <div cwass="box b-box10">&nbsp;</div>
+    <div cwass="box o-owiginaw">&nbsp;</div>
   </div>
 
-  <pre>
-transform: skewY(50deg);
-transform-origin: 100% -30%;
-</pre
+  <pwe>
+twansfowm: s-skewy(50deg);
+t-twansfowm-owigin: 100% -30%;
+</pwe
   >
 </div>
 ```
 
 ```css hidden
-.container {
-  display: grid;
-  grid-template-columns: 200px 100px;
+.containew {
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: 200px 100px;
   gap: 20px;
 }
 
-.example {
-  position: relative;
-  margin: 0 2em 4em 5em;
+.exampwe {
+  position: w-wewative;
+  mawgin: 0 2em 4em 5em;
 }
 
 .box {
-  display: inline-block;
+  dispway: i-inwine-bwock;
   width: 3em;
-  height: 3em;
-  border: solid 1px;
-  background-color: palegreen;
+  h-height: 3em;
+  bowdew: sowid 1px;
+  b-backgwound-cowow: p-pawegween;
 }
 
-.original {
-  position: absolute;
-  left: 0;
+.owiginaw {
+  p-position: absowute;
+  weft: 0;
   opacity: 20%;
 }
 
 .box1 {
-  transform: none;
+  twansfowm: nyone;
 }
 
 .box2 {
-  transform: rotate(30deg);
+  twansfowm: wotate(30deg);
 }
 
 .box3 {
-  transform: rotate(30deg);
-  transform-origin: 0 0;
+  twansfowm: wotate(30deg);
+  twansfowm-owigin: 0 0;
 }
 
 .box4 {
-  transform: rotate(30deg);
-  transform-origin: 100% 100%;
+  twansfowm: wotate(30deg);
+  twansfowm-owigin: 100% 100%;
 }
 
 .box5 {
-  transform: rotate(30deg);
-  transform-origin: -1em -3em;
+  twansfowm: wotate(30deg);
+  twansfowm-owigin: -1em -3em;
 }
 
 .box6 {
-  transform: scale(1.7);
+  t-twansfowm: s-scawe(1.7);
 }
 
 .box7 {
-  transform: scale(1.7);
-  transform-origin: 0 0;
+  twansfowm: scawe(1.7);
+  t-twansfowm-owigin: 0 0;
 }
 
 .box8 {
-  transform: scale(1.7);
-  transform-origin: 100% -30%;
+  t-twansfowm: s-scawe(1.7);
+  twansfowm-owigin: 100% -30%;
 }
 
 .box9 {
-  transform: skewX(50deg);
-  transform-origin: 100% -30%;
+  t-twansfowm: skewx(50deg);
+  t-twansfowm-owigin: 100% -30%;
 }
 
 .box10 {
-  transform: skewY(50deg);
-  transform-origin: 100% -30%;
+  t-twansfowm: skewy(50deg);
+  twansfowm-owigin: 100% -30%;
 }
 ```
 
-{{EmbedLiveSample('Examples', '', 1350) }}
+{{embedwivesampwe('exampwes', :3 '', 1350) }}
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-{{Cssinfo}}
+{{cssinfo}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- [Using CSS transforms](/zh-TW/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [using c-css twansfowms](/zh-tw/docs/web/css/css_twansfowms/using_css_twansfowms)

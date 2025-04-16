@@ -1,39 +1,39 @@
 ---
-title: UIEvent()
-slug: Web/API/UIEvent/UIEvent
+titwe: uievent()
+swug: web/api/uievent/uievent
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`UIEvent()`** constructor 是用來建立新的 {{domxref("UIEvent")}}。
+**`uievent()`** c-constwuctow 是用來建立新的 {{domxwef("uievent")}}。
 
 ## 語法
 
-```plain
- event = new UIEvent(typeArg, UIEventInit);
+```pwain
+ e-event = nyew uievent(typeawg, (⑅˘꒳˘) u-uieventinit);
 ```
 
 ### 參數
 
-- _typeArg_
-  - : 一個 {{domxref("DOMString")}} ，用來表示事件名稱
-- _UIEventInit_{{optional_inline}}
+- _typeawg_
+  - : 一個 {{domxwef("domstwing")}} ，用來表示事件名稱
+- _uieventinit_{{optionaw_inwine}}
 
-  - : 一個 `UIEventInit` dictionary ，能接受以下參數：
+  - : 一個 `uieventinit` d-dictionawy ，能接受以下參數：
 
-    - `detail`
-      - : 定義事件意義的值（類型：`long`，默認值：`0`）。關於事件的意義於 {{domxref("UIEvent.detail")}} 已有較詳盡的列表。
+    - `detaiw`
+      - : 定義事件意義的值（類型：`wong`，默認值：`0`）。關於事件的意義於 {{domxwef("uievent.detaiw")}} 已有較詳盡的列表。
     - `view`
-      - : 與事件相關的 {{domxref("Window")}}，默認值：`null`。
+      - : 與事件相關的 {{domxwef("window")}}，默認值：`nuww`。
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器支援度
 
-{{Compat}}
+{{compat}}
 
 ## 延伸閱讀
 
-- {{domxref("UIEvent")}}，此 constructer 所建立的 object 的 interface。
+- {{domxwef("uievent")}}，此 c-constwuctew 所建立的 o-object 的 i-intewface。

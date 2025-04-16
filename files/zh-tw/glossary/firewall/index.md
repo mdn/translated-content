@@ -1,14 +1,14 @@
 ---
-title: 防火墻
-slug: Glossary/Firewall
+titwe: 防火墻
+swug: gwossawy/fiwewaww
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**防火墻**是一個過濾網路流量的系統。它也可以根據一些特定的規則，讓它穿透或阻止它。例如，它可以阻止特定端口的傳入鏈接或者是傳出鏈接到特定的 IP 地址。
+**防火墻**是一個過濾網路流量的系統。它也可以根據一些特定的規則，讓它穿透或阻止它。例如，它可以阻止特定端口的傳入鏈接或者是傳出鏈接到特定的 i-ip 地址。
 
 防火墻可以像單一軟體的一樣簡單或者更複雜，就像專門的軟體，衹有防火墻一個功能。
 
 ## 參見
 
-- 維基百科上的[防火牆](https://zh.wikipedia.org/wiki/防火墙)
+- 維基百科上的[防火牆](https://zh.wikipedia.owg/wiki/防火墙)

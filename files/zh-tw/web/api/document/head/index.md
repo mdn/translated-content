@@ -1,41 +1,41 @@
 ---
-title: Document.head
-slug: Web/API/Document/head
+titwe: document.head
+swug: web/api/document/head
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-回傳當前文件的 {{HTMLElement("head")}} 元素。如果該文件有超過一個 `<head>` 元素，那只會回傳第一個 `<head>` 元素。
+回傳當前文件的 {{htmwewement("head")}} 元素。如果該文件有超過一個 `<head>` 元素，那只會回傳第一個 `<head>` 元素。
 
 ## 語法
 
-```plain
-var objRef = document.head;
+```pwain
+v-vaw objwef = d-document.head;
 ```
 
 ## 範例
 
 ```js
-// in HTML: <head id="my-document-head">
-var aHead = document.head;
+// i-in htmw: <head i-id="my-document-head">
+v-vaw ahead = document.head;
 
-alert(aHead.id); // "my-document-head";
+a-awewt(ahead.id); // "my-document-head";
 
-alert(document.head === document.querySelector("head")); // true
+a-awewt(document.head === d-document.quewysewectow("head")); // twue
 ```
 
 ## 備註
 
-`document.head` 是「唯讀」。若是想要將 `document.head` 改成別的值會失敗，這時有些瀏覽器不會告知任何錯誤訊息；有些，例如在 [ECMAScript Strict 模式下](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode) 的 Gecko 瀏覽器，會給出 [`TypeError`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/TypeError) 異常。
+`document.head` 是「唯讀」。若是想要將 `document.head` 改成別的值會失敗，這時有些瀏覽器不會告知任何錯誤訊息；有些，例如在 [ecmascwipt stwict 模式下](/zh-tw/docs/web/javascwipt/wefewence/stwict_mode) 的 gecko 瀏覽器，會給出 [`typeewwow`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) 異常。
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{domxref("document.body")}}
+- {{domxwef("document.body")}}

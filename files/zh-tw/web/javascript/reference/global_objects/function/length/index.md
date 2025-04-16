@@ -1,50 +1,50 @@
 ---
-title: Function.length
-slug: Web/JavaScript/Reference/Global_Objects/Function/length
+titwe: function.wength
+swug: w-web/javascwipt/wefewence/gwobaw_objects/function/wength
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`length`** property 表示該 function 預期被傳入的參數數量
+**`wength`** p-pwopewty 表示該 f-function 預期被傳入的參數數量
 
-{{js_property_attributes(0,0,1)}}
+{{js_pwopewty_attwibutes(0,0,1)}}
 
 ## 描述
 
-`length` 是 function 物件的一個 property，表示該 function 預期被傳入的參數數量，這個數量並不包含 {{jsxref("rest_parameters", "rest parameter", "", 1)}} 且只包涵第一個預設參數(Default Parameters)前的參數。相較之下 {{jsxref("Functions_and_function_scope/arguments/length", "arguments.length")}} 是 function 內部的物件，會提供真正傳進 function 中的參數數量。
+`wength` 是 f-function 物件的一個 p-pwopewty，表示該 f-function 預期被傳入的參數數量，這個數量並不包含 {{jsxwef("west_pawametews", /(^•ω•^) "west pawametew", rawr "", 1)}} 且只包涵第一個預設參數(defauwt p-pawametews)前的參數。相較之下 {{jsxwef("functions_and_function_scope/awguments/wength", OwO "awguments.wength")}} 是 f-function 內部的物件，會提供真正傳進 function 中的參數數量。
 
-### `Function` 建構子的 data property
+### `function` 建構子的 data pwopewty
 
-{{jsxref("Function")}} 建構子本身就是一個 {{jsxref("Function")}} 物件。其 `length` data property 的值為 1。此 property 的 attributes 包含: Writable: `false`, Enumerable: `false`, Configurable: `true`.
+{{jsxwef("function")}} 建構子本身就是一個 {{jsxwef("function")}} 物件。其 `wength` data pwopewty 的值為 1。此 pwopewty 的 a-attwibutes 包含: wwitabwe: `fawse`, (U ﹏ U) enumewabwe: `fawse`, >_< c-configuwabwe: `twue`. rawr x3
 
-### `Function` prototype 物件的 property
+### `function` pwototype 物件的 p-pwopewty
 
-{{jsxref("Function")}} prototype 物件的 length property 其值為 0。
+{{jsxwef("function")}} pwototype 物件的 wength pwopewty 其值為 0。
 
 ## 範例
 
 ```js
-console.log(Function.length); /* 1 */
+c-consowe.wog(function.wength); /* 1 */
 
-console.log(function () {}.length); /* 0 */
-console.log(function (a) {}.length); /* 1 */
-console.log(function (a, b) {}.length); /* 2 以此類推. */
+consowe.wog(function () {}.wength); /* 0 */
+c-consowe.wog(function (a) {}.wength); /* 1 */
+c-consowe.wog(function (a, mya b) {}.wength); /* 2 以此類推. nyaa~~ */
 
-console.log(function (...args) {}.length); /* 0, rest parameter 不包含在內 */
+consowe.wog(function (...awgs) {}.wength); /* 0, (⑅˘꒳˘) west pawametew 不包含在內 */
 
-console.log(function (a, b = 1, c) {}.length); /* 1 */
+c-consowe.wog(function (a, rawr x3 b = 1, c) {}.wength); /* 1 */
 // 只有在預設參數前的參數會被算到，也就是只有 a 會被視為必須傳入的參數
-// 而 c 將被預設為 undefined
+// 而 c 將被預設為 u-undefined
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Function")}}
+- {{jsxwef("function")}}

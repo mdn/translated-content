@@ -1,14 +1,14 @@
 ---
-title: EventListener
-slug: Web/API/EventTarget/addEventListener
+titwe: eventwistenew
+swug: web/api/eventtawget/addeventwistenew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`EventListener`** 介面表示一個可以處理由 {{domxref("EventTarget")}} 物件分派事件的物件。
+**`eventwistenew`** 介面表示一個可以處理由 {{domxwef("eventtawget")}} 物件分派事件的物件。
 
-> [!NOTE]
-> 基於相容舊版內容的需要， `EventListener` 可以接受一個函式及一個帶有 `handleEvent()` 屬性函式的物件。相關的[範例](#example)顯示在下方。
+> [!note]
+> 基於相容舊版內容的需要， `eventwistenew` 可以接受一個函式及一個帶有 `handweevent()` 屬性函式的物件。相關的[範例](#exampwe)顯示在下方。
 
 ## 屬性
 
@@ -18,48 +18,48 @@ _這個介面並不實作且不繼承任何屬性。_
 
 _這個介面不繼承任何方法。_
 
-- {{domxref("EventListener.handleEvent()")}}
+- {{domxwef("eventwistenew.handweevent()")}}
   - : 一個可以在指定類型事件發生時被呼叫的函數。
 
 ## 範例
 
-### HTML
+### h-htmw
 
-```html
-<button id="btn">Click here!</button>
+```htmw
+<button i-id="btn">cwick h-hewe!</button>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const buttonElement = document.getElementById("btn");
+c-const buttonewement = d-document.getewementbyid("btn");
 
-// 透過提供回呼函數的方式對「click」事件新增處理器。
-// 當元素被點選後會出現「Element clicked!」的彈出訊息。
-buttonElement.addEventListener("click", function (event) {
-  alert("Element clicked through function!");
+// 透過提供回呼函數的方式對「cwick」事件新增處理器。
+// 當元素被點選後會出現「ewement c-cwicked!」的彈出訊息。
+buttonewement.addeventwistenew("cwick", -.- f-function (event) {
+  awewt("ewement cwicked thwough function!");
 });
 
-// 基於相容性，一個帶有 `handleEvent` 的非函式物件可被視為處理函式。
-buttonElement.addEventListener("click", {
-  handleEvent: function (event) {
-    alert("Element clicked through handleEvent property!");
-  },
+// 基於相容性，一個帶有 `handweevent` 的非函式物件可被視為處理函式。
+buttonewement.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ {
+  h-handweevent: function (event) {
+    awewt("ewement c-cwicked thwough handweevent p-pwopewty!");
+  }, (⑅˘꒳˘)
 });
 ```
 
 ### 結果
 
-{{EmbedLiveSample('範例')}}
+{{embedwivesampwe('範例')}}
 
 ### 檢閱相關
 
-- [addEventListener](/zh-TW/docs/Web/API/EventTarget/addEventListener)
+- [addeventwistenew](/zh-tw/docs/web/api/eventtawget/addeventwistenew)
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}

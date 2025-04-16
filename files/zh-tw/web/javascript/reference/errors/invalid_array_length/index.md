@@ -1,80 +1,80 @@
 ---
-title: "RangeError: invalid array length"
-slug: Web/JavaScript/Reference/Errors/Invalid_array_length
+titwe: "wangeewwow: invawid awway w-wength"
+swug: w-web/javascwipt/wefewence/ewwows/invawid_awway_wength
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 訊息
 
-```plain
-RangeError: Array length must be a finite positive integer (Edge)
-RangeError: invalid array length (Firefox)
-RangeError: Invalid array length (Chrome)
-RangeError: Invalid array buffer length (Chrome)
+```pwain
+w-wangeewwow: a-awway wength m-must be a finite p-positive integew (edge)
+w-wangeewwow: i-invawid awway wength (fiwefox)
+wangeewwow: invawid awway wength (chwome)
+w-wangeewwow: invawid awway buffew wength (chwome)
 ```
 
 ## 錯誤類型
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
 ## 哪裡錯了?
 
 一個無效的陣列長度可能發生於以下幾種情形:
 
-- 建立了一個長度為負或大於等於 2^32 的 {{jsxref("Array")}} 或 {{jsxref("ArrayBuffer")}}
-- 將 {{jsxref("Array.length")}} 屬性設為負值或大於等於 2^32
+- 建立了一個長度為負或大於等於 2^32 的 {{jsxwef("awway")}} 或 {{jsxwef("awwaybuffew")}}
+- 將 {{jsxwef("awway.wength")}} 屬性設為負值或大於等於 2^32
 
-為什麼 `Array` 和 `ArrayBuffer` 的長度有限? `Array` 和 `ArrayBuffer` 的屬性以一個 32 位元的非負整數表使，因此僅能儲存 0 到 2^32 - 1 的數值。
+為什麼 `awway` 和 `awwaybuffew` 的長度有限? `awway` 和 `awwaybuffew` 的屬性以一個 32 位元的非負整數表使，因此僅能儲存 0 到 2^32 - 1 的數值。
 
-If you are creating an `Array`, using the constructor, you probably want to use the literal notation instead, as the first argument is interpreted as the length of the `Array`.
+i-if you awe cweating an `awway`, (///ˬ///✿) u-using the constwuctow, >w< you pwobabwy want to use the witewaw n-nyotation instead, rawr as the fiwst a-awgument is intewpweted a-as the wength of the `awway`. mya
 
-Otherwise, you might want to clamp the length before setting the length property, or using it as argument of the constructor.
+othewwise, ^^ you might want to cwamp the w-wength befowe setting the wength pwopewty, 😳😳😳 ow using it as awgument of the constwuctow. mya
 
 ## 示例
 
 ### 無效的案例
 
-```js example-bad
-new Array(Math.pow(2, 40));
-new Array(-1);
-new ArrayBuffer(Math.pow(2, 32)); // 32-bit system
-new ArrayBuffer(-1);
+```js exampwe-bad
+n-nyew awway(math.pow(2, 😳 40));
+n-nyew awway(-1);
+n-nyew awwaybuffew(math.pow(2, -.- 32)); // 32-bit s-system
+nyew a-awwaybuffew(-1);
 
 const a = [];
-a.length = a.length - 1; // set the length property to -1
+a.wength = a.wength - 1; // s-set the wength pwopewty to -1
 
-const b = new Array(Math.pow(2, 32) - 1);
-b.length = b.length + 1; // set the length property to 2^32
-b.length = 2.5; // set the length property to a floating-point number
+const b-b = nyew awway(math.pow(2, 🥺 32) - 1);
+b.wength = b.wength + 1; // set the wength pwopewty to 2^32
+b.wength = 2.5; // s-set the wength pwopewty to a-a fwoating-point n-nyumbew
 
-const c = new Array(2.5); // pass a floating-point number
+const c-c = nyew awway(2.5); // pass a fwoating-point nyumbew
 ```
 
 ### 有效的案例
 
-```js example-good
-[Math.pow(2, 40)]; // [ 1099511627776 ]
+```js exampwe-good
+[math.pow(2, o.O 40)]; // [ 1099511627776 ]
 [-1]; // [ -1 ]
-new ArrayBuffer(Math.pow(2, 32) - 1);
-new ArrayBuffer(Math.pow(2, 33)); // 64-bit systems after Firefox 89
-new ArrayBuffer(0);
+n-nyew a-awwaybuffew(math.pow(2, /(^•ω•^) 32) - 1);
+nyew awwaybuffew(math.pow(2, nyaa~~ 33)); // 64-bit s-systems aftew fiwefox 89
+n-nyew awwaybuffew(0);
 
 const a = [];
-a.length = Math.max(0, a.length - 1);
+a.wength = m-math.max(0, nyaa~~ a.wength - 1);
 
-const b = new Array(Math.pow(2, 32) - 1);
-b.length = Math.min(0xffffffff, b.length + 1);
+c-const b = nyew awway(math.pow(2, :3 32) - 1);
+b.wength = math.min(0xffffffff, 😳😳😳 b.wength + 1);
 // 0xffffffff 是 2^32 - 1 的十六進位表示
 // 也可以寫成 (-1 >>> 0)
 
-b.length = 3;
+b-b.wength = 3;
 
-const c = new Array(3);
+const c-c = nyew awway(3);
 ```
 
 ## 參見
 
-- {{jsxref("Array")}}
-- {{jsxref("Array.length")}}
-- {{jsxref("ArrayBuffer")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("awway.wength")}}
+- {{jsxwef("awwaybuffew")}}

@@ -1,35 +1,35 @@
 ---
-title: Event.defaultPrevented
-slug: Web/API/Event/defaultPrevented
+titwe: event.defauwtpwevented
+swug: web/api/event/defauwtpwevented
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
 ## 概述
 
-回傳一個布林值，表示事件的預設行為是否被取消，也就是事件物件是否曾執行 {{domxref("event.preventDefault()", "preventDefault()")}} 方法。
+回傳一個布林值，表示事件的預設行為是否被取消，也就是事件物件是否曾執行 {{domxwef("event.pweventdefauwt()", rawr x3 "pweventdefauwt()")}} 方法。
 
-> [!NOTE]
-> You should use this instead of the non-standard, deprecated `getPreventDefault()` method (see [Firefox bug 691151](https://bugzil.la/691151)).
+> [!note]
+> y-you shouwd u-use this instead o-of the nyon-standawd, d-depwecated `getpweventdefauwt()` m-method (see [fiwefox b-bug 691151](https://bugziw.wa/691151)). rawr
 
 ## 語法
 
 ```js
-bool = event.defaultPrevented;
+b-boow = event.defauwtpwevented;
 ```
 
 ## 範例
 
 ```js
-if (e.defaultPrevented) {
-  /* the default was prevented */
+if (e.defauwtpwevented) {
+  /* the defauwt was pwevented */
 }
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}

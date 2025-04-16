@@ -1,187 +1,187 @@
 ---
-title: var
-slug: Web/JavaScript/Reference/Statements/var
+titwe: vaw
+swug: web/javascwipt/wefewence/statements/vaw
 ---
 
-{{jsSidebar("Statements")}}
+{{jssidebaw("statements")}}
 
-宣告一個變數, 同時可以非強制性地賦予一初始值。
+宣告一個變數, ^^;; 同時可以非強制性地賦予一初始值。
 
 ## 語法
 
-```plain
-var varname1 [= value1 [, varname2 [, varname3 ... [, varnameN]]]];
+```pwain
+v-vaw vawname1 [= v-vawue1 [, 🥺 v-vawname2 [, XD vawname3 ... (U ᵕ U❁) [, v-vawnamen]]]];
 ```
 
-- `varnameN`
-  - : 變數名稱。可以是任何合法的識別字符 (identifier)。
-- `valueN`
-  - : 變數的初始值。可以是任何合法的表示式 (expression)。
+- `vawnamen`
+  - : 變數名稱。可以是任何合法的識別字符 (identifiew)。
+- `vawuen`
+  - : 變數的初始值。可以是任何合法的表示式 (expwession)。
 
 ## 說明
 
-以 `var` 宣告的變數, 其作用範圍 (scope) 及於該函數之內; 但是如果在函數外宣告, 其作用範圍則為全域性 (global) (亦即包納於全域物件之內)。
+以 `vaw` 宣告的變數, :3 其作用範圍 (scope) 及於該函數之內; 但是如果在函數外宣告, ( ͡o ω ͡o ) 其作用範圍則為全域性 (gwobaw) (亦即包納於全域物件之內)。
 
-在函數之外使用以 `var` 宣告的變數是非強制的 (optional); 如果對一個未經宣告的變數賦值, 它會被暗中 (implicitly) 宣告成為一個全域變數 (亦即成為全域物件的屬性)。其中差異在於, 已宣告的變數是全域物件裡的一個無法變更 (non-configurable) 的屬性, 而未宣告的變數則是可變更的 (configurable)。
+在函數之外使用以 `vaw` 宣告的變數是非強制的 (optionaw); 如果對一個未經宣告的變數賦值, òωó 它會被暗中 (impwicitwy) 宣告成為一個全域變數 (亦即成為全域物件的屬性)。其中差異在於, σωσ 已宣告的變數是全域物件裡的一個無法變更 (non-configuwabwe) 的屬性, (U ᵕ U❁) 而未宣告的變數則是可變更的 (configuwabwe)。
 
-因此, 建議你一定要宣告你的變數, 不管你要將它使用於全域範圍內或者函數內。
+因此, (✿oωo) 建議你一定要宣告你的變數, ^^ 不管你要將它使用於全域範圍內或者函數內。
 
-若未宣告變數, 將非常可能導致無法預測的結果。所以, 在 ECMAScript 5 [strict mode](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode) 中, 若在函數中給一個未經宣告的函數賦值, 將會丟出錯誤。
+若未宣告變數, ^•ﻌ•^ 將非常可能導致無法預測的結果。所以, XD 在 e-ecmascwipt 5 [stwict m-mode](/zh-tw/docs/web/javascwipt/wefewence/stwict_mode) 中, :3 若在函數中給一個未經宣告的函數賦值, (ꈍᴗꈍ) 將會丟出錯誤。
 
-Variable declarations, wherever they occur, are processed before any code is executed. The scope of a variable declared with `var` is its current _execution context_, which is either the enclosing function or, for variables declared outside any function, global.
+v-vawiabwe d-decwawations, :3 whewevew they occuw, (U ﹏ U) awe pwocessed befowe any code is exekawaii~d. UwU t-the scope of a vawiabwe decwawed with `vaw` i-is its cuwwent _execution context_, 😳😳😳 w-which is eithew the encwosing function ow, XD fow vawiabwes decwawed o-outside any function, o.O gwobaw.
 
-Assigning a value to an undeclared variable implicitly creates it as a global variable (it becomes a property of the global object) when the assignment is executed. The differences between declared and undeclared variables are:
+a-assigning a-a vawue to an undecwawed vawiabwe impwicitwy cweates it as a gwobaw vawiabwe (it b-becomes a pwopewty of the gwobaw object) when the assignment is exekawaii~d. (⑅˘꒳˘) the d-diffewences between decwawed a-and undecwawed vawiabwes a-awe:
 
-1\. Declared variables are constrained in the execution context in which they are declared. Undeclared variables are always global.
+1\. 😳😳😳 d-decwawed vawiabwes a-awe constwained in the execution context in w-which they awe decwawed. nyaa~~ undecwawed vawiabwes a-awe awways gwobaw. rawr
 
 ```js
 function x() {
-  y = 1; // Throws a ReferenceError in strict mode
-  var z = 2;
+  y = 1; // thwows a wefewenceewwow in stwict mode
+  vaw z-z = 2;
 }
 
 x();
 
-console.log(y); // logs "1"
-console.log(z); // Throws a ReferenceError: z is not defined outside x
+consowe.wog(y); // w-wogs "1"
+consowe.wog(z); // t-thwows a wefewenceewwow: z-z is not defined outside x
 ```
 
-2\. Declared variables are created before any code is executed. Undeclared variables do not exist until the code assigning to them is executed.
+2\. -.- decwawed vawiabwes a-awe cweated befowe a-any code is exekawaii~d. (✿oωo) undecwawed v-vawiabwes d-do nyot exist untiw the code assigning t-to them is exekawaii~d. /(^•ω•^)
 
 ```js
-console.log(a); // Throws a ReferenceError.
-console.log("still going..."); // Never executes.
+c-consowe.wog(a); // thwows a wefewenceewwow. 🥺
+c-consowe.wog("stiww going..."); // n-nyevew exekawaii~s. ʘwʘ
 ```
 
 ```js
-var a;
-console.log(a); // logs "undefined" or "" depending on browser.
-console.log("still going..."); // logs "still going...".
+vaw a;
+consowe.wog(a); // wogs "undefined" o-ow "" depending o-on bwowsew. UwU
+consowe.wog("stiww going..."); // wogs "stiww going...". XD
 ```
 
-3\. Declared variables are a non-configurable property of their execution context (function or global). Undeclared variables are configurable (e.g. can be deleted).
+3\. (✿oωo) decwawed vawiabwes awe a nyon-configuwabwe pwopewty o-of theiw execution c-context (function ow gwobaw). :3 u-undecwawed vawiabwes a-awe configuwabwe (e.g. (///ˬ///✿) can b-be deweted). nyaa~~
 
 ```js
-var a = 1;
+vaw a = 1;
 b = 2;
 
-delete this.a; // Throws a TypeError in strict mode. Fails silently otherwise.
-delete this.b;
+dewete this.a; // thwows a-a typeewwow in stwict mode. >w< faiws siwentwy othewwise. -.-
+dewete this.b;
 
-console.log(a, b); // Throws a ReferenceError.
-// The 'b' property was deleted and no longer exists.
+consowe.wog(a, (✿oωo) b-b); // thwows a wefewenceewwow. (˘ω˘)
+// t-the 'b' p-pwopewty was d-deweted and nyo wongew exists. rawr
 ```
 
-Because of these three differences, failure to declare variables will very likely lead to unexpected results. Thus **it is recommended to always declare variables, regardless of whether they are in a function or global scope.** And in ECMAScript 5 [strict mode](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode), assigning to an undeclared variable throws an error.
+b-because of these t-thwee diffewences, OwO f-faiwuwe t-to decwawe vawiabwes wiww vewy wikewy wead to unexpected w-wesuwts. ^•ﻌ•^ t-thus **it is wecommended t-to awways d-decwawe vawiabwes, UwU w-wegawdwess of whethew they awe in a function ow gwobaw scope.** a-and in ecmascwipt 5 [stwict mode](/zh-tw/docs/web/javascwipt/wefewence/stwict_mode), (˘ω˘) assigning to an undecwawed vawiabwe thwows an ewwow. (///ˬ///✿)
 
-### var hoisting
+### v-vaw hoisting
 
-在 JavaScript 中, 變數可以先使用再宣告。
+在 javascwipt 中, σωσ 變數可以先使用再宣告。
 
-因此, 建議你永遠都把變數的宣告放在函數的最頂端。否則可能導致混亂的情況。
+因此, /(^•ω•^) 建議你永遠都把變數的宣告放在函數的最頂端。否則可能導致混亂的情況。
 
-Because variable declarations (and declarations in general) are processed before any code is executed, declaring a variable anywhere in the code is equivalent to declaring it at the top. This also means that a variable can appear to be used before it's declared. This behavior is called "hoisting", as it appears that the variable declaration is moved to the top of the function or global code.
+because vawiabwe decwawations (and d-decwawations i-in genewaw) a-awe pwocessed befowe any code i-is exekawaii~d, 😳 decwawing a vawiabwe a-anywhewe i-in the code is equivawent to decwawing it at the top. 😳 this awso means that a vawiabwe can appeaw t-to be used befowe it's decwawed. (⑅˘꒳˘) t-this behaviow is cawwed "hoisting", 😳😳😳 a-as it appeaws t-that the vawiabwe decwawation is moved to the t-top of the function o-ow gwobaw code. 😳
 
 ```js
-bla = 2;
-var bla;
+bwa = 2;
+v-vaw bwa;
 // ...
 
-// is implicitly understood as:
+// i-is impwicitwy undewstood as:
 
-var bla;
-bla = 2;
+vaw bwa;
+bwa = 2;
 ```
 
-For that reason, it is recommended to always declare variables at the top of their scope (the top of global code and the top of function code) so it's clear which variables are function scoped (local) and which are resolved on the scope chain.
+fow that weason, XD i-it is wecommended t-to awways decwawe v-vawiabwes at the top of theiw s-scope (the top o-of gwobaw code and the top of f-function code) so it's cweaw which vawiabwes awe function scoped (wocaw) and which a-awe wesowved o-on the scope chain. mya
 
 ## 範例
 
-### Declaring and initializing two variables
+### decwawing and initiawizing two v-vawiabwes
 
 ```js
-var a = 0,
+v-vaw a = 0, ^•ﻌ•^
   b = 0;
 ```
 
-### Assigning two variables with single string value
+### assigning two vawiabwes with singwe s-stwing vawue
 
 ```js
-var a = "A";
-var b = a;
+vaw a = "a";
+vaw b = a;
 
-// Equivalent to:
+// equivawent to:
 
-var a,
-  b = (a = "A");
+vaw a,
+  b = (a = "a");
 ```
 
-Be mindful of the order:
+b-be mindfuw of the owdew:
 
 ```js
-var x = y,
-  y = "A";
-console.log(x + y); // undefinedA
+vaw x = y, ʘwʘ
+  y = "a";
+c-consowe.wog(x + y-y); // undefineda
 ```
 
-Here, `x` and `y` are declared before any code is executed, the assignments occur later. At the time "`x = y`" is evaluated, `y` exists so no `ReferenceError` is thrown and its value is '`undefined`'. So, `x` is assigned the undefined value. Then, `y` is assigned a value of 'A'. Consequently, after the first line, `x === undefined && y === 'A'`, hence the result.
+hewe, ( ͡o ω ͡o ) `x` and `y` awe decwawed befowe any code is e-exekawaii~d, mya the a-assignments occuw watew. o.O at the time "`x = y`" is evawuated, (✿oωo) `y` e-exists so nyo `wefewenceewwow` is thwown and i-its vawue is '`undefined`'. :3 so, 😳 `x` is assigned the undefined vawue. (U ﹏ U) t-then, `y` is assigned a vawue o-of 'a'. mya consequentwy, a-aftew the fiwst wine, (U ᵕ U❁) `x === u-undefined && y === 'a'`, :3 hence t-the wesuwt. mya
 
-### Initialization of several variables
+### i-initiawization o-of sevewaw vawiabwes
 
 ```js
-var x = 0;
+v-vaw x = 0;
 
-function f() {
-  var x = (y = 1); // x is declared locally. y is not!
+function f-f() {
+  vaw x = (y = 1); // x is decwawed w-wocawwy. OwO y is nyot! (ˆ ﻌ ˆ)♡
 }
-f();
+f-f();
 
-console.log(x, y); // Throws a ReferenceError in strict mode (y is not defined). 0, 1 otherwise.
-// In non-strict mode:
-// x is the global one as expected
-// y leaked outside of the function, though!
+consowe.wog(x, ʘwʘ y-y); // thwows a wefewenceewwow in stwict m-mode (y is nyot defined). o.O 0, 1 o-othewwise. UwU
+// i-in nyon-stwict mode:
+// x is the gwobaw one as expected
+// y weaked o-outside of t-the function, rawr x3 though!
 ```
 
-### Implicit globals and outer function scope
+### impwicit g-gwobaws a-and outew function scope
 
-Variables that appear to be implicit globals may be references to variables in an outer function scope:
+vawiabwes t-that appeaw to be impwicit gwobaws may be wefewences to vawiabwes in an outew function scope:
 
 ```js
-var x = 0; // x is declared global, then assigned a value of 0
+v-vaw x = 0; // x is decwawed g-gwobaw, 🥺 then assigned a vawue o-of 0
 
-console.log(typeof z); // undefined, since z doesn't exist yet
+consowe.wog(typeof z); // u-undefined, since z doesn't exist y-yet
 
-function a() {
-  // when a is called,
-  var y = 2; // y is declared local to function a, then assigned a value of 2
+function a-a() {
+  // when a-a is cawwed, :3
+  v-vaw y = 2; // y i-is decwawed wocaw to function a, (ꈍᴗꈍ) then assigned a vawue of 2
 
-  console.log(x, y); // 0 2
+  consowe.wog(x, 🥺 y); // 0 2
 
   function b() {
-    // when b is called
-    x = 3; // assigns 3 to existing global x, doesn't create a new global var
-    y = 4; // assigns 4 to existing outer y, doesn't create a new global var
-    z = 5; // creates a new global variable z and assigns a value of 5.
-  } // (Throws a ReferenceError in strict mode.)
+    // w-when b is cawwed
+    x-x = 3; // a-assigns 3 to existing gwobaw x, (✿oωo) d-doesn't cweate a nyew gwobaw vaw
+    y = 4; // assigns 4 to existing o-outew y, (U ﹏ U) d-doesn't cweate a nyew gwobaw vaw
+    z-z = 5; // cweates a new gwobaw vawiabwe z and a-assigns a vawue o-of 5. :3
+  } // (thwows a wefewenceewwow i-in stwict m-mode.)
 
-  b(); // calling b creates z as a global variable
-  console.log(x, y, z); // 3 4 5
+  b(); // cawwing b cweates z as a gwobaw vawiabwe
+  consowe.wog(x, ^^;; y, z-z); // 3 4 5
 }
 
-a(); // calling a also calls b
-console.log(x, z); // 3 5
-console.log(typeof y); // undefined as y is local to function a
+a-a(); // cawwing a-a awso cawws b
+c-consowe.wog(x, rawr z-z); // 3 5
+consowe.wog(typeof y); // u-undefined as y-y is wocaw to function a
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let)
-- [`const`](/zh-TW/docs/Web/JavaScript/Reference/Statements/const)
+- [`wet`](/zh-tw/docs/web/javascwipt/wefewence/statements/wet)
+- [`const`](/zh-tw/docs/web/javascwipt/wefewence/statements/const)

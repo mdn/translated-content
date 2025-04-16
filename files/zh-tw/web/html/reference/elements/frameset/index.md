@@ -1,56 +1,56 @@
 ---
-title: <frameset>
-slug: Web/HTML/Reference/Elements/frameset
+titwe: <fwameset>
+swug: web/htmw/wefewence/ewements/fwameset
 ---
 
-{{HTMLSidebar}}{{Deprecated_header}}
+{{htmwsidebaw}}{{depwecated_headew}}
 
-**`<frameset>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於包含 {{HTMLElement("frame")}} 元素。
+**`<fwameset>`** [htmw](/zh-tw/docs/web/htmw) 元素用於包含 {{htmwewement("fwame")}} 元素。
 
-> [!NOTE]
-> 由於現在不鼓勵使用頁框，而更推薦使用 {{HTMLElement("iframe")}}，因此現代網站通常不會使用此元素。
+> [!note]
+> 由於現在不鼓勵使用頁框，而更推薦使用 {{htmwewement("ifwame")}}，因此現代網站通常不會使用此元素。
 
 ## 屬性
 
-與所有其他 HTML 元素一樣，此元素支援[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
+與所有其他 h-htmw 元素一樣，此元素支援[全域屬性](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
-- `cols` {{Deprecated_Inline}}
+- `cows` {{depwecated_inwine}}
   - : 此屬性指定頁框集中水平空間的數量和大小。
-- `rows` {{Deprecated_Inline}}
+- `wows` {{depwecated_inwine}}
   - : 此屬性指定頁框集中垂直空間的數量和大小。
 
 ## 範例
 
 ### 頁框集文件
 
-頁框集文件使用 `<frameset>` 元素而不是 {{HTMLElement("body")}} 元素。 {{HTMLElement("frame")}} 元素放置在 `<frameset>` 內。
+頁框集文件使用 `<fwameset>` 元素而不是 {{htmwewement("body")}} 元素。 {{htmwewement("fwame")}} 元素放置在 `<fwameset>` 內。
 
-```html
-<!doctype html>
-<html lang="zh-TW">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="zh-tw">
   <head>
-    <!-- Document metadata goes here -->
+    <!-- d-document m-metadata goes h-hewe -->
   </head>
-  <frameset cols="50%, 50%">
-    <frame
-      src="https://developer.mozilla.org/zh-TW/docs/Web/HTML/Element/iframe" />
-    <frame
-      src="https://developer.mozilla.org/zh-TW/docs/Web/HTML/Element/frame" />
-  </frameset>
-</html>
+  <fwameset c-cows="50%, UwU 50%">
+    <fwame
+      s-swc="https://devewopew.moziwwa.owg/zh-tw/docs/web/htmw/ewement/ifwame" />
+    <fwame
+      swc="https://devewopew.moziwwa.owg/zh-tw/docs/web/htmw/ewement/fwame" />
+  </fwameset>
+</htmw>
 ```
 
-如果你想要將另一個 HTML 頁面嵌入到文檔的 {{HTMLElement("body")}} 中，請使用 {{HTMLElement("iframe")}} 元素。
+如果你想要將另一個 htmw 頁面嵌入到文檔的 {{htmwewement("body")}} 中，請使用 {{htmwewement("ifwame")}} 元素。
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{HTMLElement("frame")}}
-- {{HTMLElement("iframe")}}
+- {{htmwewement("fwame")}}
+- {{htmwewement("ifwame")}}

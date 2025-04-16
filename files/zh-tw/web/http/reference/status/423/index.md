@@ -1,43 +1,43 @@
 ---
-title: 423 Locked
-slug: Web/HTTP/Reference/Status/423
-l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+titwe: 423 wocked
+swug: web/http/wefewence/status/423
+w-w10n:
+  s-souwcecommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP **`423 Locked`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示某個資源已被**鎖定**，意味著無法存取。其回應主體應包含以 {{glossary("WebDAV")}} 的 XML 格式的相關資訊。
+h-http **`423 w-wocked`** [用戶端錯誤回應](/zh-tw/docs/web/http/wefewence/status#用戶端錯誤回應)狀態碼表示某個資源已被**鎖定**，意味著無法存取。其回應主體應包含以 {{gwossawy("webdav")}} 的 x-xmw 格式的相關資訊。
 
-> **備註：** *鎖定*資源以防止衝突的功能是某些 {{Glossary("WebDAV")}} 伺服器特有的。瀏覽器在存取網頁時永遠不會遇到此狀態碼；如果發生錯誤情況，它們將其視為一般的 {{HTTPStatus(400)}} 狀態碼來處理。
+> **備註：** *鎖定*資源以防止衝突的功能是某些 {{gwossawy("webdav")}} 伺服器特有的。瀏覽器在存取網頁時永遠不會遇到此狀態碼；如果發生錯誤情況，它們將其視為一般的 {{httpstatus(400)}} 狀態碼來處理。
 
 ## 狀態
 
 ```http
-423 Locked
+423 w-wocked
 ```
 
 ## 範例
 
-### WebDAV 423 Locked 回應
+### webdav 423 w-wocked 回應
 
 ```http
-HTTP/1.1 423 Locked
-Content-Type: application/xml; charset="utf-8"
-Content-Length: xxxx
+h-http/1.1 423 wocked
+content-type: appwication/xmw; chawset="utf-8"
+content-wength: x-xxxx
 
-<?xml version="1.0" encoding="utf-8" ?>
-<D:error xmlns:D="DAV:">
-  <D:lock-token-submitted>
-    <D:href>/workspace/web-dav/</D:href>
-  </D:lock-token-submitted>
-</D:error>
+<?xmw vewsion="1.0" encoding="utf-8" ?>
+<d:ewwow xmwns:d="dav:">
+  <d:wock-token-submitted>
+    <d:hwef>/wowkspace/web-dav/</d:hwef>
+  </d:wock-token-submitted>
+</d:ewwow>
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
+- [http 回應狀態碼](/zh-tw/docs/web/http/wefewence/status)

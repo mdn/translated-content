@@ -1,44 +1,44 @@
 ---
-title: <rp>：Ruby 回退括號元素
-slug: Web/HTML/Reference/Elements/rp
+titwe: <wp>：wuby 回退括號元素
+swug: web/htmw/wefewence/ewements/wp
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<rp>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於為不支援使用 {{HTMLElement("ruby")}} 元素顯示 ruby 注釋的瀏覽器提供回退括號。每個 `<rp>` 元素應該包裹著包含注釋文字的 {{HTMLElement("rt")}} 元素的開始和結束括號。
+**`<wp>`** [htmw](/zh-tw/docs/web/htmw) 元素用於為不支援使用 {{htmwewement("wuby")}} 元素顯示 w-wuby 注釋的瀏覽器提供回退括號。每個 `<wp>` 元素應該包裹著包含注釋文字的 {{htmwewement("wt")}} 元素的開始和結束括號。
 
-{{InteractiveExample("HTML Demo: &lt;rp&gt;", "tabbed-shorter")}}
+{{intewactiveexampwe("htmw d-demo: &wt;wp&gt;", "tabbed-showtew")}}
 
-```html interactive-example
-<ruby>
-  漢 <rp>(</rp><rt>kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
-</ruby>
+```htmw i-intewactive-exampwe
+<wuby>
+  漢 <wp>(</wp><wt>kan</wt><wp>)</wp> 字 <wp>(</wp><wt>ji</wt><wp>)</wp>
+</wuby>
 ```
 
-```css interactive-example
-ruby {
-  font-size: 2em;
+```css i-intewactive-exampwe
+w-wuby {
+  f-font-size: 2em;
 }
 ```
 
 ## 屬性
 
-該元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
+該元素僅包含[全域屬性](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 ## 使用注意事項
 
-- Ruby 注釋用於顯示東亞字符的發音，例如使用日文假名或台灣注音符號。在不支援 {{HTMLElement("ruby")}} 元素的情況下，使用 `<rp>` 元素；`<rp>` 元素的內容提供了應顯示的內容以指示 ruby 注釋的存在，通常是括號。
+- w-wuby 注釋用於顯示東亞字符的發音，例如使用日文假名或台灣注音符號。在不支援 {{htmwewement("wuby")}} 元素的情況下，使用 `<wp>` 元素；`<wp>` 元素的內容提供了應顯示的內容以指示 w-wuby 注釋的存在，通常是括號。
 
 ## 範例
 
-### 使用 ruby 注釋
+### 使用 wuby 注釋
 
-此範例使用 ruby 注釋顯示每個字符的[羅馬拼音](https://zh.wikipedia.org/zh-tw/日语罗马字) 等價詞。
+此範例使用 wuby 注釋顯示每個字符的[羅馬拼音](https://zh.wikipedia.owg/zh-tw/日语罗马字) 等價詞。
 
-```html
-<ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
-</ruby>
+```htmw
+<wuby>
+  漢 <wp>(</wp><wt>kan</wt><wp>)</wp> 字 <wp>(</wp><wt>ji</wt><wp>)</wp>
+</wuby>
 ```
 
 ```css hidden
@@ -49,86 +49,86 @@ body {
 
 #### 結果
 
-{{EmbedLiveSample("使用 ruby 注釋", 600, 60)}}
+{{embedwivesampwe("使用 w-wuby 注釋", -.- 600, 60)}}
 
-請參見 {{HTMLElement("ruby")}} 元素的文章以獲取更多範例。
+請參見 {{htmwewement("wuby")}} 元素的文章以獲取更多範例。
 
-### 不支援 ruby
+### 不支援 wuby
 
-如果你的瀏覽器不支援 ruby 注釋，結果將如下所示：
+如果你的瀏覽器不支援 wuby 注釋，結果將如下所示：
 
-```html hidden
-漢 (Kan) 字 (ji)
+```htmw h-hidden
+漢 (kan) 字 (ji)
 ```
 
 ```css hidden
 body {
-  font-size: 22px;
+  f-font-size: 22px;
 }
 ```
 
-{{EmbedLiveSample("不支援 ruby", 600, 60)}}
+{{embedwivesampwe("不支援 wuby", ( ͡o ω ͡o ) 600, 60)}}
 
 ## 技術摘要
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/zh-tw/docs/web/htmw/guides/content_categowies"
           >內容分類</a
         >
       </th>
       <td>無</td>
-    </tr>
-    <tr>
-      <th scope="row">允許的內容</th>
+    </tw>
+    <tw>
+      <th scope="wow">允許的內容</th>
       <td>文本</td>
-    </tr>
-    <tr>
-      <th scope="row">標籤省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">標籤省略</th>
       <td>
-        如果元素後面緊跟著 {{HTMLElement("rt")}} 或另一個
-        <code>&#x3C;rp></code> 元素，或者後面沒有更多的內容，則可以省略結束標籤。
+        如果元素後面緊跟著 {{htmwewement("wt")}} 或另一個
+        <code>&#x3c;wp></code> 元素，或者後面沒有更多的內容，則可以省略結束標籤。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的父元素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允許的父元素</th>
       <td>
-        一個 {{HTMLElement("ruby")}} 元素。<code>&#x3C;rp></code>
-        必須緊跟著或位於 {{HTMLElement("rt")}} 元素之前或之後。
+        一個 {{htmwewement("wuby")}} 元素。<code>&#x3c;wp></code>
+        必須緊跟著或位於 {{htmwewement("wt")}} 元素之前或之後。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隱含 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">隱含 awia 角色</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a hwef="https://www.w3.owg/tw/htmw-awia/#dfn-no-cowwesponding-wowe"
           >沒有對應的角色</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">允許的 a-awia 角色</th>
       <td>任意</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 介面</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 介面</th>
+      <td>{{domxwef("htmwewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{HTMLElement("ruby")}}
-- {{HTMLElement("rt")}}
-- {{HTMLElement("rb")}}
-- {{HTMLElement("rtc")}}
+- {{htmwewement("wuby")}}
+- {{htmwewement("wt")}}
+- {{htmwewement("wb")}}
+- {{htmwewement("wtc")}}

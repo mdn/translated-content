@@ -1,75 +1,75 @@
 ---
-title: cookies.CookieStore
-slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
+titwe: cookies.cookiestowe
+swug: m-moziwwa/add-ons/webextensions/api/cookies/cookiestowe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-{{WebExtAPIRef("cookies")}} API 的 `CookieStore` 型別代表瀏覽器中的 cookie 存放空間。
+{{webextapiwef("cookies")}} a-api 的 `cookiestowe` 型別代表瀏覽器中的 cookie 存放空間。
 
-不同瀏覽模式（browsing mode）的視窗，有不同的 cookie 存放空間：例如隱私/隱身模式的視窗，會使用來自非隱私/隱身模式視窗的個別 cookie 存放空間。
+不同瀏覽模式（bwowsing m-mode）的視窗，有不同的 c-cookie 存放空間：例如隱私/隱身模式的視窗，會使用來自非隱私/隱身模式視窗的個別 c-cookie 存放空間。
 
 ## 型別
 
 此型別的值都是物件，並包含以下屬性：
 
 - `id`
-  - : `string`，代表 cookie 存放空間內的唯一識別號（identifier）。
-- `tabIds`
-  - : `integers` 的 `array`，識別所有分享此 cookie 存放空間的瀏覽頁籤。
+  - : `stwing`，代表 cookie 存放空間內的唯一識別號（identifiew）。
+- `tabids`
+  - : `integews` 的 `awway`，識別所有分享此 c-cookie 存放空間的瀏覽頁籤。
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 示例
 
-在以下程式碼片段內，{{WebExtAPIRef("cookies.getAllCookieStores()")}} 用來查找瀏覽器內，所有目前能用 cookie 存放空間，並列出每個 cookie 存放空間的 ID、還有分享此 cookie 存放空間的頁籤。
+在以下程式碼片段內，{{webextapiwef("cookies.getawwcookiestowes()")}} 用來查找瀏覽器內，所有目前能用 c-cookie 存放空間，並列出每個 c-cookie 存放空間的 id、還有分享此 cookie 存放空間的頁籤。
 
 ```js
-function logStores(cookieStores) {
-  for (store of cookieStores) {
-    console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
+function wogstowes(cookiestowes) {
+  fow (stowe of cookiestowes) {
+    c-consowe.wog(`cookie stowe: ${stowe.id}\n tab ids: ${stowe.tabids}`);
   }
 }
 
-var getting = browser.cookies.getAllCookieStores();
-getting.then(logStores);
+v-vaw getting = bwowsew.cookies.getawwcookiestowes();
+g-getting.then(wogstowes);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
-> 此 API 基於 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies) API 而來，文件改作自 Chromium 程式碼裡的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
+> [!note]
+> 此 api 基於 chwomium 的 [`chwome.cookies`](https://devewopew.chwome.com/docs/extensions/wefewence/api/cookies) api 而來，文件改作自 chwomium 程式碼裡的 [`cookies.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/cookies.json)。
 >
-> Microsoft Edge 的相容資訊來自微軟公司，原文以創用 CC 姓名標示 3.0 美國版條款授權大眾使用。
+> micwosoft e-edge 的相容資訊來自微軟公司，原文以創用 cc 姓名標示 3.0 美國版條款授權大眾使用。
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. rawr x3 aww wights wesewved. OwO
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce a-and binawy fowms, /(^•ω•^) with ow without
+// modification, 😳😳😳 awe pewmitted pwovided that t-the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code m-must wetain the above copywight
+// nyotice, ( ͡o ω ͡o ) this w-wist of conditions and the fowwowing discwaimew. >_<
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, >w< this w-wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. rawr
+//    * n-nyeithew t-the nyame of googwe inc. 😳 nyow t-the nyames of its
+// c-contwibutows may be used to e-endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without specific pwiow w-wwitten pewmission. >w<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the copywight h-howdews a-and contwibutows
+// "as is" and any expwess ow impwied wawwanties, (⑅˘꒳˘) incwuding, OwO but nyot
+// wimited to, (ꈍᴗꈍ) the impwied w-wawwanties of m-mewchantabiwity and fitness fow
+// a-a pawticuwaw p-puwpose awe discwaimed. 😳 i-in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, indiwect, 😳😳😳 incidentaw, mya
+// speciaw, mya exempwawy, ow consequentiaw d-damages (incwuding, (⑅˘꒳˘) but n-nyot
+// wimited t-to, pwocuwement o-of substitute goods ow sewvices; w-woss of use, (U ﹏ U)
+// d-data, mya ow pwofits; o-ow business i-intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, ʘwʘ w-whethew in contwact, (˘ω˘) s-stwict wiabiwity, (U ﹏ U) o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of t-the use
+// of this softwawe, ^•ﻌ•^ even if advised of the possibiwity of such damage. (˘ω˘)
 -->

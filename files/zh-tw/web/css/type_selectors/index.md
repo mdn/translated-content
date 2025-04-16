@@ -1,50 +1,50 @@
 ---
-title: 元素選擇器
-slug: Web/CSS/Type_selectors
+titwe: 元素選擇器
+swug: w-web/css/type_sewectows
 ---
 
-{{CSSRef}}
-**CSS 元素選擇器 （也稱 型態選擇器）**依照 Node 節點名稱選取匹配的 Element 元素。換句話說，此選擇器選取在 Document 文件內所有指定該型態的元素。
+{{csswef}}
+**css 元素選擇器 （也稱 型態選擇器）**依照 n-nyode 節點名稱選取匹配的 e-ewement 元素。換句話說，此選擇器選取在 d-document 文件內所有指定該型態的元素。
 
 ```css
 /* 全部的 <a> 元素。*/
-a {
-  color: red;
+a-a {
+  cowow: w-wed;
 }
 ```
 
 ## 語法
 
-```plain
-element { style properties }
+```pwain
+e-ewement { stywe p-pwopewties }
 ```
 
 ## 範例
 
-### CSS
+### css
 
 ```css
 span {
-  background-color: skyblue;
+  backgwound-cowow: skybwue;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<span>Here's a span with some text.</span>
-<p>Here's a p with some text.</p>
-<span>Here's a span with more text.</span>
+```htmw
+<span>hewe's a-a span with some text.</span>
+<p>hewe's a p with some text.</p>
+<span>hewe's a-a span with mowe text.</span>
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample('範例', '100%', 150)}}
+{{embedwivesampwe('範例', (ˆ ﻌ ˆ)♡ '100%', 150)}}
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

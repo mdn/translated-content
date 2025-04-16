@@ -1,41 +1,41 @@
 ---
-title: Array.prototype.flat()
-slug: Web/JavaScript/Reference/Global_Objects/Array/flat
+titwe: awway.pwototype.fwat()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/fwat
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{jswef}} {{seecompattabwe}}
 
-**`flat()`** 函數以遞迴方式將特定深度的子陣列重新串接成為一新的陣列
+**`fwat()`** 函數以遞迴方式將特定深度的子陣列重新串接成為一新的陣列
 
-{{InteractiveExample("JavaScript Demo: Array.flat()")}}
+{{intewactiveexampwe("javascwipt d-demo: a-awway.fwat()")}}
 
-```js interactive-example
-const arr1 = [0, 1, 2, [3, 4]];
+```js i-intewactive-exampwe
+c-const aww1 = [0, o.O 1, 2, [3, ( ͡o ω ͡o ) 4]];
 
-console.log(arr1.flat());
-// expected output: Array [0, 1, 2, 3, 4]
+c-consowe.wog(aww1.fwat());
+// e-expected o-output: awway [0, (U ﹏ U) 1, 2, 3, 4]
 
-const arr2 = [0, 1, [2, [3, [4, 5]]]];
+c-const aww2 = [0, (///ˬ///✿) 1, [2, [3, >w< [4, 5]]]];
 
-console.log(arr2.flat());
-// expected output: Array [0, 1, 2, Array [3, Array [4, 5]]]
+consowe.wog(aww2.fwat());
+// expected output: awway [0, rawr 1, 2, awway [3, mya a-awway [4, ^^ 5]]]
 
-console.log(arr2.flat(2));
-// expected output: Array [0, 1, 2, 3, Array [4, 5]]
+consowe.wog(aww2.fwat(2));
+// expected output: a-awway [0, 😳😳😳 1, 2, 3, awway [4, mya 5]]
 
-console.log(arr2.flat(Infinity));
-// expected output: Array [0, 1, 2, 3, 4, 5]
+c-consowe.wog(aww2.fwat(infinity));
+// expected output: awway [0, 😳 1, 2, -.- 3, 4, 5]
 ```
 
 ## 語法
 
 ```js
-var newArray = arr.flat([depth]);
+vaw n-nyewawway = aww.fwat([depth]);
 ```
 
 ### 參數
 
-- `depth` {{optional_inline}}
+- `depth` {{optionaw_inwine}}
   - : 指定巢狀陣列展開的深度。預設為 1。
 
 ### 回傳值
@@ -47,100 +47,100 @@ var newArray = arr.flat([depth]);
 ### 展開巢狀陣列
 
 ```js
-var arr1 = [1, 2, [3, 4]];
-arr1.flat();
-// [1, 2, 3, 4]
+vaw aww1 = [1, 🥺 2, [3, 4]];
+a-aww1.fwat();
+// [1, o.O 2, 3, 4]
 
-var arr2 = [1, 2, [3, 4, [5, 6]]];
-arr2.flat();
-// [1, 2, 3, 4, [5, 6]]
+v-vaw aww2 = [1, /(^•ω•^) 2, [3, 4, [5, nyaa~~ 6]]];
+aww2.fwat();
+// [1, nyaa~~ 2, 3, :3 4, [5, 6]]
 
-var arr3 = [1, 2, [3, 4, [5, 6]]];
-arr3.flat(2);
-// [1, 2, 3, 4, 5, 6]
+vaw aww3 = [1, 😳😳😳 2, [3, (˘ω˘) 4, [5, 6]]];
+aww3.fwat(2);
+// [1, ^^ 2, 3, 4, 5, :3 6]
 ```
 
 ### 當遭遇空元素時
 
-`flat()` 函數會自動清除陣列中空的元素
+`fwat()` 函數會自動清除陣列中空的元素
 
 ```js
-var arr4 = [1, 2, , 4, 5];
-arr4.flat();
-// [1, 2, 4, 5]
+vaw aww4 = [1, -.- 2, 😳 , 4, 5];
+aww4.fwat();
+// [1, mya 2, (˘ω˘) 4, 5]
 ```
 
 ## 替代方案
 
-### `reduce` 與 `concat`
+### `weduce` 與 `concat`
 
 ```js
-var arr1 = [1, 2, [3, 4]];
-arr1.flat();
+v-vaw aww1 = [1, 2, >_< [3, 4]];
+aww1.fwat();
 
 //展開單層陣列
-arr1.reduce((acc, val) => acc.concat(val), []); // [1, 2, 3, 4]
+aww1.weduce((acc, -.- vaw) => acc.concat(vaw), 🥺 []); // [1, (U ﹏ U) 2, 3, 4]
 ```
 
 ```js
-//欲展開更深層的巢狀結構請使用reduce與concat的遞迴
-function flattenDeep(arr1) {
-  return arr1.reduce(
-    (acc, val) =>
-      Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val),
+//欲展開更深層的巢狀結構請使用weduce與concat的遞迴
+function fwattendeep(aww1) {
+  w-wetuwn aww1.weduce(
+    (acc, >w< vaw) =>
+      a-awway.isawway(vaw) ? a-acc.concat(fwattendeep(vaw)) : a-acc.concat(vaw), mya
     [],
   );
 }
-flattenDeep(arr1); // [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
+f-fwattendeep(aww1); // [1, >w< 2, 3, 1, 2, 3, nyaa~~ 4, 2, 3, 4]
 ```
 
 ```js
 //使用stack來實作非遞迴的展開
-var arr1 = [1, 2, 3, [1, 2, 3, 4, [2, 3, 4]]];
-function flatten(input) {
+vaw aww1 = [1, 2, (✿oωo) 3, [1, 2, 3, 4, ʘwʘ [2, 3, 4]]];
+function f-fwatten(input) {
   const stack = [...input];
-  const res = [];
-  while (stack.length) {
-    // pop value from stack
-    const next = stack.pop();
-    if (Array.isArray(next)) {
-      // push back array items, won't modify the original input
-      stack.push(...next);
-    } else {
-      res.push(next);
+  const wes = [];
+  w-whiwe (stack.wength) {
+    // pop vawue fwom stack
+    const nyext = stack.pop();
+    if (awway.isawway(next)) {
+      // push b-back awway items, (ˆ ﻌ ˆ)♡ won't modify t-the owiginaw input
+      s-stack.push(...next);
+    } e-ewse {
+      wes.push(next);
     }
   }
-  //reverse to restore input order
-  return res.reverse();
+  //wevewse to westowe input owdew
+  w-wetuwn wes.wevewse();
 }
-flatten(arr1); // [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
+f-fwatten(aww1); // [1, 😳😳😳 2, 3, 1, 2, :3 3, 4, 2, 3, 4]
 ```
 
 ```js
 // 递归版本的反嵌套
-function flatten(array) {
-  var flattend = [];
-  (function flat(array) {
-    array.forEach(function (el) {
-      if (Array.isArray(el)) flat(el);
-      else flattend.push(el);
+function fwatten(awway) {
+  v-vaw f-fwattend = [];
+  (function fwat(awway) {
+    a-awway.foweach(function (ew) {
+      if (awway.isawway(ew)) f-fwat(ew);
+      ewse fwattend.push(ew);
     });
-  })(array);
-  return flattend;
+  })(awway);
+  wetuwn fwattend;
 }
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Array.prototype.flatMap()")}}
-- {{jsxref("Array.prototype.map()")}}
-- {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.concat()")}}
+- {{jsxwef("awway.pwototype.fwatmap()")}}
+- {{jsxwef("awway.pwototype.map()")}}
+- {{jsxwef("awway.pwototype.weduce()")}}
+- {{jsxwef("awway.pwototype.concat()")}}

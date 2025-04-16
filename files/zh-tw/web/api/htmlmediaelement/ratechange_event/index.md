@@ -1,16 +1,16 @@
 ---
-title: "HTMLMediaElement: ratechange"
-slug: Web/API/HTMLMediaElement/ratechange_event
+titwe: "htmwmediaewement: watechange"
+s-swug: web/api/htmwmediaewement/watechange_event
 ---
 
-{{APIRef("HTMLMediaElement")}}
+{{apiwef("htmwmediaewement")}}
 
-`ratechange` 事件將在播放速度改變時被觸發
+`watechange` 事件將在播放速度改變時被觸發
 
 ## 基本資訊
 
 - 規格
-  - : [HTML5 Media](https://html.spec.whatwg.org/multipage/media.html#event-media-ratechange)
+  - : [htmw5 m-media](https://htmw.spec.naniwg.owg/muwtipage/media.htmw#event-media-watechange)
 - 介面
   - : 事件
 - 是否冒泡
@@ -26,32 +26,32 @@ slug: Web/API/HTMLMediaElement/ratechange_event
 
 | 屬性                            | 類型                       | 描述                            |
 | ------------------------------- | -------------------------- | ------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | 事件目標（DOM 樹中最頂層的目標) |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | 事件類型                        |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | 事件是否觸發冒泡                |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | 事件是否可取消                  |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | 事件目標（dom 樹中最頂層的目標) |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | 事件類型                        |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | 事件是否觸發冒泡                |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | 事件是否可取消                  |
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 相關事件
 
-- [`playing`](/zh-TW/docs/Web/API/HTMLMediaElement/playing_event)
-- [`waiting`](/zh-TW/docs/Web/API/HTMLMediaElement/waiting_event)
-- [`seeking`](/zh-TW/docs/Web/API/HTMLMediaElement/seeking_event)
-- [`seeked`](/zh-TW/docs/Web/API/HTMLMediaElement/seeked_event)
-- [`ended`](/zh-TW/docs/Web/API/HTMLMediaElement/ended_event)
-- [`loadedmetadata`](/zh-TW/docs/Web/API/HTMLMediaElement/loadedmetadata_event)
-- [`loadeddata`](/zh-TW/docs/Web/API/HTMLMediaElement/loadeddata_event)
-- [`canplay`](/zh-TW/docs/Web/API/HTMLMediaElement/canplay_event)
-- [`canplaythrough`](/zh-TW/docs/Web/API/HTMLMediaElement/canplaythrough_event)
-- [`durationchange`](/zh-TW/docs/Web/API/HTMLMediaElement/durationchange_event)
-- [`timeupdate`](/zh-TW/docs/Web/API/HTMLMediaElement/timeupdate_event)
-- [`play`](/zh-TW/docs/Web/API/HTMLMediaElement/play_event)
-- [`pause`](/zh-TW/docs/Web/API/HTMLMediaElement/pause_event)
-- [`ratechange`](/zh-TW/docs/Web/API/HTMLMediaElement/ratechange_event)
-- [`volumechange`](/zh-TW/docs/Web/API/HTMLMediaElement/volumechange_event)
-- [`suspend`](/zh-TW/docs/Web/API/HTMLMediaElement/suspend_event)
-- [`emptied`](/zh-TW/docs/Web/API/HTMLMediaElement/emptied_event)
-- [`stalled`](/zh-TW/docs/Web/API/HTMLMediaElement/stalled_event)
+- [`pwaying`](/zh-tw/docs/web/api/htmwmediaewement/pwaying_event)
+- [`waiting`](/zh-tw/docs/web/api/htmwmediaewement/waiting_event)
+- [`seeking`](/zh-tw/docs/web/api/htmwmediaewement/seeking_event)
+- [`seeked`](/zh-tw/docs/web/api/htmwmediaewement/seeked_event)
+- [`ended`](/zh-tw/docs/web/api/htmwmediaewement/ended_event)
+- [`woadedmetadata`](/zh-tw/docs/web/api/htmwmediaewement/woadedmetadata_event)
+- [`woadeddata`](/zh-tw/docs/web/api/htmwmediaewement/woadeddata_event)
+- [`canpway`](/zh-tw/docs/web/api/htmwmediaewement/canpway_event)
+- [`canpwaythwough`](/zh-tw/docs/web/api/htmwmediaewement/canpwaythwough_event)
+- [`duwationchange`](/zh-tw/docs/web/api/htmwmediaewement/duwationchange_event)
+- [`timeupdate`](/zh-tw/docs/web/api/htmwmediaewement/timeupdate_event)
+- [`pway`](/zh-tw/docs/web/api/htmwmediaewement/pway_event)
+- [`pause`](/zh-tw/docs/web/api/htmwmediaewement/pause_event)
+- [`watechange`](/zh-tw/docs/web/api/htmwmediaewement/watechange_event)
+- [`vowumechange`](/zh-tw/docs/web/api/htmwmediaewement/vowumechange_event)
+- [`suspend`](/zh-tw/docs/web/api/htmwmediaewement/suspend_event)
+- [`emptied`](/zh-tw/docs/web/api/htmwmediaewement/emptied_event)
+- [`stawwed`](/zh-tw/docs/web/api/htmwmediaewement/stawwed_event)

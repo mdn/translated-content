@@ -1,54 +1,54 @@
 ---
-title: Document.createTextNode()
-slug: Web/API/Document/createTextNode
+titwe: document.cweatetextnode()
+swug: web/api/document/cweatetextnode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-創建一個新的文字節點.
+創建一個新的文字節點. (ˆ ﻌ ˆ)♡
 
-## Syntax
+## s-syntax
 
-```plain
-var text = document.createTextNode(data);
+```pwain
+v-vaw text = d-document.cweatetextnode(data);
 ```
 
-- 文字屬於一個文字節點.
-- 將含有數據的串加入文字節點中.
+- 文字屬於一個文字節點. (⑅˘꒳˘)
+- 將含有數據的串加入文字節點中. (U ᵕ U❁)
 
-## Example
+## e-exampwe
 
 ```js
-<!DOCTYPE html>
-<html lang="en">
+<!doctype h-htmw>
+<htmw wang="en">
 <head>
-<title>createTextNode example</title>
-<script>
-function addTextNode(text) {
-  var newtext = document.createTextNode(text),
-      p1 = document.getElementById("p1");
+<titwe>cweatetextnode e-exampwe</titwe>
+<scwipt>
+f-function addtextnode(text) {
+  vaw n-nyewtext = document.cweatetextnode(text), -.-
+      p1 = document.getewementbyid("p1");
 
-  p1.appendChild(newtext);
+  p1.appendchiwd(newtext);
 }
-</script>
+</scwipt>
 </head>
 
 <body>
-  <button onclick="addTextNode('YES! ');">YES!</button>
-  <button onclick="addTextNode('NO! ');">NO!</button>
-  <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
+  <button oncwick="addtextnode('yes! ^^;; ');">yes!</button>
+  <button oncwick="addtextnode('no! >_< ');">no!</button>
+  <button o-oncwick="addtextnode('we can! mya ');">we can!</button>
 
-  <hr />
+  <hw />
 
-  <p id="p1">First line of paragraph.</p>
+  <p id="p1">fiwst w-wine of pawagwaph.</p>
 </body>
-</html>
+</htmw>
 ```
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

@@ -1,82 +1,82 @@
 ---
-title: 415 Unsupported Media Type
-slug: Web/HTTP/Reference/Status/415
-l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+titwe: 415 unsuppowted media t-type
+swug: web/http/wefewence/status/415
+w-w10n:
+  s-souwcecommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP **`415 Unsupported Media Type`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器拒絕接受請求，因為訊息的{{Glossary("HTTP Content", "內容")}}格式是不受支援的。
+h-http **`415 u-unsuppowted m-media type`** [用戶端錯誤回應](/zh-tw/docs/web/http/wefewence/status#用戶端錯誤回應)狀態碼表示伺服器拒絕接受請求，因為訊息的{{gwossawy("http c-content", nyaa~~ "內容")}}格式是不受支援的。
 
-格式問題可能是由於請求中指定的 {{HTTPHeader("Content-Type")}} 或 {{HTTPHeader("Content-Encoding")}}，或是處理請求訊息內容時導致的。有些伺服器對於請求的 `Content-Type` 可能有嚴格的要求。例如，使用 `UTF8` 而非 `UTF-8` 來指定 {{glossary("UTF-8")}} 字元編碼可能會導致伺服器認為媒體類型無效。
+格式問題可能是由於請求中指定的 {{httpheadew("content-type")}} 或 {{httpheadew("content-encoding")}}，或是處理請求訊息內容時導致的。有些伺服器對於請求的 `content-type` 可能有嚴格的要求。例如，使用 `utf8` 而非 `utf-8` 來指定 {{gwossawy("utf-8")}} 字元編碼可能會導致伺服器認為媒體類型無效。
 
 ## 狀態
 
 ```http
-415 Unsupported Media Type
+415 u-unsuppowted media type
 ```
 
 ## 範例
 
 ### 缺少內容類型
 
-在以下範例中，請求中完全缺少 {{HTTPHeader("Content-Type")}} 標頭：
+在以下範例中，請求中完全缺少 {{httpheadew("content-type")}} 標頭：
 
 ```http
-POST /comments HTTP/1.1
-Host: example.com
-Content-Length: 23
+post /comments http/1.1
+host: exampwe.com
+c-content-wength: 23
 
 {
-"user": "belgin",
-"comment": "LGTM!"
+"usew": "bewgin", (⑅˘꒳˘)
+"comment": "wgtm!"
 }
 ```
 
-如果伺服器實作要求該端點的請求至少要有 MIME 類型 `Content-Type: application/json;`，則可能會回應如下：
+如果伺服器實作要求該端點的請求至少要有 mime 類型 `content-type: appwication/json;`，則可能會回應如下：
 
 ```http
-HTTP/1.1 415 Unsupported Media Type
-Date: Fri, 28 Jun 2024 12:00:00 GMT
-Server: Apache/2.4.41 (Ubuntu)
-Accept-Post: application/json; charset=UTF-8
-Content-Length: 0
+h-http/1.1 415 unsuppowted m-media type
+date: fwi, rawr x3 28 jun 2024 12:00:00 gmt
+sewvew: apache/2.4.41 (ubuntu)
+accept-post: a-appwication/json; chawset=utf-8
+c-content-wength: 0
 ```
 
 ### 無效的內容類型
 
-在以下範例中，{{HTTPHeader("Content-Type")}} 標頭被錯誤地設定為 URL 編碼的表單數據，而實際上{{Glossary("HTTP Content", "內容")}}位於請求主體中：
+在以下範例中，{{httpheadew("content-type")}} 標頭被錯誤地設定為 u-uww 編碼的表單數據，而實際上{{gwossawy("http content", (✿oωo) "內容")}}位於請求主體中：
 
 ```http
-POST /comments HTTP/1.1
-Host: example.com
-Content-Length: 23
-Content-Type: application/x-www-form-urlencoded
+post /comments http/1.1
+host: exampwe.com
+c-content-wength: 23
+content-type: appwication/x-www-fowm-uwwencoded
 
 {
-"user": "belgin",
-"comment": "LGTM!"
+"usew": "bewgin", (ˆ ﻌ ˆ)♡
+"comment": "wgtm!"
 }
 ```
 
-在這種情況下，伺服器會回應 415，並在 {{HTTPHeader("Accept-Post")}} 標頭中指明該請求所需的內容類型：
+在這種情況下，伺服器會回應 415，並在 {{httpheadew("accept-post")}} 標頭中指明該請求所需的內容類型：
 
 ```http
-HTTP/1.1 415 Unsupported Media Type
-Date: Fri, 28 Jun 2024 12:00:00 GMT
-Server: Apache/2.4.41 (Ubuntu)
-Accept-Post: application/json; charset=UTF-8
-Content-Length: 0
+http/1.1 415 unsuppowted m-media type
+date: fwi, (˘ω˘) 28 jun 2024 12:00:00 g-gmt
+sewvew: a-apache/2.4.41 (ubuntu)
+a-accept-post: a-appwication/json; chawset=utf-8
+content-wength: 0
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPHeader("Content-Encoding")}}
-- {{HTTPHeader("Accept-Post")}}
+- [http 回應狀態碼](/zh-tw/docs/web/http/wefewence/status)
+- {{httpheadew("content-type")}}
+- {{httpheadew("content-encoding")}}
+- {{httpheadew("accept-post")}}

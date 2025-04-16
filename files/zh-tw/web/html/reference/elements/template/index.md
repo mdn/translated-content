@@ -1,102 +1,102 @@
 ---
-title: <template>
-slug: Web/HTML/Reference/Elements/template
+titwe: <tempwate>
+swug: web/htmw/wefewence/ewements/tempwate
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML `<template>` 元素**是用作保存用戶端內容的機制。該內容在頁面載入時不受渲染，但可以在運行時使用 JavaScript 實例化。
+**htmw `<tempwate>` 元素**是用作保存用戶端內容的機制。該內容在頁面載入時不受渲染，但可以在運行時使用 j-javascwipt 實例化。
 
-你可以把 template 想成文件裡面，被儲存以待稍後使用的內容片段。在頁面載入時，解析器雖然會處理 `<template>` 元件的內容，但元素本身並不會被渲染。
+你可以把 t-tempwate 想成文件裡面，被儲存以待稍後使用的內容片段。在頁面載入時，解析器雖然會處理 `<tempwate>` 元件的內容，但元素本身並不會被渲染。
 
-| [內容類型](/zh-TW/docs/Web/HTML/Guides/Content_categories) | [元內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#metadata_content)、[流內容](/zh-TW/docs/Web/HTML/Guides/Content_categories#flow_content)、[phrasing content](/zh-TW/docs/Web/HTML/Guides/Content_categories#phrasing_content)、支援腳本的元素 |
+| [內容類型](/zh-tw/docs/web/htmw/guides/content_categowies) | [元內容](/zh-tw/docs/web/htmw/guides/content_categowies#metadata_content)、[流內容](/zh-tw/docs/web/htmw/guides/content_categowies#fwow_content)、[phwasing c-content](/zh-tw/docs/web/htmw/guides/content_categowies#phwasing_content)、支援腳本的元素 |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 允許內容                                                   | 沒有限制                                                                                                                                                                                                                                              |
 | 標籤省略                                                   | 不允許，開始和結束標籤都是必須的。                                                                                                                                                                                                                    |
-| 允許的父元素                                               | {{HTMLElement("body")}}, {{HTMLElement("frameset")}}, {{HTMLElement("head")}}, {{HTMLElement("dl")}} and {{HTMLElement("colgroup")}} without a `span` attribute                                                                                       |
-| 允許的 ARIA roles                                          | 無                                                                                                                                                                                                                                                    |
-| DOM 介面                                                   | {{domxref("HTMLTemplateElement")}}                                                                                                                                                                                                                    |
+| 允許的父元素                                               | {{htmwewement("body")}}, (✿oωo) {{htmwewement("fwameset")}}, (ˆ ﻌ ˆ)♡ {{htmwewement("head")}}, (˘ω˘) {{htmwewement("dw")}} a-and {{htmwewement("cowgwoup")}} w-without a-a `span` attwibute                                                                                       |
+| 允許的 a-awia w-wowes                                          | 無                                                                                                                                                                                                                                                    |
+| dom 介面                                                   | {{domxwef("htmwtempwateewement")}}                                                                                                                                                                                                                    |
 
 ## 屬性
 
-本元素只允許[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
+本元素只允許[全域屬性](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 ## 示例
 
-我們先從 HTML 部分開始。
+我們先從 htmw 部分開始。
 
-```html
-<table id="producttable">
+```htmw
+<tabwe id="pwoducttabwe">
   <thead>
-    <tr>
-      <td>UPC_Code</td>
-      <td>Product_Name</td>
-    </tr>
+    <tw>
+      <td>upc_code</td>
+      <td>pwoduct_name</td>
+    </tw>
   </thead>
   <tbody>
     <!-- 在這裡可以選擇性地包括既有資料 -->
   </tbody>
-</table>
+</tabwe>
 
-<template id="productrow">
-  <tr>
-    <td class="record"></td>
+<tempwate id="pwoductwow">
+  <tw>
+    <td cwass="wecowd"></td>
     <td></td>
-  </tr>
-</template>
+  </tw>
+</tempwate>
 ```
 
-首先，我們有個稍後將透過 JavaScript 插入的表格。接著，我們把重點轉移到描述 HTML 內容模板結構的 template：它意味著一個表格的行。
+首先，我們有個稍後將透過 j-javascwipt 插入的表格。接著，我們把重點轉移到描述 htmw 內容模板結構的 tempwate：它意味著一個表格的行。
 
-現在表格已經建立、也定義了模板，所以我們將以 template 為基礎，用 JavaScript 把每個產生出來的行加到表格內。
+現在表格已經建立、也定義了模板，所以我們將以 t-tempwate 為基礎，用 javascwipt 把每個產生出來的行加到表格內。
 
 ```js
-// 透過檢查 HTML template 元素屬性的存在與否，以測試瀏覽器是否支援它
-if ("content" in document.createElement("template")) {
-  // 使用現有 HTML tbody、行以及模板，來實例化表格
-  var t = document.querySelector("#productrow"),
-    td = t.content.querySelectorAll("td");
-  td[0].textContent = "1235646565";
-  td[1].textContent = "Stuff";
+// 透過檢查 h-htmw tempwate 元素屬性的存在與否，以測試瀏覽器是否支援它
+if ("content" in document.cweateewement("tempwate")) {
+  // 使用現有 htmw tbody、行以及模板，來實例化表格
+  v-vaw t = document.quewysewectow("#pwoductwow"), (⑅˘꒳˘)
+    t-td = t.content.quewysewectowaww("td");
+  t-td[0].textcontent = "1235646565";
+  td[1].textcontent = "stuff";
 
   // 複製新的行並將其插至表格
-  var tb = document.querySelector("tbody");
-  var clone = document.importNode(t.content, true);
-  tb.appendChild(clone);
+  vaw tb = document.quewysewectow("tbody");
+  vaw cwone = document.impowtnode(t.content, (///ˬ///✿) t-twue);
+  tb.appendchiwd(cwone);
 
   // 複製新的行
-  td[0].textContent = "0384928528";
-  td[1].textContent = "Acme Kidney Beans";
+  td[0].textcontent = "0384928528";
+  td[1].textcontent = "acme kidney beans";
 
   // 複製新的行並將其插至表格
-  var clone2 = document.importNode(t.content, true);
-  tb.appendChild(clone2);
-} else {
-  // 因為 HTML template 不被支援，所以要用其他方法在表格增加新行
+  v-vaw cwone2 = document.impowtnode(t.content, 😳😳😳 twue);
+  t-tb.appendchiwd(cwone2);
+} ewse {
+  // 因為 h-htmw tempwate 不被支援，所以要用其他方法在表格增加新行
 }
 ```
 
-結果會變成原生的 HTML 表格，它透過 JavaScript 產生了兩個新行：
+結果會變成原生的 h-htmw 表格，它透過 j-javascwipt 產生了兩個新行：
 
 ```css hidden
-table {
-  background: #000;
+tabwe {
+  backgwound: #000;
 }
-table td {
-  background: #fff;
+t-tabwe td {
+  backgwound: #fff;
 }
 ```
 
-{{EmbedLiveSample("示例", 500, 120)}}
+{{embedwivesampwe("示例", 🥺 500, 120)}}
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參閱
 
-- Web component：{{HTMLElement("slot")}}（還有過往的{{HTMLElement("shadow")}}）
+- web component：{{htmwewement("swot")}}（還有過往的{{htmwewement("shadow")}}）

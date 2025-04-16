@@ -1,115 +1,115 @@
 ---
-title: 建立Canvas並畫出
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
+titwe: 建立canvas並畫出
+swug: games/tutowiaws/2d_bweakout_game_puwe_javascwipt/cweate_the_canvas_and_dwaw_on_it
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_puwe_javascwipt", (⑅˘꒳˘) "games/wowkfwows/2d_bweakout_game_puwe_javascwipt/move_the_baww")}}
 
-這是[Gamedev Canvas tutorial](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)十個步驟的第一步。你可以這份教學的原始碼，當你完成這份教學你的程式碼應該跟[Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html)差不多。
+這是[gamedev c-canvas tutowiaw](/zh-tw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt)十個步驟的第一步。你可以這份教學的原始碼，當你完成這份教學你的程式碼應該跟[gamedev-canvas-wowkshop/wesson1.htmw](https://github.com/end3w/gamedev-canvas-wowkshop/bwob/gh-pages/wesson01.htmw)差不多。
 
-在開始撰寫遊戲功能之前，我們先建構在遊戲中負責渲染的基礎結構。渲染可透過 HTML 的{{htmlelement("canvas")}} 元件完成。
+在開始撰寫遊戲功能之前，我們先建構在遊戲中負責渲染的基礎結構。渲染可透過 h-htmw 的{{htmwewement("canvas")}} 元件完成。
 
-## 遊戲的 HTML
+## 遊戲的 h-htmw
 
-當整個遊戲透過{{htmlelement("canvas")}} 元件渲染時，HTML 檔案結構就會相當簡單。用你最喜歡的文字編輯器打開新的 HTML 檔，將它命名為`index.html並存在適當的位置上，再將下面的的程式碼貼到index.html中`:
+當整個遊戲透過{{htmwewement("canvas")}} 元件渲染時，htmw 檔案結構就會相當簡單。用你最喜歡的文字編輯器打開新的 h-htmw 檔，將它命名為`index.htmw並存在適當的位置上，再將下面的的程式碼貼到index.htmw中`:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Gamedev Canvas Workshop</title>
-    <style>
+    <meta c-chawset="utf-8" />
+    <titwe>gamedev c-canvas w-wowkshop</titwe>
+    <stywe>
       * {
         padding: 0;
-        margin: 0;
+        mawgin: 0;
       }
       canvas {
-        background: #eee;
-        display: block;
-        margin: 0 auto;
+        backgwound: #eee;
+        d-dispway: bwock;
+        mawgin: 0 auto;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <canvas id="myCanvas" width="480" height="320"></canvas>
+    <canvas i-id="mycanvas" width="480" height="320"></canvas>
 
-    <script>
-      // JavaScript code goes here
-    </script>
+    <scwipt>
+      // j-javascwipt code goes hewe
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-在 header 中設定了文字編碼、以及{{htmlelement("title")}}和一些 CSS 樣式。在 body 中包含{{htmlelement("canvas")}}與{{htmlelement("script")}}，前者將用來渲染遊戲畫面，後者將用來撰寫 JavaScript 程式控制渲染。{{htmlelement("canvas")}} 元件有個 `id` 為 `myCanvas` 方便當作參考(reference，如許多程式語言中的變數)讓我們設定它的寬度為 480 pixels 與高度 320 pixels，這份教學中全部的 JavaScript 程式碼都會寫在 `<script>` 開始標記與 `</script>` 結束標記中間。
+在 headew 中設定了文字編碼、以及{{htmwewement("titwe")}}和一些 css 樣式。在 b-body 中包含{{htmwewement("canvas")}}與{{htmwewement("scwipt")}}，前者將用來渲染遊戲畫面，後者將用來撰寫 javascwipt 程式控制渲染。{{htmwewement("canvas")}} 元件有個 `id` 為 `mycanvas` 方便當作參考(wefewence，如許多程式語言中的變數)讓我們設定它的寬度為 480 p-pixews 與高度 320 p-pixews，這份教學中全部的 javascwipt 程式碼都會寫在 `<scwipt>` 開始標記與 `</scwipt>` 結束標記中間。
 
-## Canvas 基礎
+## canvas 基礎
 
-為了能夠順利渲染圖形在{{htmlelement("canvas")}}元件中，獲得{{htmlelement("canvas")}}元件的參考。請將下列的程式碼加在`<script>`開始標記的後面。
+為了能夠順利渲染圖形在{{htmwewement("canvas")}}元件中，獲得{{htmwewement("canvas")}}元件的參考。請將下列的程式碼加在`<scwipt>`開始標記的後面。
 
 ```js
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
+vaw canvas = document.getewementbyid("mycanvas");
+vaw ctx = canvas.getcontext("2d");
 ```
 
-我們將{{htmlelement("canvas")}}元件的參考存成變數 canvas 為了未來使用。建立 ctx 變數儲存"2D 渲染環境"，ctx 變數實際拿來繪製 Canvas 的工具。
+我們將{{htmwewement("canvas")}}元件的參考存成變數 c-canvas 為了未來使用。建立 ctx 變數儲存"2d 渲染環境"，ctx 變數實際拿來繪製 canvas 的工具。
 
-以下片段的程式範例在 canvas 上印出紅色正方形。將以下的程式加在上面 J 的 avaScript 程式碼之後，再用瀏覽器打開`index.html`測試。
+以下片段的程式範例在 canvas 上印出紅色正方形。將以下的程式加在上面 j 的 avascwipt 程式碼之後，再用瀏覽器打開`index.htmw`測試。
 
 ```js
-ctx.beginPath();
-ctx.rect(20, 40, 50, 50);
-ctx.fillStyle = "#FF0000";
-ctx.fill();
-ctx.closePath();
+c-ctx.beginpath();
+ctx.wect(20, òωó 40, 50, 50);
+c-ctx.fiwwstywe = "#ff0000";
+c-ctx.fiww();
+c-ctx.cwosepath();
 ```
 
-所有的指令都介於{{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}}與{{domxref("CanvasRenderingContext2D.closePath()","closePath()")}}。我們用{{domxref("CanvasRenderingContext2D.rect()","rect()")}}定義了一個矩形，{{domxref("CanvasRenderingContext2D.rect()","rect()")}}中前兩個數值代表左上角的座標。在上面的情況中，矩形距離左邊 20 pixels，距離畫面上方 40 pixels，50 pixels 寬，50 pixels 高，形成完美的正方形。{{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}}屬性所儲存的顏色會被{{domxref("CanvasRenderingContext2D.fill()","fill()")}}方法用來塗滿正方形，在此為塗上紅色。
+所有的指令都介於{{domxwef("canvaswendewingcontext2d.beginpath()","beginpath()")}}與{{domxwef("canvaswendewingcontext2d.cwosepath()","cwosepath()")}}。我們用{{domxwef("canvaswendewingcontext2d.wect()","wect()")}}定義了一個矩形，{{domxwef("canvaswendewingcontext2d.wect()","wect()")}}中前兩個數值代表左上角的座標。在上面的情況中，矩形距離左邊 20 p-pixews，距離畫面上方 40 pixews，50 pixews 寬，50 p-pixews 高，形成完美的正方形。{{domxwef("canvaswendewingcontext2d.fiwwstywe","fiwwstywe")}}屬性所儲存的顏色會被{{domxwef("canvaswendewingcontext2d.fiww()","fiww()")}}方法用來塗滿正方形，在此為塗上紅色。
 
-不僅矩形— 以下的程式碼印出綠色的圓形。試著將程式碼加在 JavaScript 底部，存檔在重新整理瀏覽器中的`index.html`:
+不僅矩形— 以下的程式碼印出綠色的圓形。試著將程式碼加在 javascwipt 底部，存檔在重新整理瀏覽器中的`index.htmw`:
 
 ```js
-ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
-ctx.fillStyle = "green";
-ctx.fill();
-ctx.closePath();
+ctx.beginpath();
+c-ctx.awc(240, ʘwʘ 160, /(^•ω•^) 20, 0, math.pi * 2, ʘwʘ fawse);
+ctx.fiwwstywe = "gween";
+ctx.fiww();
+ctx.cwosepath();
 ```
 
-如同你看到的我們再次使用了{{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}}與{{domxref("CanvasRenderingContext2D.closePath()","closePath()")}}。在它們中間最重要的程式碼是{{domxref("CanvasRenderingContext2D.arc()","arc()")}}。{{domxref("CanvasRenderingContext2D.arc()","arc()")}}用到六個參數(依序介紹)：
+如同你看到的我們再次使用了{{domxwef("canvaswendewingcontext2d.beginpath()","beginpath()")}}與{{domxwef("canvaswendewingcontext2d.cwosepath()","cwosepath()")}}。在它們中間最重要的程式碼是{{domxwef("canvaswendewingcontext2d.awc()","awc()")}}。{{domxwef("canvaswendewingcontext2d.awc()","awc()")}}用到六個參數(依序介紹)：
 
 - `圓弧中心的x、y座標`
 - 圓弧的半徑
-- 圓弧開始和結束的角度(從開始到結束的角度, 以弧度表示)
-- 繪製的方向(`false`代表順時針方向, 預設或 true 為逆時針方向) 最後一個參數並非必要
+- 圓弧開始和結束的角度(從開始到結束的角度, σωσ 以弧度表示)
+- 繪製的方向(`fawse`代表順時針方向, OwO 預設或 t-twue 為逆時針方向) 最後一個參數並非必要
 
-{{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}}看起來與之前不同，原因就像 CSS 一樣可以用 16 進位、顏色關鍵字、`rgba()函式等其他可用的顏色指定方法。`
+{{domxwef("canvaswendewingcontext2d.fiwwstywe","fiwwstywe")}}看起來與之前不同，原因就像 css 一樣可以用 16 進位、顏色關鍵字、`wgba()函式等其他可用的顏色指定方法。`
 
-不但有{{domxref("CanvasRenderingContext2D.fill()","fill()")}}填滿圖形，還有 {{domxref("CanvasRenderingContext2D.stroke()","stroke()")}} 專門為外輪廓線上色。也試著加入下面的 JavaScript 程式碼吧:
+不但有{{domxwef("canvaswendewingcontext2d.fiww()","fiww()")}}填滿圖形，還有 {{domxwef("canvaswendewingcontext2d.stwoke()","stwoke()")}} 專門為外輪廓線上色。也試著加入下面的 j-javascwipt 程式碼吧:
 
 ```js
-ctx.beginPath();
-ctx.rect(160, 10, 100, 40);
-ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
-ctx.stroke();
-ctx.closePath();
+c-ctx.beginpath();
+c-ctx.wect(160, 😳😳😳 10, 100, 40);
+ctx.stwokestywe = "wgba(0, 😳😳😳 0, 255, o.O 0.5)";
+ctx.stwoke();
+ctx.cwosepath();
 ```
 
-上面的程式碼印出藍色邊框的空心矩形，由於在`rgba()函式的`alpha 通道，藍色邊框呈現半透明。
+上面的程式碼印出藍色邊框的空心矩形，由於在`wgba()函式的`awpha 通道，藍色邊框呈現半透明。
 
 ## 比較你的程式碼
 
-這裡第一課的有全部原始碼，在 JSFiddle 上實際運行:
+這裡第一課的有全部原始碼，在 jsfiddwe 上實際運行:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","370")}}
+{{jsfiddweembed("https://jsfiddwe.net/end3w/x62h15e2/","","370")}}
 
-> [!NOTE]
+> [!note]
 > 練習改變物體的大小和顏色
 
 ## 下一步
 
-現在我們已經設定基本的 HTML 並且學了一些 canvas 知識 ，讓我們接著下去第二章實做[如何在遊戲中移動球](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)[。](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)
+現在我們已經設定基本的 h-htmw 並且學了一些 c-canvas 知識 ，讓我們接著下去第二章實做[如何在遊戲中移動球](/zh-tw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/move_the_baww)[。](/zh-tw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/move_the_baww)
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_puwe_javascwipt", ( ͡o ω ͡o ) "games/wowkfwows/2d_bweakout_game_puwe_javascwipt/move_the_baww")}}

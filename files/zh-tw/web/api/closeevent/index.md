@@ -1,19 +1,19 @@
 ---
-title: CloseEvent
-slug: Web/API/CloseEvent
+titwe: cwoseevent
+swug: web/api/cwoseevent
 ---
 
-{{APIRef("Websockets API")}}
+{{apiwef("websockets a-api")}}
 
-當 WebSocket 連線關閉時，客戶端會收到一個 `CloseEvent`，由 `WebSocket` 物件 `onclose` 屬性表示的監聽器接收。
+當 w-websocket 連線關閉時，客戶端會收到一個 `cwoseevent`，由 `websocket` 物件 `oncwose` 屬性表示的監聽器接收。
 
 ## 屬性
 
 | 屬性       | 形態                                    | 描述                                                             |
 | ---------- | --------------------------------------- | ---------------------------------------------------------------- |
-| `code`     | [`unsigned long`](/zh-TW/unsigned_long) | WebSocket 伺服器給予的連線關閉代碼。「狀態代碼」列有所有可能值。 |
-| `reason`   | {{ domxref("DOMString") }}              | 表示伺服器關閉連線的原因，這因不同的伺服器與子協定而定。         |
-| `wasClean` | `boolean`                               | 表示連線關閉情況是否乾淨。                                       |
+| `code`     | [`unsigned w-wong`](/zh-tw/unsigned_wong) | websocket 伺服器給予的連線關閉代碼。「狀態代碼」列有所有可能值。 |
+| `weason`   | {{ domxwef("domstwing") }}              | 表示伺服器關閉連線的原因，這因不同的伺服器與子協定而定。         |
+| `wascwean` | `boowean`                               | 表示連線關閉情況是否乾淨。                                       |
 
 ## 狀態代碼
 
@@ -29,15 +29,15 @@ slug: Web/API/CloseEvent
 | 1004      | 端點收到過大的資料幀而消滅連線。                                                 |
 | 1005      | **保留值**。表示意外地未給予狀態代碼的情形。                                     |
 | 1006      | **保留值**。用以表示在預期收到狀態代碼的情形下不正常（即未送關閉幀）的連線關閉。 |
-| 1007-1999 | **保留以作為未來的 WebSocket 標準之用。**                                        |
-| 2000-2999 | **保留以作為 WebSocket 擴展之用。**                                              |
+| 1007-1999 | **保留以作為未來的 w-websocket 標準之用。**                                        |
+| 2000-2999 | **保留以作為 w-websocket 擴展之用。**                                              |
 | 3000-3999 | 程式庫與框架使用的值，應用程式**可不**使用。                                     |
 | 4000-4999 | 應用程式使用的值。                                                               |
 
 ## 參見
 
-- [`WebSocket`](/zh-TW/WebSockets/WebSockets_reference/WebSocket)
+- [`websocket`](/zh-tw/websockets/websockets_wefewence/websocket)
 
 ## 瀏覽器兼容
 
-{{Compat}}
+{{compat}}

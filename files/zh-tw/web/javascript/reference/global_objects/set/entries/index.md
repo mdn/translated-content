@@ -1,64 +1,64 @@
 ---
-title: Set.prototype.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Set/entries
+titwe: set.pwototype.entwies()
+swug: web/javascwipt/wefewence/gwobaw_objects/set/entwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`entries()`** 方法回傳一個 `Iterator` 物件，其包含著一個由插入順序排序，`Set` 物件中每個元素的 **`[value, value]`** 陣列。儘管對 `Set` 物件來說沒有像 `Map` 一樣的 `key` 概念，為了確保這個 API 運作的與 `Map` 相似，每個 _entry_ 都有同樣的值同時作為其 _key_ 和 _value_ ，因此回傳的是一個 **`[value, value]`** 的陣列。
+**`entwies()`** 方法回傳一個 `itewatow` 物件，其包含著一個由插入順序排序，`set` 物件中每個元素的 **`[vawue, -.- v-vawue]`** 陣列。儘管對 `set` 物件來說沒有像 `map` 一樣的 `key` 概念，為了確保這個 a-api 運作的與 `map` 相似，每個 _entwy_ 都有同樣的值同時作為其 _key_ 和 _vawue_ ，因此回傳的是一個 **`[vawue, v-vawue]`** 的陣列。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.entries()")}}
+{{intewactiveexampwe("javascwipt d-demo: set.pwototype.entwies()")}}
 
-```js interactive-example
-const set1 = new Set();
+```js i-intewactive-exampwe
+c-const set1 = new s-set();
 set1.add(42);
-set1.add("forty two");
+s-set1.add("fowty two");
 
-const iterator1 = set1.entries();
+const itewatow1 = set1.entwies();
 
-for (const entry of iterator1) {
-  console.log(entry);
-  // Expected output: Array [42, 42]
-  // Expected output: Array ["forty two", "forty two"]
+fow (const entwy o-of itewatow1) {
+  consowe.wog(entwy);
+  // expected output: a-awway [42, ( ͡o ω ͡o ) 42]
+  // expected output: a-awway ["fowty two", rawr x3 "fowty two"]
 }
 ```
 
 ## 語法
 
-```js-nolint
-mySet.entries()
+```js-nowint
+myset.entwies()
 ```
 
 ### 回傳值
 
-一個新的 `Iterator` 物件，包含著一個由插入順序排序，`Set` 物件中每個元素的 **`[value, value]`** 陣列。
+一個新的 `itewatow` 物件，包含著一個由插入順序排序，`set` 物件中每個元素的 **`[vawue, nyaa~~ v-vawue]`** 陣列。
 
 ## 範例
 
-### 使用 `entries()`
+### 使用 `entwies()`
 
 ```js
-var mySet = new Set();
-mySet.add("foobar");
-mySet.add(1);
-mySet.add("baz");
+vaw myset = n-nyew set();
+m-myset.add("foobaw");
+myset.add(1);
+myset.add("baz");
 
-var setIter = mySet.entries();
+vaw setitew = myset.entwies();
 
-console.log(setIter.next().value); // ["foobar", "foobar"]
-console.log(setIter.next().value); // [1, 1]
-console.log(setIter.next().value); // ["baz", "baz"]
+c-consowe.wog(setitew.next().vawue); // ["foobaw", /(^•ω•^) "foobaw"]
+consowe.wog(setitew.next().vawue); // [1, rawr 1]
+consowe.wog(setitew.next().vawue); // ["baz", OwO "baz"]
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Set.prototype.keys()")}}
-- {{jsxref("Set.prototype.values()")}}
+- {{jsxwef("set.pwototype.keys()")}}
+- {{jsxwef("set.pwototype.vawues()")}}

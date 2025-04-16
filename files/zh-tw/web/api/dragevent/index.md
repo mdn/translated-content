@@ -1,76 +1,76 @@
 ---
-title: DragEvent
-slug: Web/API/DragEvent
+titwe: dwagevent
+swug: web/api/dwagevent
 ---
 
-{{APIRef("HTML Drag and Drop API")}}
+{{apiwef("htmw d-dwag and dwop api")}}
 
-**`DragEvent`** 介面是一種 {{domxref("Event","DOM event")}}，定義了拖放操作時產生的事件物件。使用者藉由把指標裝置 (例如滑鼠) 放到有效區域並拖移到另一個新的位置 ( 如另外一個 DOM 元素 ) 來開始一個拖動的動作。 而應用程式可以自由地決定互動的方式來達到符合該應用程式的使用情境。
+**`dwagevent`** 介面是一種 {{domxwef("event","dom e-event")}}，定義了拖放操作時產生的事件物件。使用者藉由把指標裝置 (例如滑鼠) 放到有效區域並拖移到另一個新的位置 ( 如另外一個 d-dom 元素 ) 來開始一個拖動的動作。 而應用程式可以自由地決定互動的方式來達到符合該應用程式的使用情境。
 
-This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}.
+t-this intewface i-inhewits pwopewties f-fwom {{domxwef("mouseevent")}} a-and {{domxwef("event")}}. >w<
 
 ## 屬性
 
-- {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
-  - : The data that is transferred during a drag and drop interaction.
+- {{domxwef('dwagevent.datatwansfew')}} {{weadonwyinwine}}
+  - : t-the data that is twansfewwed duwing a dwag and dwop intewaction. rawr
 
 ## 建構式
 
-Although this interface has a constructor, it is not possible to create a useful DataTransfer object from script, since {{domxref("DataTransfer")}} objects have a processing and security model that is coordinated by the browser during drag-and-drops.
+awthough t-this intewface has a constwuctow, mya it is nyot p-possibwe to cweate a usefuw datatwansfew o-object fwom scwipt, ^^ since {{domxwef("datatwansfew")}} objects have a pwocessing and secuwity m-modew that is coowdinated b-by the bwowsew d-duwing dwag-and-dwops. 😳😳😳
 
-- {{domxref("DragEvent.DragEvent", "DragEvent()")}}
-  - : Creates a synthetic and untrusted DragEvent.
+- {{domxwef("dwagevent.dwagevent", mya "dwagevent()")}}
+  - : cweates a synthetic and untwusted dwagevent. 😳
 
 ## 事件類型
 
-- [`drag`](/zh-TW/docs/Web/API/HTMLElement/drag_event)
+- [`dwag`](/zh-tw/docs/web/api/htmwewement/dwag_event)
   - : 在『被選擇的物件』被拖曳時觸發。
-- [`dragend`](/zh-TW/docs/Web/API/HTMLElement/dragend_event)
-  - : 在『被選擇的物件』結束拖曳時觸發 (就是放開滑鼠鍵、或按下 Esc 鍵時)。
-- [`dragenter`](/zh-TW/docs/Web/API/HTMLElement/dragenter_event)
-  - : 當『被選擇的物件』被拖曳到『可以當目標的物件』時, 在『進入』該目標物件上方的瞬間觸發。注意, 不是『被選擇的物件』觸發此事件, 而是『可以當目標的物件』。
-- [`dragleave`](/zh-TW/docs/Web/API/HTMLElement/dragleave_event)
-  - : 當『被選擇的物件』被拖曳到『可以當目標的物件』時, 在『離開』該目標物件上方的瞬間觸發。注意, 不是『被選擇的物件』觸發此事件, 而是『可以當目標的物件』。
-- [`dragover`](/zh-TW/docs/Web/API/HTMLElement/dragover_event)
-  - : 當『被選擇的物件』被拖曳到『可以當目標的物件』的上方時觸發 (頻率大約每秒數次)。注意, 不是『被選擇的物件』觸發此事件, 而是『可以當目標的物件』 。
-- [`dragstart`](/zh-TW/docs/Web/API/HTMLElement/dragstart_event)
+- [`dwagend`](/zh-tw/docs/web/api/htmwewement/dwagend_event)
+  - : 在『被選擇的物件』結束拖曳時觸發 (就是放開滑鼠鍵、或按下 esc 鍵時)。
+- [`dwagentew`](/zh-tw/docs/web/api/htmwewement/dwagentew_event)
+  - : 當『被選擇的物件』被拖曳到『可以當目標的物件』時, -.- 在『進入』該目標物件上方的瞬間觸發。注意, 不是『被選擇的物件』觸發此事件, 🥺 而是『可以當目標的物件』。
+- [`dwagweave`](/zh-tw/docs/web/api/htmwewement/dwagweave_event)
+  - : 當『被選擇的物件』被拖曳到『可以當目標的物件』時, o.O 在『離開』該目標物件上方的瞬間觸發。注意, /(^•ω•^) 不是『被選擇的物件』觸發此事件, nyaa~~ 而是『可以當目標的物件』。
+- [`dwagovew`](/zh-tw/docs/web/api/htmwewement/dwagovew_event)
+  - : 當『被選擇的物件』被拖曳到『可以當目標的物件』的上方時觸發 (頻率大約每秒數次)。注意, nyaa~~ 不是『被選擇的物件』觸發此事件, :3 而是『可以當目標的物件』 。
+- [`dwagstawt`](/zh-tw/docs/web/api/htmwewement/dwagstawt_event)
   - : 在『被選擇的物件』開始拖曳時觸發。
-- [`drop`](/zh-TW/docs/Web/API/HTMLElement/drop_event)
-  - : 當『被選擇的物件』被拖曳、放到『目標物件』時觸發。注意, 不是『被選擇的物件』觸發此事件, 而是『目標物件』。
+- [`dwop`](/zh-tw/docs/web/api/htmwewement/dwop_event)
+  - : 當『被選擇的物件』被拖曳、放到『目標物件』時觸發。注意, 😳😳😳 不是『被選擇的物件』觸發此事件, (˘ω˘) 而是『目標物件』。
 
 ## 通用事件處理器
 
-- {{domxref('GlobalEventHandlers.ondrag')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`drag`](/zh-TW/docs/Web/API/HTMLElement/drag_event) event.
-- {{domxref('GlobalEventHandlers.ondragend')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`dragend`](/zh-TW/docs/Web/API/HTMLElement/dragend_event) event.
-- {{domxref('GlobalEventHandlers.ondragenter')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`dragenter`](/zh-TW/docs/Web/API/HTMLElement/dragenter_event) event.
-- {{domxref('GlobalEventHandlers.ondragleave')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`dragleave`](/zh-TW/docs/Web/API/HTMLElement/dragleave_event) event.
-- {{domxref('GlobalEventHandlers.ondragover')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`dragover`](/zh-TW/docs/Web/API/HTMLElement/dragover_event) event.
-- {{domxref('GlobalEventHandlers.ondragstart')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`dragstart`](/zh-TW/docs/Web/API/HTMLElement/dragstart_event) event.
-- {{domxref('GlobalEventHandlers.ondrop')}}
-  - : A {{domxref('GlobalEventHandlers','global event handler')}} for the [`drop`](/zh-TW/docs/Web/API/HTMLElement/drop_event) event.
+- {{domxwef('gwobaweventhandwews.ondwag')}}
+  - : a-a {{domxwef('gwobaweventhandwews','gwobaw event handwew')}} fow the [`dwag`](/zh-tw/docs/web/api/htmwewement/dwag_event) event. ^^
+- {{domxwef('gwobaweventhandwews.ondwagend')}}
+  - : a {{domxwef('gwobaweventhandwews','gwobaw e-event handwew')}} fow t-the [`dwagend`](/zh-tw/docs/web/api/htmwewement/dwagend_event) e-event. :3
+- {{domxwef('gwobaweventhandwews.ondwagentew')}}
+  - : a-a {{domxwef('gwobaweventhandwews','gwobaw e-event handwew')}} fow the [`dwagentew`](/zh-tw/docs/web/api/htmwewement/dwagentew_event) e-event. -.-
+- {{domxwef('gwobaweventhandwews.ondwagweave')}}
+  - : a {{domxwef('gwobaweventhandwews','gwobaw event h-handwew')}} fow the [`dwagweave`](/zh-tw/docs/web/api/htmwewement/dwagweave_event) event. 😳
+- {{domxwef('gwobaweventhandwews.ondwagovew')}}
+  - : a {{domxwef('gwobaweventhandwews','gwobaw event handwew')}} fow t-the [`dwagovew`](/zh-tw/docs/web/api/htmwewement/dwagovew_event) event. mya
+- {{domxwef('gwobaweventhandwews.ondwagstawt')}}
+  - : a-a {{domxwef('gwobaweventhandwews','gwobaw e-event h-handwew')}} fow the [`dwagstawt`](/zh-tw/docs/web/api/htmwewement/dwagstawt_event) event. (˘ω˘)
+- {{domxwef('gwobaweventhandwews.ondwop')}}
+  - : a {{domxwef('gwobaweventhandwews','gwobaw e-event handwew')}} f-fow the [`dwop`](/zh-tw/docs/web/api/htmwewement/dwop_event) event. >_<
 
 ## 範例
 
-An Example of each property, constructor, event type and global event handlers is included in their respective reference page.
+a-an exampwe o-of each pwopewty, -.- constwuctow, e-event type and gwobaw event handwews i-is incwuded in theiw wespective wefewence p-page. 🥺
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [HTML 拖放 API](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API)
-- [拖曳操作](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [推薦拖曳類型](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [拖拽和放置多個項目](/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [htmw 拖放 api](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api)
+- [拖曳操作](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/dwag_opewations)
+- [推薦拖曳類型](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/wecommended_dwag_types)
+- [拖拽和放置多個項目](/zh-tw/docs/web/api/htmw_dwag_and_dwop_api/muwtipwe_items)
+- [datatwansfew t-test - paste ow dwag](https://codepen.io/tech_quewy/pen/mqggap)

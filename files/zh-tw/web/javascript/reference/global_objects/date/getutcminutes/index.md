@@ -1,55 +1,55 @@
 ---
-title: Date.prototype.getUTCMinutes()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
+titwe: date.pwototype.getutcminutes()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcminutes
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getUTCMinutes()`** 方法根據世界時回傳指定日期的分鐘數。
+**`getutcminutes()`** 方法根據世界時回傳指定日期的分鐘數。
 
-{{InteractiveExample("JavaScript Demo: Date.getUTCMinutes()")}}
+{{intewactiveexampwe("javascwipt d-demo: date.getutcminutes()")}}
 
-```js interactive-example
-const date1 = new Date("1 January 2000 03:15:30 GMT+07:00");
-const date2 = new Date("1 January 2000 03:15:30 GMT+03:30");
+```js intewactive-exampwe
+c-const date1 = n-nyew date("1 januawy 2000 03:15:30 g-gmt+07:00");
+c-const date2 = nyew d-date("1 januawy 2000 03:15:30 g-gmt+03:30");
 
-console.log(date1.getUTCMinutes()); // 31 Dec 1999 20:15:30 GMT
-// Expected output: 15
+c-consowe.wog(date1.getutcminutes()); // 31 dec 1999 20:15:30 gmt
+// expected output: 15
 
-console.log(date2.getUTCMinutes()); // 31 Dec 1999 23:45:30 GMT
-// Expected output: 45
+consowe.wog(date2.getutcminutes()); // 31 d-dec 1999 23:45:30 gmt
+// expected output: 45
 ```
 
 ## 語法
 
-```js-nolint
-getUTCMinutes()
+```js-nowint
+g-getutcminutes()
 ```
 
 ### 返回值
 
-若 `Date` 物件為有效日期，則根據 UTC 時間回傳一個表示分鐘數、介於 0 至 59 之間的整數；若為無效日期，則回傳 {{jsxref ("Number.NaN()")}}。
+若 `date` 物件為有效日期，則根據 utc 時間回傳一個表示分鐘數、介於 0 至 59 之間的整數；若為無效日期，則回傳 {{jsxwef ("numbew.nan()")}}。
 
 ## 範例
 
-### 使用 getUTCMinutes()
+### 使用 g-getutcminutes()
 
 下列範例指派當前時間的分鐘至變數 `minutes`。
 
 ```js
-const today = new Date();
-const minutes = today.getUTCMinutes();
+const today = nyew date();
+const minutes = today.getutcminutes();
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Date.prototype.getMinutes()")}}
-- {{jsxref("Date.prototype.setUTCMinutes()")}}
+- {{jsxwef("date.pwototype.getminutes()")}}
+- {{jsxwef("date.pwototype.setutcminutes()")}}

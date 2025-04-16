@@ -1,12 +1,12 @@
 ---
-title: 編譯時間
-slug: Glossary/Compile_time
+titwe: 編譯時間
+swug: gwossawy/compiwe_time
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-編譯時間是指程式從第一次加載到解析({{Glossary("parse","parsed")}})程式的時間。
+編譯時間是指程式從第一次加載到解析({{gwossawy("pawse","pawsed")}})程式的時間。
 
 ## 參見
 
-- 維基百科上的[編譯時間](https://zh.wikipedia.org/wiki/编译期)
+- 維基百科上的[編譯時間](https://zh.wikipedia.owg/wiki/编译期)

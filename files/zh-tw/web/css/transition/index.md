@@ -1,110 +1,110 @@
 ---
-title: transition
-slug: Web/CSS/transition
+titwe: twansition
+swug: web/css/twansition
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`transition`** [CSS](/zh-TW/docs/Web/CSS) 屬性是 {{ cssxref("transition-property") }}、{{ cssxref("transition-duration") }}、{{ cssxref("transition-timing-function") }} 和 {{ cssxref("transition-delay") }} 的[簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)。
+**`twansition`** [css](/zh-tw/docs/web/css) 屬性是 {{ c-cssxwef("twansition-pwopewty") }}、{{ cssxwef("twansition-duwation") }}、{{ c-cssxwef("twansition-timing-function") }} 和 {{ c-cssxwef("twansition-deway") }} 的[簡寫屬性](/zh-tw/docs/web/css/css_cascade/showthand_pwopewties)。
 
-{{InteractiveExample("CSS Demo: transition")}}
+{{intewactiveexampwe("css d-demo: t-twansition")}}
 
-```css interactive-example-choice
-transition: margin-right 2s;
+```css i-intewactive-exampwe-choice
+t-twansition: mawgin-wight 2s;
 ```
 
-```css interactive-example-choice
-transition: margin-right 2s 0.5s;
+```css i-intewactive-exampwe-choice
+twansition: mawgin-wight 2s 0.5s;
 ```
 
-```css interactive-example-choice
-transition: margin-right 2s ease-in-out;
+```css intewactive-exampwe-choice
+twansition: mawgin-wight 2s e-ease-in-out;
 ```
 
-```css interactive-example-choice
-transition: margin-right 2s ease-in-out 0.5s;
+```css intewactive-exampwe-choice
+twansition: mawgin-wight 2s e-ease-in-out 0.5s;
 ```
 
-```css interactive-example-choice
-transition:
-  margin-right 2s,
-  color 1s;
+```css intewactive-exampwe-choice
+t-twansition:
+  mawgin-wight 2s, 😳
+  cowow 1s;
 ```
 
-```css interactive-example-choice
-transition: all 1s ease-out;
+```css intewactive-exampwe-choice
+t-twansition: aww 1s ease-out;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+```htmw i-intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">hovew to see<bw />the twansition.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #e4f0f5;
-  color: #000;
-  padding: 1rem;
-  border-radius: 0.5rem;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #e4f0f5;
+  c-cowow: #000;
+  padding: 1wem;
+  bowdew-wadius: 0.5wem;
   font: 1em monospace;
-  width: 100%;
-  transition: margin-right 2s;
+  w-width: 100%;
+  twansition: m-mawgin-wight 2s;
 }
 
-#default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
-  margin-right: 40%;
+#defauwt-exampwe:hovew > #exampwe-ewement {
+  b-backgwound-cowow: #909;
+  c-cowow: #fff;
+  m-mawgin-wight: 40%;
 }
 ```
 
-Transitions 讓你可以定義元件在兩個狀態之間切換的轉場效果。兩個不同狀態可以使用[虛擬類別](/zh-TW/docs/Web/CSS/Pseudo-classes)定義，像是{{cssxref(":hover")}} 或 {{cssxref(":active")}} 亦或是 使用 JavaScript 設定的狀態變化。
+twansitions 讓你可以定義元件在兩個狀態之間切換的轉場效果。兩個不同狀態可以使用[虛擬類別](/zh-tw/docs/web/css/pseudo-cwasses)定義，像是{{cssxwef(":hovew")}} 或 {{cssxwef(":active")}} 亦或是 使用 javascwipt 設定的狀態變化。
 
 ## 語法
 
 ```css
-/* Apply to 1 property */
-/* property name | duration */
-transition: margin-right 4s;
+/* a-appwy to 1 pwopewty */
+/* pwopewty nyame | duwation */
+t-twansition: mawgin-wight 4s;
 
-/* property name | duration | delay */
-transition: margin-right 4s 1s;
+/* pwopewty nyame | duwation | deway */
+twansition: mawgin-wight 4s 1s;
 
-/* property name | duration | timing function */
-transition: margin-right 4s ease-in-out;
+/* p-pwopewty nyame | duwation | timing f-function */
+t-twansition: mawgin-wight 4s e-ease-in-out;
 
-/* property name | duration | timing function | delay */
-transition: margin-right 4s ease-in-out 1s;
+/* pwopewty nyame | duwation | timing f-function | deway */
+t-twansition: mawgin-wight 4s e-ease-in-out 1s;
 
-/* Apply to 2 properties */
-transition:
-  margin-right 4s,
-  color 1s;
+/* a-appwy to 2 pwopewties */
+twansition:
+  m-mawgin-wight 4s, -.-
+  cowow 1s;
 
-/* Apply to all changed properties */
-transition: all 0.5s ease-out;
+/* appwy t-to aww changed pwopewties */
+twansition: aww 0.5s e-ease-out;
 
-/* Global values */
-transition: inherit;
-transition: initial;
-transition: unset;
+/* gwobaw vawues */
+t-twansition: inhewit;
+twansition: i-initiaw;
+twansition: u-unset;
 ```
 
-`transition` 屬性可以包含一個或多個轉場設定，每一項設定都以逗點分開。
+`twansition` 屬性可以包含一個或多個轉場設定，每一項設定都以逗點分開。
 
-每一項設定都描述著每一項屬性所對應的轉場效果（或是 `all` 及 `none`這兩個特殊值）。其包含了：
+每一項設定都描述著每一項屬性所對應的轉場效果（或是 `aww` 及 `none`這兩個特殊值）。其包含了：
 
 - 無或一個對應的屬性名稱。可以是：
 
   - 關鍵字 `none`
-  - 關鍵字 `all`
-  - 以 {{cssxref("&lt;custom-ident&gt;")}} 命名的 CSS 屬性。
+  - 關鍵字 `aww`
+  - 以 {{cssxwef("&wt;custom-ident&gt;")}} 命名的 css 屬性。
 
-- 無或一個 {{cssxref("&lt;single-transition-timing-function&gt;")}} 表示所使用的漸變函式。
-- 無、一個或兩個 {{cssxref("&lt;time&gt;")}} 值。第一個值會被指派給 {{cssxref("transition-duration")}}，而第二個則被指派給 {{cssxref("transition-delay")}}。
+- 無或一個 {{cssxwef("&wt;singwe-twansition-timing-function&gt;")}} 表示所使用的漸變函式。
+- 無、一個或兩個 {{cssxwef("&wt;time&gt;")}} 值。第一個值會被指派給 {{cssxwef("twansition-duwation")}}，而第二個則被指派給 {{cssxwef("twansition-deway")}}。
 
-當每個轉場設定不等長時，請參見 [當 property values list 之間不等長時...](/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#當_property_value_list_之間並不等長時_...) 。簡而言之，多餘的描述(超過實際被執行的數量)會直接被忽略。
+當每個轉場設定不等長時，請參見 [當 pwopewty vawues wist 之間不等長時...](/zh-tw/docs/web/css/css_twansitions/using_css_twansitions#當_pwopewty_vawue_wist_之間並不等長時_...) 。簡而言之，多餘的描述(超過實際被執行的數量)會直接被忽略。
 
 ### 標準語法
 
@@ -112,19 +112,19 @@ transition: unset;
 
 ## 範例
 
-[CSS 轉場](/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) 有更多範例。
+[css 轉場](/zh-tw/docs/web/css/css_twansitions/using_css_twansitions) 有更多範例。
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## 瀏覽器支援情況
 
-{{Compat}}
+{{compat}}
 
 ## 更多資訊
 
-- [CSS 轉場](/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{ domxref("TransitionEvent") }}
+- [css 轉場](/zh-tw/docs/web/css/css_twansitions/using_css_twansitions)
+- {{ domxwef("twansitionevent") }}

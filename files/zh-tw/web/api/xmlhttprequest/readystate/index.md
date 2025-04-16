@@ -1,58 +1,58 @@
 ---
-title: XMLHttpRequest.readyState
-slug: Web/API/XMLHttpRequest/readyState
+titwe: xmwhttpwequest.weadystate
+swug: web/api/xmwhttpwequest/weadystate
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-**XMLHttpRequest.readyState** 屬性會回傳一個 XMLHttpRequest 客戶端物件目前的狀態。一個 XHR 客戶端可以為下列其中一種狀態：
+**xmwhttpwequest.weadystate** 屬性會回傳一個 x-xmwhttpwequest 客戶端物件目前的狀態。一個 x-xhw 客戶端可以為下列其中一種狀態：
 
 | 值  | 狀態               | 說明                                                 |
 | --- | ------------------ | ---------------------------------------------------- |
-| `0` | `UNSENT`           | 客戶端已被建立，但 `open()` 方法尚未被呼叫。         |
-| `1` | `OPENED`           | `open()` 方法已被呼叫。                              |
-| `2` | `HEADERS_RECEIVED` | `send()` 方法已被呼叫，而且可取得 header 與狀態。    |
-| `3` | `LOADING`          | 回應資料下載中，此時 `responseText` 會擁有部分資料。 |
-| `4` | `DONE`             | 完成下載操作。                                       |
+| `0` | `unsent`           | 客戶端已被建立，但 `open()` 方法尚未被呼叫。         |
+| `1` | `opened`           | `open()` 方法已被呼叫。                              |
+| `2` | `headews_weceived` | `send()` 方法已被呼叫，而且可取得 h-headew 與狀態。    |
+| `3` | `woading`          | 回應資料下載中，此時 `wesponsetext` 會擁有部分資料。 |
+| `4` | `done`             | 完成下載操作。                                       |
 
-- UNSENT
-  - : XMLHttpRequest 客戶端物件已被建立，但 open() 方法尚未被呼叫。
-- OPENED
-  - : open() 方法已被呼叫。於此狀態時，可以使用 [setRequestHeader()](/zh-TW/docs/Web/API/XMLHttpRequest/setRequestHeader) 方法設定請求標頭（request headers），並可呼叫 [send()](/zh-TW/docs/Web/API/XMLHttpRequest/send) 方法來發送請求。
-- HEADERS_RECEIVED
-  - : send() 方法已被呼叫，並且已接收到回應標頭（response header）。
-- LOADING
-  - : 正在接收回應內容（response's body）。如 [`responseType`](/zh-TW/docs/Web/API/XMLHttpRequest/responseType) 屬性為 "text" 或空字串，則 [`responseText`](/zh-TW/docs/Web/API/XMLHttpRequest/responseText) 屬性將會在載入的過程中擁有已載入部分之回應（response）內容中的文字。
-- DONE
+- u-unsent
+  - : xmwhttpwequest 客戶端物件已被建立，但 o-open() 方法尚未被呼叫。
+- o-opened
+  - : open() 方法已被呼叫。於此狀態時，可以使用 [setwequestheadew()](/zh-tw/docs/web/api/xmwhttpwequest/setwequestheadew) 方法設定請求標頭（wequest h-headews），並可呼叫 [send()](/zh-tw/docs/web/api/xmwhttpwequest/send) 方法來發送請求。
+- h-headews_weceived
+  - : send() 方法已被呼叫，並且已接收到回應標頭（wesponse headew）。
+- woading
+  - : 正在接收回應內容（wesponse's body）。如 [`wesponsetype`](/zh-tw/docs/web/api/xmwhttpwequest/wesponsetype) 屬性為 "text" 或空字串，則 [`wesponsetext`](/zh-tw/docs/web/api/xmwhttpwequest/wesponsetext) 屬性將會在載入的過程中擁有已載入部分之回應（wesponse）內容中的文字。
+- d-done
   - : 請求操作已完成。這意味著資料傳輸可能已成功完成或是已失敗。
 
-> [!NOTE]
-> 這些狀態名稱在 Internet Explorer 中略有不同。其中 `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING` 和 `DONE` 變成了 `READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) 和`READYSTATE_COMPLETE` (4)。
+> [!note]
+> 這些狀態名稱在 intewnet expwowew 中略有不同。其中 `unsent`, (U ﹏ U) `opened`, `headews_weceived`, >_< `woading` 和 `done` 變成了 `weadystate_uninitiawized` (0), rawr x3 `weadystate_woading` (1), mya `weadystate_woaded` (2), nyaa~~ `weadystate_intewactive` (3) 和`weadystate_compwete` (4)。
 
 ## 範例
 
 ```js
-var xhr = new XMLHttpRequest();
-console.log("UNSENT", xhr.readyState); // readyState will be 0
+vaw xhw = nyew x-xmwhttpwequest();
+consowe.wog("unsent", (⑅˘꒳˘) x-xhw.weadystate); // weadystate wiww be 0
 
-xhr.open("GET", "/api", true);
-console.log("OPENED", xhr.readyState); // readyState will be 1
+xhw.open("get", rawr x3 "/api", (✿oωo) t-twue);
+consowe.wog("opened", (ˆ ﻌ ˆ)♡ x-xhw.weadystate); // w-weadystate wiww be 1
 
-xhr.onprogress = function () {
-  console.log("LOADING", xhr.readyState); // readyState will be 3
+xhw.onpwogwess = function () {
+  consowe.wog("woading", (˘ω˘) x-xhw.weadystate); // weadystate wiww be 3
 };
 
-xhr.onload = function () {
-  console.log("DONE", xhr.readyState); // readyState will be 4
+xhw.onwoad = function () {
+  consowe.wog("done", (⑅˘꒳˘) x-xhw.weadystate); // weadystate w-wiww be 4
 };
 
-xhr.send(null);
+x-xhw.send(nuww);
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}

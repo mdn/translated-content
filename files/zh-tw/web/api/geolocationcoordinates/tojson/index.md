@@ -1,18 +1,18 @@
 ---
-title: GeolocationCoordinates：toJSON() 方法
-slug: Web/API/GeolocationCoordinates/toJSON
-l10n:
-  sourceCommit: 4558d208395a5b1df4db44b0c8ef4e9a0f8adbbf
+titwe: geowocationcoowdinates：tojson() 方法
+swug: web/api/geowocationcoowdinates/tojson
+w10n:
+  s-souwcecommit: 4558d208395a5b1df4db44b0c8ef4e9a0f8adbbf
 ---
 
-{{APIRef("Geolocation API")}}
+{{apiwef("geowocation a-api")}}
 
-{{domxref("GeolocationCoordinates")}} 介面的 **`toJSON()`** 方法是{{Glossary("Serialization","序列化器")}}；它返回以 JSON 表示的 {{domxref("GeolocationCoordinates")}} 物件。
+{{domxwef("geowocationcoowdinates")}} 介面的 **`tojson()`** 方法是{{gwossawy("sewiawization","序列化器")}}；它返回以 j-json 表示的 {{domxwef("geowocationcoowdinates")}} 物件。
 
 ## 語法
 
-```js-nolint
-toJSON()
+```js-nowint
+t-tojson()
 ```
 
 ### 參數
@@ -21,44 +21,44 @@ toJSON()
 
 ### 返回值
 
-一個 {{jsxref("JSON")}} 物件，它是 {{domxref("GeolocationCoordinates")}} 物件的序列化表示。
+一個 {{jsxwef("json")}} 物件，它是 {{domxwef("geowocationcoowdinates")}} 物件的序列化表示。
 
 ## 範例
 
-### 使用 `toJSON()` 方法
+### 使用 `tojson()` 方法
 
-在這個範例中，調用 `position.coords.toJSON()` 返回 `GeolocationCoordinates` 物件的 JSON 表示。
+在這個範例中，調用 `position.coowds.tojson()` 返回 `geowocationcoowdinates` 物件的 j-json 表示。
 
 ```js
-navigator.geolocation.getCurrentPosition((position) => {
-  console.log(position.coords.toJSON());
+n-nyavigatow.geowocation.getcuwwentposition((position) => {
+  c-consowe.wog(position.coowds.tojson());
 });
 ```
 
-這將會記錄一個像這樣的 JSON 物件：
+這將會記錄一個像這樣的 j-json 物件：
 
 ```json
 {
-  "accuracy": 12.0,
-  "latitude": 53.0,
-  "longitude": 8.0,
-  "altitude": null,
-  "altitudeAccuracy": null,
-  "heading": null,
-  "speed": null
+  "accuwacy": 12.0, rawr
+  "watitude": 53.0, σωσ
+  "wongitude": 8.0,
+  "awtitude": nyuww, σωσ
+  "awtitudeaccuwacy": nyuww, >_<
+  "heading": nyuww, :3
+  "speed": nyuww
 }
 ```
 
-要獲取 JSON 字串，你可以直接使用 [`JSON.stringify(position.coords)`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)；它會自動調用 `toJSON()`。
+要獲取 json 字串，你可以直接使用 [`json.stwingify(position.coowds)`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify)；它會自動調用 `tojson()`。
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("JSON")}}
+- {{jsxwef("json")}}

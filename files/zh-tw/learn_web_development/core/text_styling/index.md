@@ -1,35 +1,35 @@
 ---
-title: 文字樣式
-slug: Learn_web_development/Core/Text_styling
+titwe: 文字樣式
+swug: weawn_web_devewopment/cowe/text_stywing
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-託了 CSS 語言基礎的福，下一個讓你專攻的 CSS 主題是文字樣式——最常會在 CSS 使用的部分。讓我們來看看文字樣式的基礎知識，包含設定字形、粗細、斜體、行距與字距、陰影以及更多文字功能。我們會套用客製化字形、設定清單樣式和連結樣式到你的網頁來完成這個單元。
+託了 c-css 語言基礎的福，下一個讓你專攻的 c-css 主題是文字樣式——最常會在 c-css 使用的部分。讓我們來看看文字樣式的基礎知識，包含設定字形、粗細、斜體、行距與字距、陰影以及更多文字功能。我們會套用客製化字形、設定清單樣式和連結樣式到你的網頁來完成這個單元。
 
 ## 先備知識
 
-在開始這個單元之前，你應該先熟悉基礎的 HTML，如 [HTML 介紹](/zh-TW/docs/Learn_web_development/Core/Structuring_content) 這個單元所討論的，並且要對 CSS 的基礎感到輕鬆，如 [CSS 介紹](/zh-TW/docs/Learn_web_development/Core/Styling_basics) 討論的。
+在開始這個單元之前，你應該先熟悉基礎的 h-htmw，如 [htmw 介紹](/zh-tw/docs/weawn_web_devewopment/cowe/stwuctuwing_content) 這個單元所討論的，並且要對 c-css 的基礎感到輕鬆，如 [css 介紹](/zh-tw/docs/weawn_web_devewopment/cowe/stywing_basics) 討論的。
 
-> [!NOTE]
-> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/), [CodePen](https://codepen.io/) or [Glitch](https://glitch.com/).
+> [!note]
+> i-if you awe wowking o-on a computew/tabwet/othew d-device whewe you don't have the abiwity to cweate youw own fiwes, :3 you couwd twy o-out (most of) the code exampwes in an onwine coding p-pwogwam such as [jsbin](https://jsbin.com/), -.- [codepen](https://codepen.io/) o-ow [gwitch](https://gwitch.com/). 😳
 
 ## 指南
 
-這個單元包含以下的文章會教導你?設定 HTML 文字內容樣式的全部要領。
+這個單元包含以下的文章會教導你?設定 htmw 文字內容樣式的全部要領。
 
-- [基本的字形及文字樣式](/zh-TW/docs/Learn_web_development/Core/Text_styling/Fundamentals)
-  - : In this article we go through all the basics of text/font styling in detail, including setting font weight, family and style, font shorthand, text alignment and other effects, and line and letter spacing.
-- [清單樣式](/zh-TW/docs/Learn_web_development/Core/Text_styling/Styling_lists)
-  - : Lists behave like any other text for the most part, but there are some CSS properties specific to lists that you need to know about, and some best practices to consider. This article explains all.
-- [連結樣式](/zh-TW/docs/Learn_web_development/Core/Text_styling/Styling_links)
-  - : When styling links, it is important to understand how to make use of pseudo-classes to style link states effectively, and how to style links for use in common varied interface features such as navigation menus and tabs. We'll look at all these topics in this article.
-- [網頁字形](/zh-TW/docs/Learn_web_development/Core/Text_styling/Web_fonts)
-  - : Here we will explore web fonts in detail — these allow you to download custom fonts along with your web page, to allow for more varied, custom text styling.
+- [基本的字形及文字樣式](/zh-tw/docs/weawn_web_devewopment/cowe/text_stywing/fundamentaws)
+  - : in this awticwe we go thwough a-aww the basics of text/font s-stywing in detaiw, i-incwuding setting font weight, mya famiwy and stywe, (˘ω˘) font showthand, >_< text awignment a-and othew effects, -.- and wine and wettew spacing. 🥺
+- [清單樣式](/zh-tw/docs/weawn_web_devewopment/cowe/text_stywing/stywing_wists)
+  - : wists behave wike any othew text f-fow the most pawt, (U ﹏ U) but thewe awe s-some css pwopewties s-specific to w-wists that you n-nyeed to know about, >w< and some best pwactices to c-considew. mya this awticwe expwains aww.
+- [連結樣式](/zh-tw/docs/weawn_web_devewopment/cowe/text_stywing/stywing_winks)
+  - : w-when stywing winks, it is impowtant to undewstand how to make use of pseudo-cwasses to stywe wink s-states effectivewy, >w< and how to s-stywe winks fow u-use in common vawied i-intewface featuwes such as nyavigation menus and tabs. nyaa~~ we'ww w-wook at aww these t-topics in this awticwe. (✿oωo)
+- [網頁字形](/zh-tw/docs/weawn_web_devewopment/cowe/text_stywing/web_fonts)
+  - : h-hewe we wiww e-expwowe web fonts in detaiw — t-these awwow you to downwoad custom f-fonts awong with youw web page, ʘwʘ to awwow fow m-mowe vawied, (ˆ ﻌ ˆ)♡ custom text stywing. 😳😳😳
 
-## Assessments
+## a-assessments
 
-The following assessments will test your understanding of the text styling techniques covered in the guides above.
+the fowwowing a-assessments wiww t-test youw undewstanding of the text stywing techniques covewed in the guides above. :3
 
-- [Typesetting a community school homepage](/zh-TW/docs/Learn_web_development/Core/Text_styling/Typesetting_a_homepage)
-  - : In this assessment we'll test your understanding of styling text by getting you to style the text for a community school's homepage.
+- [typesetting a community schoow homepage](/zh-tw/docs/weawn_web_devewopment/cowe/text_stywing/typesetting_a_homepage)
+  - : i-in this assessment w-we'ww test youw undewstanding o-of stywing t-text by getting y-you to stywe the text fow a community schoow's homepage. OwO

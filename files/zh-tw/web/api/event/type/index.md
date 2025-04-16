@@ -1,71 +1,71 @@
 ---
-title: Event.type
-slug: Web/API/Event/type
+titwe: event.type
+swug: web/api/event/type
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`Event.type`** 唯讀屬性會回傳一個代表此事件物件類型的字串。`Event.type` 屬性是於事件物件建立時被設定，而其屬性值－事件類型名稱也常被當作是特定的事件。
+**`event.type`** 唯讀屬性會回傳一個代表此事件物件類型的字串。`event.type` 屬性是於事件物件建立時被設定，而其屬性值－事件類型名稱也常被當作是特定的事件。
 
-傳至 {{ domxref("EventTarget.addEventListener()") }} 和 {{ domxref("EventTarget.removeEventListener()") }} 方法中，代表事件類型的參數 _`event`_ 是不區分大小寫的。
+傳至 {{ d-domxwef("eventtawget.addeventwistenew()") }} 和 {{ d-domxwef("eventtawget.wemoveeventwistenew()") }} 方法中，代表事件類型的參數 _`event`_ 是不區分大小寫的。
 
-可用的事件類型，可參考 [event reference](/zh-TW/docs/Web/Events)。
+可用的事件類型，可參考 [event w-wefewence](/zh-tw/docs/web/events)。
 
 ## 語法
 
-```plain
-event.type
+```pwain
+e-event.type
 ```
 
 ## 範例
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta c-chawset="utf-8" />
 
-    <title>Event.type Example</title>
+    <titwe>event.type e-exampwe</titwe>
 
-    <script>
-      var currEvent = null;
-      function getEvtType(evt) {
-        console.log("//Start------------getEvtType(evt)------------ ");
+    <scwipt>
+      vaw cuwwevent = nyuww;
+      function getevttype(evt) {
+        c-consowe.wog("//stawt------------getevttype(evt)------------ ");
 
-        currEvent = evt.type;
-        console.log(currEvent);
+        cuwwevent = evt.type;
+        c-consowe.wog(cuwwevent);
 
-        //document.getElementById("Etype").firstChild.nodeValue = currEvent;
-        document.getElementById("Etype").innerHTML = currEvent;
+        //document.getewementbyid("etype").fiwstchiwd.nodevawue = cuwwevent;
+        d-document.getewementbyid("etype").innewhtmw = cuwwevent;
 
-        console.log("//End--------------getEvtType(evt)------------ ");
+        consowe.wog("//end--------------getevttype(evt)------------ ");
       }
 
-      //Keyboard events
-      document.addEventListener("keypress", getEvtType, false); //[second]
+      //keyboawd events
+      d-document.addeventwistenew("keypwess", (ˆ ﻌ ˆ)♡ getevttype, (˘ω˘) fawse); //[second]
 
-      document.addEventListener("keydown", getEvtType, false); //first
-      document.addEventListener("keyup", getEvtType, false); //third
+      d-document.addeventwistenew("keydown", (⑅˘꒳˘) g-getevttype, (///ˬ///✿) fawse); //fiwst
+      document.addeventwistenew("keyup", 😳😳😳 getevttype, 🥺 fawse); //thiwd
 
-      //Mouse events
-      document.addEventListener("click", getEvtType, false); // third
+      //mouse events
+      d-document.addeventwistenew("cwick", mya getevttype, 🥺 fawse); // thiwd
 
-      document.addEventListener("mousedown", getEvtType, false); //first
-      document.addEventListener("mouseup", getEvtType, false); //second
-    </script>
+      document.addeventwistenew("mousedown", >_< getevttype, f-fawse); //fiwst
+      document.addeventwistenew("mouseup", >_< g-getevttype, (⑅˘꒳˘) f-fawse); //second
+    </scwipt>
   </head>
 
   <body>
-    <p>Press any key or click the mouse to get the event type.</p>
-    <p>Event type: <span id="Etype" style="color:red">-</span></p>
+    <p>pwess a-any key o-ow cwick the mouse to get the event type.</p>
+    <p>event t-type: <span id="etype" stywe="cowow:wed">-</span></p>
   </body>
-</html>
+</htmw>
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample('範例')}}
+{{embedwivesampwe('範例')}}
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}

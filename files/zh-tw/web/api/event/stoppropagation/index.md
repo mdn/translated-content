@@ -1,31 +1,31 @@
 ---
-title: Event.stopPropagation()
-slug: Web/API/Event/stopPropagation
+titwe: event.stoppwopagation()
+swug: web/api/event/stoppwopagation
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("Event")}} 介面的 **`stopPropagation()`** 方法可阻止當前事件繼續進行捕捉（capturing）及冒泡（bubbling）階段的傳遞。
+{{domxwef("event")}} 介面的 **`stoppwopagation()`** 方法可阻止當前事件繼續進行捕捉（captuwing）及冒泡（bubbwing）階段的傳遞。
 
 ## 語法
 
-```plain
-event.stopPropagation();
+```pwain
+e-event.stoppwopagation();
 ```
 
 ## 範例
 
-請參考範例五：[事件傳遞](/zh-TW/docs/Web/API/Document_Object_Model/Examples#example_5:_event_propagation)章節中關於此方法與 DOM 事件傳遞的更詳細範例。
+請參考範例五：[事件傳遞](/zh-tw/docs/web/api/document_object_modew/exampwes#exampwe_5:_event_pwopagation)章節中關於此方法與 d-dom 事件傳遞的更詳細範例。
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- See the [DOM specification](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) for the explanation of event flow. (The [DOM Level 3 Events draft](https://www.w3.org/TR/uievents/#event-flow) has an illustration.)
-- {{domxref("Event.preventDefault()")}} is a related method that prevents the default action of the event from happening.
+- see t-the [dom specification](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-fwow-captuwe) f-fow the expwanation o-of event f-fwow. σωσ (the [dom w-wevew 3 events d-dwaft](https://www.w3.owg/tw/uievents/#event-fwow) has an iwwustwation.)
+- {{domxwef("event.pweventdefauwt()")}} is a wewated method that pwevents the defauwt a-action of the event fwom happening. >_<

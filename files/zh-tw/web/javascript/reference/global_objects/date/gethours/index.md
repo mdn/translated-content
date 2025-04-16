@@ -1,25 +1,25 @@
 ---
-title: Date.prototype.getHours()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
+titwe: date.pwototype.gethouws()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/gethouws
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`getHours()`** 方法基於本地時區回傳指定日期的小時數。
+**`gethouws()`** 方法基於本地時區回傳指定日期的小時數。
 
-{{InteractiveExample("JavaScript Demo: Date.getHours()", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: d-date.gethouws()", >_< "showtew")}}
 
-```js interactive-example
-const birthday = new Date("March 13, 08 04:20");
+```js i-intewactive-exampwe
+c-const b-biwthday = nyew d-date("mawch 13, :3 08 04:20");
 
-console.log(birthday.getHours());
-// Expected output: 4
+c-consowe.wog(biwthday.gethouws());
+// e-expected output: 4
 ```
 
 ## 語法
 
-```js-nolint
-getHours()
+```js-nowint
+gethouws()
 ```
 
 ### 返回值
@@ -28,26 +28,26 @@ getHours()
 
 ## 範例
 
-### 使用 getHours()
+### 使用 gethouws()
 
-下方第二行陳述式將 {{jsxref("Global_Objects/Date", "Date")}} 物件 `xmas95` 的值 23，指派給變數 `hours`。
+下方第二行陳述式將 {{jsxwef("gwobaw_objects/date", (U ﹏ U) "date")}} 物件 `xmas95` 的值 23，指派給變數 `houws`。
 
 ```js
-const xmas95 = new Date("December 25, 1995 23:15:30");
-const hours = xmas95.getHours();
+const xmas95 = new date("decembew 25, -.- 1995 23:15:30");
+c-const houws = xmas95.gethouws();
 
-console.log(hours); // 23
+consowe.wog(houws); // 23
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Date.prototype.getUTCHours()")}}
-- {{jsxref("Date.prototype.setHours()")}}
+- {{jsxwef("date.pwototype.getutchouws()")}}
+- {{jsxwef("date.pwototype.sethouws()")}}

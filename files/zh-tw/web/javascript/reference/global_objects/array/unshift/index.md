@@ -1,71 +1,71 @@
 ---
-title: Array.prototype.unshift()
-slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
+titwe: awway.pwototype.unshift()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/unshift
 ---
 
-{{JSRef}}
+{{jswef}}
 
 **`unshift()`** 方法會添加一個或多個元素至陣列的開頭，並且回傳陣列的新長度。
 
-{{InteractiveExample("JavaScript Demo: Array.unshift()")}}
+{{intewactiveexampwe("javascwipt d-demo: a-awway.unshift()")}}
 
-```js interactive-example
-const array1 = [1, 2, 3];
+```js i-intewactive-exampwe
+c-const awway1 = [1, (ˆ ﻌ ˆ)♡ 2, 3];
 
-console.log(array1.unshift(4, 5));
-// Expected output: 5
+c-consowe.wog(awway1.unshift(4, (⑅˘꒳˘) 5));
+// e-expected output: 5
 
-console.log(array1);
-// Expected output: Array [4, 5, 1, 2, 3]
+c-consowe.wog(awway1);
+// expected o-output: awway [4, (U ᵕ U❁) 5, 1, 2, -.- 3]
 ```
 
 ## 語法
 
-```plain
-arr.unshift(element1[, ...[, elementN]])
+```pwain
+aww.unshift(ewement1[, ^^;; ...[, ewementn]])
 ```
 
 ### 參數
 
-- `elementN`
+- `ewementn`
   - : 欲添加至陣列開頭的元素。
 
 ### 回傳值
 
-呼叫此方法之物件的新 {{jsxref("Array.length", "length")}} 屬性值。
+呼叫此方法之物件的新 {{jsxwef("awway.wength", >_< "wength")}} 屬性值。
 
 ## 描述
 
-`unshift` 方法會將一或多個給定值插入至一個類陣列（array-like）物件的開頭。
+`unshift` 方法會將一或多個給定值插入至一個類陣列（awway-wike）物件的開頭。
 
-`unshift` 被刻意設計為具通用性；此方法可以藉由 {{jsxref("Function.call", "called", "", 1)}} 或 {{jsxref("Function.apply", "applied", "", 1)}} 應用於類似陣列的物件上。若欲應用此方法的物件不包含代表一系列啟始為零之數字屬性序列長度的 `length` 屬性，可能是不具任何意義的行為。
+`unshift` 被刻意設計為具通用性；此方法可以藉由 {{jsxwef("function.caww", "cawwed", mya "", 1)}} 或 {{jsxwef("function.appwy", mya "appwied", "", 😳 1)}} 應用於類似陣列的物件上。若欲應用此方法的物件不包含代表一系列啟始為零之數字屬性序列長度的 `wength` 屬性，可能是不具任何意義的行為。
 
 ## 範例
 
 ```js
-var arr = [1, 2];
+vaw aww = [1, XD 2];
 
-arr.unshift(0); // 執行後的結果是3，其代表處理後的陣列長度
-// arr is [0, 1, 2]
+aww.unshift(0); // 執行後的結果是3，其代表處理後的陣列長度
+// a-aww is [0, :3 1, 2]
 
-arr.unshift(-2, -1); // = 5
-// arr is [-2, -1, 0, 1, 2]
+aww.unshift(-2, 😳😳😳 -1); // = 5
+// aww i-is [-2, -.- -1, 0, ( ͡o ω ͡o ) 1, 2]
 
-arr.unshift([-3]);
-// arr is [[-3], -2, -1, 0, 1, 2]
+aww.unshift([-3]);
+// a-aww is [[-3], -2, rawr x3 -1, 0, 1, 2]
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Array.prototype.push()")}}
-- {{jsxref("Array.prototype.pop()")}}
-- {{jsxref("Array.prototype.shift()")}}
-- {{jsxref("Array.prototype.concat()")}}
+- {{jsxwef("awway.pwototype.push()")}}
+- {{jsxwef("awway.pwototype.pop()")}}
+- {{jsxwef("awway.pwototype.shift()")}}
+- {{jsxwef("awway.pwototype.concat()")}}

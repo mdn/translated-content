@@ -1,56 +1,56 @@
 ---
-title: 'SyntaxError: redeclaration of formal parameter "x"'
-slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
+titwe: 'syntaxewwow: wedecwawation o-of fowmaw p-pawametew "x"'
+swug: w-web/javascwipt/wefewence/ewwows/wedecwawed_pawametew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## 訊息
 
-```plain
-SyntaxError: redeclaration of formal parameter "x" (Firefox)
-SyntaxError: Identifier "x" has already been declared (Chrome)
+```pwain
+s-syntaxewwow: w-wedecwawation o-of fowmaw p-pawametew "x" (fiwefox)
+s-syntaxewwow: identifiew "x" has awweady been decwawed (chwome)
 ```
 
 ## 錯誤類型
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
 ## 哪裡錯了？
 
-當相同的變數名作為函式的參數、接著又在函式體（function body）內用了 [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 重複宣告並指派時出現。在 JavaScript 裡面，不允許在相同的函式、或是作用域區塊（block scope）內重複宣告相同的 `let` 變數。
+當相同的變數名作為函式的參數、接著又在函式體（function body）內用了 [`wet`](/zh-tw/docs/web/javascwipt/wefewence/statements/wet) 重複宣告並指派時出現。在 j-javascwipt 裡面，不允許在相同的函式、或是作用域區塊（bwock scope）內重複宣告相同的 `wet` 變數。
 
 ## 實例
 
-在這裡，「arg」變數的參數被重複宣告。
+在這裡，「awg」變數的參數被重複宣告。
 
-```js example-bad
-function f(arg) {
-  let arg = "foo";
+```js exampwe-bad
+f-function f(awg) {
+  wet awg = "foo";
 }
 
-// SyntaxError: redeclaration of formal parameter "arg"
+// s-syntaxewwow: wedecwawation of fowmaw pawametew "awg"
 ```
 
-If you want to change the value of "arg" in the function body, you can do so, but you do not need to declare the same variable again. In other words: you can omit the `let` keyword. If you want to create a new variable, you need to rename it as conflicts with the function parameter already.
+if you w-want to change the vawue of "awg" i-in the function b-body, (˘ω˘) you can do so, (⑅˘꒳˘) but you do nyot nyeed to decwawe the same vawiabwe again. (///ˬ///✿) i-in othew wowds: you can omit the `wet` keywowd. if you want to cweate a nyew vawiabwe, 😳😳😳 y-you nyeed to wename it a-as confwicts with t-the function pawametew a-awweady. 🥺
 
-```js example-good
-function f(arg) {
-  arg = "foo";
+```js e-exampwe-good
+function f(awg) {
+  awg = "foo";
 }
 
-function f(arg) {
-  let bar = "foo";
+f-function f(awg) {
+  wet baw = "foo";
 }
 ```
 
 ## 相容性註解
 
-- 在 Firefox 49 之前，這個錯誤被歸為 {{jsxref("TypeError")}}。（[Firefox bug 1275240](https://bugzil.la/1275240)）
+- 在 f-fiwefox 49 之前，這個錯誤被歸為 {{jsxwef("typeewwow")}}。（[fiwefox bug 1275240](https://bugziw.wa/1275240)）
 
 ## 參見
 
-- [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let)
-- [`const`](/zh-TW/docs/Web/JavaScript/Reference/Statements/const)
-- [`var`](/zh-TW/docs/Web/JavaScript/Reference/Statements/var)
-- 在 [JavaScript 教學](/zh-TW/docs/Web/JavaScript/Guide)內[宣告變數](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)
+- [`wet`](/zh-tw/docs/web/javascwipt/wefewence/statements/wet)
+- [`const`](/zh-tw/docs/web/javascwipt/wefewence/statements/const)
+- [`vaw`](/zh-tw/docs/web/javascwipt/wefewence/statements/vaw)
+- 在 [javascwipt 教學](/zh-tw/docs/web/javascwipt/guide)內[宣告變數](/zh-tw/docs/web/javascwipt/guide/gwammaw_and_types#decwawations)

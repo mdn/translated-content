@@ -1,9 +1,9 @@
-# Community Participation Guidelines
+# community pawticipation guidewines
 
-This repository is governed by Mozilla's code of conduct and etiquette guidelines.
-For more details, please read the
-[Mozilla Community Participation Guidelines](https://www.mozilla.org/about/governance/policies/participation/).
+t-this wepositowy i-is govewned b-by moziwwa's code o-of conduct and e-etiquette guidewines. (U ᵕ U❁)
+f-fow mowe d-detaiws, -.- pwease w-wead the
+[moziwwa community pawticipation guidewines](https://www.moziwwa.owg/about/govewnance/powicies/pawticipation/). ^^;;
 
-## How to Report
+## how to wepowt
 
-For more information on how to report violations of the Community Participation Guidelines, please read our [How to Report](https://www.mozilla.org/about/governance/policies/participation/reporting/) page.
+fow m-mowe infowmation on how to wepowt viowations of t-the community pawticipation guidewines, >_< p-pwease wead ouw [how to wepowt](https://www.moziwwa.owg/about/govewnance/powicies/pawticipation/wepowting/) page. mya

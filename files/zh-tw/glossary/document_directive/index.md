@@ -1,28 +1,28 @@
 ---
-title: Document directive
-slug: Glossary/Document_directive
+titwe: document diwective
+swug: g-gwossawy/document_diwective
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**{{Glossary("CSP")}} 文件指令** 被用在 {{HTTPHeader("Content-Security-Policy")}} 頭部和管理應用策略的文件或[工作者](/zh-TW/docs/Web/API/Web_Workers_API)環境的屬性。
+**{{gwossawy("csp")}} 文件指令** 被用在 {{httpheadew("content-secuwity-powicy")}} 頭部和管理應用策略的文件或[工作者](/zh-tw/docs/web/api/web_wowkews_api)環境的屬性。
 
-文件指令不會回退到 {{CSP("default-src")}} 指令。
+文件指令不會回退到 {{csp("defauwt-swc")}} 指令。
 
-這些 CSP 指令是文件指令:
+這些 c-csp 指令是文件指令:
 
-- {{CSP("base-uri")}}
-- {{CSP("plugin-types")}}
-- {{CSP("sandbox")}}
-- {{CSP("disown-opener")}}
+- {{csp("base-uwi")}}
+- {{csp("pwugin-types")}}
+- {{csp("sandbox")}}
+- {{csp("disown-openew")}}
 
 ## 了解更多
 
 ### 技術資訊
 
-- {{HTTPHeader("Content-Security-Policy")}}
+- {{httpheadew("content-secuwity-powicy")}}
 - 其他類型的指令:
 
-  - {{Glossary("Fetch directive")}}
-  - {{Glossary("Navigation directive")}}
-  - {{Glossary("Reporting directive")}}
+  - {{gwossawy("fetch d-diwective")}}
+  - {{gwossawy("navigation d-diwective")}}
+  - {{gwossawy("wepowting diwective")}}

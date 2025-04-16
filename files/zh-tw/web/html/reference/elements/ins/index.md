@@ -1,179 +1,179 @@
 ---
-title: <ins>：插入文字元素
-slug: Web/HTML/Reference/Elements/ins
+titwe: <ins>：插入文字元素
+swug: web/htmw/wefewence/ewements/ins
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**`<ins>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表已添加到文件的一段文字範圍。你可以使用 {{HTMLElement("del")}} 元素來類似地表示已從文件中刪除的文字範圍。
+**`<ins>`** [htmw](/zh-tw/docs/web/htmw) 元素代表已添加到文件的一段文字範圍。你可以使用 {{htmwewement("dew")}} 元素來類似地表示已從文件中刪除的文字範圍。
 
-{{InteractiveExample("HTML Demo: &lt;ins&gt;", "tabbed-standard")}}
+{{intewactiveexampwe("htmw d-demo: &wt;ins&gt;", OwO "tabbed-standawd")}}
 
-```html interactive-example
-<p>&ldquo;You're late!&rdquo;</p>
-<del>
-  <p>&ldquo;I apologize for the delay.&rdquo;</p>
-</del>
-<ins cite="../howtobeawizard.html" datetime="2018-05">
-  <p>&ldquo;A wizard is never late &hellip;&rdquo;</p>
+```htmw i-intewactive-exampwe
+<p>&wdquo;you'we w-wate!&wdquo;</p>
+<dew>
+  <p>&wdquo;i apowogize f-fow the d-deway.&wdquo;</p>
+</dew>
+<ins cite="../howtobeawizawd.htmw" d-datetime="2018-05">
+  <p>&wdquo;a wizawd i-is nyevew w-wate &hewwip;&wdquo;</p>
 </ins>
 ```
 
-```css interactive-example
-del,
+```css intewactive-exampwe
+dew, 😳😳😳
 ins {
-  display: block;
-  text-decoration: none;
-  position: relative;
+  dispway: bwock;
+  text-decowation: none;
+  position: w-wewative;
 }
 
-del {
-  background-color: #fbb;
+dew {
+  backgwound-cowow: #fbb;
 }
 
 ins {
-  background-color: #d4fcbc;
+  backgwound-cowow: #d4fcbc;
 }
 
-del::before,
-ins::before {
-  position: absolute;
-  left: 0.5rem;
-  font-family: monospace;
+d-dew::befowe, 😳😳😳
+ins::befowe {
+  p-position: absowute;
+  weft: 0.5wem;
+  font-famiwy: monospace;
 }
 
-del::before {
+d-dew::befowe {
   content: "−";
 }
 
-ins::before {
-  content: "+";
+i-ins::befowe {
+  c-content: "+";
 }
 
 p {
-  margin: 0 1.8rem 0;
-  font-family: Georgia, serif;
-  font-size: 1rem;
+  mawgin: 0 1.8wem 0;
+  font-famiwy: geowgia, o.O sewif;
+  f-font-size: 1wem;
 }
 ```
 
 ## 屬性
 
-此元素包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
+此元素包含[全域屬性](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 - `cite`
-  - : 此屬性定義解釋變更的資源的 URI，例如連結到會議記錄或故障排除系統中的票證。
+  - : 此屬性定義解釋變更的資源的 uwi，例如連結到會議記錄或故障排除系統中的票證。
 - `datetime`
-  - : 此屬性指示變更的時間和日期，必須是帶有可選時間字串的有效日期。如果值無法解析為帶有可選時間字串的日期，該元素將沒有相關的時間戳記。有關不帶時間的字串的格式，請參閱[有效日期字串的格式](/zh-TW/docs/Web/HTML/Guides/Date_and_time_formats#date_strings)。如果字串包含日期和時間，其格式則在[有效本地日期和時間字串的格式](/zh-TW/docs/Web/HTML/Guides/Date_and_time_formats#local_date_and_time_strings)中有所描述。
+  - : 此屬性指示變更的時間和日期，必須是帶有可選時間字串的有效日期。如果值無法解析為帶有可選時間字串的日期，該元素將沒有相關的時間戳記。有關不帶時間的字串的格式，請參閱[有效日期字串的格式](/zh-tw/docs/web/htmw/guides/date_and_time_fowmats#date_stwings)。如果字串包含日期和時間，其格式則在[有效本地日期和時間字串的格式](/zh-tw/docs/web/htmw/guides/date_and_time_fowmats#wocaw_date_and_time_stwings)中有所描述。
 
 ## 範例
 
-```html
-<ins>This text has been inserted</ins>
+```htmw
+<ins>this text has been insewted</ins>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("範例")}}
+{{embedwivesampwe("範例")}}
 
 ## 可訪問性考慮事項
 
-大多數屏幕閱讀技術在默認配置中不會宣告 `<ins>` 元素的存在。通過使用 CSS {{cssxref("content")}} 屬性以及 {{cssxref("::before")}} 和 {{cssxref("::after")}} 擬似元素，可以使其被宣告。
+大多數屏幕閱讀技術在默認配置中不會宣告 `<ins>` 元素的存在。通過使用 css {{cssxwef("content")}} 屬性以及 {{cssxwef("::befowe")}} 和 {{cssxwef("::aftew")}} 擬似元素，可以使其被宣告。
 
 ```css
-ins::before,
-ins::after {
-  clip-path: inset(100%);
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
+i-ins::befowe, ( ͡o ω ͡o )
+ins::aftew {
+  c-cwip-path: inset(100%);
+  c-cwip: w-wect(1px, 1px, (U ﹏ U) 1px, 1px);
+  h-height: 1px;
+  ovewfwow: hidden;
+  position: a-absowute;
+  white-space: nyowwap;
   width: 1px;
 }
 
-ins::before {
-  content: " [insertion start] ";
+i-ins::befowe {
+  content: " [insewtion stawt] ";
 }
 
-ins::after {
-  content: " [insertion end] ";
+ins::aftew {
+  content: " [insewtion end] ";
 }
 ```
 
 一些使用屏幕閱讀器的人有意禁用宣告內容以避免冗長。因此，重要的是不濫用此技術，僅在不知道內容已插入將對理解產生不利影響的情況下應用它。
 
-- [製作你的標記（更具可訪問性）的簡短說明 | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
-- [微調文本級樣式 | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+- [製作你的標記（更具可訪問性）的簡短說明 | the p-paciewwo gwoup](https://www.tpgi.com/showt-note-on-making-youw-mawk-mowe-accessibwe/)
+- [微調文本級樣式 | adwian wosewwi](https://adwianwosewwi.com/2017/12/tweaking-text-wevew-stywes.htmw)
 
 ## 技術摘要
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories"
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/zh-tw/docs/web/htmw/guides/content_categowies"
           >內容類別</a
         >
       </th>
       <td>
-        <a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
+        <a h-hwef="/zh-tw/docs/web/htmw/guides/content_categowies#段落型內容"
           >段落型內容</a
-        >、<a href="/zh-TW/docs/Web/HTML/Guides/Content_categories#流內容"
+        >、<a hwef="/zh-tw/docs/web/htmw/guides/content_categowies#流內容"
           >流內容</a
         >。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的內容</th>
+    </tw>
+    <tw>
+      <th scope="wow">允許的內容</th>
       <td>
         <a
-          href="/zh-TW/docs/Web/HTML/Guides/Content_categories#透明內容模型"
+          hwef="/zh-tw/docs/web/htmw/guides/content_categowies#透明內容模型"
           >透明內容</a
         >。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">標籤省略</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">標籤省略</th>
       <td>不允許，開始和結束標籤都是必須的。</td>
-    </tr>
-    <tr>
-      <th scope="row">允許的父元素</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">允許的父元素</th>
       <td>
         任何接受<a
-          href="/zh-TW/docs/Web/HTML/Guides/Content_categories#段落型內容"
+          hwef="/zh-tw/docs/web/htmw/guides/content_categowies#段落型內容"
           >段落型內容</a
         >的元素。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">隱含的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">隱含的 a-awia 角色</th>
       <td>
         <code
-          ><a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">insertion</a
+          ><a hwef="/zh-tw/docs/web/accessibiwity/awia/wefewence/wowes/stwuctuwaw_wowes#stwuctuwaw_wowes_with_htmw_equivawents">insewtion</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">允許的 ARIA 角色</th>
+    </tw>
+    <tw>
+      <th scope="wow">允許的 a-awia 角色</th>
       <td>任何</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 介面</th>
-      <td>{{domxref("HTMLModElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 介面</th>
+      <td>{{domxwef("htmwmodewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{HTMLElement("del")}} 元素，用於標記刪除到文件的內容
+- {{htmwewement("dew")}} 元素，用於標記刪除到文件的內容

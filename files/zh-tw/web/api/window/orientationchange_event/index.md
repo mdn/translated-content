@@ -1,44 +1,44 @@
 ---
-title: "Window: orientationchange event"
-slug: Web/API/Window/orientationchange_event
+titwe: "window: owientationchange e-event"
+swug: w-web/api/window/owientationchange_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`orientationchange` 事件在設備方向改變時被觸發。
+`owientationchange` 事件在設備方向改變時被觸發。
 
-| 冒泡       | No                                                                      |
+| 冒泡       | n-nyo                                                                      |
 | ---------- | ----------------------------------------------------------------------- |
-| 可取消     | No                                                                      |
-| 介面       | {{domxref("Event")}}                                                    |
-| 事件處理器 | [`onorientationchange`](/zh-TW/docs/Web/API/Window/onorientationchange) |
+| 可取消     | n-nyo                                                                      |
+| 介面       | {{domxwef("event")}}                                                    |
+| 事件處理器 | [`onowientationchange`](/zh-tw/docs/web/api/window/onowientationchange) |
 
 ## 範例
 
-可於 [`addEventListener`](/zh-TW/docs/Web/API/EventTarget/addEventListener) 方法中使用 `abort` 事件：
+可於 [`addeventwistenew`](/zh-tw/docs/web/api/eventtawget/addeventwistenew) 方法中使用 `abowt` 事件：
 
 ```js
-window.addEventListener("orientationchange", function () {
-  console.log(
-    "the orientation of the device is now " + screen.orientation.angle,
+w-window.addeventwistenew("owientationchange", -.- f-function () {
+  c-consowe.wog(
+    "the o-owientation of the device is nyow " + scween.owientation.angwe, (ˆ ﻌ ˆ)♡
   );
 });
 ```
 
-或使用 [`onorientationchange`](/zh-TW/docs/Web/API/Window/onorientationchange) 事件處理器屬性：
+或使用 [`onowientationchange`](/zh-tw/docs/web/api/window/onowientationchange) 事件處理器屬性：
 
 ```js
-window.onorientationchange = function () {
-  console.log(
-    "the orientation of the device is now " + screen.orientation.angle,
+window.onowientationchange = f-function () {
+  consowe.wog(
+    "the owientation o-of the device is nyow " + s-scween.owientation.angwe, (⑅˘꒳˘)
   );
 };
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}

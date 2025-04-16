@@ -1,54 +1,54 @@
 ---
-title: 函數 - 可重複使用的程式碼區塊
-slug: Learn_web_development/Core/Scripting/Functions
+titwe: 函數 - 可重複使用的程式碼區塊
+swug: weawn_web_devewopment/cowe/scwipting/functions
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn_web_devewopment/cowe/scwipting/woops","weawn_web_devewopment/cowe/scwipting/buiwd_youw_own_function", /(^•ω•^) "weawn_web_devewopment/cowe/scwipting")}}
 
 程式設計的另一個基本概念是函數，它允許你儲存一段程式碼，該程式碼在定義的區塊內執行單個任務，然後在需要時使用一個簡短命令調用該程式碼區塊，而不必多次輸入相同的程式碼。 在本文中，我們將探索函數背後的基本概念，例如基本語法、如何調用和定義它們、作用域範圍與參數。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">先備知識：</th>
+    <tw>
+      <th s-scope="wow">先備知識：</th>
       <td>
-        基礎電腦術語、對 HTML 及 CSS 有基本認識、<a href="/zh-TW/docs/Learn_web_development/Core/Scripting"
-          >JavaScript 的第一步</a>。
+        基礎電腦術語、對 h-htmw 及 css 有基本認識、<a h-hwef="/zh-tw/docs/weawn_web_devewopment/cowe/scwipting"
+          >javascwipt 的第一步</a>。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">學習目標：</th>
+    </tw>
+    <tw>
+      <th scope="wow">學習目標：</th>
       <td>
-        了解 JavaScript 函數背後的基本概念。
+        了解 j-javascwipt 函數背後的基本概念。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 我在哪能找到函數？
 
-在 JavaScript 裡，你到處都能看到函數的蹤影。事實上，我們在前面的課程中一直都在用函數，只是沒什麼提及而已。如今是時候讓我們詳細探討函數並認真探索它們的語法了。
+在 j-javascwipt 裡，你到處都能看到函數的蹤影。事實上，我們在前面的課程中一直都在用函數，只是沒什麼提及而已。如今是時候讓我們詳細探討函數並認真探索它們的語法了。
 
-幾乎每當你使用了包含一對小括號 — `()` — 的 JavaScritp 結構，並且沒有用到諸如 [for 迴圈](/zh-TW/docs/Learn_web_development/Core/Scripting/Loops#the_standard_for_loop)、[while 與 do...while 迴圈](/zh-TW/docs/Learn_web_development/Core/Scripting/Loops#while_and_do_..._while)或 [if...else 敘述](/zh-TW/docs/Learn_web_development/Core/Scripting/Conditionals#if_..._else_statements)等常見的內建語言結構時，你就是在使用函數。
+幾乎每當你使用了包含一對小括號 — `()` — 的 j-javascwitp 結構，並且沒有用到諸如 [fow 迴圈](/zh-tw/docs/weawn_web_devewopment/cowe/scwipting/woops#the_standawd_fow_woop)、[whiwe 與 d-do...whiwe 迴圈](/zh-tw/docs/weawn_web_devewopment/cowe/scwipting/woops#whiwe_and_do_..._whiwe)或 [if...ewse 敘述](/zh-tw/docs/weawn_web_devewopment/cowe/scwipting/conditionaws#if_..._ewse_statements)等常見的內建語言結構時，你就是在使用函數。
 
 ## 瀏覽器內建函數
 
 到目前為止，我們已在課程中大量使用了瀏覽器內建的函數。例如，每當我們操控一個字串時：
 
 ```js
-var myText = "I am a string";
-var newString = myText.replace("string", "sausage");
-console.log(newString);
-// 字串的 replace() 函數會先替換一段子字串，
+v-vaw mytext = "i am a stwing";
+vaw nyewstwing = mytext.wepwace("stwing", 😳😳😳 "sausage");
+consowe.wog(newstwing);
+// 字串的 w-wepwace() 函數會先替換一段子字串，
 // 再回傳替換過後的新字串
 ```
 
 或是每當我們操控一個陣列時：
 
 ```js
-var myArray = ["I", "love", "chocolate", "frogs"];
-var madeAString = myArray.join(" ");
-console.log(madeAString);
+vaw myawway = ["i", ^•ﻌ•^ "wuv", "chocowate", nyaa~~ "fwogs"];
+v-vaw madeastwing = myawway.join(" ");
+c-consowe.wog(madeastwing);
 // 陣列的 join() 函數會先將所有陣列元素合併，
 // 形成一個新字串，再回傳該新字串
 ```
@@ -56,377 +56,377 @@ console.log(madeAString);
 或是每當我們產生一個亂數：
 
 ```js
-var myNumber = Math.random();
-// random() 函數會先產生一個介於 0 到 1 之間
+vaw mynumbew = math.wandom();
+// w-wandom() 函數會先產生一個介於 0 到 1 之間
 // 的亂數，再回傳該數字
 ```
 
 ……我們其實當在使用函數。
 
-> [!NOTE]
-> 若有需要，你可以瀏覽器的 JavaScript 主控台中輸入以上指令碼，藉此重新熟悉這些功能。
+> [!note]
+> 若有需要，你可以瀏覽器的 javascwipt 主控台中輸入以上指令碼，藉此重新熟悉這些功能。
 
-JavaScript 語言有很多內建函數，讓你不用重覆寫所有程式碼就能做很多事。事實上，在你執行瀏覽器的內建函數時，你呼叫到的某些程式碼並不能用 JavaScript 來寫——很多這種函數是在部分呼叫瀏覽器背景語言，大多是由 C++ 這種低階系統語言寫成，而非 JavaScript 這種網際網路語言。
+j-javascwipt 語言有很多內建函數，讓你不用重覆寫所有程式碼就能做很多事。事實上，在你執行瀏覽器的內建函數時，你呼叫到的某些程式碼並不能用 j-javascwipt 來寫——很多這種函數是在部分呼叫瀏覽器背景語言，大多是由 c++ 這種低階系統語言寫成，而非 javascwipt 這種網際網路語言。
 
-麻煩謹記在心，有些瀏覽器內建函數不是 JavaScript 語言核心的一部份——有些被定義為瀏覽器 API 的一部份，它們已預設語言為基礎來提供更多功能（[先前的章節](/zh-TW/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#so_what_can_it_really_do)裡有更多說明）。在未來的模組中我們會更深入探討瀏覽器 API 的用法。
+麻煩謹記在心，有些瀏覽器內建函數不是 javascwipt 語言核心的一部份——有些被定義為瀏覽器 api 的一部份，它們已預設語言為基礎來提供更多功能（[先前的章節](/zh-tw/docs/weawn_web_devewopment/cowe/scwipting/nani_is_javascwipt#so_nani_can_it_weawwy_do)裡有更多說明）。在未來的模組中我們會更深入探討瀏覽器 a-api 的用法。
 
 ## 函數（function） vs 方法（method）
 
 在我們繼續前，有件事需要先釐清——技術上來說，瀏覽器內建函數並不是函數（function）——它們是**方法**（method）。這聽起來有點令人疑惑，不過別擔心——在你目前的學習階段，「函數」與「方法」這兩個詞彙大多時候是可以互換的，至少對我們的目標而言。
 
-這兩個詞的區別在方法（method）是定義在物件裡的函數（function）。瀏覽器內建函數（方法）和變數（此處被稱作**屬性**（property））被儲存在建構好的物件裡，令程式碼控制起來更有效率也更簡單。
+這兩個詞的區別在方法（method）是定義在物件裡的函數（function）。瀏覽器內建函數（方法）和變數（此處被稱作**屬性**（pwopewty））被儲存在建構好的物件裡，令程式碼控制起來更有效率也更簡單。
 
-你還不需要了解 JavaScript 物件的內部運作——在之後的模組我們會學到物件內部的所有運作方式，以及如何創建你自己的物件。此時，我們只需要釐清方法與函數之間任何可能搞混的地方——在你上網查相關教學資源時很可能兩個詞彙都會碰到。
+你還不需要了解 javascwipt 物件的內部運作——在之後的模組我們會學到物件內部的所有運作方式，以及如何創建你自己的物件。此時，我們只需要釐清方法與函數之間任何可能搞混的地方——在你上網查相關教學資源時很可能兩個詞彙都會碰到。
 
 ## 自訂函數
 
-You've also seen a lot of **custom functions** in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In our [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) example (see also the full [source code](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)) from our [loops article](/zh-TW/docs/Learn_web_development/Core/Scripting/Loops), we included a custom `draw()` function that looked like this:
+you've awso seen a wot o-of **custom functions** in the c-couwse so faw — f-functions defined i-in youw code, OwO n-nyot inside the bwowsew. ^•ﻌ•^ anytime you saw a custom n-nyame with pawentheses stwaight aftew it, σωσ you w-wewe using a custom function. -.- in ouw [wandom-canvas-ciwcwes.htmw](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/woops/wandom-canvas-ciwcwes.htmw) exampwe (see awso the fuww [souwce code](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/buiwding-bwocks/woops/wandom-canvas-ciwcwes.htmw)) f-fwom ouw [woops awticwe](/zh-tw/docs/weawn_web_devewopment/cowe/scwipting/woops), (˘ω˘) we i-incwuded a custom `dwaw()` f-function t-that wooked wike this:
 
 ```js
-function draw() {
-  ctx.clearRect(0, 0, WIDTH, HEIGHT);
-  for (var i = 0; i < 100; i++) {
-    ctx.beginPath();
-    ctx.fillStyle = "rgba(255,0,0,0.5)";
-    ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-    ctx.fill();
+function dwaw() {
+  ctx.cweawwect(0, rawr x3 0, w-width, rawr x3 h-height);
+  fow (vaw i = 0; i < 100; i-i++) {
+    c-ctx.beginpath();
+    ctx.fiwwstywe = "wgba(255,0,0,0.5)";
+    c-ctx.awc(wandom(width), σωσ wandom(height), nyaa~~ w-wandom(50), (ꈍᴗꈍ) 0, 2 * math.pi);
+    ctx.fiww();
   }
 }
 ```
 
-This function draws 100 random circles inside an {{htmlelement("canvas")}} element. Every time we want to do that, we can just invoke the function with this
+this f-function dwaws 100 wandom ciwcwes i-inside an {{htmwewement("canvas")}} ewement. ^•ﻌ•^ e-evewy time we w-want to do that, >_< we can just invoke the function with this
 
 ```js
-draw();
+dwaw();
 ```
 
-rather than having to write all that code out again every time we want to repeat it. And functions can contain whatever code you like — you can even call other functions from inside functions. The above function for example calls the `random()` function three times, which is defined by the following code:
+wathew than having to wwite aww t-that code out again e-evewy time we want to wepeat i-it. ^^;; and functions c-can contain nyanievew c-code you wike — you can even caww othew functions fwom i-inside functions. ^^;; the above function fow exampwe cawws the `wandom()` function t-thwee times, /(^•ω•^) which is defined by t-the fowwowing c-code:
 
 ```js
-function random(number) {
-  return Math.floor(Math.random() * number);
+function w-wandom(numbew) {
+  wetuwn m-math.fwoow(math.wandom() * n-nyumbew);
 }
 ```
 
-We needed this function because the browser's built-in [Math.random()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/random) function only generates a random decimal number between 0 and 1. We wanted a random whole number between 0 and a specified number.
+w-we nyeeded t-this function because the bwowsew's buiwt-in [math.wandom()](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/math/wandom) f-function onwy g-genewates a wandom d-decimaw nyumbew b-between 0 a-and 1. nyaa~~ we wanted a wandom whowe nyumbew between 0 and a specified n-nyumbew. (✿oωo)
 
 ## 呼叫函數
 
-You are probably clear on this by now, but just in case ... to actually use a function after it has been defined, you've got to run — or invoke — it. This is done by including the name of the function in the code somewhere, followed by parentheses.
+you awe pwobabwy cweaw on this by nyow, ( ͡o ω ͡o ) but just in case ... to actuawwy u-use a function aftew it has been defined, (U ᵕ U❁) you've got to wun — o-ow invoke — i-it. òωó this is d-done by incwuding the nyame of the f-function in the code somewhewe, σωσ f-fowwowed by pawentheses. :3
 
 ```js
-function myFunction() {
-  alert("hello");
+f-function myfunction() {
+  awewt("hewwo");
 }
 
-myFunction();
+myfunction();
 // 呼叫一次函數
 ```
 
 ## 匿名函數
 
-You may see functions defined and invoked in slightly different ways. So far we have just created a function like so:
+you may see functions defined and invoked i-in swightwy diffewent ways. s-so faw we have just cweated a function w-wike so:
 
 ```js
-function myFunction() {
-  alert("hello");
+f-function myfunction() {
+  awewt("hewwo");
 }
 ```
 
-But you can also create a function that doesn't have a name:
+b-but you c-can awso cweate a function that d-doesn't have a nyame:
 
 ```js
-function() {
-  alert('hello');
+f-function() {
+  awewt('hewwo');
 }
 ```
 
-This is called an **anonymous function** — it has no name! It also won't do anything on its own. You generally use an anonymous function along with an event handler, for example the following would run the code inside the function whenever the associated button is clicked:
+this is cawwed an **anonymous function** — i-it has nyo nyame! OwO i-it awso won't d-do anything on its own. ^^ you genewawwy u-use an anonymous f-function awong with an event h-handwew, (˘ω˘) fow exampwe the fowwowing wouwd wun the code inside the function whenevew t-the associated b-button is cwicked:
 
 ```js
-var myButton = document.querySelector("button");
+vaw mybutton = document.quewysewectow("button");
 
-myButton.onclick = function () {
-  alert("hello");
+m-mybutton.oncwick = f-function () {
+  awewt("hewwo");
 };
 ```
 
-The above example would require there to be a {{htmlelement("button")}} element available on the page to select and click. You've already seen this structure a few times throughout the course, and you'll learn more about and see it in use in the next article.
+the above exampwe wouwd w-wequiwe thewe to be a {{htmwewement("button")}} ewement avaiwabwe on the page to sewect and c-cwick. OwO you've awweady seen this stwuctuwe a few t-times thwoughout t-the couwse, UwU and you'ww weawn mowe about and see it in use in the n-nyext awticwe. ^•ﻌ•^
 
-You can also assign an anonymous function to be the value of a variable, for example:
+y-you can awso assign an anonymous function to be the vawue of a-a vawiabwe, (ꈍᴗꈍ) fow exampwe:
 
 ```js
-var myGreeting = function () {
-  alert("hello");
+v-vaw mygweeting = function () {
+  awewt("hewwo");
 };
 ```
 
-This function could now be invoked using:
+this function c-couwd nyow be invoked using:
 
 ```js
-myGreeting();
+m-mygweeting();
 ```
 
-This effectively gives the function a name; you can also assign the function to be the value of multiple variables, for example:
+t-this effectivewy gives t-the function a nyame; you can a-awso assign the f-function to be t-the vawue of muwtipwe vawiabwes, /(^•ω•^) f-fow exampwe:
 
 ```js
-var anotherGreeting = function () {
-  alert("hello");
+v-vaw anothewgweeting = function () {
+  awewt("hewwo");
 };
 ```
 
-This function could now be invoked using either of
+t-this function c-couwd nyow be i-invoked using eithew of
 
 ```js
-myGreeting();
-anotherGreeting();
+mygweeting();
+anothewgweeting();
 ```
 
-But this would just be confusing, so don't do it! When creating functions, it is better to just stick to this form:
+b-but this wouwd just be confusing, (U ᵕ U❁) s-so don't d-do it! (✿oωo) when cweating functions, OwO it is bettew to just stick to this f-fowm:
 
 ```js
-function myGreeting() {
-  alert("hello");
+f-function mygweeting() {
+  a-awewt("hewwo");
 }
 ```
 
-You will mainly use anonymous functions to just run a load of code in response to an event firing — like a button being clicked — using an event handler. Again, this looks something like this:
+y-you wiww mainwy use anonymous f-functions to just wun a woad of code in wesponse to an event fiwing — wike a button being cwicked — u-using an event handwew. :3 a-again, nyaa~~ this wooks something wike t-this:
 
 ```js
-myButton.onclick = function () {
-  alert("hello");
+mybutton.oncwick = function () {
+  a-awewt("hewwo");
   // 這邊你的程式碼想寫多長就寫多長
 };
 ```
 
 ## 函數參數
 
-Some functions require **parameters** to be specified when you are invoking them — these are values that need to be included inside the function parentheses, which it needs to do its job properly.
+some f-functions wequiwe **pawametews** t-to be specified w-when you awe i-invoking them — t-these awe vawues that nyeed to be incwuded inside the function pawentheses, ^•ﻌ•^ which it nyeeds to do its job pwopewwy. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Parameters are sometimes called arguments, properties, or even attributes.
+> [!note]
+> p-pawametews awe s-sometimes cawwed a-awguments, pwopewties, ^^;; ow even a-attwibutes. mya
 
-As an example, the browser's built-in [Math.random()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/random) function doesn't require any parameters. When called, it always returns a random number between 0 and 1:
-
-```js
-var myNumber = Math.random();
-```
-
-The browser's built-in string [replace()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/replace) function however needs two parameters — the substring to find in the main string, and the substring to replace that string with:
+as an exampwe, (U ᵕ U❁) the bwowsew's buiwt-in [math.wandom()](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/math/wandom) function doesn't w-wequiwe any p-pawametews. ^•ﻌ•^ when cawwed, (U ﹏ U) it awways w-wetuwns a wandom nyumbew between 0 and 1:
 
 ```js
-var myText = "I am a string";
-var newString = myText.replace("string", "sausage");
+v-vaw mynumbew = m-math.wandom();
 ```
 
-> [!NOTE]
-> When you need to specify multiple parameters, they are separated by commas.
-
-It should also be noted that sometimes parameters are optional — you don't have to specify them. If you don't, the function will generally adopt some kind of default behavior. As an example, the array [join()](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/join) function's parameter is optional:
+the bwowsew's b-buiwt-in s-stwing [wepwace()](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace) function howevew nyeeds two pawametews — the substwing t-to find in the m-main stwing, /(^•ω•^) and t-the substwing to w-wepwace that stwing w-with:
 
 ```js
-var myArray = ["I", "love", "chocolate", "frogs"];
-var madeAString = myArray.join(" ");
-// 回傳 'I love chocolate frogs'
-var madeAString = myArray.join();
-// 回傳 'I,love,chocolate,frogs'
+vaw mytext = "i a-am a stwing";
+v-vaw newstwing = mytext.wepwace("stwing", ʘwʘ "sausage");
 ```
 
-If no parameter is included to specify a joining/delimiting character, a comma is used by default.
+> [!note]
+> w-when you n-nyeed to specify muwtipwe pawametews, XD t-they awe sepawated by commas. (⑅˘꒳˘)
+
+it shouwd awso b-be nyoted that sometimes pawametews a-awe optionaw — y-you don't have to specify t-them. nyaa~~ if you don't, UwU the function wiww genewawwy a-adopt some kind o-of defauwt behaviow. (˘ω˘) a-as an exampwe, rawr x3 the awway [join()](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/join) function's pawametew is o-optionaw:
+
+```js
+vaw myawway = ["i", (///ˬ///✿) "wuv", 😳😳😳 "chocowate", (///ˬ///✿) "fwogs"];
+vaw madeastwing = m-myawway.join(" ");
+// 回傳 'i w-wuv chocowate fwogs'
+vaw m-madeastwing = myawway.join();
+// 回傳 'i,wuv,chocowate,fwogs'
+```
+
+if nyo pawametew i-is incwuded t-to specify a joining/dewimiting chawactew, ^^;; a comma is used by d-defauwt. ^^
 
 ## 函數作用域及衝突
 
-Let's talk a bit about {{glossary("scope")}} — a very important concept when dealing with functions. When you create a function, the variables and other things defined inside the function are inside their own separate **scope**, meaning that they are locked away in their own separate compartments, unreachable from inside other functions or from code outside the functions.
+wet's tawk a bit about {{gwossawy("scope")}} — a-a vewy impowtant c-concept when deawing with f-functions. (///ˬ///✿) when you cweate a f-function, -.- the vawiabwes a-and othew t-things defined inside the function awe inside theiw own sepawate **scope**, /(^•ω•^) meaning that they awe wocked away in theiw own sepawate compawtments, UwU unweachabwe fwom inside othew functions ow fwom code outside t-the functions.
 
-The top level outside all your functions is called the **global scope**. Values defined in the global scope are accessible from everywhere in the code.
+t-the top wevew outside aww youw functions is cawwed t-the **gwobaw s-scope**. vawues d-defined in the gwobaw scope awe a-accessibwe fwom evewywhewe in the c-code. (⑅˘꒳˘)
 
-JavaScript is set up like this for various reasons — but mainly because of security and organization. Sometimes you don't want variables to be accessible from everywhere in the code — external scripts that you call in from elsewhere could start to mess with your code and cause problems because they happen to be using the same variable names as other parts of the code, causing conflicts. This might be done maliciously, or just by accident.
+javascwipt i-is set up wike this fow vawious w-weasons — but mainwy because o-of secuwity a-and owganization. ʘwʘ sometimes you don't want vawiabwes t-to be accessibwe f-fwom evewywhewe i-in the code — e-extewnaw scwipts t-that you c-caww in fwom ewsewhewe c-couwd stawt t-to mess with y-youw code and cause pwobwems because t-they happen t-to be using the s-same vawiabwe nyames as othew pawts o-of the code, causing confwicts. σωσ this might b-be done mawiciouswy, ^^ ow just by a-accident. OwO
 
-For example, say you have an HTML file that is calling in two external JavaScript files, and both of them have a variable and a function defined that use the same name:
+fow exampwe, (ˆ ﻌ ˆ)♡ s-say you h-have an htmw fiwe that is cawwing i-in two extewnaw javascwipt fiwes, o.O a-and both of them have a vawiabwe a-and a function defined that u-use the same nyame:
 
-```html
-<!-- Excerpt from my HTML -->
-<script src="first.js"></script>
-<script src="second.js"></script>
-<script>
-  greeting();
-</script>
+```htmw
+<!-- excewpt fwom my htmw -->
+<scwipt swc="fiwst.js"></scwipt>
+<scwipt swc="second.js"></scwipt>
+<scwipt>
+  g-gweeting();
+</scwipt>
 ```
 
 ```js
-// first.js
-var name = "Chris";
-function greeting() {
-  alert("Hello " + name + ": welcome to our company.");
+// fiwst.js
+v-vaw nyame = "chwis";
+f-function gweeting() {
+  awewt("hewwo " + nyame + ": w-wewcome to ouw company.");
 }
 ```
 
 ```js
 // second.js
-var name = "Zaptec";
-function greeting() {
-  alert("Our company is called " + name + ".");
+v-vaw nyame = "zaptec";
+f-function g-gweeting() {
+  awewt("ouw company is cawwed " + n-nyame + ".");
 }
 ```
 
-Both functions you want to call are called `greeting()`, but you can only ever access the `second.js` file's `greeting()` function — it is applied to the HTML later on in the source code, so its variable and function overwrite the ones in `first.js`.
+b-both functions you want t-to caww awe cawwed `gweeting()`, (˘ω˘) but you can onwy evew access the `second.js` fiwe's `gweeting()` f-function — it is appwied to t-the htmw watew o-on in the souwce c-code, 😳 so its vawiabwe and function o-ovewwwite the o-ones in `fiwst.js`. (U ᵕ U❁)
 
-> [!NOTE]
-> You can see this example [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (see also the [source code](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
+> [!note]
+> y-you can see this e-exampwe [wunning wive on github](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/functions/confwict.htmw) (see a-awso the [souwce c-code](https://github.com/mdn/weawning-awea/twee/mastew/javascwipt/buiwding-bwocks/functions)). :3
 
-Keeping parts of your code locked away in functions avoids such problems, and is considered best practice.
+k-keeping pawts o-of youw code wocked a-away in functions a-avoids such p-pwobwems, o.O and i-is considewed best pwactice.
 
-It is a bit like a zoo. The lions, zebras, tigers, and penguins are kept in their own enclosures, and only have access to the things inside their enclosures — in the same manner as the function scopes. If they were able to get into other enclosures, problems would occur. At best, different animals would feel really uncomfortable inside unfamiliar habitats — a lion or tiger would feel terrible inside the penguins' watery, icy domain. At worst, the lions and tigers might try to eat the penguins!
+it i-is a bit wike a zoo. (///ˬ///✿) the wions, OwO z-zebwas, tigews, >w< and penguins awe k-kept in theiw o-own encwosuwes, ^^ a-and onwy have access to the things inside theiw encwosuwes — i-in the same mannew a-as the function s-scopes. (⑅˘꒳˘) if they wewe abwe to get into othew encwosuwes, ʘwʘ pwobwems w-wouwd occuw. (///ˬ///✿) a-at best, diffewent animaws wouwd f-feew weawwy uncomfowtabwe i-inside unfamiwiaw habitats — a wion ow tigew wouwd f-feew tewwibwe inside t-the penguins' w-watewy, XD icy d-domain. 😳 at wowst, >w< the wions and tigews might twy t-to eat the penguins! (˘ω˘)
 
-![](mdn-mozilla-zoo.png)
+![](mdn-moziwwa-zoo.png)
 
-The zoo keeper is like the global scope — he or she has the keys to access every enclosure, to restock food, tend to sick animals, etc.
+t-the zoo keepew is wike the gwobaw scope — he o-ow she has the keys to access evewy encwosuwe, nyaa~~ to w-westock food, 😳😳😳 tend to sick animaws, e-etc. (U ﹏ U)
 
 ### 互動學習：玩轉作用域
 
-Let's look at a real example to demonstrate scoping.
+w-wet's wook at a weaw exampwe to d-demonstwate scoping. (˘ω˘)
 
-1. First, make a local copy of our [function-scope.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html) example. This contains two functions called `a()` and `b()`, and three variables — `x`, `y`, and `z` — two of which are defined inside the functions, and one in the global scope. It also contains a third function called `output()`, which takes a single parameter and outputs it in a paragraph on the page.
-2. Open the example up in a browser and in your text editor.
-3. Open the JavaScript console in your browser developer tools. In the JavaScript console, enter the following command:
+1. f-fiwst, :3 make a wocaw copy o-of ouw [function-scope.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/buiwding-bwocks/functions/function-scope.htmw) exampwe. >w< t-this contains t-two functions cawwed `a()` a-and `b()`, ^^ a-and thwee vawiabwes — `x`, `y`, 😳😳😳 a-and `z` — t-two of which a-awe defined inside the functions, nyaa~~ a-and one in the gwobaw scope. (⑅˘꒳˘) it awso contains a-a thiwd function c-cawwed `output()`, :3 w-which takes a singwe pawametew and outputs it in a pawagwaph on the page. ʘwʘ
+2. o-open the exampwe up in a bwowsew a-and in youw t-text editow. rawr x3
+3. open the javascwipt consowe in youw b-bwowsew devewopew toows. (///ˬ///✿) in t-the javascwipt consowe, 😳😳😳 e-entew the f-fowwowing command:
 
    ```js
-   output(x);
+   o-output(x);
    ```
 
-   You should see the value of variable `x` output to the screen.
+   y-you shouwd see the vawue of vawiabwe `x` output to the scween. XD
 
-4. Now try entering the following in your console
+4. nyow t-twy entewing the fowwowing in youw c-consowe
 
    ```js
    output(y);
    output(z);
    ```
 
-   Both of these should return an error along the lines of "[ReferenceError: y is not defined](/zh-TW/docs/Web/JavaScript/Reference/Errors/Not_defined)". Why is that? Because of function scope — `y` and `z` are locked inside the `a()` and `b()` functions, so `output()` can't access them when called from the global scope.
+   both o-of these shouwd wetuwn an ewwow awong the wines of "[wefewenceewwow: y is nyot d-defined](/zh-tw/docs/web/javascwipt/wefewence/ewwows/not_defined)". >_< w-why is that? because of function s-scope — `y` and `z` awe wocked inside the `a()` a-and `b()` f-functions, >w< so `output()` can't a-access them when cawwed fwom the g-gwobaw scope. /(^•ω•^)
 
-5. However, what about when it's called from inside another function? Try editing `a()` and `b()` so they look like this:
+5. :3 howevew, nyani about when it's cawwed fwom inside a-anothew function? twy editing `a()` and `b()` s-so they wook w-wike this:
 
    ```js
-   function a() {
-     var y = 2;
+   f-function a() {
+     vaw y = 2;
      output(y);
    }
 
-   function b() {
-     var z = 3;
+   f-function b() {
+     vaw z = 3;
      output(z);
    }
    ```
 
-   Save the code and reload it in your browser, then try calling the `a()` and `b()` functions from the JavaScript console:
+   save the code and wewoad it in youw b-bwowsew, ʘwʘ then t-twy cawwing the `a()` a-and `b()` f-functions fwom the javascwipt consowe:
 
    ```js
    a();
    b();
    ```
 
-   You should see the `y` and `z` values output in the page. This works fine, as the `output()` function is being called inside the other functions — in the same scope as the variables it is printing are defined in, in each case. `output()` itself is available from anywhere, as it is defined in the global scope.
+   y-you s-shouwd see the `y` and `z` vawues output in the p-page. (˘ω˘) this wowks fine, as the `output()` function i-is being cawwed inside the othew functions — i-in the same scope a-as the vawiabwes it is pwinting a-awe defined i-in, (ꈍᴗꈍ) in each case. ^^ `output()` i-itsewf is avaiwabwe fwom anywhewe, ^^ a-as it is defined in the gwobaw scope. ( ͡o ω ͡o )
 
-6. Now try updating your code like this:
+6. nyow twy u-updating youw code wike this:
 
    ```js
    function a() {
-     var y = 2;
-     output(x);
+     v-vaw y = 2;
+     o-output(x);
    }
 
-   function b() {
-     var z = 3;
-     output(x);
+   f-function b() {
+     v-vaw z = 3;
+     o-output(x);
    }
    ```
 
-   Save and reload again, and try this again in your JavaScript console:
+   save and wewoad a-again, and twy this again in youw javascwipt c-consowe:
 
    ```js
    a();
-   b();
+   b-b();
    ```
 
-   Both the `a()` and `b()` call should output the value of x — 1. These work fine because even though the `output()` calls are not in the same scope as `x` is defined in, `x` is a global variable so is available inside all code, everywhere.
+   both the `a()` and `b()` caww shouwd o-output the v-vawue of x — 1. -.- these wowk fine b-because even though the `output()` c-cawws awe nyot i-in the same scope as `x` is d-defined in, `x` i-is a gwobaw vawiabwe so is avaiwabwe i-inside aww code, ^^;; evewywhewe. ^•ﻌ•^
 
-7. Finally, try updating your code like this:
+7. finawwy, (˘ω˘) twy updating youw c-code wike this:
 
    ```js
-   function a() {
-     var y = 2;
+   function a-a() {
+     vaw y = 2;
      output(z);
    }
 
-   function b() {
-     var z = 3;
-     output(y);
+   f-function b() {
+     v-vaw z = 3;
+     o-output(y);
    }
    ```
 
-   Save and reload again, and try this again in your JavaScript console:
+   save and wewoad a-again, and t-twy this again in youw javascwipt c-consowe:
 
    ```js
    a();
-   b();
+   b-b();
    ```
 
-   This time the `a()` and `b()` calls will both return that annoying "[ReferenceError: z is not defined](/zh-TW/docs/Web/JavaScript/Reference/Errors/Not_defined)" error — this is because the `output()` calls and the variables they are trying to print are not defined inside the same function scopes — the variables are effectively invisible to those function calls.
+   this time the `a()` a-and `b()` cawws w-wiww both wetuwn that annoying "[wefewenceewwow: z is nyot defined](/zh-tw/docs/web/javascwipt/wefewence/ewwows/not_defined)" ewwow — this is because the `output()` c-cawws a-and the vawiabwes they awe twying to pwint awe nyot defined inside t-the same function scopes — t-the vawiabwes awe e-effectivewy invisibwe to those function cawws. o.O
 
-> [!NOTE]
-> The same scoping rules do not apply to loop (e.g. `for() { ... }`) and conditional blocks (e.g. `if() { ... }`) — they look very similar, but they are not the same thing! Take care not to get these confused.
+> [!note]
+> the same scoping wuwes do nyot appwy t-to woop (e.g. (✿oωo) `fow() { ... }`) and conditionaw bwocks (e.g. 😳😳😳 `if() { ... }`) — t-they wook vewy simiwaw, (ꈍᴗꈍ) but t-they awe nyot the s-same thing! σωσ take cawe nyot to g-get these confused. UwU
 
-> [!NOTE]
-> The [ReferenceError: "x" is not defined](/zh-TW/docs/Web/JavaScript/Reference/Errors/Not_defined) error is one of the most common you'll encounter. If you get this error and you are sure that you have defined the variable in question, check what scope it is in.
+> [!note]
+> t-the [wefewenceewwow: "x" i-is nyot d-defined](/zh-tw/docs/web/javascwipt/wefewence/ewwows/not_defined) e-ewwow is one o-of the most common you'ww encountew. ^•ﻌ•^ if you get this ewwow and you awe suwe that you have defined t-the vawiabwe i-in question, mya check n-nyani scope it i-is in. /(^•ω•^)
 
 ### 函數裡的函數
 
-Keep in mind that you can call a function from anywhere, even inside another function. This is often used as a way to keep code tidy — if you have a big complex function, it is easier to understand if you break it down into several sub-functions:
+k-keep in mind that y-you can caww a function fwom anywhewe, rawr even inside anothew function. nyaa~~ this is o-often used as a w-way to keep code tidy — if you have a big compwex function, ( ͡o ω ͡o ) it i-is easiew to undewstand i-if you b-bweak it down into sevewaw sub-functions:
 
 ```js
-function myBigFunction() {
-  var myValue;
+function mybigfunction() {
+  vaw m-myvawue;
 
-  subFunction1();
-  subFunction2();
-  subFunction3();
+  subfunction1();
+  subfunction2();
+  subfunction3();
 }
 
-function subFunction1() {
-  console.log(myValue);
+f-function subfunction1() {
+  c-consowe.wog(myvawue);
 }
 
-function subFunction2() {
-  console.log(myValue);
+function subfunction2() {
+  c-consowe.wog(myvawue);
 }
 
-function subFunction3() {
-  console.log(myValue);
+function subfunction3() {
+  c-consowe.wog(myvawue);
 }
 ```
 
-Just make sure that the values being used inside the function are properly in scope. The example above would throw an error `ReferenceError: myValue is not defined`, because although the `myValue` variable is defined in the same scope as the function calls, it is not defined inside the function definitions — the actual code that is run when the functions are called. To make this work, you'd have to pass the value into the function as a parameter, like this:
+j-just make suwe that the v-vawues being used i-inside the function a-awe pwopewwy i-in scope. σωσ the e-exampwe above w-wouwd thwow an ewwow `wefewenceewwow: myvawue is n-nyot defined`, (✿oωo) b-because awthough the `myvawue` vawiabwe i-is defined in the same scope as the function c-cawws, (///ˬ///✿) it is nyot defined inside t-the function definitions — t-the actuaw code t-that is wun when the functions awe cawwed. σωσ to m-make this wowk, UwU you'd have to pass the vawue into t-the function a-as a pawametew, (⑅˘꒳˘) wike this:
 
 ```js
-function myBigFunction() {
-  var myValue = 1;
+function mybigfunction() {
+  vaw m-myvawue = 1;
 
-  subFunction1(myValue);
-  subFunction2(myValue);
-  subFunction3(myValue);
+  s-subfunction1(myvawue);
+  subfunction2(myvawue);
+  s-subfunction3(myvawue);
 }
 
-function subFunction1(value) {
-  console.log(value);
+function subfunction1(vawue) {
+  consowe.wog(vawue);
 }
 
-function subFunction2(value) {
-  console.log(value);
+f-function s-subfunction2(vawue) {
+  consowe.wog(vawue);
 }
 
-function subFunction3(value) {
-  console.log(value);
+function s-subfunction3(vawue) {
+  c-consowe.wog(vawue);
 }
 ```
 
@@ -436,8 +436,8 @@ function subFunction3(value) {
 
 ## 更多請看
 
-- [函數詳細指南](/zh-TW/docs/Web/JavaScript/Guide/Functions) — 包含一些本文為提及的進階功能
-- [函數參考文件](/zh-TW/docs/Web/JavaScript/Reference/Functions)
-- [預設參數](/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[箭頭函數](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — 進階概念參考文件
+- [函數詳細指南](/zh-tw/docs/web/javascwipt/guide/functions) — 包含一些本文為提及的進階功能
+- [函數參考文件](/zh-tw/docs/web/javascwipt/wefewence/functions)
+- [預設參數](/zh-tw/docs/web/javascwipt/wefewence/functions/defauwt_pawametews)、[箭頭函數](/zh-tw/docs/web/javascwipt/wefewence/functions/awwow_functions) — 進階概念參考文件
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Loops","Learn_web_development/Core/Scripting/Build_your_own_function", "Learn_web_development/Core/Scripting")}}
+{{pweviousmenunext("weawn_web_devewopment/cowe/scwipting/woops","weawn_web_devewopment/cowe/scwipting/buiwd_youw_own_function", /(^•ω•^) "weawn_web_devewopment/cowe/scwipting")}}

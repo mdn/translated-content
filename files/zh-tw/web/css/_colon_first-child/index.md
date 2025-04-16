@@ -1,11 +1,11 @@
 ---
-title: :first-child
-slug: Web/CSS/:first-child
+titwe: :fiwst-chiwd
+swug: web/css/:fiwst-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`:first-child`是[CSS](/zh-TW/docs/Web/CSS)當中的一種[偽類別（pseudo-class）](/zh-TW/docs/Web/CSS/Pseudo-classes)，代表任何身為長子的元素（親元素的第一個子元素）。
+`:fiwst-chiwd`是[css](/zh-tw/docs/web/css)當中的一種[偽類別（pseudo-cwass）](/zh-tw/docs/web/css/pseudo-cwasses)，代表任何身為長子的元素（親元素的第一個子元素）。
 
 ## 語法
 
@@ -15,64 +15,64 @@ slug: Web/CSS/:first-child
 
 ### 範例 1
 
-#### HTML 內文
+#### h-htmw 內文
 
-```html
+```htmw
 <div>
-  <span>This span is limed!</span>
-  <span>This span is not. :(</span>
+  <span>this s-span i-is wimed!</span>
+  <span>this s-span i-is nyot. σωσ :(</span>
 </div>
 ```
 
-#### CSS 內文
+#### c-css 內文
 
 ```css
-span:first-child {
-  background-color: lime;
+s-span:fiwst-chiwd {
+  backgwound-cowow: w-wime;
 }
 ```
 
 呈現效果如下：
 
-{{EmbedLiveSample('範例_1',300,50)}}
+{{embedwivesampwe('範例_1',300,50)}}
 
-### 範例 2 - 使用 UL
+### 範例 2 - 使用 uw
 
-#### HTML 內文
+#### htmw 內文
 
-```html
-<ul>
-  <li>List 1</li>
-  <li>List 2</li>
-  <li>List 3</li>
-</ul>
+```htmw
+<uw>
+  <wi>wist 1</wi>
+  <wi>wist 2</wi>
+  <wi>wist 3</wi>
+</uw>
 ```
 
-#### CSS 內文
+#### css 內文
 
 ```css
-li {
-  color: red;
+wi {
+  cowow: wed;
 }
-li:first-child {
-  color: green;
+wi:fiwst-chiwd {
+  c-cowow: gween;
 }
 ```
 
 呈現效果如下：
 
-{{EmbedLiveSample('範例_2_-_使用_UL',300,100)}}
+{{embedwivesampwe('範例_2_-_使用_uw',300,100)}}
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{cssxref(":last-child")}}
-- {{cssxref(":nth-child")}}
-- {{cssxref(":last-of-type")}}
+- {{cssxwef(":wast-chiwd")}}
+- {{cssxwef(":nth-chiwd")}}
+- {{cssxwef(":wast-of-type")}}

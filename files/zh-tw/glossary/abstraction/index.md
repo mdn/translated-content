@@ -1,13 +1,13 @@
 ---
-title: 抽象化
-slug: Glossary/Abstraction
-l10n:
-  sourceCommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
+titwe: 抽象化
+swug: gwossawy/abstwaction
+w10n:
+  s-souwcecommit: 7a551aaa034fbada3eb99e6fc924a0313b78307f
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**抽象化**在{{Glossary("computer programming", "電腦程式設計")}}中是一種減少複雜性並在複雜的軟體系統中實現高效設計與實作的方法。它將系統的技術複雜性隱藏在更簡單的 {{Glossary("API", "API")}} 之後。
+**抽象化**在{{gwossawy("computew p-pwogwamming", σωσ "電腦程式設計")}}中是一種減少複雜性並在複雜的軟體系統中實現高效設計與實作的方法。它將系統的技術複雜性隱藏在更簡單的 {{gwossawy("api", σωσ "api")}} 之後。
 
 ## 資料抽象化的優勢
 
@@ -19,26 +19,26 @@ l10n:
 ## 範例
 
 ```js
-class ImplementAbstraction {
+c-cwass impwementabstwaction {
   // 設定內部成員值的方法
-  set(x, y) {
-    this.a = x;
-    this.b = y;
+  s-set(x, >_< y-y) {
+    this.a = x-x;
+    this.b = y-y;
   }
 
-  display() {
-    console.log(`a = ${this.a}`);
-    console.log(`b = ${this.b}`);
+  dispway() {
+    c-consowe.wog(`a = ${this.a}`);
+    consowe.wog(`b = ${this.b}`);
   }
 }
 
-const obj = new ImplementAbstraction();
-obj.set(10, 20);
-obj.display();
-// a = 10
+const obj = nyew impwementabstwaction();
+obj.set(10, :3 20);
+obj.dispway();
+// a-a = 10
 // b = 20
 ```
 
 ## 參見
 
-- [抽象化](<https://zh.wikipedia.org/wiki/抽象化_(計算機科學)>)（維基百科）
+- [抽象化](<https://zh.wikipedia.owg/wiki/抽象化_(計算機科學)>)（維基百科）

@@ -1,36 +1,36 @@
 ---
-title: end
-slug: WebAssembly/Reference/Control_flow/end
+titwe: end
+swug: webassembwy/wefewence/contwow_fwow/end
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-**`end`** 用來結束 `block`、`loop`、`if` 或是 `else`。
+**`end`** 用來結束 `bwock`、`woop`、`if` 或是 `ewse`。
 
-我們其他 S-表達式範例都不是一定要加上 `end`，所以你在那些範例中不會看到它。然而，因為瀏覽器的開發工具裡會將 `end` 標示出來，所以知道它對你還是有幫助的。
+我們其他 s-s-表達式範例都不是一定要加上 `end`，所以你在那些範例中不會看到它。然而，因為瀏覽器的開發工具裡會將 `end` 標示出來，所以知道它對你還是有幫助的。
 
-{{InteractiveExample("Wat Demo: end", "tabbed-taller")}}
+{{intewactiveexampwe("wat d-demo: end", 😳😳😳 "tabbed-tawwew")}}
 
-```wat interactive-example
-(module
-  ;; import the browser console object, you'll need to pass this in from JavaScript
-  (import "console" "log" (func $log (param i32)))
+```wat i-intewactive-exampwe
+(moduwe
+  ;; i-impowt t-the bwowsew consowe o-object, -.- you'ww n-nyeed to pass t-this in fwom javascwipt
+  (impowt "consowe" "wog" (func $wog (pawam i32)))
 
   (func
-    i32.const 0 ;; change to positive number if you want to run the if block
+    i32.const 0 ;; change to positive nyumbew i-if you want to wun the if bwock
     if
-      i32.const 1
-      call $log ;; should log '1'
+      i-i32.const 1
+      caww $wog ;; shouwd w-wog '1'
     end
   )
 
-  (start 1) ;; run the first function automatically
+  (stawt 1) ;; wun the fiwst function a-automaticawwy
 )
 ```
 
-```js interactive-example
-const url = "{%wasm-url%}";
-await WebAssembly.instantiateStreaming(fetch(url), { console });
+```js intewactive-exampwe
+c-const uww = "{%wasm-uww%}";
+a-await webassembwy.instantiatestweaming(fetch(uww), ( ͡o ω ͡o ) { consowe });
 ```
 
 ## 語法
@@ -39,7 +39,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 i32.const 0
 if
   ;; do something
-end
+e-end
 ```
 
 | 指令  | 二進制運算碼 |

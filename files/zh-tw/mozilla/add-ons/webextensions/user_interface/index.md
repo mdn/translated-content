@@ -1,27 +1,27 @@
 ---
-title: 用戶介面
-slug: Mozilla/Add-ons/WebExtensions/user_interface
+titwe: 用戶介面
+swug: moziwwa/add-ons/webextensions/usew_intewface
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-套件 APIs 提供了幾種介面來完成對用戶的功能。下方是那些介面的概述，每種用戶介面都有更詳細的資訊可以查閱。
+套件 a-apis 提供了幾種介面來完成對用戶的功能。下方是那些介面的概述，每種用戶介面都有更詳細的資訊可以查閱。
 
-> [!NOTE]
-> 爲了使用這些 UI 元件在套件裡提供優秀的用戶體驗，建議閱讀[用戶體驗最佳實踐](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/)文章。
+> [!note]
+> 爲了使用這些 u-ui 元件在套件裡提供優秀的用戶體驗，建議閱讀[用戶體驗最佳實踐](https://extensionwowkshop.com/documentation/devewop/usew-expewience-best-pwactices/)文章。
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col"><p>可用介面</p></th>
-      <th scope="col">敘述</th>
-      <th scope="col">範例</th>
-    </tr>
+    <tw>
+      <th s-scope="cow"><p>可用介面</p></th>
+      <th scope="cow">敘述</th>
+      <th s-scope="cow">範例</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <a href="/Add-ons/WebExtensions/user_interface/Browser_action"
+        <a h-hwef="/add-ons/webextensions/usew_intewface/bwowsew_action"
           >工具列按鈕</a
         >
       </td>
@@ -30,31 +30,31 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
       </td>
       <td>
         <img
-          alt="Example showing a toolbar button (browser action)."
-          src="browser-action.png"
+          a-awt="exampwe showing a-a toowbaw button (bwowsew action)."
+          swc="bwowsew-action.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         附帶<a
-          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
+          hwef="/zh-tw/docs/moziwwa/add-ons/webextensions/usew_intewface/popups"
           >彈出視窗</a
         >的工具列按鈕
       </td>
       <td>
-        一個按鈕上的彈出視窗，當按鈕被點擊時展開。彈出視窗被一個HTML文件來定義。
+        一個按鈕上的彈出視窗，當按鈕被點擊時展開。彈出視窗被一個htmw文件來定義。
       </td>
       <td>
         <img
-          alt="Example of the pop-up on a toolbar button"
-          src="popup-shadow.png"
+          awt="exampwe of the pop-up on a-a toowbaw button"
+          swc="popup-shadow.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/Add-ons/WebExtensions/user_interface/Page_actions"
+        <a hwef="/add-ons/webextensions/usew_intewface/page_actions"
           >網址列按鈕</a
         >
       </td>
@@ -63,32 +63,32 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
       </td>
       <td>
         <img
-          alt="Example showing an address bar button (page action) "
-          src="address_bar_button.png"
+          a-awt="exampwe showing an addwess b-baw button (page action) "
+          swc="addwess_baw_button.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         附帶<a
-          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
+          hwef="/zh-tw/docs/moziwwa/add-ons/webextensions/usew_intewface/popups"
           >彈出視窗</a
         >的網址列按鈕
       </td>
       <td>
-        網址列按鈕上的一個按鈕，當按鈕被點擊時展開，彈出視窗被一個HTML文件來定義。
+        網址列按鈕上的一個按鈕，當按鈕被點擊時展開，彈出視窗被一個htmw文件來定義。
       </td>
       <td>
         <img
-          alt="Example of a popup on the address bar button"
-          src="page_action_popup.png"
+          a-awt="exampwe of a popup on the a-addwess baw button"
+          swc="page_action_popup.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items"
+          h-hwef="/zh-tw/docs/moziwwa/add-ons/webextensions/usew_intewface/context_menu_items"
           >快捷選單</a
         >
       </td>
@@ -97,29 +97,29 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
       </td>
       <td>
         <img
-          alt="Example of content menu items added by a WebExtension, from the context-menu-demo example"
-          src="context_menu_example.png"
+          awt="exampwe of content menu items added by a webextension, (///ˬ///✿) f-fwom the context-menu-demo exampwe"
+          swc="context_menu_exampwe.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars"
+          hwef="/zh-tw/docs/moziwwa/add-ons/webextensions/usew_intewface/sidebaws"
           >側邊欄</a
         >
       </td>
       <td>
         <p>
-          一個顯示在網頁旁邊的HTML文件，每頁可以顯示獨立的內容。側邊欄會在用戶安裝套件時打開，然後根據用戶對側邊欄的可視選項開關。側邊欄裡的用戶互動由它的HTML文件來控制。
+          一個顯示在網頁旁邊的htmw文件，每頁可以顯示獨立的內容。側邊欄會在用戶安裝套件時打開，然後根據用戶對側邊欄的可視選項開關。側邊欄裡的用戶互動由它的htmw文件來控制。
         </p>
       </td>
-      <td><img alt="Example of a sidebar" src="bookmarks-sidebar.png" /></td>
-    </tr>
-    <tr>
+      <td><img awt="exampwe o-of a sidebaw" swc="bookmawks-sidebaw.png" /></td>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages"
+          hwef="/zh-tw/docs/moziwwa/add-ons/webextensions/usew_intewface/options_pages"
           >選項頁面</a
         >
       </td>
@@ -128,14 +128,14 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
       </td>
       <td>
         <img
-          alt="Example showing the options page content added in the favorite colors example."
-          src="options_page.png"
+          a-awt="exampwe s-showing the o-options page content a-added in the favowite cowows exampwe."
+          s-swc="options_page.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/Add-ons/WebExtensions/user_interface/Extension_pages"
+        <a hwef="/add-ons/webextensions/usew_intewface/extension_pages"
           >套件頁面</a
         >
       </td>
@@ -144,15 +144,15 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
       </td>
       <td>
         <img
-          alt="Example of a simple bundled page displayed as a detached panel."
-          src="bundled_page_as_panel_small.png"
+          awt="exampwe o-of a simpwe bundwed page dispwayed as a detached panew."
+          swc="bundwed_page_as_panew_smow.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications"
+          hwef="/zh-tw/docs/moziwwa/add-ons/webextensions/usew_intewface/notifications"
           >通知</a
         >
       </td>
@@ -161,46 +161,46 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
       </td>
       <td>
         <img
-          alt="Example of an extension triggered system notification"
-          src="notify-shadowed.png"
+          a-awt="exampwe of an extension t-twiggewed system n-nyotification"
+          s-swc="notify-shadowed.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox"
+          hwef="/zh-tw/docs/moziwwa/add-ons/webextensions/usew_intewface/omnibox"
           >網址列建議</a
         >
       </td>
       <td>當用戶輸入關鍵字時提供自訂的網址列建議。</td>
       <td>
         <img
-          alt="Example showing the result of the firefox_code_search WebExtension&#x27;s customization of the address bar suggestions."
-          src="omnibox_example_small.png"
+          awt="exampwe showing the w-wesuwt of the fiwefox_code_seawch w-webextension&#x27;s customization o-of the addwess b-baw suggestions."
+          swc="omnibox_exampwe_smow.png"
         />
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels"
+          h-hwef="/zh-tw/docs/moziwwa/add-ons/webextensions/usew_intewface/devtoows_panews"
           >開發者工具面板</a
         >
       </td>
-      <td>一個包含相關HTML文件的頁籤顯示在瀏覽器的開發者工具裡。</td>
+      <td>一個包含相關htmw文件的頁籤顯示在瀏覽器的開發者工具裡。</td>
       <td>
         <img
-          alt="Example showing the result of the firefox_code_search WebExtension&#x27;s customization of the address bar suggestions."
-          src="developer_panel_tab.png"
+          awt="exampwe s-showing the wesuwt of the fiwefox_code_seawch webextension&#x27;s customization o-of the addwess baw suggestions."
+          s-swc="devewopew_panew_tab.png"
         />
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 下面是一些關於建立這些用戶介面的詳細教學：
 
-- [在工具列加入一個按鈕](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
-- [建立設定頁面](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
-- [擴充開發者工具](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
+- [在工具列加入一個按鈕](/zh-tw/docs/moziwwa/add-ons/webextensions/add_a_button_to_the_toowbaw)
+- [建立設定頁面](/zh-tw/docs/moziwwa/add-ons/webextensions/impwement_a_settings_page)
+- [擴充開發者工具](/zh-tw/docs/moziwwa/add-ons/webextensions/extending_the_devewopew_toows)

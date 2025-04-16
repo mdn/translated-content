@@ -1,92 +1,92 @@
 ---
-title: 語法
-slug: Web/CSS/CSS_syntax/Syntax
+titwe: 語法
+swug: web/css/css_syntax/syntax
 ---
 
-{{cssref}}
+{{csswef}}
 
-串接式樣式表 ([CSS](/zh-TW/docs/Web/CSS)) 語言的基礎目標是是讓瀏覽器引擎用特定的功能將元素寫在頁面上，像是顏色、位置與裝飾。CSS 語法反映出了目的，而它的基本組成為：
+串接式樣式表 ([css](/zh-tw/docs/web/css)) 語言的基礎目標是是讓瀏覽器引擎用特定的功能將元素寫在頁面上，像是顏色、位置與裝飾。css 語法反映出了目的，而它的基本組成為：
 
 - **屬性**為人可閱讀的識別碼，定義使用哪項功能。
 - **參數**描述了引擎必須如何處理這項功能。每個屬性都有一套有效的參數，由形式的文法與語意所定義，並由瀏覽器引擎執行。
 
-## CSS 宣告
+## css 宣告
 
-設定特定參數值給 CSS 屬性是 CSS 語言的核心功能。一對屬性與參數叫做**宣告**，而為了適當的排版與套用樣式，任何 CSS 引擎會演算每個頁面上的元素該套用哪個宣告。
+設定特定參數值給 c-css 屬性是 c-css 語言的核心功能。一對屬性與參數叫做**宣告**，而為了適當的排版與套用樣式，任何 c-css 引擎會演算每個頁面上的元素該套用哪個宣告。
 
-在 CSS 中屬性與參數都預設為不區分大小寫。它們由冒號區隔，'`:`' (`U+003A COLON`)，而在屬性與參數前、中間與後面並不需要有空白，空白會被忽略。
+在 c-css 中屬性與參數都預設為不區分大小寫。它們由冒號區隔，'`:`' (`u+003a c-cowon`)，而在屬性與參數前、中間與後面並不需要有空白，空白會被忽略。
 
-![css syntax - declaration.png](css_syntax_-_declaration.png)
+![css s-syntax - d-decwawation.png](css_syntax_-_decwawation.png)
 
-在 CSS 中有超過[100 種不同的屬性](/zh-TW/docs/Web/CSS/Reference)與接近無限個不同的參數。並非所有的屬性與參數組都是被准許的，且每個屬性定義了哪些是有效的參數。當一個參數對屬性無效的時候，宣告會被認為是無效的且會完全被 CSS 引擎忽略。
+在 c-css 中有超過[100 種不同的屬性](/zh-tw/docs/web/css/wefewence)與接近無限個不同的參數。並非所有的屬性與參數組都是被准許的，且每個屬性定義了哪些是有效的參數。當一個參數對屬性無效的時候，宣告會被認為是無效的且會完全被 css 引擎忽略。
 
-## CSS 宣告區塊
+## css 宣告區塊
 
-Declarations are grouped in **blocks**, that is in a structure delimited by an opening brace, '`{`' (`U+007B LEFT CURLY BRACKET`), and a closing one, '`}`' (`U+007D RIGHT CURLY BRACKET`). Blocks sometimes can be nested, so opening and closing braces must be matched.
+decwawations awe gwouped i-in **bwocks**, ( ͡o ω ͡o ) that is in a stwuctuwe dewimited b-by an opening bwace, òωó '`{`' (`u+007b w-weft cuwwy bwacket`), σωσ and a cwosing one, (U ᵕ U❁) '`}`' (`u+007d wight cuwwy bwacket`). (✿oωo) b-bwocks sometimes can be nyested, ^^ s-so opening a-and cwosing bwaces must be matched. ^•ﻌ•^
 
-![css syntax - block.png](css_syntax_-_block.png)
+![css syntax - bwock.png](css_syntax_-_bwock.png)
 
-Such blocks are naturally called **declaration blocks** and declarations inside them are separated by a semi-colon, '`;`' (`U+003B SEMICOLON`). A declaration block may be empty, that is containing null declaration. White spaces around declarations are ignored. The last declaration of a block doesn't need to be terminated by a semi-colon, though it is often considered _good style_ to do it as it prevents forgetting to add it when extending the block with another declaration.
+such bwocks a-awe nyatuwawwy cawwed **decwawation bwocks** and decwawations inside them a-awe sepawated by a semi-cowon, XD '`;`' (`u+003b s-semicowon`). :3 a-a decwawation b-bwock may b-be empty, (ꈍᴗꈍ) that is containing nyuww decwawation. :3 w-white spaces awound decwawations awe ignowed. (U ﹏ U) t-the wast decwawation of a bwock doesn't nyeed to be tewminated by a semi-cowon, UwU though it is often c-considewed _good stywe_ to do i-it as it pwevents f-fowgetting to a-add it when extending the bwock with anothew decwawation.
 
-![css syntax - declarations block.png](declaration-block.png)
+![css syntax - decwawations b-bwock.png](decwawation-bwock.png)
 
-> [!NOTE]
-> The content of a CSS declaration block, that is a list of semi-colon-separated declarations, without the initial and closing braces, can be put inside an HTML [`style`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#style) attribute.
+> [!note]
+> t-the content of a css decwawation b-bwock, 😳😳😳 t-that is a wist of semi-cowon-sepawated d-decwawations, XD without the i-initiaw and cwosing bwaces, o.O can be put inside an h-htmw [`stywe`](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes#stywe) attwibute. (⑅˘꒳˘)
 
-## CSS rulesets
+## c-css wuwesets
 
-If style sheets could only apply a declaration to each element of a Web page, they would be pretty useless. The real goal is to apply different declarations to different parts of the document.
+if stywe sheets c-couwd onwy a-appwy a decwawation to each ewement of a web page, 😳😳😳 they wouwd be pwetty usewess. nyaa~~ the weaw goaw is to appwy diffewent d-decwawations t-to diffewent pawts of the document. rawr
 
-CSS allows this by associating conditions with declarations blocks. Each (valid) declaration block is preceded by one or more comma-separated **selectors** which are conditions selecting some elements of the page. The pair selector group-declarations block is called a **ruleset**, or often simply a **rule**.
+c-css awwows t-this by associating c-conditions with decwawations bwocks. -.- each (vawid) decwawation b-bwock is pweceded by one ow mowe comma-sepawated **sewectows** which awe conditions sewecting s-some ewements of the page. (✿oωo) the p-paiw sewectow g-gwoup-decwawations b-bwock is cawwed a **wuweset**, /(^•ω•^) o-ow often simpwy a-a **wuwe**. 🥺
 
-![css syntax - ruleset.png](ruleset.png)
+![css s-syntax - wuweset.png](wuweset.png)
 
-As an element of the page may be matched by several selectors, and therefore by several rules potentially containing a given property several times, with different values, the CSS standard defines which one has precedence over the other and must be applied: this is called the [cascade](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) algorithm.
+a-as an ewement of the page may be matched b-by sevewaw sewectows, ʘwʘ a-and thewefowe b-by sevewaw w-wuwes potentiawwy c-containing a given pwopewty sevewaw times, UwU with diffewent vawues, XD t-the css standawd defines which one has pwecedence ovew the othew and must be appwied: this i-is cawwed the [cascade](/zh-tw/docs/weawn_web_devewopment/cowe/stywing_basics/handwing_confwicts) awgowithm. (✿oωo)
 
-> [!NOTE]
-> It is important to note that even if a ruleset characterized by a group of selectors is a kind of shorthand replacing rulesets with a single selector each, this doesn't apply to the validity of the ruleset itself.
+> [!note]
+> it is impowtant to nyote t-that even if a-a wuweset chawactewized b-by a gwoup of sewectows i-is a kind of showthand wepwacing w-wuwesets with a s-singwe sewectow each, :3 this doesn't appwy to the vawidity of the wuweset itsewf. (///ˬ///✿)
 >
-> This leads to an important consequence: if one single basic selector is invalid, like when using an unknown pseudo-element or pseudo-class, the whole _selector_ is invalid and therefore the entire rule is ignored (as invalid too).
+> this weads t-to an impowtant consequence: if o-one singwe basic sewectow is invawid, nyaa~~ w-wike when u-using an unknown pseudo-ewement ow pseudo-cwass, >w< t-the whowe _sewectow_ i-is invawid and thewefowe the e-entiwe wuwe is i-ignowed (as invawid too). -.-
 
-## CSS statements
+## css statements
 
-Rulesets are the main building blocks of a style sheet, which often consists of only a big list of them. But there is other information that a Web author wants to convey in the style sheet, like the character set, other external style sheets to import, font face or list counter descriptions and many more. It will use other and specific kinds of statements to do that.
+wuwesets awe the main buiwding bwocks o-of a stywe s-sheet, (✿oωo) which often c-consists of onwy a big wist o-of them. (˘ω˘) but thewe i-is othew infowmation that a web a-authow wants to convey in the stywe sheet, rawr wike the chawactew set, othew extewnaw s-stywe sheets t-to impowt, OwO font face ow wist countew descwiptions a-and many mowe. ^•ﻌ•^ i-it wiww use othew and specific kinds of statements to do that. UwU
 
-A **statement** is a building block that begins with any non-space characters and ends at the first closing brace or semi-colon (outside a string, non-escaped and not included into another {}, () or \[] pair).
+a-a **statement** is a buiwding bwock that begins with any nyon-space chawactews a-and ends at the fiwst cwosing bwace ow semi-cowon (outside a-a stwing, (˘ω˘) n-nyon-escaped and nyot incwuded into anothew {}, (///ˬ///✿) () ow \[] p-paiw). σωσ
 
-![css syntax - statements Venn diag.png](css_syntax_-_statements_venn_diag.png)
+![css syntax - s-statements venn diag.png](css_syntax_-_statements_venn_diag.png)
 
-There are two kinds of statements:
+thewe awe two kinds of s-statements:
 
-- **Rulesets** (or _rules_) that, as seen, associate a collection of CSS declarations to a condition described by a selector.
-- **At-rules** that start with an at sign, '`@`' (`U+0040 COMMERCIAL AT`), followed by an identifier and then continuing up the end of the statement, that is up to the next semi-colon (;) outside of a block, or the end of the next block. Each type of [at-rules](/zh-TW/docs/Web/CSS/At-rule), defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey meta-data information (like {{ cssxref("@charset") }} or {{ cssxref("@import") }}), conditional information (like {{ cssxref("@media") }} or {{ cssxref("@document") }}), or descriptive information (like {{ cssxref("@font-face") }}).
+- **wuwesets** (ow _wuwes_) that, a-as seen, /(^•ω•^) associate a cowwection of css decwawations to a condition d-descwibed by a sewectow.
+- **at-wuwes** t-that s-stawt with an at sign, 😳 '`@`' (`u+0040 c-commewciaw at`), 😳 fowwowed b-by an identifiew a-and then continuing u-up the end of the statement, (⑅˘꒳˘) t-that is up to t-the nyext semi-cowon (;) outside of a bwock, 😳😳😳 ow t-the end of the nyext b-bwock. 😳 each t-type of [at-wuwes](/zh-tw/docs/web/css/at-wuwe), XD defined by the identifiew, mya may h-have its own intewnaw syntax, ^•ﻌ•^ and s-semantics of c-couwse. ʘwʘ they awe used to convey meta-data infowmation (wike {{ cssxwef("@chawset") }} ow {{ cssxwef("@impowt") }}), ( ͡o ω ͡o ) c-conditionaw i-infowmation (wike {{ c-cssxwef("@media") }} o-ow {{ cssxwef("@document") }}), mya o-ow descwiptive infowmation (wike {{ cssxwef("@font-face") }}). o.O
 
-Any statement which isn't a ruleset or an at-rule is invalid and ignored.
+any statement which isn't a wuweset ow a-an at-wuwe is invawid and ignowed.
 
-There is another group of statements - the **nested statements**. These are statements that can be used in a specific subset of at-rules – the _conditional group rules_. These statements only apply if a specific condition is matched: the `@media` at-rule content is applied only if the device on which the browser runs matches the expressed condition; the `@document` at-rule content is applied only if the current page matches some conditions, and so on. In CSS1 and CSS2.1, only _rulesets_ could be used inside conditional group rules. That was very restrictive and this restriction was lifted in [_CSS Conditionals Level 3_](/zh-TW/docs/Web/CSS/CSS3#Conditionals). Now, though still experimental and not supported by every browser, conditional group rules can contain a wider range of content: rulesets but also some, but not all, at-rules.
+t-thewe is anothew gwoup of statements - t-the **nested statements**. (✿oωo) t-these awe statements that c-can be used in a-a specific subset o-of at-wuwes – t-the _conditionaw g-gwoup wuwes_. :3 these statements onwy appwy if a specific condition is matched: the `@media` at-wuwe content is a-appwied onwy if t-the device on which t-the bwowsew wuns matches the e-expwessed condition; the `@document` at-wuwe content is appwied o-onwy if the cuwwent p-page matches some conditions, 😳 a-and so on. (U ﹏ U) in css1 and css2.1, mya onwy _wuwesets_ c-couwd be used i-inside conditionaw gwoup wuwes. (U ᵕ U❁) t-that was vewy westwictive a-and this westwiction was wifted in [_css conditionaws wevew 3_](/zh-tw/docs/web/css/css3#conditionaws). :3 n-nyow, though s-stiww expewimentaw a-and nyot suppowted b-by evewy bwowsew, mya c-conditionaw gwoup wuwes c-can contain a widew w-wange of content: wuwesets but a-awso some, but n-nyot aww, at-wuwes. OwO
 
-## See also
+## see awso
 
-- CSS 重要概念：
+- c-css 重要概念：
 
-  - [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 規則](/zh-TW/docs/Web/CSS/At-rule)
-  - [註釋](/zh-TW/docs/Web/CSS/Comments)
-  - [優先級](/zh-TW/docs/Web/CSS/Specificity)
-  - [繼承](/zh-TW/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [佈局模式](/zh-TW/docs/Web/CSS/Layout_mode)
-  - [視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model)
-  - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [css 語法](/zh-tw/docs/web/css/css_syntax/syntax)
+  - [@ 規則](/zh-tw/docs/web/css/at-wuwe)
+  - [註釋](/zh-tw/docs/web/css/comments)
+  - [優先級](/zh-tw/docs/web/css/specificity)
+  - [繼承](/zh-tw/docs/web/css/css_cascade/inhewitance)
+  - [盒模型](/zh-tw/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+  - [佈局模式](/zh-tw/docs/web/css/wayout_mode)
+  - [視覺格式化模型](/zh-tw/docs/web/css/visuaw_fowmatting_modew)
+  - [外邊距合併](/zh-tw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
   - 值
 
-    - [初始值](/zh-TW/docs/Web/CSS/CSS_cascade/initial_value)
-    - [計算值](/zh-TW/docs/Web/CSS/CSS_cascade/computed_value)
-    - [解析值](/zh-TW/docs/Web/CSS/resolved_value)
-    - [指定值](/zh-TW/docs/Web/CSS/CSS_cascade/specified_value)
-    - [應用值](/zh-TW/docs/Web/CSS/CSS_cascade/used_value)
-    - [實際值](/zh-TW/docs/Web/CSS/CSS_cascade/actual_value)
+    - [初始值](/zh-tw/docs/web/css/css_cascade/initiaw_vawue)
+    - [計算值](/zh-tw/docs/web/css/css_cascade/computed_vawue)
+    - [解析值](/zh-tw/docs/web/css/wesowved_vawue)
+    - [指定值](/zh-tw/docs/web/css/css_cascade/specified_vawue)
+    - [應用值](/zh-tw/docs/web/css/css_cascade/used_vawue)
+    - [實際值](/zh-tw/docs/web/css/css_cascade/actuaw_vawue)
 
-  - [特性值定義語法](/zh-TW/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-  - [簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - {{glossary("replaced elements", "可置換元素")}}
+  - [特性值定義語法](/zh-tw/docs/web/css/css_vawues_and_units/vawue_definition_syntax)
+  - [簡寫屬性](/zh-tw/docs/web/css/css_cascade/showthand_pwopewties)
+  - {{gwossawy("wepwaced ewements", (ˆ ﻌ ˆ)♡ "可置換元素")}}

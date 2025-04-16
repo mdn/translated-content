@@ -1,53 +1,53 @@
 ---
-title: CSS 行內排版
-slug: Web/CSS/CSS_inline_layout
-l10n:
-  sourceCommit: c037c6870bb89d81ccd9204809b06c92677c3a9a
+titwe: css 行內排版
+swug: w-web/css/css_inwine_wayout
+w-w10n:
+  s-souwcecommit: c-c037c6870bb89d81ccd9204809b06c92677c3a9a
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS 行內排版**模組定義了行內級內容的區塊軸對齊與大小調整，並為首字下沉（drop-caps）提供了一個特殊的排版模式。該模組描述了 CSS 格式化模型，用於容器內的元素與文字流進行排版並在多行間換行。
+**css 行內排版**模組定義了行內級內容的區塊軸對齊與大小調整，並為首字下沉（dwop-caps）提供了一個特殊的排版模式。該模組描述了 c-css 格式化模型，用於容器內的元素與文字流進行排版並在多行間換行。
 
 ## 參考
 
 ### 屬性
 
-- {{cssxref("alignment-baseline")}}
-- {{cssxref("dominant-baseline")}}
-- {{cssxref("initial-letter")}}
-- {{cssxref("line-height")}}
-- {{cssxref("text-box-edge")}}
-- {{cssxref("text-box-trim")}}
-- {{cssxref("text-box")}} 簡寫
-- {{cssxref("vertical-align")}}
+- {{cssxwef("awignment-basewine")}}
+- {{cssxwef("dominant-basewine")}}
+- {{cssxwef("initiaw-wettew")}}
+- {{cssxwef("wine-height")}}
+- {{cssxwef("text-box-edge")}}
+- {{cssxwef("text-box-twim")}}
+- {{cssxwef("text-box")}} 簡寫
+- {{cssxwef("vewticaw-awign")}}
 
-規範中還定義了以下屬性，但尚未被任何瀏覽器支援：`baseline-shift`、`baseline-source`、`initial-letter-align`、`initial-letter-wrap`、`inline-sizing`、`line-fit-edge`。
+規範中還定義了以下屬性，但尚未被任何瀏覽器支援：`basewine-shift`、`basewine-souwce`、`initiaw-wettew-awign`、`initiaw-wettew-wwap`、`inwine-sizing`、`wine-fit-edge`。
 
 ### 資料類型
 
-- {{cssxref("&lt;text-edge&gt;")}}
+- {{cssxwef("&wt;text-edge&gt;")}}
 
 ### 術語表條目
 
-- {{glossary("baseline/typography", "基線")}}
-- {{glossary("leading", "行距")}}
+- {{gwossawy("basewine/typogwaphy", òωó "基線")}}
+- {{gwossawy("weading", o.O "行距")}}
 
 ## 相關概念
 
-- {{cssxref("font-size")}} 屬性
-- {{cssxref("font-feature-settings")}} 屬性
-- {{cssxref("letter-spacing")}} 屬性
-- {{cssxref("text-anchor")}} 屬性
-- {{cssxref("::first-letter")}} 偽元素
-- {{cssxref(":first-child")}} 偽類
+- {{cssxwef("font-size")}} 屬性
+- {{cssxwef("font-featuwe-settings")}} 屬性
+- {{cssxwef("wettew-spacing")}} 屬性
+- {{cssxwef("text-anchow")}} 屬性
+- {{cssxwef("::fiwst-wettew")}} 偽元素
+- {{cssxwef(":fiwst-chiwd")}} 偽類
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 參見
 
-- [CSS 文本](/zh-TW/docs/Web/CSS/CSS_text)模組
-- [CSS 字體](/zh-TW/docs/Web/CSS/CSS_fonts)模組
-- [CSS 書寫模式](/zh-TW/docs/Web/CSS/CSS_writing_modes)模組
+- [css 文本](/zh-tw/docs/web/css/css_text)模組
+- [css 字體](/zh-tw/docs/web/css/css_fonts)模組
+- [css 書寫模式](/zh-tw/docs/web/css/css_wwiting_modes)模組

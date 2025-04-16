@@ -1,61 +1,61 @@
 ---
-title: Accept-CH
-slug: Web/HTTP/Reference/Headers/Accept-CH
-l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+titwe: accept-ch
+swug: web/http/wefewence/headews/accept-ch
+w10n:
+  s-souwcecommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}
+{{httpsidebaw}}{{secuwecontext_headew}}
 
-HTTP **`Accept-CH`** {{Glossary("response header", "回應標頭")}}可以由伺服器設定，以指定用戶在後續請求中應包含哪些[用戶端提示](/zh-TW/docs/Web/HTTP/Guides/Client_hints)標頭。為了確保用戶端提示能夠可靠地傳送，應該對所有安全請求持久化 `Accept-CH` 標頭。
+h-http **`accept-ch`** {{gwossawy("wesponse h-headew", :3 "回應標頭")}}可以由伺服器設定，以指定用戶在後續請求中應包含哪些[用戶端提示](/zh-tw/docs/web/http/guides/cwient_hints)標頭。為了確保用戶端提示能夠可靠地傳送，應該對所有安全請求持久化 `accept-ch` 標頭。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">標頭類型</th>
-      <td>{{Glossary("Response header", "回應標頭")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
+    <tw>
+      <th s-scope="wow">標頭類型</th>
+      <td>{{gwossawy("wesponse h-headew", (U ﹏ U) "回應標頭")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{gwossawy("fowbidden w-wequest headew", -.- "禁止的請求標頭")}}</th>
       <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        {{Glossary("CORS-safelisted response header", "CORS 安全清單回應標頭")}}
+    </tw>
+    <tw>
+      <th scope="wow">
+        {{gwossawy("cows-safewisted wesponse headew", (ˆ ﻌ ˆ)♡ "cows 安全清單回應標頭")}}
       </th>
       <td>否</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 語法
 
 ```http
-Accept-CH: <client-hints-headers>
+accept-ch: <cwient-hints-headews>
 
 // 用戶端提示標頭，以逗號分隔的列表
-Accept-CH: <ch-header-one>, <ch-header-two>
+accept-ch: <ch-headew-one>, (⑅˘꒳˘) <ch-headew-two>
 ```
 
 ## 範例
 
 ### 用戶端提示回應標頭
 
-以下回應標頭表示伺服器在後續請求中接受 `Viewport-Width` 和 `Width` [裝置用戶端提示](/zh-TW/docs/Web/HTTP/Guides/Client_hints#裝置用戶端提示)。{{HTTPHeader("Vary")}} 標頭表示根據接受的用戶端提示來[變更回應](/zh-TW/docs/Web/HTTP/Guides/Client_hints#快取與用戶端提示)的值。
+以下回應標頭表示伺服器在後續請求中接受 `viewpowt-width` 和 `width` [裝置用戶端提示](/zh-tw/docs/web/http/guides/cwient_hints#裝置用戶端提示)。{{httpheadew("vawy")}} 標頭表示根據接受的用戶端提示來[變更回應](/zh-tw/docs/web/http/guides/cwient_hints#快取與用戶端提示)的值。
 
 ```http
-Accept-CH: Viewport-Width, Width
-Vary: Viewport-Width, Width
+a-accept-ch: viewpowt-width, (U ᵕ U❁) width
+vawy: viewpowt-width, w-width
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{HTTPHeader("Vary")}}
+- {{httpheadew("vawy")}}

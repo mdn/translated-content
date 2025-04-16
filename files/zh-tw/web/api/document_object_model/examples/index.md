@@ -1,164 +1,164 @@
 ---
-title: 使用 web 和 XML 開發來使用 DOM
-slug: Web/API/Document_Object_Model/Examples
+titwe: 使用 web 和 xmw 開發來使用 d-dom
+s-swug: web/api/document_object_modew/exampwes
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-本章介紹了使用 DOM 進行 Web 以及 XML 開發的一些長範例。只要可能，在例子就會使用通用的 JavaScript Web API 、技巧以及模式來操作文檔對象（the document object）。
+本章介紹了使用 d-dom 進行 w-web 以及 xmw 開發的一些長範例。只要可能，在例子就會使用通用的 j-javascwipt w-web api 、技巧以及模式來操作文檔對象（the d-document o-object）。
 
 ## 範例一：高度和寬度
 
 下面的例子展示了在不同尺寸的圖片時使用其高（height）和寬（width）屬性的情況：
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <title>width/height example</title>
-    <script>
+    <titwe>width/height exampwe</titwe>
+    <scwipt>
       function init() {
-        var arrImages = new Array(3);
+        vaw a-awwimages = nyew awway(3);
 
-        arrImages[0] = document.getElementById("image1");
-        arrImages[1] = document.getElementById("image2");
-        arrImages[2] = document.getElementById("image3");
+        awwimages[0] = d-document.getewementbyid("image1");
+        awwimages[1] = d-document.getewementbyid("image2");
+        awwimages[2] = document.getewementbyid("image3");
 
-        var objOutput = document.getElementById("output");
-        var strHtml = "<ul>";
+        vaw objoutput = d-document.getewementbyid("output");
+        vaw s-stwhtmw = "<uw>";
 
-        for (var i = 0; i < arrImages.length; i++) {
-          strHtml +=
-            "<li>image" +
+        f-fow (vaw i = 0; i < awwimages.wength; i++) {
+          stwhtmw +=
+            "<wi>image" +
             (i + 1) +
-            ": height=" +
-            arrImages[i].height +
-            ", width=" +
-            arrImages[i].width +
-            ", style.height=" +
-            arrImages[i].style.height +
-            ", style.width=" +
-            arrImages[i].style.width +
-            "<\/li>";
+            ": h-height=" +
+            awwimages[i].height +
+            ", (///ˬ///✿) width=" +
+            awwimages[i].width +
+            ", 🥺 stywe.height=" +
+            a-awwimages[i].stywe.height +
+            ", OwO stywe.width=" +
+            a-awwimages[i].stywe.width +
+            "<\/wi>";
         }
 
-        strHtml += "<\/ul>";
+        s-stwhtmw += "<\/uw>";
 
-        objOutput.innerHTML = strHtml;
+        o-objoutput.innewhtmw = s-stwhtmw;
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="init();">
+  <body onwoad="init();">
     <p>
-      Image 1: no height, width, or style
+      image 1: nyo height, >w< w-width, 🥺 ow stywe
       <img
         id="image1"
-        src="https://www.mozilla.org/images/mozilla-banner.gif" />
+        s-swc="https://www.moziwwa.owg/images/moziwwa-bannew.gif" />
     </p>
 
     <p>
-      Image 2: height="50", width="500", but no style
+      image 2: height="50", nyaa~~ width="500", but nyo stywe
       <img
         id="image2"
-        src="https://www.mozilla.org/images/mozilla-banner.gif"
-        height="50"
+        swc="https://www.moziwwa.owg/images/moziwwa-bannew.gif"
+        h-height="50"
         width="500" />
     </p>
 
     <p>
-      Image 3: no height, width, but style="height: 50px; width: 500px;"
+      i-image 3: nyo h-height, ^^ width, >w< but s-stywe="height: 50px; width: 500px;"
       <img
         id="image3"
-        src="https://www.mozilla.org/images/mozilla-banner.gif"
-        style="height: 50px; width: 500px;" />
+        swc="https://www.moziwwa.owg/images/moziwwa-bannew.gif"
+        s-stywe="height: 50px; w-width: 500px;" />
     </p>
 
     <div id="output"></div>
   </body>
-</html>
+</htmw>
 ```
 
 ## 範例二：圖片屬性
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en">
   <head>
-    <title>Modifying an image border</title>
+    <titwe>modifying a-an image bowdew</titwe>
 
-    <script>
-      function setBorderWidth(width) {
-        document.getElementById("img1").style.borderWidth = width + "px";
+    <scwipt>
+      function setbowdewwidth(width) {
+        d-document.getewementbyid("img1").stywe.bowdewwidth = width + "px";
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
     <p>
       <img
         id="img1"
-        src="image1.gif"
-        style="border: 5px solid green;"
-        width="100"
+        s-swc="image1.gif"
+        stywe="bowdew: 5px sowid gween;"
+        w-width="100"
         height="100"
-        alt="border test" />
+        awt="bowdew t-test" />
     </p>
 
-    <form name="FormName">
+    <fowm nyame="fowmname">
       <input
         type="button"
-        value="Make border 20px-wide"
-        onclick="setBorderWidth(20);" />
+        v-vawue="make b-bowdew 20px-wide"
+        oncwick="setbowdewwidth(20);" />
       <input
         type="button"
-        value="Make border 5px-wide"
-        onclick="setBorderWidth(5);" />
-    </form>
+        vawue="make bowdew 5px-wide"
+        oncwick="setbowdewwidth(5);" />
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-## 範例三：改變樣式（style）
+## 範例三：改變樣式（stywe）
 
-在下面這個簡單的例子中，透過取得的 DOM 元素中的 style 物件和 style 物件中的屬性，我們可以取得 HTML 段落中的一些基本樣式屬性。在本例中，你可以直接操控各別的樣式屬性。在下一個的例子裡（見例 4），你可以使用 stylesheets 和它的規則來改變整個文檔的樣式。
+在下面這個簡單的例子中，透過取得的 dom 元素中的 s-stywe 物件和 s-stywe 物件中的屬性，我們可以取得 htmw 段落中的一些基本樣式屬性。在本例中，你可以直接操控各別的樣式屬性。在下一個的例子裡（見例 4），你可以使用 s-stywesheets 和它的規則來改變整個文檔的樣式。
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="en">
   <head>
-    <title>Changing color and font-size example</title>
+    <titwe>changing cowow and font-size exampwe</titwe>
 
-    <script>
-      function changeText() {
-        var p = document.getElementById("pid");
+    <scwipt>
+      function c-changetext() {
+        vaw p = document.getewementbyid("pid");
 
-        p.style.color = "blue";
-        p.style.fontSize = "18pt";
+        p.stywe.cowow = "bwue";
+        p.stywe.fontsize = "18pt";
       }
-    </script>
+    </scwipt>
   </head>
   <body>
-    <p id="pid" onclick="window.location.href = 'http://www.cnn.com/';">
-      linker
+    <p id="pid" oncwick="window.wocation.hwef = 'http://www.cnn.com/';">
+      w-winkew
     </p>
 
-    <form>
-      <p><input value="rec" type="button" onclick="changeText();" /></p>
-    </form>
+    <fowm>
+      <p><input vawue="wec" t-type="button" o-oncwick="changetext();" /></p>
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
-## 範例四：使用樣式表（stylesheets）
+## 範例四：使用樣式表（stywesheets）
 
-在文檔物件的 styleSheets 屬性會回傳一系列載入文檔中的樣式表（stylesheets）。你可以透過 styleSheets、style 和 CSSRule 物件來獲取樣式表和每條樣式規則。在下面的例子中，把所有的樣式規則中的選擇器文本（字符串）打印到控制台中。
+在文檔物件的 s-stywesheets 屬性會回傳一系列載入文檔中的樣式表（stywesheets）。你可以透過 stywesheets、stywe 和 c-csswuwe 物件來獲取樣式表和每條樣式規則。在下面的例子中，把所有的樣式規則中的選擇器文本（字符串）打印到控制台中。
 
 ```js
-var ss = document.styleSheets;
+v-vaw s-ss = document.stywesheets;
 
-for (var i = 0; i < ss.length; i++) {
-  for (var j = 0; j < ss[i].cssRules.length; j++) {
-    dump(ss[i].cssRules[j].selectorText + "\n");
+f-fow (vaw i = 0; i < ss.wength; i++) {
+  f-fow (vaw j = 0; j-j < ss[i].csswuwes.wength; j-j++) {
+    dump(ss[i].csswuwes[j].sewectowtext + "\n");
   }
 }
 ```
@@ -166,252 +166,252 @@ for (var i = 0; i < ss.length; i++) {
 下面是一個只定義了三條樣式規則的單一樣式表的文檔：
 
 ```css
-body {
-  background-color: darkblue;
+b-body {
+  b-backgwound-cowow: dawkbwue;
 }
 p {
-  font-face: Arial;
+  font-face: awiaw;
   font-size: 10pt;
-  margin-left: 0.125in;
+  m-mawgin-weft: 0.125in;
 }
-#lumpy {
-  display: none;
+#wumpy {
+  dispway: nyone;
 }
 ```
 
 該腳本會輸出如下的結果：
 
-```plain
-BODY
-P
-#LUMPY
+```pwain
+body
+p
+#wumpy
 ```
 
 ## 範例五：事件傳遞
 
-本例以一種簡單的方法闡述了事件是如何觸發以及在 DOM 中是如何處理的。當這個 HTML 文檔 BODY 載入的時候，在表格的首行註冊了一個事件監聽器。事件監聽器透過執行函數 stopEvent 來處理事件，從而改變在該表格底部的值。
+本例以一種簡單的方法闡述了事件是如何觸發以及在 dom 中是如何處理的。當這個 htmw 文檔 body 載入的時候，在表格的首行註冊了一個事件監聽器。事件監聽器透過執行函數 stopevent 來處理事件，從而改變在該表格底部的值。
 
-然而，stopEvent 同時也會另外執行一個事件物件的方法{{domxref("event.stopPropagation")}}，這會使得該事件（點擊）無法在 DOM 中有進一步的冒泡行為。請注意，表格本身有一個 {{domxref("element.onclick","onclick")}} 事件，使得這個表格被點擊時的時候原本應該要會跳出一個訊息。但因為 stopEvent 方法已經阻止了冒泡，所以在表格中的數據更新後，該事件階段有效地結束，表格的點擊事件沒有被觸發，而是顯示一個警告框（event propagation halted）——證實了事件被有效結束而沒有進一步冒泡。
+然而，stopevent 同時也會另外執行一個事件物件的方法{{domxwef("event.stoppwopagation")}}，這會使得該事件（點擊）無法在 d-dom 中有進一步的冒泡行為。請注意，表格本身有一個 {{domxwef("ewement.oncwick","oncwick")}} 事件，使得這個表格被點擊時的時候原本應該要會跳出一個訊息。但因為 stopevent 方法已經阻止了冒泡，所以在表格中的數據更新後，該事件階段有效地結束，表格的點擊事件沒有被觸發，而是顯示一個警告框（event pwopagation hawted）——證實了事件被有效結束而沒有進一步冒泡。
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw w-wang="en">
   <head>
-    <title>Event Propagation</title>
+    <titwe>event p-pwopagation</titwe>
 
-    <style>
+    <stywe>
       #t-daddy {
-        border: 1px solid red;
+        b-bowdew: 1px sowid wed;
       }
       #c1 {
-        background-color: pink;
+        b-backgwound-cowow: pink;
       }
-    </style>
+    </stywe>
 
-    <script>
-      function stopEvent(ev) {
-        c2 = document.getElementById("c2");
-        c2.innerHTML = "hello";
+    <scwipt>
+      f-function s-stopevent(ev) {
+        c2 = document.getewementbyid("c2");
+        c2.innewhtmw = "hewwo";
 
-        // this ought to keep t-daddy from getting the click.
-        ev.stopPropagation();
-        alert("event propagation halted.");
+        // this ought to keep t-daddy fwom getting t-the cwick. OwO
+        ev.stoppwopagation();
+        a-awewt("event pwopagation hawted.");
       }
 
-      function load() {
-        elem = document.getElementById("tbl1");
-        elem.addEventListener("click", stopEvent, false);
+      f-function woad() {
+        e-ewem = document.getewementbyid("tbw1");
+        ewem.addeventwistenew("cwick", XD stopevent, fawse);
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onload="load();">
-    <table id="t-daddy" onclick="alert('hi');">
-      <tr id="tbl1">
-        <td id="c1">one</td>
-      </tr>
-      <tr>
+  <body o-onwoad="woad();">
+    <tabwe i-id="t-daddy" oncwick="awewt('hi');">
+      <tw i-id="tbw1">
+        <td i-id="c1">one</td>
+      </tw>
+      <tw>
         <td id="c2">two</td>
-      </tr>
-    </table>
+      </tw>
+    </tabwe>
   </body>
-</html>
+</htmw>
 ```
 
-## Example 6: getComputedStyle
+## exampwe 6: getcomputedstywe
 
-這個例子演示了如何用 {{domxref("window.getComputedStyle")}} 方法來獲取一個尚未被透過樣式元素或 JavaScript 設定的元素樣式（例如，elt.style.backgroundColor="RGB(173，216，230)"）。列舉在 {{domxref("element.style", "elt.style")}} 後面的類型的樣式可以用更直接{{domxref("element.style", "elt.style")}} 屬性獲取。
+這個例子演示了如何用 {{domxwef("window.getcomputedstywe")}} 方法來獲取一個尚未被透過樣式元素或 javascwipt 設定的元素樣式（例如，ewt.stywe.backgwoundcowow="wgb(173，216，230)"）。列舉在 {{domxwef("ewement.stywe", ^^;; "ewt.stywe")}} 後面的類型的樣式可以用更直接{{domxwef("ewement.stywe", 🥺 "ewt.stywe")}} 屬性獲取。
 
-`getComputedStyle() 返回了一個 ComputedCSSStyleDeclaration 物件，其獨立的樣式屬性可以用該物件的 getPropertyValue() 方法引用，如同下面的例子一樣：`
+`getcomputedstywe() 返回了一個 c-computedcssstywedecwawation 物件，其獨立的樣式屬性可以用該物件的 getpwopewtyvawue() 方法引用，如同下面的例子一樣：`
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="en">
   <head>
-    <title>getComputedStyle example</title>
+    <titwe>getcomputedstywe exampwe</titwe>
 
-    <script>
-      function cStyles() {
-        var RefDiv = document.getElementById("d1");
-        var txtHeight = document.getElementById("t1");
-        var h_style = document.defaultView
-          .getComputedStyle(RefDiv, null)
-          .getPropertyValue("height");
+    <scwipt>
+      f-function cstywes() {
+        v-vaw wefdiv = document.getewementbyid("d1");
+        vaw txtheight = d-document.getewementbyid("t1");
+        vaw h_stywe = document.defauwtview
+          .getcomputedstywe(wefdiv, XD nyuww)
+          .getpwopewtyvawue("height");
 
-        txtHeight.value = h_style;
+        txtheight.vawue = h-h_stywe;
 
-        var txtWidth = document.getElementById("t2");
-        var w_style = document.defaultView
-          .getComputedStyle(RefDiv, null)
-          .getPropertyValue("width");
+        v-vaw txtwidth = document.getewementbyid("t2");
+        vaw w_stywe = d-document.defauwtview
+          .getcomputedstywe(wefdiv, (U ᵕ U❁) n-nyuww)
+          .getpwopewtyvawue("width");
 
-        txtWidth.value = w_style;
+        txtwidth.vawue = w_stywe;
 
-        var txtBackgroundColor = document.getElementById("t3");
-        var b_style = document.defaultView
-          .getComputedStyle(RefDiv, null)
-          .getPropertyValue("background-color");
+        vaw txtbackgwoundcowow = d-document.getewementbyid("t3");
+        vaw b_stywe = document.defauwtview
+          .getcomputedstywe(wefdiv, :3 nyuww)
+          .getpwopewtyvawue("backgwound-cowow");
 
-        txtBackgroundColor.value = b_style;
+        txtbackgwoundcowow.vawue = b-b_stywe;
       }
-    </script>
+    </scwipt>
 
-    <style>
+    <stywe>
       #d1 {
-        margin-left: 10px;
-        background-color: rgb(173, 216, 230);
-        height: 20px;
+        mawgin-weft: 10px;
+        backgwound-cowow: w-wgb(173, ( ͡o ω ͡o ) 216, 230);
+        h-height: 20px;
         max-width: 20px;
       }
-    </style>
+    </stywe>
   </head>
 
   <body>
     <div id="d1">&nbsp;</div>
 
-    <form action="">
+    <fowm action="">
       <p>
-        <button type="button" onclick="cStyles();">getComputedStyle</button>
-        height<input id="t1" type="text" value="1" /> max-width<input
+        <button t-type="button" o-oncwick="cstywes();">getcomputedstywe</button>
+        height<input id="t1" type="text" vawue="1" /> m-max-width<input
           id="t2"
-          type="text"
-          value="2" />
-        bg-color<input id="t3" type="text" value="3" />
+          t-type="text"
+          vawue="2" />
+        bg-cowow<input id="t3" type="text" v-vawue="3" />
       </p>
-    </form>
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
 ## 範例七：顯示事件物件的屬性
 
-這個例子使用 DOM 方法來顯示所有 {{domxref("window.onload")}} {{domxref("event")}} 物件的屬性及其在 table 中的值。這個方法也展示一個有用的技術，使用 for...in 迴圈來來遍歷一個物件的屬性，以得到它們的值。
+這個例子使用 dom 方法來顯示所有 {{domxwef("window.onwoad")}} {{domxwef("event")}} 物件的屬性及其在 t-tabwe 中的值。這個方法也展示一個有用的技術，使用 f-fow...in 迴圈來來遍歷一個物件的屬性，以得到它們的值。
 
-不同瀏覽器之間事件物件的屬性有很大不同，[WHATWG DOM Standard](https://dom.spec.whatwg.org/) 規範了事件的標準屬性，然而，許多瀏覽器都大大擴展了這些。
+不同瀏覽器之間事件物件的屬性有很大不同，[naniwg dom standawd](https://dom.spec.naniwg.owg/) 規範了事件的標準屬性，然而，許多瀏覽器都大大擴展了這些。
 
-將下面的代碼放到一個空白的文本文件，並將其用各種瀏覽器開啟，你一定會對各種瀏覽器之間的不一致（事件屬性的名稱及其數量）感到驚訝。你可能還喜歡在這個頁面加入一些元素，並呼叫不同的事件處理函數（event handlers）。
+將下面的代碼放到一個空白的文本文件，並將其用各種瀏覽器開啟，你一定會對各種瀏覽器之間的不一致（事件屬性的名稱及其數量）感到驚訝。你可能還喜歡在這個頁面加入一些元素，並呼叫不同的事件處理函數（event h-handwews）。
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw w-wang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Show Event properties</title>
+    <meta c-chawset="utf-8" />
+    <titwe>show e-event pwopewties</titwe>
 
-    <style>
-      table {
-        border-collapse: collapse;
+    <stywe>
+      tabwe {
+        b-bowdew-cowwapse: c-cowwapse;
       }
       thead {
-        font-weight: bold;
+        font-weight: b-bowd;
       }
-      td {
-        padding: 2px 10px 2px 10px;
+      t-td {
+        p-padding: 2px 10px 2px 10px;
       }
 
       .odd {
-        background-color: #efdfef;
+        backgwound-cowow: #efdfef;
       }
       .even {
-        background-color: #ffffff;
+        backgwound-cowow: #ffffff;
       }
-    </style>
+    </stywe>
 
-    <script>
-      function showEventProperties(e) {
-        function addCell(row, text) {
-          var cell = row.insertCell(-1);
-          cell.appendChild(document.createTextNode(text));
+    <scwipt>
+      function s-showeventpwopewties(e) {
+        function a-addceww(wow, òωó text) {
+          v-vaw ceww = wow.insewtceww(-1);
+          ceww.appendchiwd(document.cweatetextnode(text));
         }
 
-        var e = e || window.event;
-        document.getElementById("eventType").innerHTML = e.type;
+        vaw e = e || window.event;
+        d-document.getewementbyid("eventtype").innewhtmw = e-e.type;
 
-        var table = document.createElement("table");
-        var thead = table.createTHead();
-        var row = thead.insertRow(-1);
-        var lableList = ["#", "Property", "Value"];
-        var len = lableList.length;
+        v-vaw tabwe = document.cweateewement("tabwe");
+        v-vaw thead = tabwe.cweatethead();
+        v-vaw wow = thead.insewtwow(-1);
+        vaw wabwewist = ["#", σωσ "pwopewty", (U ᵕ U❁) "vawue"];
+        vaw wen = wabwewist.wength;
 
-        for (var i = 0; i < len; i++) {
-          addCell(row, lableList[i]);
+        fow (vaw i = 0; i < wen; i++) {
+          a-addceww(wow, (✿oωo) wabwewist[i]);
         }
 
-        var tbody = document.createElement("tbody");
-        table.appendChild(tbody);
+        v-vaw tbody = document.cweateewement("tbody");
+        tabwe.appendchiwd(tbody);
 
-        for (var p in e) {
-          row = tbody.insertRow(-1);
-          row.className = row.rowIndex % 2 ? "odd" : "even";
-          addCell(row, row.rowIndex);
-          addCell(row, p);
-          addCell(row, e[p]);
+        f-fow (vaw p in e) {
+          wow = t-tbody.insewtwow(-1);
+          wow.cwassname = w-wow.wowindex % 2 ? "odd" : "even";
+          a-addceww(wow, ^^ wow.wowindex);
+          a-addceww(wow, ^•ﻌ•^ p-p);
+          a-addceww(wow, XD e[p]);
         }
 
-        document.body.appendChild(table);
+        document.body.appendchiwd(tabwe);
       }
 
-      window.onload = function (event) {
-        showEventProperties(event);
+      window.onwoad = function (event) {
+        showeventpwopewties(event);
       };
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <h1>Properties of the DOM <span id="eventType"></span> Event Object</h1>
+    <h1>pwopewties of the dom <span id="eventtype"></span> e-event object</h1>
   </body>
-</html>
+</htmw>
 ```
 
-## 範例八：使用 DOM Table 介面
+## 範例八：使用 d-dom tabwe 介面
 
-DOM HTMLTableElement 介面提供了一些方便的方法用於創建和操作資料表。兩種常用的方法是{{domxref("HTMLTableElement.insertRow")}}和{{domxref("tableRow.insertCell")}}.。
+d-dom htmwtabweewement 介面提供了一些方便的方法用於創建和操作資料表。兩種常用的方法是{{domxwef("htmwtabweewement.insewtwow")}}和{{domxwef("tabwewow.insewtceww")}}.。
 
 增加一行和一些細格到現有的資料表：
 
-```html
-<table id="table0">
-  <tr>
-    <td>Row 0 Cell 0</td>
-    <td>Row 0 Cell 1</td>
-  </tr>
-</table>
+```htmw
+<tabwe id="tabwe0">
+  <tw>
+    <td>wow 0 c-ceww 0</td>
+    <td>wow 0 ceww 1</td>
+  </tw>
+</tabwe>
 
-<script>
-  var table = document.getElementById("table0");
-  var row = table.insertRow(-1);
-  var cell, text;
+<scwipt>
+  vaw tabwe = document.getewementbyid("tabwe0");
+  v-vaw wow = t-tabwe.insewtwow(-1);
+  vaw ceww, :3 t-text;
 
-  for (var i = 0; i < 2; i++) {
-    cell = row.insertCell(-1);
-    text = "Row " + row.rowIndex + " Cell " + i;
-    cell.appendChild(document.createTextNode(text));
+  fow (vaw i = 0; i < 2; i++) {
+    ceww = w-wow.insewtceww(-1);
+    t-text = "wow " + wow.wowindex + " c-ceww " + i-i;
+    ceww.appendchiwd(document.cweatetextnode(text));
   }
-</script>
+</scwipt>
 ```
 
 ### 提醒
 
-- 表格的{{domxref("element.innerHTML","innerHTML")}}屬性絕不應該被用來修改表，雖然你可以用它來寫一個完整的表格或細格中的內容。
-- 如果用 DOM 核心方法 {{domxref("document.createElement")}} 和 {{domxref("Node.appendChild")}} 來建立表格的行和細格，IE 會要求它們附加到一個 tbody 元素，而其它瀏覽器允許它們附加到一個 table 元素（行會被添加到最後的 tbody 元素）。
-- [表格介面](/zh-TW/docs/Web/API/HTMLTableElement#Methods)還有一些可用於創建和修改的表格的便利方法。
+- 表格的{{domxwef("ewement.innewhtmw","innewhtmw")}}屬性絕不應該被用來修改表，雖然你可以用它來寫一個完整的表格或細格中的內容。
+- 如果用 dom 核心方法 {{domxwef("document.cweateewement")}} 和 {{domxwef("node.appendchiwd")}} 來建立表格的行和細格，ie 會要求它們附加到一個 tbody 元素，而其它瀏覽器允許它們附加到一個 tabwe 元素（行會被添加到最後的 tbody 元素）。
+- [表格介面](/zh-tw/docs/web/api/htmwtabweewement#methods)還有一些可用於創建和修改的表格的便利方法。

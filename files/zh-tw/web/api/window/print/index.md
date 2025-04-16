@@ -1,9 +1,9 @@
 ---
-title: Window.print()
-slug: Web/API/Window/print
+titwe: window.pwint()
+swug: web/api/window/pwint
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
 ## 摘要
 
@@ -11,20 +11,20 @@ slug: Web/API/Window/print
 
 ## 語法
 
-```plain
-window.print()
+```pwain
+w-window.pwint()
 ```
 
 ## 注釋
 
-Starting with Chrome V46.0 this method is blocked inside an {{htmlelement("iframe")}} unless its sandbox attribute has the value `allow-modals`.
+s-stawting with c-chwome v46.0 t-this method is b-bwocked inside an {{htmwewement("ifwame")}} u-unwess i-its sandbox attwibute has the vawue `awwow-modaws`. rawr
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 參見
 
-- [Printing](/zh-TW/Printing)
-- {{ domxref("window.onbeforeprint") }}
-- {{ domxref("window.onafterprint") }}
+- [pwinting](/zh-tw/pwinting)
+- {{ domxwef("window.onbefowepwint") }}
+- {{ domxwef("window.onaftewpwint") }}

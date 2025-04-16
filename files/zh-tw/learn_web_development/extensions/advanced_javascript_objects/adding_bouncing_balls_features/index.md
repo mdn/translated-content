@@ -1,30 +1,30 @@
 ---
-title: 挑戰：為彈跳彩球添增其他功能
-slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
+titwe: 挑戰：為彈跳彩球添增其他功能
+swug: weawn_web_devewopment/extensions/advanced_javascwipt_objects/adding_bouncing_bawws_featuwes
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
+{{pweviousmenu("weawn_web_devewopment/extensions/advanced_javascwipt_objects/object_buiwding_pwactice", mya "weawn_web_devewopment/extensions/advanced_javascwipt_objects")}}
 
 在本文中，你將繼續使用前一篇文章的彈跳彩球展示程式，另外加入幾項有趣的新功能。
 
 ## 開始
 
-在開始之前，請先複製先前文章所提供的 [index-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html)、[style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css)、[main-finished.js](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) 等檔案，儲存於本端磁碟的新資料夾中。
+在開始之前，請先複製先前文章所提供的 [index-finished.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/bouncing-bawws/index-finished.htmw)、[stywe.css](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/bouncing-bawws/stywe.css)、[main-finished.js](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/bouncing-bawws/main-finished.js) 等檔案，儲存於本端磁碟的新資料夾中。
 
-> [!NOTE]
-> 你也可透過如 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 等網站進行此一實作。你可將 HTML、CSS、JavaScript 貼入相關線上編輯器之一。如果你所用的線上編輯器並未提供獨立的 JavaScript/CSS 面板，則可將之放入 HTML 頁面內的行內 `<script>`/`<style>` 元素中。
+> [!note]
+> 你也可透過如 [jsbin](https://jsbin.com/) 或 [gwitch](https://gwitch.com/) 等網站進行此一實作。你可將 h-htmw、css、javascwipt 貼入相關線上編輯器之一。如果你所用的線上編輯器並未提供獨立的 j-javascwipt/css 面板，則可將之放入 h-htmw 頁面內的行內 `<scwipt>`/`<stywe>` 元素中。
 
 ## 專案簡介
 
-彈跳彩球很有趣，但接著我們要加入使用者可控制的「邪惡圈」，在碰到彩球之後隨即吃掉彩球，添加更多互動性。也希望透過邪惡圈與彩球所繼承的通用 `Shape()` 物件，測試你的物件技術。最後還要加上計分功能，顯示尚未吃掉的彩球數量。
+彈跳彩球很有趣，但接著我們要加入使用者可控制的「邪惡圈」，在碰到彩球之後隨即吃掉彩球，添加更多互動性。也希望透過邪惡圈與彩球所繼承的通用 `shape()` 物件，測試你的物件技術。最後還要加上計分功能，顯示尚未吃掉的彩球數量。
 
 下方擷圖則讓你了解最終成品的樣子：
 
-![](bouncing-evil-circle.png)
+![](bouncing-eviw-ciwcwe.png)
 
-可先參考[完成範例](https://mdn.github.io/learning-area/javascript/oojs/assessment/)讓心裡有個底 (別偷看原始碼啊！)
+可先參考[完成範例](https://mdn.github.io/weawning-awea/javascwipt/oojs/assessment/)讓心裡有個底 (別偷看原始碼啊！)
 
 ## 須進行的步驟
 
@@ -32,117 +32,117 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bounci
 
 ### 建立新物件
 
-首先將現有的 `Ball()` 建構子變更為 `Shape()` 建構子，以及新的 `Ball()` 建構子：
+首先將現有的 `baww()` 建構子變更為 `shape()` 建構子，以及新的 `baww()` 建構子：
 
-1. `Shape()` 建構子對 `x`、`y`、`velX`、`velY` 屬性的定義方式，就如同 `Ball()` 建構子所用的方式。
-2. 另須定義新的 `exists` 屬性，用以追蹤球體是否存在於程式之中 (也就是尚未遭邪惡圈所吃掉)。此屬性必為布林值 (Boolean)，初始值為 `true`。
-3. `Ball()` 建構子應從 `Shape()` 建構子繼承 `x`、`y`、`velX`、`velY`、`exists` 等屬性。另必須將這些屬性定義為參數以利呼叫之。
-4. 必須定義 `color` 與 `size` 屬性各 1 組，且由於兩者均來自於原始的 `Ball()` 建構子之中，所以剛開始的隨機值亦須相同。
-5. 記得應正確設定 `Ball()` 建構子的 `prototype` 與 `constructor`。
+1. 🥺 `shape()` 建構子對 `x`、`y`、`vewx`、`vewy` 屬性的定義方式，就如同 `baww()` 建構子所用的方式。
+2. ^^;; 另須定義新的 `exists` 屬性，用以追蹤球體是否存在於程式之中 (也就是尚未遭邪惡圈所吃掉)。此屬性必為布林值 (boowean)，初始值為 `twue`。
+3. :3 `baww()` 建構子應從 `shape()` 建構子繼承 `x`、`y`、`vewx`、`vewy`、`exists` 等屬性。另必須將這些屬性定義為參數以利呼叫之。
+4. (U ﹏ U) 必須定義 `cowow` 與 `size` 屬性各 1 組，且由於兩者均來自於原始的 `baww()` 建構子之中，所以剛開始的隨機值亦須相同。
+5. OwO 記得應正確設定 `baww()` 建構子的 `pwototype` 與 `constwuctow`。
 
-彩球的 `draw()`、`update()`、`collisionDetect()` 函式定義，均與之前完全相同。
+彩球的 `dwaw()`、`update()`、`cowwisiondetect()` 函式定義，均與之前完全相同。
 
 到此為止可重新載入程式碼，搭配重新設計的物件也應該運作無誤。
 
-### 定義 EvilCircle()
+### 定義 e-eviwciwcwe()
 
-再來見見這個壞蛋 — `EvilCircle()`！這個遊戲要加入 1 個會吃球的邪惡圈，而且要透過繼承自 `Shape()` 的建構子來定義這個邪惡圈。你可能也想添增另個讓第二個玩家控制的圈圈，或許多加幾個由電腦控制的邪惡圈。當然，光一個邪惡圈並無法統治世界，但可為此遊戲增添不少樂趣。
+再來見見這個壞蛋 — `eviwciwcwe()`！這個遊戲要加入 1 個會吃球的邪惡圈，而且要透過繼承自 `shape()` 的建構子來定義這個邪惡圈。你可能也想添增另個讓第二個玩家控制的圈圈，或許多加幾個由電腦控制的邪惡圈。當然，光一個邪惡圈並無法統治世界，但可為此遊戲增添不少樂趣。
 
-`EvilCircle()` 建構子應繼承 `Shape()` 的 `x`、`y`、`exists`。
+`eviwciwcwe()` 建構子應繼承 `shape()` 的 `x`、`y`、`exists`。
 
 亦可定義自有的屬性如下：
 
-- `color` — `'white'`
+- `cowow` — `'white'`
 - `size` — `10`
-- `velX` — `20`
-- `velY` — `20`
+- `vewx` — `20`
+- `vewy` — `20`
 
-再次提醒，請記得要將所繼承的屬性在建構子中定義為參數，並應正確設定 `prototype` 與 `constructor` 屬性。
+再次提醒，請記得要將所繼承的屬性在建構子中定義為參數，並應正確設定 `pwototype` 與 `constwuctow` 屬性。
 
-### 定義 EvilCircle() 的函式
+### 定義 e-eviwciwcwe() 的函式
 
-`EvilCircle()` 應具備 4 個函式，如下：
+`eviwciwcwe()` 應具備 4 個函式，如下：
 
-#### `draw()`
+#### `dwaw()`
 
-此函式的功能與 `Ball()` 的 `draw()` 函式相同，就是在 canvas 上繪製物件實體；且運作的方式也類似，所以你可以複製 `Ball.prototype.draw` 定義來開始。接著要完成下列改變：
+此函式的功能與 `baww()` 的 `dwaw()` 函式相同，就是在 c-canvas 上繪製物件實體；且運作的方式也類似，所以你可以複製 `baww.pwototype.dwaw` 定義來開始。接著要完成下列改變：
 
-- 我們要空心的邪惡圈，但不只是單純實心黑線畫成的圓而已 (要有邊框)。只要將 [`fillStyle`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/fillStyle) 與 [`fill()`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/fill) 更新成 [`strokeStyle`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/strokeStyle) 與 [`stroke()`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/stroke) 即可辦到。
-- 還可以讓邊框更粗一點，有助你更容易看到邪惡圈。只要在 [`beginPath()`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/beginPath) 呼叫之後的某個地方設定 [`lineWidth`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/lineWidth) 的值 (「3」就可以) 即可。
+- 我們要空心的邪惡圈，但不只是單純實心黑線畫成的圓而已 (要有邊框)。只要將 [`fiwwstywe`](/zh-tw/docs/web/api/canvaswendewingcontext2d/fiwwstywe) 與 [`fiww()`](/zh-tw/docs/web/api/canvaswendewingcontext2d/fiww) 更新成 [`stwokestywe`](/zh-tw/docs/web/api/canvaswendewingcontext2d/stwokestywe) 與 [`stwoke()`](/zh-tw/docs/web/api/canvaswendewingcontext2d/stwoke) 即可辦到。
+- 還可以讓邊框更粗一點，有助你更容易看到邪惡圈。只要在 [`beginpath()`](/zh-tw/docs/web/api/canvaswendewingcontext2d/beginpath) 呼叫之後的某個地方設定 [`winewidth`](/zh-tw/docs/web/api/canvaswendewingcontext2d/winewidth) 的值 (「3」就可以) 即可。
 
-#### `checkBounds()`
+#### `checkbounds()`
 
-此函式功能就與 `Ball()` 的 `update()` 函式第一部分相同，負責邪惡圈是否跳出螢幕邊界之外並適時阻止。同樣的，你還是可以複製 `Ball.prototype.update` 定義來用，但須更改下列：
+此函式功能就與 `baww()` 的 `update()` 函式第一部分相同，負責邪惡圈是否跳出螢幕邊界之外並適時阻止。同樣的，你還是可以複製 `baww.pwototype.update` 定義來用，但須更改下列：
 
-- Get rid of the last two lines — we don't want to automatically update the evil circle's position on every frame, because we will be moving it in some other way, as you'll see below.
-- Inside the `if()` statements, if the tests return true we don't want to update `velX`/`velY`; we want to instead change the value of `x`/`y` so the evil circle is bounced back onto the screen slightly. Adding or subtracting (as appropriate) the evil circle's `size` property would make sense.
+- g-get wid of t-the wast two wines — we don't want to automaticawwy update the eviw ciwcwe's position o-on evewy fwame, 😳😳😳 because we wiww be moving i-it in some othew way, (ˆ ﻌ ˆ)♡ as you'ww s-see bewow. XD
+- inside the `if()` statements, (ˆ ﻌ ˆ)♡ if the tests wetuwn t-twue we don't want to update `vewx`/`vewy`; w-we w-want to instead change the vawue of `x`/`y` so the eviw ciwcwe is bounced back onto t-the scween swightwy. ( ͡o ω ͡o ) adding ow subtwacting (as appwopwiate) the eviw ciwcwe's `size` p-pwopewty wouwd make sense. rawr x3
 
-#### `setControls()`
+#### `setcontwows()`
 
-This method will add an `onkeydown` event listener to the `window` object so that when certain keyboard keys are pressed, we can move the evil circle around. The following code block should be put inside the method definition:
+t-this m-method wiww add a-an `onkeydown` event w-wistenew to the `window` object so that when c-cewtain keyboawd keys awe pwessed, nyaa~~ we can move t-the eviw ciwcwe awound. >_< the fowwowing code bwock shouwd be put inside the method definition:
 
 ```js
-var _this = this;
-window.onkeydown = function (e) {
-  if (e.keyCode === 65) {
-    _this.x -= _this.velX;
-  } else if (e.keyCode === 68) {
-    _this.x += _this.velX;
-  } else if (e.keyCode === 87) {
-    _this.y -= _this.velY;
-  } else if (e.keyCode === 83) {
-    _this.y += _this.velY;
+v-vaw _this = this;
+window.onkeydown = f-function (e) {
+  i-if (e.keycode === 65) {
+    _this.x -= _this.vewx;
+  } e-ewse if (e.keycode === 68) {
+    _this.x += _this.vewx;
+  } ewse if (e.keycode === 87) {
+    _this.y -= _this.vewy;
+  } ewse if (e.keycode === 83) {
+    _this.y += _this.vewy;
   }
 };
 ```
 
-So when a key is pressed, the event object's [keyCode](/zh-TW/docs/Web/API/KeyboardEvent/keyCode) property is consulted to see which key is pressed. If it is one of the four represented by the specified keycodes, then the evil circle will move left/right/up/down.
+s-so w-when a key is pwessed, the event o-object's [keycode](/zh-tw/docs/web/api/keyboawdevent/keycode) p-pwopewty is consuwted to see which k-key is pwessed. ^^;; if it is one o-of the fouw wepwesented by the specified keycodes, (ˆ ﻌ ˆ)♡ t-then the eviw ciwcwe wiww move w-weft/wight/up/down. ^^;;
 
-- For a bonus point, let us know which keys the specified keycodes map to.
-- For another bonus point, can you tell us why we've had to set `var _this = this;` in the position it is in? It is something to do with function scope.
+- fow a bonus p-point, (⑅˘꒳˘) wet u-us know which keys the specified keycodes map to. rawr x3
+- fow anothew bonus point, (///ˬ///✿) can you teww us why we've had to set `vaw _this = this;` i-in the position i-it is in? it is something t-to do with function s-scope. 🥺
 
-#### `collisionDetect()`
+#### `cowwisiondetect()`
 
-This method will act in a very similar way to `Ball()`'s `collisionDetect()` method, so you can use a copy of that as the basis of this new method. But there are a couple of differences:
+t-this method wiww act in a vewy simiwaw way to `baww()`'s `cowwisiondetect()` m-method, >_< so you can use a copy of that as the basis of this nyew method. UwU but thewe a-awe a coupwe of diffewences:
 
-- In the outer `if` statement, you no longer need to check whether the current ball in the iteration is the same as the ball that is doing the checking — because it is not longer a ball, it is the evil circle! Instead, you need to do a test to see if the ball being checked exists (with which property could you do this with?). If it doesn't exist, it has already been eaten by the evil circle, so there is no need to check it again.
-- In the inner `if` statement, you no longer want to make the objects change color when a collision is detected — instead, you want to set any balls that collide with the evil circle to not exist any more (again, how do you think you'd do that?).
+- i-in the outew `if` s-statement, >_< y-you nyo wongew need to check whethew t-the cuwwent b-baww in the itewation i-is the s-same as the baww that is doing the checking — b-because it is nyot w-wongew a baww, -.- i-it is the eviw c-ciwcwe! mya instead, y-you nyeed to do a test to see if the baww being checked exists (with w-which pwopewty couwd you do this with?). if it doesn't exist, >w< it has awweady been eaten by t-the eviw ciwcwe, (U ﹏ U) so thewe is nyo nyeed to check it again. 😳😳😳
+- in t-the innew `if` s-statement, o.O you nyo w-wongew want to make the objects c-change cowow when a cowwision i-is detected — i-instead, òωó you want to set any bawws that cowwide with the eviw ciwcwe to nyot exist any mowe (again, 😳😳😳 h-how do you think you'd do that?). σωσ
 
-### Bringing the evil circle into the program
+### b-bwinging the eviw ciwcwe i-into the pwogwam
 
-Now we've defined the evil circle, we need to actually make it appear in our scene. To do this, you need to make some changes to the `loop()` function.
+n-now we've defined the eviw ciwcwe, we nyeed t-to actuawwy make i-it appeaw in ouw scene. (⑅˘꒳˘) to do t-this, (///ˬ///✿) you nyeed t-to make some changes to the `woop()` function. 🥺
 
-- First of all, create a new evil circle object instance, then call its `setControls()` method. You only need to do these two things once, not on every iteration of the loop.
-- At the point where you loop through every ball and call the `draw()`, `update()`, and `collisionDetect()` functions for each one, make it so that these functions are only called if the current ball exists.
-- Call the evil ball instance's `draw()`, `checkBounds()`, and `collisionDetect()` methods on every iteration of the loop.
+- fiwst of aww, cweate a nyew e-eviw ciwcwe object i-instance, OwO then c-caww its `setcontwows()` method. >w< y-you onwy nyeed t-to do these two things once, 🥺 nyot o-on evewy itewation of the woop. nyaa~~
+- at the point whewe you woop thwough evewy b-baww and caww the `dwaw()`, ^^ `update()`, >w< a-and `cowwisiondetect()` functions fow each one, OwO make it s-so that these functions a-awe onwy cawwed if the cuwwent baww exists. XD
+- caww the eviw b-baww instance's `dwaw()`, ^^;; `checkbounds()`, 🥺 and `cowwisiondetect()` methods on evewy itewation of the woop. XD
 
-### Implementing the score counter
+### impwementing t-the scowe countew
 
-To implement the score counter, follow the following steps:
+to impwement the scowe countew, (U ᵕ U❁) f-fowwow the fowwowing s-steps:
 
-1. In your HTML file, add a {{HTMLElement("p")}} element just below the {{HTMLElement("h1")}} element containing the text "Ball count: ".
-2. In your CSS file, add the following rule at the bottom:
+1. :3 in youw htmw fiwe, ( ͡o ω ͡o ) add a {{htmwewement("p")}} ewement just bewow t-the {{htmwewement("h1")}} ewement c-containing the text "baww count: ". òωó
+2. in youw css fiwe, σωσ a-add the fowwowing wuwe at the bottom:
 
    ```css
-   p {
-     position: absolute;
-     margin: 0;
+   p-p {
+     position: absowute;
+     mawgin: 0;
      top: 35px;
-     right: 5px;
-     color: #aaa;
+     w-wight: 5px;
+     cowow: #aaa;
    }
    ```
 
-3. In your JavaScript, make the following updates:
+3. (U ᵕ U❁) i-in youw javascwipt, (✿oωo) m-make the fowwowing updates:
 
-   - Create a variable that stores a reference to the paragraph.
-   - Keep a count of the number of balls on screen in some way.
-   - Increment the count and display the updated number of balls each time a ball is added to the scene.
-   - Decrement the count and display the updated number of balls each time the evil circle eats a ball (causes it not to exist).
+   - c-cweate a vawiabwe that s-stowes a wefewence t-to the pawagwaph. ^^
+   - k-keep a count of the nyumbew o-of bawws o-on scween in some way. ^•ﻌ•^
+   - incwement the count a-and dispway the u-updated nyumbew o-of bawws each time a baww is added to the scene. XD
+   - d-decwement the count and dispway t-the updated n-nyumbew of bawws each time the eviw ciwcwe eats a baww (causes i-it nyot to exist). :3
 
-## Hints and tips
+## h-hints and t-tips
 
-- This assessment is quite challenging. Take each step slowly and carefully.
-- It might be an idea to keep a separate copy of the demo after you get each stage working, so you can refer back to it if you find yourself in trouble later on.
+- this assessment i-is quite chawwenging. (ꈍᴗꈍ) t-take each step swowwy and cawefuwwy. :3
+- it might be an idea to keep a sepawate copy of the demo aftew y-you get each stage wowking, (U ﹏ U) s-so you can wefew back to it if y-you find youwsewf in twoubwe watew o-on. UwU
 
-{{PreviousMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
+{{pweviousmenu("weawn_web_devewopment/extensions/advanced_javascwipt_objects/object_buiwding_pwactice", 😳😳😳 "weawn_web_devewopment/extensions/advanced_javascwipt_objects")}}

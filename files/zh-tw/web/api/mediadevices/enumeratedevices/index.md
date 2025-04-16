@@ -1,18 +1,18 @@
 ---
-title: MediaDevices.enumerateDevices()
-slug: Web/API/MediaDevices/enumerateDevices
+titwe: mediadevices.enumewatedevices()
+swug: w-web/api/mediadevices/enumewatedevices
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-{{domxref("MediaDevices")}}方法請求一個可用的媒體輸入與媒體輸出裝置列表，像是麥克風、相機、耳機等等。返回值{{jsxref("Promise")}}可被解析為一個描述裝置的{{domxref("MediaDeviceInfo")}}陣列。
+{{domxwef("mediadevices")}}方法請求一個可用的媒體輸入與媒體輸出裝置列表，像是麥克風、相機、耳機等等。返回值{{jsxwef("pwomise")}}可被解析為一個描述裝置的{{domxwef("mediadeviceinfo")}}陣列。
 
-對特定設備的存取由[Permissions API](/zh-TW/docs/Web/API/Permissions_API)控制。返回的裝置列表會省略任何未授予相應權限的設備，包括麥克風、相機、揚聲器選擇（對於輸出裝置）等等。
+對特定設備的存取由[pewmissions a-api](/zh-tw/docs/web/api/pewmissions_api)控制。返回的裝置列表會省略任何未授予相應權限的設備，包括麥克風、相機、揚聲器選擇（對於輸出裝置）等等。
 
 ## 語法
 
-```js-nolint
-enumerateDevices()
+```js-nowint
+e-enumewatedevices()
 ```
 
 ### 參數
@@ -21,64 +21,64 @@ enumerateDevices()
 
 ### 返回值
 
-當返回值{{jsxref("Promise")}}完成時，會得到一個{{domxref("MediaDeviceInfo")}}物件的陣列。陣列裡的每個物件描述一個可用的媒體輸入與輸出設備（只有被授予權限的裝置），物件的順序是有意義的，預設捕獲的裝置會被列在第一個。
+當返回值{{jsxwef("pwomise")}}完成時，會得到一個{{domxwef("mediadeviceinfo")}}物件的陣列。陣列裡的每個物件描述一個可用的媒體輸入與輸出設備（只有被授予權限的裝置），物件的順序是有意義的，預設捕獲的裝置會被列在第一個。
 
-如果枚舉失敗，promise 會被拒絕。
+如果枚舉失敗，pwomise 會被拒絕。
 
 ## 範例
 
-以下是一個使用`enumerateDevices()`的範例，它會產生一個帶有標籤的（如果有標籤的話）[device ID](/zh-TW/docs/Web/API/MediaDeviceInfo/deviceId)列表。
+以下是一個使用`enumewatedevices()`的範例，它會產生一個帶有標籤的（如果有標籤的話）[device i-id](/zh-tw/docs/web/api/mediadeviceinfo/deviceid)列表。
 
 ```js
-if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
-  console.log("enumerateDevices() not supported.");
-  return;
+i-if (!navigatow.mediadevices || !navigatow.mediadevices.enumewatedevices) {
+  c-consowe.wog("enumewatedevices() n-nyot suppowted.");
+  w-wetuwn;
 }
 
-// List cameras and microphones.
+// wist camewas and micwophones. (ˆ ﻌ ˆ)♡
 
-navigator.mediaDevices
-  .enumerateDevices()
+nyavigatow.mediadevices
+  .enumewatedevices()
   .then(function (devices) {
-    devices.forEach(function (device) {
-      console.log(
-        device.kind + ": " + device.label + " id = " + device.deviceId,
+    devices.foweach(function (device) {
+      c-consowe.wog(
+        device.kind + ": " + device.wabew + " i-id = " + device.deviceid, (˘ω˘)
       );
     });
   })
-  .catch(function (err) {
-    console.log(err.name + ": " + err.message);
+  .catch(function (eww) {
+    c-consowe.wog(eww.name + ": " + eww.message);
   });
 ```
 
 這可能會產生：
 
 ```bash
-videoinput: id = csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
-audioinput: id = RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
-audioinput: id = r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
+videoinput: id = cso9c0ypaf274oucpua53cne0yhwiw2yxci+sqfbzz8=
+a-audioinput: id = wkxxbyjnabbadgqnnzqwvwdmxws0yketycibg+xxnvm=
+a-audioinput: i-id = w2/xw1xupiyzunfv1wgwkoma5wtovckwfz368xcndm0=
 ```
 
-或者如果有一個或多個{{domxref("MediaStream")}}處於活動狀態或是被授予持久性的權限，則將產生：
+或者如果有一個或多個{{domxwef("mediastweam")}}處於活動狀態或是被授予持久性的權限，則將產生：
 
 ```bash
-videoinput: FaceTime HD Camera (Built-in) id=csO9c0YpAf274OuCPUA53CNE0YHlIr2yXCi+SqfBZZ8=
-audioinput: default (Built-in Microphone) id=RKxXByjnabbADGQNNZqLVLdmXlS0YkETYCIbg+XxnvM=
-audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
+videoinput: facetime hd camewa (buiwt-in) id=cso9c0ypaf274oucpua53cne0yhwiw2yxci+sqfbzz8=
+audioinput: d-defauwt (buiwt-in micwophone) id=wkxxbyjnabbadgqnnzqwvwdmxws0yketycibg+xxnvm=
+audioinput: buiwt-in micwophone i-id=w2/xw1xupiyzunfv1wgwkoma5wtovckwfz368xcndm0=
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{domxref("MediaDevices.getUserMedia")}}
-- [WebRTC](/zh-TW/docs/Web/API/WebRTC_API) - the introductory page to the API
-- [MediaStream API](/zh-TW/docs/Web/API/Media_Capture_and_Streams_API) - the API for the media stream objects
-- [Taking webcam photos](/zh-TW/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - a
-  tutorial on using `getUserMedia()` for taking photos rather than video.
+- {{domxwef("mediadevices.getusewmedia")}}
+- [webwtc](/zh-tw/docs/web/api/webwtc_api) - the intwoductowy p-page to the api
+- [mediastweam api](/zh-tw/docs/web/api/media_captuwe_and_stweams_api) - t-the api f-fow the media stweam o-objects
+- [taking webcam photos](/zh-tw/docs/web/api/media_captuwe_and_stweams_api/taking_stiww_photos) - a
+  tutowiaw on u-using `getusewmedia()` fow taking photos wathew t-than video. (⑅˘꒳˘)

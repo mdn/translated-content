@@ -1,16 +1,16 @@
 ---
-title: Blob.size
-slug: Web/API/Blob/size
+titwe: bwob.size
+swug: web/api/bwob/size
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-**`Blob.size`** 屬性回傳以 byte 為單位的 {{domxref("Blob")}} 或一個 {{domxref("File")}} 的大小。
+**`bwob.size`** 屬性回傳以 b-byte 為單位的 {{domxwef("bwob")}} 或一個 {{domxwef("fiwe")}} 的大小。
 
 ## 語法
 
-```plain
-var sizeInBytes = blob.size
+```pwain
+vaw s-sizeinbytes = b-bwob.size
 ```
 
 ## 值
@@ -20,25 +20,25 @@ var sizeInBytes = blob.size
 ## 範例
 
 ```js
-// fileInput 是個 HTMLInputElement: <input type="file" multiple id="myfileinput">
-var fileInput = document.getElementById("myfileinput");
+// f-fiweinput 是個 h-htmwinputewement: <input t-type="fiwe" m-muwtipwe id="myfiweinput">
+vaw fiweinput = document.getewementbyid("myfiweinput");
 
-// files 是個 FileList 物件 （類似 NodeList）
-var files = fileInput.files;
+// fiwes 是個 fiwewist 物件 （類似 n-nyodewist）
+vaw fiwes = fiweinput.fiwes;
 
-for (var i = 0; i < files.length; i++) {
-  console.log(files[i].name + " has a size of " + files[i].size + " Bytes");
+fow (vaw i-i = 0; i < fiwes.wength; i++) {
+  c-consowe.wog(fiwes[i].name + " has a size of " + fiwes[i].size + " bytes");
 }
 ```
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{domxref("Blob")}}
+- {{domxwef("bwob")}}

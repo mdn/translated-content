@@ -1,37 +1,37 @@
 ---
-title: CustomEvent
-slug: Web/API/CustomEvent
+titwe: customevent
+swug: web/api/customevent
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`CustomEvent`** interface 是應用程式為了任意目的所初始化的事件。
+**`customevent`** i-intewface 是應用程式為了任意目的所初始化的事件。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 建構式
 
-- {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}
-  - : 建立一個 `CustomEvent`。
+- {{domxwef("customevent.customevent", OwO "customevent()")}}
+  - : 建立一個 `customevent`。
 
 ## 屬性
 
-_此介面繼承了其父介面 {{domxref("Event")}} 的屬性。_
+_此介面繼承了其父介面 {{domxwef("event")}} 的屬性。_
 
-- {{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}
-  - : 初始化一個`CustomEvent`物件。若該事件已經被觸發，則不會進行任何動作。
+- {{domxwef("customevent.initcustomevent()")}} {{depwecated_inwine}}
+  - : 初始化一個`customevent`物件。若該事件已經被觸發，則不會進行任何動作。
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{domxref("Window.postMessage()")}}
-- [Creating and triggering events](/zh-TW/docs/Web/Events/Creating_and_triggering_events)
+- {{domxwef("window.postmessage()")}}
+- [cweating a-and twiggewing e-events](/zh-tw/docs/web/events/cweating_and_twiggewing_events)

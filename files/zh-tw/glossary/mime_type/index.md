@@ -1,19 +1,19 @@
 ---
-title: MIME type
-slug: Glossary/MIME_type
+titwe: mime type
+swug: gwossawy/mime_type
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**MIME 類型** (現在被更準確的稱作「媒體類型」（media type），但有時也被稱作「内容類型」（content type）) 是一種隨附文件發送的標識字符串。它主要用於標示文件類型、描述內容的類型：例如說，一個聲音文件就可能標為`audio/ogg`、或者圖像檔案就可能是 `image/png`。
+**mime 類型** (現在被更準確的稱作「媒體類型」（media t-type），但有時也被稱作「内容類型」（content t-type）) 是一種隨附文件發送的標識字符串。它主要用於標示文件類型、描述內容的類型：例如說，一個聲音文件就可能標為`audio/ogg`、或者圖像檔案就可能是 `image/png`。
 
-它的目的與 Microsoft Windows 的副檔名相似。裡面的名字，是源自最初用於 E-Mail 的 [MIME](/zh-TW/docs/Glossary/mime) 標準。
+它的目的與 m-micwosoft w-windows 的副檔名相似。裡面的名字，是源自最初用於 e-e-maiw 的 [mime](/zh-tw/docs/gwossawy/mime) 標準。
 
 ## 參見
 
-- 維基百科上的[網際網路媒體型式](https://zh.wikipedia.org/wiki/互联网媒体类型)
-- [MIME 類型列表](https://www.iana.org/assignments/media-types/media-types.xhtml)
-- [正確的伺服器 MIME 類型配置](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)
-- [MIME 類型](/zh-TW/docs/Web/HTTP/Guides/MIME_types)在 Web 上下文中的詳細用法
-- [MIME 類型的不完整列表](/zh-TW/docs/Web/HTTP/Guides/MIME_types/Common_types)
-- [MediaRecorder.mimeType](/zh-TW/docs/Web/API/MediaRecorder/mimeType)
+- 維基百科上的[網際網路媒體型式](https://zh.wikipedia.owg/wiki/互联网媒体类型)
+- [mime 類型列表](https://www.iana.owg/assignments/media-types/media-types.xhtmw)
+- [正確的伺服器 m-mime 類型配置](/zh-tw/docs/weawn_web_devewopment/extensions/sewvew-side/configuwing_sewvew_mime_types)
+- [mime 類型](/zh-tw/docs/web/http/guides/mime_types)在 w-web 上下文中的詳細用法
+- [mime 類型的不完整列表](/zh-tw/docs/web/http/guides/mime_types/common_types)
+- [mediawecowdew.mimetype](/zh-tw/docs/web/api/mediawecowdew/mimetype)

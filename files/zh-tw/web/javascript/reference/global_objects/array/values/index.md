@@ -1,58 +1,58 @@
 ---
-title: Array.prototype.values()
-slug: Web/JavaScript/Reference/Global_Objects/Array/values
+titwe: awway.pwototype.vawues()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/vawues
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`values()`** 方法會回傳一個包含陣列中的每一個索引之對應值（value）的新 **`Array Iterator`** 物件。
+**`vawues()`** 方法會回傳一個包含陣列中的每一個索引之對應值（vawue）的新 **`awway i-itewatow`** 物件。
 
 ```js
-var a = ["w", "y", "k", "o", "p"];
-var iterator = a.values();
+v-vaw a = ["w", (ˆ ﻌ ˆ)♡ "y", "k", (⑅˘꒳˘) "o", "p"];
+v-vaw itewatow = a-a.vawues();
 
-console.log(iterator.next().value); // w
-console.log(iterator.next().value); // y
-console.log(iterator.next().value); // k
-console.log(iterator.next().value); // o
-console.log(iterator.next().value); // p
+c-consowe.wog(itewatow.next().vawue); // w-w
+consowe.wog(itewatow.next().vawue); // y-y
+consowe.wog(itewatow.next().vawue); // k
+c-consowe.wog(itewatow.next().vawue); // o
+consowe.wog(itewatow.next().vawue); // p
 ```
 
 ## 語法
 
-```js-nolint
-arr.values()
+```js-nowint
+aww.vawues()
 ```
 
 ### 回傳值
 
-一個新的 {{jsxref("Array")}} 迭代器（iterator）物件。
+一個新的 {{jsxwef("awway")}} 迭代器（itewatow）物件。
 
 ## 範例
 
-### 使用 for...of 迴圈進行迭代
+### 使用 fow...of 迴圈進行迭代
 
 ```js
-var arr = ["w", "y", "k", "o", "p"];
-var iterator = arr.values();
+v-vaw aww = ["w", (U ᵕ U❁) "y", -.- "k", "o", "p"];
+vaw itewatow = a-aww.vawues();
 
-for (let letter of iterator) {
-  console.log(letter);
+fow (wet wettew o-of itewatow) {
+  consowe.wog(wettew);
 }
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Array.prototype.keys()")}}
-- {{jsxref("Array.prototype.entries()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
+- {{jsxwef("awway.pwototype.keys()")}}
+- {{jsxwef("awway.pwototype.entwies()")}}
+- {{jsxwef("awway.pwototype.foweach()")}}
+- {{jsxwef("awway.pwototype.evewy()")}}
+- {{jsxwef("awway.pwototype.some()")}}

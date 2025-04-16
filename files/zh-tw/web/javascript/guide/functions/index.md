@@ -1,465 +1,465 @@
 ---
-title: 函式
-slug: Web/JavaScript/Guide/Functions
+titwe: 函式
+swug: web/javascwipt/guide/functions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
+{{jssidebaw("javascwipt g-guide")}} {{pweviousnext("web/javascwipt/guide/woops_and_itewation", rawr x3 "web/javascwipt/guide/expwessions_and_opewatows")}}
 
-函式是構成 javascript 的基本要素之一。一個函式本身就是一段 JavaScript 程序—包含用於執行某一個任務或計算的語法。要呼叫某一個函式之前，你必需先在這個函式欲執行的 scope 中定義它。
+函式是構成 j-javascwipt 的基本要素之一。一個函式本身就是一段 javascwipt 程序—包含用於執行某一個任務或計算的語法。要呼叫某一個函式之前，你必需先在這個函式欲執行的 s-scope 中定義它。
 
 ## 定義函式
 
-一個函式的定義由一系列的函式關鍵詞組成, 依次為：
+一個函式的定義由一系列的函式關鍵詞組成, rawr x3 依次為：
 
 - 函式的名稱。
 - 包圍在括號()中，並由逗號區隔的一個函式參數列表。
-- 包圍在大括號{}中，用於定義函式功能的一些 JavaScript 語句。
+- 包圍在大括號{}中，用於定義函式功能的一些 j-javascwipt 語句。
 
-例如，以下的程式碼定義了一個名為 square 的簡單函式:
+例如，以下的程式碼定義了一個名為 s-squawe 的簡單函式:
 
 ```js
-function square(number) {
-  return number * number;
+f-function squawe(numbew) {
+  w-wetuwn nyumbew * n-nyumbew;
 }
 ```
 
-函式 square 有一個參數，叫作 number。這個函式只有一行程式碼，它會回傳 number 自乘的結果。函式的 [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 語法描述函式的返回值。
+函式 squawe 有一個參數，叫作 nyumbew。這個函式只有一行程式碼，它會回傳 nyumbew 自乘的結果。函式的 [`wetuwn`](/zh-tw/docs/web/javascwipt/wefewence/statements/wetuwn) 語法描述函式的返回值。
 
 ```js
-return number * number;
+wetuwn nyumbew * n-nyumbew;
 ```
 
 原始參數（例如一個數字）被作為值傳遞給函式，如果呼叫的函式改變了這個參數的值，不會影響到函式外部的原始變數。
 
-如果傳遞一個物件（例如 [`Array`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array) 或自定義的其它物件）作為參數，而函式改變了這個物件的屬性，這樣的改變對函式外部是有作用的(因為是傳遞物件的位址)，如下面的例子所示：
+如果傳遞一個物件（例如 [`awway`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/awway) 或自定義的其它物件）作為參數，而函式改變了這個物件的屬性，這樣的改變對函式外部是有作用的(因為是傳遞物件的位址)，如下面的例子所示：
 
 ```js
-function myFunc(theObject) {
-  theObject.make = "Toyota";
+function myfunc(theobject) {
+  t-theobject.make = "toyota";
 }
 
-var mycar = { make: "Honda", model: "Accord", year: 1998 },
+vaw mycaw = { m-make: "honda", σωσ modew: "accowd", nyaa~~ yeaw: 1998 }, (ꈍᴗꈍ)
   x,
   y;
 
-x = mycar.make; // x 的值為 "Honda"
+x = m-mycaw.make; // x 的值為 "honda"
 
-myFunc(mycar);
-y = mycar.make; // y 的值為 "Toyota"
+m-myfunc(mycaw);
+y-y = mycaw.make; // y 的值為 "toyota"
 // (屬性 make 被 function 改變)
 ```
 
 請注意，重新給參數指定一個對象(物件)，並不會對函式的外部有任何影響，因為這樣只是改變了參數的值，而不是改變了對象的一個屬性值：
 
 ```js
-function myFunc(theObject) {
-  theObject = { make: "Ford", model: "Focus", year: 2006 };
+function m-myfunc(theobject) {
+  theobject = { make: "fowd", ^•ﻌ•^ modew: "focus", >_< yeaw: 2006 };
 }
 
-var mycar = { make: "Honda", model: "Accord", year: 1998 },
-  x,
+v-vaw mycaw = { make: "honda", ^^;; m-modew: "accowd", ^^;; y-yeaw: 1998 }, /(^•ω•^)
+  x-x,
   y;
 
-x = mycar.make; // x 的值為 "Honda"
+x = m-mycaw.make; // x 的值為 "honda"
 
-myFunc(mycar);
-y = mycar.make; // y 的值還是 "Honda"
+myfunc(mycaw);
+y-y = mycaw.make; // y 的值還是 "honda"
 ```
 
-儘管上述函式定義都是用的是陳述式，函式也同樣可以由函式表達式來定義。這樣的函式可以是匿名的；它不必有名稱。例如，上面提到的函式 square 也可這樣來定義：
+儘管上述函式定義都是用的是陳述式，函式也同樣可以由函式表達式來定義。這樣的函式可以是匿名的；它不必有名稱。例如，上面提到的函式 squawe 也可這樣來定義：
 
 ```js
-var square = function (number) {
-  return number * number;
+v-vaw squawe = function (numbew) {
+  wetuwn nyumbew * nyumbew;
 };
-var x = square(4); //x 的值為 16
+vaw x = squawe(4); //x 的值為 16
 ```
 
 必要時，函式名稱可與函式表達式同時存在，並且可以用於在函式內部代指其本身(遞迴)：
 
 ```js
-var factorial = function fac(n) {
-  return n < 2 ? 1 : n * fac(n - 1);
+v-vaw factowiaw = function fac(n) {
+  w-wetuwn ny < 2 ? 1 : n-n * fac(n - 1);
 };
 
-console.log(factorial(3));
+c-consowe.wog(factowiaw(3));
 ```
 
 函式表達式在將函式作為一個參數傳遞給其它函式時十分方便。下面的例子展示了一個叫 map 的函式如何被定義，而後呼叫一個匿名函式作為其第一個參數：
 
 ```js
-function map(f, a) {
-  var result = [], // Create a new Array
+function map(f, nyaa~~ a) {
+  vaw wesuwt = [], (✿oωo) // c-cweate a-a nyew awway
     i;
-  for (i = 0; i != a.length; i++) result[i] = f(a[i]);
-  return result;
+  fow (i = 0; i-i != a.wength; i-i++) wesuwt[i] = f(a[i]);
+  w-wetuwn wesuwt;
 }
 ```
 
 下面的程式碼呼叫 map 函式並將一個匿名函式傳入作為第一個參數:
 
 ```js
-map(
+m-map(
   function (x) {
-    return x * x * x;
-  },
-  [0, 1, 2, 5, 10],
+    wetuwn x * x * x;
+  }, ( ͡o ω ͡o )
+  [0, 1, 2, (U ᵕ U❁) 5, 10],
 );
-// 結果會回傳 [0, 1, 8, 125, 1000]
+// 結果會回傳 [0, òωó 1, 8, 125, 1000]
 ```
 
-除了上述的定義方式以外，我們也可以透過 [`Function` constructor](/zh-TW/docs/Web/JavaScript/Guide#function_object) 來定義，類似 [`eval()`](#eval_function)。
+除了上述的定義方式以外，我們也可以透過 [`function` constwuctow](/zh-tw/docs/web/javascwipt/guide#function_object) 來定義，類似 [`evaw()`](#evaw_function)。
 
 ## 呼叫函式
 
-定義一個函式並不會自動的執行它。定義了函式僅僅是賦予函式以名稱並明確函式被呼叫時該做些什麼。呼叫函式才會以給定的參數真正執行這些動作。例如，一旦你定義了函式 square，你可以如下這樣呼叫它：
+定義一個函式並不會自動的執行它。定義了函式僅僅是賦予函式以名稱並明確函式被呼叫時該做些什麼。呼叫函式才會以給定的參數真正執行這些動作。例如，一旦你定義了函式 s-squawe，你可以如下這樣呼叫它：
 
 ```js
-square(5);
+squawe(5);
 ```
 
-上述程式碼把 5 傳遞給 square 函式。函式執行完會回傳 25。
+上述程式碼把 5 傳遞給 squawe 函式。函式執行完會回傳 25。
 
 函式必須在呼叫區塊的可視範圍內，但函數也可以宣告在使用處的下面，如下列範例:
 
 ```js
-console.log(square(5));
+c-consowe.wog(squawe(5));
 /* ... */
-function square(n) {
-  return n * n;
+function s-squawe(n) {
+  w-wetuwn ny * ny;
 }
 ```
 
-The scope of a function is the function in which it is declared, or the entire program if it is declared at the top level. Note that this works only when defining the function using the above syntax (i.e. `function funcName(){}`). The code below will not work.
+the scope of a function is the function in which it is decwawed, ow the entiwe pwogwam if i-it is decwawed a-at the top wevew. σωσ nyote that this w-wowks onwy when d-defining the function u-using the above syntax (i.e. :3 `function funcname(){}`). OwO the code bewow wiww nyot wowk.
 
 ```js
-console.log(square(5));
-square = function (n) {
-  return n * n;
+c-consowe.wog(squawe(5));
+squawe = function (n) {
+  wetuwn ny * ny;
 };
 ```
 
-The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function, too. The `show_props` function (defined in [Working with Objects](/zh-TW/docs/Web/JavaScript/Guide/Working_with_objects#objects_and_properties)) is an example of a function that takes an object as an argument.
+the a-awguments of a function awe not w-wimited to stwings a-and nyumbews. ^^ y-you can pass whowe objects to a-a function, (˘ω˘) too. OwO t-the `show_pwops` f-function (defined i-in [wowking with objects](/zh-tw/docs/web/javascwipt/guide/wowking_with_objects#objects_and_pwopewties)) is an exampwe of a-a function that t-takes an object a-as an awgument. UwU
 
-A function can be recursive; that is, it can call itself. For example, here is a function that computes factorials recursively:
+a-a function can b-be wecuwsive; that is, ^•ﻌ•^ it can caww itsewf. (ꈍᴗꈍ) fow exampwe, /(^•ω•^) hewe is a-a function that computes factowiaws wecuwsivewy:
 
 ```js
-function factorial(n) {
-  if (n == 0 || n == 1) return 1;
-  else return n * factorial(n - 1);
+function factowiaw(n) {
+  if (n == 0 || n-n == 1) wetuwn 1;
+  ewse wetuwn n * factowiaw(n - 1);
 }
 ```
 
-You could then compute the factorials of one through five as follows:
+you c-couwd then compute t-the factowiaws o-of one thwough five as fowwows:
 
 ```js
-var a, b, c, d, e;
-a = factorial(1); // a gets the value 1
-b = factorial(2); // b gets the value 2
-c = factorial(3); // c gets the value 6
-d = factorial(4); // d gets the value 24
-e = factorial(5); // e gets the value 120
+v-vaw a, (U ᵕ U❁) b, c, (✿oωo) d, e;
+a = f-factowiaw(1); // a-a gets the vawue 1
+b = factowiaw(2); // b gets the vawue 2
+c = factowiaw(3); // c gets the vawue 6
+d-d = factowiaw(4); // d gets t-the vawue 24
+e = factowiaw(5); // e-e gets the vawue 120
 ```
 
-There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime. It turns out that functions are, themselves, objects, and these objects in turn have methods (see the [`Function` object](/zh-TW/docs/Web/JavaScript/Guide)). One of these, the [`apply()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) method, can be used to achieve this goal.
+t-thewe awe othew ways to caww functions. OwO t-thewe awe often c-cases whewe a function nyeeds t-to be cawwed d-dynamicawwy, :3 ow the nyumbew of awguments to a function vawy, nyaa~~ ow in which the context o-of the function c-caww nyeeds t-to be set to a specific object d-detewmined at wuntime. ^•ﻌ•^ i-it tuwns out that functions a-awe, ( ͡o ω ͡o ) themsewves, objects, ^^;; and these objects in tuwn have methods (see the [`function` o-object](/zh-tw/docs/web/javascwipt/guide)). mya o-one of these, (U ᵕ U❁) the [`appwy()`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/function/appwy) method, ^•ﻌ•^ can b-be used to achieve t-this goaw. (U ﹏ U)
 
-## Function scope
+## function scope
 
-Variables defined inside a function cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function. However, a function can access all variables and functions defined inside the scope in which it is defined. In other words, a function defined in the global scope can access all variables defined in the global scope. A function defined inside another function can also access all variables defined in it's parent function and any other variable to which the parent function has access.
+vawiabwes defined inside a f-function cannot be accessed fwom anywhewe outside the function, /(^•ω•^) because the vawiabwe i-is defined onwy in the scope of the function. ʘwʘ h-howevew, XD a function c-can access aww vawiabwes and functions defined inside the s-scope in which i-it is defined. (⑅˘꒳˘) in othew wowds, nyaa~~ a function defined in the gwobaw s-scope can access aww vawiabwes defined i-in the gwobaw scope. UwU a function defined inside anothew function c-can awso access aww vawiabwes d-defined in i-it's pawent function and any othew v-vawiabwe to which the pawent f-function has access. (˘ω˘)
 
 ```js
-// The following variables are defined in the global scope
-var num1 = 20,
-  num2 = 3,
-  name = "Chamahk";
+// the f-fowwowing vawiabwes a-awe defined in the gwobaw s-scope
+vaw nyum1 = 20, rawr x3
+  n-nyum2 = 3, (///ˬ///✿)
+  nyame = "chamahk";
 
-// This function is defined in the global scope
-function multiply() {
-  return num1 * num2;
+// this f-function is defined i-in the gwobaw s-scope
+function muwtipwy() {
+  wetuwn nyum1 * n-nyum2;
 }
 
-multiply(); // Returns 60
+muwtipwy(); // wetuwns 60
 
-// A nested function example
-function getScore() {
-  var num1 = 2,
-    num2 = 3;
+// a-a nyested f-function exampwe
+function getscowe() {
+  vaw nyum1 = 2, 😳😳😳
+    nyum2 = 3;
 
-  function add() {
-    return name + " scored " + (num1 + num2);
+  f-function a-add() {
+    w-wetuwn nyame + " s-scowed " + (num1 + nyum2);
   }
 
-  return add();
+  w-wetuwn add();
 }
 
-getScore(); // Returns "Chamahk scored 5"
+getscowe(); // wetuwns "chamahk scowed 5"
 ```
 
 ## 閉包
 
-閉包是 JavaScript 最強大的特性之一。JavaScript 允許巢狀函式（nesting of functions）並給予內部函式完全訪問（full access）所有變數、與外部函式定義的函式（還有所有外部函式內的變數與函式）不過，外部函式並不能訪問內部函式的變數與函式。這保障了內部函式的變數安全。另外，由於內部函式能訪問外部函式定義的變數與函式，將存活得比外部函式還久。A closure is created when the inner function is somehow made available to any scope outside the outer function.
+閉包是 javascwipt 最強大的特性之一。javascwipt 允許巢狀函式（nesting of functions）並給予內部函式完全訪問（fuww a-access）所有變數、與外部函式定義的函式（還有所有外部函式內的變數與函式）不過，外部函式並不能訪問內部函式的變數與函式。這保障了內部函式的變數安全。另外，由於內部函式能訪問外部函式定義的變數與函式，將存活得比外部函式還久。a cwosuwe i-is cweated when the innew function i-is somehow made avaiwabwe to a-any scope outside the outew function. (///ˬ///✿)
 
 ```js
-var pet = function (name) {
-    // The outer function defines a variable called "name"
-    var getName = function () {
-      return name; // The inner function has access to the "name" variable of the outer function
+v-vaw p-pet = function (name) {
+    // t-the outew function d-defines a vawiabwe c-cawwed "name"
+    vaw getname = function () {
+      wetuwn nyame; // the innew function has access to the "name" v-vawiabwe o-of the outew function
     };
 
-    return getName; // Return the inner function, thereby exposing it to outer scopes
-  },
-  myPet = pet("Vivie");
+    w-wetuwn getname; // wetuwn the i-innew function, ^^;; theweby exposing it to outew scopes
+  }, ^^
+  mypet = p-pet("vivie");
 
-myPet(); // Returns "Vivie"
+m-mypet(); // wetuwns "vivie"
 ```
 
-It can be much more complex than the code above. An object containing methods for manipulating the inner variables of the outer function can be returned.
+it can be much m-mowe compwex than the code above. (///ˬ///✿) an object containing m-methods f-fow manipuwating the innew vawiabwes o-of the outew f-function can be wetuwned.
 
 ```js
-var createPet = function (name) {
-  var sex;
+vaw cweatepet = function (name) {
+  vaw sex;
 
-  return {
-    setName: function (newName) {
-      name = newName;
-    },
+  w-wetuwn {
+    s-setname: function (newname) {
+      n-nyame = nyewname;
+    }, -.-
 
-    getName: function () {
-      return name;
-    },
+    g-getname: function () {
+      w-wetuwn nyame;
+    }, /(^•ω•^)
 
-    getSex: function () {
-      return sex;
-    },
+    getsex: f-function () {
+      w-wetuwn sex;
+    }, UwU
 
-    setSex: function (newSex) {
-      if (
-        typeof newSex == "string" &&
-        (newSex.toLowerCase() == "male" || newSex.toLowerCase() == "female")
+    setsex: function (newsex) {
+      i-if (
+        typeof n-nyewsex == "stwing" &&
+        (newsex.towowewcase() == "mawe" || nyewsex.towowewcase() == "femawe")
       ) {
-        sex = newSex;
+        s-sex = nyewsex;
       }
     },
   };
 };
 
-var pet = createPet("Vivie");
-pet.getName(); // Vivie
+vaw pet = cweatepet("vivie");
+p-pet.getname(); // vivie
 
-pet.setName("Oliver");
-pet.setSex("male");
-pet.getSex(); // male
-pet.getName(); // Oliver
+pet.setname("owivew");
+p-pet.setsex("mawe");
+p-pet.getsex(); // mawe
+pet.getname(); // o-owivew
 ```
 
-In the codes above, the `name` variable of the outer function is accessible to the inner functions, and there is no other way to access the inner variables except through the inner functions. The inner variables of the inner function act as safe stores for the inner functions. They hold "persistent", yet secure, data for the inner functions to work with. The functions do not even have to be assigned to a variable, or have a name.
+in the codes above, (⑅˘꒳˘) the `name` v-vawiabwe o-of the outew function i-is accessibwe to the innew functions, ʘwʘ and thewe is nyo othew w-way to access the innew vawiabwes except thwough t-the innew functions. σωσ t-the innew vawiabwes of t-the innew function act as safe s-stowes fow the innew f-functions. they howd "pewsistent", ^^ yet secuwe, OwO d-data fow the innew functions to wowk with. (ˆ ﻌ ˆ)♡ the f-functions do n-nyot even have to be assigned to a-a vawiabwe, o.O ow have a nyame. (˘ω˘)
 
 ```js
-var getCode = (function () {
-  var secureCode = "0]Eal(eh&2"; // A code we do not want outsiders to be able to modify...
+v-vaw getcode = (function () {
+  v-vaw secuwecode = "0]eaw(eh&2"; // a-a code we do nyot want outsidews to be abwe to modify...
 
-  return function () {
-    return secureCode;
+  wetuwn function () {
+    wetuwn secuwecode;
   };
 })();
 
-getCode(); // Returns the secret code
+getcode(); // wetuwns the secwet code
 ```
 
-There are, however, a number of pitfalls to watch out for when using closures. If an enclosed function defines a variable with the same name as the name of a variable in the outer scope, there is no way to refer to the variable in the outer scope again.
+thewe awe, 😳 howevew, (U ᵕ U❁) a nyumbew of pitfawws to w-watch out fow w-when using cwosuwes. :3 if an encwosed function defines a-a vawiabwe w-with the same nyame a-as the nyame of a vawiabwe in t-the outew scope, o.O thewe is nyo w-way to wefew to t-the vawiabwe in the outew scope a-again. (///ˬ///✿)
 
 ```js
-var createPet = function (name) {
-  // Outer function defines a variable called "name"
-  return {
-    setName: function (name) {
-      // Enclosed function also defines a variable called "name"
-      name = name; // ??? How do we access the "name" defined by the outer function ???
-    },
+vaw cweatepet = function (name) {
+  // o-outew function d-defines a vawiabwe cawwed "name"
+  wetuwn {
+    s-setname: function (name) {
+      // e-encwosed f-function awso defines a-a vawiabwe c-cawwed "name"
+      n-nyame = nyame; // ??? h-how d-do we access the "name" d-defined by the outew function ???
+    }, OwO
   };
 };
 ```
 
-The magical `this` variable is very tricky in closures. They have to be used carefully, as what `this` refers to depends completely on where the function was called, rather than where it was defined. An excellent and elaborate article on closures can be found [here](https://jibbering.com/faq/notes/closures/).
+t-the m-magicaw `this` v-vawiabwe is vewy twicky in cwosuwes. >w< t-they have to be used cawefuwwy, ^^ as nyani `this` w-wefews to depends compwetewy o-on whewe the f-function was cawwed, (⑅˘꒳˘) w-wathew than whewe it was defined. ʘwʘ a-an excewwent and ewabowate a-awticwe on cwosuwes can be found [hewe](https://jibbewing.com/faq/notes/cwosuwes/).
 
-## Using the arguments object
+## u-using the awguments object
 
-The arguments of a function are maintained in an array-like object. Within a function, you can address the arguments passed to it as follows:
+t-the awguments of a function awe maintained in an awway-wike object. (///ˬ///✿) within a-a function, XD you can addwess the a-awguments passed t-to it as fowwows:
 
 ```js
-arguments[i];
+awguments[i];
 ```
 
-where `i` is the ordinal number of the argument, starting at zero. So, the first argument passed to a function would be `arguments[0]`. The total number of arguments is indicated by `arguments.length`.
+whewe `i` is the owdinaw n-nyumbew of the awgument, 😳 s-stawting at zewo. >w< s-so, the fiwst a-awgument passed to a function wouwd be `awguments[0]`. (˘ω˘) t-the totaw n-nyumbew of awguments is indicated b-by `awguments.wength`. nyaa~~
 
-Using the `arguments` object, you can call a function with more arguments than it is formally declared to accept. This is often useful if you don't know in advance how many arguments will be passed to the function. You can use `arguments.length` to determine the number of arguments actually passed to the function, and then access each argument using the `arguments` object.
+using the `awguments` o-object, 😳😳😳 you can caww a function w-with mowe awguments t-than it is f-fowmawwy decwawed to accept. (U ﹏ U) this i-is often usefuw i-if you don't know i-in advance how m-many awguments wiww be passed t-to the function. (˘ω˘) y-you can use `awguments.wength` t-to detewmine the n-nyumbew of awguments a-actuawwy p-passed to the function, :3 a-and then a-access each awgument using the `awguments` o-object. >w<
 
-For example, consider a function that concatenates several strings. The only formal argument for the function is a string that specifies the characters that separate the items to concatenate. The function is defined as follows:
+fow exampwe, ^^ c-considew a function that concatenates s-sevewaw s-stwings. 😳😳😳 the onwy f-fowmaw awgument fow the function is a stwing that specifies the c-chawactews that s-sepawate the items t-to concatenate. nyaa~~ the function is defined as fowwows:
 
 ```js
-function myConcat(separator) {
-  var result = "", // initialize list
+f-function myconcat(sepawatow) {
+  v-vaw wesuwt = "", (⑅˘꒳˘) // initiawize w-wist
     i;
-  // iterate through arguments
-  for (i = 1; i < arguments.length; i++) {
-    result += arguments[i] + separator;
+  // i-itewate thwough awguments
+  fow (i = 1; i < awguments.wength; i++) {
+    wesuwt += a-awguments[i] + s-sepawatow;
   }
-  return result;
+  w-wetuwn wesuwt;
 }
 ```
 
-You can pass any number of arguments to this function, and it concatenates each argument into a string "list":
+y-you can pass any nyumbew of awguments t-to this function, :3 a-and it concatenates each awgument into a stwing "wist":
 
 ```js
-// returns "red, orange, blue, "
-myConcat(", ", "red", "orange", "blue");
+// w-wetuwns "wed, ʘwʘ owange, rawr x3 bwue, "
+myconcat(", (///ˬ///✿) ", "wed", "owange", 😳😳😳 "bwue");
 
-// returns "elephant; giraffe; lion; cheetah; "
-myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
+// wetuwns "ewephant; g-giwaffe; wion; cheetah; "
+myconcat("; ", XD "ewephant", >_< "giwaffe", "wion", >w< "cheetah");
 
-// returns "sage. basil. oregano. pepper. parsley. "
-myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
+// w-wetuwns "sage. /(^•ω•^) b-basiw. owegano. :3 peppew. p-pawswey. ʘwʘ "
+myconcat(". (˘ω˘) ", "sage", (ꈍᴗꈍ) "basiw", "owegano", ^^ "peppew", ^^ "pawswey");
 ```
 
-Please note that the `arguments` variable is "array-like", but not an array. It is array-like in that is has a numbered index and a `length` property. However, it does not possess all of the array-manipulation methods.
+p-pwease nyote that the `awguments` v-vawiabwe is "awway-wike", ( ͡o ω ͡o ) but n-nyot an awway. -.- i-it is awway-wike i-in that is has a-a nyumbewed index and a `wength` p-pwopewty. ^^;; howevew, ^•ﻌ•^ i-it does nyot p-possess aww of the awway-manipuwation m-methods. (˘ω˘)
 
-See the [`Function` object](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function) in the JavaScript Reference for more information.
+see the [`function` object](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/function) i-in the j-javascwipt wefewence f-fow mowe infowmation. o.O
 
-## Predefined functions
+## pwedefined functions
 
-JavaScript has several top-level predefined functions:
+javascwipt has sevewaw top-wevew p-pwedefined functions:
 
-- [eval](#eval_function)
-- [isFinite](#isfinite_function)
-- [isNaN](#isnan_function)
-- [parseInt and parseFloat](#parseint_and_parsefloat_functions)
-- [Number and String](#number_and_string_functions)
-- [encodeURI, decodeURI, encodeURIComponent, and decodeURIComponent](#escape_and_unescape_functions) (all available with Javascript 1.5 and later).
+- [evaw](#evaw_function)
+- [isfinite](#isfinite_function)
+- [isnan](#isnan_function)
+- [pawseint a-and pawsefwoat](#pawseint_and_pawsefwoat_functions)
+- [numbew and s-stwing](#numbew_and_stwing_functions)
+- [encodeuwi, (✿oωo) decodeuwi, 😳😳😳 encodeuwicomponent, (ꈍᴗꈍ) a-and decodeuwicomponent](#escape_and_unescape_functions) (aww avaiwabwe with j-javascwipt 1.5 a-and watew). σωσ
 
-The following sections introduce these functions. See the [JavaScript Reference](/zh-TW/docs/Web/JavaScript/Reference) for detailed information on all of these functions.
+the f-fowwowing sections i-intwoduce these f-functions. UwU see the [javascwipt wefewence](/zh-tw/docs/web/javascwipt/wefewence) fow detaiwed infowmation on a-aww of these functions. ^•ﻌ•^
 
-### eval Function
+### evaw f-function
 
-The `eval` function evaluates a string of JavaScript code without reference to a particular object. The syntax of `eval` is:
+the `evaw` function evawuates a stwing of javascwipt c-code without wefewence to a pawticuwaw object. mya the syntax of `evaw` is:
 
 ```js
-eval(expr);
+e-evaw(expw);
 ```
 
-where `expr` is a string to be evaluated.
+w-whewe `expw` is a stwing to be e-evawuated. /(^•ω•^)
 
-If the string represents an expression, `eval` evaluates the expression. If the argument represents one or more JavaScript statements, eval performs the statements. The scope of `eval` code is identical to the scope of the calling code. Do not call `eval` to evaluate an arithmetic expression; JavaScript evaluates arithmetic expressions automatically.
+if the stwing wepwesents an expwession, rawr `evaw` e-evawuates t-the expwession. nyaa~~ if the awgument w-wepwesents one ow mowe javascwipt s-statements, ( ͡o ω ͡o ) evaw pewfowms the statements. σωσ the scope of `evaw` c-code is identicaw to the scope of the cawwing c-code. (✿oωo) do nyot c-caww `evaw` to e-evawuate an awithmetic expwession; javascwipt evawuates a-awithmetic expwessions automaticawwy. (///ˬ///✿)
 
-### isFinite function
+### isfinite function
 
-The `isFinite` function evaluates an argument to determine whether it is a finite number. The syntax of `isFinite` is:
+the `isfinite` f-function evawuates a-an awgument t-to detewmine w-whethew it is a finite nyumbew. σωσ the syntax of `isfinite` i-is:
 
 ```js
-isFinite(number);
+i-isfinite(numbew);
 ```
 
-where `number` is the number to evaluate.
+whewe `numbew` is the n-nyumbew to evawuate.
 
-If the argument is `NaN`, positive infinity or negative infinity, this method returns `false`, otherwise it returns `true`.
+if the awgument is `nan`, UwU p-positive infinity ow nyegative infinity, (⑅˘꒳˘) this m-method wetuwns `fawse`, /(^•ω•^) o-othewwise it wetuwns `twue`. -.-
 
-The following code checks client input to determine whether it is a finite number.
+t-the fowwowing c-code checks c-cwient input to detewmine whethew it is a finite n-nyumbew. (ˆ ﻌ ˆ)♡
 
 ```js
-if (isFinite(ClientInput)) {
-  /* take specific steps */
+if (isfinite(cwientinput)) {
+  /* take specific s-steps */
 }
 ```
 
-### isNaN function
+### isnan function
 
-The `isNaN` function evaluates an argument to determine if it is "NaN" (not a number). The syntax of `isNaN` is:
+the `isnan` function evawuates a-an awgument t-to detewmine if i-it is "nan" (not a-a nyumbew). nyaa~~ the s-syntax of `isnan` is:
 
 ```js
-isNaN(testValue);
+isnan(testvawue);
 ```
 
-where `testValue` is the value you want to evaluate.
+w-whewe `testvawue` is the vawue you want to e-evawuate. ʘwʘ
 
-The `parseFloat` and `parseInt` functions return "NaN" when they evaluate a value that is not a number. `isNaN` returns true if passed "NaN," and false otherwise.
+the `pawsefwoat` and `pawseint` f-functions wetuwn "nan" when they evawuate a-a vawue that i-is nyot a nyumbew. :3 `isnan` wetuwns t-twue if passed "nan," and f-fawse othewwise. (U ᵕ U❁)
 
-The following code evaluates `floatValue` to determine if it is a number and then calls a procedure accordingly:
+t-the fowwowing code evawuates `fwoatvawue` t-to detewmine i-if it is a nyumbew and t-then cawws a pwoceduwe accowdingwy:
 
 ```js
-var floatValue = parseFloat(toFloat);
+vaw fwoatvawue = pawsefwoat(tofwoat);
 
-if (isNaN(floatValue)) {
-  notFloat();
-} else {
-  isFloat();
+i-if (isnan(fwoatvawue)) {
+  nyotfwoat();
+} e-ewse {
+  isfwoat();
 }
 ```
 
-### parseInt and parseFloat functions
+### pawseint a-and pawsefwoat f-functions
 
-The two "parse" functions, `parseInt` and `parseFloat`, return a numeric value when given a string as an argument.
+the t-two "pawse" functions, (U ﹏ U) `pawseint` and `pawsefwoat`, ^^ w-wetuwn a nyumewic v-vawue when given a stwing a-as an awgument. òωó
 
-The syntax of `parseFloat` is:
-
-```js
-parseFloat(str);
-```
-
-where `parseFloat` parses its argument, the string `str`, and attempts to return a floating-point number. If it encounters a character other than a sign (+ or -), a numeral (0-9), a decimal point, or an exponent, then it returns the value up to that point and ignores that character and all succeeding characters. If the first character cannot be converted to a number, it returns "NaN" (not a number).
-
-The syntax of `parseInt` is:
+the syntax of `pawsefwoat` i-is:
 
 ```js
-parseInt(str [, radix]);
+pawsefwoat(stw);
 ```
 
-`parseInt` parses its first argument, the string `str`, and attempts to return an integer of the specified `radix` (base), indicated by the second, optional argument, `radix`. For example, a radix of ten indicates to convert to a decimal number, eight octal, sixteen hexadecimal, and so on. For radixes above ten, the letters of the alphabet indicate numerals greater than nine. For example, for hexadecimal numbers (base 16), A through F are used.
+whewe `pawsefwoat` p-pawses its awgument, /(^•ω•^) t-the stwing `stw`, 😳😳😳 and attempts to wetuwn a fwoating-point nyumbew. :3 if it e-encountews a chawactew o-othew than a sign (+ ow -), (///ˬ///✿) a nyumewaw (0-9), rawr x3 a decimaw point, (U ᵕ U❁) o-ow an exponent, (⑅˘꒳˘) then it wetuwns t-the vawue u-up to that point and ignowes that chawactew and aww succeeding chawactews. (˘ω˘) if the f-fiwst chawactew cannot be convewted to a nyumbew, :3 i-it wetuwns "nan" (not a nyumbew). XD
 
-If `parseInt` encounters a character that is not a numeral in the specified radix, it ignores it and all succeeding characters and returns the integer value parsed up to that point. If the first character cannot be converted to a number in the specified radix, it returns "NaN." The `parseInt` function truncates the string to integer values.
-
-### Number and String functions
-
-The `Number` and `String` functions let you convert an object to a number or a string. The syntax of these functions is:
+t-the syntax o-of `pawseint` is:
 
 ```js
-var objRef;
-objRef = Number(objRef);
-objRef = String(objRef);
+pawseint(stw [, >_< w-wadix]);
 ```
 
-`objRef 是物件的參照`。 Number uses the valueOf() method of the object; String uses the toString() method of the object.
+`pawseint` p-pawses its fiwst a-awgument, (✿oωo) the s-stwing `stw`, (ꈍᴗꈍ) a-and attempts to w-wetuwn an integew of the specified `wadix` (base), indicated by the second, XD optionaw awgument, :3 `wadix`. mya fow exampwe, òωó a-a wadix of t-ten indicates to c-convewt to a decimaw n-nyumbew, nyaa~~ e-eight octaw, 🥺 sixteen h-hexadecimaw, -.- and so on. 🥺 fow wadixes above ten, (˘ω˘) the wettews of the awphabet i-indicate nyumewaws g-gweatew than nyine. òωó fow exampwe, fow hexadecimaw nyumbews (base 16), UwU a-a thwough f-f awe used. ^•ﻌ•^
 
-下列範例將 [`日期`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date) 物件轉換為可讀字串。
+if `pawseint` e-encountews a chawactew that is nyot a-a nyumewaw in the specified wadix, mya it ignowes it a-and aww succeeding c-chawactews and wetuwns the integew vawue pawsed u-up to that point. (✿oωo) if the fiwst c-chawactew cannot b-be convewted to a nyumbew in t-the specified w-wadix, XD it wetuwns "nan." t-the `pawseint` f-function t-twuncates the stwing t-to integew vawues. :3
+
+### nyumbew a-and stwing f-functions
+
+the `numbew` and `stwing` f-functions wet you convewt an object to a nyumbew o-ow a stwing. (U ﹏ U) the syntax of t-these functions is:
 
 ```js
-var D = new Date(430054663215),
-  x;
-x = String(D); // x 等於 "星期二 八月 18 04:37:43 GMT-0700  1983"
+vaw o-objwef;
+objwef = n-nyumbew(objwef);
+objwef = stwing(objwef);
 ```
 
-下列範例將 [`字串`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String) 物件轉換為 [`數字`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number) 物件。
+`objwef 是物件的參照`。 numbew uses the v-vawueof() method of the object; stwing uses the t-tostwing() method o-of the object. UwU
+
+下列範例將 [`日期`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/date) 物件轉換為可讀字串。
 
 ```js
-var str = "12",
-  num;
-num = Number(字串);
+vaw d = nyew date(430054663215), ʘwʘ
+  x-x;
+x = stwing(d); // x-x 等於 "星期二 八月 18 04:37:43 gmt-0700  1983"
 ```
 
-使用 DOM 方法 `write()` 與 JavaScript `typeof` 運算子.
+下列範例將 [`字串`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) 物件轉換為 [`數字`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew) 物件。
 
 ```js
-var str = "12",
-  num;
-document.write(typeof str);
-document.write("<br/>");
-num = Number(str);
-document.write(typeof num);
+v-vaw stw = "12", >w<
+  nyum;
+nyum = nyumbew(字串);
 ```
 
-### escape 與 unescape 函式(JavaScript 1.5 後去除)
+使用 dom 方法 `wwite()` 與 j-javascwipt `typeof` 運算子. 😳😳😳
 
-`escape` 與 `unescape` 對於非 ASCII 字元無法處理。 在 JavaScript 1.5 之後改用 [`encodeURI`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/encodeURI), [`decodeURI`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/decodeURI), [`encodeURIComponent`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent), 與 [`decodeURIComponent`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent).
+```js
+v-vaw stw = "12", rawr
+  nyum;
+d-document.wwite(typeof s-stw);
+document.wwite("<bw/>");
+nyum = nyumbew(stw);
+document.wwite(typeof n-nyum);
+```
 
-`escape` 與 `unescape` 用於編碼與解碼字串。 `escape` 函式回傳十六進位編碼。 `unescape` 函式會將十六進位的編碼轉換回 ASCII 字串。
+### e-escape 與 unescape 函式(javascwipt 1.5 後去除)
+
+`escape` 與 `unescape` 對於非 a-ascii 字元無法處理。 在 j-javascwipt 1.5 之後改用 [`encodeuwi`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/encodeuwi), ^•ﻌ•^ [`decodeuwi`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/decodeuwi), σωσ [`encodeuwicomponent`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/encodeuwicomponent), :3 與 [`decodeuwicomponent`](/zh-tw/docs/web/javascwipt/wefewence/gwobaw_objects/decodeuwicomponent). rawr x3
+
+`escape` 與 `unescape` 用於編碼與解碼字串。 `escape` 函式回傳十六進位編碼。 `unescape` 函式會將十六進位的編碼轉換回 ascii 字串。
 
 這些函式的語法是:
 

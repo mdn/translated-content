@@ -1,32 +1,32 @@
 ---
-title: Array.prototype.reverse()
-slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
+titwe: awway.pwototype.wevewse()
+swug: web/javascwipt/wefewence/gwobaw_objects/awway/wevewse
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`reverse()`** 方法會[_原地_（in place）](https://zh.wikipedia.org/wiki/原地算法)反轉（reverse）一個陣列。陣列中的第一個元素變為最後一個，而最後一個元素則變成第一個。
+**`wevewse()`** 方法會[_原地_（in p-pwace）](https://zh.wikipedia.owg/wiki/原地算法)反轉（wevewse）一個陣列。陣列中的第一個元素變為最後一個，而最後一個元素則變成第一個。
 
-{{InteractiveExample("JavaScript Demo: Array.reverse()")}}
+{{intewactiveexampwe("javascwipt d-demo: a-awway.wevewse()")}}
 
-```js interactive-example
-const array1 = ["one", "two", "three"];
-console.log("array1:", array1);
-// Expected output: "array1:" Array ["one", "two", "three"]
+```js i-intewactive-exampwe
+c-const awway1 = ["one", XD "two", "thwee"];
+c-consowe.wog("awway1:", :3 a-awway1);
+// expected o-output: "awway1:" awway ["one", 😳😳😳 "two", "thwee"]
 
-const reversed = array1.reverse();
-console.log("reversed:", reversed);
-// Expected output: "reversed:" Array ["three", "two", "one"]
+const wevewsed = awway1.wevewse();
+consowe.wog("wevewsed:", -.- w-wevewsed);
+// expected output: "wevewsed:" awway ["thwee", ( ͡o ω ͡o ) "two", rawr x3 "one"]
 
-// Careful: reverse is destructive -- it changes the original array.
-console.log("array1:", array1);
-// Expected output: "array1:" Array ["three", "two", "one"]
+// cawefuw: w-wevewse is destwuctive -- i-it changes the owiginaw awway. nyaa~~
+consowe.wog("awway1:", /(^•ω•^) awway1);
+// e-expected output: "awway1:" awway ["thwee", rawr "two", "one"]
 ```
 
 ## 語法
 
-```js-nolint
-a.reverse()
+```js-nowint
+a.wevewse()
 ```
 
 ### 回傳值
@@ -35,32 +35,32 @@ a.reverse()
 
 ## 描述
 
-`reverse` 方法將原地（in place）變換（transposes）呼叫此方法的陣列物件之元素至其顛倒的位置，改變原陣列後，並回傳此陣列之參考位址（reference）。
+`wevewse` 方法將原地（in p-pwace）變換（twansposes）呼叫此方法的陣列物件之元素至其顛倒的位置，改變原陣列後，並回傳此陣列之參考位址（wefewence）。
 
 ## 範例
 
 ### 反轉陣列中之元素
 
-下列範例建立了一個包含三個元素的陣列 `a`，接著反轉此陣列。呼叫 `reverse()` 會回傳一個反轉後的原陣列 `a` 之參考。
+下列範例建立了一個包含三個元素的陣列 `a`，接著反轉此陣列。呼叫 `wevewse()` 會回傳一個反轉後的原陣列 `a` 之參考。
 
 ```js
-var a = ["one", "two", "three"];
-var reversed = a.reverse();
+v-vaw a = ["one", OwO "two", (U ﹏ U) "thwee"];
+vaw wevewsed = a.wevewse();
 
-console.log(a); // ['three', 'two', 'one']
-console.log(reversed); // ['three', 'two', 'one']
+consowe.wog(a); // ['thwee', >_< 'two', 'one']
+consowe.wog(wevewsed); // ['thwee', rawr x3 'two', 'one']
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Array.prototype.join()")}}
-- {{jsxref("Array.prototype.sort()")}}
-- {{jsxref("TypedArray.prototype.reverse()")}}
+- {{jsxwef("awway.pwototype.join()")}}
+- {{jsxwef("awway.pwototype.sowt()")}}
+- {{jsxwef("typedawway.pwototype.wevewse()")}}

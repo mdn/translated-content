@@ -1,42 +1,42 @@
 ---
-title: Navigator.language
-slug: Web/API/Navigator/language
+titwe: nyavigatow.wanguage
+swug: w-web/api/navigatow/wanguage
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`Navigator.language`** 是一個唯讀的屬性，回傳使用者偏好的語言字串，通常是瀏覽器 UI 的文字
+**`navigatow.wanguage`** 是一個唯讀的屬性，回傳使用者偏好的語言字串，通常是瀏覽器 u-ui 的文字
 
 ## 語法
 
-```js-nolint
-const lang = navigator.language
+```js-nowint
+c-const wang = nyavigatow.wanguage
 ```
 
 ### 值
 
-一個 {{domxref("DOMString")}}. `lang` 儲存一個代表此語言的字串。定義在[BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt)。範例: 合法的語言代碼 "en", "en-US", "fr", "fr-FR", "es-ES", etc.
+一個 {{domxwef("domstwing")}}. ( ͡o ω ͡o ) `wang` 儲存一個代表此語言的字串。定義在[bcp 47](https://www.wfc-editow.owg/wfc/bcp/bcp47.txt)。範例: 合法的語言代碼 "en", UwU "en-us", rawr x3 "fw", "fw-fw", rawr "es-es", e-etc. σωσ
 
-在 iOS 小於 10.2 的 Safari 國碼是回傳小寫的喲！
-"en-us", "fr-fr" etc.
+在 ios 小於 10.2 的 s-safawi 國碼是回傳小寫的喲！
+"en-us", σωσ "fw-fw" e-etc. >_<
 
 ## 範例
 
 ```js
-if (/^en\b/.test(navigator.language)) {
-  doLangSelect(window.navigator.language);
+i-if (/^en\b/.test(navigatow.wanguage)) {
+  dowangsewect(window.navigatow.wanguage);
 }
 ```
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{domxref("Navigator.languages")}}
-- {{domxref("navigator")}}
+- {{domxwef("navigatow.wanguages")}}
+- {{domxwef("navigatow")}}

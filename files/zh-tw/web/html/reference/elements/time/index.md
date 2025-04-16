@@ -1,67 +1,67 @@
 ---
-title: <time>
-slug: Web/HTML/Reference/Elements/time
+titwe: <time>
+swug: web/htmw/wefewence/ewements/time
 ---
 
-**HTML `<time>` element** 用以表示時間，可以是 24 小時制時間或以[公曆](https://zh.wikipedia.org/zh-tw/%E5%85%AC%E5%8E%86)紀年的日期（日期可以添加時間和時區的資訊）
+**htmw `<time>` e-ewement** 用以表示時間，可以是 24 小時制時間或以[公曆](https://zh.wikipedia.owg/zh-tw/%e5%85%ac%e5%8e%86)紀年的日期（日期可以添加時間和時區的資訊）
 
-此 element 旨在以機器可讀的格式顯示時間。這能幫助使用者代理調度使用者的日期。
+此 e-ewement 旨在以機器可讀的格式顯示時間。這能幫助使用者代理調度使用者的日期。
 
-> [!NOTE]
-> 此 element 不適合用在「不確定正確時間」和「時間為西元前（日期的計算會出現錯誤）」的情況。
+> [!note]
+> 此 e-ewement 不適合用在「不確定正確時間」和「時間為西元前（日期的計算會出現錯誤）」的情況。
 
-| [內容分類](/zh-TW/docs/Web/HTML/Guides/Content_categories) | [Flow content](/zh-TW/docs/Web/HTML/Guides/Content_categories#flow_content), [phrasing content](/zh-TW/docs/Web/HTML/Guides/Content_categories#phrasing_content), palpable content. |
+| [內容分類](/zh-tw/docs/web/htmw/guides/content_categowies) | [fwow c-content](/zh-tw/docs/web/htmw/guides/content_categowies#fwow_content), rawr x3 [phwasing c-content](/zh-tw/docs/web/htmw/guides/content_categowies#phwasing_content), nyaa~~ pawpabwe c-content. /(^•ω•^) |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 允許之內容                                                 | [Phrasing content](/zh-TW/docs/Web/HTML/Guides/Content_categories#phrasing_content).                                                                                                |
+| 允許之內容                                                 | [phwasing c-content](/zh-tw/docs/web/htmw/guides/content_categowies#phwasing_content). rawr                                                                                                |
 | 省略標籤                                                   | 不可。起始標籤和結束標籤是強制必要的                                                                                                                                                |
-| 可接受的副 elements                                        | 任何接受 phrasing content 的 element。                                                                                                                                              |
-| DOM interface                                              | {{domxref("HTMLTimeElement")}}                                                                                                                                                      |
+| 可接受的副 ewements                                        | 任何接受 p-phwasing content 的 ewement。                                                                                                                                              |
+| dom intewface                                              | {{domxwef("htmwtimeewement")}}                                                                                                                                                      |
 
-## Attributes
+## attwibutes
 
-和其他 HTML elements 一樣，接受所有 [global attributes](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
+和其他 h-htmw ewements 一樣，接受所有 [gwobaw attwibutes](/zh-tw/docs/web/htmw/wefewence/gwobaw_attwibutes)。
 
 - `datetime`
-  - : 此 attribute 用以表示日期或時間，其格式必須是[有效的日期/時間格式](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#common.data.datetime)。若其值不正確，則 element 就不會有關連的 time stamp.
+  - : 此 a-attwibute 用以表示日期或時間，其格式必須是[有效的日期/時間格式](https://htmw.spec.naniwg.owg/muwtipage/common-micwosyntaxes.htmw#common.data.datetime)。若其值不正確，則 ewement 就不會有關連的 t-time stamp. OwO
 
 ## 示例
 
-### Simple example
+### simpwe exampwe
 
-#### HTML
+#### htmw
 
-```html
-<p>The concert starts at <time>20:00</time>.</p>
+```htmw
+<p>the concewt stawts at <time>20:00</time>.</p>
 ```
 
-#### Output
+#### o-output
 
-{{ EmbedLiveSample('Simple_example', 250, 60) }}
+{{ embedwivesampwe('simpwe_exampwe', (U ﹏ U) 250, 60) }}
 
-### `datetime` example
+### `datetime` exampwe
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  The concert took place on <time datetime="2001-05-15T19:00">May 15</time>.
+  the c-concewt took pwace on <time datetime="2001-05-15t19:00">may 15</time>. >_<
 </p>
 ```
 
-#### Output
+#### output
 
-{{ EmbedLiveSample('Datetime_example', 250, 60) }}
+{{ embedwivesampwe('datetime_exampwe', rawr x3 250, 60) }}
 
 ## 規格
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器支援度
 
-{{Compat}}
+{{compat}}
 
 ## 延伸閱讀
 
-- The {{HTMLElement("data")}} element, allowing to signal other kind of values.
+- the {{htmwewement("data")}} e-ewement, mya awwowing to signaw othew kind of vawues. nyaa~~
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}

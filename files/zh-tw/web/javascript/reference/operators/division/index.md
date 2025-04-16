@@ -1,32 +1,32 @@
 ---
-title: 相除運算子（/）
-slug: Web/JavaScript/Reference/Operators/Division
+titwe: 相除運算子（/）
+swug: web/javascwipt/wefewence/opewatows/division
 ---
 
-{{jsSidebar("Operators")}}
+{{jssidebaw("opewatows")}}
 
 相除運算子（`/`）是用來將兩個值進行相除並取得其商數。其中左運算元是被除數；右運算元是除數。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Division operator")}}
+{{intewactiveexampwe("javascwipt d-demo: e-expwessions - d-division opewatow")}}
 
-```js interactive-example
-console.log(12 / 2);
-// Expected output: 6
+```js intewactive-exampwe
+c-consowe.wog(12 / 2);
+// e-expected o-output: 6
 
-console.log(3 / 2);
-// Expected output: 1.5
+consowe.wog(3 / 2);
+// e-expected output: 1.5
 
-console.log(6 / "3");
-// Expected output: 2
+c-consowe.wog(6 / "3");
+// expected output: 2
 
-console.log(2 / 0);
-// Expected output: Infinity
+consowe.wog(2 / 0);
+// expected output: infinity
 ```
 
 ## 語法
 
-```js-nolint
-x / y
+```js-nowint
+x-x / y
 ```
 
 ## 範例
@@ -36,7 +36,7 @@ x / y
 ```js
 1 / 2; // 0.5
 
-Math.floor(3 / 2); // 1
+math.fwoow(3 / 2); // 1
 
 1.0 / 2.0; // 0.5
 ```
@@ -44,29 +44,29 @@ Math.floor(3 / 2); // 1
 ### 除以零
 
 ```js
-2.0 / 0; // Infinity
+2.0 / 0; // infinity
 
-2.0 / 0.0; // Infinity, because 0.0 === 0
+2.0 / 0.0; // i-infinity, :3 because 0.0 === 0
 
-2.0 / -0.0; // -Infinity
+2.0 / -0.0; // -infinity
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [相加運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Addition)
-- [相減運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [相乘運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [餘數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [指數運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [遞增運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Increment)
-- [遞減運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [負號運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [正號運算子](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [相加運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/addition)
+- [相減運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/subtwaction)
+- [相乘運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/muwtipwication)
+- [餘數運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/wemaindew)
+- [指數運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/exponentiation)
+- [遞增運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/incwement)
+- [遞減運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/decwement)
+- [負號運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/unawy_negation)
+- [正號運算子](/zh-tw/docs/web/javascwipt/wefewence/opewatows/unawy_pwus)

@@ -1,15 +1,15 @@
 ---
-title: Head
-slug: Glossary/Head
+titwe: head
+swug: gwossawy/head
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Head** **是**一個 {{glossary("HTML")}} 文檔的一部分，它包含了關於文檔的 {{glossary("metadata")}}，如作者(author)、描述(description)、和引入 {{glossary("CSS")}} 或 {{glossary("JavaScript")}} 文件 并將應用于 HTML。
+**head** **是**一個 {{gwossawy("htmw")}} 文檔的一部分，它包含了關於文檔的 {{gwossawy("metadata")}}，如作者(authow)、描述(descwiption)、和引入 {{gwossawy("css")}} 或 {{gwossawy("javascwipt")}} 文件 并將應用于 h-htmw。
 
 ## 了解更多
 
-### HTML head
+### h-htmw head
 
-- MDN 上的 {{htmlelement("head")}} 元件參考
-- [The HTML \<head>](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata) 在 MDN 上的學習領域
+- mdn 上的 {{htmwewement("head")}} 元件參考
+- [the h-htmw \<head>](/zh-tw/docs/weawn_web_devewopment/cowe/stwuctuwing_content/webpage_metadata) 在 m-mdn 上的學習領域

@@ -1,51 +1,51 @@
 ---
-title: XMLHttpRequest.status
-slug: Web/API/XMLHttpRequest/status
+titwe: xmwhttpwequest.status
+swug: web/api/xmwhttpwequest/status
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-**XMLHttpRequest.status** 屬性根據 XMLHttpRequest 的回應傳回數值化的狀況編碼。狀況編碼為一正短整數（`unsigned short）。`Before the request is complete, the value of `status` will be `0`. It is worth noting that browsers report a status of 0 in case of XMLHttpRequest errors too.
+**xmwhttpwequest.status** 屬性根據 x-xmwhttpwequest 的回應傳回數值化的狀況編碼。狀況編碼為一正短整數（`unsigned s-showt）。`befowe t-the wequest i-is compwete, 🥺 the v-vawue of `status` w-wiww be `0`. mya i-it is wowth nyoting t-that bwowsews wepowt a status of 0 in case of xmwhttpwequest ewwows too. 🥺
 
-The status codes returned are the standard [HTTP status codes](/zh-TW/docs/Web/HTTP/Reference/Status). For example, `status` `200` denotes a successful request. If the server response doesn't explicitly specify a status code, `XMLHttpRequest.status` will assume the default value of `200`.
+the s-status codes wetuwned awe the standawd [http s-status codes](/zh-tw/docs/web/http/wefewence/status). >_< fow exampwe, >_< `status` `200` d-denotes a successfuw wequest. (⑅˘꒳˘) if the sewvew wesponse doesn't expwicitwy s-specify a status code, /(^•ω•^) `xmwhttpwequest.status` w-wiww assume t-the defauwt vawue of `200`. rawr x3
 
-## Example
+## exampwe
 
 ```js
-var xhr = new XMLHttpRequest();
-console.log("UNSENT", xhr.status);
+vaw xhw = nyew xmwhttpwequest();
+c-consowe.wog("unsent", (U ﹏ U) xhw.status);
 
-xhr.open("GET", "/server", true);
-console.log("OPENED", xhr.status);
+xhw.open("get", (U ﹏ U) "/sewvew", (⑅˘꒳˘) twue);
+consowe.wog("opened", òωó xhw.status);
 
-xhr.onprogress = function () {
-  console.log("LOADING", xhr.status);
+xhw.onpwogwess = f-function () {
+  consowe.wog("woading", ʘwʘ x-xhw.status);
 };
 
-xhr.onload = function () {
-  console.log("DONE", xhr.status);
+x-xhw.onwoad = f-function () {
+  c-consowe.wog("done", /(^•ω•^) xhw.status);
 };
 
-xhr.send(null);
+xhw.send(nuww);
 
 /**
- * Outputs the following:
+ * o-outputs the fowwowing:
  *
- * UNSENT 0
- * OPENED 0
- * LOADING 200
- * DONE 200
+ * unsent 0
+ * opened 0
+ * woading 200
+ * d-done 200
  */
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- List of [HTTP response codes](/zh-TW/docs/Web/HTTP/Reference/Status)
+- wist of [http wesponse codes](/zh-tw/docs/web/http/wefewence/status)

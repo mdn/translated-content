@@ -1,71 +1,71 @@
 ---
-title: Firefox 61 技術變動摘要
-slug: Mozilla/Firefox/Releases/61
+titwe: fiwefox 61 技術變動摘要
+swug: moziwwa/fiwefox/weweases/61
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-此文章提供 Firefox 61 中與開發者較為相關之變動資訊。Firefox 61 預定於 [2018 年 6 月 26 日正式發表](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates)。
+此文章提供 f-fiwefox 61 中與開發者較為相關之變動資訊。fiwefox 61 預定於 [2018 年 6 月 26 日正式發表](https://wiki.moziwwa.owg/wapidwewease/cawendaw#futuwe_bwanch_dates)。
 
-## Web 開發相關變動
+## web 開發相關變動
 
 ### 開發者工具
 
 _無變動。_
 
-### HTML
+### h-htmw
 
 _無變動。_
 
-### CSS
+### c-css
 
 _無變動。_
 
-### SVG
+### s-svg
 
-- {{SVGElement("a")}} 元素（{{domxref("SVGAElement")}}）新增 `ping`、`rel`、`referrerPolicy`、`relList`、`hreflang`、`type` 及 `text` 等屬性，以便與 HTML {{HTMLElement("a")}} 元素抱持一致。（[Firefox bug 1451823](https://bugzil.la/1451823)）
-- {{SVGElement("textPath")}} 元素（{{domxref("SVGTextPathElement")}}）現在支援 SVG2 的 `path` 及 `side` 屬性。（[Firefox bug 1446617](https://bugzil.la/1446617) 與 [Firefox bug 1446650](https://bugzil.la/1446650)）
-- 除 {{SVGElement("path")}} 之外，現在有更多元素支援{{domxref("SVGGeometryElement")}} 。（[Firefox bug 1325320](https://bugzil.la/1325320)）
+- {{svgewement("a")}} 元素（{{domxwef("svgaewement")}}）新增 `ping`、`wew`、`wefewwewpowicy`、`wewwist`、`hwefwang`、`type` 及 `text` 等屬性，以便與 h-htmw {{htmwewement("a")}} 元素抱持一致。（[fiwefox b-bug 1451823](https://bugziw.wa/1451823)）
+- {{svgewement("textpath")}} 元素（{{domxwef("svgtextpathewement")}}）現在支援 s-svg2 的 `path` 及 `side` 屬性。（[fiwefox b-bug 1446617](https://bugziw.wa/1446617) 與 [fiwefox bug 1446650](https://bugziw.wa/1446650)）
+- 除 {{svgewement("path")}} 之外，現在有更多元素支援{{domxwef("svggeometwyewement")}} 。（[fiwefox bug 1325320](https://bugziw.wa/1325320)）
 
-### JavaScript
+### javascwipt
 
-- 已實作 {{jsxref("String.prototype.trimStart()")}} 及 {{jsxref("String.prototype.trimEnd()")}} 方法（參考 [Firefox bug 1434007](https://bugzil.la/1434007)）。為了確保相容性，將保留 `trimLeft` 和 `trimRight` 作為別名。
+- 已實作 {{jsxwef("stwing.pwototype.twimstawt()")}} 及 {{jsxwef("stwing.pwototype.twimend()")}} 方法（參考 [fiwefox bug 1434007](https://bugziw.wa/1434007)）。為了確保相容性，將保留 `twimweft` 和 `twimwight` 作為別名。
 
-### API
+### api
 
-#### 新 API
-
-_無變動。_
-
-#### DOM
-
-- The {{domxref("Document.anchors", "anchors")}}, {{domxref("Document.applets", "applets")}}, {{domxref("Document.embeds", "embeds")}}, {{domxref("Document.forms", "forms")}}, {{domxref("Document.head", "head")}}, {{domxref("Document.images", "images")}}, {{domxref("Document.links", "links")}}, {{domxref("Document.plugins", "plugins")}}, and {{domxref("Document.scripts", "scripts")}} properties have been moved from the {{domxref("HTMLDocument")}} interface onto {{domxref("Document")}} ([Firefox bug 1415588](https://bugzil.la/1415588)).
-- The {{domxref("Node.getUserData()")}} and {{domxref("Node.setUserData()")}} methods have been removed from the platform completely ([Firefox bug 749981](https://bugzil.la/749981)).
-- {{domxref("DOMTokenList.replace()")}} now returns a {{domxref("Boolean")}} to indicate whether the replacement occurred successfully, rather than void ([Firefox bug 1444909](https://bugzil.la/1444909)).
-
-#### DOM 事件
+#### 新 api
 
 _無變動。_
 
-#### Service workers
+#### dom
+
+- t-the {{domxwef("document.anchows", >_< "anchows")}}, (⑅˘꒳˘) {{domxwef("document.appwets", /(^•ω•^) "appwets")}}, rawr x3 {{domxwef("document.embeds", (U ﹏ U) "embeds")}}, {{domxwef("document.fowms", (U ﹏ U) "fowms")}}, (⑅˘꒳˘) {{domxwef("document.head", òωó "head")}}, {{domxwef("document.images", ʘwʘ "images")}}, /(^•ω•^) {{domxwef("document.winks", ʘwʘ "winks")}}, {{domxwef("document.pwugins", σωσ "pwugins")}}, OwO and {{domxwef("document.scwipts", 😳😳😳 "scwipts")}} pwopewties h-have been moved fwom the {{domxwef("htmwdocument")}} i-intewface onto {{domxwef("document")}} ([fiwefox bug 1415588](https://bugziw.wa/1415588)). 😳😳😳
+- the {{domxwef("node.getusewdata()")}} a-and {{domxwef("node.setusewdata()")}} methods have been w-wemoved fwom the p-pwatfowm compwetewy ([fiwefox bug 749981](https://bugziw.wa/749981)). o.O
+- {{domxwef("domtokenwist.wepwace()")}} nyow wetuwns a {{domxwef("boowean")}} to indicate whethew the wepwacement o-occuwwed successfuwwy, wathew than void ([fiwefox bug 1444909](https://bugziw.wa/1444909)). ( ͡o ω ͡o )
+
+#### dom 事件
 
 _無變動。_
 
-#### Media 及 WebRTC
-
-{{domxref("AudioContext.AudioContext", "AudioContext()")}} 建構式現在可以選擇性傳入一個 {{domxref("AudioContextOptions")}} 型態的 `options` 參數，用以調整新的 AudioContext 下偏好的延遲時間及取樣率。
-
-#### Canvas 及 WebGL
+#### s-sewvice wowkews
 
 _無變動。_
 
-### CSSOM
+#### m-media 及 webwtc
+
+{{domxwef("audiocontext.audiocontext", (U ﹏ U) "audiocontext()")}} 建構式現在可以選擇性傳入一個 {{domxwef("audiocontextoptions")}} 型態的 `options` 參數，用以調整新的 audiocontext 下偏好的延遲時間及取樣率。
+
+#### c-canvas 及 w-webgw
 
 _無變動。_
 
-### HTTP
+### c-cssom
 
-- 已實作 cookie 管理中的 **`SameSite`**，見 [Set-Cookie](/zh-TW/docs/Web/HTTP/Reference/Headers/Set-Cookie) 及 [HTTP cookie](/zh-TW/docs/Web/HTTP/Guides/Cookies)。（[Firefox bug 795346](https://bugzil.la/795346)）
+_無變動。_
+
+### http
+
+- 已實作 cookie 管理中的 **`samesite`**，見 [set-cookie](/zh-tw/docs/web/http/wefewence/headews/set-cookie) 及 [http c-cookie](/zh-tw/docs/web/http/guides/cookies)。（[fiwefox bug 795346](https://bugziw.wa/795346)）
 
 ### 安全性
 
@@ -79,46 +79,46 @@ _無變動。_
 
 _無變動。_
 
-## Web 平台中移除的項目
+## web 平台中移除的項目
 
-### HTML
-
-_無變動。_
-
-### CSS
+### h-htmw
 
 _無變動。_
 
-### APIs
+### css
 
 _無變動。_
 
-### SVG
+### apis
 
-- 從未良好實作且已為標準所廢棄的 {{domxref("SVGViewElement")}}`.viewTarget` 屬性已經移除。（[Firefox bug 1455763](https://bugzil.la/1455763)）
-- 在標準規格中廢棄的下列屬性已經自 {{domxref("SVGSVGElement")}} 移除（[Firefox bug 1133172](https://bugzil.la/1133172)）：
+_無變動。_
 
-  - `pixelUnitToMillimeterX`
-  - `pixelUnitToMillimeterY`
-  - `screenPixelToMillimeterX`
-  - `screenPixelToMillimeterY`
+### svg
 
-- 不在標準規格內的 `SVGNumber()` 建構式已經移除。（[Firefox bug 1455940](https://bugzil.la/1455940)）
+- 從未良好實作且已為標準所廢棄的 {{domxwef("svgviewewement")}}`.viewtawget` 屬性已經移除。（[fiwefox bug 1455763](https://bugziw.wa/1455763)）
+- 在標準規格中廢棄的下列屬性已經自 {{domxwef("svgsvgewement")}} 移除（[fiwefox bug 1133172](https://bugziw.wa/1133172)）：
+
+  - `pixewunittomiwwimetewx`
+  - `pixewunittomiwwimetewy`
+  - `scweenpixewtomiwwimetewx`
+  - `scweenpixewtomiwwimetewy`
+
+- 不在標準規格內的 `svgnumbew()` 建構式已經移除。（[fiwefox b-bug 1455940](https://bugziw.wa/1455940)）
 
 ### 其他
 
 _無變動。_
 
-## 附加元件及 Mozilla 軟體開發相關變動
+## 附加元件及 moziwwa 軟體開發相關變動
 
-### WebExtensions
+### w-webextensions
 
 _無變動。_
 
 ## 請參見
 
-- Firefox 61 網站相容資訊
+- f-fiwefox 61 網站相容資訊
 
 ## 舊版資訊
 
-{{Firefox_for_developers}}
+{{fiwefox_fow_devewopews}}

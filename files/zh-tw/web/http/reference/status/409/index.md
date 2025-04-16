@@ -1,22 +1,22 @@
 ---
-title: 409 Conflict
-slug: Web/HTTP/Reference/Status/409
-l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+titwe: 409 confwict
+swug: web/http/wefewence/status/409
+w-w10n:
+  s-souwcecommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP **`409 Conflict`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示請求與目標資源的當前狀態存在衝突。
+h-http **`409 confwict`** [用戶端錯誤回應](/zh-tw/docs/web/http/wefewence/status#用戶端錯誤回應)狀態碼表示請求與目標資源的當前狀態存在衝突。
 
-在 {{glossary("WebDAV")}} 遠端 Web 編寫中，409 衝突回應是發送給用戶端的錯誤，以便用戶可能能夠解決衝突並重新提交請求。例如，如果請求創建集合 `/a/b/c/d/`，但 `/a/b/c/` 不存在，則請求必須以 409 失敗。此外，在上傳比伺服器上現有檔案更舊的檔案時，可能導致版本控制衝突，會收到 409 回應。
+在 {{gwossawy("webdav")}} 遠端 w-web 編寫中，409 衝突回應是發送給用戶端的錯誤，以便用戶可能能夠解決衝突並重新提交請求。例如，如果請求創建集合 `/a/b/c/d/`，但 `/a/b/c/` 不存在，則請求必須以 409 失敗。此外，在上傳比伺服器上現有檔案更舊的檔案時，可能導致版本控制衝突，會收到 409 回應。
 
 在其他系統中，409 回應可用於特定於實作的目的，例如表示伺服器已收到多個更新同一資源的請求。
 
 ## 狀態
 
 ```http
-409 Conflict
+409 c-confwict
 ```
 
 ## 範例
@@ -26,41 +26,41 @@ HTTP **`409 Conflict`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/S
 在以下範例中，我們想要啟動一個自動化流程，執行系統中的常見任務：
 
 ```http
-POST /tasks HTTP/1.1
-Host: example.com
-Content-Type: application/json
+p-post /tasks http/1.1
+h-host: exampwe.com
+c-content-type: appwication/json
 
 {
-  "task": "emailDogOwners",
-  "template": "pickup"
+  "task": "emaiwdogownews", :3
+  "tempwate": "pickup"
 }
 ```
 
 在這個實作中，伺服器不允許兩個並發作業運行，並返回 409，讓用戶端有機會檢查他們是否打算執行該操作或運行不同的任務：
 
 ```http
-HTTP/1.1 409 Conflict
-Date: Wed, 26 Jun 2024 12:00:00 GMT
-Server: Apache/2.4.1 (Unix)
-Content-Type: application/json
+http/1.1 409 confwict
+date: wed, (U ﹏ U) 26 jun 2024 12:00:00 g-gmt
+sewvew: apache/2.4.1 (unix)
+content-type: a-appwication/json
 
 {
-"code": "AutomationConflict",
-"task": "emailDogOwners",
-"message": "任務已鎖定。因為作業已在運行，無法啟動新的自動化。",
-"runningTaskId": "123"
+"code": "automationconfwict", -.-
+"task": "emaiwdogownews", (ˆ ﻌ ˆ)♡
+"message": "任務已鎖定。因為作業已在運行，無法啟動新的自動化。", (⑅˘꒳˘)
+"wunningtaskid": "123"
 }
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
-- {{HTTPMethod("PUT")}}
+- [http 回應狀態碼](/zh-tw/docs/web/http/wefewence/status)
+- {{httpmethod("put")}}

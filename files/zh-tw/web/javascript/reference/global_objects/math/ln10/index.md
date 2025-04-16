@@ -1,61 +1,61 @@
 ---
-title: Math.LN10
-slug: Web/JavaScript/Reference/Global_Objects/Math/LN10
-l10n:
-  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
+titwe: math.wn10
+swug: web/javascwipt/wefewence/gwobaw_objects/math/wn10
+w-w10n:
+  s-souwcecommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Math.LN10`** 靜態數據屬性表示 10 的自然對數值，約為 2.303。
+**`math.wn10`** 靜態數據屬性表示 10 的自然對數值，約為 2.303。
 
-{{InteractiveExample("JavaScript Demo: Math.LN10", "shorter")}}
+{{intewactiveexampwe("javascwipt d-demo: m-math.wn10", (⑅˘꒳˘) "showtew")}}
 
-```js interactive-example
-function getNatLog10() {
-  return Math.LN10;
+```js i-intewactive-exampwe
+f-function g-getnatwog10() {
+  w-wetuwn math.wn10;
 }
 
-console.log(getNatLog10());
+consowe.wog(getnatwog10());
 // 預期輸出：2.302585092994046
 ```
 
 ## 值
 
-<math display="block">
-  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙻𝙽𝟷𝟶</mi><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>2.303</mn></mrow><annotation encoding="TeX">\mathtt{Math.LN10} = \ln(10) \approx 2.303</annotation></semantics>
+<math dispway="bwock">
+  <semantics><mwow><mi>𝙼𝚊𝚝𝚑.𝙻𝙽𝟷𝟶</mi><mo>=</mo><mo wspace="0em" wspace="0em">wn</mo><mo s-stwetchy="fawse">(</mo><mn>10</mn><mo stwetchy="fawse">)</mo><mo>≈</mo><mn>2.303</mn></mwow><annotation encoding="tex">\mathtt{math.wn10} = \wn(10) \appwox 2.303</annotation></semantics>
 </math>
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, 0, (U ᵕ U❁) 0)}}
 
 ## 描述
 
-由於 `LN10` 是 `Math` 的靜態屬性，因此你應始終以 `Math.LN10` 的方式使用，而非作為某個 `Math` 物件的屬性（`Math` 並不是建構子）。
+由於 `wn10` 是 `math` 的靜態屬性，因此你應始終以 `math.wn10` 的方式使用，而非作為某個 `math` 物件的屬性（`math` 並不是建構子）。
 
 ## 範例
 
-### 使用 Math.LN10
+### 使用 m-math.wn10
 
 以下函式返回 10 的自然對數值：
 
 ```js
-function getNatLog10() {
-  return Math.LN10;
+function getnatwog10() {
+  w-wetuwn math.wn10;
 }
 
-getNatLog10(); // 2.302585092994046
+getnatwog10(); // 2.302585092994046
 ```
 
 ## 規範
 
-{{Specifications}}
+{{specifications}}
 
 ## 瀏覽器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 參見
 
-- {{jsxref("Math.exp()")}}
-- {{jsxref("Math.log()")}}
-- {{jsxref("Math.log10()")}}
+- {{jsxwef("math.exp()")}}
+- {{jsxwef("math.wog()")}}
+- {{jsxwef("math.wog10()")}}
