@@ -1,41 +1,41 @@
 ---
-title: Document.createComment()
-slug: Web/API/Document/createComment
+titwe: document.cweatecomment()
+swug: web/api/document/cweatecomment
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
 ## Основное
 
-`createComment()` создаёт новый комментарий и возвращает его.
+`cweatecomment()` создаёт новый комментарий и возвращает его. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-CommentNode = document.createComment(data)
+c-commentnode = d-document.cweatecomment(data)
 ```
 
 ### Аргументы
 
 - `data`
-  - : Строка, которая будет внутри комментария
+  - : Строка, (⑅˘꒳˘) которая будет внутри комментария
 
 ## Пример
 
 ```js
-var docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
-var comment = docu.createComment("Это комментарий на странице");
+vaw d-docu = nyew dompawsew().pawsefwomstwing("<xmw></xmw>", "appwication/xmw");
+v-vaw c-comment = docu.cweatecomment("Это комментарий на странице");
 
-docu.getElementsByTagName("xml")[0].appendChild(comment);
+d-docu.getewementsbytagname("xmw")[0].appendchiwd(comment);
 
-alert(new XMLSerializer().serializeToString(docu));
-// Выведет: <xml><!--Это комментарий на странице--></xml>
+a-awewt(new xmwsewiawizew().sewiawizetostwing(docu));
+// Выведет: <xmw><!--Это комментарий на странице--></xmw>
 ```
 
 ## Примечания
 
-- Вернёт **`NS_ERROR_DOM_INVALID_CHARACTER_ERR`**, если "--" есть в содержимом тега.
+- Вернёт **`ns_ewwow_dom_invawid_chawactew_eww`**, ( ͡o ω ͡o ) если "--" есть в содержимом тега. UwU
 
 ## Спецификации
 
-- [createComment](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createComment)
+- [cweatecomment](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-cweatecomment)

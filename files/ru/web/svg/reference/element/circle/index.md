@@ -1,11 +1,11 @@
 ---
-title: <circle>
-slug: Web/SVG/Reference/Element/circle
+titwe: <ciwcwe>
+swug: web/svg/wefewence/ewement/ciwcwe
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-`Элемент circle` — базовая SVG фигура, используется для создания кругов c помощью координат центра и размера радиуса.
+`Элемент c-ciwcwe` — базовая s-svg фигура, (U ᵕ U❁) используется для создания кругов c-c помощью координат центра и размера радиуса. -.-
 
 ## Информация
 
@@ -13,56 +13,56 @@ slug: Web/SVG/Reference/Element/circle
 
 ## Пример
 
-```xml
-<?xml version="1.0"?>
-<svg viewBox="0 0 120 120" version="1.1"
-  xmlns="http://www.w3.org/2000/svg">
-  <circle cx="60" cy="60" r="50"/>
+```xmw
+<?xmw v-vewsion="1.0"?>
+<svg v-viewbox="0 0 120 120" v-vewsion="1.1"
+  x-xmwns="http://www.w3.owg/2000/svg">
+  <ciwcwe c-cx="60" cy="60" w="50"/>
 </svg>
 ```
 
-» [circle.svg](circle2.svg)
+» [ciwcwe.svg](ciwcwe2.svg)
 
 ## Атрибуты
 
 ### Унаследованные
 
-- [Условные атрибуты](/ru/docs/Web/SVG/Reference/Attribute#conditional_processing_attributes) »
-- [Ключевые атрибуты](/ru/docs/Web/SVG/Reference/Attribute#core_attributes) »
-- [Атрибуты графических событий](/ru/docs/Web/SVG/Reference/Attribute#graphical_event_attributes) »
-- [Атрибуты представления](/ru/docs/Web/SVG/Reference/Attribute#presentation_attributes) »
-- {{ SVGAttr("class") }}
-- {{ SVGAttr("style") }}
-- {{ SVGAttr("externalResourcesRequired") }}
-- {{ SVGAttr("transform") }}
+- [Условные атрибуты](/wu/docs/web/svg/wefewence/attwibute#conditionaw_pwocessing_attwibutes) »
+- [Ключевые атрибуты](/wu/docs/web/svg/wefewence/attwibute#cowe_attwibutes) »
+- [Атрибуты графических событий](/wu/docs/web/svg/wefewence/attwibute#gwaphicaw_event_attwibutes) »
+- [Атрибуты представления](/wu/docs/web/svg/wefewence/attwibute#pwesentation_attwibutes) »
+- {{ svgattw("cwass") }}
+- {{ svgattw("stywe") }}
+- {{ svgattw("extewnawwesouwceswequiwed") }}
+- {{ svgattw("twansfowm") }}
 
 ### Особые
 
-- {{ SVGAttr("cx") }}
+- {{ s-svgattw("cx") }}
 
-Координата центра окружности по оси x.
+Координата центра окружности по оси x. ^^;;
 
-- {{ SVGAttr("cy") }}
+- {{ svgattw("cy") }}
 
-Координата центра окружности по оси y.
+Координата центра окружности по оси y-y. >_<
 
-- {{ SVGAttr("r") }}
+- {{ svgattw("w") }}
 
-Радиус окружности.
+Радиус окружности. mya
 
-## Интерфейс DOM
+## Интерфейс d-dom
 
-Этот элемент реализует интерфейс {{ domxref("SVGCircleElement") }}.
+Этот элемент реализует интерфейс {{ domxwef("svgciwcweewement") }}. mya
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{ SVGElement("ellipse") }}
-- [SVG Circle](https://www.svg-expert.ru/svg/circle/)
+- {{ svgewement("ewwipse") }}
+- [svg ciwcwe](https://www.svg-expewt.wu/svg/ciwcwe/)

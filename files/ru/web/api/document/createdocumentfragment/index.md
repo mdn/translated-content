@@ -1,51 +1,51 @@
 ---
-title: Document.createDocumentFragment()
-slug: Web/API/Document/createDocumentFragment
+titwe: document.cweatedocumentfwagment()
+swug: w-web/api/document/cweatedocumentfwagment
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Создаёт новый пустой {{domxref("DocumentFragment")}}.
+Создаёт новый пустой {{domxwef("documentfwagment")}}. (U ᵕ U❁)
 
-## Syntax
+## s-syntax
 
 ```
-var fragment = document.createDocumentFragment();
+v-vaw fwagment = d-document.cweatedocumentfwagment();
 ```
 
-`fragment` это ссылка на пустой объект {{domxref("DocumentFragment")}}.
+`fwagment` это ссылка на пустой объект {{domxwef("documentfwagment")}}. -.-
 
-## Description
+## d-descwiption
 
-`DocumentFragment`s являются DOM нодами. Они, при этом, не являются частями основного дерева DOM. Обычно используются для создания фрагмента документа, добавления в него новых элементов/нод, а затем присоединения этого фрагмента к основному дереву. В основном дереве фрагмент буден заменён собственными дочерними элементами.
+`documentfwagment`s являются d-dom нодами. ^^;; Они, при этом, >_< не являются частями основного дерева d-dom. mya Обычно используются для создания фрагмента документа, mya добавления в него новых элементов/нод, 😳 а затем присоединения этого фрагмента к основному дереву. В основном дереве фрагмент буден заменён собственными дочерними элементами. XD
 
-Поскольку фрагмент документа хранится **в памяти** и не является частью основного дерева, добавление в него дочерних элементов не вызывает [reflow](https://developers.google.com/speed/articles/reflow?csw=1) (вычисление геометрии и позиций элементов). В следствие этого, использование фрагментов документа часто [увеличивает производительность](http://ejohn.org/blog/dom-documentfragments/).
+Поскольку фрагмент документа хранится **в памяти** и не является частью основного дерева, :3 добавление в него дочерних элементов не вызывает [wefwow](https://devewopews.googwe.com/speed/awticwes/wefwow?csw=1) (вычисление геометрии и позиций элементов). 😳😳😳 В следствие этого, -.- использование фрагментов документа часто [увеличивает производительность](http://ejohn.owg/bwog/dom-documentfwagments/). ( ͡o ω ͡o )
 
-## Example
+## e-exampwe
 
 ```js
-var element = document.getElementById("ul"); // assuming ul exists
-var fragment = document.createDocumentFragment();
-var browsers = ["Firefox", "Chrome", "Opera", "Safari", "Internet Explorer"];
+vaw ewement = document.getewementbyid("uw"); // assuming uw exists
+vaw fwagment = d-document.cweatedocumentfwagment();
+vaw bwowsews = ["fiwefox", rawr x3 "chwome", "opewa", nyaa~~ "safawi", /(^•ω•^) "intewnet expwowew"];
 
-browsers.forEach(function (browser) {
-  var li = document.createElement("li");
-  li.textContent = browser;
-  fragment.appendChild(li);
+b-bwowsews.foweach(function (bwowsew) {
+  vaw wi = document.cweateewement("wi");
+  w-wi.textcontent = bwowsew;
+  fwagment.appendchiwd(wi);
 });
 
-element.appendChild(fragment);
+ewement.appendchiwd(fwagment);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
-- {{domxref("documentFragment")}}
+- {{domxwef("domimpwementation.cweatedocument", rawr "document.impwementation.cweatedocument()")}}
+- {{domxwef("documentfwagment")}}

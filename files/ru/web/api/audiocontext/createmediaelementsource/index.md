@@ -1,92 +1,92 @@
 ---
-title: AudioContext.createMediaElementSource()
-slug: Web/API/AudioContext/createMediaElementSource
+titwe: audiocontext.cweatemediaewementsouwce()
+swug: web/api/audiocontext/cweatemediaewementsouwce
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio a-api") }}
 
-Метод `createMediaElementSource()` интерфейса {{ domxref("AudioContext") }} используется для создания объекта {{ domxref("MediaElementAudioSourceNode") }} из существующих HTML-элементов {{htmlelement("audio")}} или {{htmlelement("video")}} для дальнейших манипуляций со звуком и его воспроизведения.
+Метод `cweatemediaewementsouwce()` интерфейса {{ d-domxwef("audiocontext") }} используется для создания объекта {{ d-domxwef("mediaewementaudiosouwcenode") }} из существующих h-htmw-элементов {{htmwewement("audio")}} или {{htmwewement("video")}} для дальнейших манипуляций со звуком и его воспроизведения. (⑅˘꒳˘)
 
-Узнать больше о созданном таким образом аудио узле можно на справочной странице {{ domxref("MediaElementAudioSourceNode") }}.
+Узнать больше о созданном таким образом аудио узле можно на справочной странице {{ d-domxwef("mediaewementaudiosouwcenode") }}. /(^•ω•^)
 
 ## Синтаксис
 
 ```js
-var audioCtx = new AudioContext();
-var source = audioCtx.createMediaElementSource(myMediaElement);
+v-vaw audioctx = nyew audiocontext();
+vaw souwce = audioctx.cweatemediaewementsouwce(mymediaewement);
 ```
 
 ### Параметры
 
-- `myMediaElement`
-  - : Объект {{domxref("HTMLMediaElement")}}, который вы хотите использовать в качестве исходного звука.
+- `mymediaewement`
+  - : Объект {{domxwef("htmwmediaewement")}}, rawr x3 который вы хотите использовать в качестве исходного звука. (U ﹏ U)
 
 ### Возвращаемые значения
 
-Объект {{domxref("MediaElementAudioSourceNode")}}.
+Объект {{domxwef("mediaewementaudiosouwcenode")}}. (U ﹏ U)
 
 ## Пример
 
-Простой пример создания аудио узла из элемента {{htmlelement("audio") }} используя `createMediaElementSource()`, и управления усилением звука через {{ domxref("GainNode") }} перед подачей в {{ domxref("AudioDestinationNode") }} для воспроизведения. При движении мыши вызывается функция `updatePage()`, вычисляющая текущее усиление как отношение Y позиции курсора к общей высоте окна. Таким образом вы можете увеличивать/уменьшать громкость звучания аудио движениями мыши вверх/вниз.
+Простой пример создания аудио узла из элемента {{htmwewement("audio") }} используя `cweatemediaewementsouwce()`, (⑅˘꒳˘) и управления усилением звука через {{ domxwef("gainnode") }} перед подачей в {{ d-domxwef("audiodestinationnode") }} для воспроизведения. òωó При движении мыши вызывается функция `updatepage()`, ʘwʘ вычисляющая текущее усиление как отношение y позиции курсора к общей высоте окна. /(^•ω•^) Таким образом вы можете увеличивать/уменьшать громкость звучания аудио движениями мыши вверх/вниз. ʘwʘ
 
-> [!NOTE]
-> Вы можете также посмотреть [демонстрацию](https://mdn.github.io/media-source-buffer/) или [исходники](https://github.com/mdn/media-source-buffer).
+> [!note]
+> Вы можете также посмотреть [демонстрацию](https://mdn.github.io/media-souwce-buffew/) или [исходники](https://github.com/mdn/media-souwce-buffew). σωσ
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var myAudio = document.querySelector("audio");
-var pre = document.querySelector("pre");
-var myScript = document.querySelector("script");
+vaw audioctx = n-new (window.audiocontext || window.webkitaudiocontext)();
+v-vaw myaudio = document.quewysewectow("audio");
+vaw pwe = document.quewysewectow("pwe");
+v-vaw myscwipt = document.quewysewectow("scwipt");
 
-pre.innerHTML = myScript.innerHTML;
+p-pwe.innewhtmw = m-myscwipt.innewhtmw;
 
-// Создаём MediaElementAudioSourceNode
-// На основе HTMLMediaElement
-var source = audioCtx.createMediaElementSource(myAudio);
+// Создаём mediaewementaudiosouwcenode
+// На основе htmwmediaewement
+vaw souwce = audioctx.cweatemediaewementsouwce(myaudio);
 
 // Создаём узел контроля громкости (усиления)
-var gainNode = audioCtx.createGain();
+v-vaw gainnode = audioctx.cweategain();
 
-// Переменные, содержащие Y координату курсора мыши
+// Переменные, OwO содержащие y координату курсора мыши
 // и высоту окна
-var CurY;
-var HEIGHT = window.innerHeight;
+vaw cuwy;
+vaw height = w-window.innewheight;
 
-// Обновляем Y координату курсора при движении мышью
+// Обновляем y координату курсора при движении мышью
 // и вычисляем новый коэффициент усиления
 
-document.onmousemove = updatePage;
+d-document.onmousemove = u-updatepage;
 
-function updatePage(e) {
-  CurY = window.Event
-    ? e.pageY
-    : event.clientY +
-      (document.documentElement.scrollTop
-        ? document.documentElement.scrollTop
-        : document.body.scrollTop);
+f-function updatepage(e) {
+  c-cuwy = window.event
+    ? e.pagey
+    : event.cwienty +
+      (document.documentewement.scwowwtop
+        ? d-document.documentewement.scwowwtop
+        : document.body.scwowwtop);
 
-  gainNode.gain.value = CurY / HEIGHT;
+  gainnode.gain.vawue = c-cuwy / height;
 }
 
 // Последний шаг - построение графа
-// Подсоединяем AudioBufferSourceNode к gainNode
-// а gainNode, в свою очередь, к конечному узлу вывода
+// Подсоединяем audiobuffewsouwcenode к gainnode
+// а gainnode, 😳😳😳 в свою очередь, 😳😳😳 к конечному узлу вывода
 // Теперь мы можем слушать музыку управляя громкостью воспроизведения движением курсора мыши :)
-source.connect(gainNode);
-gainNode.connect(audioCtx.destination);
+souwce.connect(gainnode);
+g-gainnode.connect(audioctx.destination);
 ```
 
-> [!NOTE]
-> Вызов `createMediaElementSource()` перенаправит выходной поток аудиоданных из {{domxref("HTMLMediaElement")}} в обрабатывающий граф AudioContext. Управление воспроизведением медиа все ещё будет осуществляться через API медиа элемента или его панель управления.
+> [!note]
+> Вызов `cweatemediaewementsouwce()` перенаправит выходной поток аудиоданных из {{domxwef("htmwmediaewement")}} в обрабатывающий граф audiocontext. o.O Управление воспроизведением медиа все ещё будет осуществляться через a-api медиа элемента или его панель управления. ( ͡o ω ͡o )
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using t-the web audio a-api](/wu/docs/web/api/web_audio_api/using_web_audio_api)

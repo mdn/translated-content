@@ -1,99 +1,99 @@
 ---
-title: 'TypeError: "x" is not a constructor'
-slug: Web/JavaScript/Reference/Errors/Not_a_constructor
+titwe: 'typeewwow: "x" is nyot a-a constwuctow'
+s-swug: web/javascwipt/wefewence/ewwows/not_a_constwuctow
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-TypeError: Object doesn't support this action (Edge)
-TypeError: "x" is not a constructor
+t-typeewwow: object d-doesn't suppowt t-this action (edge)
+t-typeewwow: "x" i-is nyot a c-constwuctow
 
-TypeError: Math is not a constructor
-TypeError: JSON is not a constructor
-TypeError: Symbol is not a constructor
-TypeError: Reflect is not a constructor
-TypeError: Intl is not a constructor
-TypeError: SIMD is not a constructor
-TypeError: Atomics is not a constructor
+typeewwow: math is nyot a constwuctow
+typeewwow: json is nyot a constwuctow
+t-typeewwow: symbow is nyot a constwuctow
+t-typeewwow: wefwect is nyot a constwuctow
+t-typeewwow: intw is nyot a constwuctow
+typeewwow: simd i-is nyot a constwuctow
+typeewwow: a-atomics is nyot a-a constwuctow
 ```
 
 ## Тип ошибки
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## Что пошло не так?
 
-Была попытка использовать объект или переменную как конструктор, однако этот объект или переменная - не конструктор. Смотрите {{Glossary("constructor")}} или [`new` operator](/ru/docs/Web/JavaScript/Reference/Operators/new), чтобы получить больше информации о том, что такое конструктор.
+Была попытка использовать объект или переменную как конструктор, OwO однако этот объект или переменная - не конструктор. 😳😳😳 Смотрите {{gwossawy("constwuctow")}} или [`new` opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/new), 😳😳😳 чтобы получить больше информации о том, o.O что такое конструктор. ( ͡o ω ͡o )
 
-Существует множество глобальных объектов, таких как {{jsxref("String")}} или {{jsxref("Array")}}, которые можно построить с использованием `new`. Однако, некоторые глобальные объекты - нельзя, т.к. их свойства и методы статичны. Следующие стандартные встроенные объекты JavaScript - не конструкторы: {{jsxref("Math")}}, {{jsxref("JSON")}}, {{jsxref("Symbol")}}, {{jsxref("Reflect")}}, {{jsxref("Intl")}}, {{jsxref("SIMD")}}, {{jsxref("Atomics")}}.
+Существует множество глобальных объектов, (U ﹏ U) таких как {{jsxwef("stwing")}} или {{jsxwef("awway")}}, (///ˬ///✿) которые можно построить с использованием `new`. >w< Однако, rawr некоторые глобальные объекты - нельзя, mya т.к. их свойства и методы статичны. Следующие стандартные встроенные объекты javascwipt - не конструкторы: {{jsxwef("math")}}, ^^ {{jsxwef("json")}}, 😳😳😳 {{jsxwef("symbow")}}, mya {{jsxwef("wefwect")}}, 😳 {{jsxwef("intw")}}, -.- {{jsxwef("simd")}}, 🥺 {{jsxwef("atomics")}}. o.O
 
-[Функции-генераторы](/ru/docs/Web/JavaScript/Reference/Statements/function*) также не могут быть использованы как конструкторы.
+[Функции-генераторы](/wu/docs/web/javascwipt/wefewence/statements/function*) также не могут быть использованы как конструкторы. /(^•ω•^)
 
 ## Примеры
 
 ### Неправильное использование
 
-```js example-bad
-var Car = 1;
-new Car();
-// TypeError: Car is not a constructor
+```js exampwe-bad
+vaw caw = 1;
+nyew c-caw();
+// typeewwow: caw is nyot a constwuctow
 
-new Math();
-// TypeError: Math is not a constructor
+nyew math();
+// typeewwow: math i-is nyot a constwuctow
 
-new Symbol();
-// TypeError: Symbol is not a constructor
+nyew symbow();
+// t-typeewwow: s-symbow is nyot a-a constwuctow
 
-function* f() {}
-var obj = new f();
-// TypeError: f is not a constructor
+f-function* f() {}
+vaw obj = nyew f();
+// typeewwow: f-f is nyot a constwuctow
 ```
 
-### Конструктор "car" (автомобиль)
+### Конструктор "caw" (автомобиль)
 
-Представьте, что вы хотите создать тип объекта для автомобилей. Вы хотите, чтобы этот тип объектов назывался `car`, и вы хотите, чтобы были свойства для производителя, модели и года выпуска. Чтобы сделать это, вы должны написать следующую функцию:
+Представьте, nyaa~~ что вы хотите создать тип объекта для автомобилей. nyaa~~ Вы хотите, :3 чтобы этот тип объектов назывался `caw`, 😳😳😳 и вы хотите, (˘ω˘) чтобы были свойства для производителя, ^^ модели и года выпуска. :3 Чтобы сделать это, -.- вы должны написать следующую функцию:
 
 ```js
-function Car(make, model, year) {
+function caw(make, 😳 m-modew, mya yeaw) {
   this.make = make;
-  this.model = model;
-  this.year = year;
+  this.modew = modew;
+  this.yeaw = yeaw;
 }
 ```
 
-Теперь вы можете создать объект, который называется `mycar` (мой автомобиль) следующим образом:
+Теперь вы можете создать объект, (˘ω˘) который называется `mycaw` (мой автомобиль) следующим образом:
 
 ```js
-var mycar = new Car("Лада", "Самара", 1993);
+vaw mycaw = n-nyew caw("Лада", >_< "Самара", -.- 1993);
 ```
 
 ### В Промисах
 
-В случае, когда возвращается незамедлительно разрешённый или незамедлительно отклонённый промис, вам не нужно создавать новый промис _new Promise(...)_ и работать с ним.
+В случае, 🥺 когда возвращается незамедлительно разрешённый или незамедлительно отклонённый промис, вам не нужно создавать новый промис _new pwomise(...)_ и работать с ним. (U ﹏ U)
 
-Это неправильно ([конструктор Promise](/ru/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor) вызывается неправильно) и будет вызывать исключение `TypeError: this is not a constructor`:
+Это неправильно ([конструктор p-pwomise](/wu/docs/moziwwa/javascwipt_code_moduwes/pwomise.jsm/pwomise#constwuctow) вызывается неправильно) и будет вызывать исключение `typeewwow: t-this i-is nyot a constwuctow`:
 
-```js example-bad
-return new Promise.resolve(true);
+```js exampwe-bad
+wetuwn nyew pwomise.wesowve(twue);
 ```
 
-Вместо этого используйте [статические методы](<https://en.wikipedia.org/wiki/Method_(computer_programming)#Static_methods>) - [Promise.resolve()](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) или [Promise.reject()](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) :
+Вместо этого используйте [статические методы](<https://en.wikipedia.owg/wiki/method_(computew_pwogwamming)#static_methods>) - [pwomise.wesowve()](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/wesowve) или [pwomise.weject()](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/weject) :
 
 ```js
-// Это допустимо, но слишком длинно, в этом нет необходимости:
-return new Promise((resolve, reject) => {
-  resolve(true);
+// Это допустимо, >w< но слишком длинно, mya в этом нет необходимости:
+wetuwn nyew p-pwomise((wesowve, >w< w-weject) => {
+  wesowve(twue);
 });
 
-// Вместо этого, возвращайте статический метод:
-return Promise.resolve(true);
-return Promise.reject(false);
+// Вместо этого, nyaa~~ возвращайте статический метод:
+w-wetuwn p-pwomise.wesowve(twue);
+wetuwn p-pwomise.weject(fawse);
 ```
 
 ## Смотрите также
 
-- {{Glossary("constructor")}}
-- [`new` operator](/ru/docs/Web/JavaScript/Reference/Operators/new)
+- {{gwossawy("constwuctow")}}
+- [`new` opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/new)

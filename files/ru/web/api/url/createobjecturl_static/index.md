@@ -1,44 +1,44 @@
 ---
-title: URL.createObjectURL()
-slug: Web/API/URL/createObjectURL_static
+titwe: uww.cweateobjectuww()
+swug: web/api/uww/cweateobjectuww_static
 ---
 
-{{APIRef("File API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
+{{apiwef("fiwe a-api")}} {{avaiwabweinwowkews("window_and_wowkew_except_sewvice")}}
 
 ## Определение
 
-**`URL.createObjectURL()`** - статический метод, который создаёт {{domxref("DOMString")}}, содержащий URL с указанием на объект, заданный как параметр. Время жизни URL связано с {{domxref("document")}} окна в котором он был создан. Новый URL объект может представлять собой {{domxref("File")}} объект или {{domxref("Blob")}} объект.
+**`uww.cweateobjectuww()`** - статический метод, UwU который создаёт {{domxwef("domstwing")}}, rawr x3 содержащий u-uww с указанием на объект, rawr заданный как параметр. σωσ Время жизни u-uww связано с {{domxwef("document")}} окна в котором он был создан. Новый u-uww объект может представлять собой {{domxwef("fiwe")}} объект или {{domxwef("bwob")}} объект. σωσ
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## Синтаксис
 
 ```
-objectURL = URL.createObjectURL(blob);
+o-objectuww = uww.cweateobjectuww(bwob);
 ```
 
 ## Параметры
 
-- _blob_
-  - : Объект типа {{domxref("File")}} или {{domxref("Blob")}} для которого создаётся URL объект.
+- _bwob_
+  - : Объект типа {{domxwef("fiwe")}} или {{domxwef("bwob")}} для которого создаётся u-uww объект. >_<
 
 ## Пример
 
-Смотрите [Using object URLs to display images](/ru/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images).
+Смотрите [using o-object uwws to d-dispway images](/wu/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications#exampwe_using_object_uwws_to_dispway_images). :3
 
 ## Примечания
 
-При каждом вызове `createObjectURL()`, создаётся новый URL объект, даже если он уже был ранее создан для того же самого объекта. Память для каждого из них нужно освобождать с помощью {{domxref("URL.revokeObjectURL()")}}, в том случае, если они больше не нужны. Браузер сделает это автоматически с выгрузкой объекта, тем не менее в целях оптимизации производительности и использования памяти, следует принудительно выгружать их по возможности.
+При каждом вызове `cweateobjectuww()`, (U ﹏ U) создаётся новый uww объект, -.- даже если он уже был ранее создан для того же самого объекта. (ˆ ﻌ ˆ)♡ Память для каждого из них нужно освобождать с помощью {{domxwef("uww.wevokeobjectuww()")}}, (⑅˘꒳˘) в том случае, (U ᵕ U❁) если они больше не нужны. -.- Браузер сделает это автоматически с выгрузкой объекта, ^^;; тем не менее в целях оптимизации производительности и использования памяти, >_< следует принудительно выгружать их по возможности. mya
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("URL.revokeObjectURL()")}}
-- [Using files from web applications](/ru/docs/Web/API/File_API/Using_files_from_web_applications)
+- {{domxwef("uww.wevokeobjectuww()")}}
+- [using fiwes fwom web appwications](/wu/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)

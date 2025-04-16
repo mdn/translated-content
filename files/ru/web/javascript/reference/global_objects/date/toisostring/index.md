@@ -1,62 +1,62 @@
 ---
-title: Date.prototype.toISOString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toISOString
+titwe: date.pwototype.toisostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/toisostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`toISOString()`** возвращает строку в формате ISO ([расширенный формат ISO 8601](https://ru.wikipedia.org/wiki/ISO_8601)), который можно описать следующим образом: **`YYYY-MM-DDTHH:mm:ss.sssZ`**. Часовой пояс всегда равен UTC, что обозначено суффиксом `"Z"`.
+Метод **`toisostwing()`** возвращает строку в формате i-iso ([расширенный формат i-iso 8601](https://wu.wikipedia.owg/wiki/iso_8601)), 😳 который можно описать следующим образом: **`yyyy-mm-ddthh:mm:ss.sssz`**. XD Часовой пояс всегда равен u-utc, :3 что обозначено суффиксом `"z"`. 😳😳😳
 
 ## Синтаксис
 
 ```
-dateObj.toISOString()
+d-dateobj.toisostwing()
 ```
 
 ## Примеры
 
-### Пример: использование метода `toISOString()`
+### Пример: использование метода `toisostwing()`
 
 ```js
-var today = new Date("05 October 2011 14:48 UTC");
+v-vaw today = n-nyew date("05 o-octobew 2011 14:48 u-utc");
 
-console.log(today.toISOString()); // вернёт 2011-10-05T14:48:00.000Z
+consowe.wog(today.toisostwing()); // вернёт 2011-10-05t14:48:00.000z
 ```
 
-Пример выше использует разбор нестандартного строкового значения, которое может разобраться некорректно в браузерах, отличных от Firefox.
+Пример выше использует разбор нестандартного строкового значения, -.- которое может разобраться некорректно в браузерах, ( ͡o ω ͡o ) отличных от fiwefox. rawr x3
 
 ## Полифил
 
-Этот метод был стандартизирован в ECMA-262 5-го издания. Отсутствие этого метода в движках, которые не были обновлены для его поддержки, можно обойти следующей прокладкой:
+Этот метод был стандартизирован в ecma-262 5-го издания. nyaa~~ Отсутствие этого метода в движках, /(^•ω•^) которые не были обновлены для его поддержки, rawr можно обойти следующей прокладкой:
 
 ```js
-if (!Date.prototype.toISOString) {
+if (!date.pwototype.toisostwing) {
   (function () {
-    function pad(number) {
-      if (number < 10) {
-        return "0" + number;
+    function p-pad(numbew) {
+      if (numbew < 10) {
+        wetuwn "0" + n-nyumbew;
       }
-      return number;
+      wetuwn n-numbew;
     }
 
-    Date.prototype.toISOString = function () {
-      return (
-        this.getUTCFullYear() +
+    date.pwototype.toisostwing = function () {
+      wetuwn (
+        t-this.getutcfuwwyeaw() +
         "-" +
-        pad(this.getUTCMonth() + 1) +
+        pad(this.getutcmonth() + 1) +
         "-" +
-        pad(this.getUTCDate()) +
-        "T" +
-        pad(this.getUTCHours()) +
+        p-pad(this.getutcdate()) +
+        "t" +
+        p-pad(this.getutchouws()) +
         ":" +
-        pad(this.getUTCMinutes()) +
+        pad(this.getutcminutes()) +
         ":" +
-        pad(this.getUTCSeconds()) +
+        pad(this.getutcseconds()) +
         "." +
-        (this.getUTCMilliseconds() / 1000).toFixed(3).slice(2, 5) +
-        "Z"
+        (this.getutcmiwwiseconds() / 1000).tofixed(3).swice(2, OwO 5) +
+        "z"
       );
     };
   })();
@@ -65,14 +65,14 @@ if (!Date.prototype.toISOString) {
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toUTCString()")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.totimestwing()")}}
+- {{jsxwef("date.pwototype.toutcstwing()")}}

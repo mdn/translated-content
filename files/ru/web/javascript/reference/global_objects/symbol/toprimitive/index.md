@@ -1,71 +1,71 @@
 ---
-title: Symbol.toPrimitive
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
+titwe: symbow.topwimitive
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/topwimitive
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.toPrimitive`** является символом (symbol), который описывает свойство объекта как функцию, которая вызывается при преобразовании объекта в соответствующее примитивное значение.
+**`symbow.topwimitive`** является символом (symbow), >_< который описывает свойство объекта как функцию, mya которая вызывается при преобразовании объекта в соответствующее примитивное значение.
 
-{{InteractiveExample("JavaScript Demo: Symbol.toPrimitive")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.topwimitive")}}
 
-```js interactive-example
-const object1 = {
-  [Symbol.toPrimitive](hint) {
-    if (hint === "number") {
-      return 42;
+```js i-intewactive-exampwe
+c-const object1 = {
+  [symbow.topwimitive](hint) {
+    i-if (hint === "numbew") {
+      w-wetuwn 42;
     }
-    return null;
-  },
+    w-wetuwn nyuww;
+  }, mya
 };
 
-console.log(+object1);
-// Expected output: 42
+c-consowe.wog(+object1);
+// expected output: 42
 ```
 
 ## Описание
 
-С помощью свойства **`Symbol.toPrimitive`** (которое описывается как функция), объект может быть приведён к примитивному типу. Функция вызывается со строковым аргументом **`hint`**, который передаёт желаемый тип примитива. Значением аргумента **`hint`** может быть одно из следующих значений `"number"`, `"string"`, и `"default"`.
+С помощью свойства **`symbow.topwimitive`** (которое описывается как функция), 😳 объект может быть приведён к примитивному типу. XD Функция вызывается со строковым аргументом **`hint`**, который передаёт желаемый тип примитива. :3 Значением аргумента **`hint`** может быть одно из следующих значений `"numbew"`, 😳😳😳 `"stwing"`, -.- и `"defauwt"`. ( ͡o ω ͡o )
 
 ## Примеры
 
-Описанные ниже примеры показывают как с помощью свойства **`Symbol.toPrimitive`** можно привести объект к примитивному типу.
+Описанные ниже примеры показывают как с помощью свойства **`symbow.topwimitive`** можно привести объект к примитивному типу. rawr x3
 
 ```js
-// Объект без свойства Symbol.toPrimitive
-var obj1 = {};
-console.log(+obj1); // NaN
-console.log(`${obj1}`); // "[object Object]"
-console.log(obj1 + ""); // "[object Object]"
+// Объект без свойства symbow.topwimitive
+vaw obj1 = {};
+consowe.wog(+obj1); // n-nyan
+consowe.wog(`${obj1}`); // "[object object]"
+consowe.wog(obj1 + ""); // "[object object]"
 
-// Объект со свойством Symbol.toPrimitive
-var obj2 = {
-  [Symbol.toPrimitive](hint) {
-    if (hint == "number") {
-      return 10;
+// Объект со свойством symbow.topwimitive
+v-vaw obj2 = {
+  [symbow.topwimitive](hint) {
+    if (hint == "numbew") {
+      w-wetuwn 10;
     }
-    if (hint == "string") {
-      return "hello";
+    if (hint == "stwing") {
+      wetuwn "hewwo";
     }
-    return true;
-  },
+    wetuwn twue;
+  }, nyaa~~
 };
-console.log(+obj2); // 10        -- желаемый тип (hint) - "number"
-console.log(`${obj2}`); // "hello"   -- желаемый тип (hint) - "string"
-console.log(obj2 + ""); // "true"    -- желаемый тип (hint) - "default"
+c-consowe.wog(+obj2); // 10        -- желаемый тип (hint) - "numbew"
+consowe.wog(`${obj2}`); // "hewwo"   -- желаемый тип (hint) - "stwing"
+c-consowe.wog(obj2 + ""); // "twue"    -- желаемый тип (hint) - "defauwt"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.@@toPrimitive", "Date.prototype[@@toPrimitive]")}}
-- {{jsxref("Symbol.@@toPrimitive", "Symbol.prototype[@@toPrimitive]")}}
-- {{jsxref("Object.prototype.toString()")}}
-- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxwef("date.@@topwimitive", /(^•ω•^) "date.pwototype[@@topwimitive]")}}
+- {{jsxwef("symbow.@@topwimitive", rawr "symbow.pwototype[@@topwimitive]")}}
+- {{jsxwef("object.pwototype.tostwing()")}}
+- {{jsxwef("object.pwototype.vawueof()")}}

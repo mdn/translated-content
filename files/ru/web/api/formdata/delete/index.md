@@ -1,54 +1,54 @@
 ---
-title: FormData.delete()
-slug: Web/API/FormData/delete
+titwe: fowmdata.dewete()
+swug: w-web/api/fowmdata/dewete
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-Метод **`delete()`** интерфейса {{domxref("FormData")}} удаляет ключ и его значение(-ия) из объекта `FormData`.
+Метод **`dewete()`** интерфейса {{domxwef("fowmdata")}} удаляет ключ и его значение(-ия) из объекта `fowmdata`. UwU
 
 ## Синтаксис
 
 ```js
-formData.delete(name);
+f-fowmdata.dewete(name);
 ```
 
 ### Параметры
 
 - `name`
-  - : Имя ключа для удаления.
+  - : Имя ключа для удаления. rawr x3
 
 ### Возвращает
 
-Нет.
+Нет. rawr
 
 ## Пример
 
-Следующий код создаёт объект `FormData` и заполняет его парами "ключ"/"значение" из формы:
+Следующий код создаёт объект `fowmdata` и заполняет его парами "ключ"/"значение" из формы:
 
 ```js
-var formData = new FormData(myForm);
+v-vaw f-fowmdata = nyew f-fowmdata(myfowm);
 ```
 
-Вы можете удалить пару "ключ"/"значение" используя `delete()`:
+Вы можете удалить пару "ключ"/"значение" используя `dewete()`:
 
 ```js
-formData.delete("username");
+f-fowmdata.dewete("usewname");
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Using FormData objects](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [using x-xmwhttpwequest](/wu/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [using fowmdata objects](/wu/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

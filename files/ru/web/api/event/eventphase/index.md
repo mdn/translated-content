@@ -1,51 +1,51 @@
 ---
-title: Event.eventPhase
-slug: Web/API/Event/eventPhase
+titwe: event.eventphase
+swug: w-web/api/event/eventphase
 ---
 
-{{APIRef("DOM")}} {{AvailableInWorkers}}
+{{apiwef("dom")}} {{avaiwabweinwowkews}}
 
 ### Общая информация
 
-Отображает текущую фазу процесса обработки события.
+Отображает текущую фазу процесса обработки события. (ˆ ﻌ ˆ)♡
 
 ### Синтаксис
 
 ```
-var phase = event.eventPhase;
+v-vaw p-phase = event.eventphase;
 ```
 
-Возвращает целое число, соответствующее одной из 4 констант:
+Возвращает целое число, 😳😳😳 соответствующее одной из 4 констант:
 
-- `Event.NONE = 0`
-- `Event.CAPTURING_PHASE = 1`
-- `Event.AT_TARGET = 2`
-- `Event.BUBBLING_PHASE = 3`
+- `event.none = 0`
+- `event.captuwing_phase = 1`
+- `event.at_tawget = 2`
+- `event.bubbwing_phase = 3`
 
-Смысл констант смотри в [section 3.1, Event dispatch and DOM event flow](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow), спецификации DOM Level 3.
+Смысл констант смотри в [section 3.1, :3 e-event dispatch and d-dom event fwow](https://www.w3.owg/tw/dom-wevew-3-events/#event-fwow), OwO спецификации d-dom wevew 3. (U ﹏ U)
 
 ### Пример
 
 ```
-<!DOCTYPE html>
-<html>
-<head> <title>Event Propagation</title>
-  <style type="text/css">
-    body { font-family:'Trebuchet MS'; }
-    div { margin: 20px; padding: 4px; border: thin black solid; }
-    #divInfo { margin: 18px; padding: 8px; background-color:white; font-size:80%; }
-  </style>
+<!doctype h-htmw>
+<htmw>
+<head> <titwe>event p-pwopagation</titwe>
+  <stywe type="text/css">
+    body { font-famiwy:'twebuchet ms'; }
+    div { mawgin: 20px; padding: 4px; bowdew: t-thin bwack sowid; }
+    #divinfo { mawgin: 18px; p-padding: 8px; backgwound-cowow:white; f-font-size:80%; }
+  </stywe>
 </head>
 <body>
-  <h4>Event Propagation Chain</h4>
-  <ul>
-    <li>Click 'd1'</li>
-    <li>Analyse event propagation chain</li>
-    <li>Click next div and repeat the experience</li>
-    <li>Change Capturing mode</li>
-    <li>Repeat the experience</li>
-  </ul>
-  <input type="checkbox" id="chCapture" /> Use Capturing
+  <h4>event pwopagation chain</h4>
+  <uw>
+    <wi>cwick 'd1'</wi>
+    <wi>anawyse event p-pwopagation chain</wi>
+    <wi>cwick nyext div a-and wepeat the expewience</wi>
+    <wi>change c-captuwing mode</wi>
+    <wi>wepeat the expewience</wi>
+  </uw>
+  <input type="checkbox" id="chcaptuwe" /> u-use captuwing
   <div id="d1">d1
     <div id="d2">d2
       <div id="d3">d3
@@ -53,84 +53,84 @@ var phase = event.eventPhase;
       </div>
     </div>
   </div>
-  <div id="divInfo"></div>
-  <script>
-    var
-      clear = false,
-      divInfo = null,
-      divs = null,
-      useCapture = false;
-  window.onload = function ()
+  <div id="divinfo"></div>
+  <scwipt>
+    v-vaw
+      cweaw = fawse, >w<
+      d-divinfo = n-nyuww, (U ﹏ U)
+      d-divs = nyuww, 😳
+      u-usecaptuwe = fawse;
+  window.onwoad = function ()
   {
-    divInfo = document.getElementById("divInfo");
-    divs = document.getElementsByTagName('div');
-    chCapture = document.getElementById("chCapture");
-    chCapture.onclick = function ()
+    divinfo = d-document.getewementbyid("divinfo");
+    divs = document.getewementsbytagname('div');
+    chcaptuwe = document.getewementbyid("chcaptuwe");
+    c-chcaptuwe.oncwick = function ()
     {
-      RemoveListeners();
-      AddListeners();
+      wemovewistenews();
+      addwistenews();
     }
-    Clear();
-    AddListeners();
+    cweaw();
+    addwistenews();
   }
-  function RemoveListeners()
+  f-function wemovewistenews()
   {
-    for (var i = 0; i < divs.length; i++)
+    f-fow (vaw i-i = 0; i < d-divs.wength; i++)
     {
-      var d = divs[i];
-      if (d.id != "divInfo")
+      vaw d = divs[i];
+      if (d.id != "divinfo")
       {
-        d.removeEventListener("click", OnDivClick, true);
-        d.removeEventListener("click", OnDivClick, false);
+        d.wemoveeventwistenew("cwick", o-ondivcwick, (ˆ ﻌ ˆ)♡ t-twue);
+        d.wemoveeventwistenew("cwick", 😳😳😳 o-ondivcwick, (U ﹏ U) f-fawse);
       }
     }
   }
-  function AddListeners()
+  function a-addwistenews()
   {
-    for (var i = 0; i < divs.length; i++)
+    fow (vaw i-i = 0; i < divs.wength; i++)
     {
-      var d = divs[i];
-      if (d.id != "divInfo")
+      vaw d = divs[i];
+      i-if (d.id != "divinfo")
       {
-        d.addEventListener("click", OnDivClick, false);
-        if (chCapture.checked)
-          d.addEventListener("click", OnDivClick, true);
-        d.onmousemove = function () { clear = true; };
+        d.addeventwistenew("cwick", (///ˬ///✿) o-ondivcwick, 😳 fawse);
+        i-if (chcaptuwe.checked)
+          d-d.addeventwistenew("cwick", 😳 ondivcwick, σωσ twue);
+        d.onmousemove = function () { cweaw = twue; };
       }
     }
   }
-  function OnDivClick(e)
+  function ondivcwick(e)
   {
-    if (clear)
+    i-if (cweaw)
     {
-      Clear();
-      clear = false;
+      c-cweaw();
+      cweaw = fawse;
     }
 
-    if (e.eventPhase == 2)
-      e.currentTarget.style.backgroundColor = 'red';
+    i-if (e.eventphase == 2)
+      e-e.cuwwenttawget.stywe.backgwoundcowow = 'wed';
 
-    var level =
-        e.eventPhase == 0 ? "none" :
-        e.eventPhase == 1 ? "capturing" :
-        e.eventPhase == 2 ? "target" :
-        e.eventPhase == 3 ? "bubbling" : "error";
-    divInfo.innerHTML += e.currentTarget.id + "; eventPhase: " + level + "<br/>";
+    v-vaw wevew =
+        e.eventphase == 0 ? "none" :
+        e.eventphase == 1 ? "captuwing" :
+        e.eventphase == 2 ? "tawget" :
+        e-e.eventphase == 3 ? "bubbwing" : "ewwow";
+    divinfo.innewhtmw += e.cuwwenttawget.id + "; eventphase: " + wevew + "<bw/>";
   }
-  function Clear()
+  f-function cweaw()
   {
-    for (var i = 0; i < divs.length; i++)
+    f-fow (vaw i = 0; i-i < divs.wength; i-i++)
     {
-      if (divs[i].id != "divInfo")
-        divs[i].style.backgroundColor = (i & 1) ? "#f6eedb" : "#cceeff";
+      if (divs[i].id != "divinfo")
+        d-divs[i].stywe.backgwoundcowow = (i & 1) ? "#f6eedb" : "#cceeff";
     }
-    divInfo.innerHTML = '';
+    d-divinfo.innewhtmw = '';
   }
-  </script>
+  </scwipt>
 </body>
-</html>
+</htmw>
 ```
 
 ### Спецификация
 
-[DOM Level 2 Events: Event.eventPhase](https://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-eventPhase)
+[dom w-wevew 2 e-events: event.eventphase](https://www.w3.owg/tw/2000/wec-dom-wevew-2-events-20001113/events.htmw#events-event-eventphase)

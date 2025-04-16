@@ -1,49 +1,49 @@
 ---
-title: GamepadEvent.gamepad
-slug: Web/API/GamepadEvent/gamepad
+titwe: gamepadevent.gamepad
+swug: web/api/gamepadevent/gamepad
 ---
 
-{{APIRef("Gamepad API")}}
+{{apiwef("gamepad a-api")}}
 
-Свойство **`GamepadEvent.gamepad`**, интерфейса **{{domxref("GamepadEvent")}},** возвращает объект {{domxref("Gamepad")}}, предоставляющий доступ к данным геймпада для событий [`gamepadconnected`](/ru/docs/Web/API/Window/gamepadconnected_event) и {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}.
+Свойство **`gamepadevent.gamepad`**, (U ﹏ U) интерфейса **{{domxwef("gamepadevent")}},** возвращает объект {{domxwef("gamepad")}}, -.- предоставляющий доступ к данным геймпада для событий [`gamepadconnected`](/wu/docs/web/api/window/gamepadconnected_event) и {{domxwef("window.gamepaddisconnected_event", (ˆ ﻌ ˆ)♡ "gamepaddisconnected")}}. (⑅˘꒳˘)
 
-> [!NOTE]
-> Эти события не возникают Chrome, только в Firefox. В Chrome вы должны использовать {{domxref("Navigator.getGamepads")}} для доступа к объекту {{domxref("Gamepad")}}.
+> [!note]
+> Эти события не возникают c-chwome, (U ᵕ U❁) только в f-fiwefox. -.- В c-chwome вы должны использовать {{domxwef("navigatow.getgamepads")}} для доступа к объекту {{domxwef("gamepad")}}.
 
 ## Синтаксис
 
 ```
-readonly    attribute Gamepad gamepad;
+w-weadonwy    a-attwibute gamepad g-gamepad;
 ```
 
 ## Пример
 
-Свойство `gamepad` будет передано при возникновении события [`Window.gamepadconnected`](/ru/docs/Web/API/Window/gamepadconnected_event).
+Свойство `gamepad` будет передано при возникновении события [`window.gamepadconnected`](/wu/docs/web/api/window/gamepadconnected_event). ^^;;
 
 ```js
-window.addEventListener("gamepadconnected", function (e) {
-  console.log(
-    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    e.gamepad.index,
-    e.gamepad.id,
-    e.gamepad.buttons.length,
-    e.gamepad.axes.length,
+w-window.addeventwistenew("gamepadconnected", >_< function (e) {
+  consowe.wog(
+    "gamepad connected at index %d: %s. mya %d b-buttons, mya %d axes.", 😳
+    e.gamepad.index, XD
+    e.gamepad.id, :3
+    e.gamepad.buttons.wength, 😳😳😳
+    e.gamepad.axes.wength, -.-
   );
 });
 ```
 
 ## Значение
 
-Объект {{domxref("Gamepad")}}.
+Объект {{domxwef("gamepad")}}.
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-[Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+[using t-the gamepad api](/wu/docs/web/api/gamepad_api/using_the_gamepad_api)

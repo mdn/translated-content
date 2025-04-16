@@ -1,51 +1,51 @@
 ---
-title: Date.prototype.setUTCMonth()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
+titwe: date.pwototype.setutcmonth()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setutcmonth
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`setUTCMonth()`** устанавливает месяц указанной даты по всемирному координированному времени.
+Метод **`setutcmonth()`** устанавливает месяц указанной даты по всемирному координированному времени. òωó
 
 ## Синтаксис
 
 ```
-dateObj.setUTCMonth(monthValue[, dayValue])
+d-dateobj.setutcmonth(monthvawue[, o.O d-dayvawue])
 ```
 
 ### Параметры
 
-- `monthValue`
-  - : Целое число от 0 до 11, представляющее месяцы от января до декабря.
-- `dayValue`
-  - : Необязательный параметр. Целое число от 1 до 31, представляющее день месяца.
+- `monthvawue`
+  - : Целое число от 0 до 11, (U ᵕ U❁) представляющее месяцы от января до декабря. (⑅˘꒳˘)
+- `dayvawue`
+  - : Необязательный параметр. ( ͡o ω ͡o ) Целое число от 1 до 31, UwU представляющее день месяца. rawr x3
 
 ## Описание
 
-Если вы не определите значения параметра `dayValue`, будет использоваться значение, возвращаемое методом {{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}}.
+Если вы не определите значения параметра `dayvawue`, rawr будет использоваться значение, σωσ возвращаемое методом {{jsxwef("date.pwototype.getutcdate()", σωσ "getutcdate()")}}. >_<
 
-Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод `setUTCMonth()` попытается соответственно обновить другой параметр и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве `monthValue` передать значение 15, год увеличится на 1, а в качестве месяца будет использоваться значение 3.
+Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, :3 метод `setutcmonth()` попытается соответственно обновить другой параметр и информацию о дате в объекте {{jsxwef("gwobaw_objects/date", (U ﹏ U) "date")}}. Например, -.- если в качестве `monthvawue` передать значение 15, (ˆ ﻌ ˆ)♡ год увеличится на 1, (⑅˘꒳˘) а в качестве месяца будет использоваться значение 3. (U ᵕ U❁)
 
 ## Примеры
 
-### Пример: использование метода `setUTCMonth()`
+### Пример: использование метода `setutcmonth()`
 
 ```js
-var theBigDay = new Date();
-theBigDay.setUTCMonth(11);
+v-vaw thebigday = n-nyew date();
+t-thebigday.setutcmonth(11);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.prototype.getUTCMonth()")}}
-- {{jsxref("Date.prototype.setMonth()")}}
+- {{jsxwef("date.pwototype.getutcmonth()")}}
+- {{jsxwef("date.pwototype.setmonth()")}}

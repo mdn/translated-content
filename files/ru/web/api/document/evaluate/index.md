@@ -1,99 +1,99 @@
 ---
-title: Document.evaluate()
-slug: Web/API/Document/evaluate
+titwe: document.evawuate()
+swug: w-web/api/document/evawuate
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Возвращает экземпляр объекта типа [`XPathResult`](/ru/docs/Web/API/XPathResult) исходя из данного [XPath](/ru/docs/Web/XPath) и других входных параметров.
+Возвращает экземпляр объекта типа [`xpathwesuwt`](/wu/docs/web/api/xpathwesuwt) исходя из данного [xpath](/wu/docs/web/xpath) и других входных параметров. 🥺
 
 ## Синтаксис
 
 ```
-var xpathResult = document.evaluate(
- xpathExpression,
- contextNode,
- namespaceResolver,
- resultType,
- result
+v-vaw xpathwesuwt = d-document.evawuate(
+ x-xpathexpwession, ^^;;
+ c-contextnode, :3
+ n-nyamespacewesowvew, (U ﹏ U)
+ w-wesuwttype, OwO
+ w-wesuwt
 );
 ```
 
-- `xpathExpression` - строка, описывающая XPath, который должен быть исполнен.
-- `contextNode` указывает*контекстный узел* для запроса (см. \[<http://www.w3.org/TR/xpath> спецификация XPath). В качестве данного аргумента может быть задан объект _document_.
-- `namespaceResolver` - функция, которой будут переданы все префиксы пространств имён. Она должна возвращать строку, описывающую URI, ассоциированный с данным префиксом. It will be used to resolve prefixes within the XPath itself, so that they can be matched with the document. `null` is common for HTML documents or when no namespace prefixes are used.
-- `resultType` - число, описывающее тип возвращаемого `XPathResult` (см. ниже). Используйте [именные свойства-константы](#result_types) конструктора класса `XPathResult` (эквивалентно численным значениям от 0 до 9), как например `XPathResult.ANY_TYPE`.
-- `result` - экземпляр объекта типа `XPathResult`, используемого для хранения результатов поиска по данному `xpathExpression`. Может принимать значение `null`
+- `xpathexpwession` - строка, 😳😳😳 описывающая xpath, (ˆ ﻌ ˆ)♡ который должен быть исполнен. XD
+- `contextnode` указывает*контекстный узел* для запроса (см. (ˆ ﻌ ˆ)♡ \[<http://www.w3.owg/tw/xpath> спецификация xpath). ( ͡o ω ͡o ) В качестве данного аргумента может быть задан объект _document_. rawr x3
+- `namespacewesowvew` - функция, nyaa~~ которой будут переданы все префиксы пространств имён. >_< Она должна возвращать строку, ^^;; описывающую uwi, ассоциированный с данным префиксом. (ˆ ﻌ ˆ)♡ it wiww be used t-to wesowve pwefixes within the xpath itsewf, ^^;; s-so that they can be matched with t-the document. (⑅˘꒳˘) `nuww` is common fow htmw documents ow when nyo nyamespace p-pwefixes awe used. rawr x3
+- `wesuwttype` - число, (///ˬ///✿) описывающее тип возвращаемого `xpathwesuwt` (см. ниже). 🥺 Используйте [именные свойства-константы](#wesuwt_types) конструктора класса `xpathwesuwt` (эквивалентно численным значениям от 0 до 9), >_< как например `xpathwesuwt.any_type`. UwU
+- `wesuwt` - экземпляр объекта типа `xpathwesuwt`, >_< используемого для хранения результатов поиска по данному `xpathexpwession`. -.- Может принимать значение `nuww`
 
 ## Пример
 
 ```js
-var headings = document.evaluate(
-  "/html/body//h2",
-  document,
-  null,
-  XPathResult.ANY_TYPE,
-  null,
+v-vaw headings = d-document.evawuate(
+  "/htmw/body//h2", mya
+  document, >w<
+  nyuww,
+  xpathwesuwt.any_type, (U ﹏ U)
+  nyuww,
 );
-/* Найти в документе все элементы h2
- * В качестве результата будет получен узловой итератор. */
-var thisHeading = headings.iterateNext();
-var alertText = "В данном документе заголовками 2-го уровня являются:\n";
-while (thisHeading) {
-  alertText += thisHeading.textContent + "\n";
-  thisHeading = headings.iterateNext();
+/* Найти в документе все элементы h-h2
+ * В качестве результата будет получен узловой итератор. 😳😳😳 */
+vaw thisheading = headings.itewatenext();
+vaw awewttext = "В данном документе заголовками 2-го уровня являются:\n";
+whiwe (thisheading) {
+  a-awewttext += thisheading.textcontent + "\n";
+  t-thisheading = h-headings.itewatenext();
 }
-alert(alertText); // Показывает alert со всеми найденными элементами h2
+a-awewt(awewttext); // Показывает a-awewt со всеми найденными элементами h2
 ```
 
-Note, in the above example, a more verbose XPath is preferred over common shortcuts such as `//h2`. Generally, more specific XPath selectors as in the above example usually gives a significant performance improvement, especially on very large documents. This is because the evaluation of the query spends does not waste time visiting unnecessary nodes. Using // is generally slow as it visits _every_ node from the root and all subnodes looking for possible matches.
+nyote, o.O in the above e-exampwe, òωó a mowe vewbose xpath is pwefewwed ovew c-common showtcuts such as `//h2`. 😳😳😳 genewawwy, σωσ mowe specific xpath sewectows as in the above exampwe u-usuawwy gives a significant pewfowmance i-impwovement, (⑅˘꒳˘) e-especiawwy o-on vewy wawge documents. this is because the evawuation of the q-quewy spends does n-nyot waste time visiting unnecessawy n-nyodes. (///ˬ///✿) u-using // is genewawwy swow as it v-visits _evewy_ nyode fwom the w-woot and aww subnodes wooking fow possibwe matches. 🥺
 
-Further optimization can be achieved by careful use of the context parameter. For example, if you know the content you are looking for is somewhere inside the body tag, you can use this:
+f-fuwthew optimization can be a-achieved by cawefuw use of the c-context pawametew. OwO f-fow exampwe, >w< if you know the content you awe wooking fow is somewhewe inside the body tag, 🥺 you can use this:
 
 ```js
-document.evaluate(".//h2", document.body, null, XPathResult.ANY_TYPE, null);
+d-document.evawuate(".//h2", nyaa~~ d-document.body, ^^ nyuww, >w< xpathwesuwt.any_type, OwO n-nyuww);
 ```
 
-Notice in the above `document.body` has been used as the context instead of `document` so the XPath starts from the body element. (In this example, the `"."` is important to indicate that the querying should start from the context node, document.body. If the "." was left out (leaving `//h2`) the query would start from the root node (`html`) which would be more wasteful.)
+n-nyotice i-in the above `document.body` has been used as the context instead of `document` s-so the xpath stawts fwom the body ewement. XD (in this exampwe, ^^;; the `"."` is impowtant t-to indicate that the quewying s-shouwd stawt f-fwom the context n-nyode, 🥺 document.body. XD if the "." w-was weft out (weaving `//h2`) t-the quewy wouwd s-stawt fwom the w-woot nyode (`htmw`) which wouwd be mowe wastefuw.)
 
-Более детально данный материал описан в статье [Introduction to using XPath in JavaScript](/ru/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript).
+Более детально данный материал описан в статье [intwoduction t-to using x-xpath in javascwipt](/wu/docs/web/xpath/intwoduction_to_using_xpath_in_javascwipt). (U ᵕ U❁)
 
 ## Примечания
 
-- Выражения XPath могут быть интерпретированы в HTML- и XML-документах.
-- While using document.evaluate() works in FF2, in FF3 one must use someXMLDoc.evaluate() if evaluating against something other than the current document.
+- Выражения x-xpath могут быть интерпретированы в h-htmw- и xmw-документах. :3
+- w-whiwe using document.evawuate() wowks in ff2, ( ͡o ω ͡o ) in ff3 one m-must use somexmwdoc.evawuate() if evawuating against something othew than the cuwwent document. òωó
 
 ## Типы возвращаемых данных
 
-These are supported values for the `resultType` parameter of the `evaluate` method:
+these awe s-suppowted vawues fow the `wesuwttype` pawametew of the `evawuate` m-method:
 
-| Result Type                    | Value | Description                                                                                                                                                                |
+| wesuwt t-type                    | v-vawue | descwiption                                                                                                                                                                |
 | ------------------------------ | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ANY_TYPE`                     | 0     | Whatever type naturally results from the given expression.                                                                                                                 |
-| `NUMBER_TYPE`                  | 1     | A result set containing a single number. Useful, for example, in an XPath expression using the `count()` function.                                                         |
-| `STRING_TYPE`                  | 2     | A result set containing a single string.                                                                                                                                   |
-| `BOOLEAN_TYPE`                 | 3     | A result set containing a single boolean value. Useful, for example, an an XPath expression using the `not()` function.                                                    |
-| `UNORDERED_NODE_ITERATOR_TYPE` | 4     | A result set containing all the nodes matching the expression. The nodes in the result set are not necessarily in the same order they appear in the document.              |
-| `ORDERED_NODE_ITERATOR_TYPE`   | 5     | A result set containing all the nodes matching the expression. The nodes in the result set are in the same order they appear in the document.                              |
-| `UNORDERED_NODE_SNAPSHOT_TYPE` | 6     | A result set containing snapshots of all the nodes matching the expression. The nodes in the result set are not necessarily in the same order they appear in the document. |
-| `ORDERED_NODE_SNAPSHOT_TYPE`   | 7     | A result set containing snapshots of all the nodes matching the expression. The nodes in the result set are in the same order they appear in the document.                 |
-| `ANY_UNORDERED_NODE_TYPE`      | 8     | A result set containing any single node that matches the expression. The node is not necessarily the first node in the document that matches the expression.               |
-| `FIRST_ORDERED_NODE_TYPE`      | 9     | A result set containing the first node in the document that matches the expression.                                                                                        |
+| `any_type`                     | 0     | n-nyanievew type nyatuwawwy w-wesuwts fwom the g-given expwession. σωσ                                                                                                                 |
+| `numbew_type`                  | 1     | a wesuwt set containing a singwe nyumbew. (U ᵕ U❁) usefuw, fow exampwe, (✿oωo) in an xpath expwession u-using the `count()` function. ^^                                                         |
+| `stwing_type`                  | 2     | a-a wesuwt set containing a-a singwe stwing. ^•ﻌ•^                                                                                                                                   |
+| `boowean_type`                 | 3     | a-a wesuwt set containing a singwe boowean vawue. XD u-usefuw, :3 fow exampwe, a-an an xpath expwession using t-the `not()` function. (ꈍᴗꈍ)                                                    |
+| `unowdewed_node_itewatow_type` | 4     | a-a wesuwt set containing aww the nyodes matching the expwession. :3 the nyodes i-in the wesuwt s-set awe nyot nyecessawiwy i-in the same owdew they a-appeaw in the d-document. (U ﹏ U)              |
+| `owdewed_node_itewatow_type`   | 5     | a wesuwt set c-containing aww the nyodes matching the expwession. UwU the nyodes in the wesuwt set a-awe in the same o-owdew they appeaw in the document. 😳😳😳                              |
+| `unowdewed_node_snapshot_type` | 6     | a wesuwt set containing s-snapshots o-of aww the nyodes matching the expwession. XD the nyodes in the wesuwt s-set awe nyot nyecessawiwy in the same owdew they appeaw in the document. o.O |
+| `owdewed_node_snapshot_type`   | 7     | a-a wesuwt set containing snapshots of a-aww the nyodes matching t-the expwession. (⑅˘꒳˘) the nyodes in the wesuwt set awe in the s-same owdew they a-appeaw in the document. 😳😳😳                 |
+| `any_unowdewed_node_type`      | 8     | a wesuwt set containing any singwe nyode that m-matches the expwession. nyaa~~ the nyode i-is nyot nyecessawiwy the fiwst nyode in the document that matches t-the expwession. rawr               |
+| `fiwst_owdewed_node_type`      | 9     | a wesuwt set containing t-the fiwst n-nyode in the document that matches t-the expwession. -.-                                                                                        |
 
-Results of `NODE_ITERATOR` types contain references to nodes in the document. Modifying a node will invalidate the iterator. After modifying a node, attempting to iterate through the results will result in an error.
+wesuwts of `node_itewatow` t-types c-contain wefewences t-to nyodes in the document. m-modifying a nyode w-wiww invawidate the itewatow. (✿oωo) aftew modifying a-a nyode, /(^•ω•^) attempting t-to itewate thwough t-the wesuwts wiww wesuwt in an ewwow. 🥺
 
-Results of `NODE_SNAPSHOT` types are snapshots, which are essentially lists of matched nodes. You can make changes to the document by altering snapshot nodes. Modifying the document doesn't invalidate the snapshot; however, if the document is changed, the snapshot may not correspond to the current state of the document, since nodes may have moved, been changed, added, or removed.
+wesuwts o-of `node_snapshot` types awe s-snapshots, ʘwʘ which a-awe essentiawwy wists of matched nyodes. UwU you can make changes t-to the document b-by awtewing snapshot n-nodes. XD modifying t-the document doesn't invawidate t-the snapshot; howevew, (✿oωo) if the document is changed, :3 the snapshot may nyot cowwespond to the c-cuwwent state of the document, (///ˬ///✿) s-since nodes may have moved, nyaa~~ been c-changed, >w< added, -.- ow wemoved.
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [DOM:document.createExpression](/ru/docs/Web/API/Document/createExpression)
-- [XPath Code Snippets](/ru/docs/Code_snippets/XPath)
-- [Check for browser support](https://codepen.io/johan/full/ckFgn)
+- [dom:document.cweateexpwession](/wu/docs/web/api/document/cweateexpwession)
+- [xpath c-code snippets](/wu/docs/code_snippets/xpath)
+- [check fow bwowsew suppowt](https://codepen.io/johan/fuww/ckfgn)

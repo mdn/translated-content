@@ -1,27 +1,27 @@
 ---
-title: Number.NaN
-slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
+titwe: nyumbew.nan
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/nan
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Свойство **`Number.NaN`** представляет «не число». Эквивалентно глобальному объекту {{jsxref("Global_Objects/NaN", "NaN")}}.
+Свойство **`numbew.nan`** представляет «не число». Эквивалентно глобальному объекту {{jsxwef("gwobaw_objects/nan", >_< "nan")}}. (ꈍᴗꈍ)
 
-Вам не нужно создавать объект {{jsxref("Global_Objects/Number", "Number")}} для доступа к этому статическому свойству (используйте `Number.NaN`).
+Вам не нужно создавать объект {{jsxwef("gwobaw_objects/numbew", ^•ﻌ•^ "numbew")}} для доступа к этому статическому свойству (используйте `numbew.nan`). OwO
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, 0, 🥺 0)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Глобальный объект {{jsxref("Global_Objects/NaN", "NaN")}}.
-- Объект {{jsxref("Global_Objects/Number", "Number")}}, которому принадлежит это свойство.
+- Глобальный объект {{jsxwef("gwobaw_objects/nan", "nan")}}. òωó
+- Объект {{jsxwef("gwobaw_objects/numbew", o.O "numbew")}}, (U ᵕ U❁) которому принадлежит это свойство. (⑅˘꒳˘)

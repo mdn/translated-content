@@ -1,103 +1,103 @@
 ---
-title: Document.forms
-slug: Web/API/Document/forms
+titwe: document.fowms
+swug: web/api/document/fowms
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`forms` возвращает коллекцию ({{domxref("HTMLCollection")}}) форм в текущем документе
+`fowms` возвращает коллекцию ({{domxwef("htmwcowwection")}}) форм в текущем документе
 
-> [!NOTE]
-> Точно также Вы можете получить список элементов выбранной формы, используя свойство {{domxref("HTMLFormElement.elements")}}.
+> [!note]
+> Точно также Вы можете получить список элементов выбранной формы, rawr x3 используя свойство {{domxwef("htmwfowmewement.ewements")}}. mya
 
 ## Синтаксис
 
 ```
-collection = document.forms;
+c-cowwection = d-document.fowms;
 ```
 
 ### Значение
 
-Объект {{domxref("HTMLCollection")}} содержит все формы, имеющиеся на странице. Каждый элемент этой коллекции - это {{domxref("HTMLFormElement")}}, представленный отдельным тегом `<form>`.
+Объект {{domxwef("htmwcowwection")}} содержит все формы, nyaa~~ имеющиеся на странице. (⑅˘꒳˘) Каждый элемент этой коллекции - это {{domxwef("htmwfowmewement")}}, представленный отдельным тегом `<fowm>`. rawr x3
 
-Если на странице форм нет, тогда возвращённый результат будет пустым, а длина коллекции равна нулю.
+Если на странице форм нет, (✿oωo) тогда возвращённый результат будет пустым, (ˆ ﻌ ˆ)♡ а длина коллекции равна нулю. (˘ω˘)
 
 ## Примеры
 
 ### Получение информации с формы
 
 ```
-<!DOCTYPE html>
-<html lang="en">
+<!doctype h-htmw>
+<htmw w-wang="en">
 
 <head>
-<title>document.forms example</title>
+<titwe>document.fowms e-exampwe</titwe>
 </head>
 
 <body>
 
-<form id="robby">
-  <input type="button" onclick="alert(document.forms[0].id);" value="robby's form" />
-</form>
+<fowm i-id="wobby">
+  <input t-type="button" o-oncwick="awewt(document.fowms[0].id);" vawue="wobby's fowm" />
+</fowm>
 
-<form id="dave">
-  <input type="button" onclick="alert(document.forms[1].id);" value="dave's form" />
-</form>
+<fowm id="dave">
+  <input type="button" o-oncwick="awewt(document.fowms[1].id);" vawue="dave's fowm" />
+</fowm>
 
-<form id="paul">
-  <input type="button" onclick="alert(document.forms[2].id);" value="paul's form" />
-</form>
+<fowm i-id="pauw">
+  <input type="button" o-oncwick="awewt(document.fowms[2].id);" vawue="pauw's fowm" />
+</fowm>
 
 </body>
-</html>
+</htmw>
 ```
 
 ### Получение элемента формы
 
 ```
-var selectForm = document.forms[index];
-var selectFormElement = document.forms[index].elements[index];
+vaw sewectfowm = d-document.fowms[index];
+vaw sewectfowmewement = d-document.fowms[index].ewements[index];
 ```
 
 ### Обращение к форме по её имени
 
 ```
-<!DOCTYPE html>
-<html lang="en">
+<!doctype h-htmw>
+<htmw wang="en">
 <head>
-  <title>document.forms example</title>
+  <titwe>document.fowms exampwe</titwe>
 </head>
 
 <body>
 
-<form name="login">
-  <input name="email" type="email">
-  <input name="password" type="password">
-  <button type="submit">Log in</button>
-</form>
+<fowm nyame="wogin">
+  <input nyame="emaiw" type="emaiw">
+  <input n-nyame="passwowd" type="passwowd">
+  <button type="submit">wog in</button>
+</fowm>
 
-<script>
-  var loginForm = document.forms.login; // Or document.forms['login']
-  loginForm.elements.email.placeholder = 'test@example.com';
-  loginForm.elements.password.placeholder = 'password';
-</script>
+<scwipt>
+  vaw woginfowm = d-document.fowms.wogin; // ow d-document.fowms['wogin']
+  w-woginfowm.ewements.emaiw.pwacehowdew = 'test@exampwe.com';
+  w-woginfowm.ewements.passwowd.pwacehowdew = 'passwowd';
+</scwipt>
 </body>
-</html>
+</htmw>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [HTML forms](/ru/docs/Learn_web_development/Extensions/Forms)
-- {{HTMLElement("form")}} и интерфейс {{domxref("HTMLFormElement")}}
+- [htmw f-fowms](/wu/docs/weawn_web_devewopment/extensions/fowms)
+- {{htmwewement("fowm")}} и интерфейс {{domxwef("htmwfowmewement")}}
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
 -

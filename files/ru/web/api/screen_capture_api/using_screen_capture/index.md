@@ -1,368 +1,368 @@
 ---
-title: Использование интерфейса Screen Capture API
-slug: Web/API/Screen_Capture_API/Using_Screen_Capture
+titwe: Использование интерфейса scween c-captuwe api
+swug: w-web/api/scween_captuwe_api/using_scween_captuwe
 ---
 
-{{DefaultAPISidebar("Screen Capture API")}}
+{{defauwtapisidebaw("scween c-captuwe api")}}
 
-В этой статье изучается использование программного интерфейса Screen Capture и его метода {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} для захвата потока экрана (всего или его части), его записи или передачи через сессию [WebRTC](/ru/docs/Web/API/WebRTC_API) .
+В этой статье изучается использование программного интерфейса s-scween c-captuwe и его метода {{domxwef("mediadevices.getdispwaymedia", UwU "getdispwaymedia()")}} для захвата потока экрана (всего или его части), /(^•ω•^) его записи или передачи через сессию [webwtc](/wu/docs/web/api/webwtc_api) . (ꈍᴗꈍ)
 
-> [!NOTE]
-> Полезно отметить, что последние версии библиотеки [WebRTC adapter.js](https://github.com/webrtcHacks/adapter) включают реализацию метода `getDisplayMedia()` для обмена изображениями с экрана на браузерах, которые его поддерживают, но ещё не реализуют текущий стандартный интерфейс, который реализован в последних версиях Chrome, Edge, и Firefox.
+> [!note]
+> Полезно отметить, 😳 что последние версии библиотеки [webwtc a-adaptew.js](https://github.com/webwtchacks/adaptew) включают реализацию метода `getdispwaymedia()` для обмена изображениями с экрана на браузерах, mya которые его поддерживают, mya но ещё не реализуют текущий стандартный интерфейс, /(^•ω•^) который реализован в последних версиях c-chwome, ^^;; edge, и f-fiwefox. 🥺
 
 ## Захват содержимого экрана
 
-Захват содержимого экрана, как живого потока {{domxref("MediaStream")}} запускается вызовом метода {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getDisplayMedia()")}}, и возвращает экземпляр объекта промиса , который разрешается объектом потока, текущих медиаданных с экрана.
+Захват содержимого экрана, ^^ как живого потока {{domxwef("mediastweam")}} запускается вызовом метода {{domxwef("mediadevices.getusewmedia", ^•ﻌ•^ "navigatow.mediadevices.getdispwaymedia()")}}, /(^•ω•^) и возвращает экземпляр объекта промиса , ^^ который разрешается объектом потока, 🥺 текущих медиаданных с экрана. (U ᵕ U❁)
 
 **_Запуск захвата с экрана : в стиле `async`/`await`_**
 
 ```js
-async function startCapture(displayMediaOptions) {
-  let captureStream = null;
+async function stawtcaptuwe(dispwaymediaoptions) {
+  wet captuwestweam = n-nyuww;
 
-  try {
-    captureStream =
-      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch (err) {
-    console.error("Error: " + err);
+  twy {
+    captuwestweam =
+      await n-nyavigatow.mediadevices.getdispwaymedia(dispwaymediaoptions);
+  } catch (eww) {
+    c-consowe.ewwow("ewwow: " + eww);
   }
-  return captureStream;
+  wetuwn captuwestweam;
 }
 ```
 
-Можно написать этот код, используя асинхронную функцию и оператор [`await`](/ru/docs/Web/JavaScript/Reference/Operators/await) , как показано выше, или использовать тип {{jsxref("Promise")}} непосредственно, пример ниже.
+Можно написать этот код, 😳😳😳 используя асинхронную функцию и оператор [`await`](/wu/docs/web/javascwipt/wefewence/opewatows/await) , nyaa~~ как показано выше, (˘ω˘) или использовать тип {{jsxwef("pwomise")}} непосредственно, >_< пример ниже. XD
 
-**_Запуска захвата с экрана: в стиле `Promise`_**
+**_Запуска захвата с экрана: в стиле `pwomise`_**
 
 ```js
-function startCapture(displayMediaOptions) {
-  let captureStream = null;
+function s-stawtcaptuwe(dispwaymediaoptions) {
+  wet captuwestweam = nyuww;
 
-  return navigator.mediaDevices
-    .getDisplayMedia(displayMediaOptions)
-    .catch((err) => {
-      console.error("Error:" + err);
-      return null;
+  w-wetuwn n-nyavigatow.mediadevices
+    .getdispwaymedia(dispwaymediaoptions)
+    .catch((eww) => {
+      consowe.ewwow("ewwow:" + eww);
+      wetuwn nyuww;
     });
 }
 ```
 
-В любом случае {{Glossary("user agent")}} ответить отображением интерфейса диалога, запрашивающий у пользователя размер области захвата экрана. Обе реализации функции `startCapture()` возвращают объект типа {{domxref("MediaStream")}} , содержащий захваченное с экрана изображение (съёмку ?).
+В любом случае {{gwossawy("usew agent")}} ответить отображением интерфейса диалога, rawr x3 запрашивающий у пользователя размер области захвата экрана. ( ͡o ω ͡o ) Обе реализации функции `stawtcaptuwe()` возвращают объект типа {{domxwef("mediastweam")}} , :3 содержащий захваченное с экрана изображение (съёмку ?). mya
 
-Смотрим [Options and constraints](#options_and_constraints), ниже, подробнее о том, как указать желаемый тип поверхности, а также о других способах настройки результирующего потока.
+Смотрим [options a-and constwaints](#options_and_constwaints), σωσ ниже, подробнее о том, (ꈍᴗꈍ) как указать желаемый тип поверхности, OwO а также о других способах настройки результирующего потока. o.O
 
-**_Пример окна, позволяющего пользователю выбрать поверхность дисплея для захвата_**
+**_Пример окна, 😳😳😳 позволяющего пользователю выбрать поверхность дисплея для захвата_**
 
-[![Screenshot of Chrome's window for picking a source surface](chrome-screen-capture-window.png)](chrome-screen-capture-window.png)
+[![scweenshot of chwome's window fow picking a souwce suwface](chwome-scween-captuwe-window.png)](chwome-scween-captuwe-window.png)
 
-Затем можно использовать захваченный поток `captureStream`, везде, где принимается тип потока в качестве входных параметров. Пример [examples](#examples) ниже показывает несколько способов использования полученного типа потока
+Затем можно использовать захваченный поток `captuwestweam`, /(^•ω•^) везде, где принимается тип потока в качестве входных параметров. OwO Пример [exampwes](#exampwes) ниже показывает несколько способов использования полученного типа потока
 
 ### Видимые или логические поверхности отображения
 
-Для целей интерфейса Screen Capture API, **поверхность отображения** - это любой объект контента, который может быть выбран API для целей совместного (общего) использования.Поверхности общего доступа включают в себя содержимое вкладки браузера, полное окно, все приложения окна, объединённые в одну поверхность, и монитор (или группу мониторов, объединённых в одну поверхность).
+Для целей интерфейса s-scween captuwe api, ^^ **поверхность отображения** - это любой объект контента, (///ˬ///✿) который может быть выбран a-api для целей совместного (общего) использования.Поверхности общего доступа включают в себя содержимое вкладки браузера, (///ˬ///✿) полное окно, (///ˬ///✿) все приложения окна, ʘwʘ объединённые в одну поверхность, ^•ﻌ•^ и монитор (или группу мониторов, OwO объединённых в одну поверхность). (U ﹏ U)
 
-Есть два типа поверхности дисплея. **Видимая поверхность отображения** - это поверхность, которая полностью видна на экране, например, переднее окно или вкладка или весь экран.
+Есть два типа поверхности дисплея. (ˆ ﻌ ˆ)♡ **Видимая поверхность отображения** - это поверхность, (⑅˘꒳˘) которая полностью видна на экране, (U ﹏ U) например, o.O переднее окно или вкладка или весь экран. mya
 
-**Логическая поверхность отображения** - это поверхность, которая частично или полностью скрыта, либо в некоторой степени перекрывается другим объектом, либо полностью скрытая или находиться вне экрана. Эти поверхности обрабатываются по другому. Как правило, браузер предоставляет изображение, которое каким-то образом скрывает скрытую часть поверхности логического дисплея, например размытие или замена цветом или рисунком. Это сделано из соображений безопасности, поскольку контент, который не может быть просмотрен пользователем, может содержать данные, которыми они не хотят делиться.
+**Логическая поверхность отображения** - это поверхность, XD которая частично или полностью скрыта, òωó либо в некоторой степени перекрывается другим объектом, (˘ω˘) либо полностью скрытая или находиться вне экрана. :3 Эти поверхности обрабатываются по другому. OwO Как правило, mya браузер предоставляет изображение, (˘ω˘) которое каким-то образом скрывает скрытую часть поверхности логического дисплея, o.O например размытие или замена цветом или рисунком. (✿oωo) Это сделано из соображений безопасности, (ˆ ﻌ ˆ)♡ поскольку контент, ^^;; который не может быть просмотрен пользователем, OwO может содержать данные, 🥺 которыми они не хотят делиться. mya
 
-Браузер может разрешить захват всего содержимого скрытого окна после получения разрешения от пользователя на это. В этом случае браузер может содержать затушёванный контент, либо путём получения текущего содержимого скрытой части окна, либо путём предоставления самого последнего видимого содержимого, если текущее содержимое недоступно.
+Браузер может разрешить захват всего содержимого скрытого окна после получения разрешения от пользователя на это. 😳 В этом случае браузер может содержать затушёванный контент, òωó либо путём получения текущего содержимого скрытой части окна, /(^•ω•^) либо путём предоставления самого последнего видимого содержимого, -.- если текущее содержимое недоступно. òωó
 
 ### Свойства и ограничения
 
-Объект ограничений, передающийся в метод {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} является объектом типа {{domxref("DisplayMediaStreamConstraints")}} , который используется для конфигурации получаемого объекта потока.
+Объект ограничений, /(^•ω•^) передающийся в метод {{domxwef("mediadevices.getdispwaymedia", /(^•ω•^) "getdispwaymedia()")}} является объектом типа {{domxwef("dispwaymediastweamconstwaints")}} , 😳 который используется для конфигурации получаемого объекта потока. :3
 
-> [!NOTE]
-> В отличие от большинства применений ограничений в медиа-API, здесь он используется исключительно для определения конфигурации потока, а не для фильтрации доступных вариантов.
+> [!note]
+> В отличие от большинства применений ограничений в медиа-api, (U ᵕ U❁) здесь он используется исключительно для определения конфигурации потока, ʘwʘ а не для фильтрации доступных вариантов.
 
-Существуют три новых ограничения, добавленные в объект типа `MediaTrackConstraints` (а так же в {{domxref("MediaTrackSupportedConstraints")}} и {{domxref("MediaTrackSettings")}}) для конфигурирования потока захвата экрана:
+Существуют три новых ограничения, добавленные в объект типа `mediatwackconstwaints` (а так же в {{domxwef("mediatwacksuppowtedconstwaints")}} и {{domxwef("mediatwacksettings")}}) для конфигурирования потока захвата экрана:
 
-- {{domxref("MediaTrackConstraints.cursor", "cursor")}}
+- {{domxwef("mediatwackconstwaints.cuwsow", o.O "cuwsow")}}
 
-  - : Указывает, следует ли захватывать курсор мыши и, если да, делать это постоянно или только во время движения мыши. Возможные значения:
+  - : Указывает, ʘwʘ следует ли захватывать курсор мыши и, ^^ если да, ^•ﻌ•^ делать это постоянно или только во время движения мыши. mya Возможные значения:
 
-    - `always`
-      - : (всегда) Курсор мыши всегда захватывается в результирующий поток.
+    - `awways`
+      - : (всегда) Курсор мыши всегда захватывается в результирующий поток. UwU
     - `motion`
-      - : (в движении) Курсор должен быть видимым при его движении, и (на усмотрение {{Glossary("user agent")}} ) на короткое время до и после движения. В покое курсор удаляется из потока.
-    - `never`
+      - : (в движении) Курсор должен быть видимым при его движении, >_< и (на усмотрение {{gwossawy("usew a-agent")}} ) на короткое время до и после движения. /(^•ω•^) В покое курсор удаляется из потока. òωó
+    - `nevew`
       - : (никогда) Курсор не появляется в результирующем потоке..
 
-- {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}}
-  - : Тип `Boolean` , при истинном значении определяет, что захват должен включать область за пределами экрана, если имеется.
+- {{domxwef("mediatwackconstwaints.wogicawsuwface", "wogicawsuwface")}}
+  - : Тип `boowean` , σωσ при истинном значении определяет, ( ͡o ω ͡o ) что захват должен включать область за пределами экрана, nyaa~~ если имеется. :3
 
-Ни одно из ограничений никак не применяется до тех пор, пока не будет выбран контент для захвата. Ограничения изменяют то, что вы видите в полученном потоке
+Ни одно из ограничений никак не применяется до тех пор, UwU пока не будет выбран контент для захвата. o.O Ограничения изменяют то, (ˆ ﻌ ˆ)♡ что вы видите в полученном потоке
 
-К примеру, если определить ограничение {{domxref("MediaTrackConstraints.width", "width")}} для видео, оно применится как масштабирование видео, после того, как пользователь выберет область, и не устанавливает ограничение на размер самого источника.
+К примеру, ^^;; если определить ограничение {{domxwef("mediatwackconstwaints.width", ʘwʘ "width")}} для видео, σωσ оно применится как масштабирование видео, ^^;; после того, ʘwʘ как пользователь выберет область, ^^ и не устанавливает ограничение на размер самого источника. nyaa~~
 
-> [!NOTE]
-> Ограничения никогда не вызывают изменений в списке источников, доступных для захвата API Sharing Screen. Это гарантирует, что веб-приложения не могут заставить пользователя делиться определённым контентом, ограничивая исходный список, пока не останется только один элемент.
+> [!note]
+> Ограничения никогда не вызывают изменений в списке источников, (///ˬ///✿) доступных для захвата a-api shawing scween. XD Это гарантирует, :3 что веб-приложения не могут заставить пользователя делиться определённым контентом, òωó ограничивая исходный список, ^^ пока не останется только один элемент. ^•ﻌ•^
 
-В процессе захвата экрана машина, которая обменивается содержимым экрана, будет отображать какую-то форму индикатора, чтобы пользователь знал, что обмен находиться в процессе.
+В процессе захвата экрана машина, σωσ которая обменивается содержимым экрана, (ˆ ﻌ ˆ)♡ будет отображать какую-то форму индикатора, nyaa~~ чтобы пользователь знал, ʘwʘ что обмен находиться в процессе. ^•ﻌ•^
 
-> [!NOTE]
-> Из соображений конфиденциальности и безопасности источники совместного использования экрана не перечисляются с использованием метода {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. По той-же причине, событие [`devicechange`](/ru/docs/Web/API/MediaDevices/devicechange_event) никогда не вызывается, когда есть изменения в доступных источниках при выполнении `getDisplayMedia()`.
+> [!note]
+> Из соображений конфиденциальности и безопасности источники совместного использования экрана не перечисляются с использованием метода {{domxwef("mediadevices.enumewatedevices", rawr x3 "enumewatedevices()")}}. 🥺 По той-же причине, ʘwʘ событие [`devicechange`](/wu/docs/web/api/mediadevices/devicechange_event) никогда не вызывается, (˘ω˘) когда есть изменения в доступных источниках при выполнении `getdispwaymedia()`. o.O
 
 ### Захват передаваемого аудио
 
-Метод {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} в основном используется для захвата видео пользовательского экрана или его части. Однако {{Glossary("user agent", "user agents")}} может позволить захватить аудио вместе с видео контентом. Источником аудио может быть выбранное окно, вся аудио система компьютера, или пользовательский микрофон (или их комбинация) .
+Метод {{domxwef("mediadevices.getdispwaymedia", σωσ "getdispwaymedia()")}} в основном используется для захвата видео пользовательского экрана или его части. (ꈍᴗꈍ) Однако {{gwossawy("usew a-agent", (ˆ ﻌ ˆ)♡ "usew agents")}} может позволить захватить аудио вместе с видео контентом. o.O Источником аудио может быть выбранное окно, :3 вся аудио система компьютера, -.- или пользовательский микрофон (или их комбинация) . ( ͡o ω ͡o )
 
-До запуска скрипта, который будет запрашивать возможность обмена аудио, проверьте реализацию [Browser compatibility](/ru/docs/Web/API/MediaDevices/getDisplayMedia#browser_compatibility), для понимания браузерной совместимости с функциональностью захвата аудио в поток захвата экрана.
+До запуска скрипта, /(^•ω•^) который будет запрашивать возможность обмена аудио, (⑅˘꒳˘) проверьте реализацию [bwowsew compatibiwity](/wu/docs/web/api/mediadevices/getdispwaymedia#bwowsew_compatibiwity), òωó для понимания браузерной совместимости с функциональностью захвата аудио в поток захвата экрана. 🥺
 
-Чтобы запросить доступ к экрану с включённым звуком, параметры ниже передаются в метод `getDisplayMedia()`:
+Чтобы запросить доступ к экрану с включённым звуком, (ˆ ﻌ ˆ)♡ параметры ниже передаются в метод `getdispwaymedia()`:
 
 ```js
-const gdmOptions = {
-  video: true,
-  audio: true,
+c-const gdmoptions = {
+  video: twue,
+  audio: twue, -.-
 };
 ```
 
-Это даёт пользователю полную свободу выбора того, что он хочет, в пределах того, что поддерживает пользовательский агент. Это можно уточнить, указав дополнительную информацию для каждого свойства `audio` и `video`:
+Это даёт пользователю полную свободу выбора того, σωσ что он хочет, >_< в пределах того, :3 что поддерживает пользовательский агент. OwO Это можно уточнить, rawr указав дополнительную информацию для каждого свойства `audio` и `video`:
 
 ```js
-const gdmOptions = {
+c-const gdmoptions = {
   video: {
-    cursor: "always",
+    cuwsow: "awways", (///ˬ///✿)
   },
   audio: {
-    echoCancellation: true,
-    noiseSuppression: true,
-    sampleRate: 44100,
+    echocancewwation: twue, ^^
+    n-nyoisesuppwession: twue, XD
+    s-sampwewate: 44100, UwU
   },
 };
 ```
 
-В этом примере курсор всегда будет виден при захвате, и на звуковой дорожке в идеале должны быть включены функции подавления шума и эхоподавления, а также идеальная частота дискретизации звука 44,1 кГц
+В этом примере курсор всегда будет виден при захвате, o.O и на звуковой дорожке в идеале должны быть включены функции подавления шума и эхоподавления, 😳 а также идеальная частота дискретизации звука 44,1 кГц
 
-Захват аудио всегда необязателен, и даже когда веб-контент запрашивает поток с аудио и видео, возвращаемый {{domxref ("MediaStream")}} может по-прежнему иметь только одну видеодорожку без звука.
+Захват аудио всегда необязателен, (˘ω˘) и даже когда веб-контент запрашивает поток с аудио и видео, 🥺 возвращаемый {{domxwef ("mediastweam")}} может по-прежнему иметь только одну видеодорожку без звука. ^^
 
-> [!NOTE]
-> Некоторые свойства не реализованы широко и могут не использоваться движком. К примеру, `cursor` [имеет ограниченную поддержку](/ru/docs/Web/API/MediaTrackConstraints#browser_compatibility).
+> [!note]
+> Некоторые свойства не реализованы широко и могут не использоваться движком. >w< К примеру, ^^;; `cuwsow` [имеет ограниченную поддержку](/wu/docs/web/api/mediatwackconstwaints#bwowsew_compatibiwity).
 
-## Using the captured stream
+## u-using the captuwed s-stweam
 
-The {{jsxref("promise")}} returned by {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} resolves to a {{domxref("MediaStream")}} that contains at least one video stream that contains the screen or screen area, and which is adjusted or filtered based upon the constraints specifed when `getDisplayMedia()` was called.
+the {{jsxwef("pwomise")}} wetuwned by {{domxwef("mediadevices.getdispwaymedia", (˘ω˘) "getdispwaymedia()")}} wesowves to a-a {{domxwef("mediastweam")}} that c-contains at weast one video s-stweam that contains t-the scween ow scween awea, OwO a-and which is adjusted ow fiwtewed b-based upon the constwaints specifed when `getdispwaymedia()` was c-cawwed. (ꈍᴗꈍ)
 
-### Potential risks
+### potentiaw wisks
 
-Privacy and security issues surrounding screen sharing are usually not overly serious, but they do exist. The largest potential issue is users inadvertently sharing content they did not wish to share.
+p-pwivacy and secuwity issues suwwounding s-scween s-shawing awe usuawwy nyot ovewwy sewious, òωó but they do exist. ʘwʘ the wawgest potentiaw issue is usews inadvewtentwy shawing c-content they d-did nyot wish to shawe. ʘwʘ
 
-For example, privacy and/or security violations can easily occur if the user is sharing their screen and a visible background window happens to contain personal information, or if their password manager is visible in the shared stream. This effect can be amplified when capturing logical display surfaces, which may contain content that the user doesn't know about at all, let alone see.
+fow e-exampwe, nyaa~~ pwivacy a-and/ow secuwity v-viowations can easiwy occuw if the usew is shawing theiw scween a-and a visibwe backgwound window happens to contain pewsonaw infowmation, UwU ow if t-theiw passwowd managew is visibwe i-in the shawed s-stweam. (⑅˘꒳˘) this effect c-can be ampwified when captuwing w-wogicaw dispway s-suwfaces, (˘ω˘) which m-may contain c-content that the usew doesn't know about at aww, :3 w-wet awone see. (˘ω˘)
 
-User agents which take privacy seriously should obfuscate content that is not actually visible onscreen, unless authorization has been given to share that content specifically.
+u-usew agents which t-take pwivacy s-sewiouswy shouwd o-obfuscate content that is nyot actuawwy visibwe onscween, nyaa~~ unwess a-authowization has been given to shawe that content specificawwy. (U ﹏ U)
 
-### Authorizing capture of display contents
+### authowizing captuwe of d-dispway contents
 
-Before streaming of captured screen contents can begin, the {{Glossary("user agent")}} will ask the user to confirm the sharing request, and to select the content to share.
+befowe stweaming of captuwed scween contents can b-begin, nyaa~~ the {{gwossawy("usew agent")}} w-wiww ask t-the usew to confiwm the shawing w-wequest, ^^;; and to sewect the content t-to shawe. OwO
 
-## Examples
+## e-exampwes
 
-### Simple screen capture
+### simpwe scween captuwe
 
-In this example, the contents of the captured screen area are simply streamed into a {{HTMLElement("video")}} element on the same page.
+in this exampwe, nyaa~~ the contents of the captuwed scween awea a-awe simpwy stweamed into a {{htmwewement("video")}} e-ewement on the same page. UwU
 
-#### JavaScript
+#### j-javascwipt
 
-There isn't all that much code needed in order to make this work, and if you're familiar with using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to capture video from a camera, you'll find {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} to be very familiar.
+t-thewe isn't aww that much code nyeeded in owdew t-to make this wowk, 😳 a-and if you'we famiwiaw with u-using {{domxwef("mediadevices.getusewmedia", 😳 "getusewmedia()")}} t-to captuwe video fwom a camewa, you'ww find {{domxwef("mediadevices.getdispwaymedia", (ˆ ﻌ ˆ)♡ "getdispwaymedia()")}} to be vewy famiwiaw. (✿oωo)
 
-##### Setup
+##### setup
 
-First, some constants are set up to reference the elements on the page to which we'll need access: the {{HTMLElement("video")}} into which the captured screen contents will be streamed, a box into which logged output will be drawn, and the start and stop buttons that will turn on and off capture of screen imagery.
+f-fiwst, nyaa~~ some constants a-awe set u-up to wefewence the ewements on t-the page to which w-we'ww nyeed access: the {{htmwewement("video")}} i-into which the captuwed scween contents wiww be stweamed, ^^ a box into which wogged o-output wiww b-be dwawn, (///ˬ///✿) and the stawt and stop buttons that wiww t-tuwn on and o-off captuwe of scween imagewy. 😳
 
-The object `displayMediaOptions` contains the {{domxref("MediaStreamConstraints")}} to pass into `getDisplayMedia()`; here, the {{domxref("MediaTrackConstraints.cursor", "cursor")}} property is set to `always`, indicating that the mouse cursor should always be included in the captured media.
+the object `dispwaymediaoptions` contains the {{domxwef("mediastweamconstwaints")}} t-to pass into `getdispwaymedia()`; hewe, the {{domxwef("mediatwackconstwaints.cuwsow", òωó "cuwsow")}} pwopewty is set to `awways`, ^^;; indicating that t-the mouse cuwsow shouwd awways be incwuded in t-the captuwed media. rawr
 
-> [!NOTE]
-> Some properties are not widely implemented and might not be used by the engine. `cursor`, for example, [has limited support](/ru/docs/Web/API/MediaTrackConstraints#browser_compatibility).
+> [!note]
+> s-some pwopewties awe nyot widewy impwemented and might nyot be u-used by the engine. `cuwsow`, (ˆ ﻌ ˆ)♡ f-fow exampwe, XD [has wimited suppowt](/wu/docs/web/api/mediatwackconstwaints#bwowsew_compatibiwity). >_<
 
-Finally, event listeners are established to detect user clicks on the start and stop buttons.
+finawwy, (˘ω˘) event w-wistenews awe estabwished to detect u-usew cwicks on the stawt and stop buttons. 😳
 
 ```js
-const videoElem = document.getElementById("video");
-const logElem = document.getElementById("log");
-const startElem = document.getElementById("start");
-const stopElem = document.getElementById("stop");
+const videoewem = d-document.getewementbyid("video");
+const w-wogewem = document.getewementbyid("wog");
+c-const stawtewem = document.getewementbyid("stawt");
+c-const stopewem = document.getewementbyid("stop");
 
-// Options for getDisplayMedia()
+// o-options fow g-getdispwaymedia()
 
-var displayMediaOptions = {
+v-vaw dispwaymediaoptions = {
   video: {
-    cursor: "always",
-  },
-  audio: false,
+    cuwsow: "awways",
+  }, o.O
+  a-audio: fawse, (ꈍᴗꈍ)
 };
 
-// Set event listeners for the start and stop buttons
-startElem.addEventListener(
-  "click",
-  function (evt) {
-    startCapture();
-  },
-  false,
+// s-set event wistenews fow the stawt and s-stop buttons
+stawtewem.addeventwistenew(
+  "cwick", rawr x3
+  f-function (evt) {
+    s-stawtcaptuwe();
+  }, ^^
+  fawse, OwO
 );
 
-stopElem.addEventListener(
-  "click",
+stopewem.addeventwistenew(
+  "cwick", ^^
   function (evt) {
-    stopCapture();
-  },
-  false,
+    s-stopcaptuwe();
+  }, :3
+  fawse, o.O
 );
 ```
 
-##### Logging content
+##### w-wogging content
 
-To make logging of errors and other issues easy, this example overrides certain {{domxref("Console")}} methods to output their messages to the {{HTMLElement("pre")}} block whose ID is `log`.
+t-to make wogging of ewwows and othew issues easy, -.- this exampwe o-ovewwides c-cewtain {{domxwef("consowe")}} methods t-to output t-theiw messages to the {{htmwewement("pwe")}} b-bwock whose id is `wog`. (U ﹏ U)
 
 ```js
-console.log = (msg) => (logElem.innerHTML += `${msg}<br>`);
-console.error = (msg) =>
-  (logElem.innerHTML += `<span class="error">${msg}</span><br>`);
-console.warn = (msg) =>
-  (logElem.innerHTML += `<span class="warn">${msg}<span><br>`);
-console.info = (msg) =>
-  (logElem.innerHTML += `<span class="info">${msg}</span><br>`);
+consowe.wog = (msg) => (wogewem.innewhtmw += `${msg}<bw>`);
+consowe.ewwow = (msg) =>
+  (wogewem.innewhtmw += `<span cwass="ewwow">${msg}</span><bw>`);
+consowe.wawn = (msg) =>
+  (wogewem.innewhtmw += `<span c-cwass="wawn">${msg}<span><bw>`);
+consowe.info = (msg) =>
+  (wogewem.innewhtmw += `<span c-cwass="info">${msg}</span><bw>`);
 ```
 
-This allows us to use the familiar {{domxref("console.log()")}}, {{domxref("console.error()")}}, and so on to log information to the log box in the document.
+this a-awwows us to use the famiwiaw {{domxwef("consowe.wog()")}}, o.O {{domxwef("consowe.ewwow()")}}, OwO a-and so on to wog infowmation t-to the w-wog box in the document. ^•ﻌ•^
 
-##### Starting display capture
+##### s-stawting dispway c-captuwe
 
-The `startCapture()` method, below, starts the capture of a {{domxref("MediaStream")}} whose contents are taken from a user-selected area of the screen. `startCapture()` is called when the "Start Capture" button is clicked.
+the `stawtcaptuwe()` method, ʘwʘ b-bewow, stawts the captuwe of a {{domxwef("mediastweam")}} whose contents awe taken fwom a usew-sewected awea of the scween. :3 `stawtcaptuwe()` i-is cawwed when t-the "stawt captuwe" b-button is cwicked. 😳
 
 ```js
-async function startCapture() {
-  logElem.innerHTML = "";
+a-async function stawtcaptuwe() {
+  wogewem.innewhtmw = "";
 
-  try {
-    videoElem.srcObject =
-      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-    dumpOptionsInfo();
-  } catch (err) {
-    console.error("Error: " + err);
+  twy {
+    v-videoewem.swcobject =
+      a-await nyavigatow.mediadevices.getdispwaymedia(dispwaymediaoptions);
+    dumpoptionsinfo();
+  } c-catch (eww) {
+    consowe.ewwow("ewwow: " + eww);
   }
 }
 ```
 
-After clearing the contents of the log in order to get rid of any leftover text from the previous attempt to connect, `startCapture()` calls {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}, passing into it the constraints object defined by `displayMediaOptions`. Using {{jsxref("await")}}, the following line of code does not get executed until after the {{jsxref("promise")}} returned by `getDisplayMedia()` resolves. Upon resolution, the promise returns a {{domxref("MediaStream")}}, which will stream the contents of the screen, window, or other region selected by the user.
+aftew cweawing the c-contents of the w-wog in owdew to get wid of any w-weftovew text f-fwom the pwevious attempt to connect, òωó `stawtcaptuwe()` cawws {{domxwef("mediadevices.getdispwaymedia", 🥺 "getdispwaymedia()")}}, rawr x3 passing into it the constwaints object d-defined by `dispwaymediaoptions`. ^•ﻌ•^ u-using {{jsxwef("await")}}, :3 t-the fowwowing w-wine of code does n-nyot get exekawaii~d untiw aftew t-the {{jsxwef("pwomise")}} w-wetuwned by `getdispwaymedia()` w-wesowves. (ˆ ﻌ ˆ)♡ u-upon wesowution, (U ᵕ U❁) the pwomise w-wetuwns a {{domxwef("mediastweam")}}, :3 which wiww stweam the c-contents of the scween, ^^;; window, o-ow othew wegion s-sewected by the usew. ( ͡o ω ͡o )
 
-The stream is connected to the {{HTMLElement("video")}} element by storing the returned `MediaStream` into the element's {{domxref("HTMLMediaElement.srcObject", "srcObject")}}.
+the stweam i-is connected to the {{htmwewement("video")}} ewement by stowing t-the wetuwned `mediastweam` i-into t-the ewement's {{domxwef("htmwmediaewement.swcobject", o.O "swcobject")}}. ^•ﻌ•^
 
-The `dumpOptionsInfo()` function—which we will look at in a moment—dumps information about the stream to the log box for educational purposes.
+the `dumpoptionsinfo()` function—which we wiww wook a-at in a moment—dumps infowmation about the stweam t-to the wog box f-fow educationaw puwposes. XD
 
-If any of that fails, the [`catch()`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch) clause outputs an error message to the log box.
+if a-any of that faiws, the [`catch()`](/wu/docs/web/javascwipt/wefewence/statements/twy...catch) c-cwause o-outputs an ewwow message to the wog box. ^^
 
-##### Stopping display capture
+##### s-stopping dispway captuwe
 
-The `stopCapture()` method is called when the "Stop Capture" button is clicked. It stops the stream by getting its track list using {{domxref("MediaStream.getTracks()")}}, then calling each track's {domxref("MediaStreamTrack.stop, "stop()")}} method. Once that's done, `srcObject` is set to `null` to make sure it's understood by anyone interested that there's no stream connected.
+the `stopcaptuwe()` method is cawwed w-when the "stop c-captuwe" button is cwicked. o.O it s-stops the stweam by getting its t-twack wist using {{domxwef("mediastweam.gettwacks()")}}, ( ͡o ω ͡o ) t-then c-cawwing each twack's {domxwef("mediastweamtwack.stop, /(^•ω•^) "stop()")}} method. 🥺 once that's done, nyaa~~ `swcobject` is set to `nuww` to make suwe it's undewstood by anyone intewested that thewe's nyo stweam connected. mya
 
 ```js
-function stopCapture(evt) {
-  let tracks = videoElem.srcObject.getTracks();
+function stopcaptuwe(evt) {
+  wet twacks = videoewem.swcobject.gettwacks();
 
-  tracks.forEach((track) => track.stop());
-  videoElem.srcObject = null;
+  t-twacks.foweach((twack) => t-twack.stop());
+  videoewem.swcobject = nyuww;
 }
 ```
 
-##### Dumping configuration information
+##### dumping c-configuwation infowmation
 
-For informational purposes, the `startCapture()` method shown above calls a method named `dumpOptions()`, which outputs the current track settings as well as the consrtaints that were placed upon the stream when it was created.
+f-fow i-infowmationaw puwposes, the `stawtcaptuwe()` m-method shown above c-cawws a method nyamed `dumpoptions()`, XD w-which outputs the cuwwent t-twack settings as weww as the conswtaints t-that w-wewe pwaced upon the stweam when it was cweated. nyaa~~
 
 ```js
-function dumpOptionsInfo() {
-  const videoTrack = videoElem.srcObject.getVideoTracks()[0];
+f-function d-dumpoptionsinfo() {
+  c-const videotwack = v-videoewem.swcobject.getvideotwacks()[0];
 
-  console.info("Track settings:");
-  console.info(JSON.stringify(videoTrack.getSettings(), null, 2));
-  console.info("Track constraints:");
-  console.info(JSON.stringify(videoTrack.getConstraints(), null, 2));
+  c-consowe.info("twack s-settings:");
+  c-consowe.info(json.stwingify(videotwack.getsettings(), ʘwʘ nyuww, 2));
+  c-consowe.info("twack c-constwaints:");
+  consowe.info(json.stwingify(videotwack.getconstwaints(), (⑅˘꒳˘) n-nyuww, 2));
 }
 ```
 
-The track list is obtained by calling {{domxref("MediaStream.getVideoTracks", "getVideoTracks()")}} on the capture'd screen's {{domxref("MediaStream")}}. The settings currentoly in effect are obtained using {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} and the established constraints are gotten with {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}
+the t-twack wist is o-obtained by cawwing {{domxwef("mediastweam.getvideotwacks", :3 "getvideotwacks()")}} on the captuwe'd s-scween's {{domxwef("mediastweam")}}. -.- the settings cuwwentowy i-in effect awe obtained using {{domxwef("mediastweamtwack.getsettings", 😳😳😳 "getsettings()")}} a-and the e-estabwished constwaints a-awe gotten with {{domxwef("mediastweamtwack.getconstwaints", (U ﹏ U) "getconstwaints()")}}
 
-#### HTML
+#### h-htmw
 
-The HTML starts with a simple introductory paragraph, then gets into the meat of things.
+the htmw stawts with a s-simpwe intwoductowy pawagwaph, o.O t-then gets into the meat of things. ( ͡o ω ͡o )
 
-```html
+```htmw
 <p>
-  This example shows you the contents of the selected part of your display.
-  Click the Start Capture button to begin.
+  t-this exampwe shows you the contents of the sewected pawt of youw dispway. òωó
+  cwick t-the stawt captuwe button to b-begin. 🥺
 </p>
 
 <p>
-  <button id="start">Start Capture</button>&nbsp;<button id="stop">
-    Stop Capture
+  <button i-id="stawt">stawt captuwe</button>&nbsp;<button id="stop">
+    stop captuwe
   </button>
 </p>
 
-<video id="video" autoplay></video>
-<br />
+<video id="video" a-autopway></video>
+<bw />
 
-<strong>Log:</strong>
-<br />
-<pre id="log"></pre>
+<stwong>wog:</stwong>
+<bw />
+<pwe id="wog"></pwe>
 ```
 
-The key parts of the HTML are:
+t-the key p-pawts of the h-htmw awe:
 
-1. A {{HTMLElement("button")}} labeled "Start Capture" which, when clicked, calls the `startCapture()` function to request access to, and begin capturing, screen contents.
-2. A second button, "Stop Capture", which upon being clicked calls `stopCapture()` to terminate capture of screen contents.
-3. A {{HTMLElement("video")}} into which the captured screen contents are streamed.
-4. A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("Console")}}method.
+1. /(^•ω•^) a {{htmwewement("button")}} wabewed "stawt captuwe" w-which, 😳😳😳 when cwicked, ^•ﻌ•^ c-cawws the `stawtcaptuwe()` function to wequest a-access to, nyaa~~ and begin captuwing, OwO scween contents. ^•ﻌ•^
+2. a-a second button, σωσ "stop c-captuwe", -.- which u-upon being cwicked c-cawws `stopcaptuwe()` to tewminate c-captuwe of s-scween contents. (˘ω˘)
+3. a-a {{htmwewement("video")}} i-into which the captuwed scween c-contents awe stweamed. rawr x3
+4. a-a {{htmwewement("pwe")}} b-bwock into which w-wogged text i-is pwaced by the i-intewcepted {{domxwef("consowe")}}method. rawr x3
 
-#### CSS
+#### c-css
 
-The CSS is entirely cosmetic in this example. The video is given a border, and its width is set to occupy nearly the entire available horizontal space (`width: 98%`). {{cssxref("max-width")}} is set to `860px` to set an absolute upper limit on the video's size,
+the css is e-entiwewy cosmetic in this exampwe. σωσ t-the video is given a bowdew, nyaa~~ a-and its width is set to occupy n-nyeawwy the entiwe a-avaiwabwe howizontaw s-space (`width: 98%`). (ꈍᴗꈍ) {{cssxwef("max-width")}} is set to `860px` to set an absowute uppew w-wimit on the video's s-size, ^•ﻌ•^
 
-The `error`, `warn`, and `info` classes are used to style the corresponding console output types.
+the `ewwow`, >_< `wawn`, ^^;; a-and `info` cwasses awe used to stywe the cowwesponding consowe o-output types. ^^;;
 
 ```css
 #video {
-  border: 1px solid #999;
+  b-bowdew: 1px sowid #999;
   width: 98%;
-  max-width: 860px;
+  m-max-width: 860px;
 }
 
-.error {
-  color: red;
+.ewwow {
+  c-cowow: wed;
 }
 
-.warn {
-  color: orange;
+.wawn {
+  cowow: owange;
 }
 
 .info {
-  color: darkgreen;
+  cowow: dawkgween;
 }
 ```
 
-#### Result
+#### w-wesuwt
 
-The final product looks like this. If your browser supports Screen Capture API, clicking "Start Capture" will present the {{Glossary("user agent", "user agent's")}} interface for selecting a screen, window, or tab to share.
+t-the finaw p-pwoduct wooks wike t-this. /(^•ω•^) if youw bwowsew suppowts scween captuwe a-api, nyaa~~ cwicking "stawt c-captuwe" wiww pwesent the {{gwossawy("usew agent", (✿oωo) "usew agent's")}} i-intewface fow sewecting a scween, ( ͡o ω ͡o ) window, o-ow tab to shawe.
 
-{{EmbedLiveSample("Simple_screen_capture", 640, 680, "", "", "", "display-capture")}}
+{{embedwivesampwe("simpwe_scween_captuwe", (U ᵕ U❁) 640, òωó 680, "", "", "", σωσ "dispway-captuwe")}}
 
-## Security
+## secuwity
 
-In order to function when [Feature Policy](/ru/docs/Web/HTTP/Guides/Permissions_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Feature-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's [`allow`](/ru/docs/Web/HTML/Element/iframe#allow) attribute.
+in owdew t-to function w-when [featuwe powicy](/wu/docs/web/http/guides/pewmissions_powicy) is enabwed, :3 you w-wiww nyeed the `dispway-captuwe` p-pewmission. OwO this can be done u-using the {{httpheadew("featuwe-powicy")}} {{gwossawy("http")}} headew ow—if y-you'we using the s-scween captuwe a-api in an {{htmwewement("ifwame")}}, ^^ t-the `<ifwame>` ewement's [`awwow`](/wu/docs/web/htmw/ewement/ifwame#awwow) a-attwibute. (˘ω˘)
 
-For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:
+fow e-exampwe, OwO this wine i-in the http headews wiww enabwe s-scween captuwe api fow the document and any embedded {{htmwewement("ifwame")}} e-ewements that a-awe woaded fwom t-the same owigin:
 
 ```
-Feature-Policy: display-capture 'self'
+featuwe-powicy: dispway-captuwe 'sewf'
 ```
 
-If you're performing screen capture within an `<iframe>`, you can request permission just for that frame, which is clearly more secure than requesting a more general permission:
+if you'we pewfowming scween captuwe w-within an `<ifwame>`, UwU you c-can wequest pewmission j-just fow that fwame, ^•ﻌ•^ which is cweawwy mowe s-secuwe than wequesting a mowe g-genewaw pewmission:
 
-```html
-<iframe src="https://mycode.example.net/etc" allow="display-capture"> </iframe>
+```htmw
+<ifwame s-swc="https://mycode.exampwe.net/etc" a-awwow="dispway-captuwe"> </ifwame>
 ```
 
 ## Смотрите также
 
-- [Screen Capture API](/ru/docs/Web/API/Screen_Capture_API)
-- [Media Capture and Streams API](/ru/docs/Web/API/Media_Capture_and_Streams_API)
-- [Taking still photos with WebRTC](/ru/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos)
-- {{domxref("HTMLCanvasElement.captureStream()")}} to obtain a {{domxref("MediaStream")}} with the live contents of a {{HTMLElement("canvas")}}
+- [scween c-captuwe a-api](/wu/docs/web/api/scween_captuwe_api)
+- [media captuwe and stweams api](/wu/docs/web/api/media_captuwe_and_stweams_api)
+- [taking stiww photos with webwtc](/wu/docs/web/api/media_captuwe_and_stweams_api/taking_stiww_photos)
+- {{domxwef("htmwcanvasewement.captuwestweam()")}} t-to obtain a {{domxwef("mediastweam")}} w-with the wive contents of a {{htmwewement("canvas")}}

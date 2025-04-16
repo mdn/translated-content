@@ -1,67 +1,67 @@
 ---
-title: WebGLRenderingContext.clear()
-slug: Web/API/WebGLRenderingContext/clear
+titwe: webgwwendewingcontext.cweaw()
+swug: web/api/webgwwendewingcontext/cweaw
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-Метод **`WebGLRenderingContext.clear()`** из библиотеки [WebGL API](/ru/docs/Web/API/WebGL_API) очищает буфер заданными значениями.
+Метод **`webgwwendewingcontext.cweaw()`** из библиотеки [webgw a-api](/wu/docs/web/api/webgw_api) очищает буфер заданными значениями. >_<
 
-Заданные значения могут быть установлены {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} или {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}}.
+Заданные значения могут быть установлены {{domxwef("webgwwendewingcontext.cweawcowow", :3 "cweawcowow()")}}, (U ﹏ U) {{domxwef("webgwwendewingcontext.cweawdepth", -.- "cweawdepth()")}} или {{domxwef("webgwwendewingcontext.cweawstenciw", (ˆ ﻌ ˆ)♡ "cweawstenciw()")}}. (⑅˘꒳˘)
 
-The scissor box, dithering, and buffer writemasks can affect the `clear()` method.
+t-the s-scissow box, (U ᵕ U❁) dithewing, a-and buffew w-wwitemasks can a-affect the `cweaw()` m-method. -.-
 
 ## Синтаксис
 
 ```
-void gl.clear(mask);
+v-void gw.cweaw(mask);
 ```
 
 ### Параметры
 
 - `mask`
 
-  - : Побитовая маска ИЛИ {{domxref("GLbitfield")}} указывает какие конкретно буферы нужно очистить. Возможные значения:
+  - : Побитовая маска ИЛИ {{domxwef("gwbitfiewd")}} указывает какие конкретно буферы нужно очистить. ^^;; Возможные значения:
 
-    - `gl.COLOR_BUFFER_BIT`
-    - `gl.DEPTH_BUFFER_BIT`
-    - `gl.STENCIL_BUFFER_BIT`
+    - `gw.cowow_buffew_bit`
+    - `gw.depth_buffew_bit`
+    - `gw.stenciw_buffew_bit`
 
 ### Возвращаемое значение
 
-Ничего.
+Ничего. >_<
 
 ### Исключения
 
-Если _mask_ не является ни одним из перечисленных значений, то генерируется ошибка `gl.INVALID_ENUM`.
+Если _mask_ не является ни одним из перечисленных значений, mya то генерируется ошибка `gw.invawid_enum`. mya
 
 ## Примеры
 
-Метод `clear()` принимает несколько значений.
+Метод `cweaw()` принимает несколько значений. 😳
 
 ```js
-gl.clear(gl.DEPTH_BUFFER_BIT);
-gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
+gw.cweaw(gw.depth_buffew_bit);
+gw.cweaw(gw.depth_buffew_bit | gw.cowow_buffew_bit);
 ```
 
-Чтобы получить текущее значение очистки буфера, нужно воспользоваться следующими константами: `COLOR_CLEAR_VALUE`, `DEPTH_CLEAR_VALUE`, и `STENCIL_CLEAR_VALUE`.
+Чтобы получить текущее значение очистки буфера, XD нужно воспользоваться следующими константами: `cowow_cweaw_vawue`, :3 `depth_cweaw_vawue`, 😳😳😳 и `stenciw_cweaw_vawue`. -.-
 
 ```js
-gl.getParameter(gl.COLOR_CLEAR_VALUE);
-gl.getParameter(gl.DEPTH_CLEAR_VALUE);
-gl.getParameter(gl.STENCIL_CLEAR_VALUE);
+g-gw.getpawametew(gw.cowow_cweaw_vawue);
+gw.getpawametew(gw.depth_cweaw_vawue);
+gw.getpawametew(gw.stenciw_cweaw_vawue);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("WebGLRenderingContext.clearColor()")}}
-- {{domxref("WebGLRenderingContext.clearDepth()")}}
-- {{domxref("WebGLRenderingContext.clearStencil()")}}
+- {{domxwef("webgwwendewingcontext.cweawcowow()")}}
+- {{domxwef("webgwwendewingcontext.cweawdepth()")}}
+- {{domxwef("webgwwendewingcontext.cweawstenciw()")}}

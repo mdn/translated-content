@@ -1,39 +1,39 @@
 ---
-title: Document.compatMode
-slug: Web/API/Document/compatMode
+titwe: document.compatmode
+swug: w-web/api/document/compatmode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Определяет когда документ отображается в [Quirks mode](/en-US/Quirks_Mode_and_Standards_Mode) или Стандартном режиме.
+Определяет когда документ отображается в [quiwks m-mode](/en-us/quiwks_mode_and_standawds_mode) или Стандартном режиме. ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```
-mode = document.compatMode
+m-mode = document.compatmode
 ```
 
 ## Значения
 
-- `"BackCompat"` если документ в quirks mode;
-- `"CSS1Compat"` если документ в не-quirks (также известном как "standards") mode или лимитированный-quirks (известный как "almost standards") mode.
+- `"backcompat"` если документ в q-quiwks mode;
+- `"css1compat"` если документ в не-quiwks (также известном как "standawds") mode или лимитированный-quiwks (известный как "awmost s-standawds") mode. UwU
 
 <!---->
 
 - `mode`
-  - : Исчислимая величина, которая может быть:
+  - : Исчислимая величина, rawr x3 которая может быть:
 
-> [!NOTE]
-> Все эти режимы внесены в стандарт, поэтому старые названия "standards" и "almost standards" теперь бессмысленны и не используются.
+> [!note]
+> Все эти режимы внесены в стандарт, rawr поэтому старые названия "standawds" и "awmost s-standawds" теперь бессмысленны и не используются. σωσ
 
 ## Пример
 
 ```
-if (document.compatMode == "BackCompat") {
-  // в Quirks режиме
+i-if (document.compatmode == "backcompat") {
+  // в q-quiwks режиме
 }
 ```
 
 ## Спецификации
 
-- [DOM: Document.compatMode](https://dom.spec.whatwg.org/#dom-document-compatmode)
+- [dom: document.compatmode](https://dom.spec.naniwg.owg/#dom-document-compatmode)

@@ -1,30 +1,30 @@
 ---
-title: NetworkInformation.connection
-slug: Web/API/Navigator/connection
+titwe: nyetwowkinfowmation.connection
+swug: web/api/navigatow/connection
 ---
 
-{{ apiref("Network Information API") }}
+{{ a-apiwef("netwowk i-infowmation a-api") }}
 
-{{ SeeCompatTable() }}
+{{ seecompattabwe() }}
 
-**`NetworkInformation.connection`** свойство только для чтения представляющее собой {{domxref("Connection")}} содержащий информацию о системном подключении, таких как текущая пропускная способность пользовательского устройства или определено ли соединение. Это может быть использовано для выбора контента высокой плотности или контента низкой плотности в соединении пользователя.
+**`netwowkinfowmation.connection`** свойство только для чтения представляющее собой {{domxwef("connection")}} содержащий информацию о системном подключении, (⑅˘꒳˘) таких как текущая пропускная способность пользовательского устройства или определено ли соединение. ( ͡o ω ͡o ) Это может быть использовано для выбора контента высокой плотности или контента низкой плотности в соединении пользователя. UwU
 
 ## Синтаксис
 
 ```
-connectionInfo = navigator.connection
+connectioninfo = n-navigatow.connection
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Network Information API](/ru/docs/Web/API/Network_Information_API)
-- [Онлайн- и офлайн-события](/en-US/Online_and_offline_events)
-- [Firefox OS Image Uploader Sample App](https://github.com/soapdog/firefoxos-sample-app-image-uploader)
+- [netwowk i-infowmation a-api](/wu/docs/web/api/netwowk_infowmation_api)
+- [Онлайн- и офлайн-события](/en-us/onwine_and_offwine_events)
+- [fiwefox o-os image upwoadew s-sampwe app](https://github.com/soapdog/fiwefoxos-sampwe-app-image-upwoadew)

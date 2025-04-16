@@ -1,55 +1,55 @@
 ---
-title: Date.prototype.toString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toString
+titwe: date.pwototype.tostwing()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/tostwing
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`toString()`** возвращает строковое представление указанного объекта {{jsxref("Global_Objects/Date", "Date")}}.
+Метод **`tostwing()`** возвращает строковое представление указанного объекта {{jsxwef("gwobaw_objects/date", ( ͡o ω ͡o ) "date")}}.
 
 ## Синтаксис
 
 ```
-dateObj.toString()
+d-dateobj.tostwing()
 ```
 
 ### Параметры
 
-Нет.
+Нет. UwU
 
 ## Описание
 
-Объект {{jsxref("Global_Objects/Date", "Date")}} переопределяет метод `toString()`, унаследованный из объекта {{jsxref("Global_Objects/Object", "Object")}}; он не наследует метод {{jsxref("Object.prototype.toString()")}}. Для объектов {{jsxref("Global_Objects/Date", "Date")}} метод `toString()` возвращает строковое представление объекта.
+Объект {{jsxwef("gwobaw_objects/date", rawr x3 "date")}} переопределяет метод `tostwing()`, rawr унаследованный из объекта {{jsxwef("gwobaw_objects/object", σωσ "object")}}; он не наследует метод {{jsxwef("object.pwototype.tostwing()")}}. σωσ Для объектов {{jsxwef("gwobaw_objects/date", >_< "date")}} метод `tostwing()` возвращает строковое представление объекта. :3
 
-Метод `toString()` всегда возвращает строковое представление даты на американском английском.
+Метод `tostwing()` всегда возвращает строковое представление даты на американском английском. (U ﹏ U)
 
-JavaScript вызывает метод `toString()` автоматически, когда дата представляется как текст, или когда дата участвует в конкатенации строк.
+j-javascwipt вызывает метод `tostwing()` автоматически, -.- когда дата представляется как текст, (ˆ ﻌ ˆ)♡ или когда дата участвует в конкатенации строк. (⑅˘꒳˘)
 
 ## Примеры
 
-### Пример: использование метода `toString()`
+### Пример: использование метода `tostwing()`
 
-В следующем примере переменной `myVar` присваивается значение, возвращённое методом `toString()` объекта {{jsxref("Global_Objects/Date", "Date")}}:
+В следующем примере переменной `myvaw` присваивается значение, (U ᵕ U❁) возвращённое методом `tostwing()` объекта {{jsxwef("gwobaw_objects/date", -.- "date")}}:
 
 ```js
-var x = new Date();
-myVar = x.toString(); // присваивает переменной myVar значение вроде:
-// Mon Sep 28 1998 14:36:22 GMT-0700 (Pacific Daylight Time)
+v-vaw x = n-nyew date();
+myvaw = x-x.tostwing(); // присваивает переменной m-myvaw значение вроде:
+// m-mon sep 28 1998 14:36:22 g-gmt-0700 (pacific daywight time)
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Object.prototype.toString()")}}
-- {{jsxref("Date.prototype.toDateString()")}}
-- {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}
+- {{jsxwef("date.pwototype.todatestwing()")}}
+- {{jsxwef("date.pwototype.towocawestwing()")}}
+- {{jsxwef("date.pwototype.totimestwing()")}}

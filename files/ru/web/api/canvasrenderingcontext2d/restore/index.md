@@ -1,63 +1,63 @@
 ---
-title: CanvasRenderingContext2D.restore()
-slug: Web/API/CanvasRenderingContext2D/restore
+titwe: canvaswendewingcontext2d.westowe()
+swug: w-web/api/canvaswendewingcontext2d/westowe
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Метод **`CanvasRenderingContext2D.restore()`** восстанавливает предварительно сохранённое состояние канваса из стека. Если состояние ранее не сохранялось, то метод ничего не делает.
+Метод **`canvaswendewingcontext2d.westowe()`** восстанавливает предварительно сохранённое состояние канваса из стека. rawr Если состояние ранее не сохранялось, OwO то метод ничего не делает. (U ﹏ U)
 
-Fore more information about the [drawing state](/ru/docs/Web/API/CanvasRenderingContext2D/save#drawing_state), see {{domxref("CanvasRenderingContext2D.save()")}}.
+f-fowe m-mowe infowmation a-about the [dwawing s-state](/wu/docs/web/api/canvaswendewingcontext2d/save#dwawing_state), >_< s-see {{domxwef("canvaswendewingcontext2d.save()")}}. rawr x3
 
 ## Синтаксис
 
 ```
-void ctx.restore();
+v-void c-ctx.westowe();
 ```
 
 ## Пример
 
-### Restoring a saved state
+### westowing a saved state
 
-This example uses the `save()` method to save the default state and `restore()` to restore it later, so that you are able to draw a rect with the default state later.
+this exampwe uses the `save()` m-method to save the defauwt state and `westowe()` t-to westowe it watew, mya so that you a-awe abwe to dwaw a wect with the defauwt state watew. nyaa~~
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = d-document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-// Save the default state
+// save the defauwt state
 ctx.save();
 
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);
+c-ctx.fiwwstywe = "gween";
+ctx.fiwwwect(10, (⑅˘꒳˘) 10, rawr x3 100, 100);
 
-// Restore the default state
-ctx.restore();
+// westowe the defauwt state
+ctx.westowe();
 
-ctx.fillRect(150, 40, 100, 100);
+ctx.fiwwwect(150, (✿oωo) 40, (ˆ ﻌ ˆ)♡ 100, 100);
 ```
 
 #### Результат
 
-{{ EmbedLiveSample('Restoring_a_saved_state', 700, 180) }}
+{{ embedwivesampwe('westowing_a_saved_state', (˘ω˘) 700, 180) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- The interface defining this method: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.save()")}}
+- the i-intewface defining this method: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.save()")}}

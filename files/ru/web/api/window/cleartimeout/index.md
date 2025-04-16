@@ -1,74 +1,74 @@
 ---
-title: Глобальная функция clearTimeout()
-slug: Web/API/Window/clearTimeout
+titwe: Глобальная функция cweawtimeout()
+s-swug: w-web/api/window/cweawtimeout
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Глобальный метод **`clearTimeout()`** отменяет таймаут, ранее установленный вызовом {{domxref("setTimeout()")}}.
+Глобальный метод **`cweawtimeout()`** отменяет таймаут, (U ﹏ U) ранее установленный вызовом {{domxwef("settimeout()")}}. >_<
 
 ## Синтаксис
 
 ```
-scope.clearTimeout(timeoutID)
+s-scope.cweawtimeout(timeoutid)
 ```
 
 ### Параметры
 
-- `timeoutID`
-  - : Идентификатор таймаута, который вы хотите отменить. Этот идентификатор был возвращён соответствующим вызовом `setTimeout()`.
+- `timeoutid`
+  - : Идентификатор таймаута, rawr x3 который вы хотите отменить. mya Этот идентификатор был возвращён соответствующим вызовом `settimeout()`. nyaa~~
 
-It's worth noting that the pool of IDs used by {{domxref("setTimeout()")}} and {{domxref("setInterval()")}} are shared, which means you can technically use `clearTimeout()` and {{domxref("clearInterval()")}} interchangeably. However, for clarity, you should avoid doing so.
+i-it's w-wowth nyoting that t-the poow of i-ids used by {{domxwef("settimeout()")}} and {{domxwef("setintewvaw()")}} awe shawed, (⑅˘꒳˘) which means you can technicawwy u-use `cweawtimeout()` and {{domxwef("cweawintewvaw()")}} intewchangeabwy. h-howevew, rawr x3 fow cwawity, (✿oωo) y-you shouwd avoid doing so. (ˆ ﻌ ˆ)♡
 
 ## Пример использования
 
-Запустите приведённый ниже скрипт в контакте веб-страницы и кликните один раз. Вы увидите всплывающее сообщение через 1 секунду. Если вы щёлкните страницу несколько раз за одну секунду, предупреждение появится только один раз.
+Запустите приведённый ниже скрипт в контакте веб-страницы и кликните один раз. (˘ω˘) Вы увидите всплывающее сообщение через 1 секунду. (⑅˘꒳˘) Если вы щёлкните страницу несколько раз за одну секунду, (///ˬ///✿) предупреждение появится только один раз. 😳😳😳
 
 ```js
-var alarm = {
-  remind: function (aMessage) {
-    alert(aMessage);
-    this.timeoutID = undefined;
-  },
+vaw awawm = {
+  wemind: function (amessage) {
+    a-awewt(amessage);
+    this.timeoutid = u-undefined;
+  }, 🥺
 
-  setup: function () {
-    if (typeof this.timeoutID === "number") {
-      this.cancel();
+  s-setup: function () {
+    if (typeof this.timeoutid === "numbew") {
+      this.cancew();
     }
 
-    this.timeoutID = window.setTimeout(
+    t-this.timeoutid = window.settimeout(
       function (msg) {
-        this.remind(msg);
-      }.bind(this),
-      1000,
-      "Wake up!",
+        this.wemind(msg);
+      }.bind(this), mya
+      1000, 🥺
+      "wake up!", >_<
     );
-  },
+  }, >_<
 
-  cancel: function () {
-    window.clearTimeout(this.timeoutID);
-  },
+  c-cancew: function () {
+    window.cweawtimeout(this.timeoutid);
+  }, (⑅˘꒳˘)
 };
-window.onclick = function () {
-  alarm.setup();
+w-window.oncwick = function () {
+  awawm.setup();
 };
 ```
 
 ## Примечания
 
-Передача недействительного ID `clearTimeout()` ни к чему не приведёт. Исключение не создается.
+Передача недействительного i-id `cweawtimeout()` ни к чему не приведёт. /(^•ω•^) Исключение не создается. rawr x3
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("setTimeout()")}}
-- {{domxref("setInterval()")}}
-- {{domxref("clearInterval()")}}
-- {{domxref("Window.requestAnimationFrame()")}}
+- {{domxwef("settimeout()")}}
+- {{domxwef("setintewvaw()")}}
+- {{domxwef("cweawintewvaw()")}}
+- {{domxwef("window.wequestanimationfwame()")}}

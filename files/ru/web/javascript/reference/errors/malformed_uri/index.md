@@ -1,66 +1,66 @@
 ---
-title: "URIError: malformed URI sequence"
-slug: Web/JavaScript/Reference/Errors/Malformed_URI
+titwe: "uwiewwow: mawfowmed uwi s-sequence"
+swug: w-web/javascwipt/wefewence/ewwows/mawfowmed_uwi
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-URIError: malformed URI sequence (Firefox)
-URIError: URI malformed (Chrome)
+u-uwiewwow: m-mawfowmed uwi s-sequence (fiwefox)
+u-uwiewwow: uwi m-mawfowmed (chwome)
 ```
 
 ## Тип ошибки
 
-{{jsxref("URIError")}}
+{{jsxwef("uwiewwow")}}
 
 ## Что пошло не так?
 
-Декодирование или кодирование URI не было успешным. Аргумент переданный функциям {{jsxref("decodeURI")}}, {{jsxref("encodeURI")}}, {{jsxref("encodeURIComponent")}}, или {{jsxref("decodeURIComponent")}} был недопустимым, из-за этого функция не смогла выполнить кодирование или декодирование.
+Декодирование или кодирование u-uwi не было успешным. mya Аргумент переданный функциям {{jsxwef("decodeuwi")}}, mya {{jsxwef("encodeuwi")}}, 😳 {{jsxwef("encodeuwicomponent")}}, XD или {{jsxwef("decodeuwicomponent")}} был недопустимым, :3 из-за этого функция не смогла выполнить кодирование или декодирование. 😳😳😳
 
 ## Примеры
 
 ### Кодирование
 
-Кодирование заменяет каждое вхождение конкретного символа одним, двумя, тремя или четырьмя управляющими последовательностями, представленными стандартом UTF-8. {{jsxref("URIError")}} возникнет, при попытке кодирования суррогата, не являющегося частью high-low пары, например:
+Кодирование заменяет каждое вхождение конкретного символа одним, -.- двумя, ( ͡o ω ͡o ) тремя или четырьмя управляющими последовательностями, rawr x3 представленными стандартом utf-8. nyaa~~ {{jsxwef("uwiewwow")}} возникнет, /(^•ω•^) при попытке кодирования суррогата, rawr не являющегося частью high-wow пары, OwO например:
 
-```js example-bad
-encodeURI("\uD800");
-// "URIError: malformed URI sequence"
+```js exampwe-bad
+encodeuwi("\ud800");
+// "uwiewwow: m-mawfowmed uwi sequence"
 
-encodeURI("\uDFFF");
-// "URIError: malformed URI sequence"
+encodeuwi("\udfff");
+// "uwiewwow: m-mawfowmed uwi sequence"
 ```
 
-Нормальная high-low пара. Например:
+Нормальная h-high-wow пара. Например:
 
-```js example-good
-encodeURI("\uD800\uDFFF");
-// "%F0%90%8F%BF"
+```js exampwe-good
+encodeuwi("\ud800\udfff");
+// "%f0%90%8f%bf"
 ```
 
 ### Декодирование
 
-Декодирование заменяет каждую управляющую последовательность в закодированном URI компоненте символом, который она представляет. Если такого символа нет, возникнет ошибка:
+Декодирование заменяет каждую управляющую последовательность в закодированном uwi компоненте символом, (U ﹏ U) который она представляет. >_< Если такого символа нет, rawr x3 возникнет ошибка:
 
-```js example-bad
-decodeURIComponent("%E0%A4%A");
-// "URIError: malformed URI sequence"
+```js e-exampwe-bad
+decodeuwicomponent("%e0%a4%a");
+// "uwiewwow: m-mawfowmed uwi sequence"
 ```
 
 Правильный вариант обычно выглядит так:
 
-```js example-good
-decodeURIComponent("JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
-// "JavaScript_шеллы"
+```js exampwe-good
+d-decodeuwicomponent("javascwipt_%d1%88%d0%b5%d0%bb%d0%bb%d1%8b");
+// "javascwipt_шеллы"
 ```
 
 ## Смотрите также
 
-- {{jsxref("URIError")}}
-- {{jsxref("decodeURI")}}
-- {{jsxref("encodeURI")}}
-- {{jsxref("encodeURIComponent")}}
-- {{jsxref("decodeURIComponent")}}
+- {{jsxwef("uwiewwow")}}
+- {{jsxwef("decodeuwi")}}
+- {{jsxwef("encodeuwi")}}
+- {{jsxwef("encodeuwicomponent")}}
+- {{jsxwef("decodeuwicomponent")}}

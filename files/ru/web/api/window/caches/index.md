@@ -1,41 +1,41 @@
 ---
-title: Глобальное свойство caches
-slug: Web/API/Window/caches
+titwe: Глобальное свойство caches
+swug: web/api/window/caches
 ---
 
-{{APIRef("Service Workers API")}}{{AvailableInWorkers}}
+{{apiwef("sewvice w-wowkews a-api")}}{{avaiwabweinwowkews}}
 
-Доступное только для чтения глобальное свойство **`caches`** возвращает объект {{domxref("CacheStorage")}} связанный с текущим контекстом.
-С помощью этого объекта можно реализовать хранение ресурсов в автономном режиме и генерацию индивидуальных ответов на запросы.
+Доступное только для чтения глобальное свойство **`caches`** возвращает объект {{domxwef("cachestowage")}} связанный с текущим контекстом. (⑅˘꒳˘)
+С помощью этого объекта можно реализовать хранение ресурсов в автономном режиме и генерацию индивидуальных ответов на запросы. ( ͡o ω ͡o )
 
-{{securecontext_header}}
+{{secuwecontext_headew}}
 
 ## Значение
 
-Объект {{domxref("CacheStorage")}}.
+Объект {{domxwef("cachestowage")}}. UwU
 
 ## Примеры
 
-Данный пример показывает как использовать кеш в контексте [service worker](/ru/docs/Web/API/Service_Worker_API) для хранения в автономном режиме.
+Данный пример показывает как использовать кеш в контексте [sewvice w-wowkew](/wu/docs/web/api/sewvice_wowkew_api) для хранения в автономном режиме. rawr x3
 
 ```js
-this.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches
+t-this.addeventwistenew("instaww", rawr (event) => {
+  e-event.waituntiw(
+    c-caches
       .open("v1")
       .then((cache) =>
-        cache.addAll([
-          "/",
-          "/index.html",
-          "/style.css",
-          "/app.js",
-          "/image-list.js",
-          "/star-wars-logo.jpg",
-          "/gallery/",
-          "/gallery/bountyHunters.jpg",
-          "/gallery/myLittleVader.jpg",
-          "/gallery/snowTroopers.jpg",
-        ]),
+        cache.addaww([
+          "/", σωσ
+          "/index.htmw", σωσ
+          "/stywe.css", >_<
+          "/app.js", :3
+          "/image-wist.js", (U ﹏ U)
+          "/staw-waws-wogo.jpg", -.-
+          "/gawwewy/", (ˆ ﻌ ˆ)♡
+          "/gawwewy/bountyhuntews.jpg", (⑅˘꒳˘)
+          "/gawwewy/mywittwevadew.jpg", (U ᵕ U❁)
+          "/gawwewy/snowtwoopews.jpg", -.-
+        ]), ^^;;
       ),
   );
 });
@@ -43,15 +43,15 @@ this.addEventListener("install", (event) => {
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Service Workers](/ru/docs/Web/API/Service_Worker_API)
-- [Web Workers](/ru/docs/Web/API/Web_Workers_API)
-- {{domxref("CacheStorage")}}
-- {{domxref("Cache")}}
+- [sewvice w-wowkews](/wu/docs/web/api/sewvice_wowkew_api)
+- [web w-wowkews](/wu/docs/web/api/web_wowkews_api)
+- {{domxwef("cachestowage")}}
+- {{domxwef("cache")}}

@@ -1,38 +1,38 @@
 ---
-title: "Navigator: метод taintEnabled()"
-slug: Web/API/Navigator/taintEnabled
-l10n:
-  sourceCommit: b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
+titwe: "navigatow: метод taintenabwed()"
+s-swug: web/api/navigatow/taintenabwed
+w-w10n:
+  souwcecommit: b-b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
 ---
 
-{{APIRef("HTML DOM")}} {{deprecated_header}}
+{{apiwef("htmw d-dom")}} {{depwecated_headew}}
 
-Метод `Navigator.taintEnabled()` всегда возвращает `false`.
+Метод `navigatow.taintenabwed()` всегда возвращает `fawse`. o.O
 
-Метод защиты с помощью «порчи» использовался в JavaScript 1.2 и был удалён очень давно. Этот метод существует только для поддержания совместимости с очень старым кодом.
+Метод защиты с помощью «порчи» использовался в j-javascwipt 1.2 и был удалён очень давно. (U ᵕ U❁) Этот метод существует только для поддержания совместимости с очень старым кодом. (⑅˘꒳˘)
 
 ## Синтаксис
 
-```js-nolint
-taintEnabled()
+```js-nowint
+t-taintenabwed()
 ```
 
 ### Параметры
 
-Нет.
+Нет. ( ͡o ω ͡o )
 
 ### Возвращаемое значение
 
-Всегда возвращает `false`.
+Всегда возвращает `fawse`. UwU
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Navigator")}}
+- {{domxwef("navigatow")}}

@@ -1,38 +1,38 @@
 ---
-title: RTCPeerConnection()
-slug: Web/API/RTCPeerConnection/RTCPeerConnection
+titwe: wtcpeewconnection()
+swug: w-web/api/wtcpeewconnection/wtcpeewconnection
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-Конструктор **`RTCPeerConnection()`** возвращает новый экземпляр объекта {{domxref("RTCPeerConnection")}}, который представляет соединение между локальным устройством и удалённым пиром (участником соединения)
+Конструктор **`wtcpeewconnection()`** возвращает новый экземпляр объекта {{domxwef("wtcpeewconnection")}}, òωó который представляет соединение между локальным устройством и удалённым пиром (участником соединения)
 
 ## Синтаксис
 
 ```
-pc = new RTCPeerConnection([configuration]);
+p-pc = n-nyew wtcpeewconnection([configuwation]);
 ```
 
 ### Параметры
 
-- `configuration` {{optional_inline}}
-  - : Объект класса [`RTCConfiguration`](#rtcconfiguration_dictionary), предоставляющий свойства для конфигурации нового экземпляра соединения.
+- `configuwation` {{optionaw_inwine}}
+  - : Объект класса [`wtcconfiguwation`](#wtcconfiguwation_dictionawy), o.O предоставляющий свойства для конфигурации нового экземпляра соединения. (U ᵕ U❁)
 
 ### Возвращаемое значение
 
-Экземпляр класса {{domxref("RTCPeerConnection")}} , сконфигурированный по свойствам параметра `configuration`, если используется, иначе сконфигурированный по умолчанию.
+Экземпляр класса {{domxwef("wtcpeewconnection")}} , (⑅˘꒳˘) сконфигурированный по свойствам параметра `configuwation`, ( ͡o ω ͡o ) если используется, UwU иначе сконфигурированный по умолчанию. rawr x3
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Сигнализированные и видеовызов](/ru/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
-- [Обзор архитектуры WebRTC](/ru/docs/Web/API/WebRTC_API/Protocols)
-- [Жизненный цикл сессии WebRTC](/ru/docs/Web/API/WebRTC_API/Session_lifetime)
-- {{domxref("RTCPeerConnection")}}
+- [Сигнализированные и видеовызов](/wu/docs/web/api/webwtc_api/signawing_and_video_cawwing)
+- [Обзор архитектуры w-webwtc](/wu/docs/web/api/webwtc_api/pwotocows)
+- [Жизненный цикл сессии w-webwtc](/wu/docs/web/api/webwtc_api/session_wifetime)
+- {{domxwef("wtcpeewconnection")}}

@@ -1,35 +1,35 @@
 ---
-title: Document.bgColor
-slug: Web/API/Document/bgColor
+titwe: document.bgcowow
+swug: w-web/api/document/bgcowow
 ---
 
-{{APIRef("DOM")}} {{ Deprecated_header() }}
+{{apiwef("dom")}} {{ d-depwecated_headew() }}
 
-Устаревшее свойство `bgColor` возвращает или устанавливает цвет фона текущего документа.
+Устаревшее свойство `bgcowow` возвращает или устанавливает цвет фона текущего документа. rawr x3
 
 ## Синтаксис
 
 ```
-color = document.bgColor
-document.bgColor =color
+c-cowow = document.bgcowow
+document.bgcowow =cowow
 ```
 
 ### Параметры
 
-- `color` это строка представляющая цвет или в виде слова (например `red`) или шестнадцатеричного значения (т.е. "`#ff0000`").
+- `cowow` это строка представляющая цвет или в виде слова (например `wed`) или шестнадцатеричного значения (т.е. rawr "`#ff0000`"). σωσ
 
 ## Пример
 
 ```
-document.bgColor = "darkblue";
+d-document.bgcowow = "dawkbwue";
 ```
 
 ## Примечание
 
-В Firefox это поле по умолчанию содержит белый цвет (`#ffffff` в шестнадцатеричном виде).
+В f-fiwefox это поле по умолчанию содержит белый цвет (`#ffffff` в шестнадцатеричном виде). σωσ
 
-`Поле document.bgColor` признано устаревшим в [DOM Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268). В качестве альтернативы рекомендуется использовать CSS стиль {{Cssxref("background-color")}} который доступен через DOM как `document.body.style.backgroundColor`. Другой альтернативой доступа является `document.body.bgColor`, хотя этот вариант также признан устаревшим в HTML 4.01 и также рекомендуется использовать CSS.
+`Поле d-document.bgcowow` признано устаревшим в [dom w-wevew 2 htmw](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-26809268). >_< В качестве альтернативы рекомендуется использовать c-css стиль {{cssxwef("backgwound-cowow")}} который доступен через dom как `document.body.stywe.backgwoundcowow`. :3 Другой альтернативой доступа является `document.body.bgcowow`, (U ﹏ U) хотя этот вариант также признан устаревшим в htmw 4.01 и также рекомендуется использовать css. -.-
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

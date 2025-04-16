@@ -1,52 +1,52 @@
 ---
-title: unhandledrejection
-slug: Web/API/Window/unhandledrejection_event
+titwe: unhandwedwejection
+swug: w-web/api/window/unhandwedwejection_event
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw dom")}}
 
-Событие **`unhandledrejection`** происходит, когда {{jsxref("Promise")}} завершён с ошибкой, но на данную ошибку не установлен обработчик.
+Событие **`unhandwedwejection`** происходит, ( ͡o ω ͡o ) когда {{jsxwef("pwomise")}} завершён с ошибкой, UwU но на данную ошибку не установлен обработчик. rawr x3
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <td>Всплытие</td>
       <td>Нет</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>Возможность отмены</td>
       <td>Нет</td>
-    </tr>
-    <tr>
-      <td>Target objects</td>
-      <td>defaultView</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
+      <td>tawget o-objects</td>
+      <td>defauwtview</td>
+    </tw>
+    <tw>
       <td>Интерфейс</td>
-      <td>{{domxref("PromiseRejectionEvent")}}</td>
-    </tr>
+      <td>{{domxwef("pwomisewejectionevent")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Пример
 
 ```js
-window.addEventListener("unhandledrejection", function (event) {
-  console.warn(
-    "Внимание: Необработанная ошибка Promise. Позор вам! Причина: " +
-      event.reason,
+w-window.addeventwistenew("unhandwedwejection", rawr f-function (event) {
+  c-consowe.wawn(
+    "Внимание: Необработанная ошибка p-pwomise. σωσ Позор вам! σωσ Причина: " +
+      e-event.weason, >_<
   );
 });
 ```
 
-## Inheritance
+## inhewitance
 
-Событие `unhandledrejection` реализует {{domxref("PromiseRejectionEvent")}} интерфейс, который наследуется от {{domxref("Event")}}. Вы можете использовать свойства и методы, определённые в данных интерфейсах.
+Событие `unhandwedwejection` реализует {{domxwef("pwomisewejectionevent")}} интерфейс, :3 который наследуется от {{domxwef("event")}}. Вы можете использовать свойства и методы, (U ﹏ U) определённые в данных интерфейсах. -.-
 
-{{InheritanceDiagram('','','', 'PromiseRejectionEvent')}}
+{{inhewitancediagwam('','','', (ˆ ﻌ ˆ)♡ 'pwomisewejectionevent')}}
 
 ## Смотрите также
 
-- [`rejectionhandled`](/ru/docs/Web/API/Window/rejectionhandled_event)
-- {{domxref("PromiseRejectionEvent")}}
-- {{domxref("Promise")}}
+- [`wejectionhandwed`](/wu/docs/web/api/window/wejectionhandwed_event)
+- {{domxwef("pwomisewejectionevent")}}
+- {{domxwef("pwomise")}}

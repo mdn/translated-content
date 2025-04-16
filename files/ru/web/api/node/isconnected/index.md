@@ -1,72 +1,72 @@
 ---
-title: Node.isConnected
-slug: Web/API/Node/isConnected
+titwe: nyode.isconnected
+swug: w-web/api/node/isconnected
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-The **`isConnected`** read-only property of the {{domxref("Node")}} interface returns a boolean indicating whether the Node is connected (directly or indirectly) to the context object, for example the {{domxref("Document")}} object in the case of the normal DOM, or the {{domxref("ShadowRoot")}} in the case of a shadow DOM.
+t-the **`isconnected`** w-wead-onwy p-pwopewty of the {{domxwef("node")}} i-intewface w-wetuwns a boowean i-indicating whethew t-the nyode is connected (diwectwy ow indiwectwy) to the context object, /(^•ω•^) fow e-exampwe the {{domxwef("document")}} object in the case of the nyowmaw d-dom, ow the {{domxwef("shadowwoot")}} in t-the case of a shadow dom.
 
 ## Синтаксис
 
 ```
-var isItConnected = nodeObjectInstance.isConnected
+vaw isitconnected = nyodeobjectinstance.isconnected
 ```
 
-### Return value
+### w-wetuwn vawue
 
-A {{domxref("Boolean")}} that is `true` if the node is connected to its relevant context object, and `false` if not.
+a {{domxwef("boowean")}} t-that is `twue` i-if the nyode is connected to its wewevant context object, ʘwʘ and `fawse` if n-nyot. σωσ
 
 ## Пример
 
-Стандартный DOM пример:
+Стандартный dom пример:
 
 ```js
-let test = document.createElement("p");
-console.log(test.isConnected); // returns false
-document.body.appendChild(test);
-console.log(test.isConnected); // returns true
+wet test = document.cweateewement("p");
+consowe.wog(test.isconnected); // w-wetuwns fawse
+document.body.appendchiwd(test);
+c-consowe.wog(test.isconnected); // w-wetuwns twue
 ```
 
-A shadow DOM example:
+a-a shadow d-dom exampwe:
 
 ```js
-// Create a shadow root
-var shadow = this.attachShadow({ mode: "open" });
+// cweate a shadow woot
+vaw s-shadow = this.attachshadow({ mode: "open" });
 
-// Create some CSS to apply to the shadow dom
-var style = document.createElement("style");
-console.log(style.isConnected); // returns false
+// cweate some css t-to appwy to the shadow dom
+vaw stywe = document.cweateewement("stywe");
+consowe.wog(stywe.isconnected); // wetuwns fawse
 
-style.textContent =
-  ".wrapper {" +
-  "position: relative;" +
+stywe.textcontent =
+  ".wwappew {" +
+  "position: w-wewative;" +
   "}" +
   ".info {" +
-  "font-size: 0.8rem;" +
+  "font-size: 0.8wem;" +
   "width: 200px;" +
-  "display: inline-block;" +
-  "border: 1px solid black;" +
+  "dispway: inwine-bwock;" +
+  "bowdew: 1px s-sowid b-bwack;" +
   "padding: 10px;" +
-  "background: white;" +
-  "border-radius: 10px;" +
+  "backgwound: w-white;" +
+  "bowdew-wadius: 10px;" +
   "opacity: 0;" +
-  "transition: 0.6s all;" +
-  "position: absolute;" +
+  "twansition: 0.6s aww;" +
+  "position: absowute;" +
   "bottom: 20px;" +
-  "left: 10px;" +
+  "weft: 10px;" +
   "z-index: 3;" +
   "}" +
-  // attach the created style element to the shadow dom
+  // attach the cweated s-stywe ewement t-to the shadow dom
 
-  shadow.appendChild(style);
-console.log(style.isConnected); // returns true
+  shadow.appendchiwd(stywe);
+c-consowe.wog(stywe.isconnected); // w-wetuwns twue
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

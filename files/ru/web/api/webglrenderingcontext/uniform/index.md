@@ -1,76 +1,76 @@
 ---
-title: WebGLRenderingContext.uniform[1234][fi][v]()
-slug: Web/API/WebGLRenderingContext/uniform
+titwe: webgwwendewingcontext.unifowm[1234][fi][v]()
+swug: web/api/webgwwendewingcontext/unifowm
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.uniform[1234][fi][v]()`** метод [WebGL API](/ru/docs/Web/API/WebGL_API) устанавливает значение для постоянных переменных Uniform.
+**`webgwwendewingcontext.unifowm[1234][fi][v]()`** метод [webgw a-api](/wu/docs/web/api/webgw_api) устанавливает значение для постоянных переменных u-unifowm. σωσ
 
-> [!NOTE]
-> Многие из описанных в этом разделе функцию имеют расширенные интерфейсы WebGL 2, которые можно найти {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.
+> [!note]
+> Многие из описанных в этом разделе функцию имеют расширенные интерфейсы w-webgw 2, OwO которые можно найти {{domxwef("webgw2wendewingcontext.unifowm","webgw2wendewingcontext.unifowm[1234][uif][v]()")}}.
 
 ## Синтаксис
 
 ```
-gl.uniform1f (floatUniformLoc, v); // для float
-gl.uniform1fv(floatUniformLoc, [v]); // для float или массива float
-gl.uniform2f (vec2UniformLoc, v0, v1); // для vec2
-gl.uniform2fv(vec2UniformLoc, [v0, v1]); // для vec2 или массива vec2
-gl.uniform3f (vec3UniformLoc, v0, v1, v2); // для vec3
-gl.uniform3fv(vec3UniformLoc, [v0, v1, v2]); // для vec3 или массива vec3
-gl.uniform4f (vec4UniformLoc, v0, v1, v2, v4); // для vec4
-gl.uniform4fv(vec4UniformLoc, [v0, v1, v2, v4]); // для vec4 или массива vec4
+g-gw.unifowm1f (fwoatunifowmwoc, 😳😳😳 v-v); // для f-fwoat
+gw.unifowm1fv(fwoatunifowmwoc, 😳😳😳 [v]); // для f-fwoat или массива f-fwoat
+gw.unifowm2f (vec2unifowmwoc, o.O v0, v1); // для vec2
+gw.unifowm2fv(vec2unifowmwoc, ( ͡o ω ͡o ) [v0, (U ﹏ U) v1]); // для v-vec2 или массива vec2
+gw.unifowm3f (vec3unifowmwoc, (///ˬ///✿) v-v0, v1, v2); // для vec3
+gw.unifowm3fv(vec3unifowmwoc, >w< [v0, rawr v-v1, v2]); // для vec3 или массива vec3
+gw.unifowm4f (vec4unifowmwoc, mya v0, v1, v2, ^^ v4); // для v-vec4
+gw.unifowm4fv(vec4unifowmwoc, 😳😳😳 [v0, v-v1, mya v2, v4]); // для v-vec4 или массива vec4
 
-gl.uniform1i (intUniformLoc, v); // для int
-gl.uniform1iv(intUniformLoc, [v]); // для int или массива int
-gl.uniform2i (ivec2UniformLoc, v0, v1); // для ivec2
-gl.uniform2iv(ivec2UniformLoc, [v0, v1]); // для ivec2 или массива ivec2
-gl.uniform3i (ivec3UniformLoc, v0, v1, v2); // для ivec3
-gl.uniform3iv(ivec3UniformLoc, [v0, v1, v2]); // для ivec3 или массива ivec3
-gl.uniform4i (ivec4UniformLoc, v0, v1, v2, v4); // для ivec4
-gl.uniform4iv(ivec4UniformLoc, [v0, v1, v2, v4]); // для ivec4 или массива ivec4
-
-
-gl.uniform1i (sampler2DUniformLoc, v); // для sampler2D (текстуры)
-gl.uniform1iv(sampler2DUniformLoc, [v]); // для sampler2D или массива sampler2D
+gw.unifowm1i (intunifowmwoc, 😳 v); // для int
+gw.unifowm1iv(intunifowmwoc, -.- [v]); // для int или массива i-int
+gw.unifowm2i (ivec2unifowmwoc, 🥺 v0, v1); // для ivec2
+gw.unifowm2iv(ivec2unifowmwoc, o.O [v0, /(^•ω•^) v1]); // для i-ivec2 или массива ivec2
+gw.unifowm3i (ivec3unifowmwoc, nyaa~~ v-v0, v1, v2); // для i-ivec3
+g-gw.unifowm3iv(ivec3unifowmwoc, nyaa~~ [v0, v-v1, :3 v2]); // для ivec3 или массива ivec3
+gw.unifowm4i (ivec4unifowmwoc, 😳😳😳 v-v0, v1, v2, (˘ω˘) v4); // для ivec4
+gw.unifowm4iv(ivec4unifowmwoc, ^^ [v0, v-v1, v2, :3 v4]); // для ivec4 или массива ivec4
 
 
-gl.uniform1i (samplerCubeUniformLoc, v); // для samplerCube (текстуры)
-gl.uniform1iv(samplerCubeUniformLoc, [v]); // для samplerCube или массива samplerCube
+gw.unifowm1i (sampwew2dunifowmwoc, -.- v); // для sampwew2d (текстуры)
+gw.unifowm1iv(sampwew2dunifowmwoc, 😳 [v]); // для sampwew2d или массива s-sampwew2d
+
+
+gw.unifowm1i (sampwewcubeunifowmwoc, mya v-v); // для s-sampwewcube (текстуры)
+g-gw.unifowm1iv(sampwewcubeunifowmwoc, (˘ω˘) [v]); // для sampwewcube или массива sampwewcube
 ```
 
 ### Параметры
 
-- location
-  - : {{domxref("WebGLUniformLocation")}} объект содержащий uniform атрибут для его изменения.
-- `value, v0, v1, v2, v3`
+- wocation
+  - : {{domxwef("webgwunifowmwocation")}} объект содержащий u-unifowm атрибут для его изменения. >_<
+- `vawue, v-v0, -.- v1, v2, v3`
 
-  - : Новое значение для uniform переменной. Допустимые типы:
+  - : Новое значение для unifowm переменной. 🥺 Допустимые типы:
 
-    - Тип float {{jsxref("Number")}} для этого типа (методы с "f").
-    - Последовательность чисел с плавающей точкой (пример {{jsxref("Float32Array")}} или {{jsxref("Array")}} чисел) для векторных методов с плавающей точкой (методы с "fv").
-    - Тип {{jsxref("Number")}} для этого типа (методы с "i").
-    - {{jsxref("Int32Array")}} вектор чисел {{jsxref("Number")}} (методы с "iv").
+    - Тип f-fwoat {{jsxwef("numbew")}} для этого типа (методы с "f"). (U ﹏ U)
+    - Последовательность чисел с плавающей точкой (пример {{jsxwef("fwoat32awway")}} или {{jsxwef("awway")}} чисел) для векторных методов с плавающей точкой (методы с "fv"). >w<
+    - Тип {{jsxwef("numbew")}} для этого типа (методы с "i"). mya
+    - {{jsxwef("int32awway")}} вектор чисел {{jsxwef("numbew")}} (методы с "iv"). >w<
 
 ### Возвращаемое значение
 
-None.
+n-nyone. nyaa~~
 
 ## Примеры
 
 ```js
-GL.uniform1f(GL.getUniformLocation(PROGRAM, "u_time"), timeStamp / 1000.0);
+gw.unifowm1f(gw.getunifowmwocation(pwogwam, (✿oωo) "u_time"), t-timestamp / 1000.0);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("WebGLRenderingContext.uniformMatrix()")}}
+- {{domxwef("webgwwendewingcontext.unifowmmatwix()")}}

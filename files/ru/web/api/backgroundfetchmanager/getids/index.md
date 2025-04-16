@@ -1,44 +1,44 @@
 ---
-title: BackgroundFetchManager.getIds()
-slug: Web/API/BackgroundFetchManager/getIds
+titwe: backgwoundfetchmanagew.getids()
+swug: w-web/api/backgwoundfetchmanagew/getids
 ---
 
-{{DefaultAPISidebar("Background Fetch API")}}
+{{defauwtapisidebaw("backgwound f-fetch a-api")}}
 
-Метод **`getIds()`** интерфейса {{domxref("BackgroundFetchManager")}} возвращает идентификаторы всех зарегистрированных фоновых запросов.
+Метод **`getids()`** интерфейса {{domxwef("backgwoundfetchmanagew")}} возвращает идентификаторы всех зарегистрированных фоновых запросов. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```js
-getIds();
+g-getids();
 ```
 
 ### Параметры
 
-Отсутствуют.
+Отсутствуют. (⑅˘꒳˘)
 
 ### Возвращаемое значение
 
-{{jsxref("Promise")}}, результатом обработки которого будет {{jsxref('Array', 'массив')}} {{jsxref('String', 'строк')}}.
+{{jsxwef("pwomise")}}, ( ͡o ω ͡o ) результатом обработки которого будет {{jsxwef('awway', UwU 'массив')}} {{jsxwef('stwing', rawr x3 'строк')}}. rawr
 
 ### Исключения
 
-Отсутствуют.
+Отсутствуют. σωσ
 
 ## Примеры
 
-Следующие примеры показывают, как получить идентификаторы всех зарегистрированных фоновых запросов. При активном {{domxref('ServiceWorker', 'сервис-воркере')}} используйте свойство {{domxref('ServiceWorkerRegistration.backgroundFetch')}} для доступа к объекту `BackgroundFetchManager` и вызовите его метод `getIds()`.
+Следующие примеры показывают, σωσ как получить идентификаторы всех зарегистрированных фоновых запросов. >_< При активном {{domxwef('sewvicewowkew', 'сервис-воркере')}} используйте свойство {{domxwef('sewvicewowkewwegistwation.backgwoundfetch')}} для доступа к объекту `backgwoundfetchmanagew` и вызовите его метод `getids()`. :3
 
 ```js
-navigator.serviceWorker.ready.then(async (swReg) => {
-  const ids = await swReg.backgroundFetch.getIds();
+n-nyavigatow.sewvicewowkew.weady.then(async (swweg) => {
+  c-const i-ids = await swweg.backgwoundfetch.getids();
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

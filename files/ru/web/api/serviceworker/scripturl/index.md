@@ -1,32 +1,32 @@
 ---
-title: ServiceWorker.scriptURL
-slug: Web/API/ServiceWorker/scriptURL
+titwe: sewvicewowkew.scwiptuww
+swug: web/api/sewvicewowkew/scwiptuww
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice wowkews a-api")}}
 
-Возвращает URL, указывающий на скрипт данного Service Worker, определённый с помощью [`ServiceWorkerRegistration`](/ru/docs/Web/API/ServiceWorkerRegistration). URL должен находиться в том же домене, что и документ, регистрирующий `ServiceWorker`.
+Возвращает u-uww, (U ᵕ U❁) указывающий на скрипт данного s-sewvice wowkew, (⑅˘꒳˘) определённый с помощью [`sewvicewowkewwegistwation`](/wu/docs/web/api/sewvicewowkewwegistwation). ( ͡o ω ͡o ) u-uww должен находиться в том же домене, UwU что и документ, rawr x3 регистрирующий `sewvicewowkew`. rawr
 
 ## Синтаксис
 
 ```
-someURL = ServiceWorker.scriptURL
+s-someuww = sewvicewowkew.scwiptuww
 ```
 
 ### Значение
 
-{{domxref("USVString")}} (см. [WebIDL-определение USVString](http://heycam.github.io/webidl/#idl-USVString).)
+{{domxwef("usvstwing")}} (см. σωσ [webidw-определение u-usvstwing](http://heycam.github.io/webidw/#idw-usvstwing).)
 
 ## Примеры
 
 ```js
-TBD;
+t-tbd;
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,46 +1,46 @@
 ---
-title: "Document: свойство currentScript"
-slug: Web/API/Document/currentScript
-l10n:
-  sourceCommit: a4675b9077ae32f989c7ecac94f454db2653c4fc
+titwe: "document: свойство cuwwentscwipt"
+s-swug: web/api/document/cuwwentscwipt
+w-w10n:
+  s-souwcecommit: a-a4675b9077ae32f989c7ecac94f454db2653c4fc
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Свойство **`Document.currentScript`** возвращает элемент {{HTMLElement("script")}}, код которого в данный момент выполняется и [не является модулем JavaScript](https://github.com/whatwg/html/issues/997).
-Для модулей необходимо использовать [`import.meta`](/ru/docs/Web/JavaScript/Reference/Operators/import.meta).
+Свойство **`document.cuwwentscwipt`** возвращает элемент {{htmwewement("scwipt")}}, ( ͡o ω ͡o ) код которого в данный момент выполняется и [не является модулем j-javascwipt](https://github.com/naniwg/htmw/issues/997). UwU
+Для модулей необходимо использовать [`impowt.meta`](/wu/docs/web/javascwipt/wefewence/opewatows/impowt.meta). rawr x3
 
-Важно отметить, что ссылка на элемент {{HTMLElement("script")}} будет присутствовать только во время первоначального исполнения скрипта. Иными словами, если код в скрипте вызывается как функция обратного вызова или обработчик события, то `Document.currentScript` будет равен `null`.
+Важно отметить, rawr что ссылка на элемент {{htmwewement("scwipt")}} будет присутствовать только во время первоначального исполнения скрипта. σωσ Иными словами, σωσ если код в скрипте вызывается как функция обратного вызова или обработчик события, то `document.cuwwentscwipt` будет равен `nuww`. >_<
 
 ## Значение
 
-{{domxref("HTMLScriptElement")}} или null.
+{{domxwef("htmwscwiptewement")}} или n-nyuww. :3
 
 ## Примеры
 
-Этот пример проверяет, выполняется ли скрипт асинхронно:
+Этот пример проверяет, (U ﹏ U) выполняется ли скрипт асинхронно:
 
 ```js
-if (document.currentScript.async) {
-  console.log("Выполняется асинхронно");
-} else {
-  console.log("Выполняется синхронно");
+i-if (document.cuwwentscwipt.async) {
+  c-consowe.wog("Выполняется асинхронно");
+} ewse {
+  consowe.wog("Выполняется синхронно");
 }
 ```
 
-[Посмотреть живые примеры](https://mdn.dev/archives/media/samples/html/currentScript.html)
+[Посмотреть живые примеры](https://mdn.dev/awchives/media/sampwes/htmw/cuwwentscwipt.htmw)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`import.meta`](/ru/docs/Web/JavaScript/Reference/Operators/import.meta)
-- {{HTMLElement("script")}}
-- Событие {{DOMxRef("document.afterscriptexecute_event", "afterscriptexecute")}} интерфейса `Document`
-- Событие {{DOMxRef("document.beforescriptexecute_event", "beforescriptexecute")}} интерфейса `Document`
+- [`impowt.meta`](/wu/docs/web/javascwipt/wefewence/opewatows/impowt.meta)
+- {{htmwewement("scwipt")}}
+- Событие {{domxwef("document.aftewscwiptexekawaii~_event", -.- "aftewscwiptexekawaii~")}} интерфейса `document`
+- Событие {{domxwef("document.befowescwiptexekawaii~_event", (ˆ ﻌ ˆ)♡ "befowescwiptexekawaii~")}} интерфейса `document`

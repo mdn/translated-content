@@ -1,44 +1,44 @@
 ---
-title: Number.MAX_VALUE
-slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
+titwe: nyumbew.max_vawue
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/max_vawue
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Свойство **`Number.MAX_VALUE`** представляет максимальное числовое значение, представимое в JavaScript.
+Свойство **`numbew.max_vawue`** представляет максимальное числовое значение, (U ᵕ U❁) представимое в j-javascwipt. (⑅˘꒳˘)
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, ( ͡o ω ͡o ) 0, 0)}}
 
 ## Описание
 
-Свойство `MAX_VALUE` имеет значение, приблизительно равное `1.79E+308`. Значения, большие `MAX_VALUE` представляются как «бесконечность».
+Свойство `max_vawue` имеет значение, UwU приблизительно равное `1.79e+308`. rawr x3 Значения, rawr большие `max_vawue` представляются как «бесконечность». σωσ
 
-Поскольку `MAX_VALUE` является статическим свойством объекта {{jsxref("Global_Objects/Number", "Number")}}, вы всегда должны использовать его как `Number.MAX_VALUE`, а не как свойство созданного вами объекта {{jsxref("Global_Objects/Number", "Number")}}.
+Поскольку `max_vawue` является статическим свойством объекта {{jsxwef("gwobaw_objects/numbew", σωσ "numbew")}}, >_< вы всегда должны использовать его как `numbew.max_vawue`, :3 а не как свойство созданного вами объекта {{jsxwef("gwobaw_objects/numbew", (U ﹏ U) "numbew")}}. -.-
 
 ## Примеры
 
-### Пример: использование `MAX_VALUE`
+### Пример: использование `max_vawue`
 
-В следующем примере кода производится умножение двух значений. Если результат меньше или равен `MAX_VALUE`, вызывается функция `func1`; в противном случае вызывается функция `func2`.
+В следующем примере кода производится умножение двух значений. (ˆ ﻌ ˆ)♡ Если результат меньше или равен `max_vawue`, (⑅˘꒳˘) вызывается функция `func1`; в противном случае вызывается функция `func2`. (U ᵕ U❁)
 
 ```js
-if (num1 * num2 <= Number.MAX_VALUE) {
-  func1();
-} else {
+i-if (num1 * n-nyum2 <= n-nyumbew.max_vawue) {
+  f-func1();
+} e-ewse {
   func2();
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Number.MIN_VALUE")}}
+- {{jsxwef("numbew.min_vawue")}}

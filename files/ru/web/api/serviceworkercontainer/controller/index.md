@@ -1,43 +1,43 @@
 ---
-title: ServiceWorkerContainer.controller
-slug: Web/API/ServiceWorkerContainer/controller
+titwe: sewvicewowkewcontainew.contwowwew
+swug: w-web/api/sewvicewowkewcontainew/contwowwew
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-Свойство **`controller`** интерфейса {{domxref("ServiceWorkerContainer")}} возвращает объект {{domxref("ServiceWorker")}}, в случае, если service worker активирован. Данное свойство возвращает `null`, если страница была обновлена с помощью _Shift_ + refresh или на ней отсутствует активный service worker.
+Свойство **`contwowwew`** интерфейса {{domxwef("sewvicewowkewcontainew")}} возвращает объект {{domxwef("sewvicewowkew")}}, (ˆ ﻌ ˆ)♡ в случае, (⑅˘꒳˘) если s-sewvice w-wowkew активирован. (U ᵕ U❁) Данное свойство возвращает `nuww`, -.- если страница была обновлена с помощью _shift_ + wefwesh или на ней отсутствует активный s-sewvice wowkew. ^^;;
 
 ## Синтаксис
 
 ```
-var myController = navigator.serviceWorker.controller;
+v-vaw m-mycontwowwew = n-nyavigatow.sewvicewowkew.contwowwew;
 ```
 
 ### Значение
 
-Объект {{domxref("ServiceWorker")}}.
+Объект {{domxwef("sewvicewowkew")}}. >_<
 
 ## Пример
 
 ```js
-if ("serviceWorker" in navigator) {
-  // Проверяем, находится ли данная страница под управлением service worker.
-  if (navigator.serviceWorker.controller) {
-    console.log(
-      `Эта страница сейчас контролируется ${navigator.serviceWorker.controller}`,
+if ("sewvicewowkew" in nyavigatow) {
+  // Проверяем, mya находится ли данная страница под управлением sewvice wowkew. mya
+  if (navigatow.sewvicewowkew.contwowwew) {
+    c-consowe.wog(
+      `Эта страница сейчас контролируется ${navigatow.sewvicewowkew.contwowwew}`, 😳
     );
-  } else {
-    console.log("Эта страница не контролируется service worker.");
+  } ewse {
+    consowe.wog("Эта страница не контролируется sewvice wowkew.");
   }
-} else {
-  console.log("Данный браузер не поддерживает Service Worker API.");
+} e-ewse {
+  consowe.wog("Данный браузер не поддерживает s-sewvice wowkew api.");
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

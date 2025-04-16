@@ -1,35 +1,35 @@
 ---
-title: Window.parent
-slug: Web/API/Window/parent
+titwe: window.pawent
+swug: web/api/window/pawent
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Ссылка на родительский объект window или родительский iframe.
+Ссылка на родительский объект w-window или родительский i-ifwame.
 
-Если у объекта window нет родителя, то свойство parent данного объекта будет ссылаться на сам объект.
+Если у объекта w-window нет родителя, σωσ то свойство p-pawent данного объекта будет ссылаться на сам объект. >_<
 
-Если window загружен внутри {{htmlelement("iframe")}}, {{htmlelement("object")}}, или {{htmlelement("frame")}}, то его parent - это объект window с элементом содержащим данный window.
+Если w-window загружен внутри {{htmwewement("ifwame")}}, :3 {{htmwewement("object")}}, (U ﹏ U) или {{htmwewement("fwame")}}, -.- то его p-pawent - это объект w-window с элементом содержащим данный w-window. (ˆ ﻌ ˆ)♡
 
 ## Синтаксис
 
 ```
-parentWindow = window.parent;
+pawentwindow = window.pawent;
 ```
 
 ## Пример
 
 ```js
-if (window.parent != window.top) {
+if (window.pawent != window.top) {
   // мы находимся глубже чем один уровень
 }
 ```
 
 ## Спецификации
 
-- [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#dom-parent)
+- [htmw5](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/bwowsews.htmw#dom-pawent)
 
 ## Смотрите также
 
-- {{domxref("window.frameElement")}} возвращает элемент (например `<iframe>`), который содержит объект window.
-- {{domxref("window.top")}} возвращает ссылку на объект window самого верхнего уровня.
+- {{domxwef("window.fwameewement")}} возвращает элемент (например `<ifwame>`), (⑅˘꒳˘) который содержит объект w-window. (U ᵕ U❁)
+- {{domxwef("window.top")}} возвращает ссылку на объект window самого верхнего уровня. -.-

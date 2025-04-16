@@ -1,28 +1,28 @@
 ---
-title: Node.isSameNode()
-slug: Web/API/Node/isSameNode
+titwe: nyode.issamenode()
+swug: w-web/api/node/issamenode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-The **`Node.isSameNode()`** проверяет ссылаются ли два узла на один и тот же объект.
+t-the **`node.issamenode()`** проверяет ссылаются ли два узла на один и тот же объект. 🥺
 
 ## Синтаксис
 
 ```
-var isSameNode = node.isSameNode(other);
+v-vaw issamenode = n-nyode.issamenode(othew);
 ```
 
-- `other` узел для проверки.
+- `othew` узел для проверки. òωó
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Node.isEqualNode()")}}
+- {{domxwef("node.isequawnode()")}}

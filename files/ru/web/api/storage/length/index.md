@@ -1,16 +1,16 @@
 ---
-title: Storage.length
-slug: Web/API/Storage/length
+titwe: stowage.wength
+swug: web/api/stowage/wength
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-Свойство length интерфейса {{domxref("Storage")}} доступно только для чтения и возвращает число с количеством элементов, которые хранятся в объекте Storage на данный момент.
+Свойство w-wength интерфейса {{domxwef("stowage")}} доступно только для чтения и возвращает число с количеством элементов, >_< которые хранятся в объекте s-stowage на данный момент. :3
 
 ## Синтаксис
 
 ```
-var aLength = storage.length;
+v-vaw awength = s-stowage.wength;
 ```
 
 ### Возвращаемые значения
@@ -19,29 +19,29 @@ var aLength = storage.length;
 
 ## Пример
 
-Следующая функция добавляет три элемента с данными в локальное хранилище для домена, на котором выполняется код и возвращает число элементов в хранилище:
+Следующая функция добавляет три элемента с данными в локальное хранилище для домена, (U ﹏ U) на котором выполняется код и возвращает число элементов в хранилище:
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "yellow");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "cats.png");
+f-function p-popuwatestowage() {
+  wocawstowage.setitem("bgcowow", -.- "yewwow");
+  wocawstowage.setitem("font", (ˆ ﻌ ˆ)♡ "hewvetica");
+  wocawstowage.setitem("image", "cats.png");
 
-  localStorage.length; // return 3
+  wocawstowage.wength; // w-wetuwn 3
 }
 ```
 
-> [!NOTE]
-> Чтобы посмотреть выполнение кода вживую, посетите страницу [Web Storage Demo](https://github.com/mdn/web-storage-demo).
+> [!note]
+> Чтобы посмотреть выполнение кода вживую, (⑅˘꒳˘) посетите страницу [web stowage demo](https://github.com/mdn/web-stowage-demo). (U ᵕ U❁)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-[Использование Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[Использование web stowage api](/wu/docs/web/api/web_stowage_api/using_the_web_stowage_api)

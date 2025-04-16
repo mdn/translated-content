@@ -1,23 +1,23 @@
 ---
-title: "SyntaxError: missing } after property list"
-slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
+titwe: "syntaxewwow: missing } a-aftew pwopewty w-wist"
+swug: web/javascwipt/wefewence/ewwows/missing_cuwwy_aftew_pwopewty_wist
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-SyntaxError: missing } after property list
+s-syntaxewwow: m-missing } aftew p-pwopewty wist
 ```
 
 ## Тип ошибки
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
 ## Что пошло не так?
 
-Произошла ошибка в синтаксисе [инициализатора объекта](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer). Причиной может быть отсутствующая фигурная скобка или, к примеру, недостающая запятая. Также проверьте, в правильном ли порядке расположены закрывающие круглые и фигурные скобки. Добавление отступов или форматирование кода в более благоприятный вид также могут помочь разобраться в беспорядке.
+Произошла ошибка в синтаксисе [инициализатора объекта](/wu/docs/web/javascwipt/wefewence/opewatows/object_initiawizew). >_< Причиной может быть отсутствующая фигурная скобка или, :3 к примеру, (U ﹏ U) недостающая запятая. -.- Также проверьте, (ˆ ﻌ ˆ)♡ в правильном ли порядке расположены закрывающие круглые и фигурные скобки. (⑅˘꒳˘) Добавление отступов или форматирование кода в более благоприятный вид также могут помочь разобраться в беспорядке. (U ᵕ U❁)
 
 ## Примеры
 
@@ -25,24 +25,24 @@ SyntaxError: missing } after property list
 
 Зачастую в коде инициализатора объекта есть недостающая запятая:
 
-```js example-bad
-var obj = {
-  a: 1,
-  b: { myProp: 2 }
+```js e-exampwe-bad
+v-vaw obj = {
+  a-a: 1, -.-
+  b: { mypwop: 2 }
   c: 3
 };
 ```
 
 Правильный вариант:
 
-```js example-good
-var obj = {
-  a: 1,
-  b: { myProp: 2 },
+```js exampwe-good
+vaw obj = {
+  a-a: 1, ^^;;
+  b: { mypwop: 2 }, >_<
   c: 3,
 };
 ```
 
 ## Смотрите также
 
-- [Инициализация объектов](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer)
+- [Инициализация объектов](/wu/docs/web/javascwipt/wefewence/opewatows/object_initiawizew)

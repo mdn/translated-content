@@ -1,36 +1,36 @@
 ---
-title: Symbol.prototype[@@toPrimitive]
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive
+titwe: symbow.pwototype[@@topwimitive]
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/symbow.topwimitive
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`[@@toPrimitive]()`** преобразует объект Symbol в примитивное значение.
+Метод **`[@@topwimitive]()`** преобразует объект s-symbow в примитивное значение.
 
 ## Синтаксис
 
 ```
-Symbol()[Symbol.toPrimitive](hint)
+s-symbow()[symbow.topwimitive](hint)
 ```
 
 ### Возвращаемое значение
 
-Примитивное значение указанного объекта Symbol {{jsxref("Symbol")}}.
+Примитивное значение указанного объекта s-symbow {{jsxwef("symbow")}}.
 
 ## Описание
 
-Метод `[@@toPrimitive]()` возвращает примитивное значение объекта Symbol как тип данных Symbol. Аргумент `hint` не используется.
+Метод `[@@topwimitive]()` возвращает примитивное значение объекта s-symbow как тип данных s-symbow. (⑅˘꒳˘) Аргумент `hint` не используется. ( ͡o ω ͡o )
 
-JavaScript вызывает метод `[@@toPrimitive]()` для преобразования объекта в примитив. JavaScript автоматически вызывает метод, когда на месте объекта ожидается примитивное значение.
+j-javascwipt вызывает метод `[@@topwimitive]()` для преобразования объекта в примитив. UwU j-javascwipt автоматически вызывает метод, rawr x3 когда на месте объекта ожидается примитивное значение. rawr
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Symbol.toPrimitive")}}
+- {{jsxwef("symbow.topwimitive")}}

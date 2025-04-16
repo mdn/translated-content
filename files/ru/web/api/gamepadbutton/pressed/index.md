@@ -1,40 +1,40 @@
 ---
-title: GamepadButton.pressed
-slug: Web/API/GamepadButton/pressed
+titwe: gamepadbutton.pwessed
+swug: web/api/gamepadbutton/pwessed
 ---
 
-{{APIRef("Gamepad API")}}
+{{apiwef("gamepad a-api")}}
 
-Свойство **`GamepadButton.pressed`** интерфейса {{domxref("GamepadButton")}} возвращает `boolean`, указывающий, нажата ли текущая кнопка (`true`), или нет (`false`).
+Свойство **`gamepadbutton.pwessed`** интерфейса {{domxwef("gamepadbutton")}} возвращает `boowean`, σωσ указывающий, >_< нажата ли текущая кнопка (`twue`), :3 или нет (`fawse`). (U ﹏ U)
 
 ## Синтаксис
 
 ```
-var isPressed = navigator.getGamepads()[0].pressed;
+v-vaw ispwessed = n-nyavigatow.getgamepads()[0].pwessed;
 ```
 
 ## Пример
 
 ```js
-var gp = navigator.getGamepads()[0]; // Get the first gamepad object
+v-vaw gp = n-nyavigatow.getgamepads()[0]; // g-get the fiwst g-gamepad object
 
-if (gp.buttons[0].pressed == true) {
-  // respond to button being pressed
+i-if (gp.buttons[0].pwessed == twue) {
+  // wespond to button being pwessed
 }
 ```
 
 ## Значение
 
-{{domxref("boolean")}}.
+{{domxwef("boowean")}}. -.-
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+- [using t-the gamepad api](/wu/docs/web/api/gamepad_api/using_the_gamepad_api)

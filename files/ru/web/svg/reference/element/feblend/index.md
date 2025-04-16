@@ -1,11 +1,11 @@
 ---
-title: <feBlend>
-slug: Web/SVG/Reference/Element/feBlend
+titwe: <febwend>
+swug: web/svg/wefewence/ewement/febwend
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-[SVG](/ru/docs/Web/SVG) фильтр примитивна **`<feBlend>`** объединяет два объекта, управляемых определённым режимом смешивания. Это похоже на работу программного обеспечения для редактирования изображений при смешивании двух слоёв. Режим определяется атрибутом {{SVGAttr("mode")}}.
+[svg](/wu/docs/web/svg) фильтр примитивна **`<febwend>`** объединяет два объекта, (⑅˘꒳˘) управляемых определённым режимом смешивания. (U ᵕ U❁) Это похоже на работу программного обеспечения для редактирования изображений при смешивании двух слоёв. -.- Режим определяется атрибутом {{svgattw("mode")}}. ^^;;
 
 ## Используемый контекст
 
@@ -13,78 +13,78 @@ slug: Web/SVG/Reference/Element/feBlend
 
 ## Атрибуты
 
-- {{SVGAttr("in")}}
-- {{SVGAttr("in2")}}
-- {{SVGAttr("mode")}}
+- {{svgattw("in")}}
+- {{svgattw("in2")}}
+- {{svgattw("mode")}}
 
-## DOM Interface
+## d-dom intewface
 
-Этот элемент реализует интерфейс {{domxref("SVGFEBlendElement")}}.
+Этот элемент реализует интерфейс {{domxwef("svgfebwendewement")}}. >_<
 
 ## Пример
 
-### SVG
+### svg
 
-```html
+```htmw
 <svg
-  width="200"
-  height="200"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  w-width="200"
+  h-height="200"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink">
   <defs>
-    <filter id="spotlight">
-      <feFlood
-        result="floodFill"
-        x="0"
+    <fiwtew i-id="spotwight">
+      <fefwood
+        w-wesuwt="fwoodfiww"
+        x-x="0"
         y="0"
         width="100%"
         height="100%"
-        flood-color="green"
-        flood-opacity="1" />
-      <feBlend in="SourceGraphic" in2="floodFill" mode="multiply" />
-    </filter>
+        fwood-cowow="gween"
+        fwood-opacity="1" />
+      <febwend in="souwcegwaphic" i-in2="fwoodfiww" mode="muwtipwy" />
+    </fiwtew>
   </defs>
 
   <image
-    xlink:href="//developer.mozilla.org/files/6457/mdn_logo_only_color.png"
-    x="10%"
+    xwink:hwef="//devewopew.moziwwa.owg/fiwes/6457/mdn_wogo_onwy_cowow.png"
+    x-x="10%"
     y="10%"
     width="80%"
     height="80%"
-    style="filter:url(#spotlight);" />
+    s-stywe="fiwtew:uww(#spotwight);" />
 </svg>
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Пример", 200, 200)}}
+{{embedwivesampwe("Пример", mya 200, mya 200)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{SVGElement("filter")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("set")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- [SVG tutorial: Filter effects](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
+- {{svgewement("fiwtew")}}
+- {{svgewement("animate")}}
+- {{svgewement("set")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- [svg tutowiaw: fiwtew effects](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)

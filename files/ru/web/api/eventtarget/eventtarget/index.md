@@ -1,59 +1,59 @@
 ---
-title: EventTarget()
-slug: Web/API/EventTarget/EventTarget
+titwe: eventtawget()
+swug: web/api/eventtawget/eventtawget
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`EventTarget()`** конструктор создаёт новый {{domxref("EventTarget")}} экземпляр объекта.
+**`eventtawget()`** конструктор создаёт новый {{domxwef("eventtawget")}} экземпляр объекта. ^^;;
 
 ## Синтаксис
 
 ```
-var myEventTarget = new EventTarget();
+v-vaw myeventtawget = n-nyew eventtawget();
 ```
 
 ### Параметры
 
-Нет параметров.
+Нет параметров. >_<
 
 ### Возвращаемые значения
 
-Экземпляр {{domxref("EventTarget")}} объекта.
+Экземпляр {{domxwef("eventtawget")}} объекта. mya
 
 ## Примеры
 
 ```js
-class MyEventTarget extends EventTarget {
-  constructor(mySecret) {
-    super();
-    this._secret = mySecret;
+cwass m-myeventtawget e-extends eventtawget {
+  c-constwuctow(mysecwet) {
+    s-supew();
+    t-this._secwet = m-mysecwet;
   }
 
-  get secret() {
-    return this._secret;
+  get secwet() {
+    wetuwn this._secwet;
   }
 }
 
-let myEventTarget = new MyEventTarget(5);
-let value = myEventTarget.secret; // == 5
-myEventTarget.addEventListener("foo", function (e) {
-  this._secret = e.detail;
+wet myeventtawget = nyew myeventtawget(5);
+w-wet vawue = myeventtawget.secwet; // == 5
+myeventtawget.addeventwistenew("foo", f-function (e) {
+  this._secwet = e.detaiw;
 });
 
-let event = new CustomEvent("foo", { detail: 7 });
-myEventTarget.dispatchEvent(event);
-let newValue = myEventTarget.secret; // == 7
+w-wet event = nyew customevent("foo", mya { detaiw: 7 });
+myeventtawget.dispatchevent(event);
+w-wet nyewvawue = myeventtawget.secwet; // == 7
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("EventTarget")}}
+- {{domxwef("eventtawget")}}

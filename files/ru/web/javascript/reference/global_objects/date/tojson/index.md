@@ -1,45 +1,45 @@
 ---
-title: Date.prototype.toJSON()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
+titwe: date.pwototype.tojson()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/tojson
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`toJSON()`** возвращает представление объекта {{jsxref("Global_Objects/Date", "Date")}} в виде {{Glossary("JSON")}}.
+Метод **`tojson()`** возвращает представление объекта {{jsxwef("gwobaw_objects/date", ( ͡o ω ͡o ) "date")}} в виде {{gwossawy("json")}}. UwU
 
 ## Синтаксис
 
 ```
-dateObj.toJSON()
+d-dateobj.tojson()
 ```
 
 ## Описание
 
-Экземпляры объекта {{jsxref("Global_Objects/Date", "Date")}} ссылаются на определённый момент времени. Вызов метода `toJSON()` вернёт строку, отформатированную в JSON (при помощи метода {{jsxref("Date.prototype.toISOString()", "toISOString()")}}), представляющую значение объекта {{jsxref("Global_Objects/Date", "Date")}}. Этот метод, как правило, предназначен для сериализации объектов {{jsxref("Global_Objects/Date", "Date")}} в JSON.
+Экземпляры объекта {{jsxwef("gwobaw_objects/date", rawr x3 "date")}} ссылаются на определённый момент времени. rawr Вызов метода `tojson()` вернёт строку, σωσ отформатированную в j-json (при помощи метода {{jsxwef("date.pwototype.toisostwing()", σωσ "toisostwing()")}}), >_< представляющую значение объекта {{jsxwef("gwobaw_objects/date", :3 "date")}}. (U ﹏ U) Этот метод, -.- как правило, (ˆ ﻌ ˆ)♡ предназначен для сериализации объектов {{jsxwef("gwobaw_objects/date", "date")}} в j-json. (⑅˘꒳˘)
 
 ## Примеры
 
-### Пример: использование метода `toJSON()`
+### Пример: использование метода `tojson()`
 
 ```js
-var jsonDate = new Date().toJSON();
-var backToDate = new Date(jsonDate);
+vaw j-jsondate = nyew d-date().tojson();
+v-vaw backtodate = n-nyew date(jsondate);
 
-console.log("Сериализованный объект даты: " + jsonDate);
+c-consowe.wog("Сериализованный объект даты: " + jsondate);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toUTCString()")}}
+- {{jsxwef("date.pwototype.towocawedatestwing()")}}
+- {{jsxwef("date.pwototype.totimestwing()")}}
+- {{jsxwef("date.pwototype.toutcstwing()")}}

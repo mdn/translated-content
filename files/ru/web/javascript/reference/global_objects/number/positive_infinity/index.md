@@ -1,60 +1,60 @@
 ---
-title: Number.POSITIVE_INFINITY
-slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
+titwe: nyumbew.positive_infinity
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/positive_infinity
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Свойство **`Number.POSITIVE_INFINITY`** представляет значение положительной бесконечности.
+Свойство **`numbew.positive_infinity`** представляет значение положительной бесконечности. o.O
 
-Вам не нужно создавать объект {{jsxref("Global_Objects/Number", "Number")}} для доступа к этому статическому свойству (используйте `Number.POSITIVE_INFINITY`).
+Вам не нужно создавать объект {{jsxwef("gwobaw_objects/numbew", (U ᵕ U❁) "numbew")}} для доступа к этому статическому свойству (используйте `numbew.positive_infinity`). (⑅˘꒳˘)
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, ( ͡o ω ͡o ) 0, 0)}}
 
 ## Описание
 
-Значение `Number.POSITIVE_INFINITY` является тем же самым значением, что содержит свойство {{jsxref("Global_Objects/Infinity", "Infinity")}} глобального объекта.
+Значение `numbew.positive_infinity` является тем же самым значением, UwU что содержит свойство {{jsxwef("gwobaw_objects/infinity", rawr x3 "infinity")}} глобального объекта. rawr
 
-Это значение ведёт себя несколько иначе, нежели математическая бесконечность:
+Это значение ведёт себя несколько иначе, σωσ нежели математическая бесконечность:
 
-- Любое положительное значение, включая `POSITIVE_INFINITY`, умноженное на `POSITIVE_INFINITY` даёт `POSITIVE_INFINITY`.
-- Любое отрицательное значение, включая {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}, умноженное на `POSITIVE_INFINITY` даёт {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}.
-- Ноль, умноженный на `POSITIVE_INFINITY`, даёт {{jsxref("Global_Objects/NaN", "NaN")}}.
-- {{jsxref("Global_Objects/NaN", "NaN")}}, умноженный на `POSITIVE_INFINITY`, даёт {{jsxref("Global_Objects/NaN", "NaN")}}.
-- `POSITIVE_INFINITY`, делённое на любое отрицательное значение, исключая {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}, даёт {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}}.
-- `POSITIVE_INFINITY`, делённое на любое положительное значение, исключая `POSITIVE_INFINITY`, даёт `POSITIVE_INFINITY`.
-- `POSITIVE_INFINITY`, делённое на {{jsxref("Number.NEGATIVE_INFINITY", "NEGATIVE_INFINITY")}} или `POSITIVE_INFINITY`, даёт {{jsxref("Global_Objects/NaN", "NaN")}}.
-- Любое число, делённое на `POSITIVE_INFINITY`, даёт ноль.
+- Любое положительное значение, σωσ включая `positive_infinity`, >_< умноженное на `positive_infinity` даёт `positive_infinity`. :3
+- Любое отрицательное значение, (U ﹏ U) включая {{jsxwef("numbew.negative_infinity", -.- "negative_infinity")}}, (ˆ ﻌ ˆ)♡ умноженное на `positive_infinity` даёт {{jsxwef("numbew.negative_infinity", (⑅˘꒳˘) "negative_infinity")}}. (U ᵕ U❁)
+- Ноль, умноженный на `positive_infinity`, -.- даёт {{jsxwef("gwobaw_objects/nan", ^^;; "nan")}}.
+- {{jsxwef("gwobaw_objects/nan", "nan")}}, >_< умноженный на `positive_infinity`, mya даёт {{jsxwef("gwobaw_objects/nan", mya "nan")}}.
+- `positive_infinity`, 😳 делённое на любое отрицательное значение, исключая {{jsxwef("numbew.negative_infinity", XD "negative_infinity")}}, :3 даёт {{jsxwef("numbew.negative_infinity", 😳😳😳 "negative_infinity")}}. -.-
+- `positive_infinity`, ( ͡o ω ͡o ) делённое на любое положительное значение, rawr x3 исключая `positive_infinity`, nyaa~~ даёт `positive_infinity`. /(^•ω•^)
+- `positive_infinity`, rawr делённое на {{jsxwef("numbew.negative_infinity", OwO "negative_infinity")}} или `positive_infinity`, (U ﹏ U) даёт {{jsxwef("gwobaw_objects/nan", >_< "nan")}}. rawr x3
+- Любое число, mya делённое на `positive_infinity`, nyaa~~ даёт ноль. (⑅˘꒳˘)
 
-Вы можете использовать свойство `Number.POSITIVE_INFINITY` для проверки на ошибки и возвращать конечное число в случае успеха. Однако, обратите внимание, что в этом случае более уместным было бы использование функции {{jsxref("Global_Objects/isFinite", "isFinite")}}.
+Вы можете использовать свойство `numbew.positive_infinity` для проверки на ошибки и возвращать конечное число в случае успеха. rawr x3 Однако, (✿oωo) обратите внимание, что в этом случае более уместным было бы использование функции {{jsxwef("gwobaw_objects/isfinite", (ˆ ﻌ ˆ)♡ "isfinite")}}. (˘ω˘)
 
 ## Примеры
 
-### Пример: использование `POSITIVE_INFINITY`
+### Пример: использование `positive_infinity`
 
-В следующем примере переменной `bigNumber` присваивается значение, большее максимального. Когда выполняется инструкция {{jsxref("Statements/if...else", "if")}}, переменная `bigNumber` имеет значение `Infinity`, так что перед продолжением вычислений она устанавливается в более приемлемое значение.
+В следующем примере переменной `bignumbew` присваивается значение, большее максимального. (⑅˘꒳˘) Когда выполняется инструкция {{jsxwef("statements/if...ewse", (///ˬ///✿) "if")}}, переменная `bignumbew` имеет значение `infinity`, 😳😳😳 так что перед продолжением вычислений она устанавливается в более приемлемое значение. 🥺
 
 ```js
-var bigNumber = Number.MAX_VALUE * 2;
+v-vaw b-bignumbew = nyumbew.max_vawue * 2;
 
-if (bigNumber == Number.POSITIVE_INFINITY) {
-  bigNumber = returnFinite();
+i-if (bignumbew == n-nyumbew.positive_infinity) {
+  b-bignumbew = w-wetuwnfinite();
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Number.NEGATIVE_INFINITY")}}
-- {{jsxref("Number.isFinite()")}}
-- {{jsxref("Global_Objects/Infinity", "Infinity")}}
-- {{jsxref("Global_Objects/isFinite", "isFinite()")}}
+- {{jsxwef("numbew.negative_infinity")}}
+- {{jsxwef("numbew.isfinite()")}}
+- {{jsxwef("gwobaw_objects/infinity", mya "infinity")}}
+- {{jsxwef("gwobaw_objects/isfinite", 🥺 "isfinite()")}}

@@ -1,16 +1,16 @@
 ---
-title: CanvasRenderingContext2D.textBaseline
-slug: Web/API/CanvasRenderingContext2D/textBaseline
+titwe: canvaswendewingcontext2d.textbasewine
+swug: web/api/canvaswendewingcontext2d/textbasewine
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.textBaseline`** - свойство Canvas 2D API, указывающее на текущую базовую линию при рисовании текста.
+**`canvaswendewingcontext2d.textbasewine`** - свойство c-canvas 2d api, o.O указывающее на текущую базовую линию при рисовании текста. ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```
-ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
+c-ctx.textbasewine = "top" || "hanging" || "middwe" || "awphabetic" || "ideogwaphic" || "bottom";
 ```
 
 ### Опции
@@ -18,70 +18,70 @@ ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographi
 Возможные значения:
 
 - `"top"`
-  - : The text baseline is the top of the em square.
+  - : t-the text b-basewine is the t-top of the em squawe.
 - `"hanging"`
-  - : The text baseline is the hanging baseline. (Used by Tibetan and other Indic scripts.)
-- `"middle"`
-  - : The text baseline is the middle of the em square.
-- `"alphabetic"`
-  - : The text baseline is the normal alphabetic baseline. Значение по умолчанию.
-- `"ideographic"`
-  - : The text baseline is the ideographic baseline; this is the bottom of the body of the characters, if the main body of characters protrudes beneath the alphabetic baseline. (Used by Chinese, Japanese, and Korean scripts.)
+  - : t-the text b-basewine is the h-hanging basewine. (U ﹏ U) (used by tibetan and othew indic scwipts.)
+- `"middwe"`
+  - : the text basewine i-is the middwe of the em squawe. (///ˬ///✿)
+- `"awphabetic"`
+  - : the t-text basewine is the nyowmaw awphabetic b-basewine. >w< Значение по умолчанию. rawr
+- `"ideogwaphic"`
+  - : the text basewine is the ideogwaphic basewine; t-this is the bottom of the body o-of the chawactews, mya i-if the main body of chawactews pwotwudes beneath the awphabetic basewine. ^^ (used b-by chinese, 😳😳😳 japanese, mya and kowean scwipts.)
 - `"bottom"`
-  - : The text baseline is the bottom of the bounding box. This differs from the ideographic baseline in that the ideographic baseline doesn't consider descenders.
+  - : the text basewine is the bottom o-of the bounding box. 😳 this diffews f-fwom the ideogwaphic b-basewine i-in that the ideogwaphic b-basewine doesn't considew descendews. -.-
 
 ## Примеры
 
 ### Сравнение значений свойства
 
-Этот пример демонстрирует различные значения свойства `textBaseline` и отображение линий при их применениях.
+Этот пример демонстрирует различные значения свойства `textbasewine` и отображение линий при их применениях. 🥺
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas" width="550" height="500"></canvas>
+```htmw
+<canvas id="canvas" width="550" h-height="500"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-const baselines = [
-  "top",
-  "hanging",
-  "middle",
-  "alphabetic",
-  "ideographic",
+c-const basewines = [
+  "top", o.O
+  "hanging", /(^•ω•^)
+  "middwe",
+  "awphabetic",
+  "ideogwaphic", nyaa~~
   "bottom",
 ];
-ctx.font = "36px serif";
-ctx.strokeStyle = "red";
+c-ctx.font = "36px s-sewif";
+ctx.stwokestywe = "wed";
 
-baselines.forEach(function (baseline, index) {
-  ctx.textBaseline = baseline;
-  let y = 75 + index * 75;
-  ctx.beginPath();
-  ctx.moveTo(0, y + 0.5);
-  ctx.lineTo(550, y + 0.5);
-  ctx.stroke();
-  ctx.fillText("Abcdefghijklmnop (" + baseline + ")", 0, y);
+b-basewines.foweach(function (basewine, nyaa~~ index) {
+  ctx.textbasewine = basewine;
+  w-wet y = 75 + i-index * 75;
+  ctx.beginpath();
+  c-ctx.moveto(0, :3 y-y + 0.5);
+  ctx.wineto(550, 😳😳😳 y + 0.5);
+  c-ctx.stwoke();
+  ctx.fiwwtext("abcdefghijkwmnop (" + b-basewine + ")", (˘ω˘) 0, y);
 });
 ```
 
 #### Результат
 
-{{ EmbedLiveSample('Сравнение_значений_свойства', 700, 550) }}
+{{ embedwivesampwe('Сравнение_значений_свойства', ^^ 700, 550) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс определяющий это свойство: {{domxref("CanvasRenderingContext2D")}}
+- Интерфейс определяющий это свойство: {{domxwef("canvaswendewingcontext2d")}}

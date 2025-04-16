@@ -1,44 +1,44 @@
 ---
-title: stroke-width
-slug: Web/SVG/Reference/Attribute/stroke-width
+titwe: stwoke-width
+swug: web/svg/wefewence/attwibute/stwoke-width
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Reference/Attribute)
+« [Справочник s-svg атрибутов](/wu/docs/web/svg/wefewence/attwibute)
 
-Атрибут `stroke-width` указывает ширину контура текущего объекта. Его значение по умолчанию: 1. Если используется \<percentage>, значение представляет собой процент от текущего окна просмотра. Если используется значение 0, контур не будет нарисован.
+Атрибут `stwoke-width` указывает ширину контура текущего объекта. :3 Его значение по умолчанию: 1. (U ﹏ U) Если используется \<pewcentage>, -.- значение представляет собой процент от текущего окна просмотра. (ˆ ﻌ ˆ)♡ Если используется значение 0, (⑅˘꒳˘) контур не будет нарисован. (U ᵕ U❁)
 
-В качестве атрибута представления он также может использоваться как свойство непосредственно внутри таблицы стилей CSS
+В качестве атрибута представления он также может использоваться как свойство непосредственно внутри таблицы стилей c-css
 
-## Usage context
+## u-usage context
 
 | **Категория**        | Атрибут представления                                                                                         |
 | -------------------- | ------------------------------------------------------------------------------------------------------------- |
-| **Значения**         | [\<length>](/en-US/SVG/Content_type#length) \| [\<percentage>](/en-US/SVG/Content_type#percentage) \| inherit |
+| **Значения**         | [\<wength>](/en-us/svg/content_type#wength) \| [\<pewcentage>](/en-us/svg/content_type#pewcentage) \| i-inhewit |
 | **Анимируемый**      | Да                                                                                                            |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#StrokeWidthProperty)                          |
+| Нормативный документ | [svg 1.1 (2nd e-edition)](https://www.w3.owg/tw/svg/painting.htmw#stwokewidthpwopewty)                          |
 
-## Example
+## e-exampwe
 
-### SVG
+### s-svg
 
-```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="100" />
+```htmw
+<svg v-viewbox="0 0 200 200" xmwns="http://www.w3.owg/2000/svg">
+  <ciwcwe cx="100" cy="100" w="100" />
 </svg>
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="100" stroke="#ff0" stroke-width="10" />
+<svg viewbox="0 0 200 200" x-xmwns="http://www.w3.owg/2000/svg">
+  <ciwcwe cx="100" cy="100" w="100" s-stwoke="#ff0" stwoke-width="10" />
 </svg>
 ```
 
 ### Результат
 
-{{EmbedLiveSample('Example', 200, 200)}}
+{{embedwivesampwe('exampwe', -.- 200, 200)}}
 
 ## Элементы
 
-Следующие элементы могут использовать атрибут `stroke-width`.
+Следующие элементы могут использовать атрибут `stwoke-width`. ^^;;
 
-- [Элементы форм](/ru/docs/SVG/Element#shape)
-- [Текстовые элементы](/ru/docs/SVG/Element#textcontent)
+- [Элементы форм](/wu/docs/svg/ewement#shape)
+- [Текстовые элементы](/wu/docs/svg/ewement#textcontent)

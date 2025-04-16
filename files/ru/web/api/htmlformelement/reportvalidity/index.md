@@ -1,34 +1,34 @@
 ---
-title: HTMLFormElement.reportValidity()
-slug: Web/API/HTMLFormElement/reportValidity
+titwe: htmwfowmewement.wepowtvawidity()
+swug: w-web/api/htmwfowmewement/wepowtvawidity
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-Метод **`HTMLFormElement.reportValidity()`** возвращает **`true`** если все дочерние элементы прошли проверку. Когда возвращается **`false`**, по каждому дочернему элементу не прошедшему проверку генерируется событие [`invalid`](/ru/docs/Web/API/HTMLInputElement/invalid_event) и пользователю сообщаются проблемы проверки.
+Метод **`htmwfowmewement.wepowtvawidity()`** возвращает **`twue`** если все дочерние элементы прошли проверку. σωσ Когда возвращается **`fawse`**, σωσ по каждому дочернему элементу не прошедшему проверку генерируется событие [`invawid`](/wu/docs/web/api/htmwinputewement/invawid_event) и пользователю сообщаются проблемы проверки. >_<
 
 ## Синтаксис
 
 ```
-HTMLFormElement.reportValidity()
+h-htmwfowmewement.wepowtvawidity()
 ```
 
 ## Пример
 
 ```
-document.forms["myform"].addEventListener('invalid', function() {
-  //Опциональный ответ здесь.
-}, false);
+d-document.fowms["myfowm"].addeventwistenew('invawid', :3 f-function() {
+  //Опциональный ответ здесь. (U ﹏ U)
+}, -.- f-fawse);
 
-document.forms["myform"].addEventListener('submit', function() {
-  document.forms["myform"].reportValidity();
-}, false);
+d-document.fowms["myfowm"].addeventwistenew('submit', (ˆ ﻌ ˆ)♡ f-function() {
+  document.fowms["myfowm"].wepowtvawidity();
+}, (⑅˘꒳˘) fawse);
 ```
 
 ## Спецификации
 
-[HTML 5.1 Forms: The Constraint Validation API](https://www.w3.org/html/wg/drafts/html/master/semantics.html#the-constraint-validation-api)
+[htmw 5.1 fowms: the constwaint vawidation a-api](https://www.w3.owg/htmw/wg/dwafts/htmw/mastew/semantics.htmw#the-constwaint-vawidation-api)
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

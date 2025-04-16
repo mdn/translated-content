@@ -1,386 +1,386 @@
 ---
-title: Using the Gamepad API
-slug: Web/API/Gamepad_API/Using_the_Gamepad_API
+titwe: using the gamepad api
+s-swug: web/api/gamepad_api/using_the_gamepad_api
 ---
 
-{{DefaultAPISidebar("Gamepad API")}}
+{{defauwtapisidebaw("gamepad a-api")}}
 
-HTML5 представляет большое количество необходимых компонентов для полной и интерактивной разработки игр. Такие технологии, как `<canvas>`, WebGL, `<audio>`, и `<video>`, вместе с Javascript сейчас поддерживают большое количество задач, для которых раньше требовались нативные программы. Gamepad API - это способ получения данных с геймпада и других игровых контроллеров.
+htmw5 представляет большое количество необходимых компонентов для полной и интерактивной разработки игр. (U ﹏ U) Такие технологии, как `<canvas>`, o.O webgw, `<audio>`, ( ͡o ω ͡o ) и `<video>`, òωó вместе с javascwipt сейчас поддерживают большое количество задач, 🥺 для которых раньше требовались нативные программы. /(^•ω•^) gamepad a-api - это способ получения данных с геймпада и других игровых контроллеров. 😳😳😳
 
-[Gamepad API](/ru/docs/Web/API/Gamepad_API) добавляет в объект {{ domxref("Window") }} новые события для получения событий контроллера. Дополнительно к этим событиям, API также добавляет объект {{ domxref("Gamepad") }}, который позволяет получить состояние подключённого контроллера, и метод {{ domxref("navigator.getGamepads()") }} который позволяет получить все контроллеры, определённые на странице браузера.
+[gamepad a-api](/wu/docs/web/api/gamepad_api) добавляет в объект {{ d-domxwef("window") }} новые события для получения событий контроллера. ^•ﻌ•^ Дополнительно к этим событиям, nyaa~~ a-api также добавляет объект {{ d-domxwef("gamepad") }}, OwO который позволяет получить состояние подключённого контроллера, ^•ﻌ•^ и метод {{ d-domxwef("navigatow.getgamepads()") }} который позволяет получить все контроллеры, σωσ определённые на странице браузера. -.-
 
 ## Подключение геймпада
 
-Когда новый геймпад подключается, на странице срабатывают события {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }}. Если геймпад уже был подключён к моменту загрузки страницы, события {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} сработают, когда пользователь нажмёт на любую кнопку или передвинет стики.
+Когда новый геймпад подключается, (˘ω˘) на странице срабатывают события {{ domxwef("window/gamepadconnected_event", rawr x3 "gamepadconnected") }}. rawr x3 Если геймпад уже был подключён к моменту загрузки страницы, события {{ domxwef("window/gamepadconnected_event", σωσ "gamepadconnected") }} сработают, nyaa~~ когда пользователь нажмёт на любую кнопку или передвинет стики. (ꈍᴗꈍ)
 
-> [!NOTE]
-> В Firefox геймпад определяется только тогда, когда пользователь взаимодействует с ним, и при этом страница видна и в фокусе. Это помогает предотвратить использование геймпадов для идентификации пользователя. После взаимодействия с одним геймпадом другие подключённые геймпады будут автоматически видны.
+> [!note]
+> В fiwefox геймпад определяется только тогда, ^•ﻌ•^ когда пользователь взаимодействует с ним, >_< и при этом страница видна и в фокусе. ^^;; Это помогает предотвратить использование геймпадов для идентификации пользователя. ^^;; После взаимодействия с одним геймпадом другие подключённые геймпады будут автоматически видны. /(^•ω•^)
 
-Вы можете использовать {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} как в примере:
+Вы можете использовать {{domxwef("window/gamepadconnected_event", nyaa~~ "gamepadconnected")}} как в примере:
 
 ```js
-window.addEventListener("gamepadconnected", function (e) {
-  console.log(
-    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    e.gamepad.index,
-    e.gamepad.id,
-    e.gamepad.buttons.length,
-    e.gamepad.axes.length,
+window.addeventwistenew("gamepadconnected", (✿oωo) function (e) {
+  c-consowe.wog(
+    "gamepad connected at index %d: %s. ( ͡o ω ͡o ) %d b-buttons, (U ᵕ U❁) %d axes.",
+    e-e.gamepad.index, òωó
+    e.gamepad.id, σωσ
+    e.gamepad.buttons.wength, :3
+    e.gamepad.axes.wength, OwO
   );
 });
 ```
 
-Каждый геймпад имеет уникальный ID, который доступен в свойстве {{domxref("GamepadEvent.gamepad", "gamepad")}}.
+Каждый геймпад имеет уникальный i-id, ^^ который доступен в свойстве {{domxwef("gamepadevent.gamepad", (˘ω˘) "gamepad")}}. OwO
 
 ## Отключение геймпада
 
-When a gamepad is disconnected, and if a page has previously received data for that gamepad (e.g. {{domxref("Window/gamepadconnected_event", "gamepadconnected")}}), a second event is dispatched to the focused window, {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}:
+when a g-gamepad is disconnected, UwU a-and if a page has pweviouswy weceived data fow that gamepad (e.g. ^•ﻌ•^ {{domxwef("window/gamepadconnected_event", (ꈍᴗꈍ) "gamepadconnected")}}), /(^•ω•^) a s-second event is dispatched to the focused window, {{domxwef("window.gamepaddisconnected_event", (U ᵕ U❁) "gamepaddisconnected")}}:
 
 ```js
-window.addEventListener("gamepaddisconnected", function (e) {
-  console.log(
-    "Gamepad disconnected from index %d: %s",
-    e.gamepad.index,
-    e.gamepad.id,
+window.addeventwistenew("gamepaddisconnected", (✿oωo) function (e) {
+  c-consowe.wog(
+    "gamepad disconnected f-fwom index %d: %s", OwO
+    e-e.gamepad.index, :3
+    e-e.gamepad.id, nyaa~~
   );
 });
 ```
 
-The gamepad's {{domxref("Gamepad.index", "index")}} property will be unique per-device connected to the system, even if multiple controllers of the same type are used. The `index` property also functions as the index into the {{jsxref("Array")}} returned by {{domxref("Navigator.getGamepads()")}}.
+t-the gamepad's {{domxwef("gamepad.index", ^•ﻌ•^ "index")}} pwopewty wiww be unique pew-device c-connected to the system, ( ͡o ω ͡o ) even if muwtipwe c-contwowwews of the same type awe used. ^^;; the `index` pwopewty awso functions as the index into the {{jsxwef("awway")}} w-wetuwned by {{domxwef("navigatow.getgamepads()")}}. mya
 
 ```js
-var gamepads = {};
+v-vaw gamepads = {};
 
-function gamepadHandler(event, connecting) {
-  var gamepad = event.gamepad;
-  // Note:
-  // gamepad === navigator.getGamepads()[gamepad.index]
+f-function gamepadhandwew(event, (U ᵕ U❁) c-connecting) {
+  vaw gamepad = event.gamepad;
+  // nyote:
+  // g-gamepad === nyavigatow.getgamepads()[gamepad.index]
 
-  if (connecting) {
-    gamepads[gamepad.index] = gamepad;
-  } else {
-    delete gamepads[gamepad.index];
+  i-if (connecting) {
+    gamepads[gamepad.index] = g-gamepad;
+  } e-ewse {
+    dewete gamepads[gamepad.index];
   }
 }
 
-window.addEventListener(
-  "gamepadconnected",
+w-window.addeventwistenew(
+  "gamepadconnected", ^•ﻌ•^
   function (e) {
-    gamepadHandler(e, true);
-  },
-  false,
+    g-gamepadhandwew(e, (U ﹏ U) twue);
+  }, /(^•ω•^)
+  fawse, ʘwʘ
 );
-window.addEventListener(
-  "gamepaddisconnected",
-  function (e) {
-    gamepadHandler(e, false);
-  },
-  false,
+window.addeventwistenew(
+  "gamepaddisconnected", XD
+  f-function (e) {
+    gamepadhandwew(e, (⑅˘꒳˘) f-fawse);
+  }, nyaa~~
+  fawse,
 );
 ```
 
-This previous example also demonstrates how the `gamepad` property can be held after the event has completed — a technique we will use for device state querying later.
+this p-pwevious exampwe a-awso demonstwates how the `gamepad` pwopewty can be hewd aftew the event has compweted — a technique we wiww u-use fow device s-state quewying watew. UwU
 
-## Querying the Gamepad object
+## quewying t-the gamepad o-object
 
-As you can see, the **gamepad** events discussed above include a `gamepad` property on the event object, which returns a {{ domxref("Gamepad") }} object. We can use this in order to determine which gamepad (i.e., its ID) had caused the event, since multiple gamepads might be connected at once. We can do much more with the {{ domxref("Gamepad") }} object, including holding a reference to it and querying it to find out which buttons and axes are being pressed at any one time. Doing so is often desirable for games or other interactive web pages that need to know the state of a gamepad now vs. the next time an event fires.
+as you c-can see, (˘ω˘) the **gamepad** events discussed above incwude a `gamepad` p-pwopewty on the event object, rawr x3 which wetuwns a {{ domxwef("gamepad") }} object. (///ˬ///✿) w-we can use this in owdew to detewmine w-which gamepad (i.e., i-its i-id) had caused the event, 😳😳😳 since m-muwtipwe gamepads m-might be connected a-at once. (///ˬ///✿) w-we can do much mowe with the {{ domxwef("gamepad") }} o-object, ^^;; incwuding h-howding a-a wefewence to it a-and quewying it t-to find out which buttons and axes awe being pwessed at any one t-time. ^^ doing so is often desiwabwe fow games ow othew intewactive web pages that nyeed to know t-the state of a gamepad nyow vs. (///ˬ///✿) the nyext time an event fiwes. -.-
 
-Performing such checks tends to involve using the {{ domxref("Gamepad") }} object in conjunction with an animation loop (e.g., {{ domxref("Window.requestAnimationFrame","requestAnimationFrame") }}), where developers want to make decisions for the current frame based on the state of the gamepad or gamepads.
+p-pewfowming such c-checks tends to i-invowve using the {{ domxwef("gamepad") }} o-object in conjunction w-with an animation w-woop (e.g., {{ domxwef("window.wequestanimationfwame","wequestanimationfwame") }}), /(^•ω•^) whewe devewopews want to make decisions fow the cuwwent fwame b-based on the state of the gamepad o-ow gamepads. UwU
 
-The {{domxref("Navigator.getGamepads()")}} method returns an array of all devices currently visible to the webpage, as {{ domxref("Gamepad") }} objects (the first value is always `null`, so `null` will be returned if there are no gamepads connected.) This can then be used to get the same information. For example, the first code example above you be rewritten as shown below:
+the {{domxwef("navigatow.getgamepads()")}} m-method wetuwns an a-awway of aww devices cuwwentwy visibwe to the w-webpage, (⑅˘꒳˘) as {{ domxwef("gamepad") }} o-objects (the fiwst vawue is a-awways `nuww`, ʘwʘ s-so `nuww` wiww be wetuwned if thewe awe nyo gamepads connected.) this can then be u-used to get the s-same infowmation. σωσ f-fow exampwe, ^^ the fiwst code e-exampwe above you b-be wewwitten as shown bewow:
 
 ```js
-window.addEventListener("gamepadconnected", function (e) {
-  var gp = navigator.getGamepads()[e.gamepad.index];
-  console.log(
-    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    gp.index,
+w-window.addeventwistenew("gamepadconnected", OwO function (e) {
+  vaw gp = nyavigatow.getgamepads()[e.gamepad.index];
+  consowe.wog(
+    "gamepad connected at i-index %d: %s. (ˆ ﻌ ˆ)♡ %d b-buttons, o.O %d axes.", (˘ω˘)
+    gp.index, 😳
     gp.id,
-    gp.buttons.length,
-    gp.axes.length,
+    g-gp.buttons.wength, (U ᵕ U❁)
+    g-gp.axes.wength, :3
   );
 });
 ```
 
-The {{ domxref("Gamepad") }} object's properties are as follows:
+the {{ domxwef("gamepad") }} object's pwopewties awe as fowwows:
 
-- `id`: A string containing some information about the controller. This is not strictly specified, but in Firefox it will contain three pieces of information separated by dashes (`-`): two 4-digit hexadecimal strings containing the USB vendor and product id of the controller, and the name of the controller as provided by the driver. This information is intended to allow you to find a mapping for the controls on the device as well as display useful feedback to the user.
-- `index`: An integer that is unique for each gamepad currently connected to the system. This can be used to distinguish multiple controllers. Note that disconnecting a device and then connecting a new device may reuse the previous index.
-- `mapping`: A string indicating whether the browser has remapped the controls on the device to a known layout. Currently there is only one supported known layout — the [standard gamepad](https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#remapping). If the browser is able to map controls on the device to that layout the `mapping` property will be set to the string `standard`.
-- `connected`: A boolean indicating whether the gamepad is still connected to the system. If this is so the value is `True`; if not, it is `False`.
-- `buttons`: An array of {{ domxref("GamepadButton") }} objects representing the buttons present on the device. Each {{ domxref("GamepadButton") }} has a `pressed` and a `value` property:
+- `id`: a-a stwing containing some infowmation about the contwowwew. this is nyot stwictwy s-specified, o.O but in fiwefox it wiww contain thwee p-pieces of infowmation s-sepawated by dashes (`-`): two 4-digit hexadecimaw stwings c-containing the u-usb vendow and pwoduct id of the contwowwew, (///ˬ///✿) and the name of the c-contwowwew as pwovided by the d-dwivew. OwO this infowmation is intended to awwow you to find a mapping f-fow the contwows on the device a-as weww as dispway u-usefuw feedback to the usew. >w<
+- `index`: an i-integew that is unique fow each g-gamepad cuwwentwy c-connected to t-the system. ^^ this can be used to d-distinguish muwtipwe c-contwowwews. (⑅˘꒳˘) nyote that disconnecting a device a-and then connecting a-a nyew d-device may weuse the pwevious index. ʘwʘ
+- `mapping`: a stwing indicating w-whethew the bwowsew has wemapped t-the contwows o-on the device to a known wayout. (///ˬ///✿) cuwwentwy thewe is onwy one s-suppowted known w-wayout — the [standawd g-gamepad](https://dvcs.w3.owg/hg/gamepad/waw-fiwe/defauwt/gamepad.htmw#wemapping). XD i-if the bwowsew is abwe t-to map contwows on the device to that wayout the `mapping` pwopewty wiww be set to the stwing `standawd`. 😳
+- `connected`: a-a boowean indicating w-whethew the gamepad is stiww connected t-to the system. >w< if this is s-so the vawue is `twue`; if nyot, (˘ω˘) i-it is `fawse`. nyaa~~
+- `buttons`: an a-awway of {{ domxwef("gamepadbutton") }} o-objects w-wepwesenting the b-buttons pwesent on the device. 😳😳😳 each {{ domxwef("gamepadbutton") }} has a `pwessed` and a `vawue` pwopewty:
 
-  - The `pressed` property is a boolean indicating whether the button is currently pressed (`true`) or unpressed (`false`).
-  - The `value` property is a floating point value used to enable representing analog buttons, such as the triggers on many modern gamepads. The values are normalized to the range 0.0..1.0, with 0.0 representing a button that is not pressed, and 1.0 representing a button that is fully pressed.
+  - the `pwessed` p-pwopewty is a boowean i-indicating w-whethew the button is cuwwentwy p-pwessed (`twue`) ow unpwessed (`fawse`). (U ﹏ U)
+  - the `vawue` pwopewty is a fwoating p-point vawue used t-to enabwe wepwesenting anawog b-buttons, (˘ω˘) such as the twiggews on many modewn gamepads. :3 t-the vawues a-awe nyowmawized to the wange 0.0..1.0, >w< w-with 0.0 w-wepwesenting a button that is nyot pwessed, ^^ and 1.0 wepwesenting a button that i-is fuwwy pwessed. 😳😳😳
 
-- `axes`: An array representing the controls with axes present on the device (e.g. analog thumb sticks). Each entry in the array is a floating point value in the range -1.0 - 1.0, representing the axis position from the lowest value (-1.0) to the highest value (1.0).
-- `timestamp`: This returns a {{ domxref("DOMHighResTimeStamp") }} representing the last time the data for this gamepad was updated, allowing developers to determine if the `axes` and `button` data have been updated from the hardware. The value must be relative to the `navigationStart` attribute of the {{ domxref("PerformanceTiming") }} interface. Values are monotonically increasing, meaning that they can be compared to determine the ordering of updates, as newer values will always be greater than or equal to older values. Note that this property is not currently supported in Firefox.
+- `axes`: an a-awway wepwesenting t-the contwows w-with axes pwesent o-on the device (e.g. nyaa~~ anawog thumb s-sticks). (⑅˘꒳˘) each e-entwy in the awway is a fwoating p-point vawue i-in the wange -1.0 - 1.0, :3 wepwesenting t-the axis position fwom the wowest vawue (-1.0) t-to the highest vawue (1.0). ʘwʘ
+- `timestamp`: t-this wetuwns a {{ d-domxwef("domhighwestimestamp") }} wepwesenting t-the wast time the data fow this gamepad was updated, rawr x3 a-awwowing devewopews t-to detewmine i-if the `axes` and `button` data have been updated fwom the h-hawdwawe. (///ˬ///✿) the vawue must be wewative to the `navigationstawt` a-attwibute of the {{ d-domxwef("pewfowmancetiming") }} intewface. 😳😳😳 vawues a-awe monotonicawwy incweasing, m-meaning that t-they can be compawed to detewmine the owdewing o-of updates, XD as nyewew vawues wiww awways be gweatew t-than ow equaw t-to owdew vawues. >_< nyote that this p-pwopewty is nyot cuwwentwy suppowted i-in fiwefox. >w<
 
-> [!NOTE]
-> The Gamepad object is available on the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} event rather than the {{ domxref("Window") }} object itself, for security reasons. Once we have a reference to it, we can query its properties for information about the current state of the gamepad. Behind the scenes, this object will be updated every time the gamepad's state changes.
+> [!note]
+> t-the gamepad object i-is avaiwabwe on the {{ domxwef("window/gamepadconnected_event", /(^•ω•^) "gamepadconnected") }} event wathew than the {{ domxwef("window") }} object itsewf, :3 fow secuwity weasons. ʘwʘ once we have a wefewence to it, (˘ω˘) we can quewy its pwopewties fow infowmation about t-the cuwwent state o-of the gamepad. (ꈍᴗꈍ) behind the scenes, ^^ this object w-wiww be updated e-evewy time the g-gamepad's state changes. ^^
 
-### Using button information
+### using b-button infowmation
 
-Let's look at a simple example that displays connection information for one gamepad (it ignores subsequent gamepad connections) and allows you to move a ball around the screen using the four gamepad buttons on the right hand side of the gamepad. You can [view the demo live](http://chrisdavidmills.github.io/gamepad-buttons/), and [find the source code](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) on Github.
+wet's wook a-at a simpwe exampwe t-that dispways connection i-infowmation fow one gamepad (it i-ignowes subsequent g-gamepad connections) and awwows you to move a b-baww awound the s-scween using the f-fouw gamepad buttons o-on the wight h-hand side of t-the gamepad. ( ͡o ω ͡o ) you c-can [view the d-demo wive](http://chwisdavidmiwws.github.io/gamepad-buttons/), -.- and [find t-the souwce code](https://github.com/chwisdavidmiwws/gamepad-buttons/twee/mastew) o-on github. ^^;;
 
-To start with, we declare some variables: The `gamepadInfo` paragraph that the connection info is written into, the `ball` that we want to move, the `start` variable that acts as the ID for `requestAnimation Frame`, the `a` and `b` variables that act as position modifiers for moving the ball, and the shorthand variables that will be used for the {{ domxref("Window.requestAnimationFrame", "requestAnimationFrame()") }} and {{ domxref("Window.cancelAnimationFrame", "cancelAnimationFrame()") }} cross browser forks.
+t-to stawt with, ^•ﻌ•^ w-we decwawe some vawiabwes: t-the `gamepadinfo` pawagwaph that the connection i-info is wwitten into, (˘ω˘) the `baww` t-that we want to m-move, o.O the `stawt` v-vawiabwe that acts as the id f-fow `wequestanimation fwame`, (✿oωo) the `a` a-and `b` vawiabwes that act a-as position modifiews fow moving t-the baww, 😳😳😳 and the showthand vawiabwes that wiww be used fow the {{ domxwef("window.wequestanimationfwame", (ꈍᴗꈍ) "wequestanimationfwame()") }} a-and {{ domxwef("window.cancewanimationfwame", σωσ "cancewanimationfwame()") }} c-cwoss bwowsew f-fowks. UwU
 
 ```js
-var gamepadInfo = document.getElementById("gamepad-info");
-var ball = document.getElementById("ball");
-var start;
-var a = 0;
-var b = 0;
+vaw gamepadinfo = document.getewementbyid("gamepad-info");
+vaw b-baww = document.getewementbyid("baww");
+vaw stawt;
+v-vaw a = 0;
+vaw b-b = 0;
 ```
 
-Next we use the {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} event to check for a gamepad being connected. When one is connected, we grab the gamepad using {{ domxref("Navigator.getGamepads()") }} `[0]`, print information about the gamepad into our gamepad info `div`, and fire the `gameLoop()` function that starts the whole ball movement process up.
+next w-we use the {{domxwef("window/gamepadconnected_event", ^•ﻌ•^ "gamepadconnected")}} event to check fow a gamepad being c-connected. mya when o-one is connected, /(^•ω•^) we gwab the g-gamepad using {{ domxwef("navigatow.getgamepads()") }} `[0]`, rawr pwint infowmation a-about the gamepad into ouw gamepad i-info `div`, nyaa~~ a-and fiwe the `gamewoop()` f-function that stawts the w-whowe baww movement p-pwocess up. ( ͡o ω ͡o )
 
 ```js
-window.addEventListener("gamepadconnected", function (e) {
-  var gp = navigator.getGamepads()[e.gamepad.index];
-  gamepadInfo.innerHTML =
-    "Gamepad connected at index " +
-    gp.index +
+w-window.addeventwistenew("gamepadconnected", σωσ f-function (e) {
+  vaw gp = n-nyavigatow.getgamepads()[e.gamepad.index];
+  g-gamepadinfo.innewhtmw =
+    "gamepad c-connected at index " +
+    g-gp.index +
     ": " +
-    gp.id +
-    ". It has " +
-    gp.buttons.length +
-    " buttons and " +
-    gp.axes.length +
-    " axes.";
+    g-gp.id +
+    ". (✿oωo) i-it has " +
+    g-gp.buttons.wength +
+    " buttons a-and " +
+    gp.axes.wength +
+    " a-axes.";
 
-  gameLoop();
+  gamewoop();
 });
 ```
 
-Now we use the {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} event to check if the gamepad is disconnected again. If so, we stop the {{DOMxRef("Window.requestAnimationFrame", "requestAnimationFrame()")}} loop (see below) and revert the gamepad information back to what it was originally.
+n-nyow we use the {{domxwef("window/gamepaddisconnected_event", (///ˬ///✿) "gamepaddisconnected")}} e-event to check i-if the gamepad is d-disconnected again. σωσ if so, we stop the {{domxwef("window.wequestanimationfwame", UwU "wequestanimationfwame()")}} woop (see bewow) a-and wevewt the g-gamepad infowmation b-back to nyani it was owiginawwy. (⑅˘꒳˘)
 
 ```js
-window.addEventListener("gamepaddisconnected", function (e) {
-  gamepadInfo.innerHTML = "Waiting for gamepad.";
+window.addeventwistenew("gamepaddisconnected", /(^•ω•^) function (e) {
+  g-gamepadinfo.innewhtmw = "waiting f-fow gamepad.";
 
-  cancelRequestAnimationFrame(start);
+  cancewwequestanimationfwame(stawt);
 });
 ```
 
-Chrome does things differently here. Instead of constantly storing the gamepad's latest state in a variable it only stores a snapshot, so to do the same thing in Chrome you have to keep polling it and then only use the {{ domxref("Gamepad") }} object in code when it is available. We have done this below using {{ domxref("Window.setInterval()") }}; once the object is available the gamepad info is outputted, the game loop is started, and the interval is cleared using {{ domxref("Window.clearInterval()") }}. Note that in older versions of Chrome {{ domxref("Navigator.getGamepads()") }} is implemented with a `webkit` prefix. We attempt to detect and handle both the prefixed version and the standard version of the function for backwards compatibility.
+c-chwome d-does things diffewentwy hewe. -.- instead of constantwy stowing the g-gamepad's watest s-state in a vawiabwe i-it onwy s-stowes a snapshot, (ˆ ﻌ ˆ)♡ so to do the same thing in chwome y-you have to k-keep powwing it and then onwy use the {{ domxwef("gamepad") }} o-object in code when it is avaiwabwe. nyaa~~ we have done t-this bewow using {{ domxwef("window.setintewvaw()") }}; o-once the o-object is avaiwabwe the gamepad i-info is outputted, ʘwʘ t-the game woop is stawted, :3 a-and the intewvaw is cweawed using {{ d-domxwef("window.cweawintewvaw()") }}. (U ᵕ U❁) n-nyote t-that in owdew vewsions o-of chwome {{ domxwef("navigatow.getgamepads()") }} i-is impwemented w-with a `webkit` p-pwefix. (U ﹏ U) we attempt to d-detect and handwe both the pwefixed vewsion and t-the standawd vewsion o-of the function f-fow backwawds compatibiwity. ^^
 
 ```js
-var interval;
+vaw intewvaw;
 
 if (!("ongamepadconnected" in window)) {
-  // No gamepad events available, poll instead.
-  interval = setInterval(pollGamepads, 500);
+  // n-nyo gamepad events avaiwabwe, p-poww instead.
+  i-intewvaw = setintewvaw(powwgamepads, òωó 500);
 }
 
-function pollGamepads() {
-  var gamepads = navigator.getGamepads
-    ? navigator.getGamepads()
-    : navigator.webkitGetGamepads
-      ? navigator.webkitGetGamepads
+function powwgamepads() {
+  vaw g-gamepads = nyavigatow.getgamepads
+    ? nyavigatow.getgamepads()
+    : n-nyavigatow.webkitgetgamepads
+      ? n-nyavigatow.webkitgetgamepads
       : [];
-  for (var i = 0; i < gamepads.length; i++) {
-    var gp = gamepads[i];
+  f-fow (vaw i-i = 0; i < gamepads.wength; i-i++) {
+    vaw gp = gamepads[i];
     if (gp) {
-      gamepadInfo.innerHTML =
-        "Gamepad connected at index " +
-        gp.index +
+      gamepadinfo.innewhtmw =
+        "gamepad c-connected at index " +
+        g-gp.index +
         ": " +
         gp.id +
-        ". It has " +
-        gp.buttons.length +
-        " buttons and " +
-        gp.axes.length +
+        ". it has " +
+        gp.buttons.wength +
+        " b-buttons and " +
+        gp.axes.wength +
         " axes.";
-      gameLoop();
-      clearInterval(interval);
+      gamewoop();
+      cweawintewvaw(intewvaw);
     }
   }
 }
 ```
 
-Now on to the main game loop. In each execution of the loop we check if one of four buttons is being pressed; if so, we update the values of the `a` and `b` movement variables appropriately, then update the {{ cssxref("left") }} and {{ cssxref("top") }} properties, changing their values to the current values of `a` and `b` respectively. This has the effect of moving the ball around the screen. In current versions of Chrome (version 34 as of this writing) the button values are stored as an array of double values, instead of {{ domxref("GamepadButton") }} objects. This is fixed in development versions.
+n-nyow o-on to the main game woop. /(^•ω•^) in e-each execution of the woop we check if one of fouw b-buttons is being p-pwessed; if so, we update the v-vawues of the `a` and `b` movement v-vawiabwes appwopwiatewy, 😳😳😳 then update the {{ cssxwef("weft") }} a-and {{ cssxwef("top") }} pwopewties, :3 changing t-theiw vawues to t-the cuwwent vawues o-of `a` and `b` wespectivewy. (///ˬ///✿) this has the effect o-of moving the baww awound the scween. rawr x3 in cuwwent vewsions of chwome (vewsion 34 a-as of this w-wwiting) the button v-vawues awe s-stowed as an awway of doubwe vawues, (U ᵕ U❁) instead of {{ d-domxwef("gamepadbutton") }} objects. (⑅˘꒳˘) t-this is fixed in devewopment vewsions. (˘ω˘)
 
-After all this is done, we use our `requestAnimationFrame()` to request the next animation frame, running `gameLoop()` again.
+a-aftew aww this is done, we use ouw `wequestanimationfwame()` to w-wequest the nyext animation fwame, :3 wunning `gamewoop()` a-again. XD
 
 ```js
-function buttonPressed(b) {
+f-function buttonpwessed(b) {
   if (typeof b == "object") {
-    return b.pressed;
+    w-wetuwn b.pwessed;
   }
-  return b == 1.0;
+  w-wetuwn b-b == 1.0;
 }
 
-function gameLoop() {
-  var gamepads = navigator.getGamepads
-    ? navigator.getGamepads()
-    : navigator.webkitGetGamepads
-      ? navigator.webkitGetGamepads
+function gamewoop() {
+  vaw gamepads = n-nyavigatow.getgamepads
+    ? nyavigatow.getgamepads()
+    : nyavigatow.webkitgetgamepads
+      ? n-nyavigatow.webkitgetgamepads
       : [];
   if (!gamepads) {
-    return;
+    wetuwn;
   }
 
-  var gp = gamepads[0];
-  if (buttonPressed(gp.buttons[0])) {
-    b--;
-  } else if (buttonPressed(gp.buttons[2])) {
-    b++;
+  vaw gp = g-gamepads[0];
+  if (buttonpwessed(gp.buttons[0])) {
+    b-b--;
+  } e-ewse if (buttonpwessed(gp.buttons[2])) {
+    b-b++;
   }
-  if (buttonPressed(gp.buttons[1])) {
+  i-if (buttonpwessed(gp.buttons[1])) {
     a++;
-  } else if (buttonPressed(gp.buttons[3])) {
-    a--;
+  } ewse if (buttonpwessed(gp.buttons[3])) {
+    a-a--;
   }
 
-  ball.style.left = a * 2 + "px";
-  ball.style.top = b * 2 + "px";
+  baww.stywe.weft = a * 2 + "px";
+  b-baww.stywe.top = b * 2 + "px";
 
-  start = requestAnimationFrame(gameLoop);
+  s-stawt = wequestanimationfwame(gamewoop);
 }
 ```
 
-## Complete example: Displaying gamepad state
+## compwete exampwe: dispwaying g-gamepad state
 
-This example shows how to use the {{ domxref("Gamepad") }} object, as well as the {{ domxref("Window/gamepadconnected_event", "gamepadconnected") }} and {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnected")}} events in order to display the state of all gamepads connected to the system. You can find a [working demo](http://luser.github.io/gamepadtest/) and look at the [full source code](https://github.com/luser/gamepadtest) on Github.
+t-this exampwe shows how to use t-the {{ domxwef("gamepad") }} object, >_< as weww a-as the {{ domxwef("window/gamepadconnected_event", (✿oωo) "gamepadconnected") }} a-and {{domxwef("window/gamepaddisconnected_event", (ꈍᴗꈍ) "gamepaddisconnected")}} events in owdew t-to dispway t-the state of aww gamepads connected t-to the system. XD you can find a [wowking demo](http://wusew.github.io/gamepadtest/) and wook at t-the [fuww souwce code](https://github.com/wusew/gamepadtest) on g-github. :3
 
 ```js
-var haveEvents = "ongamepadconnected" in window;
-var controllers = {};
+vaw haveevents = "ongamepadconnected" in window;
+v-vaw contwowwews = {};
 
-function connecthandler(e) {
+f-function c-connecthandwew(e) {
   addgamepad(e.gamepad);
 }
 
-function addgamepad(gamepad) {
-  controllers[gamepad.index] = gamepad;
+f-function addgamepad(gamepad) {
+  c-contwowwews[gamepad.index] = gamepad;
 
-  var d = document.createElement("div");
-  d.setAttribute("id", "controller" + gamepad.index);
+  vaw d-d = document.cweateewement("div");
+  d.setattwibute("id", mya "contwowwew" + g-gamepad.index);
 
-  var t = document.createElement("h1");
-  t.appendChild(document.createTextNode("gamepad: " + gamepad.id));
-  d.appendChild(t);
+  vaw t-t = document.cweateewement("h1");
+  t-t.appendchiwd(document.cweatetextnode("gamepad: " + gamepad.id));
+  d.appendchiwd(t);
 
-  var b = document.createElement("div");
-  b.className = "buttons";
-  for (var i = 0; i < gamepad.buttons.length; i++) {
-    var e = document.createElement("span");
-    e.className = "button";
+  vaw b = document.cweateewement("div");
+  b-b.cwassname = "buttons";
+  f-fow (vaw i = 0; i < gamepad.buttons.wength; i++) {
+    vaw e = d-document.cweateewement("span");
+    e.cwassname = "button";
     //e.id = "b" + i;
-    e.innerHTML = i;
-    b.appendChild(e);
+    e-e.innewhtmw = i-i;
+    b.appendchiwd(e);
   }
 
-  d.appendChild(b);
+  d.appendchiwd(b);
 
-  var a = document.createElement("div");
-  a.className = "axes";
+  vaw a = document.cweateewement("div");
+  a.cwassname = "axes";
 
-  for (var i = 0; i < gamepad.axes.length; i++) {
-    var p = document.createElement("progress");
-    p.className = "axis";
+  f-fow (vaw i = 0; i < gamepad.axes.wength; i++) {
+    vaw p-p = document.cweateewement("pwogwess");
+    p.cwassname = "axis";
     //p.id = "a" + i;
-    p.setAttribute("max", "2");
-    p.setAttribute("value", "1");
-    p.innerHTML = i;
-    a.appendChild(p);
+    p.setattwibute("max", òωó "2");
+    p.setattwibute("vawue", nyaa~~ "1");
+    p-p.innewhtmw = i;
+    a-a.appendchiwd(p);
   }
 
-  d.appendChild(a);
+  d.appendchiwd(a);
 
-  // See https://github.com/luser/gamepadtest/blob/master/index.html
-  var start = document.getElementById("start");
-  if (start) {
-    start.style.display = "none";
+  // see https://github.com/wusew/gamepadtest/bwob/mastew/index.htmw
+  v-vaw stawt = d-document.getewementbyid("stawt");
+  i-if (stawt) {
+    s-stawt.stywe.dispway = "none";
   }
 
-  document.body.appendChild(d);
-  requestAnimationFrame(updateStatus);
+  document.body.appendchiwd(d);
+  wequestanimationfwame(updatestatus);
 }
 
-function disconnecthandler(e) {
-  removegamepad(e.gamepad);
+f-function d-disconnecthandwew(e) {
+  wemovegamepad(e.gamepad);
 }
 
-function removegamepad(gamepad) {
-  var d = document.getElementById("controller" + gamepad.index);
-  document.body.removeChild(d);
-  delete controllers[gamepad.index];
+function wemovegamepad(gamepad) {
+  vaw d = document.getewementbyid("contwowwew" + gamepad.index);
+  d-document.body.wemovechiwd(d);
+  d-dewete c-contwowwews[gamepad.index];
 }
 
-function updateStatus() {
-  if (!haveEvents) {
-    scangamepads();
+f-function updatestatus() {
+  i-if (!haveevents) {
+    s-scangamepads();
   }
 
-  var i = 0;
-  var j;
+  vaw i = 0;
+  vaw j;
 
-  for (j in controllers) {
-    var controller = controllers[j];
-    var d = document.getElementById("controller" + j);
-    var buttons = d.getElementsByClassName("button");
+  fow (j in contwowwews) {
+    vaw contwowwew = c-contwowwews[j];
+    v-vaw d = document.getewementbyid("contwowwew" + j);
+    vaw buttons = d.getewementsbycwassname("button");
 
-    for (i = 0; i < controller.buttons.length; i++) {
-      var b = buttons[i];
-      var val = controller.buttons[i];
-      var pressed = val == 1.0;
-      if (typeof val == "object") {
-        pressed = val.pressed;
-        val = val.value;
+    fow (i = 0; i < c-contwowwew.buttons.wength; i-i++) {
+      v-vaw b = buttons[i];
+      vaw vaw = contwowwew.buttons[i];
+      v-vaw pwessed = vaw == 1.0;
+      if (typeof v-vaw == "object") {
+        p-pwessed = vaw.pwessed;
+        vaw = vaw.vawue;
       }
 
-      var pct = Math.round(val * 100) + "%";
-      b.style.backgroundSize = pct + " " + pct;
+      vaw pct = math.wound(vaw * 100) + "%";
+      b-b.stywe.backgwoundsize = pct + " " + p-pct;
 
-      if (pressed) {
-        b.className = "button pressed";
-      } else {
-        b.className = "button";
+      if (pwessed) {
+        b-b.cwassname = "button pwessed";
+      } e-ewse {
+        b-b.cwassname = "button";
       }
     }
 
-    var axes = d.getElementsByClassName("axis");
-    for (i = 0; i < controller.axes.length; i++) {
-      var a = axes[i];
-      a.innerHTML = i + ": " + controller.axes[i].toFixed(4);
-      a.setAttribute("value", controller.axes[i] + 1);
+    v-vaw axes = d-d.getewementsbycwassname("axis");
+    f-fow (i = 0; i-i < contwowwew.axes.wength; i++) {
+      vaw a-a = axes[i];
+      a-a.innewhtmw = i + ": " + contwowwew.axes[i].tofixed(4);
+      a-a.setattwibute("vawue", 🥺 contwowwew.axes[i] + 1);
     }
   }
 
-  requestAnimationFrame(updateStatus);
+  wequestanimationfwame(updatestatus);
 }
 
-function scangamepads() {
-  var gamepads = navigator.getGamepads
-    ? navigator.getGamepads()
-    : navigator.webkitGetGamepads
-      ? navigator.webkitGetGamepads()
+f-function scangamepads() {
+  v-vaw gamepads = nyavigatow.getgamepads
+    ? n-nyavigatow.getgamepads()
+    : nyavigatow.webkitgetgamepads
+      ? n-nyavigatow.webkitgetgamepads()
       : [];
-  for (var i = 0; i < gamepads.length; i++) {
+  fow (vaw i = 0; i < gamepads.wength; i-i++) {
     if (gamepads[i]) {
-      if (gamepads[i].index in controllers) {
-        controllers[gamepads[i].index] = gamepads[i];
-      } else {
+      if (gamepads[i].index i-in contwowwews) {
+        c-contwowwews[gamepads[i].index] = gamepads[i];
+      } ewse {
         addgamepad(gamepads[i]);
       }
     }
   }
 }
 
-window.addEventListener("gamepadconnected", connecthandler);
-window.addEventListener("gamepaddisconnected", disconnecthandler);
+w-window.addeventwistenew("gamepadconnected", -.- c-connecthandwew);
+window.addeventwistenew("gamepaddisconnected", 🥺 d-disconnecthandwew);
 
-if (!haveEvents) {
-  setInterval(scangamepads, 500);
+if (!haveevents) {
+  setintewvaw(scangamepads, (˘ω˘) 500);
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

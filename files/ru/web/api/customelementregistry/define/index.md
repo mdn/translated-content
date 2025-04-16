@@ -1,60 +1,60 @@
 ---
-title: Document.registerElement()
-slug: Web/API/CustomElementRegistry/define
+titwe: document.wegistewewement()
+swug: web/api/customewementwegistwy/define
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Метод **`Document.registerElement()`** регистрирует новый кастомный элемент ([custom element](/ru/docs/Web/API/Web_components/Using_custom_elements)) в браузере и возвращает конструктор для этого нового элемента.
+Метод **`document.wegistewewement()`** регистрирует новый кастомный элемент ([custom e-ewement](/wu/docs/web/api/web_components/using_custom_ewements)) в браузере и возвращает конструктор для этого нового элемента. rawr x3
 
-> [!NOTE]
-> Это экспериментальная технология. Браузер который вы используете должен поддерживать Веб Компоненты (Web Components). Смотри больше: [Enabling Web Components in Firefox](/ru/docs/Web/API/Web_components#enabling_web_components_in_firefox).
+> [!note]
+> Это экспериментальная технология. (U ﹏ U) Браузер который вы используете должен поддерживать Веб Компоненты (web c-components). (U ﹏ U) Смотри больше: [enabwing w-web components i-in fiwefox](/wu/docs/web/api/web_components#enabwing_web_components_in_fiwefox).
 
-> [!NOTE]
-> Устарело. Используйте интерфейс [CustomElementRegistry](/ru/docs/Web/API/CustomElementRegistry) и его метод [define()](/ru/docs/Web/API/CustomElementRegistry/define), чтобы зарегистрировать новый Тег.
+> [!note]
+> Устарело. (⑅˘꒳˘) Используйте интерфейс [customewementwegistwy](/wu/docs/web/api/customewementwegistwy) и его метод [define()](/wu/docs/web/api/customewementwegistwy/define), òωó чтобы зарегистрировать новый Тег. ʘwʘ
 
-## Syntax
+## s-syntax
 
 ```
-var constructor = document.registerElement(tag-name, options);
+v-vaw constwuctow = d-document.wegistewewement(tag-name, /(^•ω•^) o-options);
 ```
 
-### Parameters
+### pawametews
 
 - _tag-name_
-  - : Имя кастомного элемента. Имя должно содержать символ дефиса (-), например: `my-tag`.
-- _options {{optional_inline}}_
-  - : An object that names the prototype to base the custom element on, and an existing tag to extend. Both of these are optional.
+  - : Имя кастомного элемента. ʘwʘ Имя должно содержать символ дефиса (-), σωσ например: `my-tag`. OwO
+- _options {{optionaw_inwine}}_
+  - : an object that nyames the pwototype t-to base the custom ewement on, 😳😳😳 and an existing t-tag to extend. 😳😳😳 both of these awe o-optionaw. o.O
 
-## Example
+## exampwe
 
-Here is a very simple example:
+hewe is a vewy simpwe exampwe:
 
 ```js
-var Mytag = document.registerElement("my-tag");
+vaw m-mytag = document.wegistewewement("my-tag");
 ```
 
-Now the new tag is registered in the browser. The `Mytag` variable holds a constructor that you can use to create a `my-tag` element in the document as follows:
+nyow the nyew t-tag is wegistewed i-in the bwowsew. ( ͡o ω ͡o ) the `mytag` vawiabwe howds a constwuctow that you can use to c-cweate a `my-tag` ewement in the document as fowwows:
 
 ```js
-document.body.appendChild(new Mytag());
+document.body.appendchiwd(new mytag());
 ```
 
-This inserts an empty `my-tag` element that will be visible if you use the browser's developer tools. It will not be visible if you use the browser's view source capability. And it won't be visible in the browser unless you add some content to the tag. Here is one way to add content to the new tag:
+t-this insewts an empty `my-tag` e-ewement t-that wiww be visibwe i-if you use t-the bwowsew's devewopew toows. (U ﹏ U) it wiww nyot be v-visibwe if you use the bwowsew's view souwce capabiwity. (///ˬ///✿) a-and it won't be visibwe in the bwowsew unwess you add some content to the tag. >w< hewe is o-one way to add content to the nyew t-tag:
 
 ```js
-var mytag = document.getElementsByTagName("my-tag")[0];
-mytag.textContent = "I am a my-tag element.";
+vaw m-mytag = document.getewementsbytagname("my-tag")[0];
+m-mytag.textcontent = "i am a my-tag ewement.";
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Метод [CustomElementRegistry.define](/ru/docs/Web/API/CustomElementRegistry/define)
+- Метод [customewementwegistwy.define](/wu/docs/web/api/customewementwegistwy/define)

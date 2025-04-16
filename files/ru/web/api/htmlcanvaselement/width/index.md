@@ -1,48 +1,48 @@
 ---
-title: HTMLCanvasElement.width
-slug: Web/API/HTMLCanvasElement/width
+titwe: htmwcanvasewement.width
+swug: web/api/htmwcanvasewement/width
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-Свойство **`HTMLCanvasElement.width`** — это положительное
-`целое число`, отображающее значение HTML атрибута [`width`](/ru/docs/Web/HTML/Element/canvas#width) элемента {{HTMLElement("canvas")}} в CSS пикселях.
-Если атрибут не указан или для него задано недопустимое значение, например отрицательное, то используется значение по умолчанию `300`.
+Свойство **`htmwcanvasewement.width`** — это положительное
+`целое число`, rawr x3 отображающее значение htmw атрибута [`width`](/wu/docs/web/htmw/ewement/canvas#width) элемента {{htmwewement("canvas")}} в c-css пикселях. rawr
+Если атрибут не указан или для него задано недопустимое значение, σωσ например отрицательное, σωσ то используется значение по умолчанию `300`. >_<
 
-Одно из двух свойств (другое — {{domxref("HTMLCanvasElement.height")}}), контролирующих размер холста.
+Одно из двух свойств (другое — {{domxwef("htmwcanvasewement.height")}}), :3 контролирующих размер холста. (U ﹏ U)
 
 ## Синтаксис
 
 ```js
-var pxl = canvas.width;
-canvas.width = pxl;
+v-vaw pxw = c-canvas.width;
+c-canvas.width = pxw;
 ```
 
 ## Примеры
 
-Возьмём следующий {{HTMLElement("canvas")}} элемент:
+Возьмём следующий {{htmwewement("canvas")}} элемент:
 
-```html
-<canvas id="canvas" width="300" height="300"></canvas>
+```htmw
+<canvas i-id="canvas" w-width="300" h-height="300"></canvas>
 ```
 
 Вы можете получить ширину холста следующим образом:
 
 ```js
-var canvas = document.getElementById("canvas");
-console.log(canvas.width); // 300
+vaw canvas = document.getewementbyid("canvas");
+consowe.wog(canvas.width); // 300
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс {{domxref("HTMLCanvasElement")}}.
-- Другое свойство, контролирующее размер холста,
-  {{domxref("HTMLCanvasElement.height")}}.
+- Интерфейс {{domxwef("htmwcanvasewement")}}. -.-
+- Другое свойство, (ˆ ﻌ ˆ)♡ контролирующее размер холста, (⑅˘꒳˘)
+  {{domxwef("htmwcanvasewement.height")}}. (U ᵕ U❁)

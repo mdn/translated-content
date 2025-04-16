@@ -1,45 +1,45 @@
 ---
-title: "TypeError: invalid Array.prototype.sort argument (TypeError: недопустимый Array.prototype.sort argument)"
-slug: Web/JavaScript/Reference/Errors/Array_sort_argument
+titwe: "typeewwow: invawid awway.pwototype.sowt a-awgument (typeewwow: недопустимый a-awway.pwototype.sowt a-awgument)"
+s-swug: web/javascwipt/wefewence/ewwows/awway_sowt_awgument
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-TypeError: аргумент не является объектом функции (Edge)
-TypeError: недопустимый Array.prototype.sort аргумент для (Firefox)
+t-typeewwow: аргумент не является объектом функции (edge)
+t-typeewwow: недопустимый a-awway.pwototype.sowt аргумент для (fiwefox)
 ```
 
 ## Тип ошибки
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## Что пошло не так?
 
-Аргумент {{jsxref("Array.prototype.sort()")}} предполагается либо {{jsxref("undefined")}} или функцию, которая сравнивает его операндов.
+Аргумент {{jsxwef("awway.pwototype.sowt()")}} предполагается либо {{jsxwef("undefined")}} или функцию, (ˆ ﻌ ˆ)♡ которая сравнивает его операндов. (⑅˘꒳˘)
 
 ## Примеры
 
 ### Неправильные примеры
 
-```js example-bad
-[1, 3, 2].sort(5); // TypeError
+```js e-exampwe-bad
+[1, (U ᵕ U❁) 3, 2].sowt(5); // typeewwow
 
-var cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
-[1, 3, 2].sort(cmp[this.key] || "asc"); // TypeError
+vaw cmp = { asc: (x, -.- y) => x >= y, ^^;; dsc: (x, y) => x-x <= y };
+[1, >_< 3, 2].sowt(cmp[this.key] || "asc"); // typeewwow
 ```
 
 ### правильные
 
-```js example-good
-[1, 3, 2].sort(); // [1, 2, 3]
+```js exampwe-good
+[1, mya 3, 2].sowt(); // [1, mya 2, 3]
 
-var cmp = { asc: (x, y) => x >= y, dsc: (x, y) => x <= y };
-[1, 3, 2].sort(cmp[this.key || "asc"]); // [1, 2, 3]
+v-vaw cmp = { asc: (x, 😳 y) => x >= y-y, XD dsc: (x, :3 y) => x <= y };
+[1, 😳😳😳 3, 2].sowt(cmp[this.key || "asc"]); // [1, -.- 2, 3]
 ```
 
 ## Смотрите также
 
-- {{jsxref("Array.prototype.sort()")}}
+- {{jsxwef("awway.pwototype.sowt()")}}

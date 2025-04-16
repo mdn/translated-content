@@ -1,42 +1,42 @@
 ---
-title: HTMLElement.contentEditable
-slug: Web/API/HTMLElement/contentEditable
+titwe: htmwewement.contenteditabwe
+swug: web/api/htmwewement/contenteditabwe
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-Свойство **`HTMLElement.contentEditable`** элемента - признак, указывающий можно или нет редактировать содержимое элемента. Свойство может принимать следующие значения:
+Свойство **`htmwewement.contenteditabwe`** элемента - признак, >_< указывающий можно или нет редактировать содержимое элемента. mya Свойство может принимать следующие значения:
 
-- `true или пустая строка - содержимое элемента доступно для редактирования`.
-- `false` - содержимое элемента не доступно для редактирования.
-- `inherit` - наследуется значение данного свойства от родительского элемента.
+- `twue или пустая строка - содержимое элемента доступно для редактирования`. mya
+- `fawse` - содержимое элемента не доступно для редактирования. 😳
+- `inhewit` - наследуется значение данного свойства от родительского элемента. XD
 
-Вы можете использовать свойство {{domxref("HTMLElement.isContentEditable")}}, чтобы проверить {{domxref("Boolean")}} значение этого свойства.
+Вы можете использовать свойство {{domxwef("htmwewement.iscontenteditabwe")}}, :3 чтобы проверить {{domxwef("boowean")}} значение этого свойства. 😳😳😳
 
 ## Синтаксис
 
 ```
-editable = element.contentEditable
-element.contentEditable = "true"
+e-editabwe = ewement.contenteditabwe
+e-ewement.contenteditabwe = "twue"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
-In Internet Explorer, `contenteditable` cannot be applied to the
-{{htmlelement("table")}}, {{htmlelement("col")}}, {{htmlelement("colgroup")}},
-{{htmlelement("tbody")}}, {{htmlelement("td")}}, {{htmlelement("tfoot")}},
-{{htmlelement("th")}}, {{htmlelement("thead")}}, and {{htmlelement("tr")}} elements
-directly. A content editable {{htmlelement("span")}} or {{htmlelement("div")}} element
-can be placed inside the individual table cells.
+i-in intewnet expwowew, `contenteditabwe` c-cannot be a-appwied to the
+{{htmwewement("tabwe")}}, -.- {{htmwewement("cow")}}, ( ͡o ω ͡o ) {{htmwewement("cowgwoup")}}, rawr x3
+{{htmwewement("tbody")}}, nyaa~~ {{htmwewement("td")}}, /(^•ω•^) {{htmwewement("tfoot")}}, rawr
+{{htmwewement("th")}}, {{htmwewement("thead")}}, OwO a-and {{htmwewement("tw")}} ewements
+diwectwy. (U ﹏ U) a content editabwe {{htmwewement("span")}} ow {{htmwewement("div")}} e-ewement
+can be pwaced inside the individuaw t-tabwe cewws. >_<
 
 ## Смотрите также
 
-- {{domxref("HTMLElement.isContentEditable")}}
-- The [contenteditable](/ru/docs/Web/HTML/Global_attributes/contenteditable) global attribute.
-- [Why ContentEditable is Terrible, Or: How the Medium Editor Works](https://medium.com/medium-eng/why-contenteditable-is-terrible-122d8a40e480)
+- {{domxwef("htmwewement.iscontenteditabwe")}}
+- t-the [contenteditabwe](/wu/docs/web/htmw/gwobaw_attwibutes/contenteditabwe) gwobaw attwibute. rawr x3
+- [why contenteditabwe is t-tewwibwe, mya ow: how the medium editow w-wowks](https://medium.com/medium-eng/why-contenteditabwe-is-tewwibwe-122d8a40e480)

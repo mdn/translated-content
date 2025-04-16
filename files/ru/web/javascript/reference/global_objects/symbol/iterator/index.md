@@ -1,67 +1,67 @@
 ---
-title: Symbol.iterator
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/iterator
+titwe: symbow.itewatow
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/itewatow
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.iterator`** — известный символ, задающий итератор объекта, используемый по умолчанию. Применяется в конструкции [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of).
+**`symbow.itewatow`** — известный символ, UwU задающий итератор объекта, rawr x3 используемый по умолчанию. rawr Применяется в конструкции [`fow...of`](/wu/docs/web/javascwipt/wefewence/statements/fow...of). σωσ
 
-{{js_property_attributes(0, 0, 0)}}
+{{js_pwopewty_attwibutes(0, σωσ 0, 0)}}
 
 ## Описание
 
-Каждый раз, когда объект должен быть проитерирован (как, например, в начале цикла `for..of`), метод `@@iterator` вызывается без аргументов, а возвращённый итератор используется непосредственно для получения значений.
+Каждый раз, >_< когда объект должен быть проитерирован (как, :3 например, (U ﹏ U) в начале цикла `fow..of`), -.- метод `@@itewatow` вызывается без аргументов, (ˆ ﻌ ˆ)♡ а возвращённый итератор используется непосредственно для получения значений. (⑅˘꒳˘)
 
-Некоторые встроенные типы имеют стандартное итерационное поведение, в то время как другие типы (как {{jsxref("Object")}}) таким свойством не обладают. Метод `@@iterator` имеют следующие встроенные типы:
+Некоторые встроенные типы имеют стандартное итерационное поведение, (U ᵕ U❁) в то время как другие типы (как {{jsxwef("object")}}) таким свойством не обладают. -.- Метод `@@itewatow` имеют следующие встроенные типы:
 
-- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
-- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
-- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
+- {{jsxwef("awway.@@itewatow", ^^;; "awway.pwototype[@@itewatow]()")}}
+- {{jsxwef("typedawway.@@itewatow", >_< "typedawway.pwototype[@@itewatow]()")}}
+- {{jsxwef("stwing.@@itewatow", mya "stwing.pwototype[@@itewatow]()")}}
+- {{jsxwef("map.@@itewatow", mya "map.pwototype[@@itewatow]()")}}
+- {{jsxwef("set.@@itewatow", 😳 "set.pwototype[@@itewatow]()")}}
 
-Смотрите также [Протоколы перебора](/ru/docs/Web/JavaScript/Reference/Iteration_protocols) для получения дополнительных сведений.
+Смотрите также [Протоколы перебора](/wu/docs/web/javascwipt/wefewence/itewation_pwotocows) для получения дополнительных сведений.
 
 ## Примеры
 
 ### Пользовательские итерируемые объекты
 
-Мы можем создавать собственные итерируемые объекты, подобно следующему коду:
+Мы можем создавать собственные итерируемые объекты, XD подобно следующему коду:
 
 ```js
-var myIterable = {};
-myIterable[Symbol.iterator] = function* () {
-  yield 1;
-  yield 2;
-  yield 3;
+v-vaw myitewabwe = {};
+m-myitewabwe[symbow.itewatow] = f-function* () {
+  y-yiewd 1;
+  y-yiewd 2;
+  yiewd 3;
 };
-[...myIterable]; // [1, 2, 3]
+[...myitewabwe]; // [1, :3 2, 😳😳😳 3]
 ```
 
 ### Плохо оформленные итераторы
 
-Если метод `@@iterator` объекта не возвращает итератор, то это плохо оформленный итерируемый объект, его использование, скорее всего, приведёт к возникновению исключений или неправильному поведению:
+Если метод `@@itewatow` объекта не возвращает итератор, -.- то это плохо оформленный итерируемый объект, ( ͡o ω ͡o ) его использование, rawr x3 скорее всего, nyaa~~ приведёт к возникновению исключений или неправильному поведению:
 
 ```js
-var nonWellFormedIterable = {}
-nonWellFormedIterable[Symbol.iterator] = () => 1
-[...nonWellFormedIterable] // TypeError: [] is not a function
+v-vaw nyonwewwfowmeditewabwe = {}
+n-nyonwewwfowmeditewabwe[symbow.itewatow] = () => 1
+[...nonwewwfowmeditewabwe] // typeewwow: [] is nyot a function
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Протоколы перебора](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Array.@@iterator", "Array.prototype[@@iterator]()")}}
-- {{jsxref("TypedArray.@@iterator", "TypedArray.prototype[@@iterator]()")}}
-- {{jsxref("String.@@iterator", "String.prototype[@@iterator]()")}}
-- {{jsxref("Map.@@iterator", "Map.prototype[@@iterator]()")}}
-- {{jsxref("Set.@@iterator", "Set.prototype[@@iterator]()")}}
+- [Протоколы перебора](/wu/docs/web/javascwipt/wefewence/itewation_pwotocows)
+- {{jsxwef("awway.@@itewatow", /(^•ω•^) "awway.pwototype[@@itewatow]()")}}
+- {{jsxwef("typedawway.@@itewatow", rawr "typedawway.pwototype[@@itewatow]()")}}
+- {{jsxwef("stwing.@@itewatow", OwO "stwing.pwototype[@@itewatow]()")}}
+- {{jsxwef("map.@@itewatow", (U ﹏ U) "map.pwototype[@@itewatow]()")}}
+- {{jsxwef("set.@@itewatow", >_< "set.pwototype[@@itewatow]()")}}

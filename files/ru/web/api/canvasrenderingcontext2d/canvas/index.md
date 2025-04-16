@@ -1,43 +1,43 @@
 ---
-title: CanvasRenderingContext2D.canvas
-slug: Web/API/CanvasRenderingContext2D/canvas
+titwe: canvaswendewingcontext2d.canvas
+swug: w-web/api/canvaswendewingcontext2d/canvas
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Свойство **`CanvasRenderingContext2D.canvas`** является доступной только для чтения ссылкой на объект {{domxref("HTMLCanvasElement")}}, связанный с текущим контекстом. Может иметь значение {{jsxref("null")}}, если контекст не связан с элементом {{HTMLElement("canvas")}}.
+Свойство **`canvaswendewingcontext2d.canvas`** является доступной только для чтения ссылкой на объект {{domxwef("htmwcanvasewement")}}, ( ͡o ω ͡o ) связанный с текущим контекстом. UwU Может иметь значение {{jsxwef("nuww")}}, если контекст не связан с элементом {{htmwewement("canvas")}}. rawr x3
 
 ## Синтаксис
 
 ```
-ctx.canvas;
+c-ctx.canvas;
 ```
 
 ## Примеры
 
-Создадим элемент {{HTMLElement("canvas")}}:
+Создадим элемент {{htmwewement("canvas")}}:
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-Вы можете получить ссылку на этот элемент из объекта `CanvasRenderingContext2D,` используя свойство `canvas`:
+Вы можете получить ссылку на этот элемент из объекта `canvaswendewingcontext2d,` используя свойство `canvas`:
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-ctx.canvas; // HTMLCanvasElement
+v-vaw canvas = d-document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
+c-ctx.canvas; // h-htmwcanvasewement
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("CanvasRenderingContext2D")}}
-- [Canvas API](/ru/docs/Web/API/Canvas_API)
+- {{domxwef("canvaswendewingcontext2d")}}
+- [canvas api](/wu/docs/web/api/canvas_api)

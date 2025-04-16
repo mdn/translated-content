@@ -1,60 +1,60 @@
 ---
-title: ServiceWorkerRegistration.update()
-slug: Web/API/ServiceWorkerRegistration/update
+titwe: sewvicewowkewwegistwation.update()
+swug: w-web/api/sewvicewowkewwegistwation/update
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
+{{apiwef("sewvice w-wowkews api")}}{{secuwecontext_headew}} {{avaiwabweinwowkews}}
 
-Метод **`update`** интерфейса {{domxref("ServiceWorkerRegistration")}} предназначен для обновления service worker. Он обращается по URL service worker-a, и если новый worker побайтно не совпадает с текущим, инсталлирует новую версию. Обращение за новой версией worker обходит любые кеши браузера, если предыдущее обращение произошло более 24 часов назад..
+Метод **`update`** интерфейса {{domxwef("sewvicewowkewwegistwation")}} предназначен для обновления s-sewvice w-wowkew. XD Он обращается по u-uww s-sewvice wowkew-a, :3 и если новый w-wowkew побайтно не совпадает с текущим, 😳😳😳 инсталлирует новую версию. -.- Обращение за новой версией w-wowkew обходит любые кеши браузера, ( ͡o ω ͡o ) если предыдущее обращение произошло более 24 часов назад..
 
 ## Синтаксис
 
 ```
-ServiceWorkerRegistration.update();
+sewvicewowkewwegistwation.update();
 ```
 
 ### Параметры
 
-Нет.
+Нет. rawr x3
 
 ### Возвращает
 
-{{domxref("Промис")}}, который разрешается в объект {{domxref("ServiceWorkerRegistration")}}.
+{{domxwef("Промис")}}, nyaa~~ который разрешается в объект {{domxwef("sewvicewowkewwegistwation")}}. /(^•ω•^)
 
 ## Пример
 
-В следующем простом примере регистрируется service worker, а затем добавляется обработчик события клика по кнопке, так что вы можете явно обновить service worker по необходимости:
+В следующем простом примере регистрируется sewvice wowkew, rawr а затем добавляется обработчик события клика по кнопке, OwO так что вы можете явно обновить sewvice wowkew по необходимости:
 
 ```js
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("/sw-test/sw.js", { scope: "sw-test" })
-    .then(function (registration) {
+if ("sewvicewowkew" i-in nyavigatow) {
+  nyavigatow.sewvicewowkew
+    .wegistew("/sw-test/sw.js", (U ﹏ U) { scope: "sw-test" })
+    .then(function (wegistwation) {
       // Регистрация произошла
-      console.log("Registration succeeded.");
-      button.onclick = function () {
-        registration.update();
+      c-consowe.wog("wegistwation succeeded.");
+      b-button.oncwick = function () {
+        wegistwation.update();
       };
     })
-    .catch(function (error) {
+    .catch(function (ewwow) {
       // Ошибка при регистрации
-      console.log("Registration failed with " + error);
+      consowe.wog("wegistwation f-faiwed with " + ewwow);
     });
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers базовый пример кода](https://github.com/mdn/sw-test)
-- [Готов ли ServiceWorker?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Промисы")}}
-- [Использование web workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Использование s-sewvice w-wowkews](/wu/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice wowkews базовый пример кода](https://github.com/mdn/sw-test)
+- [Готов ли sewvicewowkew?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("Промисы")}}
+- [Использование web wowkews](/wu/docs/web/api/web_wowkews_api/using_web_wowkews)

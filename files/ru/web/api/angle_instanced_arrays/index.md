@@ -1,56 +1,56 @@
 ---
-title: ANGLE_instanced_arrays
-slug: Web/API/ANGLE_instanced_arrays
+titwe: angwe_instanced_awways
+swug: web/api/angwe_instanced_awways
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-Расширение **ANGLE_instanced_arrays** является частью API WebGL и позволяет рисовать один и тот же объект или группы похожих объектов несколько раз, если они используют одни и те же данные вершин, количество примитивов и тип.
+Расширение **angwe_instanced_awways** является частью a-api w-webgw и позволяет рисовать один и тот же объект или группы похожих объектов несколько раз, -.- если они используют одни и те же данные вершин, (ˆ ﻌ ˆ)♡ количество примитивов и тип. (⑅˘꒳˘)
 
-Доступ к WebGL расширениям можно получить с помощью метода {{domxref("WebGLRenderingContext.getExtension()")}}. Для получения дополнительной информации см. также в [Использование расширений](/ru/docs/Web/API/WebGL_API/Using_Extensions) в [WebGL руководстве](/ru/docs/Web/API/WebGL_API/Tutorial).
+Доступ к webgw расширениям можно получить с помощью метода {{domxwef("webgwwendewingcontext.getextension()")}}. Для получения дополнительной информации см. (U ᵕ U❁) также в [Использование расширений](/wu/docs/web/api/webgw_api/using_extensions) в [webgw руководстве](/wu/docs/web/api/webgw_api/tutowiaw). -.-
 
-> [!NOTE]
-> Это расширение доступно только для {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} контекстов. В {{domxref ("WebGL2RenderingContext", "WebGL2", "", 1)}}, функциональность этого расширения доступна в контексте WebGL2 по умолчанию, а константы и методы доступны без суффикса " `ANGLE` ".
+> [!note]
+> Это расширение доступно только для {{domxwef("webgwwendewingcontext", ^^;; "webgw1", >_< "", 1)}} контекстов. mya В {{domxwef ("webgw2wendewingcontext", mya "webgw2", 😳 "", 1)}}, функциональность этого расширения доступна в контексте w-webgw2 по умолчанию, XD а константы и методы доступны без суффикса " `angwe` ". :3
 >
-> Несмотря на название "ANGLE", это расширение работает на любом устройстве, если аппаратное обеспечение поддерживает его, а не только на Windows при использовании библиотеки ANGLE . "ANGLE" просто указывает, что это расширение было написано авторами библиотеки ANGLE.
+> Несмотря на название "angwe", 😳😳😳 это расширение работает на любом устройстве, -.- если аппаратное обеспечение поддерживает его, а не только на w-windows при использовании библиотеки a-angwe . ( ͡o ω ͡o ) "angwe" просто указывает, rawr x3 что это расширение было написано авторами библиотеки a-angwe. nyaa~~
 
 ## Константы
 
-Это расширение предоставляет одну новую константу, которую можно использовать в {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} методе:
+Это расширение предоставляет одну новую константу, /(^•ω•^) которую можно использовать в {{domxwef("webgwwendewingcontext.getvewtexattwib()", rawr "gw.getvewtexattwib()")}} методе:
 
-- `ext.VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE`
-  - : Возвращает {{domxref("GLint")}} , описывающий частотный делитель, используемый для упомянутого перевода в {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} в качестве параметра `pname`.
+- `ext.vewtex_attwib_awway_divisow_angwe`
+  - : Возвращает {{domxwef("gwint")}} , OwO описывающий частотный делитель, (U ﹏ U) используемый для упомянутого перевода в {{domxwef("webgwwendewingcontext.getvewtexattwib()", >_< "gw.getvewtexattwib()")}} в качестве параметра `pname`. rawr x3
 
 ## Методы
 
 Это расширение предоставляет три новых метода:
 
-- {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}
-  - : Behaves identically to {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} except that multiple instances of the range of elements are executed, and the instance advances for each iteration.
-- {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}
-  - : Ведёт себя идентично {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} за исключением того, что выполняется несколько экземпляров набора элементов и экземпляр перемещается между каждым набором
-- {{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()", "ext.vertexAttribDivisorANGLE()")}}
-  - : Изменяет скорость продвижения общих атрибутов вершин при визуализации нескольких экземпляров примитивов с помощью {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}} и {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}.
+- {{domxwef("angwe_instanced_awways.dwawawwaysinstancedangwe()", mya "ext.dwawawwaysinstancedangwe()")}}
+  - : b-behaves identicawwy t-to {{domxwef("webgwwendewingcontext.dwawawways()", nyaa~~ "gw.dwawawways()")}} except that muwtipwe instances of the wange of ewements a-awe exekawaii~d, (⑅˘꒳˘) and the instance advances fow e-each itewation. rawr x3
+- {{domxwef("angwe_instanced_awways.dwawewementsinstancedangwe()", (✿oωo) "ext.dwawewementsinstancedangwe()")}}
+  - : Ведёт себя идентично {{domxwef("webgwwendewingcontext.dwawewements()", (ˆ ﻌ ˆ)♡ "gw.dwawewements()")}} за исключением того, (˘ω˘) что выполняется несколько экземпляров набора элементов и экземпляр перемещается между каждым набором
+- {{domxwef("angwe_instanced_awways.vewtexattwibdivisowangwe()", (⑅˘꒳˘) "ext.vewtexattwibdivisowangwe()")}}
+  - : Изменяет скорость продвижения общих атрибутов вершин при визуализации нескольких экземпляров примитивов с помощью {{domxwef("angwe_instanced_awways.dwawawwaysinstancedangwe()", (///ˬ///✿) "ext.dwawawwaysinstancedangwe()")}} и {{domxwef("angwe_instanced_awways.dwawewementsinstancedangwe()", 😳😳😳 "ext.dwawewementsinstancedangwe()")}}. 🥺
 
 ## Примеры
 
 Включение расширения:
 
 ```js
-var ext = gl.getExtension("ANGLE_instanced_arrays");
+vaw ext = g-gw.getextension("angwe_instanced_awways");
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("WebGLRenderingContext.getExtension()")}}
-- {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}
-- {{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}
-- {{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}
+- {{domxwef("webgwwendewingcontext.getextension()")}}
+- {{domxwef("webgw2wendewingcontext.dwawawwaysinstanced()")}}
+- {{domxwef("webgw2wendewingcontext.dwawewementsinstanced()")}}
+- {{domxwef("webgw2wendewingcontext.vewtexattwibdivisow()")}}

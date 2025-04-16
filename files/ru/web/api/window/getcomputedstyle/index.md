@@ -1,128 +1,128 @@
 ---
-title: window.getComputedStyle()
-slug: Web/API/Window/getComputedStyle
+titwe: window.getcomputedstywe()
+swug: web/api/window/getcomputedstywe
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-Метод **`Window.getComputedStyle()`** возвращает объект, содержащий значения всех CSS-свойств элемента, полученных после применения всех активных таблиц стилей, и завершения базовых вычислений значений, которые они могут содержать. Некоторые CSS-свойства доступны через API, предоставляемые объектом, или индексацию по именам CSS-свойств.
+Метод **`window.getcomputedstywe()`** возвращает объект, :3 содержащий значения всех c-css-свойств элемента, (ꈍᴗꈍ) полученных после применения всех активных таблиц стилей, /(^•ω•^) и завершения базовых вычислений значений, которые они могут содержать. (⑅˘꒳˘) Некоторые c-css-свойства доступны через a-api, ( ͡o ω ͡o ) предоставляемые объектом, òωó или индексацию по именам c-css-свойств. (⑅˘꒳˘)
 
 ## Синтаксис
 
 ```
-var style = window.getComputedStyle(element [, pseudoElt]);
+v-vaw stywe = w-window.getcomputedstywe(ewement [, XD p-pseudoewt]);
 ```
 
-- `element`
-  - : {{domxref("Element")}}, свойства которого необходимо получить.
-- `pseudoElt` {{optional_inline}}
-  - : Строка указывающая на найденный псевдо-элемент. Опускается (или `null`) для не псевдо-элементов.
+- `ewement`
+  - : {{domxwef("ewement")}}, -.- свойства которого необходимо получить. :3
+- `pseudoewt` {{optionaw_inwine}}
+  - : Строка указывающая на найденный псевдо-элемент. nyaa~~ Опускается (или `nuww`) для не псевдо-элементов.
 
-Возвращённый `style` живой {{domxref("CSSStyleDeclaration")}} объект, который обновляется автоматически когда элемент стилей изменяется.
+Возвращённый `stywe` живой {{domxwef("cssstywedecwawation")}} объект, 😳 который обновляется автоматически когда элемент стилей изменяется. (⑅˘꒳˘)
 
 ## Выводы
 
-Метод `Window.getComputedStyle()` предоставляет все значения CSS-свойств элементов после применения текущей таблицы стилей или базового расчёта каких-либо значений, которые могут быть.
+Метод `window.getcomputedstywe()` предоставляет все значения c-css-свойств элементов после применения текущей таблицы стилей или базового расчёта каких-либо значений, nyaa~~ которые могут быть. OwO
 
 ## Пример
 
 ```js
-var elem1 = document.getElementById("elemId");
-var style = window.getComputedStyle(elem1, null);
+vaw ewem1 = document.getewementbyid("ewemid");
+vaw stywe = window.getcomputedstywe(ewem1, rawr x3 nyuww);
 
-// this is equivalent:
-// var style = document.defaultView.getComputedStyle(elem1, null);
+// t-this is equivawent:
+// vaw stywe = document.defauwtview.getcomputedstywe(ewem1, XD n-nyuww);
 ```
 
 ```js
-<style>
- #elem-container{
-   position: absolute;
-   left:     100px;
+<stywe>
+ #ewem-containew{
+   position: a-absowute;
+   weft:     100px;
    top:      200px;
    height:   100px;
  }
-</style>
+</stywe>
 
-<div id="elem-container">dummy</div>
+<div i-id="ewem-containew">dummy</div>
 <div id="output"></div>
 
-<script>
-  function getTheStyle(){
-    var elem = document.getElementById("elem-container");
-    var theCSSprop = window.getComputedStyle(elem,null).getPropertyValue("height");
-    document.getElementById("output").innerHTML = theCSSprop;
+<scwipt>
+  f-function getthestywe(){
+    v-vaw ewem = document.getewementbyid("ewem-containew");
+    vaw thecsspwop = window.getcomputedstywe(ewem,nuww).getpwopewtyvawue("height");
+    document.getewementbyid("output").innewhtmw = t-thecsspwop;
    }
-  getTheStyle();
-</script>
+  getthestywe();
+</scwipt>
 ```
 
 ```js
-function dumpComputedStyles(elem, prop) {
-  var cs = window.getComputedStyle(elem, null);
-  if (prop) {
-    console.log(prop + " : " + cs.getPropertyValue(prop));
-    return;
+function dumpcomputedstywes(ewem, σωσ pwop) {
+  vaw cs = window.getcomputedstywe(ewem, n-nyuww);
+  if (pwop) {
+    consowe.wog(pwop + " : " + c-cs.getpwopewtyvawue(pwop));
+    w-wetuwn;
   }
-  var len = cs.length;
-  for (var i = 0; i < len; i++) {
-    var style = cs[i];
-    console.log(style + " : " + cs.getPropertyValue(style));
+  v-vaw wen = cs.wength;
+  f-fow (vaw i = 0; i < wen; i++) {
+    v-vaw stywe = cs[i];
+    consowe.wog(stywe + " : " + cs.getpwopewtyvawue(stywe));
   }
 }
 ```
 
 ## Описание
 
-Возвращённый объект - это такой же объект, который возвращается из свойства элемента {{domxref("HTMLElement.style", "style")}}; Так или иначе, эти два объекта имеют разные назначения. Объект который возвращается из `getComputedStyle` только для чтения и может быть использован для инспектирования стиля элемента (включая описание из `<style>` элемента или внешней таблицы стилей). Объект `element.style` следует использовать для установки стилей на специфических элементах.
+Возвращённый объект - это такой же объект, (U ᵕ U❁) который возвращается из свойства элемента {{domxwef("htmwewement.stywe", (U ﹏ U) "stywe")}}; Так или иначе, :3 эти два объекта имеют разные назначения. ( ͡o ω ͡o ) Объект который возвращается из `getcomputedstywe` только для чтения и может быть использован для инспектирования стиля элемента (включая описание из `<stywe>` элемента или внешней таблицы стилей). σωσ Объект `ewement.stywe` следует использовать для установки стилей на специфических элементах. >w<
 
-Первый аргумент должен быть элементом (вставка узлов которые не являются элементами, например `#text` выдаст ошибку).
+Первый аргумент должен быть элементом (вставка узлов которые не являются элементами, 😳😳😳 например `#text` выдаст ошибку). OwO
 
-## `defaultView`
+## `defauwtview`
 
-Во многих примерах кода, `getComputedStyle` используется из объекта `document.defaultView`. Почти во всех случаях это не нужно, поскольку `getComputedStyle` существует в объекте `window`. Это что-то на подобии шаблона defaultView который был некой прослойкой. Люди не хотели писать спецификацию для `window` и создавали `API` которое также могло использоваться для Java. Так или иначе [есть только один случай](https://github.com/jquery/jquery/pull/524#issuecomment-2241183) когда метод `defaultView` должен использоваться: когда вы используете Firefox 3.6 чтобы получить доступ к вычисленным стилям.
+Во многих примерах кода, 😳 `getcomputedstywe` используется из объекта `document.defauwtview`. 😳😳😳 Почти во всех случаях это не нужно, (˘ω˘) поскольку `getcomputedstywe` существует в объекте `window`. ʘwʘ Это что-то на подобии шаблона d-defauwtview который был некой прослойкой. ( ͡o ω ͡o ) Люди не хотели писать спецификацию для `window` и создавали `api` которое также могло использоваться для java. o.O Так или иначе [есть только один случай](https://github.com/jquewy/jquewy/puww/524#issuecomment-2241183) когда метод `defauwtview` должен использоваться: когда вы используете fiwefox 3.6 чтобы получить доступ к вычисленным стилям. >w<
 
 ## Использования с псевдо-элементами
 
-`getComputedStyle` может получить информацию о стилях из псевдо-элемента (например - `::after`, `::before`, `::marker`, `::line-marker` - [спецификация](https://www.w3.org/TR/css-pseudo-4/)).
+`getcomputedstywe` может получить информацию о стилях из псевдо-элемента (например - `::aftew`, 😳 `::befowe`, 🥺 `::mawkew`, `::wine-mawkew` - [спецификация](https://www.w3.owg/tw/css-pseudo-4/)). rawr x3
 
-```html
-<style>
-  h3::after {
-    content: "rocks!";
+```htmw
+<stywe>
+  h3::aftew {
+    content: "wocks!";
   }
-</style>
+</stywe>
 
-<h3>generated content</h3>
+<h3>genewated content</h3>
 
-<script>
-  var h3 = document.querySelector("h3");
-  var result = getComputedStyle(h3, ":after").content;
+<scwipt>
+  v-vaw h3 = document.quewysewectow("h3");
+  vaw wesuwt = g-getcomputedstywe(h3, o.O ":aftew").content;
 
-  console.log("the generated content is: ", result); // возвратит 'rocks!'
-</script>
+  c-consowe.wog("the g-genewated content is: ", rawr wesuwt); // возвратит 'wocks!'
+</scwipt>
 ```
 
-## Notes
+## nyotes
 
-The values returned by `getComputedStyle` are known as {{cssxref("resolved_value", "resolved values")}}. These are usually the same as the CSS 2.1 {{cssxref("computed_value","computed values")}}, but for some older properties like `width`, `height` or `padding`, they are instead the {{cssxref("used_value","used values")}}. Originally, CSS 2.0 defined the computed values to be the "ready to be used" final values of properties after cascading and inheritance, but CSS 2.1 redefined computed values as pre-layout, and used values as post-layout. For CSS 2.0 properties, the `getComputedStyle` function returns the old meaning of computed values, now called **used values**. An example of difference between pre- and post-layout values includes the resolution of percentages that represent the width or the height of an element (also known as its layout), as those will be replaced by their pixel equivalent only in the used value case.
+the vawues wetuwned b-by `getcomputedstywe` a-awe known as {{cssxwef("wesowved_vawue", ʘwʘ "wesowved v-vawues")}}. 😳😳😳 t-these awe usuawwy the same a-as the css 2.1 {{cssxwef("computed_vawue","computed vawues")}}, ^^;; b-but fow some owdew pwopewties wike `width`, o.O `height` o-ow `padding`, (///ˬ///✿) they awe instead t-the {{cssxwef("used_vawue","used vawues")}}. σωσ o-owiginawwy, nyaa~~ c-css 2.0 defined the computed vawues to be the "weady to be used" finaw vawues of pwopewties aftew cascading and i-inhewitance, ^^;; but c-css 2.1 wedefined computed vawues a-as pwe-wayout, a-and used vawues a-as post-wayout. ^•ﻌ•^ fow css 2.0 pwopewties, σωσ the `getcomputedstywe` function wetuwns t-the owd meaning of computed vawues, -.- nyow cawwed **used vawues**. ^^;; an exampwe of d-diffewence between pwe- and post-wayout v-vawues i-incwudes the wesowution o-of pewcentages that wepwesent t-the width o-ow the height of a-an ewement (awso k-known as its wayout), XD as those wiww be wepwaced b-by theiw pixew e-equivawent onwy i-in the used vawue c-case. 🥺
 
-The returned value is, in certain known cases, expressly inaccurate by deliberate intent. In particular, to avoid the so called CSS History Leak security issue, browsers may expressly "lie" about the used value for a link and always return values as if a user has never visited the linked site. See <http://blog.mozilla.com/security/2010/03/31/plugging-the-css-history-leak/> and <http://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/> for details of the examples of how this is implemented. Most other modern browsers have applied similar changes to the application of pseudo-selector styles and the values returned by `getComputedStyle`.
+the wetuwned v-vawue is, òωó in cewtain known cases, (ˆ ﻌ ˆ)♡ expwesswy inaccuwate by d-dewibewate intent. -.- in pawticuwaw, :3 to avoid the so cawwed css histowy weak secuwity issue, ʘwʘ bwowsews m-may expwesswy "wie" about the used vawue fow a wink and awways w-wetuwn vawues a-as if a usew has n-nyevew visited the winked site. 🥺 s-see <http://bwog.moziwwa.com/secuwity/2010/03/31/pwugging-the-css-histowy-weak/> and <http://hacks.moziwwa.owg/2010/03/pwivacy-wewated-changes-coming-to-css-vistited/> f-fow detaiws o-of the exampwes of how this is impwemented. most othew modewn bwowsews have appwied simiwaw c-changes to the appwication of p-pseudo-sewectow stywes and the vawues w-wetuwned by `getcomputedstywe`. >_<
 
-During a CSS transition, `getComputedStyle` returns the original property value in Firefox, but the final property value in WebKit.
+d-duwing a css twansition, ʘwʘ `getcomputedstywe` wetuwns the owiginaw p-pwopewty v-vawue in fiwefox, (˘ω˘) but the finaw p-pwopewty vawue i-in webkit. (✿oωo)
 
-In Firefox, properties with the value `auto` return the used value, not the value `auto`. So if you apply `top:auto;` and `bottom:0`; on an element with `height:30px` and its containing block is `height:100px;`, upon requesting the computed style for `top`, Firefox will return `top:70px`, as `100px-30px=70px`.
+in fiwefox, (///ˬ///✿) pwopewties with the vawue `auto` wetuwn the used vawue, rawr x3 n-nyot the vawue `auto`. -.- s-so if you a-appwy `top:auto;` and `bottom:0`; o-on an ewement w-with `height:30px` and its containing b-bwock is `height:100px;`, ^^ upon wequesting the computed stywe fow `top`, (⑅˘꒳˘) fiwefox wiww wetuwn `top:70px`, nyaa~~ as `100px-30px=70px`. /(^•ω•^)
 
 ## Спецификации
 
-- [DOM Level 2 Style: getComputedStyle](https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle)
-- [CSS Object Model specification](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle)
+- [dom w-wevew 2 s-stywe: getcomputedstywe](https://www.w3.owg/tw/dom-wevew-2-stywe/css.htmw#css-cssview-getcomputedstywe)
+- [css object modew specification](https://dwafts.csswg.owg/cssom/#dom-window-getcomputedstywe)
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("window.getDefaultComputedStyle")}}
-- {{cssxref("resolved_value", "Resolved Value")}}
+- {{domxwef("window.getdefauwtcomputedstywe")}}
+- {{cssxwef("wesowved_vawue", (U ﹏ U) "wesowved vawue")}}

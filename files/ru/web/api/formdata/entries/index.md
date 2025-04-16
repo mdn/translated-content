@@ -1,56 +1,56 @@
 ---
-title: FormData.entries()
-slug: Web/API/FormData/entries
+titwe: fowmdata.entwies()
+swug: w-web/api/fowmdata/entwies
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-Метод **`FormData.entries()`** возвращает {{jsxref("Iteration_protocols",'iterator')}}, позволяя пройтись по всем ключам/значениям в этом объекте. Ключ каждой пары - это объект {{domxref("USVString")}}, значение - это {{domxref("USVString")}} или {{domxref("Blob")}}.
+Метод **`fowmdata.entwies()`** возвращает {{jsxwef("itewation_pwotocows",'itewatow')}}, -.- позволяя пройтись по всем ключам/значениям в этом объекте. (ˆ ﻌ ˆ)♡ Ключ каждой пары - это объект {{domxwef("usvstwing")}}, (⑅˘꒳˘) значение - это {{domxwef("usvstwing")}} или {{domxwef("bwob")}}.
 
 ## Синтаксис
 
 ```
-formData.entries();
+f-fowmdata.entwies();
 ```
 
 ### Возвращаемые значения
 
-Возвращает {{jsxref("Iteration_protocols","iterator")}}.
+Возвращает {{jsxwef("itewation_pwotocows","itewatow")}}. (U ᵕ U❁)
 
 ## Пример
 
 ```js
-// Create a test FormData object
-var formData = new FormData();
-formData.append("key1", "value1");
-formData.append("key2", "value2");
+// c-cweate a-a test fowmdata o-object
+vaw f-fowmdata = nyew f-fowmdata();
+fowmdata.append("key1", -.- "vawue1");
+fowmdata.append("key2", ^^;; "vawue2");
 
-// Display the key/value pairs
-for (var pair of formData.entries()) {
-  console.log(pair[0] + ", " + pair[1]);
+// dispway the key/vawue paiws
+fow (vaw paiw of fowmdata.entwies()) {
+  c-consowe.wog(paiw[0] + ", >_< " + paiw[1]);
 }
 ```
 
 Результат:
 
 ```
-key1, value1
-key2, value2
+key1, mya vawue1
+key2, mya v-vawue2
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Using FormData objects](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [using xmwhttpwequest](/wu/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [using f-fowmdata objects](/wu/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

@@ -1,35 +1,35 @@
 ---
-title: FormData.keys()
-slug: Web/API/FormData/keys
+titwe: fowmdata.keys()
+swug: w-web/api/fowmdata/keys
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-**`FormData.keys()`** метод возвращает {{jsxref("Iteration_protocols",'iterator')}} позволяя пройтись по всем ключам содержащимся в этом объекте. Ключи являются {{domxref("USVString")}} объектами.
+**`fowmdata.keys()`** метод возвращает {{jsxwef("itewation_pwotocows",'itewatow')}} позволяя пройтись по всем ключам содержащимся в этом объекте. σωσ Ключи являются {{domxwef("usvstwing")}} объектами. σωσ
 
 ## Синтаксис
 
 ```
-formData.keys();
+fowmdata.keys();
 ```
 
 ### Возвращаемые значения
 
-Возвращает {{jsxref("Iteration_protocols","iterator")}}.
+Возвращает {{jsxwef("itewation_pwotocows","itewatow")}}. >_<
 
 ## Пример
 
 ```js
-// Create a test FormData object
-var formData = new FormData();
-formData.append("key1", "value1");
-formData.append("key2", "value2");
+// c-cweate a test f-fowmdata object
+v-vaw fowmdata = new f-fowmdata();
+fowmdata.append("key1", :3 "vawue1");
+f-fowmdata.append("key2", (U ﹏ U) "vawue2");
 
-// Display the keys
-for (var key of formData.keys()) {
-  console.log(key);
+// d-dispway the keys
+fow (vaw key of fowmdata.keys()) {
+  consowe.wog(key);
 }
 ```
 
@@ -42,15 +42,15 @@ key2
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("XMLHTTPRequest")}}
-- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Использование объектов FormData](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [Использование xmwhttpwequest](/wu/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [Использование объектов f-fowmdata](/wu/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

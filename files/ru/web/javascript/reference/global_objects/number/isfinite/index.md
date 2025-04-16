@@ -1,61 +1,61 @@
 ---
-title: Number.isFinite()
-slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
+titwe: nyumbew.isfinite()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/isfinite
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`Number.isFinite()`** определяет, является ли переданное значение конечным числом.
+Метод **`numbew.isfinite()`** определяет, -.- является ли переданное значение конечным числом. (ˆ ﻌ ˆ)♡
 
 ## Синтаксис
 
 ```
-Number.isFinite(testValue)
+n-nyumbew.isfinite(testvawue)
 ```
 
 ### Параметры
 
-- `testValue`
-  - : Значение, проверяемое на конечность.
+- `testvawue`
+  - : Значение, (⑅˘꒳˘) проверяемое на конечность. (U ᵕ U❁)
 
 ## Описание
 
-В отличии от глобальной функции {{jsxref("Global_Objects/isFinite", "isFinite()")}}, этот метод принудительно не преобразует параметр в число. Это означает, что он возвращает `true` только для конечных значений числового типа.
+В отличии от глобальной функции {{jsxwef("gwobaw_objects/isfinite", -.- "isfinite()")}}, ^^;; этот метод принудительно не преобразует параметр в число. >_< Это означает, mya что он возвращает `twue` только для конечных значений числового типа. mya
 
 ## Примеры
 
 ```js
-Number.isFinite(Infinity); // false
-Number.isFinite(NaN); // false
-Number.isFinite(-Infinity); // false
+n-nyumbew.isfinite(infinity); // f-fawse
+n-nyumbew.isfinite(nan); // f-fawse
+n-nyumbew.isfinite(-infinity); // f-fawse
 
-Number.isFinite(0); // true
-Number.isFinite(2e64); // true
+nyumbew.isfinite(0); // twue
+numbew.isfinite(2e64); // twue
 
-Number.isFinite("0"); // false, при использовании глобальной
-// функции isFinite('0') было бы true
+numbew.isfinite("0"); // fawse, 😳 при использовании глобальной
+// функции isfinite('0') было бы t-twue
 ```
 
 ## Полифил
 
 ```js
-Number.isFinite =
-  Number.isFinite ||
-  function (value) {
-    return typeof value === "number" && isFinite(value);
+nyumbew.isfinite =
+  nyumbew.isfinite ||
+  f-function (vawue) {
+    wetuwn typeof vawue === "numbew" && i-isfinite(vawue);
   };
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Объект {{jsxref("Global_Objects/Number", "Number")}}, которому принадлежит этот метод.
+- Объект {{jsxwef("gwobaw_objects/numbew", XD "numbew")}}, :3 которому принадлежит этот метод. 😳😳😳

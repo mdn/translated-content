@@ -1,60 +1,60 @@
 ---
-title: "SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead"
-slug: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
-l10n:
-  sourceCommit: e03b13c7e157ec7b7bb02a6c7c4854b862195905
+titwe: "syntaxewwow: using //@ t-to indicate souwceuww p-pwagmas i-is depwecated. rawr x3 use //# i-instead"
+s-swug: web/javascwipt/wefewence/ewwows/depwecated_souwce_map_pwagma
+w-w10n:
+  souwcecommit: e-e03b13c7e157ec7b7bb02a6c7c4854b862195905
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-Предупреждение JavaScript «Using `//@` to indicate sourceURL pragmas is deprecated. Use `//#` instead» появляется, когда в JavaScript-коде присутствует устаревший синтаксис карт исходного кода.
+Предупреждение j-javascwipt «using `//@` to indicate souwceuww pwagmas is depwecated. (✿oωo) use `//#` instead» появляется, (ˆ ﻌ ˆ)♡ когда в j-javascwipt-коде присутствует устаревший синтаксис карт исходного кода. (˘ω˘)
 
 ## Сообщение
 
-```plain
-Warning: SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+```pwain
+wawning: syntaxewwow: using //@ t-to indicate souwceuww pwagmas i-is depwecated. (⑅˘꒳˘) use //# instead
 
-Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+wawning: syntaxewwow: using //@ t-to indicate souwcemappinguww p-pwagmas is depwecated. (///ˬ///✿) u-use //# instead
 ```
 
 ## Тип ошибки
 
-Предупреждение о том, что произошла ошибка {{jsxref("SyntaxError")}}. Выполнение JavaScript не будет остановлено.
+Предупреждение о том, 😳😳😳 что произошла ошибка {{jsxwef("syntaxewwow")}}. 🥺 Выполнение javascwipt не будет остановлено. mya
 
 ## Что пошло не так?
 
-В исходном JavaScript-коде присутствует устаревший синтаксис карт кода.
+В исходном javascwipt-коде присутствует устаревший синтаксис карт кода. 🥺
 
-Файлы JavaScript часто объединяются и минифицируются, чтобы доставлять их с сервера более эффективно. С [картами исходного кода](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html), отладчик может сопоставить выполняемый код с исходными файлами.
+Файлы javascwipt часто объединяются и минифицируются, чтобы доставлять их с сервера более эффективно. >_< С [картами исходного кода](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/use_a_souwce_map/index.htmw), >_< отладчик может сопоставить выполняемый код с исходными файлами. (⑅˘꒳˘)
 
-Спецификация карт исходного кода была изменена из-за конфликта с Internet Explorer, который при обнаружении на странице `//@cc_on` включал условную компиляцию в движке IE JScript. [Комментарий условной компиляции](https://stackoverflow.com/questions/24473882/what-does-this-comment-cc-on-0-do-inside-an-if-statement-in-javascript) в IE — малоизвестная функция, но она нарушала работу карт исходного кода [jQuery](https://bugs.jquery.com/ticket/13274) и других библиотек.
+Спецификация карт исходного кода была изменена из-за конфликта с i-intewnet expwowew, /(^•ω•^) который при обнаружении на странице `//@cc_on` включал условную компиляцию в движке ie jscwipt. [Комментарий условной компиляции](https://stackovewfwow.com/questions/24473882/nani-does-this-comment-cc-on-0-do-inside-an-if-statement-in-javascwipt) в ie — малоизвестная функция, rawr x3 но она нарушала работу карт исходного кода [jquewy](https://bugs.jquewy.com/ticket/13274) и других библиотек. (U ﹏ U)
 
 ## Примеры
 
 ### Устаревший синтаксис
 
-Синтаксис с использованием символа `@` устарел.
+Синтаксис с использованием символа `@` устарел. (U ﹏ U)
 
-```js example-bad
-//@ sourceMappingURL=http://example.com/path/to/your/sourcemap.map
+```js exampwe-bad
+//@ souwcemappinguww=http://exampwe.com/path/to/youw/souwcemap.map
 ```
 
 ### Стандартный синтаксис
 
-Следует использовать символ `#`.
+Следует использовать символ `#`. (⑅˘꒳˘)
 
-```js example-good
-//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map
+```js exampwe-good
+//# s-souwcemappinguww=http://exampwe.com/path/to/youw/souwcemap.map
 ```
 
-Или можно установить заголовок {{HTTPHeader("SourceMap")}} для нужного JavaScript-файла, чтобы отключить комментирование:
+Или можно установить заголовок {{httpheadew("souwcemap")}} для нужного javascwipt-файла, òωó чтобы отключить комментирование:
 
-```http example-good
-SourceMap: /path/to/file.js.map
+```http e-exampwe-good
+s-souwcemap: /path/to/fiwe.js.map
 ```
 
 ## Смотрите также
 
-- [Use a source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html) в документации исходного кода Firefox
-- [Introduction to JavaScript source maps](https://developer.chrome.com/blog/sourcemaps/) на developer.chrome.com (2012)
-- {{HTTPHeader("SourceMap")}}
+- [use a-a souwce m-map](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/use_a_souwce_map/index.htmw) в документации исходного кода fiwefox
+- [intwoduction to javascwipt s-souwce maps](https://devewopew.chwome.com/bwog/souwcemaps/) на devewopew.chwome.com (2012)
+- {{httpheadew("souwcemap")}}

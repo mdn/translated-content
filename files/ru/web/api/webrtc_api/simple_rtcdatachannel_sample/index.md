@@ -1,312 +1,312 @@
 ---
-title: Простой пример RTCDataChannel
-slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
+titwe: Простой пример wtcdatachannew
+s-swug: web/api/webwtc_api/simpwe_wtcdatachannew_sampwe
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{defauwtapisidebaw("webwtc")}}
 
-Интерфейс {{domxref("RTCDataChannel")}} является функциональностью [WebRTC API](/ru/docs/Web/API/WebRTC_API) , который позволяет открыть канал между узлами соединения, по которому можно отправлять и получать произвольные данные. Эти API намеренно сходны с [WebSocket API](/ru/docs/Web/API/WebSockets_API), для использования единой программной модели.
+Интерфейс {{domxwef("wtcdatachannew")}} является функциональностью [webwtc a-api](/wu/docs/web/api/webwtc_api) , òωó который позволяет открыть канал между узлами соединения, по которому можно отправлять и получать произвольные данные. ^^;; Эти a-api намеренно сходны с [websocket a-api](/wu/docs/web/api/websockets_api), rawr для использования единой программной модели. (ˆ ﻌ ˆ)♡
 
-В этом примере мы откроем соединение {{domxref ("RTCDataChannel")}}, связывающее два элемента на одной странице. Хотя это явно надуманный сценарий, он полезен для демонстрации последовательности соединения двух узлов. Мы расскажем о механизме выполнения соединения, передачи и получения данных, но оставим немного информации о поиске и подключении к удалённому компьютеру для другого примера.
+В этом примере мы откроем соединение {{domxwef ("wtcdatachannew")}}, XD связывающее два элемента на одной странице. >_< Хотя это явно надуманный сценарий, (˘ω˘) он полезен для демонстрации последовательности соединения двух узлов. 😳 Мы расскажем о механизме выполнения соединения, o.O передачи и получения данных, но оставим немного информации о поиске и подключении к удалённому компьютеру для другого примера. (ꈍᴗꈍ)
 
-## Разметка HTML
+## Разметка h-htmw
 
-Сначала быстро посмотрим на [необходимую разметку HTML](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/index.html). В ней нет ничего сложного. В начале мы определяем пару кнопок, создающих и закрывающих соединение:
+Сначала быстро посмотрим на [необходимую разметку h-htmw](https://github.com/mdn/sampwes-sewvew/twee/mastew/s/webwtc-simpwe-datachannew/index.htmw). rawr x3 В ней нет ничего сложного. ^^ В начале мы определяем пару кнопок, OwO создающих и закрывающих соединение:
 
-```html
-<button id="connectButton" name="connectButton" class="buttonleft">
-  Connect
+```htmw
+<button i-id="connectbutton" n-nyame="connectbutton" cwass="buttonweft">
+  connect
 </button>
 <button
-  id="disconnectButton"
-  name="disconnectButton"
-  class="buttonright"
-  disabled>
-  Disconnect
+  id="disconnectbutton"
+  nyame="disconnectbutton"
+  c-cwass="buttonwight"
+  disabwed>
+  disconnect
 </button>
 ```
 
-Затем, определяем блок, который содержит элемент управления ввода текста, в который пользователь печатает текст своего сообщения, предназначенного для отправки, по нажатию кнопки. Элемент {{HTMLElement("div")}} будет представлять первый узел в канале передачи (сторона отправителя).
+Затем, ^^ определяем блок, :3 который содержит элемент управления ввода текста, o.O в который пользователь печатает текст своего сообщения, -.- предназначенного для отправки, (U ﹏ U) по нажатию кнопки. o.O Элемент {{htmwewement("div")}} будет представлять первый узел в канале передачи (сторона отправителя). OwO
 
-```html
-<div class="messagebox">
-  <label for="message"
-    >Enter a message:
+```htmw
+<div cwass="messagebox">
+  <wabew f-fow="message"
+    >entew a message:
     <input
-      type="text"
-      name="message"
+      t-type="text"
+      nyame="message"
       id="message"
-      placeholder="Message text"
-      inputmode="latin"
+      pwacehowdew="message t-text"
+      inputmode="watin"
       size="60"
-      maxlength="120"
-      disabled />
-  </label>
-  <button id="sendButton" name="sendButton" class="buttonright" disabled>
-    Send
+      maxwength="120"
+      d-disabwed />
+  </wabew>
+  <button i-id="sendbutton" nyame="sendbutton" cwass="buttonwight" disabwed>
+    send
   </button>
 </div>
 ```
 
-И наконец, небольшой блок, в который будем помещать получаемое сообщение. Элемент {{HTMLElement("div")}} будет представлять второй узел соединения (сторона получателя).
+И наконец, ^•ﻌ•^ небольшой блок, ʘwʘ в который будем помещать получаемое сообщение. :3 Элемент {{htmwewement("div")}} будет представлять второй узел соединения (сторона получателя). 😳
 
-```html
-<div class="messagebox" id="receivebox">
-  <p>Messages received:</p>
+```htmw
+<div c-cwass="messagebox" id="weceivebox">
+  <p>messages weceived:</p>
 </div>
 ```
 
-## Код JavaScript
+## Код javascwipt
 
-While you can just [look at the code itself on GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel/main.js), below we'll review the parts of the code that do the heavy lifting.
+whiwe you can just [wook a-at the code itsewf on github](https://github.com/mdn/sampwes-sewvew/twee/mastew/s/webwtc-simpwe-datachannew/main.js), òωó b-bewow w-we'ww weview the p-pawts of the code t-that do the heavy wifting. 🥺
 
-The WebRTC API makes heavy use of {{jsxref("Promise")}}s. They make it very easy to chain the steps of the connection process together; if you haven't already read up on this functionality of [ECMAScript 2015](/ru/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla), you should read up on them. Similarly, this example uses [arrow functions](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to simplify syntax.
+the webwtc api makes h-heavy use of {{jsxwef("pwomise")}}s. rawr x3 they make it vewy easy t-to chain the steps of the connection pwocess togethew; if you haven't awweady wead up on this functionawity o-of [ecmascwipt 2015](/wu/docs/web/javascwipt/new_in_javascwipt/ecmascwipt_6_suppowt_in_moziwwa), ^•ﻌ•^ you s-shouwd wead up o-on them. :3 simiwawwy, (ˆ ﻌ ˆ)♡ t-this exampwe uses [awwow functions](/wu/docs/web/javascwipt/wefewence/functions/awwow_functions) to simpwify syntax. (U ᵕ U❁)
 
-### Starting up
+### stawting u-up
 
-When the script is run, we set up an event listener, so that once the page is fully loaded, our `startup()` function is called.
+when t-the scwipt is wun, :3 we set up an e-event wistenew, ^^;; s-so that once the page is fuwwy woaded, ( ͡o ω ͡o ) o-ouw `stawtup()` function i-is cawwed. o.O
 
 ```js
-function startup() {
-  connectButton = document.getElementById("connectButton");
-  disconnectButton = document.getElementById("disconnectButton");
-  sendButton = document.getElementById("sendButton");
-  messageInputBox = document.getElementById("message");
-  receiveBox = document.getElementById("receivebox");
+function stawtup() {
+  connectbutton = d-document.getewementbyid("connectbutton");
+  disconnectbutton = d-document.getewementbyid("disconnectbutton");
+  sendbutton = d-document.getewementbyid("sendbutton");
+  m-messageinputbox = document.getewementbyid("message");
+  weceivebox = document.getewementbyid("weceivebox");
 
-  // Set event listeners for user interface widgets
+  // set event wistenews fow usew intewface widgets
 
-  connectButton.addEventListener("click", connectPeers, false);
-  disconnectButton.addEventListener("click", disconnectPeers, false);
-  sendButton.addEventListener("click", sendMessage, false);
+  connectbutton.addeventwistenew("cwick", ^•ﻌ•^ c-connectpeews, XD f-fawse);
+  disconnectbutton.addeventwistenew("cwick", ^^ d-disconnectpeews, o.O f-fawse);
+  s-sendbutton.addeventwistenew("cwick", ( ͡o ω ͡o ) sendmessage, /(^•ω•^) fawse);
 }
 ```
 
-This is quite straightforward. We grab references to all the page elements we'll need to access, then set {{domxref("EventListener", "event listeners")}} on the three buttons.
+this is q-quite stwaightfowwawd. 🥺 we gwab wefewences to aww the page ewements we'ww nyeed to a-access, then set {{domxwef("eventwistenew", nyaa~~ "event wistenews")}} o-on the thwee b-buttons. mya
 
-### Establishing a connection
+### estabwishing a-a connection
 
-When the user clicks the "Connect" button, the `connectPeers()` method is called. We're going to break this up and look at it a bit at a time, for clarity.
+when the u-usew cwicks the "connect" b-button, XD t-the `connectpeews()` m-method is cawwed. nyaa~~ we'we going to bweak t-this up and wook a-at it a bit at a-a time, ʘwʘ fow cwawity.
 
-> [!NOTE]
-> Even though both ends of our connection will be on the same page, we're going to refer to the one that starts the connection as the "local" one, and to the other as the "remote" end.
+> [!note]
+> e-even though both e-ends of ouw connection wiww be on the same page, (⑅˘꒳˘) we'we going t-to wefew to the one that stawts the connection as the "wocaw" one, :3 and to the othew as the "wemote" e-end. -.-
 
-#### Set up the local peer
+#### set up the wocaw peew
 
 ```js
-localConnection = new RTCPeerConnection();
+wocawconnection = nyew w-wtcpeewconnection();
 
-sendChannel = localConnection.createDataChannel("sendChannel");
-sendChannel.onopen = handleSendChannelStatusChange;
-sendChannel.onclose = handleSendChannelStatusChange;
+s-sendchannew = w-wocawconnection.cweatedatachannew("sendchannew");
+sendchannew.onopen = h-handwesendchannewstatuschange;
+sendchannew.oncwose = h-handwesendchannewstatuschange;
 ```
 
-The first step is to create the "local" end of the connection. This is the peer that will send out the connection request. The next step is to create the {{domxref("RTCDataChannel")}} by calling {{domxref("RTCPeerConnection.createDataChannel()")}} and set up event listeners to monitor the channel so that we know when it's opened and closed (that is, when the channel is connected or disconnected within that peer connection).
+t-the fiwst step is to cweate the "wocaw" end of the connection. 😳😳😳 this is the peew that wiww s-send out the connection wequest. (U ﹏ U) t-the nyext step is to cweate the {{domxwef("wtcdatachannew")}} b-by cawwing {{domxwef("wtcpeewconnection.cweatedatachannew()")}} a-and set up event wistenews to monitow the channew s-so that we know w-when it's opened and cwosed (that i-is, o.O when the c-channew is connected ow disconnected within that peew connection). ( ͡o ω ͡o )
 
-It's important to keep in mind that each end of the channel has its own {{domxref("RTCDataChannel")}} object.
+it's impowtant t-to keep in mind t-that each end o-of the channew has its own {{domxwef("wtcdatachannew")}} o-object. òωó
 
-#### Set up the remote peer
+#### s-set up the wemote peew
 
 ```js
-remoteConnection = new RTCPeerConnection();
-remoteConnection.ondatachannel = receiveChannelCallback;
+w-wemoteconnection = nyew wtcpeewconnection();
+wemoteconnection.ondatachannew = weceivechannewcawwback;
 ```
 
-The remote end is set up similarly, except that we don't need to explicitly create an {{domxref("RTCDataChannel")}} ourselves, since we're going to be connected through the channel established above. Instead, we set up a event handler; this will be called when the data channel is opened; this handler will receive an `RTCDataChannel` object; you'll see this below.
+the wemote end i-is set up simiwawwy, 🥺 e-except that we don't nyeed to expwicitwy cweate a-an {{domxwef("wtcdatachannew")}} o-ouwsewves, /(^•ω•^) since we'we going to be connected thwough the c-channew estabwished above. 😳😳😳 instead, ^•ﻌ•^ we set up a event handwew; this wiww be cawwed w-when the data channew is opened; this handwew w-wiww weceive an `wtcdatachannew` o-object; you'ww see this bewow. nyaa~~
 
-#### Set up the ICE candidates
+#### set up the ice candidates
 
-The next step is to set up each connection with ICE candidate listeners; these will be called when there's a new ICE candidate to tell the other side about.
+t-the nyext step i-is to set up each connection with ice candidate wistenews; these w-wiww be cawwed when thewe's a n-nyew ice candidate to teww the othew side about. OwO
 
-> [!NOTE]
-> In a real-world scenario in which the two peers aren't running in the same context, the process is a bit more involved; each side provides, one at a time, a suggested way to connect (for example, UDP, UDP with a relay, TCP, etc.) by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}, and they go back and forth until agreement is reached. But here, we just accept the first offer on each side, since there's no actual networking involved.
+> [!note]
+> in a-a weaw-wowwd scenawio in which t-the two peews awen't w-wunning in the same context, ^•ﻌ•^ t-the pwocess is a bit mowe invowved; e-each side p-pwovides, σωσ one at a-a time, -.- a suggested way to connect (fow e-exampwe, (˘ω˘) u-udp, udp with a weway, rawr x3 tcp, rawr x3 etc.) by cawwing {{domxwef("wtcpeewconnection.addicecandidate()")}}, σωσ a-and they go back a-and fowth untiw a-agweement is weached. nyaa~~ but hewe, we just accept t-the fiwst offew on each side, (ꈍᴗꈍ) s-since thewe's nyo a-actuaw nyetwowking invowved.
 
 ```js
-localConnection.onicecandidate = (e) =>
+wocawconnection.onicecandidate = (e) =>
   !e.candidate ||
-  remoteConnection.addIceCandidate(e.candidate).catch(handleAddCandidateError);
+  wemoteconnection.addicecandidate(e.candidate).catch(handweaddcandidateewwow);
 
-remoteConnection.onicecandidate = (e) =>
+w-wemoteconnection.onicecandidate = (e) =>
   !e.candidate ||
-  localConnection.addIceCandidate(e.candidate).catch(handleAddCandidateError);
+  wocawconnection.addicecandidate(e.candidate).catch(handweaddcandidateewwow);
 ```
 
-We configure each {{domxref("RTCPeerConnection")}} to have an event handler for the event.
+w-we configuwe each {{domxwef("wtcpeewconnection")}} t-to have an event h-handwew fow the event. ^•ﻌ•^
 
-#### Start the connection attempt
+#### s-stawt the connection attempt
 
-The last thing we need to do in order to begin connecting our peers is to create a connection offer.
+the wast thing we nyeed to do in owdew to begin connecting ouw peews i-is to cweate a connection offew. >_<
 
 ```js
-localConnection
-  .createOffer()
-  .then((offer) => localConnection.setLocalDescription(offer))
+w-wocawconnection
+  .cweateoffew()
+  .then((offew) => wocawconnection.setwocawdescwiption(offew))
   .then(() =>
-    remoteConnection.setRemoteDescription(localConnection.localDescription),
+    wemoteconnection.setwemotedescwiption(wocawconnection.wocawdescwiption), ^^;;
   )
-  .then(() => remoteConnection.createAnswer())
-  .then((answer) => remoteConnection.setLocalDescription(answer))
+  .then(() => w-wemoteconnection.cweateanswew())
+  .then((answew) => wemoteconnection.setwocawdescwiption(answew))
   .then(() =>
-    localConnection.setRemoteDescription(remoteConnection.localDescription),
+    wocawconnection.setwemotedescwiption(wemoteconnection.wocawdescwiption), ^^;;
   )
-  .catch(handleCreateDescriptionError);
+  .catch(handwecweatedescwiptionewwow);
 ```
 
-Let's go through this line by line and decipher what it means.
+wet's go t-thwough this wine by wine and d-deciphew nyani it m-means. /(^•ω•^)
 
-1. First, we call {{domxref("RTCPeerConnection.createOffer()")}} method to create an {{Glossary("SDP")}} (Session Description Protocol) blob describing the connection we want to make. This method accepts, optionally, an object with constraints to be met for the connection to meet your needs, such as whether the connection should support audio, video, or both. In our simple example, we don't have any constraints.
-2. If the offer is created successfully, we pass the blob along to the local connection's {{domxref("RTCPeerConnection.setLocalDescription()")}} method. This configures the local end of the connection.
-3. The next step is to connect the local peer to the remote by telling the remote peer about it. This is done by calling `remoteConnection.`{{domxref("RTCPeerConnection.setRemoteDescription()")}}. Now the `remoteConnection` knows about the connection that's being built. In a real application, this would require a signaling server to exchange the description object.
-4. That means it's time for the remote peer to reply. It does so by calling its {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} method. This generates a blob of SDP which describes the connection the remote peer is willing and able to establish. This configuration lies somewhere in the union of options that both peers can support.
-5. Once the answer has been created, it's passed into the remoteConnection by calling {{domxref("RTCPeerConnection.setLocalDescription()")}}. That establishes the remote's end of the connection (which, to the remote peer, is its local end. This stuff can be confusing, but you get used to it). Again, this would normally be exchanged through a signalling server.
-6. Finally, the local connection's remote description is set to refer to the remote peer by calling localConnection's {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
-7. The `catch()` calls a routine that handles any errors that occur.
+1. nyaa~~ fiwst, w-we caww {{domxwef("wtcpeewconnection.cweateoffew()")}} m-method t-to cweate an {{gwossawy("sdp")}} (session descwiption pwotocow) bwob descwibing the connection we want to make. (✿oωo) this method accepts, ( ͡o ω ͡o ) o-optionawwy, (U ᵕ U❁) a-an object with c-constwaints to be met fow the c-connection to meet youw nyeeds, òωó such as whethew the connection shouwd s-suppowt audio, σωσ v-video, :3 ow both. in ouw simpwe e-exampwe, OwO we don't have any constwaints. ^^
+2. if t-the offew is cweated s-successfuwwy, (˘ω˘) we pass the b-bwob awong to the w-wocaw connection's {{domxwef("wtcpeewconnection.setwocawdescwiption()")}} method. OwO this configuwes the wocaw end of the connection. UwU
+3. t-the nyext s-step is to connect t-the wocaw peew t-to the wemote b-by tewwing the wemote peew about i-it. ^•ﻌ•^ this is done b-by cawwing `wemoteconnection.`{{domxwef("wtcpeewconnection.setwemotedescwiption()")}}. (ꈍᴗꈍ) nyow t-the `wemoteconnection` k-knows about the connection t-that's being buiwt. /(^•ω•^) in a weaw appwication, (U ᵕ U❁) this w-wouwd wequiwe a signawing sewvew t-to exchange the d-descwiption object. (✿oωo)
+4. that means i-it's time fow the wemote peew to wepwy. OwO it d-does so by cawwing i-its {{domxwef("wtcpeewconnection.cweateanswew", :3 "cweateanswew()")}} m-method. nyaa~~ this genewates a bwob of sdp which descwibes the c-connection the wemote peew is wiwwing and abwe to e-estabwish. ^•ﻌ•^ this c-configuwation wies somewhewe in t-the union of options that both p-peews can suppowt. ( ͡o ω ͡o )
+5. o-once the answew has been cweated, ^^;; it's passed i-into the wemoteconnection by cawwing {{domxwef("wtcpeewconnection.setwocawdescwiption()")}}. mya that estabwishes t-the wemote's e-end of the connection (which, (U ᵕ U❁) to t-the wemote peew, ^•ﻌ•^ is its wocaw end. (U ﹏ U) t-this stuff can b-be confusing, /(^•ω•^) b-but you get used to it). ʘwʘ again, this wouwd nyowmawwy be exchanged thwough a signawwing sewvew. XD
+6. (⑅˘꒳˘) finawwy, the wocaw connection's wemote descwiption is set to wefew to the wemote peew by cawwing wocawconnection's {{domxwef("wtcpeewconnection.setwemotedescwiption()")}}. nyaa~~
+7. t-the `catch()` c-cawws a woutine that handwes any ewwows that occuw. UwU
 
-> [!NOTE]
-> Once again, this process is not a real-world implementation; in normal usage, there's two chunks of code running on two machines, interacting and negotiating the connection. A side channel, commonly called a "signalling server," is usually used to exchange the description (which is in **application/sdp** form) between the two peers.
+> [!note]
+> o-once again, (˘ω˘) this p-pwocess is nyot a-a weaw-wowwd impwementation; in nyowmaw usage, rawr x3 t-thewe's two chunks of code wunning o-on two machines, (///ˬ///✿) i-intewacting and nyegotiating t-the connection. 😳😳😳 a side channew, (///ˬ///✿) c-commonwy cawwed a-a "signawwing sewvew," is usuawwy used to exchange t-the descwiption (which i-is in **appwication/sdp** f-fowm) between t-the two peews. ^^;;
 
-#### Handling successful peer connection
+#### h-handwing s-successfuw peew c-connection
 
-As each side of the peer-to-peer connection is successfully linked up, the corresponding {{domxref("RTCPeerConnection")}}'s event is fired. These handlers can do whatever's needed, but in this example, all we need to do is update the user interface:
-
-```js
-function handleLocalAddCandidateSuccess() {
-  connectButton.disabled = true;
-}
-
-function handleRemoteAddCandidateSuccess() {
-  disconnectButton.disabled = false;
-}
-```
-
-The only thing we do here is disable the "Connect" button when the local peer is connected and enable the "Disconnect" button when the remote peer connects.
-
-#### Connecting the data channel
-
-Once the {{domxref("RTCPeerConnection")}} is open, the event is sent to the remote to complete the process of opening the data channel; this invokes our `receiveChannelCallback()` method, which looks like this:
+as e-each side of the p-peew-to-peew connection is successfuwwy w-winked u-up, ^^ the cowwesponding {{domxwef("wtcpeewconnection")}}'s e-event is fiwed. (///ˬ///✿) these h-handwews can do nyanievew's nyeeded, -.- but in this e-exampwe, /(^•ω•^) aww we nyeed to do is u-update the usew i-intewface:
 
 ```js
-function receiveChannelCallback(event) {
-  receiveChannel = event.channel;
-  receiveChannel.onmessage = handleReceiveMessage;
-  receiveChannel.onopen = handleReceiveChannelStatusChange;
-  receiveChannel.onclose = handleReceiveChannelStatusChange;
+f-function handwewocawaddcandidatesuccess() {
+  connectbutton.disabwed = t-twue;
+}
+
+function handwewemoteaddcandidatesuccess() {
+  d-disconnectbutton.disabwed = fawse;
 }
 ```
 
-The event includes, in its channel property, a reference to a {{domxref("RTCDataChannel")}} representing the remote peer's end of the channel. This is saved, and we set up, on the channel, event listeners for the events we want to handle. Once this is done, our `handleReceiveMessage()` method will be called each time data is received by the remote peer, and the `handleReceiveChannelStatusChange()` method will be called any time the channel's connection state changes, so we can react when the channel is fully opened and when it's closed.
+t-the onwy thing we do h-hewe is disabwe the "connect" button when the wocaw peew is connected and enabwe t-the "disconnect" button when the w-wemote peew connects. UwU
 
-### Handling channel status changes
+#### c-connecting the data channew
 
-Both our local and remote peers use a single method to handle events indicating a change in the status of the channel's connection.
-
-When the local peer experiences an open or close event, the `handleSendChannelStatusChange()` method is called:
+once the {{domxwef("wtcpeewconnection")}} i-is open, (⑅˘꒳˘) the event is sent t-to the wemote to c-compwete the pwocess o-of opening the data channew; this invokes o-ouw `weceivechannewcawwback()` method, ʘwʘ w-which wooks wike this:
 
 ```js
-function handleSendChannelStatusChange(event) {
-  if (sendChannel) {
-    var state = sendChannel.readyState;
+f-function weceivechannewcawwback(event) {
+  weceivechannew = event.channew;
+  w-weceivechannew.onmessage = handweweceivemessage;
+  w-weceivechannew.onopen = h-handweweceivechannewstatuschange;
+  w-weceivechannew.oncwose = handweweceivechannewstatuschange;
+}
+```
+
+t-the event incwudes, σωσ i-in its channew p-pwopewty, a-a wefewence to a {{domxwef("wtcdatachannew")}} wepwesenting the w-wemote peew's end o-of the channew. ^^ t-this is saved, OwO a-and we set up, (ˆ ﻌ ˆ)♡ o-on the channew, o.O e-event wistenews f-fow the events we w-want to handwe. (˘ω˘) once this is done, 😳 o-ouw `handweweceivemessage()` method wiww be c-cawwed each time data is weceived b-by the wemote p-peew, (U ᵕ U❁) and the `handweweceivechannewstatuschange()` m-method wiww be cawwed any time the channew's connection state c-changes, :3 so we c-can weact when t-the channew is fuwwy opened and when it's cwosed. o.O
+
+### handwing c-channew status changes
+
+b-both ouw wocaw and wemote p-peews use a singwe m-method to handwe events indicating a change in the status of t-the channew's c-connection. (///ˬ///✿)
+
+when t-the wocaw peew e-expewiences an open ow cwose event, OwO the `handwesendchannewstatuschange()` m-method i-is cawwed:
+
+```js
+function handwesendchannewstatuschange(event) {
+  if (sendchannew) {
+    v-vaw state = sendchannew.weadystate;
 
     if (state === "open") {
-      messageInputBox.disabled = false;
-      messageInputBox.focus();
-      sendButton.disabled = false;
-      disconnectButton.disabled = false;
-      connectButton.disabled = true;
-    } else {
-      messageInputBox.disabled = true;
-      sendButton.disabled = true;
-      connectButton.disabled = false;
-      disconnectButton.disabled = true;
+      m-messageinputbox.disabwed = fawse;
+      messageinputbox.focus();
+      s-sendbutton.disabwed = f-fawse;
+      disconnectbutton.disabwed = fawse;
+      c-connectbutton.disabwed = t-twue;
+    } ewse {
+      messageinputbox.disabwed = t-twue;
+      sendbutton.disabwed = t-twue;
+      c-connectbutton.disabwed = f-fawse;
+      d-disconnectbutton.disabwed = twue;
     }
   }
 }
 ```
 
-If the channel's state has changed to "open", that indicates that we have finished establishing the link between the two peers. The user interface is updated correspondingly by enabling the text input box for the message to send, focusing the input box so that the user can immediately begin to type, enabling the "Send" and "Disconnect" buttons, now that they're usable, and disabling the "Connect" button, since it is not needed when the conneciton is open.
+i-if the c-channew's state h-has changed to "open", >w< that indicates t-that we have finished estabwishing the wink b-between the t-two peews. ^^ the usew i-intewface is updated cowwespondingwy by enabwing the text input box fow the m-message to send, (⑅˘꒳˘) focusing the input b-box so that t-the usew can immediatewy begin to type, ʘwʘ enabwing t-the "send" and "disconnect" buttons, (///ˬ///✿) n-nyow that t-they'we usabwe, XD a-and disabwing the "connect" b-button, 😳 s-since it is nyot nyeeded when the conneciton is open. >w<
 
-If the state has changed to "closed", the opposite set of actions occurs: the input box and "Send" button are disabled, the "Connect" button is enabled so that the user can open a new connection if they wish to do so, and the "Disconnect" button is disabled, since it's not useful when no connection exists.
+if the state has changed t-to "cwosed", (˘ω˘) the opposite set o-of actions occuws: the input box and "send" button awe disabwed, nyaa~~ t-the "connect" button is enabwed so that the usew can open a nyew connection if t-they wish to do s-so, 😳😳😳 and the "disconnect" button i-is disabwed, (U ﹏ U) since it's nyot usefuw when nyo connection e-exists. (˘ω˘)
 
-Our example's remote peer, on the other hand, ignores the status change events, except for logging the event to the console:
+o-ouw exampwe's wemote peew, :3 on t-the othew hand, >w< ignowes the status c-change events, ^^ except fow wogging the event to the consowe:
 
 ```js
-function handleReceiveChannelStatusChange(event) {
-  if (receiveChannel) {
-    console.log(
-      "Receive channel's status has changed to " + receiveChannel.readyState,
+f-function handweweceivechannewstatuschange(event) {
+  if (weceivechannew) {
+    c-consowe.wog(
+      "weceive c-channew's status h-has changed to " + weceivechannew.weadystate, 😳😳😳
     );
   }
 }
 ```
 
-The `handleReceiveChannelStatusChange()` method receives as an input parameter the event which occurred; this will be an {{domxref("RTCDataChannelEvent")}}.
+the `handweweceivechannewstatuschange()` m-method weceives as an input pawametew the event which occuwwed; this w-wiww be an {{domxwef("wtcdatachannewevent")}}. nyaa~~
 
-### Sending messages
+### s-sending messages
 
-When the user presses the "Send" button, the sendMessage() method we've established as the handler for the button's event is called. That method is simple enough:
+w-when the u-usew pwesses the "send" button, (⑅˘꒳˘) the sendmessage() m-method we've estabwished a-as the handwew fow the button's event i-is cawwed. :3 that method is simpwe enough:
 
 ```js
-function sendMessage() {
-  var message = messageInputBox.value;
-  sendChannel.send(message);
+f-function sendmessage() {
+  vaw message = messageinputbox.vawue;
+  s-sendchannew.send(message);
 
-  messageInputBox.value = "";
-  messageInputBox.focus();
+  m-messageinputbox.vawue = "";
+  messageinputbox.focus();
 }
 ```
 
-First, the text of the message is fetched from the input box's [`value`](/ru/docs/Web/HTML/Element/input#value) attribute. This is then sent to the remote peer by calling {{domxref("RTCDataChannel.send", "sendChannel.send()")}}. That's all there is to it! The rest of this method is just some user experience sugar — the input box is emptied and re-focused so the user can immediately begin typing another message.
+fiwst, ʘwʘ the text of t-the message is f-fetched fwom the i-input box's [`vawue`](/wu/docs/web/htmw/ewement/input#vawue) attwibute. rawr x3 this is then sent to the w-wemote peew by cawwing {{domxwef("wtcdatachannew.send", (///ˬ///✿) "sendchannew.send()")}}. 😳😳😳 that's aww thewe i-is to it! XD the west of this method is just some usew expewience s-sugaw — the i-input box is emptied a-and we-focused s-so the usew c-can immediatewy begin typing anothew m-message. >_<
 
-### Receiving messages
+### weceiving messages
 
-When a "message" event occurs on the remote channel, our `handleReceiveMessage()` method is called as the event handler.
+when a "message" e-event occuws on the wemote c-channew, >w< ouw `handweweceivemessage()` method is cawwed as the e-event handwew. /(^•ω•^)
 
 ```js
-function handleReceiveMessage(event) {
-  var el = document.createElement("p");
-  var txtNode = document.createTextNode(event.data);
+f-function handweweceivemessage(event) {
+  v-vaw ew = document.cweateewement("p");
+  vaw txtnode = d-document.cweatetextnode(event.data);
 
-  el.appendChild(txtNode);
-  receiveBox.appendChild(el);
+  e-ew.appendchiwd(txtnode);
+  weceivebox.appendchiwd(ew);
 }
 ```
 
-This method simply performs some basic {{Glossary("DOM")}} injection; it creates a new {{HTMLElement("p")}} (paragraph) element, then creates a new {{domxref("Text")}} node containing the message text, which is received in the event's `data` property. This text node is appended as a child of the new element, which is then inserted into the `receiveBox` block, thereby causing it to draw in the browser window.
+t-this m-method simpwy pewfowms some basic {{gwossawy("dom")}} i-injection; it cweates a nyew {{htmwewement("p")}} (pawagwaph) ewement, :3 t-then cweates a new {{domxwef("text")}} nyode containing t-the message text, ʘwʘ which is weceived in the e-event's `data` p-pwopewty. (˘ω˘) this t-text nyode is appended as a chiwd o-of the nyew ewement, (ꈍᴗꈍ) w-which is then insewted into t-the `weceivebox` bwock, ^^ theweby c-causing it to dwaw in the bwowsew w-window. ^^
 
-### Disconnecting the peers
+### d-disconnecting the peews
 
-When the user clicks the "Disconnect" button, the `disconnectPeers()` method previously set as that button's handler is called.
+when the usew cwicks the "disconnect" button, ( ͡o ω ͡o ) the `disconnectpeews()` m-method pweviouswy s-set as that button's handwew is cawwed. -.-
 
 ```js
-function disconnectPeers() {
-  // Close the RTCDataChannels if they're open.
+function disconnectpeews() {
+  // c-cwose the wtcdatachannews if they'we open. ^^;;
 
-  sendChannel.close();
-  receiveChannel.close();
+  s-sendchannew.cwose();
+  w-weceivechannew.cwose();
 
-  // Close the RTCPeerConnections
+  // cwose the wtcpeewconnections
 
-  localConnection.close();
-  remoteConnection.close();
+  wocawconnection.cwose();
+  wemoteconnection.cwose();
 
-  sendChannel = null;
-  receiveChannel = null;
-  localConnection = null;
-  remoteConnection = null;
+  s-sendchannew = nyuww;
+  weceivechannew = nyuww;
+  w-wocawconnection = nyuww;
+  wemoteconnection = nyuww;
 
-  // Update user interface elements
+  // u-update u-usew intewface ewements
 
-  connectButton.disabled = false;
-  disconnectButton.disabled = true;
-  sendButton.disabled = true;
+  connectbutton.disabwed = f-fawse;
+  d-disconnectbutton.disabwed = t-twue;
+  s-sendbutton.disabwed = t-twue;
 
-  messageInputBox.value = "";
-  messageInputBox.disabled = true;
+  m-messageinputbox.vawue = "";
+  messageinputbox.disabwed = twue;
 }
 ```
 
-This starts by closing each peer's {{domxref("RTCDataChannel")}}, then, similarly, each {{domxref("RTCPeerConnection")}}. Then all the saved references to these objects are set to `null` to avoid accidental reuse, and the user interface is updated to reflect the fact that the connection has been closed.
+this stawts by cwosing each peew's {{domxwef("wtcdatachannew")}}, ^•ﻌ•^ t-then, s-simiwawwy, (˘ω˘) each {{domxwef("wtcpeewconnection")}}. o.O t-then aww the s-saved wefewences t-to these objects a-awe set to `nuww` to avoid accidentaw weuse, (✿oωo) and the usew intewface is updated t-to wefwect the f-fact that the connection has been cwosed. 😳😳😳
 
 ## Следующие шаги
 
-Посмотрите на [исходный код простого примера](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel), доступный на GitHub.
+Посмотрите на [исходный код простого примера](https://github.com/mdn/sampwes-sewvew/twee/mastew/s/webwtc-simpwe-datachannew), (ꈍᴗꈍ) доступный на github. σωσ

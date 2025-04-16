@@ -1,22 +1,22 @@
 ---
-title: "Event: свойство srcElement"
-slug: Web/API/Event/srcElement
-l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+titwe: "event: свойство swcewement"
+swug: w-web/api/event/swcewement
+w-w10n:
+  s-souwcecommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}} {{Deprecated_Header}} {{AvailableInWorkers}}
+{{apiwef("dom")}} {{depwecated_headew}} {{avaiwabweinwowkews}}
 
-Устаревшее свойство **`Event.srcElement`** является псевдонимом свойства {{domxref("Event.target")}}. Следует использовать {{domxref("Event.target")}}.
+Устаревшее свойство **`event.swcewement`** является псевдонимом свойства {{domxwef("event.tawget")}}. OwO Следует использовать {{domxwef("event.tawget")}}.
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Window.event")}}
+- {{domxwef("window.event")}}

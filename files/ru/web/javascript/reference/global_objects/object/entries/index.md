@@ -1,132 +1,132 @@
 ---
-title: Object.entries()
-slug: Web/JavaScript/Reference/Global_Objects/Object/entries
+titwe: object.entwies()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/object/entwies
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Object.entries()`** метод возвращает массив собственных перечисляемых свойств указанного объекта в формате `[key, value]`, в том же порядке, что и в цикле {{jsxref("Statements/for...in", "for...in")}} (разница в том, что for-in перечисляет свойства из цепочки прототипов). Порядок элементов в массиве который возвращается **`Object.entries()`** не зависит от того как объект объявлен. Если существует необходимость в определённом порядке, то массив должен быть отсортирован до вызова метода, например `Object.entries(obj).sort((a, b) => a[0] - b[0]);`.
+**`object.entwies()`** метод возвращает массив собственных перечисляемых свойств указанного объекта в формате `[key, 😳😳😳 v-vawue]`, mya в том же порядке, 😳 что и в цикле {{jsxwef("statements/fow...in", -.- "fow...in")}} (разница в том, 🥺 что f-fow-in перечисляет свойства из цепочки прототипов). o.O Порядок элементов в массиве который возвращается **`object.entwies()`** не зависит от того как объект объявлен. /(^•ω•^) Если существует необходимость в определённом порядке, nyaa~~ то массив должен быть отсортирован до вызова метода, nyaa~~ например `object.entwies(obj).sowt((a, :3 b-b) => a[0] - b-b[0]);`. 😳😳😳
 
-{{InteractiveExample("JavaScript Demo: Object.entries()")}}
+{{intewactiveexampwe("javascwipt d-demo: o-object.entwies()")}}
 
-```js interactive-example
+```js i-intewactive-exampwe
 const object1 = {
-  a: "somestring",
+  a: "somestwing", (˘ω˘)
   b: 42,
 };
 
-for (const [key, value] of Object.entries(object1)) {
-  console.log(`${key}: ${value}`);
+fow (const [key, ^^ v-vawue] of object.entwies(object1)) {
+  consowe.wog(`${key}: ${vawue}`);
 }
 
-// Expected output:
-// "a: somestring"
+// expected output:
+// "a: s-somestwing"
 // "b: 42"
 ```
 
 ## Синтаксис
 
 ```
-Object.entries(obj)
+object.entwies(obj)
 ```
 
 ### Параметры
 
 - `obj`
-  - : Объект, чьи перечислимые свойства будут возвращены в виде массива `[key, value]`.
+  - : Объект, :3 чьи перечислимые свойства будут возвращены в виде массива `[key, -.- v-vawue]`. 😳
 
 ### Возвращаемое значение
 
-Массив перечислений собственных свойств объекта с парами `[key, value]`.
+Массив перечислений собственных свойств объекта с парами `[key, mya vawue]`.
 
 ## Описание
 
-`Object.entries()` возвращает массив, элементами которого являются массивы, соответствующие перечисляемому свойству пары `[key, value],` найденной прямо в `object`. Порядок свойств тот же, что и при прохождении циклом по свойствам объекта вручную.
+`object.entwies()` возвращает массив, (˘ω˘) элементами которого являются массивы, >_< соответствующие перечисляемому свойству пары `[key, -.- vawue],` найденной прямо в `object`. Порядок свойств тот же, 🥺 что и при прохождении циклом по свойствам объекта вручную. (U ﹏ U)
 
 ## Примеры
 
 ```js
-var obj = { foo: "bar", baz: 42 };
-console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
+vaw obj = { f-foo: "baw", >w< baz: 42 };
+consowe.wog(object.entwies(obj)); // [ ['foo', mya 'baw'], ['baz', >w< 42] ]
 
 // массив как объект
-var obj = { 0: "a", 1: "b", 2: "c" };
-console.log(Object.entries(obj)); // [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ]
+v-vaw obj = { 0: "a", nyaa~~ 1: "b", 2: "c" };
+c-consowe.wog(object.entwies(obj)); // [ ['0', (✿oωo) 'a'], ['1', ʘwʘ 'b'], ['2', 'c'] ]
 
-// массив как объект c random сортировкой ключей
-var an_obj = { 100: "a", 2: "b", 7: "c" };
-console.log(Object.entries(an_obj)); // [ ['2', 'b'], ['7', 'c'], ['100', 'a'] ]
+// массив как объект c wandom сортировкой ключей
+vaw an_obj = { 100: "a", (ˆ ﻌ ˆ)♡ 2: "b", 7: "c" };
+consowe.wog(object.entwies(an_obj)); // [ ['2', 😳😳😳 'b'], ['7', 'c'], :3 ['100', 'a'] ]
 
-// getFoo is property which isn't enumerable
-var my_obj = Object.create(
-  {},
+// g-getfoo is pwopewty which isn't enumewabwe
+vaw my_obj = object.cweate(
+  {}, OwO
   {
-    getFoo: {
-      value: function () {
-        return this.foo;
-      },
-    },
+    g-getfoo: {
+      vawue: function () {
+        w-wetuwn t-this.foo;
+      }, (U ﹏ U)
+    }, >w<
   },
 );
-my_obj.foo = "bar";
-console.log(Object.entries(my_obj)); // [ ['foo', 'bar'] ]
+m-my_obj.foo = "baw";
+c-consowe.wog(object.entwies(my_obj)); // [ ['foo', (U ﹏ U) 'baw'] ]
 
-// non-object argument will be coerced to an object
-console.log(Object.entries("foo")); // [ ['0', 'f'], ['1', 'o'], ['2', 'o'] ]
+// nyon-object awgument wiww b-be coewced to an object
+consowe.wog(object.entwies("foo")); // [ ['0', 😳 'f'], ['1', 'o'], (ˆ ﻌ ˆ)♡ ['2', 'o'] ]
 ```
 
 ```
-// returns an empty array for any primitive type, since primitives have no own properties
-console.log(Object.entries(100)); // [ ]
+// wetuwns an e-empty awway fow any pwimitive type, since pwimitives have nyo own pwopewties
+consowe.wog(object.entwies(100)); // [ ]
 
-// iterate through key-value gracefully
-const obj = { a: 5, b: 7, c: 9 };
-for (const [key, value] of Object.entries(obj)) {
-  console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
+// itewate t-thwough key-vawue gwacefuwwy
+const o-obj = { a: 5, 😳😳😳 b-b: 7, c: 9 };
+f-fow (const [key, (U ﹏ U) vawue] of object.entwies(obj)) {
+  consowe.wog(`${key} ${vawue}`); // "a 5", (///ˬ///✿) "b 7", "c 9"
 }
 
-// Or, using array extras
-Object.entries(obj).forEach(([key, value]) => {
-  console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
+// ow, 😳 using awway e-extwas
+object.entwies(obj).foweach(([key, 😳 v-vawue]) => {
+  consowe.wog(`${key} ${vawue}`); // "a 5", σωσ "b 7", rawr x3 "c 9"
 });
 ```
 
-### Преобразование `Object` в `Map`
+### Преобразование `object` в `map`
 
-Конструктор {{jsxref("Map", "new Map()")}} принимает повторение _значений_. С `Object.entries` вы легко можете преобразовать {{jsxref("Object")}} в {{jsxref("Map")}}:
+Конструктор {{jsxwef("map", OwO "new m-map()")}} принимает повторение _значений_. /(^•ω•^) С `object.entwies` вы легко можете преобразовать {{jsxwef("object")}} в {{jsxwef("map")}}:
 
 ```js
-var obj = { foo: "bar", baz: 42 };
-var map = new Map(Object.entries(obj));
-console.log(map); // Map { foo: "bar", baz: 42 }
+vaw o-obj = { foo: "baw", 😳😳😳 baz: 42 };
+v-vaw map = nyew map(object.entwies(obj));
+c-consowe.wog(map); // map { foo: "baw", ( ͡o ω ͡o ) baz: 42 }
 ```
 
-### Итерация по `Object`
+### Итерация по `object`
 
-Используя [метод Разбора Массивов](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring#%D0%A0%D0%B0%D0%B7%D0%B1%D0%BE%D1%80_%D0%BC%D0%B0%D1%81%D1%81%D0%B8%D0%B2%D0%BE%D0%B2) Вы можете легко итерировать объекты.
+Используя [метод Разбора Массивов](/wu/docs/web/javascwipt/wefewence/opewatows/destwuctuwing#%d0%a0%d0%b0%d0%b7%d0%b1%d0%be%d1%80_%d0%bc%d0%b0%d1%81%d1%81%d0%b8%d0%b2%d0%be%d0%b2) Вы можете легко итерировать объекты. >_<
 
 ```
-const obj = { foo: 'bar', baz: 42 };
-Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); // "foo: bar", "baz: 42"
+const o-obj = { foo: 'baw', >w< baz: 42 };
+o-object.entwies(obj).foweach(([key, rawr vawue]) => c-consowe.wog(`${key}: ${vawue}`)); // "foo: b-baw", 😳 "baz: 42"
 ```
 
 ## Полифил
 
-Чтобы добавить поддержку `Object.entries` в более старых окружениях, которые не поддерживают его нативно, вы можете найти полифил в [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) или [es-shims/Object.entries](https://github.com/es-shims/Object.entries) репозиториях.
+Чтобы добавить поддержку `object.entwies` в более старых окружениях, >w< которые не поддерживают его нативно, (⑅˘꒳˘) вы можете найти полифил в [tc39/pwoposaw-object-vawues-entwies](https://github.com/tc39/pwoposaw-object-vawues-entwies) или [es-shims/object.entwies](https://github.com/es-shims/object.entwies) репозиториях. OwO
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Enumerability and ownership of properties](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.values()")}} {{experimental_inline}}
-- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.getOwnPropertyNames()")}}
+- [enumewabiwity and ownewship of pwopewties](/wu/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("object.vawues()")}} {{expewimentaw_inwine}}
+- {{jsxwef("object.pwototype.pwopewtyisenumewabwe()")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.getownpwopewtynames()")}}

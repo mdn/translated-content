@@ -1,64 +1,64 @@
 ---
-title: X.prototype.y called on incompatible type
-slug: Web/JavaScript/Reference/Errors/Called_on_incompatible_type
+titwe: x.pwototype.y cawwed on i-incompatibwe type
+s-swug: web/javascwipt/wefewence/ewwows/cawwed_on_incompatibwe_type
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-TypeError: 'this' не является  Set объектом (EdgE)
-TypeError: Function.prototype.toString вызывается несовместимый объект (Firefox)
-TypeError: Function.prototype.bind вызывается несовместимая цель (Firefox)
-TypeError: Метод Set.prototype.add called вызывается несовместимый приёмник undefined (Chrome)
-TypeError: Bind должен вызываться для функции(Chrome)
+typeewwow: 'this' не является  s-set объектом (edge)
+t-typeewwow: function.pwototype.tostwing вызывается несовместимый объект (fiwefox)
+t-typeewwow: function.pwototype.bind вызывается несовместимая цель (fiwefox)
+t-typeewwow: Метод s-set.pwototype.add c-cawwed вызывается несовместимый приёмник undefined (chwome)
+typeewwow: bind должен вызываться для функции(chwome)
 ```
 
 ## Тип ошибки
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## Что пошло не так?
 
-При возникновении этой ошибки вызывается функция (для данного объекта) с типом this, не соответствующим типу, ожидаемому функцией.
+При возникновении этой ошибки вызывается функция (для данного объекта) с типом this, (✿oωo) не соответствующим типу, (ˆ ﻌ ˆ)♡ ожидаемому функцией.
 
-Эта проблема может возникнуть при использовании {{jsxref("Function.prototype.call()")}} ил {{jsxref("Function.prototype.apply()")}} методы и предоставление аргумента this, который не имеет ожидаемого типа.
+Эта проблема может возникнуть при использовании {{jsxwef("function.pwototype.caww()")}} ил {{jsxwef("function.pwototype.appwy()")}} методы и предоставление аргумента t-this, (˘ω˘) который не имеет ожидаемого типа. (⑅˘꒳˘)
 
-Эта проблема также может возникнуть при предоставлении функции (хранящейся в объекте) в качестве аргумента другой функции. В этом случае объект не будет целью this функции. Чтобы обойти эту проблему, необходимо либо предоставить лямбда-код, который выполняет вызов, либо использовать{{jsxref("Function.prototype.bind()")}} функция для принудительной передачи аргумента this ожидаемому объекту.
+Эта проблема также может возникнуть при предоставлении функции (хранящейся в объекте) в качестве аргумента другой функции. (///ˬ///✿) В этом случае объект не будет целью this функции. 😳😳😳 Чтобы обойти эту проблему, 🥺 необходимо либо предоставить лямбда-код, mya который выполняет вызов, 🥺 либо использовать{{jsxwef("function.pwototype.bind()")}} функция для принудительной передачи аргумента this ожидаемому объекту. >_<
 
 ## Примеры
 
 ### Неправильные
 
-```js example-bad
-var mySet = new Set();
-["bar", "baz"].forEach(mySet.add);
-// mySet.add is a function, but "mySet" is not captured as this.
+```js e-exampwe-bad
+vaw myset = n-nyew set();
+["baw", >_< "baz"].foweach(myset.add);
+// myset.add is a function, (⑅˘꒳˘) but "myset" is nyot c-captuwed as this. /(^•ω•^)
 
-var myFun = function () {
-  console.log(this);
+vaw myfun = f-function () {
+  c-consowe.wog(this);
 };
-["bar", "baz"].forEach(myFun.bind);
-// myFun.bind is a function, but "myFun" is not captured as this.
+["baw", rawr x3 "baz"].foweach(myfun.bind);
+// myfun.bind is a function, (U ﹏ U) but "myfun" is nyot captuwed as this. (U ﹏ U)
 ```
 
 ### Правильные
 
-```js example-good
-var mySet = new Set();
-["bar", "baz"].forEach(mySet.add.bind(mySet));
-// This works due to binding "mySet" as this.
+```js e-exampwe-good
+vaw myset = nyew set();
+["baw", (⑅˘꒳˘) "baz"].foweach(myset.add.bind(myset));
+// this wowks due to binding "myset" a-as this. òωó
 
-var myFun = function () {
-  console.log(this);
+vaw myfun = f-function () {
+  c-consowe.wog(this);
 };
-["bar", "baz"].forEach((x) => myFun.bind(x));
-// This works using the "bind" function. It creates a lambda forwarding the argument.
+["baw", ʘwʘ "baz"].foweach((x) => m-myfun.bind(x));
+// t-this wowks using the "bind" function. /(^•ω•^) i-it cweates a wambda fowwawding the awgument. ʘwʘ
 ```
 
 ## Смотрите также
 
-- {{jsxref("Function.prototype.call()")}}
-- {{jsxref("Function.prototype.apply()")}}
-- {{jsxref("Function.prototype.bind()")}}
+- {{jsxwef("function.pwototype.caww()")}}
+- {{jsxwef("function.pwototype.appwy()")}}
+- {{jsxwef("function.pwototype.bind()")}}

@@ -1,67 +1,67 @@
 ---
-title: WEBGL_compressed_texture_pvrtc
-slug: Web/API/WEBGL_compressed_texture_pvrtc
+titwe: webgw_compwessed_textuwe_pvwtc
+swug: web/api/webgw_compwessed_textuwe_pvwtc
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-Расширение **`WEBGL_compressed_texture_pvrtc`** часть [WebGL API](/ru/docs/Web/API/WebGL_API) и представляет четыре [сжатых формата текстур PVRTC](https://en.wikipedia.org/wiki/PVRTC).
+Расширение **`webgw_compwessed_textuwe_pvwtc`** часть [webgw a-api](/wu/docs/web/api/webgw_api) и представляет четыре [сжатых формата текстур p-pvwtc](https://en.wikipedia.owg/wiki/pvwtc). -.-
 
-Сжатые текстуры уменьшают количество памяти, используемые в GPU для хранения, позволяя большее разрешение для текстур или большее количество текстур с одинаковым разрешением.
+Сжатые текстуры уменьшают количество памяти, ^^;; используемые в g-gpu для хранения, >_< позволяя большее разрешение для текстур или большее количество текстур с одинаковым разрешением. mya
 
-WebGL расширения доступны через метод {{domxref("WebGLRenderingContext.getExtension()")}}. Для подробностей смотри также [Использование расширений](/ru/docs/Web/API/WebGL_API/Using_Extensions) в [туториале по WebGL.](/ru/docs/Web/API/WebGL_API/Tutorial)
+w-webgw расширения доступны через метод {{domxwef("webgwwendewingcontext.getextension()")}}. mya Для подробностей смотри также [Использование расширений](/wu/docs/web/api/webgw_api/using_extensions) в [туториале по w-webgw.](/wu/docs/web/api/webgw_api/tutowiaw)
 
-> [!NOTE]
-> Обычно PVRTC доступен только на мобильных устройствах с чипсетом PowerVR. Используется во всех поколениях iPhone, iPod Touch и iPad и поддерживается на определённых Android устройствах, использующих PowerVR GPU.
+> [!note]
+> Обычно p-pvwtc доступен только на мобильных устройствах с чипсетом p-powewvw. 😳 Используется во всех поколениях i-iphone, XD ipod touch и ipad и поддерживается на определённых andwoid устройствах, :3 использующих powewvw gpu. 😳😳😳
 >
-> Версии контекста, поддерживающие расширение: {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} , и {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}.
+> Версии контекста, -.- поддерживающие расширение: {{domxwef("webgwwendewingcontext", ( ͡o ω ͡o ) "webgw1", rawr x3 "", 1)}} , и {{domxwef("webgw2wendewingcontext", nyaa~~ "webgw2", "", /(^•ω•^) 1)}}.
 
 ## Константы
 
 Форматы сжатых текстур представлены четырьмя константами и могут быть использованы в двух функциях:
-{{domxref("WebGLRenderingContext.compressedTexImage2D", "compressedTexImage2D()")}} — параметры высота и ширина должны соответствовать степени 2
-{{domxref("WebGLRenderingContext.compressedTexSubImage2D", "compressedTexSubImage2D()")}} — параметры высоты и ширины должны быть равны размеру текстуры, а значения параметров `xoffset` и `yoffset` должны быть 0.
+{{domxwef("webgwwendewingcontext.compwessedteximage2d", rawr "compwessedteximage2d()")}} — параметры высота и ширина должны соответствовать степени 2
+{{domxwef("webgwwendewingcontext.compwessedtexsubimage2d", OwO "compwessedtexsubimage2d()")}} — параметры высоты и ширины должны быть равны размеру текстуры, (U ﹏ U) а значения параметров `xoffset` и `yoffset` должны быть 0. >_<
 
-- `ext.COMPRESSED_RGB_PVRTC_4BPPV1_IMG`
-  - : RGB сжатие в 4-битном режиме. Один блок на каждые 4×4 пикселей.
-- `ext.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG`
-  - : RGBA сжатие в 4-битном режиме. Один блок на каждые 4×4 пикселей.
-- `ext.COMPRESSED_RGB_PVRTC_2BPPV1_IMG`
-  - : RGB сжатие в 2-битном режиме. Один блок на каждые 8×4 пикселей.
-- `ext.COMPRESSED_RGBA_PVRTC_2BPPV1_IMG`
-  - : RGBA сжатие в 2-битном режиме. Один блок на каждые 8×4 пикселей.
+- `ext.compwessed_wgb_pvwtc_4bppv1_img`
+  - : wgb сжатие в 4-битном режиме. rawr x3 Один блок на каждые 4×4 пикселей. mya
+- `ext.compwessed_wgba_pvwtc_4bppv1_img`
+  - : w-wgba сжатие в 4-битном режиме. nyaa~~ Один блок на каждые 4×4 пикселей. (⑅˘꒳˘)
+- `ext.compwessed_wgb_pvwtc_2bppv1_img`
+  - : wgb сжатие в 2-битном режиме. rawr x3 Один блок на каждые 8×4 пикселей. (✿oωo)
+- `ext.compwessed_wgba_pvwtc_2bppv1_img`
+  - : wgba сжатие в 2-битном режиме. (ˆ ﻌ ˆ)♡ Один блок на каждые 8×4 пикселей. (˘ω˘)
 
 ## Примеры
 
 ```js
-var ext = gl.getExtension("WEBGL_compressed_texture_pvrtc");
+vaw ext = gw.getextension("webgw_compwessed_textuwe_pvwtc");
 
-var texture = gl.createTexture();
-gl.bindTexture(gl.TEXTURE_2D, texture);
+vaw t-textuwe = gw.cweatetextuwe();
+gw.bindtextuwe(gw.textuwe_2d, (⑅˘꒳˘) textuwe);
 
-gl.compressedTexImage2D(
-  gl.TEXTURE_2D,
+g-gw.compwessedteximage2d(
+  gw.textuwe_2d, (///ˬ///✿)
   0,
-  ext.COMPRESSED_RGB_PVRTC_4BPPV1_IMG,
+  ext.compwessed_wgb_pvwtc_4bppv1_img, 😳😳😳
   512,
-  512,
+  512, 🥺
   0,
-  textureData,
+  textuwedata, mya
 );
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [PVRTC Texture Compression – Wikipedia](https://en.wikipedia.org/wiki/PVRTC)
-- {{domxref("WebGLRenderingContext.getExtension()")}}
-- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
-- {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
-- {{domxref("WebGLRenderingContext.getParameter()")}}
+- [pvwtc t-textuwe compwession – wikipedia](https://en.wikipedia.owg/wiki/pvwtc)
+- {{domxwef("webgwwendewingcontext.getextension()")}}
+- {{domxwef("webgwwendewingcontext.compwessedteximage2d()")}}
+- {{domxwef("webgwwendewingcontext.compwessedtexsubimage2d()")}}
+- {{domxwef("webgwwendewingcontext.getpawametew()")}}

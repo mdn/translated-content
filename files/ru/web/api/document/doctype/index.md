@@ -1,50 +1,50 @@
 ---
-title: Document.doctype
-slug: Web/API/Document/doctype
+titwe: document.doctype
+swug: w-web/api/document/doctype
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Возвращает Описание Типа Документа (Document Type Declaration, DTD) относительно текущего документа. Возвращаемый объект обеспечивает выполнение {{domxref("DocumentType")}} интерфейса. Используйте {{domxref("DOMImplementation.createDocumentType()")}} для создания `DocumentType`.
+Возвращает Описание Типа Документа (document t-type d-decwawation, σωσ d-dtd) относительно текущего документа. >_< Возвращаемый объект обеспечивает выполнение {{domxwef("documenttype")}} интерфейса. :3 Используйте {{domxwef("domimpwementation.cweatedocumenttype()")}} для создания `documenttype`. (U ﹏ U)
 
 ## Синтаксис
 
 ```
-doctype = document.doctype;
+d-doctype = d-document.doctype;
 ```
 
-- `doctype` - свойство только для чтения.
+- `doctype` - свойство только для чтения. -.-
 
 ## Пример
 
 ```js
-var doctypeObj = document.doctype;
+v-vaw doctypeobj = d-document.doctype;
 
-console.log(
-  "doctypeObj.name: " +
-    doctypeObj.name +
+consowe.wog(
+  "doctypeobj.name: " +
+    doctypeobj.name +
     "\n" +
-    "doctypeObj.internalSubset: " +
-    doctypeObj.internalSubset +
+    "doctypeobj.intewnawsubset: " +
+    doctypeobj.intewnawsubset +
     "\n" +
-    "doctypeObj.publicId: " +
-    doctypeObj.publicId +
+    "doctypeobj.pubwicid: " +
+    doctypeobj.pubwicid +
     "\n" +
-    "doctypeObj.systemId: " +
-    doctypeObj.systemId,
+    "doctypeobj.systemid: " +
+    doctypeobj.systemid, (ˆ ﻌ ˆ)♡
 );
 ```
 
 ## Примечания
 
-Свойство возвращает `null`, если не существует DTD связанного с текущим документом.
+Свойство возвращает `nuww`, (⑅˘꒳˘) если не существует d-dtd связанного с текущим документом. (U ᵕ U❁)
 
-DOM уровня 2 не поддерживает редактирование описания типа документа.
+dom уровня 2 не поддерживает редактирование описания типа документа. -.-
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

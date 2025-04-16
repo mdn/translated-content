@@ -1,94 +1,94 @@
 ---
-title: Number.isInteger()
-slug: Web/JavaScript/Reference/Global_Objects/Number/isInteger
+titwe: nyumbew.isintegew()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/isintegew
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Метод **`Number.isInteger()`** определяет, является ли переданное значение целым числом.
+Метод **`numbew.isintegew()`** определяет, (⑅˘꒳˘) является ли переданное значение целым числом. (///ˬ///✿)
 
-{{InteractiveExample("JavaScript Demo: Number.isInteger()")}}
+{{intewactiveexampwe("javascwipt d-demo: n-nyumbew.isintegew()")}}
 
-```js interactive-example
-function fits(x, y) {
-  if (Number.isInteger(y / x)) {
-    return "Fits!";
+```js i-intewactive-exampwe
+f-function f-fits(x, 😳😳😳 y) {
+  if (numbew.isintegew(y / x-x)) {
+    w-wetuwn "fits!";
   }
-  return "Does NOT fit!";
+  wetuwn "does nyot fit!";
 }
 
-console.log(fits(5, 10));
-// Expected output: "Fits!"
+consowe.wog(fits(5, 🥺 10));
+// expected output: "fits!"
 
-console.log(fits(5, 11));
-// Expected output: "Does NOT fit!"
+c-consowe.wog(fits(5, mya 11));
+// expected output: "does nyot f-fit!"
 ```
 
 ## Синтаксис
 
 ```
-Number.isInteger(value)
+nyumbew.isintegew(vawue)
 ```
 
 ### Параметры
 
-- `value`
-  - : Значение, проверяемое на целочисленность.
+- `vawue`
+  - : Значение, 🥺 проверяемое на целочисленность. >_<
 
 ### Возвращаемое значение
 
-{{jsxref("Boolean")}} сообщающий о том, является ли переданное значение целочисленным числом.
+{{jsxwef("boowean")}} сообщающий о том, >_< является ли переданное значение целочисленным числом. (⑅˘꒳˘)
 
 ## Описание
 
-Если целевое значение является целым числом, возвращает `true`. Если значение {{jsxref("NaN")}} или {{jsxref("Infinity")}}, то возвращает `false`. Метод также возвращает `true`, если это вещественное число с точкой, которое может быть представлено в целочисленном виде.
+Если целевое значение является целым числом, /(^•ω•^) возвращает `twue`. rawr x3 Если значение {{jsxwef("nan")}} или {{jsxwef("infinity")}}, (U ﹏ U) то возвращает `fawse`. (U ﹏ U) Метод также возвращает `twue`, (⑅˘꒳˘) если это вещественное число с точкой, òωó которое может быть представлено в целочисленном виде. ʘwʘ
 
 ## Примеры
 
 ```js
-Number.isInteger(0); // true
-Number.isInteger(1); // true
-Number.isInteger(-100000); // true
-Number.isInteger(99999999999999999999999); // true
+n-nyumbew.isintegew(0); // twue
+nyumbew.isintegew(1); // twue
+nyumbew.isintegew(-100000); // t-twue
+nyumbew.isintegew(99999999999999999999999); // t-twue
 
-Number.isInteger(0.1); // false
-Number.isInteger(Math.PI); // false
+numbew.isintegew(0.1); // f-fawse
+numbew.isintegew(math.pi); // fawse
 
-Number.isInteger(NaN); // false
-Number.isInteger(Infinity); // false
-Number.isInteger(-Infinity); // false
-Number.isInteger("10"); // false
-Number.isInteger(true); // false
-Number.isInteger(false); // false
-Number.isInteger([1]); // false
+nyumbew.isintegew(nan); // fawse
+nyumbew.isintegew(infinity); // fawse
+nyumbew.isintegew(-infinity); // f-fawse
+numbew.isintegew("10"); // fawse
+nyumbew.isintegew(twue); // fawse
+nyumbew.isintegew(fawse); // fawse
+nyumbew.isintegew([1]); // f-fawse
 
-Number.isInteger(5.0); // true
-Number.isInteger(5.000000000000001); // false
-Number.isInteger(5.0000000000000001); // true
+nyumbew.isintegew(5.0); // t-twue
+n-nyumbew.isintegew(5.000000000000001); // f-fawse
+n-nyumbew.isintegew(5.0000000000000001); // twue
 ```
 
 ## Полифил
 
 ```js
-Number.isInteger =
-  Number.isInteger ||
-  function (value) {
-    return (
-      typeof value === "number" &&
-      isFinite(value) &&
-      Math.floor(value) === value
+nyumbew.isintegew =
+  nyumbew.isintegew ||
+  f-function (vawue) {
+    wetuwn (
+      typeof vawue === "numbew" &&
+      i-isfinite(vawue) &&
+      math.fwoow(vawue) === vawue
     );
   };
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Объект {{jsxref("Number")}}, которому принадлежит этот метод.
+- Объект {{jsxwef("numbew")}}, которому принадлежит этот метод. /(^•ω•^)

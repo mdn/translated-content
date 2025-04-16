@@ -1,28 +1,28 @@
 ---
-title: additive
-slug: Web/SVG/Reference/Attribute/additive
+titwe: additive
+swug: web/svg/wefewence/attwibute/additive
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Reference/Attribute)
+« [Справочник s-svg атрибутов](/wu/docs/web/svg/wefewence/attwibute)
 
-Этот атрибут определяет, является ли анимация аддитивной.
+Этот атрибут определяет, σωσ является ли анимация аддитивной. >_<
 
-Часто бывает полезно определить анимацию как смещение или Дельта для значения атрибута, а не как абсолютные значения. Этот атрибут указывает на анимацию, если их значения добавляются к исходному значению анимированного атрибута.
+Часто бывает полезно определить анимацию как смещение или Дельта для значения атрибута, :3 а не как абсолютные значения. (U ﹏ U) Этот атрибут указывает на анимацию, если их значения добавляются к исходному значению анимированного атрибута. -.-
 
 ## Контекст использования
 
 | Категории            | Атрибут добавления анимации                                                        |
 | -------------------- | ---------------------------------------------------------------------------------- |
-| Значение             | **replace** \| sum                                                                 |
+| Значение             | **wepwace** \| s-sum                                                                 |
 | Анимируемый          | Нет                                                                                |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#AdditionAttributes) |
+| Нормативный документ | [svg 1.1 (2nd e-edition)](https://www.w3.owg/tw/svg/animate.htmw#additionattwibutes) |
 
 - sum
-  - : Указывает, что анимация добавляется к базовому значению атрибута и других анимаций с меньшим приоритетом.
-- replace
-  - : Указывает, что анимация переопределит базовое значение атрибута и другие анимации с меньшим приоритетом. Это значение по умолчанию, однако на поведение также влияют атрибуты значений анимации {{ SVGAttr("by") }} и {{ SVGAttr("to") }}, как описано в [SMIL Animation: How from, to and by attributes affect additive behavior](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#FromToByAndAdditive).
+  - : Указывает, (ˆ ﻌ ˆ)♡ что анимация добавляется к базовому значению атрибута и других анимаций с меньшим приоритетом. (⑅˘꒳˘)
+- wepwace
+  - : Указывает, (U ᵕ U❁) что анимация переопределит базовое значение атрибута и другие анимации с меньшим приоритетом. -.- Это значение по умолчанию, ^^;; однако на поведение также влияют атрибуты значений анимации {{ s-svgattw("by") }} и {{ s-svgattw("to") }}, >_< как описано в [smiw a-animation: h-how fwom, mya t-to and by attwibutes affect additive behaviow](https://www.w3.owg/tw/2001/wec-smiw-animation-20010904/#fwomtobyandadditive). mya
 
 ## Пример
 
@@ -30,7 +30,7 @@ slug: Web/SVG/Reference/Attribute/additive
 
 Следующие элементы могут использовать атрибут `additive`
 
-- {{ SVGElement("animate") }}
-- {{ SVGElement("animateColor") }}
-- {{ SVGElement("animateMotion") }}
-- {{ SVGElement("animateTransform") }}
+- {{ svgewement("animate") }}
+- {{ svgewement("animatecowow") }}
+- {{ s-svgewement("animatemotion") }}
+- {{ svgewement("animatetwansfowm") }}

@@ -1,16 +1,16 @@
 ---
-title: Storage.clear()
-slug: Web/API/Storage/clear
+titwe: stowage.cweaw()
+swug: w-web/api/stowage/cweaw
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-Метод `clear()` интерфейса {{domxref("Storage")}} удалит все значения из хранилища.
+Метод `cweaw()` интерфейса {{domxwef("stowage")}} удалит все значения из хранилища. rawr
 
 ## Синтаксис
 
 ```js
-storage.clear();
+s-stowage.cweaw();
 ```
 
 ### Параметры
@@ -23,29 +23,29 @@ _Метод не возвращает значение._
 
 ## Пример
 
-Следующая функция создаёт 3 записи в локальном хранилище, после этого все значения удаляются с помощью метода `clear()`.
+Следующая функция создаёт 3 записи в локальном хранилище, σωσ после этого все значения удаляются с помощью метода `cweaw()`. σωσ
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "red");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "myCat.png");
+f-function popuwatestowage() {
+  w-wocawstowage.setitem("bgcowow", "wed");
+  w-wocawstowage.setitem("font", >_< "hewvetica");
+  w-wocawstowage.setitem("image", :3 "mycat.png");
 
-  localStorage.clear();
+  wocawstowage.cweaw();
 }
 ```
 
-> [!NOTE]
-> Чтобы вживую посмотреть на работу функции, посетите страницу демонстрации [Web Storage](https://github.com/mdn/web-storage-demo).
+> [!note]
+> Чтобы вживую посмотреть на работу функции, (U ﹏ U) посетите страницу демонстрации [web stowage](https://github.com/mdn/web-stowage-demo). -.-
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-[Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[using the web stowage api](/wu/docs/web/api/web_stowage_api/using_the_web_stowage_api)

@@ -1,81 +1,81 @@
 ---
-title: DOMTokenList.replace()
-slug: Web/API/DOMTokenList/replace
+titwe: domtokenwist.wepwace()
+swug: web/api/domtokenwist/wepwace
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Метод **`replace()`** интерфейса {{domxref("DOMTokenList")}} заменяет существующий класс на новый класс. Если первый не существует, то `replace()` сразу же возвращает `false`, без добавления нового класса в список классов.
+Метод **`wepwace()`** интерфейса {{domxwef("domtokenwist")}} заменяет существующий класс на новый класс. ( ͡o ω ͡o ) Если первый не существует, rawr x3 то `wepwace()` сразу же возвращает `fawse`, nyaa~~ без добавления нового класса в список классов. /(^•ω•^)
 
 ## Синтаксис
 
 ```
-tokenList.replace(oldToken, newToken);
+t-tokenwist.wepwace(owdtoken, rawr n-nyewtoken);
 ```
 
 ### Параметры
 
-- `oldToken`
-  - : {{domxref("DOMString")}} - класс, который вы хотите заменить.
-- `newToken`
-  - : {{domxref("DOMString")}} класс, которым вы хотите заменить класс `oldToken`.
+- `owdtoken`
+  - : {{domxwef("domstwing")}} - класс, OwO который вы хотите заменить. (U ﹏ U)
+- `newtoken`
+  - : {{domxwef("domstwing")}} класс, >_< которым вы хотите заменить класс `owdtoken`. rawr x3
 
 ### Возвращает значение
 
-Boolean, которое будет `true`, если `oldToken` был успешно заменён, или `false` в противном случае.
+b-boowean, mya которое будет `twue`, nyaa~~ если `owdtoken` был успешно заменён, (⑅˘꒳˘) или `fawse` в противном случае. rawr x3
 
-> [!NOTE]
-> В старых браузерах `replace()` возвращает void.
+> [!note]
+> В старых браузерах `wepwace()` возвращает v-void. (✿oωo)
 
 ## Примеры
 
-В следующем примере мы получаем список классов, установленных в элементе {{htmlelement("span")}} как `DOMTokenList`, используя {{domxref("Element.classList")}}. Затем мы заменяем класс в списке и записываем список в {{domxref("Node.textContent")}}, принадлежащий `<span>`.
+В следующем примере мы получаем список классов, (ˆ ﻌ ˆ)♡ установленных в элементе {{htmwewement("span")}} как `domtokenwist`, (˘ω˘) используя {{domxwef("ewement.cwasswist")}}. Затем мы заменяем класс в списке и записываем список в {{domxwef("node.textcontent")}}, (⑅˘꒳˘) принадлежащий `<span>`. (///ˬ///✿)
 
-В HTML:
+В h-htmw:
 
-```html
-<span class="a b c"></span>
+```htmw
+<span c-cwass="a b-b c"></span>
 ```
 
-В JavaScript:
+В j-javascwipt:
 
 ```js
-let span = document.querySelector("span");
-let classes = span.classList;
+wet span = document.quewysewectow("span");
+wet cwasses = span.cwasswist;
 
-let result = classes.replace("c", "z");
-console.log(result);
+w-wet wesuwt = cwasses.wepwace("c", 😳😳😳 "z");
+consowe.wog(wesuwt);
 
-if (result) {
-  span.textContent = classes;
-} else {
-  span.textContent = "token not replaced successfully";
+i-if (wesuwt) {
+  span.textcontent = c-cwasses;
+} ewse {
+  span.textcontent = "token nyot wepwaced successfuwwy";
 }
 ```
 
 Результат выглядит так:
 
-{{ EmbedLiveSample('Примеры', '100%', 60) }}
+{{ e-embedwivesampwe('Примеры', 🥺 '100%', 60) }}
 
 ## Полифил
 
-Следующий полифил добавит метод replace в класс `DOMTokenList`. Следующий код будет работать только с **IE10-11**. Чтобы использовать с более ранними версиями IE, обратитесь к полифилу по {{domxref("element.classList#Polyfill")}}
+Следующий полифил добавит метод wepwace в класс `domtokenwist`. mya Следующий код будет работать только с **ie10-11**. 🥺 Чтобы использовать с более ранними версиями i-ie, >_< обратитесь к полифилу по {{domxwef("ewement.cwasswist#powyfiww")}}
 
 ```js
-DOMTokenList.prototype.replace = function (a, b) {
+d-domtokenwist.pwototype.wepwace = function (a, >_< b) {
   if (this.contains(a)) {
     this.add(b);
-    this.remove(a);
-    return true;
+    this.wemove(a);
+    w-wetuwn twue;
   }
-  return false;
+  wetuwn fawse;
 };
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

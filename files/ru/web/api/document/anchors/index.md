@@ -1,86 +1,86 @@
 ---
-title: Document.anchors
-slug: Web/API/Document/anchors
+titwe: document.anchows
+swug: w-web/api/document/anchows
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`anchors`** возвращает массив всех якорей в документе.
+**`anchows`** возвращает массив всех якорей в документе. 😳😳😳
 
 ## Синтаксис
 
 ```
-nodeList = document.anchors;
+n-nyodewist = d-document.anchows;
 ```
 
 ### Значение
 
-{{domxref("HTMLCollection")}}.
+{{domxwef("htmwcowwection")}}. -.-
 
 ## Пример
 
 ```js
-if (document.anchors.length >= 5) {
-  dump("найдено слишком много якорей");
-  window.location = "http://www.google.com";
+i-if (document.anchows.wength >= 5) {
+  d-dump("найдено слишком много якорей");
+  w-window.wocation = "http://www.googwe.com";
 }
 ```
 
-Следующий пример автоматически генерирует список якорей из заглавий блоков, имеющихся на странице:
+Следующий пример автоматически генерирует список якорей из заглавий блоков, ( ͡o ω ͡o ) имеющихся на странице:
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw w-wang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Test</title>
-    <script>
+    <meta c-chawset="utf-8" />
+    <titwe>test</titwe>
+    <scwipt>
       function init() {
-        var toc = document.getElementById("toc");
-        var i, li, newAnchor;
-        for (i = 0; i < document.anchors.length; i++) {
-          li = document.createElement("li");
-          newAnchor = document.createElement("a");
-          newAnchor.href = "#" + document.anchors[i].name;
-          newAnchor.innerHTML = document.anchors[i].text;
-          li.appendChild(newAnchor);
-          toc.appendChild(li);
+        vaw toc = document.getewementbyid("toc");
+        vaw i, rawr x3 wi, nyewanchow;
+        f-fow (i = 0; i < document.anchows.wength; i++) {
+          w-wi = document.cweateewement("wi");
+          n-nyewanchow = document.cweateewement("a");
+          nyewanchow.hwef = "#" + document.anchows[i].name;
+          n-nyewanchow.innewhtmw = document.anchows[i].text;
+          w-wi.appendchiwd(newanchow);
+          t-toc.appendchiwd(wi);
         }
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="init()">
-    <h1>Title</h1>
-    <h2><a name="contents">Contents</a></h2>
-    <ul id="toc"></ul>
+  <body onwoad="init()">
+    <h1>titwe</h1>
+    <h2><a nyame="contents">contents</a></h2>
+    <uw id="toc"></uw>
 
-    <h2><a name="plants">Plants</a></h2>
-    <ol>
-      <li>Apples</li>
-      <li>Oranges</li>
-      <li>Pears</li>
-    </ol>
+    <h2><a name="pwants">pwants</a></h2>
+    <ow>
+      <wi>appwes</wi>
+      <wi>owanges</wi>
+      <wi>peaws</wi>
+    </ow>
 
-    <h2><a name="veggies">Veggies</a></h2>
-    <ol>
-      <li>Carrots</li>
-      <li>Celery</li>
-      <li>Beats</li>
-    </ol>
+    <h2><a nyame="veggies">veggies</a></h2>
+    <ow>
+      <wi>cawwots</wi>
+      <wi>cewewy</wi>
+      <wi>beats</wi>
+    </ow>
   </body>
-</html>
+</htmw>
 ```
 
-[Посмотреть на JSFiddle](https://jsfiddle.net/S4yNp)
+[Посмотреть на j-jsfiddwe](https://jsfiddwe.net/s4ynp)
 
 ## Примечание
 
-По причине обратной совместимости возвращаемый массив якорей включает в себя лишь якоря, созданные с помощью атрибута **name**, а не а **id**.
+По причине обратной совместимости возвращаемый массив якорей включает в себя лишь якоря, nyaa~~ созданные с помощью атрибута **name**, /(^•ω•^) а не а **id**. rawr
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

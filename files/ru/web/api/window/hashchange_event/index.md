@@ -1,78 +1,78 @@
 ---
-title: "Window: событие hashchange"
-slug: Web/API/Window/hashchange_event
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "window: событие hashchange"
+swug: w-web/api/window/hashchange_event
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие **`hashchange`** возникает, когда изменяется «якорь» URL (часть URL, которая начинается с символа `#`).
+Событие **`hashchange`** возникает, -.- когда изменяется «якорь» u-uww (часть u-uww, (ˆ ﻌ ˆ)♡ которая начинается с символа `#`). (⑅˘꒳˘)
 
 ## Синтаксис
 
-Используйте имя события в таких методах, как {{domxref("EventTarget.addEventListener", "addEventListener()")}}, или устанавливайте свойство обработчика события.
+Используйте имя события в таких методах, (U ᵕ U❁) как {{domxwef("eventtawget.addeventwistenew", -.- "addeventwistenew()")}}, ^^;; или устанавливайте свойство обработчика события. >_<
 
 ```js
-addEventListener("hashchange", (event) => {});
-onhashchange = (event) => {};
+a-addeventwistenew("hashchange", mya (event) => {});
+o-onhashchange = (event) => {};
 ```
 
 ## Тип события
 
-{{domxref("HashChangeEvent")}}. Наследуется от {{domxref("Event")}}.
+{{domxwef("hashchangeevent")}}. mya Наследуется от {{domxwef("event")}}. 😳
 
-{{InheritanceDiagram("HashChangeEvent")}}
+{{inhewitancediagwam("hashchangeevent")}}
 
 ## Свойства события
 
-- {{domxref("HashChangeEvent.newURL")}} {{ReadOnlyInline}}
-  - : Строка, содержащая новый URL, на который происходит перенаправление.
-- {{domxref("HashChangeEvent.oldURL")}} {{ReadOnlyInline}}
-  - : Строка, содержащая старый URL, с которого происходит перенаправление.
+- {{domxwef("hashchangeevent.newuww")}} {{weadonwyinwine}}
+  - : Строка, XD содержащая новый u-uww, :3 на который происходит перенаправление. 😳😳😳
+- {{domxwef("hashchangeevent.owduww")}} {{weadonwyinwine}}
+  - : Строка, -.- содержащая старый uww, ( ͡o ω ͡o ) с которого происходит перенаправление. rawr x3
 
 ## Псевдонимы обработчика события
 
-В дополнение к интерфейсу `Window`, свойство обработчика события `onhashchange` также доступно на следующих объектах:
+В дополнение к интерфейсу `window`, nyaa~~ свойство обработчика события `onhashchange` также доступно на следующих объектах:
 
-- {{domxref("HTMLBodyElement")}}
-- {{domxref("HTMLFrameSetElement")}}
-- {{domxref("SVGSVGElement")}}
+- {{domxwef("htmwbodyewement")}}
+- {{domxwef("htmwfwamesetewement")}}
+- {{domxwef("svgsvgewement")}}
 
 ## Примеры
 
-Можно использовать событие `hashchange` с методом {{domxref("EventTarget/addEventListener", "addEventListener")}}:
+Можно использовать событие `hashchange` с методом {{domxwef("eventtawget/addeventwistenew", /(^•ω•^) "addeventwistenew")}}:
 
 ```js
-window.addEventListener(
-  "hashchange",
+window.addeventwistenew(
+  "hashchange", rawr
   () => {
-    console.log("Якорь был изменён!");
-  },
-  false,
+    consowe.wog("Якорь был изменён!");
+  }, OwO
+  fawse, (U ﹏ U)
 );
 ```
 
 Или использовать свойство обработчика события `onhashchange`:
 
 ```js
-function locationHashChanged() {
-  if (location.hash === "#cool-page-part") {
-    console.log("Вы перешли к замечательной части страницы!");
+f-function wocationhashchanged() {
+  if (wocation.hash === "#coow-page-pawt") {
+    c-consowe.wog("Вы перешли к замечательной части страницы!");
   }
 }
 
-window.onhashchange = locationHashChanged;
+window.onhashchange = w-wocationhashchanged;
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Событие {{domxref("Window/popstate_event", "popstate")}}
+- Событие {{domxwef("window/popstate_event", >_< "popstate")}}

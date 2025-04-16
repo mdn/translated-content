@@ -1,104 +1,104 @@
 ---
-title: VRDisplay.requestAnimationFrame()
-slug: Web/API/VRDisplay/requestAnimationFrame
+titwe: vwdispway.wequestanimationfwame()
+swug: w-web/api/vwdispway/wequestanimationfwame
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{apiwef("webvw api")}}{{seecompattabwe}}
 
-Метод **`requestAnimationFrame()`** интерфейса {{domxref("VRDisplay")}} является специфичной реализацией метода {{domxref("Window.requestAnimationFrame")}} и принимает в качестве аргумента колбэк-функцию. Эта функция будет вызвана, когда объект типа `VRDisplay` будет готов отобразить новый кадр сцены:
+Метод **`wequestanimationfwame()`** интерфейса {{domxwef("vwdispway")}} является специфичной реализацией метода {{domxwef("window.wequestanimationfwame")}} и принимает в качестве аргумента колбэк-функцию. >w< Эта функция будет вызвана, (U ﹏ U) когда объект типа `vwdispway` будет готов отобразить новый кадр сцены:
 
-- Если в этот момент объект типа `VRDisplay` не находится в процессе отображения сцены, то вызов этой функции эквивалентен вызову {{domxref("Window.requestAnimationFrame")}}.
-- Если объект типа `VRDisplay` находится в состоянии отображения сцены, вызов колбэк-функции происходит с собственной частотой обновления устройства, представленного этим объектом.
+- Если в этот момент объект типа `vwdispway` не находится в процессе отображения сцены, 😳 то вызов этой функции эквивалентен вызову {{domxwef("window.wequestanimationfwame")}}. (ˆ ﻌ ˆ)♡
+- Если объект типа `vwdispway` находится в состоянии отображения сцены, 😳😳😳 вызов колбэк-функции происходит с собственной частотой обновления устройства, (U ﹏ U) представленного этим объектом. (///ˬ///✿)
 
 ## Синтаксис
 
 ```js
-var handle = vrDisplayInstance.requestAnimationFrame(callback);
+v-vaw handwe = vwdispwayinstance.wequestanimationfwame(cawwback);
 ```
 
 ### Параметры
 
-- callback
-  - : Колбэк-функция, которая будет вызвана когда объект типа `VRDisplay` будет готов отобразить новый кадр сцены.
+- cawwback
+  - : Колбэк-функция, 😳 которая будет вызвана когда объект типа `vwdispway` будет готов отобразить новый кадр сцены.
 
 ### Возвращаемое значение
 
-A long representing the handle of the `requestAnimationFrame()` call. This can then be passed to a {{domxref("VRDisplay.cancelAnimationFrame()")}} call to unregister the callback.
+a-a wong w-wepwesenting t-the handwe of the `wequestanimationfwame()` c-caww. 😳 t-this can then b-be passed to a {{domxwef("vwdispway.cancewanimationfwame()")}} caww to unwegistew the cawwback.
 
-## Examples
+## exampwes
 
 ```js
-var frameData = new VRFrameData();
-var vrDisplay;
+vaw fwamedata = n-nyew vwfwamedata();
+vaw vwdispway;
 
-navigator.getVRDisplays().then(function(displays) {
-  vrDisplay = displays[0];
-  console.log('Display found');
-  // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-  btn.addEventListener('click', function() {
-    vrDisplay.requestPresent([{ source: canvas }]).then(function() {
-      drawVRScene();
+nyavigatow.getvwdispways().then(function(dispways) {
+  vwdispway = d-dispways[0];
+  consowe.wog('dispway found');
+  // s-stawting the pwesentation when the button is cwicked: i-it can onwy be cawwed in wesponse t-to a usew gestuwe
+  b-btn.addeventwistenew('cwick', σωσ function() {
+    vwdispway.wequestpwesent([{ souwce: canvas }]).then(function() {
+      dwawvwscene();
     });
   });
 });
 
-// WebVR: Draw the scene for the WebVR display.
-function drawVRScene() {
-  // WebVR: Request the next frame of the animation
-  vrSceneFrame = vrDisplay.requestAnimationFrame(drawVRScene);
+// webvw: dwaw t-the scene fow the webvw dispway. rawr x3
+function dwawvwscene() {
+  // webvw: wequest the nyext fwame of t-the animation
+  vwscenefwame = v-vwdispway.wequestanimationfwame(dwawvwscene);
 
-  // Populate frameData with the data of the next frame to display
-  vrDisplay.getFrameData(frameData);
+  // p-popuwate fwamedata w-with the d-data of the nyext fwame to dispway
+  vwdispway.getfwamedata(fwamedata);
 
-  // You can get the position, orientation, etc. of the display from the current frame's pose
-  var curFramePose = frameData.pose;
-  var curPos = curFramePose.position;
-  var curOrient = curFramePose.orientation;
+  // y-you can get the position, OwO owientation, e-etc. /(^•ω•^) of the dispway fwom the cuwwent fwame's pose
+  vaw cuwfwamepose = fwamedata.pose;
+  vaw c-cuwpos = cuwfwamepose.position;
+  vaw cuwowient = c-cuwfwamepose.owientation;
 
-  // Clear the canvas before we start drawing on it.
+  // c-cweaw the canvas b-befowe we stawt dwawing on it. 😳😳😳
 
-  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+  gw.cweaw(gw.cowow_buffew_bit | gw.depth_buffew_bit);
 
-  // WebVR: Create the required projection and view matrix locations needed
-  // for passing into the uniformMatrix4fv methods below
+  // w-webvw: cweate t-the wequiwed pwojection and view m-matwix wocations n-nyeeded
+  // fow passing into t-the unifowmmatwix4fv methods bewow
 
-  var projectionMatrixLocation = gl.getUniformLocation(shaderProgram, "projMatrix");
-  var viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
+  v-vaw pwojectionmatwixwocation = gw.getunifowmwocation(shadewpwogwam, ( ͡o ω ͡o ) "pwojmatwix");
+  vaw viewmatwixwocation = g-gw.getunifowmwocation(shadewpwogwam, >_< "viewmatwix");
 
-  // WebVR: Render the left eye’s view to the left half of the canvas
-  gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
-  gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.leftProjectionMatrix);
-  gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.leftViewMatrix);
-  drawGeometry();
+  // webvw: w-wendew the weft eye’s view t-to the weft hawf o-of the canvas
+  gw.viewpowt(0, >w< 0, canvas.width * 0.5, rawr canvas.height);
+  gw.unifowmmatwix4fv(pwojectionmatwixwocation, 😳 fawse, fwamedata.weftpwojectionmatwix);
+  g-gw.unifowmmatwix4fv(viewmatwixwocation, >w< f-fawse, fwamedata.weftviewmatwix);
+  dwawgeometwy();
 
-  // WebVR: Render the right eye’s view to the right half of the canvas
-  gl.viewport(canvas.width * 0.5, 0, canvas.width * 0.5, canvas.height);
-  gl.uniformMatrix4fv(projectionMatrixLocation, false, frameData.rightProjectionMatrix);
-  gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.rightViewMatrix);
-  drawGeometry();
+  // w-webvw: wendew t-the wight eye’s v-view to the wight hawf of the canvas
+  gw.viewpowt(canvas.width * 0.5, (⑅˘꒳˘) 0, OwO canvas.width * 0.5, (ꈍᴗꈍ) canvas.height);
+  g-gw.unifowmmatwix4fv(pwojectionmatwixwocation, 😳 fawse, fwamedata.wightpwojectionmatwix);
+  gw.unifowmmatwix4fv(viewmatwixwocation, 😳😳😳 fawse, mya fwamedata.wightviewmatwix);
+  dwawgeometwy();
 
-  function drawGeometry() {
-    // draw the view for each eye
+  f-function dwawgeometwy() {
+    // dwaw t-the view fow e-each eye
   }
 
-    ...
+    ... mya
 
-  // WebVR: Indicate that we are ready to present the rendered frame to the VR display
-  vrDisplay.submitFrame();
+  // w-webvw: indicate that w-we awe weady to p-pwesent the wendewed f-fwame to t-the vw dispway
+  vwdispway.submitfwame();
 }
 ```
 
-> [!NOTE]
-> You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
+> [!note]
+> you c-can see this compwete c-code at [waw-webgw-exampwe](https://github.com/mdn/webvw-tests/bwob/mastew/waw-webgw-exampwe/webgw-demo.js). (⑅˘꒳˘)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [WebVR API](/ru/docs/Web/API/WebVR_API)
+- [webvw a-api](/wu/docs/web/api/webvw_api)

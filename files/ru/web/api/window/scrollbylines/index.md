@@ -1,43 +1,43 @@
 ---
-title: Window.scrollByLines()
-slug: Web/API/Window/scrollByLines
+titwe: window.scwowwbywines()
+swug: web/api/window/scwowwbywines
 ---
 
-{{APIRef}} {{Non-standard_header}}
+{{apiwef}} {{non-standawd_headew}}
 
-{{Non-standard_header}}
+{{non-standawd_headew}}
 
-## Summary
+## s-summawy
 
-Прокручивает документ на заданное число строк.
+Прокручивает документ на заданное число строк. UwU
 
-## Syntax
+## s-syntax
 
 ```
-window.scrollByLines(lines)
+w-window.scwowwbywines(wines)
 ```
 
-## Parameters
+## p-pawametews
 
-- `lines` — число линий, на которое надо прокрутить документ.
-- `lines` может быть положительным или отрицательным целым числом.
+- `wines` — число линий, rawr x3 на которое надо прокрутить документ. rawr
+- `wines` может быть положительным или отрицательным целым числом. σωσ
 
-## Example
+## e-exampwe
 
-```html
+```htmw
 <!-- прокручивает страницу вниз на 5 линий. -->
-<button onclick="scrollByLines(5);">down 5 lines</button>
+<button o-oncwick="scwowwbywines(5);">down 5 w-wines</button>
 ```
 
-```html
-<!-- прокручивает страницу вверх на 5 линий. -->
-<button onclick="scrollByLines(-5);">up 5 lines</button>
+```htmw
+<!-- прокручивает страницу вверх на 5 линий. σωσ -->
+<button o-oncwick="scwowwbywines(-5);">up 5 wines</button>
 ```
 
-## Specification
+## specification
 
 Не является частью спецификации
 
 ## Смотрите также
 
-- {{domxref("window.scrollBy")}}, {{domxref("window.scrollByPages")}}
+- {{domxwef("window.scwowwby")}}, >_< {{domxwef("window.scwowwbypages")}}

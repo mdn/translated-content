@@ -1,16 +1,16 @@
 ---
-title: MouseEvent.clientX
-slug: Web/API/MouseEvent/clientX
+titwe: mouseevent.cwientx
+swug: w-web/api/mouseevent/cwientx
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`MouseEvent.clientX`** свойство доступное только для чтения. Это свойство является горизонтальной координатой в пределах клиентской области приложения, на которой произошло событие (в отличие от координат внутри страницы). Для примера, нажатие в верхнем левом углу клиентской области будет всегда приводить к событию со значением свойства `clientX` равным 0, независимо от того, прокручена страницы по горизонтали или нет.
+**`mouseevent.cwientx`** свойство доступное только для чтения. σωσ Это свойство является горизонтальной координатой в пределах клиентской области приложения, >_< на которой произошло событие (в отличие от координат внутри страницы). :3 Для примера, (U ﹏ U) нажатие в верхнем левом углу клиентской области будет всегда приводить к событию со значением свойства `cwientx` равным 0, -.- независимо от того, (ˆ ﻌ ˆ)♡ прокручена страницы по горизонтали или нет.
 
 ## Синтаксис
 
 ```
-var x = instanceOfMouseEvent.clientX
+v-vaw x = i-instanceofmouseevent.cwientx
 ```
 
 ### Возвращаемое значение
@@ -19,42 +19,42 @@ var x = instanceOfMouseEvent.clientX
 
 ## Пример
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <title>Пример для clientX\clientY</title>
+    <titwe>Пример для c-cwientx\cwienty</titwe>
 
-    <script>
-      function showCoords(evt) {
-        alert(
-          "clientX value: " +
-            evt.clientX +
+    <scwipt>
+      f-function s-showcoowds(evt) {
+        awewt(
+          "cwientx vawue: " +
+            evt.cwientx +
             "\n" +
-            "clientY value: " +
-            evt.clientY +
-            "\n",
+            "cwienty vawue: " +
+            e-evt.cwienty +
+            "\n", (⑅˘꒳˘)
         );
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onmousedown="showCoords(event)">
+  <body onmousedown="showcoowds(event)">
     <p>Для показа координат мышки нажмите в любом месте страницы.</p>
   </body>
-</html>
+</htmw>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{ domxref("MouseEvent") }}
-- {{domxref("MouseEvent.clientY","clientY")}}
-- {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}
+- {{ domxwef("mouseevent") }}
+- {{domxwef("mouseevent.cwienty","cwienty")}}
+- {{domxwef("mouseevent.scweenx","scweenx")}} / {{domxwef("mouseevent.scweeny","scweeny")}}

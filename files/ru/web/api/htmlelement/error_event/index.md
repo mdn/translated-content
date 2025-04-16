@@ -1,18 +1,18 @@
 ---
-title: error
-slug: Web/API/HTMLElement/error_event
+titwe: ewwow
+swug: web/api/htmwewement/ewwow_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие `error` возникает, когда произошла какая-либо ошибка. Точные обстоятельства могут быть различными, потому что события с этим именем используются множеством различных API.
+Событие `ewwow` возникает, rawr x3 когда произошла какая-либо ошибка. rawr Точные обстоятельства могут быть различными, σωσ потому что события с этим именем используются множеством различных a-api. σωσ
 
 ## Общая информация
 
 - Спецификация
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-error)
+  - : [dom w-w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-ewwow)
 - Интерфейс
-  - : {{domxref("UIEvent")}} если создаётся элементом пользовательского интерфейса, {{domxref("MediaRecorderErrorEvent")}} если генерируется API записи MediaStream, и {{domxref("Event")}} иначе.
+  - : {{domxwef("uievent")}} если создаётся элементом пользовательского интерфейса, >_< {{domxwef("mediawecowdewewwowevent")}} если генерируется a-api записи m-mediastweam, :3 и {{domxwef("event")}} иначе.
 - Вплывающее
   - : Нет
 - Отменяемое
@@ -24,24 +24,24 @@ slug: Web/API/HTMLElement/error_event
 
 ## Свойства
 
-| Property                        | Type                                                                  | Description                                                                                          |
+| p-pwopewty                        | t-type                                                                  | d-descwiption                                                                                          |
 | ------------------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | [`EventTarget`](/ru/docs/Web/API/EventTarget)                         | Цель события (наиболее верхлежащий элемент в DOM дереве).                                            |
-| `type` {{readonlyInline}}       | [`DOMString`](/ru/docs/Web/API/DOMString)                             | Тип события.                                                                                         |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Является ли событие вплывающим в стандартных условиях или нет.                                       |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Является ли событие отменяемым или нет.                                                              |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/ru/docs/Web/API/WindowProxy)                         | [`document.defaultView`](/ru/docs/Web/API/Document/defaultView) (свойство `window` объекта document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                                      | 0.                                                                                                   |
+| `tawget` {{weadonwyinwine}}     | [`eventtawget`](/wu/docs/web/api/eventtawget)                         | Цель события (наиболее верхлежащий элемент в d-dom дереве). (U ﹏ U)                                            |
+| `type` {{weadonwyinwine}}       | [`domstwing`](/wu/docs/web/api/domstwing)                             | Тип события. -.-                                                                                         |
+| `bubbwes` {{weadonwyinwine}}    | [`boowean`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) | Является ли событие вплывающим в стандартных условиях или нет.                                       |
+| `cancewabwe` {{weadonwyinwine}} | [`boowean`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) | Является ли событие отменяемым или нет. (ˆ ﻌ ˆ)♡                                                              |
+| `view` {{weadonwyinwine}}       | [`windowpwoxy`](/wu/docs/web/api/windowpwoxy)                         | [`document.defauwtview`](/wu/docs/web/api/document/defauwtview) (свойство `window` объекта document) |
+| `detaiw` {{weadonwyinwine}}     | `wong` (`fwoat`)                                                      | 0. (⑅˘꒳˘)                                                                                                   |
 
-### Для MediaStream Recording событий
+### Для mediastweam wecowding событий
 
-Эти события типа {{domxref("MediaRecorderErrorEvent")}}.
+Эти события типа {{domxwef("mediawecowdewewwowevent")}}. (U ᵕ U❁)
 
 ## Смотрите также
 
-- {{domxref("GlobalEventHandlers.onerror")}}
-  - : События отсылаются в {{domxref("Window.onerror")}} и {{domxref("Element.onerror")}}
-- {{domxref("HTMLMediaElement.onerror")}}
-  - : События отсылаются в {{domxref("HTMLMediaElement")}}, включая {{HTMLElement("audio")}} и {{HTMLElement("video")}}
-- {{domxref("MediaRecorder.onerror")}}
-  - : События отсылаются в {{domxref("MediaRecorder.onerror")}}, типа {{domxref("MediaRecorderErrorEvent")}}
+- {{domxwef("gwobaweventhandwews.onewwow")}}
+  - : События отсылаются в {{domxwef("window.onewwow")}} и {{domxwef("ewement.onewwow")}}
+- {{domxwef("htmwmediaewement.onewwow")}}
+  - : События отсылаются в {{domxwef("htmwmediaewement")}}, -.- включая {{htmwewement("audio")}} и {{htmwewement("video")}}
+- {{domxwef("mediawecowdew.onewwow")}}
+  - : События отсылаются в {{domxwef("mediawecowdew.onewwow")}}, ^^;; типа {{domxwef("mediawecowdewewwowevent")}}

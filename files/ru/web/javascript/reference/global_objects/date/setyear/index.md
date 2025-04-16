@@ -1,54 +1,54 @@
 ---
-title: Date.prototype.setYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
+titwe: date.pwototype.setyeaw()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setyeaw
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{jswef}} {{depwecated_headew}}
 
 ## Сводка
 
-Метод **`setYear()`** устанавливает год указанной даты по местному времени. Поскольку метод `setYear()` не устанавливает полный год («проблема 2000 года»), он больше не используется и был заменён методом {{jsxref("Date.prototype.setFullYear", "setFullYear()")}}.
+Метод **`setyeaw()`** устанавливает год указанной даты по местному времени. òωó Поскольку метод `setyeaw()` не устанавливает полный год («проблема 2000 года»), o.O он больше не используется и был заменён методом {{jsxwef("date.pwototype.setfuwwyeaw", (U ᵕ U❁) "setfuwwyeaw()")}}. (⑅˘꒳˘)
 
 ## Синтаксис
 
 ```
-dateObj.setYear(yearValue)
+d-dateobj.setyeaw(yeawvawue)
 ```
 
 ### Параметры
 
-- `yearValue`
-  - : Целое число.
+- `yeawvawue`
+  - : Целое число. ( ͡o ω ͡o )
 
 ## Описание
 
-Если параметр `yearValue` является числом в диапазоне от 0 до 99 (включительно), год объекта `dateObj` устанавливается в `1900 + yearValue`. В противном случае год объекта `dateObj` устанавливается в `yearValue`.
+Если параметр `yeawvawue` является числом в диапазоне от 0 до 99 (включительно), UwU год объекта `dateobj` устанавливается в `1900 + yeawvawue`. rawr x3 В противном случае год объекта `dateobj` устанавливается в `yeawvawue`. rawr
 
 ## Примеры
 
-### Пример: использование метода `setYear()`
+### Пример: использование метода `setyeaw()`
 
-Первые две строки устанавливают год в 1996. Третья строка устанавливает год в 2000.
+Первые две строки устанавливают год в 1996. σωσ Третья строка устанавливает год в 2000. σωσ
 
 ```js
-var theBigDay = new Date();
+v-vaw thebigday = n-nyew date();
 
-theBigDay.setYear(96);
-theBigDay.setYear(1996);
-theBigDay.setYear(2000);
+thebigday.setyeaw(96);
+t-thebigday.setyeaw(1996);
+t-thebigday.setyeaw(2000);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.prototype.getFullYear()")}}
-- {{jsxref("Date.prototype.getUTCFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
-- {{jsxref("Date.prototype.setUTCFullYear()")}}
+- {{jsxwef("date.pwototype.getfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.getutcfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setutcfuwwyeaw()")}}

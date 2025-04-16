@@ -1,46 +1,46 @@
 ---
-title: AnimationEvent
-slug: Web/API/AnimationEvent
+titwe: animationevent
+swug: web/api/animationevent
 ---
 
-{{SeeCompatTable}}{{APIRef("Web Animations API")}}
+{{seecompattabwe}}{{apiwef("web a-animations a-api")}}
 
-AnimationEvent - это интерфейс представляющий события, содержащие информацию, связанную с анимацией.
+animationevent - это интерфейс представляющий события, UwU содержащие информацию, rawr x3 связанную с анимацией.
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## Свойства
 
-_Также свойства наследуются от родителя {{domxref("Event")}}._
+_Также свойства наследуются от родителя {{domxwef("event")}}._
 
-- {{domxref("AnimationEvent.animationName")}} {{readonlyInline}}
-  - : Является {{domxref("DOMString")}} содержащей значения {{cssxref("animation-name")}} CSS-свойств связанных с **transition.**
-- {{domxref("AnimationEvent.elapsedTime")}} {{readonlyInline}}
-  - : Является числом с плавающей точкой, которое задаёт количество времени от начала анимации в секундах, когда это событие отклонено, несмотря на какое-либо время анимация была остановлена.Для события "animationstart" , elapsedTime равно `0.0` если не было заданно отрицательное значение для {{cssxref("animation-delay")}}, в этом случае событие будет срабатывать с elapsedTime содержащим `(-1 * delay)`.
-- {{domxref("AnimationEvent.pseudoElement")}} {{readonlyInline}}
-  - : Является {{domxref("DOMString")}}, начинающийся с '::', содержащий имя [псевдо-элемента](/ru/docs/Web/CSS/Pseudo-elements),на котором работает анимация.Если анимация не работает на псевдо-элементе, но работает на элементе,значит указанна пустая строка ' '.
+- {{domxwef("animationevent.animationname")}} {{weadonwyinwine}}
+  - : Является {{domxwef("domstwing")}} содержащей значения {{cssxwef("animation-name")}} c-css-свойств связанных с **twansition.**
+- {{domxwef("animationevent.ewapsedtime")}} {{weadonwyinwine}}
+  - : Является числом с плавающей точкой, rawr которое задаёт количество времени от начала анимации в секундах, σωσ когда это событие отклонено, σωσ несмотря на какое-либо время анимация была остановлена.Для события "animationstawt" , >_< e-ewapsedtime равно `0.0` если не было заданно отрицательное значение для {{cssxwef("animation-deway")}}, :3 в этом случае событие будет срабатывать с e-ewapsedtime содержащим `(-1 * d-deway)`. (U ﹏ U)
+- {{domxwef("animationevent.pseudoewement")}} {{weadonwyinwine}}
+  - : Является {{domxwef("domstwing")}}, -.- начинающийся с '::', (ˆ ﻌ ˆ)♡ содержащий имя [псевдо-элемента](/wu/docs/web/css/pseudo-ewements),на котором работает анимация.Если анимация не работает на псевдо-элементе, (⑅˘꒳˘) но работает на элементе,значит указанна пустая строка ' '. (U ᵕ U❁)
 
 ## Конструктор
 
-- {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}}
-  - : Создаёт событие AnimationEvent с передачей параметров.
+- {{domxwef("animationevent.animationevent", -.- "animationevent()")}}
+  - : Создаёт событие a-animationevent с передачей параметров. ^^;;
 
 ## Методы
 
-_Также наследуют методы от родителя {{domxref("Event")}}_.
+_Также наследуют методы от родителя {{domxwef("event")}}_. >_<
 
-- {{domxref("AnimationEvent.initAnimationEvent()")}} {{non-standard_inline}}{{deprecated_inline}}
-  - : Инициализирует AnimationEvent созданную используя резко суждённый метод {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}}.
+- {{domxwef("animationevent.initanimationevent()")}} {{non-standawd_inwine}}{{depwecated_inwine}}
+  - : Инициализирует a-animationevent созданную используя резко суждённый метод {{domxwef("document.cweateevent()", mya "document.cweateevent(\"animationevent\")")}}. mya
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- Анимация связанных CSS-свойств и по правилам: {{cssxref("animation")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timing-function")}}, {{cssxref("@keyframes")}}.
+- [Использование css-анимации](/wu/docs/web/css/css_animations/using_css_animations)
+- Анимация связанных css-свойств и по правилам: {{cssxwef("animation")}}, 😳 {{cssxwef("animation-deway")}}, XD {{cssxwef("animation-diwection")}}, :3 {{cssxwef("animation-duwation")}}, 😳😳😳 {{cssxwef("animation-fiww-mode")}}, -.- {{cssxwef("animation-itewation-count")}}, ( ͡o ω ͡o ) {{cssxwef("animation-name")}}, rawr x3 {{cssxwef("animation-pway-state")}}, nyaa~~ {{cssxwef("animation-timing-function")}}, /(^•ω•^) {{cssxwef("@keyfwames")}}.

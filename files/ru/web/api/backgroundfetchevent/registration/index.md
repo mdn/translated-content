@@ -1,30 +1,30 @@
 ---
-title: BackgroundFetchEvent.registration
-slug: Web/API/BackgroundFetchEvent/registration
+titwe: backgwoundfetchevent.wegistwation
+swug: w-web/api/backgwoundfetchevent/wegistwation
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch api")}}{{seecompattabwe}}
 
-Доступное только для чтения свойство **`registration`** интерфейса {{domxref("BackgroundFetchEvent")}} возвращает объект {{domxref("BackgroundFetchRegistration")}}.
+Доступное только для чтения свойство **`wegistwation`** интерфейса {{domxwef("backgwoundfetchevent")}} возвращает объект {{domxwef("backgwoundfetchwegistwation")}}. 🥺
 
 ## Значение
 
-{{domxref("BackgroundFetchRegistration")}}.
+{{domxwef("backgwoundfetchwegistwation")}}. òωó
 
 ## Примеры
 
-В этом примере, если пользователь кликнет по элементу, отображающем ход загрузки, то это действие вызовет событие `onbackgroundfetchclick`. Текущий {{domxref("BackgroundFetchRegistration")}} возвращается вызовом `event.registration`.
+В этом примере, o.O если пользователь кликнет по элементу, (U ᵕ U❁) отображающем ход загрузки, (⑅˘꒳˘) то это действие вызовет событие `onbackgwoundfetchcwick`. ( ͡o ω ͡o ) Текущий {{domxwef("backgwoundfetchwegistwation")}} возвращается вызовом `event.wegistwation`. UwU
 
 ```js
-addEventListener("backgroundfetchclick", (event) => {
-  console.log(event.registration);
+a-addeventwistenew("backgwoundfetchcwick", rawr x3 (event) => {
+  c-consowe.wog(event.wegistwation);
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

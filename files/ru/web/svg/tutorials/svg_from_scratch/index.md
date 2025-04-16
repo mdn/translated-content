@@ -1,51 +1,51 @@
 ---
-title: SVG — учебное руководство
-slug: Web/SVG/Tutorials/SVG_from_scratch
+titwe: svg — учебное руководство
+swug: web/svg/tutowiaws/svg_fwom_scwatch
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Масштабируемая векторная графика ([SVG](/ru/docs/Web/SVG)), — это подмножество расширяемого языка разметки XML созданный Консорциумом Всемирной паутины (W3C). Эта технология реализована в Firefox, Opera, Internet Explorer, WebKit и в прочих браузерах.
+Масштабируемая векторная графика ([svg](/wu/docs/web/svg)), (U ﹏ U) — это подмножество расширяемого языка разметки x-xmw созданный Консорциумом Всемирной паутины (w3c). Эта технология реализована в f-fiwefox, -.- opewa, i-intewnet expwowew, (ˆ ﻌ ˆ)♡ w-webkit и в прочих браузерах. (⑅˘꒳˘)
 
-Это учебное пособие призвано объяснить вам суть технологии SVG и ознакомить с её техническими деталями. Если вы хотите только рисовать красивые изображения, то вы можете найти более полезные учебные ресурсы. Есть хорошее учебное пособие для знакомства с SVG — это учебное пособие от W3C [SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html).
+Это учебное пособие призвано объяснить вам суть технологии s-svg и ознакомить с её техническими деталями. (U ᵕ U❁) Если вы хотите только рисовать красивые изображения, -.- то вы можете найти более полезные учебные ресурсы. ^^;; Есть хорошее учебное пособие для знакомства с s-svg — это учебное пособие от w-w3c [svg p-pwimew](https://www.w3.owg/gwaphics/svg/ig/wesouwces/svgpwimew.htmw). >_<
 
-> [!NOTE]
-> Это учебное пособие находится в стадии разработки. Если вы можете, то, пожалуйста, помогите с написанием одного или нескольких параграфов. Плюс балл Гриффиндору за написание целой страницы!
+> [!note]
+> Это учебное пособие находится в стадии разработки. mya Если вы можете, mya то, 😳 пожалуйста, XD помогите с написанием одного или нескольких параграфов. :3 Плюс балл Гриффиндору за написание целой страницы! 😳😳😳
 
-##### Введение в SVG
+##### Введение в svg
 
-- [Введение](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Introduction)
-- [Начало работы](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started)
-- [Расположение(Позиция)](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Positions)
-- [Основные фигуры](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)
-- [Пути(Paths)](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)
-- [Заливка и обводка](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes)
-- [Градиенты](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients)
-- [Паттерны(Шаблоны)](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Patterns)
-- [Текст](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Texts)
-- [Базовые трансформации](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations)
-- [Обрезка и маска](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Clipping_and_masking)
-- [Другой контент в SVG](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG)
-- [Фильтры](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Filter_effects)
-- [SVG-шрифты](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts)
-- [SVG-тег Image](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Image_element)
-- [Инструменты для SVG](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG)
-- [SVG и CSS](/ru/docs/Web/Guide/CSS/Getting_started/SVG_%D0%B8_CSS)
+- [Введение](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/intwoduction)
+- [Начало работы](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/getting_stawted)
+- [Расположение(Позиция)](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/positions)
+- [Основные фигуры](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/basic_shapes)
+- [Пути(paths)](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/paths)
+- [Заливка и обводка](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwws_and_stwokes)
+- [Градиенты](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/gwadients)
+- [Паттерны(Шаблоны)](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/pattewns)
+- [Текст](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/texts)
+- [Базовые трансформации](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/basic_twansfowmations)
+- [Обрезка и маска](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/cwipping_and_masking)
+- [Другой контент в svg](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/othew_content_in_svg)
+- [Фильтры](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/fiwtew_effects)
+- [svg-шрифты](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/using_fonts)
+- [svg-тег image](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/image_ewement)
+- [Инструменты для svg](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch/toows_fow_svg)
+- [svg и c-css](/wu/docs/web/guide/css/getting_stawted/svg_%d0%b8_css)
 
-Следующие темы более обширные, и они требуют отдельных учебных пособий.
+Следующие темы более обширные, -.- и они требуют отдельных учебных пособий. ( ͡o ω ͡o )
 
-##### Написание SVG с JavaScript
-
-БОП
-
-##### SVG-фильтры — руководство
+##### Написание svg с javascwipt
 
 БОП
 
-##### Анимация с помощью SMIL в SVG
+##### svg-фильтры — руководство
 
 БОП
 
-##### Создание шрифтов в SVG
+##### Анимация с помощью s-smiw в svg
+
+БОП
+
+##### Создание шрифтов в svg
 
 БОП

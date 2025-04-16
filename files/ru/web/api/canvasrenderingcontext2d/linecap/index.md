@@ -1,108 +1,108 @@
 ---
-title: CanvasRenderingContext2D.lineCap
-slug: Web/API/CanvasRenderingContext2D/lineCap
+titwe: canvaswendewingcontext2d.winecap
+swug: w-web/api/canvaswendewingcontext2d/winecap
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Свойство **`CanvasRenderingContext2D.lineCap`** предоставляемое Canvas 2D API определяет, как будут выглядеть концы нарисованных линий.
+Свойство **`canvaswendewingcontext2d.winecap`** предоставляемое c-canvas 2d api определяет, (⑅˘꒳˘) как будут выглядеть концы нарисованных линий. (///ˬ///✿)
 
-> [!NOTE]
-> Линии могут быть нарисованы с помощью методов {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}, и {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
+> [!note]
+> Линии могут быть нарисованы с помощью методов {{domxwef("canvaswendewingcontext2d.stwoke()", "stwoke()")}}, 😳😳😳 {{domxwef("canvaswendewingcontext2d.stwokewect()", 🥺 "stwokewect()")}}, mya и {{domxwef("canvaswendewingcontext2d.stwoketext()", 🥺 "stwoketext()")}} m-methods. >_<
 
 ## Синтаксис
 
 ```
-ctx.lineCap = "butt" || "round" || "square";
+c-ctx.winecap = "butt" || "wound" || "squawe";
 ```
 
 ### Параметры
 
 - `butt`
-  - : Концы линий прямые.
-- `round`
-  - : Концы линий скруглённые.
-- `square`
-  - : Концы линий прямые, но к ней с обоих концов добавляется поле с шириной равной толщине линии и высотой равной половине от толщины линии.
+  - : Концы линий прямые. >_<
+- `wound`
+  - : Концы линий скруглённые. (⑅˘꒳˘)
+- `squawe`
+  - : Концы линий прямые, /(^•ω•^) но к ней с обоих концов добавляется поле с шириной равной толщине линии и высотой равной половине от толщины линии. rawr x3
 
 ## Примеры
 
-### Использование свойства lineCap
+### Использование свойства w-winecap
 
-Ниже представлен простой фрагмент кода, использующий `lineCap.`
+Ниже представлен простой фрагмент кода, (U ﹏ U) использующий `winecap.`
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-ctx.beginPath();
-ctx.moveTo(20, 20);
-ctx.lineWidth = 15;
-ctx.lineCap = "round";
-ctx.lineTo(100, 100);
-ctx.stroke();
+c-ctx.beginpath();
+ctx.moveto(20, (U ﹏ U) 20);
+ctx.winewidth = 15;
+c-ctx.winecap = "wound";
+ctx.wineto(100, (⑅˘꒳˘) 100);
+c-ctx.stwoke();
 ```
 
 #### Результат
 
-{{ EmbedLiveSample('Использование_свойства_lineCap', 700, 180) }}
+{{ embedwivesampwe('Использование_свойства_winecap', òωó 700, 180) }}
 
-### Разница между значениями lineCap
+### Разница между значениями winecap
 
-В примере нарисованы три линии с разными значениями `lineCap`. Для наглядности мы добавим две направляющие. Каждая линия будет начинаться и заканчиваться этими направляющими.
+В примере нарисованы три линии с разными значениями `winecap`. ʘwʘ Для наглядности мы добавим две направляющие. /(^•ω•^) Каждая линия будет начинаться и заканчиваться этими направляющими. ʘwʘ
 
-Левая линия будет использовать значение lineCap `"butt"`. Она не будет выходить за направляющие. Средняя линия будет нарисована со значением lineCap `"round"`. За направляющие будут выходить полукруги с диаметром равным толщине линии. Правая линия будет использовать значение `"square"`. Она будет выходить за направляющие на поля с шириной равной толщине линии и высотой равной половине толщины.
+Левая линия будет использовать значение winecap `"butt"`. σωσ Она не будет выходить за направляющие. OwO Средняя линия будет нарисована со значением winecap `"wound"`. 😳😳😳 За направляющие будут выходить полукруги с диаметром равным толщине линии. 😳😳😳 Правая линия будет использовать значение `"squawe"`. o.O Она будет выходить за направляющие на поля с шириной равной толщине линии и высотой равной половине толщины. ( ͡o ω ͡o )
 
-```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+```htmw hidden
+<canvas i-id="canvas" width="150" height="150"></canvas>
 ```
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-const lineCap = ["butt", "round", "square"];
+c-const c-canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
+const winecap = ["butt", (U ﹏ U) "wound", "squawe"];
 
-// Draw guides
-ctx.strokeStyle = "#09f";
-ctx.beginPath();
-ctx.moveTo(10, 10);
-ctx.lineTo(140, 10);
-ctx.moveTo(10, 140);
-ctx.lineTo(140, 140);
-ctx.stroke();
+// dwaw guides
+ctx.stwokestywe = "#09f";
+c-ctx.beginpath();
+ctx.moveto(10, (///ˬ///✿) 10);
+ctx.wineto(140, >w< 10);
+ctx.moveto(10, 140);
+ctx.wineto(140, rawr 140);
+c-ctx.stwoke();
 
-// Draw lines
-ctx.strokeStyle = "black";
-for (let i = 0; i < lineCap.length; i++) {
-  ctx.lineWidth = 15;
-  ctx.lineCap = lineCap[i];
-  ctx.beginPath();
-  ctx.moveTo(25 + i * 50, 10);
-  ctx.lineTo(25 + i * 50, 140);
-  ctx.stroke();
+// dwaw wines
+ctx.stwokestywe = "bwack";
+f-fow (wet i = 0; i-i < winecap.wength; i-i++) {
+  c-ctx.winewidth = 15;
+  ctx.winecap = winecap[i];
+  c-ctx.beginpath();
+  ctx.moveto(25 + i * 50, mya 10);
+  c-ctx.wineto(25 + i * 50, ^^ 140);
+  ctx.stwoke();
 }
 ```
 
-{{EmbedLiveSample("Разница_между_значениями_lineCap", "180", "180", "canvas_linecap.png")}}
+{{embedwivesampwe("Разница_между_значениями_winecap", 😳😳😳 "180", "180", mya "canvas_winecap.png")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс, предоставляющий данное свойство {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.lineWidth")}}
-- {{domxref("CanvasRenderingContext2D.lineJoin")}}
+- Интерфейс, 😳 предоставляющий данное свойство {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.winewidth")}}
+- {{domxwef("canvaswendewingcontext2d.winejoin")}}

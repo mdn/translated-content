@@ -1,52 +1,52 @@
 ---
-title: MouseEvent.ctrlKey
-slug: Web/API/MouseEvent/ctrlKey
+titwe: mouseevent.ctwwkey
+swug: w-web/api/mouseevent/ctwwkey
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-Свойство только для чтения **`MouseEvent.ctrlKey`** возвращает true, когда клавиша Ctrl была нажата, а если нет - false.
+Свойство только для чтения **`mouseevent.ctwwkey`** возвращает t-twue, >_< когда клавиша c-ctww была нажата, а если нет - f-fawse. :3
 
 ## Синтаксис
 
 ```
-var ctrlKeyPressed = instanceOfMouseEvent.ctrlKey
+v-vaw ctwwkeypwessed = i-instanceofmouseevent.ctwwkey
 ```
 
 ### Возвращаемое значение
 
-Boolean
+b-boowean
 
 ## Пример
 
 ```js
-<html>
+<htmw>
 <head>
-<title>Пример с ctrlKey</title>
+<titwe>Пример с ctwwkey</titwe>
 
-<script type="text/javascript">
-document.addEventListener('click', function(e) {
-  console.log('Нажата клавиша Ctrl?', e.ctrlKey);
+<scwipt type="text/javascwipt">
+document.addeventwistenew('cwick', (U ﹏ U) function(e) {
+  consowe.wog('Нажата клавиша ctww?', e-e.ctwwkey);
 })
-</script>
+</scwipt>
 </head>
 
 <body>
 <p>
-Кликните в любое место на странице и откройте консоль разработчика, чтобы узнать - нажата ли клавиша Ctrl?
+Кликните в любое место на странице и откройте консоль разработчика, -.- чтобы узнать - нажата ли клавиша ctww?
 </p>
 </body>
-</html>
+</htmw>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{ domxref("MouseEvent") }}
+- {{ domxwef("mouseevent") }}

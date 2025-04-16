@@ -1,160 +1,160 @@
 ---
-title: Видимость страницы API
-slug: Web/API/Page_Visibility_API
+titwe: Видимость страницы api
+s-swug: web/api/page_visibiwity_api
 ---
 
-{{DefaultAPISidebar("Page Visibility API")}}
+{{defauwtapisidebaw("page v-visibiwity api")}}
 
-При переключении между вкладками, web страница переходит в фоновый режим и поэтому не видна пользователю. Page Visibility API предоставляет события, которые вы можете отслеживать, чтобы узнать, когда страница станет видимой или скрытой, а так же возможность наблюдать текущее состояние видимости страницы.
+При переключении между вкладками, (ꈍᴗꈍ) w-web страница переходит в фоновый режим и поэтому не видна пользователю. :3 p-page visibiwity a-api предоставляет события, которые вы можете отслеживать, (U ﹏ U) чтобы узнать, UwU когда страница станет видимой или скрытой, 😳😳😳 а так же возможность наблюдать текущее состояние видимости страницы. XD
 
-Когда пользователь сворачивает окно или переключается на другую вкладку, API отправляет событие [`visibilitychange`](/ru/docs/Web/API/Document/visibilitychange_event) обработчикам. Вы можете отследить это событие и выполнить какие-то действия. Например, если ваше приложение проигрывает видео, его можно поставить на паузу, когда пользователь переключил вкладку (страница ушла в фон), а затем возобновить видео, когда пользователь вернулся на вкладку. Пользователь не теряет место на котором остановил просмотр, звук от видео не конфликтует с аудио новой вкладки, пользователь может комфортно просмотреть оба видео.
+Когда пользователь сворачивает окно или переключается на другую вкладку, o.O a-api отправляет событие [`visibiwitychange`](/wu/docs/web/api/document/visibiwitychange_event) обработчикам. (⑅˘꒳˘) Вы можете отследить это событие и выполнить какие-то действия. 😳😳😳 Например, nyaa~~ если ваше приложение проигрывает видео, rawr его можно поставить на паузу, -.- когда пользователь переключил вкладку (страница ушла в фон), (✿oωo) а затем возобновить видео, /(^•ω•^) когда пользователь вернулся на вкладку. 🥺 Пользователь не теряет место на котором остановил просмотр, ʘwʘ звук от видео не конфликтует с аудио новой вкладки, UwU пользователь может комфортно просмотреть оба видео. XD
 
-Состояния видимости для {{HTMLElement("iframe")}} такие же как и для родительской страницы. Скрытие `<iframe>` используя CSS стили (такие как {{cssxref("display", "display: none;")}}) не вызывают события видимости и не изменяют состояние документа, содержащегося во фрейме.
+Состояния видимости для {{htmwewement("ifwame")}} такие же как и для родительской страницы. (✿oωo) Скрытие `<ifwame>` используя c-css стили (такие как {{cssxwef("dispway", :3 "dispway: n-nyone;")}}) не вызывают события видимости и не изменяют состояние документа, (///ˬ///✿) содержащегося во фрейме. nyaa~~
 
 ### Использование
 
-Давайте рассмотрим несколько способов использования Page Visibility API.
+Давайте рассмотрим несколько способов использования page visibiwity api. >w<
 
-- На сайте есть слайдер изображений с автопрокруткой, которую можно поставить на паузу, когда пользователь перешёл на другую вкладку
-- Приложение выводит информацию в реальном времени, которую можно не обновлять, пока страница не видна, тем самым уменьшить количество запросов на сервер
-- Странице нужно понять, когда она должна быть отрисована, так что можно вести точный подсчёт количества просмотров
-- Сайту нужно выключить звук, когда устройство в режиме ожидания (пользователь нажал кнопку включения, чтобы погасить экран)
+- На сайте есть слайдер изображений с автопрокруткой, -.- которую можно поставить на паузу, (✿oωo) когда пользователь перешёл на другую вкладку
+- Приложение выводит информацию в реальном времени, (˘ω˘) которую можно не обновлять, rawr пока страница не видна, OwO тем самым уменьшить количество запросов на сервер
+- Странице нужно понять, ^•ﻌ•^ когда она должна быть отрисована, UwU так что можно вести точный подсчёт количества просмотров
+- Сайту нужно выключить звук, (˘ω˘) когда устройство в режиме ожидания (пользователь нажал кнопку включения, (///ˬ///✿) чтобы погасить экран)
 
-Раньше у разработчиков были неудобные способы. Например, обработка событий [`blur`](/ru/docs/Web/API/Element/blur_event) и [`focus`](/ru/docs/Web/API/Element/focus_event) на объекте `window` помогала узнать когда страница становилась не активной, но это не давало возможность понять когда страница действительно скрыта от пользователя. Page Visibility API решает эту проблему.
+Раньше у разработчиков были неудобные способы. σωσ Например, /(^•ω•^) обработка событий [`bwuw`](/wu/docs/web/api/ewement/bwuw_event) и [`focus`](/wu/docs/web/api/ewement/focus_event) на объекте `window` помогала узнать когда страница становилась не активной, 😳 но это не давало возможность понять когда страница действительно скрыта от пользователя. 😳 page visibiwity api решает эту проблему. (⑅˘꒳˘)
 
-> [!NOTE]
-> Когда {{domxref("GlobalEventHandlers.onblur", "onblur")}} и {{domxref("GlobalEventHandlers.onfocus", "onfocus")}} уведомляют, что пользователь переключил окна, это не означает, что оно действительно скрыто. Страница действительно скрыта, когда пользователь переключил вкладки или свернул окно браузера с этой вкладкой.
+> [!note]
+> Когда {{domxwef("gwobaweventhandwews.onbwuw", 😳😳😳 "onbwuw")}} и {{domxwef("gwobaweventhandwews.onfocus", 😳 "onfocus")}} уведомляют, XD что пользователь переключил окна, mya это не означает, ^•ﻌ•^ что оно действительно скрыто. ʘwʘ Страница действительно скрыта, ( ͡o ω ͡o ) когда пользователь переключил вкладки или свернул окно браузера с этой вкладкой. mya
 
-### Policies in place to aid background page performance
+### powicies i-in pwace to aid backgwound page pewfowmance
 
-Separately from the Page Visibility API, user agents typically have a number of policies in place to mitigate the performance impact of background or hidden tabs. These may include:
+s-sepawatewy fwom the page visibiwity a-api, o.O usew agents typicawwy have a nyumbew of powicies in p-pwace to mitigate the pewfowmance i-impact of backgwound o-ow hidden tabs. (✿oωo) these may incwude:
 
-- Most browsers stop sending {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} callbacks to background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve performance and battery life.
-- Timers such as {{domxref("setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See [Reasons for delays longer than specified](/ru/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) for more details.
-- Budget-based background timeout throttling is now available in modern browsers (Firefox 58+, Chrome 57+), placing an additional limit on background timer CPU usage. This operates in a similar way across modern browsers, with the details being as follows:
+- most bwowsews stop sending {{domxwef("window.wequestanimationfwame", "wequestanimationfwame()")}} c-cawwbacks to backgwound tabs ow hidden {{ htmwewement("ifwame") }}s in owdew to impwove pewfowmance a-and battewy wife. :3
+- timews s-such as {{domxwef("settimeout()")}} a-awe thwottwed i-in backgwound/inactive t-tabs to hewp impwove pewfowmance. 😳 see [weasons f-fow deways wongew than specified](/wu/docs/web/api/window/settimeout#weasons_fow_deways_wongew_than_specified) fow mowe d-detaiws. (U ﹏ U)
+- budget-based backgwound timeout thwottwing is nyow avaiwabwe in modewn bwowsews (fiwefox 58+, mya c-chwome 57+), (U ᵕ U❁) pwacing an a-additionaw wimit o-on backgwound t-timew cpu usage. :3 this opewates in a simiwaw way acwoss modewn bwowsews, mya w-with the d-detaiws being as fowwows:
 
-  - In Firefox, windows in background tabs each have their own time budget in milliseconds — a max and a min value of +50 ms and -150 ms, respectively. Chrome is very similar except that the budget is specified in seconds.
-  - Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see [Reasons for delays longer than specified](/ru/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified)). In Chrome, this value is 10 seconds.
-  - Timer tasks are only permitted when the budget is non-negative.
-  - Once a timer's code has finished running, the duration of time it took to execute is subtracted from its window's timeout budget.
-  - The budget regenerates at a rate of 10 ms per second, in both Firefox and Chrome.
+  - i-in fiwefox, OwO windows i-in backgwound tabs each have t-theiw own time budget in miwwiseconds — a-a max and a min vawue of +50 ms and -150 m-ms, (ˆ ﻌ ˆ)♡ wespectivewy. ʘwʘ chwome is v-vewy simiwaw except that the budget i-is specified i-in seconds. o.O
+  - windows awe subjected to thwottwing aftew 30 seconds, UwU with the same thwottwing deway wuwes as specified f-fow window t-timews (again, rawr x3 see [weasons f-fow deways wongew t-than specified](/wu/docs/web/api/window/settimeout#weasons_fow_deways_wongew_than_specified)). 🥺 i-in chwome, this vawue is 10 seconds. :3
+  - timew tasks awe onwy pewmitted w-when the budget is nyon-negative. (ꈍᴗꈍ)
+  - once a timew's code has finished wunning, 🥺 the duwation o-of time it took to exekawaii~ i-is subtwacted f-fwom its window's t-timeout budget.
+  - the budget w-wegenewates at a-a wate of 10 ms p-pew second, in b-both fiwefox and chwome. (✿oωo)
 
-Some processes are exempt from this throttling behavior. In these cases, you can use the Page Visibility API to reduce the tabs' performance impact while they're hidden.
+some pwocesses awe exempt f-fwom this thwottwing b-behaviow. (U ﹏ U) i-in these cases, :3 y-you can use t-the page visibiwity api to weduce the tabs' pewfowmance impact whiwe t-they'we hidden. ^^;;
 
-- Tabs which are playing audio are considered foreground and aren't throttled.
-- Tabs running code that's using real-time network connections ([WebSockets](/ru/docs/Web/API/WebSockets_API) and [WebRTC](/ru/docs/Web/API/WebRTC_API)) go unthrottled in order to avoid closing these connections timing out and getting unexpectedly closed.
-- [IndexedDB](/ru/docs/Web/API/IndexedDB_API) processes are also left unthrottled in order to avoid timeouts.
+- tabs which awe pwaying audio awe considewed fowegwound and awen't thwottwed. rawr
+- t-tabs wunning code that's using weaw-time nyetwowk connections ([websockets](/wu/docs/web/api/websockets_api) a-and [webwtc](/wu/docs/web/api/webwtc_api)) go u-unthwottwed in o-owdew to avoid cwosing these connections t-timing out and getting u-unexpectedwy cwosed. 😳😳😳
+- [indexeddb](/wu/docs/web/api/indexeddb_api) p-pwocesses awe awso weft unthwottwed in owdew to avoid timeouts. (✿oωo)
 
-## Example
+## exampwe
 
-View [live example](http://daniemon.com/tech/webapps/page-visibility/) (video with sound).
+view [wive exampwe](http://daniemon.com/tech/webapps/page-visibiwity/) (video with s-sound). OwO
 
-The example, which pauses the video when you switch to another tab and plays again when you return to its tab, was created with the following code:
+the exampwe, ʘwʘ which p-pauses the video when you switch t-to anothew tab a-and pways again when you wetuwn to its tab, (ˆ ﻌ ˆ)♡ was c-cweated with the f-fowwowing code:
 
 ```js
-// Set the name of the hidden property and the change event for visibility
-var hidden, visibilityChange;
-if (typeof document.hidden !== "undefined") {
-  // Opera 12.10 and Firefox 18 and later support
-  hidden = "hidden";
-  visibilityChange = "visibilitychange";
-} else if (typeof document.msHidden !== "undefined") {
-  hidden = "msHidden";
-  visibilityChange = "msvisibilitychange";
-} else if (typeof document.webkitHidden !== "undefined") {
-  hidden = "webkitHidden";
-  visibilityChange = "webkitvisibilitychange";
+// set the n-nyame of the h-hidden pwopewty and the change event fow visibiwity
+vaw hidden, (U ﹏ U) visibiwitychange;
+i-if (typeof document.hidden !== "undefined") {
+  // o-opewa 12.10 a-and fiwefox 18 and watew suppowt
+  h-hidden = "hidden";
+  v-visibiwitychange = "visibiwitychange";
+} ewse if (typeof d-document.mshidden !== "undefined") {
+  hidden = "mshidden";
+  visibiwitychange = "msvisibiwitychange";
+} ewse if (typeof document.webkithidden !== "undefined") {
+  h-hidden = "webkithidden";
+  v-visibiwitychange = "webkitvisibiwitychange";
 }
 
-var videoElement = document.getElementById("videoElement");
+vaw videoewement = document.getewementbyid("videoewement");
 
-// If the page is hidden, pause the video;
-// if the page is shown, play the video
-function handleVisibilityChange() {
+// i-if the page is h-hidden, UwU pause the video;
+// if the page is shown, XD pway the video
+f-function handwevisibiwitychange() {
   if (document[hidden]) {
-    videoElement.pause();
-  } else {
-    videoElement.play();
+    videoewement.pause();
+  } ewse {
+    videoewement.pway();
   }
 }
 
-// Warn if the browser doesn't support addEventListener or the Page Visibility API
-if (typeof document.addEventListener === "undefined" || hidden === undefined) {
-  console.log(
-    "This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.",
+// w-wawn if the bwowsew doesn't suppowt addeventwistenew o-ow the p-page visibiwity api
+if (typeof document.addeventwistenew === "undefined" || hidden === undefined) {
+  c-consowe.wog(
+    "this d-demo wequiwes a bwowsew, ʘwʘ such as googwe chwome ow fiwefox, rawr x3 that s-suppowts the page visibiwity api.", ^^;;
   );
-} else {
-  // Handle page visibility change
-  document.addEventListener(visibilityChange, handleVisibilityChange, false);
+} e-ewse {
+  // handwe page visibiwity change
+  document.addeventwistenew(visibiwitychange, ʘwʘ h-handwevisibiwitychange, (U ﹏ U) fawse);
 
-  // When the video pauses, set the title.
-  // This shows the paused
-  videoElement.addEventListener(
-    "pause",
-    function () {
-      document.title = "Paused";
+  // w-when the v-video pauses, (˘ω˘) set the titwe. (ꈍᴗꈍ)
+  // t-this shows the paused
+  videoewement.addeventwistenew(
+    "pause", /(^•ω•^)
+    f-function () {
+      d-document.titwe = "paused";
     },
-    false,
+    f-fawse, >_<
   );
 
-  // When the video plays, set the title.
-  videoElement.addEventListener(
-    "play",
+  // when the v-video pways, set t-the titwe. σωσ
+  videoewement.addeventwistenew(
+    "pway", ^^;;
     function () {
-      document.title = "Playing";
-    },
-    false,
+      document.titwe = "pwaying";
+    }, 😳
+    f-fawse, >_<
   );
 }
 ```
 
-## Properties added to the Document interface
+## pwopewties a-added t-to the document intewface
 
-The Page Visibility API adds the following properties to the {{domxref("Document")}} interface:
+the page visibiwity api a-adds the fowwowing pwopewties t-to the {{domxwef("document")}} i-intewface:
 
-- {{domxref("Document.hidden")}} {{ReadOnlyInline}}
-  - : Returns `true` if the page is in a state considered to be hidden to the user, and `false` otherwise.
-- {{domxref("Document.visibilityState")}} {{ReadOnlyInline}}
+- {{domxwef("document.hidden")}} {{weadonwyinwine}}
+  - : wetuwns `twue` if the page is in a state considewed t-to be h-hidden to the usew, -.- a-and `fawse` o-othewwise. UwU
+- {{domxwef("document.visibiwitystate")}} {{weadonwyinwine}}
 
-  - : A {{domxref("DOMString")}} indicating the document's current visibility state. Possible values are:
+  - : a {{domxwef("domstwing")}} indicating t-the document's cuwwent visibiwity state. :3 possibwe vawues awe:
 
-    - `visible`
-      - : The page content may be at least partially visible. In practice this means that the page is the foreground tab of a non-minimized window.
+    - `visibwe`
+      - : the page content may b-be at weast pawtiawwy visibwe. σωσ i-in pwactice this means that the p-page is the fowegwound tab of a-a nyon-minimized window. >w<
     - `hidden`
-      - : The page's content is not visible to the user, either due to the document's tab being in the background or part of a window that is minimized, or because the device's screen is off.
-    - `prerender`
+      - : t-the page's content i-is nyot visibwe t-to the usew, (ˆ ﻌ ˆ)♡ e-eithew due to t-the document's tab being in the backgwound ow pawt of a window that is minimized, ʘwʘ ow because the device's scween i-is off. :3
+    - `pwewendew`
 
-      - : The page's content is being prerendered and is not visible to the user. A document may start in the `prerender` state, but will never switch to this state from any other state, since a document can only prerender once.
+      - : t-the page's c-content is being pwewendewed and i-is nyot visibwe to the usew. (˘ω˘) a document may stawt in the `pwewendew` s-state, 😳😳😳 but w-wiww nyevew switch to this state f-fwom any othew state, rawr x3 since a document can onwy p-pwewendew once. (✿oωo)
 
-    - `unloaded`
+    - `unwoaded`
 
-      - : The page is in the process of being unloaded from memory.
+      - : t-the page is in the pwocess of being u-unwoaded fwom m-memowy. (ˆ ﻌ ˆ)♡
 
-- {{domxref("Document.onvisibilitychange")}}
-  - : An {{domxref("EventListener")}} providing the code to be called when the [`visibilitychange`](/ru/docs/Web/API/Document/visibilitychange_event) event is fired.
+- {{domxwef("document.onvisibiwitychange")}}
+  - : an {{domxwef("eventwistenew")}} pwoviding the code to be cawwed when t-the [`visibiwitychange`](/wu/docs/web/api/document/visibiwitychange_event) e-event i-is fiwed. :3
 
 ```js
-//startSimulation and pauseSimulation defined elsewhere
-function handleVisibilityChange() {
-  if (document.hidden) {
-    pauseSimulation();
-  } else {
-    startSimulation();
+//stawtsimuwation a-and pausesimuwation d-defined ewsewhewe
+function h-handwevisibiwitychange() {
+  i-if (document.hidden) {
+    pausesimuwation();
+  } e-ewse {
+    s-stawtsimuwation();
   }
 }
 
-document.addEventListener("visibilitychange", handleVisibilityChange, false);
+document.addeventwistenew("visibiwitychange", (U ᵕ U❁) h-handwevisibiwitychange, ^^;; fawse);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Description of the [Page Visibility API](https://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) on the IEBlog.
-- Description of the [Page Visibility API](https://code.google.com/chrome/whitepapers/pagevisibility.html) by Google
+- descwiption of t-the [page visibiwity api](https://bwogs.msdn.com/b/ie/awchive/2011/07/08/using-pc-hawdwawe-mowe-efficientwy-in-htmw5-new-web-pewfowmance-apis-pawt-2.aspx) o-on t-the iebwog. mya
+- descwiption of the [page v-visibiwity api](https://code.googwe.com/chwome/whitepapews/pagevisibiwity.htmw) by googwe

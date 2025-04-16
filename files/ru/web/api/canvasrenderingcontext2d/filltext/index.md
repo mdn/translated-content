@@ -1,107 +1,107 @@
 ---
-title: CanvasRenderingContext2D.fillText()
-slug: Web/API/CanvasRenderingContext2D/fillText
+titwe: canvaswendewingcontext2d.fiwwtext()
+swug: w-web/api/canvaswendewingcontext2d/fiwwtext
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Метод **`CanvasRenderingContext2D.fillText()`**, предоставляемый Canvas 2D API, рисует (заливает) заданный текст в заданной позиции (_x, y_). Если указан необязательный четвёртый параметр, текст будет масштабироваться в соответствии с указанной максимальной шириной.
+Метод **`canvaswendewingcontext2d.fiwwtext()`**, /(^•ω•^) предоставляемый c-canvas 2d api, ʘwʘ рисует (заливает) заданный текст в заданной позиции (_x, σωσ y-y_). OwO Если указан необязательный четвёртый параметр, 😳😳😳 текст будет масштабироваться в соответствии с указанной максимальной шириной. 😳😳😳
 
-Смотрите также метод {{domxref("CanvasRenderingContext2D.strokeText()")}} для выполнения обводки текста.
+Смотрите также метод {{domxwef("canvaswendewingcontext2d.stwoketext()")}} для выполнения обводки текста. o.O
 
 ## Синтаксис
 
 ```
-void ctx.fillText(text, x, y [, maxWidth]);
+v-void ctx.fiwwtext(text, ( ͡o ω ͡o ) x-x, y [, (U ﹏ U) maxwidth]);
 ```
 
 ### Параметры
 
 - `text`
-  - : Текст, использующий для визуализации следующие свойства: {{domxref("CanvasRenderingContext2D.font","font")}}, {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}} и {{domxref("CanvasRenderingContext2D.direction","direction")}}.
+  - : Текст, (///ˬ///✿) использующий для визуализации следующие свойства: {{domxwef("canvaswendewingcontext2d.font","font")}}, >w< {{domxwef("canvaswendewingcontext2d.textawign","textawign")}}, rawr {{domxwef("canvaswendewingcontext2d.textbasewine","textbasewine")}} и {{domxwef("canvaswendewingcontext2d.diwection","diwection")}}. mya
 
 <!---->
 
 - `x`
-  - : Координата левой нижней точки текста по оси x.
+  - : Координата левой нижней точки текста по оси x-x. ^^
 - `y`
-  - : Координата левой нижней точки текста по оси y.
-- `maxWidth` {{optional_inline}}
-  - : Максимальная ширина текста. Если ширина надписи больше параметра, текст масштабируется по горизонтали, или, если это невозможно (надпись становится нечитаемой), уменьшается размер шрифта.
+  - : Координата левой нижней точки текста по оси y-y. 😳😳😳
+- `maxwidth` {{optionaw_inwine}}
+  - : Максимальная ширина текста. mya Если ширина надписи больше параметра, 😳 текст масштабируется по горизонтали, -.- или, если это невозможно (надпись становится нечитаемой), 🥺 уменьшается размер шрифта. o.O
 
 ## Примеры
 
-### Использование метода fillText
+### Использование метода fiwwtext
 
-Ниже представлен простой фрагмент кода, использующий fillText.
+Ниже представлен простой фрагмент кода, /(^•ω•^) использующий f-fiwwtext. nyaa~~
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw canvas = d-document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
 
-ctx.font = "48px serif";
-ctx.fillText("Hello world", 50, 100);
+ctx.font = "48px s-sewif";
+ctx.fiwwtext("hewwo w-wowwd", nyaa~~ 50, 100);
 ```
 
-Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:
+Вы можете редактировать код, :3 представленный ниже, 😳😳😳 и сделанные вами изменения отобразятся на холсте в режиме реального времени:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas id="canvas" width="400" height="200" c-cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input i-id="edit" t-type="button" vawue="edit" />
+  <input id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.font = "48px serif";
-ctx.fillText("Hello world", 50, 100);</textarea
+<textawea i-id="code" cwass="pwayabwe-code">
+ctx.font = "48px sewif";
+ctx.fiwwtext("hewwo w-wowwd", (˘ω˘) 50, ^^ 100);</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw canvas = d-document.getewementbyid("canvas");
+v-vaw ctx = c-canvas.getcontext("2d");
+v-vaw textawea = document.getewementbyid("code");
+vaw weset = d-document.getewementbyid("weset");
+vaw edit = document.getewementbyid("edit");
+v-vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  ctx.cweawwect(0, :3 0, canvas.width, -.- canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", 😳 function () {
+  t-textawea.vawue = c-code;
+  d-dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", mya function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", (˘ω˘) d-dwawcanvas);
+window.addeventwistenew("woad", >_< d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ e-embedwivesampwe('pwayabwe_code', -.- 700, 360) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.strokeText()")}}
+- Интерфейс, 🥺 предоставляющий данный метод: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.stwoketext()")}}

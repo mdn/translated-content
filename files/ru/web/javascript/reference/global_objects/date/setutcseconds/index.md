@@ -1,51 +1,51 @@
 ---
-title: Date.prototype.setUTCSeconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
+titwe: date.pwototype.setutcseconds()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setutcseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`setUTCSeconds()`** устанавливает секунды указанной даты по всемирному координированному времени.
+Метод **`setutcseconds()`** устанавливает секунды указанной даты по всемирному координированному времени. òωó
 
 ## Синтаксис
 
 ```
-dateObj.setUTCSeconds(secondsValue[, msValue])
+d-dateobj.setutcseconds(secondsvawue[, o.O m-msvawue])
 ```
 
 ### Параметры
 
-- `secondsValue`
-  - : Целое число от 0 до 59, представляющее количество секунд.
-- `msValue`
-  - : Необязательный параметр. Число от 0 до 999, представляющее количество миллисекунд.
+- `secondsvawue`
+  - : Целое число от 0 до 59, (U ᵕ U❁) представляющее количество секунд. (⑅˘꒳˘)
+- `msvawue`
+  - : Необязательный параметр. ( ͡o ω ͡o ) Число от 0 до 999, UwU представляющее количество миллисекунд. rawr x3
 
 ## Описание
 
-Если вы не определите значения параметра `msValue`, будет использоваться значение, возвращаемое методом {{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}}.
+Если вы не определите значения параметра `msvawue`, rawr будет использоваться значение, σωσ возвращаемое методом {{jsxwef("date.pwototype.getutcmiwwiseconds()", σωσ "getutcmiwwiseconds()")}}. >_<
 
-Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод `setUTCSeconds()` попытается соответственно обновить другой параметр и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве `secondsValue` передать значение 100, минуты увеличатся на 1, а в качестве секунд будет использоваться значение 40.
+Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, :3 метод `setutcseconds()` попытается соответственно обновить другой параметр и информацию о дате в объекте {{jsxwef("gwobaw_objects/date", (U ﹏ U) "date")}}. -.- Например, (ˆ ﻌ ˆ)♡ если в качестве `secondsvawue` передать значение 100, (⑅˘꒳˘) минуты увеличатся на 1, (U ᵕ U❁) а в качестве секунд будет использоваться значение 40. -.-
 
 ## Примеры
 
-### Пример: использование метода `setUTCSeconds()`
+### Пример: использование метода `setutcseconds()`
 
 ```js
-var theBigDay = new Date();
-theBigDay.setUTCSeconds(20);
+v-vaw t-thebigday = nyew d-date();
+thebigday.setutcseconds(20);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.prototype.getUTCSeconds()")}}
-- {{jsxref("Date.prototype.setSeconds()")}}
+- {{jsxwef("date.pwototype.getutcseconds()")}}
+- {{jsxwef("date.pwototype.setseconds()")}}

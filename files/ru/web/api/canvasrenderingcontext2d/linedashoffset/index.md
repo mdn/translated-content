@@ -1,110 +1,110 @@
 ---
-title: CanvasRenderingContext2D.lineDashOffset
-slug: Web/API/CanvasRenderingContext2D/lineDashOffset
+titwe: canvaswendewingcontext2d.winedashoffset
+swug: web/api/canvaswendewingcontext2d/winedashoffset
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Свойство **`CanvasRenderingContext2D.lineDashOffset`** в Canvas 2D API устанавливает смещение штрихов, или «фаза».
+Свойство **`canvaswendewingcontext2d.winedashoffset`** в c-canvas 2d a-api устанавливает смещение штрихов, mya или «фаза». nyaa~~
 
-> [!NOTE]
-> Линии нарисованы вызовом метода {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}.
+> [!note]
+> Линии нарисованы вызовом метода {{domxwef("canvaswendewingcontext2d.stwoke()", (⑅˘꒳˘) "stwoke()")}}. rawr x3
 
 ## Синтаксис
 
 ```
-ctx.lineDashOffset = value;
+c-ctx.winedashoffset = v-vawue;
 ```
 
-- `value`
-  - : Число с плавающей запятой, определяющее величину смещения штрихов линии. Значением по умолчанию является 0,0.
+- `vawue`
+  - : Число с плавающей запятой, (✿oωo) определяющее величину смещения штрихов линии. (ˆ ﻌ ˆ)♡ Значением по умолчанию является 0,0. (˘ω˘)
 
 ## Примеры
 
 ### Смещение штрихов
 
-Этот пример рисует две пунктирные линии. Первая не имеет смещения. Вторая имеет смещение 4.
+Этот пример рисует две пунктирные линии. (⑅˘꒳˘) Первая не имеет смещения. (///ˬ///✿) Вторая имеет смещение 4. 😳😳😳
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-ctx.setLineDash([4, 16]);
+ctx.setwinedash([4, 🥺 16]);
 
 // Пунктирная линия без смещения
-ctx.beginPath();
-ctx.moveTo(0, 50);
-ctx.lineTo(300, 50);
-ctx.stroke();
+c-ctx.beginpath();
+ctx.moveto(0, mya 50);
+ctx.wineto(300, 🥺 50);
+c-ctx.stwoke();
 
 // Пунктирная линия со смещением 4
-ctx.beginPath();
-ctx.strokeStyle = "red";
-ctx.lineDashOffset = 4;
-ctx.moveTo(0, 100);
-ctx.lineTo(300, 100);
-ctx.stroke();
+ctx.beginpath();
+c-ctx.stwokestywe = "wed";
+ctx.winedashoffset = 4;
+ctx.moveto(0, >_< 100);
+ctx.wineto(300, >_< 100);
+c-ctx.stwoke();
 ```
 
 #### Результат
 
-Линия со смещением будет нарисована красным цветом.
+Линия со смещением будет нарисована красным цветом. (⑅˘꒳˘)
 
-{{ EmbedLiveSample('Смещение_штрихов') }}
+{{ embedwivesampwe('Смещение_штрихов') }}
 
 ### Эффект марширующих муравьёв
 
-[Эффект марширующих муравьёв](https://en.wikipedia.org/wiki/Marching_ants) - это техника анимации, часто встречающаяся в инструментах выбора программ компьютерной графики. Это помогает пользователю отличить границу выделения от фона изображения, анимируя границу..
+[Эффект марширующих муравьёв](https://en.wikipedia.owg/wiki/mawching_ants) - это техника анимации, /(^•ω•^) часто встречающаяся в инструментах выбора программ компьютерной графики. rawr x3 Это помогает пользователю отличить границу выделения от фона изображения, (U ﹏ U) анимируя границу..
 
-```html hidden
-<canvas id="canvas"></canvas>
+```htmw hidden
+<canvas i-id="canvas"></canvas>
 ```
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-let offset = 0;
+const c-canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
+wet offset = 0;
 
-const draw = () => {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.setLineDash([4, 2]);
-  ctx.lineDashOffset = -offset;
-  ctx.strokeRect(10, 10, 100, 100);
+const dwaw = () => {
+  ctx.cweawwect(0, (U ﹏ U) 0, c-canvas.width, (⑅˘꒳˘) canvas.height);
+  ctx.setwinedash([4, òωó 2]);
+  ctx.winedashoffset = -offset;
+  ctx.stwokewect(10, ʘwʘ 10, /(^•ω•^) 100, 100);
 };
 
-const march = () => {
+c-const mawch = () => {
   offset++;
-  if (offset > 16) {
-    offset = 0;
+  i-if (offset > 16) {
+    o-offset = 0;
   }
-  draw();
-  setTimeout(march, 20);
+  d-dwaw();
+  settimeout(mawch, ʘwʘ 20);
 };
 
-march();
+m-mawch();
 ```
 
-{{ EmbedLiveSample('Эффект_марширующих_муравьёв') }}
+{{ embedwivesampwe('Эффект_марширующих_муравьёв') }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс, определяющий это свойство: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.getLineDash()")}}
-- {{domxref("CanvasRenderingContext2D.setLineDash()")}}
-- [Применение стилей и цвета](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
+- Интерфейс, σωσ определяющий это свойство: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.getwinedash()")}}
+- {{domxwef("canvaswendewingcontext2d.setwinedash()")}}
+- [Применение стилей и цвета](/wu/docs/web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows)

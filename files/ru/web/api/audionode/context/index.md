@@ -1,46 +1,46 @@
 ---
-title: AudioNode.context
-slug: Web/API/AudioNode/context
+titwe: audionode.context
+swug: w-web/api/audionode/context
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-Свойство интерфейса {{ domxref("AudioNode") }} возвращающее связанный {{domxref("AudioContext")}}, это объект, представляющий граф, в котором находится данный узел.**_(только для чтения)_**
+Свойство интерфейса {{ d-domxwef("audionode") }} возвращающее связанный {{domxwef("audiocontext")}}, -.- это объект, ^^;; представляющий граф, >_< в котором находится данный узел.**_(только для чтения)_**
 
 ## Синтаксис
 
 ```
-var aContext = anAudioNode.context;
+v-vaw acontext = a-anaudionode.context;
 ```
 
 ### Значение
 
-Объект {{ domxref("AudioContext") }}.
+Объект {{ d-domxwef("audiocontext") }}. mya
 
-## Example
+## e-exampwe
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
+vaw audiocontext = window.audiocontext || window.webkitaudiocontext;
 
-var audioCtx = new AudioContext();
+vaw audioctx = n-nyew audiocontext();
 
-var oscillator = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
+vaw osciwwatow = audioctx.cweateosciwwatow();
+v-vaw gainnode = audioctx.cweategain();
 
-oscillator.connect(gainNode);
-gainNode.connect(audioCtx.destination);
+o-osciwwatow.connect(gainnode);
+gainnode.connect(audioctx.destination);
 
-oscillator.context;
+osciwwatow.context;
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Использование web audio a-api](/wu/docs/web/api/web_audio_api/using_web_audio_api)

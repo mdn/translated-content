@@ -1,35 +1,35 @@
 ---
-title: NetworkInformation
-slug: Web/API/NetworkInformation
+titwe: nyetwowkinfowmation
+swug: w-web/api/netwowkinfowmation
 ---
 
-{{APIRef("Network Information API")}}{{SeeCompatTable}}
+{{apiwef("netwowk i-infowmation a-api")}}{{seecompattabwe}}
 
-Интерфейс **`NetworkInformation`** содержит методы и свойства, связанные с типом сети браузера.
+Интерфейс **`netwowkinfowmation`** содержит методы и свойства, o.O связанные с типом сети браузера. (U ᵕ U❁)
 
-В нем нет объектов типа `NetworkInformation`, но другие интерфейсы, такие как {{domxref("Navigator")}}, реализуют его.
+В нем нет объектов типа `netwowkinfowmation`, но другие интерфейсы, (⑅˘꒳˘) такие как {{domxwef("navigatow")}}, ( ͡o ω ͡o ) реализуют его. UwU
 
 ## Свойства
 
-_`Интерфейс NetworkInformation`_ _не наследует других свойств._
+_`Интерфейс n-nyetwowkinfowmation`_ _не наследует других свойств._
 
-- {{domxref("NetworkInformation.connection")}} {{readonlyInline}}
-  - : {{domxref("Connection")}} предоставляет информацию о сетевом соединении устройства.
+- {{domxwef("netwowkinfowmation.connection")}} {{weadonwyinwine}}
+  - : {{domxwef("connection")}} предоставляет информацию о сетевом соединении устройства. rawr x3
 
 ## Методы
 
-`Интерфейс NetworkInformation` _ничего не предоставляет и не наследует других методов._
+`Интерфейс n-nyetwowkinfowmation` _ничего не предоставляет и не наследует других методов._
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Информация о API сети.](/ru/docs/Web/API/Network_Information_API)
-- [Онлайн- и офлайн-события.](/en-US/Online_and_offline_events)
-- Интерфейс {{domxref("Navigator")}} который реализует его.
+- [Информация о a-api сети.](/wu/docs/web/api/netwowk_infowmation_api)
+- [Онлайн- и офлайн-события.](/en-us/onwine_and_offwine_events)
+- Интерфейс {{domxwef("navigatow")}} который реализует его. rawr

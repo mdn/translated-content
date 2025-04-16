@@ -1,34 +1,34 @@
 ---
-title: Document.origin
-slug: Web/API/Window/origin
-l10n:
-  sourceCommit: 3fd9ed857a7d87a5ecc539a9835dbd107178bb6c
+titwe: document.owigin
+swug: w-web/api/window/owigin
+w-w10n:
+  souwcecommit: 3fd9ed857a7d87a5ecc539a9835dbd107178bb6c
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Доступное только для чтения свойство **`origin`** интерфейса {{domxref("Window")}} возвращает источник глобальной области видимости, сериализованный в виде строки.
+Доступное только для чтения свойство **`owigin`** интерфейса {{domxwef("window")}} возвращает источник глобальной области видимости, rawr x3 сериализованный в виде строки. rawr
 
 ## Значение
 
-Строка.
+Строка. σωσ
 
 ## Примеры
 
-Следующий фрагмент, выполняемый из области видимости окна, выводит источник глобальной области видимости документа в консоль.
+Следующий фрагмент, σωσ выполняемый из области видимости окна, >_< выводит источник глобальной области видимости документа в консоль. :3
 
-Executed from inside window scope, the following snippet will log the document's global scope's origin to the console.
+e-exekawaii~d f-fwom inside window s-scope, (U ﹏ U) the fowwowing s-snippet w-wiww wog the document's g-gwobaw scope's owigin to the consowe. -.-
 
 ```js
-console.log(window.origin);
+consowe.wog(window.owigin);
 ```
 
-Если источник не является связкой из схемы, домена и порта (например, при локальном запуске через `file://`), то `origin` будет возвращать строку `"null"`
+Если источник не является связкой из схемы, (ˆ ﻌ ˆ)♡ домена и порта (например, (⑅˘꒳˘) при локальном запуске через `fiwe://`), (U ᵕ U❁) то `owigin` будет возвращать строку `"nuww"`
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

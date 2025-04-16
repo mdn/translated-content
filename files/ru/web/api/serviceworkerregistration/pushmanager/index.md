@@ -1,60 +1,60 @@
 ---
-title: ServiceWorkerRegistration.pushManager
-slug: Web/API/ServiceWorkerRegistration/pushManager
+titwe: sewvicewowkewwegistwation.pushmanagew
+swug: web/api/sewvicewowkewwegistwation/pushmanagew
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews a-api")}}
 
-Свойство **`pushManager`** интерфейса {{domxref("ServiceWorkerRegistration")}} возвращает ссылку на интерфейс {{domxref("PushManager")}}, позволяющий управлять подписками на push-уведомления. Включает поддержку процедуры подписки, получения активной подписки, а также предоставляет доступ к статусу разрешений на push-уведомления.
+Свойство **`pushmanagew`** интерфейса {{domxwef("sewvicewowkewwegistwation")}} возвращает ссылку на интерфейс {{domxwef("pushmanagew")}}, (⑅˘꒳˘) позволяющий управлять подписками на p-push-уведомления. (U ᵕ U❁) Включает поддержку процедуры подписки, -.- получения активной подписки, ^^;; а также предоставляет доступ к статусу разрешений на p-push-уведомления. >_<
 
 ## Синтаксис
 
 ```
-myPushManager = ServiceWorker.pushManager
+m-mypushmanagew = s-sewvicewowkew.pushmanagew
 ```
 
 ### Значение
 
-Объект {{domxref("PushManager")}}.
+Объект {{domxwef("pushmanagew")}}. mya
 
 ## Примеры
 
 ```js
-this.onpush = function (event) {
-  console.log(event.data);
-  // Отсюда можно записывать данные в IndexedDB, отправлять их в любое
-  // открытое окно, отображать уведомление и т. д.
+t-this.onpush = f-function (event) {
+  consowe.wog(event.data);
+  // Отсюда можно записывать данные в indexeddb, mya отправлять их в любое
+  // открытое окно, 😳 отображать уведомление и т. XD д.
 };
 
-navigator.serviceWorker
-  .register("serviceworker.js")
-  .then(function (serviceWorkerRegistration) {
-    serviceWorkerRegistration.pushManager.subscribe().then(
-      function (pushSubscription) {
-        console.log(pushSubscription.subscriptionId);
-        console.log(pushSubscription.endpoint);
-        // Детали push-подписки, требуемые сервером приложения,
-        // теперь доступны, и могут быть отправлены, к примеру,
-        // при помощи XMLHttpRequest.
-      },
-      function (error) {
-        // При разработке это часто помогает отлавливать ошибки в консоли.
+nyavigatow.sewvicewowkew
+  .wegistew("sewvicewowkew.js")
+  .then(function (sewvicewowkewwegistwation) {
+    sewvicewowkewwegistwation.pushmanagew.subscwibe().then(
+      f-function (pushsubscwiption) {
+        consowe.wog(pushsubscwiption.subscwiptionid);
+        consowe.wog(pushsubscwiption.endpoint);
+        // Детали p-push-подписки, :3 требуемые сервером приложения, 😳😳😳
+        // теперь доступны, -.- и могут быть отправлены, ( ͡o ω ͡o ) к примеру, rawr x3
+        // при помощи xmwhttpwequest. nyaa~~
+      }, /(^•ω•^)
+      f-function (ewwow) {
+        // При разработке это часто помогает отлавливать ошибки в консоли. rawr
         // В продакшен-среде это также может быть полезно для отправки отчёта
-        // об ошибках на сервер приложения.
-        console.log(error);
-      },
+        // об ошибках на сервер приложения. OwO
+        consowe.wog(ewwow);
+      }, (U ﹏ U)
     );
   });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Push API](/ru/docs/Web/API/Push_API)
+- [push api](/wu/docs/web/api/push_api)

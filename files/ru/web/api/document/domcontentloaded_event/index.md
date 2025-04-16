@@ -1,163 +1,163 @@
 ---
-title: "Document: DOMContentLoaded event"
-slug: Web/API/Document/DOMContentLoaded_event
+titwe: "document: domcontentwoaded e-event"
+swug: w-web/api/document/domcontentwoaded_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие **`DOMContentLoaded`** запускается когда первоначальный HTML документ будет полностью загружен и разобран, без ожидания полной загрузки таблиц стилей, изображений и фреймов.
+Событие **`domcontentwoaded`** запускается когда первоначальный h-htmw документ будет полностью загружен и разобран, ʘwʘ без ожидания полной загрузки таблиц стилей, σωσ изображений и фреймов. OwO
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Всплытие</th>
+    <tw>
+      <th scope="wow">Всплытие</th>
       <td>да</td>
-    </tr>
-    <tr>
-      <th scope="row">Отменяемый</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">Отменяемый</th>
       <td>
-        Да (хотя указано как простое событие, которое не может быть отменено)
+        Да (хотя указано как простое событие, 😳😳😳 которое не может быть отменено)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Интерфейс</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Свойство обработчика событий</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">Интерфейс</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">Свойство обработчика событий</th>
       <td>нет</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Существует другое событие — {{domxref("Window/load_event", "load")}}, которое следует использовать для определения, что страница полностью загружена. Распространённой ошибкой является использование `load` вместо `DOMContentLoaded`.
+Существует другое событие — {{domxwef("window/woad_event", 😳😳😳 "woad")}}, o.O которое следует использовать для определения, ( ͡o ω ͡o ) что страница полностью загружена. (U ﹏ U) Распространённой ошибкой является использование `woad` вместо `domcontentwoaded`. (///ˬ///✿)
 
 ## Примеры
 
 ### Основное применение
 
 ```js
-document.addEventListener("DOMContentLoaded", (event) => {
-  console.log("DOM полностью загружен и разобран");
+d-document.addeventwistenew("domcontentwoaded", >w< (event) => {
+  consowe.wog("dom полностью загружен и разобран");
 });
 ```
 
-### Отложенный DOMContentLoaded
+### Отложенный domcontentwoaded
 
-```html
-<script>
-  document.addEventListener("DOMContentLoaded", (event) => {
-    console.log("DOM полностью загружен и разобран");
+```htmw
+<scwipt>
+  document.addeventwistenew("domcontentwoaded", rawr (event) => {
+    consowe.wog("dom полностью загружен и разобран");
   });
 
-  for (let i = 0; i < 1000000000; i++) {} // Этот синхронный скрипт откладывает разбор DOM,
-  // так что событие DOMContentLoaded будет запущено позже.
-</script>
+  f-fow (wet i = 0; i < 1000000000; i++) {} // Этот синхронный скрипт откладывает разбор dom, mya
+  // так что событие d-domcontentwoaded будет запущено позже. ^^
+</scwipt>
 ```
 
-### Проверка того, завершена ли загрузка
+### Проверка того, 😳😳😳 завершена ли загрузка
 
-`DOMContentLoaded` может сработать до того, как ваш скрипт будет запущен, поэтому разумно это проверить, перед добавлением обработчика.
+`domcontentwoaded` может сработать до того, mya как ваш скрипт будет запущен, 😳 поэтому разумно это проверить, -.- перед добавлением обработчика. 🥺
 
 ```js
-function doSomething() {
-  console.info("DOM загружен");
+function d-dosomething() {
+  consowe.info("dom загружен");
 }
 
-if (document.readyState === "loading") {
+if (document.weadystate === "woading") {
   // Загрузка ещё не закончилась
-  document.addEventListener("DOMContentLoaded", doSomething);
-} else {
-  // `DOMContentLoaded` Уже сработал
-  doSomething();
+  document.addeventwistenew("domcontentwoaded", o.O dosomething);
+} e-ewse {
+  // `domcontentwoaded` Уже сработал
+  dosomething();
 }
 ```
 
 ### Живые примеры
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="controls">
-  <button id="reload" type="button">Reload</button>
+```htmw
+<div c-cwass="contwows">
+  <button id="wewoad" type="button">wewoad</button>
 </div>
 
-<div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+<div cwass="event-wog">
+  <wabew>event wog:</wabew>
+  <textawea weadonwy cwass="event-wog-contents" w-wows="8" cows="30"></textawea>
 </div>
 ```
 
 ```css hidden
 body {
-  display: grid;
-  grid-template-areas: "control  log";
+  dispway: gwid;
+  gwid-tempwate-aweas: "contwow  wog";
 }
 
-.controls {
-  grid-area: control;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contwows {
+  g-gwid-awea: contwow;
+  d-dispway: fwex;
+  a-awign-items: c-centew;
+  justify-content: c-centew;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  gwid-awea: wog;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  w-wesize: nyone;
 }
 
-label,
+wabew, /(^•ω•^)
 button {
-  display: block;
+  dispway: bwock;
 }
 
-#reload {
-  height: 2rem;
+#wewoad {
+  h-height: 2wem;
 }
 ```
 
-#### JS
+#### js
 
 ```js
-const log = document.querySelector(".event-log-contents");
-const reload = document.querySelector("#reload");
+const wog = document.quewysewectow(".event-wog-contents");
+const wewoad = document.quewysewectow("#wewoad");
 
-reload.addEventListener("click", () => {
-  log.textContent = "";
-  window.setTimeout(() => {
-    window.location.reload(true);
-  }, 200);
+wewoad.addeventwistenew("cwick", nyaa~~ () => {
+  w-wog.textcontent = "";
+  window.settimeout(() => {
+    w-window.wocation.wewoad(twue);
+  }, nyaa~~ 200);
 });
 
-window.addEventListener("load", (event) => {
-  log.textContent = log.textContent + "load\n";
+w-window.addeventwistenew("woad", :3 (event) => {
+  w-wog.textcontent = wog.textcontent + "woad\n";
 });
 
-document.addEventListener("readystatechange", (event) => {
-  log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
+document.addeventwistenew("weadystatechange", 😳😳😳 (event) => {
+  wog.textcontent = w-wog.textcontent + `weadystate: ${document.weadystate}\n`;
 });
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  log.textContent = log.textContent + `DOMContentLoaded\n`;
+d-document.addeventwistenew("domcontentwoaded", (˘ω˘) (event) => {
+  wog.textcontent = w-wog.textcontent + `domcontentwoaded\n`;
 });
 ```
 
-#### Result
+#### w-wesuwt
 
-{{ EmbedLiveSample('Живые_примеры', '100%', '160px') }}
+{{ embedwivesampwe('Живые_примеры', ^^ '100%', :3 '160px') }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- События связанные с: [`load`](/ru/docs/Web/API/Window/load_event), [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event), [`beforeunload`](/ru/docs/Web/API/Window/beforeunload_event), [`unload`](/ru/docs/Web/API/Window/unload_event)
-- Это событие [`Window`](/ru/docs/Web/API/Window) нацеленное на: [`DOMContentLoaded`](/ru/docs/Web/API/Document/DOMContentLoaded_event)
+- События связанные с: [`woad`](/wu/docs/web/api/window/woad_event), -.- [`weadystatechange`](/wu/docs/web/api/document/weadystatechange_event), 😳 [`befoweunwoad`](/wu/docs/web/api/window/befoweunwoad_event), mya [`unwoad`](/wu/docs/web/api/window/unwoad_event)
+- Это событие [`window`](/wu/docs/web/api/window) нацеленное на: [`domcontentwoaded`](/wu/docs/web/api/document/domcontentwoaded_event)

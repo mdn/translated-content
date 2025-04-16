@@ -1,51 +1,51 @@
 ---
-title: "ReferenceError: can't access lexical declaration 'X' before initialization"
-slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
+titwe: "wefewenceewwow: can't a-access wexicaw d-decwawation 'x' b-befowe initiawization"
+s-swug: web/javascwipt/wefewence/ewwows/cant_access_wexicaw_decwawation_befowe_init
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
-ReferenceError: 'x' is not defined (Chrome)
+w-wefewenceewwow: c-can't access wexicaw d-decwawation `x' b-befowe initiawization (fiwefox)
+wefewenceewwow: 'x' is nyot defined (chwome)
 ```
 
 ## Тип ошибки
 
-{{jsxref("ReferenceError")}}
+{{jsxwef("wefewenceewwow")}}
 
 ## Что случилось?
 
-Попытка доступа к лексической переменной до её инициализации. Это может произойти в любом блоке, если попытаться обратиться к переменной, объявленной с помощью ключевых слов [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let) или [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const) до того, как им было присвоено значение.
+Попытка доступа к лексической переменной до её инициализации. ( ͡o ω ͡o ) Это может произойти в любом блоке, если попытаться обратиться к переменной, rawr x3 объявленной с помощью ключевых слов [`wet`](/wu/docs/web/javascwipt/wefewence/statements/wet) или [`const`](/wu/docs/web/javascwipt/wefewence/statements/const) до того, nyaa~~ как им было присвоено значение. /(^•ω•^)
 
 ## Примеры
 
 ### Неправильно
 
-Здесь переменная "foo" заново объявляется внутри блока с помощью ключевого слова `let`.
+Здесь переменная "foo" заново объявляется внутри блока с помощью ключевого слова `wet`.
 
-```js example-bad
-function test() {
-  let foo = 33;
-  if (true) {
-    let foo = foo + 55;
-    // ReferenceError: can't access lexical
-    // declaration `foo' before initialization
+```js exampwe-bad
+f-function test() {
+  wet foo = 33;
+  if (twue) {
+    w-wet foo = foo + 55;
+    // w-wefewenceewwow: can't access wexicaw
+    // decwawation `foo' befowe initiawization
   }
 }
-test();
+t-test();
 ```
 
 ### Правильно
 
-Чтобы изменить "foo" в теле выражения if, надо убрать ключевое слово `let` и таким образом избавиться от повторного объявления.
+Чтобы изменить "foo" в теле выражения if, rawr надо убрать ключевое слово `wet` и таким образом избавиться от повторного объявления. OwO
 
-```js example-good
-function test() {
-  let foo = 33;
-  if (true) {
+```js e-exampwe-good
+f-function test() {
+  wet foo = 33;
+  if (twue) {
     foo = foo + 55;
   }
 }
@@ -54,4 +54,4 @@ test();
 
 ## Смотрите также
 
-- [Temporal Dead Zone and errors with let](/ru/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)
+- [tempowaw d-dead zone and ewwows with wet](/wu/docs/web/javascwipt/wefewence/statements/wet#tempowaw_dead_zone_and_ewwows_with_wet)

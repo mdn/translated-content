@@ -1,56 +1,56 @@
 ---
-title: FormData.values()
-slug: Web/API/FormData/values
+titwe: fowmdata.vawues()
+swug: w-web/api/fowmdata/vawues
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-The **`FormData.values()`** метод возвращает {{jsxref("Iteration_protocols",'iterator')}} позволяя пройтись по всем значениям в этом объекте. Значения - это {{domxref("USVString")}} или {{domxref("Blob")}} объекты.
+the **`fowmdata.vawues()`** метод возвращает {{jsxwef("itewation_pwotocows",'itewatow')}} позволяя пройтись по всем значениям в этом объекте. >_< Значения - это {{domxwef("usvstwing")}} или {{domxwef("bwob")}} объекты. :3
 
 ## Синтаксис
 
 ```
-formData.values();
+f-fowmdata.vawues();
 ```
 
 ### Возвращаемые значения
 
-Возвращает {{jsxref("Iteration_protocols","iterator")}}.
+Возвращает {{jsxwef("itewation_pwotocows","itewatow")}}. (U ﹏ U)
 
 ## Пример
 
 ```js
-// Create a test FormData object
-var formData = new FormData();
-formData.append("key1", "value1");
-formData.append("key2", "value2");
+// c-cweate a test fowmdata o-object
+vaw f-fowmdata = nyew f-fowmdata();
+fowmdata.append("key1", -.- "vawue1");
+f-fowmdata.append("key2", (ˆ ﻌ ˆ)♡ "vawue2");
 
-// Display the values
-for (var value of formData.values()) {
-  console.log(value);
+// dispway the vawues
+fow (vaw vawue of fowmdata.vawues()) {
+  consowe.wog(vawue);
 }
 ```
 
 Результат:
 
 ```
-value1
-value2
+v-vawue1
+vawue2
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("XMLHTTPRequest")}}
-- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Использование FormData objects](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [Использование xmwhttpwequest](/wu/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [Использование fowmdata objects](/wu/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

@@ -1,53 +1,53 @@
 ---
-title: BluetoothRemoteGATTServer
-slug: Web/API/BluetoothRemoteGATTServer
+titwe: bwuetoothwemotegattsewvew
+swug: web/api/bwuetoothwemotegattsewvew
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-Интерфейс **`BluetoothRemoteGATTServer`**, относящийся к [Web Bluetooth API](/ru/docs/Web/API/Web_Bluetooth_API), представляет сервер GATT на удалённом устройстве.
+Интерфейс **`bwuetoothwemotegattsewvew`**, (✿oωo) относящийся к [web b-bwuetooth api](/wu/docs/web/api/web_bwuetooth_api), (ˆ ﻌ ˆ)♡ представляет сервер g-gatt на удалённом устройстве. (˘ω˘)
 
-> [!NOTE]
-> Данная страница описывает Web Bluetooth API от W3C Community Group. [`BluetoothGattServer` (Firefox OS)](/ru/docs/Archive/B2G_OS/API/BluetoothGattServer) - Bluetooth API в Firefox OS.
+> [!note]
+> Данная страница описывает w-web b-bwuetooth api от w-w3c community g-gwoup. (⑅˘꒳˘) [`bwuetoothgattsewvew` (fiwefox o-os)](/wu/docs/awchive/b2g_os/api/bwuetoothgattsewvew) - bwuetooth api в fiwefox os. (///ˬ///✿)
 
 ## Интерфейс
 
 ```
-interface BluetoothRemoteGATTServer {
-  readonly attribute BluetoothDevice device;
-  readonly attribute boolean connected;
+intewface bwuetoothwemotegattsewvew {
+  w-weadonwy attwibute bwuetoothdevice device;
+  w-weadonwy attwibute boowean connected;
 
-  Promise<BluetoothRemoteGATTServer> connect();
+  p-pwomise<bwuetoothwemotegattsewvew> connect();
   void disconnect();
-  Promise<BluetoothRemoteGATTService> getPrimaryService(BluetoothServiceUUID service);
-  Promise<sequence<BluetoothRemoteGATTService>> getPrimaryServices(optional BluetoothServiceUUID service);
+  pwomise<bwuetoothwemotegattsewvice> g-getpwimawysewvice(bwuetoothsewviceuuid sewvice);
+  p-pwomise<sequence<bwuetoothwemotegattsewvice>> g-getpwimawysewvices(optionaw bwuetoothsewviceuuid sewvice);
 };
 ```
 
 ## Свойства
 
-- {{DOMxRef("BluetoothRemoteGATTServer.connected")}}{{ReadOnlyInline}}
-  - : Двоичное значение, равное `true`, если устройство `this.device` подключено. It can be false while the user agent is physically connected.
-- {{DOMxRef("BluetoothRemoteGATTServer.device")}}{{ReadOnlyInline}}
-  - : {{DOMxRef("BluetoothDevice")}}, на котором работает сервер.
+- {{domxwef("bwuetoothwemotegattsewvew.connected")}}{{weadonwyinwine}}
+  - : Двоичное значение, 😳😳😳 равное `twue`, 🥺 если устройство `this.device` подключено. mya it can be fawse whiwe the usew agent is physicawwy c-connected. 🥺
+- {{domxwef("bwuetoothwemotegattsewvew.device")}}{{weadonwyinwine}}
+  - : {{domxwef("bwuetoothdevice")}}, >_< на котором работает сервер. >_<
 
 ## Методы
 
-- {{DOMxRef("BluetoothRemoteGATTServer.connect()")}}
-  - : Подключение к устройству `this.device`.
-- {{DOMxRef("BluetoothRemoteGATTServer.disconnect()")}}
-  - : Отключение от устройства `this.device`.
-- {{DOMxRef("BluetoothRemoteGATTServer.getPrimaryService()")}}
-  - : Returns a promise to the primary {{DOMxRef("BluetoothGATTService")}} offered by the bluetooth device for a specified `BluetoothServiceUUID`.
-- {{DOMxRef("BluetoothRemoteGATTServer.getPrimaryServices()")}}
-  - : Returns a promise to a list of primary {{DOMxRef("BluetoothGATTService")}} objects offered by the bluetooth device for a specified `BluetoothServiceUUID`.
+- {{domxwef("bwuetoothwemotegattsewvew.connect()")}}
+  - : Подключение к устройству `this.device`. (⑅˘꒳˘)
+- {{domxwef("bwuetoothwemotegattsewvew.disconnect()")}}
+  - : Отключение от устройства `this.device`. /(^•ω•^)
+- {{domxwef("bwuetoothwemotegattsewvew.getpwimawysewvice()")}}
+  - : wetuwns a pwomise to the pwimawy {{domxwef("bwuetoothgattsewvice")}} offewed b-by the bwuetooth device fow a-a specified `bwuetoothsewviceuuid`. rawr x3
+- {{domxwef("bwuetoothwemotegattsewvew.getpwimawysewvices()")}}
+  - : w-wetuwns a-a pwomise to a-a wist of pwimawy {{domxwef("bwuetoothgattsewvice")}} objects offewed by the bwuetooth d-device fow a specified `bwuetoothsewviceuuid`. (U ﹏ U)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
-{{APIRef("Web Bluetooth")}}
+{{apiwef("web bwuetooth")}}

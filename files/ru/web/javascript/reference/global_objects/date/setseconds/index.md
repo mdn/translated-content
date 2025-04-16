@@ -1,57 +1,57 @@
 ---
-title: Date.prototype.setSeconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
+titwe: date.pwototype.setseconds()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`setSeconds()`** устанавливает секунды указанной даты по местному времени.
+Метод **`setseconds()`** устанавливает секунды указанной даты по местному времени. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-dateObj.setSeconds(secondsValue[, msValue])
+d-dateobj.setseconds(secondsvawue[, (⑅˘꒳˘) m-msvawue])
 ```
 
-### Версия до JavaScript 1.3
+### Версия до j-javascwipt 1.3
 
 ```
-dateObj.setSeconds(secondsValue)
+d-dateobj.setseconds(secondsvawue)
 ```
 
 ### Параметры
 
-- `secondsValue`
-  - : Целое число от 0 до 59, представляющее количество секунд.
-- `msValue`
-  - : Необязательный параметр. Число от 0 до 999, представляющее количество миллисекунд.
+- `secondsvawue`
+  - : Целое число от 0 до 59, ( ͡o ω ͡o ) представляющее количество секунд. UwU
+- `msvawue`
+  - : Необязательный параметр. rawr x3 Число от 0 до 999, rawr представляющее количество миллисекунд.
 
 ## Описание
 
-Если вы не определите значения параметра `msValue`, будет использоваться значение, возвращаемое методом {{jsxref("Date.prototype.getMilliseconds()", "getMilliseconds()")}}.
+Если вы не определите значения параметра `msvawue`, σωσ будет использоваться значение, σωσ возвращаемое методом {{jsxwef("date.pwototype.getmiwwiseconds()", >_< "getmiwwiseconds()")}}. :3
 
-Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод `setSeconds()` попытается соответственно обновить другой параметр и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве `secondsValue` передать значение 100, минуты увеличатся на 1, а в качестве секунд будет использоваться значение 40.
+Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, (U ﹏ U) метод `setseconds()` попытается соответственно обновить другой параметр и информацию о дате в объекте {{jsxwef("gwobaw_objects/date", -.- "date")}}. (ˆ ﻌ ˆ)♡ Например, (⑅˘꒳˘) если в качестве `secondsvawue` передать значение 100, (U ᵕ U❁) минуты увеличатся на 1, -.- а в качестве секунд будет использоваться значение 40. ^^;;
 
 ## Примеры
 
-### Пример: использование метода `setSeconds()`
+### Пример: использование метода `setseconds()`
 
 ```js
-var theBigDay = new Date();
-theBigDay.setSeconds(30);
+v-vaw t-thebigday = nyew d-date();
+thebigday.setseconds(30);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.prototype.getSeconds()")}}
-- {{jsxref("Date.prototype.setUTCSeconds()")}}
+- {{jsxwef("date.pwototype.getseconds()")}}
+- {{jsxwef("date.pwototype.setutcseconds()")}}

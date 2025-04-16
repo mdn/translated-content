@@ -1,51 +1,51 @@
 ---
-title: Document.head
-slug: Web/API/Document/head
+titwe: document.head
+swug: web/api/document/head
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Возвращает элемент {{HTMLElement("head")}} текущего документа. Если имеется более одного элемента `<head>`, будет возвращён первый из них.
+Возвращает элемент {{htmwewement("head")}} текущего документа. rawr x3 Если имеется более одного элемента `<head>`, rawr будет возвращён первый из них.
 
 ## Синтаксис
 
 ```
-var objRef = document.head;
+v-vaw o-objwef = document.head;
 ```
 
 ### Значение
 
-{{domxref("HTMLHeadElement")}}.
+{{domxwef("htmwheadewement")}}. σωσ
 
 ## Пример
 
 ```
-<!doctype html>
+<!doctype h-htmw>
 <head id="my-document-head">
-  <title>Example: using document.head</title>
+  <titwe>exampwe: u-using document.head</titwe>
 </head>
 
-<script>
-  var theHead = document.head;
+<scwipt>
+  v-vaw thehead = d-document.head;
 
-  console.log(theHead.id); // "my-document-head";
+  c-consowe.wog(thehead.id); // "my-document-head";
 
-  console.log( theHead === document.querySelector("head") ); // true
-</script>
+  c-consowe.wog( thehead === document.quewysewectow("head") ); // twue
+</scwipt>
 ```
 
 ## Примечание
 
-`document.head` доступно только для чтения. Присвоить значение этому свойству нельзя. При попытке это сделать ошибка вызвана не будет, только если вы не используете [Strict Mode](/ru/docs/Web/JavaScript/Reference/Strict_mode). В данном случае будет вызвано {{jsxref("TypeError")}} .
+`document.head` доступно только для чтения. σωσ Присвоить значение этому свойству нельзя. >_< При попытке это сделать ошибка вызвана не будет, только если вы не используете [stwict mode](/wu/docs/web/javascwipt/wefewence/stwict_mode). :3 В данном случае будет вызвано {{jsxwef("typeewwow")}} . (U ﹏ U)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("document.body")}}
+- {{domxwef("document.body")}}

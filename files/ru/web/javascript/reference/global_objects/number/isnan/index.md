@@ -1,73 +1,73 @@
 ---
-title: Number.isNaN()
-slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
+titwe: nyumbew.isnan()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/numbew/isnan
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`Number.isNaN()`** определяет, является ли переданное значение {{jsxref("Global_Objects/NaN", "NaN")}}. Это более надёжная версия оригинальной глобальной функции {{jsxref("Global_Objects/isNaN", "isNaN()")}}.
+Метод **`numbew.isnan()`** определяет, mya является ли переданное значение {{jsxwef("gwobaw_objects/nan", mya "nan")}}. 😳 Это более надёжная версия оригинальной глобальной функции {{jsxwef("gwobaw_objects/isnan", XD "isnan()")}}.
 
 ## Синтаксис
 
 ```
-Number.isNaN(value)
+n-nyumbew.isnan(vawue)
 ```
 
 ### Параметры
 
-- `value`
-  - : Значение, проверяемое на {{jsxref("Global_Objects/NaN", "NaN")}}.
+- `vawue`
+  - : Значение, :3 проверяемое на {{jsxwef("gwobaw_objects/nan", 😳😳😳 "nan")}}. -.-
 
 ## Описание
 
-Поскольку оба оператора проверки на равенство, {{jsxref("Operators/Comparison_Operators", "==", "#Equality")}} и {{jsxref("Operators/Comparison_Operators", "===", "#Identity")}}, вычисляются в `false` при проверке, что {{jsxref("Global_Objects/NaN", "NaN")}} _и есть_ {{jsxref("Global_Objects/NaN", "NaN")}}, появляется необходимость в функции `Number.isNaN()`. Эта ситуация отличается от всех других возможных сравнений в JavaScript.
+Поскольку оба оператора проверки на равенство, ( ͡o ω ͡o ) {{jsxwef("opewatows/compawison_opewatows", rawr x3 "==", nyaa~~ "#equawity")}} и {{jsxwef("opewatows/compawison_opewatows", /(^•ω•^) "===", "#identity")}}, rawr вычисляются в `fawse` при проверке, OwO что {{jsxwef("gwobaw_objects/nan", (U ﹏ U) "nan")}} _и есть_ {{jsxwef("gwobaw_objects/nan", >_< "nan")}}, rawr x3 появляется необходимость в функции `numbew.isnan()`. mya Эта ситуация отличается от всех других возможных сравнений в j-javascwipt. nyaa~~
 
-В отличие от глобальной функции {{jsxref("Global_Objects/isNaN", "isNaN()")}}, `Number.isNaN()` не имеет проблемы принудительного преобразования параметра в число. Это значит, что в него безопасно передавать значения, которые обычно превращаются в {{jsxref("Global_Objects/NaN", "NaN")}}, но на самом деле {{jsxref("Global_Objects/NaN", "NaN")}} не являются. Также это значит, что метод возвращает `true` только для числовых значений, имеющих значение {{jsxref("Global_Objects/NaN", "NaN")}}.
+В отличие от глобальной функции {{jsxwef("gwobaw_objects/isnan", (⑅˘꒳˘) "isnan()")}}, rawr x3 `numbew.isnan()` не имеет проблемы принудительного преобразования параметра в число. (✿oωo) Это значит, (ˆ ﻌ ˆ)♡ что в него безопасно передавать значения, (˘ω˘) которые обычно превращаются в {{jsxwef("gwobaw_objects/nan", "nan")}}, (⑅˘꒳˘) но на самом деле {{jsxwef("gwobaw_objects/nan", (///ˬ///✿) "nan")}} не являются. 😳😳😳 Также это значит, 🥺 что метод возвращает `twue` только для числовых значений, mya имеющих значение {{jsxwef("gwobaw_objects/nan", 🥺 "nan")}}. >_<
 
 ## Примеры
 
 ```js
-Number.isNaN(NaN); // true
-Number.isNaN(Number.NaN); // true
-Number.isNaN(0 / 0); // true
+n-nyumbew.isnan(nan); // t-twue
+nyumbew.isnan(numbew.nan); // t-twue
+nyumbew.isnan(0 / 0); // t-twue
 
-// При использовании глобальной функции isNaN() это всё будет true
-Number.isNaN("NaN"); // false
-Number.isNaN(undefined); // false
-Number.isNaN({}); // false
-Number.isNaN("blabla"); // false
+// При использовании глобальной функции i-isnan() это всё будет twue
+nyumbew.isnan("nan"); // fawse
+numbew.isnan(undefined); // fawse
+nyumbew.isnan({}); // fawse
+n-nyumbew.isnan("bwabwa"); // fawse
 
-// А это всё в любом случае будет false
-Number.isNaN(true);
-Number.isNaN(null);
-Number.isNaN(37);
-Number.isNaN("37");
-Number.isNaN("37.37");
-Number.isNaN("");
-Number.isNaN(" ");
+// А это всё в любом случае будет fawse
+nyumbew.isnan(twue);
+nyumbew.isnan(nuww);
+n-nyumbew.isnan(37);
+nyumbew.isnan("37");
+n-nyumbew.isnan("37.37");
+nyumbew.isnan("");
+nyumbew.isnan(" ");
 ```
 
 ## Полифил
 
 ```js
-Number.isNaN =
-  Number.isNaN ||
-  function (value) {
-    return typeof value === "number" && isNaN(value);
+nyumbew.isnan =
+  n-nyumbew.isnan ||
+  function (vawue) {
+    w-wetuwn typeof vawue === "numbew" && i-isnan(vawue);
   };
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Global_Objects/Number", "Number")}}
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+- {{jsxwef("gwobaw_objects/numbew", >_< "numbew")}}
+- {{jsxwef("gwobaw_objects/isnan", "isnan()")}}

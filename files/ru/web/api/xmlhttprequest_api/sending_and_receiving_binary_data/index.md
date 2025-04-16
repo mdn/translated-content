@@ -1,190 +1,190 @@
 ---
-title: Отправка и получение бинарных данных
-slug: Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data
+titwe: Отправка и получение бинарных данных
+swug: web/api/xmwhttpwequest_api/sending_and_weceiving_binawy_data
 ---
 
-{{DefaultAPISidebar("XMLHttpRequest API")}}
+{{defauwtapisidebaw("xmwhttpwequest a-api")}}
 
-## Получение бинарных данных используя JavaScript arrays
+## Получение бинарных данных используя j-javascwipt a-awways
 
-Свойство responseType объекта XMLHttpRequest можно задать для изменения ожидаемого типа ответа с сервера. Возможные значения: пустая строка (по умолчанию), "arraybuffer", "blob", "document", "json" и "text". Свойство response будет содержать тело сущности в соответствии с типом ответа, как ArrayBuffer, Blob, Document, JSON или string. Это значение равно null, если запрос не завершён или не был успешным.
+Свойство wesponsetype объекта x-xmwhttpwequest можно задать для изменения ожидаемого типа ответа с сервера. UwU Возможные значения: пустая строка (по умолчанию), :3 "awwaybuffew", (⑅˘꒳˘) "bwob", (///ˬ///✿) "document", "json" и "text". ^^;; Свойство w-wesponse будет содержать тело сущности в соответствии с типом ответа, >_< как a-awwaybuffew, rawr x3 b-bwob, document, /(^•ω•^) j-json или stwing. :3 Это значение равно nyuww, (ꈍᴗꈍ) если запрос не завершён или не был успешным. /(^•ω•^)
 
-В этом примере изображение считывается как двоичный файл и создаётся 8-разрядный массив целых чисел без знака из необработанных байтов. Обратите внимание, что это не будет декодировать изображение и читать пиксели. Для этого вам понадобится [библиотека декодирования png](https://github.com/devongovett/png.js/).
+В этом примере изображение считывается как двоичный файл и создаётся 8-разрядный массив целых чисел без знака из необработанных байтов. (⑅˘꒳˘) Обратите внимание, ( ͡o ω ͡o ) что это не будет декодировать изображение и читать пиксели. òωó Для этого вам понадобится [библиотека декодирования png](https://github.com/devongovett/png.js/). (⑅˘꒳˘)
 
 ```js
-var oReq = new XMLHttpRequest();
-oReq.open("GET", "/myfile.png", true);
-oReq.responseType = "arraybuffer";
+vaw oweq = n-nyew xmwhttpwequest();
+oweq.open("get", XD "/myfiwe.png", -.- twue);
+o-oweq.wesponsetype = "awwaybuffew";
 
-oReq.onload = function (oEvent) {
-  var arrayBuffer = oReq.response; // Note: not oReq.responseText
-  if (arrayBuffer) {
-    var byteArray = new Uint8Array(arrayBuffer);
-    for (var i = 0; i < byteArray.byteLength; i++) {
-      // do something with each byte in the array
+oweq.onwoad = f-function (oevent) {
+  vaw awwaybuffew = oweq.wesponse; // nyote: n-nyot oweq.wesponsetext
+  if (awwaybuffew) {
+    v-vaw byteawway = n-nyew uint8awway(awwaybuffew);
+    fow (vaw i = 0; i < byteawway.bytewength; i++) {
+      // do something with e-each byte in the awway
     }
   }
 };
 
-oReq.send(null);
+oweq.send(nuww);
 ```
 
-Альтернатива вышеуказанному методу использует интерфейс {{domxref("Blob")}} для непосредственного построения Blob с данными arraybuffer.
+Альтернатива вышеуказанному методу использует интерфейс {{domxwef("bwob")}} для непосредственного построения bwob с данными awwaybuffew. :3
 
 ```js
-var oReq = new XMLHttpRequest();
-oReq.open("GET", "/myfile.png", true);
-oReq.responseType = "arraybuffer";
+v-vaw oweq = nyew xmwhttpwequest();
+o-oweq.open("get", nyaa~~ "/myfiwe.png", 😳 t-twue);
+oweq.wesponsetype = "awwaybuffew";
 
-oReq.onload = function (oEvent) {
-  var blob = new Blob([oReq.response], { type: "image/png" });
+o-oweq.onwoad = f-function (oevent) {
+  vaw bwob = nyew bwob([oweq.wesponse], (⑅˘꒳˘) { type: "image/png" });
   // ...
 };
 
-oReq.send();
+o-oweq.send();
 ```
 
-Также вы можете прочитать двоичный файл как {{domxref ("Blob")}}, установив строку" blob " в свойство responseType.
+Также вы можете прочитать двоичный файл как {{domxwef ("bwob")}}, nyaa~~ установив строку" bwob " в свойство wesponsetype. OwO
 
 ```js
-var oReq = new XMLHttpRequest();
-oReq.open("GET", "/myfile.png", true);
-oReq.responseType = "blob";
+v-vaw oweq = nyew xmwhttpwequest();
+oweq.open("get", rawr x3 "/myfiwe.png", XD twue);
+oweq.wesponsetype = "bwob";
 
-oReq.onload = function (oEvent) {
-  var blob = oReq.response;
+oweq.onwoad = f-function (oevent) {
+  vaw bwob = o-oweq.wesponse;
   // ...
 };
 
-oReq.send();
+o-oweq.send();
 ```
 
 ## Получение бинарных данных в старых браузерах
 
-Функция load_binary_resource(), показанная ниже, загружает двоичные данные из указанного URL, возвращая их вызывающему объекту.
+Функция w-woad_binawy_wesouwce(), σωσ показанная ниже, (U ᵕ U❁) загружает двоичные данные из указанного uww, (U ﹏ U) возвращая их вызывающему объекту.
 
 ```js
-function load_binary_resource(url) {
-  var req = new XMLHttpRequest();
-  req.open("GET", url, false);
-  //XHR binary charset opt by Marcus Granado 2006 [http://mgran.blogspot.com]
-  req.overrideMimeType("text/plain; charset=x-user-defined");
-  req.send(null);
-  if (req.status != 200) return "";
-  return req.responseText;
+function woad_binawy_wesouwce(uww) {
+  vaw weq = n-nyew xmwhttpwequest();
+  w-weq.open("get", :3 uww, f-fawse);
+  //xhw b-binawy chawset opt by mawcus gwanado 2006 [http://mgwan.bwogspot.com]
+  w-weq.ovewwidemimetype("text/pwain; chawset=x-usew-defined");
+  w-weq.send(nuww);
+  if (weq.status != 200) wetuwn "";
+  wetuwn w-weq.wesponsetext;
 }
 ```
 
-Магия происходит в строке 5, которая переопределяет тип MIME, заставляя браузер рассматривать его как обычный текст, используя пользовательский набор символов. Это говорит браузеру не анализировать его и пропускать байты через необработанные.
+Магия происходит в строке 5, ( ͡o ω ͡o ) которая переопределяет тип mime, σωσ заставляя браузер рассматривать его как обычный текст, >w< используя пользовательский набор символов. 😳😳😳 Это говорит браузеру не анализировать его и пропускать байты через необработанные. OwO
 
 ```js
-var filestream = load_binary_resource(url);
-var abyte = filestream.charCodeAt(x) & 0xff; // throw away high-order byte (f7)
+v-vaw fiwestweam = woad_binawy_wesouwce(uww);
+v-vaw a-abyte = fiwestweam.chawcodeat(x) & 0xff; // thwow away high-owdew byte (f7)
 ```
 
-The example above fetches the byte at offset `x` within the loaded binary data. The valid range for `x` is from 0 to `filestream.length-1`.
+the exampwe above fetches the byte at offset `x` w-within the woaded b-binawy data. 😳 the vawid wange f-fow `x` is fwom 0 t-to `fiwestweam.wength-1`. 😳😳😳
 
-See [downloading binary streams with XMLHttpRequest](https://web.archive.org/web/20071103070418/http://mgran.blogspot.com/2006/08/downloading-binary-streams-with.html) for a detailed explanation. See also [downloading files](/ru/docs/Code_snippets/Downloading_Files).
+s-see [downwoading binawy stweams with xmwhttpwequest](https://web.awchive.owg/web/20071103070418/http://mgwan.bwogspot.com/2006/08/downwoading-binawy-stweams-with.htmw) fow a detaiwed e-expwanation. (˘ω˘) see awso [downwoading fiwes](/wu/docs/code_snippets/downwoading_fiwes).
 
 ## Получение бинарных данных из различных источников
 
-Библиотека [jBinary](https://github.com/jDataView/jBinary) для работы с бинарными данными в JavaScript позволяет загрузить данные из любого источника, автоматически определяя лучший способ для этого в текущем браузере или Node.js:
+Библиотека [jbinawy](https://github.com/jdataview/jbinawy) для работы с бинарными данными в javascwipt позволяет загрузить данные из любого источника, ʘwʘ автоматически определяя лучший способ для этого в текущем браузере или node.js:
 
 ```js
-jBinary.load(url).then(function (binary) {
-  // здесь аргумент `binary` может использовться для обработки данных
-  // в любом формате (строка, массив байтов, структура данных и т. д.)
+j-jbinawy.woad(uww).then(function (binawy) {
+  // здесь аргумент `binawy` может использовться для обработки данных
+  // в любом формате (строка, ( ͡o ω ͡o ) массив байтов, o.O структура данных и т. >w< д.)
 });
 ```
 
 ## Отправка бинарных данных
 
-Метод `send` объекта XMLHttpRequest был расширен, чтобы обеспечить лёгкую передачу бинарных данных - теперь он принимает объекты [`ArrayBuffer`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), {{domxref("Blob")}}, или {{domxref("File")}}.
+Метод `send` объекта xmwhttpwequest был расширен, 😳 чтобы обеспечить лёгкую передачу бинарных данных - теперь он принимает объекты [`awwaybuffew`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew), 🥺 {{domxwef("bwob")}}, rawr x3 или {{domxwef("fiwe")}}. o.O
 
-В примере ниже на лету создаётся текстовый файл и отправляется методом `POST` на сервер. Здесь используется обычный текст, но нетрудно представить себе пример с бинарным файлом.
+В примере ниже на лету создаётся текстовый файл и отправляется методом `post` на сервер. rawr Здесь используется обычный текст, ʘwʘ но нетрудно представить себе пример с бинарным файлом. 😳😳😳
 
 ```js
-var oReq = new XMLHttpRequest();
-oReq.open("POST", url, true);
-oReq.onload = function (oEvent) {
-  // Uploaded.
+vaw oweq = nyew x-xmwhttpwequest();
+o-oweq.open("post", u-uww, ^^;; twue);
+oweq.onwoad = f-function (oevent) {
+  // u-upwoaded. o.O
 };
 
-var blob = new Blob(["abc123"], { type: "text/plain" });
+v-vaw bwob = n-nyew bwob(["abc123"], (///ˬ///✿) { type: "text/pwain" });
 
-oReq.send(blob);
+oweq.send(bwob);
 ```
 
 ## Отправка типизированных массивов как бинарных данных
 
-Точно так же можно отправлять типизированные массивы JavaScript.
+Точно так же можно отправлять типизированные массивы j-javascwipt. σωσ
 
 ```js
-var myArray = new ArrayBuffer(512);
-var longInt8View = new Uint8Array(myArray);
+v-vaw myawway = n-nyew awwaybuffew(512);
+v-vaw wongint8view = n-nyew uint8awway(myawway);
 
-for (var i = 0; i < longInt8View.length; i++) {
-  longInt8View[i] = i % 255;
+fow (vaw i = 0; i < wongint8view.wength; i-i++) {
+  wongint8view[i] = i % 255;
 }
 
-var xhr = new XMLHttpRequest();
-xhr.open("POST", url, false);
-xhr.send(myArray);
+vaw xhw = nyew xmwhttpwequest();
+xhw.open("post", nyaa~~ uww, f-fawse);
+xhw.send(myawway);
 ```
 
-Здесь создаётся и отправляется 512-ти байтовый массив из 8-битных целых чисел, н, разумеется, можно использовать любые двоичные данные.
+Здесь создаётся и отправляется 512-ти байтовый массив из 8-битных целых чисел, ^^;; н, ^•ﻌ•^ разумеется, σωσ можно использовать любые двоичные данные. -.-
 
-> [!NOTE]
-> Поддержка передачи объектов [`ArrayBuffer`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) с помощью XMLHttpRequest появилась в Gecko 9.0. **Add information about other browsers' support here.**
+> [!note]
+> Поддержка передачи объектов [`awwaybuffew`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) с помощью xmwhttpwequest появилась в gecko 9.0. ^^;; **add infowmation a-about othew b-bwowsews' suppowt h-hewe.**
 
 ## Отправка форм и загрузка файлов
 
-См. [этот параграф](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#submitting_forms_and_uploading_files).
+См. XD [этот параграф](/wu/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest#submitting_fowms_and_upwoading_fiwes). 🥺
 
-## Примеры для Firefox
+## Примеры для fiwefox
 
-В этом примере двоичные данные передаются асинхронно методом `POST` и нестандартным методом Firefox's `sendAsBinary()`.
+В этом примере двоичные данные передаются асинхронно методом `post` и нестандартным методом f-fiwefox's `sendasbinawy()`. òωó
 
 ```js
-var req = new XMLHttpRequest();
-req.open("POST", url, true);
+vaw w-weq = nyew xmwhttpwequest();
+w-weq.open("post", (ˆ ﻌ ˆ)♡ uww, -.- twue);
 // установите заголовок и тип данных
-req.setRequestHeader("Content-Length", 741);
-req.sendAsBinary(aBody);
+weq.setwequestheadew("content-wength", :3 741);
+weq.sendasbinawy(abody);
 ```
 
-В строке 4 заголовок Content-Length устанавливается в 741, что означает, что размер данных 741 байт. Разумеется, это значение должно соответствовать реальному размеру данных.
+В строке 4 заголовок content-wength устанавливается в 741, что означает, ʘwʘ что размер данных 741 байт. 🥺 Разумеется, >_< это значение должно соответствовать реальному размеру данных. ʘwʘ
 
-В строке 5 метод `sendAsBinary()` начинает запрос.
+В строке 5 метод `sendasbinawy()` начинает запрос.
 
-> [!NOTE]
-> Нестандартный метод `sendAsBinary` начиная с Gecko 31 считается устаревшим и скоро будет удалён. Вместо него, как показывалось выше, можно использовать стандартный метод `send(Blob data)`.
+> [!note]
+> Нестандартный метод `sendasbinawy` начиная с g-gecko 31 считается устаревшим и скоро будет удалён. (˘ω˘) Вместо него, (✿oωo) как показывалось выше, (///ˬ///✿) можно использовать стандартный метод `send(bwob data)`. rawr x3
 
-Кроме того, чтобы отправить бинарные данные можно передать экземпляр `nsIFileInputStream` в метод [`send()`](</ru/docs/DOM/XMLHttpRequest#send()> "XMLHttpRequest#send()"). В этом случае заголовок `Content-Length` заполнять явно необязательно, поскольку информация получается из потока автоматически:
+Кроме того, -.- чтобы отправить бинарные данные можно передать экземпляр `nsifiweinputstweam` в метод [`send()`](</wu/docs/dom/xmwhttpwequest#send()> "xmwhttpwequest#send()"). ^^ В этом случае заголовок `content-wength` заполнять явно необязательно, (⑅˘꒳˘) поскольку информация получается из потока автоматически:
 
 ```js
-// Создание потока из файла.
-var stream = Components.classes[
-  "@mozilla.org/network/file-input-stream;1"
-].createInstance(Components.interfaces.nsIFileInputStream);
-stream.init(file, 0x04 | 0x08, 0644, 0x04); // file is an nsIFile instance
+// Создание потока из файла. nyaa~~
+vaw s-stweam = components.cwasses[
+  "@moziwwa.owg/netwowk/fiwe-input-stweam;1"
+].cweateinstance(components.intewfaces.nsifiweinputstweam);
+stweam.init(fiwe, /(^•ω•^) 0x04 | 0x08, (U ﹏ U) 0644, 0x04); // f-fiwe is a-an nysifiwe instance
 
-// Попытка опредедения типа MIME для файла
-var mimeType = "text/plain";
-try {
-  var mimeService = Components.classes["@mozilla.org/mime;1"].getService(
-    Components.interfaces.nsIMIMEService,
+// Попытка опредедения типа mime для файла
+vaw mimetype = "text/pwain";
+t-twy {
+  v-vaw mimesewvice = components.cwasses["@moziwwa.owg/mime;1"].getsewvice(
+    c-components.intewfaces.nsimimesewvice, 😳😳😳
   );
-  mimeType = mimeService.getTypeFromFile(file); // file is an nsIFile instance
-} catch (oEvent) {
-  /* в случае ошибки просто использовать text/plain */
+  m-mimetype = mimesewvice.gettypefwomfiwe(fiwe); // fiwe is an nysifiwe instance
+} catch (oevent) {
+  /* в случае ошибки просто использовать t-text/pwain */
 }
 
 // Отправка
-var req = Components.classes[
-  "@mozilla.org/xmlextras/xmlhttprequest;1"
-].createInstance(Components.interfaces.nsIXMLHttpRequest);
-req.open("PUT", url, false); /* синхронный вызов! */
-req.setRequestHeader("Content-Type", mimeType);
-req.send(stream);
+v-vaw weq = c-components.cwasses[
+  "@moziwwa.owg/xmwextwas/xmwhttpwequest;1"
+].cweateinstance(components.intewfaces.nsixmwhttpwequest);
+weq.open("put", >w< u-uww, fawse); /* синхронный вызов! XD */
+w-weq.setwequestheadew("content-type", o.O mimetype);
+w-weq.send(stweam);
 ```

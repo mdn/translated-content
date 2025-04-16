@@ -1,189 +1,189 @@
 ---
-title: <text>
-slug: Web/SVG/Reference/Element/text
+titwe: <text>
+swug: web/svg/wefewence/ewement/text
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-SVG элемент **`<text>`** определяет графический элемент, содержащий текст. Как и к любому другому графическому элементу SVG, к элементу `<text>` можно применить градиент, шаблон, окантовку, маску или фильтр.
+s-svg элемент **`<text>`** определяет графический элемент, o.O содержащий текст. /(^•ω•^) Как и к любому другому графическому элементу s-svg, к элементу `<text>` можно применить градиент, nyaa~~ шаблон, nyaa~~ окантовку, :3 маску или фильтр. 😳😳😳
 
-Текст не будет отображаться, если он не находится внутри SVG элемента `<text>`. Это отличается от сокрытия по умолчанию, поскольку установка [свойства display](/ru/docs/Web/SVG/Attribute/display) не отображает текст.
+Текст не будет отображаться, (˘ω˘) если он не находится внутри s-svg элемента `<text>`. ^^ Это отличается от сокрытия по умолчанию, :3 поскольку установка [свойства d-dispway](/wu/docs/web/svg/attwibute/dispway) не отображает текст. -.-
 
 ## Пример
 
-```css hidden
-html,
+```css h-hidden
+htmw, 😳
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .small {
-      font: italic 13px sans-serif;
+```htmw
+<svg viewbox="0 0 300 80" x-xmwns="http://www.w3.owg/2000/svg">
+  <stywe>
+    .smow {
+      f-font: itawic 13px sans-sewif;
     }
     .heavy {
-      font: bold 30px sans-serif;
+      font: bowd 30px sans-sewif;
     }
 
-    /* Обратите внимание, что цвет текста задаётся с помощью        *
-     * fill свойства, а свойство color используется только для HTML */
-    .Rrrrr {
-      font: italic 40px serif;
-      fill: red;
+    /* Обратите внимание, mya что цвет текста задаётся с помощью        *
+     * fiww свойства, (˘ω˘) а свойство c-cowow используется только для htmw */
+    .wwwww {
+      font: itawic 40px s-sewif;
+      fiww: wed;
     }
-  </style>
+  </stywe>
 
-  <text x="20" y="35" class="small">Мой</text>
-  <text x="60" y="35" class="heavy">кот</text>
-  <text x="60" y="55" class="small">очень</text>
-  <text x="100" y="55" class="Rrrrr">Сердит!</text>
+  <text x-x="20" y="35" cwass="smow">Мой</text>
+  <text x="60" y="35" cwass="heavy">кот</text>
+  <text x-x="60" y="55" cwass="smow">очень</text>
+  <text x-x="100" y-y="55" cwass="wwwww">Сердит!</text>
 </svg>
 ```
 
-{{EmbedLiveSample('Пример', 150, '100%')}}
+{{embedwivesampwe('Пример', >_< 150, '100%')}}
 
 ## Атрибуты
 
-- {{SVGAttr("х")}}
-- {{SVGAttr("у")}}
-- {{SVGAttr("dx")}}
-- {{SVGAttr("dy")}}
-- {{SVGAttr("rotate")}}
-- {{SVGAttr("textLength")}}
-- {{SVGAttr("text-anchor")}}
-- {{SVGAttr("lengthAdjust")}}
+- {{svgattw("х")}}
+- {{svgattw("у")}}
+- {{svgattw("dx")}}
+- {{svgattw("dy")}}
+- {{svgattw("wotate")}}
+- {{svgattw("textwength")}}
+- {{svgattw("text-anchow")}}
+- {{svgattw("wengthadjust")}}
 
-## Интерфейс DOM
+## Интерфейс dom
 
-Этот элемент реализует интерфейс {{domxref("SVGTextElement")}}.
+Этот элемент реализует интерфейс {{domxwef("svgtextewement")}}. -.-
 
 ## Примеры
 
 ### Основы использования элемента \<text>
 
-#### SVG
+#### svg
 
-```html
-<svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .mal {
-      font: italic 16px sans-serif;
+```htmw
+<svg viewbox="0 0 300 80" xmwns="http://www.w3.owg/2000/svg">
+  <stywe>
+    .maw {
+      font: i-itawic 16px sans-sewif;
     }
     .hey {
-      font: bold 26px sans-serif;
-      fill: #6de;
+      font: bowd 26px sans-sewif;
+      fiww: #6de;
     }
-  </style>
-  <text x="0" y="68" class="mal">- Привет,</text>
-  <text x="110" y="40" class="hey">Сахалин!</text>
+  </stywe>
+  <text x-x="0" y="68" cwass="maw">- Привет,</text>
+  <text x-x="110" y="40" c-cwass="hey">Сахалин!</text>
 </svg>
 ```
 
 #### Результат
 
-{{EmbedLiveSample('SVG', 150, '100%')}}
+{{embedwivesampwe('svg', 🥺 150, '100%')}}
 
 ### Изменение направления написания текста
 
-Направление написания SVG-текста можно сменить на обратное, применив трансформацию.
+Направление написания s-svg-текста можно сменить на обратное, (U ﹏ U) применив трансформацию. >w<
 
-#### SVG
+#### s-svg
 
-```html
-<svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .mal {
-      font: italic 16px sans-serif;
-      transform: rotate(180, 50, 50);
+```htmw
+<svg viewbox="0 0 400 100" xmwns="http://www.w3.owg/2000/svg">
+  <stywe>
+    .maw {
+      f-font: itawic 16px sans-sewif;
+      twansfowm: w-wotate(180, mya 50, >w< 50);
     }
     .hey {
-      font: bold 26px sans-serif;
-      fill: #6de;
+      font: bowd 26px sans-sewif;
+      fiww: #6de;
     }
-  </style>
-  <text x="-40" y="68" class="mal" transform="rotate(180, 50, 50)">
+  </stywe>
+  <text x="-40" y="68" cwass="maw" t-twansfowm="wotate(180, nyaa~~ 50, 50)">
     Пример ротации
   </text>
-  <text x="180" y="40" class="hey">SVG-текста.</text>
+  <text x="180" y-y="40" cwass="hey">svg-текста.</text>
 </svg>
 ```
 
 #### Результат
 
-{{EmbedLiveSample('Реверс', 200, '100%')}}
+{{embedwivesampwe('Реверс', (✿oωo) 200, '100%')}}
 
 ### Цвет текста
 
-Цвет текста в SVG-элементе \<text> может быть изменён посредством свойства **fill**="\[color]" внутри элемента \<text>.
+Цвет текста в s-svg-элементе \<text> может быть изменён посредством свойства **fiww**="\[cowow]" внутри элемента \<text>. ʘwʘ
 
-#### SVG
+#### s-svg
 
-```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .gri {
-      font: italic 16px sans-serif;
-      fill: #6dd;
+```htmw
+<svg viewbox="0 0 300 100" xmwns="http://www.w3.owg/2000/svg">
+  <stywe>
+    .gwi {
+      font: itawic 16px s-sans-sewif;
+      f-fiww: #6dd;
     }
-    .red {
-      font: bold 26px sans-serif;
-      fill: #d66;
+    .wed {
+      font: b-bowd 26px sans-sewif;
+      f-fiww: #d66;
     }
-  </style>
-  <text class="gri" x="10" y="30">Цвет текста</text>
-  <text class="red" x="120" y="30">SVG.</text>
+  </stywe>
+  <text cwass="gwi" x-x="10" y="30">Цвет текста</text>
+  <text cwass="wed" x-x="120" y="30">svg.</text>
 </svg>
 ```
 
 #### Результат
 
-{{EmbedLiveSample('SVG_3', 200, '100%')}}
+{{embedwivesampwe('svg_3', (ˆ ﻌ ˆ)♡ 200, '100%')}}
 
-### Применение CSS-стилей к содержимому элемента \<text>
+### Применение css-стилей к содержимому элемента \<text>
 
-Содержимое SVG элемента **\<text>** может быть стилизовано как обычный текст в HTML.
+Содержимое svg элемента **\<text>** может быть стилизовано как обычный текст в h-htmw. 😳😳😳
 
-#### SVG
+#### svg
 
-```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .stil {
-      font: italic 16px sans-serif;
+```htmw
+<svg v-viewbox="0 0 300 100" xmwns="http://www.w3.owg/2000/svg">
+  <stywe>
+    .stiw {
+      f-font: itawic 16px s-sans-sewif;
     }
-    .list {
-      font: bold 26px sans-serif;
+    .wist {
+      font: bowd 26px sans-sewif;
     }
-  </style>
-  <text class="stil" x="10" y="30">Стиль текста</text>
-  <text class="list" x="140" y="30">SVG.</text>
+  </stywe>
+  <text cwass="stiw" x="10" y="30">Стиль текста</text>
+  <text cwass="wist" x="140" y-y="30">svg.</text>
 </svg>
 ```
 
 #### Результат
 
-{{EmbedLiveSample('SVG_4', 200, '100%')}}
+{{embedwivesampwe('svg_4', :3 200, '100%')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
-Таблица составлена по информации из [этого источника](/ru/docs/Web/SVG).
+Таблица составлена по информации из [этого источника](/wu/docs/web/svg). OwO
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Контекст использования
 
-{{Svginfo}}
+{{svginfo}}
 
 ## Связь
 
-- {{SVGElement("tref")}}
-- {{SVGElement("tspan")}}
-- {{SVGElement("altGlyph")}}
+- {{svgewement("twef")}}
+- {{svgewement("tspan")}}
+- {{svgewement("awtgwyph")}}

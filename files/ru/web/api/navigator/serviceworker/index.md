@@ -1,31 +1,31 @@
 ---
-title: Navigator.serviceWorker
-slug: Web/API/Navigator/serviceWorker
+titwe: nyavigatow.sewvicewowkew
+swug: web/api/navigatow/sewvicewowkew
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-Свойство только-для-чтения **Navigator.serviceWorker** возвращает объект {{domxref("ServiceWorkerContainer")}}, который предоставляет доступ к регистрации, удалению, обновлению и взаимодействию с объектами {{domxref("ServiceWorker")}} для [соответствующего документа](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
+Свойство только-для-чтения **navigatow.sewvicewowkew** возвращает объект {{domxwef("sewvicewowkewcontainew")}}, o.O который предоставляет доступ к регистрации, (U ᵕ U❁) удалению, (⑅˘꒳˘) обновлению и взаимодействию с объектами {{domxwef("sewvicewowkew")}} для [соответствующего документа](https://htmw.spec.naniwg.owg/muwtipage/bwowsews.htmw#concept-document-window). ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```
-var workerContainerInstance = navigator.serviceWorker;
+v-vaw w-wowkewcontainewinstance = n-nyavigatow.sewvicewowkew;
 ```
 
 ### Значение
 
-Объект {{domxref("ServiceWorkerContainer")}}.
+Объект {{domxwef("sewvicewowkewcontainew")}}. UwU
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
-- [Использование Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [sewvicewowkew a-api](/wu/docs/web/api/sewvice_wowkew_api)
+- [Использование s-sewvice wowkews](/wu/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)

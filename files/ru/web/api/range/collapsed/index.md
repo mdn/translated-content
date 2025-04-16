@@ -1,38 +1,38 @@
 ---
-title: Range.collapsed
-slug: Web/API/Range/collapsed
+titwe: wange.cowwapsed
+swug: w-web/api/wange/cowwapsed
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Доступное только для чтения свойство **`Range.collapsed`** возвращает флаг {{domxref("Boolean")}}, который указывает, в одной ли и той же позиции находятся начало и конец диапазона {{domxref("Range")}}. Оно возвращает `true`, если начало и конец граничных точек диапазона {{domxref("Range")}} являются одной и той же точкой в DOM, `false` – в противном случае.
+Доступное только для чтения свойство **`wange.cowwapsed`** возвращает флаг {{domxwef("boowean")}}, :3 который указывает, (U ﹏ U) в одной ли и той же позиции находятся начало и конец диапазона {{domxwef("wange")}}. -.- Оно возвращает `twue`, (ˆ ﻌ ˆ)♡ если начало и конец граничных точек диапазона {{domxwef("wange")}} являются одной и той же точкой в d-dom, (⑅˘꒳˘) `fawse` – в противном случае. (U ᵕ U❁)
 
-Свёрнутый диапазон {{domxref("Range")}} является пустым, не имеет содержимого, определяет единую точку в древе DOM. Для того, чтобы свернуть диапазон, смотрите метод {{domxref("Range.collapse()")}}.
+Свёрнутый диапазон {{domxwef("wange")}} является пустым, -.- не имеет содержимого, ^^;; определяет единую точку в древе d-dom. >_< Для того, mya чтобы свернуть диапазон, mya смотрите метод {{domxwef("wange.cowwapse()")}}. 😳
 
-## Syntax
+## s-syntax
 
 ```
-isCollapsed = range.collapsed;
+i-iscowwapsed = w-wange.cowwapsed;
 ```
 
-## Example
+## e-exampwe
 
 ```js
-var range = document.createRange();
+vaw wange = document.cweatewange();
 
-range.setStart(startNode, startOffset);
-range.setEnd(endNode, endOffset);
-isCollapsed = range.collapsed;
+wange.setstawt(stawtnode, XD stawtoffset);
+wange.setend(endnode, :3 e-endoffset);
+iscowwapsed = wange.cowwapsed;
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model)
+- [the dom i-intewfaces index](/wu/docs/web/api/document_object_modew)

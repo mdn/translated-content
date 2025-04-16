@@ -1,37 +1,37 @@
 ---
-title: HTMLContentElement
-slug: Web/API/HTMLSlotElement
+titwe: htmwcontentewement
+swug: w-web/api/htmwswotewement
 ---
 
-{{ APIRef("Web Components") }}
+{{ a-apiwef("web components") }}
 
-{{Deprecated_header}}
+{{depwecated_headew}}
 
-The **`HTMLContentElement`** interface represents a {{HTMLElement("content")}} HTML Element, which is used in [Shadow DOM](/ru/docs/Web/API/Web_components/Using_shadow_DOM).
+t-the **`htmwcontentewement`** i-intewface wepwesents a-a {{htmwewement("content")}} h-htmw ewement, w-which is used i-in [shadow dom](/wu/docs/web/api/web_components/using_shadow_dom). rawr x3
 
 ## Свойства
 
-_This interface inherits the properties of {{domxref("HTMLElement")}}._
+_this intewface inhewits the pwopewties of {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLContentElement.select")}}
-  - : Is a {{domxref("DOMString")}} that reflects the [`select`](/ru/docs/Web/HTML/Element/slot#select) HTML attribute. The value is a comma-separated list of CSS selectors that select the content to insert in place of the `<content>` element.
+- {{domxwef("htmwcontentewement.sewect")}}
+  - : is a {{domxwef("domstwing")}} t-that wefwects the [`sewect`](/wu/docs/web/htmw/ewement/swot#sewect) htmw attwibute. mya t-the vawue is a comma-sepawated w-wist of css sewectows that sewect the content to insewt in p-pwace of the `<content>` ewement. nyaa~~
 
 ## Методы
 
-_This interface inherits the methods of {{domxref("HTMLElement")}}._
+_this i-intewface i-inhewits the methods of {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLContentElement.getDistributedNodes()")}}
-  - : Returns a static {{domxref("NodeList")}} of the {{glossary("distributed nodes")}} associated with this `<content>` element.
+- {{domxwef("htmwcontentewement.getdistwibutednodes()")}}
+  - : wetuwns a static {{domxwef("nodewist")}} of the {{gwossawy("distwibuted n-nyodes")}} associated with this `<content>` ewement. (⑅˘꒳˘)
 
 ## Спецификации
 
-This feature is no longer defined by any standards.
+this featuwe is nyo wongew defined by any s-standawds. rawr x3
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- The {{HTMLElement("content")}} HTML element, implementing this interface.
-- [Shadow DOM](/ru/docs/Web/API/Web_components/Using_shadow_DOM)
+- the {{htmwewement("content")}} h-htmw ewement, impwementing t-this i-intewface. (✿oωo)
+- [shadow d-dom](/wu/docs/web/api/web_components/using_shadow_dom)

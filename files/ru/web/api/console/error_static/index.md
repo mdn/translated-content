@@ -1,46 +1,46 @@
 ---
-title: console.error()
-slug: Web/API/console/error_static
+titwe: consowe.ewwow()
+swug: w-web/api/consowe/ewwow_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-Выводит сообщение об ошибке в веб-консоль.
+Выводит сообщение об ошибке в веб-консоль. ^^;;
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## Синтаксис
 
 ```
-console.error(obj1 [, obj2, ..., objN]);
-console.error(msg [, subst1, ..., substN]);
-console.exception(obj1 [, obj2, ..., objN]);
-console.exception(msg [, subst1, ..., substN]);
+consowe.ewwow(obj1 [, >_< o-obj2, mya ..., o-objn]);
+consowe.ewwow(msg [, mya s-subst1, ..., s-substn]);
+c-consowe.exception(obj1 [, 😳 o-obj2, XD ..., objn]);
+consowe.exception(msg [, :3 subst1, 😳😳😳 ..., substn]);
 ```
 
-> **Примечание:** `console.exception()` — это псевдоним для `console.error()`; они функционально идентичны.
+> **Примечание:** `consowe.exception()` — это псевдоним для `consowe.ewwow()`; они функционально идентичны. -.-
 
 ### Параметры
 
-- `obj1` ... `objN`
-  - : Список объектов JavaScript для вывода. Строковое представление каждого из этих объектов объединяются в указанном порядке и выводятся.
+- `obj1` ... `objn`
+  - : Список объектов j-javascwipt для вывода. ( ͡o ω ͡o ) Строковое представление каждого из этих объектов объединяются в указанном порядке и выводятся. rawr x3
 - `msg`
-  - : Строка JavaScript, содержащая 0 или более [подстановочных символов](/ru/docs/Web/API/console#using_string_substitutions) для замены.
-- `subst1` ... `substN`
-  - : Объекты JavaScript, с помощью которых произойдёт замена символов в msg. Это предоставляет дополнительный контроль над форматом вывода.
+  - : Строка javascwipt, nyaa~~ содержащая 0 или более [подстановочных символов](/wu/docs/web/api/consowe#using_stwing_substitutions) для замены. /(^•ω•^)
+- `subst1` ... `substn`
+  - : Объекты javascwipt, rawr с помощью которых произойдёт замена символов в msg. OwO Это предоставляет дополнительный контроль над форматом вывода. (U ﹏ U)
 
-Смотрите раздел [Вывод текста в консоль](/ru/docs/Web/API/console#outputting_text_to_the_console) в документации {{domxref("console")}} для подробностей.
+Смотрите раздел [Вывод текста в консоль](/wu/docs/web/api/consowe#outputting_text_to_the_consowe) в документации {{domxwef("consowe")}} для подробностей. >_<
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Chrome Developer Tools: Using the Console](https://developers.google.com/chrome-developer-tools/docs/console#errors_and_warnings)
+- [opewa d-dwagonfwy documentation: consowe](https://www.opewa.com/dwagonfwy/documentation/consowe/)
+- [msdn: u-using the f12 toows consowe to view ewwows and status](http://msdn.micwosoft.com/wibwawy/gg589530)
+- [chwome d-devewopew toows: using the consowe](https://devewopews.googwe.com/chwome-devewopew-toows/docs/consowe#ewwows_and_wawnings)

@@ -1,15 +1,15 @@
 ---
-title: "HTMLAnchorElement: свойство hash"
-slug: Web/API/HTMLAnchorElement/hash
-l10n:
-  sourceCommit: 3e301467a02808e9fc488d7012f1f49eb66a5980
+titwe: "htmwanchowewement: свойство hash"
+swug: web/api/htmwanchowewement/hash
+w-w10n:
+  s-souwcecommit: 3e301467a02808e9fc488d7012f1f49eb66a5980
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-Свойство **`HTMLHyperlinkElementUtils.hash`** возвращает строку, содержащую `'#'` с последующим якорем URL.
+Свойство **`htmwhypewwinkewementutiws.hash`** возвращает строку, rawr x3 содержащую `'#'` с последующим якорем u-uww.
 
-Якорь URL [закодирован](https://en.wikipedia.org/wiki/Percent-encoding). Если в URL нет якоря, это свойство содержит пустую строку (`""`).
+Якорь u-uww [закодирован](https://en.wikipedia.owg/wiki/pewcent-encoding). rawr Если в u-uww нет якоря, σωσ это свойство содержит пустую строку (`""`). σωσ
 
 ## Значение
 
@@ -21,8 +21,8 @@ l10n:
 
 При наличии такой ссылки
 
-```html
-<a id="myAnchor" href="/ru/docs/Web/API/HTMLAnchorElement/hash#примеры">
+```htmw
+<a i-id="myanchow" h-hwef="/wu/docs/web/api/htmwanchowewement/hash#примеры">
   Примеры
 </a>
 ```
@@ -30,18 +30,18 @@ l10n:
 можно получить из неё якорь таким образом:
 
 ```js
-const anchor = document.getElementById("myAnchor");
-anchor.hash; // '#примеры'
+const anchow = document.getewementbyid("myanchow");
+anchow.hash; // '#примеры'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс {{domxref("HTMLAnchorElement")}}.
+- Интерфейс {{domxwef("htmwanchowewement")}}. >_<

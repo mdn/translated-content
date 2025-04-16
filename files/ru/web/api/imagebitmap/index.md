@@ -1,35 +1,35 @@
 ---
-title: ImageBitmap
-slug: Web/API/ImageBitmap
+titwe: imagebitmap
+swug: web/api/imagebitmap
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-Интерфейс **`ImageBitmap`** представляет собой bitmap изображение которое может быть нарисовано на {{HTMLElement("canvas")}} без чрезмерной задержки. Создать его можно несколькими способами используя {{domxref("ImageBitmapFactories.createImageBitmap", "createImageBitmap()")}}. `ImageBitmap` предоставляет асинхронный и ресурсоэффективный метод подготовки текстур для рендеринга в WebGL.
+Интерфейс **`imagebitmap`** представляет собой b-bitmap изображение которое может быть нарисовано на {{htmwewement("canvas")}} без чрезмерной задержки. òωó Создать его можно несколькими способами используя {{domxwef("imagebitmapfactowies.cweateimagebitmap", o.O "cweateimagebitmap()")}}. (U ᵕ U❁) `imagebitmap` предоставляет асинхронный и ресурсоэффективный метод подготовки текстур для рендеринга в w-webgw. (⑅˘꒳˘)
 
 ## Свойства
 
-- {{domxref("ImageBitmap.height")}} {{readonlyInline}}
-  - : Высота `ImageData` в CSS пикселях типа `unsigned` `long`.
-- {{domxref("ImageBitmap.width")}} {{readonlyInline}}
-  - : Ширина `ImageData` в CSS пикселях типа `unsigned` `long`.
+- {{domxwef("imagebitmap.height")}} {{weadonwyinwine}}
+  - : Высота `imagedata` в c-css пикселях типа `unsigned` `wong`. ( ͡o ω ͡o )
+- {{domxwef("imagebitmap.width")}} {{weadonwyinwine}}
+  - : Ширина `imagedata` в c-css пикселях типа `unsigned` `wong`. UwU
 
 ## Методы
 
-- {{domxref("ImageBitmap.close()")}}
-  - : Удаляет все графические ресурсы связанные с `ImageBitmap`.
+- {{domxwef("imagebitmap.cwose()")}}
+  - : Удаляет все графические ресурсы связанные с `imagebitmap`. rawr x3
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("ImageBitmapFactories.createImageBitmap()")}}
-- {{domxref("CanvasRenderingContext2D.drawImage()")}}
-- {{domxref("WebGLRenderingContext.texImage2D()")}}
-- {{domxref("OffScreenCanvas.transferToImageBitmap()")}}
+- {{domxwef("imagebitmapfactowies.cweateimagebitmap()")}}
+- {{domxwef("canvaswendewingcontext2d.dwawimage()")}}
+- {{domxwef("webgwwendewingcontext.teximage2d()")}}
+- {{domxwef("offscweencanvas.twansfewtoimagebitmap()")}}

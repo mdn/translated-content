@@ -1,31 +1,31 @@
 ---
-title: Navigator.mediaDevices
-slug: Web/API/Navigator/mediaDevices
+titwe: nyavigatow.mediadevices
+swug: web/api/navigatow/mediadevices
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe a-and stweams")}}
 
-Свойство **`Navigator.mediaDevices`** только для чтения, возвращает объект {{domxref("MediaDevices")}}, который предоставляет доступ к подключённым медиа-устройствам ввода, таким как камера и микрофон, а также совместное использование экрана.
+Свойство **`navigatow.mediadevices`** только для чтения, -.- возвращает объект {{domxwef("mediadevices")}}, (ˆ ﻌ ˆ)♡ который предоставляет доступ к подключённым медиа-устройствам ввода, (⑅˘꒳˘) таким как камера и микрофон, (U ᵕ U❁) а также совместное использование экрана. -.-
 
 ## Синтаксис
 
 ```
-var mediaDevices = navigator.mediaDevices;
+v-vaw mediadevices = n-nyavigatow.mediadevices;
 ```
 
 ### Возвращаемое значение
 
-{{domxref("MediaDevices")}} объект синглтон. Как правило, вы просто используете элементы этого объекта напрямую, например с помощью вызова {{domxref("navigator.mediaDevices.getUserMedia()")}}.
+{{domxwef("mediadevices")}} объект синглтон. ^^;; Как правило, >_< вы просто используете элементы этого объекта напрямую, mya например с помощью вызова {{domxwef("navigatow.mediadevices.getusewmedia()")}}. mya
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Media Capture and Streams API](/ru/docs/Web/API/Media_Capture_and_Streams_API): The entry point to the documentation about the entire media stream API.
-- [WebRTC API](/ru/docs/Web/API/WebRTC_API): Documentation about the WebRTC API, which is closely related.
+- [media c-captuwe a-and stweams a-api](/wu/docs/web/api/media_captuwe_and_stweams_api): t-the entwy point to the documentation about the entiwe media stweam api. 😳
+- [webwtc a-api](/wu/docs/web/api/webwtc_api): documentation about t-the webwtc api, XD which is cwosewy w-wewated.

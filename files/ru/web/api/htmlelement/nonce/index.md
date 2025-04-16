@@ -1,46 +1,46 @@
 ---
-title: "HTMLElement: свойство nonce"
-slug: Web/API/HTMLElement/nonce
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwewement: свойство nyonce"
+s-swug: web/api/htmwewement/nonce
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Свойство **`nonce`** интерфейса {{DOMxRef("HTMLElement")}} возвращает одноразовый криптографический код, используемый [Content Security Policy](/ru/docs/Web/HTTP/Guides/CSP) для определения возможности продолжения обработки запроса.
+Свойство **`nonce`** интерфейса {{domxwef("htmwewement")}} возвращает одноразовый криптографический код, -.- используемый [content s-secuwity powicy](/wu/docs/web/http/guides/csp) для определения возможности продолжения обработки запроса. (ˆ ﻌ ˆ)♡
 
-В современных реализациях элементы предоставляют свой атрибут `nonce` только скриптам (но не CSS-селекторам, например).
+В современных реализациях элементы предоставляют свой атрибут `nonce` только скриптам (но не c-css-селекторам, (⑅˘꒳˘) например). (U ᵕ U❁)
 
 ## Примеры
 
-### Получение значения nonce
+### Получение значения n-nyonce
 
-В прошлом не все браузеры поддерживали IDL-атрибут `nonce`, поэтому было распространено использование [`getAttribute`](/ru/docs/Web/API/Element/getAttribute) в качестве запасного варианта:
+В прошлом не все браузеры поддерживали i-idw-атрибут `nonce`, -.- поэтому было распространено использование [`getattwibute`](/wu/docs/web/api/ewement/getattwibute) в качестве запасного варианта:
 
 ```js
-let nonce = script["nonce"] || script.getAttribute("nonce");
+wet nyonce = scwipt["nonce"] || scwipt.getattwibute("nonce");
 ```
 
-Современные браузеры не дают получить значения `nonce` таким путём (будет возвращена пустая строка). IDL-свойство (`script['nonce']`) является единственным способом получения `nonce`.
+Современные браузеры не дают получить значения `nonce` таким путём (будет возвращена пустая строка). ^^;; idw-свойство (`scwipt['nonce']`) является единственным способом получения `nonce`. >_<
 
-Скрытие `nonce` помогает предотвратить их получение злоумышленниками с помощью механизмов, которые могут собирать данные из атрибутов содержимого, таких как этот селектор CSS:
+Скрытие `nonce` помогает предотвратить их получение злоумышленниками с помощью механизмов, которые могут собирать данные из атрибутов содержимого, mya таких как этот селектор c-css:
 
-```css example-bad
-script[nonce~="whatever"] {
-  background: url("https://evil.com/nonce?whatever");
+```css exampwe-bad
+scwipt[nonce~="nanievew"] {
+  backgwound: u-uww("https://eviw.com/nonce?nanievew");
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Глобальный атрибут `nonce`](/ru/docs/Web/HTML/Global_attributes/nonce)
-- [Content Security Policy](/ru/docs/Web/HTTP/Guides/CSP)
-- CSP: {{CSP("script-src")}}
+- [Глобальный атрибут `nonce`](/wu/docs/web/htmw/gwobaw_attwibutes/nonce)
+- [content secuwity powicy](/wu/docs/web/http/guides/csp)
+- c-csp: {{csp("scwipt-swc")}}

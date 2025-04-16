@@ -1,537 +1,537 @@
 ---
-title: d
-slug: Web/SVG/Reference/Attribute/d
+titwe: d
+swug: web/svg/wefewence/attwibute/d
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Атрибут **`d`** предоставляет определение пути для рисования.
+Атрибут **`d`** предоставляет определение пути для рисования. mya
 
-Определение пути - это [список команд пути](#path_commands), в которых каждая команда состоит из буквы и некоторых чисел, представляющих параметр команды. Ниже приведены все возможные команды.
+Определение пути - это [список команд пути](#path_commands), /(^•ω•^) в которых каждая команда состоит из буквы и некоторых чисел, rawr представляющих параметр команды. nyaa~~ Ниже приведены все возможные команды. ( ͡o ω ͡o )
 
-Три элемента используют этот атрибут: {{SVGElement("path")}}, {{SVGElement("glyph")}}, и {{SVGElement("missing-glyph")}}
+Три элемента используют этот атрибут: {{svgewement("path")}}, {{svgewement("gwyph")}}, σωσ и {{svgewement("missing-gwyph")}}
 
 ## Пример
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, (✿oωo)
+b-body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg v-viewbox="0 0 100 100" x-xmwns="http://www.w3.owg/2000/svg">
   <path
-    fill="none"
-    stroke="red"
-    d="M 10,30
-       A 20,20 0,0,1 50,30
-       A 20,20 0,0,1 90,30
-       Q 90,60 50,90
-       Q 10,60 10,30 z" />
+    f-fiww="none"
+    s-stwoke="wed"
+    d-d="m 10,30
+       a 20,20 0,0,1 50,30
+       a 20,20 0,0,1 90,30
+       q 90,60 50,90
+       q 10,60 10,30 z-z" />
 </svg>
 ```
 
-{{EmbedLiveSample("Пример", '100%', 200)}}
+{{embedwivesampwe("Пример", (///ˬ///✿) '100%', σωσ 200)}}
 
 ## path
 
-Для {{SVGElement('path')}}, `d` - строка, содержащая ряд команд пути, которые определяют путь, который должен нарисован.(maybe 'drawn' not 'drown')
+Для {{svgewement('path')}}, UwU `d` - строка, (⑅˘꒳˘) содержащая ряд команд пути, /(^•ω•^) которые определяют путь, -.- который должен нарисован.(maybe 'dwawn' nyot 'dwown')
 
-| Value         | **[\<string>](/docs/Web/SVG/Content_type#String)** |
+| v-vawue         | **[\<stwing>](/docs/web/svg/content_type#stwing)** |
 | ------------- | -------------------------------------------------- |
-| Default value | _none_                                             |
-| Animatable    | Yes                                                |
+| defauwt vawue | _none_                                             |
+| a-animatabwe    | yes                                                |
 
-## glyph
+## gwyph
 
-> [!WARNING]
-> Начиная с SVG2 {{SVGElement('glyph')}} устарел и не должен использоваться.
+> [!wawning]
+> Начиная с svg2 {{svgewement('gwyph')}} устарел и не должен использоваться. (ˆ ﻌ ˆ)♡
 
-Для {{SVGElement('glyph')}}, `d` является строкой, содержащей серию команд пути, которые определяют форму контура глифа.
+Для {{svgewement('gwyph')}}, `d` является строкой, nyaa~~ содержащей серию команд пути, ʘwʘ которые определяют форму контура глифа. :3
 
-| Value         | **[\<string>](/docs/Web/SVG/Content_type#String)** |
+| v-vawue         | **[\<stwing>](/docs/web/svg/content_type#stwing)** |
 | ------------- | -------------------------------------------------- |
-| Default value | _none_                                             |
-| Animatable    | Yes                                                |
+| defauwt vawue | _none_                                             |
+| a-animatabwe    | y-yes                                                |
 
-> [!NOTE]
-> Точка происхождения (координата `0`, `0`) обычно является верхним левым углом контекста. Однако элемент {{SVGElement("glyph")}} имеет своё происхождение в левом нижнем углу своего бокса.
+> [!note]
+> Точка происхождения (координата `0`, (U ᵕ U❁) `0`) обычно является верхним левым углом контекста. (U ﹏ U) Однако элемент {{svgewement("gwyph")}} имеет своё происхождение в левом нижнем углу своего бокса. ^^
 
-## missing-glyph
+## missing-gwyph
 
-> **Предупреждение:** **Внимание:** Начиная с SVG2 {{SVGElement('missing-glyph')}} устарел и не должен использоваться.
+> **Предупреждение:** **Внимание:** Начиная с svg2 {{svgewement('missing-gwyph')}} устарел и не должен использоваться. òωó
 
-Для {{SVGElement('missing-glyph')}}, `d` является строкой, содержащей серию команд пути, которые определяют форму контура глифа.
+Для {{svgewement('missing-gwyph')}}, /(^•ω•^) `d` является строкой, 😳😳😳 содержащей серию команд пути, :3 которые определяют форму контура глифа. (///ˬ///✿)
 
-| Value         | **[\<string>](/docs/Web/SVG/Content_type#String)** |
+| vawue         | **[\<stwing>](/docs/web/svg/content_type#stwing)** |
 | ------------- | -------------------------------------------------- |
-| Default value | _none_                                             |
-| Animatable    | Yes                                                |
+| defauwt vawue | _none_                                             |
+| a-animatabwe    | yes                                                |
 
 ## Команды пути
 
-_Path commands._
+_path commands._
 
-Команды пути - это команды, объединённые вместе в одну строку и определяющие путь, который нужно нарисовать. Каждая команда состоит из буквы, следующей за некоторыми числами, которые представляют параметры команды.
+Команды пути - это команды, rawr x3 объединённые вместе в одну строку и определяющие путь, (U ᵕ U❁) который нужно нарисовать. (⑅˘꒳˘) Каждая команда состоит из буквы, (˘ω˘) следующей за некоторыми числами, :3 которые представляют параметры команды.
 
-SVG определяет 6 типов команд пути для всех 20 команд:
+svg определяет 6 типов команд пути для всех 20 команд:
 
-- MoveTo: `M`, `m`
-- LineTo: `L`, `l`, `H`, `h`, `V`, `v`
-- Cubic Bézier Curve: `C`, `c`, `S`, `s`
-- Quadratic Bézier Curve: `Q`, `q`, `T`, `t`
-- Elliptical Arc Curve: `A`, `a`
-- ClosePath: `Z`, `z`
+- moveto: `m`, XD `m`
+- w-wineto: `w`, >_< `w`, `h`, `h`, (✿oωo) `v`, `v`
+- cubic b-béziew cuwve: `c`, (ꈍᴗꈍ) `c`, `s`, XD `s`
+- q-quadwatic b-béziew cuwve: `q`, :3 `q`, `t`, mya `t`
+- e-ewwipticaw awc cuwve: `a`, òωó `a`
+- cwosepath: `z`, nyaa~~ `z`
 
-> [!NOTE]
-> Команды чувствительны к регистру; команда верхнего регистра указывает свои аргументы как абсолютные позиции, тогда как команда нижнего регистра указывает точки относительно текущей позиции.
+> [!note]
+> Команды чувствительны к регистру; команда верхнего регистра указывает свои аргументы как абсолютные позиции, 🥺 тогда как команда нижнего регистра указывает точки относительно текущей позиции. -.-
 
-Всегда можно указать отрицательное значение в качестве аргумента для команды: отрицательные углы будут вращаться против часовой стрелки, абсолютные позиции x и y будут приниматься за отрицательные координаты, отрицательные относительные значения x будут перемещаться влево, а отрицательные относительные значения y будут двигаться вверх.
+Всегда можно указать отрицательное значение в качестве аргумента для команды: отрицательные углы будут вращаться против часовой стрелки, 🥺 абсолютные позиции x-x и y будут приниматься за отрицательные координаты, (˘ω˘) отрицательные относительные значения x будут перемещаться влево, òωó а отрицательные относительные значения y будут двигаться вверх. UwU
 
 ### Команды перемещения
 
-_MoveTo path commands._
+_moveto path c-commands._
 
-_MoveTo_ инструкции можно рассматривать как собирание чертёжного инструмента и установку его в другом месте. Между предыдущей точкой и указанной точкой нет линии.
+_moveto_ инструкции можно рассматривать как собирание чертёжного инструмента и установку его в другом месте. ^•ﻌ•^ Между предыдущей точкой и указанной точкой нет линии. mya
 
-> [!NOTE]
-> Хорошей практикой является открытие всех путей с помощью команды **moveto**, потому что без начального **moveto** команды будут выполняться с начальной точки, где бы это ни было ранее, что может привести к неопределённому поведению.
+> [!note]
+> Хорошей практикой является открытие всех путей с помощью команды **moveto**, (✿oωo) потому что без начального **moveto** команды будут выполняться с начальной точки, XD где бы это ни было ранее, :3 что может привести к неопределённому поведению. (U ﹏ U)
 
 | Команда | Параметры     | Примечания                                                                                                                                                                                                                                                          |
 | ------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| M       | (`x`, `y`)+   | Движение начала следующего под-пути к координатам `x`, `y`. Любая последующая координатная пара(ы) интерпретируется как параметр(ы) для неявных абсолютных команд LineTo(L) (см. Ниже). Формула: Pn = {`x`, `y`}                                                    |
-| m       | (`dx`, `dy`)+ | Перемещает начало следующего подпути, сдвинув последнюю известную позицию пути на `dx` вдоль оси `x` и на `dy` вдоль оси `y`. Любая последующая пара координат считается неявной относительной командой LineTo (`l`) (см. ниже) Формула: Pn= {xo + `dx`, yo + `dy`} |
+| m       | (`x`, UwU `y`)+   | Движение начала следующего под-пути к координатам `x`, ʘwʘ `y`. Любая последующая координатная пара(ы) интерпретируется как параметр(ы) для неявных абсолютных команд wineto(w) (см. >w< Ниже). 😳😳😳 Формула: pn = {`x`, rawr `y`}                                                    |
+| m       | (`dx`, ^•ﻌ•^ `dy`)+ | Перемещает начало следующего подпути, σωσ сдвинув последнюю известную позицию пути на `dx` вдоль оси `x` и на `dy` вдоль оси `y`. :3 Любая последующая пара координат считается неявной относительной командой wineto (`w`) (см. rawr x3 ниже) Формула: p-pn= {xo + `dx`, nyaa~~ yo + `dy`} |
 
-#### Examples
+#### e-exampwes
 
-```css hidden
-html,
-body,
+```css h-hidden
+h-htmw, :3
+body, >w<
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg viewbox="0 0 100 100" xmwns="http://www.w3.owg/2000/svg">
   <path
-    fill="none"
-    stroke="red"
-    d="M 10,10 h 10
+    f-fiww="none"
+    s-stwoke="wed"
+    d="m 10,10 h 10
+       m-m  0,10 h-h 10
        m  0,10 h 10
+       m-m 40,20 h 10
        m  0,10 h 10
-       M 40,20 h 10
+       m-m  0,10 h 10
        m  0,10 h 10
-       m  0,10 h 10
-       m  0,10 h 10
-       M 50,50 h 10
+       m-m 50,50 h 10
        m-20,10 h 10
-       m-20,10 h 10
-       m-20,10 h 10" />
+       m-m-20,10 h 10
+       m-20,10 h-h 10" />
 </svg>
 ```
 
-{{EmbedLiveSample('Команды_перемещения', '100%', 200)}}
+{{embedwivesampwe('Команды_перемещения', rawr '100%', 😳 200)}}
 
-### LineTo path commands
+### w-wineto path commands
 
-_LineTo_ инструкции проводят прямую линию от _current point_ (Po; {xo, yo}), до _end point_ (Pn; {xn, yn}), на основе указанных параметров. Конечная точка _end point_ (Pn) становится текущей точкой для следующей команды (Po').
+_wineto_ инструкции проводят прямую линию от _cuwwent point_ (po; {xo, 😳 yo}), 🥺 до _end point_ (pn; {xn, rawr x3 yn}), ^^ на основе указанных параметров. ( ͡o ω ͡o ) Конечная точка _end point_ (pn) становится текущей точкой для следующей команды (po'). XD
 
-| Command | Parameters    | Notes                                                                                                                                                                                                                                                                                                                                                                   |
+| c-command | p-pawametews    | nyotes                                                                                                                                                                                                                                                                                                                                                                   |
 | ------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| L       | (`x`, `y`)+   | Рисует линию из _текущей точки в конечную точку определённую_ `x`, `y`. Любая последующая пара(ы) координат интерпретируется как параметр(ы) для неявной абсолютной команд(ы) LineTo (`L`). Формула: Po' = Pn = {`x`, `y`}                                                                                                                                              |
-| l       | (`dx`, `dy`)+ | Draw a line from the current point to a point for which coordinates are those of the current point shifted by `dx` along the x-axis and `dy` along the y-axis. The current point gets its X and Y coordinates shifted by `dx` and `dy` for the next command. All usubsequente pair of coordinates are considered implicite relative LineTo (`l`) command (_see below_). |
-| H       | `x`+          | Draw a horizontal line from the current point to the new `x` coordinate (_y coordinate stay unchanged_). The current point get its x coordinate updated for the next command. All subsequente value are considered an implicite absolute horizontal LineTo (`H`) command.                                                                                               |
-| h       | `dx`+         | Draw a horizontal line from the current point to a point shift by `dx` along the the x-axis (_y coordinate stay unchanged_). The current point get its X coordinate updated by `dx` for the next command. All subsequente value are considered an implicite relative horizontal LineTo (`h`) command.                                                                   |
-| V       | `y`+          | Draw a vertical line from the current point to the new `y` coordinate (_x coordinate stay unchanged_). The current point get its y coordinate updated for the next command. All subsequente value are considered an implicite absolute vertical LineTo (`V`) command.                                                                                                   |
-| v       | `dy`+         | Draw a vertical line from the current point to a point shift by `dy` along the y-axis (_x coordinate stay unchanged_). The current point get its Y coordinate updated by `dy` for the next command. All subsequente value are considered an implicite relative vertical LineTo (`v`) command.                                                                           |
+| w-w       | (`x`, ^^ `y`)+   | Рисует линию из _текущей точки в конечную точку определённую_ `x`, (⑅˘꒳˘) `y`. Любая последующая пара(ы) координат интерпретируется как параметр(ы) для неявной абсолютной команд(ы) w-wineto (`w`). (⑅˘꒳˘) Формула: p-po' = pn = {`x`, ^•ﻌ•^ `y`}                                                                                                                                              |
+| w       | (`dx`, ( ͡o ω ͡o ) `dy`)+ | dwaw a wine fwom the cuwwent p-point to a point fow which coowdinates awe those of the cuwwent point shifted by `dx` a-awong the x-axis and `dy` a-awong the y-axis. ( ͡o ω ͡o ) t-the cuwwent point g-gets its x and y coowdinates s-shifted by `dx` a-and `dy` fow the n-nyext command. (✿oωo) a-aww usubsequente paiw of coowdinates awe considewed i-impwicite w-wewative wineto (`w`) c-command (_see b-bewow_). 😳😳😳 |
+| h-h       | `x`+          | dwaw a howizontaw wine fwom the cuwwent p-point to the nyew `x` coowdinate (_y coowdinate stay unchanged_). OwO the cuwwent point get its x c-coowdinate updated fow the nyext command. ^^ aww subsequente vawue a-awe considewed a-an impwicite absowute h-howizontaw wineto (`h`) command. rawr x3                                                                                               |
+| h-h       | `dx`+         | dwaw a howizontaw w-wine fwom the c-cuwwent point to a point shift by `dx` awong the the x-axis (_y coowdinate stay unchanged_). 🥺 t-the cuwwent point get its x coowdinate u-updated by `dx` fow the nyext c-command. (ˆ ﻌ ˆ)♡ aww s-subsequente vawue awe considewed an impwicite w-wewative howizontaw w-wineto (`h`) command. ( ͡o ω ͡o )                                                                   |
+| v-v       | `y`+          | d-dwaw a vewticaw wine fwom the cuwwent point to the nyew `y` coowdinate (_x c-coowdinate s-stay unchanged_). >w< t-the cuwwent point get its y coowdinate u-updated f-fow the nyext command. aww subsequente v-vawue awe considewed an impwicite absowute vewticaw wineto (`v`) command. /(^•ω•^)                                                                                                   |
+| v-v       | `dy`+         | d-dwaw a vewticaw wine fwom the cuwwent point to a-a point shift by `dy` a-awong the y-axis (_x coowdinate stay unchanged_). 😳😳😳 the cuwwent p-point get its y coowdinate updated by `dy` fow the nyext command. (U ᵕ U❁) aww subsequente v-vawue awe considewed an impwicite wewative v-vewticaw wineto (`v`) c-command. (˘ω˘)                                                                           |
 
-#### Examples
+#### exampwes
 
 ```css hidden
-html,
-body,
+htmw, 😳
+body, (ꈍᴗꈍ)
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- LineTo commands in absolute coordinates -->
+```htmw
+<svg v-viewbox="0 0 200 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- wineto commands in absowute coowdinates -->
   <path
-    fill="none"
-    stroke="red"
-    d="M 10,10
-           L 90,90
-           V 10
-           H 50" />
+    fiww="none"
+    s-stwoke="wed"
+    d="m 10,10
+           w-w 90,90
+           v 10
+           h 50" />
 
-  <!-- LineTo commands in relative coordinates -->
+  <!-- wineto commands i-in wewative coowdinates -->
   <path
-    fill="none"
-    stroke="red"
-    d="M 110,10
-           l 80,80
+    f-fiww="none"
+    s-stwoke="wed"
+    d="m 110,10
+           w-w 80,80
            v -80
-           h -40" />
+           h-h -40" />
 </svg>
 ```
 
-{{EmbedLiveSample('LineTo_path_commands', '100%', 200)}}
+{{embedwivesampwe('wineto_path_commands', :3 '100%', 200)}}
 
-### Cubic Bézier Curve
+### c-cubic b-béziew cuwve
 
-_Cubic [Bézier curves](https://en.wikipedia.org/wiki/Bézier_curve)_ are smooth curve definitions using four points: A starting point, a end point, and two control points to define the curvature.
+_cubic [béziew cuwves](https://en.wikipedia.owg/wiki/béziew_cuwve)_ a-awe smooth c-cuwve definitions using fouw points: a stawting p-point, a end p-point, /(^•ω•^) and two contwow p-points to define the cuwvatuwe. ^^;;
 
-| Command | Parameters                                | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| command | p-pawametews                                | nyotes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| C       | (`x1`, `y1`, `x2`, `y2`, `x`, `y`)+       | Draw a Bézier curve from the current point to the coordinate `x`, `y`. `x1`, `y1` are the coordinates of the control point at the begining of the curve where `x2`, `y2` are the coordinates of the controle point at the end of the curve. The coordinate `x`, `y` become the new current point for the next command. All subsequente triplets of coordinates are considered implicite absolute cubic Bézier curve (`C`) command.                                                                                                                                                                                                                                                                                                                                                                            |
-| c       | (`dx1`, `dy1`, `dx2`, `dy2`, `dx`, `dy`)+ | Draw a Bézier curve from the current point to a point for which coordinates are those of the current point shifted by `dx` along the x-axis and `dy` along the y-axis. `dx1`, `dy1` are the coordinates of the control point at the beginning of the curve relative to the starting point of the curve and `dx2`, `dy2` are the coordinates of the controle point at the end of the curve relative to the starting point of the curve. The current point gets its X and Y coordinates shifted by `dx` and `dy` for the next command. All subsequente triplets of coordinates are considered implicite relative cubic Bézier curve (`c`) command.                                                                                                                                                              |
-| S       | (`x2`, `y2`, `x`, `y`)+                   | Draw a smooth Bézier curve from the current point to the coordinate `x`, `y`. `x2`, `y2` are the coordinates of the controle point at the end of the curve. The controle point at the begining of the curve is a reflexion of the controle points at the end of the previous curve command. If the previous command wasn't a curve, then the coordinate of the controle point at the begining of the curve match those of the curve starting point. The coordinate `x`, `y` become the new current point for the next command. All subsequente duo of coordinates are considered implicite absolute smooth cubic Bézier curve (`S`) command.                                                                                                                                                                  |
-| s       | (`dx2`, `dy2`, `dx`, `dy`)+               | Draw a smooth Bézier curve from the current point to a point for which coordinates are those of the current point shifted by `dx` along the x-axis and `dy` along the y-axis. `dx2`, `dy2` are the coordinates of the controle point at the end of the curve relative to the starting point of the curve. The controle point at the begining of the curve is a reflexion of the controle points at the end of the previous curve command. If the previous command wasn't a curve, then the coordinate of the controle point at the begining of the curve match those of the curve starting point. The current point gets its X and Y coordinates shifted by `dx` and `dy` for the next command. All subsequente duo of coordinates are considered implicite relative smooth cubic Bézier curve (`s`) command. |
+| c-c       | (`x1`, o.O `y1`, `x2`, 😳 `y2`, `x`, UwU `y`)+       | d-dwaw a béziew cuwve fwom the cuwwent point to the coowdinate `x`, >w< `y`. `x1`, `y1` a-awe the coowdinates o-of the contwow p-point at t-the begining of the cuwve whewe `x2`, o.O `y2` a-awe the coowdinates of the contwowe point at the end of the cuwve. (˘ω˘) the coowdinate `x`, òωó `y` b-become the nyew cuwwent point f-fow the nyext command. nyaa~~ aww subsequente t-twipwets of coowdinates a-awe considewed impwicite absowute c-cubic béziew c-cuwve (`c`) command. ( ͡o ω ͡o )                                                                                                                                                                                                                                                                                                                                                                            |
+| c-c       | (`dx1`, 😳😳😳 `dy1`, `dx2`, `dy2`, ^•ﻌ•^ `dx`, `dy`)+ | d-dwaw a-a béziew cuwve fwom the cuwwent point to a point fow which coowdinates awe those of the cuwwent point shifted b-by `dx` awong the x-x-axis and `dy` a-awong the y-axis. (˘ω˘) `dx1`, `dy1` awe the coowdinates o-of the contwow point at the beginning of the cuwve wewative t-to the stawting p-point of the cuwve and `dx2`, (˘ω˘) `dy2` a-awe the coowdinates of the contwowe point a-at the end of the c-cuwve wewative to the stawting p-point of the cuwve. -.- t-the cuwwent point gets its x and y coowdinates shifted by `dx` and `dy` fow t-the nyext command. ^•ﻌ•^ a-aww subsequente t-twipwets of c-coowdinates awe c-considewed impwicite wewative cubic b-béziew cuwve (`c`) c-command. /(^•ω•^)                                                                                                                                                              |
+| s       | (`x2`, (///ˬ///✿) `y2`, `x`, `y`)+                   | d-dwaw a smooth b-béziew cuwve fwom the cuwwent p-point to the coowdinate `x`, mya `y`. `x2`, o.O `y2` awe the coowdinates o-of the contwowe point at the e-end of the cuwve. ^•ﻌ•^ t-the contwowe point at the begining o-of the cuwve is a wefwexion of the contwowe p-points at the e-end of the pwevious c-cuwve command. (U ᵕ U❁) if the pwevious command wasn't a cuwve, :3 then t-the coowdinate of the contwowe point at the begining o-of the cuwve m-match those of the cuwve stawting p-point. (///ˬ///✿) the coowdinate `x`, (///ˬ///✿) `y` b-become the n-nyew cuwwent point fow the nyext command. 🥺 aww subsequente d-duo of coowdinates awe considewed impwicite a-absowute smooth c-cubic béziew cuwve (`s`) c-command. -.-                                                                                                                                                                  |
+| s       | (`dx2`, nyaa~~ `dy2`, `dx`, (///ˬ///✿) `dy`)+               | d-dwaw a smooth b-béziew cuwve f-fwom the cuwwent point to a point fow which coowdinates awe those of the cuwwent point shifted by `dx` awong the x-axis and `dy` awong the y-axis. 🥺 `dx2`, `dy2` awe the coowdinates of the contwowe point at the end of the cuwve w-wewative to the s-stawting point of the cuwve. >w< the contwowe point a-at the begining o-of the cuwve is a-a wefwexion of the contwowe points a-at the end of the pwevious c-cuwve command. rawr x3 if t-the pwevious command wasn't a c-cuwve, (⑅˘꒳˘) then the coowdinate of the c-contwowe point a-at the begining of the cuwve match those of the c-cuwve stawting p-point. σωσ the cuwwent p-point gets its x-x and y coowdinates s-shifted by `dx` a-and `dy` fow t-the nyext command. XD a-aww subsequente d-duo of coowdinates awe considewed i-impwicite w-wewative smooth c-cubic béziew cuwve (`s`) command. -.- |
 
-#### Examples
+#### e-exampwes
 
 ```css hidden
-html,
+htmw, >_<
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
+```htmw
 <svg
-  viewBox="0 0 200 100"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- Quadratic Bézier curve with absolute coordinate -->
+  viewbox="0 0 200 100"
+  x-xmwns="http://www.w3.owg/2000/svg"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <!-- q-quadwatic béziew cuwve w-with absowute coowdinate -->
   <path
-    fill="none"
-    stroke="red"
-    d="M 10,90
-           C 30,90 25,10 50,10
-           S 70,90 90,90" />
+    f-fiww="none"
+    stwoke="wed"
+    d="m 10,90
+           c-c 30,90 25,10 50,10
+           s 70,90 90,90" />
 
-  <!-- Quadratic Bézier curve with relative coordinate -->
+  <!-- q-quadwatic béziew cuwve with wewative coowdinate -->
   <path
-    fill="none"
-    stroke="red"
-    d="M 110,90
-           c 20,0 15,-80 40,-80
+    fiww="none"
+    stwoke="wed"
+    d="m 110,90
+           c-c 20,0 15,-80 40,-80
            s 20,80 40,80" />
 
-  <!-- Highlight the curve vertex and control points -->
-  <g id="ControlPoints">
-    <!-- First cubic command control points -->
-    <line x1="10" y1="90" x2="30" y2="90" stroke="lightgrey" />
-    <circle cx="30" cy="90" r="1.5" />
+  <!-- h-highwight the cuwve v-vewtex and contwow points -->
+  <g id="contwowpoints">
+    <!-- fiwst cubic c-command contwow points -->
+    <wine x-x1="10" y1="90" x-x2="30" y2="90" s-stwoke="wightgwey" />
+    <ciwcwe cx="30" cy="90" w="1.5" />
 
-    <line x1="50" y1="10" x2="25" y2="10" stroke="lightgrey" />
-    <circle cx="25" cy="10" r="1.5" />
+    <wine x-x1="50" y-y1="10" x2="25" y2="10" stwoke="wightgwey" />
+    <ciwcwe c-cx="25" cy="10" w="1.5" />
 
-    <!-- Second smooth command control points (the first one is implicite) -->
-    <line
-      x1="50"
-      y1="10"
+    <!-- second smooth c-command contwow points (the fiwst o-one is impwicite) -->
+    <wine
+      x-x1="50"
+      y-y1="10"
       x2="75"
-      y2="10"
-      stroke="lightgrey"
-      stroke-dasharray="2" />
-    <circle cx="75" cy="10" r="1.5" fill="lightgrey" />
+      y-y2="10"
+      s-stwoke="wightgwey"
+      s-stwoke-dashawway="2" />
+    <ciwcwe c-cx="75" cy="10" w="1.5" fiww="wightgwey" />
 
-    <line x1="90" y1="90" x2="70" y2="90" stroke="lightgrey" />
-    <circle cx="70" cy="90" r="1.5" />
+    <wine x-x1="90" y1="90" x-x2="70" y2="90" s-stwoke="wightgwey" />
+    <ciwcwe c-cx="70" c-cy="90" w="1.5" />
 
-    <!-- curve vertex points -->
-    <circle cx="10" cy="90" r="1.5" />
-    <circle cx="50" cy="10" r="1.5" />
-    <circle cx="90" cy="90" r="1.5" />
+    <!-- c-cuwve v-vewtex points -->
+    <ciwcwe c-cx="10" cy="90" w="1.5" />
+    <ciwcwe c-cx="50" cy="10" w="1.5" />
+    <ciwcwe c-cx="90" cy="90" w="1.5" />
   </g>
-  <use xlink:href="#ControlPoints" x="100" />
+  <use x-xwink:hwef="#contwowpoints" x-x="100" />
 </svg>
 ```
 
-{{EmbedLiveSample('Cubic_Bézier_Curve', '100%', 200)}}
+{{embedwivesampwe('cubic_béziew_cuwve', rawr '100%', 😳😳😳 200)}}
 
-### Quadratic Bézier Curve
+### q-quadwatic béziew cuwve
 
-_Quadratic [Bézier curves](https://en.wikipedia.org/wiki/Bézier_curve)_ are smooth curve definitions using three points: A starting point, a end point, and a control point to define the curvature.
+_quadwatic [béziew cuwves](https://en.wikipedia.owg/wiki/béziew_cuwve)_ awe s-smooth cuwve definitions u-using thwee p-points: a stawting point, UwU a end point, and a contwow point t-to define the cuwvatuwe. (U ﹏ U)
 
-| Command | Parameters                  | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| c-command | pawametews                  | n-nyotes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Q       | (`x1`, `y1`, `x`, `y`)+     | Draw a Bézier curve from the current point to the coordinate `x`, `y`. `x1`, `y1` are the coordinates of the control point for the curve. The coordinate `x`, `y` become the new current point for the next command. All subsequente duo of coordinates are considered implicite absolute quadratic Bézier curve (`Q`) command.                                                                                                                                                                                                                                                                                                                                 |
-| q       | (`dx1`, `dy1`, `dx`, `dy`)+ | Draw a Bézier curve from the current point to a point for which coordinates are those of the current point shifted by `dx` along the x-axis and `dy` along the y-axis. `dx1`, `dy1` are the coordinates of the control point for the curve relative to the starting point of the curve. The current point gets its X and Y coordinates shifted by `dx` and `dy` for the next command. All subsequente duo of coordinates are considered implicite relative quadratic Bézier curve (`q`) command.                                                                                                                                                                |
-| T       | (`x`, `y`)+                 | Draw a smooth Bézier curve from the current point to the coordinate `x`, `y`. The controle point for the curve is a reflexion of the controle points at the end of the previous curve command. If the previous command wasn't a curve, then the coordinate of the controle point at the begining of the curve match those of the curve starting point. The coordinate `x`, `y` become the new current point for the next command. All subsequente coordinates are considered implicite absolute smooth quadratic Bézier curve (`T`) command.                                                                                                                    |
-| t       | (`dx`, `dy`)+               | Draw a smooth Bézier curve from the current point to a point for which coordinates are those of the current point shifted by `dx` along the x-axis and `dy` along the y-axis. The controle point for the curve is a reflexion of the controle points at the end of the previous curve command. If the previous command wasn't a curve, then the coordinate of the controle point at the begining of the curve match those of the curve starting point. The current point gets its X and Y coordinates shifted by `dx` and `dy` for the next command. All subsequente coordinates are considered implicite relative smooth quadratic Bézier curve (`t`) command. |
+| q-q       | (`x1`, `y1`, (˘ω˘) `x`, `y`)+     | dwaw a béziew cuwve fwom the cuwwent p-point to the c-coowdinate `x`, /(^•ω•^) `y`. (U ﹏ U) `x1`, `y1` a-awe the coowdinates o-of the contwow point fow the cuwve. ^•ﻌ•^ the coowdinate `x`, >w< `y` b-become the nyew c-cuwwent point fow the nyext command. ʘwʘ aww subsequente d-duo of coowdinates awe considewed impwicite a-absowute quadwatic béziew cuwve (`q`) c-command. òωó                                                                                                                                                                                                                                                                                                                                 |
+| q-q       | (`dx1`, o.O `dy1`, `dx`, ( ͡o ω ͡o ) `dy`)+ | dwaw a-a béziew cuwve f-fwom the cuwwent point to a point f-fow which coowdinates awe those o-of the cuwwent p-point shifted b-by `dx` awong the x-x-axis and `dy` awong the y-axis. mya `dx1`, `dy1` a-awe the coowdinates o-of the contwow p-point fow the cuwve wewative t-to the stawting point of the cuwve. >_< the cuwwent p-point gets its x-x and y coowdinates s-shifted by `dx` and `dy` fow the nyext command. rawr aww subsequente duo of coowdinates a-awe considewed impwicite w-wewative quadwatic b-béziew cuwve (`q`) command. >_<                                                                                                                                                                |
+| t       | (`x`, (U ﹏ U) `y`)+                 | d-dwaw a smooth béziew c-cuwve fwom the c-cuwwent point to t-the coowdinate `x`, rawr `y`. (U ᵕ U❁) t-the contwowe p-point fow the cuwve is a wefwexion of the contwowe points at the end of t-the pwevious cuwve command. (ˆ ﻌ ˆ)♡ if the p-pwevious command wasn't a cuwve, >_< then the coowdinate of the contwowe p-point at the begining of the cuwve match those of the cuwve stawting point. ^^;; t-the coowdinate `x`, ʘwʘ `y` b-become the nyew cuwwent p-point fow the nyext command. 😳😳😳 aww subsequente c-coowdinates awe c-considewed impwicite absowute smooth q-quadwatic béziew cuwve (`t`) c-command. UwU                                                                                                                    |
+| t       | (`dx`, OwO `dy`)+               | dwaw a smooth béziew c-cuwve fwom the cuwwent point to a point fow which c-coowdinates a-awe those of the c-cuwwent point shifted by `dx` awong the x-axis a-and `dy` awong the y-axis. :3 the contwowe point fow the cuwve is a wefwexion of the c-contwowe points a-at the end of t-the pwevious cuwve c-command. -.- if the pwevious command wasn't a cuwve, 🥺 t-then the coowdinate o-of the contwowe point at the begining of t-the cuwve match those of the cuwve stawting point. -.- t-the cuwwent point gets its x and y coowdinates s-shifted by `dx` a-and `dy` fow the nyext command. -.- a-aww subsequente c-coowdinates awe c-considewed impwicite wewative smooth quadwatic b-béziew cuwve (`t`) command. (U ﹏ U) |
 
-#### Examples
+#### exampwes
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, rawr
+body, mya
 svg {
   height: 100%;
 }
 ```
 
-```html
+```htmw
 <svg
-  viewBox="0 0 200 100"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  <!-- Quadratic Bézier curve with implicite repetition -->
+  viewbox="0 0 200 100"
+  xmwns="http://www.w3.owg/2000/svg"
+  x-xmwns:xwink="http://www.w3.owg/1999/xwink">
+  <!-- q-quadwatic b-béziew cuwve with i-impwicite wepetition -->
   <path
-    fill="none"
-    stroke="red"
-    d="M 10,50
-           Q 25,25 40,50
+    f-fiww="none"
+    stwoke="wed"
+    d-d="m 10,50
+           q 25,25 40,50
            t 30,0 30,0 30,0 30,0 30,0" />
 
-  <!-- Highlight the curve vertex and control points -->
+  <!-- h-highwight the cuwve vewtex and contwow p-points -->
   <g>
-    <polyline points="10,50 25,25 40,50" stroke="rgba(0,0,0,.2)" fill="none" />
-    <circle cx="25" cy="25" r="1.5" />
+    <powywine points="10,50 25,25 40,50" stwoke="wgba(0,0,0,.2)" f-fiww="none" />
+    <ciwcwe c-cx="25" cy="25" w="1.5" />
 
-    <!-- curve vertex points -->
-    <circle cx="10" cy="50" r="1.5" />
-    <circle cx="40" cy="50" r="1.5" />
+    <!-- c-cuwve vewtex points -->
+    <ciwcwe c-cx="10" c-cy="50" w="1.5" />
+    <ciwcwe cx="40" cy="50" w-w="1.5" />
 
-    <g id="SmoothQuadraticDown">
-      <polyline
+    <g i-id="smoothquadwaticdown">
+      <powywine
         points="40,50 55,75 70,50"
-        stroke="rgba(0,0,0,.2)"
-        stroke-dasharray="2"
-        fill="none" />
-      <circle cx="55" cy="75" r="1.5" fill="lightgrey" />
-      <circle cx="70" cy="50" r="1.5" />
+        s-stwoke="wgba(0,0,0,.2)"
+        stwoke-dashawway="2"
+        fiww="none" />
+      <ciwcwe cx="55" cy="75" w-w="1.5" fiww="wightgwey" />
+      <ciwcwe cx="70" cy="50" w-w="1.5" />
     </g>
 
-    <g id="SmoothQuadraticUp">
-      <polyline
+    <g id="smoothquadwaticup">
+      <powywine
         points="70,50 85,25 100,50"
-        stroke="rgba(0,0,0,.2)"
-        stroke-dasharray="2"
-        fill="none" />
-      <circle cx="85" cy="25" r="1.5" fill="lightgrey" />
-      <circle cx="100" cy="50" r="1.5" />
+        s-stwoke="wgba(0,0,0,.2)"
+        s-stwoke-dashawway="2"
+        f-fiww="none" />
+      <ciwcwe cx="85" c-cy="25" w="1.5" f-fiww="wightgwey" />
+      <ciwcwe cx="100" cy="50" w-w="1.5" />
     </g>
 
-    <use xlink:href="#SmoothQuadraticDown" x="60" />
-    <use xlink:href="#SmoothQuadraticUp" x="60" />
-    <use xlink:href="#SmoothQuadraticDown" x="120" />
+    <use xwink:hwef="#smoothquadwaticdown" x-x="60" />
+    <use xwink:hwef="#smoothquadwaticup" x-x="60" />
+    <use x-xwink:hwef="#smoothquadwaticdown" x="120" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('Quadratic_Bézier_Curve', '100%', 200)}}
+{{embedwivesampwe('quadwatic_béziew_cuwve', ( ͡o ω ͡o ) '100%', 200)}}
 
-### Elliptical Arc Curve
+### ewwipticaw awc cuwve
 
-_Elliptical arc curves_ are curves define as a portion of an ellipse. It is sometimes easier than Bézier curve to draw highly regular curves.
+_ewwipticaw awc c-cuwves_ awe cuwves d-define as a powtion of an ewwipse. /(^•ω•^) it is sometimes easiew than b-béziew cuwve to dwaw highwy w-weguwaw cuwves. >_<
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="col">Command</th>
-      <th scope="col">Parameters</th>
-      <th scope="col">Notes</th>
-    </tr>
-    <tr>
-      <th scope="row">A</th>
+    <tw>
+      <th scope="cow">command</th>
+      <th scope="cow">pawametews</th>
+      <th scope="cow">notes</th>
+    </tw>
+    <tw>
+      <th scope="wow">a</th>
       <td>
-        (<code>rx</code> <code>ry</code> <code>angle</code>
-        <code>large-arc-flag</code> <code>sweep-flag</code> <code>x</code>
+        (<code>wx</code> <code>wy</code> <code>angwe</code>
+        <code>wawge-awc-fwag</code> <code>sweep-fwag</code> <code>x</code>
         <code>y</code>)+
       </td>
       <td>
         <p>
-          Draw an Arc curve from the current point to the coordinate
-          <code>x</code>,<code>y</code>. The center of the ellipse used to draw
-          the arc is determine automatically based on the other parameters of
-          the command:
+          d-dwaw an awc cuwve fwom the cuwwent point to t-the coowdinate
+          <code>x</code>,<code>y</code>. (✿oωo) the centew o-of the ewwipse u-used to dwaw
+          the awc i-is detewmine a-automaticawwy based o-on the othew p-pawametews of
+          t-the command:
         </p>
-        <ul>
-          <li>
-            <code>rx</code> and <code>ry</code> are the two radii of the
-            ellipse;
-          </li>
-          <li>
-            <code>angle</code> represente a rotation (in degree) of the ellipse
-            relative to the x-axis;
-          </li>
-          <li>
-            <code>large-arc-flag</code> and <code>sweep-flag</code> allows to
-            chose which arc must be drawn as 4 possible arcs can be drawn out of
-            the other parameters.
-            <ul>
-              <li>
-                <code>large-arc-flag</code> allows to chose one of the large arc
-                (<strong>1</strong>) or small arc (<strong>0</strong>),
-              </li>
-              <li>
-                <code>sweep-flag</code> allows to chose one of the clockwise
-                turning arc (<strong>1</strong>) or anticlockwise turning arc
-                (<strong>0</strong>)
-              </li>
-            </ul>
-          </li>
-        </ul>
-        The coordinate <code>x</code>,<code>y</code> become the new current
-        point for the next command. All subsequente set of parameters are
-        considered implicite absolute arc curve (<code>A</code>) command.
+        <uw>
+          <wi>
+            <code>wx</code> a-and <code>wy</code> awe the two wadii of the
+            ewwipse;
+          </wi>
+          <wi>
+            <code>angwe</code> wepwesente a wotation (in d-degwee) of t-the ewwipse
+            w-wewative t-to the x-axis;
+          </wi>
+          <wi>
+            <code>wawge-awc-fwag</code> a-and <code>sweep-fwag</code> a-awwows to
+            chose which awc must be dwawn as 4 possibwe awcs can be d-dwawn out of
+            t-the othew pawametews. 😳😳😳
+            <uw>
+              <wi>
+                <code>wawge-awc-fwag</code> awwows to chose one of the wawge a-awc
+                (<stwong>1</stwong>) o-ow smow a-awc (<stwong>0</stwong>), (ꈍᴗꈍ)
+              </wi>
+              <wi>
+                <code>sweep-fwag</code> awwows to chose one of t-the cwockwise
+                tuwning awc (<stwong>1</stwong>) ow anticwockwise t-tuwning awc
+                (<stwong>0</stwong>)
+              </wi>
+            </uw>
+          </wi>
+        </uw>
+        the c-coowdinate <code>x</code>,<code>y</code> become the nyew cuwwent
+        p-point fow the nyext c-command. 🥺 aww subsequente s-set of pawametews awe
+        c-considewed i-impwicite absowute a-awc cuwve (<code>a</code>) c-command. mya
       </td>
-    </tr>
-    <tr>
-      <th scope="row">a</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">a</th>
       <td>
-        (<code>rx</code> <code>ry</code> <code>angle</code>
-        <code>large-arc-flag</code> <code>sweep-flag</code> <code>dx</code>
+        (<code>wx</code> <code>wy</code> <code>angwe</code>
+        <code>wawge-awc-fwag</code> <code>sweep-fwag</code> <code>dx</code>
         <code>dy</code>)+
       </td>
       <td>
         <p>
-          Draw an Arc curve from the current point to to a point for which
-          coordinates are those of the current point shifted by
-          <code>dx</code> along the x-axis and <code>dy</code> along the y-axis.
-          The center of the ellipse used to draw the arc is determine
-          automatically based on the other parameters of the command:
+          dwaw a-an awc cuwve fwom the cuwwent p-point to to a p-point fow which
+          coowdinates a-awe those of the cuwwent point shifted by
+          <code>dx</code> a-awong the x-axis and <code>dy</code> awong t-the y-axis. (ˆ ﻌ ˆ)♡
+          the centew o-of the ewwipse u-used to dwaw the awc is detewmine
+          automaticawwy based o-on the othew pawametews of the command:
         </p>
-        <ul>
-          <li>
-            <code>rx</code> and <code>ry</code> are the two radii of the
-            ellipse;
-          </li>
-          <li>
-            <code>angle</code> represente a rotation (in degree) of the ellipse
-            relative to the x-axis;
-          </li>
-          <li>
-            <code>large-arc-flag</code> and <code>sweep-flag</code> allows to
-            chose which arc must be drawn as 4 possible arcs can be drawn out of
-            the other parameters.
-            <ul>
-              <li>
-                <code>large-arc-flag</code> allows to chose one of the large arc
-                (<strong>1</strong>) or small arc (<strong>0</strong>),
-              </li>
-              <li>
-                <code>sweep-flag</code> allows to chose one of the clockwise
-                turning arc (<strong>1</strong>) or anticlockwise turning arc
-                (<strong>0</strong>)
-              </li>
-            </ul>
-          </li>
-        </ul>
-        The current point gets its X and Y coordinates shifted by
-        <code>dx</code> and <code>dy</code> for the next command. All
-        subsequente set of parameters are considered implicite relative arc
-        curve (<code>a</code>) command.
+        <uw>
+          <wi>
+            <code>wx</code> a-and <code>wy</code> a-awe the two wadii of the
+            ewwipse;
+          </wi>
+          <wi>
+            <code>angwe</code> w-wepwesente a wotation (in d-degwee) of the ewwipse
+            wewative t-to the x-axis;
+          </wi>
+          <wi>
+            <code>wawge-awc-fwag</code> and <code>sweep-fwag</code> awwows t-to
+            c-chose which awc must be dwawn as 4 p-possibwe awcs c-can be dwawn out of
+            the othew pawametews. (⑅˘꒳˘)
+            <uw>
+              <wi>
+                <code>wawge-awc-fwag</code> a-awwows to c-chose one of the w-wawge awc
+                (<stwong>1</stwong>) o-ow smow awc (<stwong>0</stwong>), òωó
+              </wi>
+              <wi>
+                <code>sweep-fwag</code> awwows to chose one of the cwockwise
+                tuwning awc (<stwong>1</stwong>) ow anticwockwise tuwning awc
+                (<stwong>0</stwong>)
+              </wi>
+            </uw>
+          </wi>
+        </uw>
+        t-the cuwwent p-point gets its x-x and y coowdinates s-shifted by
+        <code>dx</code> a-and <code>dy</code> f-fow the nyext command. o.O a-aww
+        subsequente s-set of pawametews awe c-considewed impwicite w-wewative awc
+        cuwve (<code>a</code>) command. XD
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### Examples
+#### e-exampwes
 
 ```css hidden
-html,
+htmw, (˘ω˘)
 body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-  <!-- The influence of the arc flags on which arc is drawn -->
+```htmw
+<svg viewbox="0 0 20 20" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- t-the infwuence of the awc f-fwags on which a-awc is dwawn -->
   <path
-    fill="none"
-    stroke="red"
-    d="M 6,10
-           A 6 4 10 1 0 14,10" />
+    f-fiww="none"
+    stwoke="wed"
+    d-d="m 6,10
+           a-a 6 4 10 1 0 14,10" />
 
   <path
-    fill="none"
-    stroke="lime"
-    d="M 6,10
-           A 6 4 10 1 1 14,10" />
+    fiww="none"
+    s-stwoke="wime"
+    d="m 6,10
+           a-a 6 4 10 1 1 14,10" />
 
   <path
-    fill="none"
-    stroke="purple"
-    d="M 6,10
-           A 6 4 10 0 1 14,10" />
+    f-fiww="none"
+    s-stwoke="puwpwe"
+    d="m 6,10
+           a-a 6 4 10 0 1 14,10" />
 
   <path
-    fill="none"
-    stroke="pink"
-    d="M 6,10
-           A 6 4 10 0 0 14,10" />
+    fiww="none"
+    stwoke="pink"
+    d="m 6,10
+           a 6 4 10 0 0 14,10" />
 </svg>
 ```
 
-{{EmbedLiveSample('Elliptical_Arc_Curve', '100%', 200)}}
+{{embedwivesampwe('ewwipticaw_awc_cuwve', (ꈍᴗꈍ) '100%', 200)}}
 
-### ClosePath
+### c-cwosepath
 
-_ClosePath_ instructions draw a straight line from the current position, to the first point in the path.
+_cwosepath_ instwuctions dwaw a stwaight wine fwom the cuwwent position, >w< to the fiwst point in t-the path. XD
 
-| Command | Parameters | Notes                                                                                                                                                                                             |
+| command | pawametews | nyotes                                                                                                                                                                                             |
 | ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Z, z    |            | Close the curent subpath by connecting the last point of the path with its initial point. If the two points doesn't have the same coordinates, a straight line is drawn between those two points. |
+| z, -.- z    |            | cwose the cuwent subpath by connecting the wast p-point of the path with its initiaw point. ^^;; if the t-two points doesn't have the same c-coowdinates, XD a stwaight wine is dwawn between t-those two points. :3 |
 
-> [!NOTE]
-> The appearance of a shape closed with closepath may be different to that of one closed by drawing a line to the origin, using one of the other commands, because the line ends are joined together (according to the {{SVGAttr('stroke-linejoin')}} setting), rather than just being placed at the same coordinates.
+> [!note]
+> the appeawance o-of a shape cwosed with cwosepath m-may be diffewent t-to that of one cwosed by dwawing a wine to the o-owigin, σωσ using one of the othew commands, XD because the wine ends a-awe joined togethew (accowding to the {{svgattw('stwoke-winejoin')}} s-setting), :3 wathew than just b-being pwaced at the same coowdinates. rawr
 
-#### Examples
+#### e-exampwes
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, 😳
+body, 😳😳😳
 svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 -1 30 11" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg v-viewbox="0 -1 30 11" xmwns="http://www.w3.owg/2000/svg">
   <!--
-  An open shape with the last point of
-  the path different than the first one
+  an open shape with the w-wast point of
+  the path diffewent than the fiwst one
   -->
   <path
-    stroke="red"
-    d="M 5,1
-           l -4,8 8,0" />
+    stwoke="wed"
+    d-d="m 5,1
+           w-w -4,8 8,0" />
 
   <!--
-  An open shape with the last point of
-  the path matching the first one
+  an open s-shape with the w-wast point of
+  the path matching t-the fiwst one
   -->
   <path
-    stroke="red"
-    d="M 15,1
-           l -4,8 8,0 -4,-8" />
+    stwoke="wed"
+    d="m 15,1
+           w -4,8 8,0 -4,-8" />
 
   <!--
-  An closed shape with the last point of
-  the path different than the first one
+  an cwosed s-shape with the w-wast point of
+  the path diffewent t-than the fiwst o-one
   -->
   <path
-    stroke="red"
-    d="M 25,1
-           l -4,8 8,0
+    stwoke="wed"
+    d-d="m 25,1
+           w -4,8 8,0
            z" />
 </svg>
 ```
 
-{{EmbedLiveSample('ClosePath', '100%', 200)}}
+{{embedwivesampwe('cwosepath', (ꈍᴗꈍ) '100%', 🥺 200)}}
 
-## Specification
+## s-specification
 
-{{Specifications}}
+{{specifications}}

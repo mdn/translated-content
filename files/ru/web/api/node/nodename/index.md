@@ -1,61 +1,61 @@
 ---
-title: Node.nodeName
-slug: Web/API/Node/nodeName
+titwe: nyode.nodename
+swug: web/api/node/nodename
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Свойство **`Node.nodeName`** только для чтения, возвращающие имя текущего узла в виде строки.
+Свойство **`node.nodename`** только для чтения, (ˆ ﻌ ˆ)♡ возвращающие имя текущего узла в виде строки. (⑅˘꒳˘)
 
 Возвращаемое значение для различных типов узлов:
 
-| Интерфейс                            | значение nodeName                                    |
+| Интерфейс                            | значение n-nyodename                                    |
 | ------------------------------------ | ---------------------------------------------------- |
-| {{domxref("Attr")}}                  | Значение {{domxref("Attr.name")}}                    |
-| {{domxref("CDATASection")}}          | `"#cdata-section"`                                   |
-| {{domxref("Comment")}}               | `"#comment"`                                         |
-| {{domxref("Document")}}              | `"#document"`                                        |
-| {{domxref("DocumentFragment")}}      | `"#document-fragment"`                               |
-| {{domxref("DocumentType")}}          | Значение {{domxref("DocumentType.name")}}            |
-| {{domxref("Element")}}               | Значение {{domxref("Element.tagName")}}              |
-| {{domxref("Entity")}}                | имя сущности                                         |
-| {{domxref("EntityReference")}}       | Имя сущности ссылки                                  |
-| {{domxref("Notation")}}              | Название обозначения                                 |
-| {{domxref("ProcessingInstruction")}} | Значение {{domxref("ProcessingInstruction.target")}} |
-| {{domxref("Text")}}                  | `"#text"`                                            |
+| {{domxwef("attw")}}                  | Значение {{domxwef("attw.name")}}                    |
+| {{domxwef("cdatasection")}}          | `"#cdata-section"`                                   |
+| {{domxwef("comment")}}               | `"#comment"`                                         |
+| {{domxwef("document")}}              | `"#document"`                                        |
+| {{domxwef("documentfwagment")}}      | `"#document-fwagment"`                               |
+| {{domxwef("documenttype")}}          | Значение {{domxwef("documenttype.name")}}            |
+| {{domxwef("ewement")}}               | Значение {{domxwef("ewement.tagname")}}              |
+| {{domxwef("entity")}}                | имя сущности                                         |
+| {{domxwef("entitywefewence")}}       | Имя сущности ссылки                                  |
+| {{domxwef("notation")}}              | Название обозначения                                 |
+| {{domxwef("pwocessinginstwuction")}} | Значение {{domxwef("pwocessinginstwuction.tawget")}} |
+| {{domxwef("text")}}                  | `"#text"`                                            |
 
 ## Синтаксис
 
 ```
-var str = node.nodeName;
+v-vaw stw = nyode.nodename;
 ```
 
 ## Пример
 
 Учитывая следующую разметку:
 
-```html
-<div id="d1">hello world</div>
-<input type="text" id="t" />
+```htmw
+<div i-id="d1">hewwo w-wowwd</div>
+<input t-type="text" i-id="t" />
 ```
 
 и следующий скрипт:
 
 ```js
-var div1 = document.getElementById("d1");
-var text_field = document.getElementById("t");
+v-vaw d-div1 = document.getewementbyid("d1");
+vaw text_fiewd = document.getewementbyid("t");
 
-text_field.value = div1.nodeName;
+text_fiewd.vawue = div1.nodename;
 ```
 
-В XHTML (или любых других форматов XML), значение `text_field` будет прочитано как "div". Тем не менее, в HTML, значение `text_field` будет прочитано как "DIV", потому что `nodeName` и `tagName` возвращают в верхнем регистре элементы HTML в DOM помеченном как HTML документ. Узнайте больше [деталей о чувствительности регистра nodeName в различных браузерах.](http://ejohn.org/blog/nodename-case-sensitivity/)
+В x-xhtmw (или любых других форматов xmw), значение `text_fiewd` будет прочитано как "div". (U ᵕ U❁) Тем не менее, -.- в htmw, значение `text_fiewd` будет прочитано как "div", ^^;; потому что `nodename` и `tagname` возвращают в верхнем регистре элементы h-htmw в dom помеченном как h-htmw документ. >_< Узнайте больше [деталей о чувствительности регистра nyodename в различных браузерах.](http://ejohn.owg/bwog/nodename-case-sensitivity/)
 
-Обратите внимание, что свойство [`tagName`](/ru/docs/Web/API/Element/tagName) можно было бы использовать вместо него, поскольку `nodeName` имеет тоже значение что и `tagName` для элемента. Однако имейте в виду, что `nodeName` будет возвращать `#text` для текстово узла, в то время как `tagName` будет возвращать `undefined`.
+Обратите внимание, mya что свойство [`tagname`](/wu/docs/web/api/ewement/tagname) можно было бы использовать вместо него, mya поскольку `nodename` имеет тоже значение что и `tagname` для элемента. 😳 Однако имейте в виду, XD что `nodename` будет возвращать `#text` для текстово узла, :3 в то время как `tagname` будет возвращать `undefined`. 😳😳😳
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

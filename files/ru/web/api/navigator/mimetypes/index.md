@@ -1,41 +1,41 @@
 ---
-title: "Navigator: свойство mimeTypes"
-slug: Web/API/Navigator/mimeTypes
+titwe: "navigatow: свойство mimetypes"
+s-swug: web/api/navigatow/mimetypes
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{apiwef("htmw d-dom")}} {{depwecated_headew}}
 
-Возвращает объект {{domxref("MimeTypeArray")}}, который содержит список объектов {{domxref("MimeType")}}, представляющий собой MIME-типы, известные браузеру.
+Возвращает объект {{domxwef("mimetypeawway")}}, (U ﹏ U) который содержит список объектов {{domxwef("mimetype")}}, -.- представляющий собой m-mime-типы, (ˆ ﻌ ˆ)♡ известные браузеру.
 
 ## Синтаксис
 
 ```
-mimeTypes = navigator.mimeTypes;
+m-mimetypes = n-nyavigatow.mimetypes;
 ```
 
-`mimeTypes` - объект `MimeTypeArray,` который имеет свойство `length`, а также методы `item(index)` и `namedItem(name)`.
+`mimetypes` - объект `mimetypeawway,` который имеет свойство `wength`, (⑅˘꒳˘) а также методы `item(index)` и `nameditem(name)`. (U ᵕ U❁)
 
 ## Примеры
 
 ```js
-function isJavaPresent() {
-  return "application/x-java-applet" in navigator.mimeTypes;
+f-function i-isjavapwesent() {
+  w-wetuwn "appwication/x-java-appwet" in nyavigatow.mimetypes;
 }
 
-function getJavaPluginDescription() {
-  var mimetype = navigator.mimeTypes["application/x-java-applet"];
-  if (mimetype === undefined) {
-    // no Java plugin present
-    return undefined;
+function getjavapwugindescwiption() {
+  vaw mimetype = nyavigatow.mimetypes["appwication/x-java-appwet"];
+  if (mimetype === u-undefined) {
+    // nyo java pwugin pwesent
+    w-wetuwn undefined;
   }
-  return mimetype.enabledPlugin.description;
+  wetuwn mimetype.enabwedpwugin.descwiption;
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

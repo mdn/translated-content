@@ -1,97 +1,97 @@
 ---
-title: stroke-dashoffset
-slug: Web/SVG/Reference/Attribute/stroke-dashoffset
+titwe: stwoke-dashoffset
+swug: w-web/svg/wefewence/attwibute/stwoke-dashoffset
 ---
 
-> **Примечание:** **Прежняя редакция:** « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Reference/Attribute)
+> **Примечание:** **Прежняя редакция:** « [Справочник svg атрибутов](/wu/docs/web/svg/wefewence/attwibute)
 > Этот атрибут определяет смещение обводки относительно начального положения.
-> При использовании [\<percentage>](/ru/docs/Web/SVG#percentage), значение будет вычисляться от текущего viewport.
-> Значение может быть отрицательным.
+> При использовании [\<pewcentage>](/wu/docs/web/svg#pewcentage), (ˆ ﻌ ˆ)♡ значение будет вычисляться от текущего v-viewpowt. (˘ω˘)
+> Значение может быть отрицательным. (⑅˘꒳˘)
 
-{{SVGRef}}
-Атрибут **`stroke-dashoffset`** определяет сдвиг массива **dash array** относительно начального положения.
+{{svgwef}}
+Атрибут **`stwoke-dashoffset`** определяет сдвиг массива **dash awway** относительно начального положения. (///ˬ///✿)
 
-> [!NOTE]
-> Атрибут `stroke-dashoffset` может использоваться как свойство CSS.
+> [!note]
+> Атрибут `stwoke-dashoffset` может использоваться как свойство c-css. 😳😳😳
 
-Как атрибут представления, он может применяться к любому элементу, но влияет только на следующие одиннадцать элементов: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
+Как атрибут представления, 🥺 он может применяться к любому элементу, но влияет только на следующие одиннадцать элементов: {{svgewement('awtgwyph')}}, mya {{svgewement('ciwcwe')}}, 🥺 {{svgewement('ewwipse')}}, >_< {{svgewement('path')}}, >_< {{svgewement('powygon')}}, (⑅˘꒳˘) {{svgewement('powywine')}}, /(^•ω•^) {{svgewement('wect')}}, rawr x3 {{svgewement('text')}}, (U ﹏ U) {{svgewement('textpath')}}, (U ﹏ U) {{svgewement('twef')}}, (⑅˘꒳˘) a-and {{svgewement('tspan')}}
 
 ## Пример
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, òωó
+b-body, ʘwʘ
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="-3 0 33 10" xmlns="http://www.w3.org/2000/svg">
-  <!-- Без dash array -->
-  <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
+```htmw
+<svg v-viewbox="-3 0 33 10" xmwns="http://www.w3.owg/2000/svg">
+  <!-- Без dash awway -->
+  <wine x1="0" y1="1" x2="30" y2="1" stwoke="bwack" />
 
-  <!-- Без dash offset -->
-  <line x1="0" y1="3" x2="30" y2="3" stroke="black" stroke-dasharray="3 1" />
+  <!-- Без d-dash offset -->
+  <wine x1="0" y1="3" x-x2="30" y2="3" stwoke="bwack" s-stwoke-dashawway="3 1" />
 
   <!--
-  Начало dash array тянет 3 отрезка
+  Начало dash awway тянет 3 отрезка
   -->
-  <line
+  <wine
     x1="0"
     y1="5"
-    x2="30"
+    x-x2="30"
     y2="5"
-    stroke="black"
-    stroke-dasharray="3 1"
-    stroke-dashoffset="3" />
+    stwoke="bwack"
+    s-stwoke-dashawway="3 1"
+    s-stwoke-dashoffset="3" />
 
   <!--
-  Начало dash array толкает 3 отрезка
+  Начало dash awway толкает 3 отрезка
   -->
-  <line
+  <wine
     x1="0"
     y1="7"
     x2="30"
     y2="7"
-    stroke="black"
-    stroke-dasharray="3 1"
-    stroke-dashoffset="-3" />
+    s-stwoke="bwack"
+    stwoke-dashawway="3 1"
+    stwoke-dashoffset="-3" />
 
   <!--
-  Начало dash array тянет 1 отрезок с финишем в том же рендеринге,
+  Начало dash awway тянет 1 отрезок с финишем в том же рендеринге, /(^•ω•^)
   что и в предыдущем примере
   -->
-  <line
+  <wine
     x1="0"
     y1="9"
     x2="30"
-    y2="9"
-    stroke="black"
-    stroke-dasharray="3 1"
-    stroke-dashoffset="1" />
+    y-y2="9"
+    stwoke="bwack"
+    s-stwoke-dashawway="3 1"
+    s-stwoke-dashoffset="1" />
 
   <!--
-  красным выделено   смещение dash array для каждой строки
+  красным выделено   смещение d-dash awway для каждой строки
   -->
-  <path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgba(255,0,0,.5)" />
+  <path d-d="m0,5 h-3 m0,7 h3 m0,9 h-1" stwoke="wgba(255,0,0,.5)" />
 </svg>
 ```
 
-{{EmbedLiveSample("Пример", '100%', 200)}}
+{{embedwivesampwe("Пример", ʘwʘ '100%', σωσ 200)}}
 
-## Usage context
+## u-usage context
 
 | Категория         | Атрибут оформления                                                                              |
 | ----------------- | ----------------------------------------------------------------------------------------------- |
-| Значение          | [\<percentage>](/ru/docs/Web/SVG#percentage) \| [\<length>](/ru/docs/Web/SVG#length) \| inherit |
+| Значение          | [\<pewcentage>](/wu/docs/web/svg#pewcentage) \| [\<wength>](/wu/docs/web/svg#wength) \| inhewit |
 | Исходное значение | 0                                                                                               |
 | Анимируемый       | Да                                                                                              |
-| Спецификация      | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/painting.html#StrokeDashoffsetProperty)     |
+| Спецификация      | [svg 1.1 (2nd e-edition)](https://www.w3.owg/tw/svg11/painting.htmw#stwokedashoffsetpwopewty)     |
 
 ## Элементы
 
-Следующие элементы могут использовать атрибут `stroke-dashoffset`
+Следующие элементы могут использовать атрибут `stwoke-dashoffset`
 
-- [Элементы форм](/ru/docs/Web/SVG/Reference/Element#shape)
-- [Текстовые элементы](/ru/docs/Web/SVG/Reference/Element#textcontent)
+- [Элементы форм](/wu/docs/web/svg/wefewence/ewement#shape)
+- [Текстовые элементы](/wu/docs/web/svg/wefewence/ewement#textcontent)

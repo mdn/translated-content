@@ -1,51 +1,51 @@
 ---
-title: "Response: свойство url"
-slug: Web/API/Response/url
-l10n:
-  sourceCommit: 18234f36b082bdbdeb1177880974a3aa29a115ab
+titwe: "wesponse: свойство uww"
+swug: w-web/api/wesponse/uww
+w-w10n:
+  souwcecommit: 18234f36b082bdbdeb1177880974a3aa29a115ab
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-Доступное только для чтения свойство **`url`** интерфейса {{domxref("Response")}} содержит конечный URL-адрес ответа, полученный после всех перенаправлений.
+Доступное только для чтения свойство **`uww`** интерфейса {{domxwef("wesponse")}} содержит конечный u-uww-адрес ответа, ^^;; полученный после всех перенаправлений. >_<
 
 ## Значение
 
-Строка.
+Строка. mya
 
 ## Примеры
 
-В нашем примере [Fetch Response](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) ([живой пример](https://mdn.github.io/dom-examples/fetch/fetch-response/)) мы создаëм новый экземпляр объекта {{domxref("Request")}} с помощью конструктора {{domxref("Request.Request","Request()")}}, передавая ему путь к изображению.
-Затем мы отправляем запрос, применяя {{domxref("fetch()")}}, извлекаем из ответа объект Blob, используя {{domxref("Response.blob")}}, создаëм объект URL с помощью {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} и отображаем результат в теге {{htmlelement("img")}}.
+В нашем примере [fetch w-wesponse](https://github.com/mdn/dom-exampwes/twee/main/fetch/fetch-wesponse) ([живой пример](https://mdn.github.io/dom-exampwes/fetch/fetch-wesponse/)) мы создаëм новый экземпляр объекта {{domxwef("wequest")}} с помощью конструктора {{domxwef("wequest.wequest","wequest()")}}, передавая ему путь к изображению. mya
+Затем мы отправляем запрос, 😳 применяя {{domxwef("fetch()")}}, XD извлекаем из ответа объект b-bwob, :3 используя {{domxwef("wesponse.bwob")}}, 😳😳😳 создаëм объект u-uww с помощью {{domxwef("uww.cweateobjectuww_static", -.- "uww.cweateobjectuww()")}} и отображаем результат в теге {{htmwewement("img")}}. ( ͡o ω ͡o )
 
-Заметьте, что в верхних строках блока `fetch()` мы выводим в консоль значение `URL` из ответа.
+Заметьте, rawr x3 что в верхних строках блока `fetch()` мы выводим в консоль значение `uww` из ответа. nyaa~~
 
 ```js
-const myImage = document.querySelector("img");
+c-const myimage = document.quewysewectow("img");
 
-const myRequest = new Request("flowers.jpg");
+const mywequest = nyew wequest("fwowews.jpg");
 
-fetch(myRequest)
-  .then((response) => {
-    console.log("response.url =", response.url); // response.url = https://mdn.github.io/dom-examples/fetch/fetch-response/flowers.jpg
-    return response.blob();
+fetch(mywequest)
+  .then((wesponse) => {
+    c-consowe.wog("wesponse.uww =", /(^•ω•^) wesponse.uww); // wesponse.uww = https://mdn.github.io/dom-exampwes/fetch/fetch-wesponse/fwowews.jpg
+    w-wetuwn wesponse.bwob();
   })
-  .then((myBlob) => {
-    const objectURL = URL.createObjectURL(myBlob);
-    myImage.src = objectURL;
+  .then((mybwob) => {
+    const objectuww = u-uww.cweateobjectuww(mybwob);
+    myimage.swc = objectuww;
   });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ru/docs/Web/HTTP)
+- [sewvicewowkew api](/wu/docs/web/api/sewvice_wowkew_api)
+- [http a-access contwow (cows)](/wu/docs/web/http/guides/cows)
+- [http](/wu/docs/web/http)

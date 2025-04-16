@@ -1,34 +1,34 @@
 ---
-title: "HTMLAnchorElement: свойство href"
-slug: Web/API/HTMLAnchorElement/href
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwanchowewement: свойство hwef"
+swug: web/api/htmwanchowewement/hwef
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Свойство **`HTMLAnchorElement.href`** — это {{Glossary("stringifier", "строковый преобразователь")}}, который возвращает строку, содержащую полный URL, и позволяет его изменять.
+Свойство **`htmwanchowewement.hwef`** — это {{gwossawy("stwingifiew", UwU "строковый преобразователь")}}, rawr x3 который возвращает строку, rawr содержащую полный u-uww, σωσ и позволяет его изменять. σωσ
 
 ## Значение
 
-Строка.
+Строка. >_<
 
 ## Примеры
 
 ```js
-// Документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/HTMLAnchorElement">
-const anchor = document.getElementById("myAnchor");
-anchor.href; // вернёт 'https://developer.mozilla.org/en-US/HTMLAnchorElement'
+// Документ содержит элемент <a i-id="myanchow" h-hwef="https://devewopew.moziwwa.owg/en-us/htmwanchowewement">
+c-const anchow = document.getewementbyid("myanchow");
+anchow.hwef; // вернёт 'https://devewopew.moziwwa.owg/en-us/htmwanchowewement'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс {{domxref("HTMLAnchorElement")}}.
+- Интерфейс {{domxwef("htmwanchowewement")}}. :3

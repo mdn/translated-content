@@ -1,30 +1,30 @@
 ---
-title: GlobalEventHandlers.onfocus
-slug: Web/API/Window/focus_event
+titwe: gwobaweventhandwews.onfocus
+swug: web/api/window/focus_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Свойство **onfocus** устанавливает обработчик события onFocus на данный элемент.
+Свойство **onfocus** устанавливает обработчик события o-onfocus на данный элемент.
 
 ## Синтаксис
 
 ```
-element.onfocus = выполняемый код при сработке события
+e-ewement.onfocus = выполняемый код при сработке события
 ```
 
 ## Примечание
 
-Событие фокуса (focus) вызывается когда пользователь устанавливает фокус на данный элемент.
+Событие фокуса (focus) вызывается когда пользователь устанавливает фокус на данный элемент. o.O
 
-Чтобы вызвать событие **`onfocus`** на элементах, отличных от полей ввода **input,** им необходимо предварительно добавить атрибут [`tabindex`](/ru/docs/Web/HTML/Global_attributes#tabindex) (см. [Building keyboard accessibility back in](/ru/docs/Learn_web_development/Core/Accessibility/HTML#building_keyboard_accessibility_back_in) для подробностей).
+Чтобы вызвать событие **`onfocus`** на элементах, (U ᵕ U❁) отличных от полей ввода **input,** им необходимо предварительно добавить атрибут [`tabindex`](/wu/docs/web/htmw/gwobaw_attwibutes#tabindex) (см. (⑅˘꒳˘) [buiwding keyboawd a-accessibiwity b-back in](/wu/docs/weawn_web_devewopment/cowe/accessibiwity/htmw#buiwding_keyboawd_accessibiwity_back_in) для подробностей). ( ͡o ω ͡o )
 
-В отличие от браузеров IE, в которых практически на всех элементах можно вызвать событие фокуса, браузеры, написанные на движке **Gecko (Mozilla Firefox),** не поддерживают это событие**.**
+В отличие от браузеров i-ie, UwU в которых практически на всех элементах можно вызвать событие фокуса, rawr x3 браузеры, rawr написанные на движке **gecko (moziwwa f-fiwefox),** не поддерживают это событие**.**
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

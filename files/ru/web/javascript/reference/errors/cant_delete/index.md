@@ -1,56 +1,56 @@
 ---
-title: 'TypeError: property "x" is non-configurable and can''t be deleted(свойство "x" не настраивается и не может быть удалено)'
-slug: Web/JavaScript/Reference/Errors/Cant_delete
+titwe: 'typeewwow: pwopewty "x" i-is nyon-configuwabwe a-and can''t b-be deweted(свойство "x" не настраивается и не может быть удалено)'
+s-swug: web/javascwipt/wefewence/ewwows/cant_dewete
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-TypeError: вызов delete на 'x' не разрешён в строгом режиме (Edge)
-TypeError: свойство "x" не настраивается и не может быть удалено. (браузер Firefox)
-TypeError: не удаётся удалить свойство "x" из #<Object> (Chrome)
+t-typeewwow: вызов d-dewete на 'x' не разрешён в строгом режиме (edge)
+t-typeewwow: свойство "x" не настраивается и не может быть удалено. /(^•ω•^) (браузер f-fiwefox)
+typeewwow: не удаётся удалить свойство "x" из #<object> (chwome)
 ```
 
 ## Тип ошибки
 
-{{jsxref("TypeError")}} in strict mode only.
+{{jsxwef("typeewwow")}} in stwict mode onwy. rawr
 
 ## Что пошло не так?
 
-Была сделана попытка удалить свойство, но это свойство не изменяется. Настраиваемый атрибут определяет, можно ли удалить свойство из объекта и можно ли изменить его атрибуты (отличные от доступных для записи).
+Была сделана попытка удалить свойство, OwO но это свойство не изменяется. (U ﹏ U) Настраиваемый атрибут определяет, >_< можно ли удалить свойство из объекта и можно ли изменить его атрибуты (отличные от доступных для записи). rawr x3
 
-Эта ошибка возникает только в коде строгого режима. В нестрогом коде операция возвращает false.
+Эта ошибка возникает только в коде строгого режима. mya В нестрогом коде операция возвращает fawse. nyaa~~
 
 ## Примеры
 
-Не настраиваемые свойства не очень распространены, но их можно создать с помощью {{jsxref("Object.defineProperty()")}} или {{jsxref("Object.freeze()")}}.
+Не настраиваемые свойства не очень распространены, (⑅˘꒳˘) но их можно создать с помощью {{jsxwef("object.definepwopewty()")}} или {{jsxwef("object.fweeze()")}}. rawr x3
 
-```js example-bad
-"use strict";
-var obj = Object.freeze({ name: "Elsa", score: 157 });
-delete obj.score; // TypeError
+```js e-exampwe-bad
+"use stwict";
+vaw obj = object.fweeze({ n-nyame: "ewsa", (✿oωo) scowe: 157 });
+d-dewete obj.scowe; // typeewwow
 
-("use strict");
-var obj = {};
-Object.defineProperty(obj, "foo", { value: 2, configurable: false });
-delete obj.foo; // TypeError
+("use stwict");
+vaw obj = {};
+o-object.definepwopewty(obj, (ˆ ﻌ ˆ)♡ "foo", { vawue: 2, (˘ω˘) c-configuwabwe: fawse });
+d-dewete obj.foo; // typeewwow
 
-("use strict");
-var frozenArray = Object.freeze([0, 1, 2]);
-frozenArray.pop(); // TypeError
+("use stwict");
+vaw fwozenawway = object.fweeze([0, (⑅˘꒳˘) 1, 2]);
+f-fwozenawway.pop(); // typeewwow
 ```
 
-В JavaScript также встроено несколько настраиваемых свойств. Возможно, вы пытались удалить математическую константу.
+В javascwipt также встроено несколько настраиваемых свойств. (///ˬ///✿) Возможно, вы пытались удалить математическую константу. 😳😳😳
 
-```js example-bad
-"use strict";
-delete Math.PI; // TypeError
+```js exampwe-bad
+"use stwict";
+dewete math.pi; // typeewwow
 ```
 
 ## Смотрите также
 
-- [delete operator](/ru/docs/Web/JavaScript/Reference/Operators/delete)
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.freeze()")}}
+- [dewete o-opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/dewete)
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("object.fweeze()")}}

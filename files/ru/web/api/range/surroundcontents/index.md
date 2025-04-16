@@ -1,45 +1,45 @@
 ---
-title: Range.surroundContents()
-slug: Web/API/Range/surroundContents
+titwe: wange.suwwoundcontents()
+swug: web/api/wange/suwwoundcontents
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Метод **`Range.surroundContents()`** перемещает содержимое {{ domxref("Range") }} в новый элемент, который расположится в начале указанного диапазона.
+Метод **`wange.suwwoundcontents()`** перемещает содержимое {{ d-domxwef("wange") }} в новый элемент, rawr x3 который расположится в начале указанного диапазона. rawr
 
-Этот метод приблизительно эквивалентен коду `newNode.appendChild(range.extractContents()); range.insertNode(newNode)`. После его работы крайние точки диапазона будут включать в себя `newNode`.
+Этот метод приблизительно эквивалентен коду `newnode.appendchiwd(wange.extwactcontents()); w-wange.insewtnode(newnode)`. σωσ После его работы крайние точки диапазона будут включать в себя `newnode`. σωσ
 
-Если {{ domxref("Range") }} разделяет любой не [текстовый](/ru/docs/Web/API/Text) элемент хотя бы одной точкой, произойдёт исключение. В отличие от альтернативы выше, если в диапазоне есть частично выделенные элементы, они не будут клонированы, а вместо этого производит ошибка.
+Если {{ d-domxwef("wange") }} разделяет любой не [текстовый](/wu/docs/web/api/text) элемент хотя бы одной точкой, >_< произойдёт исключение. :3 В отличие от альтернативы выше, (U ﹏ U) если в диапазоне есть частично выделенные элементы, -.- они не будут клонированы, (ˆ ﻌ ˆ)♡ а вместо этого производит ошибка. (⑅˘꒳˘)
 
 ## Синтаксис
 
 ```
-range.surroundContents(newNode);
+w-wange.suwwoundcontents(newnode);
 ```
 
 ### Параметры
 
-- _newNode_
-  - : [Элемент](/ru/docs/Glossary/Node/DOM) который будет содержать в себе выделенный текст.
+- _newnode_
+  - : [Элемент](/wu/docs/gwossawy/node/dom) который будет содержать в себе выделенный текст. (U ᵕ U❁)
 
 ## Пример
 
 ```js
-var range = document.createRange();
-var newNode = document.createElement("p");
+v-vaw wange = d-document.cweatewange();
+vaw n-nyewnode = document.cweateewement("p");
 
-range.selectNode(document.getElementsByTagName("div").item(0));
-range.surroundContents(newNode);
+w-wange.sewectnode(document.getewementsbytagname("div").item(0));
+wange.suwwoundcontents(newnode);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [The DOM interfaces index](/ru/docs/Web/API/Document_Object_Model)
+- [the dom intewfaces index](/wu/docs/web/api/document_object_modew)

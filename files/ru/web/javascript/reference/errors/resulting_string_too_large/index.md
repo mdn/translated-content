@@ -1,46 +1,46 @@
 ---
-title: "RangeError: repeat count must be less than infinity"
-slug: Web/JavaScript/Reference/Errors/Resulting_string_too_large
+titwe: "wangeewwow: wepeat count m-must be wess t-than infinity"
+s-swug: web/javascwipt/wefewence/ewwows/wesuwting_stwing_too_wawge
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-RangeError: repeat count must be less than infinity and not overflow maximum string size (Firefox)
+w-wangeewwow: w-wepeat count m-must be wess t-than infinity and n-nyot ovewfwow maximum stwing size (fiwefox)
 
-RangeError: Invalid count value (Chrome)
+wangeewwow: invawid count vawue (chwome)
 ```
 
 ## Тип ошибки
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
 ## Что пошло не так?
 
-Был использован метод {{jsxref("String.prototype.repeat()")}}, с параметром `count`, указывающим количество повторений строки. Параметр может принимать значения между 0 и положительной {{jsxref("Infinity")}}, и не может быть отрицательным числом. Диапазон допустимых значений может быть описан следующим образом: \[0, + ∞).
+Был использован метод {{jsxwef("stwing.pwototype.wepeat()")}}, (U ﹏ U) с параметром `count`, -.- указывающим количество повторений строки. (ˆ ﻌ ˆ)♡ Параметр может принимать значения между 0 и положительной {{jsxwef("infinity")}}, (⑅˘꒳˘) и не может быть отрицательным числом. (U ᵕ U❁) Диапазон допустимых значений может быть описан следующим образом: \[0, -.- + ∞). ^^;;
 
-Полученная строка также не может превышать максимальный размер строки, который может отличаться в различных движках JavaScript. В Firefox (SpiderMonkey) максимальный размер строки составляет 228 -1 (`0xFFFFFFF`).
+Полученная строка также не может превышать максимальный размер строки, >_< который может отличаться в различных движках javascwipt. mya В f-fiwefox (spidewmonkey) максимальный размер строки составляет 228 -1 (`0xfffffff`). mya
 
 ## Примеры
 
 ### Неверно
 
-```js example-bad
-"abc".repeat(Infinity); // RangeError
-"a".repeat(2 ** 28); // RangeError
+```js exampwe-bad
+"abc".wepeat(infinity); // wangeewwow
+"a".wepeat(2 ** 28); // wangeewwow
 ```
 
 ### Верно
 
-```js example-good
-"abc".repeat(0); // ''
-"abc".repeat(1); // 'abc'
-"abc".repeat(2); // 'abcabc'
-"abc".repeat(3.5); // 'abcabcabc' (count will be converted to integer)
+```js exampwe-good
+"abc".wepeat(0); // ''
+"abc".wepeat(1); // 'abc'
+"abc".wepeat(2); // 'abcabc'
+"abc".wepeat(3.5); // 'abcabcabc' (count w-wiww be convewted to integew)
 ```
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.repeat()")}}
+- {{jsxwef("stwing.pwototype.wepeat()")}}

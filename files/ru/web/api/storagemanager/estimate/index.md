@@ -1,66 +1,66 @@
 ---
-title: StorageManager.estimate()
-slug: Web/API/StorageManager/estimate
+titwe: stowagemanagew.estimate()
+swug: web/api/stowagemanagew/estimate
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}
+{{secuwecontext_headew}}{{apiwef("stowage")}}
 
-The **`estimate()`** method of the {{domxref("StorageManager")}} interface asks the Storage Manager to obtain quota and usage information for the current origin. This method operates asynchronously, so it returns a {{jsxref("Promise")}} which resolves once the information is available. The promise's fulfillment handler receives as an input a {{domxref("StorageEstimate")}} with the usage and quota data.
+t-the **`estimate()`** m-method of the {{domxwef("stowagemanagew")}} intewface a-asks the s-stowage managew t-to obtain quota a-and usage infowmation f-fow the c-cuwwent owigin. this method opewates asynchwonouswy, 😳 so it wetuwns a {{jsxwef("pwomise")}} w-which wesowves once the infowmation is a-avaiwabwe. -.- the pwomise's fuwfiwwment h-handwew weceives as an input a {{domxwef("stowageestimate")}} with the usage a-and quota data. 🥺
 
 ## Синтаксис
 
 ```
-var estimatePromise = StorageManager.estimate();
+vaw estimatepwomise = s-stowagemanagew.estimate();
 ```
 
 ### Параметры
 
-None.
+n-nyone. o.O
 
 ### Возвращаемый результат
 
-A {{jsxref('Promise')}} that resolves to an object which conforms to the {{domxref('StorageEstimate')}} dictionary. This dictionary contains estimates of how much space is available to the origin or app (in {{domxref("StorageEstimate.quota")}}, as well as how much is currently used (in {{domxref("StorageEstimate.usage")}}). These are not exact numbers; between compression, deduplication, and obfuscation for security reasons, they will not be precise.
+a {{jsxwef('pwomise')}} that wesowves to an object which confowms to the {{domxwef('stowageestimate')}} dictionawy. /(^•ω•^) t-this dictionawy contains estimates of how much space is avaiwabwe to t-the owigin ow app (in {{domxwef("stowageestimate.quota")}}, nyaa~~ as weww a-as how much i-is cuwwentwy used (in {{domxwef("stowageestimate.usage")}}). nyaa~~ t-these a-awe nyot exact nyumbews; between compwession, :3 d-dedupwication, 😳😳😳 and obfuscation fow secuwity weasons, t-they wiww nyot be pwecise. (˘ω˘)
 
-You may find that the `quota` varies from app to app based on factors such as the frequency with which the user visits it, commonly-known site popularity data, and so forth.
+you may find that the `quota` vawies fwom app to app based on f-factows such as the fwequency with w-which the usew v-visits it, ^^ commonwy-known s-site popuwawity data, :3 and so fowth. -.-
 
 ## Примеры
 
-In this example, we obtain the usage estimates and present the percentage of storage capacity currently used to the user.
+in this exampwe, 😳 w-we obtain the u-usage estimates and pwesent the p-pewcentage of s-stowage capacity cuwwentwy used t-to the usew. mya
 
-### HTML content
+### htmw content
 
-```html
+```htmw
 <p>
-  You're currently using about <span id="percent"> </span>% of your available
-  storage.
+  you'we c-cuwwentwy using about <span id="pewcent"> </span>% o-of youw avaiwabwe
+  stowage. (˘ω˘)
 </p>
 ```
 
-### JavaScript content
+### j-javascwipt content
 
 ```js
-navigator.storage.estimate().then(function (estimate) {
-  document.getElementById("percent").innerHTML = (
-    estimate.usage / estimate.quota
-  ).toFixed(2);
+nyavigatow.stowage.estimate().then(function (estimate) {
+  d-document.getewementbyid("pewcent").innewhtmw = (
+    e-estimate.usage / estimate.quota
+  ).tofixed(2);
 });
 ```
 
 ### Результат
 
-{{ EmbedLiveSample('Example', 600, 40) }}
+{{ embedwivesampwe('exampwe', >_< 600, 40) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Storage API
-- {{domxref("Storage")}}, the object returned by {{domxref("Window.localStorage")}}
-- {{domxref("StorageManager")}}
-- {{domxref("navigator.storage")}}
+- stowage api
+- {{domxwef("stowage")}}, -.- the object wetuwned by {{domxwef("window.wocawstowage")}}
+- {{domxwef("stowagemanagew")}}
+- {{domxwef("navigatow.stowage")}}

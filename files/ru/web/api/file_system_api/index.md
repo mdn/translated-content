@@ -1,181 +1,181 @@
 ---
-title: Введение в API файлов и каталогов
-slug: Web/API/File_System_API
+titwe: Введение в api файлов и каталогов
+s-swug: web/api/fiwe_system_api
 ---
 
-{{DefaultAPISidebar("File System API")}}{{Non-standard_header}}
+{{defauwtapisidebaw("fiwe s-system api")}}{{non-standawd_headew}}
 
-API файлов и каталогов эмулирует для веб-приложений локальную файловую систему. У вас есть возможность создания приложений, которые могут читать, записывать и создавать файлы и директории в изолированной виртуальной файловой системе.
+a-api файлов и каталогов эмулирует для веб-приложений локальную файловую систему. У вас есть возможность создания приложений, o.O которые могут читать, ^^ записывать и создавать файлы и директории в изолированной виртуальной файловой системе. >_<
 
-API файлов и каталогов взаимодействует с другими API. Оно было создано на основе File Writer API, который в свою очередь использует File API. Каждое API реализует разную функциональность. Данные программные интерфейсы являются огромным эволюционным скачком для веб-приложений, которые теперь могут кешировать и обрабатывать большие объёмы данных.
+a-api файлов и каталогов взаимодействует с другими a-api. >w< Оно было создано на основе f-fiwe wwitew a-api, >_< который в свою очередь использует f-fiwe api. Каждое api реализует разную функциональность. >w< Данные программные интерфейсы являются огромным эволюционным скачком для веб-приложений, rawr которые теперь могут кешировать и обрабатывать большие объёмы данных. rawr x3
 
 ## Об этом документе
 
-В данном документе приведены основные концепции и терминология API файлов и каталогов, которые должны показать общую картину и ключевые идеи. Также описаны [ограничения](#ограничения), несоблюдение которых может привести к появлению ошибок безопасности. Используемая терминология описана в разделе [Определений](#определения).
+В данном документе приведены основные концепции и терминология api файлов и каталогов, которые должны показать общую картину и ключевые идеи. ( ͡o ω ͡o ) Также описаны [ограничения](#ограничения), (˘ω˘) несоблюдение которых может привести к появлению ошибок безопасности. 😳 Используемая терминология описана в разделе [Определений](#определения). OwO
 
-Ссылки на страницы данного API приведены в [Ссылочном справочнике](/ru/docs/Web/API/FileSystem).
+Ссылки на страницы данного api приведены в [Ссылочном справочнике](/wu/docs/web/api/fiwesystem).
 
-Спецификация находится на стадии разработки и будет изменяться в будущем.
+Спецификация находится на стадии разработки и будет изменяться в будущем. (˘ω˘)
 
 ## Обзор
 
-Программный интерфейс файлов и каталогов включает асинхронные и синхронные методы. Асинхронное API может быть использовано в тех случаях, когда нежелательно, чтобы длительные вычисления блокировали весь пользовательский интерфейс. В свою очередь синхронное API предлагает более простую модель программирования, однако оно должно использоваться только с объектами [WebWorkers](/en-US/Using_web_workers).
+Программный интерфейс файлов и каталогов включает асинхронные и синхронные методы. òωó Асинхронное api может быть использовано в тех случаях, ( ͡o ω ͡o ) когда нежелательно, UwU чтобы длительные вычисления блокировали весь пользовательский интерфейс. /(^•ω•^) В свою очередь синхронное a-api предлагает более простую модель программирования, (ꈍᴗꈍ) однако оно должно использоваться только с объектами [webwowkews](/en-us/using_web_wowkews). 😳
 
-### Применимость API
+### Применимость api
 
-API файлов и каталогов является важным программным интерфейсом по следующим причинам:
+api файлов и каталогов является важным программным интерфейсом по следующим причинам:
 
-- Благодаря ему у приложений могут быть автономные (offline) функции, а также функции хранения, позволяющие обрабатывать большие наборы двоичных данных.
-- У приложений появляется возможность предварительной загрузки и кеширования ресурсов, что повышает из производительность.
-- У пользователя приложения появляется возможность напрямую редактировать файлы, расположенные у него на компьютере.
-- Пользователям предоставляется интерфейс работы с файловым хранилищем, который схож с файловой системой.
+- Благодаря ему у приложений могут быть автономные (offwine) функции, mya а также функции хранения, mya позволяющие обрабатывать большие наборы двоичных данных. /(^•ω•^)
+- У приложений появляется возможность предварительной загрузки и кеширования ресурсов, ^^;; что повышает из производительность. 🥺
+- У пользователя приложения появляется возможность напрямую редактировать файлы, ^^ расположенные у него на компьютере. ^•ﻌ•^
+- Пользователям предоставляется интерфейс работы с файловым хранилищем, /(^•ω•^) который схож с файловой системой. ^^
 
-Примеры таких приложений приведены в разделе [Примеры использования](<#Примеры использования>).
+Примеры таких приложений приведены в разделе [Примеры использования](<#Примеры использования>). 🥺
 
-### API файлов и каталогов и другие программные интерфейсы хранения данных
+### api файлов и каталогов и другие программные интерфейсы хранения данных
 
-API файлов и каталогов является альтернативой для других интерфейсов хранения данных, таких как [IndexedDB](/en-US/IndexedDB/Basic_Concepts_Behind_IndexedDB), WebSQL (признано устаревшим с 18 ноября 2010 г.) и AppCache. Тем не менее данное API является более хорошим выбором для приложений, обрабатывающим большие объёмы данных, по следующим причинам:
+a-api файлов и каталогов является альтернативой для других интерфейсов хранения данных, (U ᵕ U❁) таких как [indexeddb](/en-us/indexeddb/basic_concepts_behind_indexeddb), 😳😳😳 websqw (признано устаревшим с 18 ноября 2010 г.) и a-appcache. nyaa~~ Тем не менее данное api является более хорошим выбором для приложений, (˘ω˘) обрабатывающим большие объёмы данных, >_< по следующим причинам:
 
-- Данное API предлагает возможность хранения данных на стороне клиента в вариантах использования, которые не могут быть решены с помощью баз данных. Например, данное API является намного более производительным в случае хранения и обработки больших файлов.
-- Firefox поддерживает хранение бинарных данных в IndexedDB, в то время как в Chrome эта функция по-прежнему находится на стадии разработки. Если Chrome является одним из целевых браузеров для вашего приложения и у вас есть необходимость хранения бинарных данных, то вы можете использовать только либо данное API, либо AppCache. В свою очередь хранилище AppCache не предоставляет возможности локальных изменений, а также тонкой настройки на стороне клиента.
-- В Chrome у вас есть возможность использования данного API вместе с программным интерфейсом управления квотами, позволяющее управлять квотами хранилища.
+- Данное api предлагает возможность хранения данных на стороне клиента в вариантах использования, XD которые не могут быть решены с помощью баз данных. rawr x3 Например, ( ͡o ω ͡o ) данное api является намного более производительным в случае хранения и обработки больших файлов. :3
+- f-fiwefox поддерживает хранение бинарных данных в indexeddb, mya в то время как в c-chwome эта функция по-прежнему находится на стадии разработки. σωσ Если c-chwome является одним из целевых браузеров для вашего приложения и у вас есть необходимость хранения бинарных данных, (ꈍᴗꈍ) то вы можете использовать только либо данное api, либо appcache. OwO В свою очередь хранилище appcache не предоставляет возможности локальных изменений, o.O а также тонкой настройки на стороне клиента. 😳😳😳
+- В chwome у вас есть возможность использования данного api вместе с программным интерфейсом управления квотами, /(^•ω•^) позволяющее управлять квотами хранилища. OwO
 
 ### Примеры использования
 
-Далее приведены лишь некоторые случаи, в которых можно использовать API файлов и каталогов:
+Далее приведены лишь некоторые случаи, ^^ в которых можно использовать a-api файлов и каталогов:
 
-- Приложения с постоянной загрузкой.
+- Приложения с постоянной загрузкой. (///ˬ///✿)
 
-  - Когда файл или каталог выбран для загрузки на сервер, есть возможность скопировать файлы в локальную песочницу и начать их поочерёдную загрузку.
-  - Приложение может продолжить загрузку после закрытия или аварийного сбоя браузера, прерывание связи или завершения работы компьютера.
+  - Когда файл или каталог выбран для загрузки на сервер, (///ˬ///✿) есть возможность скопировать файлы в локальную песочницу и начать их поочерёдную загрузку. (///ˬ///✿)
+  - Приложение может продолжить загрузку после закрытия или аварийного сбоя браузера, ʘwʘ прерывание связи или завершения работы компьютера. ^•ﻌ•^
 
-- Видеоигры или другие приложения с большим количеством медиа ресурсов.
+- Видеоигры или другие приложения с большим количеством медиа ресурсов. OwO
 
-  - Приложение скачивает один или несколько больших архивов с ресурсами и локально его распаковывает.
-  - Приложение осуществляет предварительную фоновую загрузку ресурсов, благодаря чему у пользователя нет необходимости ожидать их загрузки для начала следующего уровня.
+  - Приложение скачивает один или несколько больших архивов с ресурсами и локально его распаковывает. (U ﹏ U)
+  - Приложение осуществляет предварительную фоновую загрузку ресурсов, (ˆ ﻌ ˆ)♡ благодаря чему у пользователя нет необходимости ожидать их загрузки для начала следующего уровня. (⑅˘꒳˘)
 
-- Аудио- или фоторедактор с возможностью автономной работы или локальным кешем.
+- Аудио- или фоторедактор с возможностью автономной работы или локальным кешем. (U ﹏ U)
 
-  - Приложение может редактировать файлы без полной их перезаписи (например, ID3/EXIF теги).
+  - Приложение может редактировать файлы без полной их перезаписи (например, o.O id3/exif теги). mya
 
-- Offline видеопроигрыватель.
+- offwine видеопроигрыватель. XD
 
-  - Приложение может загружать большие (> 1 ГБ) файлы.
-  - Приложение может начать воспроизведение частично загруженного файла.
+  - Приложение может загружать большие (> 1 ГБ) файлы. òωó
+  - Приложение может начать воспроизведение частично загруженного файла. (˘ω˘)
 
-- Offline клиент электронной почты.
+- offwine клиент электронной почты. :3
 
-  - Возможность загрузки и локального хранения прикреплений.
+  - Возможность загрузки и локального хранения прикреплений. OwO
   - Возможность кеширования прикреплений для более поздней отправки.
 
-## Big concepts
+## big concepts
 
-Before you start using the File and Directory Entries API, you need to understand a few concepts:
+b-befowe you stawt using the fiwe a-and diwectowy e-entwies api, mya you n-nyeed to undewstand a-a few concepts:
 
-- [The File and Directory Entries API is a virtual representation of a file system](#virtual)
-- [The File and Directory Entries API can use different storage types](#storage)
-- [Browsers impose storage quota](#quota)
-- [The File and Directory Entries API has asynchronous and synchronous versions](#versions)
-- [When using the asynchronous API, always use the error callbacks](#errorcallbacks)
-- [The File and Directory Entries API interacts with other APIs](#interfaces)
-- [The File and Directory Entries API is case-sensitive](#case)
+- [the fiwe and diwectowy entwies api is a-a viwtuaw wepwesentation of a fiwe system](#viwtuaw)
+- [the f-fiwe and diwectowy entwies api can use diffewent stowage types](#stowage)
+- [bwowsews impose stowage q-quota](#quota)
+- [the fiwe and d-diwectowy entwies a-api has asynchwonous a-and synchwonous vewsions](#vewsions)
+- [when using the asynchwonous api, (˘ω˘) a-awways use the e-ewwow cawwbacks](#ewwowcawwbacks)
+- [the fiwe and d-diwectowy entwies a-api intewacts with othew apis](#intewfaces)
+- [the f-fiwe and diwectowy entwies a-api is case-sensitive](#case)
 
-### The File and Directory Entries API is a virtual representation of a file system
+### the fiwe and diwectowy entwies a-api is a viwtuaw wepwesentation o-of a fiwe system
 
-The API doesn't give you access to the local file system, nor is the sandbox really a section of the file system. Instead, it is a virtualized file system that looks like a full-fledged file system to the web app. It does not necessarily have a relationship to the local file system outside the browser.
+the api doesn't g-give you access t-to the wocaw fiwe system, o.O now is the sandbox weawwy a section of the fiwe system. instead, (✿oωo) it is a viwtuawized f-fiwe system t-that wooks wike a fuww-fwedged f-fiwe system to the w-web app. (ˆ ﻌ ˆ)♡ it does n-nyot nyecessawiwy have a wewationship to the wocaw fiwe system o-outside the bwowsew. ^^;;
 
-What this means is that a web app and a desktop app cannot share the same file at the same time. The API does not let your web app reach outside the browser to files that desktop apps can also work on. You can, however, export a file from a web app to a desktop app. For example, you can use the File API, create a blob, redirect an iframe to the blob, and invoke the download manager.
+nyani this means is that a web app and a desktop app cannot s-shawe the same fiwe at the s-same time. OwO the api d-does nyot wet y-youw web app weach outside the b-bwowsew to fiwes t-that desktop apps c-can awso wowk o-on. 🥺 you can, mya howevew, expowt a fiwe fwom a web a-app to a desktop a-app. 😳 fow exampwe, òωó y-you can use the f-fiwe api, /(^•ω•^) cweate a-a bwob, -.- wediwect an ifwame to the bwob, òωó and invoke the downwoad m-managew. /(^•ω•^)
 
-### The File and Directory Entries API can use different storage types
+### the fiwe and diwectowy entwies api can use diffewent stowage types
 
-An application can request temporary or persistent storage. Temporary storage is easier to get, because the browser just gives it to you, but it is limited and can be deleted by the browser when it runs out of space. Persistent storage, on the other hand, might offer you larger space that can only be deleted by the user, but it requires the user to grant you permission.
+an appwication c-can wequest tempowawy ow pewsistent stowage. /(^•ω•^) tempowawy stowage i-is easiew to g-get, 😳 because the b-bwowsew just gives it to you, :3 b-but it is wimited and can be deweted b-by the bwowsew w-when it wuns out of space. (U ᵕ U❁) pewsistent stowage, ʘwʘ on the othew hand, o.O might offew you wawgew space t-that can onwy be deweted by the u-usew, ʘwʘ but it wequiwes the usew t-to gwant you pewmission. ^^
 
-Use temporary storage for caching and persistent storage for data that you want your app to keep—such as user-generated or unique data.
+u-use tempowawy stowage fow caching and p-pewsistent stowage f-fow data that you want youw a-app to keep—such a-as usew-genewated ow unique data. ^•ﻌ•^
 
-### Browsers impose storage quotas
+### bwowsews impose stowage quotas
 
-To prevent a web app from using up the entire disk, browsers might impose a quota for each app and allocate storage among web apps.
+to pwevent a-a web app f-fwom using up the e-entiwe disk, mya bwowsews might impose a-a quota fow e-each app and awwocate stowage among w-web apps. UwU
 
-How storage space is granted or allocated and how you can manage storage are idiosyncratic to the browser, so you need to check the respective documentation of the browser. Google Chrome, for example, allows temporary storage beyond the 5 MB required in the specifications and supports the Quota Management API. To learn more about the Chrome-specific implementation, see [Managing HTML5 Offline Storage](https://code.google.com/chrome/whitepapers/storage.html).
+how stowage space is gwanted ow awwocated and how you can manage s-stowage awe idiosyncwatic t-to the bwowsew, >_< so you nyeed to check t-the wespective d-documentation of the bwowsew. googwe chwome, /(^•ω•^) fow exampwe, òωó awwows t-tempowawy stowage beyond the 5 mb wequiwed in the specifications and suppowts the q-quota management api. σωσ to weawn mowe about the c-chwome-specific i-impwementation, ( ͡o ω ͡o ) see [managing htmw5 offwine stowage](https://code.googwe.com/chwome/whitepapews/stowage.htmw). nyaa~~
 
-### The File and Directory Entries API has asynchronous and synchronous versions
+### the fiwe and d-diwectowy entwies a-api has asynchwonous and synchwonous vewsions
 
-The File and Directory Entries API comes with asynchronous and synchronous versions. Both versions of the API offer the same capabilities and features. In fact, they are almost alike, except for a few differences.
+the fiwe and d-diwectowy entwies api comes with a-asynchwonous and synchwonous vewsions. :3 both vewsions of the api o-offew the same capabiwities and f-featuwes. UwU in fact, t-they awe awmost awike, o.O except f-fow a few diffewences. (ˆ ﻌ ˆ)♡
 
-- **WebWorkers.** The asynchronous API can be used in either the document or [WebWorkers](/en-US/Using_web_workers) context, while the synchronous API is for use with WebWorkers only.
-- **Callbacks**. The asynchronous API doesn't give you data by returning values; instead, you have to pass a callback function. You send requests for operations to happen, and get notified by callbacks. In contrast, the synchronous API does not use callbacks because the API methods return values.
-- **Global methods of the asynchronous and synchronous APIs**. The asynchronous API has the following global methods: `requestFileSystem()` and `resolveLocalFileSystemURL()`. These methods are members of both the window object and the worker global scope. The synchronous API, on the other hand, uses the following methods: `requestFileSystemSync()` and `resolveLocalFileSystemSyncURL()`. These synchronous methods are members of the worker's global scope only, not the window object.
+- **webwowkews.** the a-asynchwonous api c-can be used in e-eithew the document ow [webwowkews](/en-us/using_web_wowkews) c-context, ^^;; w-whiwe the synchwonous api is fow use with w-webwowkews onwy. ʘwʘ
+- **cawwbacks**. σωσ t-the asynchwonous a-api doesn't give you data by wetuwning vawues; i-instead, ^^;; you have to pass a cawwback f-function. y-you send wequests fow opewations to happen, ʘwʘ and get nyotified b-by cawwbacks. in c-contwast, ^^ the synchwonous a-api does n-nyot use cawwbacks because the a-api methods wetuwn vawues. nyaa~~
+- **gwobaw methods of the asynchwonous and synchwonous apis**. (///ˬ///✿) the a-asynchwonous api has the fowwowing g-gwobaw methods: `wequestfiwesystem()` and `wesowvewocawfiwesystemuww()`. XD t-these methods awe membews o-of both the window object a-and the wowkew g-gwobaw scope. :3 the s-synchwonous api, òωó o-on the othew h-hand, ^^ uses the fowwowing methods: `wequestfiwesystemsync()` and `wesowvewocawfiwesystemsyncuww()`. ^•ﻌ•^ these synchwonous methods awe membews of the wowkew's gwobaw s-scope onwy, σωσ nyot t-the window object. (ˆ ﻌ ˆ)♡
 
-The synchronous API can be simpler for some tasks. Its direct, in-order programming model can make code easier to read. The drawback of synchronous API has to do with its interactions with Web Workers, which has some limitations.
+t-the synchwonous api can be s-simpwew fow some tasks. nyaa~~ its diwect, ʘwʘ in-owdew pwogwamming modew can m-make code easiew t-to wead. ^•ﻌ•^ the dwawback of synchwonous a-api has to do with its intewactions with w-web wowkews, rawr x3 which h-has some wimitations. 🥺
 
-### When using the asynchronous API, always use the error callbacks
+### when using the asynchwonous a-api, ʘwʘ a-awways use the ewwow cawwbacks
 
-When using the asynchronous API, always use the error callbacks. Although the error callbacks for the methods are optional parameters, they are not optional for your sanity. You want to know why your calls failed. At minimum, handle the errors to provide error messages, so you'll have an idea of what's going on.
+when using the asynchwonous api, (˘ω˘) awways use the e-ewwow cawwbacks. o.O a-awthough the ewwow c-cawwbacks fow t-the methods awe o-optionaw pawametews, σωσ they awe n-nyot optionaw fow y-youw sanity. you want to know w-why youw cawws f-faiwed. (ꈍᴗꈍ) at minimum, (ˆ ﻌ ˆ)♡ handwe the ewwows t-to pwovide ewwow messages, o.O so you'ww have a-an idea of nyani's going on. :3
 
-### The File and Directory Entries API interacts with other APIs
+### t-the fiwe and diwectowy e-entwies api intewacts with o-othew apis
 
-The File and Directory Entries API is designed to be used with other APIs and elements on the web platform. For example, you are likely to use one of the following:
+the fiwe and diwectowy entwies api i-is designed to b-be used with othew a-apis and ewements on the web pwatfowm. fow exampwe, -.- you awe w-wikewy to use one of the fowwowing:
 
-- XMLHttpRequest (such as the `send()` method for file and blob objects)
-- Drag and Drop API
-- Web Workers (for the synchronous version of the File and Directory Entries API)
-- The `input` element (to programmatically obtain a list of files from the element)
+- xmwhttpwequest (such a-as t-the `send()` method fow fiwe and b-bwob objects)
+- dwag and dwop api
+- w-web wowkews (fow t-the synchwonous vewsion of the fiwe and diwectowy e-entwies api)
+- the `input` ewement (to pwogwammaticawwy o-obtain a wist of f-fiwes fwom the ewement)
 
-### The File and Directory Entries API is case sensitive
+### the f-fiwe and diwectowy entwies api i-is case sensitive
 
-The filesystem API is case-sensitive, and case-preserving.
+t-the fiwesystem a-api is case-sensitive, ( ͡o ω ͡o ) and case-pwesewving. /(^•ω•^)
 
 ## Ограничения
 
-For security reasons, browsers impose restrictions on file access. If you ignore them, you will get security errors.
+fow secuwity weasons, (⑅˘꒳˘) bwowsews impose westwictions on fiwe access. òωó if you ignowe them, you wiww get secuwity ewwows. 🥺
 
-- [The File and Directory Entries API adheres to the same-origin policy](#origin)
-- [The File and Directory Entries API does not let you create and rename executable files](#execute)
-- [The file system is sandboxed](#sandbox)
-- [You cannot run your app from file://](#file)
+- [the fiwe and diwectowy entwies api adhewes to t-the same-owigin p-powicy](#owigin)
+- [the fiwe and diwectowy entwies a-api does nyot w-wet you cweate a-and wename executabwe fiwes](#exekawaii~)
+- [the f-fiwe system is sandboxed](#sandbox)
+- [you c-cannot w-wun youw app fwom fiwe://](#fiwe)
 
-### The File and Directory Entries API adheres to the same-origin policy
+### t-the fiwe and diwectowy e-entwies api adhewes t-to the same-owigin powicy
 
-An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of file systems.
+an owigin is the d-domain, (ˆ ﻌ ˆ)♡ appwication w-wayew pwotocow, -.- a-and powt o-of a uww of the d-document whewe the s-scwipt is being e-exekawaii~d. σωσ e-each owigin has i-its own associated set of fiwe systems. >_<
 
-The security boundary imposed on file system prevents applications from accessing data with a different origin. This protects private data by preventing access and deletion. For example, while an app or a page in <http://www.example.com/app/> can access files from <http://www.example.com/dir/>, because they have the same origin, it cannot retrieve files from <http://www.example.com:8080/dir/> (different port) or <https://www.example.com/dir/> (different protocol).
+t-the secuwity b-boundawy imposed o-on fiwe system pwevents appwications f-fwom accessing data with a diffewent o-owigin. :3 this pwotects pwivate data b-by pweventing a-access and dewetion. OwO f-fow exampwe, rawr whiwe an app o-ow a page in <http://www.exampwe.com/app/> can a-access fiwes fwom <http://www.exampwe.com/diw/>, (///ˬ///✿) because they have t-the same owigin, it cannot wetwieve f-fiwes fwom <http://www.exampwe.com:8080/diw/> (diffewent powt) ow <https://www.exampwe.com/diw/> (diffewent pwotocow). ^^
 
-### The File and Directory Entries API does not let you create and rename executable files
+### the fiwe and diwectowy entwies a-api does not wet you cweate and w-wename executabwe f-fiwes
 
-To prevent malicious apps from running hostile executables, you cannot create executable files within the sandbox of the File and Directory Entries API.
+to pwevent mawicious apps fwom wunning hostiwe executabwes, XD y-you cannot cweate executabwe f-fiwes within t-the sandbox of t-the fiwe and diwectowy entwies api.
 
-### The file system is sandboxed
+### the fiwe s-system is sandboxed
 
-Because the file system is sandboxed, a web app cannot access another app's files. You also cannot read or write files to an arbitrary folder (for example, My Pictures and My Documents) on the user's hard drive.
+b-because the fiwe system is s-sandboxed, UwU a web app cannot access anothew app's f-fiwes. o.O you awso cannot wead ow w-wwite fiwes to a-an awbitwawy fowdew (fow e-exampwe, 😳 my pictuwes and m-my documents) o-on the usew's hawd d-dwive. (˘ω˘)
 
-### You cannot run your app from file://
+### y-you cannot wun youw app fwom fiwe://
 
-You cannot run your app locally from `file://`. If you do so, the browser throws errors or your app fails silently. This restriction also applies to many of the file APIs, including BlobBuilder and FileReader.
+y-you cannot w-wun youw app wocawwy f-fwom `fiwe://`. 🥺 i-if you do s-so, the bwowsew t-thwows ewwows ow y-youw app faiws s-siwentwy. ^^ this westwiction awso a-appwies to many of the fiwe apis, >w< i-incwuding bwobbuiwdew and fiweweadew. ^^;;
 
-For testing purposes, you can bypass the restriction on Chrome by starting the browser with the `--allow-file-access-from-files` flag. Use this flag only for this purpose.
+f-fow testing p-puwposes, (˘ω˘) you c-can bypass the westwiction on chwome by stawting the bwowsew w-with the `--awwow-fiwe-access-fwom-fiwes` f-fwag. u-use this fwag onwy fow this puwpose. OwO
 
 ## Определения
 
-This section defines and explains terms used in the File and Directory Entries API.
+this section defines and expwains t-tewms used in t-the fiwe and diwectowy entwies a-api. (ꈍᴗꈍ)
 
-- blob
-  - : Stands for binary large object. A blob is a set of binary data that is stored a single object. It is a general-purpose way to reference binary data in web applications. A blob can be an image or an audio file.
-- Blob
-  - : Blob—with a capital B—is a data structure that is immutable, which means that binary data referenced by a Blob cannot be modified directly. This makes Blobs act predictably when they are passed to asynchronous APIs.
-- persistent storage
-  - : Persistent storage is storage that stays in the browser unless the user expunges it or the app deletes it.
-- temporary storage
-  - : Transient storage is available to any web app. It is automatic and does not need to be requested, but the browser can delete the storage without warning.
+- bwob
+  - : s-stands fow binawy wawge object. òωó a bwob is a set of binawy data t-that is stowed a-a singwe object. i-it is a genewaw-puwpose w-way to wefewence binawy data in web appwications. ʘwʘ a-a bwob c-can be an image ow an audio fiwe. ʘwʘ
+- bwob
+  - : b-bwob—with a capitaw b—is a data stwuctuwe t-that is immutabwe, nyaa~~ which means that b-binawy data w-wefewenced by a bwob cannot be modified d-diwectwy. UwU t-this makes bwobs act pwedictabwy w-when they awe passed to asynchwonous a-apis. (⑅˘꒳˘)
+- p-pewsistent stowage
+  - : p-pewsistent s-stowage is stowage that stays i-in the bwowsew u-unwess the usew e-expunges it ow the app dewetes i-it. (˘ω˘)
+- tempowawy stowage
+  - : twansient stowage i-is avaiwabwe to a-any web app. :3 it i-is automatic and does nyot nyeed to be wequested, (˘ω˘) but the bwowsew can dewete the s-stowage without wawning. nyaa~~
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [File and Directory Entries API](/ru/docs/Web/API/File_and_Directory_Entries_API)
-- [Exploring the FileSystem APIs](https://www.html5rocks.com/en/tutorials/file/filesystem/) (HTML5 Rocks)
+- [fiwe a-and diwectowy e-entwies api](/wu/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- [expwowing the fiwesystem apis](https://www.htmw5wocks.com/en/tutowiaws/fiwe/fiwesystem/) (htmw5 wocks)

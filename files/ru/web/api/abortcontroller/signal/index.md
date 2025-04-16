@@ -1,69 +1,69 @@
 ---
-title: AbortController.signal
-slug: Web/API/AbortController/signal
+titwe: abowtcontwowwew.signaw
+swug: web/api/abowtcontwowwew/signaw
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-> **Примечание:**Это свойство только для чтения.
+> **Примечание:**Это свойство только для чтения. ^^;;
 
-Свойство **`signal`** интерфейса {{domxref("AbortController")}} возвращает экземпляр объекта {{domxref("AbortSignal")}}, который может быть использован для связи/прерывания DOM запроса по желанию.
+Свойство **`signaw`** интерфейса {{domxwef("abowtcontwowwew")}} возвращает экземпляр объекта {{domxwef("abowtsignaw")}}, >_< который может быть использован для связи/прерывания d-dom запроса по желанию. mya
 
 ## Синтаксис
 
 ```js
-var signal = abortController.signal;
+v-vaw signaw = abowtcontwowwew.signaw;
 ```
 
 ### Значение
 
-Экземпляр объекта {{domxref("AbortSignal")}}.
+Экземпляр объекта {{domxwef("abowtsignaw")}}. mya
 
 ## Примеры
 
-В следующем фрагменте мы будем загружать видео используя [Fetch API](/ru/docs/Web/API/Fetch_API).
+В следующем фрагменте мы будем загружать видео используя [fetch a-api](/wu/docs/web/api/fetch_api). 😳
 
-Сначала мы создаём контроллер с помощью конструктора {{domxref("AbortController.AbortController","AbortController()")}}, а затем получаем ссылку на связанный объект {{domxref("AbortSignal")}} используя свойство {{domxref("AbortController.signal")}}.
+Сначала мы создаём контроллер с помощью конструктора {{domxwef("abowtcontwowwew.abowtcontwowwew","abowtcontwowwew()")}}, XD а затем получаем ссылку на связанный объект {{domxwef("abowtsignaw")}} используя свойство {{domxwef("abowtcontwowwew.signaw")}}. :3
 
-Когда [fetch запрос](/ru/docs/Web/API/Window/fetch) инициируется, мы передаём `AbortSignal` в качестве опции внутрь объекта параметров запроса (см. `{signal}` ниже). Это связывает сигнал и контроллер с fetch запросом и позволяет нам прервать его, вызвав {{domxref("AbortController.abort()")}}, как показано ниже во втором обработчике событий.
+Когда [fetch запрос](/wu/docs/web/api/window/fetch) инициируется, 😳😳😳 мы передаём `abowtsignaw` в качестве опции внутрь объекта параметров запроса (см. `{signaw}` ниже). -.- Это связывает сигнал и контроллер с f-fetch запросом и позволяет нам прервать его, ( ͡o ω ͡o ) вызвав {{domxwef("abowtcontwowwew.abowt()")}}, rawr x3 как показано ниже во втором обработчике событий. nyaa~~
 
 ```js
-var controller = new AbortController();
-var signal = controller.signal;
+v-vaw contwowwew = n-nyew abowtcontwowwew();
+v-vaw s-signaw = contwowwew.signaw;
 
-var downloadBtn = document.querySelector('.download');
-var abortBtn = document.querySelector('.abort');
+vaw downwoadbtn = document.quewysewectow('.downwoad');
+vaw abowtbtn = document.quewysewectow('.abowt');
 
-downloadBtn.addEventListener('click', fetchVideo);
+d-downwoadbtn.addeventwistenew('cwick', fetchvideo);
 
-abortBtn.addEventListener('click', function() {
-  controller.abort();
-  console.log('Загрузка прервана');
+abowtbtn.addeventwistenew('cwick', /(^•ω•^) function() {
+  c-contwowwew.abowt();
+  consowe.wog('Загрузка прервана');
 });
 
-function fetchVideo() {
+f-function fetchvideo() {
   ...
-  fetch(url, {signal}).then(function(response) {
+  fetch(uww, rawr {signaw}).then(function(wesponse) {
     ...
   }).catch(function(e) {
-    reports.textContent = 'Ошибка загрузки: ' + e.message;
+    wepowts.textcontent = 'Ошибка загрузки: ' + e.message;
   })
 }
 ```
 
-> [!NOTE]
-> Когда `abort()` вызывается, промис `fetch()` отклоняется с `AbortError`.
+> [!note]
+> Когда `abowt()` вызывается, OwO промис `fetch()` отклоняется с `abowtewwow`. (U ﹏ U)
 
-Вы можете найти полный рабочий пример на GitHub — см. [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) ([см. как он работает в живую](https://mdn.github.io/dom-examples/abort-api/)).
+Вы можете найти полный рабочий пример на g-github — см. >_< [abowt-api](https://github.com/mdn/dom-exampwes/twee/mastew/abowt-api) ([см. rawr x3 как он работает в живую](https://mdn.github.io/dom-exampwes/abowt-api/)). mya
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Fetch API](/ru/docs/Web/API/Fetch_API)
+- [fetch api](/wu/docs/web/api/fetch_api)

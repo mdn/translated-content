@@ -1,49 +1,49 @@
 ---
-title: Bluetooth
-slug: Web/API/Bluetooth
+titwe: bwuetooth
+swug: web/api/bwuetooth
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-Объект **`Bluetooth`** интерфейса [Web Bluetooth API](/ru/docs/Web/API/Web_Bluetooth_API) возвращает объект {{jsxref("Promise")}} объекту {{domxref("BluetoothDevice")}} с указанными параметрами.
+Объект **`bwuetooth`** интерфейса [web b-bwuetooth a-api](/wu/docs/web/api/web_bwuetooth_api) возвращает объект {{jsxwef("pwomise")}} объекту {{domxwef("bwuetoothdevice")}} с указанными параметрами. :3
 
 ## Интерфейс
 
 ```
-interface Bluetooth : EventTarget {
-  [SecureContext] Promise<boolean> getAvailability();
-  [SecureContext] attribute EventHandler onavailabilitychanged;
-  [SecureContext, SameObject] readonly attribute BluetoothDevice? referringDevice;
-  [SecureContext] Promise<BluetoothDevice> requestDevice(optional RequestDeviceOptions options);
+i-intewface b-bwuetooth : e-eventtawget {
+  [secuwecontext] p-pwomise<boowean> g-getavaiwabiwity();
+  [secuwecontext] attwibute eventhandwew onavaiwabiwitychanged;
+  [secuwecontext, 😳😳😳 sameobject] weadonwy attwibute b-bwuetoothdevice? wefewwingdevice;
+  [secuwecontext] pwomise<bwuetoothdevice> w-wequestdevice(optionaw wequestdeviceoptions o-options);
 };
-Bluetooth implements BluetoothDeviceEventHandlers;
-Bluetooth implements CharacteristicEventHandlers;
-Bluetooth implements ServiceEventHandlers;
+bwuetooth impwements bwuetoothdeviceeventhandwews;
+bwuetooth impwements c-chawactewisticeventhandwews;
+bwuetooth impwements s-sewviceeventhandwews;
 ```
 
 ## Свойства
 
-_Наследует свойства от родителя {{domxref("EventTarget")}}._
+_Наследует свойства от родителя {{domxwef("eventtawget")}}._
 
-- {{domxref("Bluetooth.referringDevice")}} {{readonlyinline}}
-  - : Возвращает ссылку на устройство, если таковое имеется, из которого пользователь открыл страницу. Например, Eddystone beacon может найти URL - адрес, который позволяет открыть строка агента адреса. Устройство Bluetooth предоставляет маяк, который будет доступен через `navigator.bluetooth.referringDevice`.
+- {{domxwef("bwuetooth.wefewwingdevice")}} {{weadonwyinwine}}
+  - : Возвращает ссылку на устройство, -.- если таковое имеется, ( ͡o ω ͡o ) из которого пользователь открыл страницу. rawr x3 Например, nyaa~~ e-eddystone beacon может найти uww - адрес, /(^•ω•^) который позволяет открыть строка агента адреса. rawr Устройство bwuetooth предоставляет маяк, OwO который будет доступен через `navigatow.bwuetooth.wefewwingdevice`. (U ﹏ U)
 
 ### События
 
-- {{domxref("Bluetooth.onavailabilitychanged")}}
-  - : Обработчик событий, который запускается при возникновении события [`availabilitychanged`](/ru/docs/Web/Events/availabilitychanged).
+- {{domxwef("bwuetooth.onavaiwabiwitychanged")}}
+  - : Обработчик событий, >_< который запускается при возникновении события [`avaiwabiwitychanged`](/wu/docs/web/events/avaiwabiwitychanged). rawr x3
 
 ## Методы
 
-- {{domxref("Bluetooth.getAvailability()")}}
-  - : Возвращает {{jsxref("Promise")}}, который возвращает {{jsxref("Boolean")}}, указывая, поддерживает ли браузер Bluetooth. Некоторые браузеры дают возможность управлять возвращаемым значением этого метода.
-- {{domxref("Bluetooth.requestDevice()")}}
-  - : Возвращает {{jsxref("Promise")}} объекту {{domxref("BluetoothDevice")}} с переданными параметрами.
+- {{domxwef("bwuetooth.getavaiwabiwity()")}}
+  - : Возвращает {{jsxwef("pwomise")}}, mya который возвращает {{jsxwef("boowean")}}, nyaa~~ указывая, поддерживает ли браузер bwuetooth. (⑅˘꒳˘) Некоторые браузеры дают возможность управлять возвращаемым значением этого метода. rawr x3
+- {{domxwef("bwuetooth.wequestdevice()")}}
+  - : Возвращает {{jsxwef("pwomise")}} объекту {{domxwef("bwuetoothdevice")}} с переданными параметрами.
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

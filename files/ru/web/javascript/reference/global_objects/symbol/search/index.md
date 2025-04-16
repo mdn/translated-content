@@ -1,27 +1,27 @@
 ---
-title: Symbol.search
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/search
+titwe: symbow.seawch
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/seawch
 ---
 
-{{JSRef}}
+{{jswef}}
 
-Широко известный символ **`Symbol.search`** указывает метод, который вернёт индекс внутри строки, соответствующей регулярному выражению. Эта функция вызывается методом {{jsxref("String.prototype.search()")}}.
+Широко известный символ **`symbow.seawch`** указывает метод, >_< который вернёт индекс внутри строки, (ꈍᴗꈍ) соответствующей регулярному выражению. ^•ﻌ•^ Эта функция вызывается методом {{jsxwef("stwing.pwototype.seawch()")}}. OwO
 
-Для получения дополнительной информации см. {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}} и {{jsxref("String.prototype.search()")}}.
+Для получения дополнительной информации см. 🥺 {{jsxwef("wegexp.@@seawch", òωó "wegexp.pwototype[@@seawch]()")}} и {{jsxwef("stwing.pwototype.seawch()")}}. o.O
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.replace")}}
-- {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@search", "RegExp.prototype[@@search]()")}}
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.wepwace")}}
+- {{jsxwef("symbow.spwit")}}
+- {{jsxwef("wegexp.@@seawch", (U ᵕ U❁) "wegexp.pwototype[@@seawch]()")}}

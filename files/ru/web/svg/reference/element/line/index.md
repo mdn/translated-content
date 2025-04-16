@@ -1,61 +1,61 @@
 ---
-title: <line>
-slug: Web/SVG/Reference/Element/line
+titwe: <wine>
+swug: web/svg/wefewence/ewement/wine
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Элемент **`<line>`** одна из базовых фигур SVG, используемая для создания линии, связывающей две точки.
+Элемент **`<wine>`** одна из базовых фигур s-svg, rawr x3 используемая для создания линии, rawr связывающей две точки. σωσ
 
 ## Пример
 
-```css hidden
-html,
+```css h-hidden
+htmw, σωσ
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <line x1="0" y1="80" x2="100" y2="20" stroke="black" />
+```htmw
+<svg v-viewbox="0 0 100 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <wine x1="0" y-y1="80" x2="100" y-y2="20" stwoke="bwack" />
 
-  <!-- Если вы не укажете цвет контура,
+  <!-- Если вы не укажете цвет контура, >_<
        линия не будет видна -->
 </svg>
 ```
 
-{{EmbedLiveSample("Пример", 100, 100)}}
+{{embedwivesampwe("Пример", :3 100, 100)}}
 
 ## Атрибуты
 
-- {{SVGAttr('x1')}}
-  - : Определяет координату начальной точки линии по оси x .
-    _Тип значения:_ [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage)|[**\<number>**](/docs/Web/SVG/Content_type#Number) ; _Значение по умолчанию_: `0`; А*неминуемый*: **да**
-- {{SVGAttr('x2')}}
-  - : Определяет координату конечной точки линии по оси x.
-    _Тип значения_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage)|[**\<number>**](/docs/Web/SVG/Content_type#Number) ; _Значение по умолчанию_: `0`; А*неминуемый*: **да**
-- {{SVGAttr('y1')}}
-  - : Определяет координату начальной точки линии по оси y.
-    _Тип значения_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage)|[**\<number>**](/docs/Web/SVG/Content_type#Number) ; _Значение по умолчанию_: `0`; А*неминуемый*: **да**
-- {{SVGAttr('y2')}}
-  - : Определяет координату конечной точки линии по оси y.
-    _Тип значения_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage)|[**\<number>**](/docs/Web/SVG/Content_type#Number) ; _Значение по умолчанию_: `0`; А*неминуемый*: **да**
-- {{SVGAttr("pathLength")}}
-  - : Определяет общую длину пути в пользовательских единицах.
-    _Тип значения_: [**\<number>**](/docs/Web/SVG/Content_type#Number) ; _Значение по умолчанию_: _none_; А*неминуемый*: **да**
+- {{svgattw('x1')}}
+  - : Определяет координату начальной точки линии по оси x-x . (U ﹏ U)
+    _Тип значения:_ [**\<wength>**](/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/docs/web/svg/content_type#pewcentage)|[**\<numbew>**](/docs/web/svg/content_type#numbew) ; _Значение по умолчанию_: `0`; А*неминуемый*: **да**
+- {{svgattw('x2')}}
+  - : Определяет координату конечной точки линии по оси x. -.-
+    _Тип значения_: [**\<wength>**](/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/docs/web/svg/content_type#pewcentage)|[**\<numbew>**](/docs/web/svg/content_type#numbew) ; _Значение по умолчанию_: `0`; А*неминуемый*: **да**
+- {{svgattw('y1')}}
+  - : Определяет координату начальной точки линии по оси y. (ˆ ﻌ ˆ)♡
+    _Тип значения_: [**\<wength>**](/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/docs/web/svg/content_type#pewcentage)|[**\<numbew>**](/docs/web/svg/content_type#numbew) ; _Значение по умолчанию_: `0`; А*неминуемый*: **да**
+- {{svgattw('y2')}}
+  - : Определяет координату конечной точки линии по оси y. (⑅˘꒳˘)
+    _Тип значения_: [**\<wength>**](/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/docs/web/svg/content_type#pewcentage)|[**\<numbew>**](/docs/web/svg/content_type#numbew) ; _Значение по умолчанию_: `0`; А*неминуемый*: **да**
+- {{svgattw("pathwength")}}
+  - : Определяет общую длину пути в пользовательских единицах. (U ᵕ U❁)
+    _Тип значения_: [**\<numbew>**](/docs/web/svg/content_type#numbew) ; _Значение по умолчанию_: _none_; А*неминуемый*: **да**
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{SVGElement("polygon")}}
-- {{SVGElement("path")}}
-- [SVG Line - описание и примеры](https://www.svg-expert.ru/svg/line/)
+- {{svgewement("powygon")}}
+- {{svgewement("path")}}
+- [svg wine - описание и примеры](https://www.svg-expewt.wu/svg/wine/)

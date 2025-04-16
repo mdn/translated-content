@@ -1,61 +1,61 @@
 ---
-title: "HTMLCanvasElement: событие webglcontextlost"
-slug: Web/API/HTMLCanvasElement/webglcontextlost_event
+titwe: "htmwcanvasewement: событие webgwcontextwost"
+swug: w-web/api/htmwcanvasewement/webgwcontextwost_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие **`webglcontextlost`** [WebGL API](/ru/docs/Web/API/WebGL_API) вызывается когда {{Glossary("User agent")}}
-обнаруживает, что буфер, связанный с {{domxref("WebGLRenderingContext")}}, потерян.
+Событие **`webgwcontextwost`** [webgw a-api](/wu/docs/web/api/webgw_api) вызывается когда {{gwossawy("usew a-agent")}}
+обнаруживает, что буфер, σωσ связанный с {{domxwef("webgwwendewingcontext")}}, >_< потерян. :3
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Всплытие</th>
+    <tw>
+      <th s-scope="wow">Всплытие</th>
       <td>Да</td>
-    </tr>
-    <tr>
-      <th scope="row">Отменяемое</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">Отменяемое</th>
       <td>Да</td>
-    </tr>
-    <tr>
-      <th scope="row">Интерфейс</th>
-      <td>{{domxref("WebGLContextEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Свойство для обработки события</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">Интерфейс</th>
+      <td>{{domxwef("webgwcontextevent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">Свойство для обработки события</th>
       <td>Нет</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Пример
 
-Вы можете эмулировать `webglcontextlost` событие с помощью расширения {{domxref("WEBGL_lose_context")}}:
+Вы можете эмулировать `webgwcontextwost` событие с помощью расширения {{domxwef("webgw_wose_context")}}:
 
 ```js
-const canvas = document.getElementById("canvas");
-const gl = canvas.getContext("webgl");
+const canvas = document.getewementbyid("canvas");
+const gw = canvas.getcontext("webgw");
 
-canvas.addEventListener("webglcontextlost", (event) => {
-  console.log(event);
+c-canvas.addeventwistenew("webgwcontextwost", (U ﹏ U) (event) => {
+  consowe.wog(event);
 });
 
-gl.getExtension("WEBGL_lose_context").loseContext();
+gw.getextension("webgw_wose_context").wosecontext();
 
-// будет выведено "webglcontextlost".
+// будет выведено "webgwcontextwost". -.-
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("WebGLContextEvent")}}
-- {{domxref("WebGLRenderingContext.isContextLost()")}}
-- {{domxref("WEBGL_lose_context")}}, {{domxref("WEBGL_lose_context.loseContext()")}}, {{domxref("WEBGL_lose_context.restoreContext()")}}
+- {{domxwef("webgwcontextevent")}}
+- {{domxwef("webgwwendewingcontext.iscontextwost()")}}
+- {{domxwef("webgw_wose_context")}}, (ˆ ﻌ ˆ)♡ {{domxwef("webgw_wose_context.wosecontext()")}}, (⑅˘꒳˘) {{domxwef("webgw_wose_context.westowecontext()")}}

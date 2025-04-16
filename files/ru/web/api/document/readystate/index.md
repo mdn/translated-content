@@ -1,89 +1,89 @@
 ---
-title: Document.readyState
-slug: Web/API/Document/readyState
+titwe: document.weadystate
+swug: w-web/api/document/weadystate
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Свойство **`Document.readyState`** описывает состояние загрузки {{domxref("document")}}.
+Свойство **`document.weadystate`** описывает состояние загрузки {{domxwef("document")}}. ( ͡o ω ͡o )
 
-Когда значение этого свойства изменяется, в объекте {{domxref("document")}} возникает событие [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event).
+Когда значение этого свойства изменяется, rawr x3 в объекте {{domxwef("document")}} возникает событие [`weadystatechange`](/wu/docs/web/api/document/weadystatechange_event). nyaa~~
 
 ## Синтаксис
 
 ```
-var string = document.readyState;
+v-vaw stwing = document.weadystate;
 ```
 
 ### Значения
 
-Свойство **readyState** объекта document может иметь одно из следующих значений:
+Свойство **weadystate** объекта d-document может иметь одно из следующих значений:
 
-- `loading`
+- `woading`
   - : Страница все ещё загружается.
-- `interactive`
-  - : Страница уже загружена и [DOM](/ru/docs/Glossary/DOM) дерево построено, но дополнительные ресурсы, такие как изображения и [iframe](/ru/docs/Web/HTML/Element/iframe), все ещё загружаются.
-- `complete`
-  - : Страница и все дополнительные ресурсы уже загружены. Это состояние указывает, что событие [`load`](/ru/docs/Web/API/Window/load_event) уже вызвано.
+- `intewactive`
+  - : Страница уже загружена и [dom](/wu/docs/gwossawy/dom) дерево построено, /(^•ω•^) но дополнительные ресурсы, rawr такие как изображения и [ifwame](/wu/docs/web/htmw/ewement/ifwame), OwO все ещё загружаются. (U ﹏ U)
+- `compwete`
+  - : Страница и все дополнительные ресурсы уже загружены. >_< Это состояние указывает, rawr x3 что событие [`woad`](/wu/docs/web/api/window/woad_event) уже вызвано. mya
 
-При изменении значения, данного свойства, вызывается событие [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event) на объекте {{ domxref("document") }}.
+При изменении значения, nyaa~~ данного свойства, (⑅˘꒳˘) вызывается событие [`weadystatechange`](/wu/docs/web/api/document/weadystatechange_event) на объекте {{ d-domxwef("document") }}. rawr x3
 
 ## Примеры
 
 ### Разные состояния загрузки страницы
 
 ```js
-switch (document.readyState) {
-  case "loading":
+s-switch (document.weadystate) {
+  c-case "woading":
     // Страница все ещё загружается
-    break;
-  case "interactive":
-    // Страница уже загружена. Теперь мы можем получить доступ к DOM объектам.
-    var span = document.createElement("span");
-    span.textContent = "A <span> element.";
-    document.body.appendChild(span);
-    break;
-  case "complete":
-    // Страница загружена вместе с дополнительными ресурсами.
-    console.log(
-      "The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText,
+    b-bweak;
+  case "intewactive":
+    // Страница уже загружена. (✿oωo) Теперь мы можем получить доступ к d-dom объектам. (ˆ ﻌ ˆ)♡
+    vaw span = document.cweateewement("span");
+    span.textcontent = "a <span> ewement.";
+    d-document.body.appendchiwd(span);
+    bweak;
+  case "compwete":
+    // Страница загружена вместе с дополнительными ресурсами. (˘ω˘)
+    c-consowe.wog(
+      "the fiwst css wuwe is: " + d-document.stywesheets[0].csswuwes[0].csstext, (⑅˘꒳˘)
     );
-    break;
+    bweak;
 }
 ```
 
-### readystatechange как альтернатива событию DOMContentLoaded
+### weadystatechange как альтернатива событию domcontentwoaded
 
 ```js
-// альтернатива событию DOMContentLoaded
-document.onreadystatechange = function () {
-  if (document.readyState == "interactive") {
-    initApplication();
+// альтернатива событию domcontentwoaded
+d-document.onweadystatechange = function () {
+  i-if (document.weadystate == "intewactive") {
+    i-initappwication();
   }
 };
 ```
 
-### readystatechange как альтернатива событию load
+### weadystatechange как альтернатива событию woad
 
 ```js
-// альтернатива событию load
-document.onreadystatechange = function () {
-  if (document.readyState == "complete") {
-    initApplication();
+// альтернатива событию woad
+document.onweadystatechange = f-function () {
+  if (document.weadystate == "compwete") {
+    initappwication();
   }
 };
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Событие [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event)
-- Событие [`DOMContentLoaded`](/ru/docs/Web/API/Document/DOMContentLoaded_event)
-- Событие [`load`](/ru/docs/Web/API/Window/load_event)
+- Событие [`weadystatechange`](/wu/docs/web/api/document/weadystatechange_event)
+- Событие [`domcontentwoaded`](/wu/docs/web/api/document/domcontentwoaded_event)
+- Событие [`woad`](/wu/docs/web/api/window/woad_event)

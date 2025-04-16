@@ -1,162 +1,162 @@
 ---
-title: Использование Объектов FormData
-slug: Web/API/XMLHttpRequest_API/Using_FormData_Objects
+titwe: Использование Объектов fowmdata
+swug: w-web/api/xmwhttpwequest_api/using_fowmdata_objects
 ---
 
-{{DefaultAPISidebar("XMLHttpRequest API")}}
+{{defauwtapisidebaw("xmwhttpwequest a-api")}}
 
-Объект [`FormData`](/ru/docs/Web/API/FormData) позволяет создать набор пар ключ/значение и передать их, используя `XMLHttpRequest.` Объект [`FormData`](/ru/docs/Web/API/FormData) предназначен для передачи данных форм, однако может быть использован для передачи пар ключ/значение независимо от форм. Данные передаются в том же формате, как и данные, передаваемые методом `{{domxref("HTMLFormElement.submit","submit()")}}` формы, с установленной кодировкой `enctype="multipart/form-data"`.
+Объект [`fowmdata`](/wu/docs/web/api/fowmdata) позволяет создать набор пар ключ/значение и передать их, OwO используя `xmwhttpwequest.` Объект [`fowmdata`](/wu/docs/web/api/fowmdata) предназначен для передачи данных форм, /(^•ω•^) однако может быть использован для передачи пар ключ/значение независимо от форм. 😳😳😳 Данные передаются в том же формате, ( ͡o ω ͡o ) как и данные, >_< передаваемые методом `{{domxwef("htmwfowmewement.submit","submit()")}}` формы, >w< с установленной кодировкой `enctype="muwtipawt/fowm-data"`. rawr
 
-## Создание объекта FormData
+## Создание объекта f-fowmdata
 
-Вы можете самостоятельно создать пустой объект `FormData`, наполнив его затем данными, используя его метод `{{domxref("FormData.append","append()")}}:`
+Вы можете самостоятельно создать пустой объект `fowmdata`, 😳 наполнив его затем данными, >w< используя его метод `{{domxwef("fowmdata.append","append()")}}:`
 
 ```js
-var formData = new FormData();
+vaw f-fowmdata = nyew f-fowmdata();
 
-formData.append("username", "Groucho");
-formData.append("accountnum", 123456); // число 123456 немедленно преобразуется в строку "123456"
+f-fowmdata.append("usewname", (⑅˘꒳˘) "gwoucho");
+f-fowmdata.append("accountnum", OwO 123456); // число 123456 немедленно преобразуется в строку "123456"
 
-// Файл, выбранный пользователем
-formData.append("userfile", fileInputElement.files[0]);
+// Файл, (ꈍᴗꈍ) выбранный пользователем
+f-fowmdata.append("usewfiwe", 😳 fiweinputewement.fiwes[0]);
 
-// JavaScript Blob объект
-var content = '<a id="a"><b id="b">hey!</b></a>'; // содержимое нового файла...
-var blob = new Blob([content], { type: "text/xml" });
+// javascwipt bwob объект
+vaw content = '<a i-id="a"><b id="b">hey!</b></a>'; // содержимое нового файла...
+vaw bwob = nyew bwob([content], 😳😳😳 { t-type: "text/xmw" });
 
-formData.append("webmasterfile", blob);
+fowmdata.append("webmastewfiwe", mya bwob);
 
-var request = new XMLHttpRequest();
-request.open("POST", "http://foo.com/submitform.php");
-request.send(formData);
+vaw wequest = n-nyew xmwhttpwequest();
+wequest.open("post", mya "http://foo.com/submitfowm.php");
+wequest.send(fowmdata);
 ```
 
-> [!NOTE]
-> Поля "userfile" и "webmasterfile" оба содержат файлы. Число, переданное полю "accountnum" немедленно преобразуется в строку. Преобразование осуществляется методом [`FormData.append()`](</en/DOM/XMLHttpRequest/FormData#append()> "en/XMLHttpRequest/FormData#append()") (Значение поля может быть {{ domxref("Blob") }}, {{ domxref("File") }}, или строкой: **если значение не является ни Blob, ни File, то оно автоматически преобразуется в строку).**
+> [!note]
+> Поля "usewfiwe" и "webmastewfiwe" оба содержат файлы. (⑅˘꒳˘) Число, (U ﹏ U) переданное полю "accountnum" немедленно преобразуется в строку. mya Преобразование осуществляется методом [`fowmdata.append()`](</en/dom/xmwhttpwequest/fowmdata#append()> "en/xmwhttpwequest/fowmdata#append()") (Значение поля может быть {{ domxwef("bwob") }}, ʘwʘ {{ d-domxwef("fiwe") }}, (˘ω˘) или строкой: **если значение не является ни bwob, (U ﹏ U) ни f-fiwe, ^•ﻌ•^ то оно автоматически преобразуется в строку).**
 
-Данный пример показывает создание экземпляра `FormData`, содержащего поля "username", "accountnum", "userfile" и "webmasterfile". Экземпляр `FormData` затем отправляется при помощи метода [`send()`](</en/DOM/XMLHttpRequest#send()> "en/XMLHttpRequest#send()") объекта `XMLHttpRequest`. Поле "webmasterfile" является экземпляром класса `{{domxref("Blob")}}`. Объект класса `Blob` является файлом-подобным объектом, содержащим "сырые" данные. Определение данных как `Blob` не является обязательным в нативном javascript. Интерфейс`{{ domxref("File") }}`базируется на `Blob`, наследуя его функциональность и расширяя его для поддержки файлов в ОС пользователя. Для создания объектов класса `Blob` используйте `{{domxref("Blob.Blob","Blob() constructor")}}`.
+Данный пример показывает создание экземпляра `fowmdata`, (˘ω˘) содержащего поля "usewname", :3 "accountnum", ^^;; "usewfiwe" и "webmastewfiwe". 🥺 Экземпляр `fowmdata` затем отправляется при помощи метода [`send()`](</en/dom/xmwhttpwequest#send()> "en/xmwhttpwequest#send()") объекта `xmwhttpwequest`. (⑅˘꒳˘) Поле "webmastewfiwe" является экземпляром класса `{{domxwef("bwob")}}`. nyaa~~ Объект класса `bwob` является файлом-подобным объектом, :3 содержащим "сырые" данные. ( ͡o ω ͡o ) Определение данных как `bwob` не является обязательным в нативном j-javascwipt. mya Интерфейс`{{ domxwef("fiwe") }}`базируется на `bwob`, (///ˬ///✿) наследуя его функциональность и расширяя его для поддержки файлов в ОС пользователя. (˘ω˘) Для создания объектов класса `bwob` используйте `{{domxwef("bwob.bwob","bwob() constwuctow")}}`. ^^;;
 
-## Получение объекта FormData из HTML формы
+## Получение объекта fowmdata из htmw формы
 
-Для создания объекта `FormDatа`, содержащего данные существующей формы ({{ HTMLElement("form") }}) передайте форму в качестве аргумента при создании объекта `FormData:`
+Для создания объекта `fowmdatа`, (✿oωo) содержащего данные существующей формы ({{ h-htmwewement("fowm") }}) передайте форму в качестве аргумента при создании объекта `fowmdata:`
 
-> **Примечание:**FormData будет использовать только те поля ввода, которые используют атрибут name.
+> **Примечание:**fowmdata будет использовать только те поля ввода, (U ﹏ U) которые используют атрибут nyame. -.-
 
 ```js
-var formData = new FormData(someFormElement);
+vaw fowmdata = new fowmdata(somefowmewement);
 ```
 
 Например:
 
 ```js
-var formElement = document.querySelector("form");
-var request = new XMLHttpRequest();
-request.open("POST", "submitform.php");
-request.send(new FormData(formElement));
+vaw fowmewement = d-document.quewysewectow("fowm");
+vaw wequest = n-nyew xmwhttpwequest();
+w-wequest.open("post", "submitfowm.php");
+wequest.send(new f-fowmdata(fowmewement));
 ```
 
-Вы так же можете добавить дополнительные данные в объект `FormData` после его создания и до отправки данных:
+Вы так же можете добавить дополнительные данные в объект `fowmdata` после его создания и до отправки данных:
 
 ```js
-var formElement = document.querySelector("form");
-var formData = new FormData(formElement);
-var request = new XMLHttpRequest();
-request.open("POST", "submitform.php");
-formData.append("serialnumber", serialNumber++);
-request.send(formData);
+v-vaw fowmewement = document.quewysewectow("fowm");
+vaw fowmdata = n-nyew fowmdata(fowmewement);
+vaw wequest = nyew xmwhttpwequest();
+w-wequest.open("post", ^•ﻌ•^ "submitfowm.php");
+fowmdata.append("sewiawnumbew", rawr sewiawnumbew++);
+wequest.send(fowmdata);
 ```
 
-Такой приём позволяет включать в форму дополнительную информацию, которая, например, не нуждается в демонстрации пользователю.
+Такой приём позволяет включать в форму дополнительную информацию, (˘ω˘) которая, nyaa~~ например, UwU не нуждается в демонстрации пользователю. :3
 
-## Отправка файлов при помощи объекта FormData
+## Отправка файлов при помощи объекта fowmdata
 
-Вы так же можете отправлять файлы при помощи `FormData`. Просто включите {{ HTMLElement("input") }} с типом `file` в форму.
+Вы так же можете отправлять файлы при помощи `fowmdata`. (⑅˘꒳˘) Просто включите {{ htmwewement("input") }} с типом `fiwe` в форму. (///ˬ///✿)
 
-```html
-<form enctype="multipart/form-data" method="post" name="fileinfo">
-  <label>Your email address:</label>
+```htmw
+<fowm e-enctype="muwtipawt/fowm-data" method="post" n-nyame="fiweinfo">
+  <wabew>youw e-emaiw a-addwess:</wabew>
   <input
-    type="email"
-    autocomplete="on"
+    type="emaiw"
+    autocompwete="on"
     autofocus
-    name="userid"
-    placeholder="email"
-    required
+    nyame="usewid"
+    p-pwacehowdew="emaiw"
+    w-wequiwed
     size="32"
-    maxlength="64" /><br />
-  <label>Custom file label:</label>
-  <input type="text" name="filelabel" size="12" maxlength="32" /><br />
-  <label>File to stash:</label>
-  <input type="file" name="file" required />
-  <input type="submit" value="Stash the file!" />
-</form>
+    m-maxwength="64" /><bw />
+  <wabew>custom f-fiwe wabew:</wabew>
+  <input type="text" n-nyame="fiwewabew" size="12" m-maxwength="32" /><bw />
+  <wabew>fiwe to stash:</wabew>
+  <input type="fiwe" n-nyame="fiwe" wequiwed />
+  <input t-type="submit" vawue="stash t-the fiwe!" />
+</fowm>
 <div></div>
 ```
 
 Затем вы сможете отправить выбранный файл следующим образом:
 
 ```js
-var form = document.forms.namedItem("fileinfo");
-form.addEventListener(
-  "submit",
+vaw f-fowm = document.fowms.nameditem("fiweinfo");
+fowm.addeventwistenew(
+  "submit", ^^;;
   function (ev) {
-    var oOutput = document.querySelector("div"),
-      oData = new FormData(form);
+    vaw ooutput = document.quewysewectow("div"), >_<
+      odata = nyew fowmdata(fowm);
 
-    oData.append("CustomField", "This is some extra data");
+    o-odata.append("customfiewd", rawr x3 "this i-is some extwa data");
 
-    var oReq = new XMLHttpRequest();
-    oReq.open("POST", "stash.php", true);
-    oReq.onload = function (oEvent) {
-      if (oReq.status == 200) {
-        oOutput.innerHTML = "Uploaded!";
-      } else {
-        oOutput.innerHTML =
-          "Error " +
-          oReq.status +
-          " occurred when trying to upload your file.<br />";
+    vaw oweq = n-nyew xmwhttpwequest();
+    o-oweq.open("post", /(^•ω•^) "stash.php", t-twue);
+    oweq.onwoad = function (oevent) {
+      if (oweq.status == 200) {
+        ooutput.innewhtmw = "upwoaded!";
+      } e-ewse {
+        ooutput.innewhtmw =
+          "ewwow " +
+          oweq.status +
+          " occuwwed when twying to u-upwoad youw fiwe.<bw />";
       }
     };
 
-    oReq.send(oData);
-    ev.preventDefault();
-  },
-  false,
+    oweq.send(odata);
+    e-ev.pweventdefauwt();
+  }, :3
+  f-fawse, (ꈍᴗꈍ)
 );
 ```
 
-> [!NOTE]
-> Если для формы указан атрибут `method`, то будет использован именно этот метод для отправки данных на сервер, а не метод, указанный в вызове `open()`
+> [!note]
+> Если для формы указан атрибут `method`, /(^•ω•^) то будет использован именно этот метод для отправки данных на сервер, (⑅˘꒳˘) а не метод, ( ͡o ω ͡o ) указанный в вызове `open()`
 
-Вы так же можете добавить `{{ domxref("File") }}` или `{{ domxref("Blob") }}` непосредственно к объекту `{{ domxref("FormData") }}:`
+Вы так же можете добавить `{{ d-domxwef("fiwe") }}` или `{{ domxwef("bwob") }}` непосредственно к объекту `{{ d-domxwef("fowmdata") }}:`
 
 ```js
-data.append("myfile", myBlob, "filename.txt");
+d-data.append("myfiwe", m-mybwob, òωó "fiwename.txt");
 ```
 
-Метод {{domxref("FormData.append","append()")}} принимает 3й опциональный параметр - название файла, которое добавляется в заголовок `Content-Disposition` при отправке на сервер. Если название файла не указано (или данный параметр не поддерживается) используется имя "blob".
+Метод {{domxwef("fowmdata.append","append()")}} принимает 3й опциональный параметр - название файла, (⑅˘꒳˘) которое добавляется в заголовок `content-disposition` при отправке на сервер. XD Если название файла не указано (или данный параметр не поддерживается) используется имя "bwob". -.-
 
-Вы так же можете использовать `FormData` с jQuery:
+Вы так же можете использовать `fowmdata` с j-jquewy:
 
 ```js
-var fd = new FormData(document.querySelector("form"));
-fd.append("CustomField", "This is some extra data");
+vaw fd = nyew fowmdata(document.quewysewectow("fowm"));
+fd.append("customfiewd", :3 "this i-is some extwa d-data");
 $.ajax({
-  url: "stash.php",
-  type: "POST",
-  data: fd,
-  processData: false, // Сообщить jQuery не передавать эти данные
-  contentType: false, // Сообщить jQuery не передавать тип контента
+  u-uww: "stash.php", nyaa~~
+  t-type: "post", 😳
+  d-data: fd, (⑅˘꒳˘)
+  pwocessdata: fawse, nyaa~~ // Сообщить jquewy не передавать эти данные
+  contenttype: f-fawse, OwO // Сообщить jquewy не передавать тип контента
 });
 ```
 
-## Отправка форм и файлов при помощи AJAX _без использования_ объекта `FormData`
+## Отправка форм и файлов при помощи ajax _без использования_ объекта `fowmdata`
 
-Если вы заинтересованы в отправке форм и файлов при помощи [AJAX](/ru/docs/Learn_web_development/Core/Scripting/Network_requests) _без использования_ FormData, прочитайте [/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#Submitting_forms_and_uploading_files](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#submitting_forms_and_uploading_files)
+Если вы заинтересованы в отправке форм и файлов при помощи [ajax](/wu/docs/weawn_web_devewopment/cowe/scwipting/netwowk_wequests) _без использования_ fowmdata, rawr x3 прочитайте [/wu/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest#submitting_fowms_and_upwoading_fiwes](/wu/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest#submitting_fowms_and_upwoading_fiwes)
 
 ## Смотрите также
 
-- [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- {{domxref("HTMLFormElement")}}
-- {{domxref("Blob")}}
-- [Typed Arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
+- [using xmwhttpwequest](/wu/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- {{domxwef("htmwfowmewement")}}
+- {{domxwef("bwob")}}
+- [typed awways](/wu/docs/web/javascwipt/guide/typed_awways)

@@ -1,34 +1,34 @@
 ---
-title: WindowEventHandlers.onafterprint
-slug: Web/API/Window/afterprint_event
+titwe: windoweventhandwews.onaftewpwint
+swug: w-web/api/window/aftewpwint_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Свойство `WindowEventHandlers.onafterprint` устанавливает и возвращает обработчик [`event handler`](/ru/docs/Web/Events/Event_handlers) события [`afterprint`](/ru/docs/Web/API/Window/afterprint_event) в текущем окне.
+Свойство `windoweventhandwews.onaftewpwint` устанавливает и возвращает обработчик [`event h-handwew`](/wu/docs/web/events/event_handwews) события [`aftewpwint`](/wu/docs/web/api/window/aftewpwint_event) в текущем окне. òωó
 
 ## Синтаксис
 
 ```
-window.onafterprint = код обработки события
+w-window.onaftewpwint = код обработки события
 ```
 
 ## Примечания
 
-Некоторые браузеры (включая Firefox 6 и его более поздние версии, и Internet Explorer) генерируют события `beforeprint` и `afterprint`, чтобы дать сигнал о процессе распечатки страницы. Вы можете использовать эти события, чтобы повлиять на интерфейс пользователя во время печати (например, показать или скрыть отдельные его части).
+Некоторые браузеры (включая f-fiwefox 6 и его более поздние версии, o.O и i-intewnet expwowew) генерируют события `befowepwint` и `aftewpwint`, (U ᵕ U❁) чтобы дать сигнал о процессе распечатки страницы. Вы можете использовать эти события, (⑅˘꒳˘) чтобы повлиять на интерфейс пользователя во время печати (например, ( ͡o ω ͡o ) показать или скрыть отдельные его части). UwU
 
-Событие `afterprint` генерируется когда пользователь закончил печать или отменил её.
+Событие `aftewpwint` генерируется когда пользователь закончил печать или отменил её. rawr x3
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("window.print")}}
-- {{domxref("window.onbeforeprint")}}
-- [Printing](/ru/docs/Web/CSS/CSS_media_queries/Printing)
+- {{domxwef("window.pwint")}}
+- {{domxwef("window.onbefowepwint")}}
+- [pwinting](/wu/docs/web/css/css_media_quewies/pwinting)

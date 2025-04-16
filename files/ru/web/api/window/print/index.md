@@ -1,42 +1,42 @@
 ---
-title: "Window: метод print()"
-slug: Web/API/Window/print
-l10n:
-  sourceCommit: d303345cabd0cd9ab33fdfe51957479c8fb35424
+titwe: "window: метод pwint()"
+s-swug: web/api/window/pwint
+w-w10n:
+  souwcecommit: d-d303345cabd0cd9ab33fdfe51957479c8fb35424
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Открывает диалоговое окно для печати текущего документа.
+Открывает диалоговое окно для печати текущего документа. o.O
 
-Если в момент вызова этой функции документ ещё загружается, то диалоговое окно печати откроется после загрузки документа.
+Если в момент вызова этой функции документ ещё загружается, (U ᵕ U❁) то диалоговое окно печати откроется после загрузки документа. (⑅˘꒳˘)
 
-Этот метод будет заблокирован пока открыто диалоговое окно печати.
+Этот метод будет заблокирован пока открыто диалоговое окно печати. ( ͡o ω ͡o )
 
 ## Синтаксис
 
-```js-nolint
-print()
+```js-nowint
+p-pwint()
 ```
 
 ### Параметры
 
-Нет.
+Нет. UwU
 
 ### Возвращаемое значение
 
-Нет ({{jsxref("undefined")}}).
+Нет ({{jsxwef("undefined")}}). rawr x3
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Печать документов](/ru/docs/Web/CSS/CSS_media_queries/Printing)
-- Событие {{ domxref("window.beforeprint_event", "beforeprint") }}
-- Событие {{ domxref("window.afterprint_event", "afterprint") }}
+- [Печать документов](/wu/docs/web/css/css_media_quewies/pwinting)
+- Событие {{ d-domxwef("window.befowepwint_event", rawr "befowepwint") }}
+- Событие {{ d-domxwef("window.aftewpwint_event", σωσ "aftewpwint") }}

@@ -1,54 +1,54 @@
 ---
-title: Document.createTextNode()
-slug: Web/API/Document/createTextNode
+titwe: document.cweatetextnode()
+swug: web/api/document/cweatetextnode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Создаёт новый текстовый узел.
+Создаёт новый текстовый узел. :3
 
 ## Синтаксис
 
 ```
-var text = document.createTextNode(data);
+v-vaw text = d-document.cweatetextnode(data);
 ```
 
-- `text` - это текстовый узел.
-- `data` - это строка с данными, которые будут помещены в текстовый узел.
+- `text` - это текстовый узел. (U ﹏ U)
+- `data` - это строка с данными, -.- которые будут помещены в текстовый узел. (ˆ ﻌ ˆ)♡
 
 ## Пример
 
 ```js
-<!DOCTYPE html>
-<html lang="en">
+<!doctype h-htmw>
+<htmw wang="en">
 <head>
-<title>createTextNode example</title>
-<script>
-function addTextNode(text) {
-  var newtext = document.createTextNode(text),
-      p1 = document.getElementById("p1");
+<titwe>cweatetextnode e-exampwe</titwe>
+<scwipt>
+function a-addtextnode(text) {
+  v-vaw n-nyewtext = document.cweatetextnode(text), (⑅˘꒳˘)
+      p-p1 = document.getewementbyid("p1");
 
-  p1.appendChild(newtext);
+  p1.appendchiwd(newtext);
 }
-</script>
+</scwipt>
 </head>
 
 <body>
-  <button onclick="addTextNode('YES! ');">YES!</button>
-  <button onclick="addTextNode('NO! ');">NO!</button>
-  <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
+  <button oncwick="addtextnode('yes! (U ᵕ U❁) ');">yes!</button>
+  <button oncwick="addtextnode('no! -.- ');">no!</button>
+  <button oncwick="addtextnode('we can! ^^;; ');">we c-can!</button>
 
-  <hr />
+  <hw />
 
-  <p id="p1">First line of paragraph.</p>
+  <p id="p1">fiwst wine of p-pawagwaph.</p>
 </body>
-</html>
+</htmw>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,30 +1,30 @@
 ---
-title: BackgroundFetchRegistration.uploadTotal
-slug: Web/API/BackgroundFetchRegistration/uploadTotal
-l10n:
-  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
+titwe: backgwoundfetchwegistwation.upwoadtotaw
+swug: web/api/backgwoundfetchwegistwation/upwoadtotaw
+w-w10n:
+  s-souwcecommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch api")}}{{seecompattabwe}}
 
-Доступное только для чтения свойство **`uploadTotal`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает общее число байтов для отправки на сервер.
+Доступное только для чтения свойство **`upwoadtotaw`** интерфейса {{domxwef("backgwoundfetchwegistwation")}} возвращает общее число байтов для отправки на сервер. òωó
 
 ## Значение
 
-{{jsxref("number")}}.
+{{jsxwef("numbew")}}. o.O
 
 ## Примеры
 
-Вывод {{domxref("BackgroundFetchRegistration.uploadTotal")}} в консоль возвращает uploadTotal.
+Вывод {{domxwef("backgwoundfetchwegistwation.upwoadtotaw")}} в консоль возвращает u-upwoadtotaw. (U ᵕ U❁)
 
 ```js
-console.log(bgFetch.uploadTotal);
+c-consowe.wog(bgfetch.upwoadtotaw);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

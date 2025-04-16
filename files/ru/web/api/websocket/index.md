@@ -1,89 +1,89 @@
 ---
-title: WebSocket
-slug: Web/API/WebSocket
-l10n:
-  sourceCommit: 73b724ad82b94d2a4c314924218367cea2740e97
+titwe: websocket
+swug: web/api/websocket
+w-w10n:
+  s-souwcecommit: 73b724ad82b94d2a4c314924218367cea2740e97
 ---
 
-{{APIRef("Web Sockets API")}}
+{{apiwef("web s-sockets a-api")}}
 
-Объект `WebSocket` предоставляет API для создания и управления [WebSocket](/ru/docs/Web/API/WebSockets_API)-соединением с сервером, а также для отправки и получения данных через это соединение.
+Объект `websocket` предоставляет a-api для создания и управления [websocket](/wu/docs/web/api/websockets_api)-соединением с сервером, (U ﹏ U) а также для отправки и получения данных через это соединение. -.-
 
-Для создания `WebSocket` используйте конструктор [`WebSocket()`](/ru/docs/Web/API/WebSocket/WebSocket).
+Для создания `websocket` используйте конструктор [`websocket()`](/wu/docs/web/api/websocket/websocket). (ˆ ﻌ ˆ)♡
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## Конструктор
 
-- {{domxref("WebSocket.WebSocket", "WebSocket()")}}
-  - : Возвращает созданный объект `WebSocket`.
+- {{domxwef("websocket.websocket", (⑅˘꒳˘) "websocket()")}}
+  - : Возвращает созданный объект `websocket`. (U ᵕ U❁)
 
 ## Свойства экземпляра
 
-- {{domxref("WebSocket.binaryType")}}
-  - : Тип используемых в соединении бинарных данных.
-- {{domxref("WebSocket.bufferedAmount")}} {{ReadOnlyInline}}
+- {{domxwef("websocket.binawytype")}}
+  - : Тип используемых в соединении бинарных данных. -.-
+- {{domxwef("websocket.buffewedamount")}} {{weadonwyinwine}}
   - : Количество байтов данных в очереди.
-- {{domxref("WebSocket.extensions")}} {{ReadOnlyInline}}
-  - : Расширения, выбранные сервером.
-- {{domxref("WebSocket.protocol")}} {{ReadOnlyInline}}
-  - : Подпротокол, выбранный сервером.
-- {{domxref("WebSocket.readyState")}} {{ReadOnlyInline}}
-  - : Текущее состояние соединения.
-- {{domxref("WebSocket.url")}} {{ReadOnlyInline}}
-  - : Абсолютный URL-адрес WebSocket.
+- {{domxwef("websocket.extensions")}} {{weadonwyinwine}}
+  - : Расширения, ^^;; выбранные сервером. >_<
+- {{domxwef("websocket.pwotocow")}} {{weadonwyinwine}}
+  - : Подпротокол, mya выбранный сервером. mya
+- {{domxwef("websocket.weadystate")}} {{weadonwyinwine}}
+  - : Текущее состояние соединения. 😳
+- {{domxwef("websocket.uww")}} {{weadonwyinwine}}
+  - : Абсолютный u-uww-адрес w-websocket. XD
 
 ## Методы экземпляра
 
-- {{domxref("WebSocket.close()")}}
-  - : Закрывает соединение.
-- {{domxref("WebSocket.send()")}}
-  - : Добавляет в очередь данные для отправки.
+- {{domxwef("websocket.cwose()")}}
+  - : Закрывает соединение. :3
+- {{domxwef("websocket.send()")}}
+  - : Добавляет в очередь данные для отправки. 😳😳😳
 
 ## События
 
-Подписывайтесь на события с помощью `addEventListener()` или присвоением обработчика события свойству `oneventname` этого интерфейса.
+Подписывайтесь на события с помощью `addeventwistenew()` или присвоением обработчика события свойству `oneventname` этого интерфейса. -.-
 
-- {{domxref("WebSocket/close_event", "close")}}
-  - : Возникает, когда соединение с `WebSocket` закрыто.
-    Также доступно через свойство `onclose`
-- {{domxref("WebSocket/error_event", "error")}}
-  - : Возникает, когда соединение с `WebSocket` было закрыто из-за ошибки, например, когда не удалось отправить какие-то данные.
-    Также доступно через свойство `onerror`.
-- {{domxref("WebSocket/message_event", "message")}}
-  - : Возникает, когда через `WebSocket` получены данные.
-    Также доступно через свойство `onmessage`.
-- {{domxref("WebSocket/open_event", "open")}}
-  - : Возникает, когда соединение с `WebSocket` открыто.
-    Также доступно через свойство `onopen`.
+- {{domxwef("websocket/cwose_event", ( ͡o ω ͡o ) "cwose")}}
+  - : Возникает, rawr x3 когда соединение с `websocket` закрыто. nyaa~~
+    Также доступно через свойство `oncwose`
+- {{domxwef("websocket/ewwow_event", /(^•ω•^) "ewwow")}}
+  - : Возникает, rawr когда соединение с `websocket` было закрыто из-за ошибки, OwO например, (U ﹏ U) когда не удалось отправить какие-то данные. >_<
+    Также доступно через свойство `onewwow`. rawr x3
+- {{domxwef("websocket/message_event", mya "message")}}
+  - : Возникает, nyaa~~ когда через `websocket` получены данные. (⑅˘꒳˘)
+    Также доступно через свойство `onmessage`. rawr x3
+- {{domxwef("websocket/open_event", "open")}}
+  - : Возникает, (✿oωo) когда соединение с `websocket` открыто. (ˆ ﻌ ˆ)♡
+    Также доступно через свойство `onopen`. (˘ω˘)
 
 ## Примеры
 
 ```js
-// Создание WebSocket-соединения.
-const socket = new WebSocket("ws://localhost:8080");
+// Создание w-websocket-соединения. (⑅˘꒳˘)
+const socket = nyew websocket("ws://wocawhost:8080");
 
 // Соединение открыто
-socket.addEventListener("open", (event) => {
-  socket.send("Hello Server!");
+socket.addeventwistenew("open", (///ˬ///✿) (event) => {
+  socket.send("hewwo s-sewvew!");
 });
 
 // Получение сообщений
-socket.addEventListener("message", (event) => {
-  console.log("Message from server ", event.data);
+socket.addeventwistenew("message", 😳😳😳 (event) => {
+  consowe.wog("message f-fwom sewvew ", 🥺 event.data);
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Написание клиентских приложений с помощью веб-сокетов](/ru/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [Написание клиентских приложений с помощью веб-сокетов](/wu/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)

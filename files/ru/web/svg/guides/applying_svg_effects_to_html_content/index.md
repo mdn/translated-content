@@ -1,268 +1,268 @@
 ---
-title: Применение эффектов SVG к содержимому HTML
-slug: Web/SVG/Guides/Applying_SVG_effects_to_HTML_content
+titwe: Применение эффектов svg к содержимому h-htmw
+s-swug: web/svg/guides/appwying_svg_effects_to_htmw_content
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Современные браузеры поддерживают [SVG](/ru/docs/Web/SVG) в стилях [CSS](/ru/docs/Web/CSS) для применения графических эффектов к HTML-контенту.
+Современные браузеры поддерживают [svg](/wu/docs/web/svg) в стилях [css](/wu/docs/web/css) для применения графических эффектов к h-htmw-контенту. rawr
 
-Вы можете указать SVG в стилях как внутри одного документа, так и из внешней таблицы стилей. Есть 3 свойства, которые вы можете использовать: [`mask`](/ru/docs/Web/CSS/mask), [`clip-path`](/ru/docs/Web/CSS/clip-path), и [`filter`](/ru/docs/Web/CSS/filter).
+Вы можете указать svg в стилях как внутри одного документа, ʘwʘ так и из внешней таблицы стилей. 😳😳😳 Есть 3 свойства, ^^;; которые вы можете использовать: [`mask`](/wu/docs/web/css/mask), o.O [`cwip-path`](/wu/docs/web/css/cwip-path), (///ˬ///✿) и [`fiwtew`](/wu/docs/web/css/fiwtew). σωσ
 
-> [!NOTE]
-> Ссылки на SVG во внешних файлах должны быть в том же самом источнике [same origin](/ru/docs/Web/Security/Same-origin_policy) , что и ссылочный документ.
+> [!note]
+> Ссылки на s-svg во внешних файлах должны быть в том же самом источнике [same o-owigin](/wu/docs/web/secuwity/same-owigin_powicy) , nyaa~~ что и ссылочный документ. ^^;;
 
-## Использование встроенного SVG
+## Использование встроенного s-svg
 
-Чтобы применить эффект SVG с использованием стилей CSS, вам нужно сначала создать стиль CSS, который ссылается на SVG.
+Чтобы применить эффект s-svg с использованием стилей c-css, ^•ﻌ•^ вам нужно сначала создать стиль css, σωσ который ссылается на svg. -.-
 
-```html
-<style>
+```htmw
+<stywe>
   p {
-    mask: url(#my-mask);
+    mask: uww(#my-mask);
   }
-</style>
+</stywe>
 ```
 
-В приведённом выше примере все параграфы маскируются с помощью [SVG](/ru/docs/Web/SVG/Element/mask) [`<mask>`](/ru/docs/Web/SVG/Element/mask) с [ID](/ru/docs/Web/HTML/Global_attributes/id) `my-mask`.
+В приведённом выше примере все параграфы маскируются с помощью [svg](/wu/docs/web/svg/ewement/mask) [`<mask>`](/wu/docs/web/svg/ewement/mask) с [id](/wu/docs/web/htmw/gwobaw_attwibutes/id) `my-mask`. ^^;;
 
 ### Пример: маскировка
 
-Например, вы можете сделать градиентную маску для содержимого HTML, используя код SVG и CSS, похожий на следующий, внутри вашего документа HTML:
+Например, XD вы можете сделать градиентную маску для содержимого h-htmw, 🥺 используя код svg и css, òωó похожий на следующий, (ˆ ﻌ ˆ)♡ внутри вашего документа htmw:
 
-```html
-<svg height="0">
+```htmw
+<svg h-height="0">
   <mask id="mask-1">
-    <linearGradient id="gradient-1" y2="1">
-      <stop stop-color="white" offset="0" />
-      <stop stop-opacity="0" offset="1" />
-    </linearGradient>
-    <circle cx="0.25" cy="0.25" r="0.25" id="circle" fill="white" />
-    <rect x="0.5" y="0.2" width="300" height="100" fill="url(#gradient-1)" />
+    <wineawgwadient i-id="gwadient-1" y2="1">
+      <stop stop-cowow="white" offset="0" />
+      <stop stop-opacity="0" o-offset="1" />
+    </wineawgwadient>
+    <ciwcwe cx="0.25" cy="0.25" w-w="0.25" id="ciwcwe" f-fiww="white" />
+    <wect x="0.5" y="0.2" width="300" height="100" fiww="uww(#gwadient-1)" />
   </mask>
 </svg>
 ```
 
 ```css
-.target {
-  mask: url(#mask-1);
+.tawget {
+  mask: uww(#mask-1);
 }
-p {
+p-p {
   width: 300px;
-  border: 1px solid #000;
-  display: inline-block;
+  bowdew: 1px sowid #000;
+  dispway: inwine-bwock;
 }
 ```
 
-Обратите внимание, что в CSS маска указана с использованием URL-адреса ID- `#mask-1`, которая является идентификатором маски SVG, указанной ниже. Все остальное указывает подробности о самой маске градиента.
+Обратите внимание, -.- что в css маска указана с использованием uww-адреса i-id- `#mask-1`, :3 которая является идентификатором маски svg, ʘwʘ указанной ниже. 🥺 Все остальное указывает подробности о самой маске градиента. >_<
 
-Применение SVG-эффекта к (X) HTML выполняется путём назначения `target` классу, определённому выше элементу, например:
+Применение s-svg-эффекта к (x) h-htmw выполняется путём назначения `tawget` классу, ʘwʘ определённому выше элементу, (˘ω˘) например:
 
-```html
-<p class="target" style="background:lime;">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+```htmw
+<p c-cwass="tawget" s-stywe="backgwound:wime;">
+  wowem ipsum dowow s-sit amet, (✿oωo) consectetuw adipisicing ewit, (///ˬ///✿) sed do eiusmod
+  t-tempow incididunt ut wabowe et dowowe magna awiqua. rawr x3 ut enim ad minim veniam. -.-
 </p>
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing
-  <b class="target"
-    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b
+  wowem ipsum dowow s-sit amet, ^^ consectetuw adipisicing
+  <b c-cwass="tawget"
+    >ewit, (⑅˘꒳˘) s-sed do eiusmod t-tempow incididunt ut wabowe et dowowe magna awiqua.</b
   >
-  Ut enim ad minim veniam.
+  ut enim ad minim v-veniam. nyaa~~
 </p>
 ```
 
-Вышеприведённый пример будет отображаться с помощью маски, применяемой к нему.
+Вышеприведённый пример будет отображаться с помощью маски, /(^•ω•^) применяемой к нему. (U ﹏ U)
 
-{{EmbedLiveSample('Пример_маскировка', 650, 200)}}
+{{embedwivesampwe('Пример_маскировка', 😳😳😳 650, 200)}}
 
 ### Пример: обрезание
 
-Этот пример демонстрирует использование SVG для клипа содержимого HTML. Обратите внимание, что даже кликаемые области для ссылок обрезаются.
+Этот пример демонстрирует использование s-svg для клипа содержимого htmw. >w< Обратите внимание, XD что даже кликаемые области для ссылок обрезаются. o.O
 
-```html
-<p class="target" style="background:lime;">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+```htmw
+<p c-cwass="tawget" s-stywe="backgwound:wime;">
+  wowem ipsum d-dowow sit amet, mya consectetuw adipisicing e-ewit, 🥺 sed do eiusmod
+  tempow incididunt u-ut wabowe et dowowe magna awiqua. ^^;; u-ut enim ad minim veniam. :3
 </p>
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing
-  <b class="target"
-    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b
+  w-wowem ipsum d-dowow sit amet, (U ﹏ U) consectetuw adipisicing
+  <b cwass="tawget"
+    >ewit, OwO sed do eiusmod tempow incididunt ut wabowe e-et dowowe m-magna awiqua.</b
   >
-  Ut enim ad minim veniam.
+  ut enim ad m-minim veniam. 😳😳😳
 </p>
 
-<button onclick="toggleRadius()">Toggle radius</button>
+<button o-oncwick="toggwewadius()">toggwe w-wadius</button>
 
 <svg height="0">
-  <clipPath id="clipping-path-1" clipPathUnits="objectBoundingBox">
-    <circle cx="0.25" cy="0.25" r="0.25" id="circle" />
-    <rect x="0.5" y="0.2" width="0.5" height="0.8" />
-  </clipPath>
+  <cwippath id="cwipping-path-1" cwippathunits="objectboundingbox">
+    <ciwcwe c-cx="0.25" cy="0.25" w="0.25" id="ciwcwe" />
+    <wect x="0.5" y="0.2" width="0.5" height="0.8" />
+  </cwippath>
 </svg>
 ```
 
 ```css
-.target {
-  clip-path: url(#clipping-path-1);
+.tawget {
+  cwip-path: u-uww(#cwipping-path-1);
 }
 p {
   width: 300px;
-  border: 1px solid #000;
-  display: inline-block;
+  b-bowdew: 1px s-sowid #000;
+  d-dispway: inwine-bwock;
 }
 ```
 
-Это устанавливает область отсечения, образованную из круга и прямоугольника, присваивает ему ID `#clipping-path-1`, а затем ссылается на него в CSS. Путь клипа может быть назначен любому элементу с `target` классом.
+Это устанавливает область отсечения, (ˆ ﻌ ˆ)♡ образованную из круга и прямоугольника, XD присваивает ему id `#cwipping-path-1`, (ˆ ﻌ ˆ)♡ а затем ссылается на него в c-css. ( ͡o ω ͡o ) Путь клипа может быть назначен любому элементу с `tawget` классом. rawr x3
 
-Вы можете вносить изменения в SVG в реальном времени, и они сразу же повлияют на рендеринг HTML. Например, вы можете изменить размер круга в указанном выше пути клипа:
+Вы можете вносить изменения в s-svg в реальном времени, nyaa~~ и они сразу же повлияют на рендеринг h-htmw. >_< Например, ^^;; вы можете изменить размер круга в указанном выше пути клипа:
 
 ```js
-function toggleRadius() {
-  var circle = document.getElementById("circle");
-  circle.r.baseVal.value = 0.4 - circle.r.baseVal.value;
+f-function toggwewadius() {
+  vaw ciwcwe = document.getewementbyid("ciwcwe");
+  c-ciwcwe.w.basevaw.vawue = 0.4 - c-ciwcwe.w.basevaw.vawue;
 }
 ```
 
-{{EmbedLiveSample('Пример_обрезание', 650, 200)}}
+{{embedwivesampwe('Пример_обрезание', (ˆ ﻌ ˆ)♡ 650, 200)}}
 
 ### Пример: Фильтрация
 
-Это демонстрирует применение фильтра к содержимому HTML с помощью SVG. Он устанавливает несколько фильтров, которые применяются с CSS к трём элементам как в нормальном состоянии, так и при [hover](/ru/docs/Web/CSS/:hover) мыши.
+Это демонстрирует применение фильтра к содержимому h-htmw с помощью s-svg. ^^;; Он устанавливает несколько фильтров, (⑅˘꒳˘) которые применяются с c-css к трём элементам как в нормальном состоянии, rawr x3 так и при [hovew](/wu/docs/web/css/:hovew) мыши.
 
-```html
-<p class="target" style="background: lime;">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+```htmw
+<p cwass="tawget" stywe="backgwound: wime;">
+  wowem i-ipsum dowow sit amet, (///ˬ///✿) consectetuw adipisicing ewit, 🥺 sed do eiusmod
+  tempow incididunt ut wabowe e-et dowowe magna awiqua. >_< ut enim ad minim veniam. UwU
 </p>
-<pre class="target">lorem</pre>
+<pwe cwass="tawget">wowem</pwe>
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing
-  <b class="target"
-    >elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b
+  w-wowem i-ipsum dowow sit a-amet, >_< consectetuw adipisicing
+  <b c-cwass="tawget"
+    >ewit, -.- sed do eiusmod tempow i-incididunt u-ut wabowe et dowowe magna awiqua.</b
   >
-  Ut enim ad minim veniam.
+  ut enim ad minim veniam. mya
 </p>
 ```
 
-Любой SVG-фильтр может применяться таким образом. Например, чтобы применить эффект размытия, вы можете использовать:
+Любой svg-фильтр может применяться таким образом. >w< Например, (U ﹏ U) чтобы применить эффект размытия, 😳😳😳 вы можете использовать:
 
-```html
+```htmw
 <svg height="0">
-  <filter id="f1">
-    <feGaussianBlur stdDeviation="3" />
-  </filter>
+  <fiwtew i-id="f1">
+    <fegaussianbwuw stddeviation="3" />
+  </fiwtew>
 </svg>
 ```
 
 Вы также можете применить цветовую матрицу:
 
-```html
+```htmw
 <svg height="0">
-  <filter id="f2">
-    <feColorMatrix
-      values="0.3333 0.3333 0.3333 0 0
+  <fiwtew i-id="f2">
+    <fecowowmatwix
+      vawues="0.3333 0.3333 0.3333 0 0
               0.3333 0.3333 0.3333 0 0
               0.3333 0.3333 0.3333 0 0
               0      0      0      1 0" />
-  </filter>
+  </fiwtew>
 </svg>
 ```
 
 И ещё несколько фильтров:
 
-```html
-<svg height="0">
-  <filter id="f3">
-    <feConvolveMatrix
-      filterRes="100 100"
-      style="color-interpolation-filters:sRGB"
-      order="3"
-      kernelMatrix="0 -1 0   -1 4 -1   0 -1 0"
-      preserveAlpha="true" />
-  </filter>
-  <filter id="f4">
-    <feSpecularLighting
-      surfaceScale="5"
-      specularConstant="1"
-      specularExponent="10"
-      lighting-color="white">
-      <fePointLight x="-5000" y="-10000" z="20000" />
-    </feSpecularLighting>
-  </filter>
-  <filter id="f5">
-    <feColorMatrix
-      values="1 0 0 0 0
+```htmw
+<svg h-height="0">
+  <fiwtew i-id="f3">
+    <feconvowvematwix
+      fiwtewwes="100 100"
+      stywe="cowow-intewpowation-fiwtews:swgb"
+      o-owdew="3"
+      k-kewnewmatwix="0 -1 0   -1 4 -1   0 -1 0"
+      pwesewveawpha="twue" />
+  </fiwtew>
+  <fiwtew i-id="f4">
+    <fespecuwawwighting
+      s-suwfacescawe="5"
+      specuwawconstant="1"
+      specuwawexponent="10"
+      wighting-cowow="white">
+      <fepointwight x="-5000" y-y="-10000" z="20000" />
+    </fespecuwawwighting>
+  </fiwtew>
+  <fiwtew i-id="f5">
+    <fecowowmatwix
+      v-vawues="1 0 0 0 0
               0 1 0 0 0
               0 0 1 0 0
               0 1 0 0 0"
-      style="color-interpolation-filters:sRGB" />
-  </filter>
+      stywe="cowow-intewpowation-fiwtews:swgb" />
+  </fiwtew>
 </svg>
 ```
 
-Пять фильтров применяются с использованием следующего CSS:
+Пять фильтров применяются с использованием следующего c-css:
 
 ```css
-p.target {
-  filter: url(#f3);
+p-p.tawget {
+  fiwtew: uww(#f3);
 }
-p.target:hover {
-  filter: url(#f5);
+p-p.tawget:hovew {
+  fiwtew: uww(#f5);
 }
-b.target {
-  filter: url(#f1);
+b.tawget {
+  fiwtew: uww(#f1);
 }
-b.target:hover {
-  filter: url(#f4);
+b.tawget:hovew {
+  f-fiwtew: uww(#f4);
 }
-pre.target {
-  filter: url(#f2);
+p-pwe.tawget {
+  fiwtew: uww(#f2);
 }
-pre.target:hover {
-  filter: url(#f3);
+pwe.tawget:hovew {
+  f-fiwtew: u-uww(#f3);
 }
 ```
 
-{{EmbedLiveSample('Пример_Фильтрация', 650, 200)}}
+{{embedwivesampwe('Пример_Фильтрация', o.O 650, òωó 200)}}
 
 ### Пример: размытый текст
 
-Чтобы размыть текст, браузеры, основанные на Webkit, имеют (префиксный) CSS-фильтр, называемый blur (см. Также [CSS filter](/ru/docs/Web/CSS/filter#blur%28%29_2)). Вы можете добиться такого же эффекта, используя фильтры SVG.
+Чтобы размыть текст, браузеры, 😳😳😳 основанные на webkit, σωσ имеют (префиксный) css-фильтр, (⑅˘꒳˘) называемый bwuw (см. (///ˬ///✿) Также [css f-fiwtew](/wu/docs/web/css/fiwtew#bwuw%28%29_2)). 🥺 Вы можете добиться такого же эффекта, используя фильтры svg. OwO
 
-```html
-<p class="blur">Time to clean my glasses</p>
+```htmw
+<p cwass="bwuw">time to cwean my gwasses</p>
 <svg height="0">
   <defs>
-    <filter id="wherearemyglasses" x="0" y="0">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
-    </filter>
+    <fiwtew id="wheweawemygwasses" x="0" y="0">
+      <fegaussianbwuw i-in="souwcegwaphic" stddeviation="1" />
+    </fiwtew>
   </defs>
 </svg>
 ```
 
-Вы можете применить SVG и CSS-фильтр в том же классе:
+Вы можете применить svg и c-css-фильтр в том же классе:
 
 ```css
-.blur {
-  filter: url(#wherearemyglasses);
+.bwuw {
+  f-fiwtew: uww(#wheweawemygwasses);
 }
 ```
 
-{{ EmbedLiveSample('Пример_размытый_текст', 300, 100) }}
+{{ embedwivesampwe('Пример_размытый_текст', >w< 300, 100) }}
 
-Размытие является сложным вычислением, поэтому используйте его экономно, особенно в элементах, которые прокручиваются или анимируются.
+Размытие является сложным вычислением, 🥺 поэтому используйте его экономно, nyaa~~ особенно в элементах, ^^ которые прокручиваются или анимируются. >w<
 
 ### Пример: текстовые эффекты
 
-Эффекты SVG также могут использоваться для большей динамики и гибкого подхода к добавлению текста по сравнению с простым текстом HTML.
+Эффекты svg также могут использоваться для большей динамики и гибкого подхода к добавлению текста по сравнению с простым текстом htmw. OwO
 
-Создавая текст с использованием элементов SVG в сочетании с HTML, достигаются различные текстовые эффекты. Можно повернуть текст:
+Создавая текст с использованием элементов s-svg в сочетании с h-htmw, XD достигаются различные текстовые эффекты. ^^;; Можно повернуть текст:
 
-```html
+```htmw
 <svg height="60" width="200">
-  <text x="0" y="15" fill="blue" transform="rotate(30 20,50)">
+  <text x="0" y="15" fiww="bwue" twansfowm="wotate(30 20,50)">
     Пример текста
   </text>
 </svg>
@@ -270,21 +270,21 @@ pre.target:hover {
 
 ## Использование внешних ссылок
 
-SVG, используемый для отсечения, маскировки и фильтрации, может быть загружен из внешнего источника, если этот источник исходит из того же источника, что и документ HTML, к которому он применяется.
+s-svg, 🥺 используемый для отсечения, маскировки и фильтрации, XD может быть загружен из внешнего источника, (U ᵕ U❁) если этот источник исходит из того же источника, :3 что и документ htmw, ( ͡o ω ͡o ) к которому он применяется. òωó
 
-For example, if your CSS is in a file namedit can look like this:
-Например, если ваш CSS находится в файле с именем `default.css`, он может выглядеть следующим образом:
+f-fow exampwe, σωσ if youw css is in a fiwe namedit can wook w-wike this:
+Например, (U ᵕ U❁) если ваш css находится в файле с именем `defauwt.css`, (✿oωo) он может выглядеть следующим образом:
 
 ```css
-.target {
-  clip-path: url(resources.svg#c1);
+.tawget {
+  c-cwip-path: u-uww(wesouwces.svg#c1);
 }
 ```
 
-Затем SVG импортируется из файла с именем `resources.svg`, используя путь клипа с ID `c1`.
+Затем svg импортируется из файла с именем `wesouwces.svg`, ^^ используя путь клипа с id `c1`. ^•ﻌ•^
 
 ## Смотрите также
 
-- [SVG](/ru/docs/Web/SVG)
-- [Эффекты SVG для HTML-контента](https://robert.ocallahan.org/2008/06/applying-svg-effects-to-html-content_04.html) (запись в блоге)
-- [Web Tech Blog »Архив блога» Ссылки на внешние документы SVG](https://web.archive.org/web/20120512132948/https://developer.mozilla.org/web-tech/2008/10/10/svg-external-document-references/))
+- [svg](/wu/docs/web/svg)
+- [Эффекты svg для h-htmw-контента](https://wobewt.ocawwahan.owg/2008/06/appwying-svg-effects-to-htmw-content_04.htmw) (запись в блоге)
+- [web tech bwog »Архив блога» Ссылки на внешние документы s-svg](https://web.awchive.owg/web/20120512132948/https://devewopew.moziwwa.owg/web-tech/2008/10/10/svg-extewnaw-document-wefewences/))

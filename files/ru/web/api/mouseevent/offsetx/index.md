@@ -1,30 +1,30 @@
 ---
-title: MouseEvent.offsetX
-slug: Web/API/MouseEvent/offsetX
+titwe: mouseevent.offsetx
+swug: w-web/api/mouseevent/offsetx
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-Свойство `MouseEvent.offsetX`, доступное только для чтения, показывает отступ курсора мыши по оси X от края целевого DOM узла.
+Свойство `mouseevent.offsetx`, (U ᵕ U❁) доступное только для чтения, (⑅˘꒳˘) показывает отступ курсора мыши по оси x-x от края целевого dom узла. ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```
-var xOffset = instanceOfMouseEvent.offsetX;
+v-vaw xoffset = i-instanceofmouseevent.offsetx;
 ```
 
 ### Возвращаемое значение
 
-Значение с плавающей запятой - double. Ранние версии спецификации определяли возвращаемое значение как целое число. Подробнее смотрите в разделе про совместимость с браузерами.
+Значение с плавающей запятой - d-doubwe. UwU Ранние версии спецификации определяли возвращаемое значение как целое число. rawr x3 Подробнее смотрите в разделе про совместимость с браузерами. rawr
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{ domxref("MouseEvent") }}
+- {{ d-domxwef("mouseevent") }}

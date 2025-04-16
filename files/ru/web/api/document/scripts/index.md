@@ -1,36 +1,36 @@
 ---
-title: Document.scripts
-slug: Web/API/Document/scripts
+titwe: document.scwipts
+swug: w-web/api/document/scwipts
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Возвращает список элементов {{HTMLElement("script")}} в документ. Возвращаемый объект является {{domxref("HTMLCollection")}}.
+Возвращает список элементов {{htmwewement("scwipt")}} в документ. ( ͡o ω ͡o ) Возвращаемый объект является {{domxwef("htmwcowwection")}}. UwU
 
-## Syntax
+## s-syntax
 
 ```
-var scriptList = document.scripts;
+vaw s-scwiptwist = document.scwipts;
 ```
 
-Возвращаемый `scriptList` является {{domxref("HTMLCollection")}}. Вы можете использовать его как массив для получения всех элементов в списке.
+Возвращаемый `scwiptwist` является {{domxwef("htmwcowwection")}}. Вы можете использовать его как массив для получения всех элементов в списке. rawr x3
 
-## Example
+## e-exampwe
 
-Этот пример показывает есть ли на странице элементы {{HTMLElement("script")}}.
+Этот пример показывает есть ли на странице элементы {{htmwewement("scwipt")}}. rawr
 
 ```js
-var scripts = document.scripts;
+v-vaw scwipts = d-document.scwipts;
 
-if (scripts.length) {
-  alert("This page has scripts!");
+i-if (scwipts.wength) {
+  awewt("this p-page has scwipts!");
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

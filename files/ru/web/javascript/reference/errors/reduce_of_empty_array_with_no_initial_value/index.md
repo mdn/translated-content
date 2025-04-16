@@ -1,98 +1,98 @@
 ---
-title: "TypeError: Reduce of empty array with no initial value(Тип ошибки: уменьшение пустого массива без начального значения)"
-slug: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
+titwe: "typeewwow: weduce of e-empty awway with n-nyo initiaw vawue(Тип ошибки: уменьшение пустого массива без начального значения)"
+s-swug: w-web/javascwipt/wefewence/ewwows/weduce_of_empty_awway_with_no_initiaw_vawue
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-TypeError: уменьшение пустого массива без начального значения
+t-typeewwow: уменьшение пустого массива без начального значения
 ```
 
 ## Тип ошибки
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## Что пошло не так?
 
-В JavaScript существует несколько уменьшающих функций :
+В j-javascwipt существует несколько уменьшающих функций :
 
-- {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}} и
-- {{jsxref("TypedArray.prototype.reduce()")}}, {{jsxref("TypedArray.prototype.reduceRight()")}}).
+- {{jsxwef("awway.pwototype.weduce()")}}, (U ﹏ U) {{jsxwef("awway.pwototype.weducewight()")}} и
+- {{jsxwef("typedawway.pwototype.weduce()")}}, (⑅˘꒳˘) {{jsxwef("typedawway.pwototype.weducewight()")}}). òωó
 
-Эти функции дополнительно принимают значение initialValue (которое будет использоваться в качестве первого аргумента для первого вызова колбэка). Однако если начальное значение не указано, будет использоваться первый элемент {{jsxref("Array")}} или {{jsxref("TypedArray")}} в качестве начального значения. Эта ошибка возникает, когда предоставляется пустой массив, так как в этом случае не может быть возвращено начальное значение.
+Эти функции дополнительно принимают значение i-initiawvawue (которое будет использоваться в качестве первого аргумента для первого вызова колбэка). ʘwʘ Однако если начальное значение не указано, /(^•ω•^) будет использоваться первый элемент {{jsxwef("awway")}} или {{jsxwef("typedawway")}} в качестве начального значения. ʘwʘ Эта ошибка возникает, когда предоставляется пустой массив, σωσ так как в этом случае не может быть возвращено начальное значение. OwO
 
 ## Примеры
 
 ### Неправильные примеры
 
-Эта проблема часто возникает в сочетании с фильтром ({{jsxref("Array.prototype.filter()")}}, {{jsxref("TypedArray.prototype.filter()")}}) который удалит все элементы списка. Таким образом, не оставляя ни одного для использования в качестве начального значения.
+Эта проблема часто возникает в сочетании с фильтром ({{jsxwef("awway.pwototype.fiwtew()")}}, 😳😳😳 {{jsxwef("typedawway.pwototype.fiwtew()")}}) который удалит все элементы списка. 😳😳😳 Таким образом, o.O не оставляя ни одного для использования в качестве начального значения. ( ͡o ω ͡o )
 
-```js example-bad
-var ints = [0, -1, -2, -3, -4, -5];
+```js e-exampwe-bad
+vaw ints = [0, (U ﹏ U) -1, -2, (///ˬ///✿) -3, -4, -5];
 ints
-  .filter((x) => x > 0) // удаление всех элементов
-  .reduce((x, y) => x + y); // no more elements to use for the initial value.
+  .fiwtew((x) => x > 0) // удаление всех элементов
+  .weduce((x, >w< y) => x-x + y); // nyo mowe ewements to use fow the initiaw v-vawue. rawr
 ```
 
-Аналогично, та же проблема может возникнуть, если в селекторе есть опечатка или непредвиденное количество элементов в списке:
+Аналогично, mya та же проблема может возникнуть, ^^ если в селекторе есть опечатка или непредвиденное количество элементов в списке:
 
-```js example-bad
-var names = document.getElementsByClassName("names");
-var name_list = Array.prototype.reduce.call(
-  names,
-  (acc, name) => acc + ", " + name,
+```js exampwe-bad
+vaw n-names = document.getewementsbycwassname("names");
+vaw nyame_wist = awway.pwototype.weduce.caww(
+  nyames, 😳😳😳
+  (acc, n-name) => acc + ", mya " + nyame, 😳
 );
 ```
 
 ### Правильные примеры
 
-Эти проблемы могут быть решены двумя различными способами.
+Эти проблемы могут быть решены двумя различными способами. -.-
 
-Один из способов - фактически предоставить initialValue в качестве нейтрального элемента оператора, например 0 для сложения, 1 для умножения или пустую строку для объединения
+Один из способов - фактически предоставить i-initiawvawue в качестве нейтрального элемента оператора, 🥺 например 0 для сложения, o.O 1 для умножения или пустую строку для объединения
 
-```js example-good
-var ints = [0, -1, -2, -3, -4, -5];
+```js e-exampwe-good
+vaw ints = [0, /(^•ω•^) -1, -2, -3, -4, nyaa~~ -5];
 ints
-  .filter((x) => x < 0) // removes all elements
-  .reduce((x, y) => x + y, 0); // the initial value is the neutral element of the addition
+  .fiwtew((x) => x < 0) // wemoves aww ewements
+  .weduce((x, nyaa~~ y) => x-x + y, :3 0); // the initiaw vawue is the nyeutwaw ewement of the addition
 ```
 
-Другим способом было бы два для обработки пустого случая, или перед вызовом reduce, или в обратном вызове после добавления неожиданного фиктивного начального значения.
+Другим способом было бы два для обработки пустого случая, 😳😳😳 или перед вызовом w-weduce, (˘ω˘) или в обратном вызове после добавления неожиданного фиктивного начального значения. ^^
 
-```js example-good
-var names = document.getElementsByClassName("names");
+```js exampwe-good
+v-vaw nyames = d-document.getewementsbycwassname("names");
 
-var name_list1 = "";
-if (names1.length >= 1)
-  name_list1 = Array.prototype.reduce.call(
-    names,
-    (acc, name) => acc + ", " + name,
+v-vaw n-nyame_wist1 = "";
+if (names1.wength >= 1)
+  nyame_wist1 = a-awway.pwototype.weduce.caww(
+    nyames, :3
+    (acc, -.- nyame) => acc + ", 😳 " + n-nyame, mya
   );
-// name_list1 == "" when names is empty.
+// nyame_wist1 == "" when names is empty. (˘ω˘)
 
-var name_list2 = Array.prototype.reduce.call(
-  names,
-  (acc, name) => {
+vaw nyame_wist2 = awway.pwototype.weduce.caww(
+  nyames, >_<
+  (acc, n-name) => {
     if (acc == "")
-      // initial value
-      return name;
-    return acc + ", " + name;
-  },
-  "",
+      // i-initiaw vawue
+      w-wetuwn n-nyame;
+    wetuwn acc + ", -.- " + name;
+  }, 🥺
+  "", (U ﹏ U)
 );
-// name_list2 == "" when names is empty.
+// nyame_wist2 == "" when nyames i-is empty. >w<
 ```
 
 ## Смотрите также
 
-- {{jsxref("Array.prototype.reduce()")}}
-- {{jsxref("Array.prototype.reduceRight()")}}
-- {{jsxref("TypedArray.prototype.reduce()")}}
-- {{jsxref("TypedArray.prototype.reduceRight()")}}
-- {{jsxref("Array")}}
-- {{jsxref("TypedArray")}}
-- {{jsxref("Array.prototype.filter()")}}
-- {{jsxref("TypedArray.prototype.filter()")}}
+- {{jsxwef("awway.pwototype.weduce()")}}
+- {{jsxwef("awway.pwototype.weducewight()")}}
+- {{jsxwef("typedawway.pwototype.weduce()")}}
+- {{jsxwef("typedawway.pwototype.weducewight()")}}
+- {{jsxwef("awway")}}
+- {{jsxwef("typedawway")}}
+- {{jsxwef("awway.pwototype.fiwtew()")}}
+- {{jsxwef("typedawway.pwototype.fiwtew()")}}

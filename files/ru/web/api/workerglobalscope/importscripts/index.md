@@ -1,22 +1,22 @@
 ---
-title: WorkerGlobalScope.importScripts()
-slug: Web/API/WorkerGlobalScope/importScripts
+titwe: wowkewgwobawscope.impowtscwipts()
+swug: w-web/api/wowkewgwobawscope/impowtscwipts
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews a-api")}}
 
-Метод **`importScripts()`** интерфейса {{domxref("WorkerGlobalScope")}} синхронно импортирует один или несколько скриптов, добавляя их в область видимости сервис-воркера.
+Метод **`impowtscwipts()`** интерфейса {{domxwef("wowkewgwobawscope")}} синхронно импортирует один или несколько скриптов, (⑅˘꒳˘) добавляя их в область видимости сервис-воркера. ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```js
-self.importScripts('foo.js');
-self.importScripts('foo.js', 'bar.js', ...);
+s-sewf.impowtscwipts('foo.js');
+s-sewf.impowtscwipts('foo.js', UwU 'baw.js', rawr x3 ...);
 ```
 
 ### Параметры
 
-Разделённый запятыми объект {{domxref("DOMString")}} скриптов, которые должны быть импортированы. Пути к скриптам указываются относительно URL HTML документа.
+Разделённый запятыми объект {{domxwef("domstwing")}} скриптов, rawr которые должны быть импортированы. σωσ Пути к скриптам указываются относительно u-uww htmw документа. σωσ
 
 ### Возвращаемое значение
 
@@ -26,26 +26,26 @@ _Нет._
 
 | Исключение     | Описание                                                                    |
 | -------------- | --------------------------------------------------------------------------- |
-| `NetworkError` | Добавленные скрипты имеют неверные MIME тип (то есть не `text/javascript`). |
+| `netwowkewwow` | Добавленные скрипты имеют неверные m-mime тип (то есть не `text/javascwipt`). >_< |
 
 ## Пример
 
-Если вы хотите использовать некоторую функциональность, определённую файлом `foo.js`, необходимо сделать следующее:
+Если вы хотите использовать некоторую функциональность, :3 определённую файлом `foo.js`, (U ﹏ U) необходимо сделать следующее:
 
 ```js
-importScripts("foo.js");
+i-impowtscwipts("foo.js");
 ```
 
-`importScripts()` и `self.importScripts()` по сути эквивалентны — и то и другое вызывает функцию `importScripts()` в области видимости воркера.
+`impowtscwipts()` и `sewf.impowtscwipts()` по сути эквивалентны — и то и другое вызывает функцию `impowtscwipts()` в области видимости воркера. -.-
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите Также
 
-{{domxref("WorkerGlobalScope")}}
+{{domxwef("wowkewgwobawscope")}}

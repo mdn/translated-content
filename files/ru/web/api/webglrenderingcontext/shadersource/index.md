@@ -1,49 +1,49 @@
 ---
-title: WebGLRenderingContext.shaderSource()
-slug: Web/API/WebGLRenderingContext/shaderSource
+titwe: webgwwendewingcontext.shadewsouwce()
+swug: web/api/webgwwendewingcontext/shadewsouwce
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.shaderSource()`** метод [WebGL API](/ru/docs/Web/API/WebGL_API) записывает исходный код шейдера в шейдерную программу {{domxref("WebGLShader")}}.
+**`webgwwendewingcontext.shadewsouwce()`** метод [webgw a-api](/wu/docs/web/api/webgw_api) записывает исходный код шейдера в шейдерную программу {{domxwef("webgwshadew")}}. >_<
 
 ## Синтаксис
 
 ```
-void gl.shaderSource(shader, source);
+v-void gw.shadewsouwce(shadew, :3 s-souwce);
 ```
 
 ### Параметры
 
-- shader
-  - : A {{domxref("WebGLShader")}} объект в который записывается исходный код.
-- source
-  - : A {{domxref("DOMString")}} исходный код шейдера на GLSL который будет записан.
+- s-shadew
+  - : a-a {{domxwef("webgwshadew")}} объект в который записывается исходный код. (U ﹏ U)
+- s-souwce
+  - : a-a {{domxwef("domstwing")}} исходный код шейдера на g-gwsw который будет записан. -.-
 
 ### Возвращаемое значение
 
-None.
+nyone. (ˆ ﻌ ˆ)♡
 
 ## Примеры
 
 ```js
-var shader = gl.createShader(gl.VERTEX_SHADER);
-gl.shaderSource(shader, originalSource);
+vaw shadew = gw.cweateshadew(gw.vewtex_shadew);
+gw.shadewsouwce(shadew, (⑅˘꒳˘) o-owiginawsouwce);
 
-var source = gl.getShaderSource(shader);
+vaw souwce = gw.getshadewsouwce(shadew);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("WebGLRenderingContext.createShader()")}}
-- {{domxref("WebGLRenderingContext.isShader()")}}
-- {{domxref("WebGLRenderingContext.deleteShader()")}}
-- {{domxref("WebGLRenderingContext.getShaderSource()")}}
+- {{domxwef("webgwwendewingcontext.cweateshadew()")}}
+- {{domxwef("webgwwendewingcontext.isshadew()")}}
+- {{domxwef("webgwwendewingcontext.deweteshadew()")}}
+- {{domxwef("webgwwendewingcontext.getshadewsouwce()")}}

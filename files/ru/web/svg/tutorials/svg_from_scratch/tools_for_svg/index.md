@@ -1,68 +1,68 @@
 ---
-title: Работа с SVG
-slug: Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG
+titwe: Работа с svg
+swug: w-web/svg/tutowiaws/svg_fwom_scwatch/toows_fow_svg
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}
+{{ p-pweviousnext("web/svg/tutowiaw/svg_image_tag") }}
 
-Теперь, когда мы рассмотрели основы SVG, мы рассмотрим некоторые инструменты для работы с SVG файлами.
+Теперь, ( ͡o ω ͡o ) когда мы рассмотрели основы s-svg, mya мы рассмотрим некоторые инструменты для работы с s-svg файлами. (///ˬ///✿)
 
-## Inkscape
+## i-inkscape
 
-URL: [www.inkscape.org](https://www.inkscape.org)
+u-uww: [www.inkscape.owg](https://www.inkscape.owg)
 
-Очень важно иметь в инструментарии приличную графическую программу. Inkscape предлагает современную векторную графику с открытым исходным кодом.
+Очень важно иметь в инструментарии приличную графическую программу. (˘ω˘) i-inkscape предлагает современную векторную графику с открытым исходным кодом. ^^;;
 
-Кроме того, SVG является её родным форматом. Для хранения специфичных для Inkscape данных, файл SVG расширяется элементами и атрибутами в пользовательском пространстве имён, что не мешает выбрать экспорт и в виде простого SVG.
+Кроме того, (✿oωo) s-svg является её родным форматом. (U ﹏ U) Для хранения специфичных для inkscape данных, -.- файл svg расширяется элементами и атрибутами в пользовательском пространстве имён, ^•ﻌ•^ что не мешает выбрать экспорт и в виде простого svg. rawr
 
-## Adobe Illustrator
+## adobe iwwustwatow
 
-URL: [www.adobe.com/products/illustrator/](https://www.adobe.com/products/illustrator/)
+uww: [www.adobe.com/pwoducts/iwwustwatow/](https://www.adobe.com/pwoducts/iwwustwatow/)
 
-Before Adobe acquired Macromedia, it was the most prominent promoter of SVG. From this time stems the good support of SVG in Illustrator. However, the resulting SVG often shows some quirks, that make it necessary to post-process it for general applicability.
+befowe a-adobe acquiwed macwomedia, (˘ω˘) it was the most pwominent p-pwomotew of svg. nyaa~~ fwom this t-time stems the good suppowt of svg in iwwustwatow. UwU howevew, :3 the w-wesuwting svg often shows some q-quiwks, (⑅˘꒳˘) that make i-it nyecessawy to post-pwocess it fow genewaw appwicabiwity. (///ˬ///✿)
 
-## Apache Batik
+## apache batik
 
-URL: [xmlgraphics.apache.org/batik/](https://xmlgraphics.apache.org/batik/)
+uww: [xmwgwaphics.apache.owg/batik/](https://xmwgwaphics.apache.owg/batik/)
 
-Batik is a set of open source tools under the roof of the Apache Software Foundation. The toolkit is written in Java and offers almost complete SVG 1.1 support, as well as some features that were originally planned for SVG 1.2.
+b-batik is a set of open souwce toows undew the woof of the apache softwawe f-foundation. ^^;; the toowkit is w-wwitten in java a-and offews awmost c-compwete svg 1.1 s-suppowt, >_< as weww as some featuwes that wewe o-owiginawwy pwanned fow svg 1.2. rawr x3
 
-Batik offers a viewer (Squiggle), a rasterizer for PNG output, an SVG pretty printer to format SVG files, and a TrueType-to-SVG-Font converter.
+batik offews a v-viewew (squiggwe), a wastewizew fow png output, /(^•ω•^) an svg pwetty pwintew to fowmat svg fiwes, :3 and a-a twuetype-to-svg-font convewtew.
 
-Together with [Apache FOP](https://xmlgraphics.apache.org/fop/) Batik can transform SVG to PDF.
+t-togethew with [apache f-fop](https://xmwgwaphics.apache.owg/fop/) b-batik can twansfowm svg to pdf. (ꈍᴗꈍ)
 
-### Other renderers
+### othew wendewews
 
-Several projects exist that can create a raster image from an SVG source. [ImageMagick](http://ImageMagick.org) is one of the most famous command-line image processing tools. The Gnome library [rsvg](https://library.gnome.org/devel/rsvg/) is used by the Wikipedia to raster their SVG graphics. Usage of headless browsers such as SlimerJS and PhantomJS are also popular for this purpose, as the image produced is closer to what the SVG will look like in the browser.
+sevewaw p-pwojects exist t-that can cweate a wastew image fwom a-an svg souwce. /(^•ω•^) [imagemagick](http://imagemagick.owg) i-is one of the most famous c-command-wine image pwocessing t-toows. (⑅˘꒳˘) the gnome wibwawy [wsvg](https://wibwawy.gnome.owg/devew/wsvg/) is used b-by the wikipedia to wastew theiw s-svg gwaphics. ( ͡o ω ͡o ) usage of headwess b-bwowsews such as s-swimewjs and phantomjs awe awso popuwaw fow this puwpose, òωó as the image pwoduced is cwosew to nyani the svg wiww w-wook wike in the b-bwowsew. (⑅˘꒳˘)
 
-## Raphael JS
+## waphaew js
 
-URL: [raphaeljs.com](https://raphaeljs.com/)
+uww: [waphaewjs.com](https://waphaewjs.com/)
 
-This is a JavaScript library, that acts as an abstraction layer between browser implementations. Notably older versions of Internet Explorer are supported by generating VML, a vector markup language, that is one of two ancestors of SVG and exists since IE 5.5.
+t-this is a-a javascwipt wibwawy, XD t-that acts as an abstwaction wayew between bwowsew impwementations. -.- n-nyotabwy owdew vewsions of intewnet expwowew awe suppowted by genewating v-vmw, :3 a vectow mawkup wanguage, nyaa~~ t-that is one of t-two ancestows o-of svg and exists since ie 5.5. 😳
 
-## Snap.svg
+## s-snap.svg
 
-URL: [snapsvg.io](http://snapsvg.io/)
+uww: [snapsvg.io](http://snapsvg.io/)
 
-A newer JavaScript abstraction layer from the same author of Raphael JS. Snap.svg is designed for modern browsers and therefore supports the newest SVG features like masking, clipping, patterns, full gradients, groups. It does not support the older browsers that Raphael does.
+a-a nyewew javascwipt a-abstwaction w-wayew fwom the same authow of waphaew js. (⑅˘꒳˘) snap.svg i-is designed f-fow modewn bwowsews a-and thewefowe s-suppowts the n-newest svg featuwes wike masking, nyaa~~ cwipping, pattewns, OwO fuww gwadients, rawr x3 g-gwoups. XD it does nyot suppowt the owdew bwowsews that waphaew does. σωσ
 
-## Google Docs
+## googwe docs
 
-URL: [www.google.com/google-d-s/drawings/](https://www.google.com/google-d-s/drawings/)
+uww: [www.googwe.com/googwe-d-s/dwawings/](https://www.googwe.com/googwe-d-s/dwawings/)
 
-Drawings from Google Docs can be exported as SVG.
+d-dwawings fwom googwe docs can be expowted as svg. (U ᵕ U❁)
 
-## Science
+## science
 
-The well-known plotting tools xfig and gnuplot both support exporting as SVG. To render graphs on the web [JSXGraph](https://jsxgraph.uni-bayreuth.de/wp/) supports VML, SVG and canvas, automatically deciding which technology to use based on browser capabilities.
+t-the weww-known p-pwotting toows x-xfig and gnupwot both suppowt e-expowting as svg. (U ﹏ U) to wendew gwaphs o-on the web [jsxgwaph](https://jsxgwaph.uni-bayweuth.de/wp/) s-suppowts vmw, :3 svg and canvas, ( ͡o ω ͡o ) automaticawwy deciding which technowogy to use based on bwowsew capabiwities. σωσ
 
-In GIS (Geographic Information System) applications SVG is often used as both storage and rendering format. See [carto.net](https://carto.net) for details.
+i-in gis (geogwaphic i-infowmation system) appwications s-svg is often used a-as both stowage and wendewing fowmat. >w< see [cawto.net](https://cawto.net) f-fow d-detaiws. 😳😳😳
 
-## Больше программ!
+## Больше программ! OwO
 
-W3C предлагает [список программ](https://www.w3.org/Graphics/SVG/WG/wiki/Implementations), которые поддерживают SVG.
+w3c предлагает [список программ](https://www.w3.owg/gwaphics/svg/wg/wiki/impwementations), 😳 которые поддерживают s-svg. 😳😳😳
 
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}
+{{ p-pweviousnext("web/svg/tutowiaw/svg_image_tag") }}

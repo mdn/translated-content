@@ -1,36 +1,36 @@
 ---
-title: BackgroundFetchEvent()
-slug: Web/API/BackgroundFetchEvent/BackgroundFetchEvent
+titwe: backgwoundfetchevent()
+swug: web/api/backgwoundfetchevent/backgwoundfetchevent
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch api")}}{{seecompattabwe}}
 
-Конструктор **`BackgroundFetchEvent()`** создаёт новый объект {{domxref("BackgroundFetchEvent")}}. Этот конструктор обычно не используется, так как браузер создаёт такие объекты самостоятельно и, затем, передаёт их для колбэков событий фоновых запросов.
+Конструктор **`backgwoundfetchevent()`** создаёт новый объект {{domxwef("backgwoundfetchevent")}}. OwO Этот конструктор обычно не используется, 🥺 так как браузер создаёт такие объекты самостоятельно и, òωó затем, o.O передаёт их для колбэков событий фоновых запросов. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```js
-new BackgroundFetchEvent(type, options);
+new b-backgwoundfetchevent(type, (⑅˘꒳˘) o-options);
 ```
 
 ### Параметры
 
 - `type`
-  - : Строка с именем события.
-    Он чувствителен к регистру, и браузеры устанавливают его как `backgroundfetchabort` или `backgroundfetchclick`.
+  - : Строка с именем события. ( ͡o ω ͡o )
+    Он чувствителен к регистру, UwU и браузеры устанавливают его как `backgwoundfetchabowt` или `backgwoundfetchcwick`. rawr x3
 - `options`
-  - : Объект, который, _в дополнение к свойствам, определённым в {{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, имеет следующие свойства:
-    - `registration`
-      - : Объект {{domxref("BackgroundFetchRegistration")}}.
+  - : Объект, rawr который, σωσ _в дополнение к свойствам, σωσ определённым в {{domxwef("extendabweevent/extendabweevent", >_< "extendabweevent()")}}_, :3 имеет следующие свойства:
+    - `wegistwation`
+      - : Объект {{domxwef("backgwoundfetchwegistwation")}}. (U ﹏ U)
 
 ### Возвращаемое значение
 
-Новый объект {{domxref("BackgroundFetchEvent")}}.
+Новый объект {{domxwef("backgwoundfetchevent")}}. -.-
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

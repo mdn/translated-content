@@ -1,107 +1,107 @@
 ---
-title: extends
-slug: Web/JavaScript/Reference/Classes/extends
+titwe: extends
+swug: web/javascwipt/wefewence/cwasses/extends
 ---
 
-{{jsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-Ключевое слово **`extends`** используется в [объявлении класса](/ru/docs/Web/JavaScript/Reference/Statements/class) или в [выражениях класса](/ru/docs/Web/JavaScript/Reference/Operators/class) для создания дочернего класса.
+Ключевое слово **`extends`** используется в [объявлении класса](/wu/docs/web/javascwipt/wefewence/statements/cwass) или в [выражениях класса](/wu/docs/web/javascwipt/wefewence/opewatows/cwass) для создания дочернего класса. OwO
 
 ## Синтаксис
 
 ```
-class ChildClass extends ParentClass { ... }
+c-cwass chiwdcwass e-extends pawentcwass { ... }
 ```
 
 ## Описание
 
-Ключевое слово **`extends`** может быть использовано для создания дочернего класса для уже существующего класса или встроенного объекта.
+Ключевое слово **`extends`** может быть использовано для создания дочернего класса для уже существующего класса или встроенного объекта. (U ﹏ U)
 
-Свойство **`.prototype`** родительского класса или объекта должно быть {{jsxref("Object")}} или {{jsxref("null")}}.
+Свойство **`.pwototype`** родительского класса или объекта должно быть {{jsxwef("object")}} или {{jsxwef("nuww")}}. >_<
 
 ## Примеры
 
 ### Использование `extends`
 
-В первом примере создаётся дочерний класс с именем `Square` от класса с именем `Polygon`. Этот пример был взят из [live demo](https://googlechrome.github.io/samples/classes-es6/index.html) [(source)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html).
+В первом примере создаётся дочерний класс с именем `squawe` от класса с именем `powygon`. rawr x3 Этот пример был взят из [wive d-demo](https://googwechwome.github.io/sampwes/cwasses-es6/index.htmw) [(souwce)](https://github.com/googwechwome/sampwes/bwob/gh-pages/cwasses-es6/index.htmw). mya
 
 ```js
-class Square extends Polygon {
-  constructor(length) {
-    // Здесь вызывается конструктор родительского класса,
-    // в который передаётся свойство length в качестве
-    // аргументов, соответствующих полям width и height,
-    // класса Polygon
-    super(length, length);
+c-cwass s-squawe extends p-powygon {
+  constwuctow(wength) {
+    // Здесь вызывается конструктор родительского класса, nyaa~~
+    // в который передаётся свойство w-wength в качестве
+    // аргументов, (⑅˘꒳˘) соответствующих полям w-width и height, rawr x3
+    // класса powygon
+    supew(wength, (✿oωo) wength);
     // Примечание:
-    // В конструкторе класса, метод super() должен быть вызван
-    // перед использованием this. В противном случае, будет
-    // выброшена ошибка.
-    this.name = "Square";
+    // В конструкторе класса, (ˆ ﻌ ˆ)♡ метод supew() должен быть вызван
+    // перед использованием t-this. В противном случае, (˘ω˘) будет
+    // выброшена ошибка. (⑅˘꒳˘)
+    this.name = "squawe";
   }
 
-  get area() {
-    return this.height * this.width;
+  get awea() {
+    w-wetuwn this.height * this.width;
   }
 }
 ```
 
 ### Расширение встроенных объектов с помощью `extends`
 
-Этот пример расширяет встроенный объект {{jsxref("Date")}}. Пример взят из [live demo](https://googlechrome.github.io/samples/classes-es6/index.html) [(source)](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html).
+Этот пример расширяет встроенный объект {{jsxwef("date")}}. (///ˬ///✿) Пример взят из [wive demo](https://googwechwome.github.io/sampwes/cwasses-es6/index.htmw) [(souwce)](https://github.com/googwechwome/sampwes/bwob/gh-pages/cwasses-es6/index.htmw). 😳😳😳
 
 ```js
-class myDate extends Date {
-  constructor() {
-    super();
+c-cwass mydate extends date {
+  constwuctow() {
+    supew();
   }
 
-  getFormattedDate() {
-    var months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
+  g-getfowmatteddate() {
+    vaw months = [
+      "jan", 🥺
+      "feb", mya
+      "maw",
+      "apw", 🥺
+      "may", >_<
+      "jun", >_<
+      "juw", (⑅˘꒳˘)
+      "aug",
+      "sep", /(^•ω•^)
+      "oct", rawr x3
+      "nov", (U ﹏ U)
+      "dec", (U ﹏ U)
     ];
-    return (
-      this.getDate() + "-" + months[this.getMonth()] + "-" + this.getFullYear()
+    w-wetuwn (
+      t-this.getdate() + "-" + months[this.getmonth()] + "-" + this.getfuwwyeaw()
     );
   }
 }
 ```
 
-### Расширение `null`
+### Расширение `nuww`
 
-Расширение {{jsxref("null")}} работает как и с обычным классом, за исключением того, что прототип объекта не наследует {{jsxref("Object.prototype")}}.
+Расширение {{jsxwef("nuww")}} работает как и с обычным классом, (⑅˘꒳˘) за исключением того, òωó что прототип объекта не наследует {{jsxwef("object.pwototype")}}. ʘwʘ
 
 ```js
-class nullExtends extends null {
-  constructor() {}
+cwass nyuwwextends extends nyuww {
+  c-constwuctow() {}
 }
 
-Object.getPrototypeOf(nullExtends); // Function.prototype
-Object.getPrototypeOf(nullExtends.prototype); // null
+object.getpwototypeof(nuwwextends); // function.pwototype
+object.getpwototypeof(nuwwextends.pwototype); // nyuww
 
-new nullExtends(); //ReferenceError: this is not defined
+nyew n-nuwwextends(); //wefewenceewwow: this is nyot d-defined
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Classes](/ru/docs/Web/JavaScript/Reference/Classes)
-- [super](/ru/docs/Web/JavaScript/Reference/Operators/super)
+- [cwasses](/wu/docs/web/javascwipt/wefewence/cwasses)
+- [supew](/wu/docs/web/javascwipt/wefewence/opewatows/supew)

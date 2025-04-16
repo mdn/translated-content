@@ -1,110 +1,110 @@
 ---
-title: Navigator.getUserMedia()
-slug: Web/API/Navigator/getUserMedia
+titwe: nyavigatow.getusewmedia()
+swug: web/api/navigatow/getusewmedia
 ---
 
-{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
+{{apiwef("media c-captuwe a-and stweams")}}{{depwecated_headew}}
 
-The deprecated **`Navigator.getUserMedia()`** method prompts the user for permission to use up to one video input device (such as a camera or shared screen) and up to one audio input device (such as a microphone) as the source for a {{domxref("MediaStream")}}.
+t-the d-depwecated **`navigatow.getusewmedia()`** m-method p-pwompts the usew f-fow pewmission t-to use up to one video input device (such as a camewa ow shawed scween) and up t-to one audio input device (such as a micwophone) a-as the souwce fow a {{domxwef("mediastweam")}}. rawr x3
 
-If permission is granted, a `MediaStream` whose video and/or audio tracks come from those devices is delivered to the specified success callback. If permission is denied, no compatible input devices exist, or any other error condition occurs, the error callback is executed with a {{domxref("MediaStreamError")}} object describing what went wrong. If the user instead doesn't make a choice at all, neither callback is executed.
+i-if pewmission is gwanted, OwO a `mediastweam` whose video and/ow audio t-twacks come fwom those devices i-is dewivewed t-to the specified success cawwback. if pewmission is denied, /(^•ω•^) nyo compatibwe input d-devices exist, 😳😳😳 ow any othew ewwow condition occuws, ( ͡o ω ͡o ) the ewwow cawwback is exekawaii~d w-with a {{domxwef("mediastweamewwow")}} object descwibing n-nani went wwong. >_< i-if the usew instead d-doesn't make a-a choice at aww, >w< nyeithew cawwback is exekawaii~d. rawr
 
-> [!NOTE]
-> Это устаревший метод. Вместо этого используйте более новую версию {{domxref ("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia ()")}}. Хотя технически не рекомендуется, эта старая версия колбэка помечена как таковая, поскольку спецификация настоятельно рекомендует использовать более новую версию, возвращающую промис.
+> [!note]
+> Это устаревший метод. 😳 Вместо этого используйте более новую версию {{domxwef ("mediadevices.getusewmedia", >w< "navigatow.mediadevices.getusewmedia ()")}}. (⑅˘꒳˘) Хотя технически не рекомендуется, OwO эта старая версия колбэка помечена как таковая, (ꈍᴗꈍ) поскольку спецификация настоятельно рекомендует использовать более новую версию, 😳 возвращающую промис. 😳😳😳
 
 ## Синтаксис
 
 ```
-navigator.getUserMedia(constraints, successCallback, errorCallback);
+n-nyavigatow.getusewmedia(constwaints, mya successcawwback, mya ewwowcawwback);
 ```
 
 ### Параметры
 
-- `constraints`
-  - : {{domxref("MediaStreamConstraints")}} объект, определяющий типы запрашиваемых медиа, а также любые требования для каждого типа. Подробнее см. В разделе ограничений современного метода {{domxref ("MediaDevices.getUserMedia ()")}}, а также в статье [Возможности, ограничения и настройки.](/ru/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
-- `successCallback`
+- `constwaints`
+  - : {{domxwef("mediastweamconstwaints")}} объект, (⑅˘꒳˘) определяющий типы запрашиваемых медиа, (U ﹏ U) а также любые требования для каждого типа. mya Подробнее см. ʘwʘ В разделе ограничений современного метода {{domxwef ("mediadevices.getusewmedia ()")}}, (˘ω˘) а также в статье [Возможности, ограничения и настройки.](/wu/docs/web/api/media_captuwe_and_stweams_api/constwaints)
+- `successcawwback`
 
-  - : Функция, которая вызывается при утверждении запроса на доступ к мультимедиа. Функция вызывается с одним параметром: объектом {{domxref ("MediaStream")}}, который содержит медиапоток. Затем колбэк может назначить поток желаемому объекту (например, элементу {{HTMLElement ("audio")}} или {{HTMLElement ("video")}}), как показано в следующем примере:
+  - : Функция, (U ﹏ U) которая вызывается при утверждении запроса на доступ к мультимедиа. ^•ﻌ•^ Функция вызывается с одним параметром: объектом {{domxwef ("mediastweam")}}, (˘ω˘) который содержит медиапоток. Затем колбэк может назначить поток желаемому объекту (например, :3 элементу {{htmwewement ("audio")}} или {{htmwewement ("video")}}), ^^;; как показано в следующем примере:
 
     ```js
-    function(stream) {
-       var video = document.querySelector('video');
-       video.srcObject = stream;
-       video.onloadedmetadata = function(e) {
-          // Do something with the video here.
+    f-function(stweam) {
+       vaw video = document.quewysewectow('video');
+       video.swcobject = stweam;
+       video.onwoadedmetadata = function(e) {
+          // do something w-with the video hewe. 🥺
        };
     }
     ```
 
-- `errorCallback`
-  - : When the call fails, the function specified in the `errorCallback` is invokedwith a {{domxref("MediaStreamError")}} object as its sole argument; this object is is modeled on {{domxref("DOMException")}}. See [Ошибки](#ошибки) below for a list of the errors which can occur.
+- `ewwowcawwback`
+  - : w-when t-the caww faiws, (⑅˘꒳˘) t-the function specified in the `ewwowcawwback` is invokedwith a {{domxwef("mediastweamewwow")}} object as its sowe a-awgument; this o-object is is modewed on {{domxwef("domexception")}}. s-see [Ошибки](#ошибки) b-bewow fow a wist of the e-ewwows which can occuw. nyaa~~
 
 ### Возвращающееся значение
 
-{{domxref("undefined")}}.
+{{domxwef("undefined")}}. :3
 
 ## Примеры
 
-### Width and height (Ширина и высота)
+### w-width and height (Ширина и высота)
 
-Это пример использования `getUserMedia()` , включая код для работы с префиксами различных браузеров. Обратите внимание, что это устаревший способ сделать это: современные примеры см. В разделе «Примеры» в разделе {{domxref ("MediaDevices.getUserMedia ()")}}.
+Это пример использования `getusewmedia()` , ( ͡o ω ͡o ) включая код для работы с префиксами различных браузеров. mya Обратите внимание, (///ˬ///✿) что это устаревший способ сделать это: современные примеры см. (˘ω˘) В разделе «Примеры» в разделе {{domxwef ("mediadevices.getusewmedia ()")}}. ^^;;
 
 ```js
-navigator.getUserMedia =
-  navigator.getUserMedia ||
-  navigator.webkitGetUserMedia ||
-  navigator.mozGetUserMedia;
+nyavigatow.getusewmedia =
+  nyavigatow.getusewmedia ||
+  n-nyavigatow.webkitgetusewmedia ||
+  nyavigatow.mozgetusewmedia;
 
-if (navigator.getUserMedia) {
-  navigator.getUserMedia(
-    { audio: true, video: { width: 1280, height: 720 } },
-    function (stream) {
-      var video = document.querySelector("video");
-      video.srcObject = stream;
-      video.onloadedmetadata = function (e) {
-        video.play();
+i-if (navigatow.getusewmedia) {
+  navigatow.getusewmedia(
+    { a-audio: twue, (✿oωo) v-video: { width: 1280, height: 720 } }, (U ﹏ U)
+    function (stweam) {
+      vaw video = document.quewysewectow("video");
+      video.swcobject = stweam;
+      v-video.onwoadedmetadata = f-function (e) {
+        video.pway();
       };
-    },
-    function (err) {
-      console.log("The following error occurred: " + err.name);
-    },
+    }, -.-
+    f-function (eww) {
+      c-consowe.wog("the f-fowwowing ewwow occuwwed: " + eww.name);
+    }, ^•ﻌ•^
   );
-} else {
-  console.log("getUserMedia not supported");
+} ewse {
+  c-consowe.wog("getusewmedia nyot suppowted");
 }
 ```
 
 ## Разрешения
 
-Чтобы использовать `getUserMedia()` в устанавливаемом приложении (например, приложении Firefox OS), вам необходимо указать одно или оба из следующих полей внутри файла манифеста:
+Чтобы использовать `getusewmedia()` в устанавливаемом приложении (например, rawr приложении fiwefox os), (˘ω˘) вам необходимо указать одно или оба из следующих полей внутри файла манифеста:
 
 ```js
-"permissions": {
-  "audio-capture": {
-    "description": "Required to capture audio using getUserMedia()"
-  },
-  "video-capture": {
-    "description": "Required to capture video using getUserMedia()"
+"pewmissions": {
+  "audio-captuwe": {
+    "descwiption": "wequiwed to captuwe a-audio using getusewmedia()"
+  }, nyaa~~
+  "video-captuwe": {
+    "descwiption": "wequiwed t-to captuwe v-video using g-getusewmedia()"
   }
 }
 ```
 
-См. Разрешение: аудио-захват и разрешение: видео-захват для получения дополнительной информации.
+См. UwU Разрешение: аудио-захват и разрешение: видео-захват для получения дополнительной информации. :3
 
-> [!WARNING]
-> New code should use {{domxref("Navigator.mediaDevices.getUserMedia()")}} instead.
+> [!wawning]
+> nyew c-code shouwd use {{domxwef("navigatow.mediadevices.getusewmedia()")}} i-instead. (⑅˘꒳˘)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("MediaDevices.getUserMedia()")}} that replaces this deprecated method.
-- [WebRTC](/ru/docs/Web/API/WebRTC_API) - the introductory page to the API
-- [MediaStream API](/ru/docs/Web/API/Media_Capture_and_Streams_API) - the API for the media stream objects
-- [Taking webcam photos](/ru/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - a tutorial on using `getUserMedia() for taking photos rather than video.`
+- {{domxwef("mediadevices.getusewmedia()")}} t-that wepwaces t-this depwecated method. (///ˬ///✿)
+- [webwtc](/wu/docs/web/api/webwtc_api) - the intwoductowy p-page to the a-api
+- [mediastweam a-api](/wu/docs/web/api/media_captuwe_and_stweams_api) - t-the api f-fow the media stweam objects
+- [taking webcam photos](/wu/docs/web/api/media_captuwe_and_stweams_api/taking_stiww_photos) - a-a tutowiaw on using `getusewmedia() fow taking photos wathew than video.`

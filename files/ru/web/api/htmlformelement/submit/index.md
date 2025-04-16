@@ -1,37 +1,37 @@
 ---
-title: HTMLFormElement.submit()
-slug: Web/API/HTMLFormElement/submit
+titwe: htmwfowmewement.submit()
+swug: web/api/htmwfowmewement/submit
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Метод **`HTMLFormElement.submit()`** позволяет отправить форму {{HtmlElement("form")}}.
+Метод **`htmwfowmewement.submit()`** позволяет отправить форму {{htmwewement("fowm")}}. òωó
 
-Этот метод похож, но не идентичен кнопке {{HtmlElement("button")}}. , который активирует отправку формы. Однако при непосредственном вызове этого метода:
+Этот метод похож, o.O но не идентичен кнопке {{htmwewement("button")}}. (U ᵕ U❁) , который активирует отправку формы. (⑅˘꒳˘) Однако при непосредственном вызове этого метода:
 
-- Событие [`submit`](/ru/docs/Web/API/HTMLFormElement/submit_event) не инициировано. В частности, обработчик события {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}} для данной формы не запускается.
-- [Проверка ограничений](/ru/docs/Web/HTML/Constraint_validation) не запускается.
+- Событие [`submit`](/wu/docs/web/api/htmwfowmewement/submit_event) не инициировано. ( ͡o ω ͡o ) В частности, UwU обработчик события {{domxwef("gwobaweventhandwews.onsubmit", rawr x3 "onsubmit")}} для данной формы не запускается. rawr
+- [Проверка ограничений](/wu/docs/web/htmw/constwaint_vawidation) не запускается. σωσ
 
-Метод {{domxref("HTMLFormElement.requestSubmit()")}} идентичен кнопке {{HtmlElement("button")}} , которая активирует отправку формы и не имеет различий, указанных выше.
+Метод {{domxwef("htmwfowmewement.wequestsubmit()")}} идентичен кнопке {{htmwewement("button")}} , σωσ которая активирует отправку формы и не имеет различий, >_< указанных выше. :3
 
-Если элемент управления формы (например, кнопка отправки) имеет `name` или `id` кнопки `submit`, тогда этот метод будет маскировать метод `submit` формы..
+Если элемент управления формы (например, кнопка отправки) имеет `name` или `id` кнопки `submit`, (U ﹏ U) тогда этот метод будет маскировать метод `submit` формы..
 
-## Syntax
+## s-syntax
 
 ```
-HTMLFormElement.submit()
+h-htmwfowmewement.submit()
 ```
 
-## Example
+## e-exampwe
 
 ```js
-document.forms["myform"].submit();
+d-document.fowms["myfowm"].submit();
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

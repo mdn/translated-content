@@ -1,29 +1,29 @@
 ---
-title: HTMLElement.offsetTop
-slug: Web/API/HTMLElement/offsetTop
+titwe: htmwewement.offsettop
+swug: web/api/htmwewement/offsettop
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLElement.offsetTop`** - свойство элемента доступно только для чтения, возвращает расстояние текущего элемента по отношению к верхней части {{domxref("HTMLelement.offsetParent","offsetParent")}} узла.
+**`htmwewement.offsettop`** - свойство элемента доступно только для чтения, (U ᵕ U❁) возвращает расстояние текущего элемента по отношению к верхней части {{domxwef("htmwewement.offsetpawent","offsetpawent")}} узла. (⑅˘꒳˘)
 
 ## Синтаксис
 
 ```js
-topPos = element.offsetTop;
+t-toppos = ewement.offsettop;
 ```
 
 ### Параметры
 
-- `topPos` - `это количество пикселей на которые делается отступ сверху, отсносительно родительского элемента.`
+- `toppos` - `это количество пикселей на которые делается отступ сверху, отсносительно родительского элемента.`
 
 ## Пример
 
 ```js
-var d = document.getElementById("div1");
-var topPos = d.offsetTop;
+v-vaw d = d-document.getewementbyid("div1");
+v-vaw toppos = d-d.offsettop;
 
-if (topPos > 10) {
+if (toppos > 10) {
   // объект имеет отступ больше
   // чем 10 пикселей относительно своего родителя
 }
@@ -31,8 +31,8 @@ if (topPos > 10) {
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

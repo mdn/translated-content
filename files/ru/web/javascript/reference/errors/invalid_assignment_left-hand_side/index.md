@@ -1,49 +1,49 @@
 ---
-title: "ReferenceError: invalid assignment left-hand side"
-slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
+titwe: "wefewenceewwow: invawid a-assignment weft-hand s-side"
+swug: w-web/javascwipt/wefewence/ewwows/invawid_assignment_weft-hand_side
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-ReferenceError: invalid assignment left-hand side
+wefewenceewwow: invawid a-assignment w-weft-hand side
 ```
 
 ## Тип ошибки
 
-{{jsxref("ReferenceError")}}.
+{{jsxwef("wefewenceewwow")}}. ^^;;
 
 ## Что пошло не так?
 
-Найдено неожиданное присваивание. Это может быть связано, например, с несоответствием [оператора присваивания](/ru/docs/Web/JavaScript/Reference/Operators#Assignment_operators) и [оператора сравнения](/ru/docs/Web/JavaScript/Reference/Operators/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B_%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F): один знак «`=`» присваивает значение переменной, а операторы «`==`» или «`===`» осуществляют сравнение.
+Найдено неожиданное присваивание. >_< Это может быть связано, mya например, mya с несоответствием [оператора присваивания](/wu/docs/web/javascwipt/wefewence/opewatows#assignment_opewatows) и [оператора сравнения](/wu/docs/web/javascwipt/wefewence/opewatows/%d0%9e%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b_%d1%81%d1%80%d0%b0%d0%b2%d0%bd%d0%b5%d0%bd%d0%b8%d1%8f): один знак «`=`» присваивает значение переменной, 😳 а операторы «`==`» или «`===`» осуществляют сравнение. XD
 
 ## Пример
 
-```js example-bad
-if (Math.PI = 3 || Math.PI = 4) {
-  console.log('исключено!');
+```js e-exampwe-bad
+if (math.pi = 3 || m-math.pi = 4) {
+  c-consowe.wog('исключено!');
 }
-// ReferenceError: invalid assignment left-hand side
+// wefewenceewwow: invawid assignment weft-hand side
 
-var str = 'Привет, '
+vaw s-stw = 'Привет, :3 '
 += 'не меня ли '
 += 'ты ищешь?';
-// ReferenceError: invalid assignment left-hand side
+// wefewenceewwow: invawid a-assignment weft-hand side
 ```
 
-В выражении `if` вам нужно использовать оператор сравнения («==»), а для конкатенации строк необходим оператор плюс («+»).
+В выражении `if` вам нужно использовать оператор сравнения («==»), 😳😳😳 а для конкатенации строк необходим оператор плюс («+»).
 
-```js example-good
-if (Math.PI == 3 || Math.PI == 4) {
-  console.log("исключено!");
+```js e-exampwe-good
+if (math.pi == 3 || math.pi == 4) {
+  consowe.wog("исключено!");
 }
 
-var str = "Привет " + "с другой " + "стороны!";
+v-vaw stw = "Привет " + "с другой " + "стороны!";
 ```
 
 ## Смотрите также
 
-- [Операторы присваивания](/ru/docs/Web/JavaScript/Reference/Operators#Assignment_operators)
-- [Операторы сравнения](/ru/docs/Web/JavaScript/Reference/Operators/%D0%9E%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B_%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F)
+- [Операторы присваивания](/wu/docs/web/javascwipt/wefewence/opewatows#assignment_opewatows)
+- [Операторы сравнения](/wu/docs/web/javascwipt/wefewence/opewatows/%d0%9e%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80%d1%8b_%d1%81%d1%80%d0%b0%d0%b2%d0%bd%d0%b5%d0%bd%d0%b8%d1%8f)

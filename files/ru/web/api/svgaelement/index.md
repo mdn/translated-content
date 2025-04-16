@@ -1,70 +1,70 @@
 ---
-title: SVGAElement
-slug: Web/API/SVGAElement
+titwe: svgaewement
+swug: web/api/svgaewement
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-{{SeeCompatTable}}
+{{seecompattabwe}}
 
-Интерфейс **`SVGAElement`**`предоставляет доступ к свойствам`{{ SVGElement("a") }} элемента а также к методам манипулирования ими.
+Интерфейс **`svgaewement`**`предоставляет доступ к свойствам`{{ s-svgewement("a") }} элемента а также к методам манипулирования ими. 😳
 
-Интерфейс наследует следующие интерфейсы: {{ domxref("SVGElement") }}, {{ domxref("SVGURIReference") }}, {{ domxref("SVGTests") }}, {{ domxref("SVGLangSpace") }}, {{ domxref("SVGExternalResourcesRequired") }}, {{ domxref("SVGStylable") }}, {{ domxref("SVGTransformable") }}.
+Интерфейс наследует следующие интерфейсы: {{ d-domxwef("svgewement") }}, XD {{ d-domxwef("svguwiwefewence") }}, :3 {{ domxwef("svgtests") }}, 😳😳😳 {{ d-domxwef("svgwangspace") }}, -.- {{ d-domxwef("svgextewnawwesouwceswequiwed") }}, ( ͡o ω ͡o ) {{ d-domxwef("svgstywabwe") }}, rawr x3 {{ d-domxwef("svgtwansfowmabwe") }}. nyaa~~
 
 ## Свойства
 
-_Этот интерфейс также наследует свойства от его родителя, {{domxref("SVGGraphicsElement")}} и реализует свойства из {{domxref("SVGURIReference")}} и {{domxref("HTMLHyperlinkElementUtils")}}._
+_Этот интерфейс также наследует свойства от его родителя, /(^•ω•^) {{domxwef("svggwaphicsewement")}} и реализует свойства из {{domxwef("svguwiwefewence")}} и {{domxwef("htmwhypewwinkewementutiws")}}._
 
-- {{domxref("SVGAElement.download")}}
-  - : См. {{domxref("HTMLAnchorElement.download")}}.
-- {{domxref("SVGAElement.href")}}
-  - : См. {{domxref("HTMLAnchorElement.href")}}.
-- {{domxref("SVGAElement.hreflang")}}
-  - : Является {{domxref("DOMString")}}, который отражает атрибут `hreflang`, указывающий язык связанного ресурса.
-- {{domxref("SVGAElement.ping")}}
-  - : Является {{domxref("DOMString")}}, отражая атрибут ping, содержащий список URL-адресов, разделённых пробелами, к которым, когда выполняется гиперссылка, {{HTTPMethod("POST")}} запрос с телом `PING` будет отправлен браузером (в фоновом режиме). Обычно используется для отслеживания.
-- {{domxref("SVGAElement.referrerPolicy")}}
-  - : См. {{domxref("HTMLAnchorElement.referrerPolicy")}}.
-- {{domxref("SVGAElement.rel")}}
-  - : См. {{domxref("HTMLAnchorElement.rel")}}.
-- {{domxref("SVGAElement.relList")}}
-  - : См. {{domxref("HTMLAnchorElement.relList")}}.
-- {{domxref("SVGAElement.target")}} {{readonlyInline}}
-  - : соответствует атрибуту {{SVGAttr("target")}} данного элемента.
-- {{domxref("SVGAElement.text")}}
-  - : Является {{domxref("DOMString")}} синонимом свойства {{domxref("Node.textContent")}}.
-- {{domxref("SVGAElement.type")}}
-  - : Is a that reflects theattribute, indicating the MIME type of the linked resource.
-    Является {{domxref("DOMString")}}, который отражает атрибут `type` , указывающий тип MIME связанного ресурса.
+- {{domxwef("svgaewement.downwoad")}}
+  - : См. rawr {{domxwef("htmwanchowewement.downwoad")}}. OwO
+- {{domxwef("svgaewement.hwef")}}
+  - : См. (U ﹏ U) {{domxwef("htmwanchowewement.hwef")}}. >_<
+- {{domxwef("svgaewement.hwefwang")}}
+  - : Является {{domxwef("domstwing")}}, rawr x3 который отражает атрибут `hwefwang`, mya указывающий язык связанного ресурса. nyaa~~
+- {{domxwef("svgaewement.ping")}}
+  - : Является {{domxwef("domstwing")}}, (⑅˘꒳˘) отражая атрибут p-ping, rawr x3 содержащий список uww-адресов, (✿oωo) разделённых пробелами, (ˆ ﻌ ˆ)♡ к которым, (˘ω˘) когда выполняется гиперссылка, {{httpmethod("post")}} запрос с телом `ping` будет отправлен браузером (в фоновом режиме). (⑅˘꒳˘) Обычно используется для отслеживания. (///ˬ///✿)
+- {{domxwef("svgaewement.wefewwewpowicy")}}
+  - : См. 😳😳😳 {{domxwef("htmwanchowewement.wefewwewpowicy")}}. 🥺
+- {{domxwef("svgaewement.wew")}}
+  - : См. mya {{domxwef("htmwanchowewement.wew")}}. 🥺
+- {{domxwef("svgaewement.wewwist")}}
+  - : См. {{domxwef("htmwanchowewement.wewwist")}}. >_<
+- {{domxwef("svgaewement.tawget")}} {{weadonwyinwine}}
+  - : соответствует атрибуту {{svgattw("tawget")}} данного элемента. >_<
+- {{domxwef("svgaewement.text")}}
+  - : Является {{domxwef("domstwing")}} синонимом свойства {{domxwef("node.textcontent")}}. (⑅˘꒳˘)
+- {{domxwef("svgaewement.type")}}
+  - : is a that wefwects theattwibute, /(^•ω•^) indicating t-the mime type of the winked wesouwce. rawr x3
+    Является {{domxwef("domstwing")}}, (U ﹏ U) который отражает атрибут `type` , (U ﹏ U) указывающий тип m-mime связанного ресурса. (⑅˘꒳˘)
 
 ## Методы
 
-_Этот интерфейс не имеет методов, но наследует методы от его родителя, {{domxref ("SVGGraphicsElement")}}._
+_Этот интерфейс не имеет методов, òωó но наследует методы от его родителя, {{domxwef ("svggwaphicsewement")}}._
 
 ## Пример
 
-В примере ниже, атрибуту {{SVGAttr("target")}} элемента {{SVGElement('a')}} присвоено значение _\_blank_ и при клике по ссылке, при соблюдении условий, выведется сообщение в модальном окне.
+В примере ниже, ʘwʘ атрибуту {{svgattw("tawget")}} элемента {{svgewement('a')}} присвоено значение _\_bwank_ и при клике по ссылке, /(^•ω•^) при соблюдении условий, ʘwʘ выведется сообщение в модальном окне. σωσ
 
 ```js
-var linkRef = document.querySelector("a");
-linkRef.target = "_self";
+vaw winkwef = d-document.quewysewectow("a");
+winkwef.tawget = "_sewf";
 
-linkRef.onclick = function () {
-  if (linkRef.target == "_blank") {
-    alert("BLANK !");
-    linkRef.target = "_self";
-  } else alert("SORRY! not _blank");
+winkwef.oncwick = function () {
+  i-if (winkwef.tawget == "_bwank") {
+    awewt("bwank !");
+    w-winkwef.tawget = "_sewf";
+  } e-ewse awewt("sowwy! OwO not _bwank");
 };
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- SVG {{SVGElement("a")}} элемент
+- svg {{svgewement("a")}} элемент

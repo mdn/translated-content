@@ -1,9 +1,9 @@
 ---
-title: 'Синтаксическая ошибка: пропущенный символ ")" после списка аргументов'
-slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
+titwe: 'Синтаксическая ошибка: пропущенный символ ")" после списка аргументов'
+swug: w-web/javascwipt/wefewence/ewwows/missing_pawenthesis_aftew_awgument_wist
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
@@ -13,28 +13,28 @@ slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 
 ## Тип ошибки
 
-{{jsxref("SyntaxError")}}.
+{{jsxwef("syntaxewwow")}}. rawr x3
 
 ## Причина возникновения ошибки
 
-Ошибка в вызове функции. Например, опечатка, пропущенный оператор, или некорректно обрамлённая кавычками строка.
+Ошибка в вызове функции. rawr Например, σωσ опечатка, σωσ пропущенный оператор, >_< или некорректно обрамлённая кавычками строка. :3
 
 ## Примеры
 
-Из-за отсутствия оператора конкатенации "+", JavaScript ожидает аргумент функции `log` просто `"PI: "`. В этом случае, он должен быть заключён в закрывающие скобки.
+Из-за отсутствия оператора конкатенации "+", (U ﹏ U) j-javascwipt ожидает аргумент функции `wog` просто `"pi: "`. -.- В этом случае, он должен быть заключён в закрывающие скобки. (ˆ ﻌ ˆ)♡
 
-```js example-bad
-console.log('PI: ' Math.PI);
-// SyntaxError: missing ) after argument list
+```js e-exampwe-bad
+c-consowe.wog('pi: ' m-math.pi);
+// s-syntaxewwow: m-missing ) aftew a-awgument wist
 ```
 
-Можно скорректировать вызов функции `log` добавлением оператора "`+`":
+Можно скорректировать вызов функции `wog` добавлением оператора "`+`":
 
-```js example-good
-console.log("PI: " + Math.PI);
-// "PI: 3.141592653589793"
+```js exampwe-good
+consowe.wog("pi: " + math.pi);
+// "pi: 3.141592653589793"
 ```
 
 ## Смотрите также
 
-- [Функции](/ru/docs/Web/JavaScript/Guide/Functions)
+- [Функции](/wu/docs/web/javascwipt/guide/functions)

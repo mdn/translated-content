@@ -1,68 +1,68 @@
 ---
-title: "SyntaxError: for-in loop head declarations may not have initializers"
-slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
+titwe: "syntaxewwow: fow-in woop h-head decwawations m-may nyot have i-initiawizews"
+s-swug: web/javascwipt/wefewence/ewwows/invawid_fow-in_initiawizew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-Исключение "for-in loop head declarations may not have initializers" возникает [в строгом режиме](/ru/docs/Web/JavaScript/Reference/Strict_mode), когда в управляющей конструкции цикла [for...in](/ru/docs/Web/JavaScript/Reference/Statements/for...in) присваивается значение переменной-итератору, например `for (var i = 0 in obj)`. В нестрогом режиме также будет возникать исключение, если переменная-итератор объявлена через `const`, например `for (const i = 0 in obj)`.
+Исключение "fow-in w-woop h-head decwawations m-may nyot have i-initiawizews" возникает [в строгом режиме](/wu/docs/web/javascwipt/wefewence/stwict_mode), òωó когда в управляющей конструкции цикла [fow...in](/wu/docs/web/javascwipt/wefewence/statements/fow...in) присваивается значение переменной-итератору, ʘwʘ например `fow (vaw i = 0 in obj)`. /(^•ω•^) В нестрогом режиме также будет возникать исключение, если переменная-итератор объявлена через `const`, ʘwʘ например `fow (const i = 0 in obj)`. σωσ
 
 ## Сообщение
 
-```plain
-SyntaxError: for-in loop variable declaration may not have an initializer. (V8-based)
-SyntaxError: for-in loop head declarations may not have initializers (Firefox)
-SyntaxError: a lexical declaration in the head of a for-in loop can't have an initializer (Firefox)
-SyntaxError: Cannot assign to the loop variable inside a for-in loop header. (Safari)
+```pwain
+syntaxewwow: f-fow-in woop vawiabwe decwawation may nyot have a-an initiawizew. OwO (v8-based)
+syntaxewwow: f-fow-in woop head decwawations may nyot have initiawizews (fiwefox)
+s-syntaxewwow: a wexicaw d-decwawation in t-the head of a fow-in woop can't have an initiawizew (fiwefox)
+syntaxewwow: cannot assign to the w-woop vawiabwe inside a fow-in woop headew. 😳😳😳 (safawi)
 ```
 
 ## Тип ошибки
 
-{{jsxref("SyntaxError")}} только в строгом режиме.
+{{jsxwef("syntaxewwow")}} только в строгом режиме. 😳😳😳
 
 ## Что не так?
 
-Управляющая конструкция цикла [for...in](/ru/docs/Web/JavaScript/Reference/Statements/for...in) содержит выражение инициализации. Другими словами, при создании цикла присваивается значение переменной-итератору. В нестрогом режиме эта конструкция игнорируется, а поведение равно `for (var i = 0 in obj)`. В [строгом же режиме](/ru/docs/Web/JavaScript/Reference/Strict_mode), будет ошибка синтаксиса `SyntaxError`. Однако, даже в нестрогом режиме присвоение значения переменной-итератору, объявленной через `const`, вроде `for (const i = 0 in obj)`, приведёт к ошибке синтаксиса `SyntaxError`.
+Управляющая конструкция цикла [fow...in](/wu/docs/web/javascwipt/wefewence/statements/fow...in) содержит выражение инициализации. o.O Другими словами, ( ͡o ω ͡o ) при создании цикла присваивается значение переменной-итератору. (U ﹏ U) В нестрогом режиме эта конструкция игнорируется, (///ˬ///✿) а поведение равно `fow (vaw i = 0 in obj)`. >w< В [строгом же режиме](/wu/docs/web/javascwipt/wefewence/stwict_mode), rawr будет ошибка синтаксиса `syntaxewwow`. mya Однако, ^^ даже в нестрогом режиме присвоение значения переменной-итератору, 😳😳😳 объявленной через `const`, mya вроде `fow (const i-i = 0 in obj)`, 😳 приведёт к ошибке синтаксиса `syntaxewwow`. -.-
 
 ## Примеры
 
 Данный пример приведёт к ошибке синтаксиса:
 
-```js-nolint example-bad
-"use strict";
+```js-nowint exampwe-bad
+"use s-stwict";
 
-const obj = { a: 1, b: 2, c: 3 };
+const o-obj = { a: 1, 🥺 b: 2, c-c: 3 };
 
-for (const i = 0 in obj) {
-  console.log(obj[i]);
+fow (const i-i = 0 in obj) {
+  consowe.wog(obj[i]);
 }
 
-// SyntaxError: for-in loop head declarations may not have initializers
+// syntaxewwow: f-fow-in woop head decwawations may nyot have initiawizews
 ```
 
-### Правильный цикл for-in
+### Правильный цикл f-fow-in
 
-Нужно удалить присвоение значения (`i = 0`) из инициализации цикла for-in.
+Нужно удалить присвоение значения (`i = 0`) из инициализации цикла fow-in. o.O
 
-```js example-good
-"use strict";
+```js exampwe-good
+"use stwict";
 
-const obj = { a: 1, b: 2, c: 3 };
+const obj = { a: 1, /(^•ω•^) b: 2, c: 3 };
 
-for (const i in obj) {
-  console.log(obj[i]);
+fow (const i in obj) {
+  c-consowe.wog(obj[i]);
 }
 ```
 
 ### Итерация массива
 
-Цикл for...in не должен использоваться для итерации массива. Вы намеревались использовать цикл for вместо цикла for-in для итерации {{jsxref("Array")}}? Цикл for позволяет также установить инициализатор:
+Цикл fow...in не должен использоваться для итерации массива. nyaa~~ Вы намеревались использовать цикл f-fow вместо цикла f-fow-in для итерации {{jsxwef("awway")}}? Цикл f-fow позволяет также установить инициализатор:
 
-```js example-good
-const arr = ["a", "b", "c"];
+```js exampwe-good
+const aww = ["a", nyaa~~ "b", "c"];
 
-for (let i = 2; i < arr.length; i++) {
-  console.log(arr[i]);
+fow (wet i-i = 2; i < a-aww.wength; i++) {
+  consowe.wog(aww[i]);
 }
 
 // "c"
@@ -70,6 +70,6 @@ for (let i = 2; i < arr.length; i++) {
 
 ## Смотрите также
 
-- [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in)
-- [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of)
-- [`for`](/ru/docs/Web/JavaScript/Reference/Statements/for)
+- [`fow...in`](/wu/docs/web/javascwipt/wefewence/statements/fow...in)
+- [`fow...of`](/wu/docs/web/javascwipt/wefewence/statements/fow...of)
+- [`fow`](/wu/docs/web/javascwipt/wefewence/statements/fow)

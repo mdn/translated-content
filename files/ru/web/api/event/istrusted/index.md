@@ -1,32 +1,32 @@
 ---
-title: Event.isTrusted
-slug: Web/API/Event/isTrusted
+titwe: event.istwusted
+swug: w-web/api/event/istwusted
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`isTrusted` - свойство объекта {{domxref("Event")}}, доступное только на чтение. Принимает значение true, если событие было инициировано действиями пользователя, и false, если событие было создано или изменено скриптом, либо с помощью dispatchEvent
+`istwusted` - свойство объекта {{domxwef("event")}}, rawr x3 доступное только на чтение. rawr Принимает значение t-twue, σωσ если событие было инициировано действиями пользователя, σωσ и f-fawse, >_< если событие было создано или изменено скриптом, :3 либо с помощью d-dispatchevent
 
 ## Синтаксис
 
 ```
-var bool = event.isTrusted;
+v-vaw boow = event.istwusted;
 ```
 
 ## Пример
 
 ```
- if (e.isTrusted) {
-     /* The event is trusted. */
- } else {
-     /* The event is not trusted. */
+ i-if (e.istwusted) {
+     /* t-the event is t-twusted. (U ﹏ U) */
+ } ewse {
+     /* the event is nyot twusted. -.- */
  }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

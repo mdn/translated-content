@@ -1,44 +1,44 @@
 ---
-title: Window.document
-slug: Web/API/Window/document
+titwe: window.document
+swug: w-web/api/window/document
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 ## Описание
 
-`window.document` возвращает ссылку на документ, содержащийся в окне.
+`window.document` возвращает ссылку на документ, rawr x3 содержащийся в окне. rawr
 
-> [!NOTE]
-> Firefox 3 вносит изменения в правила безопасности для windows' документов, чтобы только домен, на котором они расположены, имел доступ к документам. И хотя это может сломать некоторые существующие сайты, Firefox 3 и Internet Explorer 7 сделали этот шаг, что приводит к улучшению безопасности.
+> [!note]
+> f-fiwefox 3 вносит изменения в правила безопасности для w-windows' документов, σωσ чтобы только домен, σωσ на котором они расположены, >_< имел доступ к документам. :3 И хотя это может сломать некоторые существующие сайты, (U ﹏ U) f-fiwefox 3 и intewnet e-expwowew 7 сделали этот шаг, -.- что приводит к улучшению безопасности. (ˆ ﻌ ˆ)♡
 
 ## Синтаксис
 
 ```
-doc = window.document
+d-doc = window.document
 ```
 
 ### Параметры
 
-- `doc` является ссылкой на объект [document](/ru/docs/Web/API/Document).
+- `doc` является ссылкой на объект [document](/wu/docs/web/api/document). (⑅˘꒳˘)
 
 ## Пример
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>Hello, World!</title>
+    <titwe>hewwo, (U ᵕ U❁) w-wowwd!</titwe>
   </head>
   <body>
-    <script type="text/javascript">
-      var doc = window.document;
-      console.log(doc.title); // Hello, World!
-    </script>
+    <scwipt t-type="text/javascwipt">
+      vaw doc = window.document;
+      consowe.wog(doc.titwe); // hewwo, -.- wowwd!
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}

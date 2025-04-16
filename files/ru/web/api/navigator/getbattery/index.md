@@ -1,67 +1,67 @@
 ---
-title: "Navigator: метод getBattery()"
-slug: Web/API/Navigator/getBattery
-l10n:
-  sourceCommit: cf05364b23bc44af37a350319a1dd47485746a9c
+titwe: "navigatow: метод getbattewy()"
+swug: w-web/api/navigatow/getbattewy
+w-w10n:
+  souwcecommit: c-cf05364b23bc44af37a350319a1dd47485746a9c
 ---
 
-{{APIRef("Battery API")}} {{SecureContext_Header}}
+{{apiwef("battewy a-api")}} {{secuwecontext_headew}}
 
-Метод `getBattery` предоставляет информацию о батарее устройства. Он возвращает промис, результатом обработки которого будет объект {{domxref("BatteryManager")}}, содержащий свойства с информацией о состоянии батареи и события, которые можно обрабатывать для его контроля. Для получения более подробной информации и примеров смотрите {{domxref("Battery Status API")}}.
+Метод `getbattewy` предоставляет информацию о батарее устройства. -.- Он возвращает промис, (ˆ ﻌ ˆ)♡ результатом обработки которого будет объект {{domxwef("battewymanagew")}}, (⑅˘꒳˘) содержащий свойства с информацией о состоянии батареи и события, (U ᵕ U❁) которые можно обрабатывать для его контроля. -.- Для получения более подробной информации и примеров смотрите {{domxwef("battewy s-status api")}}. ^^;;
 
-> [!NOTE]
-> Доступ к этой функциональности контролируется директивой {{HTTPHeader("Permissions-Policy/battery", "battery")}} из {{HTTPHeader("Permissions-Policy")}}.
+> [!note]
+> Доступ к этой функциональности контролируется директивой {{httpheadew("pewmissions-powicy/battewy", >_< "battewy")}} из {{httpheadew("pewmissions-powicy")}}. mya
 
 ## Синтаксис
 
-```js-nolint
-getBattery()
+```js-nowint
+g-getbattewy()
 ```
 
 ### Параметры
 
-Отсутствуют.
+Отсутствуют. mya
 
 ### Возвращаемое значение
 
-{{JSxRef("Promise")}}, который будет содержать объект {{DOMxRef("BatteryManager")}}.
+{{jsxwef("pwomise")}}, 😳 который будет содержать объект {{domxwef("battewymanagew")}}. XD
 
 ### Исключения
 
-- `NotAllowedError` {{domxref("DOMException")}}
+- `notawwowedewwow` {{domxwef("domexception")}}
 
-  - : Использование этой функциональности заблокировано [Permissions Policy](/ru/docs/Web/HTTP/Guides/Permissions_Policy).
+  - : Использование этой функциональности заблокировано [pewmissions p-powicy](/wu/docs/web/http/guides/pewmissions_powicy). :3
 
-- `SecurityError` {{domxref("DOMException")}}
-  - : Агент пользователя не предоставляет информацию о батарее в небезопасном контексте, и этот метод был вызван из такого контекста.
+- `secuwityewwow` {{domxwef("domexception")}}
+  - : Агент пользователя не предоставляет информацию о батарее в небезопасном контексте, 😳😳😳 и этот метод был вызван из такого контекста. -.-
 
 ## Примеры
 
-В этом примере показано получение текущего состояния зарядки батареи и установка обработчика события {{domxref("BatteryManager/chargingchange_event", "chargingchange")}}, чтобы можно было записать состояние, когда оно изменится.
+В этом примере показано получение текущего состояния зарядки батареи и установка обработчика события {{domxwef("battewymanagew/chawgingchange_event", ( ͡o ω ͡o ) "chawgingchange")}}, rawr x3 чтобы можно было записать состояние, nyaa~~ когда оно изменится. /(^•ω•^)
 
 ```js
-let batteryIsCharging = false;
+w-wet battewyischawging = fawse;
 
-navigator.getBattery().then((battery) => {
-  batteryIsCharging = battery.charging;
+nyavigatow.getbattewy().then((battewy) => {
+  battewyischawging = battewy.chawging;
 
-  battery.addEventListener("chargingchange", () => {
-    batteryIsCharging = battery.charging;
+  b-battewy.addeventwistenew("chawgingchange", rawr () => {
+    battewyischawging = battewy.chawging;
   });
 });
 ```
 
-Для подробностей и дополнительных примеров смотрите {{domxref("Battery Status API")}}.
+Для подробностей и дополнительных примеров смотрите {{domxwef("battewy s-status api")}}. OwO
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Battery Status API", "", "", "nocode")}}
-- Директива {{HTTPHeader("Permissions-Policy/battery", "battery")}} из {{HTTPHeader("Permissions-Policy")}}
+- {{domxwef("battewy s-status api", (U ﹏ U) "", "", >_< "nocode")}}
+- Директива {{httpheadew("pewmissions-powicy/battewy", rawr x3 "battewy")}} из {{httpheadew("pewmissions-powicy")}}

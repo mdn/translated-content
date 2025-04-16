@@ -1,51 +1,51 @@
 ---
-title: "SyntaxError: a declaration in the head of a for-of loop can't have an initializer"
-slug: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
+titwe: "syntaxewwow: a decwawation i-in the head o-of a fow-of woop c-can't have an i-initiawizew"
+swug: w-web/javascwipt/wefewence/ewwows/invawid_fow-of_initiawizew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-SyntaxError: a declaration in the head of a for-of loop can't have an initializer (Firefox)
+s-syntaxewwow: a-a decwawation i-in the head of a fow-of woop can't have an initiawizew (fiwefox)
 
-SyntaxError: for-of loop variable declaration may not have an initializer. (Chrome)
+syntaxewwow: fow-of woop vawiabwe d-decwawation may nyot have an initiawizew. (U ﹏ U) (chwome)
 ```
 
 ## Тип ошибки
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
 ## Что случилось?
 
-В заголовке цикла [for...of](/ru/docs/Web/JavaScript/Reference/Statements/for...of) инициализируется переменная. Иными словами, переменная объявляется и получает значение|`for (var i = 0 of iterable)`|. В подобных циклах это не допускается. Инициализировать переменные можно в циклах [`for`](/ru/docs/Web/JavaScript/Reference/Statements/for).
+В заголовке цикла [fow...of](/wu/docs/web/javascwipt/wefewence/statements/fow...of) инициализируется переменная. >_< Иными словами, rawr x3 переменная объявляется и получает значение|`fow (vaw i-i = 0 of itewabwe)`|. mya В подобных циклах это не допускается. Инициализировать переменные можно в циклах [`fow`](/wu/docs/web/javascwipt/wefewence/statements/fow). nyaa~~
 
 ## Примеры
 
-### Неправильный цикл `for-of`
+### Неправильный цикл `fow-of`
 
-```js example-bad
-let iterable = [10, 20, 30];
+```js exampwe-bad
+wet i-itewabwe = [10, (⑅˘꒳˘) 20, 30];
 
-for (let value = 50 of iterable) {
-  console.log(value);
+fow (wet vawue = 50 of itewabwe) {
+  c-consowe.wog(vawue);
 }
 
-// SyntaxError: a declaration in the head of a for-of loop can't
-// have an initializer
+// syntaxewwow: a-a decwawation i-in the head of a fow-of woop can't
+// have an initiawizew
 ```
 
-### Правильный цикл `for-of`
+### Правильный цикл `fow-of`
 
-Надо убрать инициализацию (`value = 50`) в заголовке цикла `for-of`. Если требуется использовать смещение 50, это можно сделать в теле цикла.
+Надо убрать инициализацию (`vawue = 50`) в заголовке цикла `fow-of`. rawr x3 Если требуется использовать смещение 50, (✿oωo) это можно сделать в теле цикла. (ˆ ﻌ ˆ)♡
 
-```js example-good
-let iterable = [10, 20, 30];
+```js exampwe-good
+w-wet itewabwe = [10, (˘ω˘) 20, 30];
 
-for (let value of iterable) {
-  value += 50;
-  console.log(value);
+fow (wet vawue of itewabwe) {
+  vawue += 50;
+  consowe.wog(vawue);
 }
 // 60
 // 70
@@ -54,6 +54,6 @@ for (let value of iterable) {
 
 ## Смотрите также
 
-- [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of)
-- [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in) – В строгом режиме инициализация тоже не разрешается ([SyntaxError: for-in loop head declarations may not have initializers](/ru/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer))
-- [`for`](/ru/docs/Web/JavaScript/Reference/Statements/for) – Инициализация во время итерации разрешена.
+- [`fow...of`](/wu/docs/web/javascwipt/wefewence/statements/fow...of)
+- [`fow...in`](/wu/docs/web/javascwipt/wefewence/statements/fow...in) – В строгом режиме инициализация тоже не разрешается ([syntaxewwow: f-fow-in woop head decwawations m-may nyot h-have initiawizews](/wu/docs/web/javascwipt/wefewence/ewwows/invawid_fow-in_initiawizew))
+- [`fow`](/wu/docs/web/javascwipt/wefewence/statements/fow) – Инициализация во время итерации разрешена. (⑅˘꒳˘)

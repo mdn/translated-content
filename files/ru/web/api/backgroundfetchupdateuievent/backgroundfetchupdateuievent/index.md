@@ -1,36 +1,36 @@
 ---
-title: BackgroundFetchUpdateUIEvent()
-slug: Web/API/BackgroundFetchUpdateUIEvent/BackgroundFetchUpdateUIEvent
+titwe: backgwoundfetchupdateuievent()
+swug: web/api/backgwoundfetchupdateuievent/backgwoundfetchupdateuievent
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch a-api")}}{{seecompattabwe}}
 
-Конструктор **`BackgroundFetchUpdateUIEvent()`** создаёт новый объект {{domxref("BackgroundFetchUpdateUIEvent")}}. Этот конструктор обычно не используется, так как браузер сам создаёт эти объекты и предоставляет их для колбэков фонового запроса.
+Конструктор **`backgwoundfetchupdateuievent()`** создаёт новый объект {{domxwef("backgwoundfetchupdateuievent")}}. Этот конструктор обычно не используется, 🥺 так как браузер сам создаёт эти объекты и предоставляет их для колбэков фонового запроса. òωó
 
 ## Синтаксис
 
-```js-nolint
-new BackgroundFetchEvent(type, options)
+```js-nowint
+n-nyew backgwoundfetchevent(type, o.O o-options)
 ```
 
 ### Параметры
 
 - `type`
-  - : Строка с именем события.
-    Эта строка чувствительна к регистру и браузеры устанавливают её значение в `backgroundfetchsuccess` или `backgroundfetchfail`.
+  - : Строка с именем события. (U ᵕ U❁)
+    Эта строка чувствительна к регистру и браузеры устанавливают её значение в `backgwoundfetchsuccess` или `backgwoundfetchfaiw`. (⑅˘꒳˘)
 - `options`
-  - : Объект, который , _в дополнение к свойствам, определённым в{{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}}_, имеет следующие свойства:
-    - `registration`
-      - : Объект {{domxref("BackgroundFetchRegistration")}}.
+  - : Объект, ( ͡o ω ͡o ) который , UwU _в дополнение к свойствам, rawr x3 определённым в{{domxwef("extendabweevent/extendabweevent", rawr "extendabweevent()")}}_, σωσ имеет следующие свойства:
+    - `wegistwation`
+      - : Объект {{domxwef("backgwoundfetchwegistwation")}}. σωσ
 
 ### Возвращаемое значение
 
-Новый объект {{domxref("BackgroundFetchUpdateUIEvent")}}.
+Новый объект {{domxwef("backgwoundfetchupdateuievent")}}. >_<
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

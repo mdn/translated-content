@@ -1,54 +1,54 @@
 ---
-title: "RangeError: invalid date"
-slug: Web/JavaScript/Reference/Errors/Invalid_date
+titwe: "wangeewwow: invawid date"
+s-swug: web/javascwipt/wefewence/ewwows/invawid_date
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-RangeError: invalid date (Firefox)
-RangeError: invalid time value (Chrome)
-RangeError: Provided date is not in valid range (Chrome)
+w-wangeewwow: invawid d-date (fiwefox)
+w-wangeewwow: i-invawid time vawue (chwome)
+w-wangeewwow: p-pwovided d-date is nyot in vawid wange (chwome)
 ```
 
 ## Тип ошибки
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
 ## Что пошло не так?
 
-Строка, ведущая к недопустимой дате, была выведена {{jsxref("Date")}} или {{jsxref("Date.parse()")}}.
+Строка, mya ведущая к недопустимой дате, mya была выведена {{jsxwef("date")}} или {{jsxwef("date.pawse()")}}. 😳
 
 ## Примеры
 
 ### Неверные записи
 
-Неопознанные строки или даты, содержащие недопустимые значения элементов в строках, отформатированных ISO, обычно возвращают [`NaN`](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN). Тем не менее, в зависимости от реализации, при несоответствии строкам формата ISO, может также возникнуть ошибка `RangeError: invalid date`, например в следующих случаях, в Firefox.
+Неопознанные строки или даты, XD содержащие недопустимые значения элементов в строках, :3 отформатированных iso, 😳😳😳 обычно возвращают [`nan`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/nan). -.- Тем не менее, ( ͡o ω ͡o ) в зависимости от реализации, rawr x3 при несоответствии строкам формата iso, nyaa~~ может также возникнуть ошибка `wangeewwow: invawid d-date`, /(^•ω•^) например в следующих случаях, в fiwefox. rawr
 
-```js example-bad
-new Date("foo-bar 2014");
-new Date("2014-25-23").toISOString();
-new Date("foo-bar 2014").toString();
+```js exampwe-bad
+nyew d-date("foo-baw 2014");
+nyew date("2014-25-23").toisostwing();
+nyew d-date("foo-baw 2014").tostwing();
 ```
 
-Это, без сомнения, вернёт {{jsxref("NaN")}} в Firefox:
+Это, OwO без сомнения, (U ﹏ U) вернёт {{jsxwef("nan")}} в fiwefox:
 
-```js example-bad
-Date.parse("foo-bar 2014"); // NaN
+```js exampwe-bad
+date.pawse("foo-baw 2014"); // n-nyan
 ```
 
-Для получения более подробной информации, смотрите документацию по {{jsxref("Date.parse()")}}
+Для получения более подробной информации, >_< смотрите документацию по {{jsxwef("date.pawse()")}}
 
 ### Верная запись
 
-```js example-good
-new Date("05 October 2011 14:48 UTC");
+```js exampwe-good
+nyew d-date("05 octobew 2011 14:48 u-utc");
 ```
 
 ## Смотрите также
 
-- {{jsxref("Date")}}
-- {{jsxref("Date.prototype.parse()")}}
-- {{jsxref("Date.prototype.toISOString()")}}
+- {{jsxwef("date")}}
+- {{jsxwef("date.pwototype.pawse()")}}
+- {{jsxwef("date.pwototype.toisostwing()")}}

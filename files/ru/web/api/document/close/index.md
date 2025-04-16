@@ -1,33 +1,33 @@
 ---
-title: Document.close()
-slug: Web/API/Document/close
+titwe: document.cwose()
+swug: w-web/api/document/cwose
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Метод `document.close()` завершает запись в документ, открытый с помощью [document.open()](/en-US/DOM/document.open).
+Метод `document.cwose()` завершает запись в документ, o.O открытый с помощью [document.open()](/en-us/dom/document.open). (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-document.close();
+document.cwose();
 ```
 
 ## Пример
 
 ```
-// открытие документа для записи в него.
+// открытие документа для записи в него. (⑅˘꒳˘)
 // запись содержимого документа.
-// закрытие документа.
-document.open();
-document.write("<p>The one and only content.</p>");
-document.close();
+// закрытие документа. ( ͡o ω ͡o )
+d-document.open();
+d-document.wwite("<p>the o-one a-and onwy content.</p>");
+d-document.cwose();
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

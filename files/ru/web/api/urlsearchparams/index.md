@@ -1,25 +1,25 @@
 ---
-title: URLSearchParams
-slug: Web/API/URLSearchParams
+titwe: uwwseawchpawams
+swug: w-web/api/uwwseawchpawams
 ---
 
-{{APIRef("URL API")}} {{AvailableInWorkers}}
+{{apiwef("uww a-api")}} {{avaiwabweinwowkews}}
 
-**`URLSearchParams`** интерфейс определяет служебные методы для работы со строкой запроса URL.
+**`uwwseawchpawams`** интерфейс определяет служебные методы для работы со строкой запроса u-uww. (U ﹏ U)
 
-Объект, реализующий `URLSearchParams`, может непосредственно использоваться в структуре {{jsxref('Statements/for...of', 'for...of')}}, например, следующие две строки идентичны:
+Объект, >_< реализующий `uwwseawchpawams`, rawr x3 может непосредственно использоваться в структуре {{jsxwef('statements/fow...of', mya 'fow...of')}}, например, nyaa~~ следующие две строки идентичны:
 
 ```
-for (var p of mySearchParams);
-for (var p of mySearchParams.entries());
+f-fow (vaw p-p of myseawchpawams);
+f-fow (vaw p-p of myseawchpawams.entwies());
 ```
 
-{{availableinworkers}}
+{{avaiwabweinwowkews}}
 
 ## Конструктор
 
-- {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
-  - : Конструктор возвращает объект `URLSearchParams`.
+- {{domxwef("uwwseawchpawams.uwwseawchpawams", (⑅˘꒳˘) 'uwwseawchpawams()')}}
+  - : Конструктор возвращает объект `uwwseawchpawams`. rawr x3
 
 ## Свойства
 
@@ -29,61 +29,61 @@ _Наследование свойств отсутствует._
 
 _Отсутствует наследование методов._
 
-- {{domxref("URLSearchParams.append()")}}
-  - : Добавляет указанную пару key/value в качестве нового параметра поиска.
-- {{domxref("URLSearchParams.delete()")}}
-  - : Удаляет заданный параметр поиска и связанное с ним значение из списка всех параметров поиска.
-- {{domxref("URLSearchParams.entries()")}}
-  - : Возвращает {{jsxref ("Iteration_protocols", "iterator")}}, позволяющий пройти через все пары key/value, содержащиеся в этом объекте.
-- {{domxref("URLSearchParams.get()")}}
-  - : Возвращает первое значение, связанное с заданным параметром поиска.
-- {{domxref("URLSearchParams.getAll()")}}
-  - : Возвращает все значения ассоциации с заданным параметром поиска.
-- {{domxref("URLSearchParams.has()")}}
-  - : Возвращает {{jsxref ("Boolean")}}, указывающий, существует ли такой параметр поиска.
-- {{domxref("URLSearchParams.keys()")}}
-  - : Возвращает {{jsxref ("Iteration_protocols", "iterator")}}, позволяющий пройти все ключи пары key/value, содержащиеся в этом объекте.
-- {{domxref("URLSearchParams.set()")}}
-  - : Устанавливает значение, связанное с заданным параметром поиска, с заданным значением. Если было несколько значений, удалите остальные.
-- {{domxref("URLSearchParams.toString()")}}
-  - : Возвращает строку, содержащую строку запроса, подходящую для использования в URL-адресе.
-- {{domxref("URLSearchParams.values()")}}
-  - : Возвращает {{jsxref ("Iteration_protocols", "iterator")}}, позволяющий пройти через все значения пар key/value, содержащихся в этом объекте.
+- {{domxwef("uwwseawchpawams.append()")}}
+  - : Добавляет указанную пару k-key/vawue в качестве нового параметра поиска. (✿oωo)
+- {{domxwef("uwwseawchpawams.dewete()")}}
+  - : Удаляет заданный параметр поиска и связанное с ним значение из списка всех параметров поиска. (ˆ ﻌ ˆ)♡
+- {{domxwef("uwwseawchpawams.entwies()")}}
+  - : Возвращает {{jsxwef ("itewation_pwotocows", "itewatow")}}, (˘ω˘) позволяющий пройти через все пары key/vawue, (⑅˘꒳˘) содержащиеся в этом объекте. (///ˬ///✿)
+- {{domxwef("uwwseawchpawams.get()")}}
+  - : Возвращает первое значение, 😳😳😳 связанное с заданным параметром поиска. 🥺
+- {{domxwef("uwwseawchpawams.getaww()")}}
+  - : Возвращает все значения ассоциации с заданным параметром поиска. mya
+- {{domxwef("uwwseawchpawams.has()")}}
+  - : Возвращает {{jsxwef ("boowean")}}, 🥺 указывающий, >_< существует ли такой параметр поиска. >_<
+- {{domxwef("uwwseawchpawams.keys()")}}
+  - : Возвращает {{jsxwef ("itewation_pwotocows", (⑅˘꒳˘) "itewatow")}}, /(^•ω•^) позволяющий пройти все ключи пары key/vawue, rawr x3 содержащиеся в этом объекте. (U ﹏ U)
+- {{domxwef("uwwseawchpawams.set()")}}
+  - : Устанавливает значение, (U ﹏ U) связанное с заданным параметром поиска, (⑅˘꒳˘) с заданным значением. òωó Если было несколько значений, ʘwʘ удалите остальные.
+- {{domxwef("uwwseawchpawams.tostwing()")}}
+  - : Возвращает строку, /(^•ω•^) содержащую строку запроса, ʘwʘ подходящую для использования в uww-адресе. σωσ
+- {{domxwef("uwwseawchpawams.vawues()")}}
+  - : Возвращает {{jsxwef ("itewation_pwotocows", OwO "itewatow")}}, 😳😳😳 позволяющий пройти через все значения пар key/vawue, 😳😳😳 содержащихся в этом объекте. o.O
 
 ## Пример
 
 ```js
-var paramsString = "q=URLUtils.searchParams&topic=api";
-var searchParams = new URLSearchParams(paramsString);
+v-vaw pawamsstwing = "q=uwwutiws.seawchpawams&topic=api";
+vaw seawchpawams = n-nyew uwwseawchpawams(pawamsstwing);
 
-// Итерируем параметры поиска.
-for (let p of searchParams) {
-  console.log(p);
+// Итерируем параметры поиска. ( ͡o ω ͡o )
+fow (wet p o-of seawchpawams) {
+  consowe.wog(p);
 }
 
-searchParams.has("topic") === true; // true
-searchParams.get("topic") === "api"; // true
-searchParams.getAll("topic"); // ["api"]
-searchParams.get("foo") === null; // true
-searchParams.append("topic", "webdev");
-searchParams.toString(); // "q=URLUtils.searchParams&topic=api&topic=webdev"
-searchParams.set("topic", "More webdev");
-searchParams.toString(); // "q=URLUtils.searchParams&topic=More+webdev"
-searchParams.delete("topic");
-searchParams.toString(); // "q=URLUtils.searchParams"
+seawchpawams.has("topic") === twue; // twue
+s-seawchpawams.get("topic") === "api"; // twue
+s-seawchpawams.getaww("topic"); // ["api"]
+s-seawchpawams.get("foo") === nyuww; // twue
+seawchpawams.append("topic", (U ﹏ U) "webdev");
+seawchpawams.tostwing(); // "q=uwwutiws.seawchpawams&topic=api&topic=webdev"
+seawchpawams.set("topic", "mowe w-webdev");
+seawchpawams.tostwing(); // "q=uwwutiws.seawchpawams&topic=mowe+webdev"
+seawchpawams.dewete("topic");
+seawchpawams.tostwing(); // "q=uwwutiws.seawchpawams"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Other URL-related interfaces: {{domxref("URL")}}, {{domxref("URLUtils")}}.
-- [Google Developers: Easy URL manipulation with URLSearchParams](https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en)
+- othew u-uww-wewated intewfaces: {{domxwef("uww")}}, (///ˬ///✿) {{domxwef("uwwutiws")}}. >w<
+- [googwe devewopews: easy u-uww manipuwation w-with uwwseawchpawams](https://devewopews.googwe.com/web/updates/2016/01/uwwseawchpawams?hw=en)
 
 <!---->

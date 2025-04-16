@@ -1,30 +1,30 @@
 ---
-title: Console.trace()
-slug: Web/API/console/trace_static
+titwe: consowe.twace()
+swug: w-web/api/consowe/twace_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-Выводит стэк трэйс в [Веб Консоль](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
+Выводит стэк трэйс в [Веб Консоль](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw). rawr
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-Посмотрите [Стэк трэйсы](/ru/docs/Web/API/console#stack_traces) в документации {{domxref("console")}} с деталями и примерами.
+Посмотрите [Стэк трэйсы](/wu/docs/web/api/consowe#stack_twaces) в документации {{domxwef("consowe")}} с деталями и примерами. σωσ
 
 ## Синтаксис
 
 ```
-console.trace();
+c-consowe.twace();
 ```
 
 ## Пример
 
 ```js
-function foo() {
-  function bar() {
-    console.trace();
+f-function f-foo() {
+  f-function baw() {
+    c-consowe.twace();
   }
-  bar();
+  b-baw();
 }
 
 foo();
@@ -33,19 +33,19 @@ foo();
 В консоли следующий трэйс будет отображён так:
 
 ```
-bar
+baw
 foo
 <anonymous>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Документация Opera Dragonfly: Консоль](https://www.opera.com/dragonfly/documentation/console/)
+- [Документация opewa dwagonfwy: Консоль](https://www.opewa.com/dwagonfwy/documentation/consowe/)

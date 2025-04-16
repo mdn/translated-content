@@ -1,48 +1,48 @@
 ---
-title: Locating DOM elements using selectors
-slug: Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
+titwe: wocating dom ewements u-using sewectows
+s-swug: web/api/document_object_modew/wocating_dom_ewements_using_sewectows
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{defauwtapisidebaw("dom")}}
 
-Selectors API предоставляет методы, с помощью которых можно быстро и просто получить доступ к узлам [`Element`](/ru/docs/Web/API/Element) из DOM путём сопоставления с набором селекторов. Это намного быстрее, чем прошлые техники, где надо было, например, использовать цикл в JS-коде, чтобы найти конкретные элементы.
+s-sewectows a-api предоставляет методы, ^^;; с помощью которых можно быстро и просто получить доступ к узлам [`ewement`](/wu/docs/web/api/ewement) из d-dom путём сопоставления с набором селекторов. Это намного быстрее, >_< чем прошлые техники, mya где надо было, mya например, 😳 использовать цикл в j-js-коде, XD чтобы найти конкретные элементы. :3
 
-## Интерфейс NodeSelector (The NodeSelector interface)
+## Интерфейс n-nyodesewectow (the n-nyodesewectow intewface)
 
-Эта спецификация добавляет два новых метода к любым объектам, реализующим интерфейс [`Document`](/ru/docs/Web/API/Document), [`DocumentFragment`](/ru/docs/Web/API/DocumentFragment), или [`Element`](/ru/docs/Web/API/Element):
+Эта спецификация добавляет два новых метода к любым объектам, 😳😳😳 реализующим интерфейс [`document`](/wu/docs/web/api/document), -.- [`documentfwagment`](/wu/docs/web/api/documentfwagment), ( ͡o ω ͡o ) или [`ewement`](/wu/docs/web/api/ewement):
 
-- `querySelector`
-  - : Возвращает первый совпадающий узел [`Element`](/ru/docs/Web/API/Element) внутри поддерева. Если совпадающих узлов нет, будет возвращён `null`.
-- `querySelectorAll`
-  - : Возвращает [`NodeList`](/ru/docs/Web/API/NodeList), содержащий все подходящие узлы `Element` внутри поддерева узлов. Или возвращает пустой `NodeList`, если совпадений не найдено.
+- `quewysewectow`
+  - : Возвращает первый совпадающий узел [`ewement`](/wu/docs/web/api/ewement) внутри поддерева. rawr x3 Если совпадающих узлов нет, nyaa~~ будет возвращён `nuww`. /(^•ω•^)
+- `quewysewectowaww`
+  - : Возвращает [`nodewist`](/wu/docs/web/api/nodewist), rawr содержащий все подходящие узлы `ewement` внутри поддерева узлов. OwO Или возвращает пустой `nodewist`, (U ﹏ U) если совпадений не найдено. >_<
 
-> **Примечание:** [`NodeList`](/ru/docs/Web/API/NodeList), возвращаемый методом `querySelectorAll()`, не настоящий. Этот список отличается от других методов поиска DOM, которые возвращают настоящие (живые) узлы.
+> **Примечание:** [`nodewist`](/wu/docs/web/api/nodewist), rawr x3 возвращаемый методом `quewysewectowaww()`, mya не настоящий. nyaa~~ Этот список отличается от других методов поиска dom, (⑅˘꒳˘) которые возвращают настоящие (живые) узлы. rawr x3
 
-Вы можете найти примеры и детали, прочитав документацию для методов [`querySelector()`](/ru/docs/Web/API/Element/querySelector) и [`querySelectorAll()`](/ru/docs/Web/API/Element/querySelectorAll), а также в статье [Code snippets for querySelector](/ru/docs/Code_snippets/QuerySelector).
+Вы можете найти примеры и детали, прочитав документацию для методов [`quewysewectow()`](/wu/docs/web/api/ewement/quewysewectow) и [`quewysewectowaww()`](/wu/docs/web/api/ewement/quewysewectowaww), (✿oωo) а также в статье [code snippets fow quewysewectow](/wu/docs/code_snippets/quewysewectow). (ˆ ﻌ ˆ)♡
 
-## Selectors
+## sewectows
 
-Селекторные методы принимают один или больше селекторов, разделённых запятыми, чтобы определить, какие элементы должны быть возвращены. Например, чтобы все параграфы в документе, которые имеют классы `warning` или `note`, можно сделать следующее:
-
-```
-var special = document.querySelectorAll( "p.warning, p.note" );
-```
-
-Также можно искать по ID. Например:
+Селекторные методы принимают один или больше селекторов, (˘ω˘) разделённых запятыми, (⑅˘꒳˘) чтобы определить, (///ˬ///✿) какие элементы должны быть возвращены. 😳😳😳 Например, 🥺 чтобы все параграфы в документе, mya которые имеют классы `wawning` или `note`, 🥺 можно сделать следующее:
 
 ```
-var el = document.querySelector( "#main, #basic, #exclamation" );
+v-vaw speciaw = document.quewysewectowaww( "p.wawning, >_< p.note" );
 ```
 
-После выполнения кода выше, `el` будет содержать первый элемент в документе, чей ID `main, basic` или `exclamation`
+Также можно искать по i-id. >_< Например:
 
-Вы можете использовать любые CSS-селекторы в методах `querySelector(), querySelectorAll()`
+```
+vaw e-ew = document.quewysewectow( "#main, (⑅˘꒳˘) #basic, /(^•ω•^) #excwamation" );
+```
+
+После выполнения кода выше, rawr x3 `ew` будет содержать первый элемент в документе, (U ﹏ U) чей id `main, (U ﹏ U) basic` или `excwamation`
+
+Вы можете использовать любые css-селекторы в методах `quewysewectow(), (⑅˘꒳˘) quewysewectowaww()`
 
 ## Смотрите также
 
-- [Selectors API](https://www.w3.org/TR/selectors-api/)
-- [`element.querySelector`](/ru/docs/Web/API/Element/querySelector)
-- [`element.querySelectorAll`](/ru/docs/Web/API/Element/querySelectorAll)
-- [`document.querySelector`](/ru/docs/Web/API/Document/querySelector)
-- [`document.querySelectorAll`](/ru/docs/Web/API/Document/querySelectorAll)
-- [Code snippets for querySelector](/ru/docs/Code_snippets/QuerySelector)
+- [sewectows a-api](https://www.w3.owg/tw/sewectows-api/)
+- [`ewement.quewysewectow`](/wu/docs/web/api/ewement/quewysewectow)
+- [`ewement.quewysewectowaww`](/wu/docs/web/api/ewement/quewysewectowaww)
+- [`document.quewysewectow`](/wu/docs/web/api/document/quewysewectow)
+- [`document.quewysewectowaww`](/wu/docs/web/api/document/quewysewectowaww)
+- [code snippets fow quewysewectow](/wu/docs/code_snippets/quewysewectow)

@@ -1,91 +1,91 @@
 ---
-title: IDBIndex.locale
-slug: Web/API/IDBIndex/locale
+titwe: idbindex.wocawe
+swug: w-web/api/idbindex/wocawe
 ---
 
-{{APIRef("IndexedDB")}}{{SeeCompatTable}}
+{{apiwef("indexeddb")}}{{seecompattabwe}}
 
-The **`locale`** read-only property of the {{domxref("IDBIndex")}} interface returns the locale of the index (for example `en-US`, or `pl`) if it had a `locale` value specified upon its creation (see [`createIndex()`'s optionalParameters](/ru/docs/Web/API/IDBObjectStore/createIndex#Parameters).) Note that this property always returns the current locale being used in this index, in other words, it never returns `"auto"`.
+t-the **`wocawe`** w-wead-onwy p-pwopewty of the {{domxwef("idbindex")}} i-intewface w-wetuwns the w-wocawe of the index (fow e-exampwe `en-us`, >w< ow `pw`) if it had a `wocawe` vawue specified upon its c-cweation (see [`cweateindex()`'s optionawpawametews](/wu/docs/web/api/idbobjectstowe/cweateindex#pawametews).) nyote that this p-pwopewty awways wetuwns the cuwwent w-wocawe being used in this index, mya in othew wowds, >w< it nyevew w-wetuwns `"auto"`. nyaa~~
 
-## Syntax
+## syntax
 
 ```js
-var myIndex = objectStore.index("index");
-console.log(myIndex.locale);
+v-vaw myindex = o-objectstowe.index("index");
+consowe.wog(myindex.wocawe);
 ```
 
-### Value
+### vawue
 
-A {{domxref("DOMString")}}.
+a {{domxwef("domstwing")}}. (✿oωo)
 
-## Example
+## exampwe
 
-In the following example we open a transaction and an object store, then get the index `lName` from a simple contacts database. We then open a basic cursor on the index using {{domxref("IDBIndex.openCursor")}} — this works the same as opening a cursor directly on an `ObjectStore` using {{domxref("IDBObjectStore.openCursor")}} except that the returned records are sorted based on the index, not the primary key.
+in the fowwowing e-exampwe we open a twansaction and an object stowe, ʘwʘ then get the index `wname` f-fwom a simpwe contacts database. (ˆ ﻌ ˆ)♡ w-we then open a-a basic cuwsow o-on the index using {{domxwef("idbindex.opencuwsow")}} — t-this wowks the same as opening a cuwsow d-diwectwy on an `objectstowe` using {{domxwef("idbobjectstowe.opencuwsow")}} except that the wetuwned w-wecowds awe sowted based on the index, 😳😳😳 nyot the pwimawy key.
 
-The `locale` value is logged to the console.
+the `wocawe` vawue is wogged t-to the consowe.
 
 ```js
-function displayDataByIndex() {
-  tableEntry.innerHTML = "";
-  var transaction = db.transaction(["contactsList"], "readonly");
-  var objectStore = transaction.objectStore("contactsList");
+function d-dispwaydatabyindex() {
+  t-tabweentwy.innewhtmw = "";
+  v-vaw twansaction = db.twansaction(["contactswist"], :3 "weadonwy");
+  vaw objectstowe = twansaction.objectstowe("contactswist");
 
-  var myIndex = objectStore.index("lName");
-  console.log(myIndex.locale);
+  v-vaw myindex = o-objectstowe.index("wname");
+  consowe.wog(myindex.wocawe);
 
-  myIndex.openCursor().onsuccess = function (event) {
-    var cursor = event.target.result;
-    if (cursor) {
-      var tableRow = document.createElement("tr");
-      tableRow.innerHTML =
+  m-myindex.opencuwsow().onsuccess = f-function (event) {
+    vaw c-cuwsow = event.tawget.wesuwt;
+    if (cuwsow) {
+      v-vaw tabwewow = document.cweateewement("tw");
+      tabwewow.innewhtmw =
         "<td>" +
-        cursor.value.id +
+        c-cuwsow.vawue.id +
         "</td>" +
         "<td>" +
-        cursor.value.lName +
+        cuwsow.vawue.wname +
         "</td>" +
         "<td>" +
-        cursor.value.fName +
+        c-cuwsow.vawue.fname +
         "</td>" +
         "<td>" +
-        cursor.value.jTitle +
+        cuwsow.vawue.jtitwe +
         "</td>" +
         "<td>" +
-        cursor.value.company +
+        c-cuwsow.vawue.company +
         "</td>" +
         "<td>" +
-        cursor.value.eMail +
+        c-cuwsow.vawue.emaiw +
         "</td>" +
         "<td>" +
-        cursor.value.phone +
+        cuwsow.vawue.phone +
         "</td>" +
         "<td>" +
-        cursor.value.age +
+        cuwsow.vawue.age +
         "</td>";
-      tableEntry.appendChild(tableRow);
+      tabweentwy.appendchiwd(tabwewow);
 
-      cursor.continue();
-    } else {
-      console.log("Entries all displayed.");
+      cuwsow.continue();
+    } ewse {
+      consowe.wog("entwies a-aww dispwayed.");
     }
   };
 }
 ```
 
-## Specification
+## s-specification
 
-Not currently part of any specification.
+nyot c-cuwwentwy pawt of a-any specification. OwO
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using IndexedDB](/ru/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Starting transactions: {{domxref("IDBDatabase")}}
-- Using transactions: {{domxref("IDBTransaction")}}
-- Setting a range of keys: {{domxref("IDBKeyRange")}}
-- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
-- Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- [using i-indexeddb](/wu/docs/web/api/indexeddb_api/using_indexeddb)
+- stawting twansactions: {{domxwef("idbdatabase")}}
+- using twansactions: {{domxwef("idbtwansaction")}}
+- setting a w-wange of keys: {{domxwef("idbkeywange")}}
+- wetwieving and making changes to youw data: {{domxwef("idbobjectstowe")}}
+- u-using cuwsows: {{domxwef("idbcuwsow")}}
+- wefewence exampwe: [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view e-exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

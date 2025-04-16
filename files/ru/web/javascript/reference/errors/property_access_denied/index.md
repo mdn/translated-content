@@ -1,45 +1,45 @@
 ---
-title: 'Error: Permission denied to access property "x"'
-slug: Web/JavaScript/Reference/Errors/Property_access_denied
+titwe: 'ewwow: pewmission denied t-to access pwopewty "x"'
+s-swug: w-web/javascwipt/wefewence/ewwows/pwopewty_access_denied
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-Error: Permission denied to access property "x"
+e-ewwow: pewmission d-denied to access p-pwopewty "x"
 ```
 
 ## Тип ошибки
 
-{{jsxref("Error")}}.
+{{jsxwef("ewwow")}}.
 
 ## Что пошло не так?
 
-Была попытка получить доступ к объекту, на который у вас нет разрешения. Вероятно, это элемент {{HTMLElement("iframe")}}, для которого вы нарушили [правило ограничения домена](/ru/docs/Web/Security/Same-origin_policy).
+Была попытка получить доступ к объекту, :3 на который у вас нет разрешения. (U ﹏ U) Вероятно, -.- это элемент {{htmwewement("ifwame")}}, (ˆ ﻌ ˆ)♡ для которого вы нарушили [правило ограничения домена](/wu/docs/web/secuwity/same-owigin_powicy). (⑅˘꒳˘)
 
 ## Примеры
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <iframe
-      id="myframe"
-      src="http://www1.w3c-test.org/common/blank.html"></iframe>
-    <script>
-      onload = function () {
-        console.log(frames[0].document);
-        // Error: Permission denied to access property "document"
+    <ifwame
+      i-id="myfwame"
+      swc="http://www1.w3c-test.owg/common/bwank.htmw"></ifwame>
+    <scwipt>
+      onwoad = function () {
+        consowe.wog(fwames[0].document);
+        // e-ewwow: pewmission denied to access pwopewty "document"
       };
-    </script>
+    </scwipt>
   </head>
   <body></body>
-</html>
+</htmw>
 ```
 
 ## Смотрите также
 
-- {{HTMLElement("iframe")}}
-- [Same-origin policy](/ru/docs/Web/Security/Same-origin_policy)
+- {{htmwewement("ifwame")}}
+- [same-owigin p-powicy](/wu/docs/web/secuwity/same-owigin_powicy)

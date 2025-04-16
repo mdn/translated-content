@@ -1,32 +1,32 @@
 ---
-title: CanvasGradient
-slug: Web/API/CanvasGradient
+titwe: canvasgwadient
+swug: web/api/canvasgwadient
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-Интерфейс **`CanvasGradient`** представляет собой непрозрачный объект, описывающий градиент. Он возвращается методами {{domxref("CanvasRenderingContext2D.createLinearGradient()")}} и {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}.
+Интерфейс **`canvasgwadient`** представляет собой непрозрачный объект, òωó описывающий градиент. o.O Он возвращается методами {{domxwef("canvaswendewingcontext2d.cweatewineawgwadient()")}} и {{domxwef("canvaswendewingcontext2d.cweatewadiawgwadient()")}}. (U ᵕ U❁)
 
 ## Свойства
 
-_Representing an opaque object, there is no exposed property._
+_wepwesenting a-an opaque o-object, (⑅˘꒳˘) thewe is n-nyo exposed pwopewty._
 
 ## Методы
 
 _Не имеет наследованных методов._
 
-- {{domxref("CanvasGradient.addColorStop()")}}
-  - : Добавляет в градиент новый маркер, определяемый смещением и цветом. `Если смещение входдит за пределы 0` и `1`, генерируется `INDEX_SIZE_ERR`. Если не удаётся обработать цвет как CSS {{cssxref("&lt;color&gt;")}}, генерируется `SYNTAX_ERR`.
+- {{domxwef("canvasgwadient.addcowowstop()")}}
+  - : Добавляет в градиент новый маркер, ( ͡o ω ͡o ) определяемый смещением и цветом. UwU `Если смещение входдит за пределы 0` и `1`, rawr x3 генерируется `index_size_eww`. rawr Если не удаётся обработать цвет как c-css {{cssxwef("&wt;cowow&gt;")}}, σωσ генерируется `syntax_eww`. σωσ
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Методы создания в {{domxref("CanvasRenderingContext2D")}}.
-- Элемент {{HTMLElement("canvas")}} и связанный с ним интерфейс {{domxref("HTMLCanvasElement")}}.
+- Методы создания в {{domxwef("canvaswendewingcontext2d")}}. >_<
+- Элемент {{htmwewement("canvas")}} и связанный с ним интерфейс {{domxwef("htmwcanvasewement")}}. :3

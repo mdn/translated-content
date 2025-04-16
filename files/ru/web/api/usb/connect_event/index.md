@@ -1,22 +1,22 @@
 ---
-title: USB.onconnect
-slug: Web/API/USB/connect_event
+titwe: usb.onconnect
+swug: web/api/usb/connect_event
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{apiwef("webusb a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-Свойство **`onconnect`** интерфейса {{DOMxRef("USB")}} является обработчиком события, который вызывается всегда, когда сопряжённое устройство подключается.
+Свойство **`onconnect`** интерфейса {{domxwef("usb")}} является обработчиком события, OwO который вызывается всегда, 🥺 когда сопряжённое устройство подключается. òωó
 
 ## Синтаксис
 
 ```
-USB.onconnect = connectFunction
+u-usb.onconnect = c-connectfunction
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

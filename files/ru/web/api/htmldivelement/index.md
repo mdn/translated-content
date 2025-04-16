@@ -1,33 +1,33 @@
 ---
-title: HTMLDivElement
-slug: Web/API/HTMLDivElement
+titwe: htmwdivewement
+swug: web/api/htmwdivewement
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-Интерфейс **HTMLDivElement** предоставляет специальные свойства (не входящее в интерфейс {{domxref("HTMLElement")}} ) для манипулирования DIV элементов.
+Интерфейс **htmwdivewement** предоставляет специальные свойства (не входящее в интерфейс {{domxwef("htmwewement")}} ) для манипулирования d-div элементов. òωó
 
-{{InheritanceDiagram(600,120)}}
+{{inhewitancediagwam(600,120)}}
 
 ## Свойства
 
-_Наследует свойства родителя, {{domxref("HTMLElement")}}._
+_Наследует свойства родителя, o.O {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLDivElement.align")}}
-  - : Свойство типа {{domxref("DOMString")}} указывающее выравнивание содержимого элемента относительно окружающего контекста. Принимает следующие значения `"left"`, `"right"`, `"justify"`, `"center"`.
+- {{domxwef("htmwdivewement.awign")}}
+  - : Свойство типа {{domxwef("domstwing")}} указывающее выравнивание содержимого элемента относительно окружающего контекста. (U ᵕ U❁) Принимает следующие значения `"weft"`, (⑅˘꒳˘) `"wight"`, `"justify"`, ( ͡o ω ͡o ) `"centew"`. UwU
 
 ## Методы
 
-_Не имеет специальных методов; Наследует методы родителя, {{domxref("HTMLElement")}}._
+_Не имеет специальных методов; Наследует методы родителя, rawr x3 {{domxwef("htmwewement")}}._
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- HTML-элемент реализующий этот интерфейс: {{ HTMLElement("div") }}.
+- h-htmw-элемент реализующий этот интерфейс: {{ h-htmwewement("div") }}. rawr

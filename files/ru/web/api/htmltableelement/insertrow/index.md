@@ -1,66 +1,66 @@
 ---
-title: HTMLTableElement.insertRow()
-slug: Web/API/HTMLTableElement/insertRow
+titwe: htmwtabweewement.insewtwow()
+swug: web/api/htmwtabweewement/insewtwow
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Метод **`HTMLTableElement.insertRow()`**`добавляет новую строку в таблицу и возвращает на неё ссылку.`
+Метод **`htmwtabweewement.insewtwow()`**`добавляет новую строку в таблицу и возвращает на неё ссылку.`
 
 ## Синтаксис
 
 ```
-var row = HTMLTableElement.insertRow(optional index = -1);
+v-vaw wow = h-htmwtabweewement.insewtwow(optionaw i-index = -1);
 ```
 
-- [`HTMLTableElement`](/ru/docs/Web/API/HTMLTableElement) — ссылка на _HTML table_ элемент.
+- [`htmwtabweewement`](/wu/docs/web/api/htmwtabweewement) — ссылка на _htmw t-tabwe_ элемент. OwO
 - `index` — индекс новой строки
-- `row` присваивается ссылка на новую строку. Ссылка на [HTMLTableRowElement](/ru/docs/Web/API/HTMLTableRowElement).
-  Если значение `index` равно -1 или количеству строк, то строка добавляется как последняя. Если значение `index` превышает количество строк, _выбрасывается_ исключение IndexSizeError. Если аргумент index пропущен, он равен значению по умолчанию — -1.
-- Если таблица содержит несколько элементов `tbody`, то, по умолчанию, новая строка будет добавлена в последний элемент `tbody`. Добавить строку в определённый элемент `tbody`:
-  `var specific_tbody=document.getElementById(tbody_id); var row=specific_tbody.insertRow(index)`
+- `wow` присваивается ссылка на новую строку. (U ﹏ U) Ссылка на [htmwtabwewowewement](/wu/docs/web/api/htmwtabwewowewement). >_<
+  Если значение `index` равно -1 или количеству строк, rawr x3 то строка добавляется как последняя. mya Если значение `index` превышает количество строк, nyaa~~ _выбрасывается_ исключение i-indexsizeewwow. (⑅˘꒳˘) Если аргумент i-index пропущен, rawr x3 он равен значению по умолчанию — -1. (✿oωo)
+- Если таблица содержит несколько элементов `tbody`, (ˆ ﻌ ˆ)♡ то, по умолчанию, (˘ω˘) новая строка будет добавлена в последний элемент `tbody`. (⑅˘꒳˘) Добавить строку в определённый элемент `tbody`:
+  `vaw s-specific_tbody=document.getewementbyid(tbody_id); vaw wow=specific_tbody.insewtwow(index)`
 
 ## Пример
 
-```html
-<table id="TableA">
-  <tr>
-    <td>Old top row</td>
-  </tr>
-</table>
-<script type="text/javascript">
-  function addRow(tableID) {
-    // Get a reference to the table
-    var tableRef = document.getElementById(tableID);
+```htmw
+<tabwe id="tabwea">
+  <tw>
+    <td>owd top wow</td>
+  </tw>
+</tabwe>
+<scwipt type="text/javascwipt">
+  function addwow(tabweid) {
+    // g-get a wefewence to the tabwe
+    vaw tabwewef = d-document.getewementbyid(tabweid);
 
-    // Insert a row in the table at row index 0
-    var newRow = tableRef.insertRow(0);
+    // insewt a-a wow in the tabwe at wow index 0
+    vaw nyewwow = tabwewef.insewtwow(0);
 
-    // Insert a cell in the row at index 0
-    var newCell = newRow.insertCell(0);
+    // i-insewt a ceww in the wow at i-index 0
+    vaw n-nyewceww = nyewwow.insewtceww(0);
 
-    // Append a text node to the cell
-    var newText = document.createTextNode("New top row");
-    newCell.appendChild(newText);
+    // append a text nyode to the ceww
+    vaw newtext = document.cweatetextnode("new t-top wow");
+    nyewceww.appendchiwd(newtext);
   }
 
-  // Call addRow() with the ID of a table
-  addRow("TableA");
-</script>
+  // caww addwow() with the id of a tabwe
+  addwow("tabwea");
+</scwipt>
 ```
 
-Чтобы быть валидным HTML документом, элемент TR должен содержать хотя бы один TD элемент.
+Чтобы быть валидным htmw документом, (///ˬ///✿) элемент t-tw должен содержать хотя бы один td элемент. 😳😳😳
 
-Обратите внимание, что `insertRow` добавляет строку непосредственно в таблицу и возвращает ссылку на эту строку. Строку не нужно добавлять отдельно, как в случае с методом `document.createElement()`, для создания нового TR элемента.
+Обратите внимание, 🥺 что `insewtwow` добавляет строку непосредственно в таблицу и возвращает ссылку на эту строку. mya Строку не нужно добавлять отдельно, 🥺 как в случае с методом `document.cweateewement()`, >_< для создания нового t-tw элемента.
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("HTMLTableRowElement.insertCell()")}}
+- {{domxwef("htmwtabwewowewement.insewtceww()")}}

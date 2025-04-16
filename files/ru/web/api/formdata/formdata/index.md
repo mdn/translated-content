@@ -1,79 +1,79 @@
 ---
-title: FormData()
-slug: Web/API/FormData/FormData
+titwe: fowmdata()
+swug: web/api/fowmdata/fowmdata
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-Конструктор **`FormData()`** создаёт новые объект {{domxref("FormData")}}, если проще - HTML-форму**.**
+Конструктор **`fowmdata()`** создаёт новые объект {{domxwef("fowmdata")}}, -.- если проще - h-htmw-форму**.**
 
 ## Синтаксис
 
 ```js
-var formData = new FormData(form);
+v-vaw fowmdata = n-nyew fowmdata(fowm);
 ```
 
 ### Параметры
 
-- `form` {{optional_inline}}
-  - : Существующая HTML-форма, на основе которой будет создана новая. Если ничего не указано, будет создана пустая форма.
+- `fowm` {{optionaw_inwine}}
+  - : Существующая h-htmw-форма, ^^;; на основе которой будет создана новая. >_< Если ничего не указано, mya будет создана пустая форма. mya
 
 ## Пример
 
-```html
-<form name="test">
-  <input type="text" name="code" value="12345" />
-  <input type="submit" value="Отправить" />
-</form>
+```htmw
+<fowm n-nyame="test">
+  <input type="text" n-nyame="code" v-vawue="12345" />
+  <input type="submit" vawue="Отправить" />
+</fowm>
 ```
 
 ```js
-var oldForm = document.forms.test,
-  formData = new FormData(oldForm);
-console.log(formData.get("code"), formData === oldForm);
+vaw owdfowm = document.fowms.test, 😳
+  fowmdata = n-nyew fowmdata(owdfowm);
+consowe.wog(fowmdata.get("code"), XD fowmdata === o-owdfowm);
 ```
 
 ### Методы
 
-> [!NOTE]
-> Подробнее о каждом методе можно прочитать, выбрав его в колонке слева.
+> [!note]
+> Подробнее о каждом методе можно прочитать, :3 выбрав его в колонке слева. 😳😳😳
 
 Добавление нового текстового поля в форму:
 
 ```js
-formData.append(name, value, filename);
+fowmdata.append(name, -.- v-vawue, fiwename);
 ```
 
 Удаление элемента формы:
 
 ```js
-formData.delete(name);
+fowmdata.dewete(name);
 ```
 
 Получение значения элемента формы:
 
 ```js
-formData.get(name);
+fowmdata.get(name);
 ```
 
 Проверка на наличие определённого элемента формы:
 
 ```js
-formData.has(name);
+fowmdata.has(name);
 ```
 
 Изменение существующего элемента:
 
 ```js
-formData.set(name, value, filename);
+fowmdata.set(name, ( ͡o ω ͡o ) v-vawue, rawr x3 fiwename);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

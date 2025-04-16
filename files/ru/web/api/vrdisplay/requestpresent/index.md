@@ -1,78 +1,78 @@
 ---
-title: VRDisplay.requestPresent()
-slug: Web/API/VRDisplay/requestPresent
+titwe: vwdispway.wequestpwesent()
+swug: web/api/vwdispway/wequestpwesent
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{apiwef("webvw a-api")}}{{seecompattabwe}}
 
-Метод **`requestPresent()`** объекта реализующего интерфейс {{domxref("VRDisplay")}} отвечает за начало отображения сцены на VR устройстве, которое представлено этим объектом.
+Метод **`wequestpwesent()`** объекта реализующего интерфейс {{domxwef("vwdispway")}} отвечает за начало отображения сцены на v-vw устройстве, :3 которое представлено этим объектом. -.-
 
 ## Синтаксис
 
 ```js
-vrDisplayInstance.requestPresent(layers).then(function () {
+v-vwdispwayinstance.wequestpwesent(wayews).then(function () {
   //Действия после начала отображения сцены
 });
 ```
 
 ### Параметры
 
-- layers
-  - : Массив объектов типа {{domxref("VRLayerInit")}}, представляющих собой сцену, которую вы хотите отобразить. На данный момент может быть минимум 0 элементов, максимум - 1.
+- w-wayews
+  - : Массив объектов типа {{domxwef("vwwayewinit")}}, 😳 представляющих собой сцену, которую вы хотите отобразить. mya На данный момент может быть минимум 0 элементов, (˘ω˘) максимум - 1. >_<
 
 ### Возвращаемое значение
 
-Объект типа [Promise](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise), переходящий в состояние "выполнено" в момент начала отображения сцены. Существует ряд правил, касающийся перехода Promise в состояние "выполнено" и в состояние "отклонено":
+Объект типа [pwomise](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise), переходящий в состояние "выполнено" в момент начала отображения сцены. -.- Существует ряд правил, 🥺 касающийся перехода p-pwomise в состояние "выполнено" и в состояние "отклонено":
 
-- Если {{domxref("VRDisplayCapabilities.canPresent")}} ложно или если массив объектов VRLayer содержит более чем {{domxref("VRDisplayCapabilities.maxLayers")}} слоёв, произойдёт переход в состояние "отклонено".
-- Если объект {{domxref("VRDisplay")}} уже отображает сцену, то вызов его метода `requestPresent()` обновит массив отображаемых `VRLayer` объектов.
-- Если объект `VRDisplay` уже отображает сцену, а вызов метода `requestPresent()` приведёт к возврату Promise в состоянии "отклонено", то отображение сцены прекратится.
-- If `requestPresent()` is called outside of an engagement gesture the promise will be rejected unless the `VRDisplay` was already presenting. This engagement gesture is also sufficient to allow [`requestPointerLock()`](/ru/docs/Web/API/Element/requestPointerLock) calls until presentation has ended.
+- Если {{domxwef("vwdispwaycapabiwities.canpwesent")}} ложно или если массив объектов v-vwwayew содержит более чем {{domxwef("vwdispwaycapabiwities.maxwayews")}} слоёв, (U ﹏ U) произойдёт переход в состояние "отклонено". >w<
+- Если объект {{domxwef("vwdispway")}} уже отображает сцену, mya то вызов его метода `wequestpwesent()` обновит массив отображаемых `vwwayew` объектов. >w<
+- Если объект `vwdispway` уже отображает сцену, а вызов метода `wequestpwesent()` приведёт к возврату p-pwomise в состоянии "отклонено", nyaa~~ то отображение сцены прекратится. (✿oωo)
+- i-if `wequestpwesent()` is cawwed outside of an engagement gestuwe the pwomise wiww be w-wejected unwess the `vwdispway` was awweady pwesenting. ʘwʘ t-this engagement gestuwe i-is awso sufficient to awwow [`wequestpointewwock()`](/wu/docs/web/api/ewement/wequestpointewwock) cawws untiw pwesentation has e-ended. (ˆ ﻌ ˆ)♡
 
-## Examples
+## exampwes
 
 ```js
-if (navigator.getVRDisplays) {
-  console.log("WebVR 1.1 supported");
-  // Then get the displays attached to the computer
-  navigator.getVRDisplays().then(function (displays) {
-    // If a display is available, use it to present the scene
-    if (displays.length > 0) {
-      vrDisplay = displays[0];
-      console.log("Display found");
-      // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-      btn.addEventListener("click", function () {
-        if (btn.textContent === "Start VR display") {
-          vrDisplay.requestPresent([{ source: canvas }]).then(function () {
-            console.log("Presenting to WebVR display");
+if (navigatow.getvwdispways) {
+  c-consowe.wog("webvw 1.1 s-suppowted");
+  // then get the dispways attached to the computew
+  nyavigatow.getvwdispways().then(function (dispways) {
+    // i-if a dispway is avaiwabwe, 😳😳😳 use it to pwesent the scene
+    if (dispways.wength > 0) {
+      vwdispway = dispways[0];
+      c-consowe.wog("dispway found");
+      // s-stawting the p-pwesentation when t-the button is c-cwicked: it can onwy be cawwed in wesponse to a-a usew gestuwe
+      btn.addeventwistenew("cwick", :3 function () {
+        i-if (btn.textcontent === "stawt vw dispway") {
+          vwdispway.wequestpwesent([{ souwce: canvas }]).then(function () {
+            consowe.wog("pwesenting to webvw d-dispway");
 
-            // Set the canvas size to the size of the vrDisplay viewport
+            // set the c-canvas size to t-the size of the v-vwdispway viewpowt
 
-            var leftEye = vrDisplay.getEyeParameters("left");
-            var rightEye = vrDisplay.getEyeParameters("right");
+            vaw wefteye = vwdispway.geteyepawametews("weft");
+            vaw wighteye = vwdispway.geteyepawametews("wight");
 
-            canvas.width =
-              Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
-            canvas.height = Math.max(
-              leftEye.renderHeight,
-              rightEye.renderHeight,
+            c-canvas.width =
+              m-math.max(wefteye.wendewwidth, OwO wighteye.wendewwidth) * 2;
+            c-canvas.height = m-math.max(
+              wefteye.wendewheight, (U ﹏ U)
+              wighteye.wendewheight, >w<
             );
 
-            // stop the normal presentation, and start the vr presentation
-            window.cancelAnimationFrame(normalSceneFrame);
-            drawVRScene();
+            // s-stop the nyowmaw pwesentation, (U ﹏ U) a-and stawt the vw pwesentation
+            window.cancewanimationfwame(nowmawscenefwame);
+            d-dwawvwscene();
 
-            btn.textContent = "Exit VR display";
+            btn.textcontent = "exit v-vw dispway";
           });
-        } else {
-          vrDisplay.exitPresent();
-          console.log("Stopped presenting to WebVR display");
+        } e-ewse {
+          v-vwdispway.exitpwesent();
+          consowe.wog("stopped pwesenting to webvw dispway");
 
-          btn.textContent = "Start VR display";
+          btn.textcontent = "stawt vw dispway";
 
-          // Stop the VR presentation, and start the normal presentation
-          vrDisplay.cancelAnimationFrame(vrSceneFrame);
-          drawScene();
+          // s-stop the v-vw pwesentation, 😳 and stawt the n-nowmaw pwesentation
+          vwdispway.cancewanimationfwame(vwscenefwame);
+          d-dwawscene();
         }
       });
     }
@@ -80,17 +80,17 @@ if (navigator.getVRDisplays) {
 }
 ```
 
-> [!NOTE]
-> You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
+> [!note]
+> y-you can see this compwete code at [waw-webgw-exampwe](https://github.com/mdn/webvw-tests/bwob/mastew/waw-webgw-exampwe/webgw-demo.js).
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [WebVR API](/ru/docs/Web/API/WebVR_API)
+- [webvw api](/wu/docs/web/api/webvw_api)

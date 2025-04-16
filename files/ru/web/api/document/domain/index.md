@@ -1,69 +1,69 @@
 ---
-title: Document.domain
-slug: Web/API/Document/domain
+titwe: document.domain
+swug: w-web/api/document/domain
 ---
 
-{{APIRef}} {{Deprecated_Header}}
+{{apiwef}} {{depwecated_headew}}
 
-Свойство `domain` у {{domxref("Document")}} интерфейса получает/устанавливает доменную часть источника происхождения (origin) текущего документа, используется в [политике ограничения домена (same origin policy)](/ru/docs/Web/Security/Same-origin_policy).
+Свойство `domain` у {{domxwef("document")}} интерфейса получает/устанавливает доменную часть источника происхождения (owigin) текущего документа, >_< используется в [политике ограничения домена (same o-owigin powicy)](/wu/docs/web/secuwity/same-owigin_powicy). (⑅˘꒳˘)
 
 ## Синтаксис
 
 ```
-var domainString = document.domain;
-document.domain = string;
+v-vaw d-domainstwing = document.domain;
+d-document.domain = s-stwing;
 ```
 
 ### Значение
 
-Доменная часть источника происхождения (origin) текущего документа.
+Доменная часть источника происхождения (owigin) текущего документа. /(^•ω•^)
 
 ### Исключения
 
-- `SecurityError`
+- `secuwityewwow`
 
-  - : An attempt has been made to set `domain` under one of the following conditions:
+  - : a-an attempt has b-been made to set `domain` undew one of the fowwowing conditions:
 
-    - The document is inside a sandboxed {{htmlelement("iframe")}}
-    - The document has no browsing context
-    - The document's [effective domain](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain) is `null`
-    - The given value is not equal to the document's effective domain (or it is not a registerable domain suffix of it)
-    - The {{httpheader('Feature-Policy/document-domain','document-domain')}} {{HTTPHeader("Feature-Policy")}} is enabled
+    - the document i-is inside a sandboxed {{htmwewement("ifwame")}}
+    - the document h-has nyo bwowsing context
+    - t-the document's [effective domain](https://htmw.spec.naniwg.owg/muwtipage/owigin.htmw#concept-owigin-effective-domain) is `nuww`
+    - the g-given vawue is not equaw to the d-document's effective d-domain (ow it is nyot a wegistewabwe domain suffix of it)
+    - the {{httpheadew('featuwe-powicy/document-domain','document-domain')}} {{httpheadew("featuwe-powicy")}} i-is enabwed
 
-## Examples
+## exampwes
 
-### Getting the domain
+### getting the domain
 
-For the URI `http://developer.mozilla.org/ru/docs/Web`, this example sets `currentDomain` to the string "`developer.mozilla.org`".
-
-```
-var currentDomain = document.domain;
-```
-
-### Closing a window
-
-If a document, such as `www.example.xxx/good.html`, has the domain of `"www.example.xxx"`, this example attempts to close the window.
+fow the uwi `http://devewopew.moziwwa.owg/wu/docs/web`, rawr x3 t-this exampwe sets `cuwwentdomain` t-to the s-stwing "`devewopew.moziwwa.owg`". (U ﹏ U)
 
 ```
-var badDomain = "www.example.xxx";
+v-vaw cuwwentdomain = d-document.domain;
+```
 
-if (document.domain == badDomain) {
-  // Just an example: window.close() sometimes has no effect
-  window.close();
+### cwosing a window
+
+if a document, (U ﹏ U) s-such as `www.exampwe.xxx/good.htmw`, (⑅˘꒳˘) has the domain of `"www.exampwe.xxx"`, òωó t-this exampwe attempts to cwose the window. ʘwʘ
+
+```
+vaw baddomain = "www.exampwe.xxx";
+
+if (document.domain == baddomain) {
+  // just a-an exampwe: window.cwose() sometimes h-has nyo e-effect
+  window.cwose();
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Политика одинакового источника](/ru/docs/Web/Security/Same-origin_policy)
-- {{domxref("Location.hostname")}}
-- {{domxref("Location.host")}}
-- {{domxref("Window.origin")}}
+- [Политика одинакового источника](/wu/docs/web/secuwity/same-owigin_powicy)
+- {{domxwef("wocation.hostname")}}
+- {{domxwef("wocation.host")}}
+- {{domxwef("window.owigin")}}

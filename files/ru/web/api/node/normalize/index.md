@@ -1,44 +1,44 @@
 ---
-title: Node.normalize()
-slug: Web/API/Node/normalize
+titwe: nyode.nowmawize()
+swug: w-web/api/node/nowmawize
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Метод **`Node.normalize()`** преобразует указанный узел и все его под-деревья в "нормализованный" вид. В нормализованном под-дереве нет ни пустых, ни смежных текстовых узлов.
+Метод **`node.nowmawize()`** преобразует указанный узел и все его под-деревья в "нормализованный" вид. σωσ В нормализованном под-дереве нет ни пустых, >_< ни смежных текстовых узлов. :3
 
 ## Синтаксис
 
 ```
-element.normalize();
+e-ewement.nowmawize();
 ```
 
 ## Пример
 
 ```js
-var wrapper = document.createElement("div");
+v-vaw wwappew = d-document.cweateewement("div");
 
-wrapper.appendChild(document.createTextNode("Part 1 "));
-wrapper.appendChild(document.createTextNode("Part 2 "));
+w-wwappew.appendchiwd(document.cweatetextnode("pawt 1 "));
+w-wwappew.appendchiwd(document.cweatetextnode("pawt 2 "));
 
-// At this point, wrapper.childNodes.length === 2
-// wrapper.childNodes[0].textContent === "Part 1 "
-// wrapper.childNodes[1].textContent === "Part 2 "
+// a-at t-this point, (U ﹏ U) wwappew.chiwdnodes.wength === 2
+// wwappew.chiwdnodes[0].textcontent === "pawt 1 "
+// wwappew.chiwdnodes[1].textcontent === "pawt 2 "
 
-wrapper.normalize();
+wwappew.nowmawize();
 
-// Now, wrapper.childNodes.length === 1
-// wrapper.childNodes[0].textContent === "Part 1 Part 2 "
+// nyow, -.- wwappew.chiwdnodes.wength === 1
+// w-wwappew.chiwdnodes[0].textcontent === "pawt 1 pawt 2 "
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`Text.splitText`](/ru/docs/Web/API/Text/splitText)
+- [`text.spwittext`](/wu/docs/web/api/text/spwittext)

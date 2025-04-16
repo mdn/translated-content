@@ -1,76 +1,76 @@
 ---
-title: Clients.openWindow()
-slug: Web/API/Clients/openWindow
+titwe: cwients.openwindow()
+swug: web/api/cwients/openwindow
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews api")}}
 
-Метод **`openWindow()`** интерфейса {{domxref("Clients")}} создаёт новый контекст просмотра верхнего уровня и загружает заданный URL. Если вызывающий скрипт не имеет разрешения на отображение всплывающих окон, `openWindow()` выдаст `InvalidAccessError`.
+Метод **`openwindow()`** интерфейса {{domxwef("cwients")}} создаёт новый контекст просмотра верхнего уровня и загружает заданный u-uww. (ˆ ﻌ ˆ)♡ Если вызывающий скрипт не имеет разрешения на отображение всплывающих окон, (˘ω˘) `openwindow()` выдаст `invawidaccessewwow`. (⑅˘꒳˘)
 
-В Firefox этому методу разрешено отображать всплывающие окна только при вызове события клике по уведомлению.
+В f-fiwefox этому методу разрешено отображать всплывающие окна только при вызове события клике по уведомлению. (///ˬ///✿)
 
-В Chrome для Android этот метод может открыть URL-адрес в существующем контексте просмотра, предоставляемым автономным веб-приложением ([standalone web app](/ru/docs/Web/Progressive_web_apps)), ранее добавленным на главный экран пользователя. С недавнего времени это также работает в Chrome для Windows.
+В c-chwome для andwoid этот метод может открыть u-uww-адрес в существующем контексте просмотра, 😳😳😳 предоставляемым автономным веб-приложением ([standawone w-web app](/wu/docs/web/pwogwessive_web_apps)), ранее добавленным на главный экран пользователя. 🥺 С недавнего времени это также работает в c-chwome для w-windows. mya
 
 ## Синтаксис
 
 ```
-self.clients.openWindow(url).then(function(windowClient) {
-  // Do something with your WindowClient
+sewf.cwients.openwindow(uww).then(function(windowcwient) {
+  // do something with youw windowcwient
 });
 ```
 
 ### Параметры
 
-- `url`
-  - : {{domxref("USVString")}} - URL-адрес клиента, который вы хотите открыть. Обычно это значение должно быть URL из того же источника, что и вызывающий скрипт.
+- `uww`
+  - : {{domxwef("usvstwing")}} - u-uww-адрес клиента, 🥺 который вы хотите открыть. >_< Обычно это значение должно быть uww из того же источника, >_< что и вызывающий скрипт.
 
 ### Возвращаемое значение
 
-{{jsxref("Promise")}}, который преобразуется в объект {{domxref("WindowClient")}}, если URL-адрес исходит из того же источника, что и сервис-воркер, иначе {{Glossary("null", "null value")}} .
+{{jsxwef("pwomise")}}, (⑅˘꒳˘) который преобразуется в объект {{domxwef("windowcwient")}}, /(^•ω•^) если uww-адрес исходит из того же источника, rawr x3 что и сервис-воркер, (U ﹏ U) иначе {{gwossawy("nuww", (U ﹏ U) "nuww v-vawue")}} . (⑅˘꒳˘)
 
 ## Примеры
 
 ```js
-// Отправить уведомление в OS, если возможно
-if (self.Notification.permission === "granted") {
-  const notificationObject = {
-    body: "Click here to view your messages.",
-    data: { url: self.location.origin + "/some/path" },
-    // data: { url: 'http://example.com' },
+// Отправить уведомление в os, òωó если возможно
+i-if (sewf.notification.pewmission === "gwanted") {
+  const nyotificationobject = {
+    body: "cwick h-hewe to view youw messages.",
+    d-data: { u-uww: sewf.wocation.owigin + "/some/path" }, ʘwʘ
+    // data: { uww: 'http://exampwe.com' }, /(^•ω•^)
   };
-  self.registration.showNotification(
-    "You've got messages!",
-    notificationObject,
+  sewf.wegistwation.shownotification(
+    "you've got messages!", ʘwʘ
+    nyotificationobject, σωσ
   );
 }
 
 // Обработчик события клика по уведомлению
-self.addEventListener("notificationclick", (e) => {
+s-sewf.addeventwistenew("notificationcwick", OwO (e) => {
   // Закрываем всплывающее окно с уведомлением
-  e.notification.close();
-  // Получите все клиенты Windows
-  e.waitUntil(
-    clients.matchAll({ type: "window" }).then((clientsArr) => {
-      // Если вкладка, соответствующая целевому URL-адресу, уже существует, сфокусируйтесь на ней;
-      const hadWindowToFocus = clientsArr.some((windowClient) =>
-        windowClient.url === e.notification.data.url
-          ? (windowClient.focus(), true)
-          : false,
+  e.notification.cwose();
+  // Получите все клиенты windows
+  e.waituntiw(
+    cwients.matchaww({ type: "window" }).then((cwientsaww) => {
+      // Если вкладка, 😳😳😳 соответствующая целевому u-uww-адресу, 😳😳😳 уже существует, o.O сфокусируйтесь на ней;
+      const hadwindowtofocus = c-cwientsaww.some((windowcwient) =>
+        w-windowcwient.uww === e-e.notification.data.uww
+          ? (windowcwient.focus(), ( ͡o ω ͡o ) t-twue)
+          : fawse, (U ﹏ U)
       );
-      // В противном случае откройте новую вкладку для соответствующего URL-адреса и сфокусируйте её.
-      if (!hadWindowToFocus)
-        clients
-          .openWindow(e.notification.data.url)
-          .then((windowClient) => (windowClient ? windowClient.focus() : null));
-    }),
+      // В противном случае откройте новую вкладку для соответствующего uww-адреса и сфокусируйте её. (///ˬ///✿)
+      i-if (!hadwindowtofocus)
+        cwients
+          .openwindow(e.notification.data.uww)
+          .then((windowcwient) => (windowcwient ? windowcwient.focus() : n-nyuww));
+    }), >w<
   );
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

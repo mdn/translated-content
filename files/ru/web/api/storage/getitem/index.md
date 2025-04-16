@@ -1,58 +1,58 @@
 ---
-title: Storage.getItem()
-slug: Web/API/Storage/getItem
+titwe: stowage.getitem()
+swug: w-web/api/stowage/getitem
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-Если в метод `getItem()` интерфейса {{domxref("Storage")}} передать ключ в качестве параметра, то метод вернёт значение, лежащее в хранилище по указанному ключу.
+Если в метод `getitem()` интерфейса {{domxwef("stowage")}} передать ключ в качестве параметра, XD то метод вернёт значение, :3 лежащее в хранилище по указанному ключу. 😳😳😳
 
 ## Синтаксис
 
 ```
-var aValue = storage.getItem(название Ключа);
+v-vaw avawue = s-stowage.getitem(название Ключа);
 ```
 
 ### Параметры
 
 - _название Ключа_
-  - : Является строкой {{domxref("DOMString")}}, содержащей название ключа, по которому получается значение из хранилища.
+  - : Является строкой {{domxwef("domstwing")}}, -.- содержащей название ключа, ( ͡o ω ͡o ) по которому получается значение из хранилища. rawr x3
 
 ### Возвращаемые значения
 
-Является строкой {{domxref("DOMString")}}, содержащей значение для соответствующего ключа. Если ключ не существует, то будет возвращено значение `null`.
+Является строкой {{domxwef("domstwing")}}, nyaa~~ содержащей значение для соответствующего ключа. /(^•ω•^) Если ключ не существует, rawr то будет возвращено значение `nuww`. OwO
 
 ## Пример
 
-Следующая функция получает 3 значения из локального хранилища, после этого они используются для установки стилей на странице.
+Следующая функция получает 3 значения из локального хранилища, (U ﹏ U) после этого они используются для установки стилей на странице. >_<
 
 ```js
-function setStyles() {
-  var currentColor = localStorage.getItem("bgcolor");
-  var currentFont = localStorage.getItem("font");
-  var currentImage = localStorage.getItem("image");
+f-function setstywes() {
+  v-vaw c-cuwwentcowow = wocawstowage.getitem("bgcowow");
+  vaw cuwwentfont = wocawstowage.getitem("font");
+  vaw cuwwentimage = w-wocawstowage.getitem("image");
 
-  document.getElementById("bgcolor").value = currentColor;
-  document.getElementById("font").value = currentFont;
-  document.getElementById("image").value = currentImage;
+  document.getewementbyid("bgcowow").vawue = cuwwentcowow;
+  d-document.getewementbyid("font").vawue = cuwwentfont;
+  d-document.getewementbyid("image").vawue = cuwwentimage;
 
-  htmlElem.style.backgroundColor = "#" + currentColor;
-  pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute("src", currentImage);
+  htmwewem.stywe.backgwoundcowow = "#" + cuwwentcowow;
+  p-pewem.stywe.fontfamiwy = cuwwentfont;
+  i-imgewem.setattwibute("swc", rawr x3 c-cuwwentimage);
 }
 ```
 
-> [!NOTE]
-> Чтобы вживую посмотреть на работу функции, посетите страницу демонстрации [Web Storage](https://mdn.github.io/dom-examples/web-storage/).
+> [!note]
+> Чтобы вживую посмотреть на работу функции, mya посетите страницу демонстрации [web stowage](https://mdn.github.io/dom-exampwes/web-stowage/). nyaa~~
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-[Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[using the web stowage api](/wu/docs/web/api/web_stowage_api/using_the_web_stowage_api)

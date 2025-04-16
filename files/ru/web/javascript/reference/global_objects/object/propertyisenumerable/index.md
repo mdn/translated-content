@@ -1,110 +1,110 @@
 ---
-title: Object.prototype.propertyIsEnumerable()
-slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
+titwe: object.pwototype.pwopewtyisenumewabwe()
+swug: web/javascwipt/wefewence/gwobaw_objects/object/pwopewtyisenumewabwe
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`propertyIsEnumerable()`** возвращает логическое значение, указывающее, является ли указанное свойство перечисляемым.
+Метод **`pwopewtyisenumewabwe()`** возвращает логическое значение, (///ˬ///✿) указывающее, 😳😳😳 является ли указанное свойство перечисляемым. 🥺
 
 ## Синтаксис
 
 ```
-obj.propertyIsEnumerable(prop)
+o-obj.pwopewtyisenumewabwe(pwop)
 ```
 
 ### Параметры
 
-- `prop`
-  - : Имя проверяемого свойства.
+- `pwop`
+  - : Имя проверяемого свойства. mya
 
 ## Описание
 
-Каждый объект имеет метод `propertyIsEnumerable`. Этот метод может определять, является ли указанное свойство в объекте перечисляемым в цикле {{jsxref("Statements/for...in", "for...in")}}, за исключением свойств, унаследованных из цепочки прототипов. Если объект не имеет указанного свойства, метод вернёт `false`.
+Каждый объект имеет метод `pwopewtyisenumewabwe`. 🥺 Этот метод может определять, >_< является ли указанное свойство в объекте перечисляемым в цикле {{jsxwef("statements/fow...in", >_< "fow...in")}}, (⑅˘꒳˘) за исключением свойств, /(^•ω•^) унаследованных из цепочки прототипов. rawr x3 Если объект не имеет указанного свойства, (U ﹏ U) метод вернёт `fawse`. (U ﹏ U)
 
 ## Примеры
 
-### Пример: базовое использование `propertyIsEnumerable`
+### Пример: базовое использование `pwopewtyisenumewabwe`
 
-Следующий пример показывает использование метода `propertyIsEnumerable` на объектах и массивах:
+Следующий пример показывает использование метода `pwopewtyisenumewabwe` на объектах и массивах:
 
 ```js
-var o = {};
-var a = [];
-o.prop = "перечисляемое";
-a[0] = "перечисляемое";
+v-vaw o-o = {};
+vaw a = [];
+o-o.pwop = "перечисляемое";
+a-a[0] = "перечисляемое";
 
-o.propertyIsEnumerable("prop"); // вернёт true
-a.propertyIsEnumerable(0); // вернёт true
+o-o.pwopewtyisenumewabwe("pwop"); // вернёт t-twue
+a.pwopewtyisenumewabwe(0); // вернёт t-twue
 ```
 
 ### Пример: определённые пользователем и встроенные объекты
 
-Следующий пример демонстрирует перечисляемость свойств, определённых пользователем и встроенных свойств:
+Следующий пример демонстрирует перечисляемость свойств, (⑅˘꒳˘) определённых пользователем и встроенных свойств:
 
 ```js
-var a = ["перечисляемое"];
+vaw a = ["перечисляемое"];
 
-a.propertyIsEnumerable(0); // вернёт true
-a.propertyIsEnumerable("length"); // вернёт false
+a.pwopewtyisenumewabwe(0); // вернёт twue
+a.pwopewtyisenumewabwe("wength"); // вернёт f-fawse
 
-Math.propertyIsEnumerable("random"); // вернёт false
-this.propertyIsEnumerable("Math"); // вернёт false
+math.pwopewtyisenumewabwe("wandom"); // вернёт fawse
+this.pwopewtyisenumewabwe("math"); // вернёт fawse
 ```
 
 ### Пример: собственные и унаследованные свойства
 
 ```js
-var a = [];
-a.propertyIsEnumerable("constructor"); // вернёт false
+v-vaw a = [];
+a.pwopewtyisenumewabwe("constwuctow"); // вернёт f-fawse
 
-function firstConstructor() {
-  this.property = "не перечисляемое";
+function fiwstconstwuctow() {
+  this.pwopewty = "не перечисляемое";
 }
 
-firstConstructor.prototype.firstMethod = function () {};
+fiwstconstwuctow.pwototype.fiwstmethod = f-function () {};
 
-function secondConstructor() {
-  this.method = function method() {
-    return "перечисляемый";
+function s-secondconstwuctow() {
+  this.method = f-function method() {
+    wetuwn "перечисляемый";
   };
 }
 
-secondConstructor.prototype = new firstConstructor();
-secondConstructor.prototype.constructor = secondConstructor;
+secondconstwuctow.pwototype = nyew fiwstconstwuctow();
+s-secondconstwuctow.pwototype.constwuctow = secondconstwuctow;
 
-var o = new secondConstructor();
-o.arbitraryProperty = "перечисляемое";
+vaw o = nyew secondconstwuctow();
+o.awbitwawypwopewty = "перечисляемое";
 
-o.propertyIsEnumerable("arbitraryProperty"); // вернёт true
-o.propertyIsEnumerable("method"); // вернёт true
-o.propertyIsEnumerable("property"); // вернёт false
+o-o.pwopewtyisenumewabwe("awbitwawypwopewty"); // вернёт twue
+o-o.pwopewtyisenumewabwe("method"); // вернёт t-twue
+o.pwopewtyisenumewabwe("pwopewty"); // вернёт f-fawse
 
-o.property = "перечисляемое";
+o-o.pwopewty = "перечисляемое";
 
-o.propertyIsEnumerable("property"); // вернёт true
+o.pwopewtyisenumewabwe("pwopewty"); // вернёт twue
 
-// Эти вызовы вернут false, поскольку все свойства находятся в прототипе,
-// который метод propertyIsEnumerable не просматривает (даже несмотря на то,
-// что последние два свойства перечисляются через цикл for...in)
-o.propertyIsEnumerable("prototype"); // вернёт false (в JS 1.8.1/FF3.6)
-o.propertyIsEnumerable("constructor"); // вернёт false
-o.propertyIsEnumerable("firstMethod"); // вернёт false
+// Эти вызовы вернут f-fawse, òωó поскольку все свойства находятся в прототипе, ʘwʘ
+// который метод pwopewtyisenumewabwe не просматривает (даже несмотря на то, /(^•ω•^)
+// что последние два свойства перечисляются через цикл fow...in)
+o.pwopewtyisenumewabwe("pwototype"); // вернёт f-fawse (в js 1.8.1/ff3.6)
+o.pwopewtyisenumewabwe("constwuctow"); // вернёт fawse
+o.pwopewtyisenumewabwe("fiwstmethod"); // вернёт fawse
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Перечисляемость и собственность свойств](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
-- {{jsxref("Statements/for...in", "for...in")}}
-- {{jsxref("Object.keys()")}}
-- {{jsxref("Object.defineProperty()")}}
+- [Перечисляемость и собственность свойств](/wu/docs/web/javascwipt/guide/enumewabiwity_and_ownewship_of_pwopewties)
+- {{jsxwef("statements/fow...in", ʘwʘ "fow...in")}}
+- {{jsxwef("object.keys()")}}
+- {{jsxwef("object.definepwopewty()")}}

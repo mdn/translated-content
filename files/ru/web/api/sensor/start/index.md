@@ -1,32 +1,32 @@
 ---
-title: Sensor.start()
-slug: Web/API/Sensor/start
-l10n:
-  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
+titwe: sensow.stawt()
+swug: web/api/sensow/stawt
+w-w10n:
+  souwcecommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
-{{APIRef("Sensor API")}}
+{{apiwef("sensow a-api")}}
 
-Метод **`start`** активирует один из датчиков, наследованных от `Sensor`.
+Метод **`stawt`** активирует один из датчиков, OwO наследованных от `sensow`. 🥺
 
 ## Синтаксис
 
 ```js
-start();
+s-stawt();
 ```
 
 ### Параметры
 
-Нет.
+Нет. òωó
 
 ### Возвращаемое значение
 
-Нет ({{jsxref("undefined")}}).
+Нет ({{jsxwef("undefined")}}). o.O
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

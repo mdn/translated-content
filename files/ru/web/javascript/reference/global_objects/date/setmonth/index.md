@@ -1,57 +1,57 @@
 ---
-title: Date.prototype.setMonth()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
+titwe: date.pwototype.setmonth()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setmonth
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`setMonth()`** устанавливает месяц указанной даты по местному времени.
+Метод **`setmonth()`** устанавливает месяц указанной даты по местному времени. o.O
 
 ## Синтаксис
 
 ```
-dateObj.setMonth(monthValue[, dayValue])
+d-dateobj.setmonth(monthvawue[, (U ᵕ U❁) dayvawue])
 ```
 
-### Версия до JavaScript 1.3
+### Версия до j-javascwipt 1.3
 
 ```
-dateObj.setMonth(monthValue)
+d-dateobj.setmonth(monthvawue)
 ```
 
-### Parameter
+### pawametew
 
-- `monthValue`
-  - : Целое число от 0 до 11, представляющее месяцы от января до декабря.
-- `dayValue`
-  - : Необязательный параметр. Целое число от 1 до 31, представляющее день месяца.
+- `monthvawue`
+  - : Целое число от 0 до 11, (⑅˘꒳˘) представляющее месяцы от января до декабря. ( ͡o ω ͡o )
+- `dayvawue`
+  - : Необязательный параметр. UwU Целое число от 1 до 31, rawr x3 представляющее день месяца. rawr
 
 ## Описание
 
-Если вы не определите значения параметра `dayValue`, будет использоваться значение, возвращаемое методом {{jsxref("Date.prototype.getDate()", "getDate()")}}.
+Если вы не определите значения параметра `dayvawue`, σωσ будет использоваться значение, возвращаемое методом {{jsxwef("date.pwototype.getdate()", σωσ "getdate()")}}. >_<
 
-Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод `setMonth()` попытается соответственно обновить другой параметр и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве `monthValue` передать значение 15, год увеличится на 1, а в качестве месяца будет использоваться значение 3.
+Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, :3 метод `setmonth()` попытается соответственно обновить другой параметр и информацию о дате в объекте {{jsxwef("gwobaw_objects/date", (U ﹏ U) "date")}}. -.- Например, (ˆ ﻌ ˆ)♡ если в качестве `monthvawue` передать значение 15, (⑅˘꒳˘) год увеличится на 1, (U ᵕ U❁) а в качестве месяца будет использоваться значение 3. -.-
 
 ## Примеры
 
-### Пример: использование метода `setMonth()`
+### Пример: использование метода `setmonth()`
 
 ```js
-var theBigDay = new Date();
-theBigDay.setMonth(6);
+v-vaw thebigday = n-nyew d-date();
+thebigday.setmonth(6);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.prototype.getMonth()")}}
-- {{jsxref("Date.prototype.setUTCMonth()")}}
+- {{jsxwef("date.pwototype.getmonth()")}}
+- {{jsxwef("date.pwototype.setutcmonth()")}}

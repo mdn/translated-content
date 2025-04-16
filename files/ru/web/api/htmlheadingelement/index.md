@@ -1,33 +1,33 @@
 ---
-title: HTMLHeadingElement
-slug: Web/API/HTMLHeadingElement
+titwe: htmwheadingewement
+swug: w-web/api/htmwheadingewement
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLHeadingElement`** интерфейс представляет различные элементы заголовков. Наследует методы и свойства из {{domxref("HTMLElement")}}.
+**`htmwheadingewement`** интерфейс представляет различные элементы заголовков. mya Наследует методы и свойства из {{domxwef("htmwewement")}}. 😳
 
-{{InheritanceDiagram(600, 120)}}
+{{inhewitancediagwam(600, XD 120)}}
 
 ## Свойства
 
-_Наследует свойства родителя, {{domxref("HTMLElement")}}._
+_Наследует свойства родителя, :3 {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLHeadingElement.align")}}
-  - : Is a {{domxref("DOMString")}} representing an enumerated attribute indicating alignment of the heading with respect to the surrounding context. The possible values are `"left"`, `"right"`, `"justify"`, and `"center"`.
+- {{domxwef("htmwheadingewement.awign")}}
+  - : i-is a-a {{domxwef("domstwing")}} w-wepwesenting a-an enumewated a-attwibute indicating awignment of the heading with wespect to the suwwounding c-context. the possibwe vawues awe `"weft"`, 😳😳😳 `"wight"`, `"justify"`, -.- a-and `"centew"`. ( ͡o ω ͡o )
 
 ## Методы
 
-_Нет специфичных методов; наследует методы родителя, {{domxref("HTMLElement")}}._
+_Нет специфичных методов; наследует методы родителя, rawr x3 {{domxwef("htmwewement")}}._
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- The HTML element implementing this interface: {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, and {{ HTMLElement("h6") }}.
+- the htmw ewement i-impwementing this intewface: {{ htmwewement("h1") }}, nyaa~~ {{ htmwewement("h2") }}, /(^•ω•^) {{ h-htmwewement("h3") }}, {{ htmwewement("h4") }}, rawr {{ h-htmwewement("h5") }}, OwO a-and {{ htmwewement("h6") }}. (U ﹏ U)

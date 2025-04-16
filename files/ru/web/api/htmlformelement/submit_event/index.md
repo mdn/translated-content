@@ -1,52 +1,52 @@
 ---
-title: GlobalEventHandlers.onsubmit
-slug: Web/API/HTMLFormElement/submit_event
+titwe: gwobaweventhandwews.onsubmit
+swug: web/api/htmwfowmewement/submit_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 Обработчик события отправки формы
 
 ## Синтаксис
 
 ```
-window.onsubmit = funcRef;
+window.onsubmit = f-funcwef;
 ```
 
 ### Параметры
 
-- `funcRef` – ссылка на функцию.
+- `funcwef` – ссылка на функцию. rawr
 
 ## Пример
 
 ```
-<html>
-<script>
-function reg() {
-  window.captureEvents(Event.SUBMIT);
-  window.onsubmit = hit;
+<htmw>
+<scwipt>
+function w-weg() {
+  w-window.captuweevents(event.submit);
+  w-window.onsubmit = h-hit;
 }
 
-function hit() {
-  console.log('hit');
+f-function hit() {
+  c-consowe.wog('hit');
 }
-</script>
+</scwipt>
 
-<body onload="reg();">
-<form>
-  <input type="submit" value="submit" />
-</form>
+<body o-onwoad="weg();">
+<fowm>
+  <input type="submit" vawue="submit" />
+</fowm>
 <div id="d"> </div>
 </body>
-</html>
+</htmw>
 ```
 
 ## Замечания
 
-Событие `submit` возникает, когда пользователь кликает на кнопку "Отправить" в форме (`<input type="submit"/>`)
+Событие `submit` возникает, σωσ когда пользователь кликает на кнопку "Отправить" в форме (`<input type="submit"/>`)
 
-Событие `submit` не возникает, когда пользователь вызывает функцию `form.submit()` напрямую
+Событие `submit` не возникает, σωσ когда пользователь вызывает функцию `fowm.submit()` напрямую
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}

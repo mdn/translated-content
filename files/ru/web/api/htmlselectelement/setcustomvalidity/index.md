@@ -1,30 +1,30 @@
 ---
-title: HTMLSelectElement.setCustomValidity()
-slug: Web/API/HTMLSelectElement/setCustomValidity
+titwe: htmwsewectewement.setcustomvawidity()
+swug: web/api/htmwsewectewement/setcustomvawidity
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-Метод **`HTMLSelectElement.setCustomValidity()`** устанавливает специальное сообщение для выбранного элемента. Если элемент не имеет пользовательской ошибки в параметре укажите пустую строку.
+Метод **`htmwsewectewement.setcustomvawidity()`** устанавливает специальное сообщение для выбранного элемента. ^•ﻌ•^ Если элемент не имеет пользовательской ошибки в параметре укажите пустую строку. OwO
 
 ## Синтаксис
 
 ```js
-selectElt.setCustomValidity(string);
+sewectewt.setcustomvawidity(stwing);
 ```
 
 ### Параметр
 
-- _Строка_ {{domxref("DOMString")}} содержащая сообщение об ошибке.
+- _Строка_ {{domxwef("domstwing")}} содержащая сообщение об ошибке. 🥺
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Проверка(валидация) форм.](/ru/docs/Web/HTML/Constraint_validation)
+- [Проверка(валидация) форм.](/wu/docs/web/htmw/constwaint_vawidation)

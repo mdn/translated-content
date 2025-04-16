@@ -1,276 +1,276 @@
 ---
-title: Document
-slug: Web/API/Document
+titwe: document
+swug: web/api/document
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект **document**. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего [DOM](/ru/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model) - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), а также обеспечивает функциональность, которая является глобальной для документа, например, для получения URL-адреса страницы или создания новых элементов в документе).
+Каждая веб-страница, (˘ω˘) которая загружается в браузер, o.O имеет свой собственный объект **document**. 😳 Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего [dom](/wu/docs/web/api/document_object_modew/using_the_document_object_modew) - дерева, o.O включая такие элементы как {{htmwewement("body")}} и {{htmwewement("tabwe")}}), ^^;; а также обеспечивает функциональность, ( ͡o ω ͡o ) которая является глобальной для документа, ^^;; например, ^^;; для получения u-uww-адреса страницы или создания новых элементов в документе). XD
 
-Объект **document** может быть получен из разных API:
+Объект **document** может быть получен из разных a-api:
 
-- Чаще всего используется прямой доступ к объекту **document** из сценариев [scripts](/ru/docs/Web/HTML/Element/script) которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)
-- Через свойство [`contentDocument`](/ru/docs/Web/API/HTMLIFrameElement#Properties) объекта iframe.
-- Как ответ [`responseXML`](/ru/docs/Web/API/XMLHttpRequest#responsexml) объекта [`XMLHttpRequest.`](/ru/docs/Web/API/XMLHttpRequest)
-- Доступ к документу может быть получен из элемента или узла через свойство {{domxref("Node.ownerDocument","ownerDocument")}}.
+- Чаще всего используется прямой доступ к объекту **document** из сценариев [scwipts](/wu/docs/web/htmw/ewement/scwipt) которые подгружаются документом. 🥺 (Этот же объект доступен как {{domxwef("window.document")}}.)
+- Через свойство [`contentdocument`](/wu/docs/web/api/htmwifwameewement#pwopewties) объекта i-ifwame. (///ˬ///✿)
+- Как ответ [`wesponsexmw`](/wu/docs/web/api/xmwhttpwequest#wesponsexmw) объекта [`xmwhttpwequest.`](/wu/docs/web/api/xmwhttpwequest)
+- Доступ к документу может быть получен из элемента или узла через свойство {{domxwef("node.ownewdocument","ownewdocument")}}. (U ᵕ U❁)
 
-В зависимости от вида документа (т.е. [HTML](/ru/docs/Web/HTML) или [XML](/ru/docs/Web/XML)) у объекта **document** могут быть доступны разные API.
+В зависимости от вида документа (т.е. ^^;; [htmw](/wu/docs/web/htmw) или [xmw](/wu/docs/web/xmw)) у объекта **document** могут быть доступны разные a-api. ^^;;
 
-- Все объекты документов реализуют интерфейс [`Document`](https://dom.spec.whatwg.org/#interface-document) (и следовательно {{domxref("Node")}} и {{domxref("EventTarget")}} интерфейсы). Таким образом основные свойства и методы, описанные на этой странице, доступны для всех видов документов.
-- В современных браузерах некоторые документы (т.е. те, которые содержат контент `text/html`) также реализуют {{domxref("HTMLDocument")}} интерфейс.
-- В современных браузерах SVG документы реализуют {{domxref("SVGDocument")}} интерфейс.
+- Все объекты документов реализуют интерфейс [`document`](https://dom.spec.naniwg.owg/#intewface-document) (и следовательно {{domxwef("node")}} и {{domxwef("eventtawget")}} интерфейсы). rawr Таким образом основные свойства и методы, (˘ω˘) описанные на этой странице, 🥺 доступны для всех видов документов. nyaa~~
+- В современных браузерах некоторые документы (т.е. :3 те, которые содержат контент `text/htmw`) также реализуют {{domxwef("htmwdocument")}} интерфейс. /(^•ω•^)
+- В современных браузерах s-svg документы реализуют {{domxwef("svgdocument")}} интерфейс.
 
-В будущем все эти интерфейсы будут сведены в один интерфейс - `Document`.
+В будущем все эти интерфейсы будут сведены в один интерфейс - `document`. ^•ﻌ•^
 
 ## Свойства
 
-> [!NOTE]
-> Интерфейс `Document` наследует также интерфейсы {{domxref("Node")}} и {{domxref("EventTarget")}}.
+> [!note]
+> Интерфейс `document` наследует также интерфейсы {{domxwef("node")}} и {{domxwef("eventtawget")}}. UwU
 
-- {{domxref("Document.all")}} {{Deprecated_inline}} {{non-standard_inline}}
-  - : Обеспечивает доступ ко всем элементам с идентификаторами (id). Это нестандартный интерфейс, вместо него рекомендуется использовать метод {{domxref("Document.getElementById()")}}.
-- {{domxref("Document.async")}} {{Deprecated_inline}}
-  - : Используется с {{domxref("document.load")}} чтобы обозначить асинхронный запрос.
-- {{domxref("Document.characterSet")}} {{experimental_inline}}
-  - : Возвращает кодировку документа.
-- {{domxref("Document.compatMode")}} {{experimental_inline}}
-  - : Указывает в каком режиме (Quirks или Strict) рендерился документ.
-- {{domxref("Document.contentType")}} {{experimental_inline}}
-  - : Возвращает Content-Type из MIME заголовка текущего документа.
-- {{domxref("Document.doctype")}}
-  - : Возвращает Document Type Definition (DTD) текущего документа .
-- {{domxref("Document.documentElement")}}
-  - : Возвращает Element, который является первым дочерним элементом документа. Для HTML документов это HTML-элемент.
-- {{domxref("Document.documentURI")}}
-  - : Возвращает URL документа.
-- {{domxref("Document.domConfig")}} {{Deprecated_inline}}
-  - : Должен вернуть {{domxref("DOMConfiguration")}} объект.
-- {{domxref("Document.implementation")}}
-  - : Возвращает DOM implementation связанную с текущим документом.
-- {{domxref("Document.inputEncoding")}} {{Deprecated_inline}}
-  - : Возвращает кодировку, которая использовалась во время парсинга документа.
-- {{domxref("Document.lastStyleSheetSet")}}
-  - : Возвращает имя последнего включённого набора таблиц стилей. Имеет значение `null` , пока таблица стилей не будет изменена путём установки значения {{domxref("Document.selectedStyleSheetSet","selectedStyleSheetSet")}}.
-- {{domxref("Document.mozSyntheticDocument")}} {{non-standard_inline}}
-  - : `true` если этот документ является синтетическим, например, отдельные изображения, видео, аудио файлы, или тому подобные.
-- {{domxref("Document.mozFullScreen")}} {{non-standard_inline}}
-  - : `true` когда документ находится в {{domxref("Using_full-screen_mode","full-screen mode")}}.
-- {{domxref("Document.mozFullScreenElement")}} {{non-standard_inline}}
-  - : Элемент, который в данный момент находится в полноэкранном режиме для этого документа.
-- {{domxref("Document.mozFullScreenEnabled")}} {{non-standard_inline}}
-  - : `true` if calling {{domxref("element.mozRequestFullscreen()")}} would succeed in the curent document.
-- {{domxref("Document.pointerLockElement")}} {{experimental_inline}}
-  - : Returns the element set as the target for mouse events while the pointer is locked. `null` if lock is pending, pointer is unlocked, or if the target is in another document.
-- {{domxref("Document.preferredStyleSheetSet")}}
-  - : Returns the preferred style sheet set as specified by the page author.
-- {{domxref("Document.selectedStyleSheetSet")}}
-  - : Returns which style sheet set is currently in use.
-- {{domxref("Document.styleSheets")}}
-  - : Returns a list of the style sheet objects on the current document.
-- {{domxref("Document.styleSheetSets")}}
-  - : Returns a list of the style sheet sets available on the document.
-- {{domxref("Document.xmlEncoding")}} {{Deprecated_inline}}
-  - : Returns the encoding as determined by the XML declaration.
-- {{domxref("Document.xmlStandalone")}} {{Deprecated_inline}}
-  - : Returns `true` if the XML declaration specifies the document to be standalone (_e.g.,_ An external part of the DTD affects the document's content), else `false`.
-- {{domxref("Document.xmlVersion")}} {{Deprecated_inline}}
-  - : Returns the version number as specified in the XML declaration or `"1.0"` if the declaration is absent.
+- {{domxwef("document.aww")}} {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : Обеспечивает доступ ко всем элементам с идентификаторами (id). 😳😳😳 Это нестандартный интерфейс, OwO вместо него рекомендуется использовать метод {{domxwef("document.getewementbyid()")}}. ^•ﻌ•^
+- {{domxwef("document.async")}} {{depwecated_inwine}}
+  - : Используется с {{domxwef("document.woad")}} чтобы обозначить асинхронный запрос. (ꈍᴗꈍ)
+- {{domxwef("document.chawactewset")}} {{expewimentaw_inwine}}
+  - : Возвращает кодировку документа. (⑅˘꒳˘)
+- {{domxwef("document.compatmode")}} {{expewimentaw_inwine}}
+  - : Указывает в каком режиме (quiwks или s-stwict) рендерился документ. (⑅˘꒳˘)
+- {{domxwef("document.contenttype")}} {{expewimentaw_inwine}}
+  - : Возвращает c-content-type из m-mime заголовка текущего документа. (ˆ ﻌ ˆ)♡
+- {{domxwef("document.doctype")}}
+  - : Возвращает document type definition (dtd) текущего документа . /(^•ω•^)
+- {{domxwef("document.documentewement")}}
+  - : Возвращает ewement, òωó который является первым дочерним элементом документа. (⑅˘꒳˘) Для htmw документов это htmw-элемент. (U ᵕ U❁)
+- {{domxwef("document.documentuwi")}}
+  - : Возвращает u-uww документа. >w<
+- {{domxwef("document.domconfig")}} {{depwecated_inwine}}
+  - : Должен вернуть {{domxwef("domconfiguwation")}} объект. σωσ
+- {{domxwef("document.impwementation")}}
+  - : Возвращает dom impwementation связанную с текущим документом. -.-
+- {{domxwef("document.inputencoding")}} {{depwecated_inwine}}
+  - : Возвращает кодировку, o.O которая использовалась во время парсинга документа. ^^
+- {{domxwef("document.waststywesheetset")}}
+  - : Возвращает имя последнего включённого набора таблиц стилей. >_< Имеет значение `nuww` , >w< пока таблица стилей не будет изменена путём установки значения {{domxwef("document.sewectedstywesheetset","sewectedstywesheetset")}}. >_<
+- {{domxwef("document.mozsyntheticdocument")}} {{non-standawd_inwine}}
+  - : `twue` если этот документ является синтетическим, >w< например, rawr отдельные изображения, rawr x3 видео, ( ͡o ω ͡o ) аудио файлы, (˘ω˘) или тому подобные. 😳
+- {{domxwef("document.mozfuwwscween")}} {{non-standawd_inwine}}
+  - : `twue` когда документ находится в {{domxwef("using_fuww-scween_mode","fuww-scween m-mode")}}. OwO
+- {{domxwef("document.mozfuwwscweenewement")}} {{non-standawd_inwine}}
+  - : Элемент, (˘ω˘) который в данный момент находится в полноэкранном режиме для этого документа. òωó
+- {{domxwef("document.mozfuwwscweenenabwed")}} {{non-standawd_inwine}}
+  - : `twue` if cawwing {{domxwef("ewement.mozwequestfuwwscween()")}} w-wouwd succeed in the cuwent document. ( ͡o ω ͡o )
+- {{domxwef("document.pointewwockewement")}} {{expewimentaw_inwine}}
+  - : wetuwns the e-ewement set as the tawget fow m-mouse events whiwe t-the pointew is wocked. UwU `nuww` if wock is pending, /(^•ω•^) pointew is unwocked, (ꈍᴗꈍ) ow if t-the tawget is in anothew document. 😳
+- {{domxwef("document.pwefewwedstywesheetset")}}
+  - : wetuwns the pwefewwed stywe sheet set a-as specified by the page authow. mya
+- {{domxwef("document.sewectedstywesheetset")}}
+  - : w-wetuwns which s-stywe sheet s-set is cuwwentwy i-in use. mya
+- {{domxwef("document.stywesheets")}}
+  - : wetuwns a wist of the stywe s-sheet objects on the cuwwent document. /(^•ω•^)
+- {{domxwef("document.stywesheetsets")}}
+  - : wetuwns a-a wist of the stywe sheet sets avaiwabwe on the document. ^^;;
+- {{domxwef("document.xmwencoding")}} {{depwecated_inwine}}
+  - : wetuwns the encoding a-as detewmined by the xmw decwawation. 🥺
+- {{domxwef("document.xmwstandawone")}} {{depwecated_inwine}}
+  - : w-wetuwns `twue` i-if the x-xmw decwawation specifies the document to be standawone (_e.g.,_ an extewnaw pawt o-of the dtd affects t-the document's content), ^^ ewse `fawse`. ^•ﻌ•^
+- {{domxwef("document.xmwvewsion")}} {{depwecated_inwine}}
+  - : w-wetuwns t-the vewsion nyumbew as specified i-in the xmw decwawation ow `"1.0"` i-if the decwawation is absent. /(^•ω•^)
 
-The `Document` interface is extended with the {{domxref("ParentNode")}} interface:
+the `document` i-intewface is extended with t-the {{domxwef("pawentnode")}} intewface:
 
-### Extension for HTML documents
+### e-extension fow htmw d-documents
 
-The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocument")}} interface or, since HTML5, is extended for such documents:
+the `document` intewface fow htmw documents inhewit fwom the {{domxwef("htmwdocument")}} intewface ow, ^^ since htmw5, 🥺 i-is extended fow s-such documents:
 
-- {{domxref("Document.activeElement")}}
-  - : Returns the currently focused element.
-- {{domxref("Document.alinkColor")}} {{Deprecated_inline}}
-  - : Returns or sets the color of active links in the document body.
-- {{domxref("Document.anchors")}}
-  - : Returns a list of all of the anchors in the document.
-- {{domxref("Document.applets")}} {{Deprecated_inline}}
-  - : Returns an ordered list of the applets within a document.
-- {{domxref("Document.bgColor")}} {{Deprecated_inline}}
-  - : Gets/sets the background color of the current document.
-- {{domxref("Document.body")}}
-  - : Returns the {{HTMLElement("body")}} element of the current document.
-- {{domxref("Document.cookie")}}
-  - : Returns a semicolon-separated list of the cookies for that document or sets a single cookie.
-- {{domxref("Document.defaultView")}}
-  - : Returns a reference to the window object.
-- {{domxref("Document.designMode")}}
-  - : Gets/sets the ability to edit the whole document.
-- {{domxref("Document.dir")}}
-  - : Gets/sets directionality (rtl/ltr) of the document.
-- {{domxref("Document.domain")}}
-  - : Returns the domain of the current document.
-- {{domxref("Document.embeds")}}
-  - : Returns a list of the embedded {{HTMLElement('embed')}} elements within the current document.
-- {{domxref("Document.fgColor")}} {{Deprecated_inline}}
-  - : Gets/sets the foreground color, or text color, of the current document.
-- {{domxref("Document.forms")}}
-  - : Returns a list of the {{HTMLElement("form")}} elements within the current document.
-- {{domxref("Document.head")}}
-  - : Returns the {{HTMLElement("head")}} element of the current document.
-- {{domxref("Document.height")}} {{non-standard_inline}}
-  - : Gets/sets the height of the current document.
-- {{domxref("Document.images")}}
-  - : Returns a list of the images in the current document.
-- {{domxref("Document.lastModified")}}
-  - : Returns the date on which the document was last modified.
-- {{domxref("Document.linkColor")}} {{Deprecated_inline}}
-  - : Gets/sets the color of hyperlinks in the document.
-- {{domxref("Document.links")}}
-  - : Returns a list of all the hyperlinks in the document.
-- {{domxref("Document.location")}}
-  - : Returns the URI of the current document.
-- {{domxref("Document.plugins")}}
-  - : Returns a list of the available plugins.
-- {{domxref("Document.readyState")}}
-  - : Returns loading status of the document.
-- {{domxref("Document.referrer")}}
-  - : Returns the URI of the page that linked to this page.
-- {{domxref("Document.scripts")}}
-  - : Returns all the {{HTMLElement("script")}} elements on the document.
-- {{domxref("Document.title")}}
-  - : Returns the title of the current document.
-- {{domxref("Document.URL")}}
-  - : Returns a string containing the URL of the current document.
-- {{domxref("Document.vlinkColor")}} {{Deprecated_inline}}
-  - : Gets/sets the color of visited hyperlinks.
-- {{domxref("Document.width")}} {{non-standard_inline}}
-  - : Returns the width of the current document.
+- {{domxwef("document.activeewement")}}
+  - : wetuwns the cuwwentwy f-focused ewement. (U ᵕ U❁)
+- {{domxwef("document.awinkcowow")}} {{depwecated_inwine}}
+  - : w-wetuwns o-ow sets the cowow of active winks in the document body. 😳😳😳
+- {{domxwef("document.anchows")}}
+  - : w-wetuwns a wist of aww of the anchows in the document. nyaa~~
+- {{domxwef("document.appwets")}} {{depwecated_inwine}}
+  - : wetuwns an owdewed wist of t-the appwets within a document. (˘ω˘)
+- {{domxwef("document.bgcowow")}} {{depwecated_inwine}}
+  - : g-gets/sets t-the backgwound c-cowow of the cuwwent document. >_<
+- {{domxwef("document.body")}}
+  - : w-wetuwns t-the {{htmwewement("body")}} e-ewement o-of the cuwwent document. XD
+- {{domxwef("document.cookie")}}
+  - : wetuwns a s-semicowon-sepawated w-wist of the c-cookies fow that d-document ow sets a-a singwe cookie. rawr x3
+- {{domxwef("document.defauwtview")}}
+  - : wetuwns a wefewence to the window object. ( ͡o ω ͡o )
+- {{domxwef("document.designmode")}}
+  - : g-gets/sets the abiwity to edit the whowe document. :3
+- {{domxwef("document.diw")}}
+  - : gets/sets diwectionawity (wtw/wtw) of t-the document.
+- {{domxwef("document.domain")}}
+  - : wetuwns the domain of the cuwwent document. mya
+- {{domxwef("document.embeds")}}
+  - : w-wetuwns a-a wist of the embedded {{htmwewement('embed')}} e-ewements within the cuwwent document. σωσ
+- {{domxwef("document.fgcowow")}} {{depwecated_inwine}}
+  - : g-gets/sets the fowegwound cowow, (ꈍᴗꈍ) o-ow text cowow, OwO o-of the cuwwent document. o.O
+- {{domxwef("document.fowms")}}
+  - : wetuwns a wist of the {{htmwewement("fowm")}} ewements within the cuwwent document. 😳😳😳
+- {{domxwef("document.head")}}
+  - : w-wetuwns the {{htmwewement("head")}} ewement o-of the cuwwent document. /(^•ω•^)
+- {{domxwef("document.height")}} {{non-standawd_inwine}}
+  - : gets/sets t-the height o-of the cuwwent document. OwO
+- {{domxwef("document.images")}}
+  - : wetuwns a wist o-of the images i-in the cuwwent document. ^^
+- {{domxwef("document.wastmodified")}}
+  - : w-wetuwns the d-date on which the document was wast modified. (///ˬ///✿)
+- {{domxwef("document.winkcowow")}} {{depwecated_inwine}}
+  - : gets/sets the cowow of hypewwinks i-in the document. (///ˬ///✿)
+- {{domxwef("document.winks")}}
+  - : w-wetuwns a-a wist of aww the hypewwinks in t-the document. (///ˬ///✿)
+- {{domxwef("document.wocation")}}
+  - : w-wetuwns the uwi of the c-cuwwent document. ʘwʘ
+- {{domxwef("document.pwugins")}}
+  - : wetuwns a wist of the avaiwabwe pwugins. ^•ﻌ•^
+- {{domxwef("document.weadystate")}}
+  - : wetuwns w-woading status o-of the document. OwO
+- {{domxwef("document.wefewwew")}}
+  - : wetuwns the uwi of the page that w-winked to this page. (U ﹏ U)
+- {{domxwef("document.scwipts")}}
+  - : w-wetuwns aww the {{htmwewement("scwipt")}} ewements on the document. (ˆ ﻌ ˆ)♡
+- {{domxwef("document.titwe")}}
+  - : w-wetuwns the titwe of the cuwwent document. (⑅˘꒳˘)
+- {{domxwef("document.uww")}}
+  - : wetuwns a stwing containing t-the uww of the cuwwent document. (U ﹏ U)
+- {{domxwef("document.vwinkcowow")}} {{depwecated_inwine}}
+  - : gets/sets the c-cowow of visited h-hypewwinks. o.O
+- {{domxwef("document.width")}} {{non-standawd_inwine}}
+  - : wetuwns the width of the cuwwent document. mya
 
-### Event handlers
+### e-event h-handwews
 
-- {{domxref("Document.onpointerlockchange")}} {{experimental_inline}}
-  - : Returns the event handling code for the [`pointerlockchange`](/ru/docs/Web/API/Document/pointerlockchange_event) event.
-- {{domxref("Document.onpointerlockerror")}} {{experimental_inline}}
-  - : Returns the event handling code for the [`pointerlockerror`](/ru/docs/Web/API/Document/pointerlockerror_event) event.
-- {{domxref("Document.onreadystatechange")}}
-  - : Returns the event handling code for the `readystatechange` event.
+- {{domxwef("document.onpointewwockchange")}} {{expewimentaw_inwine}}
+  - : wetuwns the event handwing code fow the [`pointewwockchange`](/wu/docs/web/api/document/pointewwockchange_event) e-event. XD
+- {{domxwef("document.onpointewwockewwow")}} {{expewimentaw_inwine}}
+  - : wetuwns t-the event handwing code fow the [`pointewwockewwow`](/wu/docs/web/api/document/pointewwockewwow_event) event. òωó
+- {{domxwef("document.onweadystatechange")}}
+  - : w-wetuwns the event handwing c-code fow the `weadystatechange` e-event. (˘ω˘)
 
-## Methods
+## methods
 
-> [!NOTE]
-> The `Document` interface also inherits from the {{domxref("Node")}} and {{domxref("EventTarget")}} interfaces.
+> [!note]
+> the `document` intewface a-awso inhewits fwom the {{domxwef("node")}} a-and {{domxwef("eventtawget")}} i-intewfaces. :3
 
-- {{domxref("Document.adoptNode","Document.adoptNode(Node node)")}}
-  - : Adopt node from an external document.
-- {{domxref("Document.captureEvents","Document.captureEvents(String eventName)")}} {{Deprecated_inline}}
-  - : See {{domxref("window.captureEvents")}}.
-- {{domxref("Document.caretPositionFromPoint","Document.caretPositionFromPoint(Number x, Number y)")}}
-  - : Gets a {{domxref("CaretPosition")}} based on two coordinates.
-- {{domxref("Document.createAttribute","Document.createAttribute(String name)")}}
-  - : Creates a new {{domxref("Attr")}} object and returns it.
-- {{domxref("Document.createAttributeNS","Document.createAttributeNS(String namespace, String name)")}}
-  - : Creates a new attribute node in a given namespace and returns it.
-- {{domxref("Document.createCDATASection","Document.createCDATASection(String data)")}}
-  - : Creates a new CDATA node and returns it.
-- {{domxref("Document.createComment","Document.createComment(String comment)")}}
-  - : Creates a new comment node and returns it.
-- {{domxref("Document.createDocumentFragment()")}}
-  - : Creates a new document fragment.
-- {{domxref("Document.createElement","Document.createElement(String name)")}}
-  - : Creates a new element with the given tag name.
-- {{domxref("Document.createElementNS","Document.createElementNS(String namespace, String name)")}}
-  - : Creates a new element with the given tag name and namespace URI.
-- {{domxref("Document.createEntityReference","Document.createEntityReference(String name)")}}
-  - : Creates a new entity reference object and returns it.
-- {{domxref("Document.createEvent","Document.createEvent(String interface)")}}
-  - : Creates an event object.
-- {{domxref("Document.createNodeIterator","Document.createNodeIterator(Node root[, Number whatToShow[, NodeFilter filter]])")}}
-  - : Creates a {{domxref("NodeIterator")}} object.
-- {{domxref("Document.createProcessingInstruction","Document.createProcessingInstruction(String target, String data)")}}
-  - : Creates a new {{domxref("ProcessingInstruction")}} object.
-- {{domxref("Document.createRange()")}}
-  - : Creates a {{domxref("Range")}} object.
-- {{domxref("Document.createTextNode","Document.createTextNode(String text)")}}
-  - : Creates a text node.
-- {{domxref("Document.createTreeWalker","Document.createTreeWalker(Node root[, Number whatToShow[, NodeFilter filter]])")}}
-  - : Creates a {{domxref("TreeWalker")}} object.
-- {{domxref("Document.elementFromPoint","Document.elementFromPoint(Number x, Number y)")}}
-  - : Returns the element visible at the specified coordinates.
-- {{domxref("Document.enableStyleSheetsForSet","Document.enableStyleSheetsForSet(String name)")}}
-  - : Enables the style sheets for the specified style sheet set.
-- {{domxref("Document.exitPointerLock()")}} {{experimental_inline}}
-  - : Release the pointer lock.
-- {{domxref("Document.getElementsByClassName","Document.getElementsByClassName(String className)")}}
-  - : Returns a list of elements with the given class name.
-- {{domxref("Document.getElementsByTagName","Document.getElementsByTagName(String tagName)")}}
-  - : Returns a list of elements with the given tag name.
-- {{domxref("Document.getElementsByTagNameNS","Document.getElementsByTagNameNS(String namespace, String tagName)")}}
-  - : Returns a list of elements with the given tag name and namespace.
-- {{domxref("Document.importNode","Document.importNode(Node node, Boolean deep)")}}
-  - : Returns a clone of a node from an external document.
-- {{domxref("document.mozSetImageElement")}} {{non-standard_inline}}
-  - : Allows you to change the element being used as the background image for a specified element ID.
-- {{domxref("Document.normalizeDocument()")}}
-  - : Replaces entities, normalizes text nodes, etc.
-- {{domxref("Document.releaseCapture()")}} {{non-standard_inline}}
-  - : Releases the current mouse capture if it's on an element in this document.
-- {{domxref("Document.releaseEvents")}} {{non-standard_inline}} {{Deprecated_inline}}
-  - : See {{domxref("window.releaseEvents")}}.
-- {{domxref("document.routeEvent")}} {{non-standard_inline}}
-  - : See {{domxref("window.routeEvent")}}.
+- {{domxwef("document.adoptnode","document.adoptnode(node n-nyode)")}}
+  - : adopt n-node fwom an extewnaw d-document. OwO
+- {{domxwef("document.captuweevents","document.captuweevents(stwing eventname)")}} {{depwecated_inwine}}
+  - : see {{domxwef("window.captuweevents")}}. mya
+- {{domxwef("document.cawetpositionfwompoint","document.cawetpositionfwompoint(numbew x, (˘ω˘) n-nyumbew y)")}}
+  - : g-gets a {{domxwef("cawetposition")}} b-based on two coowdinates. o.O
+- {{domxwef("document.cweateattwibute","document.cweateattwibute(stwing nyame)")}}
+  - : c-cweates a nyew {{domxwef("attw")}} o-object and wetuwns i-it. (✿oωo)
+- {{domxwef("document.cweateattwibutens","document.cweateattwibutens(stwing namespace, (ˆ ﻌ ˆ)♡ stwing nyame)")}}
+  - : cweates a n-nyew attwibute n-nyode in a given n-nyamespace and w-wetuwns it. ^^;;
+- {{domxwef("document.cweatecdatasection","document.cweatecdatasection(stwing data)")}}
+  - : c-cweates a nyew cdata nyode and wetuwns it. OwO
+- {{domxwef("document.cweatecomment","document.cweatecomment(stwing comment)")}}
+  - : cweates a-a nyew comment nyode and wetuwns i-it. 🥺
+- {{domxwef("document.cweatedocumentfwagment()")}}
+  - : cweates a new d-document fwagment. mya
+- {{domxwef("document.cweateewement","document.cweateewement(stwing nyame)")}}
+  - : c-cweates a nyew ewement with t-the given tag n-nyame. 😳
+- {{domxwef("document.cweateewementns","document.cweateewementns(stwing n-nyamespace, òωó stwing n-nyame)")}}
+  - : c-cweates a nyew ewement with the given tag nyame and nyamespace uwi. /(^•ω•^)
+- {{domxwef("document.cweateentitywefewence","document.cweateentitywefewence(stwing nyame)")}}
+  - : cweates a-a nyew entity w-wefewence object a-and wetuwns it. -.-
+- {{domxwef("document.cweateevent","document.cweateevent(stwing i-intewface)")}}
+  - : cweates an event object. òωó
+- {{domxwef("document.cweatenodeitewatow","document.cweatenodeitewatow(node woot[, /(^•ω•^) numbew nyanitoshow[, /(^•ω•^) n-nyodefiwtew f-fiwtew]])")}}
+  - : cweates a-a {{domxwef("nodeitewatow")}} object. 😳
+- {{domxwef("document.cweatepwocessinginstwuction","document.cweatepwocessinginstwuction(stwing tawget, :3 s-stwing data)")}}
+  - : c-cweates a nyew {{domxwef("pwocessinginstwuction")}} o-object. (U ᵕ U❁)
+- {{domxwef("document.cweatewange()")}}
+  - : c-cweates a {{domxwef("wange")}} object. ʘwʘ
+- {{domxwef("document.cweatetextnode","document.cweatetextnode(stwing text)")}}
+  - : cweates a text nyode. o.O
+- {{domxwef("document.cweatetweewawkew","document.cweatetweewawkew(node woot[, ʘwʘ nyumbew nyanitoshow[, ^^ n-nyodefiwtew f-fiwtew]])")}}
+  - : c-cweates a-a {{domxwef("tweewawkew")}} o-object. ^•ﻌ•^
+- {{domxwef("document.ewementfwompoint","document.ewementfwompoint(numbew x, mya nyumbew y)")}}
+  - : w-wetuwns t-the ewement visibwe at the specified c-coowdinates. UwU
+- {{domxwef("document.enabwestywesheetsfowset","document.enabwestywesheetsfowset(stwing n-nyame)")}}
+  - : enabwes t-the stywe sheets fow the specified stywe sheet s-set. >_<
+- {{domxwef("document.exitpointewwock()")}} {{expewimentaw_inwine}}
+  - : wewease the pointew w-wock. /(^•ω•^)
+- {{domxwef("document.getewementsbycwassname","document.getewementsbycwassname(stwing c-cwassname)")}}
+  - : wetuwns a w-wist of ewements with the given cwass nyame. òωó
+- {{domxwef("document.getewementsbytagname","document.getewementsbytagname(stwing tagname)")}}
+  - : w-wetuwns a wist o-of ewements with t-the given tag name. σωσ
+- {{domxwef("document.getewementsbytagnamens","document.getewementsbytagnamens(stwing nyamespace, ( ͡o ω ͡o ) stwing tagname)")}}
+  - : w-wetuwns a wist of ewements with the given tag n-nyame and nyamespace. nyaa~~
+- {{domxwef("document.impowtnode","document.impowtnode(node n-nyode, :3 boowean deep)")}}
+  - : w-wetuwns a cwone of a nyode fwom a-an extewnaw document. UwU
+- {{domxwef("document.mozsetimageewement")}} {{non-standawd_inwine}}
+  - : a-awwows you to change the ewement being used as t-the backgwound image fow a specified ewement id. o.O
+- {{domxwef("document.nowmawizedocument()")}}
+  - : w-wepwaces entities, (ˆ ﻌ ˆ)♡ n-nyowmawizes text nyodes, ^^;; e-etc.
+- {{domxwef("document.weweasecaptuwe()")}} {{non-standawd_inwine}}
+  - : weweases the cuwwent m-mouse captuwe i-if it's on an e-ewement in this document. ʘwʘ
+- {{domxwef("document.weweaseevents")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : see {{domxwef("window.weweaseevents")}}. σωσ
+- {{domxwef("document.wouteevent")}} {{non-standawd_inwine}}
+  - : see {{domxwef("window.wouteevent")}}. ^^;;
 
-The `Document` interface is extended with the {{domxref("ParentNode")}} interface:
+the `document` intewface is extended with the {{domxwef("pawentnode")}} intewface:
 
-- {{domxref("Document.getElementById","Document.getElementById(String id)")}}
-  - : Returns an object reference to the identified element.
-- {{domxref("Document.querySelector","Document.querySelector(String selector)")}}
-  - : Returns the first Element node within the document, in document order, that matches the specified selectors.
-- {{domxref("Document.querySelectorAll","Document.querySelectorAll(String selector)")}}
-  - : Returns a list of all the Element nodes within the document that match the specified selectors.
+- {{domxwef("document.getewementbyid","document.getewementbyid(stwing id)")}}
+  - : wetuwns an object wefewence to the identified e-ewement. ʘwʘ
+- {{domxwef("document.quewysewectow","document.quewysewectow(stwing s-sewectow)")}}
+  - : wetuwns the fiwst ewement nyode w-within the document, ^^ i-in document o-owdew, nyaa~~ that matches the specified s-sewectows. (///ˬ///✿)
+- {{domxwef("document.quewysewectowaww","document.quewysewectowaww(stwing sewectow)")}}
+  - : w-wetuwns a-a wist of aww the ewement nyodes w-within the document that match t-the specified s-sewectows. XD
 
-The `Document` interface is extended with the {{domxref("XPathEvaluator")}} interface:
+the `document` intewface is extended w-with the {{domxwef("xpathevawuatow")}} i-intewface:
 
-- {{domxref("Document.createExpression","Document.createExpression(String expression, XPathNSResolver resolver)")}}
-  - : Compiles an [`XPathExpression`](/ru/docs/Web/API/XPathExpression) which can then be used for (repeated) evaluations.
-- {{domxref("Document.createNSResolver","Document.createNSResolver(Node resolver)")}}
-  - : Creates an {{domxref("XPathNSResolver")}} object.
-- {{domxref("Document.evaluate","Document.evaluate(String expression, Node contextNode, XPathNSResolver resolver, Number type, Object result)")}}
-  - : Evaluates an XPath expression.
+- {{domxwef("document.cweateexpwession","document.cweateexpwession(stwing e-expwession, :3 xpathnswesowvew w-wesowvew)")}}
+  - : c-compiwes an [`xpathexpwession`](/wu/docs/web/api/xpathexpwession) w-which can then b-be used fow (wepeated) e-evawuations. òωó
+- {{domxwef("document.cweatenswesowvew","document.cweatenswesowvew(node w-wesowvew)")}}
+  - : cweates an {{domxwef("xpathnswesowvew")}} o-object. ^^
+- {{domxwef("document.evawuate","document.evawuate(stwing e-expwession, ^•ﻌ•^ n-nyode contextnode, σωσ xpathnswesowvew w-wesowvew, (ˆ ﻌ ˆ)♡ nyumbew type, nyaa~~ object wesuwt)")}}
+  - : e-evawuates an xpath e-expwession. ʘwʘ
 
-### Extension for HTML documents
+### e-extension fow h-htmw documents
 
-The `Document` interface for HTML documents inherit from the {{domxref("HTMLDocument")}} interface or, since HTML5, is extended for such documents:
+the `document` intewface f-fow htmw documents inhewit f-fwom the {{domxwef("htmwdocument")}} intewface o-ow, ^•ﻌ•^ since htmw5, is extended f-fow such documents:
 
-- {{domxref("Document.clear()")}} {{non-standard_inline}} {{Deprecated_inline}}
-  - : In majority of modern browsers, including recent versions of Firefox and Internet Explorer, this method does nothing.
-- {{domxref("Document.close()")}}
-  - : Closes a document stream for writing.
-- {{domxref("Document.execCommand","Document.execCommand(String command[, Boolean showUI[, String value]])")}}
-  - : On an editable document, executes a formating command.
-- {{domxref("Document.getElementsByName","Document.getElementsByName(String name)")}}
-  - : Returns a list of elements with the given name.
-- {{domxref("Document.getSelection()")}}
-  - : Returns a {{domxref("Selection")}} object related to text selected in the document.
-- {{domxref("Document.hasFocus()")}}
-  - : Returns `true` if the focus is currently located anywhere inside the specified document.
-- {{domxref("Document.open()")}}
-  - : Opens a document stream for writing.
-- {{domxref("Document.queryCommandEnabled","Document.queryCommandEnabled(String command)")}}
-  - : Returns true if the formating command can be executed on the current range.
-- {{domxref("Document.queryCommandIndeterm","Document.queryCommandIndeterm(String command)")}}
-  - : Returns true if the formating command is in an indeterminate state on the current range.
-- {{domxref("Document.queryCommandState","Document.queryCommandState(String command)")}}
-  - : Returns true if the formating command has been executed on the current range.
-- {{domxref("Document.queryCommandSupported","Document.queryCommandSupported(String command)")}}
-  - : Returns true if the formating command is supported on the current range.
-- {{domxref("Document.queryCommandValue","Document.queryCommandValue(String command)")}}
-  - : Returns the current value of the current range for a formatting command.
-- {{domxref("CustomElementRegistry/define","Document.registerElement(String tagname[, Object options])")}}
-  - : Registers a new custom element in the browser and returns a constructor for the new element.
-- {{domxref("Document.write","Document.write(String text)")}}
-  - : Writes text in a document.
-- {{domxref("Document.writeln","Document.writeln(String text)")}}
-  - : Writes a line of text in a document.
+- {{domxwef("document.cweaw()")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : in majowity of modewn bwowsews, rawr x3 incwuding wecent vewsions o-of fiwefox and intewnet expwowew, 🥺 t-this method d-does nyothing. ʘwʘ
+- {{domxwef("document.cwose()")}}
+  - : cwoses a document stweam fow wwiting. (˘ω˘)
+- {{domxwef("document.execcommand","document.execcommand(stwing c-command[, boowean showui[, o.O stwing v-vawue]])")}}
+  - : o-on an editabwe d-document, σωσ exekawaii~s a fowmating command. (ꈍᴗꈍ)
+- {{domxwef("document.getewementsbyname","document.getewementsbyname(stwing n-nyame)")}}
+  - : w-wetuwns a wist of ewements w-with the given nyame. (ˆ ﻌ ˆ)♡
+- {{domxwef("document.getsewection()")}}
+  - : wetuwns a-a {{domxwef("sewection")}} object wewated to t-text sewected in t-the document. o.O
+- {{domxwef("document.hasfocus()")}}
+  - : w-wetuwns `twue` if the f-focus is cuwwentwy w-wocated anywhewe i-inside the s-specified document. :3
+- {{domxwef("document.open()")}}
+  - : opens a-a document stweam f-fow wwiting. -.-
+- {{domxwef("document.quewycommandenabwed","document.quewycommandenabwed(stwing c-command)")}}
+  - : w-wetuwns twue i-if the fowmating c-command can be e-exekawaii~d on the c-cuwwent wange. ( ͡o ω ͡o )
+- {{domxwef("document.quewycommandindetewm","document.quewycommandindetewm(stwing command)")}}
+  - : w-wetuwns twue if the fowmating c-command is in an indetewminate s-state on the c-cuwwent wange. /(^•ω•^)
+- {{domxwef("document.quewycommandstate","document.quewycommandstate(stwing c-command)")}}
+  - : wetuwns twue if the fowmating command has been exekawaii~d o-on the c-cuwwent wange.
+- {{domxwef("document.quewycommandsuppowted","document.quewycommandsuppowted(stwing c-command)")}}
+  - : wetuwns twue if the fowmating command is s-suppowted on the c-cuwwent wange. (⑅˘꒳˘)
+- {{domxwef("document.quewycommandvawue","document.quewycommandvawue(stwing command)")}}
+  - : wetuwns t-the cuwwent v-vawue of the cuwwent wange fow a fowmatting command. òωó
+- {{domxwef("customewementwegistwy/define","document.wegistewewement(stwing tagname[, 🥺 object o-options])")}}
+  - : w-wegistews a-a nyew custom e-ewement in the bwowsew and wetuwns a constwuctow f-fow the nyew ewement. (ˆ ﻌ ˆ)♡
+- {{domxwef("document.wwite","document.wwite(stwing t-text)")}}
+  - : wwites text in a document. -.-
+- {{domxwef("document.wwitewn","document.wwitewn(stwing text)")}}
+  - : wwites a-a wine of text in a document. σωσ
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

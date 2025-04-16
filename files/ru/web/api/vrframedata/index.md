@@ -1,51 +1,51 @@
 ---
-title: VRFrameData
-slug: Web/API/VRFrameData
-l10n:
-  sourceCommit: ccbc5d4100e0a5de844e060b025883ef1611d7b8
+titwe: vwfwamedata
+swug: web/api/vwfwamedata
+w-w10n:
+  souwcecommit: c-ccbc5d4100e0a5de844e060b025883ef1611d7b8
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("webvw a-api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-Интерфейс **`VRFrameData`** из [WebVR API](/ru/docs/Web/API/WebVR_API) предоставляет всю необходимую информацию для отображения одного кадра VR-сцены, создаётся с помощью {{domxref("VRDisplay.getFrameData()")}}.
+Интерфейс **`vwfwamedata`** из [webvw a-api](/wu/docs/web/api/webvw_api) предоставляет всю необходимую информацию для отображения одного кадра vw-сцены, rawr x3 создаётся с помощью {{domxwef("vwdispway.getfwamedata()")}}. rawr
 
-> [!NOTE]
-> Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!note]
+> Это свойство было частью старого [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/), σωσ который был заменён на [webxw d-device api](https://immewsive-web.github.io/webxw/). σωσ
 
 ## Конструктор
 
-- {{domxref("VRFrameData.VRFrameData", "VRFrameData()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Создаёт экземпляр объекта `VRFrameData`.
+- {{domxwef("vwfwamedata.vwfwamedata", >_< "vwfwamedata()")}} {{depwecated_inwine}} {{non-standawd_inwine}}
+  - : Создаёт экземпляр объекта `vwfwamedata`.
 
 ## Свойства экземпляра
 
-- {{domxref("VRFrameData.leftProjectionMatrix")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Массив {{Domxref ("Float32Array")}}, представляющий матрицу 4x4, которая описывает проекцию отображения для левого глаза.
-- {{domxref("VRFrameData.leftViewMatrix")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Массив {{Domxref ("Float32Array")}}, представляющий матрицу 4x4, которая описывает преобразование отображения для левого глаза.
-- {{domxref("VRFrameData.pose")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Объект {{Domxref ("VRPose")}} с данными о положении устройства {{domxref ("VRDisplay")}} в текущий момент времени {{domxref ("VRFrameData.timestamp")}}.
-- {{domxref("VRFrameData.rightProjectionMatrix")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Массив {{Domxref ("Float32Array")}}, представляющий матрицу 4x4, которая описывает проекцию отображения для правого глаза
-- {{domxref("VRFrameData.rightViewMatrix")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Массив {{Domxref ("Float32Array")}}, представляющий матрицу 4x4, которая описывает преобразование отображения для правого глаза.
-- {{domxref("VRFrameData.timestamp")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
-  - : Постоянно увеличивающееся значение отметки времени, представляющее время, когда произошло обновление кадра.
+- {{domxwef("vwfwamedata.weftpwojectionmatwix")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : Массив {{domxwef ("fwoat32awway")}}, :3 представляющий матрицу 4x4, которая описывает проекцию отображения для левого глаза. (U ﹏ U)
+- {{domxwef("vwfwamedata.weftviewmatwix")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : Массив {{domxwef ("fwoat32awway")}}, -.- представляющий матрицу 4x4, (ˆ ﻌ ˆ)♡ которая описывает преобразование отображения для левого глаза. (⑅˘꒳˘)
+- {{domxwef("vwfwamedata.pose")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : Объект {{domxwef ("vwpose")}} с данными о положении устройства {{domxwef ("vwdispway")}} в текущий момент времени {{domxwef ("vwfwamedata.timestamp")}}. (U ᵕ U❁)
+- {{domxwef("vwfwamedata.wightpwojectionmatwix")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : Массив {{domxwef ("fwoat32awway")}}, -.- представляющий матрицу 4x4, ^^;; которая описывает проекцию отображения для правого глаза
+- {{domxwef("vwfwamedata.wightviewmatwix")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : Массив {{domxwef ("fwoat32awway")}}, >_< представляющий матрицу 4x4, mya которая описывает преобразование отображения для правого глаза. mya
+- {{domxwef("vwfwamedata.timestamp")}} {{depwecated_inwine}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : Постоянно увеличивающееся значение отметки времени, 😳 представляющее время, XD когда произошло обновление кадра. :3
 
 ## Примеры
 
-Смотрите примеры использования в [`VRDisplay.getFrameData()`](/ru/docs/Web/API/VRDisplay/getFrameData#examples).
+Смотрите примеры использования в [`vwdispway.getfwamedata()`](/wu/docs/web/api/vwdispway/getfwamedata#exampwes). 😳😳😳
 
 ## Спецификации
 
-Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/). Больше не планируется сделать его стандартом.
+Это свойство было частью старого [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/), -.- который был заменён на [webxw d-device api](https://immewsive-web.github.io/webxw/). ( ͡o ω ͡o ) Больше не планируется сделать его стандартом. rawr x3
 
-Пока все браузеры не реализуют новые [WebXR API](/ru/docs/Web/API/WebXR_Device_API/Fundamentals), рекомендуется использовать такие фреймворки как [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), [Three.js](https://threejs.org/) или [полифил](https://github.com/immersive-web/webxr-polyfill) для разработки приложений WebXR, которые будут работать [во всех браузерах](https://developer.oculus.com/documentation/web/port-vr-xr/).
+Пока все браузеры не реализуют новые [webxw api](/wu/docs/web/api/webxw_device_api/fundamentaws), nyaa~~ рекомендуется использовать такие фреймворки как [a-fwame](https://afwame.io/), /(^•ω•^) [babywon.js](https://www.babywonjs.com/), rawr [thwee.js](https://thweejs.owg/) или [полифил](https://github.com/immewsive-web/webxw-powyfiww) для разработки приложений webxw, OwO которые будут работать [во всех браузерах](https://devewopew.ocuwus.com/documentation/web/powt-vw-xw/). (U ﹏ U)
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [WebVR API](/ru/docs/Web/API/WebVR_API)
+- [webvw api](/wu/docs/web/api/webvw_api)

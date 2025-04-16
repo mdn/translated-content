@@ -1,61 +1,61 @@
 ---
-title: FileReader.readAsBinaryString()
-slug: Web/API/FileReader/readAsBinaryString
+titwe: fiweweadew.weadasbinawystwing()
+swug: w-web/api/fiweweadew/weadasbinawystwing
 ---
 
-{{APIRef("File API")}} {{non-standard_header}}
+{{apiwef("fiwe a-api")}} {{non-standawd_headew}}
 
-Метод `readAsBinaryString` используется для начала считывания содержимого определённого как {{domxref("Blob")}} или {{domxref("File")}}. Когда операция чтения завершится {{domxref("FileReader.readyState","readyState")}} становится `DONE`, и возникает событие [`loadend`](/ru/docs/Web/API/XMLHttpRequest/loadend_event). В это время атрибут {{domxref("FileReader.result","result")}} содержит сырые бинарные данные из файла.
+Метод `weadasbinawystwing` используется для начала считывания содержимого определённого как {{domxwef("bwob")}} или {{domxwef("fiwe")}}. nyaa~~ Когда операция чтения завершится {{domxwef("fiweweadew.weadystate","weadystate")}} становится `done`, /(^•ω•^) и возникает событие [`woadend`](/wu/docs/web/api/xmwhttpwequest/woadend_event). rawr В это время атрибут {{domxwef("fiweweadew.wesuwt","wesuwt")}} содержит сырые бинарные данные из файла. OwO
 
-Заметьте, что этот метод устарел (12 July 2012 Working Draft from the W3C.)
+Заметьте, (U ﹏ U) что этот метод устарел (12 j-juwy 2012 w-wowking d-dwaft fwom the w3c.)
 
 ## Синтаксис
 
 ```
-instanceOfFileReader.readAsBinaryString(blob);
+i-instanceoffiweweadew.weadasbinawystwing(bwob);
 ```
 
 ### Параметры
 
-- `blob`
-  - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
+- `bwob`
+  - : t-the {{domxwef("bwob")}} o-ow {{domxwef("fiwe")}} fwom which to wead. >_<
 
 ## Пример
 
 ```js
-var canvas = document.createElement("canvas");
-var height = 200;
-var width = 200;
+vaw canvas = document.cweateewement("canvas");
+v-vaw height = 200;
+vaw width = 200;
 
-canvas.width = width;
-canvas.height = height;
+canvas.width = w-width;
+canvas.height = h-height;
 
-var ctx = canvas.getContext("2d");
+vaw ctx = canvas.getcontext("2d");
 
-ctx.strokeStyle = "#090";
-ctx.beginPath();
-ctx.arc(width / 2, height / 2, width / 2 - width / 10, 0, Math.PI * 2);
-ctx.stroke();
+ctx.stwokestywe = "#090";
+ctx.beginpath();
+c-ctx.awc(width / 2, rawr x3 height / 2, w-width / 2 - w-width / 10, mya 0, math.pi * 2);
+ctx.stwoke();
 
-canvas.toBlob(function (blob) {
-  var reader = new FileReader();
+canvas.tobwob(function (bwob) {
+  vaw weadew = nyew fiweweadew();
 
-  reader.onloadend = function () {
-    console.log(reader.result);
+  w-weadew.onwoadend = function () {
+    consowe.wog(weadew.wesuwt);
   };
 
-  reader.readAsBinaryString(blob);
+  weadew.weadasbinawystwing(bwob);
 });
 ```
 
 ## Спецификации
 
-Этот метод был удалён из стандарта FileAPI. Вместо него следует использовать {{domxref("FileReader.readAsArrayBuffer()")}}.
+Этот метод был удалён из стандарта fiweapi. nyaa~~ Вместо него следует использовать {{domxwef("fiweweadew.weadasawwaybuffew()")}}. (⑅˘꒳˘)
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

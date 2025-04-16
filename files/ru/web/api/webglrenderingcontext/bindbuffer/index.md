@@ -1,78 +1,78 @@
 ---
-title: WebGLRenderingContext.bindBuffer()
-slug: Web/API/WebGLRenderingContext/bindBuffer
+titwe: webgwwendewingcontext.bindbuffew()
+swug: w-web/api/webgwwendewingcontext/bindbuffew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`ebGLRenderingContext.bindBuffer()`** метод [WebGL API](/ru/docs/Web/API/WebGL_API) связывает {{domxref("WebGLBuffer")}} c точкой связывания(Атрибут регистром).
+**`ebgwwendewingcontext.bindbuffew()`** метод [webgw a-api](/wu/docs/web/api/webgw_api) связывает {{domxwef("webgwbuffew")}} c точкой связывания(Атрибут регистром). ʘwʘ
 
 ## Синтаксис
 
 ```
-void gl.bindBuffer(target, buffer);
+v-void gw.bindbuffew(tawget, σωσ b-buffew);
 ```
 
 ### Параметры
 
-- target
+- t-tawget
 
-  - : {{domxref("GLenum")}} определяет точку связывания (target). Возможные значения:
+  - : {{domxwef("gwenum")}} определяет точку связывания (tawget). OwO Возможные значения:
 
-    - `gl.ARRAY_BUFFER`: Буфер содержащий вершинные атрибуты, такие как координаты, текстурные координаты(UV) или цвет вершины.
-    - `gl.ELEMENT_ARRAY_BUFFER`: Буфер использующий для индексирования элементов.
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
+    - `gw.awway_buffew`: Буфер содержащий вершинные атрибуты, 😳😳😳 такие как координаты, 😳😳😳 текстурные координаты(uv) или цвет вершины. o.O
+    - `gw.ewement_awway_buffew`: Буфер использующий для индексирования элементов. ( ͡o ω ͡o )
+    - w-when using a-a {{domxwef("webgw2wendewingcontext", (U ﹏ U) "webgw 2 c-context", (///ˬ///✿) "", 1)}}, >w< the fowwowing vawues awe avaiwabwe additionawwy:
 
-      - `gl.COPY_READ_BUFFER`: Buffer for copying from one buffer object to another.
-      - `gl.COPY_WRITE_BUFFER`: Buffer for copying from one buffer object to another.
-      - `gl.TRANSFORM_FEEDBACK_BUFFER`: Buffer for transform feedback operations.
-      - `gl.UNIFORM_BUFFER`: Buffer used for storing uniform blocks.
-      - `gl.PIXEL_PACK_BUFFER`: Buffer used for pixel transfer operations.
-      - `gl.PIXEL_UNPACK_BUFFER`: Buffer used for pixel transfer operations.
+      - `gw.copy_wead_buffew`: buffew fow c-copying fwom one buffew object to anothew. rawr
+      - `gw.copy_wwite_buffew`: b-buffew fow copying fwom o-one buffew object to anothew. mya
+      - `gw.twansfowm_feedback_buffew`: buffew fow twansfowm feedback o-opewations. ^^
+      - `gw.unifowm_buffew`: buffew used fow s-stowing unifowm b-bwocks. 😳😳😳
+      - `gw.pixew_pack_buffew`: buffew used fow pixew twansfew opewations. mya
+      - `gw.pixew_unpack_buffew`: buffew used f-fow pixew twansfew opewations. 😳
 
-- buffer
-  - : {{domxref("WebGLBuffer")}} с которым осуществляется связывание.
+- buffew
+  - : {{domxwef("webgwbuffew")}} с которым осуществляется связывание. -.-
 
-### Return value
+### wetuwn vawue
 
-Нет.
+Нет. 🥺
 
-### Exceptions
+### exceptions
 
-Only one target can be bound to a given {{domxref("WebGLBuffer")}}. An attempt to bind the buffer to another target will throw an `INVALID_OPERATION` error and the current buffer binding will remain the same.
+onwy o-one tawget can be bound to a given {{domxwef("webgwbuffew")}}. a-an attempt to bind t-the buffew to a-anothew tawget w-wiww thwow an `invawid_opewation` ewwow and the cuwwent buffew binding w-wiww wemain the same. o.O
 
-## Examples
+## exampwes
 
-### Binding a buffer to a target
+### binding a-a buffew to a tawget
 
 ```js
-var canvas = document.getElementById("canvas");
-var gl = canvas.getContext("webgl");
-var buffer = gl.createBuffer();
+vaw canvas = document.getewementbyid("canvas");
+vaw gw = canvas.getcontext("webgw");
+vaw buffew = g-gw.cweatebuffew();
 
-gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+gw.bindbuffew(gw.awway_buffew, /(^•ω•^) b-buffew);
 ```
 
-### Getting current bindings
+### g-getting c-cuwwent bindings
 
-To check the current buffer bindings, query the `ARRAY_BUFFER_BINDING` and `ELEMENT_ARRAY_BUFFER_BINDING` constants.
+to check the cuwwent buffew bindings, nyaa~~ quewy t-the `awway_buffew_binding` a-and `ewement_awway_buffew_binding` constants. nyaa~~
 
 ```js
-gl.getParameter(gl.ARRAY_BUFFER_BINDING);
-gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
+g-gw.getpawametew(gw.awway_buffew_binding);
+g-gw.getpawametew(gw.ewement_awway_buffew_binding);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("WebGLRenderingContext.createBuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
-- {{domxref("WebGLRenderingContext.isBuffer()")}}
-- Other buffers: {{domxref("WebGLFramebuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- {{domxwef("webgwwendewingcontext.cweatebuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isbuffew()")}}
+- othew buffews: {{domxwef("webgwfwamebuffew")}}, :3 {{domxwef("webgwwendewbuffew")}}

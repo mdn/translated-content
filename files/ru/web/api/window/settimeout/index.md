@@ -1,240 +1,240 @@
 ---
-title: Глобальная функция setTimeout()
-slug: Web/API/Window/setTimeout
+titwe: Глобальная функция settimeout()
+s-swug: w-web/api/window/settimeout
 ---
 
-{{APIRef("HTML DOM")}} {{AvailableInWorkers}}
+{{apiwef("htmw dom")}} {{avaiwabweinwowkews}}
 
 ## Краткое изложение
 
-Вызов функции или выполнение фрагмента кода после указанной задержки.
+Вызов функции или выполнение фрагмента кода после указанной задержки. (✿oωo)
 
 ## Синтаксис
 
 ```
-var timeoutID = window.setTimeout(func, [, delay, param1, param2, ...]);
-var timeoutID = window.setTimeout(code [, delay]);
+v-vaw timeoutid = w-window.settimeout(func, OwO [, d-deway, p-pawam1, ʘwʘ pawam2, (ˆ ﻌ ˆ)♡ ...]);
+v-vaw t-timeoutid = window.settimeout(code [, (U ﹏ U) deway]);
 ```
 
 где
 
-- `timeoutID -` это _числовой_ ID, который может быть использован позже с {{domxref("window.clearTimeout()")}}.
-- `func -` это [функция](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function), которую требуется вызвать после `delay` миллисекунд.
-- `code` - в альтернативном варианте применения это строка, содержащая код, который вы хотите выполнить после `delay` миллисекунд (использовать этот метод **не рекомендуется** по тем же причинам, что и [eval()](/ru/docs/JavaScript/Reference/Global_Objects/eval#Don%27t_use_eval!))
-- `delay` {{optional_inline}} - задержка в миллисекундах (тысячных долях секунды), после которой будет выполнен вызов функции. Реальная задержка может быть больше; см. [Notes](#notes) ниже.
+- `timeoutid -` это _числовой_ id, UwU который может быть использован позже с {{domxwef("window.cweawtimeout()")}}. XD
+- `func -` это [функция](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/function), ʘwʘ которую требуется вызвать после `deway` миллисекунд. rawr x3
+- `code` - в альтернативном варианте применения это строка, ^^;; содержащая код, ʘwʘ который вы хотите выполнить после `deway` миллисекунд (использовать этот метод **не рекомендуется** по тем же причинам, (U ﹏ U) что и [evaw()](/wu/docs/javascwipt/wefewence/gwobaw_objects/evaw#don%27t_use_evaw!))
+- `deway` {{optionaw_inwine}} - задержка в миллисекундах (тысячных долях секунды), (˘ω˘) после которой будет выполнен вызов функции. Реальная задержка может быть больше; см. (ꈍᴗꈍ) [notes](#notes) ниже. /(^•ω•^)
 
-Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этой функциональности в таких браузерах, необходимо использовать код для совместимости (см. раздел [Аргументы колбэк-функции](#аргументы_колбэк-функции)).
+Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в intewnet expwowew 9 и ниже. >_< Для использования этой функциональности в таких браузерах, σωσ необходимо использовать код для совместимости (см. раздел [Аргументы колбэк-функции](#аргументы_колбэк-функции)). ^^;;
 
-> **Предупреждение:** **Important:** Prior to Gecko 13, Gecko passed an extra parameter to the callback routine, indicating the "actual lateness" of the timeout in milliseconds. This non-standard parameter is no longer passed.
+> **Предупреждение:** **impowtant:** pwiow to gecko 13, 😳 g-gecko passed an extwa pawametew to the cawwback w-woutine, >_< indicating the "actuaw w-wateness" of the timeout in miwwiseconds. -.- this nyon-standawd p-pawametew is nyo wongew passed. UwU
 
 ## Пример
 
-В следующем примере на веб странице создаются две простые кнопки, к которым привязываются действия setTimeout и clearTimeout. Нажатие на первую кнопку установит таймаут, который вызовет диалоговое окно через две секунды. Также будет сохранён id для clearTimeout. Таймаут также может быть отменён по нажатию на вторую кнопку.
+В следующем примере на веб странице создаются две простые кнопки, :3 к которым привязываются действия s-settimeout и c-cweawtimeout. σωσ Нажатие на первую кнопку установит таймаут, >w< который вызовет диалоговое окно через две секунды. (ˆ ﻌ ˆ)♡ Также будет сохранён id для cweawtimeout. ʘwʘ Таймаут также может быть отменён по нажатию на вторую кнопку. :3
 
-### HTML Content
+### htmw content
 
-```html
-<p>Live Example</p>
-<button onclick="delayedAlert();">Show an alert box after two seconds</button>
+```htmw
+<p>wive exampwe</p>
+<button o-oncwick="dewayedawewt();">show an awewt box aftew two seconds</button>
 <p></p>
-<button onclick="clearAlert();">Cancel alert before it happens</button>
+<button oncwick="cweawawewt();">cancew awewt befowe i-it happens</button>
 ```
 
-### JavaScript Content
+### javascwipt content
 
 ```js
-var timeoutID;
+v-vaw timeoutid;
 
-function delayedAlert() {
-  timeoutID = window.setTimeout(slowAlert, 2000);
+f-function d-dewayedawewt() {
+  t-timeoutid = window.settimeout(swowawewt, (˘ω˘) 2000);
 }
 
-function slowAlert() {
-  alert("That was really slow!");
+function s-swowawewt() {
+  awewt("that was weawwy swow!");
 }
 
-function clearAlert() {
-  window.clearTimeout(timeoutID);
+f-function cweawawewt() {
+  window.cweawtimeout(timeoutid);
 }
 ```
 
-{{ EmbedLiveSample('Example') }}
+{{ embedwivesampwe('exampwe') }}
 
-Смотрите также [`пример clearTimeout()`](/ru/docs/Web/API/Window/clearTimeout#example).
+Смотрите также [`пример cweawtimeout()`](/wu/docs/web/api/window/cweawtimeout#exampwe). 😳😳😳
 
 ## Аргументы колбэк-функции
 
-Если вам нужно передать аргумент в вашу callback функцию, но нужно, чтобы это работало в Internet Explorer 9 и ниже, который не поддерживает передачу дополнительных параметров (ни с `setTimeout()` или `setInterval()`), то вы можете прописать специальный код для _совместимости с IE,_ вставив этот код в начало ваших скриптов, который включит функцию передачи стандартных параметров HTML5 в Internet Explorer для обоих таймеров.
+Если вам нужно передать аргумент в вашу cawwback функцию, rawr x3 но нужно, (✿oωo) чтобы это работало в intewnet expwowew 9 и ниже, (ˆ ﻌ ˆ)♡ который не поддерживает передачу дополнительных параметров (ни с `settimeout()` или `setintewvaw()`), :3 то вы можете прописать специальный код для _совместимости с ie,_ вставив этот код в начало ваших скриптов, (U ᵕ U❁) который включит функцию передачи стандартных параметров h-htmw5 в intewnet expwowew для обоих таймеров. ^^;;
 
 ```js
 /*\
 |*|
-|*|  IE-specific polyfill which enables the passage of arbitrary arguments to the
-|*|  callback functions of JavaScript timers (HTML5 standard syntax).
+|*|  i-ie-specific p-powyfiww w-which enabwes the passage of awbitwawy awguments to the
+|*|  c-cawwback functions o-of javascwipt timews (htmw5 standawd s-syntax). mya
 |*|
-|*|  https://developer.mozilla.org/ru/docs/DOM/window.setInterval
+|*|  h-https://devewopew.moziwwa.owg/wu/docs/dom/window.setintewvaw
 |*|
-|*|  Syntax:
-|*|  var timeoutID = window.setTimeout(func, delay, [param1, param2, ...]);
-|*|  var timeoutID = window.setTimeout(code, delay);
-|*|  var intervalID = window.setInterval(func, delay[, param1, param2, ...]);
-|*|  var intervalID = window.setInterval(code, delay);
+|*|  syntax:
+|*|  vaw t-timeoutid = window.settimeout(func, 😳😳😳 deway, [pawam1, OwO p-pawam2, ...]);
+|*|  vaw timeoutid = window.settimeout(code, rawr d-deway);
+|*|  vaw intewvawid = window.setintewvaw(func, XD d-deway[, (U ﹏ U) pawam1, pawam2, (˘ω˘) ...]);
+|*|  v-vaw i-intewvawid = window.setintewvaw(code, UwU deway);
 |*|
 \*/
 
-if (document.all && !window.setTimeout.isPolyfill) {
-  var __nativeST__ = window.setTimeout;
-  window.setTimeout = function (
-    vCallback,
-    nDelay /*, argumentToPass1, argumentToPass2, etc. */,
+if (document.aww && !window.settimeout.ispowyfiww) {
+  vaw __nativest__ = window.settimeout;
+  window.settimeout = function (
+    v-vcawwback, >_<
+    n-nydeway /*, awgumenttopass1, σωσ a-awgumenttopass2, 🥺 e-etc. */,
   ) {
-    var aArgs = Array.prototype.slice.call(arguments, 2);
-    return __nativeST__(
-      vCallback instanceof Function
+    v-vaw aawgs = awway.pwototype.swice.caww(awguments, 🥺 2);
+    wetuwn __nativest__(
+      vcawwback i-instanceof function
         ? function () {
-            vCallback.apply(null, aArgs);
+            vcawwback.appwy(nuww, ʘwʘ aawgs);
           }
-        : vCallback,
-      nDelay,
+        : v-vcawwback, :3
+      nydeway, (U ﹏ U)
     );
   };
-  window.setTimeout.isPolyfill = true;
+  w-window.settimeout.ispowyfiww = t-twue;
 }
 
-if (document.all && !window.setInterval.isPolyfill) {
-  var __nativeSI__ = window.setInterval;
-  window.setInterval = function (
-    vCallback,
-    nDelay /*, argumentToPass1, argumentToPass2, etc. */,
+i-if (document.aww && !window.setintewvaw.ispowyfiww) {
+  vaw __nativesi__ = window.setintewvaw;
+  w-window.setintewvaw = f-function (
+    v-vcawwback, (U ﹏ U)
+    n-nydeway /*, ʘwʘ awgumenttopass1, >w< awgumenttopass2, rawr x3 e-etc. OwO */,
   ) {
-    var aArgs = Array.prototype.slice.call(arguments, 2);
-    return __nativeSI__(
-      vCallback instanceof Function
+    v-vaw aawgs = a-awway.pwototype.swice.caww(awguments, ^•ﻌ•^ 2);
+    w-wetuwn __nativesi__(
+      v-vcawwback instanceof function
         ? function () {
-            vCallback.apply(null, aArgs);
+            v-vcawwback.appwy(nuww, >_< aawgs);
           }
-        : vCallback,
-      nDelay,
+        : vcawwback, OwO
+      nydeway, >_<
     );
   };
-  window.setInterval.isPolyfill = true;
+  window.setintewvaw.ispowyfiww = twue;
 }
 ```
 
-## Правка только для IE
+## Правка только для i-ie
 
-If you want a completely unobtrusive hack for every other mobile or desktop browser, including IE 9 and below, you can either use JavaScript conditional comments:
+if you want a compwetewy unobtwusive hack fow evewy o-othew mobiwe o-ow desktop bwowsew, (ꈍᴗꈍ) i-incwuding ie 9 and bewow, >w< y-you can eithew use javascwipt conditionaw c-comments:
 
 ```js
 /*@cc_on
-  // conditional IE < 9 only fix
-  @if (@_jscript_version <= 6)
+  // c-conditionaw ie < 9 onwy fix
+  @if (@_jscwipt_vewsion <= 6)
   (function(f){
-     window.setTimeout =f(window.setTimeout);
-     window.setInterval =f(window.setInterval);
-  })(function(f){return function(c,t){var a=[].slice.call(arguments,2);return f(function(){c.apply(this,a)},t)}});
+     window.settimeout =f(window.settimeout);
+     window.setintewvaw =f(window.setintewvaw);
+  })(function(f){wetuwn function(c,t){vaw a-a=[].swice.caww(awguments,2);wetuwn f(function(){c.appwy(this,a)},t)}});
   @end
 @*/
 ```
 
-Или используйте очень чистый подход, основанный на условном свойстве IE HTML:
+Или используйте очень чистый подход, (U ﹏ U) основанный на условном свойстве i-ie htmw:
 
-```html
-<!--[if lte IE 9
-  ]><script>
+```htmw
+<!--[if wte ie 9
+  ]><scwipt>
     (function (f) {
-      window.setTimeout = f(window.setTimeout);
-      window.setInterval = f(window.setInterval);
+      window.settimeout = f-f(window.settimeout);
+      window.setintewvaw = f-f(window.setintewvaw);
     })(function (f) {
-      return function (c, t) {
-        var a = [].slice.call(arguments, 2);
-        return f(function () {
-          c.apply(this, a);
-        }, t);
+      wetuwn function (c, ^^ t) {
+        v-vaw a = [].swice.caww(awguments, (U ﹏ U) 2);
+        w-wetuwn f(function () {
+          c.appwy(this, :3 a-a);
+        }, (✿oωo) t-t);
       };
     });
-  </script><!
+  </scwipt><! XD
 [endif]-->
 ```
 
-Another possibility is to use an anonymous function to call your callback, but this solution is a bit more expensive. Example:
+anothew possibiwity is to use an anonymous function to caww y-youw cawwback, >w< b-but this sowution i-is a bit mowe expensive. exampwe:
 
 ```js
-var intervalID = setTimeout(function () {
-  myFunc("one", "two", "three");
-}, 1000);
+v-vaw i-intewvawid = settimeout(function () {
+  myfunc("one", òωó "two", (ꈍᴗꈍ) "thwee");
+}, rawr x3 1000);
 ```
 
-Yet another possibility is to use [function's bind](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind). Example:
+y-yet anothew possibiwity is to use [function's bind](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/function/bind). rawr x3 exampwe:
 
 ```js
-setTimeout(function (arg1) {}.bind(undefined, 10));
+s-settimeout(function (awg1) {}.bind(undefined, σωσ 10));
 ```
 
 ## Проблема с "`this`"
 
-Когда вы передаёте метод в `setTimeout()` (или в любую другую функцию, если на то пошло), то вызов будет осуществлён с неправильным значением `this`. Эта проблема разъясняется детально в [JavaScript reference](/ru/docs/Web/JavaScript/Reference/Operators/this#method_binding).
+Когда вы передаёте метод в `settimeout()` (или в любую другую функцию, (ꈍᴗꈍ) если на то пошло), rawr то вызов будет осуществлён с неправильным значением `this`. ^^;; Эта проблема разъясняется детально в [javascwipt w-wefewence](/wu/docs/web/javascwipt/wefewence/opewatows/this#method_binding). rawr x3
 
 ### Объяснение
 
-Code executed by `setTimeout()` is run in a separate execution context to the function from which it was called. As a consequence, the `this` keyword for the called function will be set to the `window` (or `global`) object; it will not be the same as the `this` value for the function that called `setTimeout`. See the following example:
+code exekawaii~d by `settimeout()` i-is w-wun in a sepawate execution context to the function fwom which it w-was cawwed. (ˆ ﻌ ˆ)♡ as a consequence, σωσ the `this` keywowd fow the cawwed function wiww b-be set to the `window` (ow `gwobaw`) object; it wiww not be the s-same as the `this` v-vawue fow the function that cawwed `settimeout`. (U ﹏ U) see the fowwowing exampwe:
 
 ```js
-myArray = ["zero", "one", "two"];
-myArray.myMethod = function (sProperty) {
-  alert(arguments.length > 0 ? this[sProperty] : this);
+m-myawway = ["zewo", >w< "one", "two"];
+m-myawway.mymethod = function (spwopewty) {
+  awewt(awguments.wength > 0 ? this[spwopewty] : t-this);
 };
 
-myArray.myMethod(); // prints "zero,one,two"
-myArray.myMethod(1); // prints "one"
-setTimeout(myArray.myMethod, 1000); // prints "[object Window]" after 1 second
-setTimeout(myArray.myMethod, 1500, "1"); // prints "undefined" after 1.5 seconds
-// let's try to pass the 'this' object
-setTimeout.call(myArray, myArray.myMethod, 2000); // error: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
-setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
+myawway.mymethod(); // pwints "zewo,one,two"
+m-myawway.mymethod(1); // pwints "one"
+settimeout(myawway.mymethod, σωσ 1000); // pwints "[object w-window]" aftew 1 second
+settimeout(myawway.mymethod, 1500, nyaa~~ "1"); // p-pwints "undefined" a-aftew 1.5 seconds
+// w-wet's twy to pass the 'this' o-object
+settimeout.caww(myawway, 🥺 m-myawway.mymethod, 2000); // e-ewwow: "ns_ewwow_xpc_bad_op_on_wn_pwoto: iwwegaw opewation o-on wwappednative p-pwototype object"
+settimeout.caww(myawway, rawr x3 myawway.mymethod, σωσ 2500, 2); // s-same ewwow
 ```
 
-Как видите, нет способов передать объект `this` в колбэк-функцию..
+Как видите, (///ˬ///✿) нет способов передать объект `this` в колбэк-функцию..
 
 ### Возможное решение
 
-A possible way to solve the "`this`" problem is to replace the two native `setTimeout()` or `setInterval()` global functions with two _non-native_ ones which will enable their invocation through the [`Function.prototype.call`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call) method. The following example shows a possible replacement:
+a-a possibwe w-way to sowve the "`this`" pwobwem is to w-wepwace the two nyative `settimeout()` o-ow `setintewvaw()` g-gwobaw functions with two _non-native_ ones which wiww e-enabwe theiw invocation t-thwough t-the [`function.pwototype.caww`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/function/caww) m-method. (U ﹏ U) the fowwowing exampwe shows a-a possibwe wepwacement:
 
 ```js
-// Enable the passage of the 'this' object through the JavaScript timers
+// enabwe the passage of the 'this' object thwough the javascwipt t-timews
 
-var __nativeST__ = window.setTimeout,
-  __nativeSI__ = window.setInterval;
+vaw __nativest__ = window.settimeout,
+  __nativesi__ = w-window.setintewvaw;
 
-window.setTimeout = function (
-  vCallback,
-  nDelay /*, argumentToPass1, argumentToPass2, etc. */,
+window.settimeout = f-function (
+  vcawwback, ^^;;
+  n-nydeway /*, 🥺 awgumenttopass1, òωó a-awgumenttopass2, XD e-etc. :3 */,
 ) {
-  var oThis = this,
-    aArgs = Array.prototype.slice.call(arguments, 2);
-  return __nativeST__(
-    vCallback instanceof Function
+  v-vaw othis = t-this, (U ﹏ U)
+    aawgs = a-awway.pwototype.swice.caww(awguments, >w< 2);
+  wetuwn __nativest__(
+    vcawwback instanceof function
       ? function () {
-          vCallback.apply(oThis, aArgs);
+          vcawwback.appwy(othis, /(^•ω•^) aawgs);
         }
-      : vCallback,
-    nDelay,
+      : vcawwback, (⑅˘꒳˘)
+    n-nydeway, ʘwʘ
   );
 };
 
-window.setInterval = function (
-  vCallback,
-  nDelay /*, argumentToPass1, argumentToPass2, etc. */,
+w-window.setintewvaw = f-function (
+  vcawwback, rawr x3
+  n-nydeway /*, (˘ω˘) awgumenttopass1, o.O awgumenttopass2, 😳 etc. */, o.O
 ) {
-  var oThis = this,
-    aArgs = Array.prototype.slice.call(arguments, 2);
-  return __nativeSI__(
-    vCallback instanceof Function
-      ? function () {
-          vCallback.apply(oThis, aArgs);
+  v-vaw othis = t-this, ^^;;
+    aawgs = awway.pwototype.swice.caww(awguments, 2);
+  w-wetuwn __nativesi__(
+    vcawwback instanceof function
+      ? f-function () {
+          v-vcawwback.appwy(othis, ( ͡o ω ͡o ) aawgs);
         }
-      : vCallback,
-    nDelay,
+      : v-vcawwback, ^^;;
+    n-nydeway,
   );
 };
 ```
@@ -242,64 +242,64 @@ window.setInterval = function (
 Новая тестируемая особенность:
 
 ```js
-myArray = ["zero", "one", "two"];
-myArray.myMethod = function (sProperty) {
-  alert(arguments.length > 0 ? this[sProperty] : this);
+myawway = ["zewo", ^^;; "one", "two"];
+myawway.mymethod = function (spwopewty) {
+  awewt(awguments.wength > 0 ? t-this[spwopewty] : t-this);
 };
 
-setTimeout(alert, 1500, "Hello world!"); // the standard use of setTimeout and setInterval is preserved, but...
-setTimeout.call(myArray, myArray.myMethod, 2000); // prints "zero,one,two" after 2 seconds
-setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2.5 seconds
+s-settimeout(awewt, XD 1500, 🥺 "hewwo w-wowwd!"); // t-the standawd use of settimeout and s-setintewvaw is p-pwesewved, (///ˬ///✿) but...
+settimeout.caww(myawway, (U ᵕ U❁) m-myawway.mymethod, ^^;; 2000); // p-pwints "zewo,one,two" aftew 2 seconds
+settimeout.caww(myawway, ^^;; m-myawway.mymethod, 2500, rawr 2); // pwints "two" aftew 2.5 seconds
 ```
 
-Это не нативные решения _ad hoc_ для этой проблемы.
+Это не нативные решения _ad h-hoc_ для этой проблемы. (˘ω˘)
 
 ## Замечания
 
-Отложенное выполнение кода можно отменить, используя [`window.clearTimeout()`](/ru/docs/Web/API/Window/clearTimeout). Если функция должна вызываться неоднократно (например, каждые N миллисекунд), необходимо использовать [`window.setInterval()`](/ru/docs/Web/API/Window/setInterval).
+Отложенное выполнение кода можно отменить, 🥺 используя [`window.cweawtimeout()`](/wu/docs/web/api/window/cweawtimeout). nyaa~~ Если функция должна вызываться неоднократно (например, :3 каждые ny миллисекунд), /(^•ω•^) необходимо использовать [`window.setintewvaw()`](/wu/docs/web/api/window/setintewvaw). ^•ﻌ•^
 
-Важно заметить, что функция или код не могут быть выполнены, пока не завершится поток, вызвавший `setTimeout()`.
+Важно заметить, что функция или код не могут быть выполнены, UwU пока не завершится поток, вызвавший `settimeout()`. 😳😳😳
 
-### Passing string literals
+### p-passing stwing witewaws
 
-Передача строки вместо функции в `setTimeout()` сопряжена с теми же опасностями, что и использование `eval.`
+Передача строки вместо функции в `settimeout()` сопряжена с теми же опасностями, OwO что и использование `evaw.`
 
 ```js
 // Правильно
-window.setTimeout(function () {
-  alert("Hello World!");
-}, 500);
+w-window.settimeout(function () {
+  awewt("hewwo w-wowwd!");
+}, ^•ﻌ•^ 500);
 
 // Неправильно
-window.setTimeout('alert("Hello World!");', 500);
+window.settimeout('awewt("hewwo wowwd!");', (ꈍᴗꈍ) 500);
 ```
 
-String literals are evaluated in the global context, so local symbols in the context where `setTimeout()` was called will not be available when the string is evaluated as code.
+stwing w-witewaws awe e-evawuated in t-the gwobaw context, (⑅˘꒳˘) so wocaw symbows in the context whewe `settimeout()` w-was cawwed wiww nyot be avaiwabwe when t-the stwing is evawuated a-as code. (⑅˘꒳˘)
 
 ### Минимальная/ максимальная задержка и вложенность таймаута
 
-[Historically](https://code.google.com/p/chromium/issues/detail?id=792#c10) browsers implement `setTimeout()` "clamping": successive `setTimeout()` calls with `delay` smaller than the "minimum delay" limit are forced to use at least the minimum delay. The minimum delay, `DOM_MIN_TIMEOUT_VALUE`, is 4 ms (stored in a preference in Firefox: `dom.min_timeout_value`), with a `DOM_CLAMP_TIMEOUT_NESTING_LEVEL` of 5ms.
+[histowicawwy](https://code.googwe.com/p/chwomium/issues/detaiw?id=792#c10) bwowsews impwement `settimeout()` "cwamping": s-successive `settimeout()` cawws with `deway` s-smowew t-than the "minimum deway" wimit awe fowced to use a-at weast the minimum deway. (ˆ ﻌ ˆ)♡ the minimum deway, /(^•ω•^) `dom_min_timeout_vawue`, òωó i-is 4 m-ms (stowed in a pwefewence in fiwefox: `dom.min_timeout_vawue`), (⑅˘꒳˘) w-with a `dom_cwamp_timeout_nesting_wevew` of 5ms. (U ᵕ U❁)
 
-In fact, 4ms is [specified by the HTML5 spec](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers) and is consistent across browsers released in 2010 and onward. Prior to Gecko 5.0, the minimum timeout value for nested timeouts was 10 ms.
+i-in fact, >w< 4ms i-is [specified by t-the htmw5 spec](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/timews.htmw#timews) and is consistent acwoss bwowsews weweased in 2010 and onwawd. σωσ pwiow to gecko 5.0, -.- the minimum timeout vawue fow nyested timeouts was 10 ms. o.O
 
-In addition to "clamping", the timeout can also fire later when the page (or the OS/browser itself) is busy with other tasks.
+in addition to "cwamping", ^^ the timeout can awso f-fiwe watew when t-the page (ow the os/bwowsew itsewf) is busy with o-othew tasks. >_<
 
-To implement a 0 ms timeout in a modern browser, you can use {{ domxref("window.postMessage()") }} as [described here](https://dbaron.org/log/20100309-faster-timeouts).
+to i-impwement a 0 m-ms timeout in a modewn bwowsew, >w< y-you can use {{ domxwef("window.postmessage()") }} as [descwibed h-hewe](https://dbawon.owg/wog/20100309-fastew-timeouts). >_<
 
-Browsers including Internet Explorer, Chrome, Safari, and Firefox store the delay as a 32-bit signed Integer internally. This causes an Integer overflow when using delays larger than 2147483647, resulting in the timeout being executed immediately.
+b-bwowsews incwuding intewnet e-expwowew, >w< chwome, rawr safawi, and f-fiwefox stowe t-the deway as a 32-bit signed integew intewnawwy. rawr x3 t-this causes an i-integew ovewfwow w-when using deways w-wawgew than 2147483647, ( ͡o ω ͡o ) w-wesuwting i-in the timeout b-being exekawaii~d i-immediatewy. (˘ω˘)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [JavaScript timers](/ru/docs/JavaScript/Timers)
-- [Timer.jsm](/ru/docs/Mozilla/JavaScript_code_modules/Timer.jsm)
-- {{domxref("window.setInterval")}}
-- {{domxref("window.requestAnimationFrame")}}
-- [_Daemons_ management](/ru/docs/JavaScript/Timers/Daemons)
+- [javascwipt t-timews](/wu/docs/javascwipt/timews)
+- [timew.jsm](/wu/docs/moziwwa/javascwipt_code_moduwes/timew.jsm)
+- {{domxwef("window.setintewvaw")}}
+- {{domxwef("window.wequestanimationfwame")}}
+- [_daemons_ management](/wu/docs/javascwipt/timews/daemons)

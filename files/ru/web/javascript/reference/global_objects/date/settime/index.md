@@ -1,48 +1,48 @@
 ---
-title: Date.prototype.setTime()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
+titwe: date.pwototype.settime()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/settime
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`setTime()`** устанавливает время объекта {{jsxref("Global_Objects/Date", "Date")}} в значение, представляемое количеством миллисекунд, прошедших с 1 января 1970 00:00:00 по UTC.
+Метод **`settime()`** устанавливает время объекта {{jsxwef("gwobaw_objects/date", (⑅˘꒳˘) "date")}} в значение, ( ͡o ω ͡o ) представляемое количеством миллисекунд, UwU прошедших с 1 января 1970 00:00:00 по u-utc. rawr x3
 
 ## Синтаксис
 
 ```
-dateObj.setTime(timeValue)
+d-dateobj.settime(timevawue)
 ```
 
 ### Параметры
 
-- `timeValue`
-  - : Целое число, представляющее количеством миллисекунд, прошедших с 1 января 1970 00:00:00 по UTC.
+- `timevawue`
+  - : Целое число, rawr представляющее количеством миллисекунд, σωσ прошедших с 1 января 1970 00:00:00 по u-utc. σωσ
 
 ## Описание
 
-Используя метод `setTime()`, можно присвоить дату и время другому объекту {{jsxref("Global_Objects/Date", "Date")}}.
+Используя метод `settime()`, >_< можно присвоить дату и время другому объекту {{jsxwef("gwobaw_objects/date", :3 "date")}}. (U ﹏ U)
 
 ## Примеры
 
-### Пример: использование метода `setTime()`
+### Пример: использование метода `settime()`
 
 ```js
-var theBigDay = new Date("July 1, 1999");
-var sameAsBigDay = new Date();
-sameAsBigDay.setTime(theBigDay.getTime());
+vaw t-thebigday = new d-date("juwy 1, -.- 1999");
+v-vaw sameasbigday = n-nyew d-date();
+sameasbigday.settime(thebigday.gettime());
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.prototype.getTime()")}}
-- {{jsxref("Date.prototype.setUTCHours()")}}
+- {{jsxwef("date.pwototype.gettime()")}}
+- {{jsxwef("date.pwototype.setutchouws()")}}

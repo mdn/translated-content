@@ -1,32 +1,32 @@
 ---
-title: clear()
-slug: Web/API/console/clear_static
+titwe: cweaw()
+swug: web/api/consowe/cweaw_static
 ---
 
-{{APIRef("Console API")}}{{Non-standard_header}}
+{{apiwef("consowe a-api")}}{{non-standawd_headew}}
 
-Очищает консоль.
+Очищает консоль. rawr
 
-Содержимое консоли заменяется на информационное сообщение, которое может быть следующим: "Консоль очищена".
+Содержимое консоли заменяется на информационное сообщение, σωσ которое может быть следующим: "Консоль очищена". σωσ
 
-Примечание для Google Chrome, от функции `console.clear()` не будет никакого эффекта, если у пользователя установлена надстройка "Preserve log upon navigation" в [настройках](https://developer.chrome.com/docs/devtools/#preserve-log%20upon%20navigation).
+Примечание для g-googwe chwome, >_< от функции `consowe.cweaw()` не будет никакого эффекта, :3 если у пользователя установлена надстройка "pwesewve w-wog upon nyavigation" в [настройках](https://devewopew.chwome.com/docs/devtoows/#pwesewve-wog%20upon%20navigation). (U ﹏ U)
 
 ## Синтаксис
 
 ```
-console.clear();
+c-consowe.cweaw();
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/docs/devtools/#assertions)
+- [opewa dwagonfwy d-documentation: c-consowe](https://www.opewa.com/dwagonfwy/documentation/consowe/)
+- [msdn: u-using the f12 t-toows consowe to view ewwows and status](http://msdn.micwosoft.com/wibwawy/gg589530)
+- [chwome devewopew toows: using the consowe](https://devewopew.chwome.com/docs/devtoows/#assewtions)

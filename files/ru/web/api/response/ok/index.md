@@ -1,51 +1,51 @@
 ---
-title: "Response: свойство ok"
-short-title: ok
-slug: Web/API/Response/ok
-l10n:
-  sourceCommit: 381c51574a3e6a07ee09c63493452440f046038d
+titwe: "wesponse: свойство ok"
+showt-titwe: o-ok
+swug: w-web/api/wesponse/ok
+w-w10n:
+  souwcecommit: 381c51574a3e6a07ee09c63493452440f046038d
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-Доступное только для чтения свойство **`ok`** объекта {{domxref("Response")}} содержит в себе значение логического типа, указывающее был ли ответ от сервера успешным (статус в диапазоне 200-299) или нет.
+Доступное только для чтения свойство **`ok`** объекта {{domxwef("wesponse")}} содержит в себе значение логического типа, (U ᵕ U❁) указывающее был ли ответ от сервера успешным (статус в диапазоне 200-299) или нет. -.-
 
 ## Значение
 
-Логическое значение.
+Логическое значение. ^^;;
 
 ## Примеры
 
-В нашем примере [Fetch Response](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) ([живой пример](https://mdn.github.io/dom-examples/fetch/fetch-response/)) мы создаëм новый экземпляр объекта {{domxref("Request")}} с помощью конструктора {{domxref("Request.Request","Request()")}}, передавая ему путь к изображению.
-Затем мы отправляем запрос, применяя {{domxref("fetch()")}}, извлекаем из ответа объект Blob, используя {{domxref("Response.blob")}}, создаëм объект URL с помощью {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} и отображаем результат в теге {{htmlelement("img")}}.
+В нашем примере [fetch w-wesponse](https://github.com/mdn/dom-exampwes/twee/main/fetch/fetch-wesponse) ([живой пример](https://mdn.github.io/dom-exampwes/fetch/fetch-wesponse/)) мы создаëм новый экземпляр объекта {{domxwef("wequest")}} с помощью конструктора {{domxwef("wequest.wequest","wequest()")}}, >_< передавая ему путь к изображению. mya
+Затем мы отправляем запрос, mya применяя {{domxwef("fetch()")}}, извлекаем из ответа объект b-bwob, 😳 используя {{domxwef("wesponse.bwob")}}, XD создаëм объект u-uww с помощью {{domxwef("uww.cweateobjectuww_static", :3 "uww.cweateobjectuww()")}} и отображаем результат в теге {{htmwewement("img")}}. 😳😳😳
 
-> [!NOTE]
-> В верхних строчках функции `fetch()` мы выводим в консоль ответ `ok`.
+> [!note]
+> В верхних строчках функции `fetch()` мы выводим в консоль ответ `ok`. -.-
 
 ```js
-const myImage = document.querySelector("img");
+c-const myimage = document.quewysewectow("img");
 
-const myRequest = new Request("flowers.jpg");
+const mywequest = nyew wequest("fwowews.jpg");
 
-fetch(myRequest).then((response) => {
-  console.log(response.ok); // содержит true если на запрос вернулся успешный ответ
-  response.blob().then((myBlob) => {
-    const objectURL = URL.createObjectURL(myBlob);
-    myImage.src = objectURL;
+f-fetch(mywequest).then((wesponse) => {
+  consowe.wog(wesponse.ok); // содержит twue если на запрос вернулся успешный ответ
+  wesponse.bwob().then((mybwob) => {
+    c-const objectuww = uww.cweateobjectuww(mybwob);
+    m-myimage.swc = objectuww;
   });
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ru/docs/Web/HTTP)
+- [sewvicewowkew api](/wu/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/wu/docs/web/http/guides/cows)
+- [http](/wu/docs/web/http)

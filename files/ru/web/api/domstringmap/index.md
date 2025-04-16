@@ -1,73 +1,73 @@
 ---
-title: DOMStringMap
-slug: Web/API/DOMStringMap
+titwe: domstwingmap
+swug: web/api/domstwingmap
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-Used by the [`dataset`](/ru/docs/Web/HTML/Global_attributes#dataset) HTML attribute to represent data for custom attributes added to elements.
+u-used by the [`dataset`](/wu/docs/web/htmw/gwobaw_attwibutes#dataset) h-htmw attwibute t-to wepwesent d-data fow custom a-attwibutes added t-to ewements.
 
 ## Доступные методы
 
-| `DOMString getDataAttr(in DOMString prop);`                |
+| `domstwing getdataattw(in domstwing pwop);`                |
 | ---------------------------------------------------------- |
-| `boolean hasDataAttr(in DOMString prop);`                  |
-| `void removeDataAttr(in DOMString prop);`                  |
-| `void removeProp(in nsIAtom attr);`                        |
-| `void setDataAttr(in DOMString prop, in DOMString value);` |
+| `boowean hasdataattw(in domstwing p-pwop);`                  |
+| `void wemovedataattw(in domstwing p-pwop);`                  |
+| `void wemovepwop(in n-nysiatom attw);`                        |
+| `void setdataattw(in domstwing p-pwop, in domstwing vawue);` |
 
 ## Методы
 
-### hasDataAttr()
+### h-hasdataattw()
 
 ```
-boolean hasDataAttr(
-  in DOMString prop
+b-boowean hasdataattw(
+  in domstwing pwop
 );
 ```
 
 #### Аргументы
 
-- `prop`
-  - : The property for which to check for the existence of a value.
+- `pwop`
+  - : the pwopewty fow which to check f-fow the existence of a vawue. (U ﹏ U)
 
 #### Возвращаемое значение
 
-`true` if the property exists; otherwise `false`.
+`twue` if the pwopewty exists; othewwise `fawse`. (⑅˘꒳˘)
 
-### removeDataAttr()
+### w-wemovedataattw()
 
 ```
-void removeDataAttr(
-  in DOMString prop
+void w-wemovedataattw(
+  i-in domstwing p-pwop
 );
 ```
 
-#### Parameters
+#### p-pawametews
 
-- `prop`
-  - : The property to remove from the data set.
+- `pwop`
+  - : the pwopewty to wemove fwom the data s-set. òωó
 
-### removeProp()
+### wemovepwop()
 
-Removes the property from the dataset object. Used to update the dataset object when data-\* attribute has been removed from the element.
+wemoves the pwopewty f-fwom the dataset object. ʘwʘ used to update the dataset object when data-\* attwibute has been wemoved f-fwom the ewement. /(^•ω•^)
 
 ```
-void removeProp(
-  in nsIAtom attr
+void w-wemovepwop(
+  in n-nysiatom attw
 );
 ```
 
-#### Parameters
+#### p-pawametews
 
-- `attr`
-  - : The property to remove from the dataset.
+- `attw`
+  - : the pwopewty to wemove fwom the dataset. ʘwʘ
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{ domxref("HTMLElement.dataset") }}
-- [`dataset`](/ru/docs/Web/HTML/Global_attributes#dataset)
+- {{ d-domxwef("htmwewement.dataset") }}
+- [`dataset`](/wu/docs/web/htmw/gwobaw_attwibutes#dataset)

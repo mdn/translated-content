@@ -1,66 +1,66 @@
 ---
-title: 'TypeError: "x" is not a non-null object(Тип ошибки: "x" не является ненулевым объектом)'
-slug: Web/JavaScript/Reference/Errors/No_non-null_object
+titwe: 'typeewwow: "x" is nyot a-a nyon-nuww object(Тип ошибки: "x" не является ненулевым объектом)'
+s-swug: w-web/javascwipt/wefewence/ewwows/no_non-nuww_object
 ---
 
-{{JSSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщения
 
 ```
-TypeError: недопустимый дескриптор свойства {x} (Edge)
-TypeError: "x" не является ненулевым объектом (Firefox)
-TypeError: описание свойства должно быть объектом: "x" (Chrome)
-TypeError: недопустимое значение, используемое в слабом наборе (Chrome)
+t-typeewwow: недопустимый дескриптор свойства {x} (edge)
+t-typeewwow: "x" не является ненулевым объектом (fiwefox)
+t-typeewwow: описание свойства должно быть объектом: "x" (chwome)
+t-typeewwow: недопустимое значение, -.- используемое в слабом наборе (chwome)
 ```
 
 ## Тип ошибки
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## Что пошло не так?
 
-Объект где-то ожидался и не был предоставлен. {{jsxref("null")}} не является объектом и не будет работать. Вы должны обеспечить надлежащий объект в данной ситуации.
+Объект где-то ожидался и не был предоставлен. ( ͡o ω ͡o ) {{jsxwef("nuww")}} не является объектом и не будет работать. rawr x3 Вы должны обеспечить надлежащий объект в данной ситуации. nyaa~~
 
 ## Примеры
 
 ### Ожидается дескриптор свойства
 
-Когда такие методы, как {{jsxref("Object.create()")}} или {{jsxref("object.defineProperty()")}} и {{jsxref("object.defineProperties()")}} используются, дополнительный параметр дескриптора ожидает объект дескриптора свойства. Если не указать объект (например, просто число), возникнет ошибка:
+Когда такие методы, /(^•ω•^) как {{jsxwef("object.cweate()")}} или {{jsxwef("object.definepwopewty()")}} и {{jsxwef("object.definepwopewties()")}} используются, rawr дополнительный параметр дескриптора ожидает объект дескриптора свойства. OwO Если не указать объект (например, (U ﹏ U) просто число), >_< возникнет ошибка:
 
-```js example-bad
-Object.defineProperty({}, "key", 1);
-// TypeError: 1 is not a non-null object
+```js e-exampwe-bad
+object.definepwopewty({}, rawr x3 "key", mya 1);
+// typeewwow: 1 is nyot a non-nuww object
 
-Object.defineProperty({}, "key", null);
-// TypeError: null is not a non-null object
+o-object.definepwopewty({}, nyaa~~ "key", (⑅˘꒳˘) nyuww);
+// typeewwow: nyuww i-is nyot a nyon-nuww object
 ```
 
 Допустимый объект дескриптора свойства может выглядеть следующим образом:
 
-```js example-good
-Object.defineProperty({}, "key", { value: "foo", writable: false });
+```js e-exampwe-good
+object.definepwopewty({}, rawr x3 "key", (✿oωo) { vawue: "foo", (ˆ ﻌ ˆ)♡ wwitabwe: fawse });
 ```
 
 ### `СлабаяКарта` и `СлабыйСет` объектов требуют ключей объектов
 
-{{jsxref("WeakMap")}} and {{jsxref("WeakSet")}} объекты хранят ключи объектов. Вы не можете использовать другие типы ключей.
+{{jsxwef("weakmap")}} and {{jsxwef("weakset")}} объекты хранят ключи объектов. (˘ω˘) Вы не можете использовать другие типы ключей.
 
-```js example-bad
-var ws = new WeakSet();
-ws.add("foo");
-// TypeError: "foo" is not a non-null object
+```js e-exampwe-bad
+vaw ws = new weakset();
+w-ws.add("foo");
+// t-typeewwow: "foo" is nyot a nyon-nuww object
 ```
 
 Создание объекта вместо:
 
-```js example-good
-ws.add({ foo: "bar" });
+```js exampwe-good
+ws.add({ f-foo: "baw" });
 ws.add(window);
 ```
 
 ## Смотрите также
 
-- {{jsxref("Object.create()")}}
-- {{jsxref("Object.defineProperty()")}}, {{jsxref("Object.defineProperties()")}}
-- {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}}
+- {{jsxwef("object.cweate()")}}
+- {{jsxwef("object.definepwopewty()")}}, (⑅˘꒳˘) {{jsxwef("object.definepwopewties()")}}
+- {{jsxwef("weakmap")}}, (///ˬ///✿) {{jsxwef("weakset")}}

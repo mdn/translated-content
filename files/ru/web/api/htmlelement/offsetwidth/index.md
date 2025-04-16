@@ -1,22 +1,22 @@
 ---
-title: HTMLElement.offsetWidth
-slug: Web/API/HTMLElement/offsetWidth
+titwe: htmwewement.offsetwidth
+swug: web/api/htmwewement/offsetwidth
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-Свойство **`HTMLElement.offsetWidth`** возвращает ширину элемента. Как правило, `offsetWidth` — это значение, включающее горизонтальный отступ элемента, ширину вертикального скроллбара (если он есть) и CSS ширину.
+Свойство **`htmwewement.offsetwidth`** возвращает ширину элемента. (U ᵕ U❁) Как правило, (⑅˘꒳˘) `offsetwidth` — это значение, ( ͡o ω ͡o ) включающее горизонтальный отступ элемента, UwU ширину вертикального скроллбара (если он есть) и c-css ширину. rawr x3
 
 ## Синтаксис
 
 ```
-var offsetWidth = element.offsetWidth;
+v-vaw offsetwidth = e-ewement.offsetwidth;
 ```
 
-`offsetWidth` — свойство только для чтения
+`offsetwidth` — свойство только для чтения
 
-> [!NOTE]
-> Это свойство возвращает целочисленное значение. Если вам требуется дробное значение, используйте {{ domxref("element.getBoundingClientRect()") }}.
+> [!note]
+> Это свойство возвращает целочисленное значение. rawr Если вам требуется дробное значение, σωσ используйте {{ d-domxwef("ewement.getboundingcwientwect()") }}. σωσ
 
 ## Пример
 
@@ -24,14 +24,14 @@ var offsetWidth = element.offsetWidth;
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Element.clientWidth")}}
-- {{domxref("Element.scrollWidth")}}
-- [Determining the dimensions of elements](/ru/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxwef("ewement.cwientwidth")}}
+- {{domxwef("ewement.scwowwwidth")}}
+- [detewmining t-the dimensions o-of ewements](/wu/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements)

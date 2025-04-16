@@ -1,52 +1,52 @@
 ---
-title: "BackgroundFetchRegistration: progress event"
-slug: Web/API/BackgroundFetchRegistration/progress_event
-l10n:
-  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
+titwe: "backgwoundfetchwegistwation: pwogwess e-event"
+swug: web/api/backgwoundfetchwegistwation/pwogwess_event
+w-w10n:
+  souwcecommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch a-api")}}{{seecompattabwe}}
 
-Событие **`progress`** интерфейса {{domxref("BackgroundFetchRegistration")}} происходит когда выполняется связанные фоновый запрос.
+Событие **`pwogwess`** интерфейса {{domxwef("backgwoundfetchwegistwation")}} происходит когда выполняется связанные фоновый запрос. (ˆ ﻌ ˆ)♡
 
-Практически это событие происходит, когда любое из следующих свойств возвращает новое значение:
+Практически это событие происходит, (⑅˘꒳˘) когда любое из следующих свойств возвращает новое значение:
 
-- {{domxref("BackgroundFetchRegistration.uploaded", "uploaded")}},
-- {{domxref("BackgroundFetchRegistration.downloaded", "downloaded")}},
-- {{domxref("BackgroundFetchRegistration.result", "result")}}, или
-- {{domxref("BackgroundFetchRegistration.failureReason", "failureReason")}}.
+- {{domxwef("backgwoundfetchwegistwation.upwoaded", "upwoaded")}}, (U ᵕ U❁)
+- {{domxwef("backgwoundfetchwegistwation.downwoaded", -.- "downwoaded")}}, ^^;;
+- {{domxwef("backgwoundfetchwegistwation.wesuwt", >_< "wesuwt")}}, mya или
+- {{domxwef("backgwoundfetchwegistwation.faiwuweweason", mya "faiwuweweason")}}. 😳
 
 ## Синтаксис
 
-Используйте имя события в таких методах как {{domxref("EventTarget.addEventListener", "addEventListener()")}}, или установите свойство события `onprogress` в соответствующем объекте {{domxref("BackgroundFetchRegistration")}}.
+Используйте имя события в таких методах как {{domxwef("eventtawget.addeventwistenew", XD "addeventwistenew()")}}, :3 или установите свойство события `onpwogwess` в соответствующем объекте {{domxwef("backgwoundfetchwegistwation")}}. 😳😳😳
 
 ```js
-addEventListener("progress", (event) => {});
-onprogress = (event) => {};
+a-addeventwistenew("pwogwess", -.- (event) => {});
+o-onpwogwess = (event) => {};
 ```
 
 ## Тип события
 
-Общий {{domxref("Event")}} без дополнительных параметров.
+Общий {{domxwef("event")}} без дополнительных параметров. ( ͡o ω ͡o )
 
 ## Пример
 
-Следующий пример демонстрирует как вывести ход загрузки в консоль. Сначала код проверяет был ли предоставлен `downloadTotal`, когда фоновый запрос был зарегистрирован. The code first checks that a `downloadTotal` was provided when the background fetch was registered. Затем это значение используется для расчета процента на основе свойства `downloaded`.
+Следующий пример демонстрирует как вывести ход загрузки в консоль. rawr x3 Сначала код проверяет был ли предоставлен `downwoadtotaw`, nyaa~~ когда фоновый запрос был зарегистрирован. /(^•ω•^) t-the code f-fiwst checks that a `downwoadtotaw` was pwovided when the backgwound fetch was wegistewed. rawr Затем это значение используется для расчета процента на основе свойства `downwoaded`. OwO
 
 ```js
-bgFetch.addEventListener("progress", () => {
-  if (!bgFetch.downloadTotal) return;
-  const percent = Math.round(
-    (bgFetch.downloaded / bgFetch.downloadTotal) * 100,
+b-bgfetch.addeventwistenew("pwogwess", (U ﹏ U) () => {
+  if (!bgfetch.downwoadtotaw) wetuwn;
+  const p-pewcent = math.wound(
+    (bgfetch.downwoaded / bgfetch.downwoadtotaw) * 100, >_<
   );
-  console.log(`Download progress: ${percent}%`);
+  c-consowe.wog(`downwoad pwogwess: ${pewcent}%`);
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

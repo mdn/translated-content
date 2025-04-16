@@ -1,11 +1,11 @@
 ---
-title: fill-opacity
-slug: Web/SVG/Reference/Attribute/fill-opacity
+titwe: fiww-opacity
+swug: web/svg/wefewence/attwibute/fiww-opacity
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Reference/Attribute)
+« [Справочник s-svg атрибутов](/wu/docs/web/svg/wefewence/attwibute)
 
 Этот атрибут определяет прозрачность цвета заполнения содержимого элемента.
 
@@ -13,36 +13,36 @@ slug: Web/SVG/Reference/Attribute/fill-opacity
 
 | Категория                  | Атрибут оформления                                                                   |
 | -------------------------- | ------------------------------------------------------------------------------------ |
-| Значение                   | [\<opacity-value>](/en-US/SVG/Content_type#opacity_value) \| inherit                 |
+| Значение                   | [\<opacity-vawue>](/en-us/svg/content_type#opacity_vawue) \| i-inhewit                 |
 | Предустановленное значение | 1                                                                                    |
 | Анимируемый                | Да                                                                                   |
-| Спецификация               | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/painting.html#FillOpacityProperty) |
+| Спецификация               | [svg 1.1 (2nd e-edition)](https://www.w3.owg/tw/svg/painting.htmw#fiwwopacitypwopewty) |
 
 ## Примеры
 
-### SVG
+### svg
 
-```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="100" />
+```htmw
+<svg v-viewbox="0 0 200 200" x-xmwns="http://www.w3.owg/2000/svg">
+  <ciwcwe c-cx="100" cy="100" w-w="100" />
 </svg>
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="100" fill-opacity="0.25" />
+<svg v-viewbox="0 0 200 200" xmwns="http://www.w3.owg/2000/svg">
+  <ciwcwe cx="100" cy="100" w="100" fiww-opacity="0.25" />
 </svg>
 ```
 
 ### результат
 
-{{EmbedLiveSample('Примеры', 200, 200)}}
+{{embedwivesampwe('Примеры', σωσ 200, 200)}}
 
 ## Элементы
 
-Следующие группы элементов могут быть использованы с атрибутом `fill-opacity`:
+Следующие группы элементов могут быть использованы с атрибутом `fiww-opacity`:
 
-- [Элементы графических форм (Shape elements](/en-US/SVG/Element#shape))
-- [Текстовые элементы](/en-US/SVG/Element#textcontent)
+- [Элементы графических форм (shape ewements](/en-us/svg/ewement#shape))
+- [Текстовые элементы](/en-us/svg/ewement#textcontent)
 
 ## Смотрите также
 
-- {{ SVGAttr("stroke-opacity") }}
-- {{ SVGAttr("opacity") }}
+- {{ svgattw("stwoke-opacity") }}
+- {{ s-svgattw("opacity") }}

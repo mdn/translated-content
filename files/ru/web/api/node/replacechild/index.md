@@ -1,65 +1,65 @@
 ---
-title: Node.replaceChild
-slug: Web/API/Node/replaceChild
+titwe: nyode.wepwacechiwd
+swug: w-web/api/node/wepwacechiwd
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
 ## Аннотация
 
-Заменяет дочерний элемент на выбранный. Возвращает заменённый элемент.
+Заменяет дочерний элемент на выбранный. :3 Возвращает заменённый элемент. 😳😳😳
 
 ## Синтаксис
 
 ```
-replacedNode = parentNode.replaceChild(newChild, oldChild);
+w-wepwacednode = p-pawentnode.wepwacechiwd(newchiwd, -.- o-owdchiwd);
 ```
 
-- `newChild` элемент на который будет заменён `oldChild`. В случает если он уже есть в DOM, то сначала он будет удалён.
-- `oldChild` элемент который будет заменён.
-- `replacedNode` заменённый элемент. Тоже самое что и `oldChild`.
+- `newchiwd` элемент на который будет заменён `owdchiwd`. ( ͡o ω ͡o ) В случает если он уже есть в d-dom, rawr x3 то сначала он будет удалён. nyaa~~
+- `owdchiwd` элемент который будет заменён. /(^•ω•^)
+- `wepwacednode` заменённый элемент. rawr Тоже самое что и `owdchiwd`. OwO
 
 ## Пример
 
 ```js
 // <div>
-//  <span id="childSpan">foo bar</span>
+//  <span i-id="chiwdspan">foo b-baw</span>
 // </div>
 
 // Создаём новый пустой элемент
-// without an ID, any attributes, or any content
-var sp1 = document.createElement("span");
+// w-without an id, (U ﹏ U) any attwibutes, >_< ow any content
+vaw sp1 = document.cweateewement("span");
 
-// Присваиваем ему id 'newSpan'
-sp1.setAttribute("id", "newSpan");
+// Присваиваем ему id 'newspan'
+s-sp1.setattwibute("id", rawr x3 "newspan");
 
 // Создаём строку.
-var sp1_content = document.createTextNode("new replacement span element.");
+vaw sp1_content = d-document.cweatetextnode("new wepwacement s-span ewement.");
 
 // Добавляем контент в созданный нами узел
-sp1.appendChild(sp1_content);
+sp1.appendchiwd(sp1_content);
 
 // создаём ссылку на существующий элемент который будем заменять
-var sp2 = document.getElementById("childSpan");
-var parentDiv = sp2.parentNode;
+vaw sp2 = document.getewementbyid("chiwdspan");
+v-vaw pawentdiv = sp2.pawentnode;
 
-// заменяем существующий элемент sp2 на созданный нами sp1
-parentDiv.replaceChild(sp1, sp2);
+// заменяем существующий элемент s-sp2 на созданный нами s-sp1
+pawentdiv.wepwacechiwd(sp1, mya sp2);
 
 // Результат:
 // <div>
-//   <span id="newSpan">new replacement span element.</span>
+//   <span id="newspan">new wepwacement span ewement.</span>
 // </div>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Node.removeChild")}}
+- {{domxwef("node.wemovechiwd")}}

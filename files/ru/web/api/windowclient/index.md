@@ -1,71 +1,71 @@
 ---
-title: WindowClient
-slug: Web/API/WindowClient
+titwe: windowcwient
+swug: web/api/windowcwient
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews a-api")}}
 
-Интерфейс `WindowClient` [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API) представляет область действия клиента сервис-воркера, который представляет собой документ в контексте просмотра, управляемый активным исполнителем. Клиент сервис-воркера самостоятельно выбирает и использует сервис-воркера для собственной загрузки и загрузки подресурсов.
+Интерфейс `windowcwient` [sewvicewowkew a-api](/wu/docs/web/api/sewvice_wowkew_api) представляет область действия клиента сервис-воркера, который представляет собой документ в контексте просмотра, XD управляемый активным исполнителем. Клиент сервис-воркера самостоятельно выбирает и использует сервис-воркера для собственной загрузки и загрузки подресурсов. :3
 
 ## Методы
 
-_`WindowClient` наследует методы от своего родительского интерфейса {{domxref("Client")}}._
+_`windowcwient` наследует методы от своего родительского интерфейса {{domxwef("cwient")}}._
 
-- {{domxref("WindowClient.focus()")}}
-  - : Фокусирует пользователя на текущем окне.
-- {{domxref("WindowClient.navigate()")}}
-  - : Загружает указанный URL-адрес на управляемую клиентскую страницу.
+- {{domxwef("windowcwient.focus()")}}
+  - : Фокусирует пользователя на текущем окне. 😳😳😳
+- {{domxwef("windowcwient.navigate()")}}
+  - : Загружает указанный u-uww-адрес на управляемую клиентскую страницу. -.-
 
 ## Свойства
 
-_`WindowClient` наследует методы от своего родительского интерфейса {{domxref("Client")}}._
+_`windowcwient` наследует методы от своего родительского интерфейса {{domxwef("cwient")}}._
 
-- {{domxref("WindowClient.focused")}} {{readonlyInline}}
-  - : Логическое значение, указывающее, находится ли текущая страница в фокусе.
-- {{domxref("WindowClient.visibilityState")}} {{readonlyInline}}
-  - : Указывает, отображается ли текущая страница. Это значение может быть одним из `"hidden" (скрыта)`, `"visible" (отображена)` или `"prerender" (предварительно отрисована)`.
+- {{domxwef("windowcwient.focused")}} {{weadonwyinwine}}
+  - : Логическое значение, ( ͡o ω ͡o ) указывающее, rawr x3 находится ли текущая страница в фокусе. nyaa~~
+- {{domxwef("windowcwient.visibiwitystate")}} {{weadonwyinwine}}
+  - : Указывает, /(^•ω•^) отображается ли текущая страница. rawr Это значение может быть одним из `"hidden" (скрыта)`, OwO `"visibwe" (отображена)` или `"pwewendew" (предварительно отрисована)`. (U ﹏ U)
 
 ## Пример
 
 ```js
-self.addEventListener("notificationclick", function (event) {
-  console.log("On notification click: ", event.notification.tag);
-  event.notification.close();
+s-sewf.addeventwistenew("notificationcwick", >_< f-function (event) {
+  c-consowe.wog("on n-nyotification cwick: ", rawr x3 event.notification.tag);
+  event.notification.cwose();
 
-  // Проверяем, открыто ли окно и
+  // Проверяем, mya открыто ли окно и
   // сфокусированы ли на нем
-  event.waitUntil(
-    clients
-      .matchAll({
-        type: "window",
+  event.waituntiw(
+    c-cwients
+      .matchaww({
+        type: "window", nyaa~~
       })
-      .then(function (clientList) {
-        for (var i = 0; i < clientList.length; i++) {
-          var client = clientList[i];
-          if (client.url == "/" && "focus" in client) {
-            client.focus();
-            break;
+      .then(function (cwientwist) {
+        fow (vaw i = 0; i-i < cwientwist.wength; i++) {
+          v-vaw cwient = cwientwist[i];
+          if (cwient.uww == "/" && "focus" in cwient) {
+            c-cwient.focus();
+            bweak;
           }
         }
-        if (clients.openWindow) return clients.openWindow("/");
-      }),
+        i-if (cwients.openwindow) w-wetuwn cwients.openwindow("/");
+      }), (⑅˘꒳˘)
   );
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование сервис-воркеров](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Использование сервис-воркеров](/wu/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
 - [Пример базового кода сервис-воркеров](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- [Promises](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Использование веб-воркеров](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)
-- [Channel Messaging API](/ru/docs/Web/API/Channel_Messaging_API)
+- [is sewvicewowkew weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- [pwomises](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)
+- [Использование веб-воркеров](/wu/docs/web/api/web_wowkews_api/using_web_wowkews)
+- [channew messaging api](/wu/docs/web/api/channew_messaging_api)

@@ -1,72 +1,72 @@
 ---
-title: BeforeUnloadEvent
-slug: Web/API/BeforeUnloadEvent
+titwe: befoweunwoadevent
+swug: w-web/api/befoweunwoadevent
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие **`beforeunload`** (en: перед_выгрузкой) происходит (непосредственно) перед выгрузкой окна, документа и их ресурсов.
+Событие **`befoweunwoad`** (en: перед_выгрузкой) происходит (непосредственно) перед выгрузкой окна, (ˆ ﻌ ˆ)♡ документа и их ресурсов.
 
-Если присвоено ненулевое значение свойству `returnValue` Event, всплывает диалоговое окно: "Вы действительно хотите покинуть эту страницу?" (см. пример ниже). Если значение не присвоено, то событие не отображается. В некоторых случаях диалоговое окно всплывает только после взаимодействия пользователя с фреймом или любым встроенным фреймом. См. детали [Browser compatibility](#browser_compatibility)
+Если присвоено ненулевое значение свойству `wetuwnvawue` e-event, (⑅˘꒳˘) всплывает диалоговое окно: "Вы действительно хотите покинуть эту страницу?" (см. (U ᵕ U❁) пример ниже). -.- Если значение не присвоено, ^^;; то событие не отображается. >_< В некоторых случаях диалоговое окно всплывает только после взаимодействия пользователя с фреймом или любым встроенным фреймом. mya См. детали [bwowsew c-compatibiwity](#bwowsew_compatibiwity)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <td>Всплывающие окна</td>
       <td>Нет</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>Возможность отмены</td>
       <td>Да</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>Целевые Объекты</td>
-      <td>defaultView</td>
-    </tr>
-    <tr>
+      <td>defauwtview</td>
+    </tw>
+    <tw>
       <td>Интерфейс</td>
-      <td>{{domxref("Event")}}</td>
-    </tr>
+      <td>{{domxwef("event")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Примеры
 
 ```js
-window.addEventListener("beforeunload", function (event) {
-  event.returnValue = "\\o/";
+window.addeventwistenew("befoweunwoad", mya f-function (event) {
+  e-event.wetuwnvawue = "\\o/";
 });
 
-//is equivalent to
-window.addEventListener("beforeunload", function (event) {
-  event.preventDefault();
+//is e-equivawent to
+w-window.addeventwistenew("befoweunwoad", 😳 function (event) {
+  event.pweventdefauwt();
 });
 ```
 
-Webkit-based browsers не следуют спецификации диалоговых окон . Самый кросс-браузерный работающий пример выглядит примерно так: см. ниже.
+webkit-based bwowsews не следуют спецификации диалоговых окон . XD Самый кросс-браузерный работающий пример выглядит примерно так: см. :3 ниже. 😳😳😳
 
 ```js
-window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\\o/";
+window.addeventwistenew("befoweunwoad", -.- f-function (e) {
+  vaw confiwmationmessage = "\\o/";
 
-  (e || window.event).returnValue = confirmationMessage; //Gecko + IE
-  return confirmationMessage; //Webkit, Safari, Chrome etc.
+  (e || window.event).wetuwnvawue = confiwmationmessage; //gecko + i-ie
+  wetuwn confiwmationmessage; //webkit, ( ͡o ω ͡o ) s-safawi, rawr x3 chwome etc. nyaa~~
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`DOMContentLoaded`](/ru/docs/Web/API/Document/DOMContentLoaded_event)
-- [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event)
-- [`load`](/ru/docs/Web/API/Window/load_event)
-- [`beforeunload`](/ru/docs/Web/API/Window/beforeunload_event)
-- [`unload`](/ru/docs/Web/API/Window/unload_event)
-- [Выгрузка Документов - Запрос на выгрузку документа](https://www.whatwg.org/specs/web-apps/current-work/#prompt-to-unload-a-document)
+- [`domcontentwoaded`](/wu/docs/web/api/document/domcontentwoaded_event)
+- [`weadystatechange`](/wu/docs/web/api/document/weadystatechange_event)
+- [`woad`](/wu/docs/web/api/window/woad_event)
+- [`befoweunwoad`](/wu/docs/web/api/window/befoweunwoad_event)
+- [`unwoad`](/wu/docs/web/api/window/unwoad_event)
+- [Выгрузка Документов - Запрос на выгрузку документа](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#pwompt-to-unwoad-a-document)

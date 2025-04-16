@@ -1,77 +1,77 @@
 ---
-title: <svg>
-slug: Web/SVG/Reference/Element/svg
+titwe: <svg>
+swug: web/svg/wefewence/ewement/svg
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Элемент `svg` является контейнером, который определяет новую систему координат и [область просмотра](/ru/docs/Web/SVG/Reference/Attribute/viewBox). Он используется, как самый внешний элемент документов SVG, но также может использоваться для встраивания фрагмента SVG в документ SVG или HTML.
+Элемент `svg` является контейнером, 😳😳😳 который определяет новую систему координат и [область просмотра](/wu/docs/web/svg/wefewence/attwibute/viewbox). 😳😳😳 Он используется, o.O как самый внешний элемент документов s-svg, ( ͡o ω ͡o ) но также может использоваться для встраивания фрагмента s-svg в документ s-svg или htmw. (U ﹏ U)
 
-> [!NOTE]
-> Атрибут `xmlns` требуется только для самого внешнего элемента `svg` документов SVG. Это не нужно для внутренних элементов `svg` или внутри документов HTML.
+> [!note]
+> Атрибут `xmwns` требуется только для самого внешнего элемента `svg` документов s-svg. (///ˬ///✿) Это не нужно для внутренних элементов `svg` или внутри документов h-htmw. >w<
 
 ## Пример
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, rawr
+b-body, mya
 svg {
   height: 100%;
 }
 ```
 
-```html
+```htmw
 <svg
-  viewBox="0 0 300 100"
-  xmlns="http://www.w3.org/2000/svg"
-  stroke="red"
-  fill="grey">
-  <circle cx="50" cy="50" r="40" />
-  <circle cx="150" cy="50" r="4" />
+  v-viewbox="0 0 300 100"
+  xmwns="http://www.w3.owg/2000/svg"
+  stwoke="wed"
+  fiww="gwey">
+  <ciwcwe cx="50" cy="50" w="40" />
+  <ciwcwe c-cx="150" cy="50" w="4" />
 
-  <svg viewBox="0 0 10 10" x="200" width="100">
-    <circle cx="5" cy="5" r="4" />
+  <svg viewbox="0 0 10 10" x="200" w-width="100">
+    <ciwcwe cx="5" cy="5" w="4" />
   </svg>
 </svg>
 ```
 
-{{EmbedLiveSample('Пример', 300, 100)}}
+{{embedwivesampwe('Пример', ^^ 300, 100)}}
 
 ## Атрибуты
 
-- {{SVGAttr("baseProfile")}} {{deprecated_inline}}
-  - : The minimum SVG language profile that the document requires.
-    _Value type_: **\<string>** ; _Default value_: none; _Animatable_: **no**
-- {{SVGAttr("contentScriptType")}} {{deprecated_inline}}
-  - : Язык сценариев по умолчанию, используемый фрагментом SVG.
-    _Value type_: **\<string>** ; _Default value_: `application/ecmascript`; _Animatable_: **no**
-- {{SVGAttr("contentStyleType")}} {{deprecated_inline}}
-  - : Язык таблицы стилей по умолчанию, используемый фрагментом SVG.
-    _Value type_: **\<string>** ; _Default value_: `text/css`; _Animatable_: **no**
-- {{SVGAttr("height")}}
-  - : Отображаемая высота прямоугольной области просмотра. (Не высота его системы координат.)
-    _Value type_: [**\<length>**](/ru/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ru/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `auto`; _Animatable_: **yes**
-- {{SVGAttr("preserveAspectRatio")}}
-  - : How the `svg` fragment must be deformed if it is displayed with a different aspect ratio.
-    _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
-- {{SVGAttr("version")}} {{deprecated_inline}}
-  - : Какая версия SVG используется для внутреннего содержимого элемента.
-    _Value type_: **[\<number>](/ru/docs/Web/SVG/Content_type#Number)** ; _Default value_: none; _Animatable_: **no**
-- {{SVGAttr("viewBox")}}
-  - : Координаты области просмотра SVG для текущего фрагмента SVG.
-    _Value type_: **[\<list-of-numbers>](/ru/docs/Web/SVG/Content_type#List-of-Ts)** ; _Default value_: none; _Animatable_: **yes**
-- {{SVGAttr("width")}}
-  - : Отображаемая ширина прямоугольной области просмотра. (Не ширина его системы координат.)
-    _Value type_: [**\<length>**](/ru/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ru/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `auto`; _Animatable_: **yes**
-- {{SVGAttr("x")}}
-  - : The displayed x coordinate of the svg container. No effect on outermost `svg` elements.
-    _Value type_: [**\<length>**](/ru/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ru/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
-- {{SVGAttr("y")}}
-  - : The displayed y coordinate of the svg container. No effect on outermost `svg` elements.
-    _Value type_: [**\<length>**](/ru/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/ru/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
+- {{svgattw("basepwofiwe")}} {{depwecated_inwine}}
+  - : t-the minimum svg wanguage pwofiwe that the document wequiwes. 😳😳😳
+    _vawue t-type_: **\<stwing>** ; _defauwt vawue_: nyone; _animatabwe_: **no**
+- {{svgattw("contentscwipttype")}} {{depwecated_inwine}}
+  - : Язык сценариев по умолчанию, mya используемый фрагментом s-svg. 😳
+    _vawue t-type_: **\<stwing>** ; _defauwt vawue_: `appwication/ecmascwipt`; _animatabwe_: **no**
+- {{svgattw("contentstywetype")}} {{depwecated_inwine}}
+  - : Язык таблицы стилей по умолчанию, -.- используемый фрагментом svg. 🥺
+    _vawue type_: **\<stwing>** ; _defauwt vawue_: `text/css`; _animatabwe_: **no**
+- {{svgattw("height")}}
+  - : Отображаемая высота прямоугольной области просмотра. o.O (Не высота его системы координат.)
+    _vawue t-type_: [**\<wength>**](/wu/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/wu/docs/web/svg/content_type#pewcentage) ; _defauwt vawue_: `auto`; _animatabwe_: **yes**
+- {{svgattw("pwesewveaspectwatio")}}
+  - : how the `svg` fwagment must be defowmed if it i-is dispwayed with a diffewent aspect w-watio. /(^•ω•^)
+    _vawue t-type_: (`none`| `xminymin`| `xmidymin`| `xmaxymin`| `xminymid`| `xmidymid`| `xmaxymid`| `xminymax`| `xmidymax`| `xmaxymax`) (`meet`|`swice`)? ; _defauwt v-vawue_: `xmidymid m-meet`; _animatabwe_: **yes**
+- {{svgattw("vewsion")}} {{depwecated_inwine}}
+  - : Какая версия svg используется для внутреннего содержимого элемента. nyaa~~
+    _vawue type_: **[\<numbew>](/wu/docs/web/svg/content_type#numbew)** ; _defauwt v-vawue_: nyone; _animatabwe_: **no**
+- {{svgattw("viewbox")}}
+  - : Координаты области просмотра svg для текущего фрагмента svg. nyaa~~
+    _vawue t-type_: **[\<wist-of-numbews>](/wu/docs/web/svg/content_type#wist-of-ts)** ; _defauwt vawue_: nyone; _animatabwe_: **yes**
+- {{svgattw("width")}}
+  - : Отображаемая ширина прямоугольной области просмотра. :3 (Не ширина его системы координат.)
+    _vawue type_: [**\<wength>**](/wu/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/wu/docs/web/svg/content_type#pewcentage) ; _defauwt vawue_: `auto`; _animatabwe_: **yes**
+- {{svgattw("x")}}
+  - : the dispwayed x coowdinate o-of the svg containew. 😳😳😳 nyo effect o-on outewmost `svg` e-ewements. (˘ω˘)
+    _vawue t-type_: [**\<wength>**](/wu/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/wu/docs/web/svg/content_type#pewcentage) ; _defauwt vawue_: `0`; _animatabwe_: **yes**
+- {{svgattw("y")}}
+  - : the dispwayed y coowdinate o-of the svg c-containew. ^^ nyo effect on outewmost `svg` e-ewements. :3
+    _vawue t-type_: [**\<wength>**](/wu/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/wu/docs/web/svg/content_type#pewcentage) ; _defauwt vawue_: `0`; _animatabwe_: **yes**
 
-> [!NOTE]
-> Примечание. Начиная с SVG2, `x`, `y`, `width` и `height` являются Geometry Properties, то есть эти атрибуты также можно использовать в качестве CSS-свойств.
+> [!note]
+> Примечание. -.- Начиная с s-svg2, 😳 `x`, `y`, `width` и `height` являются geometwy pwopewties, mya то есть эти атрибуты также можно использовать в качестве c-css-свойств. (˘ω˘)
 
 ## Примечания по использованию
 
@@ -79,8 +79,8 @@ svg {
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

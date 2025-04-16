@@ -1,51 +1,51 @@
 ---
-title: Date.prototype.getDate()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getDate
+titwe: date.pwototype.getdate()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getdate
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`getDate()`** возвращает день месяца указанной даты по местному времени.
+Метод **`getdate()`** возвращает день месяца указанной даты по местному времени. o.O
 
 ## Синтаксис
 
 ```
-dateObj.getDate()
+d-dateobj.getdate()
 ```
 
 ### Параметры
 
-Нет.
+Нет. (U ᵕ U❁)
 
 ### Возвращаемое значение
 
-Значение, возвращённое методом `getDate()`, является целым числом от 1 до 31.
+Значение, (⑅˘꒳˘) возвращённое методом `getdate()`, ( ͡o ω ͡o ) является целым числом от 1 до 31. UwU
 
 ## Примеры
 
-### Пример: использование метода `getDate()`
+### Пример: использование метода `getdate()`
 
-Вторая инструкция в примере ниже присваивает значение 25 переменной `day` из значения объекта {{jsxref("Global_Objects/Date", "Date")}} `date`.
+Вторая инструкция в примере ниже присваивает значение 25 переменной `day` из значения объекта {{jsxwef("gwobaw_objects/date", rawr x3 "date")}} `date`. rawr
 
 ```js
-let date = new Date("December 25, 1995 23:15:30");
-let day = date.getDate();
+w-wet date = n-nyew date("decembew 25, σωσ 1995 23:15:30");
+w-wet day = d-date.getdate();
 
-console.log(day); // 25
+c-consowe.wog(day); // 25
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.getUTCDay()")}}
-- {{jsxref("Date.prototype.setDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.getutcday()")}}
+- {{jsxwef("date.pwototype.setdate()")}}

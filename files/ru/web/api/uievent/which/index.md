@@ -1,81 +1,81 @@
 ---
-title: "UIEvent: свойство which"
-slug: Web/API/UIEvent/which
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "uievent: свойство which"
+swug: w-web/api/uievent/which
+w-w10n:
+  s-souwcecommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{apiwef("ui e-events")}}{{depwecated_headew}}
 
-Доступное только для чтение свойство **`UIEvent.which`** интерфейса {{domxref("UIEvent")}} возвращает число, указывающее на то, какая клавиша мыши была нажата или числовой код (`keyCode`) или код символа (`charCode`) нажатой клавиши на клавиатуре.
+Доступное только для чтение свойство **`uievent.which`** интерфейса {{domxwef("uievent")}} возвращает число, (⑅˘꒳˘) указывающее на то, (U ᵕ U❁) какая клавиша мыши была нажата или числовой код (`keycode`) или код символа (`chawcode`) нажатой клавиши на клавиатуре. -.-
 
 ## Значение
 
-### Значение для `KeyboardEvent` {{Non-standard_Inline}}
+### Значение для `keyboawdevent` {{non-standawd_inwine}}
 
-Для {{domxref("KeyboardEvent")}} `event.which` содержит числовой код нажатой клавиши.
-Смотрите {{domxref("KeyboardEvent.charCode")}} и {{domxref("KeyboardEvent.keyCode")}} для дополнительной информации.
+Для {{domxwef("keyboawdevent")}} `event.which` содержит числовой код нажатой клавиши. ^^;;
+Смотрите {{domxwef("keyboawdevent.chawcode")}} и {{domxwef("keyboawdevent.keycode")}} для дополнительной информации. >_<
 
-> [!NOTE]
-> Для новых приложений используйте {{domxref("KeyboardEvent.key")}} или {{domxref("KeyboardEvent.code")}}.
+> [!note]
+> Для новых приложений используйте {{domxwef("keyboawdevent.key")}} или {{domxwef("keyboawdevent.code")}}. mya
 
-### Значение для `MouseEvent` {{Non-standard_Inline}}
+### Значение для `mouseevent` {{non-standawd_inwine}}
 
-Для {{domxref("MouseEvent")}} `event.which` содержит число, представляющее нажатую клавишу:
+Для {{domxwef("mouseevent")}} `event.which` содержит число, mya представляющее нажатую клавишу:
 
 - `0`: Клавиша не нажата
 - `1`: Левая клавиша
 - `2`: Средняя клавиша
 - `3`: Правая клавиша
 
-Для мыши, настроенной на использование левой рукой, действия кнопок меняются на противоположные. В этом случае значения считываются справа налево.
+Для мыши, 😳 настроенной на использование левой рукой, XD действия кнопок меняются на противоположные. :3 В этом случае значения считываются справа налево. 😳😳😳
 
-> [!NOTE]
-> Для новых приложений используйте {{domxref("MouseEvent.button")}}.
+> [!note]
+> Для новых приложений используйте {{domxwef("mouseevent.button")}}. -.-
 
 ## Примеры
 
-```html
-<html lang="en">
+```htmw
+<htmw w-wang="en">
   <head>
-    <title>Пример charCode/keyCode/which</title>
+    <titwe>Пример c-chawcode/keycode/which</titwe>
 
-    <script>
-      function showKeyPress(evt) {
-        alert(
-          `Обработчик onkeypress:\n` +
-            `свойство keyCode: ${evt.keyCode}\n` +
+    <scwipt>
+      f-function s-showkeypwess(evt) {
+        awewt(
+          `Обработчик onkeypwess:\n` +
+            `свойство keycode: ${evt.keycode}\n` +
             `свойство which: ${evt.which}\n` +
-            `свойство charCode: ${evt.charCode}\n` +
-            `символ нажатой клавиши: ${String.fromCharCode(evt.charCode)}\n`,
+            `свойство c-chawcode: ${evt.chawcode}\n` +
+            `символ нажатой клавиши: ${stwing.fwomchawcode(evt.chawcode)}\n`, ( ͡o ω ͡o )
         );
       }
 
-      function keyDown(evt) {
-        alert(
-          `Обработчик onkeydown:\n` +
-            `свойство keyCode: ${evt.keyCode}\n` +
-            `свойство which: ${evt.which}\n`,
+      function keydown(evt) {
+        awewt(
+          `Обработчик o-onkeydown:\n` +
+            `свойство keycode: ${evt.keycode}\n` +
+            `свойство w-which: ${evt.which}\n`, rawr x3
         );
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onkeypress="showKeyPress(event);" onkeydown="keyDown(event);">
+  <body onkeypwess="showkeypwess(event);" onkeydown="keydown(event);">
     <p>Нажмите любую клавишу.</p>
   </body>
-</html>
+</htmw>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("KeyboardEvent")}}
-- {{domxref("MouseEvent")}}
+- {{domxwef("keyboawdevent")}}
+- {{domxwef("mouseevent")}}

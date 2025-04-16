@@ -1,60 +1,60 @@
 ---
-title: BackgroundFetchManager.fetch()
-slug: Web/API/BackgroundFetchManager/fetch
+titwe: backgwoundfetchmanagew.fetch()
+swug: web/api/backgwoundfetchmanagew/fetch
 ---
 
-{{DefaultAPISidebar("Background Fetch API")}}
+{{defauwtapisidebaw("backgwound f-fetch api")}}
 
-Метод **`fetch()`** интерфейса {{domxref("BackgroundFetchManager")}} возвращает {{jsxref("Promise")}}, результатом обработки которого будет объект {{domxref("BackgroundFetchRegistration")}} для переданного массива URL-адресов или объектов {{domxref("Request")}}.
+Метод **`fetch()`** интерфейса {{domxwef("backgwoundfetchmanagew")}} возвращает {{jsxwef("pwomise")}}, :3 результатом обработки которого будет объект {{domxwef("backgwoundfetchwegistwation")}} для переданного массива u-uww-адресов или объектов {{domxwef("wequest")}}. (U ﹏ U)
 
 ## Синтаксис
 
 ```js
-fetch(id, requests);
-fetch(id, requests, options);
+f-fetch(id, -.- wequests);
+f-fetch(id, (ˆ ﻌ ˆ)♡ w-wequests, (⑅˘꒳˘) options);
 ```
 
 ### Параметры
 
 - `id`
-  - : Определяемый разработчиком идентификатор, который может быть передан другим методам для получения {{domxref("backgroundFetchRegistration")}}.
-- `requests`
-  - : Объект {{domxref("RequestInfo")}} или массив таких объектов.
-- `options` {{optional_inline}}
-  - : Объект {{domxref("BackgroundFetchOptions")}}.
+  - : Определяемый разработчиком идентификатор, (U ᵕ U❁) который может быть передан другим методам для получения {{domxwef("backgwoundfetchwegistwation")}}. -.-
+- `wequests`
+  - : Объект {{domxwef("wequestinfo")}} или массив таких объектов. ^^;;
+- `options` {{optionaw_inwine}}
+  - : Объект {{domxwef("backgwoundfetchoptions")}}. >_<
 
 ### Возвращаемое значение
 
-{{jsxref("Promise")}}, результатом обработки которого будет объект {{domxref("BackgroundFetchRegistration")}}.
+{{jsxwef("pwomise")}}, mya результатом обработки которого будет объект {{domxwef("backgwoundfetchwegistwation")}}. mya
 
 ### Исключения
 
-- {{jsxref("TypeError")}}
-  - : Возникает, если запрос не передан, либо если режим запроса 'no-cors', либо если нет сервис-воркера, либо если уже существует запрос с таким идентификатором, либо запрос завершился с ошибкой.
-- `AbortError` {{domxref("DOMException")}}
-  - : Указывает на то, что запрос был прерван.
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : Указывает на то, что пользователю не было предоставлено разрешение на фоновые запросы.
+- {{jsxwef("typeewwow")}}
+  - : Возникает, 😳 если запрос не передан, XD либо если режим запроса 'no-cows', :3 либо если нет сервис-воркера, 😳😳😳 либо если уже существует запрос с таким идентификатором, -.- либо запрос завершился с ошибкой. ( ͡o ω ͡o )
+- `abowtewwow` {{domxwef("domexception")}}
+  - : Указывает на то, rawr x3 что запрос был прерван. nyaa~~
+- `notawwowedewwow` {{domxwef("domexception")}}
+  - : Указывает на то, /(^•ω•^) что пользователю не было предоставлено разрешение на фоновые запросы. rawr
 
 ## Примеры
 
-Следующие примеры показывают, как использовать `fetch()`, чтобы создать {{domxref("BackgroundFetchRegistration")}}. При активном {{domxref('ServiceWorker', 'сервис-воркере')}}, используйте свойство {{domxref('ServiceWorkerRegistration.backgroundFetch')}} для доступа к объекту `BackgroundFetchManager` и вызовите его метод `fetch()`.
+Следующие примеры показывают, OwO как использовать `fetch()`, чтобы создать {{domxwef("backgwoundfetchwegistwation")}}. (U ﹏ U) При активном {{domxwef('sewvicewowkew', >_< 'сервис-воркере')}}, rawr x3 используйте свойство {{domxwef('sewvicewowkewwegistwation.backgwoundfetch')}} для доступа к объекту `backgwoundfetchmanagew` и вызовите его метод `fetch()`. mya
 
 ```js
-navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.fetch(
-    "my-fetch",
-    ["/ep-5.mp3", "ep-5-artwork.jpg"],
+n-nyavigatow.sewvicewowkew.weady.then(async (swweg) => {
+  c-const bgfetch = a-await swweg.backgwoundfetch.fetch(
+    "my-fetch", nyaa~~
+    ["/ep-5.mp3", (⑅˘꒳˘) "ep-5-awtwowk.jpg"], rawr x3
     {
-      title: "Episode 5: Interesting things.",
+      titwe: "episode 5: intewesting things.", (✿oωo)
       icons: [
         {
-          sizes: "300x300",
-          src: "/ep-5-icon.png",
-          type: "image/png",
-        },
+          s-sizes: "300x300", (ˆ ﻌ ˆ)♡
+          swc: "/ep-5-icon.png", (˘ω˘)
+          type: "image/png", (⑅˘꒳˘)
+        }, (///ˬ///✿)
       ],
-      downloadTotal: 60 * 1024 * 1024,
+      d-downwoadtotaw: 60 * 1024 * 1024, 😳😳😳
     },
   );
 });
@@ -62,8 +62,8 @@ navigator.serviceWorker.ready.then(async (swReg) => {
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

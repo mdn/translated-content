@@ -1,127 +1,127 @@
 ---
-title: CanvasRenderingContext2D.bezierCurveTo()
-slug: Web/API/CanvasRenderingContext2D/bezierCurveTo
+titwe: canvaswendewingcontext2d.beziewcuwveto()
+swug: web/api/canvaswendewingcontext2d/beziewcuwveto
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 ## Сводка
 
-Метод **`CanvasRenderingContext2D.bezierCurveTo()`**, предоставляемый Canvas 2D API, добавляет кубическую кривую Безье к контуру. Для построения требуются три точки. Первые две точки являются контрольными, а третья - конечной. Начальной точкой является последняя точка в текущем контуре, и она может быть изменена методом {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} перед созданием кривой Безье.
+Метод **`canvaswendewingcontext2d.beziewcuwveto()`**, /(^•ω•^) предоставляемый c-canvas 2d api, ʘwʘ добавляет кубическую кривую Безье к контуру. σωσ Для построения требуются три точки. OwO Первые две точки являются контрольными, 😳😳😳 а третья - конечной. 😳😳😳 Начальной точкой является последняя точка в текущем контуре, o.O и она может быть изменена методом {{domxwef("canvaswendewingcontext2d.moveto", ( ͡o ω ͡o ) "moveto()")}} перед созданием кривой Безье. (U ﹏ U)
 
 ## Синтаксис
 
 ```
-void ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
+v-void ctx.beziewcuwveto(cp1x, (///ˬ///✿) c-cp1y, cp2x, >w< cp2y, x-x, y);
 ```
 
 ### Параметры
 
 - `cp1x`
-  - : Координата первой контрольной точки по оси x.
+  - : Координата первой контрольной точки по оси x-x. rawr
 - `cp1y`
-  - : Координата первой контрольной точки по оси y.
+  - : Координата первой контрольной точки по оси y-y. mya
 - `cp2x`
-  - : Координата второй контрольной точки по оси x.
+  - : Координата второй контрольной точки по оси x-x. ^^
 - `cp2y`
-  - : Координата второй контрольной точки по оси y.
+  - : Координата второй контрольной точки по оси y-y. 😳😳😳
 - `x`
-  - : Координата конечной точки по оси x.
+  - : Координата конечной точки по оси x. mya
 - `y`
-  - : Координата конечной точки по оси y.
+  - : Координата конечной точки по оси y. 😳
 
 ## Примеры
 
-### Использование метода `bezierCurveTo`
+### Использование метода `beziewcuwveto`
 
-Ниже представлен простой фрагмент кода, рисующий кривую Безье. Контрольные точки нарисованы красным цветом, а начальная и конечная точки - синим.
+Ниже представлен простой фрагмент кода, -.- рисующий кривую Безье. 🥺 Контрольные точки нарисованы красным цветом, o.O а начальная и конечная точки - синим. /(^•ω•^)
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
 
-ctx.beginPath();
-ctx.moveTo(50, 20);
-ctx.bezierCurveTo(230, 30, 150, 60, 50, 100);
-ctx.stroke();
+c-ctx.beginpath();
+ctx.moveto(50, nyaa~~ 20);
+c-ctx.beziewcuwveto(230, nyaa~~ 30, 150, 60, :3 50, 100);
+ctx.stwoke();
 
-ctx.fillStyle = "blue";
+ctx.fiwwstywe = "bwue";
 // начальная точка
-ctx.fillRect(50, 20, 10, 10);
+ctx.fiwwwect(50, 😳😳😳 20, 10, 10);
 // конечная точка
-ctx.fillRect(50, 100, 10, 10);
+ctx.fiwwwect(50, (˘ω˘) 100, 10, 10);
 
-ctx.fillStyle = "red";
+c-ctx.fiwwstywe = "wed";
 // первая контрольная точка
-ctx.fillRect(230, 30, 10, 10);
+ctx.fiwwwect(230, ^^ 30, :3 10, 10);
 // вторая контрольная точка
-ctx.fillRect(150, 70, 10, 10);
+c-ctx.fiwwwect(150, -.- 70, 10, 10);
 ```
 
-{{ EmbedLiveSample('Использование_метода_bezierCurveTo', 315, 165) }}
+{{ e-embedwivesampwe('Использование_метода_beziewcuwveto', 😳 315, 165) }}
 
-### Практическое применение `bezierCurveTo`
+### Практическое применение `beziewcuwveto`
 
-Вы можете редактировать код, представленный ниже, и внесённые вами изменения отобразятся на холсте в режиме реального времени:
+Вы можете редактировать код, mya представленный ниже, (˘ω˘) и внесённые вами изменения отобразятся на холсте в режиме реального времени:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas id="canvas" width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input id="edit" type="button" vawue="edit" />
+  <input id="weset" t-type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.bezierCurveTo(50, 100, 180, 10, 20, 10);
-ctx.stroke();</textarea
+<textawea i-id="code" cwass="pwayabwe-code">
+c-ctx.beginpath();
+c-ctx.beziewcuwveto(50, >_< 100, 180, 10, 20, -.- 10);
+c-ctx.stwoke();</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw canvas = document.getewementbyid("canvas");
+vaw c-ctx = canvas.getcontext("2d");
+vaw textawea = document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+vaw edit = document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  c-ctx.cweawwect(0, 🥺 0, canvas.width, (U ﹏ U) c-canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", >w< function () {
+  textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", mya function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", >w< d-dwawcanvas);
+window.addeventwistenew("woad", nyaa~~ d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Практическое_применение_bezierCurveTo', 700, 360) }}
+{{ e-embedwivesampwe('Практическое_применение_beziewcuwveto', (✿oωo) 700, 360) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}
-- [Кривая Безье](https://ru.wikipedia.org/wiki/Кривая_Безье) в Википедии
+- Интерфейс, ʘwʘ предоставляющий данный метод: {{domxwef("canvaswendewingcontext2d")}}
+- [Кривая Безье](https://wu.wikipedia.owg/wiki/Кривая_Безье) в Википедии

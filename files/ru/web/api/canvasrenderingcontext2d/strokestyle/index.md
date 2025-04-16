@@ -1,134 +1,134 @@
 ---
-title: CanvasRenderingContext2D.strokeStyle
-slug: Web/API/CanvasRenderingContext2D/strokeStyle
+titwe: canvaswendewingcontext2d.stwokestywe
+swug: web/api/canvaswendewingcontext2d/stwokestywe
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Свойство **`CanvasRenderingContext2D.strokeStyle`**, предоставляемое Canvas 2D API задаёт цвет или стиль, используемый при выполнении обводки фигур. По умолчанию установлено значение `#000` (чёрный цвет).
+Свойство **`canvaswendewingcontext2d.stwokestywe`**, предоставляемое canvas 2d a-api задаёт цвет или стиль, 🥺 используемый при выполнении обводки фигур. o.O По умолчанию установлено значение `#000` (чёрный цвет). /(^•ω•^)
 
-Смотрите также главу [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) в [Canvas Tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
+Смотрите также главу [appwying s-stywes and c-cowow](/wu/docs/web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows) в [canvas t-tutowiaw](/wu/docs/web/api/canvas_api/tutowiaw). nyaa~~
 
 ## Синтаксис
 
 ```
-ctx.strokeStyle = color;
-ctx.strokeStyle = gradient;
-ctx.strokeStyle = pattern;
+c-ctx.stwokestywe = c-cowow;
+ctx.stwokestywe = g-gwadient;
+c-ctx.stwokestywe = pattewn;
 ```
 
 ### Значения
 
-- `color`
-  - : {{domxref("DOMString")}} строка содержащая цвет в формате, поддерживающимся стандартом CSS ({{cssxref("&lt;color&gt;")}}).
-- `gradient`
-  - : Объект класса {{domxref("CanvasGradient")}} (линейный или круговой градиент ).
-- `pattern`
-  - : Объект класса {{domxref("CanvasPattern")}} (повторяющееся изображение).
+- `cowow`
+  - : {{domxwef("domstwing")}} строка содержащая цвет в формате, nyaa~~ поддерживающимся стандартом css ({{cssxwef("&wt;cowow&gt;")}}). :3
+- `gwadient`
+  - : Объект класса {{domxwef("canvasgwadient")}} (линейный или круговой градиент ). 😳😳😳
+- `pattewn`
+  - : Объект класса {{domxwef("canvaspattewn")}} (повторяющееся изображение). (˘ω˘)
 
 ## Примеры
 
-### Использование `strokeStyle` с цветом
+### Использование `stwokestywe` с цветом
 
-Ниже представлен простой фрагмент кода, использующий `strokeStyle` с цветом.
+Ниже представлен простой фрагмент кода, ^^ использующий `stwokestywe` с цветом. :3
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
 
-ctx.strokeStyle = "blue";
-ctx.strokeRect(10, 10, 100, 100);
+c-ctx.stwokestywe = "bwue";
+ctx.stwokewect(10, -.- 10, 😳 100, 100);
 ```
 
-Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:
+Вы можете редактировать код, mya представленный ниже, (˘ω˘) и сделанные вами изменения отобразятся на холсте в режиме реального времени:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas id="canvas" width="400" h-height="200" cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" vawue="edit" />
+  <input id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.strokeStyle = "blue";
-ctx.strokeRect(10, 10, 100, 100);</textarea
+<textawea i-id="code" cwass="pwayabwe-code">
+ctx.stwokestywe = "bwue";
+ctx.stwokewect(10, >_< 10, 100, 100);</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+v-vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
+v-vaw textawea = d-document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+vaw edit = d-document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function d-dwawcanvas() {
+  ctx.cweawwect(0, -.- 0, canvas.width, 🥺 canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", (U ﹏ U) f-function () {
+  textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", >w< f-function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", mya dwawcanvas);
+w-window.addeventwistenew("woad", >w< d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ embedwivesampwe('pwayabwe_code', nyaa~~ 700, 360) }}
 
-### Использование `strokeStyle` в циклах `for`
+### Использование `stwokestywe` в циклах `fow`
 
-В этом примере свойство `strokeStyle` используется для рисования границ фигур. Мы используем метод {{domxref("CanvasRenderingContext2D.arc", "arc()")}} для рисования кругов.
+В этом примере свойство `stwokestywe` используется для рисования границ фигур. (✿oωo) Мы используем метод {{domxwef("canvaswendewingcontext2d.awc", ʘwʘ "awc()")}} для рисования кругов. (ˆ ﻌ ˆ)♡
 
 ```js
-var ctx = document.getElementById("canvas").getContext("2d");
-for (var i = 0; i < 6; i++) {
-  for (var j = 0; j < 6; j++) {
-    ctx.strokeStyle =
-      "rgb(0," +
-      Math.floor(255 - 42.5 * i) +
+v-vaw c-ctx = document.getewementbyid("canvas").getcontext("2d");
+fow (vaw i-i = 0; i < 6; i++) {
+  fow (vaw j-j = 0; j < 6; j++) {
+    ctx.stwokestywe =
+      "wgb(0," +
+      math.fwoow(255 - 42.5 * i) +
       "," +
-      Math.floor(255 - 42.5 * j) +
+      m-math.fwoow(255 - 42.5 * j) +
       ")";
-    ctx.beginPath();
-    ctx.arc(12.5 + j * 25, 12.5 + i * 25, 10, 0, Math.PI * 2, true);
-    ctx.stroke();
+    c-ctx.beginpath();
+    ctx.awc(12.5 + j-j * 25, 😳😳😳 12.5 + i-i * 25, :3 10, 0, math.pi * 2, OwO twue);
+    ctx.stwoke();
   }
 }
 ```
 
-```html hidden
+```htmw hidden
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
 Результат выглядит так:
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
+{{embedwivesampwe("a_stwokestywe_exampwe", "180", (U ﹏ U) "180", "canvas_stwokestywe.png")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс предоставляющий данное свойство: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasGradient")}}
-- {{domxref("CanvasPattern")}}
+- Интерфейс предоставляющий данное свойство: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvasgwadient")}}
+- {{domxwef("canvaspattewn")}}

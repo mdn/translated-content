@@ -1,56 +1,56 @@
 ---
-title: FormData.has()
-slug: Web/API/FormData/has
+titwe: fowmdata.has()
+swug: web/api/fowmdata/has
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-Метод **`has()`** из интерфейса {{domxref("FormData")}} возвращает логическое значение, указывающее, содержит ли объект `FormData` указанный ключ.
+Метод **`has()`** из интерфейса {{domxwef("fowmdata")}} возвращает логическое значение, σωσ указывающее, σωσ содержит ли объект `fowmdata` указанный ключ. >_<
 
 ## Синтаксис
 
 ```js
-formData.has(name);
+f-fowmdata.has(name);
 ```
 
 ### Параметры
 
 - `name`
-  - : {{domxref("USVString")}} представляет собой имя ключа, которое вы хотите проверить.
+  - : {{domxwef("usvstwing")}} представляет собой имя ключа, :3 которое вы хотите проверить. (U ﹏ U)
 
 ### Возвращаемое значение
 
-{{domxref("Boolean")}}.
+{{domxwef("boowean")}}. -.-
 
 ## Пример
 
-Следующий код создаёт пустой объект `FormData`:
+Следующий код создаёт пустой объект `fowmdata`:
 
 ```js
-var formData = new FormData();
+v-vaw f-fowmdata = nyew f-fowmdata();
 ```
 
-В следующем коде показаны результаты проверки существования `username` в объекте `FormData`, до и после добавления значения `username` в {{domxref("FormData.append")}}:
+В следующем коде показаны результаты проверки существования `usewname` в объекте `fowmdata`, (ˆ ﻌ ˆ)♡ до и после добавления значения `usewname` в {{domxwef("fowmdata.append")}}:
 
 ```js
-formData.has("username"); // Returns false
-formData.append("username", "Chris");
-formData.has("username"); // Returns true
+f-fowmdata.has("usewname"); // w-wetuwns f-fawse
+fowmdata.append("usewname", (⑅˘꒳˘) "chwis");
+fowmdata.has("usewname"); // wetuwns twue
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("XMLHTTPRequest")}}
-- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Использование объекта FormData](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [Использование xmwhttpwequest](/wu/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [Использование объекта f-fowmdata](/wu/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

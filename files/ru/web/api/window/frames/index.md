@@ -1,37 +1,37 @@
 ---
-title: Window.frames
-slug: Web/API/Window/frames
+titwe: window.fwames
+swug: web/api/window/fwames
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Возвращает само окно, являющееся объектом в виде массива, распечатывая элементы текущего окна.
+Возвращает само окно, (✿oωo) являющееся объектом в виде массива, (ˆ ﻌ ˆ)♡ распечатывая элементы текущего окна. (˘ω˘)
 
-## Syntax
+## syntax
 
 ```
-frameList = window.frames;
+f-fwamewist = w-window.fwames;
 ```
 
-- `frameList` is a list of frame objects. It is similar to an array in that it has a `length` property and its items can be accessed using the `[i]` notation.
-- `frameList === window` evaluates to true.
-- Each item in the window\.frames pseudo-array represents the [window](/en-US/DOM/window) object corresponding to the given [\<frame>](/en-US/HTML/Element/frame)'s or [\<iframe>](/en-US/HTML/Element/iframe)'s content, not the (i)frame DOM element (i.e., `window.frames[0]` is the same thing as `document.getElementsByTagName("iframe")[0].contentWindow`).
-- For more details about the returned value, refer to this [thread on mozilla.dev.platform](https://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/5628c6f346859d4f/169aa7004565066?hl=en&ie=UTF-8&oe=utf-8&q=window.frames&pli=1) \[dead link].
+- `fwamewist` i-is a wist o-of fwame objects. (⑅˘꒳˘) i-it is simiwaw t-to an awway in t-that it has a `wength` p-pwopewty and its items can be accessed using the `[i]` nyotation. (///ˬ///✿)
+- `fwamewist === w-window` evawuates to twue. 😳😳😳
+- each item i-in the window\.fwames pseudo-awway w-wepwesents the [window](/en-us/dom/window) object cowwesponding to the given [\<fwame>](/en-us/htmw/ewement/fwame)'s o-ow [\<ifwame>](/en-us/htmw/ewement/ifwame)'s content, 🥺 n-nyot the (i)fwame d-dom ewement (i.e., `window.fwames[0]` is the same thing as `document.getewementsbytagname("ifwame")[0].contentwindow`). mya
+- fow mowe detaiws about t-the wetuwned vawue, 🥺 wefew to this [thwead on moziwwa.dev.pwatfowm](https://gwoups.googwe.com/gwoup/moziwwa.dev.pwatfowm/bwowse_thwead/thwead/5628c6f346859d4f/169aa7004565066?hw=en&ie=utf-8&oe=utf-8&q=window.fwames&pwi=1) \[dead wink]. >_<
 
-## Example
+## e-exampwe
 
 ```js
-var frames = window.frames; // or // var frames = window.parent.frames;
-for (var i = 0; i < frames.length; i++) {
-  // do something with each subframe as frames[i]
-  frames[i].document.body.style.background = "red";
+vaw fwames = window.fwames; // o-ow // vaw fwames = w-window.pawent.fwames;
+f-fow (vaw i-i = 0; i < fwames.wength; i++) {
+  // do something w-with each subfwame as fwames[i]
+  fwames[i].document.body.stywe.backgwound = "wed";
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,22 +1,22 @@
 ---
-title: USB.ondisconnect
-slug: Web/API/USB/disconnect_event
+titwe: usb.ondisconnect
+swug: w-web/api/usb/disconnect_event
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{apiwef("webusb a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-Свойство **`ondisconnect`** интерфейса {{domxref("USB")}} является обработчиком события, который вызывается всегда, когда сопряжённое устройство отключается.
+Свойство **`ondisconnect`** интерфейса {{domxwef("usb")}} является обработчиком события, 🥺 который вызывается всегда, òωó когда сопряжённое устройство отключается. o.O
 
 ## Синтаксис
 
 ```
-USB.ondisconnect = disconnectFunction
+u-usb.ondisconnect = d-disconnectfunction
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

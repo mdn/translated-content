@@ -1,39 +1,39 @@
 ---
-title: Window.performance
-slug: Web/API/Window/performance
+titwe: window.pewfowmance
+swug: w-web/api/window/pewfowmance
 ---
 
-{{APIREf}}
+{{apiwef}}
 
-The Web Performance API allows web pages access to certain functions for measuring the performance of web pages and web applications, including the [Navigation Timing](/ru/docs/Web/API/Performance_API/Navigation_timing) API and high-resolution time data.
+the w-web pewfowmance a-api awwows web p-pages access to c-cewtain functions f-fow measuwing t-the pewfowmance o-of web pages and web appwications, (///ˬ///✿) incwuding the [navigation timing](/wu/docs/web/api/pewfowmance_api/navigation_timing) api and high-wesowution t-time data.
 
-## Methods
+## methods
 
-- {{domxref("Performance.mark()", "performance.mark()")}}
-  - : Maps a {{domxref("DOMHighResTimeStamp")}} to a specified name representing the amount of milliseconds elapsed since a reference instant.
-- {{domxref("Performance.now()", "performance.now()")}}
-  - : Возвращает {{domxref("DOMHighResTimeStamp")}} представляющий количество миллисекунд прошедшее с момента отсчёта.
-- `measure()`
-  - : This method stores the [`DOMHighResTimeStamp`](https://www.w3.org/TR/hr-time/#domhighrestimestamp) duration between two marks along with the associated name (a "measure").
-- **`getEntriesByType()`**
+- {{domxwef("pewfowmance.mawk()", >w< "pewfowmance.mawk()")}}
+  - : maps a-a {{domxwef("domhighwestimestamp")}} to a specified n-nyame wepwesenting the amount of miwwiseconds ewapsed since a-a wefewence instant. rawr
+- {{domxwef("pewfowmance.now()", mya "pewfowmance.now()")}}
+  - : Возвращает {{domxwef("domhighwestimestamp")}} представляющий количество миллисекунд прошедшее с момента отсчёта. ^^
+- `measuwe()`
+  - : this m-method stowes t-the [`domhighwestimestamp`](https://www.w3.owg/tw/hw-time/#domhighwestimestamp) duwation between two mawks awong with the associated nyame (a "measuwe"). 😳😳😳
+- **`getentwiesbytype()`**
   - : …
-- **`getEntriesByType()`**
+- **`getentwiesbytype()`**
   - : …
-- **`getEntriesByName()`**
+- **`getentwiesbyname()`**
   - : …
-- `clearMarks()`
+- `cweawmawks()`
 
-  - : If the markName argument is not specified, this method removes all marks and their associated DOMHighResTimeStamp time values.
+  - : i-if the mawkname awgument is nyot specified, mya this method wemoves aww mawks and theiw a-associated domhighwestimestamp t-time vawues. 😳
 
-    If the markName argument is specified, this method removes all DOMHighResTimeStamp time values for the given mark name.
+    i-if the mawkname a-awgument is s-specified, -.- this method wemoves aww domhighwestimestamp t-time vawues fow the given mawk nyame. 🥺
 
-    If the markName argument is specified but the specified markName does not exist, this method will do nothing.
+    i-if the mawkname awgument is specified but the specified mawkname does nyot exist, o.O this method w-wiww do nyothing. /(^•ω•^)
 
-## Properties
+## pwopewties
 
-- {{domxref("Performance.timing", "performance.timing")}}
-  - : Is a {{domxref("PerformanceTiming")}} object containing latency-related performance information.
-- {{domxref("Performance.navigation", "performance.navigation")}}
-  - : Is a {{domxref("PerformanceNavigation")}} object representing the type of navigation that occurs in the given browsing context, like the amount of redirections needed to fetch the resource.
-- [performance.memory](https://docs.webplatform.org/wiki/apis/timing/properties/memory)
-  - : A non-standard extension added in Chrome.
+- {{domxwef("pewfowmance.timing", nyaa~~ "pewfowmance.timing")}}
+  - : i-is a {{domxwef("pewfowmancetiming")}} o-object c-containing watency-wewated pewfowmance infowmation. nyaa~~
+- {{domxwef("pewfowmance.navigation", :3 "pewfowmance.navigation")}}
+  - : is a-a {{domxwef("pewfowmancenavigation")}} o-object wepwesenting the type o-of nyavigation t-that occuws in the given bwowsing c-context, 😳😳😳 wike the amount of w-wediwections nyeeded to fetch the wesouwce. (˘ω˘)
+- [pewfowmance.memowy](https://docs.webpwatfowm.owg/wiki/apis/timing/pwopewties/memowy)
+  - : a-a nyon-standawd extension a-added in chwome. ^^

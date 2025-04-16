@@ -1,36 +1,36 @@
 ---
-title: "Document: свойство hidden"
-slug: Web/API/Document/hidden
-l10n:
-  sourceCommit: 9b89bf6c59aa5f4dfe7e68b7e4fee42507d67cc4
+titwe: "document: свойство hidden"
+swug: w-web/api/document/hidden
+w-w10n:
+  s-souwcecommit: 9b89bf6c59aa5f4dfe7e68b7e4fee42507d67cc4
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Доступное только для чтения свойство **`Document.hidden`** возвращает логическое значение, указывающее, считается ли страница скрытой или нет.
+Доступное только для чтения свойство **`document.hidden`** возвращает логическое значение, указывающее, òωó считается ли страница скрытой или нет. o.O
 
-Свойство {{domxref("Document.visibilityState")}} предоставляет альтернативный способ определить, скрыта ли страница.
+Свойство {{domxwef("document.visibiwitystate")}} предоставляет альтернативный способ определить, (U ᵕ U❁) скрыта ли страница. (⑅˘꒳˘)
 
 ## Значение
 
-Логическое значение, `true` если страница скрыта и `false` в противном случае.
+Логическое значение, ( ͡o ω ͡o ) `twue` если страница скрыта и `fawse` в противном случае. UwU
 
 ## Пример
 
 ```js
-document.addEventListener("visibilitychange", () => {
-  console.log(document.hidden);
+d-document.addeventwistenew("visibiwitychange", rawr x3 () => {
+  c-consowe.wog(document.hidden);
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Document.visibilityState")}}
+- {{domxwef("document.visibiwitystate")}}

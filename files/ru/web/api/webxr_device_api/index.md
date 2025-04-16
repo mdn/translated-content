@@ -1,173 +1,173 @@
 ---
-title: WebXR Device API
-slug: Web/API/WebXR_Device_API
+titwe: webxw device api
+swug: w-web/api/webxw_device_api
 ---
 
-{{DefaultAPISidebar("WebXR Device API")}}
+{{defauwtapisidebaw("webxw d-device a-api")}}
 
-**WebXR** is a group of standards which are used together to support rendering 3D scenes to hardware designed for presenting virtual worlds (**virtual reality**, or **VR**), or for adding graphical imagery to the real world, (**augmented reality**, or **AR**). The **WebXR Device API** implements the core of the WebXR feature set, managing the selection of output devices, render the 3D scene to the chosen device at the appropriate frame rate, and manage motion vectors created using input controllers.
+**webxw** i-is a gwoup of s-standawds which a-awe used togethew t-to suppowt wendewing 3d s-scenes to hawdwawe designed fow pwesenting viwtuaw wowwds (**viwtuaw weawity**, XD ow **vw**), >_< o-ow fow adding gwaphicaw imagewy to the weaw w-wowwd, >w< (**augmented weawity**, /(^•ω•^) o-ow **aw**). :3 the **webxw device api** impwements the cowe of the w-webxw featuwe set, ʘwʘ managing the s-sewection of o-output devices, (˘ω˘) wendew the 3d scene to the chosen device at the appwopwiate fwame w-wate, (ꈍᴗꈍ) and manage motion vectows cweated using input contwowwews. ^^
 
-WebXR-compatible devices include fully-immersive 3D headsets with motion and orientation tracking, eyeglasses which overlay graphics atop the real world scene passing through the frames, and handheld mobile phones which augment reality by capturing the world with a camera and augment that scene with computer-generated imagery.
+webxw-compatibwe d-devices incwude fuwwy-immewsive 3d h-headsets w-with motion and o-owientation twacking, ^^ e-eyegwasses which ovewway gwaphics atop the w-weaw wowwd scene passing thwough the fwames, ( ͡o ω ͡o ) and h-handhewd mobiwe phones which augment weawity by captuwing the wowwd with a camewa and augment t-that scene with computew-genewated i-imagewy. -.-
 
-To accomplish these things, the WebXR Device API provides the following key capabilities:
+to a-accompwish these t-things, ^^;; the webxw device api pwovides the fowwowing key capabiwities:
 
-- Find compatible VR or AR output devices
-- Render a 3D scene to the device at an appropriate frame rate
-- (Optionally) mirror the output to a 2D display
-- Create vectors representing the movements of input controls
+- f-find c-compatibwe vw ow aw output devices
+- w-wendew a 3d s-scene to the device at an appwopwiate f-fwame wate
+- (optionawwy) miwwow the output t-to a 2d dispway
+- cweate vectows wepwesenting t-the movements of input contwows
 
-At the most basic level, a scene is presented in 3D by computing the perspective to apply to the scene in order to render it from the viewpoint of each of the user's eyes by computing the position of each eye and rendering the scene from that position, looking in the direction the user is currently facing. Each of these two images is rendered into a single framebuffer, with the left eye's rendered image on the left and the right eye's viewpoint rendered into the right half of the buffer. Once both eyes' perspectives on the scene have been rendered, the resulting framebuffer is delivered to the WebXR device to be presented to the user through their headset or other appropriate display device.
+a-at the most basic wevew, ^•ﻌ•^ a scene i-is pwesented i-in 3d by computing the pewspective to appwy to the scene in owdew to wendew it fwom the viewpoint of each of the u-usew's eyes by c-computing the position of each eye a-and wendewing t-the scene fwom t-that position, (˘ω˘) wooking in the diwection the usew is cuwwentwy facing. o.O e-each of these two images is wendewed into a singwe fwamebuffew, (✿oωo) with the weft e-eye's wendewed image on the w-weft and the wight e-eye's viewpoint w-wendewed into the wight hawf o-of the buffew. 😳😳😳 once b-both eyes' pewspectives o-on the s-scene have been wendewed, (ꈍᴗꈍ) the wesuwting fwamebuffew i-is dewivewed t-to the webxw d-device to be pwesented t-to the usew t-thwough theiw headset ow othew appwopwiate dispway device. σωσ
 
-## WebXR Device API concepts and usage
+## w-webxw device api concepts and usage
 
-Example WebXR hardware setup
+exampwe webxw hawdwawe setup
 
-![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labeled "Position sensor"](hw-setup.png)
+![sketch of a pewson in a chaiw with weawing g-goggwes wabewwed "head mounted dispway (hmd)" facing a monitow w-with a webcam w-wabewed "position s-sensow"](hw-setup.png)
 
-While the older [WebVR API](/ru/docs/Web/API/WebVR_API) was designed solely to support Virtual Reality (VR), WebXR provides support for both VR and Augmented Reality (AR) on the web. Support for AR functionality is added by the WebXR Augmented Reality Module.
+whiwe t-the owdew [webvw api](/wu/docs/web/api/webvw_api) w-was designed sowewy t-to suppowt viwtuaw weawity (vw), UwU webxw pwovides suppowt fow both vw and augmented weawity (aw) o-on the web. ^•ﻌ•^ suppowt fow aw f-functionawity is added by the webxw a-augmented weawity m-moduwe. mya
 
-A typical XR device can have either 3 or 6 degrees of freedom and might or might not have an external positional sensor.
+a typicaw xw device can have eithew 3 o-ow 6 degwees o-of fweedom and might ow might n-nyot have an extewnaw p-positionaw sensow. /(^•ω•^)
 
-The equipment may also include an accelerometer, barometer, or other sensors which are used to sense when the user moves through space, rotates their head, or the like.
+the equipment may awso incwude an accewewometew, rawr bawometew, nyaa~~ o-ow othew sensows w-which awe u-used to sense when the usew moves t-thwough space, ( ͡o ω ͡o ) w-wotates theiw head, σωσ ow the wike. (✿oωo)
 
-## Accessing the WebXR API
+## a-accessing the webxw api
 
-To gain access to the WebXR API within the context of a given window, use the {{domxref("navigator.xr")}} property, which returns an {{domxref("XRSystem")}} object through which the entire WebXR Device APi is then exposed.
+to gain access to the webxw api within the context o-of a given window, (///ˬ///✿) u-use the {{domxwef("navigatow.xw")}} pwopewty, σωσ which wetuwns a-an {{domxwef("xwsystem")}} o-object thwough which the entiwe webxw device api is t-then exposed. UwU
 
-- {{domxref("navigator.xr")}} {{ReadOnlyInline}}
-  - : This property, added to the {{domxref("Navigator")}} interface, returns the {{domxref("XRSystem")}} object through which the WebXR API is exposed. If this property is missing or `null`, WebXR is not available.
+- {{domxwef("navigatow.xw")}} {{weadonwyinwine}}
+  - : this pwopewty, (⑅˘꒳˘) added to the {{domxwef("navigatow")}} intewface, /(^•ω•^) wetuwns the {{domxwef("xwsystem")}} o-object thwough which the webxw api is e-exposed. -.- if this p-pwopewty is missing ow `nuww`, (ˆ ﻌ ˆ)♡ webxw is nyot avaiwabwe. nyaa~~
 
-## Интерфейсы WebXR
+## Интерфейсы webxw
 
-- {{DOMxRef("XR")}}
-  - : The {{domxref("Navigator.xr", "navigator.xr")}} property returns the window's instance of {{domxref("XRSystem")}}, which is the mechanism by which your code accesses the WebXR API. Using the `XRSystem` interface, you can create {{domxref("XRSession")}}s to represent actual AR and/or VR sessions.
-- {{DOMxRef("XRFrame")}}
-  - : While presenting an XR session, the state of all tracked objects which make up the session are represented by an `XRFrame`. To get an `XRFrame`, call the session's {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method, providing a callback which will be called with the `XRFrame` once available. Events which communicate tracking states will also use `XRFrame` to contain that information.
-- {{DOMxRef("XRRenderState")}}
-  - : Provides a set of configurable properties which change how the imagery output by an `XRSession` is composited.
-- {{DOMxRef("XRSession")}}
-  - : Provides the interface for interacting with XR hardware. Once an `XRSession` is obtained from {{domxref("XRSystem.requestSession", "navigator.xr.requestSession()")}}, the session can be used to check the position and orientation of the viewer, query the device for environment information, and present the virtual or augmented world to the user.
-- {{DOMxRef("XRSpace")}}
-  - : `XRSpace` is an opaque base class on which all virtual coordinate system interfaces are based. Positions in WebXR are always expressed in relation to a particular `XRSpace` at the time at which a particular {{domxref("XFrame")}} takes place. The space's coordinate system has its origin at the a given physical position.
-- {{DOMxRef("XRReferenceSpace")}}
-  - : A subclass of {{domxref("XRSpace")}} which is used to identify a spatial relationship in relation to the user's physical environment. The `XRReferenceSpace` coordinate system is expected to remain unchanged through the lifespan of the {{domxref("XRSession")}}.The world has no boundaries and extends infinitely in every direction.
-- {{DOMxRef("XRBoundedReferenceSpace")}}
-  - : `XRBoundedReferenceSpace` extends the {{domxref("XRReferenceSpace")}} coordinate system to further include support for a finite world with set boundaries. Unlike `XRReferenceSpace`, the origin must be located on the floor (that is, _y_ = 0 at the floor). The x and z components of the origin are typically presumed to be located at or near the center of the room or surface.
-- {{DOMxRef("XRView")}}
-  - : Represents a single view into the XR scene for a particular frame. Each `XRView` corresponds to the video display surface used to present the scene to the user. For example, a given XR device might have two views: one for the left eye and one for the right. Each view has an offset used to shift the position of the view relative to the camera, in order to allow for creating stereographic effects.
-- {{DOMxRef("XRViewport")}}
-  - : Describes a viewport. A viewport is a rectangular portion of a graphic surface. In WebXR, a viewport represents the area of a drawing surface corresponding to a particular {{domxref("XRView")}}, such as the portion of the WebGL framebuffer used to render one of the two eyes' perspectives on the scene.
-- {{DOMxRef("XRRigidTransform")}}
-  - : A transform defined using a position and orientation in the virtual space's coordinate system as described by the {{domxref("XRSpace")}}.
-- {{DOMxRef("XRPose")}}
-  - : Describes a position and orientation in space relative to an {{domxref("XRSpace")}}.
-- {{DOMxRef("XRViewerPose")}}
-  - : Based on {{domxref("XRPose")}}, `XRViewerPose` specifies the state of a viewer of the WebXR scene as indicated by the XR device. Included is an array of {{domxref("XRView")}} objects, each representing one perspective on the scene. For example, it takes two views to create the stereoscopic view as perceived by human vision—one for the left eye and a second for the right eye. One view is offset to the left slightly from the viewer's position, and the other view is offset to the right by the same distance. The view list can also be used to represent the perspectives of each of the spectators of a scene, in a multi-user environment.
-- {{DOMxRef("XRInputSource")}}
-  - : Represents any input device the user can use to perform targeted actions within the same virtual space as the viewer. Input sources may include devices such as hand controllers, optical tracking systems, and other devices which are explicitly associated with the XR device. Other input devices such as keyboards, mice, and gamepads are not presented as `XRInputSource` instances.
-- {{DOMxRef("XRWebGLLayer")}}
-  - : A layer which serves as a [WebGL](/ru/docs/Web/API/WebGL_API) frame buffer into which a scene's view is rendered. Using WebGL to render the scene gains substantial performance benefits due to graphics acceleration.
+- {{domxwef("xw")}}
+  - : t-the {{domxwef("navigatow.xw", ʘwʘ "navigatow.xw")}} p-pwopewty wetuwns the window's instance of {{domxwef("xwsystem")}}, :3 which is t-the mechanism by which youw code a-accesses the webxw api. (U ᵕ U❁) using the `xwsystem` intewface, (U ﹏ U) you can c-cweate {{domxwef("xwsession")}}s to wepwesent actuaw a-aw and/ow v-vw sessions. ^^
+- {{domxwef("xwfwame")}}
+  - : whiwe p-pwesenting an xw session, òωó the s-state of aww twacked o-objects which m-make up the session awe wepwesented b-by an `xwfwame`. /(^•ω•^) t-to get an `xwfwame`, 😳😳😳 caww the session's {{domxwef("xwsession.wequestanimationfwame", :3 "wequestanimationfwame()")}} m-method, (///ˬ///✿) p-pwoviding a cawwback w-which wiww be cawwed with the `xwfwame` once a-avaiwabwe. rawr x3 events which communicate t-twacking s-states wiww awso use `xwfwame` to contain that infowmation. (U ᵕ U❁)
+- {{domxwef("xwwendewstate")}}
+  - : p-pwovides a set o-of configuwabwe p-pwopewties which c-change how the imagewy output b-by an `xwsession` is composited. (⑅˘꒳˘)
+- {{domxwef("xwsession")}}
+  - : pwovides the intewface fow intewacting with xw hawdwawe. (˘ω˘) once a-an `xwsession` is obtained fwom {{domxwef("xwsystem.wequestsession", :3 "navigatow.xw.wequestsession()")}}, XD t-the session can be used t-to check the position and owientation o-of the viewew, >_< quewy the d-device fow enviwonment i-infowmation, (✿oωo) a-and pwesent t-the viwtuaw ow augmented w-wowwd to the usew. (ꈍᴗꈍ)
+- {{domxwef("xwspace")}}
+  - : `xwspace` is an opaque base cwass on which aww viwtuaw coowdinate system intewfaces awe b-based. XD positions i-in webxw awe a-awways expwessed in wewation to a-a pawticuwaw `xwspace` at the time at which a pawticuwaw {{domxwef("xfwame")}} takes pwace. :3 the s-space's coowdinate s-system has its owigin at the a-a given physicaw position. mya
+- {{domxwef("xwwefewencespace")}}
+  - : a subcwass of {{domxwef("xwspace")}} w-which is u-used to identify a spatiaw wewationship i-in wewation t-to the usew's physicaw enviwonment. òωó the `xwwefewencespace` coowdinate system is expected to w-wemain unchanged t-thwough the wifespan o-of the {{domxwef("xwsession")}}.the w-wowwd h-has nyo boundawies and extends i-infinitewy in evewy d-diwection.
+- {{domxwef("xwboundedwefewencespace")}}
+  - : `xwboundedwefewencespace` extends t-the {{domxwef("xwwefewencespace")}} c-coowdinate system to fuwthew i-incwude suppowt fow a finite wowwd with set boundawies. u-unwike `xwwefewencespace`, nyaa~~ the owigin m-must be wocated o-on the fwoow (that is, 🥺 _y_ = 0 at t-the fwoow). -.- the x and z components of the owigin a-awe typicawwy p-pwesumed to be w-wocated at ow nyeaw the centew of the woom ow suwface. 🥺
+- {{domxwef("xwview")}}
+  - : wepwesents a-a singwe view into the xw scene fow a pawticuwaw f-fwame. each `xwview` c-cowwesponds to the video dispway s-suwface used to pwesent the s-scene to the u-usew. (˘ω˘) fow exampwe, òωó a given xw device might have t-two views: one fow the weft eye and one fow the w-wight. UwU each view h-has an offset used to shift the p-position of the view wewative to t-the camewa, ^•ﻌ•^ in o-owdew to awwow f-fow cweating steweogwaphic effects. mya
+- {{domxwef("xwviewpowt")}}
+  - : descwibes a viewpowt. (✿oωo) a viewpowt is a wectanguwaw powtion of a gwaphic suwface. XD in webxw, a viewpowt wepwesents the awea of a dwawing suwface cowwesponding to a pawticuwaw {{domxwef("xwview")}}, :3 s-such as t-the powtion of the webgw fwamebuffew used to wendew o-one of the t-two eyes' pewspectives o-on the scene. (U ﹏ U)
+- {{domxwef("xwwigidtwansfowm")}}
+  - : a twansfowm d-defined using a position a-and owientation i-in the viwtuaw space's coowdinate s-system as descwibed by the {{domxwef("xwspace")}}. UwU
+- {{domxwef("xwpose")}}
+  - : d-descwibes a p-position and owientation in space wewative to an {{domxwef("xwspace")}}. ʘwʘ
+- {{domxwef("xwviewewpose")}}
+  - : b-based o-on {{domxwef("xwpose")}}, >w< `xwviewewpose` s-specifies t-the state o-of a viewew of t-the webxw scene a-as indicated by t-the xw device. 😳😳😳 incwuded i-is an awway of {{domxwef("xwview")}} o-objects, rawr e-each wepwesenting o-one pewspective on the scene. ^•ﻌ•^ f-fow exampwe, σωσ it takes two views to cweate t-the steweoscopic view as pewceived b-by human vision—one f-fow the w-weft eye and a second fow the wight e-eye. :3 one view is offset to t-the weft swightwy fwom the viewew's p-position, rawr x3 and the othew view i-is offset to the wight by the same distance. nyaa~~ the view wist can awso be used to w-wepwesent the pewspectives of each o-of the spectatows o-of a scene, :3 in a muwti-usew enviwonment. >w<
+- {{domxwef("xwinputsouwce")}}
+  - : wepwesents any i-input device the usew can use t-to pewfowm tawgeted a-actions within t-the same viwtuaw space as the viewew. rawr input souwces m-may incwude d-devices such as hand contwowwews, 😳 o-opticaw twacking systems, 😳 and othew devices w-which awe expwicitwy associated w-with the xw device. 🥺 o-othew input d-devices such as keyboawds, rawr x3 mice, a-and gamepads awe n-not pwesented a-as `xwinputsouwce` i-instances. ^^
+- {{domxwef("xwwebgwwayew")}}
+  - : a wayew which s-sewves as a [webgw](/wu/docs/web/api/webgw_api) f-fwame buffew into w-which a scene's v-view is wendewed. ( ͡o ω ͡o ) u-using webgw t-to wendew the scene g-gains substantiaw p-pewfowmance benefits due t-to gwaphics accewewation. XD
 
-### Интерфейсы событий WebXR
+### Интерфейсы событий webxw
 
-Следующие интерфейсы представляют события WebXR API.
+Следующие интерфейсы представляют события w-webxw api. ^^
 
-- {{domxref("XRInputSourceEvent")}}
-  - : Sent when the state of an {{domxref("XRInputSource")}} changes. This can happen, for example, when the position and/or orientation of the device changes, or when buttons are pressed or released.
-- {{domxref("XRInputSourcesChangeEvent")}}
-  - : Sent to indicate that the set of available input sources has changed for the {{domxref("XRSession")}}.
-- {{domxref("XRReferenceSpaceEvent")}}
-  - : Sent when the state of an {{domxref("XRReferenceSpace")}} changes.
-- {{domxref("XRSessionEvent")}}
-  - : Sent to indicate that the state of an {{domxref("XRSession")}} has changed. For example, if the position and/or orient
+- {{domxwef("xwinputsouwceevent")}}
+  - : s-sent when the state o-of an {{domxwef("xwinputsouwce")}} c-changes. (⑅˘꒳˘) this can happen, (⑅˘꒳˘) fow exampwe, ^•ﻌ•^ when the position a-and/ow owientation o-of the device c-changes, ( ͡o ω ͡o ) ow when buttons awe pwessed ow weweased. ( ͡o ω ͡o )
+- {{domxwef("xwinputsouwceschangeevent")}}
+  - : sent to indicate t-that the set o-of avaiwabwe input souwces has c-changed fow the {{domxwef("xwsession")}}. (✿oωo)
+- {{domxwef("xwwefewencespaceevent")}}
+  - : s-sent when the state of an {{domxwef("xwwefewencespace")}} changes. 😳😳😳
+- {{domxwef("xwsessionevent")}}
+  - : sent to indicate t-that the state o-of an {{domxwef("xwsession")}} h-has changed. OwO fow e-exampwe, ^^ if the position and/ow owient
 
-## Расширения к WebGL API
+## Расширения к w-webgw api
 
-WebGL API расширяется спецификацией WebXR для того, чтобы дополнить контекст WebGL, чтобы с помощью него можно было отрисовывать изображение для отображения на устройствах WebXR.
+webgw a-api расширяется спецификацией webxw для того, rawr x3 чтобы дополнить контекст webgw, 🥺 чтобы с помощью него можно было отрисовывать изображение для отображения на устройствах w-webxw. (ˆ ﻌ ˆ)♡
 
-- {{domxref("WebGLRenderingContextBase.makeXRCompatibile","WebGLRenderingContextBase.makeXRCompatibile()")}}
-  - : Настраивает контекст WebGL для совместимости с WebXR. Если при создании контекста опция {{domxref("WebGLContextAttributes.xrCompatible", "xrCompatible")}} не была установлена как `true`, необходимо вызвать метод `makeXRCompatible()` до использования контекста WebGL для рендеринга WebXR. Возвращает {{jsxref("Promise")}}, выполняющийся, когда контекст был подготовлен, или отклонён, если контекст не может быть настроен для работы с WebXR.
+- {{domxwef("webgwwendewingcontextbase.makexwcompatibiwe","webgwwendewingcontextbase.makexwcompatibiwe()")}}
+  - : Настраивает контекст webgw для совместимости с webxw. ( ͡o ω ͡o ) Если при создании контекста опция {{domxwef("webgwcontextattwibutes.xwcompatibwe", >w< "xwcompatibwe")}} не была установлена как `twue`, /(^•ω•^) необходимо вызвать метод `makexwcompatibwe()` до использования контекста webgw для рендеринга w-webxw. 😳😳😳 Возвращает {{jsxwef("pwomise")}}, (U ᵕ U❁) выполняющийся, (˘ω˘) когда контекст был подготовлен, 😳 или отклонён, (ꈍᴗꈍ) если контекст не может быть настроен для работы с webxw. :3
 
 ## Руководства и уроки
 
-Следующие руководства и уроки помогут вам изучить, как работает WebXR и низкоуровневые функции 3D и VR/AR графики.
+Следующие руководства и уроки помогут вам изучить, /(^•ω•^) как работает w-webxw и низкоуровневые функции 3d и v-vw/aw графики. ^^;;
 
 ### Основы
 
-- [Fundamentals of WebXR](/ru/docs/Web/API/WebXR_Device_API/Fundamentals)
-  - : Before diving into the details of how to create content using WebXR, it may be helpful to read this overview of the technology, which includes introductions to terminology that may be unfamiliar to you, or which may be used in a new way.
-- [Matrix math for the web](/ru/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
-  - : A guide covering how matrices can be used on the web, including both for CSS transforms and for WebGL purposes, as well as to handle the positioning and orientation of objects in WebXR contexts.
-- [WebXR application life cycle](/ru/docs/Web/API/WebXR_Device_API/Lifecycle)
-  - : An overview of the overall life cycle of a WebXR application, from startup to shutdown. This article serves as an introduction to the basics of what's involved in creating a WebXR experience without diving into the code in detail. It's a good way to prepare for the next steps.
+- [fundamentaws of webxw](/wu/docs/web/api/webxw_device_api/fundamentaws)
+  - : b-befowe d-diving into the detaiws of how to c-cweate content using webxw, o.O it m-may be hewpfuw t-to wead this ovewview o-of the technowogy, 😳 w-which incwudes intwoductions t-to tewminowogy t-that may be u-unfamiwiaw to you, UwU ow which may b-be used in a nyew way. >w<
+- [matwix math fow the web](/wu/docs/web/api/webgw_api/matwix_math_fow_the_web)
+  - : a-a g-guide covewing how m-matwices can be used on the web, o.O incwuding both fow css twansfowms and fow webgw p-puwposes, (˘ω˘) as weww as to handwe t-the positioning a-and owientation of objects in webxw contexts. òωó
+- [webxw a-appwication wife cycwe](/wu/docs/web/api/webxw_device_api/wifecycwe)
+  - : a-an ovewview o-of the ovewaww w-wife cycwe of a w-webxw appwication, nyaa~~ f-fwom stawtup to shutdown. ( ͡o ω ͡o ) this awticwe sewves as an intwoduction to the basics o-of nyani's invowved in cweating a-a webxw expewience without diving into the code in detaiw. 😳😳😳 it's a-a good way to pwepawe fow the nyext steps. ^•ﻌ•^
 
 ### Создание приложения смешанной реальности
 
-- [Starting up and shutting down a WebXR session](/ru/docs/Web/API/WebXR_Device_API/Startup_and_shutdown)
-  - : Before actually presenting a scene using an XR device such as a headset or goggles, you need to create a WebXR session bound to a rendering layer that draws the scene for presentation in each of the XR device's displays so that the 3D effect can be presented to the user. This guide covers how to create and stop WebXR sessions.
-- [Geometry and reference spaces in WebXR](/ru/docs/Web/API/WebXR_Device_API/Geometry)
-  - : In this guide, the required concepts of 3D geometry are briefly reviewed, and the fundamentals of how that geometry is represented in WebXR are detailed. Learn how reference spaces are used to position objects—and the viewer—and the differences among the available types of reference space, as well as their use cases.
-- [Spatial tracking in WebXR](/ru/docs/Web/API/WebXR_Device_API/Spatial_tracking)
-  - : This guide describes how objects—including the user's body and its parts—are located in space, and how their movement and orientation relative to one another is monitored and managed over time. This article explains the relationship between spaces, poses, viewers, and views.
-- [Rendering and the WebXR frame animation callback](/ru/docs/Web/API/WebXR_Device_API/Rendering)
-  - : Starting with how you schedule frames to be rendered, this guide then continues to cover how to determine the placement of objects in the view and how to then render them into the WebGL buffer used for each of the two eyes' views of the scene.
-- [Viewpoints and viewers: Simulating cameras in WebXR](/ru/docs/Web/API/WebXR_Device_API/Cameras)
-  - : WebGL (and therefore WebXR) doesn't really have a concept of a camera, which is the traditional concept used to represent a viewpoint in 3D graphics. In this article, we see how to simulate a camera and how to create the illusion of moving a viewer through a world in which the viewer doesn't really move.
-- [Lighting a WebXR setting](/ru/docs/Web/API/WebXR_Device_API/Lighting)
-  - : Since WebXR rendering is based upon WebGL, the same lighting techniques used for any 3D application are applied to WebXR scenes. However, there are issues specific to creating augmented and virtual reality settings that need to be considered when writing your lighting code. This article discusses those issues.
-- [Using bounded reference spaces](/ru/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces)
-  - : In this article, we examine how to use a `bounded-floor` reference space to define the boundaries of where the viewer can safely move about without leaving the area tracked by their XR hardware or colliding with a physical obstacle. On devices which support it, `bounded-floor` can be a useful tool in your repertoire.
+- [stawting up and shutting down a-a webxw session](/wu/docs/web/api/webxw_device_api/stawtup_and_shutdown)
+  - : b-befowe actuawwy pwesenting a scene u-using an xw device such as a headset ow goggwes, (˘ω˘) y-you nyeed to c-cweate a webxw session bound to a-a wendewing wayew that dwaws the s-scene fow pwesentation in each of the xw device's dispways so t-that the 3d effect can be pwesented to the usew. (˘ω˘) t-this guide covews h-how to cweate a-and stop webxw sessions. -.-
+- [geometwy and wefewence s-spaces in webxw](/wu/docs/web/api/webxw_device_api/geometwy)
+  - : in this guide, ^•ﻌ•^ the wequiwed concepts of 3d geometwy awe b-bwiefwy weviewed, /(^•ω•^) a-and the fundamentaws o-of how that g-geometwy is wepwesented in webxw awe detaiwed. (///ˬ///✿) w-weawn how wefewence s-spaces awe used to position objects—and t-the viewew—and the diffewences among the avaiwabwe t-types of wefewence space, mya as weww as theiw u-use cases. o.O
+- [spatiaw t-twacking in webxw](/wu/docs/web/api/webxw_device_api/spatiaw_twacking)
+  - : t-this guide descwibes h-how objects—incwuding t-the usew's body and its pawts—awe wocated in space, ^•ﻌ•^ a-and how theiw movement and owientation wewative t-to one anothew is monitowed and managed ovew time. (U ᵕ U❁) this awticwe e-expwains the w-wewationship b-between spaces, :3 p-poses, (///ˬ///✿) viewews, a-and views. (///ˬ///✿)
+- [wendewing and the w-webxw fwame animation cawwback](/wu/docs/web/api/webxw_device_api/wendewing)
+  - : stawting with h-how you scheduwe fwames to be wendewed, 🥺 t-this guide then continues to covew how t-to detewmine the p-pwacement of objects in the view a-and how to then wendew them into t-the webgw buffew u-used fow each of the two eyes' v-views of the s-scene. -.-
+- [viewpoints and viewews: s-simuwating camewas in webxw](/wu/docs/web/api/webxw_device_api/camewas)
+  - : webgw (and thewefowe webxw) doesn't w-weawwy have a concept of a camewa, nyaa~~ w-which is the twaditionaw concept used to w-wepwesent a viewpoint i-in 3d gwaphics. (///ˬ///✿) i-in this awticwe, 🥺 we see how t-to simuwate a c-camewa and how to cweate the iwwusion o-of moving a viewew thwough a-a wowwd in which the viewew doesn't w-weawwy move. >w<
+- [wighting a-a webxw setting](/wu/docs/web/api/webxw_device_api/wighting)
+  - : since webxw wendewing is based upon webgw, rawr x3 the s-same wighting techniques u-used fow any 3d appwication awe appwied to webxw scenes. (⑅˘꒳˘) h-howevew, thewe awe issues specific t-to cweating a-augmented and viwtuaw weawity settings that nyeed to be considewed when wwiting y-youw wighting code. σωσ this awticwe discusses those i-issues. XD
+- [using bounded wefewence s-spaces](/wu/docs/web/api/webxw_device_api/bounded_wefewence_spaces)
+  - : in t-this awticwe, we examine how to u-use a `bounded-fwoow` w-wefewence s-space to define t-the boundawies o-of whewe the viewew c-can safewy move about without weaving the awea twacked by theiw xw hawdwawe ow cowwiding with a-a physicaw obstacwe. -.- o-on devices w-which suppowt i-it, >_< `bounded-fwoow` c-can be a usefuw t-toow in youw wepewtoiwe. rawr
 
 ### Интерактивность
 
-- [Movement, orientation, and motion: A WebXR example](/ru/docs/Web/API/WebXR_Device_API/Movement_and_motion)
-  - : In this example and tutorial, we use information learned throughout the WebXR documentation to create a scene containing a rotating cube which the user can move around using both VR headset and keyboard and mouse.
-- [Inputs and input sources](/ru/docs/Web/API/WebXR_Device_API/Inputs)
-  - : A guide to input sources and how to efficiently manage the input devices being used to control the WebXR session, and how to receive and process user inputs from those devices.
-- [Targeting and hit detection](/ru/docs/Web/API/WebXR_Device_API/Targeting)
-  - : How to use an input source's targeting ray mode and targeting ray space to display a targeting ray, identify targeted surfaces or objects, and perform related tasks.
-- [Using WebXR input profiles](/ru/docs/Web/API/WebXR_Device_API/Input_profiles)
-  - : A guide to interpreting the {{Glossary("JSON")}} data provided by the [WebXR Input Profiles Registry](https://github.com/immersive-web/webxr-input-profiles/tree/master/packages/registry), which can be used to determine what options and controls are available on the user's available input devices.
-- [Supporting advanced controllers and gamepads in WebXR applications](/ru/docs/Web/WebXR_Device_API/Gamepads)
-  - : WebXR uses the {{domxref("Gamepad")}} object to describe the controls available on complex input devices (such as hand controllers with multiple buttons and/or axes) and gamepad-like devices. In this guide, learn how to make use of these devices' controls.
+- [movement, 😳😳😳 owientation, UwU and motion: a webxw exampwe](/wu/docs/web/api/webxw_device_api/movement_and_motion)
+  - : i-in this exampwe a-and tutowiaw, (U ﹏ U) we use infowmation weawned thwoughout the webxw d-documentation t-to cweate a scene c-containing a wotating cube which the usew can m-move awound using both vw headset and keyboawd a-and mouse. (˘ω˘)
+- [inputs a-and input souwces](/wu/docs/web/api/webxw_device_api/inputs)
+  - : a guide t-to input souwces and how to efficientwy m-manage t-the input devices being used to c-contwow the webxw s-session, /(^•ω•^) and h-how to weceive and p-pwocess usew i-inputs fwom those d-devices. (U ﹏ U)
+- [tawgeting and hit d-detection](/wu/docs/web/api/webxw_device_api/tawgeting)
+  - : h-how to use an input s-souwce's tawgeting way mode and tawgeting way s-space to dispway a tawgeting way, ^•ﻌ•^ i-identify tawgeted suwfaces ow o-objects, >w< and pewfowm w-wewated tasks. ʘwʘ
+- [using webxw input pwofiwes](/wu/docs/web/api/webxw_device_api/input_pwofiwes)
+  - : a-a guide to intewpweting the {{gwossawy("json")}} d-data p-pwovided by the [webxw input pwofiwes wegistwy](https://github.com/immewsive-web/webxw-input-pwofiwes/twee/mastew/packages/wegistwy), òωó w-which can b-be used to detewmine nyani options a-and contwows awe avaiwabwe on the usew's avaiwabwe i-input devices. o.O
+- [suppowting a-advanced contwowwews and gamepads i-in webxw appwications](/wu/docs/web/webxw_device_api/gamepads)
+  - : w-webxw uses the {{domxwef("gamepad")}} object to descwibe t-the contwows a-avaiwabwe on compwex i-input devices (such a-as hand contwowwews with muwtipwe buttons and/ow axes) and gamepad-wike devices. ( ͡o ω ͡o ) in this guide, mya weawn h-how to make use o-of these devices' c-contwows. >_<
 
 ### Производительность и безопасность
 
-- [WebXR performance guide](/ru/docs/Web/API/WebXR_Device_API/Performance)
-  - : Recommendations and tips to help you optimize the performance of your WebXR application.
-- [Permissions and security for WebXR](/ru/docs/Web/API/WebXR_Device_API/Permissions_and_security)
-  - : The WebXR Device API has several areas of security to contend with, from establishing feature-policy to ensuring the user intends to use the mixed reality presentation before activating it.
+- [webxw p-pewfowmance g-guide](/wu/docs/web/api/webxw_device_api/pewfowmance)
+  - : w-wecommendations and tips to h-hewp you optimize t-the pewfowmance of youw webxw a-appwication. rawr
+- [pewmissions a-and secuwity fow webxw](/wu/docs/web/api/webxw_device_api/pewmissions_and_secuwity)
+  - : the webxw d-device api has sevewaw aweas of secuwity to contend w-with, >_< fwom estabwishing featuwe-powicy t-to ensuwing t-the usew intends to use the m-mixed weawity p-pwesentation befowe a-activating it. (U ﹏ U)
 
 ### Включение другого медиаконтента
 
-- [Positional audio in a 3D environment](/ru/docs/Web/Media/3D_audio)
-  - : In 3D environments, which may either be 3D scenes rendered to the screen or a mixed reality experience experienced using a headset, it's important for audio to be performed so that it sounds like it's coming from the direction of its source. This guide covers how to accomplish this.
-- [Playing video in a 3D environment](/ru/docs/Web/Media/3D_video)
-  - : In this guide, we examine how to play video into a 3D scene. This technique can be used in both standard [WebGL](/ru/docs/Web/API/WebGL_API) applications presented on a flat computer screen, or in a [WebXR](/ru/docs/Web/API/WebXR_Device_API)-generated virtual or augmented reality environment.
+- [positionaw a-audio in a 3d e-enviwonment](/wu/docs/web/media/3d_audio)
+  - : in 3d enviwonments, rawr w-which may eithew be 3d scenes w-wendewed to t-the scween ow a m-mixed weawity expewience expewienced u-using a headset, (U ᵕ U❁) it's impowtant fow audio t-to be pewfowmed so that it sounds wike it's coming fwom the diwection of its souwce. (ˆ ﻌ ˆ)♡ this guide covews how to accompwish t-this. >_<
+- [pwaying video in a 3d enviwonment](/wu/docs/web/media/3d_video)
+  - : in this guide, ^^;; we examine how to pway video into a 3d scene. ʘwʘ t-this technique can be used in both standawd [webgw](/wu/docs/web/api/webgw_api) a-appwications pwesented on a f-fwat computew scween, 😳😳😳 ow in a [webxw](/wu/docs/web/api/webxw_device_api)-genewated viwtuaw ow augmented w-weawity enviwonment. UwU
 
 ## Спецификации
 
-| Specification                                                                                                                                                                                                                                                                                                                                     |
+| s-specification                                                                                                                                                                                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [**WebXR Device API**](https://immersive-web.github.io/webxr/) ([Source](https://github.com/immersive-web/webxr), [Issues](https://github.com/immersive-web/webxr/issues), [Explainer](https://github.com/immersive-web/webxr/blob/master/explainer.md))                                                                                          |
-| [**WebXR Anchors Module**](https://immersive-web.github.io/anchors/) ([Source](https://github.com/immersive-web/anchors), [Issues](https://github.com/immersive-web/anchors/issues), [Explainer](https://github.com/immersive-web/anchors/blob/master/explainer.md))                                                                              |
-| [**WebXR Augmented Reality Module**](https://immersive-web.github.io/webxr-ar-module/) ([Source](https://github.com/immersive-web/webxr-ar-module), [Issues](https://github.com/immersive-web/webxr-ar-module/issues), [Explainer](https://github.com/immersive-web/webxr-ar-module/blob/master/ar-module-explainer.md))                          |
-| [**WebXR Depth Sensing Module**](https://immersive-web.github.io/depth-sensing/) ([Source](https://github.com/immersive-web/depth-sensing), [Issues](https://github.com/immersive-web/depth-sensing/issues), [Explainer](https://github.com/immersive-web/depth-sensing/blob/master/explainer.md))                                                |
-| [**WebXR DOM Overlays Module**](https://immersive-web.github.io/dom-overlays) ([Source](https://github.com/immersive-web/dom-overlays), [Issues](https://github.com/immersive-web/dom-overlays/issues), [Explainer](https://github.com/immersive-web/dom-overlays/blob/master/explainer.md))                                                      |
-| [**WebXR Gamepads Module**](https://immersive-web.github.io/webxr-gamepads-module/) ([Source](https://github.com/immersive-web/webxr-gamepads-module), [Issues](https://github.com/immersive-web/webxr-gamepads-module/issues), [Explainer](https://github.com/immersive-web/webxr-gamepads-module/blob/master/gamepads-module-explainer.md))     |
-| [**WebXR Hand Input Module**](https://immersive-web.github.io/webxr-hand-input/) ([Source](https://github.com/immersive-web/webxr-hand-input), [Issues](https://github.com/immersive-web/webxr-hand-input/issues), [Explainer](https://github.com/immersive-web/webxr-hand-input/blob/master/explainer.md))                                       |
-| [**WebXR Hit Test Module**](https://immersive-web.github.io/hit-test) ([Source](https://github.com/immersive-web/hit-test), [Issues](https://github.com/immersive-web/hit-test/issues), [Explainer](https://github.com/immersive-web/hit-test/blob/master/hit-testing-explainer.md))                                                              |
-| [**WebXR Layers API**](https://immersive-web.github.io/layers/) ([Source](https://github.com/immersive-web/layers), [Issues](https://github.com/immersive-web/layers/issues), [Explainer](https://github.com/immersive-web/layers/blob/master/explainer.md))                                                                                      |
-| [**WebXR Lighting Estimation API**](https://immersive-web.github.io/lighting-estimation/) ([Source](https://github.com/immersive-web/lighting-estimation), [Issues](https://github.com/immersive-web/lighting-estimation/issues), [Explainer](https://github.com/immersive-web/lighting-estimation/blob/master/lighting-estimation-explainer.md)) |
+| [**webxw device api**](https://immewsive-web.github.io/webxw/) ([souwce](https://github.com/immewsive-web/webxw), OwO [issues](https://github.com/immewsive-web/webxw/issues), :3 [expwainew](https://github.com/immewsive-web/webxw/bwob/mastew/expwainew.md))                                                                                          |
+| [**webxw a-anchows m-moduwe**](https://immewsive-web.github.io/anchows/) ([souwce](https://github.com/immewsive-web/anchows), [issues](https://github.com/immewsive-web/anchows/issues), -.- [expwainew](https://github.com/immewsive-web/anchows/bwob/mastew/expwainew.md))                                                                              |
+| [**webxw augmented weawity moduwe**](https://immewsive-web.github.io/webxw-aw-moduwe/) ([souwce](https://github.com/immewsive-web/webxw-aw-moduwe), [issues](https://github.com/immewsive-web/webxw-aw-moduwe/issues), 🥺 [expwainew](https://github.com/immewsive-web/webxw-aw-moduwe/bwob/mastew/aw-moduwe-expwainew.md))                          |
+| [**webxw d-depth sensing moduwe**](https://immewsive-web.github.io/depth-sensing/) ([souwce](https://github.com/immewsive-web/depth-sensing), [issues](https://github.com/immewsive-web/depth-sensing/issues), -.- [expwainew](https://github.com/immewsive-web/depth-sensing/bwob/mastew/expwainew.md))                                                |
+| [**webxw dom ovewways moduwe**](https://immewsive-web.github.io/dom-ovewways) ([souwce](https://github.com/immewsive-web/dom-ovewways), -.- [issues](https://github.com/immewsive-web/dom-ovewways/issues), (U ﹏ U) [expwainew](https://github.com/immewsive-web/dom-ovewways/bwob/mastew/expwainew.md))                                                      |
+| [**webxw g-gamepads moduwe**](https://immewsive-web.github.io/webxw-gamepads-moduwe/) ([souwce](https://github.com/immewsive-web/webxw-gamepads-moduwe), rawr [issues](https://github.com/immewsive-web/webxw-gamepads-moduwe/issues), mya [expwainew](https://github.com/immewsive-web/webxw-gamepads-moduwe/bwob/mastew/gamepads-moduwe-expwainew.md))     |
+| [**webxw hand input m-moduwe**](https://immewsive-web.github.io/webxw-hand-input/) ([souwce](https://github.com/immewsive-web/webxw-hand-input), ( ͡o ω ͡o ) [issues](https://github.com/immewsive-web/webxw-hand-input/issues), /(^•ω•^) [expwainew](https://github.com/immewsive-web/webxw-hand-input/bwob/mastew/expwainew.md))                                       |
+| [**webxw hit t-test moduwe**](https://immewsive-web.github.io/hit-test) ([souwce](https://github.com/immewsive-web/hit-test), >_< [issues](https://github.com/immewsive-web/hit-test/issues), (✿oωo) [expwainew](https://github.com/immewsive-web/hit-test/bwob/mastew/hit-testing-expwainew.md))                                                              |
+| [**webxw wayews api**](https://immewsive-web.github.io/wayews/) ([souwce](https://github.com/immewsive-web/wayews), 😳😳😳 [issues](https://github.com/immewsive-web/wayews/issues), (ꈍᴗꈍ) [expwainew](https://github.com/immewsive-web/wayews/bwob/mastew/expwainew.md))                                                                                      |
+| [**webxw w-wighting e-estimation api**](https://immewsive-web.github.io/wighting-estimation/) ([souwce](https://github.com/immewsive-web/wighting-estimation), 🥺 [issues](https://github.com/immewsive-web/wighting-estimation/issues), mya [expwainew](https://github.com/immewsive-web/wighting-estimation/bwob/mastew/wighting-estimation-expwainew.md)) |
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Graphics on the web](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_images)
-- [Drawing graphics](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [WebGL API](/ru/docs/Web/API/WebGL_API): Accelerated 2D and 3D graphics on the web
-- [Canvas API](/ru/docs/Web/API/Canvas_API): 2D drawing for the web
-- [Canvas tutorial](/ru/docs/Web/API/Canvas_API/Tutorial)
+- [gwaphics on the web](/wu/docs/weawn_web_devewopment/cowe/stwuctuwing_content/htmw_images)
+- [dwawing gwaphics](/wu/docs/weawn/javascwipt/cwient-side_web_apis/dwawing_gwaphics)
+- [webgw a-api](/wu/docs/web/api/webgw_api): accewewated 2d and 3d gwaphics o-on the web
+- [canvas api](/wu/docs/web/api/canvas_api): 2d dwawing fow the web
+- [canvas tutowiaw](/wu/docs/web/api/canvas_api/tutowiaw)

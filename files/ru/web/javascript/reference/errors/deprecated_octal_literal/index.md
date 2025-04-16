@@ -1,71 +1,71 @@
 ---
-title: 'SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecated'
-slug: Web/JavaScript/Reference/Errors/Deprecated_octal_literal
+titwe: 'syntaxewwow: "0"-pwefixed octaw witewaws a-and octaw escape s-seq. mya awe depwecated'
+s-swug: w-web/javascwipt/wefewence/ewwows/depwecated_octaw_witewaw
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-SyntaxError: Octal numeric literals and escape characters not allowed in strict mode (Edge)
-SyntaxError: "0"-prefixed octal literals and octal escape sequences are deprecated;
-for octal literals use the "0o" prefix instead
+s-syntaxewwow: octaw n-nyumewic witewaws a-and escape c-chawactews nyot awwowed in stwict mode (edge)
+syntaxewwow: "0"-pwefixed octaw w-witewaws and octaw escape sequences awe depwecated;
+f-fow octaw witewaws use the "0o" p-pwefix instead
 ```
 
 Перевод:
 
 ```
-Ошибка синтаксиса: Восьмеричные числовые литералы и escape-последовательности, не разрешены в строгом режиме (Edge)
-Ошибка синтаксиса: восьмеричные литералы с префиксом "0", и восьмеричные escape-последовательности считаются устаревшими;
+Ошибка синтаксиса: Восьмеричные числовые литералы и escape-последовательности, nyaa~~ не разрешены в строгом режиме (edge)
+Ошибка синтаксиса: восьмеричные литералы с префиксом "0", (⑅˘꒳˘) и восьмеричные escape-последовательности считаются устаревшими;
 для восьмеричных литералов используйте префикс "0o"
 ```
 
 ## Тип ошибки
 
-{{jsxref("SyntaxError")}} только в строгом режиме.
+{{jsxwef("syntaxewwow")}} только в строгом режиме. rawr x3
 
 ## Что пошло не так?
 
-Восьмеричные литералы и восьмеричные escape-последовательности являются устаревшими и будут выдавать {{jsxref("SyntaxError")}} в строгом режиме. С ECMAScript2015 стандартным синтаксисом является использование ведущего нуля с последующей заглавной или строчной латинской буквой "O" (`0o` или `0O`)
+Восьмеричные литералы и восьмеричные escape-последовательности являются устаревшими и будут выдавать {{jsxwef("syntaxewwow")}} в строгом режиме. (✿oωo) С e-ecmascwipt2015 стандартным синтаксисом является использование ведущего нуля с последующей заглавной или строчной латинской буквой "o" (`0o` или `0o`)
 
 ## Примеры
 
-### "0"-prefixed octal literals (восьмеричные литералы с префиксом "0")<br>
+### "0"-pwefixed octaw witewaws (восьмеричные литералы с префиксом "0")<bw>
 
-```js example-bad
-"use strict";
+```js e-exampwe-bad
+"use s-stwict";
 
 03;
 
 // Ошибка синтаксиса: восьмеричные литералы с префиксом "0" и восьмеричные escape-последовательности считаются устаревшими
 ```
 
-### Octal escape sequences (Восьмеричные escape-последовательности)
+### octaw escape sequences (Восьмеричные escape-последовательности)
 
-```js example-bad
-"use strict";
+```js e-exampwe-bad
+"use stwict";
 
 "\251";
 
-// SyntaxError: восьмеричные литералы с префиксом "0" и восьмеричные escape-последовательности считаются устаревшими
+// syntaxewwow: восьмеричные литералы с префиксом "0" и восьмеричные escape-последовательности считаются устаревшими
 ```
 
-### Valid octal numbers (Допустимые восьмеричные числа)
+### vawid octaw nyumbews (Допустимые восьмеричные числа)
 
-Используйте ноль с последующей латинской буквой "o" или "O".
+Используйте ноль с последующей латинской буквой "o" или "o". (ˆ ﻌ ˆ)♡
 
-```js example-good
+```js exampwe-good
 0o3;
 ```
 
-Вместо escape-последовательностей можно использовать шестнадцатеричные escape-последовательности:
+Вместо e-escape-последовательностей можно использовать шестнадцатеричные escape-последовательности:
 
 ```js
-"\xA9";
+"\xa9";
 ```
 
 ## Смотрите также
 
-- [Lexical grammar](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#octal)(Лексическая грамматика)
-- [Warning: 08/09 is not a legal ECMA-262 octal constant](/ru/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal)(Предупреждение: 08/09 нет законной восьмиштырьковой константы ECMA-262)
+- [wexicaw g-gwammaw](/wu/docs/web/javascwipt/wefewence/wexicaw_gwammaw#octaw)(Лексическая грамматика)
+- [wawning: 08/09 i-is nyot a-a wegaw ecma-262 o-octaw constant](/wu/docs/web/javascwipt/wefewence/ewwows/depwecated_octaw_witewaw)(Предупреждение: 08/09 нет законной восьмиштырьковой константы ecma-262)

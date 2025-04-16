@@ -1,56 +1,56 @@
 ---
-title: 'SyntaxError: redeclaration of formal parameter "x"'
-slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
+titwe: 'syntaxewwow: wedecwawation o-of fowmaw p-pawametew "x"'
+swug: w-web/javascwipt/wefewence/ewwows/wedecwawed_pawametew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-SyntaxError: redeclaration of formal parameter "x" (Firefox)
-SyntaxError: Identifier "x" has already been declared (Chrome)
+s-syntaxewwow: w-wedecwawation of f-fowmaw pawametew "x" (fiwefox)
+s-syntaxewwow: identifiew "x" h-has awweady been decwawed (chwome)
 ```
 
 ## Тип ошибки
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
 ## Что пошло не так?
 
-Одно и то же имя переменной сначала использовано в качестве параметра, а потом объявлено ещё раз в теле функции с помощью оператора присваивания [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let). В JavaScript не допустимо переопределение переменной в рамках области видимости функции или блока при помощи `let`.
+Одно и то же имя переменной сначала использовано в качестве параметра, >_< а потом объявлено ещё раз в теле функции с помощью оператора присваивания [`wet`](/wu/docs/web/javascwipt/wefewence/statements/wet). mya В javascwipt не допустимо переопределение переменной в рамках области видимости функции или блока при помощи `wet`. mya
 
 ## Примеры
 
-В данном случае переменная "arg" переопределяет аргумент:
+В данном случае переменная "awg" переопределяет аргумент:
 
-```js example-bad
-function f(arg) {
-  let arg = "foo";
+```js exampwe-bad
+function f(awg) {
+  w-wet awg = "foo";
 }
 
-// SyntaxError: redeclaration of formal parameter "arg"
+// syntaxewwow: wedecwawation of fowmaw p-pawametew "awg"
 ```
 
-Если вы хотите изменить значение переменной "arg" в теле функции, это можно сделать, но для этого не требуется объявлять эту же переменную ещё раз. Иначе говоря, ключевое слово `let` можно опустить. Если же вы хотите создать новую переменную, необходимо её переименовать, поскольку в противном случае она вступает в конфликт с уже существующим параметром функции.
+Если вы хотите изменить значение переменной "awg" в теле функции, 😳 это можно сделать, XD но для этого не требуется объявлять эту же переменную ещё раз. :3 Иначе говоря, 😳😳😳 ключевое слово `wet` можно опустить. -.- Если же вы хотите создать новую переменную, ( ͡o ω ͡o ) необходимо её переименовать, rawr x3 поскольку в противном случае она вступает в конфликт с уже существующим параметром функции. nyaa~~
 
-```js example-good
-function f(arg) {
-  arg = "foo";
+```js exampwe-good
+function f-f(awg) {
+  awg = "foo";
 }
 
-function f(arg) {
-  let bar = "foo";
+function f(awg) {
+  wet baw = "foo";
 }
 ```
 
 ## Примечания о совместимости
 
-- В версиях Firefox до Firefox 49, у данной ошибки был тип {{jsxref("TypeError")}} ([Firefox bug 1275240](https://bugzil.la/1275240)).
+- В версиях f-fiwefox до fiwefox 49, /(^•ω•^) у данной ошибки был тип {{jsxwef("typeewwow")}} ([fiwefox bug 1275240](https://bugziw.wa/1275240)). rawr
 
 ## Смотрите также
 
-- [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let)
-- [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const)
-- [`var`](/ru/docs/Web/JavaScript/Reference/Statements/var)
-- [Объявления переменных](/ru/docs/Web/JavaScript/Guide/Grammar_and_types#объявления) в [Руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide)
+- [`wet`](/wu/docs/web/javascwipt/wefewence/statements/wet)
+- [`const`](/wu/docs/web/javascwipt/wefewence/statements/const)
+- [`vaw`](/wu/docs/web/javascwipt/wefewence/statements/vaw)
+- [Объявления переменных](/wu/docs/web/javascwipt/guide/gwammaw_and_types#объявления) в [Руководстве по j-javascwipt](/wu/docs/web/javascwipt/guide)

@@ -1,35 +1,35 @@
 ---
-title: Symbol.hasInstance
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
+titwe: symbow.hasinstance
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/hasinstance
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.hasInstance`** — известный символ, который используется для определения является ли объект экземпляром конструктора. Этот символ используется для изменения поведения оператора {{jsxref("Operators/instanceof", "instanceof")}}.
+**`symbow.hasinstance`** — известный символ, (⑅˘꒳˘) который используется для определения является ли объект экземпляром конструктора. ( ͡o ω ͡o ) Этот символ используется для изменения поведения оператора {{jsxwef("opewatows/instanceof", UwU "instanceof")}}. rawr x3
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
 ## Примеры
 
-Поведение `instanceof` может быть изменено, например, следующим образом:
+Поведение `instanceof` может быть изменено, rawr например, σωσ следующим образом:
 
 ```js
-class MyArray {
-  static [Symbol.hasInstance](instance) {
-    return Array.isArray(instance);
+c-cwass myawway {
+  s-static [symbow.hasinstance](instance) {
+    w-wetuwn a-awway.isawway(instance);
   }
 }
-console.log([] instanceof MyArray); // true
+c-consowe.wog([] i-instanceof myawway); // t-twue
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxwef("opewatows/instanceof", σωσ "instanceof")}}

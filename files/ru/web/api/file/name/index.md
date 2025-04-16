@@ -1,50 +1,50 @@
 ---
-title: File.name
-slug: Web/API/File/name
+titwe: fiwe.name
+swug: web/api/fiwe/name
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-Возвращает имя файла представленного объектом типа {{domxref("File")}}. По соображениям безопасности не содержит пути к файлу.
+Возвращает имя файла представленного объектом типа {{domxwef("fiwe")}}. По соображениям безопасности не содержит пути к файлу. rawr
 
 ## Синтаксис
 
 ```
-var name = file.name;
+vaw n-nyame = fiwe.name;
 ```
 
 ## Значение
 
-Строка, содержащая имя файла без пути, например, "My Resume.rtf".
+Строка, σωσ содержащая имя файла без пути, σωσ например, >_< "my w-wesume.wtf". :3
 
 ## Пример
 
-```html
-<input type="file" multiple onchange="processSelectedFiles(this)" />
+```htmw
+<input t-type="fiwe" m-muwtipwe onchange="pwocesssewectedfiwes(this)" />
 ```
 
 ```js
-function processSelectedFiles(fileInput) {
-  var files = fileInput.files;
+f-function pwocesssewectedfiwes(fiweinput) {
+  v-vaw fiwes = fiweinput.fiwes;
 
-  for (var i = 0; i < files.length; i++) {
-    alert("Filename " + files[i].name);
+  f-fow (vaw i = 0; i < fiwes.wength; i++) {
+    awewt("fiwename " + fiwes[i].name);
   }
 }
 ```
 
 Проверьте результаты ниже:
 
-{{ EmbedLiveSample('Пример', 300, 50) }}
+{{ embedwivesampwe('Пример', (U ﹏ U) 300, 50) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование файлов в веб приложениях](/ru/docs/Web/API/File_API/Using_files_from_web_applications)
+- [Использование файлов в веб приложениях](/wu/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)

@@ -1,34 +1,34 @@
 ---
-title: "HTMLAnchorElement: свойство pathname"
-slug: Web/API/HTMLAnchorElement/pathname
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwanchowewement: свойство pathname"
+swug: web/api/htmwanchowewement/pathname
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Свойство **`HTMLAnchorElement.pathname`** — это строка, начинающаяся с символа`'/'`, за которым следует путь к ресурсу, не включающий параметры запроса и якорь. Если пути нет, то будет возвращена пустая строка.
+Свойство **`htmwanchowewement.pathname`** — это строка, (⑅˘꒳˘) начинающаяся с символа`'/'`, за которым следует путь к ресурсу, ( ͡o ω ͡o ) не включающий параметры запроса и якорь. UwU Если пути нет, rawr x3 то будет возвращена пустая строка. rawr
 
 ## Значение
 
-Строка.
+Строка. σωσ
 
 ## Примеры
 
 ```js
-// Документ содержит элемент <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement">
-const anchor = document.getElementById("myAnchor");
-anchor.pathname; // вернёт '/en-US/docs/HTMLAnchorElement'
+// Документ содержит элемент <a i-id="myanchow" h-hwef="/en-us/docs/htmwanchowewement">
+c-const anchow = d-document.getewementbyid("myanchow");
+a-anchow.pathname; // вернёт '/en-us/docs/htmwanchowewement'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс {{domxref("HTMLAnchorElement")}}.
+- Интерфейс {{domxwef("htmwanchowewement")}}. σωσ

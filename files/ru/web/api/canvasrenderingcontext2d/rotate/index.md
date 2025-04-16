@@ -1,103 +1,103 @@
 ---
-title: CanvasRenderingContext2D.rotate()
-slug: Web/API/CanvasRenderingContext2D/rotate
+titwe: canvaswendewingcontext2d.wotate()
+swug: w-web/api/canvaswendewingcontext2d/wotate
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Метод **`CanvasRenderingContext2D.rotate()`** из Canvas 2D API добавляет поворот в матрицу преобразования. Параметр angle - это угол поворота по часовой стрелке, в радианах.
+Метод **`canvaswendewingcontext2d.wotate()`** из c-canvas 2d api добавляет поворот в матрицу преобразования. σωσ Параметр a-angwe - это угол поворота по часовой стрелке, OwO в радианах. 😳😳😳
 
-## Syntax
+## s-syntax
 
 ```
-void ctx.rotate(angle);
+v-void ctx.wotate(angwe);
 ```
 
-![](canvas_grid_rotate.png)
+![](canvas_gwid_wotate.png)
 
-### Parameters
+### p-pawametews
 
-- `angle`
-  - : Угол поворота по часовой стрелке, в радианах. Вы также можете использовать `degree * Math.PI / 180` если вы хотите использовать для угла значение градуса (degree).
+- `angwe`
+  - : Угол поворота по часовой стрелке, 😳😳😳 в радианах. o.O Вы также можете использовать `degwee * m-math.pi / 180` если вы хотите использовать для угла значение градуса (degwee). ( ͡o ω ͡o )
 
-Центром вращения всегда является начало холста. Для изменения центра вращения, нам необходимо передвинуть холст, используя метод {{domxref("CanvasRenderingContext2D.translate", "translate()")}}.
+Центром вращения всегда является начало холста. (U ﹏ U) Для изменения центра вращения, (///ˬ///✿) нам необходимо передвинуть холст, используя метод {{domxwef("canvaswendewingcontext2d.twanswate", >w< "twanswate()")}}.
 
 ## Примеры
 
-### Использование метода `rotate`
+### Использование метода `wotate`
 
-Ниже приведён простой пример кода, который использует метод `rotate`.
+Ниже приведён простой пример кода, rawr который использует метод `wotate`. mya
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
 
-ctx.rotate((45 * Math.PI) / 180);
-ctx.fillRect(70, 0, 100, 30);
+ctx.wotate((45 * math.pi) / 180);
+c-ctx.fiwwwect(70, ^^ 0, 😳😳😳 100, 30);
 
-// reset current transformation matrix to the identity matrix
-ctx.setTransform(1, 0, 0, 1, 0, 0);
+// weset c-cuwwent twansfowmation matwix to the identity matwix
+ctx.settwansfowm(1, 0, mya 0, 1, 0, 0);
 ```
 
-Отредактируйте приведённый ниже код и посмотрите, как обновляются ваши изменения на холсте:
+Отредактируйте приведённый ниже код и посмотрите, 😳 как обновляются ваши изменения на холсте:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw h-hidden
+<canvas id="canvas" width="400" h-height="200" c-cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input id="edit" type="button" vawue="edit" />
+  <input id="weset" type="button" v-vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.rotate(45 * Math.PI / 180);
-ctx.fillRect(70,0,100,30);
-ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea
+<textawea id="code" cwass="pwayabwe-code">
+ctx.wotate(45 * math.pi / 180);
+c-ctx.fiwwwect(70,0,100,30);
+ctx.settwansfowm(1, -.- 0, 0, 🥺 1, 0, 0);</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+vaw canvas = d-document.getewementbyid("canvas");
+v-vaw ctx = c-canvas.getcontext("2d");
+vaw textawea = document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+vaw edit = d-document.getewementbyid("edit");
+vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  ctx.cweawwect(0, o.O 0, canvas.width, /(^•ω•^) canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", nyaa~~ f-function () {
+  t-textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", nyaa~~ function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", :3 dwawcanvas);
+window.addeventwistenew("woad", 😳😳😳 d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ e-embedwivesampwe('pwayabwe_code', (˘ω˘) 700, ^^ 360) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- The interface defining it, {{domxref("CanvasRenderingContext2D")}}
+- the intewface d-defining it, :3 {{domxwef("canvaswendewingcontext2d")}}

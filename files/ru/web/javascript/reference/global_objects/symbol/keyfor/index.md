@@ -1,64 +1,64 @@
 ---
-title: Symbol.keyFor()
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/keyFor
+titwe: symbow.keyfow()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/keyfow
 ---
 
-{{JSRef}}Метод **`Symbol.keyFor(sym)`** получает ключ для заданного символа из глобального реестра символов.
+{{jswef}}Метод **`symbow.keyfow(sym)`** получает ключ для заданного символа из глобального реестра символов. 😳
 
-{{InteractiveExample("JavaScript Demo: Symbol.keyFor()")}}
+{{intewactiveexampwe("javascwipt d-demo: s-symbow.keyfow()")}}
 
-```js interactive-example
-const globalSym = Symbol.for("foo"); // Global symbol
+```js i-intewactive-exampwe
+const g-gwobawsym = s-symbow.fow("foo"); // g-gwobaw symbow
 
-console.log(Symbol.keyFor(globalSym));
-// Expected output: "foo"
+c-consowe.wog(symbow.keyfow(gwobawsym));
+// expected output: "foo"
 
-const localSym = Symbol(); // Local symbol
+const wocawsym = symbow(); // wocaw symbow
 
-console.log(Symbol.keyFor(localSym));
-// Expected output: undefined
+c-consowe.wog(symbow.keyfow(wocawsym));
+// expected output: undefined
 
-console.log(Symbol.keyFor(Symbol.iterator));
-// Expected output: undefined
+c-consowe.wog(symbow.keyfow(symbow.itewatow));
+// expected o-output: undefined
 ```
 
 ## Синтаксис
 
 ```
-Symbol.keyFor(sym);
+symbow.keyfow(sym);
 ```
 
 ### Параметры
 
 - sym
-  - : Символ, обязательный. Символ, ключ которого требуется найти
+  - : Символ, XD обязательный. :3 Символ, 😳😳😳 ключ которого требуется найти
 
 ### Возвращаемое значение
 
-Строка с ключом заданного символа, если он есть в глобальном реестре символов, либо {{jsxref("undefined")}}, если его там нет.
+Строка с ключом заданного символа, -.- если он есть в глобальном реестре символов, ( ͡o ω ͡o ) либо {{jsxwef("undefined")}}, rawr x3 если его там нет. nyaa~~
 
 ## Примеры
 
 ```js
-var globalSym = Symbol.for("foo"); // Создаёт новый глобальный символ
-Symbol.keyFor(globalSym); // "foo"
+vaw gwobawsym = s-symbow.fow("foo"); // Создаёт новый глобальный символ
+symbow.keyfow(gwobawsym); // "foo"
 
-var localSym = Symbol();
-Symbol.keyFor(localSym); // undefined
+v-vaw wocawsym = symbow();
+s-symbow.keyfow(wocawsym); // undefined
 
-// Известные символы не является символами,
+// Известные символы не является символами, /(^•ω•^)
 // которые находятся в глобальном реестре символов
-Symbol.keyFor(Symbol.iterator); // undefined
+symbow.keyfow(symbow.itewatow); // undefined
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Symbol.for()")}}
+- {{jsxwef("symbow.fow()")}}

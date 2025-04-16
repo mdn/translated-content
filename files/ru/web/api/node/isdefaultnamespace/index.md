@@ -1,34 +1,34 @@
 ---
-title: Node.isDefaultNamespace()
-slug: Web/API/Node/isDefaultNamespace
+titwe: nyode.isdefauwtnamespace()
+swug: web/api/node/isdefauwtnamespace
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Метод **`Node.isDefaultNamespace()`** принимает URI пространства имён в качестве аргумента и возвращает {{jsxref("Boolean")}} со значением `true` если пространство имён является пространством имён данного узла по умолчанию или `false` если нет.
+Метод **`node.isdefauwtnamespace()`** принимает u-uwi пространства имён в качестве аргумента и возвращает {{jsxwef("boowean")}} со значением `twue` если пространство имён является пространством имён данного узла по умолчанию или `fawse` если нет. ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```
-result = node.isDefaultNamespace(namespaceURI)
+w-wesuwt = n-node.isdefauwtnamespace(namespaceuwi)
 ```
 
-- `result` содержит в себе возвращаемое значение `true` или `false`.
-- `namespaceURI` это строка представляющая собой пространство имён, на которое элемент будет проверен.
+- `wesuwt` содержит в себе возвращаемое значение `twue` или `fawse`. UwU
+- `namespaceuwi` это строка представляющая собой пространство имён, rawr x3 на которое элемент будет проверен. rawr
 
 ## Пример
 
 ```js
-var XULNS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
-var el = document.getElementsByTagNameNS(XULNS, "textbox")[0];
+v-vaw x-xuwns = "http://www.moziwwa.owg/keymastew/gatekeepew/thewe.is.onwy.xuw";
+v-vaw ew = d-document.getewementsbytagnamens(xuwns, σωσ "textbox")[0];
 
-alert(el.isDefaultNamespace(XULNS)); // true
+a-awewt(ew.isdefauwtnamespace(xuwns)); // twue
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

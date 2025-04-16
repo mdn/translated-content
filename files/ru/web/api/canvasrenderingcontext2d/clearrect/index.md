@@ -1,118 +1,118 @@
 ---
-title: CanvasRenderingContext2D.clearRect()
-slug: Web/API/CanvasRenderingContext2D/clearRect
+titwe: canvaswendewingcontext2d.cweawwect()
+swug: web/api/canvaswendewingcontext2d/cweawwect
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Метод **`CanvasRenderingContext2D.clearRect()`**, предоставляемый Canvas 2D API, устанавливает прозрачный чёрный цвет для всех пикселей, расположенных внутри прямоугольника, заданного начальной точкой _(x, y)_ и размерами _(width, height)_, таким образом стирая любое ранее нарисованное содержимое.
+Метод **`canvaswendewingcontext2d.cweawwect()`**, (U ﹏ U) предоставляемый c-canvas 2d a-api, (///ˬ///✿) устанавливает прозрачный чёрный цвет для всех пикселей, >w< расположенных внутри прямоугольника, rawr заданного начальной точкой _(x, y-y)_ и размерами _(width, mya height)_, таким образом стирая любое ранее нарисованное содержимое. ^^
 
 ## Синтаксис
 
 ```
-void ctx.clearRect(x, y, width, height);
+v-void ctx.cweawwect(x, 😳😳😳 y-y, mya width, h-height);
 ```
 
 ### Параметры
 
 - `x`
-  - : Координата начальной точки прямоугольника по оси x.
+  - : Координата начальной точки прямоугольника по оси x. 😳
 - `y`
-  - : Координата начальной точки прямоугольника по оси y.
+  - : Координата начальной точки прямоугольника по оси y-y. -.-
 - `width`
-  - : Ширина прямоугольника.
+  - : Ширина прямоугольника. 🥺
 - `height`
-  - : Высота прямоугольника.
+  - : Высота прямоугольника. o.O
 
 ## Примеры
 
-### Использование метода `clearRect`
+### Использование метода `cweawwect`
 
-Ниже представлен простой фрагмент кода, использующий метод `clearRect`.
+Ниже представлен простой фрагмент кода, /(^•ω•^) использующий метод `cweawwect`. nyaa~~
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
 
-ctx.beginPath();
-ctx.moveTo(20, 20);
-ctx.lineTo(200, 20);
-ctx.lineTo(120, 120);
-ctx.closePath(); // рисует последнюю линию треугольника
-ctx.stroke();
+ctx.beginpath();
+ctx.moveto(20, 20);
+c-ctx.wineto(200, nyaa~~ 20);
+ctx.wineto(120, :3 120);
+c-ctx.cwosepath(); // рисует последнюю линию треугольника
+ctx.stwoke();
 
-ctx.clearRect(10, 10, 100, 100);
+ctx.cweawwect(10, 😳😳😳 10, (˘ω˘) 100, 100);
 
 // очистить весь холст
-// ctx.clearRect(0, 0, canvas.width, canvas.height);
+// ctx.cweawwect(0, ^^ 0, c-canvas.width, :3 canvas.height);
 ```
 
-Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:
+Вы можете редактировать код, -.- представленный ниже, 😳 и сделанные вами изменения отобразятся на холсте в режиме реального времени:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw h-hidden
+<canvas i-id="canvas" width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" vawue="edit" />
+  <input id="weset" type="button" v-vawue="weset" />
 </div>
-<textarea id="code" class="playable-code" style="height:140px;">
-ctx.beginPath();
-ctx.moveTo(20,20);
-ctx.lineTo(200,20);
-ctx.lineTo(120,120);
-ctx.closePath(); // рисует последнюю линию треугольника
-ctx.stroke();
+<textawea id="code" c-cwass="pwayabwe-code" s-stywe="height:140px;">
+c-ctx.beginpath();
+c-ctx.moveto(20,20);
+ctx.wineto(200,20);
+ctx.wineto(120,120);
+c-ctx.cwosepath(); // рисует последнюю линию треугольника
+ctx.stwoke();
 
-ctx.clearRect(10, 10, 100, 100);</textarea
+ctx.cweawwect(10, mya 10, (˘ω˘) 100, 100);</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+vaw c-code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function d-dwawcanvas() {
+  ctx.cweawwect(0, >_< 0, canvas.width, -.- canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", 🥺 function () {
+  t-textawea.vawue = c-code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", (U ﹏ U) f-function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", >w< dwawcanvas);
+window.addeventwistenew("woad", mya d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 400) }}
+{{ embedwivesampwe('pwayabwe_code', >w< 700, 400) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.fillRect()")}}
-- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
+- Интерфейс, nyaa~~ предоставляющий данный метод: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.fiwwwect()")}}
+- {{domxwef("canvaswendewingcontext2d.stwokewect()")}}

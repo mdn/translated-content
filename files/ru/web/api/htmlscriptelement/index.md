@@ -1,281 +1,281 @@
 ---
-title: HTMLScriptElement
-slug: Web/API/HTMLScriptElement
+titwe: htmwscwiptewement
+swug: w-web/api/htmwscwiptewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-HTML-элементы {{HTMLElement("script")}} предоставляют **`HTMLScriptElement`** интерфейс, который предоставляет специальные свойства и методы для манипулирования поведением и выполнением `<script>` элементов (за пределами унаследованного {{domxref("HTMLElement")}} интерфейса).
+htmw-элементы {{htmwewement("scwipt")}} предоставляют **`htmwscwiptewement`** интерфейс, -.- который предоставляет специальные свойства и методы для манипулирования поведением и выполнением `<scwipt>` элементов (за пределами унаследованного {{domxwef("htmwewement")}} интерфейса). 🥺
 
-JavaScript файлы должны обслуживаться с `application/javascript` [MIME type](/ru/docs/Web/HTTP/Guides/MIME_types), но браузеры снисходительны и блокируют их только, если скрипты обслуживаются с типом изображение (`image/*`), типом видео (`video/*`), типом аудио (`audio/*`), или `text/csv`. Если скрипт заблокирован, его элемент получает событие [`error`](/ru/docs/Web/API/HTMLElement/error_event); в противном случае, он получает событие [`success`](/ru/docs/Web/API/IDBRequest/success_event).
+j-javascwipt файлы должны обслуживаться с `appwication/javascwipt` [mime t-type](/wu/docs/web/http/guides/mime_types), (U ﹏ U) но браузеры снисходительны и блокируют их только, если скрипты обслуживаются с типом изображение (`image/*`), >w< типом видео (`video/*`), mya типом аудио (`audio/*`), >w< или `text/csv`. nyaa~~ Если скрипт заблокирован, (✿oωo) его элемент получает событие [`ewwow`](/wu/docs/web/api/htmwewement/ewwow_event); в противном случае, ʘwʘ он получает событие [`success`](/wu/docs/web/api/idbwequest/success_event). (ˆ ﻌ ˆ)♡
 
-{{InheritanceDiagram(600, 120)}}
+{{inhewitancediagwam(600, 😳😳😳 120)}}
 
 ## Свойства
 
-_Наследует свойства от своего родителя, {{domxref("HTMLElement")}}._
+_Наследует свойства от своего родителя, :3 {{domxwef("htmwewement")}}._
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
+    <tw>
       <th>Имя</th>
       <th>Тип</th>
       <th>Описание</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code id="type_property">type</code></td>
-      <td>{{domxref("DOMString")}}</td>
+    <tw>
+      <td><code i-id="type_pwopewty">type</code></td>
+      <td>{{domxwef("domstwing")}}</td>
       <td>
-        Представляет тип MIME сценария. Он отражает атрибут
-        <a href="/ru/docs/Web/HTML/Element/script#type"><code>type</code></a>.
+        Представляет тип m-mime сценария. OwO Он отражает атрибут
+        <a h-hwef="/wu/docs/web/htmw/ewement/scwipt#type"><code>type</code></a>. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <td><code id="src_property">src</code></td>
-      <td>{{domxref("DOMString")}}</td>
+    </tw>
+    <tw>
+      <td><code id="swc_pwopewty">swc</code></td>
+      <td>{{domxwef("domstwing")}}</td>
       <td>
-        Получает и отдаёт URL внешнего скрипта. Он отражает атрибут
-        <a href="/ru/docs/Web/HTML/Element/script#src"><code>src</code></a>.
+        Получает и отдаёт uww внешнего скрипта. >w< Он отражает атрибут
+        <a hwef="/wu/docs/web/htmw/ewement/scwipt#swc"><code>swc</code></a>. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <td><code id="event_property">event</code></td>
-      <td>{{domxref("DOMString")}}</td>
+    </tw>
+    <tw>
+      <td><code id="event_pwopewty">event</code></td>
+      <td>{{domxwef("domstwing")}}</td>
       <td>
-        Старый, способ регистрации обработчиков событий на элементы в
-        HTML-документе.
+        Старый, 😳 способ регистрации обработчиков событий на элементы в
+        h-htmw-документе. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <td><code id="charset_property">charset</code></td>
-      <td>{{domxref("DOMString")}}</td>
+    </tw>
+    <tw>
+      <td><code id="chawset_pwopewty">chawset</code></td>
+      <td>{{domxwef("domstwing")}}</td>
       <td>
-        Представляет кодировку символов внешнего скрипта. Он отражает атрибут
-        <a href="/ru/docs/Web/HTML/Element/script#charset"><code>charset</code></a>.
+        Представляет кодировку символов внешнего скрипта. 😳😳😳 Он отражает атрибут
+        <a hwef="/wu/docs/web/htmw/ewement/scwipt#chawset"><code>chawset</code></a>. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <td><code id="async_property">async</code></td>
-      <td>{{domxref("Boolean")}}</td>
-      <td rowspan="2">
+    </tw>
+    <tw>
+      <td><code i-id="async_pwopewty">async</code></td>
+      <td>{{domxwef("boowean")}}</td>
+      <td wowspan="2">
         <p>
-          Атрибуты <code>async</code> и <code>defer</code>
-          <a href="/ru/docs/JavaScript/Reference/Global_Objects/Boolean"
+          Атрибуты <code>async</code> и <code>defew</code>
+          <a h-hwef="/wu/docs/javascwipt/wefewence/gwobaw_objects/boowean"
             >булевы</a
           >
-          атрибуты, которые контролируют как скрипт должен выполняться.
-          <strong
-            >Атрибуты <code>defer</code> и <code>async</code> не должны быть
-            указаны, если атрибут <code>src</code> отсутствует.</strong
+          атрибуты, (///ˬ///✿) которые контролируют как скрипт должен выполняться. 😳
+          <stwong
+            >Атрибуты <code>defew</code> и <code>async</code> не должны быть
+            указаны, 😳 если атрибут <code>swc</code> отсутствует.</stwong
           >
         </p>
         <p>Существует три возможных режима выполнения:</p>
-        <ol>
-          <li>
-            Если атрибут <code>async</code> представлен, то скрипт будет
-            выполняться асинхронно по мере загрузки.
-          </li>
-          <li>
-            Если атрибут <code>async</code> отсутствует, но представлен атрибут
-            <code>defer</code>, то скрипт будет выполняться когда
-            <a href="/ru/docs/Web/Events/DOMContentLoaded"
+        <ow>
+          <wi>
+            Если атрибут <code>async</code> представлен, σωσ то скрипт будет
+            выполняться асинхронно по мере загрузки. rawr x3
+          </wi>
+          <wi>
+            Если атрибут <code>async</code> отсутствует, OwO но представлен атрибут
+            <code>defew</code>, /(^•ω•^) то скрипт будет выполняться когда
+            <a hwef="/wu/docs/web/events/domcontentwoaded"
               >страница полностью загружена</a
-            >.
-          </li>
-          <li>
-            Если ни один атрибут не представлен, то скрипт извлекается и
-            выполняется незамедлительно, блокируя дальнейший парсинг страницы.
-          </li>
-        </ol>
+            >. 😳😳😳
+          </wi>
+          <wi>
+            Если ни один атрибут не представлен, ( ͡o ω ͡o ) то скрипт извлекается и
+            выполняется незамедлительно, >_< блокируя дальнейший парсинг страницы. >w<
+          </wi>
+        </ow>
         <p>
-          Атрибут <code>defer</code> может быть указан с атрибутом
-          <code>async</code>, тогда устаревшие браузеры, которые поддерживают
-          только <code>defer</code> (но не <code>async</code>) откатятся к
-          поведению <code>defer</code> взамен дефолтного поведения блокировки.
+          Атрибут <code>defew</code> может быть указан с атрибутом
+          <code>async</code>, rawr тогда устаревшие браузеры, 😳 которые поддерживают
+          только <code>defew</code> (но не <code>async</code>) откатятся к
+          поведению <code>defew</code> взамен дефолтного поведения блокировки. >w<
         </p>
-        <div class="note">
-          <strong>Примечание:</strong> Точные детали обработки для этих
-          атрибутов комплексны, включая множество различных аспектов HTML, и
-          разбросаны по всей спецификации.
+        <div cwass="note">
+          <stwong>Примечание:</stwong> Точные детали обработки для этих
+          атрибутов комплексны, (⑅˘꒳˘) включая множество различных аспектов htmw, OwO и
+          разбросаны по всей спецификации. (ꈍᴗꈍ)
           <a
-            href="http://www.w3.org/html/wg/drafts/html/master/scripting-1.html#prepare-a-script"
+            hwef="http://www.w3.owg/htmw/wg/dwafts/htmw/mastew/scwipting-1.htmw#pwepawe-a-scwipt"
             >Эти алгоритмы</a
           >
-          описывают основную идею, но они основаны на правилах синтаксического
-          анализа для {{HTMLElement("script")}}
+          описывают основную идею, 😳 но они основаны на правилах синтаксического
+          анализа для {{htmwewement("scwipt")}}
           <a
-            href="http://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptTag"
+            h-hwef="http://www.w3.owg/htmw/wg/dwafts/htmw/mastew/syntax.htmw#scwipttag"
             >открывающих</a
           >
           и
           <a
-            href="http://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptEndTag"
+            hwef="http://www.w3.owg/htmw/wg/dwafts/htmw/mastew/syntax.htmw#scwiptendtag"
             >закрывающих</a
           >
-          тэгах в HTML,
+          тэгах в h-htmw, 😳😳😳
           <a
-            href="http://www.w3.org/html/wg/drafts/html/master/syntax.html#scriptForeignEndTag"
+            h-hwef="http://www.w3.owg/htmw/wg/dwafts/htmw/mastew/syntax.htmw#scwiptfoweignendtag"
             >во внешнем контенте</a
-          >, и в<a
-            href="http://www.w3.org/html/wg/drafts/html/master/the-xhtml-syntax.html#scriptTagXML"
+          >, mya и в<a
+            hwef="http://www.w3.owg/htmw/wg/dwafts/htmw/mastew/the-xhtmw-syntax.htmw#scwipttagxmw"
           >
-            XML</a
+            xmw</a
           >; правиле для метода
-          <a href="/ru/docs/DOM/document.write"
-            ><code>document.write()</code></a
+          <a hwef="/wu/docs/dom/document.wwite"
+            ><code>document.wwite()</code></a
           >; обработке
           <a
-            href="http://www.w3.org/html/wg/drafts/html/master/webappapis.html#scripting"
+            hwef="http://www.w3.owg/htmw/wg/dwafts/htmw/mastew/webappapis.htmw#scwipting"
             >сценариев</a
-          >; и так далее.
+          >; и так далее. mya
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code id="defer_property">defer</code></td>
-      <td>{{domxref("Boolean")}}</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
+      <td><code id="defew_pwopewty">defew</code></td>
+      <td>{{domxwef("boowean")}}</td>
+    </tw>
+    <tw>
       <td>
-        <code id="crossOrigin_property">crossOrigin </code
-        >{{experimental_inline}}
+        <code i-id="cwossowigin_pwopewty">cwossowigin </code
+        >{{expewimentaw_inwine}}
       </td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{domxwef("domstwing")}}</td>
       <td>
-        {{domxref("DOMString")}}, отражающий
-        <a href="/ru/docs/Web/HTML/CORS_settings_attributes"
-          >настройку CORS </a
-        >для элементов скрипта. Для скриптов из других
-        <a href="/ru/docs/Glossary/Origin">источников</a>, он контролирует,
-        будет ли раскрыта информация об ошибке.
+        {{domxwef("domstwing")}}, отражающий
+        <a hwef="/wu/docs/web/htmw/cows_settings_attwibutes"
+          >настройку cows </a
+        >для элементов скрипта. (⑅˘꒳˘) Для скриптов из других
+        <a hwef="/wu/docs/gwossawy/owigin">источников</a>, (U ﹏ U) он контролирует, mya
+        будет ли раскрыта информация об ошибке. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <td><code id="text_property">text</code></td>
-      <td>{{domxref("DOMString")}}</td>
+    </tw>
+    <tw>
+      <td><code id="text_pwopewty">text</code></td>
+      <td>{{domxwef("domstwing")}}</td>
       <td>
         <p>
-          IDL атрибут <code>text</code> объединяет и возвращает содержимое всех
-          <a href="/ru/docs/DOM/Text"><code>Text</code> нод</a> внутри
-          элемента {{HTMLElement("script")}} (игнорируя другие ноды,
-          такие как комментарии) в древовидном порядке. При установке, он
-          действует также, как и IDL атрибут
-          <a href="/ru/docs/DOM/Node.textContent"><code>textContent</code></a
-          >.
+          i-idw атрибут <code>text</code> объединяет и возвращает содержимое всех
+          <a hwef="/wu/docs/dom/text"><code>text</code> нод</a> внутри
+          элемента {{htmwewement("scwipt")}} (игнорируя другие ноды, (˘ω˘)
+          такие как комментарии) в древовидном порядке. (U ﹏ U) При установке, ^•ﻌ•^ он
+          действует также, как и i-idw атрибут
+          <a h-hwef="/wu/docs/dom/node.textcontent"><code>textcontent</code></a
+          >. (˘ω˘)
         </p>
-        <div class="note">
-          <strong>Примечание:</strong> При вставке с использованием метода
-          <a href="/ru/docs/DOM/document.write"
-            ><code>document.write()</code></a
-          >, элементы {{HTMLElement("script")}} выполняются (обычно
-          синхронно), когда при вставке используются
-          <a href="/ru/docs/DOM/element.innerHTML"><code>innerHTML</code></a>
+        <div c-cwass="note">
+          <stwong>Примечание:</stwong> При вставке с использованием метода
+          <a h-hwef="/wu/docs/dom/document.wwite"
+            ><code>document.wwite()</code></a
+          >, :3 элементы {{htmwewement("scwipt")}} выполняются (обычно
+          синхронно), ^^;; когда при вставке используются
+          <a hwef="/wu/docs/dom/ewement.innewhtmw"><code>innewhtmw</code></a>
           или
-          <a href="/ru/docs/DOM/element.outerHTML"><code>outerHTML</code></a
-          >, они вообще не выполняются.
+          <a hwef="/wu/docs/dom/ewement.outewhtmw"><code>outewhtmw</code></a
+          >, 🥺 они вообще не выполняются. (⑅˘꒳˘)
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>noModule</code></td>
-      <td>{{domxref("Boolean")}}</td>
+    </tw>
+    <tw>
+      <td><code>nomoduwe</code></td>
+      <td>{{domxwef("boowean")}}</td>
       <td>
-        Это булево свойство выполняет остановку выполнения скрипта в браузере,
+        Это булево свойство выполняет остановку выполнения скрипта в браузере, nyaa~~
         поддерживающим
-        <a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/"
-          >ES2015 модули</a
+        <a h-hwef="https://hacks.moziwwa.owg/2015/08/es6-in-depth-moduwes/"
+          >es2015 модули</a
         >
-        — используется для запуска резервных скриптов, которые не поддерживают
-        JavaScript модули.
+        — используется для запуска резервных скриптов, :3 которые не поддерживают
+        javascwipt модули. ( ͡o ω ͡o )
       </td>
-    </tr>
-    <tr>
-      <td><code>referrerPolicy</code></td>
-      <td>{{domxref("DOMString")}}</td>
+    </tw>
+    <tw>
+      <td><code>wefewwewpowicy</code></td>
+      <td>{{domxwef("domstwing")}}</td>
       <td>
-        {{domxref("DOMString")}}, который отражает HTML атрибут
-        <a href="/ru/docs/Web/HTML/Element/script#referrerpolicy"><code>referrerpolicy</code></a>
-        указывающий, какой реферер использовать при извлечении скриптов и
-        выборках, выполненных сценариев.
+        {{domxwef("domstwing")}}, mya который отражает htmw атрибут
+        <a h-hwef="/wu/docs/web/htmw/ewement/scwipt#wefewwewpowicy"><code>wefewwewpowicy</code></a>
+        указывающий, (///ˬ///✿) какой реферер использовать при извлечении скриптов и
+        выборках, (˘ω˘) выполненных сценариев. ^^;;
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Методы
 
-_Нет специальных методов; наследует методы от родителей, {{domxref("HTMLElement")}}._
+_Нет специальных методов; наследует методы от родителей, (✿oωo) {{domxwef("htmwewement")}}._
 
 ## Примеры
 
 ### Динамическое импортирование скриптов
 
-Давайте создадим функцию. которая импортирует новый скрипт в документ, создавая ноду {{HTMLElement("script")}} _непосредственно перед_ {{HTMLElement("script")}}, в котором размещается следующий код (через {{domxref("document.currentScript")}}). Эти скрипты будут выполняться **асинхронно**. Для получения подробной информации смотрите свойства [`defer`](#defer_property) и [`async`](#async_property).
+Давайте создадим функцию. (U ﹏ U) которая импортирует новый скрипт в документ, -.- создавая ноду {{htmwewement("scwipt")}} _непосредственно перед_ {{htmwewement("scwipt")}}, ^•ﻌ•^ в котором размещается следующий код (через {{domxwef("document.cuwwentscwipt")}}). rawr Эти скрипты будут выполняться **асинхронно**. (˘ω˘) Для получения подробной информации смотрите свойства [`defew`](#defew_pwopewty) и [`async`](#async_pwopewty). nyaa~~
 
 ```js
-function loadError(oError) {
-  throw new URIError(
-    "The script " + oError.target.src + " didn't load correctly.",
+function woadewwow(oewwow) {
+  thwow nyew uwiewwow(
+    "the scwipt " + oewwow.tawget.swc + " didn't woad cowwectwy.", UwU
   );
 }
 
-function prefixScript(url, onloadFunction) {
-  var newScript = document.createElement("script");
-  newScript.onerror = loadError;
-  if (onloadFunction) {
-    newScript.onload = onloadFunction;
+function pwefixscwipt(uww, :3 onwoadfunction) {
+  v-vaw nyewscwipt = document.cweateewement("scwipt");
+  n-nyewscwipt.onewwow = w-woadewwow;
+  i-if (onwoadfunction) {
+    nyewscwipt.onwoad = onwoadfunction;
   }
-  document.currentScript.parentNode.insertBefore(
-    newScript,
-    document.currentScript,
+  document.cuwwentscwipt.pawentnode.insewtbefowe(
+    n-nyewscwipt, (⑅˘꒳˘)
+    d-document.cuwwentscwipt, (///ˬ///✿)
   );
-  newScript.src = url;
+  nyewscwipt.swc = u-uww;
 }
 ```
 
-Следующая функция, вместо добавления новых скриптов непосредственно перед элементом {{domxref("document.currentScript")}}, добавляет их как потомков тега {{HTMLElement("head")}}.
+Следующая функция, ^^;; вместо добавления новых скриптов непосредственно перед элементом {{domxwef("document.cuwwentscwipt")}}, >_< добавляет их как потомков тега {{htmwewement("head")}}. rawr x3
 
 ```js
-function loadError(oError) {
-  throw new URIError(
-    "The script " + oError.target.src + " didn't load correctly.",
+f-function woadewwow(oewwow) {
+  t-thwow nyew uwiewwow(
+    "the s-scwipt " + oewwow.tawget.swc + " didn't w-woad cowwectwy.", /(^•ω•^)
   );
 }
 
-function affixScriptToHead(url, onloadFunction) {
-  var newScript = document.createElement("script");
-  newScript.onerror = loadError;
-  if (onloadFunction) {
-    newScript.onload = onloadFunction;
+function a-affixscwipttohead(uww, :3 onwoadfunction) {
+  vaw n-nyewscwipt = d-document.cweateewement("scwipt");
+  nyewscwipt.onewwow = woadewwow;
+  if (onwoadfunction) {
+    nyewscwipt.onwoad = onwoadfunction;
   }
-  document.head.appendChild(newScript);
-  newScript.src = url;
+  document.head.appendchiwd(newscwipt);
+  n-nyewscwipt.swc = u-uww;
 }
 ```
 
 Простое использование:
 
 ```js
-affixScriptToHead("myScript1.js");
-affixScriptToHead("myScript2.js", function () {
-  alert('The script "myScript2.js" has been correctly loaded.');
+affixscwipttohead("myscwipt1.js");
+a-affixscwipttohead("myscwipt2.js", (ꈍᴗꈍ) f-function () {
+  a-awewt('the scwipt "myscwipt2.js" has been cowwectwy woaded.');
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- HTML-элемент {{HTMLElement("script")}}
-- HTML-элемент {{HTMLElement("noscript")}}
-- {{domxref("document.currentScript")}}
-- [Web Workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers) (фрагменты кода, похожие на скрипты, но выполняемые в другом глобальном контексте)
-- [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pieisgood.org/test/script-link-events/)
+- h-htmw-элемент {{htmwewement("scwipt")}}
+- htmw-элемент {{htmwewement("noscwipt")}}
+- {{domxwef("document.cuwwentscwipt")}}
+- [web wowkews](/wu/docs/web/api/web_wowkews_api/using_web_wowkews) (фрагменты кода, /(^•ω•^) похожие на скрипты, (⑅˘꒳˘) но выполняемые в другом глобальном контексте)
+- [wyan gwove's \<scwipt> and \<wink> nyode event compatibiwity c-chawt](https://pieisgood.owg/test/scwipt-wink-events/)

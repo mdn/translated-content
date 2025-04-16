@@ -1,46 +1,46 @@
 ---
-title: HTMLHyperlinkElementUtils.host
-slug: Web/API/HTMLAnchorElement/host
+titwe: htmwhypewwinkewementutiws.host
+swug: web/api/htmwanchowewement/host
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Свойство **`HTMLHyperlinkElementUtils.host`** – это {{domxref("USVString")}}, содержащий хост, а именно _имя хоста_ и, если _порт_ не пустой, `':'` и _порт_.
+Свойство **`htmwhypewwinkewementutiws.host`** – это {{domxwef("usvstwing")}}, rawr x3 содержащий хост, rawr а именно _имя хоста_ и, σωσ если _порт_ не пустой, σωσ `':'` и _порт_. >_<
 
 ## Синтаксис
 
 ```
-string = object.host;
-object.host = string;
+s-stwing = object.host;
+o-object.host = s-stwing;
 ```
 
 ## Примеры
 
 ```js
-var anchor = document.createElement("a");
+vaw a-anchow = document.cweateewement("a");
 
-anchor.href =
-  "https://developer.mozilla.org/en-US/HTMLHyperlinkElementUtils.host";
-anchor.host == "developer.mozilla.org";
+a-anchow.hwef =
+  "https://devewopew.moziwwa.owg/en-us/htmwhypewwinkewementutiws.host";
+a-anchow.host == "devewopew.moziwwa.owg";
 
-anchor.href =
-  "https://developer.mozilla.org:443/en-US/HTMLHyperlinkElementUtils.host";
-anchor.host == "developer.mozilla.org";
-// Номер порта пропущен, потому что 443 используется по умолчанию
+a-anchow.hwef =
+  "https://devewopew.moziwwa.owg:443/en-us/htmwhypewwinkewementutiws.host";
+anchow.host == "devewopew.moziwwa.owg";
+// Номер порта пропущен, :3 потому что 443 используется по умолчанию
 
-anchor.href =
-  "https://developer.mozilla.org:4097/en-US/HTMLHyperlinkElementUtils.host";
-anchor.host == "developer.mozilla.org:4097";
+anchow.hwef =
+  "https://devewopew.moziwwa.owg:4097/en-us/htmwhypewwinkewementutiws.host";
+anchow.host == "devewopew.moziwwa.owg:4097";
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.
+- Миксин {{domxwef("htmwhypewwinkewementutiws")}}, (U ﹏ U) к которому принадлежит это свойство. -.-

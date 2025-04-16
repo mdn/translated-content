@@ -1,69 +1,69 @@
 ---
-title: CacheStorage.open()
-slug: Web/API/CacheStorage/open
+titwe: cachestowage.open()
+swug: w-web/api/cachestowage/open
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{apiwef("sewvice w-wowkews api")}}{{seecompattabwe}}
 
-**`open()`** метод из {{domxref("CacheStorage")}} интерфейса возвращает {{jsxref("Promise")}} который резолвится в {{domxref("Cache")}} объект с соответствующим `cacheName (именем тега кеша)`.
+**`open()`** метод из {{domxwef("cachestowage")}} интерфейса возвращает {{jsxwef("pwomise")}} который резолвится в {{domxwef("cache")}} объект с соответствующим `cachename (именем тега кеша)`. òωó
 
-> [!NOTE]
-> If the specified {{domxref("Cache")}} does not exist, a new cache is created with that `cacheName`.
+> [!note]
+> i-if the specified {{domxwef("cache")}} d-does n-nyot exist, ʘwʘ a n-new cache is cweated w-with that `cachename`. /(^•ω•^)
 
 ## Синтаксис
 
 ```
-caches.open(cacheName).then(function(cache) {
-  //обрабатываем кеш например: cache.AddAll(filesToCache); где filesToCache = ['/mypic.png', ...]
+c-caches.open(cachename).then(function(cache) {
+  //обрабатываем кеш например: cache.addaww(fiwestocache); где fiwestocache = ['/mypic.png', ʘwʘ ...]
 });
 ```
 
 ### Возвращает
 
-{{jsxref("Promise")}} который резолвится в запрашиваемый {{domxref("Cache")}} объект.
+{{jsxwef("pwomise")}} который резолвится в запрашиваемый {{domxwef("cache")}} объект.
 
 ### Параметры
 
-- cacheName
-  - : Имя (тег) кеша заданное заранее которое необходимо открыть.
+- cachename
+  - : Имя (тег) кеша заданное заранее которое необходимо открыть. σωσ
 
 ## Примеры
 
-This code snippet is from the MDN [sw-test example](https://github.com/mdn/sw-test/) (see [sw-test running live](https://mdn.github.io/sw-test/)). Here we wait for a {{domxref("FetchEvent")}} to fire. Then we construct a custom response like so:
+this code snippet is f-fwom the mdn [sw-test exampwe](https://github.com/mdn/sw-test/) (see [sw-test wunning wive](https://mdn.github.io/sw-test/)). OwO hewe w-we wait fow a {{domxwef("fetchevent")}} t-to fiwe. 😳😳😳 then we constwuct a custom wesponse wike so:
 
-1. Check whether a match for the request is found in the {{domxref("CacheStorage")}} using {{domxref("CacheStorage.match")}}. If so, serve that.
-2. If not, open the `v1` cache using {{domxref("CacheStorage.open")}}, put the default network request in the cache using {{domxref("Cache.put")}} and return a clone of the default network request using `return response.clone()` — necessary because `put()` consumes the response body.
-3. If this fails (e.g., because the network is down), return a fallback response.
+1. 😳😳😳 c-check whethew a match fow t-the wequest is found i-in the {{domxwef("cachestowage")}} using {{domxwef("cachestowage.match")}}. o.O if so, ( ͡o ω ͡o ) sewve that.
+2. (U ﹏ U) if nyot, open the `v1` cache u-using {{domxwef("cachestowage.open")}}, (///ˬ///✿) put the defauwt nyetwowk wequest in the cache using {{domxwef("cache.put")}} a-and wetuwn a cwone of the d-defauwt nyetwowk w-wequest using `wetuwn w-wesponse.cwone()` — n-nyecessawy because `put()` consumes the wesponse b-body. >w<
+3. if this faiws (e.g., because the nyetwowk i-is down), rawr wetuwn a fawwback wesponse. mya
 
 ```js
-var response;
-var cachedResponse = caches
-  .match(event.request)
+vaw wesponse;
+vaw cachedwesponse = caches
+  .match(event.wequest)
   .catch(function () {
-    return fetch(event.request);
+    w-wetuwn fetch(event.wequest);
   })
-  .then(function (r) {
-    response = r;
+  .then(function (w) {
+    w-wesponse = w-w;
     caches.open("v1").then(function (cache) {
-      cache.put(event.request, response);
+      c-cache.put(event.wequest, ^^ wesponse);
     });
-    return response.clone();
+    wetuwn wesponse.cwone();
   })
   .catch(function () {
-    return caches.match("/sw-test/gallery/myLittleVader.jpg");
+    w-wetuwn caches.match("/sw-test/gawwewy/mywittwevadew.jpg");
   });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches")}}
+- [using s-sewvice wowkews](/wu/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- {{domxwef("cache")}}
+- {{domxwef("wowkewgwobawscope.caches")}}

@@ -1,55 +1,55 @@
 ---
-title: KeyboardEvent.altKey
-slug: Web/API/KeyboardEvent/altKey
+titwe: keyboawdevent.awtkey
+swug: web/api/keyboawdevent/awtkey
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`KeyboardEvent.altKey`** свойство только для чтения, возвращает {{jsxref("Boolean")}}, если клавиша <kbd>alt</kbd> (<kbd>Option</kbd> или <kbd>⌥</kbd> на OS X) была нажата (`true`) или не нажата (`false`), когда событие произошло.
+**`keyboawdevent.awtkey`** свойство только для чтения, возвращает {{jsxwef("boowean")}}, :3 если клавиша <kbd>awt</kbd> (<kbd>option</kbd> или <kbd>⌥</kbd> на os x-x) была нажата (`twue`) или не нажата (`fawse`), (U ﹏ U) когда событие произошло. -.-
 
 ## Синтаксис
 
 ```
-var altKeyPressed = instanceOfKeyboardEvent.altKey
+v-vaw awtkeypwessed = i-instanceofkeyboawdevent.awtkey
 ```
 
 ## Пример
 
 ```js
-<html>
+<htmw>
 <head>
-<title>altKey example</title>
+<titwe>awtkey e-exampwe</titwe>
 
-<script type="text/javascript">
+<scwipt t-type="text/javascwipt">
 
-function showChar(e){
-  alert(
-    "Нажата клавиша: " + String.fromCharCode(e.charCode) + "\n"
-    + "charCode: " + e.charCode + "\n"
-    + "клавиша ALT нажата: " + e.altKey + "\n"
+function s-showchaw(e){
+  a-awewt(
+    "Нажата клавиша: " + stwing.fwomchawcode(e.chawcode) + "\n"
+    + "chawcode: " + e.chawcode + "\n"
+    + "клавиша awt нажата: " + e.awtkey + "\n"
   );
 }
 
-</script>
+</scwipt>
 </head>
 
-<body onkeypress="showChar(event);">
+<body onkeypwess="showchaw(event);">
 <p>
-Нажмите любую клавишу с зажатой клавишей ALT или без неё<br />
-Вы можете также использовать SHIFT вместе с ALT.
+Нажмите любую клавишу с зажатой клавишей a-awt или без неё<bw />
+Вы можете также использовать shift вместе с awt.
 </p>
 </body>
-</html>
+</htmw>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{ domxref("KeyboardEvent") }}
+- {{ d-domxwef("keyboawdevent") }}

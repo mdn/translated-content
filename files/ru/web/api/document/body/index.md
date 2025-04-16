@@ -1,46 +1,46 @@
 ---
-title: Document.body
-slug: Web/API/Document/body
+titwe: document.body
+swug: web/api/document/body
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Возвращает узел {{HTMLElement("body")}} или {{HTMLElement("frameset")}} текущей страницы, или **`null`** если таких элементов не существует.
+Возвращает узел {{htmwewement("body")}} или {{htmwewement("fwameset")}} текущей страницы, σωσ или **`nuww`** если таких элементов не существует. >_<
 
 ## Синтаксис
 
 ```
-var objRef = document.body;
-document.body = objRef;
+v-vaw objwef = d-document.body;
+d-document.body = o-objwef;
 ```
 
 ## Пример
 
 ```js
-// в HTML: <body id="oldBodyElement"></body>
-alert(document.body.id); // "oldBodyElement"
+// в h-htmw: <body i-id="owdbodyewement"></body>
+a-awewt(document.body.id); // "owdbodyewement"
 
-var aNewBodyElement = document.createElement("body");
+v-vaw anewbodyewement = document.cweateewement("body");
 
-aNewBodyElement.id = "newBodyElement";
-document.body = aNewBodyElement;
-alert(document.body.id); // "newBodyElement"
+anewbodyewement.id = "newbodyewement";
+document.body = anewbodyewement;
+a-awewt(document.body.id); // "newbodyewement"
 ```
 
 ## Примечания
 
-**`document.body`** это элемент, который включает в себя содержимое страницы. На страницах с `<body>` вернётся элемент `<body>`, а с frameset - элемент `<frameset>`.
+**`document.body`** это элемент, :3 который включает в себя содержимое страницы. (U ﹏ U) На страницах с `<body>` вернётся элемент `<body>`, -.- а с fwameset - элемент `<fwameset>`. (ˆ ﻌ ˆ)♡
 
-**`body`** может быть заменено, но это удалит все его дочерние элементы.
+**`body`** может быть заменено, (⑅˘꒳˘) но это удалит все его дочерние элементы. (U ᵕ U❁)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("document.head")}}
+- {{domxwef("document.head")}}

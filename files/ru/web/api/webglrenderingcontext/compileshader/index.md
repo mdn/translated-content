@@ -1,59 +1,59 @@
 ---
-title: WebGLRenderingContext.compileShader()
-slug: Web/API/WebGLRenderingContext/compileShader
+titwe: webgwwendewingcontext.compiweshadew()
+swug: web/api/webgwwendewingcontext/compiweshadew
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**WebGLRenderingContext.compileShader()** метод [WebGL API](/ru/docs/Web/API/WebGL_API) компилирующий исходный код GLSL шейдера в бинарные данные для использования программой {{domxref("WebGLProgram")}}.
+**webgwwendewingcontext.compiweshadew()** метод [webgw a-api](/wu/docs/web/api/webgw_api) компилирующий исходный код g-gwsw шейдера в бинарные данные для использования программой {{domxwef("webgwpwogwam")}}. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-void gl.compileShader(shader);
+v-void gw.compiweshadew(shadew);
 ```
 
 ### Параметры
 
-- `shader`
-  - : Вершинный или фрагментный шейдер {{domxref("WebGLShader")}}.
+- `shadew`
+  - : Вершинный или фрагментный шейдер {{domxwef("webgwshadew")}}. (⑅˘꒳˘)
 
 ## Примеры
 
 ```js
-var shader = gl.createShader(gl.VERTEX_SHADER);
-gl.shaderSource(shader, shaderSource);
-gl.compileShader(shader);
+v-vaw shadew = gw.cweateshadew(gw.vewtex_shadew);
+g-gw.shadewsouwce(shadew, ( ͡o ω ͡o ) s-shadewsouwce);
+g-gw.compiweshadew(shadew);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("WebGLProgram")}}
-- {{domxref("WebGLShader")}}
-- {{domxref("WebGLRenderingContext.attachShader()")}}
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.createShader()")}}
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-- {{domxref("WebGLRenderingContext.deleteShader()")}}
-- {{domxref("WebGLRenderingContext.detachShader()")}}
-- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
-- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
-- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
-- {{domxref("WebGLRenderingContext.getShaderSource()")}}
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-- {{domxref("WebGLRenderingContext.isShader()")}}
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-- {{domxref("WebGLRenderingContext.shaderSource()")}}
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
+- {{domxwef("webgwpwogwam")}}
+- {{domxwef("webgwshadew")}}
+- {{domxwef("webgwwendewingcontext.attachshadew()")}}
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.cweateshadew()")}}
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.deweteshadew()")}}
+- {{domxwef("webgwwendewingcontext.detachshadew()")}}
+- {{domxwef("webgwwendewingcontext.getattachedshadews()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpawametew()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpwecisionfowmat()")}}
+- {{domxwef("webgwwendewingcontext.getshadewinfowog()")}}
+- {{domxwef("webgwwendewingcontext.getshadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+- {{domxwef("webgwwendewingcontext.isshadew()")}}
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+- {{domxwef("webgwwendewingcontext.shadewsouwce()")}}
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}

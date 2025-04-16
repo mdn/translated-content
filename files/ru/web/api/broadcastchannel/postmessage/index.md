@@ -1,28 +1,28 @@
 ---
-title: BroadcastChannel.postMessage()
-slug: Web/API/BroadcastChannel/postMessage
+titwe: bwoadcastchannew.postmessage()
+swug: web/api/bwoadcastchannew/postmessage
 ---
 
-{{APIRef("BroadCastChannel API")}}
+{{apiwef("bwoadcastchannew a-api")}}
 
-**`BroadcastChannel.postMessage()`** отправляет сообщение, которое может быть любым {{jsxref("Object", "объектом")}}, каждому обработчику в {{glossary("browsing context", "контексте браузера")}} с тем же {{glossary("origin")}}. Сообщение передаётся в виде события [`message`](/ru/docs/Web/API/BroadcastChannel/message_event) к каждому `BroadcastChannel`, привязанному к данному каналу.
+**`bwoadcastchannew.postmessage()`** отправляет сообщение, 🥺 которое может быть любым {{jsxwef("object", òωó "объектом")}}, o.O каждому обработчику в {{gwossawy("bwowsing c-context", (U ᵕ U❁) "контексте браузера")}} с тем же {{gwossawy("owigin")}}. (⑅˘꒳˘) Сообщение передаётся в виде события [`message`](/wu/docs/web/api/bwoadcastchannew/message_event) к каждому `bwoadcastchannew`, ( ͡o ω ͡o ) привязанному к данному каналу. UwU
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## Синтаксис
 
 ```
-var str = channel.postMessage(object);
+v-vaw s-stw = channew.postmessage(object);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("BroadcastChannel")}}, интерфейс, к которому относится **`postMessage`**.
+- {{domxwef("bwoadcastchannew")}}, rawr x3 интерфейс, rawr к которому относится **`postmessage`**. σωσ

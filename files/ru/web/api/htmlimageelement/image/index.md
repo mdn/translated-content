@@ -1,16 +1,16 @@
 ---
-title: Image()
-slug: Web/API/HTMLImageElement/Image
+titwe: image()
+swug: web/api/htmwimageewement/image
 ---
 
-{{ APIRef("HTML DOM") }}Конструктор **Image()** создаёт новый экземпляр HTMLImageElement. Эквивалентно document.createElement ('img').
+{{ apiwef("htmw d-dom") }}Конструктор **image()** создаёт новый экземпляр h-htmwimageewement. σωσ Эквивалентно document.cweateewement ('img'). σωσ
 
-### Конструктор элемента Image
+### Конструктор элемента i-image
 
 Имеет два необязательных параметра: **ширину** и **высоту**:
 
 ```js
-Image([unsigned long width, unsigned long height])
+i-image([unsigned w-wong width, >_< unsigned w-wong height])
 ```
 
 ### Пример
@@ -18,16 +18,16 @@ Image([unsigned long width, unsigned long height])
 ##### Исходный код
 
 ```js
-var img = new Image(100, 200);
-img.src = "picture.jpg";
-console.log(img);
+v-vaw img = nyew i-image(100, :3 200);
+img.swc = "pictuwe.jpg";
+consowe.wog(img);
 ```
 
 ##### Результат
 
-```html
-<img width="100" height="200" src="picture.jpg" />
+```htmw
+<img width="100" height="200" s-swc="pictuwe.jpg" />
 ```
 
-> [!NOTE]
-> Этот конструктор существует только для истории, и возвращает экземпляр [HTMLImageElement](/ru/docs/Web/API/HTMLImageElement) точно также, как и `document.createElement('img')`.
+> [!note]
+> Этот конструктор существует только для истории, (U ﹏ U) и возвращает экземпляр [htmwimageewement](/wu/docs/web/api/htmwimageewement) точно также, -.- как и `document.cweateewement('img')`. (ˆ ﻌ ˆ)♡

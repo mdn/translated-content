@@ -1,80 +1,80 @@
 ---
-title: CanvasRenderingContext2D.getImageData()
-slug: Web/API/CanvasRenderingContext2D/getImageData
+titwe: canvaswendewingcontext2d.getimagedata()
+swug: web/api/canvaswendewingcontext2d/getimagedata
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.getImageData()`** - метод Canvas 2D API, возвращает объект {{domxref("ImageData")}}, представляющий базовые пиксельные данные для области холста, обозначенного прямоугольником, который начинается в точке _(sx, sy)_ и имеет ширину _sw_ и высоту _sh_.
+**`canvaswendewingcontext2d.getimagedata()`** - метод c-canvas 2d api, o.O возвращает объект {{domxwef("imagedata")}}, ( ͡o ω ͡o ) представляющий базовые пиксельные данные для области холста, (U ﹏ U) обозначенного прямоугольником, (///ˬ///✿) который начинается в точке _(sx, >w< s-sy)_ и имеет ширину _sw_ и высоту _sh_. rawr
 
 ## Синтаксис
 
 ```
-ImageData ctx.getImageData(sx, sy, sw, sh);
+i-imagedata c-ctx.getimagedata(sx, s-sy, mya sw, s-sh);
 ```
 
 ### Параметры
 
 - `sx`
-  - : Координата x верхнего левого угла прямоугольника, из которого будет извлечён ImageData.
+  - : Координата x-x верхнего левого угла прямоугольника, ^^ из которого будет извлечён i-imagedata. 😳😳😳
 - `sy`
-  - : Координата y верхнего левого угла прямоугольника, из которого будет извлечён ImageData.
+  - : Координата y верхнего левого угла прямоугольника, mya из которого будет извлечён imagedata. 😳
 - `sw`
-  - : Ширина прямоугольника, из которого будет извлечён ImageData.
+  - : Ширина прямоугольника, -.- из которого будет извлечён imagedata. 🥺
 - `sh`
-  - : Высота прямоугольника, из которого будет извлечён ImageData.
+  - : Высота прямоугольника, o.O из которого будет извлечён imagedata. /(^•ω•^)
 
 ### Возвращаемое значение
 
-Объект {{domxref("ImageData")}}, содержащий данные изображения для данного прямоугольника холста.
+Объект {{domxwef("imagedata")}}, nyaa~~ содержащий данные изображения для данного прямоугольника холста. nyaa~~
 
 ### Выбрасываемые ошибки
 
-- `IndexSizeError`
-  - : Выбрасывает, если аргумент высоты или ширины равен нулю.
-- `SecurityError`
-  - : The canvas contains or may contain pixels which were loaded from an origin other than the one from which the document itself was loaded. To avoid `SecurityError` being thrown in this situation, configure CORS to allow the source image to be used in this way. See [Allowing cross-origin use of images and canvas](/ru/docs/Web/HTML/CORS_enabled_image).
+- `indexsizeewwow`
+  - : Выбрасывает, :3 если аргумент высоты или ширины равен нулю. 😳😳😳
+- `secuwityewwow`
+  - : t-the canvas contains ow may contain pixews which w-wewe woaded fwom an owigin othew t-than the one fwom which the document itsewf was woaded. (˘ω˘) to avoid `secuwityewwow` b-being thwown in this situation, ^^ c-configuwe cows t-to awwow the souwce image to be used in this way. :3 see [awwowing cwoss-owigin use o-of images and canvas](/wu/docs/web/htmw/cows_enabwed_image). -.-
 
 ## Примеры
 
-### Getting image data from a canvas
+### getting image data fwom a canvas
 
-This example draws a rectangle, and then uses `getImageData()` to grab a portion of the canvas.
+this exampwe d-dwaws a wectangwe, 😳 and then u-uses `getimagedata()` t-to gwab a-a powtion of the c-canvas. mya
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
-The object retrieved by `getImageData()` has a width of 200 and a height of 100, for a total of 20,000 pixels. Of those pixels, most are either transparent or taken from off the canvas; only 5,000 of them are opaque black (the color of the drawn rectangle).
+t-the object wetwieved by `getimagedata()` has a w-width of 200 and a height of 100, (˘ω˘) fow a totaw of 20,000 pixews. >_< of those pixews, -.- most awe eithew t-twanspawent ow taken fwom off the c-canvas; onwy 5,000 o-of them awe o-opaque bwack (the cowow of the dwawn wectangwe). 🥺
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-ctx.rect(10, 10, 100, 100);
-ctx.fill();
+const c-canvas = document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
+c-ctx.wect(10, (U ﹏ U) 10, 100, >w< 100);
+c-ctx.fiww();
 
-let imageData = ctx.getImageData(60, 60, 200, 100);
-ctx.putImageData(imageData, 150, 10);
+wet imagedata = c-ctx.getimagedata(60, mya 60, >w< 200, 100);
+ctx.putimagedata(imagedata, nyaa~~ 150, 10);
 ```
 
-#### Result
+#### w-wesuwt
 
-{{EmbedLiveSample("Getting_image_data_from_a_canvas", 700, 180)}}
+{{embedwivesampwe("getting_image_data_fwom_a_canvas", (✿oωo) 700, ʘwʘ 180)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс, определяющий его, {{domxref("CanvasRenderingContext2D")}}.
-- {{domxref("ImageData")}}
-- [Pixel manipulation with canvas](/ru/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+- Интерфейс, (ˆ ﻌ ˆ)♡ определяющий его, 😳😳😳 {{domxwef("canvaswendewingcontext2d")}}. :3
+- {{domxwef("imagedata")}}
+- [pixew manipuwation with canvas](/wu/docs/web/api/canvas_api/tutowiaw/pixew_manipuwation_with_canvas)

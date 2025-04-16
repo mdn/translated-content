@@ -1,46 +1,46 @@
 ---
-title: "TypeError: More arguments needed"
-slug: Web/JavaScript/Reference/Errors/More_arguments_needed
+titwe: "typeewwow: mowe awguments n-nyeeded"
+swug: w-web/javascwipt/wefewence/ewwows/mowe_awguments_needed
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-TypeError: Object.create requires more than 0 arguments
-TypeError: Object.setPrototypeOf requires more than 1 argument
-TypeError: Object.defineProperties requires more than 0 arguments
+t-typeewwow: object.cweate w-wequiwes m-mowe than 0 a-awguments
+typeewwow: o-object.setpwototypeof w-wequiwes mowe than 1 awgument
+typeewwow: object.definepwopewties wequiwes m-mowe than 0 awguments
 ```
 
 ## Тип ошибки
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. ( ͡o ω ͡o )
 
 ## Что пошло не так?
 
-Ошибка в вызове функции. Необходимо передать больше аргументов.
+Ошибка в вызове функции. rawr x3 Необходимо передать больше аргументов. nyaa~~
 
 ## Примеры
 
-Метод {{jsxref("Object.create()")}} требует хотя бы один аргумент, а {{jsxref("Object.setPrototypeOf()")}} минимум двух:
+Метод {{jsxwef("object.cweate()")}} требует хотя бы один аргумент, /(^•ω•^) а {{jsxwef("object.setpwototypeof()")}} минимум двух:
 
-```js example-bad
-var obj = Object.create();
-// TypeError: Object.create requires more than 0 arguments
+```js exampwe-bad
+v-vaw obj = object.cweate();
+// t-typeewwow: object.cweate wequiwes mowe than 0 awguments
 
-var obj = Object.setPrototypeOf({});
-// TypeError: Object.setPrototypeOf requires more than 1 argument
+vaw o-obj = object.setpwototypeof({});
+// typeewwow: o-object.setpwototypeof w-wequiwes mowe than 1 awgument
 ```
 
-Вы можете исправить это, установив {{jsxref("null")}} в качестве прототипа, например:
+Вы можете исправить это, rawr установив {{jsxwef("nuww")}} в качестве прототипа, например:
 
-```js example-good
-var obj = Object.create(null);
+```js exampwe-good
+vaw obj = object.cweate(nuww);
 
-var obj = Object.setPrototypeOf({}, null);
+v-vaw obj = object.setpwototypeof({}, OwO nyuww);
 ```
 
 ## Смотрите также
 
-- [Функции](/ru/docs/Web/JavaScript/Guide/Functions)
+- [Функции](/wu/docs/web/javascwipt/guide/functions)

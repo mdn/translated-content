@@ -1,18 +1,18 @@
 ---
-title: deviceorientation
-slug: Web/API/Window/deviceorientation_event
+titwe: deviceowientation
+swug: w-web/api/window/deviceowientation_event
 ---
 
-{{APIRef("Device Orientation Events")}}
+{{apiwef("device owientation e-events")}}
 
-Событие `deviceorientation` срабатывает, когда с сенсоров ориентации поступают новые данные о текущем положении устройства внутри Земной системы координат. Эти данные собираются с помощью магнитометра устройства. Более детальное объяснение дано в [Ориентация и объяснение данных движения](/ru/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained).
+Событие `deviceowientation` срабатывает, 🥺 когда с сенсоров ориентации поступают новые данные о текущем положении устройства внутри Земной системы координат. o.O Эти данные собираются с помощью магнитометра устройства. /(^•ω•^) Более детальное объяснение дано в [Ориентация и объяснение данных движения](/wu/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained). nyaa~~
 
 ## Общая информация
 
 - Спецификация
-  - : Событие [DeviceOrientation](https://www.w3.org/TR/orientation-event/#deviceorientation)
+  - : Событие [deviceowientation](https://www.w3.owg/tw/owientation-event/#deviceowientation)
 - Определение
-  - : DeviceOrientationEvent
+  - : d-deviceowientationevent
 - Всплывает
   - : Нет
 - Отменяемо
@@ -24,41 +24,41 @@ slug: Web/API/Window/deviceorientation_event
 
 ## Свойства
 
-| Property                        | Type                       | Description                                                                                                                                                                                                           |
+| p-pwopewty                        | t-type                       | d-descwiption                                                                                                                                                                                                           |
 | ------------------------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                                                                                                                                                |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                                                                                                                                                                                    |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not                                                                                                                                                                             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not?                                                                                                                                                                              |
-| `alpha` {{readonlyInline}}      | double (float)             | The current orientation of the device around the Z axis; that is, how far the device is rotated around a line perpendicular to the device.                                                                            |
-| `beta` {{readonlyInline}}       | double (float)             | The current orientation of the device around the X axis; that is, how far the device is tipped forward or backward.                                                                                                   |
-| `gamma` {{readonlyInline}}      | double (float)             | The current orientation of the device around the Y axis; that is, how far the device is turned left or right.                                                                                                         |
-| `absolute` {{readonlyInline}}   | {{jsxref("boolean")}}      | This value is `true` if the orientation is provided as a difference between the device coordinate frame and the Earth coordinate frame; if the device can't detect the Earth coordinate frame, this value is `false`. |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | t-the event t-tawget (the topmost tawget in the dom twee). nyaa~~                                                                                                                                                                |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | the type of event. :3                                                                                                                                                                                                    |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | whethew t-the event nyowmawwy bubbwes ow nyot                                                                                                                                                                             |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | w-whethew the event is cancewwabwe o-ow nyot?                                                                                                                                                                              |
+| `awpha` {{weadonwyinwine}}      | doubwe (fwoat)             | the cuwwent owientation of the d-device awound the z axis; that is, 😳😳😳 h-how faw the device i-is wotated awound a wine pewpendicuwaw to the device. (˘ω˘)                                                                            |
+| `beta` {{weadonwyinwine}}       | doubwe (fwoat)             | t-the cuwwent owientation of the device awound the x axis; that is, ^^ how f-faw the device is tipped fowwawd o-ow backwawd.                                                                                                   |
+| `gamma` {{weadonwyinwine}}      | d-doubwe (fwoat)             | t-the cuwwent owientation o-of the device awound the y axis; that i-is, :3 how faw the device is tuwned weft ow wight. -.-                                                                                                         |
+| `absowute` {{weadonwyinwine}}   | {{jsxwef("boowean")}}      | t-this vawue is `twue` if the owientation is pwovided as a diffewence between the device c-coowdinate fwame and the eawth c-coowdinate fwame; i-if the device c-can't detect the eawth coowdinate fwame, 😳 this vawue is `fawse`. mya |
 
 ## Пример
 
 ```js
-if (window.DeviceOrientationEvent) {
-  window.addEventListener(
-    "deviceorientation",
+i-if (window.deviceowientationevent) {
+  w-window.addeventwistenew(
+    "deviceowientation", (˘ω˘)
     function (event) {
-      // alpha: rotation around z-axis
-      var rotateDegrees = event.alpha;
-      // gamma: left to right
-      var leftToRight = event.gamma;
-      // beta: front back motion
-      var frontToBack = event.beta;
+      // a-awpha: wotation a-awound z-axis
+      vaw wotatedegwees = e-event.awpha;
+      // gamma: weft to w-wight
+      vaw wefttowight = event.gamma;
+      // b-beta: fwont back motion
+      v-vaw fwonttoback = event.beta;
 
-      handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
-    },
-    true,
+      h-handweowientationevent(fwonttoback, >_< w-wefttowight, -.- wotatedegwees);
+    }, 🥺
+    twue, (U ﹏ U)
   );
 }
 
-var handleOrientationEvent = function (
-  frontToBack,
-  leftToRight,
-  rotateDegrees,
+vaw handweowientationevent = function (
+  fwonttoback, >w<
+  wefttowight, mya
+  wotatedegwees, >w<
 ) {
   // Сделайте что-нибудь необычное здесь
 };
@@ -66,16 +66,16 @@ var handleOrientationEvent = function (
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Похожие события
 
-- [`devicemotion`](/ru/docs/Web/API/Window/devicemotion_event)
+- [`devicemotion`](/wu/docs/web/api/window/devicemotion_event)
 
 ## Смотрите также
 
-- {{domxref("DeviceMotionEvent")}}
-- {{domxref("window.ondeviceorientation")}}
-- [Определение ориентации устройства](/ru/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Ориентация и объяснение данных о движении](/ru/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
-- Имитация события смены ориентации в настольный браузерах с помощью [orientation-devtool](http://louisremi.github.com/orientation-devtool/)
+- {{domxwef("devicemotionevent")}}
+- {{domxwef("window.ondeviceowientation")}}
+- [Определение ориентации устройства](/wu/docs/web/api/device_owientation_events/detecting_device_owientation)
+- [Ориентация и объяснение данных о движении](/wu/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained)
+- Имитация события смены ориентации в настольный браузерах с помощью [owientation-devtoow](http://wouiswemi.github.com/owientation-devtoow/)

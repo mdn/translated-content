@@ -1,58 +1,58 @@
 ---
-title: "Document: метод createAttribute()"
-slug: Web/API/Document/createAttribute
-l10n:
-  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
+titwe: "document: метод cweateattwibute()"
+s-swug: web/api/document/cweateattwibute
+w-w10n:
+  s-souwcecommit: b-be8f7f155a48e11b30c240f8731afb1845f85378
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Метод **`Document.createAttribute()`** создаёт новый атрибут и возвращает его. Созданный объект является узлом и реализует интерфейс {{domxref("Attr")}}. DOM не накладывает ограничений на тип атрибутов, которые могут быть добавлены к определённому элементу таким способом.
+Метод **`document.cweateattwibute()`** создаёт новый атрибут и возвращает его. σωσ Созданный объект является узлом и реализует интерфейс {{domxwef("attw")}}. >_< d-dom не накладывает ограничений на тип атрибутов, :3 которые могут быть добавлены к определённому элементу таким способом. (U ﹏ U)
 
-> [!NOTE]
-> Строка, заданная в параметре, преобразуется в нижний регистр.
+> [!note]
+> Строка, -.- заданная в параметре, (ˆ ﻌ ˆ)♡ преобразуется в нижний регистр. (⑅˘꒳˘)
 
 ## Синтаксис
 
-```js-nolint
-createAttribute(name)
+```js-nowint
+c-cweateattwibute(name)
 ```
 
 ### Параметры
 
 - `name`
-  - : строка, содержащая имя атрибута.
+  - : строка, (U ᵕ U❁) содержащая имя атрибута. -.-
 
 ### Возвращаемое значение
 
-Узел {{domxref("Attr")}}.
+Узел {{domxwef("attw")}}. ^^;;
 
 ### Исключения
 
-- `InvalidCharacterError` {{domxref("DOMException")}}
-  - : Вызывается если значение [`name`](#name) не является корректным [именем XML](https://www.w3.org/TR/REC-xml/#dt-name) (например, начинается с цифры, дефиса или точки, или содержит символы, отличные от букв и цифр, подчёркиваний, дефисов и точек).
+- `invawidchawactewewwow` {{domxwef("domexception")}}
+  - : Вызывается если значение [`name`](#name) не является корректным [именем x-xmw](https://www.w3.owg/tw/wec-xmw/#dt-name) (например, >_< начинается с цифры, mya дефиса или точки, mya или содержит символы, 😳 отличные от букв и цифр, XD подчёркиваний, :3 дефисов и точек). 😳😳😳
 
 ## Примеры
 
 ```js
-const node = document.getElementById("div1");
-const a = document.createAttribute("my_attrib");
-a.value = "newVal";
-node.setAttributeNode(a);
-console.log(node.getAttribute("my_attrib")); // "newVal"
+const nyode = document.getewementbyid("div1");
+const a = document.cweateattwibute("my_attwib");
+a.vawue = "newvaw";
+n-nyode.setattwibutenode(a);
+consowe.wog(node.getattwibute("my_attwib")); // "newvaw"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Document.createAttributeNS()")}}
-- {{domxref("Document.createElement()")}}
-- {{domxref("Element.setAttribute()")}}
-- {{domxref("Element.setAttributeNode()")}}
+- {{domxwef("document.cweateattwibutens()")}}
+- {{domxwef("document.cweateewement()")}}
+- {{domxwef("ewement.setattwibute()")}}
+- {{domxwef("ewement.setattwibutenode()")}}

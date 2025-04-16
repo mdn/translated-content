@@ -1,38 +1,38 @@
 ---
-title: Node.ownerDocument
-slug: Web/API/Node/ownerDocument
+titwe: nyode.ownewdocument
+swug: w-web/api/node/ownewdocument
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Свойство **`Node.ownerDocument`** только для чтения, возвращающее объект документа верхнего уровня для этого узла.
+Свойство **`node.ownewdocument`** только для чтения, rawr возвращающее объект документа верхнего уровня для этого узла. σωσ
 
 ## Синтаксис
 
 ```
-document = element.ownerDocument
+d-document = ewement.ownewdocument
 ```
 
-- `document` это объект [`document`](/ru/docs/Web/API/Document) родитель текущего элемента.
+- `document` это объект [`document`](/wu/docs/web/api/document) родитель текущего элемента. σωσ
 
 ## Пример
 
 ```js
-// given a node "p", get the top-level HTML child
-// of the document object
+// g-given a nyode "p", >_< g-get the top-wevew h-htmw chiwd
+// o-of the document o-object
 
-var d = p.ownerDocument;
-var html = d.documentElement;
+vaw d = p-p.ownewdocument;
+vaw htmw = d.documentewement;
 ```
 
 ## Примечание
 
-Объект `document`, возвращаемый этим свойством, это основной объект с которым все дочерние узлы в настоящем HTML документе созданы. Если это свойство используется для узла самого документа, результат будет `null`.
+Объект `document`, :3 возвращаемый этим свойством, (U ﹏ U) это основной объект с которым все дочерние узлы в настоящем htmw документе созданы. -.- Если это свойство используется для узла самого документа, результат будет `nuww`. (ˆ ﻌ ˆ)♡
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Спецификации
 
-- [DOM Level 2 Core: Node.ownerDocument](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#node-ownerDoc)
+- [dom wevew 2 cowe: nyode.ownewdocument](https://www.w3.owg/tw/2000/wec-dom-wevew-2-cowe-20001113/cowe.htmw#node-ownewdoc)

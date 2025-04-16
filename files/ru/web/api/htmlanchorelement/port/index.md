@@ -1,13 +1,13 @@
 ---
-title: "HTMLAnchorElement: свойство port"
-slug: Web/API/HTMLAnchorElement/port
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwanchowewement: свойство powt"
+swug: web/api/htmwanchowewement/powt
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Свойство **`HTMLAnchorElement.port`** — это строка, содержащая номер порта сервера, указанный в URL. Если в URL явно не указан номер порта, то значение этого свойства будет установлено в `''`.
+Свойство **`htmwanchowewement.powt`** — это строка, UwU содержащая номер порта сервера, указанный в u-uww. rawr x3 Если в uww явно не указан номер порта, rawr то значение этого свойства будет установлено в `''`. σωσ
 
 ## Значение
 
@@ -18,19 +18,19 @@ l10n:
 ### Получение номера порта из ссылки
 
 ```js
-// Документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org:443/en-US/docs/HTMLAnchorElement">
-const anchor = document.getElementByID("myAnchor");
-anchor.port; // '443'
+// Документ содержит элемент <a i-id="myanchow" h-hwef="https://devewopew.moziwwa.owg:443/en-us/docs/htmwanchowewement">
+c-const anchow = document.getewementbyid("myanchow");
+anchow.powt; // '443'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс {{domxref("HTMLAnchorElement")}}.
+- Интерфейс {{domxwef("htmwanchowewement")}}. σωσ

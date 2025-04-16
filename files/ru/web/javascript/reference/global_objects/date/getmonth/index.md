@@ -1,50 +1,50 @@
 ---
-title: Date.prototype.getMonth()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
+titwe: date.pwototype.getmonth()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getmonth
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`getMonth()`** возвращает месяц указанной даты по местному времени, нумерация месяцев начинается с нуля для первого месяца в году.
+Метод **`getmonth()`** возвращает месяц указанной даты по местному времени, o.O нумерация месяцев начинается с нуля для первого месяца в году. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-dateObj.getMonth()
+d-dateobj.getmonth()
 ```
 
 ### Параметры
 
-Нет.
+Нет. (⑅˘꒳˘)
 
 ### Возвращаемое значение
 
-Значение, возвращённое методом `getMonth()`, является целым числом от 0 до 11. 0 соответствует январю, 1 — февралю и так далее.
+Значение, ( ͡o ω ͡o ) возвращённое методом `getmonth()`, является целым числом от 0 до 11. UwU 0 соответствует январю, rawr x3 1 — февралю и так далее. rawr
 
 ## Примеры
 
-### Пример: использование метода `getMonth()`
+### Пример: использование метода `getmonth()`
 
-Вторая инструкция в примере ниже присваивает значение 11 переменной `month` из значения переменной `date` объекта {{jsxref("Global_Objects/Date", "Date")}}.
+Вторая инструкция в примере ниже присваивает значение 11 переменной `month` из значения переменной `date` объекта {{jsxwef("gwobaw_objects/date", σωσ "date")}}.
 
 ```js
-let date = new Date("December 25, 1995 23:15:30");
-let month = date.getMonth();
+w-wet date = nyew d-date("decembew 25, σωσ 1995 23:15:30");
+w-wet month = d-date.getmonth();
 
-console.log(month); // 11
+c-consowe.wog(month); // 11
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.prototype.getUTCMonth()")}}
-- {{jsxref("Date.prototype.setMonth()")}}
+- {{jsxwef("date.pwototype.getutcmonth()")}}
+- {{jsxwef("date.pwototype.setmonth()")}}

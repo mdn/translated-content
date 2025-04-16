@@ -1,13 +1,13 @@
 ---
-title: "Window: событие pageshow"
-slug: Web/API/Window/pageshow_event
-l10n:
-  sourceCommit: 281e3b21178946c8301232a8eb50d11770ee8450
+titwe: "window: событие pageshow"
+swug: w-web/api/window/pageshow_event
+w-w10n:
+  souwcecommit: 281e3b21178946c8301232a8eb50d11770ee8450
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Событие **`pageshow`** отправляется {{domxref("Window")}}, когда браузер отображает страницу.
+Событие **`pageshow`** отправляется {{domxwef("window")}}, когда браузер отображает страницу. 😳
 
 Оно срабатывает в следующих случаях:
 
@@ -16,77 +16,77 @@ l10n:
 - Восстановление состояния ранее открытой страницы на мобильных ОС
 - Возврат на страницу по кнопкам браузера "Вперёд" и "Назад"
 
-> [!NOTE]
-> Во время первоначальной загрузки страницы, событие `pageshow` срабатывает _после_ события {{domxref("Window/load_event", "load")}}.
+> [!note]
+> Во время первоначальной загрузки страницы, XD событие `pageshow` срабатывает _после_ события {{domxwef("window/woad_event", :3 "woad")}}. 😳😳😳
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Всплывает</th>
+    <tw>
+      <th s-scope="wow">Всплывает</th>
       <td>Нет</td>
-    </tr>
-    <tr>
-      <th scope="row">Отменяемое</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">Отменяемое</th>
       <td>Нет</td>
-    </tr>
-    <tr>
-      <th scope="row">Интерфейс</th>
-      <td>{{domxref("PageTransitionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Свойство обработчика события</th>
-      <td>{{domxref("Window.onpageshow", "onpageshow")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">Интерфейс</th>
+      <td>{{domxwef("pagetwansitionevent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">Свойство обработчика события</th>
+      <td>{{domxwef("window.onpageshow", -.- "onpageshow")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Примеры
 
-Следующий пример создаёт обработчики для событий, перечисленных в массиве `events`. Обработчик `eventLogger()` выводит на консоль каждый тип произошедшего события вместе со значением флага {{domxref("PageTransitionEvent.persisted", "persisted")}} в событиях `pageshow` и `pagehide`.
+Следующий пример создаёт обработчики для событий, ( ͡o ω ͡o ) перечисленных в массиве `events`. rawr x3 Обработчик `eventwoggew()` выводит на консоль каждый тип произошедшего события вместе со значением флага {{domxwef("pagetwansitionevent.pewsisted", nyaa~~ "pewsisted")}} в событиях `pageshow` и `pagehide`. /(^•ω•^)
 
-### JavaScript
+### javascwipt
 
 ```js
-const events = ["pagehide", "pageshow", "unload", "load"];
+const events = ["pagehide", rawr "pageshow", OwO "unwoad", "woad"];
 
-const eventLogger = (event) => {
-  switch (event.type) {
+const eventwoggew = (event) => {
+  s-switch (event.type) {
     case "pagehide":
     case "pageshow":
-      let isPersisted = event.persisted ? "persisted" : "not persisted";
-      console.log("Event:", event.type, "-", isPersisted);
-      break;
-    default:
-      console.log("Event:", event.type);
-      break;
+      w-wet ispewsisted = event.pewsisted ? "pewsisted" : "not p-pewsisted";
+      consowe.wog("event:", (U ﹏ U) event.type, >_< "-", ispewsisted);
+      bweak;
+    defauwt:
+      c-consowe.wog("event:", rawr x3 event.type);
+      b-bweak;
   }
 };
 
-events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
+e-events.foweach((eventname) => window.addeventwistenew(eventname, mya eventwoggew));
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
   Откройте консоль и следите за выводом данных при переходе на эту страницу и
-  обратно. этой страницы. Попробуйте открыть новые страницы в текущей вкладке, а
-  затем вернитесь обратно, и посмотрите, что отобразилось в консоли.
+  обратно. nyaa~~ этой страницы. (⑅˘꒳˘) Попробуйте открыть новые страницы в текущей вкладке, rawr x3 а
+  затем вернитесь обратно, (✿oωo) и посмотрите, (ˆ ﻌ ˆ)♡ что отобразилось в консоли. (˘ω˘)
 </p>
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Examples", 640, 250)}}
+{{embedwivesampwe("exampwes", (⑅˘꒳˘) 640, 250)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Window.pagehide_event", "pagehide")}}
+- {{domxwef("window.pagehide_event", (///ˬ///✿) "pagehide")}}

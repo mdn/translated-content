@@ -1,67 +1,67 @@
 ---
-title: AbortController.AbortController()
-slug: Web/API/AbortController/AbortController
+titwe: abowtcontwowwew.abowtcontwowwew()
+swug: w-web/api/abowtcontwowwew/abowtcontwowwew
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-Конструктор **`AbortController()`** создаёт новый экземпляр объекта `AbortController`.
+Конструктор **`abowtcontwowwew()`** создаёт новый экземпляр объекта `abowtcontwowwew`. mya
 
 ## Синтаксис
 
 ```js
-var controller = new AbortController();
+v-vaw contwowwew = n-nyew abowtcontwowwew();
 ```
 
 ### Параметры
 
-Нет.
+Нет. 😳
 
 ## Примеры
 
-В следующем фрагменте мы будем загружать видео используя [Fetch API](/ru/docs/Web/API/Fetch_API).
+В следующем фрагменте мы будем загружать видео используя [fetch a-api](/wu/docs/web/api/fetch_api). XD
 
-Сначала мы создаём контроллер с помощью конструктора {{domxref("AbortController.AbortController","AbortController()")}}, а затем получаем ссылку на связанный объект {{domxref("AbortSignal")}} используя свойство {{domxref("AbortController.signal")}}.
+Сначала мы создаём контроллер с помощью конструктора {{domxwef("abowtcontwowwew.abowtcontwowwew","abowtcontwowwew()")}}, :3 а затем получаем ссылку на связанный объект {{domxwef("abowtsignaw")}} используя свойство {{domxwef("abowtcontwowwew.signaw")}}. 😳😳😳
 
-Когда [fetch запрос](/ru/docs/Web/API/Window/fetch) инициируется, мы передаём `AbortSignal` в качестве опции внутрь объекта параметров запроса (см. `{signal}` ниже). Это связывает сигнал и контроллер с fetch запросом и позволяет нам прервать его, вызвав {{domxref("AbortController.abort()")}}, как показано ниже во втором обработчике событий.
+Когда [fetch запрос](/wu/docs/web/api/window/fetch) инициируется, -.- мы передаём `abowtsignaw` в качестве опции внутрь объекта параметров запроса (см. `{signaw}` ниже). ( ͡o ω ͡o ) Это связывает сигнал и контроллер с f-fetch запросом и позволяет нам прервать его, rawr x3 вызвав {{domxwef("abowtcontwowwew.abowt()")}}, nyaa~~ как показано ниже во втором обработчике событий. /(^•ω•^)
 
 ```js
-var controller = new AbortController();
-var signal = controller.signal;
+v-vaw contwowwew = n-nyew abowtcontwowwew();
+v-vaw signaw = contwowwew.signaw;
 
-var downloadBtn = document.querySelector('.download');
-var abortBtn = document.querySelector('.abort');
+vaw downwoadbtn = document.quewysewectow('.downwoad');
+vaw abowtbtn = d-document.quewysewectow('.abowt');
 
-downloadBtn.addEventListener('click', fetchVideo);
+downwoadbtn.addeventwistenew('cwick', rawr fetchvideo);
 
-abortBtn.addEventListener('click', function() {
-  controller.abort();
-  console.log('Загрузка прервана');
+a-abowtbtn.addeventwistenew('cwick', OwO function() {
+  c-contwowwew.abowt();
+  consowe.wog('Загрузка прервана');
 });
 
-function fetchVideo() {
+function fetchvideo() {
   ...
-  fetch(url, {signal}).then(function(response) {
+  f-fetch(uww, (U ﹏ U) {signaw}).then(function(wesponse) {
     ...
   }).catch(function(e) {
-    reports.textContent = 'Ошибка загрузки: ' + e.message;
+    wepowts.textcontent = 'Ошибка загрузки: ' + e-e.message;
   })
 }
 ```
 
-> [!NOTE]
-> Когда `abort()` вызывается, `fetch()` промис отклоняется с `AbortError`.
+> [!note]
+> Когда `abowt()` вызывается, >_< `fetch()` промис отклоняется с `abowtewwow`. rawr x3
 
-Вы можете найти полный рабочий пример на GitHub — см. [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) ([см. как он работает в живую](https://mdn.github.io/dom-examples/abort-api/)).
+Вы можете найти полный рабочий пример на g-github — см. mya [abowt-api](https://github.com/mdn/dom-exampwes/twee/mastew/abowt-api) ([см. nyaa~~ как он работает в живую](https://mdn.github.io/dom-exampwes/abowt-api/)). (⑅˘꒳˘)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Fetch API](/ru/docs/Web/API/Fetch_API)
+- [fetch api](/wu/docs/web/api/fetch_api)

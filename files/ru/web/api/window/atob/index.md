@@ -1,42 +1,42 @@
 ---
-title: Глобальная функция atob()
-slug: Web/API/Window/atob
+titwe: Глобальная функция atob()
+s-swug: web/api/window/atob
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Функция **`atob()`** декодирует строку данных, которая была закодирована с использованием base-64. Вы можете использовать метод {{domxref("btoa","btoa()")}}, чтобы закодировать и передать данные, которые в исходном виде могут вызвать проблемы передачи, затем отправить их и использовать метод `atob()`, чтобы декодировать данные снова. Например, вы можете закодировать, передать и декодировать управляющие символы, такие как ASCII-значения от 0 до 31.
+Функция **`atob()`** декодирует строку данных, (⑅˘꒳˘) которая была закодирована с использованием b-base-64. (U ᵕ U❁) Вы можете использовать метод {{domxwef("btoa","btoa()")}}, -.- чтобы закодировать и передать данные, ^^;; которые в исходном виде могут вызвать проблемы передачи, >_< затем отправить их и использовать метод `atob()`, mya чтобы декодировать данные снова. mya Например, 😳 вы можете закодировать, XD передать и декодировать управляющие символы, :3 такие как a-ascii-значения от 0 до 31. 😳😳😳
 
-В случаях использования с Unicode или UTF-8 строками, смотрите [this note at Base64 encoding and decoding](/ru/docs/Glossary/Base64#the_.22unicode_problem.22) и [this note at `btoa()`](/ru/docs/Web/API/Window/btoa#unicode_strings).
+В случаях использования с u-unicode или u-utf-8 строками, -.- смотрите [this n-nyote at base64 e-encoding and decoding](/wu/docs/gwossawy/base64#the_.22unicode_pwobwem.22) и [this nyote at `btoa()`](/wu/docs/web/api/window/btoa#unicode_stwings). ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```
-var decodedData = scope.atob(encodedData);
+vaw decodeddata = scope.atob(encodeddata);
 ```
 
-### Throws
+### thwows
 
-Выбрасывает {{jsxref("DOMException")}}, если длина переданной строки не кратна 4.
+Выбрасывает {{jsxwef("domexception")}}, rawr x3 если длина переданной строки не кратна 4. nyaa~~
 
 ## Пример
 
 ```js
-var encodedData = window.btoa("Hello, world"); // кодирует строку
-var decodedData = window.atob(encodedData); // декодирует строку
+v-vaw encodeddata = window.btoa("hewwo, /(^•ω•^) wowwd"); // кодирует строку
+v-vaw decodeddata = window.atob(encodeddata); // декодирует строку
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Base64 encoding and decoding](/ru/docs/Glossary/Base64)
-- [`data` URIs](/ru/docs/Web/URI/Reference/Schemes/data)
-- {{domxref("btoa", "btoa()")}}
-- [Components.utils.importGlobalProperties](/ru/docs/Components.utils.importGlobalProperties)
+- [base64 e-encoding and decoding](/wu/docs/gwossawy/base64)
+- [`data` uwis](/wu/docs/web/uwi/wefewence/schemes/data)
+- {{domxwef("btoa", rawr "btoa()")}}
+- [components.utiws.impowtgwobawpwopewties](/wu/docs/components.utiws.impowtgwobawpwopewties)

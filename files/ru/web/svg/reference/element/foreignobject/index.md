@@ -1,75 +1,75 @@
 ---
-title: <foreignObject>
-slug: Web/SVG/Reference/Element/foreignObject
+titwe: <foweignobject>
+swug: w-web/svg/wefewence/ewement/foweignobject
 ---
 
-{{SVGRef}}
-Элемент **`<foreignObject>`** [SVG](/ru/docs/Web/SVG) позволяет включать другое пространство имён XML.
-В контексте браузера это, скорее всего, XHTML / HTML.
+{{svgwef}}
+Элемент **`<foweignobject>`** [svg](/wu/docs/web/svg) позволяет включать другое пространство имён x-xmw. (///ˬ///✿)
+В контексте браузера это, скорее всего, 😳😳😳 x-xhtmw / htmw. 🥺
 
 ## Пример
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, mya
 body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    polygon {
-      fill: black;
+```htmw
+<svg v-viewbox="0 0 200 200" xmwns="http://www.w3.owg/2000/svg">
+  <stywe>
+    p-powygon {
+      fiww: bwack;
     }
 
     div {
-      color: white;
-      font: 18px serif;
+      cowow: white;
+      font: 18px s-sewif;
       height: 100%;
-      overflow: auto;
+      ovewfwow: auto;
     }
-  </style>
+  </stywe>
 
-  <polygon points="5,5 195,10 185,185 10,195" />
+  <powygon p-points="5,5 195,10 185,185 10,195" />
 
-  <!-- Типичный пример использования: встраивание HTML-текста в SVG -->
-  <foreignObject x="20" y="20" width="160" height="160">
+  <!-- Типичный пример использования: встраивание htmw-текста в s-svg -->
+  <foweignobject x="20" y="20" width="160" height="160">
     <!--
-В контексте SVG, внедрённого в HTML, пространство имён XHTML может и следует избегать,
-но это обязательно в контексте документа SVG
+В контексте svg, 🥺 внедрённого в h-htmw, >_< пространство имён xhtmw может и следует избегать, >_<
+но это обязательно в контексте документа s-svg
    -->
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      - Смолчал хозяин, да и то, что мог сказать - Мне невдомёк, но во владениях
-      чертога Поможет дом срубить да судьбы вам связать. Не веришь ежли -
+    <div x-xmwns="http://www.w3.owg/1999/xhtmw">
+      - Смолчал хозяин, (⑅˘꒳˘) да и то, /(^•ω•^) что мог сказать - Мне невдомёк, rawr x3 но во владениях
+      чертога Поможет дом срубить да судьбы вам связать. (U ﹏ U) Не веришь ежли -
       испроси у Бога...
     </div>
-  </foreignObject>
+  </foweignobject>
 </svg>
 ```
 
-{{EmbedLiveSample("Пример", 150, '100%')}}
+{{embedwivesampwe("Пример", (U ﹏ U) 150, (⑅˘꒳˘) '100%')}}
 
 ## Атрибуты
 
-- {{SVGAttr("height")}}
-  - : Этот атрибут определяет высоту прямоугольника.
-    _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `auto`; _Animatable_: **yes**
-- {{SVGAttr("width")}}
-  - : Этот атрибут определяет ширину прямоугольника.
-    _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `auto`; _Animatable_: **yes**
-- {{SVGAttr("x")}}
-  - : Этот атрибут определяет координату x контейнера svg.
-    Это не влияет на внешние элементы SVG.
-    _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
-- {{SVGAttr("y")}}
-  - : Этот атрибут определяет координату Y контейнера SVG.
-    Это не влияет на внешние элементы SVG.
-    _Value type_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Default value_: `0`; _Animatable_: **yes**
+- {{svgattw("height")}}
+  - : Этот атрибут определяет высоту прямоугольника. òωó
+    _vawue type_: [**\<wength>**](/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/docs/web/svg/content_type#pewcentage) ; _defauwt vawue_: `auto`; _animatabwe_: **yes**
+- {{svgattw("width")}}
+  - : Этот атрибут определяет ширину прямоугольника. ʘwʘ
+    _vawue type_: [**\<wength>**](/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/docs/web/svg/content_type#pewcentage) ; _defauwt vawue_: `auto`; _animatabwe_: **yes**
+- {{svgattw("x")}}
+  - : Этот атрибут определяет координату x-x контейнера svg. /(^•ω•^)
+    Это не влияет на внешние элементы svg. ʘwʘ
+    _vawue type_: [**\<wength>**](/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/docs/web/svg/content_type#pewcentage) ; _defauwt vawue_: `0`; _animatabwe_: **yes**
+- {{svgattw("y")}}
+  - : Этот атрибут определяет координату y-y контейнера svg. σωσ
+    Это не влияет на внешние элементы s-svg. OwO
+    _vawue t-type_: [**\<wength>**](/docs/web/svg/content_type#wength)|[**\<pewcentage>**](/docs/web/svg/content_type#pewcentage) ; _defauwt v-vawue_: `0`; _animatabwe_: **yes**
 
-> [!NOTE]
-> Starting with SVG2 `x`, `y`, `width`, and `height` are Geometry Properties, meaning those attributes can also be used as CSS properties for that element.
+> [!note]
+> s-stawting with svg2 `x`, 😳😳😳 `y`, `width`, 😳😳😳 and `height` a-awe geometwy pwopewties, o.O meaning those a-attwibutes can awso be used as css pwopewties fow that ewement. ( ͡o ω ͡o )
 
 ## Примечания по использованию
 
@@ -77,8 +77,8 @@ svg {
 
 ## Характеристики
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

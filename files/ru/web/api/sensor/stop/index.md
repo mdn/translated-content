@@ -1,38 +1,38 @@
 ---
-title: Sensor.stop()
-slug: Web/API/Sensor/stop
-l10n:
-  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
+titwe: sensow.stop()
+swug: web/api/sensow/stop
+w-w10n:
+  souwcecommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
-{{APIRef("Sensor API")}}
+{{apiwef("sensow a-api")}}
 
-Метод **`stop`** интерфейса {{domxref("Sensor")}} деактивирует датчик.
+Метод **`stop`** интерфейса {{domxwef("sensow")}} деактивирует датчик. 🥺
 
 ## Синтаксис
 
 ```js
-stop();
+s-stop();
 ```
 
 ### Параметры
 
-Нет.
+Нет. òωó
 
 ### Возвращаемое значение
 
-Нет ({{jsxref("undefined")}}).
+Нет ({{jsxwef("undefined")}}). o.O
 
 ## Примеры
 
 ```js
-// TBD
+// t-tbd
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

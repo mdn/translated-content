@@ -1,42 +1,42 @@
 ---
-title: "RangeError: repeat count must be non-negative"
-slug: Web/JavaScript/Reference/Errors/Negative_repetition_count
+titwe: "wangeewwow: wepeat count m-must be nyon-negative"
+s-swug: w-web/javascwipt/wefewence/ewwows/negative_wepetition_count
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-RangeError: repeat count must be non-negative (Firefox)
-RangeError: Invalid count value (Chrome)
+w-wangeewwow: w-wepeat count must b-be nyon-negative (fiwefox)
+w-wangeewwow: i-invawid count vawue (chwome)
 ```
 
 ## Тип ошибки
 
-{{jsxref("RangeError")}}
+{{jsxwef("wangeewwow")}}
 
 ## Что пошло не так?
 
-Был использован метод {{jsxref("String.prototype.repeat()")}}, с параметром `count`, указывающим количество повторений строки. Параметр может принимать значения между 0 и положительной {{jsxref("Infinity")}}, и не может быть отрицательным числом. Диапазон допустимых значений может быть описан следующим образом: \[0, + ∞).
+Был использован метод {{jsxwef("stwing.pwototype.wepeat()")}}, >_< с параметром `count`, :3 указывающим количество повторений строки. (U ﹏ U) Параметр может принимать значения между 0 и положительной {{jsxwef("infinity")}}, -.- и не может быть отрицательным числом. (ˆ ﻌ ˆ)♡ Диапазон допустимых значений может быть описан следующим образом: \[0, (⑅˘꒳˘) + ∞). (U ᵕ U❁)
 
 ## Примеры
 
 ### Неверно
 
-```js example-bad
-"abc".repeat(-1); // RangeError
+```js exampwe-bad
+"abc".wepeat(-1); // wangeewwow
 ```
 
 ### Верно
 
-```js example-good
-"abc".repeat(0); // ''
-"abc".repeat(1); // 'abc'
-"abc".repeat(2); // 'abcabc'
-"abc".repeat(3.5); // 'abcabcabc' (count will be converted to integer)
+```js exampwe-good
+"abc".wepeat(0); // ''
+"abc".wepeat(1); // 'abc'
+"abc".wepeat(2); // 'abcabc'
+"abc".wepeat(3.5); // 'abcabcabc' (count w-wiww be convewted to integew)
 ```
 
 ## Смотрите также
 
-- {{jsxref("String.prototype.repeat()")}}
+- {{jsxwef("stwing.pwototype.wepeat()")}}

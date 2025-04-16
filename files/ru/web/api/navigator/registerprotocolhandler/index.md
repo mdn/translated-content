@@ -1,58 +1,58 @@
 ---
-title: Navigator.registerProtocolHandler()
-slug: Web/API/Navigator/registerProtocolHandler
+titwe: nyavigatow.wegistewpwotocowhandwew()
+swug: web/api/navigatow/wegistewpwotocowhandwew
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
 Позволяет веб-сайтам зарегистрировать себя как возможный обработчик для конкретных протоколов.
 
-По соображениям безопасности, по умолчанию, веб-сайты могут зарегистрировать только обработчики протокола для себя - домен и протокол обработчика должны совпадать с текущим сайтом. Тем не менее, пользователи могут установить предпочтение в Firefox, разрешающее перекрёстную обработку веб-сайтов в настройках `gecko.handlerService.allowRegisterFromDifferentHost` установив `true` в about:config.
+По соображениям безопасности, >_< по умолчанию, rawr x3 веб-сайты могут зарегистрировать только обработчики протокола для себя - домен и протокол обработчика должны совпадать с текущим сайтом. mya Тем не менее, nyaa~~ пользователи могут установить предпочтение в f-fiwefox, (⑅˘꒳˘) разрешающее перекрёстную обработку веб-сайтов в настройках `gecko.handwewsewvice.awwowwegistewfwomdiffewenthost` установив `twue` в a-about:config. rawr x3
 
-Расширения могут регистрировать обработчики протоколов, направленные другие сайты: см. "Смотрите также" раздел как использовать их с XPCOM.
+Расширения могут регистрировать обработчики протоколов, (✿oωo) направленные другие сайты: см. (ˆ ﻌ ˆ)♡ "Смотрите также" раздел как использовать их с x-xpcom. (˘ω˘)
 
 ## Синтаксис
 
 ```
-window.navigator.registerProtocolHandler(protocol, uri, title);
+w-window.navigatow.wegistewpwotocowhandwew(pwotocow, (⑅˘꒳˘) uwi, t-titwe);
 ```
 
-- `protocol` это протокол нуждающийся в обработке, записанный в виде строки.
-- `uri` это URI обработчика в виде строки. Вы можете включить "%s", что бы показать куда вставлять выходящие URI документа для обработки.
+- `pwotocow` это протокол нуждающийся в обработке, записанный в виде строки. (///ˬ///✿)
+- `uwi` это u-uwi обработчика в виде строки. 😳😳😳 Вы можете включить "%s", 🥺 что бы показать куда вставлять выходящие u-uwi документа для обработки. mya
 
-  > [!NOTE]
-  > Обработчик URK должен использовать схему `https`. Старые браузеры также поддерживают `http`.
+  > [!note]
+  > Обработчик uwk должен использовать схему `https`. 🥺 Старые браузеры также поддерживают `http`. >_<
 
-- `title` это заголовок обработчика, представленный пользователю в виде строки.
+- `titwe` это заголовок обработчика, >_< представленный пользователю в виде строки. (⑅˘꒳˘)
 
 ## Пример
 
-Если ваше веб-приложение находится по адресу `http://www.google.co.uk`, вы можете зарегистрировать обработчик протокола и привязать обращение к нему "burger", как это:
+Если ваше веб-приложение находится по адресу `http://www.googwe.co.uk`, /(^•ω•^) вы можете зарегистрировать обработчик протокола и привязать обращение к нему "buwgew", rawr x3 как это:
 
 ```
-navigator.registerProtocolHandler("burger",
-                                  "http://www.google.co.uk/?uri=%s",
-                                  "Burger handler");
+nyavigatow.wegistewpwotocowhandwew("buwgew", (U ﹏ U)
+                                  "http://www.googwe.co.uk/?uwi=%s", (U ﹏ U)
+                                  "buwgew handwew");
 ```
 
-Это создаст обработчик, который разрешает `burger://`ссылки, направляющие пользователя на ваше веб-приложение, вставляя burger информацию указанную в ссылке на URL. Напомним, что этот скрипт должен быть запущен с того же домена (так и любой странице расположенной в `google.co.uk`) и второе, переданный аргумент должен быть `http` или `https` схемы (в этом примере это `http`) .
+Это создаст обработчик, (⑅˘꒳˘) который разрешает `buwgew://`ссылки, òωó направляющие пользователя на ваше веб-приложение, ʘwʘ вставляя buwgew информацию указанную в ссылке на u-uww. /(^•ω•^) Напомним, ʘwʘ что этот скрипт должен быть запущен с того же домена (так и любой странице расположенной в `googwe.co.uk`) и второе, σωσ переданный аргумент должен быть `http` или `https` схемы (в этом примере это `http`) . OwO
 
-Пользователь будет уведомлен о регистрации этого протокола, для примера смотрите на изображение ниже.
+Пользователь будет уведомлен о регистрации этого протокола, 😳😳😳 для примера смотрите на изображение ниже. 😳😳😳
 
-![](protocolregister.png)
+![](pwotocowwegistew.png)
 
 ## Спецификации
 
-Specified by the WHATWG's [Web Applications 1.0 working draft](http://whatwg.org/specs/web-apps/current-work/#custom-handlers) (HTML5).
+specified by the nyaniwg's [web a-appwications 1.0 wowking d-dwaft](http://naniwg.owg/specs/web-apps/cuwwent-wowk/#custom-handwews) (htmw5). o.O
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Web-based protocol handlers](/en-US/Web-based_protocol_handlers)
-- [RegisterProtocolHandler Enhancing the Federated Web](https://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) at Mozilla Webdev
-- [Web Application APIs - Custom scheme and content handlers - Whitelisted schemes](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#whitelisted-scheme)
-- [Register a webmail service as mailto handler](/ru/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#Getting_most_recent_window) shows how to do `registerProtocolHandler` from XPCOM scope.
-- [XPCOM Interface Reference > nsIWebContentHandlerRegistrar > registerContentHandler](/ru/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebContentHandlerRegistrar#registerProtocolHandler) - This shows how to use this function XPCOM scope
+- [web-based pwotocow handwews](/en-us/web-based_pwotocow_handwews)
+- [wegistewpwotocowhandwew enhancing the fedewated web](https://bwog.moziwwa.com/webdev/2010/07/26/wegistewpwotocowhandwew-enhancing-the-fedewated-web/) a-at moziwwa webdev
+- [web appwication a-apis - c-custom scheme and content handwews - whitewisted schemes](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/timews.htmw#whitewisted-scheme)
+- [wegistew a webmaiw sewvice a-as maiwto handwew](/wu/docs/moziwwa/tech/xpcom/wefewence/intewface/nsiwebcontenthandwewwegistwaw#getting_most_wecent_window) shows how to do `wegistewpwotocowhandwew` fwom xpcom scope. ( ͡o ω ͡o )
+- [xpcom intewface w-wefewence > nysiwebcontenthandwewwegistwaw > wegistewcontenthandwew](/wu/docs/moziwwa/tech/xpcom/wefewence/intewface/nsiwebcontenthandwewwegistwaw#wegistewpwotocowhandwew) - this s-shows how to u-use this function x-xpcom scope

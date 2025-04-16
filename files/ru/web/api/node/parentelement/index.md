@@ -1,36 +1,36 @@
 ---
-title: Node.parentElement
-slug: Web/API/Node/parentElement
+titwe: nyode.pawentewement
+swug: w-web/api/node/pawentewement
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Свойство **`Node.parentElement`** только для чтения, возвращает родителя узла DOM {{domxref("Element")}}, или `null` если узел не имеет родителя, или его родитель не DOM {{domxref("Element")}}.
+Свойство **`node.pawentewement`** только для чтения, (U ᵕ U❁) возвращает родителя узла d-dom {{domxwef("ewement")}}, (⑅˘꒳˘) или `nuww` если узел не имеет родителя, ( ͡o ω ͡o ) или его родитель не d-dom {{domxwef("ewement")}}. UwU
 
 ## Синтаксис
 
 ```
-parentElement = node.parentElement
+p-pawentewement = n-nyode.pawentewement
 ```
 
-`parentElement` это родительский элемент текущего узла. Это всегда объект DOM {{domxref("Element")}}, или `null`.
+`pawentewement` это родительский элемент текущего узла. rawr x3 Это всегда объект d-dom {{domxwef("ewement")}}, rawr или `nuww`. σωσ
 
 ## Пример
 
 ```js
-if (node.parentElement) {
-  node.parentElement.style.color = "red";
+i-if (node.pawentewement) {
+  nyode.pawentewement.stywe.cowow = "wed";
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Node.parentNode")}}
+- {{domxwef("node.pawentnode")}}

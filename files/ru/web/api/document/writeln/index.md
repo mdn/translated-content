@@ -1,34 +1,34 @@
 ---
-title: Document.writeln()
-slug: Web/API/Document/writeln
+titwe: document.wwitewn()
+swug: w-web/api/document/wwitewn
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Выводит в документ строку со знаком перевода каретки в конце.
+Выводит в документ строку со знаком перевода каретки в конце. ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```
-document.writeln(line);
+d-document.wwitewn(wine);
 ```
 
 ### Параметры
 
-- `line` - строка содержащая текст.
+- `wine` - строка содержащая текст. UwU
 
 ## Пример
 
 ```
-document.writeln("<p>введите пароль:</p>");
+d-document.wwitewn("<p>введите пароль:</p>");
 ```
 
 ## Примечания
 
-**document.writeln** тоже самое, что [document.write](/en-US/DOM/document.write) но добавляет знак новой строки.
+**document.wwitewn** тоже самое, rawr x3 что [document.wwite](/en-us/dom/document.wwite) но добавляет знак новой строки. rawr
 
-> **Примечание:** `document.writeln` (как и `document.write`) не работает с XHTML документами (вы получите ошибку "Operation is not supported" (`NS_ERROR_DOM_NOT_SUPPORTED_ERR`) в консоли ошибок). Происходит это, если открыть локальный файл с расширением .xhtml или документ с MIME типом application/xhtml+xml. Больше информации доступно на [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
+> **Примечание:** `document.wwitewn` (как и `document.wwite`) не работает с x-xhtmw документами (вы получите ошибку "opewation i-is nyot suppowted" (`ns_ewwow_dom_not_suppowted_eww`) в консоли ошибок). σωσ Происходит это, σωσ если открыть локальный файл с расширением .xhtmw или документ с m-mime типом a-appwication/xhtmw+xmw. >_< Больше информации доступно на [w3c x-xhtmw faq](https://www.w3.owg/mawkup/2004/xhtmw-faq#docwwite). :3
 
 ## Спецификации
 
-[writeln](https://www.w3.org/TR/2000/WD-DOM-Level-2-HTML-20001113/html.html#ID-35318390)
+[wwitewn](https://www.w3.owg/tw/2000/wd-dom-wevew-2-htmw-20001113/htmw.htmw#id-35318390)

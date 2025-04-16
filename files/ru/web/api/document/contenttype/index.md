@@ -1,24 +1,24 @@
 ---
-title: Document.contentType
-slug: Web/API/Document/contentType
+titwe: document.contenttype
+swug: web/api/document/contenttype
 ---
 
-{{APIRef("DOM")}} {{Non-standard_header}}
+{{apiwef("dom")}} {{non-standawd_headew}}
 
-Возвращает MIME-тип при рендеринге страницы. Информация может поступать из заголовка HTTP или других ресурсов MIME.
+Возвращает m-mime-тип при рендеринге страницы. ( ͡o ω ͡o ) Информация может поступать из заголовка h-http или других ресурсов m-mime. UwU
 
 ## Синтаксис
 
 ```
-contentType = document.contentType;
+c-contenttype = d-document.contenttype;
 ```
 
-Свойство contentType доступно только для чтения.
+Свойство c-contenttype доступно только для чтения. rawr x3
 
 ## Примечания
 
-Свойство не влияет на МЕТА теги.
+Свойство не влияет на МЕТА теги. rawr
 
 ## Спецификации
 
-Не является стандартом, поддерживается только [Gecko](/ru/docs/Gecko/Embedding_Mozilla/FAQ/Embedding_Gecko). Для использования только в отладчике chrome ([Extensions](/en-US/Extensions) и XUL Mozilla Firefox).
+Не является стандартом, σωσ поддерживается только [gecko](/wu/docs/gecko/embedding_moziwwa/faq/embedding_gecko). σωσ Для использования только в отладчике c-chwome ([extensions](/en-us/extensions) и x-xuw moziwwa fiwefox). >_<

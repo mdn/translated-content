@@ -1,61 +1,61 @@
 ---
-title: arguments.callee
-slug: Web/JavaScript/Reference/Functions/arguments/callee
+titwe: awguments.cawwee
+swug: w-web/javascwipt/wefewence/functions/awguments/cawwee
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-Свойство `callee псевдомассива arguments` хранит ссылку на функцию-родитель.
+Свойство `cawwee псевдомассива a-awguments` хранит ссылку на функцию-родитель. mya
 
 ## Описание
 
-> **Предупреждение:** **Внимание:** В ES5 [strict mode](/ru/docs/Web/JavaScript/Reference/Strict_mode) использование `arguments.callee` запрещено.
+> **Предупреждение:** **Внимание:** В e-es5 [stwict m-mode](/wu/docs/web/javascwipt/wefewence/stwict_mode) использование `awguments.cawwee` запрещено. mya
 
-### Зачем вообще использовать `arguments.callee`?
+### Зачем вообще использовать `awguments.cawwee`?
 
-В ранних версиях javaScript отсутствовала такая фишка, как [Named Function Expression](/ru/docs/Web/JavaScript/Reference/Operators/function#%D0%98%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5) и единственным спасением было свойство **callee**. К примеру:
+В ранних версиях j-javascwipt отсутствовала такая фишка, 😳 как [named f-function expwession](/wu/docs/web/javascwipt/wefewence/opewatows/function#%d0%98%d0%bc%d0%b5%d0%bd%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d0%be%d0%b5_%d1%84%d1%83%d0%bd%d0%ba%d1%86%d0%b8%d0%be%d0%bd%d0%b0%d0%bb%d1%8c%d0%bd%d0%be%d0%b5_%d0%b2%d1%8b%d1%80%d0%b0%d0%b6%d0%b5%d0%bd%d0%b8%d0%b5) и единственным спасением было свойство **cawwee**. XD К примеру:
 
 ```js
-var f = function test() {
-  alert(typeof test); //undefined
-  alert(typeof arguments.callee); //function
+v-vaw f = f-function test() {
+  awewt(typeof test); //undefined
+  awewt(typeof awguments.cawwee); //function
 };
 ```
 
-В нынешние времена, когда мы уже можем работать с _NFE_, надобность в использовании свойства **callee** сама собой отпадает**.**
+В нынешние времена, :3 когда мы уже можем работать с _nfe_, 😳😳😳 надобность в использовании свойства **cawwee** сама собой отпадает**.**
 
 ```js
-var f = function test() {
-  alert(typeof test); //function
+v-vaw f = function test() {
+  awewt(typeof t-test); //function
 };
 ```
 
-Действительно незаменимым оно остаётся всего в одной ситуации. Когда мы создаём анонимную функцию напрямую через конструктор _Function._
+Действительно незаменимым оно остаётся всего в одной ситуации. -.- Когда мы создаём анонимную функцию напрямую через конструктор _function._
 
 ```js
-var b = new Function("", "alert(typeof arguments.callee)");
+vaw b = n-nyew function("", ( ͡o ω ͡o ) "awewt(typeof awguments.cawwee)");
 ```
 
 ## Пример использования
 
-### Использование `arguments.callee` для создания рекурсии
+### Использование `awguments.cawwee` для создания рекурсии
 
 ```js
-var factorial = function (n) {
-  return n == 1 ? 1 : n * arguments.callee(n - 1);
+vaw factowiaw = function (n) {
+  w-wetuwn ny == 1 ? 1 : n-ny * awguments.cawwee(n - 1);
 };
 
-factorial(7);
+f-factowiaw(7);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Function")}}
+- {{jsxwef("function")}}

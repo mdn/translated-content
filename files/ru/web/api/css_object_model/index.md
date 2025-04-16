@@ -1,123 +1,123 @@
 ---
-title: CSS Object Model (CSSOM)
-slug: Web/API/CSS_Object_Model
+titwe: css object modew (cssom)
+s-swug: web/api/css_object_modew
 ---
 
-{{DefaultAPISidebar('CSSOM')}}
+{{defauwtapisidebaw('cssom')}}
 
-**CSS Object Model** представляет собой набор API-интерфейсов, позволяющих манипулировать CSS из JavaScript. Это очень похоже на DOM, но для CSS, а не HTML. Это позволяет пользователям динамически читать и изменять стиль CSS.
+**css o-object m-modew** представляет собой набор a-api-интерфейсов, rawr x3 позволяющих манипулировать c-css из j-javascwipt. (✿oωo) Это очень похоже на d-dom, (ˆ ﻌ ˆ)♡ но для c-css, (˘ω˘) а не htmw. (⑅˘꒳˘) Это позволяет пользователям динамически читать и изменять стиль css. (///ˬ///✿)
 
 ## Ссылки
 
-- {{domxref("AnimationEvent")}}
-- {{domxref("CaretPosition")}}
-- {{domxref("CSS")}}
-- {{domxref("CSSCharsetRule")}}
-- {{domxref("CSSConditionRule")}}
-- {{domxref("CSSCounterStyleRule")}}
-- {{domxref("CSSFontFaceRule")}}
-- {{domxref("CSSFontFeatureValuesMap")}}
-- {{domxref("CSSFontFeatureValuesRule")}}
-- {{domxref("CSSGroupingRule")}}
-- {{domxref("CSSImportRule")}}
-- {{domxref("CSSKeyframeRule")}}
-- {{domxref("CSSKeyframesRule")}}
-- {{domxref("CSSMarginRule")}}
-- {{domxref("CSSMediaRule")}}
-- {{domxref("CSSNamespaceRule")}}
-- {{domxref("CSSPageRule")}}
-- {{domxref("CSSRule")}}
-- {{domxref("CSSRuleList")}}
-- {{domxref("CSSStyleDeclaration")}}
-- {{domxref("CSSStyleSheet")}}
-- {{domxref("CSSStyleRule")}}
-- {{domxref("CSSSupportsRule")}}
-- {{domxref("CSSVariablesMap")}}
-- {{domxref("CSSViewportRule")}}
-- {{domxref("ElementCSSInlineStyle")}}
-- {{DOMxRef("FontFace")}}
-- {{DOMxRef("FontFaceSet")}}
-- {{DOMxRef("FontFaceSetLoadEvent")}}
-- {{domxref("GeometryUtils")}}
-- {{domxref("GetStyleUtils")}}
-- {{domxref("LinkStyle")}}
-- {{domxref("MediaList")}}
-- {{domxref("MediaQueryList")}}
-- {{DOMxRef("MediaQueryListEvent")}}
-- {{DOMxRef("MediaQueryListListener")}}
-- {{domxref("PseudoElement")}}
-- {{domxref("Screen")}}
-- {{domxref("StyleSheet")}}
-- {{domxref("StyleSheetList")}}
-- {{domxref("TransitionEvent")}}
+- {{domxwef("animationevent")}}
+- {{domxwef("cawetposition")}}
+- {{domxwef("css")}}
+- {{domxwef("csschawsetwuwe")}}
+- {{domxwef("cssconditionwuwe")}}
+- {{domxwef("csscountewstywewuwe")}}
+- {{domxwef("cssfontfacewuwe")}}
+- {{domxwef("cssfontfeatuwevawuesmap")}}
+- {{domxwef("cssfontfeatuwevawueswuwe")}}
+- {{domxwef("cssgwoupingwuwe")}}
+- {{domxwef("cssimpowtwuwe")}}
+- {{domxwef("csskeyfwamewuwe")}}
+- {{domxwef("csskeyfwameswuwe")}}
+- {{domxwef("cssmawginwuwe")}}
+- {{domxwef("cssmediawuwe")}}
+- {{domxwef("cssnamespacewuwe")}}
+- {{domxwef("csspagewuwe")}}
+- {{domxwef("csswuwe")}}
+- {{domxwef("csswuwewist")}}
+- {{domxwef("cssstywedecwawation")}}
+- {{domxwef("cssstywesheet")}}
+- {{domxwef("cssstywewuwe")}}
+- {{domxwef("csssuppowtswuwe")}}
+- {{domxwef("cssvawiabwesmap")}}
+- {{domxwef("cssviewpowtwuwe")}}
+- {{domxwef("ewementcssinwinestywe")}}
+- {{domxwef("fontface")}}
+- {{domxwef("fontfaceset")}}
+- {{domxwef("fontfacesetwoadevent")}}
+- {{domxwef("geometwyutiws")}}
+- {{domxwef("getstyweutiws")}}
+- {{domxwef("winkstywe")}}
+- {{domxwef("mediawist")}}
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("mediaquewywistevent")}}
+- {{domxwef("mediaquewywistwistenew")}}
+- {{domxwef("pseudoewement")}}
+- {{domxwef("scween")}}
+- {{domxwef("stywesheet")}}
+- {{domxwef("stywesheetwist")}}
+- {{domxwef("twansitionevent")}}
 
-Несколько других интерфейсов также расширены спецификациями, связанными с CSSOM:
+Несколько других интерфейсов также расширены спецификациями, 😳😳😳 связанными с cssom:
 
-{{domxref("Document")}}, {{domxref("Window")}}, {{domxref("Element")}}, {{domxref("HTMLElement")}}, {{domxref("HTMLImageElement")}}, {{domxref("Range")}}, {{domxref("MouseEvent")}}, and {{domxref("SVGElement")}}.
+{{domxwef("document")}}, 🥺 {{domxwef("window")}}, mya {{domxwef("ewement")}}, 🥺 {{domxwef("htmwewement")}}, >_< {{domxwef("htmwimageewement")}}, >_< {{domxwef("wange")}}, (⑅˘꒳˘) {{domxwef("mouseevent")}}, /(^•ω•^) and {{domxwef("svgewement")}}. rawr x3
 
-### CSS Typed Object Model {{experimental_inline}}
+### c-css typed object modew {{expewimentaw_inwine}}
 
-{{SeeCompatTable}}
+{{seecompattabwe}}
 
-- {{DOMxRef("CSSImageValue")}} {{experimental_inline}}
-- {{DOMxRef("CSSKeywordValue")}} {{experimental_inline}}
-- {{DOMxRef("CSSMathInvert")}} {{experimental_inline}}
-- {{DOMxRef("CSSMathMax")}} {{experimental_inline}}
-- {{DOMxRef("CSSMathMin")}} {{experimental_inline}}
-- {{DOMxRef("CSSMathNegate")}} {{experimental_inline}}
-- {{DOMxRef("CSSMathProduct")}} {{experimental_inline}}
-- {{DOMxRef("CSSMathSum")}} {{experimental_inline}}
-- {{DOMxRef("CSSMathValue")}} {{experimental_inline}}
-- {{DOMxRef("CSSMatrixComponent")}} {{experimental_inline}}
-- {{DOMxRef("CSSNumericArray")}} {{experimental_inline}}
-- {{DOMxRef("CSSNumericValue")}} {{experimental_inline}}
-- {{DOMxRef("CSSPerspective")}} {{experimental_inline}}
-- {{DOMxRef("CSSPositionValue")}} {{experimental_inline}}
-- {{DOMxRef("CSSRotate")}} {{experimental_inline}}
-- {{DOMxRef("CSSScale")}} {{experimental_inline}}
-- {{DOMxRef("CSSSkew")}} {{experimental_inline}}
-- {{DOMxRef("CSSSkewX")}} {{experimental_inline}}
-- {{DOMxRef("CSSSkewY")}} {{experimental_inline}}
-- {{DOMxRef("CSSStyleValue")}} {{experimental_inline}}
-- {{DOMxRef("CSSTransformComponent")}} {{experimental_inline}}
-- {{DOMxRef("CSSTransformValue")}} {{experimental_inline}}
-- {{DOMxRef("CSSTranslate")}} {{experimental_inline}}
-- {{DOMxRef("CSSUnitValue")}} {{experimental_inline}}
-- {{DOMxRef("CSSUnparsedValue")}} {{experimental_inline}}
-- {{DOMxRef("CSSVariableReferenceValue")}} {{experimental_inline}}
-- {{DOMxRef("StylePropertyMap")}} {{experimental_inline}}
-- {{DOMxRef("StylePropertyMapReadOnly")}} {{experimental_inline}}
+- {{domxwef("cssimagevawue")}} {{expewimentaw_inwine}}
+- {{domxwef("csskeywowdvawue")}} {{expewimentaw_inwine}}
+- {{domxwef("cssmathinvewt")}} {{expewimentaw_inwine}}
+- {{domxwef("cssmathmax")}} {{expewimentaw_inwine}}
+- {{domxwef("cssmathmin")}} {{expewimentaw_inwine}}
+- {{domxwef("cssmathnegate")}} {{expewimentaw_inwine}}
+- {{domxwef("cssmathpwoduct")}} {{expewimentaw_inwine}}
+- {{domxwef("cssmathsum")}} {{expewimentaw_inwine}}
+- {{domxwef("cssmathvawue")}} {{expewimentaw_inwine}}
+- {{domxwef("cssmatwixcomponent")}} {{expewimentaw_inwine}}
+- {{domxwef("cssnumewicawway")}} {{expewimentaw_inwine}}
+- {{domxwef("cssnumewicvawue")}} {{expewimentaw_inwine}}
+- {{domxwef("csspewspective")}} {{expewimentaw_inwine}}
+- {{domxwef("csspositionvawue")}} {{expewimentaw_inwine}}
+- {{domxwef("csswotate")}} {{expewimentaw_inwine}}
+- {{domxwef("cssscawe")}} {{expewimentaw_inwine}}
+- {{domxwef("cssskew")}} {{expewimentaw_inwine}}
+- {{domxwef("cssskewx")}} {{expewimentaw_inwine}}
+- {{domxwef("cssskewy")}} {{expewimentaw_inwine}}
+- {{domxwef("cssstywevawue")}} {{expewimentaw_inwine}}
+- {{domxwef("csstwansfowmcomponent")}} {{expewimentaw_inwine}}
+- {{domxwef("csstwansfowmvawue")}} {{expewimentaw_inwine}}
+- {{domxwef("csstwanswate")}} {{expewimentaw_inwine}}
+- {{domxwef("cssunitvawue")}} {{expewimentaw_inwine}}
+- {{domxwef("cssunpawsedvawue")}} {{expewimentaw_inwine}}
+- {{domxwef("cssvawiabwewefewencevawue")}} {{expewimentaw_inwine}}
+- {{domxwef("stywepwopewtymap")}} {{expewimentaw_inwine}}
+- {{domxwef("stywepwopewtymapweadonwy")}} {{expewimentaw_inwine}}
 
-### Устаревшие CSSOM interfaces
+### Устаревшие cssom i-intewfaces
 
-- {{DOMxRef("CSSPrimitiveValue")}}
-- {{DOMxRef("CSSValue")}}
-- {{DOMxRef("CSSValueList")}}
+- {{domxwef("csspwimitivevawue")}}
+- {{domxwef("cssvawue")}}
+- {{domxwef("cssvawuewist")}}
 
 ## Уроки
 
-- [Определение размеров элементов](/ru/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) (урок нуждается в обновлении,так как он был сделан в эпоху DHTML/Ajax).
-- [Управление ориентацией экрана](/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
+- [Определение размеров элементов](/wu/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements) (урок нуждается в обновлении,так как он был сделан в эпоху dhtmw/ajax). (U ﹏ U)
+- [Управление ориентацией экрана](/wu/docs/web/api/css_object_modew/managing_scween_owientation)
 
 ## Спецификации
 
-| Specification                                                                                               |
+| s-specification                                                                                               |
 | ----------------------------------------------------------------------------------------------------------- |
-| [CSS Object Model (CSSOM)](https://drafts.csswg.org/cssom/)                                                 |
-| [CSSOM View Module](https://drafts.csswg.org/cssom-view/)                                                   |
-| [CSS Fonts Module # object-model](https://drafts.csswg.org/css-fonts/#object-model)                         |
-| [CSS Animations # interface-dom](https://drafts.csswg.org/css-animations/#interface-dom)                    |
-| [CSS Conditional Rules Module # apis](https://drafts.csswg.org/css-conditional/#apis)                       |
-| [CSS Custom Properties for Cascading Variables Module # apis](https://drafts.csswg.org/css-variables/#apis) |
-| [CSS Counter Styles # apis](https://drafts.csswg.org/css-counter-styles/#apis)                              |
-| [CSS Device Adaptation Module # cssom](https://drafts.csswg.org/css-device-adapt/#cssom)                    |
-| [CSS Painting API # paint-worklet](https://drafts.css-houdini.org/css-paint-api/#paint-worklet)             |
-| [CSS Typed OM](https://drafts.css-houdini.org/css-typed-om/)                                                |
+| [css object modew (cssom)](https://dwafts.csswg.owg/cssom/)                                                 |
+| [cssom view m-moduwe](https://dwafts.csswg.owg/cssom-view/)                                                   |
+| [css fonts m-moduwe # object-modew](https://dwafts.csswg.owg/css-fonts/#object-modew)                         |
+| [css a-animations # intewface-dom](https://dwafts.csswg.owg/css-animations/#intewface-dom)                    |
+| [css conditionaw wuwes moduwe # apis](https://dwafts.csswg.owg/css-conditionaw/#apis)                       |
+| [css c-custom pwopewties fow cascading vawiabwes moduwe # apis](https://dwafts.csswg.owg/css-vawiabwes/#apis) |
+| [css countew s-stywes # apis](https://dwafts.csswg.owg/css-countew-stywes/#apis)                              |
+| [css device a-adaptation moduwe # c-cssom](https://dwafts.csswg.owg/css-device-adapt/#cssom)                    |
+| [css p-painting a-api # paint-wowkwet](https://dwafts.css-houdini.owg/css-paint-api/#paint-wowkwet)             |
+| [css typed om](https://dwafts.css-houdini.owg/css-typed-om/)                                                |
 
 ## Совместимость с браузерами
 
-Все эти функции постепенно добавлялись в разные браузеры постепенно: это был довольно сложный процесс, который не может быть сведён в простую таблицу. Пожалуйста, обратитесь к конкретным интерфейсам для его доступности.
+Все эти функции постепенно добавлялись в разные браузеры постепенно: это был довольно сложный процесс, (U ﹏ U) который не может быть сведён в простую таблицу. (⑅˘꒳˘) Пожалуйста, òωó обратитесь к конкретным интерфейсам для его доступности. ʘwʘ
 
 ## Смотрите также
 
-- [Document Object Model (DOM)](/ru/docs/Web/API/Document_Object_Model)
+- [document o-object modew (dom)](/wu/docs/web/api/document_object_modew)

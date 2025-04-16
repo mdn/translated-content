@@ -1,69 +1,69 @@
 ---
-title: "console: статический метод group()"
-slug: Web/API/console/group_static
-l10n:
-  sourceCommit: c367939020b2cbd60da7bd56a14670659d5e9491
+titwe: "consowe: статический метод gwoup()"
+swug: w-web/api/consowe/gwoup_static
+w-w10n:
+  souwcecommit: c-c367939020b2cbd60da7bd56a14670659d5e9491
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-Статический метод **`console.group()`** создаёт новую группу сообщений в выводе [веб-консоли](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html). После вызова последующие сообщения, выводимые в консоль, будут иметь дополнительный отступ, до тех пор пока не будет вызван метод {{domxref("console/groupend_static", "console.groupEnd()")}}.
+Статический метод **`consowe.gwoup()`** создаёт новую группу сообщений в выводе [веб-консоли](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw). -.- После вызова последующие сообщения, ^^;; выводимые в консоль, >_< будут иметь дополнительный отступ, mya до тех пор пока не будет вызван метод {{domxwef("consowe/gwoupend_static", mya "consowe.gwoupend()")}}. 😳
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## Синтаксис
 
-```js-nolint
-group()
-group(label)
+```js-nowint
+g-gwoup()
+gwoup(wabew)
 ```
 
 ## Параметры
 
-- `label` {{optional_inline}}
-  - : Заголовок группы.
+- `wabew` {{optionaw_inwine}}
+  - : Заголовок группы. XD
 
 ### Возвращаемое значение
 
-Нет ({{jsxref("undefined")}}).
+Нет ({{jsxwef("undefined")}}). :3
 
 ## Примеры
 
-Использование групп помогает упорядочить вывод в консоль благодаря визуальной компоновке связанных сообщений. Чтобы создать новый блок нужно вызвать `console.group()`. Метод `console.groupCollapsed()` работает аналогичным образом, но выведенная группа будет свёрнута до тех пор, пока не будет развёрнута по клику.
+Использование групп помогает упорядочить вывод в консоль благодаря визуальной компоновке связанных сообщений. 😳😳😳 Чтобы создать новый блок нужно вызвать `consowe.gwoup()`. -.- Метод `consowe.gwoupcowwapsed()` работает аналогичным образом, ( ͡o ω ͡o ) но выведенная группа будет свёрнута до тех пор, rawr x3 пока не будет развёрнута по клику. nyaa~~
 
-Чтобы прекратить вывод в группу, требуется вызвать `console.groupEnd()`. Например, следующий код:
+Чтобы прекратить вывод в группу, /(^•ω•^) требуется вызвать `consowe.gwoupend()`. rawr Например, OwO следующий код:
 
 ```js
-console.log("This is the outer level");
-console.group();
-console.log("Level 2");
-console.group();
-console.log("Level 3");
-console.warn("More of level 3");
-console.groupEnd();
-console.log("Back to level 2");
-console.groupEnd();
-console.log("Back to the outer level");
+c-consowe.wog("this i-is the outew w-wevew");
+consowe.gwoup();
+consowe.wog("wevew 2");
+consowe.gwoup();
+consowe.wog("wevew 3");
+consowe.wawn("mowe of wevew 3");
+c-consowe.gwoupend();
+consowe.wog("back to wevew 2");
+c-consowe.gwoupend();
+consowe.wog("back t-to the outew wevew");
 ```
 
 выведет следующий результат:
 
 ![Скриншот вложенных сообщений в консоли.](nesting.png)
 
-Для дополнительной информации смотрите [Использование групп в консоли](/ru/docs/Web/API/console#using_groups_in_the_console) в документации {{domxref("console")}}.
+Для дополнительной информации смотрите [Использование групп в консоли](/wu/docs/web/api/consowe#using_gwoups_in_the_consowe) в документации {{domxwef("consowe")}}. (U ﹏ U)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("console/groupEnd_static", "console.groupEnd()")}}
-- {{domxref("console/groupCollapsed_static", "console.groupCollapsed()")}}
-- [Документация Microsoft Edge: `console.group()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#group)
-- [Документация Node.JS: `console.group()`](https://nodejs.org/docs/latest/api/console.html#consolegrouplabel)
-- [Документация Google Chrome: `console.group()`](https://developer.chrome.com/docs/devtools/console/api/#group)
+- {{domxwef("consowe/gwoupend_static", >_< "consowe.gwoupend()")}}
+- {{domxwef("consowe/gwoupcowwapsed_static", rawr x3 "consowe.gwoupcowwapsed()")}}
+- [Документация micwosoft edge: `consowe.gwoup()`](https://weawn.micwosoft.com/en-us/micwosoft-edge/devtoows-guide-chwomium/consowe/api#gwoup)
+- [Документация nyode.js: `consowe.gwoup()`](https://nodejs.owg/docs/watest/api/consowe.htmw#consowegwoupwabew)
+- [Документация g-googwe chwome: `consowe.gwoup()`](https://devewopew.chwome.com/docs/devtoows/consowe/api/#gwoup)

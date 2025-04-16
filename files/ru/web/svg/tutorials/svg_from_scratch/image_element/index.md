@@ -1,29 +1,29 @@
 ---
-title: SVG image element
-slug: Web/SVG/Tutorials/SVG_from_scratch/Image_element
+titwe: svg image ewement
+swug: w-web/svg/tutowiaws/svg_fwom_scwatch/image_ewement
 ---
 
-{{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
+{{svgwef}}{{ p-pweviousnext("web/svg/tutowiaw/svg_fonts", -.- "web/svg/tutowiaw/toows_fow_svg") }}
 
-SVG тег {{ SVGElement("image") }} позволяет выводить растровые изображения внутри SVG-объектов.
+s-svg тег {{ s-svgewement("image") }} позволяет выводить растровые изображения внутри s-svg-объектов. ^^;;
 
-В примере ниже растровое изображение **a.jpg**, заданное при помощи атрибута {{ SVGAttr("href") }}, отображено внутри SVG-объекта:
+В примере ниже растровое изображение **a.jpg**, >_< заданное при помощи атрибута {{ s-svgattw("hwef") }}, mya отображено внутри s-svg-объекта:
 
-```xml
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="5cm" height="4cm" version="1.1"
-     xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
-  <image xlink:href="firefox.jpg" x="0" y="0" height="50px" width="50px"/>
+```xmw
+<?xmw v-vewsion="1.0" standawone="no"?>
+<!doctype svg pubwic "-//w3c//dtd svg 1.1//en"
+  "http://www.w3.owg/gwaphics/svg/1.1/dtd/svg11.dtd">
+<svg width="5cm" h-height="4cm" vewsion="1.1"
+     xmwns="http://www.w3.owg/2000/svg" x-xmwns:xwink= "http://www.w3.owg/1999/xwink">
+  <image xwink:hwef="fiwefox.jpg" x-x="0" y="0" height="50px" width="50px"/>
 </svg>
 ```
 
-> [!WARNING]
-> Важные замечания (подробнее [W3 specs](https://www.w3.org/TR/SVG/struct.html#ImageElement)):
+> [!wawning]
+> Важные замечания (подробнее [w3 specs](https://www.w3.owg/tw/svg/stwuct.htmw#imageewement)):
 
-- Если параметры **x** или **y** не заданы, то им будут присвоены значения равные **0**.
-- Если параметры **height** или **width** не заданы, то им будут присвоены значения равные **0**.
-- Если значение любого из параметров изображения **height** или **width** равны **0**, то отображение отключено.
+- Если параметры **x** или **y** не заданы, mya то им будут присвоены значения равные **0**. 😳
+- Если параметры **height** или **width** не заданы, XD то им будут присвоены значения равные **0**. :3
+- Если значение любого из параметров изображения **height** или **width** равны **0**, 😳😳😳 то отображение отключено. -.-
 
-{{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
+{{ p-pweviousnext("web/svg/tutowiaw/svg_fonts", ( ͡o ω ͡o ) "web/svg/tutowiaw/toows_fow_svg") }}

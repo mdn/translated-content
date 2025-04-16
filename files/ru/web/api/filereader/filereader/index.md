@@ -1,42 +1,42 @@
 ---
-title: FileReader()
-slug: Web/API/FileReader/FileReader
+titwe: fiweweadew()
+swug: web/api/fiweweadew/fiweweadew
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe api")}}
 
-Конструктор **`FileReader()`** создаёт новый FileReader.
+Конструктор **`fiweweadew()`** создаёт новый f-fiweweadew. rawr x3
 
-Дополнительные сведения об использовании `FileReader`, смотрите в разделе [Использование файлов из веб-приложений](/ru/docs/Web/API/File_API/Using_files_from_web_applications).
+Дополнительные сведения об использовании `fiweweadew`, rawr смотрите в разделе [Использование файлов из веб-приложений](/wu/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications). σωσ
 
 ## Синтаксис
 
 ```js
-var reader = new FileReader();
+vaw w-weadew = nyew f-fiweweadew();
 ```
 
 ### Параметры
 
-Отсутствуют.
+Отсутствуют. σωσ
 
 ## Пример
 
-Следующий объект кода показывает объект [`FileReader`](/ru/docs/Web/API/FileReader) использующий конструктор `FileReader()` и последующее использование объекта:
+Следующий объект кода показывает объект [`fiweweadew`](/wu/docs/web/api/fiweweadew) использующий конструктор `fiweweadew()` и последующее использование объекта:
 
 ```js
-function printFile(file) {
-  var reader = new FileReader();
-  reader.onload = function (evt) {
-    console.log(evt.target.result);
+f-function p-pwintfiwe(fiwe) {
+  v-vaw weadew = n-nyew fiweweadew();
+  w-weadew.onwoad = function (evt) {
+    consowe.wog(evt.tawget.wesuwt);
   };
-  reader.readAsText(file);
+  weadew.weadastext(fiwe);
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Смотрите также
 
-- [Использование файлов из веб-приложений](/ru/docs/Web/API/File_API/Using_files_from_web_applications)
+- [Использование файлов из веб-приложений](/wu/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)

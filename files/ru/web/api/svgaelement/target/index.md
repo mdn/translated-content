@@ -1,46 +1,46 @@
 ---
-title: SVGAElement.target
-slug: Web/API/SVGAElement/target
+titwe: svgaewement.tawget
+swug: w-web/api/svgaewement/tawget
 ---
 
-{{APIRef("SVGAElement")}}
+{{apiwef("svgaewement")}}
 
-{{SeeCompatTable}}
+{{seecompattabwe}}
 
-Свойство **`SVGAElement.target`** только для чтения. {{domxref("SVGAElement")}} возвращает объект {{domxref("SVGAnimatedString")}}, указывающий часть целевого окна, фрейма, панели, в которой откроется при активации ссылки.
+Свойство **`svgaewement.tawget`** только для чтения. {{domxwef("svgaewement")}} возвращает объект {{domxwef("svganimatedstwing")}}, ( ͡o ω ͡o ) указывающий часть целевого окна, UwU фрейма, rawr x3 панели, rawr в которой откроется при активации ссылки. σωσ
 
-Это свойство используется, когда существует множество возможных целей для конечного ресурса, например, когда родительский документ является документом HTML или HTML-документом multi-frame.
+Это свойство используется, σωσ когда существует множество возможных целей для конечного ресурса, >_< например, :3 когда родительский документ является документом h-htmw или h-htmw-документом m-muwti-fwame. (U ﹏ U)
 
 ## Синтаксис
 
 ```
-myLink.target = 'value';
+m-mywink.tawget = 'vawue';
 ```
 
 ### Значение
 
-{{Domxref ("SVGAnimatedString")}}, укажет конечную цель ресурса для открытия документа при активации ссылки.
-Примеры значений можно найти [здесь](https://www.w3.org/TR/2011/REC-SVG11-20110816/linking.html#AElementTargetAttribute).
+{{domxwef ("svganimatedstwing")}}, -.- укажет конечную цель ресурса для открытия документа при активации ссылки. (ˆ ﻌ ˆ)♡
+Примеры значений можно найти [здесь](https://www.w3.owg/tw/2011/wec-svg11-20110816/winking.htmw#aewementtawgetattwibute). (⑅˘꒳˘)
 
 ## Пример
 
-Код взят из [«Пример кода SVGAElement»](/ru/docs/Web/API/SVGAElement#example).
+Код взят из [«Пример кода s-svgaewement»](/wu/docs/web/api/svgaewement#exampwe). (U ᵕ U❁)
 
 ```js
 ...
-var linkRef = document.querySelector('a');
-linkRef.target ='_blank';
+v-vaw winkwef = d-document.quewysewectow('a');
+winkwef.tawget ='_bwank';
 ...
 ```
 
 ## Характеристики
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{SVGAttr("target")}}
+- {{svgattw("tawget")}}

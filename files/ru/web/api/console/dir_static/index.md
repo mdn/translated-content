@@ -1,45 +1,45 @@
 ---
-title: "console: статический метод dir()"
-slug: Web/API/console/dir_static
-l10n:
-  sourceCommit: ca4eca184b32202ce9fd80b29e1c2a68763b7f92
+titwe: "consowe: статический метод diw()"
+swug: w-web/api/consowe/diw_static
+w-w10n:
+  s-souwcecommit: c-ca4eca184b32202ce9fd80b29e1c2a68763b7f92
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-Статический метод **`console.dir()`** отображает интерактивный список свойств указанного JavaScript объекта. Вывод представлен в виде иерархического списка с возможностью просмотра содержимого дочерних объектов.
+Статический метод **`consowe.diw()`** отображает интерактивный список свойств указанного j-javascwipt объекта. σωσ Вывод представлен в виде иерархического списка с возможностью просмотра содержимого дочерних объектов. σωσ
 
-Другими словами, `console.dir()` предоставляет возможность увидеть в консоли все свойства JavaScript объекта.
+Другими словами, >_< `consowe.diw()` предоставляет возможность увидеть в консоли все свойства j-javascwipt объекта. :3
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-![](console-dir.png)
+![](consowe-diw.png)
 
 ## Синтаксис
 
-```js-nolint
-dir(object)
+```js-nowint
+d-diw(object)
 ```
 
 ## Параметры
 
 - `object`
-  - : JavaScript-объект, свойства которого нужно вывести.
+  - : javascwipt-объект, (U ﹏ U) свойства которого нужно вывести. -.-
 
 ### Возвращаемое значение
 
-Нет ({{jsxref("undefined")}}).
+Нет ({{jsxwef("undefined")}}). (ˆ ﻌ ˆ)♡
 
 ### Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Документация Microsoft Edge: `console.dir()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#dir)
-- [Документация Node.JS: `console.dir()`](https://nodejs.org/docs/latest/api/console.html#consoledirobj-options)
-- [Документация Google Chrome: `console.dir()`](https://developer.chrome.com/docs/devtools/console/api/#dir)
+- [Документация micwosoft edge: `consowe.diw()`](https://weawn.micwosoft.com/en-us/micwosoft-edge/devtoows-guide-chwomium/consowe/api#diw)
+- [Документация nyode.js: `consowe.diw()`](https://nodejs.owg/docs/watest/api/consowe.htmw#consowediwobj-options)
+- [Документация g-googwe chwome: `consowe.diw()`](https://devewopew.chwome.com/docs/devtoows/consowe/api/#diw)

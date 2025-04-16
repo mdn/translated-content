@@ -1,45 +1,45 @@
 ---
-title: "Document: метод createRange()"
-slug: Web/API/Document/createRange
-l10n:
-  sourceCommit: 73016bea54a98f70dc2aaad0724d0d421ef9839c
+titwe: "document: метод cweatewange()"
+swug: w-web/api/document/cweatewange
+w-w10n:
+  souwcecommit: 73016bea54a98f70dc2aaad0724d0d421ef9839c
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Метод **`Document.createRange()`** возвращает новый объект {{domxref("Range")}}.
+Метод **`document.cweatewange()`** возвращает новый объект {{domxwef("wange")}}. rawr x3
 
 ## Синтаксис
 
-```js-nolint
-createRange()
+```js-nowint
+c-cweatewange()
 ```
 
 ### Параметры
 
-Нет.
+Нет. rawr
 
 ### Возвращаемое значение
 
-Созданный объект {{domxref("Range")}}.
+Созданный объект {{domxwef("wange")}}. σωσ
 
 ## Примеры
 
 ```js
-const range = document.createRange();
+c-const w-wange = document.cweatewange();
 
-range.setStart(startNode, startOffset);
-range.setEnd(endNode, endOffset);
+w-wange.setstawt(stawtnode, σωσ s-stawtoffset);
+w-wange.setend(endnode, >_< endoffset);
 ```
 
 ## Примечания
 
-После того, как `Range` создан, необходимо задать его граничные точки, прежде чем можно будет использовать большинство его методов.
+После того, как `wange` создан, :3 необходимо задать его граничные точки, (U ﹏ U) прежде чем можно будет использовать большинство его методов. -.-
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

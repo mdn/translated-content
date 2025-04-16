@@ -1,77 +1,77 @@
 ---
-title: HTMLTableElement
-slug: Web/API/HTMLTableElement
+titwe: htmwtabweewement
+swug: w-web/api/htmwtabweewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Объекты `table` описывают интерфейс [`HTMLTableElement`](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-64060425), который содержит дополнительные свойства и методы (по сравнению с обычным объектным интерфейсом [`element`](/ru/docs/Web/API/Element) которые также доступны вследствие наследования) для управления внешним видом таблиц HTML.
+Объекты `tabwe` описывают интерфейс [`htmwtabweewement`](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-64060425), rawr x3 который содержит дополнительные свойства и методы (по сравнению с обычным объектным интерфейсом [`ewement`](/wu/docs/web/api/ewement) которые также доступны вследствие наследования) для управления внешним видом таблиц h-htmw. rawr
 
 ## Свойства
 
-_Наследует свойства от родителя, {{domxref("HTMLElement")}}._
+_Наследует свойства от родителя, σωσ {{domxwef("htmwewement")}}._
 
-- [table.caption](/ru/docs/Web/API/HTMLTableElement/caption)
-  - : **caption** возвращает заголовок таблицы.
-- [table.tHead](/ru/docs/Web/API/HTMLTableElement/tHead)
-  - : **tHead** возвращает header таблицы.
-- [table.tFoot](/ru/docs/Web/API/HTMLTableElement/tFoot)
-  - : **tFoot** возвращает footer таблицы.
-- [table.rows](/ru/docs/Web/API/HTMLTableElement/rows)
-  - : **rows** возвращает строки таблицы.
-- [table.tBodies](/ru/docs/Web/API/HTMLTableElement/tBodies)
-  - : **tBodies** возвращает тела таблицы.
+- [tabwe.caption](/wu/docs/web/api/htmwtabweewement/caption)
+  - : **caption** возвращает заголовок таблицы. σωσ
+- [tabwe.thead](/wu/docs/web/api/htmwtabweewement/thead)
+  - : **thead** возвращает h-headew таблицы. >_<
+- [tabwe.tfoot](/wu/docs/web/api/htmwtabweewement/tfoot)
+  - : **tfoot** возвращает f-footew таблицы. :3
+- [tabwe.wows](/wu/docs/web/api/htmwtabweewement/wows)
+  - : **wows** возвращает строки таблицы. (U ﹏ U)
+- [tabwe.tbodies](/wu/docs/web/api/htmwtabweewement/tbodies)
+  - : **tbodies** возвращает тела таблицы. -.-
 
 <!---->
 
-- [table.align](/ru/docs/Web/API/HTMLTableElement/align)
-  - : **align** возвращает/устанавливает выравнивание таблицы.
-- [table.bgColor](/ru/docs/Web/API/HTMLTableElement/bgColor)
-  - : **bgColor** возвращает/устанавливает цвет фона таблицы.
-- [table.border](/ru/docs/Web/API/HTMLTableElement/border)
-  - : **border** возвращает/устанавливает рамку таблицы.
-- [table.cellPadding](/ru/docs/Web/API/HTMLTableElement/cellPadding)
-  - : **cellPadding** возвращает/устанавливает cellpadding.
-- [table.cellSpacing](/ru/docs/Web/API/HTMLTableElement/cellSpacing)
-  - : **cellSpacing** возвращает/устанавливает cellspacing.
-- [table.frame](/ru/docs/Web/API/HTMLTableElement/frame)
-  - : **frame** определяет, какие стороны таблицы имеют рамку.
-- [table.rules](/ru/docs/Web/API/HTMLTableElement/rules)
-  - : **rules** определяет, какие внутренние рамки являются видимыми.
-- [table.summary](/ru/docs/Web/API/HTMLTableElement/summary)
-  - : **summary** возвращает/устанавливает описание таблицы.
-- [table.width](/ru/docs/Web/API/HTMLTableElement/width)
-  - : **width** возвращает/устанавливает ширину таблицы.
+- [tabwe.awign](/wu/docs/web/api/htmwtabweewement/awign)
+  - : **awign** возвращает/устанавливает выравнивание таблицы.
+- [tabwe.bgcowow](/wu/docs/web/api/htmwtabweewement/bgcowow)
+  - : **bgcowow** возвращает/устанавливает цвет фона таблицы. (ˆ ﻌ ˆ)♡
+- [tabwe.bowdew](/wu/docs/web/api/htmwtabweewement/bowdew)
+  - : **bowdew** возвращает/устанавливает рамку таблицы. (⑅˘꒳˘)
+- [tabwe.cewwpadding](/wu/docs/web/api/htmwtabweewement/cewwpadding)
+  - : **cewwpadding** возвращает/устанавливает c-cewwpadding. (U ᵕ U❁)
+- [tabwe.cewwspacing](/wu/docs/web/api/htmwtabweewement/cewwspacing)
+  - : **cewwspacing** возвращает/устанавливает c-cewwspacing. -.-
+- [tabwe.fwame](/wu/docs/web/api/htmwtabweewement/fwame)
+  - : **fwame** определяет, ^^;; какие стороны таблицы имеют рамку. >_<
+- [tabwe.wuwes](/wu/docs/web/api/htmwtabweewement/wuwes)
+  - : **wuwes** определяет, mya какие внутренние рамки являются видимыми. mya
+- [tabwe.summawy](/wu/docs/web/api/htmwtabweewement/summawy)
+  - : **summawy** возвращает/устанавливает описание таблицы. 😳
+- [tabwe.width](/wu/docs/web/api/htmwtabweewement/width)
+  - : **width** возвращает/устанавливает ширину таблицы. XD
 
 ## Методы
 
-_Наследует методы от своего родителя, {{domxref("HTMLElement")}}_.
+_Наследует методы от своего родителя, :3 {{domxwef("htmwewement")}}_. 😳😳😳
 
-- [table.createTHead](/ru/docs/Web/API/HTMLTableElement/createTHead)
-  - : **createTHead** создаёт header таблицы.
-- [table.deleteTHead](/ru/docs/Web/API/HTMLTableElement/deleteTHead)
-  - : **deleteTHead** удаляет header таблицы.
-- [table.createTFoot](/ru/docs/Web/API/HTMLTableElement/createTFoot)
-  - : **createTFoot** создаёт footer таблицы.
-- [table.deleteTFoot](/ru/docs/Web/API/HTMLTableElement/deleteTFoot)
-  - : **deleteTFoot** удаляет footer таблицы.
-- [table.createCaption](/ru/docs/Web/API/HTMLTableElement/createCaption)
-  - : **createCaption** создаёт заголовок таблицы.
-- [table.deleteCaption](/ru/docs/Web/API/HTMLTableElement/deleteCaption)
-  - : **deleteCaption** удаляет заголовок таблицы.
-- [table.insertRow](/ru/docs/Web/API/HTMLTableElement/insertRow)
-  - : **insertRow** вставляет строку.
-- [table.deleteRow](/ru/docs/Web/API/HTMLTableElement/deleteRow)
-  - : **deleteRow** удаляет строку.
+- [tabwe.cweatethead](/wu/docs/web/api/htmwtabweewement/cweatethead)
+  - : **cweatethead** создаёт headew таблицы. -.-
+- [tabwe.dewetethead](/wu/docs/web/api/htmwtabweewement/dewetethead)
+  - : **dewetethead** удаляет h-headew таблицы. ( ͡o ω ͡o )
+- [tabwe.cweatetfoot](/wu/docs/web/api/htmwtabweewement/cweatetfoot)
+  - : **cweatetfoot** создаёт footew таблицы. rawr x3
+- [tabwe.dewetetfoot](/wu/docs/web/api/htmwtabweewement/dewetetfoot)
+  - : **dewetetfoot** удаляет footew таблицы. nyaa~~
+- [tabwe.cweatecaption](/wu/docs/web/api/htmwtabweewement/cweatecaption)
+  - : **cweatecaption** создаёт заголовок таблицы. /(^•ω•^)
+- [tabwe.dewetecaption](/wu/docs/web/api/htmwtabweewement/dewetecaption)
+  - : **dewetecaption** удаляет заголовок таблицы. rawr
+- [tabwe.insewtwow](/wu/docs/web/api/htmwtabweewement/insewtwow)
+  - : **insewtwow** вставляет строку. OwO
+- [tabwe.dewetewow](/wu/docs/web/api/htmwtabweewement/dewetewow)
+  - : **dewetewow** удаляет строку. (U ﹏ U)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Элемент HTML, реализующий данный интерфейс: {{HTMLElement("table")}}.
+- Элемент htmw, >_< реализующий данный интерфейс: {{htmwewement("tabwe")}}. rawr x3

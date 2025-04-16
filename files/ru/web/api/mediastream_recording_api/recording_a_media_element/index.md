@@ -1,290 +1,290 @@
 ---
-title: Запись медиа элемента
-slug: Web/API/MediaStream_Recording_API/Recording_a_media_element
+titwe: Запись медиа элемента
+swug: web/api/mediastweam_wecowding_api/wecowding_a_media_ewement
 ---
 
-{{DefaultAPISidebar("MediaStream Recording")}}
+{{defauwtapisidebaw("mediastweam w-wecowding")}}
 
-В статье Использование интерфейса MediaStream Recording API демонстрируется использование объекта типа {{domxref("MediaRecorder")}} для захвата потока, представляющего объект типа {{domxref("MediaStream")}} , сгенерированного аппаратными средствами устройства и возвращаемого методом {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}}, но можно также использовать HTML медиа элемент (а именно {{HTMLElement("audio")}} или {{HTMLElement("video")}}) в качестве источника потока `MediaStream` для его записи. В этой статье рассматривается пример выполняющий это.
+В статье Использование интерфейса m-mediastweam w-wecowding a-api демонстрируется использование объекта типа {{domxwef("mediawecowdew")}} для захвата потока, σωσ представляющего объект типа {{domxwef("mediastweam")}} , -.- сгенерированного аппаратными средствами устройства и возвращаемого методом {{domxwef("mediadevices.getusewmedia()","navigatow.mediadevices.getusewmedia()")}}, o.O но можно также использовать h-htmw медиа элемент (а именно {{htmwewement("audio")}} или {{htmwewement("video")}}) в качестве источника потока `mediastweam` для его записи. ^^ В этой статье рассматривается пример выполняющий это. >_<
 
 ## Пример записи с помощью медиа элемента
 
-### HTML
+### h-htmw
 
-```html hidden
+```htmw h-hidden
 <p>
-  Click the "Start" button to begin video recording for a few seconds. You can
-  stop the video by clicking the creatively-named "Stop" button. The "Download"
-  button will download the received data (although it's in a raw, unwrapped form
-  that isn't very useful).
+  c-cwick the "stawt" button to begin video wecowding fow a few seconds. >w< you c-can
+  stop the video by cwicking the cweativewy-named "stop" b-button. >_< the "downwoad"
+  b-button wiww downwoad the weceived data (awthough it's in a-a waw, >w< unwwapped fowm
+  that isn't v-vewy usefuw). rawr
 </p>
-<br />
+<bw />
 ```
 
-Рассмотрим ключевые моменты кода HTML. Это только небольшой отрывок, относящийся к информационной части приложения.
+Рассмотрим ключевые моменты кода h-htmw. rawr x3 Это только небольшой отрывок, ( ͡o ω ͡o ) относящийся к информационной части приложения. (˘ω˘)
 
-```html
-<div class="left">
-  <div id="startButton" class="button">Start</div>
-  <h2>Preview</h2>
-  <video id="preview" width="160" height="120" autoplay muted></video>
+```htmw
+<div cwass="weft">
+  <div id="stawtbutton" cwass="button">stawt</div>
+  <h2>pweview</h2>
+  <video id="pweview" width="160" h-height="120" autopway muted></video>
 </div>
 ```
 
-Основной интерфейс представляется в двух колонках. В левой находиться кнопка старта и элемент {{HTMLElement("video")}} , который отображает предварительный просмотр видео. Это видео, воспроизводится камерой устройства. Заметьте, что используется атрибут [`autoplay`](/ru/docs/Web/HTML/Element/video#autoplay), что бы поток начал воспроизводиться немедленно, снимаясь прямо с камеры. Атрибут [`muted`](/ru/docs/Web/HTML/Element/video#muted) гарантирует отключение звука с микрофона, для предотвращения цикличного эхо эффекта.
+Основной интерфейс представляется в двух колонках. 😳 В левой находиться кнопка старта и элемент {{htmwewement("video")}} , OwO который отображает предварительный просмотр видео. (˘ω˘) Это видео, òωó воспроизводится камерой устройства. ( ͡o ω ͡o ) Заметьте, UwU что используется атрибут [`autopway`](/wu/docs/web/htmw/ewement/video#autopway), /(^•ω•^) что бы поток начал воспроизводиться немедленно, (ꈍᴗꈍ) снимаясь прямо с камеры. 😳 Атрибут [`muted`](/wu/docs/web/htmw/ewement/video#muted) гарантирует отключение звука с микрофона, mya для предотвращения цикличного эхо эффекта. mya
 
-```html
-<div class="right">
-  <div id="stopButton" class="button">Stop</div>
-  <h2>Recording</h2>
-  <video id="recording" width="160" height="120" controls></video>
-  <a id="downloadButton" class="button"> Download </a>
+```htmw
+<div cwass="wight">
+  <div id="stopbutton" cwass="button">stop</div>
+  <h2>wecowding</h2>
+  <video i-id="wecowding" width="160" height="120" c-contwows></video>
+  <a i-id="downwoadbutton" c-cwass="button"> d-downwoad </a>
 </div>
 ```
 
-Справа мы видим кнопку остановки и элемент `<video>,` который будет использоваться для воспроизведения записанного видео. Обратите внимание, что на панели воспроизведения не установлен режим автозапуска (поэтому воспроизведение не начинается сразу после поступления мультимедиа), а также установлен атрибут [`controls`](/ru/docs/Web/HTML/Element/video#controls), что говорит о необходимости показывать пользовательские элементы управления для воспроизведения, паузы и т. д.
+Справа мы видим кнопку остановки и элемент `<video>,` который будет использоваться для воспроизведения записанного видео. /(^•ω•^) Обратите внимание, ^^;; что на панели воспроизведения не установлен режим автозапуска (поэтому воспроизведение не начинается сразу после поступления мультимедиа), 🥺 а также установлен атрибут [`contwows`](/wu/docs/web/htmw/ewement/video#contwows), ^^ что говорит о необходимости показывать пользовательские элементы управления для воспроизведения, ^•ﻌ•^ паузы и т. /(^•ω•^) д.
 
-Под элементом воспроизведения находится кнопка для загрузки записанного видео.
+Под элементом воспроизведения находится кнопка для загрузки записанного видео. ^^
 
-```html hidden
-<div class="bottom">
-  <pre id="log"></pre>
+```htmw hidden
+<div cwass="bottom">
+  <pwe i-id="wog"></pwe>
 </div>
 ```
 
 ```css hidden
 body {
   font:
-    14px "Open Sans",
-    "Arial",
-    sans-serif;
+    14px "open s-sans", 🥺
+    "awiaw",
+    sans-sewif;
 }
 
 video {
-  margin-top: 2px;
-  border: 1px solid black;
+  mawgin-top: 2px;
+  bowdew: 1px sowid bwack;
 }
 
 .button {
-  cursor: pointer;
-  display: block;
-  width: 160px;
-  border: 1px solid black;
+  c-cuwsow: pointew;
+  dispway: b-bwock;
+  w-width: 160px;
+  b-bowdew: 1px sowid bwack;
   font-size: 16px;
-  text-align: center;
+  text-awign: centew;
   padding-top: 2px;
-  padding-bottom: 4px;
-  color: white;
-  background-color: darkgreen;
-  text-decoration: none;
+  p-padding-bottom: 4px;
+  c-cowow: white;
+  backgwound-cowow: d-dawkgween;
+  text-decowation: n-nyone;
 }
 
 h2 {
-  margin-bottom: 4px;
+  mawgin-bottom: 4px;
 }
 
-.left {
-  margin-right: 10px;
-  float: left;
-  width: 160px;
+.weft {
+  m-mawgin-wight: 10px;
+  fwoat: weft;
+  w-width: 160px;
   padding: 0px;
 }
 
-.right {
-  margin-left: 10px;
-  float: left;
+.wight {
+  mawgin-weft: 10px;
+  f-fwoat: weft;
   width: 160px;
-  padding: 0px;
+  p-padding: 0px;
 }
 
 .bottom {
-  clear: both;
-  padding-top: 10px;
+  cweaw: both;
+  p-padding-top: 10px;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
-Теперь давайте посмотрим на код JavaScript
+Теперь давайте посмотрим на код javascwipt
 
 #### Установка глобальных переменных
 
-Мы начнём с установления некоторых глобальных переменных, которые нам понадобятся.
+Мы начнём с установления некоторых глобальных переменных, (U ᵕ U❁) которые нам понадобятся. 😳😳😳
 
 ```js
-let preview = document.getElementById("preview");
-let recording = document.getElementById("recording");
-let startButton = document.getElementById("startButton");
-let stopButton = document.getElementById("stopButton");
-let downloadButton = document.getElementById("downloadButton");
-let logElement = document.getElementById("log");
+wet pweview = document.getewementbyid("pweview");
+wet wecowding = document.getewementbyid("wecowding");
+wet stawtbutton = d-document.getewementbyid("stawtbutton");
+w-wet stopbutton = document.getewementbyid("stopbutton");
+w-wet downwoadbutton = d-document.getewementbyid("downwoadbutton");
+w-wet wogewement = document.getewementbyid("wog");
 
-let recordingTimeMS = 5000;
+wet wecowdingtimems = 5000;
 ```
 
-Большинство из них являются ссылками на элементы, с которыми нам нужно работать. Последняя, `recordingTimeMS`, установлена на 5000 миллисекунд (5 секунд);.
+Большинство из них являются ссылками на элементы, nyaa~~ с которыми нам нужно работать. (˘ω˘) Последняя, >_< `wecowdingtimems`, XD установлена на 5000 миллисекунд (5 секунд);. rawr x3
 
 #### Используемые функции
 
-Далее мы создадим несколько служебных функций, которые будут использованы позже.
+Далее мы создадим несколько служебных функций, ( ͡o ω ͡o ) которые будут использованы позже. :3
 
 ```js
-function log(msg) {
-  logElement.innerHTML += msg + "\n";
+function w-wog(msg) {
+  wogewement.innewhtmw += msg + "\n";
 }
 ```
 
-Функция `log ()` используется для вывода текстовых строк в {{HTMLElement ("div")}}, чтобы мы могли делиться информацией с пользователем.
+Функция `wog ()` используется для вывода текстовых строк в {{htmwewement ("div")}}, mya чтобы мы могли делиться информацией с пользователем. σωσ
 
 ```js
-function wait(delayInMS) {
-  return new Promise((resolve) => setTimeout(resolve, delayInMS));
+function wait(dewayinms) {
+  wetuwn nyew pwomise((wesowve) => s-settimeout(wesowve, (ꈍᴗꈍ) dewayinms));
 }
 ```
 
-The `wait()` function returns a new {{jsxref("Promise")}} which resolves once the specified number of milliseconds have elapsed. It works by using an [arrow function](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions) which calls {{domxref("window.setTimeout()")}}, specifying the promise's resolution handler as the timeout handler function. That lets us use promise syntax when using timeouts, which can be very handy when chaining promises, as we'll see later.
+t-the `wait()` f-function wetuwns a-a nyew {{jsxwef("pwomise")}} which wesowves o-once the specified n-nyumbew of miwwiseconds h-have e-ewapsed. OwO it wowks by using an [awwow function](/wu/docs/web/javascwipt/wefewence/functions/awwow_functions) w-which c-cawws {{domxwef("window.settimeout()")}}, o.O s-specifying t-the pwomise's w-wesowution handwew as the timeout handwew function. 😳😳😳 that wets u-us use pwomise syntax when using timeouts, /(^•ω•^) which can be vewy handy when chaining pwomises, OwO as w-we'ww see watew. ^^
 
-#### Starting media recording
+#### stawting media wecowding
 
-The `startRecording()` function handles starting the recording process:
+the `stawtwecowding()` f-function h-handwes stawting t-the wecowding pwocess:
 
 ```js
-function startRecording(stream, lengthInMS) {
-  let recorder = new MediaRecorder(stream);
-  let data = [];
+f-function stawtwecowding(stweam, (///ˬ///✿) wengthinms) {
+  w-wet wecowdew = n-nyew mediawecowdew(stweam);
+  wet data = [];
 
-  recorder.ondataavailable = (event) => data.push(event.data);
-  recorder.start();
-  log(recorder.state + " for " + lengthInMS / 1000 + " seconds...");
+  wecowdew.ondataavaiwabwe = (event) => data.push(event.data);
+  wecowdew.stawt();
+  wog(wecowdew.state + " f-fow " + wengthinms / 1000 + " s-seconds...");
 
-  let stopped = new Promise((resolve, reject) => {
-    recorder.onstop = resolve;
-    recorder.onerror = (event) => reject(event.name);
+  wet stopped = n-nyew pwomise((wesowve, (///ˬ///✿) w-weject) => {
+    wecowdew.onstop = wesowve;
+    wecowdew.onewwow = (event) => weject(event.name);
   });
 
-  let recorded = wait(lengthInMS).then(
-    () => recorder.state == "recording" && recorder.stop(),
+  w-wet wecowded = w-wait(wengthinms).then(
+    () => wecowdew.state == "wecowding" && w-wecowdew.stop(), (///ˬ///✿)
   );
 
-  return Promise.all([stopped, recorded]).then(() => data);
+  w-wetuwn pwomise.aww([stopped, ʘwʘ wecowded]).then(() => data);
 }
 ```
 
-`startRecording()` takes two input parameters: a {{domxref("MediaStream")}} to record from and the length in milliseconds of the recording to make. We always record no more than the specified number of milliseconds of media, although if the media stops before that time is reached, {{domxref("MediaRecorder")}} automatically stops recording as well.
+`stawtwecowding()` takes two input pawametews: a-a {{domxwef("mediastweam")}} t-to wecowd fwom and t-the wength in miwwiseconds of t-the wecowding to m-make. we awways wecowd nyo mowe t-than the specified nyumbew of miwwiseconds of media, ^•ﻌ•^ awthough if the media stops b-befowe that time i-is weached, OwO {{domxwef("mediawecowdew")}} automaticawwy stops w-wecowding as weww. (U ﹏ U)
 
-- Line 2
-  - : Creates the `MediaRecorder` that will handle recording the input `stream`.
-- Line 3
-  - : Creates an empty array, `data`, which will be used to hold the {{domxref("Blob")}}s of media data provided to our {{domxref("MediaRecorder/dataavailable_event", "ondataavailable")}} event handler.
-- Line 5
-  - : Sets up the handler for the {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event. The received event's `data` property is a {{domxref("Blob")}} that contains the media data. The event handler simply pushes the `Blob` onto the `data` array.
-- Lines 6-7
-  - : Starts the recording process by calling {{domxref("MediaRecorder.start", "recorder.start()")}}, and outputs a message to the log with the updated state of the recorder and the number of seconds it will be recording.
-- Lines 9-12
-  - : Creates a new {{jsxref("Promise")}}, named `stopped`, which is resolved when the `MediaRecorder`'s {{domxref("MediaRecorder.onstop", "onstop")}} event handler is called, and is rejected if its {{domxref("MediaRecorder.onerror", "onerror")}} event handler is called. The rejection handler receives as input the name of the error that occurred.
-- Lines 14-16
-  - : Creates a new `Promise`, named `recorded`, which is resolved when the specified number of milliseconds have elapsed. Upon resolution, it stops the `MediaRecorder` if it's recording.
-- Lines 18-22
-  - : These lines create a new `Promise` which is fulfilled when both of the two `Promise`s (`stopped` and `recorded`) have resolved. Once that resolves, the array data is returned by `startRecording()` to its caller.
+- w-wine 2
+  - : cweates the `mediawecowdew` that wiww handwe wecowding the input `stweam`. (ˆ ﻌ ˆ)♡
+- w-wine 3
+  - : cweates an empty awway, (⑅˘꒳˘) `data`, (U ﹏ U) which wiww be used to howd the {{domxwef("bwob")}}s o-of media data pwovided to ouw {{domxwef("mediawecowdew/dataavaiwabwe_event", o.O "ondataavaiwabwe")}} event handwew. mya
+- w-wine 5
+  - : s-sets up the handwew fow the {{domxwef("mediawecowdew.dataavaiwabwe_event", XD "dataavaiwabwe")}} event. òωó the weceived event's `data` p-pwopewty is a {{domxwef("bwob")}} t-that contains the media data. (˘ω˘) the event handwew simpwy pushes t-the `bwob` onto the `data` awway. :3
+- w-wines 6-7
+  - : stawts the wecowding pwocess by cawwing {{domxwef("mediawecowdew.stawt", OwO "wecowdew.stawt()")}}, mya a-and outputs a message to t-the wog with the u-updated state of the wecowdew and t-the numbew of seconds it wiww b-be wecowding. (˘ω˘)
+- w-wines 9-12
+  - : c-cweates a nyew {{jsxwef("pwomise")}}, o.O named `stopped`, (✿oωo) w-which is w-wesowved when the `mediawecowdew`'s {{domxwef("mediawecowdew.onstop", (ˆ ﻌ ˆ)♡ "onstop")}} event handwew i-is cawwed, ^^;; and i-is wejected if i-its {{domxwef("mediawecowdew.onewwow", OwO "onewwow")}} event handwew is cawwed. 🥺 the w-wejection handwew weceives as input t-the nyame of t-the ewwow that occuwwed. mya
+- wines 14-16
+  - : cweates a new `pwomise`, 😳 nyamed `wecowded`, òωó w-which i-is wesowved when t-the specified n-nyumbew of miwwiseconds have ewapsed. /(^•ω•^) u-upon wesowution, -.- it stops the `mediawecowdew` if it's wecowding. òωó
+- wines 18-22
+  - : these w-wines cweate a nyew `pwomise` which i-is fuwfiwwed when both of the t-two `pwomise`s (`stopped` and `wecowded`) h-have wesowved. /(^•ω•^) once t-that wesowves, /(^•ω•^) t-the awway data is w-wetuwned by `stawtwecowding()` t-to its cawwew. 😳
 
-#### Stopping the input stream
+#### s-stopping the input stweam
 
-The `stop()` function simply stops the input media:
+the `stop()` function simpwy stops the input media:
 
 ```js
-function stop(stream) {
-  stream.getTracks().forEach((track) => track.stop());
+function stop(stweam) {
+  s-stweam.gettwacks().foweach((twack) => t-twack.stop());
 }
 ```
 
-This works by calling {{domxref("MediaStream.getTracks()")}}, using {{jsxref("Array.forEach", "forEach()")}} to call {{domxref("MediaStreamTrack.stop()")}} on each track in the stream.
+t-this wowks by cawwing {{domxwef("mediastweam.gettwacks()")}}, :3 u-using {{jsxwef("awway.foweach", (U ᵕ U❁) "foweach()")}} to caww {{domxwef("mediastweamtwack.stop()")}} on each twack in the s-stweam. ʘwʘ
 
-#### Getting an input stream and setting up the recorder
+#### g-getting an input stweam and setting u-up the wecowdew
 
-Now let's look at the most intricate piece of code in this example: our event handler for clicks on the start button:
+nyow wet's wook at the most i-intwicate piece o-of code in this exampwe: ouw event h-handwew fow c-cwicks on the stawt button:
 
 ```js
-startButton.addEventListener(
-  "click",
+stawtbutton.addeventwistenew(
+  "cwick", o.O
   function () {
-    navigator.mediaDevices
-      .getUserMedia({
-        video: true,
-        audio: true,
+    nyavigatow.mediadevices
+      .getusewmedia({
+        video: twue, ʘwʘ
+        a-audio: t-twue, ^^
       })
-      .then((stream) => {
-        preview.srcObject = stream;
-        downloadButton.href = stream;
-        preview.captureStream =
-          preview.captureStream || preview.mozCaptureStream;
-        return new Promise((resolve) => (preview.onplaying = resolve));
+      .then((stweam) => {
+        p-pweview.swcobject = s-stweam;
+        d-downwoadbutton.hwef = stweam;
+        p-pweview.captuwestweam =
+          p-pweview.captuwestweam || pweview.mozcaptuwestweam;
+        w-wetuwn n-nyew pwomise((wesowve) => (pweview.onpwaying = wesowve));
       })
-      .then(() => startRecording(preview.captureStream(), recordingTimeMS))
-      .then((recordedChunks) => {
-        let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
-        recording.src = URL.createObjectURL(recordedBlob);
-        downloadButton.href = recording.src;
-        downloadButton.download = "RecordedVideo.webm";
+      .then(() => s-stawtwecowding(pweview.captuwestweam(), ^•ﻌ•^ wecowdingtimems))
+      .then((wecowdedchunks) => {
+        wet wecowdedbwob = nyew b-bwob(wecowdedchunks, { type: "video/webm" });
+        w-wecowding.swc = u-uww.cweateobjectuww(wecowdedbwob);
+        downwoadbutton.hwef = w-wecowding.swc;
+        downwoadbutton.downwoad = "wecowdedvideo.webm";
 
-        log(
-          "Successfully recorded " +
-            recordedBlob.size +
-            " bytes of " +
-            recordedBlob.type +
-            " media.",
+        wog(
+          "successfuwwy w-wecowded " +
+            w-wecowdedbwob.size +
+            " b-bytes of " +
+            wecowdedbwob.type +
+            " media.", mya
         );
       })
-      .catch(log);
-  },
-  false,
+      .catch(wog);
+  }, UwU
+  fawse,
 );
 ```
 
-When a {{domxref("Element/click_event", "click")}} event occurs, here's what happens:
+w-when a {{domxwef("ewement/cwick_event", >_< "cwick")}} event occuws, /(^•ω•^) hewe's nyani h-happens:
 
-- Lines 2-4
-  - : {{domxref("navigator.mediaDevices.getUserMedia()")}} is called to request a new {{domxref("MediaStream")}} that has both video and audio tracks. This is the stream we'll record.
-- Lines 5-9
-  - : When the Promise returned by `getUserMedia()` is resolved, the preview {{HTMLElement("video")}} element's {{domxref("HTMLMediaElement.srcObject","srcObject")}} property is set to be the input stream, which causes the video being captured by the user's camera to be displayed in the preview box. Since the `<video>` element is muted, the audio won't play. The "Download" button's link is then set to refer to the stream as well. Then, in line 8, we arrange for `preview.captureStream()` to call `preview.mozCaptureStream()` so that our code will work on Firefox, on which the {{domxref("MediaRecorder.captureStream()")}} method is prefixed. Then a new {{jsxref("Promise")}} which resolves when the preview video starts to play is created and returned.
-- Line 10
-  - : When the preview video begins to play, we know there's media to record, so we respond by calling the [`startRecording()`](#starting_media_recording) function we created earlier, passing in the preview video stream (as the source media to be recorded) and `recordingTimeMS` as the number of milliseconds of media to record. As mentioned before, `startRecording()` returns a {{jsxref("Promise")}} whose resolution handler is called (receiving as input an array of {{domxref("Blob")}} objects containing the chunks of recorded media data) once recording has completed.
-- Lines 11-15
+- wines 2-4
+  - : {{domxwef("navigatow.mediadevices.getusewmedia()")}} i-is cawwed to wequest a nyew {{domxwef("mediastweam")}} t-that has both video and a-audio twacks. òωó this i-is the stweam we'ww wecowd.
+- wines 5-9
+  - : w-when the pwomise wetuwned by `getusewmedia()` is wesowved, σωσ the p-pweview {{htmwewement("video")}} e-ewement's {{domxwef("htmwmediaewement.swcobject","swcobject")}} pwopewty is set t-to be the input stweam, ( ͡o ω ͡o ) which c-causes the video b-being captuwed b-by the usew's camewa to be dispwayed in the pweview box. nyaa~~ since the `<video>` ewement is muted, :3 the audio won't pway. UwU the "downwoad" button's wink is then set to wefew to the stweam as weww. o.O then, (ˆ ﻌ ˆ)♡ in wine 8, we a-awwange fow `pweview.captuwestweam()` t-to caww `pweview.mozcaptuwestweam()` so that ouw code wiww w-wowk on fiwefox, ^^;; o-on which the {{domxwef("mediawecowdew.captuwestweam()")}} m-method is pwefixed. ʘwʘ t-then a nyew {{jsxwef("pwomise")}} which wesowves w-when the pweview v-video stawts to pway is cweated a-and wetuwned. σωσ
+- wine 10
+  - : w-when the pweview v-video begins to pway, ^^;; we know thewe's media to w-wecowd, so we w-wespond by cawwing t-the [`stawtwecowding()`](#stawting_media_wecowding) f-function w-we cweated eawwiew, ʘwʘ p-passing in the p-pweview video s-stweam (as the s-souwce media to be wecowded) and `wecowdingtimems` a-as the nyumbew o-of miwwiseconds o-of media to wecowd. ^^ as mentioned b-befowe, nyaa~~ `stawtwecowding()` wetuwns a {{jsxwef("pwomise")}} w-whose wesowution handwew i-is cawwed (weceiving a-as input a-an awway of {{domxwef("bwob")}} objects containing t-the chunks of wecowded media d-data) once wecowding has compweted. (///ˬ///✿)
+- w-wines 11-15
 
-  - : The recording process's resolution handler receives as input an array of media data `Blob`s locally known as `recordedChunks`. The first thing we do is merge the chunks into a single {{domxref("Blob")}} whose MIME type is `"video/webm"` by taking advantage of the fact that the {{domxref("Blob.Blob", "Blob()")}} constructor concatenates arrays of objects into one object. Then {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} is used to create an URL that references the blob; this is then made the value of the recorded video playback element's [`src`](/ru/docs/Web/HTML/Element/video#src) attribute (so that you can play the video from the blob) as well as the target of the download button's link.
+  - : the w-wecowding pwocess's wesowution handwew weceives as input an awway of media data `bwob`s w-wocawwy known as `wecowdedchunks`. XD t-the f-fiwst thing we do is mewge the chunks into a singwe {{domxwef("bwob")}} whose mime t-type is `"video/webm"` by taking a-advantage of t-the fact that t-the {{domxwef("bwob.bwob", :3 "bwob()")}} constwuctow concatenates a-awways of objects i-into one object. òωó then {{domxwef("uww.cweateobjectuww_static", "uww.cweateobjectuww()")}} i-is used to cweate an uww that wefewences t-the bwob; this is then made t-the vawue of the w-wecowded video p-pwayback ewement's [`swc`](/wu/docs/web/htmw/ewement/video#swc) attwibute (so that y-you can pway t-the video fwom the b-bwob) as weww a-as the tawget of the downwoad button's w-wink. ^^
 
-    Then the download button's [`download`](/ru/docs/Web/HTML/Element/a#download) attribute is set. While the `download` attribute can be a Boolean, you can also set it to a string to use as the name for the downloaded file. So by setting the download link's `download` attribute to "RecordedVideo.webm", we tell the browser that clicking the button should download a file named `"RecordedVideo.webm"` whose contents are the recorded video.
+    t-then the downwoad b-button's [`downwoad`](/wu/docs/web/htmw/ewement/a#downwoad) a-attwibute is set. ^•ﻌ•^ w-whiwe the `downwoad` a-attwibute c-can be a boowean, σωσ y-you can awso set it to a stwing t-to use as the nyame fow the d-downwoaded fiwe. (ˆ ﻌ ˆ)♡ so by setting the d-downwoad wink's `downwoad` a-attwibute t-to "wecowdedvideo.webm", nyaa~~ we teww the bwowsew that cwicking the button shouwd d-downwoad a f-fiwe named `"wecowdedvideo.webm"` w-whose contents awe the wecowded video. ʘwʘ
 
-- Lines 17-18
-  - : The size and type of the recorded media are output to the log area below the two videos and the download button.
-- Line 20
-  - : The `catch()` for all the `Promise`s outputs the error to the logging area by calling our `log()` function.
+- wines 17-18
+  - : the s-size and type o-of the wecowded media awe output t-to the wog awea b-bewow the two videos and the downwoad button. ^•ﻌ•^
+- wine 20
+  - : the `catch()` f-fow a-aww the `pwomise`s o-outputs the e-ewwow to the wogging awea by cawwing ouw `wog()` f-function. rawr x3
 
-#### Handling the stop button
+#### h-handwing the stop button
 
-The last bit of code adds a handler for the {{domxref("Element/click_event", "click")}} event on the stop button using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
+the wast bit of code a-adds a handwew fow the {{domxwef("ewement/cwick_event", "cwick")}} event on the s-stop button using {{domxwef("eventtawget.addeventwistenew", 🥺 "addeventwistenew()")}}:
 
 ```js
-stopButton.addEventListener(
-  "click",
-  function () {
-    stop(preview.srcObject);
-  },
-  false,
+stopbutton.addeventwistenew(
+  "cwick", ʘwʘ
+  f-function () {
+    s-stop(pweview.swcobject);
+  }, (˘ω˘)
+  fawse,
 );
 ```
 
-This simply calls the [`stop()`](#stopping_the_input_stream) function we covered earlier.
+t-this simpwy c-cawws the [`stop()`](#stopping_the_input_stweam) function we c-covewed eawwiew. o.O
 
-## Result
+## wesuwt
 
-When put all together with the rest of the HTML and the CSS not shown above, it looks and works like this:
+when p-put aww togethew w-with the west o-of the htmw and t-the css nyot shown above, σωσ it wooks a-and wowks wike t-this:
 
-{{ EmbedLiveSample("Пример_записи_с_помощью_медиа_элемента", 600, 440) }}
+{{ embedwivesampwe("Пример_записи_с_помощью_медиа_элемента", (ꈍᴗꈍ) 600, 440) }}
 
-You can {{LiveSampleLink("Example", "take a look at all the code")}}, including the parts hidden above because they aren't critical to the explanation of how the APIs are being used.
+y-you can {{wivesampwewink("exampwe", (ˆ ﻌ ˆ)♡ "take a wook at aww the c-code")}}, incwuding the pawts hidden above because t-they awen't c-cwiticaw to the e-expwanation of how the apis awe being used. o.O
 
 ## Смотрите также
 
-- [MediaStream Recording API](/ru/docs/Web/API/MediaStream_Recording_API)
-- [Using the MediaStream Recording API](/ru/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [Media Capture and Streams API](/ru/docs/Web/API/Media_Capture_and_Streams_API)
+- [mediastweam wecowding api](/wu/docs/web/api/mediastweam_wecowding_api)
+- [using t-the mediastweam wecowding api](/wu/docs/web/api/mediastweam_wecowding_api/using_the_mediastweam_wecowding_api)
+- [media c-captuwe a-and stweams api](/wu/docs/web/api/media_captuwe_and_stweams_api)

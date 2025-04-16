@@ -1,102 +1,102 @@
 ---
-title: MediaDevices
-slug: Web/API/MediaDevices
+titwe: mediadevices
+swug: web/api/mediadevices
 ---
 
-{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
+{{apiwef("media c-captuwe and s-stweams")}}{{seecompattabwe}}
 
-Интерфейс **`MediaDevices`** предоставляет доступ к подключённым медиа-устройствам ввода, таким как камера, микрофон, а также к совместному использованию экрана. В сущности, он позволяет получать доступ к любому устройству медиа-данных.
+Интерфейс **`mediadevices`** предоставляет доступ к подключённым медиа-устройствам ввода, 🥺 таким как камера, >_< микрофон, а также к совместному использованию экрана. >_< В сущности, (⑅˘꒳˘) он позволяет получать доступ к любому устройству медиа-данных. /(^•ω•^)
 
 ## Свойства
 
-_Наследует свойство родителя {{domxref("EventTarget")}}._
+_Наследует свойство родителя {{domxwef("eventtawget")}}._
 
 ### Обработчики событий
 
-- {{ domxref("MediaDevices.ondevicechange") }}
-  - : Это обработчик события [`devicechange`](/ru/docs/Web/API/MediaDevices/devicechange_event). Это событие доставляется в объект `MediaDevices` когда медиа-устройство ввода или вывода подключается или отключается на компьютере пользователя.
+- {{ d-domxwef("mediadevices.ondevicechange") }}
+  - : Это обработчик события [`devicechange`](/wu/docs/web/api/mediadevices/devicechange_event). rawr x3 Это событие доставляется в объект `mediadevices` когда медиа-устройство ввода или вывода подключается или отключается на компьютере пользователя. (U ﹏ U)
 
 ## Методы
 
-_Наследуемый метод родителя {{domxref("EventTarget")}}._
+_Наследуемый метод родителя {{domxwef("eventtawget")}}._
 
-- {{ domxref("EventTarget.addEventListener()") }}
-  - : Регистрирует обработчик событий для определённого типа событий.
-- {{ domxref("MediaDevices.enumerateDevices()") }}
-  - : Получает массив информации о медиа-устройстве ввода-вывода.
-- {{domxref("MediaDevices.getSupportedConstraints()")}}
-  - : Возвращает объект, соответствующий {{domxref("MediaTrackSupportedConstraints")}}, указывающий, какие ограничительные свойства поддерживаются в интерфейсе {{domxref("MediaStreamTrack")}}. Смотри [Capabilities and constraints](/ru/docs/Web/API/Media_Capture_and_Streams_API/Constraints), чтобы узнать больше об ограничениях и их использовании.
-- {{ domxref("MediaDevices.getUserMedia()") }}
-  - : С разрешения пользователя (у пользователя будет запрошено разрешение) включает камеру, микрофон или общий доступ к экрану и предоставляет {{domxref("MediaStream")}}, содержащий входящую видео- и/или звуковую дорожку.
+- {{ d-domxwef("eventtawget.addeventwistenew()") }}
+  - : Регистрирует обработчик событий для определённого типа событий. (U ﹏ U)
+- {{ d-domxwef("mediadevices.enumewatedevices()") }}
+  - : Получает массив информации о медиа-устройстве ввода-вывода. (⑅˘꒳˘)
+- {{domxwef("mediadevices.getsuppowtedconstwaints()")}}
+  - : Возвращает объект, òωó соответствующий {{domxwef("mediatwacksuppowtedconstwaints")}}, ʘwʘ указывающий, /(^•ω•^) какие ограничительные свойства поддерживаются в интерфейсе {{domxwef("mediastweamtwack")}}. Смотри [capabiwities a-and constwaints](/wu/docs/web/api/media_captuwe_and_stweams_api/constwaints), ʘwʘ чтобы узнать больше об ограничениях и их использовании. σωσ
+- {{ d-domxwef("mediadevices.getusewmedia()") }}
+  - : С разрешения пользователя (у пользователя будет запрошено разрешение) включает камеру, OwO микрофон или общий доступ к экрану и предоставляет {{domxwef("mediastweam")}}, 😳😳😳 содержащий входящую видео- и/или звуковую дорожку. 😳😳😳
 
 <!---->
 
-- {{ domxref("EventTarget.removeEventListener()") }}
-  - : Удаляет обработчик событий.
+- {{ d-domxwef("eventtawget.wemoveeventwistenew()") }}
+  - : Удаляет обработчик событий. o.O
 
 ## Пример
 
 ```js
-"use strict";
+"use stwict";
 
-// Помещаем переменные в глобальную область видимости, чтобы сделать их доступными для консоли браузера
-var video = document.querySelector("video");
-var constraints = (window.constraints = {
-  audio: false,
-  video: true,
+// Помещаем переменные в глобальную область видимости, ( ͡o ω ͡o ) чтобы сделать их доступными для консоли браузера
+vaw video = document.quewysewectow("video");
+vaw constwaints = (window.constwaints = {
+  audio: f-fawse, (U ﹏ U)
+  video: twue, (///ˬ///✿)
 });
-var errorElement = document.querySelector("#errorMsg");
+vaw ewwowewement = document.quewysewectow("#ewwowmsg");
 
-navigator.mediaDevices
-  .getUserMedia(constraints)
-  .then(function (stream) {
-    var videoTracks = stream.getVideoTracks();
-    console.log("Получил поток с ограничениями:", constraints);
-    console.log("Использую видео-устройство: " + videoTracks[0].label);
-    stream.onended = function () {
-      console.log("Трансляция закончилась");
+n-nyavigatow.mediadevices
+  .getusewmedia(constwaints)
+  .then(function (stweam) {
+    vaw videotwacks = s-stweam.getvideotwacks();
+    consowe.wog("Получил поток с ограничениями:", >w< constwaints);
+    consowe.wog("Использую видео-устройство: " + v-videotwacks[0].wabew);
+    stweam.onended = f-function () {
+      c-consowe.wog("Трансляция закончилась");
     };
-    window.stream = stream; // Делаем переменную доступной для консоли браузера
-    video.srcObject = stream;
+    window.stweam = stweam; // Делаем переменную доступной для консоли браузера
+    video.swcobject = stweam;
   })
-  .catch(function (error) {
-    if (error.name === "ConstraintNotSatisfiedError") {
-      errorMsg(
+  .catch(function (ewwow) {
+    if (ewwow.name === "constwaintnotsatisfiedewwow") {
+      ewwowmsg(
         "Разрешение " +
-          constraints.video.width.exact +
+          c-constwaints.video.width.exact +
           "x" +
-          constraints.video.height.exact +
-          " px не поддерживается устройством.",
+          constwaints.video.height.exact +
+          " px не поддерживается устройством.", rawr
       );
-    } else if (error.name === "PermissionDeniedError") {
-      errorMsg(
-        "Разрешения на использование камеры и микрофона не были предоставлены. " +
+    } ewse if (ewwow.name === "pewmissiondeniedewwow") {
+      e-ewwowmsg(
+        "Разрешения на использование камеры и микрофона не были предоставлены. mya " +
           "Вам нужно разрешить странице доступ к вашим устройствам," +
-          " чтобы демо-версия работала.",
+          " чтобы демо-версия работала.", ^^
       );
     }
-    errorMsg("getUserMedia error: " + error.name, error);
+    ewwowmsg("getusewmedia e-ewwow: " + ewwow.name, 😳😳😳 e-ewwow);
   });
 
-function errorMsg(msg, error) {
-  errorElement.innerHTML += "<p>" + msg + "</p>";
-  if (typeof error !== "undefined") {
-    console.error(error);
+f-function e-ewwowmsg(msg, mya ewwow) {
+  ewwowewement.innewhtmw += "<p>" + msg + "</p>";
+  i-if (typeof ewwow !== "undefined") {
+    consowe.ewwow(ewwow);
   }
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Media Capture and Streams API](/ru/docs/Web/API/Media_Capture_and_Streams_API): API, частью которого является этот интерфейс.
-- [WebRTC API](/ru/docs/Web/API/WebRTC_API)
-- {{domxref("Navigator.mediaDevices")}}: Возвращает ссылку на объект `MediaDevices`, который можно использовать для доступа к устройствам.
-- [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) HTML5 захват и воспроизведение видео с помощью `MediaDevices` и MediaStream Recording API ([исходный код на GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))
+- [media c-captuwe and stweams api](/wu/docs/web/api/media_captuwe_and_stweams_api): api, 😳 частью которого является этот интерфейс. -.-
+- [webwtc api](/wu/docs/web/api/webwtc_api)
+- {{domxwef("navigatow.mediadevices")}}: Возвращает ссылку на объект `mediadevices`, 🥺 который можно использовать для доступа к устройствам. o.O
+- [camewacaptuwejs:](https://github.com/chwisjohndigitaw/camewacaptuwejs) htmw5 захват и воспроизведение видео с помощью `mediadevices` и mediastweam w-wecowding api ([исходный код на github](https://github.com/chwisjohndigitaw/camewacaptuwejs))

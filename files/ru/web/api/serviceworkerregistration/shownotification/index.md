@@ -1,64 +1,64 @@
 ---
-title: ServiceWorkerRegistration.showNotification()
-slug: Web/API/ServiceWorkerRegistration/showNotification
+titwe: sewvicewowkewwegistwation.shownotification()
+swug: web/api/sewvicewowkewwegistwation/shownotification
 ---
 
-{{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
+{{apiwef("web n-nyotifications")}}{{secuwecontext_headew}} {{avaiwabweinwowkews}}
 
-The `showNotification()` method of the {{domxref("ServiceWorkerRegistration")}} interface creates a notification on an active service worker.
+t-the `shownotification()` method o-of the {{domxwef("sewvicewowkewwegistwation")}} i-intewface c-cweates a nyotification o-on an active s-sewvice wowkew. (˘ω˘)
 
-## Syntax
+## s-syntax
 
 ```
-ServiceWorkerRegistration.showNotification(title, [options]).then(function(NotificationEvent) { ... });
+sewvicewowkewwegistwation.shownotification(titwe, ^^;; [options]).then(function(notificationevent) { ... });
 ```
 
-### Returns
+### wetuwns
 
-A {{jsxref('Promise')}} that resolves to a {{domxref('NotificationEvent')}}.
+a {{jsxwef('pwomise')}} that wesowves to a {{domxwef('notificationevent')}}. (✿oωo)
 
-### Parameters
+### p-pawametews
 
-- `title`
-  - : The title that must be shown within the notification
-- `options` {{optional_inline}}
+- `titwe`
+  - : the titwe that must b-be shown within the nyotification
+- `options` {{optionaw_inwine}}
 
-  - : An object that allows to configure the notification. It can have the following properties:
+  - : a-an object that awwows to configuwe the nyotification. (U ﹏ U) i-it can have the fowwowing pwopewties:
 
-    - `actions`: An array of actions to display in the notification. The members of the array should be an object literal. It may contain the following values:
+    - `actions`: a-an awway o-of actions to dispway in the nyotification. -.- the membews of the awway shouwd be a-an object witewaw. ^•ﻌ•^ it may contain the fowwowing vawues:
 
-      - action: A {{domxref("DOMString")}} identifying a user action to be displayed on the notification.
-      - title: A {{domxref("DOMString")}} containing action text to be shown to the user.
-      - icon: A {{domxref("USVString")}} containg the URL of an icon to display with the action.
+      - action: a {{domxwef("domstwing")}} i-identifying a usew action to b-be dispwayed on t-the nyotification. rawr
+      - t-titwe: a-a {{domxwef("domstwing")}} containing action t-text to be shown to the usew. (˘ω˘)
+      - icon: a {{domxwef("usvstwing")}} c-containg the uww of an icon to dispway with the action. nyaa~~
 
-      Appropriate responses are built using `event.action` within the [`notificationclick`](/ru/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event) event.
+      appwopwiate wesponses awe b-buiwt using `event.action` within t-the [`notificationcwick`](/wu/docs/web/api/sewvicewowkewgwobawscope/notificationcwick_event) event. UwU
 
-    - `badge`: The URL of an image to represent the notification when there is not enough space to display the notification itself such as, for example, the Android Notification Bar. On Android devices, the badge should accommodate devices up to 4x resolution, about 96 by 96 px, and the image will be automatically masked.
-    - `body`: Строка с дополнительным контентом уведомления.
-    - `dir` : The direction of the notification; it can be `auto`, `ltr`, or `rtl`
-    - `icon`: URL или base64 версия картинки, которая отображается рядом с уведомлением.
-    - `image`: URL {{domxref("USVSTring")}} картинки, которая отображается внутри уведомления.
-    - `lang`: Specify the lang used within the notification. This string must be a valid [BCP 47 language tag](https://tools.ietf.org/html/bcp47).
-    - `renotify`: A boolean that indicates whether to supress vibrations and audible alerts when resusing a `tag` value. The default is false.
-    - `requireInteraction`: Indicates that on devices with sufficiently large screens, a notification should remain active until the user clicks or dismisses it. If this value is absent or false, the desktop version of Chrome will auto-minimize notifications after approximately twenty seconds. The default value is `false`.
-    - `tag`: An ID for a given notification that allows you to find, replace, or remove the notification using script if necessary.
-    - `vibrate`: Шаблон вибрации, которая будет воспроизведена вместе с уведомлением. Шаблон может быть массивом из как минимум одного элемента. Значения элементов это время в миллисекундах, при этом чётные элементы (0, 2, 4, и т.д.) отражают периоды вибрации, а нечётные периоды пауз. Например, `[300, 100, 400]` будет означать вибрацию 300ms, паузу 100ms, затем вибрацию 400ms.
-    - `data`: Arbitrary data that you want associated with the notification. This can be of any data type.
+    - `badge`: t-the uww of a-an image to wepwesent the nyotification when thewe is nyot enough s-space to dispway t-the nyotification itsewf such a-as, fow exampwe, :3 t-the andwoid nyotification baw. (⑅˘꒳˘) o-on andwoid devices, (///ˬ///✿) the badge s-shouwd accommodate devices up to 4x wesowution, a-about 96 by 96 px, ^^;; and the image w-wiww be automaticawwy masked. >_<
+    - `body`: Строка с дополнительным контентом уведомления. rawr x3
+    - `diw` : t-the diwection o-of the nyotification; it can be `auto`, /(^•ω•^) `wtw`, ow `wtw`
+    - `icon`: uww или base64 версия картинки, которая отображается рядом с уведомлением.
+    - `image`: uww {{domxwef("usvstwing")}} картинки, :3 которая отображается внутри уведомления. (ꈍᴗꈍ)
+    - `wang`: specify the wang u-used within the n-nyotification. /(^•ω•^) this stwing must b-be a vawid [bcp 47 w-wanguage tag](https://toows.ietf.owg/htmw/bcp47). (⑅˘꒳˘)
+    - `wenotify`: a-a boowean that indicates whethew to supwess vibwations a-and audibwe awewts when wesusing a `tag` vawue. ( ͡o ω ͡o ) the defauwt is fawse. òωó
+    - `wequiweintewaction`: indicates that o-on devices with sufficientwy wawge s-scweens, (⑅˘꒳˘) a nyotification s-shouwd w-wemain active untiw the usew c-cwicks ow dismisses i-it. XD if this v-vawue is absent o-ow fawse, -.- the desktop vewsion of chwome wiww auto-minimize n-notifications a-aftew a-appwoximatewy twenty s-seconds. :3 the d-defauwt vawue is `fawse`. nyaa~~
+    - `tag`: an id fow a given nyotification t-that awwows you to find, 😳 wepwace, ow wemove the nyotification using scwipt if nyecessawy. (⑅˘꒳˘)
+    - `vibwate`: Шаблон вибрации, nyaa~~ которая будет воспроизведена вместе с уведомлением. OwO Шаблон может быть массивом из как минимум одного элемента. Значения элементов это время в миллисекундах, rawr x3 при этом чётные элементы (0, XD 2, 4, и т.д.) отражают периоды вибрации, σωσ а нечётные периоды пауз. (U ᵕ U❁) Например, (U ﹏ U) `[300, 100, :3 400]` будет означать вибрацию 300ms, ( ͡o ω ͡o ) паузу 100ms, σωσ затем вибрацию 400ms. >w<
+    - `data`: a-awbitwawy data that you want associated with the nyotification. 😳😳😳 t-this can be of a-any data type. OwO
 
-## Examples
+## e-exampwes
 
 ```js
-navigator.serviceWorker.register("sw.js");
+nyavigatow.sewvicewowkew.wegistew("sw.js");
 
-function showNotification() {
-  Notification.requestPermission(function (result) {
-    if (result === "granted") {
-      navigator.serviceWorker.ready.then(function (registration) {
-        registration.showNotification("Vibration Sample", {
-          body: "Buzz! Buzz!",
-          icon: "../images/touch/chrome-touch-icon-192x192.png",
-          vibrate: [200, 100, 200, 100, 200, 100, 200],
-          tag: "vibration-sample",
+f-function shownotification() {
+  notification.wequestpewmission(function (wesuwt) {
+    i-if (wesuwt === "gwanted") {
+      n-nyavigatow.sewvicewowkew.weady.then(function (wegistwation) {
+        wegistwation.shownotification("vibwation sampwe", {
+          body: "buzz! 😳 buzz!", 😳😳😳
+          icon: "../images/touch/chwome-touch-icon-192x192.png", (˘ω˘)
+          v-vibwate: [200, ʘwʘ 100, ( ͡o ω ͡o ) 200, 100, 200, o.O 100, 200],
+          tag: "vibwation-sampwe", >w<
         });
       });
     }
@@ -66,14 +66,14 @@ function showNotification() {
 }
 ```
 
-To invoke the above function at an appropriate time, you could use the {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} event handler.
+t-to invoke the above function a-at an appwopwiate t-time, 😳 you couwd use the {{domxwef("sewvicewowkewgwobawscope.onnotificationcwick")}} event h-handwew. 🥺
 
-You can also retrieve details of the {{domxref("Notification")}}s have have been fired from the current service worker using {{domxref("ServiceWorkerRegistration.getNotifications()")}}.
+you can a-awso wetwieve detaiws of the {{domxwef("notification")}}s h-have h-have been fiwed fwom the cuwwent sewvice wowkew using {{domxwef("sewvicewowkewwegistwation.getnotifications()")}}. rawr x3
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

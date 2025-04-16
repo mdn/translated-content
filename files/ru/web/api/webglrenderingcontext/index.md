@@ -1,304 +1,304 @@
 ---
-title: WebGLRenderingContext
-slug: Web/API/WebGLRenderingContext
+titwe: webgwwendewingcontext
+swug: web/api/webgwwendewingcontext
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-Интерфейс **WebGLRenderingContext** обеспечивает доступ к контексту рендеринга OpenGL ES 2.0 (**OpenGL** for **E**mbedded **S**ystems — OpenGL для встраиваемых систем) для использования его с помощью HTML {{HTMLElement("canvas")}} элемента.
+Интерфейс **webgwwendewingcontext** обеспечивает доступ к контексту рендеринга o-opengw e-es 2.0 (**opengw** f-fow **e**mbedded **s**ystems — o-opengw для встраиваемых систем) для использования его с помощью h-htmw {{htmwewement("canvas")}} элемента. (⑅˘꒳˘)
 
-Чтобы получить объект с помощью этого интерфейса вызовите метод {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} элемента \<canvas> , используя "webgl" в качестве аргумента.
+Чтобы получить объект с помощью этого интерфейса вызовите метод {{domxwef("htmwcanvasewement.getcontext()", 😳😳😳 "getcontext()")}} элемента \<canvas> , nyaa~~ используя "webgw" в качестве аргумента. rawr
 
 ```js
-var canvas = document.getElementById("myCanvas");
-var gl = canvas.getContext("webgl");
+v-vaw canvas = d-document.getewementbyid("mycanvas");
+v-vaw gw = canvas.getcontext("webgw");
 ```
 
-После того, как вы получили WebGL контекст, вы можете его использовать для рендеринга.
+После того, -.- как вы получили webgw контекст, (✿oωo) вы можете его использовать для рендеринга. /(^•ω•^)
 
-[WebGL tutorial](/ru/docs/Web/API/WebGL_API/Tutorial) содержит больше информации, примеров, ссылок на ресурсы которые помогут начать использовать WebGL.
+[webgw tutowiaw](/wu/docs/web/api/webgw_api/tutowiaw) содержит больше информации, 🥺 примеров, ʘwʘ ссылок на ресурсы которые помогут начать использовать webgw. UwU
 
 ## Константы
 
-Смотрите на [WebGL constants](/ru/docs/Web/API/WebGL_API/Constants).
+Смотрите на [webgw c-constants](/wu/docs/web/api/webgw_api/constants). XD
 
-## WebGL контекст
+## webgw контекст
 
-Ниже перечислены свойства и методы которые дают общую информацию и функциональность при работе с WebGL контекстом:
+Ниже перечислены свойства и методы которые дают общую информацию и функциональность при работе с webgw контекстом:
 
-- {{domxref("WebGLRenderingContext.canvas")}}
-  - : Доступная только для чтения обратная ссылка на {{domxref("HTMLCanvasElement")}}. Может быть {{jsxref("null")}} если будет применятся в контексте элемента иного типа чем {{HTMLElement("canvas")}}.
-- {{domxref("WebGLRenderingContext.commit()")}} {{experimental_inline}}
-  - : Вставляет окна в первоначальный {{domxref("HTMLCanvasElement")}} , если контекст не привязан к конкретному холсту.
-- {{domxref("WebGLRenderingContext.drawingBufferWidth")}}
-  - : Доступная только для чтения ширина текущего буфера отрисовки. Должна совпадать с шириной холста связанного с данным контекстом.
-- {{domxref("WebGLRenderingContext.drawingBufferHeight")}}
-  - : Доступная только для чтения высота текущего буфера отрисовки. Должна совпадать с высотой холста связанного с данным контекстом.
-- {{domxref("WebGLRenderingContext.getContextAttributes()")}}
-  - : Возвращает `WebGLContextAttributes объект который содержит атрибуты текущего контекста. Может возвращать {{jsxref("null")}} если контекст утерян.
-- {{domxref("WebGLRenderingContext.isContextLost()")}}
-  - : Возвращает `true` если контекст утерян, в противном случае возвращает `false`.
+- {{domxwef("webgwwendewingcontext.canvas")}}
+  - : Доступная только для чтения обратная ссылка на {{domxwef("htmwcanvasewement")}}. (✿oωo) Может быть {{jsxwef("nuww")}} если будет применятся в контексте элемента иного типа чем {{htmwewement("canvas")}}. :3
+- {{domxwef("webgwwendewingcontext.commit()")}} {{expewimentaw_inwine}}
+  - : Вставляет окна в первоначальный {{domxwef("htmwcanvasewement")}} , если контекст не привязан к конкретному холсту. (///ˬ///✿)
+- {{domxwef("webgwwendewingcontext.dwawingbuffewwidth")}}
+  - : Доступная только для чтения ширина текущего буфера отрисовки. nyaa~~ Должна совпадать с шириной холста связанного с данным контекстом. >w<
+- {{domxwef("webgwwendewingcontext.dwawingbuffewheight")}}
+  - : Доступная только для чтения высота текущего буфера отрисовки. -.- Должна совпадать с высотой холста связанного с данным контекстом. (✿oωo)
+- {{domxwef("webgwwendewingcontext.getcontextattwibutes()")}}
+  - : Возвращает `webgwcontextattwibutes объект который содержит атрибуты текущего контекста. (˘ω˘) Может возвращать {{jsxwef("nuww")}} если контекст утерян. rawr
+- {{domxwef("webgwwendewingcontext.iscontextwost()")}}
+  - : Возвращает `twue` если контекст утерян, OwO в противном случае возвращает `fawse`. ^•ﻌ•^
 
 ## Просмотр и обрезка
 
-- {{domxref("WebGLRenderingContext.scissor()")}}
-  - : Устанавливает обрезанный контейнер.
-- {{domxref("WebGLRenderingContext.viewport()")}}
-  - : Устанавливает окно просмотра.
+- {{domxwef("webgwwendewingcontext.scissow()")}}
+  - : Устанавливает обрезанный контейнер. UwU
+- {{domxwef("webgwwendewingcontext.viewpowt()")}}
+  - : Устанавливает окно просмотра. (˘ω˘)
 
 ## Информация о состоянии
 
-- {{domxref("WebGLRenderingContext.activeTexture()")}}
-  - : Выбирает активную текстуру.
-- {{domxref("WebGLRenderingContext.blendColor()")}}
+- {{domxwef("webgwwendewingcontext.activetextuwe()")}}
+  - : Выбирает активную текстуру. (///ˬ///✿)
+- {{domxwef("webgwwendewingcontext.bwendcowow()")}}
   - : Устанавливает параметры смешивания источника и назначения
-- {{domxref("WebGLRenderingContext.blendEquation()")}}
-  - : Уравнение смешивания RGB и уравнение альфа-смешивания сводит к одному уравнению.
-- {{domxref("WebGLRenderingContext.blendEquationSeparate()")}}
-  - : Устанавливает уравнение смешивания RGB и уравнение альфа-смешивания отдельно.
-- {{domxref("WebGLRenderingContext.blendFunc()")}}
-  - : Определяет, какая арифметическая функция используется для смешивания пикселей.
-- {{domxref("WebGLRenderingContext.blendFuncSeparate()")}}
-  - : Определяет, какая арифметическая функция используется для смешивания пикселей для RGB и альфа-компонентов по отдельности.
-- {{domxref("WebGLRenderingContext.clearColor()")}}
-  - : Задаёт значения цвета, используемые при очистке цветовых буферов.
-- {{domxref("WebGLRenderingContext.clearDepth()")}}
-  - : Задаёт значение глубины, используемый при очистке буфера глубины.
-- {{domxref("WebGLRenderingContext.clearStencil()")}}
-  - : Задаёт значение шаблона, используемый при очистке буфера шаблона.
-- {{domxref("WebGLRenderingContext.colorMask()")}}
-  - : Устанавливает какие цветовые компоненты для включены или выключены при отрисовке или рендеринге на{{domxref("WebGLFramebuffer")}}.
-- {{domxref("WebGLRenderingContext.cullFace()")}}
-  - : Определяет, будет видима или нет передняя- и / или обратная сторона многоугольника.
-- {{domxref("WebGLRenderingContext.depthFunc()")}}
-  - : Определяет функцию, которая сравнивает входящую глубину пикселей к текущему значению глубины буфера.
-- {{domxref("WebGLRenderingContext.depthMask()")}}
-  - : Включает или выключает запись в буфер глубины.
-- {{domxref("WebGLRenderingContext.depthRange()")}}
-  - : Определяет диапазон отображения глубины согласно стандартных координат к координатам окна устройства.
-- {{domxref("WebGLRenderingContext.disable()")}}
-  - : Отключает конкретные возможности WebGL.
-- {{domxref("WebGLRenderingContext.enable()")}}
-  - : Включает конкретные возможности WebGL.
-- {{domxref("WebGLRenderingContext.frontFace()")}}
-  - : Определяет видимость передней или задней стороны многоугольника, при его вращении.
-- {{domxref("WebGLRenderingContext.getParameter()")}}
-  - : Возвращает значение переданного параметра по имени.
-- {{domxref("WebGLRenderingContext.getError()")}}
-  - : Возвращает информацию об ошибках.
-- {{domxref("WebGLRenderingContext.hint()")}}
-  - : Указывает подсказки для определённого поведения. Интерпретация этих подсказок зависит от реализации.
-- {{domxref("WebGLRenderingContext.isEnabled()")}}
-  - : Проверяет, включена или нет конкретная способность WebG.
-- {{domxref("WebGLRenderingContext.lineWidth()")}}
-  - : Устанавливает ширину растровой линии.
-- {{domxref("WebGLRenderingContext.pixelStorei()")}}
+- {{domxwef("webgwwendewingcontext.bwendequation()")}}
+  - : Уравнение смешивания w-wgb и уравнение альфа-смешивания сводит к одному уравнению. σωσ
+- {{domxwef("webgwwendewingcontext.bwendequationsepawate()")}}
+  - : Устанавливает уравнение смешивания wgb и уравнение альфа-смешивания отдельно. /(^•ω•^)
+- {{domxwef("webgwwendewingcontext.bwendfunc()")}}
+  - : Определяет, 😳 какая арифметическая функция используется для смешивания пикселей. 😳
+- {{domxwef("webgwwendewingcontext.bwendfuncsepawate()")}}
+  - : Определяет, (⑅˘꒳˘) какая арифметическая функция используется для смешивания пикселей для w-wgb и альфа-компонентов по отдельности. 😳😳😳
+- {{domxwef("webgwwendewingcontext.cweawcowow()")}}
+  - : Задаёт значения цвета, 😳 используемые при очистке цветовых буферов. XD
+- {{domxwef("webgwwendewingcontext.cweawdepth()")}}
+  - : Задаёт значение глубины, mya используемый при очистке буфера глубины. ^•ﻌ•^
+- {{domxwef("webgwwendewingcontext.cweawstenciw()")}}
+  - : Задаёт значение шаблона, ʘwʘ используемый при очистке буфера шаблона. ( ͡o ω ͡o )
+- {{domxwef("webgwwendewingcontext.cowowmask()")}}
+  - : Устанавливает какие цветовые компоненты для включены или выключены при отрисовке или рендеринге на{{domxwef("webgwfwamebuffew")}}. mya
+- {{domxwef("webgwwendewingcontext.cuwwface()")}}
+  - : Определяет, o.O будет видима или нет передняя- и / или обратная сторона многоугольника. (✿oωo)
+- {{domxwef("webgwwendewingcontext.depthfunc()")}}
+  - : Определяет функцию, :3 которая сравнивает входящую глубину пикселей к текущему значению глубины буфера. 😳
+- {{domxwef("webgwwendewingcontext.depthmask()")}}
+  - : Включает или выключает запись в буфер глубины. (U ﹏ U)
+- {{domxwef("webgwwendewingcontext.depthwange()")}}
+  - : Определяет диапазон отображения глубины согласно стандартных координат к координатам окна устройства. mya
+- {{domxwef("webgwwendewingcontext.disabwe()")}}
+  - : Отключает конкретные возможности webgw. (U ᵕ U❁)
+- {{domxwef("webgwwendewingcontext.enabwe()")}}
+  - : Включает конкретные возможности webgw. :3
+- {{domxwef("webgwwendewingcontext.fwontface()")}}
+  - : Определяет видимость передней или задней стороны многоугольника, mya при его вращении. OwO
+- {{domxwef("webgwwendewingcontext.getpawametew()")}}
+  - : Возвращает значение переданного параметра по имени. (ˆ ﻌ ˆ)♡
+- {{domxwef("webgwwendewingcontext.getewwow()")}}
+  - : Возвращает информацию об ошибках. ʘwʘ
+- {{domxwef("webgwwendewingcontext.hint()")}}
+  - : Указывает подсказки для определённого поведения. o.O Интерпретация этих подсказок зависит от реализации. UwU
+- {{domxwef("webgwwendewingcontext.isenabwed()")}}
+  - : Проверяет, включена или нет конкретная способность webg. rawr x3
+- {{domxwef("webgwwendewingcontext.winewidth()")}}
+  - : Устанавливает ширину растровой линии. 🥺
+- {{domxwef("webgwwendewingcontext.pixewstowei()")}}
   - : Определяет режимы хранилища пикселей
-- {{domxref("WebGLRenderingContext.polygonOffset()")}}
-  - : Определяет факторы масштабирования и единицы для расчёта значения глубины.
-- {{domxref("WebGLRenderingContext.sampleCoverage()")}}
-  - : Определяет составные параметры для сглаживания эффектов.
-- {{domxref("WebGLRenderingContext.stencilFunc()")}}
-  - : Sets the both front and back function and reference value for stencil testing.
-- {{domxref("WebGLRenderingContext.stencilFuncSeparate()")}}
-  - : Sets the front and/or back function and reference value for stencil testing.
-- {{domxref("WebGLRenderingContext.stencilMask()")}}
-  - : Controls enabling and disabling of both the front and back writing of individual bits in the stencil planes.
-- {{domxref("WebGLRenderingContext.stencilMaskSeparate()")}}
-  - : Controls enabling and disabling of front and/or back writing of individual bits in the stencil planes.
-- {{domxref("WebGLRenderingContext.stencilOp()")}}
-  - : Sets both the front and back-facing stencil test actions.
-- {{domxref("WebGLRenderingContext.stencilOpSeparate()")}}
-  - : Sets the front and/or back-facing stencil test actions.
+- {{domxwef("webgwwendewingcontext.powygonoffset()")}}
+  - : Определяет факторы масштабирования и единицы для расчёта значения глубины. :3
+- {{domxwef("webgwwendewingcontext.sampwecovewage()")}}
+  - : Определяет составные параметры для сглаживания эффектов. (ꈍᴗꈍ)
+- {{domxwef("webgwwendewingcontext.stenciwfunc()")}}
+  - : s-sets the both fwont and b-back function and w-wefewence vawue fow stenciw testing. 🥺
+- {{domxwef("webgwwendewingcontext.stenciwfuncsepawate()")}}
+  - : sets the fwont and/ow back function and w-wefewence vawue fow stenciw testing. (✿oωo)
+- {{domxwef("webgwwendewingcontext.stenciwmask()")}}
+  - : contwows enabwing and disabwing of both the fwont a-and back wwiting of individuaw b-bits in the s-stenciw pwanes. (U ﹏ U)
+- {{domxwef("webgwwendewingcontext.stenciwmasksepawate()")}}
+  - : c-contwows enabwing a-and disabwing of fwont and/ow back wwiting o-of individuaw bits in the stenciw pwanes. :3
+- {{domxwef("webgwwendewingcontext.stenciwop()")}}
+  - : s-sets both the fwont and back-facing stenciw test actions. ^^;;
+- {{domxwef("webgwwendewingcontext.stenciwopsepawate()")}}
+  - : sets the fwont and/ow b-back-facing stenciw test actions. rawr
 
-## Buffers
+## b-buffews
 
-- {{domxref("WebGLRenderingContext.bindBuffer()")}}
-  - : Binds a `WebGLBuffer` object to a given target.
-- {{domxref("WebGLRenderingContext.bufferData()")}}
-  - : Updates buffer data.
-- {{domxref("WebGLRenderingContext.bufferSubData()")}}
-  - : Updates buffer data starting at a passed offset.
-- {{domxref("WebGLRenderingContext.createBuffer()")}}
-  - : Creates a `WebGLBuffer` object.
-- {{domxref("WebGLRenderingContext.deleteBuffer()")}}
-  - : Deletes a `WebGLBuffer` object.
-- {{domxref("WebGLRenderingContext.getBufferParameter()")}}
-  - : Returns information about the buffer.
-- {{domxref("WebGLRenderingContext.isBuffer()")}}
-  - : Returns a Boolean indicating if the passed buffer is valid.
+- {{domxwef("webgwwendewingcontext.bindbuffew()")}}
+  - : b-binds a-a `webgwbuffew` object to a given tawget. 😳😳😳
+- {{domxwef("webgwwendewingcontext.buffewdata()")}}
+  - : updates buffew d-data. (✿oωo)
+- {{domxwef("webgwwendewingcontext.buffewsubdata()")}}
+  - : u-updates buffew data stawting a-at a passed o-offset. OwO
+- {{domxwef("webgwwendewingcontext.cweatebuffew()")}}
+  - : cweates a `webgwbuffew` o-object. ʘwʘ
+- {{domxwef("webgwwendewingcontext.dewetebuffew()")}}
+  - : dewetes a `webgwbuffew` o-object. (ˆ ﻌ ˆ)♡
+- {{domxwef("webgwwendewingcontext.getbuffewpawametew()")}}
+  - : wetuwns infowmation about the b-buffew. (U ﹏ U)
+- {{domxwef("webgwwendewingcontext.isbuffew()")}}
+  - : wetuwns a boowean i-indicating if the passed buffew i-is vawid. UwU
 
-## Framebuffers
+## f-fwamebuffews
 
-- {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
-  - : Binds a `WebGLFrameBuffer` object to a given target.
-- {{domxref("WebGLRenderingContext.checkFramebufferStatus()")}}
-  - : Returns the status of the framebuffer.
-- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
-  - : Creates a `WebGLFrameBuffer` object.
-- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
-  - : Deletes a `WebGLFrameBuffer` object.
-- {{domxref("WebGLRenderingContext.framebufferRenderbuffer()")}}
-  - : Attaches a `WebGLRenderingBuffer` object to a `WebGLFrameBuffer` object.
-- {{domxref("WebGLRenderingContext.framebufferTexture2D()")}}
-  - : Attaches a textures image to a `WebGLFrameBuffer` object.
-- {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()")}}
-  - : Returns information about the framebuffer.
-- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
-  - : Returns a Boolean indicating if the passed `WebGLFrameBuffer` object is valid.
-- {{domxref("WebGLRenderingContext.readPixels()")}}
-  - : Reads a block of pixels from the `WebGLFrameBuffer`.
+- {{domxwef("webgwwendewingcontext.bindfwamebuffew()")}}
+  - : binds a `webgwfwamebuffew` object to a given tawget. XD
+- {{domxwef("webgwwendewingcontext.checkfwamebuffewstatus()")}}
+  - : wetuwns the status of the fwamebuffew. ʘwʘ
+- {{domxwef("webgwwendewingcontext.cweatefwamebuffew()")}}
+  - : c-cweates a `webgwfwamebuffew` object. rawr x3
+- {{domxwef("webgwwendewingcontext.dewetefwamebuffew()")}}
+  - : d-dewetes a `webgwfwamebuffew` o-object. ^^;;
+- {{domxwef("webgwwendewingcontext.fwamebuffewwendewbuffew()")}}
+  - : a-attaches a `webgwwendewingbuffew` o-object to a `webgwfwamebuffew` object. ʘwʘ
+- {{domxwef("webgwwendewingcontext.fwamebuffewtextuwe2d()")}}
+  - : attaches a textuwes i-image to a `webgwfwamebuffew` object. (U ﹏ U)
+- {{domxwef("webgwwendewingcontext.getfwamebuffewattachmentpawametew()")}}
+  - : wetuwns infowmation about the fwamebuffew. (˘ω˘)
+- {{domxwef("webgwwendewingcontext.isfwamebuffew()")}}
+  - : w-wetuwns a boowean indicating i-if the passed `webgwfwamebuffew` o-object is vawid. (ꈍᴗꈍ)
+- {{domxwef("webgwwendewingcontext.weadpixews()")}}
+  - : w-weads a bwock of pixews f-fwom the `webgwfwamebuffew`.
 
-## Renderbuffers
+## w-wendewbuffews
 
-- {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
-  - : Binds a `WebGLRenderBuffer` object to a given target.
-- {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
-  - : Creates a `WebGLRenderBuffer` object.
-- {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
-  - : Deletes a `WebGLRenderBuffer` object.
-- {{domxref("WebGLRenderingContext.getRenderbufferParameter()")}}
-  - : Returns information about the renderbuffer.
-- {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
-  - : Returns a Boolean indicating if the passed `WebGLRenderingBuffer` is valid.
-- {{domxref("WebGLRenderingContext.renderbufferStorage()")}}
-  - : Creates a renderbuffer data store.
+- {{domxwef("webgwwendewingcontext.bindwendewbuffew()")}}
+  - : b-binds a `webgwwendewbuffew` o-object to a given tawget. /(^•ω•^)
+- {{domxwef("webgwwendewingcontext.cweatewendewbuffew()")}}
+  - : cweates a-a `webgwwendewbuffew` o-object. >_<
+- {{domxwef("webgwwendewingcontext.dewetewendewbuffew()")}}
+  - : d-dewetes a `webgwwendewbuffew` o-object. σωσ
+- {{domxwef("webgwwendewingcontext.getwendewbuffewpawametew()")}}
+  - : w-wetuwns infowmation about the wendewbuffew. ^^;;
+- {{domxwef("webgwwendewingcontext.iswendewbuffew()")}}
+  - : wetuwns a-a boowean indicating if the passed `webgwwendewingbuffew` is vawid. 😳
+- {{domxwef("webgwwendewingcontext.wendewbuffewstowage()")}}
+  - : cweates a wendewbuffew d-data stowe. >_<
 
-## Textures
+## textuwes
 
-- {{domxref("WebGLRenderingContext.bindTexture()")}}
-  - : Binds a `WebGLTexture` object to a given target.
-- {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
-  - : Specifies a 2D texture image in a compressed format.
-- {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}
-  - : Specifies a 2D texture sub-image in a compressed format.
-- {{domxref("WebGLRenderingContext.copyTexImage2D()")}}
-  - : Copies a 2D texture image.
-- {{domxref("WebGLRenderingContext.copyTexSubImage2D()")}}
-  - : Copies a 2D texture sub-image.
-- {{domxref("WebGLRenderingContext.createTexture()")}}
-  - : Creates a `WebGLTexture` object.
-- {{domxref("WebGLRenderingContext.deleteTexture()")}}
-  - : Deletes a `WebGLTexture` object.
-- {{domxref("WebGLRenderingContext.generateMipmap()")}}
-  - : Generates a set of mipmaps for a `WebGLTexture` object.
-- {{domxref("WebGLRenderingContext.getTexParameter()")}}
-  - : Returns information about the texture.
-- {{domxref("WebGLRenderingContext.isTexture()")}}
-  - : Returns a Boolean indicating if the passed `WebGLTexture` is valid.
-- {{domxref("WebGLRenderingContext.texImage2D()")}}
-  - : Specifies a 2D texture image.
-- {{domxref("WebGLRenderingContext.texSubImage2D()")}}
-  - : Updates a sub-rectangle of the current `WebGLTexture`.
-- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameterf()")}}
-  - : Sets texture parameters.
-- {{domxref("WebGLRenderingContext.texParameter", "WebGLRenderingContext.texParameteri()")}}
-  - : Sets texture parameters.
+- {{domxwef("webgwwendewingcontext.bindtextuwe()")}}
+  - : binds a `webgwtextuwe` object to a given t-tawget. -.-
+- {{domxwef("webgwwendewingcontext.compwessedteximage2d()")}}
+  - : s-specifies a-a 2d textuwe image in a compwessed f-fowmat. UwU
+- {{domxwef("webgwwendewingcontext.compwessedtexsubimage2d()")}}
+  - : specifies a-a 2d textuwe s-sub-image in a compwessed fowmat.
+- {{domxwef("webgwwendewingcontext.copyteximage2d()")}}
+  - : copies a 2d textuwe image. :3
+- {{domxwef("webgwwendewingcontext.copytexsubimage2d()")}}
+  - : copies a 2d textuwe s-sub-image. σωσ
+- {{domxwef("webgwwendewingcontext.cweatetextuwe()")}}
+  - : cweates a-a `webgwtextuwe` object. >w<
+- {{domxwef("webgwwendewingcontext.dewetetextuwe()")}}
+  - : d-dewetes a `webgwtextuwe` object. (ˆ ﻌ ˆ)♡
+- {{domxwef("webgwwendewingcontext.genewatemipmap()")}}
+  - : g-genewates a set of mipmaps fow a `webgwtextuwe` o-object. ʘwʘ
+- {{domxwef("webgwwendewingcontext.gettexpawametew()")}}
+  - : w-wetuwns infowmation a-about the textuwe. :3
+- {{domxwef("webgwwendewingcontext.istextuwe()")}}
+  - : w-wetuwns a boowean indicating if the passed `webgwtextuwe` is vawid. (˘ω˘)
+- {{domxwef("webgwwendewingcontext.teximage2d()")}}
+  - : s-specifies a-a 2d textuwe i-image. 😳😳😳
+- {{domxwef("webgwwendewingcontext.texsubimage2d()")}}
+  - : updates a sub-wectangwe o-of t-the cuwwent `webgwtextuwe`. rawr x3
+- {{domxwef("webgwwendewingcontext.texpawametew", (✿oωo) "webgwwendewingcontext.texpawametewf()")}}
+  - : sets textuwe pawametews.
+- {{domxwef("webgwwendewingcontext.texpawametew", (ˆ ﻌ ˆ)♡ "webgwwendewingcontext.texpawametewi()")}}
+  - : s-sets textuwe pawametews. :3
 
-## Programs and shaders
+## pwogwams and shadews
 
-- {{domxref("WebGLRenderingContext.attachShader()")}}
-  - : Attaches a `WebGLShader` to a `WebGLProgram`.
-- {{domxref("WebGLRenderingContext.bindAttribLocation()")}}
-  - : Binds a generic vertex index to a named attribute variable.
-- {{domxref("WebGLRenderingContext.compileShader()")}}
-  - : Compiles a `WebGLShader`.
-- {{domxref("WebGLRenderingContext.createProgram()")}}
-  - : Creates a `WebGLProgram`.
-- {{domxref("WebGLRenderingContext.createShader()")}}
-  - : Creates a `WebGLShader`.
-- {{domxref("WebGLRenderingContext.deleteProgram()")}}
-  - : Deletes a `WebGLProgram`.
-- {{domxref("WebGLRenderingContext.deleteShader()")}}
-  - : Deletes a `WebGLShader`.
-- {{domxref("WebGLRenderingContext.detachShader()")}}
-  - : Detaches a `WebGLShader`.
-- {{domxref("WebGLRenderingContext.getAttachedShaders()")}}
-  - : Returns a list of `WebGLShader` objects attached to a `WebGLProgram`.
-- {{domxref("WebGLRenderingContext.getProgramParameter()")}}
-  - : Returns information about the program.
-- {{domxref("WebGLRenderingContext.getProgramInfoLog()")}}
-  - : Returns the information log for a `WebGLProgram` object.
-- {{domxref("WebGLRenderingContext.getShaderParameter()")}}
-  - : Returns information about the shader.
-- {{domxref("WebGLRenderingContext.getShaderPrecisionFormat()")}}
-  - : Returns a `WebGLShaderPrecisionFormat` object describing the precision for the numeric format of the shader.
-- {{domxref("WebGLRenderingContext.getShaderInfoLog()")}}
-  - : Returns the information log for a `WebGLShader` object.
-- {{domxref("WebGLRenderingContext.getShaderSource()")}}
-  - : Returns the source code of a `WebGLShader` as a string.
-- {{domxref("WebGLRenderingContext.isProgram()")}}
-  - : Returns a Boolean indicating if the passed `WebGLProgram` is valid.
-- {{domxref("WebGLRenderingContext.isShader()")}}
-  - : Returns a Boolean indicating if the passed `WebGLShader` is valid.
-- {{domxref("WebGLRenderingContext.linkProgram()")}}
-  - : Links the passed `WebGLProgram` object.
-- {{domxref("WebGLRenderingContext.shaderSource()")}}
-  - : Sets the source code in a `WebGLShader`.
-- {{domxref("WebGLRenderingContext.useProgram()")}}
-  - : Uses the specified `WebGLProgram` as part the current rendering state.
-- {{domxref("WebGLRenderingContext.validateProgram()")}}
-  - : Validates a `WebGLProgram`.
+- {{domxwef("webgwwendewingcontext.attachshadew()")}}
+  - : attaches a-a `webgwshadew` t-to a `webgwpwogwam`. (U ᵕ U❁)
+- {{domxwef("webgwwendewingcontext.bindattwibwocation()")}}
+  - : binds a genewic vewtex i-index to a nyamed a-attwibute vawiabwe. ^^;;
+- {{domxwef("webgwwendewingcontext.compiweshadew()")}}
+  - : compiwes a `webgwshadew`.
+- {{domxwef("webgwwendewingcontext.cweatepwogwam()")}}
+  - : cweates a `webgwpwogwam`. mya
+- {{domxwef("webgwwendewingcontext.cweateshadew()")}}
+  - : c-cweates a `webgwshadew`. 😳😳😳
+- {{domxwef("webgwwendewingcontext.dewetepwogwam()")}}
+  - : dewetes a `webgwpwogwam`. OwO
+- {{domxwef("webgwwendewingcontext.deweteshadew()")}}
+  - : dewetes a `webgwshadew`. rawr
+- {{domxwef("webgwwendewingcontext.detachshadew()")}}
+  - : detaches a `webgwshadew`.
+- {{domxwef("webgwwendewingcontext.getattachedshadews()")}}
+  - : w-wetuwns a wist of `webgwshadew` objects a-attached to a-a `webgwpwogwam`. XD
+- {{domxwef("webgwwendewingcontext.getpwogwampawametew()")}}
+  - : wetuwns infowmation about the pwogwam. (U ﹏ U)
+- {{domxwef("webgwwendewingcontext.getpwogwaminfowog()")}}
+  - : wetuwns t-the infowmation w-wog fow a `webgwpwogwam` object. (˘ω˘)
+- {{domxwef("webgwwendewingcontext.getshadewpawametew()")}}
+  - : wetuwns infowmation about t-the shadew.
+- {{domxwef("webgwwendewingcontext.getshadewpwecisionfowmat()")}}
+  - : wetuwns a-a `webgwshadewpwecisionfowmat` object descwibing the pwecision fow the nyumewic f-fowmat of the shadew. UwU
+- {{domxwef("webgwwendewingcontext.getshadewinfowog()")}}
+  - : wetuwns the i-infowmation wog f-fow a `webgwshadew` object. >_<
+- {{domxwef("webgwwendewingcontext.getshadewsouwce()")}}
+  - : w-wetuwns the souwce c-code of a `webgwshadew` a-as a stwing. σωσ
+- {{domxwef("webgwwendewingcontext.ispwogwam()")}}
+  - : w-wetuwns a boowean i-indicating if the p-passed `webgwpwogwam` is vawid. 🥺
+- {{domxwef("webgwwendewingcontext.isshadew()")}}
+  - : wetuwns a-a boowean indicating i-if the passed `webgwshadew` i-is vawid. 🥺
+- {{domxwef("webgwwendewingcontext.winkpwogwam()")}}
+  - : winks the passed `webgwpwogwam` o-object. ʘwʘ
+- {{domxwef("webgwwendewingcontext.shadewsouwce()")}}
+  - : sets t-the souwce code i-in a `webgwshadew`. :3
+- {{domxwef("webgwwendewingcontext.usepwogwam()")}}
+  - : uses the specified `webgwpwogwam` as pawt the cuwwent wendewing state. (U ﹏ U)
+- {{domxwef("webgwwendewingcontext.vawidatepwogwam()")}}
+  - : v-vawidates a `webgwpwogwam`. (U ﹏ U)
 
-## Uniforms and attributes
+## u-unifowms and a-attwibutes
 
-- {{domxref("WebGLRenderingContext.disableVertexAttribArray()")}}
-  - : Disables a vertex attribute array at a given position.
-- {{domxref("WebGLRenderingContext.enableVertexAttribArray()")}}
-  - : Enables a vertex attribute array at a given position.
-- {{domxref("WebGLRenderingContext.getActiveAttrib()")}}
-  - : Returns information about an active attribute variable.
-- {{domxref("WebGLRenderingContext.getActiveUniform()")}}
-  - : Returns information about an active uniform variable.
-- {{domxref("WebGLRenderingContext.getAttribLocation()")}}
-  - : Returns the location of an attribute variable.
-- {{domxref("WebGLRenderingContext.getUniform()")}}
-  - : Returns the value of a uniform variable at a given location.
-- {{domxref("WebGLRenderingContext.getUniformLocation()")}}
-  - : Returns the location of a uniform variable.
-- {{domxref("WebGLRenderingContext.getVertexAttrib()")}}
-  - : Returns information about a vertex attribute at a given position.
-- {{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}
-  - : Returns the address of a given vertex attribute.
-- {{domxref("WebGLRenderingContext.uniform()", "WebGLRenderingContext.uniform[1234][fi][v]()")}}
-  - : Specifies a value for a uniform variable.
-- {{domxref("WebGLRenderingContext.uniformMatrix()", "WebGLRenderingContext.uniformMatrix[234]fv()")}}
-  - : Specifies a matrix value for a uniform variable.
-- {{domxref("WebGLRenderingContext.vertexAttrib()", "WebGLRenderingContext.vertexAttrib[1234]f[v]()")}}
-  - : Specifies a value for a generic vertex attribute.
-- {{domxref("WebGLRenderingContext.vertexAttribPointer()")}}
-  - : Specifies the data formats and locations of vertex attributes in a vertex attributes array.
+- {{domxwef("webgwwendewingcontext.disabwevewtexattwibawway()")}}
+  - : d-disabwes a vewtex attwibute a-awway at a given position. ʘwʘ
+- {{domxwef("webgwwendewingcontext.enabwevewtexattwibawway()")}}
+  - : enabwes a vewtex attwibute awway at a given position. >w<
+- {{domxwef("webgwwendewingcontext.getactiveattwib()")}}
+  - : w-wetuwns infowmation about a-an active attwibute vawiabwe. rawr x3
+- {{domxwef("webgwwendewingcontext.getactiveunifowm()")}}
+  - : w-wetuwns infowmation about an active u-unifowm vawiabwe. OwO
+- {{domxwef("webgwwendewingcontext.getattwibwocation()")}}
+  - : wetuwns t-the wocation of a-an attwibute vawiabwe. ^•ﻌ•^
+- {{domxwef("webgwwendewingcontext.getunifowm()")}}
+  - : w-wetuwns the vawue o-of a unifowm v-vawiabwe at a given wocation. >_<
+- {{domxwef("webgwwendewingcontext.getunifowmwocation()")}}
+  - : wetuwns the wocation of a unifowm vawiabwe. OwO
+- {{domxwef("webgwwendewingcontext.getvewtexattwib()")}}
+  - : wetuwns infowmation about a-a vewtex attwibute a-at a given p-position. >_<
+- {{domxwef("webgwwendewingcontext.getvewtexattwiboffset()")}}
+  - : wetuwns the addwess o-of a given vewtex attwibute. (ꈍᴗꈍ)
+- {{domxwef("webgwwendewingcontext.unifowm()", >w< "webgwwendewingcontext.unifowm[1234][fi][v]()")}}
+  - : specifies a vawue fow a-a unifowm vawiabwe. (U ﹏ U)
+- {{domxwef("webgwwendewingcontext.unifowmmatwix()", ^^ "webgwwendewingcontext.unifowmmatwix[234]fv()")}}
+  - : s-specifies a matwix vawue fow a u-unifowm vawiabwe. (U ﹏ U)
+- {{domxwef("webgwwendewingcontext.vewtexattwib()", "webgwwendewingcontext.vewtexattwib[1234]f[v]()")}}
+  - : specifies a vawue fow a genewic v-vewtex attwibute. :3
+- {{domxwef("webgwwendewingcontext.vewtexattwibpointew()")}}
+  - : s-specifies the data fowmats a-and wocations of v-vewtex attwibutes in a vewtex attwibutes awway. (✿oωo)
 
-## Drawing buffers
+## dwawing buffews
 
-- {{domxref("WebGLRenderingContext.clear()")}}
-  - : Clears specified buffers to preset values.
-- {{domxref("WebGLRenderingContext.drawArrays()")}}
-  - : Renders primitives from array data.
-- {{domxref("WebGLRenderingContext.drawElements()")}}
-  - : Renders primitives from element array data.
-- {{domxref("WebGLRenderingContext.finish()")}}
-  - : Blocks execution until all previously called commands are finished.
-- {{domxref("WebGLRenderingContext.flush()")}}
-  - : Empties different buffer commands, causing all commands to be executed as quickly as possible.
+- {{domxwef("webgwwendewingcontext.cweaw()")}}
+  - : cweaws s-specified buffews t-to pweset vawues. XD
+- {{domxwef("webgwwendewingcontext.dwawawways()")}}
+  - : w-wendews pwimitives f-fwom awway data. >w<
+- {{domxwef("webgwwendewingcontext.dwawewements()")}}
+  - : w-wendews pwimitives fwom ewement a-awway data. òωó
+- {{domxwef("webgwwendewingcontext.finish()")}}
+  - : b-bwocks execution untiw aww pweviouswy c-cawwed commands a-awe finished. (ꈍᴗꈍ)
+- {{domxwef("webgwwendewingcontext.fwush()")}}
+  - : empties d-diffewent buffew commands, rawr x3 causing aww commands t-to be exekawaii~d as quickwy a-as possibwe. rawr x3
 
-## Working with extensions
+## w-wowking with extensions
 
-These methods manage WebGL extensions:
+these m-methods manage webgw extensions:
 
-- {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
-  - : Returns an {{jsxref("Array")}} of {{domxref("DOMString")}} elements with all the supported WebGL extensions.
-- {{domxref("WebGLRenderingContext.getExtension()")}}
-  - : Returns an extension object.
+- {{domxwef("webgwwendewingcontext.getsuppowtedextensions()")}}
+  - : wetuwns a-an {{jsxwef("awway")}} o-of {{domxwef("domstwing")}} e-ewements with aww the suppowted webgw extensions. σωσ
+- {{domxwef("webgwwendewingcontext.getextension()")}}
+  - : wetuwns an extension o-object. (ꈍᴗꈍ)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("HTMLCanvasElement")}}
+- {{domxwef("htmwcanvasewement")}}

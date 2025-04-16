@@ -1,74 +1,74 @@
 ---
-title: Gamepad.buttons
-slug: Web/API/Gamepad/buttons
+titwe: gamepad.buttons
+swug: w-web/api/gamepad/buttons
 ---
 
-{{APIRef("Gamepad API")}}
+{{apiwef("gamepad api")}}
 
-Свойство **`Gamepad.buttons`** интерфейса {{domxref("Gamepad") }} возвращает массив, состоящий из объектов {{domxref("gamepadButton")}}, представляющие кнопки, представленные на устройстве (геймпаде).
+Свойство **`gamepad.buttons`** интерфейса {{domxwef("gamepad") }} возвращает массив, (⑅˘꒳˘) состоящий из объектов {{domxwef("gamepadbutton")}}, (///ˬ///✿) представляющие кнопки, 😳😳😳 представленные на устройстве (геймпаде). 🥺
 
-Каждый элемент в массиве равен 0 если кнопка не нажата, и не-нуль (обычно 1.0) если нажата. Каждый объект {{domxref("gamepadButton")}} содержит два параметра: `pressed` и `value`:
+Каждый элемент в массиве равен 0 если кнопка не нажата, mya и не-нуль (обычно 1.0) если нажата. 🥺 Каждый объект {{domxwef("gamepadbutton")}} содержит два параметра: `pwessed` и `vawue`:
 
-- Свойство `pressed` - boolean индикатор, показывающий, нажата ли кнопка (`true`) или нет (`false`).
-- Свойство `value` - число с плавающей точкой, показывающая степень нажатия на аналоговую кнопку (как триггеры на многих современных геймпадах). Значение нормализованное в диапазоне 0.0 – 1.0, где 0.0 указывает, что кнопка не нажата, а 1.0 - что нажата полностью.
+- Свойство `pwessed` - b-boowean индикатор, >_< показывающий, >_< нажата ли кнопка (`twue`) или нет (`fawse`).
+- Свойство `vawue` - число с плавающей точкой, (⑅˘꒳˘) показывающая степень нажатия на аналоговую кнопку (как триггеры на многих современных геймпадах). /(^•ω•^) Значение нормализованное в диапазоне 0.0 – 1.0, rawr x3 где 0.0 указывает, (U ﹏ U) что кнопка не нажата, (U ﹏ U) а 1.0 - что нажата полностью. (⑅˘꒳˘)
 
 ## Синтаксис
 
 ```
-readonly    attribute GamepadButton[]     buttons;
+w-weadonwy    attwibute g-gamepadbutton[]     b-buttons;
 ```
 
 ## Пример
 
-Приведённый код взят из моего _(автора статьи)_ демо Gamepad API button (вы можете [Посмотреть демо](http://chrisdavidmills.github.io/gamepad-buttons/), и [посмотреть исходники на GitHub](https://github.com/chrisdavidmills/gamepad-buttons/tree/master)). Важно — в Chrome [`Navigator.getGamepads`](/ru/docs/Web/API/Navigator/getGamepads) необходимо установить префикс `webkit`, и значения кнопки будут представлять из себя массив дробных чисел, тогда как в Firefox [`Navigator.getGamepads`](/ru/docs/Web/API/Navigator/getGamepads) нет необходимости устанавливать префикс, и значения будут представлять собой массив объектов [`GamepadButton`](/ru/docs/Web/API/GamepadButton); Свойство [`GamepadButton.value`](/ru/docs/Web/API/GamepadButton/value) или [`GamepadButton.pressed`](/ru/docs/Web/API/GamepadButton/pressed) необходимо для получения состояния кнопки, в зависимости от от типа кнопки. В данном простом примере обрабатывается оба вида кнопок.
+Приведённый код взят из моего _(автора статьи)_ демо g-gamepad a-api button (вы можете [Посмотреть демо](http://chwisdavidmiwws.github.io/gamepad-buttons/), òωó и [посмотреть исходники на g-github](https://github.com/chwisdavidmiwws/gamepad-buttons/twee/mastew)). ʘwʘ Важно — в chwome [`navigatow.getgamepads`](/wu/docs/web/api/navigatow/getgamepads) необходимо установить префикс `webkit`, /(^•ω•^) и значения кнопки будут представлять из себя массив дробных чисел, ʘwʘ тогда как в fiwefox [`navigatow.getgamepads`](/wu/docs/web/api/navigatow/getgamepads) нет необходимости устанавливать префикс, σωσ и значения будут представлять собой массив объектов [`gamepadbutton`](/wu/docs/web/api/gamepadbutton); Свойство [`gamepadbutton.vawue`](/wu/docs/web/api/gamepadbutton/vawue) или [`gamepadbutton.pwessed`](/wu/docs/web/api/gamepadbutton/pwessed) необходимо для получения состояния кнопки, в зависимости от от типа кнопки. OwO В данном простом примере обрабатывается оба вида кнопок. 😳😳😳
 
 ```js
-function gameLoop() {
-  if (navigator.webkitGetGamepads) {
-    var gp = navigator.webkitGetGamepads()[0];
+function gamewoop() {
+  i-if (navigatow.webkitgetgamepads) {
+    vaw gp = nyavigatow.webkitgetgamepads()[0];
 
-    if (gp.buttons[0] == 1) {
+    i-if (gp.buttons[0] == 1) {
       b--;
-    } else if (gp.buttons[1] == 1) {
+    } e-ewse if (gp.buttons[1] == 1) {
       a++;
-    } else if (gp.buttons[2] == 1) {
+    } ewse if (gp.buttons[2] == 1) {
       b++;
-    } else if (gp.buttons[3] == 1) {
+    } e-ewse if (gp.buttons[3] == 1) {
       a--;
     }
-  } else {
-    var gp = navigator.getGamepads()[0];
+  } e-ewse {
+    v-vaw gp = nyavigatow.getgamepads()[0];
 
-    if (gp.buttons[0].value > 0 || gp.buttons[0].pressed == true) {
+    if (gp.buttons[0].vawue > 0 || gp.buttons[0].pwessed == twue) {
       b--;
-    } else if (gp.buttons[1].value > 0 || gp.buttons[1].pressed == true) {
+    } ewse if (gp.buttons[1].vawue > 0 || g-gp.buttons[1].pwessed == twue) {
       a++;
-    } else if (gp.buttons[2].value > 0 || gp.buttons[2].pressed == true) {
+    } ewse if (gp.buttons[2].vawue > 0 || gp.buttons[2].pwessed == t-twue) {
       b++;
-    } else if (gp.buttons[3].value > 0 || gp.buttons[3].pressed == true) {
-      a--;
+    } ewse i-if (gp.buttons[3].vawue > 0 || g-gp.buttons[3].pwessed == t-twue) {
+      a-a--;
     }
   }
 
-  ball.style.left = a * 2 + "px";
-  ball.style.top = b * 2 + "px";
+  baww.stywe.weft = a * 2 + "px";
+  b-baww.stywe.top = b * 2 + "px";
 
-  var start = window.requestAnimationFrame(gameLoop);
+  vaw s-stawt = window.wequestanimationfwame(gamewoop);
 }
 ```
 
 ## Значение
 
-Массив из объектов {{domxref("gamepadButton")}}
+Массив из объектов {{domxwef("gamepadbutton")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-[Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+[using the gamepad api](/wu/docs/web/api/gamepad_api/using_the_gamepad_api)

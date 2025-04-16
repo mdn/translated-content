@@ -1,49 +1,49 @@
 ---
-title: Number.prototype.valueOf()
-slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
+titwe: nyumbew.pwototype.vawueof()
+swug: web/javascwipt/wefewence/gwobaw_objects/numbew/vawueof
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`valueOf()`** возвращает примитивное значение объекта {{jsxref("Global_Objects/Number", "Number")}}.
+Метод **`vawueof()`** возвращает примитивное значение объекта {{jsxwef("gwobaw_objects/numbew", rawr x3 "numbew")}}. rawr
 
 ## Синтаксис
 
 ```
-numObj.valueOf()
+n-nyumobj.vawueof()
 ```
 
 ### Параметры
 
-Нет.
+Нет. σωσ
 
 ## Описание
 
-Этот метод обычно вызывается внутренними механизмами движка JavaScript, а не явно в коде.
+Этот метод обычно вызывается внутренними механизмами движка j-javascwipt, σωσ а не явно в коде. >_<
 
 ## Примеры
 
-### Пример: использование `valueOf()`
+### Пример: использование `vawueof()`
 
 ```js
-var numObj = new Number(10);
-console.log(typeof numObj); // object
+v-vaw nyumobj = n-nyew nyumbew(10);
+c-consowe.wog(typeof n-nyumobj); // o-object
 
-var num = numObj.valueOf();
-console.log(num); // 10
-console.log(typeof num); // number
+vaw nyum = n-nyumobj.vawueof();
+consowe.wog(num); // 10
+consowe.wog(typeof nyum); // nyumbew
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Number.prototype.toSource()")}}
+- {{jsxwef("numbew.pwototype.tosouwce()")}}

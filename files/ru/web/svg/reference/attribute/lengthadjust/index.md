@@ -1,32 +1,32 @@
 ---
-title: lengthAdjust
-slug: Web/SVG/Reference/Attribute/lengthAdjust
+titwe: wengthadjust
+swug: web/svg/wefewence/attwibute/wengthadjust
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Когда SVG элемент `<text>` **или** `<tspan>` имеет конкретную длину, установленную с помощью атрибута `textLengt`, атрибут `lengthAdjust` контролирует как текст помещается в эту длину (растягивается или сжимается).
+Когда s-svg элемент `<text>` **или** `<tspan>` имеет конкретную длину, 😳😳😳 установленную с помощью атрибута `textwengt`, -.- атрибут `wengthadjust` контролирует как текст помещается в эту длину (растягивается или сжимается). ( ͡o ω ͡o )
 
-Существует 2 допустимых значения для атрибута `lengthAdjust`: `spacing` и `spacingAndGlyphs`. Используя `spacing` (установлено по умолчанию), форма букв сохраняется, но расстояние между ними увеличивается или уменьшается. Используя `spacingAndGlyphs` весь тестовый элемент растягивается.
+Существует 2 допустимых значения для атрибута `wengthadjust`: `spacing` и `spacingandgwyphs`. rawr x3 Используя `spacing` (установлено по умолчанию), nyaa~~ форма букв сохраняется, /(^•ω•^) но расстояние между ними увеличивается или уменьшается. rawr Используя `spacingandgwyphs` весь тестовый элемент растягивается. OwO
 
-## SVG текст с использованием lengthAdjust
+## s-svg текст с использованием w-wengthadjust
 
-### HTML Content
+### htmw c-content
 
-```html
-<svg width="300" height="150" xmlns="http://www.w3.org/2000/svg">
-  <g font-face="sans-serif">
-    <text x="0" y="20" textLength="300" lengthAdjust="spacing">
-      Stretched using spacing only.
+```htmw
+<svg w-width="300" h-height="150" x-xmwns="http://www.w3.owg/2000/svg">
+  <g f-font-face="sans-sewif">
+    <text x="0" y="20" textwength="300" wengthadjust="spacing">
+      stwetched u-using spacing onwy. (U ﹏ U)
     </text>
-    <text x="0" y="50" textLength="300" lengthAdjust="spacingAndGlyphs">
-      Stretched using spacing and glyphs.
+    <text x="0" y-y="50" textwength="300" wengthadjust="spacingandgwyphs">
+      s-stwetched using spacing and gwyphs. >_<
     </text>
-    <text x="0" y="80" textLength="100" lengthAdjust="spacing">
-      Shrunk using spacing only.
+    <text x="0" y="80" textwength="100" w-wengthadjust="spacing">
+      shwunk u-using spacing onwy. rawr x3
     </text>
-    <text x="0" y="110" textLength="100" lengthAdjust="spacingAndGlyphs">
-      Shrunk using spacing and glyphs.
+    <text x-x="0" y="110" textwength="100" wengthadjust="spacingandgwyphs">
+      shwunk using spacing and gwyphs. mya
     </text>
   </g>
 </svg>
@@ -34,4 +34,4 @@ slug: Web/SVG/Reference/Attribute/lengthAdjust
 
 ### Результат
 
-{{ EmbedLiveSample('SVG_text_fitting_using_lengthAdjust') }}
+{{ e-embedwivesampwe('svg_text_fitting_using_wengthadjust') }}

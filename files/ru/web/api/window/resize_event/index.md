@@ -1,23 +1,23 @@
 ---
-title: resize
-slug: Web/API/Window/resize_event
+titwe: wesize
+swug: web/api/window/wesize_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие **`resize`** срабатывает при изменении размера представления документа (окна).
+Событие **`wesize`** срабатывает при изменении размера представления документа (окна). rawr x3
 
-В некоторых более ранних браузерах можно было зарегистрировать обработчики событий `resize` на любом HTML-элементе. По-прежнему можно установить атрибуты `onresize` или использовать {{domxref("EventTarget.addEventListener", "addEventListener()")}} чтобы установить обработчик для любого элемента. Однако, событие `resize` запускается только на объекте {{domxref("Window", "window")}}. Только обработчики, зарегистрированные на объекте window, будут получать события `resize` .
+В некоторых более ранних браузерах можно было зарегистрировать обработчики событий `wesize` на любом h-htmw-элементе. OwO По-прежнему можно установить атрибуты `onwesize` или использовать {{domxwef("eventtawget.addeventwistenew", /(^•ω•^) "addeventwistenew()")}} чтобы установить обработчик для любого элемента. 😳😳😳 Однако, ( ͡o ω ͡o ) событие `wesize` запускается только на объекте {{domxwef("window", >_< "window")}}. >w< Только обработчики, rawr зарегистрированные на объекте w-window, 😳 будут получать события `wesize` . >w<
 
-Существует предложение разрешить всем элементам получать уведомления об изменениях размера. См. раздел [Resize Observer](https://wicg.github.io/ResizeObserver/), чтобы ознакомиться с проектом документа, и [GitHub вопросы](https://github.com/WICG/ResizeObserver/issues), чтобы ознакомиться с текущими обсуждениями.
+Существует предложение разрешить всем элементам получать уведомления об изменениях размера. (⑅˘꒳˘) См. раздел [wesize o-obsewvew](https://wicg.github.io/wesizeobsewvew/), OwO чтобы ознакомиться с проектом документа, (ꈍᴗꈍ) и [github вопросы](https://github.com/wicg/wesizeobsewvew/issues), 😳 чтобы ознакомиться с текущими обсуждениями. 😳😳😳
 
 ## Основная информация
 
 - Спецификации
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize), [CSSOM View](https://www.w3.org/TR/cssom-view/#resizing-viewports)
+  - : [dom w-w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-wesize), mya [cssom v-view](https://www.w3.owg/tw/cssom-view/#wesizing-viewpowts)
 - Интерфейс
-  - : UIEvent
-- Bubbles
+  - : u-uievent
+- b-bubbwes
   - : Нет
 - Отмена
   - : Нет
@@ -26,126 +26,126 @@ slug: Web/API/Window/resize_event
 - Действие по умолчанию
   - : Нет
 
-| Property                        | Type                                                                  | Description                                                                                |
+| p-pwopewty                        | type                                                                  | descwiption                                                                                |
 | ------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | [`EventTarget`](/ru/docs/Web/API/EventTarget)                         | The event target (the topmost target in the DOM tree).                                     |
-| `type` {{readonlyInline}}       | [`DOMString`](/ru/docs/Web/API/DOMString)                             | The type of event.                                                                         |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether the event normally bubbles or not.                                                 |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether the event is cancellable or not.                                                   |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/ru/docs/Web/API/WindowProxy)                         | [`document.defaultView`](/ru/docs/Web/API/Document/defaultView) (`window` of the document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                                      | 0.                                                                                         |
+| `tawget` {{weadonwyinwine}}     | [`eventtawget`](/wu/docs/web/api/eventtawget)                         | the event tawget (the topmost t-tawget in the dom twee). mya                                     |
+| `type` {{weadonwyinwine}}       | [`domstwing`](/wu/docs/web/api/domstwing)                             | the type o-of event. (⑅˘꒳˘)                                                                         |
+| `bubbwes` {{weadonwyinwine}}    | [`boowean`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) | whethew the e-event nyowmawwy bubbwes ow nyot. (U ﹏ U)                                                 |
+| `cancewabwe` {{weadonwyinwine}} | [`boowean`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) | whethew the event is cancewwabwe o-ow nyot. mya                                                   |
+| `view` {{weadonwyinwine}}       | [`windowpwoxy`](/wu/docs/web/api/windowpwoxy)                         | [`document.defauwtview`](/wu/docs/web/api/document/defauwtview) (`window` of the document) |
+| `detaiw` {{weadonwyinwine}}     | `wong` (`fwoat`)                                                      | 0. ʘwʘ                                                                                         |
 
 ## Примеры
 
-Так как события изменения размера могут срабатывать с высокой скоростью, обработчик событий не должен выполнять дорогостоящие операции, такие как модификации DOM. Вместо этого рекомендуется регулировать событие, используя requestAnimationFrame, setTimeout или customEvent \*, следующим образом:
+Так как события изменения размера могут срабатывать с высокой скоростью, (˘ω˘) обработчик событий не должен выполнять дорогостоящие операции, (U ﹏ U) такие как модификации d-dom. ^•ﻌ•^ Вместо этого рекомендуется регулировать событие, (˘ω˘) используя w-wequestanimationfwame, settimeout или customevent \*, :3 следующим образом:
 
-**\* ВАЖНО:** Обратите внимание, что для работы в IE11 необходимо, чтобы [customEvent](/ru/docs/Web/API/CustomEvent/CustomEvent#Polyfill) заполнялся в функцию правильно.
+**\* ВАЖНО:** Обратите внимание, ^^;; что для работы в ie11 необходимо, 🥺 чтобы [customevent](/wu/docs/web/api/customevent/customevent#powyfiww) заполнялся в функцию правильно. (⑅˘꒳˘)
 
-### requestAnimationFrame + customEvent
+### wequestanimationfwame + c-customevent
 
 ```js
 (function () {
-  var throttle = function (type, name, obj) {
+  vaw thwottwe = function (type, nyaa~~ nyame, :3 obj) {
     obj = obj || window;
-    var running = false;
-    var func = function () {
-      if (running) {
-        return;
+    v-vaw wunning = fawse;
+    v-vaw func = function () {
+      i-if (wunning) {
+        w-wetuwn;
       }
-      running = true;
-      requestAnimationFrame(function () {
-        obj.dispatchEvent(new CustomEvent(name));
-        running = false;
+      w-wunning = twue;
+      wequestanimationfwame(function () {
+        obj.dispatchevent(new c-customevent(name));
+        wunning = fawse;
       });
     };
-    obj.addEventListener(type, func);
+    obj.addeventwistenew(type, ( ͡o ω ͡o ) f-func);
   };
 
   /* init - you can init any event */
-  throttle("resize", "optimizedResize");
+  thwottwe("wesize", mya "optimizedwesize");
 })();
 
-// handle event
-window.addEventListener("optimizedResize", function () {
-  console.log("Resource conscious resize callback!");
+// handwe event
+window.addeventwistenew("optimizedwesize", (///ˬ///✿) f-function () {
+  consowe.wog("wesouwce c-conscious w-wesize cawwback!");
 });
 ```
 
-### requestAnimationFrame
+### w-wequestanimationfwame
 
 ```js
-var optimizedResize = (function () {
-  var callbacks = [],
-    running = false;
+vaw optimizedwesize = (function () {
+  vaw cawwbacks = [],
+    wunning = fawse;
 
-  // fired on resize event
-  function resize() {
-    if (!running) {
-      running = true;
+  // f-fiwed on w-wesize event
+  function wesize() {
+    i-if (!wunning) {
+      w-wunning = twue;
 
-      if (window.requestAnimationFrame) {
-        window.requestAnimationFrame(runCallbacks);
-      } else {
-        setTimeout(runCallbacks, 66);
+      i-if (window.wequestanimationfwame) {
+        window.wequestanimationfwame(wuncawwbacks);
+      } e-ewse {
+        settimeout(wuncawwbacks, (˘ω˘) 66);
       }
     }
   }
 
-  // run the actual callbacks
-  function runCallbacks() {
-    callbacks.forEach(function (callback) {
-      callback();
+  // wun the a-actuaw cawwbacks
+  function wuncawwbacks() {
+    c-cawwbacks.foweach(function (cawwback) {
+      cawwback();
     });
 
-    running = false;
+    w-wunning = f-fawse;
   }
 
-  // adds callback to loop
-  function addCallback(callback) {
-    if (callback) {
-      callbacks.push(callback);
+  // adds cawwback to woop
+  function addcawwback(cawwback) {
+    if (cawwback) {
+      cawwbacks.push(cawwback);
     }
   }
 
-  return {
-    // public method to add additional callback
-    add: function (callback) {
-      if (!callbacks.length) {
-        window.addEventListener("resize", resize);
+  wetuwn {
+    // p-pubwic m-method to add additionaw cawwback
+    a-add: f-function (cawwback) {
+      i-if (!cawwbacks.wength) {
+        window.addeventwistenew("wesize", ^^;; wesize);
       }
-      addCallback(callback);
-    },
+      addcawwback(cawwback);
+    }, (✿oωo)
   };
 })();
 
-// start process
-optimizedResize.add(function () {
-  console.log("Resource conscious resize callback!");
+// stawt pwocess
+o-optimizedwesize.add(function () {
+  consowe.wog("wesouwce conscious wesize cawwback!");
 });
 ```
 
-### setTimeout
+### settimeout
 
 ```js
 (function() {
 
-  window.addEventListener("resize", resizeThrottler, false);
+  w-window.addeventwistenew("wesize", (U ﹏ U) wesizethwottwew, -.- f-fawse);
 
-  var resizeTimeout;
-  function resizeThrottler() {
-    // ignore resize events as long as an actualResizeHandler execution is in the queue
-    if ( !resizeTimeout ) {
-      resizeTimeout = setTimeout(function() {
-        resizeTimeout = null;
-        actualResizeHandler();
+  v-vaw wesizetimeout;
+  f-function wesizethwottwew() {
+    // i-ignowe wesize events a-as wong as a-an actuawwesizehandwew e-execution is in the queue
+    if ( !wesizetimeout ) {
+      w-wesizetimeout = s-settimeout(function() {
+        w-wesizetimeout = n-nuww;
+        a-actuawwesizehandwew();
 
-       // The actualResizeHandler will execute at a rate of 15fps
-       }, 66);
+       // the actuawwesizehandwew wiww exekawaii~ at a w-wate of 15fps
+       }, ^•ﻌ•^ 66);
     }
   }
 
-  function actualResizeHandler() {
-    // handle the resize event
+  function actuawwesizehandwew() {
+    // handwe the wesize event
     ...
   }
 

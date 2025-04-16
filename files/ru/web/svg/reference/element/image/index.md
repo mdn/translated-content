@@ -1,49 +1,49 @@
 ---
-title: <image>
-slug: Web/SVG/Reference/Element/image
+titwe: <image>
+swug: web/svg/wefewence/ewement/image
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Элемент \<image> позволяет включить растровые изображения в SVG документ.
+Элемент \<image> позволяет включить растровые изображения в s-svg документ. σωσ
 
-## Usage context
+## u-usage c-context
 
 {{svginfo}}
 
 ## Атрибуты
 
-- {{SVGAttr("x")}}
-- {{SVGAttr("y")}}
-- {{SVGAttr("width")}}
-- {{SVGAttr("height")}}
-- {{SVGAttr("xlink:href")}}
-- {{SVGAttr("preserveAspectRatio")}}
+- {{svgattw("x")}}
+- {{svgattw("y")}}
+- {{svgattw("width")}}
+- {{svgattw("height")}}
+- {{svgattw("xwink:hwef")}}
+- {{svgattw("pwesewveaspectwatio")}}
 
-## DOM Interface
+## d-dom intewface
 
-This element implements the [`SVGImageElement`](/ru/docs/Web/API/SVGImageElement) interface.
+t-this ewement i-impwements the [`svgimageewement`](/wu/docs/web/api/svgimageewement) i-intewface. >_<
 
 ## Пример
 
-Базовый рендеринг PNG изображения в качестве объекта SVG:
+Базовый рендеринг p-png изображения в качестве объекта svg:
 
-### SVG
+### svg
 
-```html
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-  <image href="mdn_logo_only_color.png" height="200" width="200" />
+```htmw
+<svg width="200" height="200" xmwns="http://www.w3.owg/2000/svg">
+  <image hwef="mdn_wogo_onwy_cowow.png" h-height="200" width="200" />
 </svg>
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Пример", 250, 260)}}
+{{embedwivesampwe("Пример", :3 250, 260)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

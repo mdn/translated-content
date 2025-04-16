@@ -1,40 +1,40 @@
 ---
-title: "Navigator: метод javaEnabled()"
-slug: Web/API/Navigator/javaEnabled
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: метод javaenabwed()"
+s-swug: web/api/navigatow/javaenabwed
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{apiwef("htmw d-dom")}}{{depwecated_headew}}
 
-Этот метод всегда возвращает `false`.
+Этот метод всегда возвращает `fawse`. (U ᵕ U❁)
 
 ## Синтаксис
 
-```js-nolint
-javaEnabled()
+```js-nowint
+j-javaenabwed()
 ```
 
 ### Параметры
 
-Нет.
+Нет. (⑅˘꒳˘)
 
 ### Возвращаемое значение
 
-Булево значение `false`.
+Булево значение `fawse`. ( ͡o ω ͡o )
 
 ## Примеры
 
 ```js
-if (window.navigator.javaEnabled()) {
-  // этот код не будет выполнен; условие всегда равное false
+i-if (window.navigatow.javaenabwed()) {
+  // этот код не будет выполнен; условие всегда равное f-fawse
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

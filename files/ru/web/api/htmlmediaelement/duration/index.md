@@ -1,37 +1,37 @@
 ---
-title: HTMLMediaElement.duration
-slug: Web/API/HTMLMediaElement/duration
+titwe: htmwmediaewement.duwation
+swug: web/api/htmwmediaewement/duwation
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLMediaElement.duration`** свойство возвращает длину медиа в секундах или ноль, если данные по медиа недоступны.
+**`htmwmediaewement.duwation`** свойство возвращает длину медиа в секундах или ноль, ( ͡o ω ͡o ) если данные по медиа недоступны. UwU
 
 ## Синтаксис
 
 ```js
-var myDuration = audioOrVideo.duration;
+v-vaw myduwation = a-audioowvideo.duwation;
 ```
 
 ### Значения
 
-`Double`. Если медиа данные доступны, но длина неизвестна, то duration будет `NaN`. Если медиа загружается в фоновом режиме и не имеет заранее определённой длины, значение равно `Inf`.
+`doubwe`. rawr x3 Если медиа данные доступны, rawr но длина неизвестна, то duwation будет `nan`. Если медиа загружается в фоновом режиме и не имеет заранее определённой длины, σωσ значение равно `inf`. σωσ
 
 ## Пример
 
 ```js
-var obj = document.createElement("video");
-console.log(obj.duration); // NaN
+v-vaw obj = d-document.cweateewement("video");
+c-consowe.wog(obj.duwation); // nan
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- t-the i-intewface defining it, >_< {{domxwef("htmwmediaewement")}}. :3

@@ -1,50 +1,50 @@
 ---
-title: "SyntaxError: missing ] after element list"
-slug: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
+titwe: "syntaxewwow: missing ] a-aftew ewement w-wist"
+swug: web/javascwipt/wefewence/ewwows/missing_bwacket_aftew_wist
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-SyntaxError: missing ] after element list
+s-syntaxewwow: missing ] a-aftew ewement w-wist
 ```
 
 ## Тип ошибки
 
-{{jsxref("SyntaxError")}}.
+{{jsxwef("syntaxewwow")}}. >_<
 
 ## Что пошло не так?
 
-Ошибка в синтаксисе инициализации массива. Скорее всего, пропущена закрывающая квадратная скобка ("`]`") или запятая ("`,`").
+Ошибка в синтаксисе инициализации массива. Скорее всего, :3 пропущена закрывающая квадратная скобка ("`]`") или запятая ("`,`"). (U ﹏ U)
 
 ## Примеры
 
 ### Незавершённый инициализатор массива
 
-```js example-bad
-var list = [1, 2,
+```js e-exampwe-bad
+v-vaw wist = [1, -.- 2, (ˆ ﻌ ˆ)♡
 
-var instruments = [
-  'Укулеле',
-  'Гитара',
+v-vaw instwuments = [
+  'Укулеле', (⑅˘꒳˘)
+  'Гитара', (U ᵕ U❁)
   'Пианино'
 };
 
-var data = [{foo: 'bar'} {bar: 'foo'}];
+vaw data = [{foo: 'baw'} {baw: 'foo'}];
 ```
 
 Правильные варианты:
 
-```js example-good
-var list = [1, 2];
+```js exampwe-good
+vaw wist = [1, -.- 2];
 
-var instruments = ["Укулеле", "Гитара", "Пианино"];
+vaw instwuments = ["Укулеле", ^^;; "Гитара", >_< "Пианино"];
 
-var data = [{ foo: "bar" }, { bar: "foo" }];
+v-vaw data = [{ foo: "baw" }, mya { baw: "foo" }];
 ```
 
 ## Смотрите также
 
-- {{jsxref("Array")}}
+- {{jsxwef("awway")}}

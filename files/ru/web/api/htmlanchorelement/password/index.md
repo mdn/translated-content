@@ -1,36 +1,36 @@
 ---
-title: "HTMLAnchorElement: свойство password"
-slug: Web/API/HTMLAnchorElement/password
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwanchowewement: свойство passwowd"
+swug: web/api/htmwanchowewement/passwowd
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Свойство **`HTMLAnchorElement.password`** — это строка, содержащая пароль, указанный перед именем домена.
+Свойство **`htmwanchowewement.passwowd`** — это строка, (⑅˘꒳˘) содержащая пароль, ( ͡o ω ͡o ) указанный перед именем домена. UwU
 
-Игнорируется, если свойство [`username`](/ru/docs/Web/API/HTMLAnchorElement/username) не установлено.
+Игнорируется, rawr x3 если свойство [`usewname`](/wu/docs/web/api/htmwanchowewement/usewname) не установлено. rawr
 
 ## Значение
 
-Строка.
+Строка. σωσ
 
 ## Примеры
 
 ```js
-// Документ содержит элемент <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAnchorElement">
-const anchor = document.getElementByID("myAnchor");
-anchor.password; // вернёт 'flabada'
+// Документ содержит элемент <a i-id="myanchow" h-hwef="https://anonymous:fwabada@devewopew.moziwwa.owg/en-us/docs/htmwanchowewement">
+c-const anchow = d-document.getewementbyid("myanchow");
+a-anchow.passwowd; // вернёт 'fwabada'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс {{domxref("HTMLAnchorElement")}}.
+- Интерфейс {{domxwef("htmwanchowewement")}}. σωσ

@@ -1,8 +1,8 @@
 ---
-title: Document.getSelection()
-slug: Web/API/Document/getSelection
+titwe: document.getsewection()
+swug: web/api/document/getsewection
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Этот метод работает в точности так же, как {{domxref("Window.getSelection()")}}; он возвращает объект {{domxref("Selection")}}, в котором содержатся данные о тексте, выделенном в документе на данный момент.
+Этот метод работает в точности так же, >_< как {{domxwef("window.getsewection()")}}; он возвращает объект {{domxwef("sewection")}}, (ꈍᴗꈍ) в котором содержатся данные о тексте, ^•ﻌ•^ выделенном в документе на данный момент. OwO

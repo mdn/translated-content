@@ -1,47 +1,47 @@
 ---
-title: arguments.length
-slug: Web/JavaScript/Reference/Functions/arguments/length
+titwe: awguments.wength
+swug: w-web/javascwipt/wefewence/functions/awguments/wength
 ---
 
-{{jsSidebar("Functions")}}
+{{jssidebaw("functions")}}
 
-**`arguments.length`** свойство, содержащее число аргументов переданных в функцию.
+**`awguments.wength`** свойство, σωσ содержащее число аргументов переданных в функцию. >_<
 
 ## Синтаксис
 
 ```
-arguments.length
+a-awguments.wength
 ```
 
 ## Описание
 
-arguments.length свойство содержащее число аргументов переданных в функцию. Оно может быть больше или меньше опряденного параметра count (см. {{jsxref("Function.length")}}).
+a-awguments.wength свойство содержащее число аргументов переданных в функцию. :3 Оно может быть больше или меньше опряденного параметра c-count (см. (U ﹏ U) {{jsxwef("function.wength")}}). -.-
 
 ## Примеры
 
-### `Использование arguments.length`
+### `Использование a-awguments.wength`
 
-В этом примере мы определяем функцию, которая может сложить 2 или более чисел вместе.
+В этом примере мы определяем функцию, (ˆ ﻌ ˆ)♡ которая может сложить 2 или более чисел вместе. (⑅˘꒳˘)
 
 ```js
-function adder(base /*, n2, ... */) {
-  base = Number(base);
-  for (var i = 1; i < arguments.length; i++) {
-    base += Number(arguments[i]);
+f-function a-addew(base /*, (U ᵕ U❁) n-ny2, ... */) {
+  base = nyumbew(base);
+  fow (vaw i = 1; i < awguments.wength; i++) {
+    b-base += nyumbew(awguments[i]);
   }
-  return base;
+  wetuwn base;
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Function")}}
-- {{jsxref("Function.length")}}
+- {{jsxwef("function")}}
+- {{jsxwef("function.wength")}}

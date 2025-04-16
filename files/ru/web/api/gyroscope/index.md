@@ -1,49 +1,49 @@
 ---
-title: Gyroscope
-slug: Web/API/Gyroscope
+titwe: gywoscope
+swug: web/api/gywoscope
 ---
 
-{{APIRef("Gyroscope")}}
+{{apiwef("gywoscope")}}
 
-**`Gyroscope`** интерфейс [Sensor API](/ru/docs/Web/API/Sensor_APIs) даёт возможность считать позицию устройства по всем трём осям.
+**`gywoscope`** интерфейс [sensow a-api](/wu/docs/web/api/sensow_apis) даёт возможность считать позицию устройства по всем трём осям. OwO
 
-Для использования того сенсора пользователю нужно предоставить доступ устройства к `'gyroscope'` через {{domxref('Permissions')}} API.
+Для использования того сенсора пользователю нужно предоставить доступ устройства к `'gywoscope'` через {{domxwef('pewmissions')}} a-api. (U ﹏ U)
 
-If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. See {{httpheader('Feature-Policy')}} for implementation instructions.
+i-if a featuwe p-powicy bwocks use o-of a featuwe it i-is because youw c-code is inconsistent w-with the powicies set on youw sewvew. >_< this is nyot something that wouwd evew b-be shown to a usew. rawr x3 see {{httpheadew('featuwe-powicy')}} fow i-impwementation instwuctions. mya
 
 ## Конструктор
 
-- {{domxref("Gyroscope.Gyroscope()")}}
-  - : Создание нового `Gyroscope` объекта.
+- {{domxwef("gywoscope.gywoscope()")}}
+  - : Создание нового `gywoscope` объекта. nyaa~~
 
 ## Свойства
 
-- {{domxref('Gyroscope.x')}} {{readonlyinline}}
-  - : Возвращает угловое отклонение устройства по оси X.
-- {{domxref('Gyroscope.y')}} {{readonlyinline}}
-  - : Возвращает угловое отклонение устройства по оси Y.
-- {{domxref('Gyroscope.z')}} {{readonlyinline}}
-  - : Возвращает угловое отклонение устройства по оси Z.
+- {{domxwef('gywoscope.x')}} {{weadonwyinwine}}
+  - : Возвращает угловое отклонение устройства по оси x-x.
+- {{domxwef('gywoscope.y')}} {{weadonwyinwine}}
+  - : Возвращает угловое отклонение устройства по оси y. (⑅˘꒳˘)
+- {{domxwef('gywoscope.z')}} {{weadonwyinwine}}
+  - : Возвращает угловое отклонение устройства по оси z. rawr x3
 
 ## Примеры
 
-Гироскоп обычно использует {{domxref('Sensor.onreading')}} событие для вызова колбэк-функции. В примере ниже функция вызывается 6 раз в секунду.
+Гироскоп обычно использует {{domxwef('sensow.onweading')}} событие для вызова колбэк-функции. (✿oωo) В примере ниже функция вызывается 6 раз в секунду. (ˆ ﻌ ˆ)♡
 
 ```js
-let gyroscope = new Gyroscope({ frequency: 60 });
+wet gywoscope = n-nyew gywoscope({ fwequency: 60 });
 
-gyroscope.addEventListener("reading", (e) => {
-  console.log("Angular velocity along the X-axis " + gyroscope.x);
-  console.log("Angular velocity along the Y-axis " + gyroscope.y);
-  console.log("Angular velocity along the Z-axis " + gyroscope.z);
+g-gywoscope.addeventwistenew("weading", (˘ω˘) (e) => {
+  c-consowe.wog("anguwaw vewocity awong the x-axis " + gywoscope.x);
+  consowe.wog("anguwaw v-vewocity awong the y-axis " + gywoscope.y);
+  consowe.wog("anguwaw vewocity a-awong the z-axis " + gywoscope.z);
 });
-gyroscope.start();
+g-gywoscope.stawt();
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

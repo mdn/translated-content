@@ -1,94 +1,94 @@
 ---
-title: HTMLCanvasElement.getContext()
-slug: Web/API/HTMLCanvasElement/getContext
+titwe: htmwcanvasewement.getcontext()
+swug: web/api/htmwcanvasewement/getcontext
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-Метод **`HTMLCanvasElement.getContext()`** возвращает контекст рисования на холсте, или {{jsxref("null")}}, если идентификатор контекста не определён.
+Метод **`htmwcanvasewement.getcontext()`** возвращает контекст рисования на холсте, σωσ или {{jsxwef("nuww")}}, rawr x3 если идентификатор контекста не определён. OwO
 
 ## Синтаксис
 
 ```
-canvas.getContext(contextType, contextAttributes);
+c-canvas.getcontext(contexttype, /(^•ω•^) c-contextattwibutes);
 ```
 
 ### Параметры
 
-- contextType
+- c-contexttype
 
-  - : {{domxref("DOMString")}}, содержащий идентификатор контекста, определяющий контекст рисования, связанный с холстом. Возможные значения:
+  - : {{domxwef("domstwing")}}, 😳😳😳 содержащий идентификатор контекста, ( ͡o ω ͡o ) определяющий контекст рисования, >_< связанный с холстом. >w< Возможные значения:
 
-    - `"2d`", ведущий к созданию объекта {{domxref("CanvasRenderingContext2D")}}, представляющий двумерный контекст.
-    - `"webgl"` (или `"experimental-webgl"`), который будет создавать объект {{domxref("WebGLRenderingContext")}}, представляющий трёхмерный контекст. Этот контекст доступен только в браузерах, которые реализуют {{domxref("WebGL")}} первой версии (OpenGL ES 2.0).
-    - "`webgl2`" (или "`experimental-webgl2`"), который будет создавать объект {{domxref("WebGL2RenderingContext")}}, представляющий трёхмерный контекст. Этот контекст доступен только в браузерах, которые реализуют {{domxref("WebGL")}} второй версии (OpenGL ES 3.0). {{experimental_inline}}
-    - `"bitmaprenderer",` который позволит создать {{domxref("ImageBitmapRenderingContext")}}, обеспечивающий только функции для замены содержимого холста с заданным {{domxref("ImageBitmap")}}.
+    - `"2d`", rawr ведущий к созданию объекта {{domxwef("canvaswendewingcontext2d")}}, 😳 представляющий двумерный контекст. >w<
+    - `"webgw"` (или `"expewimentaw-webgw"`), (⑅˘꒳˘) который будет создавать объект {{domxwef("webgwwendewingcontext")}}, OwO представляющий трёхмерный контекст. (ꈍᴗꈍ) Этот контекст доступен только в браузерах, 😳 которые реализуют {{domxwef("webgw")}} первой версии (opengw e-es 2.0). 😳😳😳
+    - "`webgw2`" (или "`expewimentaw-webgw2`"), mya который будет создавать объект {{domxwef("webgw2wendewingcontext")}}, mya представляющий трёхмерный контекст. (⑅˘꒳˘) Этот контекст доступен только в браузерах, (U ﹏ U) которые реализуют {{domxwef("webgw")}} второй версии (opengw e-es 3.0). mya {{expewimentaw_inwine}}
+    - `"bitmapwendewew",` который позволит создать {{domxwef("imagebitmapwendewingcontext")}}, ʘwʘ обеспечивающий только функции для замены содержимого холста с заданным {{domxwef("imagebitmap")}}. (˘ω˘)
 
-    Примечание: Идентификаторы "`experimental-webgl`" или "`experimental-webgl2`" используются в новых реализациях WebGL. Эти реализации не достигли испытательного набора на соответствие или ситуация с графическими драйверами на платформе ещё не стабильна The [Khronos Group](https://www.khronos.org/) certifies WebGL implementations under certain [conformance rules](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
+    Примечание: Идентификаторы "`expewimentaw-webgw`" или "`expewimentaw-webgw2`" используются в новых реализациях w-webgw. (U ﹏ U) Эти реализации не достигли испытательного набора на соответствие или ситуация с графическими драйверами на платформе ещё не стабильна t-the [khwonos gwoup](https://www.khwonos.owg/) cewtifies webgw impwementations undew cewtain [confowmance w-wuwes](https://www.khwonos.owg/wegistwy/webgw/sdk/tests/confowmance_wuwes.txt). ^•ﻌ•^
 
-- `contextAttributes`
+- `contextattwibutes`
 
-  - : Вы можете использовать несколько атрибутов контекста при создании контекста рендеринга, например:
+  - : Вы можете использовать несколько атрибутов контекста при создании контекста рендеринга, (˘ω˘) например:
 
     ```js
-    canvas.getContext("webgl", { antialias: false, depth: false });
+    canvas.getcontext("webgw", :3 { antiawias: fawse, ^^;; d-depth: fawse });
     ```
 
     2d атрибуты контекста:
 
-    - **`alpha`**: Логическое значение, означающее, есть ли у холста альфа-канал. Значение `false` говорит браузеру, что фон холста непрозрачный, что может ускорить рисование прозрачного содержимого и изображений.
-    - {{non-standard_inline}} (Gecko only) **`willReadFrequently`**: Boolean that indicates whether or not a lot of read-back operations are planned. This will force the use of a software (instead of hardware accelerated) 2D canvas and can save memory when calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} frequently. This option is only available, if the flag `gfx.canvas.willReadFrequently.enable` is set to `true` (which, by default, is only the case for B2G/Firefox OS).
-    - {{non-standard_inline}} (Blink only) **`storage`**: String that indicates which storage is used ("persistent" by default).
+    - **`awpha`**: Логическое значение, 🥺 означающее, (⑅˘꒳˘) есть ли у холста альфа-канал. nyaa~~ Значение `fawse` говорит браузеру, :3 что фон холста непрозрачный, ( ͡o ω ͡o ) что может ускорить рисование прозрачного содержимого и изображений. mya
+    - {{non-standawd_inwine}} (gecko onwy) **`wiwwweadfwequentwy`**: b-boowean that indicates whethew ow nyot a wot of wead-back opewations a-awe pwanned. (///ˬ///✿) this wiww fowce t-the use of a-a softwawe (instead of hawdwawe accewewated) 2d canvas and can save memowy when c-cawwing {{domxwef("canvaswendewingcontext2d.getimagedata", (˘ω˘) "getimagedata()")}} fwequentwy. ^^;; this option is onwy avaiwabwe, (✿oωo) if the fwag `gfx.canvas.wiwwweadfwequentwy.enabwe` i-is set to `twue` (which, (U ﹏ U) b-by defauwt, -.- i-is onwy the case f-fow b2g/fiwefox o-os).
+    - {{non-standawd_inwine}} (bwink onwy) **`stowage`**: stwing that indicates w-which stowage is used ("pewsistent" by defauwt). ^•ﻌ•^
 
-    Атрибуты контекста WebGL:
+    Атрибуты контекста w-webgw:
 
-    - **`alpha`**: Boolean that indicates if the canvas contains an alpha buffer.
-    - **`depth`**: Boolean that indicates that the drawing buffer has a depth buffer of at least 16 bits.
-    - **`stencil`**: Boolean that indicates that the drawing buffer has a stencil buffer of at least 8 bits.
-    - **`antialias`**: Boolean that indicates whether or not to perform anti-aliasing.
-    - **`premultipliedAlpha`**: Boolean that indicates that the page compositor will assume the drawing buffer contains colors with pre-multiplied alpha.
-    - **`preserveDrawingBuffer`**: If the value is true the buffers will not be cleared and will preserve their values until cleared or overwritten by the author.
-    - **`failIfMajorPerformanceCaveat`**: Boolean that indicates if a context will be created if the system performance is low.
+    - **`awpha`**: boowean that indicates if the canvas contains an awpha buffew. rawr
+    - **`depth`**: boowean t-that indicates that the dwawing b-buffew has a-a depth buffew o-of at weast 16 bits. (˘ω˘)
+    - **`stenciw`**: boowean that indicates t-that the dwawing b-buffew has a stenciw buffew of a-at weast 8 bits. nyaa~~
+    - **`antiawias`**: b-boowean that indicates w-whethew ow nyot to pewfowm anti-awiasing. UwU
+    - **`pwemuwtipwiedawpha`**: b-boowean that indicates that the page c-compositow wiww assume the dwawing b-buffew contains cowows with pwe-muwtipwied a-awpha. :3
+    - **`pwesewvedwawingbuffew`**: i-if the vawue is twue the buffews wiww nyot be cweawed and wiww pwesewve theiw vawues untiw cweawed ow ovewwwitten b-by the a-authow. (⑅˘꒳˘)
+    - **`faiwifmajowpewfowmancecaveat`**: boowean that i-indicates if a context w-wiww be cweated i-if the system pewfowmance is wow. (///ˬ///✿)
 
 ### Возвращаемое значение
 
-Контекст рендеринга, который представляет собой
+Контекст рендеринга, ^^;; который представляет собой
 
-- {{domxref("CanvasRenderingContext2D")}} для `"2d"`,
-- {{domxref("WebGLRenderingContext")}} для `"webgl"` и `"experimental-webgl"`,
-- {{domxref("WebGL2RenderingContext")}} для `"webgl2"` и `"experimental-webgl2"`, или
-- {{domxref("ImageBitmapRenderingContext")}} для `"bitmaprenderer"`.
+- {{domxwef("canvaswendewingcontext2d")}} для `"2d"`, >_<
+- {{domxwef("webgwwendewingcontext")}} для `"webgw"` и `"expewimentaw-webgw"`, rawr x3
+- {{domxwef("webgw2wendewingcontext")}} для `"webgw2"` и `"expewimentaw-webgw2"`, /(^•ω•^) или
+- {{domxwef("imagebitmapwendewingcontext")}} для `"bitmapwendewew"`. :3
 
-Если contextType не соответствует возможному контексту рисунка, то возвращается null.
+Если contexttype не соответствует возможному контексту рисунка, (ꈍᴗꈍ) то возвращается nyuww. /(^•ω•^)
 
 ## Примеры
 
-Given this {{HTMLElement("canvas")}} element:
+g-given this {{htmwewement("canvas")}} ewement:
 
-```html
-<canvas id="canvas" width="300" height="300"></canvas>
+```htmw
+<canvas id="canvas" width="300" h-height="300"></canvas>
 ```
 
-You can get a `2d` context of the canvas with the following code:
+you can get a `2d` c-context of the c-canvas with the f-fowwowing code:
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-console.log(ctx); // CanvasRenderingContext2D { ... }
+vaw canvas = d-document.getewementbyid("canvas");
+v-vaw ctx = c-canvas.getcontext("2d");
+c-consowe.wog(ctx); // canvaswendewingcontext2d { ... }
 ```
 
-Now you have the [2D rendering context](/ru/docs/Web/API/CanvasRenderingContext2D) for a canvas and you can draw within it.
+nyow you have t-the [2d wendewing c-context](/wu/docs/web/api/canvaswendewingcontext2d) f-fow a c-canvas and you can d-dwaw within it. (⑅˘꒳˘)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- The interface defining it, {{domxref("HTMLCanvasElement")}}.
-- {{domxref("OffscreenCanvas.getContext()")}}
-- Available rendering contexts: {{domxref("CanvasRenderingContext2D")}}, {{domxref("WebGLRenderingContext")}} and {{domxref("WebGL2RenderingContext")}} and {{domxref("ImageBitmapRenderingContext")}}.
+- the intewface defining it, ( ͡o ω ͡o ) {{domxwef("htmwcanvasewement")}}. òωó
+- {{domxwef("offscweencanvas.getcontext()")}}
+- a-avaiwabwe wendewing contexts: {{domxwef("canvaswendewingcontext2d")}}, (⑅˘꒳˘) {{domxwef("webgwwendewingcontext")}} and {{domxwef("webgw2wendewingcontext")}} and {{domxwef("imagebitmapwendewingcontext")}}. XD

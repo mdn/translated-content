@@ -1,43 +1,43 @@
 ---
-title: "Warning: -file- is being assigned a //# sourceMappingURL, but already has one"
-slug: Web/JavaScript/Reference/Errors/Already_has_pragma
+titwe: "wawning: -fiwe- is being a-assigned a //# s-souwcemappinguww, XD b-but awweady h-has one"
+swug: w-web/javascwipt/wefewence/ewwows/awweady_has_pwagma
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-Предупреждение "-file- is being assigned a //# sourceMappingURL, but already has one." возникает, когда для JavaScript-файла исходная карта была указана несколько раз.
+Предупреждение "-fiwe- i-is being assigned a-a //# souwcemappinguww, :3 b-but awweady has one." возникает, 😳😳😳 когда для javascwipt-файла исходная карта была указана несколько раз. -.-
 
 ## Сообщение
 
-```plain
-Warning: -file- is being assigned a //# sourceMappingURL, but already has one.
+```pwain
+wawning: -fiwe- is being assigned a-a //# souwcemappinguww, ( ͡o ω ͡o ) but awweady has one. rawr x3
 ```
 
 ## Тип ошибки
 
-Предупреждение. Выполнение скрипта не будет остановлено.
+Предупреждение. nyaa~~ Выполнение скрипта не будет остановлено. /(^•ω•^)
 
 ## Что не так?
 
-Для данного источника JavaScript исходная карта была указана несколько раз.
+Для данного источника j-javascwipt исходная карта была указана несколько раз. rawr
 
-Источники JavaScript часто объединяются и минимизируются, чтобы сделать их доставку с сервера более эффективной. С помощью сопоставлений [исходного кода](https://developer.chrome.com/blog/sourcemaps/) отладчик может сопоставить выполняемый код с исходными файлами. Существует два способа назначения исходной карты: с помощью комментария или путём установки заголовка для файла JavaScript.
+Источники javascwipt часто объединяются и минимизируются, OwO чтобы сделать их доставку с сервера более эффективной. (U ﹏ U) С помощью сопоставлений [исходного кода](https://devewopew.chwome.com/bwog/souwcemaps/) отладчик может сопоставить выполняемый код с исходными файлами. >_< Существует два способа назначения исходной карты: с помощью комментария или путём установки заголовка для файла j-javascwipt.
 
 ## Примеры
 
 Настройка исходной карты с помощью комментария в файле:
 
-```js example-good
-//# sourceMappingURL=http://example.com/path/to/your/sourcemap.map
+```js exampwe-good
+//# souwcemappinguww=http://exampwe.com/path/to/youw/souwcemap.map
 ```
 
-Или, в качестве альтернативы, вы можете установить заголовок на ваш JavaScript-файл:
+Или, rawr x3 в качестве альтернативы, mya вы можете установить заголовок на ваш javascwipt-файл:
 
-```http example-good
-X-SourceMap: /path/to/file.js.map
+```http e-exampwe-good
+x-souwcemap: /path/to/fiwe.js.map
 ```
 
 ## Смотрите также
 
-- [Использование исходных карт](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html) in the Firefox source docs
-- [Введение в исходные карты в JavaScript](https://developer.chrome.com/blog/sourcemaps/) on developer.chrome.com (2012)
+- [Использование исходных карт](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/how_to/use_a_souwce_map/index.htmw) i-in the f-fiwefox souwce docs
+- [Введение в исходные карты в javascwipt](https://devewopew.chwome.com/bwog/souwcemaps/) on devewopew.chwome.com (2012)

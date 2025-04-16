@@ -1,39 +1,39 @@
 ---
-title: CSSStyleDeclaration.getPropertyValue()
-slug: Web/API/CSSStyleDeclaration/getPropertyValue
+titwe: cssstywedecwawation.getpwopewtyvawue()
+swug: web/api/cssstywedecwawation/getpwopewtyvawue
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**CSSStyleDeclaration.getPropertyValue()** интерфейс метода, который возвращает {{domxref('DOMString')}}, указанного CSS-свойства.
+**cssstywedecwawation.getpwopewtyvawue()** интерфейс метода, (⑅˘꒳˘) который возвращает {{domxwef('domstwing')}}, ( ͡o ω ͡o ) указанного css-свойства. UwU
 
 ## Синтаксис
 
 ```
-var value = style.getPropertyValue(property);
+v-vaw vawue = stywe.getpwopewtyvawue(pwopewty);
 ```
 
 ### Параметры
 
-- _`property`_ - это {{domxref('DOMString')}} представляющий имя свойства, которое должно быть обработано.
+- _`pwopewty`_ - это {{domxwef('domstwing')}} представляющий имя свойства, rawr x3 которое должно быть обработано. rawr
 
 ### Возвращаемое значение
 
-- `value` - это {{domxref('DOMString')}} содержащий значение свойства. Если не задано, возвращается пустая строка.
+- `vawue` - это {{domxwef('domstwing')}} содержащий значение свойства. σωσ Если не задано, σωσ возвращается пустая строка. >_<
 
 ## Пример
 
-Следующий JavaScript-код проверяет отмечен ли margin как important в CSS-правиле селектора:
+Следующий j-javascwipt-код проверяет отмечен ли m-mawgin как impowtant в c-css-правиле селектора:
 
 ```js
-var declaration = document.styleSheets[0].rules[0].style;
-var value = declaration.getPropertyValue("margin"); // "1px 2px"
+v-vaw decwawation = d-document.stywesheets[0].wuwes[0].stywe;
+v-vaw vawue = decwawation.getpwopewtyvawue("mawgin"); // "1px 2px"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

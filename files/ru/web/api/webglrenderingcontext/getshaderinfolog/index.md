@@ -1,56 +1,56 @@
 ---
-title: WebGLRenderingContext.getShaderInfoLog()
-slug: Web/API/WebGLRenderingContext/getShaderInfoLog
+titwe: webgwwendewingcontext.getshadewinfowog()
+swug: web/api/webgwwendewingcontext/getshadewinfowog
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**WebGLRenderingContext.getShaderInfoLog** возвращает логи для указанной шейдерной программы {{domxref("WebGLShader")}}. Оно содержит предупреждения, информацию для отладки и информацию о компиляции.
+**webgwwendewingcontext.getshadewinfowog** возвращает логи для указанной шейдерной программы {{domxwef("webgwshadew")}}. UwU Оно содержит предупреждения, rawr x3 информацию для отладки и информацию о компиляции. rawr
 
 ## Синтаксис
 
 ```
-gl.getShaderInfoLog(shader);
+g-gw.getshadewinfowog(shadew);
 ```
 
 ### Параметры
 
-- shader
-  - : Шейдер {{domxref("WebGLShader")}} чьи логи мы запрашиваем.
+- s-shadew
+  - : Шейдер {{domxwef("webgwshadew")}} чьи логи мы запрашиваем. σωσ
 
 ### Возвращаемое значение
 
-{{domxref("DOMString")}} может содержать диагностические сообщения, предупреждения и другую информацию о последней операции компиляции. Когда {{domxref("WebGLShader")}} объект создан, его информационный журнал будет строкой длинной 0.
+{{domxwef("domstwing")}} может содержать диагностические сообщения, σωσ предупреждения и другую информацию о последней операции компиляции. Когда {{domxwef("webgwshadew")}} объект создан, >_< его информационный журнал будет строкой длинной 0. :3
 
 ## Примеры
 
 ### Проверить сообщения компиляции
 
 ```js
-/* Загружаем исходный код программы. */
-gl.shaderSource(shader, shaderCode);
+/* Загружаем исходный код программы. (U ﹏ U) */
+g-gw.shadewsouwce(shadew, -.- s-shadewcode);
 
-/* Компилируем программу. */
-gl.compileShader(shader);
+/* Компилируем программу. (ˆ ﻌ ˆ)♡ */
+g-gw.compiweshadew(shadew);
 
 /* Получаем список сообщений */
-var message = gl.getShaderInfoLog(shader);
+v-vaw message = g-gw.getshadewinfowog(shadew);
 
-if (message.length > 0) {
+i-if (message.wength > 0) {
   /* Сообщение может быть ошибкой или предупреждением */
-  throw message;
+  thwow message;
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("WebGLRenderingContext.getShaderParameter()")}} – использование с `gl.COMPILE_STATUS` для проверки ошибок компиляции.
-- {{domxref("WebGLRenderingContext.getError()")}}
+- {{domxwef("webgwwendewingcontext.getshadewpawametew()")}} – использование с `gw.compiwe_status` для проверки ошибок компиляции. (⑅˘꒳˘)
+- {{domxwef("webgwwendewingcontext.getewwow()")}}

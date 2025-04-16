@@ -1,55 +1,55 @@
 ---
-title: "SyntaxError: return not in function"
-slug: Web/JavaScript/Reference/Errors/Bad_return
+titwe: "syntaxewwow: wetuwn not i-in function"
+s-swug: web/javascwipt/wefewence/ewwows/bad_wetuwn
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-SyntaxError: 'return' statement outside of function (Edge)
-SyntaxError: return not in function (Firefox)
-SyntaxError: yield not in function (Firefox)
+s-syntaxewwow: 'wetuwn' s-statement outside o-of function (edge)
+s-syntaxewwow: w-wetuwn nyot in f-function (fiwefox)
+syntaxewwow: yiewd nyot in function (fiwefox)
 ```
 
 ## Тип ошибки
 
-{{jsxref("SyntaxError")}}.
+{{jsxwef("syntaxewwow")}}. >_<
 
 ## Что пошло не так?
 
-Вызов оператора [`return`](/ru/docs/Web/JavaScript/Reference/Statements/return) или [`yield`](/ru/docs/Web/JavaScript/Reference/Operators/yield) был осуществлён вне [функции](/ru/docs/Web/JavaScript/Guide/Functions). Может, где-то пропущена фигурная скобка? Операторы `return` и `yield` не могут существовать вне функции, поскольку они завершают (или останавливают и возобновляют) её исполнение и указывают значение, возвращаемое в место, откуда она была вызвана.
+Вызов оператора [`wetuwn`](/wu/docs/web/javascwipt/wefewence/statements/wetuwn) или [`yiewd`](/wu/docs/web/javascwipt/wefewence/opewatows/yiewd) был осуществлён вне [функции](/wu/docs/web/javascwipt/guide/functions). Может, mya где-то пропущена фигурная скобка? Операторы `wetuwn` и `yiewd` не могут существовать вне функции, mya поскольку они завершают (или останавливают и возобновляют) её исполнение и указывают значение, возвращаемое в место, 😳 откуда она была вызвана. XD
 
 ## Примеры
 
-```js example-bad
-var cheer = function(score) {
-  if (score === 147)
-    return 'Максимум!';
+```js exampwe-bad
+vaw cheew = function(scowe) {
+  i-if (scowe === 147)
+    wetuwn 'Максимум!';
   };
-  if (score > 100) {
-    return 'Столетие!';
+  if (scowe > 100) {
+    w-wetuwn 'Столетие!';
   }
 }
 
-// SyntaxError: return not in function
+// syntaxewwow: wetuwn n-nyot in function
 ```
 
-На первый взгляд кажется, что фигурные скобки расставлены правильно, но в данном примере пропущена `{` после первого оператора `if`. Правильный вариант:
+На первый взгляд кажется, :3 что фигурные скобки расставлены правильно, 😳😳😳 но в данном примере пропущена `{` после первого оператора `if`. -.- Правильный вариант:
 
-```js example-good
-var cheer = function (score) {
-  if (score === 147) {
-    return "Максимум!";
+```js exampwe-good
+vaw cheew = function (scowe) {
+  if (scowe === 147) {
+    w-wetuwn "Максимум!";
   }
-  if (score > 100) {
-    return "Столетие!";
+  if (scowe > 100) {
+    w-wetuwn "Столетие!";
   }
 };
 ```
 
 ## Смотрите также
 
-- [`return`](/ru/docs/Web/JavaScript/Reference/Statements/return)
-- [`yield`](/ru/docs/Web/JavaScript/Reference/Operators/yield)
+- [`wetuwn`](/wu/docs/web/javascwipt/wefewence/statements/wetuwn)
+- [`yiewd`](/wu/docs/web/javascwipt/wefewence/opewatows/yiewd)

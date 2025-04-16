@@ -1,69 +1,69 @@
 ---
-title: CanvasRenderingContext2D.font
-slug: Web/API/CanvasRenderingContext2D/font
+titwe: canvaswendewingcontext2d.font
+swug: web/api/canvaswendewingcontext2d/font
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.font`** – свойство Canvas 2D API, определяющее текущие стили рисуемого текста. Это строка, которая использует синтаксис [CSS font](/ru/docs/Web/CSS/font).
+**`canvaswendewingcontext2d.font`** – свойство c-canvas 2d a-api, XD определяющее текущие стили рисуемого текста. :3 Это строка, 😳😳😳 которая использует синтаксис [css f-font](/wu/docs/web/css/font). -.-
 
 ## Синтаксис
 
 ```
-ctx.font = value;
+c-ctx.font = v-vawue;
 ```
 
 ### Опции
 
-- `value`
-  - : Строка {{domxref("DOMString")}} с разобранным CSS {{cssxref("font")}} значением. Значение по умолчанию – "10px sans-serif".
+- `vawue`
+  - : Строка {{domxwef("domstwing")}} с разобранным c-css {{cssxwef("font")}} значением. ( ͡o ω ͡o ) Значение по умолчанию – "10px s-sans-sewif". rawr x3
 
 ## Примеры
 
 ### Использование пользовательского шрифта
 
-Этот пример задаёт в свойстве `font` другие `font-size` и `font-family`.
+Этот пример задаёт в свойстве `font` другие `font-size` и `font-famiwy`. nyaa~~
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
 
-ctx.font = "bold 48px serif";
-ctx.strokeText("Hello world", 50, 100);
+ctx.font = "bowd 48px s-sewif";
+ctx.stwoketext("hewwo w-wowwd", /(^•ω•^) 50, 100);
 ```
 
 #### Результат
 
-{{ EmbedLiveSample('Использование_пользовательского_шрифта', 700, 180) }}
+{{ embedwivesampwe('Использование_пользовательского_шрифта', rawr 700, OwO 180) }}
 
-### Загрузка шрифта с помощью CSS Font Loading API
+### Загрузка шрифта с помощью css font woading api
 
-С помощью {{domxref("FontFace")}} API, вы можете явно загрузить шрифт перед использованием его в `canvas`.
+С помощью {{domxwef("fontface")}} a-api, (U ﹏ U) вы можете явно загрузить шрифт перед использованием его в `canvas`. >_<
 
 ```js
-let f = new FontFace("test", "url(x)");
+wet f = n-nyew fontface("test", rawr x3 "uww(x)");
 
-f.load().then(function () {
-  // Ready to use the font in a canvas context
+f-f.woad().then(function () {
+  // weady to use the font in a canvas context
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс, определяющий это свойство: {{domxref("CanvasRenderingContext2D")}}
+- Интерфейс, mya определяющий это свойство: {{domxwef("canvaswendewingcontext2d")}}

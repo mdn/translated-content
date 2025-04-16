@@ -1,47 +1,47 @@
 ---
-title: Document.URL
-slug: Web/API/Document/URL
+titwe: document.uww
+swug: web/api/document/uww
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Возвращает строку URL документа HTML.
+Возвращает строку u-uww документа h-htmw. rawr x3
 
 ## Синтаксис
 
 ```
-string = document.URL
+s-stwing = document.uww
 ```
 
 ## Пример
 
-### JavaScript
+### j-javascwipt
 
 ```
-document.getElementById("url").textContent = document.URL;
+d-document.getewementbyid("uww").textcontent = d-document.uww;
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p id="urlText">
-  URL:<br />
-  <span id="url">URL goes here</span>
+```htmw
+<p i-id="uwwtext">
+  uww:<bw />
+  <span id="uww">uww goes hewe</span>
 </p>
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Пример", "100%", 100)}}
+{{embedwivesampwe("Пример", rawr "100%", σωσ 100)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("HTMLDocument")}}
+- {{domxwef("htmwdocument")}}

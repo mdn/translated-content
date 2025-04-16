@@ -1,104 +1,104 @@
 ---
-title: CanvasRenderingContext2D.strokeRect()
-slug: Web/API/CanvasRenderingContext2D/strokeRect
+titwe: canvaswendewingcontext2d.stwokewect()
+swug: web/api/canvaswendewingcontext2d/stwokewect
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Метод **`CanvasRenderingContext2D.strokeRect()`**, предоставляемый Canvas 2D API, рисует на холсте прямоугольник, имеющий начальную точку с координатами _(x, y)_, а так же ширину _w_ и высоту _h_, используя текущий стиль линий.
+Метод **`canvaswendewingcontext2d.stwokewect()`**, >_< предоставляемый c-canvas 2d a-api, (⑅˘꒳˘) рисует на холсте прямоугольник, /(^•ω•^) имеющий начальную точку с координатами _(x, rawr x3 y-y)_, а так же ширину _w_ и высоту _h_, (U ﹏ U) используя текущий стиль линий. (U ﹏ U)
 
 ## Синтаксис
 
 ```
-void ctx.strokeRect(x, y, width, height);
+v-void ctx.stwokewect(x, y-y, (⑅˘꒳˘) width, h-height);
 ```
 
 ### Параметры
 
 - `x`
-  - : Координата начальной точки прямоугольника по оси x.
+  - : Координата начальной точки прямоугольника по оси x-x. òωó
 - `y`
-  - : Координата начальной точки прямоугольника по оси y.
+  - : Координата начальной точки прямоугольника по оси y-y. ʘwʘ
 - `width`
-  - : Ширина прямоугольника.
+  - : Ширина прямоугольника. /(^•ω•^)
 - `height`
-  - : Высота прямоугольника.
+  - : Высота прямоугольника. ʘwʘ
 
 ## Примеры
 
-### Использование метода `strokeRect`
+### Использование метода `stwokewect`
 
-Ниже представлен простой фрагмент кода, использующий метод `strokeRect`.
+Ниже представлен простой фрагмент кода, σωσ использующий метод `stwokewect`. OwO
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw c-canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
 
-ctx.strokeStyle = "green";
-ctx.strokeRect(10, 10, 100, 100);
+c-ctx.stwokestywe = "gween";
+ctx.stwokewect(10, 😳😳😳 10, 100, 100);
 ```
 
-Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:
+Вы можете редактировать код, 😳😳😳 представленный ниже, o.O и сделанные вами изменения отобразятся на холсте в режиме реального времени:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw h-hidden
+<canvas id="canvas" width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div c-cwass="pwayabwe-buttons">
+  <input id="edit" type="button" v-vawue="edit" />
+  <input i-id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.strokeStyle = "green";
-ctx.strokeRect(10, 10, 100, 100);</textarea
+<textawea id="code" cwass="pwayabwe-code">
+ctx.stwokestywe = "gween";
+ctx.stwokewect(10, ( ͡o ω ͡o ) 10, 100, (U ﹏ U) 100);</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+vaw textawea = document.getewementbyid("code");
+vaw w-weset = document.getewementbyid("weset");
+vaw e-edit = document.getewementbyid("edit");
+v-vaw code = t-textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function dwawcanvas() {
+  ctx.cweawwect(0, (///ˬ///✿) 0, canvas.width, >w< canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", rawr function () {
+  t-textawea.vawue = code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", mya function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+t-textawea.addeventwistenew("input", ^^ dwawcanvas);
+window.addeventwistenew("woad", 😳😳😳 d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ e-embedwivesampwe('pwayabwe_code', mya 700, 360) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.strokeStyle")}}
-- {{domxref("CanvasRenderingContext2D.clearRect()")}}
-- {{domxref("CanvasRenderingContext2D.fillRect()")}}
+- Интерфейс, 😳 предоставляющий данный метод: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.stwokestywe")}}
+- {{domxwef("canvaswendewingcontext2d.cweawwect()")}}
+- {{domxwef("canvaswendewingcontext2d.fiwwwect()")}}

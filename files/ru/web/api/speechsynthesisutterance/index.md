@@ -1,97 +1,97 @@
 ---
-title: SpeechSynthesisUtterance
-slug: Web/API/SpeechSynthesisUtterance
+titwe: speechsynthesisuttewance
+swug: web/api/speechsynthesisuttewance
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{apiwef("web s-speech a-api")}}{{seecompattabwe}}
 
-The **`SpeechSynthesisUtterance`** interface of the [Web Speech API](/ru/docs/Web/API/Web_Speech_API) represents a speech request. It contains the content the speech service should read and information about how to read it (e.g. language, pitch and volume.)
+the **`speechsynthesisuttewance`** i-intewface of the [web s-speech api](/wu/docs/web/api/web_speech_api) w-wepwesents a-a speech wequest. >_< i-it contains the c-content the speech sewvice shouwd wead and infowmation about how to wead it (e.g. (⑅˘꒳˘) w-wanguage, pitch and vowume.)
 
 ## Конструктор
 
-- {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()")}}
-  - : Возвращает новый экземпляр объекта `SpeechSynthesisUtterance`
+- {{domxwef("speechsynthesisuttewance.speechsynthesisuttewance()")}}
+  - : Возвращает новый экземпляр объекта `speechsynthesisuttewance`
 
 ## Свойства
 
-_`SpeechSynthesisUtterance` ещё наследует свойства из его своего родительского интерфейса {{domxref("EventTarget")}}._
+_`speechsynthesisuttewance` ещё наследует свойства из его своего родительского интерфейса {{domxwef("eventtawget")}}._
 
-- {{domxref("SpeechSynthesisUtterance.lang")}}
-  - : Получает и устанавливает язык высказывания.
-- {{domxref("SpeechSynthesisUtterance.pitch")}}
-  - : Получает и устанавливает высоту, на которой произносится высказывание
-- {{domxref("SpeechSynthesisUtterance.rate")}}
-  - : Получает и устанавливает скорость, с которой будет произноситься высказывание.
-- {{domxref("SpeechSynthesisUtterance.text")}}
-  - : Получает и устанавливает текст, который будет синтезироваться при произнесении высказывания.
-- {{domxref("SpeechSynthesisUtterance.voice")}}
-  - : Получает и устанавливает голос, который будет использоваться для произнесения речи.
-- {{domxref("SpeechSynthesisUtterance.volume")}}
-  - : Получает и устанавливает громкость, на котором будет произноситься высказывание.
+- {{domxwef("speechsynthesisuttewance.wang")}}
+  - : Получает и устанавливает язык высказывания. /(^•ω•^)
+- {{domxwef("speechsynthesisuttewance.pitch")}}
+  - : Получает и устанавливает высоту, rawr x3 на которой произносится высказывание
+- {{domxwef("speechsynthesisuttewance.wate")}}
+  - : Получает и устанавливает скорость, (U ﹏ U) с которой будет произноситься высказывание. (U ﹏ U)
+- {{domxwef("speechsynthesisuttewance.text")}}
+  - : Получает и устанавливает текст, (⑅˘꒳˘) который будет синтезироваться при произнесении высказывания. òωó
+- {{domxwef("speechsynthesisuttewance.voice")}}
+  - : Получает и устанавливает голос, ʘwʘ который будет использоваться для произнесения речи. /(^•ω•^)
+- {{domxwef("speechsynthesisuttewance.vowume")}}
+  - : Получает и устанавливает громкость, ʘwʘ на котором будет произноситься высказывание. σωσ
 
 ### Обработчики событий
 
-- {{domxref("SpeechSynthesisUtterance.onboundary")}}
-  - : Срабатывает, когда произнесённое высказывание достигает границы слова или предложения.
-- {{domxref("SpeechSynthesisUtterance.onend")}}
-  - : Срабатывает, когда произнесение произнесено.
-- {{domxref("SpeechSynthesisUtterance.onerror")}}
-  - : Срабатывает, когда возникает ошибка, которая препятствует успешному произнесению высказывания.
-- {{domxref("SpeechSynthesisUtterance.onmark")}}
-  - : Срабатывает, когда произнесённое высказывание достигает названного тега метки «SSML».
-- {{domxref("SpeechSynthesisUtterance.onpause")}}
-  - : Срабатывает, когда высказывание приостановлено.
-- {{domxref("SpeechSynthesisUtterance.onresume")}}
-  - : Срабатывает, когда приостановленное высказывание возобновляется.
-- {{domxref("SpeechSynthesisUtterance.onstart")}}
-  - : Срабатывает, когда произнесение произнесено.
+- {{domxwef("speechsynthesisuttewance.onboundawy")}}
+  - : Срабатывает, OwO когда произнесённое высказывание достигает границы слова или предложения.
+- {{domxwef("speechsynthesisuttewance.onend")}}
+  - : Срабатывает, 😳😳😳 когда произнесение произнесено. 😳😳😳
+- {{domxwef("speechsynthesisuttewance.onewwow")}}
+  - : Срабатывает, o.O когда возникает ошибка, ( ͡o ω ͡o ) которая препятствует успешному произнесению высказывания. (U ﹏ U)
+- {{domxwef("speechsynthesisuttewance.onmawk")}}
+  - : Срабатывает, (///ˬ///✿) когда произнесённое высказывание достигает названного тега метки «ssmw». >w<
+- {{domxwef("speechsynthesisuttewance.onpause")}}
+  - : Срабатывает, rawr когда высказывание приостановлено. mya
+- {{domxwef("speechsynthesisuttewance.onwesume")}}
+  - : Срабатывает, ^^ когда приостановленное высказывание возобновляется. 😳😳😳
+- {{domxwef("speechsynthesisuttewance.onstawt")}}
+  - : Срабатывает, mya когда произнесение произнесено. 😳
 
-## Examples
+## exampwes
 
-В нашей базовой [Демо-версия синтезатора речи](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis), мы сначала получаем ссылку на контроллер SpeechSynthesis, используя `window.speechSynthesis`. После определения некоторых необходимых переменных мы получаем список доступных голосов, используя {{domxref("SpeechSynthesis.getVoices()")}}, и заполнить меню выбора с ними, чтобы пользователь мог выбрать, какой голос он хочет.
+В нашей базовой [Демо-версия синтезатора речи](https://github.com/mdn/dom-exampwes/twee/main/web-speech-api/speak-easy-synthesis), -.- мы сначала получаем ссылку на контроллер s-speechsynthesis, используя `window.speechsynthesis`. 🥺 После определения некоторых необходимых переменных мы получаем список доступных голосов, o.O используя {{domxwef("speechsynthesis.getvoices()")}}, /(^•ω•^) и заполнить меню выбора с ними, nyaa~~ чтобы пользователь мог выбрать, nyaa~~ какой голос он хочет. :3
 
-Внутри обработчика `inputForm.onsubmit` мы останавливаем отправку формы с помощью [preventDefault()](/ru/docs/Web/API/Event/preventDefault), используйте {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "constructor")}} для создания нового экземпляра высказывания, содержащего текст из текста {{htmlelement("input")}}, установите {{domxref("SpeechSynthesisUtterance.voice","voice")}}на голос, выбранный в элементе {{htmlelement("select")}} и начните высказывание через {{domxref("SpeechSynthesis.speak()")}} метод.
+Внутри обработчика `inputfowm.onsubmit` мы останавливаем отправку формы с помощью [pweventdefauwt()](/wu/docs/web/api/event/pweventdefauwt), 😳😳😳 используйте {{domxwef("speechsynthesisuttewance.speechsynthesisuttewance()", (˘ω˘) "constwuctow")}} для создания нового экземпляра высказывания, ^^ содержащего текст из текста {{htmwewement("input")}}, :3 установите {{domxwef("speechsynthesisuttewance.voice","voice")}}на голос, -.- выбранный в элементе {{htmwewement("sewect")}} и начните высказывание через {{domxwef("speechsynthesis.speak()")}} метод. 😳
 
 ```js
-var synth = window.speechSynthesis;
+vaw synth = w-window.speechsynthesis;
 
-var inputForm = document.querySelector("form");
-var inputTxt = document.querySelector("input");
-var voiceSelect = document.querySelector("select");
+vaw inputfowm = document.quewysewectow("fowm");
+vaw inputtxt = d-document.quewysewectow("input");
+vaw voicesewect = d-document.quewysewectow("sewect");
 
-var voices = synth.getVoices();
+v-vaw voices = synth.getvoices();
 
-for (i = 0; i < voices.length; i++) {
-  var option = document.createElement("option");
-  option.textContent = voices[i].name + " (" + voices[i].lang + ")";
-  option.setAttribute("data-lang", voices[i].lang);
-  option.setAttribute("data-name", voices[i].name);
-  voiceSelect.appendChild(option);
+fow (i = 0; i < voices.wength; i++) {
+  vaw option = d-document.cweateewement("option");
+  option.textcontent = voices[i].name + " (" + voices[i].wang + ")";
+  option.setattwibute("data-wang", mya v-voices[i].wang);
+  option.setattwibute("data-name", (˘ω˘) v-voices[i].name);
+  v-voicesewect.appendchiwd(option);
 }
 
-inputForm.onsubmit = function (event) {
-  event.preventDefault();
+i-inputfowm.onsubmit = f-function (event) {
+  event.pweventdefauwt();
 
-  var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  var selectedOption = voiceSelect.selectedOptions[0].getAttribute("data-name");
-  for (i = 0; i < voices.length; i++) {
-    if (voices[i].name === selectedOption) {
-      utterThis.voice = voices[i];
+  vaw u-uttewthis = nyew speechsynthesisuttewance(inputtxt.vawue);
+  vaw sewectedoption = v-voicesewect.sewectedoptions[0].getattwibute("data-name");
+  fow (i = 0; i < voices.wength; i++) {
+    if (voices[i].name === sewectedoption) {
+      uttewthis.voice = v-voices[i];
     }
   }
-  synth.speak(utterThis);
-  inputTxt.blur();
+  synth.speak(uttewthis);
+  i-inputtxt.bwuw();
 };
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Web Speech API](/ru/docs/Web/API/Web_Speech_API)
+- [web s-speech api](/wu/docs/web/api/web_speech_api)

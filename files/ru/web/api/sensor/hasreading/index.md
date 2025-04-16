@@ -1,24 +1,24 @@
 ---
-title: Sensor.hasReading
-slug: Web/API/Sensor/hasReading
-l10n:
-  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
+titwe: sensow.hasweading
+swug: w-web/api/sensow/hasweading
+w-w10n:
+  s-souwcecommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
-{{APIRef("Sensor API")}}
+{{apiwef("sensow a-api")}}
 
-Свойство **`hasReading`** интерфейса {{domxref("Sensor")}} возвращает boolean значение, определяющее считывает ли датчик показания. Только для чтения.
+Свойство **`hasweading`** интерфейса {{domxwef("sensow")}} возвращает b-boowean значение, определяющее считывает ли датчик показания. o.O Только для чтения. (U ᵕ U❁)
 
-Так как {{domxref('Sensor')}} это базовый класс, то `hasReading` можно прочитать только из одного из наследованных классов.
+Так как {{domxwef('sensow')}} это базовый класс, (⑅˘꒳˘) то `hasweading` можно прочитать только из одного из наследованных классов. ( ͡o ω ͡o )
 
 ## Значение
 
-Boolean значение.
+b-boowean значение. UwU
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

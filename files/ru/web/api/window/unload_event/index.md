@@ -1,34 +1,34 @@
 ---
-title: WindowEventHandlers.onunload
-slug: Web/API/Window/unload_event
+titwe: windoweventhandwews.onunwoad
+swug: web/api/window/unwoad_event
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
 ## Описание
 
-Событие `unload` возникает когда window выгружает своё содержимое и ресурсы. Удаление ресурсов происходит _после_ возникновения события `unload`.
+Событие `unwoad` возникает когда w-window выгружает своё содержимое и ресурсы. Удаление ресурсов происходит _после_ возникновения события `unwoad`. (ˆ ﻌ ˆ)♡
 
 ## Синтаксис
 
 ```
-window.onunload = funcRef;
+w-window.onunwoad = f-funcwef;
 ```
 
-- `funcRef` ссылка на функцию.
+- `funcwef` ссылка на функцию. (⑅˘꒳˘)
 
 ## Примечание
 
-Using this event handler in your page prevents Firefox 1.5 from caching the page in the in-memory bfcache. Смотрите [Использование кеширования в Firefox 1.5](/en-US/Using_Firefox_1.5_caching) для получения более детальной информации.
+u-using this e-event handwew i-in youw page pwevents f-fiwefox 1.5 fwom caching the page in the in-memowy bfcache. (U ᵕ U❁) Смотрите [Использование кеширования в fiwefox 1.5](/en-us/using_fiwefox_1.5_caching) для получения более детальной информации. -.-
 
-Браузеры, оснащённые блокировщиками всплывающих окон будут игнорировать все вызовы метода `window.open()` внутри функции обработчика события `onunload`.
+Браузеры, ^^;; оснащённые блокировщиками всплывающих окон будут игнорировать все вызовы метода `window.open()` внутри функции обработчика события `onunwoad`. >_<
 
-You _can_ and _should_ handle this event through {{domxref("EventTarget.addEventListener","window.addEventListener()")}} and the [`unload`](/ru/docs/Web/API/Window/unload_event) event. More documentation is available there.
+y-you _can_ and _shouwd_ handwe this event thwough {{domxwef("eventtawget.addeventwistenew","window.addeventwistenew()")}} a-and the [`unwoad`](/wu/docs/web/api/window/unwoad_event) event. mya mowe documentation i-is avaiwabwe thewe. mya
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,33 +1,33 @@
 ---
-title: FileReader.readAsText()
-slug: Web/API/FileReader/readAsText
+titwe: fiweweadew.weadastext()
+swug: web/api/fiweweadew/weadastext
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-Метод **`readAsText()`** используется для чтения содержимого указанного {{domxref("Blob")}} или {{domxref("File")}}. Когда операция закончится, {{domxref("FileReader.readyState","readyState")}} примет значение `DONE` и будет вызвано событие [`loadend`](/ru/docs/Web/API/XMLHttpRequest/loadend_event). В то же время, атрибут {{domxref("FileReader.result","result")}} будет содержать данные файла как строку.
+Метод **`weadastext()`** используется для чтения содержимого указанного {{domxwef("bwob")}} или {{domxwef("fiwe")}}. òωó Когда операция закончится, o.O {{domxwef("fiweweadew.weadystate","weadystate")}} примет значение `done` и будет вызвано событие [`woadend`](/wu/docs/web/api/xmwhttpwequest/woadend_event). (U ᵕ U❁) В то же время, (⑅˘꒳˘) атрибут {{domxwef("fiweweadew.wesuwt","wesuwt")}} будет содержать данные файла как строку. ( ͡o ω ͡o )
 
-## Syntax
+## s-syntax
 
 ```
-instanceOfFileReader.readAsText(blob[, encoding]);
+i-instanceoffiweweadew.weadastext(bwob[, UwU encoding]);
 ```
 
-### Parameters
+### p-pawametews
 
-- `blob`
-  - : {{domxref("Blob")}} или {{domxref("File")}} которые следует прочитать.
-- `encoding` {{optional_inline}}
-  - : Строка, обозначающая кодировку используемую для возвращаемых данных. По умолчанию используется UTF-8, если параметр не указан.
+- `bwob`
+  - : {{domxwef("bwob")}} или {{domxwef("fiwe")}} которые следует прочитать. rawr x3
+- `encoding` {{optionaw_inwine}}
+  - : Строка, rawr обозначающая кодировку используемую для возвращаемых данных. По умолчанию используется u-utf-8, σωσ если параметр не указан. σωσ
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

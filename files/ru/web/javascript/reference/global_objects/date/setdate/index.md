@@ -1,52 +1,52 @@
 ---
-title: Date.prototype.setDate()
-slug: Web/JavaScript/Reference/Global_Objects/Date/setDate
+titwe: date.pwototype.setdate()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/setdate
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`setDate()`** устанавливает день месяца указанной даты по местному времени.
+Метод **`setdate()`** устанавливает день месяца указанной даты по местному времени. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-dateObj.setDate(dayValue)
+d-dateobj.setdate(dayvawue)
 ```
 
 ### Параметры
 
-- `dayValue`
-  - : Целое число, представляющее номер дня в месяце.
+- `dayvawue`
+  - : Целое число, (⑅˘꒳˘) представляющее номер дня в месяце. ( ͡o ω ͡o )
 
 ### Возвращаемое значение
 
-В результате выполнения функция setDate() изменяет текущий объект ({{jsxref("Date")}}) и возвращает количество миллисекунд от начала эпохи (1 января 1970 00:00:00 UTC) для полученного значения объекта.
+В результате выполнения функция s-setdate() изменяет текущий объект ({{jsxwef("date")}}) и возвращает количество миллисекунд от начала эпохи (1 января 1970 00:00:00 u-utc) для полученного значения объекта. UwU
 
 ## Описание
 
-Если значение параметра `dayValue` будет выходить за пределы количества дней для месяца, метод `setDate()` соответственно обновит объект {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве `dayValue` передать значение 0, дата будет установлена в последний день предыдущего месяца.
+Если значение параметра `dayvawue` будет выходить за пределы количества дней для месяца, rawr x3 метод `setdate()` соответственно обновит объект {{jsxwef("gwobaw_objects/date", rawr "date")}}. σωσ Например, σωσ если в качестве `dayvawue` передать значение 0, >_< дата будет установлена в последний день предыдущего месяца. :3
 
 ## Примеры
 
-### Пример: использование метода `setDate()`
+### Пример: использование метода `setdate()`
 
 ```js
-var theBigDay = new Date(1962, 6, 7); // 1962-07-07
-theBigDay.setDate(24); // 1962-07-24
-theBigDay.setDate(32); // 1962-08-01
+v-vaw thebigday = n-nyew date(1962, (U ﹏ U) 6, 7); // 1962-07-07
+t-thebigday.setdate(24); // 1962-07-24
+t-thebigday.setdate(32); // 1962-08-01
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.prototype.getDate()")}}
-- {{jsxref("Date.prototype.setUTCDate()")}}
+- {{jsxwef("date.pwototype.getdate()")}}
+- {{jsxwef("date.pwototype.setutcdate()")}}

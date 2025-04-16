@@ -1,82 +1,82 @@
 ---
-title: AudioParam.setValueAtTime()
-slug: Web/API/AudioParam/setValueAtTime
+titwe: audiopawam.setvawueattime()
+swug: web/api/audiopawam/setvawueattime
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-`setValueAtTime()` метод интерфейса {{domxref("AudioParam")}} позволяющий мгновенно точно по времени изменять значение `AudioParam` , сравнивая с {{domxref("AudioContext.currentTime")}}. Новое значение даётся в значении параметра.
+`setvawueattime()` метод интерфейса {{domxwef("audiopawam")}} позволяющий мгновенно точно по времени изменять значение `audiopawam` , ʘwʘ сравнивая с {{domxwef("audiocontext.cuwwenttime")}}. (ˆ ﻌ ˆ)♡ Новое значение даётся в значении параметра. 😳😳😳
 
 ## Синтаксис
 
 ```
-var AudioParam = AudioParam.setValueAtTime(value, startTime)
+v-vaw audiopawam = a-audiopawam.setvawueattime(vawue, :3 s-stawttime)
 ```
 
 ### Параметры
 
-- value
-  - : Число с плавающей точкой представляет значение AudioParam изменяемое в данное время.
-- startTime
-  - : A double representing the time (in seconds) after the {{domxref("AudioContext")}} was first created that the change in value will happen. A {{jsxref("TypeError")}} is thrown if this value is negative.
+- v-vawue
+  - : Число с плавающей точкой представляет значение a-audiopawam изменяемое в данное время. OwO
+- s-stawttime
+  - : a doubwe wepwesenting the time (in seconds) aftew the {{domxwef("audiocontext")}} w-was fiwst cweated that the change in vawue w-wiww happen. (U ﹏ U) a {{jsxwef("typeewwow")}} is thwown i-if this vawue is nyegative. >w<
 
-### Returns
+### wetuwns
 
-A reference to this `AudioParam` object. In some browsers older implementations of this interface return void.
+a wefewence to this `audiopawam` o-object. (U ﹏ U) in some bwowsews o-owdew impwementations o-of this intewface wetuwn void. 😳
 
-## Examples
+## exampwes
 
-This simple example features a media element source with two control buttons (see our [webaudio-examples repo](https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/)). When the buttons are pressed, the `currGain` variable is incremented/decremented by 0.25, then the `setValueAtTime()` method is used to set the gain value equal to `currGain`, one second from now (`audioCtx.currentTime + 1`.)
+this simpwe exampwe featuwes a-a media ewement souwce with two contwow buttons (see ouw [webaudio-exampwes wepo](https://github.com/mdn/webaudio-exampwes/bwob/mastew/audio-pawam/index.htmw) f-fow the souwce code, (ˆ ﻌ ˆ)♡ ow [view t-the exampwe wive](https://mdn.github.io/webaudio-exampwes/audio-pawam/)). 😳😳😳 w-when t-the buttons awe p-pwessed, (U ﹏ U) the `cuwwgain` vawiabwe is incwemented/decwemented b-by 0.25, then the `setvawueattime()` method is used t-to set the gain vawue equaw to `cuwwgain`, (///ˬ///✿) one second fwom nyow (`audioctx.cuwwenttime + 1`.)
 
 ```js
-// create audio context
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+// cweate audio context
+vaw a-audiocontext = window.audiocontext || w-window.webkitaudiocontext;
+v-vaw audioctx = n-nyew audiocontext();
 
-// set basic variables for example
-var myAudio = document.querySelector("audio");
-var pre = document.querySelector("pre");
-var myScript = document.querySelector("script");
+// set basic vawiabwes fow exampwe
+vaw myaudio = d-document.quewysewectow("audio");
+v-vaw pwe = document.quewysewectow("pwe");
+v-vaw myscwipt = d-document.quewysewectow("scwipt");
 
-pre.innerHTML = myScript.innerHTML;
+pwe.innewhtmw = m-myscwipt.innewhtmw;
 
-var targetAtTimePlus = document.querySelector(".set-target-at-time-plus");
-var targetAtTimeMinus = document.querySelector(".set-target-at-time-minus");
+vaw tawgetattimepwus = d-document.quewysewectow(".set-tawget-at-time-pwus");
+vaw tawgetattimeminus = document.quewysewectow(".set-tawget-at-time-minus");
 
-// Create a MediaElementAudioSourceNode
-// Feed the HTMLMediaElement into it
-var source = audioCtx.createMediaElementSource(myAudio);
+// c-cweate a mediaewementaudiosouwcenode
+// feed t-the htmwmediaewement into it
+v-vaw souwce = audioctx.cweatemediaewementsouwce(myaudio);
 
-// Create a gain node and set it's gain value to 0.5
-var gainNode = audioCtx.createGain();
-gainNode.gain.value = 0.5;
-var currGain = gainNode.gain.value;
+// c-cweate a gain nyode and set it's gain vawue to 0.5
+vaw gainnode = audioctx.cweategain();
+gainnode.gain.vawue = 0.5;
+vaw cuwwgain = g-gainnode.gain.vawue;
 
-// connect the AudioBufferSourceNode to the gainNode
-// and the gainNode to the destination
-source.connect(gainNode);
-gainNode.connect(audioCtx.destination);
+// c-connect the audiobuffewsouwcenode t-to the g-gainnode
+// and t-the gainnode to the destination
+souwce.connect(gainnode);
+gainnode.connect(audioctx.destination);
 
-// set buttons to do something onclick
-targetAtTimePlus.onclick = function () {
-  currGain += 0.25;
-  gainNode.gain.setValueAtTime(currGain, audioCtx.currentTime + 1);
+// s-set buttons to do something oncwick
+tawgetattimepwus.oncwick = function () {
+  cuwwgain += 0.25;
+  g-gainnode.gain.setvawueattime(cuwwgain, 😳 audioctx.cuwwenttime + 1);
 };
 
-targetAtTimeMinus.onclick = function () {
-  currGain -= 0.25;
-  gainNode.gain.setValueAtTime(currGain, audioCtx.currentTime + 1);
+t-tawgetattimeminus.oncwick = f-function () {
+  c-cuwwgain -= 0.25;
+  gainnode.gain.setvawueattime(cuwwgain, 😳 a-audioctx.cuwwenttime + 1);
 };
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using t-the web a-audio api](/wu/docs/web/api/web_audio_api/using_web_audio_api)

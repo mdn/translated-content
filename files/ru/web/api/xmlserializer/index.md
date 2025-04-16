@@ -1,47 +1,47 @@
 ---
-title: XMLSerializer
-slug: Web/API/XMLSerializer
+titwe: xmwsewiawizew
+swug: web/api/xmwsewiawizew
 ---
 
-{{APIRef("XMLSerializer")}}
+{{apiwef("xmwsewiawizew")}}
 
-`XMLSerializer` может быть использован для конвертации веток DOM-дерева или дерева целиком в текст. `XMLSerializer` доступен непривилегированным скриптам.
+`xmwsewiawizew` может быть использован для конвертации веток d-dom-дерева или дерева целиком в текст. OwO `xmwsewiawizew` доступен непривилегированным скриптам. (U ﹏ U)
 
-Для получения более подробной информации об `XMLSerializer` в расширениях для браузера Firefox, пожалуйста обратитесь к документации [`nsIDOMSerializer`](/ru/docs/nsIDOMSerializer).
+Для получения более подробной информации об `xmwsewiawizew` в расширениях для браузера f-fiwefox, >_< пожалуйста обратитесь к документации [`nsidomsewiawizew`](/wu/docs/nsidomsewiawizew).
 
 ## Методы
 
-- `XMLSerializer.serializeToString()`
+- `xmwsewiawizew.sewiawizetostwing()`
   - : Возвращает сериализованное дерево или ветку в виде строки
-- `XMLSerializer.serializeToStream()` {{ non-standard_inline() }}{{ deprecated_inline() }}
-  - : Поддерево, обёрнутое в указанный элемент, сериализуется в поток байтов с использованием указанной кодировки.
+- `xmwsewiawizew.sewiawizetostweam()` {{ non-standawd_inwine() }}{{ d-depwecated_inwine() }}
+  - : Поддерево, rawr x3 обёрнутое в указанный элемент, mya сериализуется в поток байтов с использованием указанной кодировки. nyaa~~
 
 ## Примеры
 
 ```js
-var s = new XMLSerializer();
-var d = document;
-var str = s.serializeToString(d);
-alert(str);
+v-vaw s = n-nyew xmwsewiawizew();
+v-vaw d = d-document;
+vaw stw = s-s.sewiawizetostwing(d);
+awewt(stw);
 ```
 
-The next example uses XMLSerializer with [insertAdjacentHTML()](/ru/docs/Web/API/Element/insertAdjacentHTML) to insert a newly created DOM Node into the Document's body. Because [insertAdjacentHTML()](/ru/docs/Web/API/Element/insertAdjacentHTML) accepts a string and not a Node for its second parameter, XMLSerializer is used to first convert the node into a string.
+the nyext exampwe uses xmwsewiawizew w-with [insewtadjacenthtmw()](/wu/docs/web/api/ewement/insewtadjacenthtmw) to insewt a nyewwy cweated d-dom nyode into the document's b-body. (⑅˘꒳˘) because [insewtadjacenthtmw()](/wu/docs/web/api/ewement/insewtadjacenthtmw) accepts a stwing and nyot a nyode fow its s-second pawametew, rawr x3 xmwsewiawizew i-is used to fiwst c-convewt the nyode into a stwing. (✿oωo)
 
 ```js
-var inp = document.createElement("input");
-var XMLS = new XMLSerializer();
-var inp_xmls = XMLS.serializeToString(inp); // Конвертируем DOM-элемент в строку
+vaw inp = document.cweateewement("input");
+vaw xmws = n-nyew xmwsewiawizew();
+vaw inp_xmws = xmws.sewiawizetostwing(inp); // Конвертируем dom-элемент в строку
 
 // Вставляет вновь созданный элемент в тело документа
-document.body.insertAdjacentHTML("afterbegin", inp_xmls);
+document.body.insewtadjacenthtmw("aftewbegin", (ˆ ﻌ ˆ)♡ i-inp_xmws);
 ```
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Parsing and serializing XML](/en-US/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest)
-- [DOMParser](/en-US/DOMParser)
+- [pawsing and sewiawizing x-xmw](/en-us/pawsing_and_sewiawizing_xmw)
+- [xmwhttpwequest](/wu/docs/web/api/xmwhttpwequest)
+- [dompawsew](/en-us/dompawsew)

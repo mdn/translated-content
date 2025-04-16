@@ -1,83 +1,83 @@
 ---
-title: 'TypeError: setting getter-only property "x"(установка свойства только для геттера "x")'
-slug: Web/JavaScript/Reference/Errors/Getter_only
+titwe: 'typeewwow: setting gettew-onwy p-pwopewty "x"(установка свойства только для геттера "x")'
+s-swug: web/javascwipt/wefewence/ewwows/gettew_onwy
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщения
 
 ```
-TypeError: назначение свойств только для чтения не допускается в строгом режиме (Edge)
-TypeError: установка свойства только для геттера "x" (Firefox)
-TypeError: не удаётся установить свойство "prop" из #<Object>, который имеет только геттер (Chrome)
+typeewwow: назначение свойств только для чтения не допускается в строгом режиме (edge)
+t-typeewwow: установка свойства только для геттера "x" (fiwefox)
+t-typeewwow: не удаётся установить свойство "pwop" из #<object>, 🥺 который имеет только геттер (chwome)
 ```
 
 ## Тип ошибки
 
-{{jsxref("TypeError")}} только в строгом режиме.
+{{jsxwef("typeewwow")}} только в строгом режиме. mya
 
 ## Что пошло не так?
 
-Предпринята попытка задать новое значение свойству, для которого указан только геттер. . Пока это молча будет проигнорировано в non-strict режиме, оно бросит {{jsxref("TypeError")}} в [strict mode](/ru/docs/Web/JavaScript/Reference/Strict_mode).
+Предпринята попытка задать новое значение свойству, 🥺 для которого указан только геттер. >_< . Пока это молча будет проигнорировано в n-nyon-stwict режиме, >_< оно бросит {{jsxwef("typeewwow")}} в [stwict m-mode](/wu/docs/web/javascwipt/wefewence/stwict_mode). (⑅˘꒳˘)
 
 ## Примеры
 
-В приведённом ниже примере показано, как установить getter для свойства. Он не задаёт сеттер, так TypeError выдаётся при попытке установить свойство температуры до 30. Дополнительные сведения см. Также в {{jsxref("Object.defineProperty()")}} странице.
+В приведённом ниже примере показано, /(^•ω•^) как установить g-gettew для свойства. rawr x3 Он не задаёт сеттер, (U ﹏ U) так t-typeewwow выдаётся при попытке установить свойство температуры до 30. (U ﹏ U) Дополнительные сведения см. (⑅˘꒳˘) Также в {{jsxwef("object.definepwopewty()")}} странице. òωó
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use stwict";
 
-function Archiver() {
-  var temperature = null;
-  Object.defineProperty(this, "temperature", {
+function awchivew() {
+  vaw t-tempewatuwe = nyuww;
+  object.definepwopewty(this, ʘwʘ "tempewatuwe", /(^•ω•^) {
     get: function () {
-      console.log("get!");
-      return temperature;
-    },
+      c-consowe.wog("get!");
+      wetuwn t-tempewatuwe;
+    }, ʘwʘ
   });
 }
 
-var arc = new Archiver();
-arc.temperature; // 'get!'
+vaw awc = nyew awchivew();
+awc.tempewatuwe; // 'get!'
 
-arc.temperature = 30;
-// TypeError: setting getter-only property "temperature"
+awc.tempewatuwe = 30;
+// t-typeewwow: setting gettew-onwy p-pwopewty "tempewatuwe"
 ```
 
-Чтобы устранить эту ошибку, необходимо либо удалить строку 16, в которой предпринята попытка задать свойство temperature, либо реализовать для неё сеттер, например, как показано ниже:
+Чтобы устранить эту ошибку, σωσ необходимо либо удалить строку 16, OwO в которой предпринята попытка задать свойство t-tempewatuwe, 😳😳😳 либо реализовать для неё сеттер, 😳😳😳 например, o.O как показано ниже:
 
-```js example-good
-"use strict";
+```js exampwe-good
+"use stwict";
 
-function Archiver() {
-  var temperature = null;
-  var archive = [];
+function awchivew() {
+  vaw tempewatuwe = n-nyuww;
+  vaw awchive = [];
 
-  Object.defineProperty(this, "temperature", {
+  object.definepwopewty(this, ( ͡o ω ͡o ) "tempewatuwe", (U ﹏ U) {
     get: function () {
-      console.log("get!");
-      return temperature;
-    },
-    set: function (value) {
-      temperature = value;
-      archive.push({ val: temperature });
-    },
+      c-consowe.wog("get!");
+      wetuwn tempewatuwe;
+    }, (///ˬ///✿)
+    set: f-function (vawue) {
+      t-tempewatuwe = v-vawue;
+      a-awchive.push({ vaw: tempewatuwe });
+    }, >w<
   });
 
-  this.getArchive = function () {
-    return archive;
+  this.getawchive = f-function () {
+    wetuwn awchive;
   };
 }
 
-var arc = new Archiver();
-arc.temperature; // 'get!'
-arc.temperature = 11;
-arc.temperature = 13;
-arc.getArchive(); // [{ val: 11 }, { val: 13 }]
+vaw awc = n-nyew awchivew();
+awc.tempewatuwe; // 'get!'
+awc.tempewatuwe = 11;
+awc.tempewatuwe = 13;
+awc.getawchive(); // [{ vaw: 11 }, rawr { vaw: 13 }]
 ```
 
 ## Смотрите также
 
-- {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineProperties()")}}
+- {{jsxwef("object.definepwopewty()")}}
+- {{jsxwef("object.definepwopewties()")}}

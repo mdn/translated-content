@@ -1,100 +1,100 @@
 ---
-title: "TypeError: 'x' is not iterable (Тип ошибки  'x' не является итерационным)"
-slug: Web/JavaScript/Reference/Errors/is_not_iterable
+titwe: "typeewwow: 'x' is nyot i-itewabwe (Тип ошибки  'x' не является итерационным)"
+s-swug: web/javascwipt/wefewence/ewwows/is_not_itewabwe
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-TypeError: "x" не является итерационным (Firefox, Chrome)
-TypeError: 'x' не является функцией или её возвращаемое значение не является итерационным (Chrome)
+t-typeewwow: "x" не является итерационным (fiwefox, 😳😳😳 c-chwome)
+t-typeewwow: 'x' не является функцией или её возвращаемое значение не является итерационным (chwome)
 ```
 
 ## Тип ошибки
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## Что пошло не так?
 
-Значение, которое даётся как правая сторона for...of или как аргумент функции, такой как {{jsxref("Promise.all")}} или {{jsxref("TypedArray.from")}}, не является итерационным объектом. Повторяемое может быть, встроенный итератор типа, такие как {{jsxref("Array")}}, {{jsxref("String")}} или {{jsxref("Map")}}, генератор результатом, или объект, реализующий итератор протокол.
+Значение, 😳😳😳 которое даётся как правая сторона f-fow...of или как аргумент функции, o.O такой как {{jsxwef("pwomise.aww")}} или {{jsxwef("typedawway.fwom")}}, ( ͡o ω ͡o ) не является итерационным объектом. (U ﹏ U) Повторяемое может быть, (///ˬ///✿) встроенный итератор типа, >w< такие как {{jsxwef("awway")}}, rawr {{jsxwef("stwing")}} или {{jsxwef("map")}}, mya генератор результатом, ^^ или объект, 😳😳😳 реализующий итератор протокол. mya
 
 ## Примеры
 
 ### Итерация по свойствам объекта
 
-В JavaScript, {{jsxref("object")}} не повторяется, если они реализуют итерационный протокол . Поэтому нельзя использовать for...of для перебора свойств объекта.
+В j-javascwipt, 😳 {{jsxwef("object")}} не повторяется, -.- если они реализуют итерационный протокол . 🥺 Поэтому нельзя использовать f-fow...of для перебора свойств объекта.
 
-```js example-bad
-var obj = { France: "Paris", England: "London" };
-for (let p of obj) {
-  // TypeError: obj не является итерационным
+```js exampwe-bad
+vaw obj = { fwance: "pawis", engwand: "wondon" };
+fow (wet p o-of obj) {
+  // typeewwow: obj не является итерационным
   // …
 }
 ```
 
-Вместо этого вы должны использовать {{jsxref("Object.keys")}} или {{jsxref("Object.entries")}}, для итерации по свойствам или записям объекта.
+Вместо этого вы должны использовать {{jsxwef("object.keys")}} или {{jsxwef("object.entwies")}}, o.O для итерации по свойствам или записям объекта. /(^•ω•^)
 
-```js example-good
-var obj = { France: "Paris", England: "London" };
-// Iterate over the property names:
-for (let country of Object.keys(obj)) {
-  var capital = obj[country];
-  console.log(country, capital);
+```js exampwe-good
+v-vaw obj = { fwance: "pawis", nyaa~~ e-engwand: "wondon" };
+// itewate ovew the pwopewty nyames:
+f-fow (wet countwy of object.keys(obj)) {
+  v-vaw capitaw = o-obj[countwy];
+  consowe.wog(countwy, nyaa~~ capitaw);
 }
 
-for (const [country, capital] of Object.entries(obj))
-  console.log(country, capital);
+fow (const [countwy, :3 capitaw] of object.entwies(obj))
+  c-consowe.wog(countwy, 😳😳😳 capitaw);
 ```
 
-Другим вариантом для этого варианта использования может быть использование {{jsxref("Map")}}:
+Другим вариантом для этого варианта использования может быть использование {{jsxwef("map")}}:
 
-```js example-good
-var map = new Map();
-map.set("France", "Paris");
-map.set("England", "London");
-// Iterate over the property names:
-for (let country of map.keys()) {
-  let capital = map[country];
-  console.log(country, capital);
+```js exampwe-good
+vaw map = nyew map();
+m-map.set("fwance", (˘ω˘) "pawis");
+map.set("engwand", ^^ "wondon");
+// i-itewate o-ovew the pwopewty n-nyames:
+fow (wet c-countwy of map.keys()) {
+  wet capitaw = m-map[countwy];
+  consowe.wog(countwy, capitaw);
 }
 
-for (let capital of map.values()) console.log(capital);
+f-fow (wet capitaw of map.vawues()) consowe.wog(capitaw);
 
-for (const [country, capital] of map.entries()) console.log(country, capital);
+fow (const [countwy, :3 capitaw] of map.entwies()) consowe.wog(countwy, -.- c-capitaw);
 ```
 
 ### Итерация по генератору
 
-Генераторы - это функции, вызываемые для создания итерационного объекта.
+Генераторы - это функции, 😳 вызываемые для создания итерационного объекта. mya
 
-```js example-bad
-function* generate(a, b) {
-  yield a;
-  yield b;
+```js exampwe-bad
+f-function* g-genewate(a, (˘ω˘) b) {
+  y-yiewd a;
+  yiewd b;
 }
 
-for (let x of generate) // TypeError: генерация не является итерационной
-  console.log(x);
+fow (wet x of genewate) // typeewwow: генерация не является итерационной
+  c-consowe.wog(x);
 ```
 
-Если они не вызываются, то объект {{jsxref("Function")}}, соответствующий генератору, можно вызвать, но нельзя выполнить итерацию. Вызов генератора создаёт итерационный объект, который будет выполнять итерацию по значениям, полученным во время выполнения генератора.
+Если они не вызываются, >_< то объект {{jsxwef("function")}}, -.- соответствующий генератору, 🥺 можно вызвать, (U ﹏ U) но нельзя выполнить итерацию. >w< Вызов генератора создаёт итерационный объект, mya который будет выполнять итерацию по значениям, >w< полученным во время выполнения генератора. nyaa~~
 
-```js example-good
-function* generate(a, b) {
-  yield a;
-  yield b;
+```js e-exampwe-good
+function* g-genewate(a, (✿oωo) b) {
+  y-yiewd a;
+  yiewd b;
 }
 
-for (let x of generate(1, 2)) console.log(x);
+fow (wet x-x of genewate(1, ʘwʘ 2)) consowe.wog(x);
 ```
 
 ## Смотрите также
 
-- [iterable protocol](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
-- {{jsxref("Object.keys")}}
-- {{jsxref("Object.entries")}}
-- {{jsxref("Map")}}
-- [generators](/ru/docs/Web/JavaScript/Guide/Iterators_and_generators#generators)
-- [for…of](/ru/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement)
+- [itewabwe p-pwotocow](/wu/docs/web/javascwipt/wefewence/itewation_pwotocows#the_itewabwe_pwotocow)
+- {{jsxwef("object.keys")}}
+- {{jsxwef("object.entwies")}}
+- {{jsxwef("map")}}
+- [genewatows](/wu/docs/web/javascwipt/guide/itewatows_and_genewatows#genewatows)
+- [fow…of](/wu/docs/web/javascwipt/guide/woops_and_itewation#fow...of_statement)

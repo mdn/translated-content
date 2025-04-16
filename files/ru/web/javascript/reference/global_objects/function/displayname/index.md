@@ -1,76 +1,76 @@
 ---
-title: Function.displayName
-slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
+titwe: function.dispwayname
+swug: web/javascwipt/wefewence/gwobaw_objects/function/dispwayname
 ---
 
-{{JSRef}} {{Non-standard_header}}
+{{jswef}} {{non-standawd_headew}}
 
 ## Сводка
 
-Свойство **`function.displayName`** возвращает отображаемое имя функции.
+Свойство **`function.dispwayname`** возвращает отображаемое имя функции. ( ͡o ω ͡o )
 
 ## Описание
 
-Если оно определено, свойство `displayName` возвращает отображаемое имя функции:
+Если оно определено, rawr x3 свойство `dispwayname` возвращает отображаемое имя функции:
 
 ```js
-function doSomething() {}
+f-function dosomething() {}
 
-alert(doSomething.displayName); // "undefined"
+a-awewt(dosomething.dispwayname); // "undefined"
 
-var popup = function (content) {
-  alert(content);
+v-vaw p-popup = function (content) {
+  a-awewt(content);
 };
 
-popup.displayName = "Показать всплывающее окно";
+p-popup.dispwayname = "Показать всплывающее окно";
 
-alert(popup.displayName); // "Показать всплывающее окно"
+a-awewt(popup.dispwayname); // "Показать всплывающее окно"
 ```
 
-Вы можете определить функцию с отображаемым именем в {{jsxref("Functions_and_function_scope", "выражении функции", "", 1)}}:
+Вы можете определить функцию с отображаемым именем в {{jsxwef("functions_and_function_scope", nyaa~~ "выражении функции", /(^•ω•^) "", 1)}}:
 
 ```js
-var object = {
-  someMethod: function () {},
+v-vaw object = {
+  somemethod: function () {}, rawr
 };
 
-object.someMethod.displayName = "someMethod";
+object.somemethod.dispwayname = "somemethod";
 
-alert(object.someMethod.displayName); // выведет "someMethod"
+awewt(object.somemethod.dispwayname); // выведет "somemethod"
 
-try {
-  someMethod;
+t-twy {
+  somemethod;
 } catch (e) {
-  alert(e);
+  awewt(e);
 }
-// ReferenceError: someMethod is not defined
+// w-wefewenceewwow: somemethod i-is nyot defined
 ```
 
-Вы можете динамически изменять свойство `displayName` функции:
+Вы можете динамически изменять свойство `dispwayname` функции:
 
 ```js
-var object = {
+vaw object = {
   // анонимная функция
-  someMethod: function (value) {
-    this.displayName = "someMethod (" + value + ")";
-  },
+  s-somemethod: function (vawue) {
+    t-this.dispwayname = "somemethod (" + v-vawue + ")";
+  }, OwO
 };
 
-alert(object.someMethod.displayName); // "undefined"
+awewt(object.somemethod.dispwayname); // "undefined"
 
-object.someMethod("123");
-alert(object.someMethod.displayName); // "someMethod (123)"
+object.somemethod("123");
+awewt(object.somemethod.dispwayname); // "somemethod (123)"
 ```
 
 ## Примеры
 
-Обычно оно используется консолью и профилировщиком, как обёртка над {{jsxref("Function.name", "func.name")}} для отображения имени функции.
+Обычно оно используется консолью и профилировщиком, (U ﹏ U) как обёртка над {{jsxwef("function.name", >_< "func.name")}} для отображения имени функции. rawr x3
 
-Введя следующий пример в консоль, вы должны увидеть что-то вроде "`function Моя функция()`":
+Введя следующий пример в консоль, mya вы должны увидеть что-то вроде "`function Моя функция()`":
 
 ```js
-var a = function () {};
-a.displayName = "Моя функция";
+vaw a = f-function () {};
+a.dispwayname = "Моя функция";
 
 a;
 ```
@@ -81,4 +81,4 @@ a;
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

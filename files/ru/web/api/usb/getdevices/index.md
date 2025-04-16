@@ -1,39 +1,39 @@
 ---
-title: USB.getDevices()
-slug: Web/API/USB/getDevices
+titwe: usb.getdevices()
+swug: w-web/api/usb/getdevices
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{apiwef("webusb a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-Метод** `getDevices` **интерфейса {{DOMxRef("USB")}} возвращает {{JSxRef("Promise")}}, который разрешается с массивом {{DOMxRef("USBDevice")}} объектов сопряжённых подключённых устройств. Для информации о сопряжённых устройствах, смотрите {{DOMxRef("USB.requestDevice()")}}.
+Метод** `getdevices` **интерфейса {{domxwef("usb")}} возвращает {{jsxwef("pwomise")}}, rawr который разрешается с массивом {{domxwef("usbdevice")}} объектов сопряжённых подключённых устройств. σωσ Для информации о сопряжённых устройствах, σωσ смотрите {{domxwef("usb.wequestdevice()")}}.
 
 ## Синтаксис
 
 ```
-USB.getDevices()
+u-usb.getdevices()
 ```
 
 ### Параметры
 
-Нет.
+Нет. >_<
 
 ### Возвращаемое значение
 
-{{JSxRef("Promise")}}, который разрешается с массивом объектов {{DOMxRef("USBDevice")}}.
+{{jsxwef("pwomise")}}, :3 который разрешается с массивом объектов {{domxwef("usbdevice")}}.
 
 ## Пример
 
-В следующем примере имена продуктов и серийные номера сопряжённых устройств выводятся в консоль. Для информации о сопряжённых устройствах, смотрите {{DOMxRef("USB.requestDevice","USB.requestDevice()")}}.
+В следующем примере имена продуктов и серийные номера сопряжённых устройств выводятся в консоль. (U ﹏ U) Для информации о сопряжённых устройствах, -.- смотрите {{domxwef("usb.wequestdevice","usb.wequestdevice()")}}. (ˆ ﻌ ˆ)♡
 
 ```js
-navigator.usb.getDevices().then((devices) => {
-  console.log("Total devices: " + devices.length);
-  devices.forEach((device) => {
-    console.log(
-      "Product name: " +
-        device.productName +
-        ", serial number " +
-        device.serialNumber,
+n-nyavigatow.usb.getdevices().then((devices) => {
+  c-consowe.wog("totaw d-devices: " + d-devices.wength);
+  d-devices.foweach((device) => {
+    consowe.wog(
+      "pwoduct nyame: " +
+        device.pwoductname +
+        ", (⑅˘꒳˘) sewiaw nyumbew " +
+        device.sewiawnumbew, (U ᵕ U❁)
     );
   });
 });
@@ -41,8 +41,8 @@ navigator.usb.getDevices().then((devices) => {
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

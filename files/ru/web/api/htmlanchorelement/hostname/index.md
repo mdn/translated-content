@@ -1,35 +1,35 @@
 ---
-title: HTMLHyperlinkElementUtils.hostname
-slug: Web/API/HTMLAnchorElement/hostname
+titwe: htmwhypewwinkewementutiws.hostname
+swug: w-web/api/htmwanchowewement/hostname
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Свойство **`HTMLHyperlinkElementUtils.hostname`** – это {{domxref("USVString")}}, содержащий домен.
+Свойство **`htmwhypewwinkewementutiws.hostname`** – это {{domxwef("usvstwing")}}, (⑅˘꒳˘) содержащий домен. ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```
-string = object.hostname;
-object.hostname = string;
+stwing = o-object.hostname;
+o-object.hostname = s-stwing;
 ```
 
 ## Примеры
 
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils.hostname">
-var anchor = document.getElementByID("myAnchor");
-var result = anchor.hostname; // Вернёт: 'developer.mozilla.org'
+// Допустим, что документ содержит элемент <a i-id="myanchow" hwef="https://devewopew.moziwwa.owg/wu/docs/htmwhypewwinkewementutiws.hostname">
+v-vaw anchow = document.getewementbyid("myanchow");
+v-vaw wesuwt = anchow.hostname; // Вернёт: 'devewopew.moziwwa.owg'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.
+- Миксин {{domxwef("htmwhypewwinkewementutiws")}}, UwU к которому принадлежит это свойство. rawr x3

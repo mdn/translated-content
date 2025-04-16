@@ -1,41 +1,41 @@
 ---
-title: Navigator.getGamepads()
-slug: Web/API/Navigator/getGamepads
+titwe: nyavigatow.getgamepads()
+swug: web/api/navigatow/getgamepads
 ---
 
-{{APIRef("Gamepad API")}}{{SeeCompatTable}}
+{{apiwef("gamepad a-api")}}{{seecompattabwe}}
 
-**`Navigator.getGamepads()`** метод, возвращающий массив {{ domxref("Gamepad") }} объектов, по одному для каждого геймпада, подключённому к устройству.
+**`navigatow.getgamepads()`** метод, σωσ возвращающий массив {{ d-domxwef("gamepad") }} объектов, σωσ по одному для каждого геймпада, >_< подключённому к устройству. :3
 
 ## Синтаксис
 
 ```
- var arrayGP = navigator.getGamepads();
+ vaw a-awwaygp = nyavigatow.getgamepads();
 ```
 
 ## Пример
 
 ```js
-window.addEventListener("gamepadconnected", function (e) {
-  var gp = navigator.getGamepads()[0];
-  console.log(
-    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    gp.index,
+w-window.addeventwistenew("gamepadconnected", (U ﹏ U) function (e) {
+  v-vaw gp = nyavigatow.getgamepads()[0];
+  c-consowe.wog(
+    "gamepad c-connected at index %d: %s. -.- %d b-buttons, (ˆ ﻌ ˆ)♡ %d axes.", (⑅˘꒳˘)
+    gp.index, (U ᵕ U❁)
     gp.id,
-    gp.buttons.length,
-    gp.axes.length,
+    gp.buttons.wength, -.-
+    gp.axes.wength, ^^;;
   );
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+- [using t-the gamepad api](/wu/docs/web/api/gamepad_api/using_the_gamepad_api)

@@ -1,74 +1,74 @@
 ---
-title: HTMLImageElement
-slug: Web/API/HTMLImageElement
+titwe: htmwimageewement
+swug: w-web/api/htmwimageewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Интерфейс **`HTMLImageElement`** предоставляет специальные свойства и методы (расширяя обычный интерфейс {{domxref("HTMLElement")}} ) для управления вёрсткой и отображением элемента {{HTMLElement("img")}}.
+Интерфейс **`htmwimageewement`** предоставляет специальные свойства и методы (расширяя обычный интерфейс {{domxwef("htmwewement")}} ) для управления вёрсткой и отображением элемента {{htmwewement("img")}}. (U ﹏ U)
 
-{{InheritanceDiagram(600,120)}}
+{{inhewitancediagwam(600,120)}}
 
 ## Свойства
 
-_Наследует свойства родителя, {{domxref("HTMLElement")}}._
+_Наследует свойства родителя, >w< {{domxwef("htmwewement")}}._
 
 | Имя                                                   | Тип                      | Описание                                                                                                                                                                                                            |
 | ----------------------------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `align`                                               | {{domxref("DOMString")}} | Указывает расположение картинки зависящее от окружающего контента. Возможные значения: `"left"`, `"right"`, `"justify"`, и `"center"`.                                                                              |
-| `alt`                                                 | {{domxref("DOMString")}} | Повторяет атрибут HTML [`alt`](/ru/docs/Web/HTML/Element/img#alt) указывающий на запасной контекст картинки.                                                                                                        |
-| `border`                                              | {{domxref("DOMString")}} | Ширина рамки вокруг картинки. Устарело и вместо него следует использовать свойство CSS {{cssxref("border")}}.                                                                                                       |
-| `complete` {{readonlyInline}}                         | {{domxref("Boolean")}}   | Возвращает true, если браузер закончил загрузку картинки с ошибкой или успешно. Также возвращает true, когда не установлено значение {{domxref("HTMLImageElement.src", "src")}}, во всех остальных случаях - false. |
-| `crossOrigin`                                         | {{domxref("DOMString")}} | Является {{domxref("DOMString")}}, с настройками CORS для этого элемента изображения. Дополнительная информация: [Атрибуты настроек CORS](/ru/docs/Web/HTML/Attributes/crossorigin).                                |
-| `currentSrc`{{readonlyInline}}{{experimental_inline}} | {{domxref("DOMString")}} | Возвращает {{domxref("DOMString")}} с URL-адресом текущего изображения (что может измениться, например, в ответ на запросы мультимедиа).                                                                            |
-| `height`                                              | `unsigned long`          | Отражает атрибут [`height`](/ru/docs/Web/HTML/Element/img#height) HTML, указывая визуализированную высоту изображения в пикселях CSS.                                                                               |
-| `hspace`                                              | `long`                   | Space to the left and right of the image.                                                                                                                                                                           |
-| `isMap`                                               | {{domxref("Boolean")}}   | Reflects the [`ismap`](/ru/docs/Web/HTML/Element/img#ismap) HTML attribute, indicating that the image is part of a server-side image map.                                                                           |
-| `longDesc`                                            | {{domxref("DOMString")}} | URI of a long description of the image.                                                                                                                                                                             |
-| `lowSrc`                                              | {{domxref("DOMString")}} | A reference to a low-quality (but faster to load) copy of the image.                                                                                                                                                |
-| `name`                                                | {{domxref("DOMString")}} |                                                                                                                                                                                                                     |
-| `naturalHeight` {{readonlyInline}}                    | `unsigned long`          | Intrinsic height of the image in CSS pixels, if it is available; otherwise, `0`.                                                                                                                                    |
-| `naturalWidth` {{readonlyInline}}                     | `unsigned long`          | Intrinsic width of the image in CSS pixels, if it is available; otherwise, `0`.                                                                                                                                     |
-| `src`                                                 | {{domxref("DOMString")}} | Reflects the [`src`](/ru/docs/Web/HTML/Global_attributes#src) HTML attribute, containing the URL of the image.                                                                                                      |
-| `srcset` {{experimental_inline}}                      |                          |                                                                                                                                                                                                                     |
-| `useMap`                                              | {{domxref("DOMString")}} | Reflects the [`usemap`](/ru/docs/Web/HTML/Element/img#usemap) HTML attribute, containing a partial URL of a map element.                                                                                            |
-| `vspace`                                              | `long`                   | Space above and below the image.                                                                                                                                                                                    |
-| `width`                                               | `unsigned long`          | Reflects the [`width`](/ru/docs/Web/HTML/Element/img#width) HTML attribute, indicating the rendered width of the image in CSS pixels.                                                                               |
-| `x` {{readonlyInline}}{{non-standard_inline}}         | `long`                   | The horizontal offset from the nearest layer. (Mimic an old Netscape 4 behavior)                                                                                                                                    |
-| `y` {{readonlyInline}}{{non-standard_inline}}         | `long`                   | The vertical offset from the nearest layer. (Mimic an old Netscape 4 behavior)                                                                                                                                      |
+| `awign`                                               | {{domxwef("domstwing")}} | Указывает расположение картинки зависящее от окружающего контента. mya Возможные значения: `"weft"`, >w< `"wight"`, nyaa~~ `"justify"`, (✿oωo) и `"centew"`. ʘwʘ                                                                              |
+| `awt`                                                 | {{domxwef("domstwing")}} | Повторяет атрибут h-htmw [`awt`](/wu/docs/web/htmw/ewement/img#awt) указывающий на запасной контекст картинки. (ˆ ﻌ ˆ)♡                                                                                                        |
+| `bowdew`                                              | {{domxwef("domstwing")}} | Ширина рамки вокруг картинки. 😳😳😳 Устарело и вместо него следует использовать свойство c-css {{cssxwef("bowdew")}}. :3                                                                                                       |
+| `compwete` {{weadonwyinwine}}                         | {{domxwef("boowean")}}   | Возвращает t-twue, OwO если браузер закончил загрузку картинки с ошибкой или успешно. (U ﹏ U) Также возвращает t-twue, >w< когда не установлено значение {{domxwef("htmwimageewement.swc", (U ﹏ U) "swc")}}, во всех остальных случаях - f-fawse. 😳 |
+| `cwossowigin`                                         | {{domxwef("domstwing")}} | Является {{domxwef("domstwing")}}, (ˆ ﻌ ˆ)♡ с настройками c-cows для этого элемента изображения. 😳😳😳 Дополнительная информация: [Атрибуты настроек cows](/wu/docs/web/htmw/attwibutes/cwossowigin). (U ﹏ U)                                |
+| `cuwwentswc`{{weadonwyinwine}}{{expewimentaw_inwine}} | {{domxwef("domstwing")}} | Возвращает {{domxwef("domstwing")}} с uww-адресом текущего изображения (что может измениться, (///ˬ///✿) например, 😳 в ответ на запросы мультимедиа). 😳                                                                            |
+| `height`                                              | `unsigned wong`          | Отражает атрибут [`height`](/wu/docs/web/htmw/ewement/img#height) htmw, σωσ указывая визуализированную высоту изображения в пикселях c-css. rawr x3                                                                               |
+| `hspace`                                              | `wong`                   | space to the weft and wight of t-the image.                                                                                                                                                                           |
+| `ismap`                                               | {{domxwef("boowean")}}   | wefwects t-the [`ismap`](/wu/docs/web/htmw/ewement/img#ismap) htmw attwibute, OwO indicating that the image i-is pawt of a sewvew-side image m-map. /(^•ω•^)                                                                           |
+| `wongdesc`                                            | {{domxwef("domstwing")}} | u-uwi of a wong descwiption of the image. 😳😳😳                                                                                                                                                                             |
+| `wowswc`                                              | {{domxwef("domstwing")}} | a wefewence to a wow-quawity (but f-fastew to woad) copy of the image. ( ͡o ω ͡o )                                                                                                                                                |
+| `name`                                                | {{domxwef("domstwing")}} |                                                                                                                                                                                                                     |
+| `natuwawheight` {{weadonwyinwine}}                    | `unsigned wong`          | intwinsic h-height of the image in css pixews, >_< i-if it is avaiwabwe; o-othewwise, >w< `0`.                                                                                                                                    |
+| `natuwawwidth` {{weadonwyinwine}}                     | `unsigned w-wong`          | i-intwinsic width of the image in css pixews, rawr i-if it is avaiwabwe; othewwise, 😳 `0`.                                                                                                                                     |
+| `swc`                                                 | {{domxwef("domstwing")}} | wefwects the [`swc`](/wu/docs/web/htmw/gwobaw_attwibutes#swc) h-htmw attwibute, >w< containing the uww of the image. (⑅˘꒳˘)                                                                                                      |
+| `swcset` {{expewimentaw_inwine}}                      |                          |                                                                                                                                                                                                                     |
+| `usemap`                                              | {{domxwef("domstwing")}} | wefwects the [`usemap`](/wu/docs/web/htmw/ewement/img#usemap) htmw attwibute, OwO c-containing a pawtiaw uww of a m-map ewement. (ꈍᴗꈍ)                                                                                            |
+| `vspace`                                              | `wong`                   | s-space above and b-bewow the image. 😳                                                                                                                                                                                    |
+| `width`                                               | `unsigned wong`          | wefwects the [`width`](/wu/docs/web/htmw/ewement/img#width) h-htmw attwibute, 😳😳😳 i-indicating the wendewed width o-of the image i-in css pixews. mya                                                                               |
+| `x` {{weadonwyinwine}}{{non-standawd_inwine}}         | `wong`                   | the howizontaw o-offset fwom the nyeawest wayew. mya (mimic a-an owd nyetscape 4 behaviow)                                                                                                                                    |
+| `y` {{weadonwyinwine}}{{non-standawd_inwine}}         | `wong`                   | the vewticaw o-offset fwom the nyeawest wayew. (⑅˘꒳˘) (mimic a-an owd nyetscape 4 behaviow)                                                                                                                                      |
 
 ## Методы
 
-_Наследует методы родителя, {{domxref("HTMLElement")}}._
+_Наследует методы родителя, (U ﹏ U) {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLImageElement.Image()")}}
-  - : The `Image()` constructor, taking two optional `unsigned` `long`, the width and the height of the resource, creates an instance of `HTMLImageElement` not inserted in a DOM tree.
+- {{domxwef("htmwimageewement.image()")}}
+  - : t-the `image()` c-constwuctow, mya taking two optionaw `unsigned` `wong`, ʘwʘ the width and the height of the wesouwce, (˘ω˘) cweates an instance of `htmwimageewement` n-nyot insewted i-in a dom twee. (U ﹏ U)
 
 ## Пример
 
 ```js
-var img1 = new Image(); // Конструктор HTML5
-img1.src = "image1.png";
-img1.alt = "alt";
-document.body.appendChild(img1);
+vaw img1 = n-new image(); // Конструктор h-htmw5
+i-img1.swc = "image1.png";
+img1.awt = "awt";
+document.body.appendchiwd(img1);
 
-var img2 = document.createElement("img"); // Используем HTMLImageElement
-img2.src = "image2.jpg";
-img2.alt = "alt text";
-document.body.appendChild(img2);
+vaw i-img2 = document.cweateewement("img"); // Используем htmwimageewement
+img2.swc = "image2.jpg";
+img2.awt = "awt text";
+d-document.body.appendchiwd(img2);
 
 // выбираем первое изображение на странице
-alert(document.images[0].src);
+awewt(document.images[0].swc);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Элемент HTML, реализующий этот интерфейс: {{HTMLElement("img")}}
+- Элемент h-htmw, ^•ﻌ•^ реализующий этот интерфейс: {{htmwewement("img")}}

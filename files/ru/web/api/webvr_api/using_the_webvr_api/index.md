@@ -1,488 +1,488 @@
 ---
-title: Использование WebVR API
-slug: Web/API/WebVR_API/Using_the_WebVR_API
+titwe: Использование webvw api
+swug: w-web/api/webvw_api/using_the_webvw_api
 ---
 
-{{APIRef("WebVR API")}}
+{{apiwef("webvw a-api")}}
 
-WebVR API - фантастическое дополнение к набору инструментов веб-разработчика, позволяющее отображать WebGL сцены на устройствах виртуальной реальности, таких как Oculus Rift и HTC Vive. Но как же начать разработку VR для Веба? Эта статья познакомит вас с основами.
+webvw api - фантастическое дополнение к набору инструментов веб-разработчика, rawr x3 позволяющее отображать w-webgw сцены на устройствах виртуальной реальности, (ˆ ﻌ ˆ)♡ таких как o-ocuwus w-wift и htc vive. rawr Но как же начать разработку v-vw для Веба? Эта статья познакомит вас с основами. :3
 
-> [!NOTE]
-> Наиболее стабильная версия WebVR API — 1.1 — была недавно реализована в Firefox 55 (для Windows в релизной версии, для Mac OS X только в Nightly версии). Так же она доступна в Chrome при использовании Google Daydream. Существует спецификация для следующей версии — 2.0 — но процесс разработки всё ещё находится на ранней стадии. Последнюю информацию можно найти на [WebVR Spec Version List](https://w3c.github.io/webvr/).
+> [!note]
+> Наиболее стабильная версия w-webvw a-api — 1.1 — была недавно реализована в fiwefox 55 (для windows в релизной версии, rawr для mac os x только в n-nyightwy версии). (˘ω˘) Так же она доступна в chwome при использовании googwe d-daydweam. Существует спецификация для следующей версии — 2.0 — но процесс разработки всё ещё находится на ранней стадии. (ˆ ﻌ ˆ)♡ Последнюю информацию можно найти на [webvw spec vewsion wist](https://w3c.github.io/webvw/). mya
 
 ## С чего начать
 
 Для начала вам понадобится:
 
-- Устройство с поддержкой VR.
+- Устройство с поддержкой v-vw. (U ᵕ U❁)
 
-  - Самым дешёвым вариантом будет использовать мобильное устройство, какое-нибудь крепление (например, Google Cardboard) и подходящий браузер. Ощущения будут не такие яркие, как от специализированного устройства, но зато вам не понадобится приобретать мощный компьютер или отдельный VR дисплей.
-  - Специализированное устройство может быть дорогим, но зато ощущения будут лучше. Наиболее WebVR-совместимые устройства на данный момент: HTC VIVE, The Oculus Rift. Дополнительную информацию о доступных устройствах и их поддержке браузерами можно найти на [webvr.info](https://webvr.info/).
+  - Самым дешёвым вариантом будет использовать мобильное устройство, mya какое-нибудь крепление (например, ʘwʘ googwe cawdboawd) и подходящий браузер. (˘ω˘) Ощущения будут не такие яркие, 😳 как от специализированного устройства, òωó но зато вам не понадобится приобретать мощный компьютер или отдельный vw дисплей. nyaa~~
+  - Специализированное устройство может быть дорогим, o.O но зато ощущения будут лучше. nyaa~~ Наиболее webvw-совместимые устройства на данный момент: h-htc vive, (U ᵕ U❁) the ocuwus wift. 😳😳😳 Дополнительную информацию о доступных устройствах и их поддержке браузерами можно найти на [webvw.info](https://webvw.info/).
 
-- Компьютер с мощностью, достаточной для соответствующего рендеринга/отображения VR сцен, если вы всё-таки решите воспользоваться специализированным устройством. Чтобы получить некоторое представление о системных требованиях, поищите соответствующие руководства для VR платформы, которую вы думаете использовать. В качестве примера: [VIVE READY Computers](https://www.vive.com/us/ready/).
-- Подходящий браузер. Последние версии [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/) и [Chrome](https://www.google.com/chrome/index.html) на данные момент являются лучшими вариантами, как для ПК, так и для мобильных устройств.
+- Компьютер с мощностью, (U ﹏ U) достаточной для соответствующего рендеринга/отображения v-vw сцен, ^•ﻌ•^ если вы всё-таки решите воспользоваться специализированным устройством. (⑅˘꒳˘) Чтобы получить некоторое представление о системных требованиях, >_< поищите соответствующие руководства для v-vw платформы, (⑅˘꒳˘) которую вы думаете использовать. σωσ В качестве примера: [vive weady computews](https://www.vive.com/us/weady/). 🥺
+- Подходящий браузер. :3 Последние версии [fiwefox nyightwy](https://www.moziwwa.owg/en-us/fiwefox/channew/desktop/) и [chwome](https://www.googwe.com/chwome/index.htmw) на данные момент являются лучшими вариантами, (ꈍᴗꈍ) как для ПК, ^•ﻌ•^ так и для мобильных устройств. (˘ω˘)
 
-После того, как вы всё подготовили, можете проверить всё ли работает как следует. Для этого надо открыть [простой A-Frame пример](https://mdn.github.io/webvr-tests/aframe-demo/) и убедиться, что сцена отображается и что можно перейти в VR режим по нажатию на кнопку в правом нижнем углу.
+После того, 🥺 как вы всё подготовили, (✿oωo) можете проверить всё ли работает как следует. XD Для этого надо открыть [простой a-fwame пример](https://mdn.github.io/webvw-tests/afwame-demo/) и убедиться, (///ˬ///✿) что сцена отображается и что можно перейти в vw режим по нажатию на кнопку в правом нижнем углу. ( ͡o ω ͡o )
 
-Фреймворк [A-Frame](https://aframe.io/) является лучшим вариантом, если вы хотите быстро создать WebVR-совместимую сцену, не углубляясь в огромное количество JavaScript-кода. Однако, пользуясь им, вы не узнаете о работе с чистым WebVR API, а именно этим мы сейчас и займёмся.
+Фреймворк [a-fwame](https://afwame.io/) является лучшим вариантом, ʘwʘ если вы хотите быстро создать webvw-совместимую сцену, rawr не углубляясь в огромное количество j-javascwipt-кода. o.O Однако, ^•ﻌ•^ пользуясь им, (///ˬ///✿) вы не узнаете о работе с чистым webvw api, (ˆ ﻌ ˆ)♡ а именно этим мы сейчас и займёмся. XD
 
-## Introducing our demo
+## intwoducing ouw demo
 
-Рассмотрим как работает WebVR API на примере, проекте raw-webgl-example, который выглядит похожим образом:
+Рассмотрим как работает webvw api на примере, (✿oωo) проекте w-waw-webgw-exampwe, -.- который выглядит похожим образом:
 
-![](capture1.png)
+![](captuwe1.png)
 
-> [!NOTE]
-> Вы можете найти [исходный код примера](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) на GitHub, а так же [посмотреть как он работает прямо в браузере](https://mdn.github.io/webvr-tests/raw-webgl-example/).
+> [!note]
+> Вы можете найти [исходный код примера](https://github.com/mdn/webvw-tests/twee/mastew/waw-webgw-exampwe) на github, XD а так же [посмотреть как он работает прямо в браузере](https://mdn.github.io/webvw-tests/waw-webgw-exampwe/). (✿oωo)
 
-> [!NOTE]
-> Если вы решили просто посмотреть на этот пример, не подключая VR устройство и не используя Firefox , то есть вероятность, что он не будет корректно отображаться при том, что [простой A-Frame пример](https://mdn.github.io/webvr-tests/aframe-demo/) работает. В таком случае установите одну из последних версий Firefox, и пример должен отобразиться как на рисунке выше, плюс должна присутствовать анимация.
+> [!note]
+> Если вы решили просто посмотреть на этот пример, (˘ω˘) не подключая v-vw устройство и не используя f-fiwefox , (ˆ ﻌ ˆ)♡ то есть вероятность, >_< что он не будет корректно отображаться при том, -.- что [простой a-a-fwame пример](https://mdn.github.io/webvw-tests/afwame-demo/) работает. (///ˬ///✿) В таком случае установите одну из последних версий f-fiwefox, XD и пример должен отобразиться как на рисунке выше, ^^;; плюс должна присутствовать анимация. rawr x3
 
-> [!NOTE]
-> Если WebVR не работает в вашем браузере, то возможно вам следует убедиться, что работа идёт через видеокарту. Например, для видеокарт фирмы NVIDIA, если у вас успешно установлена панель управления NVIDIA, по клику правой кнопки на ярлык Firefox появится контекстное меню, в котором можно будет выбрать _Run with graphics processor > High-performance NVIDIA processor_.
+> [!note]
+> Если webvw не работает в вашем браузере, OwO то возможно вам следует убедиться, ʘwʘ что работа идёт через видеокарту. rawr Например, UwU для видеокарт фирмы nyvidia, (ꈍᴗꈍ) если у вас успешно установлена панель управления nyvidia, по клику правой кнопки на ярлык f-fiwefox появится контекстное меню, (✿oωo) в котором можно будет выбрать _wun with gwaphics pwocessow > h-high-pewfowmance nvidia pwocessow_. (⑅˘꒳˘)
 
-Наш пример это своеобразный святой Грааль примеров WebGL — вращающийся куб в 3D. Реализован этот пример с помощью чистого [WebGL API](/ru/docs/Web/API/WebGL_API). Мы не будем объяснять основы JavaScript или WebGL, а только то, что касается WebVR.
+Наш пример это своеобразный святой Грааль примеров webgw — вращающийся куб в 3d. OwO Реализован этот пример с помощью чистого [webgw api](/wu/docs/web/api/webgw_api). 🥺 Мы не будем объяснять основы javascwipt или webgw, >_< а только то, (ꈍᴗꈍ) что касается webvw. 😳
 
 Так же в нашем примере присутствуют:
 
-- Кнопка для начала (и окончания) отображения сцены на VR дисплее.
-- Кнопка, показывающая и скрывающая обновляемые в реальном времени данные о положении и направлении VR устройства.
+- Кнопка для начала (и окончания) отображения сцены на v-vw дисплее. 🥺
+- Кнопка, nyaa~~ показывающая и скрывающая обновляемые в реальном времени данные о положении и направлении vw устройства. ^•ﻌ•^
 
-При просмотре исходного кода [основного JavaScript файла нашего примера](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js), вы легко сможете найти части, относящиеся к WebVR, по предваряющим их комментариям. Просто забейте в строку поиска по документу строчку "WebVR".
+При просмотре исходного кода [основного javascwipt файла нашего примера](https://github.com/mdn/webvw-tests/bwob/mastew/waw-webgw-exampwe/webgw-demo.js), (ˆ ﻌ ˆ)♡ вы легко сможете найти части, (U ᵕ U❁) относящиеся к w-webvw, mya по предваряющим их комментариям. 😳 Просто забейте в строку поиска по документу строчку "webvw". σωσ
 
-> [!NOTE]
-> Чтобы узнать больше об основах JavaScript и WebGL, обратитесь к нашим [учебным материалам по JavaScript](/ru/docs/Learn/JavaScript) и нашему [руководству по WebGL](/ru/docs/Web/API/WebGL_API/Tutorial).
+> [!note]
+> Чтобы узнать больше об основах j-javascwipt и w-webgw, ( ͡o ω ͡o ) обратитесь к нашим [учебным материалам по javascwipt](/wu/docs/weawn/javascwipt) и нашему [руководству по webgw](/wu/docs/web/api/webgw_api/tutowiaw). XD
 
 ## Как это работает?
 
-Пока что, давайте взглянем на части кода, связанные с WebVR.
+Пока что, :3 давайте взглянем на части кода, :3 связанные с webvw. (⑅˘꒳˘)
 
-Типичное (простое) WebVR приложение работает следующим образом:
+Типичное (простое) w-webvw приложение работает следующим образом:
 
-1. {{domxref("Navigator.getVRDisplays()")}} используется для получения ссылки на ваше VR устройство.
-2. {{domxref("VRDisplay.requestPresent()")}} используется для начала отображения сцены на VR устройстве.
-3. {{domxref("VRDisplay.requestAnimationFrame()")}} используется при создании цикла отображения кадров анимации с правильной для выбранного устройства частотой обновления.
-4. Внутри цикла сначала, для получения данных необходимых для отображения кадра, используется ({{domxref("VRDisplay.getFrameData()")}}). Затем сцена отрисовывается дважды (по разу для каждого глаза в соответствующей ему области видимости), а потом отображается с помощью функции ({{domxref("VRDisplay.submitFrame()")}}).
+1. òωó {{domxwef("navigatow.getvwdispways()")}} используется для получения ссылки на ваше v-vw устройство. mya
+2. {{domxwef("vwdispway.wequestpwesent()")}} используется для начала отображения сцены на vw устройстве. 😳😳😳
+3. {{domxwef("vwdispway.wequestanimationfwame()")}} используется при создании цикла отображения кадров анимации с правильной для выбранного устройства частотой обновления. :3
+4. Внутри цикла сначала, >_< для получения данных необходимых для отображения кадра, 🥺 используется ({{domxwef("vwdispway.getfwamedata()")}}). (ꈍᴗꈍ) Затем сцена отрисовывается дважды (по разу для каждого глаза в соответствующей ему области видимости), rawr x3 а потом отображается с помощью функции ({{domxwef("vwdispway.submitfwame()")}}). (U ﹏ U)
 
-In the below sections we'll look at our raw-webgl-demo in detail, and see where exactly the above features are used.
+i-in the bewow s-sections we'ww wook at ouw waw-webgw-demo i-in detaiw, ( ͡o ω ͡o ) and see w-whewe exactwy the above featuwes awe used. 😳😳😳
 
-### Starting with some variables
+### s-stawting with some vawiabwes
 
-The first WebVR-related code you'll meet is this following block:
+the f-fiwst webvw-wewated code you'ww m-meet is this fowwowing b-bwock:
 
 ```js
-// WebVR variables
+// webvw vawiabwes
 
-var frameData = new VRFrameData();
-var vrDisplay;
-var btn = document.querySelector(".stop-start");
-var normalSceneFrame;
-var vrSceneFrame;
+vaw fwamedata = nyew vwfwamedata();
+vaw vwdispway;
+vaw btn = document.quewysewectow(".stop-stawt");
+vaw n-nyowmawscenefwame;
+v-vaw vwscenefwame;
 
-var poseStatsBtn = document.querySelector(".pose-stats");
-var poseStatsSection = document.querySelector("section");
-poseStatsSection.style.visibility = "hidden"; // hide it initially
+vaw posestatsbtn = d-document.quewysewectow(".pose-stats");
+v-vaw posestatssection = d-document.quewysewectow("section");
+posestatssection.stywe.visibiwity = "hidden"; // hide it initiawwy
 
-var posStats = document.querySelector(".pos");
-var orientStats = document.querySelector(".orient");
-var linVelStats = document.querySelector(".lin-vel");
-var linAccStats = document.querySelector(".lin-acc");
-var angVelStats = document.querySelector(".ang-vel");
-var angAccStats = document.querySelector(".ang-acc");
-var poseStatsDisplayed = false;
+v-vaw posstats = document.quewysewectow(".pos");
+vaw owientstats = document.quewysewectow(".owient");
+vaw winvewstats = d-document.quewysewectow(".win-vew");
+vaw winaccstats = d-document.quewysewectow(".win-acc");
+v-vaw angvewstats = d-document.quewysewectow(".ang-vew");
+vaw angaccstats = d-document.quewysewectow(".ang-acc");
+v-vaw p-posestatsdispwayed = f-fawse;
 ```
 
-Let's briefly explain these:
+wet's bwiefwy expwain these:
 
-- `frameData` contains a {{domxref("VRFrameData")}} object, created using the {{domxref("VRFrameData.VRFrameData", "VRFrameData()")}} constructor. This is initially empty, but will later contain the data required to render each frame to show in the VR display, updated constantly as the rendering loop runs.
-- `vrDisplay` starts uninitialized, but will later on hold a reference to our VR headset ({{domxref("VRDisplay")}} — the central control object of the API).
-- `btn` and `poseStatsBtn` hold references to the two buttons we are using to control our app.
-- `normalSceneFrame` and `vrSceneFrame` start uninitialized, but later on will hold references to {{domxref("Window.requestAnimationFrame()")}} and {{domxref("VRDisplay.requestAnimationFrame()")}} calls — these will initiate the running of a normal rendering loop, and a special WebVR rendering loop; we'll explain the difference between these two later on.
-- The other variables store references to different parts of the VR pose data display box, which you can see in the bottom right hand corner of the UI.
+- `fwamedata` c-contains a-a {{domxwef("vwfwamedata")}} o-object, 🥺 cweated u-using the {{domxwef("vwfwamedata.vwfwamedata", òωó "vwfwamedata()")}} c-constwuctow. XD this is initiawwy empty, XD but wiww watew contain t-the data wequiwed to wendew each fwame to show in the vw dispway, ( ͡o ω ͡o ) updated constantwy as the wendewing w-woop wuns. >w<
+- `vwdispway` stawts uninitiawized, mya but wiww watew on howd a w-wefewence to ouw v-vw headset ({{domxwef("vwdispway")}} — t-the centwaw contwow object o-of the api). (ꈍᴗꈍ)
+- `btn` and `posestatsbtn` h-howd w-wefewences to the two buttons we awe using to contwow ouw app.
+- `nowmawscenefwame` and `vwscenefwame` stawt u-uninitiawized, -.- but watew on wiww h-howd wefewences to {{domxwef("window.wequestanimationfwame()")}} a-and {{domxwef("vwdispway.wequestanimationfwame()")}} c-cawws — these wiww initiate the wunning o-of a nyowmaw wendewing w-woop, (⑅˘꒳˘) and a speciaw webvw w-wendewing woop; w-we'ww expwain the diffewence between these two watew on. (U ﹏ U)
+- the othew vawiabwes s-stowe wefewences t-to diffewent pawts o-of the vw pose data dispway b-box, σωσ which you c-can see in the bottom wight hand c-cownew of the ui. :3
 
-### Getting a reference to our VR display
+### getting a wefewence to ouw vw dispway
 
-One of the major functions inside our code is `start()` — we run this function when the body has finished loading:
+one of the majow f-functions inside o-ouw code is `stawt()` — we wun this function w-when the body has f-finished woading:
 
 ```js
-// start
+// stawt
 //
-// Called when the body has loaded is created to get the ball rolling.
+// cawwed when the body has w-woaded is cweated to get the baww wowwing. /(^•ω•^)
 
-document.body.onload = start;
+document.body.onwoad = stawt;
 ```
 
-To begin with, `start()` retrieves a WebGL context to use to render 3D graphics into the {{htmlelement("canvas")}} element in [our HTML](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/index.html). We then check whether the `gl` context is available — if so, we run a number of functions to set up the scene for display.
+to begin with, σωσ `stawt()` w-wetwieves a webgw context to use to wendew 3d g-gwaphics i-into the {{htmwewement("canvas")}} ewement in [ouw htmw](https://github.com/mdn/webvw-tests/bwob/mastew/waw-webgw-exampwe/index.htmw). (U ᵕ U❁) we then c-check whethew the `gw` c-context is avaiwabwe — if so, 😳 we wun a nyumbew of functions t-to set up the scene fow dispway. ʘwʘ
 
 ```js
-function start() {
-  canvas = document.getElementById("glcanvas");
+f-function stawt() {
+  canvas = document.getewementbyid("gwcanvas");
 
-  initWebGL(canvas);      // Initialize the GL context
+  initwebgw(canvas);      // initiawize t-the gw context
 
-  // WebGL setup code here
+  // webgw s-setup code h-hewe
 ```
 
-Next, we start the process of actually rendering the scene onto the canvas, by setting the canvas to fill the entire browser viewport, and running the rendering loop (`drawScene()`) for the first time. This is the non-WebVR — normal — rendering loop.
+nyext, (⑅˘꒳˘) we stawt the pwocess o-of actuawwy wendewing the s-scene onto the canvas, ^•ﻌ•^ b-by setting t-the canvas to fiww the entiwe b-bwowsew viewpowt, nyaa~~ a-and wunning the wendewing woop (`dwawscene()`) fow the fiwst time. XD t-this is the n-nyon-webvw — n-nyowmaw — wendewing woop. /(^•ω•^)
 
 ```js
-// draw the scene normally, without WebVR - for those who don't have it and want to see the scene in their browser
+// dwaw the scene n-nyowmawwy, (U ᵕ U❁) without webvw - f-fow those who don't h-have it and want to see the scene in theiw bwowsew
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-drawScene();
+canvas.width = w-window.innewwidth;
+c-canvas.height = w-window.innewheight;
+d-dwawscene();
 ```
 
-Now onto our first WebVR-specific code. First of all, we check to see if {{domxref("Navigator.getVRDisplays")}} exists — this is the entry point into the API, and therefore good basic feature detection for WebVR. You'll see at the end of the block (inside the `else` clause) that if this doesn't exist, we log a message to indicate that WebVR 1.1 isn't supported by the browser.
+nyow onto ouw fiwst w-webvw-specific code. mya fiwst of aww, (ˆ ﻌ ˆ)♡ we check to see if {{domxwef("navigatow.getvwdispways")}} exists — this is the entwy point i-into the api, (✿oωo) and thewefowe g-good basic featuwe detection fow w-webvw. (✿oωo) you'ww see at the end of t-the bwock (inside the `ewse` cwause) t-that if this d-doesn't exist, òωó w-we wog a message t-to indicate that w-webvw 1.1 isn't suppowted by the bwowsew. (˘ω˘)
 
 ```js
-    // WebVR: Check to see if WebVR is supported
-    if(navigator.getVRDisplays) {
-      console.log('WebVR 1.1 supported');
+    // webvw: check to see if webvw is suppowted
+    if(navigatow.getvwdispways) {
+      c-consowe.wog('webvw 1.1 s-suppowted');
 ```
 
-Inside our `if() { ... }` block, we run the {{domxref("Navigator.getVRDisplays()")}} function. This returns a promise, which is fulfilled with an array containing all the VR display devices connected to the computer. If none are connected, the array will be empty.
+i-inside ouw `if() { ... }` bwock, (ˆ ﻌ ˆ)♡ we wun the {{domxwef("navigatow.getvwdispways()")}} f-function. ( ͡o ω ͡o ) this wetuwns a pwomise, rawr x3 which is fuwfiwwed w-with an awway containing a-aww the vw dispway devices c-connected to the computew. (˘ω˘) if nyone awe connected, òωó t-the awway w-wiww be empty. ( ͡o ω ͡o )
 
 ```js
-      // Then get the displays attached to the computer
-      navigator.getVRDisplays().then(function(displays) {
+      // then get the dispways a-attached t-to the computew
+      nyavigatow.getvwdispways().then(function(dispways) {
 ```
 
-Inside the promise `then()` block, we check whether the array length is more than 0; if so, we set the value of our `vrDisplay` variable to the 0 index item inside the array. `vrDisplay` now contains a {{domxref("VRDisplay")}} object representing our connected display!
+inside the pwomise `then()` bwock, σωσ we check whethew t-the awway wength i-is mowe than 0; i-if so, (U ﹏ U) we set t-the vawue of o-ouw `vwdispway` vawiabwe to the 0 i-index item inside t-the awway. rawr `vwdispway` nyow c-contains a {{domxwef("vwdispway")}} o-object wepwesenting ouw connected d-dispway! -.-
 
 ```js
-        // If a display is available, use it to present the scene
-        if(displays.length > 0) {
-          vrDisplay = displays[0];
-          console.log('Display found');
+        // if a dispway is avaiwabwe, ( ͡o ω ͡o ) use i-it to pwesent the scene
+        i-if(dispways.wength > 0) {
+          v-vwdispway = dispways[0];
+          c-consowe.wog('dispway found');
 ```
 
-> [!NOTE]
-> It is unlikely that you'll have multiple VR displays connected to your computer, and this is just a simple demo, so this will do for now.
+> [!note]
+> it is unwikewy t-that you'ww h-have muwtipwe vw d-dispways connected to youw computew, >_< and this is just a simpwe d-demo, o.O so this wiww do fow nyow. σωσ
 
-### Starting and stopping the VR presentation
+### stawting and s-stopping the v-vw pwesentation
 
-Now we have a {{domxref("VRDisplay")}} object, we can use it do a number of things. The next thing we want to do is wire up functionality to start and stop presentation of the WebGL content to the display.
+nyow we have a {{domxwef("vwdispway")}} o-object, -.- we can use it do a-a nyumbew of things. σωσ t-the nyext thing we want to do is wiwe up f-functionawity to stawt and stop pwesentation of t-the webgw content t-to the dispway. :3
 
-Continuing on with the previous code block, we now add an event listener to our start/stop button (`btn`) — when this button is clicked we want to check whether we are presenting to the display already (we do this in a fairly dumb fashion, by checking what the button [`textContent`](/ru/docs/Web/API/Node/textContent) contains).
+continuing on w-with the pwevious code bwock, ^^ we n-nyow add an event w-wistenew to o-ouw stawt/stop button (`btn`) — when this button is cwicked we want to check whethew we awe pwesenting to the dispway awweady (we do this in a faiwwy dumb fashion, òωó by checking nyani the button [`textcontent`](/wu/docs/web/api/node/textcontent) contains). (ˆ ﻌ ˆ)♡
 
-If the display is not already presenting, we use the {{domxref("VRDisplay.requestPresent()")}} method to request that the browser start presenting content to the display. This takes as a parameter an array of the {{domxref("VRLayerInit")}} objects representing the layers you want to present in the display.
+if the dispway i-is nyot awweady p-pwesenting, XD we use the {{domxwef("vwdispway.wequestpwesent()")}} method to wequest t-that the bwowsew s-stawt pwesenting c-content to the dispway. òωó this t-takes as a pawametew an awway o-of the {{domxwef("vwwayewinit")}} o-objects wepwesenting the wayews y-you want to pwesent in the dispway. (ꈍᴗꈍ)
 
-Since the maximum number of layers you can display is currently 1, and the only required object member is the {{domxref("VRLayerInit.source")}} property (which is a reference to the {{htmlelement("canvas")}} you want to present in that layer; the other parameters are given sensible defaults — see {{domxref("VRLayerInit.leftBounds", "leftBounds")}} and {{domxref("VRLayerInit.rightBounds", "rightBounds")}})), the parameter is simply \[{ source: canvas }].
+s-since the m-maximum nyumbew of wayews you can dispway is cuwwentwy 1, a-and t-the onwy wequiwed o-object membew i-is the {{domxwef("vwwayewinit.souwce")}} p-pwopewty (which i-is a wefewence t-to the {{htmwewement("canvas")}} y-you want t-to pwesent in that wayew; the o-othew pawametews a-awe given sensibwe d-defauwts — see {{domxwef("vwwayewinit.weftbounds", UwU "weftbounds")}} a-and {{domxwef("vwwayewinit.wightbounds", "wightbounds")}})), >w< the pawametew is simpwy \[{ s-souwce: canvas }]. ʘwʘ
 
-`requestPresent()` returns a promise that is fulfilled when the presentation begins successfully.
+`wequestpwesent()` wetuwns a-a pwomise that i-is fuwfiwwed when t-the pwesentation begins successfuwwy. :3
 
 ```js
-          // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-          btn.addEventListener('click', function() {
-            if(btn.textContent === 'Start VR display') {
-              vrDisplay.requestPresent([{ source: canvas }]).then(function() {
-                console.log('Presenting to WebVR display');
+          // s-stawting the pwesentation w-when the button is cwicked: i-it can onwy be cawwed in wesponse t-to a usew gestuwe
+          btn.addeventwistenew('cwick', ^•ﻌ•^ function() {
+            if(btn.textcontent === 'stawt vw dispway') {
+              v-vwdispway.wequestpwesent([{ souwce: c-canvas }]).then(function() {
+                c-consowe.wog('pwesenting to webvw dispway');
 ```
 
-With our presentation request successful, we now want to start setting up to render content to present to the VRDisplay. First of all we set the canvas to the same size as the VR display area. We do this by getting the {{domxref("VREyeParameters")}} for both eyes using {{domxref("VRDisplay.getEyeParameters()")}}.
+with ouw pwesentation w-wequest successfuw, (ˆ ﻌ ˆ)♡ we n-nyow want to stawt s-setting up to w-wendew content to pwesent to the vwdispway. 🥺 fiwst o-of aww we set t-the canvas to the same size as t-the vw dispway awea. OwO we do this by getting the {{domxwef("vweyepawametews")}} fow b-both eyes using {{domxwef("vwdispway.geteyepawametews()")}}. 🥺
 
-We then do some simple math to calculate the total width of the VRDisplay rendering area based on the eye {{domxref("VREyeParameters.renderWidth")}} and {{domxref("VREyeParameters.renderHeight")}}.
+we then do some s-simpwe math to c-cawcuwate the totaw w-width of the vwdispway wendewing a-awea based o-on the eye {{domxwef("vweyepawametews.wendewwidth")}} a-and {{domxwef("vweyepawametews.wendewheight")}}. OwO
 
 ```js
-// Set the canvas size to the size of the vrDisplay viewport
+// s-set the canvas size to the size o-of the vwdispway v-viewpowt
 
-var leftEye = vrDisplay.getEyeParameters("left");
-var rightEye = vrDisplay.getEyeParameters("right");
+vaw w-wefteye = vwdispway.geteyepawametews("weft");
+v-vaw w-wighteye = vwdispway.geteyepawametews("wight");
 
-canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
-canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
+c-canvas.width = m-math.max(wefteye.wendewwidth, w-wighteye.wendewwidth) * 2;
+canvas.height = m-math.max(wefteye.wendewheight, (U ᵕ U❁) wighteye.wendewheight);
 ```
 
-Next, we {{domxref("Window.cancelAnimationFrame()", "cancel the animation loop")}} previously set in motion by the {{domxref("Window.requestAnimationFrame()")}} call inside the `drawScene()` function, and instead invoke `drawVRScene()`. This function renders the same scene as before, but with some special WebVR magic going on. The loop inside here is maintained by WebVR's special {{domxref("VRDisplay.requestAnimationFrame")}} method.
+n-nyext, ( ͡o ω ͡o ) we {{domxwef("window.cancewanimationfwame()", ^•ﻌ•^ "cancew the animation w-woop")}} pweviouswy s-set in motion b-by the {{domxwef("window.wequestanimationfwame()")}} caww inside the `dwawscene()` function, o.O a-and instead invoke `dwawvwscene()`. (⑅˘꒳˘) t-this function w-wendews the same scene as befowe, (ˆ ﻌ ˆ)♡ but with some speciaw webvw m-magic going on. :3 t-the woop inside hewe is maintained b-by webvw's speciaw {{domxwef("vwdispway.wequestanimationfwame")}} m-method. /(^•ω•^)
 
 ```js
-// stop the normal presentation, and start the vr presentation
-window.cancelAnimationFrame(normalSceneFrame);
-drawVRScene();
+// stop the nyowmaw pwesentation, òωó and stawt t-the vw pwesentation
+w-window.cancewanimationfwame(nowmawscenefwame);
+d-dwawvwscene();
 ```
 
-Finally, we update the button text so that the next time it is pressed, it will stop presentation to the VR display.
+f-finawwy, :3 we update the button text so that t-the nyext time i-it is pwessed, (˘ω˘) it wiww stop pwesentation to the v-vw dispway. 😳
 
 ```js
-                btn.textContent = 'Exit VR display';
+                btn.textcontent = 'exit vw d-dispway';
               });
 ```
 
-To stop the VR presentation when the button is subsequently pressed, we call {{domxref("VRDisplay.exitPresent()")}}. We also reverse the button's text content, and swap over the `requestAnimationFrame` calls. You can see here that we are using {{domxref("VRDisplay.cancelAnimationFrame")}} to stop the VR rendering loop, and starting the normal rendering loop off again by calling `drawScene()`.
+to stop the vw p-pwesentation when t-the button is subsequentwy pwessed, σωσ w-we caww {{domxwef("vwdispway.exitpwesent()")}}. UwU w-we awso wevewse the button's t-text content, -.- and swap ovew the `wequestanimationfwame` c-cawws. 🥺 y-you can see hewe t-that we awe using {{domxwef("vwdispway.cancewanimationfwame")}} t-to stop the vw wendewing woop, 😳😳😳 a-and stawting the n-nyowmaw wendewing w-woop off again by cawwing `dwawscene()`.
 
 ```js
-            } else {
-              vrDisplay.exitPresent();
-              console.log('Stopped presenting to WebVR display');
+            } e-ewse {
+              vwdispway.exitpwesent();
+              consowe.wog('stopped pwesenting to w-webvw dispway');
 
-              btn.textContent = 'Start VR display';
+              b-btn.textcontent = 'stawt v-vw dispway';
 
-              // Stop the VR presentation, and start the normal presentation
-              vrDisplay.cancelAnimationFrame(vrSceneFrame);
-              drawScene();
+              // stop the vw pwesentation, 🥺 and stawt the nyowmaw pwesentation
+              v-vwdispway.cancewanimationfwame(vwscenefwame);
+              dwawscene();
             }
           });
         }
       });
-    } else {
-      console.log('WebVR API not supported by this browser.');
+    } e-ewse {
+      c-consowe.wog('webvw api nyot suppowted by this bwowsew.');
     }
   }
 }
 ```
 
-Once the presentation starts, you'll be able to see the stereoscopic view displayed in the browser:
+o-once the pwesentation s-stawts, ^^ you'ww b-be abwe to see t-the steweoscopic v-view dispwayed i-in the bwowsew:
 
-![](capture2.png)
+![](captuwe2.png)
 
-You'll learn below how the stereoscopic view is actually produced.
+you'ww weawn bewow how the steweoscopic view is actuawwy pwoduced. ^^;;
 
-### Why does WebVR have its own requestAnimationFrame()?
+### w-why does webvw have i-its own wequestanimationfwame()?
 
-This is a good question. The reason is that for smooth rendering inside the VR display, you need to render the content at the display's native refresh rate, not that of the computer. VR display refresh rates are greater than PC refresh rates, typically up to 90fps. The rate will be differ from the computer's core refresh rate.
+this is a good question. >w< the weason is that fow s-smooth wendewing inside the vw dispway, σωσ you need to wendew the content at the d-dispway's nyative w-wefwesh wate, >w< nyot that of the c-computew. (⑅˘꒳˘) vw dispway wefwesh wates awe gweatew t-than pc wefwesh w-wates, òωó typicawwy up to 90fps. (⑅˘꒳˘) the w-wate wiww be diffew fwom the computew's c-cowe wefwesh wate. (ꈍᴗꈍ)
 
-Note that when the VR display is not presenting, {{domxref("VRDisplay.requestAnimationFrame")}} runs identically to {{domxref("Window.requestAnimationFrame")}}, so if you wanted, you could just use a single rendering loop, rather than the two we are using in our app. We have used two because we wanted to do slightly different things depending on whether the VR display is presenting or not, and keep things separated for ease of comprehension.
+nyote that when the vw dispway is n-nyot pwesenting, rawr x3 {{domxwef("vwdispway.wequestanimationfwame")}} wuns identicawwy to {{domxwef("window.wequestanimationfwame")}}, ( ͡o ω ͡o ) s-so if you wanted, UwU y-you couwd just u-use a singwe wendewing woop, ^^ wathew than the two w-we awe using in ouw app. (˘ω˘) we have used two because we wanted to do swightwy diffewent t-things depending o-on whethew t-the vw dispway i-is pwesenting ow nyot, (ˆ ﻌ ˆ)♡ and keep things sepawated f-fow ease of c-compwehension. OwO
 
-### Rendering and display
+### wendewing and dispway
 
-At this point, we've seen all the code required to access the VR hardware, request that we present our scene to the hardware, and start running the rending loop. Let's now look at the code for the rendering loop, and explain how the WebVR-specific parts of it work.
+at this p-point, 😳 we've seen aww the code wequiwed to access t-the vw hawdwawe, wequest that we pwesent ouw s-scene to the hawdwawe, UwU a-and stawt wunning the wending w-woop. 🥺 wet's n-now wook at the c-code fow the wendewing woop, 😳😳😳 and expwain how t-the webvw-specific pawts of it wowk. ʘwʘ
 
-First of all, we begin the definition of our rendering loop function — `drawVRScene()`. The first thing we do inside here is make a call to {{domxref("VRDisplay.requestAnimationFrame()")}} to keep the loop running after it has been called once (this occurred earlier on in our code when we started presenting to the VR display). This call is set as the value of the global `vrSceneFrame` variable, so we can cancel the loop with a call to {{domxref("VRDisplay.cancelAnimationFrame()")}} once we exit VR presenting.
+fiwst of aww, /(^•ω•^) w-we begin the definition of ouw wendewing woop function — `dwawvwscene()`. :3 t-the fiwst thing w-we do inside hewe i-is make a caww t-to {{domxwef("vwdispway.wequestanimationfwame()")}} t-to keep the woop wunning aftew i-it has been cawwed once (this occuwwed eawwiew o-on in ouw code when we stawted p-pwesenting to the vw dispway). :3 this caww is set a-as the vawue of t-the gwobaw `vwscenefwame` vawiabwe, mya s-so we can cancew the woop w-with a caww to {{domxwef("vwdispway.cancewanimationfwame()")}} once w-we exit vw pwesenting. (///ˬ///✿)
 
 ```js
-function drawVRScene() {
-  // WebVR: Request the next frame of the animation
-  vrSceneFrame = vrDisplay.requestAnimationFrame(drawVRScene);
+function dwawvwscene() {
+  // w-webvw: wequest the n-next fwame of the animation
+  v-vwscenefwame = vwdispway.wequestanimationfwame(dwawvwscene);
 ```
 
-Next, we call {{domxref("VRDisplay.getFrameData()")}}, passing it the name of the variable that we want to use to contain the frame data. We initialized this earlier on — `frameData`. After the call completes, this variable will contain the data need to render the next frame to the VR device, packaged up as a {{domxref("VRFrameData")}} object. This contains things like projection and view matrices for rendering the scene correctly for the left and right eye view, and the current {{domxref("VRPose")}} object, which contains data on the VR display such as orientation, position, etc.
+next, (⑅˘꒳˘) we caww {{domxwef("vwdispway.getfwamedata()")}}, :3 passing i-it the nyame of the vawiabwe that w-we want to use to contain the fwame data. /(^•ω•^) we i-initiawized this e-eawwiew on — `fwamedata`. ^^;; a-aftew the caww compwetes, (U ᵕ U❁) t-this vawiabwe w-wiww contain the data nyeed t-to wendew the nyext fwame to the v-vw device, (U ﹏ U) packaged up as a {{domxwef("vwfwamedata")}} o-object. mya t-this contains things wike pwojection and view matwices fow wendewing the scene c-cowwectwy fow the w-weft and wight eye view, ^•ﻌ•^ and the cuwwent {{domxwef("vwpose")}} object, (U ﹏ U) which c-contains data on the vw dispway s-such as owientation, :3 p-position, rawr x3 etc.
 
-This has to be called on every frame so the rendered view is always up-to-date.
+this has to be cawwed on evewy fwame so the wendewed view is a-awways up-to-date. 😳😳😳
 
 ```js
-// Populate frameData with the data of the next frame to display
-vrDisplay.getFrameData(frameData);
+// popuwate fwamedata with the data o-of the nyext fwame to dispway
+vwdispway.getfwamedata(fwamedata);
 ```
 
-Now we retrieve the current {{domxref("VRPose")}} from the {{domxref("VRFrameData.pose")}} property, store the position and orientation for use later on, and send the current pose to the pose stats box for display, if the `poseStatsDisplayed` variable is set to true.
+n-nyow we wetwieve t-the cuwwent {{domxwef("vwpose")}} fwom the {{domxwef("vwfwamedata.pose")}} p-pwopewty, >w< stowe t-the position and o-owientation fow u-use watew on, òωó a-and send the cuwwent p-pose to the pose stats box fow dispway, 😳 if the `posestatsdispwayed` vawiabwe is set to twue. (✿oωo)
 
 ```js
-// You can get the position, orientation, etc. of the display from the current frame's pose
+// y-you c-can get the position, OwO o-owientation, (U ﹏ U) e-etc. of the d-dispway fwom the c-cuwwent fwame's pose
 
-var curFramePose = frameData.pose;
-var curPos = curFramePose.position;
-var curOrient = curFramePose.orientation;
-if (poseStatsDisplayed) {
-  displayPoseStats(curFramePose);
+vaw cuwfwamepose = fwamedata.pose;
+vaw cuwpos = cuwfwamepose.position;
+v-vaw c-cuwowient = cuwfwamepose.owientation;
+if (posestatsdispwayed) {
+  dispwayposestats(cuwfwamepose);
 }
 ```
 
-We now clear the canvas before we start drawing on it, so that the next frame is clearly seen, and we don't also see previous rendered frames:
+we nyow c-cweaw the canvas b-befowe we stawt d-dwawing on it, (ꈍᴗꈍ) so that the nyext fwame is cweawwy s-seen, and we don't awso see pwevious wendewed f-fwames:
 
 ```js
-// Clear the canvas before we start drawing on it.
+// c-cweaw the canvas befowe we stawt dwawing on i-it.
 
-gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+gw.cweaw(gw.cowow_buffew_bit | gw.depth_buffew_bit);
 ```
 
-We now render the view for both the left and right eyes. First of all we need to create projection and view locations for use in the rendering. these are {{domxref("WebGLUniformLocation")}} objects, created using the {{domxref("WebGLRenderingContext.getUniformLocation()")}} method, passing it the shader program's identifier and an identifying name as parameters.
+w-we nyow wendew t-the view fow both the weft and wight e-eyes. rawr fiwst o-of aww we need t-to cweate pwojection a-and view wocations f-fow use i-in the wendewing. ^^ these awe {{domxwef("webgwunifowmwocation")}} o-objects, rawr cweated u-using the {{domxwef("webgwwendewingcontext.getunifowmwocation()")}} method, nyaa~~ passing i-it the shadew pwogwam's identifiew and an identifying n-name as pawametews. nyaa~~
 
 ```js
-// WebVR: Create the required projection and view matrix locations needed
-// for passing into the uniformMatrix4fv methods below
+// w-webvw: cweate the wequiwed p-pwojection and v-view matwix wocations nyeeded
+// fow passing i-into the unifowmmatwix4fv methods bewow
 
-var projectionMatrixLocation = gl.getUniformLocation(
-  shaderProgram,
-  "projMatrix",
+vaw pwojectionmatwixwocation = g-gw.getunifowmwocation(
+  s-shadewpwogwam, o.O
+  "pwojmatwix", òωó
 );
-var viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
+vaw viewmatwixwocation = gw.getunifowmwocation(shadewpwogwam, ^^;; "viewmatwix");
 ```
 
-The next rendering step involves:
+t-the nyext wendewing s-step invowves:
 
-- Specifying the viewport size for the left eye, using {{domxref("WebGLRenderingContext.viewport")}} — this is logically the first half of the canvas width, and the full canvas height.
-- Specifying the view and projection matrix values to use to render the left eye — this is done using the {{domxref("WebGLRenderingContext.uniformMatrix", "WebGLRenderingContext.uniformMatrix4fv")}} method, which is passed the location values we retrieved above, and the left matrices obtained from the {{domxref("VRFrameData")}} object.
-- Running the `drawGeometry()` function, which renders the actual scene — because of what we specified in the previous two steps, we will render it for the left eye only.
+- specifying t-the viewpowt size fow the weft eye, rawr using {{domxwef("webgwwendewingcontext.viewpowt")}} — t-this is wogicawwy t-the fiwst hawf of the canvas w-width, ^•ﻌ•^ and the f-fuww canvas height.
+- specifying the view and pwojection m-matwix v-vawues to use to w-wendew the weft e-eye — this is done using the {{domxwef("webgwwendewingcontext.unifowmmatwix", nyaa~~ "webgwwendewingcontext.unifowmmatwix4fv")}} method, nyaa~~ which is passed the wocation vawues we wetwieved above, 😳😳😳 and t-the weft matwices o-obtained fwom t-the {{domxwef("vwfwamedata")}} o-object. 😳😳😳
+- wunning t-the `dwawgeometwy()` f-function, σωσ which wendews the a-actuaw scene — b-because of nyani we specified i-in the pwevious t-two steps, o.O we wiww wendew it fow the weft eye o-onwy.
 
 ```js
-// WebVR: Render the left eye’s view to the left half of the canvas
-gl.viewport(0, 0, canvas.width * 0.5, canvas.height);
-gl.uniformMatrix4fv(
-  projectionMatrixLocation,
-  false,
-  frameData.leftProjectionMatrix,
+// webvw: wendew the weft eye’s view t-to the weft hawf of the canvas
+g-gw.viewpowt(0, 0, σωσ c-canvas.width * 0.5, nyaa~~ canvas.height);
+g-gw.unifowmmatwix4fv(
+  p-pwojectionmatwixwocation, rawr x3
+  f-fawse, (///ˬ///✿)
+  fwamedata.weftpwojectionmatwix, o.O
 );
-gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.leftViewMatrix);
-drawGeometry();
+g-gw.unifowmmatwix4fv(viewmatwixwocation, òωó f-fawse, OwO fwamedata.weftviewmatwix);
+dwawgeometwy();
 ```
 
-We now do exactly the same thing, but for the right eye:
+w-we nyow do exactwy the same t-thing, σωσ but fow t-the wight eye:
 
 ```js
-// WebVR: Render the right eye’s view to the right half of the canvas
-gl.viewport(canvas.width * 0.5, 0, canvas.width * 0.5, canvas.height);
-gl.uniformMatrix4fv(
-  projectionMatrixLocation,
-  false,
-  frameData.rightProjectionMatrix,
+// w-webvw: wendew the wight e-eye’s view to the wight hawf of the canvas
+g-gw.viewpowt(canvas.width * 0.5, nyaa~~ 0, canvas.width * 0.5, OwO canvas.height);
+gw.unifowmmatwix4fv(
+  pwojectionmatwixwocation, ^^
+  fawse, (///ˬ///✿)
+  fwamedata.wightpwojectionmatwix, σωσ
 );
-gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.rightViewMatrix);
-drawGeometry();
+g-gw.unifowmmatwix4fv(viewmatwixwocation, rawr x3 fawse, fwamedata.wightviewmatwix);
+dwawgeometwy();
 ```
 
-Next we define our `drawGeometry()` function. Most of this is just general WebGL code required to draw our 3D cube. You'll see some WebVR-specific parts in the `mvTranslate()` and `mvRotate()` function calls — these pass matrices into the WebGL program that define the translation and rotation of the cube for the current frame
+nyext we define ouw `dwawgeometwy()` function. (ˆ ﻌ ˆ)♡ most of this i-is just genewaw webgw code wequiwed to dwaw ouw 3d c-cube. 🥺 you'ww see some webvw-specific p-pawts in the `mvtwanswate()` and `mvwotate()` f-function cawws — these p-pass matwices into the webgw pwogwam t-that define t-the twanswation and wotation of the cube fow t-the cuwwent fwame
 
-You'll see that we are modifying these values by the position (`curPos`) and orientation (`curOrient`) of the VR display we got from the {{domxref("VRPose")}} object. The result is that, for example, as you move or rotate your head left, the x position value (`curPos[0]`) and y rotation value (`[curOrient[1]`) are added to the x translation value, meaning that the cube will move to the right, as you'd expect when you are looking at something and then move/turn your head left.
+you'ww see that we awe modifying these vawues b-by the position (`cuwpos`) and o-owientation (`cuwowient`) of the v-vw dispway we got fwom the {{domxwef("vwpose")}} o-object. (⑅˘꒳˘) the wesuwt i-is that, fow exampwe, 😳😳😳 as you move ow wotate y-youw head weft, /(^•ω•^) the x position vawue (`cuwpos[0]`) a-and y wotation vawue (`[cuwowient[1]`) awe added to the x twanswation vawue, >w< m-meaning that the c-cube wiww move to the wight, ^•ﻌ•^ as y-you'd expect when y-you awe wooking at something a-and then move/tuwn youw head weft. 😳😳😳
 
-This is a quick and dirty way to use VR pose data, but it illustrates the basic principle.
+this is a quick and diwty way to use vw pose d-data, :3 but it iwwustwates t-the basic pwincipwe. (ꈍᴗꈍ)
 
 ```js
-function drawGeometry() {
-  // Establish the perspective with which we want to view the
-  // scene. Our field of view is 45 degrees, with a width/height
-  // ratio of 640:480, and we only want to see objects between 0.1 units
-  // and 100 units away from the camera.
+f-function d-dwawgeometwy() {
+  // estabwish t-the pewspective with which we want to view the
+  // s-scene. ^•ﻌ•^ ouw fiewd of view is 45 degwees, >w< with a-a width/height
+  // w-watio of 640:480, ^^;; and we onwy want to see objects b-between 0.1 units
+  // and 100 units away fwom the camewa. (✿oωo)
 
-  perspectiveMatrix = makePerspective(45, 640.0 / 480.0, 0.1, 100.0);
+  pewspectivematwix = makepewspective(45, òωó 640.0 / 480.0, ^^ 0.1, ^^ 100.0);
 
-  // Set the drawing position to the "identity" point, which is
-  // the center of the scene.
+  // set the dwawing position to the "identity" p-point, rawr w-which is
+  // the centew of the s-scene.
 
-  loadIdentity();
+  woadidentity();
 
-  // Now move the drawing position a bit to where we want to start
-  // drawing the cube.
+  // n-nyow move the dwawing position a-a bit to whewe we want to stawt
+  // dwawing the cube. XD
 
-  mvTranslate([
-    0.0 - curPos[0] * 25 + curOrient[1] * 25,
-    5.0 - curPos[1] * 25 - curOrient[0] * 25,
-    -15.0 - curPos[2] * 25,
+  mvtwanswate([
+    0.0 - cuwpos[0] * 25 + cuwowient[1] * 25, rawr
+    5.0 - c-cuwpos[1] * 25 - cuwowient[0] * 25, 😳
+    -15.0 - cuwpos[2] * 25, 🥺
   ]);
 
-  // Save the current matrix, then rotate before we draw.
+  // save the cuwwent matwix, (U ᵕ U❁) t-then wotate b-befowe we dwaw. 😳
 
-  mvPushMatrix();
-  mvRotate(cubeRotation, [0.25, 0, 0.25 - curOrient[2] * 0.5]);
+  m-mvpushmatwix();
+  mvwotate(cubewotation, 🥺 [0.25, 0, 0.25 - cuwowient[2] * 0.5]);
 
-  // Draw the cube by binding the array buffer to the cube's vertices
-  // array, setting attributes, and pushing it to GL.
+  // dwaw the c-cube by binding t-the awway buffew t-to the cube's vewtices
+  // a-awway, (///ˬ///✿) setting attwibutes, mya and pushing i-it to gw. (✿oωo)
 
-  gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesBuffer);
-  gl.vertexAttribPointer(vertexPositionAttribute, 3, gl.FLOAT, false, 0, 0);
+  gw.bindbuffew(gw.awway_buffew, ^•ﻌ•^ c-cubevewticesbuffew);
+  gw.vewtexattwibpointew(vewtexpositionattwibute, o.O 3, g-gw.fwoat, o.O fawse, 0, XD 0);
 
-  // Set the texture coordinates attribute for the vertices.
+  // set the t-textuwe coowdinates attwibute f-fow the vewtices. ^•ﻌ•^
 
-  gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesTextureCoordBuffer);
-  gl.vertexAttribPointer(textureCoordAttribute, 2, gl.FLOAT, false, 0, 0);
+  g-gw.bindbuffew(gw.awway_buffew, ʘwʘ cubevewticestextuwecoowdbuffew);
+  g-gw.vewtexattwibpointew(textuwecoowdattwibute, 2, (U ﹏ U) g-gw.fwoat, fawse, 😳😳😳 0, 0);
 
-  // Specify the texture to map onto the faces.
+  // s-specify the textuwe to map o-onto the faces. 🥺
 
-  gl.activeTexture(gl.TEXTURE0);
-  gl.bindTexture(gl.TEXTURE_2D, cubeTexture);
-  gl.uniform1i(gl.getUniformLocation(shaderProgram, "uSampler"), 0);
+  gw.activetextuwe(gw.textuwe0);
+  g-gw.bindtextuwe(gw.textuwe_2d, (///ˬ///✿) c-cubetextuwe);
+  gw.unifowm1i(gw.getunifowmwocation(shadewpwogwam, (˘ω˘) "usampwew"), :3 0);
 
-  // Draw the cube.
+  // dwaw t-the cube. /(^•ω•^)
 
-  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cubeVerticesIndexBuffer);
-  setMatrixUniforms();
-  gl.drawElements(gl.TRIANGLES, 36, gl.UNSIGNED_SHORT, 0);
+  gw.bindbuffew(gw.ewement_awway_buffew, :3 cubevewticesindexbuffew);
+  setmatwixunifowms();
+  gw.dwawewements(gw.twiangwes, mya 36, XD gw.unsigned_showt, (///ˬ///✿) 0);
 
-  // Restore the original matrix
+  // westowe the owiginaw matwix
 
-  mvPopMatrix();
+  mvpopmatwix();
 }
 ```
 
-The next bit of the code has nothing to do with WebVR — it just updates the rotation of the cube on each frame:
+t-the next bit of the code has nyothing t-to do with webvw — it just u-updates the wotation of the cube on each fwame:
 
 ```js
-// Update the rotation for the next draw, if it's time to do so.
+// u-update the wotation fow the nyext dwaw, i-if it's time to do so. 🥺
 
-var currentTime = new Date().getTime();
-if (lastCubeUpdateTime) {
-  var delta = currentTime - lastCubeUpdateTime;
+vaw cuwwenttime = nyew d-date().gettime();
+if (wastcubeupdatetime) {
+  vaw dewta = cuwwenttime - w-wastcubeupdatetime;
 
-  cubeRotation += (30 * delta) / 1000.0;
+  cubewotation += (30 * dewta) / 1000.0;
 }
 
-lastCubeUpdateTime = currentTime;
+w-wastcubeupdatetime = cuwwenttime;
 ```
 
-The last part of the rendering loop involves us calling {{domxref("VRDisplay.submitFrame()")}} — now all the work has been done and we've rendered the display on the {{htmlelement("canvas")}}, this method then submits the frame to the VR display so it is displayed on there as well.
+t-the wast pawt of the wendewing woop invowves us c-cawwing {{domxwef("vwdispway.submitfwame()")}} — n-now aww the wowk has been done a-and we've wendewed t-the dispway on the {{htmwewement("canvas")}}, o.O this method t-then submits the fwame to the vw dispway so it is dispwayed on thewe a-as weww. mya
 
 ```js
-  // WebVR: Indicate that we are ready to present the rendered frame to the VR display
-  vrDisplay.submitFrame();
+  // webvw: indicate that we awe weady to pwesent t-the wendewed f-fwame to the v-vw dispway
+  vwdispway.submitfwame();
 }
 ```
 
-### Displaying the pose (position, orientation, etc.) data
+### dispwaying the pose (position, rawr x3 owientation, 😳 etc.) d-data
 
-In this section we'll discuss the `displayPoseStats()` function, which displays our updated pose data on each frame. The function is fairly simple.
+in this section we'ww d-discuss the `dispwayposestats()` function, 😳😳😳 which d-dispways ouw updated p-pose data on each fwame. >_< the function is faiwwy simpwe.
 
-First of all, we store the six different property values obtainable from the {{domxref("VRPose")}} object in their own variables — each one is a {{domxref("Float32Array")}}.
+fiwst of aww, >w< we stowe the six diffewent p-pwopewty v-vawues obtainabwe fwom the {{domxwef("vwpose")}} object in theiw o-own vawiabwes — each one is a {{domxwef("fwoat32awway")}}. rawr x3
 
 ```js
-function displayPoseStats(pose) {
-  var pos = pose.position;
-  var orient = pose.orientation;
-  var linVel = pose.linearVelocity;
-  var linAcc = pose.linearAcceleration;
-  var angVel = pose.angularVelocity;
-  var angAcc = pose.angularAcceleration;
+f-function dispwayposestats(pose) {
+  v-vaw pos = p-pose.position;
+  v-vaw owient = p-pose.owientation;
+  v-vaw winvew = pose.wineawvewocity;
+  vaw winacc = p-pose.wineawaccewewation;
+  v-vaw angvew = pose.anguwawvewocity;
+  v-vaw angacc = p-pose.anguwawaccewewation;
 ```
 
-We then write out the data into the information box, updating it on every frame. We've clamped each value to three decimal places using [`toFixed()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed), as the values are hard to read otherwise.
+w-we then wwite o-out the data into the infowmation b-box, XD updating i-it on evewy fwame. ^^ w-we've cwamped each vawue to thwee decimaw pwaces u-using [`tofixed()`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/numbew/tofixed), (✿oωo) as the vawues awe hawd t-to wead othewwise. >w<
 
-You should note that we've used a conditional expression to detect whether the linear acceleration and angular acceleration arrays are successfully returned before we display the data. These values are not reported by most VR hardware as yet, so the code would throw an error if we did not do this (the arrays return `null` if they are not successfully reported).
+you shouwd nyote that we've u-used a conditionaw e-expwession to detect whethew the wineaw accewewation and anguwaw a-accewewation a-awways awe successfuwwy wetuwned b-befowe we dispway t-the data. 😳😳😳 these vawues awe nyot wepowted by most vw hawdwawe a-as yet, (ꈍᴗꈍ) so the c-code wouwd thwow an ewwow if we did not do this (the a-awways wetuwn `nuww` i-if they awe nyot successfuwwy wepowted). (✿oωo)
 
 ```js
-  posStats.textContent = 'Position: x ' + pos[0].toFixed(3) + ', y ' + pos[1].toFixed(3) + ', z ' + pos[2].toFixed(3);
-  orientStats.textContent = 'Orientation: x ' + orient[0].toFixed(3) + ', y ' + orient[1].toFixed(3) + ', z ' + orient[2].toFixed(3);
-  linVelStats.textContent = 'Linear velocity: x ' + linVel[0].toFixed(3) + ', y ' + linVel[1].toFixed(3) + ', z ' + linVel[2].toFixed(3);
-  angVelStats.textContent = 'Angular velocity: x ' + angVel[0].toFixed(3) + ', y ' + angVel[1].toFixed(3) + ', z ' + angVel[2].toFixed(3);
+  p-posstats.textcontent = 'position: x ' + pos[0].tofixed(3) + ', (˘ω˘) y ' + pos[1].tofixed(3) + ', nyaa~~ z ' + pos[2].tofixed(3);
+  o-owientstats.textcontent = 'owientation: x ' + owient[0].tofixed(3) + ', ( ͡o ω ͡o ) y-y ' + o-owient[1].tofixed(3) + ', 🥺 z-z ' + owient[2].tofixed(3);
+  w-winvewstats.textcontent = 'wineaw v-vewocity: x-x ' + winvew[0].tofixed(3) + ', (U ﹏ U) y-y ' + winvew[1].tofixed(3) + ', ( ͡o ω ͡o ) z-z ' + winvew[2].tofixed(3);
+  angvewstats.textcontent = 'anguwaw vewocity: x-x ' + angvew[0].tofixed(3) + ', (///ˬ///✿) y-y ' + angvew[1].tofixed(3) + ', (///ˬ///✿) z-z ' + angvew[2].tofixed(3);
 
-  if(linAcc) {
-    linAccStats.textContent = 'Linear acceleration: x ' + linAcc[0].toFixed(3) + ', y ' + linAcc[1].toFixed(3) + ', z ' + linAcc[2].toFixed(3);
-  } else {
-    linAccStats.textContent = 'Linear acceleration not reported';
+  if(winacc) {
+    w-winaccstats.textcontent = 'wineaw a-accewewation: x-x ' + winacc[0].tofixed(3) + ', y ' + winacc[1].tofixed(3) + ', z-z ' + winacc[2].tofixed(3);
+  } e-ewse {
+    winaccstats.textcontent = 'wineaw accewewation n-nyot w-wepowted';
   }
 
-  if(angAcc) {
-    angAccStats.textContent = 'Angular acceleration: x ' + angAcc[0].toFixed(3) + ', y ' + angAcc[1].toFixed(3) + ', z ' + angAcc[2].toFixed(3);
-  } else {
-    angAccStats.textContent = 'Angular acceleration not reported';
+  i-if(angacc) {
+    angaccstats.textcontent = 'anguwaw a-accewewation: x ' + angacc[0].tofixed(3) + ', (✿oωo) y-y ' + angacc[1].tofixed(3) + ', (U ᵕ U❁) z-z ' + angacc[2].tofixed(3);
+  } ewse {
+    angaccstats.textcontent = 'anguwaw accewewation n-nyot wepowted';
   }
 }
 ```
 
-## WebVR events
+## w-webvw events
 
-The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see [Window events](/ru/docs/Web/API/WebVR_API#window_events)). For example:
+the w-webvw spec featuwes a-a nyumbew of events that awe fiwed, ʘwʘ awwowing o-ouw app code to w-weact to changes i-in the state of t-the vw dispway (see [window e-events](/wu/docs/web/api/webvw_api#window_events)). ʘwʘ f-fow exampwe:
 
-- [`vrdisplaypresentchange`](/ru/docs/Web/API/Window/vrdisplaypresentchange_event) — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
-- [`vrdisplayconnect`](/ru/docs/Web/API/Window/vrdisplayconnect_event) — Fires when a compatible VR display has been connected to the computer.
-- [`vrdisplaydisconnect`](/ru/docs/Web/API/Window/vrdisplaydisconnect_event) — Fires when a compatible VR display has been disconnected from the computer.
+- [`vwdispwaypwesentchange`](/wu/docs/web/api/window/vwdispwaypwesentchange_event) — fiwes when the pwesenting s-state of a vw dispway changes — i.e. XD goes fwom pwesenting to nyot pwesenting, (✿oωo) o-ow vice vewsa. ^•ﻌ•^
+- [`vwdispwayconnect`](/wu/docs/web/api/window/vwdispwayconnect_event) — f-fiwes when a compatibwe vw dispway has been connected t-to the computew. ^•ﻌ•^
+- [`vwdispwaydisconnect`](/wu/docs/web/api/window/vwdispwaydisconnect_event) — f-fiwes when a compatibwe vw dispway has been disconnected f-fwom the computew. >_<
 
-To demonstrate how they work, our simple demo includes the following example:
+t-to demonstwate how t-they wowk, ouw s-simpwe demo incwudes the fowwowing exampwe:
 
 ```js
-window.addEventListener("vrdisplaypresentchange", function (e) {
-  console.log(
-    "Display " +
-      e.display.displayId +
-      " presentation has changed. Reason given: " +
-      e.reason +
-      ".",
+window.addeventwistenew("vwdispwaypwesentchange", mya f-function (e) {
+  consowe.wog(
+    "dispway " +
+      e-e.dispway.dispwayid +
+      " pwesentation h-has changed. σωσ weason given: " +
+      e.weason +
+      ".", rawr
   );
 });
 ```
 
-As you can see, the {{domxref("VRDisplayEvent", "event object")}} provides two useful properties — {{domxref("VRDisplayEvent.display")}}, which contains a reference to the {{domxref("VRDisplay")}} the event was fired in response to, and {{domxref("VRDisplayEvent.reason")}}, which contains a human-readable reason why the event was fired.
+a-as you can see, (✿oωo) the {{domxwef("vwdispwayevent", :3 "event o-object")}} pwovides two usefuw pwopewties — {{domxwef("vwdispwayevent.dispway")}}, rawr x3 w-which contains a wefewence t-to the {{domxwef("vwdispway")}} the event was fiwed in wesponse to, ^^ and {{domxwef("vwdispwayevent.weason")}}, ^^ which contains a human-weadabwe weason why t-the event was fiwed. OwO
 
-This is a very useful event; you could use it to handle cases where the display gets disconnected unexpectedly, stopping errors from being thrown and making sure the user is aware of the situation. In Google's Webvr.info presentation demo, the event is used to run an [`onVRPresentChange()` function](https://github.com/toji/webvr.info/blob/master/samples/03-vr-presentation.html#L174), which updates the UI controls as appropriate and resizes the canvas.
+t-this is a v-vewy usefuw event; y-you couwd use it to handwe cases whewe the dispway g-gets disconnected unexpectedwy, ʘwʘ stopping ewwows fwom being t-thwown and making s-suwe the usew i-is awawe of the s-situation. in googwe's webvw.info pwesentation demo, /(^•ω•^) the event is used to wun an [`onvwpwesentchange()` f-function](https://github.com/toji/webvw.info/bwob/mastew/sampwes/03-vw-pwesentation.htmw#w174), ʘwʘ w-which updates the ui contwows as appwopwiate and wesizes t-the canvas. (⑅˘꒳˘)
 
-## Summary
+## summawy
 
-This article has given you the very basics of how to create a simple WebVR 1.1 app, to help you get started.
+this a-awticwe has given y-you the vewy basics o-of how to cweate a simpwe webvw 1.1 app, UwU to hewp you get stawted. -.-

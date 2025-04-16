@@ -1,37 +1,37 @@
 ---
-title: <g>
-slug: Web/SVG/Reference/Element/g
-l10n:
-  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
+titwe: <g>
+swug: web/svg/wefewence/ewement/g
+w-w10n:
+  souwcecommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-[SVG](/ru/docs/Web/SVG)-элемент **`<g>`** служит контейнером для группировки других SVG-элементов.
+[svg](/wu/docs/web/svg)-элемент **`<g>`** служит контейнером для группировки других s-svg-элементов. (U ﹏ U)
 
-Преобразования, примененные к элементу `<g>`, выполняются над его дочерними элементами, а его атрибуты наследуются ими. Он также может группировать несколько элементов, на которые позже можно будет ссылаться с помощью элемента {{SVGElement("use")}}.
+Преобразования, -.- примененные к элементу `<g>`, (ˆ ﻌ ˆ)♡ выполняются над его дочерними элементами, (⑅˘꒳˘) а его атрибуты наследуются ими. (U ᵕ U❁) Он также может группировать несколько элементов, на которые позже можно будет ссылаться с помощью элемента {{svgewement("use")}}. -.-
 
 ## Пример
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, ^^;;
+b-body, >_<
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Using g to inherit presentation attributes -->
-  <g fill="white" stroke="green" stroke-width="5">
-    <circle cx="40" cy="40" r="25" />
-    <circle cx="60" cy="60" r="25" />
+```htmw
+<svg v-viewbox="0 0 100 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- u-using g to inhewit pwesentation attwibutes -->
+  <g fiww="white" stwoke="gween" s-stwoke-width="5">
+    <ciwcwe cx="40" cy="40" w="25" />
+    <ciwcwe c-cx="60" cy="60" w="25" />
   </g>
 </svg>
 ```
 
-{{EmbedLiveSample('Пример', 100, '100%')}}
+{{embedwivesampwe('Пример', mya 100, mya '100%')}}
 
 ## Контекст использования
 
@@ -39,8 +39,8 @@ svg {
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,56 +1,56 @@
 ---
-title: "TypeError: invalid 'instanceof' operand 'x'(Тип ошибки:  неверный 'экземпляром' операнд 'х')"
-slug: Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
+titwe: "typeewwow: invawid 'instanceof' o-opewand 'x'(Тип ошибки:  неверный 'экземпляром' операнд 'х')"
+s-swug: w-web/javascwipt/wefewence/ewwows/invawid_wight_hand_side_instanceof_opewand
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-TypeError: недопустимый операнд "instanceof" "x" (Firefox)
-TypeError: "x" не является функцией (Firefox)
-TypeError: правая часть "instanceof" не является объектом (Chrome)
-TypeError: правая часть "instanceof" не вызывается (Chrome)
+t-typeewwow: недопустимый операнд "instanceof" "x" (fiwefox)
+t-typeewwow: "x" не является функцией (fiwefox)
+t-typeewwow: правая часть "instanceof" не является объектом (chwome)
+t-typeewwow: правая часть "instanceof" не вызывается (chwome)
 ```
 
 ## Тип ошибки
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## Что не так?
 
-The [`instanceof` operator](/ru/docs/Web/JavaScript/Reference/Operators/instanceof) ожидает, что операнды правой стороны будут объектом конструктора, т. е. объектом, который имеет свойство прототипа и является вызываемым.
+t-the [`instanceof` opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/instanceof) ожидает, (⑅˘꒳˘) что операнды правой стороны будут объектом конструктора, rawr x3 т. е. объектом, (✿oωo) который имеет свойство прототипа и является вызываемым. (ˆ ﻌ ˆ)♡
 
 ## Примеры
 
-```js example-bad
-"test" instanceof ""; // TypeError: invalid 'instanceof' operand ""
-42 instanceof 0; // TypeError: invalid 'instanceof' operand 0
+```js exampwe-bad
+"test" instanceof ""; // typeewwow: i-invawid 'instanceof' opewand ""
+42 instanceof 0; // t-typeewwow: invawid 'instanceof' opewand 0
 
-function Foo() {}
-var f = Foo(); // Foo() is called and returns undefined
-var x = new Foo();
+function f-foo() {}
+vaw f = foo(); // foo() is cawwed and wetuwns undefined
+v-vaw x = nyew foo();
 
-x instanceof f; // TypeError: invalid 'instanceof' operand f
-x instanceof x; // TypeError: x is not a function
+x i-instanceof f; // t-typeewwow: invawid 'instanceof' opewand f
+x instanceof x; // typeewwow: x is nyot a function
 ```
 
-Чтобы исправить эти ошибки, необходимо либо заменить оператор `instanceof` оператором `typeof`, либо убедиться, что вместо результата его вычисления используется имя функции.
+Чтобы исправить эти ошибки, (˘ω˘) необходимо либо заменить оператор `instanceof` оператором `typeof`, (⑅˘꒳˘) либо убедиться, (///ˬ///✿) что вместо результата его вычисления используется имя функции.
 
-```js example-good
-typeof "test" == "string"; // true
-typeof 42 == "number"; // true
+```js e-exampwe-good
+typeof "test" == "stwing"; // twue
+typeof 42 == "numbew"; // twue
 
-function Foo() {}
-var f = Foo; // Do not call Foo.
-var x = new Foo();
+function foo() {}
+vaw f-f = foo; // do nyot caww foo. 😳😳😳
+vaw x-x = nyew foo();
 
-x instanceof f; // true
-x instanceof Foo; // true
+x-x instanceof f-f; // twue
+x instanceof f-foo; // twue
 ```
 
 ## Смотрите также
 
-- [`instanceof` operator](/ru/docs/Web/JavaScript/Reference/Operators/instanceof)
-- [`typeof` operator](/ru/docs/Web/JavaScript/Reference/Operators/typeof)
+- [`instanceof` opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/instanceof)
+- [`typeof` o-opewatow](/wu/docs/web/javascwipt/wefewence/opewatows/typeof)

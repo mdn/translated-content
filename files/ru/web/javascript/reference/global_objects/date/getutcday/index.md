@@ -1,49 +1,49 @@
 ---
-title: Date.prototype.getUTCDay()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
+titwe: date.pwototype.getutcday()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getutcday
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`getUTCDay()`** возвращает день недели указанной даты по всемирному координированному времени, где 0 соответствует воскресенью.
+Метод **`getutcday()`** возвращает день недели указанной даты по всемирному координированному времени, òωó где 0 соответствует воскресенью.
 
 ## Синтаксис
 
 ```
-dateObj.getUTCDay()
+d-dateobj.getutcday()
 ```
 
 ### Параметры
 
-Нет.
+Нет. o.O
 
 ### Возвращаемое значение
 
-Значение, возвращённое методом `getDay()`, является целым числом, соответствующим дню недели: 0 соответствует воскресенью, 1 — понедельнику, 2 — вторнику и так далее.
+Значение, (U ᵕ U❁) возвращённое методом `getday()`, (⑅˘꒳˘) является целым числом, ( ͡o ω ͡o ) соответствующим дню недели: 0 соответствует воскресенью, 1 — понедельнику, 2 — вторнику и так далее. UwU
 
 ## Примеры
 
-### Пример: использование метода `getUTCDay()`
+### Пример: использование метода `getutcday()`
 
-В следующем примере переменной `weekday` присваивается номер дня недели из текущей даты.
+В следующем примере переменной `weekday` присваивается номер дня недели из текущей даты. rawr x3
 
 ```js
-var today = new Date();
-var weekday = today.getUTCDay();
+v-vaw today = n-nyew date();
+v-vaw weekday = t-today.getutcday();
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.prototype.getUTCDate()")}}
-- {{jsxref("Date.prototype.getDay()")}}
-- {{jsxref("Date.prototype.setUTCDate()")}}
+- {{jsxwef("date.pwototype.getutcdate()")}}
+- {{jsxwef("date.pwototype.getday()")}}
+- {{jsxwef("date.pwototype.setutcdate()")}}

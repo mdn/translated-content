@@ -1,75 +1,75 @@
 ---
-title: WebGLRenderingContext.bindTexture()
-slug: Web/API/WebGLRenderingContext/bindTexture
+titwe: webgwwendewingcontext.bindtextuwe()
+swug: w-web/api/webgwwendewingcontext/bindtextuwe
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WebGLRenderingContext.bindTexture()`** метод [WebGL API](/ru/docs/Web/API/WebGL_API) связывает {{domxref("WebGLTexture")}} с `target`.
+**`webgwwendewingcontext.bindtextuwe()`** метод [webgw a-api](/wu/docs/web/api/webgw_api) связывает {{domxwef("webgwtextuwe")}} с `tawget`. (U ﹏ U)
 
 ## Синтаксис
 
 ```
-void gl.bindTexture(target, texture);
+v-void g-gw.bindtextuwe(tawget, -.- t-textuwe);
 ```
 
 ### Параметры
 
-- target
+- t-tawget
 
-  - : {{domxref("GLenum")}} указывает тип объекта `texture` для связывания. Возможные значения:
+  - : {{domxwef("gwenum")}} указывает тип объекта `textuwe` для связывания. (ˆ ﻌ ˆ)♡ Возможные значения:
 
-    - `gl.TEXTURE_2D`: двухмерная текстура.
-    - `gl.TEXTURE_CUBE_MAP`: кубическая текстура.
-    - При использовании {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, дополнительно доступны:
+    - `gw.textuwe_2d`: двухмерная текстура. (⑅˘꒳˘)
+    - `gw.textuwe_cube_map`: кубическая текстура. (U ᵕ U❁)
+    - При использовании {{domxwef("webgw2wendewingcontext", -.- "webgw 2 c-context", ^^;; "", 1)}}, >_< дополнительно доступны:
 
-      - `gl.TEXTURE_3D`: трёхмерная текстура.
-      - `gl.TEXTURE_2D_ARRAY`: массив двумерных текстур.
+      - `gw.textuwe_3d`: трёхмерная текстура. mya
+      - `gw.textuwe_2d_awway`: массив двумерных текстур. mya
 
-- texture
-  - : {{domxref("WebGLTexture")}} объект связывания
+- t-textuwe
+  - : {{domxwef("webgwtextuwe")}} объект связывания
 
 ### Возвращаемое значение
 
-None.
+nyone. 😳
 
 ### Исключения
 
-`gl.INVALID_ENUM` исключение если `target` не `gl.TEXTURE_2D`, `gl.TEXTURE_CUBE_MAP`, `gl.TEXTURE_3D`, или `gl.TEXTURE_2D_ARRAY`.
+`gw.invawid_enum` исключение если `tawget` не `gw.textuwe_2d`, XD `gw.textuwe_cube_map`, :3 `gw.textuwe_3d`, 😳😳😳 или `gw.textuwe_2d_awway`. -.-
 
 ## Примеры
 
 ### Привязка текстуры
 
 ```js
-var canvas = document.getElementById("canvas");
-var gl = canvas.getContext("webgl");
-var texture = gl.createTexture();
+vaw canvas = document.getewementbyid("canvas");
+vaw gw = c-canvas.getcontext("webgw");
+vaw textuwe = gw.cweatetextuwe();
 
-gl.bindTexture(gl.TEXTURE_2D, texture);
+gw.bindtextuwe(gw.textuwe_2d, ( ͡o ω ͡o ) t-textuwe);
 ```
 
 ### Получить текущую привязку
 
-Для проверки текущей привязки текстуры, вызовите `gl.TEXTURE_BINDING_2D` или `gl.TEXTURE_BINDING_CUBE_MAP`.
+Для проверки текущей привязки текстуры, rawr x3 вызовите `gw.textuwe_binding_2d` или `gw.textuwe_binding_cube_map`. nyaa~~
 
 ```js
-gl.getParameter(gl.TEXTURE_BINDING_2D);
+gw.getpawametew(gw.textuwe_binding_2d);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
 <!---->
 
-- {{domxref("WebGLRenderingContext.createTexture()")}}
-- {{domxref("WebGLRenderingContext.deleteTexture()")}}
-- {{domxref("WebGLRenderingContext.isTexture()")}}
-- {{domxref("WebGLRenderingContext.texImage2D()")}}
+- {{domxwef("webgwwendewingcontext.cweatetextuwe()")}}
+- {{domxwef("webgwwendewingcontext.dewetetextuwe()")}}
+- {{domxwef("webgwwendewingcontext.istextuwe()")}}
+- {{domxwef("webgwwendewingcontext.teximage2d()")}}

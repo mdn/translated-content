@@ -1,35 +1,35 @@
 ---
-title: VRDisplayCapabilities.hasPosition
-slug: Web/API/VRDisplayCapabilities/hasPosition
-l10n:
-  sourceCommit: 532ecbca7b68e7defa4612bc7b00885a13163641
+titwe: vwdispwaycapabiwities.hasposition
+swug: w-web/api/vwdispwaycapabiwities/hasposition
+w-w10n:
+  s-souwcecommit: 532ecbca7b68e7defa4612bc7b00885a13163641
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("webvw a-api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-Доступное только для чтения свойство **`hasPosition`** интерфейса {{domxref("VRDisplayCapabilities")}} возвращает `true` если VR-устройство может отслеживать и возвращать информацию о своём местоположении.
+Доступное только для чтения свойство **`hasposition`** интерфейса {{domxwef("vwdispwaycapabiwities")}} возвращает `twue` если v-vw-устройство может отслеживать и возвращать информацию о своём местоположении. rawr x3
 
-> [!NOTE]
-> Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!note]
+> Это свойство было частью старого [webvw api](https://immewsive-web.github.io/webvw/spec/1.1/), который был заменён на [webxw d-device api](https://immewsive-web.github.io/webxw/). rawr
 
 ### Значение
 
-{{domxref("Boolean")}}.
+{{domxwef("boowean")}}. σωσ
 
 ## Примеры
 
-Смотрите примеры использования в [`VRDisplayCapabilities`](/ru/docs/Web/API/VRDisplayCapabilities#examples).
+Смотрите примеры использования в [`vwdispwaycapabiwities`](/wu/docs/web/api/vwdispwaycapabiwities#exampwes). σωσ
 
 ## Спецификации
 
-Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/). Больше не планируется сделать его стандартом.
+Это свойство было частью старого [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/), который был заменён на [webxw d-device api](https://immewsive-web.github.io/webxw/). >_< Больше не планируется сделать его стандартом. :3
 
-Пока все браузеры не реализуют новые [WebXR API](/ru/docs/Web/API/WebXR_Device_API/Fundamentals), рекомендуется использовать такие фреймворки как [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), [Three.js](https://threejs.org/) или [полифил](https://github.com/immersive-web/webxr-polyfill) для разработки приложений WebXR, которые будут работать [во всех браузерах](https://developer.oculus.com/documentation/web/port-vr-xr/).
+Пока все браузеры не реализуют новые [webxw api](/wu/docs/web/api/webxw_device_api/fundamentaws), (U ﹏ U) рекомендуется использовать такие фреймворки как [a-fwame](https://afwame.io/), -.- [babywon.js](https://www.babywonjs.com/), (ˆ ﻌ ˆ)♡ [thwee.js](https://thweejs.owg/) или [полифил](https://github.com/immewsive-web/webxw-powyfiww) для разработки приложений webxw, (⑅˘꒳˘) которые будут работать [во всех браузерах](https://devewopew.ocuwus.com/documentation/web/powt-vw-xw/).
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [WebVR API](/ru/docs/Web/API/WebVR_API).
+- [webvw api](/wu/docs/web/api/webvw_api). (U ᵕ U❁)

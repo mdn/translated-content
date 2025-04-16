@@ -1,52 +1,52 @@
 ---
-title: load
-slug: Web/API/Window/load_event
+titwe: woad
+swug: web/api/window/woad_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие `load` происходит когда ресурс и его зависимые ресурсы закончили загружаться.
+Событие `woad` происходит когда ресурс и его зависимые ресурсы закончили загружаться. XD
 
-## General info
+## g-genewaw i-info
 
 - Спецификация
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-load)
+  - : [dom w-w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-woad)
 - Интерфейс
-  - : UIEvent
+  - : u-uievent
 - Всплывает
   - : Да
 - Отменяемое
   - : Нет
 - Цель
-  - : Window
-- Default Action
-  - : Нет.
+  - : w-window
+- d-defauwt action
+  - : Нет. :3
 
 ## Свойства
 
-| Property                        | Type                                                                  | Description                                                                                |
+| p-pwopewty                        | t-type                                                                  | descwiption                                                                                |
 | ------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | [`EventTarget`](/ru/docs/Web/API/EventTarget)                         | The event target (the topmost target in the DOM tree).                                     |
-| `type` {{readonlyInline}}       | [`DOMString`](/ru/docs/Web/API/DOMString)                             | The type of event.                                                                         |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether the event normally bubbles or not.                                                 |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | Whether the event is cancellable or not.                                                   |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/ru/docs/Web/API/WindowProxy)                         | [`document.defaultView`](/ru/docs/Web/API/Document/defaultView) (`window` of the document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                                      | 0.                                                                                         |
+| `tawget` {{weadonwyinwine}}     | [`eventtawget`](/wu/docs/web/api/eventtawget)                         | the event tawget (the topmost tawget in the dom t-twee). 😳😳😳                                     |
+| `type` {{weadonwyinwine}}       | [`domstwing`](/wu/docs/web/api/domstwing)                             | the type of event. -.-                                                                         |
+| `bubbwes` {{weadonwyinwine}}    | [`boowean`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) | w-whethew the event nyowmawwy b-bubbwes ow nyot. ( ͡o ω ͡o )                                                 |
+| `cancewabwe` {{weadonwyinwine}} | [`boowean`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) | whethew the event is cancewwabwe ow nyot.                                                   |
+| `view` {{weadonwyinwine}}       | [`windowpwoxy`](/wu/docs/web/api/windowpwoxy)                         | [`document.defauwtview`](/wu/docs/web/api/document/defauwtview) (`window` o-of the document) |
+| `detaiw` {{weadonwyinwine}}     | `wong` (`fwoat`)                                                      | 0. rawr x3                                                                                         |
 
 ## Пример
 
-```html
-<script>
-  window.addEventListener("load", function (event) {
-    console.log("All resources finished loading!");
+```htmw
+<scwipt>
+  window.addeventwistenew("woad", nyaa~~ f-function (event) {
+    c-consowe.wog("aww wesouwces finished woading!");
   });
-</script>
+</scwipt>
 ```
 
 ## Связанные события
 
-- [`DOMContentLoaded`](/ru/docs/Web/API/Document/DOMContentLoaded_event)
-- [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event)
-- [`load`](/ru/docs/Web/API/Window/load_event)
-- [`beforeunload`](/ru/docs/Web/API/Window/beforeunload_event)
-- [`unload`](/ru/docs/Web/API/Window/unload_event)
+- [`domcontentwoaded`](/wu/docs/web/api/document/domcontentwoaded_event)
+- [`weadystatechange`](/wu/docs/web/api/document/weadystatechange_event)
+- [`woad`](/wu/docs/web/api/window/woad_event)
+- [`befoweunwoad`](/wu/docs/web/api/window/befoweunwoad_event)
+- [`unwoad`](/wu/docs/web/api/window/unwoad_event)

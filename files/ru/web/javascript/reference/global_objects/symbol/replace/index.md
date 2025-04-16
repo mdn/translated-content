@@ -1,27 +1,27 @@
 ---
-title: Symbol.replace
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/replace
+titwe: symbow.wepwace
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/wepwace
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.replace`** — известный символ, задающий метод для замены подстрок в строке. Эта функция вызывается методом {{jsxref("String.prototype.replace()")}}.
+**`symbow.wepwace`** — известный символ, задающий метод для замены подстрок в строке. >_< Эта функция вызывается методом {{jsxwef("stwing.pwototype.wepwace()")}}. (ꈍᴗꈍ)
 
-Смотрите также {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}} и {{jsxref("String.prototype.replace()")}} для получения дополнительных сведений.
+Смотрите также {{jsxwef("wegexp.@@wepwace", "wegexp.pwototype[@@wepwace]()")}} и {{jsxwef("stwing.pwototype.wepwace()")}} для получения дополнительных сведений. ^•ﻌ•^
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.search")}}
-- {{jsxref("Symbol.split")}}
-- {{jsxref("RegExp.@@replace", "RegExp.prototype[@@replace]()")}}
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.seawch")}}
+- {{jsxwef("symbow.spwit")}}
+- {{jsxwef("wegexp.@@wepwace", OwO "wegexp.pwototype[@@wepwace]()")}}

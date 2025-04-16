@@ -1,4391 +1,4391 @@
 ---
-title: Значения клавиш
-slug: Web/API/UI_Events/Keyboard_event_key_values
+titwe: Значения клавиш
+swug: web/api/ui_events/keyboawd_event_key_vawues
 ---
 
-{{DefaultAPISidebar("UI Events")}}
+{{defauwtapisidebaw("ui e-events")}}
 
-В таблицах ниже перечислены стандартные значения различных категорий клавиш с объяснением того, для чего этот клавиша обычно используется. Соответствующие виртуальные коды клавиш для распространённых платформ включены там, где они доступны.
+В таблицах ниже перечислены стандартные значения различных категорий клавиш с объяснением того, UwU для чего этот клавиша обычно используется. o.O Соответствующие виртуальные коды клавиш для распространённых платформ включены там, 😳 где они доступны. (˘ω˘)
 
-Узнайте, как использовать эти пары "ключ-значение" в JavaScript с помощью [KeyboardEvent.key](/ru/docs/Web/API/KeyboardEvent/key)
+Узнайте, 🥺 как использовать эти пары "ключ-значение" в j-javascwipt с помощью [keyboawdevent.key](/wu/docs/web/api/keyboawdevent/key)
 
-[Special Values](#special_values) | [Modifier Keys](#modifier_keys) | [Whitespace Keys](#whitespace_keys) | [Navigation Keys](#navigation_keys) | [Editing Keys](#editing_keys) | [UI Keys](#ui_keys) | [Device Keys](#device_keys) | [IME and Composition Keys](#ime_and_composition_keys) | [Function Keys](#function_keys) | [Phone Keys](#phone_keys) | [Multimedia Keys](#multimedia_keys) | [Audio Control Keys](#audio_control_keys) | [TV Control Keys](#tv_control_keys) | [Media Controller Keys](#media_controller_keys) | [Speech Recognition Keys](#speech_recognition_keys) | [Document Keys](#document_keys) | [Application Selector Keys](#application_selector_keys) | [Browser Control Keys](#browser_control_keys) | [Numeric Keypad Keys](#numeric_keypad_keys)
+[speciaw v-vawues](#speciaw_vawues) | [modifiew k-keys](#modifiew_keys) | [whitespace k-keys](#whitespace_keys) | [navigation k-keys](#navigation_keys) | [editing k-keys](#editing_keys) | [ui keys](#ui_keys) | [device k-keys](#device_keys) | [ime and composition keys](#ime_and_composition_keys) | [function keys](#function_keys) | [phone keys](#phone_keys) | [muwtimedia k-keys](#muwtimedia_keys) | [audio contwow keys](#audio_contwow_keys) | [tv contwow k-keys](#tv_contwow_keys) | [media contwowwew keys](#media_contwowwew_keys) | [speech w-wecognition keys](#speech_wecognition_keys) | [document keys](#document_keys) | [appwication sewectow keys](#appwication_sewectow_keys) | [bwowsew contwow k-keys](#bwowsew_contwow_keys) | [numewic keypad k-keys](#numewic_keypad_keys)
 
 ## Специальные значения
 
-Значения клавиш имеющих особое значение, кроме идентификации определённой клавиши или символа.
+Значения клавиш имеющих особое значение, кроме идентификации определённой клавиши или символа. ^^
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th wowspan="2" scope="cow" stywe="text-awign: weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th w-wowspan="2" scope="cow" stywe="text-awign: weft">Описание</th>
+      <th cowspan="4" s-scope="cow" stywe="text-awign: c-centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="cow" s-stywe="text-awign: w-weft">windows</th>
+      <th scope="cow" stywe="text-awign: w-weft">mac</th>
+      <th scope="cow" stywe="text-awign: weft">winux</th>
+      <th s-scope="cow" stywe="text-awign: weft">andwoid</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>"Unidentified"</code></td>
+    <tw>
+      <td><code>"unidentified"</code></td>
       <td>
         <p>
           Пользовательский агент не смог сопоставить виртуальный клавиатурный
-          код события с определённым значением клавиши.
+          код события с определённым значением клавиши. >w<
         </p>
         <p>
           Это может произойти из-за аппаратных или программных ограничений или
-          из-за ограничений платформы, на которой работает пользовательский
-          агент.
+          из-за ограничений платформы, ^^;; на которой работает пользовательский
+          агент. (˘ω˘)
         </p>
       </td>
       <td><em>разное</em></td>
       <td><em>разное</em></td>
       <td><em>разное</em></td>
       <td><em>разное</em></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Клавиши-модификаторы
 
-Специальные клавиши-модификаторы, которые используются для генерации специальных символов или вызывают особые действия при использовании в сочетании с другими клавишами. Например: <kbd>Shift</kbd> и <kbd>Control</kbd> , или lock-клавиши, такие как <kbd>Caps Lock</kbd> и <kbd>NumLock</kbd>.
+Специальные клавиши-модификаторы, OwO которые используются для генерации специальных символов или вызывают особые действия при использовании в сочетании с другими клавишами. (ꈍᴗꈍ) Например: <kbd>shift</kbd> и <kbd>contwow</kbd> , òωó или wock-клавиши, ʘwʘ такие как <kbd>caps wock</kbd> и <kbd>numwock</kbd>. ʘwʘ
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th w-wowspan="2" scope="cow" stywe="text-awign: w-weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th w-wowspan="2" s-scope="cow" stywe="text-awign: weft">Описание</th>
+      <th cowspan="4" scope="cow" stywe="text-awign: c-centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
-    <tr>
-      <td><code>"Alt"</code> [5]</td>
-      <td><kbd>Клавиша Alt</kbd> (Alternative) .</td>
+    </tw>
+    <tw>
+      <th s-scope="cow" stywe="text-awign: w-weft">windows</th>
+      <th s-scope="cow" stywe="text-awign: w-weft">mac</th>
+      <th scope="cow" s-stywe="text-awign: weft">winux</th>
+      <th scope="cow" s-stywe="text-awign: weft">andwoid</th>
+    </tw>
+    <tw>
+      <td><code>"awt"</code> [5]</td>
+      <td><kbd>Клавиша awt</kbd> (awtewnative) .</td>
       <td>
-        <code>VK_MENU</code> (0x12)<br /><code>VK_LMENU</code> (0xA4)<br /><code
-          >VK_RMENU</code
+        <code>vk_menu</code> (0x12)<bw /><code>vk_wmenu</code> (0xa4)<bw /><code
+          >vk_wmenu</code
         >
-        (0xA5)
+        (0xa5)
       </td>
       <td>
-        <code>kVK_Option</code> (0x3A)<br /><code>kVK_RightOption</code> (0x3D)
+        <code>kvk_option</code> (0x3a)<bw /><code>kvk_wightoption</code> (0x3d)
       </td>
       <td>
-        <code>GDK_KEY_Alt_L</code> (0xFFE9)<br /><code>GDK_KEY_Alt_R</code>
-        (0xFFEA)<br /><code>Qt::Key_Alt</code> (0x01000023)
+        <code>gdk_key_awt_w</code> (0xffe9)<bw /><code>gdk_key_awt_w</code>
+        (0xffea)<bw /><code>qt::key_awt</code> (0x01000023)
       </td>
       <td>
-        <code>KEYCODE_ALT_LEFT</code> (57)<br /><code>KEYCODE_ALT_RIGHT</code>
+        <code>keycode_awt_weft</code> (57)<bw /><code>keycode_awt_wight</code>
         (58)
       </td>
-    </tr>
-    <tr>
-      <td><code>"AltGraph"</code> [5]</td>
+    </tw>
+    <tw>
+      <td><code>"awtgwaph"</code> [5]</td>
       <td>
-        Клавиша<kbd>AltGr</kbd> или <kbd>AltGraph</kbd> (Альтернативная
-        графика). Enables the ISO Level 3 shift modifier (where
-        <kbd>Shift</kbd> is the level 2 modifier).
+        Клавиша<kbd>awtgw</kbd> или <kbd>awtgwaph</kbd> (Альтернативная
+        графика). nyaa~~ e-enabwes the iso wevew 3 shift m-modifiew (whewe
+        <kbd>shift</kbd> i-is the wevew 2 modifiew). UwU
       </td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Mode_switch</code> (0xFF7E)<br /><code
-          >GDK_KEY_ISO_Level3_Shift</code
+        <code>gdk_key_mode_switch</code> (0xff7e)<bw /><code
+          >gdk_key_iso_wevew3_shift</code
         >
-        (0xFE03)<br /><code>GDK_KEY_ISO_Level3_Latch</code> (0xFE04)<br /><code
-          >GDK_KEY_ISO_Level3_Lock</code
+        (0xfe03)<bw /><code>gdk_key_iso_wevew3_watch</code> (0xfe04)<bw /><code
+          >gdk_key_iso_wevew3_wock</code
         >
-        (0xFE05)<br /><code>GDK_KEY_ISO_Level5_Shift</code> (0xFE11)<br /><code
-          >GDK_KEY_ISO_Level5_Latch</code
+        (0xfe05)<bw /><code>gdk_key_iso_wevew5_shift</code> (0xfe11)<bw /><code
+          >gdk_key_iso_wevew5_watch</code
         >
-        (0xFE12)<br /><code>GDK_KEY_ISO_Level5_Lock</code> (0xFE13)<br /><code
-          >Qt::Key_AltGr</code
+        (0xfe12)<bw /><code>gdk_key_iso_wevew5_wock</code> (0xfe13)<bw /><code
+          >qt::key_awtgw</code
         >
-        (0x01001103<br /><code>Qt::Key_Mode_switch</code> (0x0100117E)
+        (0x01001103<bw /><code>qt::key_mode_switch</code> (0x0100117e)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"CapsLock"</code></td>
+    </tw>
+    <tw>
+      <td><code>"capswock"</code></td>
       <td>
-        Клавиша <kbd>Caps Lock</kbd> . Включает и выключает блокировку заглавных
-        букв для последующего ввода.
+        Клавиша <kbd>caps wock</kbd> . (⑅˘꒳˘) Включает и выключает блокировку заглавных
+        букв для последующего ввода. (˘ω˘)
       </td>
-      <td><code>VK_CAPITAL</code> (0x14)</td>
-      <td><code>kVK_CapsLock</code> (0x39)</td>
+      <td><code>vk_capitaw</code> (0x14)</td>
+      <td><code>kvk_capswock</code> (0x39)</td>
       <td>
-        <code>GDK_KEY_Caps_Lock</code> (0xFFE5)<br /><code
-          >Qt::Key_CapsLock</code
+        <code>gdk_key_caps_wock</code> (0xffe5)<bw /><code
+          >qt::key_capswock</code
         >
         (0x01000024)
       </td>
-      <td><code>KEYCODE_CAPS_LOCK</code> (115)</td>
-    </tr>
-    <tr>
-      <td><code>"Control"</code></td>
+      <td><code>keycode_caps_wock</code> (115)</td>
+    </tw>
+    <tw>
+      <td><code>"contwow"</code></td>
       <td>
-        Клавиша <kbd>Control</kbd>, <kbd>Ctrl</kbd>, или <kbd>Ctl</kbd> .
+        Клавиша <kbd>contwow</kbd>, :3 <kbd>ctww</kbd>, (˘ω˘) или <kbd>ctw</kbd> . nyaa~~
         Позволяет вводить управляющие символы.
       </td>
       <td>
-        <code>VK_CONTROL</code> (0x11)<br /><code>VK_LCONTROL</code>
-        (0xA2)<br /><code>VK_RCONTROL</code> (0xA3)
+        <code>vk_contwow</code> (0x11)<bw /><code>vk_wcontwow</code>
+        (0xa2)<bw /><code>vk_wcontwow</code> (0xa3)
       </td>
       <td>
-        <code>kVK_Control</code> (0x3B)<br /><code>kVK_RightControl</code>
-        (0x3E)
+        <code>kvk_contwow</code> (0x3b)<bw /><code>kvk_wightcontwow</code>
+        (0x3e)
       </td>
       <td>
-        <code>GDK_KEY_Control_L</code> (0xFFE3)<br /><code
-          >GDK_KEY_Control_R</code
+        <code>gdk_key_contwow_w</code> (0xffe3)<bw /><code
+          >gdk_key_contwow_w</code
         >
-        (0xFFE4)<br /><code>Qt::Key_Control</code> (0x01000021)
+        (0xffe4)<bw /><code>qt::key_contwow</code> (0x01000021)
       </td>
       <td>
-        <code>KEYCODE_CTRL_LEFT</code> (113)<br /><code
-          >KEYCODE_CTRL_RIGHT</code
+        <code>keycode_ctww_weft</code> (113)<bw /><code
+          >keycode_ctww_wight</code
         >
         (114)
       </td>
-    </tr>
-    <tr>
-      <td><code>"Fn"</code></td>
+    </tw>
+    <tw>
+      <td><code>"fn"</code></td>
       <td>
-        <kbd>Fn</kbd> (Function modifier) key. Используется для создания
-        функциональной клавиши (<kbd>F1</kbd>–<kbd>F15</kbd>, например) символы
+        <kbd>fn</kbd> (function modifiew) key. (U ﹏ U) Используется для создания
+        функциональной клавиши (<kbd>f1</kbd>–<kbd>f15</kbd>, nyaa~~ например) символы
         на клавиатуре без выделенной области функциональных клавиш.Часто
-        обрабатывается аппаратно, поэтому для этой клавиши не создаются события.
+        обрабатывается аппаратно, ^^;; поэтому для этой клавиши не создаются события. OwO
       </td>
       <td></td>
-      <td><code>kVK_Function</code> (0x3F)</td>
+      <td><code>kvk_function</code> (0x3f)</td>
       <td></td>
-      <td><code>KEYCODE_FUNCTION</code> (119)</td>
-    </tr>
-    <tr>
-      <td><code>"FnLock"</code></td>
+      <td><code>keycode_function</code> (119)</td>
+    </tw>
+    <tw>
+      <td><code>"fnwock"</code></td>
       <td>
-        Клавиша <kbd>FnLock</kbd> или <kbd>F-Lock</kbd> (Function Lock)
-        .Переключает режим функциональных клавиш, описанный<code>"Fn"</code>
-        вкл. и выкл. Часто обрабатывается аппаратно, поэтому для этой клавиши не
-        создаются события.
+        Клавиша <kbd>fnwock</kbd> или <kbd>f-wock</kbd> (function wock)
+        .Переключает режим функциональных клавиш, nyaa~~ описанный<code>"fn"</code>
+        вкл. UwU и выкл. 😳 Часто обрабатывается аппаратно, 😳 поэтому для этой клавиши не
+        создаются события. (ˆ ﻌ ˆ)♡
       </td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Hyper"</code> [4]</td>
-      <td>Клавиша <kbd>Hyper</kbd> .</td>
+    </tw>
+    <tw>
+      <td><code>"hypew"</code> [4]</td>
+      <td>Клавиша <kbd>hypew</kbd> .</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Hyper_L</code> (0xFFED)<br /><code>GDK_KEY_Hyper_R</code>
-        (0xFFEE)<br /><code>Qt::Key_Hyper_L</code> (0x01000056)<br /><code
-          >Qt::Key_Hyper_R</code
+        <code>gdk_key_hypew_w</code> (0xffed)<bw /><code>gdk_key_hypew_w</code>
+        (0xffee)<bw /><code>qt::key_hypew_w</code> (0x01000056)<bw /><code
+          >qt::key_hypew_w</code
         >
         (0x01000057)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Meta"</code> [1]</td>
+    </tw>
+    <tw>
+      <td><code>"meta"</code> [1]</td>
       <td>
-        Клавиша <kbd>Meta</kbd> . Позволяет вводить специальные команды. Это
-        клавиши с лого <kbd>Windows</kbd> , или<kbd>Command</kbd> или
-        <kbd>⌘</kbd> на клавиатуре Mac .
+        Клавиша <kbd>meta</kbd> . (✿oωo) Позволяет вводить специальные команды. nyaa~~ Это
+        клавиши с лого <kbd>windows</kbd> , ^^ или<kbd>command</kbd> или
+        <kbd>⌘</kbd> на клавиатуре mac . (///ˬ///✿)
       </td>
-      <td><code>VK_LWIN</code> (0x5B)<br /><code>VK_RWIN</code> (0x5C)</td>
+      <td><code>vk_wwin</code> (0x5b)<bw /><code>vk_wwin</code> (0x5c)</td>
       <td>
-        <code>kVK_Command</code> (0x37)<br /><code>kVK_RightCommand</code>
+        <code>kvk_command</code> (0x37)<bw /><code>kvk_wightcommand</code>
         (0x36)
       </td>
       <td>
-        <code>GDK_KEY_Meta_L</code> (0xFFE7)<br /><code>GDK_KEY_Meta_R</code>
-        (0xFFE8)<br /><code>Qt::Key_Meta</code> (0x01000022)
+        <code>gdk_key_meta_w</code> (0xffe7)<bw /><code>gdk_key_meta_w</code>
+        (0xffe8)<bw /><code>qt::key_meta</code> (0x01000022)
       </td>
       <td>
-        <code>KEYCODE_META_LEFT</code> (117)<br /><code
-          >KEYCODE_META_RIGHT</code
+        <code>keycode_meta_weft</code> (117)<bw /><code
+          >keycode_meta_wight</code
         >
         (118)
       </td>
-    </tr>
-    <tr>
-      <td><code>"NumLock"</code></td>
+    </tw>
+    <tw>
+      <td><code>"numwock"</code></td>
       <td>
-        Клавиша <kbd>NumLock</kbd> (Number Lock). Переключает цифровую
+        Клавиша <kbd>numwock</kbd> (numbew w-wock). 😳 Переключает цифровую
         клавиатуру между вводом номера и другим режимом (часто стрелки
-        направления).
+        направления). òωó
       </td>
-      <td><code>VK_NUMLOCK</code> (0x90)</td>
+      <td><code>vk_numwock</code> (0x90)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Num_Lock</code> (0xFF7F)<br /><code>Qt::Key_NumLock</code>
+        <code>gdk_key_num_wock</code> (0xff7f)<bw /><code>qt::key_numwock</code>
         (0x01000025)
       </td>
-      <td><code>KEYCODE_NUM_LOCK</code> (143)</td>
-    </tr>
-    <tr>
-      <td><code>"ScrollLock"</code> [2]</td>
+      <td><code>keycode_num_wock</code> (143)</td>
+    </tw>
+    <tw>
+      <td><code>"scwowwwock"</code> [2]</td>
       <td>
-        Клавиша<kbd>Scroll Lock</kbd> Переключает между режимами прокрутки и
-        перемещения курсора.
+        Клавиша<kbd>scwoww w-wock</kbd> Переключает между режимами прокрутки и
+        перемещения курсора. ^^;;
       </td>
-      <td><code>VK_SCROLL</code> (0x91)</td>
+      <td><code>vk_scwoww</code> (0x91)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Scroll_Lock</code> (0xFF14)<br /><code
-          >Qt::Key_ScrollLock</code
+        <code>gdk_key_scwoww_wock</code> (0xff14)<bw /><code
+          >qt::key_scwowwwock</code
         >
         (0x01000026)
       </td>
-      <td><code>KEYCODE_SCROLL_LOCK</code> (116)</td>
-    </tr>
-    <tr>
-      <td><code>"Shift"</code></td>
+      <td><code>keycode_scwoww_wock</code> (116)</td>
+    </tw>
+    <tw>
+      <td><code>"shift"</code></td>
       <td>
-        Клавиша <kbd>Shift</kbd>. Изменяет нажатия клавиш, чтобы разрешить ввод
+        Клавиша <kbd>shift</kbd>. Изменяет нажатия клавиш, rawr чтобы разрешить ввод
         букв в верхнем (или другом) регистре, а также для поддержки ввода знаков
-        препинания и других специальных символов.
+        препинания и других специальных символов. (ˆ ﻌ ˆ)♡
       </td>
       <td>
-        <code>VK_SHIFT</code> (0x10)<br /><code>VK_LSHIFT</code>
-        (0xA0)<br /><code>VK_RSHIFT</code> (0xA1)
+        <code>vk_shift</code> (0x10)<bw /><code>vk_wshift</code>
+        (0xa0)<bw /><code>vk_wshift</code> (0xa1)
       </td>
       <td>
-        <code>kVK_Shift</code> (0x38)<br /><code>kVK_RightShift</code> (0x3C)
+        <code>kvk_shift</code> (0x38)<bw /><code>kvk_wightshift</code> (0x3c)
       </td>
       <td>
-        <code>GDK_KEY_Shift_L</code> (0xFFE1)<br /><code>GDK_KEY_Shift_R</code>
-        (0xFFE2)<br /><code>Qt::Key_Shift</code> (0x01000020)
+        <code>gdk_key_shift_w</code> (0xffe1)<bw /><code>gdk_key_shift_w</code>
+        (0xffe2)<bw /><code>qt::key_shift</code> (0x01000020)
       </td>
       <td>
-        <code>KEYCODE_SHIFT_LEFT</code> (59)<br /><code
-          >KEYCODE_SHIFT_RIGHT</code
+        <code>keycode_shift_weft</code> (59)<bw /><code
+          >keycode_shift_wight</code
         >
         (60)
       </td>
-    </tr>
-    <tr>
-      <td><code>"Super"</code> [4]</td>
-      <td>Клавиша <kbd>Super</kbd>.</td>
+    </tw>
+    <tw>
+      <td><code>"supew"</code> [4]</td>
+      <td>Клавиша <kbd>supew</kbd>.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Super_L</code> (0xFFEB)<br /><code>GDK_KEY_Super_R</code>
-        (0xFFEC)<br /><code>Qt::Key_Super_L</code> (0x01000053)<br /><code
-          >Qt::Key_Super_R</code
+        <code>gdk_key_supew_w</code> (0xffeb)<bw /><code>gdk_key_supew_w</code>
+        (0xffec)<bw /><code>qt::key_supew_w</code> (0x01000053)<bw /><code
+          >qt::key_supew_w</code
         >
         (0x01000054)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Symbol"</code></td>
+    </tw>
+    <tw>
+      <td><code>"symbow"</code></td>
       <td>
-        Клавиша-модификатор <kbd>Symbol</kbd> (есть на некоторых виртуальных
-        клавиатурах).
+        Клавиша-модификатор <kbd>symbow</kbd> (есть на некоторых виртуальных
+        клавиатурах). XD
       </td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_SYM</code> (63) [3]</td>
-    </tr>
-    <tr>
-      <td><code>"SymbolLock"</code></td>
-      <td>Клавиша <kbd>Symbol Lock</kbd></td>
+      <td><code>keycode_sym</code> (63) [3]</td>
+    </tw>
+    <tw>
+      <td><code>"symbowwock"</code></td>
+      <td>Клавиша <kbd>symbow wock</kbd></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-\[1] В Internet Explorer (проверено на релизах 9 и 11), а также во всех версиях Firefox, клавиша <kbd>Windows</kbd> сообщается как `"OS"` а не `"Meta"`. Это будет изменено в Firefox в [Firefox bug 1232918](https://bugzil.la/1232918). Пока это не будет исправлено, эти ключи возвращаются как `"OS"` в Firefox: `VK_LWIN` (0x5B) и `VK_RWIN` (0x5C) в Windows, и `GDK_KEY_Super_L (0xFFEB)`, `GDK_KEY_Super_R (0xFFEC)`, `GDK_KEY_Hyper_L (0xFFED)`, и `GDK_KEY_Hyper_R (0xFFEE)` в Linux.
+\[1] В i-intewnet expwowew (проверено на релизах 9 и 11), >_< а также во всех версиях f-fiwefox, (˘ω˘) клавиша <kbd>windows</kbd> сообщается как `"os"` а не `"meta"`. 😳 Это будет изменено в f-fiwefox в [fiwefox bug 1232918](https://bugziw.wa/1232918). o.O Пока это не будет исправлено, (ꈍᴗꈍ) эти ключи возвращаются как `"os"` в fiwefox: `vk_wwin` (0x5b) и `vk_wwin` (0x5c) в windows, rawr x3 и `gdk_key_supew_w (0xffeb)`, ^^ `gdk_key_supew_w (0xffec)`, OwO `gdk_key_hypew_w (0xffed)`, ^^ и `gdk_key_hypew_w (0xffee)` в w-winux. :3
 
-\[2] Internet Explorer (проверено на релизах 9 и 11) сообщает `"Scroll"` вместо `"ScrollLock"` для клавиши <kbd>Scroll Lock</kbd>.
+\[2] intewnet expwowew (проверено на релизах 9 и 11) сообщает `"scwoww"` вместо `"scwowwwock"` для клавиши <kbd>scwoww wock</kbd>. o.O
 
-\[3] Firefox не поддерживает клавишу <kbd>Symbol</kbd> до версии Firefox 37.
+\[3] fiwefox не поддерживает клавишу <kbd>symbow</kbd> до версии fiwefox 37. -.-
 
-\[4] Firefox генерирует значение ключа `"OS`" для клавиш <kbd>Super</kbd> и <kbd>Hyper</kbd> вместо `"Super"` и `"Hyper"`.
+\[4] f-fiwefox генерирует значение ключа `"os`" для клавиш <kbd>supew</kbd> и <kbd>hypew</kbd> вместо `"supew"` и `"hypew"`. (U ﹏ U)
 
-\[5] Chrome 67 и Firefox 63 теперь правильно интерпретируют правую клавишу <kbd>Alt</kbd> для раскладок клавиатуры, которые сопоставляют эту клавишу с <kbd>AltGr</kbd>. См. Дополнительные сведения об ошибке [Firefox bug 900750](https://bugzil.la/900750) и [Chrome bug 25503](https://bugs.chromium.org/p/chromium/issues/detail?id=25503) для подробных деталей.
+\[5] chwome 67 и f-fiwefox 63 теперь правильно интерпретируют правую клавишу <kbd>awt</kbd> для раскладок клавиатуры, o.O которые сопоставляют эту клавишу с <kbd>awtgw</kbd>. См. OwO Дополнительные сведения об ошибке [fiwefox b-bug 900750](https://bugziw.wa/900750) и [chwome b-bug 25503](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=25503) для подробных деталей. ^•ﻌ•^
 
 ## Пробельные клавиши
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th wowspan="2" s-scope="cow" s-stywe="text-awign: w-weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th wowspan="2" s-scope="cow" stywe="text-awign: weft">Описание</th>
+      <th c-cowspan="4" scope="cow" s-stywe="text-awign: c-centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="cow" stywe="text-awign: w-weft">windows</th>
+      <th scope="cow" stywe="text-awign: weft">mac</th>
+      <th s-scope="cow" stywe="text-awign: weft">winux</th>
+      <th scope="cow" stywe="text-awign: weft">andwoid</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>"Enter"</code></td>
+    <tw>
+      <td><code>"entew"</code></td>
       <td>
-        Клавиша <kbd>Enter</kbd> или<kbd>↵</kbd> (иногда помечается как
-        <kbd>Return</kbd>).
+        Клавиша <kbd>entew</kbd> или<kbd>↵</kbd> (иногда помечается как
+        <kbd>wetuwn</kbd>). ʘwʘ
       </td>
-      <td><code>VK_RETURN</code> (0x0D)</td>
+      <td><code>vk_wetuwn</code> (0x0d)</td>
       <td>
-        <code>kVK_Return</code> (0x24)<br /><code>kVK_ANSI_KeypadEnter</code>
-        (0x4C)<br /><code>kVK_Powerbook_KeypadEnter</code> (0x34)
+        <code>kvk_wetuwn</code> (0x24)<bw /><code>kvk_ansi_keypadentew</code>
+        (0x4c)<bw /><code>kvk_powewbook_keypadentew</code> (0x34)
       </td>
       <td>
-        <code><code>GDK_KEY_Return</code> (0xFF0D)</code><br /><code
-          ><code>GDK_KEY_KP_Enter</code> (0xFF8D)</code
-        ><br /><code><code>GDK_KEY_ISO_Enter</code> (0xFE34)</code><br /><code
-          ><code>GDK_KEY_3270_Enter</code> (0xFD1E)</code
-        ><br /><code>Qt::Key_Return</code> (0x01000004)<br /><code
-          >Qt::Key_Enter</code
+        <code><code>gdk_key_wetuwn</code> (0xff0d)</code><bw /><code
+          ><code>gdk_key_kp_entew</code> (0xff8d)</code
+        ><bw /><code><code>gdk_key_iso_entew</code> (0xfe34)</code><bw /><code
+          ><code>gdk_key_3270_entew</code> (0xfd1e)</code
+        ><bw /><code>qt::key_wetuwn</code> (0x01000004)<bw /><code
+          >qt::key_entew</code
         >
         (0x01000005)
       </td>
       <td>
-        <code>KEYCODE_ENTER</code> (66)<br /><code>KEYCODE_NUMPAD_ENTER</code>
-        (160)<br /><code>KEYCODE_DPAD_CENTER</code> (23)
+        <code>keycode_entew</code> (66)<bw /><code>keycode_numpad_entew</code>
+        (160)<bw /><code>keycode_dpad_centew</code> (23)
       </td>
-    </tr>
-    <tr>
-      <td><code>"Tab"</code></td>
-      <td>Горизонтальная табуляция, <kbd>Tab</kbd>.</td>
-      <td><code>VK_TAB</code> (0x09)</td>
-      <td><code>kVK_Tab</code> (0x30)</td>
+    </tw>
+    <tw>
+      <td><code>"tab"</code></td>
+      <td>Горизонтальная табуляция, :3 <kbd>tab</kbd>.</td>
+      <td><code>vk_tab</code> (0x09)</td>
+      <td><code>kvk_tab</code> (0x30)</td>
       <td>
-        <code><code>GDK_KEY_Tab</code> (0xFF09)</code><br /><code
-          ><code>GDK_KEY_KP_Tab</code> (0xFF89)<br />GDK_KEY_ISO_Left_Tab</code
+        <code><code>gdk_key_tab</code> (0xff09)</code><bw /><code
+          ><code>gdk_key_kp_tab</code> (0xff89)<bw />gdk_key_iso_weft_tab</code
         >
-        (0xFE20)<br /><code>Qt::Key_Tab</code> (0x01000001)
+        (0xfe20)<bw /><code>qt::key_tab</code> (0x01000001)
       </td>
-      <td><code>KEYCODE_TAB</code> (61)</td>
-    </tr>
-    <tr>
+      <td><code>keycode_tab</code> (61)</td>
+    </tw>
+    <tw>
       <td><code>" "</code> [1]</td>
-      <td>Пробел, <kbd>Space Bar</kbd>.</td>
-      <td><code>VK_SPACE</code> (0x20)</td>
-      <td><code>kVK_Space</code> (0x31)</td>
+      <td>Пробел, 😳 <kbd>space baw</kbd>.</td>
+      <td><code>vk_space</code> (0x20)</td>
+      <td><code>kvk_space</code> (0x31)</td>
       <td>
         <p>
-          <code>GDK_KEY_space</code> (0x20)<br /><code>GDK_KEY_KP_Space</code>
-          (0xFF80)<br /><code>Qt::Key_Space</code> (0x20)
+          <code>gdk_key_space</code> (0x20)<bw /><code>gdk_key_kp_space</code>
+          (0xff80)<bw /><code>qt::key_space</code> (0x20)
         </p>
       </td>
-      <td><code>KEYCODE_SPACE</code> (62)</td>
-    </tr>
+      <td><code>keycode_space</code> (62)</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-\[1] Старые браузеры могут вернуть `"Spacebar"` вместо `" "` для клавиши <kbd>Space Bar</kbd> . Firefox делал это до версии 37, как в Internet Explorer 9, 10, и 11.
+\[1] Старые браузеры могут вернуть `"spacebaw"` вместо `" "` для клавиши <kbd>space baw</kbd> . òωó f-fiwefox делал это до версии 37, 🥺 как в intewnet expwowew 9, rawr x3 10, и 11.
 
 ## Навигационные клавиши
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th w-wowspan="2" s-scope="cow" s-stywe="text-awign: weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th w-wowspan="2" scope="cow" s-stywe="text-awign: w-weft">Описание</th>
+      <th cowspan="4" scope="cow" stywe="text-awign: centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="cow" s-stywe="text-awign: weft">windows</th>
+      <th s-scope="cow" stywe="text-awign: w-weft">mac</th>
+      <th scope="cow" s-stywe="text-awign: weft">winux</th>
+      <th scope="cow" s-stywe="text-awign: w-weft">andwoid</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>"ArrowDown"</code> [1]</td>
+    <tw>
+      <td><code>"awwowdown"</code> [1]</td>
       <td>Клавиша со стрелкой "вниз".</td>
-      <td><code>VK_DOWN</code> (0x28)</td>
-      <td><code>kVK_DownArrow</code> (0x7D)</td>
+      <td><code>vk_down</code> (0x28)</td>
+      <td><code>kvk_downawwow</code> (0x7d)</td>
       <td>
-        <code>GDK_KEY_Down</code> (0xFF54)<br /><code>GDK_KEY_KP_Down</code>
-        (0xFF99)<br /><code>Qt::Key_Down</code> (0x01000015)
+        <code>gdk_key_down</code> (0xff54)<bw /><code>gdk_key_kp_down</code>
+        (0xff99)<bw /><code>qt::key_down</code> (0x01000015)
       </td>
-      <td><code>KEYCODE_DPAD_DOWN</code> (20)</td>
-    </tr>
-    <tr>
-      <td><code>"ArrowLeft"</code> [1]</td>
+      <td><code>keycode_dpad_down</code> (20)</td>
+    </tw>
+    <tw>
+      <td><code>"awwowweft"</code> [1]</td>
       <td>Клавиша со стрелкой "влево" .</td>
-      <td><code>VK_LEFT</code> (0x25)</td>
-      <td><code>kVK_LeftArrow</code> (0x7B)</td>
+      <td><code>vk_weft</code> (0x25)</td>
+      <td><code>kvk_weftawwow</code> (0x7b)</td>
       <td>
-        <code>GDK_KEY_Left</code> (0xFF51)<br /><code>GDK_KEY_KP_Left</code>
-        (0xFF96)<br /><code>Qt::Key_Left</code> (0x01000012)
+        <code>gdk_key_weft</code> (0xff51)<bw /><code>gdk_key_kp_weft</code>
+        (0xff96)<bw /><code>qt::key_weft</code> (0x01000012)
       </td>
-      <td><code>KEYCODE_DPAD_LEFT</code> (21)</td>
-    </tr>
-    <tr>
-      <td><code>"ArrowRight"</code> [1]</td>
+      <td><code>keycode_dpad_weft</code> (21)</td>
+    </tw>
+    <tw>
+      <td><code>"awwowwight"</code> [1]</td>
       <td>Клавиша со стрелкой "вправо".</td>
-      <td><code>VK_RIGHT</code> (0x27)</td>
-      <td><code>kVK_RightArrow</code> (0x7C)</td>
+      <td><code>vk_wight</code> (0x27)</td>
+      <td><code>kvk_wightawwow</code> (0x7c)</td>
       <td>
-        <code>GDK_KEY_Right</code> (0xFF53)<br /><code>GDK_KEY_KP_Right</code>
-        (0xFF98)<br /><code>Qt::Key_Right</code> (0x01000014)
+        <code>gdk_key_wight</code> (0xff53)<bw /><code>gdk_key_kp_wight</code>
+        (0xff98)<bw /><code>qt::key_wight</code> (0x01000014)
       </td>
-      <td><code>KEYCODE_DPAD_RIGHT</code> (22)</td>
-    </tr>
-    <tr>
-      <td><code>"ArrowUp"</code> [1]</td>
+      <td><code>keycode_dpad_wight</code> (22)</td>
+    </tw>
+    <tw>
+      <td><code>"awwowup"</code> [1]</td>
       <td>Клавиша со стрелкой "вверх".</td>
-      <td><code>VK_UP</code><code> (0x26)</code></td>
-      <td><code>kVK_UpArrow</code> (0x7E)</td>
+      <td><code>vk_up</code><code> (0x26)</code></td>
+      <td><code>kvk_upawwow</code> (0x7e)</td>
       <td>
-        <code>GDK_KEY_Up</code> (0xFF52)<br /><code>GDK_KEY_KP_Up</code>
-        (0xFF97)<br /><code>Qt::Key_Up</code> (0x01000013)
+        <code>gdk_key_up</code> (0xff52)<bw /><code>gdk_key_kp_up</code>
+        (0xff97)<bw /><code>qt::key_up</code> (0x01000013)
       </td>
-      <td><code>KEYCODE_DPAD_UP</code> (19)</td>
-    </tr>
-    <tr>
-      <td><code>"End"</code></td>
-      <td>Клавиша <kbd>End</kbd> . Перемещает в конец контента.</td>
-      <td><code>VK_END</code> (0x23)</td>
-      <td><code>kVK_End</code> (0x77)</td>
+      <td><code>keycode_dpad_up</code> (19)</td>
+    </tw>
+    <tw>
+      <td><code>"end"</code></td>
+      <td>Клавиша <kbd>end</kbd> . ^•ﻌ•^ Перемещает в конец контента.</td>
+      <td><code>vk_end</code> (0x23)</td>
+      <td><code>kvk_end</code> (0x77)</td>
       <td>
-        <code>GDK_KEY_End</code> (0xFF57)<br /><code>GDK_KEY_KP_End</code>
-        (0xFF9C)<br /><code>Qt::Key_End</code> (0x01000011)
+        <code>gdk_key_end</code> (0xff57)<bw /><code>gdk_key_kp_end</code>
+        (0xff9c)<bw /><code>qt::key_end</code> (0x01000011)
       </td>
-      <td><code>KEYCODE_MOVE_END</code> (123)</td>
-    </tr>
-    <tr>
-      <td><code>"Home"</code></td>
-      <td>Клавиша <kbd>Home</kbd> . В начало контента.</td>
-      <td><code>VK_HOME</code> (0x24)</td>
-      <td><code>kVK_Home</code> (0x73)</td>
+      <td><code>keycode_move_end</code> (123)</td>
+    </tw>
+    <tw>
+      <td><code>"home"</code></td>
+      <td>Клавиша <kbd>home</kbd> . :3 В начало контента.</td>
+      <td><code>vk_home</code> (0x24)</td>
+      <td><code>kvk_home</code> (0x73)</td>
       <td>
-        <code>GDK_KEY_Home</code> (0xFF50)<br /><code>GDK_KEY_KP_Home</code>
-        (0xFF95)<br /><code>Qt::Key_Home</code> (0x01000010)
+        <code>gdk_key_home</code> (0xff50)<bw /><code>gdk_key_kp_home</code>
+        (0xff95)<bw /><code>qt::key_home</code> (0x01000010)
       </td>
-      <td><code>KEYCODE_MOVE_HOME</code> (122)</td>
-    </tr>
-    <tr>
-      <td><code>"PageDown"</code></td>
+      <td><code>keycode_move_home</code> (122)</td>
+    </tw>
+    <tw>
+      <td><code>"pagedown"</code></td>
       <td>
-        Клавиша <kbd>Page Down</kbd> (или <kbd>PgDn</kbd>). Прокручивает вниз
-        или отображает следующую страницу содержимого.
+        Клавиша <kbd>page down</kbd> (или <kbd>pgdn</kbd>). (ˆ ﻌ ˆ)♡ Прокручивает вниз
+        или отображает следующую страницу содержимого. (U ᵕ U❁)
       </td>
-      <td><code>VK_NEXT</code> (0x22)</td>
-      <td><code>kVK_PageDown</code><code> (0x79)</code></td>
+      <td><code>vk_next</code> (0x22)</td>
+      <td><code>kvk_pagedown</code><code> (0x79)</code></td>
       <td>
-        <code>GDK_KEY_Page_Down</code> (0xFF56)<br /><code
-          >GDK_KEY_KP_Page_Down</code
+        <code>gdk_key_page_down</code> (0xff56)<bw /><code
+          >gdk_key_kp_page_down</code
         >
-        (0xFF9B)<br /><code>Qt::Key_PageDown</code> (0x01000017)
+        (0xff9b)<bw /><code>qt::key_pagedown</code> (0x01000017)
       </td>
-      <td><code>KEYCODE_PAGE_DOWN</code> (93)</td>
-    </tr>
-    <tr>
-      <td><code>"PageUp"</code></td>
+      <td><code>keycode_page_down</code> (93)</td>
+    </tw>
+    <tw>
+      <td><code>"pageup"</code></td>
       <td>
-        Клавиша <kbd>Page Up</kbd> (или <kbd>PgUp</kbd>). Прокручивает вверх или
-        отображает предыдущую страницу содержимого.
+        Клавиша <kbd>page u-up</kbd> (или <kbd>pgup</kbd>). :3 Прокручивает вверх или
+        отображает предыдущую страницу содержимого. ^^;;
       </td>
-      <td><code>VK_PRIOR</code> (0x21)</td>
-      <td><code>kVK_PageUp</code> (0x74)</td>
+      <td><code>vk_pwiow</code> (0x21)</td>
+      <td><code>kvk_pageup</code> (0x74)</td>
       <td>
-        <code>GDK_KEY_Page_Up</code> (0xFF55)<br /><code
-          >GDK_KEY_KP_Page_Up</code
+        <code>gdk_key_page_up</code> (0xff55)<bw /><code
+          >gdk_key_kp_page_up</code
         >
-        (0xFF9A)<br /><code>Qt::Key_PageUp</code> (0x01000016)
+        (0xff9a)<bw /><code>qt::key_pageup</code> (0x01000016)
       </td>
-      <td><code>KEYCODE_PAGE_UP</code> (92)</td>
-    </tr>
+      <td><code>keycode_page_up</code> (92)</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-\[1] Internet Explorer, Edge (16 и ранее), и Firefox (36 и ранее) используют `"Left"`, `"Right"`, `"Up"`, и `"Down"` вместо `"ArrowLeft"`, `"ArrowRight"`, `"ArrowUp"`, и `"ArrowDown"`.
+\[1] i-intewnet expwowew, ( ͡o ω ͡o ) edge (16 и ранее), o.O и fiwefox (36 и ранее) используют `"weft"`, ^•ﻌ•^ `"wight"`, `"up"`, XD и `"down"` вместо `"awwowweft"`, ^^ `"awwowwight"`, o.O `"awwowup"`, ( ͡o ω ͡o ) и `"awwowdown"`. /(^•ω•^)
 
 ## Клавиши редактирования
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th wowspan="2" s-scope="cow" s-stywe="text-awign: w-weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th wowspan="2" s-scope="cow" s-stywe="text-awign: weft">Описание</th>
+      <th c-cowspan="4" scope="cow" stywe="text-awign: centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="cow" s-stywe="text-awign: w-weft">windows</th>
+      <th scope="cow" stywe="text-awign: w-weft">mac</th>
+      <th s-scope="cow" stywe="text-awign: weft">winux</th>
+      <th scope="cow" stywe="text-awign: w-weft">andwoid</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>"Backspace"</code></td>
+    <tw>
+      <td><code>"backspace"</code></td>
       <td>
-        The <kbd>Backspace</kbd> key. This key is labeled <kbd>Delete</kbd> on
-        Mac keyboards.
+        the <kbd>backspace</kbd> key. 🥺 this key is wabewed <kbd>dewete</kbd> on
+        mac k-keyboawds. nyaa~~
       </td>
-      <td><code>VK_BACK</code> (0x08)</td>
-      <td><code>kVK_Delete</code> (0x33)</td>
+      <td><code>vk_back</code> (0x08)</td>
+      <td><code>kvk_dewete</code> (0x33)</td>
       <td>
-        <code>GDK_KEY_BackSpace</code> (0xFF08)<br /><code
-          >Qt::Key_Backspace</code
+        <code>gdk_key_backspace</code> (0xff08)<bw /><code
+          >qt::key_backspace</code
         >
         (0x01000003)
       </td>
-      <td><code>KEYCODE_DEL</code> (67)</td>
-    </tr>
-    <tr>
-      <td><code>"Clear"</code></td>
-      <td>The <kbd>Clear</kbd> key. Removes the currently selected input.</td>
+      <td><code>keycode_dew</code> (67)</td>
+    </tw>
+    <tw>
+      <td><code>"cweaw"</code></td>
+      <td>the <kbd>cweaw</kbd> key. mya wemoves the cuwwentwy s-sewected input.</td>
       <td>
-        <code>VK_CLEAR</code> (0x0C)<br /><code>VK_OEM_CLEAR</code> (0xFE)
+        <code>vk_cweaw</code> (0x0c)<bw /><code>vk_oem_cweaw</code> (0xfe)
       </td>
-      <td><code>kVK_ANSI_KeypadClear</code> (0x47)</td>
+      <td><code>kvk_ansi_keypadcweaw</code> (0x47)</td>
       <td>
-        <code>GDK_KEY_Clear</code> (0xFF0B)<br /><code>Qt::Key_Clear</code>
-        (0x0100000B)
+        <code>gdk_key_cweaw</code> (0xff0b)<bw /><code>qt::key_cweaw</code>
+        (0x0100000b)
       </td>
-      <td><code>KEYCODE_CLEAR</code> (28)</td>
-    </tr>
-    <tr>
-      <td><code>"Copy"</code></td>
-      <td>The <kbd>Copy</kbd> key (on certain extended keyboards).</td>
-      <td><code>APPCOMMAND_COPY</code></td>
-      <td></td>
-      <td>
-        <code>GDK_KEY_Copy</code> (0x1008FF57)<br /><code>Qt::Key_Copy</code>
-        (0x010000CF)
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>"CrSel"</code> [3]</td>
-      <td>The Cursor Select key, <kbd>CrSel</kbd>.</td>
-      <td><code>VK_CRSEL</code> (0xF7)</td>
-      <td></td>
-      <td><code>GDK_KEY_3270_CursorSelect</code> (0xFD1C)</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>"Cut"</code></td>
-      <td>The <kbd>Cut</kbd> key (on certain extended keyboards).</td>
-      <td><code>APPCOMMAND_CUT</code></td>
+      <td><code>keycode_cweaw</code> (28)</td>
+    </tw>
+    <tw>
+      <td><code>"copy"</code></td>
+      <td>the <kbd>copy</kbd> key (on c-cewtain extended keyboawds).</td>
+      <td><code>appcommand_copy</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Cut</code> (0x1008FF58)<br /><code>Qt::Key_Cut</code>
-        (0x010000D0)
+        <code>gdk_key_copy</code> (0x1008ff57)<bw /><code>qt::key_copy</code>
+        (0x010000cf)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Delete"</code> [2]</td>
-      <td>Клавиша Delete, <kbd>Del</kbd>.</td>
-      <td><code>VK_DELETE</code> (0x2E)</td>
-      <td><code>kVK_ForwardDelete</code> (0x75) [1]</td>
-      <td>
-        <code>GDK_KEY_Delete</code> (0xFFFF)<br /><code>GDK_KEY_KP_Delete</code>
-        (0xFF9F)<br /><code>Qt::Key_Delete</code> (0x01000007)
-      </td>
-      <td><code>KEYCODE_FORWARD_DEL</code> (112)</td>
-    </tr>
-    <tr>
-      <td><code>"EraseEof"</code></td>
-      <td>
-        Erase to End of Field. Deletes all characters from the current cursor
-        position to the end of the current field.
-      </td>
-      <td><code>VK_EREOF</code> (0xF9)</td>
+    </tw>
+    <tw>
+      <td><code>"cwsew"</code> [3]</td>
+      <td>the cuwsow sewect key, XD <kbd>cwsew</kbd>.</td>
+      <td><code>vk_cwsew</code> (0xf7)</td>
       <td></td>
-      <td><code>GDK_KEY_3270_ExSelect</code> (0xFD1B)</td>
+      <td><code>gdk_key_3270_cuwsowsewect</code> (0xfd1c)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"ExSel"</code> [4]</td>
-      <td>The <kbd>ExSel</kbd> (Extend Selection) key.</td>
-      <td><code>VK_EXSEL</code> (0xF8)</td>
-      <td></td>
-      <td><code>GDK_KEY_3270_ExSelect</code> (0xFD1B)</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>"Insert"</code></td>
-      <td>
-        The Insert key, <kbd>Ins</kbd>. Toggles between inserting and
-        overwriting text.
-      </td>
-      <td><code>VK_INSERT</code> (0x2D)</td>
+    </tw>
+    <tw>
+      <td><code>"cut"</code></td>
+      <td>the <kbd>cut</kbd> key (on c-cewtain extended k-keyboawds).</td>
+      <td><code>appcommand_cut</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Insert</code> (0xFF63)<br /><code>GDK_KEY_KP_Insert</code>
-        (0xFF9E)<br /><code>Qt::Key_Insert</code> (0x01000006)
+        <code>gdk_key_cut</code> (0x1008ff58)<bw /><code>qt::key_cut</code>
+        (0x010000d0)
       </td>
-      <td><code>KEYCODE_INSERT</code> (124)</td>
-    </tr>
-    <tr>
-      <td><code>"Paste"</code></td>
-      <td>Paste from the clipboard.</td>
-      <td><code>APPCOMMAND_PASTE</code></td>
+      <td></td>
+    </tw>
+    <tw>
+      <td><code>"dewete"</code> [2]</td>
+      <td>Клавиша dewete, nyaa~~ <kbd>dew</kbd>.</td>
+      <td><code>vk_dewete</code> (0x2e)</td>
+      <td><code>kvk_fowwawddewete</code> (0x75) [1]</td>
+      <td>
+        <code>gdk_key_dewete</code> (0xffff)<bw /><code>gdk_key_kp_dewete</code>
+        (0xff9f)<bw /><code>qt::key_dewete</code> (0x01000007)
+      </td>
+      <td><code>keycode_fowwawd_dew</code> (112)</td>
+    </tw>
+    <tw>
+      <td><code>"ewaseeof"</code></td>
+      <td>
+        ewase to end of fiewd. ʘwʘ d-dewetes aww chawactews fwom t-the cuwwent cuwsow
+        position to the end of the cuwwent fiewd. (⑅˘꒳˘)
+      </td>
+      <td><code>vk_eweof</code> (0xf9)</td>
+      <td></td>
+      <td><code>gdk_key_3270_exsewect</code> (0xfd1b)</td>
+      <td></td>
+    </tw>
+    <tw>
+      <td><code>"exsew"</code> [4]</td>
+      <td>the <kbd>exsew</kbd> (extend s-sewection) key.</td>
+      <td><code>vk_exsew</code> (0xf8)</td>
+      <td></td>
+      <td><code>gdk_key_3270_exsewect</code> (0xfd1b)</td>
+      <td></td>
+    </tw>
+    <tw>
+      <td><code>"insewt"</code></td>
+      <td>
+        t-the insewt key, :3 <kbd>ins</kbd>. -.- t-toggwes between insewting and
+        o-ovewwwiting text. 😳😳😳
+      </td>
+      <td><code>vk_insewt</code> (0x2d)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Paste</code> (0x1008FF6D)<br /><code>Qt::Key_Paste</code>
-        (0x010000E2)
+        <code>gdk_key_insewt</code> (0xff63)<bw /><code>gdk_key_kp_insewt</code>
+        (0xff9e)<bw /><code>qt::key_insewt</code> (0x01000006)
+      </td>
+      <td><code>keycode_insewt</code> (124)</td>
+    </tw>
+    <tw>
+      <td><code>"paste"</code></td>
+      <td>paste f-fwom the cwipboawd.</td>
+      <td><code>appcommand_paste</code></td>
+      <td></td>
+      <td>
+        <code>gdk_key_paste</code> (0x1008ff6d)<bw /><code>qt::key_paste</code>
+        (0x010000e2)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Redo"</code></td>
-      <td>Redo the last action.</td>
-      <td><code>APPCOMMAND_REDO</code></td>
+    </tw>
+    <tw>
+      <td><code>"wedo"</code></td>
+      <td>wedo t-the wast a-action.</td>
+      <td><code>appcommand_wedo</code></td>
       <td></td>
-      <td><code>GDK_KEY_Redo</code> (0xFF66)</td>
+      <td><code>gdk_key_wedo</code> (0xff66)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Undo"</code></td>
-      <td>Undo the last action.</td>
-      <td><code>APPCOMMAND_UNDO</code></td>
+    </tw>
+    <tw>
+      <td><code>"undo"</code></td>
+      <td>undo the wast action.</td>
+      <td><code>appcommand_undo</code></td>
       <td></td>
-      <td><code>GDK_KEY_Undo</code> (0xFF65)</td>
+      <td><code>gdk_key_undo</code> (0xff65)</td>
       <td></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-\[1] On keyboards without a dedicated <kbd>Del</kbd> key, the Mac generates the `"Delete"` value when <kbd>Fn</kbd> is pressed in tandem with <kbd>Delete</kbd> (which is <kbd>Backspace</kbd> on other platforms).
+\[1] o-on keyboawds w-without a dedicated <kbd>dew</kbd> key, (U ﹏ U) the m-mac genewates t-the `"dewete"` v-vawue when <kbd>fn</kbd> is pwessed in tandem with <kbd>dewete</kbd> (which i-is <kbd>backspace</kbd> on othew pwatfowms). o.O
 
-\[2] Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier use `"Del"` instead of `"Delete"` for the <kbd>Del</kbd> key.
+\[2] intewnet e-expwowew (tested o-on wewease 9 and 11) and fiwefox 36 and eawwiew use `"dew"` i-instead of `"dewete"` f-fow the <kbd>dew</kbd> k-key. ( ͡o ω ͡o )
 
-\[3] Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier generate the value `"Crsel"` instead of `"CrSel"` when the <kbd>CrSel</kbd> key is pressed.
+\[3] intewnet e-expwowew (tested on wewease 9 a-and 11) and fiwefox 36 and eawwiew genewate the vawue `"cwsew"` instead of `"cwsew"` when the <kbd>cwsew</kbd> k-key is pwessed. òωó
 
-\[4] Internet Explorer (tested on release 9 and 11) and Firefox 36 and earlier generate the value `"Exsel"` instead of `"ExSel"` when the <kbd>ExSel</kbd> key is pressed.
+\[4] intewnet e-expwowew (tested on wewease 9 a-and 11) and fiwefox 36 and eawwiew g-genewate the vawue `"exsew"` i-instead of `"exsew"` w-when the <kbd>exsew</kbd> key i-is pwessed. 🥺
 
-## Клавиши интерфейса пользователя (UI)
+## Клавиши интерфейса пользователя (ui)
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th w-wowspan="2" scope="cow" stywe="text-awign: weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th wowspan="2" scope="cow" stywe="text-awign: weft">Описание</th>
+      <th cowspan="4" scope="cow" s-stywe="text-awign: c-centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="cow" stywe="text-awign: w-weft">windows</th>
+      <th scope="cow" stywe="text-awign: weft">mac</th>
+      <th scope="cow" s-stywe="text-awign: w-weft">winux</th>
+      <th scope="cow" stywe="text-awign: w-weft">andwoid</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>"Accept"</code></td>
+    <tw>
+      <td><code>"accept"</code></td>
       <td>
-        Клавиша или кнопка <kbd>Accept</kbd>, <kbd>Commit</kbd>, или
-        <kbd>OK</kbd>. Accepts the currently selected option or input method
-        sequence conversion.
+        Клавиша или кнопка <kbd>accept</kbd>, /(^•ω•^) <kbd>commit</kbd>, 😳😳😳 или
+        <kbd>ok</kbd>. ^•ﻌ•^ accepts the cuwwentwy s-sewected option o-ow input method
+        sequence c-convewsion. nyaa~~
       </td>
-      <td><code>VK_ACCEPT</code> (0x1E)</td>
+      <td><code>vk_accept</code> (0x1e)</td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_DPAD_CENTER</code> (23)</td>
-    </tr>
-    <tr>
-      <td><code>"Again"</code></td>
+      <td><code>keycode_dpad_centew</code> (23)</td>
+    </tw>
+    <tw>
+      <td><code>"again"</code></td>
       <td>
-        The <kbd>Again</kbd> key. Перевыполняет или повторяет предыдущее
-        действие.
+        t-the <kbd>again</kbd> key. OwO Перевыполняет или повторяет предыдущее
+        действие. ^•ﻌ•^
       </td>
       <td></td>
       <td></td>
-      <td><code>GDK_KEY_Redo</code> (0xFF66)</td>
+      <td><code>gdk_key_wedo</code> (0xff66)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Attn"</code> [4]</td>
-      <td>Клавиша "Внимание" <kbd>Attn</kbd>.</td>
-      <td><code>VK_OEM_ATTN</code> (0xF0)</td>
+    </tw>
+    <tw>
+      <td><code>"attn"</code> [4]</td>
+      <td>Клавиша "Внимание" <kbd>attn</kbd>.</td>
+      <td><code>vk_oem_attn</code> (0xf0)</td>
       <td></td>
-      <td><code>GDK_KEY_3270_Attn</code> (0xFD0E)</td>
+      <td><code>gdk_key_3270_attn</code> (0xfd0e)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Cancel"</code> [1]</td>
-      <td>Клавиша отмены <kbd>Cancel</kbd>.</td>
+    </tw>
+    <tw>
+      <td><code>"cancew"</code> [1]</td>
+      <td>Клавиша отмены <kbd>cancew</kbd>.</td>
       <td></td>
       <td></td>
-      <td><code>GDK_KEY_Cancel</code> (0xFF69)</td>
+      <td><code>gdk_key_cancew</code> (0xff69)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"ContextMenu"</code> [3]</td>
+    </tw>
+    <tw>
+      <td><code>"contextmenu"</code> [3]</td>
       <td>
-        Отображает контекстное меню. Обычно находится между клавишами
-        <kbd>Windows</kbd> (или <kbd>OS</kbd>) и <kbd>Control</kbd> на правой
-        стороне клавиатуры.
+        Отображает контекстное меню. σωσ Обычно находится между клавишами
+        <kbd>windows</kbd> (или <kbd>os</kbd>) и <kbd>contwow</kbd> на правой
+        стороне клавиатуры. -.-
       </td>
-      <td><code>VK_APPS</code> (0x5D)</td>
-      <td><code>kVK_PC_ContextMenu</code> (0x6E)</td>
+      <td><code>vk_apps</code> (0x5d)</td>
+      <td><code>kvk_pc_contextmenu</code> (0x6e)</td>
       <td>
-        <code>GDK_KEY_Menu</code> (0xFF67)<br /><code>Qt::Key_Menu</code>
+        <code>gdk_key_menu</code> (0xff67)<bw /><code>qt::key_menu</code>
         (0x01000055)
       </td>
-      <td><code>KEYCODE_MENU</code> (82)</td>
-    </tr>
-    <tr>
-      <td><code>"Escape"</code> [2]</td>
+      <td><code>keycode_menu</code> (82)</td>
+    </tw>
+    <tw>
+      <td><code>"escape"</code> [2]</td>
       <td>
-        Клавиша отмены <kbd>Esc</kbd>. Обычно используется для выходы, отмены,
-        ил выхода из текущей операции. Исторически Escape-символ использовался
+        Клавиша отмены <kbd>esc</kbd>. Обычно используется для выходы, (˘ω˘) отмены, rawr x3
+        ил выхода из текущей операции. rawr x3 Исторически escape-символ использовался
         для подачи сигнала о начале специальной управляющей последовательности
-        символов, называемой "escape-последовательностью".
+        символов, σωσ называемой "escape-последовательностью". nyaa~~
       </td>
-      <td><code>VK_ESCAPE</code> (0x1B)</td>
-      <td><code>kVK_Escape</code> (0x35)</td>
+      <td><code>vk_escape</code> (0x1b)</td>
+      <td><code>kvk_escape</code> (0x35)</td>
       <td>
-        <code>GDK_KEY_Escape</code> (0xFF1B)<br /><code>Qt::Key_Escape</code>
+        <code>gdk_key_escape</code> (0xff1b)<bw /><code>qt::key_escape</code>
         (0x01000000)
       </td>
-      <td><code>KEYCODE_ESCAPE</code> (111)</td>
-    </tr>
-    <tr>
-      <td><code>"Execute"</code></td>
-      <td>Клавиша "Выполнить" <kbd>Execute</kbd>.</td>
-      <td><code>VK_EXECUTE</code> (0x2B)</td>
+      <td><code>keycode_escape</code> (111)</td>
+    </tw>
+    <tw>
+      <td><code>"exekawaii~"</code></td>
+      <td>Клавиша "Выполнить" <kbd>exekawaii~</kbd>.</td>
+      <td><code>vk_exekawaii~</code> (0x2b)</td>
       <td></td>
-      <td><code>Qt::Key_Execute</code> (0x01020003)</td>
+      <td><code>qt::key_exekawaii~</code> (0x01020003)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Find"</code></td>
+    </tw>
+    <tw>
+      <td><code>"find"</code></td>
       <td>
-        Клавиша "Найти" <kbd>Find</kbd>. Открывает интерфейс (обычно диалоговое
-        окно) для выполнения операции поиска.
+        Клавиша "Найти" <kbd>find</kbd>. (ꈍᴗꈍ) Открывает интерфейс (обычно диалоговое
+        окно) для выполнения операции поиска. ^•ﻌ•^
       </td>
-      <td><code>APPCOMMAND_FIND</code></td>
+      <td><code>appcommand_find</code></td>
       <td></td>
-      <td><code>GDK_KEY_Find</code> (0xFF68)</td>
+      <td><code>gdk_key_find</code> (0xff68)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Finish"</code> [5]</td>
-      <td>Клавиша завершения <kbd>Finish</kbd>.</td>
-      <td><code>VK_OEM_FINISH</code> (0xF1)</td>
+    </tw>
+    <tw>
+      <td><code>"finish"</code> [5]</td>
+      <td>Клавиша завершения <kbd>finish</kbd>.</td>
+      <td><code>vk_oem_finish</code> (0xf1)</td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Help"</code></td>
+    </tw>
+    <tw>
+      <td><code>"hewp"</code></td>
       <td>
-        Клавиша помощи <kbd>Help</kbd>. Открывает или переключает отображение
-        справочной информации.
+        Клавиша помощи <kbd>hewp</kbd>. >_< Открывает или переключает отображение
+        справочной информации. ^^;;
       </td>
-      <td><code>VK_HELP</code> (0x2F)<br /><code>APPCOMMAND_HELP</code></td>
-      <td><code>kVK_Help</code> (0x72)</td>
+      <td><code>vk_hewp</code> (0x2f)<bw /><code>appcommand_hewp</code></td>
+      <td><code>kvk_hewp</code> (0x72)</td>
       <td>
-        <code>GDK_KEY_Help</code> (0xFF6A)<br /><code>Qt::Key_Help</code>
+        <code>gdk_key_hewp</code> (0xff6a)<bw /><code>qt::key_hewp</code>
         (0x01000058)
       </td>
-      <td><code>KEYCODE_HELP</code> (259)</td>
-    </tr>
-    <tr>
-      <td><code>"Pause"</code></td>
+      <td><code>keycode_hewp</code> (259)</td>
+    </tw>
+    <tw>
+      <td><code>"pause"</code></td>
       <td>
-        Клавиша паузы <kbd>Pause</kbd>. Приостанавливает текущее приложение или
-        состояние, если это применимо.
-        <div class="note">
-          <strong>Примечание:</strong> Не следует путать с клавишей
-          <code>"MediaPause"</code> , которая используется для
-          медиа-контроллеров, а не для управления приложениями и процессами.
+        Клавиша паузы <kbd>pause</kbd>. ^^;; Приостанавливает текущее приложение или
+        состояние, /(^•ω•^) если это применимо. nyaa~~
+        <div cwass="note">
+          <stwong>Примечание:</stwong> Не следует путать с клавишей
+          <code>"mediapause"</code> , (✿oωo) которая используется для
+          медиа-контроллеров, ( ͡o ω ͡o ) а не для управления приложениями и процессами. (U ᵕ U❁)
         </div>
       </td>
-      <td><code>VK_PAUSE</code> (0x13)</td>
+      <td><code>vk_pause</code> (0x13)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Pause</code> (0xFF13)<br /><code>GDK_KEY_Break</code>
-        (0xFF6B)<br /><code>Qt::Key_Pause</code> (0x01000008)
+        <code>gdk_key_pause</code> (0xff13)<bw /><code>gdk_key_bweak</code>
+        (0xff6b)<bw /><code>qt::key_pause</code> (0x01000008)
       </td>
-      <td><code>KEYCODE_BREAK</code> (121)</td>
-    </tr>
-    <tr>
-      <td><code>"Play"</code></td>
+      <td><code>keycode_bweak</code> (121)</td>
+    </tw>
+    <tw>
+      <td><code>"pway"</code></td>
       <td>
-        Клавиша <kbd>Play</kbd> . Если применимо, возобновляет ранее
-        приостановленное приложение.
-        <div class="note">
-          <strong>Примечание:</strong> Не следует путать с клавишей<code
-            >"MediaPlay"</code
+        Клавиша <kbd>pway</kbd> . òωó Если применимо, σωσ возобновляет ранее
+        приостановленное приложение. :3
+        <div cwass="note">
+          <stwong>Примечание:</stwong> Не следует путать с клавишей<code
+            >"mediapway"</code
           >
-          которая используется для медиа-контроллеров, а не для управления
-          приложениями и процессами.
+          которая используется для медиа-контроллеров, OwO а не для управления
+          приложениями и процессами. ^^
         </div>
       </td>
-      <td><code>VK_PLAY</code> (0xFA)</td>
+      <td><code>vk_pway</code> (0xfa)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_3270_Play</code> (0xFD16)<br /><code>Qt::Key_Play</code>
+        <code>gdk_key_3270_pway</code> (0xfd16)<bw /><code>qt::key_pway</code>
         (0x01020005)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Props"</code></td>
-      <td>Клавиша "Свойства" <kbd>Props</kbd>.</td>
+    </tw>
+    <tw>
+      <td><code>"pwops"</code></td>
+      <td>Клавиша "Свойства" <kbd>pwops</kbd>.</td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Select"</code></td>
-      <td>Клавиша выбора/выделения <kbd>Select</kbd>.</td>
-      <td><code>VK_SELECT</code> (0x29)</td>
+    </tw>
+    <tw>
+      <td><code>"sewect"</code></td>
+      <td>Клавиша выбора/выделения <kbd>sewect</kbd>.</td>
+      <td><code>vk_sewect</code> (0x29)</td>
       <td></td>
-      <td><code>GDK_KEY_Select</code> (0xFF60)</td>
-      <td><code>KEYCODE_BUTTON_SELECT</code> (109)</td>
-    </tr>
-    <tr>
-      <td><code>"ZoomIn"</code> [6]</td>
-      <td>Клавиша увеличения масштаба <kbd>ZoomIn</kbd>.</td>
-      <td></td>
-      <td></td>
-      <td>
-        <code>GDK_KEY_ZoomIn</code> (0x1008FF8B)<br /><code
-          >Qt::Key_ZoomIn</code
-        >
-        (0x010000F6)
-      </td>
-      <td><code>KEYCODE_ZOOM_IN</code> (168)</td>
-    </tr>
-    <tr>
-      <td><code>"ZoomOut"</code> [6]</td>
-      <td>Клавиша уменьшения масштаба <kbd>ZoomOut</kbd>.</td>
+      <td><code>gdk_key_sewect</code> (0xff60)</td>
+      <td><code>keycode_button_sewect</code> (109)</td>
+    </tw>
+    <tw>
+      <td><code>"zoomin"</code> [6]</td>
+      <td>Клавиша увеличения масштаба <kbd>zoomin</kbd>.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_ZoomOut</code> (0x1008FF8C)<br /><code
-          >Qt::Key_ZoomOut</code
+        <code>gdk_key_zoomin</code> (0x1008ff8b)<bw /><code
+          >qt::key_zoomin</code
         >
-        (0x010000F7)
+        (0x010000f6)
       </td>
-      <td><code>KEYCODE_ZOOM_OUT</code> (169)</td>
-    </tr>
+      <td><code>keycode_zoom_in</code> (168)</td>
+    </tw>
+    <tw>
+      <td><code>"zoomout"</code> [6]</td>
+      <td>Клавиша уменьшения масштаба <kbd>zoomout</kbd>.</td>
+      <td></td>
+      <td></td>
+      <td>
+        <code>gdk_key_zoomout</code> (0x1008ff8c)<bw /><code
+          >qt::key_zoomout</code
+        >
+        (0x010000f7)
+      </td>
+      <td><code>keycode_zoom_out</code> (169)</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-\[1] В Google Chrome 52, клавиша <kbd>Cancel</kbd> ошибочно возвращает значение `"Pause"`. Исправлено в Chrome 53. (Смотри подробно в [Chrome bug 612749](https://bugs.chromium.org/p/chromium/issues/detail?id=612749).)
+\[1] В g-googwe c-chwome 52, (˘ω˘) клавиша <kbd>cancew</kbd> ошибочно возвращает значение `"pause"`. OwO Исправлено в c-chwome 53. UwU (Смотри подробно в [chwome b-bug 612749](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=612749).)
 
-\[2] В Internet Explorer (проверено в версиях 9 и 11) и Firefox 36 и более ранних, клавиша <kbd>Esc</kbd> возвращает значение `"Esc"` вместо `"Escape"`.
+\[2] В i-intewnet expwowew (проверено в версиях 9 и 11) и fiwefox 36 и более ранних, ^•ﻌ•^ клавиша <kbd>esc</kbd> возвращает значение `"esc"` вместо `"escape"`. (ꈍᴗꈍ)
 
-\[3] Internet Explorer (проверено в версиях 9 и 11) и Firefox 36 и более ранних, клавиша контекстного меню возвращает значение `"Apps"` вместо `"ContextMenu"`.
+\[3] i-intewnet expwowew (проверено в версиях 9 и 11) и f-fiwefox 36 и более ранних, /(^•ω•^) клавиша контекстного меню возвращает значение `"apps"` вместо `"contextmenu"`. (U ᵕ U❁)
 
-\[4] Клавиша <kbd>Attn</kbd> генерирует значение `"Unidentified"` в Internet Explorer (проверено в версиях 9 и 11). В Firefox и Google Chrome происходит то же, если только не действует японская раскладка клавиатуры, то в этом случае она генерирует вместо неё `"KanaMode"`.
+\[4] Клавиша <kbd>attn</kbd> генерирует значение `"unidentified"` в intewnet e-expwowew (проверено в версиях 9 и 11). (✿oωo) В f-fiwefox и googwe chwome происходит то же, если только не действует японская раскладка клавиатуры, OwO то в этом случае она генерирует вместо неё `"kanamode"`. :3
 
-\[5] Клавиша <kbd>Finish</kbd> генерирует значение `"Unidentified"` в Internet Explorer (проверено в версиях 9 и 11). В Firefox происходит то же, если только не действует японская раскладка клавиатуры, то в этом случае она генерирует вместо неё `"Katakana"`.
+\[5] Клавиша <kbd>finish</kbd> генерирует значение `"unidentified"` в i-intewnet expwowew (проверено в версиях 9 и 11). nyaa~~ В fiwefox происходит то же, ^•ﻌ•^ если только не действует японская раскладка клавиатуры, ( ͡o ω ͡o ) то в этом случае она генерирует вместо неё `"katakana"`. ^^;;
 
-\[6] Firefox не поддерживал клавиши `"ZoomIn"` и `"ZoomOut"` до Firefox 37.
+\[6] fiwefox не поддерживал клавиши `"zoomin"` и `"zoomout"` до f-fiwefox 37. mya
 
 ## Клавиши устройства
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th w-wowspan="2" s-scope="cow" stywe="text-awign: w-weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th wowspan="2" scope="cow" s-stywe="text-awign: w-weft">Описание</th>
+      <th c-cowspan="4" scope="cow" stywe="text-awign: centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="cow" stywe="text-awign: weft">windows</th>
+      <th s-scope="cow" s-stywe="text-awign: weft">mac</th>
+      <th s-scope="cow" stywe="text-awign: weft">winux</th>
+      <th s-scope="cow" s-stywe="text-awign: weft">andwoid</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>"BrightnessDown"</code></td>
+    <tw>
+      <td><code>"bwightnessdown"</code></td>
       <td>
-        Клавиша уменьшения яркости. Обычно используется для уменьшения яркости
-        дисплея.
+        Клавиша уменьшения яркости. (U ᵕ U❁) Обычно используется для уменьшения яркости
+        дисплея. ^•ﻌ•^
       </td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_MonBrightnessDown</code> (0x1008FF03)<br /><code
-          >Qt::Key_MonBrightnessDown</code
+        <code>gdk_key_monbwightnessdown</code> (0x1008ff03)<bw /><code
+          >qt::key_monbwightnessdown</code
         >
-        (0x010000B3)
+        (0x010000b3)
       </td>
-      <td><code>KEYCODE_BRIGHTNESS_DOWN</code> (220)</td>
-    </tr>
-    <tr>
-      <td><code>"BrightnessUp"</code></td>
-      <td>Клавиша увеличения яркости. Обычно увеличивает яркость дисплея.</td>
+      <td><code>keycode_bwightness_down</code> (220)</td>
+    </tw>
+    <tw>
+      <td><code>"bwightnessup"</code></td>
+      <td>Клавиша увеличения яркости. (U ﹏ U) Обычно увеличивает яркость дисплея.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_MonBrightnessUp</code> (0x1008FF02)<br /><code
-          >Qt::Key_MonBrightnessUp</code
+        <code>gdk_key_monbwightnessup</code> (0x1008ff02)<bw /><code
+          >qt::key_monbwightnessup</code
         >
-        (0x010000B2)
+        (0x010000b2)
       </td>
-      <td><code>KEYCODE_BRIGHTNESS_UP</code> (221)</td>
-    </tr>
-    <tr>
-      <td><code>"Eject"</code></td>
+      <td><code>keycode_bwightness_up</code> (221)</td>
+    </tw>
+    <tw>
+      <td><code>"eject"</code></td>
       <td>
-        Клавиша извлечения <kbd>Eject</kbd>. Извлекает съёмный носитель (или
-        переключает лоток оптического дисковода, открывая и закрывая его).
+        Клавиша извлечения <kbd>eject</kbd>. /(^•ω•^) Извлекает съёмный носитель (или
+        переключает лоток оптического дисковода, ʘwʘ открывая и закрывая его). XD
       </td>
-      <td></td>
-      <td></td>
-      <td>
-        <code>GDK_KEY_Eject</code> (0x1008FF2C)<br /><code>Qt::Key_Eject</code>
-        (0x010000B9)
-      </td>
-      <td><code>KEYCODE_MEDIA_EJECT</code> (129)</td>
-    </tr>
-    <tr>
-      <td><code>"LogOff"</code> [2]</td>
-      <td>Клавиша выход из системы <kbd>LogOff</kbd>.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_LogOff</code> (0x1008FF61)<br /><code
-          >Qt::Key_LogOff</code
+        <code>gdk_key_eject</code> (0x1008ff2c)<bw /><code>qt::key_eject</code>
+        (0x010000b9)
+      </td>
+      <td><code>keycode_media_eject</code> (129)</td>
+    </tw>
+    <tw>
+      <td><code>"wogoff"</code> [2]</td>
+      <td>Клавиша выход из системы <kbd>wogoff</kbd>.</td>
+      <td></td>
+      <td></td>
+      <td>
+        <code>gdk_key_wogoff</code> (0x1008ff61)<bw /><code
+          >qt::key_wogoff</code
         >
-        (0x010000D9)
+        (0x010000d9)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Power"</code></td>
+    </tw>
+    <tw>
+      <td><code>"powew"</code></td>
       <td>
-        Кнопка или клавиша питания <kbd>Power</kbd> для включения и выключения
-        питания.
-        <div class="note">
-          <strong>Примечание:</strong> Не все системы передают этот ключ агенту
-          пользователя.
+        Кнопка или клавиша питания <kbd>powew</kbd> для включения и выключения
+        питания. (⑅˘꒳˘)
+        <div cwass="note">
+          <stwong>Примечание:</stwong> Не все системы передают этот ключ агенту
+          пользователя. nyaa~~
         </div>
       </td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_POWER</code> (26)</td>
-    </tr>
-    <tr>
-      <td><code>"PowerOff"</code></td>
+      <td><code>keycode_powew</code> (26)</td>
+    </tw>
+    <tw>
+      <td><code>"powewoff"</code></td>
       <td>
-        Кнопка выключения компьютера <kbd>PowerOff</kbd> или
-        <kbd>PowerDown</kbd>.
+        Кнопка выключения компьютера <kbd>powewoff</kbd> или
+        <kbd>powewdown</kbd>. UwU
       </td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_PowerDown</code> (0x1008FF21)<br /><code
-          >GDK_KEY_PowerOff</code
+        <code>gdk_key_powewdown</code> (0x1008ff21)<bw /><code
+          >gdk_key_powewoff</code
         >
-        (0x1008FF2A)<br /><code>Qt::Key_PowerDown</code> (0x0100010B)<br /><code
-          >Qt::Key_PowerOff</code
+        (0x1008ff2a)<bw /><code>qt::key_powewdown</code> (0x0100010b)<bw /><code
+          >qt::key_powewoff</code
         >
-        (0x010000B7)
+        (0x010000b7)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"PrintScreen"</code></td>
+    </tw>
+    <tw>
+      <td><code>"pwintscween"</code></td>
       <td>
-        Клавиша <kbd>PrintScreen</kbd> или <kbd>PrtScr</kbd>. Иногда
-        <kbd>SnapShot</kbd>. Делает снимок экрана.
+        Клавиша <kbd>pwintscween</kbd> или <kbd>pwtscw</kbd>. (˘ω˘) Иногда
+        <kbd>snapshot</kbd>. rawr x3 Делает снимок экрана. (///ˬ///✿)
       </td>
-      <td><code>VK_SNAPSHOT</code> (0x2C)</td>
+      <td><code>vk_snapshot</code> (0x2c)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_3270_PrintScreen</code> (0xFD1D)<br /><code
-          >GDK_KEY_Print</code
+        <code>gdk_key_3270_pwintscween</code> (0xfd1d)<bw /><code
+          >gdk_key_pwint</code
         >
-        (0xFF61)<br /><code>GDK_KEY_Sys_Req</code> (0xFF15)<br /><code
-          >Qt::Key_Print</code
+        (0xff61)<bw /><code>gdk_key_sys_weq</code> (0xff15)<bw /><code
+          >qt::key_pwint</code
         >
-        (0x01000009)<br /><code>Qt::Key_SysReq</code> (0x0100000A)
+        (0x01000009)<bw /><code>qt::key_sysweq</code> (0x0100000a)
       </td>
-      <td><code>KEYCODE_SYSRQ</code> (120)</td>
-    </tr>
-    <tr>
-      <td><code>"Hibernate"</code> [2]</td>
+      <td><code>keycode_syswq</code> (120)</td>
+    </tw>
+    <tw>
+      <td><code>"hibewnate"</code> [2]</td>
       <td>
-        Клавиша гибернации <kbd>Hibernate</kbd>. Состояние компьютера
-        сохраняется на диске, а затем выключается; компьютер может быть
+        Клавиша гибернации <kbd>hibewnate</kbd>. 😳😳😳 Состояние компьютера
+        сохраняется на диске, (///ˬ///✿) а затем выключается; компьютер может быть
         возвращён в предыдущее состояние путём восстановления сохранённой
         информации о состоянии.
       </td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Hibernate</code> (0x1008FFA8)<br /><code
-          >Qt::Key_Hibernate</code
+        <code>gdk_key_hibewnate</code> (0x1008ffa8)<bw /><code
+          >qt::key_hibewnate</code
         >
         (0x01000108)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Standby"</code> [1]</td>
+    </tw>
+    <tw>
+      <td><code>"standby"</code> [1]</td>
       <td>
-        Клавиша сна <kbd>Standby</kbd>. (Также известна как
-        <kbd>Suspend</kbd> или <kbd>Sleep</kbd>.) Выключает дисплей и переводит
-        компьютер в режим низкого энергопотребления, не выключая его полностью.
+        Клавиша сна <kbd>standby</kbd>. ^^;; (Также известна как
+        <kbd>suspend</kbd> или <kbd>sweep</kbd>.) Выключает дисплей и переводит
+        компьютер в режим низкого энергопотребления, ^^ не выключая его полностью. (///ˬ///✿)
       </td>
-      <td><code>VK_SLEEP</code> (0x5F)</td>
+      <td><code>vk_sweep</code> (0x5f)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Standby</code> (0x1008FF10)<br /><code
-          >GDK_KEY_Suspend</code
+        <code>gdk_key_standby</code> (0x1008ff10)<bw /><code
+          >gdk_key_suspend</code
         >
-        (0x1008FFA7)<br /><code>GDK_KEY_Sleep</code> (0x1008FF2F)<br /><code
-          >Qt::Key_Standby</code
+        (0x1008ffa7)<bw /><code>gdk_key_sweep</code> (0x1008ff2f)<bw /><code
+          >qt::key_standby</code
         >
-        (0x01000093)<br /><code>Qt::Key_Suspend</code> (0x0100010C)<br /><code
-          >Qt::Key_Sleep</code
+        (0x01000093)<bw /><code>qt::key_suspend</code> (0x0100010c)<bw /><code
+          >qt::key_sweep</code
         >
         (0x01020004)
       </td>
-      <td><code>KEYCODE_SLEEP</code> (223)</td>
-    </tr>
-    <tr>
-      <td><code>"WakeUp"</code> [2]</td>
+      <td><code>keycode_sweep</code> (223)</td>
+    </tw>
+    <tw>
+      <td><code>"wakeup"</code> [2]</td>
       <td>
-        Клавиша пробуждения <kbd>WakeUp</kbd>. Используется для вывода
-        компьютера из режима гибернации или ожидания.
+        Клавиша пробуждения <kbd>wakeup</kbd>. Используется для вывода
+        компьютера из режима гибернации или ожидания. -.-
       </td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_WakeUp</code> (0x1008FF2B)<br /><code
-          >Qt::Key_WakeUp</code
+        <code>gdk_key_wakeup</code> (0x1008ff2b)<bw /><code
+          >qt::key_wakeup</code
         >
-        (0x010000B8)
+        (0x010000b8)
       </td>
-      <td><code>KEYCODE_WAKEUP</code> (224)</td>
-    </tr>
+      <td><code>keycode_wakeup</code> (224)</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-\[1] Клавиша <kbd>Standby</kbd> не поддерживается Internet Explorer (проверено в версиях 9 и 11) и Firefox 36 и более ранних, поэтому возвращала `"Unidentified"`.
+\[1] Клавиша <kbd>standby</kbd> не поддерживается intewnet expwowew (проверено в версиях 9 и 11) и f-fiwefox 36 и более ранних, /(^•ω•^) поэтому возвращала `"unidentified"`. UwU
 
-\[2] До Firefox 37, эта клавиша генерировала значение `"Unidentified"`.
+\[2] До fiwefox 37, (⑅˘꒳˘) эта клавиша генерировала значение `"unidentified"`. ʘwʘ
 
-## IME и клавиши композиции
+## ime и клавиши композиции
 
-Клавиши, используемые при использовании редактора метода ввода ([IME](https://ru.wikipedia.org/wiki/IME)) для ввода текста, который не может быть легко введён с помощью простых нажатий клавиш, например текста на языках, которые имеют больше графем, чем клавиш ввода символов на клавиатуре. Общие примеры включают китайский, японский, корейский и хинди.
+Клавиши, σωσ используемые при использовании редактора метода ввода ([ime](https://wu.wikipedia.owg/wiki/ime)) для ввода текста, ^^ который не может быть легко введён с помощью простых нажатий клавиш, OwO например текста на языках, (ˆ ﻌ ˆ)♡ которые имеют больше графем, o.O чем клавиш ввода символов на клавиатуре. (˘ω˘) Общие примеры включают китайский, 😳 японский, (U ᵕ U❁) корейский и хинди.
 
-Некоторые клавиши являются общими для нескольких языков, в то время как другие существуют только на клавиатурах, ориентированных на определённые языки. Кроме того, не все клавиатуры имеют все эти клавиши.
+Некоторые клавиши являются общими для нескольких языков, :3 в то время как другие существуют только на клавиатурах, o.O ориентированных на определённые языки. (///ˬ///✿) Кроме того, OwO не все клавиатуры имеют все эти клавиши. >w<
 
-#### Обычные IME клавиши
+#### Обычные ime клавиши
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th w-wowspan="2" scope="cow" s-stywe="text-awign: weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th w-wowspan="2" s-scope="cow" s-stywe="text-awign: weft">Описание</th>
+      <th cowspan="4" scope="cow" stywe="text-awign: centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="cow" stywe="text-awign: weft">windows</th>
+      <th scope="cow" stywe="text-awign: weft">mac</th>
+      <th scope="cow" stywe="text-awign: weft">winux</th>
+      <th s-scope="cow" s-stywe="text-awign: weft">andwoid</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>"AllCandidates"</code></td>
+    <tw>
+      <td><code>"awwcandidates"</code></td>
       <td>
-        The <kbd>All Candidates</kbd> key, which starts multi-candidate mode, in
-        which multiple candidates are displayed for the ongoing input.
+        the <kbd>aww c-candidates</kbd> k-key, ^^ which stawts m-muwti-candidate mode, (⑅˘꒳˘) in
+        w-which muwtipwe candidates a-awe dispwayed fow t-the ongoing input. ʘwʘ
       </td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_MultipleCandidate</code> (0xFF3D<br /><code
-          >Qt::Key_MultipleCandidate</code
+        <code>gdk_key_muwtipwecandidate</code> (0xff3d<bw /><code
+          >qt::key_muwtipwecandidate</code
         >
-        (0x0100113D)
+        (0x0100113d)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Alphanumeric"</code></td>
-      <td>The <kbd>Alphanumeric</kbd> key.</td>
-      <td><code>VK_OEM_ATTN</code> (0xF0)</td>
+    </tw>
+    <tw>
+      <td><code>"awphanumewic"</code></td>
+      <td>the <kbd>awphanumewic</kbd> key.</td>
+      <td><code>vk_oem_attn</code> (0xf0)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Eisu_Shift</code> (0xFF2F)<br /><code
-          >GDK_KEY_Eisu_toggle</code
+        <code>gdk_key_eisu_shift</code> (0xff2f)<bw /><code
+          >gdk_key_eisu_toggwe</code
         >
-        (0xFF30)<br /><code>Qt::Key_Eisu_Shift</code> (0x0100112f)<br /><code
-          >Qt::Key_Eisu_toggle</code
+        (0xff30)<bw /><code>qt::key_eisu_shift</code> (0x0100112f)<bw /><code
+          >qt::key_eisu_toggwe</code
         >
         (0x01001130)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"CodeInput"</code></td>
+    </tw>
+    <tw>
+      <td><code>"codeinput"</code></td>
       <td>
-        The <kbd>Code Input</kbd> key, which enables code input mode, which lets
-        the user enter characters by typing their code points (their Unicode
-        character numbers, typically).
+        t-the <kbd>code input</kbd> key, (///ˬ///✿) w-which enabwes c-code input mode, XD which wets
+        the usew entew c-chawactews by t-typing theiw code p-points (theiw u-unicode
+        c-chawactew nyumbews, 😳 t-typicawwy). >w<
       </td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Codeinput</code> (0xFF37)<br /><code
-          >Qt::Key_Codeinput</code
+        <code>gdk_key_codeinput</code> (0xff37)<bw /><code
+          >qt::key_codeinput</code
         >
         (0x01001137)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Compose"</code></td>
-      <td>The <kbd>Compose</kbd> key.</td>
+    </tw>
+    <tw>
+      <td><code>"compose"</code></td>
+      <td>the <kbd>compose</kbd> k-key.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Multi_key</code> (0xFF20) [1]<br /><code
-          >Qt::Key_Multi_key</code
+        <code>gdk_key_muwti_key</code> (0xff20) [1]<bw /><code
+          >qt::key_muwti_key</code
         >
         (0x01001120)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Convert"</code> [4]</td>
+    </tw>
+    <tw>
+      <td><code>"convewt"</code> [4]</td>
       <td>
-        The <kbd>Convert</kbd> key, which instructs the IME to convert the
-        current input method sequence into the resulting character.
+        t-the <kbd>convewt</kbd> k-key, which instwucts the ime t-to convewt the
+        c-cuwwent i-input method sequence into the w-wesuwting chawactew. (˘ω˘)
       </td>
-      <td><code>VK_CONVERT</code> (0x1C)</td>
+      <td><code>vk_convewt</code> (0x1c)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Henkan</code> (0xFF23)<br /><code>Qt::Key_Henkan</code>
+        <code>gdk_key_henkan</code> (0xff23)<bw /><code>qt::key_henkan</code>
         (0x01001123)
       </td>
-      <td><code>KEYCODE_HENKAN</code> (214)</td>
-    </tr>
-    <tr>
-      <td><code>"Dead"</code></td>
+      <td><code>keycode_henkan</code> (214)</td>
+    </tw>
+    <tw>
+      <td><code>"dead"</code></td>
       <td>
         <p>
-          A dead "combining" key; that is, a key which is used in tandem with
-          other keys to generate accented and other modified characters. If
-          pressed by itself, it doesn't generate a character.
+          a dead "combining" key; that is, a-a key which is used in tandem w-with
+          othew k-keys to genewate a-accented and othew modified c-chawactews. nyaa~~ if
+          pwessed b-by itsewf, 😳😳😳 it doesn't genewate a-a chawactew. (U ﹏ U)
         </p>
         <p>
-          If you wish to identify which specific dead key was pressed (in cases
-          where more than one exists), you can do so by examining the
-          {{domxref("KeyboardEvent")}}'s associated
-          [`compositionupdate`](/ru/docs/Web/API/Element/compositionupdate_event) event's
-          {{domxref("CompositionEvent.data", "data")}} property.
+          if you wish to i-identify which specific dead key was pwessed (in cases
+          whewe mowe than o-one exists), (˘ω˘) you can do so by e-examining the
+          {{domxwef("keyboawdevent")}}'s a-associated
+          [`compositionupdate`](/wu/docs/web/api/ewement/compositionupdate_event) event's
+          {{domxwef("compositionevent.data", :3 "data")}} pwopewty. >w<
         </p>
       </td>
       <td></td>
       <td></td>
       <td>
-        See <a href="#dead_keycodes_for_linux">Dead keycodes for Linux</a> below
+        see <a h-hwef="#dead_keycodes_fow_winux">dead keycodes fow w-winux</a> bewow
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"FinalMode"</code></td>
+    </tw>
+    <tw>
+      <td><code>"finawmode"</code></td>
       <td>
-        The <kbd>Final</kbd> (Final Mode) key is used on some Asian keyboards to
-        enter final mode when using IMEs.
+        t-the <kbd>finaw</kbd> (finaw m-mode) key is used on some asian keyboawds t-to
+        entew f-finaw mode when using imes. ^^
       </td>
-      <td><code>VK_FINAL</code> (0x18)</td>
+      <td><code>vk_finaw</code> (0x18)</td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"GroupFirst"</code></td>
+    </tw>
+    <tw>
+      <td><code>"gwoupfiwst"</code></td>
       <td>
-        Switches to the first character group on an
-        <a href="https://en.wikipedia.org/wiki/ISO/IEC_9995"
-          >ISO/IEC 9995 keyboard</a
-        >. Each key may have multiple groups of characters, each in its own
-        column. Pressing this key instructs the device to interpret keypresses
-        as coming from the first column on subsequent keystrokes.
-      </td>
-      <td></td>
-      <td></td>
-      <td><code>GDK_KEY_ISO_First_Group</code> (0xFE0C)</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>"GroupLast"</code></td>
-      <td>
-        Switches to the last character group on an
-        <a href="https://en.wikipedia.org/wiki/ISO/IEC_9995"
-          >ISO/IEC 9995 keyboard</a
-        >.
+        s-switches to the fiwst chawactew gwoup on an
+        <a h-hwef="https://en.wikipedia.owg/wiki/iso/iec_9995"
+          >iso/iec 9995 keyboawd</a
+        >. 😳😳😳 e-each k-key may have m-muwtipwe gwoups of chawactews, nyaa~~ each i-in its own
+        c-cowumn. (⑅˘꒳˘) pwessing t-this key i-instwucts the device to intewpwet k-keypwesses
+        a-as coming f-fwom the fiwst cowumn o-on subsequent k-keystwokes. :3
       </td>
       <td></td>
       <td></td>
-      <td><code>GDK_KEY_ISO_Last_Group</code> (0xFE0E)</td>
+      <td><code>gdk_key_iso_fiwst_gwoup</code> (0xfe0c)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"GroupNext"</code> [4]</td>
+    </tw>
+    <tw>
+      <td><code>"gwoupwast"</code></td>
       <td>
-        Switches to the next character group on an
-        <a href="https://en.wikipedia.org/wiki/ISO/IEC_9995"
-          >ISO/IEC 9995 keyboard</a
-        >.
+        s-switches t-to the wast chawactew g-gwoup on an
+        <a hwef="https://en.wikipedia.owg/wiki/iso/iec_9995"
+          >iso/iec 9995 k-keyboawd</a
+        >. ʘwʘ
       </td>
       <td></td>
       <td></td>
-      <td><code>GDK_KEY_ISO_Next_Group</code> (0xFE08)</td>
-      <td><code>KEYCODE_LANGUAGE_SWITCH</code> (204)</td>
-    </tr>
-    <tr>
-      <td><code>"GroupPrevious"</code></td>
+      <td><code>gdk_key_iso_wast_gwoup</code> (0xfe0e)</td>
+      <td></td>
+    </tw>
+    <tw>
+      <td><code>"gwoupnext"</code> [4]</td>
       <td>
-        Switches to the previous character group on an
-        <a href="https://en.wikipedia.org/wiki/ISO/IEC_9995"
-          >ISO/IEC 9995 keyboard</a
-        >.
+        switches t-to the nyext chawactew gwoup on a-an
+        <a hwef="https://en.wikipedia.owg/wiki/iso/iec_9995"
+          >iso/iec 9995 k-keyboawd</a
+        >. rawr x3
       </td>
       <td></td>
       <td></td>
-      <td><code>GDK_KEY_ISO_Prev_Group</code> (0xFE0A)</td>
+      <td><code>gdk_key_iso_next_gwoup</code> (0xfe08)</td>
+      <td><code>keycode_wanguage_switch</code> (204)</td>
+    </tw>
+    <tw>
+      <td><code>"gwouppwevious"</code></td>
+      <td>
+        s-switches to the pwevious chawactew gwoup on an
+        <a hwef="https://en.wikipedia.owg/wiki/iso/iec_9995"
+          >iso/iec 9995 k-keyboawd</a
+        >. (///ˬ///✿)
+      </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"ModeChange"</code> [5]</td>
-      <td>The Mode Change key. Toggles or cycles among input modes of IMEs.</td>
-      <td><code>VK_MODECHANGE</code> (0x1F)</td>
+      <td></td>
+      <td><code>gdk_key_iso_pwev_gwoup</code> (0xfe0a)</td>
+      <td></td>
+    </tw>
+    <tw>
+      <td><code>"modechange"</code> [5]</td>
+      <td>the m-mode change k-key. 😳😳😳 toggwes ow cycwes among input modes of imes.</td>
+      <td><code>vk_modechange</code> (0x1f)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Mode_switch</code> (0xFF7E)<br /><code
-          >GDK_KEY_script_switch</code
+        <code>gdk_key_mode_switch</code> (0xff7e)<bw /><code
+          >gdk_key_scwipt_switch</code
         >
-        (0xFF7E)<br /><code>Qt::Key_Mode_switch</code> (0x0100117E)
+        (0xff7e)<bw /><code>qt::key_mode_switch</code> (0x0100117e)
       </td>
-      <td><code>KEYCODE_SWITCH_CHARSET</code> (95)</td>
-    </tr>
-    <tr>
-      <td><code>"NextCandidate"</code></td>
+      <td><code>keycode_switch_chawset</code> (95)</td>
+    </tw>
+    <tw>
+      <td><code>"nextcandidate"</code></td>
       <td>
-        The Next Candidate function key. Selects the next possible match for the
-        ongoing input.
+        the n-nyext candidate f-function key. XD sewects the nyext p-possibwe match fow t-the
+        ongoing input. >_<
       </td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"NonConvert"</code> [2]</td>
+    </tw>
+    <tw>
+      <td><code>"nonconvewt"</code> [2]</td>
       <td>
-        The <kbd>NonConvert</kbd> ("Don't convert") key. This accepts the
-        current input method sequence without running conversion when using an
-        IME.
+        the <kbd>nonconvewt</kbd> ("don't convewt") key. >w< this a-accepts the
+        c-cuwwent input m-method sequence w-without wunning convewsion when using an
+        i-ime. /(^•ω•^)
       </td>
-      <td><code>VK_NONCONVERT</code> (0x1D)</td>
+      <td><code>vk_nonconvewt</code> (0x1d)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Muhenkan</code> (0xFF22)<br /><code
-          >Qt::Key_Muhenkan</code
+        <code>gdk_key_muhenkan</code> (0xff22)<bw /><code
+          >qt::key_muhenkan</code
         >
-        (0x01001122)<br />
+        (0x01001122)<bw />
       </td>
-      <td><code>KEYCODE_MUHENKAN</code> (213)</td>
-    </tr>
-    <tr>
-      <td><code>"PreviousCandidate"</code></td>
+      <td><code>keycode_muhenkan</code> (213)</td>
+    </tw>
+    <tw>
+      <td><code>"pweviouscandidate"</code></td>
       <td>
-        The Previous Candidate key. Selects the previous possible match for the
-        ongoing input.
+        t-the pwevious candidate key. :3 sewects the p-pwevious possibwe match fow the
+        ongoing i-input. ʘwʘ
       </td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_PreviousCandidate</code> (0xFF3E)<br /><code
-          >Qt::Key_PreviousCandidate</code
+        <code>gdk_key_pweviouscandidate</code> (0xff3e)<bw /><code
+          >qt::key_pweviouscandidate</code
         >
-        (0x0100113E)
+        (0x0100113e)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Process"</code> [3]</td>
+    </tw>
+    <tw>
+      <td><code>"pwocess"</code> [3]</td>
       <td>
-        The <kbd>Process</kbd> key. Instructs the IME to process the conversion.
+        the <kbd>pwocess</kbd> key. (˘ω˘) i-instwucts the i-ime to pwocess the convewsion. (ꈍᴗꈍ)
       </td>
-      <td><code>VK_PROCESSKEY</code> (0xE5)</td>
+      <td><code>vk_pwocesskey</code> (0xe5)</td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"SingleCandidate"</code> [4]</td>
+    </tw>
+    <tw>
+      <td><code>"singwecandidate"</code> [4]</td>
       <td>
-        The Single Candidate key. Enables single candidate mode (as opposed to
-        multi-candidate mode); in this mode, only one candidate is displayed at
-        a time.
+        t-the singwe c-candidate key. ^^ enabwes singwe candidate m-mode (as opposed to
+        m-muwti-candidate m-mode); in this m-mode, ^^ onwy one c-candidate is dispwayed at
+        a-a time. ( ͡o ω ͡o )
       </td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_SingleCandidate</code> (0xFF3C)<br /><code
-          >Qt::Key_SingleCandidate</code
+        <code>gdk_key_singwecandidate</code> (0xff3c)<bw /><code
+          >qt::key_singwecandidate</code
         >
-        (0x0100113C)
+        (0x0100113c)
       </td>
       <td></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-\[1] В _X Window System_, клавиша <kbd>Compose</kbd> называется <kbd>Multi</kbd>.
+\[1] В _x w-window system_, -.- клавиша <kbd>compose</kbd> называется <kbd>muwti</kbd>. ^^;;
 
-\[2] Клавиша <kbd>NonConvert</kbd> возвращает значение `"Nonconvert"` вместо корректного `"NonConvert"` в Internet Explorer (проверено в версиях 9 и 11) и Firefox версии 36 и более ранних.
+\[2] Клавиша <kbd>nonconvewt</kbd> возвращает значение `"nonconvewt"` вместо корректного `"nonconvewt"` в i-intewnet expwowew (проверено в версиях 9 и 11) и fiwefox версии 36 и более ранних. ^•ﻌ•^
 
-\[3] Клавиша <kbd>Process</kbd> в настоящее время возвращает `"Unidentified"` в Firefox и Internet Explorer. Google Chrome возвращает значение клавиши так, как если бы IME не использовался.
+\[3] Клавиша <kbd>pwocess</kbd> в настоящее время возвращает `"unidentified"` в f-fiwefox и intewnet expwowew. (˘ω˘) googwe c-chwome возвращает значение клавиши так, o.O как если бы i-ime не использовался. (✿oωo)
 
-\[4] До Firefox 37, эта клавиша возвращала `"Unidentified"`.
+\[4] До f-fiwefox 37, эта клавиша возвращала `"unidentified"`. 😳😳😳
 
-\[5] Firefox генерирует значение `"AltGraph"` вместо `"ModeChange"`.
+\[5] fiwefox генерирует значение `"awtgwaph"` вместо `"modechange"`. (ꈍᴗꈍ)
 
 ### Только корейские клавиатуры
 
-Эти клавиши доступны только на корейских клавиатурах. Существуют и другие клавиши, определённые различными платформами для корейских клавиатур, но они являются наиболее распространёнными и идентифицируются спецификацией событий пользовательского интерфейса.
+Эти клавиши доступны только на корейских клавиатурах. σωσ Существуют и другие клавиши, UwU определённые различными платформами для корейских клавиатур, ^•ﻌ•^ но они являются наиболее распространёнными и идентифицируются спецификацией событий пользовательского интерфейса. mya
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th wowspan="2" scope="cow" s-stywe="text-awign: weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th w-wowspan="2" s-scope="cow" stywe="text-awign: weft">Описание</th>
+      <th c-cowspan="4" scope="cow" s-stywe="text-awign: c-centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
-    <tr>
-      <td><code>"HangulMode"</code></td>
+    </tw>
+    <tw>
+      <th s-scope="cow" stywe="text-awign: weft">windows</th>
+      <th s-scope="cow" s-stywe="text-awign: weft">mac</th>
+      <th scope="cow" stywe="text-awign: weft">winux</th>
+      <th s-scope="cow" stywe="text-awign: w-weft">andwoid</th>
+    </tw>
+    <tw>
+      <td><code>"hanguwmode"</code></td>
       <td>
-        The <kbd>Hangul</kbd> (Korean character set) mode key, which toggles
-        between Hangul and English entry modes.
+        the <kbd>hanguw</kbd> (kowean chawactew set) mode key, /(^•ω•^) which toggwes
+        b-between hanguw and engwish entwy modes. rawr
       </td>
-      <td><code>VK_HANGUL</code> (0x15) [1]</td>
+      <td><code>vk_hanguw</code> (0x15) [1]</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Hangul</code> (0xFF31)<br /><code>Qt::Key_Hangul</code>
+        <code>gdk_key_hanguw</code> (0xff31)<bw /><code>qt::key_hanguw</code>
         (0x01001131)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"HanjaMode"</code></td>
+    </tw>
+    <tw>
+      <td><code>"hanjamode"</code></td>
       <td>
-        Selects the Hanja mode, for converting Hangul characters to the more
-        specific Hanja characters.
+        sewects the hanja mode, nyaa~~ f-fow convewting h-hanguw chawactews to the mowe
+        s-specific hanja chawactews. ( ͡o ω ͡o )
       </td>
-      <td><code>VK_HANJA</code> (0x19) [1]</td>
+      <td><code>vk_hanja</code> (0x19) [1]</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Hangul_Hanja</code> (0xFF34)<br /><code
-          >Qt::Key_Hangul_Hanja</code
+        <code>gdk_key_hanguw_hanja</code> (0xff34)<bw /><code
+          >qt::key_hanguw_hanja</code
         >
         (0x01001134)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"JunjaMode"</code></td>
+    </tw>
+    <tw>
+      <td><code>"junjamode"</code></td>
       <td>
-        Selects the Junja mode, in which Korean is represented using single-byte
-        Latin characters.
+        sewects the j-junja mode, σωσ in w-which kowean is wepwesented using s-singwe-byte
+        watin chawactews. (✿oωo)
       </td>
-      <td><code>VK_JUNJA</code> (0x17)</td>
+      <td><code>vk_junja</code> (0x17)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Hangul_Jeonja</code> (0xFF38)<br /><code
-          >Qt::Key_Hangul_Jeonja</code
+        <code>gdk_key_hanguw_jeonja</code> (0xff38)<bw /><code
+          >qt::key_hanguw_jeonja</code
         >
         (0x01001138)
       </td>
       <td></td>
-    </tr>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-\[1] `VK_HANGUL` и `VK_KANA` используют один и тот же числовой код клавиши в Windows, также как `VK_HANJA` и `VK_KANJI`.
+\[1] `vk_hanguw` и `vk_kana` используют один и тот же числовой код клавиши в w-windows, (///ˬ///✿) также как `vk_hanja` и `vk_kanji`. σωσ
 
 ### Только японские клавиатуры
 
 Эти клавиши доступны только на японских клавиатурах.
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th wowspan="2" scope="cow" s-stywe="text-awign: weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th wowspan="2" s-scope="cow" s-stywe="text-awign: w-weft">Описание</th>
+      <th cowspan="4" scope="cow" s-stywe="text-awign: centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
-    <tr>
-      <td><code>"Eisu"</code> [1]</td>
+    </tw>
+    <tw>
+      <th scope="cow" stywe="text-awign: weft">windows</th>
+      <th scope="cow" stywe="text-awign: w-weft">mac</th>
+      <th s-scope="cow" s-stywe="text-awign: w-weft">winux</th>
+      <th scope="cow" stywe="text-awign: w-weft">andwoid</th>
+    </tw>
+    <tw>
+      <td><code>"eisu"</code> [1]</td>
       <td>
-        The <kbd>Eisu</kbd> key. This key's purpose is defined by the IME, but
-        may be used to close the IME.
+        t-the <kbd>eisu</kbd> key. UwU this key's puwpose is defined b-by the ime, (⑅˘꒳˘) but
+        may be used to cwose t-the ime. /(^•ω•^)
       </td>
       <td></td>
-      <td><code>kVK_JIS_Eisu</code> (0x66)</td>
+      <td><code>kvk_jis_eisu</code> (0x66)</td>
       <td>
-        <code>GDK_KEY_Eisu_toggle</code> (0xFF2F)<br /><code
-          >Qt::Key_Eisu_toggle</code
+        <code>gdk_key_eisu_toggwe</code> (0xff2f)<bw /><code
+          >qt::key_eisu_toggwe</code
         >
         (0x01001130)
       </td>
-      <td><code>KEYCODE_EISU</code> (212)</td>
-    </tr>
-    <tr>
-      <td><code>"Hankaku"</code> [3]</td>
-      <td>The <kbd>Hankaku</kbd> (half-width characters) key.</td>
-      <td><code>VK_OEM_AUTO</code> (0xF3)</td>
+      <td><code>keycode_eisu</code> (212)</td>
+    </tw>
+    <tw>
+      <td><code>"hankaku"</code> [3]</td>
+      <td>the <kbd>hankaku</kbd> (hawf-width chawactews) key.</td>
+      <td><code>vk_oem_auto</code> (0xf3)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Hankaku</code> (0xFF29)<br /><code>Qt::Key_Hankaku</code>
+        <code>gdk_key_hankaku</code> (0xff29)<bw /><code>qt::key_hankaku</code>
         (0x01001129)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Hiragana"</code></td>
-      <td>The <kbd>Hiragana</kbd> key; selects Kana characters mode.</td>
-      <td><code>VK_OEM_COPY</code> (0xF2)</td>
+    </tw>
+    <tw>
+      <td><code>"hiwagana"</code></td>
+      <td>the <kbd>hiwagana</kbd> k-key; sewects k-kana chawactews mode.</td>
+      <td><code>vk_oem_copy</code> (0xf2)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Hiragana</code> (0xFF25)<br /><code
-          >Qt::Key_Hiragana</code
+        <code>gdk_key_hiwagana</code> (0xff25)<bw /><code
+          >qt::key_hiwagana</code
         >
         (0x01001125)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"HiraganaKatakana"</code> [6]</td>
-      <td>Toggles between the Hiragana and Katakana writing systems.</td>
+    </tw>
+    <tw>
+      <td><code>"hiwaganakatakana"</code> [6]</td>
+      <td>toggwes b-between the h-hiwagana and katakana w-wwiting systems.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Hiragana_Katakana</code> (0xFF27)<br /><code
-          >Qt::Key_Hiragana_Katakana</code
+        <code>gdk_key_hiwagana_katakana</code> (0xff27)<bw /><code
+          >qt::key_hiwagana_katakana</code
         >
         (0x01001127)
       </td>
-      <td><code>KEYCODE_KATAKANA_HIRAGANA</code> (215)</td>
-    </tr>
-    <tr>
-      <td><code>"KanaMode"</code></td>
-      <td>The <kbd>Kana Mode</kbd> (Kana Lock) key.</td>
-      <td><code>VK_KANA</code> (0x15) [2]<br /><code>VK_ATTN</code> (0xF6)</td>
+      <td><code>keycode_katakana_hiwagana</code> (215)</td>
+    </tw>
+    <tw>
+      <td><code>"kanamode"</code></td>
+      <td>the <kbd>kana mode</kbd> (kana wock) key.</td>
+      <td><code>vk_kana</code> (0x15) [2]<bw /><code>vk_attn</code> (0xf6)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Kana_Lock</code> (0xFF2D)<br /><code
-          >GDK_KEY_Kana_Shift</code
+        <code>gdk_key_kana_wock</code> (0xff2d)<bw /><code
+          >gdk_key_kana_shift</code
         >
-        (0xFF2E)<br /><code>Qt::Key_Kana_Lock</code> (0x0100112D)<br /><code
-          >Qt::Key_Kana_Shift</code
+        (0xff2e)<bw /><code>qt::key_kana_wock</code> (0x0100112d)<bw /><code
+          >qt::key_kana_shift</code
         >
-        (0x0100112E)
+        (0x0100112e)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"KanjiMode"</code></td>
+    </tw>
+    <tw>
+      <td><code>"kanjimode"</code></td>
       <td>
-        The <kbd>Kanji Mode</kbd> key. Enables entering Japanese text using the
-        ideographic characters of Chinese origin.
+        the <kbd>kanji m-mode</kbd> key. -.- enabwes entewing japanese t-text using the
+        ideogwaphic chawactews of chinese o-owigin. (ˆ ﻌ ˆ)♡
       </td>
-      <td><code>VK_KANJI</code>(0x19) [2]</td>
-      <td><code>kVK_JIS_Kana</code> (0x68)</td>
+      <td><code>vk_kanji</code>(0x19) [2]</td>
+      <td><code>kvk_jis_kana</code> (0x68)</td>
       <td>
-        <code>GDK_KEY_Kanji</code> (0xFF21)<br /><code>Qt::Key_Kanji</code>
+        <code>gdk_key_kanji</code> (0xff21)<bw /><code>qt::key_kanji</code>
         (0x01001121)
       </td>
-      <td><code>KEYCODE_KANA</code> (218)</td>
-    </tr>
-    <tr>
-      <td><code>"Katakana"</code></td>
-      <td>The <kbd>Katakana</kbd> key.</td>
-      <td><code>VK_OEM_FINISH</code> (0xF1)</td>
+      <td><code>keycode_kana</code> (218)</td>
+    </tw>
+    <tw>
+      <td><code>"katakana"</code></td>
+      <td>the <kbd>katakana</kbd> k-key.</td>
+      <td><code>vk_oem_finish</code> (0xf1)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Katakana</code> (0xFF26)<br /><code
-          >Qt::Key_Katakana</code
+        <code>gdk_key_katakana</code> (0xff26)<bw /><code
+          >qt::key_katakana</code
         >
         (0x01001126)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Romaji"</code> [5]</td>
-      <td>The <kbd>Romaji</kbd> key; selects the Roman character set.</td>
-      <td><code>VK_OEM_BACKTAB</code> (0xF5)</td>
+    </tw>
+    <tw>
+      <td><code>"womaji"</code> [5]</td>
+      <td>the <kbd>womaji</kbd> key; s-sewects the w-woman chawactew s-set.</td>
+      <td><code>vk_oem_backtab</code> (0xf5)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Romaji</code> (0xFF24)<br /><code>Qt::Key_Romaji</code>
+        <code>gdk_key_womaji</code> (0xff24)<bw /><code>qt::key_womaji</code>
         (0x01001124)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Zenkaku"</code> [4]</td>
-      <td>The <kbd>Zenkaku</kbd> (full width) characters key.</td>
-      <td><code>VK_OEM_ENLW</code> (0xF4)</td>
+    </tw>
+    <tw>
+      <td><code>"zenkaku"</code> [4]</td>
+      <td>the <kbd>zenkaku</kbd> (fuww width) c-chawactews key.</td>
+      <td><code>vk_oem_enww</code> (0xf4)</td>
       <td></td>
       <td>
-        <code>GDK_KEY_Zenkaku</code> (0xFF28)<br /><code>Qt::Key_Zenkaku</code>
+        <code>gdk_key_zenkaku</code> (0xff28)<bw /><code>qt::key_zenkaku</code>
         (0x01001128)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"ZenkakuHanaku"</code> [6]</td>
+    </tw>
+    <tw>
+      <td><code>"zenkakuhanaku"</code> [6]</td>
       <td>
-        The <kbd>Zenkaku/Hankaku</kbd> (full width/half width) toggle key.
+        the <kbd>zenkaku/hankaku</kbd> (fuww width/hawf w-width) toggwe key.
       </td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Zenkaku_Hankaku</code> (0xFF2A)<br /><code
-          >Qt::Zenkaku_Hankaku</code
+        <code>gdk_key_zenkaku_hankaku</code> (0xff2a)<bw /><code
+          >qt::zenkaku_hankaku</code
         >
-        (0x0100112A)
+        (0x0100112a)
       </td>
       <td>
-        <p><code>KEYCODE_ZENKAKU_HANKAKU</code> (211)</p>
+        <p><code>keycode_zenkaku_hankaku</code> (211)</p>
       </td>
-    </tr>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-\[1] До Firefox 37, клавиша <kbd>Eisu</kbd> ошибочно сопоставлялась `"RomanCharacters"`.
+\[1] До f-fiwefox 37, клавиша <kbd>eisu</kbd> ошибочно сопоставлялась `"womanchawactews"`. nyaa~~
 
-\[2] `VK_HANGUL` и `VK_KANA` используют один и тот же числовой код клавиши в Windows, также как `VK_HANJA` и `VK_KANJI`.
+\[2] `vk_hanguw` и `vk_kana` используют один и тот же числовой код клавиши в windows, ʘwʘ также как `vk_hanja` и `vk_kanji`. :3
 
-\[3] До Firefox 37, клавиша <kbd>Hankaku</kbd> (half-width) генерировала значение `"HalfWidth"` в Firefox. Также, этак клавиша генерировала значение `"Unidentified"` в Internet Explorer (проверено в версиях 9 и 11).
+\[3] До fiwefox 37, (U ᵕ U❁) клавиша <kbd>hankaku</kbd> (hawf-width) генерировала значение `"hawfwidth"` в f-fiwefox. (U ﹏ U) Также, ^^ этак клавиша генерировала значение `"unidentified"` в i-intewnet expwowew (проверено в версиях 9 и 11). òωó
 
-\[4] Internet Explorer (проверено в версиях 9 и 11) возвращал `"Unidentified"` для клавиши <kbd>Zenkaku</kbd>; Firefox 36 и более ранние определяли эту клавишу как `"FullWidth"` на японских раскладках клавиатуры и `"Unidentified"` на всех остальных раскладках клавиатуры. Firefox 37 и выше, а также все версии Google Chrome, корректно возвращают `"Zenkaku"`.
+\[4] intewnet e-expwowew (проверено в версиях 9 и 11) возвращал `"unidentified"` для клавиши <kbd>zenkaku</kbd>; fiwefox 36 и более ранние определяли эту клавишу как `"fuwwwidth"` на японских раскладках клавиатуры и `"unidentified"` на всех остальных раскладках клавиатуры. /(^•ω•^) f-fiwefox 37 и выше, 😳😳😳 а также все версии g-googwe chwome, :3 корректно возвращают `"zenkaku"`. (///ˬ///✿)
 
-\[5] `"Unidentified"` в Internet Explorer (проверено в версиях 9 и 11). Firefox 36 и более ранние определяли клавишу <kbd>Romaji</kbd> как `"RomanCharacters"` на японских клавиатурах и `"Unidentified"` для остальных клавиатур; исправлено на значение `"Romaji"` в Firefox 37 и выше.
+\[5] `"unidentified"` в intewnet expwowew (проверено в версиях 9 и 11). rawr x3 f-fiwefox 36 и более ранние определяли клавишу <kbd>womaji</kbd> как `"womanchawactews"` на японских клавиатурах и `"unidentified"` для остальных клавиатур; исправлено на значение `"womaji"` в f-fiwefox 37 и выше. (U ᵕ U❁)
 
-\[6] Эта клавиша возвращала `"Unidentified"` до Firefox 37.
+\[6] Эта клавиша возвращала `"unidentified"` до fiwefox 37. (⑅˘꒳˘)
 
-### Dead keycodes for Linux
+### d-dead keycodes fow winux
 
-Linux generates accented characters using special **dead keys**. _Dead keys_ are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the {{domxref("KeyboardEvent")}}'s associated [`compositionupdate`](/ru/docs/Web/API/Element/compositionupdate_event) event's {{domxref("CompositionEvent.data", "data")}} property.
+winux genewates accented chawactews u-using speciaw **dead keys**. (˘ω˘) _dead k-keys_ awe keys which awe pwessed in combination w-with chawactew k-keys to genewate a-accented fowms of those chawactews. :3 y-you can i-identify which specific dead k-key was used (if mowe than one exists) b-by examining the {{domxwef("keyboawdevent")}}'s a-associated [`compositionupdate`](/wu/docs/web/api/ewement/compositionupdate_event) e-event's {{domxwef("compositionevent.data", XD "data")}} pwopewty. >_<
 
-You can find a table of the dead keys and the characters they can be used with to generate accented or otherwise special characters on Linux using GTK.
+you can find a tabwe of the dead keys and the chawactews t-they can be used w-with to genewate accented ow othewwise speciaw chawactews on w-winux using gtk. (✿oωo)
 
-The value of {{domxref("CompositionEvent.data", "data")}} will be one of the following:
+the vawue of {{domxwef("compositionevent.data", (ꈍᴗꈍ) "data")}} w-wiww b-be one of the fowwowing:
 
-| **Значение `CompositionEvent.data`**                                                  | Символ | Комментарии                                               |
+| **Значение `compositionevent.data`**                                                  | Символ | Комментарии                                               |
 | ------------------------------------------------------------------------------------- | ------ | --------------------------------------------------------- |
-| `GDK_KEY_dead_grave` (0xFE50) `Qt::Key_Dead_Grave` (0x01001250)                       | \`     |                                                           |
-| `GDK_KEY_dead_acute` (0xFE51) `Qt::Key_Dead_Acute` (0x01001251)                       | ´      |                                                           |
-| `GDK_KEY_dead_circumflex` (0xFE52) `Qt::Key_Dead_Circumflex` (0x01001252)             | ˆ      |                                                           |
-| `GDK_KEY_dead_tilde` (0xFE53) `Qt::Key_Dead_Tilde` (0x01001253)                       | ˜      |                                                           |
-| `GDK_KEY_dead_perispomeni` (0xFE53)                                                   | ͂       |                                                           |
-| `GDK_KEY_dead_macron` (0xFE54) `Qt::Key_Dead_Macron` (0x01001254)                     | ¯      |                                                           |
-| `GDK_KEY_dead_breve` (0xFE55) `Qt::Key_Dead_Breve` (0x01001255)                       | ˘      |                                                           |
-| `GDK_KEY_dead_abovedot` (0xFE56) `Qt::Key_Dead_Abovedot` (0x01001256)                 | ˙      |                                                           |
-| `GDK_KEY_dead_diaeresis` (0xFE57) `Qt::Key_Dead_Diaeresis` (0x01001257)               | ¨      | Also called an umlaut.                                    |
-| `GDK_KEY_dead_abovering` (0xFE58) `Qt::Key_Dead_Abovering` (0x01001258)               | ˚      |                                                           |
-| `GDK_KEY_dead_doubleacute` (0xFE59) `Qt::Key_Dead_Doubleacute` (0x01001259)           | ˝      |                                                           |
-| `GDK_KEY_dead_caron` (0xFE5A) `Qt::Key_Dead_Caron` (0x0100125A)                       | ˇ      | Also called a háček; used in Czech among other languages. |
-| `GDK_KEY_dead_cedilla` (0xFE5B) `Qt::Key_Dead_Cedilla` (0x0100125B)                   | ¸      |                                                           |
-| `GDK_KEY_dead_ogonek` (0xFE5C) `Qt::Key_Dead_Ogonek` (0x0100125C)                     | ˛      | Also called a nosinė; used in Polish and Old Irish.       |
-| `GDK_KEY_dead_iota` (0xFE5D) `Qt::Key_Dead_Iota` (0x0100125D)                         | ͅ       | Iota subscript.                                           |
-| `GDK_KEY_dead_voiced_sound` (0xFE5E) `Qt::Key_Dead_Voiced_Sound` (0x0100125E)         | ゙     |                                                           |
-| `GDK_KEY_dead_semivoiced_sound` (0xFE5F) `Qt::Key_Dead_Semivoiced_Sound` (0x0100125F) | ゚     |                                                           |
-| `GDK_KEY_dead_belowdot` (0xFE60) `Qt::Key_Dead_Belowdot` (0x01001260)                 | ̣̣       |                                                           |
-| `GDK_KEY_dead_hook` (0xFE61) `Qt::Key_Dead_Hook` (0x01001261)                         | ̡       |                                                           |
-| `GDK_KEY_dead_horn` (0xFE62) `Qt::Key_Dead_Horn` (0x01001262)                         | ̛       |                                                           |
-| `GDK_KEY_dead_stroke` (0xFE63)                                                        | ̶̶       |                                                           |
-| `GDK_KEY_dead_abovecomma` (0xFE64)                                                    | ̓̓       |                                                           |
-| `GDK_KEY_dead_psili` (0xFE64)                                                         | ᾿      |                                                           |
-| `GDK_KEY_dead_abovereversedcomma` (0xFE65)                                            | ʽ      |                                                           |
-| `GDK_KEY_dead_dasia` (0xFE65)                                                         | ῾      |                                                           |
-| `GDK_KEY_dead_doublegrave` (0xFE66)                                                   | ̏       |                                                           |
-| `GDK_KEY_dead_belowring` (0xFE67)                                                     | ˳      |                                                           |
-| `GDK_KEY_dead_belowmacron` (0xFE68)                                                   | ̱       |                                                           |
-| `GDK_KEY_dead_belowcircumflex` (0xFE69)                                               | ꞈ      |                                                           |
-| `GDK_KEY_dead_belowtilde` (0xFE6A)                                                    | ̰       |                                                           |
-| `GDK_KEY_dead_belowbreve` (0xFE6B)                                                    | ̮       |                                                           |
-| `GDK_KEY_dead_belowdiaeresis` (0xFE6C)                                                | ̤       |                                                           |
-| `GDK_KEY_dead_invertedbreve` (0xFE6D)                                                 | ̯       |                                                           |
-| `GDK_KEY_dead_belowcomma` (0xFE6E)                                                    | ̦       |                                                           |
-| `GDK_KEY_dead_currency` (0xFE6F)                                                      |        |                                                           |
-| `GDK_KEY_dead_a` (0xFE80)                                                             |        |                                                           |
-| `GDK_KEY_dead_A` (0xFE81)                                                             |        |                                                           |
-| `GDK_KEY_dead_e` (0xFE82)                                                             |        |                                                           |
-| `GDK_KEY_dead_E` (0xFE83)                                                             |        |                                                           |
-| `GDK_KEY_dead_i` (0xFE84)                                                             |        |                                                           |
-| `GDK_KEY_dead_I` (0xFE85)                                                             |        |                                                           |
-| `GDK_KEY_dead_o` (0xFE86)                                                             |        |                                                           |
-| `GDK_KEY_dead_O` (0xFE87)                                                             |        |                                                           |
-| `GDK_KEY_dead_u` (0xFE88)                                                             |        |                                                           |
-| `GDK_KEY_dead_U` (0xFE89)                                                             |        |                                                           |
-| `GDK_KEY_dead_small_schwa` (0xFE8A)                                                   | ə      |                                                           |
-| `GDK_KEY_dead_capital_schwa` (0xFE8B)                                                 | Ə      |                                                           |
-| `GDK_KEY_dead_greek` (0xFE8C)                                                         |        |                                                           |
+| `gdk_key_dead_gwave` (0xfe50) `qt::key_dead_gwave` (0x01001250)                       | \`     |                                                           |
+| `gdk_key_dead_akawaii~` (0xfe51) `qt::key_dead_akawaii~` (0x01001251)                       | ´      |                                                           |
+| `gdk_key_dead_ciwcumfwex` (0xfe52) `qt::key_dead_ciwcumfwex` (0x01001252)             | ˆ      |                                                           |
+| `gdk_key_dead_tiwde` (0xfe53) `qt::key_dead_tiwde` (0x01001253)                       | ˜      |                                                           |
+| `gdk_key_dead_pewispomeni` (0xfe53)                                                   | ͂       |                                                           |
+| `gdk_key_dead_macwon` (0xfe54) `qt::key_dead_macwon` (0x01001254)                     | ¯      |                                                           |
+| `gdk_key_dead_bweve` (0xfe55) `qt::key_dead_bweve` (0x01001255)                       | ˘      |                                                           |
+| `gdk_key_dead_abovedot` (0xfe56) `qt::key_dead_abovedot` (0x01001256)                 | ˙      |                                                           |
+| `gdk_key_dead_diaewesis` (0xfe57) `qt::key_dead_diaewesis` (0x01001257)               | ¨      | awso cawwed an umwaut. XD                                    |
+| `gdk_key_dead_abovewing` (0xfe58) `qt::key_dead_abovewing` (0x01001258)               | ˚      |                                                           |
+| `gdk_key_dead_doubweakawaii~` (0xfe59) `qt::key_dead_doubweakawaii~` (0x01001259)           | ˝      |                                                           |
+| `gdk_key_dead_cawon` (0xfe5a) `qt::key_dead_cawon` (0x0100125a)                       | ˇ      | awso cawwed a háček; used i-in czech among o-othew wanguages. (ꈍᴗꈍ) |
+| `gdk_key_dead_cediwwa` (0xfe5b) `qt::key_dead_cediwwa` (0x0100125b)                   | ¸      |                                                           |
+| `gdk_key_dead_ogonek` (0xfe5c) `qt::key_dead_ogonek` (0x0100125c)                     | ˛      | a-awso cawwed a-a nyosinė; u-used in powish a-and owd iwish. /(^•ω•^)       |
+| `gdk_key_dead_iota` (0xfe5d) `qt::key_dead_iota` (0x0100125d)                         | ͅ       | i-iota s-subscwipt. (⑅˘꒳˘)                                           |
+| `gdk_key_dead_voiced_sound` (0xfe5e) `qt::key_dead_voiced_sound` (0x0100125e)         | ゙     |                                                           |
+| `gdk_key_dead_semivoiced_sound` (0xfe5f) `qt::key_dead_semivoiced_sound` (0x0100125f) | ゚     |                                                           |
+| `gdk_key_dead_bewowdot` (0xfe60) `qt::key_dead_bewowdot` (0x01001260)                 | ̣̣       |                                                           |
+| `gdk_key_dead_hook` (0xfe61) `qt::key_dead_hook` (0x01001261)                         | ̡       |                                                           |
+| `gdk_key_dead_hown` (0xfe62) `qt::key_dead_hown` (0x01001262)                         | ̛       |                                                           |
+| `gdk_key_dead_stwoke` (0xfe63)                                                        | ̶̶       |                                                           |
+| `gdk_key_dead_abovecomma` (0xfe64)                                                    | ̓̓       |                                                           |
+| `gdk_key_dead_psiwi` (0xfe64)                                                         | ᾿      |                                                           |
+| `gdk_key_dead_abovewevewsedcomma` (0xfe65)                                            | ʽ      |                                                           |
+| `gdk_key_dead_dasia` (0xfe65)                                                         | ῾      |                                                           |
+| `gdk_key_dead_doubwegwave` (0xfe66)                                                   | ̏       |                                                           |
+| `gdk_key_dead_bewowwing` (0xfe67)                                                     | ˳      |                                                           |
+| `gdk_key_dead_bewowmacwon` (0xfe68)                                                   | ̱       |                                                           |
+| `gdk_key_dead_bewowciwcumfwex` (0xfe69)                                               | ꞈ      |                                                           |
+| `gdk_key_dead_bewowtiwde` (0xfe6a)                                                    | ̰       |                                                           |
+| `gdk_key_dead_bewowbweve` (0xfe6b)                                                    | ̮       |                                                           |
+| `gdk_key_dead_bewowdiaewesis` (0xfe6c)                                                | ̤       |                                                           |
+| `gdk_key_dead_invewtedbweve` (0xfe6d)                                                 | ̯       |                                                           |
+| `gdk_key_dead_bewowcomma` (0xfe6e)                                                    | ̦       |                                                           |
+| `gdk_key_dead_cuwwency` (0xfe6f)                                                      |        |                                                           |
+| `gdk_key_dead_a` (0xfe80)                                                             |        |                                                           |
+| `gdk_key_dead_a` (0xfe81)                                                             |        |                                                           |
+| `gdk_key_dead_e` (0xfe82)                                                             |        |                                                           |
+| `gdk_key_dead_e` (0xfe83)                                                             |        |                                                           |
+| `gdk_key_dead_i` (0xfe84)                                                             |        |                                                           |
+| `gdk_key_dead_i` (0xfe85)                                                             |        |                                                           |
+| `gdk_key_dead_o` (0xfe86)                                                             |        |                                                           |
+| `gdk_key_dead_o` (0xfe87)                                                             |        |                                                           |
+| `gdk_key_dead_u` (0xfe88)                                                             |        |                                                           |
+| `gdk_key_dead_u` (0xfe89)                                                             |        |                                                           |
+| `gdk_key_dead_smow_schwa` (0xfe8a)                                                   | ə      |                                                           |
+| `gdk_key_dead_capitaw_schwa` (0xfe8b)                                                 | Ə      |                                                           |
+| `gdk_key_dead_gweek` (0xfe8c)                                                         |        |                                                           |
 
 ## Функциональные клавиши
 
-Хотя разные платформы поддерживают разное количество функциональных клавиш общего назначения, таких как <kbd>F1</kbd>–<kbd>F12</kbd> (or <kbd>F1</kbd>–<kbd>F10</kbd>, or <kbd>F1</kbd>–<kbd>F15</kbd>, etc.), первые несколько конкретно определены следующим образом.
+Хотя разные платформы поддерживают разное количество функциональных клавиш общего назначения, ( ͡o ω ͡o ) таких как <kbd>f1</kbd>–<kbd>f12</kbd> (ow <kbd>f1</kbd>–<kbd>f10</kbd>, òωó ow <kbd>f1</kbd>–<kbd>f15</kbd>, (⑅˘꒳˘) etc.), XD первые несколько конкретно определены следующим образом. -.-
 
-Если доступно больше функциональных клавиш, их имена продолжают представленный шаблон, продолжая увеличивать числовую часть имени каждой клавиши, так что, например, `"F24"` это валидное значение клавиши.
+Если доступно больше функциональных клавиш, :3 их имена продолжают представленный шаблон, nyaa~~ продолжая увеличивать числовую часть имени каждой клавиши, 😳 так что, (⑅˘꒳˘) например, nyaa~~ `"f24"` это валидное значение клавиши. OwO
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th wowspan="2" s-scope="cow" stywe="text-awign: weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th w-wowspan="2" scope="cow" s-stywe="text-awign: weft">Описание</th>
+      <th cowspan="4" scope="cow" s-stywe="text-awign: centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
-    <tr>
-      <td><code>"F1"</code></td>
-      <td>Клавиша <kbd>F1</kbd>.</td>
-      <td><code>VK_F1</code> (0x70)</td>
-      <td><code>kVK_F1</code> (0x7A)</td>
+    </tw>
+    <tw>
+      <th scope="cow" s-stywe="text-awign: w-weft">windows</th>
+      <th scope="cow" stywe="text-awign: weft">mac</th>
+      <th scope="cow" stywe="text-awign: w-weft">winux</th>
+      <th scope="cow" stywe="text-awign: weft">andwoid</th>
+    </tw>
+    <tw>
+      <td><code>"f1"</code></td>
+      <td>Клавиша <kbd>f1</kbd>.</td>
+      <td><code>vk_f1</code> (0x70)</td>
+      <td><code>kvk_f1</code> (0x7a)</td>
       <td>
-        <code>GDK_KEY_F1</code> (0xFFBE)<br /><code>GDK_KEY_KP_F1</code>
-        (0xFF91)<br /><code>Qt::Key_F1</code> (0x01000030)
+        <code>gdk_key_f1</code> (0xffbe)<bw /><code>gdk_key_kp_f1</code>
+        (0xff91)<bw /><code>qt::key_f1</code> (0x01000030)
       </td>
-      <td><code>KEYCODE_F1</code> (131)</td>
-    </tr>
-    <tr>
-      <td><code>"F2"</code></td>
-      <td>Клавиша <kbd>F2</kbd>.</td>
-      <td><code>VK_F2</code> (0x71)</td>
-      <td><code>kVK_F2</code> (0x78)</td>
+      <td><code>keycode_f1</code> (131)</td>
+    </tw>
+    <tw>
+      <td><code>"f2"</code></td>
+      <td>Клавиша <kbd>f2</kbd>.</td>
+      <td><code>vk_f2</code> (0x71)</td>
+      <td><code>kvk_f2</code> (0x78)</td>
       <td>
-        <code>GDK_KEY_F2</code> (0xFFBF)<br /><code>GDK_KEY_KP_F2</code>
-        (0xFF92)<br /><code>Qt::Key_F2</code> (0x01000031)
+        <code>gdk_key_f2</code> (0xffbf)<bw /><code>gdk_key_kp_f2</code>
+        (0xff92)<bw /><code>qt::key_f2</code> (0x01000031)
       </td>
-      <td><code>KEYCODE_F2</code> (132)</td>
-    </tr>
-    <tr>
-      <td><code>"F3"</code></td>
-      <td>Клавиша <kbd>F3</kbd>.</td>
-      <td><code>VK_F3</code> (0x72)</td>
-      <td><code>kVK_F3</code> (0x63)</td>
+      <td><code>keycode_f2</code> (132)</td>
+    </tw>
+    <tw>
+      <td><code>"f3"</code></td>
+      <td>Клавиша <kbd>f3</kbd>.</td>
+      <td><code>vk_f3</code> (0x72)</td>
+      <td><code>kvk_f3</code> (0x63)</td>
       <td>
-        <code>GDK_KEY_F3</code> (0xFFC0)<br /><code>GDK_KEY_KP_F3</code>
-        (0xFF93)<br /><code>Qt::Key_F3</code> (0x01000032)
+        <code>gdk_key_f3</code> (0xffc0)<bw /><code>gdk_key_kp_f3</code>
+        (0xff93)<bw /><code>qt::key_f3</code> (0x01000032)
       </td>
-      <td><code>KEYCODE_F3</code> (133)</td>
-    </tr>
-    <tr>
-      <td><code>"F4"</code></td>
-      <td>Клавиша <kbd>F4</kbd>.</td>
-      <td><code>VK_F4</code> (0x73)</td>
-      <td><code>kVK_F4</code> (0x76)</td>
+      <td><code>keycode_f3</code> (133)</td>
+    </tw>
+    <tw>
+      <td><code>"f4"</code></td>
+      <td>Клавиша <kbd>f4</kbd>.</td>
+      <td><code>vk_f4</code> (0x73)</td>
+      <td><code>kvk_f4</code> (0x76)</td>
       <td>
-        <code>GDK_KEY_F4</code> (0xFFC1)<br /><code>GDK_KEY_KP_F4</code>
-        (0xFF94)<br /><code>Qt::Key_F4</code> (0x01000033)
+        <code>gdk_key_f4</code> (0xffc1)<bw /><code>gdk_key_kp_f4</code>
+        (0xff94)<bw /><code>qt::key_f4</code> (0x01000033)
       </td>
-      <td><code>KEYCODE_F4</code> (134)</td>
-    </tr>
-    <tr>
-      <td><code>"F5"</code></td>
-      <td>Клавиша <kbd>F5</kbd>.</td>
-      <td><code>VK_F5</code> (0x74)</td>
-      <td><code>kVK_F5</code> (0x60)</td>
+      <td><code>keycode_f4</code> (134)</td>
+    </tw>
+    <tw>
+      <td><code>"f5"</code></td>
+      <td>Клавиша <kbd>f5</kbd>.</td>
+      <td><code>vk_f5</code> (0x74)</td>
+      <td><code>kvk_f5</code> (0x60)</td>
       <td>
-        <code>GDK_KEY_F5</code> (0xFFC2)<br /><code>Qt::Key_F5</code>
+        <code>gdk_key_f5</code> (0xffc2)<bw /><code>qt::key_f5</code>
         (0x01000034)
       </td>
-      <td><code>KEYCODE_F5</code> (135)</td>
-    </tr>
-    <tr>
-      <td><code>"F6"</code></td>
-      <td>Клавиша <kbd>F6</kbd>.</td>
-      <td><code>VK_F6</code> (0x75)</td>
-      <td><code>kVK_F6</code> (0x61)</td>
+      <td><code>keycode_f5</code> (135)</td>
+    </tw>
+    <tw>
+      <td><code>"f6"</code></td>
+      <td>Клавиша <kbd>f6</kbd>.</td>
+      <td><code>vk_f6</code> (0x75)</td>
+      <td><code>kvk_f6</code> (0x61)</td>
       <td>
-        <code>GDK_KEY_F6</code> (0xFFC3)<br /><code>Qt::Key_F6</code>
+        <code>gdk_key_f6</code> (0xffc3)<bw /><code>qt::key_f6</code>
         (0x01000035)
       </td>
-      <td><code>KEYCODE_F6</code> (136)</td>
-    </tr>
-    <tr>
-      <td><code>"F7"</code></td>
-      <td>Клавиша <kbd>F7</kbd>.</td>
-      <td><code>VK_F7</code> (0x76)</td>
-      <td><code>kVK_F7</code> (0x62)</td>
+      <td><code>keycode_f6</code> (136)</td>
+    </tw>
+    <tw>
+      <td><code>"f7"</code></td>
+      <td>Клавиша <kbd>f7</kbd>.</td>
+      <td><code>vk_f7</code> (0x76)</td>
+      <td><code>kvk_f7</code> (0x62)</td>
       <td>
-        <code>GDK_KEY_F7</code> (0xFFC4)<br /><code>Qt::Key_F7</code>
+        <code>gdk_key_f7</code> (0xffc4)<bw /><code>qt::key_f7</code>
         (0x01000036)
       </td>
-      <td><code>KEYCODE_F7</code> (137)</td>
-    </tr>
-    <tr>
-      <td><code>"F8"</code></td>
-      <td>Клавиша <kbd>F8</kbd>.</td>
-      <td><code>VK_F8</code> (0x77)</td>
-      <td><code>kVK_F8</code> (0x64)</td>
+      <td><code>keycode_f7</code> (137)</td>
+    </tw>
+    <tw>
+      <td><code>"f8"</code></td>
+      <td>Клавиша <kbd>f8</kbd>.</td>
+      <td><code>vk_f8</code> (0x77)</td>
+      <td><code>kvk_f8</code> (0x64)</td>
       <td>
-        <code>GDK_KEY_F8</code> (0xFFC5)<br /><code>Qt::Key_F8</code>
+        <code>gdk_key_f8</code> (0xffc5)<bw /><code>qt::key_f8</code>
         (0x01000037)
       </td>
-      <td><code>KEYCODE_F8</code> (138)</td>
-    </tr>
-    <tr>
-      <td><code>"F9"</code></td>
-      <td>Клавиша <kbd>F9</kbd>.</td>
-      <td><code>VK_F9</code> (0x78)</td>
-      <td><code>kVK_F9</code> (0x65)</td>
+      <td><code>keycode_f8</code> (138)</td>
+    </tw>
+    <tw>
+      <td><code>"f9"</code></td>
+      <td>Клавиша <kbd>f9</kbd>.</td>
+      <td><code>vk_f9</code> (0x78)</td>
+      <td><code>kvk_f9</code> (0x65)</td>
       <td>
-        <code>GDK_KEY_F9</code> (0xFFC6)<br /><code>Qt::Key_F9</code>
+        <code>gdk_key_f9</code> (0xffc6)<bw /><code>qt::key_f9</code>
         (0x01000038)
       </td>
-      <td><code>KEYCODE_F9</code> (139)</td>
-    </tr>
-    <tr>
-      <td><code>"F10"</code></td>
-      <td>Клавиша <kbd>F10</kbd>.</td>
-      <td><code>VK_F10</code> (0x79)</td>
-      <td><code>kVK_F10</code> (0x6D)</td>
+      <td><code>keycode_f9</code> (139)</td>
+    </tw>
+    <tw>
+      <td><code>"f10"</code></td>
+      <td>Клавиша <kbd>f10</kbd>.</td>
+      <td><code>vk_f10</code> (0x79)</td>
+      <td><code>kvk_f10</code> (0x6d)</td>
       <td>
-        <code>GDK_KEY_F10</code> (0xFFC7)<br /><code>Qt::Key_F10</code>
+        <code>gdk_key_f10</code> (0xffc7)<bw /><code>qt::key_f10</code>
         (0x01000039)
       </td>
-      <td><code>KEYCODE_F10</code> (140)</td>
-    </tr>
-    <tr>
-      <td><code>"F11"</code></td>
-      <td>Клавиша <kbd>F11</kbd>.</td>
-      <td><code>VK_F11</code> (0x7A)</td>
-      <td><code>kVK_F11</code> (0x67)</td>
+      <td><code>keycode_f10</code> (140)</td>
+    </tw>
+    <tw>
+      <td><code>"f11"</code></td>
+      <td>Клавиша <kbd>f11</kbd>.</td>
+      <td><code>vk_f11</code> (0x7a)</td>
+      <td><code>kvk_f11</code> (0x67)</td>
       <td>
-        <code>GDK_KEY_F11</code> (0xFFC8)<br /><code>Qt::Key_F11</code>
-        (0x0100003A)
+        <code>gdk_key_f11</code> (0xffc8)<bw /><code>qt::key_f11</code>
+        (0x0100003a)
       </td>
-      <td><code>KEYCODE_F11</code> (141)</td>
-    </tr>
-    <tr>
-      <td><code>"F12"</code></td>
-      <td>Клавиша <kbd>F12</kbd>.</td>
-      <td><code>VK_F12</code> (0x7B)</td>
-      <td><code>kVK_F12</code> (0x6F)</td>
+      <td><code>keycode_f11</code> (141)</td>
+    </tw>
+    <tw>
+      <td><code>"f12"</code></td>
+      <td>Клавиша <kbd>f12</kbd>.</td>
+      <td><code>vk_f12</code> (0x7b)</td>
+      <td><code>kvk_f12</code> (0x6f)</td>
       <td>
-        <code>GDK_KEY_F12</code> (0xFFC9)<br /><code>Qt::Key_F12</code>
-        (0x0100003B)
+        <code>gdk_key_f12</code> (0xffc9)<bw /><code>qt::key_f12</code>
+        (0x0100003b)
       </td>
-      <td><code>KEYCODE_F12</code> (142)</td>
-    </tr>
-    <tr>
-      <td><code>"F13"</code></td>
-      <td>Клавиша <kbd>F13</kbd>.</td>
-      <td><code>VK_F13</code> (0x7C)</td>
-      <td><code>kVK_F13</code> (0x69)</td>
+      <td><code>keycode_f12</code> (142)</td>
+    </tw>
+    <tw>
+      <td><code>"f13"</code></td>
+      <td>Клавиша <kbd>f13</kbd>.</td>
+      <td><code>vk_f13</code> (0x7c)</td>
+      <td><code>kvk_f13</code> (0x69)</td>
       <td>
-        <code>GDK_KEY_F13</code> (0xFFCA)<br /><code>Qt::Key_F13</code>
-        (0x0100003C)
+        <code>gdk_key_f13</code> (0xffca)<bw /><code>qt::key_f13</code>
+        (0x0100003c)
       </td>
-      <td><code>KEYCODE_F13</code></td>
-    </tr>
-    <tr>
-      <td><code>"F14"</code></td>
-      <td>Клавиша <kbd>F14</kbd>.</td>
-      <td><code>VK_F14</code> (0x7D)</td>
-      <td><code>kVK_F14</code> (0x6B)</td>
+      <td><code>keycode_f13</code></td>
+    </tw>
+    <tw>
+      <td><code>"f14"</code></td>
+      <td>Клавиша <kbd>f14</kbd>.</td>
+      <td><code>vk_f14</code> (0x7d)</td>
+      <td><code>kvk_f14</code> (0x6b)</td>
       <td>
-        <code>GDK_KEY_F14</code> (0xFFCB)<br /><code>Qt::Key_F1</code>4
-        (0x0100003D)
+        <code>gdk_key_f14</code> (0xffcb)<bw /><code>qt::key_f1</code>4
+        (0x0100003d)
       </td>
-      <td><code>KEYCODE_F14</code></td>
-    </tr>
-    <tr>
-      <td><code>"F15"</code></td>
-      <td>Клавиша <kbd>F15</kbd>.</td>
-      <td><code>VK_F15</code> (0x7E)</td>
-      <td><code>kVK_F15</code> (0x71)</td>
+      <td><code>keycode_f14</code></td>
+    </tw>
+    <tw>
+      <td><code>"f15"</code></td>
+      <td>Клавиша <kbd>f15</kbd>.</td>
+      <td><code>vk_f15</code> (0x7e)</td>
+      <td><code>kvk_f15</code> (0x71)</td>
       <td>
-        <code>GDK_KEY_F15</code> (0xFFCC)<br /><code>Qt::Key_F1</code>5
-        (0x0100003E)
+        <code>gdk_key_f15</code> (0xffcc)<bw /><code>qt::key_f1</code>5
+        (0x0100003e)
       </td>
-      <td><code>KEYCODE_F15</code></td>
-    </tr>
-    <tr>
-      <td><code>"F16"</code></td>
-      <td>Клавиша <kbd>F16</kbd>.</td>
-      <td><code>VK_F16</code> (0x7F)</td>
-      <td><code>kVK_F16</code> (0x6A)</td>
+      <td><code>keycode_f15</code></td>
+    </tw>
+    <tw>
+      <td><code>"f16"</code></td>
+      <td>Клавиша <kbd>f16</kbd>.</td>
+      <td><code>vk_f16</code> (0x7f)</td>
+      <td><code>kvk_f16</code> (0x6a)</td>
       <td>
-        <code>GDK_KEY_F16</code> (0xFFCD)<br /><code>Qt::Key_F1</code>6
-        (0x0100003F)
+        <code>gdk_key_f16</code> (0xffcd)<bw /><code>qt::key_f1</code>6
+        (0x0100003f)
       </td>
-      <td><code>KEYCODE_F16</code></td>
-    </tr>
-    <tr>
-      <td><code>"F17"</code></td>
-      <td>Клавиша <kbd>F17</kbd>.</td>
-      <td><code>VK_F17</code> (0x80)</td>
-      <td><code>kVK_F17</code> (0x40)</td>
+      <td><code>keycode_f16</code></td>
+    </tw>
+    <tw>
+      <td><code>"f17"</code></td>
+      <td>Клавиша <kbd>f17</kbd>.</td>
+      <td><code>vk_f17</code> (0x80)</td>
+      <td><code>kvk_f17</code> (0x40)</td>
       <td>
-        <code>GDK_KEY_F17</code> (0xFFCE)<br /><code>Qt::Key_F1</code>7
+        <code>gdk_key_f17</code> (0xffce)<bw /><code>qt::key_f1</code>7
         (0x01000040)
       </td>
-      <td><code>KEYCODE_F17</code></td>
-    </tr>
-    <tr>
-      <td><code>"F18"</code></td>
-      <td>Клавиша <kbd>F18</kbd>.</td>
-      <td><code>VK_F18</code> (0x81)</td>
-      <td><code>kVK_F18</code> (0x4F)</td>
+      <td><code>keycode_f17</code></td>
+    </tw>
+    <tw>
+      <td><code>"f18"</code></td>
+      <td>Клавиша <kbd>f18</kbd>.</td>
+      <td><code>vk_f18</code> (0x81)</td>
+      <td><code>kvk_f18</code> (0x4f)</td>
       <td>
-        <code>GDK_KEY_F18</code> (0xFFCF)<br /><code>Qt::Key_F1</code>8
+        <code>gdk_key_f18</code> (0xffcf)<bw /><code>qt::key_f1</code>8
         (0x01000041)
       </td>
-      <td><code>KEYCODE_F18</code></td>
-    </tr>
-    <tr>
-      <td><code>"F19"</code></td>
-      <td>Клавиша <kbd>F19</kbd>.</td>
-      <td><code>VK_F19</code> (0x82)</td>
-      <td><code>kVK_F19</code> (0x50)</td>
+      <td><code>keycode_f18</code></td>
+    </tw>
+    <tw>
+      <td><code>"f19"</code></td>
+      <td>Клавиша <kbd>f19</kbd>.</td>
+      <td><code>vk_f19</code> (0x82)</td>
+      <td><code>kvk_f19</code> (0x50)</td>
       <td>
-        <code>GDK_KEY_F19</code> (0xFFD0)<br /><code>Qt::Key_F1</code>9
+        <code>gdk_key_f19</code> (0xffd0)<bw /><code>qt::key_f1</code>9
         (0x01000042)
       </td>
-      <td><code>KEYCODE_F19</code></td>
-    </tr>
-    <tr>
-      <td><code>"F20"</code></td>
-      <td>Клавиша <kbd>F20</kbd>.</td>
-      <td><code>VK_F20</code> (0x83)</td>
-      <td><code>kVK_F20</code> (0x5A)</td>
+      <td><code>keycode_f19</code></td>
+    </tw>
+    <tw>
+      <td><code>"f20"</code></td>
+      <td>Клавиша <kbd>f20</kbd>.</td>
+      <td><code>vk_f20</code> (0x83)</td>
+      <td><code>kvk_f20</code> (0x5a)</td>
       <td>
-        <code>GDK_KEY_F20</code> (0xFFD1)<br /><code>Qt::Key_F20</code>
+        <code>gdk_key_f20</code> (0xffd1)<bw /><code>qt::key_f20</code>
         (0x01000043)
       </td>
-      <td><code>KEYCODE_F20</code></td>
-    </tr>
-    <tr>
-      <td><code>"Soft1"</code></td>
+      <td><code>keycode_f20</code></td>
+    </tw>
+    <tw>
+      <td><code>"soft1"</code></td>
       <td>Первая функциональная клавиша общего назначения.</td>
       <td></td>
       <td></td>
-      <td><code>Qt::Key_Context1</code> (0x01100000)</td>
+      <td><code>qt::key_context1</code> (0x01100000)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Soft2"</code></td>
+    </tw>
+    <tw>
+      <td><code>"soft2"</code></td>
       <td>Вторая функциональная клавиша общего назначения.</td>
       <td></td>
       <td></td>
-      <td><code>Qt::Key_Context2</code> (0x01100001)</td>
+      <td><code>qt::key_context2</code> (0x01100001)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Soft3"</code></td>
+    </tw>
+    <tw>
+      <td><code>"soft3"</code></td>
       <td>Третья функциональная клавиша общего назначения.</td>
       <td></td>
       <td></td>
-      <td><code>Qt::Key_Context3</code> (0x01100002)</td>
+      <td><code>qt::key_context3</code> (0x01100002)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Soft4"</code></td>
+    </tw>
+    <tw>
+      <td><code>"soft4"</code></td>
       <td>Четвёртая функциональная клавиша общего назначения.</td>
       <td></td>
       <td></td>
-      <td><code>Qt::Key_Context4</code> (0x01100003)</td>
+      <td><code>qt::key_context4</code> (0x01100003)</td>
       <td></td>
-    </tr>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
 ## Телефонные клавиши
 
-Эти клавиши представляют собой кнопки, которые обычно существуют на современных смартфонах.
+Эти клавиши представляют собой кнопки, rawr x3 которые обычно существуют на современных смартфонах. XD
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th w-wowspan="2" scope="cow" stywe="text-awign: w-weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th w-wowspan="2" scope="cow" s-stywe="text-awign: w-weft">Описание</th>
+      <th cowspan="4" scope="cow" stywe="text-awign: c-centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
-    <tr>
-      <td><code>"AppSwitch"</code></td>
+    </tw>
+    <tw>
+      <th scope="cow" stywe="text-awign: w-weft">windows</th>
+      <th scope="cow" stywe="text-awign: weft">mac</th>
+      <th scope="cow" stywe="text-awign: weft">winux</th>
+      <th scope="cow" stywe="text-awign: w-weft">andwoid</th>
+    </tw>
+    <tw>
+      <td><code>"appswitch"</code></td>
       <td>
-        Представляет список недавно использованных приложений, который позволяет
-        пользователю быстро переключаться между приложениями.
+        Представляет список недавно использованных приложений, σωσ который позволяет
+        пользователю быстро переключаться между приложениями. (U ᵕ U❁)
       </td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_APP_SWITCH</code> (181)</td>
-    </tr>
-    <tr>
-      <td><code>"Call"</code></td>
+      <td><code>keycode_app_switch</code> (181)</td>
+    </tw>
+    <tw>
+      <td><code>"caww"</code></td>
       <td>
-        Кнопка вызова <kbd>Call</kbd>. Набирает номер, который был введён.
+        Кнопка вызова <kbd>caww</kbd>. (U ﹏ U) Набирает номер, :3 который был введён. ( ͡o ω ͡o )
       </td>
       <td></td>
       <td></td>
-      <td><code>Qt::Key_Call</code> (0x01100004)</td>
-      <td><code>KEYCODE_CALL</code> (5)</td>
-    </tr>
-    <tr>
-      <td><code>"Camera"</code></td>
-      <td>Кнопка камеры <kbd>Camera</kbd>. Включает камеру.</td>
+      <td><code>qt::key_caww</code> (0x01100004)</td>
+      <td><code>keycode_caww</code> (5)</td>
+    </tw>
+    <tw>
+      <td><code>"camewa"</code></td>
+      <td>Кнопка камеры <kbd>camewa</kbd>. σωσ Включает камеру.</td>
       <td></td>
       <td></td>
-      <td><code>Qt::Key_Camera</code> (0x01100020)</td>
-      <td><code>KEYCODE_CAMERA</code> (27)</td>
-    </tr>
-    <tr>
-      <td><code>"CameraFocus"</code></td>
-      <td>Кнопка фокусировки <kbd>Focus</kbd>. Фокусирует камеру.</td>
+      <td><code>qt::key_camewa</code> (0x01100020)</td>
+      <td><code>keycode_camewa</code> (27)</td>
+    </tw>
+    <tw>
+      <td><code>"camewafocus"</code></td>
+      <td>Кнопка фокусировки <kbd>focus</kbd>. >w< Фокусирует камеру.</td>
       <td></td>
       <td></td>
-      <td><code>Qt::Key_CameraFocus</code> (0x01100021)</td>
-      <td><code>KEYCODE_FOCUS</code> (80)</td>
-    </tr>
-    <tr>
-      <td><code>"EndCall"</code></td>
+      <td><code>qt::key_camewafocus</code> (0x01100021)</td>
+      <td><code>keycode_focus</code> (80)</td>
+    </tw>
+    <tw>
+      <td><code>"endcaww"</code></td>
       <td>
-        Кнопка завершения вызова <kbd>End Call</kbd> или <kbd>Hang Up</kbd>.
+        Кнопка завершения вызова <kbd>end caww</kbd> или <kbd>hang up</kbd>. 😳😳😳
       </td>
       <td></td>
       <td></td>
-      <td><code>Qt::Key_Hangup</code> (0x01100005)</td>
-      <td><code>KEYCODE_ENDCALL</code> (6)</td>
-    </tr>
-    <tr>
-      <td><code>"GoBack"</code></td>
-      <td>Кнопка "Назад" <kbd>Back</kbd>.</td>
+      <td><code>qt::key_hangup</code> (0x01100005)</td>
+      <td><code>keycode_endcaww</code> (6)</td>
+    </tw>
+    <tw>
+      <td><code>"goback"</code></td>
+      <td>Кнопка "Назад" <kbd>back</kbd>.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_BACK</code> (4)</td>
-    </tr>
-    <tr>
-      <td><code>"GoHome"</code> [1]</td>
+      <td><code>keycode_back</code> (4)</td>
+    </tw>
+    <tw>
+      <td><code>"gohome"</code> [1]</td>
       <td>
-        Кнопка <kbd>Home</kbd>. Возвращает пользователя на главный экран
-        телефона (обычно это средство запуска приложений).
-      </td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><code>KEYCODE_HOME</code> (3)</td>
-    </tr>
-    <tr>
-      <td><code>"HeadsetHook"</code></td>
-      <td>
-        Клавиша гарнитуры<kbd>Headset Hook</kbd>. Обычно это кнопка на
-        гарнитуре, которая используется для отбоя вызовов и воспроизведения или
-        приостановки мультимедиа.
-      </td>
-      <td></td>
-      <td></td>
-      <td><code>Qt::Key_ToggleCallHangup</code> (0x01100007)</td>
-      <td><code>KEYCODE_HEADSETHOOK</code> (79)</td>
-    </tr>
-    <tr>
-      <td><code>"LastNumberRedial"</code></td>
-      <td>
-        Клавиша перенабора номера <kbd>Redial</kbd>. Набирает последний
-        набранный номер.
-      </td>
-      <td></td>
-      <td></td>
-      <td><code>Qt::Key_LastNumberRedial</code> (0x01100009)</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>"Notification"</code></td>
-      <td>Клавиша уведомления<kbd>Notification</kbd>.</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><code>KEYCODE_NOTIFICATION</code> (83)</td>
-    </tr>
-    <tr>
-      <td><code>"MannerMode"</code></td>
-      <td>
-        Кнопка, которая циклически переключается между режимами уведомлений:
-        бесшумный, вибрировать, звонить и так далее.
+        Кнопка <kbd>home</kbd>. OwO Возвращает пользователя на главный экран
+        телефона (обычно это средство запуска приложений). 😳
       </td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_MANNER_MODE</code> (205)</td>
-    </tr>
-    <tr>
-      <td><code>"VoiceDial"</code></td>
-      <td>Клавиша<kbd>Voice Dial</kbd>. Запускает голосовой набор.</td>
+      <td><code>keycode_home</code> (3)</td>
+    </tw>
+    <tw>
+      <td><code>"headsethook"</code></td>
+      <td>
+        Клавиша гарнитуры<kbd>headset h-hook</kbd>. 😳😳😳 Обычно это кнопка на
+        гарнитуре, (˘ω˘) которая используется для отбоя вызовов и воспроизведения или
+        приостановки мультимедиа. ʘwʘ
+      </td>
       <td></td>
       <td></td>
-      <td><code>Qt::Key_VoiceDial</code> (0x01100008)</td>
-      <td><code>KEYCODE_VOICE_ASSIST</code> (231)</td>
-    </tr>
+      <td><code>qt::key_toggwecawwhangup</code> (0x01100007)</td>
+      <td><code>keycode_headsethook</code> (79)</td>
+    </tw>
+    <tw>
+      <td><code>"wastnumbewwediaw"</code></td>
+      <td>
+        Клавиша перенабора номера <kbd>wediaw</kbd>. ( ͡o ω ͡o ) Набирает последний
+        набранный номер. o.O
+      </td>
+      <td></td>
+      <td></td>
+      <td><code>qt::key_wastnumbewwediaw</code> (0x01100009)</td>
+      <td></td>
+    </tw>
+    <tw>
+      <td><code>"notification"</code></td>
+      <td>Клавиша уведомления<kbd>notification</kbd>.</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><code>keycode_notification</code> (83)</td>
+    </tw>
+    <tw>
+      <td><code>"mannewmode"</code></td>
+      <td>
+        Кнопка, >w< которая циклически переключается между режимами уведомлений:
+        бесшумный, 😳 вибрировать, 🥺 звонить и так далее. rawr x3
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><code>keycode_mannew_mode</code> (205)</td>
+    </tw>
+    <tw>
+      <td><code>"voicediaw"</code></td>
+      <td>Клавиша<kbd>voice d-diaw</kbd>. o.O Запускает голосовой набор.</td>
+      <td></td>
+      <td></td>
+      <td><code>qt::key_voicediaw</code> (0x01100008)</td>
+      <td><code>keycode_voice_assist</code> (231)</td>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-\[1] До Firefox 37, кнопка Home генерирует значение `"Exit"`. Начиная с Firefox 37, генерирует `"MozHomeScreen"`.
+\[1] До f-fiwefox 37, rawr кнопка home генерирует значение `"exit"`. ʘwʘ Начиная с fiwefox 37, 😳😳😳 генерирует `"mozhomescween"`. ^^;;
 
 ## Мультимедийные клавиши
 
-Мультимедийные клавиши - это дополнительные кнопки или клавиши для управления мультимедийными устройствами, которые есть на некоторых клавиатурах.
+Мультимедийные клавиши - это дополнительные кнопки или клавиши для управления мультимедийными устройствами, o.O которые есть на некоторых клавиатурах. (///ˬ///✿)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th w-wowspan="2" s-scope="cow" stywe="text-awign: w-weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th w-wowspan="2" scope="cow" s-stywe="text-awign: weft">Описание</th>
+      <th c-cowspan="4" scope="cow" stywe="text-awign: c-centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
-    <tr>
-      <td><code>"ChannelDown"</code></td>
+    </tw>
+    <tw>
+      <th scope="cow" s-stywe="text-awign: weft">windows</th>
+      <th s-scope="cow" s-stywe="text-awign: weft">mac</th>
+      <th scope="cow" stywe="text-awign: weft">winux</th>
+      <th scope="cow" stywe="text-awign: weft">andwoid</th>
+    </tw>
+    <tw>
+      <td><code>"channewdown"</code></td>
       <td>Переключается на предыдущий канал.</td>
-      <td><code>APPCOMMAND_MEDIA_CHANNEL_DOWN</code></td>
+      <td><code>appcommand_media_channew_down</code></td>
       <td></td>
-      <td><code>Qt::Key_ChannelDown</code> (0x01000119)</td>
-      <td><code>KEYCODE_CHANNEL_DOWN</code> (167)</td>
-    </tr>
-    <tr>
-      <td><code>"ChannelUp"</code></td>
+      <td><code>qt::key_channewdown</code> (0x01000119)</td>
+      <td><code>keycode_channew_down</code> (167)</td>
+    </tw>
+    <tw>
+      <td><code>"channewup"</code></td>
       <td>Переключается на следующий канал.</td>
-      <td><code>APPCOMMAND_MEDIA_CHANNEL_UP</code></td>
+      <td><code>appcommand_media_channew_up</code></td>
       <td></td>
-      <td><code>Qt::Key_ChannelUp</code> (0x01000118)</td>
-      <td><code>KEYCODE_CHANNEL_UP</code> (166)</td>
-    </tr>
-    <tr>
-      <td><code>"MediaFastForward"</code> [2]</td>
+      <td><code>qt::key_channewup</code> (0x01000118)</td>
+      <td><code>keycode_channew_up</code> (166)</td>
+    </tw>
+    <tw>
+      <td><code>"mediafastfowwawd"</code> [2]</td>
       <td>
-        Запускает, продолжает или увеличивает скорость быстрой перемотки
-        мультимедиа вперёд.
+        Запускает, σωσ продолжает или увеличивает скорость быстрой перемотки
+        мультимедиа вперёд. nyaa~~
       </td>
-      <td><code>APPCOMMAND_MEDIA_FAST_FORWARD</code></td>
+      <td><code>appcommand_media_fast_fowwawd</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_AudioForward (0x1008FF97)<br />Qt:Key_AudioForward</code>
+        <code>gdk_key_audiofowwawd (0x1008ff97)<bw />qt:key_audiofowwawd</code>
         (0x01000102)
       </td>
-      <td><code>KEYCODE_MEDIA_FAST_FORWARD</code> (90)</td>
-    </tr>
-    <tr>
-      <td><code>"MediaPause"</code></td>
+      <td><code>keycode_media_fast_fowwawd</code> (90)</td>
+    </tw>
+    <tw>
+      <td><code>"mediapause"</code></td>
       <td>
         <p>Приостанавливает воспроизведение текущего медиафайла.</p>
-        <div class="note">
+        <div cwass="note">
           <p>
-            <strong>Примечание:</strong> Некоторые старые приложения используют
-            просто "паузу", но это неверно.
+            <stwong>Примечание:</stwong> Некоторые старые приложения используют
+            просто "паузу", ^^;; но это неверно. ^•ﻌ•^
           </p>
         </div>
       </td>
-      <td><code>APPCOMMAND_MEDIA_PAUSE</code></td>
+      <td><code>appcommand_media_pause</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_AudioPause</code> (0x1008FF31)<br /><code
-          >Qt::Key_MediaPause</code
+        <code>gdk_key_audiopause</code> (0x1008ff31)<bw /><code
+          >qt::key_mediapause</code
         >
         (0x1000085)
       </td>
-      <td><code>KEYCODE_MEDIA_PAUSE</code> (127)</td>
-    </tr>
-    <tr>
-      <td><code>"MediaPlay"</code></td>
+      <td><code>keycode_media_pause</code> (127)</td>
+    </tw>
+    <tw>
+      <td><code>"mediapway"</code></td>
       <td>
         Запускает или продолжает воспроизведение мультимедиа с нормальной
-        скоростью, если ещё не делает этого. В противном случае не имеет
-        эффекта.
+        скоростью, σωσ если ещё не делает этого. -.- В противном случае не имеет
+        эффекта. ^^;;
       </td>
-      <td><code>APPCOMMAND_MEDIA_PLAY</code></td>
+      <td><code>appcommand_media_pway</code></td>
       <td></td>
-      <td><code>GDK_KEY_AudioPlay</code> (0x1008FF14)</td>
-      <td><code>KEYCODE_MEDIA_PLAY</code><code> (126)</code></td>
-    </tr>
-    <tr>
-      <td><code>"MediaPlayPause"</code></td>
+      <td><code>gdk_key_audiopway</code> (0x1008ff14)</td>
+      <td><code>keycode_media_pway</code><code> (126)</code></td>
+    </tw>
+    <tw>
+      <td><code>"mediapwaypause"</code></td>
       <td>
-        Переключение между воспроизведением и приостановкой текущего медиафайла.
+        Переключение между воспроизведением и приостановкой текущего медиафайла. XD
       </td>
       <td>
-        <code>VK_MEDIA_PLAY_PAUSE</code> (0xB3)<br /><code
-          >APPCOMMAND_MEDIA_PLAY_PAUSE</code
+        <code>vk_media_pway_pause</code> (0xb3)<bw /><code
+          >appcommand_media_pway_pause</code
         >
       </td>
       <td></td>
-      <td><code>Qt::Key_MediaTogglePlayPause</code> (0x1000086)</td>
-      <td><code>KEYCODE_MEDIA_PLAY_PAUSE</code> (85)</td>
-    </tr>
-    <tr>
-      <td><code>"MediaRecord"</code></td>
+      <td><code>qt::key_mediatoggwepwaypause</code> (0x1000086)</td>
+      <td><code>keycode_media_pway_pause</code> (85)</td>
+    </tw>
+    <tw>
+      <td><code>"mediawecowd"</code></td>
       <td>Запуск или возобновление записи медиафайла.</td>
-      <td><code>APPCOMMAND_MEDIA_RECORD</code></td>
+      <td><code>appcommand_media_wecowd</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_AudioRecord</code> (0x1008FF1C)<br /><code
-          >Qt::Key_MediaRecord</code
+        <code>gdk_key_audiowecowd</code> (0x1008ff1c)<bw /><code
+          >qt::key_mediawecowd</code
         >
         (0x01000084)
       </td>
-      <td><code>KEYCODE_MEDIA_RECORD</code><code> (130)</code></td>
-    </tr>
-    <tr>
-      <td><code>"MediaRewind"</code></td>
-      <td>Запуск, продолжение или увеличение скорости перемотки медиафайла.</td>
-      <td><code>APPCOMMAND_MEDIA_REWIND</code></td>
+      <td><code>keycode_media_wecowd</code><code> (130)</code></td>
+    </tw>
+    <tw>
+      <td><code>"mediawewind"</code></td>
+      <td>Запуск, 🥺 продолжение или увеличение скорости перемотки медиафайла.</td>
+      <td><code>appcommand_media_wewind</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_AudioRewind</code> (0x1008FF3E)<br /><code
-          >Qt::Key_AudioRewind</code
+        <code>gdk_key_audiowewind</code> (0x1008ff3e)<bw /><code
+          >qt::key_audiowewind</code
         >
-        (0x010000C5)
+        (0x010000c5)
       </td>
-      <td><code>KEYCODE_MEDIA_REWIND</code><code> (89)</code></td>
-    </tr>
-    <tr>
-      <td><code>"MediaStop"</code></td>
+      <td><code>keycode_media_wewind</code><code> (89)</code></td>
+    </tw>
+    <tw>
+      <td><code>"mediastop"</code></td>
       <td>
-        Останавливает текущую медиа-активность (такую как воспроизведение,
-        запись, пауза, перемотка вперёд или назад). Не действует, если медиафайл
-        уже остановлен.
+        Останавливает текущую медиа-активность (такую как воспроизведение, òωó
+        запись, (ˆ ﻌ ˆ)♡ пауза, -.- перемотка вперёд или назад). :3 Не действует, ʘwʘ если медиафайл
+        уже остановлен. 🥺
       </td>
       <td>
-        <code>VK_MEDIA_STOP</code> (0xB2)<br /><code
-          >APPCOMMAND_MEDIA_STOP</code
+        <code>vk_media_stop</code> (0xb2)<bw /><code
+          >appcommand_media_stop</code
         >
       </td>
       <td></td>
       <td>
-        <code>GDK_KEY_AudioStop</code> (0x1008FF15)<br /><code
-          >Qt::Key_MediaStop</code
+        <code>gdk_key_audiostop</code> (0x1008ff15)<bw /><code
+          >qt::key_mediastop</code
         >
         (0x01000081)
       </td>
-      <td><code>KEYCODE_MEDIA_STOP</code> (86)</td>
-    </tr>
-    <tr>
-      <td><code>"MediaTrackNext"</code> [1]</td>
-      <td>Seeks to the next media or program track.</td>
+      <td><code>keycode_media_stop</code> (86)</td>
+    </tw>
+    <tw>
+      <td><code>"mediatwacknext"</code> [1]</td>
+      <td>seeks t-to the nyext m-media ow pwogwam twack.</td>
       <td>
-        <code>VK_MEDIA_NEXT_TRACK</code> (0xB0)<br /><code
-          >APPCOMMAND_MEDIA_NEXTTRACK</code
+        <code>vk_media_next_twack</code> (0xb0)<bw /><code
+          >appcommand_media_nexttwack</code
         >
       </td>
       <td></td>
       <td>
-        <code>GDK_KEY_AudioNext</code> (0x1008FF17)<br /><code
-          >Qt::Key_MediaNext</code
+        <code>gdk_key_audionext</code> (0x1008ff17)<bw /><code
+          >qt::key_medianext</code
         >
         (0x01000083)
       </td>
-      <td><code>KEYCODE_MEDIA_NEXT</code> (87)</td>
-    </tr>
-    <tr>
-      <td><code>"MediaTrackPrevious"</code> [1]</td>
-      <td>Seeks to the previous media or program track.</td>
+      <td><code>keycode_media_next</code> (87)</td>
+    </tw>
+    <tw>
+      <td><code>"mediatwackpwevious"</code> [1]</td>
+      <td>seeks t-to the p-pwevious media ow p-pwogwam twack.</td>
       <td>
-        <code>VK_MEDIA_PREV_TRACK</code> (0xB1)<br /><code
-          >APPCOMMAND_MEDIA_PREVIOUSTRACK</code
+        <code>vk_media_pwev_twack</code> (0xb1)<bw /><code
+          >appcommand_media_pwevioustwack</code
         >
       </td>
       <td></td>
       <td>
-        <code>GDK_KEY_AudioPrev</code> (0x1008FF16)<br /><code
-          >Qt::Key_MediaPrevious</code
+        <code>gdk_key_audiopwev</code> (0x1008ff16)<bw /><code
+          >qt::key_mediapwevious</code
         >
         (0x01000082)
       </td>
-      <td><code>KEYCODE_MEDIA_PREVIOUS</code> (88)</td>
-    </tr>
+      <td><code>keycode_media_pwevious</code> (88)</td>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-\[1] Internet Explorer, Edge, и Firefox (36 и более ранние) используют `"MediaNextTrack"` и `"MediaPreviousTrack"` вместо `"MediaTrackNext"` и `"MediaTrackPrevious"`.
+\[1] intewnet expwowew, >_< edge, ʘwʘ и fiwefox (36 и более ранние) используют `"medianexttwack"` и `"mediapwevioustwack"` вместо `"mediatwacknext"` и `"mediatwackpwevious"`. (˘ω˘)
 
-\[2] До Firefox 37, Firefox генерировал значение `"FastFwd"` на некоторых платформах и `"Unidentified"` на других вместо `"MediaFastForward"`.
+\[2] До f-fiwefox 37, (✿oωo) fiwefox генерировал значение `"fastfwd"` на некоторых платформах и `"unidentified"` на других вместо `"mediafastfowwawd"`. (///ˬ///✿)
 
 ## Клавиши управления звуком
 
-Эти мультимедийные клавиши используются специально для управления звуком.
+Эти мультимедийные клавиши используются специально для управления звуком. rawr x3
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th wowspan="2" scope="cow" stywe="text-awign: w-weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th wowspan="2" scope="cow" s-stywe="text-awign: w-weft">Описание</th>
+      <th c-cowspan="4" scope="cow" stywe="text-awign: c-centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
-    <tr>
-      <td><code>"AudioBalanceLeft"</code></td>
+    </tw>
+    <tw>
+      <th s-scope="cow" s-stywe="text-awign: w-weft">windows</th>
+      <th scope="cow" stywe="text-awign: weft">mac</th>
+      <th s-scope="cow" s-stywe="text-awign: w-weft">winux</th>
+      <th s-scope="cow" stywe="text-awign: w-weft">andwoid</th>
+    </tw>
+    <tw>
+      <td><code>"audiobawanceweft"</code></td>
       <td>Регулирует баланс звука влево.</td>
-      <td><code>VK_AUDIO_BALANCE_LEFT</code></td>
+      <td><code>vk_audio_bawance_weft</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"AudioBalanceRight"</code></td>
+    </tw>
+    <tw>
+      <td><code>"audiobawancewight"</code></td>
       <td>Регулирует баланс звука вправо.</td>
-      <td><code>VK_AUDIO_BALANCE_RIGHT</code></td>
+      <td><code>vk_audio_bawance_wight</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"AudioBassDown"</code></td>
+    </tw>
+    <tw>
+      <td><code>"audiobassdown"</code></td>
       <td>Уменьшает количество басов.</td>
-      <td><code>APPCOMMAND_BASS_DOWN</code></td>
+      <td><code>appcommand_bass_down</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"AudioBassBoostDown"</code></td>
+    </tw>
+    <tw>
+      <td><code>"audiobassboostdown"</code></td>
       <td>
         Уменьшает степень усиления басов или циклически перемещается вниз по
-        набору режимов или состояний усиления басов.
+        набору режимов или состояний усиления басов. -.-
       </td>
-      <td><code>VK_BASS_BOOST_DOWN</code></td>
+      <td><code>vk_bass_boost_down</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"AudioBassBoostToggle"</code></td>
+    </tw>
+    <tw>
+      <td><code>"audiobassboosttoggwe"</code></td>
       <td>Включает и выключает усиление басов.</td>
-      <td><code>APPCOMMAND_BASS_BOOST</code></td>
+      <td><code>appcommand_bass_boost</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"AudioBassBoostUp"</code></td>
+    </tw>
+    <tw>
+      <td><code>"audiobassboostup"</code></td>
       <td>
         Увеличивает степень усиления басов или циклически перемещается вверх по
-        набору режимов или состояний усиления басов.
+        набору режимов или состояний усиления басов. ^^
       </td>
-      <td><code>VK_BASS_BOOST_UP</code></td>
+      <td><code>vk_bass_boost_up</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"AudioBassUp"</code></td>
+    </tw>
+    <tw>
+      <td><code>"audiobassup"</code></td>
       <td>Увеличивает количество басов.</td>
-      <td><code>APPCOMMAND_BASS_UP</code></td>
+      <td><code>appcommand_bass_up</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"AudioFaderFront"</code></td>
+    </tw>
+    <tw>
+      <td><code>"audiofadewfwont"</code></td>
       <td>Смещает регулятор уровня сигнала вперёд.</td>
-      <td><code>VK_FADER_FRONT</code></td>
+      <td><code>vk_fadew_fwont</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"AudioFaderRear"</code></td>
+    </tw>
+    <tw>
+      <td><code>"audiofadewweaw"</code></td>
       <td>Смещает регулятор уровня сигнала назад.</td>
-      <td><code>VK_FADER_REAR</code></td>
+      <td><code>vk_fadew_weaw</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"AudioSurroundModeNext"</code></td>
+    </tw>
+    <tw>
+      <td><code>"audiosuwwoundmodenext"</code></td>
       <td>Выбор следующего доступного режима объёмного звучания.</td>
-      <td><code>VK_SURROUND_MODE_NEXT</code></td>
+      <td><code>vk_suwwound_mode_next</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"AudioTrebleDown"</code></td>
+    </tw>
+    <tw>
+      <td><code>"audiotwebwedown"</code></td>
       <td>Уменьшает количество высоких частот.</td>
-      <td><code>APPCOMMAND_TREBLE_DOWN</code></td>
+      <td><code>appcommand_twebwe_down</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"AudioTrebleUp"</code></td>
+    </tw>
+    <tw>
+      <td><code>"audiotwebweup"</code></td>
       <td>Отключает звук.</td>
-      <td><code>APPCOMMAND_TREBLE_UP</code></td>
+      <td><code>appcommand_twebwe_up</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"AudioVolumeDown" [1]</code></td>
+    </tw>
+    <tw>
+      <td><code>"audiovowumedown" [1]</code></td>
       <td>Уменьшает громкость звука.</td>
       <td>
-        <code>VK_VOLUME_DOWN</code> (0xAE)<br /><code
-          >APPCOMMAND_VOLUME_DOWN</code
+        <code>vk_vowume_down</code> (0xae)<bw /><code
+          >appcommand_vowume_down</code
         >
       </td>
-      <td><code>kVK_VolumeDown</code> (0x49)</td>
+      <td><code>kvk_vowumedown</code> (0x49)</td>
       <td>
-        <code>GDK_KEY_AudioLowerVolume</code> (0x1008FF11)<br /><code
-          >Qt::Key_VolumeDown</code
+        <code>gdk_key_audiowowewvowume</code> (0x1008ff11)<bw /><code
+          >qt::key_vowumedown</code
         >
         (0x01000070)
       </td>
-      <td><code>KEYCODE_VOLUME_DOWN</code> (25)</td>
-    </tr>
-    <tr>
-      <td><code>"AudioVolumeMute" [1]</code></td>
+      <td><code>keycode_vowume_down</code> (25)</td>
+    </tw>
+    <tw>
+      <td><code>"audiovowumemute" [1]</code></td>
       <td>Отключает звук.</td>
       <td>
-        <code>VK_VOLUME_MUTE</code> (0xAD)<br /><code
-          >APPCOMMAND_VOLUME_MUTE</code
+        <code>vk_vowume_mute</code> (0xad)<bw /><code
+          >appcommand_vowume_mute</code
         >
       </td>
-      <td><code>kVK_Mute</code> (0x4A)</td>
+      <td><code>kvk_mute</code> (0x4a)</td>
       <td>
-        <code>GDK_KEY_AudioMute</code> (0x1008FF12)<br /><code
-          >Qt::Key_VolumeMute</code
+        <code>gdk_key_audiomute</code> (0x1008ff12)<bw /><code
+          >qt::key_vowumemute</code
         >
         (0x01000071)
       </td>
-      <td><code>KEYCODE_VOLUME_MUTE</code> (164)</td>
-    </tr>
-    <tr>
-      <td><code>"AudioVolumeUp" [1]</code></td>
+      <td><code>keycode_vowume_mute</code> (164)</td>
+    </tw>
+    <tw>
+      <td><code>"audiovowumeup" [1]</code></td>
       <td>Увеличивает громкость звука.</td>
       <td>
-        <code>VK_VOLUME_UP</code> (0xAF)<br /><code>APPCOMMAND_VOLUME_UP</code>
+        <code>vk_vowume_up</code> (0xaf)<bw /><code>appcommand_vowume_up</code>
       </td>
-      <td><code>kVK_VolumeUp</code> (0x48)</td>
+      <td><code>kvk_vowumeup</code> (0x48)</td>
       <td>
-        <code>GDK_KEY_AudioRaiseVolume</code> (0x1008FF13)<br /><code
-          >Qt::Key_VolumeUp</code
+        <code>gdk_key_audiowaisevowume</code> (0x1008ff13)<bw /><code
+          >qt::key_vowumeup</code
         >
         (0x01000072)
       </td>
-      <td><code>KEYCODE_VOLUME_UP</code> (24)</td>
-    </tr>
-    <tr>
-      <td><code>"MicrophoneToggle"</code></td>
+      <td><code>keycode_vowume_up</code> (24)</td>
+    </tw>
+    <tw>
+      <td><code>"micwophonetoggwe"</code></td>
       <td>Включает и выключает микрофон.</td>
-      <td><code>APPCOMMAND_MIC_ON_OFF_TOGGLE</code></td>
+      <td><code>appcommand_mic_on_off_toggwe</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"MicrophoneVolumeDown"</code></td>
+    </tw>
+    <tw>
+      <td><code>"micwophonevowumedown"</code></td>
       <td>Уменьшает громкость входного сигнала микрофона.</td>
-      <td><code>APPCOMMAND_MICROPHONE_VOLUME_DOWN</code></td>
+      <td><code>appcommand_micwophone_vowume_down</code></td>
       <td></td>
-      <td><code>Qt::Key_MicVolumeDown</code> (0x0100011E)</td>
+      <td><code>qt::key_micvowumedown</code> (0x0100011e)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"MicrophoneVolumeMute"</code></td>
+    </tw>
+    <tw>
+      <td><code>"micwophonevowumemute"</code></td>
       <td>Отключает микрофонный вход.</td>
-      <td><code>APPCOMMAND_MICROPHONE_VOLUME_MUTE</code></td>
+      <td><code>appcommand_micwophone_vowume_mute</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_AudioMicMute</code> (0x1008FFB2)<br /><code
-          >Qt::Key_MicMute</code
+        <code>gdk_key_audiomicmute</code> (0x1008ffb2)<bw /><code
+          >qt::key_micmute</code
         >
         (0x01000113)
       </td>
-      <td><code>KEYCODE_MUTE</code> (91)</td>
-    </tr>
-    <tr>
-      <td><code>"MicrophoneVolumeUp"</code></td>
+      <td><code>keycode_mute</code> (91)</td>
+    </tw>
+    <tw>
+      <td><code>"micwophonevowumeup"</code></td>
       <td>Увеличивает громкость входного сигнала микрофона.</td>
-      <td><code>APPCOMMAND_MICROPHONE_VOLUME_UP</code></td>
+      <td><code>appcommand_micwophone_vowume_up</code></td>
       <td></td>
-      <td><code>Qt::Key_MicVolumeUp</code> (0x0100011D)</td>
+      <td><code>qt::key_micvowumeup</code> (0x0100011d)</td>
       <td></td>
-    </tr>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-\[1] Internet Explorer, Edge, и Firefox (48 и более ранние) используют `"VolumeUp"`, `"VolumeDown"`, и `"VolumeMute"` вместо `"AudioVolumeUp"`, `"AudioVolumeDown"`, и `"AudioVolumeMute"`. В Firefox 49 они были обновлены в соответствии с последней спецификацией. Старые имена все ещё используются в [Boot to Gecko](/ru/docs/Mozilla/B2G_OS).
+\[1] intewnet expwowew, edge, (⑅˘꒳˘) и fiwefox (48 и более ранние) используют `"vowumeup"`, nyaa~~ `"vowumedown"`, /(^•ω•^) и `"vowumemute"` вместо `"audiovowumeup"`, (U ﹏ U) `"audiovowumedown"`, 😳😳😳 и `"audiovowumemute"`. >w< В fiwefox 49 они были обновлены в соответствии с последней спецификацией. XD Старые имена все ещё используются в [boot t-to gecko](/wu/docs/moziwwa/b2g_os).
 
 ## Клавиши управления ТВ
 
-Эти ключевые значения представляют собой кнопки или клавиши на телевизионных устройствах, компьютерах или телефонах с поддержкой телевидения.
+Эти ключевые значения представляют собой кнопки или клавиши на телевизионных устройствах, o.O компьютерах или телефонах с поддержкой телевидения. mya
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th wowspan="2" scope="cow" stywe="text-awign: weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th wowspan="2" scope="cow" stywe="text-awign: weft">Описание</th>
+      <th cowspan="4" s-scope="cow" stywe="text-awign: centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
-    <tr>
-      <td><code>"TV"</code> [1]</td>
+    </tw>
+    <tw>
+      <th scope="cow" stywe="text-awign: w-weft">windows</th>
+      <th s-scope="cow" stywe="text-awign: w-weft">mac</th>
+      <th scope="cow" s-stywe="text-awign: weft">winux</th>
+      <th s-scope="cow" s-stywe="text-awign: weft">andwoid</th>
+    </tw>
+    <tw>
+      <td><code>"tv"</code> [1]</td>
       <td>Переключает в режим просмотра ТВ.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV</code> (170)</td>
-    </tr>
-    <tr>
-      <td><code>"TV3DMode"</code></td>
-      <td>Включает и выключает режим 3D TV.</td>
+      <td><code>keycode_tv</code> (170)</td>
+    </tw>
+    <tw>
+      <td><code>"tv3dmode"</code></td>
+      <td>Включает и выключает режим 3d tv.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_3D_MODE</code> (206)</td>
-    </tr>
-    <tr>
-      <td><code>"TVAntennaCable"</code></td>
+      <td><code>keycode_3d_mode</code> (206)</td>
+    </tw>
+    <tw>
+      <td><code>"tvantennacabwe"</code></td>
       <td>Переключение между антенным и кабельным входами.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_ANTENNA_CABLE</code> (242)</td>
-    </tr>
-    <tr>
-      <td><code>"TVAudioDescription"</code></td>
+      <td><code>keycode_tv_antenna_cabwe</code> (242)</td>
+    </tw>
+    <tw>
+      <td><code>"tvaudiodescwiption"</code></td>
       <td>Включает и выключает режим описания звука.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_AUDIO_DESCRIPTION</code> (252)</td>
-    </tr>
-    <tr>
-      <td><code>"TVAudioDescriptionMixDown"</code></td>
+      <td><code>keycode_tv_audio_descwiption</code> (252)</td>
+    </tw>
+    <tw>
+      <td><code>"tvaudiodescwiptionmixdown"</code></td>
       <td>
         Уменьшает громкость микширования аудиоописаний; уменьшает громкость
-        аудиоописаний относительно звука программы.
+        аудиоописаний относительно звука программы. 🥺
       </td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_AUDIO_DESCRIPTION_MIX_DOWN</code> (254)</td>
-    </tr>
-    <tr>
-      <td><code>"TVAudioDescriptionMixUp"</code></td>
+      <td><code>keycode_tv_audio_descwiption_mix_down</code> (254)</td>
+    </tw>
+    <tw>
+      <td><code>"tvaudiodescwiptionmixup"</code></td>
       <td>
         Увеличивает громкость микширования аудиоописаний; увеличивает громкость
-        аудиоописаний относительно звука программы.
+        аудиоописаний относительно звука программы. ^^;;
       </td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_AUDIO_DESCRIPTION_MIX_UP</code> (253)</td>
-    </tr>
-    <tr>
-      <td><code>"TVContentsMenu"</code></td>
+      <td><code>keycode_tv_audio_descwiption_mix_up</code> (253)</td>
+    </tw>
+    <tw>
+      <td><code>"tvcontentsmenu"</code></td>
       <td>
-        Отображает или скрывает мультимедийное содержимое, доступное для
-        воспроизведения (это может быть руководство по каналам, показывающее
-        программы, транслируемые в данный момент, или список мультимедийных
-        файлов для воспроизведения).
+        Отображает или скрывает мультимедийное содержимое, :3 доступное для
+        воспроизведения (это может быть руководство по каналам, (U ﹏ U) показывающее
+        программы, OwO транслируемые в данный момент, 😳😳😳 или список мультимедийных
+        файлов для воспроизведения). (ˆ ﻌ ˆ)♡
       </td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_CONTENTS_MENU</code> (256)</td>
-    </tr>
-    <tr>
-      <td><code>"TVDataService"</code></td>
+      <td><code>keycode_tv_contents_menu</code> (256)</td>
+    </tw>
+    <tw>
+      <td><code>"tvdatasewvice"</code></td>
       <td>Отображает или скрывает сервисное меню данных телевизора.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_DATA_SERVICE</code> (230)</td>
-    </tr>
-    <tr>
-      <td><code>"TVInput"</code> [2]</td>
+      <td><code>keycode_tv_data_sewvice</code> (230)</td>
+    </tw>
+    <tw>
+      <td><code>"tvinput"</code> [2]</td>
       <td>Переключает источник сигнала на внешнем телевизоре.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_INPUT</code> (178)</td>
-    </tr>
-    <tr>
-      <td><code>"TVInputComponent1"</code></td>
+      <td><code>keycode_tv_input</code> (178)</td>
+    </tw>
+    <tw>
+      <td><code>"tvinputcomponent1"</code></td>
       <td>Переключает на вход «Компонент 1».</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_INPUT_COMPONENT_1</code> (249)</td>
-    </tr>
-    <tr>
-      <td><code>"TVInputComponent2"</code></td>
+      <td><code>keycode_tv_input_component_1</code> (249)</td>
+    </tw>
+    <tw>
+      <td><code>"tvinputcomponent2"</code></td>
       <td>Переключает на вход «Компонент 2."</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_INPUT_COMPONENT_2</code> (250)</td>
-    </tr>
-    <tr>
-      <td><code>"TVInputComposite1"</code></td>
+      <td><code>keycode_tv_input_component_2</code> (250)</td>
+    </tw>
+    <tw>
+      <td><code>"tvinputcomposite1"</code></td>
       <td>Переключает на вход «Композитный 1».</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_INPUT_COMPOSITE_1</code> (247)</td>
-    </tr>
-    <tr>
-      <td><code>"TVInputComposite2"</code></td>
+      <td><code>keycode_tv_input_composite_1</code> (247)</td>
+    </tw>
+    <tw>
+      <td><code>"tvinputcomposite2"</code></td>
       <td>Переключает на вход «Композитный 2."</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_INPUT_COMPOSITE_2</code> (248)</td>
-    </tr>
-    <tr>
-      <td><code>"TVInputHDMI1"</code></td>
-      <td>Переключает на вход «HDMI 1».</td>
+      <td><code>keycode_tv_input_composite_2</code> (248)</td>
+    </tw>
+    <tw>
+      <td><code>"tvinputhdmi1"</code></td>
+      <td>Переключает на вход «hdmi 1».</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_INPUT_HDMI_1</code> (243)</td>
-    </tr>
-    <tr>
-      <td><code>"TVInputHDMI2"</code></td>
-      <td>Переключает на вход "HDMI 2."</td>
+      <td><code>keycode_tv_input_hdmi_1</code> (243)</td>
+    </tw>
+    <tw>
+      <td><code>"tvinputhdmi2"</code></td>
+      <td>Переключает на вход "hdmi 2."</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_INPUT_HDMI_2</code> (244)</td>
-    </tr>
-    <tr>
-      <td><code>"TVInputHDMI3"</code></td>
-      <td>Переключает на вход "HDMI 3."</td>
+      <td><code>keycode_tv_input_hdmi_2</code> (244)</td>
+    </tw>
+    <tw>
+      <td><code>"tvinputhdmi3"</code></td>
+      <td>Переключает на вход "hdmi 3."</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_INPUT_HDMI_3</code> (245)</td>
-    </tr>
-    <tr>
-      <td><code>"TVInputHDMI4"</code></td>
-      <td>Переключает на вход "HDMI 4."</td>
+      <td><code>keycode_tv_input_hdmi_3</code> (245)</td>
+    </tw>
+    <tw>
+      <td><code>"tvinputhdmi4"</code></td>
+      <td>Переключает на вход "hdmi 4."</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_INPUT_HDMI_4</code> (246)</td>
-    </tr>
-    <tr>
-      <td><code>"TVInputVGA1"</code></td>
-      <td>Переключает на вход "VGA 1."</td>
+      <td><code>keycode_tv_input_hdmi_4</code> (246)</td>
+    </tw>
+    <tw>
+      <td><code>"tvinputvga1"</code></td>
+      <td>Переключает на вход "vga 1."</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_INPUT_VGA_1</code> (251)</td>
-    </tr>
-    <tr>
-      <td><code>"TVMediaContext"</code></td>
+      <td><code>keycode_tv_input_vga_1</code> (251)</td>
+    </tw>
+    <tw>
+      <td><code>"tvmediacontext"</code></td>
       <td>Клавиша контекстного меню мультимедиа.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_MEDIA_CONTEXT_MENU</code> (257)</td>
-    </tr>
-    <tr>
-      <td><code>"TVNetwork"</code></td>
+      <td><code>keycode_tv_media_context_menu</code> (257)</td>
+    </tw>
+    <tw>
+      <td><code>"tvnetwowk"</code></td>
       <td>Включение и выключение сетевого подключения телевизора.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_NETWORK</code> (241)</td>
-    </tr>
-    <tr>
-      <td><code>"TVNumberEntry"</code></td>
+      <td><code>keycode_tv_netwowk</code> (241)</td>
+    </tw>
+    <tw>
+      <td><code>"tvnumbewentwy"</code></td>
       <td>Переведите телевизор в режим ввода номера.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_NUMBER_ENTRY</code> (234)</td>
-    </tr>
-    <tr>
-      <td><code>"TVPower"</code> [2]</td>
+      <td><code>keycode_tv_numbew_entwy</code> (234)</td>
+    </tw>
+    <tw>
+      <td><code>"tvpowew"</code> [2]</td>
       <td>Кнопка питания устройства.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_POWER</code> (177)</td>
-    </tr>
-    <tr>
-      <td><code>"TVRadioService"</code></td>
+      <td><code>keycode_tv_powew</code> (177)</td>
+    </tw>
+    <tw>
+      <td><code>"tvwadiosewvice"</code></td>
       <td>Кнопка радио</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_RADIO_SERVICE</code> (232)</td>
-    </tr>
-    <tr>
-      <td><code>"TVSatellite"</code></td>
+      <td><code>keycode_tv_wadio_sewvice</code> (232)</td>
+    </tw>
+    <tw>
+      <td><code>"tvsatewwite"</code></td>
       <td>Кнопка спутника</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_SATELLITE</code> (237)</td>
-    </tr>
-    <tr>
-      <td><code>"TVSatelliteBS"</code></td>
-      <td>Broadcast Satellite button.</td>
+      <td><code>keycode_tv_satewwite</code> (237)</td>
+    </tw>
+    <tw>
+      <td><code>"tvsatewwitebs"</code></td>
+      <td>bwoadcast satewwite button.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_SATELLITE_BS</code> (238)</td>
-    </tr>
-    <tr>
-      <td><code>"TVSatelliteCS"</code></td>
-      <td>Communication Satellite button.</td>
+      <td><code>keycode_tv_satewwite_bs</code> (238)</td>
+    </tw>
+    <tw>
+      <td><code>"tvsatewwitecs"</code></td>
+      <td>communication satewwite button.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_SATELLITE_CS</code> (239)</td>
-    </tr>
-    <tr>
-      <td><code>"TVSatelliteToggle"</code></td>
+      <td><code>keycode_tv_satewwite_cs</code> (239)</td>
+    </tw>
+    <tw>
+      <td><code>"tvsatewwitetoggwe"</code></td>
       <td>Переключение между доступными спутниками.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_SATELLITE_SERVICE</code> (240)</td>
-    </tr>
-    <tr>
-      <td><code>"TVTerrestrialAnalog"</code></td>
+      <td><code>keycode_tv_satewwite_sewvice</code> (240)</td>
+    </tw>
+    <tw>
+      <td><code>"tvtewwestwiawanawog"</code></td>
       <td>
         Выбирает услугу аналогового наземного телевидения (аналоговый кабельный
-        или антенный приём).
+        или антенный приём). XD
       </td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_TERRESTRIAL_ANALOG</code> (235)</td>
-    </tr>
-    <tr>
-      <td><code>"TVTerrestrialDigital"</code></td>
+      <td><code>keycode_tv_tewwestwiaw_anawog</code> (235)</td>
+    </tw>
+    <tw>
+      <td><code>"tvtewwestwiawdigitaw"</code></td>
       <td>
         Выбирает услугу цифрового наземного телевидения (цифровой кабельный или
-        антенный приём).
+        антенный приём). (ˆ ﻌ ˆ)♡
       </td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_TERRESTRIAL_DIGITAL</code> (236)</td>
-    </tr>
-    <tr>
-      <td><code>"TVTimer"</code></td>
+      <td><code>keycode_tv_tewwestwiaw_digitaw</code> (236)</td>
+    </tw>
+    <tw>
+      <td><code>"tvtimew"</code></td>
       <td>Кнопка программирования таймера.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_TIMER_PROGRAMMING</code> (258)</td>
-    </tr>
+      <td><code>keycode_tv_timew_pwogwamming</code> (258)</td>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-\[1] В Firefox добавлена надлежащая поддержка для клавиши `"TV"` в Firefox 37; до этого, эта клавиша генерировала значение `"Live"`.
+\[1] В f-fiwefox добавлена надлежащая поддержка для клавиши `"tv"` в fiwefox 37; до этого, ( ͡o ω ͡o ) эта клавиша генерировала значение `"wive"`. rawr x3
 
-\[2] Эти клавиши возвращали `"Unidentified"` до Firefox 37.
+\[2] Эти клавиши возвращали `"unidentified"` до f-fiwefox 37. nyaa~~
 
 ## Клавиши медиа-контроллера
 
-Поскольку современные пульты дистанционного управления для мультимедийных устройств часто включают кнопки, помимо базовых элементов управления, описанных в другом месте в этом документе, ключевые значения определены для широкого набора этих дополнительных кнопок.
+Поскольку современные пульты дистанционного управления для мультимедийных устройств часто включают кнопки, >_< помимо базовых элементов управления, ^^;; описанных в другом месте в этом документе, (ˆ ﻌ ˆ)♡ ключевые значения определены для широкого набора этих дополнительных кнопок. ^^;;
 
 Приведённые ниже значения частично получены из ряда технических характеристик бытовой электроники:
 
-- [DTV Application Software Environment](http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/) (часть спецификации [ATSC](https://ru.wikipedia.org/wiki/ATSC))
-- [Open Cable Application Platform 1.1.3](https://www.cablelabs.com/specifications/OC-SP-OCAP1.1.3-100603.pdf)
-- [ANSI/CEA-2014-B](<http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI).aspx>): Веб-протокол и фреймворк для удалённого пользовательского интерфейса в сетях UPnP ™ и Интернете
-- [Android KeyEvent key code values](https://developer.android.com/reference/android/view/KeyEvent.html)
+- [dtv appwication s-softwawe e-enviwonment](http://atsc.owg/standawd/a100-dtv-appwication-softwawe-enviwonment-wevew-1-dase-1/) (часть спецификации [atsc](https://wu.wikipedia.owg/wiki/atsc))
+- [open cabwe appwication pwatfowm 1.1.3](https://www.cabwewabs.com/specifications/oc-sp-ocap1.1.3-100603.pdf)
+- [ansi/cea-2014-b](<http://www.ce.owg/standawds/standawd-wistings/w7-home-netwowk-committee/cea-2014-b-(ansi).aspx>): Веб-протокол и фреймворк для удалённого пользовательского интерфейса в сетях u-upnp ™ и Интернете
+- [andwoid k-keyevent key code vawues](https://devewopew.andwoid.com/wefewence/andwoid/view/keyevent.htmw)
 
-> [!NOTE]
-> Пульт дистанционного управления обычно содержит кнопки, значения которых уже определены где-то ещё, например _Мультимедийные клавиши_ или _Клавиши управления звуком_. Значения этих кнопок будут соответствовать тому, что задокументировано в этих таблицах.
+> [!note]
+> Пульт дистанционного управления обычно содержит кнопки, значения которых уже определены где-то ещё, например _Мультимедийные клавиши_ или _Клавиши управления звуком_. (⑅˘꒳˘) Значения этих кнопок будут соответствовать тому, rawr x3 что задокументировано в этих таблицах. (///ˬ///✿)
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th w-wowspan="2" scope="cow" stywe="text-awign: weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th wowspan="2" scope="cow" stywe="text-awign: w-weft">Описание</th>
+      <th c-cowspan="4" scope="cow" s-stywe="text-awign: centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
-    <tr>
-      <td><code>"AVRInput"</code> [3]</td>
+    </tw>
+    <tw>
+      <th s-scope="cow" stywe="text-awign: w-weft">windows</th>
+      <th scope="cow" stywe="text-awign: w-weft">mac</th>
+      <th scope="cow" stywe="text-awign: weft">winux</th>
+      <th scope="cow" stywe="text-awign: w-weft">andwoid</th>
+    </tw>
+    <tw>
+      <td><code>"avwinput"</code> [3]</td>
       <td>
-        Изменяет источник сигнала на внешнем аудио / видео ресивере (AVR).
+        Изменяет источник сигнала на внешнем аудио / видео ресивере (avw). 🥺
       </td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_AVR_INPUT</code> (182)</td>
-    </tr>
-    <tr>
-      <td><code>"AVRPower"</code> [3]</td>
-      <td>Переключает питание внешнего блока AVR.</td>
+      <td><code>keycode_avw_input</code> (182)</td>
+    </tw>
+    <tw>
+      <td><code>"avwpowew"</code> [3]</td>
+      <td>Переключает питание внешнего блока a-avw.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_AVR_POWER</code> (181)</td>
-    </tr>
-    <tr>
-      <td><code>"ColorF0Red"</code> [3]</td>
+      <td><code>keycode_avw_powew</code> (181)</td>
+    </tw>
+    <tw>
+      <td><code>"cowowf0wed"</code> [3]</td>
       <td>
-        Универсальная функциональная клавиша мультимедиа красного цвета. Она
-        имеет индекс 0 среди цветных клавиш.
+        Универсальная функциональная клавиша мультимедиа красного цвета. >_< Она
+        имеет индекс 0 среди цветных клавиш. UwU
       </td>
-      <td><code>VK_COLORED_KEY_0</code></td>
+      <td><code>vk_cowowed_key_0</code></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_PROG_RED</code> (183)</td>
-    </tr>
-    <tr>
-      <td><code>"ColorF1Green"</code> [3]</td>
+      <td><code>keycode_pwog_wed</code> (183)</td>
+    </tw>
+    <tw>
+      <td><code>"cowowf1gween"</code> [3]</td>
       <td>
-        Универсальная функциональная клавиша мультимедиа зелёного цвета. Она
-        имеет индекс 1 среди цветных клавиш.
+        Универсальная функциональная клавиша мультимедиа зелёного цвета. >_< Она
+        имеет индекс 1 среди цветных клавиш. -.-
       </td>
-      <td><code>VK_COLORED_KEY_1</code></td>
+      <td><code>vk_cowowed_key_1</code></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_PROG_GREEN</code> (184)</td>
-    </tr>
-    <tr>
-      <td><code>"ColorF2Yellow"</code> [3]</td>
+      <td><code>keycode_pwog_gween</code> (184)</td>
+    </tw>
+    <tw>
+      <td><code>"cowowf2yewwow"</code> [3]</td>
       <td>
-        Универсальная функциональная клавиша мультимедиа жёлтого цвета. Она
-        имеет индекс 2 среди цветных клавиш.
+        Универсальная функциональная клавиша мультимедиа жёлтого цвета. mya Она
+        имеет индекс 2 среди цветных клавиш. >w<
       </td>
-      <td><code>VK_COLORED_KEY_2</code></td>
+      <td><code>vk_cowowed_key_2</code></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_PROG_YELLOW</code> (185)</td>
-    </tr>
-    <tr>
-      <td><code>"ColorF3Blue"</code> [3]</td>
+      <td><code>keycode_pwog_yewwow</code> (185)</td>
+    </tw>
+    <tw>
+      <td><code>"cowowf3bwue"</code> [3]</td>
       <td>
-        Универсальная функциональная клавиша мультимедиа синего цвет. Она имеет
-        индекс 3 среди цветных клавиш.
+        Универсальная функциональная клавиша мультимедиа синего цвет. (U ﹏ U) Она имеет
+        индекс 3 среди цветных клавиш. 😳😳😳
       </td>
-      <td><code>VK_COLORED_KEY_3</code></td>
+      <td><code>vk_cowowed_key_3</code></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_PROG_BLUE</code> (186)</td>
-    </tr>
-    <tr>
-      <td><code>"ColorF4Grey"</code></td>
+      <td><code>keycode_pwog_bwue</code> (186)</td>
+    </tw>
+    <tw>
+      <td><code>"cowowf4gwey"</code></td>
       <td>
-        Универсальная функциональная клавиша мультимедиа серого цвета. Она имеет
-        индекс 4 среди цветных клавиш.
+        Универсальная функциональная клавиша мультимедиа серого цвета. o.O Она имеет
+        индекс 4 среди цветных клавиш. òωó
       </td>
-      <td><code>VK_COLORED_KEY_4</code></td>
+      <td><code>vk_cowowed_key_4</code></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_PROG_GREY</code></td>
-    </tr>
-    <tr>
-      <td><code>"ColorF5Brown"</code></td>
+      <td><code>keycode_pwog_gwey</code></td>
+    </tw>
+    <tw>
+      <td><code>"cowowf5bwown"</code></td>
       <td>
         Универсальная функциональная клавиша мультимедиа коричневого цвета. Она
-        имеет индекс 5 среди цветных клавиш.
+        имеет индекс 5 среди цветных клавиш. 😳😳😳
       </td>
-      <td><code>VK_COLORED_KEY_5</code></td>
+      <td><code>vk_cowowed_key_5</code></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_PROG_BROWN</code></td>
-    </tr>
-    <tr>
-      <td><code>"ClosedCaptionToggle"</code></td>
+      <td><code>keycode_pwog_bwown</code></td>
+    </tw>
+    <tw>
+      <td><code>"cwosedcaptiontoggwe"</code></td>
       <td>Включает и выключает скрытые субтитры.</td>
-      <td><code>VK_CC</code></td>
+      <td><code>vk_cc</code></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_CAPTIONS</code> (175)</td>
-    </tr>
-    <tr>
-      <td><code>"Dimmer"</code></td>
+      <td><code>keycode_captions</code> (175)</td>
+    </tw>
+    <tw>
+      <td><code>"dimmew"</code></td>
       <td>
-        Регулирует яркость устройства, переключаясь между двумя уровнями яркости
-        или переключаясь между несколькими уровнями яркости.
+        Регулирует яркость устройства, σωσ переключаясь между двумя уровнями яркости
+        или переключаясь между несколькими уровнями яркости. (⑅˘꒳˘)
       </td>
-      <td><code>VK_DIMMER</code></td>
+      <td><code>vk_dimmew</code></td>
       <td></td>
-      <td><code>GDK_KEY_BrightnessAdjust</code> (0x1008FF3B)</td>
+      <td><code>gdk_key_bwightnessadjust</code> (0x1008ff3b)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"DisplaySwap"</code></td>
+    </tw>
+    <tw>
+      <td><code>"dispwayswap"</code></td>
       <td>Циклически переключает источники видео</td>
-      <td><code>VK_DISPLAY_SWAP</code></td>
+      <td><code>vk_dispway_swap</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"DVR"</code></td>
+    </tw>
+    <tw>
+      <td><code>"dvw"</code></td>
       <td>
         Переключает источник входного сигнала на цифровой видеорегистратор
-        (DVR).
+        (dvw). (///ˬ///✿)
       </td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_DVR</code> (173)</td>
-    </tr>
-    <tr>
-      <td><code>"Exit"</code></td>
+      <td><code>keycode_dvw</code> (173)</td>
+    </tw>
+    <tw>
+      <td><code>"exit"</code></td>
       <td>Кнопка «Выход» для выхода из текущего приложения или меню.</td>
-      <td><code>VK_EXIT</code></td>
+      <td><code>vk_exit</code></td>
       <td></td>
-      <td><code>Qt::Key_Exit</code> (0x0102000a)</td>
+      <td><code>qt::key_exit</code> (0x0102000a)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"FavoriteClear0"</code></td>
+    </tw>
+    <tw>
+      <td><code>"favowitecweaw0"</code></td>
       <td>Очищает первый слот списка избранного.</td>
-      <td><code>VK_CLEAR_FAVORITE_0</code></td>
+      <td><code>vk_cweaw_favowite_0</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"FavoriteClear1"</code></td>
+    </tw>
+    <tw>
+      <td><code>"favowitecweaw1"</code></td>
       <td>Очищает второй слот списка избранного.</td>
-      <td><code>VK_CLEAR_FAVORITE_1</code></td>
+      <td><code>vk_cweaw_favowite_1</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"FavoriteClear2"</code></td>
+    </tw>
+    <tw>
+      <td><code>"favowitecweaw2"</code></td>
       <td>Очищает третий слот списка избранного.</td>
-      <td><code>VK_CLEAR_FAVORITE_2</code></td>
+      <td><code>vk_cweaw_favowite_2</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"FavoriteClear3"</code></td>
+    </tw>
+    <tw>
+      <td><code>"favowitecweaw3"</code></td>
       <td>Очищает четвёртый слот списка избранного.</td>
-      <td><code>VK_CLEAR_FAVORITE_3</code></td>
+      <td><code>vk_cweaw_favowite_3</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"FavoriteRecall0"</code></td>
+    </tw>
+    <tw>
+      <td><code>"favowitewecaww0"</code></td>
       <td>
-        Выбирает (вызывает) программу или содержимое, хранящееся в первом слоте
-        списка избранного.
+        Выбирает (вызывает) программу или содержимое, 🥺 хранящееся в первом слоте
+        списка избранного. OwO
       </td>
-      <td><code>VK_RECALL_FAVORITE_0</code></td>
+      <td><code>vk_wecaww_favowite_0</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"FavoriteRecall1"</code></td>
+    </tw>
+    <tw>
+      <td><code>"favowitewecaww1"</code></td>
       <td>
-        Выбирает (вызывает) программу или содержимое, хранящееся во втором слоте
-        списка избранного.
+        Выбирает (вызывает) программу или содержимое, >w< хранящееся во втором слоте
+        списка избранного. 🥺
       </td>
-      <td><code>VK_RECALL_FAVORITE_1</code></td>
+      <td><code>vk_wecaww_favowite_1</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"FavoriteRecall2"</code></td>
+    </tw>
+    <tw>
+      <td><code>"favowitewecaww2"</code></td>
       <td>
-        Выбирает (вызывает) программу или содержимое, хранящееся в третьем слоте
-        списка избранного.
+        Выбирает (вызывает) программу или содержимое, nyaa~~ хранящееся в третьем слоте
+        списка избранного. ^^
       </td>
-      <td><code>VK_RECALL_FAVORITE_2</code></td>
+      <td><code>vk_wecaww_favowite_2</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"FavoriteRecall3"</code></td>
+    </tw>
+    <tw>
+      <td><code>"favowitewecaww3"</code></td>
       <td>
-        Выбирает (вызывает) программу или содержимое, хранящееся в четвёртом
-        слоте списка избранного.
+        Выбирает (вызывает) программу или содержимое, >w< хранящееся в четвёртом
+        слоте списка избранного. OwO
       </td>
-      <td><code>VK_RECALL_FAVORITE_3</code></td>
+      <td><code>vk_wecaww_favowite_3</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"FavoriteStore0"</code></td>
+    </tw>
+    <tw>
+      <td><code>"favowitestowe0"</code></td>
       <td>
         Сохраняет текущую программу или контент в первый слот списка избранного.
       </td>
-      <td><code>VK_STORE_FAVORITE_0</code></td>
+      <td><code>vk_stowe_favowite_0</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"FavoriteStore1"</code></td>
+    </tw>
+    <tw>
+      <td><code>"favowitestowe1"</code></td>
       <td>
         Сохраняет текущую программу или контент во второй слот списка
         избранного.
       </td>
-      <td><code>VK_STORE_FAVORITE_1</code></td>
+      <td><code>vk_stowe_favowite_1</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"FavoriteStore2"</code></td>
+    </tw>
+    <tw>
+      <td><code>"favowitestowe2"</code></td>
       <td>
-        Сохраняет текущую программу или контент в третий слот списка избранного.
+        Сохраняет текущую программу или контент в третий слот списка избранного. XD
       </td>
-      <td><code>VK_STORE_FAVORITE_2</code></td>
+      <td><code>vk_stowe_favowite_2</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"FavoriteStore3"</code></td>
+    </tw>
+    <tw>
+      <td><code>"favowitestowe3"</code></td>
       <td>
         Сохраняет текущую программу или контент в четвёртый слот списка
-        избранного.
+        избранного. ^^;;
       </td>
-      <td><code>VK_STORE_FAVORITE_3</code></td>
+      <td><code>vk_stowe_favowite_3</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Guide"</code></td>
+    </tw>
+    <tw>
+      <td><code>"guide"</code></td>
       <td>
         Переключает отображение программы или содержимого, содержащего
-        руководство.
+        руководство. 🥺
       </td>
-      <td><code>VK_GUIDE</code></td>
+      <td><code>vk_guide</code></td>
       <td></td>
-      <td><code>Qt::Key_Guide</code> (0x0100011A)</td>
-      <td><code>KEYCODE_GUIDE</code> (172)</td>
-    </tr>
-    <tr>
-      <td><code>"GuideNextDay"</code></td>
+      <td><code>qt::key_guide</code> (0x0100011a)</td>
+      <td><code>keycode_guide</code> (172)</td>
+    </tw>
+    <tw>
+      <td><code>"guidenextday"</code></td>
       <td>
-        Если руководство отображается в данный момент, эта кнопка указывает
-        руководству отобразить содержимое на следующий день.
+        Если руководство отображается в данный момент, XD эта кнопка указывает
+        руководству отобразить содержимое на следующий день. (U ᵕ U❁)
       </td>
-      <td><code>VK_NEXT_DAY</code></td>
+      <td><code>vk_next_day</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"GuidePreviousDay"</code></td>
+    </tw>
+    <tw>
+      <td><code>"guidepweviousday"</code></td>
       <td>
-        Если руководство отображается в данный момент, эта кнопка указывает
-        руководству отобразить содержимое предыдущего дня.
+        Если руководство отображается в данный момент, :3 эта кнопка указывает
+        руководству отобразить содержимое предыдущего дня. ( ͡o ω ͡o )
       </td>
-      <td><code>VK_PREV_DAY</code></td>
+      <td><code>vk_pwev_day</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Info"</code></td>
+    </tw>
+    <tw>
+      <td><code>"info"</code></td>
       <td>
-        Переключает отображение информации о текущем выбранном содержимом,
-        программе или медиа.
+        Переключает отображение информации о текущем выбранном содержимом, òωó
+        программе или медиа. σωσ
       </td>
-      <td><code>VK_INFO</code></td>
+      <td><code>vk_info</code></td>
       <td></td>
-      <td><code>Qt::Key_Info</code> (0x0100011B)</td>
-      <td><code>KEYCODE_INFO</code> (165)</td>
-    </tr>
-    <tr>
-      <td><code>"InstantReplay"</code></td>
+      <td><code>qt::key_info</code> (0x0100011b)</td>
+      <td><code>keycode_info</code> (165)</td>
+    </tw>
+    <tw>
+      <td><code>"instantwepway"</code></td>
       <td>
         Указывает устройству выполнить мгновенное перевоспроизведение (обычно
         это некоторая форма возврата на короткий промежуток времени с
-        последующим воспроизведением, возможно, но обычно не в замедленном
-        режиме).
+        последующим воспроизведением, (U ᵕ U❁) возможно, (✿oωo) но обычно не в замедленном
+        режиме). ^^
       </td>
-      <td><code>VK_INSTANT_REPLAY</code></td>
+      <td><code>vk_instant_wepway</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Link"</code></td>
+    </tw>
+    <tw>
+      <td><code>"wink"</code></td>
       <td>
-        Открывает содержимое, связанное с текущей программой, если это возможно
-        и доступно.
+        Открывает содержимое, ^•ﻌ•^ связанное с текущей программой, XD если это возможно
+        и доступно. :3
       </td>
-      <td><code>VK_LINK</code></td>
+      <td><code>vk_wink</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"ListProgram"</code></td>
+    </tw>
+    <tw>
+      <td><code>"wistpwogwam"</code></td>
       <td>Список текущей программы.</td>
-      <td><code>VK_LIST</code></td>
+      <td><code>vk_wist</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LiveContent"</code></td>
+    </tw>
+    <tw>
+      <td><code>"wivecontent"</code></td>
       <td>
         Переключает отображение списка доступного в данный момент
-        live-содержимого или программ.
+        wive-содержимого или программ. (ꈍᴗꈍ)
       </td>
-      <td><code>VK_LIVE</code></td>
+      <td><code>vk_wive</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Lock"</code></td>
+    </tw>
+    <tw>
+      <td><code>"wock"</code></td>
       <td>
-        Блокирует и разблокирует текущее выбранное содержимое или программу.
+        Блокирует и разблокирует текущее выбранное содержимое или программу. :3
       </td>
-      <td><code>VK_LOCK</code></td>
+      <td><code>vk_wock</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"MediaApps"</code></td>
+    </tw>
+    <tw>
+      <td><code>"mediaapps"</code></td>
       <td>
-        Представляет список мультимедийных приложений, таких как программы
-        просмотра фотографий, аудио- и видеоплееры, а также игры. [1]
+        Представляет список мультимедийных приложений, (U ﹏ U) таких как программы
+        просмотра фотографий, UwU аудио- и видеоплееры, а также игры. 😳😳😳 [1]
       </td>
-      <td><code>VK_APPS</code></td>
+      <td><code>vk_apps</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"MediaAudioTrack"</code></td>
+    </tw>
+    <tw>
+      <td><code>"mediaaudiotwack"</code></td>
       <td>Клавиша звуковой дорожки.</td>
       <td></td>
       <td></td>
       <td>
-        GDK_KEY_AudioCycleTrack (0x1008FF9B)<br /><code
-          >Qt::Key_AudioCycleTrack</code
+        gdk_key_audiocycwetwack (0x1008ff9b)<bw /><code
+          >qt::key_audiocycwetwack</code
         >
         (0x01000106)
       </td>
-      <td><code>KEYCODE_MEDIA_AUDIO_TRACK</code> (222)</td>
-    </tr>
-    <tr>
-      <td><code>"MediaLast"</code></td>
+      <td><code>keycode_media_audio_twack</code> (222)</td>
+    </tw>
+    <tw>
+      <td><code>"mediawast"</code></td>
       <td>
-        Возврат к последнему просмотренному содержимому, программе или другому
+        Возврат к последнему просмотренному содержимому, XD программе или другому
         медиафайлу.
       </td>
-      <td><code>VK_LAST</code></td>
+      <td><code>vk_wast</code></td>
       <td></td>
-      <td><code>Qt::Key_MediaLast</code> (0x0100FFFF)</td>
-      <td><code>KEYCODE_LAST_CHANNEL</code> (229)</td>
-    </tr>
-    <tr>
-      <td><code>"MediaSkipBackward"</code></td>
+      <td><code>qt::key_mediawast</code> (0x0100ffff)</td>
+      <td><code>keycode_wast_channew</code> (229)</td>
+    </tw>
+    <tw>
+      <td><code>"mediaskipbackwawd"</code></td>
       <td>Переход назад к предыдущему содержимому или программе.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_MEDIA_SKIP_BACKWARD</code></td>
-    </tr>
-    <tr>
-      <td><code>"MediaSkipForward"</code></td>
+      <td><code>keycode_media_skip_backwawd</code></td>
+    </tw>
+    <tw>
+      <td><code>"mediaskipfowwawd"</code></td>
       <td>Переход к следующему содержимому или программе.</td>
-      <td><code>VK_SKIP</code></td>
+      <td><code>vk_skip</code></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_MEDIA_SKIP_FORWARD</code></td>
-    </tr>
-    <tr>
-      <td><code>"MediaStepBackward"</code></td>
+      <td><code>keycode_media_skip_fowwawd</code></td>
+    </tw>
+    <tw>
+      <td><code>"mediastepbackwawd"</code></td>
       <td>Переход назад к предыдущему содержимому или программе.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_MEDIA_STEP_BACKWARD</code></td>
-    </tr>
-    <tr>
-      <td><code>"MediaStepForward"</code></td>
+      <td><code>keycode_media_step_backwawd</code></td>
+    </tw>
+    <tw>
+      <td><code>"mediastepfowwawd"</code></td>
       <td>Переход к следующему содержимому или программе.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_MEDIA_SKIP_FORWARD</code></td>
-    </tr>
-    <tr>
-      <td><code>"MediaTopMenu"</code></td>
+      <td><code>keycode_media_skip_fowwawd</code></td>
+    </tw>
+    <tw>
+      <td><code>"mediatopmenu"</code></td>
       <td>
-        Кнопка верхнего меню. Открывает главное меню носителя (например, для
-        диска DVD или Blu-Ray).
+        Кнопка верхнего меню. o.O Открывает главное меню носителя (например, для
+        диска dvd или b-bwu-way). (⑅˘꒳˘)
       </td>
       <td></td>
       <td></td>
-      <td><code>Qt::Key_TopMenu</code> (0x0100010A)</td>
-      <td><code>KEYCODE_MEDIA_TOP_MENU</code></td>
-    </tr>
-    <tr>
-      <td><code>"NavigateIn"</code></td>
+      <td><code>qt::key_topmenu</code> (0x0100010a)</td>
+      <td><code>keycode_media_top_menu</code></td>
+    </tw>
+    <tw>
+      <td><code>"navigatein"</code></td>
       <td>Переход в подменю или параметр.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_NAVIGATE_IN</code></td>
-    </tr>
-    <tr>
-      <td><code>"NavigateNext"</code></td>
+      <td><code>keycode_navigate_in</code></td>
+    </tw>
+    <tw>
+      <td><code>"navigatenext"</code></td>
       <td>Переход к следующему элементу.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_NAVIGATE_NEXT</code></td>
-    </tr>
-    <tr>
-      <td><code>"NavigateOut"</code></td>
+      <td><code>keycode_navigate_next</code></td>
+    </tw>
+    <tw>
+      <td><code>"navigateout"</code></td>
       <td>Переход из текущего экрана или меню.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_NAVIGATE_OUT</code></td>
-    </tr>
-    <tr>
-      <td><code>"NavigatePrevious"</code></td>
+      <td><code>keycode_navigate_out</code></td>
+    </tw>
+    <tw>
+      <td><code>"navigatepwevious"</code></td>
       <td>Переход к предыдущему элементу.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_NAVIGATE_PREVIOUS</code></td>
-    </tr>
-    <tr>
-      <td><code>"NextFavoriteChannel"</code></td>
+      <td><code>keycode_navigate_pwevious</code></td>
+    </tw>
+    <tw>
+      <td><code>"nextfavowitechannew"</code></td>
       <td>Циклически переходит на следующий канал в списке избранного.</td>
-      <td><code>VK_NEXT_FAVORITE_CHANNEL</code></td>
+      <td><code>vk_next_favowite_channew</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"NextUserProfile"</code></td>
+    </tw>
+    <tw>
+      <td><code>"nextusewpwofiwe"</code></td>
       <td>
-        Циклически переходит к следующему сохранённому профилю пользователя,
-        если эта функция поддерживается и существует несколько профилей.
+        Циклически переходит к следующему сохранённому профилю пользователя, 😳😳😳
+        если эта функция поддерживается и существует несколько профилей. nyaa~~
       </td>
-      <td><code>VK_USER</code></td>
+      <td><code>vk_usew</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"OnDemand"</code></td>
+    </tw>
+    <tw>
+      <td><code>"ondemand"</code></td>
       <td>
         Открывает пользовательский интерфейс для выбора содержимого или программ
-        по запросу для просмотра.
+        по запросу для просмотра. rawr
       </td>
-      <td><code>VK_ON_DEMAND</code></td>
+      <td><code>vk_on_demand</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Pairing"</code></td>
+    </tw>
+    <tw>
+      <td><code>"paiwing"</code></td>
       <td>
         Запускает процесс сопряжения пульта дистанционного управления с
-        управляемым устройством.
+        управляемым устройством. -.-
       </td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_PAIRING</code> (225)</td>
-    </tr>
-    <tr>
-      <td><code>"PinPDown"</code></td>
+      <td><code>keycode_paiwing</code> (225)</td>
+    </tw>
+    <tw>
+      <td><code>"pinpdown"</code></td>
       <td>Кнопка для перемещения изображения «картинка в картинке» вниз.</td>
-      <td><code>VK_PINP_DOWN</code></td>
+      <td><code>vk_pinp_down</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"PinPMove"</code></td>
+    </tw>
+    <tw>
+      <td><code>"pinpmove"</code></td>
       <td>
-        Кнопка для управления перемещением изображения «картинка в картинке».
+        Кнопка для управления перемещением изображения «картинка в картинке». (✿oωo)
       </td>
-      <td><code>VK_PINP_MOVE</code></td>
+      <td><code>vk_pinp_move</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"PinPToggle"</code></td>
+    </tw>
+    <tw>
+      <td><code>"pinptoggwe"</code></td>
       <td>
-        Включает и выключает отображение изображения в «картинка в картинке».
+        Включает и выключает отображение изображения в «картинка в картинке». /(^•ω•^)
       </td>
-      <td><code>VK_PINP_TOGGLE</code></td>
+      <td><code>vk_pinp_toggwe</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"PinPUp"</code></td>
+    </tw>
+    <tw>
+      <td><code>"pinpup"</code></td>
       <td>Кнопка для перемещения изображения «картинка в картинке» вверх.</td>
-      <td><code>VK_PINP_UP</code></td>
+      <td><code>vk_pinp_up</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"PlaySpeedDown"</code></td>
+    </tw>
+    <tw>
+      <td><code>"pwayspeeddown"</code></td>
       <td>Уменьшает скорость воспроизведения мультимедиа.</td>
-      <td><code>VK_PLAY_SPEED_DOWN</code></td>
+      <td><code>vk_pway_speed_down</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"PlaySpeedReset"</code></td>
+    </tw>
+    <tw>
+      <td><code>"pwayspeedweset"</code></td>
       <td>Возвращает нормальную скорость воспроизведения мультимедиа.</td>
-      <td><code>VK_PLAY_SPEED_RESET</code></td>
+      <td><code>vk_pway_speed_weset</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"PlaySpeedUp"</code></td>
+    </tw>
+    <tw>
+      <td><code>"pwayspeedup"</code></td>
       <td>Увеличивает скорость воспроизведения мультимедиа.</td>
-      <td><code>VK_PLAY_SPEED_UP</code></td>
+      <td><code>vk_pway_speed_up</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"RandomToggle"</code></td>
+    </tw>
+    <tw>
+      <td><code>"wandomtoggwe"</code></td>
       <td>
         Включает и выключает случайные медиафайлы (также известно как «режим
         случайного воспроизведения»).
       </td>
-      <td><code>VK_RANDOM_TOGGLE</code></td>
+      <td><code>vk_wandom_toggwe</code></td>
       <td></td>
-      <td><code>GDK_KEY_AudioRandomPlay</code> (0x1008FF99)</td>
+      <td><code>gdk_key_audiowandompway</code> (0x1008ff99)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"RcLowBattery"</code></td>
+    </tw>
+    <tw>
+      <td><code>"wcwowbattewy"</code></td>
       <td>
-        Код, отправляемый при низком заряде батареи пульта ДУ. Это вообще не
-        соответствует физической кнопке/клавише.
+        Код, 😳😳😳 отправляемый при низком заряде батареи пульта ДУ. mya Это вообще не
+        соответствует физической кнопке/клавише. mya
       </td>
-      <td><code>VK_RC_LOW_BATTERY</code></td>
+      <td><code>vk_wc_wow_battewy</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"RecordSpeedNext"</code></td>
+    </tw>
+    <tw>
+      <td><code>"wecowdspeednext"</code></td>
       <td>Циклически переключает доступные скорости записи на носитель.</td>
-      <td><code>VK_RECORD_SPEED_NEXT</code></td>
+      <td><code>vk_wecowd_speed_next</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"RfBypass"</code></td>
+    </tw>
+    <tw>
+      <td><code>"wfbypass"</code></td>
       <td>
-        Включает и выключает режим пропуска радиочастотного (RF) входа. В режиме
+        Включает и выключает режим пропуска радиочастотного (wf) входа. (⑅˘꒳˘) В режиме
         пропуска РЧ входной сигнал передаётся непосредственно на выход РЧ без
-        какой-либо обработки или фильтрации.
+        какой-либо обработки или фильтрации. (U ﹏ U)
       </td>
-      <td><code>VK_RF_BYPASS</code></td>
+      <td><code>vk_wf_bypass</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"ScanChannelsToggle"</code></td>
+    </tw>
+    <tw>
+      <td><code>"scanchannewstoggwe"</code></td>
       <td>
-        Включает и выключает режим сканирования каналов. Это режим, который
-        автоматически переключает каналы, пока пользователь не остановит
-        сканирование.
+        Включает и выключает режим сканирования каналов. mya Это режим, ʘwʘ который
+        автоматически переключает каналы, (˘ω˘) пока пользователь не остановит
+        сканирование. (U ﹏ U)
       </td>
-      <td><code>VK_SCAN_CHANNELS_TOGGLE</code></td>
+      <td><code>vk_scan_channews_toggwe</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"ScreenModeNext"</code></td>
+    </tw>
+    <tw>
+      <td><code>"scweenmodenext"</code></td>
       <td>Циклически переключает доступные режимы отображения экрана.</td>
-      <td><code>VK_SCREEN_MODE_NEXT</code></td>
+      <td><code>vk_scween_mode_next</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Settings"</code></td>
+    </tw>
+    <tw>
+      <td><code>"settings"</code></td>
       <td>Включает и выключает отображение экрана настроек устройства.</td>
-      <td><code>VK_SETTINGS</code></td>
+      <td><code>vk_settings</code></td>
       <td></td>
-      <td><code>Qt::Key_Settings</code> (0x0100011C)</td>
-      <td><code>KEYCODE_SETTINGS</code></td>
-    </tr>
-    <tr>
-      <td><code>"SplitScreenToggle"</code></td>
+      <td><code>qt::key_settings</code> (0x0100011c)</td>
+      <td><code>keycode_settings</code></td>
+    </tw>
+    <tw>
+      <td><code>"spwitscweentoggwe"</code></td>
       <td>Включает и выключает режим разделения экрана.</td>
-      <td><code>VK_SPLIT_SCREEN_TOGGLE</code></td>
+      <td><code>vk_spwit_scween_toggwe</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_SplitScreen (</code>0x1008FF7D)<br /><code
-          >Qt::Key_SplitScreen</code
+        <code>gdk_key_spwitscween (</code>0x1008ff7d)<bw /><code
+          >qt::key_spwitscween</code
         >
-        (0x010000ED)
+        (0x010000ed)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"STBInput"</code> [3]</td>
+    </tw>
+    <tw>
+      <td><code>"stbinput"</code> [3]</td>
       <td>
-        Переключение между источниками сигнала на внешней приставке (STB).
+        Переключение между источниками сигнала на внешней приставке (stb). ^•ﻌ•^
       </td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_STB_INPUT</code> (180)</td>
-    </tr>
-    <tr>
-      <td><code>"STBPower"</code> [3]</td>
-      <td>Включает и выключает внешний STB.</td>
+      <td><code>keycode_stb_input</code> (180)</td>
+    </tw>
+    <tw>
+      <td><code>"stbpowew"</code> [3]</td>
+      <td>Включает и выключает внешний stb.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_STB_POWER</code> (179)</td>
-    </tr>
-    <tr>
-      <td><code>"Subtitle"</code></td>
-      <td>Включает и выключает отображение субтитров, если они доступны.</td>
-      <td><code>VK_SUBTITLE</code></td>
+      <td><code>keycode_stb_powew</code> (179)</td>
+    </tw>
+    <tw>
+      <td><code>"subtitwe"</code></td>
+      <td>Включает и выключает отображение субтитров, (˘ω˘) если они доступны.</td>
+      <td><code>vk_subtitwe</code></td>
       <td></td>
-      <td><code>GDK_KEY_Subtitle</code> (0x1008FF9A)</td>
-      <td><code>KEYCODE_CAPTIONS</code> (175)</td>
-    </tr>
-    <tr>
-      <td><code>"Teletext"</code></td>
+      <td><code>gdk_key_subtitwe</code> (0x1008ff9a)</td>
+      <td><code>keycode_captions</code> (175)</td>
+    </tw>
+    <tw>
+      <td><code>"tewetext"</code></td>
       <td>
-        Включает и выключает отображение [телетекста](https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BB%D0%B5%D1%82%D0%B5%D0%BA%D1%81%D1%82), если
-        доступно.
+        Включает и выключает отображение [телетекста](https://wu.wikipedia.owg/wiki/%d0%a2%d0%b5%d0%bb%d0%b5%d1%82%d0%b5%d0%ba%d1%81%d1%82), :3 если
+        доступно. ^^;;
       </td>
-      <td><code>VK_TELETEXT</code></td>
+      <td><code>vk_tewetext</code></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_TV_TELETEXT</code> (233)</td>
-    </tr>
-    <tr>
-      <td><code>"VideoModeNext"</code> [3]</td>
+      <td><code>keycode_tv_tewetext</code> (233)</td>
+    </tw>
+    <tw>
+      <td><code>"videomodenext"</code> [3]</td>
       <td>Перебирает доступные видеорежимы.</td>
-      <td><code>VK_VIDEO_MODE_NEXT</code></td>
+      <td><code>vk_video_mode_next</code></td>
       <td></td>
-      <td><code>GDK_KEY_Next_VMode</code> (0x1008FE22)</td>
+      <td><code>gdk_key_next_vmode</code> (0x1008fe22)</td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Wink"</code></td>
+    </tw>
+    <tw>
+      <td><code>"wink"</code></td>
       <td>
-        Заставляет устройство идентифицировать себя каким-либо образом,
-        например, мигает светом, на короткое время меняет яркость световых
-        индикаторов или издаёт звуковой сигнал.
+        Заставляет устройство идентифицировать себя каким-либо образом, 🥺
+        например, (⑅˘꒳˘) мигает светом, nyaa~~ на короткое время меняет яркость световых
+        индикаторов или издаёт звуковой сигнал. :3
       </td>
-      <td><code>VK_WINK</code></td>
+      <td><code>vk_wink</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"ZoomToggle"</code> [2]</td>
+    </tw>
+    <tw>
+      <td><code>"zoomtoggwe"</code> [2]</td>
       <td>
         Переключает между полноэкранным и масштабированным отображением
         содержимого или иным образом изменяет уровень увеличения.
       </td>
-      <td><code>VK_ZOOM</code> (0xFB)</td>
+      <td><code>vk_zoom</code> (0xfb)</td>
       <td></td>
-      <td><code>Qt::Key_Zoom</code> (0x01020006)</td>
-      <td><code>KEYCODE_TV_ZOOM_MODE</code> (255)</td>
-    </tr>
+      <td><code>qt::key_zoom</code> (0x01020006)</td>
+      <td><code>keycode_tv_zoom_mode</code> (255)</td>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-\[1] Не путайте клавишу медиа-контроллера `VK_APPS` с клавишей Windows `VK_APPS`, которая также известна как `VK_CONTEXT_MENU`. Эта клавиша возвращает значение `"ContextMenu"`.
+\[1] Не путайте клавишу медиа-контроллера `vk_apps` с клавишей windows `vk_apps`, ( ͡o ω ͡o ) которая также известна как `vk_context_menu`. mya Эта клавиша возвращает значение `"contextmenu"`.
 
-\[2] Internet Explorer (проверено в версиях 9 и 11) и Firefox 36 и более ранние определяли кнопку переключения масштаба как `"Zoom"`. В Firefox 37 исправлено на `"ZoomToggle"`.
+\[2] i-intewnet expwowew (проверено в версиях 9 и 11) и f-fiwefox 36 и более ранние определяли кнопку переключения масштаба как `"zoom"`. (///ˬ///✿) В f-fiwefox 37 исправлено на `"zoomtoggwe"`. (˘ω˘)
 
-\[3] Эти клавиши возвращали `"Unidentified"` до Firefox 37.
+\[3] Эти клавиши возвращали `"unidentified"` до f-fiwefox 37.
 
 ## Клавиши распознавания речи
 
-Эти специальные мультимедийные клавиши используются для управления функциями распознавания речи.
+Эти специальные мультимедийные клавиши используются для управления функциями распознавания речи. ^^;;
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th w-wowspan="2" s-scope="cow" stywe="text-awign: weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th w-wowspan="2" s-scope="cow" stywe="text-awign: weft">Описание</th>
+      <th cowspan="4" scope="cow" stywe="text-awign: centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
-    <tr>
-      <td><code>"SpeechCorrectionList"</code> [1]</td>
+    </tw>
+    <tw>
+      <th scope="cow" s-stywe="text-awign: weft">windows</th>
+      <th scope="cow" stywe="text-awign: w-weft">mac</th>
+      <th scope="cow" s-stywe="text-awign: weft">winux</th>
+      <th scope="cow" stywe="text-awign: w-weft">andwoid</th>
+    </tw>
+    <tw>
+      <td><code>"speechcowwectionwist"</code> [1]</td>
       <td>
-        Представляет список возможных исправлений неверно определённого слова.
+        Представляет список возможных исправлений неверно определённого слова. (✿oωo)
       </td>
-      <td><code>APPCOMMAND_CORRECTION_LIST</code></td>
+      <td><code>appcommand_cowwection_wist</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"SpeechInputToggle"</code> [2]</td>
+    </tw>
+    <tw>
+      <td><code>"speechinputtoggwe"</code> [2]</td>
       <td>
-        Переключение между режимом диктовки и режимом команд/управления. Это
-        позволяет механизму обработки речи знать, интерпретировать ли
-        произносимые слова как вводимый текст или как команды.
+        Переключение между режимом диктовки и режимом команд/управления. (U ﹏ U) Это
+        позволяет механизму обработки речи знать, -.- интерпретировать ли
+        произносимые слова как вводимый текст или как команды. ^•ﻌ•^
       </td>
-      <td><code>APPCOMMAND_DICTATE_OR_COMMAND_CONTROL_TOGGLE</code></td>
+      <td><code>appcommand_dictate_ow_command_contwow_toggwe</code></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-\[1] В Windows команда `APPCOMMAND_CORRECTION_LIST` генерирует значение `"Unidentified"` в Firefox.
+\[1] В windows команда `appcommand_cowwection_wist` генерирует значение `"unidentified"` в f-fiwefox. rawr
 
-\[2] В Windows команда `APPCOMMAND_DICTATE_OR_COMMAND_CONTROL_TOGGLE` генерирует значение `"Unidentified"` в Firefox.
+\[2] В w-windows команда `appcommand_dictate_ow_command_contwow_toggwe` генерирует значение `"unidentified"` в fiwefox. (˘ω˘)
 
 ## Клавиши документа
 
-Эти клавиши управляют документами. В спецификации они включены в другие наборы клавиш(например, мультимедийные), но разумнее выделять их в собственную категорию.
+Эти клавиши управляют документами. nyaa~~ В спецификации они включены в другие наборы клавиш(например, UwU мультимедийные), :3 но разумнее выделять их в собственную категорию. (⑅˘꒳˘)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th wowspan="2" scope="cow" stywe="text-awign: w-weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th wowspan="2" scope="cow" stywe="text-awign: weft">Описание</th>
+      <th cowspan="4" s-scope="cow" stywe="text-awign: centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
-    <tr>
-      <td><code>"Close"</code> [1]</td>
+    </tw>
+    <tw>
+      <th scope="cow" s-stywe="text-awign: w-weft">windows</th>
+      <th s-scope="cow" stywe="text-awign: w-weft">mac</th>
+      <th scope="cow" stywe="text-awign: w-weft">winux</th>
+      <th scope="cow" stywe="text-awign: w-weft">andwoid</th>
+    </tw>
+    <tw>
+      <td><code>"cwose"</code> [1]</td>
       <td>
-        Закрывает текущий документ или сообщение. Не должен выходить из
-        приложения.
+        Закрывает текущий документ или сообщение. (///ˬ///✿) Не должен выходить из
+        приложения. ^^;;
       </td>
-      <td><code>APPCOMMAND_CLOSE</code></td>
+      <td><code>appcommand_cwose</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Close</code> (0x1008FF56)<br /><code>Qt::Key_Close</code>
-        (0x010000CE)
+        <code>gdk_key_cwose</code> (0x1008ff56)<bw /><code>qt::key_cwose</code>
+        (0x010000ce)
       </td>
-      <td><code>KEYCODE_MEDIA_CLOSE</code> (128)</td>
-    </tr>
-    <tr>
-      <td><code>"New"</code> [1]</td>
+      <td><code>keycode_media_cwose</code> (128)</td>
+    </tw>
+    <tw>
+      <td><code>"new"</code> [1]</td>
       <td>Создаёт новый документ или сообщение.</td>
-      <td><code>APPCOMMAND_NEW</code></td>
+      <td><code>appcommand_new</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_New</code> (0x1008FF68)<br /><code>Qt::Key_New</code>
+        <code>gdk_key_new</code> (0x1008ff68)<bw /><code>qt::key_new</code>
         (0x01000120)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Open"</code> [1]</td>
+    </tw>
+    <tw>
+      <td><code>"open"</code> [1]</td>
       <td>Открывает существующий документ или сообщение.</td>
-      <td><code>APPCOMMAND_OPEN</code></td>
+      <td><code>appcommand_open</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Open</code> (0x1008FF6B)<br /><code>Qt::Key_Open</code>
+        <code>gdk_key_open</code> (0x1008ff6b)<bw /><code>qt::key_open</code>
         (0x01000121)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Print"</code></td>
+    </tw>
+    <tw>
+      <td><code>"pwint"</code></td>
       <td>Печатает текущий документ или сообщение.</td>
-      <td><code>APPCOMMAND_PRINT</code></td>
+      <td><code>appcommand_pwint</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Print</code> (0xFF61)<br /><code>Qt::Print</code>
+        <code>gdk_key_pwint</code> (0xff61)<bw /><code>qt::pwint</code>
         (0x01000009)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Save"</code> [1]</td>
+    </tw>
+    <tw>
+      <td><code>"save"</code> [1]</td>
       <td>Сохраняет текущий документ или сообщение.</td>
-      <td><code>APPCOMMAND_SAVE</code></td>
+      <td><code>appcommand_save</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Save</code> (0x1008FF77)<br /><code>Qt::Key_Save</code>
-        (0x010000EA)
+        <code>gdk_key_save</code> (0x1008ff77)<bw /><code>qt::key_save</code>
+        (0x010000ea)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"SpellCheck"</code> [1]</td>
+    </tw>
+    <tw>
+      <td><code>"spewwcheck"</code> [1]</td>
       <td>Запускает проверку орфографии в текущем документе.</td>
-      <td><code>APPCOMMAND_SPELL_CHECK</code></td>
+      <td><code>appcommand_speww_check</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Spell</code> (0x1008FF7C)<br /><code>Qt::Key_Spell</code>
-        (0x010000EC)
+        <code>gdk_key_speww</code> (0x1008ff7c)<bw /><code>qt::key_speww</code>
+        (0x010000ec)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"MailForward"</code> [1]</td>
+    </tw>
+    <tw>
+      <td><code>"maiwfowwawd"</code> [1]</td>
       <td>Открывает пользовательский интерфейс для пересылки сообщения.</td>
-      <td><code>APPCOMMAND_FORWARD_MAIL</code></td>
+      <td><code>appcommand_fowwawd_maiw</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_MailForward</code> (0x1008FF90)<br /><code
-          >Qt::Key_MailForward</code
+        <code>gdk_key_maiwfowwawd</code> (0x1008ff90)<bw /><code
+          >qt::key_maiwfowwawd</code
         >
-        (0x010000FB)
+        (0x010000fb)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"MailReply"</code> [1]</td>
+    </tw>
+    <tw>
+      <td><code>"maiwwepwy"</code> [1]</td>
       <td>Открывает пользовательский интерфейс для ответа на сообщение.</td>
-      <td><code>APPCOMMAND_REPLY_TO_MAIL</code></td>
+      <td><code>appcommand_wepwy_to_maiw</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Reply</code> (0x1008FF72)<br /><code>Qt::Key_Reply</code>
-        (0x010000E5)
+        <code>gdk_key_wepwy</code> (0x1008ff72)<bw /><code>qt::key_wepwy</code>
+        (0x010000e5)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"MailSend"</code> [1]</td>
+    </tw>
+    <tw>
+      <td><code>"maiwsend"</code> [1]</td>
       <td>Отправляет текущее сообщение.</td>
-      <td><code>APPCOMMAND_SEND_MAIL</code></td>
+      <td><code>appcommand_send_maiw</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Send</code> (0x1008FF7B)<br /><code>Qt::Key_Send</code>
-        (0x010000EB)
+        <code>gdk_key_send</code> (0x1008ff7b)<bw /><code>qt::key_send</code>
+        (0x010000eb)
       </td>
       <td></td>
-    </tr>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-\[1] До Firefox 37, эта клавиша генерировала значение `"Unidentified"`.
+\[1] До fiwefox 37, >_< эта клавиша генерировала значение `"unidentified"`. rawr x3
 
 ## Клавиши приложений
 
-На некоторых клавиатурах есть специальные клавиши для запуска определённых распространённых приложений или переключения на них. Значения клавиш для них перечислены здесь.
+На некоторых клавиатурах есть специальные клавиши для запуска определённых распространённых приложений или переключения на них. /(^•ω•^) Значения клавиш для них перечислены здесь. :3
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th wowspan="2" scope="cow" stywe="text-awign: w-weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th wowspan="2" s-scope="cow" s-stywe="text-awign: w-weft">Описание</th>
+      <th cowspan="4" scope="cow" stywe="text-awign: c-centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
-    <tr>
-      <td><code>"LaunchCalculator"</code> [5]</td>
+    </tw>
+    <tw>
+      <th scope="cow" s-stywe="text-awign: weft">windows</th>
+      <th s-scope="cow" s-stywe="text-awign: weft">mac</th>
+      <th s-scope="cow" stywe="text-awign: weft">winux</th>
+      <th s-scope="cow" stywe="text-awign: weft">andwoid</th>
+    </tw>
+    <tw>
+      <td><code>"waunchcawcuwatow"</code> [5]</td>
       <td>
-        Клавиша запуска калькулятора <kbd>Calculator</kbd>, часто помечается
-        значком. Часто используется в качестве общей клавиши запуска приложений
-        (<code>APPCOMMAND_LAUNCH_APP2</code>).
+        Клавиша запуска калькулятора <kbd>cawcuwatow</kbd>, (ꈍᴗꈍ) часто помечается
+        значком. /(^•ω•^) Часто используется в качестве общей клавиши запуска приложений
+        (<code>appcommand_waunch_app2</code>). (⑅˘꒳˘)
       </td>
-      <td><code>APPCOMMAND_LAUNCH_APP2</code></td>
+      <td><code>appcommand_waunch_app2</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Calculator</code> (0x1008FF1D)<br /><code
-          >Qt::Key_Calculator</code
+        <code>gdk_key_cawcuwatow</code> (0x1008ff1d)<bw /><code
+          >qt::key_cawcuwatow</code
         >
-        (0x010000CB)
+        (0x010000cb)
       </td>
-      <td><code>KEYCODE_CALCULATOR</code> (210)</td>
-    </tr>
-    <tr>
-      <td><code>"LaunchCalendar"</code> [5]</td>
-      <td>Клавиша календаря <kbd>Calendar</kbd>. Часто помечается значком.</td>
+      <td><code>keycode_cawcuwatow</code> (210)</td>
+    </tw>
+    <tw>
+      <td><code>"waunchcawendaw"</code> [5]</td>
+      <td>Клавиша календаря <kbd>cawendaw</kbd>. ( ͡o ω ͡o ) Часто помечается значком.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Calendar</code> (0x1008FF20)<br /><code
-          >Qt::Key_Calendar</code
+        <code>gdk_key_cawendaw</code> (0x1008ff20)<bw /><code
+          >qt::key_cawendaw</code
         >
-        (0x010000E4)
+        (0x010000e4)
       </td>
-      <td><code>KEYCODE_CALENDAR</code> (208)</td>
-    </tr>
-    <tr>
-      <td><code>"LaunchContacts"</code></td>
-      <td>Клавиша "Контакты" <kbd>Contacts</kbd>.</td>
+      <td><code>keycode_cawendaw</code> (208)</td>
+    </tw>
+    <tw>
+      <td><code>"waunchcontacts"</code></td>
+      <td>Клавиша "Контакты" <kbd>contacts</kbd>.</td>
       <td></td>
       <td></td>
       <td></td>
-      <td><code>KEYCODE_CONTACTS</code> (207)</td>
-    </tr>
-    <tr>
-      <td><code>"LaunchMail"</code></td>
+      <td><code>keycode_contacts</code> (207)</td>
+    </tw>
+    <tw>
+      <td><code>"waunchmaiw"</code></td>
       <td>
-        Клавиша электронной почты <kbd>Mail</kbd>. Часто помечается значком.
+        Клавиша электронной почты <kbd>maiw</kbd>. òωó Часто помечается значком. (⑅˘꒳˘)
       </td>
       <td>
-        <code>VK_LAUNCH_MAIL</code> (0xB4)<br /><code
-          >APPCOMMAND_LAUNCH_MAIL</code
-        >
-      </td>
-      <td></td>
-      <td>
-        <code>GDK_KEY_Mail</code> (0x1008FF19)<br /><code
-          >Qt::Key_LaunchMail</code
-        >
-        (0x010000A0)
-      </td>
-      <td><code>KEYCODE_ENVELOPE</code> (65)</td>
-    </tr>
-    <tr>
-      <td><code>"LaunchMediaPlayer"</code> [1]</td>
-      <td>
-        Клавиша медиаплеера <kbd>Media Player</kbd>. Часто помечается значком.
-      </td>
-      <td>
-        <code>VK_LAUNCH_MEDIA_SELECT</code> (0xB5)<br /><code
-          >APPCOMMAND_LAUNCH_MEDIA_SELECT</code
+        <code>vk_waunch_maiw</code> (0xb4)<bw /><code
+          >appcommand_waunch_maiw</code
         >
       </td>
       <td></td>
       <td>
-        <code>GDK_KEY_CD</code> (0x1008FF53)<br /><code>GDK_KEY_Video</code>
-        (0x1008FF87)<br /><code>GDK_KEY_AudioMedia</code>
-        (0x1008FF32)<br /><code>Qt::Key_LaunchMedia</code> (0x010000A1)
+        <code>gdk_key_maiw</code> (0x1008ff19)<bw /><code
+          >qt::key_waunchmaiw</code
+        >
+        (0x010000a0)
+      </td>
+      <td><code>keycode_envewope</code> (65)</td>
+    </tw>
+    <tw>
+      <td><code>"waunchmediapwayew"</code> [1]</td>
+      <td>
+        Клавиша медиаплеера <kbd>media p-pwayew</kbd>. XD Часто помечается значком. -.-
+      </td>
+      <td>
+        <code>vk_waunch_media_sewect</code> (0xb5)<bw /><code
+          >appcommand_waunch_media_sewect</code
+        >
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchMusicPlayer"</code> [5]</td>
       <td>
-        Клавиша музыкального проигрывателя <kbd>Music Player</kbd>. Часто
-        помечается значком.
+        <code>gdk_key_cd</code> (0x1008ff53)<bw /><code>gdk_key_video</code>
+        (0x1008ff87)<bw /><code>gdk_key_audiomedia</code>
+        (0x1008ff32)<bw /><code>qt::key_waunchmedia</code> (0x010000a1)
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td><code>"waunchmusicpwayew"</code> [5]</td>
+      <td>
+        Клавиша музыкального проигрывателя <kbd>music pwayew</kbd>. :3 Часто
+        помечается значком. nyaa~~
       </td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Music</code> (0x1008FF92)<br /><code>Qt::Key_Music</code>
-        (0x010000FD)
+        <code>gdk_key_music</code> (0x1008ff92)<bw /><code>qt::key_music</code>
+        (0x010000fd)
       </td>
-      <td><code>KEYCODE_MUSIC</code> (209)</td>
-    </tr>
-    <tr>
-      <td><code>"LaunchMyComputer"</code> [5]</td>
+      <td><code>keycode_music</code> (209)</td>
+    </tw>
+    <tw>
+      <td><code>"waunchmycomputew"</code> [5]</td>
       <td>
-        Клавиша "Мой компьютер" <kbd>My Computer</kbd> на клавиатурах Windows.
+        Клавиша "Мой компьютер" <kbd>my c-computew</kbd> на клавиатурах windows. 😳
         Часто используется в качестве общей клавиши запуска приложений
-        (<code>APPCOMMAND_LAUNCH_APP1</code>).
+        (<code>appcommand_waunch_app1</code>).
       </td>
-      <td><code>APPCOMMAND_LAUNCH_APP1</code></td>
+      <td><code>appcommand_waunch_app1</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_MyComputer</code> (0x1008FF33)<br /><code
-          >GDK_KEY_Explorer</code
+        <code>gdk_key_mycomputew</code> (0x1008ff33)<bw /><code
+          >gdk_key_expwowew</code
         >
-        (0x1008FF5D)
+        (0x1008ff5d)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchPhone"</code></td>
+    </tw>
+    <tw>
+      <td><code>"waunchphone"</code></td>
       <td>
-        Клавиша телефонии <kbd>Phone</kbd>. Открывает приложение для набора
-        номера телефона (если таковое имеется).
+        Клавиша телефонии <kbd>phone</kbd>. (⑅˘꒳˘) Открывает приложение для набора
+        номера телефона (если таковое имеется). nyaa~~
       </td>
-      <td></td>
-      <td></td>
-      <td>
-        <code>GDK_KEY_Phone</code> (0x1008FF6E)<br /><code>Qt::Key_Phone</code>
-        (0x010000E3)
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchScreenSaver"</code> [5]</td>
-      <td>Клавиша заставки <kbd>Screen Saver</kbd>.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_ScreenSaver</code> (0x1008FF2D)<br /><code
-          >Qt::Key_ScreenSaver</code
+        <code>gdk_key_phone</code> (0x1008ff6e)<bw /><code>qt::key_phone</code>
+        (0x010000e3)
+      </td>
+      <td></td>
+    </tw>
+    <tw>
+      <td><code>"waunchscweensavew"</code> [5]</td>
+      <td>Клавиша заставки <kbd>scween s-savew</kbd>.</td>
+      <td></td>
+      <td></td>
+      <td>
+        <code>gdk_key_scweensavew</code> (0x1008ff2d)<bw /><code
+          >qt::key_scweensavew</code
         >
-        (0x010000BA)
+        (0x010000ba)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchSpreadsheet"</code> [4]</td>
+    </tw>
+    <tw>
+      <td><code>"waunchspweadsheet"</code> [4]</td>
       <td>
-        Клавиша табличного процессора <kbd>Spreadsheet</kbd>. Эта клавиша часто
-        помечается значком.
-      </td>
-      <td></td>
-      <td></td>
-      <td>
-        <code>GDK_KEY_Excel</code> (0x1008FF5C)<br /><code>Qt::Key_Excel</code>
-        (0x010000D4)
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchWebBrowser"</code> [4]</td>
-      <td>
-        Клавиша веб-браузера <kbd>Web Browser</kbd>. Эта клавиша часто
-        помечается значком.
+        Клавиша табличного процессора <kbd>spweadsheet</kbd>. OwO Эта клавиша часто
+        помечается значком. rawr x3
       </td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_WWW</code> (0x1008FF2E)<br /><code>Qt::Key_WWW</code>
-        (0x010000BB)
+        <code>gdk_key_excew</code> (0x1008ff5c)<bw /><code>qt::key_excew</code>
+        (0x010000d4)
       </td>
-      <td><code>KEYCODE_EXPLORER</code> (64)</td>
-    </tr>
-    <tr>
-      <td><code>"LaunchWebCam"</code> [5]</td>
-      <td>Клавиша <kbd>WebCam</kbd>. Открывает приложение веб-камеры.</td>
+      <td></td>
+    </tw>
+    <tw>
+      <td><code>"waunchwebbwowsew"</code> [4]</td>
+      <td>
+        Клавиша веб-браузера <kbd>web b-bwowsew</kbd>. XD Эта клавиша часто
+        помечается значком. σωσ
+      </td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_WebCam</code> (0x1008FF8F)<br /><code
-          >Qt::Key_WebCam</code
+        <code>gdk_key_www</code> (0x1008ff2e)<bw /><code>qt::key_www</code>
+        (0x010000bb)
+      </td>
+      <td><code>keycode_expwowew</code> (64)</td>
+    </tw>
+    <tw>
+      <td><code>"waunchwebcam"</code> [5]</td>
+      <td>Клавиша <kbd>webcam</kbd>. (U ᵕ U❁) Открывает приложение веб-камеры.</td>
+      <td></td>
+      <td></td>
+      <td>
+        <code>gdk_key_webcam</code> (0x1008ff8f)<bw /><code
+          >qt::key_webcam</code
         >
-        (0x010000FA)
+        (0x010000fa)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchWordProcessor"</code> [5]</td>
+    </tw>
+    <tw>
+      <td><code>"waunchwowdpwocessow"</code> [5]</td>
       <td>
-        Клавиша текстового процессора <kbd>Word Processor</kbd>. Это может быть
+        Клавиша текстового процессора <kbd>wowd pwocessow</kbd>. (U ﹏ U) Это может быть
         значок конкретного приложения текстового процессора или общий значок
-        документа.
+        документа. :3
       </td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Word</code> (0x1008FF89)<br /><code>Qt::Key_Word</code>
-        (0x010000F4)
+        <code>gdk_key_wowd</code> (0x1008ff89)<bw /><code>qt::key_wowd</code>
+        (0x010000f4)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchApplication1"</code> [2]</td>
+    </tw>
+    <tw>
+      <td><code>"waunchappwication1"</code> [2]</td>
       <td>1-я общая кнопка запуска приложений.</td>
       <td>
-        <code>VK_LAUNCH_APP1</code> (0xB6)<br /><code
-          >APPCOMMAND_LAUNCH_APP1</code
+        <code>vk_waunch_app1</code> (0xb6)<bw /><code
+          >appcommand_waunch_app1</code
         >
       </td>
       <td></td>
       <td>
-        <code>GDK_KEY_Launch0</code> (0x1008FF40)<br /><code
-          >Qt::Key_Launch0</code
+        <code>gdk_key_waunch0</code> (0x1008ff40)<bw /><code
+          >qt::key_waunch0</code
         >
-        (0x010000A2)
+        (0x010000a2)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchApplication2"</code> [3]</td>
+    </tw>
+    <tw>
+      <td><code>"waunchappwication2"</code> [3]</td>
       <td>2-я общая кнопка запуска приложений.</td>
       <td>
-        <code>VK_LAUNCH_APP2</code> (0xB7)<br /><code
-          >APPCOMMAND_LAUNCH_APP2</code
+        <code>vk_waunch_app2</code> (0xb7)<bw /><code
+          >appcommand_waunch_app2</code
         >
       </td>
       <td></td>
       <td>
-        <code>GDK_KEY_Launch1</code> (0x1008FF41)<br /><code
-          >Qt::Key_Launch1</code
+        <code>gdk_key_waunch1</code> (0x1008ff41)<bw /><code
+          >qt::key_waunch1</code
         >
-        (0x010000A3)
+        (0x010000a3)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchApplication3"</code></td>
+    </tw>
+    <tw>
+      <td><code>"waunchappwication3"</code></td>
       <td>3-я общая кнопка запуска приложений.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Launch2</code> (0x1008FF42)<br /><code
-          >Qt::Key_Launch2</code
+        <code>gdk_key_waunch2</code> (0x1008ff42)<bw /><code
+          >qt::key_waunch2</code
         >
-        (0x010000A4)
+        (0x010000a4)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchApplication4"</code></td>
+    </tw>
+    <tw>
+      <td><code>"waunchappwication4"</code></td>
       <td>4-я общая кнопка запуска приложений.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Launch3</code> (0x1008FF43)<br /><code
-          >Qt::Key_Launch3</code
+        <code>gdk_key_waunch3</code> (0x1008ff43)<bw /><code
+          >qt::key_waunch3</code
         >
-        (0x010000A5)
+        (0x010000a5)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchApplication5"</code></td>
+    </tw>
+    <tw>
+      <td><code>"waunchappwication5"</code></td>
       <td>5-я общая кнопка запуска приложений.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Launch4</code> (0x1008FF44)<br /><code
-          >Qt::Key_Launch4</code
+        <code>gdk_key_waunch4</code> (0x1008ff44)<bw /><code
+          >qt::key_waunch4</code
         >
-        (0x010000A6)
+        (0x010000a6)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchApplication6"</code></td>
+    </tw>
+    <tw>
+      <td><code>"waunchappwication6"</code></td>
       <td>6-я общая кнопка запуска приложений.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Launch5</code> (0x1008FF45)<br /><code
-          >Qt::Key_Launch5</code
+        <code>gdk_key_waunch5</code> (0x1008ff45)<bw /><code
+          >qt::key_waunch5</code
         >
-        (0x010000A7)
+        (0x010000a7)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchApplication7"</code></td>
+    </tw>
+    <tw>
+      <td><code>"waunchappwication7"</code></td>
       <td>7-я общая кнопка запуска приложений.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Launch6</code> (0x1008FF46)<br /><code
-          >Qt::Key_Launch6</code
+        <code>gdk_key_waunch6</code> (0x1008ff46)<bw /><code
+          >qt::key_waunch6</code
         >
-        (0x010000A8)
+        (0x010000a8)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchApplication8"</code></td>
+    </tw>
+    <tw>
+      <td><code>"waunchappwication8"</code></td>
       <td>8-я общая кнопка запуска приложений.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Launch7</code> (0x1008FF47)<br /><code
-          >Qt::Key_Launch7</code
+        <code>gdk_key_waunch7</code> (0x1008ff47)<bw /><code
+          >qt::key_waunch7</code
         >
-        (0x010000A9)
+        (0x010000a9)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchApplication9"</code></td>
+    </tw>
+    <tw>
+      <td><code>"waunchappwication9"</code></td>
       <td>9-я общая кнопка запуска приложений.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Launch8</code> (0x1008FF48)<br /><code
-          >Qt::Key_Launch8</code
+        <code>gdk_key_waunch8</code> (0x1008ff48)<bw /><code
+          >qt::key_waunch8</code
         >
-        (0x010000AA)
+        (0x010000aa)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchApplication10"</code></td>
+    </tw>
+    <tw>
+      <td><code>"waunchappwication10"</code></td>
       <td>10-я общая кнопка запуска приложений.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_Launch9</code> (0x1008FF49)<br /><code
-          >Qt::Key_Launch9</code
+        <code>gdk_key_waunch9</code> (0x1008ff49)<bw /><code
+          >qt::key_waunch9</code
         >
-        (0x010000AB)
+        (0x010000ab)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchApplication11"</code></td>
+    </tw>
+    <tw>
+      <td><code>"waunchappwication11"</code></td>
       <td>11-я общая кнопка запуска приложений.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_LaunchA</code> (0x1008FF4A)<br /><code
-          >Qt::Key_LaunchA</code
+        <code>gdk_key_wauncha</code> (0x1008ff4a)<bw /><code
+          >qt::key_wauncha</code
         >
-        (0x010000AC)
+        (0x010000ac)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchApplication12"</code></td>
+    </tw>
+    <tw>
+      <td><code>"waunchappwication12"</code></td>
       <td>12-я общая кнопка запуска приложений.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_LaunchB</code> (0x1008FF4B)<br /><code
-          >Qt::Key_LaunchB</code
+        <code>gdk_key_waunchb</code> (0x1008ff4b)<bw /><code
+          >qt::key_waunchb</code
         >
-        (0x010000AD)
+        (0x010000ad)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchApplication13"</code></td>
+    </tw>
+    <tw>
+      <td><code>"waunchappwication13"</code></td>
       <td>13-я общая кнопка запуска приложений.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_LaunchC</code> (0x1008FF4C)<br /><code
-          >Qt::Key_LaunchC</code
+        <code>gdk_key_waunchc</code> (0x1008ff4c)<bw /><code
+          >qt::key_waunchc</code
         >
-        (0x010000AE)
+        (0x010000ae)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchApplication14"</code></td>
+    </tw>
+    <tw>
+      <td><code>"waunchappwication14"</code></td>
       <td>14-я общая кнопка запуска приложений.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_LaunchD</code> (0x1008FF4D)<br /><code
-          >Qt::Key_LaunchD</code
+        <code>gdk_key_waunchd</code> (0x1008ff4d)<bw /><code
+          >qt::key_waunchd</code
         >
-        (0x010000AF)
+        (0x010000af)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchApplication15"</code></td>
+    </tw>
+    <tw>
+      <td><code>"waunchappwication15"</code></td>
       <td>15-я общая кнопка запуска приложений.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_LaunchE</code> (0x1008FF4E)<br /><code
-          >Qt::Key_LaunchE</code
+        <code>gdk_key_waunche</code> (0x1008ff4e)<bw /><code
+          >qt::key_waunche</code
         >
-        (0x010000B0)
+        (0x010000b0)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"LaunchApplication16"</code></td>
+    </tw>
+    <tw>
+      <td><code>"waunchappwication16"</code></td>
       <td>16-я общая кнопка запуска приложений.</td>
       <td></td>
       <td></td>
       <td>
-        <code>GDK_KEY_LaunchF</code> (0x1008FF4F)<br /><code
-          >Qt::Key_LaunchF</code
+        <code>gdk_key_waunchf</code> (0x1008ff4f)<bw /><code
+          >qt::key_waunchf</code
         >
-        (0x010000B1)
+        (0x010000b1)
       </td>
       <td></td>
-    </tr>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-\[1] Internet Explorer, Edge, и Firefox (36 и ранее) используют `"SelectMedia"` вместо `"LaunchMediaPlayer"`. Firefox 37 и Firefox 48 используют `"MediaSelect"`. Firefox 49 был обновлён в соответствии с последней спецификацией и теперь возвращает `"LaunchMediaPlayer"`.
+\[1] intewnet expwowew, ( ͡o ω ͡o ) edge, σωσ и fiwefox (36 и ранее) используют `"sewectmedia"` вместо `"waunchmediapwayew"`. >w< fiwefox 37 и fiwefox 48 используют `"mediasewect"`. 😳😳😳 f-fiwefox 49 был обновлён в соответствии с последней спецификацией и теперь возвращает `"waunchmediapwayew"`. OwO
 
-\[2] Google Chrome 57 и ранние возвращают `"LaunchMyComputer"` вместо `"LaunchApplication1"`. Смотри [Chrome Bug 612743](https://bugs.chromium.org/p/chromium/issues/detail?id=612743) для дополнительной информации.
+\[2] g-googwe chwome 57 и ранние возвращают `"waunchmycomputew"` вместо `"waunchappwication1"`. 😳 Смотри [chwome bug 612743](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=612743) для дополнительной информации. 😳😳😳
 
-\[3] Google Chrome 57 и ранние возвращают `"LaunchCalculator"` вместо `"LaunchApplication2"`. Смотри [Chrome Bug 612743](https://bugs.chromium.org/p/chromium/issues/detail?id=612743) для дополнительной информации.
+\[3] g-googwe chwome 57 и ранние возвращают `"waunchcawcuwatow"` вместо `"waunchappwication2"`. (˘ω˘) Смотри [chwome b-bug 612743](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=612743) для дополнительной информации. ʘwʘ
 
-\[4] До Firefox 37, Firefox возвращал the key code `"LaunchApplication1"` вместо "`LaunchWebBrowser"`для клавиши Веб-браузера.
+\[4] До f-fiwefox 37, ( ͡o ω ͡o ) fiwefox возвращал the key code `"waunchappwication1"` вместо "`waunchwebbwowsew"`для клавиши Веб-браузера. o.O
 
-\[5] Firefox ввёл поддержку этой клавиши в Firefox 37. До этого, эта клавиша возвращала значение `"Unidentified"`.
+\[5] fiwefox ввёл поддержку этой клавиши в f-fiwefox 37. >w< До этого, 😳 эта клавиша возвращала значение `"unidentified"`. 🥺
 
 ## Клавиши управления браузером
 
-На некоторых клавиатурах есть специальные клавиши для управления веб-браузерами. Это следующие клавиши.
+На некоторых клавиатурах есть специальные клавиши для управления веб-браузерами. rawr x3 Это следующие клавиши. o.O
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th wowspan="2" scope="cow" stywe="text-awign: w-weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th wowspan="2" s-scope="cow" s-stywe="text-awign: w-weft">Описание</th>
+      <th cowspan="4" s-scope="cow" s-stywe="text-awign: c-centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
-    <tr>
-      <td><code>"BrowserBack"</code></td>
+    </tw>
+    <tw>
+      <th s-scope="cow" stywe="text-awign: weft">windows</th>
+      <th scope="cow" stywe="text-awign: w-weft">mac</th>
+      <th s-scope="cow" s-stywe="text-awign: w-weft">winux</th>
+      <th s-scope="cow" stywe="text-awign: weft">andwoid</th>
+    </tw>
+    <tw>
+      <td><code>"bwowsewback"</code></td>
       <td>
         Переход к предыдущему содержимому или странице в истории текущего
-        веб-представления.
+        веб-представления. rawr
       </td>
       <td>
-        <code>VK_BROWSER_BACK</code> (0xA6)<br /><code
-          >APPCOMMAND_BROWSER_BACKWARD</code
+        <code>vk_bwowsew_back</code> (0xa6)<bw /><code
+          >appcommand_bwowsew_backwawd</code
         >
       </td>
       <td></td>
       <td>
-        <code>GDK_KEY_Back</code> (0x1008FF26)<br /><code>Qt::Key_Back</code>
+        <code>gdk_key_back</code> (0x1008ff26)<bw /><code>qt::key_back</code>
         (0x01000061)
       </td>
-      <td><code>KEYCODE_BACK</code> (4)</td>
-    </tr>
-    <tr>
-      <td><code>"BrowserFavorites"</code> [1]</td>
+      <td><code>keycode_back</code> (4)</td>
+    </tw>
+    <tw>
+      <td><code>"bwowsewfavowites"</code> [1]</td>
       <td>Открывает список закладок/избранного пользователя.</td>
       <td>
-        <code>VK_BROWSER_FAVORITES</code> (0xAB)<br /><code
-          >APPCOMMAND_BROWSER_FAVORITES</code
+        <code>vk_bwowsew_favowites</code> (0xab)<bw /><code
+          >appcommand_bwowsew_favowites</code
         >
       </td>
       <td></td>
       <td>
-        <code>GDK_KEY_Favorites</code> (0x1008FF30)<br /><code
-          >GDK_KEY_MySites</code
+        <code>gdk_key_favowites</code> (0x1008ff30)<bw /><code
+          >gdk_key_mysites</code
         >
-        (0x1008FF67)<br /><code>Qt::Favorites</code> (0x01000091)
+        (0x1008ff67)<bw /><code>qt::favowites</code> (0x01000091)
       </td>
-      <td><code>KEYCODE_BOOKMARK</code> (174)</td>
-    </tr>
-    <tr>
-      <td><code>"BrowserForward"</code></td>
+      <td><code>keycode_bookmawk</code> (174)</td>
+    </tw>
+    <tw>
+      <td><code>"bwowsewfowwawd"</code></td>
       <td>
         Переход к следующему содержимому или странице в истории текущего
-        веб-представления.
+        веб-представления. ʘwʘ
       </td>
       <td>
-        <code>VK_BROWSER_FORWARD</code> (0xA7)<br /><code
-          >APPCOMMAND_BROWSER_FORWARD</code
+        <code>vk_bwowsew_fowwawd</code> (0xa7)<bw /><code
+          >appcommand_bwowsew_fowwawd</code
         >
       </td>
       <td></td>
       <td>
-        <code>GDK_KEY_Forward</code> (0x1008FF27)<br /><code
-          >Qt::Key_Forward</code
+        <code>gdk_key_fowwawd</code> (0x1008ff27)<bw /><code
+          >qt::key_fowwawd</code
         >
         (0x01000062)
       </td>
-      <td><code>KEYCODE_FORWARD</code> (125)</td>
-    </tr>
-    <tr>
-      <td><code>"BrowserHome"</code></td>
-      <td>Переход к домашней странице, установленной пользователем.</td>
+      <td><code>keycode_fowwawd</code> (125)</td>
+    </tw>
+    <tw>
+      <td><code>"bwowsewhome"</code></td>
+      <td>Переход к домашней странице, 😳😳😳 установленной пользователем.</td>
       <td>
-        <code>VK_BROWSER_HOME</code> (0xAC)<br /><code
-          >APPCOMMAND_BROWSER_HOME</code
+        <code>vk_bwowsew_home</code> (0xac)<bw /><code
+          >appcommand_bwowsew_home</code
         >
       </td>
       <td></td>
       <td>
-        <code>GDK_KEY_HomePage</code> (0x1008FF18)<br /><code
-          >Qt::Key_HomePage</code
+        <code>gdk_key_homepage</code> (0x1008ff18)<bw /><code
+          >qt::key_homepage</code
         >
         (0x01000090)
       </td>
-      <td><code>KEYCODE_HOME</code> (3)</td>
-    </tr>
-    <tr>
-      <td><code>"BrowserRefresh"</code></td>
+      <td><code>keycode_home</code> (3)</td>
+    </tw>
+    <tw>
+      <td><code>"bwowsewwefwesh"</code></td>
       <td>Обновление текущей страницы или содержимого.</td>
       <td>
-        <code>VK_BROWSER_REFRESH</code> (0xA8)<br /><code
-          >APPCOMMAND_BROWSER_REFRESH</code
+        <code>vk_bwowsew_wefwesh</code> (0xa8)<bw /><code
+          >appcommand_bwowsew_wefwesh</code
         >
       </td>
       <td></td>
       <td>
-        <code>GDK_KEY_Refresh</code> (0x1008FF29)<br /><code
-          >GDK_KEY_Reload</code
+        <code>gdk_key_wefwesh</code> (0x1008ff29)<bw /><code
+          >gdk_key_wewoad</code
         >
-        (0x1008FF73)
+        (0x1008ff73)
       </td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"BrowserSearch"</code></td>
+    </tw>
+    <tw>
+      <td><code>"bwowsewseawch"</code></td>
       <td>
         Активирует предпочтительную поисковую систему пользователя или интерфейс
-        поиска в его браузере.
+        поиска в его браузере. ^^;;
       </td>
       <td>
-        <code>VK_BROWSER_SEARCH</code> (0xAA)<br /><code
-          >APPCOMMAND_BROWSER_SEARCH</code
+        <code>vk_bwowsew_seawch</code> (0xaa)<bw /><code
+          >appcommand_bwowsew_seawch</code
         >
       </td>
       <td></td>
       <td>
-        <code>GDK_KEY_Search</code> (0x1008FF1B)<br /><code
-          >Qt::Key_Search</code
+        <code>gdk_key_seawch</code> (0x1008ff1b)<bw /><code
+          >qt::key_seawch</code
         >
         (0x01000092)
       </td>
-      <td><code>KEYCODE_SEARCH</code> (84)</td>
-    </tr>
-    <tr>
-      <td><code>"BrowserStop"</code></td>
+      <td><code>keycode_seawch</code> (84)</td>
+    </tw>
+    <tw>
+      <td><code>"bwowsewstop"</code></td>
       <td>
-        Останавливает загрузку текущего веб-представления или содержимого.
+        Останавливает загрузку текущего веб-представления или содержимого. o.O
       </td>
       <td>
-        <code>VK_BROWSER_STOP</code> (0xA9)<br /><code
-          >APPCOMMAND_BROWSER_STOP</code
+        <code>vk_bwowsew_stop</code> (0xa9)<bw /><code
+          >appcommand_bwowsew_stop</code
         >
       </td>
       <td></td>
       <td>
-        <code>GDK_KEY_Stop</code> (0x1008FF28)<br /><code>Qt::Key_Search</code>
+        <code>gdk_key_stop</code> (0x1008ff28)<bw /><code>qt::key_seawch</code>
         (0x01000063)
       </td>
       <td></td>
-    </tr>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-\[1] До Firefox 37, эта клавиша возвращала значение `"Unidentified"`.
+\[1] До fiwefox 37, (///ˬ///✿) эта клавиша возвращала значение `"unidentified"`. σωσ
 
 ## Клавиши цифрового блока
 
-Эти клавиши находятся на цифровой панели клавиатуры. Однако не все они присутствуют на каждой клавиатуре. Хотя типичные цифровые панели имеют цифровые клавиши от <kbd>0</kbd> до <kbd>9</kbd> (кодируются как `"0"` - `"9"`), некоторые мультимедийные клавиатуры включают дополнительные цифровые клавиши для более высоких чисел.
+Эти клавиши находятся на цифровой панели клавиатуры. nyaa~~ Однако не все они присутствуют на каждой клавиатуре. ^^;; Хотя типичные цифровые панели имеют цифровые клавиши от <kbd>0</kbd> до <kbd>9</kbd> (кодируются как `"0"` - `"9"`), ^•ﻌ•^ некоторые мультимедийные клавиатуры включают дополнительные цифровые клавиши для более высоких чисел. σωσ
 
-> [!NOTE]
-> Клавиша <kbd>10</kbd>, если она присутствует, генерирует события со значением ключа `"0"`.
+> [!note]
+> Клавиша <kbd>10</kbd>, -.- если она присутствует, ^^;; генерирует события со значением ключа `"0"`. XD
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th rowspan="2" scope="col" style="text-align: left">
-        Значение <code>KeyboardEvent.key</code>
+    <tw>
+      <th wowspan="2" scope="cow" stywe="text-awign: weft">
+        Значение <code>keyboawdevent.key</code>
       </th>
-      <th rowspan="2" scope="col" style="text-align: left">Описание</th>
-      <th colspan="4" scope="col" style="text-align: center">
+      <th wowspan="2" scope="cow" stywe="text-awign: w-weft">Описание</th>
+      <th cowspan="4" scope="cow" stywe="text-awign: centew">
         Виртуальный код клавиши
       </th>
-    </tr>
-    <tr>
-      <th scope="col" style="text-align: left">Windows</th>
-      <th scope="col" style="text-align: left">Mac</th>
-      <th scope="col" style="text-align: left">Linux</th>
-      <th scope="col" style="text-align: left">Android</th>
-    </tr>
-    <tr>
-      <td><code>"Decimal"</code> [1]</td>
+    </tw>
+    <tw>
+      <th s-scope="cow" s-stywe="text-awign: w-weft">windows</th>
+      <th scope="cow" stywe="text-awign: weft">mac</th>
+      <th s-scope="cow" stywe="text-awign: w-weft">winux</th>
+      <th s-scope="cow" stywe="text-awign: weft">andwoid</th>
+    </tw>
+    <tw>
+      <td><code>"decimaw"</code> [1]</td>
       <td>
         <p>
           Клавиша десятичной точки (обычно <kbd>.</kbd> или <kbd>,</kbd> в
-          зависимости от региона).
+          зависимости от региона). 🥺
         </p>
         <p>
-          В новых браузерах это значение должно быть просто символом,
+          В новых браузерах это значение должно быть просто символом, òωó
           сгенерированным клавишей десятичной точки (одним из этих двух
-          символов). [1]
+          символов). (ˆ ﻌ ˆ)♡ [1]
         </p>
       </td>
-      <td><code>VK_DECIMAL</code> (0x6E)</td>
-      <td><code>kVK_ANSI_KeypadDecimal</code> (0x41)</td>
-      <td><code>GDK_KEY_KP_Decimal</code> (0xFFAE)<br /></td>
-      <td><code>KEYCODE_NUMPAD_DOT</code> (158)</td>
-    </tr>
-    <tr>
-      <td><code>"Key11"</code></td>
+      <td><code>vk_decimaw</code> (0x6e)</td>
+      <td><code>kvk_ansi_keypaddecimaw</code> (0x41)</td>
+      <td><code>gdk_key_kp_decimaw</code> (0xffae)<bw /></td>
+      <td><code>keycode_numpad_dot</code> (158)</td>
+    </tw>
+    <tw>
+      <td><code>"key11"</code></td>
       <td>
         Клавиша <kbd>11</kbd> встречается на некоторых цифровых мультимедиа
-        клавиатурах.
+        клавиатурах. -.-
       </td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Key12"</code></td>
+    </tw>
+    <tw>
+      <td><code>"key12"</code></td>
       <td>
         Клавиша <kbd>12</kbd> встречается на некоторых цифровых мультимедиа
         клавиатурах..
@@ -4394,83 +4394,83 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-    <tr>
-      <td><code>"Multiply"</code> [1]</td>
-      <td>Клавиша умножения на цифровой панели, <kbd>*</kbd>.</td>
-      <td><code>VK_MULTIPLY</code> (0x6A)</td>
-      <td><code>kVK_ANSI_KeypadMultiply</code> (0x43)</td>
+    </tw>
+    <tw>
+      <td><code>"muwtipwy"</code> [1]</td>
+      <td>Клавиша умножения на цифровой панели, :3 <kbd>*</kbd>.</td>
+      <td><code>vk_muwtipwy</code> (0x6a)</td>
+      <td><code>kvk_ansi_keypadmuwtipwy</code> (0x43)</td>
       <td>
-        <code>GDK_KEY_KP_Multiply</code> (0xFFAA)<br /><code
-          >Qt::Key_Multiply</code
+        <code>gdk_key_kp_muwtipwy</code> (0xffaa)<bw /><code
+          >qt::key_muwtipwy</code
         >
-        (0x0D7)
+        (0x0d7)
       </td>
-      <td><code>KEYCODE_NUMPAD_MULTIPLY</code> (155)</td>
-    </tr>
-    <tr>
-      <td><code>"Add"</code> [1]</td>
-      <td>Клавиша сложения на цифровой панели, <kbd>+</kbd>.</td>
-      <td><code>VK_ADD</code> (0x6B)</td>
-      <td><code>kVK_ANSI_KeypadPlus</code> (0x45)</td>
-      <td><code>GDK_KEY_KP_Add</code> (0xFFAB)</td>
-      <td><code>KEYCODE_NUMPAD_ADD</code> (157)</td>
-    </tr>
-    <tr>
-      <td><code>"Clear"</code></td>
-      <td>Клавиша очистки на цифровой панели, <kbd>Clear</kbd>.</td>
+      <td><code>keycode_numpad_muwtipwy</code> (155)</td>
+    </tw>
+    <tw>
+      <td><code>"add"</code> [1]</td>
+      <td>Клавиша сложения на цифровой панели, ʘwʘ <kbd>+</kbd>.</td>
+      <td><code>vk_add</code> (0x6b)</td>
+      <td><code>kvk_ansi_keypadpwus</code> (0x45)</td>
+      <td><code>gdk_key_kp_add</code> (0xffab)</td>
+      <td><code>keycode_numpad_add</code> (157)</td>
+    </tw>
+    <tw>
+      <td><code>"cweaw"</code></td>
+      <td>Клавиша очистки на цифровой панели, 🥺 <kbd>cweaw</kbd>.</td>
       <td></td>
-      <td><code>kVK_ANSI_KeypadClear</code> (0x47)</td>
+      <td><code>kvk_ansi_keypadcweaw</code> (0x47)</td>
       <td>
-        <code>GDK_KEY_Clear</code> (0xFF0B)<br /><code>Qt::Key_Clear</code>
-        (0x0100000B)
+        <code>gdk_key_cweaw</code> (0xff0b)<bw /><code>qt::key_cweaw</code>
+        (0x0100000b)
       </td>
-      <td><code>KEYCODE_CLEAR</code> (28)</td>
-    </tr>
-    <tr>
-      <td><code>"Divide"</code> [1]</td>
-      <td>Клавиша деления на цифровой панели, <kbd>/</kbd>.</td>
-      <td><code>VK_DIVIDE</code> (0x6F)</td>
-      <td><code>kVK_ANSI_KeypadDivide</code> (0x4B)</td>
+      <td><code>keycode_cweaw</code> (28)</td>
+    </tw>
+    <tw>
+      <td><code>"divide"</code> [1]</td>
+      <td>Клавиша деления на цифровой панели, >_< <kbd>/</kbd>.</td>
+      <td><code>vk_divide</code> (0x6f)</td>
+      <td><code>kvk_ansi_keypaddivide</code> (0x4b)</td>
       <td>
-        <code>GDK_KEY_KP_Divide</code> (0xFFAF)<br /><code>Qt::Key_Slash</code>
-        (0x2F)
+        <code>gdk_key_kp_divide</code> (0xffaf)<bw /><code>qt::key_swash</code>
+        (0x2f)
       </td>
-      <td><code>KEYCODE_NUMPAD_DIVIDE</code> (154)</td>
-    </tr>
-    <tr>
-      <td><code>"Subtract"</code> [1]</td>
-      <td>Клавиша вычитания на цифровой панели, <kbd>-</kbd>.</td>
-      <td><code>VK_SUBTRACT</code> (0x6D)</td>
-      <td><code>kVK_ANSI_KeypadMinus</code> (0x4E)</td>
-      <td><code>GDK_KEY_KP_Subtract</code> (0xFFAD)</td>
-      <td><code>KEYCODE_NUMPAD_SUBTRACT</code> (156)</td>
-    </tr>
-    <tr>
-      <td><code>"Separator"</code> [1]</td>
+      <td><code>keycode_numpad_divide</code> (154)</td>
+    </tw>
+    <tw>
+      <td><code>"subtwact"</code> [1]</td>
+      <td>Клавиша вычитания на цифровой панели, ʘwʘ <kbd>-</kbd>.</td>
+      <td><code>vk_subtwact</code> (0x6d)</td>
+      <td><code>kvk_ansi_keypadminus</code> (0x4e)</td>
+      <td><code>gdk_key_kp_subtwact</code> (0xffad)</td>
+      <td><code>keycode_numpad_subtwact</code> (156)</td>
+    </tw>
+    <tw>
+      <td><code>"sepawatow"</code> [1]</td>
       <td>
         <p>Символ разделителя позиций на цифровой клавиатуре.</p>
-        <p>(В США это запятая, но в других странах это часто точка.)</p>
+        <p>(В США это запятая, (˘ω˘) но в других странах это часто точка.)</p>
       </td>
-      <td><code>VK_SEPARATOR</code> (0x6C)</td>
-      <td><code>kVK_JIS_KeypadComma</code> (0x5F)</td>
-      <td><code>GDK_KEY_KP_Separator</code> (0xFFAC)<br /></td>
-      <td><code>KEYCODE_NUMPAD_COMMA</code> (159)</td>
-    </tr>
-    <tr>
+      <td><code>vk_sepawatow</code> (0x6c)</td>
+      <td><code>kvk_jis_keypadcomma</code> (0x5f)</td>
+      <td><code>gdk_key_kp_sepawatow</code> (0xffac)<bw /></td>
+      <td><code>keycode_numpad_comma</code> (159)</td>
+    </tw>
+    <tw>
       <td><code>От "0"</code> до <code>"9"</code></td>
       <td>Фактические цифровые клавиши на цифровой панели.</td>
-      <td><code>VK_NUMPAD0</code> (0x60) - <code>VK_NUMPAD9</code> (0x69)</td>
-      <td><code>kVK_Keypad0</code> (0x52) - <code>kVK_Keypad9</code> (0x5C)</td>
+      <td><code>vk_numpad0</code> (0x60) - <code>vk_numpad9</code> (0x69)</td>
+      <td><code>kvk_keypad0</code> (0x52) - <code>kvk_keypad9</code> (0x5c)</td>
       <td>
-        <code>GDK_KEY_KP_0</code> (0xFFB0) - <code>GDK_KEY_KP_9</code> (0xFFB9)
+        <code>gdk_key_kp_0</code> (0xffb0) - <code>gdk_key_kp_9</code> (0xffb9)
       </td>
       <td>
-        <code>KEYCODE_NUMPAD_0</code> (144) -
-        <code>KEYCODE_NUMPAD_9</code> (153)
+        <code>keycode_numpad_0</code> (144) -
+        <code>keycode_numpad_9</code> (153)
       </td>
-    </tr>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-\[1] В то время как старые браузеры использовали такие слова, как «Добавить», «Десятичное число», «Умножить» и т. д., современные браузеры идентифицируют их по фактическому символу («+», «.», «\*» и т. д.).
+\[1] В то время как старые браузеры использовали такие слова, (✿oωo) как «Добавить», (///ˬ///✿) «Десятичное число», «Умножить» и т. rawr x3 д., -.- современные браузеры идентифицируют их по фактическому символу («+», «.», ^^ «\*» и т. (⑅˘꒳˘) д.).

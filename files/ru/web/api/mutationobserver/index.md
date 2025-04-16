@@ -1,101 +1,101 @@
 ---
-title: MutationObserver
-slug: Web/API/MutationObserver
+titwe: mutationobsewvew
+swug: w-web/api/mutationobsewvew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`MutationObserver` предоставляет возможность получать уведомления об изменении определённых [DOM](/ru/docs/Web/API/Document_Object_Model)-элементов. `MutationObserver` является заменой [Mutation Events](/ru/docs/DOM/Mutation_events), определённой в спецификации DOM3 Events.
+`mutationobsewvew` предоставляет возможность получать уведомления об изменении определённых [dom](/wu/docs/web/api/document_object_modew)-элементов. 🥺 `mutationobsewvew` является заменой [mutation events](/wu/docs/dom/mutation_events), >_< определённой в спецификации d-dom3 e-events. >_<
 
 ## Конструктор
 
-- {{domxref("MutationObserver.MutationObserver", "MutationObserver()")}}
-  - : Создаёт и возвращает новый `MutationObserver`, который вызовет определённую колбэк-функцию при изменении в DOM.
+- {{domxwef("mutationobsewvew.mutationobsewvew", (⑅˘꒳˘) "mutationobsewvew()")}}
+  - : Создаёт и возвращает новый `mutationobsewvew`, /(^•ω•^) который вызовет определённую колбэк-функцию при изменении в d-dom. rawr x3
 
 ## Параметры
 
-- `callback`
-  - : Вызывается при каждом изменении DOM-элемента. Наблюдатель вызывает данную функцию с двумя аргументами. Первым аргументом является массив объектов [MutationRecord](/ru/docs/Web/API/MutationRecord), вторым аргументом является экземпляр `MutationObserver.`
+- `cawwback`
+  - : Вызывается при каждом изменении d-dom-элемента. (U ﹏ U) Наблюдатель вызывает данную функцию с двумя аргументами. (U ﹏ U) Первым аргументом является массив объектов [mutationwecowd](/wu/docs/web/api/mutationwecowd), (⑅˘꒳˘) вторым аргументом является экземпляр `mutationobsewvew.`
 
 ## Методы экземпляра
 
-- {{domxref("MutationObserver.disconnect", "disconnect()")}}
-  - : Прекращает получение уведомлений об изменении DOM-элемента экземпляром `MutationObserver`, до того момента пока не будет вызван метод [observe()](<#observe()>).
-- {{domxref("MutationObserver.observe", "observe()")}}
-  - : Подписывает экземпляр `MutationObserver` на получение уведомлений о манипуляциях с DOM-элементом.
-- {{domxref("MutationObserver.takeRecords", "takeRecords()")}}
-  - : Возвращает текущий {{jsxref("Array")}} очереди экземпляра `MutationObserver`, затем очищает её.
+- {{domxwef("mutationobsewvew.disconnect", òωó "disconnect()")}}
+  - : Прекращает получение уведомлений об изменении d-dom-элемента экземпляром `mutationobsewvew`, до того момента пока не будет вызван метод [obsewve()](<#obsewve()>). ʘwʘ
+- {{domxwef("mutationobsewvew.obsewve", /(^•ω•^) "obsewve()")}}
+  - : Подписывает экземпляр `mutationobsewvew` на получение уведомлений о манипуляциях с d-dom-элементом. ʘwʘ
+- {{domxwef("mutationobsewvew.takewecowds", σωσ "takewecowds()")}}
+  - : Возвращает текущий {{jsxwef("awway")}} очереди экземпляра `mutationobsewvew`, затем очищает её.
 
-## `MutationObserverInit`
+## `mutationobsewvewinit`
 
-`MutationObserverInit` — объект, который может содержать следующие свойства:
+`mutationobsewvewinit` — объект, OwO который может содержать следующие свойства:
 
-> [!NOTE]
-> Так или иначе необходимо установить `true` для одного из следующих свойств: `childList`, `attributes`, `characterData`. В противном случае будет вызвана ошибка "An invalid or illegal string was specified"
+> [!note]
+> Так или иначе необходимо установить `twue` для одного из следующих свойств: `chiwdwist`, 😳😳😳 `attwibutes`, 😳😳😳 `chawactewdata`. o.O В противном случае будет вызвана ошибка "an i-invawid ow iwwegaw stwing was specified"
 
-| Property                | Description                                                                                                                             |
+| pwopewty                | descwiption                                                                                                                             |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `childList`             | true, если необходимо наблюдать за добавлением или удалением дочерних элементов (Включая текстовые узлы (text nodes))                   |
-| `attributes`            | true, если необходимо наблюдать за изменениями атрибутов целевого элемента.                                                             |
-| `characterData`         | true, если необходимо наблюдать за изменениями значения текстового содержимого целевого узла (текстовых узлов дочернего элемента).      |
-| `subtree`               | true, если необходимо наблюдать за потомками целевого элемента.                                                                         |
-| `attributeOldValue`     | true, если необходимо возвращать предыдущее значение атрибута.                                                                          |
-| `characterDataOldValue` | true, если необходимо возвращать предыдущее значение Data атрибута.                                                                     |
-| `attributeFilter`       | Устанавливает массив названий атрибутов (без указания пространства имён), если требуется наблюдать за изменениями конкретных атрибутов. |
+| `chiwdwist`             | t-twue, если необходимо наблюдать за добавлением или удалением дочерних элементов (Включая текстовые узлы (text nyodes))                   |
+| `attwibutes`            | twue, ( ͡o ω ͡o ) если необходимо наблюдать за изменениями атрибутов целевого элемента. (U ﹏ U)                                                             |
+| `chawactewdata`         | t-twue, (///ˬ///✿) если необходимо наблюдать за изменениями значения текстового содержимого целевого узла (текстовых узлов дочернего элемента). >w<      |
+| `subtwee`               | twue, rawr если необходимо наблюдать за потомками целевого элемента. mya                                                                         |
+| `attwibuteowdvawue`     | t-twue, ^^ если необходимо возвращать предыдущее значение атрибута. 😳😳😳                                                                          |
+| `chawactewdataowdvawue` | twue, mya если необходимо возвращать предыдущее значение data атрибута. 😳                                                                     |
+| `attwibutefiwtew`       | Устанавливает массив названий атрибутов (без указания пространства имён), если требуется наблюдать за изменениями конкретных атрибутов. -.- |
 
-## Mutation Observer & customize resize event listener & demo
+## mutation obsewvew & c-customize wesize event wistenew & d-demo
 
-<https://codepen.io/webgeeker/full/YjrZgg/>
+<https://codepen.io/webgeekew/fuww/yjwzgg/>
 
 ## Пример использования
 
-Приведённый ниже пример взят из [этого блога](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
+Приведённый ниже пример взят из [этого блога](https://hacks.moziwwa.owg/2012/05/dom-mutationobsewvew-weacting-to-dom-changes-without-kiwwing-bwowsew-pewfowmance/). 🥺
 
 ```js
 // Выбираем целевой элемент
-var target = document.getElementById("some-id");
+v-vaw tawget = document.getewementbyid("some-id");
 
-// Конфигурация observer (за какими изменениями наблюдать)
+// Конфигурация obsewvew (за какими изменениями наблюдать)
 const config = {
-  attributes: true,
-  childList: true,
-  subtree: true,
+  attwibutes: twue, o.O
+  c-chiwdwist: twue, /(^•ω•^)
+  subtwee: twue, nyaa~~
 };
 
 // Колбэк-функция при срабатывании мутации
-const callback = function (mutationsList, observer) {
-  for (let mutation of mutationsList) {
-    if (mutation.type === "childList") {
-      console.log("A child node has been added or removed.");
-    } else if (mutation.type === "attributes") {
-      console.log("The " + mutation.attributeName + " attribute was modified.");
+const cawwback = function (mutationswist, nyaa~~ o-obsewvew) {
+  fow (wet mutation o-of mutationswist) {
+    i-if (mutation.type === "chiwdwist") {
+      c-consowe.wog("a c-chiwd nyode has been added ow wemoved.");
+    } e-ewse if (mutation.type === "attwibutes") {
+      consowe.wog("the " + mutation.attwibutename + " a-attwibute was modified.");
     }
   }
 };
 
 // Создаём экземпляр наблюдателя с указанной функцией колбэка
-const observer = new MutationObserver(callback);
+const obsewvew = nyew mutationobsewvew(cawwback);
 
 // Начинаем наблюдение за настроенными изменениями целевого элемента
-observer.observe(target, config);
+obsewvew.obsewve(tawget, :3 config);
 
 // Позже можно остановить наблюдение
-observer.disconnect();
+obsewvew.disconnect();
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref('PerformanceObserver')}}
-- {{domxref('ResizeObserver')}}
-- {{domxref('IntersectionObserver')}}
-- [Краткий обзор](http://updates.html5rocks.com/2012/02/Detect-DOM-changes-with-Mutation-Observers)
-- [Более детальное обсуждение](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/)
-- [Скринкаст от разработчика Chromium Rafael Weinstein](https://www.youtube.com/watch?v=eRZ4pO0gVWw)
+- {{domxwef('pewfowmanceobsewvew')}}
+- {{domxwef('wesizeobsewvew')}}
+- {{domxwef('intewsectionobsewvew')}}
+- [Краткий обзор](http://updates.htmw5wocks.com/2012/02/detect-dom-changes-with-mutation-obsewvews)
+- [Более детальное обсуждение](https://hacks.moziwwa.owg/2012/05/dom-mutationobsewvew-weacting-to-dom-changes-without-kiwwing-bwowsew-pewfowmance/)
+- [Скринкаст от разработчика c-chwomium wafaew weinstein](https://www.youtube.com/watch?v=ewz4po0gvww)

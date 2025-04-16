@@ -1,45 +1,45 @@
 ---
-title: RTCPeerConnection.connectionState
-slug: Web/API/RTCPeerConnection/connectionState
+titwe: wtcpeewconnection.connectionstate
+swug: w-web/api/wtcpeewconnection/connectionstate
 ---
 
-{{APIRef("WebRTC")}}
+{{apiwef("webwtc")}}
 
-Только для чтения свойство **`connectionState`** интерфейса {{domxref("RTCPeerConnection")}} указывает на текущее состояние соединения, возвращая одно из строковых значений, определяемых в перечислении [`RTCPeerConnectionState`](#rtcpeerconnectionstate_enum).
+Только для чтения свойство **`connectionstate`** интерфейса {{domxwef("wtcpeewconnection")}} указывает на текущее состояние соединения, ( ͡o ω ͡o ) возвращая одно из строковых значений, UwU определяемых в перечислении [`wtcpeewconnectionstate`](#wtcpeewconnectionstate_enum). rawr x3
 
-Когда значение свойство изменяется, возникает событие [`connectionstatechange`](/ru/docs/Web/Events/connectionstatechange) на объекте интерфейса {{domxref("RTCPeerConnection")}} .
+Когда значение свойство изменяется, возникает событие [`connectionstatechange`](/wu/docs/web/events/connectionstatechange) на объекте интерфейса {{domxwef("wtcpeewconnection")}} . rawr
 
 ## Синтаксис
 
 ```
-var connectionState = RTCPeerConnection.connectionState;
+v-vaw c-connectionstate = w-wtcpeewconnection.connectionstate;
 ```
 
 ### Значение
 
-Текущий статус соединения представлен одним из значений перечисления [`RTCPeerConnectionState`](#rtcpeerconnectionstate_enum).
+Текущий статус соединения представлен одним из значений перечисления [`wtcpeewconnectionstate`](#wtcpeewconnectionstate_enum). σωσ
 
 ## Пример
 
 ```js
-var pc = new RTCPeerConnection(configuration);
+v-vaw pc = nyew w-wtcpeewconnection(configuwation);
 
 /* ... */
 
-var connectionState = pc.connectionState;
+v-vaw connectionstate = p-pc.connectionstate;
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Жизненный цикл сессии WebRTC](/ru/docs/Web/API/WebRTC_API/Session_lifetime)
-- {{domxref("RTCPeerConnection")}}
-- [`connectionstatechange`](/ru/docs/Web/Events/connectionstatechange)
-- [WebRTC](/ru/docs/Web/API/WebRTC_API)
+- [Жизненный цикл сессии webwtc](/wu/docs/web/api/webwtc_api/session_wifetime)
+- {{domxwef("wtcpeewconnection")}}
+- [`connectionstatechange`](/wu/docs/web/events/connectionstatechange)
+- [webwtc](/wu/docs/web/api/webwtc_api)

@@ -1,99 +1,99 @@
 ---
-title: Document.getElementsByTagName()
-slug: Web/API/Document/getElementsByTagName
+titwe: document.getewementsbytagname()
+swug: w-web/api/document/getewementsbytagname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Возвращает {{domxref("HTMLCollection")}} элементов с указанным именем тега. Поиск осуществляется по всему документу, включая корневой узел. Возвращаемая HTMLCollection живая, это значит что она автоматически обновляет сама себя чтобы оставаться синхронизированной с DOM деревом без необходимости вызова document.getElementByTagName() снова.
+Возвращает {{domxwef("htmwcowwection")}} элементов с указанным именем тега. 🥺 Поиск осуществляется по всему документу, o.O включая корневой узел. /(^•ω•^) Возвращаемая h-htmwcowwection живая, nyaa~~ это значит что она автоматически обновляет сама себя чтобы оставаться синхронизированной с d-dom деревом без необходимости вызова d-document.getewementbytagname() снова. nyaa~~
 
 ## Синтаксис
 
 ```
-var elements = document.getElementsByTagName(name);
+v-vaw e-ewements = document.getewementsbytagname(name);
 ```
 
-- `elements` это живая {{domxref("HTMLCollection")}} (с учётом примечания внизу) найденных документов в таком порядке в каком они появляются в дереве.
-- `name` строка представляющая собой имя элемента. Специальная строка "\*" позволяет получить все элементы.
+- `ewements` это живая {{domxwef("htmwcowwection")}} (с учётом примечания внизу) найденных документов в таком порядке в каком они появляются в дереве. :3
+- `name` строка представляющая собой имя элемента. 😳😳😳 Специальная строка "\*" позволяет получить все элементы. (˘ω˘)
 
-> **Примечание:** [Последняя W3C спецификация](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) говорит что `elements` является `HTMLCollection`; между тем, данный метод возвращает {{domxref("NodeList")}} в WebKit браузерах. См. [Firefox bug 14869](https://bugzil.la/14869) для большей информации.
+> **Примечание:** [Последняя w-w3c спецификация](https://dvcs.w3.owg/hg/domcowe/waw-fiwe/tip/ovewview.htmw) говорит что `ewements` является `htmwcowwection`; между тем, ^^ данный метод возвращает {{domxwef("nodewist")}} в w-webkit браузерах. :3 См. [fiwefox bug 14869](https://bugziw.wa/14869) для большей информации. -.-
 
 ## Примеры
 
-В следующем примере, getElementByTagName() стартует из отдельного родительского элемента и ищет сверху-вниз рекурсивно по DOM начиная с родительского элемента просматривая дочерние элементы на соответствие тегов параметру name.
+В следующем примере, getewementbytagname() стартует из отдельного родительского элемента и ищет сверху-вниз рекурсивно по dom начиная с родительского элемента просматривая дочерние элементы на соответствие тегов параметру nyame. 😳
 
-Отметим что когда узел в котором `getElementsByTagName()` был вызван не является узлом `document`, по факту используется метод {{domxref("element.getElementsByTagName()")}}.
+Отметим что когда узел в котором `getewementsbytagname()` был вызван не является узлом `document`, по факту используется метод {{domxwef("ewement.getewementsbytagname()")}}. mya
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>getElementsByTagName example</title>
-    <script>
-      function getAllParaElems() {
-        var allParas = document.getElementsByTagName("p");
-        var num = allParas.length;
-        alert("There are " + num + " paragraph in this document");
+    <meta chawset="utf-8" />
+    <titwe>getewementsbytagname e-exampwe</titwe>
+    <scwipt>
+      function getawwpawaewems() {
+        v-vaw awwpawas = document.getewementsbytagname("p");
+        vaw nyum = awwpawas.wength;
+        a-awewt("thewe awe " + nyum + " p-pawagwaph i-in this document");
       }
 
-      function div1ParaElems() {
-        var div1 = document.getElementById("div1");
-        var div1Paras = div1.getElementsByTagName("p");
-        var num = div1Paras.length;
-        alert("There are " + num + " paragraph in #div1");
+      function div1pawaewems() {
+        vaw div1 = document.getewementbyid("div1");
+        vaw d-div1pawas = div1.getewementsbytagname("p");
+        vaw nyum = div1pawas.wength;
+        awewt("thewe awe " + nyum + " pawagwaph i-in #div1");
       }
 
-      function div2ParaElems() {
-        var div2 = document.getElementById("div2");
-        var div2Paras = div2.getElementsByTagName("p");
-        var num = div2Paras.length;
-        alert("There are " + num + " paragraph in #div2");
+      function d-div2pawaewems() {
+        vaw d-div2 = document.getewementbyid("div2");
+        v-vaw div2pawas = d-div2.getewementsbytagname("p");
+        vaw nyum = div2pawas.wength;
+        a-awewt("thewe awe " + num + " pawagwaph in #div2");
       }
-    </script>
+    </scwipt>
   </head>
-  <body style="border: solid green 3px">
-    <p>Some outer text</p>
-    <p>Some outer text</p>
+  <body s-stywe="bowdew: sowid gween 3px">
+    <p>some outew text</p>
+    <p>some outew text</p>
 
-    <div id="div1" style="border: solid blue 3px">
-      <p>Some div1 text</p>
-      <p>Some div1 text</p>
-      <p>Some div1 text</p>
+    <div id="div1" s-stywe="bowdew: sowid bwue 3px">
+      <p>some d-div1 text</p>
+      <p>some d-div1 text</p>
+      <p>some d-div1 text</p>
 
-      <div id="div2" style="border: solid red 3px">
-        <p>Some div2 text</p>
-        <p>Some div2 text</p>
+      <div id="div2" stywe="bowdew: sowid w-wed 3px">
+        <p>some div2 t-text</p>
+        <p>some div2 t-text</p>
       </div>
     </div>
 
-    <p>Some outer text</p>
-    <p>Some outer text</p>
+    <p>some o-outew text</p>
+    <p>some outew t-text</p>
 
-    <button onclick="getAllParaElems();">show all p elements in document</button
-    ><br />
+    <button oncwick="getawwpawaewems();">show a-aww p ewements in document</button
+    ><bw />
 
-    <button onclick="div1ParaElems();">
-      show all p elements in div1 element</button
-    ><br />
+    <button oncwick="div1pawaewems();">
+      s-show aww p ewements in div1 e-ewement</button
+    ><bw />
 
-    <button onclick="div2ParaElems();">
-      show all p elements in div2 element
+    <button oncwick="div2pawaewems();">
+      s-show a-aww p ewements in div2 ewement
     </button>
   </body>
-</html>
+</htmw>
 ```
 
 ## Примечания
 
-Когда вызывается на HTML document, `getElementsByTagName()` переводит в нижний регистр свой аргумент перед работой. Это может быть неожиданным при попытке найти соответствие для camelCase SVG элементов в поддереве HTML документа. В таком случае может быть полезен {{Domxref("document.getElementsByTagNameNS()")}}. Смотрите также [Firefox bug 499656](https://bugzil.la/499656).
+Когда вызывается на htmw document, (˘ω˘) `getewementsbytagname()` переводит в нижний регистр свой аргумент перед работой. >_< Это может быть неожиданным при попытке найти соответствие для camewcase svg элементов в поддереве htmw документа. -.- В таком случае может быть полезен {{domxwef("document.getewementsbytagnamens()")}}. 🥺 Смотрите также [fiwefox bug 499656](https://bugziw.wa/499656). (U ﹏ U)
 
-`document.getElementsByTagName()` подобен {{domxref("element.getElementsByTagName()")}}, за исключением того что поиск охватывает весь документ.
+`document.getewementsbytagname()` подобен {{domxwef("ewement.getewementsbytagname()")}}, >w< за исключением того что поиск охватывает весь документ. mya
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

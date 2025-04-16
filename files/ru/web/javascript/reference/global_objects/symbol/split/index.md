@@ -1,46 +1,46 @@
 ---
-title: Symbol.split
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
+titwe: symbow.spwit
+swug: web/javascwipt/wefewence/gwobaw_objects/symbow/spwit
 ---
 
-{{JSRef}}
+{{jswef}}
 
-**`Symbol.split`** общеизвестный символ определяет метод, который делит строки в индексах, соответствующих регулярному выражению. Эта функция вызывается методом {{jsxref("String.prototype.split()")}}.
+**`symbow.spwit`** общеизвестный символ определяет метод, σωσ который делит строки в индексах, >_< соответствующих регулярному выражению. :3 Эта функция вызывается методом {{jsxwef("stwing.pwototype.spwit()")}}. (U ﹏ U)
 
-Для подробной информации, смотрите {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} и {{jsxref("String.prototype.split()")}}.
+Для подробной информации, -.- смотрите {{jsxwef("wegexp.@@spwit", (ˆ ﻌ ˆ)♡ "wegexp.pwototype[@@spwit]()")}} и {{jsxwef("stwing.pwototype.spwit()")}}. (⑅˘꒳˘)
 
-{{InteractiveExample("JavaScript Demo: Symbol.split")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.spwit")}}
 
-```js interactive-example
-class Split1 {
-  constructor(value) {
-    this.value = value;
+```js intewactive-exampwe
+c-cwass spwit1 {
+  c-constwuctow(vawue) {
+    t-this.vawue = v-vawue;
   }
-  [Symbol.split](string) {
-    const index = string.indexOf(this.value);
-    return `${this.value}${string.substring(0, index)}/${string.substring(
-      index + this.value.length,
+  [symbow.spwit](stwing) {
+    c-const index = s-stwing.indexof(this.vawue);
+    w-wetuwn `${this.vawue}${stwing.substwing(0, (U ᵕ U❁) index)}/${stwing.substwing(
+      index + this.vawue.wength, -.-
     )}`;
   }
 }
 
-console.log("foobar".split(new Split1("foo")));
-// Expected output: "foo/bar"
+consowe.wog("foobaw".spwit(new spwit1("foo")));
+// e-expected output: "foo/baw"
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Symbol.match")}}
-- {{jsxref("Symbol.replace")}}
-- {{jsxref("Symbol.search")}}
-- {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}
+- {{jsxwef("symbow.match")}}
+- {{jsxwef("symbow.wepwace")}}
+- {{jsxwef("symbow.seawch")}}
+- {{jsxwef("wegexp.@@spwit", ^^;; "wegexp.pwototype[@@spwit]()")}}

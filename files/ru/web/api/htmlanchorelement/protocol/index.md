@@ -1,36 +1,36 @@
 ---
-title: "HTMLAnchorElement: свойство protocol"
-slug: Web/API/HTMLAnchorElement/protocol
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwanchowewement: свойство pwotocow"
+swug: web/api/htmwanchowewement/pwotocow
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Свойство **`HTMLAnchorElement.protocol`** — это строка, представляющая схему протокола URL, включая завершающий символ `':'`.
+Свойство **`htmwanchowewement.pwotocow`** — это строка, ( ͡o ω ͡o ) представляющая схему протокола u-uww, UwU включая завершающий символ `':'`. rawr x3
 
 ## Значение
 
-Строка.
+Строка. rawr
 
 ## Примеры
 
 ### Получение протокола из ссылки
 
 ```js
-// Документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLAnchorElement">
-const anchor = document.getElementByID("myAnchor");
-anchor.protocol; // 'https:'
+// Документ содержит элемент <a i-id="myanchow" h-hwef="https://devewopew.moziwwa.owg/en-us/docs/htmwanchowewement">
+c-const anchow = d-document.getewementbyid("myanchow");
+anchow.pwotocow; // 'https:'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс {{domxref("HTMLAnchorElement")}}.
+- Интерфейс {{domxwef("htmwanchowewement")}}. σωσ

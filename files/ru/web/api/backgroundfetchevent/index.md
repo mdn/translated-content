@@ -1,56 +1,56 @@
 ---
-title: BackgroundFetchEvent
-slug: Web/API/BackgroundFetchEvent
+titwe: backgwoundfetchevent
+swug: web/api/backgwoundfetchevent
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch a-api")}}{{seecompattabwe}}
 
-Интерфейс **`BackgroundFetchEvent`** {{domxref('Background Fetch API','','',' ')}} это тип события для событий фоновых запросов, отправляемых в {{domxref("ServiceWorkerGlobalScope", "глобальный контекст выполнения сервис-воркера")}}.
+Интерфейс **`backgwoundfetchevent`** {{domxwef('backgwound f-fetch api','','',' ')}} это тип события для событий фоновых запросов, UwU отправляемых в {{domxwef("sewvicewowkewgwobawscope", rawr x3 "глобальный контекст выполнения сервис-воркера")}}. rawr
 
-Это тип события, передаваемый при `onbackgroundfetchabort` и `onbackgroundfetchclick`.
+Это тип события, σωσ передаваемый при `onbackgwoundfetchabowt` и `onbackgwoundfetchcwick`. σωσ
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## Конструктор
 
-- {{domxref("BackgroundFetchEvent.BackgroundFetchEvent()", "BackgroundFetchEvent()")}} {{Experimental_Inline}}
-  - : Создаёт новый объект `BackgroundFetchEvent`. Этот конструктор обычно не используется, так как браузер создаёт такие объекты самостоятельно и, затем, передаёт их для колбэков событий фоновых запросов.
+- {{domxwef("backgwoundfetchevent.backgwoundfetchevent()", >_< "backgwoundfetchevent()")}} {{expewimentaw_inwine}}
+  - : Создаёт новый объект `backgwoundfetchevent`. :3 Этот конструктор обычно не используется, (U ﹏ U) так как браузер создаёт такие объекты самостоятельно и, -.- затем, передаёт их для колбэков событий фоновых запросов. (ˆ ﻌ ˆ)♡
 
 ## Свойства
 
-_Наследует свойства от своего предка, {{domxref("Event")}}_.
+_Наследует свойства от своего предка, (⑅˘꒳˘) {{domxwef("event")}}_. (U ᵕ U❁)
 
-- {{domxref("BackgroundFetchEvent.registration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Возвращает {{domxref("BackgroundFetchRegistration")}}, для которого было инициализировано событие.
+- {{domxwef("backgwoundfetchevent.wegistwation")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : Возвращает {{domxwef("backgwoundfetchwegistwation")}}, -.- для которого было инициализировано событие. ^^;;
 
 ### Обработчики событий
 
-Отсутствуют.
+Отсутствуют. >_<
 
 ## Методы
 
-Отсутствуют.
+Отсутствуют. mya
 
 ## Примеры
 
-В этом примере, если пользователь кликнет по элементу, отображающему ход загрузки, то откроется новое окно. Текущий {{domxref("BackgroundFetchRegistration")}} возвращается вызовом `event.registration`.
+В этом примере, mya если пользователь кликнет по элементу, 😳 отображающему ход загрузки, то откроется новое окно. XD Текущий {{domxwef("backgwoundfetchwegistwation")}} возвращается вызовом `event.wegistwation`. :3
 
 ```js
-addEventListener("backgroundfetchclick", (event) => {
-  const bgFetch = event.registration;
+a-addeventwistenew("backgwoundfetchcwick", 😳😳😳 (event) => {
+  c-const b-bgfetch = event.wegistwation;
 
-  if (bgFetch.result === "success") {
-    clients.openWindow("/latest-podcasts");
-  } else {
-    clients.openWindow("/download-progress");
+  i-if (bgfetch.wesuwt === "success") {
+    c-cwients.openwindow("/watest-podcasts");
+  } ewse {
+    cwients.openwindow("/downwoad-pwogwess");
   }
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,32 +1,32 @@
 ---
-title: FileReader.error
-slug: Web/API/FileReader/error
+titwe: fiweweadew.ewwow
+swug: w-web/api/fiweweadew/ewwow
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
 ## Сводка
 
-Возвращает ошибку, произошедшую во время чтения файла.
+Возвращает ошибку, o.O произошедшую во время чтения файла. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-var error = instanceOfFileReader.error
+v-vaw ewwow = i-instanceoffiweweadew.ewwow
 ```
 
 ## Значение
 
-{{domxref("DOMError")}} содержит соответствующую ошибку. В Chrome 48+/Firefox 58+ значение возвращает {{domxref("DOMException")}} так как `DOMError` был удалён из DOM-стандарта.
+{{domxwef("domewwow")}} содержит соответствующую ошибку. (⑅˘꒳˘) В c-chwome 48+/fiwefox 58+ значение возвращает {{domxwef("domexception")}} так как `domewwow` был удалён из d-dom-стандарта. ( ͡o ω ͡o )
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

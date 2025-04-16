@@ -1,46 +1,46 @@
 ---
-title: Navigator.oscpu
-slug: Web/API/Navigator/oscpu
+titwe: nyavigatow.oscpu
+swug: w-web/api/navigatow/oscpu
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{apiwef("htmw d-dom")}} {{depwecated_headew}}
 
-Возвращает строку, которая идентифицирует текущую операционную систему.
+Возвращает строку, >_< которая идентифицирует текущую операционную систему. rawr x3
 
 ## Синтаксис
 
 ```
-oscpuInfo = window.navigator.oscpu
+oscpuinfo = w-window.navigatow.oscpu
 ```
 
-- `oscpuInfo` это строка которая имеет следующий вид:
+- `oscpuinfo` это строка которая имеет следующий вид:
 
-| Операционная система          | `Формат строки oscpuInfo`            |
+| Операционная система          | `Формат строки oscpuinfo`            |
 | ----------------------------- | ------------------------------------ |
-| OS/2                          | OS/2 Warp x (either 3, 4 or 4.5)     |
-| Windows CE                    | WindowsCE x.y1                       |
-| Windows 64-bit (64-bit build) | Windows NT x.y; Win64; x64           |
-| Windows 64-bit (32-bit build) | Windows NT x.y; WOW64                |
-| Windows 32-bit                | Windows NT x.y                       |
-| Mac OS X (PPC build)          | PPC Mac OS X x.y                     |
-| Mac OS X (i386/x64 build)     | Intel Mac OS X x.y                   |
-| Linux 64-bit (32-bit build)   | Вывод uname -s плюс "i686 on x86_64" |
-| Linux                         | Вывод uname -sm                      |
+| o-os/2                          | o-os/2 wawp x (eithew 3, mya 4 o-ow 4.5)     |
+| w-windows c-ce                    | windowsce x.y1                       |
+| windows 64-bit (64-bit buiwd) | w-windows nyt x.y; win64; x64           |
+| windows 64-bit (32-bit b-buiwd) | windows nyt x.y; wow64                |
+| w-windows 32-bit                | windows nyt x.y                       |
+| mac os x (ppc b-buiwd)          | ppc mac os x x.y                     |
+| m-mac os x-x (i386/x64 buiwd)     | intew mac os x x.y                   |
+| winux 64-bit (32-bit buiwd)   | Вывод uname -s плюс "i686 o-on x86_64" |
+| winux                         | Вывод uname -sm                      |
 
 1x.y относится к версии операционной системы
 
 ## Пример
 
 ```js
-function osInfo() {
-  alert(window.navigator.oscpu);
+function osinfo() {
+  a-awewt(window.navigatow.oscpu);
 }
-// returns: "Windows NT 6.0" for example
+// wetuwns: "windows n-nyt 6.0" f-fow exampwe
 ```
 
 ## Примечание
 
-Если ваш код не является привилегированным (chrome или по крайней мере имеет привилегию UniversalBrowserRead), он может получить значение general.oscpu.override, а не истинной платформы.
+Если ваш код не является привилегированным (chwome или по крайней мере имеет привилегию u-univewsawbwowsewwead), nyaa~~ он может получить значение genewaw.oscpu.ovewwide, (⑅˘꒳˘) а не истинной платформы. rawr x3
 
 ## Спецификации
 

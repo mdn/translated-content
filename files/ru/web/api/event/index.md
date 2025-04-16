@@ -1,147 +1,147 @@
 ---
-title: Event
-slug: Web/API/Event
+titwe: event
+swug: web/api/event
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Интерфейс **`Event`** представляет собой любое событие, которое происходит в [DOM](/ru/docs/Web/API/Document_Object_Model); некоторые из них генерируемые пользователем (клик мышью или нажатие клавиши на клавиатуре), а некоторые - генерируемые API (события, обозначающие завершение процесса анимации, приостановка видео и т.д.). Существует много типов событий, некоторые из них используют интерфейсы, базирующиеся на главном интерфейсе `Event`. `Event` содержит общие свойства и методы для всех событий.
+Интерфейс **`event`** представляет собой любое событие, rawr x3 которое происходит в [dom](/wu/docs/web/api/document_object_modew); некоторые из них генерируемые пользователем (клик мышью или нажатие клавиши на клавиатуре), nyaa~~ а некоторые - генерируемые a-api (события, /(^•ω•^) обозначающие завершение процесса анимации, rawr приостановка видео и т.д.). OwO Существует много типов событий, (U ﹏ U) некоторые из них используют интерфейсы, >_< базирующиеся на главном интерфейсе `event`. rawr x3 `event` содержит общие свойства и методы для всех событий. mya
 
-## Интерфейсы, основанные на `Event`
+## Интерфейсы, nyaa~~ основанные на `event`
 
-Ниже приведён список интерфейсов, основанных на главном интерфейсе `Event`, а также указаны ссылки на них в документации MDN API. Заметьте, что имена всех интерфейсов оканчиваются на "Event".
+Ниже приведён список интерфейсов, (⑅˘꒳˘) основанных на главном интерфейсе `event`, rawr x3 а также указаны ссылки на них в документации m-mdn api. (✿oωo) Заметьте, (ˆ ﻌ ˆ)♡ что имена всех интерфейсов оканчиваются на "event". (˘ω˘)
 
-- {{domxref("AnimationEvent")}}
-- {{domxref("AudioProcessingEvent")}}
-- {{domxref("BeforeInputEvent")}}
-- {{domxref("BeforeUnloadEvent")}}
-- {{domxref("BlobEvent")}}
-- {{domxref("ClipboardEvent")}}
-- {{domxref("CloseEvent")}}
-- {{domxref("CompositionEvent")}}
-- {{domxref("CSSFontFaceLoadEvent")}}
-- {{domxref("CustomEvent")}}
-- {{domxref("DeviceLightEvent")}}
-- {{domxref("DeviceMotionEvent")}}
-- {{domxref("DeviceOrientationEvent")}}
-- {{domxref("DeviceProximityEvent")}}
-- {{domxref("DOMTransactionEvent")}}
-- {{domxref("DragEvent")}}
-- {{domxref("EditingBeforeInputEvent")}}
-- {{domxref("ErrorEvent")}}
-- {{domxref("FetchEvent")}}
-- {{domxref("FocusEvent")}}
-- {{domxref("GamepadEvent")}}
-- {{domxref("HashChangeEvent")}}
-- {{domxref("IDBVersionChangeEvent")}}
-- {{domxref("InputEvent")}}
-- {{domxref("KeyboardEvent")}}
-- {{domxref("MediaStreamEvent")}}
-- {{domxref("MessageEvent")}}
-- {{domxref("MouseEvent")}}
-- {{domxref("MutationEvent")}}
-- {{domxref("OfflineAudioCompletionEvent")}}
-- {{domxref("PageTransitionEvent")}}
-- {{domxref("PointerEvent")}}
-- {{domxref("PopStateEvent")}}
-- {{domxref("ProgressEvent")}}
-- {{domxref("RelatedEvent")}}
-- {{domxref("RTCDataChannelEvent")}}
-- {{domxref("RTCIdentityErrorEvent")}}
-- {{domxref("RTCIdentityEvent")}}
-- {{domxref("RTCPeerConnectionIceEvent")}}
-- {{domxref("SensorEvent")}}
-- {{domxref("StorageEvent")}}
-- {{domxref("SVGEvent")}}
-- {{domxref("SVGZoomEvent")}}
-- {{domxref("TimeEvent")}}
-- {{domxref("TouchEvent")}}
-- {{domxref("TrackEvent")}}
-- {{domxref("TransitionEvent")}}
-- {{domxref("UIEvent")}}
-- {{domxref("UserProximityEvent")}}
-- {{domxref("WebGLContextEvent")}}
-- {{domxref("WheelEvent")}}
+- {{domxwef("animationevent")}}
+- {{domxwef("audiopwocessingevent")}}
+- {{domxwef("befoweinputevent")}}
+- {{domxwef("befoweunwoadevent")}}
+- {{domxwef("bwobevent")}}
+- {{domxwef("cwipboawdevent")}}
+- {{domxwef("cwoseevent")}}
+- {{domxwef("compositionevent")}}
+- {{domxwef("cssfontfacewoadevent")}}
+- {{domxwef("customevent")}}
+- {{domxwef("devicewightevent")}}
+- {{domxwef("devicemotionevent")}}
+- {{domxwef("deviceowientationevent")}}
+- {{domxwef("devicepwoximityevent")}}
+- {{domxwef("domtwansactionevent")}}
+- {{domxwef("dwagevent")}}
+- {{domxwef("editingbefoweinputevent")}}
+- {{domxwef("ewwowevent")}}
+- {{domxwef("fetchevent")}}
+- {{domxwef("focusevent")}}
+- {{domxwef("gamepadevent")}}
+- {{domxwef("hashchangeevent")}}
+- {{domxwef("idbvewsionchangeevent")}}
+- {{domxwef("inputevent")}}
+- {{domxwef("keyboawdevent")}}
+- {{domxwef("mediastweamevent")}}
+- {{domxwef("messageevent")}}
+- {{domxwef("mouseevent")}}
+- {{domxwef("mutationevent")}}
+- {{domxwef("offwineaudiocompwetionevent")}}
+- {{domxwef("pagetwansitionevent")}}
+- {{domxwef("pointewevent")}}
+- {{domxwef("popstateevent")}}
+- {{domxwef("pwogwessevent")}}
+- {{domxwef("wewatedevent")}}
+- {{domxwef("wtcdatachannewevent")}}
+- {{domxwef("wtcidentityewwowevent")}}
+- {{domxwef("wtcidentityevent")}}
+- {{domxwef("wtcpeewconnectioniceevent")}}
+- {{domxwef("sensowevent")}}
+- {{domxwef("stowageevent")}}
+- {{domxwef("svgevent")}}
+- {{domxwef("svgzoomevent")}}
+- {{domxwef("timeevent")}}
+- {{domxwef("touchevent")}}
+- {{domxwef("twackevent")}}
+- {{domxwef("twansitionevent")}}
+- {{domxwef("uievent")}}
+- {{domxwef("usewpwoximityevent")}}
+- {{domxwef("webgwcontextevent")}}
+- {{domxwef("wheewevent")}}
 
 ## Конструктор
 
-- {{domxref("Event.Event", "Event()")}}
-  - : Создаёт объект `Event` и возвращает его вызывающему.
+- {{domxwef("event.event", (⑅˘꒳˘) "event()")}}
+  - : Создаёт объект `event` и возвращает его вызывающему. (///ˬ///✿)
 
 ## Свойства
 
-- {{domxref("Event.bubbles")}} {{readonlyinline}}
-  - : Логическое значение, указывающее, всплыло ли событие вверх по DOM или нет.
-- {{domxref("Event.cancelBubble")}}
-  - : Историческое название синонима {{domxref("Event.stopPropagation()")}}. Если установить значение в `true` до возврата из обработчика события (Event Handler), то событие не будет распространяться дальше (например, на обработчики для родительских узлов).
-- {{domxref("Event.cancelable")}} {{readonlyinline}}
-  - : Логическое значение, показывающее возможность отмены события.
-- {{domxref("Event.composed")}} {{ReadOnlyInline}}
-  - : Логическое значение, показывающее может или нет событие всплывать через границы между shadow DOM (внутренний DOM конкретного элемента) и обычного DOM документа.
-- {{domxref("Event.currentTarget")}} {{readonlyinline}}
-  - : Ссылка на текущий зарегистрированный объект, на котором обрабатывается событие. Это объект, которому планируется отправка события; поведение можно изменить с использованием перенаправления (_retargeting_).
-- {{domxref("Event.deepPath")}} {{non-standard_inline}}
-  - : {{jsxref("Array", "Массив")}} DOM-{{domxref("Node", "узлов")}}, через которые всплывало событие.
-- {{domxref("Event.defaultPrevented")}} {{readonlyinline}}
-  - : Показывает, была ли для события вызвана функция {{domxref("event.preventDefault()")}}.
-- {{domxref("Event.eventPhase")}} {{readonlyinline}}
-  - : Указывает фазу процесса обработки события.
-- {{domxref("Event.explicitOriginalTarget")}} {{non-standard_inline}} {{readonlyinline}}
-  - : Явный первоначальный целевой объект события (Mozilla-специфичный). Не может содержать [анонимного контента](/ru/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content).
-- {{domxref("Event.originalTarget")}} {{non-standard_inline}} {{readonlyinline}}
-  - : Первоначальный целевой объект события до перенаправлений (Mozilla-специфичный). Может быть из [анонимного контента](/ru/docs/Mozilla/Tech/XBL/XBL_1.0_Reference/Anonymous_Content).
-- {{domxref("Event.returnValue")}} {{non-standard_inline}}
-  - : Нестандартная альтернатива (оставшаяся от старых версий Microsoft Internet Explorer) для {{domxref("Event.preventDefault()")}} и {{domxref("Event.defaultPrevented")}}.
-- {{domxref("Event.scoped")}} {{readonlyinline}}
-  - : {{jsxref("Boolean", "Логическое значение")}}, показывающее всплывает ли данное событие через shadow root (внутренний DOM-элемента). Это свойство было переименовано в {{domxref("Event.composed", "composed")}}.
-- {{domxref("Event.srcElement")}} {{non-standard_inline}}
-  - : Нестандартный синоним (остался от старых версий Microsoft Internet Explorer) для {{domxref("Event.target")}}.
-- {{domxref("Event.target")}} {{readonlyinline}}
-  - : Ссылка на целевой объект, на котором произошло событие.
-- {{domxref("Event.timeStamp")}} {{readonlyinline}}
-  - : Время, когда событие было создано (в миллисекундах). По спецификации это время от начала Эпохи (Unix Epoch), но в действительности в разных браузерах определяется по-разному; кроме того, ведётся работа по изменению его на {{domxref("DOMHighResTimeStamp")}} тип.
-- {{domxref("Event.type")}} {{readonlyinline}}
-  - : Название события (без учёта регистра символов).
-- {{domxref("Event.isTrusted")}} {{readonlyinline}}
-  - : Показывает было или нет событие инициировано браузером (например, по клику мышью) или из скрипта (например, через функцию создания события, такую как [event.initEvent](/ru/docs/Web/API/Event/initEvent))
+- {{domxwef("event.bubbwes")}} {{weadonwyinwine}}
+  - : Логическое значение, 😳😳😳 указывающее, всплыло ли событие вверх по dom или нет. 🥺
+- {{domxwef("event.cancewbubbwe")}}
+  - : Историческое название синонима {{domxwef("event.stoppwopagation()")}}. mya Если установить значение в `twue` до возврата из обработчика события (event h-handwew), то событие не будет распространяться дальше (например, 🥺 на обработчики для родительских узлов). >_<
+- {{domxwef("event.cancewabwe")}} {{weadonwyinwine}}
+  - : Логическое значение, показывающее возможность отмены события. >_<
+- {{domxwef("event.composed")}} {{weadonwyinwine}}
+  - : Логическое значение, (⑅˘꒳˘) показывающее может или нет событие всплывать через границы между s-shadow dom (внутренний d-dom конкретного элемента) и обычного d-dom документа. /(^•ω•^)
+- {{domxwef("event.cuwwenttawget")}} {{weadonwyinwine}}
+  - : Ссылка на текущий зарегистрированный объект, rawr x3 на котором обрабатывается событие. (U ﹏ U) Это объект, (U ﹏ U) которому планируется отправка события; поведение можно изменить с использованием перенаправления (_wetawgeting_). (⑅˘꒳˘)
+- {{domxwef("event.deeppath")}} {{non-standawd_inwine}}
+  - : {{jsxwef("awway", òωó "Массив")}} d-dom-{{domxwef("node", "узлов")}}, ʘwʘ через которые всплывало событие. /(^•ω•^)
+- {{domxwef("event.defauwtpwevented")}} {{weadonwyinwine}}
+  - : Показывает, ʘwʘ была ли для события вызвана функция {{domxwef("event.pweventdefauwt()")}}. σωσ
+- {{domxwef("event.eventphase")}} {{weadonwyinwine}}
+  - : Указывает фазу процесса обработки события. OwO
+- {{domxwef("event.expwicitowiginawtawget")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : Явный первоначальный целевой объект события (moziwwa-специфичный). 😳😳😳 Не может содержать [анонимного контента](/wu/docs/moziwwa/tech/xbw/xbw_1.0_wefewence/anonymous_content). 😳😳😳
+- {{domxwef("event.owiginawtawget")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : Первоначальный целевой объект события до перенаправлений (moziwwa-специфичный). o.O Может быть из [анонимного контента](/wu/docs/moziwwa/tech/xbw/xbw_1.0_wefewence/anonymous_content). ( ͡o ω ͡o )
+- {{domxwef("event.wetuwnvawue")}} {{non-standawd_inwine}}
+  - : Нестандартная альтернатива (оставшаяся от старых версий m-micwosoft intewnet expwowew) для {{domxwef("event.pweventdefauwt()")}} и {{domxwef("event.defauwtpwevented")}}. (U ﹏ U)
+- {{domxwef("event.scoped")}} {{weadonwyinwine}}
+  - : {{jsxwef("boowean", (///ˬ///✿) "Логическое значение")}}, >w< показывающее всплывает ли данное событие через shadow woot (внутренний dom-элемента). rawr Это свойство было переименовано в {{domxwef("event.composed", mya "composed")}}.
+- {{domxwef("event.swcewement")}} {{non-standawd_inwine}}
+  - : Нестандартный синоним (остался от старых версий micwosoft i-intewnet expwowew) для {{domxwef("event.tawget")}}. ^^
+- {{domxwef("event.tawget")}} {{weadonwyinwine}}
+  - : Ссылка на целевой объект, 😳😳😳 на котором произошло событие. mya
+- {{domxwef("event.timestamp")}} {{weadonwyinwine}}
+  - : Время, 😳 когда событие было создано (в миллисекундах). -.- По спецификации это время от начала Эпохи (unix epoch), 🥺 но в действительности в разных браузерах определяется по-разному; кроме того, o.O ведётся работа по изменению его на {{domxwef("domhighwestimestamp")}} тип. /(^•ω•^)
+- {{domxwef("event.type")}} {{weadonwyinwine}}
+  - : Название события (без учёта регистра символов). nyaa~~
+- {{domxwef("event.istwusted")}} {{weadonwyinwine}}
+  - : Показывает было или нет событие инициировано браузером (например, nyaa~~ по клику мышью) или из скрипта (например, :3 через функцию создания события, 😳😳😳 такую как [event.initevent](/wu/docs/web/api/event/initevent))
 
 ## Методы
 
-- {{domxref("Event.createEvent()")}}
+- {{domxwef("event.cweateevent()")}}
 
-  - : Создаёт новое событие, которое затем должно быть проинициализировано вызовом его метода `initEvent()`.
+  - : Создаёт новое событие, (˘ω˘) которое затем должно быть проинициализировано вызовом его метода `initevent()`. ^^
 
-- {{domxref("Event.initEvent()")}} {{deprecated_inline}}
-  - : Инициализация значений созданного с помощью [Document.createEvent()](/ru/docs/Web/API/Document/createEvent) события. Если событие уже отправлено, то эта функция ничего не делает.
-- {{domxref("Event.preventBubble()")}} {{non-standard_inline}}
-  - : Предотвращает всплытие события. Устаревшая, используйте вместо неё {{domxref("event.stopPropagation")}}.
-- {{domxref("Event.preventCapture()")}} {{non-standard_inline}}
-  - : Устаревшая, используйте вместо неё {{domxref("event.stopPropagation")}}.
-- {{domxref("Event.preventDefault()")}}
-  - : Отменяет событие (если его возможно отменить).
-- {{domxref("Event.stopImmediatePropagation()")}}
-  - : Для конкретного события не будет больше вызвано обработчиков. Ни тех, которые привязаны к этому же элементу (на котором работает обработчик, который вызывает этот Event.stopImmediatePropagation()), ни других, которые могли бы вызваться при распространении события позже (например, в фазе перехвата - capture).
-- {{domxref("Event.stopPropagation()")}}
-  - : Остановка распространения события далее по DOM.
-- {{domxref("Event.getPreventDefault()")}} {{non-standard_inline}}
-  - : Нестандартная. Возвращает значение {{domxref("Event.defaultPrevented")}}. Используйте вместо неё {{domxref("Event.defaultPrevented")}}.
+- {{domxwef("event.initevent()")}} {{depwecated_inwine}}
+  - : Инициализация значений созданного с помощью [document.cweateevent()](/wu/docs/web/api/document/cweateevent) события. :3 Если событие уже отправлено, -.- то эта функция ничего не делает. 😳
+- {{domxwef("event.pweventbubbwe()")}} {{non-standawd_inwine}}
+  - : Предотвращает всплытие события. mya Устаревшая, (˘ω˘) используйте вместо неё {{domxwef("event.stoppwopagation")}}. >_<
+- {{domxwef("event.pweventcaptuwe()")}} {{non-standawd_inwine}}
+  - : Устаревшая, -.- используйте вместо неё {{domxwef("event.stoppwopagation")}}. 🥺
+- {{domxwef("event.pweventdefauwt()")}}
+  - : Отменяет событие (если его возможно отменить). (U ﹏ U)
+- {{domxwef("event.stopimmediatepwopagation()")}}
+  - : Для конкретного события не будет больше вызвано обработчиков. >w< Ни тех, mya которые привязаны к этому же элементу (на котором работает обработчик, >w< который вызывает этот event.stopimmediatepwopagation()), nyaa~~ ни других, (✿oωo) которые могли бы вызваться при распространении события позже (например, ʘwʘ в фазе перехвата - c-captuwe). (ˆ ﻌ ˆ)♡
+- {{domxwef("event.stoppwopagation()")}}
+  - : Остановка распространения события далее по dom. 😳😳😳
+- {{domxwef("event.getpweventdefauwt()")}} {{non-standawd_inwine}}
+  - : Нестандартная. :3 Возвращает значение {{domxwef("event.defauwtpwevented")}}. OwO Используйте вместо неё {{domxwef("event.defauwtpwevented")}}. (U ﹏ U)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Типы событий: [Event reference](/ru/docs/Web/Events)
-- [Сравнение Event Targets](/ru/docs/Learn_web_development/Core/Scripting/Event_bubbling) (target и currentTarget и relatedTarget и originalTarget)
-- [Creating and triggering custom events](/ru/docs/Web/Events/Creating_and_triggering_events)
-- Для разработчиков дополнений Firefox:
+- Типы событий: [event w-wefewence](/wu/docs/web/events)
+- [Сравнение event tawgets](/wu/docs/weawn_web_devewopment/cowe/scwipting/event_bubbwing) (tawget и cuwwenttawget и w-wewatedtawget и owiginawtawget)
+- [cweating a-and twiggewing c-custom events](/wu/docs/web/events/cweating_and_twiggewing_events)
+- Для разработчиков дополнений fiwefox:
 
-  - [Listening to events in Firefox extensions](/ru/docs/Listening_to_events_in_Firefox_extensions)
-  - [Listening to events on all tabs](/ru/docs/Listening_to_events_on_all_tabs)
+  - [wistening to events in fiwefox extensions](/wu/docs/wistening_to_events_in_fiwefox_extensions)
+  - [wistening to events o-on aww tabs](/wu/docs/wistening_to_events_on_aww_tabs)
 
-- [Mozilla related events in real life at wiki.mozilla.org](https://wiki.mozilla.org/Events)
+- [moziwwa wewated events in weaw wife at wiki.moziwwa.owg](https://wiki.moziwwa.owg/events)

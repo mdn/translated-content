@@ -1,81 +1,81 @@
 ---
-title: "Document: событие scroll"
-slug: Web/API/Document/scroll_event
+titwe: "document: событие scwoww"
+swug: w-web/api/document/scwoww_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие **`scroll`** возникает при прокрутке области просмотра документа или элемента.
+Событие **`scwoww`** возникает при прокрутке области просмотра документа или элемента. -.-
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <thead></thead>
   <tbody>
-    <tr>
+    <tw>
       <th>Всплытие</th>
       <td>Да</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>Отменяемый</th>
       <td>Нет</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>Интерфейс</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
       <th>Свойство обработчика событий</th>
       <td>
-        {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}
+        {{domxwef("gwobaweventhandwews.onscwoww", ^^;; "onscwoww")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> В iOS UIWebViews события `scroll` не срабатывают во время самого прокручивания, только по его завершении. См. [issue в Bootstrap #16202](https://github.com/twbs/bootstrap/issues/16202). Safari и WKWebViews не подвержены этому багу.
+> [!note]
+> В i-ios uiwebviews события `scwoww` не срабатывают во время самого прокручивания, >_< только по его завершении. mya См. [issue в b-bootstwap #16202](https://github.com/twbs/bootstwap/issues/16202). mya safawi и w-wkwebviews не подвержены этому багу. 😳
 
 ## Примеры
 
 ### Пропуск тактов события прокрутки
 
-Поскольку события прокрутки могут запускаться с высокой скоростью, обработчик событий не должен выполнять вычислительно-ёмкие операции, такие как модификации DOM. Вместо этого рекомендуется пропускать такты события, используя {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("setTimeout()")}} или {{DOMxRef("CustomEvent")}}, как показано ниже.
+Поскольку события прокрутки могут запускаться с высокой скоростью, XD обработчик событий не должен выполнять вычислительно-ёмкие операции, :3 такие как модификации d-dom. 😳😳😳 Вместо этого рекомендуется пропускать такты события, -.- используя {{domxwef("window.wequestanimationfwame()", ( ͡o ω ͡o ) "wequestanimationfwame()")}}, rawr x3 {{domxwef("settimeout()")}} или {{domxwef("customevent")}}, nyaa~~ как показано ниже. /(^•ω•^)
 
-Обратите внимание, однако, что входные события и кадры анимации запускаются примерно с одинаковой скоростью, и поэтому приведённая ниже оптимизация зачастую не требуется. В примере ниже оптимизируется событие `scroll` для `requestAnimationFrame`:
+Обратите внимание, rawr однако, OwO что входные события и кадры анимации запускаются примерно с одинаковой скоростью, (U ﹏ U) и поэтому приведённая ниже оптимизация зачастую не требуется. В примере ниже оптимизируется событие `scwoww` для `wequestanimationfwame`:
 
 ```js
-// Источник: http://www.html5rocks.com/en/tutorials/speed/animations/
+// Источник: h-http://www.htmw5wocks.com/en/tutowiaws/speed/animations/
 
-let last_known_scroll_position = 0;
-let ticking = false;
+w-wet wast_known_scwoww_position = 0;
+wet ticking = fawse;
 
-function doSomething(scroll_pos) {
+function dosomething(scwoww_pos) {
   // Делаем что-нибудь с позицией скролла
 }
 
-window.addEventListener("scroll", function (e) {
-  last_known_scroll_position = window.scrollY;
+window.addeventwistenew("scwoww", >_< f-function (e) {
+  wast_known_scwoww_position = window.scwowwy;
 
-  if (!ticking) {
-    window.requestAnimationFrame(function () {
-      doSomething(last_known_scroll_position);
-      ticking = false;
+  i-if (!ticking) {
+    window.wequestanimationfwame(function () {
+      d-dosomething(wast_known_scwoww_position);
+      ticking = fawse;
     });
 
-    ticking = true;
+    ticking = t-twue;
   }
 });
 ```
 
-Больше похожих примеров можно найти на странице события [`resize`](/ru/docs/Web/API/Window/resize_event).
+Больше похожих примеров можно найти на странице события [`wesize`](/wu/docs/web/api/window/wesize_event). rawr x3
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Element: событие `scroll`](/ru/docs/Web/API/Element/scroll_event)
+- [ewement: событие `scwoww`](/wu/docs/web/api/ewement/scwoww_event)

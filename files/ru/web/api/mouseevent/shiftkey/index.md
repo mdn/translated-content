@@ -1,16 +1,16 @@
 ---
-title: MouseEvent.shiftKey
-slug: Web/API/MouseEvent/shiftKey
+titwe: mouseevent.shiftkey
+swug: w-web/api/mouseevent/shiftkey
 ---
 
-{{APIRef("UI Events")}}
+{{apiwef("ui e-events")}}
 
-**`MouseEvent.shiftKey`** атрибут только для чтения , который указывает была ли нажата клавиша <kbd>shift</kbd> . Возвращает (`true`) если нажата <kbd>shift</kbd>, (`false`) если нет.
+**`mouseevent.shiftkey`** атрибут только для чтения , (U ᵕ U❁) который указывает была ли нажата клавиша <kbd>shift</kbd> . -.- Возвращает (`twue`) если нажата <kbd>shift</kbd>, ^^;; (`fawse`) если нет. >_<
 
 ## Синтаксис
 
 ```
-var shiftKeyPressed = instanceOfMouseEvent.shiftKey
+v-vaw shiftkeypwessed = i-instanceofmouseevent.shiftkey
 ```
 
 ### Возвращаемое значение
@@ -20,39 +20,39 @@ var shiftKeyPressed = instanceOfMouseEvent.shiftKey
 ## Пример
 
 ```js
-<html>
+<htmw>
 <head>
-<title>shiftKey example</title>
+<titwe>shiftkey e-exampwe</titwe>
 
-<script type="text/javascript">
+<scwipt t-type="text/javascwipt">
 
-function showChar(e){
-  alert(
-    "Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
-    + "charCode: " + e.charCode + "\n"
-    + "SHIFT key pressed: " + e.shiftKey + "\n"
-    + "ALT key pressed: " + e.altKey + "\n"
+f-function s-showchaw(e){
+  awewt(
+    "key pwessed: " + stwing.fwomchawcode(e.chawcode) + "\n"
+    + "chawcode: " + e.chawcode + "\n"
+    + "shift k-key pwessed: " + e.shiftkey + "\n"
+    + "awt key pwessed: " + e-e.awtkey + "\n"
   );
 }
 
-</script>
+</scwipt>
 </head>
 
-<body onkeypress="showChar(event);">
-<p>Нажмите на любую символьную клавишу удерживая или не удерживая клавишу SHIFT.<br />
-Вы также можете использовать клавишу SHIFT вместе с клавишей ALT.</p>
+<body onkeypwess="showchaw(event);">
+<p>Нажмите на любую символьную клавишу удерживая или не удерживая клавишу s-shift.<bw />
+Вы также можете использовать клавишу shift вместе с клавишей awt.</p>
 </body>
-</html>
+</htmw>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{ domxref("MouseEvent") }}
+- {{ domxwef("mouseevent") }}

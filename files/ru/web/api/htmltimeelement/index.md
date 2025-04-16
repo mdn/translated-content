@@ -1,33 +1,33 @@
 ---
-title: HTMLTimeElement
-slug: Web/API/HTMLTimeElement
+titwe: htmwtimeewement
+swug: w-web/api/htmwtimeewement
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-**`HTMLTimeElement`** даёт специальные свойства (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) для управления {{HTMLElement("time")}} элементами.
+**`htmwtimeewement`** даёт специальные свойства (beyond t-the weguwaw {{domxwef("htmwewement")}} i-intewface i-it awso has a-avaiwabwe to i-it by inhewitance) для управления {{htmwewement("time")}} элементами. ( ͡o ω ͡o )
 
-{{InheritanceDiagram(600, 120)}}
+{{inhewitancediagwam(600, UwU 120)}}
 
 ## Свойства
 
-_Наследует свойства от родителя {{domxref("HTMLElement")}}._
+_Наследует свойства от родителя {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLTimeElement.dateTime")}}
-  - : Это {{domxref("DOMString")}} который отражает [`datetime`](/ru/docs/Web/HTML/Element/time#datetime) HTML атрибут, содержащий понятный для машин формат даты и времени.
+- {{domxwef("htmwtimeewement.datetime")}}
+  - : Это {{domxwef("domstwing")}} который отражает [`datetime`](/wu/docs/web/htmw/ewement/time#datetime) h-htmw атрибут, rawr x3 содержащий понятный для машин формат даты и времени. rawr
 
 ## Методы
 
-_Нет определённого метода; наследует его у родителя, {{domxref("HTMLElement")}}._
+_Нет определённого метода; наследует его у родителя, σωσ {{domxwef("htmwewement")}}._
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- HTML-элемент, реализующий данный интерфейс: {{HTMLElement("time")}}.
+- htmw-элемент, σωσ реализующий данный интерфейс: {{htmwewement("time")}}. >_<

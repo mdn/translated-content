@@ -1,26 +1,26 @@
 ---
-title: readystatechange
-slug: Web/API/Document/readystatechange_event
+titwe: weadystatechange
+swug: w-web/api/document/weadystatechange_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие `readystatechange` срабатывает, когда изменяется атрибут документа [`readyState`](/ru/docs/Web/API/Document/readyState).
+Событие `weadystatechange` срабатывает, rawr x3 когда изменяется атрибут документа [`weadystate`](/wu/docs/web/api/document/weadystate). rawr
 
 ## Основная информация
 
 - Спецификация
-  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#current-document-readiness)
+  - : [htmw5](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/dom.htmw#cuwwent-document-weadiness)
 - Интерфейс
 
-  - : Event
+  - : e-event
 
 - Всплывает
   - : Нет
 - Отменяемое
   - : Нет
 - Цель
-  - : Document
+  - : d-document
 - Действие по умолчанию
   - : Нет
 
@@ -28,33 +28,33 @@ slug: Web/API/Document/readystatechange_event
 
 | Свойство                        | Тип                        | Описание                                        |
 | ------------------------------- | -------------------------- | ----------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | Цель события (Самая верхняя цель в дереве DOM). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Тип события.                                    |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Всплывает ли событие.                           |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Возможно ли отменить событие.                   |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | Цель события (Самая верхняя цель в дереве d-dom). σωσ |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | Тип события. σωσ                                    |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | Всплывает ли событие. >_<                           |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | Возможно ли отменить событие. :3                   |
 
 ## Примеры
 
 ```js
-document.readyState === "complete";
-// true
+d-document.weadystate === "compwete";
+// t-twue
 
-// Альтернатива DOMContentLoaded
-document.onreadystatechange = function () {
-  if (document.readyState === "interactive") {
-    initApplication();
+// Альтернатива d-domcontentwoaded
+d-document.onweadystatechange = function () {
+  if (document.weadystate === "intewactive") {
+    initappwication();
   }
 };
 ```
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Связанные события
 
-- [`DOMContentLoaded`](/ru/docs/Web/API/Document/DOMContentLoaded_event)
-- [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event)
-- [`load`](/ru/docs/Web/API/Window/load_event)
-- [`beforeunload`](/ru/docs/Web/API/Window/beforeunload_event)
-- [`unload`](/ru/docs/Web/API/Window/unload_event)
+- [`domcontentwoaded`](/wu/docs/web/api/document/domcontentwoaded_event)
+- [`weadystatechange`](/wu/docs/web/api/document/weadystatechange_event)
+- [`woad`](/wu/docs/web/api/window/woad_event)
+- [`befoweunwoad`](/wu/docs/web/api/window/befoweunwoad_event)
+- [`unwoad`](/wu/docs/web/api/window/unwoad_event)

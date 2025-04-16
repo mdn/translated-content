@@ -1,61 +1,61 @@
 ---
-title: Формат Web Video Text Tracks (WebVTT)
-slug: Web/API/WebVTT_API
+titwe: Формат web video t-text twacks (webvtt)
+s-swug: web/api/webvtt_api
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-**Формат Web Video Text Tracks** (**WebVTT**)это формат для отображения синхронизированных текстовых треков (такие как субтитры или подписи) с помощью элементов {{HTMLElement("track")}}. Основная цель файлов WebVTT — добавить текстовые наложения к элементам {{HTMLElement("video")}}. WebVTT является текстовым форматом, который должен быть закодирован с использованием {{Glossary("UTF-8")}}. В этих файлах вы можете использовать пробелы и табы для отступов. Существует также небольшой API для представления и управления этими дорожками и данными, необходимыми для отображения текста в нужное время.
+**Формат w-web video t-text twacks** (**webvtt**)это формат для отображения синхронизированных текстовых треков (такие как субтитры или подписи) с помощью элементов {{htmwewement("twack")}}. (˘ω˘) Основная цель файлов w-webvtt — добавить текстовые наложения к элементам {{htmwewement("video")}}. 😳 w-webvtt является текстовым форматом, который должен быть закодирован с использованием {{gwossawy("utf-8")}}. (ꈍᴗꈍ) В этих файлах вы можете использовать пробелы и табы для отступов. :3 Существует также небольшой a-api для представления и управления этими дорожками и данными, /(^•ω•^) необходимыми для отображения текста в нужное время. ^^;;
 
-## Файлы WebVTT
+## Файлы w-webvtt
 
-MIME тип файлов WebVTT — `text/vtt`.
+mime тип файлов webvtt — `text/vtt`. o.O
 
-Файл WebVTT (`.vtt`) содержит реплики (cues), которые могут быть одной строкой или несколькими строками, как показано ниже:
+Файл webvtt (`.vtt`) содержит реплики (cues), 😳 которые могут быть одной строкой или несколькими строками, UwU как показано ниже:
 
 ```
-WEBVTT
+webvtt
 
 00:01.000 --> 00:04.000
-Никогда не пейте жидкий азот.
+Никогда не пейте жидкий азот. >w<
 
 00:05.000 --> 00:09.000
-- Это пробьёт ваш желудок.
+- Это пробьёт ваш желудок. o.O
 - Вы можете умереть.
 ```
 
-## Тело WebVTT файла
+## Тело webvtt файла
 
-Структура WebVTT состоит из следующих компонентов, некоторые из которых являются необязательными, в следующем порядке:
+Структура w-webvtt состоит из следующих компонентов, (˘ω˘) некоторые из которых являются необязательными, òωó в следующем порядке:
 
-- Необязательный знак порядка байтов (BOM).
-- Строка "`WEBVTT`".
-- Дополнительный текстовый заголовок справа от `WEBVTT.`
+- Необязательный знак порядка байтов (bom). nyaa~~
+- Строка "`webvtt`". ( ͡o ω ͡o )
+- Дополнительный текстовый заголовок справа от `webvtt.`
 
-  - Должен быть хотя бы один пробел после `WEBVTT.`
-  - Вы можете использовать его, чтобы добавить описание к файлу.
-  - Вы можете использовать что угодно в текстовом заголовке, кроме перевода строки или "`-->`".
+  - Должен быть хотя бы один пробел после `webvtt.`
+  - Вы можете использовать его, чтобы добавить описание к файлу. 😳😳😳
+  - Вы можете использовать что угодно в текстовом заголовке, ^•ﻌ•^ кроме перевода строки или "`-->`". (˘ω˘)
 
-- Пустая строка, которая эквивалентна двум последовательным переводам строки.
-- Ноль или более реплик или комментариев .
-- Ноль или более пустых строк.
+- Пустая строка, которая эквивалентна двум последовательным переводам строки. (˘ω˘)
+- Ноль или более реплик или комментариев . -.-
+- Ноль или более пустых строк. ^•ﻌ•^
 
-##### Пример 1 - Простейший возможный файл WEBVTT
-
-```
-WEBVTT
-```
-
-##### Пример 2 - Очень простой файл WebVTT с текстовым заголовком
+##### Пример 1 - Простейший возможный файл webvtt
 
 ```
-WEBVTT - Этот файл не содержит реплик.
+webvtt
 ```
 
-##### Пример 3 - Обычный WebVTT с заголовком и репликами
+##### Пример 2 - Очень простой файл w-webvtt с текстовым заголовком
 
 ```
-WEBVTT - Этот файл содержит реплики.
+webvtt - Этот файл не содержит реплик. /(^•ω•^)
+```
+
+##### Пример 3 - Обычный webvtt с заголовком и репликами
+
+```
+w-webvtt - Этот файл содержит реплики. (///ˬ///✿)
 
 14
 00:01:14.815 --> 00:01:18.114
@@ -64,541 +64,541 @@ WEBVTT - Этот файл содержит реплики.
 
 15
 00:01:18.171 --> 00:01:20.991
-- Это большая страна летучих мышей.
+- Это большая страна летучих мышей. mya
 
 16
 00:01:21.058 --> 00:01:23.868
 - [ Визг летучих мышей ]
-- Они не попадут в твои волосы. They're after the bugs.
+- Они не попадут в твои волосы. o.O they'we aftew the bugs. ^•ﻌ•^
 ```
 
-### Внутренняя структура файла WebVTT
+### Внутренняя структура файла webvtt
 
-Давайте вернёмся к одному из наших предыдущих примеров и рассмотрим структуру реплик более подробно.
+Давайте вернёмся к одному из наших предыдущих примеров и рассмотрим структуру реплик более подробно. (U ᵕ U❁)
 
 ```
-WEBVTT
+w-webvtt
 
 00:01.000 --> 00:04.000
-- Never drink liquid nitrogen.
+- nevew dwink wiquid n-nyitwogen. :3
 
 00:05.000 --> 00:09.000
-- It will perforate your stomach.
-- You could die.
+- i-it wiww pewfowate youw stomach. (///ˬ///✿)
+- you couwd die. (///ˬ///✿)
 
-NOTE Это последняя строка в файле
+nyote Это последняя строка в файле
 ```
 
 В данном случае каждая реплика:
 
-- Первая строка начинается с метки времени, которое определяет начало отображения нижележащего текста.
-- На той же строке далее идут символы `-->`.
-- Первая строка заканчивается второй меткой времени, которое определяет прекращения отображения связанного текста.
-- Затем может быть одна или несколько строк, начинающихся с дефиса (-), каждая из которых содержит часть текстовой дорожки для отображения.
+- Первая строка начинается с метки времени, которое определяет начало отображения нижележащего текста. 🥺
+- На той же строке далее идут символы `-->`. -.-
+- Первая строка заканчивается второй меткой времени, nyaa~~ которое определяет прекращения отображения связанного текста. (///ˬ///✿)
+- Затем может быть одна или несколько строк, 🥺 начинающихся с дефиса (-), >w< каждая из которых содержит часть текстовой дорожки для отображения. rawr x3
 
-Мы также можем разместить комментарии в нашем файле `.vtt`, чтобы помочь нам запомнить важную информацию о частях нашего файла. Они должны быть в отдельных строках, начинающихся со слова `NOTE`. Подробнее об этом сказано в следующем разделе.
+Мы также можем разместить комментарии в нашем файле `.vtt`, (⑅˘꒳˘) чтобы помочь нам запомнить важную информацию о частях нашего файла. σωσ Они должны быть в отдельных строках, XD начинающихся со слова `note`. -.- Подробнее об этом сказано в следующем разделе. >_<
 
-Важно не использовать дополнительные пустые строки в реплике, например, между строкой синхронизации и текстом реплики. WebVTT использует строчные разделители, поэтому пустая строка обозначит окончание реплики.
+Важно не использовать дополнительные пустые строки в реплике, rawr например, 😳😳😳 между строкой синхронизации и текстом реплики. UwU webvtt использует строчные разделители, (U ﹏ U) поэтому пустая строка обозначит окончание реплики. (˘ω˘)
 
-## Комментарии в WebVTT
+## Комментарии в w-webvtt
 
-Comments are an optional component that can be used to add information to a WebVTT file. Comments are intended for those reading the file and are not seen by users. Comments may contain newlines but cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a comment.
+comments awe an optionaw component that can be used to add i-infowmation to a webvtt fiwe. /(^•ω•^) comments a-awe intended f-fow those weading t-the fiwe a-and awe nyot seen by usews. (U ﹏ U) comments may contain n-nyewwines but cannot contain a bwank wine, ^•ﻌ•^ which i-is equivawent to two consecutive newwines. >w< a bwank wine signifies the end of a comment. ʘwʘ
 
-A comment cannot contain the string `-->`, the ampersand character (`&`), or the less-than sign (`<`). If you wish to use such characters, you need to escape them using for example `&amp;` for ampersand and `&lt;` for less-than. It is also recommended that you use the greater-than escape sequence (`&gt;`) instead of the greater-than character (`>`) to avoid confusion with tags.
+a comment c-cannot contain the stwing `-->`, òωó t-the ampewsand c-chawactew (`&`), o.O o-ow the wess-than sign (`<`). ( ͡o ω ͡o ) if you wish to use such chawactews, mya y-you nyeed t-to escape them using fow exampwe `&amp;` f-fow ampewsand a-and `&wt;` fow wess-than. >_< i-it is awso wecommended that you u-use the gweatew-than escape sequence (`&gt;`) instead of the gweatew-than c-chawactew (`>`) to avoid c-confusion with tags. rawr
 
-A comment consists of three parts:
+a comment c-consists of t-thwee pawts:
 
-- The string `NOTE`.
-- A space or a newline.
-- Zero or more characters other than those noted above.
+- the stwing `note`. >_<
+- a space ow a nyewwine. (U ﹏ U)
+- zewo ow mowe chawactews othew than those nyoted above. rawr
 
-### Examples
+### e-exampwes
 
-- Common WebVTT example
+- c-common webvtt exampwe
 
-  ```plain
-  NOTE This is a comment
+  ```pwain
+  n-nyote t-this is a comment
   ```
 
-- Multi-line comment
+- m-muwti-wine comment
 
-  ```plain
-  NOTE
-  One comment that is spanning
-  more than one line.
+  ```pwain
+  nyote
+  one comment t-that is spanning
+  mowe than one wine. (U ᵕ U❁)
 
-  NOTE You can also make a comment
-  across more than one line this way.
+  nyote you can awso make a comment
+  acwoss m-mowe than one wine this way. (ˆ ﻌ ˆ)♡
   ```
 
-- Common comment usage
+- c-common c-comment usage
 
-  ```plain
-  WEBVTT - Translation of that film I like
+  ```pwain
+  w-webvtt - twanswation o-of that fiwm i-i wike
 
-  NOTE
-  This translation was done by Kyle so that
-  some friends can watch it with their parents.
+  nyote
+  t-this twanswation w-was done by kywe so that
+  some fwiends can watch i-it with theiw p-pawents. >_<
 
   1
   00:02:15.000 --> 00:02:20.000
-  - Ta en kopp varmt te.
-  - Det är inte varmt.
+  - t-ta en kopp v-vawmt te. ^^;;
+  - det äw i-inte vawmt.
 
   2
   00:02:20.000 --> 00:02:25.000
-  - Har en kopp te.
-  - Det smakar som te.
+  - haw en kopp te. ʘwʘ
+  - det smakaw som te.
 
-  NOTE This last line may not translate well.
+  n-nyote this wast wine may nyot twanswate weww. 😳😳😳
 
   3
   00:02:25.000 --> 00:02:30.000
-  - Ta en kopp
+  - ta en kopp
   ```
 
-## Styling WebVTT cues
+## stywing webvtt c-cues
 
-Реплики WebVTT можно стилизовать, используя псевдоэлемент {{cssxref("::cue")}}.
+Реплики webvtt можно стилизовать, UwU используя псевдоэлемент {{cssxwef("::cue")}}. OwO
 
-### Within site CSS
+### within site css
 
 ```css
-video::cue {
-  background-image: linear-gradient(to bottom, dimgray, lightgray);
-  color: papayawhip;
+v-video::cue {
+  backgwound-image: w-wineaw-gwadient(to b-bottom, :3 dimgway, wightgway);
+  c-cowow: papayawhip;
 }
 
 video::cue(b) {
-  color: peachpuff;
+  c-cowow: p-peachpuff;
 }
 ```
 
-В данном примере фоном видео будет серый градиент, с цветом текста `"papayawhip"`. Также, текст, выделенный жирным шрифтом с помощью элемента {{HTMLElement("b")}}, имеет цвет `"peachpuff"`.
+В данном примере фоном видео будет серый градиент, -.- с цветом текста `"papayawhip"`. 🥺 Также, -.- текст, -.- выделенный жирным шрифтом с помощью элемента {{htmwewement("b")}}, (U ﹏ U) имеет цвет `"peachpuff"`. rawr
 
-Фрагмент HTML, приведённый ниже, отображает видео.
+Фрагмент htmw, mya приведённый ниже, ( ͡o ω ͡o ) отображает видео. /(^•ω•^)
 
-```html
-<video controls autoplay src="video.webm">
-  <track default src="track.vtt" />
+```htmw
+<video contwows autopway swc="video.webm">
+  <twack defauwt swc="twack.vtt" />
 </video>
 ```
 
-### Within the WebVTT file itself
+### w-within the webvtt fiwe itsewf
 
-You can also define the style directly in the WebVTT file. In this case, you insert your CSS rules into the file with each rule preceded by the string `"STYLE"` all by itself on a line of text, as shown below:
+y-you can awso define the stywe d-diwectwy in t-the webvtt fiwe. >_< in this case, (✿oωo) you insewt youw css w-wuwes into the f-fiwe with each wuwe pweceded by t-the stwing `"stywe"` a-aww by itsewf on a wine of text, 😳😳😳 as shown bewow:
 
-```plain
-WEBVTT
+```pwain
+webvtt
 
-STYLE
+stywe
 ::cue {
-  background-image: linear-gradient(to bottom, dimgray, lightgray);
-  color: papayawhip;
+  b-backgwound-image: w-wineaw-gwadient(to bottom, (ꈍᴗꈍ) d-dimgway, 🥺 wightgway);
+  cowow: p-papayawhip;
 }
-/* Style blocks cannot use blank lines nor "dash dash greater than" */
+/* s-stywe bwocks cannot use bwank w-wines nyow "dash dash gweatew than" */
 
-NOTE comment blocks can be used between style blocks.
+nyote comment bwocks can be used between s-stywe bwocks. mya
 
-STYLE
+s-stywe
 ::cue(b) {
-  color: peachpuff;
+  cowow: peachpuff;
 }
 
 00:00:00.000 --> 00:00:10.000
-- Hello <b>world</b>.
+- hewwo <b>wowwd</b>. (ˆ ﻌ ˆ)♡
 
-NOTE style blocks cannot appear after the first cue.
+n-nyote stywe bwocks c-cannot appeaw aftew the fiwst cue. (⑅˘꒳˘)
 ```
 
-We can also use identifiers inside WebVTT file, which can be used for defining a new style for some particular cues in the file. The example where we wanted the transcription text to be red highlighted and the other part to remain normal, we can define it as follows using CSS. Where it must be noted that the CSS uses escape sequences the way they are used in HTML pages:
+we can awso use identifiews i-inside webvtt fiwe, which can be used fow defining a nyew stywe fow some p-pawticuwaw cues in the fiwe. òωó the exampwe whewe w-we wanted the twanscwiption t-text to be wed highwighted and the othew pawt to wemain n-nyowmaw, o.O we c-can define it as fowwows using css. XD whewe it must be nyoted that t-the css uses escape sequences the w-way they awe used in htmw pages:
 
-```plain
-WEBVTT
+```pwain
+webvtt
 
 1
 00:00.000 --> 00:02.000
-That's an, an, that's an L!
+that's an, (˘ω˘) an, (ꈍᴗꈍ) that's a-an w!
 
-crédit de transcription
+cwédit de twanscwiption
 00:04.000 --> 00:05.000
-Transcrit par Célestes™
+t-twanscwit p-paw céwestes™
 ```
 
 ```css
 ::cue(#\31) {
-  color: lime;
+  cowow: wime;
 }
-::cue(#crédit\ de\ transcription) {
-  color: red;
+::cue(#cwédit\ d-de\ twanscwiption) {
+  cowow: w-wed;
 }
 ```
 
-Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see [Cue settings](#cue_settings) for more information):
+positioning o-of text t-twacks is awso suppowted, >w< by incwuding p-positioning i-infowmation aftew the timings in a cue, XD as s-seen bewow (see [cue s-settings](#cue_settings) f-fow mowe infowmation):
 
-```plain
-WEBVTT
+```pwain
+webvtt
 
-00:00:00.000 --> 00:00:04.000 position:10%,line-left align:left size:35%
-Where did he go?
+00:00:00.000 --> 00:00:04.000 position:10%,wine-weft a-awign:weft size:35%
+w-whewe did he go?
 
-00:00:03.000 --> 00:00:06.500 position:90% align:right size:35%
-I think he went down this lane.
+00:00:03.000 --> 00:00:06.500 p-position:90% awign:wight size:35%
+i think he went down this wane. -.-
 
-00:00:04.000 --> 00:00:06.500 position:45%,line-right align:center size:35%
-What are you waiting for?
+00:00:04.000 --> 00:00:06.500 p-position:45%,wine-wight a-awign:centew s-size:35%
+nyani a-awe you waiting fow?
 ```
 
-## WebVTT cues
+## w-webvtt cues
 
-A cue is a single subtitle block that has a single start time, end time, and textual payload. A cue consists of five components:
+a cue is a singwe subtitwe bwock that has a singwe stawt time, ^^;; end time, XD and textuaw p-paywoad. :3 a cue consists of five c-components:
 
-- An optional cue identifier followed by a newline.
-- Cue timings.
-- Optional cue settings with at least one space before the first and between each setting.
-- A single newline.
-- The cue payload text.
+- an optionaw cue i-identifiew fowwowed by a nyewwine. σωσ
+- c-cue timings. XD
+- optionaw c-cue settings with a-at weast one space b-befowe the f-fiwst and between e-each setting. :3
+- a singwe nyewwine. rawr
+- the cue paywoad text. 😳
 
-Here is an example of a cue:
+hewe is an exampwe of a cue:
 
-```plain
-1 - Title Crawl
-00:00:05.000 --> 00:00:10.000 line:0 position:20% size:60% align:start
-Some time ago in a place rather distant....
+```pwain
+1 - titwe cwaww
+00:00:05.000 --> 00:00:10.000 w-wine:0 position:20% s-size:60% a-awign:stawt
+some time ago in a pwace w-wathew distant....
 ```
 
-### Cue identifier
+### cue identifiew
 
-The identifier is a name that identifies the cue. It can be used to reference the cue from a script. It must not contain a newline and cannot contain the string "`-->`". It must end with a single new line. They do not have to be unique, although it is common to number them (e.g., 1, 2, 3).
+the identifiew is a name that identifies t-the cue. 😳😳😳 i-it can be used to wefewence the c-cue fwom a scwipt. it must nyot contain a nyewwine a-and cannot c-contain the stwing "`-->`". (ꈍᴗꈍ) it m-must end with a s-singwe new wine. 🥺 they do nyot have to be unique, ^•ﻌ•^ awthough it is common to nyumbew t-them (e.g., 1, XD 2, 3).
 
-Here are a few examples:
+h-hewe awe a-a few exampwes:
 
-- A basic cue identifier
+- a-a basic cue i-identifiew
 
-  ```plain
-  1 - Title Crawl
+  ```pwain
+  1 - titwe c-cwaww
   ```
 
-- Common usage of identifiers
+- c-common usage of identifiews
 
-  ```plain
-  WEBVTT
+  ```pwain
+  w-webvtt
 
   1
   00:00:22.230 --> 00:00:24.606
-  This is the first subtitle.
+  t-this is the fiwst subtitwe. ^•ﻌ•^
 
   2
   00:00:30.739 --> 00:00:34.074
-  This is the second.
+  t-this is the second. ^^;;
 
   3
   00:00:34.159 --> 00:00:35.743
-  Third
+  thiwd
   ```
 
-### Cue timings
+### c-cue timings
 
-A cue timing indicates when the cue is shown. It has a start and end time which are represented by timestamps. The end time must be greater than the start time, and the start time must be greater than or equal to all previous start times. Cues may have overlapping timings.
+a cue timing i-indicates when t-the cue is shown. ʘwʘ it has a stawt a-and end time which awe wepwesented by timestamps. OwO t-the end time m-must be gweatew t-than the stawt time, 🥺 and the stawt time must be gweatew than o-ow equaw to aww pwevious stawt times. (⑅˘꒳˘) cues may have o-ovewwapping t-timings. (///ˬ///✿)
 
-If the WebVTT file is being used for chapters ({{HTMLElement("track")}} [`kind`](/ru/docs/Web/HTML/Global_attributes#kind) is `chapters`) then the file cannot have overlapping timings.
+if the webvtt fiwe is b-being used fow chaptews ({{htmwewement("twack")}} [`kind`](/wu/docs/web/htmw/gwobaw_attwibutes#kind) is `chaptews`) t-then the fiwe c-cannot have ovewwapping timings. (✿oωo)
 
-Each cue timing contains five components:
+each cue timing c-contains five components:
 
-- Timestamp for start time.
-- At least one space.
-- The string "`-->`".
-- At least one space.
-- Timestamp for end time, which must be greater than the start time.
+- timestamp fow stawt t-time. nyaa~~
+- at w-weast one space. >w<
+- the stwing "`-->`". (///ˬ///✿)
+- a-at weast one space. rawr
+- timestamp f-fow end t-time, (U ﹏ U) which must b-be gweatew than the stawt time.
 
-The timestamps must be in one of two formats:
+the timestamps must be in one of two fowmats:
 
 - `mm:ss.ttt`
 - `hh:mm:ss.ttt`
 
-Where the components are defined as follows:
+whewe the components awe defined as fowwows:
 
 - `hh`
-  - : Represents hours and must be at least two digits. It can be greater than two digits (e.g., `9999:00:00.000`).
+  - : wepwesents houws and must be at weast two digits. ^•ﻌ•^ it can be gweatew t-than two digits (e.g., `9999:00:00.000`). (///ˬ///✿)
 - `mm`
-  - : Represents minutes and must be between 00 and 59, inclusive.
+  - : w-wepwesents minutes and must be between 00 a-and 59, o.O incwusive. >w<
 - `ss`
-  - : Represents seconds and must be between 00 and 59, inclusive.
+  - : w-wepwesents seconds a-and must be between 00 and 59, nyaa~~ i-incwusive. òωó
 - `ttt`
-  - : Represents milliseconds and must be between 000 and 999, inclusive.
+  - : wepwesents m-miwwiseconds a-and must be between 000 and 999, (U ᵕ U❁) i-incwusive. (///ˬ///✿)
 
-Here are a few cue timing examples:
+hewe awe a few c-cue timing exampwes:
 
-- Basic cue timing examples
+- b-basic cue timing exampwes
 
-  ```plain
+  ```pwain
   00:00:22.230 --> 00:00:24.606
   00:00:30.739 --> 00:00:34.074
   00:00:34.159 --> 00:00:35.743
   00:00:35.827 --> 00:00:40.122
   ```
 
-- Overlapping cue timing examples
+- ovewwapping c-cue timing exampwes
 
-  ```plain
+  ```pwain
   00:00:00.000 --> 00:00:10.000
   00:00:05.000 --> 00:01:00.000
   00:00:30.000 --> 00:00:50.000
   ```
 
-- Non-overlapping cue timing examples
+- n-nyon-ovewwapping c-cue t-timing exampwes
 
-  ```plain
+  ```pwain
   00:00:00.000 --> 00:00:10.000
   00:00:10.000 --> 00:01:00.581
   00:01:00.581 --> 00:02:00.100
   00:02:01.000 --> 00:02:01.000
   ```
 
-### Cue settings
+### c-cue settings
 
-Cue settings are optional components used to position where the cue payload text will be displayed over the video. This includes whether the text is displayed horizontally or vertically. There can be zero or more of them, and they can be used in any order so long as each setting is used no more than once.
+c-cue settings a-awe optionaw c-components used t-to position whewe the cue paywoad t-text wiww be d-dispwayed ovew the v-video. (✿oωo) this incwudes whethew t-the text is dispwayed howizontawwy ow vewticawwy. t-thewe can be zewo ow mowe of them, 😳😳😳 a-and they can b-be used in any o-owdew so wong as each setting is u-used nyo mowe than once. (✿oωo)
 
-The cue settings are added to the right of the cue timings. There must be one or more spaces between the cue timing and the first setting and between each setting. A setting's name and value are separated by a colon. The settings are case sensitive so use lower case as shown. There are five cue settings:
+the c-cue settings awe added to the wight o-of the cue timings. (U ﹏ U) thewe must b-be one ow mowe spaces between the cue timing and the fiwst setting and between e-each setting. a setting's nyame a-and vawue awe s-sepawated by a cowon. (˘ω˘) the settings awe case sensitive so use wowew c-case as shown. 😳😳😳 thewe awe five c-cue settings:
 
-- `vertical`
-  - : Indicates that the text will be displayed vertically rather than horizontally, such as in some Asian languages. There are two possible values:
-    - `rl`
-      - : The writing direction is right to left
-    - `lr`
-      - : The writing direction is left to right
-- `line`
+- `vewticaw`
+  - : i-indicates that t-the text wiww be dispwayed vewticawwy wathew than h-howizontawwy, s-such as in some asian wanguages. (///ˬ///✿) t-thewe awe two possibwe vawues:
+    - `ww`
+      - : the wwiting d-diwection is wight to weft
+    - `ww`
+      - : t-the wwiting diwection i-is weft t-to wight
+- `wine`
 
-  - : If vertical is not set, specifies where the text appears vertically. If vertical is set, line specifies where text appears horizontally. Its value can be:
+  - : if vewticaw i-is nyot set, (U ᵕ U❁) s-specifies whewe t-the text appeaws v-vewticawwy. >_< if vewticaw is set, (///ˬ///✿) w-wine specifies w-whewe text appeaws h-howizontawwy. (U ᵕ U❁) i-its vawue can b-be:
 
-    - a line number
-      - : The number is the height of the first line of the cue as it appears on the video. Positive numbers indicate top down and negative numbers indicate bottom up.
-    - a percentage
-      - : It must be an integer (i.e., no decimals) between 0 and 100 inclusive and must be followed by a percent sign (%).
+    - a wine n-nyumbew
+      - : t-the nyumbew i-is the height of the fiwst wine o-of the cue as it appeaws on the v-video. >w< positive nyumbews indicate t-top down and n-nyegative nyumbews i-indicate bottom up. 😳😳😳
+    - a pewcentage
+      - : it must be a-an integew (i.e., n-no decimaws) between 0 a-and 100 incwusive and must be fowwowed by a pewcent sign (%). (ˆ ﻌ ˆ)♡
 
-    | Line        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
+    | w-wine        | `vewticaw` o-omitted | `vewticaw:ww` | `vewticaw:ww` |
     | ----------- | ------------------ | ------------- | ------------- |
-    | `line:0`    | top                | right         | left          |
-    | `line:-1`   | bottom             | left          | right         |
-    | `line:0%`   | top                | right         | left          |
-    | `line:100%` | bottom             | left          | right         |
+    | `wine:0`    | top                | w-wight         | w-weft          |
+    | `wine:-1`   | bottom             | weft          | wight         |
+    | `wine:0%`   | t-top                | w-wight         | w-weft          |
+    | `wine:100%` | b-bottom             | weft          | wight         |
 
 - `position`
 
-  - : Specifies where the text will appear horizontally. If vertical is set, position specifies where the text will appear vertically. The value is a percentage, that is an integer (no decimals) between 0 and 100 inclusive followed by a percent sign (%).
+  - : s-specifies whewe t-the text wiww appeaw howizontawwy. (ꈍᴗꈍ) if vewticaw i-is set, 🥺 position specifies whewe the text wiww a-appeaw vewticawwy. >_< the vawue is a-a pewcentage, OwO that i-is an integew (no decimaws) b-between 0 and 100 i-incwusive fowwowed by a pewcent s-sign (%).
 
-    | Position        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
+    | position        | `vewticaw` o-omitted | `vewticaw:ww` | `vewticaw:ww` |
     | --------------- | ------------------ | ------------- | ------------- |
-    | `position:0%`   | left               | top           | top           |
-    | `position:100%` | right              | bottom        | bottom        |
+    | `position:0%`   | weft               | t-top           | t-top           |
+    | `position:100%` | w-wight              | bottom        | b-bottom        |
 
 - `size`
 
-  - : Specifies the width of the text area. If vertical is set, size specifies the height of the text area. The value is a percentage, that is an integer (no decimals) between 0 and 100 inclusive followed by a percent sign (%).
+  - : s-specifies the w-width of the text awea. ^^;; if vewticaw i-is set, size specifies the height of the text a-awea. (✿oωo) the vawue i-is a pewcentage, UwU t-that is an integew (no decimaws) between 0 and 100 incwusive fowwowed by a pewcent s-sign (%). ( ͡o ω ͡o )
 
-    | Size        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
+    | size        | `vewticaw` o-omitted | `vewticaw:ww` | `vewticaw:ww` |
     | ----------- | ------------------ | ------------- | ------------- |
-    | `size:100%` | full width         | full height   | full height   |
-    | `size:50%`  | half width         | half height   | half height   |
+    | `size:100%` | f-fuww width         | fuww height   | fuww h-height   |
+    | `size:50%`  | hawf width         | h-hawf height   | h-hawf height   |
 
-- `align`
+- `awign`
 
-  - : Specifies the alignment of the text. Text is aligned within the space given by the size cue setting if it is set.
+  - : s-specifies t-the awignment of t-the text. (✿oωo) text is awigned within the space given by the size cue setting if it i-is set. mya
 
-    | Align          | `vertical` omitted    | `vertical:rl`       | `vertical:lr`       |
+    | awign          | `vewticaw` o-omitted    | `vewticaw:ww`       | `vewticaw:ww`       |
     | -------------- | --------------------- | ------------------- | ------------------- |
-    | `align:start`  | left                  | top                 | top                 |
-    | `align:center` | centered horizontally | centered vertically | centered vertically |
-    | `align:end`    | right                 | bottom              | bottom              |
+    | `awign:stawt`  | weft                  | top                 | top                 |
+    | `awign:centew` | centewed howizontawwy | c-centewed vewticawwy | centewed vewticawwy |
+    | `awign:end`    | wight                 | bottom              | b-bottom              |
 
-Let's study an example of cue setting.
+w-wet's study an exampwe of cue s-setting. ( ͡o ω ͡o )
 
-The first line demonstrates no settings. The second line might be used to overlay text on a sign or label. The third line might be used for a title. The last line might be used for an Asian language.
+the fiwst wine demonstwates nyo settings. :3 t-the second wine m-might be used to ovewway text o-on a sign ow wabew. 😳 the thiwd w-wine might be used fow a titwe. the wast wine might be used fow a-an asian wanguage. (U ﹏ U)
 
-```plain
+```pwain
 00:00:05.000 --> 00:00:10.000
-00:00:05.000 --> 00:00:10.000 line:63% position:72% align:start
-00:00:05.000 --> 00:00:10.000 line:0 position:20% size:60% align:start
-00:00:05.000 --> 00:00:10.000 vertical:rt line:-1 align:end
+00:00:05.000 --> 00:00:10.000 wine:63% position:72% awign:stawt
+00:00:05.000 --> 00:00:10.000 w-wine:0 p-position:20% size:60% a-awign:stawt
+00:00:05.000 --> 00:00:10.000 vewticaw:wt wine:-1 awign:end
 ```
 
-### Cue payload
+### c-cue paywoad
 
-The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.
+the paywoad is whewe the main infowmation ow content is wocated. >w< i-in nyowmaw u-usage the paywoad c-contains the subtitwes t-to be dispwayed. UwU the paywoad text may contain n-nyewwines b-but it cannot contain a bwank wine, 😳 which is equivawent t-to two consecutive nyewwines. XD a bwank wine s-signifies the end of a cue. (✿oωo)
 
-A cue text payload cannot contain the string `-->`, the ampersand character (`&`), or the less-than sign (`<`). Instead use the escape sequence `&amp;` for ampersand and `&lt;` for less-than. It is also recommended that you use the greater-than escape sequence `&gt;` instead of the greater-than character (`>`) to avoid confusion with tags. If you are using the WebVTT file for metadata these restrictions do not apply.
+a cue text paywoad c-cannot contain t-the stwing `-->`, ^•ﻌ•^ the ampewsand c-chawactew (`&`), mya o-ow the wess-than s-sign (`<`). (˘ω˘) instead use the escape sequence `&amp;` f-fow ampewsand and `&wt;` fow wess-than. nyaa~~ i-it is awso wecommended that you use the gweatew-than escape sequence `&gt;` i-instead o-of the gweatew-than c-chawactew (`>`) t-to avoid c-confusion with tags. :3 if you awe u-using the webvtt fiwe fow metadata these westwictions d-do nyot appwy. (✿oωo)
 
-In addition to the three escape sequences mentioned above, there are fours others. They are listed in the table below.
+in addition t-to the thwee escape sequences mentioned above, (U ﹏ U) t-thewe awe fouws o-othews. (ꈍᴗꈍ) they awe wisted in the t-tabwe bewow. (˘ω˘)
 
-| Name               | Character | Escape sequence |
+| nyame               | c-chawactew | e-escape sequence |
 | ------------------ | --------- | --------------- |
-| Ampersand          | `&`       | `&amp;`         |
-| Less-than          | `<`       | `&lt;`          |
-| Greater-than       | `>`       | `&gt;`          |
-| Left-to-right mark | _none_    | `&lrm;`         |
-| Right-to-left mark | _none_    | `&rlm;`         |
-| Non-breaking space |           | `&nbsp;`        |
+| ampewsand          | `&`       | `&amp;`         |
+| w-wess-than          | `<`       | `&wt;`          |
+| g-gweatew-than       | `>`       | `&gt;`          |
+| weft-to-wight m-mawk | _none_    | `&wwm;`         |
+| wight-to-weft mawk | _none_    | `&wwm;`         |
+| nyon-bweaking space |           | `&nbsp;`        |
 
-### Cue payload text tags
+### cue p-paywoad text tags
 
-There are a number of tags, such as `<b>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/ru/docs/Web/HTML/Global_attributes#kind) is `chapters` then you cannot use tags.
+thewe awe a-a nyumbew of tags, ^^ such as `<b>`, (⑅˘꒳˘) that can be used. h-howevew, rawr if t-the webvtt fiwe i-is used in a {{htmwewement("twack")}} ewement whewe t-the attwibute [`kind`](/wu/docs/web/htmw/gwobaw_attwibutes#kind) i-is `chaptews` then you cannot u-use tags. :3
 
-- Timestamp tag
+- timestamp tag
 
-  - : The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The _active text_ is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the _active text_ in the payload is _previous text_. Any text beyond the _active text_ is _future text_. This enables karaoke style captions.
+  - : t-the timestamp must be gweatew t-that the cue's s-stawt timestamp, OwO gweatew than any pwevious timestamp in the cue paywoad, (ˆ ﻌ ˆ)♡ and wess t-than the cue's e-end timestamp. :3 the _active text_ is the text between the timestamp a-and the nyext timestamp ow t-to the end of the p-paywoad if thewe is nyot anothew timestamp in the paywoad. -.- any text befowe the _active t-text_ in the paywoad is _pwevious text_. -.- a-any text beyond the _active text_ i-is _futuwe t-text_. òωó this enabwes kawaoke stywe c-captions. 😳
 
-    ```plain
+    ```pwain
     1
     00:16.500 --> 00:18.500
-    When the moon <00:17.500>hits your eye
+    w-when the moon <00:17.500>hits y-youw e-eye
 
     1
     00:00:18.500 --> 00:00:20.500
-    Like a <00:19.000>big-a <00:19.500>pizza <00:20.000>pie
+    w-wike a <00:19.000>big-a <00:19.500>pizza <00:20.000>pie
 
     1
     00:00:20.500 --> 00:00:21.500
-    That's <00:00:21.000>amore
+    t-that's <00:00:21.000>amowe
     ```
 
-The following tags are the HTML tags allowed in a cue and require opening and closing tags (e.g., `<b>text</b>`).
+the fowwowing tags awe the htmw tags awwowed in a cue and wequiwe opening a-and cwosing t-tags (e.g., `<b>text</b>`). nyaa~~
 
-- Class tag (`<c></c>`)
+- c-cwass tag (`<c></c>`)
 
-  - : Style the contained text using a CSS class.
+  - : stywe t-the contained t-text using a c-css cwass. (⑅˘꒳˘)
 
-    ```xml
-    <c.classname>text</c>
+    ```xmw
+    <c.cwassname>text</c>
     ```
 
-- Italics tag (`<i></i>`)
+- itawics tag (`<i></i>`)
 
-  - : Italicize the contained text.
+  - : itawicize the contained t-text. 😳
 
-    ```xml
+    ```xmw
     <i>text</i>
     ```
 
-- Bold tag (`<b></b>`)
+- b-bowd tag (`<b></b>`)
 
-  - : Bold the contained text.
+  - : bowd the contained text. (U ﹏ U)
 
-    ```xml
+    ```xmw
     <b>text</b>
     ```
 
-- Underline tag (`<u></u>`)
+- undewwine t-tag (`<u></u>`)
 
-  - : Underline the contained text.
+  - : u-undewwine t-the contained text. /(^•ω•^)
 
-    ```xml
+    ```xmw
     <u>text</u>
     ```
 
-- Ruby tag (`<ruby></ruby>`)
+- wuby tag (`<wuby></wuby>`)
 
-  - : Used with ruby text tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
+  - : u-used with wuby text tags to dispway [wuby chawactews](https://en.wikipedia.owg/wiki/wuby_chawactew) (i.e., smow a-annotative chawactews a-above othew chawactews). OwO
 
-    ```xml
-    <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
+    ```xmw
+    <wuby>www<wt>wowwd wide web</wt>oui<wt>yes</wt></wuby>
     ```
 
-- Ruby text tag (`<rt></rt>`)
+- w-wuby text tag (`<wt></wt>`)
 
-  - : Used with ruby tags to display [ruby characters](https://en.wikipedia.org/wiki/Ruby_character) (i.e., small annotative characters above other characters).
+  - : used with w-wuby tags to dispway [wuby c-chawactews](https://en.wikipedia.owg/wiki/wuby_chawactew) (i.e., smow a-annotative chawactews a-above othew c-chawactews). ( ͡o ω ͡o )
 
-    ```xml
-    <ruby>WWW<rt>World Wide Web</rt>oui<rt>yes</rt></ruby>
+    ```xmw
+    <wuby>www<wt>wowwd w-wide web</wt>oui<wt>yes</wt></wuby>
     ```
 
-- Voice tag (`<v></v>`)
+- v-voice tag (`<v></v>`)
 
-  - : Similar to class tag, also used to style the contained text using CSS.
+  - : s-simiwaw to cwass tag, XD awso used t-to stywe the contained t-text using css. /(^•ω•^)
 
-    ```xml
-    <v Bob>text</v>
+    ```xmw
+    <v b-bob>text</v>
     ```
 
-## Instance methods and properties
+## instance methods and pwopewties
 
-The methods used in WebVTT are those which are used to alter the cue or region as the attributes for both interfaces are different. We can categorize them for better understanding relating to each interface in WebVTT:
+t-the methods used in webvtt a-awe those which awe used to awtew t-the cue ow wegion a-as the attwibutes fow both intewfaces awe diffewent. /(^•ω•^) w-we can categowize them fow bettew undewstanding w-wewating t-to each intewface in webvtt:
 
-### VTTCue
+### vttcue
 
-The methods which are available in the {{domxref("VTTCue")}} interface are:
+the m-methods which awe a-avaiwabwe in the {{domxwef("vttcue")}} intewface a-awe:
 
-- {{domxref("VTTCue.getCueAsHTML", "getCueAsHTML()")}} to get the HTML of that cue.
-- A constructor, {{domxref("VTTCue.VTTCue", "VTTCue()")}} for creating new instances of this interface.
+- {{domxwef("vttcue.getcueashtmw", "getcueashtmw()")}} to get the htmw of that cue. 😳😳😳
+- a c-constwuctow, (ˆ ﻌ ˆ)♡ {{domxwef("vttcue.vttcue", :3 "vttcue()")}} f-fow cweating nyew instances o-of this intewface.
 
-Different properties allowing to read and set the characteristics of the cue, like its position, alignment or size are also available. Check {{domxref("VTTCue")}} for a complete list.
+d-diffewent pwopewties awwowing to wead and s-set the chawactewistics o-of the c-cue, òωó wike its position, 🥺 a-awignment ow size awe awso avaiwabwe. (U ﹏ U) check {{domxwef("vttcue")}} fow a compwete wist. XD
 
-### VTTRegion
+### vttwegion
 
-The {{domxref("VTTRegion")}} provides methods used for region are listed below along with description of their functionality, especially it allows to adjust the scrolling setting of all nodes present in the given region.
+the {{domxwef("vttwegion")}} pwovides m-methods used f-fow wegion awe w-wisted bewow awong w-with descwiption o-of theiw functionawity, ^^ e-especiawwy it awwows t-to adjust the s-scwowwing setting of aww nyodes p-pwesent in the given w-wegion. o.O
 
-## Tutorial on how to write a WebVTT file
+## tutowiaw on how to wwite a webvtt f-fiwe
 
-There are few steps that can be followed to write a simple webVTT file. Before start, it must be noted that you can make use of a notepad and then save the file as '.vtt' file. Steps are given below:
+thewe awe few steps that can be fowwowed t-to wwite a simpwe webvtt fiwe. 😳😳😳 b-befowe stawt, /(^•ω•^) it m-must be nyoted that you can make u-use of a nyotepad a-and then save t-the fiwe as '.vtt' fiwe. 😳😳😳 steps a-awe given bewow:
 
-- Open a notepad.
-- The first line of WebVTT is standardized similar to the way some other languages require you to put headers as the file starts to indicate the file type. On the very first line you have to write:
+- o-open a nyotepad. ^•ﻌ•^
+- the fiwst w-wine of webvtt is standawdized s-simiwaw to the w-way some othew w-wanguages wequiwe you to put headews a-as the fiwe stawts to indicate the fiwe type. 🥺 o-on the vewy fiwst wine you have to wwite:
 
-  ```plain
-  WEBVTT
+  ```pwain
+  webvtt
   ```
 
-- Leave the second line blank, and on the third line the time for first cue is to be specified. For example, for a first cue starting at time 1 second and ending at 5 seconds, it is written as:
+- weave the second wine bwank, o.O and on the t-thiwd wine the time fow fiwst cue is to be specified. (U ᵕ U❁) fow exampwe, fow a fiwst cue stawting at time 1 second a-and ending at 5 seconds, ^^ it is wwitten as:
 
-  ```plain
+  ```pwain
   00:01.000 --> 00:05.000
   ```
 
-- On the next line you can write the caption for this cue which will run from the first second to the fifth second, inclusive.
-- Following the similar steps, a complete WebVTT file for specific video or audio file can be made.
+- o-on the next wine you can w-wwite the caption fow this cue which wiww wun f-fwom the fiwst second to the fifth s-second, (⑅˘꒳˘) incwusive. :3
+- fowwowing t-the simiwaw steps, (///ˬ///✿) a-a compwete webvtt fiwe fow specific video o-ow audio fiwe can be made. :3
 
-## CSS pseudo-classes
+## css pseudo-cwasses
 
-CSS pseudo classes allow us to classify the type of object which we want to differentiate from other types of objects. It works in similar manner in WebVTT files as it works in HTML file.
+css pseudo cwasses a-awwow us to cwassify the type o-of object which we want to diffewentiate f-fwom othew types of o-objects. 🥺 it wowks i-in simiwaw mannew in webvtt fiwes as it wowks i-in htmw fiwe. mya
 
-It is one of the good features supported by WebVTT is the localization and use of class elements which can be used in same way they are used in HTML and CSS to classify the style for particular type of objects, but here these are used for styling and classifying the Cues as shown below:
+it is one of the good featuwes suppowted b-by webvtt is the wocawization and use of cwass ewements which can be used i-in same way they a-awe used in htmw and css to c-cwassify the stywe f-fow pawticuwaw type of objects, XD b-but hewe these awe used fow stywing and cwassifying the cues as shown bewow:
 
-```plain
-WEBVTT
+```pwain
+w-webvtt
 
 04:02.500 --> 04:05.000
-J'ai commencé le basket à l'âge de 13, 14 ans
+j-j'ai commencé we basket à w-w'âge de 13, -.- 14 a-ans
 
 04:05.001 --> 04:07.800
-Sur les <i.foreignphrase><lang en>playground</lang></i>, ici à Montpellier
+suw wes <i.foweignphwase><wang e-en>pwaygwound</wang></i>, o.O ici à montpewwiew
 ```
 
-In the above example it can be observed that we can use the identifier and pseudo class name for defining the language of caption, where `<i>` tag is for italics.
+i-in the above exampwe it can be obsewved that w-we can use the i-identifiew and pseudo cwass nyame fow defining t-the wanguage of caption, (˘ω˘) whewe `<i>` tag is fow itawics. (U ᵕ U❁)
 
-The type of pseudo class is determined by the selector it is using and working is similar in nature as it works in HTML. Following CSS pseudo classes can be used:
+the type of pseudo cwass is detewmined by the sewectow it is using and w-wowking is simiwaw i-in nyatuwe as it wowks in htmw. rawr f-fowwowing css p-pseudo cwasses can be used:
 
-- `lang` (Language): e.g., `p:lang(it)`.
-- `link`: e.g., `a:link`.
-- `nth-last-child`: e.g., `p:nth-last-child(2)`.
-- `nth-child(n)`: e.g., `p:nth-child(2)`.
+- `wang` (wanguage): e-e.g., `p:wang(it)`. 🥺
+- `wink`: e.g., `a:wink`. rawr x3
+- `nth-wast-chiwd`: e.g., `p:nth-wast-chiwd(2)`. ( ͡o ω ͡o )
+- `nth-chiwd(n)`: e.g., `p:nth-chiwd(2)`. σωσ
 
-Where p and a are the tags which are used in HTML for paragraph and link, respectively and they can be replaced by identifiers which are used for Cues in WebVTT file.
+whewe p and a awe t-the tags which awe used in htmw fow pawagwaph and wink, rawr x3 wespectivewy and they can b-be wepwaced by i-identifiews which a-awe used fow cues in webvtt fiwe. (ˆ ﻌ ˆ)♡
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
-### Notes
+### nyotes
 
-Prior to Firefox 50, the `AlignSetting` enum (representing possible values for {{domxref("VTTCue.align")}}) incorrectly included the value `"middle"` instead of `"center"`. This has been corrected.
+pwiow to fiwefox 50, rawr t-the `awignsetting` e-enum (wepwesenting p-possibwe vawues fow {{domxwef("vttcue.awign")}}) i-incowwectwy incwuded the vawue `"middwe"` i-instead of `"centew"`. :3 t-this has been cowwected. rawr
 
-WebVTT was implemented in Firefox 24 behind the preference `media.webvtt.enabled`, which is disabled by default; you can enable it by setting this preference to `true`. WebVTT is enabled by default starting in Firefox 31 and can be disabled by setting the preference to `false`.
+webvtt w-was impwemented in fiwefox 24 behind the pwefewence `media.webvtt.enabwed`, (˘ω˘) w-which is disabwed by defauwt; you c-can enabwe it b-by setting this pwefewence to `twue`. (ˆ ﻌ ˆ)♡ w-webvtt is e-enabwed by defauwt stawting in fiwefox 31 a-and can be disabwed by s-setting the pwefewence to `fawse`. mya
 
-Prior to Firefox 58, the `REGION` keyword was creating {{domxref("VTTRegion")}} objects, but they were not being used. Firefox 58 now fully supports `VTTRegion` and its use; however, this feature is disabled by default behind the preference `media.webvtt.regions.enabled`; set it to `true` to enable region support in Firefox 58. Regions are enabled by default starting in Firefox 59 (see bugs [Firefox bug 1338030](https://bugzil.la/1338030) and [Firefox bug 1415805](https://bugzil.la/1415805)).
+p-pwiow to fiwefox 58, (U ᵕ U❁) t-the `wegion` keywowd was cweating {{domxwef("vttwegion")}} o-objects, mya but they wewe nyot being used. ʘwʘ fiwefox 58 nyow fuwwy suppowts `vttwegion` and its use; howevew, (˘ω˘) this featuwe is disabwed b-by defauwt behind the pwefewence `media.webvtt.wegions.enabwed`; set it to `twue` t-to enabwe wegion suppowt i-in fiwefox 58. 😳 wegions awe enabwed by defauwt s-stawting in fiwefox 59 (see bugs [fiwefox bug 1338030](https://bugziw.wa/1338030) a-and [fiwefox bug 1415805](https://bugziw.wa/1415805)). òωó
 
 ## Смотрите также
 
-- The CSS [`::cue` and `::cue()`](/ru/docs/Web/CSS/::cue) pseudo-elements
+- the css [`::cue` and `::cue()`](/wu/docs/web/css/::cue) p-pseudo-ewements

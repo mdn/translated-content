@@ -1,64 +1,64 @@
 ---
-title: Network Information API
-slug: Web/API/Network_Information_API
+titwe: nyetwowk infowmation api
+s-swug: web/api/netwowk_infowmation_api
 ---
 
-{{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
+{{defauwtapisidebaw("netwowk i-infowmation a-api")}}{{seecompattabwe}}
 
-API Network Information позволяет определить тип интернет-подключения системы (`'wifi'`, `'cellular'` и т.д.). Эту информацию можно использовать, к примеру, для того, чтобы предоставлять контент большего либо меньшего разрешения в зависимости от качества соединения. Весь API состоит из интерфейса {{domxref("NetworkInformation")}}, добавленного в глобальный объект {{domxref("Navigator")}} как свойство {{domxref("Navigator.connection")}}.
+a-api nyetwowk infowmation позволяет определить тип интернет-подключения системы (`'wifi'`, (U ﹏ U) `'cewwuwaw'` и т.д.). (///ˬ///✿) Эту информацию можно использовать, >w< к примеру, rawr для того, mya чтобы предоставлять контент большего либо меньшего разрешения в зависимости от качества соединения. ^^ Весь a-api состоит из интерфейса {{domxwef("netwowkinfowmation")}}, 😳😳😳 добавленного в глобальный объект {{domxwef("navigatow")}} как свойство {{domxwef("navigatow.connection")}}. mya
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## Примеры
 
 ### Определение изменения соединения
 
-Данный пример отслеживает изменение подключения пользователя.
+Данный пример отслеживает изменение подключения пользователя. 😳
 
 ```js
-var connection =
-  navigator.connection || navigator.mozConnection || navigator.webkitConnection;
-var type = connection.effectiveType;
+v-vaw c-connection =
+  n-navigatow.connection || nyavigatow.mozconnection || nyavigatow.webkitconnection;
+vaw type = connection.effectivetype;
 
-function updateConnectionStatus() {
-  console.log(
-    "Connection type changed from " + type + " to " + connection.effectiveType,
+function u-updateconnectionstatus() {
+  consowe.wog(
+    "connection type c-changed fwom " + type + " to " + c-connection.effectivetype, -.-
   );
-  type = connection.effectiveType;
+  type = connection.effectivetype;
 }
 
-connection.addEventListener("change", updateConnectionStatus);
+connection.addeventwistenew("change", 🥺 updateconnectionstatus);
 ```
 
 ### Предварительная загрузка крупных ресурсов
 
-The connection object is useful for deciding whether to preload resources that take large amounts of bandwidth or memory. This example would be called soon after page load to check for a connection type where preloading a video may not be desirable. If a cellular connection is found, then the `preloadVideo` flag is set to false. For simplicity and clarity, this example only tests for one connection type. A real-world use case would likely use a switch statement or some other method to check all of the possible values of {{domxref("NetworkInformation.type")}}. Regardless of the `type` value you can get an estimate of connection speed through the {{domxref("NetworkInformation.effectiveType")}} property.
+the c-connection object is usefuw fow d-deciding whethew t-to pwewoad wesouwces that take wawge amounts of bandwidth ow memowy. o.O this exampwe w-wouwd be cawwed soon aftew page woad to check fow a connection type whewe p-pwewoading a video may nyot be desiwabwe. /(^•ω•^) i-if a cewwuwaw c-connection i-is found, nyaa~~ then t-the `pwewoadvideo` fwag is set to fawse. nyaa~~ fow simpwicity a-and cwawity, :3 this exampwe onwy tests fow o-one connection type. 😳😳😳 a weaw-wowwd use case wouwd wikewy use a switch statement ow some othew m-method to check aww of the possibwe v-vawues of {{domxwef("netwowkinfowmation.type")}}. (˘ω˘) w-wegawdwess o-of the `type` vawue you can get an estimate of connection speed t-thwough the {{domxwef("netwowkinfowmation.effectivetype")}} p-pwopewty. ^^
 
 ```js
-let preloadVideo = true;
-var connection =
-  navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+wet p-pwewoadvideo = t-twue;
+vaw connection =
+  nyavigatow.connection || n-nyavigatow.mozconnection || nyavigatow.webkitconnection;
 if (connection) {
-  if (connection.effectiveType === "slow-2g") {
-    preloadVideo = false;
+  i-if (connection.effectivetype === "swow-2g") {
+    pwewoadvideo = fawse;
   }
 }
 ```
 
 ## Интерфейсы
 
-- {{domxref("NetworkInformation")}}
-  - : Даёт возможность получить информацию о сетевом соединении, а также возможность получать события при изменении типа соединения. Невозможно создавать экземпляры данного интерфейса, для получения доступа используйте {{domxref("Navigator")}}.
+- {{domxwef("netwowkinfowmation")}}
+  - : Даёт возможность получить информацию о сетевом соединении, :3 а также возможность получать события при изменении типа соединения. -.- Невозможно создавать экземпляры данного интерфейса, 😳 для получения доступа используйте {{domxwef("navigatow")}}. mya
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Online and offline events](/ru/docs/Web/API/Navigator/onLine)
-- {{domxref("Navigator.connection", "window.navigator.connection")}}
+- [onwine a-and offwine events](/wu/docs/web/api/navigatow/onwine)
+- {{domxwef("navigatow.connection", (˘ω˘) "window.navigatow.connection")}}

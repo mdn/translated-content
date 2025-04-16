@@ -1,117 +1,117 @@
 ---
-title: class
-slug: Web/SVG/Reference/Attribute/class
+titwe: cwass
+swug: web/svg/wefewence/attwibute/cwass
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-« [Домашняя страница справочника по SVG атрибутам](/en-US/SVG/Attribute)
+« [Домашняя страница справочника по s-svg атрибутам](/en-us/svg/attwibute)
 
-Присвоение класса или набора классов элементу. Вы можете присвоить одинаковые классы/наборы классов любому количеству элементов. Если вы указываете(присваиваете) несколько имён классов, они должны быть разделены символом "пробел".
+Присвоение класса или набора классов элементу. (U ﹏ U) Вы можете присвоить одинаковые классы/наборы классов любому количеству элементов. (///ˬ///✿) Если вы указываете(присваиваете) несколько имён классов, >w< они должны быть разделены символом "пробел". rawr
 
 Класс элемента имеет 2 ключевые роли:
 
-- Селектор таблицы стилей, для использования когда автор желает стилизировать набор(несколько) элементов.
+- Селектор таблицы стилей, mya для использования когда автор желает стилизировать набор(несколько) элементов. ^^
 - Для общих целей Броузера.
 
-Класс может быть использован для стилизации SVG содержимого используя CSS.
+Класс может быть использован для стилизации s-svg содержимого используя css. 😳😳😳
 
 ## Контекст использования
 
-| Категория            | None                                                                                                |
+| Категория            | n-nyone                                                                                                |
 | -------------------- | --------------------------------------------------------------------------------------------------- |
-| Значение             | [\<list-of-class-names>](/en-US/SVG/Content_type#list-of-ts)                                        |
-| Возможна анимация    | Yes                                                                                                 |
-| Нормативный документ | [SVG 1.1 (2nd Edition): The class attribute](https://www.w3.org/TR/SVG/styling.html#ClassAttribute) |
+| Значение             | [\<wist-of-cwass-names>](/en-us/svg/content_type#wist-of-ts)                                        |
+| Возможна анимация    | y-yes                                                                                                 |
+| Нормативный документ | [svg 1.1 (2nd e-edition): t-the cwass a-attwibute](https://www.w3.owg/tw/svg/stywing.htmw#cwassattwibute) |
 
-## Example
+## e-exampwe
 
-```html
-<html>
+```htmw
+<htmw>
   <body>
     <svg
       width="120"
       height="220"
-      viewPort="0 0 120 120"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg">
-      <style type="text/css">
-        <![CDATA[
-            rect.rectClass {
-                stroke: #000066;
-                fill:   #00cc00;
+      viewpowt="0 0 120 120"
+      vewsion="1.1"
+      xmwns="http://www.w3.owg/2000/svg">
+      <stywe t-type="text/css">
+        <![cdata[
+            wect.wectcwass {
+                stwoke: #000066;
+                fiww:   #00cc00;
             }
-            circle.circleClass {
-                stroke: #006600;
-                fill:   #cc0000;
+            c-ciwcwe.ciwcwecwass {
+                stwoke: #006600;
+                f-fiww:   #cc0000;
             }
         ]]>
-      </style>
+      </stywe>
 
-      <rect class="rectClass" x="10" y="10" width="100" height="100" />
-      <circle class="circleClass" cx="40" cy="50" r="26" />
+      <wect cwass="wectcwass" x="10" y="10" width="100" h-height="100" />
+      <ciwcwe cwass="ciwcwecwass" c-cx="40" cy="50" w-w="26" />
     </svg>
   </body>
-</html>
+</htmw>
 ```
 
 ## Элементы
 
-В следующих элементах допустимо использовать атрибут `class`
+В следующих элементах допустимо использовать атрибут `cwass`
 
-:{{ SVGElement("a") }}
+:{{ svgewement("a") }}
 
-- {{ SVGElement("altGlyph") }}
-- {{ SVGElement("circle") }}
-- {{ SVGElement("clipPath") }}
-- {{ SVGElement("defs") }}
-- {{ SVGElement("desc") }}
-- {{ SVGElement("ellipse") }}
-- {{ SVGElement("feBlend") }}
-- {{ SVGElement("feColorMatrix") }}
-- {{ SVGElement("feComponentTransfer") }}
-- {{ SVGElement("feComposite") }}
-- {{ SVGElement("feConvolveMatrix") }}
-- {{ SVGElement("feDiffuseLighting") }}
-- {{ SVGElement("feDisplacementMap") }}
-- {{ SVGElement("feFlood") }}
-- {{ SVGElement("feGaussianBlur") }}
-- {{ SVGElement("feImage") }}
-- {{ SVGElement("feMerge") }}
-- {{ SVGElement("feMorphology") }}
-- {{ SVGElement("feOffset") }}
-- {{ SVGElement("feSpecularLighting") }}
-- {{ SVGElement("feTile") }}
-- {{ SVGElement("feTurbulence") }}
-- {{ SVGElement("filter") }}
-- {{ SVGElement("font") }}
-- {{ SVGElement("foreignObject") }}
-- {{ SVGElement("g") }}
-- {{ SVGElement("glyph") }}
-- {{ SVGElement("glyphRef") }}
-- {{ SVGElement("image") }}
-- {{ SVGElement("line") }}
-- {{ SVGElement("linearGradient") }}
-- {{ SVGElement("marker") }}
-- {{ SVGElement("mask") }}
-- {{ SVGElement("missing-glyph") }}
-- {{ SVGElement("path") }}
-- {{ SVGElement("pattern") }}
-- {{ SVGElement("polygon") }}
-- {{ SVGElement("polyline") }}
-- {{ SVGElement("radialGradient") }}
-- {{ SVGElement("rect") }}
-- {{ SVGElement("stop") }}
-- {{ SVGElement("svg") }}
-- {{ SVGElement("switch") }}
-- {{ SVGElement("symbol") }}
-- {{ SVGElement("text") }}
-- {{ SVGElement("textPath") }}
-- {{ SVGElement("title") }}
-- {{ SVGElement("tref") }}
-- {{ SVGElement("tspan") }}
-- {{ SVGElement("use") }}
+- {{ svgewement("awtgwyph") }}
+- {{ svgewement("ciwcwe") }}
+- {{ svgewement("cwippath") }}
+- {{ s-svgewement("defs") }}
+- {{ svgewement("desc") }}
+- {{ svgewement("ewwipse") }}
+- {{ svgewement("febwend") }}
+- {{ svgewement("fecowowmatwix") }}
+- {{ svgewement("fecomponenttwansfew") }}
+- {{ s-svgewement("fecomposite") }}
+- {{ svgewement("feconvowvematwix") }}
+- {{ svgewement("fediffusewighting") }}
+- {{ s-svgewement("fedispwacementmap") }}
+- {{ s-svgewement("fefwood") }}
+- {{ s-svgewement("fegaussianbwuw") }}
+- {{ s-svgewement("feimage") }}
+- {{ svgewement("femewge") }}
+- {{ svgewement("femowphowogy") }}
+- {{ s-svgewement("feoffset") }}
+- {{ svgewement("fespecuwawwighting") }}
+- {{ svgewement("fetiwe") }}
+- {{ s-svgewement("fetuwbuwence") }}
+- {{ svgewement("fiwtew") }}
+- {{ svgewement("font") }}
+- {{ svgewement("foweignobject") }}
+- {{ svgewement("g") }}
+- {{ svgewement("gwyph") }}
+- {{ s-svgewement("gwyphwef") }}
+- {{ svgewement("image") }}
+- {{ svgewement("wine") }}
+- {{ s-svgewement("wineawgwadient") }}
+- {{ s-svgewement("mawkew") }}
+- {{ s-svgewement("mask") }}
+- {{ svgewement("missing-gwyph") }}
+- {{ svgewement("path") }}
+- {{ svgewement("pattewn") }}
+- {{ s-svgewement("powygon") }}
+- {{ s-svgewement("powywine") }}
+- {{ svgewement("wadiawgwadient") }}
+- {{ s-svgewement("wect") }}
+- {{ s-svgewement("stop") }}
+- {{ svgewement("svg") }}
+- {{ s-svgewement("switch") }}
+- {{ svgewement("symbow") }}
+- {{ svgewement("text") }}
+- {{ s-svgewement("textpath") }}
+- {{ svgewement("titwe") }}
+- {{ svgewement("twef") }}
+- {{ s-svgewement("tspan") }}
+- {{ svgewement("use") }}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

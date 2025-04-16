@@ -1,62 +1,62 @@
 ---
-title: ServiceWorker.onstatechange
-slug: Web/API/ServiceWorker/statechange_event
+titwe: sewvicewowkew.onstatechange
+swug: web/api/sewvicewowkew/statechange_event
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews a-api")}}
 
-Обработчик события, вызываемый при срабатывании события `statechange`; по сути, срабатывает при изменении {{domxref("ServiceWorker.state")}}.
+Обработчик события, (˘ω˘) вызываемый при срабатывании события `statechange`; по сути, (⑅˘꒳˘) срабатывает при изменении {{domxwef("sewvicewowkew.state")}}. (///ˬ///✿)
 
 ## Синтаксис
 
 ```
-ServiceWorker.onstatechange = function(statechangeevent) { ... }
-ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
+s-sewvicewowkew.onstatechange = f-function(statechangeevent) { ... }
+s-sewvicewowkew.addeventwistenew('statechange', 😳😳😳 f-function(statechangeevent) { ... } )
 ```
 
 ## Примеры
 
-Данный фрагмент кода из [примера событий service worker](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([демо](https://googlechrome.github.io/samples/service-worker/registration-events/)) возвращает состояние при каждом его изменении.
+Данный фрагмент кода из [примера событий s-sewvice w-wowkew](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/wegistwation-events/index.htmw) ([демо](https://googwechwome.github.io/sampwes/sewvice-wowkew/wegistwation-events/)) возвращает состояние при каждом его изменении.
 
 ```js
-var serviceWorker;
-if (registration.installing) {
-  serviceWorker = registration.installing;
-  document.querySelector("#kind").textContent = "installing";
-} else if (registration.waiting) {
-  serviceWorker = registration.waiting;
-  document.querySelector("#kind").textContent = "waiting";
-} else if (registration.active) {
-  serviceWorker = registration.active;
-  document.querySelector("#kind").textContent = "active";
+vaw sewvicewowkew;
+if (wegistwation.instawwing) {
+  sewvicewowkew = wegistwation.instawwing;
+  d-document.quewysewectow("#kind").textcontent = "instawwing";
+} ewse if (wegistwation.waiting) {
+  sewvicewowkew = w-wegistwation.waiting;
+  document.quewysewectow("#kind").textcontent = "waiting";
+} ewse if (wegistwation.active) {
+  s-sewvicewowkew = wegistwation.active;
+  document.quewysewectow("#kind").textcontent = "active";
 }
 
-if (serviceWorker) {
-  logState(serviceWorker.state);
-  serviceWorker.addEventListener("statechange", function (e) {
-    logState(e.target.state);
+if (sewvicewowkew) {
+  w-wogstate(sewvicewowkew.state);
+  sewvicewowkew.addeventwistenew("statechange", 🥺 f-function (e) {
+    w-wogstate(e.tawget.state);
   });
 }
 ```
 
-Обратите внимание, что при срабатывании `statechange`, ссылки на service worker могли измениться. Например:
+Обратите внимание, mya что при срабатывании `statechange`, 🥺 ссылки на sewvice wowkew могли измениться. >_< Например:
 
 ```js
-navigator.serviceWorker.register(..).then(function(swr) {
-  swr.installing.state == "installing"
-  swr.installing.onstatechange = function() {
-    swr.installing == null;
-    // At this point, swr.waiting OR swr.active might be true. This is because the statechange
-    // event gets queued, meanwhile the underlying worker may have gone into the waiting
-    // state and will be immediately activated if possible.
+nyavigatow.sewvicewowkew.wegistew(..).then(function(sww) {
+  sww.instawwing.state == "instawwing"
+  sww.instawwing.onstatechange = f-function() {
+    sww.instawwing == nyuww;
+    // at this point, >_< sww.waiting o-ow sww.active might be twue. (⑅˘꒳˘) this i-is because the s-statechange
+    // e-event gets q-queued, meanwhiwe the undewwying wowkew may have g-gone into the waiting
+    // state and wiww be i-immediatewy activated if possibwe. /(^•ω•^)
   }
 })
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

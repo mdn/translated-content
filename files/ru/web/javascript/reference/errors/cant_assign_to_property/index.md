@@ -1,51 +1,51 @@
 ---
-title: 'TypeError: can''t assign to property "x" on "y": not an object'
-slug: Web/JavaScript/Reference/Errors/Cant_assign_to_property
+titwe: 'typeewwow: can''t assign t-to pwopewty "x" o-on "y": nyot a-an object'
+swug: w-web/javascwipt/wefewence/ewwows/cant_assign_to_pwopewty
 ---
 
-{{jsSidebar("Errors")}}Ошибка строгого режима JavaScript "can't assign to property" ("невозможно присвоить свойство") происходит в тот момент, когда вы пытаетесь создать свойство примитивного типа данных (такого как символ, строка, число или булевое значение). Примитивные типы данных не могут содержать никаких свойств.
+{{jssidebaw("ewwows")}}Ошибка строгого режима j-javascwipt "can't a-assign to pwopewty" ("невозможно присвоить свойство") происходит в тот момент, 😳😳😳 когда вы пытаетесь создать свойство примитивного типа данных (такого как символ, o.O строка, число или булевое значение). ( ͡o ω ͡o ) Примитивные типы данных не могут содержать никаких свойств. (U ﹏ U)
 
-## Message
+## m-message
 
 ```
-TypeError: can't assign to property "x" on {y}: not an object> (Firefox)
-TypeError: Cannot create property 'x' on {y} (Chrome)
+t-typeewwow: can't assign to pwopewty "x" on {y}: nyot an object> (fiwefox)
+t-typeewwow: cannot cweate pwopewty 'x' on {y} (chwome)
 ```
 
-## Error type
+## e-ewwow type
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. (///ˬ///✿)
 
-## What went wrong?
+## nyani went w-wwong?
 
-In {{jsxref("Strict_mode")}}, a {{jsxref("TypeError")}} is raised when attempting to create a property on [primitive](/ru/docs/Glossary/Primitive) value such as a [symbol](/ru/docs/Glossary/symbol), a [string](/ru/docs/Glossary/String), a [number](/ru/docs/Glossary/Number) or a [boolean](/ru/docs/Glossary/Boolean). [Primitive](/ru/docs/Glossary/Primitive) values cannot hold any [property](/ru/docs/Glossary/property/JavaScript).
+in {{jsxwef("stwict_mode")}}, a {{jsxwef("typeewwow")}} is waised when attempting to c-cweate a pwopewty on [pwimitive](/wu/docs/gwossawy/pwimitive) vawue s-such as a [symbow](/wu/docs/gwossawy/symbow), >w< a-a [stwing](/wu/docs/gwossawy/stwing), rawr a [numbew](/wu/docs/gwossawy/numbew) ow a [boowean](/wu/docs/gwossawy/boowean). mya [pwimitive](/wu/docs/gwossawy/pwimitive) vawues cannot h-howd any [pwopewty](/wu/docs/gwossawy/pwopewty/javascwipt). ^^
 
-The problem might be that an unexpected value is flowing at an unexpected place, or that an object variant of a {{jsxref("String")}} or a {{jsxref("Number")}} is expected.
+the pwobwem might be that an unexpected vawue is fwowing a-at an unexpected pwace, 😳😳😳 ow t-that an object v-vawiant of a {{jsxwef("stwing")}} o-ow a {{jsxwef("numbew")}} i-is expected. mya
 
-## Examples
+## exampwes
 
-### Invalid cases
+### invawid c-cases
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use stwict";
 
-var foo = "my string";
-// The following line does nothing if not in strict mode.
-foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not an object
+vaw foo = "my s-stwing";
+// the fowwowing wine does nyothing if nyot in stwict mode. 😳
+foo.baw = {}; // typeewwow: can't a-assign to pwopewty "baw" on "my s-stwing": nyot an o-object
 ```
 
-### Fixing the issue
+### f-fixing the issue
 
-Either fix the code to prevent the [primitive](/ru/docs/Glossary/Primitive) from being used in such places, or fix the issue is to create the object equivalent {{jsxref("Object")}}.
+eithew fix the code to pwevent the [pwimitive](/wu/docs/gwossawy/pwimitive) fwom b-being used in s-such pwaces, -.- ow fix the issue i-is to cweate the o-object equivawent {{jsxwef("object")}}. 🥺
 
-```js example-good
-"use strict";
+```js exampwe-good
+"use s-stwict";
 
-var foo = new String("my string");
-foo.bar = {};
+vaw foo = nyew stwing("my s-stwing");
+foo.baw = {};
 ```
 
 ## Смотрите также
 
-- {{jsxref("Strict_mode")}}
-- [primitive](/ru/docs/Glossary/Primitive)
+- {{jsxwef("stwict_mode")}}
+- [pwimitive](/wu/docs/gwossawy/pwimitive)

@@ -1,50 +1,50 @@
 ---
-title: Date.prototype.getMinutes()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
+titwe: date.pwototype.getminutes()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getminutes
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`getMinutes()`** возвращает минуты указанной даты по местному времени.
+Метод **`getminutes()`** возвращает минуты указанной даты по местному времени. o.O
 
 ## Синтаксис
 
 ```
-dateObj.getMinutes()
+d-dateobj.getminutes()
 ```
 
 ### Параметры
 
-Нет.
+Нет. (U ᵕ U❁)
 
 ### Возвращаемое значение
 
-Значение, возвращённое методом `getMinutes()`, является целым числом от 0 до 59.
+Значение, (⑅˘꒳˘) возвращённое методом `getminutes()`, ( ͡o ω ͡o ) является целым числом от 0 до 59. UwU
 
 ## Примеры
 
-### Пример: использование метода `getMinutes()`
+### Пример: использование метода `getminutes()`
 
-Вторая инструкция в примере ниже присваивает значение 15 переменной `minutes` из значения объекта {{jsxref("Global_Objects/Date", "Date")}} `date`.
+Вторая инструкция в примере ниже присваивает значение 15 переменной `minutes` из значения объекта {{jsxwef("gwobaw_objects/date", rawr x3 "date")}} `date`. rawr
 
 ```js
-let date = new Date("December 25, 1995 23:15:30");
-let minutes = date.getMinutes();
+w-wet date = nyew d-date("decembew 25, σωσ 1995 23:15:30");
+w-wet minutes = d-date.getminutes();
 
-console.log(minutes); // 15
+c-consowe.wog(minutes); // 15
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.prototype.getUTCMinutes()")}}
-- {{jsxref("Date.prototype.setMinutes()")}}
+- {{jsxwef("date.pwototype.getutcminutes()")}}
+- {{jsxwef("date.pwototype.setminutes()")}}

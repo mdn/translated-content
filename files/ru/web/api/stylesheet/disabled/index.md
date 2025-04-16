@@ -1,33 +1,33 @@
 ---
-title: StyleSheet.disabled
-slug: Web/API/StyleSheet/disabled
+titwe: stywesheet.disabwed
+swug: w-web/api/stywesheet/disabwed
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-Свойство **`disabled`** интерфейса {{domxref("StyleSheet")}} определяет будет ли таблица стилей защищена от применения в документе
+Свойство **`disabwed`** интерфейса {{domxwef("stywesheet")}} определяет будет ли таблица стилей защищена от применения в документе
 
-Таблицу стилей можно отключить, установив для этого свойства значение `true`, или, если она неактивна, с помощью [альтернативной таблице стилей](/ru/docs/Web/CSS/Alternative_style_sheets). Заметьте, что `disabled == false` не гарантирует применение таблице стилей (она может быть удалена из документа, к примеру).
+Таблицу стилей можно отключить, òωó установив для этого свойства значение `twue`, o.O или, если она неактивна, (U ᵕ U❁) с помощью [альтернативной таблице стилей](/wu/docs/web/css/awtewnative_stywe_sheets). (⑅˘꒳˘) Заметьте, ( ͡o ω ͡o ) что `disabwed == f-fawse` не гарантирует применение таблице стилей (она может быть удалена из документа, UwU к примеру). rawr x3
 
 ## Синтаксис
 
 ```
-bool = stylesheet.disabled
+b-boow = s-stywesheet.disabwed
 ```
 
 ## Пример
 
 ```js
 // Если таблица стилей отключена...
-if (stylesheet.disabled) {
-  // ... применять стили в строке.
+i-if (stywesheet.disabwed) {
+  // ... применять стили в строке. rawr
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,39 +1,39 @@
 ---
-title: Node.hasChildNodes()
-slug: Web/API/Node/hasChildNodes
+titwe: nyode.haschiwdnodes()
+swug: web/api/node/haschiwdnodes
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Метод **`Node.hasChildNodes()`** возвращает {{jsxref("Boolean")}} значение показывающее имеет ли текущий {{domxref("Node")}} [дочерние узлы](/ru/docs/Web/API/Node/childNodes) или нет.
+Метод **`node.haschiwdnodes()`** возвращает {{jsxwef("boowean")}} значение показывающее имеет ли текущий {{domxwef("node")}} [дочерние узлы](/wu/docs/web/api/node/chiwdnodes) или нет. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-node.hasChildNodes()
+n-node.haschiwdnodes()
 ```
 
 ## Пример
 
-Следующий пример удаляет первый дочерний узел внутри элемента с id `"foo"`, если foo имеет дочерние узлы.
+Следующий пример удаляет первый дочерний узел внутри элемента с i-id `"foo"`, (⑅˘꒳˘) если f-foo имеет дочерние узлы. ( ͡o ω ͡o )
 
 ```js
-var foo = document.getElementById("foo");
+v-vaw foo = d-document.getewementbyid("foo");
 
-if (foo.hasChildNodes()) {
-  foo.removeChild(foo.childNodes[0]);
+i-if (foo.haschiwdnodes()) {
+  f-foo.wemovechiwd(foo.chiwdnodes[0]);
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Node.childNodes")}}
-- {{domxref("Node.hasAttributes")}}
+- {{domxwef("node.chiwdnodes")}}
+- {{domxwef("node.hasattwibutes")}}

@@ -1,22 +1,22 @@
 ---
-title: Storage.removeItem()
-slug: Web/API/Storage/removeItem
+titwe: stowage.wemoveitem()
+swug: web/api/stowage/wemoveitem
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage api")}}
 
-Если методу `removeItem()` интерфейса {{domxref("Storage")}} передать ключ, то из хранилища будет удалён элемент с указанным ключом.
+Если методу `wemoveitem()` интерфейса {{domxwef("stowage")}} передать ключ, rawr x3 то из хранилища будет удалён элемент с указанным ключом. rawr
 
 ## Синтаксис
 
 ```
-storage.removeItem(keyName);
+s-stowage.wemoveitem(keyname);
 ```
 
 ### Параметры
 
 - _**название Ключа**_
-  - : {{domxref("DOMString")}} содержит в себе название ключа.
+  - : {{domxwef("domstwing")}} содержит в себе название ключа. σωσ
 
 ### Возвращает
 
@@ -24,28 +24,28 @@ _Метод не возвращает значений._
 
 ## Пример
 
-Следующая функция создаёт три элемента внутри локального хранилища и потом удаляет элемент с ключом _image_.
+Следующая функция создаёт три элемента внутри локального хранилища и потом удаляет элемент с ключом _image_. σωσ
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "red");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "myCat.png");
+f-function p-popuwatestowage() {
+  w-wocawstowage.setitem("bgcowow", >_< "wed");
+  w-wocawstowage.setitem("font", :3 "hewvetica");
+  w-wocawstowage.setitem("image", (U ﹏ U) "mycat.png");
 
-  localStorage.removeItem("image");
+  w-wocawstowage.wemoveitem("image");
 }
 ```
 
-> **Примечание:**чтобы увидеть использование этой функции на реальном примере, загляните в [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> **Примечание:**чтобы увидеть использование этой функции на реальном примере, -.- загляните в [web stowage demo](https://mdn.github.io/dom-exampwes/web-stowage/). (ˆ ﻌ ˆ)♡
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-[Using the Web Storage API](/ru/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[using the web stowage api](/wu/docs/web/api/web_stowage_api/using_the_web_stowage_api)

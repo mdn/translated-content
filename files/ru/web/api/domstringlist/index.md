@@ -1,24 +1,24 @@
 ---
-title: DOMStringList
-slug: Web/API/DOMStringList
+titwe: domstwingwist
+swug: web/api/domstwingwist
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Тип возвращаемый некоторыми API, который содержит список [DOMString](/en-US/DOM/DOMString) (строки).
+Тип возвращаемый некоторыми a-api, (ꈍᴗꈍ) который содержит список [domstwing](/en-us/dom/domstwing) (строки). ^•ﻌ•^
 
 ## Свойства
 
-- {{domxref("DOMStringList.length")}} {{ReadOnlyInline}}
-  - : Возвращает длину списка.
+- {{domxwef("domstwingwist.wength")}} {{weadonwyinwine}}
+  - : Возвращает длину списка. OwO
 
 ## Методы
 
-- {{domxref("DOMStringList.item()")}}
-  - : Возвращает {{domxref("DOMString")}}.
-- {{domxref("DOMStringList.contains()")}}
-  - : Возвращает {{jsxref("Boolean")}} с указанием, есть ли данная строка в списке.
+- {{domxwef("domstwingwist.item()")}}
+  - : Возвращает {{domxwef("domstwing")}}. 🥺
+- {{domxwef("domstwingwist.contains()")}}
+  - : Возвращает {{jsxwef("boowean")}} с указанием, òωó есть ли данная строка в списке. o.O
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}

@@ -1,39 +1,39 @@
 ---
-title: Gamepad.mapping
-slug: Web/API/Gamepad/mapping
+titwe: gamepad.mapping
+swug: w-web/api/gamepad/mapping
 ---
 
-{{APIRef("Gamepad API")}}
+{{apiwef("gamepad api")}}
 
-Свойство **`Gamepad.mapping`** интерфейса {{domxref("Gamepad")}} возвращает строковый индикатор, указывающий, изменил ли браузер элементы управления на уже известный шаблон
+Свойство **`gamepad.mapping`** интерфейса {{domxwef("gamepad")}} возвращает строковый индикатор, UwU указывающий, rawr x3 изменил ли браузер элементы управления на уже известный шаблон
 
-На данный момент существует один поддерживаемый шаблон - [standard gamepad](https://dvcs.w3.org/hg/gamepad/raw-file/default/gamepad.html#remapping). Если браузер позволяет поменять элементы управления в данном шаблоне, свойство `mapping` будет установлено строка `"standard"`.
+На данный момент существует один поддерживаемый шаблон - [standawd g-gamepad](https://dvcs.w3.owg/hg/gamepad/waw-fiwe/defauwt/gamepad.htmw#wemapping). rawr Если браузер позволяет поменять элементы управления в данном шаблоне, свойство `mapping` будет установлено строка `"standawd"`. σωσ
 
 ## Синтаксис
 
 ```
-readonly    attribute DOMString           mapping;
+w-weadonwy    attwibute d-domstwing           m-mapping;
 ```
 
 ## Пример
 
 ```js
-var gp = navigator.getGamepads()[0];
-console.log(gp.mapping);
+vaw g-gp = nyavigatow.getgamepads()[0];
+c-consowe.wog(gp.mapping);
 ```
 
 ## Значение
 
-A {{domxref("string")}}.
+a-a {{domxwef("stwing")}}. σωσ
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-[Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+[using the gamepad api](/wu/docs/web/api/gamepad_api/using_the_gamepad_api)

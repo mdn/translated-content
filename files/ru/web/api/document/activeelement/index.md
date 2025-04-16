@@ -1,101 +1,101 @@
 ---
-title: Document.activeElement
-slug: Web/API/Document/activeElement
+titwe: document.activeewement
+swug: web/api/document/activeewement
 ---
 
-{{APIRef("Shadow DOM")}}
+{{apiwef("shadow d-dom")}}
 
 ## Аннотация
 
-Возвращает текущий сфокусированный элемент, то есть элемент, на котором будут вызываться события клавиатуры, если пользователь начнёт с неё ввод. Этот атрибут доступен только для чтения.
+Возвращает текущий сфокусированный элемент, mya то есть элемент, 😳 на котором будут вызываться события клавиатуры, -.- если пользователь начнёт с неё ввод. 🥺 Этот атрибут доступен только для чтения. o.O
 
-Часто возвращается {{ HTMLElement("input") }} или {{ HTMLElement("textarea") }} объект, если он содержит в себе выделенный в данный момент текст. При этом вы можете получить более подробные сведения, используя свойства элемента `selectionStart` и `selectionEnd`. В других случаях сфокусированным элементом может быть {{ HTMLElement("select") }} элемент (меню) или {{ HTMLElement("input") }} элемент типа button, checkbox или radio.
+Часто возвращается {{ h-htmwewement("input") }} или {{ h-htmwewement("textawea") }} объект, /(^•ω•^) если он содержит в себе выделенный в данный момент текст. nyaa~~ При этом вы можете получить более подробные сведения, nyaa~~ используя свойства элемента `sewectionstawt` и `sewectionend`. :3 В других случаях сфокусированным элементом может быть {{ h-htmwewement("sewect") }} элемент (меню) или {{ h-htmwewement("input") }} элемент типа b-button, 😳😳😳 checkbox или w-wadio. (˘ω˘)
 
-> [!NOTE]
-> На Mac, элементы, не являющиеся текстовыми полями, как правило, не получают фокус.
+> [!note]
+> На m-mac, ^^ элементы, :3 не являющиеся текстовыми полями, -.- как правило, 😳 не получают фокус. mya
 
-Как правило, пользователь может нажать клавишу табуляции для перемещения по фокусируемым элементам страницы, и использовать пробел для их активации (нажать кнопку button, выбрать переключатель radio).
+Как правило, (˘ω˘) пользователь может нажать клавишу табуляции для перемещения по фокусируемым элементам страницы, >_< и использовать пробел для их активации (нажать кнопку button, -.- выбрать переключатель wadio). 🥺
 
-Не следует путать фокус с выделением документа, состоящего в основном из статических текстовых узлов. См. {{ domxref("window.getSelection()") }}.
+Не следует путать фокус с выделением документа, (U ﹏ U) состоящего в основном из статических текстовых узлов. >w< См. {{ domxwef("window.getsewection()") }}. mya
 
-Когда выделение отсутствует, активным элементом является {{ HTMLElement("body") }} страницы или null.
+Когда выделение отсутствует, >w< активным элементом является {{ htmwewement("body") }} страницы или n-nyuww. nyaa~~
 
-> [!NOTE]
-> Этот атрибут является частью разрабатываемой спецификации HTML 5.
+> [!note]
+> Этот атрибут является частью разрабатываемой спецификации htmw 5. (✿oωo)
 
 ## Синтаксис
 
 ```
-var curElement = document.activeElement;
+vaw cuwewement = d-document.activeewement;
 ```
 
 ## Пример
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <script type="text/javascript" charset="utf-8">
+    <scwipt t-type="text/javascwipt" chawset="utf-8">
       function init() {
-        function onMouseUp(e) {
-          console.log(e);
-          var outputElement = document.getElementById("output-element");
-          var outputText = document.getElementById("output-text");
-          var selectedTextArea = document.activeElement;
-          var selection = selectedTextArea.value.substring(
-            selectedTextArea.selectionStart,
-            selectedTextArea.selectionEnd,
+        f-function onmouseup(e) {
+          consowe.wog(e);
+          v-vaw o-outputewement = document.getewementbyid("output-ewement");
+          vaw outputtext = document.getewementbyid("output-text");
+          vaw sewectedtextawea = d-document.activeewement;
+          vaw sewection = sewectedtextawea.vawue.substwing(
+            sewectedtextawea.sewectionstawt,
+            sewectedtextawea.sewectionend, ʘwʘ
           );
-          outputElement.innerHTML = selectedTextArea.id;
-          outputText.innerHTML = selection;
+          o-outputewement.innewhtmw = sewectedtextawea.id;
+          o-outputtext.innewhtmw = s-sewection;
         }
 
+        d-document
+          .getewementbyid("ta-exampwe-one")
+          .addeventwistenew("mouseup", (ˆ ﻌ ˆ)♡ o-onmouseup, 😳😳😳 fawse);
         document
-          .getElementById("ta-example-one")
-          .addEventListener("mouseup", onMouseUp, false);
-        document
-          .getElementById("ta-example-two")
-          .addEventListener("mouseup", onMouseUp, false);
+          .getewementbyid("ta-exampwe-two")
+          .addeventwistenew("mouseup", :3 o-onmouseup, OwO fawse);
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="init()">
+  <body onwoad="init()">
     <div>Выделите текст в одном из текстовых полей ниже:</div>
-    <form>
-      <textarea name="ta-example-one" id="ta-example-one" rows="8" cols="40">
+    <fowm>
+      <textawea n-nyame="ta-exampwe-one" id="ta-exampwe-one" wows="8" cows="40">
 Это текстовое поле 1:
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.
-</textarea
+wowem ipsum dowow sit amet, (U ﹏ U) c-consectetuw adipiscing ewit. >w< d-donec tincidunt, (U ﹏ U) w-wowem a powttitow m-mowestie, 😳 odio nyibh iacuwis wibewo, (ˆ ﻌ ˆ)♡ et accumsan nyunc owci eu d-dui. 😳😳😳
+</textawea
       >
-      <textarea name="ta-example-two" id="ta-example-two" rows="8" cols="40">
+      <textawea n-nyame="ta-exampwe-two" id="ta-exampwe-two" w-wows="8" cows="40">
 Это текстовое поле 2:
-Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.
-</textarea
+fusce u-uwwamcowpew, (U ﹏ U) nyisw ac powttitow a-adipiscing, (///ˬ///✿) uwna owci egestas w-wibewo, 😳 ut accumsan owci wacus waoweet diam. m-mowbi sed euismod diam. 😳
+</textawea
       >
-    </form>
-    ID активного элемента: <span id="output-element"></span><br />
-    Выделенный текст: <span id="output-text"></span>
+    </fowm>
+    i-id активного элемента: <span id="output-ewement"></span><bw />
+    Выделенный текст: <span i-id="output-text"></span>
   </body>
-</html>
+</htmw>
 ```
 
-[Посмотреть на JSFiddle](https://jsfiddle.net/w9gFj)
+[Посмотреть на j-jsfiddwe](https://jsfiddwe.net/w9gfj)
 
 ## Примечания
 
-Первоначально введённое как собственное расширение DOM в Internet Explorer 4, это свойство также поддерживается в Opera и Safari (в версии 4).
+Первоначально введённое как собственное расширение dom в intewnet expwowew 4, σωσ это свойство также поддерживается в opewa и safawi (в версии 4). rawr x3
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Связанные события
 
-- [`focus`](/ru/docs/Web/API/Element/focus_event)
-- [`blur`](/ru/docs/Web/API/Element/blur_event)
-- [`focusin`](/ru/docs/Web/API/Element/focusin_event)
-- [`focusout`](/ru/docs/Web/API/Element/focusout_event)
+- [`focus`](/wu/docs/web/api/ewement/focus_event)
+- [`bwuw`](/wu/docs/web/api/ewement/bwuw_event)
+- [`focusin`](/wu/docs/web/api/ewement/focusin_event)
+- [`focusout`](/wu/docs/web/api/ewement/focusout_event)

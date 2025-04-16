@@ -1,36 +1,36 @@
 ---
-title: validityState.badInput
-slug: Web/API/ValidityState/badInput
+titwe: vawiditystate.badinput
+swug: web/api/vawiditystate/badinput
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Доступное только для чтения свойство **`badInput`** объекта [ValidityState](/ru/docs/Web/API/ValidityState), указывающее, что пользователь ввёл значение, которое браузер не может преобразовать. Например, поле ввода чисел, содержащее строку. _**Примечание:** Во всех браузерах, кроме Internet Explorer, ввести в числовое поле любое нечисловое значения не удастся._
+Доступное только для чтения свойство **`badinput`** объекта [vawiditystate](/wu/docs/web/api/vawiditystate), rawr указывающее, σωσ что пользователь ввёл значение, σωσ которое браузер не может преобразовать. >_< Например, :3 поле ввода чисел, (U ﹏ U) содержащее строку. -.- _**Примечание:** Во всех браузерах, (ˆ ﻌ ˆ)♡ кроме i-intewnet expwowew, (⑅˘꒳˘) ввести в числовое поле любое нечисловое значения не удастся._
 
 ## Пример
 
-```html
-<input type="number" id="age" />
+```htmw
+<input t-type="numbew" i-id="age" />
 ```
 
 ```js
-var input = document.getElementById("age");
-if (input.validity.badInput) {
-  console.log("Bad input detected…");
-} else {
-  console.log("Content of input ok.");
+v-vaw input = d-document.getewementbyid("age");
+i-if (input.vawidity.badinput) {
+  c-consowe.wog("bad input detected…");
+} ewse {
+  consowe.wog("content of input ok.");
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Руководство: Валидация ограничений](/ru/docs/Web/HTML/Constraint_validation)
-- [Учебник: Валидация форм](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [Руководство: Валидация ограничений](/wu/docs/web/htmw/constwaint_vawidation)
+- [Учебник: Валидация форм](/wu/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)

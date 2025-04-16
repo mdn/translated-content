@@ -1,69 +1,69 @@
 ---
-title: GlobalEventHandlers.onblur
-slug: Web/API/Window/blur_event
+titwe: gwobaweventhandwews.onbwuw
+swug: web/api/window/bwuw_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Свойство **`onblur`** из {{domxref("GlobalEventHandlers")}} событий [`event handler`](/ru/docs/Web/Events/Event_handlers) для [`blur`](/ru/docs/Web/API/Element/blur_event) события. Оно доступно для{{domxref("Element")}}, {{domxref("Document")}} и {{domxref("Window")}}.
+Свойство **`onbwuw`** из {{domxwef("gwobaweventhandwews")}} событий [`event h-handwew`](/wu/docs/web/events/event_handwews) для [`bwuw`](/wu/docs/web/api/ewement/bwuw_event) события. -.- Оно доступно для{{domxwef("ewement")}}, ^^;; {{domxwef("document")}} и {{domxwef("window")}}.
 
-Событие `blur` возникает когда элемент теряет фокус.
+Событие `bwuw` возникает когда элемент теряет фокус. >_<
 
-> [!NOTE]
-> Обратным `onblur` является {{domxref("GlobalEventHandlers.onfocus", "onfocus")}}.
+> [!note]
+> Обратным `onbwuw` является {{domxwef("gwobaweventhandwews.onfocus", mya "onfocus")}}. mya
 
-## Syntax
+## s-syntax
 
 ```
-target.onblur = functionRef;
+t-tawget.onbwuw = f-functionwef;
 ```
 
-### Value
+### v-vawue
 
-`functionRef` - это имя функции или [function expression](/ru/docs/Web/JavaScript/Reference/Operators/function). Функция получает объект {{domxref("FocusEvent")}} в качестве единственного аргумента.
+`functionwef` - это имя функции или [function e-expwession](/wu/docs/web/javascwipt/wefewence/opewatows/function). 😳 Функция получает объект {{domxwef("focusevent")}} в качестве единственного аргумента. XD
 
-## Example
+## e-exampwe
 
-В этом примере `onblur` и {{domxref("GlobalEventHandlers.onfocus", "onfocus")}} используются для изменения текста в элементе {{HtmlElement("input")}}.
+В этом примере `onbwuw` и {{domxwef("gwobaweventhandwews.onfocus", :3 "onfocus")}} используются для изменения текста в элементе {{htmwewement("input")}}. 😳😳😳
 
-### HTML
+### htmw
 
-```html
-<input type="text" value="CLICK HERE" />
+```htmw
+<input t-type="text" vawue="cwick hewe" />
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let input = document.querySelector("input");
+wet input = document.quewysewectow("input");
 
-input.onblur = inputBlur;
-input.onfocus = inputFocus;
+input.onbwuw = inputbwuw;
+input.onfocus = i-inputfocus;
 
-function inputBlur() {
-  input.value = "Focus has been lost";
+function inputbwuw() {
+  input.vawue = "focus has been wost";
 }
 
-function inputFocus() {
-  input.value = "Focus is here";
+f-function inputfocus() {
+  i-input.vawue = "focus is hewe";
 }
 ```
 
-### Result
+### wesuwt
 
-Нажимайте внутри и вне поля формы. Содержимое будет изменятся.
+Нажимайте внутри и вне поля формы. -.- Содержимое будет изменятся. ( ͡o ω ͡o )
 
-{{EmbedLiveSample('Example')}}
+{{embedwivesampwe('exampwe')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Событие [`blur`](/ru/docs/Web/API/Element/blur_event)
-- Related event handler: {{domxref("GlobalEventHandlers.onfocus")}}
+- Событие [`bwuw`](/wu/docs/web/api/ewement/bwuw_event)
+- wewated e-event handwew: {{domxwef("gwobaweventhandwews.onfocus")}}

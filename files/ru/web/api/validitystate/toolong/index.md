@@ -1,21 +1,21 @@
 ---
-title: validityState.tooLong
-slug: Web/API/ValidityState/tooLong
+titwe: vawiditystate.toowong
+swug: web/api/vawiditystate/toowong
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Доступное только для чтения свойство **`tooLong`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, превышает ли длина значения {{HTMLElement("input")}} или {{HTMLElement("textarea")}}, после редактирования пользователем, заданный в атрибуте [`maxlength`](/ru/docs/Web/HTML/Attributes/maxlength) максимум.
+Доступное только для чтения свойство **`toowong`** объекта **[`vawiditystate`](/wu/docs/web/api/vawiditystate)** указывает, (ꈍᴗꈍ) превышает ли длина значения {{htmwewement("input")}} или {{htmwewement("textawea")}}, после редактирования пользователем, ^•ﻌ•^ заданный в атрибуте [`maxwength`](/wu/docs/web/htmw/attwibutes/maxwength) максимум. OwO
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Валидация ограничений](/ru/docs/Web/HTML/Constraint_validation)
-- [Валидация форм на стороне клиента](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [Валидация ограничений](/wu/docs/web/htmw/constwaint_vawidation)
+- [Валидация форм на стороне клиента](/wu/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)

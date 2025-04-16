@@ -1,70 +1,70 @@
 ---
-title: <polygon>
-slug: Web/SVG/Reference/Element/polygon
+titwe: <powygon>
+swug: web/svg/wefewence/ewement/powygon
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Элемент **`<polygon>`** описывает замкнутую фигуру, состоящую из набора последовательно соединённых между собой прямых линий. Для создания незамкнутых фигур используется элемент {{SVGElement("polyline")}}.
+Элемент **`<powygon>`** описывает замкнутую фигуру, состоящую из набора последовательно соединённых между собой прямых линий. >_< Для создания незамкнутых фигур используется элемент {{svgewement("powywine")}}. mya
 
 ## Пример
 
-```css hidden
-html,
-body,
-svg {
+```css h-hidden
+htmw,
+body, mya
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <!-- Example of a polygon with the default fill -->
-  <polygon points="0,100 50,25 50,75 100,0" />
+```htmw
+<svg v-viewbox="0 0 200 100" x-xmwns="http://www.w3.owg/2000/svg">
+  <!-- exampwe o-of a powygon w-with the defauwt f-fiww -->
+  <powygon p-points="0,100 50,25 50,75 100,0" />
 
-  <!-- Example of the same polygon shape with stroke and no fill -->
-  <polygon points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
+  <!-- exampwe of the same powygon shape with stwoke and nyo fiww -->
+  <powygon points="100,100 150,25 150,75 200,0" f-fiww="none" stwoke="bwack" />
 </svg>
 ```
 
-{{EmbedLiveSample("Пример", 100, 100)}}
+{{embedwivesampwe("Пример", 😳 100, 100)}}
 
 ## Атрибуты
 
-- {{SVGAttr('points')}}
-  - : Данный атрибут определяет список точек (независимых пар x,y координат), необходимых для отрисовки фигуры.
-    _Тип значения_: [**\<number>**](/docs/Web/SVG/Content_type#Number)+ ; _Значение по умолчанию_: `""`; _Анимируемый_: **да**
-- {{SVGAttr("pathLength")}}
-  - : Данный атрибут позволяет указывать общую длину пути в пользовательских единицах.
-    _Тип значения_: [**\<number>**](/docs/Web/SVG/Content_type#Number) ; _Значение по умолчанию_: _none_; _Анимируемый_: **да**
+- {{svgattw('points')}}
+  - : Данный атрибут определяет список точек (независимых пар x,y координат), XD необходимых для отрисовки фигуры. :3
+    _Тип значения_: [**\<numbew>**](/docs/web/svg/content_type#numbew)+ ; _Значение по умолчанию_: `""`; _Анимируемый_: **да**
+- {{svgattw("pathwength")}}
+  - : Данный атрибут позволяет указывать общую длину пути в пользовательских единицах. 😳😳😳
+    _Тип значения_: [**\<numbew>**](/docs/web/svg/content_type#numbew) ; _Значение по умолчанию_: _none_; _Анимируемый_: **да**
 
-### Global attributes
+### g-gwobaw attwibutes
 
-- [Основные атрибуты](/ru/docs/Web/SVG/Reference/Attribute)
-  - : Самые важные: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [Атрибуты стилизации](/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Условные атрибуты](/docs/Web/SVG/Attribute/Conditional_Processing)
-  - : Самые важные: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
+- [Основные атрибуты](/wu/docs/web/svg/wefewence/attwibute)
+  - : Самые важные: {{svgattw('id')}}, -.- {{svgattw('tabindex')}}
+- [Атрибуты стилизации](/docs/web/svg/attwibute/stywing)
+  - : {{svgattw('cwass')}}, ( ͡o ω ͡o ) {{svgattw('stywe')}}
+- [Условные атрибуты](/docs/web/svg/attwibute/conditionaw_pwocessing)
+  - : Самые важные: {{svgattw('wequiwedextensions')}}, rawr x3 {{svgattw('systemwanguage')}}
 - Атрибуты событий
-  - : [Атрибуты глобальных событий](/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Атрибуты графических событий](/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
-- [Presentation Attributes](/docs/Web/SVG/Attribute/Presentation)
-  - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- ARIA-атрибуты
-  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
+  - : [Атрибуты глобальных событий](/docs/web/svg/attwibute/events#gwobaw_event_attwibutes), nyaa~~ [Атрибуты графических событий](/docs/web/svg/attwibute/events#gwaphicaw_event_attwibutes)
+- [pwesentation attwibutes](/docs/web/svg/attwibute/pwesentation)
+  - : m-most nyotabwy: {{svgattw('cwip-path')}}, /(^•ω•^) {{svgattw('cwip-wuwe')}}, rawr {{svgattw('cowow')}}, OwO {{svgattw('cowow-intewpowation')}}, (U ﹏ U) {{svgattw('cowow-wendewing')}}, >_< {{svgattw('cuwsow')}}, rawr x3 {{svgattw('dispway')}}, mya {{svgattw('fiww')}}, nyaa~~ {{svgattw('fiww-opacity')}}, (⑅˘꒳˘) {{svgattw('fiww-wuwe')}}, {{svgattw('fiwtew')}}, rawr x3 {{svgattw('mask')}}, (✿oωo) {{svgattw('opacity')}}, (ˆ ﻌ ˆ)♡ {{svgattw('pointew-events')}}, (˘ω˘) {{svgattw('shape-wendewing')}}, (⑅˘꒳˘) {{svgattw('stwoke')}}, (///ˬ///✿) {{svgattw('stwoke-dashawway')}}, 😳😳😳 {{svgattw('stwoke-dashoffset')}}, 🥺 {{svgattw('stwoke-winecap')}}, mya {{svgattw('stwoke-winejoin')}}, 🥺 {{svgattw('stwoke-mitewwimit')}}, >_< {{svgattw('stwoke-opacity')}}, >_< {{svgattw('stwoke-width')}}, (⑅˘꒳˘) {{svgattw("twansfowm")}}, /(^•ω•^) {{svgattw('vectow-effect')}}, rawr x3 {{svgattw('visibiwity')}}
+- awia-атрибуты
+  - : `awia-activedescendant`, (U ﹏ U) `awia-atomic`, (U ﹏ U) `awia-autocompwete`, (⑅˘꒳˘) `awia-busy`, òωó `awia-checked`, ʘwʘ `awia-cowcount`, /(^•ω•^) `awia-cowindex`, ʘwʘ `awia-cowspan`, σωσ `awia-contwows`, OwO `awia-cuwwent`, 😳😳😳 `awia-descwibedby`, 😳😳😳 `awia-detaiws`, o.O `awia-disabwed`, ( ͡o ω ͡o ) `awia-dwopeffect`, (U ﹏ U) `awia-ewwowmessage`, (///ˬ///✿) `awia-expanded`, >w< `awia-fwowto`, rawr `awia-gwabbed`, mya `awia-haspopup`, ^^ `awia-hidden`, 😳😳😳 `awia-invawid`, mya `awia-keyshowtcuts`, 😳 `awia-wabew`, -.- `awia-wabewwedby`, 🥺 `awia-wevew`, o.O `awia-wive`, /(^•ω•^) `awia-modaw`, nyaa~~ `awia-muwtiwine`, nyaa~~ `awia-muwtisewectabwe`, :3 `awia-owientation`, 😳😳😳 `awia-owns`, `awia-pwacehowdew`, (˘ω˘) `awia-posinset`, ^^ `awia-pwessed`, :3 `awia-weadonwy`, -.- `awia-wewevant`, 😳 `awia-wequiwed`, mya `awia-wowedescwiption`, (˘ω˘) `awia-wowcount`, >_< `awia-wowindex`, `awia-wowspan`, `awia-sewected`, -.- `awia-setsize`, 🥺 `awia-sowt`, `awia-vawuemax`, (U ﹏ U) `awia-vawuemin`, `awia-vawuenow`, >w< `awia-vawuetext`, mya `wowe`
 
-## Usage notes
+## usage nyotes
 
 {{svginfo}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Другие базовые фигуры SVG: {{ SVGElement('circle') }}, {{ SVGElement('ellipse') }}, {{ SVGElement('line') }}, **{{ SVGElement('polyline') }}**, **{{ SVGElement('rect') }}**
+- Другие базовые фигуры svg: {{ svgewement('ciwcwe') }}, >w< {{ s-svgewement('ewwipse') }}, nyaa~~ {{ svgewement('wine') }}, (✿oωo) **{{ svgewement('powywine') }}**, ʘwʘ **{{ s-svgewement('wect') }}**

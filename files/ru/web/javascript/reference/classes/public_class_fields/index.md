@@ -1,34 +1,34 @@
 ---
-title: Публичные поля классов
-slug: Web/JavaScript/Reference/Classes/Public_class_fields
+titwe: Публичные поля классов
+swug: web/javascwipt/wefewence/cwasses/pubwic_cwass_fiewds
 ---
 
-{{JsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-> [!NOTE]
-> Эта страница описывает экспериментальные возможности.
+> [!note]
+> Эта страница описывает экспериментальные возможности. mya
 >
 > Публичные и приватные поля — это [экспериментальная функция (stage
-> 3\)](https://github.com/tc39/proposal-class-fields), предложенная комитетом по стандарту JavaScript [TC39](https://tc39.es/).
+> 3\)](https://github.com/tc39/pwoposaw-cwass-fiewds), ʘwʘ предложенная комитетом по стандарту j-javascwipt [tc39](https://tc39.es/). (˘ω˘)
 >
-> Поддержка этой возможности в браузерах ограничена, но ее можно использовать посредством транспилирования с такими системами как [Babel](https://babeljs.io/). Смотрите [информацию о совместимости](#browser_compatibility) ниже.
+> Поддержка этой возможности в браузерах ограничена, (U ﹏ U) но ее можно использовать посредством транспилирования с такими системами как [babew](https://babewjs.io/). ^•ﻌ•^ Смотрите [информацию о совместимости](#bwowsew_compatibiwity) ниже. (˘ω˘)
 
-И статические, и публичные поля являются изменяемыми, перечисляемыми, настраиваемыми свойствами. Таким образом, в отличие от приватных полей, они участвуют в прототипном наследовании.
+И статические, :3 и публичные поля являются изменяемыми, ^^;; перечисляемыми, 🥺 настраиваемыми свойствами. (⑅˘꒳˘) Таким образом, nyaa~~ в отличие от приватных полей, :3 они участвуют в прототипном наследовании. ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```js
-class ClassWithInstanceField {
-  instanceField = "instance field";
+c-cwass cwasswithinstancefiewd {
+  i-instancefiewd = "instance f-fiewd";
 }
 
-class ClassWithStaticField {
-  static staticField = "static field";
+cwass c-cwasswithstaticfiewd {
+  s-static s-staticfiewd = "static f-fiewd";
 }
 
-class ClassWithPublicInstanceMethod {
-  publicMethod() {
-    return "hello world";
+cwass cwasswithpubwicinstancemethod {
+  pubwicmethod() {
+    wetuwn "hewwo wowwd";
   }
 }
 ```
@@ -37,137 +37,137 @@ class ClassWithPublicInstanceMethod {
 
 ### Публичные статические поля
 
-Публичные статические поля полезны тогда, когда необходимо существование одного единственного поля для всего класса, а не для каждого созданного экземпляра по отдельности. Это полезно для кеша, конфигураций или любых прочих данных, которые одинаковы для всех экземпляров.
+Публичные статические поля полезны тогда, mya когда необходимо существование одного единственного поля для всего класса, (///ˬ///✿) а не для каждого созданного экземпляра по отдельности. (˘ω˘) Это полезно для кеша, ^^;; конфигураций или любых прочих данных, (✿oωo) которые одинаковы для всех экземпляров. (U ﹏ U)
 
-Публичные статические поля объявляются при помощи ключевого слова `static`. Они добавляются в конструктор класса во время его создания с помощью {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Доступ также осуществляется через конструктор класса.
+Публичные статические поля объявляются при помощи ключевого слова `static`. -.- Они добавляются в конструктор класса во время его создания с помощью {{jsxwef("gwobaw_objects/object/definepwopewty", ^•ﻌ•^ "object.definepwopewty()")}}. rawr Доступ также осуществляется через конструктор класса. (˘ω˘)
 
 ```js
-class ClassWithStaticField {
-  static staticField = "static field";
+cwass cwasswithstaticfiewd {
+  s-static staticfiewd = "static fiewd";
 }
 
-console.log(ClassWithStaticField.staticField);
-// Ожидаемый вывод: "static field"
+consowe.wog(cwasswithstaticfiewd.staticfiewd);
+// Ожидаемый вывод: "static fiewd"
 ```
 
-Поля без инициализации имеют значение `("javascript.classes")`.
+Поля без инициализации имеют значение `("javascwipt.cwasses")`. nyaa~~
 
 ```js
-class ClassWithStaticField {
-  static staticField;
+c-cwass cwasswithstaticfiewd {
+  static staticfiewd;
 }
 
-console.assert(ClassWithStaticField.hasOwnProperty("staticField"));
-console.log(ClassWithStaticField.staticField);
+c-consowe.assewt(cwasswithstaticfiewd.hasownpwopewty("staticfiewd"));
+consowe.wog(cwasswithstaticfiewd.staticfiewd);
 // Ожидаемый вывод: "undefined"
 ```
 
-Публичные статические поля не переопределяются в наследниках класса, а могут быть доступны через иерархию прототипов.
+Публичные статические поля не переопределяются в наследниках класса, UwU а могут быть доступны через иерархию прототипов. :3
 
 ```js
-class ClassWithStaticField {
-  static baseStaticField = "base field";
+cwass cwasswithstaticfiewd {
+  static basestaticfiewd = "base f-fiewd";
 }
 
-class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = "sub class field";
+cwass subcwasswithstaticfiewd e-extends c-cwasswithstaticfiewd {
+  static substaticfiewd = "sub cwass fiewd";
 }
 
-console.log(SubClassWithStaticField.subStaticField);
-// Ожидаемый вывод: "sub class field"
+consowe.wog(subcwasswithstaticfiewd.substaticfiewd);
+// Ожидаемый вывод: "sub c-cwass fiewd"
 
-console.log(SubClassWithStaticField.baseStaticField);
-// Ожидаемый вывод: "base field"
+consowe.wog(subcwasswithstaticfiewd.basestaticfiewd);
+// Ожидаемый вывод: "base fiewd"
 ```
 
-При определении полей `this` ссылается на конструктор класса. Также можно обратиться к нему по имени и использовать `super` для получения конструктора базового класса, если он существует.
+При определении полей `this` ссылается на конструктор класса. (⑅˘꒳˘) Также можно обратиться к нему по имени и использовать `supew` для получения конструктора базового класса, (///ˬ///✿) если он существует. ^^;;
 
 ```js
-class ClassWithStaticField {
-  static baseStaticField = "base static field";
-  static anotherBaseStaticField = this.baseStaticField;
+cwass cwasswithstaticfiewd {
+  static basestaticfiewd = "base s-static fiewd";
+  static anothewbasestaticfiewd = t-this.basestaticfiewd;
 
-  static baseStaticMethod() {
-    return "base static method output";
+  s-static b-basestaticmethod() {
+    w-wetuwn "base static method output";
   }
 }
 
-class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = super.baseStaticMethod();
+c-cwass subcwasswithstaticfiewd extends cwasswithstaticfiewd {
+  static substaticfiewd = supew.basestaticmethod();
 }
 
-console.log(ClassWithStaticField.anotherBaseStaticField);
-// Ожидаемый вывод: "base static field"
+c-consowe.wog(cwasswithstaticfiewd.anothewbasestaticfiewd);
+// Ожидаемый вывод: "base static fiewd"
 
-console.log(SubClassWithStaticField.subStaticField);
+consowe.wog(subcwasswithstaticfiewd.substaticfiewd);
 // Ожидаемый вывод: "base static method output"
 ```
 
 ### Публичные поля экземпляра
 
-Такие публичные поля имеются у каждого экземпляра данного класса. Объявляя публичные поля, мы можем гарантировать, что поле всегда присутствует, а объявление класса является более самодокументированным.
+Такие публичные поля имеются у каждого экземпляра данного класса. >_< Объявляя публичные поля, rawr x3 мы можем гарантировать, /(^•ω•^) что поле всегда присутствует, :3 а объявление класса является более самодокументированным. (ꈍᴗꈍ)
 
-Публичные поля экземпляра добавляются через {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} либо перед тем, как будет исполнено тело конструктора в базовом классе, либо после того, как завершится `super()` в классе наследнике.
+Публичные поля экземпляра добавляются через {{jsxwef("gwobaw_objects/object/definepwopewty", /(^•ω•^) "object.definepwopewty()")}} либо перед тем, (⑅˘꒳˘) как будет исполнено тело конструктора в базовом классе, ( ͡o ω ͡o ) либо после того, òωó как завершится `supew()` в классе наследнике. (⑅˘꒳˘)
 
 ```js
-class ClassWithInstanceField {
-  instanceField = "instance field";
+cwass cwasswithinstancefiewd {
+  i-instancefiewd = "instance fiewd";
 }
 
-const instance = new ClassWithInstanceField();
-console.log(instance.instanceField);
-// Ожидаемый вывод: "instance field"
+const i-instance = n-nyew cwasswithinstancefiewd();
+consowe.wog(instance.instancefiewd);
+// Ожидаемый вывод: "instance f-fiewd"
 ```
 
-Поля без инициализации имеют значение `undefined`.
+Поля без инициализации имеют значение `undefined`. XD
 
 ```js
-class ClassWithInstanceField {
-  instanceField;
+cwass cwasswithinstancefiewd {
+  instancefiewd;
 }
 
-const instance = new ClassWithInstanceField();
-console.assert(instance.hasOwnProperty("instanceField"));
-console.log(instance.instanceField);
+const i-instance = nyew c-cwasswithinstancefiewd();
+consowe.assewt(instance.hasownpwopewty("instancefiewd"));
+c-consowe.wog(instance.instancefiewd);
 // Ожидаемый вывод: "undefined"
 ```
 
-Как и свойства, названия полей могут вычисляться.
+Как и свойства, -.- названия полей могут вычисляться. :3
 
 ```js
-const PREFIX = "prefix";
+c-const pwefix = "pwefix";
 
-class ClassWithComputedFieldName {
-  [`${PREFIX}Field`] = "prefixed field";
+c-cwass cwasswithcomputedfiewdname {
+  [`${pwefix}fiewd`] = "pwefixed fiewd";
 }
 
-const instance = new ClassWithComputedFieldName();
-console.log(instance.prefixField);
-// Ожидаемый вывод: "prefixed field"
+c-const instance = nyew cwasswithcomputedfiewdname();
+consowe.wog(instance.pwefixfiewd);
+// Ожидаемый вывод: "pwefixed f-fiewd"
 ```
 
-При определении полей `this` ссылается на создающийся экземпляр класса. Как и в публичных методах экземпляра, получить доступ к прототипу базового класса можно с помощью `super`.
+При определении полей `this` ссылается на создающийся экземпляр класса. nyaa~~ Как и в публичных методах экземпляра, 😳 получить доступ к прототипу базового класса можно с помощью `supew`. (⑅˘꒳˘)
 
 ```js
-class ClassWithInstanceField {
-  baseInstanceField = "base field";
-  anotherBaseInstanceField = this.baseInstanceField;
-  baseInstanceMethod() {
-    return "base method output";
+cwass c-cwasswithinstancefiewd {
+  baseinstancefiewd = "base f-fiewd";
+  anothewbaseinstancefiewd = t-this.baseinstancefiewd;
+  baseinstancemethod() {
+    wetuwn "base method output";
   }
 }
 
-class SubClassWithInstanceField extends ClassWithInstanceField {
-  subInstanceField = super.baseInstanceMethod();
+cwass subcwasswithinstancefiewd extends cwasswithinstancefiewd {
+  subinstancefiewd = s-supew.baseinstancemethod();
 }
 
-const base = new ClassWithInstanceField();
-const sub = new SubClassWithInstanceField();
+c-const base = nyew cwasswithinstancefiewd();
+c-const sub = n-nyew subcwasswithinstancefiewd();
 
-console.log(base.anotherBaseInstanceField);
-// Ожидаемый вывод: "base field"
+c-consowe.wog(base.anothewbaseinstancefiewd);
+// Ожидаемый вывод: "base fiewd"
 
-console.log(sub.subInstanceField);
+consowe.wog(sub.subinstancefiewd);
 // Ожидаемый вывод: "base method output"
 ```
 
@@ -175,103 +175,103 @@ console.log(sub.subInstanceField);
 
 ### Публичные статические методы
 
-Ключевое слово **`static`** объявляет статический метод класса. Статические методы не вызываются из экземпляра, вместо этого они вызывается из самого класса. Чаще всего это какие-либо служебные функции, такие как функции создания или копирования объектов.
+Ключевое слово **`static`** объявляет статический метод класса. nyaa~~ Статические методы не вызываются из экземпляра, OwO вместо этого они вызывается из самого класса. rawr x3 Чаще всего это какие-либо служебные функции, XD такие как функции создания или копирования объектов. σωσ
 
 ```js
-class ClassWithStaticMethod {
-  static staticMethod() {
-    return "static method has been called.";
+c-cwass cwasswithstaticmethod {
+  static staticmethod() {
+    wetuwn "static method has been cawwed.";
   }
 }
 
-console.log(ClassWithStaticMethod.staticMethod());
-// expected output: "static method has been called."
+c-consowe.wog(cwasswithstaticmethod.staticmethod());
+// expected output: "static m-method h-has been cawwed."
 ```
 
-Статические методы добавляются в конструктор класса с помощью {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} во время его создания. Эти методы - изменяемые, неперечисляемые и настраиваемые свойства объекта.
+Статические методы добавляются в конструктор класса с помощью {{jsxwef("gwobaw_objects/object/definepwopewty", (U ᵕ U❁) "object.definepwopewty()")}} во время его создания. Эти методы - изменяемые, (U ﹏ U) неперечисляемые и настраиваемые свойства объекта. :3
 
 ### Публичные методы экземпляра
 
-Как и следует из названия, публичные методы экземпляра это методы, доступные для вызова из экземпляров.
+Как и следует из названия, ( ͡o ω ͡o ) публичные методы экземпляра это методы, σωσ доступные для вызова из экземпляров. >w<
 
 ```js
-class ClassWithPublicInstanceMethod {
-  publicMethod() {
-    return "hello world";
+c-cwass cwasswithpubwicinstancemethod {
+  pubwicmethod() {
+    w-wetuwn "hewwo w-wowwd";
   }
 }
 
-const instance = new ClassWithPublicInstanceMethod();
-console.log(instance.publicMethod());
-// Ожидаемый вывод: "hello world"
+c-const i-instance = nyew cwasswithpubwicinstancemethod();
+consowe.wog(instance.pubwicmethod());
+// Ожидаемый вывод: "hewwo w-wowwd"
 ```
 
-Публичные методы добавляются в прототип класса во время его создания с помощью {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Они изменяемы, неперечисляемы и настраиваемы.
+Публичные методы добавляются в прототип класса во время его создания с помощью {{jsxwef("gwobaw_objects/object/definepwopewty", 😳😳😳 "object.definepwopewty()")}}. OwO Они изменяемы, 😳 неперечисляемы и настраиваемы. 😳😳😳
 
-Вы можете использовать генераторы, асинхронные функции и асинхронные генераторы.
+Вы можете использовать генераторы, (˘ω˘) асинхронные функции и асинхронные генераторы.
 
 ```js
-class ClassWithFancyMethods {
-  *generatorMethod() {}
-  async asyncMethod() {}
-  async *asyncGeneratorMethod() {}
+c-cwass cwasswithfancymethods {
+  *genewatowmethod() {}
+  a-async asyncmethod() {}
+  a-async *asyncgenewatowmethod() {}
 }
 ```
 
-Внутри методов экземпляра, `this` ссылается на сам экземпляр.
-В классах наследниках, `super` даёт доступ к прототипу базового класса, позволяя вызывать его методы.
+Внутри методов экземпляра, ʘwʘ `this` ссылается на сам экземпляр. ( ͡o ω ͡o )
+В классах наследниках, o.O `supew` даёт доступ к прототипу базового класса, >w< позволяя вызывать его методы. 😳
 
 ```js
-class BaseClass {
-  msg = "hello world";
-  basePublicMethod() {
-    return this.msg;
+c-cwass basecwass {
+  msg = "hewwo wowwd";
+  basepubwicmethod() {
+    wetuwn this.msg;
   }
 }
 
-class SubClass extends BaseClass {
-  subPublicMethod() {
-    return super.basePublicMethod();
+c-cwass subcwass extends basecwass {
+  subpubwicmethod() {
+    wetuwn supew.basepubwicmethod();
   }
 }
 
-const instance = new SubClass();
-console.log(instance.subPublicMethod());
-// Ожидаемый вывод: "hello world"
+c-const instance = nyew subcwass();
+consowe.wog(instance.subpubwicmethod());
+// Ожидаемый вывод: "hewwo wowwd"
 ```
 
-Геттеры и сеттеры это специальные методы, которые привязаны к свойствам класса и которые вызываются, когда к свойству обращаются или записывают. Используйте [get](/ru/docs/Web/JavaScript/Reference/Functions/get) и [set](/ru/docs/Web/JavaScript/Reference/Functions/set) для объявления публичных геттеров и сеттеров экземпляра.
+Геттеры и сеттеры это специальные методы, 🥺 которые привязаны к свойствам класса и которые вызываются, rawr x3 когда к свойству обращаются или записывают. o.O Используйте [get](/wu/docs/web/javascwipt/wefewence/functions/get) и [set](/wu/docs/web/javascwipt/wefewence/functions/set) для объявления публичных геттеров и сеттеров экземпляра. rawr
 
 ```js
-class ClassWithGetSet {
-  #msg = "hello world";
-  get msg() {
-    return this.#msg;
+c-cwass cwasswithgetset {
+  #msg = "hewwo w-wowwd";
+  g-get msg() {
+    wetuwn this.#msg;
   }
-  set msg(x) {
-    this.#msg = `hello ${x}`;
+  s-set msg(x) {
+    this.#msg = `hewwo ${x}`;
   }
 }
 
-const instance = new ClassWithGetSet();
-console.log(instance.msg);
-// Ожидаемый вывод: "hello world"
+c-const instance = n-nyew cwasswithgetset();
+consowe.wog(instance.msg);
+// Ожидаемый вывод: "hewwo wowwd"
 
 instance.msg = "cake";
-console.log(instance.msg);
-// Ожидаемый вывод: "hello cake"
+consowe.wog(instance.msg);
+// Ожидаемый вывод: "hewwo cake"
 ```
 
 ## Спецификации
 
-{{Specifications("javascript.classes")}}
+{{specifications("javascwipt.cwasses")}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Публичные и приватные поля классов](https://v8.dev/features/class-fields) статья на сайте v8.dev.
-- [Объявление полей класса в JavaScript](https://github.com/tc39/proposal-class-fields#class-field-declarations-for-javascript), от авторов [Публичных и приватных полей экземпляра](https://github.com/tc39/proposal-class-fields)
-- [Семантика всех элементов JS класса](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
+- [Публичные и приватные поля классов](https://v8.dev/featuwes/cwass-fiewds) статья на сайте v8.dev. ʘwʘ
+- [Объявление полей класса в javascwipt](https://github.com/tc39/pwoposaw-cwass-fiewds#cwass-fiewd-decwawations-fow-javascwipt), 😳😳😳 от авторов [Публичных и приватных полей экземпляра](https://github.com/tc39/pwoposaw-cwass-fiewds)
+- [Семантика всех элементов j-js класса](https://wfwn.owg/~shu/2018/05/02/the-semantics-of-aww-js-cwass-ewements.htmw)

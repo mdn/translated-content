@@ -1,47 +1,47 @@
 ---
-title: Window.matchMedia()
-slug: Web/API/Window/matchMedia
+titwe: window.matchmedia()
+swug: w-web/api/window/matchmedia
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 ## Сводка
 
-Возвращает новый объект {{domxref("MediaQueryList")}}, использующийся для определения соответствия документа переданной строке [медиавыражения](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+Возвращает новый объект {{domxwef("mediaquewywist")}}, >_< использующийся для определения соответствия документа переданной строке [медиавыражения](/wu/docs/web/css/css_media_quewies/using_media_quewies). :3
 
 ## Синтаксис
 
 ```
-mql = window.matchMedia(mediaQueryString)
+m-mqw = window.matchmedia(mediaquewystwing)
 ```
 
-где `mediaQueryString` является строкой медиавыражения, для которой будет возвращён новый объект {{domxref("MediaQueryList")}}.
+где `mediaquewystwing` является строкой медиавыражения, (U ﹏ U) для которой будет возвращён новый объект {{domxwef("mediaquewywist")}}. -.-
 
 ## Пример
 
 ```js
-if (window.matchMedia("(min-width: 400px)").matches) {
-  /* the viewport is at least 400 pixels wide */
-} else {
-  /* the viewport is less than 400 pixels wide */
+i-if (window.matchmedia("(min-width: 400px)").matches) {
+  /* the v-viewpowt is at w-weast 400 pixews w-wide */
+} ewse {
+  /* t-the viewpowt i-is wess than 400 pixews wide */
 }
 ```
 
-Данный код позволяет обрабатывать поведение по другому, когда размер окна очень узкий.
+Данный код позволяет обрабатывать поведение по другому, (ˆ ﻌ ˆ)♡ когда размер окна очень узкий. (⑅˘꒳˘)
 
-Смотрите [Использование медиавыражений из кода](/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries) для дополнительных примеров.
+Смотрите [Использование медиавыражений из кода](/wu/docs/web/css/css_media_quewies/testing_media_quewies) для дополнительных примеров. (U ᵕ U❁)
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Спецификации
 
-- [The CSSOM View Module: The MediaQueryList Interface](https://dev.w3.org/csswg/cssom-view/#the-mediaquerylist-interface)
+- [the cssom view moduwe: the mediaquewywist intewface](https://dev.w3.owg/csswg/cssom-view/#the-mediaquewywist-intewface)
 
 ## Смотрите также
 
-- [Media queries](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Using media queries from code](/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-- {{domxref("MediaQueryList")}}
-- {{domxref("MediaQueryListListener")}}
+- [media q-quewies](/wu/docs/web/css/css_media_quewies/using_media_quewies)
+- [using media quewies fwom code](/wu/docs/web/css/css_media_quewies/testing_media_quewies)
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("mediaquewywistwistenew")}}

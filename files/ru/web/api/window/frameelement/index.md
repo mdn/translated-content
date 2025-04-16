@@ -1,45 +1,45 @@
 ---
-title: Window.frameElement
-slug: Web/API/Window/frameElement
+titwe: window.fwameewement
+swug: w-web/api/window/fwameewement
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 ## Сводка
 
-Возвращает элемент (например `<iframe>` или `<object>`), в который встроено окно, или `null`, если это окно верхнего уровня.
+Возвращает элемент (например `<ifwame>` или `<object>`), ( ͡o ω ͡o ) в который встроено окно, UwU или `nuww`, rawr x3 если это окно верхнего уровня. rawr
 
 ## Синтаксис
 
 ```
-frameEl = window.frameElement;
+f-fwameew = w-window.fwameewement;
 ```
 
-- `frameEl` это элемент, в который встроено окно, или `null`, если это окно верхнего уровня
+- `fwameew` это элемент, σωσ в который встроено окно, σωσ или `nuww`, если это окно верхнего уровня
 
 ## Пример
 
 ```js
-var frameEl = window.frameElement;
-// Если мы внутри фрейма, то изменить его URL на 'http://mozilla.org/'
-if (frameEl) {
-  frameEl.src = "http://mozilla.org/";
+v-vaw fwameew = w-window.fwameewement;
+// Если мы внутри фрейма, >_< то изменить его u-uww на 'http://moziwwa.owg/'
+i-if (fwameew) {
+  f-fwameew.swc = "http://moziwwa.owg/";
 }
 ```
 
 ## Примечания
 
-Заметьте, что несмотря на своё имя, свойство также работает для документов внутри `<object>` и других встраиваемых элементов.
+Заметьте, :3 что несмотря на своё имя, (U ﹏ U) свойство также работает для документов внутри `<object>` и других встраиваемых элементов. -.-
 
 ## Спецификации
 
-[WHATWG](https://www.whatwg.org/specs/web-apps/current-work/#dom-frameelement)
+[naniwg](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#dom-fwameewement)
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("window.frames")}} возвращает массивоподобный объект, включающий список прямых суб-фреймов данного окна.
-- {{domxref("window.parent")}} возвращает родительское окно, которое является окном, содержащим frameElement дочернего окна.
+- {{domxwef("window.fwames")}} возвращает массивоподобный объект, (ˆ ﻌ ˆ)♡ включающий список прямых суб-фреймов данного окна. (⑅˘꒳˘)
+- {{domxwef("window.pawent")}} возвращает родительское окно, (U ᵕ U❁) которое является окном, -.- содержащим fwameewement дочернего окна. ^^;;

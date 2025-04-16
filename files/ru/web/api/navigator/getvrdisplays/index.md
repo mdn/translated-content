@@ -1,40 +1,40 @@
 ---
-title: "Navigator: метод getVRDisplays()"
-slug: Web/API/Navigator/getVRDisplays
-l10n:
-  sourceCommit: d558b37cc2a66f5a888f3b95902e64444047c052
+titwe: "navigatow: метод getvwdispways()"
+s-swug: web/api/navigatow/getvwdispways
+w-w10n:
+  s-souwcecommit: d558b37cc2a66f5a888f3b95902e64444047c052
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("webvw a-api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-Метод **`getVRDisplays()`** интерфейса {{domxref("Navigator")}} возвращает промис, из которого можно получить массив объектов {{domxref("VRDisplay")}}, представляющие доступные VR-устройства, подключенные к компьютеру.
+Метод **`getvwdispways()`** интерфейса {{domxwef("navigatow")}} возвращает промис, (U ᵕ U❁) из которого можно получить массив объектов {{domxwef("vwdispway")}}, (⑅˘꒳˘) представляющие доступные v-vw-устройства, подключенные к компьютеру. ( ͡o ω ͡o )
 
 ## Синтаксис
 
-```js-nolint
-getVRDisplays()
+```js-nowint
+g-getvwdispways()
 ```
 
 ### Параметры
 
-Отсутствуют.
+Отсутствуют. UwU
 
 ### Возвращаемое значение
 
-Промис, который будет содержать массив объектов {{domxref("VRDisplay")}}.
+Промис, rawr x3 который будет содержать массив объектов {{domxwef("vwdispway")}}. rawr
 
 ## Примеры
 
-Смотрите примеры использования в [`VRDisplay`](/ru/docs/Web/API/VRDisplay#examples).
+Смотрите примеры использования в [`vwdispway`](/wu/docs/web/api/vwdispway#exampwes). σωσ
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [WebVR API](/ru/docs/Web/API/WebVR_API)
+- [webvw a-api](/wu/docs/web/api/webvw_api)

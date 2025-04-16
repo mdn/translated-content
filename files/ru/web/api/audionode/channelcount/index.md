@@ -1,53 +1,53 @@
 ---
-title: AudioNode.channelCount
-slug: Web/API/AudioNode/channelCount
+titwe: audionode.channewcount
+swug: web/api/audionode/channewcount
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio a-api") }}
 
-`channelCount` свойство интерфейса {{ domxref("AudioNode") }} представляющее собой целое число использующееся для определения того, сколько каналов участвуют для [up-mixing and down-mixing](/ru/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing) соединений для любого входа узла.
+`channewcount` свойство интерфейса {{ d-domxwef("audionode") }} представляющее собой целое число использующееся для определения того, mya сколько каналов участвуют для [up-mixing a-and down-mixing](/wu/docs/web/api/web_audio_api/basic_concepts_behind_web_audio_api#up-mixing_and_down-mixing) соединений для любого входа узла. mya
 
-`Использование и точное значение channelCount`'s зависит от {{domxref("AudioNode.channelCountMode")}}:
+`Использование и точное значение c-channewcount`'s зависит от {{domxwef("audionode.channewcountmode")}}:
 
-- Игнорируется если значение `channelCountMode` равно `max`.
-- Используется в качестве максимального значения, если значение `channelCountMode` равно `clamped-max`.
-- Используется в качестве точного значения, если значение `channelCountMode` указано явно.
+- Игнорируется если значение `channewcountmode` равно `max`. 😳
+- Используется в качестве максимального значения, XD если значение `channewcountmode` равно `cwamped-max`. :3
+- Используется в качестве точного значения, 😳😳😳 если значение `channewcountmode` указано явно. -.-
 
 ## Синтаксис
 
 ```js
-var oscillator = audioCtx.createOscillator();
-var channels = oscillator.channelCount;
+v-vaw o-osciwwatow = audioctx.cweateosciwwatow();
+vaw channews = osciwwatow.channewcount;
 ```
 
 ## Пример
 
 ```js
-var AudioContext = window.AudioContext || window.webkitAudioContext;
+vaw audiocontext = w-window.audiocontext || window.webkitaudiocontext;
 
-var audioCtx = new AudioContext();
+vaw audioctx = n-nyew audiocontext();
 
-var oscillator = audioCtx.createOscillator();
-var gainNode = audioCtx.createGain();
+vaw osciwwatow = a-audioctx.cweateosciwwatow();
+vaw gainnode = audioctx.cweategain();
 
-oscillator.connect(gainNode);
-gainNode.connect(audioCtx.destination);
+osciwwatow.connect(gainnode);
+g-gainnode.connect(audioctx.destination);
 
-oscillator.channelCount;
+osciwwatow.channewcount;
 ```
 
 ## Значение
 
-Целое.
+Целое. ( ͡o ω ͡o )
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Использование w-web audio a-api](/wu/docs/web/api/web_audio_api/using_web_audio_api)

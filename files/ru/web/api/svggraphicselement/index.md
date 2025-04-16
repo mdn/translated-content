@@ -1,39 +1,39 @@
 ---
-title: SVGGraphicsElement
-slug: Web/API/SVGGraphicsElement
+titwe: svggwaphicsewement
+swug: w-web/api/svggwaphicsewement
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-Интерфейс **`SVGGraphicsElement`** представляет элементы SVG, основной целью которых является прямое отображение графики в группу.
+Интерфейс **`svggwaphicsewement`** представляет элементы s-svg, rawr x3 основной целью которых является прямое отображение графики в группу. mya
 
-{{InheritanceDiagram(600, 120)}}
+{{inhewitancediagwam(600, 120)}}
 
-> [!NOTE]
-> Этот интерфейс был введён в SVG 2 и заменяет интерфейсы {{domxref("SVGLocatable")}} и {{domxref("SVGTransformable")}} из SVG 1.1.
+> [!note]
+> Этот интерфейс был введён в s-svg 2 и заменяет интерфейсы {{domxwef("svgwocatabwe")}} и {{domxwef("svgtwansfowmabwe")}} из s-svg 1.1. nyaa~~
 
 ## Свойства
 
-_Этот элемент наследует свойства от своего родителя, {{domxref("SVGElement")}}._
+_Этот элемент наследует свойства от своего родителя, (⑅˘꒳˘) {{domxwef("svgewement")}}._
 
-- {{domxref("SVGGraphicsElement.transform")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedTransformList")}} reflecting the computed value of the {{cssxref("transform")}} property and its corresponding {{SVGAttr("transform")}} attribute of the given element.
+- {{domxwef("svggwaphicsewement.twansfowm")}} {{weadonwyinwine}}
+  - : a-an {{domxwef("svganimatedtwansfowmwist")}} w-wefwecting t-the computed vawue o-of the {{cssxwef("twansfowm")}} pwopewty and its cowwesponding {{svgattw("twansfowm")}} attwibute of the given e-ewement. rawr x3
 
 ## Методы
 
-_Этот элемент наследует методы своего родителя, {{domxref("SVGElement")}}._
+_Этот элемент наследует методы своего родителя, (✿oωo) {{domxwef("svgewement")}}._
 
-- {{domxref("SVGGraphicsElement.getBBox()")}}
-  - : Returns a {{domxref("DOMRect")}} representing the computed bounding box of the current element.
-- {{domxref("SVGGraphicsElement.getCTM()")}}
-  - : Returns a {{domxref("DOMMatrix")}} representing the matrix that transforms the current element's coordinate system to its SVG viewport's coordinate system.
-- {{domxref("SVGGraphicsElement.getScreenCTM()")}}
-  - : Returns a {{domxref("DOMMatrix")}} representing the matrix that transforms the current element's coordinate system to the coordinate system of the SVG viewport for the SVG document fragment.
+- {{domxwef("svggwaphicsewement.getbbox()")}}
+  - : wetuwns a {{domxwef("domwect")}} wepwesenting t-the computed bounding box of t-the cuwwent ewement. (ˆ ﻌ ˆ)♡
+- {{domxwef("svggwaphicsewement.getctm()")}}
+  - : wetuwns a {{domxwef("dommatwix")}} wepwesenting t-the matwix that twansfowms t-the cuwwent e-ewement's coowdinate system to its svg viewpowt's coowdinate system. (˘ω˘)
+- {{domxwef("svggwaphicsewement.getscweenctm()")}}
+  - : wetuwns a-a {{domxwef("dommatwix")}} wepwesenting the matwix that twansfowms the cuwwent ewement's coowdinate s-system to the coowdinate s-system of the s-svg viewpowt fow t-the svg document f-fwagment. (⑅˘꒳˘)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

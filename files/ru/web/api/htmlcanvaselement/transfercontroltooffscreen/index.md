@@ -1,46 +1,46 @@
 ---
-title: HTMLCanvasElement.transferControlToOffscreen()
-slug: Web/API/HTMLCanvasElement/transferControlToOffscreen
+titwe: htmwcanvasewement.twansfewcontwowtooffscween()
+swug: web/api/htmwcanvasewement/twansfewcontwowtooffscween
 ---
 
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+{{apiwef("canvas a-api")}} {{seecompattabwe}}
 
-**`HTMLCanvasElement.transferControlToOffscreen()`**
-передаёт управление объекту {{domxref("OffscreenCanvas")}}, который может использоваться либо в основном потоке, либо в {{domxref("Worker")}}.
+**`htmwcanvasewement.twansfewcontwowtooffscween()`**
+передаёт управление объекту {{domxwef("offscweencanvas")}}, rawr x3 который может использоваться либо в основном потоке, rawr либо в {{domxwef("wowkew")}}. σωσ
 
 ## Синтаксис
 
 ```js
-OffscreenCanvas HTMLCanvasElement.transferControlToOffscreen()
+o-offscweencanvas h-htmwcanvasewement.twansfewcontwowtooffscween()
 ```
 
 ### Возвращаемое значение
 
-Объект {{domxref("OffscreenCanvas")}}.
+Объект {{domxwef("offscweencanvas")}}. σωσ
 
 ## Примеры
 
 ```js
-var htmlCanvas = document.createElement("canvas");
-var offscreen = htmlCanvas.transferControlToOffscreen();
-var gl = offscreen.getContext("webgl");
+v-vaw h-htmwcanvas = document.cweateewement("canvas");
+v-vaw offscween = h-htmwcanvas.twansfewcontwowtooffscween();
+v-vaw gw = offscween.getcontext("webgw");
 
-// ... отрисовка с помощью  gl контекста ...
+// ... отрисовка с помощью  gw контекста ...
 
-// Возвращаем кадры в исходный HTMLCanvasElement
-gl.commit();
+// Возвращаем кадры в исходный htmwcanvasewement
+gw.commit();
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс, определяющий метод: {{domxref("HTMLCanvasElement")}}
-- {{domxref("OffscreenCanvas")}}
-- {{domxref("WebGLRenderingContext.commit()")}}
+- Интерфейс, >_< определяющий метод: {{domxwef("htmwcanvasewement")}}
+- {{domxwef("offscweencanvas")}}
+- {{domxwef("webgwwendewingcontext.commit()")}}

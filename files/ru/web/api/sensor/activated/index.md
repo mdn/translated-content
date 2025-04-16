@@ -1,24 +1,24 @@
 ---
-title: Sensor.activated
-slug: Web/API/Sensor/activated
-l10n:
-  sourceCommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
+titwe: sensow.activated
+swug: w-web/api/sensow/activated
+w-w10n:
+  s-souwcecommit: 6d194a9afcce7beef0082c1dc50644bd0fcda635
 ---
 
-{{APIRef("Sensor API")}}
+{{apiwef("sensow api")}}
 
-Свойство **`activated`** интерфейса {{domxref("Sensor")}} возвращает boolean значение, определяющее в активном ли состоянии находится датчик. Только для чтения.
+Свойство **`activated`** интерфейса {{domxwef("sensow")}} возвращает b-boowean значение, òωó определяющее в активном ли состоянии находится датчик. o.O Только для чтения. (U ᵕ U❁)
 
-Так как {{domxref('Sensor')}} это базовый класс, то `activated` можно прочитать только из одного из наследованных классов.
+Так как {{domxwef('sensow')}} это базовый класс, (⑅˘꒳˘) то `activated` можно прочитать только из одного из наследованных классов. ( ͡o ω ͡o )
 
 ## Значение
 
-Boolean значение.
+b-boowean значение. UwU
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,31 +1,31 @@
 ---
-title: Event.stopPropagation()
-slug: Web/API/Event/stopPropagation
+titwe: event.stoppwopagation()
+swug: web/api/event/stoppwopagation
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Прекращает дальнейшую передачу текущего события.
+Прекращает дальнейшую передачу текущего события. o.O
 
 ## Синтаксис
 
 ```
-event.stopPropagation();
+e-event.stoppwopagation();
 ```
 
 ## Пример
 
-См. Пример 5: [Event Propagation](/ru/docs/Web/API/Document_Object_Model/Examples#example_5:_event_propagation) для более детального объяснения данного метода и всего механизма передачи событий в DOM документе.
+См. (U ᵕ U❁) Пример 5: [event p-pwopagation](/wu/docs/web/api/document_object_modew/exampwes#exampwe_5:_event_pwopagation) для более детального объяснения данного метода и всего механизма передачи событий в d-dom документе. (⑅˘꒳˘)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Смотрите [DOM specification](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) для понимания потока событий. ([DOM Level 3 Events draft](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) содержит иллюстрации.)
-- {{domxref("Event.preventDefault()")}} – это дополнительный метод, который запрещает исполнение метода по умолчанию, предназначенного для данного события.
+- Смотрите [dom s-specification](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-fwow-captuwe) для понимания потока событий. ( ͡o ω ͡o ) ([dom w-wevew 3 events d-dwaft](https://www.w3.owg/tw/dom-wevew-3-events/#event-fwow) содержит иллюстрации.)
+- {{domxwef("event.pweventdefauwt()")}} – это дополнительный метод, UwU который запрещает исполнение метода по умолчанию, rawr x3 предназначенного для данного события. rawr

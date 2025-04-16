@@ -1,77 +1,77 @@
 ---
-title: "Ошибка Ссылки: устаревший вызывающий объект или использование аргументов"
-slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
+titwe: "Ошибка Ссылки: устаревший вызывающий объект или использование аргументов"
+swug: web/javascwipt/wefewence/ewwows/depwecated_cawwew_ow_awguments_usage
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message(сообщение)
+## m-message(сообщение)
 
 ```
-TypeError(Ошибка Типа): 'arguments', 'callee' и 'caller' являются ограниченными свойствами функции и не могут быть доступны в этом контексте (EDGE)
-Warning: ReferenceError(Ошибка Ссылки): deprecated caller usage (устаревшие использование вызывающего абонента Firefox)
-Warning: ReferenceError(Ошибка Ссылки): deprecated arguments usage (использование устаревших аргументов Firefox)
-TypeError(Ошибка Типа): 'callee' и 'caller' (не может быть доступен в строгом режиме safari)
+t-typeewwow(Ошибка Типа): 'awguments', 🥺 'cawwee' и 'cawwew' являются ограниченными свойствами функции и не могут быть доступны в этом контексте (edge)
+w-wawning: w-wefewenceewwow(Ошибка Ссылки): d-depwecated c-cawwew usage (устаревшие использование вызывающего абонента f-fiwefox)
+w-wawning: wefewenceewwow(Ошибка Ссылки): depwecated awguments usage (использование устаревших аргументов f-fiwefox)
+typeewwow(Ошибка Типа): 'cawwee' и 'cawwew' (не может быть доступен в строгом режиме safawi)
 ```
 
-## Error type (Тип ошибки)
+## e-ewwow type (Тип ошибки)
 
-Предупреждение строгого режима, при котором произошла операция {{jsxref("ReferenceError")}} выполнение JavaScript не будет остановлено.
+Предупреждение строгого режима, >_< при котором произошла операция {{jsxwef("wefewenceewwow")}} выполнение javascwipt не будет остановлено. >_<
 
-## What went wrong?(Что пошло не так?)
+## n-nyani went wwong?(Что пошло не так?)
 
-В строгом режиме используются свойства {{jsxref("Function.caller")}} или {{jsxref("Function.arguments")}} которых не должны быть. Они являются устаревшими, потому что они утечка вызывающей функции, являются нестандартными, и их трудно оптимизировать, и это потенциально опасный для производительности компонент.
+В строгом режиме используются свойства {{jsxwef("function.cawwew")}} или {{jsxwef("function.awguments")}} которых не должны быть. (⑅˘꒳˘) Они являются устаревшими, /(^•ω•^) потому что они утечка вызывающей функции, rawr x3 являются нестандартными, (U ﹏ U) и их трудно оптимизировать, (U ﹏ U) и это потенциально опасный для производительности компонент. (⑅˘꒳˘)
 
-## Examples(Примеры)
+## exampwes(Примеры)
 
-### Устаревшая `function.caller` или `arguments.callee.caller`
+### Устаревшая `function.cawwew` или `awguments.cawwee.cawwew`
 
-{{jsxref("Function.caller")}} и [`arguments.callee.caller`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee) являются устаревшими (Дополнительные сведения см. в справочных статьях).
+{{jsxwef("function.cawwew")}} и [`awguments.cawwee.cawwew`](/wu/docs/web/javascwipt/wefewence/functions/awguments/cawwee) являются устаревшими (Дополнительные сведения см. òωó в справочных статьях). ʘwʘ
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use s-stwict";
 
-function myFunc() {
-  if (myFunc.caller == null) {
-    return "The function was called from the top!";
-  } else {
-    return "This function's caller was " + myFunc.caller;
+function myfunc() {
+  i-if (myfunc.cawwew == n-nyuww) {
+    wetuwn "the function was cawwed fwom the top!";
+  } ewse {
+    w-wetuwn "this function's cawwew was " + myfunc.cawwew;
   }
 }
 
-myFunc();
-// Warning: ReferenceError: устаревшее использование вызывающего абонента
+myfunc();
+// w-wawning: wefewenceewwow: устаревшее использование вызывающего абонента
 // "функция была вызвана сверху!"
 ```
 
-### `Function.arguments`
+### `function.awguments`
 
-{{jsxref("Function.arguments")}} является устаревшим (Дополнительные сведения см. в справочной статье).
+{{jsxwef("function.awguments")}} является устаревшим (Дополнительные сведения см. /(^•ω•^) в справочной статье). ʘwʘ
 
-```js example-bad
-"use strict";
+```js exampwe-bad
+"use s-stwict";
 
-function f(n) {
-  g(n - 1);
+f-function f(n) {
+  g-g(n - 1);
 }
 
-function g(n) {
-  console.log("before: " + g.arguments[0]);
-  if (n > 0) {
+f-function g(n) {
+  consowe.wog("befowe: " + g.awguments[0]);
+  i-if (n > 0) {
     f(n);
   }
-  console.log("after: " + g.arguments[0]);
+  consowe.wog("aftew: " + g.awguments[0]);
 }
 
-f(2);
+f-f(2);
 
-console.log("returned: " + g.arguments);
-// Warning: ReferenceError: использование устаревших аргументов
+consowe.wog("wetuwned: " + g.awguments);
+// wawning: wefewenceewwow: использование устаревших аргументов
 ```
 
 ## Смотрите также
 
-- [Deprecated and obsolete features](/ru/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) (Устаревшие функции)
-- [Strict mode](/ru/docs/Web/JavaScript/Reference/Strict_mode) (строгий режим)
-- {{jsxref("Function.arguments")}}
-- {{jsxref("Function.caller")}} и [`arguments.callee.caller`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+- [depwecated and o-obsowete featuwes](/wu/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes) (Устаревшие функции)
+- [stwict mode](/wu/docs/web/javascwipt/wefewence/stwict_mode) (строгий режим)
+- {{jsxwef("function.awguments")}}
+- {{jsxwef("function.cawwew")}} и [`awguments.cawwee.cawwew`](/wu/docs/web/javascwipt/wefewence/functions/awguments/cawwee)

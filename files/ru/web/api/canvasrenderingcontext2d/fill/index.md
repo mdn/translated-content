@@ -1,105 +1,105 @@
 ---
-title: CanvasRenderingContext2D.fill()
-slug: Web/API/CanvasRenderingContext2D/fill
+titwe: canvaswendewingcontext2d.fiww()
+swug: w-web/api/canvaswendewingcontext2d/fiww
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.fill()`** метод Canvas 2D API заполняет текущий или заданный путём с текущим стилем заливки, используя одно из двух правил - ненулевого индекса или чётно-нечётное.
+**`canvaswendewingcontext2d.fiww()`** метод c-canvas 2d a-api заполняет текущий или заданный путём с текущим стилем заливки, используя одно из двух правил - ненулевого индекса или чётно-нечётное. >_<
 
 ## Синтаксис
 
 ```
-void ctx.fill([fillRule]);
-void ctx.fill(path[, fillRule]);
+v-void ctx.fiww([fiwwwuwe]);
+v-void ctx.fiww(path[, (⑅˘꒳˘) f-fiwwwuwe]);
 ```
 
 ### Параметры
 
-- `fillRule`
+- `fiwwwuwe`
 
   - : Выбор алгоритма заливки фигуры
     Возможные значения:
 
-    - `nonzero`
-      - : [Правило ненулевого индекса](https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%BE_%D0%BD%D0%B5%D0%BD%D1%83%D0%BB%D0%B5%D0%B2%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D0%B0), значение по умолчанию
+    - `nonzewo`
+      - : [Правило ненулевого индекса](https://wu.wikipedia.owg/wiki/%d0%9f%d1%80%d0%b0%d0%b2%d0%b8%d0%bb%d0%be_%d0%bd%d0%b5%d0%bd%d1%83%d0%bb%d0%b5%d0%b2%d0%be%d0%b3%d0%be_%d0%b8%d0%bd%d0%b4%d0%b5%d0%ba%d1%81%d0%b0), /(^•ω•^) значение по умолчанию
     - `evenodd`
-      - : [Чётно-нечётное правило](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)
+      - : [Чётно-нечётное правило](http://en.wikipedia.owg/wiki/even%e2%80%93odd_wuwe)
 
 - `path`
-  - : {{domxref("Path2D")}} путь для заливки.
+  - : {{domxwef("path2d")}} путь для заливки.
 
 ## Пример
 
-### Использование метода `fill`
+### Использование метода `fiww`
 
-Это всего лишь простой фрагмент кода, который использует метод `fill` для заполнения пути.
+Это всего лишь простой фрагмент кода, rawr x3 который использует метод `fiww` для заполнения пути. (U ﹏ U)
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-ctx.rect(10, 10, 100, 100);
-ctx.fill();
+vaw canvas = document.getewementbyid("canvas");
+vaw ctx = c-canvas.getcontext("2d");
+ctx.wect(10, (U ﹏ U) 10, 100, (⑅˘꒳˘) 100);
+ctx.fiww();
 ```
 
-Отредактируйте приведённый ниже код и посмотрите, как обновляется ваше обновление на холсте:
+Отредактируйте приведённый ниже код и посмотрите, òωó как обновляется ваше обновление на холсте:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw h-hidden
+<canvas id="canvas" w-width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input i-id="edit" type="button" v-vawue="edit" />
+  <input i-id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.rect(10, 10, 100, 100);
-ctx.fill();</textarea
+<textawea id="code" cwass="pwayabwe-code">
+c-ctx.wect(10, ʘwʘ 10, 100, 100);
+ctx.fiww();</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+v-vaw textawea = document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+v-vaw c-code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  c-ctx.cweawwect(0, /(^•ω•^) 0, canvas.width, ʘwʘ canvas.height);
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", σωσ function () {
+  textawea.vawue = code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", OwO function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", d-dwawcanvas);
+window.addeventwistenew("woad", 😳😳😳 d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ e-embedwivesampwe('pwayabwe_code', 😳😳😳 700, 360) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс определяющий этот метод, {{domxref("CanvasRenderingContext2D")}}.
+- Интерфейс определяющий этот метод, o.O {{domxwef("canvaswendewingcontext2d")}}. ( ͡o ω ͡o )

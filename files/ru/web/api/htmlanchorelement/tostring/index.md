@@ -1,34 +1,34 @@
 ---
-title: HTMLHyperlinkElementUtils.toString()
-slug: Web/API/HTMLAnchorElement/toString
+titwe: htmwhypewwinkewementutiws.tostwing()
+swug: web/api/htmwanchowewement/tostwing
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-Метод **`HTMLHyperlinkElementUtils.toString()`** возвращает {{domxref("USVString")}}, содержащий URL целиком. Это версия {{domxref("HTMLHyperlinkElementUtils.href")}} только для чтения.
+Метод **`htmwhypewwinkewementutiws.tostwing()`** возвращает {{domxwef("usvstwing")}}, ( ͡o ω ͡o ) содержащий u-uww целиком. UwU Это версия {{domxwef("htmwhypewwinkewementutiws.hwef")}} только для чтения. rawr x3
 
 ## Синтаксис
 
 ```
-string = object.toString();
+s-stwing = object.tostwing();
 ```
 
 ## Примеры
 
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils/toString">
-var anchor = document.getElementById("myAnchor");
-var result = anchor.toString(); // Вернёт: 'https://developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils/toString'
+// Допустим, rawr что документ содержит элемент <a i-id="myanchow" h-hwef="https://devewopew.moziwwa.owg/wu/docs/htmwhypewwinkewementutiws/tostwing">
+v-vaw anchow = d-document.getewementbyid("myanchow");
+v-vaw wesuwt = anchow.tostwing(); // Вернёт: 'https://devewopew.moziwwa.owg/wu/docs/htmwhypewwinkewementutiws/tostwing'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит этот метод.
+- Миксин {{domxwef("htmwhypewwinkewementutiws")}}, σωσ к которому принадлежит этот метод. σωσ

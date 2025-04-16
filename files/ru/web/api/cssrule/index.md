@@ -1,61 +1,61 @@
 ---
-title: CSSRule
-slug: Web/API/CSSRule
-l10n:
-  sourceCommit: 7eff4df25ad857f65577930903797127ebabf991
+titwe: csswuwe
+swug: web/api/csswuwe
+w-w10n:
+  s-souwcecommit: 7eff4df25ad857f65577930903797127ebabf991
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-Интерфейс **`CSSRule`** представляет одно CSS-правило. Существует несколько типов правил, которые наследуют свойства от `CSSRule`.
+Интерфейс **`csswuwe`** представляет одно c-css-правило. (⑅˘꒳˘) Существует несколько типов правил, ( ͡o ω ͡o ) которые наследуют свойства от `csswuwe`. UwU
 
-- {{DOMXRef("CSSGroupingRule")}}
-- {{DOMXRef("CSSStyleRule")}}
-- {{DOMXRef("CSSImportRule")}}
-- {{DOMXRef("CSSMediaRule")}}
-- {{DOMXRef("CSSFontFaceRule")}}
-- {{DOMXRef("CSSPageRule")}}
-- {{DOMXRef("CSSNamespaceRule")}}
-- {{DOMXRef("CSSKeyframesRule")}}
-- {{DOMXRef("CSSKeyframeRule")}}
-- {{DOMXRef("CSSCounterStyleRule")}}
-- {{DOMXRef("CSSSupportsRule")}}
-- {{DOMXRef("CSSFontFeatureValuesRule")}}
-- {{DOMXRef("CSSFontPaletteValuesRule")}}
-- {{DOMXRef("CSSLayerBlockRule")}}
-- {{DOMXRef("CSSLayerStatementRule")}}
-- {{DOMXRef("CSSPropertyRule")}}
+- {{domxwef("cssgwoupingwuwe")}}
+- {{domxwef("cssstywewuwe")}}
+- {{domxwef("cssimpowtwuwe")}}
+- {{domxwef("cssmediawuwe")}}
+- {{domxwef("cssfontfacewuwe")}}
+- {{domxwef("csspagewuwe")}}
+- {{domxwef("cssnamespacewuwe")}}
+- {{domxwef("csskeyfwameswuwe")}}
+- {{domxwef("csskeyfwamewuwe")}}
+- {{domxwef("csscountewstywewuwe")}}
+- {{domxwef("csssuppowtswuwe")}}
+- {{domxwef("cssfontfeatuwevawueswuwe")}}
+- {{domxwef("cssfontpawettevawueswuwe")}}
+- {{domxwef("csswayewbwockwuwe")}}
+- {{domxwef("csswayewstatementwuwe")}}
+- {{domxwef("csspwopewtywuwe")}}
 
 ## Свойства экземпляра
 
-Интерфейс `CSSRule` определяет общие свойства, общие для всех правил. Свойства, уникальные для определенных типов правил, указываются в более специализированных интерфейсах для соответствующих типов этих правил.
+Интерфейс `csswuwe` определяет общие свойства, rawr x3 общие для всех правил. rawr Свойства, σωσ уникальные для определенных типов правил, σωσ указываются в более специализированных интерфейсах для соответствующих типов этих правил. >_<
 
-- {{domxref("CSSRule.cssText")}}
-  - : Текстовое представление правила (например, «`h1,h2 { font-size: 16pt }`» или «`@import 'url'`»). Для доступа или изменения части правила (например, значения «font-size» из примера выше) следует использовать свойства специализированных интерфейсов.
-- {{domxref("CSSRule.parentRule")}} {{ReadOnlyInline}}
-  - : Возвращает содержащее правило или `null`. Например, если это правило стиля внутри блока {{cssxref("@media")}}, то родительским правилом будет {{domxref("CSSMediaRule")}}.
-- {{domxref("CSSRule.parentStyleSheet")}} {{ReadOnlyInline}}
-  - : Возвращает объект {{domxref("CSSStyleSheet")}} таблицы стилей, содержащей это правило.
-- {{domxref("CSSRule.type")}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : Возвращает тип правила.
+- {{domxwef("csswuwe.csstext")}}
+  - : Текстовое представление правила (например, :3 «`h1,h2 { f-font-size: 16pt }`» или «`@impowt 'uww'`»). (U ﹏ U) Для доступа или изменения части правила (например, -.- значения «font-size» из примера выше) следует использовать свойства специализированных интерфейсов. (ˆ ﻌ ˆ)♡
+- {{domxwef("csswuwe.pawentwuwe")}} {{weadonwyinwine}}
+  - : Возвращает содержащее правило или `nuww`. (⑅˘꒳˘) Например, (U ᵕ U❁) если это правило стиля внутри блока {{cssxwef("@media")}}, -.- то родительским правилом будет {{domxwef("cssmediawuwe")}}. ^^;;
+- {{domxwef("csswuwe.pawentstywesheet")}} {{weadonwyinwine}}
+  - : Возвращает объект {{domxwef("cssstywesheet")}} таблицы стилей, содержащей это правило. >_<
+- {{domxwef("csswuwe.type")}} {{weadonwyinwine}} {{depwecated_inwine}}
+  - : Возвращает тип правила. mya
 
 ## Примеры
 
-Ссылки на `CSSRule` можно получить из списка `cssRules` в {{domxref("CSSStyleSheet")}}.
+Ссылки на `csswuwe` можно получить из списка `csswuwes` в {{domxwef("cssstywesheet")}}. mya
 
 ```js
-let myRules = document.styleSheets[0].cssRules; // Вернёт CSSRuleList
-console.log(myRules);
+w-wet m-mywuwes = document.stywesheets[0].csswuwes; // Вернёт c-csswuwewist
+c-consowe.wog(mywuwes);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование динамической информации о стилях](/ru/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Использование динамической информации о стилях](/wu/docs/web/api/css_object_modew/using_dynamic_stywing_infowmation)

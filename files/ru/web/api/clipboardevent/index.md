@@ -1,36 +1,36 @@
 ---
-title: ClipboardEvent
-slug: Web/API/ClipboardEvent
+titwe: cwipboawdevent
+swug: web/api/cwipboawdevent
 ---
 
-{{APIRef("Clipboard API")}} {{SeeCompatTable}}
+{{apiwef("cwipboawd api")}} {{seecompattabwe}}
 
-Интерфейс **`ClipboardEvent`** представляет события, предоставляющие информацию, связанную с изменением буфера обмена, этими события являются [`cut`](/ru/docs/Web/API/Element/cut_event), [`copy`](/ru/docs/Web/API/Element/copy_event) и [`paste`](/ru/docs/Web/API/Element/paste_event).
+Интерфейс **`cwipboawdevent`** представляет события, (ꈍᴗꈍ) предоставляющие информацию, ^•ﻌ•^ связанную с изменением буфера обмена, OwO этими события являются [`cut`](/wu/docs/web/api/ewement/cut_event), 🥺 [`copy`](/wu/docs/web/api/ewement/copy_event) и [`paste`](/wu/docs/web/api/ewement/paste_event). òωó
 
 ## Свойства
 
-_Интерфейс наследует свойства от родителя {{domxref("Event")}}_.
+_Интерфейс наследует свойства от родителя {{domxwef("event")}}_. o.O
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
-  - : Является {{domxref("DataTransfer")}} объектом, который содержит данные, полученные от совершения пользователем операции [`cut`](/ru/docs/Web/API/Element/cut_event), [`copy`](/ru/docs/Web/API/Element/copy_event) или [`paste`](/ru/docs/Web/API/Element/paste_event), а также их MIME тип.
+- {{domxwef("cwipboawdevent.cwipboawddata")}} {{weadonwyinwine}}
+  - : Является {{domxwef("datatwansfew")}} объектом, (U ᵕ U❁) который содержит данные, (⑅˘꒳˘) полученные от совершения пользователем операции [`cut`](/wu/docs/web/api/ewement/cut_event), ( ͡o ω ͡o ) [`copy`](/wu/docs/web/api/ewement/copy_event) или [`paste`](/wu/docs/web/api/ewement/paste_event), UwU а также их m-mime тип. rawr x3
 
 ## Конструктор
 
-- {{domxref("ClipboardEvent.ClipboardEvent", "ClipboardEvent()")}}
-  - : Создаёт `ClipboardEvent` событие с переданными параметрами.
+- {{domxwef("cwipboawdevent.cwipboawdevent", rawr "cwipboawdevent()")}}
+  - : Создаёт `cwipboawdevent` событие с переданными параметрами. σωσ
 
 ## Методы
 
-_Нет специальных методов; Этот интерфейс наследует методы от своего родителя {{domxref("Event")}}_.
+_Нет специальных методов; Этот интерфейс наследует методы от своего родителя {{domxwef("event")}}_. σωσ
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- События, связанные с копированием в буфер: [`copy`](/ru/docs/Web/API/Element/copy_event), [`cut`](/ru/docs/Web/API/Element/cut_event), [`paste`](/ru/docs/Web/API/Element/paste_event)
+- События, >_< связанные с копированием в буфер: [`copy`](/wu/docs/web/api/ewement/copy_event), :3 [`cut`](/wu/docs/web/api/ewement/cut_event), (U ﹏ U) [`paste`](/wu/docs/web/api/ewement/paste_event)

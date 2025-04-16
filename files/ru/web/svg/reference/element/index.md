@@ -1,227 +1,227 @@
 ---
-title: Справочник SVG элементов
-slug: Web/SVG/Reference/Element
+titwe: Справочник svg элементов
+swug: web/svg/wefewence/ewement
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-« [SVG](/ru/docs/Web/SVG) / [Справочник SVG атрибутов](/ru/docs/Web/SVG/Reference/Attribute) »
+« [svg](/wu/docs/web/svg) / [Справочник s-svg атрибутов](/wu/docs/web/svg/wefewence/attwibute) »
 
-## SVG элементы
+## svg элементы
 
-A
+a-a
 
-- {{SVGElement("a")}}
-- {{SVGElement("altGlyph")}}
-- {{SVGElement("altGlyphDef")}}
-- {{SVGElement("altGlyphItem")}}
-- {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
-- {{SVGElement("animateMotion")}}
-- {{SVGElement("animateTransform")}}
+- {{svgewement("a")}}
+- {{svgewement("awtgwyph")}}
+- {{svgewement("awtgwyphdef")}}
+- {{svgewement("awtgwyphitem")}}
+- {{svgewement("animate")}}
+- {{svgewement("animatecowow")}}
+- {{svgewement("animatemotion")}}
+- {{svgewement("animatetwansfowm")}}
 
-B C
+b-b c
 
-- {{SVGElement("circle")}}
-- {{SVGElement("clipPath")}}
-- {{SVGElement("color-profile")}}
-- {{SVGElement("cursor")}}
+- {{svgewement("ciwcwe")}}
+- {{svgewement("cwippath")}}
+- {{svgewement("cowow-pwofiwe")}}
+- {{svgewement("cuwsow")}}
 
-D
+d-d
 
-- {{SVGElement("defs")}}
-- {{SVGElement("desc")}}
-- {{SVGElement("discard")}}
+- {{svgewement("defs")}}
+- {{svgewement("desc")}}
+- {{svgewement("discawd")}}
 
-E
+e-e
 
-- {{SVGElement("ellipse")}}
+- {{svgewement("ewwipse")}}
 
-F
+f-f
 
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feDistantLight")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feFuncA")}}
-- {{SVGElement("feFuncB")}}
-- {{SVGElement("feFuncG")}}
-- {{SVGElement("feFuncR")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMergeNode")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("fePointLight")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feSpotLight")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- {{SVGElement("filter")}}
-- {{SVGElement("font")}}
-- {{SVGElement("font-face")}}
-- {{SVGElement("font-face-format")}}
-- {{SVGElement("font-face-name")}}
-- {{SVGElement("font-face-src")}}
-- {{SVGElement("font-face-uri")}}
-- {{SVGElement("foreignObject")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fedistantwight")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fefunca")}}
+- {{svgewement("fefuncb")}}
+- {{svgewement("fefuncg")}}
+- {{svgewement("fefuncw")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femewgenode")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fepointwight")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fespotwight")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- {{svgewement("fiwtew")}}
+- {{svgewement("font")}}
+- {{svgewement("font-face")}}
+- {{svgewement("font-face-fowmat")}}
+- {{svgewement("font-face-name")}}
+- {{svgewement("font-face-swc")}}
+- {{svgewement("font-face-uwi")}}
+- {{svgewement("foweignobject")}}
 
-G
+g-g
 
-- {{SVGElement("g")}}
-- {{SVGElement("glyph")}}
-- {{SVGElement("glyphRef")}}
+- {{svgewement("g")}}
+- {{svgewement("gwyph")}}
+- {{svgewement("gwyphwef")}}
 
-H
+h-h
 
-- {{SVGElement("hatch")}}
-- {{SVGElement("hatchpath")}}
-- {{SVGElement("hkern")}}
+- {{svgewement("hatch")}}
+- {{svgewement("hatchpath")}}
+- {{svgewement("hkewn")}}
 
-I
+i
 
-- {{SVGElement("image")}}
+- {{svgewement("image")}}
 
-J K L
+j k w
 
-- {{SVGElement("line")}}
-- {{SVGElement("linearGradient")}}
+- {{svgewement("wine")}}
+- {{svgewement("wineawgwadient")}}
 
-M
+m
 
-- {{SVGElement("marker")}}
-- {{SVGElement("mask")}}
-- {{SVGElement("mesh")}}
-- {{SVGElement("meshgradient")}}
-- {{SVGElement("meshpatch")}}
-- {{SVGElement("meshrow")}}
-- {{SVGElement("metadata")}}
-- {{SVGElement("missing-glyph")}}
-- {{SVGElement("mpath")}}
+- {{svgewement("mawkew")}}
+- {{svgewement("mask")}}
+- {{svgewement("mesh")}}
+- {{svgewement("meshgwadient")}}
+- {{svgewement("meshpatch")}}
+- {{svgewement("meshwow")}}
+- {{svgewement("metadata")}}
+- {{svgewement("missing-gwyph")}}
+- {{svgewement("mpath")}}
 
-N O P
+ny o p
 
-- {{SVGElement("path")}}
-- {{SVGElement("pattern")}}
-- {{SVGElement("polygon")}}
-- {{SVGElement("polyline")}}
+- {{svgewement("path")}}
+- {{svgewement("pattewn")}}
+- {{svgewement("powygon")}}
+- {{svgewement("powywine")}}
 
-Q R
+q-q w
 
-- {{SVGElement("radialGradient")}}
-- {{SVGElement("rect")}}
+- {{svgewement("wadiawgwadient")}}
+- {{svgewement("wect")}}
 
-S
+s
 
-- {{SVGElement("script")}}
-- {{SVGElement("set")}}
-- {{SVGElement("solidcolor")}}
-- {{SVGElement("stop")}}
-- {{SVGElement("style")}}
-- {{SVGElement("svg")}}
-- {{SVGElement("switch")}}
-- {{SVGElement("symbol")}}
+- {{svgewement("scwipt")}}
+- {{svgewement("set")}}
+- {{svgewement("sowidcowow")}}
+- {{svgewement("stop")}}
+- {{svgewement("stywe")}}
+- {{svgewement("svg")}}
+- {{svgewement("switch")}}
+- {{svgewement("symbow")}}
 
-T
+t
 
-- {{SVGElement("text")}}
-- {{SVGElement("textPath")}}
-- {{SVGElement("title")}}
-- {{SVGElement("tref")}}
-- {{SVGElement("tspan")}}
+- {{svgewement("text")}}
+- {{svgewement("textpath")}}
+- {{svgewement("titwe")}}
+- {{svgewement("twef")}}
+- {{svgewement("tspan")}}
 
-U
+u-u
 
-- {{SVGElement("unknown")}}
-- {{SVGElement("use")}}
+- {{svgewement("unknown")}}
+- {{svgewement("use")}}
 
-V — Z
+v — z
 
-- {{SVGElement("view")}}
-- {{SVGElement("vkern")}}
+- {{svgewement("view")}}
+- {{svgewement("vkewn")}}
 
-## Элементы SVG по категориям
+## Элементы s-svg по категориям
 
 ### Элементы анимации
 
-{{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("discard")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}
+{{svgewement("animate")}}, (⑅˘꒳˘) {{svgewement("animatecowow")}}, (U ᵕ U❁) {{svgewement("animatemotion")}}, -.- {{svgewement("animatetwansfowm")}}, ^^;; {{svgewement("discawd")}}, >_< {{svgewement("mpath")}}, mya {{svgewement("set")}}
 
 ### Базовые фигуры
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
+{{svgewement("ciwcwe")}}, mya {{svgewement("ewwipse")}}, {{svgewement("wine")}}, 😳 {{svgewement("powygon")}}, XD {{svgewement("powywine")}}, :3 {{svgewement("wect")}}
 
 ### Контейнеры
 
-{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("glyph")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("unknown")}}
+{{svgewement("a")}}, 😳😳😳 {{svgewement("defs")}}, -.- {{svgewement("gwyph")}}, ( ͡o ω ͡o ) {{svgewement("g")}}, rawr x3 {{svgewement("mawkew")}}, nyaa~~ {{svgewement("mask")}}, /(^•ω•^) {{svgewement("missing-gwyph")}}, rawr {{svgewement("pattewn")}}, OwO {{svgewement("svg")}}, (U ﹏ U) {{svgewement("switch")}}, >_< {{svgewement("symbow")}}, rawr x3 {{svgewement("unknown")}}
 
 ### Элементы описания
 
-{{SVGElement("desc")}}, {{SVGElement("metadata")}}, {{SVGElement("title")}}
+{{svgewement("desc")}}, mya {{svgewement("metadata")}}, nyaa~~ {{svgewement("titwe")}}
 
 ### Фильтры
 
-{{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}},{{SVGElement("feFuncA")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncR")}},{{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}
+{{svgewement("febwend")}}, (⑅˘꒳˘) {{svgewement("fecowowmatwix")}}, rawr x3 {{svgewement("fecomponenttwansfew")}}, (✿oωo) {{svgewement("fecomposite")}}, (ˆ ﻌ ˆ)♡ {{svgewement("feconvowvematwix")}}, (˘ω˘) {{svgewement("fediffusewighting")}}, (⑅˘꒳˘) {{svgewement("fedispwacementmap")}}, (///ˬ///✿) {{svgewement("fedwopshadow")}}, 😳😳😳 {{svgewement("fefwood")}},{{svgewement("fefunca")}}, 🥺 {{svgewement("fefuncb")}}, mya {{svgewement("fefuncg")}}, 🥺 {{svgewement("fefuncw")}},{{svgewement("fegaussianbwuw")}}, >_< {{svgewement("feimage")}}, >_< {{svgewement("femewge")}}, (⑅˘꒳˘) {{svgewement("femewgenode")}}, /(^•ω•^) {{svgewement("femowphowogy")}}, rawr x3 {{svgewement("feoffset")}}, {{svgewement("fespecuwawwighting")}}, (U ﹏ U) {{svgewement("fetiwe")}}, {{svgewement("fetuwbuwence")}}
 
 ### Элементы шрифта
 
-{{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("font-face-format")}}, {{SVGElement("font-face-name")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}
+{{svgewement("font")}}, (U ﹏ U) {{svgewement("font-face")}}, (⑅˘꒳˘) {{svgewement("font-face-fowmat")}}, òωó {{svgewement("font-face-name")}}, ʘwʘ {{svgewement("font-face-swc")}}, /(^•ω•^) {{svgewement("font-face-uwi")}}, {{svgewement("hkewn")}}, ʘwʘ {{svgewement("vkewn")}}
 
 ### Градиентные элементы
 
-{{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("radialGradient")}}, {{SVGElement("stop")}}
+{{svgewement("wineawgwadient")}}, σωσ {{svgewement("meshgwadient")}}, OwO {{svgewement("wadiawgwadient")}}, 😳😳😳 {{svgewement("stop")}}
 
 ### Графические элементы
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("use")}}
+{{svgewement("ciwcwe")}}, 😳😳😳 {{svgewement("ewwipse")}}, o.O {{svgewement("image")}}, ( ͡o ω ͡o ) {{svgewement("wine")}}, (U ﹏ U) {{svgewement("mesh")}}, (///ˬ///✿) {{svgewement("path")}}, >w< {{svgewement("powygon")}}, rawr {{svgewement("powywine")}}, mya {{svgewement("wect")}}, ^^ {{svgewement("text")}}, 😳😳😳 {{svgewement("use")}}
 
 ### Элементы ссылки на графику
 
-{{SVGElement("mesh")}}, {{SVGElement("use")}}
+{{svgewement("mesh")}}, mya {{svgewement("use")}}
 
 ### Источники света
 
-{{SVGElement("feDistantLight")}}, {{SVGElement("fePointLight")}}, {{SVGElement("feSpotLight")}}
+{{svgewement("fedistantwight")}}, 😳 {{svgewement("fepointwight")}}, -.- {{svgewement("fespotwight")}}
 
 ### Непрозрачные элементы
 
-{{SVGElement("clipPath")}}, {{SVGElement("defs")}}, {{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("meshgradient")}}, {{SVGElement("metadata")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("symbol")}}, {{SVGElement("title")}}
+{{svgewement("cwippath")}}, 🥺 {{svgewement("defs")}}, o.O {{svgewement("hatch")}}, /(^•ω•^) {{svgewement("wineawgwadient")}}, nyaa~~ {{svgewement("mawkew")}}, nyaa~~ {{svgewement("mask")}}, :3 {{svgewement("meshgwadient")}}, 😳😳😳 {{svgewement("metadata")}}, (˘ω˘) {{svgewement("pattewn")}}, ^^ {{svgewement("wadiawgwadient")}}, :3 {{svgewement("scwipt")}}, -.- {{svgewement("stywe")}}, 😳 {{svgewement("symbow")}}, mya {{svgewement("titwe")}}
 
 ### Элементы сервера печати
 
-{{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("solidcolor")}}
+{{svgewement("hatch")}}, {{svgewement("wineawgwadient")}}, (˘ω˘) {{svgewement("meshgwadient")}}, >_< {{svgewement("pattewn")}}, -.- {{svgewement("wadiawgwadient")}}, 🥺 {{svgewement("sowidcowow")}}
 
 ### Отличительные элементы
 
-{{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("unknown")}}, {{SVGElement("use")}}
+{{svgewement("a")}}, (U ﹏ U) {{svgewement("ciwcwe")}}, >w< {{svgewement("ewwipse")}}, mya {{svgewement("foweignobject")}}, >w< {{svgewement("g")}}, nyaa~~ {{svgewement("image")}}, (✿oωo) {{svgewement("wine")}}, ʘwʘ {{svgewement("mesh")}}, (ˆ ﻌ ˆ)♡ {{svgewement("path")}}, 😳😳😳 {{svgewement("powygon")}}, :3 {{svgewement("powywine")}}, OwO {{svgewement("wect")}}, (U ﹏ U) {{svgewement("svg")}}, >w< {{svgewement("switch")}}, (U ﹏ U) {{svgewement("symbow")}}, 😳 {{svgewement("text")}}, (ˆ ﻌ ˆ)♡ {{svgewement("textpath")}}, 😳😳😳 {{svgewement("tspan")}}, (U ﹏ U) {{svgewement("unknown")}}, (///ˬ///✿) {{svgewement("use")}}
 
 ### Элементы формы
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
+{{svgewement("ciwcwe")}}, 😳 {{svgewement("ewwipse")}}, 😳 {{svgewement("wine")}}, σωσ {{svgewement("mesh")}}, rawr x3 {{svgewement("path")}}, OwO {{svgewement("powygon")}}, /(^•ω•^) {{svgewement("powywine")}}, 😳😳😳 {{svgewement("wect")}}
 
 ### Структурные элементы
 
-{{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("svg")}}, {{SVGElement("symbol")}}, {{SVGElement("use")}}
+{{svgewement("defs")}}, ( ͡o ω ͡o ) {{svgewement("g")}}, >_< {{svgewement("svg")}}, >w< {{svgewement("symbow")}}, {{svgewement("use")}}
 
 ### Элементы текстового контента
 
-{{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}}, {{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{svgewement("awtgwyph")}}, rawr {{svgewement("awtgwyphdef")}}, 😳 {{svgewement("awtgwyphitem")}}, >w< {{svgewement("gwyph")}}, (⑅˘꒳˘) {{svgewement("gwyphwef")}}, OwO {{svgewement("textpath")}}, (ꈍᴗꈍ) {{svgewement("text")}}, 😳 {{svgewement("twef")}}, 😳😳😳 {{svgewement("tspan")}}
 
 ### Текстовые контентные дочерние элементы
 
-{{SVGElement("altGlyph")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{svgewement("awtgwyph")}}, mya {{svgewement("textpath")}}, mya {{svgewement("twef")}}, (⑅˘꒳˘) {{svgewement("tspan")}}
 
 ### Некатегоризированные элементы
 
-{{SVGElement("clipPath")}}, {{SVGElement("color-profile")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("hatchpath")}}, {{SVGElement("meshpatch")}}, {{SVGElement("meshrow")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
+{{svgewement("cwippath")}}, (U ﹏ U) {{svgewement("cowow-pwofiwe")}}, mya {{svgewement("cuwsow")}}, ʘwʘ {{svgewement("fiwtew")}}, {{svgewement("foweignobject")}}, (˘ω˘) {{svgewement("hatchpath")}}, (U ﹏ U) {{svgewement("meshpatch")}}, ^•ﻌ•^ {{svgewement("meshwow")}}, (˘ω˘) {{svgewement("scwipt")}}, {{svgewement("stywe")}}, :3 {{svgewement("view")}}
 
 ## Смотрите также
 
-- [Ссылка на атрибут SVG](/ru/docs/Web/SVG/Reference/Attribute)
-- [Учебник SVG](/ru/docs/Web/SVG/Tutorials/SVG_from_scratch)
-- [Ссылка на интерфейс SVG](/ru/docs/Web/API/Document_Object_Model#svg_interfaces)
+- [Ссылка на атрибут svg](/wu/docs/web/svg/wefewence/attwibute)
+- [Учебник svg](/wu/docs/web/svg/tutowiaws/svg_fwom_scwatch)
+- [Ссылка на интерфейс svg](/wu/docs/web/api/document_object_modew#svg_intewfaces)

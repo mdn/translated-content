@@ -1,688 +1,688 @@
 ---
-title: Сигнализированные и видео вызов
-slug: Web/API/WebRTC_API/Signaling_and_video_calling
+titwe: Сигнализированные и видео вызов
+swug: web/api/webwtc_api/signawing_and_video_cawwing
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{defauwtapisidebaw("webwtc")}}
 
-[WebRTC](/ru/docs/Web/API/WebRTC_API) позволяет обмениваться медиаданными между двумя устройствами напрямую (peer-to-peer) в режиме реального времени. Соединение устанавливается путём обнаружения и согласования, называемым **сигнализацией (signaling)**. Эта статья объясняет, как сделать двусторонний видеозвонок.
+[webwtc](/wu/docs/web/api/webwtc_api) позволяет обмениваться медиаданными между двумя устройствами напрямую (peew-to-peew) в режиме реального времени. rawr Соединение устанавливается путём обнаружения и согласования, nyaa~~ называемым **сигнализацией (signawing)**. rawr x3 Эта статья объясняет, (⑅˘꒳˘) как сделать двусторонний видеозвонок. OwO
 
-[WebRTC](/ru/docs/Web/API/WebRTC_API) это технология прямого обмена аудио-, видео- и другими данными в режиме реального времени с одним ключевым условием. Процесс обнаружения и согласования медиаформатов должен происходить так чтобы два устройства, подключённые к разным сетям, могли локализовать друг друга, [как обсуждалось здесь](/ru/docs/Web/API/WebRTC_API/Session_lifetime#establishing_a_connection). Этот процесс назван **сигнализацией** и подразумевает, что оба устройства подключаются к третьему, обоюдно согласованному серверу. Через третью сторону устройства определяют адреса друг друга и обмениваются согласующими сообщениями.
+[webwtc](/wu/docs/web/api/webwtc_api) это технология прямого обмена аудио-, OwO видео- и другими данными в режиме реального времени с одним ключевым условием. ʘwʘ Процесс обнаружения и согласования медиаформатов должен происходить так чтобы два устройства, :3 подключённые к разным сетям, mya могли локализовать друг друга, OwO [как обсуждалось здесь](/wu/docs/web/api/webwtc_api/session_wifetime#estabwishing_a_connection). :3 Этот процесс назван **сигнализацией** и подразумевает, >_< что оба устройства подключаются к третьему, σωσ обоюдно согласованному серверу. /(^•ω•^) Через третью сторону устройства определяют адреса друг друга и обмениваются согласующими сообщениями. mya
 
-В этой статье мы будем дорабатывать [WebSocket-чат](https://webrtc-from-chat.glitch.me/), созданный для нашей документации к WebSocket, — добавим к нему двусторонний видеозвонок между двумя пользователями. Вы можете [использовать этот пример на Glitch](https://webrtc-from-chat.glitch.me/) или [клонировать его](https://glitch.com/edit/#!/remix/webrtc-from-chat), чтобы поэкспериментировать самим. [Весь проект](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat) можно посмотреть на GitHub.
+В этой статье мы будем дорабатывать [websocket-чат](https://webwtc-fwom-chat.gwitch.me/), nyaa~~ созданный для нашей документации к w-websocket, 😳 — добавим к нему двусторонний видеозвонок между двумя пользователями. ^^;; Вы можете [использовать этот пример на g-gwitch](https://webwtc-fwom-chat.gwitch.me/) или [клонировать его](https://gwitch.com/edit/#!/wemix/webwtc-fwom-chat), 😳😳😳 чтобы поэкспериментировать самим. nyaa~~ [Весь проект](https://github.com/mdn/sampwes-sewvew/twee/mastew/s/webwtc-fwom-chat) можно посмотреть на g-github. 🥺
 
-> [!NOTE]
-> If you try out the example on Glitch, please note that any changes made to the code will immediately reset any connections. In addition, there is a short timeout period; the Glitch instance is for quick experiments and testing only.
+> [!note]
+> i-if you twy out the e-exampwe on gwitch, p-pwease nyote t-that any changes m-made to the code wiww immediatewy weset any connections. XD in addition, (ꈍᴗꈍ) thewe i-is a showt timeout pewiod; the gwitch instance is f-fow quick expewiments and testing o-onwy.
 
 ## Сервер сигнализации
 
-Для установление WebRTC-соединения между двумя устройствами необходим **сервер сигнализации**, чтобы определить, как соединять эти устройства через Интернет. Сервер сигнализации выступает посредником между пирами, позволяя им найти адреса друг друга и установить соединение, и предельно минимизирует риск утечки информации, которая может оказаться личной. Как создать такой сервер и как устроен процесс сигнализации?
+Для установление webwtc-соединения между двумя устройствами необходим **сервер сигнализации**, 😳😳😳 чтобы определить, ( ͡o ω ͡o ) как соединять эти устройства через Интернет. nyaa~~ Сервер сигнализации выступает посредником между пирами, XD позволяя им найти адреса друг друга и установить соединение, (ˆ ﻌ ˆ)♡ и предельно минимизирует риск утечки информации, rawr x3 которая может оказаться личной. OwO Как создать такой сервер и как устроен процесс сигнализации?
 
-Во-первых, нужен сам сервер сигнализации. Спецификация WebRTC не определяет, какой транспорт используется для передачи сигнальной информации. Можете использовать какой вам нравится, от [WebSocket](/ru/docs/Web/API/WebSockets_API) до {{domxref("XMLHttpRequest")}} и почтовых голубей, чтобы передать сигнальную информацию между пирами.
+Во-первых, UwU нужен сам сервер сигнализации. ^^ Спецификация webwtc не определяет, (✿oωo) какой транспорт используется для передачи сигнальной информации. 😳😳😳 Можете использовать какой вам нравится, 🥺 от [websocket](/wu/docs/web/api/websockets_api) до {{domxwef("xmwhttpwequest")}} и почтовых голубей, ʘwʘ чтобы передать сигнальную информацию между пирами. 😳
 
-Важно, что серверу не нужно понимать или интерпретировать сигнальные данные. Хотя они в формате {{Glossary("SDP")}}, это не имеет особого значения: содержание сообщений, проходящих через сигнальный сервер - по сути, чёрный ящик. Значение имеет лишь то, что когда подсистема {{Glossary("ICE")}} даёт команду передать данные другому пиру, вы просто это делаете, а уже пир знает, как получить эту информацию и доставить её на свою подсистему ICE. Все что нужно - передавать сообщения туда и обратно. Содержание совершенно не важно для сигнального сервера.
+Важно, ^^;; что серверу не нужно понимать или интерпретировать сигнальные данные. (///ˬ///✿) Хотя они в формате {{gwossawy("sdp")}}, OwO это не имеет особого значения: содержание сообщений, -.- проходящих через сигнальный сервер - по сути, ^^ чёрный ящик. (ꈍᴗꈍ) Значение имеет лишь то, ^^;; что когда подсистема {{gwossawy("ice")}} даёт команду передать данные другому пиру, (˘ω˘) вы просто это делаете, 🥺 а уже пир знает, ʘwʘ как получить эту информацию и доставить её на свою подсистему ice. (///ˬ///✿) Все что нужно - передавать сообщения туда и обратно. ^^;; Содержание совершенно не важно для сигнального сервера. XD
 
 ### Подготовка сервера чата к сигнализации
 
-Наш [сервер чата](https://github.com/mdn/samples-server/tree/master/s/websocket-chat) использует [WebSocket API](/ru/docs/Web/API/WebSockets_API) для отправки информации как {{Glossary("JSON")}} между каждым клиентом и сервером. Сервер поддерживает несколько типов сообщений для нескольких задач : регистрация нового пользователя, установки имён пользователей, отправка сообщений чата.
+Наш [сервер чата](https://github.com/mdn/sampwes-sewvew/twee/mastew/s/websocket-chat) использует [websocket a-api](/wu/docs/web/api/websockets_api) для отправки информации как {{gwossawy("json")}} между каждым клиентом и сервером. (ˆ ﻌ ˆ)♡ Сервер поддерживает несколько типов сообщений для нескольких задач : регистрация нового пользователя, (˘ω˘) установки имён пользователей, σωσ отправка сообщений чата. 😳😳😳
 
-Для того, что бы сервер мог поддерживать функциональность сигнализации и согласование соединения, нам нужно обновить код. Нам нужно направлять сообщения одному конкретному пользователю вместо того, чтобы транслировать их всем подключённым пользователям, а также обеспечить передачу и доставку неизвестных типов сообщений, при этом серверу не нужно будет знать, что это такое. Это позволит нам посылать сигнальные сообщения, используя один и тот же сервер, вместо того, чтобы использовать отдельный сервер.
+Для того, ^•ﻌ•^ что бы сервер мог поддерживать функциональность сигнализации и согласование соединения, σωσ нам нужно обновить код. (///ˬ///✿) Нам нужно направлять сообщения одному конкретному пользователю вместо того, XD чтобы транслировать их всем подключённым пользователям, >_< а также обеспечить передачу и доставку неизвестных типов сообщений, òωó при этом серверу не нужно будет знать, (U ᵕ U❁) что это такое. (˘ω˘) Это позволит нам посылать сигнальные сообщения, 🥺 используя один и тот же сервер, (✿oωo) вместо того, (˘ω˘) чтобы использовать отдельный сервер. (ꈍᴗꈍ)
 
-Let's take a look which changes we need to make to the chat server support WebRTC signaling. This is in the file [chatserver.js](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat/chatserver.js).
+wet's take a-a wook which c-changes we nyeed to make to the chat sewvew suppowt webwtc signawing. ( ͡o ω ͡o ) this is in t-the fiwe [chatsewvew.js](https://github.com/mdn/sampwes-sewvew/twee/mastew/s/webwtc-fwom-chat/chatsewvew.js). (U ᵕ U❁)
 
-First up is the addition of the function `sendToOneUser()`. As the name suggests, this sends a stringified JSON message to a particular username.
+fiwst up is the addition of the function `sendtooneusew()`. ʘwʘ as the n-nyame suggests, (ˆ ﻌ ˆ)♡ this sends a s-stwingified json m-message to a pawticuwaw u-usewname. /(^•ω•^)
 
 ```js
-function sendToOneUser(target, msgString) {
-  var isUnique = true;
-  var i;
+f-function sendtooneusew(tawget, (ˆ ﻌ ˆ)♡ msgstwing) {
+  v-vaw isunique = twue;
+  vaw i;
 
-  for (i = 0; i < connectionArray.length; i++) {
-    if (connectionArray[i].username === target) {
-      connectionArray[i].send(msgString);
-      break;
+  fow (i = 0; i-i < connectionawway.wength; i++) {
+    if (connectionawway[i].usewname === tawget) {
+      connectionawway[i].send(msgstwing);
+      bweak;
     }
   }
 }
 ```
 
-This function iterates over the list of connected users until it finds one matching the specified username, then sends the message to that user. The parameter `msgString` is a stringified JSON object. We could have made it receive our original message object, but in this example it's more efficient this way. Since the message has already been stringified, we can send it with no further processing. Each entry in `connectionArray` is a {{domxref("WebSocket")}} object, so we can just call its {{domxref("WebSocket.send", "send()")}} method directly.
+this function i-itewates ovew the wist of connected u-usews untiw i-it finds one matching t-the specified usewname, (✿oωo) then sends the message to that usew. ^•ﻌ•^ t-the pawametew `msgstwing` i-is a stwingified json o-object. (ˆ ﻌ ˆ)♡ we couwd h-have made it weceive ouw owiginaw m-message object, XD but in this e-exampwe it's mowe efficient this way. :3 since the m-message has awweady been stwingified, -.- w-we can send it with nyo f-fuwthew pwocessing. ^^;; e-each entwy in `connectionawway` is a {{domxwef("websocket")}} object, OwO so we can just caww its {{domxwef("websocket.send", ^^;; "send()")}} method diwectwy. 🥺
 
-Our original chat demo didn't support sending messages to a specific user. The next task is to update the main WebSocket message handler to support doing so. This involves a change near the end of the `"connection"` message handler:
+ouw owiginaw chat demo d-didn't suppowt s-sending messages to a specific u-usew. ^^ the nyext t-task is to update t-the main websocket message handwew to suppowt doing so. o.O this i-invowves a change nyeaw the end of the `"connection"` message handwew:
 
 ```js
-if (sendToClients) {
-  var msgString = JSON.stringify(msg);
-  var i;
+if (sendtocwients) {
+  v-vaw msgstwing = json.stwingify(msg);
+  v-vaw i-i;
 
-  if (msg.target && msg.target !== undefined && msg.target.length !== 0) {
-    sendToOneUser(msg.target, msgString);
-  } else {
-    for (i = 0; i < connectionArray.length; i++) {
-      connectionArray[i].send(msgString);
+  if (msg.tawget && m-msg.tawget !== undefined && m-msg.tawget.wength !== 0) {
+    s-sendtooneusew(msg.tawget, ( ͡o ω ͡o ) m-msgstwing);
+  } e-ewse {
+    fow (i = 0; i < connectionawway.wength; i-i++) {
+      connectionawway[i].send(msgstwing);
     }
   }
 }
 ```
 
-This code now looks at the pending message to see if it has a `target` property. If that property is present, it specifies the username of the client to which the message is to be sent, and we call `sendToOneUser()` to send the message to them. Otherwise, the message is broadcast to all users by iterating over the connection list, sending the message to each user.
+t-this code nyow w-wooks at the pending m-message to s-see if it has a `tawget` pwopewty. nyaa~~ if that pwopewty is pwesent, (///ˬ///✿) i-it specifies the usewname of the cwient to which the message is to be sent, (ˆ ﻌ ˆ)♡ and we caww `sendtooneusew()` t-to send the message to them. XD othewwise, >_< the message is b-bwoadcast to aww u-usews by itewating o-ovew the connection wist, (U ﹏ U) s-sending the message to each usew. òωó
 
-As the existing code allows the sending of arbitrary message types, no additional changes are required. Our clients can now send messages of unknown types to any specific user, letting them send signaling messages back and forth as desired.
+a-as the existing c-code awwows the sending of awbitwawy message types, >w< nyo additionaw changes awe wequiwed. ^•ﻌ•^ ouw c-cwients can nyow send messages of u-unknown types to any specific u-usew, 🥺 wetting them s-send signawing messages back and fowth as desiwed. (✿oωo)
 
-That's all we need to change on the server side of the equation. Now let's consider the signaling protocol we will implement.
+t-that's aww w-we nyeed to change on the sewvew s-side of the equation. UwU n-now wet's considew the signawing pwotocow we wiww impwement. (˘ω˘)
 
-### Designing the signaling protocol
+### designing t-the signawing p-pwotocow
 
-Now that we've built a mechanism for exchanging messages, we need a protocol defining how those messages will look. This can be done in a number of ways; what's demonstrated here is just one possible way to structure signaling messages.
+nyow t-that we've buiwt a mechanism fow e-exchanging messages, ʘwʘ w-we nyeed a pwotocow defining h-how those messages wiww wook. (ˆ ﻌ ˆ)♡ this can be done in a nyumbew of ways; nyani's d-demonstwated hewe i-is just one possibwe way to stwuctuwe signawing m-messages. ( ͡o ω ͡o )
 
-This example's server uses stringified JSON objects to communicate with its clients. This means our signaling messages will be in JSON format, with contents which specify what kind of messages they are as well as any additional information needed in order to handle the messages properly.
+this e-exampwe's sewvew uses stwingified json objects to communicate w-with its cwients. :3 this means ouw signawing messages wiww be in json fowmat, 😳 with c-contents which specify nyani kind of messages t-they awe as weww a-as any additionaw infowmation nyeeded in owdew to handwe the messages p-pwopewwy. (✿oωo)
 
-#### Exchanging session descriptions
+#### e-exchanging session descwiptions
 
-When starting the signaling process, an **offer** is created by the user initiating the call. This offer includes a session description, in {{Glossary("SDP")}} format, and needs to be delivered to the receiving user, which we'll call the **callee**. The callee responds to the offer with an **answer** message, also containing an SDP description. Our signaling server will use WebSocket to transmit offer messages with the type `"video-offer"`, and answer messages with the type `"video-answer"`. These messages have the following fields:
+when stawting the signawing p-pwocess, /(^•ω•^) an **offew** is cweated b-by the usew initiating the caww. :3 this offew incwudes a session d-descwiption, σωσ in {{gwossawy("sdp")}} f-fowmat, σωσ a-and nyeeds to be dewivewed to the w-weceiving usew, 🥺 which we'ww caww t-the **cawwee**. t-the cawwee wesponds t-to the offew with an **answew** m-message, rawr a-awso containing an sdp descwiption. o.O ouw signawing s-sewvew wiww use w-websocket to t-twansmit offew messages with the type `"video-offew"`, 😳😳😳 a-and answew messages with t-the type `"video-answew"`. /(^•ω•^) t-these messages have the fowwowing fiewds:
 
 - `type`
-  - : The message type; either `"video-offer"` or `"video-answer"`.
+  - : the message t-type; eithew `"video-offew"` o-ow `"video-answew"`. σωσ
 - `name`
-  - : The sender's username.
-- `target`
-  - : The username of the person to receive the description (if the caller is sending the message, this specifies the callee, and vice-versa).
+  - : t-the sendew's usewname. OwO
+- `tawget`
+  - : t-the usewname of the pewson t-to weceive the descwiption (if the cawwew is sending the message, OwO this specifies the cawwee, òωó a-and vice-vewsa). :3
 - `sdp`
-  - : The SDP (Session Description Protocol) string describing the local end of the connection from the perspective of the sender (or the remote end of the connection from the receiver's point of view).
+  - : the sdp (session d-descwiption pwotocow) stwing descwibing t-the wocaw end of the connection f-fwom the pewspective of t-the sendew (ow t-the wemote end o-of the connection f-fwom the weceivew's p-point of view). σωσ
 
-At this point, the two participants know which codecs and video parameters are to be used for this call. They still don't know how to transmit the media data itself though. This is where {{Glossary('ICE', 'Interactive Connectivity Establishment (ICE)')}} comes in.
+at this point, σωσ the two pawticipants know which codecs and video pawametews awe to be used f-fow this caww. -.- t-they stiww don't k-know how to twansmit the media d-data itsewf though. (///ˬ///✿) this is whewe {{gwossawy('ice', rawr x3 'intewactive connectivity estabwishment (ice)')}} comes in. (U ﹏ U)
 
-### Exchanging ICE candidates
+### e-exchanging i-ice candidates
 
-Two peers need to exchange ICE candidates to negotiate the actual connection between them. Every ICE candidate describes a method that the sending peer is able to use to communicate. Each peer sends candidates in the order they're discovered, and keeps sending candidates until it runs out of suggestions, even if media has already started streaming.
+two peews nyeed t-to exchange ice candidates to nyegotiate the actuaw c-connection between t-them. òωó evewy ice candidate d-descwibes a method t-that the sending peew is abwe to use to communicate. OwO each peew sends candidates i-in the owdew t-they'we discovewed, ^^ a-and keeps sending c-candidates u-untiw it wuns out of suggestions, e-even if media h-has awweady stawted stweaming. /(^•ω•^)
 
-An `icecandidate` event is sent to the {{domxref("RTCPeerConnection")}} to complete the process of adding a local description using `pc.setLocalDescription(offer)`.
+a-an `icecandidate` e-event is sent to the {{domxwef("wtcpeewconnection")}} t-to compwete the pwocess of adding a wocaw d-descwiption using `pc.setwocawdescwiption(offew)`. >_<
 
-Once the two peers agree upon a mutually-compatible candidate, that candidate's SDP is used by each peer to construct and open a connection, through which media then begins to flow. If they later agree on a better (usually higher-performance) candidate, the stream may change formats as needed.
+o-once the t-two peews agwee upon a mutuawwy-compatibwe c-candidate, -.- that candidate's sdp is used b-by each peew t-to constwuct and o-open a connection, (˘ω˘) thwough which media then begins to fwow. >_< if t-they watew agwee on a bettew (usuawwy highew-pewfowmance) c-candidate, (˘ω˘) t-the stweam may change fowmats a-as nyeeded. >w<
 
-Though not currently supported, a candidate received after media is already flowing could theoretically also be used to downgrade to a lower-bandwidth connection if needed.
+though nyot cuwwentwy s-suppowted, a-a candidate weceived aftew media is awweady fwowing c-couwd theoweticawwy awso be used to downgwade t-to a wowew-bandwidth c-connection if nyeeded. 😳😳😳
 
-Each ICE candidate is sent to the other peer by sending a JSON message of type `"new-ice-candidate"` over the signaling server to the remote peer. Each candidate message include these fields:
+e-each ice candidate is sent to the o-othew peew by s-sending a json m-message of type `"new-ice-candidate"` ovew the signawing sewvew to the wemote peew. 😳 each candidate message incwude these fiewds:
 
 - `type`
-  - : The message type: `"new-ice-candidate"`.
-- `target`
-  - : The username of the person with whom negotiation is underway; the server will direct the message to this user only.
+  - : the message type: `"new-ice-candidate"`. XD
+- `tawget`
+  - : the usewname of the pewson with whom nyegotiation is undewway; the sewvew w-wiww diwect t-the message to this usew onwy. OwO
 - `candidate`
-  - : The SDP candidate string, describing the proposed connection method. You typically don't need to look at the contents of this string. All your code needs to do is route it through to the remote peer using the signaling server.
+  - : the sdp candidate s-stwing, -.- descwibing t-the pwoposed c-connection method. o.O you typicawwy d-don't nyeed to wook at the c-contents of this s-stwing. ^^ aww youw code nyeeds t-to do is woute it thwough to the w-wemote peew using t-the signawing sewvew. ^^
 
-Each ICE message suggests a communication protocol (TCP or UDP), IP address, port number, connection type (for example, whether the specified IP is the peer itself or a relay server), along with other information needed to link the two computers together. This includes NAT or other networking complexity.
+each ice message suggests a-a communication p-pwotocow (tcp o-ow udp), XD ip addwess, >w< p-powt nyumbew, (⑅˘꒳˘) c-connection t-type (fow exampwe, 😳 w-whethew the specified i-ip is the p-peew itsewf ow a weway sewvew), :3 a-awong with othew i-infowmation n-nyeeded to wink the two computews t-togethew. :3 this incwudes nat ow othew nyetwowking c-compwexity. OwO
 
-> [!NOTE]
-> The important thing to note is this: the only thing your code is responsible for during ICE negotiation is accepting outgoing candidates from the ICE layer and sending them across the signaling connection to the other peer when your {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} handler is executed, and receiving ICE candidate messages from the signaling server (when the `"new-ice-candidate"` message is received) and delivering them to your ICE layer by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}. That's it.
+> [!note]
+> the i-impowtant thing t-to nyote is this: t-the onwy thing youw code is wesponsibwe f-fow duwing ice nyegotiation i-is accepting outgoing candidates f-fwom the ice wayew and sending t-them acwoss the signawing connection to the othew peew when youw {{domxwef("wtcpeewconnection.onicecandidate", (U ﹏ U) "onicecandidate")}} h-handwew is exekawaii~d, (⑅˘꒳˘) a-and weceiving ice c-candidate messages fwom the signawing sewvew (when the `"new-ice-candidate"` m-message is weceived) and dewivewing t-them to youw i-ice wayew by cawwing {{domxwef("wtcpeewconnection.addicecandidate()")}}. 😳 t-that's it. (ˆ ﻌ ˆ)♡
 >
-> The contents of the SDP are irrelevant to you in essentially all cases. Avoid the temptation to try to make it more complicated than that until you really know what you're doing. That way lies madness.
+> the contents of the sdp a-awe iwwewevant t-to you in essentiawwy aww cases. mya a-avoid the temptation to twy to make it mowe compwicated t-than that untiw you weawwy k-know nyani you'we d-doing. ʘwʘ that w-way wies madness. (˘ω˘)
 
-All your signaling server now needs to do is send the messages it's asked to. Your workflow may also demand login/authentication functionality, but such details will vary.
+aww youw signawing s-sewvew nyow n-nyeeds to do i-is send the messages i-it's asked to. (///ˬ///✿) youw wowkfwow m-may awso demand w-wogin/authentication f-functionawity, XD b-but such d-detaiws wiww vawy. 😳
 
-### Signaling transaction flow
+### s-signawing t-twansaction fwow
 
-The signaling process involves this exchange of messages between two peers using an intermediary, the signaling server. The exact process will vary, of course, but in general there are a few key points at which signaling messages get handled:
+t-the signawing pwocess invowves t-this exchange of messages between t-two peews using an intewmediawy, :3 t-the signawing s-sewvew. 😳😳😳 the e-exact pwocess wiww vawy, (U ᵕ U❁) of couwse, but in genewaw thewe awe a few k-key points at w-which signawing m-messages get handwed:
 
-The signaling process involves this exchange of messages among a number of points:
+the signawing pwocess invowves this exchange o-of messages a-among a nyumbew of points:
 
-- Each user's client running within a web browser
-- Each user's web browser
-- The signaling server
-- The web server hosting the chat service
+- each u-usew's cwient w-wunning within a web bwowsew
+- each usew's web bwowsew
+- the signawing s-sewvew
+- t-the web sewvew h-hosting the chat s-sewvice
 
-Imagine that Naomi and Priya are engaged in a discussion using the chat software, and Naomi decides to open a video call between the two. Here's the expected sequence of events:
+imagine that nyaomi and pwiya awe engaged i-in a discussion u-using the chat softwawe, ^•ﻌ•^ and naomi decides t-to open a video caww between the two. (˘ω˘) hewe's the e-expected sequence of events:
 
-[![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)](webrtc_-_signaling_diagram.svg)
+[![diagwam o-of the s-signawing pwocess](webwtc_-_signawing_diagwam.svg)](webwtc_-_signawing_diagwam.svg)
 
-We'll see this detailed more over the course of this article.
+we'ww see t-this detaiwed mowe o-ovew the couwse of this awticwe. /(^•ω•^)
 
-### ICE candidate exchange process
+### i-ice candidate exchange p-pwocess
 
-When each peer's ICE layer begins to send candidates, it enters into an exchange among the various points in the chain that looks like this:
+when each p-peew's ice wayew b-begins to send c-candidates, ^•ﻌ•^ it entews into an e-exchange among t-the vawious points i-in the chain that wooks wike t-this:
 
-[![Diagram of ICE candidate exchange process](webrtc_-_ice_candidate_exchange.svg)](webrtc_-_ice_candidate_exchange.svg)
+[![diagwam of ice candidate exchange pwocess](webwtc_-_ice_candidate_exchange.svg)](webwtc_-_ice_candidate_exchange.svg)
 
-Each side sends candidates to the other as it receives them from their local ICE layer; there is no taking turns or batching of candidates. As soon as the two peers agree upon one candidate that they can both use to exchange the media, media begins to flow. Each peer continues to send candidates until it runs out of options, even after the media has already begun to flow. This is done in hopes of identifying even better options than the one initially selected.
+e-each side sends c-candidates to the o-othew as it weceives them fwom theiw wocaw ice wayew; thewe is no taking tuwns o-ow batching of candidates. ^^ as s-soon as the two p-peews agwee upon one candidate that they can both u-use to exchange the media, (U ﹏ U) media b-begins to fwow. :3 e-each peew continues t-to send candidates u-untiw i-it wuns out of options, òωó even aftew the media has awweady begun to fwow. σωσ this is d-done in hopes of identifying even b-bettew options than the one initiawwy sewected. σωσ
 
-If conditions change—for example the network connection deteriorates—one or both peers might suggest switching to a lower-bandwidth media resolution, or to an alternative codec. This triggers a new exchange of candidates, after which a another media format and/or codec change may take place.
+if conditions c-change—fow exampwe the nyetwowk connection detewiowates—one ow both peews might suggest switching t-to a wowew-bandwidth m-media wesowution, (⑅˘꒳˘) ow t-to an awtewnative codec. 🥺 this twiggews a nyew exchange o-of candidates, (U ﹏ U) a-aftew which a anothew media f-fowmat and/ow codec change may t-take pwace. >w<
 
-Optionally, see {{RFC(8445, "Interactive Connectivity Establishment")}}, [section 2.3 ("Negotiating Candidate Pairs and Concluding ICE")](https://tools.ietf.org/html/rfc5245#section-2.3) if you want greater understanding of this process is completed inside the ICE layer. You should note that candidates are exchanged and media starts to flow as soon as the ICE layer is satisfied. This all taken care of behind the scenes. Our role is to simply send the candidates, back and forth, through the signaling server.
+optionawwy, nyaa~~ see {{wfc(8445, -.- "intewactive connectivity estabwishment")}}, XD [section 2.3 ("negotiating c-candidate paiws and concwuding ice")](https://toows.ietf.owg/htmw/wfc5245#section-2.3) i-if you w-want gweatew undewstanding o-of this pwocess is compweted inside t-the ice wayew. -.- you shouwd nyote that candidates awe exchanged and media stawts to f-fwow as soon as t-the ice wayew i-is satisfied. >w< this a-aww taken cawe of behind the scenes. (ꈍᴗꈍ) ouw wowe i-is to simpwy send t-the candidates, :3 back and fowth, (ˆ ﻌ ˆ)♡ thwough the signawing s-sewvew. -.-
 
-## The client application
+## the cwient appwication
 
-The core to any signaling process is its message handling. It's not necessary to use WebSockets for signaling, but it is a common solution. You should, of course, select a mechanism for exchanging signaling information that is appropriate for your application.
+the c-cowe to any signawing pwocess is its message handwing. mya i-it's nyot n-nyecessawy to use websockets fow s-signawing, (˘ω˘) but i-it is a common s-sowution. ^•ﻌ•^ you shouwd, 😳😳😳 of couwse, σωσ sewect a mechanism f-fow exchanging signawing infowmation that is a-appwopwiate fow youw appwication. ( ͡o ω ͡o )
 
-Let's update the chat client to support video calling.
+wet's update the chat cwient t-to suppowt video c-cawwing. nyaa~~
 
-### Updating the HTML
+### u-updating the htmw
 
-The HTML for our client needs a location for video to be presented. This requires video elements, and a button to hang up the call:
+t-the htmw fow o-ouw cwient nyeeds a wocation fow v-video to be pwesented. :3 this wequiwes video ewements, (✿oωo) a-and a button to hang up the c-caww:
 
-```html
-<div class="flexChild" id="camera-container">
-  <div class="camera-box">
-    <video id="received_video" autoplay></video>
-    <video id="local_video" autoplay muted></video>
-    <button id="hangup-button" onclick="hangUpCall();" disabled>Hang Up</button>
+```htmw
+<div cwass="fwexchiwd" id="camewa-containew">
+  <div c-cwass="camewa-box">
+    <video i-id="weceived_video" autopway></video>
+    <video i-id="wocaw_video" autopway m-muted></video>
+    <button i-id="hangup-button" oncwick="hangupcaww();" disabwed>hang u-up</button>
   </div>
 </div>
 ```
 
-The page structure defined here is using {{HTMLElement("div")}} elements, giving us full control over the page layout by enabling the use of CSS. We'll skip layout detail in this guide, but [take a look at the CSS](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat/chat.css) on Github to see how we handled it. Take note of the two {{HTMLElement("video")}} elements, one for your self-view, one for the connection, and the {{HTMLElement("button")}} element.
+t-the page stwuctuwe defined h-hewe is using {{htmwewement("div")}} ewements, >_< giving us fuww contwow ovew the p-page wayout by enabwing the use o-of css. ^^ we'ww skip wayout detaiw in this guide, (///ˬ///✿) b-but [take a wook a-at the css](https://github.com/mdn/sampwes-sewvew/twee/mastew/s/webwtc-fwom-chat/chat.css) o-on github to see how w-we handwed it. :3 t-take nyote of the two {{htmwewement("video")}} ewements, :3 o-one fow youw sewf-view, (ˆ ﻌ ˆ)♡ o-one fow the connection, 🥺 and the {{htmwewement("button")}} e-ewement.
 
-The `<video>` element with the `id` "`received_video`" will present video received from the connected user. We specify the `autoplay` attribute, ensuring once the video starts arriving, it immediately plays. This removes any need to explicitly handle playback in our code. The "`local_video`" `<video>` element presents a preview of the user's camera; specifiying the `muted` attribute, as we don't need to hear local audio in this preview panel.
+t-the `<video>` ewement with the `id` "`weceived_video`" wiww pwesent video weceived f-fwom the c-connected usew. 😳 we specify the `autopway` attwibute, (ꈍᴗꈍ) ensuwing once t-the video stawts awwiving, mya it i-immediatewy pways. rawr t-this wemoves any nyeed to expwicitwy handwe pwayback in ouw code. ʘwʘ the "`wocaw_video`" `<video>` e-ewement pwesents a pweview of the usew's camewa; s-specifiying the `muted` attwibute, -.- a-as we don't n-nyeed to heaw wocaw audio in t-this pweview panew. UwU
 
-Finally, the "`hangup-button`" {{HTMLElement("button")}}, to disconnect from a call, is defined and configured to start disabled (setting this as our default for when no call is connected) and apply the function `hangUpCall()` on click. This function's role is to close the call, and send a signalling server notification to the other peer, requesting it also close.
+f-finawwy, :3 t-the "`hangup-button`" {{htmwewement("button")}}, 😳 t-to disconnect fwom a-a caww, (ꈍᴗꈍ) is defined a-and configuwed to stawt disabwed (setting this as ouw defauwt fow when nyo caww is connected) and appwy the f-function `hangupcaww()` o-on cwick. mya t-this function's w-wowe is to c-cwose the caww, nyaa~~ a-and send a signawwing sewvew nyotification to the othew peew, o.O wequesting it awso c-cwose. òωó
 
-### The JavaScript code
+### the j-javascwipt code
 
-We'll divide this code into functional areas to more easily describe how it works. The main body of this code is found in the `connect()` function: it opens up a {{domxref("WebSocket")}} server on port 6503, and establishes a handler to receive messages in JSON object format. This code generally handles text chat messages as it did previously.
+we'ww divide this code into functionaw aweas to m-mowe easiwy descwibe h-how it wowks. ^•ﻌ•^ t-the main body of this code is found in the `connect()` f-function: it opens up a {{domxwef("websocket")}} s-sewvew o-on powt 6503, (˘ω˘) and estabwishes a handwew to weceive m-messages in json object fowmat. òωó t-this code g-genewawwy handwes text chat messages a-as it did p-pweviouswy. mya
 
-#### Sending messages to the signaling server
+#### s-sending messages t-to the signawing s-sewvew
 
-Throughout our code, we call `sendToServer()` in order to send messages to the signaling server. This function uses the [WebSocket](/ru/docs/Web/API/WebSockets_API) connection to do its work:
+thwoughout o-ouw code, ^^ we caww `sendtosewvew()` i-in owdew t-to send messages to the signawing s-sewvew. rawr this function uses the [websocket](/wu/docs/web/api/websockets_api) c-connection to do its wowk:
 
 ```js
-function sendToServer(msg) {
-  var msgJSON = JSON.stringify(msg);
+f-function sendtosewvew(msg) {
+  vaw msgjson = j-json.stwingify(msg);
 
-  connection.send(msgJSON);
+  c-connection.send(msgjson);
 }
 ```
 
-The message object passed into this function is converted into a JSON string by calling {{jsxref("JSON.stringify()")}}, then we call the WebSocket connection's {{domxref("WebSocket.send", "send()")}} function to transmit the message to the server.
+the message object passed i-into this function is convewted into a json stwing b-by cawwing {{jsxwef("json.stwingify()")}}, >_< t-then we caww the websocket connection's {{domxwef("websocket.send", (U ᵕ U❁) "send()")}} function to twansmit t-the message t-to the sewvew. /(^•ω•^)
 
-#### UI to start a call
+#### ui to stawt a-a caww
 
-The code which handles the `"userlist"` message calls `handleUserlistMsg()`. Here we set up the handler for each connected user in the user list displayed to the left of the chat panel. This function receives a message object whose `users` property is an array of strings specifying the user names of every connected user.
+the code which handwes the `"usewwist"` m-message cawws `handweusewwistmsg()`. mya h-hewe we set up the handwew f-fow each connected u-usew in the usew wist dispwayed to the weft o-of the chat panew. OwO t-this function w-weceives a message o-object whose `usews` pwopewty is an awway of stwings specifying the usew nyames of evewy connected usew. UwU
 
 ```js
-function handleUserlistMsg(msg) {
-  var i;
-  var listElem = document.querySelector(".userlistbox");
+f-function handweusewwistmsg(msg) {
+  v-vaw i;
+  v-vaw wistewem = d-document.quewysewectow(".usewwistbox");
 
-  while (listElem.firstChild) {
-    listElem.removeChild(listElem.firstChild);
+  w-whiwe (wistewem.fiwstchiwd) {
+    wistewem.wemovechiwd(wistewem.fiwstchiwd);
   }
 
-  msg.users.forEach(function (username) {
-    var item = document.createElement("li");
-    item.appendChild(document.createTextNode(username));
-    item.addEventListener("click", invite, false);
+  m-msg.usews.foweach(function (usewname) {
+    vaw i-item = document.cweateewement("wi");
+    i-item.appendchiwd(document.cweatetextnode(usewname));
+    item.addeventwistenew("cwick", 🥺 i-invite, fawse);
 
-    listElem.appendChild(item);
+    w-wistewem.appendchiwd(item);
   });
 }
 ```
 
-After getting a reference to the {{HTMLElement("ul")}} which contains the list of user names into the variable `listElem`, we empty the list by removing each of its child elements.
+aftew getting a wefewence to the {{htmwewement("uw")}} w-which contains the wist of usew nyames into t-the vawiabwe `wistewem`, (✿oωo) we empty t-the wist by w-wemoving each of its chiwd ewements. rawr
 
-> [!NOTE]
-> Obviously, it would be more efficient to update the list by adding and removing individual users instead of rebuilding the whole list every time it changes, but this is good enough for the purposes of this example.
+> [!note]
+> o-obviouswy, it w-wouwd be mowe efficient t-to update the wist by adding a-and wemoving i-individuaw usews instead of webuiwding t-the whowe wist evewy time i-it changes, rawr b-but this is good e-enough fow the puwposes of this e-exampwe. ( ͡o ω ͡o )
 
-Then we iterate over the array of user names using {{jsxref("Array.forEach", "forEach()")}}. For each name, we create a new {{HTMLElement("li")}} element, then create a new text node containing the user name using {{domxref("Document.createTextNode", "createTextNode()")}}. That text node is added as a child of the `<li>` element. Next, we set a handler for the [`click`](/ru/docs/Web/API/Element/click_event) event on the list item, that clicking on a user name calls our `invite()` method, which we'll look at in the next section.
+then we itewate ovew the awway of usew n-nyames using {{jsxwef("awway.foweach", /(^•ω•^) "foweach()")}}. -.- fow each nyame, >w< we cweate a nyew {{htmwewement("wi")}} ewement, ( ͡o ω ͡o ) then cweate a nyew text nyode containing t-the usew nyame using {{domxwef("document.cweatetextnode", (˘ω˘) "cweatetextnode()")}}. /(^•ω•^) that text nyode is added as a chiwd of the `<wi>` ewement. (˘ω˘) nyext, we set a handwew f-fow the [`cwick`](/wu/docs/web/api/ewement/cwick_event) event on the wist i-item, o.O that cwicking on a usew nyame c-cawws ouw `invite()` method, nyaa~~ which we'ww wook a-at in the nyext section. :3
 
-Finally, we append the new item to the `<ul>` that contains all of the user names.
+finawwy, (///ˬ///✿) w-we append the nyew item to t-the `<uw>` that c-contains aww of the usew nyames. (U ﹏ U)
 
-#### Starting a call
+#### stawting a-a caww
 
-When the user clicks on a username they want to call, the `invite()` function is invoked as the event handler for that [`click`](/ru/docs/Web/API/Element/click_event) event:
+when the usew cwicks on a usewname they want to caww, o.O the `invite()` f-function is invoked a-as the event handwew fow that [`cwick`](/wu/docs/web/api/ewement/cwick_event) event:
 
 ```js
-var mediaConstraints = {
-  audio: true, // We want an audio track
-  video: true, // ...and we want a video track
+v-vaw mediaconstwaints = {
+  a-audio: twue, ^^;; // w-we want an audio twack
+  video: twue, // ...and w-we want a video twack
 };
 
 function invite(evt) {
-  if (myPeerConnection) {
-    alert("You can't start a call because you already have one open!");
-  } else {
-    var clickedUsername = evt.target.textContent;
+  i-if (mypeewconnection) {
+    awewt("you can't stawt a caww because you awweady have one o-open!");
+  } ewse {
+    v-vaw cwickedusewname = evt.tawget.textcontent;
 
-    if (clickedUsername === myUsername) {
-      alert(
-        "I'm afraid I can't let you talk to yourself. That would be weird.",
+    i-if (cwickedusewname === m-myusewname) {
+      awewt(
+        "i'm a-afwaid i can't wet you tawk to youwsewf. ʘwʘ that wouwd be weiwd.", (///ˬ///✿)
       );
-      return;
+      w-wetuwn;
     }
 
-    targetUsername = clickedUsername;
-    createPeerConnection();
+    tawgetusewname = c-cwickedusewname;
+    cweatepeewconnection();
 
-    navigator.mediaDevices
-      .getUserMedia(mediaConstraints)
-      .then(function (localStream) {
-        document.getElementById("local_video").srcObject = localStream;
-        localStream
-          .getTracks()
-          .forEach((track) => myPeerConnection.addTrack(track, localStream));
+    n-nyavigatow.mediadevices
+      .getusewmedia(mediaconstwaints)
+      .then(function (wocawstweam) {
+        d-document.getewementbyid("wocaw_video").swcobject = wocawstweam;
+        w-wocawstweam
+          .gettwacks()
+          .foweach((twack) => mypeewconnection.addtwack(twack, σωσ wocawstweam));
       })
-      .catch(handleGetUserMediaError);
+      .catch(handwegetusewmediaewwow);
   }
 }
 ```
 
-This begins with a basic sanity check: is the user even connected? If there's no {{domxref("RTCPeerConnection")}}, they obviously can't make a call. Then the name of the user that was clicked upon is obtained from the event target's {{domxref("Node.textContent", "textContent")}} property, and we check to be sure that it's not the same user that's trying to start the call.
+t-this begins with a basic sanity check: is the usew e-even connected? i-if thewe's nyo {{domxwef("wtcpeewconnection")}}, ^^;; they obviouswy can't make a c-caww. UwU then the nyame of the usew that was cwicked upon is obtained fwom the event tawget's {{domxwef("node.textcontent", mya "textcontent")}} pwopewty, ^•ﻌ•^ and we check t-to be suwe that i-it's nyot the same usew that's t-twying to stawt t-the caww. (⑅˘꒳˘)
 
-Then we copy the name of the user we're calling into the variable `targetUsername` and call `createPeerConnection()`, a function which will create and do basic configuration of the {{domxref("RTCPeerConnection")}}.
+then we copy the nyame o-of the usew we'we cawwing into the vawiabwe `tawgetusewname` and caww `cweatepeewconnection()`, nyaa~~ a function which wiww cweate a-and do basic configuwation of the {{domxwef("wtcpeewconnection")}}. ^^;;
 
-Once the `RTCPeerConnection` has been created, we request access to the user's camera and microphone by calling {{domxref("MediaDevices.getUserMedia()")}}, which is exposed to us through the {{domxref("Navigator.mediaDevices.getUserMedia")}} property. When this succeeds, fulfilling the returned promise, our `then` handler is executed. It receives, as input, a {{domxref("MediaStream")}} object representing the stream with audio from the user's microphone and video from their webcam.
+once the `wtcpeewconnection` has been cweated, 🥺 we wequest access t-to the usew's c-camewa and micwophone b-by cawwing {{domxwef("mediadevices.getusewmedia()")}}, ^^;; which is exposed to us thwough the {{domxwef("navigatow.mediadevices.getusewmedia")}} p-pwopewty. nyaa~~ w-when this succeeds, 🥺 f-fuwfiwwing the wetuwned pwomise, o-ouw `then` handwew is exekawaii~d. (ˆ ﻌ ˆ)♡ i-it weceives, ( ͡o ω ͡o ) as input, a-a {{domxwef("mediastweam")}} object w-wepwesenting the stweam with audio fwom the u-usew's micwophone and video fwom t-theiw webcam. nyaa~~
 
-> [!NOTE]
-> We could restrict the set of permitted media inputs to a specific device or set of devices by calling {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} to get a list of devices, filtering the resulting list based on our desired criteria, then using the selected devices' {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} values in the `deviceId` field of the the `mediaConstraints` object passed into `getUserMedia()`. In practice, this is rarely if ever necessary, since most of that work is done for you by `getUserMedia()`.
+> [!note]
+> w-we couwd westwict the s-set of pewmitted m-media inputs to a specific device o-ow set of devices by cawwing {{domxwef("mediadevices.enumewatedevices", ( ͡o ω ͡o ) "navigatow.mediadevices.enumewatedevices()")}} t-to get a wist of devices, ^^;; f-fiwtewing t-the wesuwting wist based on ouw desiwed cwitewia, rawr x3 t-then using the sewected devices' {{domxwef("mediatwackconstwaints.deviceid", ^^;; "deviceid")}} vawues in the `deviceid` fiewd of the the `mediaconstwaints` object passed into `getusewmedia()`. ^•ﻌ•^ in p-pwactice, 🥺 this is wawewy if evew nyecessawy, (ꈍᴗꈍ) since m-most of that wowk is done fow y-you by `getusewmedia()`. ^•ﻌ•^
 
-We attach the incoming stream to the local preview {{HTMLElement("video")}} element by setting the element's {{domxref("HTMLMediaElement.srcObject", "srcObject")}} property. Since the element is configured to automatically play incoming video, the stream begins playing in our local preview box.
+we attach the incoming s-stweam to the wocaw pweview {{htmwewement("video")}} ewement b-by setting the ewement's {{domxwef("htmwmediaewement.swcobject", :3 "swcobject")}} pwopewty. (˘ω˘) since t-the ewement is configuwed to automaticawwy pway i-incoming video, ^^ the stweam begins pwaying in ouw w-wocaw pweview b-box. /(^•ω•^)
 
-We then iterate over the tracks in the stream, calling {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} to add each track to the `RTCPeerConnection`. Even though the connection is not fully established yet, it's important to begin sending media to it as soon as possible, because the media will help the ICE layer decide on the best connectivity approach to take, aiding in the negotiation process.
+we then itewate ovew the twacks in the stweam, σωσ c-cawwing {{domxwef("wtcpeewconnection.addtwack", òωó "addtwack()")}} t-to add each twack to the `wtcpeewconnection`. >w< e-even though the c-connection is not fuwwy estabwished yet, (˘ω˘) it's i-impowtant to begin sending media to it as soon as possibwe, ^•ﻌ•^ because t-the media wiww hewp the ice wayew decide on the best connectivity a-appwoach t-to take, >_< aiding i-in the nyegotiation pwocess. -.-
 
-As soon as media is attached to the `RTCPeerConnection`, a [`negotiationneeded`](/ru/docs/Web/API/RTCPeerConnection/negotiationneeded_event) event is triggered at the connection, so that ICE negotiation can be started.
+as soon as media is attached to the `wtcpeewconnection`, òωó a-a [`negotiationneeded`](/wu/docs/web/api/wtcpeewconnection/negotiationneeded_event) event i-is twiggewed at the connection, ( ͡o ω ͡o ) s-so that ice nyegotiation c-can be stawted. (ˆ ﻌ ˆ)♡
 
-If an error occurs while trying to get the local media stream, our catch clause calls `handleGetUserMediaError()`, which displays an appropriate error to the user as required.
+if an ewwow occuws whiwe twying to get the wocaw media stweam, :3 ouw catch c-cwause cawws `handwegetusewmediaewwow()`, ^•ﻌ•^ w-which dispways an appwopwiate ewwow t-to the usew as wequiwed. ( ͡o ω ͡o )
 
-#### Handling getUserMedia() errors
+#### handwing getusewmedia() e-ewwows
 
-If the promise returned by `getUserMedia()` concludes in a failure, our `handleGetUserMediaError()` function performs.
+i-if the pwomise w-wetuwned by `getusewmedia()` c-concwudes i-in a faiwuwe, ^•ﻌ•^ o-ouw `handwegetusewmediaewwow()` function pewfowms. ʘwʘ
 
 ```js
-function handleGetUserMediaError(e) {
-  switch (e.name) {
-    case "NotFoundError":
-      alert(
-        "Unable to open your call because no camera and/or microphone" +
-          "were found.",
+function handwegetusewmediaewwow(e) {
+  s-switch (e.name) {
+    c-case "notfoundewwow":
+      a-awewt(
+        "unabwe t-to open youw caww b-because nyo camewa a-and/ow micwophone" +
+          "wewe found.", :3
       );
-      break;
-    case "SecurityError":
-    case "PermissionDeniedError":
-      // Do nothing; this is the same as the user canceling the call.
-      break;
-    default:
-      alert("Error opening your camera and/or microphone: " + e.message);
-      break;
+      b-bweak;
+    case "secuwityewwow":
+    c-case "pewmissiondeniedewwow":
+      // d-do nyothing; this is the same as the u-usew cancewing the caww. >_<
+      bweak;
+    defauwt:
+      a-awewt("ewwow opening youw camewa and/ow m-micwophone: " + e-e.message);
+      bweak;
   }
 
-  closeVideoCall();
+  cwosevideocaww();
 }
 ```
 
-An error message is displayed in all cases but one. In this example, we ignore `"SecurityError"` and `"PermissionDeniedError"` results, treating refusal to grant permission to use the media hardware the same as the user canceling the call.
+an e-ewwow message is d-dispwayed in aww cases but one. rawr i-in this exampwe, 🥺 w-we ignowe `"secuwityewwow"` and `"pewmissiondeniedewwow"` wesuwts, (✿oωo) tweating wefusaw t-to gwant pewmission t-to use the media hawdwawe the same as t-the usew cancewing t-the caww. (U ﹏ U)
 
-Regardless of why an attempt to get the stream fails, we call our `closeVideoCall()` function to shut down the {{domxref("RTCPeerConnection")}}, and release any resources already allocated by the process of attempting the call. This code is designed to safely handle partially-started calls.
+wegawdwess of why an attempt to get t-the stweam faiws, rawr x3 we caww ouw `cwosevideocaww()` function to shut down the {{domxwef("wtcpeewconnection")}}, (✿oωo) and wewease any wesouwces awweady a-awwocated by the pwocess of attempting the caww. (U ᵕ U❁) t-this code is designed t-to safewy h-handwe pawtiawwy-stawted cawws. -.-
 
-#### Creating the peer connection
+#### c-cweating t-the peew connection
 
-The `createPeerConnection()` function is used by both the caller and the callee to construct their {{domxref("RTCPeerConnection")}} objects, their respective ends of the WebRTC connection. It's invoked by `invite()` when the caller tries to start a call, and by `handleVideoOfferMsg()` when the callee receives an offer message from the caller.
+t-the `cweatepeewconnection()` f-function is used b-by both the cawwew and the cawwee to constwuct t-theiw {{domxwef("wtcpeewconnection")}} o-objects, /(^•ω•^) t-theiw wespective ends of the w-webwtc connection. OwO i-it's invoked b-by `invite()` when the cawwew twies t-to stawt a caww, rawr x3 a-and by `handwevideooffewmsg()` w-when the cawwee w-weceives an o-offew message fwom the cawwew. σωσ
 
 ```js
-function createPeerConnection() {
-  myPeerConnection = new RTCPeerConnection({
-    iceServers: [
-      // Information about ICE servers - Use your own!
+f-function cweatepeewconnection() {
+  mypeewconnection = n-nyew w-wtcpeewconnection({
+    icesewvews: [
+      // infowmation about ice sewvews - u-use youw own! ʘwʘ
       {
-        urls: "stun:stun.stunprotocol.org",
+        uwws: "stun:stun.stunpwotocow.owg", -.-
       },
-    ],
+    ], 😳
   });
 
-  myPeerConnection.onicecandidate = handleICECandidateEvent;
-  myPeerConnection.ontrack = handleTrackEvent;
-  myPeerConnection.onnegotiationneeded = handleNegotiationNeededEvent;
-  myPeerConnection.onremovetrack = handleRemoveTrackEvent;
-  myPeerConnection.oniceconnectionstatechange =
-    handleICEConnectionStateChangeEvent;
-  myPeerConnection.onicegatheringstatechange =
-    handleICEGatheringStateChangeEvent;
-  myPeerConnection.onsignalingstatechange = handleSignalingStateChangeEvent;
+  m-mypeewconnection.onicecandidate = handweicecandidateevent;
+  m-mypeewconnection.ontwack = h-handwetwackevent;
+  mypeewconnection.onnegotiationneeded = handwenegotiationneededevent;
+  mypeewconnection.onwemovetwack = handwewemovetwackevent;
+  m-mypeewconnection.oniceconnectionstatechange =
+    h-handweiceconnectionstatechangeevent;
+  m-mypeewconnection.onicegathewingstatechange =
+    h-handweicegathewingstatechangeevent;
+  m-mypeewconnection.onsignawingstatechange = h-handwesignawingstatechangeevent;
 }
 ```
 
-When using the {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}} constructor, we will specify an {{domxref("RTCConfiguration")}}-compliant object providing configuration parameters for the connection. We use only one of these in this example: `iceServers`. This is an array of objects describing STUN and/or TURN servers for the {{Glossary("ICE")}} layer to use when attempting to establish a route between the caller and the callee. These servers are used to determine the best route and protocols to use when communicating between the peers, even if they're behind a firewall or using {{Glossary("NAT")}}.
+when using the {{domxwef("wtcpeewconnection.wtcpeewconnection", 😳😳😳 "wtcpeewconnection()")}} c-constwuctow, OwO we wiww specify an {{domxwef("wtcconfiguwation")}}-compwiant object pwoviding configuwation pawametews f-fow the c-connection. ^•ﻌ•^ we use onwy one of these in this exampwe: `icesewvews`. rawr this is an a-awway of objects d-descwibing stun and/ow tuwn sewvews fow the {{gwossawy("ice")}} w-wayew to use when attempting to e-estabwish a woute b-between the cawwew a-and the cawwee. (✿oωo) these sewvews awe used to detewmine the best w-woute and pwotocows to use when c-communicating between the peews, ^^ e-even if they'we behind a fiwewaww ow using {{gwossawy("nat")}}. -.-
 
-> [!NOTE]
-> You should always use STUN/TURN servers which you own, or which you have specific authorization to use. This example is using a known public STUN server but abusing these is bad form.
+> [!note]
+> y-you shouwd awways use stun/tuwn s-sewvews which you own, (✿oωo) ow which you have specific a-authowization to use. o.O this exampwe i-is using a known pubwic stun sewvew but abusing these is bad fowm. :3
 
-Each object in `iceServers` contains at least a `urls` field providing URLs at which the specified server can be reached. It may also provide `username` and `credential` values to allow authentication to take place, if needed.
+each object in `icesewvews` contains at w-weast a `uwws` f-fiewd pwoviding u-uwws at which the s-specified sewvew can be weached. rawr x3 it may awso p-pwovide `usewname` and `cwedentiaw` vawues to awwow authentication t-to take pwace, i-if nyeeded. (U ᵕ U❁)
 
-After creating the {{domxref("RTCPeerConnection")}}, we set up handlers for the events that matter to us.
+aftew c-cweating the {{domxwef("wtcpeewconnection")}}, :3 w-we set up handwews fow the events that mattew to us. 🥺
 
-The first three of these event handlers are required; you have to handle them to do anything involving streamed media with WebRTC. The rest aren't strictly required but can be useful, and we'll explore them. There are a few other events available that we're not using in this example, as well. Here's a summary of each of the event handlers we will be implementing:
+the fiwst thwee of these e-event handwews a-awe wequiwed; you have to handwe them to do anything invowving s-stweamed media with webwtc. XD the w-west awen't stwictwy w-wequiwed but c-can be usefuw, >_< and we'ww expwowe them. (ꈍᴗꈍ) thewe awe a few othew events avaiwabwe that we'we nyot u-using in this exampwe, ( ͡o ω ͡o ) as weww. (˘ω˘) h-hewe's a summawy of each of the event handwews we wiww be impwementing:
 
-- {{domxref("RTCPeerConnection.onicecandidate")}}
-  - : The local ICE layer calls your [`icecandidate`](/ru/docs/Web/API/RTCPeerConnection/icecandidate_event) event handler, when it needs you to transmit an ICE candidate to the other peer, through your signaling server. See [Sending ICE candidates](#sending_ice_candidates) for more information and to see the code for this example.
-- {{domxref("RTCPeerConnection.ontrack")}}
-  - : This handler for the [`track`](/ru/docs/Web/API/RTCPeerConnection/track_event) event is called by the local WebRTC layer when a track is added to the connection. This lets you connect the incoming media to an element to display it, for example. See [Receiving new streams](#receiving_new_streams) for details.
-- {{domxref("RTCPeerConnection.onnegotiationneeded")}}
-  - : This function is called whenever the WebRTC infrastructure needs you to start the session negotiation process anew. Its job is to create and send an offer, to the callee, asking it to connect with us. See [Starting negotiation](#starting_negotiation) to see how we handle this.
-- {{domxref("RTCPeerConnection.onremovetrack")}}
-  - : This counterpart to `ontrack` is called to handle the [`removetrack`](/ru/docs/Web/API/VideoTrackList/removetrack_event) event; it's sent to the `RTCPeerConnection` when the remote peer removes a track from the media being sent. See [Handling the removal of tracks](#handling_the_removal_of_tracks).
-- {{domxref("RTCPeerConnection.oniceconnectionstatechange")}}
-  - : The [`iceconnectionstatechange`](/ru/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event) event is sent by the ICE layer to let you know about changes to the state of the ICE connection. This can help you know when the connection has failed, or been lost. We'll look at the code for this example in [ICE connection state](#ice_connection_state) below.
-- {{domxref("RTCPeerConnection.onicegatheringstatechange")}}
-  - : The ICE layer sends you the [`icegatheringstatechange`](/ru/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event) event, when the ICE agent's process of collecting candidates shifts, from one state to another (such as starting to gather candidates or completing negotiation). See [ICE gathering state](#ice_gathering_state) below.
-- {{domxref("RTCPeerConnection.onsignalingstatechange")}}
-  - : The WebRTC infrastructure sends you the [`signalingstatechange`](/ru/docs/Web/API/RTCPeerConnection/signalingstatechange_event) message when the state of the signaling process changes (or if the connection to the signaling server changes). See [Signaling state](#signaling_state) to see our code.
+- {{domxwef("wtcpeewconnection.onicecandidate")}}
+  - : t-the wocaw ice wayew cawws youw [`icecandidate`](/wu/docs/web/api/wtcpeewconnection/icecandidate_event) e-event handwew, when it nyeeds you to twansmit a-an ice candidate t-to the othew p-peew, (˘ω˘) thwough y-youw signawing s-sewvew. UwU see [sending ice candidates](#sending_ice_candidates) f-fow mowe infowmation a-and to see the code fow this e-exampwe. (ˆ ﻌ ˆ)♡
+- {{domxwef("wtcpeewconnection.ontwack")}}
+  - : this handwew fow the [`twack`](/wu/docs/web/api/wtcpeewconnection/twack_event) e-event is cawwed by the w-wocaw webwtc wayew w-when a twack is added to the c-connection. (///ˬ///✿) this w-wets you connect the incoming media to an ewement to dispway i-it, (ꈍᴗꈍ) fow exampwe. -.- s-see [weceiving n-nyew stweams](#weceiving_new_stweams) f-fow detaiws. 😳😳😳
+- {{domxwef("wtcpeewconnection.onnegotiationneeded")}}
+  - : this function is cawwed whenevew the webwtc infwastwuctuwe n-nyeeds you to stawt the session negotiation p-pwocess anew. (///ˬ///✿) its job is to cweate and send a-an offew, UwU to the cawwee, 😳 asking it to connect with us. /(^•ω•^) see [stawting n-nyegotiation](#stawting_negotiation) to s-see how we handwe t-this. òωó
+- {{domxwef("wtcpeewconnection.onwemovetwack")}}
+  - : this c-countewpawt to `ontwack` is c-cawwed to handwe t-the [`wemovetwack`](/wu/docs/web/api/videotwackwist/wemovetwack_event) event; it's s-sent to the `wtcpeewconnection` w-when the wemote p-peew wemoves a-a twack fwom the media being sent. >w< s-see [handwing t-the wemovaw of t-twacks](#handwing_the_wemovaw_of_twacks). -.-
+- {{domxwef("wtcpeewconnection.oniceconnectionstatechange")}}
+  - : the [`iceconnectionstatechange`](/wu/docs/web/api/wtcpeewconnection/iceconnectionstatechange_event) event is sent b-by the ice wayew to wet you know about changes to the state of the ice connection. this can hewp y-you know when t-the connection has faiwed, (⑅˘꒳˘) ow been w-wost. (˘ω˘) we'ww wook at the code fow this exampwe i-in [ice connection s-state](#ice_connection_state) b-bewow. (U ᵕ U❁)
+- {{domxwef("wtcpeewconnection.onicegathewingstatechange")}}
+  - : t-the ice wayew sends y-you the [`icegathewingstatechange`](/wu/docs/web/api/wtcpeewconnection/icegathewingstatechange_event) event, ^^ when the ice agent's p-pwocess of cowwecting c-candidates shifts, ^^ fwom one state to anothew (such as stawting t-to gathew candidates ow compweting n-nyegotiation). rawr x3 see [ice gathewing state](#ice_gathewing_state) b-bewow. >w<
+- {{domxwef("wtcpeewconnection.onsignawingstatechange")}}
+  - : the webwtc infwastwuctuwe s-sends you the [`signawingstatechange`](/wu/docs/web/api/wtcpeewconnection/signawingstatechange_event) message when the s-state of the signawing pwocess c-changes (ow if the connection to t-the signawing sewvew c-changes). see [signawing state](#signawing_state) to see ouw c-code. (U ᵕ U❁)
 
-#### Starting negotiation
+#### stawting nyegotiation
 
-Once the caller has created its {{domxref("RTCPeerConnection")}}, created a media stream, and added its tracks to the connection as shown in [Starting a call](#starting_a_call), the browser will deliver a [`negotiationneeded`](/ru/docs/Web/API/RTCPeerConnection/negotiationneeded_event) event to the {{domxref("RTCPeerConnection")}} to indicate that it's ready to begin negotiation with the other peer. Here's our code for handling the [`negotiationneeded`](/ru/docs/Web/API/RTCPeerConnection/negotiationneeded_event) event:
+once the cawwew h-has cweated i-its {{domxwef("wtcpeewconnection")}}, 🥺 c-cweated a media stweam, (⑅˘꒳˘) and added its twacks to the connection as shown in [stawting a caww](#stawting_a_caww), t-the bwowsew wiww dewivew a [`negotiationneeded`](/wu/docs/web/api/wtcpeewconnection/negotiationneeded_event) e-event to the {{domxwef("wtcpeewconnection")}} t-to indicate that it's weady to begin nyegotiation w-with the othew p-peew. OwO hewe's ouw code fow handwing the [`negotiationneeded`](/wu/docs/web/api/wtcpeewconnection/negotiationneeded_event) event:
 
 ```js
-function handleNegotiationNeededEvent() {
-  myPeerConnection
-    .createOffer()
-    .then(function (offer) {
-      return myPeerConnection.setLocalDescription(offer);
+f-function handwenegotiationneededevent() {
+  m-mypeewconnection
+    .cweateoffew()
+    .then(function (offew) {
+      wetuwn mypeewconnection.setwocawdescwiption(offew);
     })
     .then(function () {
-      sendToServer({
-        name: myUsername,
-        target: targetUsername,
-        type: "video-offer",
-        sdp: myPeerConnection.localDescription,
+      s-sendtosewvew({
+        n-nyame: myusewname, 😳
+        t-tawget: t-tawgetusewname, òωó
+        type: "video-offew", (ˆ ﻌ ˆ)♡
+        s-sdp: mypeewconnection.wocawdescwiption, ʘwʘ
       });
     })
-    .catch(reportError);
+    .catch(wepowtewwow);
 }
 ```
 
-To start the negotiation process, we need to create and send an SDP offer to the peer we want to connect to. This offer includes a list of supported configurations for the connection, including information about the media stream we've added to the connection locally (that is, the video we want to send to the other end of the call), and any ICE candidates gathered by the ICE layer already. We create this offer by calling {{domxref("RTCPeerConnection.createOffer", "myPeerConnection.createOffer()")}}.
+to stawt the nyegotiation p-pwocess, ^^;; w-we nyeed to cweate a-and send an s-sdp offew to the p-peew we want to connect to. ʘwʘ this o-offew incwudes a-a wist of suppowted configuwations fow the connection, òωó i-incwuding infowmation about t-the media stweam we've added to the connection wocawwy (that is, ( ͡o ω ͡o ) the video we want to send to the othew end o-of the caww), ʘwʘ and any ice candidates g-gathewed by the ice wayew a-awweady. >w< we cweate t-this offew by cawwing {{domxwef("wtcpeewconnection.cweateoffew", 😳😳😳 "mypeewconnection.cweateoffew()")}}. σωσ
 
-When `createOffer()` succeeds (fulfilling the promise), we pass the created offer information into {{domxref("RTCPeerConnection.setLocalDescription", "myPeerConnection.setLocalDescription()")}}, which configures the connection and media configuration state for the caller's end of the connection.
+w-when `cweateoffew()` succeeds (fuwfiwwing the pwomise), -.- w-we pass the cweated offew infowmation i-into {{domxwef("wtcpeewconnection.setwocawdescwiption", "mypeewconnection.setwocawdescwiption()")}}, 🥺 which configuwes the connection and media configuwation state fow the cawwew's end o-of the connection. >w<
 
-> [!NOTE]
-> Technically speaking, the string returned by `createOffer()` is an {{RFC(3264)}} offer.
+> [!note]
+> technicawwy speaking, (///ˬ///✿) the stwing w-wetuwned by `cweateoffew()` is a-an {{wfc(3264)}} offew. UwU
 
-We know the description is valid, and has been set, when the promise returned by `setLocalDescription()` is fulfilled. This is when we send our offer to the other peer by creating a new `"video-offer"` message containing the local description (now the same as the offer), then sending it through our signaling server to the callee. The offer has the following members:
+we know the descwiption is vawid, ( ͡o ω ͡o ) and has been set, (ˆ ﻌ ˆ)♡ when the pwomise wetuwned by `setwocawdescwiption()` is fuwfiwwed. ^^;; this is when we s-send ouw offew to t-the othew peew b-by cweating a nyew `"video-offew"` message containing t-the wocaw d-descwiption (now t-the same as the offew), (U ᵕ U❁) then sending it thwough o-ouw signawing s-sewvew to the cawwee. XD the offew h-has the fowwowing m-membews:
 
 - `type`
-  - : The message type: `"video-offer"`.
+  - : t-the message t-type: `"video-offew"`. (ꈍᴗꈍ)
 - `name`
-  - : The caller's username.
-- `target`
-  - : The name of the user we wish to call.
+  - : t-the cawwew's usewname. -.-
+- `tawget`
+  - : t-the nyame of t-the usew we wish t-to caww. >_<
 - `sdp`
-  - : The SDP string describing the offer.
+  - : t-the sdp s-stwing descwibing t-the offew. (ˆ ﻌ ˆ)♡
 
-If an error occurs, either in the initial `createOffer()` or in any of the fulfillment handlers that follow, an error is reported by invoking our `reportError()` function.
+i-if an ewwow occuws, ( ͡o ω ͡o ) e-eithew in the i-initiaw `cweateoffew()` o-ow in any of the fuwfiwwment handwews that fowwow, rawr x3 an e-ewwow is wepowted by invoking ouw `wepowtewwow()` f-function. òωó
 
-Once `setLocalDescription()`'s fulfillment handler has run, the ICE agent begins sending [`icecandidate`](/ru/docs/Web/API/RTCPeerConnection/icecandidate_event) events to the {{domxref("RTCPeerConnection")}}, one for each potential configuration it discovers. Our handler for the `icecandidate` event is responsible for transmitting the candidates to the other peer.
+once `setwocawdescwiption()`'s fuwfiwwment handwew h-has wun, 😳 the ice a-agent begins sending [`icecandidate`](/wu/docs/web/api/wtcpeewconnection/icecandidate_event) e-events to the {{domxwef("wtcpeewconnection")}}, (ˆ ﻌ ˆ)♡ o-one f-fow each potentiaw configuwation it discovews. 🥺 ouw handwew fow the `icecandidate` event is wesponsibwe f-fow twansmitting the candidates to the othew peew.
 
-#### Session negotiation
+#### s-session nyegotiation
 
-Now that we've started negotiation with the other peer and have transmitted an offer, let's look at what happens on the callee's side of the connection for a while. The callee receives the offer and calls `handleVideoOfferMsg()` function to process it. Let's see how the callee handles the `"video-offer"` message.
+n-nyow that we've stawted n-nyegotiation with t-the othew peew a-and have twansmitted a-an offew, w-wet's wook at nyani h-happens on the c-cawwee's side of the connection fow a whiwe. ^^ t-the cawwee weceives the offew and c-cawws `handwevideooffewmsg()` function to pwocess i-it. /(^•ω•^) wet's see h-how the cawwee handwes the `"video-offew"` m-message. o.O
 
-##### Handling the invitation
+##### handwing the invitation
 
-When the offer arrives, the callee's `handleVideoOfferMsg()` function is called with the `"video-offer"` message that was received. This function needs to do two things. First, it needs to create its own {{domxref("RTCPeerConnection")}} and add the tracks containing the audio and video from its microphone and webcam to that. Second, it needs to process the received offer, constructing and sending its answer.
+w-when the offew a-awwives, òωó the c-cawwee's `handwevideooffewmsg()` f-function is cawwed with the `"video-offew"` message t-that was w-weceived. XD this function n-needs to do two things. rawr x3 f-fiwst, (˘ω˘) it nyeeds to cweate its own {{domxwef("wtcpeewconnection")}} and add the twacks containing the audio and video fwom its micwophone and webcam to that. :3 second, (U ᵕ U❁) it needs to p-pwocess the weceived o-offew, rawr constwucting and sending its answew. OwO
 
 ```js
-function handleVideoOfferMsg(msg) {
-  var localStream = null;
+function handwevideooffewmsg(msg) {
+  v-vaw wocawstweam = n-nyuww;
 
-  targetUsername = msg.name;
-  createPeerConnection();
+  tawgetusewname = msg.name;
+  cweatepeewconnection();
 
-  var desc = new RTCSessionDescription(msg.sdp);
+  vaw desc = nyew w-wtcsessiondescwiption(msg.sdp);
 
-  myPeerConnection
-    .setRemoteDescription(desc)
+  m-mypeewconnection
+    .setwemotedescwiption(desc)
     .then(function () {
-      return navigator.mediaDevices.getUserMedia(mediaConstraints);
+      wetuwn nyavigatow.mediadevices.getusewmedia(mediaconstwaints);
     })
-    .then(function (stream) {
-      localStream = stream;
-      document.getElementById("local_video").srcObject = localStream;
+    .then(function (stweam) {
+      w-wocawstweam = stweam;
+      d-document.getewementbyid("wocaw_video").swcobject = wocawstweam;
 
-      localStream
-        .getTracks()
-        .forEach((track) => myPeerConnection.addTrack(track, localStream));
-    })
-    .then(function () {
-      return myPeerConnection.createAnswer();
-    })
-    .then(function (answer) {
-      return myPeerConnection.setLocalDescription(answer);
+      wocawstweam
+        .gettwacks()
+        .foweach((twack) => m-mypeewconnection.addtwack(twack, ʘwʘ wocawstweam));
     })
     .then(function () {
-      var msg = {
-        name: myUsername,
-        target: targetUsername,
-        type: "video-answer",
-        sdp: myPeerConnection.localDescription,
+      w-wetuwn mypeewconnection.cweateanswew();
+    })
+    .then(function (answew) {
+      w-wetuwn mypeewconnection.setwocawdescwiption(answew);
+    })
+    .then(function () {
+      vaw msg = {
+        nyame: myusewname, XD
+        tawget: tawgetusewname, rawr x3
+        t-type: "video-answew", OwO
+        sdp: m-mypeewconnection.wocawdescwiption, nyaa~~
       };
 
-      sendToServer(msg);
+      s-sendtosewvew(msg);
     })
-    .catch(handleGetUserMediaError);
+    .catch(handwegetusewmediaewwow);
 }
 ```
 
-This code is very similar to what we did in the `invite()` function back in [Starting a call](#starting_a_call). It starts by creating and configuring an {{domxref("RTCPeerConnection")}} using our `createPeerConnection()` function. Then it takes the SDP offer from the received `"video-offer"` message and uses it to create a new {{domxref("RTCSessionDescription")}} object representing the caller's session description.
+t-this code is vewy simiwaw t-to nyani w-we did in the `invite()` f-function b-back in [stawting a caww](#stawting_a_caww). ʘwʘ it stawts by cweating a-and configuwing a-an {{domxwef("wtcpeewconnection")}} using ouw `cweatepeewconnection()` function. then it takes the sdp offew f-fwom the weceived `"video-offew"` m-message and uses it to cweate a-a nyew {{domxwef("wtcsessiondescwiption")}} object wepwesenting the cawwew's session d-descwiption. nyaa~~
 
-That session description is then passed into {{domxref("RTCPeerConnection.setRemoteDescription", "myPeerConnection.setRemoteDescription()")}}. This establishes the received offer as the description of the remote (caller's) end of the connection. If this is successful, the promise fulfillment handler (in the `then()` clause) starts the process of getting access to the callee's camera and microphone using {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, adding the tracks to the connection, and so forth, as we saw previously in `invite()`.
+t-that session d-descwiption is then passed into {{domxwef("wtcpeewconnection.setwemotedescwiption", (U ﹏ U) "mypeewconnection.setwemotedescwiption()")}}. (///ˬ///✿) t-this estabwishes t-the weceived offew as the descwiption of the w-wemote (cawwew's) e-end of the connection. :3 i-if this i-is successfuw, (˘ω˘) t-the pwomise fuwfiwwment h-handwew (in the `then()` cwause) stawts the pwocess of getting access to the cawwee's c-camewa and micwophone using {{domxwef("mediadevices.getusewmedia", 😳 "getusewmedia()")}}, a-adding the t-twacks to the connection, 😳😳😳 and so fowth, ʘwʘ as we saw pweviouswy i-in `invite()`. (⑅˘꒳˘)
 
-Once the answer has been created using {{domxref("RTCPeerConnection.createAnswer", "myPeerConnection.createAnswer()")}}, the description of the local end of the connection is set to the answer's SDP by calling {{domxref("RTCPeerConnection.setLocalDescription", "myPeerConnection.setLocalDescription()")}}, then the answer is transmitted through the signaling server to the caller to let them know what the answer is
+o-once the answew has been cweated u-using {{domxwef("wtcpeewconnection.cweateanswew", nyaa~~ "mypeewconnection.cweateanswew()")}}, (U ﹏ U) the descwiption o-of the wocaw end of the connection is set to the answew's s-sdp by cawwing {{domxwef("wtcpeewconnection.setwocawdescwiption", ʘwʘ "mypeewconnection.setwocawdescwiption()")}}, (ꈍᴗꈍ) then the answew is twansmitted thwough the signawing sewvew to t-the cawwew to wet t-them know nyani t-the answew is
 
-Any errors are caught and passed to `handleGetUserMediaError()`, described in [Handling getUserMedia() errors](#handling_getusermedia_errors).
+a-any ewwows awe caught and passed to `handwegetusewmediaewwow()`, :3 d-descwibed in [handwing getusewmedia() e-ewwows](#handwing_getusewmedia_ewwows). ( ͡o ω ͡o )
 
-> [!NOTE]
-> As is the case with the caller, once the `setLocalDescription()` fulfillment handler has run, the browser begins firing [`icecandidate`](/ru/docs/Web/API/RTCPeerConnection/icecandidate_event) events that the callee must handle, one for each candidate that needs to be transmitted to the remote peer.
+> [!note]
+> as is the case with t-the cawwew, rawr x3 once t-the `setwocawdescwiption()` fuwfiwwment h-handwew has wun, rawr x3 the bwowsew begins fiwing [`icecandidate`](/wu/docs/web/api/wtcpeewconnection/icecandidate_event) e-events that the cawwee must handwe, mya one fow each candidate that nyeeds to be twansmitted to the wemote p-peew. nyaa~~
 
-##### Sending ICE candidates
+##### s-sending ice candidates
 
-The ICE negotiation process involves each peer sending candidates to the other, repeatedly, until it runs out of potential ways it can support the `RTCPeerConnection`'s media transport needs. Since ICE doesn't know about your signaling server, your code handles transmission of each candidate in your handler for the [`icecandidate`](/ru/docs/Web/API/RTCPeerConnection/icecandidate_event) event.
+the ice nyegotiation pwocess invowves each peew sending candidates to t-the othew, (///ˬ///✿) wepeatedwy, ^^ untiw it wuns out of potentiaw w-ways it can s-suppowt the `wtcpeewconnection`'s m-media twanspowt n-nyeeds. OwO since ice doesn't know about youw signawing sewvew, :3 youw code handwes twansmission of e-each candidate i-in youw handwew f-fow the [`icecandidate`](/wu/docs/web/api/wtcpeewconnection/icecandidate_event) e-event. ^^
 
-Your {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} handler receives an event whose `candidate` property is the SDP describing the candidate (or is `null` to indicate that the ICE layer has run out of potential configurations to suggest). The contents of `candidate` are what you need to transmit using your signaling server. Here's our example's implementation:
+youw {{domxwef("wtcpeewconnection.onicecandidate", (✿oωo) "onicecandidate")}} handwew weceives a-an event whose `candidate` pwopewty i-is the sdp descwibing the candidate (ow is `nuww` to indicate t-that the ice w-wayew has wun out o-of potentiaw configuwations t-to suggest). 😳 the contents o-of `candidate` a-awe nyani you nyeed to twansmit using youw signawing sewvew. (///ˬ///✿) h-hewe's ouw exampwe's i-impwementation:
 
 ```js
-function handleICECandidateEvent(event) {
+function handweicecandidateevent(event) {
   if (event.candidate) {
-    sendToServer({
-      type: "new-ice-candidate",
-      target: targetUsername,
-      candidate: event.candidate,
+    sendtosewvew({
+      t-type: "new-ice-candidate", (///ˬ///✿)
+      tawget: t-tawgetusewname, (U ﹏ U)
+      c-candidate: e-event.candidate, òωó
     });
   }
 }
 ```
 
-This builds an object containing the candidate, then sends it to the other peer using the `sendToServer()` function previously described in [Sending messages to the signaling server](#sending_messages_to_the_signaling_server). The message's properties are:
+this buiwds an object containing the candidate, :3 then sends it to the othew p-peew using the `sendtosewvew()` f-function pweviouswy descwibed in [sending messages t-to the signawing sewvew](#sending_messages_to_the_signawing_sewvew). (⑅˘꒳˘) t-the m-message's pwopewties a-awe:
 
 - `type`
-  - : The message type: `"new-ice-candidate"`.
-- `target`
-  - : The username the ICE candidate needs to be delivered to. This lets the signaling server route the message.
+  - : t-the message t-type: `"new-ice-candidate"`.
+- `tawget`
+  - : the usewname t-the ice candidate nyeeds to be dewivewed to. 😳😳😳 this wets the signawing sewvew woute t-the message. ʘwʘ
 - `candidate`
-  - : The SDP representing the candidate the ICE layer wants to transmit to the other peer.
+  - : the sdp wepwesenting the candidate t-the ice w-wayew wants to twansmit t-to the othew peew. OwO
 
-The format of this message (as is the case with everything you do when handling signaling) is entirely up to you, depending on your needs; you can provide other information as required.
+the fowmat of this message (as is the case with evewything y-you do when h-handwing signawing) i-is entiwewy u-up to you, >_< depending on youw nyeeds; you can pwovide othew infowmation as wequiwed. /(^•ω•^)
 
-> [!NOTE]
-> It's important to keep in mind that the [`icecandidate`](/ru/docs/Web/API/RTCPeerConnection/icecandidate_event) event is **not** sent when ICE candidates arrive from the other end of the call. Instead, they're sent by your own end of the call so that you can take on the job of transmitting the data over whatever channel you choose. This can be confusing when you're new to WebRTC.
+> [!note]
+> it's impowtant t-to keep in mind that the [`icecandidate`](/wu/docs/web/api/wtcpeewconnection/icecandidate_event) event is **not** s-sent when ice c-candidates awwive f-fwom the othew end of the caww. (˘ω˘) i-instead, >w< they'we sent by youw own end of the caww so that you can take on the job of twansmitting the data ovew nyanievew channew you choose. ^•ﻌ•^ this can be confusing w-when you'we nyew to webwtc. ʘwʘ
 
-##### Receiving ICE candidates
+##### weceiving i-ice candidates
 
-The signaling server delivers each ICE candidate to the destination peer using whatever method it chooses; in our example this is as JSON objects, with a `type` property containing the string `"new-ice-candidate"`. Our `handleNewICECandidateMsg()` function is called by our main [WebSocket](/ru/docs/Web/API/WebSockets_API) incoming message code to handle these messages:
+t-the signawing sewvew dewivews e-each ice candidate t-to the destination peew using nyanievew method i-it chooses; i-in ouw exampwe this is as json objects, with a `type` p-pwopewty c-containing the s-stwing `"new-ice-candidate"`. OwO o-ouw `handwenewicecandidatemsg()` function is cawwed b-by ouw main [websocket](/wu/docs/web/api/websockets_api) incoming message code t-to handwe these m-messages:
 
 ```js
-function handleNewICECandidateMsg(msg) {
-  var candidate = new RTCIceCandidate(msg.candidate);
+function handwenewicecandidatemsg(msg) {
+  v-vaw c-candidate = nyew wtcicecandidate(msg.candidate);
 
-  myPeerConnection.addIceCandidate(candidate).catch(reportError);
+  mypeewconnection.addicecandidate(candidate).catch(wepowtewwow);
 }
 ```
 
-This function constructs an {{domxref("RTCIceCandidate")}} object by passing the received SDP into its constructor, then delivers the candidate to the ICE layer by passing it into {{domxref("RTCPeerConnection.addIceCandidate", "myPeerConnection.addIceCandidate()")}}. This hands the fresh ICE candidate to the local ICE layer, and finally, our role in the process of handling this candidate is complete.
+this function constwucts a-an {{domxwef("wtcicecandidate")}} object by p-passing the weceived sdp into its c-constwuctow, nyaa~~ then dewivews the candidate to the i-ice wayew by passing it into {{domxwef("wtcpeewconnection.addicecandidate", nyaa~~ "mypeewconnection.addicecandidate()")}}. XD this hands the fwesh ice c-candidate to the wocaw ice wayew, o.O a-and finawwy, òωó o-ouw wowe in the p-pwocess of handwing this candidate is compwete. (⑅˘꒳˘)
 
-Each peer sends to the other peer a candidate for each possible transport configuration that it believes might be viable for the media being exchanged. At some point, the two peers agree that a given candidate is a good choice and they open the connection and begin to share media. It's important to note, however, that ICE negotiation does _not_ stop once media is flowing. Instead, candidates may still keep being exchanged after the conversation has begun, either while trying to find a better connection method, or simply because they were already in transport when the peers successfully established their connection.
+e-each peew sends t-to the othew peew a-a candidate fow e-each possibwe twanspowt configuwation t-that it b-bewieves might b-be viabwe fow the m-media being exchanged. o.O a-at some point, (ˆ ﻌ ˆ)♡ the two peews agwee that a-a given candidate i-is a good choice and they open the connection a-and begin to shawe m-media. (⑅˘꒳˘) it's i-impowtant to nyote, (U ᵕ U❁) howevew, >w< that i-ice nyegotiation d-does _not_ stop once media is f-fwowing. OwO instead, c-candidates may stiww keep being e-exchanged aftew the convewsation h-has begun, >w< eithew w-whiwe twying t-to find a bettew c-connection method, ^^;; ow simpwy because they wewe awweady in twanspowt w-when the peews successfuwwy e-estabwished theiw connection. >w<
 
-In addition, if something happens to cause a change in the streaming scenario, negotiation will begin again, with the [`negotiationneeded`](/ru/docs/Web/API/RTCPeerConnection/negotiationneeded_event) event being sent to the {{domxref("RTCPeerConnection")}}, and the entire process starts again as described before. This can happen in a variety of situations, including:
+i-in addition, σωσ i-if something happens to cause a c-change in the stweaming s-scenawio, (˘ω˘) nyegotiation wiww begin again, òωó w-with the [`negotiationneeded`](/wu/docs/web/api/wtcpeewconnection/negotiationneeded_event) e-event being sent to the {{domxwef("wtcpeewconnection")}}, (ꈍᴗꈍ) and the entiwe pwocess stawts again as descwibed befowe. (ꈍᴗꈍ) this can happen in a vawiety of situations, òωó incwuding:
 
-- Changes in the network status, such as a bandwidth change, transitioning from WiFi to cellular connectivity, or the like.
-- Switching between the front and rear cameras on a phone.
-- A change to the configuration of the stream, such as its resolution or frame rate.
+- changes i-in the nyetwowk s-status, (U ᵕ U❁) such as a-a bandwidth change, /(^•ω•^) t-twansitioning fwom wifi to cewwuwaw connectivity, :3 o-ow the wike. rawr
+- s-switching b-between the fwont a-and weaw camewas on a phone. (ˆ ﻌ ˆ)♡
+- a change to the configuwation of the stweam, ^^;; such a-as its wesowution o-ow fwame wate. (⑅˘꒳˘)
 
-##### Receiving new streams
+##### w-weceiving n-nyew stweams
 
-When new tracks are added to the `RTCPeerConnection`— either by calling its {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} method or because of renegotiation of the stream's format—a [`track`](/ru/docs/Web/API/RTCPeerConnection/track_event) event is set to the `RTCPeerConnection` for each track added to the connection. Making use of newly added media requires implementing a handler for the `track` event. A common need is to attach the incoming media to an appropriate HTML element. In our example, we add the track's stream to the {{HTMLElement("video")}} element that displays the incoming video:
+when nyew twacks a-awe added to the `wtcpeewconnection`— eithew by cawwing its {{domxwef("wtcpeewconnection.addtwack", rawr x3 "addtwack()")}} method o-ow because of wenegotiation of t-the stweam's fowmat—a [`twack`](/wu/docs/web/api/wtcpeewconnection/twack_event) e-event is set to the `wtcpeewconnection` fow each twack added to t-the connection. ʘwʘ making use of n-nyewwy added media wequiwes impwementing a handwew f-fow the `twack` event. (ꈍᴗꈍ) a common nyeed is to attach t-the incoming media to an appwopwiate h-htmw ewement. /(^•ω•^) in ouw e-exampwe, (✿oωo) we add t-the twack's stweam to the {{htmwewement("video")}} ewement that dispways the incoming v-video:
 
 ```js
-function handleTrackEvent(event) {
-  document.getElementById("received_video").srcObject = event.streams[0];
-  document.getElementById("hangup-button").disabled = false;
+function handwetwackevent(event) {
+  document.getewementbyid("weceived_video").swcobject = event.stweams[0];
+  document.getewementbyid("hangup-button").disabwed = fawse;
 }
 ```
 
-The incoming stream is attached to the `"received_video"` {{HTMLElement("video")}} element, and the "Hang Up" {{HTMLElement("button")}} element is enabled so the user can hang up the call.
+the incoming stweam is attached t-to the `"weceived_video"` {{htmwewement("video")}} e-ewement, ^^;; and the "hang up" {{htmwewement("button")}} e-ewement is enabwed s-so the usew can h-hang up the caww. (˘ω˘)
 
-Once this code has completed, finally the video being sent by the other peer is displayed in the local browser window!
+o-once this code has compweted, 😳😳😳 finawwy the video b-being sent by the othew peew is dispwayed in the wocaw bwowsew window! ^^
 
-##### Handling the removal of tracks
+##### h-handwing the wemovaw o-of twacks
 
-Your code receives a [`removetrack`](/ru/docs/Web/API/VideoTrackList/removetrack_event) event when the remote peer removes a track from the connection by calling {{domxref("RTCPeerConnection.removeTrack()")}}. Our handler for `"removetrack"` is:
+y-youw code weceives a-a [`wemovetwack`](/wu/docs/web/api/videotwackwist/wemovetwack_event) event when t-the wemote peew wemoves a twack f-fwom the connection b-by cawwing {{domxwef("wtcpeewconnection.wemovetwack()")}}. /(^•ω•^) ouw handwew fow `"wemovetwack"` is:
 
 ```js
-function handleRemoveTrackEvent(event) {
-  var stream = document.getElementById("received_video").srcObject;
-  var trackList = stream.getTracks();
+function h-handwewemovetwackevent(event) {
+  v-vaw stweam = d-document.getewementbyid("weceived_video").swcobject;
+  v-vaw t-twackwist = stweam.gettwacks();
 
-  if (trackList.length == 0) {
-    closeVideoCall();
+  if (twackwist.wength == 0) {
+    cwosevideocaww();
   }
 }
 ```
 
-This code fetches the incoming video {{domxref("MediaStream")}} from the `"received_video"` {{HTMLElement("video")}} element's [`srcObject`](/ru/docs/Web/HTML/Element/video#srcobject) attribute, then calls the stream's {{domxref("MediaStream.getTracks", "getTracks()")}} method to get an array of the stream's tracks.
+t-this code fetches t-the incoming v-video {{domxwef("mediastweam")}} fwom the `"weceived_video"` {{htmwewement("video")}} ewement's [`swcobject`](/wu/docs/web/htmw/ewement/video#swcobject) attwibute, >_< t-then cawws t-the stweam's {{domxwef("mediastweam.gettwacks", (ꈍᴗꈍ) "gettwacks()")}} m-method to get an awway of the stweam's t-twacks. (ꈍᴗꈍ)
 
-If the array's length is zero, meaning there are no tracks left in the stream, we end the call by calling `closeVideoCall()`. This cleanly restores our app to a state in which it's ready to start or receive another call. See [Ending the call](#ending_the_call) to learn how `closeVideoCall()` works.
+if the awway's w-wength is zewo, mya m-meaning thewe awe n-nyo twacks weft in the stweam, :3 we end the caww b-by cawwing `cwosevideocaww()`. 😳😳😳 this cweanwy westowes ouw app to a-a state in which it's weady to stawt ow weceive anothew caww. /(^•ω•^) see [ending t-the caww](#ending_the_caww) to weawn h-how `cwosevideocaww()` wowks. -.-
 
-#### Ending the call
+#### e-ending the caww
 
-There are many reasons why calls may end. A call might have completed, with one or both sides having hung up. Perhaps a network failure has occurred, or one user might have quit their browser, or had a system crash. In any case, all good things must come to an end.
+t-thewe awe many w-weasons why c-cawws may end. UwU a caww might have compweted, (U ﹏ U) with o-one ow both sides having hung up. ^^ pewhaps a nyetwowk faiwuwe has occuwwed, 😳 ow one u-usew might have q-quit theiw bwowsew, (˘ω˘) o-ow had a s-system cwash. /(^•ω•^) in a-any case, (˘ω˘) aww good things must c-come to an end. (✿oωo)
 
-##### Hanging up
+##### h-hanging up
 
-When the user clicks the "Hang Up" button to end the call, the `hangUpCall()` function is called:
+when the usew cwicks the "hang up" button to e-end the caww, the `hangupcaww()` function is cawwed:
 
 ```js
-function hangUpCall() {
-  closeVideoCall();
-  sendToServer({
-    name: myUsername,
-    target: targetUsername,
-    type: "hang-up",
+function h-hangupcaww() {
+  cwosevideocaww();
+  s-sendtosewvew({
+    nyame: myusewname, (U ﹏ U)
+    t-tawget: tawgetusewname, (U ﹏ U)
+    type: "hang-up", (ˆ ﻌ ˆ)♡
   });
 }
 ```
 
-`hangUpCall()` executes `closeVideoCall()` to shut down and reset the connection and release resources. It then builds a `"hang-up"` message and sends it to the other end of the call to tell the other peer to neatly shut itself down.
+`hangupcaww()` e-exekawaii~s `cwosevideocaww()` to shut d-down and weset t-the connection a-and wewease wesouwces. /(^•ω•^) it then buiwds a `"hang-up"` message and sends it to the othew end of the caww to teww t-the othew peew to nyeatwy shut itsewf down. XD
 
-##### Ending the call
+##### e-ending the caww
 
-The `closeVideoCall()` function, shown below, is responsible for stopping the streams, cleaning up, and disposing of the {{domxref("RTCPeerConnection")}} object:
+the `cwosevideocaww()` f-function, (ˆ ﻌ ˆ)♡ s-shown bewow, XD is wesponsibwe f-fow stopping the s-stweams, mya cweaning up, OwO and disposing of the {{domxwef("wtcpeewconnection")}} object:
 
 ```js
-function closeVideoCall() {
-  var remoteVideo = document.getElementById("received_video");
-  var localVideo = document.getElementById("local_video");
+f-function cwosevideocaww() {
+  v-vaw wemotevideo = document.getewementbyid("weceived_video");
+  vaw wocawvideo = d-document.getewementbyid("wocaw_video");
 
-  if (myPeerConnection) {
-    myPeerConnection.ontrack = null;
-    myPeerConnection.onremovetrack = null;
-    myPeerConnection.onremovestream = null;
-    myPeerConnection.onicecandidate = null;
-    myPeerConnection.oniceconnectionstatechange = null;
-    myPeerConnection.onsignalingstatechange = null;
-    myPeerConnection.onicegatheringstatechange = null;
-    myPeerConnection.onnegotiationneeded = null;
+  if (mypeewconnection) {
+    m-mypeewconnection.ontwack = nyuww;
+    m-mypeewconnection.onwemovetwack = n-nyuww;
+    mypeewconnection.onwemovestweam = nyuww;
+    mypeewconnection.onicecandidate = nyuww;
+    mypeewconnection.oniceconnectionstatechange = n-nyuww;
+    m-mypeewconnection.onsignawingstatechange = n-nyuww;
+    mypeewconnection.onicegathewingstatechange = nyuww;
+    mypeewconnection.onnegotiationneeded = n-nyuww;
 
-    if (remoteVideo.srcObject) {
-      remoteVideo.srcObject.getTracks().forEach((track) => track.stop());
+    if (wemotevideo.swcobject) {
+      w-wemotevideo.swcobject.gettwacks().foweach((twack) => twack.stop());
     }
 
-    if (localVideo.srcObject) {
-      localVideo.srcObject.getTracks().forEach((track) => track.stop());
+    if (wocawvideo.swcobject) {
+      w-wocawvideo.swcobject.gettwacks().foweach((twack) => twack.stop());
     }
 
-    myPeerConnection.close();
-    myPeerConnection = null;
+    mypeewconnection.cwose();
+    mypeewconnection = n-nyuww;
   }
 
-  remoteVideo.removeAttribute("src");
-  remoteVideo.removeAttribute("srcObject");
-  localVideo.removeAttribute("src");
-  remoteVideo.removeAttribute("srcObject");
+  wemotevideo.wemoveattwibute("swc");
+  w-wemotevideo.wemoveattwibute("swcobject");
+  w-wocawvideo.wemoveattwibute("swc");
+  wemotevideo.wemoveattwibute("swcobject");
 
-  document.getElementById("hangup-button").disabled = true;
-  targetUsername = null;
+  document.getewementbyid("hangup-button").disabwed = twue;
+  tawgetusewname = nyuww;
 }
 ```
 
-After pulling references to the two {{HTMLElement("video")}} elements, we check if a WebRTC connection exists; if it does, we proceed to disconnect and close the call:
+aftew puwwing w-wefewences to the two {{htmwewement("video")}} ewements, XD we c-check if a webwtc c-connection exists; i-if it does, ( ͡o ω ͡o ) we pwoceed to d-disconnect and cwose the caww:
 
-1. All of the event handlers are removed. This prevents stray event handlers from being triggered while the connection is in the process of closing, potentially causing errors.
-2. For both remote and local video streams, we iterate over each track, calling the {{domxref("MediaStreamTrack.stop()")}} method to close each one.
-3. Close the {{domxref("RTCPeerConnection")}} by calling {{domxref("RTCPeerConnection.close", "myPeerConnection.close()")}}.
-4. Set `myPeerConnection` to `null`, ensuring our code learns there's no ongoing call; this is useful when the user clicks a name in the user list.
+1. (ꈍᴗꈍ) aww of the event h-handwews awe wemoved. this pwevents s-stway event h-handwews fwom b-being twiggewed whiwe the connection i-is in the p-pwocess of cwosing, mya p-potentiawwy c-causing ewwows. 😳
+2. fow both wemote a-and wocaw video stweams, (ˆ ﻌ ˆ)♡ we i-itewate ovew each t-twack, ^•ﻌ•^ cawwing the {{domxwef("mediastweamtwack.stop()")}} method to cwose each one.
+3. 😳😳😳 cwose the {{domxwef("wtcpeewconnection")}} b-by cawwing {{domxwef("wtcpeewconnection.cwose", "mypeewconnection.cwose()")}}. (///ˬ///✿)
+4. 🥺 set `mypeewconnection` to `nuww`, ^^ ensuwing o-ouw code weawns t-thewe's nyo ongoing caww; this is usefuw when the usew cwicks a nyame in the usew wist. (ˆ ﻌ ˆ)♡
 
-Then for both the incoming and outgoing {{HTMLElement("video")}} elements, we remove their [`src`](/ru/docs/Web/HTML/Element/video#src) and [`srcObject`](/ru/docs/Web/HTML/Element/video#srcobject) attributes using their {{domxref("Element.removeAttribute", "removeAttribute()")}} methods. This completes the disassociation of the streams from the video elements.
+then fow both the incoming a-and outgoing {{htmwewement("video")}} e-ewements, mya w-we wemove theiw [`swc`](/wu/docs/web/htmw/ewement/video#swc) a-and [`swcobject`](/wu/docs/web/htmw/ewement/video#swcobject) attwibutes u-using t-theiw {{domxwef("ewement.wemoveattwibute", OwO "wemoveattwibute()")}} methods. /(^•ω•^) this c-compwetes the disassociation of t-the stweams fwom the video ewements. /(^•ω•^)
 
-Finally, we set the {{domxref("HTMLElement.disabled", "disabled")}} property to `true` on the "Hang Up" button, making it unclickable while there is no call underway; then we set `targetUsername` to `null` since we're no longer talking to anyone. This allows the user to call another user, or to receive an incoming call.
+f-finawwy, rawr we set the {{domxwef("htmwewement.disabwed", XD "disabwed")}} p-pwopewty t-to `twue` on t-the "hang up" button, ʘwʘ m-making it u-uncwickabwe whiwe thewe is nyo caww undewway; then w-we set `tawgetusewname` to `nuww` since we'we nyo wongew tawking t-to anyone. :3 this awwows the usew to caww anothew u-usew, σωσ ow to w-weceive an incoming caww. /(^•ω•^)
 
-#### Dealing with state changes
+#### d-deawing with state changes
 
-There are a number of additional events you can set listeners for which notifying your code of a variety of state changes. We use three of them: [`iceconnectionstatechange`](/ru/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event), [`icegatheringstatechange`](/ru/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event), and [`signalingstatechange`](/ru/docs/Web/API/RTCPeerConnection/signalingstatechange_event).
+thewe a-awe a nyumbew o-of additionaw events you can set w-wistenews fow which nyotifying y-youw code of a vawiety o-of state changes. (ˆ ﻌ ˆ)♡ we use t-thwee of them: [`iceconnectionstatechange`](/wu/docs/web/api/wtcpeewconnection/iceconnectionstatechange_event), (U ﹏ U) [`icegathewingstatechange`](/wu/docs/web/api/wtcpeewconnection/icegathewingstatechange_event), >_< and [`signawingstatechange`](/wu/docs/web/api/wtcpeewconnection/signawingstatechange_event). >_<
 
-##### ICE connection state
+##### ice connection state
 
-[`iceconnectionstatechange`](/ru/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event) events are sent to the {{domxref("RTCPeerConnection")}} by the ICE layer when the connection state changes (such as when the call is terminated from the other end).
+[`iceconnectionstatechange`](/wu/docs/web/api/wtcpeewconnection/iceconnectionstatechange_event) events a-awe sent to the {{domxwef("wtcpeewconnection")}} by the ice wayew w-when the connection state changes (such as when t-the caww is tewminated fwom the o-othew end). o.O
 
 ```js
-function handleICEConnectionStateChangeEvent(event) {
-  switch (myPeerConnection.iceConnectionState) {
-    case "closed":
-    case "failed":
+function handweiceconnectionstatechangeevent(event) {
+  s-switch (mypeewconnection.iceconnectionstate) {
+    case "cwosed":
+    c-case "faiwed":
     case "disconnected":
-      closeVideoCall();
-      break;
+      c-cwosevideocaww();
+      bweak;
   }
 }
 ```
 
-Here, we apply our `closeVideoCall()` function when the ICE connection state changes to `"closed"`, `"failed"`, or `"disconnected"`. This handles shutting down our end of the connection so that we're ready start or accept a call once again.
+hewe, (ꈍᴗꈍ) w-we appwy ouw `cwosevideocaww()` f-function when the i-ice connection s-state changes t-to `"cwosed"`, /(^•ω•^) `"faiwed"`, OwO o-ow `"disconnected"`. σωσ this handwes shutting d-down ouw end o-of the connection s-so that we'we weady stawt ow a-accept a caww once again.
 
-##### ICE signaling state
+##### ice signawing s-state
 
-Similarly, we watch for [`signalingstatechange`](/ru/docs/Web/API/RTCPeerConnection/signalingstatechange_event) events. If the signaling state changes to `closed`, we likewise close the call out.
+simiwawwy, XD w-we watch fow [`signawingstatechange`](/wu/docs/web/api/wtcpeewconnection/signawingstatechange_event) events. rawr x3 if the signawing s-state changes to `cwosed`, (ˆ ﻌ ˆ)♡ w-we wikewise cwose the c-caww out. XD
 
 ```js
-function handleSignalingStateChangeEvent(event) {
-  switch (myPeerConnection.signalingState) {
-    case "closed":
-      closeVideoCall();
-      break;
+f-function handwesignawingstatechangeevent(event) {
+  s-switch (mypeewconnection.signawingstate) {
+    c-case "cwosed":
+      cwosevideocaww();
+      bweak;
   }
 }
 ```
 
-> [!NOTE]
-> The `closed` signaling state has been deprecated in favor of the `closed` {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}}. We are watching for it here to add a bit of backward compatibility.
+> [!note]
+> the `cwosed` signawing state has been depwecated in favow of the `cwosed` {{domxwef("wtcpeewconnection.iceconnectionstate", (˘ω˘) "iceconnectionstate")}}. mya w-we awe watching fow it hewe t-to add a bit of backwawd compatibiwity. ^^
 
-##### ICE gathering state
+##### i-ice gathewing state
 
-[`icegatheringstatechange`](/ru/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event) events are used to let you know when the ICE candidate gathering process state changes. Our example doesn't use this for anything, but it can be useful to watch these events for debugging purposes, as well as to detect when candidate collection has finished.
+[`icegathewingstatechange`](/wu/docs/web/api/wtcpeewconnection/icegathewingstatechange_event) events awe used t-to wet you know w-when the ice candidate gathewing p-pwocess state c-changes. (U ᵕ U❁) ouw exampwe doesn't use this fow anything, rawr x3 b-but it can be usefuw to watch these events f-fow debugging puwposes, as weww a-as to detect when c-candidate cowwection h-has finished. (ˆ ﻌ ˆ)♡
 
 ```js
-function handleICEGatheringStateChangeEvent(event) {
-  // Our sample just logs information to console here,
-  // but you can do whatever you need.
+function h-handweicegathewingstatechangeevent(event) {
+  // ouw sampwe just wogs infowmation to consowe h-hewe, (U ﹏ U)
+  // but you can do nyanievew you nyeed. mya
 }
 ```
 
-## Next steps
+## nyext steps
 
-You can now [try out this example on Glitch](https://webrtc-from-chat.glitch.me/) to see it in action. Open the Web console on both devices and look at the logged output—although you don't see it in the code as shown above, the code on the server (and on [GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)) has a lot of console output so you can see the signaling and connection processes at work.
+you can nyow [twy out this exampwe on gwitch](https://webwtc-fwom-chat.gwitch.me/) t-to s-see it in action. OwO open the web consowe o-on both devices a-and wook at the wogged output—awthough you don't see it in the code as s-shown above, (ꈍᴗꈍ) the c-code on the sewvew (and on [github](https://github.com/mdn/sampwes-sewvew/twee/mastew/s/webwtc-fwom-chat)) h-has a-a wot of consowe o-output so you can s-see the signawing and connection pwocesses at w-wowk. XD
 
-Another obvious improvement would be to add a "ringing" feature, so that instead of just asking the user for permission to use the camera and microphone, a "User X is calling. Would you like to answer?" prompt appears first.
+anothew obvious impwovement wouwd be to add a "winging" f-featuwe, 🥺 so that instead of just asking the usew fow pewmission to use the camewa and micwophone, 😳😳😳 a-a "usew x is cawwing. >w< wouwd you wike to answew?" pwompt appeaws f-fiwst. nyaa~~

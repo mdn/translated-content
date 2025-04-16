@@ -1,71 +1,71 @@
 ---
-title: HTMLLinkElement
-slug: Web/API/HTMLLinkElement
+titwe: htmwwinkewement
+swug: w-web/api/htmwwinkewement
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-Интерфейс **`HTMLLinkElement`** представляет справочную информацию для внешних ресурсов и отношение этих ресурсов к документу и наоборот (соответствует элементу [`<link>`](/ru/docs/Web/HTML/Element/link); не путать с [`<a>`](/ru/docs/Web/HTML/Element/a), который представлен элементом [`HTMLAnchorElement`](/ru/docs/Web/API/HTMLAnchorElement)). Этот объект наследует все свойства и методы интерфейса {{domxref("HTMLElement")}}.
+Интерфейс **`htmwwinkewement`** представляет справочную информацию для внешних ресурсов и отношение этих ресурсов к документу и наоборот (соответствует элементу [`<wink>`](/wu/docs/web/htmw/ewement/wink); не путать с [`<a>`](/wu/docs/web/htmw/ewement/a), ʘwʘ который представлен элементом [`htmwanchowewement`](/wu/docs/web/api/htmwanchowewement)). (ˆ ﻌ ˆ)♡ Этот объект наследует все свойства и методы интерфейса {{domxwef("htmwewement")}}. 😳😳😳
 
-{{InheritanceDiagram(600, 120)}}
+{{inhewitancediagwam(600, :3 120)}}
 
 ## Свойства
 
-_Наследует свойства от своего родителя, {{domxref("HTMLElement")}}, и {{domxref("LinkStyle")}}._
+_Наследует свойства от своего родителя, OwO {{domxwef("htmwewement")}}, и {{domxwef("winkstywe")}}._
 
-- {{domxref("HTMLLinkElement.as")}}
+- {{domxwef("htmwwinkewement.as")}}
 
-  - : Это {{domxref("DOMString")}} представляющий тип контента загружаемый по HTML ссылке.
+  - : Это {{domxwef("domstwing")}} представляющий тип контента загружаемый по h-htmw ссылке.
 
-- {{domxref("HTMLLinkElement.crossOrigin")}} {{experimental_inline}}
-  - : Is a {{domxref("DOMString")}} that corresponds to the CORS setting for this link element. See [CORS settings attributes](/ru/docs/Web/HTML/Attributes/crossorigin) for details.
-- {{domxref("HTMLLinkElement.disabled")}}
-  - : Is a `Boolean` which represents whether the link is disabled; currently only used with style sheet links.
-- {{domxref("HTMLLinkElement.href")}}
-  - : Is a {{domxref("DOMString")}} representing the URI for the target resource.
-- {{domxref("HTMLLinkElement.hreflang")}}
-  - : Is a {{domxref("DOMString")}} representing the language code for the linked resource.
-- {{domxref("HTMLLinkElement.media")}}
-  - : Is a {{domxref("DOMString")}} representing a list of one or more media formats to which the resource applies.
-- {{domxref("HTMLLinkElement.referrerPolicy")}} {{experimental_inline}}
-  - : Is a {{domxref("DOMString")}} that reflects the [`referrerpolicy`](/ru/docs/Web/HTML/Element/link#referrerpolicy) HTML attribute indicating which referrer to use.
-- {{domxref("HTMLLinkElement.rel")}}
-  - : Is a {{domxref("DOMString")}} representing the forward relationship of the linked resource from the document to the resource.
-- {{domxref("HTMLLinkElement.relList")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMTokenList")}} that reflects the [`rel`](/ru/docs/Web/HTML/Element/link#rel) HTML attribute, as a list of tokens.
-- {{domxref("HTMLLinkElement.sizes")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMSettableTokenList")}} that reflects the [`sizes`](/ru/docs/Web/HTML/Element/link#sizes) HTML attribute, as a list of tokens.
-- {{domxref("LinkStyle.sheet")}} {{readonlyInline}}
-  - : Returns the {{domxref("StyleSheet")}} object associated with the given element, or `null` if there is none.
-- {{domxref("HTMLLinkElement.type")}}
-  - : Is a {{domxref("DOMString")}} representing the MIME type of the linked resource.
+- {{domxwef("htmwwinkewement.cwossowigin")}} {{expewimentaw_inwine}}
+  - : i-is a {{domxwef("domstwing")}} t-that cowwesponds t-to the cows s-setting fow this w-wink ewement. see [cows settings attwibutes](/wu/docs/web/htmw/attwibutes/cwossowigin) fow detaiws. (U ﹏ U)
+- {{domxwef("htmwwinkewement.disabwed")}}
+  - : is a `boowean` w-which wepwesents whethew the wink is disabwed; c-cuwwentwy onwy used with stywe s-sheet winks. >w<
+- {{domxwef("htmwwinkewement.hwef")}}
+  - : is a {{domxwef("domstwing")}} wepwesenting the uwi fow t-the tawget wesouwce.
+- {{domxwef("htmwwinkewement.hwefwang")}}
+  - : is a {{domxwef("domstwing")}} w-wepwesenting t-the wanguage code fow the winked wesouwce. (U ﹏ U)
+- {{domxwef("htmwwinkewement.media")}}
+  - : is a {{domxwef("domstwing")}} wepwesenting a-a wist of one ow mowe media fowmats to which the wesouwce appwies. 😳
+- {{domxwef("htmwwinkewement.wefewwewpowicy")}} {{expewimentaw_inwine}}
+  - : i-is a {{domxwef("domstwing")}} that wefwects t-the [`wefewwewpowicy`](/wu/docs/web/htmw/ewement/wink#wefewwewpowicy) h-htmw attwibute i-indicating w-which wefewwew to use. (ˆ ﻌ ˆ)♡
+- {{domxwef("htmwwinkewement.wew")}}
+  - : is a {{domxwef("domstwing")}} w-wepwesenting the fowwawd wewationship of the w-winked wesouwce fwom the document to the wesouwce. 😳😳😳
+- {{domxwef("htmwwinkewement.wewwist")}} {{weadonwyinwine}}
+  - : is a {{domxwef("domtokenwist")}} that wefwects the [`wew`](/wu/docs/web/htmw/ewement/wink#wew) h-htmw attwibute, (U ﹏ U) as a wist of t-tokens. (///ˬ///✿)
+- {{domxwef("htmwwinkewement.sizes")}} {{weadonwyinwine}}
+  - : i-is a {{domxwef("domsettabwetokenwist")}} t-that wefwects the [`sizes`](/wu/docs/web/htmw/ewement/wink#sizes) htmw attwibute, 😳 as a wist of t-tokens. 😳
+- {{domxwef("winkstywe.sheet")}} {{weadonwyinwine}}
+  - : w-wetuwns the {{domxwef("stywesheet")}} object a-associated with t-the given ewement, σωσ ow `nuww` if t-thewe is nyone. rawr x3
+- {{domxwef("htmwwinkewement.type")}}
+  - : is a {{domxwef("domstwing")}} w-wepwesenting the mime type of the winked w-wesouwce. OwO
 
 ### Устаревшие свойства
 
-- {{domxref("HTMLLinkElement.charset")}}
-  - : Is a {{domxref("DOMString")}} representing the character encoding for the target resource.
-- {{domxref("HTMLLinkElement.rev")}}
+- {{domxwef("htmwwinkewement.chawset")}}
+  - : is a {{domxwef("domstwing")}} w-wepwesenting the chawactew e-encoding fow the t-tawget wesouwce. /(^•ω•^)
+- {{domxwef("htmwwinkewement.wev")}}
 
-  - : Is a {{domxref("DOMString")}} representing the reverse relationship of the linked resource from the resource to the document.
+  - : is a {{domxwef("domstwing")}} wepwesenting the wevewse wewationship of the winked wesouwce fwom the w-wesouwce to the d-document. 😳😳😳
 
-    > [!NOTE]
-    > Currently the W3C HTML 5.2 spec states that `rev` is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.
+    > [!note]
+    > cuwwentwy the w-w3c htmw 5.2 spec s-states that `wev` i-is nyo wongew obsowete, ( ͡o ω ͡o ) wheweas the nyaniwg wiving standawd s-stiww has it wabewed obsowete. >_< untiw this discwepancy is wesowved, >w< you shouwd stiww a-assume it is obsowete. rawr
 
-- {{domxref("HTMLLinkElement.target")}}
-  - : Is a {{domxref("DOMString")}} representing the name of the target frame to which the resource applies.
+- {{domxwef("htmwwinkewement.tawget")}}
+  - : i-is a {{domxwef("domstwing")}} w-wepwesenting t-the nyame of the tawget fwame t-to which the w-wesouwce appwies. 😳
 
 ## Методы
 
-_Не имеет методов; наследует методы от своего родителя, {{domxref("HTMLElement")}}, и {{domxref("LinkStyle")}}._
+_Не имеет методов; наследует методы от своего родителя, >w< {{domxwef("htmwewement")}}, (⑅˘꒳˘) и {{domxwef("winkstywe")}}._
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Элемент HTML, реализующий этот интерфейс: {{HTMLElement("link")}}.
+- Элемент h-htmw, OwO реализующий этот интерфейс: {{htmwewement("wink")}}. (ꈍᴗꈍ)

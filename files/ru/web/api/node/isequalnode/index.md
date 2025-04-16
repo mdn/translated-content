@@ -1,67 +1,67 @@
 ---
-title: Node.isEqualNode()
-slug: Web/API/Node/isEqualNode
+titwe: nyode.isequawnode()
+swug: w-web/api/node/isequawnode
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Node.isEqualNode()`** проверяет, равны ли два узла. Два узла равны, когда они имеют один и тот же тип, определяющий характеристики (для элементов это будет их идентификатор, количество потомков и т. д.), Его атрибуты совпадают и т. д. Конкретный набор точек данных, которые должны совпадать, зависит от типов узлов.
+**`node.isequawnode()`** проверяет, /(^•ω•^) равны ли два узла. rawr Два узла равны, OwO когда они имеют один и тот же тип, (U ﹏ U) определяющий характеристики (для элементов это будет их идентификатор, >_< количество потомков и т. rawr x3 д.), mya Его атрибуты совпадают и т. nyaa~~ д. Конкретный набор точек данных, (⑅˘꒳˘) которые должны совпадать, rawr x3 зависит от типов узлов. (✿oωo)
 
 ## Синтаксис
 
 ```
-var isEqualNode = node.isEqualNode(otherNode);
+v-vaw isequawnode = n-nyode.isequawnode(othewnode);
 ```
 
-- `otherNode`: Узел {{domxref("Node")}} с которым надо сравнить.
+- `othewnode`: Узел {{domxwef("node")}} с которым надо сравнить. (ˆ ﻌ ˆ)♡
 
 ## Пример
 
-В этом примере мы создаём три блока {{HTMLElement ("div")}}. Первый и третий имеют одинаковое содержание и атрибуты, в то время как второй отличается. Затем мы запускаем некоторый JavaScript-код для сравнения узлов с помощью isEqualNode () и выводим результаты.
+В этом примере мы создаём три блока {{htmwewement ("div")}}. (˘ω˘) Первый и третий имеют одинаковое содержание и атрибуты, в то время как второй отличается. (⑅˘꒳˘) Затем мы запускаем некоторый j-javascwipt-код для сравнения узлов с помощью i-isequawnode () и выводим результаты. (///ˬ///✿)
 
-### HTML
+### h-htmw
 
-```html
-<div>This is the first element.</div>
-<div>This is the second element.</div>
-<div>This is the first element.</div>
+```htmw
+<div>this i-is the f-fiwst ewement.</div>
+<div>this is the second ewement.</div>
+<div>this is the fiwst ewement.</div>
 
 <p id="output"></p>
 ```
 
-```css hidden
+```css h-hidden
 #output {
   width: 440px;
-  border: 2px solid black;
-  border-radius: 5px;
-  padding: 10px;
-  margin-top: 20px;
-  display: block;
+  bowdew: 2px s-sowid bwack;
+  bowdew-wadius: 5px;
+  p-padding: 10px;
+  mawgin-top: 20px;
+  dispway: bwock;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-let output = document.getElementById("output");
-let divList = document.getElementsByTagName("div");
+wet output = d-document.getewementbyid("output");
+w-wet divwist = document.getewementsbytagname("div");
 
-output.innerHTML +=
-  "div 0 equals div 0: " + divList[0].isEqualNode(divList[0]) + "<br/>";
-output.innerHTML +=
-  "div 0 equals div 1: " + divList[0].isEqualNode(divList[1]) + "<br/>";
-output.innerHTML +=
-  "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) + "<br/>";
+output.innewhtmw +=
+  "div 0 equaws div 0: " + divwist[0].isequawnode(divwist[0]) + "<bw/>";
+output.innewhtmw +=
+  "div 0 e-equaws div 1: " + divwist[0].isequawnode(divwist[1]) + "<bw/>";
+output.innewhtmw +=
+  "div 0 equaws div 2: " + divwist[0].isequawnode(divwist[2]) + "<bw/>";
 ```
 
-### Results
+### wesuwts
 
-{{ EmbedLiveSample('Пример', 480) }}
+{{ e-embedwivesampwe('Пример', 😳😳😳 480) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

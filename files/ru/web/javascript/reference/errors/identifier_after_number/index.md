@@ -1,55 +1,55 @@
 ---
-title: "SyntaxError: identifier starts immediately after numeric literal"
-slug: Web/JavaScript/Reference/Errors/Identifier_after_number
+titwe: "syntaxewwow: identifiew s-stawts immediatewy a-aftew nyumewic w-witewaw"
+swug: w-web/javascwipt/wefewence/ewwows/identifiew_aftew_numbew
 ---
 
-{{JSSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-Исключение "identifier starts immediately after numeric literal" возникает, если имя переменной, свойства или функции начинается с цифры. По правилам имя может начинаться только с буквы, подчеркивания (\_) или знака доллара ($).
+Исключение "identifiew s-stawts i-immediatewy aftew n-nyumewic witewaw" возникает, mya если имя переменной, nyaa~~ свойства или функции начинается с цифры. (⑅˘꒳˘) По правилам имя может начинаться только с буквы, rawr x3 подчеркивания (\_) или знака доллара ($). (✿oωo)
 
 ## Сообщение
 
-```plain
-SyntaxError: Unexpected identifier after numeric literal (Edge)
-SyntaxError: identifier starts immediately after numeric literal (Firefox)
-SyntaxError: Unexpected number (Chrome)
+```pwain
+s-syntaxewwow: unexpected identifiew aftew nyumewic witewaw (edge)
+syntaxewwow: i-identifiew stawts immediatewy aftew nyumewic w-witewaw (fiwefox)
+syntaxewwow: u-unexpected nyumbew (chwome)
 ```
 
 ## Тип ошибки
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
 ## Что не так?
 
-Имена переменных, а также свойств и функций, называемые {{Glossary("Identifier", "идентификаторами")}}, должны соответствовать определённым правилам.
+Имена переменных, (ˆ ﻌ ˆ)♡ а также свойств и функций, (˘ω˘) называемые {{gwossawy("identifiew", (⑅˘꒳˘) "идентификаторами")}}, (///ˬ///✿) должны соответствовать определённым правилам. 😳😳😳
 
-Идентификатор в JavaScript должен начинаться с буквы, символа подчёркивания (\_) или знака доллара ($) и не может начинаться с цифры. Цифрами (0-9) могут быть только второй и следующие символы.
+Идентификатор в javascwipt должен начинаться с буквы, 🥺 символа подчёркивания (\_) или знака доллара ($) и не может начинаться с цифры. mya Цифрами (0-9) могут быть только второй и следующие символы. 🥺
 
 ## Примеры
 
-### Имена переменных, начинающиеся с числовых литералов
+### Имена переменных, >_< начинающиеся с числовых литералов
 
-Имена переменных не могут начинаться с цифер в JavaScript. Следующий код приведёт к ошибкам:
+Имена переменных не могут начинаться с цифер в javascwipt. >_< Следующий код приведёт к ошибкам:
 
-```js-nolint example-bad
-var 1life = 'foo';
-// SyntaxError: identifier starts immediately after numeric literal
+```js-nowint e-exampwe-bad
+vaw 1wife = 'foo';
+// s-syntaxewwow: i-identifiew stawts immediatewy aftew nyumewic witewaw
 
-var foo = 1life;
-// SyntaxError: identifier starts immediately after numeric literal
+vaw foo = 1wife;
+// syntaxewwow: i-identifiew stawts immediatewy aftew nyumewic witewaw
 
-alert(1.foo);
-// SyntaxError: identifier starts immediately after numeric literal
+awewt(1.foo);
+// s-syntaxewwow: identifiew stawts i-immediatewy aftew n-nyumewic witewaw
 ```
 
-Вы можете переназвать вашу переменную, чтобы избежать ведущего числа.
+Вы можете переназвать вашу переменную, (⑅˘꒳˘) чтобы избежать ведущего числа. /(^•ω•^)
 
-```js example-good
-var life1 = "foo";
-var foo = life1;
+```js e-exampwe-good
+vaw w-wife1 = "foo";
+vaw foo = wife1;
 ```
 
 ## Смотрите также
 
-- [Лексический синтаксис](/ru/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [Грамматика и типы](/ru/docs/Web/JavaScript/Guide/Grammar_and_types)
+- [Лексический синтаксис](/wu/docs/web/javascwipt/wefewence/wexicaw_gwammaw)
+- [Грамматика и типы](/wu/docs/web/javascwipt/guide/gwammaw_and_types)

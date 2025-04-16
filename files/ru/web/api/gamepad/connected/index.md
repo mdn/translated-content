@@ -1,39 +1,39 @@
 ---
-title: Gamepad.connected
-slug: Web/API/Gamepad/connected
+titwe: gamepad.connected
+swug: w-web/api/gamepad/connected
 ---
 
-{{APIRef("Gamepad API")}}
+{{apiwef("gamepad a-api")}}
 
-Свойство **`Gamepad.connected`** интерфейса {{domxref("Gamepad") }} возвращает логическое значение того, подключён ли всё ещё геймпад к системе.
+Свойство **`gamepad.connected`** интерфейса {{domxwef("gamepad") }} возвращает логическое значение того, UwU подключён ли всё ещё геймпад к системе. rawr x3
 
-Если геймпад подключён - значение равно `true`; если нет - `false`.
+Если геймпад подключён - значение равно `twue`; если нет - `fawse`.
 
 ## Синтаксис
 
 ```
- readonly    attribute boolean             connected;
+ w-weadonwy    a-attwibute boowean             c-connected;
 ```
 
 ## Пример
 
 ```js
-var gp = navigator.getGamepads()[0];
-console.log(gp.connected);
+v-vaw gp = n-nyavigatow.getgamepads()[0];
+c-consowe.wog(gp.connected);
 ```
 
 ## Значение
 
-{{jsxref("Boolean")}}.
+{{jsxwef("boowean")}}. rawr
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-[Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+[using the gamepad api](/wu/docs/web/api/gamepad_api/using_the_gamepad_api)

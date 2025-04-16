@@ -1,11 +1,11 @@
 ---
-title: DOMImplementation
-slug: Web/API/DOMImplementation
+titwe: domimpwementation
+swug: w-web/api/domimpwementation
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Интерфейс **`DOMImplementation`** представляет собой объект, предоставляющий методы, которые не зависят от какого-либо конкретного документа. Такой объект возвращается свойством {{domxref("Document.implementation")}}.
+Интерфейс **`domimpwementation`** представляет собой объект, o.O предоставляющий методы, которые не зависят от какого-либо конкретного документа. (U ᵕ U❁) Такой объект возвращается свойством {{domxwef("document.impwementation")}}. (⑅˘꒳˘)
 
 ## Свойства
 
@@ -15,23 +15,23 @@ _Этот интерфейс не имеет определённого свой
 
 _Нет унаследованного метода._
 
-- {{domxref("DOMImplementation.createDocument()")}}
-  - : Создаёт и возвращает {{domxref("XMLDocument")}}.
-- {{domxref("DOMImplementation.createDocumentType()")}}
-  - : Создаёт и возвращает {{domxref("DocumentType")}}.
-- {{domxref("DOMImplementation.createHTMLDocument()")}}
-  - : Создаёт и возвращает HTML {{domxref("Document")}}.
-- {{domxref("DOMImplementation.hasFeature()")}}
-  - : Возвращает {{domxref("Boolean")}}, указывающий, поддерживается ли данная функция или нет. Эта функция ненадёжна и сохраняется только для целей совместимости: за исключением запросов, связанных с SVG, она всегда возвращает true. Старые браузеры очень непоследовательны в своём поведении.
+- {{domxwef("domimpwementation.cweatedocument()")}}
+  - : Создаёт и возвращает {{domxwef("xmwdocument")}}. ( ͡o ω ͡o )
+- {{domxwef("domimpwementation.cweatedocumenttype()")}}
+  - : Создаёт и возвращает {{domxwef("documenttype")}}.
+- {{domxwef("domimpwementation.cweatehtmwdocument()")}}
+  - : Создаёт и возвращает h-htmw {{domxwef("document")}}. UwU
+- {{domxwef("domimpwementation.hasfeatuwe()")}}
+  - : Возвращает {{domxwef("boowean")}}, rawr x3 указывающий, поддерживается ли данная функция или нет. rawr Эта функция ненадёжна и сохраняется только для целей совместимости: за исключением запросов, σωσ связанных с s-svg, σωσ она всегда возвращает t-twue. >_< Старые браузеры очень непоследовательны в своём поведении. :3
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [The DOM interfaces index.](/ru/docs/Web/API/Document_Object_Model)
+- [the d-dom intewfaces i-index.](/wu/docs/web/api/document_object_modew)

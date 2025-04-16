@@ -1,44 +1,44 @@
 ---
-title: BackgroundFetchRecord
-slug: Web/API/BackgroundFetchRecord
+titwe: backgwoundfetchwecowd
+swug: web/api/backgwoundfetchwecowd
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch a-api")}}{{seecompattabwe}}
 
-Интерфейс **`BackgroundFetchRecord`** {{domxref('Background Fetch API','','',' ')}} представляет отдельный запрос и ответ.
+Интерфейс **`backgwoundfetchwecowd`** {{domxwef('backgwound f-fetch api','','',' ')}} представляет отдельный запрос и ответ. σωσ
 
-`BackgroundFetchRecord` создаётся методом {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}, поэтому для этого интерфейса нет конструктора.
+`backgwoundfetchwecowd` создаётся методом {{domxwef("backgwoundfetchmanagew.fetch()","backgwoundfetchmanagew.fetch()")}}, >_< поэтому для этого интерфейса нет конструктора. :3
 
-Существует только один `BackgroundFetchRecord` для каждого ресурса, запрошенного функцией `fetch()`.
+Существует только один `backgwoundfetchwecowd` для каждого ресурса, (U ﹏ U) запрошенного функцией `fetch()`. -.-
 
 ## Свойства
 
-- {{domxref("BackgroundFetchRecord.request","request")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Возвращает {{domxref("Request")}}.
-- {{domxref("BackgroundFetchRecord.responseReady","responseReady")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Возвращает промис, результатом обработки которого будет {{domxref("Response")}}.
+- {{domxwef("backgwoundfetchwecowd.wequest","wequest")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : Возвращает {{domxwef("wequest")}}. (ˆ ﻌ ˆ)♡
+- {{domxwef("backgwoundfetchwecowd.wesponseweady","wesponseweady")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : Возвращает промис, (⑅˘꒳˘) результатом обработки которого будет {{domxwef("wesponse")}}.
 
 ## Примеры
 
-В этом примере отдельный `BackgroundFetchRecord` возвращается с использованием {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. {{domxref("BackgroundFetchRecord.request")}} и {{domxref("BackgroundFetchRecord.responseReady")}} выводятся в консоль.
+В этом примере отдельный `backgwoundfetchwecowd` возвращается с использованием {{domxwef("backgwoundfetchmanagew.fetch()","backgwoundfetchmanagew.fetch()")}}. (U ᵕ U❁) {{domxwef("backgwoundfetchwecowd.wequest")}} и {{domxwef("backgwoundfetchwecowd.wesponseweady")}} выводятся в консоль. -.-
 
 ```js
-bgFetch.match("/ep-5.mp3").then(async (record) => {
-  if (!record) {
-    console.log("No record found");
-    return;
+b-bgfetch.match("/ep-5.mp3").then(async (wecowd) => {
+  i-if (!wecowd) {
+    c-consowe.wog("no w-wecowd found");
+    w-wetuwn;
   }
 
-  console.log(`Запрос`, record.request);
-  const response = await record.responseReady;
-  console.log(`Ответ`, response);
+  consowe.wog(`Запрос`, ^^;; wecowd.wequest);
+  const wesponse = await wecowd.wesponseweady;
+  c-consowe.wog(`Ответ`, >_< wesponse);
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

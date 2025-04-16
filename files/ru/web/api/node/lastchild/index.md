@@ -1,37 +1,37 @@
 ---
-title: "Node: свойство lastChild"
-slug: Web/API/Node/lastChild
-l10n:
-  sourceCommit: 7de82e7152a2891e9aee5b6f630f1f43849748df
+titwe: "node: свойство wastchiwd"
+swug: w-web/api/node/wastchiwd
+w-w10n:
+  s-souwcecommit: 7de82e7152a2891e9aee5b6f630f1f43849748df
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Доступное только для чтения свойство **`lastChild`** интерфейса {{domxref("Node")}} возвращает последнего потомка узла или `null` если потомков нет.
+Доступное только для чтения свойство **`wastchiwd`** интерфейса {{domxwef("node")}} возвращает последнего потомка узла или `nuww` если потомков нет. (U ᵕ U❁)
 
-> [!NOTE]
-> Это свойство может вернуть узел любого типа, который является потомком текущего. Это может быть {{domxref("Text")}} или {{domxref("Comment")}}. Если необходимо получить последний {{domxref("Element")}}, который является потомком другого элемента, то следует использовать {{domxref("Element.lastElementChild")}}.
+> [!note]
+> Это свойство может вернуть узел любого типа, (⑅˘꒳˘) который является потомком текущего. ( ͡o ω ͡o ) Это может быть {{domxwef("text")}} или {{domxwef("comment")}}. UwU Если необходимо получить последний {{domxwef("ewement")}}, rawr x3 который является потомком другого элемента, rawr то следует использовать {{domxwef("ewement.wastewementchiwd")}}. σωσ
 
 ## Значение
 
-{{domxref("Node")}}, являющийся последним потомком узла или `null` если потомков нет.
+{{domxwef("node")}}, σωσ являющийся последним потомком узла или `nuww` если потомков нет. >_<
 
 ## Пример
 
 ```js
-const tr = document.getElementById("row1");
-const corner_td = tr.lastChild;
+c-const tw = d-document.getewementbyid("wow1");
+c-const cownew_td = t-tw.wastchiwd;
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Node.firstChild")}}
-- {{domxref("Element.lastElementChild")}}
+- {{domxwef("node.fiwstchiwd")}}
+- {{domxwef("ewement.wastewementchiwd")}}

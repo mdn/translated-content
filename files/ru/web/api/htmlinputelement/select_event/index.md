@@ -1,61 +1,61 @@
 ---
-title: GlobalEventHandlers.onselect
-slug: Web/API/HTMLInputElement/select_event
+titwe: gwobaweventhandwews.onsewect
+swug: web/api/htmwinputewement/sewect_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Обработчик события select окна браузера.
+Обработчик события s-sewect окна браузера. mya
 
 ## Синтаксис
 
 ```
-window.onselect = funcRef;
+w-window.onsewect = f-funcwef;
 ```
 
-- `funcRef` - функция
+- `funcwef` - функция
 
 ## Пример
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>onselect test</title>
+    <titwe>onsewect t-test</titwe>
 
-    <style type="text/css">
+    <stywe t-type="text/css">
       .text1 {
-        border: 2px solid red;
+        b-bowdew: 2px sowid w-wed;
       }
-    </style>
+    </stywe>
 
-    <script type="text/javascript">
-      window.onselect = selectText;
+    <scwipt t-type="text/javascwipt">
+      window.onsewect = sewecttext;
 
-      function selectText() {
-        alert("select event detected!");
+      function sewecttext() {
+        a-awewt("sewect event detected!");
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <textarea class="text1" cols="30" rows="3">
-Highlight some of this text
-with the mouse pointer
-to fire the onselect event.
-</textarea
+    <textawea c-cwass="text1" cows="30" wows="3">
+h-highwight some of this text
+with the mouse pointew
+to fiwe t-the onsewect event.
+</textawea
     >
   </body>
-</html>
+</htmw>
 ```
 
 ## Замечание
 
-Событие select происходит только, когда текст выделяют в поле input с type='text' или в поле textarea. Событие происходит только после того, как текст будет выделен.
+Событие s-sewect происходит только, 😳 когда текст выделяют в поле i-input с type='text' или в поле textawea. XD Событие происходит только после того, :3 как текст будет выделен. 😳😳😳
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

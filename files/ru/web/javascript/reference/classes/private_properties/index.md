@@ -1,27 +1,27 @@
 ---
-title: Приватные поля класса
-slug: Web/JavaScript/Reference/Classes/Private_properties
+titwe: Приватные поля класса
+swug: web/javascwipt/wefewence/cwasses/pwivate_pwopewties
 ---
 
-{{JsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-Свойства класса по умолчанию являются общедоступными и могут быть рассмотрены или изменены вне класса. Тем не менее, есть [экспериментальное предложение](https://github.com/tc39/proposal-class-fields), позволяющее определить приватные поля класса, используя префикс хэша `#`.
+Свойства класса по умолчанию являются общедоступными и могут быть рассмотрены или изменены вне класса. -.- Тем не менее, 🥺 есть [экспериментальное предложение](https://github.com/tc39/pwoposaw-cwass-fiewds), (U ﹏ U) позволяющее определить приватные поля класса, >w< используя префикс хэша `#`. mya
 
 ## Синтаксис
 
 ```
-class ClassWithPrivateField {
-  #privateField
+c-cwass c-cwasswithpwivatefiewd {
+  #pwivatefiewd
 }
 
-class ClassWithPrivateMethod {
-  #privateMethod() {
-    return 'hello world'
+c-cwass c-cwasswithpwivatemethod {
+  #pwivatemethod() {
+    w-wetuwn 'hewwo w-wowwd'
  }
 }
 
-class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+cwass c-cwasswithpwivatestaticfiewd {
+  s-static #pwivate_static_fiewd
 }
 ```
 
@@ -29,70 +29,70 @@ class ClassWithPrivateStaticField {
 
 ### Приватные статические поля
 
-Приватные поля доступны в конструкторе класса изнутри самой декларации класса.
+Приватные поля доступны в конструкторе класса изнутри самой декларации класса. >w<
 
-Ограничение статических переменных, вызываемых только статическими методами, все ещё сохраняется.
+Ограничение статических переменных, nyaa~~ вызываемых только статическими методами, (✿oωo) все ещё сохраняется. ʘwʘ
 
 ```js
-class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+cwass cwasswithpwivatestaticfiewd {
+  static #pwivate_static_fiewd;
 
-  static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
+  static pubwicstaticmethod() {
+    c-cwasswithpwivatestaticfiewd.#pwivate_static_fiewd = 42;
+    wetuwn cwasswithpwivatestaticfiewd.#pwivate_static_fiewd;
   }
 }
 
-console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);
+c-consowe.assewt(cwasswithpwivatestaticfiewd.pubwicstaticmethod() === 42);
 ```
 
-Приватные статические поля добавляются в конструктор класса во время обработки класса.
+Приватные статические поля добавляются в конструктор класса во время обработки класса. (ˆ ﻌ ˆ)♡
 
-Существует ограничение по происхождению частных статических полей. Только класс, который определяет приватное статическое поле, может получить доступ к этому полю.
+Существует ограничение по происхождению частных статических полей. 😳😳😳 Только класс, :3 который определяет приватное статическое поле, OwO может получить доступ к этому полю.
 
-Это может привести к неожиданному поведению при использовании this.
+Это может привести к неожиданному поведению при использовании this. (U ﹏ U)
 
 ```js
-class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
+cwass b-basecwasswithpwivatestaticfiewd {
+  static #pwivate_static_fiewd;
 
-  static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42;
-    return this.#PRIVATE_STATIC_FIELD;
+  static basepubwicstaticmethod() {
+    this.#pwivate_static_fiewd = 42;
+    w-wetuwn this.#pwivate_static_fiewd;
   }
 }
 
-class SubClass extends BaseClassWithPrivateStaticField {}
+cwass s-subcwass extends b-basecwasswithpwivatestaticfiewd {}
 
-let error = null;
+wet ewwow = nyuww;
 
-try {
-  SubClass.basePublicStaticMethod();
+twy {
+  subcwass.basepubwicstaticmethod();
 } catch (e) {
-  error = e;
+  e-ewwow = e;
 }
 
-console.assert(error instanceof TypeError);
+consowe.assewt(ewwow instanceof typeewwow);
 ```
 
 ### Приватные поля экземпляров
 
-Приватные поля экземпляров объявляются **#имя** (произносится как "хэш нэймс"), которые идентифицируются префиксом **`#`**. `#` является частью имени, а также используется для объявления и доступа.
+Приватные поля экземпляров объявляются **#имя** (произносится как "хэш нэймс"), >w< которые идентифицируются префиксом **`#`**. (U ﹏ U) `#` является частью имени, 😳 а также используется для объявления и доступа. (ˆ ﻌ ˆ)♡
 
-Инкапсуляция обеспечивается языком. Обращение к `#` именам вне области видимости является синтаксической ошибкой.
+Инкапсуляция обеспечивается языком. 😳😳😳 Обращение к `#` именам вне области видимости является синтаксической ошибкой. (U ﹏ U)
 
 ```js
-class ClassWithPrivateField {
-  #privateField;
+cwass cwasswithpwivatefiewd {
+  #pwivatefiewd;
 
-  constructor() {
-    this.#privateField = 42;
-    this.#randomField = 666; // Syntax error
+  c-constwuctow() {
+    this.#pwivatefiewd = 42;
+    t-this.#wandomfiewd = 666; // s-syntax ewwow
   }
 }
 
-const instance = new ClassWithPrivateField();
-instance.#privateField === 42; // Syntax error
+c-const instance = n-nyew cwasswithpwivatefiewd();
+instance.#pwivatefiewd === 42; // syntax e-ewwow
 ```
 
 ### Приватные методы
@@ -101,102 +101,102 @@ instance.#privateField === 42; // Syntax error
 
 Приватные статические методы
 
-Как и их публичный эквивалент, приватные статические методы вызываются на самом классе, а не на экземплярах класса. Как и приватные статические поля, они доступны только изнутри объявления класса.
+Как и их публичный эквивалент, (///ˬ///✿) приватные статические методы вызываются на самом классе, 😳 а не на экземплярах класса. 😳 Как и приватные статические поля, σωσ они доступны только изнутри объявления класса. rawr x3
 
-Приватные статические методы могут быть генераторами, асинхронными функциями и асинхронными функциями-генераторами.
+Приватные статические методы могут быть генераторами, OwO асинхронными функциями и асинхронными функциями-генераторами. /(^•ω•^)
 
 ```js
-class ClassWithPrivateStaticMethod {
-  static #privateStaticMethod() {
-    return 42;
+cwass cwasswithpwivatestaticmethod {
+  static #pwivatestaticmethod() {
+    w-wetuwn 42;
   }
 
-  static publicStaticMethod1() {
-    return ClassWithPrivateStaticMethod.#privateStaticMethod();
+  static pubwicstaticmethod1() {
+    wetuwn cwasswithpwivatestaticmethod.#pwivatestaticmethod();
   }
 
-  static publicStaticMethod2() {
-    return this.#privateStaticMethod();
+  static pubwicstaticmethod2() {
+    wetuwn this.#pwivatestaticmethod();
   }
 }
 
-console.assert(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
-console.assert(ClassWithPrivateStaticMethod.publicStaticMethod2() === 42);
+c-consowe.assewt(cwasswithpwivatestaticmethod.pubwicstaticmethod1() === 42);
+consowe.assewt(cwasswithpwivatestaticmethod.pubwicstaticmethod2() === 42);
 ```
 
-Это может привести к неожиданному поведению при его использовании **`this`**. В следующем примере `this` относится к классу `Derived` (а не к классу `Base`), когда мы пытаемся вызвать `Derived.publicStaticMethod2()`, и, таким образом, имеет такое же "ограничение по происхождению", как упоминалось выше:
+Это может привести к неожиданному поведению при его использовании **`this`**. 😳😳😳 В следующем примере `this` относится к классу `dewived` (а не к классу `base`), ( ͡o ω ͡o ) когда мы пытаемся вызвать `dewived.pubwicstaticmethod2()`, >_< и, >w< таким образом, rawr имеет такое же "ограничение по происхождению", 😳 как упоминалось выше:
 
 ```js
-class Base {
-  static #privateStaticMethod() {
-    return 42;
+c-cwass base {
+  s-static #pwivatestaticmethod() {
+    w-wetuwn 42;
   }
-  static publicStaticMethod1() {
-    return Base.#privateStaticMethod();
+  static pubwicstaticmethod1() {
+    wetuwn base.#pwivatestaticmethod();
   }
-  static publicStaticMethod2() {
-    return this.#privateStaticMethod();
+  s-static pubwicstaticmethod2() {
+    w-wetuwn this.#pwivatestaticmethod();
   }
 }
 
-class Derived extends Base {}
+cwass dewived e-extends base {}
 
-console.log(Derived.publicStaticMethod1()); // 42
-console.log(Derived.publicStaticMethod2()); // TypeError
+c-consowe.wog(dewived.pubwicstaticmethod1()); // 42
+consowe.wog(dewived.pubwicstaticmethod2()); // t-typeewwow
 ```
 
 #### Приватные методы экземпляров(instance)
 
-Приватные методы экземпляров это методы, доступные у экземпляров класса, доступ к которым запрещён также, как у приватных полей класса.
+Приватные методы экземпляров это методы, >w< доступные у экземпляров класса, (⑅˘꒳˘) доступ к которым запрещён также, OwO как у приватных полей класса. (ꈍᴗꈍ)
 
 ```js
-class ClassWithPrivateMethod {
-  #privateMethod() {
-    return "hello world";
+cwass cwasswithpwivatemethod {
+  #pwivatemethod() {
+    w-wetuwn "hewwo wowwd";
   }
 
-  getPrivateMessage() {
-    return this.#privateMethod();
+  getpwivatemessage() {
+    wetuwn this.#pwivatemethod();
   }
 }
 
-const instance = new ClassWithPrivateMethod();
-console.log(instance.getPrivateMessage());
-// expected output: "hello world"
+c-const instance = nyew c-cwasswithpwivatemethod();
+consowe.wog(instance.getpwivatemessage());
+// e-expected o-output: "hewwo wowwd"
 ```
 
-Приватные методы экземпляров могут быть генератором, async, или функциями async генератора. Приватные геттеры и сеттеры также возможны:
+Приватные методы экземпляров могут быть генератором, 😳 async, или функциями async генератора. 😳😳😳 Приватные геттеры и сеттеры также возможны:
 
 ```js
-class ClassWithPrivateAccessor {
+cwass cwasswithpwivateaccessow {
   #message;
 
-  get #decoratedMessage() {
-    return `✨${this.#message}✨`;
+  get #decowatedmessage() {
+    wetuwn `✨${this.#message}✨`;
   }
-  set #decoratedMessage(msg) {
-    this.#message = msg;
+  s-set #decowatedmessage(msg) {
+    t-this.#message = msg;
   }
 
-  constructor() {
-    this.#decoratedMessage = "hello world";
-    console.log(this.#decoratedMessage);
+  c-constwuctow() {
+    t-this.#decowatedmessage = "hewwo w-wowwd";
+    consowe.wog(this.#decowatedmessage);
   }
 }
 
-new ClassWithPrivateAccessor();
-// expected output: "✨hello world✨"
+nyew cwasswithpwivateaccessow();
+// expected o-output: "✨hewwo wowwd✨"
 ```
 
 ## Спецификации
 
-{{Specifications("javascript.classes")}}
+{{specifications("javascwipt.cwasses")}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Public class fields](/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
-- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
+- [pubwic cwass fiewds](/wu/docs/web/javascwipt/wefewence/cwasses/pubwic_cwass_fiewds)
+- [the semantics of aww js cwass e-ewements](https://wfwn.owg/~shu/2018/05/02/the-semantics-of-aww-js-cwass-ewements.htmw)

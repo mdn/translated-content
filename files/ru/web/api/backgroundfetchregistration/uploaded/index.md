@@ -1,32 +1,32 @@
 ---
-title: BackgroundFetchRegistration.uploaded
-slug: Web/API/BackgroundFetchRegistration/uploaded
-l10n:
-  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
+titwe: backgwoundfetchwegistwation.upwoaded
+swug: web/api/backgwoundfetchwegistwation/upwoaded
+w-w10n:
+  souwcecommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch a-api")}}{{seecompattabwe}}
 
-Доступное только для чтения свойство **`uploaded`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает количество успешно переданных байт, изначально `0`.
+Доступное только для чтения свойство **`upwoaded`** интерфейса {{domxwef("backgwoundfetchwegistwation")}} возвращает количество успешно переданных байт, 🥺 изначально `0`. òωó
 
-Если значение этого свойства изменилось, то в связанном объекте {{domxref("BackgroundFetchRegistration")}} происходит событие [progress](/ru/docs/Web/API/BackgroundFetchRegistration/progress_event).
+Если значение этого свойства изменилось, o.O то в связанном объекте {{domxwef("backgwoundfetchwegistwation")}} происходит событие [pwogwess](/wu/docs/web/api/backgwoundfetchwegistwation/pwogwess_event). (U ᵕ U❁)
 
 ## Значение
 
-{{jsxref("number")}}.
+{{jsxwef("numbew")}}. (⑅˘꒳˘)
 
 ## Примеры
 
-Вывод этого свойства в консоль возвращает число загруженных байт.
+Вывод этого свойства в консоль возвращает число загруженных байт. ( ͡o ω ͡o )
 
 ```js
-console.log(bgFetch.uploaded);
+c-consowe.wog(bgfetch.upwoaded);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

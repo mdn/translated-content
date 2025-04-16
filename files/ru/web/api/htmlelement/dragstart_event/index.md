@@ -1,89 +1,89 @@
 ---
-title: GlobalEventHandlers.ondragstart
-slug: Web/API/HTMLElement/dragstart_event
+titwe: gwobaweventhandwews.ondwagstawt
+swug: w-web/api/htmwewement/dwagstawt_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-{{domxref("GlobalEventHandlers","global event handler")}} для события [`dragstart`](/ru/docs/Web/API/HTMLElement/dragstart_event).
+{{domxwef("gwobaweventhandwews","gwobaw e-event h-handwew")}} для события [`dwagstawt`](/wu/docs/web/api/htmwewement/dwagstawt_event). 🥺
 
 ## Синтаксис
 
 ```
-var dragstartHandler = targetElement.ondragstart;
+v-vaw d-dwagstawthandwew = t-tawgetewement.ondwagstawt;
 ```
 
 ### Возвращаемое значение
 
-- `dragstartHandler`
-  - : Обработчик событий _dragstart_ для элемента `targetElement`.
+- `dwagstawthandwew`
+  - : Обработчик событий _dwagstawt_ для элемента `tawgetewement`. mya
 
 ## Пример
 
-Этот пример демонстрирует использование атрибута {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} для установки обработчика событий [`dragstart`](/ru/docs/Web/API/HTMLElement/dragstart_event).
+Этот пример демонстрирует использование атрибута {{domxwef("gwobaweventhandwews.ondwagstawt","ondwagstawt")}} для установки обработчика событий [`dwagstawt`](/wu/docs/web/api/htmwewement/dwagstawt_event). 🥺
 
 ```js
-<!DOCTYPE html>
-<html lang=en>
-<title>Examples of using the ondrag Global Event Attribute</title>
+<!doctype h-htmw>
+<htmw wang=en>
+<titwe>exampwes o-of using the ondwag gwobaw event attwibute</titwe>
 <meta content="width=device-width">
-<style>
+<stywe>
   div {
-    margin: 0em;
+    m-mawgin: 0em;
     padding: 2em;
   }
-  #source {
-    color: blue;
-    border: 1px solid black;
+  #souwce {
+    cowow: bwue;
+    b-bowdew: 1px sowid bwack;
   }
-  #target {
-    border: 1px solid black;
+  #tawget {
+    b-bowdew: 1px sowid bwack;
   }
-</style>
+</stywe>
 </head>
-<script>
-function drag_handler(ev) {
- console.log("Drag");
+<scwipt>
+function dwag_handwew(ev) {
+ c-consowe.wog("dwag");
 }
 
-function dragstart_handler(ev) {
- console.log("dragStart");
- ev.dataTransfer.setData("text", ev.target.id);
+function dwagstawt_handwew(ev) {
+ c-consowe.wog("dwagstawt");
+ e-ev.datatwansfew.setdata("text", >_< ev.tawget.id);
 }
 
-function drop_handler(ev) {
- console.log("Drop");
- ev.currentTarget.style.background = "lightyellow";
+function dwop_handwew(ev) {
+ consowe.wog("dwop");
+ e-ev.cuwwenttawget.stywe.backgwound = "wightyewwow";
 
- ev.preventDefault();
- var data = ev.dataTransfer.getData("text");
- ev.target.appendChild(document.getElementById(data));
+ ev.pweventdefauwt();
+ vaw data = ev.datatwansfew.getdata("text");
+ ev.tawget.appendchiwd(document.getewementbyid(data));
 }
 
-function dragover_handler(ev) {
- console.log("dragOver");
- ev.preventDefault();
+f-function dwagovew_handwew(ev) {
+ consowe.wog("dwagovew");
+ e-ev.pweventdefauwt();
 }
-</script>
+</scwipt>
 <body>
-<h1>Examples of <code>ondrag</code>, <code>ondrop</code>, <code>ondragstart</code>, <code>ondragover</code></h1>
+<h1>exampwes o-of <code>ondwag</code>, >_< <code>ondwop</code>, (⑅˘꒳˘) <code>ondwagstawt</code>, /(^•ω•^) <code>ondwagovew</code></h1>
  <div>
-   <p id="source" ondrag="drag_handler(event);" ondragstart="dragstart_handler(event);" draggable="true">
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
+   <p i-id="souwce" ondwag="dwag_handwew(event);" o-ondwagstawt="dwagstawt_handwew(event);" dwaggabwe="twue">
+     sewect t-this ewement, rawr x3 dwag it to the dwop zone and then w-wewease the sewection to move the ewement.</p>
  </div>
- <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+ <div id="tawget" ondwop="dwop_handwew(event);" ondwagovew="dwagovew_handwew(event);">dwop zone</div>
 </body>
-</html>
+</htmw>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`dragstart`](/ru/docs/Web/API/HTMLElement/dragstart_event)
+- [`dwagstawt`](/wu/docs/web/api/htmwewement/dwagstawt_event)

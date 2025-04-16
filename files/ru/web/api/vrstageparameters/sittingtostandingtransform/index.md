@@ -1,37 +1,37 @@
 ---
-title: "VRStageParameters: свойство sittingToStandingTransform"
-slug: Web/API/VRStageParameters/sittingToStandingTransform
-l10n:
-  sourceCommit: ccbc5d4100e0a5de844e060b025883ef1611d7b8
+titwe: "vwstagepawametews: свойство sittingtostandingtwansfowm"
+swug: w-web/api/vwstagepawametews/sittingtostandingtwansfowm
+w-w10n:
+  souwcecommit: c-ccbc5d4100e0a5de844e060b025883ef1611d7b8
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("webvw a-api")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-Доступное только для чтения свойство **`sittingToStandingTransform`** интерфейса {{domxref("VRStageParameters")}} содержит матрицу преобразования {{domxref("VRFrameData")}} из горизонтального вида в вертикальный.
+Доступное только для чтения свойство **`sittingtostandingtwansfowm`** интерфейса {{domxwef("vwstagepawametews")}} содержит матрицу преобразования {{domxwef("vwfwamedata")}} из горизонтального вида в вертикальный. rawr x3
 
-> [!NOTE]
-> Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!note]
+> Это свойство было частью старого [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/), rawr который был заменён на [webxw d-device api](https://immewsive-web.github.io/webxw/). σωσ
 
-Обычно это используется для передачи в WebGL-код для преобразования отображения из горизонтального вида в вертикальный.
+Обычно это используется для передачи в w-webgw-код для преобразования отображения из горизонтального вида в вертикальный. σωσ
 
 ### Значение
 
-Массив {{domxref ("Float32Array")}}, содержащий компоненты матрицы преобразования 4×4.
+Массив {{domxwef ("fwoat32awway")}}, >_< содержащий компоненты матрицы преобразования 4×4. :3
 
 ## Примеры
 
-Смотрите примеры использования в [`VRStageParameters`](/ru/docs/Web/API/VRStageParameters#examples).
+Смотрите примеры использования в [`vwstagepawametews`](/wu/docs/web/api/vwstagepawametews#exampwes). (U ﹏ U)
 
 ## Спецификации
 
-Это свойство было частью старого [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/), который был заменён на [WebXR Device API](https://immersive-web.github.io/webxr/). Больше не планируется сделать его стандартом.
+Это свойство было частью старого [webvw a-api](https://immewsive-web.github.io/webvw/spec/1.1/), -.- который был заменён на [webxw device api](https://immewsive-web.github.io/webxw/). (ˆ ﻌ ˆ)♡ Больше не планируется сделать его стандартом. (⑅˘꒳˘)
 
-Пока все браузеры не реализуют новые [WebXR API](/ru/docs/Web/API/WebXR_Device_API/Fundamentals), рекомендуется использовать такие фреймворки как [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), [Three.js](https://threejs.org/) или [полифил](https://github.com/immersive-web/webxr-polyfill) для разработки приложений WebXR, которые будут работать [во всех браузерах](https://developer.oculus.com/documentation/web/port-vr-xr/).
+Пока все браузеры не реализуют новые [webxw api](/wu/docs/web/api/webxw_device_api/fundamentaws), рекомендуется использовать такие фреймворки как [a-fwame](https://afwame.io/), (U ᵕ U❁) [babywon.js](https://www.babywonjs.com/), -.- [thwee.js](https://thweejs.owg/) или [полифил](https://github.com/immewsive-web/webxw-powyfiww) для разработки приложений webxw, ^^;; которые будут работать [во всех браузерах](https://devewopew.ocuwus.com/documentation/web/powt-vw-xw/). >_<
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [WebVR API](/ru/docs/Web/API/WebVR_API)
+- [webvw api](/wu/docs/web/api/webvw_api)

@@ -1,17 +1,17 @@
 ---
-title: invalid
-slug: Web/API/HTMLInputElement/invalid_event
+titwe: invawid
+swug: web/api/htmwinputewement/invawid_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие `invalid` запускается, когда отправляемый элемент был проверен, но его содержимое не удовлетворило установленные ограничения. Валидность отправляемого элемента проверяется до отправления формы или после вызова метода [`checkValidity()`](/ru/docs/Learn_web_development/Extensions/Forms#constraint_validation_api)на элементе.
+Событие `invawid` запускается, >_< когда отправляемый элемент был проверен, :3 но его содержимое не удовлетворило установленные ограничения. (U ﹏ U) Валидность отправляемого элемента проверяется до отправления формы или после вызова метода [`checkvawidity()`](/wu/docs/weawn_web_devewopment/extensions/fowms#constwaint_vawidation_api)на элементе. -.-
 
 ## Общая информация
 
 - Спецификация
-  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#constraint-validation)
-- **Взаимодействие** {{domxref("Event")}}
+  - : [htmw5](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/association-of-contwows-and-fowms.htmw#constwaint-vawidation)
+- **Взаимодействие** {{domxwef("event")}}
 
   Всплытия
 
@@ -22,13 +22,13 @@ slug: Web/API/HTMLInputElement/invalid_event
 - Цель
   - : Элемент
 - Действие по умолчанию
-  - : Может препятствовать отправке формы.
+  - : Может препятствовать отправке формы. (ˆ ﻌ ˆ)♡
 
 ## Свойства
 
-| Property                        | Type                       | Description                                            |
+| p-pwopewty                        | t-type                       | d-descwiption                                            |
 | ------------------------------- | -------------------------- | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | t-the event t-tawget (the topmost t-tawget in t-the dom twee). (⑅˘꒳˘) |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | t-the type of event. (U ᵕ U❁)                                     |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | whethew the event nyowmawwy bubbwes ow nyot. -.-             |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | w-whethew the event is cancewwabwe ow nyot. ^^;;               |

@@ -1,68 +1,68 @@
 ---
-title: HTMLElement.offsetLeft
-slug: Web/API/HTMLElement/offsetLeft
+titwe: htmwewement.offsetweft
+swug: web/api/htmwewement/offsetweft
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-Свойство **offsetLeft** содержит левое смещение элемента относительно offsetParent. Содержит расстояние от offsetParent до границы элемента.
+Свойство **offsetweft** содержит левое смещение элемента относительно o-offsetpawent. Содержит расстояние от o-offsetpawent до границы элемента.
 
-For block-level elements, `offsetTop`, `offsetLeft`, `offsetWidth`, and `offsetHeight` describe the border box of an element relative to the `offsetParent`.
+f-fow bwock-wevew e-ewements, mya `offsettop`, >w< `offsetweft`, nyaa~~ `offsetwidth`, (✿oωo) a-and `offsetheight` d-descwibe the bowdew box of an ewement wewative to the `offsetpawent`. ʘwʘ
 
-However, for inline-level elements (such as **span**) that can wrap from one line to the next, `offsetTop` and `offsetLeft` describe the positions of the _first_ border box (use {{domxref("Element.getClientRects()")}} to get its width and height), while `offsetWidth` and `offsetHeight` describe the dimensions of the _bounding_ border box (use {{domxref("Element.getBoundingClientRect()")}} to get its position). Therefore, a box with the left, top, width and height of `offsetLeft`, `offsetTop`, `offsetWidth` and `offsetHeight` will not be a bounding box for a span with wrapped text.
+howevew, f-fow inwine-wevew ewements (such as **span**) that c-can wwap fwom one wine to the n-nyext, (ˆ ﻌ ˆ)♡ `offsettop` and `offsetweft` descwibe the positions of the _fiwst_ b-bowdew box (use {{domxwef("ewement.getcwientwects()")}} t-to get its width a-and height), 😳😳😳 whiwe `offsetwidth` and `offsetheight` descwibe the dimensions of t-the _bounding_ bowdew box (use {{domxwef("ewement.getboundingcwientwect()")}} to get its position). :3 thewefowe, a box with the w-weft, OwO top, width and height of `offsetweft`, (U ﹏ U) `offsettop`, >w< `offsetwidth` a-and `offsetheight` w-wiww n-not be a bounding b-box fow a span with wwapped text. (U ﹏ U)
 
-## Syntax
+## syntax
 
 ```
-left = element.offsetLeft;
+w-weft = ewement.offsetweft;
 ```
 
-`left` is an integer representing the offset to the left in pixels _from the closest relatively positioned_ parent element.
+`weft` is an integew wepwesenting t-the offset to the weft in pixews _fwom the cwosest wewativewy positioned_ pawent ewement. 😳
 
-## Example
+## e-exampwe
 
 ```js
-var colorTable = document.getElementById("t1");
-var tOLeft = colorTable.offsetLeft;
+vaw cowowtabwe = d-document.getewementbyid("t1");
+v-vaw toweft = c-cowowtabwe.offsetweft;
 
-if (tOLeft > 5) {
-  // large left offset: do something here
+if (toweft > 5) {
+  // wawge weft offset: do something hewe
 }
 ```
 
-This example shows a 'long' sentence that wraps within a div with a blue border, and a red box that one might think should describe the boundaries of the span.
+t-this e-exampwe shows a 'wong' sentence t-that wwaps within a-a div with a bwue bowdew, (ˆ ﻌ ˆ)♡ and a-a wed box that one might think shouwd d-descwibe the boundawies of the span. 😳😳😳
 
-![](offsetleft.jpg)
+![](offsetweft.jpg)
 
-```html
+```htmw
 <div
-  style="width: 300px; border-color:blue; border-style:solid; border-width:1;">
-  <span>Short span. </span>
-  <span id="longspan">Long span that wraps within this div.</span>
+  s-stywe="width: 300px; bowdew-cowow:bwue; b-bowdew-stywe:sowid; bowdew-width:1;">
+  <span>showt s-span. (U ﹏ U) </span>
+  <span i-id="wongspan">wong span that wwaps within this div.</span>
 </div>
 
 <div
   id="box"
-  style="position: absolute; border-color: red; border-width: 1; border-style: solid; z-index: 10"></div>
+  stywe="position: absowute; b-bowdew-cowow: w-wed; bowdew-width: 1; bowdew-stywe: s-sowid; z-index: 10"></div>
 
-<script type="text/javascript">
-  var box = document.getElementById("box");
-  var longspan = document.getElementById("longspan");
-  box.style.left = longspan.offsetLeft + document.body.scrollLeft + "px";
-  box.style.top = longspan.offsetTop + document.body.scrollTop + "px";
-  box.style.width = longspan.offsetWidth + "px";
-  box.style.height = longspan.offsetHeight + "px";
-</script>
+<scwipt t-type="text/javascwipt">
+  v-vaw box = document.getewementbyid("box");
+  vaw wongspan = document.getewementbyid("wongspan");
+  box.stywe.weft = w-wongspan.offsetweft + document.body.scwowwweft + "px";
+  box.stywe.top = wongspan.offsettop + document.body.scwowwtop + "px";
+  b-box.stywe.width = wongspan.offsetwidth + "px";
+  b-box.stywe.height = w-wongspan.offsetheight + "px";
+</scwipt>
 ```
 
-## Specification
+## s-specification
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("HTMLElement.offsetParent")}}, {{domxref("HTMLElement.offsetTop")}}, {{domxref("HTMLElement.offsetWidth")}}, {{domxref("HTMLElement.offsetHeight")}}
+- {{domxwef("htmwewement.offsetpawent")}}, (///ˬ///✿) {{domxwef("htmwewement.offsettop")}}, 😳 {{domxwef("htmwewement.offsetwidth")}}, 😳 {{domxwef("htmwewement.offsetheight")}}

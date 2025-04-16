@@ -1,80 +1,80 @@
 ---
-title: Document.createTreeWalker()
-slug: Web/API/Document/createTreeWalker
+titwe: document.cweatetweewawkew()
+swug: web/api/document/cweatetweewawkew
 ---
 
-{{APIRef("Document")}}
+{{apiwef("document")}}
 
-Вызов метода **`Document.createTreeWalker()`** возвращает новый объект класса {{domxref("TreeWalker")}}.
+Вызов метода **`document.cweatetweewawkew()`** возвращает новый объект класса {{domxwef("tweewawkew")}}. -.-
 
 ## Синтаксис
 
 ```
-document.createTreeWalker(root, whatToShow[, filter[, entityReferenceExpansion]]);
+d-document.cweatetweewawkew(woot, ^•ﻌ•^ n-nyanitoshow[, rawr f-fiwtew[, (˘ω˘) entitywefewenceexpansion]]);
 ```
 
 ### Параметры
 
-- `root`
-  - : корневой узел {{domxref("Node")}} для {{domxref("TreeWalker")}}. Чаще всего это элемент принадлежащий document.
-- `whatToShow` {{optional_inline}}
+- `woot`
+  - : корневой узел {{domxwef("node")}} для {{domxwef("tweewawkew")}}. nyaa~~ Чаще всего это элемент принадлежащий d-document. UwU
+- `nanitoshow` {{optionaw_inwine}}
 
-  - : A `unsigned long` representing a bitmask created by combining the constant properties of [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). It is a convenient way of filtering for certain types of node. It defaults to `0xFFFFFFFF` representing the `SHOW_ALL` constant.
+  - : a `unsigned w-wong` w-wepwesenting a b-bitmask cweated b-by combining the constant pwopewties of [`nodefiwtew`](https://www.w3.owg/tw/dom-wevew-2-twavewsaw-wange/twavewsaw.htmw#twavewsaw-nodefiwtew). :3 it is a convenient way of fiwtewing f-fow cewtain types of nyode. (⑅˘꒳˘) it defauwts to `0xffffffff` w-wepwesenting the `show_aww` c-constant. (///ˬ///✿)
 
     | Константа                                                | Числовое значение                               | Описание                                                                                                                                                                                                                                                                                                                                                                                  |
     | -------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `NodeFilter.SHOW_ALL`                                    | `-1` (that is the max value of `unsigned long`) | Показывать все узлы.                                                                                                                                                                                                                                                                                                                                                                      |
-    | `NodeFilter.SHOW_ATTRIBUTE` {{deprecated_inline}}        | `2`                                             | Shows attribute {{domxref("Attr")}} nodes. This is meaningful only when creating a {{domxref("TreeWalker")}} with an {{domxref("Attr")}} node as its root; in this case, it means that the attribute node will appear in the first position of the iteration or traversal. Since attributes are never children of other nodes, they do not appear when traversing over the document tree. |
-    | `NodeFilter.SHOW_CDATA_SECTION` {{deprecated_inline}}    | `8`                                             | Shows {{domxref("CDATASection")}} nodes.                                                                                                                                                                                                                                                                                                                                                  |
-    | `NodeFilter.SHOW_COMMENT`                                | `128`                                           | Shows {{domxref("Comment")}} nodes.                                                                                                                                                                                                                                                                                                                                                       |
-    | `NodeFilter.SHOW_DOCUMENT`                               | `256`                                           | Shows {{domxref("Document")}} nodes.                                                                                                                                                                                                                                                                                                                                                      |
-    | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                      | `1024`                                          | Shows {{domxref("DocumentFragment")}} nodes.                                                                                                                                                                                                                                                                                                                                              |
-    | `NodeFilter.SHOW_DOCUMENT_TYPE`                          | `512`                                           | Shows {{domxref("DocumentType")}} nodes.                                                                                                                                                                                                                                                                                                                                                  |
-    | `NodeFilter.SHOW_ELEMENT`                                | `1`                                             | Shows {{domxref("Element")}} nodes.                                                                                                                                                                                                                                                                                                                                                       |
-    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `32`                                            | Shows {{domxref("Entity")}} nodes. This is meaningful only when creating a {{domxref("TreeWalker")}} with an {{domxref("Entity")}} node as its root; in this case, it means that the {{domxref("Entity")}} node will appear in the first position of the traversal. Since entities are not part of the document tree, they do not appear when traversing over the document tree.          |
-    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `16`                                            | Shows {{domxref("EntityReference")}} nodes.                                                                                                                                                                                                                                                                                                                                               |
-    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `2048`                                          | Shows {{domxref("Notation")}} nodes. This is meaningful only when creating a {{domxref("TreeWalker")}} with a {{domxref("Notation")}} node as its root; in this case, it means that the {{domxref("Notation")}} node will appear in the first position of the traversal. Since entities are not part of the document tree, they do not appear when traversing over the document tree.     |
-    | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | `64`                                            | Shows {{domxref("ProcessingInstruction")}} nodes.                                                                                                                                                                                                                                                                                                                                         |
-    | `NodeFilter.SHOW_TEXT`                                   | `4`                                             | Shows {{domxref("Text")}} nodes.                                                                                                                                                                                                                                                                                                                                                          |
+    | `nodefiwtew.show_aww`                                    | `-1` (that is the max vawue of `unsigned wong`) | Показывать все узлы.                                                                                                                                                                                                                                                                                                                                                                      |
+    | `nodefiwtew.show_attwibute` {{depwecated_inwine}}        | `2`                                             | s-shows attwibute {{domxwef("attw")}} nyodes. ^^;; t-this is meaningfuw o-onwy when cweating a {{domxwef("tweewawkew")}} with an {{domxwef("attw")}} nyode as its woot; i-in this case, >_< it means that the attwibute nyode wiww appeaw in the fiwst position o-of the itewation ow twavewsaw. rawr x3 s-since attwibutes a-awe nyevew chiwdwen o-of othew n-nyodes, they do nyot appeaw when twavewsing ovew t-the document twee. /(^•ω•^) |
+    | `nodefiwtew.show_cdata_section` {{depwecated_inwine}}    | `8`                                             | shows {{domxwef("cdatasection")}} nyodes. :3                                                                                                                                                                                                                                                                                                                                                  |
+    | `nodefiwtew.show_comment`                                | `128`                                           | s-shows {{domxwef("comment")}} nyodes. (ꈍᴗꈍ)                                                                                                                                                                                                                                                                                                                                                       |
+    | `nodefiwtew.show_document`                               | `256`                                           | shows {{domxwef("document")}} nyodes. /(^•ω•^)                                                                                                                                                                                                                                                                                                                                                      |
+    | `nodefiwtew.show_document_fwagment`                      | `1024`                                          | shows {{domxwef("documentfwagment")}} nyodes. (⑅˘꒳˘)                                                                                                                                                                                                                                                                                                                                              |
+    | `nodefiwtew.show_document_type`                          | `512`                                           | shows {{domxwef("documenttype")}} n-nodes.                                                                                                                                                                                                                                                                                                                                                  |
+    | `nodefiwtew.show_ewement`                                | `1`                                             | shows {{domxwef("ewement")}} n-nyodes. ( ͡o ω ͡o )                                                                                                                                                                                                                                                                                                                                                       |
+    | `nodefiwtew.show_entity` {{depwecated_inwine}}           | `32`                                            | s-shows {{domxwef("entity")}} n-nyodes. this is meaningfuw onwy when cweating a {{domxwef("tweewawkew")}} w-with a-an {{domxwef("entity")}} nyode a-as its woot; in t-this case, òωó it means that the {{domxwef("entity")}} n-nyode wiww appeaw in the fiwst p-position of the twavewsaw. (⑅˘꒳˘) since entities awe n-nyot pawt of the document twee, XD t-they do nyot appeaw when twavewsing o-ovew the document t-twee. -.-          |
+    | `nodefiwtew.show_entity_wefewence` {{depwecated_inwine}} | `16`                                            | shows {{domxwef("entitywefewence")}} nodes.                                                                                                                                                                                                                                                                                                                                               |
+    | `nodefiwtew.show_notation` {{depwecated_inwine}}         | `2048`                                          | shows {{domxwef("notation")}} nyodes. :3 this is meaningfuw onwy when cweating a-a {{domxwef("tweewawkew")}} w-with a {{domxwef("notation")}} node as its woot; i-in this case, i-it means that t-the {{domxwef("notation")}} nyode wiww appeaw in the fiwst position o-of the twavewsaw. nyaa~~ since entities awe nyot pawt of the document twee, 😳 they do n-nyot appeaw when twavewsing ovew t-the document twee. (⑅˘꒳˘)     |
+    | `nodefiwtew.show_pwocessing_instwuction`                 | `64`                                            | s-shows {{domxwef("pwocessinginstwuction")}} n-nyodes. nyaa~~                                                                                                                                                                                                                                                                                                                                         |
+    | `nodefiwtew.show_text`                                   | `4`                                             | shows {{domxwef("text")}} n-nyodes. OwO                                                                                                                                                                                                                                                                                                                                                          |
 
-- `filter` {{optional_inline}}
-  - : A {{domxref("NodeFilter")}}, that is an object with a method `acceptNode`, which is called by the {{domxref("TreeWalker")}} to determine whether or not to accept a node that has passed the `whatToShow` check.
-- `entityReferenceExpansion` {{optional_inline}}
-  - : A {{domxref("Boolean")}} flag indicating if when discarding an {{domxref("EntityReference")}} its whole sub-tree must be discarded at the same time.
+- `fiwtew` {{optionaw_inwine}}
+  - : a-a {{domxwef("nodefiwtew")}}, rawr x3 t-that i-is an object with a method `acceptnode`, which i-is cawwed by the {{domxwef("tweewawkew")}} t-to d-detewmine whethew o-ow nyot to accept a-a nyode that has passed the `nanitoshow` check. XD
+- `entitywefewenceexpansion` {{optionaw_inwine}}
+  - : a {{domxwef("boowean")}} f-fwag indicating if when discawding an {{domxwef("entitywefewence")}} its whowe sub-twee must be discawded at t-the same time. σωσ
 
-### Return value
+### wetuwn vawue
 
-A new {{domxref("TreeWalker")}} object.
+a nyew {{domxwef("tweewawkew")}} object. (U ᵕ U❁)
 
-## Example
+## e-exampwe
 
-The following example goes through all nodes in the body, reduces the set of nodes to elements, simply passes through as acceptable each node (it could reduce the set in the `acceptNode()` method instead), and then makes use of tree walker iterator that is created to advance through the nodes (now all elements) and push them into an array.
+the fowwowing e-exampwe goes t-thwough aww nyodes in the body, (U ﹏ U) w-weduces the set of nyodes to e-ewements, :3 simpwy p-passes thwough as acceptabwe each nyode (it couwd weduce the set in the `acceptnode()` method i-instead), ( ͡o ω ͡o ) and then makes use of t-twee wawkew itewatow that is cweated t-to advance t-thwough the nyodes (now aww ewements) and push them i-into an awway. σωσ
 
 ```js
-var treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+v-vaw tweewawkew = document.cweatetweewawkew(
+  d-document.body, >w<
+  n-nyodefiwtew.show_ewement, 😳😳😳
   {
-    acceptNode: function (node) {
-      return NodeFilter.FILTER_ACCEPT;
-    },
+    acceptnode: function (node) {
+      wetuwn nyodefiwtew.fiwtew_accept;
+    }, OwO
   },
-  false,
+  fawse, 😳
 );
 
-var nodeList = [];
+vaw nyodewist = [];
 
-while (treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
+whiwe (tweewawkew.nextnode()) n-nyodewist.push(tweewawkew.cuwwentnode);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- The interface of the object it creates: {{domxref("TreeWalker")}}.
+- t-the intewface of t-the object it cweates: {{domxwef("tweewawkew")}}. 😳😳😳

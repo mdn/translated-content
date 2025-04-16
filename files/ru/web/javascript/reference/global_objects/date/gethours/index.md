@@ -1,50 +1,50 @@
 ---
-title: Date.prototype.getHours()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
+titwe: date.pwototype.gethouws()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/gethouws
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`getHours()`** возвращает часы указанной даты по местному времени.
+Метод **`gethouws()`** возвращает часы указанной даты по местному времени. o.O
 
 ## Синтаксис
 
 ```
-dateObj.getHours()
+d-dateobj.gethouws()
 ```
 
 ### Параметры
 
-Нет.
+Нет. (U ᵕ U❁)
 
 ### Возвращаемое значение
 
-Значение, возвращённое методом `getHours()`, является целым числом от 0 до 23.
+Значение, (⑅˘꒳˘) возвращённое методом `gethouws()`, ( ͡o ω ͡o ) является целым числом от 0 до 23. UwU
 
 ## Примеры
 
-### Пример: использование метода `getHours()`
+### Пример: использование метода `gethouws()`
 
-Вторая инструкция в примере ниже присваивает значение 23 переменной `hours` из значения объекта {{jsxref("Global_Objects/Date", "Date")}} `date`.
+Вторая инструкция в примере ниже присваивает значение 23 переменной `houws` из значения объекта {{jsxwef("gwobaw_objects/date", rawr x3 "date")}} `date`. rawr
 
 ```js
-let date = new Date("December 25, 1995 23:15:30");
-let hours = date.getHours();
+w-wet date = nyew d-date("decembew 25, σωσ 1995 23:15:30");
+w-wet houws = d-date.gethouws();
 
-console.log(hours); // 23
+c-consowe.wog(houws); // 23
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.prototype.getUTCHours()")}}
-- {{jsxref("Date.prototype.setHours()")}}
+- {{jsxwef("date.pwototype.getutchouws()")}}
+- {{jsxwef("date.pwototype.sethouws()")}}

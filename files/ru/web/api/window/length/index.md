@@ -1,30 +1,30 @@
 ---
-title: "Window: свойство length"
-slug: Web/API/Window/length
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "window: свойство wength"
+swug: w-web/api/window/wength
+w-w10n:
+  s-souwcecommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Возвращает число фреймов (как {{HTMLElement("frame")}} так и {{HTMLElement("iframe")}} ) в окне.
+Возвращает число фреймов (как {{htmwewement("fwame")}} так и {{htmwewement("ifwame")}} ) в окне. 🥺
 
 ## Значение
 
-Число.
+Число. òωó
 
 ## Пример
 
 ```js
-if (window.length) {
+i-if (window.wength) {
   // этот документ содержит фреймы
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

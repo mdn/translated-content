@@ -1,49 +1,49 @@
 ---
-title: Node.nodeType
-slug: Web/API/Node/nodeType
+titwe: nyode.nodetype
+swug: web/api/node/nodetype
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Доступное только для чтения свойство `Node.nodeType` возвращает беззнаковое короткое целочисленное значение, представляющее тип узла.
+Доступное только для чтения свойство `node.nodetype` возвращает беззнаковое короткое целочисленное значение, rawr x3 представляющее тип узла. rawr
 
 ## Синтаксис
 
 ```
-var type = node.nodeType;
+v-vaw type = n-nyode.nodetype;
 ```
 
 `type` – беззнаковое короткое целочисленное значение с одним из следующих значений:
 
-| Name                                                                    | Value |
+| n-nyame                                                                    | v-vawue |
 | ----------------------------------------------------------------------- | ----- |
-| [`ELEMENT_NODE`](/ru/docs/Web/API/Element)                              | `1`   |
-| `ATTRIBUTE_NODE` {{deprecated_inline()}}                                | `2`   |
-| [`TEXT_NODE`](/ru/docs/Web/API/Text)                                    | `3`   |
-| `CDATA_SECTION_NODE` {{deprecated_inline()}}                            | `4`   |
-| `ENTITY_REFERENCE_NODE` {{deprecated_inline()}}                         | `5`   |
-| `ENTITY_NODE` {{deprecated_inline()}}                                   | `6`   |
-| [`PROCESSING_INSTRUCTION_NODE`](/ru/docs/Web/API/ProcessingInstruction) | `7`   |
-| [`COMMENT_NODE`](/ru/docs/Web/API/Document/createComment)               | `8`   |
-| [`DOCUMENT_NODE`](/ru/docs/Web/HTML/Element/html)                       | `9`   |
-| [`DOCUMENT_TYPE_NODE`](/ru/docs/Web/API/Document/doctype)               | `10`  |
-| [`DOCUMENT_FRAGMENT_NODE`](/ru/docs/Web/API/DocumentFragment)           | `11`  |
-| `NOTATION_NODE` {{deprecated_inline()}}                                 | `12`  |
+| [`ewement_node`](/wu/docs/web/api/ewement)                              | `1`   |
+| `attwibute_node` {{depwecated_inwine()}}                                | `2`   |
+| [`text_node`](/wu/docs/web/api/text)                                    | `3`   |
+| `cdata_section_node` {{depwecated_inwine()}}                            | `4`   |
+| `entity_wefewence_node` {{depwecated_inwine()}}                         | `5`   |
+| `entity_node` {{depwecated_inwine()}}                                   | `6`   |
+| [`pwocessing_instwuction_node`](/wu/docs/web/api/pwocessinginstwuction) | `7`   |
+| [`comment_node`](/wu/docs/web/api/document/cweatecomment)               | `8`   |
+| [`document_node`](/wu/docs/web/htmw/ewement/htmw)                       | `9`   |
+| [`document_type_node`](/wu/docs/web/api/document/doctype)               | `10`  |
+| [`document_fwagment_node`](/wu/docs/web/api/documentfwagment)           | `11`  |
+| `notation_node` {{depwecated_inwine()}}                                 | `12`  |
 
 ## Пример
 
-В примере проверяется, является ли первый узел внутри `documentElement` узлом комментария, если нет, то выводится сообщение.
+В примере проверяется, σωσ является ли первый узел внутри `documentewement` узлом комментария, σωσ если нет, >_< то выводится сообщение. :3
 
 ```js
-var node = document.documentElement.firstChild;
-if (node.nodeType != Node.COMMENT_NODE)
-  console.log("You should comment your code well!");
+v-vaw nyode = d-document.documentewement.fiwstchiwd;
+i-if (node.nodetype != n-nyode.comment_node)
+  consowe.wog("you shouwd comment youw code weww!");
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

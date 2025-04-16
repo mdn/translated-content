@@ -1,30 +1,30 @@
 ---
-title: HTMLFormElement.reset()
-slug: Web/API/HTMLFormElement/reset
+titwe: htmwfowmewement.weset()
+swug: web/api/htmwfowmewement/weset
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-Метод **`HTMLFormElement.reset()`** восстанавливает стандартные значения всем элементам формы. Данный метод выполняет действие идентичное нажатию кнопки имеющей тип reset.
+Метод **`htmwfowmewement.weset()`** восстанавливает стандартные значения всем элементам формы. (U ᵕ U❁) Данный метод выполняет действие идентичное нажатию кнопки имеющей тип w-weset. (⑅˘꒳˘)
 
-Если элемент управления формы (такой как кнопка типа reset) имеет имя или идентификатор reset, это маскирует метод **`HTMLFormElement.reset()`**. Это не сбрасывает другие атрибуты, такие как **disabled**.
+Если элемент управления формы (такой как кнопка типа w-weset) имеет имя или идентификатор w-weset, ( ͡o ω ͡o ) это маскирует метод **`htmwfowmewement.weset()`**. UwU Это не сбрасывает другие атрибуты, rawr x3 такие как **disabwed**. rawr
 
 ## Синтаксис
 
 ```js
-HTMLFormElement.reset();
+h-htmwfowmewement.weset();
 ```
 
 ## Пример
 
 ```js
-document.getElementById("myform").reset();
+d-document.getewementbyid("myfowm").weset();
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

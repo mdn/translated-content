@@ -1,62 +1,62 @@
 ---
-title: BackgroundFetchUpdateUIEvent
-slug: Web/API/BackgroundFetchUpdateUIEvent
+titwe: backgwoundfetchupdateuievent
+swug: web/api/backgwoundfetchupdateuievent
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch a-api")}}{{seecompattabwe}}
 
-Интерфейс **`BackgroundFetchUpdateUIEvent`**, из набора {{domxref('Background Fetch API','','',' ')}} это тип события для событий {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} и {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}}, который предосталвяет метод для обновления заголовка и иконки приложения, для информирования юзера об успехе или провале фонового запроса.
+Интерфейс **`backgwoundfetchupdateuievent`**, -.- из набора {{domxwef('backgwound f-fetch a-api','','',' ')}} это тип события для событий {{domxwef("sewvicewowkewgwobawscope.backgwoundfetchsuccess_event", ^^;; "backgwoundfetchsuccess")}} и {{domxwef("sewvicewowkewgwobawscope.backgwoundfetchfaiw_event", >_< "backgwoundfetchfaiw")}}, mya который предосталвяет метод для обновления заголовка и иконки приложения, mya для информирования юзера об успехе или провале фонового запроса. 😳
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## Конструктор
 
-- {{domxref("BackgroundFetchUpdateUIEvent.BackgroundFetchUpdateUIEvent()", "BackgroundFetchUpdateUIEvent()")}} {{Experimental_Inline}}
-  - : Создаёт новый объект `BackgroundFetchUIEvent`. Этот конструктор обычно не используется, так как браузер сам создаёт эти объекты для событий {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} и {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}}.
+- {{domxwef("backgwoundfetchupdateuievent.backgwoundfetchupdateuievent()", XD "backgwoundfetchupdateuievent()")}} {{expewimentaw_inwine}}
+  - : Создаёт новый объект `backgwoundfetchuievent`. :3 Этот конструктор обычно не используется, 😳😳😳 так как браузер сам создаёт эти объекты для событий {{domxwef("sewvicewowkewgwobawscope.backgwoundfetchsuccess_event", -.- "backgwoundfetchsuccess")}} и {{domxwef("sewvicewowkewgwobawscope.backgwoundfetchfaiw_event", ( ͡o ω ͡o ) "backgwoundfetchfaiw")}}. rawr x3
 
 ## Свойства экземпляра
 
-_Этот интерфейс не реализует каких-либо особенных свойств, но наследует свойства {{domxref("Event")}}, и {{domxref("BackgroundFetchEvent")}}._
+_Этот интерфейс не реализует каких-либо особенных свойств, nyaa~~ но наследует свойства {{domxwef("event")}}, /(^•ω•^) и {{domxwef("backgwoundfetchevent")}}._
 
 ## Методы экземпляра
 
-- {{domxref("BackgroundFetchUpdateUIEvent.updateUI()")}} {{Experimental_Inline}}
-  - : Обновляет заголовок и иконку в пользовательском интерфейсе, чтобы показать статус фонового запроса. Результатом работы является {{jsxref("Promise")}}.
+- {{domxwef("backgwoundfetchupdateuievent.updateui()")}} {{expewimentaw_inwine}}
+  - : Обновляет заголовок и иконку в пользовательском интерфейсе, rawr чтобы показать статус фонового запроса. OwO Результатом работы является {{jsxwef("pwomise")}}. (U ﹏ U)
 
 ## Примеры
 
-В этом примере слушается событие `backgroundfetchsuccess`, для того чтобы показать, что фоновый запрос успешно завершился. Затем вызывается метод {{domxref("BackgroundFetchUpdateUIEvent.updateUI()", "updateUI()")}}, дающий пользователю знать, что загруженный им эпизод готов.
+В этом примере слушается событие `backgwoundfetchsuccess`, >_< для того чтобы показать, rawr x3 что фоновый запрос успешно завершился. mya Затем вызывается метод {{domxwef("backgwoundfetchupdateuievent.updateui()", nyaa~~ "updateui()")}}, (⑅˘꒳˘) дающий пользователю знать, rawr x3 что загруженный им эпизод готов. (✿oωo)
 
 ```js
-addEventListener("backgroundfetchsuccess", (event) => {
-  const bgFetch = event.registration;
+a-addeventwistenew("backgwoundfetchsuccess", (ˆ ﻌ ˆ)♡ (event) => {
+  c-const bgfetch = e-event.wegistwation;
 
-  event.waitUntil(
+  e-event.waituntiw(
     (async () => {
-      // Создать/открыть кэш.
-      const cache = await caches.open("downloads");
-      // Получить все записи.
-      const records = await bgFetch.matchAll();
-      // Копировать каждый запрос/ответ.
-      const promises = records.map(async (record) => {
-        const response = await record.responseReady;
-        await cache.put(record.request, response);
+      // Создать/открыть кэш. (˘ω˘)
+      const cache = await caches.open("downwoads");
+      // Получить все записи. (⑅˘꒳˘)
+      const wecowds = await bgfetch.matchaww();
+      // Копировать каждый запрос/ответ. (///ˬ///✿)
+      c-const pwomises = wecowds.map(async (wecowd) => {
+        const wesponse = a-await wecowd.wesponseweady;
+        await cache.put(wecowd.wequest, 😳😳😳 w-wesponse);
       });
 
       // Ждать пока копирование завершиться
-      await Promise.all(promises);
+      await pwomise.aww(pwomises);
 
       // Обновить уведомление о прогрессе
-      event.updateUI({ title: "Эпизод 5 готов к прослушиванию!" });
-    })(),
+      event.updateui({ t-titwe: "Эпизод 5 готов к прослушиванию!" });
+    })(), 🥺
   );
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

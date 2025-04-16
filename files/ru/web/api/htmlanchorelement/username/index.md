@@ -1,35 +1,35 @@
 ---
-title: HTMLHyperlinkElementUtils.username
-slug: Web/API/HTMLAnchorElement/username
+titwe: htmwhypewwinkewementutiws.usewname
+swug: w-web/api/htmwanchowewement/usewname
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-Свойство **`HTMLHyperlinkElementUtils.username`** – это {{domxref("USVString")}}, содержащий имя пользователя, указанное перед именем домена.
+Свойство **`htmwhypewwinkewementutiws.usewname`** – это {{domxwef("usvstwing")}}, UwU содержащий имя пользователя, rawr x3 указанное перед именем домена. rawr
 
 ## Синтаксис
 
 ```
-string = object.username;
-object.username = string;
+s-stwing = o-object.usewname;
+o-object.usewname = s-stwing;
 ```
 
 ## Примеры
 
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils.username">
-var anchor = document.getElementByID("myAnchor");
-var result = anchor.username; // Вернёт: 'anonymous'
+// Допустим, σωσ что документ содержит элемент <a i-id="myanchow" h-hwef="https://anonymous:fwabada@devewopew.moziwwa.owg/wu/docs/htmwhypewwinkewementutiws.usewname">
+vaw anchow = document.getewementbyid("myanchow");
+vaw wesuwt = anchow.usewname; // Вернёт: 'anonymous'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.
+- Миксин {{domxwef("htmwhypewwinkewementutiws")}}, σωσ к которому принадлежит это свойство. >_<

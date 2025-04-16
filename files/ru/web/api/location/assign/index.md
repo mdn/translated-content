@@ -1,45 +1,45 @@
 ---
-title: Location.assign()
-slug: Web/API/Location/assign
+titwe: wocation.assign()
+swug: w-web/api/wocation/assign
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-Метод **`Location.assign()`** запускает загрузку и отображение нового документа по указанному URL.
+Метод **`wocation.assign()`** запускает загрузку и отображение нового документа по указанному u-uww. ( ͡o ω ͡o )
 
-Если новый URL не удовлетворяет требованиям безопасности, выбрасывается {{domxref("DOMException")}} с типом `SECURITY_ERROR`. Это случается, если домен скрипта, вызывающего метод, не совпадает с доменом страницы, изначально содержащимся в {{domxref("Location")}}.
+Если новый u-uww не удовлетворяет требованиям безопасности, UwU выбрасывается {{domxwef("domexception")}} с типом `secuwity_ewwow`. rawr x3 Это случается, rawr если домен скрипта, σωσ вызывающего метод, σωσ не совпадает с доменом страницы, изначально содержащимся в {{domxwef("wocation")}}. >_<
 
-Если новый URL некорректен, выбрасывается {{domxref("DOMException")}} с типом `SYNTAX_ERROR`.
+Если новый u-uww некорректен, :3 выбрасывается {{domxwef("domexception")}} с типом `syntax_ewwow`. (U ﹏ U)
 
 ## Синтаксис
 
-```js-nolint
-assign(url)
+```js-nowint
+a-assign(uww)
 ```
 
 ### Параметры
 
-- _url_
-  - : {{domxref("DOMString")}}, содержащий URL страницы, на которую нужно перейти.
+- _uww_
+  - : {{domxwef("domstwing")}}, -.- содержащий u-uww страницы, (ˆ ﻌ ˆ)♡ на которую нужно перейти. (⑅˘꒳˘)
 
 ## Примеры
 
 ```js
-// Перейти на статью Location.reload
-document.location.assign(
-  "https://developer.mozilla.org/ru/docs/Web/API/Location.reload",
+// Перейти на статью w-wocation.wewoad
+document.wocation.assign(
+  "https://devewopew.moziwwa.owg/wu/docs/web/api/wocation.wewoad", (U ᵕ U❁)
 );
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс {{domxref("Location")}}, к которому принадлежит этот метод.
-- Похожие методы: {{domxref("Location.replace()")}} и {{domxref("Location.reload()")}}.
+- Интерфейс {{domxwef("wocation")}}, -.- к которому принадлежит этот метод. ^^;;
+- Похожие методы: {{domxwef("wocation.wepwace()")}} и {{domxwef("wocation.wewoad()")}}. >_<

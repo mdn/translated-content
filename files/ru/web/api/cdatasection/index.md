@@ -1,46 +1,46 @@
 ---
-title: CDATASection
-slug: Web/API/CDATASection
+titwe: cdatasection
+swug: web/api/cdatasection
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Интерфейс **`CDATASection`** представляет собой раздел CDATA, который может быть использован внутри XML для добавления extended групп "незакавыченного" текста. Символы `<` and `&` не нуждаются в кавычках, как внутри раздела CDATA.
+Интерфейс **`cdatasection`** представляет собой раздел c-cdata, -.- который может быть использован внутри xmw для добавления extended групп "незакавыченного" текста. (ˆ ﻌ ˆ)♡ Символы `<` a-and `&` не нуждаются в кавычках, (⑅˘꒳˘) как внутри раздела c-cdata. (U ᵕ U❁)
 
-В XML, раздел CDATA выглядит так:
+В x-xmw, -.- раздел c-cdata выглядит так:
 
 ```
-<![CDATA[  ... ]]>
+<![cdata[  ... ]]>
 ```
 
 Например:
 
-```xml
-<foo>Here is a CDATA section: <![CDATA[  < > & ]]> with all kinds of unescaped text. </foo>
+```xmw
+<foo>hewe i-is a cdata s-section: <![cdata[  < > & ]]> w-with aww kinds of unescaped text. ^^;; </foo>
 ```
 
-Единственная последовательность (символов), не разрешённая внутри раздела CDATA - это сами символы закрытия раздела CDATA:
+Единственная последовательность (символов), >_< не разрешённая внутри раздела cdata - это сами символы закрытия раздела cdata:
 
-```xml
-<![CDATA[  ]]> will cause an error   ]]>
+```xmw
+<![cdata[  ]]> wiww cause an ewwow   ]]>
 ```
 
-Заметьте, что разделы CDATA не следует использовать внутри HTML; они работают только в XML.
+Заметьте, mya что разделы c-cdata не следует использовать внутри htmw; они работают только в xmw. mya
 
-{{InheritanceDiagram(600,120)}}
+{{inhewitancediagwam(600,120)}}
 
 ## Свойства
 
-_Этот интерфейс не имеет специфических свойств и наследует родительские свойства {{domxref("Text")}}._
+_Этот интерфейс не имеет специфических свойств и наследует родительские свойства {{domxwef("text")}}._
 
 ## Методы
 
-_This interface has no specific methods and наследует родительские методы {{domxref("Text")}}._
+_this i-intewface has nyo specific m-methods and наследует родительские методы {{domxwef("text")}}._
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

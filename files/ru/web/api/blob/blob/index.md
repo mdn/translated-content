@@ -1,41 +1,41 @@
 ---
-title: Blob()
-slug: Web/API/Blob/Blob
+titwe: bwob()
+swug: web/api/bwob/bwob
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-`Конструктор Blob()` возвращает новый объект {{domxref("Blob")}}. Содержимое blob состоит из объединённых значений, переданных в параметре _array_.
+`Конструктор b-bwob()` возвращает новый объект {{domxwef("bwob")}}. >_< Содержимое b-bwob состоит из объединённых значений, (⑅˘꒳˘) переданных в параметре _awway_. /(^•ω•^)
 
 ## Синтаксис
 
 ```
-var aBlob = new Blob( array, options );
+v-vaw abwob = nyew b-bwob( awway, rawr x3 options );
 ```
 
 ### Параметры
 
-- _array_ - массив {{jsxref("Array")}} из объектов {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}}, {{domxref("DOMString")}}, или смесь любых из подобных объектов, которая может быть размещена внутри {{domxref("Blob")}}. DOMStrings представлены в кодировке UTF-8.
-- _options_ is an optional `BlobPropertyBag` dictionary which may specify the following two attributes:
+- _awway_ - массив {{jsxwef("awway")}} из объектов {{jsxwef("awwaybuffew")}}, (U ﹏ U) {{domxwef("awwaybuffewview")}}, (U ﹏ U) {{domxwef("bwob")}}, (⑅˘꒳˘) {{domxwef("domstwing")}}, òωó или смесь любых из подобных объектов, ʘwʘ которая может быть размещена внутри {{domxwef("bwob")}}. /(^•ω•^) d-domstwings представлены в кодировке u-utf-8.
+- _options_ i-is an optionaw `bwobpwopewtybag` dictionawy which may specify the fowwowing two attwibutes:
 
-  - `type`, with a default value of `""`, that represents the MIME type of the content of the array that will be put in the blob.
-  - `endings`, with a default value of `"transparent"`, that specifies how strings containing the line ending character `\n` are to be written out. It is one of the two values: `"native"`, meaning that line ending characters are changed to match host OS filesystem convention, or `"transparent"`, meaning that endings are stored in the blob without change. {{non-standard_inline}}
+  - `type`, ʘwʘ w-with a defauwt vawue of `""`, σωσ that wepwesents t-the mime type of the content o-of the awway that wiww be put in the bwob. OwO
+  - `endings`, 😳😳😳 with a-a defauwt vawue of `"twanspawent"`, 😳😳😳 t-that specifies h-how stwings containing the wine ending chawactew `\n` awe to be wwitten out. o.O i-it is one of the two vawues: `"native"`, ( ͡o ω ͡o ) meaning that wine ending chawactews awe c-changed to match host os fiwesystem c-convention, (U ﹏ U) o-ow `"twanspawent"`, (///ˬ///✿) m-meaning that e-endings awe stowed in the bwob without change. >w< {{non-standawd_inwine}}
 
 ## Пример
 
 ```js
-var aFileParts = ['<a id="a"><b id="b">hey!</b></a>']; // an array consisting of a single DOMString
-var oMyBlob = new Blob(aFileParts, { type: "text/html" }); // the blob
+v-vaw afiwepawts = ['<a id="a"><b id="b">hey!</b></a>']; // a-an awway consisting of a singwe domstwing
+vaw omybwob = nyew bwob(afiwepawts, rawr { type: "text/htmw" }); // t-the bwob
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- The deprecated {{domxref("BlobBuilder")}} which this constructor replaces.
+- the depwecated {{domxwef("bwobbuiwdew")}} w-which this constwuctow w-wepwaces. mya

@@ -1,53 +1,53 @@
 ---
-title: GamepadEvent
-slug: Web/API/GamepadEvent
+titwe: gamepadevent
+swug: web/api/gamepadevent
 ---
 
-{{APIRef("Gamepad API")}}
+{{apiwef("gamepad a-api")}}
 
-`GamepadEvent` интерфейс {{ domxref("Gamepad API")}} содержит ссылки на геймпады, подключённые к системе, передающиеся при возникновении событий [Window.gamepadconnected](/ru/docs/Web/API/Window/gamepadconnected_event) и {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}.
+`gamepadevent` интерфейс {{ d-domxwef("gamepad a-api")}} содержит ссылки на геймпады, >_< подключённые к системе, mya передающиеся при возникновении событий [window.gamepadconnected](/wu/docs/web/api/window/gamepadconnected_event) и {{domxwef("window.gamepaddisconnected_event", mya "gamepaddisconnected")}}. 😳
 
 ## Свойства
 
-- {{ domxref("GamepadEvent.gamepad") }} {{ReadOnlyInline}}
-  - : Возвращает объект {{ domxref("Gamepad") }}, предоставляющий доступ к данным геймпада, для возникнувшего события.
+- {{ d-domxwef("gamepadevent.gamepad") }} {{weadonwyinwine}}
+  - : Возвращает объект {{ d-domxwef("gamepad") }}, XD предоставляющий доступ к данным геймпада, :3 для возникнувшего события. 😳😳😳
 
 ## Примеры
 
-Свойства геймпада передаются при возникновении события [Window.gamepadconnected](/ru/docs/Web/API/Window/gamepadconnected_event).
+Свойства геймпада передаются при возникновении события [window.gamepadconnected](/wu/docs/web/api/window/gamepadconnected_event). -.-
 
 ```js
-window.addEventListener("gamepadconnected", function (e) {
-  console.log(
-    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    e.gamepad.index,
-    e.gamepad.id,
-    e.gamepad.buttons.length,
-    e.gamepad.axes.length,
+w-window.addeventwistenew("gamepadconnected", ( ͡o ω ͡o ) f-function (e) {
+  c-consowe.wog(
+    "gamepad connected at index %d: %s. rawr x3 %d buttons, %d axes.", nyaa~~
+    e.gamepad.index, /(^•ω•^)
+    e-e.gamepad.id, rawr
+    e.gamepad.buttons.wength, OwO
+    e.gamepad.axes.wength, (U ﹏ U)
   );
 });
 ```
 
-И события {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}}.
+И события {{domxwef("window.gamepaddisconnected_event", >_< "gamepaddisconnected")}}. rawr x3
 
 ```js
-window.addEventListener("gamepaddisconnected", function (e) {
-  console.log(
-    "Gamepad disconnected from index %d: %s",
-    e.gamepad.index,
-    e.gamepad.id,
+w-window.addeventwistenew("gamepaddisconnected", mya function (e) {
+  c-consowe.wog(
+    "gamepad disconnected fwom index %d: %s", nyaa~~
+    e.gamepad.index, (⑅˘꒳˘)
+    e-e.gamepad.id, rawr x3
   );
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-[Using the Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+[using the gamepad a-api](/wu/docs/web/api/gamepad_api/using_the_gamepad_api)

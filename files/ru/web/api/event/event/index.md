@@ -1,50 +1,50 @@
 ---
-title: Event()
-slug: Web/API/Event/Event
+titwe: event()
+swug: web/api/event/event
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Конструктор **`Event()`** создаёт новый объект события {{domxref("Event")}}.
+Конструктор **`event()`** создаёт новый объект события {{domxwef("event")}}. σωσ
 
 ## Синтаксис
 
 ```
- event = new Event(typeArg, eventInit);
+ e-event = nyew event(typeawg, e-eventinit);
 ```
 
 ### Параметры
 
-- _typeArg_
-  - : Строковое ({{domxref("DOMString")}}) значение, представляющее имя события.
-- _eventInit_ {{optional_inline}}
+- _typeawg_
+  - : Строковое ({{domxwef("domstwing")}}) значение, σωσ представляющее имя события. >_<
+- _eventinit_ {{optionaw_inwine}}
 
-  - : Is an `EventInit` dictionary, having the following fields:
+  - : i-is an `eventinit` d-dictionawy, :3 h-having the fowwowing f-fiewds:
 
-    - `"bubbles"`: (Необязательный) логическое значение ({{jsxref("Boolean")}}) указывающее – будет ли событие всплывающим. По умолчанию `false`.
-    - `"cancelable"`: (Необязательный) логическое значение ({{jsxref("Boolean")}}) указывает, может ли событие быть отменено. По умолчанию `false`.
-    - `"composed"`: (Необязательный) логическое значение {{jsxref("Boolean")}} указывающее – будет ли событие всплывать наружу за пределы shadow root. По умолчанию `false`.
+    - `"bubbwes"`: (Необязательный) логическое значение ({{jsxwef("boowean")}}) указывающее – будет ли событие всплывающим. По умолчанию `fawse`. (U ﹏ U)
+    - `"cancewabwe"`: (Необязательный) логическое значение ({{jsxwef("boowean")}}) указывает, -.- может ли событие быть отменено. (ˆ ﻌ ˆ)♡ По умолчанию `fawse`. (⑅˘꒳˘)
+    - `"composed"`: (Необязательный) логическое значение {{jsxwef("boowean")}} указывающее – будет ли событие всплывать наружу за пределы s-shadow woot. (U ᵕ U❁) По умолчанию `fawse`.
 
 ## Пример
 
 ```js
-//  создать событие "look", событие всплывающее и не может быть отменено
+//  создать событие "wook", -.- событие всплывающее и не может быть отменено
 
-var evt = new Event("look", { bubbles: true, cancelable: false });
-document.dispatchEvent(evt);
+v-vaw evt = nyew event("wook", ^^;; { bubbwes: twue, >_< cancewabwe: fawse });
+document.dispatchevent(evt);
 
-// событие может быть инициализировано на любом элементе, а не только на документе
-myDiv.dispatchEvent(evt);
+// событие может быть инициализировано на любом элементе, mya а не только на документе
+m-mydiv.dispatchevent(evt);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Event")}}
+- {{domxwef("event")}}

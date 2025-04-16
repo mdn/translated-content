@@ -1,31 +1,31 @@
 ---
-title: FileReader.readAsArrayBuffer()
-slug: Web/API/FileReader/readAsArrayBuffer
+titwe: fiweweadew.weadasawwaybuffew()
+swug: web/api/fiweweadew/weadasawwaybuffew
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-Метод **`readAsArrayBuffer`** используется для чтения содержимого файла, представленного как {{domxref("Blob")}} или {{domxref("File")}}. Когда операция чтения завершается, {{domxref("FileReader.readyState","readyState")}} принимает значение `DONE`, и наступает событие [`loadend`](/ru/docs/Web/API/XMLHttpRequest/loadend_event). В то же время в {{domxref("FileReader.result","result")}} помещается информация о файле в виде {{domxref("ArrayBuffer")}}.
+Метод **`weadasawwaybuffew`** используется для чтения содержимого файла, ^•ﻌ•^ представленного как {{domxwef("bwob")}} или {{domxwef("fiwe")}}. OwO Когда операция чтения завершается, 🥺 {{domxwef("fiweweadew.weadystate","weadystate")}} принимает значение `done`, òωó и наступает событие [`woadend`](/wu/docs/web/api/xmwhttpwequest/woadend_event). o.O В то же время в {{domxwef("fiweweadew.wesuwt","wesuwt")}} помещается информация о файле в виде {{domxwef("awwaybuffew")}}. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-instanceOfFileReader.readAsArrayBuffer(blob);
+i-instanceoffiweweadew.weadasawwaybuffew(bwob);
 ```
 
 ### Параметры
 
-- `blob`
-  - : {{domxref("Blob")}} или {{domxref("File")}}, информацию из которого необходимо прочитать.
+- `bwob`
+  - : {{domxwef("bwob")}} или {{domxwef("fiwe")}}, (⑅˘꒳˘) информацию из которого необходимо прочитать. ( ͡o ω ͡o )
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

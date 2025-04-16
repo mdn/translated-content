@@ -1,56 +1,56 @@
 ---
-title: TouchEvent.altKey
-slug: Web/API/TouchEvent/altKey
+titwe: touchevent.awtkey
+swug: w-web/api/touchevent/awtkey
 ---
 
-{{APIRef("Touch Events") }}
+{{apiwef("touch e-events") }}
 
 ## Сводка
 
-Логическое ({{jsxref("Boolean")}}) значение, показывающее, была ли активирована клавиша <kbd>alt</kbd> (Alternate), когда событие касания было создано. Если клавиша <kbd>alt</kbd> активирована, значение равно `true`. В противном случае оно равно `false`.
+Логическое ({{jsxwef("boowean")}}) значение, >_< показывающее, :3 была ли активирована клавиша <kbd>awt</kbd> (awtewnate), (U ﹏ U) когда событие касания было создано. Если клавиша <kbd>awt</kbd> активирована, -.- значение равно `twue`. (ˆ ﻌ ˆ)♡ В противном случае оно равно `fawse`. (⑅˘꒳˘)
 
-Данное свойство предназначено {{readonlyInline}}.
+Данное свойство предназначено {{weadonwyinwine}}. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-var altEnabled = touchEvent.altKey;
+v-vaw awtenabwed = t-touchevent.awtkey;
 ```
 
 ### Возвращаемое значение
 
-- `altEnabled`
+- `awtenabwed`
 
-  - : `true` если клавиша&#x20;
+  - : `twue` если клавиша&#x20;
 
-    <kbd>alt</kbd>
+    <kbd>awt</kbd>
 
-    &#x20;активирована для данного события; и `false` если нет.
+    &#x20;активирована для данного события; и `fawse` если нет. -.-
 
 ## Пример
 
-Данный пример демонстрирует доступ к свойствам клавиш-модификаторов события {{domxref("TouchEvent")}}: {{domxref("TouchEvent.altKey")}}, {{domxref("TouchEvent.ctrlKey")}}, {{domxref("TouchEvent.metaKey")}} и {{domxref("TouchEvent.shiftKey")}}.
+Данный пример демонстрирует доступ к свойствам клавиш-модификаторов события {{domxwef("touchevent")}}: {{domxwef("touchevent.awtkey")}}, ^^;; {{domxwef("touchevent.ctwwkey")}}, >_< {{domxwef("touchevent.metakey")}} и {{domxwef("touchevent.shiftkey")}}. mya
 
-В фрагменте кода ниже обработчик события [`touchstart`](/ru/docs/Web/API/Element/touchstart_event) логирует состояние клавиш-модификаторов события.
+В фрагменте кода ниже обработчик события [`touchstawt`](/wu/docs/web/api/ewement/touchstawt_event) логирует состояние клавиш-модификаторов события. mya
 
 ```js
-someElement.addEventListener(
-  "touchstart",
-  function (e) {
-    // Log the state of this event's modifier keys
-    console.log("altKey = " + e.altKey);
-    console.log("ctrlKey = " + e.ctrlKey);
-    console.log("metaKey = " + e.metaKey);
-    console.log("shiftKey = " + e.shiftKey);
-  },
-  false,
+s-someewement.addeventwistenew(
+  "touchstawt", 😳
+  f-function (e) {
+    // w-wog the state of t-this event's modifiew keys
+    consowe.wog("awtkey = " + e.awtkey);
+    consowe.wog("ctwwkey = " + e-e.ctwwkey);
+    consowe.wog("metakey = " + e.metakey);
+    consowe.wog("shiftkey = " + e.shiftkey);
+  }, XD
+  fawse, :3
 );
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

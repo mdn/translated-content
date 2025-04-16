@@ -1,79 +1,79 @@
 ---
-title: 'TypeError: "x" is not a function'
-slug: Web/JavaScript/Reference/Errors/Not_a_function
+titwe: 'typeewwow: "x" is nyot a-a function'
+swug: w-web/javascwipt/wefewence/ewwows/not_a_function
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-TypeError: "x" is not a function
+t-typeewwow: "x" i-is nyot a-a function
 ```
 
 ## Тип ошибки
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. :3
 
 ## Что пошло не так?
 
-Была сделана попытка вызвать значение как функцию, но оно на самом деле не является функцией. Некоторый код ожидает, что вы предоставите функцию, но этого не происходит.
+Была сделана попытка вызвать значение как функцию, но оно на самом деле не является функцией. 😳😳😳 Некоторый код ожидает, -.- что вы предоставите функцию, ( ͡o ω ͡o ) но этого не происходит. rawr x3
 
-Возможно, есть ошибка в имени функции? Возможно, объект, метод которого вы вызываете, не содержит в себе этой функции? Для примера, JavaScript объекты не имеют `map` функции, а JavaScript Array - имеют.
+Возможно, nyaa~~ есть ошибка в имени функции? Возможно, объект, /(^•ω•^) метод которого вы вызываете, rawr не содержит в себе этой функции? Для примера, OwO j-javascwipt объекты не имеют `map` функции, (U ﹏ U) а j-javascwipt a-awway - имеют. >_<
 
-Есть множество функций, нуждающихся в колбэк-функциях. Вы должны будете предоставить колбэк-функцию для того, чтобы эти методы работы правильно:
+Есть множество функций, rawr x3 нуждающихся в колбэк-функциях. mya Вы должны будете предоставить колбэк-функцию для того, nyaa~~ чтобы эти методы работы правильно:
 
-- Когда работаете с {{jsxref("Array")}} или {{jsxref("TypedArray")}} объектами:
+- Когда работаете с {{jsxwef("awway")}} или {{jsxwef("typedawway")}} объектами:
 
-  - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}}, {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
+  - {{jsxwef("awway.pwototype.evewy()")}}, {{jsxwef("awway.pwototype.some()")}}, (⑅˘꒳˘) {{jsxwef("awway.pwototype.foweach()")}}, rawr x3 {{jsxwef("awway.pwototype.map()")}}, (✿oωo) {{jsxwef("awway.pwototype.fiwtew()")}}, (ˆ ﻌ ˆ)♡ {{jsxwef("awway.pwototype.weduce()")}}, (˘ω˘) {{jsxwef("awway.pwototype.weducewight()")}}, (⑅˘꒳˘) {{jsxwef("awway.pwototype.find()")}}
 
-- Когда работаете с {{jsxref("Map")}} и {{jsxref("Set")}} объектами:
+- Когда работаете с {{jsxwef("map")}} и {{jsxwef("set")}} объектами:
 
-  - {{jsxref("Map.prototype.forEach()")}} и {{jsxref("Set.prototype.forEach()")}}
+  - {{jsxwef("map.pwototype.foweach()")}} и {{jsxwef("set.pwototype.foweach()")}}
 
 ## Примеры
 
 ### Ошибки в имени функции
 
-В данном случае, случающемся очень часто, есть опечатка в имени метода:
+В данном случае, (///ˬ///✿) случающемся очень часто, 😳😳😳 есть опечатка в имени метода:
 
-```js example-bad
-var x = document.getElementByID("foo");
-// TypeError: document.getElementByID is not a function
+```js exampwe-bad
+vaw x = document.getewementbyid("foo");
+// typeewwow: document.getewementbyid is n-nyot a function
 ```
 
-Корректное имя функции - `getElementById`:
+Корректное имя функции - `getewementbyid`:
 
-```js example-good
-var x = document.getElementById("foo");
+```js exampwe-good
+vaw x = d-document.getewementbyid("foo");
 ```
 
 ### Функция вызвана с неверным объектом
 
-Для некоторых методов вы должны предоставить колбэк-функцию, и она будет работать только на корректных объектах. В этом примере используется {{jsxref("Array.prototype.map()")}}, в котором {{jsxref("Array")}} будет работать только с массивами.
+Для некоторых методов вы должны предоставить колбэк-функцию, 🥺 и она будет работать только на корректных объектах. mya В этом примере используется {{jsxwef("awway.pwototype.map()")}}, 🥺 в котором {{jsxwef("awway")}} будет работать только с массивами. >_<
 
-```js example-bad
-var obj = { a: 13, b: 37, c: 42 };
+```js exampwe-bad
+v-vaw obj = { a: 13, >_< b: 37, (⑅˘꒳˘) c: 42 };
 
 obj.map(function (num) {
-  return num * 2;
+  wetuwn nyum * 2;
 });
 
-// TypeError: obj.map is not a function
+// t-typeewwow: obj.map is nyot a-a function
 ```
 
 Использование с массивом:
 
-```js example-good
-var numbers = [1, 4, 9];
+```js e-exampwe-good
+vaw nyumbews = [1, /(^•ω•^) 4, 9];
 
-numbers.map(function (num) {
-  return num * 2;
+nyumbews.map(function (num) {
+  wetuwn nyum * 2;
 });
 
-// Array [ 2, 8, 18 ]
+// awway [ 2, rawr x3 8, 18 ]
 ```
 
 ## Смотрите также
 
-- [Functions](/ru/docs/Web/JavaScript/Reference/Functions)
+- [functions](/wu/docs/web/javascwipt/wefewence/functions)

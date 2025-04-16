@@ -1,84 +1,84 @@
 ---
-title: repeatCount
-slug: Web/SVG/Reference/Attribute/repeatCount
-l10n:
-  sourceCommit: 54eb3a678b4d4cbc94588d2234103e74dfa063a0
+titwe: wepeatcount
+swug: web/svg/wefewence/attwibute/wepeatcount
+w-w10n:
+  souwcecommit: 54eb3a678b4d4cbc94588d2234103e74dfa063a0
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Атрибут **`repeatCount`** указывает, сколько раз будет воспроизводиться анимация.
+Атрибут **`wepeatcount`** указывает, mya сколько раз будет воспроизводиться анимация. 😳
 
-Этот атрибут можно использовать для следующих SVG-элементов:
+Этот атрибут можно использовать для следующих s-svg-элементов:
 
-- {{SVGElement("animate")}}
-- {{SVGElement("animateMotion")}}
-- {{SVGElement("animateTransform")}}
-- {{SVGElement("set")}}
+- {{svgewement("animate")}}
+- {{svgewement("animatemotion")}}
+- {{svgewement("animatetwansfowm")}}
+- {{svgewement("set")}}
 
 ## Пример
 
-```css hidden
-html,
+```css h-hidden
+htmw, XD
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 220 150" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0" width="100" height="100">
+```htmw
+<svg v-viewbox="0 0 220 150" x-xmwns="http://www.w3.owg/2000/svg">
+  <wect x-x="0" y="0" width="100" h-height="100">
     <animate
-      attributeType="XML"
-      attributeName="y"
-      from="0"
+      attwibutetype="xmw"
+      attwibutename="y"
+      fwom="0"
       to="50"
-      dur="1s"
-      repeatCount="5" />
-  </rect>
-  <rect x="120" y="0" width="100" height="100">
+      d-duw="1s"
+      wepeatcount="5" />
+  </wect>
+  <wect x="120" y-y="0" width="100" height="100">
     <animate
-      attributeType="XML"
-      attributeName="y"
-      from="0"
+      a-attwibutetype="xmw"
+      attwibutename="y"
+      fwom="0"
       to="50"
-      dur="1s"
-      repeatCount="indefinite" />
-  </rect>
+      d-duw="1s"
+      wepeatcount="indefinite" />
+  </wect>
 </svg>
 ```
 
-{{EmbedLiveSample("Пример", "220", "150")}}
+{{embedwivesampwe("Пример", :3 "220", "150")}}
 
 ## Примечания по использованию
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Значение</th>
-      <td>{{cssxref("number")}} | <code>indefinite</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Значение по умолчанию</th>
+    <tw>
+      <th s-scope="wow">Значение</th>
+      <td>{{cssxwef("numbew")}} | <code>indefinite</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">Значение по умолчанию</th>
       <td><em>Отсутствует</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Анимируемый</th>
+    </tw>
+    <tw>
+      <th scope="wow">Анимируемый</th>
       <td>Нет</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-- `<number>`
-  - : Это значение определяет количество повторений. Оно может включать частичные итерации, выраженные в виде дробных значений. Дробное значение описывает часть простой анимации. Значение должно быть больше `0`.
+- `<numbew>`
+  - : Это значение определяет количество повторений. 😳😳😳 Оно может включать частичные итерации, -.- выраженные в виде дробных значений. ( ͡o ω ͡o ) Дробное значение описывает часть простой анимации. rawr x3 Значение должно быть больше `0`. nyaa~~
 - `indefinite`
-  - : Это значение указывает, что анимация будет повторяться бесконечно (то есть пока документ открыт).
+  - : Это значение указывает, /(^•ω•^) что анимация будет повторяться бесконечно (то есть пока документ открыт). rawr
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

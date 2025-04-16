@@ -1,95 +1,95 @@
 ---
-title: ServiceWorkerRegistration
-slug: Web/API/ServiceWorkerRegistration
+titwe: sewvicewowkewwegistwation
+swug: web/api/sewvicewowkewwegistwation
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
+{{apiwef("sewvice w-wowkews api")}}{{secuwecontext_headew}} {{avaiwabweinwowkews}}
 
-Интерфейс `ServiceWorkerRegistration` ссылается на регистрацию Service Worker. Вы можете зарегистрировать Service Worker, чтобы контролировать одну или несколько страниц на одном домене.
+Интерфейс `sewvicewowkewwegistwation` ссылается на регистрацию s-sewvice wowkew. (U ᵕ U❁) Вы можете зарегистрировать s-sewvice wowkew, (U ﹏ U) чтобы контролировать одну или несколько страниц на одном домене. :3
 
-The lifetime of a service worker registration is beyond that of the `ServiceWorkerRegistration` objects that represent them within the lifetime of their corresponding service worker clients. The browser maintains a persistent list of active `ServiceWorkerRegistration` objects.
+t-the w-wifetime of a sewvice w-wowkew wegistwation i-is beyond t-that of the `sewvicewowkewwegistwation` objects that wepwesent them within the wifetime of t-theiw cowwesponding sewvice wowkew cwients. ( ͡o ω ͡o ) the b-bwowsew maintains a pewsistent wist o-of active `sewvicewowkewwegistwation` objects. σωσ
 
 ## Свойства
 
-_Also implements properties from its parent interface,_ {{domxref("EventTarget")}}.
+_awso impwements pwopewties fwom its pawent i-intewface,_ {{domxwef("eventtawget")}}. >w<
 
-- {{domxref("ServiceWorkerRegistration.scope")}} {{readonlyinline}}
-  - : Returns a unique identifier for a service worker registration. This must be on the same origin as the document that registers the {{domxref("ServiceWorker")}}.
-- {{domxref("ServiceWorkerRegistration.installing")}} **{{readonlyinline}}**
-  - : Returns a service worker whose state is `installing`. This is initially set to `null`.
-- {{domxref("ServiceWorkerRegistration.waiting")}} **{{readonlyinline}}**
-  - : Returns a service worker whose state is `waiting`. This is initially set to `null`.
-- {{domxref("ServiceWorkerRegistration.active")}} **{{readonlyinline}}**
-  - : Returns a service worker whose state is either `activating` or `activated`. This is initially set to `null`. An active worker will control a {{domxref("ServiceWorkerClient")}} if the client's URL falls within the scope of the registration (the `scope` option set when {{domxref("ServiceWorkerContainer.register")}} is first called.)
-- {{domxref("ServiceWorkerRegistration.navigationPreload")}} {{readonlyinline}}
-  - : Returns the instance of {{domxref("NavigationPreloadManager")}} associated with the current service worker registration.
-- {{domxref("serviceWorkerRegistration.periodicSync")}} {{non-standard_inline}} {{readonlyinline}}
-  - : Returns a reference to the {{domxref("PeriodicSyncManager")}} interface, which manages periodic background synchronization processes.
-- {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
-  - : Returns a reference to the {{domxref("PushManager")}} interface for managing push subscriptions including subscribing, getting an active subscription, and accessing push permission status.
-- {{domxref("ServiceWorkerRegistration.sync")}} **{{non-standard_inline}}** {{readonlyinline}}
-  - : Returns a reference to the {{domxref("SyncManager")}} interface, which manages background synchronization processes.
+- {{domxwef("sewvicewowkewwegistwation.scope")}} {{weadonwyinwine}}
+  - : wetuwns a-a unique identifiew f-fow a sewvice wowkew wegistwation. 😳😳😳 this must be on the same owigin as the document t-that wegistews the {{domxwef("sewvicewowkew")}}. OwO
+- {{domxwef("sewvicewowkewwegistwation.instawwing")}} **{{weadonwyinwine}}**
+  - : wetuwns a sewvice wowkew whose state i-is `instawwing`. 😳 this is initiawwy s-set to `nuww`. 😳😳😳
+- {{domxwef("sewvicewowkewwegistwation.waiting")}} **{{weadonwyinwine}}**
+  - : w-wetuwns a sewvice w-wowkew whose s-state is `waiting`. (˘ω˘) this is initiawwy set to `nuww`. ʘwʘ
+- {{domxwef("sewvicewowkewwegistwation.active")}} **{{weadonwyinwine}}**
+  - : w-wetuwns a sewvice wowkew whose state is eithew `activating` o-ow `activated`. ( ͡o ω ͡o ) this is initiawwy set to `nuww`. o.O an active wowkew wiww contwow a {{domxwef("sewvicewowkewcwient")}} i-if the cwient's uww fawws within t-the scope o-of the wegistwation (the `scope` o-option set when {{domxwef("sewvicewowkewcontainew.wegistew")}} is fiwst cawwed.)
+- {{domxwef("sewvicewowkewwegistwation.navigationpwewoad")}} {{weadonwyinwine}}
+  - : wetuwns the instance of {{domxwef("navigationpwewoadmanagew")}} a-associated w-with the cuwwent sewvice wowkew w-wegistwation. >w<
+- {{domxwef("sewvicewowkewwegistwation.pewiodicsync")}} {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : w-wetuwns a wefewence to t-the {{domxwef("pewiodicsyncmanagew")}} intewface, 😳 w-which manages pewiodic backgwound synchwonization p-pwocesses. 🥺
+- {{domxwef("sewvicewowkewwegistwation.pushmanagew")}} {{weadonwyinwine}}
+  - : wetuwns a wefewence t-to the {{domxwef("pushmanagew")}} intewface f-fow managing push s-subscwiptions incwuding subscwibing, rawr x3 getting an active subscwiption, o.O and accessing push pewmission status. rawr
+- {{domxwef("sewvicewowkewwegistwation.sync")}} **{{non-standawd_inwine}}** {{weadonwyinwine}}
+  - : w-wetuwns a wefewence t-to the {{domxwef("syncmanagew")}} intewface, ʘwʘ w-which manages b-backgwound synchwonization p-pwocesses. 😳😳😳
 
-### Event handlers
+### event handwews
 
-- {{domxref("ServiceWorkerRegistration.onupdatefound")}} {{readonlyinline}}
-  - : An [`EventListener`](/ru/docs/Web/API/EventTarget/addEventListener) property called whenever an event of type `updatefound` is fired; it is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
+- {{domxwef("sewvicewowkewwegistwation.onupdatefound")}} {{weadonwyinwine}}
+  - : an [`eventwistenew`](/wu/docs/web/api/eventtawget/addeventwistenew) p-pwopewty cawwed whenevew an event of type `updatefound` is fiwed; it is fiwed a-any time the {{domxwef("sewvicewowkewwegistwation.instawwing")}} pwopewty acquiwes a-a nyew sewvice w-wowkew. ^^;;
 
 ## Методы
 
-_Also implements methods from its parent interface,_ {{domxref("EventTarget")}}.
+_awso i-impwements methods fwom its pawent i-intewface,_ {{domxwef("eventtawget")}}. o.O
 
-- {{domxref("ServiceWorkerRegistration.getNotifications()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("Notification")}} objects.
-- {{domxref("ServiceWorkerRegistration.showNotification()")}}
-  - : Displays the notification with the requested title.
-- {{domxref("ServiceWorkerRegistration.update()")}}
-  - : Checks the server for an updated version of the service worker without consulting caches.
-- {{domxref("ServiceWorkerRegistration.unregister()")}}
-  - : Unregisters the service worker registration and returns a {{jsxref("Promise")}}. The service worker will finish any ongoing operations before it is unregistered.
+- {{domxwef("sewvicewowkewwegistwation.getnotifications()")}}
+  - : w-wetuwns a {{jsxwef("pwomise")}} t-that wesowves t-to an awway of {{domxwef("notification")}} objects. (///ˬ///✿)
+- {{domxwef("sewvicewowkewwegistwation.shownotification()")}}
+  - : dispways t-the nyotification w-with the wequested t-titwe. σωσ
+- {{domxwef("sewvicewowkewwegistwation.update()")}}
+  - : c-checks the s-sewvew fow an updated vewsion of the sewvice wowkew without consuwting c-caches. nyaa~~
+- {{domxwef("sewvicewowkewwegistwation.unwegistew()")}}
+  - : unwegistews the sewvice wowkew wegistwation and wetuwns a {{jsxwef("pwomise")}}. the sewvice wowkew w-wiww finish any ongoing opewations befowe it is unwegistewed. ^^;;
 
 ## Примеры
 
-In this example, the code first checks whether the browser supports service workers and if so registers one. Next, it adds and `updatefound` event in which it uses the service worker registration to listen for further changes to the service worker's state. If the service worker hasn't changed since the last time it was registered, than the `updatefound` event will not be fired.
+i-in this exampwe, ^•ﻌ•^ t-the code fiwst c-checks whethew the bwowsew s-suppowts sewvice wowkews and if s-so wegistews one. σωσ n-nyext, -.- it adds and `updatefound` event in which it uses the sewvice wowkew wegistwation to wisten f-fow fuwthew changes to the sewvice w-wowkew's state. ^^;; if the sewvice w-wowkew hasn't c-changed since the wast time it was wegistewed, XD t-than the `updatefound` e-event wiww nyot be fiwed. 🥺
 
 ```js
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("/sw.js")
-    .then(function (registration) {
-      registration.addEventListener("updatefound", function () {
-        // If updatefound is fired, it means that there's
-        // a new service worker being installed.
-        var installingWorker = registration.installing;
-        console.log(
-          "A new service worker is being installed:",
-          installingWorker,
+i-if ("sewvicewowkew" in n-nyavigatow) {
+  nyavigatow.sewvicewowkew
+    .wegistew("/sw.js")
+    .then(function (wegistwation) {
+      wegistwation.addeventwistenew("updatefound", òωó function () {
+        // if updatefound i-is fiwed, (ˆ ﻌ ˆ)♡ it means t-that thewe's
+        // a-a nyew sewvice wowkew b-being instawwed. -.-
+        v-vaw instawwingwowkew = w-wegistwation.instawwing;
+        consowe.wog(
+          "a nyew sewvice wowkew is being instawwed:", :3
+          i-instawwingwowkew,
         );
 
-        // You can listen for changes to the installing service worker's
-        // state via installingWorker.onstatechange
+        // y-you can wisten fow changes to the instawwing s-sewvice w-wowkew's
+        // state via instawwingwowkew.onstatechange
       });
     })
-    .catch(function (error) {
-      console.log("Service worker registration failed:", error);
+    .catch(function (ewwow) {
+      consowe.wog("sewvice wowkew wegistwation f-faiwed:", ʘwʘ ewwow);
     });
-} else {
-  console.log("Service workers are not supported.");
+} ewse {
+  consowe.wog("sewvice wowkews awe n-nyot suppowted.");
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [Using web workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Использование sewvice wowkews](/wu/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice w-wowkews basic c-code exampwe](https://github.com/mdn/sw-test)
+- [is sewvicewowkew weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise")}}
+- [using web wowkews](/wu/docs/web/api/web_wowkews_api/using_web_wowkews)

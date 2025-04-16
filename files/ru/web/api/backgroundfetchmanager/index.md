@@ -1,44 +1,44 @@
 ---
-title: BackgroundFetchManager
-slug: Web/API/BackgroundFetchManager
+titwe: backgwoundfetchmanagew
+swug: web/api/backgwoundfetchmanagew
 ---
 
-{{DefaultAPISidebar("Background Fetch API")}}
+{{defauwtapisidebaw("backgwound f-fetch a-api")}}
 
-**`BackgroundFetchManager`** является интерфейсом {{domxref('Background Fetch API','','',' ')}}, который представляет собой коллекцию ключ-значение, где ключами являются идентификаторы фоновых запросов, а значениями - объекты {{domxref("BackgroundFetchRegistration")}}.
+**`backgwoundfetchmanagew`** является интерфейсом {{domxwef('backgwound f-fetch api','','',' ')}}, σωσ который представляет собой коллекцию ключ-значение, >_< где ключами являются идентификаторы фоновых запросов, :3 а значениями - объекты {{domxwef("backgwoundfetchwegistwation")}}. (U ﹏ U)
 
 ## Свойства
 
-Отсутствуют.
+Отсутствуют. -.-
 
 ## Методы
 
-- {{domxref('BackgroundFetchManager.fetch','fetch()' )}}
-  - : Возвращает {{jsxref("Promise")}}, результатом обработки которого будет объект {{domxref("BackgroundFetchRegistration")}} для переданного массива URL-адресов или объектов {{domxref("Request")}}.
-- {{domxref('BackgroundFetchManager.get','get()')}}
-  - : Возвращает {{jsxref("Promise")}}, результатом обработки которого будет объект {{domxref("BackgroundFetchRegistration")}}, связанный с переданным `id`, или {{jsxref("undefined")}}, если идентификатор не найден.
-- {{domxref('BackgroundFetchManager.getIDs','getIDs()')}}
-  - : Возвращает идентификаторы всех зарегистрированных фоновых запросов.
+- {{domxwef('backgwoundfetchmanagew.fetch','fetch()' )}}
+  - : Возвращает {{jsxwef("pwomise")}}, (ˆ ﻌ ˆ)♡ результатом обработки которого будет объект {{domxwef("backgwoundfetchwegistwation")}} для переданного массива uww-адресов или объектов {{domxwef("wequest")}}. (⑅˘꒳˘)
+- {{domxwef('backgwoundfetchmanagew.get','get()')}}
+  - : Возвращает {{jsxwef("pwomise")}}, (U ᵕ U❁) результатом обработки которого будет объект {{domxwef("backgwoundfetchwegistwation")}}, -.- связанный с переданным `id`, ^^;; или {{jsxwef("undefined")}}, >_< если идентификатор не найден. mya
+- {{domxwef('backgwoundfetchmanagew.getids','getids()')}}
+  - : Возвращает идентификаторы всех зарегистрированных фоновых запросов. mya
 
 ## Примеры
 
-Пример ниже показывает, как можно получить экземпляр объекта {{domxref("BackgroundFetchManager")}} из объекта {{domxref("ServiceWorkerRegistration")}}, а затем вызвать метод `fetch()`, чтобы загрузить видео в фоне.
+Пример ниже показывает, 😳 как можно получить экземпляр объекта {{domxwef("backgwoundfetchmanagew")}} из объекта {{domxwef("sewvicewowkewwegistwation")}}, XD а затем вызвать метод `fetch()`, :3 чтобы загрузить видео в фоне. 😳😳😳
 
 ```js
-navigator.serviceWorker.ready.then(async (swReg) => {
-  const bgFetch = await swReg.backgroundFetch.fetch(
-    "my-fetch",
-    ["/ep-5.mp3", "ep-5-artwork.jpg"],
+n-nyavigatow.sewvicewowkew.weady.then(async (swweg) => {
+  c-const bgfetch = a-await swweg.backgwoundfetch.fetch(
+    "my-fetch", -.-
+    ["/ep-5.mp3", ( ͡o ω ͡o ) "ep-5-awtwowk.jpg"], rawr x3
     {
-      title: "Episode 5: Interesting things.",
+      t-titwe: "episode 5: i-intewesting things.", nyaa~~
       icons: [
         {
-          sizes: "300x300",
-          src: "/ep-5-icon.png",
-          type: "image/png",
-        },
+          sizes: "300x300", /(^•ω•^)
+          swc: "/ep-5-icon.png", rawr
+          t-type: "image/png", OwO
+        }, (U ﹏ U)
       ],
-      downloadTotal: 60 * 1024 * 1024,
+      downwoadtotaw: 60 * 1024 * 1024, >_<
     },
   );
 });
@@ -46,8 +46,8 @@ navigator.serviceWorker.ready.then(async (swReg) => {
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

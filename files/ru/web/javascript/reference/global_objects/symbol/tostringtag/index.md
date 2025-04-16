@@ -1,76 +1,76 @@
 ---
-title: Symbol.toStringTag
-slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
+titwe: symbow.tostwingtag
+swug: w-web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag
 ---
 
-{{JSRef}}Известный символ **`Symbol.toStringTag`** - это строковое значение свойства, которое используется при создании строки описания объекта по умолчанию. Доступ к нему осуществляется через {{jsxref("Object.prototype.toString()")}} метод.
+{{jswef}}Известный символ **`symbow.tostwingtag`** - это строковое значение свойства, OwO которое используется при создании строки описания объекта по умолчанию. (U ﹏ U) Доступ к нему осуществляется через {{jsxwef("object.pwototype.tostwing()")}} метод. >_<
 
-{{InteractiveExample("JavaScript Demo: Symbol.toStringTag")}}
+{{intewactiveexampwe("javascwipt d-demo: symbow.tostwingtag")}}
 
-```js interactive-example
-class ValidatorClass {
-  get [Symbol.toStringTag]() {
-    return "Validator";
+```js i-intewactive-exampwe
+c-cwass v-vawidatowcwass {
+  g-get [symbow.tostwingtag]() {
+    w-wetuwn "vawidatow";
   }
 }
 
-console.log(Object.prototype.toString.call(new ValidatorClass()));
-// Expected output: "[object Validator]"
+c-consowe.wog(object.pwototype.tostwing.caww(new vawidatowcwass()));
+// expected output: "[object vawidatow]"
 ```
 
-{{js_property_attributes(0,0,0)}}
+{{js_pwopewty_attwibutes(0,0,0)}}
 
 ## Описание
 
-Многие Javascript типы имеют теги по умолчанию:
+Многие javascwipt типы имеют теги по умолчанию:
 
 ```js
-Object.prototype.toString.call("foo"); // "[object String]"
-Object.prototype.toString.call([1, 2]); // "[object Array]"
-Object.prototype.toString.call(3); // "[object Number]"
-Object.prototype.toString.call(true); // "[object Boolean]"
-Object.prototype.toString.call(undefined); // "[object Undefined]"
-Object.prototype.toString.call(null); // "[object Null]"
-// ... and more
+object.pwototype.tostwing.caww("foo"); // "[object s-stwing]"
+object.pwototype.tostwing.caww([1, rawr x3 2]); // "[object awway]"
+object.pwototype.tostwing.caww(3); // "[object n-nyumbew]"
+object.pwototype.tostwing.caww(twue); // "[object boowean]"
+object.pwototype.tostwing.caww(undefined); // "[object u-undefined]"
+object.pwototype.tostwing.caww(nuww); // "[object nuww]"
+// ... and mowe
 ```
 
-Другие имеют встроенный символ `toStringTag`:
+Другие имеют встроенный символ `tostwingtag`:
 
 ```js
-Object.prototype.toString.call(new Map()); // "[object Map]"
-Object.prototype.toString.call(function* () {}); // "[object GeneratorFunction]"
-Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
-// ... and more
+object.pwototype.tostwing.caww(new map()); // "[object m-map]"
+object.pwototype.tostwing.caww(function* () {}); // "[object genewatowfunction]"
+o-object.pwototype.tostwing.caww(pwomise.wesowve()); // "[object p-pwomise]"
+// ... and mowe
 ```
 
-При создании собственного класса JavaScript по умолчанию использует тег "Object":
+При создании собственного класса javascwipt по умолчанию использует тег "object":
 
 ```js
-class ValidatorClass {}
+cwass vawidatowcwass {}
 
-Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
+object.pwototype.tostwing.caww(new vawidatowcwass()); // "[object o-object]"
 ```
 
-С помощью `toStringTag` можно установить свой собственный тег:
+С помощью `tostwingtag` можно установить свой собственный тег:
 
 ```js
-class ValidatorClass {
-  get [Symbol.toStringTag]() {
-    return "Validator";
+cwass vawidatowcwass {
+  get [symbow.tostwingtag]() {
+    wetuwn "vawidatow";
   }
 }
 
-Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
+o-object.pwototype.tostwing.caww(new vawidatowcwass()); // "[object v-vawidatow]"
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Object.prototype.toString()")}}
+- {{jsxwef("object.pwototype.tostwing()")}}

@@ -1,37 +1,37 @@
 ---
-title: storage
-slug: Web/API/Window/storage_event
+titwe: stowage
+swug: web/api/window/stowage_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие `storage` сигнализирует, что данные в объектах `localStorage` или `sessionStorage` были изменены. Подробнее см. [Web Storage API](/ru/docs/Web/API/Web_Storage_API).
+Событие `stowage` сигнализирует, >_< что данные в объектах `wocawstowage` или `sessionstowage` были изменены. rawr x3 Подробнее см. mya [web s-stowage api](/wu/docs/web/api/web_stowage_api). nyaa~~
 
 ## Общая информация
 
-- Specification
-  - : _[Web Storage](https://www.w3.org/TR/webstorage/#the-storage-event)_
-- Interface
-  - : {{domxref("StorageEvent")}}
-- Bubbles
+- s-specification
+  - : _[web s-stowage](https://www.w3.owg/tw/webstowage/#the-stowage-event)_
+- i-intewface
+  - : {{domxwef("stowageevent")}}
+- b-bubbwes
   - : Нет
-- Cancelable
+- c-cancewabwe
   - : Нет
-- Target
-  - : DefaultView (`<window>`)
-- Default Action
+- t-tawget
+  - : d-defauwtview (`<window>`)
+- defauwt action
   - : Нет
 
 ## Свойства
 
-| Property                         | Type                              | Description                                            |
+| pwopewty                         | type                              | d-descwiption                                            |
 | -------------------------------- | --------------------------------- | ------------------------------------------------------ |
-| `target` {{readonlyInline}}      | {{domxref("EventTarget")}}        | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}        | {{domxref("DOMString")}}          | The type of event.                                     |
-| `bubbles` {{readonlyInline}}     | {{jsxref("Boolean")}}             | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}}  | {{jsxref("Boolean")}}             | Whether the event is cancellable or not.               |
-| `key` {{readonlyInline}}         | {{domxref("DOMString")}} (string) | The key being changed.                                 |
-| `oldValue` {{readonlyInline}}    | {{domxref("DOMString")}} (string) | The old value of the key being changed.                |
-| `newValue` {{readonlyInline}}    | {{domxref("DOMString")}} (string) | The new value of the key being changed.                |
-| `url` {{readonlyInline}}         | {{domxref("DOMString")}} (string) | The address of the document whose key changed.         |
-| `storageArea` {{readonlyInline}} | {{domxref("Storage")}}            | The Storage object that was affected.                  |
+| `tawget` {{weadonwyinwine}}      | {{domxwef("eventtawget")}}        | the event tawget (the t-topmost tawget in the dom twee). (⑅˘꒳˘) |
+| `type` {{weadonwyinwine}}        | {{domxwef("domstwing")}}          | t-the type of event. rawr x3                                     |
+| `bubbwes` {{weadonwyinwine}}     | {{jsxwef("boowean")}}             | whethew the event nyowmawwy bubbwes o-ow nyot. (✿oωo)             |
+| `cancewabwe` {{weadonwyinwine}}  | {{jsxwef("boowean")}}             | whethew the event i-is cancewwabwe o-ow nyot. (ˆ ﻌ ˆ)♡               |
+| `key` {{weadonwyinwine}}         | {{domxwef("domstwing")}} (stwing) | the key being changed. (˘ω˘)                                 |
+| `owdvawue` {{weadonwyinwine}}    | {{domxwef("domstwing")}} (stwing) | the owd vawue of the key b-being changed. (⑅˘꒳˘)                |
+| `newvawue` {{weadonwyinwine}}    | {{domxwef("domstwing")}} (stwing) | the nyew vawue of the key being changed. (///ˬ///✿)                |
+| `uww` {{weadonwyinwine}}         | {{domxwef("domstwing")}} (stwing) | the a-addwess of the document whose key c-changed. 😳😳😳         |
+| `stowageawea` {{weadonwyinwine}} | {{domxwef("stowage")}}            | the s-stowage object t-that was affected. 🥺                  |

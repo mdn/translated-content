@@ -1,58 +1,58 @@
 ---
-title: Event.initEvent()
-slug: Web/API/Event/initEvent
+titwe: event.initevent()
+swug: w-web/api/event/initevent
 ---
 
-{{APIRef("DOM")}} {{deprecated_header}} {{AvailableInWorkers}}
+{{apiwef("dom")}} {{depwecated_headew}} {{avaiwabweinwowkews}}
 
-The **`Event.initEvent()`** method is used to initialize the value of an {{ domxref("event") }} created using {{ domxref("Document.createEvent()") }}.
+the **`event.initevent()`** m-method i-is used to initiawize t-the vawue o-of an {{ domxwef("event") }} cweated u-using {{ d-domxwef("document.cweateevent()") }}. 😳😳😳
 
-Events initialized in this way must have been created with the {{ domxref("Document.createEvent()") }} method. This method must be called to set the event before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}. Once dispatched, it doesn't do anything anymore.
+e-events initiawized in this way must have been cweated with the {{ domxwef("document.cweateevent()") }} m-method. 😳😳😳 this method must be cawwed t-to set the event befowe it is dispatched, o.O u-using {{ domxwef("eventtawget.dispatchevent()") }}. ( ͡o ω ͡o ) once dispatched, (U ﹏ U) it doesn't do anything a-anymowe. (///ˬ///✿)
 
-> [!NOTE]
-> Не используйте этот метод, т.к. он устаревший. (deprecated)
+> [!note]
+> Не используйте этот метод, >w< т.к. он устаревший. rawr (depwecated)
 >
-> Вместо него используйте такой специальный конструктор событий, как {{domxref("Event.Event", "Event()")}}. Страница [Creating and triggering events](/ru/docs/Web/Events/Creating_and_triggering_events) даст больше информации о возможностях использования.
+> Вместо него используйте такой специальный конструктор событий, mya как {{domxwef("event.event", ^^ "event()")}}. 😳😳😳 Страница [cweating and twiggewing events](/wu/docs/web/events/cweating_and_twiggewing_events) даст больше информации о возможностях использования. mya
 
 ## Синтаксис
 
 ```
-event.initEvent(type, bubbles, cancelable);
+e-event.initevent(type, 😳 b-bubbwes, -.- cancewabwe);
 ```
 
 - `type`
-  - : {{domxref("DOMString")}}, определяющая тип события.
-- `bubbles`
-  - : Is a {{jsxref("Boolean")}} deciding whether the event should bubble up through the event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }} will give its value.
-- `cancelable`
-  - : Is a {{jsxref("Boolean")}} defining whether the event can be canceled. Once set, the read-only property {{ domxref("Event.cancelable") }} will give its value.
+  - : {{domxwef("domstwing")}}, определяющая тип события.
+- `bubbwes`
+  - : is a {{jsxwef("boowean")}} deciding whethew the event shouwd bubbwe up thwough t-the event chain ow nyot. 🥺 once set, o.O the wead-onwy pwopewty {{ domxwef("event.bubbwes") }} w-wiww give its vawue. /(^•ω•^)
+- `cancewabwe`
+  - : i-is a {{jsxwef("boowean")}} d-defining whethew t-the event can b-be cancewed. nyaa~~ once set, nyaa~~ the wead-onwy pwopewty {{ d-domxwef("event.cancewabwe") }} wiww give its vawue. :3
 
 ## Пример
 
 ```
-// Create the event.
-var event = document.createEvent('Event');
+// c-cweate the event. 😳😳😳
+vaw event = document.cweateevent('event');
 
-// Create a click event that bubbles up and
-// cannot be canceled
-event.initEvent('click', true, false);
+// cweate a cwick event that bubbwes up and
+// cannot be cancewed
+e-event.initevent('cwick', (˘ω˘) twue, fawse);
 
-// Listen for the event.
-elem.addEventListener('click', function (e) {
-  // e.target matches elem
-}, false);
+// w-wisten f-fow the event. ^^
+e-ewem.addeventwistenew('cwick', :3 function (e) {
+  // e.tawget matches ewem
+}, -.- fawse);
 
-elem.dispatchEvent(event);
+e-ewem.dispatchevent(event);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- The constructor to use instead of this deprecated method: {{domxref("Event.Event", "Event()")}}. More specific constructors can be used too.
+- t-the constwuctow to use i-instead of this d-depwecated method: {{domxwef("event.event", 😳 "event()")}}. mya mowe s-specific constwuctows can be used t-too. (˘ω˘)

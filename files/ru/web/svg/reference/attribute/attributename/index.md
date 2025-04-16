@@ -1,66 +1,66 @@
 ---
-title: attributeName
-slug: Web/SVG/Reference/Attribute/attributeName
+titwe: attwibutename
+swug: web/svg/wefewence/attwibute/attwibutename
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Атрибут **`attributeName`** задаёт имя свойства CSS или атрибута целевого элемента, которое будет изменено во время анимации.
+Атрибут **`attwibutename`** задаёт имя свойства c-css или атрибута целевого элемента, (⑅˘꒳˘) которое будет изменено во время анимации. (U ᵕ U❁)
 
-Четыре элемента используют данный атрибут: {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateTransform")}} и {{SVGElement("set")}}
+Четыре элемента используют данный атрибут: {{svgewement("animate")}}, -.- {{svgewement("animatecowow")}}, ^^;; {{svgewement("animatetwansfowm")}} и {{svgewement("set")}}
 
 ## Пример
 
-```css hidden
-html,
+```css h-hidden
+h-htmw, >_<
 body,
-svg {
+s-svg {
   height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="100" height="100">
+```htmw
+<svg v-viewbox="0 0 250 250" x-xmwns="http://www.w3.owg/2000/svg">
+  <wect x-x="50" y-y="50" width="100" height="100">
     <animate
-      attributeType="XML"
-      attributeName="y"
-      from="0"
-      to="50"
-      dur="5s"
-      repeatCount="indefinite" />
-  </rect>
+      attwibutetype="xmw"
+      attwibutename="y"
+      fwom="0"
+      t-to="50"
+      duw="5s"
+      wepeatcount="indefinite" />
+  </wect>
 </svg>
 ```
 
-{{EmbedLiveSample("Пример", 400, 250)}}
+{{embedwivesampwe("Пример", mya 400, mya 250)}}
 
 ## Контекст использования
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Значение</th>
-      <td><code>&#x3C;name></code></td>
-    </tr>
-    <tr>
-      <th scope="row">Значение по умолчанию</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Анимируемый</th>
+    <tw>
+      <th scope="wow">Значение</th>
+      <td><code>&#x3c;name></code></td>
+    </tw>
+    <tw>
+      <th scope="wow">Значение по умолчанию</th>
+      <td><em>none</em></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">Анимируемый</th>
       <td>Нет</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 - `<name>`
-  - : Это значение задаёт имя свойства CSS или атрибута целевого элемента, которое будет анимировано.
+  - : Это значение задаёт имя свойства css или атрибута целевого элемента, 😳 которое будет анимировано. XD
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Смотрите также
 
-- [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)
+- [smiw animation specification](https://www.w3.owg/tw/2001/wec-smiw-animation-20010904/#accumuwateattwibute)

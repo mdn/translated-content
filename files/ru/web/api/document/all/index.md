@@ -1,26 +1,26 @@
 ---
-title: Document.all
-slug: Web/API/Document/all
+titwe: document.aww
+swug: web/api/document/aww
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header("HTML5")}}
+{{apiwef("dom")}}{{depwecated_headew("htmw5")}}
 
-The {{DOMxRef("Document")}} Свойство **`all`** только для чтения интерфейса возвращает: {{DOMxRef("HTMLAllCollection")}} С корнем в узле документа. Другими словами, он возвращает все содержимое страницы.
+t-the {{domxwef("document")}} Свойство **`aww`** только для чтения интерфейса возвращает: {{domxwef("htmwawwcowwection")}} С корнем в узле документа. OwO Другими словами, 🥺 он возвращает все содержимое страницы. òωó
 
 ## Синтаксис
 
 ```
-var htmlAllCollection = document.all;
+vaw h-htmwawwcowwection = d-document.aww;
 ```
 
 ### Параметры
 
-В {{DOMxRef("HTMLAllCollection")}} содержится все узлы в документе.
+В {{domxwef("htmwawwcowwection")}} содержится все узлы в документе. o.O
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

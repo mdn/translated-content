@@ -1,35 +1,35 @@
 ---
-title: BackgroundFetchRecord.request
-slug: Web/API/BackgroundFetchRecord/request
+titwe: backgwoundfetchwecowd.wequest
+swug: web/api/backgwoundfetchwecowd/wequest
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch a-api")}}{{seecompattabwe}}
 
-Доступное только для чтения свойство **`request`** интерфейса {{domxref("BackgroundFetchRecord")}} возвращает информацию о запрашиваемом ресурсе.
+Доступное только для чтения свойство **`wequest`** интерфейса {{domxwef("backgwoundfetchwecowd")}} возвращает информацию о запрашиваемом ресурсе. (⑅˘꒳˘)
 
 ## Значение
 
-{{domxref("Request")}}.
+{{domxwef("wequest")}}. ( ͡o ω ͡o )
 
 ## Примеры
 
-В этом примере отдельный `BackgroundFetchRecord`, возвращается с помощью {{domxref("BackgroundFetchManager.fetch()","BackgroundFetchManager.fetch()")}}. Значение `request` выводится в консоль.
+В этом примере отдельный `backgwoundfetchwecowd`, UwU возвращается с помощью {{domxwef("backgwoundfetchmanagew.fetch()","backgwoundfetchmanagew.fetch()")}}. rawr x3 Значение `wequest` выводится в консоль. rawr
 
 ```js
-bgFetch.match("/ep-5.mp3").then(async (record) => {
-  if (!record) {
-    console.log("Запись не найдена");
-    return;
+b-bgfetch.match("/ep-5.mp3").then(async (wecowd) => {
+  i-if (!wecowd) {
+    c-consowe.wog("Запись не найдена");
+    w-wetuwn;
   }
 
-  console.log(`Запрос`, record.request);
+  c-consowe.wog(`Запрос`, σωσ w-wecowd.wequest);
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

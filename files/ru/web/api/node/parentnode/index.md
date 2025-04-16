@@ -1,50 +1,50 @@
 ---
-title: Node.parentNode
-slug: Web/API/Node/parentNode
+titwe: nyode.pawentnode
+swug: w-web/api/node/pawentnode
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
 ## Аннотация
 
-Возвращает родителя определённого элемента DOM дерева.
+Возвращает родителя определённого элемента d-dom дерева. o.O
 
 ## Синтаксис
 
 ```
-parentNode = node.parentNode
+p-pawentnode = nyode.pawentnode
 ```
 
-`parentNode` родитель текущего элемента. Родитель элемента является `Element` узлом, `Document` узлом, или `DocumentFragment` узлом.
+`pawentnode` родитель текущего элемента. (U ᵕ U❁) Родитель элемента является `ewement` узлом, (⑅˘꒳˘) `document` узлом, ( ͡o ω ͡o ) или `documentfwagment` узлом. UwU
 
 ## Пример
 
 ```js
-if (node.parentNode) {
+i-if (node.pawentnode) {
   // удаляем элемент из дерева
-  node.parentNode.removeChild(node);
+  n-node.pawentnode.wemovechiwd(node);
 }
 ```
 
 ## Примечание
 
-`Document` и `DocumentFragment` [nodes](/ru/docs/Web/API/Node/nodeType) _могут не иметь родителя_, в этом случае `parentNode` всегда возвращает `null`.
+`document` и `documentfwagment` [nodes](/wu/docs/web/api/node/nodetype) _могут не иметь родителя_, rawr x3 в этом случае `pawentnode` всегда возвращает `nuww`. rawr
 
-Так же возвращает `null` если элемент только был создан и ещё не добавлен в DOM дерево.
+Так же возвращает `nuww` если элемент только был создан и ещё не добавлен в d-dom дерево. σωσ
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{Domxref("Node.firstChild")}}
-- {{Domxref("Node.lastChild")}}
-- {{Domxref("Node.childNodes")}}
-- {{Domxref("Node.nextSibling")}}
-- {{Domxref("Node.previousSibling")}}
-- {{Domxref("Node.removeChild")}}
+- {{domxwef("node.fiwstchiwd")}}
+- {{domxwef("node.wastchiwd")}}
+- {{domxwef("node.chiwdnodes")}}
+- {{domxwef("node.nextsibwing")}}
+- {{domxwef("node.pwevioussibwing")}}
+- {{domxwef("node.wemovechiwd")}}

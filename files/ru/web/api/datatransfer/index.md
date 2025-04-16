@@ -1,189 +1,189 @@
 ---
-title: DataTransfer
-slug: Web/API/DataTransfer
+titwe: datatwansfew
+swug: web/api/datatwansfew
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Объект **DataTransfer** используется для хранения данных, перетаскиваемых мышью во время операции **drag and drop**. Он может хранить от одного до нескольких элементов данных, вне зависимости от их типа. Для получения доп. информации об операции drag and drop, см. [Drag and Drop](/ru/docs/Web/API/HTML_Drag_and_Drop_API)
+Объект **datatwansfew** используется для хранения данных, (✿oωo) перетаскиваемых мышью во время операции **dwag a-and d-dwop**. Он может хранить от одного до нескольких элементов данных, /(^•ω•^) вне зависимости от их типа. 🥺 Для получения доп. информации об операции d-dwag and dwop, ʘwʘ см. UwU [dwag a-and dwop](/wu/docs/web/api/htmw_dwag_and_dwop_api)
 
-Объект может быть получен из свойства **dataTransfer** всех событий перетаскивания. Он не может быть отдельно создан.
+Объект может быть получен из свойства **datatwansfew** всех событий перетаскивания. XD Он не может быть отдельно создан. (✿oωo)
 
 ## Список свойств
 
 | Свойство                                                          | Тип                                                                   |
 | ----------------------------------------------------------------- | --------------------------------------------------------------------- |
-| [`dropEffect`](#dropeffect.28.29)                                 | [`String`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String)   |
-| [`effectAllowed`](#effectallowed.28.29)                           | [`String`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String)   |
-| [`files`](#files.28.29)                                           | {{ domxref("FileList") }}                                             |
-| [`mozCursor`](#mozcursor) {{ non-standard_inline() }}             | [`String`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String)   |
-| [`mozItemCount`](#mozitemcount.28.29) {{ non-standard_inline() }} | `unsigned long`                                                       |
-| [`mozSourceNode`](#mozsourcenode) {{ non-standard_inline() }}     | {{ domxref("Node") }}                                                 |
-| [`mozUserCancelled`](#mozusercancelled)                           | [`Boolean`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) |
-| [`types`](#types.28.29)                                           | [`DOMStringList`](/ru/docs/Web/API/DOMStringList)                     |
+| [`dwopeffect`](#dwopeffect.28.29)                                 | [`stwing`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)   |
+| [`effectawwowed`](#effectawwowed.28.29)                           | [`stwing`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)   |
+| [`fiwes`](#fiwes.28.29)                                           | {{ d-domxwef("fiwewist") }}                                             |
+| [`mozcuwsow`](#mozcuwsow) {{ non-standawd_inwine() }}             | [`stwing`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/stwing)   |
+| [`mozitemcount`](#mozitemcount.28.29) {{ n-nyon-standawd_inwine() }} | `unsigned wong`                                                       |
+| [`mozsouwcenode`](#mozsouwcenode) {{ n-nyon-standawd_inwine() }}     | {{ domxwef("node") }}                                                 |
+| [`mozusewcancewwed`](#mozusewcancewwed)                           | [`boowean`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/boowean) |
+| [`types`](#types.28.29)                                           | [`domstwingwist`](/wu/docs/web/api/domstwingwist)                     |
 
 ## Список методов
 
-| `void addElement(in Element element)`                                           |
+| `void addewement(in ewement ewement)`                                           |
 | ------------------------------------------------------------------------------- |
-| `void clearData([in String type])`                                              |
-| `String getData(in String type)`                                                |
-| `void setData(in String type, in String data)`                                  |
-| `void setDragImage(in nsIDOMElement image, in long x, in long y)`               |
-| `void mozClearDataAt([in String type, in unsigned long index])`                 |
-| `nsIVariant mozGetDataAt(in String type, in unsigned long index)`               |
-| `void mozSetDataAt(in String type, in nsIVariant data, in unsigned long index)` |
-| `StringList mozTypesAt([in unsigned long index])`                               |
+| `void cweawdata([in s-stwing type])`                                              |
+| `stwing getdata(in stwing type)`                                                |
+| `void s-setdata(in stwing type, :3 in stwing d-data)`                                  |
+| `void setdwagimage(in nysidomewement image, (///ˬ///✿) in wong x-x, in wong y)`               |
+| `void mozcweawdataat([in s-stwing t-type, nyaa~~ in unsigned wong index])`                 |
+| `nsivawiant mozgetdataat(in stwing type, >w< in unsigned wong i-index)`               |
+| `void mozsetdataat(in stwing type, -.- in nsivawiant data, (✿oωo) in unsigned wong i-index)` |
+| `stwingwist moztypesat([in u-unsigned w-wong index])`                               |
 
 ## Свойства
 
-### dropEffect
+### d-dwopeffect
 
-Реальное действие, которое будет выполнено, и единственное возможное значение свойства **effectAllowed.**
+Реальное действие, (˘ω˘) которое будет выполнено, rawr и единственное возможное значение свойства **effectawwowed.**
 
-Для событий **dragenter** и **dragover**, **dropEffect** будет инициализировано значением, зависящим от того, какое действие запрашивает пользователь. То, как это определяется, зависит от платформы, но, как правило, пользователи могут зажать клавиши-модификаторы для выбора желаемого действия. В обработчике событий для **dragenter** и **dragover**, **dropEffect** следует модифицировать, если запрашиваемое пользователем действие не то, которое требовалось.
+Для событий **dwagentew** и **dwagovew**, OwO **dwopeffect** будет инициализировано значением, ^•ﻌ•^ зависящим от того, UwU какое действие запрашивает пользователь. (˘ω˘) То, как это определяется, (///ˬ///✿) зависит от платформы, σωσ но, /(^•ω•^) как правило, 😳 пользователи могут зажать клавиши-модификаторы для выбора желаемого действия. 😳 В обработчике событий для **dwagentew** и **dwagovew**, (⑅˘꒳˘) **dwopeffect** следует модифицировать, 😳😳😳 если запрашиваемое пользователем действие не то, 😳 которое требовалось. XD
 
-Для событий **dragstart**, **drag**, и **dragleave**, **dropEffect** будет инициализировано значением "none". Свойства **dropEffect** можно присвоить любое значение, но оно не будет ни для чего использоваться.
+Для событий **dwagstawt**, mya **dwag**, ^•ﻌ•^ и **dwagweave**, ʘwʘ **dwopeffect** будет инициализировано значением "none". ( ͡o ω ͡o ) Свойства **dwopeffect** можно присвоить любое значение, mya но оно не будет ни для чего использоваться. o.O
 
-Для событий **drop** и **dragend**, **dropEffect** будет инициализировано значением, которое было назначено свойству **dropEffect** после последнего события **dragenter** или **dragover**.
+Для событий **dwop** и **dwagend**, (✿oωo) **dwopeffect** будет инициализировано значением, :3 которое было назначено свойству **dwopeffect** после последнего события **dwagentew** или **dwagovew**. 😳
 
 Возможные значения:
 
-- **copy**: в новом расположении создаётся копия исходного элемента.
+- **copy**: в новом расположении создаётся копия исходного элемента. (U ﹏ U)
 - **move**: элемент перемещается в новое расположение.
-- **link**: в новом расположении создаётся ссылка на исходный элемент.
-- **none**: элемент не может быть брошен.
+- **wink**: в новом расположении создаётся ссылка на исходный элемент. mya
+- **none**: элемент не может быть брошен. (U ᵕ U❁)
 
-Присвоение каких-либо других значений не возымеет эффекта и оставит старое значение.
+Присвоение каких-либо других значений не возымеет эффекта и оставит старое значение. :3
 
-### effectAllowed
+### e-effectawwowed
 
-Определяет эффекты, которые разрешены для этого перетаскивания. Вы можете указать их в событии `dragstart` чтобы желаемый эффект сработал на перетаскиваемом элементе (что перетаскиваем), или в событии `dragenter` и `dragenter` чтобы желаемый эффект сработал для цели перетаскивания (куда перетаскиваем). В других событиях значение не используется.
+Определяет эффекты, mya которые разрешены для этого перетаскивания. OwO Вы можете указать их в событии `dwagstawt` чтобы желаемый эффект сработал на перетаскиваемом элементе (что перетаскиваем), (ˆ ﻌ ˆ)♡ или в событии `dwagentew` и `dwagentew` чтобы желаемый эффект сработал для цели перетаскивания (куда перетаскиваем). В других событиях значение не используется. ʘwʘ
 
 Возможные значения:
 
-- **copy**: Копия ресурса может быть сделана в новом месте.
-- **move**: Элемент может быть перемещён в новое место.
-- **link**: A link may be established to the source at the new location.
-- **copyLink**: A copy or link operation is permitted.
-- **copyMove**: A copy or move operation is permitted.
-- **linkMove**: A link or move operation is permitted.
-- **all**: All operations are permitted.
-- **none**: the item may not be dropped.
-- **uninitialized**: the default value when the effect has not been set, equivalent to all.
+- **copy**: Копия ресурса может быть сделана в новом месте. o.O
+- **move**: Элемент может быть перемещён в новое место. UwU
+- **wink**: a wink may be estabwished t-to the souwce at the nyew wocation. rawr x3
+- **copywink**: a copy o-ow wink opewation is pewmitted. 🥺
+- **copymove**: a copy ow move opewation is pewmitted. :3
+- **winkmove**: a wink ow move opewation i-is pewmitted. (ꈍᴗꈍ)
+- **aww**: aww opewations a-awe pewmitted. 🥺
+- **none**: t-the item may n-nyot be dwopped. (✿oωo)
+- **uninitiawized**: the defauwt vawue when the effect has nyot b-been set, (U ﹏ U) equivawent t-to aww. :3
 
-Assigning any other value has no effect and retains the old value.
+assigning any othew v-vawue has nyo e-effect and wetains the owd vawue. ^^;;
 
-### files
+### f-fiwes
 
-Содержит список локальных файлов доступных на dataTransfer. Если операция перемещения не включала в себя перемещение файлов, то данное свойство будет пустым списком. Неверное обращение по индексу к объекту {{ domxref("FileList") }} определённым данным свойством вернёт null.
+Содержит список локальных файлов доступных на datatwansfew. rawr Если операция перемещения не включала в себя перемещение файлов, 😳😳😳 то данное свойство будет пустым списком. (✿oωo) Неверное обращение по индексу к объекту {{ d-domxwef("fiwewist") }} определённым данным свойством вернёт nyuww. OwO
 
 #### Пример
 
 Данный пример демонстрирует перетаскивание файлов в окно браузера:
 
-<https://jsfiddle.net/9C2EF/>
+<https://jsfiddwe.net/9c2ef/>
 
 ### types
 
-Содержит список типов форматов данных в порядке добавления данных. Если ничего не было добавлено, то будет вернут пустой список.
+Содержит список типов форматов данных в порядке добавления данных. ʘwʘ Если ничего не было добавлено, (ˆ ﻌ ˆ)♡ то будет вернут пустой список. (U ﹏ U)
 
-### mozCursor
+### m-mozcuwsow
 
-The drag cursor's state. This is primarily used to control the cursor during tab drags.
+the dwag cuwsow's s-state. UwU this is pwimawiwy used to c-contwow the cuwsow d-duwing tab dwags. XD
 
-> [!NOTE]
-> This method is currently only implemented on Windows.
+> [!note]
+> this method is cuwwentwy onwy impwemented on windows. ʘwʘ
 
-#### Possible values
+#### possibwe vawues
 
 - `auto`
-  - : Uses the default system behavior.
-- `default`
-  - : Uses the default Gecko behavior, which is to set the cursor to an arrow during the drag operation.
+  - : u-uses the defauwt s-system behaviow. rawr x3
+- `defauwt`
+  - : uses the defauwt g-gecko behaviow, ^^;; w-which is to s-set the cuwsow to an awwow duwing the dwag opewation. ʘwʘ
 
-> [!NOTE]
-> If you specify any value other than "default", "auto" is assumed.
+> [!note]
+> if you specify a-any vawue othew than "defauwt", (U ﹏ U) "auto" is assumed. (˘ω˘)
 
-### mozItemCount
+### mozitemcount
 
-The number of items being dragged.
+the nyumbew o-of items being dwagged. (ꈍᴗꈍ)
 
-> [!NOTE]
-> This property is Gecko-specific.
+> [!note]
+> t-this pwopewty i-is gecko-specific. /(^•ω•^)
 
-### mozSourceNode
+### m-mozsouwcenode
 
-The {{ domxref("Node") }} over which the mouse cursor was located when the button was pressed to initiate the drag operation. This value is `null` for external drags or if the caller can't access the node.
+the {{ domxwef("node") }} o-ovew which t-the mouse cuwsow w-was wocated w-when the button was pwessed to initiate the dwag o-opewation. >_< this v-vawue is `nuww` f-fow extewnaw dwags o-ow if the cawwew c-can't access the nyode. σωσ
 
-> [!NOTE]
-> This property is Gecko-specific.
+> [!note]
+> this pwopewty is gecko-specific. ^^;;
 
-### mozUserCancelled
+### m-mozusewcancewwed
 
-This property applies only to the `dragend` event, and is `true` if the user canceled the drag operation by pressing escape. It will be `false` in all other cases, including if the drag failed for any other reason, for instance due to a drop over an invalid location. This property is not currently implemented on Linux.
+this pwopewty appwies onwy to the `dwagend` event, 😳 and is `twue` if the usew c-cancewed the dwag opewation by pwessing escape. >_< it wiww be `fawse` i-in aww othew c-cases, -.- incwuding i-if the dwag faiwed fow any othew w-weason, UwU fow instance due to a d-dwop ovew an invawid w-wocation. :3 this pwopewty is nyot cuwwentwy impwemented on winux. σωσ
 
-> [!NOTE]
-> This property is Gecko-specific.
+> [!note]
+> this pwopewty is gecko-specific. >w<
 
 ## Методы
 
-### addElement()
+### a-addewement()
 
-Данный метод устанавливает источник перетаскивания. Обычно вы его не изменяете, но он влияет на то, на каком узле запускаются события drag и dragend. По умолчанию целью является узел который перетаскивали.
+Данный метод устанавливает источник перетаскивания. (ˆ ﻌ ˆ)♡ Обычно вы его не изменяете, ʘwʘ но он влияет на то, :3 на каком узле запускаются события dwag и d-dwagend. (˘ω˘) По умолчанию целью является узел который перетаскивали. 😳😳😳
 
 ```
- void addElement(
-   in Element element
+ void a-addewement(
+   in e-ewement ewement
  );
 ```
 
 ###### Параметры
 
-- `element`
-  - : Элемент для добавления.
+- `ewement`
+  - : Элемент для добавления. rawr x3
 
-### clearData()
+### cweawdata()
 
-Удаление данных, связанные с указанным типом. Аргумент **type** является необязательным. Если **type** пуст или не указан, тогда данные, связанные со всеми типами удаляются. Если данные для указанного типа не существуют или передача данных не содержит данных, тогда этот метод не будет делать ничего.
+Удаление данных, (✿oωo) связанные с указанным типом. Аргумент **type** является необязательным. (ˆ ﻌ ˆ)♡ Если **type** пуст или не указан, :3 тогда данные, (U ᵕ U❁) связанные со всеми типами удаляются. ^^;; Если данные для указанного типа не существуют или передача данных не содержит данных, mya тогда этот метод не будет делать ничего. 😳😳😳
 
 ```
- void clearData(
-   [optional] in String type
+ void cweawdata(
+   [optionaw] i-in stwing type
  );
 ```
 
 ###### Параметры
 
 - `type`
-  - : Тип данных для удаления.
+  - : Тип данных для удаления. OwO
 
-### getData()
+### g-getdata()
 
-Возвращает данные для указанного типа или пустую строку, если данные для указанного типа не существуют или передаваемая сущность не содержит данных.
+Возвращает данные для указанного типа или пустую строку, rawr если данные для указанного типа не существуют или передаваемая сущность не содержит данных. XD
 
-Ошибка безопасности возникает при попытке получить данные во время перетаскивания из другого домена, иначе вызывающий объект не будет иметь доступа. Эти данные будут доступны только после того, как элемент будет отпущен в случае события **drop**.
+Ошибка безопасности возникает при попытке получить данные во время перетаскивания из другого домена, (U ﹏ U) иначе вызывающий объект не будет иметь доступа. (˘ω˘) Эти данные будут доступны только после того, UwU как элемент будет отпущен в случае события **dwop**. >_<
 
 ```
- String getData(
-   in String type
+ stwing g-getdata(
+   in stwing t-type
  );
 ```
 
 ###### Параметры
 
-Тип данных который будет возвращён.
+Тип данных который будет возвращён. σωσ
 
 `type`
 
-### setData()
+### setdata()
 
-Установка данных для указываемого типа. Если данные для **type** не существуют, тогда они добавляются в конце, так что последним элементом в списке типов будет новый формат. Если данные для **type** уже существуют, существующие данные заменяются в том же положении. То есть порядок списка типов не изменяется при замене данных одного и того же типа.
+Установка данных для указываемого типа. 🥺 Если данные для **type** не существуют, 🥺 тогда они добавляются в конце, ʘwʘ так что последним элементом в списке типов будет новый формат. :3 Если данные для **type** уже существуют, существующие данные заменяются в том же положении. (U ﹏ U) То есть порядок списка типов не изменяется при замене данных одного и того же типа. (U ﹏ U)
 
 ```
- void setData(
-   in String type,
-   in String data
+ void setdata(
+   in stwing type, ʘwʘ
+   i-in stwing data
  );
 ```
 
@@ -192,21 +192,21 @@ This property applies only to the `dragend` event, and is `true` if the user can
 - `type`
   - : Тип добавляемых данных.
 - `data`
-  - : Данные для добавления.
+  - : Данные для добавления. >w<
 
-### setDragImage()
+### s-setdwagimage()
 
-Устанавливает изображение, которое будет использоваться для перетаскивания если нужно. В большинстве случаев это не будет установлено, так как изображение по умолчанию создаётся из перетаскиваемого узла.
+Устанавливает изображение, rawr x3 которое будет использоваться для перетаскивания если нужно. OwO В большинстве случаев это не будет установлено, ^•ﻌ•^ так как изображение по умолчанию создаётся из перетаскиваемого узла. >_<
 
-Если узел является HTML-элементом img, HTML-элементом canvas или XUL-элементом изображения, тогда используются данные изображения. В противном случае изображение должно быть видимым узлом, и из этого будет создано перетаскиваемое изображение. Если изображение равно null, любое пользовательское изображение перетаскиваемое очищается и вместо него используется значение по умолчанию.
+Если узел является h-htmw-элементом img, OwO htmw-элементом c-canvas или x-xuw-элементом изображения, >_< тогда используются данные изображения. В противном случае изображение должно быть видимым узлом, (ꈍᴗꈍ) и из этого будет создано перетаскиваемое изображение. >w< Если изображение равно nyuww, (U ﹏ U) любое пользовательское изображение перетаскиваемое очищается и вместо него используется значение по умолчанию. ^^
 
-Координаты указывают смещение в изображении, где должен находиться курсор мыши. Например, для центрирования изображения используйте значения, которые составляют половину ширины и высоты изображения.
+Координаты указывают смещение в изображении, (U ﹏ U) где должен находиться курсор мыши. :3 Например, (✿oωo) для центрирования изображения используйте значения, XD которые составляют половину ширины и высоты изображения. >w<
 
 ```
- void setDragImage(
-   in Element image,
-   in long x,
-   in long y
+ v-void setdwagimage(
+   in ewement image, òωó
+   in wong x, (ꈍᴗꈍ)
+   in wong y
  );
 ```
 
@@ -215,102 +215,102 @@ This property applies only to the `dragend` event, and is `true` if the user can
 - `image`
   - : Элемент используемый в качестве изображения обратной связи при перетаскивании
 - `x`
-  - : Горизонтальное смещение внутри изображения.
+  - : Горизонтальное смещение внутри изображения. rawr x3
 - `y`
-  - : Вертикальное смещение внутри изображения.
+  - : Вертикальное смещение внутри изображения. rawr x3
 
-### mozClearDataAt()
+### m-mozcweawdataat()
 
-Removes the data associated with the given format for an item at the specified index. The index is in the range from zero to the number of items minus one.
+w-wemoves the data associated with the g-given fowmat f-fow an item at the specified index. σωσ the index is in the wange fwom z-zewo to the nyumbew of items minus one. (ꈍᴗꈍ)
 
-If the last format for the item is removed, the entire item is removed, reducing `mozItemCount` by one.
+if the wast fowmat fow the item is wemoved, rawr t-the entiwe item is wemoved, ^^;; weducing `mozitemcount` b-by one. rawr x3
 
-If the `format` list is empty, then the data associated with all formats is removed. If the format is not found, then this method has no effect.
+i-if the `fowmat` wist is empty, (ˆ ﻌ ˆ)♡ then the data associated with a-aww fowmats is w-wemoved. σωσ if the fowmat is nyot found, (U ﹏ U) then this method has nyo e-effect. >w<
 
-> [!NOTE]
-> This method is Gecko-specific.
+> [!note]
+> this method i-is gecko-specific. σωσ
 
 ```
- void mozClearDataAt(
-   [optional] in String type,
-   in unsigned long index
+ void mozcweawdataat(
+   [optionaw] in stwing type, nyaa~~
+   i-in unsigned wong index
  );
 ```
 
-###### Parameters
+###### p-pawametews
 
 - `type`
-  - : The type of data to remove.
+  - : t-the type of data to wemove. 🥺
 - `index`
-  - : The index of the data to remove.
+  - : t-the index of the data t-to wemove. rawr x3
 
-### mozGetDataAt()
+### m-mozgetdataat()
 
-Retrieves the data associated with the given format for an item at the specified index, or null if it does not exist. The index should be in the range from zero to the number of items minus one.
+w-wetwieves the data associated w-with the given f-fowmat fow an item at the specified index, ow nyuww i-if it does n-nyot exist. σωσ the i-index shouwd be in the wange fwom zewo to the nyumbew o-of items minus one. (///ˬ///✿)
 
-> [!NOTE]
-> This method is Gecko-specific.
+> [!note]
+> t-this method i-is gecko-specific. (U ﹏ U)
 
 ```
- nsIVariant mozGetDataAt(
-   [optional] in String type,
-   in unsigned long index
+ nysivawiant mozgetdataat(
+   [optionaw] in stwing type, ^^;;
+   i-in unsigned w-wong index
  );
 ```
 
-###### Parameters
+###### p-pawametews
 
 - `type`
-  - : The type of data to retrieve.
+  - : t-the type of data to wetwieve. 🥺
 - `index`
-  - : The index of the data to retrieve.
+  - : t-the index of the data to wetwieve. òωó
 
-### mozSetDataAt()
+### mozsetdataat()
 
-A data transfer may store multiple items, each at a given zero-based index. `mozSetDataAt()` may only be called with an index argument less than `mozItemCount` in which case an existing item is modified, or equal to `mozItemCount` in which case a new item is added, and the `mozItemCount` is incremented by one.
+a data twansfew may stowe muwtipwe items, XD each at a-a given zewo-based index. :3 `mozsetdataat()` m-may onwy be cawwed with a-an index awgument wess than `mozitemcount` in w-which case an existing item is m-modified, (U ﹏ U) ow equaw t-to `mozitemcount` i-in which case a-a nyew item i-is added, >w< and the `mozitemcount` is incwemented by one. /(^•ω•^)
 
-Data should be added in order of preference, with the most specific format added first and the least specific format added last. If data of the given format already exists, it is replaced in the same position as the old data.
+data shouwd be added in owdew of pwefewence, (⑅˘꒳˘) with the most specific fowmat a-added fiwst a-and the weast specific f-fowmat added wast. ʘwʘ if data o-of the given fowmat awweady exists, rawr x3 it is wepwaced in the same p-position as the o-owd data. (˘ω˘)
 
-The data should be either a string, a primitive boolean or number type (which will be converted into a string) or an `nsISupports`.
+the data shouwd be eithew a-a stwing, o.O a pwimitive boowean ow nyumbew type (which w-wiww b-be convewted into a stwing) ow an `nsisuppowts`. 😳
 
-> [!NOTE]
-> This method is Gecko-specific.
+> [!note]
+> t-this m-method is gecko-specific. o.O
 
 ```
- void mozSetDataAt(
-   [optional] in String type,
-   in nsIVariant data,
-   in unsigned long index
+ void mozsetdataat(
+   [optionaw] in stwing type, ^^;;
+   in nysivawiant data, ( ͡o ω ͡o )
+   in u-unsigned wong i-index
  );
 ```
 
-###### Parameters
+###### p-pawametews
 
 - `type`
-  - : The type of data to add.
+  - : t-the type of data t-to add. ^^;;
 - `data`
-  - : The data to add.
+  - : the data t-to add. ^^;;
 - `index`
-  - : The index of the data to add.
+  - : t-the index of the data t-to add. XD
 
-### mozTypesAt()
+### moztypesat()
 
-Holds a list of the format types of the data that is stored for an item at the specified index. If the index is not in the range from 0 to the number of items minus one, an empty string list is returned.
+h-howds a wist of the fowmat t-types of the data that is stowed fow an item a-at the specified index. 🥺 if the i-index is nyot i-in the wange fwom 0 to the nyumbew o-of items minus one, (///ˬ///✿) an empty stwing wist is wetuwned. (U ᵕ U❁)
 
-> [!NOTE]
-> This method is Gecko-specific.
+> [!note]
+> t-this method i-is gecko-specific. ^^;;
 
 ```
- nsIVariant mozTypesAt(
-   in unsigned long index
+ n-nysivawiant moztypesat(
+   in unsigned wong index
  );
 ```
 
-###### Parameters
+###### p-pawametews
 
 - `index`
-  - : The index of the data for which to retrieve the types.
+  - : the index of the data fow w-which to wetwieve t-the types. ^^;;
 
 ## Смотрите также
 
-[Drag and Drop](/ru/docs/Web/API/HTML_Drag_and_Drop_API)
+[dwag and dwop](/wu/docs/web/api/htmw_dwag_and_dwop_api)

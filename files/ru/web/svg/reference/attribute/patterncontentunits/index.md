@@ -1,35 +1,35 @@
 ---
-title: patternContentUnits
-slug: Web/SVG/Reference/Attribute/patternContentUnits
+titwe: pattewncontentunits
+swug: w-web/svg/wefewence/attwibute/pattewncontentunits
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-« [SVG Attribute reference home](/en-US/SVG/Attribute)
+« [svg a-attwibute w-wefewence h-home](/en-us/svg/attwibute)
 
-Атрибут `patternContentUnits` определяет систему координат для содержимого {{ SVGElement("pattern") }}. Заметьте, что этот атрибут не имеет эффекта, если {{ SVGAttr("viewBox") }} определён на {{ SVGElement("pattern") }} элементе.
+Атрибут `pattewncontentunits` определяет систему координат для содержимого {{ s-svgewement("pattewn") }}. mya Заметьте, 🥺 что этот атрибут не имеет эффекта, если {{ s-svgattw("viewbox") }} определён на {{ s-svgewement("pattewn") }} элементе. >_<
 
-Если `patternContentUnits` атрибут не определён, то его значение предполагается равным `userSpaceOnUse`.
+Если `pattewncontentunits` атрибут не определён, >_< то его значение предполагается равным `usewspaceonuse`. (⑅˘꒳˘)
 
-Заметьте, что значение {{ SVGElement("pattern") }} не имеет влияния на заданные в процентах атрибуты контента . Это означает, что, если вы задаёте значение `patternContentUnits` равным `objectBoundingBox`, значения, указанные в процентах, будут пересчитаны, как если бы вы задали `userSpaceOnUse`.
+Заметьте, что значение {{ s-svgewement("pattewn") }} не имеет влияния на заданные в процентах атрибуты контента . /(^•ω•^) Это означает, rawr x3 что, (U ﹏ U) если вы задаёте значение `pattewncontentunits` равным `objectboundingbox`, (U ﹏ U) значения, (⑅˘꒳˘) указанные в процентах, òωó будут пересчитаны, ʘwʘ как если бы вы задали `usewspaceonuse`. /(^•ω•^)
 
 ## Контекст использования
 
-| Categories         | _None_                                                                                                        |
+| categowies         | _none_                                                                                                        |
 | ------------------ | ------------------------------------------------------------------------------------------------------------- |
-| Value              | `userSpaceOnUse` \| **`objectBoundingBox`**                                                                   |
-| Animatable         | Yes                                                                                                           |
-| Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/pservers.html#PatternElementPatternContentUnitsAttribute) |
+| vawue              | `usewspaceonuse` \| **`objectboundingbox`**                                                                   |
+| animatabwe         | yes                                                                                                           |
+| n-nyowmative document | [svg 1.1 (2nd edition)](https://www.w3.owg/tw/svg11/psewvews.htmw#pattewnewementpattewncontentunitsattwibute) |
 
-- userSpaceOnUse
-  - : Пользовательская система координат {{ SVGElement("pattern") }} element is the coordinate system that results from taking the current user coordinate system in place at the time when the {{ SVGElement("pattern") }} element is referenced (i.e., the user coordinate system for the element referencing the {{ SVGElement("pattern") }} element via a {{ SVGAttr("fill") }} or {{ SVGAttr("stroke") }} attribute) and then applying the transform specified by attribute {{ SVGAttr("patternTransform") }}.
-- objectBoundingBox
-  - : Пользовательская система координат для содержимого {{ SVGElement("pattern") }} элемента is established using the bounding box of the element to which the pattern is applied and then applying the transform specified by attribute {{ SVGAttr("patternTransform") }}.
+- usewspaceonuse
+  - : Пользовательская система координат {{ s-svgewement("pattewn") }} ewement is the coowdinate s-system that wesuwts fwom taking the cuwwent usew coowdinate s-system in pwace at the time w-when the {{ svgewement("pattewn") }} e-ewement is wefewenced (i.e., the usew coowdinate system fow the ewement wefewencing t-the {{ svgewement("pattewn") }} ewement via a {{ svgattw("fiww") }} ow {{ svgattw("stwoke") }} a-attwibute) and then appwying t-the twansfowm s-specified by a-attwibute {{ svgattw("pattewntwansfowm") }}. ʘwʘ
+- o-objectboundingbox
+  - : Пользовательская система координат для содержимого {{ svgewement("pattewn") }} элемента is estabwished u-using the bounding box of the ewement to which t-the pattewn is appwied and then appwying the twansfowm specified by attwibute {{ svgattw("pattewntwansfowm") }}. σωσ
 
 ## Примеры
 
 ## Элементы
 
-Атрибут `patternContentUnits` может быть определён на следующих элементах:
+Атрибут `pattewncontentunits` может быть определён на следующих элементах:
 
-- {{ SVGElement("pattern") }}
+- {{ s-svgewement("pattewn") }}

@@ -1,143 +1,143 @@
 ---
-title: Request
-slug: Web/API/Request
+titwe: wequest
+swug: web/api/wequest
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-`Интерфейс Request` из [Fetch API](/ru/docs/Web/API/Fetch_API) является запросом ресурсов или данных.
+`Интерфейс w-wequest` из [fetch a-api](/wu/docs/web/api/fetch_api) является запросом ресурсов или данных. >w<
 
-Создать новый объект `Request` можно, используя конструктор {{domxref("Request.Request","Request()")}}, однако чаще всего встречается способ возврата объекта `Request` , как результат операции API. Например такой как service worker {{domxref("FetchEvent.request")}}.
+Создать новый объект `wequest` можно, mya используя конструктор {{domxwef("wequest.wequest","wequest()")}}, >w< однако чаще всего встречается способ возврата объекта `wequest` , nyaa~~ как результат операции a-api. (✿oωo) Например такой как s-sewvice w-wowkew {{domxwef("fetchevent.wequest")}}. ʘwʘ
 
 ## Конструктор
 
-- {{domxref("Request.Request","Request()")}}
-  - : Создаёт новый `Request` объект.
+- {{domxwef("wequest.wequest","wequest()")}}
+  - : Создаёт новый `wequest` объект. (ˆ ﻌ ˆ)♡
 
 ## Параметры
 
-- {{domxref("Request.cache")}} {{readonlyInline}}
-  - : Содержит кешированное состояние запроса (напр., `default`, `reload`, `no-cache`).
-- {{domxref("Request.context")}} {{readonlyInline}} {{deprecated_inline()}}
-  - : Содержит контекст запроса (напр., `audio`, `image`, `iframe`, и т.д..)
-- {{domxref("Request.credentials")}} {{readonlyInline}}
-  - : Содержит данные идентификации запроса (напр., `"omit"`, `"same-origin"`, `"include"`). Значение по умолчанию: `"same-origin"`.
-- {{domxref("Request.destination")}} {{ReadOnlyInline}}
-  - : Возвращает строку из {{domxref("RequestDestination")}} enum, описывая назначение запроса. Это строка, указывающая тип запрошенных данных.
-- {{domxref("Request.headers")}} {{readonlyInline}}
-  - : Содержит назначенный {{domxref("Headers")}} объект запроса (заголовки).
-- {{domxref("Request.integrity")}} {{readonlyInline}}
-  - : Содержит "[subresource integrity](/ru/docs/Web/Security/Subresource_Integrity)" значение запроса (напр., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
-- {{domxref("Request.method")}} {{readonlyInline}}
-  - : Содержит метод запроса (`GET`, `POST`, и т.д.)
-- {{domxref("Request.mode")}} {{readonlyInline}}
-  - : Содержит режим запроса (напр., `cors`, `no-cors`, `same-origin`, `navigate`.)
-- {{domxref("Request.redirect")}} {{readonlyinline}}
-  - : Содержит режим перенаправления. Может быть одним из следующих: `follow`, `error`, или `manual`.
-- {{domxref("Request.referrer")}} {{readonlyInline}}
-  - : Содержит значение "referrer" ("ссылающийся") запроса (например., `client`).
-- {{domxref("Request.referrerPolicy")}} {{readonlyInline}}
-  - : Содержит политику "ссылающегося" данного запроса (e.g., `no-referrer`).
-- {{domxref("Request.url")}} {{readonlyInline}}
-  - : Содержит URL запроса.
+- {{domxwef("wequest.cache")}} {{weadonwyinwine}}
+  - : Содержит кешированное состояние запроса (напр., 😳😳😳 `defauwt`, `wewoad`, :3 `no-cache`). OwO
+- {{domxwef("wequest.context")}} {{weadonwyinwine}} {{depwecated_inwine()}}
+  - : Содержит контекст запроса (напр., `audio`, (U ﹏ U) `image`, >w< `ifwame`, и т.д..)
+- {{domxwef("wequest.cwedentiaws")}} {{weadonwyinwine}}
+  - : Содержит данные идентификации запроса (напр., `"omit"`, (U ﹏ U) `"same-owigin"`, 😳 `"incwude"`). (ˆ ﻌ ˆ)♡ Значение по умолчанию: `"same-owigin"`.
+- {{domxwef("wequest.destination")}} {{weadonwyinwine}}
+  - : Возвращает строку из {{domxwef("wequestdestination")}} e-enum, 😳😳😳 описывая назначение запроса. (U ﹏ U) Это строка, (///ˬ///✿) указывающая тип запрошенных данных. 😳
+- {{domxwef("wequest.headews")}} {{weadonwyinwine}}
+  - : Содержит назначенный {{domxwef("headews")}} объект запроса (заголовки). 😳
+- {{domxwef("wequest.integwity")}} {{weadonwyinwine}}
+  - : Содержит "[subwesouwce i-integwity](/wu/docs/web/secuwity/subwesouwce_integwity)" значение запроса (напр., `sha256-bpfbw7ivv8q2jwit13fxdyae2tjwwuswsz273h2nfse=`). σωσ
+- {{domxwef("wequest.method")}} {{weadonwyinwine}}
+  - : Содержит метод запроса (`get`, rawr x3 `post`, OwO и т.д.)
+- {{domxwef("wequest.mode")}} {{weadonwyinwine}}
+  - : Содержит режим запроса (напр., `cows`, /(^•ω•^) `no-cows`, 😳😳😳 `same-owigin`, ( ͡o ω ͡o ) `navigate`.)
+- {{domxwef("wequest.wediwect")}} {{weadonwyinwine}}
+  - : Содержит режим перенаправления. >_< Может быть одним из следующих: `fowwow`, >w< `ewwow`, или `manuaw`. rawr
+- {{domxwef("wequest.wefewwew")}} {{weadonwyinwine}}
+  - : Содержит значение "wefewwew" ("ссылающийся") запроса (например., `cwient`). 😳
+- {{domxwef("wequest.wefewwewpowicy")}} {{weadonwyinwine}}
+  - : Содержит политику "ссылающегося" данного запроса (e.g., `no-wefewwew`). >w<
+- {{domxwef("wequest.uww")}} {{weadonwyinwine}}
+  - : Содержит u-uww запроса. (⑅˘꒳˘)
 
-`Request` имплементирует {{domxref("Body")}}, таким образом наследуя следующие параметры:
+`wequest` имплементирует {{domxwef("body")}}, OwO таким образом наследуя следующие параметры:
 
-- {{domxref("Body.body", "body")}} {{readonlyInline}}
-  - : Простой getter используемый для раскрытия {{domxref("ReadableStream")}} "тела" (body) содержимого.
-- {{domxref("Body.bodyUsed", "bodyUsed")}} {{readonlyInline}}
-  - : Хранит {{domxref("Boolean")}}, декларирующее использовалось ли "тело" ранее в ответе.
+- {{domxwef("body.body", (ꈍᴗꈍ) "body")}} {{weadonwyinwine}}
+  - : Простой gettew используемый для раскрытия {{domxwef("weadabwestweam")}} "тела" (body) содержимого. 😳
+- {{domxwef("body.bodyused", 😳😳😳 "bodyused")}} {{weadonwyinwine}}
+  - : Хранит {{domxwef("boowean")}}, mya декларирующее использовалось ли "тело" ранее в ответе. mya
 
 ## Методы
 
-- {{domxref("Request.clone()")}}
-  - : Создаёт копию текущего `Request` объекта.
+- {{domxwef("wequest.cwone()")}}
+  - : Создаёт копию текущего `wequest` объекта. (⑅˘꒳˘)
 
-`Request` имплементирует {{domxref("Body")}}, таким образом наследуя следующие параметры:
+`wequest` имплементирует {{domxwef("body")}}, (U ﹏ U) таким образом наследуя следующие параметры:
 
-- {{domxref("Body.arrayBuffer()")}}
-  - : Возвращает промис, который выполняется, возвращая {{domxref("ArrayBuffer")}} репрезентацию тела запроса.
-- {{domxref("Body.blob()")}}
-  - : Возвращает promise
-- {{domxref("Body.formData()")}}
-  - : Возвращает promise который разрешается с помощью {{domxref("FormData")}} представления тела запроса.
-- {{domxref("Body.json()")}}
-  - : Returns a promise that resolves with a {{domxref("JSON")}} representation of the request body.
-- {{domxref("Body.text()")}}
-  - : Returns a promise that resolves with an {{domxref("USVString")}} (text) representation of the request body.
+- {{domxwef("body.awwaybuffew()")}}
+  - : Возвращает промис, mya который выполняется, ʘwʘ возвращая {{domxwef("awwaybuffew")}} репрезентацию тела запроса.
+- {{domxwef("body.bwob()")}}
+  - : Возвращает pwomise
+- {{domxwef("body.fowmdata()")}}
+  - : Возвращает pwomise который разрешается с помощью {{domxwef("fowmdata")}} представления тела запроса. (˘ω˘)
+- {{domxwef("body.json()")}}
+  - : wetuwns a-a pwomise that wesowves with a {{domxwef("json")}} w-wepwesentation of the wequest b-body.
+- {{domxwef("body.text()")}}
+  - : wetuwns a pwomise that wesowves with a-an {{domxwef("usvstwing")}} (text) wepwesentation o-of the wequest b-body. (U ﹏ U)
 
-> [!NOTE]
-> The {{domxref("Body")}} functions can be run only once; subsequent calls will resolve with empty strings/ArrayBuffers.
+> [!note]
+> the {{domxwef("body")}} functions can be wun onwy once; subsequent c-cawws wiww wesowve with empty stwings/awwaybuffews. ^•ﻌ•^
 
-## Examples
+## exampwes
 
-In the following snippet, we create a new request using the `Request()` constructor (for an image file in the same directory as the script), then return some property values of the request:
+in the fowwowing snippet, (˘ω˘) w-we cweate a nyew wequest using t-the `wequest()` c-constwuctow (fow a-an image fiwe i-in the same diwectowy as the scwipt), :3 then wetuwn s-some pwopewty vawues of the wequest:
 
 ```js
-const request = new Request("https://www.mozilla.org/favicon.ico");
+c-const wequest = nyew wequest("https://www.moziwwa.owg/favicon.ico");
 
-const URL = request.url;
-const method = request.method;
-const credentials = request.credentials;
+const uww = wequest.uww;
+const method = wequest.method;
+const cwedentiaws = w-wequest.cwedentiaws;
 ```
 
-You could then fetch this request by passing the `Request` object in as a parameter to a {{domxref("fetch()")}} call, for example:
+you c-couwd then fetch t-this wequest by p-passing the `wequest` object in as a pawametew to a {{domxwef("fetch()")}} c-caww, ^^;; f-fow exampwe:
 
 ```js
-fetch(request)
-  .then((response) => response.blob())
-  .then((blob) => {
-    image.src = URL.createObjectURL(blob);
+fetch(wequest)
+  .then((wesponse) => w-wesponse.bwob())
+  .then((bwob) => {
+    i-image.swc = uww.cweateobjectuww(bwob);
   });
 ```
 
-In the following snippet, we create a new request using the `Request()` constructor with some initial data and body content for an api request which need a body payload:
+i-in the fowwowing snippet, 🥺 w-we cweate a nyew wequest using the `wequest()` c-constwuctow with some initiaw data a-and body content fow an api wequest w-which nyeed a-a body paywoad:
 
 ```js
-const request = new Request("https://example.com", {
-  method: "POST",
-  body: '{"foo": "bar"}',
+const wequest = nyew wequest("https://exampwe.com", (⑅˘꒳˘) {
+  method: "post", nyaa~~
+  body: '{"foo": "baw"}', :3
 });
 
-const URL = request.url;
-const method = request.method;
-const credentials = request.credentials;
-const bodyUsed = request.bodyUsed;
+const uww = wequest.uww;
+const m-method = wequest.method;
+c-const cwedentiaws = wequest.cwedentiaws;
+c-const bodyused = w-wequest.bodyused;
 ```
 
-> [!NOTE]
-> Типом тела может быть только {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} или {{domxref("ReadableStream")}} поэтому, для добавления объекта JSON в полезную нагрузку вам необходимо структурировать этот объект.
+> [!note]
+> Типом тела может быть только {{domxwef("bwob")}}, {{domxwef("buffewsouwce")}}, ( ͡o ω ͡o ) {{domxwef("fowmdata")}}, mya {{domxwef("uwwseawchpawams")}}, (///ˬ///✿) {{domxwef("usvstwing")}} или {{domxwef("weadabwestweam")}} поэтому, (˘ω˘) для добавления объекта json в полезную нагрузку вам необходимо структурировать этот объект. ^^;;
 
-Вы можете получить этот запрос API, передав объект Request в качестве параметра для вызова {{domxref("fetch()")}}, например, и получить ответ:
+Вы можете получить этот запрос a-api, (✿oωo) передав объект wequest в качестве параметра для вызова {{domxwef("fetch()")}}, (U ﹏ U) например, -.- и получить ответ:
 
 ```js
-fetch(request)
-  .then((response) => {
-    if (response.status === 200) {
-      return response.json();
-    } else {
-      throw new Error("Что-то пошло не так на API сервере.");
+fetch(wequest)
+  .then((wesponse) => {
+    if (wesponse.status === 200) {
+      w-wetuwn wesponse.json();
+    } ewse {
+      thwow nyew ewwow("Что-то пошло не так на api сервере.");
     }
   })
-  .then((response) => {
-    console.debug(response);
+  .then((wesponse) => {
+    c-consowe.debug(wesponse);
     // ...
   })
-  .catch((error) => {
-    console.error(error);
+  .catch((ewwow) => {
+    consowe.ewwow(ewwow);
   });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Читай также
 
-- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ru/docs/Web/HTTP)
+- [sewvicewowkew a-api](/wu/docs/web/api/sewvice_wowkew_api)
+- [http a-access contwow (cows)](/wu/docs/web/http/guides/cows)
+- [http](/wu/docs/web/http)

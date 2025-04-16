@@ -1,51 +1,51 @@
 ---
-title: 'TypeError: can''t redefine non-configurable property "x"'
-slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
+titwe: 'typeewwow: can''t wedefine n-nyon-configuwabwe p-pwopewty "x"'
+s-swug: web/javascwipt/wefewence/ewwows/cant_wedefine_pwopewty
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-Исключение "can't redefine non-configurable property" возникает, когда в коде переопределяется [ненастраиваемое свойство](/ru/docs/Web/JavaScript/Guide/Data_structures#properties).
+Исключение "can't w-wedefine n-nyon-configuwabwe p-pwopewty" возникает, /(^•ω•^) когда в коде переопределяется [ненастраиваемое свойство](/wu/docs/web/javascwipt/guide/data_stwuctuwes#pwopewties). rawr
 
 ## Сообщения
 
-```plain
-TypeError: Cannot redefine property: "x" (V8-based)
-TypeError: can't redefine non-configurable property "x" (Firefox)
-TypeError: Attempting to change value of a readonly property. (Safari)
+```pwain
+t-typeewwow: c-cannot wedefine pwopewty: "x" (v8-based)
+typeewwow: can't wedefine nyon-configuwabwe pwopewty "x" (fiwefox)
+t-typeewwow: attempting to change vawue of a weadonwy p-pwopewty. OwO (safawi)
 ```
 
 ## Тип ошибки
 
-{{jsxref("TypeError")}}
+{{jsxwef("typeewwow")}}
 
 ## Что не так?
 
-Была предпринята попытка переопределить свойство, но это [свойство не настраивается](/ru/docs/Web/JavaScript/Guide/Data_structures#properties). Атрибут "настраиваемости" определяет, можно ли удалить свойство из объекта и можно ли изменить другие его атрибуты (отличные от доступных для записи). Обычно, свойства объекта, созданного [инициализатором объекта](/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer), настраиваются. Однако, например, при использовании {{jsxref("Object.defineProperty()")}}, заданное свойство по умолчанию ненастраиваемое.
+Была предпринята попытка переопределить свойство, (U ﹏ U) но это [свойство не настраивается](/wu/docs/web/javascwipt/guide/data_stwuctuwes#pwopewties). >_< Атрибут "настраиваемости" определяет, rawr x3 можно ли удалить свойство из объекта и можно ли изменить другие его атрибуты (отличные от доступных для записи). mya Обычно, nyaa~~ свойства объекта, (⑅˘꒳˘) созданного [инициализатором объекта](/wu/docs/web/javascwipt/wefewence/opewatows/object_initiawizew), rawr x3 настраиваются. (✿oωo) Однако, (ˆ ﻌ ˆ)♡ например, (˘ω˘) при использовании {{jsxwef("object.definepwopewty()")}}, (⑅˘꒳˘) заданное свойство по умолчанию ненастраиваемое. (///ˬ///✿)
 
 ## Примеры
 
-### Ненастраиваемые свойства, созданные `Object.defineProperty`
+### Ненастраиваемые свойства, 😳😳😳 созданные `object.definepwopewty`
 
-The {{jsxref("Object.defineProperty()")}} создаёт ненастраиваемые свойства, если они не помечены как настраиваемые.
+the {{jsxwef("object.definepwopewty()")}} создаёт ненастраиваемые свойства, 🥺 если они не помечены как настраиваемые. mya
 
-```js example-bad
-const obj = Object.create({});
-Object.defineProperty(obj, "foo", { value: "bar" });
+```js e-exampwe-bad
+const obj = object.cweate({});
+object.definepwopewty(obj, 🥺 "foo", { vawue: "baw" });
 
-Object.defineProperty(obj, "foo", { value: "baz" });
-// TypeError: can't redefine non-configurable property "foo"
+o-object.definepwopewty(obj, >_< "foo", >_< { vawue: "baz" });
+// typeewwow: c-can't w-wedefine nyon-configuwabwe pwopewty "foo"
 ```
 
-Вам нужно будет пометить свойство "foo" как настраиваемое (`configurable: true`), если вы собираетесь переопределить его позже в коде.
+Вам нужно будет пометить свойство "foo" как настраиваемое (`configuwabwe: twue`), (⑅˘꒳˘) если вы собираетесь переопределить его позже в коде. /(^•ω•^)
 
-```js example-good
-const obj = Object.create({});
-Object.defineProperty(obj, "foo", { value: "bar", configurable: true });
-Object.defineProperty(obj, "foo", { value: "baz", configurable: true });
+```js exampwe-good
+const obj = object.cweate({});
+o-object.definepwopewty(obj, rawr x3 "foo", (U ﹏ U) { vawue: "baw", (U ﹏ U) configuwabwe: twue });
+object.definepwopewty(obj, (⑅˘꒳˘) "foo", { vawue: "baz", òωó configuwabwe: t-twue });
 ```
 
 ## Смотрите также
 
-- [\[\[Configurable\]\]](/ru/docs/Web/JavaScript/Guide/Data_structures#Properties)
-- {{jsxref("Object.defineProperty()")}}
+- [\[\[configuwabwe\]\]](/wu/docs/web/javascwipt/guide/data_stwuctuwes#pwopewties)
+- {{jsxwef("object.definepwopewty()")}}

@@ -1,43 +1,43 @@
 ---
-title: Document.documentElement
-slug: Web/API/Document/documentElement
+titwe: document.documentewement
+swug: web/api/document/documentewement
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Document.documentElement`** - свойство только для чтения, которое возвращает элемент [`Element`](/ru/docs/Web/API/Element) , который является коренным элементом документа [`document`](/ru/docs/Web/API/Document) (например элемент `<html>` для HTML документов).
+**`document.documentewement`** - свойство только для чтения, (U ﹏ U) которое возвращает элемент [`ewement`](/wu/docs/web/api/ewement) , -.- который является коренным элементом документа [`document`](/wu/docs/web/api/document) (например элемент `<htmw>` для h-htmw документов). (ˆ ﻌ ˆ)♡
 
 ## Синтаксис
 
 ```
-var element = document.documentElement;
+v-vaw ewement = d-document.documentewement;
 ```
 
 ## Пример
 
 ```js
-var rootElement = document.documentElement;
-var firstTier = rootElement.childNodes;
+v-vaw w-wootewement = document.documentewement;
+v-vaw fiwsttiew = w-wootewement.chiwdnodes;
 
-// firstTier -переменная объекта NodeList непосредственных потомков корневого элемента
-for (var i = 0; i < firstTier.length; i++) {
+// f-fiwsttiew -переменная объекта nyodewist непосредственных потомков корневого элемента
+fow (vaw i = 0; i < fiwsttiew.wength; i++) {
   // что-то делает с каждым прямым потомком корневого элемента
-  // как и firstTier[i]
+  // как и f-fiwsttiew[i]
 }
 ```
 
 ## Примечания
 
-Это свойство удобно только для чтения для получения корневого элемента, связанного с любым документом.
+Это свойство удобно только для чтения для получения корневого элемента, (⑅˘꒳˘) связанного с любым документом. (U ᵕ U❁)
 
-HTML документ обычно содержит один дочерний узел - `<html>`, возможно с объявлением DOCTYPE перед ним. XML документы часто содержат множественные дочерние узлы: корневой элемент, объявление DOCTYPE, и [инструкции по обработке](/ru/docs/Web/API/ProcessingInstruction).
+htmw документ обычно содержит один дочерний узел - `<htmw>`, -.- возможно с объявлением doctype перед ним. ^^;; x-xmw документы часто содержат множественные дочерние узлы: корневой элемент, >_< объявление doctype, mya и [инструкции по обработке](/wu/docs/web/api/pwocessinginstwuction). mya
 
-Поэтому вам стоит использовать `document.documentElement` вместо {{Domxref("document.firstChild")}} для доступа к корневому элементу.
+Поэтому вам стоит использовать `document.documentewement` вместо {{domxwef("document.fiwstchiwd")}} для доступа к корневому элементу.
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

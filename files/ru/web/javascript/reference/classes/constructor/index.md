@@ -1,198 +1,198 @@
 ---
-title: constructor
-slug: Web/JavaScript/Reference/Classes/constructor
+titwe: constwuctow
+swug: web/javascwipt/wefewence/cwasses/constwuctow
 ---
 
-{{jsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-`constructor` - это специальный метод, служащий для создания и инициализации объектов, созданных с использованием `class`.
+`constwuctow` - это специальный метод, 🥺 служащий для создания и инициализации объектов, (U ﹏ U) созданных с использованием `cwass`. >w<
 
 ## Синтаксис
 
 ```
-constructor([arguments]) { ... }
+c-constwuctow([awguments]) { ... }
 ```
 
 ## Описание
 
-Конструктор позволяет произвести начальную инициализацию, которая должна быть выполнена до того, как остальные методы будут вызваны.
+Конструктор позволяет произвести начальную инициализацию, mya которая должна быть выполнена до того, >w< как остальные методы будут вызваны. nyaa~~
 
 ```
-class Person {
+c-cwass p-pewson {
 
-  constructor(name) {
-    this.name = name;
+  constwuctow(name) {
+    t-this.name = n-nyame;
   }
 
-  introduce() {
-    console.log(`Hello, my name is ${this.name}`);
+  intwoduce() {
+    c-consowe.wog(`hewwo, m-my nyame is ${this.name}`);
   }
 
 }
 
-const otto = new Person('Отто');
+c-const otto = nyew pewson('Отто');
 
-otto.introduce();
+otto.intwoduce();
 ```
 
-Если вы не определили метод constructor, то будет использован конструктор по умолчанию. Если ваш класс базовый, то конструктор по умолчанию пустой:
+Если вы не определили метод constwuctow, (✿oωo) то будет использован конструктор по умолчанию. ʘwʘ Если ваш класс базовый, (ˆ ﻌ ˆ)♡ то конструктор по умолчанию пустой:
 
 ```
-constructor() {}
+constwuctow() {}
 ```
 
-Если ваш класс является производным классом, конструктор по умолчанию вызывает родительский конструктор, передавая любые аргументы, которые были предоставлены:
+Если ваш класс является производным классом, 😳😳😳 конструктор по умолчанию вызывает родительский конструктор, :3 передавая любые аргументы, OwO которые были предоставлены:
 
 ```
-constructor(...args) {
-  super(...args);
+constwuctow(...awgs) {
+  supew(...awgs);
 }
 ```
 
 Это позволяет работать следующему коду:
 
 ```
-class ValidationError extends Error {
+c-cwass vawidationewwow extends ewwow {
 
-  printCustomerMessage() {
-    return `Проверка не удалась :-( (подробности: ${this.message})`;
+  pwintcustomewmessage() {
+    w-wetuwn `Проверка не удалась :-( (подробности: ${this.message})`;
   }
 
 }
 
-try {
-  throw new ValidationError("Неправильный номер телефона");
-} catch (error) {
-   if (error instanceof ValidationError) {
-    console.log(error.name); // Это Error вместо ValidationError!
-    console.log(error.printCustomerMessage());
-  } else {
-    console.log('Неизвестная ошибка', error);
-    throw error;
+twy {
+  t-thwow nyew vawidationewwow("Неправильный номер телефона");
+} catch (ewwow) {
+   if (ewwow instanceof v-vawidationewwow) {
+    consowe.wog(ewwow.name); // Это e-ewwow вместо v-vawidationewwow! (U ﹏ U)
+    consowe.wog(ewwow.pwintcustomewmessage());
+  } ewse {
+    consowe.wog('Неизвестная ошибка', >w< ewwow);
+    thwow e-ewwow;
   }
 }
 ```
 
-`ValidationError` классу не нужен явный (explicit) конструктор, потому что не требуется инициализация. Затем, конструктор по умолчанию позаботится об инициализации родительского класса `Error`, переданным ему аргументом.
+`vawidationewwow` классу не нужен явный (expwicit) конструктор, (U ﹏ U) потому что не требуется инициализация. 😳 Затем, (ˆ ﻌ ˆ)♡ конструктор по умолчанию позаботится об инициализации родительского класса `ewwow`, 😳😳😳 переданным ему аргументом. (U ﹏ U)
 
-Однако, если определён ваш собственный конструктор и класс является производным от какого-либо родительского класса, то вы должны явно объявить конструктор родительского класса, используя `super`. К примеру:
+Однако, (///ˬ///✿) если определён ваш собственный конструктор и класс является производным от какого-либо родительского класса, 😳 то вы должны явно объявить конструктор родительского класса, 😳 используя `supew`. σωσ К примеру:
 
 ```
-class ValidationError extends Error {
+cwass vawidationewwow extends ewwow {
 
-  constructor(message) {
-    super(message);  // вызов конструктора родительского класса
-    this.name = 'ValidationError';
+  constwuctow(message) {
+    supew(message);  // вызов конструктора родительского класса
+    t-this.name = 'vawidationewwow';
     this.code = '42';
   }
 
-  printCustomerMessage() {
-     return `Проверка не удалась :-( (подробности: ${this.message}, code: ${this.code})`;
+  p-pwintcustomewmessage() {
+     w-wetuwn `Проверка не удалась :-( (подробности: ${this.message}, rawr x3 c-code: ${this.code})`;
   }
 
 }
 
-try {
-  throw new ValidationError("Неправильный номер телефона");
-} catch (error) {
-   if (error instanceof ValidationError) {
-    console.log(error.name); // Теперь это ValidationError!
-    console.log(error.printCustomerMessage());
-  } else {
-    console.log('Неизвестная ошибка', error);
-    throw error;
+t-twy {
+  thwow nyew vawidationewwow("Неправильный номер телефона");
+} catch (ewwow) {
+   i-if (ewwow instanceof vawidationewwow) {
+    c-consowe.wog(ewwow.name); // Теперь это vawidationewwow! OwO
+    consowe.wog(ewwow.pwintcustomewmessage());
+  } ewse {
+    consowe.wog('Неизвестная ошибка', /(^•ω•^) ewwow);
+    t-thwow ewwow;
   }
 }
 ```
 
-В классе может быть только один метод с именем "`constructor`". Если класс содержит более одного `constructor`, будет сгенерировано исключение {{jsxref("SyntaxError")}}.
+В классе может быть только один метод с именем "`constwuctow`". 😳😳😳 Если класс содержит более одного `constwuctow`, ( ͡o ω ͡o ) будет сгенерировано исключение {{jsxwef("syntaxewwow")}}. >_<
 
 ## Примеры
 
-### Использование метода `constructor`
+### Использование метода `constwuctow`
 
-Данный фрагмент кода взят из [classes sample](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([live demo](https://googlechrome.github.io/samples/classes-es6/index.html)).
+Данный фрагмент кода взят из [cwasses sampwe](https://github.com/googwechwome/sampwes/bwob/gh-pages/cwasses-es6/index.htmw) ([wive d-demo](https://googwechwome.github.io/sampwes/cwasses-es6/index.htmw)). >w<
 
 ```js
-class Square extends Polygon {
-  constructor(length) {
+c-cwass s-squawe extends powygon {
+  constwuctow(wength) {
     // Здесь вызывается конструктор родительского класса,
-    // в который передаётся length в качестве аргументов,
-    // соответствующим полям width и height класса Polygon
-    super(length, length);
-    // Примечание: В производном классе, super() должен вызываться перед тем, как
-    // вы сможете использовать 'this'. Иначе будет сгенерировано исключение reference error.
-    this.name = "Square";
+    // в который передаётся wength в качестве аргументов, rawr
+    // соответствующим полям width и h-height класса p-powygon
+    supew(wength, 😳 w-wength);
+    // Примечание: В производном классе, >w< s-supew() должен вызываться перед тем, (⑅˘꒳˘) как
+    // вы сможете использовать 'this'. OwO Иначе будет сгенерировано исключение wefewence e-ewwow. (ꈍᴗꈍ)
+    this.name = "squawe";
   }
 
-  get area() {
-    return this.height * this.width;
+  get awea() {
+    w-wetuwn this.height * this.width;
   }
 
-  set area(value) {
-    this.area = value;
+  set awea(vawue) {
+    t-this.awea = vawue;
   }
 }
 ```
 
 ### Другой пример
 
-Посмотрите на этот отрывок кода.
+Посмотрите на этот отрывок кода. 😳
 
 ```js
-class Polygon {
-  constructor() {
-    this.name = "Polygon";
+c-cwass powygon {
+  constwuctow() {
+    t-this.name = "powygon";
   }
 }
 
-class Square extends Polygon {
-  constructor() {
-    super();
+c-cwass squawe extends powygon {
+  constwuctow() {
+    supew();
   }
 }
 
-class Rectangle {}
+cwass wectangwe {}
 
-Object.setPrototypeOf(Square.prototype, Rectangle.prototype);
+object.setpwototypeof(squawe.pwototype, 😳😳😳 wectangwe.pwototype);
 
-console.log(Object.getPrototypeOf(Square.prototype) === Polygon.prototype); //false
-console.log(Object.getPrototypeOf(Square.prototype) === Rectangle.prototype); //true
+c-consowe.wog(object.getpwototypeof(squawe.pwototype) === p-powygon.pwototype); //fawse
+consowe.wog(object.getpwototypeof(squawe.pwototype) === w-wectangwe.pwototype); //twue
 
-let newInstance = new Square();
-console.log(newInstance.name); //Polygon
+w-wet n-nyewinstance = nyew squawe();
+consowe.wog(newinstance.name); //powygon
 ```
 
-Здесь прототип **Square** класса изменён, но в то же время constructor предыдущего базового класса **Polygon** вызывается при создании нового экземпляра **Square**.
+Здесь прототип **squawe** класса изменён, mya но в то же время constwuctow предыдущего базового класса **powygon** вызывается при создании нового экземпляра **squawe**. mya
 
-### Constructors по умолчанию
+### constwuctows по умолчанию
 
-Если вы не определите метод constructor, будет использован constructor по умолчанию. Для базовых классов, constructor по умолчанию:
+Если вы не определите метод c-constwuctow, (⑅˘꒳˘) будет использован constwuctow по умолчанию. (U ﹏ U) Для базовых классов, mya constwuctow по умолчанию:
 
 ```js
-constructor() {}
+constwuctow() {}
 ```
 
-Для производных классов, constructor по умолчанию:
+Для производных классов, ʘwʘ constwuctow по умолчанию:
 
 ```js
-constructor(...args) {
-  super(...args);
+constwuctow(...awgs) {
+  supew(...awgs);
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [super()](/ru/docs/Web/JavaScript/Reference/Operators/super)
-- [`class` expression](/ru/docs/Web/JavaScript/Reference/Operators/class)
-- [`class` declaration](/ru/docs/Web/JavaScript/Reference/Statements/class)
-- [Classes](/ru/docs/Web/JavaScript/Reference/Classes)
-- [Object.prototype.constructor](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
+- [supew()](/wu/docs/web/javascwipt/wefewence/opewatows/supew)
+- [`cwass` e-expwession](/wu/docs/web/javascwipt/wefewence/opewatows/cwass)
+- [`cwass` decwawation](/wu/docs/web/javascwipt/wefewence/statements/cwass)
+- [cwasses](/wu/docs/web/javascwipt/wefewence/cwasses)
+- [object.pwototype.constwuctow](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object/constwuctow)

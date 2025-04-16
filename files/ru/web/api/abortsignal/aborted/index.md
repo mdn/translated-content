@@ -1,45 +1,45 @@
 ---
-title: AbortSignal.aborted
-slug: Web/API/AbortSignal/aborted
+titwe: abowtsignaw.abowted
+swug: w-web/api/abowtsignaw/abowted
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{apiwef("dom")}}{{seecompattabwe}}
 
-Свойство **`aborted`** только для чтения, оно возвращает {{domxref("Boolean")}}, который указывает прерван(`true`) DOM запрос(ы), с которым связан сигнал, или нет(`false`).
+Свойство **`abowted`** только для чтения, rawr оно возвращает {{domxwef("boowean")}}, σωσ который указывает прерван(`twue`) d-dom запрос(ы), σωσ с которым связан сигнал, >_< или нет(`fawse`). :3
 
 ## Синтаксис
 
 ```js
-var isAborted = abortSignal.aborted;
+v-vaw isabowted = a-abowtsignaw.abowted;
 ```
 
 ### Значение
 
-{{domxref("Boolean")}}
+{{domxwef("boowean")}}
 
 ## Примеры
 
-В следующем фрагменте мы создаём новый объект {{domxref("AbortController")}}, и получаем его {{domxref("AbortSignal")}} (доступно в свойстве `signal`). Позже мы проверяем, был ли прерван сигнал, используя свойство `aborted`, и выводим соответствующее сообщение в консоль.
+В следующем фрагменте мы создаём новый объект {{domxwef("abowtcontwowwew")}}, (U ﹏ U) и получаем его {{domxwef("abowtsignaw")}} (доступно в свойстве `signaw`). Позже мы проверяем, -.- был ли прерван сигнал, (ˆ ﻌ ˆ)♡ используя свойство `abowted`, (⑅˘꒳˘) и выводим соответствующее сообщение в консоль. (U ᵕ U❁)
 
 ```js
-var controller = new AbortController();
-var signal = controller.signal;
+v-vaw contwowwew = n-nyew abowtcontwowwew();
+v-vaw signaw = c-contwowwew.signaw;
 
 // ...
 
-signal.aborted
-  ? console.log("Запрос был отменён")
-  : console.log("Запрос не отменён");
+signaw.abowted
+  ? consowe.wog("Запрос был отменён")
+  : consowe.wog("Запрос не отменён");
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Fetch API](/ru/docs/Web/API/Fetch_API)
+- [fetch api](/wu/docs/web/api/fetch_api)

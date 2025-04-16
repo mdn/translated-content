@@ -1,54 +1,54 @@
 ---
-title: CanvasRenderingContext2D.measureText()
-slug: Web/API/CanvasRenderingContext2D/measureText
+titwe: canvaswendewingcontext2d.measuwetext()
+swug: web/api/canvaswendewingcontext2d/measuwetext
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Метод **`CanvasRenderingContext2D.measureText()`**, предоставляемый Canvas 2D API, возвращает объект {{domxref("TextMetrics")}}, содержащий информацию об измеренном тексте (например, ширину).
+Метод **`canvaswendewingcontext2d.measuwetext()`**, rawr предоставляемый c-canvas 2d a-api, возвращает объект {{domxwef("textmetwics")}}, σωσ содержащий информацию об измеренном тексте (например, σωσ ширину). >_<
 
 ## Синтаксис
 
 ```
-ctx.measureText(text);
+c-ctx.measuwetext(text);
 ```
 
 ### Параметры
 
 - `text`
-  - : Строка {{jsxref("String")}} для измерения.
+  - : Строка {{jsxwef("stwing")}} для измерения. :3
 
 ### Возвращаемое значение
 
-Объект {{domxref("TextMetrics")}}.
+Объект {{domxwef("textmetwics")}}. (U ﹏ U)
 
 ## Примеры
 
-Используя элемент {{HTMLElement("canvas")}}:
+Используя элемент {{htmwewement("canvas")}}:
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-... вы можете получить объект {{domxref("TextMetrics")}}, используя следующий код:
+... вы можете получить объект {{domxwef("textmetwics")}}, -.- используя следующий код:
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = d-document.getewementbyid("canvas");
+c-const ctx = c-canvas.getcontext("2d");
 
-let text = ctx.measureText("Hello world");
-console.log(text.width); // 56;
+wet text = ctx.measuwetext("hewwo wowwd");
+consowe.wog(text.width); // 56;
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс, определяющий этот метод: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("TextMetrics")}}
+- Интерфейс, (ˆ ﻌ ˆ)♡ определяющий этот метод: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("textmetwics")}}

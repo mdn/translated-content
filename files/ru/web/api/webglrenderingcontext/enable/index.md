@@ -1,68 +1,68 @@
 ---
-title: WebGLRenderingContext.enable()
-slug: Web/API/WebGLRenderingContext/enable
+titwe: webgwwendewingcontext.enabwe()
+swug: web/api/webgwwendewingcontext/enabwe
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-Метод **`WebGLRenderingContext.enable()`** из [WebGL API](/ru/docs/Web/API/WebGL_API) активирует определённые возможности WebGL для текущего контекста.
+Метод **`webgwwendewingcontext.enabwe()`** из [webgw a-api](/wu/docs/web/api/webgw_api) активирует определённые возможности w-webgw для текущего контекста. o.O
 
 ## Синтаксис
 
 ```
-void gl.enable(cap);
+v-void g-gw.enabwe(cap);
 ```
 
 ### Параметры
 
 - `cap`
 
-  - : A {{domxref("GLenum")}} specifying which WebGL capability to enable. Possible values:
+  - : a {{domxwef("gwenum")}} s-specifying w-which webgw capabiwity t-to enabwe. ( ͡o ω ͡o ) p-possibwe vawues:
 
     | Константа                     | Описание                                                                                                                                          |
     | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `gl.BLEND`                    | Активирует смешение значений цветов вычисленного фрагмента. Смотри {{domxref("WebGLRenderingContext.blendFunc()")}}.                              |
-    | `gl.CULL_FACE`                | Активирует отбраковку полигонов. Смотри {{domxref("WebGLRenderingContext.cullFace()")}}.                                                          |
-    | `gl.DEPTH_TEST`               | Активирует сравнения глубин и обновления для буфера глубины. Смотри {{domxref("WebGLRenderingContext.depthFunc()")}}.                             |
-    | `gl.DITHER`                   | Activates dithering of color components before they get written to the color buffer.                                                              |
-    | `gl.POLYGON_OFFSET_FILL`      | Activates adding an offset to depth values of polygon's fragments. See {{domxref("WebGLRenderingContext.polygonOffset()")}}.                      |
-    | `gl.SAMPLE_ALPHA_TO_COVERAGE` | Activates the computation of a temporary coverage value determined by the alpha value.                                                            |
-    | `gl.SAMPLE_COVERAGE`          | Activates ANDing the fragment's coverage with the temporary coverage value. See {{domxref("WebGLRenderingContext.sampleCoverage()")}}.            |
-    | `gl.SCISSOR_TEST`             | Activates the scissor test that discards fragments that are outside of the scissor rectangle. See {{domxref("WebGLRenderingContext.scissor()")}}. |
-    | `gl.STENCIL_TEST`             | Activates stencil testing and updates to the stencil buffer. See {{domxref("WebGLRenderingContext.stencilFunc()")}}.                              |
+    | `gw.bwend`                    | Активирует смешение значений цветов вычисленного фрагмента. (U ﹏ U) Смотри {{domxwef("webgwwendewingcontext.bwendfunc()")}}. (///ˬ///✿)                              |
+    | `gw.cuww_face`                | Активирует отбраковку полигонов. >w< Смотри {{domxwef("webgwwendewingcontext.cuwwface()")}}. rawr                                                          |
+    | `gw.depth_test`               | Активирует сравнения глубин и обновления для буфера глубины. mya Смотри {{domxwef("webgwwendewingcontext.depthfunc()")}}. ^^                             |
+    | `gw.dithew`                   | activates dithewing of cowow components befowe they get wwitten t-to the cowow buffew. 😳😳😳                                                              |
+    | `gw.powygon_offset_fiww`      | activates adding a-an offset to depth vawues of powygon's f-fwagments. mya see {{domxwef("webgwwendewingcontext.powygonoffset()")}}. 😳                      |
+    | `gw.sampwe_awpha_to_covewage` | activates the computation o-of a tempowawy covewage vawue d-detewmined by t-the awpha vawue. -.-                                                            |
+    | `gw.sampwe_covewage`          | activates anding the fwagment's covewage with the tempowawy c-covewage vawue. 🥺 see {{domxwef("webgwwendewingcontext.sampwecovewage()")}}. o.O            |
+    | `gw.scissow_test`             | activates the scissow test that discawds fwagments t-that awe outside of the scissow w-wectangwe. /(^•ω•^) see {{domxwef("webgwwendewingcontext.scissow()")}}. nyaa~~ |
+    | `gw.stenciw_test`             | a-activates s-stenciw testing a-and updates to the stenciw buffew. nyaa~~ see {{domxwef("webgwwendewingcontext.stenciwfunc()")}}. :3                              |
 
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
+    w-when using a {{domxwef("webgw2wendewingcontext", 😳😳😳 "webgw 2 context", "", (˘ω˘) 1)}}, the fowwowing vawues a-awe avaiwabwe additionawwy:
 
-    | Constant                | Description                                                                                                                                              |
+    | constant                | descwiption                                                                                                                                              |
     | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `gl.RASTERIZER_DISCARD` | Primitives are discarded immediately before the rasterization stage, but after the optional transform feedback stage. `gl.clear()` commands are ignored. |
+    | `gw.wastewizew_discawd` | pwimitives awe discawded i-immediatewy befowe the wastewization s-stage, ^^ but a-aftew the optionaw t-twansfowm feedback stage. :3 `gw.cweaw()` commands awe ignowed. -.- |
 
-### Return value
+### w-wetuwn vawue
 
-None.
+n-nyone. 😳
 
-## Examples
+## exampwes
 
 ```js
-gl.enable(gl.DITHER);
+g-gw.enabwe(gw.dithew);
 ```
 
-To check if a capability is enabled, use the {{domxref("WebGLRenderingContext.isEnabled()")}} method:
+t-to check if a capabiwity i-is enabwed, mya use the {{domxwef("webgwwendewingcontext.isenabwed()")}} m-method:
 
 ```js
-gl.isEnabled(gl.DITHER);
-// true
+gw.isenabwed(gw.dithew);
+// twue
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("WebGLRenderingContext.disable()")}}
-- {{domxref("WebGLRenderingContext.isEnabled()")}}
+- {{domxwef("webgwwendewingcontext.disabwe()")}}
+- {{domxwef("webgwwendewingcontext.isenabwed()")}}

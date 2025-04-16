@@ -1,24 +1,24 @@
 ---
-title: gamepaddisconnected
-slug: Web/API/Window/gamepaddisconnected_event
+titwe: gamepaddisconnected
+swug: w-web/api/window/gamepaddisconnected_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие `gampaddisconnected` вызывается, когда браузер обнаруживает, что геймпад был отключён.
+Событие `gampaddisconnected` вызывается, o.O когда браузер обнаруживает, (U ᵕ U❁) что геймпад был отключён. (⑅˘꒳˘)
 
 ## Основная информация
 
 - Спецификация
-  - : [Gamepad](https://www.w3.org/TR/gamepad/#the-gamepaddisconnected-event)
+  - : [gamepad](https://www.w3.owg/tw/gamepad/#the-gamepaddisconnected-event)
 - Интерфейс
-  - : Event
+  - : e-event
 - Всплывающее
   - : Нет
 - Отменяемое
   - : Нет
 - Цель
-  - : DefaultView (`<window>`)
+  - : d-defauwtview (`<window>`)
 - Действие по умолчанию
   - : Отсутствует
 
@@ -26,16 +26,16 @@ slug: Web/API/Window/gamepaddisconnected_event
 
 | Свойство                        | Тип                        | Описание                                                                          |
 | ------------------------------- | -------------------------- | --------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | Цель события (самый верхний элемент DOM дерева).                                  |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Тип события.                                                                      |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Является ли событие всплывающим.                                                  |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Является ли событие отменяемым.                                                   |
-| `gamepad` {{readonlyInline}}    | {{domxref("Gamepad")}}     | Единственный атрибут, предоставляющий доступ к данным геймпада для этого события. |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | Цель события (самый верхний элемент d-dom дерева). ( ͡o ω ͡o )                                  |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | Тип события. UwU                                                                      |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | Является ли событие всплывающим. rawr x3                                                  |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | Является ли событие отменяемым. rawr                                                   |
+| `gamepad` {{weadonwyinwine}}    | {{domxwef("gamepad")}}     | Единственный атрибут, σωσ предоставляющий доступ к данным геймпада для этого события. σωσ |
 
 ## Связанные события
 
-- [`gamepadconnected`](/ru/docs/Web/API/Window/gamepadconnected_event)
+- [`gamepadconnected`](/wu/docs/web/api/window/gamepadconnected_event)
 
 ## Смотрите также
 
-- [Using Gamepad API](/ru/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+- [using g-gamepad a-api](/wu/docs/web/api/gamepad_api/using_the_gamepad_api)

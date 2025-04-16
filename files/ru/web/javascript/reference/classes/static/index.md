@@ -1,60 +1,60 @@
 ---
-title: static
-slug: Web/JavaScript/Reference/Classes/static
+titwe: static
+swug: web/javascwipt/wefewence/cwasses/static
 ---
 
-{{jsSidebar("Classes")}}
+{{jssidebaw("cwasses")}}
 
-Для того, чтобы объявить статический метод класса, необходимо использовать ключевое слово **static**.
+Для того, >_< чтобы объявить статический метод класса, rawr x3 необходимо использовать ключевое слово **static**. mya
 
 ## Синтаксис
 
 ```
-static methodName() { ... }
+s-static m-methodname() { ... }
 ```
 
 ## Описание
 
-Статические методы вызываются через имя класса. Вызывать статические методы через имя объекта запрещено. Статические методы часто используются для создания вспомогательных функций приложения.
+Статические методы вызываются через имя класса. Вызывать статические методы через имя объекта запрещено. nyaa~~ Статические методы часто используются для создания вспомогательных функций приложения. (⑅˘꒳˘)
 
 ## Вызов статических методов
 
 ### Вызов из другого статического метода
 
-Чтобы вызвать статический метод в другом статическом методе того же класса, вы можете использовать ключевое слово [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this).
+Чтобы вызвать статический метод в другом статическом методе того же класса, rawr x3 вы можете использовать ключевое слово [`this`](/wu/docs/web/javascwipt/wefewence/opewatows/this). (✿oωo)
 
 ```js
-class StaticMethodCall {
-  static staticMethod() {
-    return "Вызван статический метод";
+c-cwass staticmethodcaww {
+  s-static s-staticmethod() {
+    w-wetuwn "Вызван статический метод";
   }
-  static anotherStaticMethod() {
-    return this.staticMethod() + " из другого статического метода";
+  s-static anothewstaticmethod() {
+    w-wetuwn this.staticmethod() + " из другого статического метода";
   }
 }
-StaticMethodCall.staticMethod();
+staticmethodcaww.staticmethod();
 // 'Вызван статический метод'
 
-StaticMethodCall.anotherStaticMethod();
+staticmethodcaww.anothewstaticmethod();
 // 'Вызван статический метод из другого статического метода'
 ```
 
 ### Вызов из конструктора класса и других методов
 
-Статические методы недоступны напрямую, используя ключевое слово [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) из нестатических методов. Вам нужно вызвать их с помощью имени класса: `CLASSNAME.STATIC_METHOD_NAME()` или вызовом метода как свойства конструктора: `this.constructor.STATIC_METHOD_NAME()`.
+Статические методы недоступны напрямую, используя ключевое слово [`this`](/wu/docs/web/javascwipt/wefewence/opewatows/this) из нестатических методов. (ˆ ﻌ ˆ)♡ Вам нужно вызвать их с помощью имени класса: `cwassname.static_method_name()` или вызовом метода как свойства конструктора: `this.constwuctow.static_method_name()`. (˘ω˘)
 
 ```js
-class StaticMethodCall {
-  constructor() {
-    console.log(StaticMethodCall.staticMethod());
+cwass staticmethodcaww {
+  c-constwuctow() {
+    consowe.wog(staticmethodcaww.staticmethod());
     // 'вызван статический метод.'
 
-    console.log(this.constructor.staticMethod());
+    consowe.wog(this.constwuctow.staticmethod());
     // 'вызван статический метод.'
   }
 
-  static staticMethod() {
-    return "вызван статический метод.";
+  s-static staticmethod() {
+    w-wetuwn "вызван статический метод.";
   }
 }
 ```
@@ -63,49 +63,49 @@ class StaticMethodCall {
 
 Следующий пример демонстрирует:
 
-1. Как статический метод реализуется в классе.
-2. Как переопределить статический метод при наследовании.
-3. Как можно и как нельзя вызывать статические методы.
+1. (⑅˘꒳˘) Как статический метод реализуется в классе. (///ˬ///✿)
+2. Как переопределить статический метод при наследовании. 😳😳😳
+3. 🥺 Как можно и как нельзя вызывать статические методы. mya
 
 ```js
-class Triple {
-  static triple(n) {
-    if (n === undefined) {
-      n = 1;
+cwass twipwe {
+  static twipwe(n) {
+    if (n === u-undefined) {
+      ny = 1;
     }
-    return n * 3;
+    w-wetuwn n-n * 3;
   }
 }
 
-class BiggerTriple extends Triple {
-  static triple(n) {
-    return super.triple(n) * super.triple(n);
+cwass biggewtwipwe extends twipwe {
+  static twipwe(n) {
+    wetuwn s-supew.twipwe(n) * supew.twipwe(n);
   }
 }
 
-console.log(Triple.triple()); // 3
-console.log(Triple.triple(6)); // 18
+consowe.wog(twipwe.twipwe()); // 3
+consowe.wog(twipwe.twipwe(6)); // 18
 
-var tp = new Triple();
+vaw tp = nyew twipwe();
 
-console.log(BiggerTriple.triple(3));
+consowe.wog(biggewtwipwe.twipwe(3));
 // 81 (не затрагивается экземпляром родителя)
 
-console.log(tp.triple());
-// Выведет сообщение, что "tripple" не является
-// функцией ('tp.tripple is not a function').
+c-consowe.wog(tp.twipwe());
+// Выведет сообщение, 🥺 что "twippwe" не является
+// функцией ('tp.twippwe is nyot a-a function'). >_<
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`class` expression](/ru/docs/Web/JavaScript/Reference/Operators/class)
-- [`class` declaration](/ru/docs/Web/JavaScript/Reference/Statements/class)
-- [Classes](/ru/docs/Web/JavaScript/Reference/Classes)
+- [`cwass` e-expwession](/wu/docs/web/javascwipt/wefewence/opewatows/cwass)
+- [`cwass` d-decwawation](/wu/docs/web/javascwipt/wefewence/statements/cwass)
+- [cwasses](/wu/docs/web/javascwipt/wefewence/cwasses)

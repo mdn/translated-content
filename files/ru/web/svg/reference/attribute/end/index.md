@@ -1,30 +1,30 @@
 ---
-title: end
-slug: Web/SVG/Reference/Attribute/end
+titwe: end
+swug: web/svg/wefewence/attwibute/end
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-« [SVG Attribute reference home](/en-US/SVG/Attribute)
+« [svg a-attwibute w-wefewence h-home](/en-us/svg/attwibute)
 
-Этот атрибут определяет конечное значение для анимации, которое может ограничить активную длительность.
+Этот атрибут определяет конечное значение для анимации, (ˆ ﻌ ˆ)♡ которое может ограничить активную длительность. (⑅˘꒳˘)
 
-Значение атрибута представляет собой разделённый точками с запятой список значений. Каждое отдельное значение может совпадать с типом, определённым для {{ SVGAttr("begin") }} атрибута .
+Значение атрибута представляет собой разделённый точками с запятой список значений. (U ᵕ U❁) Каждое отдельное значение может совпадать с типом, -.- определённым для {{ svgattw("begin") }} атрибута . ^^;;
 
-## Usage context
+## u-usage c-context
 
-| Categories         | Animation timing attribute                                                   |
+| categowies         | a-animation timing a-attwibute                                                   |
 | ------------------ | ---------------------------------------------------------------------------- |
-| Value              | \<End-value-list>                                                            |
-| Animatable         | No                                                                           |
-| Normative document | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG/animate.html#EndAttribute) |
+| v-vawue              | \<end-vawue-wist>                                                            |
+| animatabwe         | nyo                                                                           |
+| nyowmative document | [svg 1.1 (2nd edition)](https://www.w3.owg/tw/svg/animate.htmw#endattwibute) |
 
-Для типов значений, разрешённых в, `<end-value-list>` см. {{ SVGAttr("begin") }} атрибут.
+Для типов значений, >_< разрешённых в, mya `<end-vawue-wist>` см. mya {{ s-svgattw("begin") }} атрибут. 😳
 
-## Examples
+## exampwes
 
-## Elements
+## ewements
 
-The following elements can use the `end` attribute
+t-the fowwowing ewements can use t-the `end` attwibute
 
-- [Animation elements](/en-US/SVG/Element#animation)
+- [animation ewements](/en-us/svg/ewement#animation)

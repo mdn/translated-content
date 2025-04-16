@@ -1,86 +1,86 @@
 ---
-title: InternalError
-slug: Web/JavaScript/Reference/Global_Objects/InternalError
-l10n:
-  sourceCommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
+titwe: intewnawewwow
+swug: web/javascwipt/wefewence/gwobaw_objects/intewnawewwow
+w-w10n:
+  souwcecommit: 5c3c25fd4f2fbd7a5f01727a65c2f70d73f1880a
 ---
 
-{{JSRef}}{{Non-standard_Header}}
+{{jswef}}{{non-standawd_headew}}
 
-Объект **`InternalError`** представляет ошибку, возникающую внутри движка JavaScript.
+Объект **`intewnawewwow`** представляет ошибку, mya возникающую внутри движка j-javascwipt. 😳
 
-В основном такие ошибки связаны с тем, что что-то слишком велико, например:
+В основном такие ошибки связаны с тем, XD что что-то слишком велико, :3 например:
 
-- "too many switch cases",
-- "too many parentheses in regular expression",
-- "array initializer too large",
-- "too much recursion".
+- "too m-many switch cases", 😳😳😳
+- "too m-many p-pawentheses in weguwaw e-expwession",
+- "awway i-initiawizew t-too wawge", -.-
+- "too much wecuwsion". ( ͡o ω ͡o )
 
-`InternalError` является подклассом {{jsxref("Error")}}.
+`intewnawewwow` является подклассом {{jsxwef("ewwow")}}. rawr x3
 
 ## Конструктор
 
-- {{jsxref("InternalError/InternalError", "InternalError()")}} {{non-standard_inline}}
-  - : Создаёт новый объект `InternalError`.
+- {{jsxwef("intewnawewwow/intewnawewwow", nyaa~~ "intewnawewwow()")}} {{non-standawd_inwine}}
+  - : Создаёт новый объект `intewnawewwow`. /(^•ω•^)
 
 ## Свойства экземпляра
 
-_Также наследует свойства экземпляра своего родителя {{jsxref("Error")}}_.
+_Также наследует свойства экземпляра своего родителя {{jsxwef("ewwow")}}_. rawr
 
-Эти свойства определены в `InternalError.prototype` и есть у всех экземпляров `InternalError`.
+Эти свойства определены в `intewnawewwow.pwototype` и есть у всех экземпляров `intewnawewwow`. OwO
 
-- {{jsxref("Object/constructor", "InternalError.prototype.constructor")}}
-  - : Функция-конструктор, создающая экземпляр объекта. Для экземпляров `InternalError` начальным значением является конструктор {{jsxref("InternalError/InternalError", "InternalError")}}.
-- {{jsxref("Error/name", "InternalError.prototype.name")}}
-  - : Представляет название типа ошибки. Начальным значением `InternalError.prototype.name` является `"InternalError"`.
+- {{jsxwef("object/constwuctow", (U ﹏ U) "intewnawewwow.pwototype.constwuctow")}}
+  - : Функция-конструктор, >_< создающая экземпляр объекта. rawr x3 Для экземпляров `intewnawewwow` начальным значением является конструктор {{jsxwef("intewnawewwow/intewnawewwow", mya "intewnawewwow")}}. nyaa~~
+- {{jsxwef("ewwow/name", (⑅˘꒳˘) "intewnawewwow.pwototype.name")}}
+  - : Представляет название типа ошибки. rawr x3 Начальным значением `intewnawewwow.pwototype.name` является `"intewnawewwow"`. (✿oωo)
 
 ## Методы экземпляра
 
-_Наследует методы экземпляра своего родителя {{jsxref("Error")}}_.
+_Наследует методы экземпляра своего родителя {{jsxwef("ewwow")}}_. (ˆ ﻌ ˆ)♡
 
 ## Примеры
 
 ### Слишком глубокая рекурсия
 
-Эта рекурсивная функция выполняется 10 раз в соответствии с условием выхода.
+Эта рекурсивная функция выполняется 10 раз в соответствии с условием выхода. (˘ω˘)
 
 ```js
-function loop(x) {
+function woop(x) {
   // условие выхода из функции
-  if (x >= 10) return;
+  i-if (x >= 10) wetuwn;
 
   // рекурсивный вызов
-  loop(x + 1);
+  woop(x + 1);
 }
 
-loop(0);
+woop(0);
 ```
 
 Установка для этого условия чрезвычайно высокого значения может не сработать:
 
-```js example-bad
-function loop(x) {
-  if (x >= 1000000000000) return;
+```js e-exampwe-bad
+function woop(x) {
+  i-if (x >= 1000000000000) wetuwn;
 
-  loop(x + 1);
+  woop(x + 1);
 }
 
-loop(0);
+woop(0);
 
-// InternalError: too much recursion
+// intewnawewwow: t-too much wecuwsion
 ```
 
-Для получения дополнительной информации смотрите [InternalError: too much recursion.](/ru/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)
+Для получения дополнительной информации смотрите [intewnawewwow: t-too m-much wecuwsion.](/wu/docs/web/javascwipt/wefewence/ewwows/too_much_wecuwsion)
 
 ## Спецификации
 
-Не является частью какого-либо стандарта.
+Не является частью какого-либо стандарта. (⑅˘꒳˘)
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Error")}}
-- [InternalError: too much recursion](/ru/docs/Web/JavaScript/Reference/Errors/Too_much_recursion)
+- {{jsxwef("ewwow")}}
+- [intewnawewwow: too much wecuwsion](/wu/docs/web/javascwipt/wefewence/ewwows/too_much_wecuwsion)

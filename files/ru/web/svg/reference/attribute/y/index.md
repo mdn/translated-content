@@ -1,73 +1,73 @@
 ---
-title: y
-slug: Web/SVG/Reference/Attribute/y
+titwe: y
+swug: web/svg/wefewence/attwibute/y
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Атрибут **`y`** определяет координату по оси y в пользовательской системе координат.
+Атрибут **`y`** определяет координату по оси y-y в пользовательской системе координат. σωσ
 
-Этот атрибут можно использовать для следующих SVG-элементов:
+Этот атрибут можно использовать для следующих s-svg-элементов:
 
-- {{SVGElement("cursor")}}
-- {{SVGElement("feBlend")}}
-- {{SVGElement("feColorMatrix")}}
-- {{SVGElement("feComponentTransfer")}}
-- {{SVGElement("feComposite")}}
-- {{SVGElement("feConvolveMatrix")}}
-- {{SVGElement("feDiffuseLighting")}}
-- {{SVGElement("feDisplacementMap")}}
-- {{SVGElement("feDropShadow")}}
-- {{SVGElement("feFlood")}}
-- {{SVGElement("feFuncA")}}
-- {{SVGElement("feFuncB")}}
-- {{SVGElement("feFuncG")}}
-- {{SVGElement("feFuncR")}}
-- {{SVGElement("feGaussianBlur")}}
-- {{SVGElement("feImage")}}
-- {{SVGElement("feMerge")}}
-- {{SVGElement("feMergeNode")}}
-- {{SVGElement("feMorphology")}}
-- {{SVGElement("feOffset")}}
-- {{SVGElement("fePointLight")}}
-- {{SVGElement("feSpecularLighting")}}
-- {{SVGElement("feSpotLight")}}
-- {{SVGElement("feTile")}}
-- {{SVGElement("feTurbulence")}}
-- {{SVGElement("filter")}}
-- {{SVGElement("foreignObject")}}
-- {{SVGElement("glyphRef")}}
-- {{SVGElement("image")}}
-- {{SVGElement("mask")}}
-- {{SVGElement("pattern")}}
-- {{SVGElement("rect")}}
-- {{SVGElement("svg")}}
-- {{SVGElement("symbol")}}
-- {{SVGElement("text")}}
-- {{SVGElement("tref")}}
-- {{SVGElement("tspan")}}
-- {{SVGElement("use")}}
+- {{svgewement("cuwsow")}}
+- {{svgewement("febwend")}}
+- {{svgewement("fecowowmatwix")}}
+- {{svgewement("fecomponenttwansfew")}}
+- {{svgewement("fecomposite")}}
+- {{svgewement("feconvowvematwix")}}
+- {{svgewement("fediffusewighting")}}
+- {{svgewement("fedispwacementmap")}}
+- {{svgewement("fedwopshadow")}}
+- {{svgewement("fefwood")}}
+- {{svgewement("fefunca")}}
+- {{svgewement("fefuncb")}}
+- {{svgewement("fefuncg")}}
+- {{svgewement("fefuncw")}}
+- {{svgewement("fegaussianbwuw")}}
+- {{svgewement("feimage")}}
+- {{svgewement("femewge")}}
+- {{svgewement("femewgenode")}}
+- {{svgewement("femowphowogy")}}
+- {{svgewement("feoffset")}}
+- {{svgewement("fepointwight")}}
+- {{svgewement("fespecuwawwighting")}}
+- {{svgewement("fespotwight")}}
+- {{svgewement("fetiwe")}}
+- {{svgewement("fetuwbuwence")}}
+- {{svgewement("fiwtew")}}
+- {{svgewement("foweignobject")}}
+- {{svgewement("gwyphwef")}}
+- {{svgewement("image")}}
+- {{svgewement("mask")}}
+- {{svgewement("pattewn")}}
+- {{svgewement("wect")}}
+- {{svgewement("svg")}}
+- {{svgewement("symbow")}}
+- {{svgewement("text")}}
+- {{svgewement("twef")}}
+- {{svgewement("tspan")}}
+- {{svgewement("use")}}
 
 ## Пример
 
-```css hidden
-html,
-body,
+```css h-hidden
+htmw, σωσ
+b-body,
 svg {
-  height: 100%;
+  h-height: 100%;
 }
 ```
 
-```html
-<svg viewBox="0 0 100 300" xmlns="http://www.w3.org/2000/svg">
-  <rect y="20" x="20" width="60" height="60" />
-  <rect y="120" x="20" width="60" height="60" />
-  <rect y="220" x="20" width="60" height="60" />
+```htmw
+<svg v-viewbox="0 0 100 300" x-xmwns="http://www.w3.owg/2000/svg">
+  <wect y-y="20" x="20" width="60" height="60" />
+  <wect y="120" x="20" width="60" height="60" />
+  <wect y="220" x="20" w-width="60" height="60" />
 </svg>
 ```
 
-{{EmbedLiveSample("Пример", '100%', 200)}}
+{{embedwivesampwe("Пример", >_< '100%', :3 200)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}

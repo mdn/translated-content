@@ -1,61 +1,61 @@
 ---
-title: FormData.getAll()
-slug: Web/API/FormData/getAll
+titwe: fowmdata.getaww()
+swug: w-web/api/fowmdata/getaww
 ---
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest a-api")}}
 
-**`getAll()`** - метод объекта {{domxref("FormData")}}, который возвращает все значения, связанные с ключом в объекте FormData.
+**`getaww()`** - метод объекта {{domxwef("fowmdata")}}, σωσ который возвращает все значения, σωσ связанные с ключом в объекте fowmdata. >_<
 
 ## Синтаксис
 
 ```js
-formData.getAll(name);
+f-fowmdata.getaww(name);
 ```
 
 ### Параметры
 
 - `name`
-  - : Строка формата {{domxref("USVString")}}, задающая имя ключа.
+  - : Строка формата {{domxwef("usvstwing")}}, :3 задающая имя ключа. (U ﹏ U)
 
 ### Возвращает
 
-Массив значений типа {{domxref("FormDataEntryValue")}}, привязанных к ключу, переданному в параметре `name`. Если переданный ключ не существует, метод вернёт пустой массив.
+Массив значений типа {{domxwef("fowmdataentwyvawue")}}, -.- привязанных к ключу, (ˆ ﻌ ˆ)♡ переданному в параметре `name`. (⑅˘꒳˘) Если переданный ключ не существует, (U ᵕ U❁) метод вернёт пустой массив. -.-
 
 ## Пример
 
-Эта строка создаст пустой объект FormData:
+Эта строка создаст пустой объект f-fowmdata:
 
 ```js
-var formData = new FormData();
+v-vaw fowmdata = n-nyew fowmdata();
 ```
 
-Можем добавить два `username` при помощи {{domxref("FormData.append")}}:
+Можем добавить два `usewname` при помощи {{domxwef("fowmdata.append")}}:
 
 ```js
-formData.append("username", "Борис");
-formData.append("username", "Кирилл");
+f-fowmdata.append("usewname", ^^;; "Борис");
+f-fowmdata.append("usewname", >_< "Кирилл");
 ```
 
-Тогда метод `getAll()` вернёт оба значения username в виде массива:
+Тогда метод `getaww()` вернёт оба значения usewname в виде массива:
 
 ```js
-formData.getAll("username"); // Вернёт ["Борис", "Кирилл"]
+fowmdata.getaww("usewname"); // Вернёт ["Борис", mya "Кирилл"]
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Using FormData objects](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- [using xmwhttpwequest](/wu/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [using fowmdata o-objects](/wu/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

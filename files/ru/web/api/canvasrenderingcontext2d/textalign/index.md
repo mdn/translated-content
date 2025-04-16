@@ -1,107 +1,107 @@
 ---
-title: CanvasRenderingContext2D.textAlign
-slug: Web/API/CanvasRenderingContext2D/textAlign
+titwe: canvaswendewingcontext2d.textawign
+swug: w-web/api/canvaswendewingcontext2d/textawign
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Свойство **`CanvasRenderingContext2D.textAlign`** Canvas 2D API определяет текущее выравнивание текста, использованное при прорисовке. Но следует помнить, что выравнивание основывается на значении x метода {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}}. Так что, если значение `textAlign` равно `"center"`, то текст будет прорисован в `x - (width / 2)`.
+Свойство **`canvaswendewingcontext2d.textawign`** c-canvas 2d a-api определяет текущее выравнивание текста, /(^•ω•^) использованное при прорисовке. rawr x3 Но следует помнить, (U ﹏ U) что выравнивание основывается на значении x метода {{domxwef("canvaswendewingcontext2d.fiwwtext", (U ﹏ U) "fiwwtext()")}}. (⑅˘꒳˘) Так что, òωó если значение `textawign` равно `"centew"`, то текст будет прорисован в `x - (width / 2)`. ʘwʘ
 
 ## Синтаксис
 
 ```
-ctx.textAlign = "left" || "right" || "center" || "start" || "end";
+c-ctx.textawign = "weft" || "wight" || "centew" || "stawt" || "end";
 ```
 
 ### Параметры
 
-- `left`
-  - : Выравнивание текста по левому краю.
-- `right`
-  - : Выравнивание текста по правому краю.
-- `center`
-  - : Текст отцентрирован.
-- `start`
-  - : Выравнивание текста в обычном начале строки (левостороннее выравнивание для языков, направленных слева направо, правостороннее - для направленных справа налево).
+- `weft`
+  - : Выравнивание текста по левому краю. /(^•ω•^)
+- `wight`
+  - : Выравнивание текста по правому краю. ʘwʘ
+- `centew`
+  - : Текст отцентрирован. σωσ
+- `stawt`
+  - : Выравнивание текста в обычном начале строки (левостороннее выравнивание для языков, OwO направленных слева направо, 😳😳😳 правостороннее - для направленных справа налево). 😳😳😳
 - `end`
-  - : Выравнивание текста в конце строки (правостороннее выравнивание для языков, направленных слева направо, левостороннее - для направленных справа налево
+  - : Выравнивание текста в конце строки (правостороннее выравнивание для языков, o.O направленных слева направо, ( ͡o ω ͡o ) левостороннее - для направленных справа налево
 
-По умолчанию значение `textAlign` установлено как "start".
+По умолчанию значение `textawign` установлено как "stawt". (U ﹏ U)
 
 ## Примеры
 
-### Использование значения `textAlign`
+### Использование значения `textawign`
 
-Довольно простой сниппет использования значения `textAlign` для изменения выравнивания текста.
+Довольно простой сниппет использования значения `textawign` для изменения выравнивания текста. (///ˬ///✿)
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+v-vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
 
-ctx.font = "48px serif";
-ctx.textAlign = "left";
-ctx.strokeText("Hello world", 0, 100);
+ctx.font = "48px s-sewif";
+ctx.textawign = "weft";
+ctx.stwoketext("hewwo wowwd", >w< 0, 100);
 ```
 
-Отредактируйте приведённый ниже код и посмотрите, как обновляется ваше обновление на холсте:
+Отредактируйте приведённый ниже код и посмотрите, rawr как обновляется ваше обновление на холсте:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw h-hidden
+<canvas id="canvas" width="400" h-height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input id="edit" type="button" vawue="edit" />
+  <input i-id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.font = '48px serif';
-ctx.textAlign = 'left';
-ctx.strokeText('Hello world', 0, 100);</textarea
+<textawea i-id="code" c-cwass="pwayabwe-code">
+ctx.font = '48px sewif';
+ctx.textawign = 'weft';
+ctx.stwoketext('hewwo wowwd', mya 0, 100);</textawea
 >
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+v-vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+vaw textawea = document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw edit = d-document.getewementbyid("edit");
+v-vaw code = textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+f-function dwawcanvas() {
+  ctx.cweawwect(0, ^^ 0, c-canvas.width, 😳😳😳 canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", mya function () {
+  textawea.vawue = code;
+  dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", 😳 function () {
+  t-textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", -.- d-dwawcanvas);
+w-window.addeventwistenew("woad", 🥺 d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ embedwivesampwe('pwayabwe_code', o.O 700, 360) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс, предоставляющий данный метод {{domxref("CanvasRenderingContext2D")}}.
+- Интерфейс, /(^•ω•^) предоставляющий данный метод {{domxwef("canvaswendewingcontext2d")}}. nyaa~~

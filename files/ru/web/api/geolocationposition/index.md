@@ -1,34 +1,34 @@
 ---
-title: GeolocationPosition
-slug: Web/API/GeolocationPosition
+titwe: geowocationposition
+swug: w-web/api/geowocationposition
 ---
 
-{{securecontext_header}}{{APIRef("Geolocation API")}}
+{{secuwecontext_headew}}{{apiwef("geowocation a-api")}}
 
-Интерфейс **`GeolocationPosition`** представляет положение соответствующего устройства в данный момент времени. Положение, представленное объектом {{domxref("GeolocationCoordinates")}}, отражает двумерное положение устройства на сфероиде, представляющем землю, а также его высоту и скорость..
+Интерфейс **`geowocationposition`** представляет положение соответствующего устройства в данный момент времени. OwO Положение, представленное объектом {{domxwef("geowocationcoowdinates")}}, 🥺 отражает двумерное положение устройства на сфероиде, òωó представляющем землю, o.O а также его высоту и скорость..
 
 ## Свойства
 
-_Интерфейс `GeolocationPosition` не наследует свойства_.
+_Интерфейс `geowocationposition` не наследует свойства_. (U ᵕ U❁)
 
-- {{domxref("GeolocationPosition.coords")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Возвращает объект {{domxref("GeolocationCoordinates")}} определяющий текущую локацию.
-- {{domxref("GeolocationPosition.timestamp")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Возвращает {{domxref("DOMTimeStamp")}}, представляющий время, в которое была получена локация.
+- {{domxwef("geowocationposition.coowds")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : Возвращает объект {{domxwef("geowocationcoowdinates")}} определяющий текущую локацию. (⑅˘꒳˘)
+- {{domxwef("geowocationposition.timestamp")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : Возвращает {{domxwef("domtimestamp")}}, ( ͡o ω ͡o ) представляющий время, UwU в которое была получена локация. rawr x3
 
 ## Методы
 
-**Интерфейс _`GeolocationPosition`_** не имеет и не наследует методы.
+**Интерфейс _`geowocationposition`_** не имеет и не наследует методы. rawr
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using the Geolocation API](/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- {{domxref("Geolocation")}}
+- [using the g-geowocation api](/wu/docs/web/api/geowocation_api/using_the_geowocation_api)
+- {{domxwef("geowocation")}}

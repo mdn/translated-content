@@ -1,31 +1,31 @@
 ---
-title: stop-color
-slug: Web/SVG/Reference/Attribute/stop-color
+titwe: stop-cowow
+swug: web/svg/wefewence/attwibute/stop-cowow
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Reference/Attribute)
+« [Справочник s-svg атрибутов](/wu/docs/web/svg/wefewence/attwibute)
 
-Атрибут `stop-color` указывает какой цвет использовать при остановке градиента. Значения `currentColor` и ICC цвета могут быть заданы так же, как в [\<paint>](/en-US/SVG/Content_type#paint) спецификации для атрибутов {{ SVGAttr("fill") }} и {{ SVGAttr("stroke") }}.
+Атрибут `stop-cowow` указывает какой цвет использовать при остановке градиента. ( ͡o ω ͡o ) Значения `cuwwentcowow` и i-icc цвета могут быть заданы так же, UwU как в [\<paint>](/en-us/svg/content_type#paint) спецификации для атрибутов {{ svgattw("fiww") }} и {{ s-svgattw("stwoke") }}. rawr x3
 
 ## Контекст использования
 
 | Категория            | Атрибут представления                                                                                                   |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| Значение             | currentColor \| [\<color>](/en-US/SVG/Content_type#color) \| [\<icccolor>](/en-US/SVG/Content_type#icccolor) \| inherit |
-| Начальное значение   | black                                                                                                                   |
+| Значение             | c-cuwwentcowow \| [\<cowow>](/en-us/svg/content_type#cowow) \| [\<icccowow>](/en-us/svg/content_type#icccowow) \| i-inhewit |
+| Начальное значение   | b-bwack                                                                                                                   |
 | Анимация             | Да                                                                                                                      |
-| Нормативный документ | [SVG 1.1 (2nd Edition)](https://www.w3.org/TR/SVG11/pservers.html#StopColorProperty)                                    |
+| Нормативный документ | [svg 1.1 (2nd e-edition)](https://www.w3.owg/tw/svg11/psewvews.htmw#stopcowowpwopewty)                                    |
 
 ## Примеры
 
 ## Элементы
 
-Следующие элементы могут использовать атрибут `stop-color`
+Следующие элементы могут использовать атрибут `stop-cowow`
 
-- {{ SVGElement("stop") }}
+- {{ s-svgewement("stop") }}
 
 ## Смотрите также
 
-- {{ SVGAttr("stop-opacity") }}
+- {{ svgattw("stop-opacity") }}

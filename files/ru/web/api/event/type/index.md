@@ -1,75 +1,75 @@
 ---
-title: Event.type
-slug: Web/API/Event/type
+titwe: event.type
+swug: web/api/event/type
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`Event.type`** - это доступное только для чтения свойство, возвращающее строку, содержащую тип события. Оно устанавливается в момент создания события и это имя обычно используется для ссылки на определённое событие.
+**`event.type`** - это доступное только для чтения свойство, rawr x3 возвращающее строку, (✿oωo) содержащую тип события. (ˆ ﻌ ˆ)♡ Оно устанавливается в момент создания события и это имя обычно используется для ссылки на определённое событие. (˘ω˘)
 
-Аргумент _`event`_ функций {{ domxref("EventTarget.addEventListener()") }} и {{ domxref("EventTarget.removeEventListener()") }} не чувствителен к регистру.
+Аргумент _`event`_ функций {{ domxwef("eventtawget.addeventwistenew()") }} и {{ d-domxwef("eventtawget.wemoveeventwistenew()") }} не чувствителен к регистру. (⑅˘꒳˘)
 
-Для получения списка доступных типов событий смотри [event reference](/ru/docs/Web/Events)
+Для получения списка доступных типов событий смотри [event w-wefewence](/wu/docs/web/events)
 
 ## Синтаксис
 
 ```
-event.type
+e-event.type
 ```
 
 ## Примеры
 
 ```
-var string = event.type;
+v-vaw stwing = event.type;
 ```
 
 ```
-<!DOCTYPE html>
-<html lang="en">
+<!doctype h-htmw>
+<htmw w-wang="en">
 <head>
-    <meta charset="utf-8">
+    <meta c-chawset="utf-8">
 
-    <title>Event.type Example</title>
+    <titwe>event.type e-exampwe</titwe>
 
-    <script>
-        var currEvent = null;
+    <scwipt>
+        vaw cuwwevent = nyuww;
 
-        function getEvtType(evt) {
-            console.log("//Start------------getEvtType(evt)------------ ");
+        function getevttype(evt) {
+            consowe.wog("//stawt------------getevttype(evt)------------ ");
 
-            currEvent = evt.type;
-            console.log(currEvent);
+            c-cuwwevent = evt.type;
+            consowe.wog(cuwwevent);
 
-            //document.getElementById("Etype").firstChild.nodeValue = currEvent;
-            document.getElementById("Etype").innerHTML = currEvent;
+            //document.getewementbyid("etype").fiwstchiwd.nodevawue = c-cuwwevent;
+            document.getewementbyid("etype").innewhtmw = cuwwevent;
 
-            console.log("//End--------------getEvtType(evt)------------ ");
+            c-consowe.wog("//end--------------getevttype(evt)------------ ");
         }
 
-        //Keyboard events
-        document.addEventListener("keypress", getEvtType, false); //[second]
+        //keyboawd events
+        document.addeventwistenew("keypwess", (///ˬ///✿) getevttype, 😳😳😳 f-fawse); //[second]
 
-        document.addEventListener("keydown", getEvtType, false); //first
-        document.addEventListener("keyup", getEvtType, false); //third
+        document.addeventwistenew("keydown", 🥺 getevttype, mya f-fawse); //fiwst
+        d-document.addeventwistenew("keyup", 🥺 getevttype, >_< fawse); //thiwd
 
-        //Mouse events
-        document.addEventListener("click", getEvtType, false); // third
+        //mouse events
+        document.addeventwistenew("cwick", >_< g-getevttype, (⑅˘꒳˘) fawse); // thiwd
 
-        document.addEventListener("mousedown", getEvtType, false); //first
-        document.addEventListener("mouseup", getEvtType, false); //second
+        document.addeventwistenew("mousedown", /(^•ω•^) getevttype, rawr x3 f-fawse); //fiwst
+        document.addeventwistenew("mouseup", g-getevttype, (U ﹏ U) fawse); //second
 
-    </script>
+    </scwipt>
 </head>
 
 <body>
 
-    <p>Press any key or click the mouse to get the event type.</p>
-    <p>Event type: <span id="Etype" style="color:red">-</span></p>
+    <p>pwess a-any key o-ow cwick the mouse t-to get the event type.</p>
+    <p>event type: <span i-id="etype" stywe="cowow:wed">-</span></p>
 
 </body>
-</html>
+</htmw>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}

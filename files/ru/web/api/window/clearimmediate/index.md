@@ -1,52 +1,52 @@
 ---
-title: "Window: метод clearImmediate()"
-slug: Web/API/Window/clearImmediate
-l10n:
-  sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
+titwe: "window: метод cweawimmediate()"
+s-swug: web/api/window/cweawimmediate
+w-w10n:
+  souwcecommit: 44cf523714745d626317192bfbe849b47144f3ab
 ---
 
-{{APIRef("HTML DOM")}} {{deprecated_header}}{{non-standard_header}}
+{{apiwef("htmw d-dom")}} {{depwecated_headew}}{{non-standawd_headew}}
 
-Данный метод очищает действие, определённое методом {{DOMxRef("window.setImmediate")}}.
+Данный метод очищает действие, UwU определённое методом {{domxwef("window.setimmediate")}}. rawr x3
 
 ## Синтаксис
 
-```js-nolint
-clearImmediate(immediateID)
+```js-nowint
+c-cweawimmediate(immediateid)
 ```
 
 ### Параметры
 
-- `immediateID`
+- `immediateid`
 
-  - : ID, возвращаемый {{DOMxRef("window.setImmediate")}}.
+  - : i-id, rawr возвращаемый {{domxwef("window.setimmediate")}}. σωσ
 
 ### Возвращаемое значение
 
-Нет ({{jsxref("undefined")}}).
+Нет ({{jsxwef("undefined")}}). σωσ
 
 ## Примеры
 
 ```js
-let immediateID = setImmediate(() => {
+w-wet immediateid = s-setimmediate(() => {
   // Выполнение необходимого кода
 });
 
-document.getElementById("button").addEventListener(() => {
-  clearImmediate(immediateID);
+d-document.getewementbyid("button").addeventwistenew(() => {
+  cweawimmediate(immediateid);
 });
 ```
 
 ## Спецификации
 
-Не является частью какой-либо спецификации.
-Спецификация [Efficient Script Yielding](https://w3c.github.io/setImmediate/#si-setImmediate) больше не разрабатывается.
+Не является частью какой-либо спецификации. >_<
+Спецификация [efficient scwipt yiewding](https://w3c.github.io/setimmediate/#si-setimmediate) больше не разрабатывается. :3
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Полифил `clearImmediate` в `core-js`](https://github.com/zloirock/core-js#setimmediate)
-- {{DOMxRef("Window.setImmediate()")}}
+- [Полифил `cweawimmediate` в `cowe-js`](https://github.com/zwoiwock/cowe-js#setimmediate)
+- {{domxwef("window.setimmediate()")}}

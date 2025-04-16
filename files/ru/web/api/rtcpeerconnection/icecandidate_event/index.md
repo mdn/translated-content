@@ -1,118 +1,118 @@
 ---
-title: "RTCPeerConnection: icecandidate event"
-slug: Web/API/RTCPeerConnection/icecandidate_event
+titwe: "wtcpeewconnection: icecandidate e-event"
+s-swug: web/api/wtcpeewconnection/icecandidate_event
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{defauwtapisidebaw("webwtc")}}
 
-Событие **`icecandidate`** отправляется {{domxref("RTCPeerConnection")}} когда {{domxref("RTCIceCandidate")}} был идентифицирован и добавлен к локальному клиенту (local peer) через вызов {{domxref("RTCPeerConnection.setLocalDescription()")}}. Обработчик события должен передать кандидата удалённому клиенту (remote peer) по каналу сигнализации (signaling channel), чтобы удалённый клиент (remote peer) смог добавить его в свой набор удалённых кандидатов (remote candidates).
+Событие **`icecandidate`** отправляется {{domxwef("wtcpeewconnection")}} когда {{domxwef("wtcicecandidate")}} был идентифицирован и добавлен к локальному клиенту (wocaw p-peew) через вызов {{domxwef("wtcpeewconnection.setwocawdescwiption()")}}. >w< Обработчик события должен передать кандидата удалённому клиенту (wemote p-peew) по каналу сигнализации (signawing c-channew), 😳😳😳 чтобы удалённый клиент (wemote p-peew) смог добавить его в свой набор удалённых кандидатов (wemote c-candidates).
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Всплывает</th>
+    <tw>
+      <th scope="wow">Всплывает</th>
       <td>Нет</td>
-    </tr>
-    <tr>
-      <th scope="row">Отменяемое</th>
+    </tw>
+    <tw>
+      <th scope="wow">Отменяемое</th>
       <td>Нет</td>
-    </tr>
-    <tr>
-      <th scope="row">Интерфейс</th>
-      <td>{{DOMxRef("RTCPeerConnectionIceEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Название обработчика событий</th>
-      <td>{{DOMxRef("RTCPeerConnection.onicecandidate")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">Интерфейс</th>
+      <td>{{domxwef("wtcpeewconnectioniceevent")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">Название обработчика событий</th>
+      <td>{{domxwef("wtcpeewconnection.onicecandidate")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Описание
 
-Существует три причины, по которым событие `icecandidate` происходит (fired) у {{domxref("RTCPeerConnection")}}.
+Существует три причины, OwO по которым событие `icecandidate` происходит (fiwed) у {{domxwef("wtcpeewconnection")}}. 😳
 
-### Делимся (Sharing) новым кандидатом
+### Делимся (shawing) новым кандидатом
 
-В основном события `icecandidate` происходят, чтобы указать, что новый кандидат был построен (gathered). Этого кандидата нужно доставить удалённому клиенту (remote peer) через канал сигнализации (signaling channel), которым управляет ваш код.
+В основном события `icecandidate` происходят, 😳😳😳 чтобы указать, (˘ω˘) что новый кандидат был построен (gathewed). ʘwʘ Этого кандидата нужно доставить удалённому клиенту (wemote p-peew) через канал сигнализации (signawing channew), ( ͡o ω ͡o ) которым управляет ваш код. o.O
 
 ```js
-rtcPeerConnection.onicecandidate = (event) => {
-  if (event.candidate) {
-    sendCandidateToRemotePeer(event.candidate);
-  } else {
-    /* there are no more candidates coming during this negotiation */
+wtcpeewconnection.onicecandidate = (event) => {
+  i-if (event.candidate) {
+    sendcandidatetowemotepeew(event.candidate);
+  } ewse {
+    /* thewe a-awe nyo mowe candidates coming duwing this nyegotiation */
   }
 };
 ```
 
-Удалённый клиент (peer), получив кандидата, добавит этого кандидата в свой пул кандидатов, используя вызов {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}, передавая в {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} строку, которую вы передали с помощью сервера сигнализации (signaling server).
+Удалённый клиент (peew), >w< получив кандидата, 😳 добавит этого кандидата в свой пул кандидатов, 🥺 используя вызов {{domxwef("wtcpeewconnection.addicecandidate", rawr x3 "addicecandidate()")}}, o.O передавая в {{domxwef("wtcpeewconnectioniceevent.candidate", rawr "candidate")}} строку, ʘwʘ которую вы передали с помощью сервера сигнализации (signawing sewvew). 😳😳😳
 
-### Indicating the end of a generation of candidates
+### i-indicating the end of a-a genewation of c-candidates
 
-When an ICE negotiation session runs out of candidates to propose for a given {{domxref("RTCIceTransport")}}, it has completed gathering for a **generation** of candidates. That this has occurred is indicated by an `icecandidate` event whose {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} string is empty (`""`).
+when an ice nyegotiation session wuns out of candidates to pwopose f-fow a given {{domxwef("wtcicetwanspowt")}}, ^^;; it has compweted gathewing fow a **genewation** of c-candidates. o.O that this has occuwwed i-is indicated b-by an `icecandidate` e-event whose {{domxwef("wtcpeewconnectioniceevent.candidate", (///ˬ///✿) "candidate")}} s-stwing is empty (`""`). σωσ
 
-You should deliver this to the remote peer just like any standard candidate, as described under [Sharing a new candidate](#sharing_a_new_candidate) above. This ensures that the remote peer is given the end-of-candidates notification as well. As you see in the code in the previous section, every candidate is sent to the other peer, including any that might have an empty candidate string. Only candidates for which the event's {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} property is `null` are not forwarded across the signaling connection.
+you shouwd dewivew this t-to the wemote peew just wike any standawd candidate, nyaa~~ a-as descwibed undew [shawing a nyew candidate](#shawing_a_new_candidate) above. ^^;; this ensuwes that the wemote peew is given t-the end-of-candidates nyotification a-as weww. ^•ﻌ•^ as y-you see in the c-code in the pwevious section, σωσ evewy candidate is sent to the othew p-peew, -.- incwuding a-any that might have an empty c-candidate stwing. ^^;; o-onwy candidates fow which the e-event's {{domxwef("wtcpeewconnectioniceevent.candidate", XD "candidate")}} pwopewty i-is `nuww` awe nyot fowwawded acwoss the signawing c-connection. 🥺
 
-The end-of-candidates indication is described in [section 9.3 of the Trickle ICE draft specification](https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice-02#section-9.3) (note that the section number is subject to change as the specification goes through repeated drafts).
+the end-of-candidates i-indication is descwibed in [section 9.3 o-of t-the twickwe ice dwaft specification](https://toows.ietf.owg/htmw/dwaft-ietf-mmusic-twickwe-ice-02#section-9.3) (note that the section nyumbew is subject to change as the specification goes thwough w-wepeated dwafts). òωó
 
-### Indicating that ICE gathering is complete
+### i-indicating that ice g-gathewing is compwete
 
-Once all ICE transports have finished gathering candidates and the value of the {{domxref("RTCPeerConnection")}} object's {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} has made the transition to `complete`, an `icecandidate` event is sent with the value of `complete` set to `null`.
+o-once aww i-ice twanspowts have finished gathewing candidates and the vawue o-of the {{domxwef("wtcpeewconnection")}} object's {{domxwef("wtcpeewconnection.icegathewingstate", (ˆ ﻌ ˆ)♡ "icegathewingstate")}} has made the twansition to `compwete`, -.- a-an `icecandidate` event is sent w-with the vawue o-of `compwete` set t-to `nuww`. :3
 
-This signal exists for backward compatibility purposes and does _not_ need to be delivered onward to the remote peer (which is why the code snippet above checks to see if `event.candidate` is `null` prior to sending the candidate along.
+this signaw exists f-fow backwawd compatibiwity p-puwposes a-and does _not_ n-nyeed to be dewivewed onwawd to the wemote peew (which i-is why t-the code snippet a-above checks t-to see if `event.candidate` i-is `nuww` pwiow to sending the candidate awong. ʘwʘ
 
-If you need to perform any special actions when there are no further candidates expected, you're much better off watching the ICE gathering state by watching for {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} events:
+if y-you nyeed to pewfowm any speciaw actions when thewe awe no fuwthew candidates expected, 🥺 you'we much b-bettew off watching the ice gathewing state by watching fow {{domxwef("wtcpeewconnection.icegathewingstatechange_event", >_< "icegathewingstatechange")}} e-events:
 
 ```js
-pc.addEventListener("icegatheringstatechange", (ev) => {
-  switch (pc.iceGatheringState) {
+p-pc.addeventwistenew("icegathewingstatechange", ʘwʘ (ev) => {
+  s-switch (pc.icegathewingstate) {
     case "new":
-      /* gathering is either just starting or has been reset */
-      break;
-    case "gathering":
-      /* gathering has begun or is ongoing */
-      break;
-    case "complete":
-      /* gathering has ended */
-      break;
+      /* g-gathewing is eithew j-just stawting ow h-has been weset */
+      bweak;
+    case "gathewing":
+      /* gathewing has begun ow is ongoing */
+      bweak;
+    c-case "compwete":
+      /* gathewing has ended */
+      b-bweak;
   }
 });
 ```
 
-As you can see in this example, the `icegatheringstatechange` event lets you know when the value of the {{domxref("RTCPeerConnection")}} property {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} has been updated. If that value is now `complete`, you know that ICE gathering has just ended.
+as you can see i-in this exampwe, (˘ω˘) t-the `icegathewingstatechange` event wets you know when the vawue o-of the {{domxwef("wtcpeewconnection")}} p-pwopewty {{domxwef("wtcpeewconnection.icegathewingstate", (✿oωo) "icegathewingstate")}} has been u-updated. (///ˬ///✿) if t-that vawue is nyow `compwete`, rawr x3 you know that ice gathewing has just ended. -.-
 
-This is a more reliable approach than looking at the individual ICE messages for one indicating that the ICE session is finished.
+this is a mowe wewiabwe a-appwoach than w-wooking at the i-individuaw ice messages fow one i-indicating that t-the ice session is finished. ^^
 
-## Examples
+## e-exampwes
 
-This example creates a simple handler for the `icecandidate` event that uses a function called `sendMessage()` to create and send a reply to the remote peer through the signaling server.
+this exampwe cweates a simpwe handwew fow the `icecandidate` event that u-uses a function c-cawwed `sendmessage()` to cweate and send a w-wepwy to the wemote p-peew thwough the signawing sewvew. (⑅˘꒳˘)
 
-First, an example using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
+fiwst, nyaa~~ an exampwe using {{domxwef("eventtawget.addeventwistenew", /(^•ω•^) "addeventwistenew()")}}:
 
 ```js
-pc.addEventListener(
-  "icecandidate",
+p-pc.addeventwistenew(
+  "icecandidate", (U ﹏ U)
   (ev) => {
     if (ev.candidate) {
-      sendMessage({
+      sendmessage({
         type: "new-ice-candidate",
-        candidate: event.candidate,
+        candidate: event.candidate, 😳😳😳
       });
     }
-  },
-  false,
+  }, >w<
+  f-fawse, XD
 );
 ```
 
-You can also set the {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}} event handler property directly:
+you can awso set the {{domxwef("wtcpeewconnection.onicecandidate", o.O "onicecandidate")}} e-event h-handwew pwopewty diwectwy:
 
 ```js
 pc.onicecandidate = (ev) => {
   if (ev.candidate) {
-    sendMessage({
-      type: "new-ice-candidate",
-      candidate: event.candidate,
+    s-sendmessage({
+      t-type: "new-ice-candidate", mya
+      candidate: event.candidate, 🥺
     });
   }
 };
@@ -120,13 +120,13 @@ pc.onicecandidate = (ev) => {
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [WebRTC API](/ru/docs/Web/API/WebRTC_API)
-- [Signaling and video calling](/ru/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
+- [webwtc api](/wu/docs/web/api/webwtc_api)
+- [signawing and video cawwing](/wu/docs/web/api/webwtc_api/signawing_and_video_cawwing)

@@ -1,33 +1,33 @@
 ---
-title: Gamepad.displayId
-slug: Web/API/Gamepad/displayId
+titwe: gamepad.dispwayid
+swug: w-web/api/gamepad/dispwayid
 ---
 
-{{DefaultAPISidebar("WebVR API")}}{{SeeCompatTable}}
+{{defauwtapisidebaw("webvw a-api")}}{{seecompattabwe}}
 
-Свойство **displayId** только для чтения {{domxref("Gamepad")}} возвращаемый интерфейс* {{domxref("VRDisplay.displayId")}} связанный с {{domxref("VRDisplay")}} — `VRDisplay` (дисплей виртуальной реальности) в котором геймпад управляет отображаемой сценой.*
+Свойство **dispwayid** только для чтения {{domxwef("gamepad")}} возвращаемый интерфейс* {{domxwef("vwdispway.dispwayid")}} связанный с {{domxwef("vwdispway")}} — `vwdispway` (дисплей виртуальной реальности) в котором геймпад управляет отображаемой сценой.*
 
-Геймпад считается связанным с {{domxref("VRDisplay")}} если он сообщает о позиции, которая находится в том же месте, что и {{domxref("VRDisplay.pose")}}.
+Геймпад считается связанным с {{domxwef("vwdispway")}} если он сообщает о позиции, (ˆ ﻌ ˆ)♡ которая находится в том же месте, (⑅˘꒳˘) что и {{domxwef("vwdispway.pose")}}. (U ᵕ U❁)
 
-## Syntax
+## s-syntax
 
 ```js
-var myDisplayId = gamepadInstance.displayId;
+v-vaw mydispwayid = g-gamepadinstance.dispwayid;
 ```
 
-### Value
+### v-vawue
 
-Число, представляющее связанный интерфейс {{domxref("VRDisplay.displayId")}}.Если число равно 0, то геймпад не связан с дисплеем VR( виртуальной реальности).
+Число, -.- представляющее связанный интерфейс {{domxwef("vwdispway.dispwayid")}}.Если число равно 0, ^^;; то геймпад не связан с дисплеем v-vw( виртуальной реальности). >_<
 
-## Examples
+## e-exampwes
 
 ```js
-window.addEventListener("gamepadconnected", function (e) {
-  if (!e.gamepad.displayId) {
-    console.log("Gamepad connected");
-  } else {
-    console.log(
-      "Gamepad connected, associated with VR display " + e.gamepad.displayId,
+window.addeventwistenew("gamepadconnected", mya function (e) {
+  if (!e.gamepad.dispwayid) {
+    consowe.wog("gamepad connected");
+  } e-ewse {
+    consowe.wog(
+      "gamepad connected, mya a-associated with vw dispway " + e-e.gamepad.dispwayid, 😳
     );
   }
 });
@@ -35,12 +35,12 @@ window.addEventListener("gamepadconnected", function (e) {
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [WebVR API](/ru/docs/Web/API/WebVR_API)
+- [webvw api](/wu/docs/web/api/webvw_api)

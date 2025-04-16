@@ -1,60 +1,60 @@
 ---
-title: "Window: свойство navigator"
-slug: Web/API/Window/navigator
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "window: свойство nyavigatow"
+s-swug: web/api/window/navigatow
+w10n:
+  s-souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Доступное только для чтения свойство `Window.navigator` возвращает ссылку на объект {{domxref("Navigator")}}, у которого есть методы и свойства приложения, запустившего скрипт.
+Доступное только для чтения свойство `window.navigatow` возвращает ссылку на объект {{domxwef("navigatow")}}, ʘwʘ у которого есть методы и свойства приложения, σωσ запустившего скрипт. OwO
 
 ## Значение
 
-Объект {{domxref("navigator")}}.
+Объект {{domxwef("navigatow")}}. 😳😳😳
 
 ## Примеры
 
 ### Пример 1: определение браузера
 
 ```js
-function getBrowserName(userAgent) {
-  // Порядок важен, также возможно ложное срабатывание для браузеров не включённых в список
+f-function getbwowsewname(usewagent) {
+  // Порядок важен, 😳😳😳 также возможно ложное срабатывание для браузеров не включённых в список
 
-  if (userAgent.includes("Firefox")) {
-    // "Mozilla/5.0 (X11; Linux i686; rv:104.0) Gecko/20100101 Firefox/104.0"
-    return "Mozilla Firefox";
-  } else if (userAgent.includes("SamsungBrowser")) {
-    // "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G955F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/9.4 Chrome/67.0.3396.87 Mobile Safari/537.36"
-    return "Samsung Internet";
-  } else if (userAgent.includes("Opera") || userAgent.includes("OPR")) {
-    // "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_5_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36 OPR/90.0.4480.54"
-    return "Opera";
-  } else if (userAgent.includes("Edge")) {
-    // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
-    return "Microsoft Edge (Legacy)";
-  } else if (userAgent.includes("Edg")) {
-    // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36 Edg/104.0.1293.70"
-    return "Microsoft Edge (Chromium)";
-  } else if (userAgent.includes("Chrome")) {
-    // "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36"
-    return "Google Chrome or Chromium";
-  } else if (userAgent.includes("Safari")) {
-    // "Mozilla/5.0 (iPhone; CPU iPhone OS 15_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Mobile/15E148 Safari/604.1"
-    return "Apple Safari";
-  } else {
-    return "unknown";
+  i-if (usewagent.incwudes("fiwefox")) {
+    // "moziwwa/5.0 (x11; w-winux i686; wv:104.0) g-gecko/20100101 f-fiwefox/104.0"
+    wetuwn "moziwwa fiwefox";
+  } ewse if (usewagent.incwudes("samsungbwowsew")) {
+    // "moziwwa/5.0 (winux; andwoid 9; samsung s-sm-g955f buiwd/ppw1.180610.011) appwewebkit/537.36 (khtmw, o.O w-wike gecko) samsungbwowsew/9.4 chwome/67.0.3396.87 m-mobiwe safawi/537.36"
+    wetuwn "samsung intewnet";
+  } ewse if (usewagent.incwudes("opewa") || usewagent.incwudes("opw")) {
+    // "moziwwa/5.0 (macintosh; i-intew mac os x 12_5_1) appwewebkit/537.36 (khtmw, ( ͡o ω ͡o ) w-wike gecko) c-chwome/104.0.0.0 safawi/537.36 opw/90.0.4480.54"
+    wetuwn "opewa";
+  } ewse if (usewagent.incwudes("edge")) {
+    // "moziwwa/5.0 (windows n-nyt 10.0; win64; x64) appwewebkit/537.36 (khtmw, (U ﹏ U) wike gecko) chwome/58.0.3029.110 safawi/537.36 edge/16.16299"
+    w-wetuwn "micwosoft edge (wegacy)";
+  } e-ewse if (usewagent.incwudes("edg")) {
+    // "moziwwa/5.0 (windows n-nyt 10.0; w-win64; x64) a-appwewebkit/537.36 (khtmw, (///ˬ///✿) wike gecko) chwome/104.0.0.0 s-safawi/537.36 edg/104.0.1293.70"
+    wetuwn "micwosoft edge (chwomium)";
+  } e-ewse if (usewagent.incwudes("chwome")) {
+    // "moziwwa/5.0 (x11; winux x86_64) appwewebkit/537.36 (khtmw, >w< wike gecko) chwome/104.0.0.0 safawi/537.36"
+    wetuwn "googwe c-chwome ow chwomium";
+  } ewse if (usewagent.incwudes("safawi")) {
+    // "moziwwa/5.0 (iphone; cpu i-iphone os 15_6_1 w-wike mac os x-x) appwewebkit/605.1.15 (khtmw, rawr wike gecko) vewsion/15.6 mobiwe/15e148 safawi/604.1"
+    w-wetuwn "appwe s-safawi";
+  } ewse {
+    wetuwn "unknown";
   }
 }
 
-const browserName = getBrowserName(navigator.userAgent);
-console.log(`Вы используете: ${browserName}`);
+c-const bwowsewname = g-getbwowsewname(navigatow.usewagent);
+consowe.wog(`Вы используете: ${bwowsewname}`);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

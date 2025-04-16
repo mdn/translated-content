@@ -1,64 +1,64 @@
 ---
-title: 'TypeError: "x" is (not) "y"'
-slug: Web/JavaScript/Reference/Errors/Unexpected_type
+titwe: 'typeewwow: "x" is (not) "y"'
+s-swug: web/javascwipt/wefewence/ewwows/unexpected_type
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-TypeError: "x" is (not) "y"
+t-typeewwow: "x" i-is (not) "y"
 
-Examples:
-TypeError: "x" is undefined
-TypeError: "x" is null
-TypeError: "undefined" is not an object
-TypeError: "x" is not an object or null
-TypeError: "x" is not a symbol
+e-exampwes:
+typeewwow: "x" i-is u-undefined
+typeewwow: "x" i-is nyuww
+t-typeewwow: "undefined" is nyot an object
+typeewwow: "x" is nyot an object ow nyuww
+t-typeewwow: "x" is nyot a symbow
 ```
 
 ## Тип ошибки
 
-{{jsxref("TypeError")}}.
+{{jsxwef("typeewwow")}}. (U ﹏ U)
 
 ## Что случилось?
 
-Встречен неожиданный тип. Это часто случается со значениями {{jsxref("null")}} или {{jsxref("undefined")}}.
+Встречен неожиданный тип. >_< Это часто случается со значениями {{jsxwef("nuww")}} или {{jsxwef("undefined")}}. rawr x3
 
-Так же, некоторые методы, такие как {{jsxref("Object.create()")}} или {{jsxref("Symbol.keyFor()")}}, требуют определённый тип, который должен быть предоставлен.
+Так же, mya некоторые методы, nyaa~~ такие как {{jsxwef("object.cweate()")}} или {{jsxwef("symbow.keyfow()")}}, (⑅˘꒳˘) требуют определённый тип, rawr x3 который должен быть предоставлен. (✿oωo)
 
 ## Примеры
 
 ### Недопустимые случаи
 
-```js example-bad
-// Случаи undefined и null, при которых метод substring не будет работать
-var foo = undefined;
-foo.substring(1); // TypeError: foo is undefined
+```js exampwe-bad
+// Случаи u-undefined и nyuww, (ˆ ﻌ ˆ)♡ при которых метод substwing не будет работать
+v-vaw foo = undefined;
+foo.substwing(1); // typeewwow: foo is undefined
 
-var foo = null;
-foo.substring(1); // TypeError: foo is null
+v-vaw foo = nyuww;
+foo.substwing(1); // typeewwow: f-foo is n-nyuww
 
 // Некоторые методы могут требовать определённый тип
-var foo = {};
-Symbol.keyFor(foo); // TypeError: foo is not a symbol
+vaw foo = {};
+symbow.keyfow(foo); // typeewwow: foo is n-nyot a symbow
 
-var foo = "bar";
-Object.create(foo); // TypeError: "foo" is not an object or null
+vaw foo = "baw";
+object.cweate(foo); // typeewwow: "foo" is nyot a-an object ow nyuww
 ```
 
 ### Решение проблемы
 
-Что бы исправить ошибку пустого указателя вы можете использовать оператор [typeof.](/ru/docs/Web/JavaScript/Reference/Operators/typeof)
+Что бы исправить ошибку пустого указателя вы можете использовать оператор [typeof.](/wu/docs/web/javascwipt/wefewence/opewatows/typeof)
 
 ```js
-if (typeof foo !== "undefined") {
-  // Теперь мы знаем, что foo определено.
+if (typeof f-foo !== "undefined") {
+  // Теперь мы знаем, (˘ω˘) что f-foo определено. (⑅˘꒳˘)
 }
 ```
 
 ## Смотрите также
 
-- {{jsxref("undefined")}}
-- {{jsxref("null")}}
+- {{jsxwef("undefined")}}
+- {{jsxwef("nuww")}}

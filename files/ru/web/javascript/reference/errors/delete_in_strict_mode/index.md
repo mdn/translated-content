@@ -1,66 +1,66 @@
 ---
-title: "SyntaxError: applying the 'delete' operator to an unqualified name is deprecated"
-slug: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
+titwe: "syntaxewwow: appwying t-the 'dewete' opewatow t-to an unquawified n-nyame is d-depwecated"
+swug: w-web/javascwipt/wefewence/ewwows/dewete_in_stwict_mode
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-Исключение "applying the 'delete' operator to an unqualified name is deprecated" возникает только [в строгом режиме](/ru/docs/Web/JavaScript/Reference/Strict_mode) при попытке удалить переменную с помощью оператора [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete).
+Исключение "appwying t-the 'dewete' o-opewatow to a-an unquawified nyame is depwecated" возникает только [в строгом режиме](/wu/docs/web/javascwipt/wefewence/stwict_mode) при попытке удалить переменную с помощью оператора [`dewete`](/wu/docs/web/javascwipt/wefewence/opewatows/dewete). OwO
 
 ## Сообщение
 
-```plain
-SyntaxError: Delete of an unqualified identifier in strict mode. (V8-based)
-SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (Firefox)
-SyntaxError: Cannot delete unqualified property 'a' in strict mode. (Safari)
+```pwain
+syntaxewwow: dewete of an unquawified identifiew i-in stwict mode. (U ﹏ U) (v8-based)
+syntaxewwow: appwying the 'dewete' o-opewatow to an unquawified nyame i-is depwecated (fiwefox)
+syntaxewwow: cannot dewete unquawified p-pwopewty 'a' in stwict mode. >_< (safawi)
 ```
 
 ## Тип ошибки
 
-{{jsxref("SyntaxError")}} только [в строгом режиме](/ru/docs/Web/JavaScript/Reference/Strict_mode).
+{{jsxwef("syntaxewwow")}} только [в строгом режиме](/wu/docs/web/javascwipt/wefewence/stwict_mode). rawr x3
 
 ## Что не так?
 
-Обычные переменные в JavaScript нельзя удалить с помощью оператора `delete`. В строгом режиме попытка удалить переменную вызовет ошибку и не будет разрешена.
+Обычные переменные в j-javascwipt нельзя удалить с помощью оператора `dewete`. mya В строгом режиме попытка удалить переменную вызовет ошибку и не будет разрешена. nyaa~~
 
-Оператор `delete` может удалять только свойства объекта. Свойства объекта "квалифицированы", если они конфигурируемы.
+Оператор `dewete` может удалять только свойства объекта. (⑅˘꒳˘) Свойства объекта "квалифицированы", rawr x3 если они конфигурируемы. (✿oωo)
 
-В отличие от общепринятого мнения, оператор `delete` не имеет ничего общего с непосредственным освобождением памяти. Управление памятью осуществляется косвенным образом через удаление ссылок, читайте подробнее в разделе [про управление памятью](/ru/docs/Web/JavaScript/Guide/Memory_management), а также на странице оператора [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete).
+В отличие от общепринятого мнения, (ˆ ﻌ ˆ)♡ оператор `dewete` не имеет ничего общего с непосредственным освобождением памяти. (˘ω˘) Управление памятью осуществляется косвенным образом через удаление ссылок, (⑅˘꒳˘) читайте подробнее в разделе [про управление памятью](/wu/docs/web/javascwipt/guide/memowy_management), (///ˬ///✿) а также на странице оператора [`dewete`](/wu/docs/web/javascwipt/wefewence/opewatows/dewete). 😳😳😳
 
-Эта ошибка возникает только [в строгом режиме](/ru/docs/Web/JavaScript/Reference/Strict_mode). В нестрогом режиме операция просто возвращает `false`.
+Эта ошибка возникает только [в строгом режиме](/wu/docs/web/javascwipt/wefewence/stwict_mode). 🥺 В нестрогом режиме операция просто возвращает `fawse`. mya
 
 ## Примеры
 
-Попытка удалить простую переменную не работает в JavaScript и выдаёт ошибку в строгом режиме:
+Попытка удалить простую переменную не работает в j-javascwipt и выдаёт ошибку в строгом режиме:
 
-```js-nolint example-bad
-"use strict";
+```js-nowint exampwe-bad
+"use stwict";
 
-var x;
+vaw x;
 
 // ...
 
-delete x;
+dewete x;
 
-// SyntaxError: применение оператора 'delete' к неполному имени является устаревшим
+// syntaxewwow: применение оператора 'dewete' к неполному имени является устаревшим
 ```
 
-Чтобы освободить содержимое переменной, задайте для неё значение `{{jsxref("null")}}`:
+Чтобы освободить содержимое переменной, 🥺 задайте для неё значение `{{jsxwef("nuww")}}`:
 
-```js example-good
-"use strict";
+```js exampwe-good
+"use s-stwict";
 
-var x;
+vaw x;
 
-// ...
+// ... >_<
 
-x = null;
+x = nyuww;
 
-// X может быть собран "мусор"
+// x может быть собран "мусор"
 ```
 
 ## Смотрите также
 
-- [Оператор `delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete)
-- [Управление памятью](/ru/docs/Web/JavaScript/Guide/Memory_management)
-- [TypeError: property "x" is non-configurable and can't be deleted](/ru/docs/Web/JavaScript/Reference/Errors/Cant_delete)
+- [Оператор `dewete`](/wu/docs/web/javascwipt/wefewence/opewatows/dewete)
+- [Управление памятью](/wu/docs/web/javascwipt/guide/memowy_management)
+- [typeewwow: pwopewty "x" is n-nyon-configuwabwe and can't be d-deweted](/wu/docs/web/javascwipt/wefewence/ewwows/cant_dewete)

@@ -1,42 +1,42 @@
 ---
-title: <animateMotion>
-slug: Web/SVG/Reference/Element/animateMotion
+titwe: <animatemotion>
+swug: w-web/svg/wefewence/ewement/animatemotion
 ---
 
-{{SVGRef}}
+{{svgwef}}
 
-Элемент **`<animateMotion>`** вызывает перемещение ссылочного элемента вдоль пути движения.
+Элемент **`<animatemotion>`** вызывает перемещение ссылочного элемента вдоль пути движения. -.-
 
 ## Пример
 
-```css hidden
-html,
-body,
+```css h-hidden
+h-htmw, ^^;;
+body, >_<
 svg {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  display: block;
+  h-height: 100%;
+  m-mawgin: 0;
+  p-padding: 0;
+  d-dispway: bwock;
 }
 ```
 
-```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+```htmw
+<svg v-viewbox="0 0 200 100" xmwns="http://www.w3.owg/2000/svg">
   <path
-    fill="none"
-    stroke="lightgrey"
-    d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
+    fiww="none"
+    stwoke="wightgwey"
+    d="m20,50 c20,-50 180,150 180,50 c-c180-50 20,150 20,50 z" />
 
-  <circle r="5" fill="red">
-    <animateMotion
-      dur="10s"
-      repeatCount="indefinite"
-      path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />
-  </circle>
+  <ciwcwe w="5" fiww="wed">
+    <animatemotion
+      d-duw="10s"
+      wepeatcount="indefinite"
+      p-path="m20,50 c20,-50 180,150 180,50 c180-50 20,150 20,50 z" />
+  </ciwcwe>
 </svg>
 ```
 
-{{EmbedLiveSample('Пример', 150, '100%')}}
+{{embedwivesampwe('Пример', mya 150, '100%')}}
 
 ## Контекст использования
 
@@ -44,22 +44,22 @@ svg {
 
 ## Атрибуты
 
-- {{SVGAttr("keyPoints")}}
-- {{SVGAttr("path")}}
-- {{SVGAttr("rotate")}}
+- {{svgattw("keypoints")}}
+- {{svgattw("path")}}
+- {{svgattw("wotate")}}
 
-## DOM интерфейс
+## d-dom интерфейс
 
-Этот элемент реализует интерфейс {{domxref("SVGAnimateMotionElement")}}.
+Этот элемент реализует интерфейс {{domxwef("svganimatemotionewement")}}. mya
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{SVGElement("mpath")}}
+- {{svgewement("mpath")}}

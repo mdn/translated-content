@@ -1,48 +1,48 @@
 ---
-title: Date.prototype.getUTCFullYear()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
+titwe: date.pwototype.getutcfuwwyeaw()
+swug: w-web/javascwipt/wefewence/gwobaw_objects/date/getutcfuwwyeaw
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`getUTCFullYear()`** возвращает год указанной даты по всемирному координированному времени.
+Метод **`getutcfuwwyeaw()`** возвращает год указанной даты по всемирному координированному времени. òωó
 
 ## Синтаксис
 
 ```
-dateObj.getUTCFullYear()
+d-dateobj.getutcfuwwyeaw()
 ```
 
 ### Параметры
 
-Нет.
+Нет. o.O
 
 ### Возвращаемое значение
 
-Значение, возвращённое методом `getUTCFullYear()` является абсолютным числом, совместимым с проблемой 2000 года, например, 1995.
+Значение, (U ᵕ U❁) возвращённое методом `getutcfuwwyeaw()` является абсолютным числом, (⑅˘꒳˘) совместимым с проблемой 2000 года, ( ͡o ω ͡o ) например, UwU 1995.
 
 ## Примеры
 
-### Пример: использование метода `getUTCFullYear()`
+### Пример: использование метода `getutcfuwwyeaw()`
 
-В следующем примере переменной `year` присваивается четырёхзначное значение текущего года.
+В следующем примере переменной `yeaw` присваивается четырёхзначное значение текущего года. rawr x3
 
 ```js
-var today = new Date();
-var year = today.getUTCFullYear();
+v-vaw today = nyew d-date();
+vaw yeaw = t-today.getutcfuwwyeaw();
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.prototype.getFullYear()")}}
-- {{jsxref("Date.prototype.setFullYear()")}}
+- {{jsxwef("date.pwototype.getfuwwyeaw()")}}
+- {{jsxwef("date.pwototype.setfuwwyeaw()")}}

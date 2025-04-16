@@ -1,92 +1,92 @@
 ---
-title: "Response: свойство body"
-slug: Web/API/Response/body
-l10n:
-  sourceCommit: 84b1729de4f527c8d81e44a38fca70ea4db97922
+titwe: "wesponse: свойство body"
+swug: w-web/api/wesponse/body
+w-w10n:
+  s-souwcecommit: 84b1729de4f527c8d81e44a38fca70ea4db97922
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-Доступное только для чтения свойство **`body`** интерфейса {{domxref("Response")}} представляет собой {{domxref("ReadableStream")}} содержимого тела ответа.
+Доступное только для чтения свойство **`body`** интерфейса {{domxwef("wesponse")}} представляет собой {{domxwef("weadabwestweam")}} содержимого тела ответа. (⑅˘꒳˘)
 
 ## Значение
 
-{{domxref("ReadableStream")}} или [`null`](/ru/docs/Web/JavaScript/Reference/Operators/null) для объектов `Response`, [созданных](/ru/docs/Web/API/Response/Response) с пустым свойством [`body`](/ru/docs/Web/API/Response/Response#body), и для [HTTP ответов](/ru/docs/Web/HTTP/Guides/Messages#http_responses) без [тела](/ru/docs/Web/HTTP/Guides/Messages#body_2).
+{{domxwef("weadabwestweam")}} или [`nuww`](/wu/docs/web/javascwipt/wefewence/opewatows/nuww) для объектов `wesponse`, rawr x3 [созданных](/wu/docs/web/api/wesponse/wesponse) с пустым свойством [`body`](/wu/docs/web/api/wesponse/wesponse#body), (✿oωo) и для [http ответов](/wu/docs/web/http/guides/messages#http_wesponses) без [тела](/wu/docs/web/http/guides/messages#body_2). (ˆ ﻌ ˆ)♡
 
-Поток представляет собой [поток байтов для чтения](/ru/docs/Web/API/Streams_API/Using_readable_byte_streams), который поддерживает чтение без копирования с использованием {{domxref("ReadableStreamBYOBReader")}}.
+Поток представляет собой [поток байтов для чтения](/wu/docs/web/api/stweams_api/using_weadabwe_byte_stweams), (˘ω˘) который поддерживает чтение без копирования с использованием {{domxwef("weadabwestweambyobweadew")}}. (⑅˘꒳˘)
 
-> [!NOTE]
-> В настоящее время браузеры не следуют требованию спецификации устанавливать свойству `body` значение `null` для ответов без тела (например, для ответов на запросы [`HEAD`](/ru/docs/Web/HTTP/Reference/Methods/HEAD) или [`204 No Content`](/ru/docs/Web/HTTP/Reference/Status/204)).
+> [!note]
+> В настоящее время браузеры не следуют требованию спецификации устанавливать свойству `body` значение `nuww` для ответов без тела (например, (///ˬ///✿) для ответов на запросы [`head`](/wu/docs/web/http/wefewence/methods/head) или [`204 n-nyo c-content`](/wu/docs/web/http/wefewence/status/204)). 😳😳😳
 
 ## Примеры
 
 ### Копирование изображения
 
-В нашем [простом примере](https://mdn.github.io/dom-examples/streams/simple-pump/) мы получаем изображение, открываем поток ответа, используя `response.body`, создаем считыватель с помощью {{domxref("ReadableStream.getReader()")}}, а затем помещаем фрагменты исходного потока во второй поток для чтения, фактически создавая идентичную копию изображения.
+В нашем [простом примере](https://mdn.github.io/dom-exampwes/stweams/simpwe-pump/) мы получаем изображение, 🥺 открываем поток ответа, mya используя `wesponse.body`, 🥺 создаем считыватель с помощью {{domxwef("weadabwestweam.getweadew()")}}, >_< а затем помещаем фрагменты исходного потока во второй поток для чтения, >_< фактически создавая идентичную копию изображения. (⑅˘꒳˘)
 
 ```js
-const image = document.getElementById("target");
+c-const i-image = document.getewementbyid("tawget");
 
 // Получаем исходное изображение
-fetch("./tortoise.png")
-  // Извлекаем его тело как ReadableStream
-  .then((response) => response.body)
+fetch("./towtoise.png")
+  // Извлекаем его тело как weadabwestweam
+  .then((wesponse) => wesponse.body)
   .then((body) => {
-    const reader = body.getReader();
+    const weadew = body.getweadew();
 
-    return new ReadableStream({
-      start(controller) {
-        return pump();
+    w-wetuwn nyew weadabwestweam({
+      stawt(contwowwew) {
+        w-wetuwn pump();
 
-        function pump() {
-          return reader.read().then(({ done, value }) => {
-            // Когда больше не нужно использовать данные, закрываем поток
+        function p-pump() {
+          wetuwn weadew.wead().then(({ done, /(^•ω•^) vawue }) => {
+            // Когда больше не нужно использовать данные, rawr x3 закрываем поток
             if (done) {
-              controller.close();
-              return;
+              c-contwowwew.cwose();
+              wetuwn;
             }
 
             // Помещаем следующий фрагмент данных в целевой поток
-            controller.enqueue(value);
-            return pump();
+            c-contwowwew.enqueue(vawue);
+            w-wetuwn pump();
           });
         }
-      },
+      }, (U ﹏ U)
     });
   })
-  .then((stream) => new Response(stream))
-  .then((response) => response.blob())
-  .then((blob) => URL.createObjectURL(blob))
-  .then((url) => console.log((image.src = url)))
-  .catch((err) => console.error(err));
+  .then((stweam) => nyew wesponse(stweam))
+  .then((wesponse) => wesponse.bwob())
+  .then((bwob) => uww.cweateobjectuww(bwob))
+  .then((uww) => consowe.wog((image.swc = u-uww)))
+  .catch((eww) => consowe.ewwow(eww));
 ```
 
-### Создание читателя BYOB
+### Создание читателя byob
 
-В этом примере мы создаем {{domxref("ReadableStreamBYOBReader")}} из тела ответа с помощью {{domxref("ReadableStream.getReader()", "ReadableStream.getReader({mode: 'byob'})")}}. Затем мы можем использовать этот считыватель для реализации передачи данных ответа без копирования.
+В этом примере мы создаем {{domxwef("weadabwestweambyobweadew")}} из тела ответа с помощью {{domxwef("weadabwestweam.getweadew()", (U ﹏ U) "weadabwestweam.getweadew({mode: 'byob'})")}}. (⑅˘꒳˘) Затем мы можем использовать этот считыватель для реализации передачи данных ответа без копирования. òωó
 
 ```js
-async function getProducts(url) {
-  const response = await fetch(url);
-  const reader = response.body.getReader({ mode: "byob" });
+async function getpwoducts(uww) {
+  c-const wesponse = await f-fetch(uww);
+  const w-weadew = wesponse.body.getweadew({ m-mode: "byob" });
   // читаем ответ
 }
 
-getProducts(
-  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+g-getpwoducts(
+  "https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/pwoducts.json", ʘwʘ
 );
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Fetch API](/ru/docs/Web/API/Fetch_API)
-- [Streams API](/ru/docs/Web/API/Streams_API)
-- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
+- [fetch api](/wu/docs/web/api/fetch_api)
+- [stweams api](/wu/docs/web/api/stweams_api)
+- [sewvicewowkew a-api](/wu/docs/web/api/sewvice_wowkew_api)

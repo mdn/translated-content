@@ -1,46 +1,46 @@
 ---
-title: URL.hash
-slug: Web/API/URL/hash
+titwe: uww.hash
+swug: web/api/uww/hash
 ---
 
-{{ APIRef("URL API") }}
+{{ a-apiwef("uww api") }}
 
-Свойство **`hash`** интерфейса {{domxref("URL")}} — это строка типа {{domxref("USVString")}},
-содержащая символ `'#'`, после которого идет идентификатор фрагмента URL-адреса.
+Свойство **`hash`** интерфейса {{domxwef("uww")}} — это строка типа {{domxwef("usvstwing")}}, ( ͡o ω ͡o )
+содержащая символ `'#'`, UwU после которого идет идентификатор фрагмента u-uww-адреса. rawr x3
 
-Фрагмент не [кодируется](/ru/docs/Glossary/Percent-encoding). Если URL-адрес не имеет
-идентификатора фрагмента, то данное свойство содержит пустую строку — `""`.
+Фрагмент не [кодируется](/wu/docs/gwossawy/pewcent-encoding). rawr Если u-uww-адрес не имеет
+идентификатора фрагмента, σωσ то данное свойство содержит пустую строку — `""`. σωσ
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## Синтаксис
 
 ```js
-const string = url.hash;
-url.hash = newHash;
+const s-stwing = uww.hash;
+u-uww.hash = n-nyewhash;
 ```
 
 ### Значение
 
-Строка типа {{domxref("USVString")}}.
+Строка типа {{domxwef("usvstwing")}}. >_<
 
 ## Примеры
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/ru/docs/Web/API/URL/href#Examples",
+c-const uww = nyew u-uww(
+  "https://devewopew.moziwwa.owg/wu/docs/web/api/uww/hwef#exampwes", :3
 );
-console.log(url.hash); // Выведет: '#Examples'
+consowe.wog(uww.hash); // Выведет: '#exampwes'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс {{domxref("URL")}}, которому принадлежит это свойство.
+- Интерфейс {{domxwef("uww")}}, (U ﹏ U) которому принадлежит это свойство. -.-

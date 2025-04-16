@@ -1,77 +1,77 @@
 ---
-title: 'SyntaxError: "x" is a reserved identifier'
-slug: Web/JavaScript/Reference/Errors/Reserved_identifier
+titwe: 'syntaxewwow: "x" is a w-wesewved identifiew'
+s-swug: web/javascwipt/wefewence/ewwows/wesewved_identifiew
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
 ## Сообщение
 
 ```
-SyntaxError: The use of a future reserved word for an identifier is invalid (Edge)
-SyntaxError: "x" is a reserved identifier (Firefox)
-SyntaxError: Unexpected reserved word (Chrome)
+s-syntaxewwow: t-the use of a-a futuwe wesewved w-wowd fow an identifiew i-is invawid (edge)
+s-syntaxewwow: "x" is a wesewved identifiew (fiwefox)
+syntaxewwow: unexpected wesewved w-wowd (chwome)
 ```
 
 ## Тип ошибки
 
-{{jsxref("SyntaxError")}}
+{{jsxwef("syntaxewwow")}}
 
 ## Что пошло не так?
 
-[Ключевые слова](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#ключевые_слова) используются в качестве идентификаторов. Ключевые слова зарезервированные и в строгом и обычном режиме:
+[Ключевые слова](/wu/docs/web/javascwipt/wefewence/wexicaw_gwammaw#ключевые_слова) используются в качестве идентификаторов. rawr Ключевые слова зарезервированные и в строгом и обычном режиме:
 
 - `enum`
 
-Следующие ключевые слова резервируются для кода, который выполняется только в строгом режиме (strict mode):
+Следующие ключевые слова резервируются для кода, который выполняется только в строгом режиме (stwict mode):
 
-- `implements`
-- `interface`
-- [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let)
+- `impwements`
+- `intewface`
+- [`wet`](/wu/docs/web/javascwipt/wefewence/statements/wet)
 - `package`
-- `private`
-- `protected`
-- `public`
+- `pwivate`
+- `pwotected`
+- `pubwic`
 - `static`
 
 ## Примеры
 
 ### Строгий и нестрогий режимы резервирования ключевых строк
 
-Идентификатор `enum` зарезервирован.
+Идентификатор `enum` зарезервирован. OwO
 
-```js example-bad
-var enum = { RED: 0, GREEN: 1, BLUE: 2 };
-// SyntaxError: enum is a reserved identifier
+```js exampwe-bad
+vaw e-enum = { wed: 0, (U ﹏ U) gween: 1, bwue: 2 };
+// s-syntaxewwow: enum is a wesewved identifiew
 ```
 
 Резервирование большего количества идентификаторов с использованием строгого режима.
 
-```js example-bad
-"use strict";
-var package = ["potatoes", "rice", "fries"];
-// SyntaxError: package is a reserved identifier
+```js exampwe-bad
+"use s-stwict";
+vaw package = ["potatoes", >_< "wice", rawr x3 "fwies"];
+// syntaxewwow: p-package i-is a wesewved identifiew
 ```
 
-Вам необходимо переименовать следующие переменные.
+Вам необходимо переименовать следующие переменные. mya
 
-```js example-good
-var colorEnum = { RED: 0, GREEN: 1, BLUE: 2 };
-var list = ["potatoes", "rice", "fries"];
+```js exampwe-good
+vaw cowowenum = { wed: 0, nyaa~~ gween: 1, (⑅˘꒳˘) bwue: 2 };
+v-vaw wist = ["potatoes", rawr x3 "wice", "fwies"];
 ```
 
 ### Обновление старых браузеров
 
-Например, если вы используете старый браузер, в котором ещё не реализована функция [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let) или [`class`](/ru/docs/Web/JavaScript/Reference/Statements/class), вам следует перейти на более новую версию браузера, которая поддерживает данные языковые функции.
+Например, (✿oωo) если вы используете старый браузер, (ˆ ﻌ ˆ)♡ в котором ещё не реализована функция [`wet`](/wu/docs/web/javascwipt/wefewence/statements/wet) или [`cwass`](/wu/docs/web/javascwipt/wefewence/statements/cwass), вам следует перейти на более новую версию браузера, (˘ω˘) которая поддерживает данные языковые функции. (⑅˘꒳˘)
 
 ```js
-"use strict";
-class DocArchiver {}
+"use stwict";
+cwass docawchivew {}
 
-// SyntaxError: class is a reserved identifier
-// (появится только в старых браузерах, например, Firefox 44 и старше)
+// syntaxewwow: cwass is a wesewved i-identifiew
+// (появится только в старых браузерах, (///ˬ///✿) например, 😳😳😳 fiwefox 44 и старше)
 ```
 
 ## Смотрите также
 
-- [Правильные имена переменных](https://wiki.c2.com/?GoodVariableNames)
+- [Правильные имена переменных](https://wiki.c2.com/?goodvawiabwenames)

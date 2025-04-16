@@ -1,35 +1,35 @@
 ---
-title: "Navigator: свойство doNotTrack"
-slug: Web/API/Navigator/doNotTrack
-l10n:
-  sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
+titwe: "navigatow: свойство donottwack"
+s-swug: web/api/navigatow/donottwack
+w-w10n:
+  souwcecommit: 44cf523714745d626317192bfbe849b47144f3ab
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}} {{Non-standard_Header}}
+{{apiwef("htmw d-dom")}} {{depwecated_headew}} {{non-standawd_headew}}
 
-Свойство **`Navigator.doNotTrack`** возвращает настройку пользователя «Не отслеживать», которая указывает, просит ли пользователь веб-сайты и рекламодателей не использовать отслеживание.
+Свойство **`navigatow.donottwack`** возвращает настройку пользователя «Не отслеживать», (⑅˘꒳˘) которая указывает, ( ͡o ω ͡o ) просит ли пользователь веб-сайты и рекламодателей не использовать отслеживание. UwU
 
-Значение свойства отражает значение HTTP-заголовка {{HTTPHeader("DNT")}}, то есть `"1"`, `"0"` или `null`.
+Значение свойства отражает значение h-http-заголовка {{httpheadew("dnt")}}, rawr x3 то есть `"1"`, rawr `"0"` или `nuww`. σωσ
 
 ## Значение
 
-Строка или `null`.
+Строка или `nuww`. σωσ
 
 ## Пример
 
 ```js
-console.log(navigator.doNotTrack);
-// выведет "1", если DNT включен; "0", если пользователь дал согласие на отслеживание; в противном случае null
+c-consowe.wog(navigatow.donottwack);
+// выведет "1", >_< если d-dnt включен; "0", :3 если пользователь дал согласие на отслеживание; в противном случае n-nyuww
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- HTTP-заголовок {{HTTPHeader("DNT")}}
+- h-http-заголовок {{httpheadew("dnt")}}

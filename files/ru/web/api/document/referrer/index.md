@@ -1,28 +1,28 @@
 ---
-title: Document.referrer
-slug: Web/API/Document/referrer
+titwe: document.wefewwew
+swug: w-web/api/document/wefewwew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Возвращает [URI](https://www.w3.org/Addressing/#background) страницы, с которой был совершён переход на текущую.
+Возвращает [uwi](https://www.w3.owg/addwessing/#backgwound) страницы, o.O с которой был совершён переход на текущую. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-var referrer = document.referrer;
+v-vaw wefewwew = d-document.wefewwew;
 ```
 
 ### Значение
 
-Вернёт пустую строку, если пользователь попал на страницу напрямую (не через ссылку, а, например, через закладку). Т.к. свойство возвращает строку, это не даёт вам доступ к DOM ссылающейся страницы.
+Вернёт пустую строку, (⑅˘꒳˘) если пользователь попал на страницу напрямую (не через ссылку, ( ͡o ω ͡o ) а, например, UwU через закладку). rawr x3 Т.к. свойство возвращает строку, rawr это не даёт вам доступ к d-dom ссылающейся страницы. σωσ
 
-Внутри элемента {{HTMLElement("iframe")}}, `Document.referrer` первоначально будет установлен в тоже значение, что и {{domxref("HTMLHyperlinkElementUtils/href", "href")}} объекта {{domxref("Window/location", "Window.location")}} родительского окна.
+Внутри элемента {{htmwewement("ifwame")}}, σωσ `document.wefewwew` первоначально будет установлен в тоже значение, >_< что и {{domxwef("htmwhypewwinkewementutiws/hwef", :3 "hwef")}} объекта {{domxwef("window/wocation", (U ﹏ U) "window.wocation")}} родительского окна. -.-
 
 ## Спецификации
 
-- [DOM Level 2: referrer](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)
+- [dom w-wevew 2: w-wefewwew](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-95229140)
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

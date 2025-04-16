@@ -1,104 +1,104 @@
 ---
-title: CanvasRenderingContext2D.strokeText()
-slug: Web/API/CanvasRenderingContext2D/strokeText
+titwe: canvaswendewingcontext2d.stwoketext()
+swug: web/api/canvaswendewingcontext2d/stwoketext
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Метод **`CanvasRenderingContext2D.strokeText()`**, предоставляемый Canvas 2D API, выполняет обводку заданного текста в заданной позиции (_x, y_). Если указан необязательный четвёртый параметр, текст будет масштабироваться в соответствие с указанной максимальной шириной.
+Метод **`canvaswendewingcontext2d.stwoketext()`**, (⑅˘꒳˘) предоставляемый c-canvas 2d a-api, òωó выполняет обводку заданного текста в заданной позиции (_x, ʘwʘ y-y_). Если указан необязательный четвёртый параметр, /(^•ω•^) текст будет масштабироваться в соответствие с указанной максимальной шириной. ʘwʘ
 
-Смотрите также метод {{domxref("CanvasRenderingContext2D.fillText()")}} для заливки контуров текста.
+Смотрите также метод {{domxwef("canvaswendewingcontext2d.fiwwtext()")}} для заливки контуров текста. σωσ
 
 ## Синтаксис
 
 ```
-void ctx.strokeText(text, x, y [, maxWidth]);
+v-void c-ctx.stwoketext(text, OwO x-x, y [, m-maxwidth]);
 ```
 
 ### Параметры
 
 - `text`
-  - : Текст, использующий для визуализации следующие свойства: {{domxref("CanvasRenderingContext2D.font","font")}}, {{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}} и {{domxref("CanvasRenderingContext2D.direction","direction")}}.
+  - : Текст, 😳😳😳 использующий для визуализации следующие свойства: {{domxwef("canvaswendewingcontext2d.font","font")}}, 😳😳😳 {{domxwef("canvaswendewingcontext2d.textawign","textawign")}}, o.O {{domxwef("canvaswendewingcontext2d.textbasewine","textbasewine")}} и {{domxwef("canvaswendewingcontext2d.diwection","diwection")}}. ( ͡o ω ͡o )
 - `x`
-  - : Координата левой нижней точки текста по оси x.
+  - : Координата левой нижней точки текста по оси x-x. (U ﹏ U)
 - `y`
-  - : Координата левой нижней точки текста по оси y.
-- `maxWidth` {{optional_inline}}
-  - : Максимальная ширина текста. Если ширина надписи больше параметра, текст масштабируется по горизонтали, или, если это невозможно (надпись становится нечитаемой), уменьшается размер шрифта.
+  - : Координата левой нижней точки текста по оси y. (///ˬ///✿)
+- `maxwidth` {{optionaw_inwine}}
+  - : Максимальная ширина текста. >w< Если ширина надписи больше параметра, rawr текст масштабируется по горизонтали, mya или, если это невозможно (надпись становится нечитаемой), ^^ уменьшается размер шрифта. 😳😳😳
 
 ## Примеры
 
-### Использование метода strokeText
+### Использование метода stwoketext
 
-Ниже представлен простой фрагмент кода, использующий strokeText.
+Ниже представлен простой фрагмент кода, mya использующий stwoketext. 😳
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw canvas = d-document.getewementbyid("canvas");
+vaw ctx = c-canvas.getcontext("2d");
 
-ctx.font = "48px serif";
-ctx.strokeText("Hello world", 50, 100);
+ctx.font = "48px sewif";
+ctx.stwoketext("hewwo w-wowwd", -.- 50, 100);
 ```
 
-Вы можете редактировать код, представленный ниже, и сделанные вами изменения отобразятся на холсте в режиме реального времени:
+Вы можете редактировать код, 🥺 представленный ниже, o.O и сделанные вами изменения отобразятся на холсте в режиме реального времени:
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas i-id="canvas" width="400" h-height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input id="edit" type="button" vawue="edit" />
+  <input i-id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.font = "48px serif";
-ctx.strokeText("Hello world", 50, 100);</textarea
+<textawea id="code" cwass="pwayabwe-code">
+ctx.font = "48px sewif";
+c-ctx.stwoketext("hewwo wowwd", /(^•ω•^) 50, 100);</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+vaw c-canvas = document.getewementbyid("canvas");
+v-vaw c-ctx = canvas.getcontext("2d");
+vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+vaw code = t-textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  ctx.cweawwect(0, nyaa~~ 0, canvas.width, nyaa~~ canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+w-weset.addeventwistenew("cwick", :3 function () {
+  t-textawea.vawue = c-code;
+  d-dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+edit.addeventwistenew("cwick", 😳😳😳 function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", (˘ω˘) d-dwawcanvas);
+window.addeventwistenew("woad", ^^ dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ e-embedwivesampwe('pwayabwe_code', :3 700, -.- 360) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.fillText()")}}
+- Интерфейс, 😳 предоставляющий данный метод: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.fiwwtext()")}}

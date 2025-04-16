@@ -1,70 +1,70 @@
 ---
-title: CanvasRenderingContext2D.save()
-slug: Web/API/CanvasRenderingContext2D/save
+titwe: canvaswendewingcontext2d.save()
+swug: w-web/api/canvaswendewingcontext2d/save
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.save()`** - метод Canvas 2D API. Сохраняет все состояния и добавляет текущее состояние в стек.
+**`canvaswendewingcontext2d.save()`** - метод c-canvas 2d a-api. (U ﹏ U) Сохраняет все состояния и добавляет текущее состояние в стек. -.-
 
 ### Состояние чертежа
 
-Состояние чертежа, которое сохраняется в стеке, состоит из:
+Состояние чертежа, (ˆ ﻌ ˆ)♡ которое сохраняется в стеке, (⑅˘꒳˘) состоит из:
 
-- Текущая матрица преобразования.
-- Текущая область отсечения.
-- The current dash list.
-- Текущие значения следующих атрибутов: {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
+- Текущая матрица преобразования. (U ᵕ U❁)
+- Текущая область отсечения. -.-
+- t-the cuwwent d-dash wist. ^^;;
+- Текущие значения следующих атрибутов: {{domxwef("canvaswendewingcontext2d.stwokestywe", >_< "stwokestywe")}}, mya {{domxwef("canvaswendewingcontext2d.fiwwstywe", mya "fiwwstywe")}}, 😳 {{domxwef("canvaswendewingcontext2d.gwobawawpha", XD "gwobawawpha")}}, :3 {{domxwef("canvaswendewingcontext2d.winewidth", 😳😳😳 "winewidth")}}, -.- {{domxwef("canvaswendewingcontext2d.winecap", ( ͡o ω ͡o ) "winecap")}}, rawr x3 {{domxwef("canvaswendewingcontext2d.winejoin", nyaa~~ "winejoin")}}, /(^•ω•^) {{domxwef("canvaswendewingcontext2d.mitewwimit", rawr "mitewwimit")}}, OwO {{domxwef("canvaswendewingcontext2d.winedashoffset", (U ﹏ U) "winedashoffset")}}, >_< {{domxwef("canvaswendewingcontext2d.shadowoffsetx", rawr x3 "shadowoffsetx")}}, mya {{domxwef("canvaswendewingcontext2d.shadowoffsety", nyaa~~ "shadowoffsety")}}, (⑅˘꒳˘) {{domxwef("canvaswendewingcontext2d.shadowbwuw", rawr x3 "shadowbwuw")}}, (✿oωo) {{domxwef("canvaswendewingcontext2d.shadowcowow", (ˆ ﻌ ˆ)♡ "shadowcowow")}}, (˘ω˘) {{domxwef("canvaswendewingcontext2d.gwobawcompositeopewation", (⑅˘꒳˘) "gwobawcompositeopewation")}}, (///ˬ///✿) {{domxwef("canvaswendewingcontext2d.font", 😳😳😳 "font")}}, 🥺 {{domxwef("canvaswendewingcontext2d.textawign", mya "textawign")}}, 🥺 {{domxwef("canvaswendewingcontext2d.textbasewine", >_< "textbasewine")}}, >_< {{domxwef("canvaswendewingcontext2d.diwection", (⑅˘꒳˘) "diwection")}}, /(^•ω•^) {{domxwef("canvaswendewingcontext2d.imagesmoothingenabwed", rawr x3 "imagesmoothingenabwed")}}. (U ﹏ U)
 
 ## Синтаксис
 
 ```
-void ctx.save();
+v-void ctx.save();
 ```
 
 ## Пример
 
 ### Сохранение состояния чертежа
 
-Этот пример использует метод `save()` для сохранения состояния по умолчанию, и метод `restore()` для восстановления состояния позже, чтобы позже можно было нарисовать прямоугольник с состоянием по умолчанию.
+Этот пример использует метод `save()` для сохранения состояния по умолчанию, (U ﹏ U) и метод `westowe()` для восстановления состояния позже, (⑅˘꒳˘) чтобы позже можно было нарисовать прямоугольник с состоянием по умолчанию. òωó
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getewementbyid('canvas');
+const ctx = canvas.getcontext('2d');
 
 // Сохранение состояния по умолчанию
-ctx.save();
+c-ctx.save();
 
-ctx.fillStyle = 'green';
-ctx.fillRect(10, 10, 100, 100);
+ctx.fiwwstywe = 'gween';
+ctx.fiwwwect(10, ʘwʘ 10, 100, /(^•ω•^) 100);
 
 // Восстановление состояния по умолчанию
-ctx.restore();
+ctx.westowe();
 
-ctx.fillRect(150, 40, 100, 100);
+c-ctx.fiwwwect(150, ʘwʘ 40, 100, σωσ 100);
 ```
 
 #### Результат
 
-{{ EmbedLiveSample('Сохранение_состояния_чертежа', 700, 180) }}
+{{ embedwivesampwe('Сохранение_состояния_чертежа', OwO 700, 180) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс, предоставляющий данный метод: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.restore()")}}
+- Интерфейс, 😳😳😳 предоставляющий данный метод: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.westowe()")}}

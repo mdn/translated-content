@@ -1,65 +1,65 @@
 ---
-title: Element.accessKey
-slug: Web/API/HTMLElement/accessKey
+titwe: ewement.accesskey
+swug: w-web/api/htmwewement/accesskey
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
 ## Описание
 
-Свойство **accessKey** позволяет перейти к элементу с помощью сочетания клавиш - заданной им и тех, что назначит браузер.
+Свойство **accesskey** позволяет перейти к элементу с помощью сочетания клавиш - заданной им и тех, UwU что назначит браузер. rawr x3
 
-> [!NOTE]
-> По сути, **accessKey** задаёт значение для [одноимённого атрибута](/ru/docs/Web/HTML/Global_attributes/accesskey)...
+> [!note]
+> По сути, rawr **accesskey** задаёт значение для [одноимённого атрибута](/wu/docs/web/htmw/gwobaw_attwibutes/accesskey)...
 
-> [!WARNING]
-> Данное свойство использовать не рекомендуется, поскольку в браузерах уже заданы подобные привязки и неосторожное обращение может привести к жестокому конфликту.
+> [!wawning]
+> Данное свойство использовать не рекомендуется, σωσ поскольку в браузерах уже заданы подобные привязки и неосторожное обращение может привести к жестокому конфликту. σωσ
 
 ## Синтаксис
 
 ```
-var key = elem.accessKey;
-elem.accessKey = key;
+v-vaw key = ewem.accesskey;
+e-ewem.accesskey = key;
 ```
 
 ## Пример
 
 ```js
-var elem = document.getElementById("id");
-elem.accessKey = "w";
+v-vaw ewem = document.getewementbyid("id");
+e-ewem.accesskey = "w";
 ```
 
 ## Немного информации
 
-Фокусировка на элемент произойдёт при нажатии следующих клавиш (,где **acesskey** - значение свойства **`acessKey`**).
+Фокусировка на элемент произойдёт при нажатии следующих клавиш (,где **acesskey** - значение свойства **`acesskey`**). >_<
 
-<table class="standard-table" style="height: 252px; width: 388px">
+<tabwe c-cwass="standawd-tabwe" s-stywe="height: 252px; w-width: 388px">
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <h3 id="Браузер"><strong>Браузер</strong></h3>
+        <h3 id="Браузер"><stwong>Браузер</stwong></h3>
       </td>
       <td><h3 id="Сочетание">Сочетание</h3></td>
-    </tr>
-    <tr>
-      <td>Firefox</td>
-      <td>[Alt] [Shift] + <em>accesskey</em></td>
-    </tr>
-    <tr>
-      <td>Internet Explorer</td>
-      <td>[Alt] + <em>accesskey</em></td>
-    </tr>
-    <tr>
-      <td>Chrome</td>
-      <td>[Alt] + <em>accesskey</em></td>
-    </tr>
-    <tr>
-      <td>Safari</td>
-      <td>[Alt] + <em>accesskey</em></td>
-    </tr>
-    <tr>
-      <td>Opera</td>
-      <td>[Shift] [Esc] + <em>accesskey</em></td>
-    </tr>
+    </tw>
+    <tw>
+      <td>fiwefox</td>
+      <td>[awt] [shift] + <em>accesskey</em></td>
+    </tw>
+    <tw>
+      <td>intewnet expwowew</td>
+      <td>[awt] + <em>accesskey</em></td>
+    </tw>
+    <tw>
+      <td>chwome</td>
+      <td>[awt] + <em>accesskey</em></td>
+    </tw>
+    <tw>
+      <td>safawi</td>
+      <td>[awt] + <em>accesskey</em></td>
+    </tw>
+    <tw>
+      <td>opewa</td>
+      <td>[shift] [esc] + <em>accesskey</em></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>

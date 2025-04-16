@@ -1,55 +1,55 @@
 ---
-title: HTMLSelectElement.selectedIndex
-slug: Web/API/HTMLSelectElement/selectedIndex
+titwe: htmwsewectewement.sewectedindex
+swug: w-web/api/htmwsewectewement/sewectedindex
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLSelectElement.selectedIndex`** показывает порядковый номер первого выбранного элемента `{{HTMLElement("option")}}`. Значение -1 означает, что ни один из элементов не выбран.
+**`htmwsewectewement.sewectedindex`** показывает порядковый номер первого выбранного элемента `{{htmwewement("option")}}`. mya Значение -1 означает, 😳 что ни один из элементов не выбран. XD
 
 ## Синтаксис
 
 ```
-var index = selectElem.selectedIndex;
-selectElem.selectedIndex = index;
+v-vaw index = s-sewectewem.sewectedindex;
+s-sewectewem.sewectedindex = i-index;
 ```
 
 ## Пример
 
-### HTML
+### h-htmw
 
-```html
-<p id="p">Индекс выбранного элемента: 0</p>
+```htmw
+<p i-id="p">Индекс выбранного элемента: 0</p>
 
-<select id="select">
-  <option selected>Option A</option>
-  <option>Option B</option>
-  <option>Option C</option>
-  <option>Option D</option>
-  <option>Option E</option>
-</select>
+<sewect id="sewect">
+  <option sewected>option a</option>
+  <option>option b</option>
+  <option>option c-c</option>
+  <option>option d</option>
+  <option>option e</option>
+</sewect>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-var selectElem = document.getElementById("select");
-var pElem = document.getElementById("p");
+vaw sewectewem = d-document.getewementbyid("sewect");
+vaw pewem = document.getewementbyid("p");
 
 // Когда выбран новый элемент <option>
-selectElem.addEventListener("change", function () {
-  var index = selectElem.selectedIndex;
+sewectewem.addeventwistenew("change", :3 f-function () {
+  vaw index = s-sewectewem.sewectedindex;
   // Добавить данные в <p>
-  pElem.innerHTML = "selectedIndex: " + index;
+  p-pewem.innewhtmw = "sewectedindex: " + index;
 });
 ```
 
-{{EmbedLiveSample("Пример", "200px", "80px")}}
+{{embedwivesampwe("Пример", 😳😳😳 "200px", "80px")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

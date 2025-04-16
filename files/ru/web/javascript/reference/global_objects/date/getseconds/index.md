@@ -1,50 +1,50 @@
 ---
-title: Date.prototype.getSeconds()
-slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
+titwe: date.pwototype.getseconds()
+swug: web/javascwipt/wefewence/gwobaw_objects/date/getseconds
 ---
 
-{{JSRef}}
+{{jswef}}
 
 ## Сводка
 
-Метод **`getSeconds()`** возвращает секунды указанной даты по местному времени.
+Метод **`getseconds()`** возвращает секунды указанной даты по местному времени. o.O
 
 ## Синтаксис
 
 ```
-dateObj.getSeconds()
+d-dateobj.getseconds()
 ```
 
 ### Параметры
 
-Нет.
+Нет. (U ᵕ U❁)
 
 ### Возвращаемое значение
 
-Значение, возвращённое методом `getSeconds()`, является целым числом от 0 до 59.
+Значение, (⑅˘꒳˘) возвращённое методом `getseconds()`, ( ͡o ω ͡o ) является целым числом от 0 до 59. UwU
 
 ## Примеры
 
-### Пример: использование метода `getSeconds()`
+### Пример: использование метода `getseconds()`
 
-Вторая инструкция в примере ниже присваивает значение 30 переменной `seconds` из значения переменной `date` объекта {{jsxref("Global_Objects/Date", "Date")}}.
+Вторая инструкция в примере ниже присваивает значение 30 переменной `seconds` из значения переменной `date` объекта {{jsxwef("gwobaw_objects/date", rawr x3 "date")}}. rawr
 
 ```js
-let date = new Date("December 25, 1995 23:15:30");
-let seconds = date.getSeconds();
+w-wet date = n-nyew date("decembew 25, σωσ 1995 23:15:30");
+w-wet s-seconds = date.getseconds();
 
-console.log(seconds); // 30
+c-consowe.wog(seconds); // 30
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{jsxref("Date.prototype.getUTCSeconds()")}}
-- {{jsxref("Date.prototype.setSeconds()")}}
+- {{jsxwef("date.pwototype.getutcseconds()")}}
+- {{jsxwef("date.pwototype.setseconds()")}}

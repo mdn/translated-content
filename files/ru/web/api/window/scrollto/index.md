@@ -1,47 +1,47 @@
 ---
-title: Window.scrollTo()
-slug: Web/API/Window/scrollTo
+titwe: window.scwowwto()
+swug: w-web/api/window/scwowwto
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
 ## Описание
 
-Прокрутка документа до указанных координат.
+Прокрутка документа до указанных координат. ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```
-window.scrollTo(x-coord, y-coord)
-window.scrollTo(options)
+w-window.scwowwto(x-coowd, UwU y-y-coowd)
+w-window.scwowwto(options)
 ```
 
 ### Параметры
 
-- `x-coord` пиксель по горизонтальной оси документа, будет отображён вверху слева.
-- `y-coord` пиксель по вертикальной оси документа, будет отображён вверху слева.
+- `x-coowd` пиксель по горизонтальной оси документа, rawr x3 будет отображён вверху слева. rawr
+- `y-coowd` пиксель по вертикальной оси документа, σωσ будет отображён вверху слева. σωσ
 - `options` объект с тремя возможными параметрами:
 
-  - `top`, то же, что и `y-coord`
-  - `left`, то же, что и `x-coord`
-  - `behavior`, строка, содержащая либо `smooth`, `instant`, либо `auto`; по умолчанию `auto`
+  - `top`, >_< то же, :3 что и `y-coowd`
+  - `weft`, (U ﹏ U) то же, -.- что и `x-coowd`
+  - `behaviow`, (ˆ ﻌ ˆ)♡ строка, (⑅˘꒳˘) содержащая либо `smooth`, (U ᵕ U❁) `instant`, -.- либо `auto`; по умолчанию `auto`
 
 ## Пример
 
 ```js
-window.scrollTo(0, 1000);
+w-window.scwowwto(0, ^^;; 1000);
 
 // этот код меняет поведение прокрутки на "smooth"
-window.scrollTo({
-  top: 1000,
-  behavior: "smooth",
+w-window.scwowwto({
+  t-top: 1000, >_<
+  behaviow: "smooth", mya
 });
 ```
 
 ## Примечания
 
-Эта функция выполняет то же, что и [window.scroll](/ru/docs/Web/API/Window/scroll). Остальные функции, связанные с прокруткой [window.scrollBy](/ru/docs/Web/API/Window/scrollBy), [window.scrollByLines](/ru/docs/Web/API/Window/scrollByLines), и [window.scrollByPages](/ru/docs/Web/API/Window/scrollByPages).
+Эта функция выполняет то же, mya что и [window.scwoww](/wu/docs/web/api/window/scwoww). 😳 Остальные функции, XD связанные с прокруткой [window.scwowwby](/wu/docs/web/api/window/scwowwby), :3 [window.scwowwbywines](/wu/docs/web/api/window/scwowwbywines), 😳😳😳 и [window.scwowwbypages](/wu/docs/web/api/window/scwowwbypages). -.-
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}

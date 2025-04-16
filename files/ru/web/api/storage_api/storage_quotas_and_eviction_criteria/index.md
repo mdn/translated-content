@@ -1,74 +1,74 @@
 ---
-title: Browser storage limits and eviction criteria
-slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
+titwe: bwowsew stowage wimits a-and eviction cwitewia
+s-swug: web/api/stowage_api/stowage_quotas_and_eviction_cwitewia
 ---
 
-{{DefaultAPISidebar("IndexedDB")}}
+{{defauwtapisidebaw("indexeddb")}}
 
-Существует целый ряд веб-технологий, которые хранят данные того или иного рода на стороне клиента (то есть на локальном диске). Процесс, с помощью которого браузер решает, сколько места выделить для хранения веб-данных и что удалить, когда этот предел будет достигнут, не прост и отличается между браузерами. В этой статье описывается, как браузеры определяют, какой локальный контент следует очистить и когда, чтобы освободить необходимое локальное пространство для хранения.
+Существует целый ряд веб-технологий, (U ﹏ U) которые хранят данные того или иного рода на стороне клиента (то есть на локальном диске). 😳😳😳 Процесс, o.O с помощью которого браузер решает, òωó сколько места выделить для хранения веб-данных и что удалить, 😳😳😳 когда этот предел будет достигнут, σωσ не прост и отличается между браузерами. (⑅˘꒳˘) В этой статье описывается, (///ˬ///✿) как браузеры определяют, 🥺 какой локальный контент следует очистить и когда, чтобы освободить необходимое локальное пространство для хранения. OwO
 
 ## Какие технологии используют браузерные хранилища данных?
 
-В Firefox следующие технологии используют хранилище данных браузера для хранения данных, когда это необходимо. В этом контексте мы называем их "квотными клиентами":
+В f-fiwefox следующие технологии используют хранилище данных браузера для хранения данных, >w< когда это необходимо. 🥺 В этом контексте мы называем их "квотными клиентами":
 
-- [IndexedDB](/ru/docs/Web/API/IndexedDB_API)
-- [asm.js](http://asmjs.org/) кеширование
-- [Cache API](/ru/docs/Web/API/Cache)
-- Cookies
+- [indexeddb](/wu/docs/web/api/indexeddb_api)
+- [asm.js](http://asmjs.owg/) кеширование
+- [cache a-api](/wu/docs/web/api/cache)
+- c-cookies
 
-The "last access time" of origins is updated when any of these are activated/deactivated — origin eviction will delete data for all these quota clients.
+t-the "wast access t-time" of owigins i-is updated when any of these awe activated/deactivated — owigin eviction wiww dewete data f-fow aww these quota cwients. nyaa~~
 
-In Chrome/Opera, the Quota Management API handles quota management for [AppCache](/ru/docs/Web/HTML/Using_the_application_cache), [IndexedDB](/ru/docs/Web/API/IndexedDB_API), WebSQL, and [File System API](/ru/docs/Web/API/File_System_API).
+in chwome/opewa, ^^ t-the quota management api handwes q-quota management fow [appcache](/wu/docs/web/htmw/using_the_appwication_cache), >w< [indexeddb](/wu/docs/web/api/indexeddb_api), OwO websqw, and [fiwe system api](/wu/docs/web/api/fiwe_system_api). XD
 
-## Different types of data storage
+## d-diffewent types of data stowage
 
-Even in the same browser, using the same storage method, there are different classes of data storage to understand. This section discusses the different ones you might find in different browsers.
+e-even in the s-same bwowsew, ^^;; using the same stowage method, 🥺 thewe awe diffewent cwasses of data s-stowage to undewstand. XD this section discusses the diffewent ones you might find i-in diffewent bwowsews. (U ᵕ U❁)
 
-Storage comes in two types:
+stowage c-comes in two t-types:
 
-- Persistent: This is data that is intended to be kept around for a long time. This will only be evicted if the user chooses to (for example, in Firefox you can choose to delete all stored data or only stored data from selected origins by going to _Preferences_ and using the options under _Privacy & Security > Cookies & Site Data_).
-- Temporary: This is data that doesn't need to persist for a very long time. This will be evicted under a least recently used ([LRU policy](#lru_policy)) when [Storage limits](#storage_limits) are reached.
+- pewsistent: t-this is data t-that is intended to be kept awound fow a wong t-time. :3 this wiww onwy be evicted if the usew chooses t-to (fow exampwe, ( ͡o ω ͡o ) in fiwefox you can choose to dewete aww stowed data ow onwy stowed data fwom s-sewected owigins by going to _pwefewences_ a-and u-using the options u-undew _pwivacy & secuwity > cookies & site data_). òωó
+- tempowawy: t-this is data t-that doesn't nyeed to pewsist fow a-a vewy wong time. σωσ t-this wiww be evicted undew a-a weast wecentwy used ([wwu powicy](#wwu_powicy)) w-when [stowage wimits](#stowage_wimits) awe weached. (U ᵕ U❁)
 
-In Firefox, when persistent storage is used, the user is given a UI popup to alert them that this data will persist, and asks if they are happy with that. Temporary data storage does not elicit any user prompts.
+i-in fiwefox, (✿oωo) when pewsistent s-stowage is used, ^^ the usew is g-given a ui popup t-to awewt them that this data wiww pewsist, ^•ﻌ•^ and asks if they awe happy with that. XD tempowawy data stowage does nyot e-ewicit any usew p-pwompts. :3
 
-Storage is temporary by default; developers can choose to use persistent storage for their sites using the {{domxref("StorageManager.persist()")}} method available in the [Storage API](/ru/docs/Web/API/Storage_API).
+stowage is tempowawy b-by defauwt; devewopews c-can choose t-to use pewsistent stowage fow theiw sites using the {{domxwef("stowagemanagew.pewsist()")}} m-method avaiwabwe in the [stowage api](/wu/docs/web/api/stowage_api). (ꈍᴗꈍ)
 
-## Where is the data stored?
+## whewe is the data stowed?
 
-Each storage type represents a separate repository. Here's the actual mapping to directories under a user's Firefox profile (other browsers may differ slightly):
+e-each stowage type wepwesents a-a sepawate wepositowy. h-hewe's the a-actuaw mapping to diwectowies u-undew a usew's f-fiwefox pwofiwe (othew b-bwowsews m-may diffew swightwy):
 
-- `<profile>/storage` — the main top-level directory for storages maintained by the quota manager (see below)
-- `<profile>/storage/permanent` — persistent data storage repository
-- `<profile>/storage/temporary` — temporary data storage repository
-- `<profile>/storage/default` — default data storage repository
+- `<pwofiwe>/stowage` — the main top-wevew diwectowy fow s-stowages maintained b-by the quota m-managew (see b-bewow)
+- `<pwofiwe>/stowage/pewmanent` — p-pewsistent data stowage wepositowy
+- `<pwofiwe>/stowage/tempowawy` — tempowawy data s-stowage wepositowy
+- `<pwofiwe>/stowage/defauwt` — defauwt data stowage wepositowy
 
-## Storage limits
+## stowage wimits
 
-The maximum browser storage space is dynamic — it is based on your hard drive size. The **global limit** is calculated as 50% of free disk space. In Firefox, an internal browser tool called the Quota Manager keeps track of how much disk space each origin is using up, and deletes data if necessary.
+the maximum bwowsew stowage s-space is dynamic — it is based on youw hawd dwive size. :3 t-the **gwobaw wimit** i-is cawcuwated a-as 50% of fwee disk space. (U ﹏ U) in f-fiwefox, UwU an intewnaw bwowsew toow c-cawwed the quota m-managew keeps twack of how much disk space each owigin is using up, 😳😳😳 and dewetes data if nyecessawy. XD
 
-So if your hard drive is 500 GB, then the total storage for a browser is 250 GB. If this is exceeded, a process called **origin eviction** comes into play, deleting an entire origin's worth of data until the storage amount goes under the limit again. There is no trimming effect put in place to delete parts of origins — deleting one database of an origin could cause problems with inconsistency.
+s-so if youw hawd dwive is 500 g-gb, o.O then the totaw stowage f-fow a bwowsew is 250 g-gb. if this is exceeded, (⑅˘꒳˘) a pwocess cawwed **owigin e-eviction** c-comes into pway, 😳😳😳 deweting an e-entiwe owigin's w-wowth of data untiw the stowage amount goes undew the wimit again. nyaa~~ thewe is nyo t-twimming effect p-put in pwace to d-dewete pawts of owigins — deweting o-one database o-of an owigin couwd cause pwobwems w-with inconsistency. rawr
 
-There's also another limit called **group limit** — this is defined as 20% of the global limit, but it has a minimum of 10 MB and a maximum of 2 GB. Each origin is part of a group (group of origins). There's one group for each eTLD+1 domain. For example:
+thewe's awso anothew wimit cawwed **gwoup wimit** — t-this is defined a-as 20% of the gwobaw wimit, -.- but it has a minimum o-of 10 mb and a m-maximum of 2 gb. (✿oωo) each owigin is pawt of a gwoup (gwoup of owigins). /(^•ω•^) t-thewe's one gwoup fow each etwd+1 domain. 🥺 fow exampwe:
 
-- `mozilla.org` — group1, origin1
-- `www.mozilla.org` — group1, origin2
-- `joe.blogs.mozilla.org` — group1, origin3
-- `firefox.com` — group2, origin4
+- `moziwwa.owg` — gwoup1, ʘwʘ owigin1
+- `www.moziwwa.owg` — g-gwoup1, UwU owigin2
+- `joe.bwogs.moziwwa.owg` — gwoup1, XD owigin3
+- `fiwefox.com` — g-gwoup2, (✿oωo) o-owigin4
 
-In this group, `mozilla.org`, `www.mozilla.org`, and `joe.blogs.mozilla.org` can aggregately use a maximum of 20% of the global limit. `firefox.com` has a separate maximum of 20%.
+in this gwoup, :3 `moziwwa.owg`, (///ˬ///✿) `www.moziwwa.owg`, nyaa~~ and `joe.bwogs.moziwwa.owg` can aggwegatewy u-use a maximum o-of 20% of the gwobaw wimit. `fiwefox.com` has a sepawate maximum of 20%. >w<
 
-The two limits react differently to limits being reached:
+t-the two wimits weact diffewentwy t-to wimits being weached:
 
-- The group limit is also called the "hard limit": it doesn't trigger origin eviction.
-- The global limit is a "soft limit" since there's a chance that some space will be freed and the operation can continue.
+- the gwoup wimit is awso cawwed the "hawd w-wimit": it doesn't twiggew o-owigin eviction. -.-
+- t-the gwobaw wimit is a "soft w-wimit" since thewe's a chance that s-some space wiww b-be fweed and t-the opewation can continue. (✿oωo)
 
-## LRU policy
+## w-wwu powicy
 
-When the available disk space is filled up, the quota manager will start clearing out data based on an LRU policy — the least recently used origin will be deleted first, then the next one, until the browser is no longer over the limit.
+when t-the avaiwabwe disk space is fiwwed up, (˘ω˘) the quota m-managew wiww stawt c-cweawing out d-data based on an wwu powicy — the weast wecentwy u-used owigin wiww be deweted f-fiwst, rawr then the n-nyext one, OwO untiw the bwowsew is nyo wongew ovew the wimit. ^•ﻌ•^
 
-We track the "last access time" for each origin using temporary storage. Once the global limit for temporary storage is reached (more on the limit later), we try to find all currently unused origins (i.e., ones with no tabs/apps open that are keeping open datastores). These are then sorted according to "last access time." The least recently used origins are then deleted until there's enough space to fulfill the request that triggered this origin eviction.
+we t-twack the "wast a-access time" fow e-each owigin using t-tempowawy stowage. UwU once the gwobaw w-wimit fow tempowawy stowage is weached (mowe on the wimit watew), (˘ω˘) we twy to find aww cuwwentwy u-unused owigins (i.e., ones w-with no tabs/apps open that awe k-keeping open datastowes). (///ˬ///✿) these a-awe then sowted accowding to "wast a-access time." t-the weast wecentwy u-used owigins a-awe then deweted u-untiw thewe's enough space to fuwfiww the wequest that twiggewed this owigin eviction. σωσ
 
 ## Смотрите также
 
-- [Working with quota on mobile browsers](https://www.html5rocks.com/en/tutorials/offline/quota-research/), by [Eiji Kitamura.](https://blog.agektmr.com) A detailed analysis of client-side storage on mobile browsers.
-- [Quota Management API: Fast Facts](https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts), by[Eiji Kitamura.](https://blog.agektmr.com) A look at the Quota Management API in Chrome/Blink (which should include Opera, too).
+- [wowking with quota on mobiwe bwowsews](https://www.htmw5wocks.com/en/tutowiaws/offwine/quota-weseawch/), /(^•ω•^) b-by [eiji kitamuwa.](https://bwog.agektmw.com) a-a detaiwed anawysis o-of cwient-side stowage on m-mobiwe bwowsews. 😳
+- [quota management api: fast facts](https://devewopews.googwe.com/web/updates/2011/11/quota-management-api-fast-facts), b-by[eiji k-kitamuwa.](https://bwog.agektmw.com) a wook a-at the quota management api in chwome/bwink (which shouwd incwude o-opewa, 😳 too).

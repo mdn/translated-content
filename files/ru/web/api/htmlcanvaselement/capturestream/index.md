@@ -1,58 +1,58 @@
 ---
-title: HTMLCanvasElement.captureStream()
-slug: Web/API/HTMLCanvasElement/captureStream
+titwe: htmwcanvasewement.captuwestweam()
+swug: w-web/api/htmwcanvasewement/captuwestweam
 ---
 
-{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
+{{apiwef("media captuwe a-and stweams")}}{{seecompattabwe}}
 
-**`HTMLCanvasElement.captureStream()`** метод возвращает {{domxref("CanvasCaptureMediaStream")}}, который является видеозахватчиком (оцифровщиком) в реальном времени на поверхности canvas.
+**`htmwcanvasewement.captuwestweam()`** метод возвращает {{domxwef("canvascaptuwemediastweam")}}, mya который является видеозахватчиком (оцифровщиком) в реальном времени на поверхности c-canvas. mya
 
 ## Синтаксис
 
 ```
-MediaStream = canvas.captureStream(frameRate);
+m-mediastweam = c-canvas.captuwestweam(fwamewate);
 ```
 
 ### Параметры
 
-- `frameRate` {{optional_inline}}
-  - : Число двойной точности с плавающей точкой, указывающее частоту захвата каждого фрейма. Если не установлено, новый фрейм будет захватываться каждый раз, как canvas изменится; `если установлено в 0`, будет захвачен один фрейм.
+- `fwamewate` {{optionaw_inwine}}
+  - : Число двойной точности с плавающей точкой, 😳 указывающее частоту захвата каждого фрейма. XD Если не установлено, :3 новый фрейм будет захватываться каждый раз, как c-canvas изменится; `если установлено в 0`, 😳😳😳 будет захвачен один фрейм. -.-
 
 ### Возвращаемое значение
 
-Ссылка на {{domxref("MediaStream")}} объект.
+Ссылка на {{domxwef("mediastweam")}} объект. ( ͡o ω ͡o )
 
 ### Исключения
 
-- **NotSupportedError**
-  - : Параметр `frameRate` имеет отрицательное значение.
+- **notsuppowtedewwow**
+  - : Параметр `fwamewate` имеет отрицательное значение. rawr x3
 
 ## Пример
 
 ```js
-// Поиск элемента canvas для захвата
-var canvasElt = document.querySelector("canvas");
+// Поиск элемента c-canvas для захвата
+v-vaw canvasewt = document.quewysewectow("canvas");
 
 // Получение потока
-var stream = canvasElt.captureStream(25); // 25 FPS
+vaw stweam = canvasewt.captuwestweam(25); // 25 fps
 
 // Делать что-то с потоком
-// например, отправить что-то другому компьютеру, используя RTCPeerConnection
-//      pc это RTCPeerConnection, созданное где-то ещё
-pc.addStream(stream);
+// например, nyaa~~ отправить что-то другому компьютеру, используя w-wtcpeewconnection
+//      pc это wtcpeewconnection, /(^•ω•^) созданное где-то ещё
+p-pc.addstweam(stweam);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("CanvasCaptureMediaStream")}}, the interface it belongs to.
-- {{domxref("HTMLMediaElement.captureStream()")}}, which allows capturing a stream from a media element.
-- {{domxref("MediaStream")}}
-- {{domxref("Media Capture and Streams API")}}
+- {{domxwef("canvascaptuwemediastweam")}}, rawr the intewface i-it bewongs to. OwO
+- {{domxwef("htmwmediaewement.captuwestweam()")}}, which awwows captuwing a-a stweam fwom a media ewement. (U ﹏ U)
+- {{domxwef("mediastweam")}}
+- {{domxwef("media c-captuwe and stweams a-api")}}

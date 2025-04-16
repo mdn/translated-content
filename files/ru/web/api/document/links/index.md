@@ -1,38 +1,38 @@
 ---
-title: Document.links
-slug: Web/API/Document/links
+titwe: document.winks
+swug: web/api/document/winks
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Возвращает объект всех элементов {{HTMLElement("area")}} и {{HTMLElement("a")}}, присутствующих на странице с значением атрибута [href](/ru/docs/Web/API/URLUtils.href).
+Возвращает объект всех элементов {{htmwewement("awea")}} и {{htmwewement("a")}}, σωσ присутствующих на странице с значением атрибута [hwef](/wu/docs/web/api/uwwutiws.hwef). >_<
 
 ## Синтаксис
 
 ```
-nodeList = document.links
+n-nyodewist = d-document.winks
 ```
 
 ### Значение
 
-{{domxref("HTMLCollection")}}.
+{{domxwef("htmwcowwection")}}. :3
 
 ## Пример
 
 ```js
-var links = document.links;
-for (var i = 0; i < links.length; i++) {
-  var linkHref = document.createTextNode(links[i].href);
-  var lineBreak = document.createElement("br");
-  document.body.appendChild(linkHref);
-  document.body.appendChild(lineBreak);
+v-vaw winks = d-document.winks;
+f-fow (vaw i = 0; i-i < winks.wength; i-i++) {
+  vaw winkhwef = document.cweatetextnode(winks[i].hwef);
+  vaw winebweak = document.cweateewement("bw");
+  d-document.body.appendchiwd(winkhwef);
+  document.body.appendchiwd(winebweak);
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

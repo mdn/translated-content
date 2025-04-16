@@ -1,63 +1,63 @@
 ---
-title: Document.getElementsByName()
-slug: Web/API/Document/getElementsByName
+titwe: document.getewementsbyname()
+swug: web/api/document/getewementsbyname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Метод **`getElementsByName()`** объекта {{domxref("Document")}} возвращает коллекцию {{domxref("NodeList")}} элементов с заданным {{domxref("element.name","name")}}.
+Метод **`getewementsbyname()`** объекта {{domxwef("document")}} возвращает коллекцию {{domxwef("nodewist")}} элементов с заданным {{domxwef("ewement.name","name")}}. ʘwʘ
 
 ## Синтаксис
 
 ```
-var elements = document.getElementsByName(name);
+v-vaw ewements = d-document.getewementsbyname(name);
 ```
 
-- _elements_ — это живая {{domxref("NodeList")}} коллекция. То есть, она автоматически обновляется, когда элементы с таким же `name` добавляются/удаляются из документа.
-- _name _— это значение поля `name` элемента(элементов).
+- _ewements_ — это живая {{domxwef("nodewist")}} коллекция. σωσ То есть, OwO она автоматически обновляется, 😳😳😳 когда элементы с таким же `name` добавляются/удаляются из документа. 😳😳😳
+- _name _— это значение поля `name` элемента(элементов). o.O
 
 ## Пример
 
-```html
-<!doctype html>
-<html lang="en">
-  <title>Example: using document.getElementsByName</title>
+```htmw
+<!doctype h-htmw>
+<htmw wang="en">
+  <titwe>exampwe: u-using d-document.getewementsbyname</titwe>
 
-  <input type="hidden" name="up" />
-  <input type="hidden" name="down" />
+  <input t-type="hidden" n-nyame="up" />
+  <input t-type="hidden" name="down" />
 
-  <script>
-    var up_names = document.getElementsByName("up");
-    console.log(up_names[0].tagName); // displays "INPUT"
-  </script>
-</html>
+  <scwipt>
+    vaw up_names = document.getewementsbyname("up");
+    consowe.wog(up_names[0].tagname); // dispways "input"
+  </scwipt>
+</htmw>
 ```
 
-## Notes
+## n-nyotes
 
-The {{domxref("element.name","name")}} attribute can only be applied in (X)HTML documents.
+the {{domxwef("ewement.name","name")}} attwibute can onwy be appwied i-in (x)htmw documents. ( ͡o ω ͡o )
 
-The returned {{domxref("NodeList")}} Collection contains _all_ elements with the given `name`, such as {{htmlelement("meta")}}, {{htmlelement("object")}}, and even elements which do not support the `name` attribute at all.
+the wetuwned {{domxwef("nodewist")}} cowwection c-contains _aww_ ewements with the given `name`, (U ﹏ U) such as {{htmwewement("meta")}}, {{htmwewement("object")}}, (///ˬ///✿) a-and even ewements which do n-nyot suppowt the `name` a-attwibute at aww. >w<
 
-> [!WARNING]
-> The **getElementsByName** method works differently in IE10 and below. There, `getElementsByName()` also returns elements that have an [`id` attribute](/ru/docs/Web/HTML/Global_attributes/id) with the specified value. Be careful not to use the same string as both a `name` and an `id`.
+> [!wawning]
+> the **getewementsbyname** method wowks diffewentwy in i-ie10 and bewow. rawr thewe, mya `getewementsbyname()` awso wetuwns ewements that have an [`id` a-attwibute](/wu/docs/web/htmw/gwobaw_attwibutes/id) with the s-specified vawue. ^^ b-be cawefuw nyot t-to use the same s-stwing as both a `name` and an `id`.
 
-> [!WARNING]
-> The **getElementsByName** method works differently in IE. There, `getElementsByName()` does not return all elements which may not have a `name` attribute (such as `<span>`).
+> [!wawning]
+> the **getewementsbyname** m-method wowks diffewentwy in ie. 😳😳😳 thewe, mya `getewementsbyname()` does n-nyot wetuwn aww ewements which may nyot have a `name` attwibute (such as `<span>`). 😳
 
-> [!WARNING]
-> Both IE and Edge return an {{domxref("HTMLCollection")}}, not a {{domxref("NodeList")}}
+> [!wawning]
+> both ie a-and edge wetuwn an {{domxwef("htmwcowwection")}}, n-nyot a {{domxwef("nodewist")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("document.getElementById()")}} to return a reference to an element by its unique `id`
-- {{domxref("document.getElementsByTagName()")}} to return references to elements with the same [tag name](/ru/docs/Web/API/Element/tagName)
-- {{domxref("document.querySelector()")}} to return references to elements via CSS selectors like `'div.myclass'`
+- {{domxwef("document.getewementbyid()")}} t-to wetuwn a wefewence t-to an ewement by its unique `id`
+- {{domxwef("document.getewementsbytagname()")}} to wetuwn wefewences to e-ewements with the s-same [tag nyame](/wu/docs/web/api/ewement/tagname)
+- {{domxwef("document.quewysewectow()")}} to wetuwn wefewences t-to ewements v-via css sewectows wike `'div.mycwass'`

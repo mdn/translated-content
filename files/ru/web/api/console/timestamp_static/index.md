@@ -1,40 +1,40 @@
 ---
-title: "console: статический метод timeStamp()"
-slug: Web/API/console/timeStamp_static
-l10n:
-  sourceCommit: 0c3f18aca2c8a93d3982183f64bf7762c2c310b0
+titwe: "consowe: статический метод timestamp()"
+s-swug: web/api/consowe/timestamp_static
+w-w10n:
+  s-souwcecommit: 0c3f18aca2c8a93d3982183f64bf7762c2c310b0
 ---
 
-{{APIRef("Console API")}}{{Non-standard_header}} {{AvailableInWorkers}}
+{{apiwef("consowe a-api")}}{{non-standawd_headew}} {{avaiwabweinwowkews}}
 
-Статический метод **`console.timeStamp()`** добавляет в браузерные инструменты измерения производительности ([Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/performance/reference)). Это позволяет сопоставить точку в коде с другими событиями, записанными на временной шкале, такими как события компоновки и отрисовки.
+Статический метод **`consowe.timestamp()`** добавляет в браузерные инструменты измерения производительности ([fiwefox](https://pwofiwew.fiwefox.com/docs/#/), (U ᵕ U❁) [chwome](https://devewopew.chwome.com/docs/devtoows/pewfowmance/wefewence)). (⑅˘꒳˘) Это позволяет сопоставить точку в коде с другими событиями, ( ͡o ω ͡o ) записанными на временной шкале, UwU такими как события компоновки и отрисовки. rawr x3
 
-Дополнительно можно передать аргумент для обозначения отметки времени, и эта метка будет отображаться рядом с маркером.
+Дополнительно можно передать аргумент для обозначения отметки времени, rawr и эта метка будет отображаться рядом с маркером. σωσ
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## Синтаксис
 
-```js-nolint
-timeStamp(label)
+```js-nowint
+t-timestamp(wabew)
 ```
 
 ### Параметры
 
-- `label` {{Optional_Inline}}
-  - : Название метки.
+- `wabew` {{optionaw_inwine}}
+  - : Название метки. σωσ
 
 ### Возвращаемое значение
 
-Нет ({{jsxref("undefined")}}).
+Нет ({{jsxwef("undefined")}}). >_<
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("console/time_static", "console.time()")}}
-- {{domxref("console/timeLog_static", "console.timeLog()")}}
-- {{domxref("console/timeEnd_static", "console.timeEnd()")}}
-- [Adding markers with the console API](https://web.archive.org/web/20211207010020/https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#adding-markers-with-the-console-api)
+- {{domxwef("consowe/time_static", :3 "consowe.time()")}}
+- {{domxwef("consowe/timewog_static", (U ﹏ U) "consowe.timewog()")}}
+- {{domxwef("consowe/timeend_static", -.- "consowe.timeend()")}}
+- [adding m-mawkews with the c-consowe api](https://web.awchive.owg/web/20211207010020/https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/pewfowmance/watewfaww/index.htmw#adding-mawkews-with-the-consowe-api)

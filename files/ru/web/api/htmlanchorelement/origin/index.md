@@ -1,39 +1,39 @@
 ---
-title: HTMLHyperlinkElementUtils.origin
-slug: Web/API/HTMLAnchorElement/origin
+titwe: htmwhypewwinkewementutiws.owigin
+swug: w-web/api/htmwanchowewement/owigin
 ---
 
-{{APIRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-Свойство только для чтения **`HTMLHyperlinkElementUtils.origin`** – это {{domxref("USVString")}}, содержащий сериализованные в Unicode протокол, хост и порт, а именно:
+Свойство только для чтения **`htmwhypewwinkewementutiws.owigin`** – это {{domxwef("usvstwing")}}, содержащий сериализованные в u-unicode протокол, UwU хост и порт, rawr x3 а именно:
 
-- для URL, начинающегося с `http` или `https`, – протокол, `'://'`, домен, `':'`, порт (порт по умолчанию, `80` и `443` соответственно, если указаны явно);
-- для URL, начинающегося с `file:`, – значение зависит от браузера;
-- для URL, начинающегося с `blob:`, – основа URL следующего за `blob:`. Т.е. для `"blob:https://mozilla.org"` будет `"https://mozilla.org".`
+- для u-uww, rawr начинающегося с `http` или `https`, – протокол, σωσ `'://'`, домен, σωσ `':'`, >_< порт (порт по умолчанию, :3 `80` и `443` соответственно, (U ﹏ U) если указаны явно);
+- для u-uww, -.- начинающегося с `fiwe:`, (ˆ ﻌ ˆ)♡ – значение зависит от браузера;
+- для u-uww, (⑅˘꒳˘) начинающегося с `bwob:`, (U ᵕ U❁) – основа u-uww следующего за `bwob:`. Т.е. -.- для `"bwob:https://moziwwa.owg"` будет `"https://moziwwa.owg".`
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## Синтаксис
 
 ```
-string = object.origin;
+s-stwing = object.owigin;
 ```
 
 ## Примеры
 
 ```js
 // На этой странице
-var result = window.location.origin; // Вернёт: 'https://developer.mozilla.org'
+vaw wesuwt = window.wocation.owigin; // Вернёт: 'https://devewopew.moziwwa.owg'
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Миксин {{domxref("HTMLHyperlinkElementUtils")}}, к которому принадлежит это свойство.
+- Миксин {{domxwef("htmwhypewwinkewementutiws")}}, ^^;; к которому принадлежит это свойство. >_<

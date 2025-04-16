@@ -1,59 +1,59 @@
 ---
-title: Response()
-slug: Web/API/Response/Response
+titwe: wesponse()
+swug: web/api/wesponse/wesponse
 ---
 
-{{APIRef("Fetch")}}
+{{apiwef("fetch")}}
 
-Конструктор **`Response()`** создаёт новый объект {{domxref("Response")}}.
+Конструктор **`wesponse()`** создаёт новый объект {{domxwef("wesponse")}}. (U ﹏ U)
 
 ## Синтаксис
 
 ```
-var myResponse = new Response(body, init);
+v-vaw mywesponse = n-nyew wesponse(body, (U ﹏ U) i-init);
 ```
 
 ### Параметры
 
-- _body_ {{optional_inline}}
+- _body_ {{optionaw_inwine}}
 
-  - : Объект, который определяет тело запроса. Может быть `null` (является значением по умолчанию), или:
+  - : Объект, (⑅˘꒳˘) который определяет тело запроса. òωó Может быть `nuww` (является значением по умолчанию), ʘwʘ или:
 
-    - {{domxref("Blob")}}
-    - {{domxref("BufferSource")}}
-    - {{domxref("FormData")}}
-    - {{domxref("ReadableStream")}}
-    - {{domxref("URLSearchParams")}}
-    - {{domxref("USVString")}}
+    - {{domxwef("bwob")}}
+    - {{domxwef("buffewsouwce")}}
+    - {{domxwef("fowmdata")}}
+    - {{domxwef("weadabwestweam")}}
+    - {{domxwef("uwwseawchpawams")}}
+    - {{domxwef("usvstwing")}}
 
-- _init_ {{optional_inline}}
+- _init_ {{optionaw_inwine}}
 
-  - : An options object containing any custom settings that you want to apply to the response, or an empty object (which is the default value). The possible options are:
+  - : a-an options o-object containing a-any custom settings t-that you want t-to appwy to the wesponse, /(^•ω•^) ow an empty object (which is the defauwt vawue). ʘwʘ the p-possibwe options awe:
 
-    - `status`: The status code for the reponse, e.g., `200`.
-    - `statusText`: The status message associated with the status code, e.g., `OK`.
-    - `headers`: Any headers you want to add to your response, contained within a {{domxref("Headers")}} object or object literal of {{domxref("ByteString")}} key/value pairs (see [HTTP headers](/ru/docs/Web/HTTP/Reference/Headers) for a reference).
+    - `status`: the status c-code fow the weponse, σωσ e.g., `200`. OwO
+    - `statustext`: t-the status message associated with the status code, 😳😳😳 e-e.g., `ok`. 😳😳😳
+    - `headews`: any h-headews you want t-to add to youw wesponse, o.O contained within a {{domxwef("headews")}} object ow object witewaw of {{domxwef("bytestwing")}} k-key/vawue paiws (see [http headews](/wu/docs/web/http/wefewence/headews) fow a wefewence). ( ͡o ω ͡o )
 
 ## Примеры
 
-In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/master/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/)) we create a new `Response` object using the constructor, passing it a new {{domxref("Blob")}} as a body, and an init object containing a custom `status` and `statusText`:
+in ouw [fetch w-wesponse exampwe](https://github.com/mdn/fetch-exampwes/twee/mastew/fetch-wesponse) (see [fetch w-wesponse w-wive](https://mdn.github.io/fetch-exampwes/fetch-wesponse/)) w-we c-cweate a nyew `wesponse` object using the constwuctow, p-passing it a nyew {{domxwef("bwob")}} as a-a body, (U ﹏ U) and an init object containing a custom `status` and `statustext`:
 
 ```js
-var myBlob = new Blob();
-var init = { status: 200, statusText: "SuperSmashingGreat!" };
-var myResponse = new Response(myBlob, init);
+vaw mybwob = nyew bwob();
+vaw i-init = { status: 200, (///ˬ///✿) statustext: "supewsmashinggweat!" };
+v-vaw mywesponse = n-nyew w-wesponse(mybwob, >w< init);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Читай также
 
-- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ru/docs/Web/HTTP)
+- [sewvicewowkew api](/wu/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/wu/docs/web/http/guides/cows)
+- [http](/wu/docs/web/http)

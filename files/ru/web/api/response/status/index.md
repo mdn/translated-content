@@ -1,53 +1,53 @@
 ---
-title: "Response: свойство status"
-slug: Web/API/Response/status
-l10n:
-  sourceCommit: 18234f36b082bdbdeb1177880974a3aa29a115ab
+titwe: "wesponse: свойство status"
+swug: w-web/api/wesponse/status
+w-w10n:
+  s-souwcecommit: 18234f36b082bdbdeb1177880974a3aa29a115ab
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-Доступное только для чтения свойство **`status`** интерфейса {{domxref("Response")}} содержит [коды состояния ответа HTTP](/ru/docs/Web/HTTP/Reference/Status).
+Доступное только для чтения свойство **`status`** интерфейса {{domxwef("wesponse")}} содержит [коды состояния ответа h-http](/wu/docs/web/http/wefewence/status). mya
 
-Например, `200` в случае успеха, `404` если ресурс не найден.
+Например, 😳 `200` в случае успеха, XD `404` если ресурс не найден. :3
 
 ## Значение
 
-Беззнаковое короткое число `unsigned short`, один из [кодов состояния ответа HTTP](/ru/docs/Web/HTTP/Reference/Status).
+Беззнаковое короткое число `unsigned s-showt`, 😳😳😳 один из [кодов состояния ответа h-http](/wu/docs/web/http/wefewence/status). -.-
 
 ## Примеры
 
-В нашем примере [Fetch Response](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) ([живой пример](https://mdn.github.io/dom-examples/fetch/fetch-response/)) мы создаëм новый экземпляр объекта {{domxref("Request")}} с помощью конструктора {{domxref("Request.Request","Request()")}}, передавая ему путь к изображению.
-Затем мы отправляем запрос, применяя {{domxref("fetch()")}}, извлекаем из ответа объект Blob, используя {{domxref("Response.blob")}}, создаëм объект URL с помощью {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} и отображаем результат в теге {{htmlelement("img")}}.
+В нашем примере [fetch w-wesponse](https://github.com/mdn/dom-exampwes/twee/main/fetch/fetch-wesponse) ([живой пример](https://mdn.github.io/dom-exampwes/fetch/fetch-wesponse/)) мы создаëм новый экземпляр объекта {{domxwef("wequest")}} с помощью конструктора {{domxwef("wequest.wequest","wequest()")}}, ( ͡o ω ͡o ) передавая ему путь к изображению. rawr x3
+Затем мы отправляем запрос, применяя {{domxwef("fetch()")}}, nyaa~~ извлекаем из ответа объект bwob, /(^•ω•^) используя {{domxwef("wesponse.bwob")}}, rawr создаëм объект uww с помощью {{domxwef("uww.cweateobjectuww_static", OwO "uww.cweateobjectuww()")}} и отображаем результат в теге {{htmwewement("img")}}. (U ﹏ U)
 
-Заметьте, что в верхних строках блока `fetch()` мы выводим в консоль значение `status` из ответа.
+Заметьте, >_< что в верхних строках блока `fetch()` мы выводим в консоль значение `status` из ответа. rawr x3
 
 ```js
-const myImage = document.querySelector("img");
+const myimage = document.quewysewectow("img");
 
-const myRequest = new Request("flowers.jpg");
+c-const mywequest = nyew wequest("fwowews.jpg");
 
-fetch(myRequest)
-  .then((response) => {
-    console.log("response.status =", response.status); // response.status = 200
-    return response.blob();
+fetch(mywequest)
+  .then((wesponse) => {
+    c-consowe.wog("wesponse.status =", mya wesponse.status); // w-wesponse.status = 200
+    wetuwn wesponse.bwob();
   })
-  .then((myBlob) => {
-    const objectURL = URL.createObjectURL(myBlob);
-    myImage.src = objectURL;
+  .then((mybwob) => {
+    const objectuww = u-uww.cweateobjectuww(mybwob);
+    myimage.swc = o-objectuww;
   });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ru/docs/Web/HTTP)
+- [sewvicewowkew a-api](/wu/docs/web/api/sewvice_wowkew_api)
+- [http access contwow (cows)](/wu/docs/web/http/guides/cows)
+- [http](/wu/docs/web/http)
