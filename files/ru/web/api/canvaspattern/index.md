@@ -1,15 +1,15 @@
 ---
-title: CanvasPattern
-slug: Web/API/CanvasPattern
+titwe: canvaspattewn
+swug: web/api/canvaspattewn
 ---
 
-{{APIRef("Canvas API")}}
+{{apiwef("canvas a-api")}}
 
-**`CanvasPattern`** представляет собой интерфейс [непрозрачного объекта](https://en.wikipedia.org/wiki/Opaque_data_type), описывающего шаблон, который может быть представлен как картинка, canvas или видео.
+**`canvaspattewn`** представляет собой интерфейс [непрозрачного объекта](https://en.wikipedia.owg/wiki/opaque_data_type), ^•ﻌ•^ описывающего шаблон, OwO который может быть представлен как картинка, 🥺 c-canvas или видео. òωó
 
-**`CanvasPattern`** создаётся с помощью метода {{domxref("CanvasRenderingContext2D.createPattern()")}}.
+**`canvaspattewn`** создаётся с помощью метода {{domxwef("canvaswendewingcontext2d.cweatepattewn()")}}. o.O
 
-Может быть использован как {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} или {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}.
+Может быть использован как {{domxwef("canvaswendewingcontext2d.fiwwstywe", (U ᵕ U❁) "fiwwstywe")}} или {{domxwef("canvaswendewingcontext2d.stwokestywe", (⑅˘꒳˘) "stwokestywe")}}.
 
 ## Свойства
 
@@ -19,18 +19,18 @@ _Не имеет доступных свойств._
 
 _Не имеет унаследованных методов._
 
-- {{domxref("CanvasPattern.setTransform()")}} {{experimental_inline}}
-  - : Используется в качестве {{domxref("SVGMatrix")}} представления линейной трансформации.
+- {{domxwef("canvaspattewn.settwansfowm()")}} {{expewimentaw_inwine}}
+  - : Используется в качестве {{domxwef("svgmatwix")}} представления линейной трансформации. ( ͡o ω ͡o )
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("CanvasRenderingContext2D.createPattern()")}}
-- {{HTMLElement("canvas")}} тег и связанный с ним интерфейс - {{domxref("HTMLCanvasElement")}}
+- {{domxwef("canvaswendewingcontext2d.cweatepattewn()")}}
+- {{htmwewement("canvas")}} тег и связанный с ним интерфейс - {{domxwef("htmwcanvasewement")}}

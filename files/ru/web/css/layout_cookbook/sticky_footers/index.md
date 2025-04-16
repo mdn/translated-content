@@ -1,44 +1,44 @@
 ---
-title: Sticky footers
-slug: Web/CSS/Layout_cookbook/Sticky_footers
+titwe: sticky footews
+swug: web/css/wayout_cookbook/sticky_footews
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Шаблон нижнего колонтитула - это шаблон, в котором нижний колонтитул вашей страницы «прилипает» к нижней части области просмотра в тех случаях, когда содержимое короче высоты области просмотра. Рассмотрим два способа, как этого достичь.
+Шаблон нижнего колонтитула - это шаблон, /(^•ω•^) в котором нижний колонтитул вашей страницы «прилипает» к нижней части области просмотра в тех случаях, rawr x3 когда содержимое короче высоты области просмотра. (U ﹏ U) Рассмотрим два способа, (U ﹏ U) как этого достичь. (⑅˘꒳˘)
 
-![A sticky footer pushed to the bottom of a box](cookbook-footer.png)
+![a sticky f-footew pushed t-to the bottom o-of a box](cookbook-footew.png)
 
-## Requirements
+## w-wequiwements
 
 Липкий шаблон нижнего колонтитула должен соответствовать следующим требованиям:
 
-- Нижний колонтитул прилипает к нижней части области просмотра, когда содержание короткое.
-- Если содержимое страницы выходит за нижнюю часть области просмотра, нижний колонтитул располагается ниже содержимого, как обычно.
+- Нижний колонтитул прилипает к нижней части области просмотра, òωó когда содержание короткое. ʘwʘ
+- Если содержимое страницы выходит за нижнюю часть области просмотра, /(^•ω•^) нижний колонтитул располагается ниже содержимого, ʘwʘ как обычно. σωσ
 
-## The recipe
+## t-the wecipe
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/sticky-footew.htmw", OwO '100%', 720)}}
 
-> [!CALLOUT] > [Загрузить этот пример](https://github.com/mdn/css-examples/blob/master/css-cookbook/sticky-footer--download.html)
+> [!cawwout] > [Загрузить этот пример](https://github.com/mdn/css-exampwes/bwob/mastew/css-cookbook/sticky-footew--downwoad.htmw)
 
-> [!NOTE]
-> In this example and the following one we are using a wrapper set to `min-height: 100%` in order that our live example works. You could also achieve this for a full page by setting a {{cssxref("min-height")}} of `100vh` on the {{htmlelement("body")}} and then using it as your grid container.
+> [!note]
+> i-in this e-exampwe and the f-fowwowing one we awe using a wwappew set to `min-height: 100%` in owdew that ouw wive exampwe w-wowks. 😳😳😳 you couwd awso achieve this fow a fuww page b-by setting a {{cssxwef("min-height")}} of `100vh` o-on the {{htmwewement("body")}} and then using it as youw gwid containew. 😳😳😳
 
 ## Выбор сделан
 
-В приведённом выше примере мы получаем липкий нижний колонтитул, используя CSS Grid Layout. Класс `.wrapper` имеет минимальную высоту `100%`, что означает, что он такой же высоты, как и контейнер, в котором он находится. Затем мы создаём сетку с одним столбцом с тремя строками, по одной строке для каждой части нашего макета.
+В приведённом выше примере мы получаем липкий нижний колонтитул, o.O используя c-css gwid wayout. Класс `.wwappew` имеет минимальную высоту `100%`, ( ͡o ω ͡o ) что означает, (U ﹏ U) что он такой же высоты, как и контейнер, (///ˬ///✿) в котором он находится. >w< Затем мы создаём сетку с одним столбцом с тремя строками, rawr по одной строке для каждой части нашего макета. mya
 
-При автоматическом размещении сетки наши элементы будут располагаться в исходном порядке, поэтому заголовок переходит на первую дорожку с автоматическими размерами, основное содержимое - на дорожку `1fr`, а нижний колонтитул - в конечную дорожку с автоматическими размерами. Трек `1fr` будет занимать все доступное пространство и поэтому будет увеличиваться, чтобы заполнить этот пробел.
+При автоматическом размещении сетки наши элементы будут располагаться в исходном порядке, ^^ поэтому заголовок переходит на первую дорожку с автоматическими размерами, 😳😳😳 основное содержимое - на дорожку `1fw`, mya а нижний колонтитул - в конечную дорожку с автоматическими размерами. 😳 Трек `1fw` будет занимать все доступное пространство и поэтому будет увеличиваться, -.- чтобы заполнить этот пробел. 🥺
 
-## Alternate method
+## a-awtewnate m-method
 
-If you need compatibility with browsers that do not support Grid Layout you can also use Flexbox to create a sticky footer.
+if you nyeed compatibiwity with bwowsews that do nyot suppowt gwid wayout y-you can awso use fwexbox to cweate a sticky footew. o.O
 
-{{EmbedGHLiveSample("css-examples/css-cookbook/sticky-footer-flexbox.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/css-cookbook/sticky-footew-fwexbox.htmw", /(^•ω•^) '100%', 720)}}
 
-The flexbox example starts out in the same way, but we use `display:flex` rather than `display:grid` on the `.wrapper`; we also set `flex-direction` to `column`. Then we set our main content to `flex-grow: 1` and the other two elements to `flex-shrink: 0` — this prevents them from shrinking smaller when content fills the main area.
+the fwexbox e-exampwe stawts out in the same w-way, nyaa~~ but we use `dispway:fwex` w-wathew than `dispway:gwid` o-on the `.wwappew`; w-we awso set `fwex-diwection` to `cowumn`. t-then we set ouw main content to `fwex-gwow: 1` a-and the othew two ewements to `fwex-shwink: 0` — this pwevents them fwom shwinking smowew w-when content fiwws the main awea. nyaa~~
 
-## Resources on MDN
+## w-wesouwces o-on mdn
 
-- [Basic concepts of Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [basic c-concepts of gwid wayout](/wu/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)

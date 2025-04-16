@@ -1,45 +1,45 @@
 ---
-title: Селектор следующего элемента
-slug: Web/CSS/Subsequent-sibling_combinator
+titwe: Селектор следующего элемента
+swug: web/css/subsequent-sibwing_combinatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Описание
 
-Общий комбинатор смежных селекторов `(~)` разделяет два селектора и находит второй элемент только если ему предшествует первый, и они оба имеют общего родителя. Свойства будут применены ко всем элементам, указанным в правой части, следующим за элементом, указанным в левой части.
+Общий комбинатор смежных селекторов `(~)` разделяет два селектора и находит второй элемент только если ему предшествует первый, (U ᵕ U❁) и они оба имеют общего родителя. (⑅˘꒳˘) Свойства будут применены ко всем элементам, ( ͡o ω ͡o ) указанным в правой части, UwU следующим за элементом, rawr x3 указанным в левой части.
 
 ## Синтаксис
 
 ```
-element ~ element { style properties }
+e-ewement ~ e-ewement { s-stywe pwopewties }
 ```
 
 ## Пример
 
 ```css
-p ~ span {
-  color: red;
+p-p ~ span {
+  cowow: w-wed;
 }
 ```
 
-```html
+```htmw
 <span>Это не красный.</span>
 <p>Здесь параграф.</p>
 <code>Тут какой-то код.</code>
-<span>А здесь span.</span>
+<span>А здесь s-span.</span>
 ```
 
-{{ EmbedLiveSample('Example', 280, 120) }}
+{{ e-embedwivesampwe('exampwe', rawr 280, 120) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Смежные селекторы](/ru/docs/Web/CSS/Next-sibling_combinator)
+- [Смежные селекторы](/wu/docs/web/css/next-sibwing_combinatow)

@@ -1,48 +1,48 @@
 ---
-title: loadstart
-slug: Web/API/XMLHttpRequest/loadstart_event
+titwe: woadstawt
+swug: web/api/xmwhttpwequest/woadstawt_event
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{apiwef("xmwhttpwequest api")}}
 
-Событие `loadstart` происходит, когда начинается загрузка.
+Событие `woadstawt` происходит, rawr x3 когда начинается загрузка. (✿oωo)
 
 ## Общая информация
 
 - Спецификация
-  - : [Progress](https://www.w3.org/TR/progress-events/)
+  - : [pwogwess](https://www.w3.owg/tw/pwogwess-events/)
 - Интерфейс
-  - : ProgressEvent
+  - : pwogwessevent
 - Распространяется
   - : Нет
 - Отменяемое
   - : Нет
 - Цель
-  - : Element
+  - : e-ewement
 - Действие по умолчанию
   - : Нет
 
 ## Свойства
 
-| Property                              | Type                       | Description                                                                                                                                                    |
+| p-pwopewty                              | t-type                       | descwiption                                                                                                                                                    |
 | ------------------------------------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}           | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                                                                                         |
-| `type` {{readonlyInline}}             | {{domxref("DOMString")}}   | The type of event.                                                                                                                                             |
-| `bubbles` {{readonlyInline}}          | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.                                                                                                                     |
-| `cancelable` {{readonlyInline}}       | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.                                                                                                                       |
-| `lengthComputable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Specifies whether or not the total size of the transfer is known. Read only.                                                                                   |
-| `loaded` {{readonlyInline}}           | unsigned long (long)       | The number of bytes transferred since the beginning of the operation. This doesn't include headers and other overhead, but only the content itself. Read only. |
-| `total` {{readonlyInline}}            | unsigned long (long)       | The total number of bytes of content that will be transferred during the operation. If the total size is unknown, this value is zero. Read only.               |
+| `tawget` {{weadonwyinwine}}           | {{domxwef("eventtawget")}} | the e-event tawget (the t-topmost tawget i-in the dom twee). (ˆ ﻌ ˆ)♡                                                                                                         |
+| `type` {{weadonwyinwine}}             | {{domxwef("domstwing")}}   | t-the type o-of event. (˘ω˘)                                                                                                                                             |
+| `bubbwes` {{weadonwyinwine}}          | {{jsxwef("boowean")}}      | whethew the event nyowmawwy bubbwes ow nyot. (⑅˘꒳˘)                                                                                                                     |
+| `cancewabwe` {{weadonwyinwine}}       | {{jsxwef("boowean")}}      | whethew t-the event is cancewwabwe ow nyot. (///ˬ///✿)                                                                                                                       |
+| `wengthcomputabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | specifies whethew o-ow nyot the totaw size of the t-twansfew is known. 😳😳😳 wead onwy. 🥺                                                                                   |
+| `woaded` {{weadonwyinwine}}           | unsigned wong (wong)       | t-the nyumbew of bytes t-twansfewwed since t-the beginning of the opewation. mya this doesn't incwude headews and othew ovewhead, 🥺 b-but onwy the content itsewf. >_< wead onwy. >_< |
+| `totaw` {{weadonwyinwine}}            | unsigned wong (wong)       | t-the totaw nyumbew of bytes of c-content that wiww b-be twansfewwed d-duwing the opewation. (⑅˘꒳˘) i-if the totaw size is unknown, /(^•ω•^) this vawue i-is zewo. rawr x3 wead onwy.               |
 
 ## Связанные свойства
 
-- [`loadstart`](/ru/docs/Web/API/XMLHttpRequest/loadstart_event)
-- [`progress`](/ru/docs/Web/API/XMLHttpRequest/progress_event)
-- [`error`](/ru/docs/Web/API/HTMLElement/error_event)
-- [`abort`](/ru/docs/Web/API/HTMLMediaElement/abort_event)
-- [`load`](/ru/docs/Web/API/Window/load_event)
-- [`loadend`](/ru/docs/Web/API/XMLHttpRequest/loadend_event)
+- [`woadstawt`](/wu/docs/web/api/xmwhttpwequest/woadstawt_event)
+- [`pwogwess`](/wu/docs/web/api/xmwhttpwequest/pwogwess_event)
+- [`ewwow`](/wu/docs/web/api/htmwewement/ewwow_event)
+- [`abowt`](/wu/docs/web/api/htmwmediaewement/abowt_event)
+- [`woad`](/wu/docs/web/api/window/woad_event)
+- [`woadend`](/wu/docs/web/api/xmwhttpwequest/woadend_event)
 
 ## Смотрите также
 
-- [Отслеживание состояния загрузки](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
+- [Отслеживание состояния загрузки](/wu/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest#monitowing_pwogwess)

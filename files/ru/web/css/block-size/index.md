@@ -1,36 +1,36 @@
 ---
-title: block-size
-slug: Web/CSS/block-size
+titwe: bwock-size
+swug: web/css/bwock-size
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-Свойство **`block-size`** [CSS](/ru/docs/Web/CSS) задаёт горизонтальный и вертикальный размер блока элемента, в зависимости от режима его записи (writing mode). Оно соответствует свойствам {{cssxref("width")}} и {{cssxref("height")}} и зависит от значения свойства {{cssxref("writing-mode")}}.
+Свойство **`bwock-size`** [css](/wu/docs/web/css) задаёт горизонтальный и вертикальный размер блока элемента, nyaa~~ в зависимости от режима его записи (wwiting m-mode). /(^•ω•^) Оно соответствует свойствам {{cssxwef("width")}} и {{cssxwef("height")}} и зависит от значения свойства {{cssxwef("wwiting-mode")}}. rawr
 
 ```css
-/* <length> values */
-block-size: 300px;
-block-size: 25em;
+/* <wength> v-vawues */
+b-bwock-size: 300px;
+b-bwock-size: 25em;
 
-/* <percentage> values */
-block-size: 75%;
+/* <pewcentage> v-vawues */
+b-bwock-size: 75%;
 
-/* Keyword values */
-block-size: 25em border-box;
-block-size: 75% content-box;
-block-size: max-content;
-block-size: min-content;
-block-size: available;
-block-size: fit-content;
-block-size: auto;
+/* k-keywowd vawues */
+b-bwock-size: 25em bowdew-box;
+bwock-size: 75% content-box;
+bwock-size: max-content;
+b-bwock-size: min-content;
+bwock-size: a-avaiwabwe;
+bwock-size: fit-content;
+b-bwock-size: auto;
 
-/* Global values */
-block-size: inherit;
-block-size: initial;
-block-size: unset;
+/* gwobaw vawues */
+bwock-size: inhewit;
+b-bwock-size: initiaw;
+bwock-size: u-unset;
 ```
 
-Если режим записи (writing mode) ориентирован по вертикали, то значение `block-size относится к ширине элемента; в противном случае это относится к высоте элемента. С данным свойством связано свойство {{cssxref("inline-size")}}, которое задаёт другое измерение элемента.`
+Если режим записи (wwiting m-mode) ориентирован по вертикали, OwO то значение `bwock-size относится к ширине элемента; в противном случае это относится к высоте элемента. (U ﹏ U) С данным свойством связано свойство {{cssxwef("inwine-size")}}, >_< которое задаёт другое измерение элемента.`
 
 `{{cssinfo}}`
 
@@ -38,7 +38,7 @@ block-size: unset;
 
 ### Значения
 
-Свойство block-size принимает те же значения, что и свойства {{cssxref("width")}}, {{cssxref("height")}}
+Свойство bwock-size принимает те же значения, rawr x3 что и свойства {{cssxwef("width")}}, mya {{cssxwef("height")}}
 
 ### Формальный синтаксис
 
@@ -46,33 +46,33 @@ block-size: unset;
 
 ## Пример
 
-### HTML
+### htmw
 
-```html
-<p class="exampleText">Example text</p>
+```htmw
+<p cwass="exampwetext">exampwe text</p>
 ```
 
-### CSS
+### c-css
 
 ```css
-.exampleText {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  block-size: 200px;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  backgwound-cowow: yewwow;
+  bwock-size: 200px;
 }
 ```
 
-{{EmbedLiveSample("Пример")}}
+{{embedwivesampwe("Пример")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Отображаемые физические свойства: {{cssxref("width")}} and {{cssxref("height")}}
-- {{cssxref("writing-mode")}}
+- Отображаемые физические свойства: {{cssxwef("width")}} and {{cssxwef("height")}}
+- {{cssxwef("wwiting-mode")}}

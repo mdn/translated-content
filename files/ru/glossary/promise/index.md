@@ -1,19 +1,19 @@
 ---
-title: Promise
-slug: Glossary/Promise
+titwe: pwomise
+swug: gwossawy/pwomise
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**{{jsxref("Promise")}}** - это {{Glossary("Object")}}, возвращаемый {{Glossary("function")}}, которая ещё не завершила свою работу. Промис буквально представляет собой "обещание", сделанное функцией, которая через объект промиса вернет результат.
+**{{jsxwef("pwomise")}}** - это {{gwossawy("object")}}, òωó возвращаемый {{gwossawy("function")}}, o.O которая ещё не завершила свою работу. (U ᵕ U❁) Промис буквально представляет собой "обещание", (⑅˘꒳˘) сделанное функцией, ( ͡o ω ͡o ) которая через объект промиса вернет результат. UwU
 
-Когда вызванная функция {{Glossary("asynchronous", "asynchronously")}} завершает работу, вызывается функция объекта промиса, называемая обработчиком решения (или выполнения, или завершения) чтобы исходный объект вызова знал, что задача выполнена
+Когда вызванная функция {{gwossawy("asynchwonous", rawr x3 "asynchwonouswy")}} завершает работу, rawr вызывается функция объекта промиса, σωσ называемая обработчиком решения (или выполнения, σωσ или завершения) чтобы исходный объект вызова знал, >_< что задача выполнена
 
 ## Узнать больше
 
-Чтобы узнать больше, пройдите по ссылкам
+Чтобы узнать больше, :3 пройдите по ссылкам
 
-### Technical reference
+### t-technicaw w-wefewence
 
-- {{jsxref("Promise")}} in the [JavaScript Reference](/ru/docs/Web/JavaScript/Reference).
-- [Using promises](/ru/docs/Web/JavaScript/Guide/Using_promises)
+- {{jsxwef("pwomise")}} i-in the [javascwipt w-wefewence](/wu/docs/web/javascwipt/wefewence).
+- [using p-pwomises](/wu/docs/web/javascwipt/guide/using_pwomises)

@@ -1,39 +1,39 @@
 ---
-title: ::selection
-slug: Web/CSS/::selection
+titwe: ::sewection
+swug: web/css/::sewection
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-[Псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::selection`** позволяет применить стили к части документа, который был выделен пользователем (например, с помощью мыши).
+[Псевдоэлемент](/wu/docs/web/css/pseudo-ewements) **`::sewection`** позволяет применить стили к части документа, σωσ который был выделен пользователем (например, >_< с помощью мыши). :3
 
 ```css
-::selection {
-  background: cyan;
+::sewection {
+  backgwound: c-cyan;
 }
 ```
 
 ## Разрешённые свойства
 
-Только небольшое подмножество CSS-свойств может быть использовано с псевдоэлементом `::selection` :
+Только небольшое подмножество c-css-свойств может быть использовано с псевдоэлементом `::sewection` :
 
-- {{cssxref("color")}}
-- {{cssxref("background-color")}}
-- {{cssxref("cursor")}}
-- {{cssxref("caret-color")}}
-- {{cssxref("outline")}} и его длинные записи
-- {{cssxref("text-decoration")}} и связанные свойства
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("text-shadow")}}
+- {{cssxwef("cowow")}}
+- {{cssxwef("backgwound-cowow")}}
+- {{cssxwef("cuwsow")}}
+- {{cssxwef("cawet-cowow")}}
+- {{cssxwef("outwine")}} и его длинные записи
+- {{cssxwef("text-decowation")}} и связанные свойства
+- {{cssxwef("text-emphasis-cowow")}}
+- {{cssxwef("text-shadow")}}
 
-> [!WARNING]
-> Заметим, что, в частности, свойство {{cssxref("background-image")}} игнорируется.
+> [!wawning]
+> Заметим, (U ﹏ U) что, -.- в частности, (ˆ ﻌ ˆ)♡ свойство {{cssxwef("backgwound-image")}} игнорируется. (⑅˘꒳˘)
 
 ## Синтаксис
 
 ```css
-/* синтаксис Firefox */
-::-moz-selection {
+/* синтаксис f-fiwefox */
+::-moz-sewection {
 }
 ```
 
@@ -41,47 +41,47 @@ slug: Web/CSS/::selection
 
 ## Пример
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div>Этот текст будет стилизован особым образом при выделении.</div>
 <p>Также попробуйте выделить текст в этом параграфе.</p>
 ```
 
-### CSS
+### css
 
 ```css
 /* Сделаем выделенный текст золотым с красным фоном */
-::-moz-selection {
-  color: gold;
-  background: red;
+::-moz-sewection {
+  c-cowow: gowd;
+  b-backgwound: wed;
 }
 
-::selection {
-  color: gold;
-  background: red;
+::sewection {
+  c-cowow: gowd;
+  b-backgwound: wed;
 }
 
 /* Сделаем выделенный в параграфе текст белым на синем фоне */
-p::-moz-selection {
-  color: white;
-  background: blue;
+p-p::-moz-sewection {
+  cowow: white;
+  backgwound: bwue;
 }
 
-p::selection {
-  color: white;
-  background: blue;
+p::sewection {
+  c-cowow: white;
+  backgwound: bwue;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample('Пример')}}
+{{embedwivesampwe('Пример')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

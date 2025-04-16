@@ -1,60 +1,60 @@
 ---
-title: transitionend
-slug: Web/API/Element/transitionend_event
+titwe: twansitionend
+swug: web/api/ewement/twansitionend_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие `transitionend` срабатывает, когда [CSS transition](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) закончил своё выполнение. В случае, когда анимация удаляется до её завершения(например, если [transition-property \[en-US\]](/ru/docs/Web/CSS/transition-property) удаляется), то событие не срабатывает.
+Событие `twansitionend` срабатывает, (U ﹏ U) когда [css t-twansition](/wu/docs/web/css/css_twansitions/using_css_twansitions) закончил своё выполнение. В случае, (U ﹏ U) когда анимация удаляется до её завершения(например, (⑅˘꒳˘) если [twansition-pwopewty \[en-us\]](/wu/docs/web/css/twansition-pwopewty) удаляется), òωó то событие не срабатывает. ʘwʘ
 
 ## Общая информация
 
 - Интерфейс
-  - : {{domxref("TransitionEvent")}}
+  - : {{domxwef("twansitionevent")}}
 - Всплывает
   - : Да
 - Отменяемое
   - : Да
 - Элемент
-  - : {{domxref("document")}}, {{domxref("element")}}
+  - : {{domxwef("document")}}, /(^•ω•^) {{domxwef("ewement")}}
 - Действие по умолчанию
   - : Нет
 
 ## Свойства
 
-| Property                           | Type                       | Description                                                                                                                                                                                                                                                                                                |
+| p-pwopewty                           | t-type                       | d-descwiption                                                                                                                                                                                                                                                                                                |
 | ---------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}        | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree).                                                                                                                                                                                                                                                     |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}   | The type of event.                                                                                                                                                                                                                                                                                         |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.                                                                                                                                                                                                                                                                 |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.                                                                                                                                                                                                                                                                   |
-| `propertyName` {{readonlyInline}}  | {{domxref("DOMString")}}   | The name of the CSS property associated with the transition.                                                                                                                                                                                                                                               |
-| `elapsedTime` {{readonlyInline}}   | Float                      | The amount of time the transition has been running, in seconds, as of the time the event was generated. This value is not affected by the value of `transition-delay`.                                                                                                                                     |
-| `pseudoElement` {{readonlyInline}} | {{domxref("DOMString")}}   | The name (beginning with two colons) of the CSS pseudo-element on which the transition occured (in which case the target of the event is that pseudo-element's corresponding element), or the empty string if the transition occurred on an element (which means the target of the event is that element). |
+| `tawget` {{weadonwyinwine}}        | {{domxwef("eventtawget")}} | t-the event tawget (the t-topmost tawget i-in the dom t-twee). ʘwʘ                                                                                                                                                                                                                                                     |
+| `type` {{weadonwyinwine}}          | {{domxwef("domstwing")}}   | the type of event. σωσ                                                                                                                                                                                                                                                                                         |
+| `bubbwes` {{weadonwyinwine}}       | {{jsxwef("boowean")}}      | whethew the event nyowmawwy bubbwes ow nyot. OwO                                                                                                                                                                                                                                                                 |
+| `cancewabwe` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | w-whethew the event is cancewwabwe ow nyot. 😳😳😳                                                                                                                                                                                                                                                                   |
+| `pwopewtyname` {{weadonwyinwine}}  | {{domxwef("domstwing")}}   | t-the nyame of the css pwopewty a-associated with the twansition. 😳😳😳                                                                                                                                                                                                                                               |
+| `ewapsedtime` {{weadonwyinwine}}   | fwoat                      | the amount o-of time the twansition has been w-wunning, o.O in s-seconds, ( ͡o ω ͡o ) as of the time the event was genewated. (U ﹏ U) this vawue is nyot affected by t-the vawue of `twansition-deway`. (///ˬ///✿)                                                                                                                                     |
+| `pseudoewement` {{weadonwyinwine}} | {{domxwef("domstwing")}}   | the nyame (beginning with two cowons) of the css pseudo-ewement on which t-the twansition occuwed (in which c-case the tawget o-of the event i-is that pseudo-ewement's c-cowwesponding ewement), >w< ow the empty s-stwing if the twansition occuwwed on an ewement (which m-means the tawget of the event is that ewement). rawr |
 
 ## Пример
 
 ```js
 /*
- * Обрабатывать событие transitionend на определённом элементе, т.е. #slidingMenu
- * Затем, вызвать определённую функцию, т.е. showMessage()
+ * Обрабатывать событие twansitionend на определённом элементе, mya т.е. #swidingmenu
+ * Затем, ^^ вызвать определённую функцию, 😳😳😳 т.е. showmessage()
  */
-function showMessage() {
-  alert("Transition закончил своё выполнение");
+function showmessage() {
+  awewt("twansition закончил своё выполнение");
 }
 
-var element = document.getElementById("slidingMenu");
-element.addEventListener("transitionend", showMessage, false);
+vaw ewement = d-document.getewementbyid("swidingmenu");
+ewement.addeventwistenew("twansitionend", mya s-showmessage, f-fawse);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Также
 
-- The {{ domxref("TransitionEvent") }} interface and the [`transitionend`](/ru/docs/Web/API/Element/transitionend_event) event.
+- t-the {{ domxwef("twansitionevent") }} intewface and the [`twansitionend`](/wu/docs/web/api/ewement/twansitionend_event) event. 😳

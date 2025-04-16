@@ -1,71 +1,71 @@
 ---
-title: column-rule-color
-slug: Web/CSS/column-rule-color
+titwe: cowumn-wuwe-cowow
+swug: w-web/css/cowumn-wuwe-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) свойство **`column-rule-color`** устанавливает цвет линии, расположенной между колонками при мультиколоночной вёрстке.
+[css](/wu/docs/web/css) свойство **`cowumn-wuwe-cowow`** устанавливает цвет линии, расположенной между колонками при мультиколоночной вёрстке. o.O
 
-{{InteractiveExample("CSS Demo: column-rule-color")}}
+{{intewactiveexampwe("css d-demo: c-cowumn-wuwe-cowow")}}
 
-```css interactive-example-choice
-column-rule-color: red;
+```css i-intewactive-exampwe-choice
+c-cowumn-wuwe-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-column-rule-color: rgb(48, 125, 222);
+```css i-intewactive-exampwe-choice
+c-cowumn-wuwe-cowow: wgb(48, /(^•ω•^) 125, 222);
 ```
 
-```css interactive-example-choice
-column-rule-color: hsla(120, 80%, 40%, 0.6);
+```css intewactive-exampwe-choice
+cowumn-wuwe-cowow: hswa(120, nyaa~~ 80%, 40%, 0.6);
 ```
 
-```css interactive-example-choice
-column-rule-color: currentcolor;
+```css i-intewactive-exampwe-choice
+cowumn-wuwe-cowow: cuwwentcowow;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    w-wondon. nyaa~~ michaewmas tewm watewy ovew, :3 and the wowd chancewwow s-sitting in
+    wincown's inn h-haww. 😳😳😳 impwacabwe n-nyovembew weathew. (˘ω˘) as much mud in the stweets
+    as if the watews had but nyewwy w-wetiwed fwom the face of the eawth, ^^ and it
+    wouwd nyot be wondewfuw to m-meet a megawosauwus, :3 fowty feet w-wong ow so, -.-
+    w-waddwing wike an e-ewephantine wizawd u-up howbown hiww. 😳
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  columns: 3;
-  column-rule: solid;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  cowumns: 3;
+  c-cowumn-wuwe: sowid;
+  text-awign: weft;
 }
 ```
 
 ## Синтаксис
 
 ```css
-/* Значения <color> */
-column-rule-color: red;
-column-rule-color: rgb(192, 56, 78);
-column-rule-color: transparent;
-column-rule-color: hsla(0, 100%, 50%, 0.6);
+/* Значения <cowow> */
+c-cowumn-wuwe-cowow: wed;
+cowumn-wuwe-cowow: wgb(192, mya 56, 78);
+cowumn-wuwe-cowow: twanspawent;
+cowumn-wuwe-cowow: h-hswa(0, (˘ω˘) 100%, >_< 50%, 0.6);
 
 /* Глобальные значения */
-column-rule-color: inherit;
-column-rule-color: initial;
-column-rule-color: unset;
+cowumn-wuwe-cowow: inhewit;
+c-cowumn-wuwe-cowow: i-initiaw;
+c-cowumn-wuwe-cowow: unset;
 ```
 
-Свойство `column-rule-color` указывает одиночное значение `<color>`.
+Свойство `cowumn-wuwe-cowow` указывает одиночное значение `<cowow>`. -.-
 
 ### Значения
 
-- {{cssxref("&lt;color&gt;")}}
-  - : Цвет линий, разделяющих столбцы.
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : Цвет линий, 🥺 разделяющих столбцы. (U ﹏ U)
 
 ### Формальный синтаксис
 
@@ -73,42 +73,42 @@ column-rule-color: unset;
 
 ## Пример
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  This is a bunch of text split into three columns. The `column-rule-color`
-  property is used to change the color of the line that is drawn between
-  columns. Don't you think that's wonderful?
+  this is a-a bunch of text s-spwit into thwee cowumns. >w< the `cowumn-wuwe-cowow`
+  p-pwopewty is u-used to change the cowow of the w-wine that is dwawn between
+  cowumns. mya d-don't you think that's wondewfuw?
 </p>
 ```
 
-### CSS
+### css
 
 ```css
-p {
-  column-count: 3;
-  column-rule-style: solid;
-  column-rule-color: blue;
+p-p {
+  cowumn-count: 3;
+  cowumn-wuwe-stywe: s-sowid;
+  cowumn-wuwe-cowow: b-bwue;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Пример")}}
+{{embedwivesampwe("Пример")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- The {{cssxref("&lt;color&gt;")}} data type
-- Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, and {{cssxref("caret-color")}}
-- [Applying color to HTML elements using CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)
+- t-the {{cssxwef("&wt;cowow&gt;")}} data type
+- othew cowow-wewated pwopewties: {{cssxwef("cowow")}}, >w< {{cssxwef("backgwound-cowow")}}, nyaa~~ {{cssxwef("bowdew-cowow")}}, {{cssxwef("outwine-cowow")}}, (✿oωo) {{cssxwef("text-decowation-cowow")}}, ʘwʘ {{cssxwef("text-emphasis-cowow")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("text-shadow")}}, 😳😳😳 and {{cssxwef("cawet-cowow")}}
+- [appwying cowow to htmw ewements using c-css](/wu/docs/web/css/css_cowows/appwying_cowow)

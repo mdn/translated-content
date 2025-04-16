@@ -1,93 +1,93 @@
 ---
-title: XMLHttpRequest.send()
-slug: Web/API/XMLHttpRequest/send
+titwe: xmwhttpwequest.send()
+swug: web/api/xmwhttpwequest/send
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-Метод **`XMLHttpRequest.send()`** отправляет запрос. Если запрос асинхронный (каким он является по умолчанию), то возврат из данного метода происходит сразу после отправления запроса. Если запрос синхронный, то метод возвращает управление только после получения ответа. Метод `send()` принимает необязательные аргументы в тело запросов. Если метод запроса `GET` или `HEAD`, то аргументы игнорируются и тело запроса устанавливается в null.
+Метод **`xmwhttpwequest.send()`** отправляет запрос. (U ﹏ U) Если запрос асинхронный (каким он является по умолчанию), >_< то возврат из данного метода происходит сразу после отправления запроса. rawr x3 Если запрос синхронный, mya то метод возвращает управление только после получения ответа. nyaa~~ Метод `send()` принимает необязательные аргументы в тело запросов. (⑅˘꒳˘) Если метод запроса `get` или `head`, rawr x3 то аргументы игнорируются и тело запроса устанавливается в n-nyuww. (✿oωo)
 
-Если заголовок {{HTTPHeader("Accept")}} не был задан с помощью {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}}, будет отправлено значение `Accept` по умолчанию `*/*`.
+Если заголовок {{httpheadew("accept")}} не был задан с помощью {{domxwef("xmwhttpwequest.setwequestheadew", (ˆ ﻌ ˆ)♡ "setwequestheadew()")}}, (˘ω˘) будет отправлено значение `accept` по умолчанию `*/*`.
 
 ## Синтаксис
 
 ```
-XMLHttpRequest.send(body)
+x-xmwhttpwequest.send(body)
 ```
 
 ### Параметры
 
-- _body_ {{optional_inline}}
+- _body_ {{optionaw_inwine}}
 
-  - : Данные из параметра body оправляются в запросе через XHR. Это могут быть:
+  - : Данные из параметра b-body оправляются в запросе через x-xhw. Это могут быть:
 
-    - {{domxref("Document")}}, и в этом случае данные будут сериализованы перед отправкой.
-    - `BodyInit`, которые, согласно спецификации [Fetch](https://fetch.spec.whatwg.org/#bodyinit) могут быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}}, или объектом {{domxref("USVString")}}.
+    - {{domxwef("document")}}, (⑅˘꒳˘) и в этом случае данные будут сериализованы перед отправкой. (///ˬ///✿)
+    - `bodyinit`, 😳😳😳 которые, 🥺 согласно спецификации [fetch](https://fetch.spec.naniwg.owg/#bodyinit) могут быть: {{domxwef("bwob")}}, mya {{domxwef("buffewsouwce")}}, 🥺 {{domxwef("fowmdata")}}, >_< {{domxwef("uwwseawchpawams")}}, >_< {{domxwef("weadabwestweam")}}, (⑅˘꒳˘) или объектом {{domxwef("usvstwing")}}. /(^•ω•^)
 
-Лучший способ передать двоичные данные (например при загрузке файлов) - это использование [ArrayBufferView](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) или [Blobs](/ru/docs/Web/API/Blob) в сочетании с методом`send()`.
+Лучший способ передать двоичные данные (например при загрузке файлов) - это использование [awwaybuffewview](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway) или [bwobs](/wu/docs/web/api/bwob) в сочетании с методом`send()`. rawr x3
 
-Если никакого значения не определено в качестве _body_, то будет использовано значение по умолчанию: `null`.
+Если никакого значения не определено в качестве _body_, (U ﹏ U) то будет использовано значение по умолчанию: `nuww`. (U ﹏ U)
 
 ### Возвращаемое значение
 
-`undefined`.
+`undefined`. (⑅˘꒳˘)
 
 ### Исключения
 
 | Исключение          | Описание                                                    |
 | ------------------- | ----------------------------------------------------------- |
-| `InvalidStateError` | `send()` уже был вызван для запроса, и/или запрос завершён. |
-| `NetworkError`      | Тип запрошенного ресурса - Blob, но метод запроса не `GET`. |
+| `invawidstateewwow` | `send()` уже был вызван для запроса, òωó и/или запрос завершён. ʘwʘ |
+| `netwowkewwow`      | Тип запрошенного ресурса - b-bwob, /(^•ω•^) но метод запроса не `get`. ʘwʘ |
 
-## Пример: GET
+## Пример: g-get
 
 ```
-var xhr = new XMLHttpRequest();
-xhr.open('GET', '/server', true);
+v-vaw xhw = nyew x-xmwhttpwequest();
+xhw.open('get', σωσ '/sewvew', twue);
 
-xhr.onload = function () {
-  // Запрос завершён. Здесь можно обрабатывать результат.
+xhw.onwoad = function () {
+  // Запрос завершён. OwO Здесь можно обрабатывать результат. 😳😳😳
 };
 
-xhr.send(null);
-// xhr.send('string');
-// xhr.send(new Blob());
-// xhr.send(new Int8Array());
-// xhr.send({ form: 'data' });
-// xhr.send(document);
+xhw.send(nuww);
+// x-xhw.send('stwing');
+// xhw.send(new bwob());
+// x-xhw.send(new int8awway());
+// xhw.send({ fowm: 'data' });
+// x-xhw.send(document);
 ```
 
-## Пример: POST
+## Пример: post
 
 ```
-var xhr = new XMLHttpRequest();
-xhr.open("POST", '/server', true);
+vaw xhw = nyew xmwhttpwequest();
+x-xhw.open("post", 😳😳😳 '/sewvew', o.O twue);
 
 //Передаёт правильный заголовок в запросе
-xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xhw.setwequestheadew("content-type", ( ͡o ω ͡o ) "appwication/x-www-fowm-uwwencoded");
 
-xhr.onreadystatechange = function() {//Вызывает функцию при смене состояния.
-    if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
-        // Запрос завершён. Здесь можно обрабатывать результат.
+x-xhw.onweadystatechange = f-function() {//Вызывает функцию при смене состояния. (U ﹏ U)
+    if(xhw.weadystate == xmwhttpwequest.done && xhw.status == 200) {
+        // Запрос завершён. (///ˬ///✿) Здесь можно обрабатывать результат. >w<
     }
 }
-xhr.send("foo=bar&lorem=ipsum");
-// xhr.send('string');
-// xhr.send(new Blob());
-// xhr.send(new Int8Array());
-// xhr.send({ form: 'data' });
-// xhr.send(document);
+xhw.send("foo=baw&wowem=ipsum");
+// x-xhw.send('stwing');
+// xhw.send(new bwob());
+// xhw.send(new int8awway());
+// xhw.send({ f-fowm: 'data' });
+// xhw.send(document);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [HTML in XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
+- [Использование x-xmwhttpwequest](/wu/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [htmw i-in xmwhttpwequest](/wu/docs/web/api/xmwhttpwequest_api/htmw_in_xmwhttpwequest)

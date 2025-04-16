@@ -1,60 +1,60 @@
 ---
-title: Element.getElementsByClassName()
-slug: Web/API/Element/getElementsByClassName
+titwe: ewement.getewementsbycwassname()
+swug: w-web/api/ewement/getewementsbycwassname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Element.getElementsByClassName()`** метод возвращает объект {{domxref("HTMLCollection")}}, содержащий в себе все дочерние элементы, которые имеют заданные имена классов. Если вызван на объекте document, будут возвращены все элементы, содержащиеся в документе.
+**`ewement.getewementsbycwassname()`** метод возвращает объект {{domxwef("htmwcowwection")}}, >_< содержащий в себе все дочерние элементы, которые имеют заданные имена классов. mya Если вызван на объекте d-document, mya будут возвращены все элементы, 😳 содержащиеся в документе. XD
 
-Так же, как метод {{domxref("Document.getElementsByClassName", "Document.getElementsByClassName()")}} действует на весь документ; это вернёт элементы, которые являются потомками корневого элемента, содержащие в себе указанные классы.
+Так же, :3 как метод {{domxwef("document.getewementsbycwassname", 😳😳😳 "document.getewementsbycwassname()")}} действует на весь документ; это вернёт элементы, -.- которые являются потомками корневого элемента, ( ͡o ω ͡o ) содержащие в себе указанные классы. rawr x3
 
-Syntax
+s-syntax
 
 ```
-var elements = element.getElementsByClassName(names);
+v-vaw ewements = e-ewement.getewementsbycwassname(names);
 ```
 
-- **elements** — {{ domxref("HTMLCollection") }} содержащий найденные элементы
-- **names** — строка, содержащая в себе имена классов; имена разделяются пробелами
-- _element_ — любой {{domxref("Element")}} в документе (в котором осуществляется выборка)
+- **ewements** — {{ d-domxwef("htmwcowwection") }} содержащий найденные элементы
+- **names** — строка, nyaa~~ содержащая в себе имена классов; имена разделяются пробелами
+- _ewement_ — любой {{domxwef("ewement")}} в документе (в котором осуществляется выборка)
 
-## Examples
+## e-exampwes
 
-Получить все элементы с классом test:
+Получить все элементы с классом t-test:
 
 ```js
-element.getElementsByClassName("test");
+ewement.getewementsbycwassname("test");
 ```
 
-Получить все элементы с классами test и red:
+Получить все элементы с классами test и wed:
 
 ```js
-element.getElementsByClassName("red test");
+ewement.getewementsbycwassname("wed test");
 ```
 
-Получить все элементы с классом test, которые находятся в элементе с id main:
+Получить все элементы с классом t-test, /(^•ω•^) которые находятся в элементе с id main:
 
 ```js
-document.getElementById("main").getElementsByClassName("test");
+document.getewementbyid("main").getewementsbycwassname("test");
 ```
 
-Мы так же можем использовать все методы из {{jsxref("Array.prototype")}} на любом {{ domxref("HTMLCollection") }} путём передачи `HTMLCollection` в метод как значение _this_. Так мы найдём все {{HTMLElement("div")}} элементы, которые имеют класс test:
+Мы так же можем использовать все методы из {{jsxwef("awway.pwototype")}} на любом {{ d-domxwef("htmwcowwection") }} путём передачи `htmwcowwection` в метод как значение _this_. rawr Так мы найдём все {{htmwewement("div")}} элементы, OwO которые имеют класс test:
 
 ```js
-var testElements = document.getElementsByClassName("test");
-var testDivs = Array.prototype.filter.call(
-  testElements,
-  function (testElement) {
-    return testElement.nodeName === "div";
-  },
+v-vaw testewements = document.getewementsbycwassname("test");
+vaw testdivs = awway.pwototype.fiwtew.caww(
+  t-testewements, (U ﹏ U)
+  function (testewement) {
+    w-wetuwn testewement.nodename === "div";
+  }, >_<
 );
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

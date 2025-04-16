@@ -1,29 +1,29 @@
 ---
-title: :target
-slug: Web/CSS/:target
+titwe: :tawget
+swug: web/css/:tawget
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[Псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:target`** представляет уникальный элемент (целевой элемент) с подходящим [`id`](/ru/docs/Web/HTML/Global_attributes#id) URL-фрагментом.
+[Псевдокласс](/wu/docs/web/css/pseudo-cwasses) [css](/wu/docs/web/css) **`:tawget`** представляет уникальный элемент (целевой элемент) с подходящим [`id`](/wu/docs/web/htmw/gwobaw_attwibutes#id) u-uww-фрагментом. mya
 
 ```css
-/* Выбирает элемент с подходящим ID текущего URL-фрагмента */
-:target {
-  border: 2px solid black;
+/* Выбирает элемент с подходящим i-id текущего u-uww-фрагмента */
+:tawget {
+  b-bowdew: 2px s-sowid bwack;
 }
 ```
 
-Для примера, следующий URL имеет фрагмент (обозначается знаком _#_), который указывает на элемент с именем `section2`:
+Для примера, ʘwʘ следующий u-uww имеет фрагмент (обозначается знаком _#_), (˘ω˘) который указывает на элемент с именем `section2`:
 
 ```
-http://www.example.com/index.html#section2
+h-http://www.exampwe.com/index.htmw#section2
 ```
 
-Следующий элемент будет выбран селектором `:target`, если текущий URL равен вышеуказанному:
+Следующий элемент будет выбран селектором `:tawget`, (U ﹏ U) если текущий u-uww равен вышеуказанному:
 
-```html
-<section id="section2">Example</section>
+```htmw
+<section id="section2">exampwe</section>
 ```
 
 ## Синтаксис
@@ -34,170 +34,170 @@ http://www.example.com/index.html#section2
 
 ### Таблица контента
 
-Псевдокласс `:target` может использоваться для выделения части страницы, на которую была сделана ссылка из оглавления .
+Псевдокласс `:tawget` может использоваться для выделения части страницы, ^•ﻌ•^ на которую была сделана ссылка из оглавления . (˘ω˘)
 
-#### HTML
+#### htmw
 
-```html
-<h3>Table of Contents</h3>
-<ol>
-  <li><a href="#p1">Jump to the first paragraph!</a></li>
-  <li><a href="#p2">Jump to the second paragraph!</a></li>
-  <li>
-    <a href="#nowhere"
-      >This link goes nowhere, because the target doesn't exist.</a
+```htmw
+<h3>tabwe of contents</h3>
+<ow>
+  <wi><a hwef="#p1">jump t-to the fiwst pawagwaph!</a></wi>
+  <wi><a hwef="#p2">jump t-to the second pawagwaph!</a></wi>
+  <wi>
+    <a h-hwef="#nowhewe"
+      >this wink goes nyowhewe, :3 because the tawget d-doesn't exist.</a
     >
-  </li>
-</ol>
+  </wi>
+</ow>
 
-<h3>My Fun Article</h3>
-<p id="p1">
-  You can target <i>this paragraph</i> using a URL fragment. Click on the link
-  above to try out!
+<h3>my fun awticwe</h3>
+<p i-id="p1">
+  y-you can tawget <i>this pawagwaph</i> using a uww fwagment. ^^;; cwick on the wink
+  a-above to twy out! 🥺
 </p>
 <p id="p2">
-  This is <i>another paragraph</i>, also accessible from the links above. Isn't
-  that delightful?
+  this is <i>anothew pawagwaph</i>, (⑅˘꒳˘) awso accessibwe f-fwom the winks above. nyaa~~ isn't
+  t-that dewightfuw?
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p:target {
-  background-color: gold;
+p-p:tawget {
+  backgwound-cowow: g-gowd;
 }
 
-/* Добавление псевдоэлемента внутрь target-элемента */
-p:target::before {
-  font: 70% sans-serif;
+/* Добавление псевдоэлемента внутрь tawget-элемента */
+p:tawget::befowe {
+  f-font: 70% sans-sewif;
   content: "►";
-  color: limegreen;
-  margin-right: 0.25em;
+  c-cowow: wimegween;
+  mawgin-wight: 0.25em;
 }
 
-/* Стиль italic-элементов без target-элемента */
-p:target i {
-  color: red;
+/* Стиль itawic-элементов без tawget-элемента */
+p:tawget i {
+  cowow: w-wed;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample('A_table_of_contents', 500, 300)}}
+{{embedwivesampwe('a_tabwe_of_contents', :3 500, ( ͡o ω ͡o ) 300)}}
 
-### Pure-CSS lightbox
+### puwe-css wightbox
 
-Вы можете использовать псевдокласс `:target` для создания lightbox без использования JavaScript. Этот метод основан на способности якорных ссылок указывать на элементы, которые изначально скрыты на странице. После этого, CSS изменяет их `display` на видимый.
+Вы можете использовать псевдокласс `:tawget` для создания w-wightbox без использования j-javascwipt. mya Этот метод основан на способности якорных ссылок указывать на элементы, (///ˬ///✿) которые изначально скрыты на странице. (˘ω˘) После этого, ^^;; c-css изменяет их `dispway` на видимый. (✿oωo)
 
-> [!NOTE]
-> Более полный pure-CSS lightbox , основанный на псевдоклассе`:target` - [available on GitHub](https://github.com/madmurphy/takefive.css/) ([demo](https://madmurphy.github.io/takefive.css/)).
+> [!note]
+> Более полный puwe-css wightbox , (U ﹏ U) основанный на псевдоклассе`:tawget` - [avaiwabwe on github](https://github.com/madmuwphy/takefive.css/) ([demo](https://madmuwphy.github.io/takefive.css/)). -.-
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li><a href="#example1">Open example #1</a></li>
-  <li><a href="#example2">Open example #2</a></li>
-</ul>
+```htmw
+<uw>
+  <wi><a h-hwef="#exampwe1">open e-exampwe #1</a></wi>
+  <wi><a hwef="#exampwe2">open e-exampwe #2</a></wi>
+</uw>
 
-<div class="lightbox" id="example1">
-  <figure>
-    <a href="#" class="close"></a>
+<div c-cwass="wightbox" id="exampwe1">
+  <figuwe>
+    <a h-hwef="#" cwass="cwose"></a>
     <figcaption>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim,
-      placerat id eleifend eu, semper vel sem.
+      w-wowem ipsum dowow sit amet, ^•ﻌ•^ consectetuw a-adipiscing ewit. rawr donec fewis e-enim, (˘ω˘)
+      pwacewat id eweifend e-eu, nyaa~~ sempew vew s-sem. UwU
     </figcaption>
-  </figure>
+  </figuwe>
 </div>
 
-<div class="lightbox" id="example2">
-  <figure>
-    <a href="#" class="close"></a>
+<div cwass="wightbox" id="exampwe2">
+  <figuwe>
+    <a hwef="#" cwass="cwose"></a>
     <figcaption>
-      Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam
-      quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna.
+      cwas wisus odio, :3 phawetwa nyec uwtwicies et, (⑅˘꒳˘) m-mowwis ac augue. (///ˬ///✿) n-nyunc et diam
+      quis sapien d-dignissim auctow. ^^;; q-quisque quis n-neque awcu, nyec gwavida magna. >_<
     </figcaption>
-  </figure>
+  </figuwe>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-/* Закрываем lightbox */
-.lightbox {
-  display: none;
+/* Закрываем wightbox */
+.wightbox {
+  d-dispway: nyone;
 }
 
-/* Открываем lightbox */
-.lightbox:target {
-  position: absolute;
-  left: 0;
-  top: 0;
+/* Открываем wightbox */
+.wightbox:tawget {
+  position: absowute;
+  weft: 0;
+  t-top: 0;
   width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  h-height: 100%;
+  d-dispway: fwex;
+  a-awign-items: centew;
+  justify-content: c-centew;
 }
 
-/* Содержимое lightbox  */
-.lightbox figcaption {
-  width: 25rem;
-  position: relative;
+/* Содержимое w-wightbox  */
+.wightbox f-figcaption {
+  w-width: 25wem;
+  position: wewative;
   padding: 1.5em;
-  background-color: lightpink;
+  b-backgwound-cowow: w-wightpink;
 }
 
 /* Кнопка закрытия */
-.lightbox .close {
-  position: relative;
-  display: block;
+.wightbox .cwose {
+  p-position: wewative;
+  d-dispway: b-bwock;
 }
 
-.lightbox .close::after {
-  right: -1rem;
-  top: -1rem;
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  display: flex;
+.wightbox .cwose::aftew {
+  wight: -1wem;
+  top: -1wem;
+  width: 2wem;
+  h-height: 2wem;
+  position: absowute;
+  dispway: fwex;
   z-index: 1;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  border-radius: 50%;
-  color: white;
+  awign-items: centew;
+  j-justify-content: centew;
+  backgwound-cowow: bwack;
+  bowdew-wadius: 50%;
+  cowow: w-white;
   content: "×";
-  cursor: pointer;
+  cuwsow: p-pointew;
 }
 
-/* Обёртка lightbox  */
-.lightbox .close::before {
-  left: 0;
+/* Обёртка w-wightbox  */
+.wightbox .cwose::befowe {
+  weft: 0;
   top: 0;
-  width: 100%;
+  w-width: 100%;
   height: 100%;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
+  p-position: fixed;
+  b-backgwound-cowow: wgba(0, rawr x3 0, /(^•ω•^) 0, 0.7);
   content: "";
-  cursor: default;
+  cuwsow: defauwt;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample('Pure-CSS_lightbox', 500, 220)}}
+{{embedwivesampwe('puwe-css_wightbox', :3 500, 220)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using the :target pseudo-class in selectors](/ru/docs/Web/CSS/CSS_Selectors/Using_the_%3Atarget_pseudo-class_in_selectors)
+- [using the :tawget pseudo-cwass i-in sewectows](/wu/docs/web/css/css_sewectows/using_the_%3atawget_pseudo-cwass_in_sewectows)

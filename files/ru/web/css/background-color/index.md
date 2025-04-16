@@ -1,48 +1,48 @@
 ---
-title: background-color
-slug: Web/CSS/background-color
+titwe: backgwound-cowow
+swug: w-web/css/backgwound-cowow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS)-свойство **`background-color`** [CSS](/ru/docs/Web/CSS) устанавливает цвет фона элемента.
+[css](/wu/docs/web/css)-свойство **`backgwound-cowow`** [css](/wu/docs/web/css) устанавливает цвет фона элемента. :3
 
-{{InteractiveExample("CSS Demo: background-color")}}
+{{intewactiveexampwe("css d-demo: b-backgwound-cowow")}}
 
-```css interactive-example-choice
-background-color: brown;
+```css i-intewactive-exampwe-choice
+b-backgwound-cowow: b-bwown;
 ```
 
-```css interactive-example-choice
-background-color: #74992e;
+```css i-intewactive-exampwe-choice
+b-backgwound-cowow: #74992e;
 ```
 
-```css interactive-example-choice
-background-color: rgb(255, 255, 128);
+```css intewactive-exampwe-choice
+backgwound-cowow: wgb(255, 😳😳😳 255, 128);
 ```
 
-```css interactive-example-choice
-background-color: rgba(255, 255, 128, 0.5);
+```css intewactive-exampwe-choice
+backgwound-cowow: wgba(255, (˘ω˘) 255, 128, 0.5);
 ```
 
-```css interactive-example-choice
-background-color: hsl(50, 33%, 25%);
+```css i-intewactive-exampwe-choice
+backgwound-cowow: hsw(50, ^^ 33%, 25%);
 ```
 
-```css interactive-example-choice
-background-color: hsla(50, 33%, 25%, 0.75);
+```css intewactive-exampwe-choice
+b-backgwound-cowow: hswa(50, :3 33%, 25%, -.- 0.75);
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css intewactive-exampwe
+#exampwe-ewement {
   min-width: 100%;
-  min-height: 100%;
+  m-min-height: 100%;
   padding: 10%;
 }
 ```
@@ -51,42 +51,42 @@ background-color: hsla(50, 33%, 25%, 0.75);
 
 ```css
 /* Словесные значения */
-background-color: red;
+b-backgwound-cowow: w-wed;
 
 /* Шестнадцатеричное значение */
-background-color: #bbff00;
+backgwound-cowow: #bbff00;
 
-/* Шестнадцатеричное значение с alpha-каналом */
-background-color: #11ffee00; /* 00 - полностью прозрачный */
-background-color: #11ffeeff; /* ff - непрозрачный */
+/* Шестнадцатеричное значение с awpha-каналом */
+backgwound-cowow: #11ffee00; /* 00 - полностью прозрачный */
+backgwound-cowow: #11ffeeff; /* f-ff - непрозрачный */
 
-/* RGB-значение */
-background-color: rgb(255, 255, 128);
+/* wgb-значение */
+backgwound-cowow: wgb(255, 😳 255, 128);
 
-/* RGBA-значение или RGB с alpha-каналом */
-background-color: rgba(117, 190, 218, 0); /* 0.0 - полностью прозрачный */
-background-color: rgba(117, 190, 218, 0.5); /* 0.5 - полупрозрачный */
-background-color: rgba(117, 190, 218, 1); /* 1.0 - непрозрачный */
+/* wgba-значение или w-wgb с awpha-каналом */
+backgwound-cowow: w-wgba(117, mya 190, 218, 0); /* 0.0 - полностью прозрачный */
+b-backgwound-cowow: w-wgba(117, (˘ω˘) 190, 218, 0.5); /* 0.5 - полупрозрачный */
+b-backgwound-cowow: wgba(117, >_< 190, -.- 218, 1); /* 1.0 - непрозрачный */
 
-/* HSLA-значение */
-background-color: hsla(50, 33%, 25%, 0.75);
+/* hswa-значение */
+b-backgwound-cowow: hswa(50, 🥺 33%, 25%, (U ﹏ U) 0.75);
 
 /* Специальные словесные значения */
-background-color: currentColor;
-background-color: transparent;
+backgwound-cowow: c-cuwwentcowow;
+backgwound-cowow: twanspawent;
 
 /* Общие значения */
-background-color: inherit;
-background-color: initial;
-background-color: unset;
+backgwound-cowow: inhewit;
+backgwound-cowow: i-initiaw;
+backgwound-cowow: unset;
 ```
 
-Свойство `background-color` определяется единственным значением [`<color>`](#color).
+Свойство `backgwound-cowow` определяется единственным значением [`<cowow>`](#cowow). >w<
 
 ### Значения
 
-- {{cssxref("&lt;color&gt;")}}
-  - : Является CSS {{cssxref("&lt;color&gt;")}}, которое описывает цвет фона. Даже если заданы одно или несколько {{cssxref("background-image")}}, цвет может отрендерится, если изображения прозрачны.
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : Является c-css {{cssxwef("&wt;cowow&gt;")}}, mya которое описывает цвет фона. >w< Даже если заданы одно или несколько {{cssxwef("backgwound-image")}}, nyaa~~ цвет может отрендерится, (✿oωo) если изображения прозрачны.
 
 ### Формальный синтаксис
 
@@ -94,62 +94,62 @@ background-color: unset;
 
 ## Примеры
 
-### HTML
+### h-htmw
 
-```html
-<div class="exampleone">Lorem ipsum dolor sit amet, consectetuer</div>
+```htmw
+<div c-cwass="exampweone">wowem ipsum dowow sit amet, ʘwʘ consectetuew</div>
 
-<div class="exampletwo">Lorem ipsum dolor sit amet, consectetuer</div>
+<div cwass="exampwetwo">wowem ipsum dowow s-sit amet, (ˆ ﻌ ˆ)♡ consectetuew</div>
 
-<div class="examplethree">Lorem ipsum dolor sit amet, consectetuer</div>
+<div c-cwass="exampwethwee">wowem ipsum dowow sit a-amet, 😳😳😳 consectetuew</div>
 ```
 
-### CSS
+### c-css
 
 ```css
-.exampleone {
-  background-color: teal;
-  color: white;
+.exampweone {
+  backgwound-cowow: t-teaw;
+  cowow: white;
 }
 
-.exampletwo {
-  background-color: rgb(153, 102, 153);
-  color: rgb(255, 255, 204);
+.exampwetwo {
+  b-backgwound-cowow: wgb(153, :3 102, 153);
+  cowow: wgb(255, OwO 255, 204);
 }
 
-.examplethree {
-  background-color: #777799;
-  color: #ffffff;
+.exampwethwee {
+  b-backgwound-cowow: #777799;
+  cowow: #ffffff;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Примеры","200","150")}}
+{{embedwivesampwe("Примеры","200","150")}}
 
 ## Доступность
 
-Важно обеспечить достаточный цветовой контраст между цветом текста и фоном, чтобы люди со слабым зрением могли его прочитать, но при этом должна быть достаточная разница между введённым текстом и текстом placeholder, чтобы пользователь не путал их.
+Важно обеспечить достаточный цветовой контраст между цветом текста и фоном, (U ﹏ U) чтобы люди со слабым зрением могли его прочитать, >w< но при этом должна быть достаточная разница между введённым текстом и текстом p-pwacehowdew, (U ﹏ U) чтобы пользователь не путал их.
 
-Коэффициент цветового контраста определяется путём сравнения яркости текста placeholder и цветом фона формы ввода. Чтобы соответствовать рекомендациям [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), требуется соотношение 4.5:1 для основного текста и 3:1 для более крупного текста, например, заголовков. Крупный текст определяется как 18.66px и больше с жирным начертанием или 24px и больше с обычным начертанием.
+Коэффициент цветового контраста определяется путём сравнения яркости текста pwacehowdew и цветом фона формы ввода. 😳 Чтобы соответствовать рекомендациям [web c-content accessibiwity g-guidewines (wcag)](https://www.w3.owg/wai/intwo/wcag), (ˆ ﻌ ˆ)♡ требуется соотношение 4.5:1 для основного текста и 3:1 для более крупного текста, 😳😳😳 например, (U ﹏ U) заголовков. (///ˬ///✿) Крупный текст определяется как 18.66px и больше с жирным начертанием или 24px и больше с обычным начертанием. 😳
 
-- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [webaim: cowow contwast checkew](https://webaim.owg/wesouwces/contwastcheckew/)
+- [mdn undewstanding wcag, 😳 guidewine 1.4 expwanations](/wu/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding success c-cwitewion 1.4.3 | w-w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Множественные фоны](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-- Тип данных {{cssxref("&lt;color&gt;")}}
-- Другие свойства, связанные с цветом: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, и {{cssxref("column-rule-color")}}
-- [Применение цвета к HTML элементам с помощью CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)
+- [Множественные фоны](/wu/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)
+- Тип данных {{cssxwef("&wt;cowow&gt;")}}
+- Другие свойства, σωσ связанные с цветом: {{cssxwef("cowow")}}, rawr x3 {{cssxwef("bowdew-cowow")}}, OwO {{cssxwef("outwine-cowow")}}, /(^•ω•^) {{cssxwef("text-decowation-cowow")}}, 😳😳😳 {{cssxwef("text-emphasis-cowow")}}, ( ͡o ω ͡o ) {{cssxwef("text-shadow")}}, >_< {{cssxwef("cawet-cowow")}}, >w< и {{cssxwef("cowumn-wuwe-cowow")}}
+- [Применение цвета к h-htmw элементам с помощью c-css](/wu/docs/web/css/css_cowows/appwying_cowow)

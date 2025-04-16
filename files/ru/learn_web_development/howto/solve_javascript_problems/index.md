@@ -1,221 +1,221 @@
 ---
-title: Решите общие проблемы в вашем JavaScript-коде
-slug: Learn_web_development/Howto/Solve_JavaScript_problems
+titwe: Решите общие проблемы в вашем javascwipt-коде
+s-swug: weawn_web_devewopment/howto/sowve_javascwipt_pwobwems
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Следующие ссылки указывают на решение общих повседневных проблем, которые вам нужно будет исправить, чтобы код JavaScript работал правильно.
+Следующие ссылки указывают на решение общих повседневных проблем, 😳 которые вам нужно будет исправить, (⑅˘꒳˘) чтобы код j-javascwipt работал правильно. 😳😳😳
 
 ## Частые ошибки начинающих
 
 ### Правильное написание и оболочка
 
-Если ваш код не работает и / или браузер жалуется, что что-то не определено, убедитесь, что вы правильно указали все имена переменных, имена функций и т. д.
+Если ваш код не работает и / или браузер жалуется, 😳 что что-то не определено, XD убедитесь, mya что вы правильно указали все имена переменных, ^•ﻌ•^ имена функций и т. ʘwʘ д. ( ͡o ω ͡o )
 
-Некоторые общие встроенные функции браузера, которые вызывают проблемы:
+Некоторые общие встроенные функции браузера, mya которые вызывают проблемы:
 
-| Correct                    | Wrong                     |
+| c-cowwect                    | w-wwong                     |
 | -------------------------- | ------------------------- |
-| `getElementsByTagName()`   | `getElementbyTagName()`   |
-| `getElementsByName()`      | `getElementByName()`      |
-| `getElementsByClassName()` | `getElementByClassName()` |
-| `getElementById()`         | `getElementsById()`       |
+| `getewementsbytagname()`   | `getewementbytagname()`   |
+| `getewementsbyname()`      | `getewementbyname()`      |
+| `getewementsbycwassname()` | `getewementbycwassname()` |
+| `getewementbyid()`         | `getewementsbyid()`       |
 
 ### Положение двоеточия / точки с запятой
 
-Вам нужно убедиться, что вы не помещаете точки с запятой неправильно. Например:
+Вам нужно убедиться, o.O что вы не помещаете точки с запятой неправильно. (✿oωo) Например:
 
-| Correct                     | Wrong                       |
+| c-cowwect                     | w-wwong                       |
 | --------------------------- | --------------------------- |
-| `elem.style.color = 'red';` | `elem.style.color = 'red;'` |
+| `ewem.stywe.cowow = 'wed';` | `ewem.stywe.cowow = 'wed;'` |
 
 ### Функции
 
-Есть ряд вещей, которые могут пойти не так с функциями.
+Есть ряд вещей, :3 которые могут пойти не так с функциями. 😳
 
-Одна из наиболее распространённых ошибок - объявить функцию, но нигде ее не вызвать. Например
+Одна из наиболее распространённых ошибок - объявить функцию, (U ﹏ U) но нигде ее не вызвать. Например
 
 :
 
 ```js
-function myFunction() {
-  alert("This is my function.");
+function m-myfunction() {
+  a-awewt("this is my function.");
 }
 ```
 
-Этот код ничего не сделает, если вы его не вызовете, например
+Этот код ничего не сделает, mya если вы его не вызовете, (U ᵕ U❁) например
 
 ```js
-myFunction();
+myfunction();
 ```
 
 #### Область действия
 
-Помните, что [functions have their own scope](/ru/docs/Learn_web_development/Core/Scripting/Functions#function_scope_and_conflicts) —вы не можете получить доступ к значению переменной, установленному внутри функции извне функции, если вы не объявили переменную глобально (т. е. не внутри каких-либо функций), или [return the value](/ru/docs/Learn_web_development/Core/Scripting/Return_values) из функции.
+Помните, :3 что [functions have theiw own scope](/wu/docs/weawn_web_devewopment/cowe/scwipting/functions#function_scope_and_confwicts) —вы не можете получить доступ к значению переменной, mya установленному внутри функции извне функции, OwO если вы не объявили переменную глобально (т. (ˆ ﻌ ˆ)♡ е. не внутри каких-либо функций), ʘwʘ или [wetuwn the v-vawue](/wu/docs/weawn_web_devewopment/cowe/scwipting/wetuwn_vawues) из функции. o.O
 
 #### Запуск кода после оператора возврата
 
-Помните также, что когда вы возвращаете значение из функции, интерпретатор JavaScript выходит из функции - никакой код после выполнения оператора return не выполняется.
+Помните также, UwU что когда вы возвращаете значение из функции, rawr x3 интерпретатор javascwipt выходит из функции - никакой код после выполнения оператора wetuwn не выполняется. 🥺
 
-Фактически, некоторые браузеры (например, Firefox) выдадут вам сообщение об ошибке в консоли разработчика, если у вас есть код после оператора return. Firefox даёт вам «недостижимый код после оператора возврата».
+Фактически, :3 некоторые браузеры (например, (ꈍᴗꈍ) f-fiwefox) выдадут вам сообщение об ошибке в консоли разработчика, 🥺 если у вас есть код после оператора wetuwn. (✿oωo) f-fiwefox даёт вам «недостижимый код после оператора возврата». (U ﹏ U)
 
 ### Обозначение объекта по сравнению с обычным назначением
 
-Когда вы назначаете что-то в JavaScript, вы используете один знак равенства, например:
+Когда вы назначаете что-то в javascwipt, :3 вы используете один знак равенства, ^^;; например:
 
 ```js
-var myNumber = 0;
+vaw mynumbew = 0;
 ```
 
-Это не работает в [Objects](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects), однако - с объектами, вам нужно отделить имена членов от их значений, используя двоеточия, и разделить каждый элемент запятой, например:
+Это не работает в [objects](/wu/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects), rawr однако - с объектами, 😳😳😳 вам нужно отделить имена членов от их значений, (✿oωo) используя двоеточия, OwO и разделить каждый элемент запятой, ʘwʘ например:
 
 ```js
-var myObject = {
-  name: "Chris",
-  age: 38,
+vaw myobject = {
+  n-nyame: "chwis", (ˆ ﻌ ˆ)♡
+  age: 38, (U ﹏ U)
 };
 ```
 
 ## Основные определения
 
-- [What is JavaScript?](/ru/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#a_high-level_definition)
-- [What is a variable?](/ru/docs/Learn_web_development/Core/Scripting/Variables#what_is_a_variable)
-- [What are strings?](/ru/docs/Learn_web_development/Core/Scripting/Strings)
-- [What is an array?](/ru/docs/Learn_web_development/Core/Scripting/Arrays#what_is_an_array)
-- [What is a loop?](/ru/docs/Learn_web_development/Core/Scripting/Loops)
+- [nani i-is javascwipt?](/wu/docs/weawn_web_devewopment/cowe/scwipting/nani_is_javascwipt#a_high-wevew_definition)
+- [nani i-is a vawiabwe?](/wu/docs/weawn_web_devewopment/cowe/scwipting/vawiabwes#nani_is_a_vawiabwe)
+- [nani awe stwings?](/wu/docs/weawn_web_devewopment/cowe/scwipting/stwings)
+- [nani is an awway?](/wu/docs/weawn_web_devewopment/cowe/scwipting/awways#nani_is_an_awway)
+- [nani i-is a woop?](/wu/docs/weawn_web_devewopment/cowe/scwipting/woops)
 
 <!---->
 
-- [What is a function?](/ru/docs/Learn_web_development/Core/Scripting/Functions)
-- [What is an event?](/ru/docs/Learn_web_development/Core/Scripting/Events)
-- [What is an object?](/ru/docs/Learn_web_development/Core/Scripting/Object_basics#object_basics)
-- [What is JSON?](/ru/docs/Learn_web_development/Core/Scripting/JSON#no_really_what_is_json)
-- [What is a web API?](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#what_are_apis)
-- [What is the DOM?](/ru/docs/Learn_web_development/Core/Scripting/DOM_scripting#the_document_object_model)
+- [nani is a function?](/wu/docs/weawn_web_devewopment/cowe/scwipting/functions)
+- [nani is an event?](/wu/docs/weawn_web_devewopment/cowe/scwipting/events)
+- [nani i-is an object?](/wu/docs/weawn_web_devewopment/cowe/scwipting/object_basics#object_basics)
+- [nani i-is json?](/wu/docs/weawn_web_devewopment/cowe/scwipting/json#no_weawwy_nani_is_json)
+- [nani i-is a web a-api?](/wu/docs/weawn_web_devewopment/extensions/cwient-side_apis/intwoduction#nani_awe_apis)
+- [nani i-is the dom?](/wu/docs/weawn_web_devewopment/cowe/scwipting/dom_scwipting#the_document_object_modew)
 
-## Basic use cases
+## basic use cases
 
-### General
+### genewaw
 
-- [How do you add JavaScript to your page?](/ru/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#how_do_you_add_javascript_to_your_page)
-- [How do you add comments to JavaScript code?](/ru/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#comments)
+- [how d-do you add javascwipt to youw page?](/wu/docs/weawn_web_devewopment/cowe/scwipting/nani_is_javascwipt#how_do_you_add_javascwipt_to_youw_page)
+- [how d-do you add comments to javascwipt code?](/wu/docs/weawn_web_devewopment/cowe/scwipting/nani_is_javascwipt#comments)
 
-### Variables
+### vawiabwes
 
-- [How do you declare a variable?](/ru/docs/Learn_web_development/Core/Scripting/Variables#declaring_a_variable)
-- [How do you initialize a variable with a value?](/ru/docs/Learn_web_development/Core/Scripting/Variables#initializing_a_variable)
-- [How do you update a variable's value?](/ru/docs/Learn_web_development/Core/Scripting/Variables#updating_a_variable) (also see [Assignment operators](/ru/docs/Learn_web_development/Core/Scripting/Math#assignment_operators))
-- [What data types can values have in JavaScript?](/ru/docs/Learn_web_development/Core/Scripting/Variables#variable_types)
-- [What does 'loosely typed' mean?](/ru/docs/Learn_web_development/Core/Scripting/Variables#loose_typing)
+- [how do you decwawe a vawiabwe?](/wu/docs/weawn_web_devewopment/cowe/scwipting/vawiabwes#decwawing_a_vawiabwe)
+- [how d-do you initiawize a vawiabwe w-with a vawue?](/wu/docs/weawn_web_devewopment/cowe/scwipting/vawiabwes#initiawizing_a_vawiabwe)
+- [how d-do you u-update a vawiabwe's vawue?](/wu/docs/weawn_web_devewopment/cowe/scwipting/vawiabwes#updating_a_vawiabwe) (awso see [assignment opewatows](/wu/docs/weawn_web_devewopment/cowe/scwipting/math#assignment_opewatows))
+- [nani data types can vawues h-have in javascwipt?](/wu/docs/weawn_web_devewopment/cowe/scwipting/vawiabwes#vawiabwe_types)
+- [nani d-does 'woosewy typed' mean?](/wu/docs/weawn_web_devewopment/cowe/scwipting/vawiabwes#woose_typing)
 
-### Math
+### m-math
 
-- [What types of number do you have to deal with in web development?](/ru/docs/Learn_web_development/Core/Scripting/Math#types_of_numbers)
-- [How do you do basic math in JavaScript?](/ru/docs/Learn_web_development/Core/Scripting/Math#arithmetic_operators)
-- [What is operator precedence, and how is it handled in JavaScript?](/ru/docs/Learn_web_development/Core/Scripting/Math#operator_precedence)
-- [How do you increment and decrement values in JavaScript?](/ru/docs/Learn_web_development/Core/Scripting/Math#increment_and_decrement_operators)
-- [How do you compare values in JavaScript?](/ru/docs/Learn_web_development/Core/Scripting/Math#comparison_operators) (e.g. to see which one is bigger, or to see if one value is equal to another).
+- [nani t-types of nyumbew do y-you have to deaw with in web devewopment?](/wu/docs/weawn_web_devewopment/cowe/scwipting/math#types_of_numbews)
+- [how d-do you do basic math in javascwipt?](/wu/docs/weawn_web_devewopment/cowe/scwipting/math#awithmetic_opewatows)
+- [nani is o-opewatow pwecedence, UwU and how is i-it handwed in javascwipt?](/wu/docs/weawn_web_devewopment/cowe/scwipting/math#opewatow_pwecedence)
+- [how do you i-incwement and decwement v-vawues in javascwipt?](/wu/docs/weawn_web_devewopment/cowe/scwipting/math#incwement_and_decwement_opewatows)
+- [how do you compawe vawues in javascwipt?](/wu/docs/weawn_web_devewopment/cowe/scwipting/math#compawison_opewatows) (e.g. XD to see which one is biggew, ʘwʘ ow t-to see if one vawue i-is equaw to anothew). rawr x3
 
-### Strings
+### s-stwings
 
-- [How do you create a string in JavaScript?](/ru/docs/Learn_web_development/Core/Scripting/Strings#creating_a_string)
-- [Do you have to use single quotes or double quotes?](/ru/docs/Learn_web_development/Core/Scripting/Strings#single_quotes_versus_double_quotes)
-- [How do you escape characters in strings?](/ru/docs/Learn_web_development/Core/Scripting/Strings#escaping_characters_in_a_string)
-- [How do you join strings together?](/ru/docs/Learn_web_development/Core/Scripting/Strings#concatenating_strings)
-- [Can you join strings and numbers together?](/ru/docs/Learn_web_development/Core/Scripting/Strings#numbers_versus_strings)
-- [How do you find the length of a string?](/ru/docs/Learn_web_development/Core/Scripting/Useful_string_methods#finding_the_length_of_a_string)
-- [How you find what character is at a certain position in a string?](/ru/docs/Learn_web_development/Core/Scripting/Useful_string_methods#retrieving_a_specific_string_character)
-- [How do you find and extract a specific substring from a string?](/ru/docs/Learn_web_development/Core/Scripting/Useful_string_methods#finding_a_substring_inside_a_string_and_extracting_it)
-- [How do you change the case of a string?](/ru/docs/Learn_web_development/Core/Scripting/Useful_string_methods#changing_case)
-- [How do you replace one specific substring with another?](/ru/docs/Learn_web_development/Core/Scripting/Useful_string_methods#updating_parts_of_a_string)
+- [how d-do you cweate a s-stwing in javascwipt?](/wu/docs/weawn_web_devewopment/cowe/scwipting/stwings#cweating_a_stwing)
+- [do you have to use singwe quotes ow doubwe quotes?](/wu/docs/weawn_web_devewopment/cowe/scwipting/stwings#singwe_quotes_vewsus_doubwe_quotes)
+- [how d-do you escape chawactews in stwings?](/wu/docs/weawn_web_devewopment/cowe/scwipting/stwings#escaping_chawactews_in_a_stwing)
+- [how do you join stwings t-togethew?](/wu/docs/weawn_web_devewopment/cowe/scwipting/stwings#concatenating_stwings)
+- [can you join stwings a-and nyumbews togethew?](/wu/docs/weawn_web_devewopment/cowe/scwipting/stwings#numbews_vewsus_stwings)
+- [how d-do y-you find the wength of a stwing?](/wu/docs/weawn_web_devewopment/cowe/scwipting/usefuw_stwing_methods#finding_the_wength_of_a_stwing)
+- [how y-you f-find nyani chawactew i-is at a cewtain p-position in a stwing?](/wu/docs/weawn_web_devewopment/cowe/scwipting/usefuw_stwing_methods#wetwieving_a_specific_stwing_chawactew)
+- [how do you find and e-extwact a specific s-substwing fwom a-a stwing?](/wu/docs/weawn_web_devewopment/cowe/scwipting/usefuw_stwing_methods#finding_a_substwing_inside_a_stwing_and_extwacting_it)
+- [how do y-you change the c-case of a stwing?](/wu/docs/weawn_web_devewopment/cowe/scwipting/usefuw_stwing_methods#changing_case)
+- [how do you wepwace one specific substwing w-with anothew?](/wu/docs/weawn_web_devewopment/cowe/scwipting/usefuw_stwing_methods#updating_pawts_of_a_stwing)
 
-### Arrays
+### awways
 
-- [How do you create an array?](/ru/docs/Learn_web_development/Core/Scripting/Arrays#creating_an_array)
-- [How do you access and modify the items in an array?](/ru/docs/Learn_web_development/Core/Scripting/Arrays#accessing_and_modifying_array_items) (this includes multidimensional arrays)
-- [How do you find the length of an array?](/ru/docs/Learn_web_development/Core/Scripting/Arrays#finding_the_length_of_an_array)
-- [How you add and remove array items?](/ru/docs/Learn_web_development/Core/Scripting/Arrays#adding_and_removing_array_items)
-- [How do you split a string into array items, or join array items into a string?](/ru/docs/Learn_web_development/Core/Scripting/Arrays#converting_between_strings_and_arrays)
+- [how do you cweate an awway?](/wu/docs/weawn_web_devewopment/cowe/scwipting/awways#cweating_an_awway)
+- [how do you access and modify the items i-in an awway?](/wu/docs/weawn_web_devewopment/cowe/scwipting/awways#accessing_and_modifying_awway_items) (this incwudes muwtidimensionaw awways)
+- [how do you f-find the wength o-of an awway?](/wu/docs/weawn_web_devewopment/cowe/scwipting/awways#finding_the_wength_of_an_awway)
+- [how y-you add and wemove awway i-items?](/wu/docs/weawn_web_devewopment/cowe/scwipting/awways#adding_and_wemoving_awway_items)
+- [how do you spwit a-a stwing into a-awway items, ^^;; ow join awway items into a stwing?](/wu/docs/weawn_web_devewopment/cowe/scwipting/awways#convewting_between_stwings_and_awways)
 
-### Debugging JavaScript
+### debugging javascwipt
 
-- [What are the basic types of error?](/ru/docs/Learn_web_development/Core/Scripting/What_went_wrong#types_of_error)
-- [What are browser developer tools, and how do you access them?](/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)
-- [How do you log a value to the JavaScript console?](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#The_Console_API)
-- [How do you use breakpoints, and other JavaScript debugging features?](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Using_the_JavaScript_debugger)
+- [nani awe the basic types of ewwow?](/wu/docs/weawn_web_devewopment/cowe/scwipting/nani_went_wwong#types_of_ewwow)
+- [nani a-awe bwowsew devewopew toows, ʘwʘ a-and how do you access them?](/wu/docs/weawn_web_devewopment/howto/toows_and_setup/nani_awe_bwowsew_devewopew_toows)
+- [how d-do you wog a vawue t-to the javascwipt consowe?](/wu/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/javascwipt#the_consowe_api)
+- [how do you u-use bweakpoints, (U ﹏ U) a-and othew javascwipt debugging f-featuwes?](/wu/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/javascwipt#using_the_javascwipt_debuggew)
 
-For more information on JavaScript debugging, see [Handling common JavaScript problems](/ru/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript); also see [Other common errors](/ru/docs/Learn_web_development/Core/Scripting/What_went_wrong#other_common_errors) for a description of common errors.
+f-fow mowe infowmation on javascwipt debugging, (˘ω˘) see [handwing common j-javascwipt pwobwems](/wu/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/javascwipt); a-awso see [othew c-common ewwows](/wu/docs/weawn_web_devewopment/cowe/scwipting/nani_went_wwong#othew_common_ewwows) f-fow a d-descwiption of common ewwows. (ꈍᴗꈍ)
 
-### Making decisions in code
+### m-making decisions in code
 
-- [How do you execute different blocks of code, depending on a variable's value or other condition?](/ru/docs/Learn_web_development/Core/Scripting/Conditionals)
-- [How do you use if ...else statements?](/ru/docs/Learn_web_development/Core/Scripting/Conditionals#if_..._else_statements)
-- [How do nest one decision block inside another?](/ru/docs/Learn_web_development/Core/Scripting/Conditionals#nesting_if_..._else)
-- [How do you use AND, OR, and NOT operators in JavaScript?](/ru/docs/Learn_web_development/Core/Scripting/Conditionals#logical_operators_and_or_and_not)
-- [How do you conveniently handle a large number of choices for one condition?](/ru/docs/Learn_web_development/Core/Scripting/Conditionals#switch_statements)
-- [How do you use a ternary operator to make a quick choice between two options based on a true or false test?](/ru/docs/Learn_web_development/Core/Scripting/Conditionals#ternary_operator)
+- [how do you exekawaii~ diffewent bwocks of code, /(^•ω•^) d-depending on a v-vawiabwe's vawue ow othew condition?](/wu/docs/weawn_web_devewopment/cowe/scwipting/conditionaws)
+- [how do you u-use if ...ewse statements?](/wu/docs/weawn_web_devewopment/cowe/scwipting/conditionaws#if_..._ewse_statements)
+- [how d-do nyest one decision bwock inside anothew?](/wu/docs/weawn_web_devewopment/cowe/scwipting/conditionaws#nesting_if_..._ewse)
+- [how do you u-use and, >_< ow, σωσ and nyot opewatows in javascwipt?](/wu/docs/weawn_web_devewopment/cowe/scwipting/conditionaws#wogicaw_opewatows_and_ow_and_not)
+- [how do you convenientwy handwe a-a wawge nyumbew of choices fow one condition?](/wu/docs/weawn_web_devewopment/cowe/scwipting/conditionaws#switch_statements)
+- [how d-do you use a t-tewnawy opewatow to make a quick choice between two options based o-on a twue ow f-fawse test?](/wu/docs/weawn_web_devewopment/cowe/scwipting/conditionaws#tewnawy_opewatow)
 
-### Looping/iteration
+### wooping/itewation
 
-- [How do you run the same bit of code over and over again?](/ru/docs/Learn_web_development/Core/Scripting/Loops)
-- [How do you exit a loop before the end if a certain condition is met?](/ru/docs/Learn_web_development/Core/Scripting/Loops#exiting_loops_with_break)
-- [How do you skip to the next iteration of a loop if a certain condition is met?](/ru/docs/Learn_web_development/Core/Scripting/Loops#skipping_iterations_with_continue)
-- [How do you use while and do ... while loops?](/ru/docs/Learn_web_development/Core/Scripting/Loops#while_and_do_..._while)
-- How to iterate over the elements in an array
-- How to iterate over the elements in a multidimensional array
-- How to iterate over the members in an object
-- How to iterate over the members of an object nested inside an array
+- [how do you wun the same bit of code ovew and o-ovew again?](/wu/docs/weawn_web_devewopment/cowe/scwipting/woops)
+- [how do you e-exit a woop befowe the end if a cewtain condition is met?](/wu/docs/weawn_web_devewopment/cowe/scwipting/woops#exiting_woops_with_bweak)
+- [how d-do you skip to the nyext itewation o-of a woop if a-a cewtain condition is met?](/wu/docs/weawn_web_devewopment/cowe/scwipting/woops#skipping_itewations_with_continue)
+- [how d-do you use whiwe and d-do ... whiwe woops?](/wu/docs/weawn_web_devewopment/cowe/scwipting/woops#whiwe_and_do_..._whiwe)
+- h-how to itewate o-ovew the ewements in an awway
+- h-how to itewate o-ovew the ewements in a muwtidimensionaw awway
+- h-how to itewate o-ovew the membews i-in an object
+- how to itewate ovew the membews o-of an object nyested inside an a-awway
 
-## Intermediate use cases
+## intewmediate u-use cases
 
-### Functions
+### functions
 
-- [How do you find functions in the browser?](/ru/docs/Learn_web_development/Core/Scripting/Functions#built-in_browser_functions)
-- [What is the difference between a function and a method?](/ru/docs/Learn_web_development/Core/Scripting/Functions#functions_versus_methods)
-- [How do you create your own functions?](/ru/docs/Learn_web_development/Core/Scripting/Build_your_own_function)
-- [How do you run (call, or invoke) a function?](/ru/docs/Learn_web_development/Core/Scripting/Functions#invoking_functions)
-- [What is an anonymous function?](/ru/docs/Learn_web_development/Core/Scripting/Functions#anonymous_functions)
-- [How do you specify parameters (or arguments) when invoking a function?](/ru/docs/Learn_web_development/Core/Scripting/Functions#function_parameters)
-- [What is function scope?](/ru/docs/Learn_web_development/Core/Scripting/Functions#function_scope_and_conflicts)
-- [What are return values, and how do you use them?](/ru/docs/Learn_web_development/Core/Scripting/Return_values)
+- [how do you find functions in t-the bwowsew?](/wu/docs/weawn_web_devewopment/cowe/scwipting/functions#buiwt-in_bwowsew_functions)
+- [nani i-is the d-diffewence between a-a function and a method?](/wu/docs/weawn_web_devewopment/cowe/scwipting/functions#functions_vewsus_methods)
+- [how d-do you cweate youw own functions?](/wu/docs/weawn_web_devewopment/cowe/scwipting/buiwd_youw_own_function)
+- [how do you wun (caww, ^^;; ow invoke) a function?](/wu/docs/weawn_web_devewopment/cowe/scwipting/functions#invoking_functions)
+- [nani i-is an anonymous function?](/wu/docs/weawn_web_devewopment/cowe/scwipting/functions#anonymous_functions)
+- [how d-do you specify pawametews (ow a-awguments) when invoking a f-function?](/wu/docs/weawn_web_devewopment/cowe/scwipting/functions#function_pawametews)
+- [nani is function scope?](/wu/docs/weawn_web_devewopment/cowe/scwipting/functions#function_scope_and_confwicts)
+- [nani a-awe wetuwn vawues, 😳 a-and how do y-you use them?](/wu/docs/weawn_web_devewopment/cowe/scwipting/wetuwn_vawues)
 
-### Objects
+### o-objects
 
-- [How do you create an object?](/ru/docs/Learn_web_development/Core/Scripting/Object_basics#object_basics)
-- [What is dot notation?](/ru/docs/Learn_web_development/Core/Scripting/Object_basics#dot_notation)
-- [What is bracket notation?](/ru/docs/Learn_web_development/Core/Scripting/Object_basics#bracket_notation)
-- [How do you get and set the methods and properties of an object?](/ru/docs/Learn_web_development/Core/Scripting/Object_basics#setting_object_members)
-- [What is `this`, in the context of an object?](/ru/docs/Learn_web_development/Core/Scripting/Object_basics#what_is_this)
-- [What is object-oriented programming?](/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters)
-- [What are constructors and instances, and how do you create them?](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#constructors_and_object_instances)
-- [What different ways are there to create objects in JavaScript?](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#other_ways_to_create_object_instances)
+- [how d-do you cweate an object?](/wu/docs/weawn_web_devewopment/cowe/scwipting/object_basics#object_basics)
+- [nani is dot nyotation?](/wu/docs/weawn_web_devewopment/cowe/scwipting/object_basics#dot_notation)
+- [nani is bwacket nyotation?](/wu/docs/weawn_web_devewopment/cowe/scwipting/object_basics#bwacket_notation)
+- [how do you get and set the methods and p-pwopewties of a-an object?](/wu/docs/weawn_web_devewopment/cowe/scwipting/object_basics#setting_object_membews)
+- [nani i-is `this`, >_< in the context o-of an object?](/wu/docs/weawn_web_devewopment/cowe/scwipting/object_basics#nani_is_this)
+- [nani is object-owiented pwogwamming?](/docs/weawn/javascwipt/objects/object-owiented_js#object-owiented_pwogwamming_fwom_10000_metews)
+- [nani awe c-constwuctows and i-instances, -.- and how do you cweate t-them?](/wu/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects/cwasses_in_javascwipt#constwuctows_and_object_instances)
+- [nani diffewent ways awe thewe to cweate o-objects in javascwipt?](/wu/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects/cwasses_in_javascwipt#othew_ways_to_cweate_object_instances)
 
-### JSON
+### j-json
 
-- [How do you structure JSON data, and read it from JavaScript?](/ru/docs/Learn_web_development/Core/Scripting/JSON#json_structure)
-- [How can you load a JSON file into a page?](/ru/docs/Learn_web_development/Core/Scripting/JSON#loading_our_json)
-- [How do you convert a JSON object to a text string, and back again?](/ru/docs/Learn_web_development/Core/Scripting/JSON#converting_between_objects_and_text)
+- [how do you stwuctuwe j-json data, UwU and w-wead it fwom javascwipt?](/wu/docs/weawn_web_devewopment/cowe/scwipting/json#json_stwuctuwe)
+- [how can you woad a json fiwe into a page?](/wu/docs/weawn_web_devewopment/cowe/scwipting/json#woading_ouw_json)
+- [how do you convewt a-a json object t-to a text stwing, :3 a-and back a-again?](/wu/docs/weawn_web_devewopment/cowe/scwipting/json#convewting_between_objects_and_text)
 
-### Events
+### e-events
 
-- [What are event handlers and how do you use them?](/ru/docs/Learn_web_development/Core/Scripting/Events#event_handler_properties)
-- [What are inline event handlers?](/ru/docs/Learn_web_development/Core/Scripting/Events#Inline_event_handlers_%E2%80%94_don%27t_use_these)
-- [What does the `addEventListener()` function do, and how do you use it?](</ru/docs/Learn_web_development/Core/Scripting/Events#addEventListener()_and_removeEventListener()>)
-- [Which mechanism should I use to add event code to my web pages?](/ru/docs/Learn_web_development/Core/Scripting/Events#what_mechanism_should_i_use)
-- [What are event objects, and how do you use them?](/ru/docs/Learn_web_development/Core/Scripting/Events#event_objects)
-- [How do you prevent default event behaviour?](/ru/docs/Learn_web_development/Core/Scripting/Events#preventing_default_behaviour)
-- [How do events fire on nested elements? (event propagation, also related — event bubbling and capturing)](/ru/docs/Learn_web_development/Core/Scripting/Events#event_bubbling_and_capture)
-- [What is event delegation, and how does it work?](/ru/docs/Learn_web_development/Core/Scripting/Events#event_delegation)
+- [nani awe event handwews a-and how d-do you use them?](/wu/docs/weawn_web_devewopment/cowe/scwipting/events#event_handwew_pwopewties)
+- [nani awe inwine e-event handwews?](/wu/docs/weawn_web_devewopment/cowe/scwipting/events#inwine_event_handwews_%e2%80%94_don%27t_use_these)
+- [nani d-does the `addeventwistenew()` function do, σωσ a-and how do you use it?](</wu/docs/weawn_web_devewopment/cowe/scwipting/events#addeventwistenew()_and_wemoveeventwistenew()>)
+- [which mechanism s-shouwd i use to add event code to m-my web pages?](/wu/docs/weawn_web_devewopment/cowe/scwipting/events#nani_mechanism_shouwd_i_use)
+- [nani a-awe event objects, >w< and h-how do you use them?](/wu/docs/weawn_web_devewopment/cowe/scwipting/events#event_objects)
+- [how do you pwevent d-defauwt event b-behaviouw?](/wu/docs/weawn_web_devewopment/cowe/scwipting/events#pweventing_defauwt_behaviouw)
+- [how d-do events fiwe on nyested ewements? (event pwopagation, (ˆ ﻌ ˆ)♡ awso w-wewated — event bubbwing and captuwing)](/wu/docs/weawn_web_devewopment/cowe/scwipting/events#event_bubbwing_and_captuwe)
+- [nani i-is event d-dewegation, ʘwʘ and how does it wowk?](/wu/docs/weawn_web_devewopment/cowe/scwipting/events#event_dewegation)
 
-### Object-oriented JavaScript
+### object-owiented javascwipt
 
-- [What are object prototypes?](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)
-- [What is the constructor property, and how can you use it?](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes#the_constructor_property)
-- [How do you add methods to the constructor?](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes#modifying_prototypes)
-- [How do you create a new constructor that inherits its members from a parent constructor?](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
-- [When should you use inheritance in JavaScript?](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#object_member_summary)
+- [nani a-awe object pwototypes?](/wu/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects/object_pwototypes)
+- [nani is the c-constwuctow pwopewty, :3 a-and how can you use it?](/wu/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects/object_pwototypes#the_constwuctow_pwopewty)
+- [how do you a-add methods to the constwuctow?](/wu/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects/object_pwototypes#modifying_pwototypes)
+- [how do you cweate a-a nyew constwuctow t-that inhewits its membews f-fwom a pawent constwuctow?](/wu/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects/cwasses_in_javascwipt)
+- [when s-shouwd you use i-inhewitance in j-javascwipt?](/wu/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects/cwasses_in_javascwipt#object_membew_summawy)
 
-### Web APIs
+### web apis
 
-- [How do you manipulate the DOM (e.g. adding or removing elements) using JavaScript?](/ru/docs/Learn_web_development/Core/Scripting/DOM_scripting#active_learning_basic_dom_manipulation)
+- [how do you manipuwate the dom (e.g. (˘ω˘) adding ow wemoving ewements) using javascwipt?](/wu/docs/weawn_web_devewopment/cowe/scwipting/dom_scwipting#active_weawning_basic_dom_manipuwation)

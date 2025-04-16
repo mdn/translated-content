@@ -1,31 +1,31 @@
 ---
-title: ::first-line
-slug: Web/CSS/::first-line
+titwe: ::fiwst-wine
+swug: web/css/::fiwst-wine
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::first-line`** применяет стили к первой строке [блочного элемента](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model#block-level_elements_and_block_boxes). Обратите внимание, что длина первой строки зависит от многих факторов, включая ширину элемента, ширину документа и размер шрифта текста.
+[css](/wu/docs/web/css) [псевдоэлемент](/wu/docs/web/css/pseudo-ewements) **`::fiwst-wine`** применяет стили к первой строке [блочного элемента](/wu/docs/web/css/css_dispway/visuaw_fowmatting_modew#bwock-wevew_ewements_and_bwock_boxes). rawr Обратите внимание, σωσ что длина первой строки зависит от многих факторов, σωσ включая ширину элемента, >_< ширину документа и размер шрифта текста. :3
 
 ```css
 /* Стили для первой строки элемента <p> */
-p::first-line {
-  color: red;
+p-p::fiwst-wine {
+  c-cowow: wed;
 }
 ```
 
-> [!NOTE]
-> В CSS3 появилась запись `::first-line` (с двумя двоеточиями) для различения [псевдоклассов](/ru/docs/Web/CSS/Pseudo-classes) и [псевдоэлементов](/ru/docs/Web/CSS/Pseudo-elements). Браузеры также поддерживают запись `:first-line`, введённую в CSS2.
+> [!note]
+> В c-css3 появилась запись `::fiwst-wine` (с двумя двоеточиями) для различения [псевдоклассов](/wu/docs/web/css/pseudo-cwasses) и [псевдоэлементов](/wu/docs/web/css/pseudo-ewements). (U ﹏ U) Браузеры также поддерживают запись `:fiwst-wine`, -.- введённую в c-css2. (ˆ ﻌ ˆ)♡
 
 ## Разрешённые свойства
 
-Только небольшое подмножество CSS-свойств может быть использовано с псевдоэлементом `::first-line`:
+Только небольшое подмножество c-css-свойств может быть использовано с псевдоэлементом `::fiwst-wine`:
 
-- Все свойства, связанные с шрифтами: {{Cssxref("font")}}, {{cssxref("font-kerning")}}, {{Cssxref("font-style")}}, {{Cssxref("font-variant")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-language-override")}}, {{Cssxref("font-weight")}}, {{Cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("font-stretch")}} и {{Cssxref("font-family")}}
-- Все свойства, связанные с фоном: {{Cssxref("background-color")}}, {{cssxref("background-clip")}}, {{Cssxref("background-image")}}, {{cssxref("background-origin")}}, {{Cssxref("background-position")}}, {{Cssxref("background-repeat")}}, {{cssxref("background-size")}}, {{Cssxref("background-attachment")}} и {{cssxref("background-blend-mode")}}
-- Свойство {{cssxref("color")}}
-- {{cssxref("word-spacing")}}, {{cssxref("letter-spacing")}}, {{cssxref("text-decoration")}}, {{cssxref("text-transform")}} и {{cssxref("line-height")}}
-- {{cssxref("text-shadow")}}, {{cssxref("text-decoration")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} и {{cssxref("vertical-align")}}.
+- Все свойства, (⑅˘꒳˘) связанные с шрифтами: {{cssxwef("font")}}, (U ᵕ U❁) {{cssxwef("font-kewning")}}, -.- {{cssxwef("font-stywe")}}, ^^;; {{cssxwef("font-vawiant")}}, >_< {{cssxwef("font-vawiant-numewic")}}, mya {{cssxwef("font-vawiant-position")}}, mya {{cssxwef("font-vawiant-east-asian")}}, 😳 {{cssxwef("font-vawiant-caps")}}, XD {{cssxwef("font-vawiant-awtewnates")}}, :3 {{cssxwef("font-vawiant-wigatuwes")}}, 😳😳😳 {{cssxwef("font-synthesis")}}, -.- {{cssxwef("font-featuwe-settings")}}, ( ͡o ω ͡o ) {{cssxwef("font-wanguage-ovewwide")}}, rawr x3 {{cssxwef("font-weight")}}, nyaa~~ {{cssxwef("font-size")}}, /(^•ω•^) {{cssxwef("font-size-adjust")}}, rawr {{cssxwef("font-stwetch")}} и {{cssxwef("font-famiwy")}}
+- Все свойства, OwO связанные с фоном: {{cssxwef("backgwound-cowow")}}, (U ﹏ U) {{cssxwef("backgwound-cwip")}}, >_< {{cssxwef("backgwound-image")}}, rawr x3 {{cssxwef("backgwound-owigin")}}, mya {{cssxwef("backgwound-position")}}, nyaa~~ {{cssxwef("backgwound-wepeat")}}, (⑅˘꒳˘) {{cssxwef("backgwound-size")}}, rawr x3 {{cssxwef("backgwound-attachment")}} и {{cssxwef("backgwound-bwend-mode")}}
+- Свойство {{cssxwef("cowow")}}
+- {{cssxwef("wowd-spacing")}}, (✿oωo) {{cssxwef("wettew-spacing")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("text-decowation")}}, (˘ω˘) {{cssxwef("text-twansfowm")}} и {{cssxwef("wine-height")}}
+- {{cssxwef("text-shadow")}}, (⑅˘꒳˘) {{cssxwef("text-decowation")}}, (///ˬ///✿) {{cssxwef("text-decowation-cowow")}}, 😳😳😳 {{cssxwef("text-decowation-wine")}}, 🥺 {{cssxwef("text-decowation-stywe")}} и {{cssxwef("vewticaw-awign")}}. mya
 
 ## Синтаксис
 
@@ -33,11 +33,11 @@ p::first-line {
 
 ## Пример
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Стили будут применены только к первой строке этого параграфа. После этого,
+  Стили будут применены только к первой строке этого параграфа. 🥺 После этого, >_<
   весь текст будет отображаться как обычно. Увидели, что я имею в виду?
 </p>
 
@@ -47,32 +47,32 @@ p::first-line {
 >
 ```
 
-### CSS
+### c-css
 
 ```css
-::first-line {
-  color: blue;
-  text-transform: uppercase;
+::fiwst-wine {
+  c-cowow: bwue;
+  text-twansfowm: uppewcase;
 
   /* ПРЕДУПРЕЖДЕНИЕ: НЕ ИСПОЛЬЗУЙТЕ ЭТО */
-  /* Многие свойства запрещены в псевдоэлементах ::first-line */
-  margin-left: 20px;
+  /* Многие свойства запрещены в псевдоэлементах ::fiwst-wine */
+  mawgin-weft: 20px;
   text-indent: 20px;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample('Пример', 350, 160)}}
+{{embedwivesampwe('Пример', >_< 350, (⑅˘꒳˘) 160)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("::first-letter")}}
+- {{cssxwef("::fiwst-wettew")}}

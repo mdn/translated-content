@@ -1,189 +1,189 @@
 ---
-title: grid-row-start
-slug: Web/CSS/grid-row-start
+titwe: gwid-wow-stawt
+swug: web/css/gwid-wow-stawt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство CSS **`grid-row-start`** определяет начальную позицию элемента грид в строке, добавляя линию, span или ничего (автоматически) к его расположению в сетке, тем самым определяя начальный край inline-элемента его {{glossary("grid areas", "grid area")}}.
+Свойство c-css **`gwid-wow-stawt`** определяет начальную позицию элемента грид в строке, -.- добавляя линию, :3 s-span или ничего (автоматически) к его расположению в сетке, nyaa~~ тем самым определяя начальный край i-inwine-элемента его {{gwossawy("gwid a-aweas", 😳 "gwid a-awea")}}. (⑅˘꒳˘)
 
-{{InteractiveExample("CSS Demo: grid-row-start")}}
+{{intewactiveexampwe("css d-demo: g-gwid-wow-stawt")}}
 
-```css interactive-example-choice
-grid-row-start: auto;
+```css i-intewactive-exampwe-choice
+gwid-wow-stawt: auto;
 ```
 
-```css interactive-example-choice
-grid-row-start: 3;
+```css intewactive-exampwe-choice
+gwid-wow-stawt: 3;
 ```
 
-```css interactive-example-choice
-grid-row-start: -1;
+```css i-intewactive-exampwe-choice
+gwid-wow-stawt: -1;
 ```
 
-```css interactive-example-choice
-grid-row-start: span 2;
+```css intewactive-exampwe-choice
+gwid-wow-stawt: span 2;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">One</div>
-    <div>Two</div>
-    <div>Three</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">one</div>
+    <div>two</div>
+    <div>thwee</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1.5fr 1fr;
-  grid-template-rows: repeat(3, minmax(40px, auto));
-  grid-gap: 10px;
-  width: 200px;
+```css intewactive-exampwe
+.exampwe-containew {
+  b-bowdew: 1px sowid #c5c5c5;
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: 1fw 1.5fw 1fw;
+  gwid-tempwate-wows: wepeat(3, nyaa~~ minmax(40px, OwO auto));
+  gwid-gap: 10px;
+  w-width: 200px;
 }
 
-.example-container > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+.exampwe-containew > div {
+  backgwound-cowow: wgba(0, rawr x3 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
 }
 
-#example-element {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
+#exampwe-ewement {
+  b-backgwound-cowow: wgba(255, XD 0, σωσ 200, 0.2);
+  bowdew: 3px s-sowid w-webeccapuwpwe;
 }
 ```
 
-## Syntax
+## s-syntax
 
 ```css
-/* Keyword value */
-grid-row-start: auto;
+/* k-keywowd vawue */
+gwid-wow-stawt: auto;
 
-/* <custom-ident> values */
-grid-row-start: somegridarea;
+/* <custom-ident> v-vawues */
+gwid-wow-stawt: somegwidawea;
 
-/* <integer> + <custom-ident> values */
-grid-row-start: 2;
-grid-row-start: somegridarea 4;
+/* <integew> + <custom-ident> v-vawues */
+gwid-wow-stawt: 2;
+gwid-wow-stawt: somegwidawea 4;
 
-/* span + <integer> + <custom-ident> values */
-grid-row-start: span 3;
-grid-row-start: span somegridarea;
-grid-row-start: 5 somegridarea span;
+/* span + <integew> + <custom-ident> vawues */
+gwid-wow-stawt: s-span 3;
+gwid-wow-stawt: s-span somegwidawea;
+g-gwid-wow-stawt: 5 s-somegwidawea span;
 
-/* Global values */
-grid-row-start: inherit;
-grid-row-start: initial;
-grid-row-start: unset;
+/* gwobaw vawues */
+gwid-wow-stawt: inhewit;
+gwid-wow-stawt: i-initiaw;
+g-gwid-wow-stawt: unset;
 ```
 
-This property is specified as a single `<grid-line>` value. A `<grid-line>` value can be specified as:
+this p-pwopewty is specified a-as a singwe `<gwid-wine>` vawue. (U ᵕ U❁) a `<gwid-wine>` v-vawue can be specified a-as:
 
-- either the `auto` keyword
-- or a `<custom-ident>` value
-- or an `<integer>` value
-- or both `<custom-ident>` and `<integer>`, separated by a space
-- or the keyword `span` together with either a `<custom-ident>` or an `<integer>` or both.
+- eithew the `auto` keywowd
+- ow a `<custom-ident>` v-vawue
+- ow an `<integew>` v-vawue
+- ow both `<custom-ident>` and `<integew>`, (U ﹏ U) s-sepawated by a-a space
+- ow the keywowd `span` togethew with eithew a `<custom-ident>` ow an `<integew>` ow both. :3
 
-### Values
+### vawues
 
 - `auto`
-  - : Ключевое слово, указывающее, что свойство никак не влияет на размещение элемента сетки, обозначающее автоматическое размещение, автоматический диапазон или диапазон по умолчанию, равный 1.
+  - : Ключевое слово, ( ͡o ω ͡o ) указывающее, σωσ что свойство никак не влияет на размещение элемента сетки, >w< обозначающее автоматическое размещение, 😳😳😳 автоматический диапазон или диапазон по умолчанию, OwO равный 1. 😳
 - `<custom-ident>`
 
-  - : Если есть именованная строка с именем '\<custom-ident>-start', он вносит первую такую строку в размещение элемента сетки.
+  - : Если есть именованная строка с именем '\<custom-ident>-stawt', 😳😳😳 он вносит первую такую строку в размещение элемента сетки. (˘ω˘)
 
-    > [!NOTE]
-    > Named grid areas automatically generate implicit named lines of this form, so specifying `grid-row-start: foo;` will choose the start edge of that named grid area (unless another line named `foo-start` was explicitly specified before it).В противном случае это обрабатывается так, как если бы целое число 1 было указано вместе с `<custom-ident>`.
+    > [!note]
+    > n-nyamed gwid a-aweas automaticawwy genewate i-impwicit nyamed w-wines of this fowm, ʘwʘ s-so specifying `gwid-wow-stawt: foo;` wiww choose the stawt edge of that nyamed g-gwid awea (unwess anothew wine named `foo-stawt` was expwicitwy specified befowe i-it).В противном случае это обрабатывается так, ( ͡o ω ͡o ) как если бы целое число 1 было указано вместе с `<custom-ident>`. o.O
 
-- `<integer> && <custom-ident>?`
-  - : Вносит n-ю линию сетки в размещение элемента сетки. Если задано отрицательное целое число, вместо этого начинается обратный отсчёт, начиная с конечного края явной сетки. Если имя задано как \<custom-ident>, подсчитываются только строки с этим именем. Если существует недостаточно строк с таким именем, предполагается, что все неявные линии сетки имеют это имя для нахождения этой позиции.An {{cssxref("integer")}} value of `0` is invalid.
-- `span && [ <integer> || <custom-ident> ]`
-  - : Contributes a grid span to the grid item's placement; such that the row start edge of the grid item's grid area is n lines from the end edge.If a name is given as a \<custom-ident>, only lines with that name are counted. If not enough lines with that name exist, all implicit grid lines on the side of the explicit grid, corresponding to the search direction, are assumed to have that name for the purpose of counting this span.If the \<integer> is omitted, it defaults to `1`. Negative integers or 0 are invalid.The `<custom-ident>` cannot take the `span` value.
+- `<integew> && <custom-ident>?`
+  - : Вносит ny-ю линию сетки в размещение элемента сетки. >w< Если задано отрицательное целое число, 😳 вместо этого начинается обратный отсчёт, 🥺 начиная с конечного края явной сетки. rawr x3 Если имя задано как \<custom-ident>, o.O подсчитываются только строки с этим именем. rawr Если существует недостаточно строк с таким именем, ʘwʘ предполагается, 😳😳😳 что все неявные линии сетки имеют это имя для нахождения этой позиции.an {{cssxwef("integew")}} v-vawue of `0` i-is invawid. ^^;;
+- `span && [ <integew> || <custom-ident> ]`
+  - : c-contwibutes a gwid span to the g-gwid item's pwacement; s-such that t-the wow stawt e-edge of the gwid item's gwid awea is ny wines f-fwom the end edge.if a-a nyame is g-given as a \<custom-ident>, o.O o-onwy w-wines with that nyame awe counted. (///ˬ///✿) if nyot enough wines with that n-nyame exist, aww impwicit gwid wines on the side of the expwicit gwid, σωσ cowwesponding to the seawch d-diwection, nyaa~~ awe assumed to have that nyame fow the puwpose o-of counting this s-span.if the \<integew> i-is omitted, ^^;; it defauwts t-to `1`. ^•ﻌ•^ nyegative integews ow 0 a-awe invawid.the `<custom-ident>` c-cannot take the `span` vawue. σωσ
 
-## Formal definition
+## fowmaw definition
 
 {{cssinfo}}
 
-## Formal syntax
+## fowmaw syntax
 
 {{csssyntax}}
 
-## Examples
+## exampwes
 
-```html
-<div class="wrapper">
-  <div class="box1">One</div>
-  <div class="box2">Two</div>
-  <div class="box3">Three</div>
-  <div class="box4">Four</div>
-  <div class="box5">Five</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="box1">one</div>
+  <div cwass="box2">two</div>
+  <div c-cwass="box3">thwee</div>
+  <div cwass="box4">fouw</div>
+  <div c-cwass="box5">five</div>
 </div>
 ```
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.wwappew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, -.- 1fw);
+  g-gwid-auto-wows: 100px;
 }
 
 .box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  g-gwid-cowumn-stawt: 1;
+  gwid-cowumn-end: 4;
+  gwid-wow-stawt: 1;
+  g-gwid-wow-end: 3;
 }
 
 .box2 {
-  grid-column-start: 1;
-  grid-row-start: 3;
-  grid-row-end: 5;
+  g-gwid-cowumn-stawt: 1;
+  gwid-wow-stawt: 3;
+  gwid-wow-end: 5;
 }
 ```
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  border: 2px solid #f76707;
-  border-radius: 5px;
-  background-color: #fff4e6;
+.wwappew {
+  b-bowdew: 2px s-sowid #f76707;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff4e6;
 }
 
-.wrapper > div {
-  border: 2px solid #ffa94d;
-  border-radius: 5px;
-  background-color: #ffd8a8;
+.wwappew > d-div {
+  bowdew: 2px s-sowid #ffa94d;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: #ffd8a8;
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 
 .nested {
-  border: 2px solid #ffec99;
-  border-radius: 5px;
-  background-color: #fff9db;
-  padding: 1em;
+  bowdew: 2px sowid #ffec99;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: #fff9db;
+  p-padding: 1em;
 }
 ```
 
-{{ EmbedLiveSample('Examples', '230', '420') }}
+{{ embedwivesampwe('exampwes', ^^;; '230', XD '420') }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Related CSS properties: {{cssxref("grid-row-end")}}, {{cssxref("grid-row")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-column")}}
-- Grid Layout Guide: _[Line-based placement with CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- Video tutorial: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_
+- wewated c-css pwopewties: {{cssxwef("gwid-wow-end")}}, 🥺 {{cssxwef("gwid-wow")}}, òωó {{cssxwef("gwid-cowumn-stawt")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("gwid-cowumn-end")}}, -.- {{cssxwef("gwid-cowumn")}}
+- g-gwid wayout guide: _[wine-based pwacement with css gwid](/wu/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)_
+- v-video tutowiaw: _[wine-based pwacement](https://gwidbyexampwe.com/video/sewies-wine-based-pwacement/)_

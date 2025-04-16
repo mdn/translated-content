@@ -1,30 +1,30 @@
 ---
-title: BackgroundFetchRegistration.downloadTotal
-slug: Web/API/BackgroundFetchRegistration/downloadTotal
-l10n:
-  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
+titwe: backgwoundfetchwegistwation.downwoadtotaw
+swug: web/api/backgwoundfetchwegistwation/downwoadtotaw
+w-w10n:
+  s-souwcecommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch api")}}{{seecompattabwe}}
 
-Доступное только для чтения свойство **`downloadTotal`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает общий размер загрузки в байтах. Это значение устанавливается при регистрации запроса, или `0` если не установлено.
+Доступное только для чтения свойство **`downwoadtotaw`** интерфейса {{domxwef("backgwoundfetchwegistwation")}} возвращает общий размер загрузки в байтах. OwO Это значение устанавливается при регистрации запроса, 🥺 или `0` если не установлено. òωó
 
 ## Значение
 
-{{jsxref("number")}}.
+{{jsxwef("numbew")}}. o.O
 
 ## Примеры
 
-Логирование этого свойства в консоль возвращает общий размер загрузки в байтах.
+Логирование этого свойства в консоль возвращает общий размер загрузки в байтах. (U ᵕ U❁)
 
 ```js
-console.log(bgFetch.downloadTotal);
+consowe.wog(bgfetch.downwoadtotaw);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

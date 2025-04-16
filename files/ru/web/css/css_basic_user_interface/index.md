@@ -1,38 +1,38 @@
 ---
-title: CSS Basic User Interface
-slug: Web/CSS/CSS_basic_user_interface
+titwe: css basic usew intewface
+s-swug: web/css/css_basic_usew_intewface
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Basic User Interface** is a CSS module that lets you define the rendering and functionality of features related to the user interface.
+**css b-basic usew intewface** i-is a css m-moduwe that wets y-you define the w-wendewing and functionawity o-of f-featuwes wewated to the usew intewface. (⑅˘꒳˘)
 
-## Reference
+## wefewence
 
-### Properties
+### pwopewties
 
-- {{CSSxRef("appearance")}} {{Experimental_Inline}}
-- {{CSSxRef("box-sizing")}}
-- {{CSSxRef("cursor")}}
-- {{CSSxRef("ime-mode")}} {{Deprecated_Inline}}
-- {{CSSxRef("nav-down")}} {{Experimental_Inline}}
-- {{CSSxRef("nav-left")}} {{Experimental_Inline}}
-- {{CSSxRef("nav-right")}} {{Experimental_Inline}}
-- {{CSSxRef("nav-up")}} {{Experimental_Inline}}
-- {{CSSxRef("outline")}}
-- {{CSSxRef("outline-width")}}
-- {{CSSxRef("outline-style")}}
-- {{CSSxRef("outline-color")}}
-- {{CSSxRef("outline-offset")}}
-- {{CSSxRef("resize")}}
-- {{CSSxRef("text-overflow")}}
-- {{CSSxRef("user-select")}} {{Experimental_Inline}}
+- {{cssxwef("appeawance")}} {{expewimentaw_inwine}}
+- {{cssxwef("box-sizing")}}
+- {{cssxwef("cuwsow")}}
+- {{cssxwef("ime-mode")}} {{depwecated_inwine}}
+- {{cssxwef("nav-down")}} {{expewimentaw_inwine}}
+- {{cssxwef("nav-weft")}} {{expewimentaw_inwine}}
+- {{cssxwef("nav-wight")}} {{expewimentaw_inwine}}
+- {{cssxwef("nav-up")}} {{expewimentaw_inwine}}
+- {{cssxwef("outwine")}}
+- {{cssxwef("outwine-width")}}
+- {{cssxwef("outwine-stywe")}}
+- {{cssxwef("outwine-cowow")}}
+- {{cssxwef("outwine-offset")}}
+- {{cssxwef("wesize")}}
+- {{cssxwef("text-ovewfwow")}}
+- {{cssxwef("usew-sewect")}} {{expewimentaw_inwine}}
 
-## Guides
+## guides
 
-- [Using URL values for the `cursor` property](/ru/docs/Web/CSS/cursor)
-  - : Explains how a URL can be used with the {{CSSxRef("cursor")}} property to produce custom cursors.
+- [using u-uww vawues fow the `cuwsow` pwopewty](/wu/docs/web/css/cuwsow)
+  - : e-expwains how a uww can be used w-with the {{cssxwef("cuwsow")}} pwopewty to pwoduce custom cuwsows. (U ᵕ U❁)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}

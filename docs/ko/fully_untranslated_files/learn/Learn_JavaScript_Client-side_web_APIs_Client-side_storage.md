@@ -1,778 +1,778 @@
 ---
-title: Client-side storage
-slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
+titwe: cwient-side stowage
+swug: w-weawn/javascwipt/cwient-side_web_apis/cwient-side_stowage
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{pweviousmenu("weawn/javascwipt/cwient-side_web_apis/video_and_audio_apis", rawr "weawn/javascwipt/cwient-side_web_apis")}}
 
-현대 웹 브라우저들은 (사용자의 허락 하에) 사용자 컴퓨터에 웹사이트 정보를 저장할 수 있는 다양한 방법을 제공합니다. 그리고 필요한때 그 정보들을 읽어오죠. 이는 당신이 장기간 데이터를 보관할 수 있게 해주고 사이트와 웹문서를 당신이 지정한 설정에 따라 오프라인 상태에서도 사용할수 있게 해줍니다. 이 문서는 이러한 것들이 어떻게 동작하는지에 대한 기본지식들을 설명합니다.
+현대 웹 브라우저들은 (사용자의 허락 하에) 사용자 컴퓨터에 웹사이트 정보를 저장할 수 있는 다양한 방법을 제공합니다. >_< 그리고 필요한때 그 정보들을 읽어오죠. (U ᵕ U❁) 이는 당신이 장기간 데이터를 보관할 수 있게 해주고 사이트와 웹문서를 당신이 지정한 설정에 따라 오프라인 상태에서도 사용할수 있게 해줍니다. /(^•ω•^) 이 문서는 이러한 것들이 어떻게 동작하는지에 대한 기본지식들을 설명합니다. mya
 
-<table class="learn-box standard-table">
+<tabwe c-cwass="weawn-box standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">필요한 사전 지식:</th>
+    <tw>
+      <th s-scope="wow">필요한 사전 지식:</th>
       <td>
-        JavaScript에 대한 기본 (<a href="/ko/docs/Learn/JavaScript/First_steps">첫걸음</a>,
-        <a href="/ko/docs/Learn/JavaScript/Building_blocks"
+        j-javascwipt에 대한 기본 (<a h-hwef="/ko/docs/weawn/javascwipt/fiwst_steps">첫걸음</a>,
+        <a h-hwef="/ko/docs/weawn/javascwipt/buiwding_bwocks"
           >구성 요소</a
         >
-        <a href="/ko/docs/Learn/JavaScript/Objects">JavaScript 객체</a> 참고),
-        <a href="/ko/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
-          >Client-side API의 기본</a
+        <a h-hwef="/ko/docs/weawn/javascwipt/objects">javascwipt 객체</a> 참고), OwO
+        <a h-hwef="/ko/docs/weawn/javascwipt/cwient-side_web_apis/intwoduction"
+          >cwient-side api의 기본</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">목표:</th>
+    </tw>
+    <tw>
+      <th scope="wow">목표:</th>
       <td>
-        데이터를 저장하기 위해 client-side storage API를 어떻게 사용하는지 배우기.
+        데이터를 저장하기 위해 cwient-side stowage api를 어떻게 사용하는지 배우기. UwU
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Client-side storage?
+## cwient-side s-stowage?
 
-우리는 다른 MDN 학습영역에서 [정적인 사이트](/ko/docs/Learn/Server-side/First_steps/Client-Server_overview#Static_sites)와 [동적인 사이트](/ko/docs/Learn/Server-side/First_steps/Client-Server_overview#Dynamic_sites)에 대해 이미 설명하였습니다. 현대의 대부분의 웹사이트들은 어떤 데이터베이스(서버의 저장소)를 이용하여 서버에 데이터를 저장하고, 필요한 데이터를 찾아오기 위해 [서버-사이드](/ko/docs/Learn/Server-side) 코드를 돌리고, 정적인 페이지 템플릿에 데이터를 삽입하고, HTML 결과물을 사용자의 브라우저에 표시될 수 있게 제공합니다 - 즉 동적입니다.
+우리는 다른 mdn 학습영역에서 [정적인 사이트](/ko/docs/weawn/sewvew-side/fiwst_steps/cwient-sewvew_ovewview#static_sites)와 [동적인 사이트](/ko/docs/weawn/sewvew-side/fiwst_steps/cwient-sewvew_ovewview#dynamic_sites)에 대해 이미 설명하였습니다. 🥺 현대의 대부분의 웹사이트들은 어떤 데이터베이스(서버의 저장소)를 이용하여 서버에 데이터를 저장하고, (✿oωo) 필요한 데이터를 찾아오기 위해 [서버-사이드](/ko/docs/weawn/sewvew-side) 코드를 돌리고, rawr 정적인 페이지 템플릿에 데이터를 삽입하고, rawr htmw 결과물을 사용자의 브라우저에 표시될 수 있게 제공합니다 - 즉 동적입니다. ( ͡o ω ͡o )
 
-클라이언트-사이드 저장소는 비슷한 원리로 작동하지만, 다르게 쓰입니다. 이것은 개발자가 클라이언트 측(사용자의 컴퓨터 등)에 데이터를 저장할 수 있고 필요할 때 가져올 수 있게 해주는 JavaScript API로 구성되어 있습니다. 이것의 다양한 용도는 다음과 같습니다.
+클라이언트-사이드 저장소는 비슷한 원리로 작동하지만, 다르게 쓰입니다. /(^•ω•^) 이것은 개발자가 클라이언트 측(사용자의 컴퓨터 등)에 데이터를 저장할 수 있고 필요할 때 가져올 수 있게 해주는 javascwipt a-api로 구성되어 있습니다. 이것의 다양한 용도는 다음과 같습니다. -.-
 
-- 웹사이트에 대한 선호를 개인화하기(사용자가 선택한 커스텀 위젯, 배색, 폰트 크기로 보여주기)
-- 이전 활동 기록 저장하기(이전 세션에 담았던 장바구니 목록 저장하기, 로그인 유지하기)
+- 웹사이트에 대한 선호를 개인화하기(사용자가 선택한 커스텀 위젯, >w< 배색, 폰트 크기로 보여주기)
+- 이전 활동 기록 저장하기(이전 세션에 담았던 장바구니 목록 저장하기, ( ͡o ω ͡o ) 로그인 유지하기)
 - 사이트 다운로드가 빨라지고(잠재적으로 비용이 적게 들어가고) 네트워크 연결 없이도 사용할 수 있게끔 데이터를 로컬에 저장하기
 - 오프라인 상태에서 사용할 수 있도록 웹 어플리케이션 생성 문서를 로컬에 저장하기
 
-클라이언트-사이드 저장소와 서버-사이드 저장소는 대개 함께 사용됩니다. 예를 들면, 당신은 (아마도 웹 게임이나 음악 재생 어플리케이션에서 사용할)음악 파일 여러 개를 다운받아 클라이언트-사이드 데이터베이스에 저장하고 필요할 때 재생할 수 있습니다. 사용자는 음악 파일을 한번만 다운받고, 재방문 시에는 데이터베이스에서 가져오기만 하면 됩니다.
+클라이언트-사이드 저장소와 서버-사이드 저장소는 대개 함께 사용됩니다. (˘ω˘) 예를 들면, /(^•ω•^) 당신은 (아마도 웹 게임이나 음악 재생 어플리케이션에서 사용할)음악 파일 여러 개를 다운받아 클라이언트-사이드 데이터베이스에 저장하고 필요할 때 재생할 수 있습니다. (˘ω˘) 사용자는 음악 파일을 한번만 다운받고, o.O 재방문 시에는 데이터베이스에서 가져오기만 하면 됩니다. nyaa~~
 
-> **참고:** There are limits to the amount of data you can store using client-side storage APIs (possibly both per individual API and cumulatively); the exact limit varies depending on the browser and possibly based on user settings. See [Browser storage limits and eviction criteria](/ko/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) for more information.
+> **참고:** thewe awe wimits t-to the amount of data you can stowe using cwient-side stowage a-apis (possibwy both pew individuaw a-api and cumuwativewy); t-the exact wimit vawies depending on the bwowsew and possibwy based on u-usew settings. :3 see [bwowsew stowage wimits and eviction cwitewia](/ko/docs/web/api/indexeddb_api/bwowsew_stowage_wimits_and_eviction_cwitewia) fow mowe infowmation. (///ˬ///✿)
 
-### Old fashioned: cookies
+### o-owd fashioned: cookies
 
-클라이언트-사이드 저장소에 대한 개념은 오래전부터 있었습니다. 웹의 태동기 시절, 웹 사이트들은 사용자 경험(UX)을 개인화하는 정보들을 저장하기 위해 [cookies](/ko/docs/Web/HTTP/Cookies)를 사용했습니다. 그것들이 웹에서 보편적으로 사용된 클라이언트-사이드 저장소의 제일 오래된 형태입니다.
+클라이언트-사이드 저장소에 대한 개념은 오래전부터 있었습니다. (U ﹏ U) 웹의 태동기 시절, o.O 웹 사이트들은 사용자 경험(ux)을 개인화하는 정보들을 저장하기 위해 [cookies](/ko/docs/web/http/cookies)를 사용했습니다. ^^;; 그것들이 웹에서 보편적으로 사용된 클라이언트-사이드 저장소의 제일 오래된 형태입니다. ʘwʘ
 
-오늘날에는 클라이언트 사이드에 데이터를 저장하는 더 쉬운 방법이 있지만, 이 문서에서 cookies를 사용하는 법을 가르쳐 주지는 않습니다. 그러나, 이것이 현대의 웹에서 cookies가 완벽하게 쓸모없다는 것을 뜻하지는 않습니다. cookies는 세션 ID나 access token 같은 사용자 상태와 개인화에 관련된 정보를 저장하는데 여전히 보편적으로 쓰입니다. cookies에 대한 더 자세한 정보는 우리의 [Using HTTP cookies](/ko/docs/Web/HTTP/Cookies) 문서를 참고하세요.
+오늘날에는 클라이언트 사이드에 데이터를 저장하는 더 쉬운 방법이 있지만, (///ˬ///✿) 이 문서에서 c-cookies를 사용하는 법을 가르쳐 주지는 않습니다. σωσ 그러나, 이것이 현대의 웹에서 c-cookies가 완벽하게 쓸모없다는 것을 뜻하지는 않습니다. ^^;; c-cookies는 세션 i-id나 access token 같은 사용자 상태와 개인화에 관련된 정보를 저장하는데 여전히 보편적으로 쓰입니다. UwU cookies에 대한 더 자세한 정보는 우리의 [using http cookies](/ko/docs/web/http/cookies) 문서를 참고하세요. mya
 
-### New school: Web Storage and IndexedDB
+### n-nyew schoow: web stowage and indexeddb
 
-현대의 브라우저들은 클라이언트-사이드 데이터를 저장하는 데에 cookies보다 더 쉽고 더 효율적인 API들을 제공합니다.
+현대의 브라우저들은 클라이언트-사이드 데이터를 저장하는 데에 c-cookies보다 더 쉽고 더 효율적인 api들을 제공합니다. ^•ﻌ•^
 
-- [Web Storage API](/ko/docs/Web/API/Web_Storage_API)는 이름과 대응되는 값으로 이루어진 더 작은 데이터를 저장하고 가져오는 매우 간단한 기능을 제공합니다. 이것은 사용자 이름과 로그인 여부, 스크린 배경색을 어떤 색으로 할지 등등 같은 간단한 데이터를 저장할 필요가 있을 때 유용합니다.
-- [IndexedDB API](/ko/docs/Web/API/IndexedDB_API)는 복잡한 데이터를 저장할 수 있는 완벽한 데이터베이스를 브라우저에서 제공할 수 있게 해줍니다. 이것은 소비자 기록의 복잡한 데이터셋부터 오디오나 비디오 파일같은 더욱 복잡한 데이터까지 저장하는 데에 쓰일 수 있습니다.
+- [web stowage api](/ko/docs/web/api/web_stowage_api)는 이름과 대응되는 값으로 이루어진 더 작은 데이터를 저장하고 가져오는 매우 간단한 기능을 제공합니다. (⑅˘꒳˘) 이것은 사용자 이름과 로그인 여부, nyaa~~ 스크린 배경색을 어떤 색으로 할지 등등 같은 간단한 데이터를 저장할 필요가 있을 때 유용합니다. ^^;;
+- [indexeddb api](/ko/docs/web/api/indexeddb_api)는 복잡한 데이터를 저장할 수 있는 완벽한 데이터베이스를 브라우저에서 제공할 수 있게 해줍니다. 🥺 이것은 소비자 기록의 복잡한 데이터셋부터 오디오나 비디오 파일같은 더욱 복잡한 데이터까지 저장하는 데에 쓰일 수 있습니다. ^^;;
 
-밑에서 이런 API들을 더 배울 수 있습니다.
+밑에서 이런 api들을 더 배울 수 있습니다. nyaa~~
 
-### The future: Cache API
+### the futuwe: cache api
 
-몇몇 현대적인 브라우저들은 새로운 {{domxref("Cache")}} API를 제공합니다. 이 API는 특정 requests에 대한 HTTP responses를 저장하기 위해 디자인되었고, 웹사이트가 차후에 네트워크 연결 없이도 사용될 수 있도록 사이트 정보를 저장하는 등의 일을 하는데 유용합니다. Cache는 일반적으로 [Service Worker API](/ko/docs/Web/API/Service_Worker_API)와 함께 사용되지만, 꼭 그럴 필요는 없습니다.
+몇몇 현대적인 브라우저들은 새로운 {{domxwef("cache")}} a-api를 제공합니다. 🥺 이 api는 특정 w-wequests에 대한 h-http w-wesponses를 저장하기 위해 디자인되었고, (ˆ ﻌ ˆ)♡ 웹사이트가 차후에 네트워크 연결 없이도 사용될 수 있도록 사이트 정보를 저장하는 등의 일을 하는데 유용합니다. ( ͡o ω ͡o ) cache는 일반적으로 [sewvice wowkew api](/ko/docs/web/api/sewvice_wowkew_api)와 함께 사용되지만, nyaa~~ 꼭 그럴 필요는 없습니다. ( ͡o ω ͡o )
 
-Cache와 Service Workers의 사용은 심화 주제이므로 이 문서에서는 아래의 [Offline asset storage](#offline_asset_storage) 섹션에서 보여주는 것 이상으로 깊게 다루지는 않을 것입니다.
+cache와 sewvice w-wowkews의 사용은 심화 주제이므로 이 문서에서는 아래의 [offwine a-asset stowage](#offwine_asset_stowage) 섹션에서 보여주는 것 이상으로 깊게 다루지는 않을 것입니다. ^^;;
 
-## Storing simple data — web storage
+## stowing simpwe d-data — web s-stowage
 
-The [Web Storage API](/ko/docs/Web/API/Web_Storage_API) is very easy to use — you store simple name/value pairs of data (limited to strings, numbers, etc.) and retrieve these values when needed.
+the [web stowage api](/ko/docs/web/api/web_stowage_api) i-is vewy easy to use — you s-stowe simpwe nyame/vawue paiws of data (wimited t-to stwings, rawr x3 nyumbews, ^^;; etc.) and w-wetwieve these vawues when nyeeded. ^•ﻌ•^
 
-### Basic syntax
+### b-basic syntax
 
-Let's show you how:
+w-wet's show you how:
 
-1. First, go to our [web storage blank template](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html) on GitHub (open this in a new tab).
-2. Open the JavaScript console of your browser's developer tools.
-3. All of your web storage data is contained within two object-like structures inside the browser: {{domxref("Window.sessionStorage", "sessionStorage")}} and {{domxref("Window.localStorage", "localStorage")}}. The first one persists data for as long as the browser is open (the data is lost when the browser is closed) and the second one persists data even after the browser is closed and then opened again. We'll use the second one in this article as it is generally more useful.
+1. 🥺 fiwst, go to ouw [web stowage bwank tempwate](https://mdn.github.io/weawning-awea/javascwipt/apis/cwient-side-stowage/web-stowage/index.htmw) on github (open this i-in a nyew tab). (ꈍᴗꈍ)
+2. o-open the javascwipt consowe o-of youw bwowsew's d-devewopew toows. ^•ﻌ•^
+3. a-aww of youw web stowage data is contained within two object-wike s-stwuctuwes inside the bwowsew: {{domxwef("window.sessionstowage", :3 "sessionstowage")}} and {{domxwef("window.wocawstowage", (˘ω˘) "wocawstowage")}}. ^^ the fiwst one pewsists data f-fow as wong as the bwowsew is o-open (the data is w-wost when the b-bwowsew is cwosed) and the second o-one pewsists data e-even aftew the b-bwowsew is cwosed a-and then opened again. we'ww use the second o-one in this awticwe a-as it is genewawwy m-mowe usefuw. /(^•ω•^)
 
-   The {{domxref("Storage.setItem()")}} method allows you to save a data item in storage — it takes two parameters: the name of the item, and its value. Try typing this into your JavaScript console (change the value to your own name, if you wish!):
+   t-the {{domxwef("stowage.setitem()")}} m-method awwows you to save a data item in stowage — i-it takes two pawametews: the nyame of the item, σωσ and its vawue. òωó twy typing this into youw javascwipt c-consowe (change the vawue to youw own nyame, >w< if you wish!):
 
    ```js
-   localStorage.setItem("name", "Chris");
+   w-wocawstowage.setitem("name", (˘ω˘) "chwis");
    ```
 
-4. The {{domxref("Storage.getItem()")}} method takes one parameter — the name of a data item you want to retrieve — and returns the item's value. Now type these lines into your JavaScript console:
+4. ^•ﻌ•^ t-the {{domxwef("stowage.getitem()")}} m-method takes one pawametew — t-the nyame of a data item you w-want to wetwieve — a-and wetuwns the item's vawue. >_< nyow type these wines into youw javascwipt consowe:
 
    ```js
-   let myName = localStorage.getItem("name");
-   myName;
+   w-wet myname = wocawstowage.getitem("name");
+   m-myname;
    ```
 
-   Upon typing in the second line, you should see that the `myName` variable now contains the value of the `name` data item.
+   upon typing i-in the second w-wine, -.- you shouwd see that the `myname` vawiabwe n-nyow contains t-the vawue of the `name` data item. òωó
 
-5. The {{domxref("Storage.removeItem()")}} method takes one parameter — the name of a data item you want to remove — and removes that item out of web storage. Type the following lines into your JavaScript console:
+5. ( ͡o ω ͡o ) t-the {{domxwef("stowage.wemoveitem()")}} method t-takes one pawametew — the nyame of a data item you want to wemove — and w-wemoves that item o-out of web stowage. (ˆ ﻌ ˆ)♡ t-type the fowwowing wines i-into youw javascwipt c-consowe:
 
    ```js
-   localStorage.removeItem("name");
-   myName = localStorage.getItem("name");
-   myName;
+   wocawstowage.wemoveitem("name");
+   m-myname = wocawstowage.getitem("name");
+   myname;
    ```
 
-   The third line should now return `null` — the `name` item no longer exists in the web storage.
+   the thiwd wine shouwd nyow wetuwn `nuww` — t-the `name` i-item nyo wongew exists in the web stowage. :3
 
-### The data persists!
+### t-the data pewsists! ^•ﻌ•^
 
-One key feature of web storage is that the data persists between page loads (and even when the browser is shut down, in the case of `localStorage`). Let's look at this in action.
+o-one key featuwe of web stowage is that the data pewsists b-between page woads (and even when the bwowsew is shut down, ( ͡o ω ͡o ) in the case of `wocawstowage`). ^•ﻌ•^ w-wet's wook at this in action. ʘwʘ
 
-1. Open our web storage blank template again, but this time in a different browser to the one you've got this tutorial open in! This will make it easier to deal with.
-2. Type these lines into the browser's JavaScript console:
+1. o-open ouw web stowage b-bwank tempwate again, :3 but this time in a diffewent bwowsew t-to the one you've g-got this tutowiaw open in! >_< this wiww make it easiew to deaw with. rawr
+2. t-type these wines into the b-bwowsew's javascwipt consowe:
 
    ```js
-   localStorage.setItem("name", "Chris");
-   let myName = localStorage.getItem("name");
-   myName;
+   wocawstowage.setitem("name", 🥺 "chwis");
+   wet myname = w-wocawstowage.getitem("name");
+   myname;
    ```
 
-   You should see the name item returned.
+   y-you shouwd s-see the nyame item wetuwned. (✿oωo)
 
-3. Now close down the browser and open it up again.
-4. Enter the following lines again:
+3. n-nyow cwose down the bwowsew and o-open it up again. (U ﹏ U)
+4. e-entew the f-fowwowing wines again:
 
    ```js
-   let myName = localStorage.getItem("name");
-   myName;
+   w-wet myname = w-wocawstowage.getitem("name");
+   myname;
    ```
 
-   You should see that the value is still available, even though the browser has been closed and then opened again.
+   you shouwd s-see that the vawue i-is stiww avaiwabwe, rawr x3 e-even though the bwowsew has been cwosed a-and then opened again. (✿oωo)
 
-### Separate storage for each domain
+### sepawate s-stowage fow e-each domain
 
-There is a separate data store for each domain (each separate web address loaded in the browser). You will see that if you load two websites (say google.com and amazon.com) and try storing an item on one website, it won't be available to the other website.
+thewe is a sepawate data stowe fow each domain (each s-sepawate web a-addwess woaded i-in the bwowsew). (U ᵕ U❁) y-you wiww see that if you woad two w-websites (say googwe.com and amazon.com) and twy stowing an item on one website, -.- it won't be a-avaiwabwe to the othew website. /(^•ω•^)
 
-This makes sense — you can imagine the security issues that would arise if websites could see each other's data!
+t-this makes sense — you can imagine t-the secuwity issues that wouwd a-awise if websites couwd see e-each othew's data! OwO
 
-### A more involved example
+### a-a mowe i-invowved exampwe
 
-Let's apply this new-found knowledge by writing a working example to give you an idea of how web storage can be used. Our example will allow you to enter a name, after which the page will update to give you a personalized greeting. This state will also persist across page/browser reloads, because the name is stored in web storage.
+w-wet's appwy this n-nyew-found knowwedge by wwiting a wowking exampwe to give you an idea of how web stowage can be used. rawr x3 ouw exampwe w-wiww awwow y-you to entew a name, σωσ a-aftew which the page wiww update t-to give you a pewsonawized gweeting. ʘwʘ this state wiww awso p-pewsist acwoss page/bwowsew w-wewoads, -.- because the n-nyame is stowed in web stowage. 😳
 
-You can find the example HTML at [personal-greeting.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/web-storage/personal-greeting.html) — this contains a website with a header, content, and footer, and a form for entering your name.
+you can find the e-exampwe htmw a-at [pewsonaw-gweeting.htmw](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/cwient-side-stowage/web-stowage/pewsonaw-gweeting.htmw) — this contains a-a website with a-a headew, content, 😳😳😳 and footew, OwO and a fowm fow entewing youw name. ^•ﻌ•^
 
-![A Screenshot of a website that has a header, content and footer sections. The header has a welcome text to the left-hand side and a button labelled 'forget' to the right-hand side. The content has an heading followed by a two paragraphs of dummy text. The footer reads 'Copyright nobody. Use the code as you like'.](web-storage-demo.png)
+![a scweenshot o-of a website t-that has a headew, rawr c-content and f-footew sections. (✿oωo) t-the headew has a wewcome text t-to the weft-hand s-side and a button wabewwed 'fowget' t-to the wight-hand s-side. ^^ the content has an h-heading fowwowed by a two pawagwaphs of dummy text. -.- t-the footew weads 'copywight n-nyobody. (✿oωo) use the c-code as you wike'.](web-stowage-demo.png)
 
-Let's build up the example, so you can understand how it works.
+wet's b-buiwd up the exampwe, o.O so you can undewstand how i-it wowks. :3
 
-1. First, make a local copy of our [personal-greeting.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/web-storage/personal-greeting.html) file in a new directory on your computer.
-2. Next, note how our HTML references a JavaScript file called `index.js`, with a line like `<script src="index.js" defer></script>`. We need to create this and write our JavaScript code into it. Create an `index.js` file in the same directory as your HTML file.
-3. We'll start off by creating references to all the HTML features we need to manipulate in this example — we'll create them all as constants, as these references do not need to change in the lifecycle of the app. Add the following lines to your JavaScript file:
+1. rawr x3 f-fiwst, make a wocaw c-copy of ouw [pewsonaw-gweeting.htmw](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/cwient-side-stowage/web-stowage/pewsonaw-gweeting.htmw) fiwe in a nyew diwectowy on youw computew.
+2. (U ᵕ U❁) nyext, n-nyote how ouw htmw wefewences a javascwipt f-fiwe cawwed `index.js`, :3 w-with a wine wike `<scwipt s-swc="index.js" defew></scwipt>`. w-we nyeed to c-cweate this and wwite ouw javascwipt code into it. 🥺 c-cweate an `index.js` fiwe in the same diwectowy a-as youw htmw f-fiwe. XD
+3. we'ww stawt off by cweating w-wefewences to aww the htmw f-featuwes we nyeed t-to manipuwate i-in this exampwe — we'ww cweate them aww as constants, >_< as these wefewences do nyot nyeed to change in the wifecycwe of the app. (ꈍᴗꈍ) add the fowwowing wines to youw javascwipt fiwe:
 
    ```js
-   // create needed constants
-   const rememberDiv = document.querySelector(".remember");
-   const forgetDiv = document.querySelector(".forget");
-   const form = document.querySelector("form");
-   const nameInput = document.querySelector("#entername");
-   const submitBtn = document.querySelector("#submitname");
-   const forgetBtn = document.querySelector("#forgetname");
+   // cweate nyeeded constants
+   const w-wemembewdiv = d-document.quewysewectow(".wemembew");
+   const fowgetdiv = document.quewysewectow(".fowget");
+   c-const fowm = document.quewysewectow("fowm");
+   c-const nyameinput = d-document.quewysewectow("#entewname");
+   const s-submitbtn = document.quewysewectow("#submitname");
+   c-const f-fowgetbtn = document.quewysewectow("#fowgetname");
 
-   const h1 = document.querySelector("h1");
-   const personalGreeting = document.querySelector(".personal-greeting");
+   const h1 = d-document.quewysewectow("h1");
+   const pewsonawgweeting = d-document.quewysewectow(".pewsonaw-gweeting");
    ```
 
-4. Next up, we need to include a small event listener to stop the form from actually submitting itself when the submit button is pressed, as this is not the behavior we want. Add this snippet below your previous code:
+4. ( ͡o ω ͡o ) n-nyext up, (˘ω˘) we nyeed to incwude a smow event w-wistenew to stop t-the fowm fwom actuawwy s-submitting i-itsewf when the s-submit button i-is pwessed, (˘ω˘) as t-this is nyot the b-behaviow we want. UwU a-add this snippet bewow youw pwevious c-code:
 
    ```js
-   // Stop the form from submitting when a button is pressed
-   form.addEventListener("submit", (e) => e.preventDefault());
+   // s-stop t-the fowm fwom submitting when a-a button is pwessed
+   fowm.addeventwistenew("submit", (ˆ ﻌ ˆ)♡ (e) => e.pweventdefauwt());
    ```
 
-5. Now we need to add an event listener, the handler function of which will run when the "Say hello" button is clicked. The comments explain in detail what each bit does, but in essence here we are taking the name the user has entered into the text input box and saving it in web storage using `setItem()`, then running a function called `nameDisplayCheck()` that will handle updating the actual website text. Add this to the bottom of your code:
+5. (///ˬ///✿) nyow we nyeed to a-add an event wistenew, (ꈍᴗꈍ) the handwew f-function of which w-wiww wun when t-the "say hewwo" button is cwicked. -.- t-the comments expwain in detaiw n-nyani each bit does, 😳😳😳 but in e-essence hewe we awe taking the n-name the usew has entewed into the text input box and saving it in web stowage using `setitem()`, t-then wunning a function cawwed `namedispwaycheck()` t-that wiww h-handwe updating the actuaw website text. (///ˬ///✿) add this to the bottom o-of youw code:
 
    ```js
-   // run function when the 'Say hello' button is clicked
-   submitBtn.addEventListener("click", () => {
-     // store the entered name in web storage
-     localStorage.setItem("name", nameInput.value);
-     // run nameDisplayCheck() to sort out displaying the personalized greetings and updating the form display
-     nameDisplayCheck();
+   // wun f-function when t-the 'say hewwo' b-button is cwicked
+   submitbtn.addeventwistenew("cwick", UwU () => {
+     // stowe the e-entewed nyame i-in web stowage
+     wocawstowage.setitem("name", 😳 n-nyameinput.vawue);
+     // wun nyamedispwaycheck() t-to sowt out dispwaying the p-pewsonawized gweetings a-and updating t-the fowm dispway
+     nyamedispwaycheck();
    });
    ```
 
-6. At this point we also need an event handler to run a function when the "Forget" button is clicked — this is only displayed after the "Say hello" button has been clicked (the two form states toggle back and forth). In this function we remove the `name` item from web storage using `removeItem()`, then again run `nameDisplayCheck()` to update the display. Add this to the bottom:
+6. /(^•ω•^) a-at this point we a-awso nyeed an e-event handwew to w-wun a function when the "fowget" b-button is cwicked — t-this is o-onwy dispwayed aftew t-the "say hewwo" b-button has b-been cwicked (the t-two fowm states t-toggwe back and fowth). òωó in this f-function we wemove the `name` i-item fwom web stowage using `wemoveitem()`, >w< t-then a-again wun `namedispwaycheck()` t-to update the dispway. -.- add this to the bottom:
 
    ```js
-   // run function when the 'Forget' button is clicked
-   forgetBtn.addEventListener("click", () => {
-     // Remove the stored name from web storage
-     localStorage.removeItem("name");
-     // run nameDisplayCheck() to sort out displaying the generic greeting again and updating the form display
-     nameDisplayCheck();
+   // wun function when t-the 'fowget' button i-is cwicked
+   f-fowgetbtn.addeventwistenew("cwick", (⑅˘꒳˘) () => {
+     // wemove the stowed nyame fwom web stowage
+     w-wocawstowage.wemoveitem("name");
+     // w-wun nyamedispwaycheck() t-to sowt out d-dispwaying the genewic gweeting again and updating the fowm dispway
+     n-nyamedispwaycheck();
    });
    ```
 
-7. It is now time to define the `nameDisplayCheck()` function itself. Here we check whether the name item has been stored in web storage by using `localStorage.getItem('name')` as a conditional test. If the name has been stored, this call will evaluate to `true`; if not, the call will evaluate to `false`. If the call evaluates to `true`, we display a personalized greeting, display the "forget" part of the form, and hide the "Say hello" part of the form. If the call evaluates to `false`, we display a generic greeting and do the opposite. Again, put the following code at the bottom:
+7. (˘ω˘) i-it is now time t-to define the `namedispwaycheck()` f-function itsewf. (U ᵕ U❁) hewe we check whethew the nyame i-item has been s-stowed in web stowage by using `wocawstowage.getitem('name')` as a conditionaw t-test. if the nyame has been stowed, ^^ this caww w-wiww evawuate to `twue`; if nyot, ^^ t-the caww wiww e-evawuate to `fawse`. rawr x3 if the caww e-evawuates to `twue`, >w< w-we dispway a pewsonawized g-gweeting, (U ᵕ U❁) dispway the "fowget" pawt o-of the fowm, 🥺 a-and hide the "say h-hewwo" pawt of t-the fowm. (⑅˘꒳˘) if the caww evawuates t-to `fawse`, OwO we d-dispway a genewic g-gweeting and do the opposite. 😳 a-again, put the fowwowing code at the bottom:
 
    ```js
-   // define the nameDisplayCheck() function
-   function nameDisplayCheck() {
-     // check whether the 'name' data item is stored in web Storage
-     if (localStorage.getItem("name")) {
-       // If it is, display personalized greeting
-       const name = localStorage.getItem("name");
-       h1.textContent = `Welcome, ${name}`;
-       personalGreeting.textContent = `Welcome to our website, ${name}! We hope you have fun while you are here.`;
-       // hide the 'remember' part of the form and show the 'forget' part
-       forgetDiv.style.display = "block";
-       rememberDiv.style.display = "none";
-     } else {
-       // if not, display generic greeting
-       h1.textContent = "Welcome to our website ";
-       personalGreeting.textContent =
-         "Welcome to our website. We hope you have fun while you are here.";
-       // hide the 'forget' part of the form and show the 'remember' part
-       forgetDiv.style.display = "none";
-       rememberDiv.style.display = "block";
+   // d-define t-the nyamedispwaycheck() f-function
+   function nyamedispwaycheck() {
+     // check whethew the 'name' data item i-is stowed in web stowage
+     i-if (wocawstowage.getitem("name")) {
+       // if i-it is, òωó dispway pewsonawized gweeting
+       const n-nyame = wocawstowage.getitem("name");
+       h1.textcontent = `wewcome, (ˆ ﻌ ˆ)♡ ${name}`;
+       p-pewsonawgweeting.textcontent = `wewcome t-to ouw website, ʘwʘ ${name}! ^^;; w-we h-hope you have fun w-whiwe you awe hewe.`;
+       // hide the 'wemembew' pawt of the fowm and show t-the 'fowget' pawt
+       fowgetdiv.stywe.dispway = "bwock";
+       w-wemembewdiv.stywe.dispway = "none";
+     } ewse {
+       // if nyot, ʘwʘ dispway genewic gweeting
+       h1.textcontent = "wewcome t-to ouw website ";
+       pewsonawgweeting.textcontent =
+         "wewcome to ouw website. òωó we hope you have fun w-whiwe you awe h-hewe.";
+       // hide the 'fowget' p-pawt of the fowm and show the 'wemembew' pawt
+       f-fowgetdiv.stywe.dispway = "none";
+       w-wemembewdiv.stywe.dispway = "bwock";
      }
    }
    ```
 
-8. Last but not least, we need to run the `nameDisplayCheck()` function when the page is loaded. If we don't do this, then the personalized greeting will not persist across page reloads. Add the following to the bottom of your code:
+8. ( ͡o ω ͡o ) wast b-but nyot weast, ʘwʘ we nyeed to wun t-the `namedispwaycheck()` function when the page is woaded. >w< if w-we don't do this, 😳😳😳 then the pewsonawized gweeting w-wiww nyot pewsist a-acwoss page w-wewoads. σωσ add the fowwowing to the bottom of youw c-code:
 
    ```js
-   nameDisplayCheck();
+   nyamedispwaycheck();
    ```
 
-Your example is finished — well done! All that remains now is to save your code and test your HTML page in a browser. You can see our [finished version running live here](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/personal-greeting.html).
+youw exampwe is finished — weww done! -.- aww that w-wemains nyow is t-to save youw code a-and test youw h-htmw page in a bwowsew. 🥺 you can see ouw [finished v-vewsion wunning w-wive hewe](https://mdn.github.io/weawning-awea/javascwipt/apis/cwient-side-stowage/web-stowage/pewsonaw-gweeting.htmw). >w<
 
-> **Note:** There is another, slightly more complex example to explore at [Using the Web Storage API](/ko/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
+> **note:** thewe is anothew, (///ˬ///✿) swightwy m-mowe compwex exampwe to expwowe at [using the w-web stowage api](/ko/docs/web/api/web_stowage_api/using_the_web_stowage_api). UwU
 
-> **Note:** In the line `<script src="index.js" defer></script>` of the source for our finished version, the `defer` attribute specifies that the contents of the {{htmlelement("script")}} element will not execute until the page has finished loading.
+> **note:** in the wine `<scwipt s-swc="index.js" d-defew></scwipt>` of the souwce f-fow ouw finished v-vewsion, ( ͡o ω ͡o ) the `defew` a-attwibute specifies that the contents of the {{htmwewement("scwipt")}} e-ewement wiww nyot exekawaii~ untiw t-the page has finished woading. (ˆ ﻌ ˆ)♡
 
-## Storing complex data — IndexedDB
+## stowing compwex data — indexeddb
 
-The [IndexedDB API](/ko/docs/Web/API/IndexedDB_API) (sometimes abbreviated IDB) is a complete database system available in the browser in which you can store complex related data, the types of which aren't limited to simple values like strings or numbers. You can store videos, images, and pretty much anything else in an IndexedDB instance.
+t-the [indexeddb a-api](/ko/docs/web/api/indexeddb_api) (sometimes a-abbweviated i-idb) is a compwete d-database system avaiwabwe in t-the bwowsew in which you can stowe compwex wewated d-data, ^^;; the types of which awen't w-wimited to simpwe vawues wike stwings ow nyumbews. y-you can s-stowe videos, (U ᵕ U❁) images, XD and pwetty m-much anything ewse in an indexeddb i-instance. (ꈍᴗꈍ)
 
-The IndexedDB API allows you to create a database, then create object stores within that database.
-Object stores are like tables in a relational database, and each object store can contain a number of objects.
-To learn more about the IndexedDB API, see [Using IndexedDB](/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB).
+the i-indexeddb api awwows you to cweate a-a database, -.- t-then cweate object stowes within t-that database. >_<
+object stowes awe wike tabwes in a wewationaw d-database, (ˆ ﻌ ˆ)♡ and each object stowe c-can contain a nyumbew of objects. ( ͡o ω ͡o )
+to weawn mowe a-about the indexeddb a-api, rawr x3 see [using i-indexeddb](/ko/docs/web/api/indexeddb_api/using_indexeddb). òωó
 
-However, this does come at a cost: IndexedDB is much more complex to use than the Web Storage API. In this section, we'll really only scratch the surface of what it is capable of, but we will give you enough to get started.
+howevew, this does c-come at a cost: i-indexeddb is much mowe compwex t-to use than the web stowage api. 😳 i-in this section, (ˆ ﻌ ˆ)♡ we'ww weawwy o-onwy scwatch the s-suwface of nyani it is capabwe of, 🥺 but we wiww give you enough to get stawted.
 
-### Working through a note storage example
+### w-wowking thwough a-a nyote stowage exampwe
 
-Here we'll run you through an example that allows you to store notes in your browser and view and delete them whenever you like, getting you to build it up for yourself and explaining the most fundamental parts of IDB as we go along.
+hewe we'ww wun you thwough an exampwe t-that awwows you to stowe nyotes i-in youw bwowsew a-and view and dewete them whenevew you wike, ^^ getting you to buiwd it up fow y-youwsewf and expwaining the most fundamentaw pawts o-of idb as we go awong. /(^•ω•^)
 
-The app looks something like this:
+the a-app wooks something w-wike this:
 
-![IndexDB notes demo screenshot with 4 sections. The first section is the header. The second section lists all the notes that have been created. It has two notes, each with a delete button. A third section is a form with 2 input fields for 'Note title' and 'Note text' and a button labeled 'Create new note'. The bottom section footer reads 'Copyright nobody. Use the code as you like'.](idb-demo.png)
+![indexdb notes d-demo scweenshot w-with 4 sections. o.O t-the fiwst section i-is the headew. òωó t-the second section w-wists aww the nyotes that have been cweated. XD it has two nyotes, rawr x3 each with a dewete button. (˘ω˘) a-a thiwd section i-is a fowm with 2 i-input fiewds fow 'note t-titwe' and 'note t-text' and a-a button wabewed 'cweate new nyote'. the bottom section footew weads 'copywight n-nyobody. :3 use t-the code as you wike'.](idb-demo.png)
 
-Each note has a title and some body text, each individually editable. The JavaScript code we'll go through below has detailed comments to help you understand what's going on.
+each nyote has a titwe and s-some body text, e-each individuawwy e-editabwe. the javascwipt code we'ww go thwough b-bewow has detaiwed comments to hewp you undewstand n-nyani's going o-on.
 
-### Getting started
+### getting stawted
 
-1. First of all, make local copies of our [`index.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/style.css), and [`index-start.js`](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) files into a new directory on your local machine.
-2. Have a look at the files. You'll see that the HTML defines a website with a header and footer, as well as a main content area that contains a place to display notes, and a form for entering new notes into the database. The CSS provides some styling to make it clearer what is going on. The JavaScript file contains five declared constants containing references to the {{htmlelement("ul")}} element the notes will be displayed in, the title and body {{htmlelement("input")}} elements, the {{htmlelement("form")}} itself, and the {{htmlelement("button")}}.
-3. Rename your JavaScript file to `index.js`. You are now ready to start adding code to it.
+1. (U ᵕ U❁) fiwst of aww, rawr make w-wocaw copies of ouw [`index.htmw`](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/cwient-side-stowage/indexeddb/notes/index.htmw), OwO [`stywe.css`](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/cwient-side-stowage/indexeddb/notes/stywe.css), ʘwʘ a-and [`index-stawt.js`](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/cwient-side-stowage/indexeddb/notes/index-stawt.js) f-fiwes into a nyew d-diwectowy on youw w-wocaw machine. XD
+2. h-have a wook a-at the fiwes. rawr x3 you'ww s-see that the h-htmw defines a website with a h-headew and footew, OwO a-as weww as a main content awea t-that contains a pwace to dispway nyotes, nyaa~~ and a f-fowm fow entewing nyew nyotes into t-the database. ʘwʘ the css pwovides s-some stywing t-to make it cweawew nyani is going on. nyaa~~ the javascwipt f-fiwe contains five decwawed constants containing w-wefewences t-to the {{htmwewement("uw")}} ewement the nyotes w-wiww be dispwayed i-in, (U ﹏ U) the titwe and body {{htmwewement("input")}} e-ewements, (///ˬ///✿) the {{htmwewement("fowm")}} itsewf, :3 and the {{htmwewement("button")}}. (˘ω˘)
+3. w-wename youw j-javascwipt fiwe to `index.js`. 😳 y-you awe nyow weady t-to stawt adding code to it. 😳😳😳
 
-### Database initial setup
+### database initiaw s-setup
 
-Now let's look at what we have to do in the first place, to actually set up a database.
+nyow w-wet's wook at n-nyani we have to d-do in the fiwst pwace, ʘwʘ to actuawwy set up a database. (⑅˘꒳˘)
 
-1. Below the constant declarations, add the following lines:
+1. bewow the constant decwawations, nyaa~~ add the fowwowing wines:
 
    ```js
-   // Create an instance of a db object for us to store the open database in
-   let db;
+   // c-cweate an i-instance of a db o-object fow us to s-stowe the open d-database in
+   w-wet db;
    ```
 
-   Here we are declaring a variable called `db` — this will later be used to store an object representing our database. We will use this in a few places, so we've declared it globally here to make things easier.
+   hewe we awe decwawing a-a vawiabwe c-cawwed `db` — this wiww watew b-be used to stowe a-an object wepwesenting ouw database. (U ﹏ U) we wiww u-use this in a few pwaces, ʘwʘ so we've decwawed it g-gwobawwy hewe to make things easiew. (ꈍᴗꈍ)
 
-2. Next, add the following:
+2. n-nyext, a-add the fowwowing:
 
    ```js
-   // Open our database; it is created if it doesn't already exist
-   // (see the upgradeneeded handler below)
-   const openRequest = window.indexedDB.open("notes_db", 1);
+   // open ouw database; i-it is cweated i-if it doesn't a-awweady exist
+   // (see the u-upgwadeneeded handwew b-bewow)
+   const openwequest = w-window.indexeddb.open("notes_db", :3 1);
    ```
 
-   This line creates a request to open version `1` of a database called `notes_db`. If this doesn't already exist, it will be created for you by subsequent code. You will see this request pattern used very often throughout IndexedDB. Database operations take time. You don't want to hang the browser while you wait for the results, so database operations are {{Glossary("asynchronous")}}, meaning that instead of happening immediately, they will happen at some point in the future, and you get notified when they're done.
+   this wine cweates a-a wequest t-to open vewsion `1` o-of a database cawwed `notes_db`. ( ͡o ω ͡o ) i-if this doesn't awweady exist, rawr x3 it wiww be c-cweated fow you by subsequent code. rawr x3 you wiww see this wequest pattewn used vewy often thwoughout indexeddb. mya database o-opewations take time. nyaa~~ you don't want to hang the bwowsew whiwe you wait fow the wesuwts, (///ˬ///✿) so database opewations a-awe {{gwossawy("asynchwonous")}}, ^^ meaning that instead of happening i-immediatewy, OwO they wiww h-happen at some point in the futuwe, :3 and you get n-nyotified when they'we done. ^^
 
-   To handle this in IndexedDB, you create a request object (which can be called anything you like — we called it `openRequest` here, so it is obvious what it is for). You then use event handlers to run code when the request completes, fails, etc., which you'll see in use below.
+   t-to handwe this in indexeddb, you c-cweate a wequest o-object (which can be cawwed anything you wike — w-we cawwed it `openwequest` hewe, (✿oωo) so it is obvious nyani it is fow). 😳 you then u-use event handwews to wun code w-when the wequest compwetes, (///ˬ///✿) faiws, e-etc., which you'ww see in use b-bewow. (///ˬ///✿)
 
-   > **Note:** The version number is important. If you want to upgrade your database (for example, by changing the table structure), you have to run your code again with an increased version number, different schema specified inside the `upgradeneeded` handler (see below), etc. We won't cover upgrading databases in this tutorial.
+   > **note:** t-the vewsion nyumbew is impowtant. (U ﹏ U) if you w-want to upgwade youw database (fow exampwe, òωó by c-changing the tabwe stwuctuwe), :3 you have to wun youw code again with an incweased v-vewsion nyumbew, (⑅˘꒳˘) d-diffewent schema specified inside t-the `upgwadeneeded` h-handwew (see bewow), 😳😳😳 etc. ʘwʘ w-we won't covew upgwading databases in this tutowiaw. OwO
 
-3. Now add the following event handlers just below your previous addition:
+3. nyow add the fowwowing e-event handwews j-just bewow youw pwevious addition:
 
    ```js
-   // error handler signifies that the database didn't open successfully
-   openRequest.addEventListener("error", () =>
-     console.error("Database failed to open"),
+   // e-ewwow handwew s-signifies that the database didn't o-open successfuwwy
+   openwequest.addeventwistenew("ewwow", >_< () =>
+     consowe.ewwow("database f-faiwed to open"), /(^•ω•^)
    );
 
-   // success handler signifies that the database opened successfully
-   openRequest.addEventListener("success", () => {
-     console.log("Database opened successfully");
+   // success handwew signifies that t-the database opened s-successfuwwy
+   openwequest.addeventwistenew("success", (˘ω˘) () => {
+     consowe.wog("database o-opened successfuwwy");
 
-     // Store the opened database object in the db variable. This is used a lot below
-     db = openRequest.result;
+     // stowe the opened database object in the db vawiabwe. >w< this is used a wot bewow
+     db = openwequest.wesuwt;
 
-     // Run the displayData() function to display the notes already in the IDB
-     displayData();
+     // wun the dispwaydata() f-function t-to dispway the nyotes awweady i-in the idb
+     d-dispwaydata();
    });
    ```
 
-   The {{domxref("IDBRequest/error_event", "error")}} event handler will run if the system comes back saying that the request failed. This allows you to respond to this problem. In our example, we just print a message to the JavaScript console.
+   the {{domxwef("idbwequest/ewwow_event", ^•ﻌ•^ "ewwow")}} e-event handwew wiww wun if the system comes back saying that the wequest faiwed. ʘwʘ this awwows y-you to wespond to this pwobwem. OwO in ouw exampwe, nyaa~~ we just pwint a message to the j-javascwipt consowe. nyaa~~
 
-   The {{domxref("IDBRequest/success_event", "success")}} event handler will run if the request returns successfully, meaning the database was successfully opened. If this is the case, an object representing the opened database becomes available in the {{domxref("IDBRequest.result", "openRequest.result")}} property, allowing us to manipulate the database. We store this in the `db` variable we created earlier for later use. We also run a function called `displayData()`, which displays the data in the database inside the {{HTMLElement("ul")}}. We run it now so that the notes already in the database are displayed as soon as the page loads. You'll see `displayData()` defined later on.
+   t-the {{domxwef("idbwequest/success_event", XD "success")}} e-event handwew wiww wun if the wequest wetuwns successfuwwy, o.O meaning t-the database w-was successfuwwy o-opened. òωó if this is the case, (⑅˘꒳˘) a-an object wepwesenting the opened d-database becomes avaiwabwe in t-the {{domxwef("idbwequest.wesuwt", o.O "openwequest.wesuwt")}} pwopewty, (ˆ ﻌ ˆ)♡ a-awwowing us to manipuwate the database. (⑅˘꒳˘) we s-stowe this in the `db` vawiabwe w-we cweated eawwiew f-fow watew use. (U ᵕ U❁) we awso wun a f-function cawwed `dispwaydata()`, >w< w-which dispways the data in the d-database inside the {{htmwewement("uw")}}. OwO w-we wun it nyow so that t-the nyotes awweady i-in the database awe dispwayed as soon as the p-page woads. >w< you'ww see `dispwaydata()` defined watew on. ^^;;
 
-4. Finally for this section, we'll add probably the most important event handler for setting up the database: {{domxref("IDBOpenDBRequest/upgradeneeded_event", "upgradeneeded")}}. This handler runs if the database has not already been set up, or if the database is opened with a bigger version number than the existing stored database (when performing an upgrade). Add the following code, below your previous handler:
+4. finawwy fow this section, >w< we'ww add pwobabwy the most impowtant event h-handwew fow setting up the database: {{domxwef("idbopendbwequest/upgwadeneeded_event", σωσ "upgwadeneeded")}}. (˘ω˘) t-this handwew wuns if the database h-has nyot awweady been set up, òωó ow if the database i-is opened with a biggew vewsion numbew than the e-existing stowed database (when pewfowming an u-upgwade). (ꈍᴗꈍ) add the fowwowing code, (ꈍᴗꈍ) bewow youw pwevious h-handwew:
 
    ```js
-   // Set up the database tables if this has not already been done
-   openRequest.addEventListener("upgradeneeded", (e) => {
-     // Grab a reference to the opened database
-     db = e.target.result;
+   // set up the database tabwes if this h-has nyot awweady b-been done
+   openwequest.addeventwistenew("upgwadeneeded", òωó (e) => {
+     // gwab a wefewence t-to the opened database
+     d-db = e.tawget.wesuwt;
 
-     // Create an objectStore in our database to store notes and an auto-incrementing key
-     // An objectStore is similar to a 'table' in a relational database
-     const objectStore = db.createObjectStore("notes_os", {
-       keyPath: "id",
-       autoIncrement: true,
+     // c-cweate a-an objectstowe in ouw database to stowe nyotes a-and an auto-incwementing key
+     // an objectstowe is simiwaw t-to a 'tabwe' in a wewationaw database
+     const objectstowe = db.cweateobjectstowe("notes_os", (U ᵕ U❁) {
+       k-keypath: "id", /(^•ω•^)
+       autoincwement: t-twue, :3
      });
 
-     // Define what data items the objectStore will contain
-     objectStore.createIndex("title", "title", { unique: false });
-     objectStore.createIndex("body", "body", { unique: false });
+     // d-define nyani data items the objectstowe wiww contain
+     o-objectstowe.cweateindex("titwe", rawr "titwe", (ˆ ﻌ ˆ)♡ { unique: f-fawse });
+     objectstowe.cweateindex("body", ^^;; "body", { u-unique: f-fawse });
 
-     console.log("Database setup complete");
+     consowe.wog("database setup compwete");
    });
    ```
 
-   This is where we define the schema (structure) of our database; that is, the set of columns (or fields) it contains. Here we first grab a reference to the existing database from the `result` property of the event's target (`e.target.result`), which is the `request` object. This is equivalent to the line `db = openRequest.result;` inside the `success` event handler, but we need to do this separately here because the `upgradeneeded` event handler (if needed) will run before the `success` event handler, meaning that the `db` value wouldn't be available if we didn't do this.
+   this is whewe we define the schema (stwuctuwe) o-of o-ouw database; that is, (⑅˘꒳˘) the set of cowumns (ow fiewds) i-it contains. rawr x3 hewe we fiwst gwab a wefewence t-to the existing d-database fwom t-the `wesuwt` pwopewty o-of the event's t-tawget (`e.tawget.wesuwt`), ʘwʘ w-which is the `wequest` object. (ꈍᴗꈍ) this is equivawent t-to the wine `db = o-openwequest.wesuwt;` i-inside t-the `success` e-event handwew, /(^•ω•^) but w-we need to do this sepawatewy h-hewe because the `upgwadeneeded` e-event handwew (if n-nyeeded) wiww wun befowe the `success` event h-handwew, (✿oωo) meaning that the `db` vawue wouwdn't be a-avaiwabwe if we didn't do this. ^^;;
 
-   We then use {{domxref("IDBDatabase.createObjectStore()")}} to create a new object store inside our opened database called `notes_os`. This is equivalent to a single table in a conventional database system. We've given it the name notes, and also specified an `autoIncrement` key field called `id` — in each new record this will automatically be given an incremented value — the developer doesn't need to set this explicitly. Being the key, the `id` field will be used to uniquely identify records, such as when deleting or displaying a record.
+   we then use {{domxwef("idbdatabase.cweateobjectstowe()")}} t-to cweate a nyew o-object stowe inside ouw opened database cawwed `notes_os`. (˘ω˘) this i-is equivawent t-to a singwe tabwe in a conventionaw d-database system. 😳😳😳 w-we've given it the name nyotes, ^^ and awso specified an `autoincwement` k-key fiewd c-cawwed `id` — in each nyew wecowd this wiww a-automaticawwy b-be given an incwemented vawue — the devewopew d-doesn't nyeed to set this expwicitwy. /(^•ω•^) being the key, >_< the `id` fiewd wiww be used to uniquewy identify w-wecowds, (ꈍᴗꈍ) such as when deweting ow dispwaying a-a wecowd. (ꈍᴗꈍ)
 
-   We also create two other indexes (fields) using the {{domxref("IDBObjectStore.createIndex()")}} method: `title` (which will contain a title for each note), and `body` (which will contain the body text of the note).
+   w-we awso cweate t-two othew indexes (fiewds) using t-the {{domxwef("idbobjectstowe.cweateindex()")}} m-method: `titwe` (which w-wiww contain a-a titwe fow e-each nyote), mya and `body` (which wiww contain the body text of the n-nyote). :3
 
-So with this database schema set up, when we start adding records to the database, each one will be represented as an object along these lines:
+so with t-this database s-schema set up, 😳😳😳 when we stawt adding w-wecowds to t-the database, /(^•ω•^) each o-one wiww be wepwesented as an o-object awong these w-wines:
 
 ```json
 {
-  "title": "Buy milk",
-  "body": "Need both cows milk and soy.",
+  "titwe": "buy m-miwk", -.-
+  "body": "need b-both c-cows miwk and soy.",
   "id": 8
 }
 ```
 
-### Adding data to the database
+### a-adding data to the d-database
 
-Now let's look at how we can add records to the database. This will be done using the form on our page.
+nyow wet's w-wook at how we can add wecowds to the database. UwU this wiww be d-done using the f-fowm on ouw page. (U ﹏ U)
 
-Below your previous event handler, add the following line, which sets up a `submit` event handler that runs a function called `addData()` when the form is submitted (when the submit {{htmlelement("button")}} is pressed leading to a successful form submission):
+bewow youw pwevious e-event handwew, ^^ a-add the fowwowing wine, 😳 which sets up a `submit` e-event handwew t-that wuns a-a function cawwed `adddata()` w-when t-the fowm is submitted (when the s-submit {{htmwewement("button")}} is pwessed weading to a successfuw f-fowm submission):
 
 ```js
-// Create a submit event handler so that when the form is submitted the addData() function is run
-form.addEventListener("submit", addData);
+// cweate a submit event handwew so that when the fowm is submitted t-the adddata() f-function is wun
+fowm.addeventwistenew("submit", (˘ω˘) adddata);
 ```
 
-Now let's define the `addData()` function. Add this below your previous line:
+nyow wet's define t-the `adddata()` f-function. /(^•ω•^) add this bewow youw pwevious wine:
 
 ```js
-// Define the addData() function
-function addData(e) {
-  // prevent default - we don't want the form to submit in the conventional way
-  e.preventDefault();
+// d-define the adddata() function
+f-function a-adddata(e) {
+  // p-pwevent defauwt - we don't want the fowm to submit in the conventionaw w-way
+  e.pweventdefauwt();
 
-  // grab the values entered into the form fields and store them in an object ready for being inserted into the DB
-  const newItem = { title: titleInput.value, body: bodyInput.value };
+  // g-gwab the vawues entewed i-into the fowm fiewds and stowe them in an object w-weady fow being insewted into t-the db
+  const nyewitem = { titwe: titweinput.vawue, (˘ω˘) b-body: bodyinput.vawue };
 
-  // open a read/write db transaction, ready for adding the data
-  const transaction = db.transaction(["notes_os"], "readwrite");
+  // open a wead/wwite d-db twansaction, (✿oωo) weady fow adding the data
+  const twansaction = db.twansaction(["notes_os"], (U ﹏ U) "weadwwite");
 
-  // call an object store that's already been added to the database
-  const objectStore = transaction.objectStore("notes_os");
+  // caww an object stowe that's a-awweady been a-added to the database
+  c-const objectstowe = t-twansaction.objectstowe("notes_os");
 
-  // Make a request to add our newItem object to the object store
-  const addRequest = objectStore.add(newItem);
+  // make a wequest to add ouw n-nyewitem object to the object stowe
+  const addwequest = objectstowe.add(newitem);
 
-  addRequest.addEventListener("success", () => {
-    // Clear the form, ready for adding the next entry
-    titleInput.value = "";
-    bodyInput.value = "";
+  a-addwequest.addeventwistenew("success", (U ﹏ U) () => {
+    // c-cweaw t-the fowm, weady f-fow adding the nyext entwy
+    titweinput.vawue = "";
+    bodyinput.vawue = "";
   });
 
-  // Report on the success of the transaction completing, when everything is done
-  transaction.addEventListener("complete", () => {
-    console.log("Transaction completed: database modification finished.");
+  // wepowt on the success o-of the twansaction c-compweting, (ˆ ﻌ ˆ)♡ when evewything is done
+  twansaction.addeventwistenew("compwete", () => {
+    consowe.wog("twansaction c-compweted: database m-modification finished.");
 
-    // update the display of data to show the newly added item, by running displayData() again.
-    displayData();
+    // u-update the dispway o-of data to show the nyewwy added item, /(^•ω•^) by wunning dispwaydata() again. XD
+    dispwaydata();
   });
 
-  transaction.addEventListener("error", () =>
-    console.log("Transaction not opened due to error"),
+  t-twansaction.addeventwistenew("ewwow", (ˆ ﻌ ˆ)♡ () =>
+    consowe.wog("twansaction n-nyot opened due to ewwow"), XD
   );
 }
 ```
 
-This is quite complex; breaking it down, we:
+this is quite compwex; b-bweaking it down, mya we:
 
-- Run {{domxref("Event.preventDefault()")}} on the event object to stop the form actually submitting in the conventional manner (this would cause a page refresh and spoil the experience).
-- Create an object representing a record to enter into the database, populating it with values from the form inputs. Note that we don't have to explicitly include an `id` value — as we explained earlier, this is auto-populated.
-- Open a `readwrite` transaction against the `notes_os` object store using the {{domxref("IDBDatabase.transaction()")}} method. This transaction object allows us to access the object store so we can do something to it, e.g. add a new record.
-- Access the object store using the {{domxref("IDBTransaction.objectStore()")}} method, saving the result in the `objectStore` variable.
-- Add the new record to the database using {{domxref("IDBObjectStore.add()")}}. This creates a request object, in the same fashion as we've seen before.
-- Add a bunch of event handlers to the `request` and the `transaction` objects to run code at critical points in the lifecycle. Once the request has succeeded, we clear the form inputs ready for entering the next note. Once the transaction has completed, we run the `displayData()` function again to update the display of notes on the page.
+- wun {{domxwef("event.pweventdefauwt()")}} o-on the event object to stop the fowm actuawwy s-submitting in t-the conventionaw m-mannew (this wouwd c-cause a page w-wefwesh and spoiw the expewience). OwO
+- c-cweate an o-object wepwesenting a wecowd to e-entew into the database, XD popuwating it with vawues f-fwom the fowm inputs. ( ͡o ω ͡o ) nyote that w-we don't have t-to expwicitwy incwude an `id` v-vawue — as we e-expwained eawwiew, (ꈍᴗꈍ) this is auto-popuwated. mya
+- open a `weadwwite` t-twansaction against t-the `notes_os` o-object stowe u-using the {{domxwef("idbdatabase.twansaction()")}} method. 😳 this twansaction object awwows us to a-access the object stowe so we can do something to i-it, (ˆ ﻌ ˆ)♡ e.g. add a nyew wecowd. ^•ﻌ•^
+- access the object s-stowe using the {{domxwef("idbtwansaction.objectstowe()")}} method, 😳😳😳 saving the wesuwt in the `objectstowe` v-vawiabwe. (///ˬ///✿)
+- add the n-nyew wecowd to t-the database using {{domxwef("idbobjectstowe.add()")}}. 🥺 t-this cweates a wequest object, ^^ i-in the same f-fashion as we've seen befowe. (ˆ ﻌ ˆ)♡
+- a-add a bunch of e-event handwews t-to the `wequest` a-and the `twansaction` objects t-to wun code at cwiticaw p-points in t-the wifecycwe. mya once the wequest h-has succeeded, OwO we cweaw the fowm inputs weady fow entewing the nyext nyote. /(^•ω•^) once the twansaction h-has compweted, w-we wun the `dispwaydata()` function a-again to update the dispway of nyotes on the p-page. /(^•ω•^)
 
-### Displaying the data
+### dispwaying t-the data
 
-We've referenced `displayData()` twice in our code already, so we'd probably better define it. Add this to your code, below the previous function definition:
+w-we've wefewenced `dispwaydata()` t-twice in ouw code awweady, rawr so w-we'd pwobabwy bettew define it. XD add this to youw c-code, ʘwʘ bewow the p-pwevious function definition:
 
 ```js
-// Define the displayData() function
-function displayData() {
-  // Here we empty the contents of the list element each time the display is updated
-  // If you didn't do this, you'd get duplicates listed each time a new note is added
-  while (list.firstChild) {
-    list.removeChild(list.firstChild);
+// define the dispwaydata() f-function
+function dispwaydata() {
+  // h-hewe we empty the contents of the wist e-ewement each time the dispway i-is updated
+  // if you didn't do this, :3 you'd get d-dupwicates wisted each time a nyew n-nyote is added
+  whiwe (wist.fiwstchiwd) {
+    w-wist.wemovechiwd(wist.fiwstchiwd);
   }
 
-  // Open our object store and then get a cursor - which iterates through all the
-  // different data items in the store
-  const objectStore = db.transaction("notes_os").objectStore("notes_os");
-  objectStore.openCursor().addEventListener("success", (e) => {
-    // Get a reference to the cursor
-    const cursor = e.target.result;
+  // o-open ouw object stowe and then get a cuwsow - which i-itewates thwough aww the
+  // diffewent data i-items in the stowe
+  c-const objectstowe = d-db.twansaction("notes_os").objectstowe("notes_os");
+  objectstowe.opencuwsow().addeventwistenew("success", σωσ (e) => {
+    // get a wefewence to the cuwsow
+    const cuwsow = e.tawget.wesuwt;
 
-    // If there is still another data item to iterate through, keep running this code
-    if (cursor) {
-      // Create a list item, h3, and p to put each data item inside when displaying it
-      // structure the HTML fragment, and append it inside the list
-      const listItem = document.createElement("li");
-      const h3 = document.createElement("h3");
-      const para = document.createElement("p");
+    // if t-thewe is stiww anothew data item to itewate thwough, /(^•ω•^) k-keep wunning t-this code
+    if (cuwsow) {
+      // cweate a-a wist item, (ˆ ﻌ ˆ)♡ h3, (U ﹏ U) a-and p to put each data item inside when dispwaying it
+      // s-stwuctuwe the htmw fwagment, >_< and a-append it inside the wist
+      const wistitem = d-document.cweateewement("wi");
+      c-const h3 = document.cweateewement("h3");
+      c-const pawa = d-document.cweateewement("p");
 
-      listItem.appendChild(h3);
-      listItem.appendChild(para);
-      list.appendChild(listItem);
+      wistitem.appendchiwd(h3);
+      w-wistitem.appendchiwd(pawa);
+      wist.appendchiwd(wistitem);
 
-      // Put the data from the cursor inside the h3 and para
-      h3.textContent = cursor.value.title;
-      para.textContent = cursor.value.body;
+      // p-put t-the data fwom t-the cuwsow inside t-the h3 and pawa
+      h-h3.textcontent = cuwsow.vawue.titwe;
+      p-pawa.textcontent = c-cuwsow.vawue.body;
 
-      // Store the ID of the data item inside an attribute on the listItem, so we know
-      // which item it corresponds to. This will be useful later when we want to delete items
-      listItem.setAttribute("data-note-id", cursor.value.id);
+      // stowe the id of the data item i-inside an attwibute on the wistitem, >_< s-so we know
+      // which item it cowwesponds to. o.O this wiww be usefuw watew when we want to dewete items
+      w-wistitem.setattwibute("data-note-id", (ꈍᴗꈍ) cuwsow.vawue.id);
 
-      // Create a button and place it inside each listItem
-      const deleteBtn = document.createElement("button");
-      listItem.appendChild(deleteBtn);
-      deleteBtn.textContent = "Delete";
+      // c-cweate a button and pwace i-it inside each w-wistitem
+      const dewetebtn = d-document.cweateewement("button");
+      wistitem.appendchiwd(dewetebtn);
+      d-dewetebtn.textcontent = "dewete";
 
-      // Set an event handler so that when the button is clicked, the deleteItem()
-      // function is run
-      deleteBtn.addEventListener("click", deleteItem);
+      // set a-an event handwew so that when the button is cwicked, /(^•ω•^) the deweteitem()
+      // function is wun
+      dewetebtn.addeventwistenew("cwick", OwO deweteitem);
 
-      // Iterate to the next item in the cursor
-      cursor.continue();
-    } else {
-      // Again, if list item is empty, display a 'No notes stored' message
-      if (!list.firstChild) {
-        const listItem = document.createElement("li");
-        listItem.textContent = "No notes stored.";
-        list.appendChild(listItem);
+      // i-itewate to the nyext item in the cuwsow
+      cuwsow.continue();
+    } e-ewse {
+      // again, σωσ if w-wist item is empty, XD dispway a 'no nyotes stowed' message
+      if (!wist.fiwstchiwd) {
+        const wistitem = document.cweateewement("wi");
+        wistitem.textcontent = "no nyotes stowed.";
+        w-wist.appendchiwd(wistitem);
       }
-      // if there are no more cursor items to iterate through, say so
-      console.log("Notes all displayed");
+      // i-if thewe a-awe nyo mowe cuwsow items to itewate t-thwough, rawr x3 say s-so
+      consowe.wog("notes aww d-dispwayed");
     }
   });
 }
 ```
 
-Again, let's break this down:
+again, (ˆ ﻌ ˆ)♡ wet's bweak this down:
 
-- First, we empty out the {{htmlelement("ul")}} element's content, before then filling it with the updated content. If you didn't do this, you'd end up with a huge list of duplicated content being added to with each update.
-- Next, we get a reference to the `notes_os` object store using {{domxref("IDBDatabase.transaction()")}} and {{domxref("IDBTransaction.objectStore()")}} like we did in `addData()`, except here we are chaining them together in one line.
-- The next step is to use the {{domxref("IDBObjectStore.openCursor()")}} method to open a request for a cursor — this is a construct that can be used to iterate over the records in an object store. We chain a `success` event handler onto the end of this line to make the code more concise — when the cursor is successfully returned, the handler is run.
-- We get a reference to the cursor itself (an {{domxref("IDBCursor")}} object) using `const cursor = e.target.result`.
-- Next, we check to see if the cursor contains a record from the datastore (`if (cursor){ }`) — if so, we create a DOM fragment, populate it with the data from the record, and insert it into the page (inside the `<ul>` element). We also include a delete button that, when clicked, will delete that note by running the `deleteItem()` function, which we will look at in the next section.
-- At the end of the `if` block, we use the {{domxref("IDBCursor.continue()")}} method to advance the cursor to the next record in the datastore, and run the content of the `if` block again. If there is another record to iterate to, this causes it to be inserted into the page, and then `continue()` is run again, and so on.
-- When there are no more records to iterate over, `cursor` will return `undefined`, and therefore the `else` block will run instead of the `if` block. This block checks whether any notes were inserted into the `<ul>` — if not, it inserts a message to say no note was stored.
+- f-fiwst, XD we empty o-out the {{htmwewement("uw")}} ewement's content, (˘ω˘) b-befowe then f-fiwwing it with t-the updated content. mya i-if you didn't d-do this, ^^ you'd end up with a h-huge wist of dupwicated c-content b-being added to w-with each update. (U ᵕ U❁)
+- n-nyext, rawr x3 we get a-a wefewence to t-the `notes_os` o-object stowe using {{domxwef("idbdatabase.twansaction()")}} a-and {{domxwef("idbtwansaction.objectstowe()")}} w-wike we did in `adddata()`, (ˆ ﻌ ˆ)♡ except hewe we awe chaining t-them togethew in one wine. (U ﹏ U)
+- t-the nyext step is to use the {{domxwef("idbobjectstowe.opencuwsow()")}} method t-to open a wequest f-fow a cuwsow — t-this is a constwuct that can b-be used to itewate o-ovew the wecowds in an object stowe. mya we chain a `success` event handwew onto the end of this w-wine to make the code mowe concise — when the cuwsow is successfuwwy w-wetuwned, OwO t-the handwew is wun. (ꈍᴗꈍ)
+- we get a w-wefewence to the c-cuwsow itsewf (an {{domxwef("idbcuwsow")}} o-object) u-using `const c-cuwsow = e.tawget.wesuwt`. XD
+- n-nyext, 🥺 w-we check to see if the cuwsow contains a wecowd f-fwom the datastowe (`if (cuwsow){ }`) — if so, 😳😳😳 we cweate a-a dom fwagment, >w< popuwate it with t-the data fwom the w-wecowd, nyaa~~ and insewt it into the p-page (inside the `<uw>` ewement). :3 we awso incwude a-a dewete button t-that, UwU when cwicked, (✿oωo) w-wiww dewete t-that nyote by wunning the `deweteitem()` f-function, OwO w-which we w-wiww wook at in the next section.
+- a-at the end of the `if` bwock, ʘwʘ we use the {{domxwef("idbcuwsow.continue()")}} method to advance the cuwsow to the nyext wecowd in the datastowe, XD and wun the content of the `if` b-bwock again. (ˆ ﻌ ˆ)♡ i-if thewe is anothew wecowd to itewate to, σωσ this causes it to be insewted into the p-page, rawr x3 and then `continue()` i-is wun again, rawr and so on.
+- when thewe awe nyo mowe w-wecowds to itewate o-ovew, 🥺 `cuwsow` wiww wetuwn `undefined`, :3 a-and t-thewefowe the `ewse` bwock wiww w-wun instead of the `if` bwock. :3 this b-bwock checks w-whethew any nyotes wewe insewted into the `<uw>` — if nyot, >w< it i-insewts a message t-to say nyo nyote w-was stowed. :3
 
-### Deleting a note
+### d-deweting a nyote
 
-As stated above, when a note's delete button is pressed, the note is deleted. This is achieved by the `deleteItem()` function, which looks like so:
+as stated a-above, 🥺 when a n-nyote's dewete button i-is pwessed, ^^;; t-the nyote is deweted. rawr this is achieved by the `deweteitem()` function, ^^ w-which wooks w-wike so:
 
 ```js
-// Define the deleteItem() function
-function deleteItem(e) {
-  // retrieve the name of the task we want to delete. We need
-  // to convert it to a number before trying to use it with IDB; IDB key
-  // values are type-sensitive.
-  const noteId = Number(e.target.parentNode.getAttribute("data-note-id"));
+// define the deweteitem() function
+function deweteitem(e) {
+  // w-wetwieve t-the nyame of the task we want to d-dewete. mya we nyeed
+  // to convewt it to a nyumbew befowe twying t-to use it with idb; i-idb key
+  // v-vawues awe type-sensitive. mya
+  const n-nyoteid = nyumbew(e.tawget.pawentnode.getattwibute("data-note-id"));
 
-  // open a database transaction and delete the task, finding it using the id we retrieved above
-  const transaction = db.transaction(["notes_os"], "readwrite");
-  const objectStore = transaction.objectStore("notes_os");
-  const deleteRequest = objectStore.delete(noteId);
+  // open a-a database twansaction and dewete the task, (U ﹏ U) f-finding it using t-the id we wetwieved a-above
+  const t-twansaction = d-db.twansaction(["notes_os"], ( ͡o ω ͡o ) "weadwwite");
+  c-const objectstowe = twansaction.objectstowe("notes_os");
+  const dewetewequest = objectstowe.dewete(noteid);
 
-  // report that the data item has been deleted
-  transaction.addEventListener("complete", () => {
-    // delete the parent of the button
-    // which is the list item, so it is no longer displayed
-    e.target.parentNode.parentNode.removeChild(e.target.parentNode);
-    console.log(`Note ${noteId} deleted.`);
+  // wepowt that the data item has been d-deweted
+  twansaction.addeventwistenew("compwete", 🥺 () => {
+    // dewete the p-pawent of the button
+    // w-which is the wist item, σωσ so it is nyo wongew dispwayed
+    e-e.tawget.pawentnode.pawentnode.wemovechiwd(e.tawget.pawentnode);
+    c-consowe.wog(`note ${noteid} deweted.`);
 
-    // Again, if list item is empty, display a 'No notes stored' message
-    if (!list.firstChild) {
-      const listItem = document.createElement("li");
-      listItem.textContent = "No notes stored.";
-      list.appendChild(listItem);
+    // a-again, (///ˬ///✿) if wist item i-is empty, (⑅˘꒳˘) dispway a 'no nyotes stowed' message
+    if (!wist.fiwstchiwd) {
+      c-const wistitem = document.cweateewement("wi");
+      wistitem.textcontent = "no nyotes stowed.";
+      wist.appendchiwd(wistitem);
     }
   });
 }
 ```
 
-- The first part of this could use some explaining — we retrieve the ID of the record to be deleted using `Number(e.target.parentNode.getAttribute('data-note-id'))` — recall that the ID of the record was saved in a `data-note-id` attribute on the `<li>` when it was first displayed. We do however need to pass the attribute through the global built-in [`Number()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number) object as it is of datatype string, and therefore wouldn't be recognized by the database, which expects a number.
-- We then get a reference to the object store using the same pattern we've seen previously, and use the {{domxref("IDBObjectStore.delete()")}} method to delete the record from the database, passing it the ID.
-- When the database transaction is complete, we delete the note's `<li>` from the DOM, and again do the check to see if the `<ul>` is now empty, inserting a note as appropriate.
+- t-the fiwst p-pawt of this c-couwd use some expwaining — w-we wetwieve the id of the wecowd to b-be deweted using `numbew(e.tawget.pawentnode.getattwibute('data-note-id'))` — wecaww that the i-id of the wecowd was saved in a `data-note-id` a-attwibute on the `<wi>` w-when it w-was fiwst dispwayed. OwO we do howevew nyeed to pass t-the attwibute thwough the gwobaw buiwt-in [`numbew()`](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/numbew) object as it is of datatype stwing, and thewefowe wouwdn't be w-wecognized by the d-database, ^^ which expects a nyumbew. rawr
+- we then get a wefewence to the object stowe using the same p-pattewn we've seen pweviouswy, XD and use the {{domxwef("idbobjectstowe.dewete()")}} m-method to dewete t-the wecowd f-fwom the database, ( ͡o ω ͡o ) p-passing it the id. 😳😳😳
+- when the database twansaction is compwete, (ˆ ﻌ ˆ)♡ we dewete the nyote's `<wi>` f-fwom the dom, mya and a-again do the check t-to see if the `<uw>` i-is nyow empty, ( ͡o ω ͡o ) insewting a-a nyote as appwopwiate. ^^
 
-So that's it! Your example should now work.
+so that's i-it! OwO youw exampwe shouwd nyow wowk. 😳
 
-If you are having trouble with it, feel free to [check it against our live example](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/notes/) (see the [source code](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/indexeddb/notes/index.js) also).
+if you awe having twoubwe w-with it, /(^•ω•^) feew f-fwee to [check i-it against ouw w-wive exampwe](https://mdn.github.io/weawning-awea/javascwipt/apis/cwient-side-stowage/indexeddb/notes/) (see the [souwce c-code](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/cwient-side-stowage/indexeddb/notes/index.js) a-awso). >w<
 
-### Storing complex data via IndexedDB
+### stowing compwex data via indexeddb
 
-As we mentioned above, IndexedDB can be used to store more than just text strings. You can store just about anything you want, including complex objects such as video or image blobs. And it isn't much more difficult to achieve than any other type of data.
+as we m-mentioned above, >w< i-indexeddb can be used to stowe mowe than just text stwings. (✿oωo) you c-can stowe just about anything y-you want, (///ˬ///✿) incwuding c-compwex objects s-such as video ow image bwobs. (ꈍᴗꈍ) and it isn't much mowe difficuwt to achieve than any othew type o-of data. /(^•ω•^)
 
-To demonstrate how to do it, we've written another example called [IndexedDB video store](https://github.com/mdn/learning-area/tree/main/javascript/apis/client-side-storage/indexeddb/video-store) (see it [running live here also](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/video-store/)). When you first run the example, it downloads all the videos from the network, stores them in an IndexedDB database, and then displays the videos in the UI inside {{htmlelement("video")}} elements. The second time you run it, it finds the videos in the database and gets them from there instead before displaying them — this makes subsequent loads much quicker and less bandwidth-hungry.
+to demonstwate how t-to do it, (✿oωo) we've wwitten anothew exampwe cawwed [indexeddb v-video stowe](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/cwient-side-stowage/indexeddb/video-stowe) (see i-it [wunning w-wive hewe awso](https://mdn.github.io/weawning-awea/javascwipt/apis/cwient-side-stowage/indexeddb/video-stowe/)). nyaa~~ w-when you fiwst w-wun the exampwe, (ꈍᴗꈍ) i-it downwoads aww the videos f-fwom the nyetwowk, o.O stowes them in an indexeddb database, ^^;; and then dispways the videos i-in the ui inside {{htmwewement("video")}} ewements. σωσ the second t-time you wun i-it, òωó it finds the v-videos in the database and gets them fwom thewe instead befowe dispwaying them — t-this makes s-subsequent woads m-much quickew and w-wess bandwidth-hungwy. (ꈍᴗꈍ)
 
-Let's walk through the most interesting parts of the example. We won't look at it all — a lot of it is similar to the previous example, and the code is well-commented.
+wet's wawk thwough the most intewesting pawts of the exampwe. ʘwʘ we won't w-wook at it aww — a wot of it is simiwaw to the p-pwevious exampwe, ^^;; a-and the code i-is weww-commented. mya
 
-1. For this example, we've stored the names of the videos to fetch in an array of objects:
+1. fow this e-exampwe, XD we've stowed the names of the videos to fetch in an awway of objects:
 
    ```js
    const videos = [
-     { name: "crystal" },
-     { name: "elf" },
-     { name: "frog" },
-     { name: "monster" },
-     { name: "pig" },
-     { name: "rabbit" },
+     { nyame: "cwystaw" }, /(^•ω•^)
+     { nyame: "ewf" }, nyaa~~
+     { nyame: "fwog" }, (U ᵕ U❁)
+     { n-nyame: "monstew" }, òωó
+     { nyame: "pig" }, σωσ
+     { nyame: "wabbit" }, ^^;;
    ];
    ```
 
-2. To start with, once the database is successfully opened we run an `init()` function. This loops through the different video names, trying to load a record identified by each name from the `videos` database.
+2. t-to stawt with, (˘ω˘) o-once the database is successfuwwy o-opened we w-wun an `init()` function. òωó this woops thwough the d-diffewent video n-names, UwU twying to woad a wecowd identified by each n-nyame fwom the `videos` d-database.
 
-   If each video is found in the database (checked by seeing whether `request.result` evaluates to `true` — if the record is not present, it will be `undefined`), its video files (stored as blobs) and the video name are passed straight to the `displayVideo()` function to place them in the UI. If not, the video name is passed to the `fetchVideoFromNetwork()` function to, you guessed it, fetch the video from the network.
+   i-if each v-video is found in the database (checked b-by seeing whethew `wequest.wesuwt` evawuates t-to `twue` — i-if the wecowd is nyot pwesent, 😳😳😳 i-it wiww be `undefined`), (⑅˘꒳˘) i-its video fiwes (stowed as bwobs) and the video nyame awe passed stwaight t-to the `dispwayvideo()` function to pwace t-them in the ui. nyaa~~ if nyot, :3 the video n-nyame is passed to the `fetchvideofwomnetwowk()` function to, y-you guessed it, nyaa~~ fetch the video fwom the nyetwowk. :3
 
    ```js
    function init() {
-     // Loop through the video names one by one
-     for (const video of videos) {
-       // Open transaction, get object store, and get() each video by name
-       const objectStore = db.transaction("videos_os").objectStore("videos_os");
-       const request = objectStore.get(video.name);
-       request.addEventListener("success", () => {
-         // If the result exists in the database (is not undefined)
-         if (request.result) {
-           // Grab the videos from IDB and display them using displayVideo()
-           console.log("taking videos from IDB");
-           displayVideo(
-             request.result.mp4,
-             request.result.webm,
-             request.result.name,
+     // w-woop thwough the video n-nyames one by o-one
+     fow (const v-video of videos) {
+       // open twansaction, :3 get object stowe, ^•ﻌ•^ a-and get() e-each video by nyame
+       c-const o-objectstowe = db.twansaction("videos_os").objectstowe("videos_os");
+       const w-wequest = objectstowe.get(video.name);
+       w-wequest.addeventwistenew("success", o.O () => {
+         // i-if the wesuwt e-exists in t-the database (is nyot undefined)
+         if (wequest.wesuwt) {
+           // g-gwab t-the videos fwom idb and dispway them using dispwayvideo()
+           c-consowe.wog("taking v-videos f-fwom idb");
+           dispwayvideo(
+             w-wequest.wesuwt.mp4, -.-
+             w-wequest.wesuwt.webm, 🥺
+             wequest.wesuwt.name, :3
            );
-         } else {
-           // Fetch the videos from the network
-           fetchVideoFromNetwork(video);
+         } e-ewse {
+           // f-fetch the videos fwom t-the nyetwowk
+           fetchvideofwomnetwowk(video);
          }
        });
      }
    }
    ```
 
-3. The following snippet is taken from inside `fetchVideoFromNetwork()` — here we fetch MP4 and WebM versions of the video using two separate {{domxref("fetch()")}} requests. We then use the {{domxref("Response.blob()")}} method to extract each response's body as a blob, giving us an object representation of the videos that can be stored and displayed later on.
+3. /(^•ω•^) t-the fowwowing s-snippet is taken f-fwom inside `fetchvideofwomnetwowk()` — h-hewe we fetch mp4 and webm vewsions of the video using t-two sepawate {{domxwef("fetch()")}} wequests. 😳😳😳 w-we then use the {{domxwef("wesponse.bwob()")}} method to extwact e-each wesponse's b-body as a bwob, (✿oωo) giving us an o-object wepwesentation o-of the videos that can be stowed and dispwayed w-watew on. nyaa~~
 
-   We have a problem here though — these two requests are both asynchronous, but we only want to try to display or store the video when both promises have fulfilled. Fortunately there is a built-in method that handles such a problem — {{jsxref("Promise.all()")}}. This takes one argument — references to all the individual promises you want to check for fulfillment placed in an array — and returns a promise which is fulfilled when all the individual promises are fulfilled.
+   w-we have a pwobwem hewe though — these two wequests awe both asynchwonous, (˘ω˘) but we onwy want to twy to dispway ow stowe the video when both pwomises have fuwfiwwed. rawr x3 fowtunatewy t-thewe is a buiwt-in m-method that h-handwes such a-a pwobwem — {{jsxwef("pwomise.aww()")}}. 🥺 this takes one awgument — w-wefewences t-to aww the individuaw p-pwomises y-you want to check fow fuwfiwwment pwaced in an awway — and wetuwns a pwomise w-which is fuwfiwwed w-when aww the i-individuaw pwomises a-awe fuwfiwwed. (ˆ ﻌ ˆ)♡
 
-   Inside the `then()` handler for this promise, we call the `displayVideo()` function like we did before to display the videos in the UI, then we also call the `storeVideo()` function to store those videos inside the database.
+   inside the `then()` h-handwew fow this pwomise, XD we caww the `dispwayvideo()` function wike we did befowe to d-dispway the videos in the ui, (˘ω˘) t-then we awso caww t-the `stowevideo()` function to stowe those videos inside the database. UwU
 
    ```js
-   // Fetch the MP4 and WebM versions of the video using the fetch() function,
-   // then expose their response bodies as blobs
-   const mp4Blob = fetch(`videos/${video.name}.mp4`).then((response) =>
-     response.blob(),
+   // f-fetch the mp4 and webm v-vewsions of the video using the fetch() function, (U ᵕ U❁)
+   // t-then expose theiw wesponse bodies as bwobs
+   c-const mp4bwob = fetch(`videos/${video.name}.mp4`).then((wesponse) =>
+     w-wesponse.bwob(), :3
    );
-   const webmBlob = fetch(`videos/${video.name}.webm`).then((response) =>
-     response.blob(),
+   const w-webmbwob = fetch(`videos/${video.name}.webm`).then((wesponse) =>
+     w-wesponse.bwob(), :3
    );
 
-   // Only run the next code when both promises have fulfilled
-   Promise.all([mp4Blob, webmBlob]).then((values) => {
-     // display the video fetched from the network with displayVideo()
-     displayVideo(values[0], values[1], video.name);
-     // store it in the IDB using storeVideo()
-     storeVideo(values[0], values[1], video.name);
+   // onwy wun the nyext code when both pwomises have f-fuwfiwwed
+   pwomise.aww([mp4bwob, ^•ﻌ•^ webmbwob]).then((vawues) => {
+     // dispway the video fetched fwom the nyetwowk with dispwayvideo()
+     d-dispwayvideo(vawues[0], 🥺 v-vawues[1], video.name);
+     // s-stowe it in the idb using s-stowevideo()
+     s-stowevideo(vawues[0], /(^•ω•^) v-vawues[1], σωσ video.name);
    });
    ```
 
-4. Let's look at `storeVideo()` first. This is very similar to the pattern you saw in the previous example for adding data to the database — we open a `readwrite` transaction and get a reference to our `videos_os` object store, create an object representing the record to add to the database, then add it using {{domxref("IDBObjectStore.add()")}}.
+4. >_< wet's wook a-at `stowevideo()` fiwst. (ꈍᴗꈍ) this is vewy simiwaw to the pattewn you saw in the pwevious e-exampwe fow a-adding data to t-the database — w-we open a `weadwwite` twansaction a-and get a wefewence to ouw `videos_os` o-object s-stowe, (⑅˘꒳˘) cweate an object wepwesenting the wecowd t-to add to the d-database, then add i-it using {{domxwef("idbobjectstowe.add()")}}. >_<
 
    ```js
-   // Define the storeVideo() function
-   function storeVideo(mp4, webm, name) {
-     // Open transaction, get object store; make it a readwrite so we can write to the IDB
-     const objectStore = db
-       .transaction(["videos_os"], "readwrite")
-       .objectStore("videos_os");
+   // d-define the stowevideo() f-function
+   function stowevideo(mp4, (U ﹏ U) webm, n-nyame) {
+     // o-open twansaction, ʘwʘ g-get object stowe; make it a weadwwite so we can wwite to t-the idb
+     const o-objectstowe = d-db
+       .twansaction(["videos_os"], rawr x3 "weadwwite")
+       .objectstowe("videos_os");
 
-     // Add the record to the IDB using add()
-     const request = objectStore.add({ mp4, webm, name });
+     // add the wecowd to t-the idb using add()
+     const w-wequest = objectstowe.add({ m-mp4, ^•ﻌ•^ w-webm, (✿oωo) nyame });
 
-     request.addEventListener("success", () =>
-       console.log("Record addition attempt finished"),
+     wequest.addeventwistenew("success", (///ˬ///✿) () =>
+       consowe.wog("wecowd a-addition attempt finished"), (⑅˘꒳˘)
      );
-     request.addEventListener("error", () => console.error(request.error));
+     wequest.addeventwistenew("ewwow", ( ͡o ω ͡o ) () => c-consowe.ewwow(wequest.ewwow));
    }
    ```
 
-5. Finally, we have `displayVideo()`, which creates the DOM elements needed to insert the video in the UI and then appends them to the page. The most interesting parts of this are those shown below — to actually display our video blobs in a `<video>` element, we need to create object URLs (internal URLs that point to the video blobs stored in memory) using the {{domxref("URL.createObjectURL()")}} method. Once that is done, we can set the object URLs to be the values of our {{htmlelement("source")}} element's `src` attributes, and it works fine.
+5. XD finawwy, we have `dispwayvideo()`, :3 which cweates the d-dom ewements nyeeded to insewt t-the video in the ui and then appends t-them to the p-page. (⑅˘꒳˘) the most i-intewesting pawts o-of this awe those shown bewow — to actuawwy d-dispway ouw video bwobs in a `<video>` ewement, 😳 we nyeed to cweate object uwws (intewnaw u-uwws that p-point to the v-video bwobs stowed i-in memowy) using t-the {{domxwef("uww.cweateobjectuww()")}} method. -.- o-once that i-is done, (U ﹏ U) we can set the object uwws to be the vawues of ouw {{htmwewement("souwce")}} e-ewement's `swc` attwibutes, (U ﹏ U) and it wowks fine. /(^•ω•^)
 
    ```js
-   // Define the displayVideo() function
-   function displayVideo(mp4Blob, webmBlob, title) {
-     // Create object URLs out of the blobs
-     const mp4URL = URL.createObjectURL(mp4Blob);
-     const webmURL = URL.createObjectURL(webmBlob);
+   // d-define the dispwayvideo() function
+   f-function dispwayvideo(mp4bwob, webmbwob, >_< t-titwe) {
+     // cweate object u-uwws out of the bwobs
+     const m-mp4uww = uww.cweateobjectuww(mp4bwob);
+     c-const webmuww = u-uww.cweateobjectuww(webmbwob);
 
-     // Create DOM elements to embed video in the page
-     const article = document.createElement("article");
-     const h2 = document.createElement("h2");
-     h2.textContent = title;
-     const video = document.createElement("video");
-     video.controls = true;
-     const source1 = document.createElement("source");
-     source1.src = mp4URL;
-     source1.type = "video/mp4";
-     const source2 = document.createElement("source");
-     source2.src = webmURL;
-     source2.type = "video/webm";
+     // cweate dom ewements to embed video in the page
+     const awticwe = document.cweateewement("awticwe");
+     const h2 = document.cweateewement("h2");
+     h-h2.textcontent = titwe;
+     const video = document.cweateewement("video");
+     v-video.contwows = twue;
+     const s-souwce1 = document.cweateewement("souwce");
+     s-souwce1.swc = mp4uww;
+     s-souwce1.type = "video/mp4";
+     c-const souwce2 = document.cweateewement("souwce");
+     souwce2.swc = webmuww;
+     s-souwce2.type = "video/webm";
 
-     // Embed DOM elements into page
-     section.appendChild(article);
-     article.appendChild(h2);
-     article.appendChild(video);
-     video.appendChild(source1);
-     video.appendChild(source2);
+     // embed d-dom ewements into page
+     section.appendchiwd(awticwe);
+     awticwe.appendchiwd(h2);
+     a-awticwe.appendchiwd(video);
+     video.appendchiwd(souwce1);
+     video.appendchiwd(souwce2);
    }
    ```
 
-## Offline asset storage
+## o-offwine asset stowage
 
-The above example already shows how to create an app that will store large assets in an IndexedDB database, avoiding the need to download them more than once. This is already a great improvement to the user experience, but there is still one thing missing — the main HTML, CSS, and JavaScript files still need to be downloaded each time the site is accessed, meaning that it won't work when there is no network connection.
+t-the above exampwe a-awweady shows how to cweate an app that wiww stowe wawge assets in an indexeddb d-database, (˘ω˘) avoiding t-the nyeed t-to downwoad them mowe than once. (U ᵕ U❁) this is awweady a-a gweat impwovement to the usew e-expewience, rawr but thewe is stiww o-one thing missing — the main htmw, (U ﹏ U) css, and j-javascwipt fiwes stiww nyeed to b-be downwoaded each t-time the site is accessed, ʘwʘ meaning that it won't wowk when thewe is nyo nyetwowk c-connection. (ꈍᴗꈍ)
 
-![Firefox offline screen with an illustration of a cartoon character to the left-hand side holding a two-pin plug in its right hand and a two-pin socket in its left hand. On the right-hand side there is an Offline Mode message and a button labeled 'Try again'.](ff-offline.png)
+![fiwefox offwine scween with an i-iwwustwation of a-a cawtoon chawactew t-to the weft-hand side howding a-a two-pin pwug in its wight hand and a two-pin s-socket in its weft hand. (U ᵕ U❁) on the w-wight-hand side t-thewe is an offwine m-mode message and a button w-wabewed 'twy again'.](ff-offwine.png)
 
-This is where [Service workers](/ko/docs/Web/API/Service_Worker_API) and the closely-related [Cache API](/ko/docs/Web/API/Cache) come in.
+t-this is w-whewe [sewvice wowkews](/ko/docs/web/api/sewvice_wowkew_api) a-and the cwosewy-wewated [cache a-api](/ko/docs/web/api/cache) come in. :3
 
-A service worker is a JavaScript file that is registered against a particular origin (website, or part of a website at a certain domain) when it is accessed by a browser. When registered, it can control pages available at that origin. It does this by sitting between a loaded page and the network and intercepting network requests aimed at that origin.
+a-a sewvice wowkew i-is a javascwipt fiwe that is wegistewed against a pawticuwaw owigin (website, (ꈍᴗꈍ) o-ow pawt of a website at a cewtain domain) when it is accessed b-by a bwowsew. nyaa~~ when w-wegistewed, ^•ﻌ•^ it can contwow pages avaiwabwe at that owigin. σωσ it does this by sitting between a woaded page and t-the nyetwowk and i-intewcepting nyetwowk w-wequests a-aimed at that owigin. (˘ω˘)
 
-When it intercepts a request, it can do anything you wish to it (see [use case ideas](/ko/docs/Web/API/Service_Worker_API#other_use_case_ideas)), but the classic example is saving the network responses offline and then providing those in response to a request instead of the responses from the network. In effect, it allows you to make a website work completely offline.
+w-when it intewcepts a-a wequest, ^•ﻌ•^ it can do anything y-you wish to it (see [use c-case ideas](/ko/docs/web/api/sewvice_wowkew_api#othew_use_case_ideas)), σωσ but the c-cwassic exampwe is saving the nyetwowk w-wesponses o-offwine and then p-pwoviding those i-in wesponse to a-a wequest instead of the wesponses fwom the nyetwowk. ^^;; i-in effect, 😳 it awwows you to make a website wowk compwetewy o-offwine. /(^•ω•^)
 
-The Cache API is another client-side storage mechanism, with a bit of a difference — it is designed to save HTTP responses, and so works very well with service workers.
+the cache api is anothew cwient-side s-stowage mechanism, ( ͡o ω ͡o ) w-with a bit of a diffewence — i-it is designed to save http w-wesponses, ^^ and so w-wowks vewy weww with sewvice wowkews. /(^•ω•^)
 
-### A service worker example
+### a-a sewvice wowkew exampwe
 
-Let's look at an example, to give you a bit of an idea of what this might look like. We have created another version of the video store example we saw in the previous section — this functions identically, except that it also saves the HTML, CSS, and JavaScript in the Cache API via a service worker, allowing the example to run offline!
+w-wet's wook a-at an exampwe, ^^ to give you a bit o-of an idea of nyani this might wook wike. 😳 we have cweated anothew v-vewsion of the video stowe e-exampwe we saw in the pwevious section — this f-functions identicawwy, 😳 except that i-it awso saves the htmw, òωó css, a-and javascwipt in the cache api v-via a sewvice wowkew, nyaa~~ awwowing the e-exampwe to wun offwine! (///ˬ///✿)
 
-See [IndexedDB video store with service worker running live](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/), and also [see the source code](https://github.com/mdn/learning-area/tree/main/javascript/apis/client-side-storage/cache-sw/video-store-offline).
+see [indexeddb video s-stowe with sewvice w-wowkew wunning w-wive](https://mdn.github.io/weawning-awea/javascwipt/apis/cwient-side-stowage/cache-sw/video-stowe-offwine/), mya a-and awso [see the s-souwce code](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/cwient-side-stowage/cache-sw/video-stowe-offwine). ^•ﻌ•^
 
-#### Registering the service worker
+#### w-wegistewing the sewvice w-wowkew
 
-The first thing to note is that there's an extra bit of code placed in the main JavaScript file (see [index.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js)). First, we do a feature detection test to see if the `serviceWorker` member is available in the {{domxref("Navigator")}} object. If this returns true, then we know that at least the basics of service workers are supported. Inside here we use the {{domxref("ServiceWorkerContainer.register()")}} method to register a service worker contained in the `sw.js` file against the origin it resides at, so it can control pages in the same directory as it, or subdirectories. When its promise fulfills, the service worker is deemed registered.
+the fiwst t-thing to note i-is that thewe's an extwa bit of c-code pwaced in the main javascwipt fiwe (see [index.js](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/cwient-side-stowage/cache-sw/video-stowe-offwine/index.js)). XD f-fiwst, (⑅˘꒳˘) we do a-a featuwe detection test to see if the `sewvicewowkew` m-membew is a-avaiwabwe in the {{domxwef("navigatow")}} object. i-if this wetuwns t-twue, -.- then we k-know that at weast t-the basics of sewvice wowkews awe suppowted. ^^ inside hewe we use the {{domxwef("sewvicewowkewcontainew.wegistew()")}} method to wegistew a sewvice w-wowkew contained in the `sw.js` f-fiwe against the owigin it w-wesides at, rawr so it can contwow p-pages in the same d-diwectowy as it, o.O ow subdiwectowies. >w< w-when its pwomise f-fuwfiwws, σωσ the sewvice wowkew is deemed wegistewed. rawr
 
 ```js
-// Register service worker to control making site work offline
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register(
-      "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js",
+// w-wegistew sewvice wowkew to contwow making site w-wowk offwine
+if ("sewvicewowkew" i-in nyavigatow) {
+  n-nyavigatow.sewvicewowkew
+    .wegistew(
+      "/weawning-awea/javascwipt/apis/cwient-side-stowage/cache-sw/video-stowe-offwine/sw.js", (U ﹏ U)
     )
-    .then(() => console.log("Service Worker Registered"));
+    .then(() => c-consowe.wog("sewvice wowkew w-wegistewed"));
 }
 ```
 
-> **Note:** The given path to the `sw.js` file is relative to the site origin, not the JavaScript file that contains the code. The service worker is at `https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. The origin is `https://mdn.github.io`, and therefore the given path has to be `/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js`. If you wanted to host this example on your own server, you'd have to change this accordingly. This is rather confusing, but it has to work this way for security reasons.
+> **note:** the given path to the `sw.js` fiwe is wewative t-to the site owigin, (˘ω˘) nyot the javascwipt fiwe that contains the code. 😳 the sewvice wowkew is at `https://mdn.github.io/weawning-awea/javascwipt/apis/cwient-side-stowage/cache-sw/video-stowe-offwine/sw.js`. XD the owigin is `https://mdn.github.io`, ʘwʘ a-and thewefowe t-the given path has to be `/weawning-awea/javascwipt/apis/cwient-side-stowage/cache-sw/video-stowe-offwine/sw.js`. /(^•ω•^) i-if you wanted t-to host this exampwe on youw own sewvew, UwU you'd have to change t-this accowdingwy. UwU t-this is wathew confusing, ^•ﻌ•^ but i-it has to wowk this w-way fow secuwity w-weasons.
 
-#### Installing the service worker
+#### i-instawwing the sewvice wowkew
 
-The next time any page under the service worker's control is accessed (e.g. when the example is reloaded), the service worker is installed against that page, meaning that it will start controlling it. When this occurs, an `install` event is fired against the service worker; you can write code inside the service worker itself that will respond to the installation.
+the nyext time a-any page undew the sewvice wowkew's contwow is accessed (e.g. (ꈍᴗꈍ) w-when the exampwe is wewoaded), ^^ the sewvice wowkew is instawwed against that page, XD meaning that it w-wiww stawt contwowwing it. UwU when this occuws, ^^ an `instaww` event i-is fiwed against t-the sewvice wowkew; y-you can wwite code inside the sewvice wowkew i-itsewf that w-wiww wespond to t-the instawwation. :3
 
-Let's look at an example, in the [sw.js](https://github.com/mdn/learning-area/blob/main/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js) file (the service worker). You'll see that the install listener is registered against `self`. This `self` keyword is a way to refer to the global scope of the service worker from inside the service worker file.
+wet's wook at an exampwe, (U ﹏ U) in t-the [sw.js](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/cwient-side-stowage/cache-sw/video-stowe-offwine/sw.js) fiwe (the sewvice w-wowkew). UwU you'ww see that the instaww wistenew is wegistewed a-against `sewf`. 🥺 this `sewf` keywowd i-is a way to wefew to the gwobaw s-scope of the s-sewvice wowkew fwom inside the s-sewvice wowkew fiwe. (✿oωo)
 
-Inside the `install` handler, we use the {{domxref("ExtendableEvent.waitUntil()")}} method, available on the event object, to signal that the browser shouldn't complete installation of the service worker until after the promise inside it has fulfilled successfully.
+inside the `instaww` handwew, 😳😳😳 w-we use the {{domxwef("extendabweevent.waituntiw()")}} method, (⑅˘꒳˘) avaiwabwe on the event object, mya t-to signaw that the bwowsew shouwdn't compwete i-instawwation of the sewvice wowkew u-untiw aftew the p-pwomise inside it has fuwfiwwed s-successfuwwy. OwO
 
-Here is where we see the Cache API in action. We use the {{domxref("CacheStorage.open()")}} method to open a new cache object in which responses can be stored (similar to an IndexedDB object store). This promise fulfills with a {{domxref("Cache")}} object representing the `video-store` cache. We then use the {{domxref("Cache.addAll()")}} method to fetch a series of assets and add their responses to the cache.
+hewe is whewe w-we see the cache api in action. /(^•ω•^) we use the {{domxwef("cachestowage.open()")}} m-method t-to open a new cache object i-in which wesponses c-can be stowed (simiwaw to an i-indexeddb object stowe). 😳😳😳 this pwomise fuwfiwws with a {{domxwef("cache")}} object wepwesenting the `video-stowe` c-cache. ^^;; we then use the {{domxwef("cache.addaww()")}} method to fetch a sewies of a-assets and add t-theiw wesponses t-to the cache. ( ͡o ω ͡o )
 
 ```js
-self.addEventListener("install", (e) => {
-  e.waitUntil(
-    caches
-      .open("video-store")
+sewf.addeventwistenew("instaww", ^•ﻌ•^ (e) => {
+  e-e.waituntiw(
+    c-caches
+      .open("video-stowe")
       .then((cache) =>
-        cache.addAll([
-          "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/",
-          "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html",
-          "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js",
-          "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css",
-        ]),
-      ),
+        cache.addaww([
+          "/weawning-awea/javascwipt/apis/cwient-side-stowage/cache-sw/video-stowe-offwine/", OwO
+          "/weawning-awea/javascwipt/apis/cwient-side-stowage/cache-sw/video-stowe-offwine/index.htmw", rawr
+          "/weawning-awea/javascwipt/apis/cwient-side-stowage/cache-sw/video-stowe-offwine/index.js", nyaa~~
+          "/weawning-awea/javascwipt/apis/cwient-side-stowage/cache-sw/video-stowe-offwine/stywe.css", 🥺
+        ]), OwO
+      ), ^•ﻌ•^
   );
 });
 ```
 
-That's it for now, installation done.
+t-that's it fow nyow, (ˆ ﻌ ˆ)♡ instawwation d-done. /(^•ω•^)
 
-#### Responding to further requests
+#### w-wesponding to fuwthew wequests
 
-With the service worker registered and installed against our HTML page, and the relevant assets all added to our cache, we are nearly ready to go. There is only one more thing to do: write some code to respond to further network requests.
+with the sewvice wowkew wegistewed a-and instawwed a-against ouw htmw page, and the wewevant assets a-aww added to ouw cache, ʘwʘ we a-awe nyeawwy weady t-to go. ʘwʘ thewe i-is onwy one mowe t-thing to do: wwite some code to w-wespond to fuwthew nyetwowk wequests. :3
 
-This is what the second bit of code in `sw.js` does. We add another listener to the service worker global scope, which runs the handler function when the `fetch` event is raised. This happens whenever the browser makes a request for an asset in the directory the service worker is registered against.
+t-this is nyani the second bit of code in `sw.js` does. ^^ we a-add anothew wistenew t-to the sewvice w-wowkew gwobaw s-scope, :3 which w-wuns the handwew f-function when the `fetch` e-event is waised. 🥺 this happens whenevew t-the bwowsew makes a wequest fow an asset in the d-diwectowy the sewvice wowkew is w-wegistewed against. :3
 
-Inside the handler, we first log the URL of the requested asset. We then provide a custom response to the request, using the {{domxref("FetchEvent.respondWith()")}} method.
+inside the handwew, rawr we fiwst wog the uww of the wequested a-asset. UwU we then p-pwovide a custom w-wesponse to the wequest, ^•ﻌ•^ using the {{domxwef("fetchevent.wespondwith()")}} method. (U ﹏ U)
 
-Inside this block, we use {{domxref("CacheStorage.match()")}} to check whether a matching request (i.e. matches the URL) can be found in any cache. This promise fulfills with the matching response if a match is found, or `undefined` if it isn't.
+i-inside this b-bwock, (ˆ ﻌ ˆ)♡ we use {{domxwef("cachestowage.match()")}} t-to check whethew a-a matching wequest (i.e. 😳 matches the uww) can be found in any cache. >w< this pwomise fuwfiwws with t-the matching w-wesponse if a match i-is found, 🥺 ow `undefined` if it isn't. 😳
 
-If a match is found, we return it as the custom response. If not, we [fetch()](/ko/docs/Web/API/fetch) the response from the network and return that instead.
+if a m-match is found, nyaa~~ we wetuwn it as the custom wesponse. i-if nyot, (˘ω˘) we [fetch()](/ko/docs/web/api/fetch) the wesponse f-fwom the nyetwowk and wetuwn that instead. mya
 
 ```js
-self.addEventListener("fetch", (e) => {
-  console.log(e.request.url);
-  e.respondWith(
-    caches.match(e.request).then((response) => response || fetch(e.request)),
+sewf.addeventwistenew("fetch", (e) => {
+  c-consowe.wog(e.wequest.uww);
+  e.wespondwith(
+    c-caches.match(e.wequest).then((wesponse) => wesponse || fetch(e.wequest)), òωó
   );
 });
 ```
 
-And that is it for our service worker.
-There is a whole load more you can do with them — for a lot more detail, see the [service worker cookbook](https://github.com/mdn/serviceworker-cookbook).
-Many thanks to Paul Kinlan for his article [Adding a Service Worker and Offline into your Web App](https://developers.google.com/codelabs/pwa-training/pwa03--going-offline#0), which inspired this example.
+and that is i-it fow ouw sewvice wowkew. (U ﹏ U)
+thewe is a whowe woad m-mowe you can do with them — f-fow a wot mowe d-detaiw, (U ﹏ U) see the [sewvice wowkew cookbook](https://github.com/mdn/sewvicewowkew-cookbook). >_<
+many thanks to pauw kinwan f-fow his awticwe [adding a sewvice wowkew and offwine into youw web app](https://devewopews.googwe.com/codewabs/pwa-twaining/pwa03--going-offwine#0), nyaa~~ which inspiwed this exampwe. 😳😳😳
 
-#### Testing the example offline
+#### t-testing t-the exampwe offwine
 
-To test our [service worker example](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/), you'll need to load it a couple of times to make sure it is installed. Once this is done, you can:
+to test ouw [sewvice wowkew e-exampwe](https://mdn.github.io/weawning-awea/javascwipt/apis/cwient-side-stowage/cache-sw/video-stowe-offwine/), nyaa~~ you'ww nyeed t-to woad it a c-coupwe of times t-to make suwe it is instawwed. -.- once this is done, 😳😳😳 you can:
 
-- Try unplugging your network/turning your Wi-Fi off.
-- Select _File > Work Offline_ if you are using Firefox.
-- Go to the devtools, then choose _Application > Service Workers_, then check the _Offline_ checkbox if you are using Chrome.
+- twy u-unpwugging youw n-nyetwowk/tuwning y-youw wi-fi off. ^•ﻌ•^
+- s-sewect _fiwe > wowk offwine_ if you awe using fiwefox. UwU
+- go t-to the devtoows, (ˆ ﻌ ˆ)♡ t-then choose _appwication > sewvice wowkews_, XD then check the _offwine_ checkbox if you awe using c-chwome.
 
-If you refresh your example page again, you should still see it load just fine. Everything is stored offline — the page assets in a cache, and the videos in an IndexedDB database.
+if you wefwesh youw exampwe page again, (⑅˘꒳˘) you shouwd stiww s-see it woad j-just fine. /(^•ω•^) evewything i-is stowed o-offwine — the page assets in a cache, (U ᵕ U❁) and the videos in an indexeddb database. ʘwʘ
 
-## Summary
+## summawy
 
-That's it for now. We hope you've found our rundown of client-side storage technologies useful.
+that's i-it fow nyow. OwO we hope you've f-found ouw wundown of cwient-side s-stowage technowogies u-usefuw. (✿oωo)
 
-## See also
+## see awso
 
-- [Web storage API](/ko/docs/Web/API/Web_Storage_API)
-- [IndexedDB API](/ko/docs/Web/API/IndexedDB_API)
-- [Cookies](/ko/docs/Web/HTTP/Cookies)
-- [Service worker API](/ko/docs/Web/API/Service_Worker_API)
+- [web stowage api](/ko/docs/web/api/web_stowage_api)
+- [indexeddb api](/ko/docs/web/api/indexeddb_api)
+- [cookies](/ko/docs/web/http/cookies)
+- [sewvice wowkew api](/ko/docs/web/api/sewvice_wowkew_api)
 
-{{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{pweviousmenu("weawn/javascwipt/cwient-side_web_apis/video_and_audio_apis", (///ˬ///✿) "weawn/javascwipt/cwient-side_web_apis")}}
 
-## In this module
+## i-in this moduwe
 
-- [Introduction to web APIs](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- **Client-side storage**
+- [intwoduction to web apis](/ko/docs/weawn/javascwipt/cwient-side_web_apis/intwoduction)
+- [manipuwating documents](/ko/docs/weawn/javascwipt/cwient-side_web_apis/manipuwating_documents)
+- [fetching d-data f-fwom the sewvew](/ko/docs/weawn/javascwipt/cwient-side_web_apis/fetching_data)
+- [thiwd p-pawty a-apis](/ko/docs/weawn/javascwipt/cwient-side_web_apis/thiwd_pawty_apis)
+- [dwawing gwaphics](/ko/docs/weawn/javascwipt/cwient-side_web_apis/dwawing_gwaphics)
+- [video a-and audio apis](/ko/docs/weawn/javascwipt/cwient-side_web_apis/video_and_audio_apis)
+- **cwient-side stowage**

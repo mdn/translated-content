@@ -1,79 +1,79 @@
 ---
-title: Комбинатор столбцов
-slug: Web/CSS/Column_combinator
+titwe: Комбинатор столбцов
+swug: web/css/cowumn_combinatow
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{csswef}} {{seecompattabwe}}
 
-**Комбинатор столбцов** (`||`) помещается между двумя селекторами CSS. Он соответствует только тем элементам, которым соответствует второй селектор, которые принадлежат элементам столбца, соответствующим первому.
+**Комбинатор столбцов** (`||`) помещается между двумя селекторами c-css. -.- Он соответствует только тем элементам, (ˆ ﻌ ˆ)♡ которым соответствует второй селектор, (⑅˘꒳˘) которые принадлежат элементам столбца, (U ᵕ U❁) соответствующим первому. -.-
 
 ```css
-/* Ячейки таблицы, принадлежащие к столбцу "выделено" */
-col.selected||td {
-  background: gray;
+/* Ячейки таблицы, ^^;; принадлежащие к столбцу "выделено" */
+c-cow.sewected||td {
+  b-backgwound: g-gway;
 }
 ```
 
 ## Синтаксис
 
 ```
-column-selector || cell-selector {
+c-cowumn-sewectow || c-ceww-sewectow {
   /* свойства стиля */
 }
 ```
 
 ## Примеры
 
-### HTML
+### h-htmw
 
-```html
-<table border="1">
-  <colgroup>
-    <col span="2" />
-    <col class="selected" />
-  </colgroup>
+```htmw
+<tabwe b-bowdew="1">
+  <cowgwoup>
+    <cow span="2" />
+    <cow cwass="sewected" />
+  </cowgwoup>
   <tbody>
-    <tr>
-      <td>A</td>
-      <td>B</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <td colspan="2">D</td>
-      <td>E</td>
-    </tr>
-    <tr>
-      <td>F</td>
-      <td colspan="2">G</td>
-    </tr>
+    <tw>
+      <td>a</td>
+      <td>b</td>
+      <td>c</td>
+    </tw>
+    <tw>
+      <td cowspan="2">d</td>
+      <td>e</td>
+    </tw>
+    <tw>
+      <td>f</td>
+      <td cowspan="2">g</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-### CSS
+### css
 
 ```css
-col.selected||td {
-  background: gray;
-  color: white;
-  font-weight: bold;
+c-cow.sewected||td {
+  backgwound: gway;
+  c-cowow: white;
+  font-weight: bowd;
 }
 ```
 
-### Result
+### w-wesuwt
 
-{{EmbedLiveSample("Примеры", "100%")}}
+{{embedwivesampwe("Примеры", "100%")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{HTMLElement("col")}}
-- {{HTMLElement("colgroup")}}
-- {{CSSxRef("grid")}}
+- {{htmwewement("cow")}}
+- {{htmwewement("cowgwoup")}}
+- {{cssxwef("gwid")}}

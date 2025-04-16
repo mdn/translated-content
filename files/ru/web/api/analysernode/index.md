@@ -1,154 +1,154 @@
 ---
-title: AnalyserNode
-slug: Web/API/AnalyserNode
+titwe: anawysewnode
+swug: web/api/anawysewnode
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-`AnalyserNode` интерфейс который предоставляет частоту (frequency) в реальном времени. Элемент {{domxref("AudioNode")}} который пропускает аудиопоток неизменным от ввода (input) до вывода (output), но позволяет использовать генерируемые данные, обрабатывать или создавать аудиовизуализацию.
+`anawysewnode` интерфейс который предоставляет частоту (fwequency) в реальном времени. OwO Элемент {{domxwef("audionode")}} который пропускает аудиопоток неизменным от ввода (input) до вывода (output), 😳 но позволяет использовать генерируемые данные, 😳😳😳 обрабатывать или создавать аудиовизуализацию. (˘ω˘)
 
-`AnalyserNode` имеет только один ввод и один вывод. Узел работает даже если вывод не подсоединён.
+`anawysewnode` имеет только один ввод и один вывод. ʘwʘ Узел работает даже если вывод не подсоединён.
 
-![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](fttaudiodata_en.svg)
+![without m-modifying t-the audio stweam, ( ͡o ω ͡o ) t-the nyode awwows t-to get the f-fwequency and time-domain d-data a-associated to it, o.O using a fft.](fttaudiodata_en.svg)
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Количество входов</th>
+    <tw>
+      <th scope="wow">Количество входов</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Количество выводов</th>
-      <td><code>1</code> (but may be left unconnected)</td>
-    </tr>
-    <tr>
-      <th scope="row">Channel count mode</th>
-      <td><code>"explicit"</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Количество каналов</th>
+    </tw>
+    <tw>
+      <th scope="wow">Количество выводов</th>
+      <td><code>1</code> (but may b-be weft unconnected)</td>
+    </tw>
+    <tw>
+      <th scope="wow">channew count m-mode</th>
+      <td><code>"expwicit"</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">Количество каналов</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Channel interpretation</th>
-      <td><code>"speakers"</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">channew intewpwetation</th>
+      <td><code>"speakews"</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Наследование
 
 Интерфейс унаследован от следующих родительских интерфейсов:
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
-## Constructor
+## constwuctow
 
-- {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}}
-  - : Creates a new instance of an `AnalyserNode` object.
+- {{domxwef("anawysewnode.anawysewnode", >w< "anawysewnode()")}}
+  - : cweates a-a nyew instance of an `anawysewnode` o-object. 😳
 
-## Properties
+## p-pwopewties
 
-_Inherits properties from its parent, {{domxref("AudioNode")}}_.
+_inhewits pwopewties fwom its pawent, 🥺 {{domxwef("audionode")}}_. rawr x3
 
-- {{domxref("AnalyserNode.fftSize")}}
-  - : Is an unsigned long value representing the size of the FFT ([Fast Fourier Transform](http://en.wikipedia.org/wiki/Fast_Fourier_transform)) to be used to determine the frequency domain.
-- {{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}
-  - : Is an unsigned long value half that of the FFT size. This generally equates to the number of data values you will have to play with for the visualization.
-- {{domxref("AnalyserNode.minDecibels")}}
-  - : Is a double value representing the minimum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the minimum value for the range of results when using `getByteFrequencyData()`.
-- {{domxref("AnalyserNode.maxDecibels")}}
-  - : Is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the maximum value for the range of results when using `getByteFrequencyData()`.
-- {{domxref("AnalyserNode.smoothingTimeConstant")}}
-  - : Is a double value representing the averaging constant with the last analysis frame — basically, it makes the transition between values over time smoother.
+- {{domxwef("anawysewnode.fftsize")}}
+  - : is an unsigned wong vawue wepwesenting t-the size of the fft ([fast fouwiew twansfowm](http://en.wikipedia.owg/wiki/fast_fouwiew_twansfowm)) to be used to detewmine t-the fwequency domain. o.O
+- {{domxwef("anawysewnode.fwequencybincount")}} {{weadonwyinwine}}
+  - : i-is an unsigned w-wong vawue hawf t-that of the fft s-size. rawr this genewawwy equates to the nyumbew of data v-vawues you wiww have to pway with fow the visuawization. ʘwʘ
+- {{domxwef("anawysewnode.mindecibews")}}
+  - : i-is a doubwe vawue wepwesenting the minimum powew vawue in the scawing wange fow the f-fft anawysis data, 😳😳😳 fow convewsion t-to unsigned byte v-vawues — basicawwy, ^^;; t-this specifies the minimum vawue fow the wange of wesuwts w-when using `getbytefwequencydata()`. o.O
+- {{domxwef("anawysewnode.maxdecibews")}}
+  - : i-is a doubwe vawue wepwesenting t-the maximum p-powew vawue in the scawing wange f-fow the fft anawysis data, (///ˬ///✿) f-fow convewsion to unsigned byte vawues — basicawwy, σωσ t-this specifies the maximum v-vawue fow the wange of wesuwts w-when using `getbytefwequencydata()`. nyaa~~
+- {{domxwef("anawysewnode.smoothingtimeconstant")}}
+  - : is a-a doubwe vawue wepwesenting the avewaging constant with the wast anawysis fwame — basicawwy, ^^;; it makes the twansition b-between v-vawues ovew time smoothew. ^•ﻌ•^
 
-## Methods
+## m-methods
 
-_Inherits methods from its parent, {{domxref("AudioNode")}}_.
+_inhewits m-methods fwom i-its pawent, σωσ {{domxwef("audionode")}}_. -.-
 
-- {{domxref("AnalyserNode.getFloatFrequencyData()")}}
+- {{domxwef("anawysewnode.getfwoatfwequencydata()")}}
 
-  - : Copies the current frequency data into a {{domxref("Float32Array")}} array passed into it.
+  - : copies the cuwwent fwequency data into a {{domxwef("fwoat32awway")}} a-awway passed into it. ^^;;
 
-- {{domxref("AnalyserNode.getByteFrequencyData()")}}
+- {{domxwef("anawysewnode.getbytefwequencydata()")}}
 
-  - : Copies the current frequency data into a {{domxref("Uint8Array")}} (unsigned byte array) passed into it.
+  - : copies the cuwwent fwequency data into a-a {{domxwef("uint8awway")}} (unsigned byte awway) p-passed into i-it.
 
-- {{domxref("AnalyserNode.getFloatTimeDomainData()")}}
-  - : Copies the current waveform, or time-domain, data into a {{domxref("Float32Array")}} array passed into it.
-- {{domxref("AnalyserNode.getByteTimeDomainData()")}}
-  - : Copies the current waveform, or time-domain, data into a {{domxref("Uint8Array")}} (unsigned byte array) passed into it.
+- {{domxwef("anawysewnode.getfwoattimedomaindata()")}}
+  - : c-copies the cuwwent wavefowm, XD o-ow time-domain, 🥺 d-data into a {{domxwef("fwoat32awway")}} a-awway passed i-into it. òωó
+- {{domxwef("anawysewnode.getbytetimedomaindata()")}}
+  - : copies the cuwwent wavefowm, (ˆ ﻌ ˆ)♡ o-ow time-domain, -.- d-data into a-a {{domxwef("uint8awway")}} (unsigned b-byte awway) p-passed into it. :3
 
-## Examples
+## exampwes
 
-> [!NOTE]
-> See the guide [Visualizations with Web Audio API](/ru/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) for more information on creating audio visualizations.
+> [!note]
+> see the guide [visuawizations w-with web audio api](/wu/docs/web/api/web_audio_api/visuawizations_with_web_audio_api) fow mowe infowmation on cweating audio visuawizations. ʘwʘ
 
-### Basic usage
+### basic u-usage
 
-The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect time domain data repeatedly and draw an "oscilloscope style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
+the fowwowing exampwe shows basic usage of an {{domxwef("audiocontext")}} t-to cweate an `anawysewnode`, 🥺 t-then {{domxwef("window.wequestanimationfwame()","wequestanimationfwame")}} a-and {{htmwewement("canvas")}} to cowwect t-time domain data wepeatedwy a-and dwaw an "osciwwoscope s-stywe" output of the cuwwent audio input. >_< fow mowe compwete appwied exampwes/infowmation, ʘwʘ c-check out ouw [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) d-demo (see [app.js wines 128–205](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js#w128-w205) fow w-wewevant code). (˘ω˘)
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
+v-vaw audioctx = nyew (window.audiocontext || window.webkitaudiocontext)();
+v-vaw anawysew = a-audioctx.cweateanawysew();
 
 // ...
 
-analyser.fftSize = 2048;
-var bufferLength = analyser.frequencyBinCount;
-var dataArray = new Uint8Array(bufferLength);
-analyser.getByteTimeDomainData(dataArray);
+anawysew.fftsize = 2048;
+v-vaw buffewwength = a-anawysew.fwequencybincount;
+vaw dataawway = nyew uint8awway(buffewwength);
+anawysew.getbytetimedomaindata(dataawway);
 
-// Get a canvas defined with ID "oscilloscope"
-var canvas = document.getElementById("oscilloscope");
-var canvasCtx = canvas.getContext("2d");
+// get a-a canvas defined w-with id "osciwwoscope"
+v-vaw canvas = document.getewementbyid("osciwwoscope");
+vaw c-canvasctx = canvas.getcontext("2d");
 
-// draw an oscilloscope of the current audio source
+// d-dwaw an osciwwoscope o-of the cuwwent audio souwce
 
-function draw() {
-  requestAnimationFrame(draw);
+function dwaw() {
+  wequestanimationfwame(dwaw);
 
-  analyser.getByteTimeDomainData(dataArray);
+  anawysew.getbytetimedomaindata(dataawway);
 
-  canvasCtx.fillStyle = "rgb(200, 200, 200)";
-  canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+  c-canvasctx.fiwwstywe = "wgb(200, (✿oωo) 200, (///ˬ///✿) 200)";
+  c-canvasctx.fiwwwect(0, rawr x3 0, canvas.width, -.- canvas.height);
 
-  canvasCtx.lineWidth = 2;
-  canvasCtx.strokeStyle = "rgb(0, 0, 0)";
+  c-canvasctx.winewidth = 2;
+  c-canvasctx.stwokestywe = "wgb(0, ^^ 0, 0)";
 
-  canvasCtx.beginPath();
+  canvasctx.beginpath();
 
-  var sliceWidth = (canvas.width * 1.0) / bufferLength;
-  var x = 0;
+  vaw swicewidth = (canvas.width * 1.0) / buffewwength;
+  v-vaw x = 0;
 
-  for (var i = 0; i < bufferLength; i++) {
-    var v = dataArray[i] / 128.0;
-    var y = (v * canvas.height) / 2;
+  fow (vaw i = 0; i < buffewwength; i++) {
+    vaw v = dataawway[i] / 128.0;
+    v-vaw y = (v * canvas.height) / 2;
 
     if (i === 0) {
-      canvasCtx.moveTo(x, y);
-    } else {
-      canvasCtx.lineTo(x, y);
+      c-canvasctx.moveto(x, (⑅˘꒳˘) y-y);
+    } ewse {
+      canvasctx.wineto(x, nyaa~~ y);
     }
 
-    x += sliceWidth;
+    x-x += swicewidth;
   }
 
-  canvasCtx.lineTo(canvas.width, canvas.height / 2);
-  canvasCtx.stroke();
+  c-canvasctx.wineto(canvas.width, /(^•ω•^) canvas.height / 2);
+  canvasctx.stwoke();
 }
 
-draw();
+dwaw();
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using t-the web audio api](/wu/docs/web/api/web_audio_api/using_web_audio_api)

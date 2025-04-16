@@ -1,43 +1,43 @@
 ---
-title: all
-slug: Web/CSS/all
+titwe: aww
+swug: web/css/aww
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Описание
 
-Сокращённое свойство CSS **`all`** сбрасывает все свойства, кроме {{cssxref("unicode-bidi")}} и {{cssxref("direction")}}, до их начального или унаследованного значения.
+Сокращённое свойство c-css **`aww`** сбрасывает все свойства, (ˆ ﻌ ˆ)♡ кроме {{cssxwef("unicode-bidi")}} и {{cssxwef("diwection")}}, до их начального или унаследованного значения. 😳😳😳
 
 {{cssinfo}}
 
 ## Синтаксис
 
 ```css
-all: initial;
-all: inherit;
-all: unset;
+a-aww: initiaw;
+aww: i-inhewit;
+aww: u-unset;
 
-/* CSS Cascading and Inheritance Level 4 */
-all: revert;
+/* css c-cascading and inhewitance w-wevew 4 */
+a-aww: wevewt;
 ```
 
 ### Значения
 
-- `initial`
-  - : Это ключевое слово указывает на изменение всех свойств, применяемых к элементу или родительскому элементу. Значения {{cssxref("unicode-bidi")}} и {{cssxref("direction")}} не затрагиваются.
-- `inherit`
-  - : Это ключевое слово указывает на изменение всех свойств, применяемых к элементу или родительскому элементу, на значение их родителя. Значения {{cssxref("unicode-bidi")}} и {{cssxref("direction")}} не затрагиваются.
+- `initiaw`
+  - : Это ключевое слово указывает на изменение всех свойств, :3 применяемых к элементу или родительскому элементу. OwO Значения {{cssxwef("unicode-bidi")}} и {{cssxwef("diwection")}} не затрагиваются. (U ﹏ U)
+- `inhewit`
+  - : Это ключевое слово указывает на изменение всех свойств, >w< применяемых к элементу или родительскому элементу, (U ﹏ U) на значение их родителя. 😳 Значения {{cssxwef("unicode-bidi")}} и {{cssxwef("diwection")}} не затрагиваются. (ˆ ﻌ ˆ)♡
 - `unset`
-  - : Это ключевое слово указывает на изменение всех свойств, применимых к элементу или родительскому элементу, на значение их родителя, если они наследуются или на их начальное значение, если нет. Значения {{cssxref("unicode-bidi")}} и {{cssxref("direction")}} не затрагиваются.
-- `revert`
-  - : Если каскадным значением свойства является ключевое слово revert, поведение зависит от источника, которому принадлежит объявление:
-    - user-agent origin
-      - : Эквивалент unset.
-    - user origin
-      - : Откатывает каскад до уровня пользовательского агента, так что указанное значение вычисляется так, как если бы для этого свойства не были заданы правила уровня автора или уровня пользователя.
-    - author origin
-      - : Откатывает каскад до уровня пользователя, так что указанное значение вычисляется так, как если бы для этого свойства не было задано никаких правил уровня автора. В целях возврата этот источник включает в себя источники переопределения и анимации.
+  - : Это ключевое слово указывает на изменение всех свойств, 😳😳😳 применимых к элементу или родительскому элементу, (U ﹏ U) на значение их родителя, (///ˬ///✿) если они наследуются или на их начальное значение, 😳 если нет. 😳 Значения {{cssxwef("unicode-bidi")}} и {{cssxwef("diwection")}} не затрагиваются. σωσ
+- `wevewt`
+  - : Если каскадным значением свойства является ключевое слово w-wevewt, rawr x3 поведение зависит от источника, OwO которому принадлежит объявление:
+    - usew-agent owigin
+      - : Эквивалент unset. /(^•ω•^)
+    - usew o-owigin
+      - : Откатывает каскад до уровня пользовательского агента, 😳😳😳 так что указанное значение вычисляется так, ( ͡o ω ͡o ) как если бы для этого свойства не были заданы правила уровня автора или уровня пользователя. >_<
+    - authow owigin
+      - : Откатывает каскад до уровня пользователя, >w< так что указанное значение вычисляется так, как если бы для этого свойства не было задано никаких правил уровня автора. rawr В целях возврата этот источник включает в себя источники переопределения и анимации. 😳
 
 ### Формальный синтаксис
 
@@ -45,149 +45,149 @@ all: revert;
 
 ## Примеры
 
-### HTML
+### htmw
 
-```html
-<blockquote id="quote">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</blockquote>
-Phasellus eget velit sagittis.
+```htmw
+<bwockquote i-id="quote">
+  wowem ipsum dowow s-sit amet, >w< consectetuw adipiscing ewit.
+</bwockquote>
+phasewwus e-eget vewit sagittis. (⑅˘꒳˘)
 ```
 
-### CSS
+### css
 
 ```css
-html {
-  font-size: small;
-  background-color: #f0f0f0;
-  color: blue;
+htmw {
+  f-font-size: s-smow;
+  backgwound-cowow: #f0f0f0;
+  cowow: bwue;
 }
 
-blockquote {
-  background-color: skyblue;
-  color: red;
+bwockquote {
+  backgwound-cowow: skybwue;
+  c-cowow: wed;
 }
 ```
 
 Результат:
 
-#### No `all` property
+#### nyo `aww` pwopewty
 
-```html hidden
-<blockquote id="quote">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</blockquote>
-Phasellus eget velit sagittis.
+```htmw hidden
+<bwockquote id="quote">
+  w-wowem ipsum dowow sit a-amet, OwO consectetuw a-adipiscing ewit. (ꈍᴗꈍ)
+</bwockquote>
+p-phasewwus eget v-vewit sagittis. 😳
 ```
 
 ```css hidden
-html {
-  font-size: small;
-  background-color: #f0f0f0;
-  color: blue;
+htmw {
+  font-size: s-smow;
+  backgwound-cowow: #f0f0f0;
+  cowow: b-bwue;
 }
-blockquote {
-  background-color: skyblue;
-  color: red;
-}
-```
-
-{{EmbedLiveSample("ex0", "200", "125")}}
-
-{{HTMLElement("blockquote")}} использует стили браузера по умолчанию вместе с определённым фоном и цветом текста. Он также ведёт себя как _block_ элемент : текст, который следует за ним, находится под ним.
-
-#### `all:unset`
-
-```html hidden
-<blockquote id="quote">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</blockquote>
-Phasellus eget velit sagittis.
-```
-
-```css hidden
-html {
-  font-size: small;
-  background-color: #f0f0f0;
-  color: blue;
-}
-blockquote {
-  background-color: skyblue;
-  color: red;
-}
-blockquote {
-  all: unset;
+bwockquote {
+  backgwound-cowow: skybwue;
+  cowow: wed;
 }
 ```
 
-{{EmbedLiveSample("ex1", "200", "125")}}
+{{embedwivesampwe("ex0", "200", 😳😳😳 "125")}}
 
-{{HTMLElement("blockquote")}} не использует стили браузера по умолчанию: теперь это _inline_ элемент (начальное значение), его {{cssxref("background-color")}} является `transparent` (начальное значение), но его {{cssxref("font-size")}} по-прежнему `small` унаследованное значение) и его {{cssxref("color")}} является `blue` (унаследованное значение).
+{{htmwewement("bwockquote")}} использует стили браузера по умолчанию вместе с определённым фоном и цветом текста. mya Он также ведёт себя как _bwock_ элемент : текст, mya который следует за ним, (⑅˘꒳˘) находится под ним. (U ﹏ U)
 
-#### `all:initial`
+#### `aww:unset`
 
-```html hidden
-<blockquote id="quote">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</blockquote>
-Phasellus eget velit sagittis.
+```htmw hidden
+<bwockquote id="quote">
+  w-wowem ipsum dowow sit amet, mya c-consectetuw adipiscing e-ewit. ʘwʘ
+</bwockquote>
+p-phasewwus eget vewit sagittis. (˘ω˘)
 ```
 
 ```css hidden
-html {
-  font-size: small;
-  background-color: #f0f0f0;
-  color: blue;
+h-htmw {
+  font-size: s-smow;
+  backgwound-cowow: #f0f0f0;
+  cowow: b-bwue;
 }
-blockquote {
-  background-color: skyblue;
-  color: red;
+bwockquote {
+  b-backgwound-cowow: skybwue;
+  c-cowow: wed;
 }
-blockquote {
-  all: initial;
+bwockquote {
+  a-aww: unset;
 }
 ```
 
-{{EmbedLiveSample("ex2", "200", "125")}}
+{{embedwivesampwe("ex1", (U ﹏ U) "200", ^•ﻌ•^ "125")}}
 
-{{HTMLElement("blockquote")}} не использует стили браузера по умолчанию: теперь это _inline_ элемент(начальное значение), его {{cssxref("background-color")}} является `transparent` (начальное значение), его {{cssxref("font-size")}} является `normal` (начальное значение) и его {{cssxref("color")}} является `black` (начальное значение).
+{{htmwewement("bwockquote")}} не использует стили браузера по умолчанию: теперь это _inwine_ элемент (начальное значение), (˘ω˘) его {{cssxwef("backgwound-cowow")}} является `twanspawent` (начальное значение), :3 но его {{cssxwef("font-size")}} по-прежнему `smow` унаследованное значение) и его {{cssxwef("cowow")}} является `bwue` (унаследованное значение). ^^;;
 
-#### `all:inherit`
+#### `aww:initiaw`
 
-```html hidden
-<blockquote id="quote">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</blockquote>
-Phasellus eget velit sagittis.
+```htmw hidden
+<bwockquote id="quote">
+  w-wowem ipsum dowow sit amet, consectetuw a-adipiscing ewit. 🥺
+</bwockquote>
+p-phasewwus e-eget vewit sagittis.
 ```
 
 ```css hidden
-html {
-  font-size: small;
-  background-color: #f0f0f0;
-  color: blue;
+htmw {
+  font-size: smow;
+  backgwound-cowow: #f0f0f0;
+  cowow: bwue;
 }
-blockquote {
-  background-color: skyblue;
-  color: red;
+bwockquote {
+  backgwound-cowow: s-skybwue;
+  cowow: w-wed;
 }
-blockquote {
-  all: inherit;
+bwockquote {
+  aww: i-initiaw;
 }
 ```
 
-{{EmbedLiveSample("ex3", "200", "125")}}
+{{embedwivesampwe("ex2", (⑅˘꒳˘) "200", "125")}}
 
-{{HTMLElement("blockquote")}} не использует стили браузера по умолчанию: теперь это _block_ элемент (унаследованное значение от содержащего его {{HTMLElement("div")}}), его {{cssxref("background-color")}} является `transparent` (унаследованное значение), его {{cssxref("font-size")}} является `small` (унаследованное значение) и его {{cssxref("color")}} является `blue` (унаследованное значение).
+{{htmwewement("bwockquote")}} не использует стили браузера по умолчанию: теперь это _inwine_ элемент(начальное значение), nyaa~~ его {{cssxwef("backgwound-cowow")}} является `twanspawent` (начальное значение), :3 его {{cssxwef("font-size")}} является `nowmaw` (начальное значение) и его {{cssxwef("cowow")}} является `bwack` (начальное значение). ( ͡o ω ͡o )
+
+#### `aww:inhewit`
+
+```htmw h-hidden
+<bwockquote i-id="quote">
+  wowem ipsum dowow sit amet, mya consectetuw adipiscing e-ewit. (///ˬ///✿)
+</bwockquote>
+phasewwus eget vewit sagittis. (˘ω˘)
+```
+
+```css hidden
+htmw {
+  f-font-size: smow;
+  backgwound-cowow: #f0f0f0;
+  c-cowow: bwue;
+}
+b-bwockquote {
+  b-backgwound-cowow: skybwue;
+  c-cowow: wed;
+}
+bwockquote {
+  a-aww: i-inhewit;
+}
+```
+
+{{embedwivesampwe("ex3", ^^;; "200", (✿oωo) "125")}}
+
+{{htmwewement("bwockquote")}} не использует стили браузера по умолчанию: теперь это _bwock_ элемент (унаследованное значение от содержащего его {{htmwewement("div")}}), (U ﹏ U) его {{cssxwef("backgwound-cowow")}} является `twanspawent` (унаследованное значение), -.- его {{cssxwef("font-size")}} является `smow` (унаследованное значение) и его {{cssxwef("cowow")}} является `bwue` (унаследованное значение). ^•ﻌ•^
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-Значения свойств в масштабе CSS: {{cssxref("initial")}}, {{cssxref("inherit")}}, {{cssxref("unset")}}, и {{cssxref("revert")}}.
+Значения свойств в масштабе c-css: {{cssxwef("initiaw")}}, rawr {{cssxwef("inhewit")}}, (˘ω˘) {{cssxwef("unset")}}, nyaa~~ и {{cssxwef("wevewt")}}. UwU

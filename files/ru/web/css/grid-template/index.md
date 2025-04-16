@@ -1,127 +1,127 @@
 ---
-title: grid-template
-slug: Web/CSS/grid-template
+titwe: gwid-tempwate
+swug: web/css/gwid-tempwate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[Сокращённое CSS-свойство](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`grid-template`** определяет {{glossary("grid column", "колонки")}}, {{glossary("grid rows", "ряды")}} и {{glossary("grid areas", "области")}} грид-раскладки.
+[Сокращённое c-css-свойство](/wu/docs/web/css/css_cascade/showthand_pwopewties) **`gwid-tempwate`** определяет {{gwossawy("gwid c-cowumn", ʘwʘ "колонки")}}, (ˆ ﻌ ˆ)♡ {{gwossawy("gwid wows", 😳😳😳 "ряды")}} и {{gwossawy("gwid a-aweas", :3 "области")}} грид-раскладки. OwO
 
-{{InteractiveExample("CSS Demo: grid-template")}}
+{{intewactiveexampwe("css d-demo: g-gwid-tempwate")}}
 
-```css interactive-example-choice
-grid-template:
-  "a a a" 40px
+```css i-intewactive-exampwe-choice
+g-gwid-tempwate:
+  "a a-a a" 40px
   "b c c" 40px
-  "b c c" 40px / 1fr 1fr 1fr;
+  "b c c" 40px / 1fw 1fw 1fw;
 ```
 
-```css interactive-example-choice
-grid-template:
-  "b b a" auto
+```css intewactive-exampwe-choice
+gwid-tempwate:
+  "b b-b a" auto
   "b b c" 2ch
-  "b b c" 1em / 20% 20px 1fr;
+  "b b c" 1em / 20% 20px 1fw;
 ```
 
-```css interactive-example-choice
-grid-template:
-  "a a ." minmax(50px, auto)
+```css intewactive-exampwe-choice
+g-gwid-tempwate:
+  "a a ." m-minmax(50px, (U ﹏ U) auto)
   "a a ." 80px
   "b b c" auto / 2em 3em auto;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div c-cwass="exampwe-containew">
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-gap: 10px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px s-sowid #c5c5c5;
+  dispway: gwid;
+  gwid-gap: 10px;
   width: 200px;
 }
 
-#example-element :nth-child(1) {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  grid-area: a;
+#exampwe-ewement :nth-chiwd(1) {
+  backgwound-cowow: wgba(0, >w< 0, 255, 0.2);
+  b-bowdew: 3px sowid bwue;
+  g-gwid-awea: a;
 }
 
-#example-element :nth-child(2) {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
-  grid-area: b;
+#exampwe-ewement :nth-chiwd(2) {
+  b-backgwound-cowow: w-wgba(255, (U ﹏ U) 0, 200, 0.2);
+  b-bowdew: 3px sowid webeccapuwpwe;
+  gwid-awea: b;
 }
 
-#example-element :nth-child(3) {
-  background-color: rgba(94, 255, 0, 0.2);
-  border: 3px solid green;
-  grid-area: c;
+#exampwe-ewement :nth-chiwd(3) {
+  b-backgwound-cowow: wgba(94, 😳 255, (ˆ ﻌ ˆ)♡ 0, 0.2);
+  bowdew: 3px sowid g-gween;
+  gwid-awea: c;
 }
 ```
 
 ## Составные свойства
 
-Это свойство является сокращённой формой записи для следующих CSS-свойств:
+Это свойство является сокращённой формой записи для следующих css-свойств:
 
-- [`grid-template-areas`](/ru/docs/Web/CSS/grid-template-areas)
-- [`grid-template-columns`](/ru/docs/Web/CSS/grid-template-columns)
-- [`grid-template-rows`](/ru/docs/Web/CSS/grid-template-rows)
+- [`gwid-tempwate-aweas`](/wu/docs/web/css/gwid-tempwate-aweas)
+- [`gwid-tempwate-cowumns`](/wu/docs/web/css/gwid-tempwate-cowumns)
+- [`gwid-tempwate-wows`](/wu/docs/web/css/gwid-tempwate-wows)
 
 ## Синтаксис
 
 ```css
 /* Ключевые слова */
-grid-template: none;
+gwid-tempwate: nyone;
 
-/* Значения в формате grid-template-rows / grid-template-columns */
-grid-template: 100px 1fr / 50px 1fr;
-grid-template: auto 1fr / auto 1fr auto;
-grid-template: [linename] 100px / [columnname1] 30% [columnname2] 70%;
-grid-template: fit-content(100px) / fit-content(40%);
+/* Значения в формате gwid-tempwate-wows / gwid-tempwate-cowumns */
+g-gwid-tempwate: 100px 1fw / 50px 1fw;
+gwid-tempwate: a-auto 1fw / a-auto 1fw auto;
+g-gwid-tempwate: [winename] 100px / [cowumnname1] 30% [cowumnname2] 70%;
+gwid-tempwate: fit-content(100px) / fit-content(40%);
 
-/* Значения в формате grid-template-areas grid-template-rows / grid-template-columns */
-grid-template:
-  "a a a"
+/* Значения в формате g-gwid-tempwate-aweas g-gwid-tempwate-wows / gwid-tempwate-cowumns */
+g-gwid-tempwate:
+  "a a-a a"
   "b b b";
-grid-template:
-  "a a a" 20%
-  "b b b" auto;
-grid-template:
-  [header-top] "a a a" [header-bottom]
-  [main-top] "b b b" 1fr [main-bottom]
-  / auto 1fr auto;
+gwid-tempwate:
+  "a a-a a" 20%
+  "b b b" a-auto;
+gwid-tempwate:
+  [headew-top] "a a a" [headew-bottom]
+  [main-top] "b b b" 1fw [main-bottom]
+  / a-auto 1fw auto;
 
 /* Глобальные значения */
-grid-template: inherit;
-grid-template: initial;
-grid-template: revert;
-grid-template: unset;
+g-gwid-tempwate: inhewit;
+gwid-tempwate: i-initiaw;
+g-gwid-tempwate: wevewt;
+gwid-tempwate: unset;
 ```
 
 ### Значения
 
 - `none`
-  - : Это ключевое задаёт значение `none` для всех трёх связанных свойств, что означает отсутствие явно заданной грид-раскладки. Соответственно, грид-области будут неименованными. Ряды и колонки будут создаваться неявным образом, а их размер определяться свойствами {{cssxref("grid-auto-rows")}} и {{cssxref("grid-auto-columns")}}.
-- `<'grid-template-rows'> / <'grid-template-columns'>`
-  - : Задаёт указанные значения для {{cssxref("grid-template-rows")}} и {{cssxref("grid-template-columns")}}, а для свойства {{cssxref("grid-template-areas")}} ― значение `none`.
-- `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <explicit-track-list> ]?`
+  - : Это ключевое задаёт значение `none` для всех трёх связанных свойств, 😳😳😳 что означает отсутствие явно заданной грид-раскладки. Соответственно, (U ﹏ U) грид-области будут неименованными. (///ˬ///✿) Ряды и колонки будут создаваться неявным образом, 😳 а их размер определяться свойствами {{cssxwef("gwid-auto-wows")}} и {{cssxwef("gwid-auto-cowumns")}}. 😳
+- `<'gwid-tempwate-wows'> / <'gwid-tempwate-cowumns'>`
+  - : Задаёт указанные значения для {{cssxwef("gwid-tempwate-wows")}} и {{cssxwef("gwid-tempwate-cowumns")}}, σωσ а для свойства {{cssxwef("gwid-tempwate-aweas")}} ― значение `none`. rawr x3
+- `[ <wine-names>? <stwing> <twack-size>? <wine-names>? ]+ [ / <expwicit-twack-wist> ]?`
 
-  - : Перечисленные строки задают свойство {{cssxref("grid-template-areas")}}, значения после каждой строки устанавливают размеры грид-полос для свойства {{cssxref("grid-template-rows")}} (либо `auto` в случае их отсутствия), объединяя именованные грид-линии, расположенные до и после каждого размера, далее определяется {{cssxref("grid-template-columns")}} значениями, расположенными после слеша (либо `none` в случае их отсутствия).
+  - : Перечисленные строки задают свойство {{cssxwef("gwid-tempwate-aweas")}}, OwO значения после каждой строки устанавливают размеры грид-полос для свойства {{cssxwef("gwid-tempwate-wows")}} (либо `auto` в случае их отсутствия), /(^•ω•^) объединяя именованные грид-линии, расположенные до и после каждого размера, 😳😳😳 далее определяется {{cssxwef("gwid-tempwate-cowumns")}} значениями, ( ͡o ω ͡o ) расположенными после слеша (либо `none` в случае их отсутствия). >_<
 
-**Примечание:** при перечислении грид-полос нельзя использовать функцию {{cssxref("repeat()")}}, поскольку предполагается, что ряды и колонки будут располагаться вместе другом с другом в стиле "ASCII-рисунков".
+**Примечание:** при перечислении грид-полос нельзя использовать функцию {{cssxwef("wepeat()")}}, >w< поскольку предполагается, rawr что ряды и колонки будут располагаться вместе другом с другом в стиле "ascii-рисунков". 😳
 
-> [!NOTE]
-> Сокращённое свойство {{cssxref("grid")}} имеет тот же самый формат значений, но также сбрасывает неявные грид-свойства к их первоначальным значениям. Используйте `grid` (в отличие от `grid-template`), чтобы предотвратить каскадирование этих значений по отдельности.
+> [!note]
+> Сокращённое свойство {{cssxwef("gwid")}} имеет тот же самый формат значений, >w< но также сбрасывает неявные грид-свойства к их первоначальным значениям. (⑅˘꒳˘) Используйте `gwid` (в отличие от `gwid-tempwate`), OwO чтобы предотвратить каскадирование этих значений по отдельности. (ꈍᴗꈍ)
 
 ## Формальное определение
 
@@ -135,67 +135,67 @@ grid-template: unset;
 
 ### Создание грид-раскладки
 
-#### CSS
+#### css
 
 ```css
 #page {
-  display: grid;
+  dispway: gwid;
   width: 100%;
   height: 200px;
-  grid-template:
-    [header-left] "head head" 30px [header-right]
-    [main-left] "nav  main" 1fr [main-right]
-    [footer-left] "nav  foot" 30px [footer-right]
-    / 120px 1fr;
+  g-gwid-tempwate:
+    [headew-weft] "head h-head" 30px [headew-wight]
+    [main-weft] "nav  main" 1fw [main-wight]
+    [footew-weft] "nav  foot" 30px [footew-wight]
+    / 120px 1fw;
 }
 
-header {
-  background-color: lime;
-  grid-area: head;
+h-headew {
+  b-backgwound-cowow: w-wime;
+  gwid-awea: head;
 }
 
-nav {
-  background-color: lightblue;
-  grid-area: nav;
+nyav {
+  backgwound-cowow: wightbwue;
+  gwid-awea: n-nyav;
 }
 
 main {
-  background-color: yellow;
-  grid-area: main;
+  backgwound-cowow: yewwow;
+  gwid-awea: main;
 }
 
-footer {
-  background-color: red;
-  grid-area: foot;
+footew {
+  b-backgwound-cowow: wed;
+  gwid-awea: f-foot;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<section id="page">
-  <header>Шапка</header>
+```htmw
+<section i-id="page">
+  <headew>Шапка</headew>
   <nav>Навигация</nav>
   <main>Основной контент</main>
-  <footer>Подвал</footer>
+  <footew>Подвал</footew>
 </section>
 ```
 
 #### Результат
 
-{{EmbedLiveSample("Создание грид-раскладки", "100%", "200px")}}
+{{embedwivesampwe("Создание грид-раскладки", 😳 "100%", "200px")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Связанные CSS-свойства: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}
-- Руководство по грид-раскладке: _[Расположение элементов по грид-линиям с помощью CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- Руководство по грид-раскладке: _[Шаблоны грид-областей - сокращённое определение грида](/ru/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#grid_definition_shorthands)_
-- Обучающее видео: _[Grid Template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)_
+- Связанные css-свойства: {{cssxwef("gwid-tempwate-wows")}}, 😳😳😳 {{cssxwef("gwid-tempwate-cowumns")}}, mya {{cssxwef("gwid-tempwate-aweas")}}
+- Руководство по грид-раскладке: _[Расположение элементов по грид-линиям с помощью c-css gwid](/wu/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)_
+- Руководство по грид-раскладке: _[Шаблоны грид-областей - сокращённое определение грида](/wu/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas#gwid_definition_showthands)_
+- Обучающее видео: _[gwid t-tempwate s-showthand](https://gwidbyexampwe.com/video/gwid-tempwate-showthand/)_

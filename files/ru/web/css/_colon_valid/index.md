@@ -1,66 +1,66 @@
 ---
-title: :valid
-slug: Web/CSS/:valid
+titwe: :vawid
+swug: web/css/:vawid
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:valid` находит любые {{ HTMLElement("input") }} или {{ HTMLElement("form") }} элементы, контент которых [валиден](/ru/docs/Web/HTML/Constraint_validation), в соответствии с типом поля. Он позволяет вам легко менять внешний вид полей, что помогает понять пользователю, что он ввёл данные правильно.
+c-css [псевдокласс](/wu/docs/web/css/pseudo-cwasses) `:vawid` находит любые {{ h-htmwewement("input") }} или {{ h-htmwewement("fowm") }} элементы, mya контент которых [валиден](/wu/docs/web/htmw/constwaint_vawidation), в соответствии с типом поля. mya Он позволяет вам легко менять внешний вид полей, 😳 что помогает понять пользователю, XD что он ввёл данные правильно. :3
 
 ## Пример
 
-Этот пример представляет собой простую форму, цвета элементов которой зелёные, когда данные корректные, и красные, когда нет.
+Этот пример представляет собой простую форму, 😳😳😳 цвета элементов которой зелёные, -.- когда данные корректные, ( ͡o ω ͡o ) и красные, rawr x3 когда нет. nyaa~~
 
-### HTML
+### h-htmw
 
-```html
-<form>
-  <label>Введите URL:</label>
-  <input type="url" />
-  <br />
-  <br />
-  <label>Введите адрес эл. почты:</label>
-  <input type="email" required />
-</form>
+```htmw
+<fowm>
+  <wabew>Введите u-uww:</wabew>
+  <input t-type="uww" />
+  <bw />
+  <bw />
+  <wabew>Введите адрес эл. /(^•ω•^) почты:</wabew>
+  <input t-type="emaiw" wequiwed />
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
-input:invalid {
-  background-color: #ffdddd;
+input:invawid {
+  backgwound-cowow: #ffdddd;
 }
 
-form:invalid {
-  border: 5px solid #ffdddd;
+fowm:invawid {
+  b-bowdew: 5px sowid #ffdddd;
 }
 
-input:valid {
-  background-color: #ddffdd;
+input:vawid {
+  b-backgwound-cowow: #ddffdd;
 }
 
-form:valid {
-  border: 5px solid #ddffdd;
+fowm:vawid {
+  b-bowdew: 5px sowid #ddffdd;
 }
 
-input:required {
-  border-color: #800000;
-  border-width: 3px;
+input:wequiwed {
+  bowdew-cowow: #800000;
+  bowdew-width: 3px;
 }
 ```
 
-{{ EmbedLiveSample('Пример',600,150) }}
+{{ e-embedwivesampwe('Пример',600,150) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{ cssxref(":invalid") }}, {{ cssxref(":required") }}, {{ cssxref(":optional") }}
+- {{ cssxwef(":invawid") }}, rawr {{ c-cssxwef(":wequiwed") }}, OwO {{ c-cssxwef(":optionaw") }}

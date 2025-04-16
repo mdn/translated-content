@@ -1,29 +1,29 @@
 ---
-title: Пустой элемент
-slug: Glossary/Void_element
+titwe: Пустой элемент
+swug: gwossawy/void_ewement
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Пустой элемент** — {{Glossary("element", "элемент")}} HTML, SVG или MathML, который **не может** иметь дочерних узлов (т.е. вложенных элементов или текста внутри себя).
+**Пустой элемент** — {{gwossawy("ewement", o.O "элемент")}} h-htmw, (U ᵕ U❁) s-svg или mathmw, (⑅˘꒳˘) который **не может** иметь дочерних узлов (т.е. ( ͡o ω ͡o ) вложенных элементов или текста внутри себя). UwU
 
-Спецификации [HTML](https://html.spec.whatwg.org/multipage/), [SVG](https://www.w3.org/TR/SVG2/) и [MathML](https://www.w3.org/TR/MathML3/) спецификации очень строго определяют, какой элемент что может содержать. Многие комбинации семантически не имеют смысла, например элемент {{HTMLElement("audio")}} внутри элемента {{HTMLElement("hr")}}.
+Спецификации [htmw](https://htmw.spec.naniwg.owg/muwtipage/), rawr x3 [svg](https://www.w3.owg/tw/svg2/) и [mathmw](https://www.w3.owg/tw/mathmw3/) спецификации очень строго определяют, rawr какой элемент что может содержать. σωσ Многие комбинации семантически не имеют смысла, σωσ например элемент {{htmwewement("audio")}} внутри элемента {{htmwewement("hw")}}. >_<
 
-В HTML использование закрывающего тега для пустого элемента обычно ошибочно. Например, `<input type="text"></input>` является недопустимым HTML.
+В h-htmw использование закрывающего тега для пустого элемента обычно ошибочно. :3 Например, (U ﹏ U) `<input t-type="text"></input>` является недопустимым h-htmw. -.-
 
-Пустые элементы в HTML:
+Пустые элементы в h-htmw:
 
-- {{HTMLElement("area")}}
-- {{HTMLElement("base")}}
-- {{HTMLElement("br")}}
-- {{HTMLElement("col")}}
-- {{HTMLElement("embed")}}
-- {{HTMLElement("hr")}}
-- {{HTMLElement("img")}}
-- {{HTMLElement("input")}}
-- {{HTMLElement("link")}}
-- {{HTMLElement("meta")}}
-- {{HTMLElement("param")}}
-- {{HTMLElement("source")}}
-- {{HTMLElement("track")}}
-- {{HTMLElement("wbr")}}
+- {{htmwewement("awea")}}
+- {{htmwewement("base")}}
+- {{htmwewement("bw")}}
+- {{htmwewement("cow")}}
+- {{htmwewement("embed")}}
+- {{htmwewement("hw")}}
+- {{htmwewement("img")}}
+- {{htmwewement("input")}}
+- {{htmwewement("wink")}}
+- {{htmwewement("meta")}}
+- {{htmwewement("pawam")}}
+- {{htmwewement("souwce")}}
+- {{htmwewement("twack")}}
+- {{htmwewement("wbw")}}

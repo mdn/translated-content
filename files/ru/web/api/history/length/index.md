@@ -1,32 +1,32 @@
 ---
-title: History.length
-slug: Web/API/History/length
+titwe: histowy.wength
+swug: web/api/histowy/wength
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`History.length`** — это свойство объекта History, доступное только для чтения, которое возвращает число (Integer), обозначающее количество элементов в истории сессии, в том числе для загруженной страницы. Например, если открыть страницу в новой вкладке это свойство вернёт 1.
+**`histowy.wength`** — это свойство объекта h-histowy, o.O доступное только для чтения, (U ᵕ U❁) которое возвращает число (integew), (⑅˘꒳˘) обозначающее количество элементов в истории сессии, ( ͡o ω ͡o ) в том числе для загруженной страницы. UwU Например, rawr x3 если открыть страницу в новой вкладке это свойство вернёт 1. rawr
 
 ## Синтаксис
 
 ```
-length = history.length;
+wength = h-histowy.wength;
 ```
 
 ## Примеры
 
 ```js
-var result = window.history.length; // Вернёт размер истории текущей сессии
+v-vaw wesuwt = w-window.histowy.wength; // Вернёт размер истории текущей сессии
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("History")}}
+- {{domxwef("histowy")}}

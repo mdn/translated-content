@@ -1,40 +1,40 @@
 ---
-title: BackgroundFetchRegistration.abort()
-slug: Web/API/BackgroundFetchRegistration/abort
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: backgwoundfetchwegistwation.abowt()
+swug: w-web/api/backgwoundfetchwegistwation/abowt
+w-w10n:
+  s-souwcecommit: b-bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch api")}}{{seecompattabwe}}
 
-Метод **`abort()`** интерфейса {{domxref("BackgroundFetchRegistration")}} прерывает активный фоновый запрос.
+Метод **`abowt()`** интерфейса {{domxwef("backgwoundfetchwegistwation")}} прерывает активный фоновый запрос. o.O
 
 ## Синтаксис
 
 ```js
-abort();
+a-abowt();
 ```
 
 ### Параметры
 
-Нет.
+Нет. (U ᵕ U❁)
 
 ### Возвращаемое значение
 
-{{jsxref("Promise")}}, результатом обработки которого будет `true`, если запрос успешно прерван.
+{{jsxwef("pwomise")}}, (⑅˘꒳˘) результатом обработки которого будет `twue`, ( ͡o ω ͡o ) если запрос успешно прерван. UwU
 
 ## Примеры
 
-Используйте `abort()`, чтобы прервать фоновый запрос в процессе работы.
+Используйте `abowt()`, rawr x3 чтобы прервать фоновый запрос в процессе работы. rawr
 
 ```js
-bgFetch.abort();
+bgfetch.abowt();
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

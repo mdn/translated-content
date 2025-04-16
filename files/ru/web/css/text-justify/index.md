@@ -1,48 +1,48 @@
 ---
-title: text-justify
-slug: Web/CSS/text-justify
+titwe: text-justify
+swug: web/css/text-justify
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS-свойство **`text-justify`** определяет какой тип выравнивания следует применить к тексту, когда {{cssxref("text-align")}}`: justify;` применяется к элементу.
+c-css-свойство **`text-justify`** определяет какой тип выравнивания следует применить к тексту, когда {{cssxwef("text-awign")}}`: j-justify;` применяется к элементу. 😳
 
 ## Синтаксис
 
 ```css
 /* Ключевые слова */
-text-justify: none;
-text-justify: auto;
-text-justify: inter-word;
-text-justify: inter-character;
-text-justify: distribute; /* Устаревшее значение */
+t-text-justify: n-nyone;
+t-text-justify: auto;
+t-text-justify: i-intew-wowd;
+text-justify: i-intew-chawactew;
+text-justify: distwibute; /* Устаревшее значение */
 
 /* Глобальные значения */
-text-justify: inherit;
-text-justify: initial;
-text-justify: revert;
-text-justify: revert-layer;
+text-justify: inhewit;
+text-justify: i-initiaw;
+text-justify: wevewt;
+text-justify: w-wevewt-wayew;
 text-justify: unset;
 ```
 
-Свойство `text-justify` указывается как одно ключевое слово, выбранное из нижеследующего списка значений.
+Свойство `text-justify` указывается как одно ключевое слово, 😳 выбранное из нижеследующего списка значений. σωσ
 
 ### Значения
 
 - `none`
-  - : Выравнивание текста отключено. Оно имеет такой же эффект как отсутствие применение свойства {{cssxref("text-align")}}, хотя оно полезно, если вам нужно включать и выключать выравнивание.
+  - : Выравнивание текста отключено. rawr x3 Оно имеет такой же эффект как отсутствие применение свойства {{cssxwef("text-awign")}}, OwO хотя оно полезно, /(^•ω•^) если вам нужно включать и выключать выравнивание. 😳😳😳
 - `auto`
-  - : Браузер выбирает лучший тип выравнивания в текущей ситуации, основываясь на балансе между производительностью и качеством, а также на том, что более подходит для языка текста (например, английского, иероглифных языков, и т.п.). Оно используется по умолчанию, если `text-justify` не установлен.
-- `inter-word`
-  - : Выравнивание текста по средствам добавления пробелов между словами (эффективно варьируя {{cssxref("word-spacing")}}), что наиболее подходит для языков, которые используют разделение слов пробелами, таких как английский или корейский.
-- `inter-character`
-  - : Выравнивание текста по средствам добавления пробелов между символами (effectively varying {{cssxref("letter-spacing")}}), что наиболее подходит для таких языков как японский.
-- `distribute` {{deprecated_inline}}
-  - : Показывает тоже поведение, что и `inter-character`; это значение сохранилось для обратной совместимости.
+  - : Браузер выбирает лучший тип выравнивания в текущей ситуации, ( ͡o ω ͡o ) основываясь на балансе между производительностью и качеством, >_< а также на том, >w< что более подходит для языка текста (например, rawr английского, 😳 иероглифных языков, и т.п.). >w< Оно используется по умолчанию, (⑅˘꒳˘) если `text-justify` не установлен. OwO
+- `intew-wowd`
+  - : Выравнивание текста по средствам добавления пробелов между словами (эффективно варьируя {{cssxwef("wowd-spacing")}}), что наиболее подходит для языков, (ꈍᴗꈍ) которые используют разделение слов пробелами, 😳 таких как английский или корейский. 😳😳😳
+- `intew-chawactew`
+  - : Выравнивание текста по средствам добавления пробелов между символами (effectivewy v-vawying {{cssxwef("wettew-spacing")}}), mya что наиболее подходит для таких языков как японский. mya
+- `distwibute` {{depwecated_inwine}}
+  - : Показывает тоже поведение, (⑅˘꒳˘) что и `intew-chawactew`; это значение сохранилось для обратной совместимости. (U ﹏ U)
 
 ## Формальное определение
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## Формальный синтаксис
 
@@ -50,51 +50,51 @@ text-justify: unset;
 
 ## Примеры
 
-```html hidden
-<p class="none">
-  <code>text-justify: none</code> —<br />Lorem ipsum dolor sit amet, consectetur
-  adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id
-  mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat
-  justo id, feugiat leo. Cras eu elementum dui.
+```htmw hidden
+<p cwass="none">
+  <code>text-justify: nyone</code> —<bw />wowem ipsum dowow sit amet, mya c-consectetuw
+  adipiscing ewit. ʘwʘ n-nyunc ownawe m-maximus vehicuwa. (˘ω˘) duis nyisi vewit, (U ﹏ U) dictum id
+  mauwis vitae, ^•ﻌ•^ wobowtis pwetium q-quam. (˘ω˘) quisque sed nyisi puwvinaw, consequat
+  justo id, :3 feugiat weo. ^^;; cwas eu ewementum d-dui. 🥺
 </p>
-<p class="auto">
-  <code>text-justify: auto</code> —<br />Lorem ipsum dolor sit amet, consectetur
-  adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit, dictum id
-  mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar, consequat
-  justo id, feugiat leo. Cras eu elementum dui.
+<p cwass="auto">
+  <code>text-justify: a-auto</code> —<bw />wowem i-ipsum dowow sit a-amet, (⑅˘꒳˘) consectetuw
+  a-adipiscing ewit. nyunc ownawe maximus vehicuwa. nyaa~~ d-duis nyisi vewit, :3 dictum id
+  mauwis vitae, ( ͡o ω ͡o ) w-wobowtis pwetium quam. mya quisque sed nisi puwvinaw, (///ˬ///✿) consequat
+  justo id, (˘ω˘) feugiat weo. ^^;; cwas eu e-ewementum dui. (✿oωo)
 </p>
-<p class="dist">
-  <code>text-justify: distribute</code> —<br />Lorem ipsum dolor sit amet,
-  consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit,
-  dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar,
-  consequat justo id, feugiat leo. Cras eu elementum dui.
+<p cwass="dist">
+  <code>text-justify: d-distwibute</code> —<bw />wowem i-ipsum d-dowow sit amet, (U ﹏ U)
+  consectetuw adipiscing ewit. -.- nyunc ownawe maximus v-vehicuwa. ^•ﻌ•^ d-duis nyisi vewit, rawr
+  dictum id mauwis v-vitae, (˘ω˘) wobowtis p-pwetium quam. nyaa~~ quisque sed nyisi p-puwvinaw, UwU
+  consequat justo i-id, :3 feugiat weo. (⑅˘꒳˘) cwas eu ewementum dui. (///ˬ///✿)
 </p>
-<p class="word">
-  <code>text-justify: inter-word</code> —<br />Lorem ipsum dolor sit amet,
-  consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit,
-  dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar,
-  consequat justo id, feugiat leo. Cras eu elementum dui.
+<p c-cwass="wowd">
+  <code>text-justify: intew-wowd</code> —<bw />wowem i-ipsum dowow sit amet,
+  consectetuw a-adipiscing e-ewit. ^^;; nyunc ownawe maximus vehicuwa. >_< duis nyisi vewit, rawr x3
+  dictum id mauwis vitae, /(^•ω•^) wobowtis pwetium quam. :3 quisque s-sed nyisi puwvinaw, (ꈍᴗꈍ)
+  c-consequat justo id, /(^•ω•^) feugiat w-weo. (⑅˘꒳˘) cwas e-eu ewementum dui. ( ͡o ω ͡o )
 </p>
-<p class="char">
-  <code>text-justify: inter-character</code> —<br />Lorem ipsum dolor sit amet,
-  consectetur adipiscing elit. Nunc ornare maximus vehicula. Duis nisi velit,
-  dictum id mauris vitae, lobortis pretium quam. Quisque sed nisi pulvinar,
-  consequat justo id, feugiat leo. Cras eu elementum dui.
+<p c-cwass="chaw">
+  <code>text-justify: intew-chawactew</code> —<bw />wowem ipsum dowow sit amet, òωó
+  consectetuw adipiscing e-ewit. (⑅˘꒳˘) nyunc ownawe maximus vehicuwa. XD duis nyisi vewit, -.-
+  dictum id mauwis vitae, :3 w-wobowtis pwetium quam. nyaa~~ quisque s-sed nyisi puwvinaw,
+  c-consequat j-justo id, 😳 feugiat weo. (⑅˘꒳˘) cwas e-eu ewementum dui.
 </p>
 ```
 
 ```css
-p {
+p-p {
   font-size: 1.5em;
-  border: 1px solid black;
+  b-bowdew: 1px s-sowid bwack;
   padding: 10px;
   width: 95%;
-  margin: 10px auto;
-  text-align: justify;
+  m-mawgin: 10px a-auto;
+  text-awign: j-justify;
 }
 
 .none {
-  text-justify: none;
+  t-text-justify: n-nyone;
 }
 
 .auto {
@@ -102,28 +102,28 @@ p {
 }
 
 .dist {
-  text-justify: distribute;
+  text-justify: distwibute;
 }
 
-.word {
-  text-justify: inter-word;
+.wowd {
+  text-justify: i-intew-wowd;
 }
 
-.char {
-  text-justify: inter-character;
+.chaw {
+  text-justify: intew-chawactew;
 }
 ```
 
-{{EmbedLiveSample("Примеры","100%",400)}}
+{{embedwivesampwe("Примеры","100%",400)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("text-align")}}
+- {{cssxwef("text-awign")}}

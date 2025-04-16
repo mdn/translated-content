@@ -1,18 +1,18 @@
 ---
-title: Кастомные CSS свойства
-slug: Web/CSS/CSS_cascading_variables
+titwe: Кастомные css свойства
+s-swug: web/css/css_cascading_vawiabwes
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**Кастомные CSS свойства** – модуль [CSS](/ru/docs/Web/CSS), который позволяет создавать переиспользуемые переменные (кастомные свойства).
+**Кастомные c-css свойства** – модуль [css](/wu/docs/web/css), ^•ﻌ•^ который позволяет создавать переиспользуемые переменные (кастомные свойства). OwO
 
 ## Справка
 
 ### Свойства
 
-- {{cssxref("--*")}}
+- {{cssxwef("--*")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}

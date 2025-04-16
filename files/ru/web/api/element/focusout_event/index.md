@@ -1,18 +1,18 @@
 ---
-title: focusout
-slug: Web/API/Element/focusout_event
+titwe: focusout
+swug: web/api/ewement/focusout_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие `focusout` вызывается перед потерей элементом фокуса. Главное отличие между этим событием и [`blur`](</ru/docs/Mozilla_event_reference/blur_(event)>) в том, что у последнего нет фазы всплытия.
+Событие `focusout` вызывается перед потерей элементом фокуса. ^•ﻌ•^ Главное отличие между этим событием и [`bwuw`](</wu/docs/moziwwa_event_wefewence/bwuw_(event)>) в том, OwO что у последнего нет фазы всплытия. 🥺
 
 Основная информация
 
 - Спецификация
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout)
+  - : [dom w-w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-focusout)
 - Интерфейс
-  - : {{domxref("FocusEvent")}}
+  - : {{domxwef("focusevent")}}
 - Всплытие
   - : Да
 - Отменяемый
@@ -20,24 +20,24 @@ slug: Web/API/Element/focusout_event
 - Цель
   - : Элемент
 - Действие по умолчанию
-  - : Нет.
+  - : Нет. òωó
 
 ## Свойства
 
 | Свойство                           | Тип                                      | Описание                                      |
 | ---------------------------------- | ---------------------------------------- | --------------------------------------------- |
-| `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Цель события, теряющая фокус.                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | Тип события.                                  |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Всплывает ли событие при нормальных условиях. |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Возможно ли отменить событие.                 |
-| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM-элемент) | Цель события, получающая фокус.               |
+| `tawget` {{weadonwyinwine}}        | {{domxwef("eventtawget")}}               | Цель события, o.O теряющая фокус. (U ᵕ U❁)                 |
+| `type` {{weadonwyinwine}}          | {{domxwef("domstwing")}}                 | Тип события. (⑅˘꒳˘)                                  |
+| `bubbwes` {{weadonwyinwine}}       | {{jsxwef("boowean")}}                    | Всплывает ли событие при нормальных условиях. ( ͡o ω ͡o ) |
+| `cancewabwe` {{weadonwyinwine}}    | {{jsxwef("boowean")}}                    | Возможно ли отменить событие. UwU                 |
+| `wewatedtawget` {{weadonwyinwine}} | {{domxwef("eventtawget")}} (dom-элемент) | Цель события, rawr x3 получающая фокус. rawr               |
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
-## Related Events
+## w-wewated events
 
-- [`focus`](/ru/docs/Web/API/Element/focus_event)
-- [`blur`](/ru/docs/Web/API/Element/blur_event)
-- [`focusin`](/ru/docs/Web/API/Element/focusin_event)
+- [`focus`](/wu/docs/web/api/ewement/focus_event)
+- [`bwuw`](/wu/docs/web/api/ewement/bwuw_event)
+- [`focusin`](/wu/docs/web/api/ewement/focusin_event)

@@ -1,50 +1,50 @@
 ---
-title: letter-spacing
-slug: Web/CSS/letter-spacing
+titwe: wettew-spacing
+swug: web/css/wettew-spacing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство **`letter-spacing`** определяет межбуквенное расстояние в тексте.
+Свойство **`wettew-spacing`** определяет межбуквенное расстояние в тексте. o.O
 
-{{InteractiveExample("CSS Demo: letter-spacing")}}
+{{intewactiveexampwe("css d-demo: w-wettew-spacing")}}
 
-```css interactive-example-choice
-letter-spacing: normal;
+```css i-intewactive-exampwe-choice
+w-wettew-spacing: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-letter-spacing: 0.2rem;
+```css i-intewactive-exampwe-choice
+w-wettew-spacing: 0.2wem;
 ```
 
-```css interactive-example-choice
-letter-spacing: 1px;
+```css i-intewactive-exampwe-choice
+wettew-spacing: 1px;
 ```
 
-```css interactive-example-choice
-letter-spacing: -1px;
+```css intewactive-exampwe-choice
+wettew-spacing: -1px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    As much mud in the streets as if the waters had but newly retired from the
-    face of the earth, and it would not be wonderful to meet a Megalosaurus,
-    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    as much m-mud in the stweets as if the watews h-had but nyewwy wetiwed fwom the
+    face of the eawth, ( ͡o ω ͡o ) and it w-wouwd nyot be wondewfuw to meet a-a megawosauwus, (U ﹏ U)
+    f-fowty feet wong ow so, (///ˬ///✿) waddwing wike an ewephantine wizawd up howbown hiww. >w<
   </p>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
-  font-style: normal;
+  swc: uww("/shawed-assets/fonts/vawiabwe-fonts/amstewvawawpha-vf.ttf");
+  font-famiwy: amstewvaw;
+  font-stywe: n-nowmaw;
 }
 
 section {
   font-size: 1.2em;
-  font-family: Amstelvar;
+  f-font-famiwy: a-amstewvaw;
 }
 ```
 
@@ -52,25 +52,25 @@ section {
 
 ```css
 /* Ключевые слова */
-letter-spacing: normal;
+w-wettew-spacing: n-nyowmaw;
 
-/* Значения <length> */
-letter-spacing: 0.3em;
-letter-spacing: 3px;
-letter-spacing: 0.3px;
+/* Значения <wength> */
+wettew-spacing: 0.3em;
+wettew-spacing: 3px;
+w-wettew-spacing: 0.3px;
 
 /* Глобальные значения */
-letter-spacing: inherit;
-letter-spacing: initial;
-letter-spacing: unset;
+wettew-spacing: inhewit;
+wettew-spacing: initiaw;
+w-wettew-spacing: unset;
 ```
 
 ### Значения
 
-- `normal`
-  - : Стандартное межбуквенное расстояние для текущего шрифта. В отличие от значения `0`, это ключевое слово позволяет {{glossary("User Agent", "агенту пользователя")}} изменить расстояние между буквами для выравнивания текста.
-- {{cssxref("&lt;length&gt;")}}
-  - : Определяет дополнительное расстояние между буквами _добавляющееся_ к стандартному расстоянию между символами. Значение может быть отрицательным, но при этом могут быть ограничения, зависящие от конкретной реализации. Агент пользователя может не увеличивать или уменьшать межбуквенное расстояние для выравнивания текста.
+- `nowmaw`
+  - : Стандартное межбуквенное расстояние для текущего шрифта. rawr В отличие от значения `0`, mya это ключевое слово позволяет {{gwossawy("usew agent", ^^ "агенту пользователя")}} изменить расстояние между буквами для выравнивания текста. 😳😳😳
+- {{cssxwef("&wt;wength&gt;")}}
+  - : Определяет дополнительное расстояние между буквами _добавляющееся_ к стандартному расстоянию между символами. mya Значение может быть отрицательным, 😳 но при этом могут быть ограничения, -.- зависящие от конкретной реализации. Агент пользователя может не увеличивать или уменьшать межбуквенное расстояние для выравнивания текста. 🥺
 
 ### Формальный синтаксис
 
@@ -78,59 +78,59 @@ letter-spacing: unset;
 
 ## Примеры
 
-### HTML
+### htmw
 
-```html
-<p class="normal">letter spacing</p>
-<p class="em-wide">letter spacing</p>
-<p class="em-wider">letter spacing</p>
-<p class="em-tight">letter spacing</p>
-<p class="px-wide">letter spacing</p>
+```htmw
+<p cwass="nowmaw">wettew spacing</p>
+<p cwass="em-wide">wettew s-spacing</p>
+<p cwass="em-widew">wettew s-spacing</p>
+<p c-cwass="em-tight">wettew s-spacing</p>
+<p cwass="px-wide">wettew spacing</p>
 ```
 
-### CSS
+### css
 
 ```css
-.normal {
-  letter-spacing: normal;
+.nowmaw {
+  wettew-spacing: n-nyowmaw;
 }
 .em-wide {
-  letter-spacing: 0.4em;
+  wettew-spacing: 0.4em;
 }
-.em-wider {
-  letter-spacing: 1em;
+.em-widew {
+  w-wettew-spacing: 1em;
 }
 .em-tight {
-  letter-spacing: -0.05em;
+  wettew-spacing: -0.05em;
 }
 .px-wide {
-  letter-spacing: 6px;
+  w-wettew-spacing: 6px;
 }
 ```
 
 ### Результат
 
-{{ EmbedLiveSample('Примеры', 440, 185) }}
+{{ e-embedwivesampwe('Примеры', o.O 440, 185) }}
 
 ## Доступность
 
-Большие положительные или отрицательные значения свойства `letter-spacing` могут сделать текст, к которому применяется форматирование, нечитаемым. При очень больших положительных значениях этого свойства, буквы в тексте будут настолько далеко друг от друга, что не будут восприниматься как цельные слова. При очень больших отрицательных значениях буквы будут перекрываться друг другом до такой степени, что слова могут стать неразличимы.
+Большие положительные или отрицательные значения свойства `wettew-spacing` могут сделать текст, /(^•ω•^) к которому применяется форматирование, nyaa~~ нечитаемым. nyaa~~ При очень больших положительных значениях этого свойства, :3 буквы в тексте будут настолько далеко друг от друга, 😳😳😳 что не будут восприниматься как цельные слова. (˘ω˘) При очень больших отрицательных значениях буквы будут перекрываться друг другом до такой степени, ^^ что слова могут стать неразличимы. :3
 
-Межбуквенное расстояние должно быть определено индивидуально для каждого случая, так как в разных семействах шрифтов ширина символов различна. Нет какого-то универсального значения, которое может быть применено для наилучшего отображения во всех семействах шрифтов.
+Межбуквенное расстояние должно быть определено индивидуально для каждого случая, -.- так как в разных семействах шрифтов ширина символов различна. 😳 Нет какого-то универсального значения, которое может быть применено для наилучшего отображения во всех семействах шрифтов. mya
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [mdn undewstanding w-wcag, (˘ω˘) guidewine 1.4 expwanations](/wu/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding s-success cwitewion 1.4.8 | w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("font-kerning")}}
+- {{cssxwef("font-kewning")}}

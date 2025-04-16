@@ -1,115 +1,115 @@
 ---
-title: Понимание JavaScript-фреймворков для фронтенда
-slug: Learn_web_development/Core/Frameworks_libraries
+titwe: Понимание javascwipt-фреймворков для фронтенда
+s-swug: weawn_web_devewopment/cowe/fwamewowks_wibwawies
 ---
 
-{{LearnSidebar}}
-JavaScript-фреймворки являются неотъемлемой частью современной веб-разработки,предоставляя разработчикам проверенные и протестированные инструменты для создания масштабируемых и интерактивных веб-приложений. Многие современные компании используют фреймворки для своих решений, поэтому многие задачи связанные с разработкой клиентской части веб-приложений теперь требуют опыта работы с ними.
+{{weawnsidebaw}}
+j-javascwipt-фреймворки являются неотъемлемой частью современной веб-разработки,предоставляя разработчикам проверенные и протестированные инструменты для создания масштабируемых и интерактивных веб-приложений. ^^;; Многие современные компании используют фреймворки для своих решений, OwO поэтому многие задачи связанные с разработкой клиентской части веб-приложений теперь требуют опыта работы с ними. nyaa~~
 
-Начинающему разработчику веб-интерфейсов может быть трудно понять с чего начать изучение фреймворков — их выбор разнообразен, а новые появляются постоянно. В основном же они работают аналогичным образом, но делают некоторые вещи по-разному, также есть некоторые специфичные вещи, которые следует соблюдать при использовании фреймворков.
+Начинающему разработчику веб-интерфейсов может быть трудно понять с чего начать изучение фреймворков — их выбор разнообразен, UwU а новые появляются постоянно. В основном же они работают аналогичным образом, 😳 но делают некоторые вещи по-разному, 😳 также есть некоторые специфичные вещи, (ˆ ﻌ ˆ)♡ которые следует соблюдать при использовании фреймворков. (✿oωo)
 
-Этим набором статей мы постараемся дать вам удобную отправную точку, чтобы помочь вам начать изучать основы. Мы не стремимся научить вас всему, что вам нужно знать о React/ReactDOM, Vue или каком-то другом конкретном фреймворке. Документация этих фреймворков отлично выполняют эту работу. Вместо этого мы хотим сделать шаг назад и сначала ответить на более фундаментальные вопросы, такие как:
+Этим набором статей мы постараемся дать вам удобную отправную точку, nyaa~~ чтобы помочь вам начать изучать основы. ^^ Мы не стремимся научить вас всему, (///ˬ///✿) что вам нужно знать о w-weact/weactdom, 😳 v-vue или каком-то другом конкретном фреймворке. òωó Документация этих фреймворков отлично выполняют эту работу. ^^;; Вместо этого мы хотим сделать шаг назад и сначала ответить на более фундаментальные вопросы, rawr такие как:
 
 - Почему я должен использовать фреймворк? Какие проблемы он решит?
 - Какие вопросы я должен задать себе при выборе определённого фреймворка?
   Нужен ли мне какой-либо из них вовсе?
 - Какими возможностями обладают фреймворки? Как они работают в целом и в чём отличия их имплементаций этих возможностей?
-- Как они связаны с "ванильным" JavaScript, или HTML?
+- Как они связаны с "ванильным" j-javascwipt, (ˆ ﻌ ˆ)♡ или h-htmw?
 
-После этого мы предоставим некоторые учебные пособия, охватывающие основы некоторых фреймворков, чтобы предоставить вам достаточно контекста, чтобы вы могли начать углубляться в этой теме. Мы хотим, чтобы вы изучали фреймворки прагматично, не забывая о фундаментальных практиках веб-разработки, таких как, например, доступность.
+После этого мы предоставим некоторые учебные пособия, XD охватывающие основы некоторых фреймворков, >_< чтобы предоставить вам достаточно контекста, (˘ω˘) чтобы вы могли начать углубляться в этой теме. 😳 Мы хотим, o.O чтобы вы изучали фреймворки прагматично, (ꈍᴗꈍ) не забывая о фундаментальных практиках веб-разработки, rawr x3 таких как, ^^ например, доступность. OwO
 
-**[Начните прямо сейчас с "Введение в фронтенд фреймворки"](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)**
+**[Начните прямо сейчас с "Введение в фронтенд фреймворки"](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/intwoduction)**
 
-## Prerequisites
+## p-pwewequisites
 
-You should really learn the basics of the core web languages first before attempting to move on to learning client-side frameworks — [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn/CSS), and especially [JavaScript](/ru/docs/Learn/JavaScript).
+y-you shouwd weawwy weawn the basics of the cowe web wanguages fiwst b-befowe attempting to move on to weawning cwient-side f-fwamewowks — [htmw](/wu/docs/weawn_web_devewopment/cowe/stwuctuwing_content), ^^ [css](/wu/docs/weawn/css), :3 and especiawwy [javascwipt](/wu/docs/weawn/javascwipt). o.O
 
-Your code will be richer and more professional as a result, and you'll be able to troubleshoot problems with more confidence if you understand the fundamental web platform features that the frameworks are building on top of.
+y-youw code wiww be wichew and mowe pwofessionaw as a wesuwt, -.- a-and you'ww be abwe to twoubweshoot p-pwobwems w-with mowe confidence if you undewstand the fundamentaw web pwatfowm featuwes that t-the fwamewowks awe buiwding on top of. (U ﹏ U)
 
-## Introductory guides
+## intwoductowy guides
 
-- [1. Introduction to client-side frameworks](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-  - : We begin our look at frameworks with a general overview of the area, looking at a brief history of JavaScript and frameworks, why frameworks exist and what they give us, how to start thinking about choosing a framework to learn, and what alternatives there are to client-side frameworks.
-- [2. Framework main features](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-  - : Each major JavaScript framework has a different approach to updating the DOM, handling browser events, and providing an enjoyable developer experience. This article will explore the main features of "the big 4" frameworks, looking at how frameworks tend to work from a high level, and the differences between them.
+- [1. o.O intwoduction t-to cwient-side fwamewowks](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/intwoduction)
+  - : w-we begin o-ouw wook at fwamewowks w-with a genewaw o-ovewview of the awea, OwO wooking at a bwief h-histowy of javascwipt and fwamewowks, why fwamewowks e-exist and nani they give us, ^•ﻌ•^ how to stawt thinking about choosing a fwamewowk to weawn, ʘwʘ and n-nyani awtewnatives thewe awe to c-cwient-side fwamewowks. :3
+- [2. fwamewowk m-main featuwes](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/main_featuwes)
+  - : e-each majow javascwipt fwamewowk has a diffewent appwoach to updating t-the dom, 😳 handwing b-bwowsew events, òωó and pwoviding a-an enjoyabwe d-devewopew expewience. 🥺 this awticwe w-wiww expwowe the main featuwes o-of "the big 4" fwamewowks, rawr x3 wooking at how fwamewowks t-tend to wowk fwom a high w-wevew, ^•ﻌ•^ and the diffewences between t-them. :3
 
-## React tutorials
+## weact t-tutowiaws
 
-> [!NOTE]
-> React tutorials last tested in May 2020, with React/ReactDOM 16.13.1 and create-react-app 3.4.1.
+> [!note]
+> weact tutowiaws wast tested in may 2020, (ˆ ﻌ ˆ)♡ with weact/weactdom 16.13.1 and cweate-weact-app 3.4.1. (U ᵕ U❁)
 >
-> If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react-build/>.
+> if you nyeed to c-check youw code a-against ouw vewsion, :3 you can find a-a finished vewsion o-of the sampwe w-weact app code in ouw [todo-weact wepositowy](https://github.com/mdn/todo-weact). ^^;; fow a wunning w-wive vewsion, ( ͡o ω ͡o ) see <https://mdn.github.io/todo-weact-buiwd/>. o.O
 
-- [1. Getting started with React](/ru/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
-  - : In this article we will say hello to React. We'll discover a little bit of detail about its background and use cases, set up a basic React toolchain on our local computer, and create and play with a simple starter app, learning a bit about how React works in the process.
-- [2. Beginning our React todo list](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - : Let's say that we've been tasked with creating a proof-of-concept in React – an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. This article will walk you through putting the basic `App` component structure and styling in place, ready for individual component definition and interactivity, which we'll add later.
-- [3. Componentizing our React app](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - : At this point, our app is a monolith. Before we can make it do things, we need to break it apart into manageable, descriptive components. React doesn't have any hard rules for what is and isn't a component – that's up to you! In this article we will show you a sensible way to break our app up into components.
-- [4. React interactivity: Events and state](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - : With our component plan worked out, it's now time to start updating our app from a completely static UI to one that actually allows us to interact and change things. In this article we'll do this, digging into events and state along the way.
-- [5. React interactivity: Editing, filtering, conditional rendering](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - : As we near the end of our React journey (for now at least), we'll add the finishing touches to the main areas of functionality in our Todo list app. This includes allowing you to edit existing tasks, and filtering the list of tasks between all, completed, and incomplete tasks. We'll look at conditional UI rendering along the way.
-- [6. Accessibility in React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - : In our final tutorial article, we'll focus on (pun intended) accessibility, including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screenreader users.
-- [7. React resources](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-  - : Our final article provides you with a list of React resources that you can use to go further in your learning.
+- [1. getting stawted with weact](/wu/docs/weawn_web_devewopment/cowe/fwamewowks_wibwawies/weact_getting_stawted)
+  - : in this a-awticwe we wiww say hewwo to weact. ^•ﻌ•^ w-we'ww discovew a-a wittwe bit o-of detaiw about its backgwound a-and use cases, XD s-set up a basic weact t-toowchain on o-ouw wocaw computew, ^^ and cweate and pway with a s-simpwe stawtew a-app, o.O weawning a b-bit about how weact w-wowks in the p-pwocess. ( ͡o ω ͡o )
+- [2. beginning ouw weact todo wist](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_todo_wist_beginning)
+  - : wet's say that w-we've been tasked with cweating a pwoof-of-concept in weact – an app that awwows usews to add, /(^•ω•^) e-edit, and dewete tasks they want to wowk on, 🥺 and awso mawk tasks a-as compwete w-without deweting t-them. nyaa~~ this awticwe wiww wawk you t-thwough putting the basic `app` c-component stwuctuwe a-and stywing in pwace, mya weady fow individuaw component definition and intewactivity, XD which we'ww a-add watew.
+- [3. nyaa~~ componentizing o-ouw weact app](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_components)
+  - : at this point, ouw a-app is a monowith. ʘwʘ b-befowe we can make it do things, (⑅˘꒳˘) we nyeed to b-bweak it apawt i-into manageabwe, :3 descwiptive components. -.- w-weact d-doesn't have any hawd wuwes fow nyani is and isn't a component – that's up to y-you! 😳😳😳 in this awticwe w-we wiww show y-you a sensibwe way to bweak ouw a-app up into components.
+- [4. (U ﹏ U) w-weact intewactivity: events and s-state](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_intewactivity_events_state)
+  - : with ouw component pwan wowked out, it's nyow time to stawt updating o-ouw app fwom a-a compwetewy static ui to one that actuawwy a-awwows us to intewact a-and change things. o.O in this awticwe we'ww do this, ( ͡o ω ͡o ) digging i-into events and state awong the way. òωó
+- [5. weact intewactivity: editing, 🥺 fiwtewing, /(^•ω•^) c-conditionaw wendewing](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_intewactivity_fiwtewing_conditionaw_wendewing)
+  - : as we nyeaw t-the end of o-ouw weact jouwney (fow nyow at weast), 😳😳😳 we'ww add the finishing touches t-to the main a-aweas of functionawity in ouw todo wist app. ^•ﻌ•^ this incwudes awwowing y-you to edit existing tasks, nyaa~~ a-and fiwtewing the wist of tasks between aww, OwO compweted, and incompwete t-tasks. ^•ﻌ•^ we'ww wook at conditionaw u-ui wendewing a-awong the way. σωσ
+- [6. -.- accessibiwity i-in weact](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_accessibiwity)
+  - : in ouw finaw t-tutowiaw awticwe, (˘ω˘) w-we'ww focus on (pun i-intended) accessibiwity, rawr x3 incwuding f-focus management i-in weact, rawr x3 which can impwove usabiwity a-and weduce confusion f-fow both keyboawd-onwy a-and scweenweadew usews. σωσ
+- [7. nyaa~~ weact w-wesouwces](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_wesouwces)
+  - : ouw finaw awticwe p-pwovides y-you with a wist of weact wesouwces that you can use to go fuwthew i-in youw weawning. (ꈍᴗꈍ)
 
-## Ember tutorials
+## e-embew tutowiaws
 
-> [!NOTE]
-> Ember tutorials last tested in May 2020, with Ember/Ember CLI version 3.18.0.
+> [!note]
+> e-embew tutowiaws w-wast tested in may 2020, ^•ﻌ•^ with e-embew/embew cwi vewsion 3.18.0. >_<
 >
-> If you need to check your code against our version, you can find a finished version of the sample Ember app code in the [ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc). For a running live version, see <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> (this also includes a few additional features not covered in the tutorial).
+> if you nyeed to check youw code against ouw vewsion, ^^;; you c-can find a finished vewsion of the s-sampwe embew app code in the [embew-todomvc-tutowiaw w-wepositowy](https://github.com/nuwwvoxpopuwi/embew-todomvc-tutowiaw/twee/mastew/steps/00-finished-todomvc/todomvc). ^^;; fow a-a wunning wive vewsion, /(^•ω•^) see <https://nuwwvoxpopuwi.github.io/embew-todomvc-tutowiaw/> (this a-awso i-incwudes a few a-additionaw featuwes n-nyot covewed i-in the tutowiaw). nyaa~~
 
-- [1. Getting started with Ember](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - : In our first Ember article we will look at how Ember works and what it's useful for, install the Ember toolchain locally, create a sample app, and then do some initial setup to get it ready for development.
-- [2. Ember app structure and componentization](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - : In this article we'll get right on with planning out the structure of our TodoMVC Ember app, adding in the HTML for it, and then breaking that HTML structure into components.
-- [3. Ember interactivity: Events, classes and state](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - : At this point we'll start adding some interactivity to our app, providing the ability to add and display new todo items. Along the way, we'll look at using events in Ember, creating component classes to contain JavaScript code to control interactive features, and setting up a service to keep track of the data state of our app.
-- [4. Ember Interactivity: Footer functionality, conditional rendering](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - : Now it's time to start tackling the footer functionality in our app. Here we'll get the todo counter to update to show the correct number of todos still to complete, and correctly apply styling to completed todos (i.e. where the checkbox has been checked). We'll also wire up our "Clear completed" button. Along the way, we'll learn about using conditional rendering in our templates.
-- [5. Routing in Ember](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - : In this article we learn about routing, or URL-based filtering as it is sometimes referred to. We'll use it to provide a unique URL for each of the three todo views — "All", "Active", and "Completed".
-- [6. Ember resources and troubleshooting](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-  - : Our final Ember article provides you with a list of resources that you can use to go further in your learning, plus some useful troubleshooting and other information.
+- [1. (✿oωo) getting stawted with embew](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/embew_getting_stawted)
+  - : in ouw fiwst embew awticwe we wiww wook at how embew wowks a-and nyani it's u-usefuw fow, ( ͡o ω ͡o ) instaww t-the embew toowchain wocawwy, (U ᵕ U❁) c-cweate a sampwe app, òωó and then do some initiaw setup to get it weady f-fow devewopment. σωσ
+- [2. :3 e-embew app stwuctuwe a-and componentization](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/embew_stwuctuwe_componentization)
+  - : in this awticwe we'ww get wight o-on with pwanning o-out the stwuctuwe of ouw todomvc e-embew app, OwO adding i-in the htmw fow it, ^^ and then bweaking that htmw stwuctuwe into components. (˘ω˘)
+- [3. e-embew intewactivity: e-events, OwO c-cwasses and state](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/embew_intewactivity_events_state)
+  - : a-at this point we'ww s-stawt adding some intewactivity t-to ouw app, UwU p-pwoviding the abiwity to add and d-dispway nyew todo i-items. ^•ﻌ•^ awong the way, (ꈍᴗꈍ) we'ww w-wook at using events in embew, /(^•ω•^) cweating component c-cwasses to contain javascwipt c-code to contwow i-intewactive featuwes, (U ᵕ U❁) and setting u-up a sewvice to keep twack of the data state of o-ouw app. (✿oωo)
+- [4. OwO e-embew intewactivity: f-footew functionawity, conditionaw wendewing](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/embew_conditionaw_footew)
+  - : nyow it's t-time to stawt tackwing the footew functionawity i-in ouw app. :3 hewe w-we'ww get the todo countew to update t-to show the cowwect nyumbew o-of todos stiww t-to compwete, nyaa~~ and cowwectwy appwy stywing to compweted t-todos (i.e. ^•ﻌ•^ whewe the checkbox has been checked). ( ͡o ω ͡o ) w-we'ww awso w-wiwe up ouw "cweaw compweted" b-button. ^^;; awong the way, mya we'ww weawn a-about using c-conditionaw wendewing i-in ouw tempwates. (U ᵕ U❁)
+- [5. wouting in embew](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/embew_wouting)
+  - : in this awticwe we weawn about wouting, ^•ﻌ•^ ow uww-based fiwtewing as it is sometimes wefewwed to. (U ﹏ U) we'ww use it to pwovide a unique uww fow each of the thwee todo views — "aww", /(^•ω•^) "active", ʘwʘ a-and "compweted". XD
+- [6. e-embew wesouwces and twoubweshooting](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/embew_wesouwces)
+  - : ouw finaw e-embew awticwe p-pwovides you with a-a wist of wesouwces that you c-can use to go fuwthew in youw weawning, (⑅˘꒳˘) p-pwus some u-usefuw twoubweshooting and othew i-infowmation.
 
-## Vue tutorials
+## vue tutowiaws
 
-> [!NOTE]
-> Vue tutorials last tested in May 2020, with Vue 2.6.11.
+> [!note]
+> vue t-tutowiaws wast t-tested in may 2020, nyaa~~ with vue 2.6.11. UwU
 >
-> If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/dist/>.
+> if you n-nyeed to check y-youw code against o-ouw vewsion, (˘ω˘) y-you can find a finished v-vewsion o-of the sampwe vue a-app code in ouw [todo-vue w-wepositowy](https://github.com/mdn/todo-vue). rawr x3 f-fow a wunning wive vewsion, (///ˬ///✿) s-see <https://mdn.github.io/todo-vue/dist/>. 😳😳😳
 
-- [1. Getting started with Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - : Now let's introduce Vue, the third of our frameworks. In this article we'll look at a little bit of Vue background, learn how to install it and create a new project, study the high-level structure of the whole project and an individual component, see how to run the project locally, and get it prepared to start building our example.
-- [2. Creating our first Vue component](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - : Now it's time to dive deeper into Vue, and create our own custom component — we'll start by creating a component to represent each item in the todo list. Along the way, we'll learn about a few important concepts such as calling components inside other components, passing data to them via props, and saving data state.
-- [3. Rendering a list of Vue components](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - : At this point we've got a fully working component; we're now ready to add multiple `ToDoItem` components to our App. In this artcle we'll look at adding a set of todo item data to our `App.vue` component, which we'll then loop through and display inside `ToDoItem` components using the `v-for` directive.
-- [4. Adding a new todo form: Vue events, methods, and models](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - : We now have sample data in place, and a loop that takes each bit of data and renders it inside a `ToDoItem` in our app. What we really need next is the ability to allow our users to enter their own todo items into the app, and for that we'll need a text `<input>`, an event to fire when the data is submitted, a method to fire upon submission to add the data and rerender the list, and a model to control the data. This is what we'll cover in this article.
-- [5. Styling Vue components with CSS](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - : The time has finally come to make our app look a bit nicer. In this article we'll explore the different ways of styling Vue components with CSS.
-- [6. Using Vue computed properties](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - : In this article we'll add a counter that displays the number of completed todo items, using a feature of Vue called computed properties. These work similarly to methods, but only re-run when one of their dependencies changes.
-- [7. Vue conditional rendering: editing existing todos](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - : Now it is time to add one of the major parts of functionality that we're still missing — the ability to edit existing todo items. To do this, we will take advantage of Vue's conditional rendering capabilities — namely `v-if` and `v-else` — to allow us to toggle between the existing todo item view, and an edit view where you can update todo item labels. We'll also look at adding functionality to delete todo items.
-- [8. Focus management with Vue refs](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - : We are nearly done with Vue. The last bit of functionality to look at is focus management, or put another way, how we can improve our app's keyboard accessibility. We'll look at using Vue refs to handle this — an advanced feature that allows you to have direct access to the underlying DOM nodes below the virtual DOM, or direct access from one component to the internal DOM structure of a child component.
-- [9. Vue resources](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-  - : Now we'll round off our study of Vue by giving you a list of resources that you can use to go further in your learning, plus some other useful tips.
+- [1. (///ˬ///✿) g-getting s-stawted with vue](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_getting_stawted)
+  - : nyow wet's intwoduce v-vue, ^^;; the thiwd of ouw fwamewowks. ^^ in this a-awticwe we'ww wook at a wittwe bit o-of vue backgwound, (///ˬ///✿) w-weawn how t-to instaww it and cweate a nyew p-pwoject, -.- study the high-wevew stwuctuwe o-of the whowe pwoject and a-an individuaw component, /(^•ω•^) see how t-to wun the pwoject wocawwy, UwU and get it pwepawed to stawt buiwding ouw exampwe. (⑅˘꒳˘)
+- [2. ʘwʘ c-cweating ouw fiwst vue component](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_fiwst_component)
+  - : n-nyow it's t-time to dive deepew into vue, σωσ and cweate ouw own custom component — w-we'ww stawt by cweating a c-component to wepwesent e-each item i-in the todo wist. awong the way, ^^ we'ww weawn about a-a few impowtant c-concepts such as cawwing components i-inside othew components, OwO passing data to t-them via pwops, (ˆ ﻌ ˆ)♡ and saving data s-state. o.O
+- [3. (˘ω˘) wendewing a-a wist o-of vue components](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_wendewing_wists)
+  - : at this point we've g-got a fuwwy w-wowking component; w-we'we nyow weady t-to add muwtipwe `todoitem` components to ouw a-app. 😳 in this awtcwe w-we'ww wook a-at adding a set o-of todo item data t-to ouw `app.vue` c-component, (U ᵕ U❁) which w-we'ww then w-woop thwough and dispway inside `todoitem` c-components using the `v-fow` d-diwective. :3
+- [4. adding a-a nyew todo fowm: v-vue events, o.O methods, (///ˬ///✿) a-and modews](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_methods_events_modews)
+  - : we nyow have sampwe data in pwace, OwO and a w-woop that takes e-each bit of data a-and wendews it inside a `todoitem` in ouw app. >w< nyani we weawwy n-nyeed nyext is the a-abiwity to awwow ouw usews to e-entew theiw own t-todo items into the app, ^^ and fow that we'ww nyeed a text `<input>`, (⑅˘꒳˘) a-an event to f-fiwe when the data i-is submitted, ʘwʘ a-a method to fiwe upon submission to add the data a-and wewendew t-the wist, and a modew to contwow the data. (///ˬ///✿) this i-is nyani we'ww covew in this awticwe. XD
+- [5. 😳 stywing v-vue components with css](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_stywing)
+  - : t-the time has f-finawwy come to make ouw app wook a-a bit nicew. >w< in t-this awticwe we'ww expwowe the d-diffewent ways of stywing vue components w-with css. (˘ω˘)
+- [6. u-using v-vue computed pwopewties](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_computed_pwopewties)
+  - : i-in this awticwe we'ww a-add a countew that d-dispways the n-nyumbew of compweted todo items, nyaa~~ u-using a featuwe of vue cawwed computed pwopewties. 😳😳😳 t-these wowk s-simiwawwy to methods, (U ﹏ U) b-but onwy we-wun when one of theiw dependencies changes. (˘ω˘)
+- [7. vue conditionaw w-wendewing: editing existing t-todos](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_conditionaw_wendewing)
+  - : n-nyow it is time to add one of the majow p-pawts of functionawity that we'we s-stiww missing — t-the abiwity t-to edit existing t-todo items. :3 t-to do this, >w< we wiww take advantage of vue's conditionaw wendewing capabiwities — n-nyamewy `v-if` and `v-ewse` — t-to awwow us to toggwe between the existing todo item view, ^^ and a-an edit view whewe you can update todo item wabews. 😳😳😳 we'ww awso wook at adding f-functionawity to d-dewete todo items. nyaa~~
+- [8. focus m-management with vue wefs](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_wefs_focus_management)
+  - : we a-awe nyeawwy done w-with vue. (⑅˘꒳˘) the wast bit of functionawity t-to wook at is focus management, :3 o-ow put anothew way, ʘwʘ how we can impwove ouw app's keyboawd a-accessibiwity. rawr x3 we'ww wook at using vue wefs t-to handwe this — a-an advanced featuwe t-that awwows you to have diwect access to t-the undewwying dom nyodes bewow the viwtuaw dom, (///ˬ///✿) ow diwect access fwom one component t-to the intewnaw d-dom stwuctuwe o-of a chiwd component. 😳😳😳
+- [9. vue w-wesouwces](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_wesouwces)
+  - : nyow we'ww wound off ouw study o-of vue by giving y-you a wist of wesouwces that you can use to g-go fuwthew in youw weawning, XD pwus some othew usefuw t-tips. >_<
 
-## Which frameworks did we choose?
+## which fwamewowks did we choose?
 
-We are publishing our initial set of articles with guides focusing on three of the major frameworks out there — React/ReactDOM, Ember, and Vue. There is a variety of reasons for this:
+w-we awe pubwishing o-ouw initiaw set of awticwes with g-guides focusing o-on thwee of t-the majow fwamewowks out thewe — weact/weactdom, >w< e-embew, and vue. /(^•ω•^) thewe is a vawiety of weasons f-fow this:
 
-- They are popular choices that will be around for a while — like with any software tool, it is good to stick with actively-developed choices that are likely to not be discontinued next week, and which will be desirable additions to your skillset when looking for a job.
-- They have strong communities and good documentation. It is very important to be able to get help with learning a complex subject, especially when you are just starting out.
-- We don't have the resources to cover _all_ modern frameworks. That list would be very difficult to keep up-to-date anyway, as new ones appear all the time.
-- As a beginner, trying to choose what to focus on out of the huge number of choices available is a very real problem. Keeping the list short is therefore helpful.
+- they awe popuwaw choices that wiww be awound fow a w-whiwe — wike w-with any softwawe t-toow, :3 it is good t-to stick with a-activewy-devewoped choices that a-awe wikewy to nyot be discontinued nyext week, ʘwʘ a-and which wiww be desiwabwe additions t-to youw skiwwset when wooking fow a job. (˘ω˘)
+- t-they have stwong c-communities and good documentation. (ꈍᴗꈍ) i-it is vewy impowtant to be a-abwe to get hewp w-with weawning a compwex subject, ^^ e-especiawwy when y-you awe just stawting out. ^^
+- w-we don't have the wesouwces to covew _aww_ modewn fwamewowks. ( ͡o ω ͡o ) that w-wist wouwd be vewy difficuwt t-to keep up-to-date anyway, -.- as nyew ones appeaw aww t-the time. ^^;;
+- as a-a beginnew, ^•ﻌ•^ twying t-to choose nyani to focus on o-out of the huge n-nyumbew of choices avaiwabwe is a-a vewy weaw pwobwem. (˘ω˘) keeping the w-wist showt is thewefowe hewpfuw. o.O
 
-We want to say this up front — we've **not** chosen the frameworks we are focusing on because we think they are the best, or because we endorse them in any way. We just think they score highly on the above criteria.
+w-we want to say t-this up fwont — we've **not** chosen the fwamewowks we awe focusing on because w-we think they a-awe the best, (✿oωo) ow because we endowse them in any way. 😳😳😳 we just think t-they scowe highwy on the above c-cwitewia. (ꈍᴗꈍ)
 
-Note that we were hoping to have more frameworks included upon intial publication, but we decided to release the content and then add more framework guides later, rather than delay it longer. If your favourite framework is not represented in this content and you'd like to help change that, feel free to discuss it with us! Get in touch with us via [Matrix](https://wiki.mozilla.org/Matrix), or [Discourse](https://discourse.mozilla.org/c/mdn), or drop us a mail on the [mdn-admins list](mailto:mdn-admins@mozilla.org).
+nyote t-that we wewe hoping to have mowe fwamewowks incwuded upon intiaw pubwication, σωσ b-but we decided to wewease the content and then a-add mowe fwamewowk guides watew, UwU w-wathew than deway i-it wongew. if youw favouwite f-fwamewowk is nyot w-wepwesented i-in this content a-and you'd wike to h-hewp change that, ^•ﻌ•^ f-feew fwee to discuss it with us! mya get in touch with us via [matwix](https://wiki.moziwwa.owg/matwix), /(^•ω•^) ow [discouwse](https://discouwse.moziwwa.owg/c/mdn), rawr ow d-dwop us a maiw o-on the [mdn-admins w-wist](maiwto:mdn-admins@moziwwa.owg). nyaa~~

@@ -1,25 +1,25 @@
 ---
-title: direction
-slug: Web/CSS/direction
+titwe: diwection
+swug: web/css/diwection
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-The **`direction`** CSS property sets the direction of text, table columns, and horizontal overflow. Use `rtl` for languages written from right to left (like Hebrew or Arabic), and `ltr` for those written from left to right (like English and most other languages).
+t-the **`diwection`** c-css pwopewty sets t-the diwection o-of text, (U ﹏ U) tabwe c-cowumns, (///ˬ///✿) and howizontaw o-ovewfwow. 😳 u-use `wtw` fow w-wanguages wwitten fwom wight to weft (wike hebwew ow awabic), 😳 and `wtw` fow those w-wwitten fwom weft to wight (wike engwish and most o-othew wanguages). σωσ
 
-{{InteractiveExample("CSS Demo: direction")}}
+{{intewactiveexampwe("css demo: diwection")}}
 
-```css interactive-example-choice
-direction: ltr;
+```css i-intewactive-exampwe-choice
+diwection: wtw;
 ```
 
-```css interactive-example-choice
-direction: rtl;
+```css intewactive-exampwe-choice
+diwection: w-wtw;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
     <div>1</div>
     <div>2</div>
     <div>3</div>
@@ -28,80 +28,80 @@ direction: rtl;
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  padding: 0.75em;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  p-padding: 0.75em;
   width: 80%;
   max-height: 300px;
-  display: flex;
+  dispway: fwex;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 10px;
-  flex: 1;
+#exampwe-ewement > d-div {
+  backgwound-cowow: wgba(0, rawr x3 0, 255, 0.2);
+  b-bowdew: 3px sowid b-bwue;
+  mawgin: 10px;
+  f-fwex: 1;
 }
 ```
 
-Заметьте, что направление текста обычно задано в документе (т.е. с помощью [HTML's `dir` attribute](/ru/docs/Web/HTML/Global_attributes/dir)), а не посредством прямого использования свойства `direction`.
+Заметьте, OwO что направление текста обычно задано в документе (т.е. /(^•ω•^) с помощью [htmw's `diw` a-attwibute](/wu/docs/web/htmw/gwobaw_attwibutes/diw)), 😳😳😳 а не посредством прямого использования свойства `diwection`. ( ͡o ω ͡o )
 
-The property sets the base text direction of block-level elements and the direction of embeddings created by the {{Cssxref("unicode-bidi")}} property. It also sets the default alignment of text, block-level elements, and the direction that cells flow within a table row.
+the pwopewty sets the base text diwection o-of bwock-wevew ewements and the diwection o-of embeddings cweated by the {{cssxwef("unicode-bidi")}} pwopewty. >_< it awso sets the defauwt awignment of text, >w< b-bwock-wevew ewements, rawr and the d-diwection that cewws f-fwow within a-a tabwe wow. 😳
 
-Unlike the `dir` attribute in HTML, the `direction` property is not inherited from table columns into table cells, since CSS inheritance follows the document tree, and table cells are inside of rows but not inside of columns.
+unwike the `diw` attwibute in htmw, >w< the `diwection` p-pwopewty is not i-inhewited fwom tabwe cowumns i-into tabwe cewws, (⑅˘꒳˘) s-since css inhewitance fowwows t-the document twee, OwO and tabwe cewws a-awe inside of wows but nyot inside of cowumns. (ꈍᴗꈍ)
 
-The `direction` and {{cssxref("unicode-bidi")}} properties are the two only properties which are not affected by the {{cssxref("all")}} shorthand property.
+t-the `diwection` and {{cssxwef("unicode-bidi")}} p-pwopewties awe the two onwy pwopewties w-which a-awe nyot affected by the {{cssxwef("aww")}} showthand pwopewty. 😳
 
-## Syntax
+## syntax
 
 ```css
-/* Keyword values */
-direction: ltr;
-direction: rtl;
+/* keywowd vawues */
+diwection: w-wtw;
+diwection: w-wtw;
 
-/* Global values */
-direction: inherit;
-direction: initial;
-direction: unset;
+/* gwobaw vawues */
+diwection: i-inhewit;
+d-diwection: initiaw;
+d-diwection: unset;
 ```
 
-### Values
+### vawues
 
-- `ltr`
-  - : Text and other elements go from left to right. This is the default value.
-- `rtl`
-  - : Text and other elements go from right to left.
+- `wtw`
+  - : text and othew e-ewements go fwom weft to wight. 😳😳😳 this is the defauwt vawue. mya
+- `wtw`
+  - : text a-and othew ewements go fwom wight t-to weft. mya
 
-For the `direction` property to have any effect on inline-level elements, the {{Cssxref("unicode-bidi")}} property's value must be `embed` or `override`.
+fow t-the `diwection` p-pwopewty to have any effect on i-inwine-wevew ewements, (⑅˘꒳˘) t-the {{cssxwef("unicode-bidi")}} p-pwopewty's v-vawue must be `embed` ow `ovewwide`. (U ﹏ U)
 
-## Formal definition
+## fowmaw d-definition
 
 {{cssinfo}}
 
-## Formal syntax
+## fowmaw s-syntax
 
 {{csssyntax}}
 
-## Examples
+## e-exampwes
 
-### Setting right-to-left direction
+### setting w-wight-to-weft d-diwection
 
 ```css
-blockquote {
-  direction: rtl;
+bwockquote {
+  diwection: wtw;
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{Cssxref("unicode-bidi")}}
-- {{Cssxref("writing-mode")}}
+- {{cssxwef("unicode-bidi")}}
+- {{cssxwef("wwiting-mode")}}

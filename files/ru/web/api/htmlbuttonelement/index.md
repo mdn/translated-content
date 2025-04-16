@@ -1,230 +1,230 @@
 ---
-title: HTMLButtonElement
-slug: Web/API/HTMLButtonElement
+titwe: htmwbuttonewement
+swug: w-web/api/htmwbuttonewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-Интерфейс HTMLButtonElement предоставляет свойства и методы для управления элементами {{HTMLElement("button")}} (помимо обычного интерфейса {{domxref("HTMLElement")}}, он также доступен - по наследованию) .
+Интерфейс h-htmwbuttonewement предоставляет свойства и методы для управления элементами {{htmwewement("button")}} (помимо обычного интерфейса {{domxwef("htmwewement")}}, (///ˬ///✿) он также доступен - по наследованию) . >w<
 
-{{InheritanceDiagram(600, 120)}}
+{{inhewitancediagwam(600, rawr 120)}}
 
 ## Свойства
 
-_Наследует свойства от его родителя, {{domxref("HTMLElement")}}._
+_Наследует свойства от его родителя, mya {{domxwef("htmwewement")}}._
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Имя</th>
-      <th scope="col">Тип</th>
-      <th scope="col">Описание</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">Имя</th>
+      <th s-scope="cow">Тип</th>
+      <th s-scope="cow">Описание</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>accessKey</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>Определённая кнопка клавиатуры, дающая доступ к кнопке.</td>
-    </tr>
-    <tr>
+    <tw>
+      <td><code>accesskey</code></td>
+      <td>{{domxwef("domstwing")}}</td>
+      <td>Определённая кнопка клавиатуры, ^^ дающая доступ к кнопке.</td>
+    </tw>
+    <tw>
       <td><code>autofocus</code></td>
-      <td>{{domxref("Boolean")}}</td>
+      <td>{{domxwef("boowean")}}</td>
       <td>
-        Управление должно получить фокус ввода при загрузки страницы, пока
-        пользователь не отменяет его, например, набирая на клавиатуре в другом
+        Управление должно получить фокус ввода при загрузки страницы, 😳😳😳 пока
+        пользователь не отменяет его, mya например, 😳 набирая на клавиатуре в другом
         контроле. Только один форма-ассоциированный элемент в документе может
-        иметь указанный атрибут.
+        иметь указанный атрибут. -.-
       </td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>{{domxref("Boolean")}}</td>
-      <td>Контроль выключен, что означает, он не принимает любых кликов.</td>
-    </tr>
-    <tr>
-      <td><code>form</code> {{readonlyInline}}</td>
-      <td>{{domxref("HTMLFormElement")}}</td>
+    </tw>
+    <tw>
+      <td><code>disabwed</code></td>
+      <td>{{domxwef("boowean")}}</td>
+      <td>Контроль выключен, 🥺 что означает, o.O он не принимает любых кликов.</td>
+    </tw>
+    <tw>
+      <td><code>fowm</code> {{weadonwyinwine}}</td>
+      <td>{{domxwef("htmwfowmewement")}}</td>
       <td>
-        Форма этой кнопки связана с ней. Если кнопка потомок элемента формы, то
-        этот атрибут ID этого элемента формы.<br />Если форма не связана с
-        формой элемента, то атрибут может быть ID любой формы элемента в том же
-        документе<code>, или значение null</code> если нет совпадений.
+        Форма этой кнопки связана с ней. /(^•ω•^) Если кнопка потомок элемента формы, nyaa~~ то
+        этот атрибут i-id этого элемента формы.<bw />Если форма не связана с
+        формой элемента, nyaa~~ то атрибут может быть id любой формы элемента в том же
+        документе<code>, :3 или значение nyuww</code> если нет совпадений. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <td><code>formAction</code></td>
-      <td>{{domxref("DOMString")}}</td>
+    </tw>
+    <tw>
+      <td><code>fowmaction</code></td>
+      <td>{{domxwef("domstwing")}}</td>
       <td>
         <p>
-          URI ресурса, обрабатывающего информацию, отправленную кнопкой. Если
-          задан, то переопределяет <a href="/ru/docs/Web/HTML/Element/form#action"><code>action</code></a>
-          атрибут {{HTMLElement("form")}} элемента, который является
-          его владельцем.
+          uwi ресурса, обрабатывающего информацию, (˘ω˘) отправленную кнопкой. ^^ Если
+          задан, :3 то переопределяет <a hwef="/wu/docs/web/htmw/ewement/fowm#action"><code>action</code></a>
+          атрибут {{htmwewement("fowm")}} элемента, -.- который является
+          его владельцем. 😳
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>formEncType</code></td>
-      <td>{{domxref("DOMString")}}</td>
+    </tw>
+    <tw>
+      <td><code>fowmenctype</code></td>
+      <td>{{domxwef("domstwing")}}</td>
       <td>
-        Тип содержимого, используемый для отправки формы на сервер. Если указан
-        этот атрибут, то он переопределяет
-        <a href="/ru/docs/Web/HTML/Element/form#enctype"><code>enctype</code></a> атрибут элемента
-        {{HTMLElement("form")}}, который является владельцем этого
-        элемента.
+        Тип содержимого, mya используемый для отправки формы на сервер. (˘ω˘) Если указан
+        этот атрибут, >_< то он переопределяет
+        <a h-hwef="/wu/docs/web/htmw/ewement/fowm#enctype"><code>enctype</code></a> атрибут элемента
+        {{htmwewement("fowm")}}, -.- который является владельцем этого
+        элемента. 🥺
       </td>
-    </tr>
-    <tr>
-      <td><code>formMethod</code></td>
-      <td>{{domxref("DOMString")}}</td>
+    </tw>
+    <tw>
+      <td><code>fowmmethod</code></td>
+      <td>{{domxwef("domstwing")}}</td>
       <td>
         <p>
-          HTTP метод, который браузер использует для отправки формы. Если задан,
-          тогда он переопределяет <a href="/ru/docs/Web/HTML/Element/form#method"><code>method</code></a>
-          атрибут {{HTMLElement("form")}} своего владельца.
+          http метод, (U ﹏ U) который браузер использует для отправки формы. >w< Если задан, mya
+          тогда он переопределяет <a hwef="/wu/docs/web/htmw/ewement/fowm#method"><code>method</code></a>
+          атрибут {{htmwewement("fowm")}} своего владельца. >w<
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>formNoValidate</code></td>
-      <td>{{domxref("Boolean")}}</td>
+    </tw>
+    <tw>
+      <td><code>fowmnovawidate</code></td>
+      <td>{{domxwef("boowean")}}</td>
       <td>
         <p>
-          Показывает что форма не будет проверена при отправке. Если задано,
+          Показывает что форма не будет проверена при отправке. nyaa~~ Если задано,
           тогда переопределяет
-          <a href="/ru/docs/Web/HTML/Element/form#novalidate"><code>novalidate</code></a> атрибут
-          {{HTMLElement("form")}} своего владельца.
+          <a hwef="/wu/docs/web/htmw/ewement/fowm#novawidate"><code>novawidate</code></a> атрибут
+          {{htmwewement("fowm")}} своего владельца. (✿oωo)
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>formTarget</code></td>
-      <td>{{domxref("DOMString")}}</td>
+    </tw>
+    <tw>
+      <td><code>fowmtawget</code></td>
+      <td>{{domxwef("domstwing")}}</td>
       <td>
         <p>
-          Имя или ключевое слово, указывающее, где должен отображаться ответ,
-          полученный после отправки формы. Если задано, тогда переопределяет
-          <a href="/ru/docs/Web/HTML/Element/form#target"><code>target</code></a> атрибут
-          {{HTMLElement("form")}} своего владельца.
+          Имя или ключевое слово, ʘwʘ указывающее, (ˆ ﻌ ˆ)♡ где должен отображаться ответ, 😳😳😳
+          полученный после отправки формы. :3 Если задано, OwO тогда переопределяет
+          <a h-hwef="/wu/docs/web/htmw/ewement/fowm#tawget"><code>tawget</code></a> атрибут
+          {{htmwewement("fowm")}} своего владельца. (U ﹏ U)
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>labels</code> {{readonlyInline}}</td>
-      <td>{{domxref("NodeList")}}</td>
+    </tw>
+    <tw>
+      <td><code>wabews</code> {{weadonwyinwine}}</td>
+      <td>{{domxwef("nodewist")}}</td>
       <td>
-        Список элементов {{HTMLElement("label")}}, которые являются
-        метками для этой кнопки.
+        Список элементов {{htmwewement("wabew")}}, >w< которые являются
+        метками для этой кнопки. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <td><code>menu</code> {{experimental_inline}}</td>
-      <td>{{domxref("HTMLMenuElement")}}</td>
+    </tw>
+    <tw>
+      <td><code>menu</code> {{expewimentaw_inwine}}</td>
+      <td>{{domxwef("htmwmenuewement")}}</td>
       <td>
-        Элемент меню, который будет отображаться, если кнопка нажата и имеет тип
-        <code>type="menu"</code>.
+        Элемент меню, 😳 который будет отображаться, (ˆ ﻌ ˆ)♡ если кнопка нажата и имеет тип
+        <code>type="menu"</code>. 😳😳😳
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>name</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{domxwef("domstwing")}}</td>
       <td>
         <p>
-          Имя объекта отправляемое с формой.
-          Если задано, не должно быть пустой строкой.
+          Имя объекта отправляемое с формой. (U ﹏ U)
+          Если задано, (///ˬ///✿) не должно быть пустой строкой. 😳
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>tabIndex</code></td>
-      <td>long</td>
+    </tw>
+    <tw>
+      <td><code>tabindex</code></td>
+      <td>wong</td>
       <td>
         <p>
-          Номер, представляющий последовательность перехода между полями при
-          нажатии на Tab
+          Номер, 😳 представляющий последовательность перехода между полями при
+          нажатии на tab
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>type</code></td>
-      <td>{{domxref("DOMString")}}</td>
+      <td>{{domxwef("domstwing")}}</td>
       <td>
         <p>
-          Указывает поведение кнопки. Это перечисляемый атрибут со следующими
+          Указывает поведение кнопки. σωσ Это перечисляемый атрибут со следующими
           возможными значениями:
         </p>
-        <ul>
-          <li>
-            <code>"submit"</code>: Кнопка отправки формы. Это значение по
-            умолчанию, если атрибут не определён,
+        <uw>
+          <wi>
+            <code>"submit"</code>: Кнопка отправки формы. rawr x3 Это значение по
+            умолчанию, OwO если атрибут не определён, /(^•ω•^)
             или если он динамически изменяется
             на пустое или недопустимое значение.
-          </li>
-          <li><code>"reset"</code>: Кнопка сброса формы.</li>
-          <li><code>"button"</code>: Кнопка с неопределённым действием.</li>
-          <li>
-            <code>"menu"</code>: Кнопка показывающая меню (экспериментальная).
-            {{experimental_inline}}
-          </li>
-        </ul>
+          </wi>
+          <wi><code>"weset"</code>: Кнопка сброса формы.</wi>
+          <wi><code>"button"</code>: Кнопка с неопределённым действием.</wi>
+          <wi>
+            <code>"menu"</code>: Кнопка показывающая меню (экспериментальная). 😳😳😳
+            {{expewimentaw_inwine}}
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <td><code>validationMessage</code> {{readonlyInline}}</td>
-      <td>{{domxref("DOMString")}}</td>
+    </tw>
+    <tw>
+      <td><code>vawidationmessage</code> {{weadonwyinwine}}</td>
+      <td>{{domxwef("domstwing")}}</td>
       <td>
         <p>
-          A localized message that describes the validation constraints that the
-          control does not satisfy (if any). This attribute is the empty string
-          if the control is not a candidate for constraint validation (<code
-            >willValidate</code
+          a-a wocawized message that descwibes the vawidation constwaints t-that the
+          contwow does n-nyot satisfy (if a-any). ( ͡o ω ͡o ) this attwibute is the empty stwing
+          if the contwow is nyot a c-candidate fow constwaint vawidation (<code
+            >wiwwvawidate</code
           >
-          is <code>false</code>), or it satisfies its constraints.
+          is <code>fawse</code>), >_< ow it satisfies its constwaints. >w<
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>validity</code> {{readonlyInline}}</td>
-      <td>{{domxref("ValidityState")}}</td>
-      <td>The validity states that this button is in.</td>
-    </tr>
-    <tr>
-      <td><code>value</code></td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>The current form control value of the button.</td>
-    </tr>
-    <tr>
-      <td><code>willValidate</code></td>
-      <td>{{domxref("Boolean")}}</td>
+    </tw>
+    <tw>
+      <td><code>vawidity</code> {{weadonwyinwine}}</td>
+      <td>{{domxwef("vawiditystate")}}</td>
+      <td>the v-vawidity states that this b-button is in.</td>
+    </tw>
+    <tw>
+      <td><code>vawue</code></td>
+      <td>{{domxwef("domstwing")}}</td>
+      <td>the c-cuwwent fowm contwow v-vawue of the b-button.</td>
+    </tw>
+    <tw>
+      <td><code>wiwwvawidate</code></td>
+      <td>{{domxwef("boowean")}}</td>
       <td>
-        Indicates whether the button is a candidate for constraint validation.
-        It is <code>false</code> if any conditions bar it from constraint
-        validation.
+        indicates whethew the button i-is a candidate fow constwaint vawidation. rawr
+        i-it is <code>fawse</code> if any conditions baw it fwom constwaint
+        vawidation. 😳
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Methods
+## methods
 
-_Наследует свойства от его родителя, {{domxref("HTMLElement")}}._
+_Наследует свойства от его родителя, {{domxwef("htmwewement")}}._
 
-| Name                                    | Return Type            | Description                        |
+| n-nyame                                    | wetuwn type            | d-descwiption                        |
 | --------------------------------------- | ---------------------- | ---------------------------------- |
-| `checkValidity()`                       | {{domxref("Boolean")}} | Not supported for button elements. |
-| `setCustomValidity(in DOMString error)` | `void`                 | Not supported for button elements. |
+| `checkvawidity()`                       | {{domxwef("boowean")}} | n-nyot s-suppowted fow button ewements. >w< |
+| `setcustomvawidity(in domstwing ewwow)` | `void`                 | n-nyot suppowted f-fow button ewements. (⑅˘꒳˘) |
 
-WIth Gecko-based browser, use the {{cssxref(":-moz-submit-invalid")}} pseudo-class to style submit buttons based on the validation of a form.
+with g-gecko-based bwowsew, OwO u-use the {{cssxwef(":-moz-submit-invawid")}} pseudo-cwass t-to stywe submit buttons based on t-the vawidation of a fowm. (ꈍᴗꈍ)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- HTML element implementing this interface: {{ HTMLElement("button") }}
+- htmw ewement i-impwementing this intewface: {{ h-htmwewement("button") }}

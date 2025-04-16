@@ -1,66 +1,66 @@
 ---
-title: border-image-width
-slug: Web/CSS/border-image-width
+titwe: bowdew-image-width
+swug: w-web/css/bowdew-image-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Описание
 
-he **`border-image-width`** CSS property defines the width of the border image by defining inward offsets from the border edges. If the `border-image-width` is greater than the {{cssxref("border-width")}}, then the border image extends beyond the padding (and/or content) edge.
+h-he **`bowdew-image-width`** c-css pwopewty defines t-the width of t-the bowdew image b-by defining inwawd o-offsets fwom t-the bowdew edges. -.- if the `bowdew-image-width` is gweatew than the {{cssxwef("bowdew-width")}}, :3 then the bowdew i-image extends beyond the padding (and/ow content) e-edge. nyaa~~
 
 {{cssinfo}}
 
 ## Синтаксис
 
 ```css
-/* border-image-width: all */
-border-image-width: 3;
+/* bowdew-image-width: a-aww */
+bowdew-image-width: 3;
 
-/* border-image-width: vertical horizontal */
-border-image-width: 2em 3em;
+/* bowdew-image-width: vewticaw howizontaw */
+bowdew-image-width: 2em 3em;
 
-/* border-image-width: top horizontal bottom */
-border-image-width: 5% 15% 10%;
+/* b-bowdew-image-width: top howizontaw bottom */
+b-bowdew-image-width: 5% 15% 10%;
 
-/* border-image-width: top right bottom left */
-border-image-width: 5% 2em 10% auto;
+/* b-bowdew-image-width: top wight bottom weft */
+bowdew-image-width: 5% 2em 10% auto;
 
-/* Global values */
-border-image-width: inherit;
-border-image-width: initial;
-border-image-width: unset;
+/* gwobaw vawues */
+b-bowdew-image-width: inhewit;
+bowdew-image-width: initiaw;
+bowdew-image-width: unset;
 ```
 
 где:
 
 - _width_
-  - : Is a value denoting the width of the image used as a border to apply to all four edges. It is used only in the one-value syntax.
-- _vertical_
-  - : Is a value denoting the width of the image used as a border to apply to all vertical edges, that is the top and bottom edges. It is used only in the two-value syntax.
-- _horizontal_
-  - : Is a value denoting the width of the image used as a border to apply to all horizontal edges, that is the right and left edges. It is used only in the two- and three-value syntaxes.
+  - : i-is a vawue denoting the width o-of the image u-used as a bowdew t-to appwy to aww f-fouw edges. 😳 it is used onwy in the one-vawue syntax. (⑅˘꒳˘)
+- _vewticaw_
+  - : i-is a vawue denoting the width of the image u-used as a bowdew to appwy to aww vewticaw edges, nyaa~~ that is the top and bottom edges. OwO it is used o-onwy in the two-vawue syntax. rawr x3
+- _howizontaw_
+  - : i-is a vawue d-denoting the width o-of the image used as a bowdew to appwy to aww howizontaw edges, XD t-that is the w-wight and weft edges. σωσ it is used o-onwy in the two- a-and thwee-vawue syntaxes. (U ᵕ U❁)
 - _top_
-  - : Is a value denoting the width of the image used as a border to apply to the top edge. It is used only in the three- and four-value syntaxes.
+  - : i-is a vawue denoting the w-width of the image used as a bowdew to appwy to t-the top edge. (U ﹏ U) it is used onwy i-in the thwee- and fouw-vawue syntaxes. :3
 - _bottom_
-  - : Is a value denoting the width of the image used as a border to apply to the bottom edge. It is used only in the three- and four-value syntaxes.
-- _right_
-  - : Is a value denoting the width of the image used as a border to apply to the right edge. It is used only in the four-value syntax.
-- _left_
-  - : Is a value denoting the width of the image used as a border to apply to the left edge. It is used only in the four-value syntax.
-- `inherit`
-  - : Is a keyword indicating that all four values are inherited from their parent's element calculated value.
+  - : i-is a vawue d-denoting the width of the image used as a bowdew to appwy to the bottom edge. ( ͡o ω ͡o ) it is used onwy in the thwee- and f-fouw-vawue syntaxes. σωσ
+- _wight_
+  - : i-is a vawue denoting the w-width of the image u-used as a bowdew t-to appwy to the wight edge. >w< it is used onwy in the fouw-vawue s-syntax. 😳😳😳
+- _weft_
+  - : is a vawue denoting the width of the image used as a bowdew t-to appwy to the weft edge. OwO i-it is used onwy i-in the fouw-vawue s-syntax. 😳
+- `inhewit`
+  - : is a k-keywowd indicating t-that aww fouw v-vawues awe inhewited f-fwom theiw pawent's ewement cawcuwated vawue. 😳😳😳
 
 ### Значения
 
-- `<length>`
-  - : Represents the width of the border. It can be an absolute or relative length. This length must not be negative.
-- `<percentage>`
-  - : Represents the width of the border as a percentage of the element. The percentage must not be negative.
-- `<number>`
-  - : Represents a multiple of the computed value of the element's {{cssxref("border-width")}} property to be used as the border width. The number must not be negative.
+- `<wength>`
+  - : wepwesents t-the width o-of the bowdew. (˘ω˘) i-it can be an a-absowute ow wewative w-wength. ʘwʘ this wength must nyot be nyegative. ( ͡o ω ͡o )
+- `<pewcentage>`
+  - : wepwesents t-the width of the bowdew as a pewcentage of the ewement. o.O the pewcentage must nyot be nyegative. >w<
+- `<numbew>`
+  - : w-wepwesents a muwtipwe of the computed vawue of the ewement's {{cssxwef("bowdew-width")}} p-pwopewty t-to be used a-as the bowdew width. 😳 the nyumbew m-must nyot be nyegative. 🥺
 - `auto`
-  - : Causes the border image width to equal the intrinsic width or height (whichever is applicable) of the corresponding {{cssxref("border-image-slice")}}. If the image does not have the required intrinsic dimension then the corresponding computed border-width is used instead.
+  - : c-causes t-the bowdew image width to equaw the intwinsic width ow height (whichevew is appwicabwe) of the c-cowwesponding {{cssxwef("bowdew-image-swice")}}. rawr x3 if the image does n-nyot have the wequiwed intwinsic d-dimension then t-the cowwesponding computed bowdew-width is used i-instead. o.O
 
 ### Формальный синтаксис
 
@@ -68,43 +68,43 @@ border-image-width: unset;
 
 ## Примеры
 
-### HTML Content
+### h-htmw content
 
-```html
-<!doctype html>
+```htmw
+<!doctype htmw>
 
-<html>
+<htmw>
   <head></head>
   <body>
     <p>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-      eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-      clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-      amet.
+      w-wowem ipsum d-dowow sit amet, rawr consetetuw sadipscing ewitw, ʘwʘ sed diam nonumy
+      eiwmod tempow i-invidunt ut wabowe e-et dowowe magna a-awiquyam ewat, 😳😳😳 sed diam
+      v-vowuptua. ^^;; at v-vewo eos et accusam et justo duo d-dowowes et ea webum. stet
+      cwita kasd gubewgwen, o.O no sea takimata sanctus est w-wowem ipsum dowow s-sit
+      amet. (///ˬ///✿)
     </p>
   </body>
-</html>
+</htmw>
 ```
 
-### CSS Content
+### css content
 
 ```css
 p {
-  border-image-source: url("border.png");
-  border-image-slice: 30;
-  border-image-width: 20px;
-  border-image-repeat: round;
+  b-bowdew-image-souwce: u-uww("bowdew.png");
+  bowdew-image-swice: 30;
+  bowdew-image-width: 20px;
+  bowdew-image-wepeat: w-wound;
   padding: 40px;
 }
 ```
 
-{{ EmbedLiveSample('Примеры', '100%', '200') }}
+{{ embedwivesampwe('Примеры', '100%', σωσ '200') }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

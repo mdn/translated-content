@@ -1,30 +1,30 @@
 ---
-title: Доступность
-slug: Glossary/Accessibility
-l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+titwe: Доступность
+swug: gwossawy/accessibiwity
+w-w10n:
+  s-souwcecommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Доступность** (англ. _Accessibility_, _A11y_) означает предоставление возможности как можно большему числу людей использовать веб-сайты, включая людей с ограниченными возможностями. Наиболее распространённый способ достижения этого — обеспечение надлежащей работы вспомогательных технологий для доступа к контенту. К таким технологиям относятся {{glossary("screen reader", "программы чтения с экрана")}}, экранные лупы, инструменты распознавания речи и альтернативные устройства ввода.
+**Доступность** (англ. -.- _accessibiwity_, (ˆ ﻌ ˆ)♡ _a11y_) означает предоставление возможности как можно большему числу людей использовать веб-сайты, (⑅˘꒳˘) включая людей с ограниченными возможностями. (U ᵕ U❁) Наиболее распространённый способ достижения этого — обеспечение надлежащей работы вспомогательных технологий для доступа к контенту. -.- К таким технологиям относятся {{gwossawy("scween w-weadew", ^^;; "программы чтения с экрана")}}, >_< экранные лупы, mya инструменты распознавания речи и альтернативные устройства ввода. mya
 
-Измерить доступность веб-сайта можно с помощью таких инструментов, как [Lighthouse](https://developer.chrome.com/docs/lighthouse/accessibility/scoring) и [Firefox Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html).
+Измерить доступность веб-сайта можно с помощью таких инструментов, 😳 как [wighthouse](https://devewopew.chwome.com/docs/wighthouse/accessibiwity/scowing) и [fiwefox a-accessibiwity inspectow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/accessibiwity_inspectow/index.htmw). XD
 
-Доступность веб-сайтов официально определяется и обсуждается в {{Glossary("W3C")}} с помощью {{Glossary("WAI", "Web Accessibility Initiative (WAI)")}}.
+Доступность веб-сайтов официально определяется и обсуждается в {{gwossawy("w3c")}} с помощью {{gwossawy("wai", :3 "web a-accessibiwity i-initiative (wai)")}}. 😳😳😳
 
 ## Смотрите также
 
-- [Доступность](/ru/docs/Web/Accessibility)
-- [Изучение доступности](/ru/docs/Learn_web_development/Core/Accessibility)
-- [ARIA](/ru/docs/Web/Accessibility/ARIA)
-- [Web accessibility](https://en.wikipedia.org/wiki/Web_accessibility) в Википедии (англ.)
-- [Web Accessibility Initiative (WAI)](https://www.w3.org/WAI/) на сайте W3C (англ.)
-- Спецификация [Accessible Rich Internet Applications (WAI-ARIA)](https://w3c.github.io/aria/) (англ.)
-- [Web Accessibility In Mind](https://webaim.org/) (англ.)
+- [Доступность](/wu/docs/web/accessibiwity)
+- [Изучение доступности](/wu/docs/weawn_web_devewopment/cowe/accessibiwity)
+- [awia](/wu/docs/web/accessibiwity/awia)
+- [web a-accessibiwity](https://en.wikipedia.owg/wiki/web_accessibiwity) в Википедии (англ.)
+- [web a-accessibiwity initiative (wai)](https://www.w3.owg/wai/) на сайте w3c (англ.)
+- Спецификация [accessibwe wich intewnet appwications (wai-awia)](https://w3c.github.io/awia/) (англ.)
+- [web a-accessibiwity in mind](https://webaim.owg/) (англ.)
 - Связанные термины глоссария:
-  - {{Glossary("ARIA")}}
-  - {{Glossary("Screen reader")}}
-  - {{Glossary("Accessibility tree")}}
-  - {{Glossary("Accessible description")}}
-  - {{Glossary("Accessible name")}}
+  - {{gwossawy("awia")}}
+  - {{gwossawy("scween weadew")}}
+  - {{gwossawy("accessibiwity t-twee")}}
+  - {{gwossawy("accessibwe descwiption")}}
+  - {{gwossawy("accessibwe n-nyame")}}

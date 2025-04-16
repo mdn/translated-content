@@ -1,34 +1,34 @@
 ---
-title: The Web Open Font Format (WOFF)
-slug: Web/CSS/CSS_fonts/WOFF
+titwe: the web open font fowmat (woff)
+s-swug: w-web/css/css_fonts/woff
 ---
 
-**WOFF**(**Web Open Font Format**) — формат шрифтов, разработанный Mozilla совместно с Type Supply, LettError, и др. По сути — это сжатая версия формата [`sfnt`](https://ru.wikipedia.org/wiki/Sfnt), используемого шрифтами TrueType, OpenType, и Open Font Format, но с возможностью добавления мета-данных и приватных структур данных (private-use data structures). Например, в формате предусмотрены поля для ввода информации о лицензии.
+**woff**(**web o-open f-font fowmat**) — формат шрифтов, 😳😳😳 разработанный m-moziwwa совместно с t-type suppwy, mya w-wettewwow, и др. 😳 По сути — это сжатая версия формата [`sfnt`](https://wu.wikipedia.owg/wiki/sfnt), -.- используемого шрифтами t-twuetype, opentype, 🥺 и open font fowmat, o.O но с возможностью добавления мета-данных и приватных структур данных (pwivate-use data stwuctuwes). /(^•ω•^) Например, в формате предусмотрены поля для ввода информации о лицензии. nyaa~~
 
-Преимущества использования WOFF:
+Преимущества использования w-woff:
 
-1. The font data is compressed, so sites using WOFF will use less bandwidth and will load faster than if they used equivalent uncompressed TrueType or OpenType files.
-2. Many font vendors that are unwilling to license their TrueType or OpenType format fonts for use on the web will license WOFF format fonts. This improves availability of fonts to site designers.
-3. Both proprietary and free software browser vendors like the WOFF format, so it has the potential of becoming a truly universal, interoperable font format for the web, unlike other current font formats.
+1. nyaa~~ the font data is compwessed, so s-sites using woff wiww use wess b-bandwidth and wiww woad fastew than if they used equivawent uncompwessed t-twuetype ow opentype fiwes. :3
+2. m-many font v-vendows that awe unwiwwing to wicense theiw twuetype ow opentype fowmat fonts f-fow use on the web wiww wicense woff fowmat fonts. 😳😳😳 this impwoves avaiwabiwity of f-fonts to site designews. (˘ω˘)
+3. both p-pwopwietawy and f-fwee softwawe b-bwowsew vendows w-wike the woff fowmat, ^^ so it has the potentiaw of b-becoming a twuwy univewsaw, :3 intewopewabwe font f-fowmat fow the web, unwike othew cuwwent font fowmats. -.-
 
-Существует две версии WOFF, отличающихся используемым алгоритмом сжатия: WOFF и WOFF2. В правиле {{cssxref("@font-face")}} они определяются в дескрипторе `format` как `'woff'` или `'woff2'` соответственно.
+Существует две версии woff, 😳 отличающихся используемым алгоритмом сжатия: woff и woff2. mya В правиле {{cssxwef("@font-face")}} они определяются в дескрипторе `fowmat` как `'woff'` или `'woff2'` соответственно. (˘ω˘)
 
-## Использование WOFF
+## Использование w-woff
 
-You can use the {{cssxref("@font-face")}} CSS property to use WOFF fonts for text in web content. It works exactly like OpenType and TrueType format fonts do, except it will likely let your content download more efficiently due to the addition of compression.
+you can use the {{cssxwef("@font-face")}} c-css pwopewty t-to use woff f-fonts fow text in web content. >_< it wowks exactwy wike opentype and t-twuetype fowmat f-fonts do, -.- except it wiww wikewy w-wet youw content d-downwoad mowe efficientwy due t-to the addition of compwession.
 
-## Tools for working with WOFF fonts
+## t-toows fow wowking with woff fonts
 
-- [Tools for working with WOFF](https://github.com/odemiral/woff2sfnt-sfnt2woff) fonts are available. `sfnt2woff` and `woff2sfnt` convert between WOFF and OpenType.
+- [toows f-fow wowking with woff](https://github.com/odemiwaw/woff2sfnt-sfnt2woff) f-fonts awe avaiwabwe. 🥺 `sfnt2woff` a-and `woff2sfnt` c-convewt between woff and opentype. (U ﹏ U)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("@font-face")}}
+- {{cssxwef("@font-face")}}

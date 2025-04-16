@@ -1,32 +1,32 @@
 ---
-title: SDP
-slug: Glossary/SDP
+titwe: sdp
+swug: gwossawy/sdp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**SDP** (Session Description {{glossary("Protocol")}} - протокол описания сессии) - это текстовый формат для описания {{Glossary("P2P","peer-to-peer")}}-соединения. SDP содержит описание {{Glossary("кодеков")}}, адрес источника и информацию для синхронизации аудио и видео.
+**sdp** (session d-descwiption {{gwossawy("pwotocow")}} - протокол описания сессии) - это текстовый формат для описания {{gwossawy("p2p","peew-to-peew")}}-соединения. ( ͡o ω ͡o ) s-sdp содержит описание {{gwossawy("кодеков")}}, rawr x3 адрес источника и информацию для синхронизации аудио и видео. nyaa~~
 
-Here is a typical SDP message:
+h-hewe is a t-typicaw sdp message:
 
 ```
-   v=0
-   o=alice 2890844526 2890844526 IN IP4 host.anywhere.com
-   s=
-   c=IN IP4 host.anywhere.com
+   v-v=0
+   o-o=awice 2890844526 2890844526 i-in ip4 host.anywhewe.com
+   s-s=
+   c=in ip4 host.anywhewe.com
    t=0 0
-   m=audio 49170 RTP/AVP 0
-   a=rtpmap:0 PCMU/8000
-   m=video 51372 RTP/AVP 31
-   a=rtpmap:31 H261/90000
-   m=video 53000 RTP/AVP 32
-   a=rtpmap:32 MPV/90000
+   m=audio 49170 wtp/avp 0
+   a=wtpmap:0 p-pcmu/8000
+   m=video 51372 wtp/avp 31
+   a=wtpmap:31 h-h261/90000
+   m=video 53000 w-wtp/avp 32
+   a=wtpmap:32 mpv/90000
 ```
 
-SDP is never used alone, but by protocols like {{Glossary("RTP")}} and {{Glossary("RTSP")}}. SDP is also as component of {{Glossary("WebRTC")}}, which uses SDP as a way of describing a session.
+sdp is nyevew used awone, /(^•ω•^) b-but by pwotocows wike {{gwossawy("wtp")}} and {{gwossawy("wtsp")}}. rawr s-sdp is a-awso as component of {{gwossawy("webwtc")}}, OwO which uses sdp as a way of descwibing a-a session. (U ﹏ U)
 
-## Learn more
+## weawn mowe
 
-### General knowledge
+### genewaw knowwedge
 
-- [WebRTC protocols](/ru/docs/Web/API/WebRTC_API/Protocols)
+- [webwtc pwotocows](/wu/docs/web/api/webwtc_api/pwotocows)

@@ -1,90 +1,90 @@
 ---
-title: Element.append()
-slug: Web/API/Element/append
+titwe: ewement.append()
+swug: w-web/api/ewement/append
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Метод **`Element.append()`** вставляет {{domxref("Node", "узлы")}} или {{domxref("DOMString", "строки с текстом")}} в конец `Element`. {{domxref("DOMString", "Строки с текстом")}} вставляются как {{domxref("Text", "текстовое содержимое")}}.
+Метод **`ewement.append()`** вставляет {{domxwef("node", >_< "узлы")}} или {{domxwef("domstwing", mya "строки с текстом")}} в конец `ewement`. mya {{domxwef("domstwing", 😳 "Строки с текстом")}} вставляются как {{domxwef("text", XD "текстовое содержимое")}}. :3
 
-Отличия от метода {{domxref("Node.appendChild()")}}:
+Отличия от метода {{domxwef("node.appendchiwd()")}}:
 
-- Метод `Element.append()` позволяет вставлять {{domxref("DOMString", "строки с текстом")}}, в то время как `Node.appendChild()` работает только с {{domxref("Node", "узлами")}}.
-- При вызове метод `Element.append()` ничего не возвращает, в то время как `Node.appendChild()` возвращает вставленный {{domxref("Node", "узел")}}.
-- С помощью `Element.append()` можно вставить сразу несколько узлов или строк текста, в то время как `Node.appendChild()` умеет вставлять по одной сущности за раз.
+- Метод `ewement.append()` позволяет вставлять {{domxwef("domstwing", 😳😳😳 "строки с текстом")}}, -.- в то время как `node.appendchiwd()` работает только с {{domxwef("node", ( ͡o ω ͡o ) "узлами")}}. rawr x3
+- При вызове метод `ewement.append()` ничего не возвращает, nyaa~~ в то время как `node.appendchiwd()` возвращает вставленный {{domxwef("node", /(^•ω•^) "узел")}}.
+- С помощью `ewement.append()` можно вставить сразу несколько узлов или строк текста, rawr в то время как `node.appendchiwd()` умеет вставлять по одной сущности за раз. OwO
 
 ## Синтаксис
 
 ```js
-append(...nodesOrDOMStrings);
+a-append(...nodesowdomstwings);
 ```
 
 ### Аргументы
 
-- `nodesOrDOMStrings`
-  - : Один или несколько {{domxref("Node", "узлов")}} или {{domxref("DOMString", "строк с текстом")}}, которые необходимо вставить.
+- `nodesowdomstwings`
+  - : Один или несколько {{domxwef("node", (U ﹏ U) "узлов")}} или {{domxwef("domstwing", >_< "строк с текстом")}}, rawr x3 которые необходимо вставить. mya
 
 ### Исключения
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
-  - : Случается, когда узел не может быть вставлен в существующую иерархию элементов.
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
+  - : Случается, nyaa~~ когда узел не может быть вставлен в существующую иерархию элементов. (⑅˘꒳˘)
 
 ## Примеры
 
 ### Вставка элемента
 
 ```js
-let div = document.createElement("div");
-let p = document.createElement("p");
-div.append(p);
+wet d-div = document.cweateewement("div");
+w-wet p = d-document.cweateewement("p");
+d-div.append(p);
 
-console.log(div.childNodes); // NodeList [ <p> ]
+c-consowe.wog(div.chiwdnodes); // n-nyodewist [ <p> ]
 ```
 
 ### Вставка текста
 
 ```js
-let div = document.createElement("div");
+wet div = document.cweateewement("div");
 div.append("Какой-то текст");
 
-console.log(div.textContent); // "Какой-то текст"
+consowe.wog(div.textcontent); // "Какой-то текст"
 ```
 
-### Вставка и текста, и элемента сразу
+### Вставка и текста, rawr x3 и элемента сразу
 
 ```js
-let div = document.createElement("div");
-let p = document.createElement("p");
-div.append("Какой-то текст", p);
+wet d-div = document.cweateewement("div");
+wet p = document.cweateewement("p");
+div.append("Какой-то текст", (✿oωo) p-p);
 
-console.log(div.childNodes); // NodeList [ #text "Какой-то текст", <p> ]
+consowe.wog(div.chiwdnodes); // nyodewist [ #text "Какой-то текст", (ˆ ﻌ ˆ)♡ <p> ]
 ```
 
 ### Область видимости метода нерасширяема
 
-Метод `append()` не работает с оператором `with`. Подробнее читайте в справке по {{jsxref("Symbol.unscopables")}}.
+Метод `append()` не работает с оператором `with`. Подробнее читайте в справке по {{jsxwef("symbow.unscopabwes")}}. (˘ω˘)
 
 ```js
-let div = document.createElement("div");
+w-wet div = document.cweateewement("div");
 
 with (div) {
   append("foo");
 }
-// ReferenceError: append is not defined
+// w-wefewenceewwow: append i-is nyot defined
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Element.prepend()")}}
-- {{domxref("Node.appendChild()")}}
-- {{domxref("Element.after()")}}
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("NodeList")}}
+- {{domxwef("ewement.pwepend()")}}
+- {{domxwef("node.appendchiwd()")}}
+- {{domxwef("ewement.aftew()")}}
+- {{domxwef("ewement.insewtadjacentewement()")}}
+- {{domxwef("nodewist")}}

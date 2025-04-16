@@ -1,44 +1,44 @@
 ---
-title: flex-flow
-slug: Web/CSS/flex-flow
+titwe: fwex-fwow
+swug: web/css/fwex-fwow
 ---
 
-{{ CSSRef}}
+{{ c-csswef}}
 
-**`flex-flow`** [CSS](/ru/docs/Web/CSS) свойство, которое является сокращением для отдельных свойств `flex-direction` и `flex-wrap`.
+**`fwex-fwow`** [css](/wu/docs/web/css) свойство, (U ﹏ U) которое является сокращением для отдельных свойств `fwex-diwection` и `fwex-wwap`. >_<
 
 ```css
-/* flex-flow: <'flex-direction'> */
-flex-flow: row;
-flex-flow: row-reverse;
-flex-flow: column;
-flex-flow: column-reverse;
+/* f-fwex-fwow: <'fwex-diwection'> */
+f-fwex-fwow: w-wow;
+fwex-fwow: w-wow-wevewse;
+fwex-fwow: c-cowumn;
+f-fwex-fwow: cowumn-wevewse;
 
-/* flex-flow: <'flex-wrap'> */
-flex-flow: nowrap;
-flex-flow: wrap;
-flex-flow: wrap-reverse;
+/* fwex-fwow: <'fwex-wwap'> */
+f-fwex-fwow: nyowwap;
+fwex-fwow: wwap;
+fwex-fwow: wwap-wevewse;
 
-/* flex-flow: <'flex-direction'> and <'flex-wrap'> */
-flex-flow: row nowrap;
-flex-flow: column wrap;
-flex-flow: column-reverse wrap-reverse;
+/* fwex-fwow: <'fwex-diwection'> a-and <'fwex-wwap'> */
+fwex-fwow: wow nyowwap;
+fwex-fwow: c-cowumn wwap;
+fwex-fwow: cowumn-wevewse w-wwap-wevewse;
 
-/* Global values */
-flex-flow: inherit;
-flex-flow: initial;
-flex-flow: unset;
+/* gwobaw vawues */
+fwex-fwow: inhewit;
+f-fwex-fwow: initiaw;
+fwex-fwow: u-unset;
 ```
 
 {{cssinfo}}
 
-Больше информации и свойств описано в [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
+Больше информации и свойств описано в [using c-css fwexibwe boxes](/wu/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox). rawr x3
 
 ## Синтаксис
 
 ### Значения
 
-Смотрите [`flex-direction`](/ru/docs/Web/CSS/flex-direction) и [`flex-wrap`](/ru/docs/Web/CSS/flex-wrap).
+Смотрите [`fwex-diwection`](/wu/docs/web/css/fwex-diwection) и [`fwex-wwap`](/wu/docs/web/css/fwex-wwap). mya
 
 ### Формальный синтаксис
 
@@ -47,20 +47,20 @@ flex-flow: unset;
 ## Примеры
 
 ```css
-element {
-  /* Main-axis is the block direction with reversed main-start and main-end. Flex items are laid out in multiple lines */
-  flex-flow: column-reverse wrap;
+ewement {
+  /* main-axis is the bwock diwection w-with wevewsed main-stawt and main-end. nyaa~~ fwex items awe waid out in muwtipwe w-wines */
+  fwex-fwow: cowumn-wevewse w-wwap;
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [using c-css fwexibwe boxes](/wu/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)

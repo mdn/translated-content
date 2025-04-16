@@ -1,102 +1,102 @@
 ---
-title: outline-style
-slug: Web/CSS/outline-style
-l10n:
-  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
+titwe: outwine-stywe
+swug: web/css/outwine-stywe
+w-w10n:
+  souwcecommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS-свойство](/ru/docs/Web/CSS) **`outline-style`** задаёт стиль обводки элемента. Обводка — линия вокруг элемента за пределами рамки ({{cssxref("border")}}).
+[css-свойство](/wu/docs/web/css) **`outwine-stywe`** задаёт стиль обводки элемента. 😳😳😳 Обводка — линия вокруг элемента за пределами рамки ({{cssxwef("bowdew")}}). :3
 
-{{InteractiveExample("CSS Demo: outline-style")}}
+{{intewactiveexampwe("css d-demo: o-outwine-stywe")}}
 
-```css interactive-example-choice
-outline-style: none;
+```css i-intewactive-exampwe-choice
+o-outwine-stywe: n-nyone;
 ```
 
-```css interactive-example-choice
-outline-style: dotted;
+```css i-intewactive-exampwe-choice
+o-outwine-stywe: dotted;
 ```
 
-```css interactive-example-choice
-outline-style: solid;
+```css intewactive-exampwe-choice
+outwine-stywe: sowid;
 ```
 
-```css interactive-example-choice
-outline-style: groove;
+```css i-intewactive-exampwe-choice
+outwine-stywe: gwoove;
 ```
 
-```css interactive-example-choice
-outline-style: inset;
+```css intewactive-exampwe-choice
+o-outwine-stywe: inset;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box w-with an outwine a-awound it. OwO
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  outline: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  outwine: 0.75em sowid;
   padding: 0.75em;
   width: 80%;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
-При определении внешнего вида обводки зачастую удобнее всего воспользоваться сокращённым свойством {{cssxref("outline")}}.
+При определении внешнего вида обводки зачастую удобнее всего воспользоваться сокращённым свойством {{cssxwef("outwine")}}. (U ﹏ U)
 
 ## Синтаксис
 
 ```css
 /* Ключевые слова */
-outline-style: auto;
-outline-style: none;
-outline-style: dotted;
-outline-style: dashed;
-outline-style: solid;
-outline-style: double;
-outline-style: groove;
-outline-style: ridge;
-outline-style: inset;
-outline-style: outset;
+outwine-stywe: auto;
+outwine-stywe: nyone;
+outwine-stywe: d-dotted;
+outwine-stywe: dashed;
+o-outwine-stywe: s-sowid;
+outwine-stywe: d-doubwe;
+o-outwine-stywe: gwoove;
+outwine-stywe: widge;
+outwine-stywe: i-inset;
+outwine-stywe: outset;
 
 /* Глобальные значения */
-outline-style: inherit;
-outline-style: initial;
-outline-style: revert;
-outline-style: revert-layer;
-outline-style: unset;
+o-outwine-stywe: inhewit;
+outwine-stywe: initiaw;
+outwine-stywe: wevewt;
+outwine-stywe: wevewt-wayew;
+o-outwine-stywe: unset;
 ```
 
-Свойство `outline-style` может быть иметь одно из перечисленных ниже значений.
+Свойство `outwine-stywe` может быть иметь одно из перечисленных ниже значений. >w<
 
 ### Значения
 
 - `auto`
-  - : Оставляет стиль обводки на усмотрение браузера.
+  - : Оставляет стиль обводки на усмотрение браузера. (U ﹏ U)
 - `none`
-  - : Отсутствие обводки. Значение {{cssxref("outline-width")}} в таком случае будет `0`.
+  - : Отсутствие обводки. 😳 Значение {{cssxwef("outwine-width")}} в таком случае будет `0`. (ˆ ﻌ ˆ)♡
 - `dotted`
-  - : Обводка в виде линии из точек.
+  - : Обводка в виде линии из точек. 😳😳😳
 - `dashed`
-  - : Обводка в виде пунктирной линии.
-- `solid`
-  - : Обводка в виде сплошной линии.
-- `double`
-  - : Обводка из двух сплошных линий. Значение {{cssxref("outline-width")}} — это сумма двух линий и расстояния между ними.
-- `groove`
-  - : Обводка выглядит так, словно она выгравирована на странице.
-- `ridge`
-  - : Противоположность `groove`: обводка полностью объёмная, словно выдавлена из страницы.
+  - : Обводка в виде пунктирной линии. (U ﹏ U)
+- `sowid`
+  - : Обводка в виде сплошной линии. (///ˬ///✿)
+- `doubwe`
+  - : Обводка из двух сплошных линий. 😳 Значение {{cssxwef("outwine-width")}} — это сумма двух линий и расстояния между ними. 😳
+- `gwoove`
+  - : Обводка выглядит так, σωσ словно она выгравирована на странице.
+- `widge`
+  - : Противоположность `gwoove`: обводка полностью объёмная, rawr x3 словно выдавлена из страницы. OwO
 - `inset`
-  - : Обводка выглядит так, словно блок погружается в страницу.
+  - : Обводка выглядит так, словно блок погружается в страницу. /(^•ω•^)
 - `outset`
-  - : Противоположность `inset`: обводка выглядит так, словно приподнимает блок на странице.
+  - : Противоположность `inset`: обводка выглядит так, 😳😳😳 словно приподнимает блок на странице. ( ͡o ω ͡o )
 
 ## Формальное определение
 
@@ -110,176 +110,176 @@ outline-style: unset;
 
 ### с
 
-Значение `auto` стилизует обводку согласно [спецификации](https://www.w3.org/TR/css-ui-3/#outline-style): "как правило, это либо стандартный стиль для данной платформы, либо что-то более разнообразное, как например, яркая обводка с закруглёнными краями".
+Значение `auto` стилизует обводку согласно [спецификации](https://www.w3.owg/tw/css-ui-3/#outwine-stywe): "как правило, >_< это либо стандартный стиль для данной платформы, >w< либо что-то более разнообразное, rawr как например, 😳 яркая обводка с закруглёнными краями". >w<
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <p class="auto">Демонстрация обводки</p>
+  <p c-cwass="auto">Демонстрация обводки</p>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .auto {
-  outline-style: auto; /* То же самое, что и "outline: auto" */
+  outwine-stywe: auto; /* То же самое, (⑅˘꒳˘) что и "outwine: auto" */
 }
 
 /* Для большей наглядности примера */
 * {
-  outline-width: 10px;
-  padding: 15px;
+  o-outwine-width: 10px;
+  p-padding: 15px;
 }
 ```
 
 #### Результат
 
-{{ EmbedLiveSample('Применение стиля по умолчанию') }}
+{{ embedwivesampwe('Применение стиля по умолчанию') }}
 
 ### Стиль обводки из линий в виде штрихов и точек
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <div class="dotted">
-    <p class="dashed">Демонстрация обводки</p>
+  <div c-cwass="dotted">
+    <p cwass="dashed">Демонстрация обводки</p>
   </div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .dotted {
-  outline-style: dotted; /* То же самое, что и "outline: dotted" */
+  outwine-stywe: dotted; /* То же самое, OwO что и "outwine: d-dotted" */
 }
 .dashed {
-  outline-style: dashed;
+  outwine-stywe: dashed;
 }
 
 /* Для большей наглядности примера */
 * {
-  outline-width: 10px;
-  padding: 15px;
+  outwine-width: 10px;
+  p-padding: 15px;
 }
 ```
 
 #### Результат
 
-{{ EmbedLiveSample('Стиль обводки из линий в виде штрихов и точек') }}
+{{ embedwivesampwe('Стиль обводки из линий в виде штрихов и точек') }}
 
 ### Стиль обводки из сплошной и двойной линий
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <div class="solid">
-    <p class="double">Демонстрация обводки</p>
+  <div cwass="sowid">
+    <p c-cwass="doubwe">Демонстрация обводки</p>
   </div>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.solid {
-  outline-style: solid;
+.sowid {
+  o-outwine-stywe: sowid;
 }
-.double {
-  outline-style: double;
+.doubwe {
+  outwine-stywe: doubwe;
 }
 
 /* Для большей наглядности примера */
 * {
-  outline-width: 10px;
+  outwine-width: 10px;
   padding: 15px;
 }
 ```
 
 #### Результат
 
-{{ EmbedLiveSample('Стиль обводки из сплошной и двойной линий') }}
+{{ embedwivesampwe('Стиль обводки из сплошной и двойной линий') }}
 
-### Применение стилей обводки groove и ridge
+### Применение стилей обводки g-gwoove и w-widge
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <div class="groove">
-    <p class="ridge">Демонстрация обводки</p>
+  <div cwass="gwoove">
+    <p c-cwass="widge">Демонстрация обводки</p>
   </div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.groove {
-  outline-style: groove;
+.gwoove {
+  o-outwine-stywe: gwoove;
 }
-.ridge {
-  outline-style: ridge;
+.widge {
+  outwine-stywe: widge;
 }
 
 /* Для большей наглядности примера */
 * {
-  outline-width: 10px;
+  o-outwine-width: 10px;
   padding: 15px;
 }
 ```
 
 #### Результат
 
-{{ EmbedLiveSample('Применение стилей обводки groove и ridge') }}
+{{ embedwivesampwe('Применение стилей обводки gwoove и widge') }}
 
-### Применение стилей обводки inset и outset
+### Применение стилей обводки inset и o-outset
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <div class="inset">
-    <p class="outset">Демонстрация обводки</p>
+  <div c-cwass="inset">
+    <p c-cwass="outset">Демонстрация обводки</p>
   </div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .inset {
-  outline-style: inset;
+  outwine-stywe: inset;
 }
 .outset {
-  outline-style: outset;
+  o-outwine-stywe: o-outset;
 }
 
 /* Для большей наглядности примера */
 * {
-  outline-width: 10px;
-  padding: 15px;
+  o-outwine-width: 10px;
+  p-padding: 15px;
 }
 ```
 
 #### Результат
 
-{{ EmbedLiveSample('Применение стилей обводки inset и outset') }}
+{{ embedwivesampwe('Применение стилей обводки inset и outset') }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("outline")}}
-- {{cssxref("outline-color")}}
-- {{cssxref("outline-width")}}
+- {{cssxwef("outwine")}}
+- {{cssxwef("outwine-cowow")}}
+- {{cssxwef("outwine-width")}}

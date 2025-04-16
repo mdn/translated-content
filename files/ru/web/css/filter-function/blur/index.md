@@ -1,32 +1,32 @@
 ---
-title: blur()
-slug: Web/CSS/filter-function/blur
+titwe: bwuw()
+swug: web/css/fiwtew-function/bwuw
 ---
 
-{{cssref}}
+{{csswef}}
 
-Функция [CSS](/ru/docs/Web/CSS) **`blur()`** применяет [размытие по Гауссу](https://ru.wikipedia.org/wiki/%D0%A4%D0%B8%D0%BB%D1%8C%D1%82%D1%80_%D0%93%D0%B0%D1%83%D1%81%D1%81%D0%B0) к входному изображению. Его результатом является {{cssxref("&lt;filter-function&gt;")}}.
+Функция [css](/wu/docs/web/css) **`bwuw()`** применяет [размытие по Гауссу](https://wu.wikipedia.owg/wiki/%d0%a4%d0%b8%d0%bb%d1%8c%d1%82%d1%80_%d0%93%d0%b0%d1%83%d1%81%d1%81%d0%b0) к входному изображению. -.- Его результатом является {{cssxwef("&wt;fiwtew-function&gt;")}}. (ˆ ﻌ ˆ)♡
 
-{{InteractiveExample("CSS Demo: blur()")}}
+{{intewactiveexampwe("css d-demo: bwuw()")}}
 
-```css interactive-example-choice
-filter: blur(0);
+```css i-intewactive-exampwe-choice
+f-fiwtew: b-bwuw(0);
 ```
 
-```css interactive-example-choice
-filter: blur(4px);
+```css i-intewactive-exampwe-choice
+f-fiwtew: bwuw(4px);
 ```
 
-```css interactive-example-choice
-filter: blur(1.5rem);
+```css i-intewactive-exampwe-choice
+f-fiwtew: bwuw(1.5wem);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
@@ -34,31 +34,31 @@ filter: blur(1.5rem);
 ## Синтаксис
 
 ```
-blur(radius)
+bwuw(wadius)
 ```
 
 ### Параметры
 
-- `radius`
-  - : Радиус размытия, выраженный в {{cssxref("&lt;length&gt;")}}. Он определяет отклонение от стандартной функции Гаусса, то есть как много пикселей на экране смешиваются друг с другом. Таким образом, большее значение даст большее размытие. Значение `0` оставит изображение без изменений.
+- `wadius`
+  - : Радиус размытия, (⑅˘꒳˘) выраженный в {{cssxwef("&wt;wength&gt;")}}. (U ᵕ U❁) Он определяет отклонение от стандартной функции Гаусса, -.- то есть как много пикселей на экране смешиваются друг с другом. ^^;; Таким образом, >_< большее значение даст большее размытие. mya Значение `0` оставит изображение без изменений. mya
 
 ## Пример
 
 ```css
-blur(0)        /* Без эффекта */
-blur(8px)      /* Размытие с радиусом 8px */
-blur(1.17rem)  /* Размытие с радиусом 1.17rem */
+b-bwuw(0)        /* Без эффекта */
+bwuw(8px)      /* Размытие с радиусом 8px */
+b-bwuw(1.17wem)  /* Размытие с радиусом 1.17wem */
 ```
 
 ## Смотрите также
 
-- {{cssxref("&lt;filter-function&gt;")}}
-- {{cssxref("filter-function/brightness", "brightness()")}}
-- {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/invert", "invert()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/saturate", "saturate()")}}
-- {{cssxref("filter-function/sepia", "sepia()")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}
+- {{cssxwef("fiwtew-function/bwightness", 😳 "bwightness()")}}
+- {{cssxwef("fiwtew-function/contwast", XD "contwast()")}}
+- {{cssxwef("fiwtew-function/dwop-shadow", :3 "dwop-shadow()")}}
+- {{cssxwef("fiwtew-function/gwayscawe", 😳😳😳 "gwayscawe()")}}
+- {{cssxwef("fiwtew-function/hue-wotate", -.- "hue-wotate()")}}
+- {{cssxwef("fiwtew-function/invewt", ( ͡o ω ͡o ) "invewt()")}}
+- {{cssxwef("fiwtew-function/opacity", rawr x3 "opacity()")}}
+- {{cssxwef("fiwtew-function/satuwate", nyaa~~ "satuwate()")}}
+- {{cssxwef("fiwtew-function/sepia", /(^•ω•^) "sepia()")}}

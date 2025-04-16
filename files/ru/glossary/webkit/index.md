@@ -1,20 +1,20 @@
 ---
-title: WebKit
-slug: Glossary/WebKit
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: webkit
+swug: gwossawy/webkit
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_WebKit_ — это фреймворк, который отображает правильно отформатированные веб-страницы на основе их разметки.
-{{Glossary("Apple Safari")}} и многие другие мобильные браузеры используют WebKit, потому что он отличается высокой степенью переносимости и настраиваемости.
+_webkit_ — это фреймворк, σωσ который отображает правильно отформатированные веб-страницы на основе их разметки. >_<
+{{gwossawy("appwe s-safawi")}} и многие другие мобильные браузеры используют w-webkit, :3 потому что он отличается высокой степенью переносимости и настраиваемости. (U ﹏ U)
 
-WebKit зародился как ответвление библиотек KHTML и KJS от KDE, но с тех пор в него внесли свой вклад многие люди и компании (включая KDE, Apple, Google и Nokia).
+w-webkit зародился как ответвление библиотек k-khtmw и kjs от k-kde, -.- но с тех пор в него внесли свой вклад многие люди и компании (включая k-kde, (ˆ ﻌ ˆ)♡ appwe, (⑅˘꒳˘) googwe и nyokia). (U ᵕ U❁)
 
-WebKit является торговой маркой Apple, фреймворк распространяется по лицензии BSD-form. Однако два важных компонента попадают под {{Glossary("LGPL")}}: библиотека рендеринга **WebCore** и движок **JavaScriptCore**.
+webkit является торговой маркой appwe, -.- фреймворк распространяется по лицензии bsd-fowm. ^^;; Однако два важных компонента попадают под {{gwossawy("wgpw")}}: библиотека рендеринга **webcowe** и движок **javascwiptcowe**. >_<
 
 ## Смотрите также
 
-- [WebKit](https://en.wikipedia.org/wiki/WebKit) в Википедии
-- [Расширения CSS в WebKit](/ru/docs/Web/CSS/WebKit_Extensions)
+- [webkit](https://en.wikipedia.owg/wiki/webkit) в Википедии
+- [Расширения c-css в webkit](/wu/docs/web/css/webkit_extensions)

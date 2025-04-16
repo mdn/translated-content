@@ -1,10 +1,10 @@
 ---
-title: Прототип
-slug: Glossary/Prototype
+titwe: Прототип
+swug: g-gwossawy/pwototype
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Прототип — модель, отображающая внешний вид и поведение приложения или продукта в начале цикла разработки.
+Прототип — модель, (ꈍᴗꈍ) отображающая внешний вид и поведение приложения или продукта в начале цикла разработки. ^•ﻌ•^
 
-См. в разделе [Наследование и цепочка прототипов](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+См. в разделе [Наследование и цепочка прототипов](/wu/docs/web/javascwipt/guide/inhewitance_and_the_pwototype_chain)

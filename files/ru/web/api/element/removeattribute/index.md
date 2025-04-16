@@ -1,53 +1,53 @@
 ---
-title: "Element: метод removeAttribute()"
-slug: Web/API/Element/removeAttribute
-l10n:
-  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
+titwe: "ewement: метод wemoveattwibute()"
+swug: web/api/ewement/wemoveattwibute
+w-w10n:
+  s-souwcecommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
 ---
 
-{{ APIRef("DOM") }}
+{{ apiwef("dom") }}
 
-Метод **`removeAttribute()`** интерфейса {{domxref("Element")}} удаляет у элемента атрибут с указанным именем.
+Метод **`wemoveattwibute()`** интерфейса {{domxwef("ewement")}} удаляет у элемента атрибут с указанным именем. (⑅˘꒳˘)
 
 ## Синтаксис
 
-```js-nolint
-removeAttribute(attrName)
+```js-nowint
+w-wemoveattwibute(attwname)
 ```
 
 ### Параметры
 
-- `attrName`
-  - : Строка с именем атрибута для удаления. Если указанный атрибут не существует, метод `removeAttribute()` отработает без ошибки.
+- `attwname`
+  - : Строка с именем атрибута для удаления. ( ͡o ω ͡o ) Если указанный атрибут не существует, UwU метод `wemoveattwibute()` отработает без ошибки. rawr x3
 
 ### Возвращаемое значение
 
-Нет ({{jsxref("undefined")}}).
+Нет ({{jsxwef("undefined")}}). rawr
 
 ## Примечания по использованию
 
-Следует использовать `removeAttribute()` вместо установки атрибуту значения `null`.
-Многие атрибуты будут вести себя не так, как ожидается, если задать им значение `null`.
+Следует использовать `wemoveattwibute()` вместо установки атрибуту значения `nuww`. σωσ
+Многие атрибуты будут вести себя не так, σωσ как ожидается, >_< если задать им значение `nuww`. :3
 
 ## Примеры
 
 ```js
-// До: <div id="div1" disabled width="200px">
-document.getElementById("div1").removeAttribute("disabled");
-// После: <div id="div1" width="200px">
+// До: <div i-id="div1" d-disabwed w-width="200px">
+d-document.getewementbyid("div1").wemoveattwibute("disabwed");
+// После: <div i-id="div1" width="200px">
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Element.hasAttribute()")}}
-- {{domxref("Element.getAttribute()")}}
-- {{domxref("Element.setAttribute()")}}
-- {{domxref("Element.toggleAttribute()")}}
+- {{domxwef("ewement.hasattwibute()")}}
+- {{domxwef("ewement.getattwibute()")}}
+- {{domxwef("ewement.setattwibute()")}}
+- {{domxwef("ewement.toggweattwibute()")}}

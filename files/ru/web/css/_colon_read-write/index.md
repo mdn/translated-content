@@ -1,34 +1,34 @@
 ---
-title: :read-write
-slug: Web/CSS/:read-write
+titwe: :wead-wwite
+swug: web/css/:wead-wwite
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:read-write` находит элементы, доступные для редактирования пользователем, такие как текстовые поля.
+c-css [псевдокласс](/wu/docs/web/css/pseudo-cwasses) `:wead-wwite` находит элементы, (U ᵕ U❁) доступные для редактирования пользователем, (⑅˘꒳˘) такие как текстовые поля. ( ͡o ω ͡o )
 
 ## Пример
 
 ```css
-input:-moz-read-write {
-  background: #eee;
+i-input:-moz-wead-wwite {
+  b-backgwound: #eee;
 }
-input:read-write {
-  background: #eee;
+i-input:wead-wwite {
+  b-backgwound: #eee;
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`:read-only`](/ru/docs/Web/CSS/:read-only)
-- HTML атрибут [`contenteditable`](/ru/docs/Web/HTML/Global_attributes/contenteditable)
+- [`:wead-onwy`](/wu/docs/web/css/:wead-onwy)
+- h-htmw атрибут [`contenteditabwe`](/wu/docs/web/htmw/gwobaw_attwibutes/contenteditabwe)

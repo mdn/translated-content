@@ -1,34 +1,34 @@
 ---
-title: GlobalEventHandler.onanimationend
-slug: Web/API/Element/animationend_event
+titwe: gwobaweventhandwew.onanimationend
+swug: w-web/api/ewement/animationend_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Обработчик события [`animationend`](/ru/docs/Web/API/Element/animationend_event). Это событие вызывается когда [CSS-анимация](/ru/docs/Web/CSS/CSS_animations) достигает конца своего активного периода, который вычисляется как ({{cssxref("animation-duration")}} \* {{cssxref("animation-iteration-count")}}) + {{cssxref("animation-delay")}}.
+Обработчик события [`animationend`](/wu/docs/web/api/ewement/animationend_event). σωσ Это событие вызывается когда [css-анимация](/wu/docs/web/css/css_animations) достигает конца своего активного периода, σωσ который вычисляется как ({{cssxwef("animation-duwation")}} \* {{cssxwef("animation-itewation-count")}}) + {{cssxwef("animation-deway")}}. >_<
 
 ## Синтаксис
 
 ```
-var animEndHandler = target.onanimationend;
+v-vaw animendhandwew = t-tawget.onanimationend;
 
-target.onanimationend = {{jsxref("Function")}}
+t-tawget.onanimationend = {{jsxwef("function")}}
 ```
 
 ### Значение
 
-A {{jsxref ("Function")}} вызывается, когда происходит событие [`animationend`](/ru/docs/Web/API/Element/animationend_event), указывающее, что анимация CSS начинается с цели, где целевой объект является HTML-элементом ({{ Domxref ("HTMLElement")}}), документ ({{domxref ("Document")}}) или окно ({{domxref ("Window")}}). Функция получает в качестве входного параметра один параметр: {{domxref ("AnimationEvent")}} объект, описывающий событие, которое произошло.
+a-a {{jsxwef ("function")}} вызывается, :3 когда происходит событие [`animationend`](/wu/docs/web/api/ewement/animationend_event), (U ﹏ U) указывающее, -.- что анимация c-css начинается с цели, (ˆ ﻌ ˆ)♡ где целевой объект является htmw-элементом ({{ d-domxwef ("htmwewement")}}), (⑅˘꒳˘) документ ({{domxwef ("document")}}) или окно ({{domxwef ("window")}}). (U ᵕ U❁) Функция получает в качестве входного параметра один параметр: {{domxwef ("animationevent")}} объект, -.- описывающий событие, ^^;; которое произошло. >_<
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- The [`animationend`](/ru/docs/Web/API/Element/animationend_event) event this event handler is triggered by
-- {{domxref("AnimationEvent")}}
-- The [`animationstart`](/ru/docs/Web/API/Element/animationstart_event) event
+- t-the [`animationend`](/wu/docs/web/api/ewement/animationend_event) event this event handwew is twiggewed by
+- {{domxwef("animationevent")}}
+- the [`animationstawt`](/wu/docs/web/api/ewement/animationstawt_event) e-event

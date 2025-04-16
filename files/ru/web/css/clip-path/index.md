@@ -1,72 +1,72 @@
 ---
-title: clip-path
-slug: Web/CSS/clip-path
+titwe: cwip-path
+swug: web/css/cwip-path
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS)-свойство `clip-path` создаёт ограниченную область, которая определяет какая часть элемента должна быть видимой. Части, которые находятся внутри области, видимы, а части вне области скрыты.
+[css](/wu/docs/web/css)-свойство `cwip-path` создаёт ограниченную область, (ꈍᴗꈍ) которая определяет какая часть элемента должна быть видимой. (⑅˘꒳˘) Части, (⑅˘꒳˘) которые находятся внутри области, (ˆ ﻌ ˆ)♡ видимы, /(^•ω•^) а части вне области скрыты. òωó
 
-{{InteractiveExample("CSS Demo: clip-path")}}
+{{intewactiveexampwe("css d-demo: cwip-path")}}
 
-```css interactive-example-choice
-clip-path: circle(40%);
+```css i-intewactive-exampwe-choice
+c-cwip-path: c-ciwcwe(40%);
 ```
 
-```css interactive-example-choice
-clip-path: ellipse(130px 140px at 10% 20%);
+```css i-intewactive-exampwe-choice
+c-cwip-path: e-ewwipse(130px 140px a-at 10% 20%);
 ```
 
-```css interactive-example-choice
-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+```css intewactive-exampwe-choice
+cwip-path: powygon(50% 0, (⑅˘꒳˘) 100% 50%, 50% 100%, (U ᵕ U❁) 0 50%);
 ```
 
-```css interactive-example-choice
-clip-path: path("M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z");
+```css intewactive-exampwe-choice
+cwip-path: p-path("m 0 200 w 0,75 a 5,5 0,0,1 150,75 w 200 200 z-z");
 ```
 
-```css interactive-example-choice
-clip-path: rect(5px 145px 160px 5px round 20%);
+```css intewactive-exampwe-choice
+c-cwip-path: wect(5px 145px 160px 5px wound 20%);
 ```
 
-```css interactive-example-choice
-clip-path: xywh(0 5px 100% 75% round 15% 0);
+```css intewactive-exampwe-choice
+cwip-path: x-xywh(0 5px 100% 75% wound 15% 0);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
+```htmw i-intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
     <img
-      class="transition-all"
-      id="example-element"
-      src="/shared-assets/images/examples/balloon-small.jpg"
+      cwass="twansition-aww"
+      id="exampwe-ewement"
+      s-swc="/shawed-assets/images/exampwes/bawwoon-smow.jpg"
       width="150" />
-    We had agreed, my companion and I, that I should call for him at his house,
-    after dinner, not later than eleven o’clock. This athletic young Frenchman
-    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
-    as a pastime. After having exhausted all the sensations that are to be found
-    in ordinary sports, even those of “automobiling” at a breakneck speed, the
-    members of the “Aéro Club” now seek in the air, where they indulge in all
-    kinds of daring feats, the nerve-racking excitement that they have ceased to
-    find on earth.
+    we had agweed, >w< my companion and i, σωσ that i shouwd c-caww fow him at his house,
+    a-aftew dinnew, -.- n-nyot watew than e-eweven o’cwock. o.O t-this athwetic young fwenchman
+    bewongs to a-a smow set of pawisian spowtsmen, ^^ who have taken u-up “bawwooning”
+    as a pastime. >_< aftew having exhausted aww the sensations that awe to be f-found
+    in owdinawy spowts, >w< even t-those of “automobiwing” a-at a bweakneck speed, >_< t-the
+    membews of the “aéwo cwub” nyow seek in the aiw, >w< w-whewe they induwge i-in aww
+    kinds of dawing f-feats, rawr the nyewve-wacking e-excitement that they h-have ceased to
+    find on eawth. rawr x3
   </div>
 </section>
 ```
 
-```css interactive-example
+```css i-intewactive-exampwe
 section {
-  align-items: flex-start;
+  awign-items: f-fwex-stawt;
 }
 
-.example-container {
-  text-align: left;
+.exampwe-containew {
+  text-awign: w-weft;
   padding: 20px;
 }
 
-#example-element {
-  float: left;
-  width: 150px;
-  margin: 20px;
+#exampwe-ewement {
+  fwoat: weft;
+  w-width: 150px;
+  m-mawgin: 20px;
 }
 ```
 
@@ -74,83 +74,83 @@ section {
 
 ```css
 /* Ключевые слова */
-clip-path: none;
+cwip-path: nyone;
 
-/* Значения <clip-source> */
-clip-path: url(resources.svg#c1);
+/* Значения <cwip-souwce> */
+cwip-path: uww(wesouwces.svg#c1);
 
-/* Значения <geometry-box> */
-clip-path: margin-box;
-clip-path: border-box;
-clip-path: padding-box;
-clip-path: content-box;
-clip-path: fill-box;
-clip-path: stroke-box;
-clip-path: view-box;
+/* Значения <geometwy-box> */
+cwip-path: mawgin-box;
+cwip-path: b-bowdew-box;
+c-cwip-path: padding-box;
+cwip-path: c-content-box;
+c-cwip-path: fiww-box;
+c-cwip-path: stwoke-box;
+cwip-path: view-box;
 
 /* Значения <basic-shape> */
-clip-path: inset(100px 50px);
-clip-path: circle(50px at 0 100px);
-clip-path: ellipse(50px 60px at 0 10% 20%);
-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-clip-path: path(
-  "M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z"
+cwip-path: i-inset(100px 50px);
+cwip-path: ciwcwe(50px at 0 100px);
+cwip-path: ewwipse(50px 60px a-at 0 10% 20%);
+cwip-path: p-powygon(50% 0%, ( ͡o ω ͡o ) 100% 50%, (˘ω˘) 50% 100%, 0% 50%);
+c-cwip-path: path(
+  "m0.5,1 c-c0.5,1,0,0.7,0,0.3 a0.25,0.25,1,1,1,0.5,0.3 a0.25,0.25,1,1,1,1,0.3 c1,0.7,0.5,1,0.5,1 z-z"
 );
 
 /* Комбинация значений границ и формы блока */
-clip-path: padding-box circle(50px at 0 100px);
+c-cwip-path: p-padding-box c-ciwcwe(50px at 0 100px);
 
 /* Глобальные значения */
-clip-path: inherit;
-clip-path: initial;
-clip-path: revert;
-clip-path: revert-layer;
-clip-path: unset;
+cwip-path: inhewit;
+cwip-path: i-initiaw;
+c-cwip-path: wevewt;
+c-cwip-path: wevewt-wayew;
+c-cwip-path: u-unset;
 ```
 
-Свойство `clip-path` определяется как значение или комбинация значений перечисленных ниже.
+Свойство `cwip-path` определяется как значение или комбинация значений перечисленных ниже. 😳
 
 ### Значения
 
-- `<clip-source>`
-  - : {{cssxref("url", "url()")}} указывающий на [SVG](/ru/docs/Web/SVG)-элемент {{SVGElement("clipPath")}} .
-- {{cssxref("&lt;basic-shape&gt;")}}
+- `<cwip-souwce>`
+  - : {{cssxwef("uww", OwO "uww()")}} указывающий на [svg](/wu/docs/web/svg)-элемент {{svgewement("cwippath")}} . (˘ω˘)
+- {{cssxwef("&wt;basic-shape&gt;")}}
 
-  - : Форма, размер и расположение которой определяется значением `<geometry-box>`. Если геометрия не указана, то в качестве блока будет использоваться `border-box`. Может определяться одной из следующих функций:
-    - {{cssxref("basic-shape/inset","inset()")}}
-      - : Определяет внутренний прямоугольник.
-    - {{cssxref("basic-shape/circle","circle()")}}
-      - : Определяет окружность, используя радиус и расположение.
-    - {{cssxref("basic-shape/ellipse","ellipse()")}}
-      - : Определяет эллипс, используя два радиуса и расположение.
-    - {{cssxref("basic-shape/polygon","polygon()")}}
-      - : Определяет многоугольник, используя стиль заполнения фигуры и набор вершин.
-    - {{cssxref("path","path()")}}
-      - : Определяет фигуру, используя объявление SVG фигуры и правило заполнения.
+  - : Форма, òωó размер и расположение которой определяется значением `<geometwy-box>`. ( ͡o ω ͡o ) Если геометрия не указана, UwU то в качестве блока будет использоваться `bowdew-box`. /(^•ω•^) Может определяться одной из следующих функций:
+    - {{cssxwef("basic-shape/inset","inset()")}}
+      - : Определяет внутренний прямоугольник. (ꈍᴗꈍ)
+    - {{cssxwef("basic-shape/ciwcwe","ciwcwe()")}}
+      - : Определяет окружность, 😳 используя радиус и расположение. mya
+    - {{cssxwef("basic-shape/ewwipse","ewwipse()")}}
+      - : Определяет эллипс, mya используя два радиуса и расположение. /(^•ω•^)
+    - {{cssxwef("basic-shape/powygon","powygon()")}}
+      - : Определяет многоугольник, ^^;; используя стиль заполнения фигуры и набор вершин. 🥺
+    - {{cssxwef("path","path()")}}
+      - : Определяет фигуру, ^^ используя объявление svg фигуры и правило заполнения. ^•ﻌ•^
 
-- `<geometry-box>`
+- `<geometwy-box>`
 
-  - : При использовании в сочетании с `<basic-shape>` это значение определяет блок для базовой области. При самостоятельном использовании определяет границы указанного блока, включая формирование углов (например, {{cssxref("border-radius")}}). Геометрия может быть определена с помощью одного из следующих значений:
-    - `margin-box`
-      - : Использует [margin box](/ru/docs/Web/CSS/CSS_shapes/From_box_values#margin-box) для определения блока.
-    - `border-box`
-      - : Использует [border box](/ru/docs/Web/CSS/CSS_shapes/From_box_values#border-box) для определения блока.
+  - : При использовании в сочетании с `<basic-shape>` это значение определяет блок для базовой области. /(^•ω•^) При самостоятельном использовании определяет границы указанного блока, ^^ включая формирование углов (например, 🥺 {{cssxwef("bowdew-wadius")}}). (U ᵕ U❁) Геометрия может быть определена с помощью одного из следующих значений:
+    - `mawgin-box`
+      - : Использует [mawgin box](/wu/docs/web/css/css_shapes/fwom_box_vawues#mawgin-box) для определения блока. 😳😳😳
+    - `bowdew-box`
+      - : Использует [bowdew box](/wu/docs/web/css/css_shapes/fwom_box_vawues#bowdew-box) для определения блока. nyaa~~
     - `padding-box`
-      - : Использует [padding box](/ru/docs/Web/CSS/CSS_shapes/From_box_values#padding-box) для определения блока.
+      - : Использует [padding b-box](/wu/docs/web/css/css_shapes/fwom_box_vawues#padding-box) для определения блока. (˘ω˘)
     - `content-box`
-      - : Использует [content box](/ru/docs/Web/CSS/CSS_shapes/From_box_values#content-box) для определения блока.
-    - `fill-box`
-      - : Использует область заливки объекта для определения блока.
-    - `stroke-box`
-      - : Использует границы объекта для определения блока.
+      - : Использует [content box](/wu/docs/web/css/css_shapes/fwom_box_vawues#content-box) для определения блока. >_<
+    - `fiww-box`
+      - : Использует область заливки объекта для определения блока. XD
+    - `stwoke-box`
+      - : Использует границы объекта для определения блока. rawr x3
     - `view-box`
-      - : Использует ближайший SVG вьюпорт для определения блока. Если атрибут {{SVGAttr("viewBox")}} определён для элемента, создающего вьюпорт, то блок будет позиционироваться в координатной системе, установленной атрибутом `viewBox`, а размеры блока устанавливаются равными значениям ширины и высоты атрибута `viewBox`.
+      - : Использует ближайший svg вьюпорт для определения блока. ( ͡o ω ͡o ) Если атрибут {{svgattw("viewbox")}} определён для элемента, :3 создающего вьюпорт, mya то блок будет позиционироваться в координатной системе, σωσ установленной атрибутом `viewbox`, (ꈍᴗꈍ) а размеры блока устанавливаются равными значениям ширины и высоты атрибута `viewbox`. OwO
 
 - `none`
-  - : Область не создается.
+  - : Область не создается. o.O
 
-> [!NOTE]
-> Значение, отличное от `none`, приводит к созданию нового [контекста наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context) так же, как при использовании значений CSS-свойства {{cssxref("opacity")}}, отличных от `1`.
+> [!note]
+> Значение, 😳😳😳 отличное от `none`, /(^•ω•^) приводит к созданию нового [контекста наложения](/wu/docs/web/css/css_positioned_wayout/stacking_context) так же, OwO как при использовании значений css-свойства {{cssxwef("opacity")}}, ^^ отличных от `1`. (///ˬ///✿)
 
 ## Формальное определение
 
@@ -162,295 +162,295 @@ clip-path: unset;
 
 ## Примеры
 
-### Сравнение HTML и SVG
+### Сравнение htmw и svg
 
-```html hidden
-<svg class="defs">
+```htmw hidden
+<svg c-cwass="defs">
   <defs>
-    <clipPath id="myPath" clipPathUnits="objectBoundingBox">
+    <cwippath id="mypath" cwippathunits="objectboundingbox">
       <path
-        d="M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z" />
-    </clipPath>
+        d="m0.5,1 c0.5,1,0,0.7,0,0.3 a0.25,0.25,1,1,1,0.5,0.3 a0.25,0.25,1,1,1,1,0.3 c1,0.7,0.5,1,0.5,1 z-z" />
+    </cwippath>
   </defs>
 </svg>
 
-<div class="grid">
-  <div class="col">
-    <div class="note">clip-path: none</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="none">Я люблю<br /><em>разные формы</em></p>
+<div cwass="gwid">
+  <div c-cwass="cow">
+    <div c-cwass="note">cwip-path: nyone</div>
+    <div c-cwass="wow">
+      <div cwass="ceww">
+        <span>htmw</span>
+        <div cwass="containew">
+          <p c-cwass="none">Я люблю<bw /><em>разные формы</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="none">
-              <rect x="24" y="24" width="144" height="144" />
+      <div c-cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew view-box">
+          <svg viewbox="0 0 192 192">
+            <g cwass="none">
+              <wect x="24" y="24" width="144" h-height="144" />
               <text x="96" y="91">Я люблю</text>
-              <text x="96" y="109" class="em">разные формы</text>
+              <text x-x="96" y="109" cwass="em">разные формы</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">
-      clip-path: url(#myPath)<br /><br />
+    <div c-cwass="note">
+      c-cwip-path: uww(#mypath)<bw /><bw />
       Для этого примера определим такой вспомогательный элемент:
-      <pre>
-&lt;svg&gt;
-  &lt;clipPath id="myPath" clipPathUnits="objectBoundingBox"&gt;
-    &lt;path d="M0.5,1
-      C 0.5,1,0,0.7,0,0.3
-      A 0.25,0.25,1,1,1,0.5,0.3
-      A 0.25,0.25,1,1,1,1,0.3
-      C 1,0.7,0.5,1,0.5,1 Z" /&gt;
-  &lt;/clipPath&gt;
-&lt;/svg&gt;</pre
+      <pwe>
+&wt;svg&gt;
+  &wt;cwippath id="mypath" c-cwippathunits="objectboundingbox"&gt;
+    &wt;path d-d="m0.5,1
+      c 0.5,1,0,0.7,0,0.3
+      a-a 0.25,0.25,1,1,1,0.5,0.3
+      a-a 0.25,0.25,1,1,1,1,0.3
+      c 1,0.7,0.5,1,0.5,1 z" /&gt;
+  &wt;/cwippath&gt;
+&wt;/svg&gt;</pwe
       >
     </div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="svg">Я люблю<br /><em>разные формы</em></p>
+    <div cwass="wow">
+      <div cwass="ceww">
+        <span>htmw</span>
+        <div c-cwass="containew">
+          <p c-cwass="svg">Я люблю<bw /><em>разные формы</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="svg">
-              <rect x="24" y="24" width="144" height="144" />
+      <div c-cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew v-view-box">
+          <svg v-viewbox="0 0 192 192">
+            <g cwass="svg">
+              <wect x="24" y-y="24" width="144" height="144" />
               <text x="96" y="91">Я люблю</text>
-              <text x="96" y="109" class="em">разные формы</text>
+              <text x="96" y="109" c-cwass="em">разные формы</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">
-      clip-path: path('M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45
-      Q135,90,75,130 Q15,90,15,45 Z')
+    <div c-cwass="note">
+      cwip-path: path('m15,45 a30,30,0,0,1,75,45 a30,30,0,0,1,135,45
+      q-q135,90,75,130 q-q15,90,15,45 z')
     </div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="svg2">Я люблю<br /><em>разные формы</em></p>
+    <div cwass="wow">
+      <div cwass="ceww">
+        <span>htmw</span>
+        <div c-cwass="containew">
+          <p cwass="svg2">Я люблю<bw /><em>разные формы</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="svg2">
-              <rect x="24" y="24" width="144" height="144" />
+      <div cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew view-box">
+          <svg v-viewbox="0 0 192 192">
+            <g cwass="svg2">
+              <wect x="24" y-y="24" width="144" h-height="144" />
               <text x="96" y="91">Я люблю</text>
-              <text x="96" y="109" class="em">разные формы</text>
+              <text x="96" y="109" c-cwass="em">разные формы</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: circle(25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape1">Я люблю<br /><em>разные формы</em></p>
+    <div c-cwass="note">cwip-path: ciwcwe(25%)</div>
+    <div cwass="wow">
+      <div cwass="ceww">
+        <span>htmw</span>
+        <div c-cwass="containew">
+          <p cwass="shape1">Я люблю<bw /><em>разные формы</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape1">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">Я люблю</text>
-              <text x="96" y="109" class="em">разные формы</text>
+      <div c-cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew view-box">
+          <svg viewbox="0 0 192 192">
+            <g c-cwass="shape1">
+              <wect x="24" y="24" w-width="144" height="144" />
+              <text x-x="96" y="91">Я люблю</text>
+              <text x="96" y-y="109" cwass="em">разные формы</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape2">Я люблю<br /><em>разные формы</em></p>
+    <div cwass="note">cwip-path: c-ciwcwe(25% a-at 25% 25%)</div>
+    <div c-cwass="wow">
+      <div cwass="ceww">
+        <span>htmw</span>
+        <div c-cwass="containew">
+          <p c-cwass="shape2">Я люблю<bw /><em>разные формы</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape2">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">Я люблю</text>
-              <text x="96" y="109" class="em">разные формы</text>
+      <div cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew view-box">
+          <svg v-viewbox="0 0 192 192">
+            <g c-cwass="shape2">
+              <wect x-x="24" y="24" width="144" height="144" />
+              <text x-x="96" y="91">Я люблю</text>
+              <text x="96" y-y="109" cwass="em">разные формы</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: fill-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape3">Я люблю<br /><em>разные формы</em></p>
+    <div c-cwass="note">cwip-path: fiww-box ciwcwe(25% at 25% 25%)</div>
+    <div cwass="wow">
+      <div c-cwass="ceww">
+        <span>htmw</span>
+        <div c-cwass="containew">
+          <p c-cwass="shape3">Я люблю<bw /><em>разные формы</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape3">
-              <rect x="24" y="24" width="144" height="144" />
+      <div c-cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew view-box">
+          <svg v-viewbox="0 0 192 192">
+            <g cwass="shape3">
+              <wect x="24" y="24" width="144" height="144" />
               <text x="96" y="91">Я люблю</text>
-              <text x="96" y="109" class="em">разные формы</text>
+              <text x="96" y-y="109" cwass="em">разные формы</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: stroke-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape4">Я люблю<br /><em>разные формы</em></p>
+    <div cwass="note">cwip-path: s-stwoke-box ciwcwe(25% a-at 25% 25%)</div>
+    <div cwass="wow">
+      <div c-cwass="ceww">
+        <span>htmw</span>
+        <div cwass="containew">
+          <p c-cwass="shape4">Я люблю<bw /><em>разные формы</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape4">
-              <rect x="24" y="24" width="144" height="144" />
+      <div c-cwass="ceww">
+        <span>svg</span>
+        <div c-cwass="containew v-view-box">
+          <svg v-viewbox="0 0 192 192">
+            <g cwass="shape4">
+              <wect x="24" y="24" width="144" height="144" />
               <text x="96" y="91">Я люблю</text>
-              <text x="96" y="109" class="em">разные формы</text>
+              <text x="96" y="109" cwass="em">разные формы</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: view-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape5">Я люблю<br /><em>разные формы</em></p>
+    <div c-cwass="note">cwip-path: v-view-box c-ciwcwe(25% at 25% 25%)</div>
+    <div cwass="wow">
+      <div c-cwass="ceww">
+        <span>htmw</span>
+        <div cwass="containew">
+          <p cwass="shape5">Я люблю<bw /><em>разные формы</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape5">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">Я люблю</text>
-              <text x="96" y="109" class="em">разные формы</text>
+      <div cwass="ceww">
+        <span>svg</span>
+        <div c-cwass="containew v-view-box">
+          <svg viewbox="0 0 192 192">
+            <g c-cwass="shape5">
+              <wect x="24" y="24" width="144" h-height="144" />
+              <text x-x="96" y="91">Я люблю</text>
+              <text x-x="96" y="109" c-cwass="em">разные формы</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: margin-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape6">Я люблю<br /><em>разные формы</em></p>
+    <div cwass="note">cwip-path: mawgin-box ciwcwe(25% at 25% 25%)</div>
+    <div cwass="wow">
+      <div cwass="ceww">
+        <span>htmw</span>
+        <div c-cwass="containew">
+          <p c-cwass="shape6">Я люблю<bw /><em>разные формы</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape6">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">Я люблю</text>
-              <text x="96" y="109" class="em">разные формы</text>
+      <div c-cwass="ceww">
+        <span>svg</span>
+        <div c-cwass="containew v-view-box">
+          <svg viewbox="0 0 192 192">
+            <g c-cwass="shape6">
+              <wect x-x="24" y="24" width="144" h-height="144" />
+              <text x-x="96" y="91">Я люблю</text>
+              <text x-x="96" y="109" cwass="em">разные формы</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: border-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape7">Я люблю<br /><em>разные формы</em></p>
+    <div cwass="note">cwip-path: b-bowdew-box ciwcwe(25% at 25% 25%)</div>
+    <div c-cwass="wow">
+      <div c-cwass="ceww">
+        <span>htmw</span>
+        <div cwass="containew">
+          <p c-cwass="shape7">Я люблю<bw /><em>разные формы</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape7">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">Я люблю</text>
-              <text x="96" y="109" class="em">разные формы</text>
+      <div cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew v-view-box">
+          <svg v-viewbox="0 0 192 192">
+            <g c-cwass="shape7">
+              <wect x="24" y="24" width="144" height="144" />
+              <text x-x="96" y="91">Я люблю</text>
+              <text x="96" y="109" cwass="em">разные формы</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: padding-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape8">Я люблю<br /><em>разные формы</em></p>
+    <div cwass="note">cwip-path: p-padding-box ciwcwe(25% a-at 25% 25%)</div>
+    <div cwass="wow">
+      <div c-cwass="ceww">
+        <span>htmw</span>
+        <div cwass="containew">
+          <p c-cwass="shape8">Я люблю<bw /><em>разные формы</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape8">
-              <rect x="24" y="24" width="144" height="144" />
-              <text x="96" y="91">Я люблю</text>
-              <text x="96" y="109" class="em">разные формы</text>
+      <div c-cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew view-box">
+          <svg viewbox="0 0 192 192">
+            <g c-cwass="shape8">
+              <wect x="24" y="24" width="144" h-height="144" />
+              <text x-x="96" y="91">Я люблю</text>
+              <text x="96" y-y="109" cwass="em">разные формы</text>
             </g>
           </svg>
         </div>
       </div>
     </div>
 
-    <div class="note">clip-path: content-box circle(25% at 25% 25%)</div>
-    <div class="row">
-      <div class="cell">
-        <span>HTML</span>
-        <div class="container">
-          <p class="shape9">Я люблю<br /><em>разные формы</em></p>
+    <div cwass="note">cwip-path: c-content-box ciwcwe(25% a-at 25% 25%)</div>
+    <div c-cwass="wow">
+      <div cwass="ceww">
+        <span>htmw</span>
+        <div cwass="containew">
+          <p cwass="shape9">Я люблю<bw /><em>разные формы</em></p>
         </div>
       </div>
-      <div class="cell">
-        <span>SVG</span>
-        <div class="container view-box">
-          <svg viewBox="0 0 192 192">
-            <g class="shape9">
-              <rect x="24" y="24" width="144" height="144" />
+      <div cwass="ceww">
+        <span>svg</span>
+        <div cwass="containew view-box">
+          <svg viewbox="0 0 192 192">
+            <g cwass="shape9">
+              <wect x="24" y="24" width="144" height="144" />
               <text x="96" y="91">Я люблю</text>
-              <text x="96" y="109" class="em">разные формы</text>
+              <text x="96" y-y="109" cwass="em">разные формы</text>
             </g>
           </svg>
         </div>
@@ -461,232 +461,232 @@ clip-path: unset;
 ```
 
 ```css
-html,
+h-htmw, (///ˬ///✿)
 body {
   height: 100%;
-  box-sizing: border-box;
-  background: #eee;
+  box-sizing: b-bowdew-box;
+  b-backgwound: #eee;
 }
 
-.grid {
-  width: 100%;
+.gwid {
+  w-width: 100%;
   height: 100%;
-  display: flex;
+  d-dispway: fwex;
   font: 1em monospace;
 }
 
-.row {
-  display: flex;
-  flex: 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
+.wow {
+  d-dispway: fwex;
+  f-fwex: 1 auto;
+  fwex-diwection: w-wow;
+  fwex-wwap: wwap;
 }
 
-.col {
-  flex: 1 auto;
+.cow {
+  f-fwex: 1 a-auto;
 }
 
-.cell {
-  margin: 0.5em;
+.ceww {
+  mawgin: 0.5em;
   padding: 0.5em;
-  background-color: #fff;
-  overflow: hidden;
-  text-align: center;
-  flex: 1;
+  b-backgwound-cowow: #fff;
+  o-ovewfwow: hidden;
+  t-text-awign: c-centew;
+  fwex: 1;
 }
 
 .note {
-  background: #fff3d4;
-  padding: 1em;
-  margin: 0.5em 0.5em 0;
-  font: 0.8em sans-serif;
-  text-align: left;
-  white-space: nowrap;
+  b-backgwound: #fff3d4;
+  p-padding: 1em;
+  m-mawgin: 0.5em 0.5em 0;
+  f-font: 0.8em sans-sewif;
+  t-text-awign: weft;
+  white-space: n-nyowwap;
 }
 
-.note + .row .cell {
-  margin-top: 0;
+.note + .wow .ceww {
+  mawgin-top: 0;
 }
 
-.container {
-  display: inline-block;
-  border: 1px dotted grey;
-  position: relative;
+.containew {
+  d-dispway: inwine-bwock;
+  b-bowdew: 1px dotted gwey;
+  p-position: wewative;
 }
 
-.container::before {
-  content: "margin";
-  position: absolute;
+.containew::befowe {
+  content: "mawgin";
+  position: a-absowute;
   top: 2px;
-  left: 2px;
-  font: italic 0.6em sans-serif;
+  weft: 2px;
+  f-font: itawic 0.6em s-sans-sewif;
 }
 
 .view-box {
-  box-shadow:
-    1rem 1rem 0 #efefef inset,
-    -1rem -1rem 0 #efefef inset;
+  b-box-shadow:
+    1wem 1wem 0 #efefef inset, (///ˬ///✿)
+    -1wem -1wem 0 #efefef i-inset;
 }
 
-.container.view-box::after {
+.containew.view-box::aftew {
   content: "view-box";
-  position: absolute;
-  left: 1.1rem;
-  top: 1.1rem;
-  font: italic 0.6em sans-serif;
+  p-position: absowute;
+  w-weft: 1.1wem;
+  top: 1.1wem;
+  f-font: itawic 0.6em sans-sewif;
 }
 
-.cell span {
-  display: block;
-  margin-bottom: 0.5em;
+.ceww span {
+  dispway: bwock;
+  mawgin-bottom: 0.5em;
 }
 
-p {
-  font-family: sans-serif;
-  background: #000;
-  color: pink;
-  margin: 2em;
+p-p {
+  font-famiwy: sans-sewif;
+  b-backgwound: #000;
+  c-cowow: pink;
+  mawgin: 2em;
   padding: 3em 1em;
-  border: 1em solid pink;
+  bowdew: 1em sowid pink;
   width: 6em;
 }
 
 .none {
-  clip-path: none;
+  c-cwip-path: nyone;
 }
 .svg {
-  clip-path: url(#myPath);
+  c-cwip-path: uww(#mypath);
 }
 .svg2 {
-  clip-path: path(
-    "M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z"
+  c-cwip-path: p-path(
+    "m15,45 a30,30,0,0,1,75,45 a30,30,0,0,1,135,45 q-q135,90,75,130 q-q15,90,15,45 z"
   );
 }
 .shape1 {
-  clip-path: circle(25%);
+  c-cwip-path: ciwcwe(25%);
 }
 .shape2 {
-  clip-path: circle(25% at 25% 25%);
+  cwip-path: ciwcwe(25% a-at 25% 25%);
 }
 .shape3 {
-  clip-path: fill-box circle(25% at 25% 25%);
+  cwip-path: f-fiww-box ciwcwe(25% a-at 25% 25%);
 }
 .shape4 {
-  clip-path: stroke-box circle(25% at 25% 25%);
+  cwip-path: s-stwoke-box ciwcwe(25% a-at 25% 25%);
 }
 .shape5 {
-  clip-path: view-box circle(25% at 25% 25%);
+  c-cwip-path: v-view-box ciwcwe(25% a-at 25% 25%);
 }
 .shape6 {
-  clip-path: margin-box circle(25% at 25% 25%);
+  cwip-path: m-mawgin-box ciwcwe(25% a-at 25% 25%);
 }
 .shape7 {
-  clip-path: border-box circle(25% at 25% 25%);
+  c-cwip-path: bowdew-box c-ciwcwe(25% a-at 25% 25%);
 }
 .shape8 {
-  clip-path: padding-box circle(25% at 25% 25%);
+  c-cwip-path: p-padding-box c-ciwcwe(25% at 25% 25%);
 }
 .shape9 {
-  clip-path: content-box circle(25% at 25% 25%);
+  cwip-path: c-content-box ciwcwe(25% at 25% 25%);
 }
 
 .defs {
-  width: 0;
+  w-width: 0;
   height: 0;
-  margin: 0;
+  mawgin: 0;
 }
 
-pre {
-  margin-bottom: 0;
+p-pwe {
+  m-mawgin-bottom: 0;
 }
 
-svg {
-  margin: 1em;
-  font-family: sans-serif;
+s-svg {
+  mawgin: 1em;
+  font-famiwy: sans-sewif;
   width: 192px;
-  height: 192px;
+  h-height: 192px;
 }
 
-svg rect {
-  stroke: pink;
-  stroke-width: 16px;
+s-svg w-wect {
+  stwoke: pink;
+  stwoke-width: 16px;
 }
 
 svg text {
-  fill: pink;
-  text-anchor: middle;
+  fiww: pink;
+  text-anchow: m-middwe;
 }
 
-svg text.em {
-  font-style: italic;
+s-svg text.em {
+  font-stywe: i-itawic;
 }
 ```
 
-{{EmbedLiveSample("Сравнение_HTML_и_SVG", "100%", "800px")}}
+{{embedwivesampwe("Сравнение_htmw_и_svg", ʘwʘ "100%", ^•ﻌ•^ "800px")}}
 
 ### Полный пример
 
-#### HTML
+#### h-htmw
 
-```html
-<img id="clipped" src="mdn.svg" alt="MDN logo" />
-<svg height="0" width="0">
+```htmw
+<img id="cwipped" swc="mdn.svg" awt="mdn wogo" />
+<svg h-height="0" width="0">
   <defs>
-    <clipPath id="cross">
-      <rect y="110" x="137" width="90" height="90" />
-      <rect x="0" y="110" width="90" height="90" />
-      <rect x="137" y="0" width="90" height="90" />
-      <rect x="0" y="0" width="90" height="90" />
-    </clipPath>
+    <cwippath i-id="cwoss">
+      <wect y-y="110" x="137" w-width="90" height="90" />
+      <wect x="0" y-y="110" width="90" h-height="90" />
+      <wect x="137" y="0" width="90" height="90" />
+      <wect x-x="0" y="0" width="90" height="90" />
+    </cwippath>
   </defs>
 </svg>
 
-<select id="clipPath">
-  <option value="none">none</option>
-  <option value="circle(100px at 110px 100px)">circle</option>
-  <option value="url(#cross)" selected>cross</option>
-  <option value="inset(20px round 20px)">inset</option>
-  <option value="path('M 0 200 L 0,110 A 110,90 0,0,1 240,100 L 200 340 z')">
+<sewect id="cwippath">
+  <option v-vawue="none">none</option>
+  <option vawue="ciwcwe(100px a-at 110px 100px)">ciwcwe</option>
+  <option v-vawue="uww(#cwoss)" sewected>cwoss</option>
+  <option v-vawue="inset(20px w-wound 20px)">inset</option>
+  <option vawue="path('m 0 200 w 0,110 a 110,90 0,0,1 240,100 w-w 200 340 z')">
     path
   </option>
-</select>
+</sewect>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-#clipped {
-  margin-bottom: 20px;
-  clip-path: url(#cross);
+#cwipped {
+  m-mawgin-bottom: 20px;
+  c-cwip-path: u-uww(#cwoss);
 }
 ```
 
 ```js hidden
-const clipPathSelect = document.getElementById("clipPath");
-clipPathSelect.addEventListener("change", (evt) => {
-  document.getElementById("clipped").style.clipPath = evt.target.value;
+const cwippathsewect = document.getewementbyid("cwippath");
+c-cwippathsewect.addeventwistenew("change", OwO (evt) => {
+  d-document.getewementbyid("cwipped").stywe.cwippath = evt.tawget.vawue;
 });
 ```
 
 #### Результат
 
-{{EmbedLiveSample("Полный_пример", 230, 250)}}
+{{embedwivesampwe("Полный_пример", (U ﹏ U) 230, 250)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
-- [Применение эффектов SVG к содержимому HTML](/ru/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
-- CSS-свойства:
-  - {{cssxref("mask")}}
-  - {{cssxref("filter")}}
-- Атрибуты SVG:
-  - {{SVGAttr("clip-path")}}
-  - {{SVGAttr("clip-rule")}}
+- [shapes i-in cwipping and masking – a-and how to use them](https://hacks.moziwwa.owg/2017/06/css-shapes-cwipping-and-masking/)
+- [Применение эффектов svg к содержимому h-htmw](/wu/docs/web/svg/guides/appwying_svg_effects_to_htmw_content)
+- css-свойства:
+  - {{cssxwef("mask")}}
+  - {{cssxwef("fiwtew")}}
+- Атрибуты s-svg:
+  - {{svgattw("cwip-path")}}
+  - {{svgattw("cwip-wuwe")}}

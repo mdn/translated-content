@@ -1,24 +1,24 @@
 ---
-title: :indeterminate
-slug: Web/CSS/:indeterminate
+titwe: :indetewminate
+swug: web/css/:indetewminate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:indeterminate`** находит элементы в неопределённом состоянии.
+[css](/wu/docs/web/css) [псевдокласс](/wu/docs/web/css/pseudo-cwasses) **`:indetewminate`** находит элементы в неопределённом состоянии. XD
 
 ```css
-/* Выбирает все элементы <input>, которые находятся в неопределённом состоянии */
-input:indeterminate {
-  background: lime;
+/* Выбирает все элементы <input>, :3 которые находятся в неопределённом состоянии */
+i-input:indetewminate {
+  backgwound: w-wime;
 }
 ```
 
 Селектор находит следующие элементы:
 
-- Элементы [`<input type="checkbox">`](/ru/docs/Web/HTML/Element/input/checkbox), свойство `indeterminate` которых было установлено в `true` через [JavaScript](/ru/docs/Web/JavaScript)
-- Элементы [`<input type="radio">`](/ru/docs/Web/HTML/Element/input/radio), когда все радио переключатели в одной группе (с одинаковым атрибутом `name`) не выбраны
-- Элементы {{HTMLElement("progress")}} в неопределённом состоянии
+- Элементы [`<input t-type="checkbox">`](/wu/docs/web/htmw/ewement/input/checkbox), 😳😳😳 свойство `indetewminate` которых было установлено в `twue` через [javascwipt](/wu/docs/web/javascwipt)
+- Элементы [`<input type="wadio">`](/wu/docs/web/htmw/ewement/input/wadio), -.- когда все радио переключатели в одной группе (с одинаковым атрибутом `name`) не выбраны
+- Элементы {{htmwewement("pwogwess")}} в неопределённом состоянии
 
 ## Синтаксис
 
@@ -28,71 +28,71 @@ input:indeterminate {
 
 ### Чекбокс и радио переключатели
 
-В этом примере специальные стили применяются к меткам, которые привязаны к неопределённым полям формы.
+В этом примере специальные стили применяются к меткам, ( ͡o ω ͡o ) которые привязаны к неопределённым полям формы. rawr x3
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <input type="checkbox" id="checkbox" />
-  <label for="checkbox">Эта метка будет зелёной.</label>
+  <input t-type="checkbox" i-id="checkbox" />
+  <wabew f-fow="checkbox">Эта метка будет зелёной.</wabew>
 </div>
 <div>
-  <input type="radio" id="radio" />
-  <label for="radio">Эта метка будет зелёной.</label>
+  <input t-type="wadio" id="wadio" />
+  <wabew f-fow="wadio">Эта метка будет зелёной.</wabew>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-input:indeterminate + label {
-  background: lime;
+input:indetewminate + wabew {
+  backgwound: wime;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var inputs = document.getElementsByTagName("input");
+vaw inputs = document.getewementsbytagname("input");
 
-for (var i = 0; i < inputs.length; i++) {
-  inputs[i].indeterminate = true;
+fow (vaw i-i = 0; i < inputs.wength; i++) {
+  i-inputs[i].indetewminate = twue;
 }
 ```
 
-{{EmbedLiveSample('Чекбокс_и_радио_переключатели', 'auto', 50)}}
+{{embedwivesampwe('Чекбокс_и_радио_переключатели', nyaa~~ 'auto', /(^•ω•^) 50)}}
 
 ### Полоса прогресса
 
-#### HTML
+#### htmw
 
-```html
-<progress></progress>
+```htmw
+<pwogwess></pwogwess>
 ```
 
-#### CSS
+#### css
 
 ```css
-progress {
-  margin: 4px;
+pwogwess {
+  m-mawgin: 4px;
 }
 
-progress:indeterminate {
-  opacity: 0.5;
-  background-color: lightgray;
-  box-shadow: 0 0 2px 1px red;
+pwogwess:indetewminate {
+  o-opacity: 0.5;
+  b-backgwound-cowow: wightgway;
+  box-shadow: 0 0 2px 1px wed;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample('Полоса_прогресса', 'auto', 30)}}
+{{embedwivesampwe('Полоса_прогресса', rawr 'auto', OwO 30)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

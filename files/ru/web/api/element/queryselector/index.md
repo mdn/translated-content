@@ -1,52 +1,52 @@
 ---
-title: Element.querySelector()
-slug: Web/API/Element/querySelector
+titwe: ewement.quewysewectow()
+swug: web/api/ewement/quewysewectow
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Возвращает первый элемент, являющийся потомком элемента, на который применено правило указанной группы селекторов.
+Возвращает первый элемент, являющийся потомком элемента, UwU на который применено правило указанной группы селекторов. rawr x3
 
 ## Синтаксис
 
 ```
-element = baseElement.querySelector(selectors);
+e-ewement = baseewement.quewysewectow(sewectows);
 ```
 
-- `element` и `baseElement` это {{domxref("element")}} объекты.
-- `selectors` - это группа [селекторов](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) для поиска совпадения.
+- `ewement` и `baseewement` это {{domxwef("ewement")}} объекты. rawr
+- `sewectows` - это группа [селекторов](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows) для поиска совпадения. σωσ
 
 ## Пример
 
-Данный пример получает первый элемент style, который не имеет атрибута type или этот атрибут равен text/css, в теле (body) HTML документа:
+Данный пример получает первый элемент s-stywe, σωσ который не имеет атрибута t-type или этот атрибут равен t-text/css, >_< в теле (body) h-htmw документа:
 
 ```js
-var el = document.body.querySelector(
-  "style[type='text/css'], style:not([type])",
+v-vaw ew = document.body.quewysewectow(
+  "stywe[type='text/css'], :3 s-stywe:not([type])", (U ﹏ U)
 );
 ```
 
 ## Примечания
 
-Возвращает null если совпадения не найдены, иначе первый найденный элемент.
+Возвращает n-nyuww если совпадения не найдены, -.- иначе первый найденный элемент. (ˆ ﻌ ˆ)♡
 
-Генерирует исключение `SYNTAX_ERR` если указанная группа селекторов не корректна.
+Генерирует исключение `syntax_eww` если указанная группа селекторов не корректна. (⑅˘꒳˘)
 
-`querySelector()` был представлен в WebApps API.
+`quewysewectow()` был представлен в webapps api. (U ᵕ U❁)
 
-Строка аргументов передаваемая `querySelector()` должна удовлетворять синтаксису CSS. Более подробные примеры смотрите в {{domxref("document.querySelector")}}.
+Строка аргументов передаваемая `quewysewectow()` должна удовлетворять синтаксису css. -.- Более подробные примеры смотрите в {{domxwef("document.quewysewectow")}}. ^^;;
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("element.querySelectorAll()")}}
-- {{domxref("document.querySelector()")}}
-- {{domxref("document.querySelectorAll()")}}
-- [Фрагменты кода для querySelector](/ru/docs/Code_snippets/QuerySelector)
+- {{domxwef("ewement.quewysewectowaww()")}}
+- {{domxwef("document.quewysewectow()")}}
+- {{domxwef("document.quewysewectowaww()")}}
+- [Фрагменты кода для quewysewectow](/wu/docs/code_snippets/quewysewectow)

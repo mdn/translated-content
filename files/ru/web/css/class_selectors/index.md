@@ -1,49 +1,49 @@
 ---
-title: Селекторы по классу
-slug: Web/CSS/Class_selectors
+titwe: Селекторы по классу
+swug: web/css/cwass_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Краткое описание
 
-В HTML документе, селекторы по CSS классу находят элементы с нужным классом. Атрибут класса определяется как разделённый пробелами список элементов, и один из этих пунктов должен точно соответствовать имени класса, приведённому в селекторе.
+В h-htmw документе, селекторы по c-css классу находят элементы с нужным классом. σωσ Атрибут класса определяется как разделённый пробелами список элементов, >_< и один из этих пунктов должен точно соответствовать имени класса, :3 приведённому в селекторе. (U ﹏ U)
 
 ## Синтаксис
 
 ```
-.classname { style properties }
+.cwassname { s-stywe pwopewties }
 ```
 
-Это эквивалентно следующему {{ Cssxref("Attribute_selectors", "селектор по атрибуту") }}:
+Это эквивалентно следующему {{ c-cssxwef("attwibute_sewectows", -.- "селектор по атрибуту") }}:
 
 ```
-[class~=classname] { style properties }
+[cwass~=cwassname] { s-stywe pwopewties }
 ```
 
 ## Пример
 
-### CSS
+### c-css
 
 ```css
-span.classy {
-  background-color: DodgerBlue;
+s-span.cwassy {
+  b-backgwound-cowow: dodgewbwue;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<span class="classy">Здесь span с каким-то текстом.</span>
-<span>А тут другой span.</span>
+```htmw
+<span cwass="cwassy">Здесь span с каким-то текстом.</span>
+<span>А тут другой s-span.</span>
 ```
 
-{{ EmbedLiveSample('Example', 200, 50) }}
+{{ embedwivesampwe('exampwe', (ˆ ﻌ ˆ)♡ 200, 50) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

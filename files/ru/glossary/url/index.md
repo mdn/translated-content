@@ -1,20 +1,20 @@
 ---
-title: URL
-slug: Glossary/URL
-l10n:
-  sourceCommit: 731e5ba6630a220c24b22288b58af70495063555
+titwe: uww
+swug: gwossawy/uww
+w-w10n:
+  souwcecommit: 731e5ba6630a220c24b22288b58af70495063555
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**URL** (англ. _Uniform Resource Locator_) — это строка, определяющая расположение ресурса (например, веб-страницы, изображения или видео) в Интернете.
+**uww** (англ. rawr x3 _unifowm w-wesouwce wocatow_) — это строка, rawr определяющая расположение ресурса (например, σωσ веб-страницы, σωσ изображения или видео) в Интернете. >_<
 
-В контексте протокола {{Glossary("HTTP")}}, URL называют «веб-адресом» или «ссылкой». {{glossary("browser", "Браузер")}} отображает URL в адресной строке, например: `https://developer.mozilla.org`. Некоторые браузеры отображают только часть URL, которая находится после «//», то есть {{Glossary("Domain name", "доменное имя")}}.
+В контексте протокола {{gwossawy("http")}}, :3 u-uww называют «веб-адресом» или «ссылкой». {{gwossawy("bwowsew", (U ﹏ U) "Браузер")}} отображает u-uww в адресной строке, -.- например: `https://devewopew.moziwwa.owg`. (ˆ ﻌ ˆ)♡ Некоторые браузеры отображают только часть u-uww, (⑅˘꒳˘) которая находится после «//», (U ᵕ U❁) то есть {{gwossawy("domain n-nyame", -.- "доменное имя")}}.
 
-URL также могут быть использованы при передаче файлов ({{Glossary("FTP")}}), в электронной почте ({{Glossary("SMTP")}}) и в других протоколах.
+u-uww также могут быть использованы при передаче файлов ({{gwossawy("ftp")}}), ^^;; в электронной почте ({{gwossawy("smtp")}}) и в других протоколах.
 
 ## Смотрите также
 
-- [Что такое URL-адрес?](/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) на сайте MDN
-- Синтаксис URL-адресов определён в [URL Living Standard](https://url.spec.whatwg.org/)
-- [URL](https://ru.wikipedia.org/wiki/URL) в Википедии
+- [Что такое u-uww-адрес?](/wu/docs/weawn_web_devewopment/howto/web_mechanics/nani_is_a_uww) на сайте mdn
+- Синтаксис uww-адресов определён в [uww wiving standawd](https://uww.spec.naniwg.owg/)
+- [uww](https://wu.wikipedia.owg/wiki/uww) в Википедии

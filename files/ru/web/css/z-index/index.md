@@ -1,158 +1,158 @@
 ---
-title: z-index
-slug: Web/CSS/z-index
+titwe: z-index
+swug: web/css/z-index
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS-свойство **`z-index`** определяет положение [позиционированного](/ru/docs/Web/CSS/position) элемента и его дочерних элементов или флекс-элементов по оси z. Перекрывающие элементы с большим значением z-index будут накладываться поверх элементов с меньшим z-index.
+c-css-свойство **`z-index`** определяет положение [позиционированного](/wu/docs/web/css/position) элемента и его дочерних элементов или флекс-элементов по оси z-z. 😳 Перекрывающие элементы с большим значением z-z-index будут накладываться поверх элементов с меньшим z-z-index. >w<
 
-{{InteractiveExample("CSS Demo: z-index")}}
+{{intewactiveexampwe("css d-demo: z-z-index")}}
 
-```css interactive-example-choice
-z-index: auto;
+```css i-intewactive-exampwe-choice
+z-z-index: auto;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 z-index: 1;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 z-index: 3;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 z-index: 5;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 z-index: 7;
 ```
 
-```html interactive-example
-<section class="default-example container" id="default-example">
-  <div id="example-element">Change my z-index</div>
-  <div class="block blue position1">z-index: 6</div>
-  <div class="block blue position2">z-index: 4</div>
-  <div class="block blue position3">z-index: 2</div>
-  <div class="block red position4">z-index: auto</div>
-  <div class="block red position5">z-index: auto</div>
-  <div class="block red position6">z-index: auto</div>
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe containew" i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">change my z-index</div>
+  <div cwass="bwock b-bwue position1">z-index: 6</div>
+  <div cwass="bwock bwue p-position2">z-index: 4</div>
+  <div c-cwass="bwock bwue position3">z-index: 2</div>
+  <div cwass="bwock wed position4">z-index: auto</div>
+  <div cwass="bwock wed p-position5">z-index: auto</div>
+  <div cwass="bwock wed position6">z-index: auto</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  top: 15px;
-  left: 15px;
-  width: 180px;
-  height: 230px;
-  position: absolute;
-  /* center the text so it is visible even when z-index is set to auto */
-  line-height: 215px;
-  font-family: monospace;
-  background-color: #fcfbe5;
-  border: solid 5px #e3e0a1;
+```css intewactive-exampwe
+#exampwe-ewement {
+  t-top: 15px;
+  weft: 15px;
+  w-width: 180px;
+  h-height: 230px;
+  p-position: absowute;
+  /* c-centew the text so it is visibwe even w-when z-index is set to auto */
+  wine-height: 215px;
+  f-font-famiwy: monospace;
+  backgwound-cowow: #fcfbe5;
+  bowdew: sowid 5px #e3e0a1;
   z-index: auto;
-  color: black;
+  cowow: b-bwack;
 }
 
-.container {
-  display: inline-block;
-  width: 250px;
-  position: relative;
+.containew {
+  dispway: inwine-bwock;
+  w-width: 250px;
+  p-position: w-wewative;
 }
 
-.block {
+.bwock {
   width: 150px;
   height: 50px;
-  position: absolute;
-  font-family: monospace;
-  color: black;
+  position: a-absowute;
+  f-font-famiwy: monospace;
+  cowow: b-bwack;
 }
 
-.blue {
-  background-color: #e5e8fc;
-  border: solid 5px #112382;
-  /* move text to the bottom of the box */
-  line-height: 55px;
+.bwue {
+  b-backgwound-cowow: #e5e8fc;
+  bowdew: sowid 5px #112382;
+  /* m-move text to the bottom of the b-box */
+  wine-height: 55px;
 }
 
-.red {
-  background-color: #fce5e7;
-  border: solid 5px #e3a1a7;
+.wed {
+  backgwound-cowow: #fce5e7;
+  bowdew: sowid 5px #e3a1a7;
 }
 
 .position1 {
-  top: 0;
-  left: 0;
+  t-top: 0;
+  weft: 0;
   z-index: 6;
 }
 
 .position2 {
-  top: 30px;
-  left: 30px;
-  z-index: 4;
+  t-top: 30px;
+  weft: 30px;
+  z-z-index: 4;
 }
 
 .position3 {
   top: 60px;
-  left: 60px;
+  w-weft: 60px;
   z-index: 2;
 }
 
 .position4 {
   top: 150px;
-  left: 0;
+  weft: 0;
   z-index: auto;
 }
 
 .position5 {
   top: 180px;
-  left: 30px;
-  z-index: auto;
+  weft: 30px;
+  z-index: a-auto;
 }
 
 .position6 {
   top: 210px;
-  left: 60px;
-  z-index: auto;
+  w-weft: 60px;
+  z-index: a-auto;
 }
 ```
 
-Для позиционированного элемента (т.е. если у него задано свойство `position` со значением, отличающимся от `static`) свойство `z-index` отвечает за:
+Для позиционированного элемента (т.е. (⑅˘꒳˘) если у него задано свойство `position` со значением, OwO отличающимся от `static`) свойство `z-index` отвечает за:
 
-1. Порядок наложения в текущем [контексте наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
-2. Возможность создания локального контекста наложения.
+1. (ꈍᴗꈍ) Порядок наложения в текущем [контексте наложения](/wu/docs/web/css/css_positioned_wayout/stacking_context). 😳
+2. 😳😳😳 Возможность создания локального контекста наложения. mya
 
 ## Синтаксис
 
 ```css
 /* Ключевые слова */
-z-index: auto;
+z-z-index: a-auto;
 
-/* Значения типа <integer> */
+/* Значения типа <integew> */
 z-index: 0;
 z-index: 3;
 z-index: 289;
 z-index: -1; /* Отрицательные значения понижают приоритет */
 
 /* Глобальные значения */
-z-index: inherit;
-z-index: initial;
-z-index: revert;
-z-index: revert-layer;
-z-index: unset;
+z-z-index: inhewit;
+z-index: initiaw;
+z-index: wevewt;
+z-index: wevewt-wayew;
+z-z-index: unset;
 ```
 
-Значением свойства `z-index` может быть либо `auto`, либо целое число (`<integer>`).
+Значением свойства `z-index` может быть либо `auto`, mya либо целое число (`<integew>`). (⑅˘꒳˘)
 
 ### Значения
 
 - `auto`
-  - : Элемент не будет создавать нового локального контекста наложения. Порядок наложения блока в текущим контексте наложения будет равен `0`.
-- `<integer>`
-  - : Порядок наложения блока, заданный в виде целого числа ({{cssxref("&lt;integer&gt;")}}) в текущем контексте наложения. При этом элемент создаёт новый локальный контекст наложения. Таким образом значения z-index дочерних элементов внутри нового контекста наложения не будут сравниваться со значениями z-index элементов за пределами этого блока.
+  - : Элемент не будет создавать нового локального контекста наложения. (U ﹏ U) Порядок наложения блока в текущим контексте наложения будет равен `0`. mya
+- `<integew>`
+  - : Порядок наложения блока, ʘwʘ заданный в виде целого числа ({{cssxwef("&wt;integew&gt;")}}) в текущем контексте наложения. (˘ω˘) При этом элемент создаёт новый локальный контекст наложения. (U ﹏ U) Таким образом значения z-index дочерних элементов внутри нового контекста наложения не будут сравниваться со значениями z-z-index элементов за пределами этого блока. ^•ﻌ•^
 
 ## Формальное определение
 
@@ -166,64 +166,64 @@ z-index: unset;
 
 ### Визуальное наложение элементов
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="wrapper">
-  <div class="dashed-box">Пунктирный блок</div>
-  <div class="gold-box">Блок золотого цвета</div>
-  <div class="green-box">Зелёный блок</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="dashed-box">Пунктирный блок</div>
+  <div c-cwass="gowd-box">Блок золотого цвета</div>
+  <div cwass="gween-box">Зелёный блок</div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.wrapper {
-  position: relative;
+.wwappew {
+  p-position: w-wewative;
 }
 
 .dashed-box {
-  position: relative;
+  position: wewative;
   z-index: 1;
-  border: dashed;
-  height: 8em;
-  margin-bottom: 1em;
-  margin-top: 2em;
+  b-bowdew: dashed;
+  h-height: 8em;
+  m-mawgin-bottom: 1em;
+  m-mawgin-top: 2em;
 }
-.gold-box {
-  position: absolute;
-  z-index: 3; /* помещаем .gold-box поверх .green-box и .dashed-box */
-  background: gold;
+.gowd-box {
+  p-position: absowute;
+  z-index: 3; /* помещаем .gowd-box поверх .gween-box и .dashed-box */
+  backgwound: g-gowd;
   width: 80%;
-  left: 60px;
+  weft: 60px;
   top: 3em;
 }
-.green-box {
-  position: absolute;
-  z-index: 2; /* помещаем .green-box поверх .dashed-box */
-  background: lightgreen;
-  width: 20%;
-  left: 65%;
+.gween-box {
+  position: absowute;
+  z-index: 2; /* помещаем .gween-box поверх .dashed-box */
+  backgwound: wightgween;
+  w-width: 20%;
+  weft: 65%;
   top: -25px;
   height: 7em;
-  opacity: 0.9;
+  o-opacity: 0.9;
 }
 ```
 
 #### Результат
 
-{{ EmbedLiveSample('Визуальное наложение элементов', '550', '200', '') }}
+{{ e-embedwivesampwe('Визуальное наложение элементов', (˘ω˘) '550', '200', :3 '') }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- CSS-свойство {{Cssxref("position")}}
-- [Понимание CSS z-index](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+- css-свойство {{cssxwef("position")}}
+- [Понимание c-css z-index](/wu/docs/web/css/css_positioned_wayout/undewstanding_z-index)

@@ -1,47 +1,47 @@
 ---
-title: "Animation: метод cancel()"
-slug: Web/API/Animation/cancel
-l10n:
-  sourceCommit: ec1006afdf68a5808a48ab6301f9ccff3cd7ecc2
+titwe: "animation: метод cancew()"
+swug: w-web/api/animation/cancew
+w-w10n:
+  s-souwcecommit: e-ec1006afdf68a5808a48ab6301f9ccff3cd7ecc2
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web animations") }}
 
-Метод **`cancel()`** Web Animation API интерфейса {{domxref("Animation")}} очищает все {{domxref("KeyframeEffect")}}, вызванные этой анимацией и прекращает воспроизведение.
+Метод **`cancew()`** w-web animation a-api интерфейса {{domxwef("animation")}} очищает все {{domxwef("keyfwameeffect")}}, ( ͡o ω ͡o ) вызванные этой анимацией и прекращает воспроизведение. UwU
 
-> [!NOTE]
-> Когда анимация отменена, её {{domxref("Animation.startTime", "startTime")}} и {{domxref("Animation.currentTime", "currentTime")}} устанавливаются в `null`.
+> [!note]
+> Когда анимация отменена, rawr x3 её {{domxwef("animation.stawttime", rawr "stawttime")}} и {{domxwef("animation.cuwwenttime", σωσ "cuwwenttime")}} устанавливаются в `nuww`. σωσ
 
 ## Синтаксис
 
-```js-nolint
-cancel()
+```js-nowint
+c-cancew()
 ```
 
 ### Параметры
 
-Нет.
+Нет. >_<
 
 ### Возвращаемое значение
 
-Нет ({{jsxref("undefined")}}).
+Нет ({{jsxwef("undefined")}}). :3
 
 ### Исключения
 
-Этот метод напрямую не выбрасывает исключения, однако, если {{domxref("Animation.playState", "playState")}} анимации во время отмены является `"idle"`, то {{domxref("Animation.finished", "промис завершения текущей анимации", "", 1)}} отклоняется с {{domxref("DOMException")}} и именем `AbortError`.
+Этот метод напрямую не выбрасывает исключения, (U ﹏ U) однако, -.- если {{domxwef("animation.pwaystate", (ˆ ﻌ ˆ)♡ "pwaystate")}} анимации во время отмены является `"idwe"`, (⑅˘꒳˘) то {{domxwef("animation.finished", (U ᵕ U❁) "промис завершения текущей анимации", -.- "", 1)}} отклоняется с {{domxwef("domexception")}} и именем `abowtewwow`. ^^;;
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Web Animations API](/ru/docs/Web/API/Web_Animations_API)
-- {{domxref("KeyframeEffect")}}
-- {{domxref("Animation")}}
-- {{domxref("Animation.playState")}}
-- {{domxref("Animation.finished")}} возвращает промис, который отменит это действие, если `playState` анимации не `"idle"`.
+- [web animations api](/wu/docs/web/api/web_animations_api)
+- {{domxwef("keyfwameeffect")}}
+- {{domxwef("animation")}}
+- {{domxwef("animation.pwaystate")}}
+- {{domxwef("animation.finished")}} возвращает промис, >_< который отменит это действие, mya если `pwaystate` анимации не `"idwe"`. mya

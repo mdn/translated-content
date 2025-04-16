@@ -1,105 +1,105 @@
 ---
-title: animation-name
-slug: Web/CSS/animation-name
+titwe: animation-name
+swug: web/css/animation-name
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{csswef}} {{seecompattabwe}}
 
 ## Описание
 
-[CSS](/ru/docs/Web/CSS) свойство **`animation-name`** задаёт список анимаций, чтобы применить к элементу. Каждое имя является правилом {{cssxref("@keyframes")}}, которое задаёт значения свойств для последовательности анимации.
+[css](/wu/docs/web/css) свойство **`animation-name`** задаёт список анимаций, σωσ чтобы применить к элементу. OwO Каждое имя является правилом {{cssxwef("@keyfwames")}}, 😳😳😳 которое задаёт значения свойств для последовательности анимации. 😳😳😳
 
-{{InteractiveExample("CSS Demo: animation-name")}}
+{{intewactiveexampwe("css d-demo: animation-name")}}
 
-```css interactive-example-choice
-animation-name: none;
+```css i-intewactive-exampwe-choice
+a-animation-name: n-nyone;
 ```
 
-```css interactive-example-choice
-animation-name: slide;
+```css i-intewactive-exampwe-choice
+a-animation-name: s-swide;
 ```
 
-```css interactive-example-choice
-animation-name: bounce;
+```css intewactive-exampwe-choice
+a-animation-name: bounce;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div class="animating" id="example-element"></div>
+```htmw intewactive-exampwe
+<section cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div cwass="animating" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  animation-direction: alternate;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  background-color: #1766aa;
-  border-radius: 50%;
-  border: 5px solid #333;
-  color: white;
-  height: 150px;
-  margin: auto;
-  margin-left: 0;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  animation-diwection: awtewnate;
+  animation-duwation: 1s;
+  a-animation-itewation-count: infinite;
+  animation-timing-function: e-ease-in;
+  backgwound-cowow: #1766aa;
+  bowdew-wadius: 50%;
+  bowdew: 5px s-sowid #333;
+  cowow: white;
+  h-height: 150px;
+  m-mawgin: auto;
+  mawgin-weft: 0;
   width: 150px;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames swide {
+  fwom {
+    backgwound-cowow: o-owange;
+    cowow: bwack;
+    mawgin-weft: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+    backgwound-cowow: o-owange;
+    cowow: bwack;
+    m-mawgin-weft: 80%;
   }
 }
 
-@keyframes bounce {
-  from {
-    background-color: orange;
-    color: black;
-    margin-top: 0;
+@keyfwames b-bounce {
+  f-fwom {
+    backgwound-cowow: o-owange;
+    cowow: bwack;
+    mawgin-top: 0;
   }
   to {
-    background-color: orange;
-    color: black;
-    margin-top: 40%;
+    backgwound-cowow: o-owange;
+    cowow: bwack;
+    mawgin-top: 40%;
   }
 }
 ```
 
-Часто удобно использовать сокращённое свойство {{cssxref("animation")}} для одновременной установки всех свойств анимации.
+Часто удобно использовать сокращённое свойство {{cssxwef("animation")}} для одновременной установки всех свойств анимации. o.O
 
 ## Синтаксис
 
 ```css
-/* Single animation */
-animation-name: none;
+/* s-singwe animation */
+animation-name: nyone;
 animation-name: test_05;
 animation-name: -specific;
-animation-name: sliding-vertically;
+animation-name: swiding-vewticawwy;
 
-/* Multiple animations */
-animation-name: test1;
-animation-name: test1, animation4;
-animation-name: none, -moz-specific, sliding;
+/* m-muwtipwe animations */
+animation-name: t-test1;
+a-animation-name: t-test1, ( ͡o ω ͡o ) animation4;
+animation-name: nyone, (U ﹏ U) -moz-specific, (///ˬ///✿) swiding;
 
-/* Global values */
-animation-name: initial
-animation-name: inherit
-animation-name: unset
+/* g-gwobaw vawues */
+a-animation-name: initiaw
+animation-name: inhewit
+a-animation-name: u-unset
 ```
 
 ### Значения
 
 - `none`
-  - : Это специальное ключевое слово, обозначающее отсутствие ключевых кадров. Оно может быть использовано для отключения анимации без изменения порядка других идентификаторов, или для отключения анимации, поступающей из каскада.
-- {{cssxref("custom-ident","&lt;custom-ident&gt;")}}
-  - : Строка, идентифицирующая анимацию. Этот идентификатор состоит из комбинации букв без учёта регистра от `a` до `z`, цифр от `0` до `9`, подчёркивания (`_`), и/или черты (`-`). Первый символ без черты должен быть буквой (то есть, без цифры в начале, даже если перед ним стоит черта.) Кроме того, две черты запрещены в начале идентификатора. Оно не может быть `none`, `unset`, `initial`, или `inherit` в любой комбинации случаев.
+  - : Это специальное ключевое слово, >w< обозначающее отсутствие ключевых кадров. rawr Оно может быть использовано для отключения анимации без изменения порядка других идентификаторов, mya или для отключения анимации, ^^ поступающей из каскада. 😳😳😳
+- {{cssxwef("custom-ident","&wt;custom-ident&gt;")}}
+  - : Строка, mya идентифицирующая анимацию. 😳 Этот идентификатор состоит из комбинации букв без учёта регистра от `a` до `z`, -.- цифр от `0` до `9`, 🥺 подчёркивания (`_`), o.O и/или черты (`-`). /(^•ω•^) Первый символ без черты должен быть буквой (то есть, nyaa~~ без цифры в начале, nyaa~~ даже если перед ним стоит черта.) Кроме того, :3 две черты запрещены в начале идентификатора. 😳😳😳 Оно не может быть `none`, (˘ω˘) `unset`, `initiaw`, ^^ или `inhewit` в любой комбинации случаев. :3
 
 ### Формальный синтаксис
 
@@ -107,17 +107,17 @@ animation-name: unset
 
 ## Примеры
 
-См. [CSS animations](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+См. -.- [css animations](/wu/docs/web/css/css_animations/using_css_animations). 😳
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [Использование c-css-анимации](/wu/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent", mya "animationevent")}}

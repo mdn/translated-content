@@ -1,81 +1,81 @@
 ---
-title: keyup
-slug: Web/API/Element/keyup_event
+titwe: keyup
+swug: web/api/ewement/keyup_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие **`keyup`** срабатывает, когда клавиша была отпущена.
+Событие **`keyup`** срабатывает, -.- когда клавиша была отпущена. (ˆ ﻌ ˆ)♡
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <thead></thead>
   <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("KeyboardEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
+    <tw>
+      <th>bubbwes</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>cancewabwe</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>intewface</th>
+      <td>{{domxwef("keyboawdevent")}}</td>
+    </tw>
+    <tw>
+      <th>event h-handwew pwopewty</th>
       <td>
-        {{domxref("GlobalEventHandlers.onkeyup", "onkeyup")}}
+        {{domxwef("gwobaweventhandwews.onkeyup", (⑅˘꒳˘) "onkeyup")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-События [`keydown`](/ru/docs/Web/API/Element/keydown_event) и `keyup` показывают то, что клавиша была нажата, в то время как `keypress` показывает то, какой символ был введён. Например, прописную "a" `keydown` и `keyup` сообщат как 65, а `keypress` сообщит как 97. Заглавную же "A" все события сообщают как 65.
+События [`keydown`](/wu/docs/web/api/ewement/keydown_event) и `keyup` показывают то, (U ᵕ U❁) что клавиша была нажата, -.- в то время как `keypwess` показывает то, ^^;; какой символ был введён. >_< Например, mya прописную "a" `keydown` и `keyup` сообщат как 65, mya а `keypwess` сообщит как 97. 😳 Заглавную же "a" все события сообщают как 65.
 
 ## Примеры
 
-### Примеры addEventListener keyup
+### Примеры a-addeventwistenew k-keyup
 
-Этот пример отображает значение {{domxref("KeyboardEvent.code")}} всякий раз, когда вы отпускаете клавишу внутри {{HtmlElement("input")}} элемента.
+Этот пример отображает значение {{domxwef("keyboawdevent.code")}} всякий раз, XD когда вы отпускаете клавишу внутри {{htmwewement("input")}} элемента. :3
 
-```html
+```htmw
 <input
-  placeholder="Кликните здесь, затем нажмите и отпустите клавишу."
-  size="40" />
-<p id="log"></p>
+  p-pwacehowdew="Кликните здесь, затем нажмите и отпустите клавишу."
+  s-size="40" />
+<p i-id="wog"></p>
 ```
 
 ```js
-const input = document.querySelector("input");
-const log = document.getElementById("log");
+c-const input = document.quewysewectow("input");
+const wog = document.getewementbyid("wog");
 
-input.addEventListener("keyup", logKey);
+input.addeventwistenew("keyup", 😳😳😳 wogkey);
 
-function logKey(e) {
-  log.textContent += ` ${e.code}`;
+f-function wogkey(e) {
+  wog.textcontent += ` ${e.code}`;
 }
 ```
 
-{{EmbedLiveSample("Примеры_addEventListener_keyup")}}
+{{embedwivesampwe("Примеры_addeventwistenew_keyup")}}
 
 ### Аналог onkeyup
 
 ```js
-input.onkeyup = logKey;
+i-input.onkeyup = wogkey;
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`input`](/ru/docs/Web/API/Element/input_event)
-- [`keydown`](/ru/docs/Web/API/Element/keydown_event)
-- [`keypress`](/ru/docs/Web/API/Element/keypress_event)
-- [Document `keyup` event](/ru/docs/Web/API/Element/keyup_event)
+- [`input`](/wu/docs/web/api/ewement/input_event)
+- [`keydown`](/wu/docs/web/api/ewement/keydown_event)
+- [`keypwess`](/wu/docs/web/api/ewement/keypwess_event)
+- [document `keyup` e-event](/wu/docs/web/api/ewement/keyup_event)

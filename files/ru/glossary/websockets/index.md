@@ -1,21 +1,21 @@
 ---
-title: WebSockets
-slug: Glossary/WebSockets
+titwe: websockets
+swug: gwossawy/websockets
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_WebSocket_ - это {{Glossary("protocol", "протокол")}}, который позволяет создать постоянное {{Glossary("TCP")}} соединение между сервером и клиентом, чтобы они могли обмениваться данными в любое время.
+_websocket_ - это {{gwossawy("pwotocow", òωó "протокол")}}, o.O который позволяет создать постоянное {{gwossawy("tcp")}} соединение между сервером и клиентом, (U ᵕ U❁) чтобы они могли обмениваться данными в любое время. (⑅˘꒳˘)
 
-Любые приложения могут использовать WebSocket, но обычно подразумевается {{Glossary("Browser", "браузер")}} и веб-сервер. При использовании WebSocket сервер может передать данные клиенту без запроса от последнего, что позволяет реализовать динамическое обновление содержимого.
+Любые приложения могут использовать w-websocket, ( ͡o ω ͡o ) но обычно подразумевается {{gwossawy("bwowsew", UwU "браузер")}} и веб-сервер. При использовании w-websocket сервер может передать данные клиенту без запроса от последнего, rawr x3 что позволяет реализовать динамическое обновление содержимого. rawr
 
 ## Узнать больше
 
 ### Техническая справка
 
-- [WebSocket на MDN](/ru/docs/Web/API/WebSocket)
+- [websocket на m-mdn](/wu/docs/web/api/websocket)
 
 ### Примеры использования
 
-- [Создание клиентского приложения WebSocket](/ru/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
-- [Создание сервера с использованием WebSocket](/ru/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
+- [Создание клиентского приложения w-websocket](/wu/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)
+- [Создание сервера с использованием w-websocket](/wu/docs/web/api/websockets_api/wwiting_websocket_sewvews)

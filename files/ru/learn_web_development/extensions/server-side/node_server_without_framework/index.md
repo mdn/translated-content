@@ -1,86 +1,86 @@
 ---
-title: Node.js server without a framework
-slug: Learn_web_development/Extensions/Server-side/Node_server_without_framework
+titwe: nyode.js sewvew without a-a fwamewowk
+swug: w-weawn_web_devewopment/extensions/sewvew-side/node_sewvew_without_fwamewowk
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Здесь вы найдёте описание простого статического сервера, который построен сугубо на Node.js без использования какого-либо фреймворка .
+Здесь вы найдёте описание простого статического сервера, rawr x3 который построен сугубо на n-nyode.js без использования какого-либо фреймворка .
 
-[Node.js](https://nodejs.org/en/) может использовать множество фреймворков, которые могут помочь создать сервер
+[node.js](https://nodejs.owg/en/) может использовать множество фреймворков, (✿oωo) которые могут помочь создать сервер
 
 Наиболее популярные:
 
-- [Express](http://expressjs.com/): Один из наиболее популярных фреймворков.
-- [Hapi.js](https://hapijs.com/): Набирающий популярность фреймворк для построения приложений и сервисов
-- [Total](https://www.totaljs.com/): Этот фреймворк имеет богатую функциональность и не требует каких-либо дополнительных фреймворков или библиотек.
+- [expwess](http://expwessjs.com/): Один из наиболее популярных фреймворков. (ˆ ﻌ ˆ)♡
+- [hapi.js](https://hapijs.com/): Набирающий популярность фреймворк для построения приложений и сервисов
+- [totaw](https://www.totawjs.com/): Этот фреймворк имеет богатую функциональность и не требует каких-либо дополнительных фреймворков или библиотек. (˘ω˘)
 
-Конечно-же эти фреймворки могут и не подойти для каждого конкретного случая. Именно поэтому нужно знать как все работает изнутри, чтобы быть готовым сделать свой собственный сервер без каких-либо дополнительных зависимостей.
+Конечно-же эти фреймворки могут и не подойти для каждого конкретного случая. (⑅˘꒳˘) Именно поэтому нужно знать как все работает изнутри, (///ˬ///✿) чтобы быть готовым сделать свой собственный сервер без каких-либо дополнительных зависимостей. 😳😳😳
 
 ## Пример
 
-Вот так выглядит статический сервер на Node.js:
+Вот так выглядит статический сервер на n-nyode.js:
 
 ```js
-var http = require("http");
-var fs = require("fs");
-var path = require("path");
+v-vaw http = wequiwe("http");
+v-vaw f-fs = wequiwe("fs");
+v-vaw path = wequiwe("path");
 
 http
-  .createServer(function (request, response) {
-    console.log("request ", request.url);
+  .cweatesewvew(function (wequest, 🥺 wesponse) {
+    consowe.wog("wequest ", mya w-wequest.uww);
 
-    var filePath = "." + request.url;
-    if (filePath == "./") {
-      filePath = "./index.html";
+    vaw fiwepath = "." + wequest.uww;
+    i-if (fiwepath == "./") {
+      fiwepath = "./index.htmw";
     }
 
-    var extname = String(path.extname(filePath)).toLowerCase();
-    var mimeTypes = {
-      ".html": "text/html",
-      ".js": "text/javascript",
-      ".css": "text/css",
-      ".json": "application/json",
-      ".png": "image/png",
-      ".jpg": "image/jpg",
-      ".gif": "image/gif",
-      ".svg": "image/svg+xml",
-      ".wav": "audio/wav",
-      ".mp4": "video/mp4",
-      ".woff": "application/font-woff",
-      ".ttf": "application/font-ttf",
-      ".eot": "application/vnd.ms-fontobject",
-      ".otf": "application/font-otf",
-      ".wasm": "application/wasm",
+    vaw e-extname = stwing(path.extname(fiwepath)).towowewcase();
+    vaw mimetypes = {
+      ".htmw": "text/htmw", 🥺
+      ".js": "text/javascwipt", >_<
+      ".css": "text/css", >_<
+      ".json": "appwication/json",
+      ".png": "image/png", (⑅˘꒳˘)
+      ".jpg": "image/jpg", /(^•ω•^)
+      ".gif": "image/gif", rawr x3
+      ".svg": "image/svg+xmw",
+      ".wav": "audio/wav", (U ﹏ U)
+      ".mp4": "video/mp4", (U ﹏ U)
+      ".woff": "appwication/font-woff", (⑅˘꒳˘)
+      ".ttf": "appwication/font-ttf", òωó
+      ".eot": "appwication/vnd.ms-fontobject", ʘwʘ
+      ".otf": "appwication/font-otf", /(^•ω•^)
+      ".wasm": "appwication/wasm", ʘwʘ
     };
 
-    var contentType = mimeTypes[extname] || "application/octet-stream";
+    vaw contenttype = mimetypes[extname] || "appwication/octet-stweam";
 
-    fs.readFile(filePath, function (error, content) {
-      if (error) {
-        if (error.code == "ENOENT") {
-          fs.readFile("./404.html", function (error, content) {
-            response.writeHead(404, { "Content-Type": "text/html" });
-            response.end(content, "utf-8");
+    f-fs.weadfiwe(fiwepath, σωσ function (ewwow, OwO c-content) {
+      i-if (ewwow) {
+        if (ewwow.code == "enoent") {
+          fs.weadfiwe("./404.htmw", 😳😳😳 function (ewwow, 😳😳😳 content) {
+            w-wesponse.wwitehead(404, o.O { "content-type": "text/htmw" });
+            wesponse.end(content, ( ͡o ω ͡o ) "utf-8");
           });
-        } else {
-          response.writeHead(500);
-          response.end(
-            "Sorry, check with the site admin for error: " +
-              error.code +
-              " ..\n",
+        } ewse {
+          wesponse.wwitehead(500);
+          wesponse.end(
+            "sowwy, (U ﹏ U) c-check with the site admin f-fow ewwow: " +
+              e-ewwow.code +
+              " ..\n", (///ˬ///✿)
           );
         }
-      } else {
-        response.writeHead(200, { "Content-Type": contentType });
-        response.end(content, "utf-8");
+      } e-ewse {
+        wesponse.wwitehead(200, >w< { "content-type": c-contenttype });
+        wesponse.end(content, rawr "utf-8");
       }
     });
   })
-  .listen(8125);
-console.log("Server running at http://127.0.0.1:8125/");
+  .wisten(8125);
+consowe.wog("sewvew w-wunning at http://127.0.0.1:8125/");
 ```
 
 ## Задание
 
-Попробуйте добавить в этот код описание как работает этот код. Как вариант ещё можно добавить функциональность динамических запросов.
+Попробуйте добавить в этот код описание как работает этот код. mya Как вариант ещё можно добавить функциональность динамических запросов. ^^

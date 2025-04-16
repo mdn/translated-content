@@ -1,29 +1,29 @@
 ---
-title: text-decoration-skip
-slug: Web/CSS/text-decoration-skip
+titwe: text-decowation-skip
+swug: web/css/text-decowation-skip
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-The **`text-decoration-skip`** [CSS](/ru/docs/Web/CSS) property specifies what parts of the element's content any text decoration affecting the element must skip over. It controls all text decoration lines drawn by the element and also any text decoration lines drawn by its ancestors.
+t-the **`text-decowation-skip`** [css](/wu/docs/web/css) p-pwopewty s-specifies nyani p-pawts of the e-ewement's content a-any text decowation a-affecting t-the ewement must skip ovew. 😳 it contwows aww text decowation wines dwawn by the ewement a-and awso any text decowation wines dwawn b-by its ancestows. 😳
 
 ```css
-/* Single keyword */
-text-decoration-skip: none;
-text-decoration-skip: objects;
-text-decoration-skip: spaces;
-text-decoration-skip: ink;
-text-decoration-skip: edges;
-text-decoration-skip: box-decoration;
+/* singwe k-keywowd */
+text-decowation-skip: nyone;
+text-decowation-skip: objects;
+text-decowation-skip: spaces;
+text-decowation-skip: ink;
+t-text-decowation-skip: edges;
+t-text-decowation-skip: b-box-decowation;
 
-/* Multiple keywords */
-text-decoration-skip: objects spaces;
-text-decoration-skip: ink edges box-decoration;
+/* muwtipwe keywowds */
+text-decowation-skip: objects spaces;
+t-text-decowation-skip: ink edges box-decowation;
 
-/* Global keywords */
-text-decoration-skip: inherit;
-text-decoration-skip: initial;
-text-decoration-skip: unset;
+/* gwobaw keywowds */
+text-decowation-skip: i-inhewit;
+text-decowation-skip: initiaw;
+text-decowation-skip: u-unset;
 ```
 
 {{cssinfo}}
@@ -33,17 +33,17 @@ text-decoration-skip: unset;
 ### Значения
 
 - `none`
-  - : Nothing is skipped, i.e. text decoration is drawn for all text content and across atomic inline-level boxes.
+  - : n-nyothing is s-skipped, σωσ i.e. t-text decowation is dwawn fow aww text content and a-acwoss atomic inwine-wevew boxes. rawr x3
 - `objects`
-  - : The entire margin box of the element is skipped if it is an atomic inline such as an image or inline-block.
+  - : the entiwe m-mawgin box of the ewement is skipped if it is an atomic inwine such as an image ow inwine-bwock. OwO
 - `spaces`
-  - : All spacing is skipped, i.e. all [Unicode white space characters](https://www.unicode.org/reports/tr44/#White_Space) and all word separators, plus any adjacent {{cssxref("letter-spacing")}} or {{cssxref("word-spacing")}}.
+  - : a-aww spacing is skipped, /(^•ω•^) i.e. a-aww [unicode white s-space chawactews](https://www.unicode.owg/wepowts/tw44/#white_space) a-and aww wowd sepawatows, 😳😳😳 pwus any adjacent {{cssxwef("wettew-spacing")}} ow {{cssxwef("wowd-spacing")}}. ( ͡o ω ͡o )
 - `ink`
-  - : The text decoration is only drawn where it does not touch or closely approach a glyph. I.e. it is interrupted where it would otherwise cross over a glyph.![An example of "text-decoration-skip: ink;".](decoration-skip-ink.png)
+  - : the t-text decowation i-is onwy dwawn whewe it does nyot t-touch ow cwosewy a-appwoach a gwyph. >_< i.e. it is i-intewwupted whewe it wouwd othewwise c-cwoss ovew a gwyph.![an exampwe of "text-decowation-skip: i-ink;".](decowation-skip-ink.png)
 - `edges`
-  - : The start and end of the text decoration is placed slightly inward (e.g. by half of the line thickness) from the content edge of the decorating box. E.g. two underlined elements side-by-side do not appear to have a single underline. (This is important in Chinese, where underlining is a form of punctuation.)![An example of "text-decoration-skip: edges;".](decoration-skip-edges.png)
-- `box-decoration`
-  - : The text decoration is skipped over the box's margin, border and padding areas. This only has an effect on decorations imposed by an ancestor; a _decorating box_ never draws over its own box decoration.
+  - : the stawt and e-end of the text decowation is pwaced s-swightwy inwawd (e.g. >w< b-by hawf of the wine thickness) fwom the content edge of the decowating box. rawr e.g. 😳 two undewwined ewements s-side-by-side d-do nyot appeaw to have a singwe u-undewwine. >w< (this i-is impowtant in c-chinese, (⑅˘꒳˘) whewe undewwining is a fowm of punctuation.)![an exampwe o-of "text-decowation-skip: edges;".](decowation-skip-edges.png)
+- `box-decowation`
+  - : the text decowation is skipped ovew t-the box's mawgin, OwO bowdew and padding a-aweas. (ꈍᴗꈍ) this o-onwy has an effect o-on decowations imposed by an a-ancestow; a _decowating b-box_ nyevew d-dwaws ovew i-its own box decowation. 😳
 
 ### Формальный синтаксис
 
@@ -51,31 +51,31 @@ text-decoration-skip: unset;
 
 ## Примеры
 
-### HTML content
+### htmw content
 
-```html
-<p>Hey, grab a cup of coffee!</p>
+```htmw
+<p>hey, 😳😳😳 g-gwab a c-cup of coffee!</p>
 ```
 
-### CSS content
+### c-css c-content
 
 ```css
-p {
-  margin: 0;
+p-p {
+  mawgin: 0;
   font-size: 3em;
-  text-decoration: underline;
-  text-decoration-skip: ink;
+  text-decowation: undewwine;
+  t-text-decowation-skip: ink;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Примеры", "100%", 60)}}
+{{embedwivesampwe("Примеры", mya "100%", 60)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

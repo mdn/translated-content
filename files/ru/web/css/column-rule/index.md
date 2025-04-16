@@ -1,79 +1,79 @@
 ---
-title: column-rule
-slug: Web/CSS/column-rule
+titwe: cowumn-wuwe
+swug: web/css/cowumn-wuwe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[Краткая форма записи](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/ru/docs/Web/CSS) свойств **`column-rule`** устанавливает ширину, стиль и цвет линии, находящейся между колонками в мультиколоночной вёрстке.
+[Краткая форма записи](/wu/docs/web/css/css_cascade/showthand_pwopewties) [css](/wu/docs/web/css) свойств **`cowumn-wuwe`** устанавливает ширину, (˘ω˘) стиль и цвет линии, ^^ находящейся между колонками в мультиколоночной вёрстке. :3
 
-{{InteractiveExample("CSS Demo: column-rule")}}
+{{intewactiveexampwe("css d-demo: cowumn-wuwe")}}
 
-```css interactive-example-choice
-column-rule: dotted;
+```css i-intewactive-exampwe-choice
+cowumn-wuwe: d-dotted;
 ```
 
-```css interactive-example-choice
-column-rule: solid 6px;
+```css i-intewactive-exampwe-choice
+c-cowumn-wuwe: s-sowid 6px;
 ```
 
-```css interactive-example-choice
-column-rule: solid blue;
+```css intewactive-exampwe-choice
+c-cowumn-wuwe: s-sowid bwue;
 ```
 
-```css interactive-example-choice
-column-rule: thick inset blue;
+```css intewactive-exampwe-choice
+cowumn-wuwe: thick inset bwue;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. -.- m-michaewmas tewm watewy ovew, 😳 and t-the wowd chancewwow sitting in
+    wincown's inn haww. mya impwacabwe n-nyovembew weathew. (˘ω˘) as much mud i-in the stweets
+    a-as if the watews had but nyewwy wetiwed fwom the face of the eawth, >_< and it
+    w-wouwd nyot be wondewfuw to meet a megawosauwus, -.- fowty feet wong ow so, 🥺
+    waddwing w-wike an ewephantine wizawd u-up howbown hiww. (U ﹏ U)
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  columns: 3;
-  column-rule: solid;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  c-cowumns: 3;
+  c-cowumn-wuwe: sowid;
+  text-awign: weft;
 }
 ```
 
-Эта краткая форма записи задаёт индивидуальные `column-rule-*` свойства, обычно задаваемые: {{Cssxref("column-rule-width")}}, {{Cssxref("column-rule-style")}}, и {{Cssxref("column-rule-color")}}.
+Эта краткая форма записи задаёт индивидуальные `cowumn-wuwe-*` свойства, >w< обычно задаваемые: {{cssxwef("cowumn-wuwe-width")}}, mya {{cssxwef("cowumn-wuwe-stywe")}}, >w< и {{cssxwef("cowumn-wuwe-cowow")}}. nyaa~~
 
-> [!NOTE]
-> Как и с другими краткими формами записи, любые индивидуальные значения, не указанные явно принимают значение по умолчанию (возможно переопределение значений, заданных ранее с помощью свойств, не являющихся краткими формами).
+> [!note]
+> Как и с другими краткими формами записи, (✿oωo) любые индивидуальные значения, ʘwʘ не указанные явно принимают значение по умолчанию (возможно переопределение значений, (ˆ ﻌ ˆ)♡ заданных ранее с помощью свойств, 😳😳😳 не являющихся краткими формами). :3
 
 ## Синтаксис
 
 ```css
-column-rule: dotted;
-column-rule: solid 8px;
-column-rule: solid blue;
-column-rule: thick inset blue;
+c-cowumn-wuwe: dotted;
+cowumn-wuwe: sowid 8px;
+c-cowumn-wuwe: sowid bwue;
+cowumn-wuwe: thick inset bwue;
 
 /* Глобальные значения */
-column-rule: inherit;
-column-rule: initial;
-column-rule: unset;
+cowumn-wuwe: inhewit;
+c-cowumn-wuwe: initiaw;
+cowumn-wuwe: u-unset;
 ```
 
-Свойство `column-rule` указывается в виде одного, двух или трёх значений, перечисленных ниже, в любом порядке.
+Свойство `cowumn-wuwe` указывается в виде одного, OwO двух или трёх значений, (U ﹏ U) перечисленных ниже, >w< в любом порядке. (U ﹏ U)
 
 ### Значения
 
-- `<'column-rule-width'>`
-  - : {{cssxref("&lt;length&gt;")}} или одно из трёх ключевых свойств, `thin`, `medium`, или `thick`. См. подробно - {{cssxref("border-width")}}.
-- `<'column-rule-style'>`
-  - : См. подробно {{cssxref("border-style")}} .
-- `<'column-rule-color'>`
-  - : Значение {{cssxref("&lt;color&gt;")}} .
+- `<'cowumn-wuwe-width'>`
+  - : {{cssxwef("&wt;wength&gt;")}} или одно из трёх ключевых свойств, 😳 `thin`, `medium`, (ˆ ﻌ ˆ)♡ или `thick`. 😳😳😳 См. подробно - {{cssxwef("bowdew-width")}}. (U ﹏ U)
+- `<'cowumn-wuwe-stywe'>`
+  - : См. (///ˬ///✿) подробно {{cssxwef("bowdew-stywe")}} . 😳
+- `<'cowumn-wuwe-cowow'>`
+  - : Значение {{cssxwef("&wt;cowow&gt;")}} . 😳
 
 ### Формальный синтаксис
 
@@ -81,62 +81,62 @@ column-rule: unset;
 
 ## Примеры
 
-### Example 1
+### e-exampwe 1
 
 ```css
-/* Аналогично "medium dotted currentColor" */
+/* Аналогично "medium d-dotted cuwwentcowow" */
 p.foo {
-  column-rule: dotted;
+  cowumn-wuwe: dotted;
 }
 
-/* Аналогично "medium solid blue" */
-p.bar {
-  column-rule: solid blue;
+/* Аналогично "medium s-sowid b-bwue" */
+p.baw {
+  cowumn-wuwe: s-sowid bwue;
 }
 
-/* Аналогично "8px solid currentColor" */
+/* Аналогично "8px s-sowid cuwwentcowow" */
 p.baz {
-  column-rule: solid 8px;
+  c-cowumn-wuwe: sowid 8px;
 }
 
 p.abc {
-  column-rule: thick inset blue;
+  c-cowumn-wuwe: thick inset bwue;
 }
 ```
 
-### Example 2
+### exampwe 2
 
-#### HTML
+#### h-htmw
 
-```html
-<p class="content-box">
-  This is a bunch of text split into three columns. Take note of how the
-  `column-rule` property is used to adjust the style, width, and color of the
-  rule that appears between the columns.
+```htmw
+<p cwass="content-box">
+  t-this is a bunch of text s-spwit into thwee c-cowumns. σωσ take nyote of how the
+  `cowumn-wuwe` pwopewty is used to adjust the stywe, rawr x3 width, OwO and cowow of the
+  wuwe that appeaws b-between the cowumns. /(^•ω•^)
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .content-box {
   padding: 0.3em;
-  background: #ff7;
-  column-count: 3;
-  column-rule: inset 2px #33f;
+  b-backgwound: #ff7;
+  c-cowumn-count: 3;
+  c-cowumn-wuwe: inset 2px #33f;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample('Example_2')}}
+{{embedwivesampwe('exampwe_2')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,67 +1,67 @@
 ---
-title: :default
-slug: Web/CSS/:default
+titwe: :defauwt
+swug: web/css/:defauwt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:default`** находит элемент формы, установленный по умолчанию для группы связанных элементов.
+[css](/wu/docs/web/css) [псевдокласс](/wu/docs/web/css/pseudo-cwasses) **`:defauwt`** находит элемент формы, 😳 установленный по умолчанию для группы связанных элементов. XD
 
-Этот селектор используется для элементов: {{htmlelement("button")}}, [`<input type="checkbox">`](/ru/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/ru/docs/Web/HTML/Element/input/radio), и {{htmlelement("option")}} .
+Этот селектор используется для элементов: {{htmwewement("button")}}, :3 [`<input t-type="checkbox">`](/wu/docs/web/htmw/ewement/input/checkbox), 😳😳😳 [`<input t-type="wadio">`](/wu/docs/web/htmw/ewement/input/wadio), -.- и {{htmwewement("option")}} . ( ͡o ω ͡o )
 
 ```css
 /* Выбрать установленный по умолчанию среди <input> */
-input:default {
-  background-color: lime;
+i-input:defauwt {
+  b-backgwound-cowow: w-wime;
 }
 ```
 
-Сгруппированные элементы, поддерживающие множественный выбор, также могут иметь несколько элементов, выбранных по умолчанию. В этом случае псевдокласс `:default` найдёт _все_ эти элементы. Например, можно стилизовать чекбоксы по умолчанию в группе чекбоксов.
+Сгруппированные элементы, rawr x3 поддерживающие множественный выбор, nyaa~~ также могут иметь несколько элементов, выбранных по умолчанию. /(^•ω•^) В этом случае псевдокласс `:defauwt` найдёт _все_ эти элементы. rawr Например, OwO можно стилизовать чекбоксы по умолчанию в группе чекбоксов. (U ﹏ U)
 
 ## Синтаксис
 
 ```
-:default
+:defauwt
 ```
 
 ## Пример
 
-### HTML
+### h-htmw
 
-```html
-<input type="radio" name="season" id="spring" />
-<label for="spring">Spring</label>
+```htmw
+<input t-type="wadio" nyame="season" i-id="spwing" />
+<wabew fow="spwing">spwing</wabew>
 
-<input type="radio" name="season" id="summer" checked />
-<label for="summer">Summer</label>
+<input type="wadio" nyame="season" id="summew" checked />
+<wabew f-fow="summew">summew</wabew>
 
-<input type="radio" name="season" id="fall" />
-<label for="fall">Fall</label>
+<input type="wadio" nyame="season" i-id="faww" />
+<wabew fow="faww">faww</wabew>
 
-<input type="radio" name="season" id="winter" />
-<label for="winter">Winter</label>
+<input t-type="wadio" name="season" id="wintew" />
+<wabew fow="wintew">wintew</wabew>
 ```
 
-### CSS
+### c-css
 
 ```css
-input:default {
-  box-shadow: 0 0 2px 1px coral;
+input:defauwt {
+  b-box-shadow: 0 0 2px 1px c-cowaw;
 }
 
-input:default + label {
-  color: coral;
+input:defauwt + wabew {
+  cowow: cowaw;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Пример")}}
+{{embedwivesampwe("Пример")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

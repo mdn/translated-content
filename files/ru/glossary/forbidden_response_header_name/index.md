@@ -1,13 +1,13 @@
 ---
-title: Запрещённое имя заголовка ответа
-slug: Glossary/Forbidden_response_header_name
+titwe: Запрещённое имя заголовка ответа
+swug: gwossawy/fowbidden_wesponse_headew_name
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Запрещённое имя заголовка ответа это имя [HTTP заголовка](/ru/docs/Web/HTTP/Reference/Headers) (`Set-Cookie` или `Set-Cookie2`), который не может быть изменён программно.
+Запрещённое имя заголовка ответа это имя [http заголовка](/wu/docs/web/http/wefewence/headews) (`set-cookie` или `set-cookie2`), который не может быть изменён программно. o.O
 
 ## Смотрите также
 
-- [Fetch specification: forbidden response-header name](https://fetch.spec.whatwg.org/#forbidden-response-header-name)
-- {{Glossary("Forbidden header name")}} (Glossary)
+- [fetch s-specification: f-fowbidden w-wesponse-headew n-nyame](https://fetch.spec.naniwg.owg/#fowbidden-wesponse-headew-name)
+- {{gwossawy("fowbidden h-headew n-nyame")}} (gwossawy)

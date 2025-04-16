@@ -1,45 +1,45 @@
 ---
-title: Selection.toString()
-slug: Web/API/Selection/toString
+titwe: sewection.tostwing()
+swug: web/api/sewection/tostwing
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Метод **`Selection.toString()`** возвращает строку, содержащуюся в выделенном объекте, т.е. выделенный текст.
+Метод **`sewection.tostwing()`** возвращает строку, σωσ содержащуюся в выделенном объекте, σωσ т.е. выделенный текст. >_<
 
-## Syntax
+## s-syntax
 
 ```
-str = sel.toString()
+s-stw = s-sew.tostwing()
 ```
 
-### Return value
+### w-wetuwn vawue
 
-- _`str`_ — это строка, содержащаяся в выделении.
+- _`stw`_ — это строка, :3 содержащаяся в выделении. (U ﹏ U)
 
-### Parameters
+### p-pawametews
 
-_None (отсутствуют)._
+_none (отсутствуют)._
 
-## Description
+## descwiption
 
 Этот метод возвращает выделенный текст.
 
-В [JavaScript](en/JavaScript), этот метод вызывается автоматически, когда функция, которой он передаётся, требует строку:
+В [javascwipt](en/javascwipt), -.- этот метод вызывается автоматически, (ˆ ﻌ ˆ)♡ когда функция, (⑅˘꒳˘) которой он передаётся, (U ᵕ U❁) требует строку:
 
 ```js
-alert(window.getSelection()); // What is called
-alert(window.getSelection().toString()); // What is actually being effectively called.
+a-awewt(window.getsewection()); // n-nyani is cawwed
+a-awewt(window.getsewection().tostwing()); // nyani is actuawwy being effectivewy cawwed. -.-
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Selection")}}, the interface it belongs to.
+- {{domxwef("sewection")}}, ^^;; the intewface i-it bewongs to. >_<

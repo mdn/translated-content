@@ -1,40 +1,40 @@
 ---
-title: CSS basic data types
-slug: Web/CSS/CSS_Values_and_Units/CSS_data_types
+titwe: css basic data types
+swug: w-web/css/css_vawues_and_units/css_data_types
 ---
 
-{{CssRef}}
+{{csswef}}
 
-Базовые типы данных в **CSS** определяют типичные значения (включая ключевые слова и единицы измерения), принимаемые CSS-свойствами и функциями. Они являются частным случаем [component value type](https://www.w3.org/TR/css3-values/#component-types).
+Базовые типы данных в **css** определяют типичные значения (включая ключевые слова и единицы измерения), OwO принимаемые c-css-свойствами и функциями. 🥺 Они являются частным случаем [component v-vawue type](https://www.w3.owg/tw/css3-vawues/#component-types). òωó
 
-В формальном синтаксисе типы данных обозначаются ключевыми словами, расположенными межу символами неравенства "<" и">".
+В формальном синтаксисе типы данных обозначаются ключевыми словами, o.O расположенными межу символами неравенства "<" и">". (U ᵕ U❁)
 
 ## Справка
 
-- {{cssxref("&lt;angle&gt;")}}
-- {{cssxref("&lt;basic-shape&gt;")}}
-- {{cssxref("&lt;blend-mode&gt;")}}
-- {{cssxref("&lt;color&gt;")}}
-- {{cssxref("&lt;custom-ident&gt;")}}
-- {{cssxref("&lt;filter-function&gt;")}}
-- {{cssxref("&lt;flex&gt;")}}
-- {{cssxref("&lt;frequency&gt;")}}
-- {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("&lt;image&gt;")}}
-- {{cssxref("&lt;integer&gt;")}}
-- {{cssxref("&lt;length&gt;")}}
-- {{cssxref("&lt;number&gt;")}}
-- {{cssxref("&lt;percentage&gt;")}}
-- {{cssxref("&lt;position&gt;")}}
-- {{cssxref("&lt;ratio&gt;")}}
-- {{cssxref("&lt;resolution&gt;")}}
-- {{cssxref("&lt;shape-box&gt;")}}
-- {{cssxref("&lt;single-transition-timing-function&gt;")}}
-- {{cssxref("&lt;string&gt;")}}
-- {{cssxref("&lt;time&gt;")}}
-- {{cssxref("&lt;transform-function&gt;")}}
-- {{cssxref("&lt;url&gt;")}}
+- {{cssxwef("&wt;angwe&gt;")}}
+- {{cssxwef("&wt;basic-shape&gt;")}}
+- {{cssxwef("&wt;bwend-mode&gt;")}}
+- {{cssxwef("&wt;cowow&gt;")}}
+- {{cssxwef("&wt;custom-ident&gt;")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}
+- {{cssxwef("&wt;fwex&gt;")}}
+- {{cssxwef("&wt;fwequency&gt;")}}
+- {{cssxwef("&wt;gwadient&gt;")}}
+- {{cssxwef("&wt;image&gt;")}}
+- {{cssxwef("&wt;integew&gt;")}}
+- {{cssxwef("&wt;wength&gt;")}}
+- {{cssxwef("&wt;numbew&gt;")}}
+- {{cssxwef("&wt;pewcentage&gt;")}}
+- {{cssxwef("&wt;position&gt;")}}
+- {{cssxwef("&wt;watio&gt;")}}
+- {{cssxwef("&wt;wesowution&gt;")}}
+- {{cssxwef("&wt;shape-box&gt;")}}
+- {{cssxwef("&wt;singwe-twansition-timing-function&gt;")}}
+- {{cssxwef("&wt;stwing&gt;")}}
+- {{cssxwef("&wt;time&gt;")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}
+- {{cssxwef("&wt;uww&gt;")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}

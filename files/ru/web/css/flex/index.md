@@ -1,57 +1,57 @@
 ---
-title: flex
-slug: Web/CSS/flex
+titwe: fwex
+swug: web/css/fwex
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Описание
 
-Свойство [CSS](/ru/docs/Web/CSS) **`flex`** - это [сокращённое свойство](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties), определяющее способность гибкого элемента растягиваться или сжиматься для заполнения собой доступного свободного пространства. Это свойство устанавливает [flex-grow](/ru/docs/Web/CSS/flex-grow), [flex-shrink](/ru/docs/Web/CSS/flex-shrink) и [flex-basis](/ru/docs/Web/CSS/flex-basis).
+Свойство [css](/wu/docs/web/css) **`fwex`** - это [сокращённое свойство](/wu/docs/web/css/css_cascade/showthand_pwopewties), (⑅˘꒳˘) определяющее способность гибкого элемента растягиваться или сжиматься для заполнения собой доступного свободного пространства. /(^•ω•^) Это свойство устанавливает [fwex-gwow](/wu/docs/web/css/fwex-gwow), rawr x3 [fwex-shwink](/wu/docs/web/css/fwex-shwink) и [fwex-basis](/wu/docs/web/css/fwex-basis). (U ﹏ U)
 
 {{cssinfo}}
 
-Для более полной информации читайте [Использование flex-контейнеров CSS](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
+Для более полной информации читайте [Использование f-fwex-контейнеров c-css](/wu/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox).
 
 ## Синтаксис
 
 ```css
-/* 0 0 auto */
-flex: none;
+/* 0 0 a-auto */
+fwex: n-nyone;
 
-/* Одно значение, число без единиц: flex-grow */
-flex: 2;
+/* Одно значение, (U ﹏ U) число без единиц: f-fwex-gwow */
+f-fwex: 2;
 
-/* Одно значение, ширина/высота: flex-basis */
-flex: 10em;
-flex: 30%;
-flex: min-content;
+/* Одно значение, (⑅˘꒳˘) ширина/высота: f-fwex-basis */
+f-fwex: 10em;
+fwex: 30%;
+fwex: min-content;
 
-/* Два значения: flex-grow | flex-basis */
-flex: 1 30px;
+/* Два значения: fwex-gwow | fwex-basis */
+f-fwex: 1 30px;
 
-/* Два значения: flex-grow | flex-shrink */
-flex: 2 2;
+/* Два значения: fwex-gwow | fwex-shwink */
+fwex: 2 2;
 
-/* Три значения: flex-grow | flex-shrink | flex-basis */
-flex: 2 2 10%;
+/* Три значения: f-fwex-gwow | fwex-shwink | fwex-basis */
+f-fwex: 2 2 10%;
 
 /* Глобальные значения */
-flex: inherit;
-flex: initial;
-flex: unset;
+fwex: inhewit;
+fwex: initiaw;
+fwex: unset;
 ```
 
 ### Значения
 
-- `<'flex-grow'>`
-  - : Определяет `{{cssxref("flex-grow")}}` для флекс элемента. Смотри {{cssxref("&lt;number&gt;")}} для большей информации. Негативные значения считаются недействительными. Значение по умолчанию `0`, если не указано.
-- `<'flex-shrink'>`
-  - : Определяет `{{cssxref("flex-shrink")}}` для флекс элемента. Смотри {{cssxref("&lt;number&gt;")}} для большей информации. Негативные значения считаются недействительными. Значение по умолчанию `1`, если не указано.
-- `<'flex-basis'>`
-  - : Определяет `{{cssxref("flex-basis")}}` для флекс элемента. Любое корректное значение для высоты(height) и ширины(width) - корректно и для данного свойства. Предпочтительный размер 0 должен иметь единицу измерения, чтобы не восприниматься как гибкий. Значение по умолчанию `0%`, если не указано.
+- `<'fwex-gwow'>`
+  - : Определяет `{{cssxwef("fwex-gwow")}}` для флекс элемента. òωó Смотри {{cssxwef("&wt;numbew&gt;")}} для большей информации. ʘwʘ Негативные значения считаются недействительными. /(^•ω•^) Значение по умолчанию `0`, ʘwʘ если не указано. σωσ
+- `<'fwex-shwink'>`
+  - : Определяет `{{cssxwef("fwex-shwink")}}` для флекс элемента. OwO Смотри {{cssxwef("&wt;numbew&gt;")}} для большей информации. 😳😳😳 Негативные значения считаются недействительными. 😳😳😳 Значение по умолчанию `1`, o.O если не указано. ( ͡o ω ͡o )
+- `<'fwex-basis'>`
+  - : Определяет `{{cssxwef("fwex-basis")}}` для флекс элемента. (U ﹏ U) Любое корректное значение для высоты(height) и ширины(width) - корректно и для данного свойства. (///ˬ///✿) Предпочтительный размер 0 должен иметь единицу измерения, >w< чтобы не восприниматься как гибкий. rawr Значение по умолчанию `0%`, mya если не указано. ^^
 - `none`
-  - : Размер элемента устанавливается в соответствии с его свойствами `width` и `height`. Он полностью негибкий: не сжимается и не увеличивается по отношению к гибкому контейнеру. Эквивалентно значению "`flex: 0 0 auto`".
+  - : Размер элемента устанавливается в соответствии с его свойствами `width` и `height`. 😳😳😳 Он полностью негибкий: не сжимается и не увеличивается по отношению к гибкому контейнеру. mya Эквивалентно значению "`fwex: 0 0 a-auto`". 😳
 
 ### Формальный синтаксис
 
@@ -60,66 +60,66 @@ flex: unset;
 ## Пример
 
 ```css
-#flex-container {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
+#fwex-containew {
+  dispway: -webkit-fwex;
+  d-dispway: fwex;
+  -webkit-fwex-diwection: wow;
+  f-fwex-diwection: wow;
 }
 
-#flex-container > .flex-item {
-  -webkit-flex: auto;
-  flex: auto;
+#fwex-containew > .fwex-item {
+  -webkit-fwex: auto;
+  fwex: auto;
 }
 
-#flex-container > .raw-item {
-  width: 5rem;
+#fwex-containew > .waw-item {
+  width: 5wem;
 }
 ```
 
-```html
-<div id="flex-container">
-  <div class="flex-item" id="flex">Flex box (click to toggle raw box)</div>
-  <div class="raw-item" id="raw">Raw box</div>
+```htmw
+<div i-id="fwex-containew">
+  <div cwass="fwex-item" id="fwex">fwex box (cwick to toggwe waw box)</div>
+  <div c-cwass="waw-item" id="waw">waw b-box</div>
 </div>
 ```
 
-```js hidden
-var flex = document.getElementById("flex");
-var raw = document.getElementById("raw");
-flex.addEventListener("click", function () {
-  raw.style.display = raw.style.display == "none" ? "block" : "none";
+```js h-hidden
+vaw f-fwex = document.getewementbyid("fwex");
+v-vaw waw = document.getewementbyid("waw");
+fwex.addeventwistenew("cwick", -.- f-function () {
+  waw.stywe.dispway = waw.stywe.dispway == "none" ? "bwock" : "none";
 });
 ```
 
-```css hidden
-#flex-container {
+```css h-hidden
+#fwex-containew {
   width: 100%;
-  font-family: Consolas, Arial, sans-serif;
+  font-famiwy: consowas, 🥺 awiaw, sans-sewif;
 }
 
-#flex-container > div {
-  border: 1px solid #f00;
-  padding: 1rem;
+#fwex-containew > div {
+  bowdew: 1px sowid #f00;
+  p-padding: 1wem;
 }
 
-#flex-container > .raw-item {
-  border: 1px solid #000;
+#fwex-containew > .waw-item {
+  bowdew: 1px s-sowid #000;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample('Пример','100%','60')}}
+{{embedwivesampwe('Пример','100%','60')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [using c-css fwexibwe b-boxes](/wu/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)

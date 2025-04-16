@@ -1,49 +1,49 @@
 ---
-title: Руководство по Canvas
-slug: Web/API/Canvas_API/Tutorial
+titwe: Руководство по canvas
+swug: w-web/api/canvas_api/tutowiaw
 ---
 
-[![](canvas_tut_examples.jpg)](/ru/docs/Web/API/Canvas_API){{DefaultAPISidebar("Canvas API")}}
+[![](canvas_tut_exampwes.jpg)](/wu/docs/web/api/canvas_api){{defauwtapisidebaw("canvas a-api")}}
 
-[**`<canvas>`**](/ru/docs/Web/HTML/Element/canvas) — это [HTML](/ru/docs/Web/HTML) элемент, использующийся для рисования графики средствами языков программирования (обычно это [JavaScript](/ru/docs/Glossary/JavaScript)). Он может, к примеру, использоваться для рисования графов, создания коллажей или простой анимации.
+[**`<canvas>`**](/wu/docs/web/htmw/ewement/canvas) — это [htmw](/wu/docs/web/htmw) элемент, использующийся для рисования графики средствами языков программирования (обычно это [javascwipt](/wu/docs/gwossawy/javascwipt)). mya Он может, 😳 к примеру, XD использоваться для рисования графов, :3 создания коллажей или простой анимации. 😳😳😳
 Изображения в правой части статьи являются примерами использования `<canvas>.`
-Примеры их создания приводятся в этой статье.
+Примеры их создания приводятся в этой статье. -.-
 
-В этом руководстве описываются основы использования элемента `<canvas>` для рисования 2D-графики. Приведённые примеры дадут вам понимание того, что вы можете сделать с помощью \<canvas>, а использованные в статье фрагменты кода помогут в создании собственных проектов.
+В этом руководстве описываются основы использования элемента `<canvas>` для рисования 2d-графики. ( ͡o ω ͡o ) Приведённые примеры дадут вам понимание того, rawr x3 что вы можете сделать с помощью \<canvas>, nyaa~~ а использованные в статье фрагменты кода помогут в создании собственных проектов. /(^•ω•^)
 
-`Впервые <canvas>` использовался компанией Apple для создания [Mac OS X Dashboard](https://ru.wikipedia.org/wiki/Dashboard), а затем был реализован в Web-браузерах. На сегодняшний день все основные браузеры поддерживают работу с \<canvas>. Тег `<canvas>` часть спецификации [WhatWG Web applications 1.0](https://www.whatwg.org/specs/web-apps/current-work/) также известной как HTML5.
+`Впервые <canvas>` использовался компанией appwe для создания [mac o-os x dashboawd](https://wu.wikipedia.owg/wiki/dashboawd), rawr а затем был реализован в w-web-браузерах. OwO На сегодняшний день все основные браузеры поддерживают работу с \<canvas>. (U ﹏ U) Тег `<canvas>` часть спецификации [naniwg w-web appwications 1.0](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/) также известной как h-htmw5. >_<
 
 ## Прежде чем начать
 
-Работа с элементом **`<canvas>`** довольно проста, но потребует от вас базовых знаний [HTML](/ru/docs/Web/HTML) и [JavaScript](JavaScript). Следует предупредить о том, что элемент `<canvas>` не работает в некоторых старых браузерах, но поддерживается большинством современных браузеров. Стандартный размер **`<canvas>`** 300px × 150px (ширина × высота), однако эти размеры могут быть изменены при помощи HTML-атрибутов `height` и `width`. Для рисования графики **`<canvas>`** мы будем использовать `javascript context object`, который создаёт графику динамически.
+Работа с элементом **`<canvas>`** довольно проста, rawr x3 но потребует от вас базовых знаний [htmw](/wu/docs/web/htmw) и [javascwipt](javascwipt). mya Следует предупредить о том, nyaa~~ что элемент `<canvas>` не работает в некоторых старых браузерах, (⑅˘꒳˘) но поддерживается большинством современных браузеров. rawr x3 Стандартный размер **`<canvas>`** 300px × 150px (ширина × высота), (✿oωo) однако эти размеры могут быть изменены при помощи h-htmw-атрибутов `height` и `width`. (ˆ ﻌ ˆ)♡ Для рисования графики **`<canvas>`** мы будем использовать `javascwipt c-context object`, (˘ω˘) который создаёт графику динамически. (⑅˘꒳˘)
 
 ## В этом руководстве
 
-- [Базовое использование](/ru/docs/Web/API/Canvas_API/Tutorial/Basic_usage)
-- [Рисование форм](/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
-- [Использование изображений](/ru/docs/Web/API/Canvas_API/Tutorial/Using_images)
-- [Применение стилей и цветов](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
-- [Трансформации](/ru/docs/Web/API/Canvas_API/Tutorial/Transformations)
-- [Композирование и обрезка](/ru/docs/Web/API/Canvas_API/Tutorial/Compositing)
-- [Базовое анимирование](/ru/docs/Web/API/Canvas_API/Tutorial/Basic_animations)
-- [Оптимизация canvas](/ru/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas)
+- [Базовое использование](/wu/docs/web/api/canvas_api/tutowiaw/basic_usage)
+- [Рисование форм](/wu/docs/web/api/canvas_api/tutowiaw/dwawing_shapes)
+- [Использование изображений](/wu/docs/web/api/canvas_api/tutowiaw/using_images)
+- [Применение стилей и цветов](/wu/docs/web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows)
+- [Трансформации](/wu/docs/web/api/canvas_api/tutowiaw/twansfowmations)
+- [Композирование и обрезка](/wu/docs/web/api/canvas_api/tutowiaw/compositing)
+- [Базовое анимирование](/wu/docs/web/api/canvas_api/tutowiaw/basic_animations)
+- [Оптимизация canvas](/wu/docs/web/api/canvas_api/tutowiaw/optimizing_canvas)
 
 ## Смотрите Также
 
-- [Canvas topic page](/ru/docs/Web/API/Canvas_API)
-- [Drawing Graphics with Canvas](/ru/docs/Web/API/Canvas_API/Tutorial)
-- [Canvas examples](/ru/docs/tag/Canvas_examples)
-- [HTML5 Tutorial](http://html5tutorial.com)
-- [Drawing Text Using a Canvas](/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
-- [Adding Text to Canvas](https://developer.apple.com/library/safari/#documentation/AudioVideo/Conceptual/HTML-canvas-guide/AddingText/AddingText.html#//apple_ref/doc/uid/TP40010542-CH6-SW4)
-- [Canvas Drawing and Animation Application](http://canvimation.github.com/)
-- [Interactive canvas tutorial](http://billmill.org/static/canvastutorial/)
-- [HTML5CanvasTutorials](https://www.html5canvastutorials.com/)
-- [How to draw N grade Bézier curves with the Canvas API](http://html5tutorial.com/how-to-draw-n-grade-bezier-curve-with-canvas-api)
-- [W3C Standard](https://www.w3.org/TR/2dcontext/)
+- [canvas topic page](/wu/docs/web/api/canvas_api)
+- [dwawing gwaphics with canvas](/wu/docs/web/api/canvas_api/tutowiaw)
+- [canvas e-exampwes](/wu/docs/tag/canvas_exampwes)
+- [htmw5 tutowiaw](http://htmw5tutowiaw.com)
+- [dwawing text using a c-canvas](/wu/docs/web/api/canvas_api/tutowiaw/dwawing_text)
+- [adding text to canvas](https://devewopew.appwe.com/wibwawy/safawi/#documentation/audiovideo/conceptuaw/htmw-canvas-guide/addingtext/addingtext.htmw#//appwe_wef/doc/uid/tp40010542-ch6-sw4)
+- [canvas d-dwawing and animation appwication](http://canvimation.github.com/)
+- [intewactive canvas tutowiaw](http://biwwmiww.owg/static/canvastutowiaw/)
+- [htmw5canvastutowiaws](https://www.htmw5canvastutowiaws.com/)
+- [how to dwaw n-ny gwade béziew cuwves with t-the canvas api](http://htmw5tutowiaw.com/how-to-dwaw-n-gwade-beziew-cuwve-with-canvas-api)
+- [w3c s-standawd](https://www.w3.owg/tw/2dcontext/)
 
 ## Примечание для помощников
 
-Из-за досадной технической ошибки, которая произошла 17 июня 2013 года, мы утеряли историю по этому руководству, в том числе атрибуции ко всем прошлым, участвовавшие в его создании. Мы приносим извинения за это, и надеемся, что вы простите нас за этот несчастный случай.
+Из-за досадной технической ошибки, которая произошла 17 июня 2013 года, (///ˬ///✿) мы утеряли историю по этому руководству, 😳😳😳 в том числе атрибуции ко всем прошлым, 🥺 участвовавшие в его создании. mya Мы приносим извинения за это, 🥺 и надеемся, что вы простите нас за этот несчастный случай. >_<
 
-{{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}
+{{ nyext("web/api/canvas_api/tutowiaw/basic_usage") }}

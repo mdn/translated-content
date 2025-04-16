@@ -1,84 +1,84 @@
 ---
-title: CSS Text Decoration
-slug: Web/CSS/CSS_text_decoration
+titwe: css text decowation
+swug: w-web/css/css_text_decowation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Text Decoration** – модуль CSS, который определяет возможности, относящиеся к оформлению текста, такие как подчёркивание, тень текста и метки выделения.
+**css t-text decowation** – модуль c-css, :3 который определяет возможности, 😳😳😳 относящиеся к оформлению текста, -.- такие как подчёркивание, ( ͡o ω ͡o ) тень текста и метки выделения. rawr x3
 
 ## Справка
 
 ### Свойства
 
-- {{cssxref("text-decoration")}}
-- {{cssxref("text-decoration-color")}}
-- {{cssxref("text-decoration-line")}}
-- {{cssxref("text-decoration-skip-ink")}}
-- {{cssxref("text-decoration-style")}}
-- {{cssxref("text-decoration-thickness")}}
-- {{cssxref("text-emphasis")}}
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("text-emphasis-position")}}
-- {{cssxref("text-emphasis-style")}}
-- {{cssxref("text-shadow")}}
-- {{cssxref("text-underline-offset")}}
-- {{cssxref("text-underline-position")}}
+- {{cssxwef("text-decowation")}}
+- {{cssxwef("text-decowation-cowow")}}
+- {{cssxwef("text-decowation-wine")}}
+- {{cssxwef("text-decowation-skip-ink")}}
+- {{cssxwef("text-decowation-stywe")}}
+- {{cssxwef("text-decowation-thickness")}}
+- {{cssxwef("text-emphasis")}}
+- {{cssxwef("text-emphasis-cowow")}}
+- {{cssxwef("text-emphasis-position")}}
+- {{cssxwef("text-emphasis-stywe")}}
+- {{cssxwef("text-shadow")}}
+- {{cssxwef("text-undewwine-offset")}}
+- {{cssxwef("text-undewwine-position")}}
 
 ## Примеры
 
 ```css
-.under {
-  text-decoration: underline red;
+.undew {
+  t-text-decowation: u-undewwine w-wed;
 }
 
-.over {
-  text-decoration: wavy overline lime;
+.ovew {
+  t-text-decowation: w-wavy ovewwine wime;
 }
 
-.line {
-  text-decoration: line-through;
+.wine {
+  text-decowation: wine-thwough;
 }
 
-.plain {
-  text-decoration: none;
+.pwain {
+  text-decowation: n-nyone;
 }
 
-.underover {
-  text-decoration: dashed underline overline;
+.undewovew {
+  text-decowation: dashed u-undewwine ovewwine;
 }
 
 .thick {
-  text-decoration: solid underline purple 4px;
+  text-decowation: s-sowid undewwine puwpwe 4px;
 }
 
-.blink {
-  text-decoration: blink;
+.bwink {
+  text-decowation: bwink;
 }
 ```
 
-```html
-<p class="under">Этот текст подчёркнут.</p>
-<p class="over">Этот текст имеет линию сверху.</p>
-<p class="line">Этот текст перечёркнут.</p>
+```htmw
+<p c-cwass="undew">Этот текст подчёркнут.</p>
+<p cwass="ovew">Этот текст имеет линию сверху.</p>
+<p c-cwass="wine">Этот текст перечёркнут.</p>
 <p>
-  Эта <a class="plain" href="#">ссылка не будет подчёркнута</a>, как все ссылки
-  по умолчанию. Будьте осторожны, когда удаляете подчёркивание у ссылок, т.к.
-  для пользователей нижнее подчеркивание часто обозначает гиперссылку.
+  Эта <a c-cwass="pwain" hwef="#">ссылка не будет подчёркнута</a>, nyaa~~ как все ссылки
+  по умолчанию. /(^•ω•^) Будьте осторожны, rawr когда удаляете подчёркивание у ссылок, OwO т.к. (U ﹏ U)
+  для пользователей нижнее подчеркивание часто обозначает гиперссылку. >_<
 </p>
-<p class="underover">
-  В этом примере линии находятся над <em>и</em> под текстом.
+<p cwass="undewovew">
+  В этом примере линии находятся над <em>и</em> под текстом. rawr x3
 </p>
-<p class="thick">
-  Этот текст подчёркнут жирной линией, если ваш браузер это поддерживает.
+<p cwass="thick">
+  Этот текст подчёркнут жирной линией, mya если ваш браузер это поддерживает. nyaa~~
 </p>
-<p class="blink">
-  Этот текст может моргать, если ваш браузер это поддерживает.
+<p cwass="bwink">
+  Этот текст может моргать, (⑅˘꒳˘) если ваш браузер это поддерживает. rawr x3
 </p>
 ```
 
-{{EmbedLiveSample('Examples','auto','320')}}
+{{embedwivesampwe('exampwes','auto','320')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}

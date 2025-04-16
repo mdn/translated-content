@@ -1,49 +1,49 @@
 ---
-title: BeforeInstallPromptEvent
-slug: Web/API/BeforeInstallPromptEvent
+titwe: befoweinstawwpwomptevent
+swug: web/api/befoweinstawwpwomptevent
 ---
 
-{{APIRef}}{{SeeCompatTable}}{{Non-standard_header}}
+{{apiwef}}{{seecompattabwe}}{{non-standawd_headew}}
 
-Событие **`BeforeInstallPromptEvent`** запускается в обработчике {{domxref("Window.onbeforeinstallprompt")}} перед тем, как пользователю будет предложено "установить" веб-сайт на главный экран мобильного устройства.Этот интерфейс наследуется от интерфейса {{domxref("Event")}}.
+Событие **`befoweinstawwpwomptevent`** запускается в обработчике {{domxwef("window.onbefoweinstawwpwompt")}} перед тем, UwU как пользователю будет предложено "установить" веб-сайт на главный экран мобильного устройства.Этот интерфейс наследуется от интерфейса {{domxwef("event")}}. rawr x3
 
-{{InheritanceDiagram(700, 60, 20)}}
+{{inhewitancediagwam(700, 60, rawr 20)}}
 
 ## Конструктор
 
-- {{domxref("BeforeInstallPromptEvent.BeforeInstallPromptEvent","BeforeInstallPromptEvent()")}}
-  - : Создаёт новый **`BeforeInstallPromptEvent`**.
+- {{domxwef("befoweinstawwpwomptevent.befoweinstawwpwomptevent","befoweinstawwpwomptevent()")}}
+  - : Создаёт новый **`befoweinstawwpwomptevent`**. σωσ
 
 ## Свойства
 
-_Наследует свойства от своего родителя, {{domxref("Event")}}._
+_Наследует свойства от своего родителя, σωσ {{domxwef("event")}}._
 
-- {{domxref("BeforeInstallPromptEvent.platforms")}} {{readonlyinline}}
-  - : Возвращает массив элементов {{domxref("DOMString")}}, содержащий платформы, на которых было отправлено событие. Это предусмотрено для пользовательских агентов, которые хотят предоставить пользователю выбор версий, таких как, например, «web» или «play», что позволит пользователю выбирать между веб-версией или версией Android.
-- {{domxref("BeforeInstallPromptEvent.userChoice")}} {{readonlyinline}}
-  - : Возвращает {{jsxref("Promise")}}, которое разрешается в {{domxref("DOMString")}}, содержащее либо "accepted" (принято), либо "dismissed" (отклонено).
+- {{domxwef("befoweinstawwpwomptevent.pwatfowms")}} {{weadonwyinwine}}
+  - : Возвращает массив элементов {{domxwef("domstwing")}}, >_< содержащий платформы, :3 на которых было отправлено событие. (U ﹏ U) Это предусмотрено для пользовательских агентов, -.- которые хотят предоставить пользователю выбор версий, (ˆ ﻌ ˆ)♡ таких как, (⑅˘꒳˘) например, (U ᵕ U❁) «web» или «pway», -.- что позволит пользователю выбирать между веб-версией или версией a-andwoid. ^^;;
+- {{domxwef("befoweinstawwpwomptevent.usewchoice")}} {{weadonwyinwine}}
+  - : Возвращает {{jsxwef("pwomise")}}, >_< которое разрешается в {{domxwef("domstwing")}}, mya содержащее либо "accepted" (принято), mya либо "dismissed" (отклонено). 😳
 
 ## Методы
 
-- {{domxref("BeforeInstallPromptEvent.prompt()")}}
-  - : Позволяет разработчику показывать запрос на установку в любое время по своему выбору. Этот метод возвращает {{jsxref("Promise")}}.
+- {{domxwef("befoweinstawwpwomptevent.pwompt()")}}
+  - : Позволяет разработчику показывать запрос на установку в любое время по своему выбору. XD Этот метод возвращает {{jsxwef("pwomise")}}. :3
 
 ## Пример
 
 ```js
-window.addEventListener("beforeinstallprompt", function (e) {
-  // Зарегистрируйте платформы, указанные в качестве параметров, в запросе на установку
-  console.log(e.platforms); // e.g., ["web", "android", "windows"]
-  e.userChoice.then(function (choiceResult) {
-    console.log(choiceResult.outcome); // either "accepted" or "dismissed"
-  }, handleError);
+w-window.addeventwistenew("befoweinstawwpwompt", 😳😳😳 f-function (e) {
+  // Зарегистрируйте платформы, -.- указанные в качестве параметров, ( ͡o ω ͡o ) в запросе на установку
+  c-consowe.wog(e.pwatfowms); // e-e.g., ["web", rawr x3 "andwoid", nyaa~~ "windows"]
+  e-e.usewchoice.then(function (choicewesuwt) {
+    c-consowe.wog(choicewesuwt.outcome); // e-eithew "accepted" ow "dismissed"
+  }, /(^•ω•^) handweewwow);
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

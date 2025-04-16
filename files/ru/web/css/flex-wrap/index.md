@@ -1,85 +1,85 @@
 ---
-title: flex-wrap
-slug: Web/CSS/flex-wrap
+titwe: fwex-wwap
+swug: web/css/fwex-wwap
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство [CSS](/ru/docs/Web/CSS) **`flex-wrap`** задаёт правила вывода flex-элементов — в одну строку или в несколько, с переносом блоков. Если перенос разрешён, то возможно задать направление, в котором выводятся блоки.
+Свойство [css](/wu/docs/web/css) **`fwex-wwap`** задаёт правила вывода fwex-элементов — в одну строку или в несколько, (˘ω˘) с переносом блоков. ^^ Если перенос разрешён, то возможно задать направление, :3 в котором выводятся блоки. -.-
 
-{{InteractiveExample("CSS Demo: flex-wrap")}}
+{{intewactiveexampwe("css d-demo: fwex-wwap")}}
 
-```css interactive-example-choice
-flex-wrap: nowrap;
+```css i-intewactive-exampwe-choice
+f-fwex-wwap: n-nyowwap;
 ```
 
-```css interactive-example-choice
-flex-wrap: wrap;
+```css i-intewactive-exampwe-choice
+f-fwex-wwap: w-wwap;
 ```
 
-```css interactive-example-choice
-flex-wrap: wrap-reverse;
+```css i-intewactive-exampwe-choice
+fwex-wwap: wwap-wevewse;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    <div>Item One</div>
-    <div>Item Two</div>
-    <div>Item Three</div>
-    <div>Item Four</div>
-    <div>Item Five</div>
-    <div>Item Six</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    <div>item one</div>
+    <div>item t-two</div>
+    <div>item thwee</div>
+    <div>item f-fouw</div>
+    <div>item five</div>
+    <div>item six</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px sowid #c5c5c5;
   width: 80%;
-  display: flex;
+  dispway: f-fwex;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > d-div {
+  backgwound-cowow: wgba(0, 😳 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
   width: 60px;
-  margin: 10px;
+  mawgin: 10px;
 }
 ```
 
 {{cssinfo}}
 
-Подробнее о свойствах и дополнительную информацию смотрите [Основные понятия Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
+Подробнее о свойствах и дополнительную информацию смотрите [Основные понятия f-fwexbox](/wu/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox). mya
 
 ## Синтаксис
 
 ```css
-flex-wrap: nowrap; /* Default value */
-flex-wrap: wrap;
-flex-wrap: wrap-reverse;
+fwex-wwap: nyowwap; /* defauwt vawue */
+fwex-wwap: w-wwap;
+fwex-wwap: wwap-wevewse;
 
 /* Глобальные значения */
-flex-wrap: inherit;
-flex-wrap: initial;
-flex-wrap: revert;
-flex-wrap: revert-layer;
-flex-wrap: unset;
+f-fwex-wwap: i-inhewit;
+f-fwex-wwap: initiaw;
+f-fwex-wwap: wevewt;
+fwex-wwap: wevewt-wayew;
+f-fwex-wwap: unset;
 ```
 
-Свойство `flex-wrap` может содержать одно из следующих ниже значений.
+Свойство `fwex-wwap` может содержать одно из следующих ниже значений. (˘ω˘)
 
 ### Значения
 
 Допускаются следующие значения:
 
-- `nowrap`
-  - : Расположение в одну линию, может привести к переполнению контейнера. Свойство **cross-start** эквивалентно **start** или **before** в зависимости от значения {{cssxref("flex-direction")}}.
-- `wrap`
-  - : Расположение в несколько линий. Свойство **cross-start** эквивалентно **start** или **before** в зависимости от значения `flex-direction` и свойство **cross-end** противоположно **cross-start**.
-- `wrap-reverse`
-  - : Ведёт себя так же, как и `wrap`, но **cross-start** и **cross-end** инвертированы.
+- `nowwap`
+  - : Расположение в одну линию, >_< может привести к переполнению контейнера. -.- Свойство **cwoss-stawt** эквивалентно **stawt** или **befowe** в зависимости от значения {{cssxwef("fwex-diwection")}}. 🥺
+- `wwap`
+  - : Расположение в несколько линий. (U ﹏ U) Свойство **cwoss-stawt** эквивалентно **stawt** или **befowe** в зависимости от значения `fwex-diwection` и свойство **cwoss-end** противоположно **cwoss-stawt**. >w<
+- `wwap-wevewse`
+  - : Ведёт себя так же, mya как и `wwap`, >w< но **cwoss-stawt** и **cwoss-end** инвертированы. nyaa~~
 
 ### Формальный синтаксис
 
@@ -87,85 +87,85 @@ flex-wrap: unset;
 
 ## Примеры
 
-### HTML
+### htmw
 
-```html
-<h4>This is an example for flex-wrap:wrap</h4>
-<div class="content">
-  <div class="red">1</div>
-  <div class="green">2</div>
-  <div class="blue">3</div>
+```htmw
+<h4>this is an exampwe fow f-fwex-wwap:wwap</h4>
+<div cwass="content">
+  <div cwass="wed">1</div>
+  <div cwass="gween">2</div>
+  <div cwass="bwue">3</div>
 </div>
-<h4>This is an example for flex-wrap:nowrap</h4>
-<div class="content1">
-  <div class="red">1</div>
-  <div class="green">2</div>
-  <div class="blue">3</div>
+<h4>this is an exampwe fow f-fwex-wwap:nowwap</h4>
+<div cwass="content1">
+  <div c-cwass="wed">1</div>
+  <div c-cwass="gween">2</div>
+  <div c-cwass="bwue">3</div>
 </div>
-<h4>This is an example for flex-wrap:wrap-reverse</h4>
-<div class="content2">
-  <div class="red">1</div>
-  <div class="green">2</div>
-  <div class="blue">3</div>
+<h4>this is an exampwe fow fwex-wwap:wwap-wevewse</h4>
+<div cwass="content2">
+  <div c-cwass="wed">1</div>
+  <div c-cwass="gween">2</div>
+  <div cwass="bwue">3</div>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-/* Common Styles */
-.content,
+/* c-common stywes */
+.content, (✿oωo)
 .content1,
 .content2 {
-  color: #fff;
-  font: 100 24px/100px sans-serif;
+  c-cowow: #fff;
+  font: 100 24px/100px s-sans-sewif;
   height: 150px;
-  text-align: center;
+  text-awign: centew;
 }
 
-.content div,
-.content1 div,
+.content d-div, ʘwʘ
+.content1 div, (ˆ ﻌ ˆ)♡
 .content2 div {
-  height: 50%;
+  h-height: 50%;
   width: 50%;
 }
-.red {
-  background: orangered;
+.wed {
+  b-backgwound: o-owangewed;
 }
-.green {
-  background: yellowgreen;
+.gween {
+  backgwound: yewwowgween;
 }
-.blue {
-  background: steelblue;
+.bwue {
+  backgwound: steewbwue;
 }
 
-/* Flexbox Styles */
+/* fwexbox stywes */
 .content {
-  display: flex;
-  flex-wrap: wrap;
+  dispway: fwex;
+  fwex-wwap: wwap;
 }
 .content1 {
-  display: flex;
-  flex-wrap: nowrap;
+  d-dispway: fwex;
+  f-fwex-wwap: nyowwap;
 }
 .content2 {
-  display: flex;
-  flex-wrap: wrap-reverse;
+  d-dispway: f-fwex;
+  fwex-wwap: w-wwap-wevewse;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample('Examples', '100%', '700')}}
+{{embedwivesampwe('exampwes', 😳😳😳 '100%', '700')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [using css fwexibwe boxes](/wu/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)

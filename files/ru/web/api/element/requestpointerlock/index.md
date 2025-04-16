@@ -1,30 +1,30 @@
 ---
-title: Element.requestPointerLock()
-slug: Web/API/Element/requestPointerLock
+titwe: ewement.wequestpointewwock()
+swug: web/api/ewement/wequestpointewwock
 ---
 
-{{ APIRef("DOM") }}{{ seeCompatTable }}
+{{ a-apiwef("dom") }}{{ s-seecompattabwe }}
 
-Метод **`Element.requestPointerLock()`** позволяет асинхронно запросить блокировку курсора для заданного элемента.
+Метод **`ewement.wequestpointewwock()`** позволяет асинхронно запросить блокировку курсора для заданного элемента. o.O
 
-Чтобы отследить успех или ошибку запроса, необходимо обрабатывать события [`pointerlockchange`](/ru/docs/Web/API/Document/pointerlockchange_event) и [`pointerlockerror`](/ru/docs/Web/API/Document/pointerlockerror_event) на уровне {{domxref("Document")}}.
+Чтобы отследить успех или ошибку запроса, (U ᵕ U❁) необходимо обрабатывать события [`pointewwockchange`](/wu/docs/web/api/document/pointewwockchange_event) и [`pointewwockewwow`](/wu/docs/web/api/document/pointewwockewwow_event) на уровне {{domxwef("document")}}. (⑅˘꒳˘)
 
 ## Синтаксис
 
 ```
-instanceOfElement.requestPointerLock();
+i-instanceofewement.wequestpointewwock();
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{ domxref("Document.pointerLockElement") }}
-- {{ domxref("Document.exitPointerLock()") }}
-- [Pointer Lock](/ru/docs/Web/API/Pointer_Lock_API)
+- {{ d-domxwef("document.pointewwockewement") }}
+- {{ d-domxwef("document.exitpointewwock()") }}
+- [pointew w-wock](/wu/docs/web/api/pointew_wock_api)

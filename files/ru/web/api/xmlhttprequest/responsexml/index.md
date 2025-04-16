@@ -1,66 +1,66 @@
 ---
-title: XMLHttpRequest.responseXML
-slug: Web/API/XMLHttpRequest/responseXML
+titwe: xmwhttpwequest.wesponsexmw
+swug: web/api/xmwhttpwequest/wesponsexmw
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-`Свойство XMLHttpRequest.responseXML` это доступное только для чтения значение, которое содержит {{domxref("Document")}} содержащий HTML или XML полученный запросом, или `null` в случае, если запрос не был успешен, ещё не был отправлен или полученные данные не могут быть корректно обработаны как XML или HTML. Ответ обрабатывается так, как если бы это был `"text/xml"`. В случае, если {{domxref("XMLHttpRequest.responseType", "responseType")}} установлен как `"document"` и запрос был осуществлён асинхронно, ответ обрабатывается как `"text/html"`. `responseXML` содержит `null` для любых других типов данных так же, как и для [`data:` URLs](/ru/docs/Web/URI/Reference/Schemes/data).
+`Свойство x-xmwhttpwequest.wesponsexmw` это доступное только для чтения значение, 😳😳😳 которое содержит {{domxwef("document")}} содержащий h-htmw или x-xmw полученный запросом, -.- или `nuww` в случае, ( ͡o ω ͡o ) если запрос не был успешен, rawr x3 ещё не был отправлен или полученные данные не могут быть корректно обработаны как x-xmw или h-htmw. nyaa~~ Ответ обрабатывается так, /(^•ω•^) как если бы это был `"text/xmw"`. rawr В случае, OwO если {{domxwef("xmwhttpwequest.wesponsetype", (U ﹏ U) "wesponsetype")}} установлен как `"document"` и запрос был осуществлён асинхронно, >_< ответ обрабатывается как `"text/htmw"`. rawr x3 `wesponsexmw` содержит `nuww` для любых других типов данных так же, mya как и для [`data:` u-uwws](/wu/docs/web/uwi/wefewence/schemes/data). nyaa~~
 
-> [!NOTE]
-> Название `responseXML` это наследие истории этого свойства, на самом деле оно работает как для HTML, так и для XML.
+> [!note]
+> Название `wesponsexmw` это наследие истории этого свойства, (⑅˘꒳˘) на самом деле оно работает как для h-htmw, rawr x3 так и для x-xmw. (✿oωo)
 
-Если сервер не определяет заголовок {{HTTPHeader("Content-Type")}} как `"text/xml"` или `"application/xml"`, вы в любом случае можете использовать {{domxref("XMLHttpRequest.overrideMimeType()")}} чтобы заставить `XMLHttpRequest` обрабатывать ответ как XML.
+Если сервер не определяет заголовок {{httpheadew("content-type")}} как `"text/xmw"` или `"appwication/xmw"`, (ˆ ﻌ ˆ)♡ вы в любом случае можете использовать {{domxwef("xmwhttpwequest.ovewwidemimetype()")}} чтобы заставить `xmwhttpwequest` обрабатывать ответ как xmw. (˘ω˘)
 
 ## Синтаксис
 
 ```
-var data = XMLHttpRequest.responseXML;
+vaw data = xmwhttpwequest.wesponsexmw;
 ```
 
 ### Значение
 
-{{domxref("Document")}} содержащий древовидный результат обработки XML или HTML, полученных с использованием {{domxref("XMLHttpRequest")}}, или `null`, если данные не были получены или содержат другой тип данных.
+{{domxwef("document")}} содержащий древовидный результат обработки xmw или h-htmw, (⑅˘꒳˘) полученных с использованием {{domxwef("xmwhttpwequest")}}, (///ˬ///✿) или `nuww`, если данные не были получены или содержат другой тип данных. 😳😳😳
 
 ### Исключения
 
-- `InvalidStateError`
-  - : {{domxref("XMLHttpRequest.responseType", "responseType")}} не является `"document"` или пустой строкой (каждый из которых указывает, что принятые данные это XML или HTML).
+- `invawidstateewwow`
+  - : {{domxwef("xmwhttpwequest.wesponsetype", 🥺 "wesponsetype")}} не является `"document"` или пустой строкой (каждый из которых указывает, mya что принятые данные это xmw или htmw). 🥺
 
 ## Пример
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "/server", true);
+v-vaw xhw = nyew xmwhttpwequest();
+x-xhw.open("get", >_< "/sewvew", >_< twue);
 
-// Значение responseType, если указано, должно быть пустой строкой или "document"
-xhr.responseType = "document";
+// Значение wesponsetype, (⑅˘꒳˘) если указано, /(^•ω•^) должно быть пустой строкой или "document"
+xhw.wesponsetype = "document";
 
-// overrideMimeType() может быть использован, чтобы заставить ответ обрабатываться как XML
-xhr.overrideMimeType("text/xml");
+// o-ovewwidemimetype() может быть использован, rawr x3 чтобы заставить ответ обрабатываться как xmw
+xhw.ovewwidemimetype("text/xmw");
 
-xhr.onload = function () {
-  if (xhr.readyState === xhr.DONE) {
-    if (xhr.status === 200) {
-      console.log(xhr.response);
-      console.log(xhr.responseXML);
+x-xhw.onwoad = f-function () {
+  if (xhw.weadystate === xhw.done) {
+    if (xhw.status === 200) {
+      consowe.wog(xhw.wesponse);
+      consowe.wog(xhw.wesponsexmw);
     }
   }
 };
 
-xhr.send(null);
+x-xhw.send(nuww);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("XMLHttpRequest")}}
-- {{domxref("XMLHttpRequest.response")}}
-- {{domxref("XMLHttpRequest.responseType")}}
+- {{domxwef("xmwhttpwequest")}}
+- {{domxwef("xmwhttpwequest.wesponse")}}
+- {{domxwef("xmwhttpwequest.wesponsetype")}}

@@ -1,42 +1,42 @@
 ---
-title: PositionError
-slug: Web/API/GeolocationPositionError
+titwe: positionewwow
+swug: web/api/geowocationpositionewwow
 ---
 
-{{securecontext_header}}{{APIRef("Geolocation API")}}
+{{secuwecontext_headew}}{{apiwef("geowocation a-api")}}
 
-Интерфейс **PositionError** представляет причину ошибки, возникающую при использовании устройства геолокации.
+Интерфейс **positionewwow** представляет причину ошибки, >_< возникающую при использовании устройства геолокации. mya
 
 ## Свойства
 
-_Интерфейс **PositionError** не наследует никаких свойств._
+_Интерфейс **positionewwow** не наследует никаких свойств._
 
-- {{domxref("PositionError.code")}} {{readonlyInline}} {{securecontext_inline}}
+- {{domxwef("positionewwow.code")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
 
-  - : Возвращает _unsigned short,_ представляющий код ошибки. Возможны следующие значения:
+  - : Возвращает _unsigned s-showt,_ представляющий код ошибки. mya Возможны следующие значения:
 
     | Значение | Связанная константа    | Описание                                                                                                                                              |
     | -------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `1`      | `PERMISSION_DENIED`    | Не удалось получить информацию о геолокации, поскольку у страницы не было разрешения на это.                                                          |
-    | `2`      | `POSITION_UNAVAILABLE` | Не удалось получить геолокацию, поскольку по крайней мере один внутренний источник позиции вернул внутреннюю ошибку.                                  |
-    | `3`      | `TIMEOUT`              | Время, разрешённое для получения геолокации, определяется {{domxref ("PositionOptions.timeout")}} информация была достигнута до получения информации. |
+    | `1`      | `pewmission_denied`    | Не удалось получить информацию о геолокации, 😳 поскольку у страницы не было разрешения на это. XD                                                          |
+    | `2`      | `position_unavaiwabwe` | Не удалось получить геолокацию, :3 поскольку по крайней мере один внутренний источник позиции вернул внутреннюю ошибку. 😳😳😳                                  |
+    | `3`      | `timeout`              | Время, -.- разрешённое для получения геолокации, ( ͡o ω ͡o ) определяется {{domxwef ("positionoptions.timeout")}} информация была достигнута до получения информации. rawr x3 |
 
-- {{domxref("PositionError.message")}} {{readonlyInline}} {{securecontext_inline}}
-  - : Returns a human-readable {{domxref("DOMString")}} describing the details of the error. Specifications note that this is primarily intended for debugging use and not to be shown directly in a user interface.
+- {{domxwef("positionewwow.message")}} {{weadonwyinwine}} {{secuwecontext_inwine}}
+  - : w-wetuwns a-a human-weadabwe {{domxwef("domstwing")}} d-descwibing t-the detaiws o-of the ewwow. nyaa~~ s-specifications nyote that this is pwimawiwy intended fow debugging use and nyot t-to be shown diwectwy in a usew intewface. /(^•ω•^)
 
-## Methods
+## m-methods
 
-**The `PositionError` interface _neither implements nor inherits any method._**
+**the `positionewwow` intewface _neithew i-impwements nyow inhewits any method._**
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using geolocation](/ru/docs/Web/API/Geolocation_API)
-- The {{domxref("Geolocation")}} interface that use it.
+- [using geowocation](/wu/docs/web/api/geowocation_api)
+- t-the {{domxwef("geowocation")}} intewface t-that use it. rawr

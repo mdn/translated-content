@@ -1,52 +1,52 @@
 ---
-title: :last-child
-slug: Web/CSS/:last-child
+titwe: :wast-chiwd
+swug: web/css/:wast-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:last-child` находит любой элемент, являющийся последним в его родителе.
+c-css [псевдокласс](/wu/docs/web/css/pseudo-cwasses) `:wast-chiwd` находит любой элемент, (⑅˘꒳˘) являющийся последним в его родителе. ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```
-element:last-child { style properties }
+e-ewement:wast-chiwd { s-stywe pwopewties }
 ```
 
 ## Пример
 
-### HTML
+### h-htmw
 
-```html
-<ul>
-  <li>Этот элемент не лаймовый.</li>
-  <li>И этот тоже.</li>
-  <li>А этот да! :)</li>
-</ul>
+```htmw
+<uw>
+  <wi>Этот элемент не лаймовый.</wi>
+  <wi>И этот тоже.</wi>
+  <wi>А этот да! UwU :)</wi>
+</uw>
 ```
 
-### CSS
+### c-css
 
 ```css
-li:last-child {
-  background-color: lime;
+w-wi:wast-chiwd {
+  b-backgwound-cowow: w-wime;
 }
 ```
 
-{{EmbedLiveSample('Пример', '100%', 100)}}
+{{embedwivesampwe('Пример', rawr x3 '100%', rawr 100)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref(":first-child")}}
-- {{cssxref(":nth-child")}}
-- {{cssxref(":last-of-type")}}
+- {{cssxwef(":fiwst-chiwd")}}
+- {{cssxwef(":nth-chiwd")}}
+- {{cssxwef(":wast-of-type")}}

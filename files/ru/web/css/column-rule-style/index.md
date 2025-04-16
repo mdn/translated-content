@@ -1,82 +1,82 @@
 ---
-title: column-rule-style
-slug: Web/CSS/column-rule-style
+titwe: cowumn-wuwe-stywe
+swug: w-web/css/cowumn-wuwe-stywe
 ---
 
-{{ CSSRef}}
+{{ c-csswef}}
 
-[CSS](/ru/docs/Web/CSS) свойство **`column-rule-style`** устанавливает стиль линии, расположенной между колонками при мультиколоночной вёрстке.
+[css](/wu/docs/web/css) свойство **`cowumn-wuwe-stywe`** устанавливает стиль линии, /(^•ω•^) расположенной между колонками при мультиколоночной вёрстке. nyaa~~
 
-{{InteractiveExample("CSS Demo: column-rule-style")}}
+{{intewactiveexampwe("css d-demo: c-cowumn-wuwe-stywe")}}
 
-```css interactive-example-choice
-column-rule-style: none;
+```css i-intewactive-exampwe-choice
+c-cowumn-wuwe-stywe: none;
 ```
 
-```css interactive-example-choice
-column-rule-style: dotted;
+```css i-intewactive-exampwe-choice
+c-cowumn-wuwe-stywe: dotted;
 ```
 
-```css interactive-example-choice
-column-rule-style: solid;
+```css intewactive-exampwe-choice
+cowumn-wuwe-stywe: sowid;
 ```
 
-```css interactive-example-choice
-column-rule-style: double;
+```css intewactive-exampwe-choice
+cowumn-wuwe-stywe: d-doubwe;
 ```
 
-```css interactive-example-choice
-column-rule-style: ridge;
-column-rule-color: #88f;
+```css intewactive-exampwe-choice
+cowumn-wuwe-stywe: w-widge;
+cowumn-wuwe-cowow: #88f;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    wondon. nyaa~~ michaewmas tewm watewy o-ovew, and the wowd chancewwow s-sitting in
+    wincown's i-inn haww. :3 impwacabwe nyovembew weathew. 😳😳😳 as much mud in the stweets
+    a-as if the watews had but nyewwy wetiwed fwom the face of the eawth, (˘ω˘) and it
+    wouwd n-nyot be wondewfuw to meet a m-megawosauwus, ^^ fowty f-feet wong ow s-so, :3
+    waddwing w-wike an ewephantine wizawd up howbown hiww. -.-
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  columns: 3;
-  column-rule: solid;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  cowumns: 3;
+  cowumn-wuwe: s-sowid;
+  text-awign: weft;
 }
 ```
 
 ## Синтаксис
 
 ```css
-/* <'border-style'> значения */
-column-rule-style: none;
-column-rule-style: hidden;
-column-rule-style: dotted;
-column-rule-style: dashed;
-column-rule-style: solid;
-column-rule-style: double;
-column-rule-style: groove;
-column-rule-style: ridge;
-column-rule-style: inset;
-column-rule-style: outset;
+/* <'bowdew-stywe'> значения */
+cowumn-wuwe-stywe: nyone;
+cowumn-wuwe-stywe: hidden;
+cowumn-wuwe-stywe: d-dotted;
+cowumn-wuwe-stywe: dashed;
+c-cowumn-wuwe-stywe: s-sowid;
+cowumn-wuwe-stywe: d-doubwe;
+cowumn-wuwe-stywe: gwoove;
+cowumn-wuwe-stywe: widge;
+cowumn-wuwe-stywe: i-inset;
+cowumn-wuwe-stywe: o-outset;
 
 /* Глобальные значения */
-column-rule-style: inherit;
-column-rule-style: initial;
-column-rule-style: unset;
+cowumn-wuwe-stywe: i-inhewit;
+cowumn-wuwe-stywe: initiaw;
+c-cowumn-wuwe-stywe: unset;
 ```
 
-Свойство `column-rule-style` указывается как одиночное `<'border-style'>` значение.
+Свойство `cowumn-wuwe-stywe` указывается как одиночное `<'bowdew-stywe'>` значение. 😳
 
 ### Значения
 
-- `<'border-style'>`
-  - : Ключевое слово, определяющее {{ cssxref("border-style") }}, описывающий стиль для линии, разделяющей столбцы. Стилизация должна быть интерпретирована как разрушающая границы модель.
+- `<'bowdew-stywe'>`
+  - : Ключевое слово, mya определяющее {{ c-cssxwef("bowdew-stywe") }}, (˘ω˘) описывающий стиль для линии, >_< разделяющей столбцы. -.- Стилизация должна быть интерпретирована как разрушающая границы модель. 🥺
 
 ### Формальный синтаксис
 
@@ -84,35 +84,35 @@ column-rule-style: unset;
 
 ## Пример
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  This is a bunch of text split into three columns. The `column-rule-style`
-  property is used to change the style of the line that is drawn between
-  columns. Don't you think that's wonderful?
+  t-this is a bunch of text spwit into thwee cowumns. (U ﹏ U) t-the `cowumn-wuwe-stywe`
+  pwopewty i-is used to change the stywe o-of the wine that i-is dwawn between
+  cowumns. >w< don't you think that's wondewfuw?
 </p>
 ```
 
-### CSS
+### css
 
 ```css
 p {
-  column-count: 3;
-  column-rule-style: dashed;
+  cowumn-count: 3;
+  cowumn-wuwe-stywe: d-dashed;
 }
 ```
 
 ### Результат
 
-{{ EmbedLiveSample('Пример') }}
+{{ e-embedwivesampwe('Пример') }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

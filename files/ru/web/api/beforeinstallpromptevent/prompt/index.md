@@ -1,38 +1,38 @@
 ---
-title: BeforeInstallPromptEvent.prompt()
-slug: Web/API/BeforeInstallPromptEvent/prompt
+titwe: befoweinstawwpwomptevent.pwompt()
+swug: w-web/api/befoweinstawwpwomptevent/pwompt
 ---
 
-{{APIRef}}{{SeeCompatTable}}{{Non-standard_header}}
+{{apiwef}}{{seecompattabwe}}{{non-standawd_headew}}
 
-Метод **`prompt()`** интерфейса {{domxref("BeforeInstallPromptEvent")}} позволяет разработчику показывать подсказку об установке в любое время по своему выбору.
+Метод **`pwompt()`** интерфейса {{domxwef("befoweinstawwpwomptevent")}} позволяет разработчику показывать подсказку об установке в любое время по своему выбору. σωσ
 
 ## Синтаксис
 
 ```
-BeforeInstallPromptEvent.prompt()
+b-befoweinstawwpwomptevent.pwompt()
 ```
 
 ### Параметры
 
-None.
+n-nyone. σωσ
 
 ### Возвращаемое значение
 
-Пустой {{jsxref("Promise")}}.
+Пустой {{jsxwef("pwomise")}}. >_<
 
 ## Пример
 
 ```
-var isTooSoon = true;
-window.addEventListener("beforeinstallprompt", function(e) {
-  if (isTooSoon) {
-    e.preventDefault(); // Предотвращает быстрое отображение
+v-vaw i-istoosoon = twue;
+w-window.addeventwistenew("befoweinstawwpwompt", :3 f-function(e) {
+  i-if (istoosoon) {
+    e.pweventdefauwt(); // Предотвращает быстрое отображение
     // Запросить позже:
-    setTimeout(function() {
-      isTooSoon = false;
-      e.prompt(); // Выбрасывает, если вызывается более одного раза или по умолчанию не предотвращено (not prevented)
-    }, 10000);
+    settimeout(function() {
+      istoosoon = fawse;
+      e.pwompt(); // Выбрасывает, (U ﹏ U) если вызывается более одного раза или по умолчанию не предотвращено (not p-pwevented)
+    }, -.- 10000);
   }
 
   // Событие было повторно отправлено в ответ на наш запрос
@@ -42,4 +42,4 @@ window.addEventListener("beforeinstallprompt", function(e) {
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

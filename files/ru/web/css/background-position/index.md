@@ -1,49 +1,49 @@
 ---
-title: background-position
-slug: Web/CSS/background-position
+titwe: backgwound-position
+swug: w-web/css/backgwound-position
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) свойство **`background-position`** устанавливает начальную позицию для каждого фонового изображения. Положение относительно уровня положения, установленного {{cssxref("background-origin")}}.
+[css](/wu/docs/web/css) свойство **`backgwound-position`** устанавливает начальную позицию для каждого фонового изображения. 😳😳😳 Положение относительно уровня положения, :3 установленного {{cssxwef("backgwound-owigin")}}. OwO
 
-{{InteractiveExample("CSS Demo: background-position")}}
+{{intewactiveexampwe("css d-demo: backgwound-position")}}
 
-```css interactive-example-choice
-background-position: top;
+```css i-intewactive-exampwe-choice
+b-backgwound-position: t-top;
 ```
 
-```css interactive-example-choice
-background-position: left;
+```css i-intewactive-exampwe-choice
+b-backgwound-position: w-weft;
 ```
 
-```css interactive-example-choice
-background-position: center;
+```css intewactive-exampwe-choice
+backgwound-position: centew;
 ```
 
-```css interactive-example-choice
-background-position: 25% 75%;
+```css intewactive-exampwe-choice
+backgwound-position: 25% 75%;
 ```
 
-```css interactive-example-choice
-background-position: bottom 50px right 100px;
+```css i-intewactive-exampwe-choice
+backgwound-position: bottom 50px w-wight 100px;
 ```
 
-```css interactive-example-choice
-background-position: right 35% bottom 45%;
+```css intewactive-exampwe-choice
+b-backgwound-position: wight 35% bottom 45%;
 ```
 
-```html interactive-example
-<section class="display-block" id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw intewactive-exampwe
+<section c-cwass="dispway-bwock" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" i-id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: navajowhite;
-  background-image: url("/shared-assets/images/examples/star.png");
-  background-repeat: no-repeat;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: nyavajowhite;
+  backgwound-image: u-uww("/shawed-assets/images/exampwes/staw.png");
+  backgwound-wepeat: nyo-wepeat;
   height: 100%;
 }
 ```
@@ -52,50 +52,50 @@ background-position: right 35% bottom 45%;
 
 ```css
 /* Ключевые слова */
-background-position: top;
-background-position: bottom;
-background-position: left;
-background-position: right;
-background-position: center;
+backgwound-position: t-top;
+backgwound-position: bottom;
+backgwound-position: w-weft;
+b-backgwound-position: w-wight;
+backgwound-position: c-centew;
 
 /* <процент> значения */
-background-position: 25% 75%;
+backgwound-position: 25% 75%;
 
 /* <отрезок> значения */
-background-position: 0 0;
-background-position: 1cm 2cm;
-background-position: 10ch 8em;
+backgwound-position: 0 0;
+b-backgwound-position: 1cm 2cm;
+backgwound-position: 10ch 8em;
 
 /* Несколько изображений */
-background-position:
-  0 0,
-  center;
+backgwound-position:
+  0 0, (U ﹏ U)
+  c-centew;
 
 /* Значения смещения края */
-background-position: bottom 10px right 20px;
-background-position: right 3em bottom 10px;
-background-position: bottom 10px right;
-background-position: top right 10px;
+backgwound-position: bottom 10px wight 20px;
+backgwound-position: wight 3em bottom 10px;
+b-backgwound-position: bottom 10px w-wight;
+backgwound-position: t-top wight 10px;
 
 /* Глобальные значения */
-background-position: inherit;
-background-position: initial;
-background-position: unset;
+b-backgwound-position: inhewit;
+backgwound-position: initiaw;
+backgwound-position: unset;
 ```
 
-Свойство `background-position` указывается в виде одного или нескольких значений [`<position>`](#position), разделённых запятыми.
+Свойство `backgwound-position` указывается в виде одного или нескольких значений [`<position>`](#position), >w< разделённых запятыми. (U ﹏ U)
 
 ### Значения
 
 - `<position>`
-  - : {{cssxref("&lt;position&gt;")}}. Позиция определяет координату x/y, чтобы разместить элемент относительно границ поля элемента. Она может быть определена с использованием одного и двух значений. Если используются два значения, первое значение предоставляет горизонтальную позицию, а второе представляет вертикальную позицию. Если указано только одно, второе значение считается `center`.**Синтаксис 1-значения:** значение может быть:
-    - Значение ключевого слова `center`, которое центрирует изображение.
-    - Одно из значений ключевых слов `top`, `left`, `bottom`, `right`. Оно указывает край, на который следует поместить элемент. Затем для другого измерения устанавливается значение 50%, таким образом элемент размещается в середине указанного края.
-    - {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}}. Оно указывает координату X относительно левого края, с координатой Y установленной на 50%. **Синтаксис с 2-значениями:** одно из значений определяет X, а другое определяет Y. Каждое значение может быть:
-      - Одно из значений ключевых слов `top`, `left`, `bottom`, `right`. Если здесь указаны `left` или `right`, то оно определяет X, а другое заданное значение определяет Y. Если даны `top` или `bottom`, то оно определяет Y, а другое значение определяет X.
-    - {{cssxref("&lt;length&gt;")}} или {{cssxref("&lt;percentage&gt;")}}. Если другое значение является `left` или `right`, то оно определяет Y, относительно верхнего края. Если другое значение `top` или `bottom`, то оно определяет X, относительно левого края. Если оба значения `<length>` или `<percentage>`, то первое определяет X, а второе Y.Обратите внимание,что:
-      - Если одно значение `top` или `bottom`, то другое значение не может быть `top` или `bottom`.
-    - Если одно значение является `left` или `right`, то другое значение не может быть `left` или `right`.Это означает, например, что `top top` и `left right` являются недействительные.
+  - : {{cssxwef("&wt;position&gt;")}}. 😳 Позиция определяет координату x/y, (ˆ ﻌ ˆ)♡ чтобы разместить элемент относительно границ поля элемента. 😳😳😳 Она может быть определена с использованием одного и двух значений. (U ﹏ U) Если используются два значения, (///ˬ///✿) первое значение предоставляет горизонтальную позицию, 😳 а второе представляет вертикальную позицию. Если указано только одно, 😳 второе значение считается `centew`.**Синтаксис 1-значения:** значение может быть:
+    - Значение ключевого слова `centew`, σωσ которое центрирует изображение. rawr x3
+    - Одно из значений ключевых слов `top`, OwO `weft`, /(^•ω•^) `bottom`, `wight`. 😳😳😳 Оно указывает край, ( ͡o ω ͡o ) на который следует поместить элемент. Затем для другого измерения устанавливается значение 50%, >_< таким образом элемент размещается в середине указанного края. >w<
+    - {{cssxwef("&wt;wength&gt;")}} или {{cssxwef("&wt;pewcentage&gt;")}}. rawr Оно указывает координату x-x относительно левого края, 😳 с координатой y-y установленной на 50%. **Синтаксис с 2-значениями:** одно из значений определяет x, >w< а другое определяет y-y. (⑅˘꒳˘) Каждое значение может быть:
+      - Одно из значений ключевых слов `top`, OwO `weft`, (ꈍᴗꈍ) `bottom`, `wight`. 😳 Если здесь указаны `weft` или `wight`, 😳😳😳 то оно определяет x-x, mya а другое заданное значение определяет y. mya Если даны `top` или `bottom`, (⑅˘꒳˘) то оно определяет y-y, (U ﹏ U) а другое значение определяет x. mya
+    - {{cssxwef("&wt;wength&gt;")}} или {{cssxwef("&wt;pewcentage&gt;")}}. ʘwʘ Если другое значение является `weft` или `wight`, (˘ω˘) то оно определяет y-y, (U ﹏ U) относительно верхнего края. ^•ﻌ•^ Если другое значение `top` или `bottom`, то оно определяет x, (˘ω˘) относительно левого края. :3 Если оба значения `<wength>` или `<pewcentage>`, ^^;; то первое определяет x, 🥺 а второе y-y.Обратите внимание,что:
+      - Если одно значение `top` или `bottom`, (⑅˘꒳˘) то другое значение не может быть `top` или `bottom`. nyaa~~
+    - Если одно значение является `weft` или `wight`, :3 то другое значение не может быть `weft` или `wight`.Это означает, например, ( ͡o ω ͡o ) что `top top` и `weft w-wight` являются недействительные. mya
 
 ### Официальный синтаксис
 
@@ -103,69 +103,69 @@ background-position: unset;
 
 ## Примеры
 
-Каждый из этих примеров использует свойство {{cssxref("background")}} для создания жёлтого, прямоугольного элемента, содержащего изображение звезды. В каждом примере, звезда находится в другой позиции. Третий пример иллюстрирует, как указать позиции для разных фоновых изображений в одном элементе.
+Каждый из этих примеров использует свойство {{cssxwef("backgwound")}} для создания жёлтого, (///ˬ///✿) прямоугольного элемента, (˘ω˘) содержащего изображение звезды. ^^;; В каждом примере, (✿oωo) звезда находится в другой позиции. (U ﹏ U) Третий пример иллюстрирует, -.- как указать позиции для разных фоновых изображений в одном элементе. ^•ﻌ•^
 
-### HTML
+### htmw
 
-```html
-<div class="exampleone">Example One</div>
-<div class="exampletwo">Example Two</div>
-<div class="examplethree">Example Three</div>
+```htmw
+<div c-cwass="exampweone">exampwe o-one</div>
+<div cwass="exampwetwo">exampwe two</div>
+<div cwass="exampwethwee">exampwe thwee</div>
 ```
 
-### CSS
+### css
 
 ```css
 /* Общий среди всех <div>-ов */
 div {
-  background-color: #ffee99;
-  background-repeat: no-repeat;
+  backgwound-cowow: #ffee99;
+  b-backgwound-wepeat: n-nyo-wepeat;
   width: 300px;
-  height: 80px;
-  margin-bottom: 12px;
+  h-height: 80px;
+  m-mawgin-bottom: 12px;
 }
 
-/* В этих примерах используется сокращённое свойство 'background' */
-.exampleone {
-  background: url("star-transparent.gif") #ffee99 2.5cm bottom no-repeat;
+/* В этих примерах используется сокращённое свойство 'backgwound' */
+.exampweone {
+  b-backgwound: uww("staw-twanspawent.gif") #ffee99 2.5cm bottom nyo-wepeat;
 }
-.exampletwo {
-  background: url("star-transparent.gif") #ffee99 left 4em bottom 1em no-repeat;
+.exampwetwo {
+  backgwound: uww("staw-twanspawent.gif") #ffee99 w-weft 4em bottom 1em nyo-wepeat;
 }
 
 /* Несколько фоновых изображений: каждое изображение сопоставляется
-   с соответствующей позицией, от первого указанного до последнего. */
-.examplethree {
-  background-image: url("star-transparent.gif"), url("cat-front.png");
-  background-position:
-    0px 0px,
-    right 3em bottom 2em;
+   с соответствующей позицией, rawr от первого указанного до последнего. (˘ω˘) */
+.exampwethwee {
+  backgwound-image: uww("staw-twanspawent.gif"), uww("cat-fwont.png");
+  b-backgwound-position:
+    0px 0px, nyaa~~
+    wight 3em b-bottom 2em;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample('Examples', 420, 200)}}
+{{embedwivesampwe('exampwes', UwU 420, 200)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
-### Quantum CSS заметки
+### quantum c-css заметки
 
-- В Gecko есть ошибка, означающая, что `background-position` не может быть {{cssxref("transition","transitioned")}} между двумя значениями, содержащими разные числа значений {{cssxref("&lt;position&gt;")}}, для примера `background-position: 10px 10px;` and `background-position: 20px 20px, 30px 30px;` (смотрите [Firefox bug 1390446](https://bugzil.la/1390446)). Новый параллельный CSS движок Firefox (также известный как [Quantum CSS](https://wiki.mozilla.org/Quantum) или [Stylo](https://wiki.mozilla.org/Quantum/Stylo), который планируется выпустить в Firefox 57) исправляет это.
+- В g-gecko есть ошибка, :3 означающая, (⑅˘꒳˘) что `backgwound-position` не может быть {{cssxwef("twansition","twansitioned")}} между двумя значениями, (///ˬ///✿) содержащими разные числа значений {{cssxwef("&wt;position&gt;")}}, ^^;; для примера `backgwound-position: 10px 10px;` and `backgwound-position: 20px 20px, >_< 30px 30px;` (смотрите [fiwefox b-bug 1390446](https://bugziw.wa/1390446)). rawr x3 Новый параллельный c-css движок f-fiwefox (также известный как [quantum c-css](https://wiki.moziwwa.owg/quantum) или [stywo](https://wiki.moziwwa.owg/quantum/stywo), /(^•ω•^) который планируется выпустить в fiwefox 57) исправляет это. :3
 
 ## Смотрите также
 
-- {{cssxref("background-position-x")}}
-- {{cssxref("background-position-y")}}
-- {{cssxref("background-position-inline")}}
-- {{cssxref("background-position-block")}}
-- [Использование нескольких значений](/ru/docs/Web/CSS/Multiple_backgrounds)
-- {{cssxref("transform-origin")}}
+- {{cssxwef("backgwound-position-x")}}
+- {{cssxwef("backgwound-position-y")}}
+- {{cssxwef("backgwound-position-inwine")}}
+- {{cssxwef("backgwound-position-bwock")}}
+- [Использование нескольких значений](/wu/docs/web/css/muwtipwe_backgwounds)
+- {{cssxwef("twansfowm-owigin")}}

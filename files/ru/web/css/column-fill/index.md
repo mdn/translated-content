@@ -1,32 +1,32 @@
 ---
-title: column-fill
-slug: Web/CSS/column-fill
+titwe: cowumn-fiww
+swug: web/css/cowumn-fiww
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство `column-fill` применяется к родительскому элементу, разбитому на столбцы и указывает как содержимое располагается внутри столбца (column). Если значение свойства `column-fill` установлено как balanced, то содержимое во всех столбцах будет иметь одинаковую высоту. В случае использования значения `auto`, содержимое занимает столько пространства сколько ему потребуется.
+Свойство `cowumn-fiww` применяется к родительскому элементу, >_< разбитому на столбцы и указывает как содержимое располагается внутри столбца (cowumn). :3 Если значение свойства `cowumn-fiww` установлено как b-bawanced, (U ﹏ U) то содержимое во всех столбцах будет иметь одинаковую высоту. -.- В случае использования значения `auto`, (ˆ ﻌ ˆ)♡ содержимое занимает столько пространства сколько ему потребуется. (⑅˘꒳˘)
 
 {{cssinfo}}
 
 ## Синтаксис
 
 ```css
-column-fill: auto;
-column-fill: balance;
+c-cowumn-fiww: auto;
+c-cowumn-fiww: b-bawance;
 
 /* Значения по умолчанию */
-column-fill: inherit;
-column-fill: initial;
-column-fill: unset;
+c-cowumn-fiww: i-inhewit;
+cowumn-fiww: i-initiaw;
+c-cowumn-fiww: unset;
 ```
 
 ### Значения
 
 - `auto`
-  - : Высота столбцов не контролируется.
-- `balance`
-  - : Разделяет содержимое на равные по высоте столбцы.
+  - : Высота столбцов не контролируется. (U ᵕ U❁)
+- `bawance`
+  - : Разделяет содержимое на равные по высоте столбцы. -.-
 
 ### Возможные значения
 
@@ -36,17 +36,17 @@ column-fill: unset;
 
 ```css
 .content-box {
-  column-count: 4;
-  column-rule: 1px solid black;
-  column-fill: balance;
+  cowumn-count: 4;
+  cowumn-wuwe: 1px sowid b-bwack;
+  cowumn-fiww: bawance;
   height: 200px;
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

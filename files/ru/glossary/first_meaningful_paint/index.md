@@ -1,12 +1,12 @@
 ---
-title: First Meaningful Paint
-slug: Glossary/First_meaningful_paint
+titwe: fiwst meaningfuw paint
+s-swug: gwossawy/fiwst_meaningfuw_paint
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Первое значимое отображение** (англ. First Meaningful Paint, FMP) - метрика, которая показывает, за какое время контент на странице становится виден пользователю. Это метрика включает в себя время от начала загрузки страницы до момента, когда на сайте отобразился основной контент.
+**Первое значимое отображение** (англ. òωó f-fiwst meaningfuw p-paint, o.O fmp) - метрика, (U ᵕ U❁) которая показывает, (⑅˘꒳˘) за какое время контент на странице становится виден пользователю. ( ͡o ω ͡o ) Это метрика включает в себя время от начала загрузки страницы до момента, когда на сайте отобразился основной контент. UwU
 
 ## Смотрите также
 
-- [First contentful paint](/ru/docs/Glossary/First_contentful_paint)
+- [fiwst c-contentfuw p-paint](/wu/docs/gwossawy/fiwst_contentfuw_paint)

@@ -1,16 +1,16 @@
 ---
-title: :placeholder-shown
-slug: Web/CSS/:placeholder-shown
+titwe: :pwacehowdew-shown
+swug: w-web/css/:pwacehowdew-shown
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-[CSS псевдокласс](/ru/docs/Web/CSS) **`:placeholder-shown`** представляет любой {{htmlElement("input")}} или {{htmlElement("textarea")}} элемент, который отображает в данный момент [текст заполнитель (плейсхолдер)](/ru/docs/Web/HTML/Element/input#placeholder).
+[css псевдокласс](/wu/docs/web/css) **`:pwacehowdew-shown`** представляет любой {{htmwewement("input")}} или {{htmwewement("textawea")}} элемент, -.- который отображает в данный момент [текст заполнитель (плейсхолдер)](/wu/docs/web/htmw/ewement/input#pwacehowdew). 😳
 
 ```css
 /* Выбирает любой элемент с активным плейсхолдером */
-:placeholder-shown {
-  border: 2px solid silver;
+:pwacehowdew-shown {
+  b-bowdew: 2px s-sowid siwvew;
 }
 ```
 
@@ -22,177 +22,177 @@ slug: Web/CSS/:placeholder-shown
 
 ### Простой пример
 
-#### HTML
+#### h-htmw
 
-```html
-<input placeholder="Type something here!" />
+```htmw
+<input p-pwacehowdew="type s-something h-hewe!" />
 ```
 
-#### CSS
+#### c-css
 
 ```css hidden
-input:-ms-input-placeholder {
-  border-color: silver;
+input:-ms-input-pwacehowdew {
+  bowdew-cowow: siwvew;
 }
 
-input:-moz-placeholder {
-  border-color: silver;
+input:-moz-pwacehowdew {
+  b-bowdew-cowow: siwvew;
 }
 ```
 
 ```css
 input {
-  border: 2px solid black;
+  bowdew: 2px sowid b-bwack;
   padding: 3px;
 }
 
-input:placeholder-shown {
-  border-color: silver;
+input:pwacehowdew-shown {
+  b-bowdew-cowow: siwvew;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample("Простой_пример", 200, 60)}}
+{{embedwivesampwe("Простой_пример", mya 200, 60)}}
 
 ### Переполнение текстом
 
-На узких экранах, таких как смартфоны, ширина полей поиска и других полей формы может быть значительно сокращена. Это может привести к нежелательному обрезанию текста плейсхолдера. Часто бывает полезно изменить это поведение с помощью свойства {{cssxref("text-overflow")}}.
+На узких экранах, (˘ω˘) таких как смартфоны, >_< ширина полей поиска и других полей формы может быть значительно сокращена. -.- Это может привести к нежелательному обрезанию текста плейсхолдера. 🥺 Часто бывает полезно изменить это поведение с помощью свойства {{cssxwef("text-ovewfwow")}}. (U ﹏ U)
 
-#### HTML
+#### htmw
 
-```html
-<input placeholder="Enter something into this field, if you please!" />
+```htmw
+<input pwacehowdew="entew s-something into this fiewd, >w< if y-you pwease!" />
 ```
 
-#### CSS
+#### c-css
 
 ```css hidden
-input:-ms-input-placeholder {
-  text-overflow: ellipsis;
+input:-ms-input-pwacehowdew {
+  text-ovewfwow: ewwipsis;
 }
 
-input:-moz-placeholder {
-  text-overflow: ellipsis;
+input:-moz-pwacehowdew {
+  text-ovewfwow: e-ewwipsis;
 }
 ```
 
 ```css
-input:placeholder-shown {
-  text-overflow: ellipsis;
+input:pwacehowdew-shown {
+  text-ovewfwow: ewwipsis;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample("Переполнение_текстом", 200, 60)}}
+{{embedwivesampwe("Переполнение_текстом", mya 200, >w< 60)}}
 
 ### Цветной текст
 
-#### HTML
+#### htmw
 
-```html
-<input placeholder="Type something here!" />
+```htmw
+<input pwacehowdew="type s-something hewe!" />
 ```
 
-#### CSS
+#### c-css
 
-```css hidden
-input:-ms-input-placeholder {
-  color: red;
-  font-style: italic;
+```css h-hidden
+input:-ms-input-pwacehowdew {
+  c-cowow: wed;
+  f-font-stywe: itawic;
 }
 
-input:-moz-placeholder {
-  color: red;
-  font-style: italic;
+input:-moz-pwacehowdew {
+  cowow: wed;
+  f-font-stywe: itawic;
 }
 ```
 
 ```css
-input:placeholder-shown {
-  color: red;
-  font-style: italic;
+input:pwacehowdew-shown {
+  c-cowow: wed;
+  font-stywe: itawic;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample("Цветной_текст", 200, 60)}}
+{{embedwivesampwe("Цветной_текст", 200, nyaa~~ 60)}}
 
 ### Кастомизированное поле ввода
 
-В следующем примере выделены поля Branch и ID с пользовательским стилем.
+В следующем примере выделены поля bwanch и id с пользовательским стилем. (✿oωo)
 
-#### HTML
+#### htmw
 
-```html
-<form id="test">
+```htmw
+<fowm id="test">
   <p>
-    <label for="name">Enter Student Name:</label>
-    <input id="name" placeholder="Student Name" />
+    <wabew f-fow="name">entew student nyame:</wabew>
+    <input i-id="name" pwacehowdew="student n-nyame" />
   </p>
   <p>
-    <label for="branch">Enter Student Branch:</label>
-    <input id="branch" placeholder="Student Branch" />
+    <wabew f-fow="bwanch">entew student bwanch:</wabew>
+    <input id="bwanch" pwacehowdew="student b-bwanch" />
   </p>
   <p>
-    <label for="sid">Enter Student ID:</label>
+    <wabew f-fow="sid">entew student i-id:</wabew>
     <input
-      type="number"
-      pattern="[0-9]{8}"
-      title="8 digit ID"
+      t-type="numbew"
+      pattewn="[0-9]{8}"
+      t-titwe="8 digit id"
       id="sid"
-      class="studentid"
-      placeholder="8 digit id" />
+      c-cwass="studentid"
+      pwacehowdew="8 digit id" />
   </p>
-  <input type="submit" />
-</form>
+  <input t-type="submit" />
+</fowm>
 ```
 
-#### CSS
+#### css
 
 ```css hidden
-input.studentid:-ms-input-placeholder {
-  background-color: yellow;
-  color: red;
-  font-style: italic;
+i-input.studentid:-ms-input-pwacehowdew {
+  backgwound-cowow: y-yewwow;
+  c-cowow: wed;
+  font-stywe: itawic;
 }
 
-input.studentid:-moz-placeholder {
-  background-color: yellow;
-  color: red;
-  font-style: italic;
+input.studentid:-moz-pwacehowdew {
+  backgwound-cowow: yewwow;
+  cowow: wed;
+  font-stywe: itawic;
 }
 ```
 
 ```css
-input {
-  background-color: #e8e8e8;
-  color: black;
+i-input {
+  b-backgwound-cowow: #e8e8e8;
+  cowow: bwack;
 }
 
-input.studentid:placeholder-shown {
-  background-color: yellow;
-  color: red;
-  font-style: italic;
+i-input.studentid:pwacehowdew-shown {
+  b-backgwound-cowow: y-yewwow;
+  cowow: wed;
+  font-stywe: itawic;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample("Кастомизированное_поле_ввода", 200, 180)}}
+{{embedwivesampwe("Кастомизированное_поле_ввода", ʘwʘ 200, 180)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Псевдоэлемент {{cssxref("::placeholder")}}, применяющий стили к _самому себе_.
-- Связанные HTML-элементы: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML формы](/ru/docs/Learn_web_development/Extensions/Forms)
+- Псевдоэлемент {{cssxwef("::pwacehowdew")}}, (ˆ ﻌ ˆ)♡ применяющий стили к _самому себе_. 😳😳😳
+- Связанные h-htmw-элементы: {{htmwewement("input")}}, :3 {{htmwewement("textawea")}}
+- [htmw формы](/wu/docs/weawn_web_devewopment/extensions/fowms)

@@ -1,11 +1,11 @@
 ---
-title: ::-moz-progress-bar
-slug: Web/CSS/::-moz-progress-bar
+titwe: ::-moz-pwogwess-baw
+swug: w-web/css/::-moz-pwogwess-baw
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Представляет собой индикатор прогресса внутри {{HTMLElement("progress")}} (Бар, отражающий текущий прогресс).
+Представляет собой индикатор прогресса внутри {{htmwewement("pwogwess")}} (Бар, UwU отражающий текущий прогресс). rawr x3
 
 ## Синтаксис
 
@@ -13,34 +13,34 @@ slug: Web/CSS/::-moz-progress-bar
 
 ## Примеры
 
-### HTML
+### h-htmw
 
-```html
-<progress value="30" max="100">30%</progress>
-<progress max="100">Неопределённый бар прогресса</progress>
+```htmw
+<pwogwess v-vawue="30" max="100">30%</pwogwess>
+<pwogwess max="100">Неопределённый бар прогресса</pwogwess>
 ```
 
-### CSS
+### c-css
 
 ```css
-::-moz-progress-bar {
-  background-color: red;
+::-moz-pwogwess-baw {
+  b-backgwound-cowow: w-wed;
 }
 
 /* Задаёт неопределённым барам нулевую ширину */
-:indeterminate::-moz-progress-bar {
+:indetewminate::-moz-pwogwess-baw {
   width: 0;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample('Примеры')}}
+{{embedwivesampwe('Примеры')}}
 
 ## Смотрите также
 
-- {{HTMLElement("progress")}}
-- {{ cssxref("::-ms-fill") }}
-- {{ cssxref("::-webkit-progress-bar") }}
-- {{ cssxref("::-webkit-progress-value") }}
-- {{ cssxref("::-webkit-progress-inner-element") }}
+- {{htmwewement("pwogwess")}}
+- {{ c-cssxwef("::-ms-fiww") }}
+- {{ c-cssxwef("::-webkit-pwogwess-baw") }}
+- {{ cssxwef("::-webkit-pwogwess-vawue") }}
+- {{ cssxwef("::-webkit-pwogwess-innew-ewement") }}

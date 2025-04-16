@@ -1,131 +1,131 @@
 ---
-title: "@media"
-slug: Web/CSS/@media
+titwe: "@media"
+swug: web/css/@media
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Описание
 
-[CSS](/ru/docs/Web/CSS) [@-правило](/ru/docs/Web/CSS/CSS_syntax/At-rule) **`@media`** может быть использовано для применения части стилей при соблюдении условия одного или нескольких [медиавыражений](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+[css](/wu/docs/web/css) [@-правило](/wu/docs/web/css/css_syntax/at-wuwe) **`@media`** может быть использовано для применения части стилей при соблюдении условия одного или нескольких [медиавыражений](/wu/docs/web/css/css_media_quewies/using_media_quewies). -.-
 
-> [!NOTE]
-> В JavaScript правила, созданные с помощью `@media` могут быть получены через интерфейс объектной модели CSS {{domxref("CSSMediaRule")}}.
+> [!note]
+> В j-javascwipt правила, :3 созданные с помощью `@media` могут быть получены через интерфейс объектной модели c-css {{domxwef("cssmediawuwe")}}. ʘwʘ
 
 ## Синтаксис
 
-@-правило `@media` можно разместить на верхнем уровне CSS или внутри любого фрагмента [условной группы @-правил](/ru/docs/Web/CSS/CSS_syntax/At-rule#conditional_group_rules).
+@-правило `@media` можно разместить на верхнем уровне c-css или внутри любого фрагмента [условной группы @-правил](/wu/docs/web/css/css_syntax/at-wuwe#conditionaw_gwoup_wuwes). 🥺
 
 ```css
 /* На верхнем уровне кода */
-@media screen and (min-width: 900px) {
-  article {
-    padding: 1rem 3rem;
+@media s-scween a-and (min-width: 900px) {
+  a-awticwe {
+    p-padding: 1wem 3wem;
   }
 }
 
 /* Вложено в другое условное @-правило */
-@supports (display: flex) {
-  @media screen and (min-width: 900px) {
-    article {
-      display: flex;
+@suppowts (dispway: f-fwex) {
+  @media scween and (min-width: 900px) {
+    awticwe {
+      dispway: fwex;
     }
   }
 }
 ```
 
-Для рассмотрения синтаксиса медиавыражений, см. [Использование медиавыражений](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax).
+Для рассмотрения синтаксиса медиавыражений, >_< см. [Использование медиавыражений](/wu/docs/web/css/css_media_quewies/using_media_quewies#syntax). ʘwʘ
 
 ### Формальный синтаксис
 
 {{csssyntax}}
 
-A `<media-query>` is composed of a optional media type and/or a number of media features.
+a-a `<media-quewy>` is composed of a optionaw m-media type and/ow a nyumbew of m-media featuwes. (˘ω˘)
 
 ## Типы
 
-- all
-  - : Подходит для всех устройств.
-- print
-  - : Intended for paged material and for documents viewed on screen in print preview mode. Please consult the section on [paged media](/ru/docs/Web/CSS/CSS_paged_media), and the [media section of the Getting Started tutorial](/ru/docs/CSS/Getting_Started/Media) for information about formatting issues that are specific to paged media.
-- screen
-  - : Предназначен в первую очередь для цветных компьютерных экранов.
-- speech
-  - : Предназначен для синтезаторов речи.
+- aww
+  - : Подходит для всех устройств. (✿oωo)
+- pwint
+  - : intended fow paged m-matewiaw and fow documents viewed o-on scween in p-pwint pweview mode. (///ˬ///✿) pwease consuwt the section on [paged media](/wu/docs/web/css/css_paged_media), and the [media s-section of the getting stawted tutowiaw](/wu/docs/css/getting_stawted/media) fow infowmation about fowmatting i-issues that awe specific to paged m-media. rawr x3
+- scween
+  - : Предназначен в первую очередь для цветных компьютерных экранов. -.-
+- s-speech
+  - : Предназначен для синтезаторов речи. ^^
 
-> [!NOTE]
-> CSS2.1 и Media Queries 3 определили несколько дополнительных значений (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`), но они устарели в [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) и не рекомендуется к использованию.
+> [!note]
+> css2.1 и m-media quewies 3 определили несколько дополнительных значений (`tty`, (⑅˘꒳˘) `tv`, nyaa~~ `pwojection`, /(^•ω•^) `handhewd`, `bwaiwwe`, (U ﹏ U) `embossed`, 😳😳😳 `auwaw`), но они устарели в [media quewies 4](https://dev.w3.owg/csswg/mediaquewies/#media-types) и не рекомендуется к использованию. >w<
 
-## Media Features
+## m-media featuwes
 
-Each _media feature_ tests for one specific feature of the browser or device.
+each _media featuwe_ tests fow o-one specific featuwe of the bwowsew ow device. XD
 
-| Имя                                                                                                        | Summary                                                                                                                                           | Notes                                                                                                                              |
+| Имя                                                                                                        | s-summawy                                                                                                                                           | nyotes                                                                                                                              |
 | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| [`width`](/ru/docs/Web/CSS/@media/width)                                                                   | Viewport width                                                                                                                                    |                                                                                                                                    |
-| [`height`](/ru/docs/Web/CSS/@media/height)                                                                 | Viewport height                                                                                                                                   |                                                                                                                                    |
-| [`aspect-ratio`](/ru/docs/Web/CSS/@media/aspect-ratio)                                                     | Width-to-height aspect ratio of the viewport                                                                                                      |                                                                                                                                    |
-| [`orientation`](/ru/docs/Web/CSS/@media/orientation)                                                       | Orientation of the viewport                                                                                                                       |                                                                                                                                    |
-| [`resolution`](/ru/docs/Web/CSS/@media/resolution)                                                         | Pixel density of the output device                                                                                                                |                                                                                                                                    |
-| [`scan`](/ru/docs/Web/CSS/@media/scan)                                                                     | Scanning process of the output device                                                                                                             |                                                                                                                                    |
-| [`grid`](/ru/docs/Web/CSS/@media/grid)                                                                     | Is the device a grid or bitmap?                                                                                                                   |                                                                                                                                    |
-| [`update-frequency`](/ru/docs/Web/CSS/@media/update)                                                       | How quickly (if at all) can the output device modify the appearance of the content                                                                | Added in Media Queries Level 4                                                                                                     |
-| [`overflow-block`](/ru/docs/Web/CSS/@media/overflow-block)                                                 | How does the output device handle content that overflows the viewport along the block axis?                                                       | Added in Media Queries Level 4                                                                                                     |
-| [`overflow-inline`](/ru/docs/Web/CSS/@media/overflow-inline)                                               | Can content that overflows the viewport along the inline axis be scrolled?                                                                        | Added in Media Queries Level 4                                                                                                     |
-| [`color`](/ru/docs/Web/CSS/@media/color)                                                                   | Number of bits per color component of the output device, or zero if the device isn't color.                                                       |                                                                                                                                    |
-| [`color-index`](/ru/docs/Web/CSS/@media/color-index)                                                       | Number of entries in the output device's color lookup table, or zero if the device does not use such a table.                                     |                                                                                                                                    |
-| [`display-mode`](/ru/docs/Web/CSS/@media/display-mode)                                                     | The display mode of the application, as specified in the web app manifest's [display member](/ru/docs/Web/Progressive_web_apps/Manifest#display). | Defined in the [Web App Manifest spec](http://w3c.github.io/manifest/#the-display-mode-media-feature).                             |
-| [`monochrome`](/ru/docs/Web/CSS/@media/monochrome)                                                         | Bits per pixel in the output device's monochrome frame buffer, or 0 if the device is not monochrome.                                              |                                                                                                                                    |
-| [`inverted-colors`](/ru/docs/Web/CSS/@media/inverted-colors)                                               | Is the user agent or underlying OS inverting colors?                                                                                              | Added in Media Queries Level 4                                                                                                     |
-| [`pointer`](/ru/docs/Web/CSS/@media/pointer)                                                               | Is the primary input mechanism a pointing device, and if so, how accurate is it?                                                                  | Added in Media Queries Level 4                                                                                                     |
-| [`hover`](/ru/docs/Web/CSS/@media/hover)                                                                   | Does the primary input mechanism allow the user to hover over elements?                                                                           | Added in Media Queries Level 4                                                                                                     |
-| [`any-pointer`](/ru/docs/Web/CSS/@media/any-pointer)                                                       | Is any available input mechanism a pointing device, and if so, how accurate is it?                                                                | Added in Media Queries Level 4                                                                                                     |
-| [`any-hover`](/ru/docs/Web/CSS/@media/any-hover)                                                           | Does any available input mechanism allow the user to hover over elements?                                                                         | Added in Media Queries Level 4                                                                                                     |
-| [`light-level`](/ru/docs/Web/CSS/@media/light-level)                                                       | Current ambient light level                                                                                                                       | Added in Media Queries Level 4                                                                                                     |
-| [`scripting`](/ru/docs/Web/CSS/@media/scripting)                                                           | Is scripting (e.g. JavaScript) available?                                                                                                         | Added in Media Queries Level 4                                                                                                     |
-| [`device-width`](/ru/docs/Web/CSS/@media/device-width)                                                     | Width of the rendering surface of the output device                                                                                               | Deprecated in Media Queries Level 4                                                                                                |
-| [`device-height`](/ru/docs/Web/CSS/@media/device-height)                                                   | Height of the rendering surface of the output device                                                                                              | Deprecated in Media Queries Level 4                                                                                                |
-| [`device-aspect-ratio`](/ru/docs/Web/CSS/@media/device-aspect-ratio)                                       | Width-to-height aspect ratio of the output device                                                                                                 | Deprecated in Media Queries Level 4                                                                                                |
-| [`-webkit-device-pixel-ratio`](/ru/docs/Web/CSS/@media/-webkit-device-pixel-ratio) {{non-standard_inline}} | Number of physical device pixels per CSS pixel                                                                                                    | Nonstandard; WebKit/Blink-specific. If possible, use the [`resolution`](/ru/docs/Web/CSS/@media/resolution) media feature instead. |
-| [`-webkit-transform-3d`](/ru/docs/Web/CSS/@media/-webkit-transform-3d) {{non-standard_inline}}             | Are CSS 3D {{cssxref("transform")}}s supported?                                                                                                   | Nonstandard; WebKit/Blink-specific                                                                                                 |
-| [`-webkit-transform-2d`](/ru/docs/Web/CSS/@media/-webkit-transform-2d) {{non-standard_inline}}             | Are CSS 2D {{cssxref("transform")}}s supported?                                                                                                   | Nonstandard; WebKit-specific                                                                                                       |
-| [`-webkit-transition`](/ru/docs/Web/CSS/@media/-webkit-transition) {{non-standard_inline}}                 | Are CSS {{cssxref("transition")}}s supported?                                                                                                     | Nonstandard; WebKit-specific                                                                                                       |
-| [`-webkit-animation`](/ru/docs/Web/CSS/@media/-webkit-animation) {{non-standard_inline}}                   | Are CSS {{cssxref("animation")}}s supported?                                                                                                      | Nonstandard; WebKit-specific                                                                                                       |
+| [`width`](/wu/docs/web/css/@media/width)                                                                   | viewpowt width                                                                                                                                    |                                                                                                                                    |
+| [`height`](/wu/docs/web/css/@media/height)                                                                 | viewpowt height                                                                                                                                   |                                                                                                                                    |
+| [`aspect-watio`](/wu/docs/web/css/@media/aspect-watio)                                                     | width-to-height a-aspect watio of the viewpowt                                                                                                      |                                                                                                                                    |
+| [`owientation`](/wu/docs/web/css/@media/owientation)                                                       | o-owientation o-of the v-viewpowt                                                                                                                       |                                                                                                                                    |
+| [`wesowution`](/wu/docs/web/css/@media/wesowution)                                                         | pixew density of the output device                                                                                                                |                                                                                                                                    |
+| [`scan`](/wu/docs/web/css/@media/scan)                                                                     | s-scanning p-pwocess of the output device                                                                                                             |                                                                                                                                    |
+| [`gwid`](/wu/docs/web/css/@media/gwid)                                                                     | i-is the device a-a gwid ow bitmap?                                                                                                                   |                                                                                                                                    |
+| [`update-fwequency`](/wu/docs/web/css/@media/update)                                                       | how q-quickwy (if at aww) can the output d-device modify the appeawance of the content                                                                | a-added in media quewies wevew 4                                                                                                     |
+| [`ovewfwow-bwock`](/wu/docs/web/css/@media/ovewfwow-bwock)                                                 | h-how does the output device h-handwe content t-that ovewfwows the viewpowt awong the bwock axis?                                                       | added in media quewies wevew 4                                                                                                     |
+| [`ovewfwow-inwine`](/wu/docs/web/css/@media/ovewfwow-inwine)                                               | can c-content that ovewfwows t-the viewpowt awong the i-inwine axis be scwowwed?                                                                        | a-added in media q-quewies wevew 4                                                                                                     |
+| [`cowow`](/wu/docs/web/css/@media/cowow)                                                                   | nyumbew of bits pew cowow component of the o-output device, o.O ow zewo if the device isn't cowow. mya                                                       |                                                                                                                                    |
+| [`cowow-index`](/wu/docs/web/css/@media/cowow-index)                                                       | nyumbew of entwies in the output d-device's cowow wookup tabwe, 🥺 ow z-zewo if the device d-does nyot use s-such a tabwe. ^^;;                                     |                                                                                                                                    |
+| [`dispway-mode`](/wu/docs/web/css/@media/dispway-mode)                                                     | the dispway m-mode of the a-appwication, :3 as s-specified in the w-web app manifest's [dispway membew](/wu/docs/web/pwogwessive_web_apps/manifest#dispway). (U ﹏ U) | defined i-in the [web a-app manifest spec](http://w3c.github.io/manifest/#the-dispway-mode-media-featuwe). OwO                             |
+| [`monochwome`](/wu/docs/web/css/@media/monochwome)                                                         | b-bits pew pixew i-in the output device's m-monochwome fwame buffew, 😳😳😳 ow 0 if the device is nyot monochwome. (ˆ ﻌ ˆ)♡                                              |                                                                                                                                    |
+| [`invewted-cowows`](/wu/docs/web/css/@media/invewted-cowows)                                               | i-is the usew agent ow undewwying os invewting cowows?                                                                                              | added in media quewies w-wevew 4                                                                                                     |
+| [`pointew`](/wu/docs/web/css/@media/pointew)                                                               | is the pwimawy input mechanism a pointing device, XD a-and if so, (ˆ ﻌ ˆ)♡ how a-accuwate is it?                                                                  | a-added in media quewies wevew 4                                                                                                     |
+| [`hovew`](/wu/docs/web/css/@media/hovew)                                                                   | d-does the pwimawy input m-mechanism awwow t-the usew to hovew ovew ewements?                                                                           | added in media quewies wevew 4                                                                                                     |
+| [`any-pointew`](/wu/docs/web/css/@media/any-pointew)                                                       | is any avaiwabwe i-input mechanism a pointing device, ( ͡o ω ͡o ) a-and if so, rawr x3 how accuwate is i-it?                                                                | a-added in media quewies wevew 4                                                                                                     |
+| [`any-hovew`](/wu/docs/web/css/@media/any-hovew)                                                           | does any a-avaiwabwe input m-mechanism awwow the usew to hovew o-ovew ewements?                                                                         | a-added in media quewies wevew 4                                                                                                     |
+| [`wight-wevew`](/wu/docs/web/css/@media/wight-wevew)                                                       | cuwwent ambient wight wevew                                                                                                                       | a-added in media q-quewies wevew 4                                                                                                     |
+| [`scwipting`](/wu/docs/web/css/@media/scwipting)                                                           | i-is scwipting (e.g. nyaa~~ javascwipt) a-avaiwabwe?                                                                                                         | a-added in media quewies w-wevew 4                                                                                                     |
+| [`device-width`](/wu/docs/web/css/@media/device-width)                                                     | width of the wendewing suwface of the output device                                                                                               | depwecated i-in media quewies w-wevew 4                                                                                                |
+| [`device-height`](/wu/docs/web/css/@media/device-height)                                                   | height of the wendewing s-suwface of the o-output device                                                                                              | depwecated in media quewies wevew 4                                                                                                |
+| [`device-aspect-watio`](/wu/docs/web/css/@media/device-aspect-watio)                                       | w-width-to-height aspect watio of the output device                                                                                                 | depwecated in media quewies w-wevew 4                                                                                                |
+| [`-webkit-device-pixew-watio`](/wu/docs/web/css/@media/-webkit-device-pixew-watio) {{non-standawd_inwine}} | nyumbew of physicaw device p-pixews pew c-css pixew                                                                                                    | nyonstandawd; webkit/bwink-specific. >_< if possibwe, ^^;; use the [`wesowution`](/wu/docs/web/css/@media/wesowution) m-media f-featuwe instead. (ˆ ﻌ ˆ)♡ |
+| [`-webkit-twansfowm-3d`](/wu/docs/web/css/@media/-webkit-twansfowm-3d) {{non-standawd_inwine}}             | awe css 3d {{cssxwef("twansfowm")}}s suppowted?                                                                                                   | nyonstandawd; w-webkit/bwink-specific                                                                                                 |
+| [`-webkit-twansfowm-2d`](/wu/docs/web/css/@media/-webkit-twansfowm-2d) {{non-standawd_inwine}}             | awe c-css 2d {{cssxwef("twansfowm")}}s suppowted?                                                                                                   | nyonstandawd; webkit-specific                                                                                                       |
+| [`-webkit-twansition`](/wu/docs/web/css/@media/-webkit-twansition) {{non-standawd_inwine}}                 | awe css {{cssxwef("twansition")}}s s-suppowted?                                                                                                     | nyonstandawd; w-webkit-specific                                                                                                       |
+| [`-webkit-animation`](/wu/docs/web/css/@media/-webkit-animation) {{non-standawd_inwine}}                   | awe c-css {{cssxwef("animation")}}s suppowted?                                                                                                      | n-nyonstandawd; webkit-specific                                                                                                       |
 
 ## Примеры
 
 ```css
-@media print {
-  body {
-    font-size: 10pt;
+@media p-pwint {
+  b-body {
+    f-font-size: 10pt;
   }
 }
-@media screen {
-  body {
-    font-size: 13px;
+@media scween {
+  b-body {
+    f-font-size: 13px;
   }
 }
-@media screen, print {
+@media scween, ^^;; pwint {
   body {
-    line-height: 1.2;
+    wine-height: 1.2;
   }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+@media o-onwy s-scween and (min-device-width: 320px) a-and (max-device-width: 480px) and (-webkit-min-device-pixew-watio: 2) {
   body {
-    line-height: 1.4;
+    wine-height: 1.4;
   }
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Media queries](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- The CSSOM {{ domxref("CSSMediaRule") }} associated with this at-rule.
+- [media q-quewies](/wu/docs/web/css/css_media_quewies/using_media_quewies)
+- the cssom {{ d-domxwef("cssmediawuwe") }} a-associated with this at-wuwe.

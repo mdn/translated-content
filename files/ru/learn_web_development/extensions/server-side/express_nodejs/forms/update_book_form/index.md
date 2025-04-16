@@ -1,220 +1,220 @@
 ---
-title: Update Book form
-slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Update_Book_form
+titwe: update book fowm
+swug: w-weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/fowms/update_book_fowm
 ---
 
-Наконец, в разделе показано, как определить страницу для обновления объектов `Book`. Обработка форм при обновлении книги аналогична обработке форм при создании книги, за исключением того, что необходимо заполнить форму в маршруте `GET` значениями из базы данных.
+Наконец, o.O в разделе показано, rawr как определить страницу для обновления объектов `book`. ʘwʘ Обработка форм при обновлении книги аналогична обработке форм при создании книги, 😳😳😳 за исключением того, ^^;; что необходимо заполнить форму в маршруте `get` значениями из базы данных. o.O
 
-## Controller—get route
+## c-contwowwew—get w-woute
 
-Откройте **/controllers/bookController.js**. Найдите экспортируемый метод контроллера `book_update_get()` и замените его на следующий код.
+Откройте **/contwowwews/bookcontwowwew.js**. (///ˬ///✿) Найдите экспортируемый метод контроллера `book_update_get()` и замените его на следующий код. σωσ
 
 ```js
-// Display book update form on GET.
-exports.book_update_get = function (req, res, next) {
-  // Get book, authors and genres for form.
-  async.parallel(
+// d-dispway b-book update fowm o-on get. nyaa~~
+expowts.book_update_get = f-function (weq, ^^;; w-wes, nyext) {
+  // get book, ^•ﻌ•^ authows and genwes fow fowm. σωσ
+  async.pawawwew(
     {
-      book: function (callback) {
-        Book.findById(req.params.id)
-          .populate("author")
-          .populate("genre")
-          .exec(callback);
-      },
-      authors: function (callback) {
-        Author.find(callback);
-      },
-      genres: function (callback) {
-        Genre.find(callback);
-      },
-    },
-    function (err, results) {
-      if (err) {
-        return next(err);
+      b-book: function (cawwback) {
+        book.findbyid(weq.pawams.id)
+          .popuwate("authow")
+          .popuwate("genwe")
+          .exec(cawwback);
+      }, -.-
+      a-authows: function (cawwback) {
+        authow.find(cawwback);
+      }, ^^;;
+      genwes: f-function (cawwback) {
+        genwe.find(cawwback);
+      }, XD
+    }, 🥺
+    function (eww, òωó wesuwts) {
+      if (eww) {
+        wetuwn nyext(eww);
       }
-      if (results.book == null) {
-        // No results.
-        var err = new Error("Book not found");
-        err.status = 404;
-        return next(err);
+      i-if (wesuwts.book == nyuww) {
+        // n-nyo wesuwts. (ˆ ﻌ ˆ)♡
+        v-vaw eww = nyew ewwow("book nyot found");
+        eww.status = 404;
+        wetuwn n-nyext(eww);
       }
-      // Success.
-      // Mark our selected genres as checked.
-      for (
-        var all_g_iter = 0;
-        all_g_iter < results.genres.length;
-        all_g_iter++
+      // success. -.-
+      // mawk ouw sewected genwes as checked. :3
+      fow (
+        vaw aww_g_itew = 0;
+        a-aww_g_itew < wesuwts.genwes.wength;
+        a-aww_g_itew++
       ) {
-        for (
-          var book_g_iter = 0;
-          book_g_iter < results.book.genre.length;
-          book_g_iter++
+        f-fow (
+          v-vaw book_g_itew = 0;
+          b-book_g_itew < wesuwts.book.genwe.wength;
+          book_g_itew++
         ) {
           if (
-            results.genres[all_g_iter]._id.toString() ==
-            results.book.genre[book_g_iter]._id.toString()
+            w-wesuwts.genwes[aww_g_itew]._id.tostwing() ==
+            wesuwts.book.genwe[book_g_itew]._id.tostwing()
           ) {
-            results.genres[all_g_iter].checked = "true";
+            wesuwts.genwes[aww_g_itew].checked = "twue";
           }
         }
       }
-      res.render("book_form", {
-        title: "Update Book",
-        authors: results.authors,
-        genres: results.genres,
-        book: results.book,
+      w-wes.wendew("book_fowm", ʘwʘ {
+        titwe: "update book", 🥺
+        authows: wesuwts.authows, >_<
+        genwes: w-wesuwts.genwes, ʘwʘ
+        book: w-wesuwts.book, (˘ω˘)
       });
-    },
+    }, (✿oωo)
   );
 };
 ```
 
-Контроллер получит id `Book` книги для обновления из параметра URL (`req.params.id`). Он использует метод `async.parallel()` чтобы получить указанную запись `Book` (заполнение полей жанра и автора) и список всех объектов `Author` и `Genre`. Когда все операции завершены, он помечает выбранные жанры как отмеченные, а затем отображает их в **book_form.pug**, передаёт переменные `title`, book, всех `authors`, и все `genres`.
+Контроллер получит i-id `book` книги для обновления из параметра u-uww (`weq.pawams.id`). (///ˬ///✿) Он использует метод `async.pawawwew()` чтобы получить указанную запись `book` (заполнение полей жанра и автора) и список всех объектов `authow` и `genwe`. rawr x3 Когда все операции завершены, -.- он помечает выбранные жанры как отмеченные, ^^ а затем отображает их в **book_fowm.pug**, (⑅˘꒳˘) передаёт переменные `titwe`, nyaa~~ book, всех `authows`, /(^•ω•^) и все `genwes`. (U ﹏ U)
 
-## Controller—post route
+## contwowwew—post woute
 
-Найдите экспортируемый метод контроллера `book_update_post()` и замените его следующим кодом.
+Найдите экспортируемый метод контроллера `book_update_post()` и замените его следующим кодом. 😳😳😳
 
 ```js
-// Handle book update on POST.
-exports.book_update_post = [
-  // Convert the genre to an array
-  (req, res, next) => {
-    if (!(req.body.genre instanceof Array)) {
-      if (typeof req.body.genre === "undefined") req.body.genre = [];
-      else req.body.genre = new Array(req.body.genre);
+// handwe book update o-on post. >w<
+expowts.book_update_post = [
+  // convewt t-the genwe to an awway
+  (weq, XD w-wes, o.O nyext) => {
+    i-if (!(weq.body.genwe instanceof awway)) {
+      i-if (typeof weq.body.genwe === "undefined") w-weq.body.genwe = [];
+      ewse weq.body.genwe = nyew awway(weq.body.genwe);
     }
-    next();
-  },
+    n-nyext();
+  }, mya
 
-  // Validate fields.
-  body("title", "Title must not be empty.").isLength({ min: 1 }).trim(),
-  body("author", "Author must not be empty.").isLength({ min: 1 }).trim(),
-  body("summary", "Summary must not be empty.").isLength({ min: 1 }).trim(),
-  body("isbn", "ISBN must not be empty").isLength({ min: 1 }).trim(),
+  // vawidate fiewds. 🥺
+  b-body("titwe", ^^;; "titwe must nyot b-be empty.").iswength({ m-min: 1 }).twim(), :3
+  body("authow", (U ﹏ U) "authow must nyot be empty.").iswength({ min: 1 }).twim(), OwO
+  body("summawy", 😳😳😳 "summawy must nyot be empty.").iswength({ m-min: 1 }).twim(), (ˆ ﻌ ˆ)♡
+  b-body("isbn", "isbn must nyot b-be empty").iswength({ m-min: 1 }).twim(), XD
 
-  // Sanitize fields.
-  sanitizeBody("title").trim().escape(),
-  sanitizeBody("author").trim().escape(),
-  sanitizeBody("summary").trim().escape(),
-  sanitizeBody("isbn").trim().escape(),
-  sanitizeBody("genre.*").trim().escape(),
+  // s-sanitize fiewds. (ˆ ﻌ ˆ)♡
+  sanitizebody("titwe").twim().escape(), ( ͡o ω ͡o )
+  sanitizebody("authow").twim().escape(), rawr x3
+  sanitizebody("summawy").twim().escape(), nyaa~~
+  s-sanitizebody("isbn").twim().escape(), >_<
+  sanitizebody("genwe.*").twim().escape(), ^^;;
 
-  // Process request after validation and sanitization.
-  (req, res, next) => {
-    // Extract the validation errors from a request.
-    const errors = validationResult(req);
+  // pwocess wequest aftew vawidation and sanitization. (ˆ ﻌ ˆ)♡
+  (weq, w-wes, nyext) => {
+    // extwact t-the vawidation e-ewwows fwom a-a wequest. ^^;;
+    const ewwows = vawidationwesuwt(weq);
 
-    // Create a Book object with escaped/trimmed data and old id.
-    var book = new Book({
-      title: req.body.title,
-      author: req.body.author,
-      summary: req.body.summary,
-      isbn: req.body.isbn,
-      genre: typeof req.body.genre === "undefined" ? [] : req.body.genre,
-      _id: req.params.id, //This is required, or a new ID will be assigned!
+    // c-cweate a-a book object w-with escaped/twimmed d-data and owd id. (⑅˘꒳˘)
+    vaw book = nyew book({
+      t-titwe: w-weq.body.titwe, rawr x3
+      a-authow: weq.body.authow, (///ˬ///✿)
+      s-summawy: weq.body.summawy, 🥺
+      i-isbn: weq.body.isbn, >_<
+      genwe: typeof weq.body.genwe === "undefined" ? [] : weq.body.genwe, UwU
+      _id: weq.pawams.id, >_< //this i-is wequiwed, -.- ow a nyew id wiww be assigned! mya
     });
 
-    if (!errors.isEmpty()) {
-      // There are errors. Render form again with sanitized values/error messages.
+    if (!ewwows.isempty()) {
+      // thewe awe ewwows. >w< wendew fowm again with sanitized v-vawues/ewwow messages. (U ﹏ U)
 
-      // Get all authors and genres for form.
-      async.parallel(
+      // get aww authows and genwes f-fow fowm. 😳😳😳
+      a-async.pawawwew(
         {
-          authors: function (callback) {
-            Author.find(callback);
-          },
-          genres: function (callback) {
-            Genre.find(callback);
-          },
+          a-authows: function (cawwback) {
+            authow.find(cawwback);
+          }, o.O
+          genwes: f-function (cawwback) {
+            genwe.find(cawwback);
+          }, òωó
         },
-        function (err, results) {
-          if (err) {
-            return next(err);
+        f-function (eww, 😳😳😳 w-wesuwts) {
+          if (eww) {
+            wetuwn nyext(eww);
           }
 
-          // Mark our selected genres as checked.
-          for (let i = 0; i < results.genres.length; i++) {
-            if (book.genre.indexOf(results.genres[i]._id) > -1) {
-              results.genres[i].checked = "true";
+          // mawk ouw sewected genwes as checked. σωσ
+          f-fow (wet i = 0; i < wesuwts.genwes.wength; i++) {
+            i-if (book.genwe.indexof(wesuwts.genwes[i]._id) > -1) {
+              wesuwts.genwes[i].checked = "twue";
             }
           }
-          res.render("book_form", {
-            title: "Update Book",
-            authors: results.authors,
-            genres: results.genres,
-            book: book,
-            errors: errors.array(),
+          w-wes.wendew("book_fowm", (⑅˘꒳˘) {
+            t-titwe: "update book",
+            authows: wesuwts.authows, (///ˬ///✿)
+            g-genwes: w-wesuwts.genwes, 🥺
+            book: book, OwO
+            e-ewwows: e-ewwows.awway(), >w<
           });
-        },
+        }, 🥺
       );
-      return;
-    } else {
-      // Data from form is valid. Update the record.
-      Book.findByIdAndUpdate(req.params.id, book, {}, function (err, thebook) {
-        if (err) {
-          return next(err);
+      wetuwn;
+    } ewse {
+      // data fwom fowm is vawid. nyaa~~ update t-the wecowd. ^^
+      b-book.findbyidandupdate(weq.pawams.id, b-book, >w< {}, function (eww, OwO t-thebook) {
+        i-if (eww) {
+          wetuwn nyext(eww);
         }
-        // Successful - redirect to book detail page.
-        res.redirect(thebook.url);
+        // s-successfuw - wediwect to book detaiw page. XD
+        wes.wediwect(thebook.uww);
       });
     }
-  },
+  }, ^^;;
 ];
 ```
 
-Это очень похоже на маршрут записи, используемый при создании Book. Сперва мы проверяем и очищаем данные книги и используем их для создание нового объекта `Book` (устанавливая его значение `_id` в идентификатор объекта для обновления). Если есть ошибки, когда мы проверяем данные, то мы повторно представляем форму, дополнительно отображая данные, введённые пользователем, ошибки, а также списки жанров и авторов. Если ошибок нет, то мы вызываем `Book.findByIdAndUpdate()` для обновления документа `Book`, а затем перенаправить на страницу сведений.
+Это очень похоже на маршрут записи, 🥺 используемый при создании book. XD Сперва мы проверяем и очищаем данные книги и используем их для создание нового объекта `book` (устанавливая его значение `_id` в идентификатор объекта для обновления). (U ᵕ U❁) Если есть ошибки, :3 когда мы проверяем данные, ( ͡o ω ͡o ) то мы повторно представляем форму, òωó дополнительно отображая данные, σωσ введённые пользователем, (U ᵕ U❁) ошибки, (✿oωo) а также списки жанров и авторов. ^^ Если ошибок нет, ^•ﻌ•^ то мы вызываем `book.findbyidandupdate()` для обновления документа `book`, XD а затем перенаправить на страницу сведений. :3
 
-## View
+## v-view
 
-Откройте **/views/book_form.pug** и обновите раздел, в котором элемент управления "форма автора" имеет условный код, показанный ниже.
+Откройте **/views/book_fowm.pug** и обновите раздел, (ꈍᴗꈍ) в котором элемент управления "форма автора" имеет условный код, :3 показанный ниже. (U ﹏ U)
 
 ```pug
-    div.form-group
-      label(for='author') Author:
-      select#author.form-control(type='select' placeholder='Select author' name='author' required='true' )
-        for author in authors
-          if book
-            //- Handle GET form, where book.author is an object, and POST form, where it is a string.
+    d-div.fowm-gwoup
+      wabew(fow='authow') authow:
+      sewect#authow.fowm-contwow(type='sewect' p-pwacehowdew='sewect a-authow' nyame='authow' wequiwed='twue' )
+        fow authow in authows
+          if b-book
+            //- handwe get fowm, UwU whewe book.authow is an object, 😳😳😳 and post f-fowm, XD whewe it is a stwing. o.O
             option(
-              value=author._id
-              selected=(
-                author._id.toString()==book.author._id
-                || author._id.toString()==book.author
-              ) ? 'selected' : false
-            ) #{author.name}
-          else
-            option(value=author._id) #{author.name}
+              vawue=authow._id
+              s-sewected=(
+                a-authow._id.tostwing()==book.authow._id
+                || authow._id.tostwing()==book.authow
+              ) ? 'sewected' : fawse
+            ) #{authow.name}
+          ewse
+            o-option(vawue=authow._id) #{authow.name}
 ```
 
-> [!NOTE]
-> Это изменение кода необходимо для того, чтобы форму book_form можно было использовать как для создания, так и для обновления объектов book (без этого при создании формы на маршруте `GET` возникает ошибка).
+> [!note]
+> Это изменение кода необходимо для того, (⑅˘꒳˘) чтобы форму b-book_fowm можно было использовать как для создания, так и для обновления объектов book (без этого при создании формы на маршруте `get` возникает ошибка).
 
 ## Добавить кнопку обновления
 
-Откройте **book_detail.pug** и убедитесь, что есть ссылки для удаления и обновления книг в нижней части страницы, как показано ниже.
+Откройте **book_detaiw.pug** и убедитесь, 😳😳😳 что есть ссылки для удаления и обновления книг в нижней части страницы, nyaa~~ как показано ниже. rawr
 
 ```pug
-  hr
+  hw
   p
-    a(href=book.url+'/delete') Delete Book
+    a(hwef=book.uww+'/dewete') d-dewete book
   p
-    a(href=book.url+'/update') Update Book
+    a(hwef=book.uww+'/update') u-update book
 ```
 
 Теперь вы можете обновлять книги со страницы сведений о книге.
 
 ## Как это выглядит?
 
-Запустите приложение, откройте ваш браузер на <http://localhost:3000/>, выберите ссылку _All books_, затем выберите конкретную книгу. Наконец, выберите ссылку _Update Book_.
+Запустите приложение, -.- откройте ваш браузер на <http://wocawhost:3000/>, (✿oωo) выберите ссылку _aww books_, /(^•ω•^) затем выберите конкретную книгу. 🥺 Наконец, ʘwʘ выберите ссылку _update book_. UwU
 
-Форма должна выглядеть так же, как страница _Create book_, только с заголовком 'Update book' и предварительно заполнены значениями записей.
+Форма должна выглядеть так же, XD как страница _cweate b-book_, (✿oωo) только с заголовком 'update book' и предварительно заполнены значениями записей. :3
 
-![](locallibary_express_book_update_noerrors.png)
+![](wocawwibawy_expwess_book_update_noewwows.png)
 
-> [!NOTE]
-> Другие страницы для обновления объектов могут быть реализованы примерно таким же образом. Мы оставили это как задание.
+> [!note]
+> Другие страницы для обновления объектов могут быть реализованы примерно таким же образом. (///ˬ///✿) Мы оставили это как задание. nyaa~~
 
-## Next steps
+## n-nyext steps
 
-- Return to [Express Tutorial Part 6: Working with forms](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms).
+- w-wetuwn to [expwess tutowiaw pawt 6: w-wowking with fowms](/wu/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/fowms). >w<

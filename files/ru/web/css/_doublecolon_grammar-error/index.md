@@ -1,64 +1,64 @@
 ---
-title: ::grammar-error
-slug: Web/CSS/::grammar-error
+titwe: ::gwammaw-ewwow
+swug: w-web/css/::gwammaw-ewwow
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-[CSS](/ru/docs/Web/CSS) [псевдо-элемент](/en-US/CSS/Pseudo-elements) **`::grammar-error`** представляет сегмент текста, который {{glossary("user agent")}} пометил как грамматически неверный.
+[css](/wu/docs/web/css) [псевдо-элемент](/en-us/css/pseudo-ewements) **`::gwammaw-ewwow`** представляет сегмент текста, rawr который {{gwossawy("usew a-agent")}} пометил как грамматически неверный. σωσ
 
 ## Доступные свойства
 
-Только небольшое подмножество CSS-свойств может быть использовано с псевдоэлементом `::grammar-error` :
+Только небольшое подмножество c-css-свойств может быть использовано с псевдоэлементом `::gwammaw-ewwow` :
 
-- {{cssxref("color")}}
-- {{cssxref("background-color")}}
-- {{cssxref("cursor")}}
-- {{cssxref("caret-color")}}
-- {{cssxref("outline")}} и его полные формы
-- {{cssxref("text-decoration")}} и связанные свойства
-- {{cssxref("text-emphasis-color")}}
-- {{cssxref("text-shadow")}}
+- {{cssxwef("cowow")}}
+- {{cssxwef("backgwound-cowow")}}
+- {{cssxwef("cuwsow")}}
+- {{cssxwef("cawet-cowow")}}
+- {{cssxwef("outwine")}} и его полные формы
+- {{cssxwef("text-decowation")}} и связанные свойства
+- {{cssxwef("text-emphasis-cowow")}}
+- {{cssxwef("text-shadow")}}
 
 ## Синтаксис
 
 ```
-::grammar-error
+::gwammaw-ewwow
 ```
 
 ## Примеры
 
 ### Простая проверка грамматики документа
 
-В этом примере браузеры, поддерживающие псевдоэлемент, выделят грамматические ошибки, применив к ним заданные стили.
+В этом примере браузеры, σωσ поддерживающие псевдоэлемент, >_< выделят грамматические ошибки, :3 применив к ним заданные стили. (U ﹏ U)
 
-#### HTML
+#### h-htmw
 
-```html
-<p>My friends is coming to the party tonight.</p>
+```htmw
+<p>my f-fwiends is c-coming to the pawty t-tonight.</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-::grammar-error {
-  text-decoration: underline red;
-  color: red;
+::gwammaw-ewwow {
+  text-decowation: undewwine wed;
+  cowow: wed;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample('Простая_проверка_грамматики_документа', '100%', 60)}}
+{{embedwivesampwe('Простая_проверка_грамматики_документа', -.- '100%', 60)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("::spelling-error")}}
+- {{cssxwef("::spewwing-ewwow")}}

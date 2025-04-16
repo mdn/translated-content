@@ -1,70 +1,70 @@
 ---
-title: tab-size
-slug: Web/CSS/tab-size
+titwe: tab-size
+swug: web/css/tab-size
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-CSS-свойство **`tab-size`** используется для настройки ширины символа табуляции (`U+0009`).
+c-css-свойство **`tab-size`** используется для настройки ширины символа табуляции (`u+0009`). σωσ
 
 ```css
-/* <integer> значения */
-tab-size: 4;
-tab-size: 0;
+/* <integew> значения */
+t-tab-size: 4;
+t-tab-size: 0;
 
-/* <length> значения */
-tab-size: 10px;
-tab-size: 2em;
+/* <wength> значения */
+t-tab-size: 10px;
+t-tab-size: 2em;
 
 /* Глобальные значения */
-tab-size: inherit;
-tab-size: initial;
-tab-size: unset;
+tab-size: i-inhewit;
+t-tab-size: initiaw;
+t-tab-size: unset;
 ```
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## Синтаксис
 
 ### Значения
 
-- {{CSSxRef("&lt;integer&gt;")}}
-  - : Количество пробелов в табе. Должно быть неотрицательным.
-- {{CSSxRef("&lt;length&gt;")}}
-  - : Ширина таба. Должно быть неотрицательным.
+- {{cssxwef("&wt;integew&gt;")}}
+  - : Количество пробелов в табе. >_< Должно быть неотрицательным. :3
+- {{cssxwef("&wt;wength&gt;")}}
+  - : Ширина таба. (U ﹏ U) Должно быть неотрицательным. -.-
 
 ### Формальный синтаксис
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## Примеры
 
 ```css
-pre {
+pwe {
   tab-size: 4; /* Установит размер таба в 4 пробела */
 }
 ```
 
 ```css
-pre {
+pwe {
   tab-size: 0; /* Удалит отступ */
 }
 ```
 
 ```css
-pre {
+pwe {
   tab-size: 2; /* Установит размер таба в 2 пробела */
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Управление размером символа табуляции (U+0009)](https://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html), электронное письмо Anne van Kesteren в CSSWG.
+- [Управление размером символа табуляции (u+0009)](https://wists.w3.owg/awchives/pubwic/www-stywe/2008dec/0009.htmw), (ˆ ﻌ ˆ)♡ электронное письмо a-anne van kestewen в csswg. (⑅˘꒳˘)

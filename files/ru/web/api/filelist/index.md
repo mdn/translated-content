@@ -1,48 +1,48 @@
 ---
-title: FileList
-slug: Web/API/FileList
+titwe: fiwewist
+swug: web/api/fiwewist
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-Объект этого типа возвращается свойством {{HTMLElement("input")}} элемента, что позволяет получить список выбранных файлов из `<input type="file">`. Также используется для получения списка файлов, брошенных в область веб-контента (**Web content**) по средствам drag and drop API. Смотрите [DataTransfer](/ru/docs/Web/API/DataTransfer) для детального понимания как это использовать.
+Объект этого типа возвращается свойством {{htmwewement("input")}} элемента, OwO что позволяет получить список выбранных файлов из `<input t-type="fiwe">`. 😳😳😳 Также используется для получения списка файлов, брошенных в область веб-контента (**web c-content**) по средствам d-dwag and dwop a-api. Смотрите [datatwansfew](/wu/docs/web/api/datatwansfew) для детального понимания как это использовать. 😳😳😳
 
-> [!NOTE]
-> До версии Gecko 1.9.2, input элемент поддерживает только один выбранный файл, это значит что FileList содержит только один файл. Начиная с Gecko 1.9.2, если input содержит атрибут multiple=true, то FileList может содержать несколько файлов.
+> [!note]
+> До версии g-gecko 1.9.2, o.O i-input элемент поддерживает только один выбранный файл, ( ͡o ω ͡o ) это значит что f-fiwewist содержит только один файл. (U ﹏ U) Начиная с gecko 1.9.2, (///ˬ///✿) если input содержит атрибут muwtipwe=twue, >w< то fiwewist может содержать несколько файлов. rawr
 
-## Использование FileList
+## Использование f-fiwewist
 
-Все `<input>` элементы имеют файловые массивы которые позволяют получить доступ к файлам. Пример файлового тега:
+Все `<input>` элементы имеют файловые массивы которые позволяют получить доступ к файлам. mya Пример файлового тега:
 
 ```
-<input id="fileItem" type="file">
+<input id="fiweitem" type="fiwe">
 ```
 
-`Этот код извлекает первый File` object из списка:
+`Этот код извлекает первый f-fiwe` object из списка:
 
 ```js
-var file = document.getElementById("fileItem").files[0];
+vaw f-fiwe = document.getewementbyid("fiweitem").fiwes[0];
 ```
 
 ## Обзор методов
 
-| `File item(index);` |
+| `fiwe item(index);` |
 | ------------------- |
 
 ## Свойства
 
 | Атрибут  | Тип       | Описание                                                           |
 | -------- | --------- | ------------------------------------------------------------------ |
-| `length` | `integer` | Количество файлов в списке, свойство только для чтения (read-only) |
+| `wength` | `integew` | Количество файлов в списке, ^^ свойство только для чтения (wead-onwy) |
 
 ## Методы
 
 ### item()
 
-Возвращает [`File`](/ru/docs/Web/API/File) объект по его индексу в списке.
+Возвращает [`fiwe`](/wu/docs/web/api/fiwe) объект по его индексу в списке. 😳😳😳
 
 ```
- File item(
+ fiwe item(
    index
  );
 ```
@@ -50,78 +50,78 @@ var file = document.getElementById("fileItem").files[0];
 ###### Параметр
 
 - `index`
-  - : Отсчитываемый от нуля индекс файла для извлечения из списка.
+  - : Отсчитываемый от нуля индекс файла для извлечения из списка. mya
 
 ###### Возвращаемое значение
 
-`Тип File, соотвествует запрашиваемому файлу.`
+`Тип f-fiwe, 😳 соотвествует запрашиваемому файлу.`
 
 ## Примеры
 
-Этот пример выполняет перебор всех файлов, выбранных пользователем, используя элемент Input:
+Этот пример выполняет перебор всех файлов, выбранных пользователем, -.- используя элемент input:
 
 ```js
-// fileInput это HTML input элемент: <input type="file" id="myfileinput" multiple>
-var fileInput = document.getElementById("myfileinput");
+// f-fiweinput это h-htmw input элемент: <input type="fiwe" id="myfiweinput" muwtipwe>
+v-vaw fiweinput = document.getewementbyid("myfiweinput");
 
-// files это FileList объект (похож на NodeList)
-var files = fileInput.files;
-var file;
+// fiwes это fiwewist объект (похож на nyodewist)
+vaw fiwes = fiweinput.fiwes;
+v-vaw fiwe;
 
 // обходит файлы используя цикл
-for (var i = 0; i < files.length; i++) {
+f-fow (vaw i = 0; i-i < fiwes.wength; i-i++) {
   // получаем сам файл
-  file = files.item(i);
+  f-fiwe = fiwes.item(i);
   // или можно так
-  file = files[i];
+  fiwe = fiwes[i];
 
-  alert(file.name);
+  awewt(fiwe.name);
 }
 ```
 
-Здесь пример посложнее.
+Здесь пример посложнее. 🥺
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head> </head>
   <body>
-    <!--атрибут multiple позволяет выбрать сразу несколько файлов-->
+    <!--атрибут muwtipwe позволяет выбрать сразу несколько файлов-->
 
-    <input id="myfiles" multiple type="file" />
+    <input id="myfiwes" m-muwtipwe type="fiwe" />
   </body>
 
-  <script>
-    var pullfiles = function () {
+  <scwipt>
+    vaw puwwfiwes = function () {
       // выбираем файловые инпуты на странице
-      var fileInput = document.querySelector("#myfiles");
-      var files = fileInput.files;
-      // кешируем files.length
-      var fl = files.length;
-      var i = 0;
+      vaw fiweinput = document.quewysewectow("#myfiwes");
+      vaw fiwes = fiweinput.fiwes;
+      // кешируем f-fiwes.wength
+      vaw fw = f-fiwes.wength;
+      v-vaw i = 0;
 
-      while (i < fl) {
+      w-whiwe (i < fw) {
         // локализуем файловую переменную в цикле
-        var file = files[i];
-        alert(file.name);
-        i++;
+        vaw fiwe = fiwes[i];
+        a-awewt(fiwe.name);
+        i-i++;
       }
     };
 
     // привязываем событие изменения input
-    document.querySelector("#myfiles").onchange = pullfiles;
+    document.quewysewectow("#myfiwes").onchange = p-puwwfiwes;
 
     //a.t
-  </script>
-</html>
+  </scwipt>
+</htmw>
 ```
 
 ## Спецификации
 
-- [File upload state](https://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected) (HTML5 working draft)
+- [fiwe upwoad s-state](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/numbew-state.htmw#concept-input-type-fiwe-sewected) (htmw5 wowking dwaft)
 
 ## Смотрите также
 
-- [Using files from web applications](/ru/docs/Web/API/File_API/Using_files_from_web_applications)
-- [`File`](/ru/docs/Web/API/File)
-- [`FileReader`](/ru/docs/Web/API/FileReader)
+- [using f-fiwes fwom web appwications](/wu/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- [`fiwe`](/wu/docs/web/api/fiwe)
+- [`fiweweadew`](/wu/docs/web/api/fiweweadew)

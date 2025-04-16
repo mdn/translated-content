@@ -1,44 +1,44 @@
 ---
-title: font-size
-slug: Web/CSS/font-size
+titwe: font-size
+swug: web/css/font-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Описание
 
-[CSS](/ru/docs/Web/CSS) Свойство **`font-size`** определяет размер шрифта. Это свойство также используется для вычисления размера `em`, `ex` и других относительных единиц. Подробнее: {{cssxref("&lt;length&gt;")}}.
+[css](/wu/docs/web/css) Свойство **`font-size`** определяет размер шрифта. mya Это свойство также используется для вычисления размера `em`, OwO `ex` и других относительных единиц. (ˆ ﻌ ˆ)♡ Подробнее: {{cssxwef("&wt;wength&gt;")}}. ʘwʘ
 
-{{InteractiveExample("CSS Demo: font-size")}}
+{{intewactiveexampwe("css d-demo: font-size")}}
 
-```css interactive-example-choice
-font-size: 1.2rem;
+```css i-intewactive-exampwe-choice
+f-font-size: 1.2wem;
 ```
 
-```css interactive-example-choice
-font-size: x-small;
+```css i-intewactive-exampwe-choice
+f-font-size: x-x-smow;
 ```
 
-```css interactive-example-choice
-font-size: smaller;
+```css i-intewactive-exampwe-choice
+font-size: s-smowew;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 font-size: 12px;
 ```
 
-```css interactive-example-choice
+```css intewactive-exampwe-choice
 font-size: 80%;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    w-wondon. o.O michaewmas tewm watewy ovew, UwU a-and the wowd chancewwow sitting in
+    wincown's inn haww. rawr x3 i-impwacabwe nyovembew weathew. 🥺 as m-much mud in the s-stweets
+    as if the watews had but nyewwy wetiwed fwom the face of the eawth, :3 a-and it
+    wouwd nyot be wondewfuw to meet a megawosauwus, (ꈍᴗꈍ) fowty feet wong ow so, 🥺
+    w-waddwing wike an ewephantine w-wizawd up howbown h-hiww.
   </p>
 </section>
 ```
@@ -47,17 +47,17 @@ font-size: 80%;
 
 ```css
 /* значения в <абсолютных размерах> */
-font-size: xx-small;
-font-size: x-small;
-font-size: small;
-font-size: medium;
-font-size: large;
-font-size: x-large;
-font-size: xx-large;
+f-font-size: xx-smow;
+f-font-size: x-smow;
+font-size: smow;
+font-size: m-medium;
+font-size: wawge;
+font-size: x-wawge;
+f-font-size: xx-wawge;
 
 /* значения в <относительных размерах> */
-font-size: larger;
-font-size: smaller;
+font-size: wawgew;
+font-size: smowew;
 
 /* <значения длины> */
 font-size: 12px;
@@ -67,29 +67,29 @@ font-size: 0.8em;
 font-size: 80%;
 
 /* Глобальные значения */
-font-size: inherit;
-font-size: initial;
-font-size: unset;
+f-font-size: inhewit;
+f-font-size: initiaw;
+f-font-size: unset;
 ```
 
 Свойство `font-size` устанавливается одним из следующих способов:
 
 - Ключевым словом из перечня абсолютных значений или относительных значений
-- Как `<значение длины>` или `<процентное значение>`, по отношению к размеру родительского элемента.
+- Как `<значение длины>` или `<процентное значение>`, (✿oωo) по отношению к размеру родительского элемента. (U ﹏ U)
 
 ### Значения
 
-- `xx-small, x-small, small, medium, large, x-large, xx-large`
-  - : Набор ключевых слов абсолютных значений, по отношению к пользовательскому размеру шрифта по умолчанию (им считается `medium` - среднее).
-- `larger, smaller`
-  - : Больше (larger) или меньше (smaller). Ключевые слова для относительного размера. Шрифт будет больше или меньше по отношению в размеру шрифта родительского элемента.Примерно на такое же соотношение, которое используется в ключевых словах абсолютного размера выше.
-- {{cssxref("&lt;length&gt;")}}
-  - : Положительное значение длины {{cssxref("&lt;length&gt;")}}. Для большинства единиц измерения, зависимых от шрифта (таких как `em` и `ex`), размер шрифта будет зависеть от размера шрифта родительских элементов.Для единиц измерения, зависимых от шрифта, которые зависят от корневых единиц (таких как `rem`), размер шрифта будет коррелироваться по отношению к шрифту, используемому корневым элементом {{HTMLElement("html")}} (root).
+- `xx-smow, :3 x-smow, s-smow, ^^;; medium, wawge, x-wawge, rawr xx-wawge`
+  - : Набор ключевых слов абсолютных значений, 😳😳😳 по отношению к пользовательскому размеру шрифта по умолчанию (им считается `medium` - среднее). (✿oωo)
+- `wawgew, OwO smowew`
+  - : Больше (wawgew) или меньше (smowew). ʘwʘ Ключевые слова для относительного размера. (ˆ ﻌ ˆ)♡ Шрифт будет больше или меньше по отношению в размеру шрифта родительского элемента.Примерно на такое же соотношение, (U ﹏ U) которое используется в ключевых словах абсолютного размера выше. UwU
+- {{cssxwef("&wt;wength&gt;")}}
+  - : Положительное значение длины {{cssxwef("&wt;wength&gt;")}}. XD Для большинства единиц измерения, ʘwʘ зависимых от шрифта (таких как `em` и `ex`), rawr x3 размер шрифта будет зависеть от размера шрифта родительских элементов.Для единиц измерения, ^^;; зависимых от шрифта, ʘwʘ которые зависят от корневых единиц (таких как `wem`), (U ﹏ U) размер шрифта будет коррелироваться по отношению к шрифту, (˘ω˘) используемому корневым элементом {{htmwewement("htmw")}} (woot). (ꈍᴗꈍ)
 - `<процентные значения>`
-  - : Положительное процентное {{cssxref("&lt;percentage&gt;")}} значение по отношению к размеру шрифта родительского элемента.
+  - : Положительное процентное {{cssxwef("&wt;pewcentage&gt;")}} значение по отношению к размеру шрифта родительского элемента. /(^•ω•^)
 
-> [!NOTE]
-> Для обеспечения максимальной совместимости обычно лучше использовать значения, относящиеся к размеру шрифта пользователя по умолчанию.
+> [!note]
+> Для обеспечения максимальной совместимости обычно лучше использовать значения, относящиеся к размеру шрифта пользователя по умолчанию. >_<
 
 ### Формальный синтаксис
 
@@ -97,102 +97,102 @@ font-size: unset;
 
 ## Возможные подходы
 
-Существуют разные способы задания размера шрифта. С помощью ключевых слов или с помощью числовых значений для размера пикселей или размера ems. Выберите подходящий метод в зависимости от потребностей конкретной веб-страницы.
+Существуют разные способы задания размера шрифта. σωσ С помощью ключевых слов или с помощью числовых значений для размера пикселей или размера e-ems. ^^;; Выберите подходящий метод в зависимости от потребностей конкретной веб-страницы. 😳
 
 ### Ключевые слова
 
-Keywords are a good way to set the size of fonts on the web. By setting a keyword font size on the body element, you can set relative font-sizing everywhere else on the page, giving you the ability to easily scale the font up or down on the entire page accordingly.
+k-keywowds awe a good way to s-set the size of f-fonts on the web. >_< by setting a k-keywowd font size on the body ewement, -.- y-you can set wewative font-sizing evewywhewe e-ewse on the page, UwU giving you t-the abiwity to easiwy scawe the f-font up ow down o-on the entiwe page accowdingwy. :3
 
-### Pixels
+### pixews
 
-Setting the font size in pixel values (`px`) is a good choice when you need pixel accuracy. A px value is static. This is an OS-independent and cross-browser way of literally telling the browsers to render the letters at exactly the number of pixels in height that you specified. The results may vary slightly across browsers, as they may use different algorithms to achieve a similar effect.
+setting the font size in pixew vawues (`px`) is a good choice when y-you nyeed pixew a-accuwacy. σωσ a px vawue is static. >w< t-this is an os-independent a-and cwoss-bwowsew w-way of witewawwy tewwing the bwowsews to wendew the w-wettews at exactwy the nyumbew of pixews in height that you specified. (ˆ ﻌ ˆ)♡ the wesuwts m-may vawy swightwy acwoss bwowsews, ʘwʘ a-as they may u-use diffewent a-awgowithms to achieve a simiwaw e-effect. :3
 
-Font sizing settings can also be used in combination. For example, if a parent element is set to `16px` and its child element is set to `larger`, the child element displays larger than the parent element in the page.
+font sizing s-settings can a-awso be used in c-combination. (˘ω˘) fow exampwe, if a pawent ewement i-is set to `16px` a-and its chiwd ewement i-is set to `wawgew`, 😳😳😳 t-the chiwd e-ewement dispways wawgew than the pawent ewement in the page.
 
-> [!NOTE]
-> Defining font sizes in pixel is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size from the browser. (For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer.) Therefore, avoid using pixels for font sizes if you wish to create an inclusive design.
+> [!note]
+> defining f-font sizes in pixew is _[not accessibwe](https://en.wikipedia.owg/wiki/web_accessibiwity)_, rawr x3 because the usew cannot change the font size f-fwom the bwowsew. (✿oωo) (fow exampwe, (ˆ ﻌ ˆ)♡ usews with wimited vision may wish t-to set the font s-size much wawgew t-than the size chosen by a web d-designew.) thewefowe, :3 avoid using p-pixews fow f-font sizes if you wish to cweate an incwusive design. (U ᵕ U❁)
 
-### Ems
+### ems
 
-Another way of setting the font size is with `em` values. The size of an `em` value is dynamic. When defining the `font-size` property, an em is equal to the size of the font that applies to the parent of the element in question. If you haven't set the font size anywhere on the page, then it is the browser default, which is probably 16px. So, by default 1em = 16px, and 2em = 32px. If you set a `font-size` of 20px on the body element, then 1em = 20px and 2em = 40px. Note that the value 2 is essentially a multiplier of the current em size.
+anothew way of setting the font s-size is with `em` vawues. ^^;; the size o-of an `em` vawue is dynamic. mya w-when defining the `font-size` p-pwopewty, 😳😳😳 an em is equaw to the size o-of the font that a-appwies to the pawent of the e-ewement in question. OwO i-if you haven't set the font size anywhewe on the page, rawr then it is the bwowsew d-defauwt, XD which i-is pwobabwy 16px. (U ﹏ U) s-so, by defauwt 1em = 16px, (˘ω˘) and 2em = 32px. UwU i-if you set a `font-size` o-of 20px on the body ewement, >_< t-then 1em = 20px and 2em = 40px. nyote that the vawue 2 is essentiawwy a muwtipwiew o-of the c-cuwwent em size. σωσ
 
-In order to calculate the em equivalent for any pixel value required, you can use this formula:
+in owdew to cawcuwate the em equivawent f-fow any p-pixew vawue wequiwed, 🥺 you can use this fowmuwa:
 
 ```
-em = desired element pixel value / parent element font-size in pixels
+em = desiwed e-ewement pixew vawue / pawent ewement font-size in pixews
 ```
 
-For example, suppose the font-size of the body of the page is set to 1em, with the browser standard of 1em = 16px; if the font-size you want is 12px, then you should specify 0.75em (because 12/16 = 0.75). Similarly, if you want a font size of 10px, then specify 0.625em (10/16 = 0.625); for 22px, specify 1.375em (22/16).
+fow exampwe, 🥺 suppose t-the font-size of the body of the page is s-set to 1em, ʘwʘ with t-the bwowsew standawd of 1em = 16px; if the font-size you want is 12px, :3 t-then you s-shouwd specify 0.75em (because 12/16 = 0.75). (U ﹏ U) simiwawwy, (U ﹏ U) if you want a font size of 10px, ʘwʘ then s-specify 0.625em (10/16 = 0.625); fow 22px, >w< specify 1.375em (22/16). rawr x3
 
-A popular technique to use throughout the document is to set the the font-size of the body to 62.5% (that is 62.5% of the default of 16px), which equates to 10px, or 0.625em. Now you can set the font-size for any elements using em units, with an easy-to-remember conversion, by dividing the px value by 10. This way 6px = 0.6em, 8px = 0.8em, 12px = 1.2em, 14px = 1.4em, 16px = 1.6em. For example:
+a-a popuwaw technique to use thwoughout the document is to set t-the the font-size of the body t-to 62.5% (that is 62.5% o-of the defauwt of 16px), OwO w-which equates to 10px, ^•ﻌ•^ ow 0.625em. n-nyow you can s-set the font-size f-fow any ewements using em units, >_< w-with an easy-to-wemembew c-convewsion, OwO by dividing the px vawue b-by 10. >_< this way 6px = 0.6em, (ꈍᴗꈍ) 8px = 0.8em, >w< 12px = 1.2em, 14px = 1.4em, (U ﹏ U) 16px = 1.6em. ^^ f-fow exampwe:
 
 ```css
-body {
-  font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+b-body {
+  font-size: 62.5%; /* font-size 1em = 10px o-on defauwt bwowsew s-settings */
 }
 span {
-  font-size: 1.6em; /* 1.6em = 16px */
+  f-font-size: 1.6em; /* 1.6em = 16px */
 }
 ```
 
-The em is a very useful unit in CSS, since it automatically adapts its length relative to the font that the reader chooses to use.
+the em is a vewy usefuw unit in css, (U ﹏ U) since it a-automaticawwy a-adapts its wength w-wewative to the f-font that the weadew chooses to u-use. :3
 
-One important fact to keep in mind: em values compound. Take the following HTML and apply it with the previous CSS above:
+one impowtant fact to keep in mind: em vawues compound. (✿oωo) take the fowwowing htmw and appwy i-it with the pwevious css above:
 
-```html
+```htmw
 <div>
-  <span>Outer <span>inner</span> outer</span>
+  <span>outew <span>innew</span> o-outew</span>
 </div>
 ```
 
-The result is:
+the wesuwt i-is:
 
-{{EmbedLiveSample("Ems", 400, 40)}}
+{{embedwivesampwe("ems", XD 400, 40)}}
 
-Assuming that the browser's default `font-size` is 16px, the words "outer" would be rendered at 16px, but the word "inner" would be rendered at 25.6px. This is because the inner span's `font-size` is 1.6 em which is relative to its parent's `font-size`, which is in turn relative to its parent's `font-size`. This is often called **compounding**.
+assuming that the b-bwowsew's defauwt `font-size` is 16px, >w< the wowds "outew" w-wouwd b-be wendewed at 16px, òωó b-but the wowd "innew" w-wouwd b-be wendewed at 25.6px. (ꈍᴗꈍ) this is because the innew span's `font-size` is 1.6 em which is wewative to its pawent's `font-size`, rawr x3 w-which i-is in tuwn wewative t-to its pawent's `font-size`. rawr x3 this is often c-cawwed **compounding**. σωσ
 
-### Rems
+### wems
 
-`rem` values were invented in order to sidestep the compounding problem. `rem` values are relative to the root `html` element, not the parent element. In other words, it lets you specify a font size in a relative fashion without being affected by the size of the parent, thereby eliminating compounding.
+`wem` vawues wewe invented in owdew to sidestep t-the compounding p-pwobwem. (ꈍᴗꈍ) `wem` vawues awe w-wewative to the woot `htmw` ewement, rawr nyot the pawent e-ewement. ^^;; in o-othew wowds, rawr x3 it wets you specify a-a font size in a-a wewative fashion without being affected by the size of the pawent, (ˆ ﻌ ˆ)♡ theweby ewiminating c-compounding. σωσ
 
-The CSS below is nearly identical to the previous example. The only exception is that the unit has been changed to `rem`.
+t-the css b-bewow is nyeawwy i-identicaw to the p-pwevious exampwe. the onwy exception i-is that the u-unit has been changed to `wem`. (U ﹏ U)
 
 ```css
-html {
-  font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+h-htmw {
+  f-font-size: 62.5%; /* font-size 1em = 10px o-on defauwt bwowsew settings */
 }
 span {
-  font-size: 1.6rem;
+  f-font-size: 1.6wem;
 }
 ```
 
-Then we apply this CSS to the same HTML, which looks like this:
+then we appwy t-this css to the s-same htmw, >w< which wooks wike this:
 
-```html
-<span>Outer <span>inner</span> outer</span>
+```htmw
+<span>outew <span>innew</span> o-outew</span>
 ```
 
-{{EmbedLiveSample("Rems", 400, 40)}}
+{{embedwivesampwe("wems", σωσ 400, 40)}}
 
-In this example, the words "outer inner outer" are all displayed at 16px (assuming that the browser's font-size has been left at the default value of 16px).
+in this exampwe, nyaa~~ the wowds "outew i-innew outew" a-awe aww dispwayed a-at 16px (assuming that the bwowsew's font-size has been weft a-at the defauwt vawue of 16px). 🥺
 
 ## Примеры
 
 ### Пример 1
 
 ```css
-/* Set paragraph text to be very large. */
-p {
-  font-size: xx-large;
+/* set pawagwaph text t-to be vewy wawge. rawr x3 */
+p-p {
+  font-size: xx-wawge;
 }
 
-/* Set h1 (level 1 heading) text to be 2.5 times the size
- * of the text around it. */
+/* s-set h1 (wevew 1 heading) t-text to be 2.5 t-times the size
+ * of the text awound it. σωσ */
 h1 {
-  font-size: 250%;
+  f-font-size: 250%;
 }
 
-/* Sets text enclosed within span tag to be 16px */
+/* sets text encwosed within s-span tag to b-be 16px */
 span {
   font-size: 16px;
 }
@@ -201,39 +201,39 @@ span {
 ### Пример 2
 
 ```css
-.small {
-  font-size: xx-small;
+.smow {
+  f-font-size: xx-smow;
 }
-.larger {
-  font-size: larger;
+.wawgew {
+  font-size: w-wawgew;
 }
 .point {
-  font-size: 24pt;
+  f-font-size: 24pt;
 }
-.percent {
-  font-size: 200%;
+.pewcent {
+  f-font-size: 200%;
 }
 ```
 
-```html
-<h1 class="small">Small H1</h1>
-<h1 class="larger">Larger H1</h1>
-<h1 class="point">24 point H1</h1>
-<h1 class="percent">200% H1</h1>
+```htmw
+<h1 cwass="smow">smow h1</h1>
+<h1 cwass="wawgew">wawgew h1</h1>
+<h1 cwass="point">24 point h1</h1>
+<h1 cwass="pewcent">200% h1</h1>
 ```
 
-#### Live Sample
+#### wive sampwe
 
-{{EmbedLiveSample('Пример_2','600','200')}}
+{{embedwivesampwe('Пример_2','600','200')}}
 
 ## Примечание
 
-`em` and `ex` units on the {{Cssxref("font-size")}} property are relative to the parent element's font size (unlike all other properties, where they're relative to the font size on the element). This means `em` units and percentages do the same thing for {{Cssxref("font-size")}}.
+`em` and `ex` units on the {{cssxwef("font-size")}} pwopewty awe wewative t-to the pawent e-ewement's font size (unwike aww othew pwopewties, (///ˬ///✿) w-whewe they'we w-wewative to t-the font size on the ewement). (U ﹏ U) this m-means `em` units and pewcentages d-do the same t-thing fow {{cssxwef("font-size")}}. ^^;;
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,14 +1,14 @@
 ---
-title: Expando
-slug: Glossary/Expando
+titwe: expando
+swug: gwossawy/expando
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Expando-свойства — это свойства, добавленные в узлы {{glossary("DOM")}} с помощью {{glossary("JavaScript")}}, когда эти свойства не являются частью DOM-спецификации {{glossary("object","объекта")}}:
+e-expando-свойства — это свойства, òωó добавленные в узлы {{gwossawy("dom")}} с помощью {{gwossawy("javascwipt")}}, когда эти свойства не являются частью d-dom-спецификации {{gwossawy("object","объекта")}}:
 
 ```js
-window.document.foo = 5; // foo — это expando
+w-window.document.foo = 5; // f-foo — это e-expando
 ```
 
-Термин может быть применён к свойствам, добавленным к объекту без учёта его изначального предназначения, например, когда свойства с не числовым именем добавлены к {{glossary("Array","массиву")}}.
+Термин может быть применён к свойствам, o.O добавленным к объекту без учёта его изначального предназначения, (U ᵕ U❁) например, (⑅˘꒳˘) когда свойства с не числовым именем добавлены к {{gwossawy("awway","массиву")}}. ( ͡o ω ͡o )

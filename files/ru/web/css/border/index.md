@@ -1,75 +1,75 @@
 ---
-title: border
-slug: Web/CSS/border
+titwe: bowdew
+swug: web/css/bowdew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство [CSS](/ru/docs/Web/CSS) **`border`** это [универсальное свойство](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) для указания всех персональных свойств границ за раз: {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}}.
+Свойство [css](/wu/docs/web/css) **`bowdew`** это [универсальное свойство](/wu/docs/web/css/css_cascade/showthand_pwopewties) для указания всех персональных свойств границ за раз: {{cssxwef("bowdew-width")}}, mya {{cssxwef("bowdew-stywe")}}, 🥺 и {{cssxwef("bowdew-cowow")}}. >_<
 
-{{InteractiveExample("CSS Demo: border")}}
+{{intewactiveexampwe("css d-demo: b-bowdew")}}
 
-```css interactive-example-choice
-border: solid;
+```css i-intewactive-exampwe-choice
+b-bowdew: sowid;
 ```
 
-```css interactive-example-choice
-border: dashed red;
+```css i-intewactive-exampwe-choice
+b-bowdew: dashed w-wed;
 ```
 
-```css interactive-example-choice
-border: 1rem solid;
+```css i-intewactive-exampwe-choice
+bowdew: 1wem sowid;
 ```
 
-```css interactive-example-choice
-border: thick double #32a1ce;
+```css intewactive-exampwe-choice
+bowdew: thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border: 4mm ridge rgba(211, 220, 50, 0.6);
+```css i-intewactive-exampwe-choice
+bowdew: 4mm widge wgba(211, 220, >_< 50, 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box with a-a bowdew awound it. (⑅˘꒳˘)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  b-backgwound-cowow: #eee;
+  cowow: #8b008b;
   padding: 0.75em;
   width: 80%;
   height: 100px;
 }
 ```
 
-Как и во всех универсальных свойствах, любое персональное значение, которое не указанно, устанавливается в начальное значение. Обратите внимание, `border` не может быть использован для указания пользовательского значения {{cssxref("border-image")}}, но вместо этого устанавливает его в начальное значение, т.е. `none`.
+Как и во всех универсальных свойствах, /(^•ω•^) любое персональное значение, rawr x3 которое не указанно, (U ﹏ U) устанавливается в начальное значение. (U ﹏ U) Обратите внимание, (⑅˘꒳˘) `bowdew` не может быть использован для указания пользовательского значения {{cssxwef("bowdew-image")}}, òωó но вместо этого устанавливает его в начальное значение, ʘwʘ т.е. `none`. /(^•ω•^)
 
 ```css
-border: 1px;
-border: 2px dotted;
-border: medium dashed green;
+b-bowdew: 1px;
+bowdew: 2px dotted;
+bowdew: medium dashed gween;
 ```
 
-> [!NOTE]
-> Рекомендуется использовать `border`, когда вы хотите установить все свойства границ одновременно. Тогда как универсальные свойства {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, и {{Cssxref("border-color")}} принимают до четырёх значений, позволяя установить различные значения для каждого ребра, `border` принимает единственное значение для каждого свойства. И этот стиль применяется для всех четырёх границ.
+> [!note]
+> Рекомендуется использовать `bowdew`, ʘwʘ когда вы хотите установить все свойства границ одновременно. σωσ Тогда как универсальные свойства {{cssxwef("bowdew-width")}}, OwO {{cssxwef("bowdew-stywe")}}, 😳😳😳 и {{cssxwef("bowdew-cowow")}} принимают до четырёх значений, 😳😳😳 позволяя установить различные значения для каждого ребра, o.O `bowdew` принимает единственное значение для каждого свойства. ( ͡o ω ͡o ) И этот стиль применяется для всех четырёх границ. (U ﹏ U)
 
 ## Синтаксис
 
-Свойство `border` указывается используя одно или более значений [`<br-width>`](#br-width), [`<br-style>`](#br-style), и [`<color>`](#color) указанных ниже.
+Свойство `bowdew` указывается используя одно или более значений [`<bw-width>`](#bw-width), (///ˬ///✿) [`<bw-stywe>`](#bw-stywe), >w< и [`<cowow>`](#cowow) указанных ниже.
 
 ### Значения
 
-- `<br-width>`
-  - : Толщина границ. По умолчанию `medium` если отсутствует. Больше информации {{Cssxref("border-width")}}.
-- `<br-style>`
-  - : Стиль линии границ. По умолчанию `none` если отсутствует. Больше информации {{Cssxref("border-style")}}.
-- {{cssxref("&lt;color&gt;")}}
-  - : Цвет границ. По умолчанию принимает значение свойства элементов {{cssxref("color")}}. Больше информации {{Cssxref("border-color")}}.
+- `<bw-width>`
+  - : Толщина границ. rawr По умолчанию `medium` если отсутствует. mya Больше информации {{cssxwef("bowdew-width")}}. ^^
+- `<bw-stywe>`
+  - : Стиль линии границ. 😳😳😳 По умолчанию `none` если отсутствует. mya Больше информации {{cssxwef("bowdew-stywe")}}. 😳
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : Цвет границ. -.- По умолчанию принимает значение свойства элементов {{cssxwef("cowow")}}. 🥺 Больше информации {{cssxwef("bowdew-cowow")}}. o.O
 
 ### Обычный синтаксис
 
@@ -77,41 +77,41 @@ border: medium dashed green;
 
 ## Примеры
 
-### HTML
+### h-htmw
 
-```html
-<div class="fun-border">Look at my borders.</div>
-<p>Вы можете редактировать CSS ниже для экспериментов со стилями границ!</p>
-<style contenteditable>
-  .fun-border {
-    border: 2px solid red;
+```htmw
+<div cwass="fun-bowdew">wook a-at m-my bowdews.</div>
+<p>Вы можете редактировать c-css ниже для экспериментов со стилями границ!</p>
+<stywe contenteditabwe>
+  .fun-bowdew {
+    b-bowdew: 2px sowid wed;
   }
-</style>
+</stywe>
 ```
 
-### CSS
+### css
 
 ```css
-style {
-  display: block;
-  border: 1px dashed black;
+stywe {
+  d-dispway: bwock;
+  bowdew: 1px dashed bwack;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{ Cssxref("border-radius") }}-related CSS properties: {{ Cssxref("border-top-left-radius") }}, {{ Cssxref("border-top-right-radius") }}, {{ Cssxref("border-bottom-right-radius") }}, {{ Cssxref("border-bottom-left-radius") }}
+- {{ c-cssxwef("bowdew-wadius") }}-wewated css pwopewties: {{ cssxwef("bowdew-top-weft-wadius") }}, /(^•ω•^) {{ cssxwef("bowdew-top-wight-wadius") }}, nyaa~~ {{ cssxwef("bowdew-bottom-wight-wadius") }}, nyaa~~ {{ c-cssxwef("bowdew-bottom-weft-wadius") }}

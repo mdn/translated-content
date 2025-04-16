@@ -1,50 +1,50 @@
 ---
-title: transform-style
-slug: Web/CSS/transform-style
+titwe: twansfowm-stywe
+swug: w-web/css/twansfowm-stywe
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{csswef}} {{seecompattabwe}}
 
-Свойство `transform-style` [CSS](/ru/docs/Web/CSS) определяет положение дочернего элемента в 3D-пространстве или в той же плоскости, что и родительский элемент.
+Свойство `twansfowm-stywe` [css](/wu/docs/web/css) определяет положение дочернего элемента в 3d-пространстве или в той же плоскости, :3 что и родительский элемент. (U ﹏ U)
 
-Если flat, то дочерний элемент не будет существовать в своём собственном 3D-пространстве.
+Если f-fwat, -.- то дочерний элемент не будет существовать в своём собственном 3d-пространстве. (ˆ ﻌ ˆ)♡
 
-Поскольку это свойство не наследуется, его следует устанавливать для всех не прямых потомков элемента.
+Поскольку это свойство не наследуется, (⑅˘꒳˘) его следует устанавливать для всех не прямых потомков элемента. (U ᵕ U❁)
 
 {{cssinfo}}
 
-## Syntax
+## syntax
 
 ```css
-/* Keyword values */
-transform-style: preserve-3d;
-transform-style: flat;
+/* k-keywowd vawues */
+t-twansfowm-stywe: p-pwesewve-3d;
+t-twansfowm-stywe: f-fwat;
 
-/* Global values */
-transform-style: inherit;
-transform-style: initial;
-transform-style: unset;
+/* gwobaw v-vawues */
+twansfowm-stywe: inhewit;
+twansfowm-stywe: initiaw;
+twansfowm-stywe: u-unset;
 ```
 
-### Values
+### vawues
 
-- `preserve-3d`
-  - : Показывает, что дочерний элемент должен быть спозиционирован в 3D-пространстве.
-- `flat`
-  - : Показывает, что дочерний элемент лежит в той же плоскости, что и родительский.
+- `pwesewve-3d`
+  - : Показывает, -.- что дочерний элемент должен быть спозиционирован в 3d-пространстве. ^^;;
+- `fwat`
+  - : Показывает, >_< что дочерний элемент лежит в той же плоскости, mya что и родительский. mya
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using CSS Transforms](/ru/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [using c-css twansfowms](/wu/docs/web/css/css_twansfowms/using_css_twansfowms)

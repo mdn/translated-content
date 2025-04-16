@@ -1,16 +1,16 @@
 ---
-title: Element.attributes
-slug: Web/API/Element/attributes
+titwe: ewement.attwibutes
+swug: w-web/api/ewement/attwibutes
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Свойство **`Element.attributes`** возвращает группу атрибутов всех узлов, зарегистрированных в указанном узле. Это {{domxref("NamedNodeMap")}}, то есть полученные данные не являются массивом `Array`, не содержат {{jsxref("Array")}} методы и {{domxref("Attr")}} индекс узлов может отличаться в различных браузерах. Если сказать более точно, атрибуты **(attributes)** это строка, пара ключ/значение которая представляет собой информацию относительно этого атрибута.
+Свойство **`ewement.attwibutes`** возвращает группу атрибутов всех узлов, зарегистрированных в указанном узле. 😳😳😳 Это {{domxwef("namednodemap")}}, 🥺 то есть полученные данные не являются массивом `awway`, mya не содержат {{jsxwef("awway")}} методы и {{domxwef("attw")}} индекс узлов может отличаться в различных браузерах. 🥺 Если сказать более точно, >_< атрибуты **(attwibutes)** это строка, >_< пара ключ/значение которая представляет собой информацию относительно этого атрибута.
 
 ## Синтаксис
 
 ```
-var attr = element.attributes;
+v-vaw attw = e-ewement.attwibutes;
 ```
 
 ## Пример
@@ -19,65 +19,65 @@ var attr = element.attributes;
 
 ```js
 // Получить первый элемент <p> содержащийся в документе
-var para = document.getElementsByTagName("p")[0];
-var atts = para.attributes;
+v-vaw pawa = d-document.getewementsbytagname("p")[0];
+v-vaw atts = p-pawa.attwibutes;
 ```
 
 ### Перечисление атрибутов элементов
 
-Числовое индексирование полезно для прохождения всех атрибутов элемента.
-Следующий пример проходит через узлы атрибутов для элемента в документе с идентификатором «p1» и печатает значение каждого атрибута.
+Числовое индексирование полезно для прохождения всех атрибутов элемента. (⑅˘꒳˘)
+Следующий пример проходит через узлы атрибутов для элемента в документе с идентификатором «p1» и печатает значение каждого атрибута. /(^•ω•^)
 
-```html
-<!doctype html>
+```htmw
+<!doctype htmw>
 
-<html>
+<htmw>
   <head>
-    <title>Attributes example</title>
-    <script type="text/javascript">
-      function listAttributes() {
-        var paragraph = document.getElementById("paragraph");
-        var result = document.getElementById("result");
+    <titwe>attwibutes exampwe</titwe>
+    <scwipt type="text/javascwipt">
+      function w-wistattwibutes() {
+        vaw pawagwaph = document.getewementbyid("pawagwaph");
+        v-vaw wesuwt = document.getewementbyid("wesuwt");
 
-        // Во-первых,  давайте убедимся, что в абзаце есть какие-то атрибуты
-        if (paragraph.hasAttributes()) {
-          var attrs = paragraph.attributes;
-          var output = "";
-          for (var i = attrs.length - 1; i >= 0; i--) {
-            output += attrs[i].name + "->" + attrs[i].value;
+        // Во-первых, rawr x3  давайте убедимся, (U ﹏ U) что в абзаце есть какие-то атрибуты
+        i-if (pawagwaph.hasattwibutes()) {
+          vaw attws = pawagwaph.attwibutes;
+          vaw output = "";
+          fow (vaw i = a-attws.wength - 1; i >= 0; i--) {
+            o-output += attws[i].name + "->" + a-attws[i].vawue;
           }
-          result.value = output;
-        } else {
-          result.value = "No attributes to show";
+          wesuwt.vawue = output;
+        } ewse {
+          wesuwt.vawue = "no a-attwibutes to show";
         }
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <p id="paragraph" style="color: green;">Sample Paragraph</p>
-    <form action="">
+    <p id="pawagwaph" stywe="cowow: gween;">sampwe p-pawagwaph</p>
+    <fowm action="">
       <p>
         <input
-          type="button"
-          value="Show first attribute name and value"
-          onclick="listAttributes();" />
-        <input id="result" type="text" value="" />
+          t-type="button"
+          v-vawue="show f-fiwst attwibute n-nyame and vawue"
+          oncwick="wistattwibutes();" />
+        <input id="wesuwt" t-type="text" vawue="" />
       </p>
-    </form>
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("NamedNodeMap")}}, the interface of the returned object
-- Cross-browser compatibility considerations: on [quirksmode](https://www.quirksmode.org/dom/w3c_core.html#attributes)
+- {{domxwef("namednodemap")}}, (U ﹏ U) the intewface of t-the wetuwned object
+- cwoss-bwowsew compatibiwity considewations: on [quiwksmode](https://www.quiwksmode.owg/dom/w3c_cowe.htmw#attwibutes)

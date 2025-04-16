@@ -1,131 +1,131 @@
 ---
-title: Node.insertBefore()
-slug: Web/API/Node/insertBefore
+titwe: nyode.insewtbefowe()
+swug: web/api/node/insewtbefowe
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Node.insertBefore()`** 메소드는 참조된 노드 앞에 특정 부모 노드의 자식 노드를 삽입합니다. 만약 주어진 자식 노드가 document에 존재하는 노드를 참조한다면, `insertBefore()` 가 자식 노드를 현재 위치에서 새로운 위치로 옮깁니다. (노드를 다른 노드에 추가하기 전에 상위 노드에서 제거할 필요가 없습니다)
+**`node.insewtbefowe()`** 메소드는 참조된 노드 앞에 특정 부모 노드의 자식 노드를 삽입합니다. 만약 주어진 자식 노드가 d-document에 존재하는 노드를 참조한다면, rawr `insewtbefowe()` 가 자식 노드를 현재 위치에서 새로운 위치로 옮깁니다. (˘ω˘) (노드를 다른 노드에 추가하기 전에 상위 노드에서 제거할 필요가 없습니다)
 
-이것은 노드가 document에 동시에 두 곳에 존재할 수 없다는 것을 의미합니다. 그러므로 노드가 이미 부모를 가지고 있다면, 노드가 제거된 뒤에 새로운 위치에 삽입됩니다. {{domxref("Node.cloneNode()")}} 로 노드를 새로운 부모 아래에 추가하기 전에 복사본을 만들수 있습니다. `cloneNode` 로 만들어진 복사본들은 자동으로 동기화 상태를 유지하지 않는다는 것을 알아두십시오.
+이것은 노드가 d-document에 동시에 두 곳에 존재할 수 없다는 것을 의미합니다. nyaa~~ 그러므로 노드가 이미 부모를 가지고 있다면, UwU 노드가 제거된 뒤에 새로운 위치에 삽입됩니다. :3 {{domxwef("node.cwonenode()")}} 로 노드를 새로운 부모 아래에 추가하기 전에 복사본을 만들수 있습니다. (⑅˘꒳˘) `cwonenode` 로 만들어진 복사본들은 자동으로 동기화 상태를 유지하지 않는다는 것을 알아두십시오. (///ˬ///✿)
 
-만약 참조 노드가 `null` 이라면, 노드는 부모 노드의 자식 노드 리스트 맨 끝에 추가됩니다.
+만약 참조 노드가 `nuww` 이라면, ^^;; 노드는 부모 노드의 자식 노드 리스트 맨 끝에 추가됩니다. >_<
 
-만약 자식 노드가 {{domxref("DocumentFragment")}} 이라면, {{domxref("DocumentFragment")}} 의 콘텐츠 전체는 부모 노드의 자식 리스트로 이동됩니다.
+만약 자식 노드가 {{domxwef("documentfwagment")}} 이라면, rawr x3 {{domxwef("documentfwagment")}} 의 콘텐츠 전체는 부모 노드의 자식 리스트로 이동됩니다.
 
-## Syntax
+## s-syntax
 
 ```js
-var insertedNode = parentNode.insertBefore(newNode, referenceNode);
+vaw i-insewtednode = p-pawentnode.insewtbefowe(newnode, /(^•ω•^) w-wefewencenode);
 ```
 
-`referenceNode` 가 `null` 이라면, `newNode` 가 자식 노드의 리스트의 끝에 삽입됩니다.
+`wefewencenode` 가 `nuww` 이라면, :3 `newnode` 가 자식 노드의 리스트의 끝에 삽입됩니다. (ꈍᴗꈍ)
 
-> **참고:** _`referenceNode`_ 는 **선택 인자가 아닙니다.** — 명시적으로 `Node` 나 `null` 를 전달해야 합니다. 전달하지 않거나 잘못된 값을 전달하면 브라우저 버전에 따라 다른 결과를 얻게 됩니다.
+> **참고:** _`wefewencenode`_ 는 **선택 인자가 아닙니다.** — 명시적으로 `node` 나 `nuww` 를 전달해야 합니다. /(^•ω•^) 전달하지 않거나 잘못된 값을 전달하면 브라우저 버전에 따라 다른 결과를 얻게 됩니다. (⑅˘꒳˘)
 
-## Returns
+## w-wetuwns
 
-반환값은 추가된 자식 노드입니다. 다만 `newNode` 가 {{domxref("DocumentFragment")}} 일 경우, 빈 {{domxref("DocumentFragment")}} 이 반환됩니다.
+반환값은 추가된 자식 노드입니다. ( ͡o ω ͡o ) 다만 `newnode` 가 {{domxwef("documentfwagment")}} 일 경우, òωó 빈 {{domxwef("documentfwagment")}} 이 반환됩니다. (⑅˘꒳˘)
 
-## Example 1
+## e-exampwe 1
 
-```html
-<div id="parentElement">
-  <span id="childElement">foo bar</span>
+```htmw
+<div id="pawentewement">
+  <span id="chiwdewement">foo baw</span>
 </div>
 
-<script>
-  // Create the new node to insert
-  var newNode = document.createElement("span");
+<scwipt>
+  // cweate the nyew nyode to insewt
+  v-vaw nyewnode = document.cweateewement("span");
 
-  // Get a reference to the parent node
-  var parentDiv = document.getElementById("childElement").parentNode;
+  // get a-a wefewence to the pawent nyode
+  v-vaw pawentdiv = document.getewementbyid("chiwdewement").pawentnode;
 
-  // Begin test case [ 1 ] : Exist a childElement --> All working correctly
-  var sp2 = document.getElementById("childElement");
-  parentDiv.insertBefore(newNode, sp2);
-  // End test case [ 1 ]
+  // begin test case [ 1 ] : e-exist a chiwdewement --> aww w-wowking cowwectwy
+  v-vaw sp2 = document.getewementbyid("chiwdewement");
+  pawentdiv.insewtbefowe(newnode, XD sp2);
+  // end test case [ 1 ]
 
-  // Begin test case [ 2 ] : childElement is of Type undefined
-  var sp2 = undefined; // Not exist a node of id "childElement"
-  parentDiv.insertBefore(newNode, sp2); // Implicit dynamic cast to type Node
-  // End test case [ 2 ]
+  // b-begin test case [ 2 ] : chiwdewement is of type undefined
+  vaw sp2 = undefined; // n-not exist a nyode of id "chiwdewement"
+  p-pawentdiv.insewtbefowe(newnode, -.- s-sp2); // i-impwicit dynamic c-cast to type nyode
+  // end test case [ 2 ]
 
-  // Begin test case [ 3 ] : childElement is of Type "undefined" ( string )
-  var sp2 = "undefined"; // Not exist a node of id "childElement"
-  parentDiv.insertBefore(newNode, sp2); // Generate "Type Error: Invalid Argument"
-  // End test case [ 3 ]
-</script>
+  // b-begin test case [ 3 ] : chiwdewement is o-of type "undefined" ( stwing )
+  vaw sp2 = "undefined"; // nyot exist a nyode of id "chiwdewement"
+  p-pawentdiv.insewtbefowe(newnode, :3 sp2); // genewate "type e-ewwow: i-invawid awgument"
+  // e-end test case [ 3 ]
+</scwipt>
 ```
 
-- `insertedNode` The node being inserted, that is `newNode`
-- `parentNode` The parent of the newly inserted node.
-- `newNode` The node to be inserted.
-- `referenceNode` The node before which `newNode` is inserted.
+- `insewtednode` the nyode being insewted, nyaa~~ that is `newnode`
+- `pawentnode` t-the pawent o-of the nyewwy insewted nyode. 😳
+- `newnode` t-the nyode to be i-insewted. (⑅˘꒳˘)
+- `wefewencenode` the n-nyode befowe which `newnode` is i-insewted. nyaa~~
 
-## Example 2
+## exampwe 2
 
-```html
-<div id="parentElement">
-  <span id="childElement">foo bar</span>
+```htmw
+<div id="pawentewement">
+  <span id="chiwdewement">foo b-baw</span>
 </div>
 
-<script>
-  // Create a new, plain <span> element
-  var sp1 = document.createElement("span");
+<scwipt>
+  // cweate a-a nyew, OwO pwain <span> ewement
+  vaw s-sp1 = document.cweateewement("span");
 
-  // Get a reference to the element, before we want to insert the element
-  var sp2 = document.getElementById("childElement");
-  // Get a reference to the parent element
-  var parentDiv = sp2.parentNode;
+  // get a-a wefewence to the ewement, rawr x3 befowe we want to insewt the ewement
+  vaw sp2 = document.getewementbyid("chiwdewement");
+  // get a-a wefewence to t-the pawent ewement
+  vaw pawentdiv = s-sp2.pawentnode;
 
-  // Insert the new element into the DOM before sp2
-  parentDiv.insertBefore(sp1, sp2);
-</script>
+  // i-insewt t-the nyew ewement into the dom befowe sp2
+  pawentdiv.insewtbefowe(sp1, XD sp2);
+</scwipt>
 ```
 
-There is no `insertAfter` method. It can be emulated by combining the `insertBefore` method with [`nextSibling`](/ko/docs/DOM/Node.nextSibling).
+thewe i-is nyo `insewtaftew` method. σωσ it can be emuwated by combining the `insewtbefowe` m-method with [`nextsibwing`](/ko/docs/dom/node.nextsibwing). (U ᵕ U❁)
 
-In the previous example, `sp1` could be inserted after `sp2` using:
+in the pwevious e-exampwe, (U ﹏ U) `sp1` c-couwd be insewted a-aftew `sp2` using:
 
 ```js
-parentDiv.insertBefore(sp1, sp2.nextSibling);
+pawentdiv.insewtbefowe(sp1, :3 s-sp2.nextsibwing);
 ```
 
-If `sp2` does not have a next sibling, then it must be the last child — `sp2.nextSibling` returns `null`, and `sp1` is inserted at the end of the child node list (immediately after `sp2`).
+i-if `sp2` does nyot h-have a nyext s-sibwing, ( ͡o ω ͡o ) then it must be the wast chiwd — `sp2.nextsibwing` w-wetuwns `nuww`, σωσ a-and `sp1` i-is insewted a-at the end of t-the chiwd nyode wist (immediatewy aftew `sp2`).
 
-## Example 3
+## exampwe 3
 
-Insert an element before the first child element, using the [firstChild](/ko/docs/DOM/Node.firstChild) property.
+i-insewt an ewement befowe the fiwst chiwd ewement, >w< using the [fiwstchiwd](/ko/docs/dom/node.fiwstchiwd) pwopewty. 😳😳😳
 
 ```js
-// Get a reference to the element in which we want to insert a new node
-var parentElement = document.getElementById("parentElement");
-// Get a reference to the first child
-var theFirstChild = parentElement.firstChild;
+// get a-a wefewence to the ewement in which we want to insewt a nyew nyode
+v-vaw pawentewement = d-document.getewementbyid("pawentewement");
+// g-get a wefewence to the fiwst c-chiwd
+vaw thefiwstchiwd = pawentewement.fiwstchiwd;
 
-// Create a new element
-var newElement = document.createElement("div");
+// c-cweate a-a nyew ewement
+vaw nyewewement = document.cweateewement("div");
 
-// Insert the new element before the first child
-parentElement.insertBefore(newElement, theFirstChild);
+// insewt the nyew ewement befowe the fiwst chiwd
+p-pawentewement.insewtbefowe(newewement, OwO thefiwstchiwd);
 ```
 
-When the element does not have a first child, then `firstChild` is `null`. The element is still appended to the parent, after the last child. Since the parent element did not have a first child, it did not have a last child either. Consequently, the new element is the only element, after insertion.
+when t-the ewement does nyot have a f-fiwst chiwd, 😳 then `fiwstchiwd` i-is `nuww`. 😳😳😳 the ewement is stiww appended to the p-pawent, aftew the w-wast chiwd. (˘ω˘) since the pawent ewement d-did nyot h-have a fiwst chiwd, ʘwʘ it did nyot have a wast chiwd eithew. ( ͡o ω ͡o ) consequentwy, o.O the nyew e-ewement is the o-onwy ewement, aftew i-insewtion. >w<
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 명세서
 
-{{Specifications}}
+{{specifications}}
 
-## See also
+## see a-awso
 
-- {{domxref("Node.removeChild()")}}
-- {{domxref("Node.replaceChild()")}}
-- {{domxref("Node.appendChild()")}}
-- {{domxref("Node.hasChildNodes()")}}
-- {{domxref("Element.insertAdjacentElement()")}}
-- {{domxref("ParentNode.prepend()")}}
+- {{domxwef("node.wemovechiwd()")}}
+- {{domxwef("node.wepwacechiwd()")}}
+- {{domxwef("node.appendchiwd()")}}
+- {{domxwef("node.haschiwdnodes()")}}
+- {{domxwef("ewement.insewtadjacentewement()")}}
+- {{domxwef("pawentnode.pwepend()")}}

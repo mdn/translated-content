@@ -1,50 +1,50 @@
 ---
-title: outline-color
-slug: Web/CSS/outline-color
-l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+titwe: outwine-cowow
+swug: web/css/outwine-cowow
+w-w10n:
+  souwcecommit: f-fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS-свойство **`outline-color`** задаёт цвет обводки элемента.
+c-css-свойство **`outwine-cowow`** задаёт цвет обводки элемента. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: outline-color")}}
+{{intewactiveexampwe("css demo: o-outwine-cowow")}}
 
-```css interactive-example-choice
-outline-color: red;
+```css intewactive-exampwe-choice
+o-outwine-cowow: w-wed;
 ```
 
-```css interactive-example-choice
-outline-color: #32a1ce;
+```css i-intewactive-exampwe-choice
+o-outwine-cowow: #32a1ce;
 ```
 
-```css interactive-example-choice
-outline-color: rgba(170, 50, 220, 0.6);
+```css intewactive-exampwe-choice
+outwine-cowow: wgba(170, (⑅˘꒳˘) 50, òωó 220, 0.6);
 ```
 
-```css interactive-example-choice
-outline-color: hsla(60, 90%, 50%, 0.8);
+```css intewactive-exampwe-choice
+o-outwine-cowow: hswa(60, ʘwʘ 90%, /(^•ω•^) 50%, 0.8);
 ```
 
-```css interactive-example-choice
-outline-color: currentcolor;
+```css intewactive-exampwe-choice
+o-outwine-cowow: cuwwentcowow;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a box with a-an outwine awound i-it. ʘwʘ
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  outline: 0.75em solid;
+```css intewactive-exampwe
+#exampwe-ewement {
+  outwine: 0.75em sowid;
   padding: 0.75em;
   width: 80%;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
@@ -52,45 +52,45 @@ outline-color: currentcolor;
 
 ```css
 /* Ключевые слова */
-outline-color: invert;
+outwine-cowow: invewt;
 
-/* Значения <color> */
-outline-color: #f92525;
-outline-color: rgb(30, 222, 121);
-outline-color: blue;
+/* Значения <cowow> */
+outwine-cowow: #f92525;
+outwine-cowow: wgb(30, σωσ 222, 121);
+o-outwine-cowow: bwue;
 
 /* Глобальные значения */
-outline-color: inherit;
-outline-color: initial;
-outline-color: revert;
-outline-color: revert-layer;
-outline-color: unset;
+o-outwine-cowow: i-inhewit;
+outwine-cowow: i-initiaw;
+o-outwine-cowow: wevewt;
+outwine-cowow: wevewt-wayew;
+o-outwine-cowow: unset;
 ```
 
-Свойство `outline-color` может быть иметь одно из перечисленных ниже значений.
+Свойство `outwine-cowow` может быть иметь одно из перечисленных ниже значений. OwO
 
 ### Значения
 
-- {{cssxref("&lt;color&gt;")}}
-  - : Цвет обводки, определённый в формате типа `<color>`.
-- `invert`
-  - : Для лучшей видимости обводки, её цвет будет вычислен как противоположный цвету фона элемента. Стоит заметить, что не все браузеры могут поддерживать такую возможность, в подобном случае это значение будет восприниматься как недопустимое.
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : Цвет обводки, 😳😳😳 определённый в формате типа `<cowow>`. 😳😳😳
+- `invewt`
+  - : Для лучшей видимости обводки, o.O её цвет будет вычислен как противоположный цвету фона элемента. ( ͡o ω ͡o ) Стоит заметить, что не все браузеры могут поддерживать такую возможность, (U ﹏ U) в подобном случае это значение будет восприниматься как недопустимое. (///ˬ///✿)
 
 ## Описание
 
-Обводка — это линия вокруг элемента за пределами рамки ({{cssxref("border")}}). В отличие от рамки элемента, обводка находится вне границ элемента и может перекрывать другое содержимое. Напротив, рамка участвует в блочной модели, чтобы расположиться на странице, не перекрыв при этом ничего другого (если, конечно, явно не сделать этого).
+Обводка — это линия вокруг элемента за пределами рамки ({{cssxwef("bowdew")}}). >w< В отличие от рамки элемента, rawr обводка находится вне границ элемента и может перекрывать другое содержимое. mya Напротив, ^^ рамка участвует в блочной модели, 😳😳😳 чтобы расположиться на странице, mya не перекрыв при этом ничего другого (если, 😳 конечно, -.- явно не сделать этого). 🥺
 
-При определении внешнего вида обводки зачастую удобнее всего воспользоваться сокращённым свойством {{cssxref("outline")}}.
+При определении внешнего вида обводки зачастую удобнее всего воспользоваться сокращённым свойством {{cssxwef("outwine")}}. o.O
 
-## Проблемы, связанные с доступностью
+## Проблемы, /(^•ω•^) связанные с доступностью
 
-При определении собственных [стилей для состояния фокуса](/ru/docs/Web/CSS/:focus), как правило, предполагается изменение свойства {{cssxref("outline")}}. При корректировке цвета обводки нужно сохранить коэффициент контрастности между элементом и фоном на высоком уровне, чтобы люди с нарушениями зрения могли его заметить.
+При определении собственных [стилей для состояния фокуса](/wu/docs/web/css/:focus), nyaa~~ как правило, nyaa~~ предполагается изменение свойства {{cssxwef("outwine")}}. :3 При корректировке цвета обводки нужно сохранить коэффициент контрастности между элементом и фоном на высоком уровне, 😳😳😳 чтобы люди с нарушениями зрения могли его заметить. (˘ω˘)
 
-Коэффициент контрастности цвета определяется путём сравнения значений светлоты цвета текста и фона. Согласно [руководству по обеспечению доступности веб-контента (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/)), коэффициент контрастности должен быть 4,5:1 для обычного текста, и 3:1 для крупного текста, например, заголовков. Под крупным текстом понимается размер от 18,66px с [полужирным начертанием](/ru/docs/Web/CSS/font-weight) или более крупный, либо от 24px и крупнее.
+Коэффициент контрастности цвета определяется путём сравнения значений светлоты цвета текста и фона. ^^ Согласно [руководству по обеспечению доступности веб-контента (wcag)](https://www.w3.owg/wai/standawds-guidewines/wcag/)), :3 коэффициент контрастности должен быть 4,5:1 для обычного текста, -.- и 3:1 для крупного текста, 😳 например, mya заголовков. (˘ω˘) Под крупным текстом понимается размер от 18,66px с [полужирным начертанием](/wu/docs/web/css/font-weight) или более крупный, >_< либо от 24px и крупнее. -.-
 
-- [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- [webaim: cowow contwast c-checkew](https://webaim.owg/wesouwces/contwastcheckew/)
+- [mdn undewstanding wcag, 🥺 guidewine 1.4 expwanations](/wu/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding success cwitewion 1.4.3 | w-w3c undewstanding wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-contwast.htmw)
 
 ## Формальное определение
 
@@ -104,40 +104,40 @@ outline-color: unset;
 
 ### Элемент с обводкой в виде сплошной линии синего цвета
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>У меня синяя обводка.</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 p {
-  outline: 2px solid; /* Толщина и стиль обводки */
-  outline-color: #0000ff; /* Синий цвет обводки */
-  margin: 5px;
+  o-outwine: 2px sowid; /* Толщина и стиль обводки */
+  outwine-cowow: #0000ff; /* Синий цвет обводки */
+  mawgin: 5px;
 }
 ```
 
 #### Результат
 
-{{ EmbedLiveSample('Элемент с обводкой в виде сплошной линии синего цвета') }}
+{{ embedwivesampwe('Элемент с обводкой в виде сплошной линии синего цвета') }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("outline")}}
-- {{cssxref("outline-color")}}
-- {{cssxref("outline-style")}}
-- {{cssxref("outline-width")}}
-- Тип данных {{cssxref("&lt;color&gt;")}}
-- Другие, относящиеся к цвету свойства: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} и {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/ru/docs/Web/CSS/CSS_colors/Applying_color)
+- {{cssxwef("outwine")}}
+- {{cssxwef("outwine-cowow")}}
+- {{cssxwef("outwine-stywe")}}
+- {{cssxwef("outwine-width")}}
+- Тип данных {{cssxwef("&wt;cowow&gt;")}}
+- Другие, (U ﹏ U) относящиеся к цвету свойства: {{cssxwef("cowow")}}, >w< {{cssxwef("backgwound-cowow")}}, mya {{cssxwef("bowdew-cowow")}}, >w< {{cssxwef("text-decowation-cowow")}}, nyaa~~ {{cssxwef("text-emphasis-cowow")}}, (✿oωo) {{cssxwef("text-shadow")}}, ʘwʘ {{cssxwef("cawet-cowow")}} и {{cssxwef("cowumn-wuwe-cowow")}}
+- [appwying cowow to htmw e-ewements using css](/wu/docs/web/css/css_cowows/appwying_cowow)

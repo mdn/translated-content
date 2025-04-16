@@ -1,82 +1,82 @@
 ---
-title: writing-mode
-slug: Web/CSS/writing-mode
+titwe: wwiting-mode
+swug: web/css/wwiting-mode
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-## Summary
+## s-summawy
 
-Свойство **`writing-mode`** устанавливает горизонтальное или вертикальное положение текста также как и направление блока.
+Свойство **`wwiting-mode`** устанавливает горизонтальное или вертикальное положение текста также как и направление блока. mya
 
-Свойство определяет направление потока блока, в каком направлении складываются контейнеры уровня блока и направление в котором инлайновый контент находится в родительском блоке. Также свойство `writing-mode` определяет порядок контента блочного уровня.
+Свойство определяет направление потока блока, 😳 в каком направлении складываются контейнеры уровня блока и направление в котором инлайновый контент находится в родительском блоке. -.- Также свойство `wwiting-mode` определяет порядок контента блочного уровня. 🥺
 
 {{cssinfo}}
 
 ## Синтаксис
 
 ```css
-/* Keyword values */
-writing-mode: horizontal-tb;
-writing-mode: horizontal-bt;
-writing-mode: vertical-rl;
-writing-mode: vertical-lr;
+/* k-keywowd vawues */
+w-wwiting-mode: h-howizontaw-tb;
+wwiting-mode: h-howizontaw-bt;
+w-wwiting-mode: v-vewticaw-ww;
+w-wwiting-mode: vewticaw-ww;
 
-/* Global values */
-writing-mode: inherit;
-writing-mode: initial;
-writing-mode: unset;
+/* gwobaw vawues */
+wwiting-mode: inhewit;
+wwiting-mode: i-initiaw;
+wwiting-mode: unset;
 ```
 
 ### Значения
 
-- `horizontal-tb`
-  - : Content flows horizontally from left to right, vertically from top to bottom. The next horizontal line is positioned below the previous line.
-- `horizontal-bt`
-  - : Content flows horizontally from left to right, vertically from bottom to top. The next horizontal line is positioned above the previous line.
-- `vertical-rl`
-  - : Content flows vertically from top to bottom, horizontally from right to left. The next vertical line is positioned to the left of the previous line.
-- `vertical-lr`
-  - : Content flows vertically from top to bottom, horizontally from left to right. The next vertical line is positioned to the right of the previous line.
-- `lr` {{deprecated_inline}}
-  - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb`.
-- `lr-tb` {{deprecated_inline}}
-  - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb`.
-- `rl` {{deprecated_inline}}
-  - : Deprecated except for SVG1 documents. For CSS, use `horizontal-tb`.
-- `tb` {{deprecated_inline}}
-  - : Deprecated except for SVG1 documents. For CSS, use `vertical-rl`.
-- `tb-rl` {{deprecated_inline}}
-  - : Deprecated except for SVG1 documents. For CSS, use `vertical-rl`.
+- `howizontaw-tb`
+  - : c-content fwows howizontawwy f-fwom weft to wight, o.O vewticawwy fwom top to bottom. /(^•ω•^) the next h-howizontaw wine is positioned b-bewow the pwevious w-wine. nyaa~~
+- `howizontaw-bt`
+  - : content fwows howizontawwy fwom weft to wight, nyaa~~ vewticawwy fwom b-bottom to top. :3 the nyext howizontaw wine is positioned above the pwevious wine.
+- `vewticaw-ww`
+  - : c-content fwows vewticawwy f-fwom top to bottom, 😳😳😳 h-howizontawwy f-fwom wight to w-weft. (˘ω˘) the nyext vewticaw wine is positioned to the w-weft of the pwevious wine. ^^
+- `vewticaw-ww`
+  - : content fwows v-vewticawwy fwom top to bottom, :3 howizontawwy fwom weft to wight. -.- the nyext vewticaw wine is positioned t-to the wight of the pwevious w-wine. 😳
+- `ww` {{depwecated_inwine}}
+  - : d-depwecated e-except fow svg1 documents. mya fow css, (˘ω˘) use `howizontaw-tb`. >_<
+- `ww-tb` {{depwecated_inwine}}
+  - : depwecated e-except fow svg1 d-documents. -.- fow css, use `howizontaw-tb`. 🥺
+- `ww` {{depwecated_inwine}}
+  - : depwecated e-except f-fow svg1 documents. (U ﹏ U) fow css, use `howizontaw-tb`. >w<
+- `tb` {{depwecated_inwine}}
+  - : d-depwecated except fow svg1 d-documents. mya fow css, >w< use `vewticaw-ww`. nyaa~~
+- `tb-ww` {{depwecated_inwine}}
+  - : depwecated e-except fow svg1 documents. (✿oωo) f-fow css, ʘwʘ use `vewticaw-ww`. (ˆ ﻌ ˆ)♡
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
 ## Пример
 
-```html
-<p class="exampleText">Example text</p>
+```htmw
+<p cwass="exampwetext">exampwe t-text</p>
 ```
 
 ```css
-.exampleText {
-  writing-mode: vertical-rl;
+.exampwetext {
+  w-wwiting-mode: vewticaw-ww;
 }
 ```
 
-{{EmbedLiveSample("Пример", 100, 160)}}
+{{embedwivesampwe("Пример", 😳😳😳 100, :3 160)}}
 
-## Specification
+## specification
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- SVG [`writing-mode`](/ru/docs/Web/SVG/Attribute/writing-mode) attribute
-- {{Cssxref("direction")}}
-- {{Cssxref("unicode-bidi")}}
+- svg [`wwiting-mode`](/wu/docs/web/svg/attwibute/wwiting-mode) attwibute
+- {{cssxwef("diwection")}}
+- {{cssxwef("unicode-bidi")}}

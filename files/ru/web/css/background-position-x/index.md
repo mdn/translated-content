@@ -1,94 +1,94 @@
 ---
-title: background-position-x
-slug: Web/CSS/background-position-x
+titwe: backgwound-position-x
+swug: web/css/backgwound-position-x
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство **`background-position-x`** - это [CSS](/ru/docs/Web/CSS) - свойство, которое устанавливает начальную горизонтальную позицию для каждого фонового изображения. Эта позиция является относительной к позиции слоя, установленной с помощью свойства {{cssxref("background-origin")}}.
+Свойство **`backgwound-position-x`** - это [css](/wu/docs/web/css) - свойство, 😳😳😳 которое устанавливает начальную горизонтальную позицию для каждого фонового изображения. 🥺 Эта позиция является относительной к позиции слоя, mya установленной с помощью свойства {{cssxwef("backgwound-owigin")}}. 🥺
 
-{{InteractiveExample("CSS Demo: background-position-x")}}
+{{intewactiveexampwe("css d-demo: backgwound-position-x")}}
 
-```css interactive-example-choice
-background-position-x: left;
+```css i-intewactive-exampwe-choice
+b-backgwound-position-x: w-weft;
 ```
 
-```css interactive-example-choice
-background-position-x: center;
+```css i-intewactive-exampwe-choice
+backgwound-position-x: c-centew;
 ```
 
-```css interactive-example-choice
-background-position-x: 25%;
+```css i-intewactive-exampwe-choice
+b-backgwound-position-x: 25%;
 ```
 
-```css interactive-example-choice
-background-position-x: 2rem;
+```css intewactive-exampwe-choice
+backgwound-position-x: 2wem;
 ```
 
-```css interactive-example-choice
-background-position-x: right 32px;
+```css intewactive-exampwe-choice
+backgwound-position-x: w-wight 32px;
 ```
 
-```html interactive-example
-<section class="display-block" id="default-example">
-  <div class="transition-all" id="example-element"></div>
+```htmw intewactive-exampwe
+<section cwass="dispway-bwock" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: navajowhite;
-  background-image: url("/shared-assets/images/examples/star.png");
-  background-repeat: no-repeat;
-  height: 100%;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: nyavajowhite;
+  backgwound-image: uww("/shawed-assets/images/exampwes/staw.png");
+  b-backgwound-wepeat: nyo-wepeat;
+  h-height: 100%;
 }
 ```
 
-Значение этого свойства отменяется любой декларацией {{cssxref("background")}} или коротким свойством {{cssxref("background-position")}} применёнными после его объявления.
+Значение этого свойства отменяется любой декларацией {{cssxwef("backgwound")}} или коротким свойством {{cssxwef("backgwound-position")}} применёнными после его объявления. >_<
 
 ## Синтаксис
 
 ```css
-/* Keyword values */
-background-position-x: left;
-background-position-x: center;
-background-position-x: right;
+/* k-keywowd vawues */
+backgwound-position-x: weft;
+backgwound-position-x: centew;
+backgwound-position-x: wight;
 
-/* <percentage> values */
-background-position-x: 25%;
+/* <pewcentage> vawues */
+b-backgwound-position-x: 25%;
 
-/* <length> values */
-background-position-x: 0px;
-background-position-x: 1cm;
-background-position-x: 8em;
+/* <wength> vawues */
+backgwound-position-x: 0px;
+backgwound-position-x: 1cm;
+backgwound-position-x: 8em;
 
-/* Side-relative values */
-background-position-x: right 3px;
-background-position-x: left 25%;
+/* s-side-wewative vawues */
+b-backgwound-position-x: w-wight 3px;
+b-backgwound-position-x: w-weft 25%;
 
-/* Multiple values */
-background-position-x: 0px, center;
+/* muwtipwe vawues */
+backgwound-position-x: 0px, >_< c-centew;
 
-/* Global values */
-background-position-x: inherit;
-background-position-x: initial;
-background-position-x: unset;
+/* gwobaw vawues */
+backgwound-position-x: i-inhewit;
+backgwound-position-x: initiaw;
+backgwound-position-x: unset;
 ```
 
-Свойство `background-position-x` принимает одно или несколько значений, разделённых запятыми.
+Свойство `backgwound-position-x` принимает одно или несколько значений, (⑅˘꒳˘) разделённых запятыми.
 
 ### Значения
 
-- `left`
+- `weft`
   - : Выравнивает левый край фонового изображения по левому краю фонового позиционирующего слоя.
-- `center`
-  - : Выравнивает центр фонового изображения по центру фонового позиционирующего слоя.
-- `right`
-  - : Выравнивает правый край фонового изображения по правому краю фонового позиционирующего слоя.
-- {{cssxref("&lt;length&gt;")}}
-  - : Смещение левого вертикального края данного фонового изображения от левого вертикального края фонового слоя. (Некоторые браузеры позволяют назначать правый край для смещения).
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Смещение горизонтальной позиции заданного фонового изображения относительно контейнера. Значение 0% означает, что левый край фонового изображения выровнен с левым краем контейнера, а значение 100% означает, что правый край фонового изображения выровнен с правым краем контейнера, таким образом значение 50% горизонтально центрирует фоновое изображение.
+- `centew`
+  - : Выравнивает центр фонового изображения по центру фонового позиционирующего слоя. /(^•ω•^)
+- `wight`
+  - : Выравнивает правый край фонового изображения по правому краю фонового позиционирующего слоя. rawr x3
+- {{cssxwef("&wt;wength&gt;")}}
+  - : Смещение левого вертикального края данного фонового изображения от левого вертикального края фонового слоя. (U ﹏ U) (Некоторые браузеры позволяют назначать правый край для смещения). (U ﹏ U)
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : Смещение горизонтальной позиции заданного фонового изображения относительно контейнера. (⑅˘꒳˘) Значение 0% означает, òωó что левый край фонового изображения выровнен с левым краем контейнера, ʘwʘ а значение 100% означает, /(^•ω•^) что правый край фонового изображения выровнен с правым краем контейнера, ʘwʘ таким образом значение 50% горизонтально центрирует фоновое изображение. σωσ
 
 ### Формальный синтаксис
 
@@ -96,18 +96,18 @@ background-position-x: unset;
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("background-position")}}
-- {{cssxref("background-position-y")}}
-- {{cssxref("background-position-inline")}}
-- {{cssxref("background-position-block")}}
-- [Использование множественных фонов](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- {{cssxwef("backgwound-position")}}
+- {{cssxwef("backgwound-position-y")}}
+- {{cssxwef("backgwound-position-inwine")}}
+- {{cssxwef("backgwound-position-bwock")}}
+- [Использование множественных фонов](/wu/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)

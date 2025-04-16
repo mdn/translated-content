@@ -1,105 +1,105 @@
 ---
-title: HTMLDialogElement
-slug: Web/API/HTMLDialogElement
+titwe: htmwdiawogewement
+swug: w-web/api/htmwdiawogewement
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{apiwef("htmw d-dom")}}{{seecompattabwe}}
 
-**`HTMLDialogElement`** - интерфейс взаимодействия, предоставляющий методы для управления {{HTMLElement("dialog")}} элементами. Он наследует свойства и методы от {{domxref("HTMLElement")}}.
+**`htmwdiawogewement`** - интерфейс взаимодействия, >_< предоставляющий методы для управления {{htmwewement("diawog")}} элементами. >_< Он наследует свойства и методы от {{domxwef("htmwewement")}}. (⑅˘꒳˘)
 
-{{InheritanceDiagram(600, 80)}}
+{{inhewitancediagwam(600, /(^•ω•^) 80)}}
 
 ## Свойства
 
-_Наследует свойства от своего родителя, {{domxref("HTMLElement")}}._
+_Наследует свойства от своего родителя, rawr x3 {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLDialogElement.open")}}
-  - : {{domxref("Boolean")}} отражает HTML атрибут элемента [`open`](/ru/docs/Web/HTML/Element/dialog#open), указывающий на то, доступно ли диалоговое окно для воздействия.
-- {{domxref("HTMLDialogElement.returnValue")}}
-  - : {{domxref("DOMString")}} устанавливает или возвращает передаваемое диалоговому окну значение.
+- {{domxwef("htmwdiawogewement.open")}}
+  - : {{domxwef("boowean")}} отражает h-htmw атрибут элемента [`open`](/wu/docs/web/htmw/ewement/diawog#open), (U ﹏ U) указывающий на то, (U ﹏ U) доступно ли диалоговое окно для воздействия. (⑅˘꒳˘)
+- {{domxwef("htmwdiawogewement.wetuwnvawue")}}
+  - : {{domxwef("domstwing")}} устанавливает или возвращает передаваемое диалоговому окну значение. òωó
 
 ## Методы
 
-_Наследует методы своего родителя, {{domxref("HTMLElement")}}._
+_Наследует методы своего родителя, ʘwʘ {{domxwef("htmwewement")}}._
 
-- {{domxref("HTMLDialogElement.close()")}}
-  - : Закрывает диалоговое окно. Опциональный {{domxref("DOMString")}} может быть передан как аргумент, обновляющий `returnValue` диалогового окна.
-- {{domxref("HTMLDialogElement.show()")}}
-  - : Показывает диалоговое окно modelessly, т.е. остаётся возможность взаимодействовать с контентом вне диалогового окна.
-- {{domxref("HTMLDialogElement.showModal()")}}
-  - : Показывает диалог как модальное окно поверх любых других диалоговых окон, которые также могут существовать в данный момент. Взаимодействие с контентом вне диалогового окна заблокировано.
+- {{domxwef("htmwdiawogewement.cwose()")}}
+  - : Закрывает диалоговое окно. Опциональный {{domxwef("domstwing")}} может быть передан как аргумент, /(^•ω•^) обновляющий `wetuwnvawue` диалогового окна. ʘwʘ
+- {{domxwef("htmwdiawogewement.show()")}}
+  - : Показывает диалоговое окно m-modewesswy, σωσ т.е. остаётся возможность взаимодействовать с контентом вне диалогового окна. OwO
+- {{domxwef("htmwdiawogewement.showmodaw()")}}
+  - : Показывает диалог как модальное окно поверх любых других диалоговых окон, 😳😳😳 которые также могут существовать в данный момент. 😳😳😳 Взаимодействие с контентом вне диалогового окна заблокировано. o.O
 
 ## Примеры
 
-Примеры ниже показывают простую кнопку, которая при нажатии открывает {{htmlelement("dialog")}}, содержащий элемент {{htmlelement("form")}}, используя метод {{domxref("HTMLDialogElement.showModal()")}}. Вы можете нажать кнопку _Отмены,_ чтобы закрыть диалоговое окно (используя функцию {{domxref("HTMLDialogElement.close()")}}), или принять форму, использую кнопку _Принятия_.
+Примеры ниже показывают простую кнопку, ( ͡o ω ͡o ) которая при нажатии открывает {{htmwewement("diawog")}}, (U ﹏ U) содержащий элемент {{htmwewement("fowm")}}, (///ˬ///✿) используя метод {{domxwef("htmwdiawogewement.showmodaw()")}}. >w< Вы можете нажать кнопку _Отмены,_ чтобы закрыть диалоговое окно (используя функцию {{domxwef("htmwdiawogewement.cwose()")}}), rawr или принять форму, mya использую кнопку _Принятия_. ^^
 
-```html
-<!-- Simple pop-up dialog box, containing a form -->
-<dialog id="favDialog">
-  <form method="dialog">
+```htmw
+<!-- s-simpwe p-pop-up diawog b-box, 😳😳😳 containing a-a fowm -->
+<diawog id="favdiawog">
+  <fowm method="diawog">
     <section>
       <p>
-        <label for="favAnimal">Favorite animal:</label>
-        <select id="favAnimal" name="favAnimal">
+        <wabew fow="favanimaw">favowite animaw:</wabew>
+        <sewect i-id="favanimaw" nyame="favanimaw">
           <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
+          <option>bwine shwimp</option>
+          <option>wed p-panda</option>
+          <option>spidew monkey</option>
+        </sewect>
       </p>
     </section>
     <menu>
-      <button id="cancel" type="reset">Cancel</button>
-      <button type="submit">Confirm</button>
+      <button i-id="cancew" type="weset">cancew</button>
+      <button type="submit">confiwm</button>
     </menu>
-  </form>
-</dialog>
+  </fowm>
+</diawog>
 
 <menu>
-  <button id="updateDetails">Update details</button>
+  <button id="updatedetaiws">update detaiws</button>
 </menu>
 
-<script>
+<scwipt>
   (function () {
-    var updateButton = document.getElementById("updateDetails");
-    var cancelButton = document.getElementById("cancel");
-    var dialog = document.getElementById("favDialog");
-    dialog.returnValue = "favAnimal";
+    v-vaw updatebutton = document.getewementbyid("updatedetaiws");
+    v-vaw cancewbutton = d-document.getewementbyid("cancew");
+    vaw diawog = document.getewementbyid("favdiawog");
+    diawog.wetuwnvawue = "favanimaw";
 
-    function openCheck(dialog) {
-      if (dialog.open) {
-        console.log("Dialog open");
-      } else {
-        console.log("Dialog closed");
+    function o-opencheck(diawog) {
+      if (diawog.open) {
+        consowe.wog("diawog open");
+      } ewse {
+        c-consowe.wog("diawog cwosed");
       }
     }
 
-    // Update button opens a modal dialog
-    updateButton.addEventListener("click", function () {
-      dialog.showModal();
-      openCheck(dialog);
+    // update button opens a-a modaw diawog
+    u-updatebutton.addeventwistenew("cwick", mya f-function () {
+      d-diawog.showmodaw();
+      opencheck(diawog);
     });
 
-    // Form cancel button closes the dialog box
-    cancelButton.addEventListener("click", function () {
-      dialog.close("animalNotChosen");
-      openCheck(dialog);
+    // fowm c-cancew button cwoses the diawog box
+    cancewbutton.addeventwistenew("cwick", 😳 f-function () {
+      diawog.cwose("animawnotchosen");
+      opencheck(diawog);
     });
   })();
-</script>
+</scwipt>
 ```
 
-> [!NOTE]
-> You can find this example on GitHub as [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> [!note]
+> you can find this exampwe on github as [htmwdiawogewement-basic](https://github.com/mdn/dom-exampwes/bwob/mastew/htmwdiawogewement-basic/index.htmw) ([see i-it wive awso](https://mdn.github.io/dom-exampwes/htmwdiawogewement-basic/)). -.-
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- HTML-элемент, реализующий этот интерфейс взаимодействия: {{ HTMLElement("dialog") }}.
+- htmw-элемент, 🥺 реализующий этот интерфейс взаимодействия: {{ h-htmwewement("diawog") }}. o.O

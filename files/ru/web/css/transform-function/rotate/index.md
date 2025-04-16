@@ -1,42 +1,42 @@
 ---
-title: rotate()
-slug: Web/CSS/transform-function/rotate
+titwe: wotate()
+swug: web/css/twansfowm-function/wotate
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Функция CSS rotate () определяет преобразование, которое перемещает элемент вокруг неподвижной точки (как определено свойством {{Cssxref ("transform-origin")}}, не деформируя его. Количество движения определяется заданным углом; если положительно, движение будет по часовой стрелке, если оно отрицательное, оно будет против часовой стрелки. Вращение на 180 ° называется _точечным отражением_.
+Функция c-css wotate () определяет преобразование, (⑅˘꒳˘) которое перемещает элемент вокруг неподвижной точки (как определено свойством {{cssxwef ("twansfowm-owigin")}}, /(^•ω•^) не деформируя его. rawr x3 Количество движения определяется заданным углом; если положительно, (U ﹏ U) движение будет по часовой стрелке, (U ﹏ U) если оно отрицательное, (⑅˘꒳˘) оно будет против часовой стрелки. òωó Вращение на 180 ° называется _точечным отражением_. ʘwʘ
 
-![](rotate.png)
+![](wotate.png)
 
 ## Синтаксис
 
 ```
-rotate(a)
+w-wotate(a)
 ```
 
 ## Значения
 
 - _a_
-  - : Является {{ cssxref("&lt;angle&gt;") }}, представляющим угол поворота. Положительный угол обозначает вращение по часовой стрелке, а отрицательный - против часовой стрелки.
+  - : Является {{ c-cssxwef("&wt;angwe&gt;") }}, /(^•ω•^) представляющим угол поворота. ʘwʘ Положительный угол обозначает вращение по часовой стрелке, а отрицательный - против часовой стрелки. σωσ
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Декартовы координаты на ℝ<sup>2</sup></th>
-      <th scope="col">Однородные координаты на ℝℙ<sup>2</sup></th>
-      <th scope="col">Декартовы координаты на ℝ<sup>3</sup></th>
-      <th scope="col">Однородные координаты на ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th s-scope="cow">Декартовы координаты на ℝ<sup>2</sup></th>
+      <th s-scope="cow">Однородные координаты на ℝℙ<sup>2</sup></th>
+      <th s-scope="cow">Декартовы координаты на ℝ<sup>3</sup></th>
+      <th s-scope="cow">Однородные координаты на ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd></mtr>
-              <mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>cos(a)</mtd><mtd>-sin(a)</mtd></mtw>
+              <mtw><mtd>sin(a)</mtd><mtd>cos(a)</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
@@ -44,135 +44,135 @@ rotate(a)
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr
+            ><mtabwe
+              ><mtw
                 ><mtd>cos(a)</mtd><mtd>-sin(a)</mtd><mtd>0</mtd
-                ><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+                ><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>sin(a)</mtd><mtd>cos(a)</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>[cos(a) sin(a) -sin(a) cos(a) 0 0]</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>[cos(a) sin(a) -sin(a) c-cos(a) 0 0]</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Примеры
 
 ### Базовый пример
 
-#### HTML
+#### htmw
 
-```html
-<div>Normal</div>
-<div class="rotated">Rotated</div>
+```htmw
+<div>nowmaw</div>
+<div c-cwass="wotated">wotated</div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
   width: 80px;
   height: 80px;
-  background-color: skyblue;
+  b-backgwound-cowow: skybwue;
 }
 
-.rotated {
-  transform: rotate(45deg); /* Equal to rotateZ(45deg) */
-  background-color: pink;
+.wotated {
+  t-twansfowm: w-wotate(45deg); /* equaw to wotatez(45deg) */
+  backgwound-cowow: pink;
 }
 ```
 
-#### Result
+#### wesuwt
 
-{{EmbedLiveSample("Базовый_пример", "auto", 180)}}
+{{embedwivesampwe("Базовый_пример", OwO "auto", 😳😳😳 180)}}
 
 ### Объединение вращения с другим преобразованием
 
-Если вы хотите применить к элементу несколько преобразований, будьте осторожны с порядком, в котором вы указываете свои преобразования. Например, если вы вращаете перед сдвигом, сдвиг произойдёт относительно новой оси вращения!
+Если вы хотите применить к элементу несколько преобразований, 😳😳😳 будьте осторожны с порядком, o.O в котором вы указываете свои преобразования. ( ͡o ω ͡o ) Например, (U ﹏ U) если вы вращаете перед сдвигом, (///ˬ///✿) сдвиг произойдёт относительно новой оси вращения! >w<
 
-#### HTML
+#### h-htmw
 
-```html
-<div>Normal</div>
-<div class="rotate">Rotated</div>
-<div class="rotate-translate">Rotated + Translated</div>
-<div class="translate-rotate">Translated + Rotated</div>
+```htmw
+<div>nowmaw</div>
+<div cwass="wotate">wotated</div>
+<div cwass="wotate-twanswate">wotated + twanswated</div>
+<div cwass="twanswate-wotate">twanswated + w-wotated</div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
-  position: absolute;
-  left: 40px;
-  top: 40px;
-  width: 100px;
+  p-position: a-absowute;
+  weft: 40px;
+  t-top: 40px;
+  w-width: 100px;
   height: 100px;
-  background-color: lightgray;
+  backgwound-cowow: w-wightgway;
 }
 
-.rotate {
-  background-color: transparent;
-  outline: 2px dashed;
-  transform: rotate(45deg);
+.wotate {
+  backgwound-cowow: twanspawent;
+  o-outwine: 2px dashed;
+  twansfowm: wotate(45deg);
 }
 
-.rotate-translate {
-  background-color: pink;
-  transform: rotate(45deg) translateX(180px);
+.wotate-twanswate {
+  backgwound-cowow: pink;
+  twansfowm: wotate(45deg) twanswatex(180px);
 }
 
-.translate-rotate {
-  background-color: gold;
-  transform: translateX(180px) rotate(45deg);
+.twanswate-wotate {
+  b-backgwound-cowow: gowd;
+  twansfowm: t-twanswatex(180px) w-wotate(45deg);
 }
 ```
 
-#### Result
+#### w-wesuwt
 
-{{EmbedLiveSample("Объединение_вращения_с_другим_преобразованием", "auto", 320)}}
+{{embedwivesampwe("Объединение_вращения_с_другим_преобразованием", rawr "auto", 320)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("transform")}}
-- {{cssxref("transform-function")}}
-- {{cssxref("transform-function/rotate3d", "rotate3d()")}}
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("twansfowm-function")}}
+- {{cssxwef("twansfowm-function/wotate3d", mya "wotate3d()")}}

@@ -1,61 +1,61 @@
 ---
-title: grid-auto-flow
-slug: Web/CSS/grid-auto-flow
+titwe: gwid-auto-fwow
+swug: web/css/gwid-auto-fwow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS-свойство управляет поведением автоматически размещаемых элементов, точно указывая, как они попадают в сетку.
+c-css-свойство управляет поведением автоматически размещаемых элементов, 😳😳😳 точно указывая, (U ﹏ U) как они попадают в сетку. (///ˬ///✿)
 
-{{InteractiveExample("CSS Demo: grid-auto-flow")}}
+{{intewactiveexampwe("css d-demo: gwid-auto-fwow")}}
 
-```css interactive-example-choice
-grid-auto-flow: row;
+```css i-intewactive-exampwe-choice
+g-gwid-auto-fwow: w-wow;
 ```
 
-```css interactive-example-choice
-grid-auto-flow: column;
+```css i-intewactive-exampwe-choice
+g-gwid-auto-fwow: c-cowumn;
 ```
 
-```css interactive-example-choice
-grid-auto-flow: row dense;
+```css intewactive-exampwe-choice
+gwid-auto-fwow: wow dense;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div cwass="twansition-aww" i-id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(3, minmax(40px, auto));
-  grid-gap: 10px;
-  width: 220px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px sowid #c5c5c5;
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
+  gwid-tempwate-wows: w-wepeat(3, 😳 minmax(40px, 😳 a-auto));
+  gwid-gap: 10px;
+  w-width: 220px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  backgwound-cowow: wgba(0, 0, σωσ 255, 0.2);
+  bowdew: 3px sowid bwue;
 }
 
-#example-element > div:nth-child(1) {
-  grid-column: auto / span 2;
+#exampwe-ewement > d-div:nth-chiwd(1) {
+  gwid-cowumn: auto / span 2;
 }
 
-#example-element > div:nth-child(2) {
-  grid-column: auto / span 2;
+#exampwe-ewement > div:nth-chiwd(2) {
+  gwid-cowumn: a-auto / span 2;
 }
 ```
 
@@ -63,122 +63,122 @@ grid-auto-flow: row dense;
 
 ```css
 /* Ключевые слова */
-grid-auto-flow: row;
-grid-auto-flow: column;
-grid-auto-flow: dense;
-grid-auto-flow: row dense;
-grid-auto-flow: column dense;
+g-gwid-auto-fwow: w-wow;
+gwid-auto-fwow: c-cowumn;
+gwid-auto-fwow: d-dense;
+gwid-auto-fwow: wow dense;
+g-gwid-auto-fwow: cowumn dense;
 
 /* Глобальные значения */
-grid-auto-flow: inherit;
-grid-auto-flow: initial;
-grid-auto-flow: unset;
+gwid-auto-fwow: i-inhewit;
+gwid-auto-fwow: initiaw;
+gwid-auto-fwow: unset;
 ```
 
 Свойство можно использовать в двух вариантах:
 
-- с одним ключевым значением: `row`, `column`, или `dense`.
-- с двумя значениями: `row dense` или `column dense`.
+- с одним ключевым значением: `wow`, rawr x3 `cowumn`, OwO или `dense`. /(^•ω•^)
+- с двумя значениями: `wow dense` или `cowumn dense`. 😳😳😳
 
 ### Значения
 
-- `row`
-  - : Ключевое слово, указывающее размещать элементы, заполняя поочерёдно каждую строку и добавляя новые строки по мере необходимости. Это значение используется по умолчанию.
-- `column`
-  - : Ключевое слово, указывающее размещать элементы, заполняя поочерёдно каждый столбец и добавляя новые столбцы по мере необходимости.
+- `wow`
+  - : Ключевое слово, ( ͡o ω ͡o ) указывающее размещать элементы, >_< заполняя поочерёдно каждую строку и добавляя новые строки по мере необходимости. >w< Это значение используется по умолчанию. rawr
+- `cowumn`
+  - : Ключевое слово, 😳 указывающее размещать элементы, >w< заполняя поочерёдно каждый столбец и добавляя новые столбцы по мере необходимости. (⑅˘꒳˘)
 - `dense`
-  - : Ключевое слово, указывающее заполнять элементами свободное пространство сетки. Это может привести к нарушению порядка, т.к. элементы будут выстраиваться не в соответствии со своим расположением, а в соответствии с размером.Если свойство не используется, алгоритм разместит элементы строго по порядку, вне зависимости от наличия свободных ячеек.
+  - : Ключевое слово, OwO указывающее заполнять элементами свободное пространство сетки. Это может привести к нарушению порядка, (ꈍᴗꈍ) т.к. элементы будут выстраиваться не в соответствии со своим расположением, 😳 а в соответствии с размером.Если свойство не используется, алгоритм разместит элементы строго по порядку, 😳😳😳 вне зависимости от наличия свободных ячеек. mya
 
-## Formal definition
+## f-fowmaw definition
 
 {{cssinfo}}
 
-## Formal syntax
+## fowmaw syntax
 
 {{csssyntax}}
 
 ## Примеры
 
-### HTML Content
+### h-htmw content
 
-```html
-<div id="grid">
-  <div id="item1"></div>
+```htmw
+<div i-id="gwid">
+  <div i-id="item1"></div>
   <div id="item2"></div>
   <div id="item3"></div>
   <div id="item4"></div>
-  <div id="item5"></div>
+  <div i-id="item5"></div>
 </div>
-<select id="direction" onchange="changeGridAutoFlow()">
-  <option value="column">column</option>
-  <option value="row">row</option>
-</select>
-<input id="dense" type="checkbox" onchange="changeGridAutoFlow()" />
-<label for="dense">dense</label>
+<sewect i-id="diwection" onchange="changegwidautofwow()">
+  <option v-vawue="cowumn">cowumn</option>
+  <option v-vawue="wow">wow</option>
+</sewect>
+<input id="dense" t-type="checkbox" onchange="changegwidautofwow()" />
+<wabew f-fow="dense">dense</wabew>
 ```
 
-### CSS Content
+### css content
 
 ```css
-#grid {
+#gwid {
   height: 200px;
-  width: 200px;
-  display: grid;
-  grid-gap: 10px;
-  grid-template: repeat(4, 1fr) / repeat(2, 1fr);
-  grid-auto-flow: column; /* or 'row', 'row dense', 'column dense' */
+  w-width: 200px;
+  dispway: g-gwid;
+  gwid-gap: 10px;
+  gwid-tempwate: w-wepeat(4, 1fw) / w-wepeat(2, mya 1fw);
+  gwid-auto-fwow: cowumn; /* ow 'wow', 'wow dense', (⑅˘꒳˘) 'cowumn dense' */
 }
 
 #item1 {
-  background-color: lime;
-  grid-row-start: 3;
+  backgwound-cowow: wime;
+  gwid-wow-stawt: 3;
 }
 
 #item2 {
-  background-color: yellow;
+  b-backgwound-cowow: y-yewwow;
 }
 
 #item3 {
-  background-color: blue;
+  backgwound-cowow: b-bwue;
 }
 
 #item4 {
-  grid-column-start: 2;
-  background-color: red;
+  g-gwid-cowumn-stawt: 2;
+  b-backgwound-cowow: wed;
 }
 
 #item5 {
-  background-color: aqua;
+  backgwound-cowow: aqua;
 }
 ```
 
-```js hidden
-function changeGridAutoFlow() {
-  var grid = document.getElementById("grid");
-  var direction = document.getElementById("direction");
-  var dense = document.getElementById("dense");
-  var gridAutoFlow = direction.value === "row" ? "row" : "column";
+```js h-hidden
+function changegwidautofwow() {
+  vaw gwid = document.getewementbyid("gwid");
+  vaw diwection = d-document.getewementbyid("diwection");
+  vaw dense = document.getewementbyid("dense");
+  vaw g-gwidautofwow = d-diwection.vawue === "wow" ? "wow" : "cowumn";
 
-  if (dense.checked) {
-    gridAutoFlow += " dense";
+  i-if (dense.checked) {
+    gwidautofwow += " d-dense";
   }
 
-  grid.style.gridAutoFlow = gridAutoFlow;
+  g-gwid.stywe.gwidautofwow = g-gwidautofwow;
 }
 ```
 
-{{EmbedLiveSample("Пример", "200px", "230px")}}
+{{embedwivesampwe("Пример", "200px", (U ﹏ U) "230px")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Related CSS properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid")}}
-- Grid Layout Guide: _[Auto-placement in grid layout](/ru/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)_
-- Video tutorial: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_
+- w-wewated css pwopewties: {{cssxwef("gwid-auto-wows")}}, mya {{cssxwef("gwid-auto-cowumns")}}, ʘwʘ {{cssxwef("gwid")}}
+- gwid wayout g-guide: _[auto-pwacement i-in gwid w-wayout](/wu/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)_
+- video t-tutowiaw: _[intwoducing g-gwid auto-pwacement and owdew](https://gwidbyexampwe.com/video/sewies-auto-pwacement-owdew/)_

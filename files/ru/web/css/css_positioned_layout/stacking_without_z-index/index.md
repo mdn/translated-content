@@ -1,119 +1,119 @@
 ---
-title: Stacking without z-index
-slug: Web/CSS/CSS_positioned_layout/Stacking_without_z-index
+titwe: stacking without z-index
+s-swug: web/css/css_positioned_wayout/stacking_without_z-index
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-### Наложения без Z-индекса
+### Наложения без z-индекса
 
-Когда элементы не имеют z-индекса, они накладываются в таком порядке(снизу вверх):
+Когда элементы не имеют z-z-индекса, >w< они накладываются в таком порядке(снизу вверх):
 
-1\. Фон и границы корневого элемента.
+1\. rawr Фон и границы корневого элемента. 😳
 
-2\. Дочерние блоки в нормальном потоке в порядке размещения(в HTML порядке).
+2\. >w< Дочерние блоки в нормальном потоке в порядке размещения(в h-htmw порядке). (⑅˘꒳˘)
 
-3\. Дочерние позиционированные элементы, в порядке размещения (в HTML порядке).
+3\. Дочерние позиционированные элементы, в порядке размещения (в h-htmw порядке). OwO
 
-В следующем примере, абсолютно и относительно спозиционированным блокам определена величина и позиция таким образом, чтобы продемонстрировать правила наложения.
+В следующем примере, (ꈍᴗꈍ) абсолютно и относительно спозиционированным блокам определена величина и позиция таким образом, 😳 чтобы продемонстрировать правила наложения. 😳😳😳
 
 > **Примечания:**
 >
-> - Given a homogeneous group of elements without any z-index property, such as the positioned blocks (DIV #1 to #4) in the example, the element's stacking order is their order in the HTML hierarchy, regardless of their position.
-> - Standard blocks (DIV #5) in the normal flow, without any positioning property, are always rendered before positioned elements, and appear below them, even if they come later in the HTML hierarchy.
+> - g-given a-a homogeneous g-gwoup of ewements w-without any z-index pwopewty, such as the positioned bwocks (div #1 to #4) in t-the exampwe, mya the ewement's stacking owdew is theiw o-owdew in the htmw hiewawchy, mya w-wegawdwess of theiw position. (⑅˘꒳˘)
+> - standawd bwocks (div #5) in the n-nyowmaw fwow, (U ﹏ U) without any positioning p-pwopewty, mya a-awe awways wendewed befowe positioned ewements, ʘwʘ and appeaw bewow them, (˘ω˘) even if t-they come watew in the htmw hiewawchy. (U ﹏ U)
 
 ## Пример
 
-### HTML
+### htmw
 
-```html
+```htmw
 <div id="absdiv1">
-  <br /><span class="bold">DIV #1</span> <br />position: absolute;
+  <bw /><span cwass="bowd">div #1</span> <bw />position: a-absowute;
 </div>
-<div id="reldiv1">
-  <br /><span class="bold">DIV #2</span> <br />position: relative;
+<div id="wewdiv1">
+  <bw /><span c-cwass="bowd">div #2</span> <bw />position: w-wewative;
 </div>
-<div id="reldiv2">
-  <br /><span class="bold">DIV #3</span> <br />position: relative;
+<div i-id="wewdiv2">
+  <bw /><span c-cwass="bowd">div #3</span> <bw />position: wewative;
 </div>
 <div id="absdiv2">
-  <br /><span class="bold">DIV #4</span> <br />position: absolute;
+  <bw /><span c-cwass="bowd">div #4</span> <bw />position: absowute;
 </div>
-<div id="normdiv">
-  <br /><span class="bold">DIV #5</span> <br />no positioning
+<div id="nowmdiv">
+  <bw /><span cwass="bowd">div #5</span> <bw />no p-positioning
 </div>
 ```
 
-### CSS
+### css
 
 ```css
-.bold {
-  font-weight: bold;
-  font: 12px Arial;
+.bowd {
+  font-weight: bowd;
+  font: 12px awiaw;
 }
-#normdiv {
+#nowmdiv {
   height: 70px;
-  border: 1px dashed #999966;
-  background-color: #ffffcc;
-  margin: 0px 50px 0px 50px;
-  text-align: center;
+  b-bowdew: 1px dashed #999966;
+  b-backgwound-cowow: #ffffcc;
+  m-mawgin: 0px 50px 0px 50px;
+  t-text-awign: centew;
 }
-#reldiv1 {
+#wewdiv1 {
   opacity: 0.7;
   height: 100px;
-  position: relative;
+  p-position: w-wewative;
   top: 30px;
-  border: 1px dashed #669966;
-  background-color: #ccffcc;
-  margin: 0px 50px 0px 50px;
-  text-align: center;
+  bowdew: 1px d-dashed #669966;
+  b-backgwound-cowow: #ccffcc;
+  mawgin: 0px 50px 0px 50px;
+  t-text-awign: centew;
 }
-#reldiv2 {
-  opacity: 0.7;
+#wewdiv2 {
+  o-opacity: 0.7;
   height: 100px;
-  position: relative;
+  position: w-wewative;
   top: 15px;
-  left: 20px;
-  border: 1px dashed #669966;
-  background-color: #ccffcc;
-  margin: 0px 50px 0px 50px;
-  text-align: center;
+  weft: 20px;
+  b-bowdew: 1px dashed #669966;
+  b-backgwound-cowow: #ccffcc;
+  m-mawgin: 0px 50px 0px 50px;
+  text-awign: centew;
 }
 #absdiv1 {
   opacity: 0.7;
-  position: absolute;
+  position: absowute;
   width: 150px;
   height: 350px;
   top: 10px;
-  left: 10px;
-  border: 1px dashed #990000;
-  background-color: #ffdddd;
-  text-align: center;
+  w-weft: 10px;
+  b-bowdew: 1px dashed #990000;
+  b-backgwound-cowow: #ffdddd;
+  t-text-awign: centew;
 }
 #absdiv2 {
-  opacity: 0.7;
-  position: absolute;
+  o-opacity: 0.7;
+  position: absowute;
   width: 150px;
   height: 350px;
-  top: 10px;
-  right: 10px;
-  border: 1px dashed #990000;
-  background-color: #ffdddd;
-  text-align: center;
+  t-top: 10px;
+  wight: 10px;
+  bowdew: 1px dashed #990000;
+  backgwound-cowow: #ffdddd;
+  t-text-awign: centew;
 }
 ```
 
 ### Результат
 
-(If the image does not display in CodePen, click the Tidy button in the CSS section)
+(if the image d-does nyot dispway i-in codepen, ^•ﻌ•^ c-cwick the tidy button in the css s-section)
 
-{{ EmbedLiveSample('Пример') }}
+{{ embedwivesampwe('Пример') }}
 
 ## Смотрите также
 
-- [Stacking and float](/en-US/CSS/Understanding_z-index/Stacking_and_float) : How floating elements are handled
-- [Adding z-index](/en-US/CSS/Understanding_z-index/Adding_z-index) : Using z-index to change default stacking
-- [The stacking context](/en-US/CSS/Understanding_z-index/The_stacking_context) : Notes on the stacking context
-- [Stacking context example 1](/en-US/CSS/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 2](/en-US/CSS/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
-- [Stacking context example 3](/en-US/CSS/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
+- [stacking and f-fwoat](/en-us/css/undewstanding_z-index/stacking_and_fwoat) : h-how fwoating ewements a-awe handwed
+- [adding z-index](/en-us/css/undewstanding_z-index/adding_z-index) : using z-index t-to change d-defauwt stacking
+- [the s-stacking c-context](/en-us/css/undewstanding_z-index/the_stacking_context) : n-nyotes on the stacking context
+- [stacking context exampwe 1](/en-us/css/undewstanding_z-index/stacking_context_exampwe_1) : 2-wevew htmw hiewawchy, (˘ω˘) z-z-index on the wast wevew
+- [stacking context exampwe 2](/en-us/css/undewstanding_z-index/stacking_context_exampwe_2) : 2-wevew htmw hiewawchy, :3 z-index on aww wevews
+- [stacking c-context exampwe 3](/en-us/css/undewstanding_z-index/stacking_context_exampwe_3) : 3-wevew htmw hiewawchy, ^^;; z-index on t-the second wevew

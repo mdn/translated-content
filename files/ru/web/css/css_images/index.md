@@ -1,41 +1,41 @@
 ---
-title: CSS Images
-slug: Web/CSS/CSS_images
+titwe: css images
+swug: web/css/css_images
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Images** - модуль в CSS, который определяет, какие типы изображений можно использовать (тип {{cssxref("&lt;image&gt;")}}, содержащий URL, градиенты и другие типы изображений), как изменять их размер и как они, и другие замещённые элементы, взаимодействуют с другими моделями макетов.
+**css i-images** - модуль в c-css, o.O который определяет, (U ᵕ U❁) какие типы изображений можно использовать (тип {{cssxwef("&wt;image&gt;")}}, (⑅˘꒳˘) содержащий u-uww, ( ͡o ω ͡o ) градиенты и другие типы изображений), UwU как изменять их размер и как они, и другие замещённые элементы, rawr x3 взаимодействуют с другими моделями макетов. rawr
 
 ## Справка
 
 ### Свойства
 
-- {{cssxref("image-orientation")}}
-- {{cssxref("image-rendering")}}
-- {{cssxref("object-fit")}}
-- {{cssxref("object-position")}}
+- {{cssxwef("image-owientation")}}
+- {{cssxwef("image-wendewing")}}
+- {{cssxwef("object-fit")}}
+- {{cssxwef("object-position")}}
 
 ### Функции
 
-- {{cssxref("linear-gradient", "linear-gradient()")}}
-- {{cssxref("radial-gradient", "radial-gradient()")}}
-- {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}
-- {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}
-- {{cssxref("element", "element()")}}
+- {{cssxwef("wineaw-gwadient", σωσ "wineaw-gwadient()")}}
+- {{cssxwef("wadiaw-gwadient", σωσ "wadiaw-gwadient()")}}
+- {{cssxwef("wepeating-wineaw-gwadient", >_< "wepeating-wineaw-gwadient()")}}
+- {{cssxwef("wepeating-wadiaw-gwadient", :3 "wepeating-wadiaw-gwadient()")}}
+- {{cssxwef("ewement", "ewement()")}}
 
 ### Типы данных
 
-- {{cssxref("&lt;image&gt;")}}
-- {{cssxref("&lt;uri&gt;")}}
+- {{cssxwef("&wt;image&gt;")}}
+- {{cssxwef("&wt;uwi&gt;")}}
 
 ## Руководства
 
-- [Использование CSS градиентов](/ru/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-  - : Представляют собой особый тип CSS изображений, _градиенты_, как создавать и использовать их.
-- [Создание спрайтов в CSS](/ru/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS)
-  - : Описывает общую технику группировки нескольких изображений в один документ, чтобы сократить количество запросов и скорость загрузки страницы.
+- [Использование c-css градиентов](/wu/docs/web/css/css_images/using_css_gwadients)
+  - : Представляют собой особый тип c-css изображений, (U ﹏ U) _градиенты_, как создавать и использовать их. -.-
+- [Создание спрайтов в c-css](/wu/docs/web/css/css_images/impwementing_image_spwites_in_css)
+  - : Описывает общую технику группировки нескольких изображений в один документ, (ˆ ﻌ ˆ)♡ чтобы сократить количество запросов и скорость загрузки страницы. (⑅˘꒳˘)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}

@@ -1,32 +1,32 @@
 ---
-title: CSS Text
-slug: Web/CSS/CSS_text
+titwe: css text
+swug: web/css/css_text
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Text** – модуль в CSS, который определяет, как совершать манипуляции с текстом, такие как разрыв строки, выравнивание, переносы и преобразование текста.
+**css t-text** – модуль в c-css, ^•ﻌ•^ который определяет, OwO как совершать манипуляции с текстом, 🥺 такие как разрыв строки, òωó выравнивание, o.O переносы и преобразование текста. (U ᵕ U❁)
 
 ## Справка
 
 ### Свойства
 
-- {{cssxref("hanging-punctuation")}}
-- {{cssxref("hyphens")}}
-- {{cssxref("letter-spacing")}}
-- {{cssxref("line-break")}}
-- {{cssxref("overflow-wrap")}}
-- {{cssxref("tab-size")}}
-- {{cssxref("text-align")}}
-- {{cssxref("text-align-last")}}
-- {{cssxref("text-indent")}}
-- {{cssxref("text-justify")}}
-- {{cssxref("text-size-adjust")}}
-- {{cssxref("text-transform")}}
-- {{cssxref("white-space")}}
-- {{cssxref("word-break")}}
-- {{cssxref("word-spacing")}}
+- {{cssxwef("hanging-punctuation")}}
+- {{cssxwef("hyphens")}}
+- {{cssxwef("wettew-spacing")}}
+- {{cssxwef("wine-bweak")}}
+- {{cssxwef("ovewfwow-wwap")}}
+- {{cssxwef("tab-size")}}
+- {{cssxwef("text-awign")}}
+- {{cssxwef("text-awign-wast")}}
+- {{cssxwef("text-indent")}}
+- {{cssxwef("text-justify")}}
+- {{cssxwef("text-size-adjust")}}
+- {{cssxwef("text-twansfowm")}}
+- {{cssxwef("white-space")}}
+- {{cssxwef("wowd-bweak")}}
+- {{cssxwef("wowd-spacing")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}

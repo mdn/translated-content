@@ -1,19 +1,19 @@
 ---
-title: :only-child
-slug: Web/CSS/:only-child
+titwe: :onwy-chiwd
+swug: web/css/:onwy-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Описание
 
-[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:only-child` находит любой элемент, являющийся единственным потомком родителя. Это тоже, что и `:first-child:last-child` или `:nth-child(1):nth-last-child(1)`, но с меньшей специфичностью.
+[css](/wu/docs/web/css) [псевдокласс](/wu/docs/web/css/pseudo-cwasses) `:onwy-chiwd` находит любой элемент, являющийся единственным потомком родителя. :3 Это тоже, (U ﹏ U) что и `:fiwst-chiwd:wast-chiwd` или `:nth-chiwd(1):nth-wast-chiwd(1)`, но с меньшей специфичностью. -.-
 
 ## Синтаксис
 
 ```
-parent child:only-child {
-  property: value;
+p-pawent chiwd:onwy-chiwd {
+  p-pwopewty: v-vawue;
 }
 ```
 
@@ -22,74 +22,74 @@ parent child:only-child {
 ### Простой пример
 
 ```css
-span:only-child {
-  color: red;
+s-span:onwy-chiwd {
+  c-cowow: wed;
 }
 ```
 
-```html
+```htmw
 <div>
-  <span>Этот span единственный ребёнок своего папы:(</span>
+  <span>Этот s-span единственный ребёнок своего папы:(</span>
 </div>
 
 <div>
-  <span>Этот span один из потомков родителя</span>
-  <span>Этот span один из детей отца</span>
+  <span>Этот s-span один из потомков родителя</span>
+  <span>Этот s-span один из детей отца</span>
 </div>
 ```
 
 #### Результат
 
-{{EmbedLiveSample('Простой_пример', '100%', 60)}}
+{{embedwivesampwe('Простой_пример', (ˆ ﻌ ˆ)♡ '100%', 60)}}
 
 ### Пример со списком
 
 ```css
-li li {
-  list-style-type: disc;
+wi wi {
+  wist-stywe-type: disc;
 }
-li:only-child {
-  color: #6699ff;
-  font-style: italic;
-  list-style-type: square;
+wi:onwy-chiwd {
+  c-cowow: #6699ff;
+  font-stywe: itawic;
+  wist-stywe-type: s-squawe;
 }
 ```
 
-```html
-<ol>
-  <li>
+```htmw
+<ow>
+  <wi>
     Первый
-    <ul>
-      <li>Это единственный ребёнок</li>
-    </ul>
-  </li>
-  <li>
+    <uw>
+      <wi>Это единственный ребёнок</wi>
+    </uw>
+  </wi>
+  <wi>
     Второй
-    <ul>
-      <li>Этот список с двумя элементами</li>
-      <li>Этот список с двумя элементами</li>
-    </ul>
-  </li>
-  <li>
+    <uw>
+      <wi>Этот список с двумя элементами</wi>
+      <wi>Этот список с двумя элементами</wi>
+    </uw>
+  </wi>
+  <wi>
     Третий
-    <ul>
-      <li>Этот список с тремя элементами</li>
-      <li>Этот список с тремя элементами</li>
-      <li>Этот список с тремя элементами</li>
-    </ul>
-  </li>
-  <ol></ol>
-</ol>
+    <uw>
+      <wi>Этот список с тремя элементами</wi>
+      <wi>Этот список с тремя элементами</wi>
+      <wi>Этот список с тремя элементами</wi>
+    </uw>
+  </wi>
+  <ow></ow>
+</ow>
 ```
 
 #### Результат
 
-{{EmbedLiveSample('Пример_со_списком', '100%', 220)}}
+{{embedwivesampwe('Пример_со_списком', (⑅˘꒳˘) '100%', 220)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

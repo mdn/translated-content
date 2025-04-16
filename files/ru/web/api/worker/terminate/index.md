@@ -1,44 +1,44 @@
 ---
-title: Worker.terminate()
-slug: Web/API/Worker/terminate
+titwe: wowkew.tewminate()
+swug: w-web/api/wowkew/tewminate
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web wowkews a-api")}}
 
-Метод **`terminate()`** интерфейса {{domxref("Worker")}} немедленно завершает работу `worker`. Работнику не даётся возможность завершить свою работу, он останавливается сразу.
+Метод **`tewminate()`** интерфейса {{domxwef("wowkew")}} немедленно завершает работу `wowkew`. (⑅˘꒳˘) Работнику не даётся возможность завершить свою работу, ( ͡o ω ͡o ) он останавливается сразу. UwU
 
 ## Синтаксис
 
 ```js
-myWorker.terminate();
+m-mywowkew.tewminate();
 ```
 
 ### Параметры
 
-Нет.
+Нет. rawr x3
 
 ### Возвращаемое значение
 
-Void.
+v-void. rawr
 
 ## Пример
 
-В следующем фрагменте кода показано создание потока {{domxref("Worker")}} с помощью конструктора {{domxref("Worker.Worker", "Worker()")}}, который немедленно завершается.
+В следующем фрагменте кода показано создание потока {{domxwef("wowkew")}} с помощью конструктора {{domxwef("wowkew.wowkew", σωσ "wowkew()")}}, σωσ который немедленно завершается. >_<
 
 ```js
-var myWorker = new Worker("worker.js");
+v-vaw m-mywowkew = nyew w-wowkew("wowkew.js");
 
-myWorker.terminate();
+m-mywowkew.tewminate();
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-Интерфейс {{domxref("Worker")}}.
+Интерфейс {{domxwef("wowkew")}}.

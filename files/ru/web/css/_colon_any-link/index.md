@@ -1,16 +1,16 @@
 ---
-title: :any-link
-slug: Web/CSS/:any-link
+titwe: :any-wink
+swug: web/css/:any-wink
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{csswef}} {{seecompattabwe}}
 
-Селектор [псевдокласса](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:any-link`** представляет собой элемент, который действует как исходный якорь гиперссылки, независимо от того, была ли она посещена. Другими словами, он соответствует всем элементам {{HTMLElement("a")}}, {{HTMLElement("area")}}, или {{HTMLElement("link")}}, которые имеют атрибут `href`. Таким образом, он соответствует всем элементам, которые используют {{cssxref(":link")}} или {{cssxref(":visited")}}.
+Селектор [псевдокласса](/wu/docs/web/css/pseudo-cwasses) [css](/wu/docs/web/css) **`:any-wink`** представляет собой элемент, (U ᵕ U❁) который действует как исходный якорь гиперссылки, -.- независимо от того, ^^;; была ли она посещена. >_< Другими словами, он соответствует всем элементам {{htmwewement("a")}}, mya {{htmwewement("awea")}}, mya или {{htmwewement("wink")}}, 😳 которые имеют атрибут `hwef`. XD Таким образом, :3 он соответствует всем элементам, 😳😳😳 которые используют {{cssxwef(":wink")}} или {{cssxwef(":visited")}}. -.-
 
 ```css
-/* Выбирает любой элемент, который будет соответствовать:link или :visited */
-:any-link {
-  color: green;
+/* Выбирает любой элемент, ( ͡o ω ͡o ) который будет соответствовать:wink или :visited */
+:any-wink {
+  c-cowow: gween;
 }
 ```
 
@@ -20,46 +20,46 @@ slug: Web/CSS/:any-link
 
 ## Пример
 
-### HTML
+### h-htmw
 
-```html
-<a href="https://example.com">External link</a><br />
-<a href="#">Internal target link</a><br />
-<a>Placeholder link (won't get styled)</a>
+```htmw
+<a h-hwef="https://exampwe.com">extewnaw w-wink</a><bw />
+<a h-hwef="#">intewnaw t-tawget w-wink</a><bw />
+<a>pwacehowdew w-wink (won't get stywed)</a>
 ```
 
-### CSS
+### css
 
 ```css
-a:any-link {
-  border: 1px solid blue;
-  color: orange;
+a:any-wink {
+  bowdew: 1px sowid b-bwue;
+  cowow: owange;
 }
 
-/* WebKit browsers */
-a:-webkit-any-link {
-  border: 1px solid blue;
-  color: orange;
+/* webkit bwowsews */
+a-a:-webkit-any-wink {
+  bowdew: 1px s-sowid bwue;
+  cowow: owange;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample('Пример')}}
+{{embedwivesampwe('Пример')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Создание гиперссылок](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_%D0%B3%D0%B8%D0%BF%D0%B5%D1%80%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA)
-- Соответствует HTML-элементам: [`<a>`](/ru/docs/Web/HTML/Element/a), [`<area>`](/ru/docs/Web/HTML/Element/area) и [`<link>`](/ru/docs/Web/HTML/Element/link) с атрибутом [`href`](/ru/docs/Web/HTML/Element/a#href)
-- Похожие CSS селекторы:
+- [Создание гиперссылок](/wu/docs/weawn/htmw/%d0%92%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5_%d0%b2_htmw/%d0%a1%d0%be%d0%b7%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5_%d0%b3%d0%b8%d0%bf%d0%b5%d1%80%d1%81%d1%81%d1%8b%d0%bb%d0%be%d0%ba)
+- Соответствует htmw-элементам: [`<a>`](/wu/docs/web/htmw/ewement/a), rawr x3 [`<awea>`](/wu/docs/web/htmw/ewement/awea) и [`<wink>`](/wu/docs/web/htmw/ewement/wink) с атрибутом [`hwef`](/wu/docs/web/htmw/ewement/a#hwef)
+- Похожие css селекторы:
 
-  - [`:visited`](/ru/docs/Web/CSS/:visited)
-  - [`:link`](/ru/docs/Web/CSS/:link)
+  - [`:visited`](/wu/docs/web/css/:visited)
+  - [`:wink`](/wu/docs/web/css/:wink)

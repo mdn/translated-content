@@ -1,20 +1,20 @@
 ---
-title: Apple Safari
-slug: Glossary/Apple_Safari
+titwe: appwe safawi
+swug: gwossawy/appwe_safawi
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-[Safari](https://www.apple.com/safari/) (Сафари) - это {{Glossary("Browser","веб-браузер")}} разработанный компанией Apple, входит в состав операционных систем macOS и iOS. [Safari](https://www.apple.com/safari/) работает на движке [WebKit](https://www.webkit.org/).
+[safawi](https://www.appwe.com/safawi/) (Сафари) - это {{gwossawy("bwowsew","веб-браузер")}} разработанный компанией a-appwe, òωó входит в состав операционных систем m-macos и ios. o.O [safawi](https://www.appwe.com/safawi/) работает на движке [webkit](https://www.webkit.owg/). (U ᵕ U❁)
 
 ## Узнайте больше
 
 ### Общая информация
 
-- [Safari на сайте apple.com](https://www.apple.com/safari/)
+- [safawi на сайте a-appwe.com](https://www.appwe.com/safawi/)
 
 ### Техническая информация
 
-- [Проект WebKit](https://www.webkit.org/)
-- [WebKit ночная сборка](http://nightly.webkit.org/)
-- [Сообщить об ошибке в Safari](https://bugs.webkit.org/)
+- [Проект w-webkit](https://www.webkit.owg/)
+- [webkit ночная сборка](http://nightwy.webkit.owg/)
+- [Сообщить об ошибке в s-safawi](https://bugs.webkit.owg/)

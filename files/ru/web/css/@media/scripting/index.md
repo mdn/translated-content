@@ -1,69 +1,69 @@
 ---
-title: scripting
-slug: Web/CSS/@media/scripting
+titwe: scwipting
+swug: web/css/@media/scwipting
 ---
 
-{{cssref}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries) **`scripting`** может использоваться для проверки доступности скриптов (таких как JavaScript)
+[css](/wu/docs/web/css) [медиа функция](/wu/docs/web/css/css_media_quewies/using_media_quewies) **`scwipting`** может использоваться для проверки доступности скриптов (таких как j-javascwipt)
 
 ## Синтаксис
 
-Функция **`scripting`** указывается в качестве значения ключевого слова, выбранного из списка ниже.
+Функция **`scwipting`** указывается в качестве значения ключевого слова, ^^;; выбранного из списка ниже. >_<
 
 - `none`
-  - : Скрипты полностью недоступны в текущем документе.
-- `initial-only`
-  - : Скрипты включаются во время начальной загрузки страницы, но не после.
-- `enabled`
-  - : Скрипты поддерживаются и активны в текущем документе.
+  - : Скрипты полностью недоступны в текущем документе. mya
+- `initiaw-onwy`
+  - : Скрипты включаются во время начальной загрузки страницы, mya но не после.
+- `enabwed`
+  - : Скрипты поддерживаются и активны в текущем документе. 😳
 
 ## Пример
 
-### HTML
+### h-htmw
 
-```html
-<p class="script-none">You do not have scripting available. :-(</p>
-<p class="script-initial-only">
-  Your scripting is only enabled during the initial page load. Weird.
+```htmw
+<p c-cwass="scwipt-none">you d-do nyot have s-scwipting avaiwabwe. XD :-(</p>
+<p c-cwass="scwipt-initiaw-onwy">
+  youw s-scwipting is o-onwy enabwed duwing the initiaw page woad. :3 weiwd. 😳😳😳
 </p>
-<p class="script-enabled">You have scripting enabled! :-)</p>
+<p cwass="scwipt-enabwed">you have scwipting e-enabwed! :-)</p>
 ```
 
-### CSS
+### css
 
 ```css
 p {
-  color: lightgray;
+  cowow: wightgway;
 }
 
-@media (scripting: none) {
-  .script-none {
-    color: red;
+@media (scwipting: n-nyone) {
+  .scwipt-none {
+    cowow: wed;
   }
 }
 
-@media (scripting: initial-only) {
-  .script-initial-only {
-    color: red;
+@media (scwipting: i-initiaw-onwy) {
+  .scwipt-initiaw-onwy {
+    cowow: wed;
   }
 }
 
-@media (scripting: enabled) {
-  .script-enabled {
-    color: red;
+@media (scwipting: enabwed) {
+  .scwipt-enabwed {
+    c-cowow: wed;
   }
 }
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample("Пример")}}
+{{embedwivesampwe("Пример")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

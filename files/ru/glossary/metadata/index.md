@@ -1,16 +1,16 @@
 ---
-title: Метаданные
-slug: Glossary/Metadata
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: Метаданные
+swug: gwossawy/metadata
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Метаданные** — это, в самом простом определении, данные, которые описывают данные. Например, {{glossary("HTML")}}-документ — это данные, но HTML может также содержать в своём элементе {{htmlelement("head")}} метаданные, которые описывают этот документ, например, кто его автор и его краткое содержание.
+**Метаданные** — это, òωó в самом простом определении, o.O данные, (U ᵕ U❁) которые описывают данные. (⑅˘꒳˘) Например, ( ͡o ω ͡o ) {{gwossawy("htmw")}}-документ — это данные, UwU но h-htmw может также содержать в своём элементе {{htmwewement("head")}} метаданные, rawr x3 которые описывают этот документ, rawr например, σωσ кто его автор и его краткое содержание. σωσ
 
 ## Смотрите также
 
-- [Метаданные в HTML](/ru/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#метаданные_элемент_meta)
-- [Метаданные](https://ru.wikipedia.org/wiki/Метаданные) в Википедии
-- Элемент {{htmlelement("meta")}} в MDN
+- [Метаданные в h-htmw](/wu/docs/weawn_web_devewopment/cowe/stwuctuwing_content/webpage_metadata#метаданные_элемент_meta)
+- [Метаданные](https://wu.wikipedia.owg/wiki/Метаданные) в Википедии
+- Элемент {{htmwewement("meta")}} в m-mdn

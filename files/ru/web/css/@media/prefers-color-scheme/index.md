@@ -1,94 +1,94 @@
 ---
-title: prefers-color-scheme
-slug: Web/CSS/@media/prefers-color-scheme
+titwe: pwefews-cowow-scheme
+swug: web/css/@media/pwefews-cowow-scheme
 ---
 
-[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries) **`prefers-color-scheme`** может использоваться для определения того, светлую или тёмную тему использует пользователь в операционной системе.
+[css](/wu/docs/web/css) [медиа функция](/wu/docs/web/css/css_media_quewies/using_media_quewies) **`pwefews-cowow-scheme`** может использоваться для определения того, mya светлую или тёмную тему использует пользователь в операционной системе. nyaa~~
 
 ## Синтаксис
 
-- `no-preference`
-  - : Указывает, что пользователь не сделал никаких предпочтений, известных системе. Значение этого ключевого слова оценивается как `false` в [логическом контексте](https://drafts.csswg.org/mediaqueries-5/#boolean-context).
-- `light`
-  - : Указывает, что пользователь выбрал светлую тему в операционной системе.
-- `dark`
-  - : Указывает, что пользователь выбрал тёмную тему в операционной системе.
+- `no-pwefewence`
+  - : Указывает, (⑅˘꒳˘) что пользователь не сделал никаких предпочтений, rawr x3 известных системе. (✿oωo) Значение этого ключевого слова оценивается как `fawse` в [логическом контексте](https://dwafts.csswg.owg/mediaquewies-5/#boowean-context). (ˆ ﻌ ˆ)♡
+- `wight`
+  - : Указывает, (˘ω˘) что пользователь выбрал светлую тему в операционной системе. (⑅˘꒳˘)
+- `dawk`
+  - : Указывает, (///ˬ///✿) что пользователь выбрал тёмную тему в операционной системе. 😳😳😳
 
 ## Примеры
 
-В этом примере используется элемент с черным фоном и белым текстом, если пользователь выбрал светлую тему в операционной системе, то цвета будут инвертированы.
+В этом примере используется элемент с черным фоном и белым текстом, 🥺 если пользователь выбрал светлую тему в операционной системе, mya то цвета будут инвертированы. 🥺
 
-### HTML
+### h-htmw
 
-```html
-<div class="day">Day (initial)</div>
-<div class="day light-scheme">Day (changes in light scheme)</div>
-<div class="day dark-scheme">Day (changes in dark scheme)</div>
-<br />
+```htmw
+<div c-cwass="day">day (initiaw)</div>
+<div c-cwass="day wight-scheme">day (changes i-in wight s-scheme)</div>
+<div c-cwass="day d-dawk-scheme">day (changes i-in dawk scheme)</div>
+<bw />
 
-<div class="night">Night (initial)</div>
-<div class="night light-scheme">Night (changes in light scheme)</div>
-<div class="night dark-scheme">Night (changes in dark scheme)</div>
+<div cwass="night">night (initiaw)</div>
+<div cwass="night wight-scheme">night (changes i-in wight scheme)</div>
+<div cwass="night dawk-scheme">night (changes i-in dawk scheme)</div>
 ```
 
-### CSS
+### css
 
 ```css
 .day {
-  background: #eee;
-  color: black;
+  b-backgwound: #eee;
+  cowow: bwack;
 }
 .night {
-  background: #333;
-  color: white;
+  backgwound: #333;
+  c-cowow: white;
 }
 
-@media (prefers-color-scheme: dark) {
-  .day.dark-scheme {
-    background: #333;
-    color: white;
+@media (pwefews-cowow-scheme: d-dawk) {
+  .day.dawk-scheme {
+    b-backgwound: #333;
+    cowow: white;
   }
-  .night.dark-scheme {
-    background: black;
-    color: #ddd;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .day.light-scheme {
-    background: white;
-    color: #555;
-  }
-  .night.light-scheme {
-    background: #eee;
-    color: black;
+  .night.dawk-scheme {
+    backgwound: bwack;
+    cowow: #ddd;
   }
 }
 
-.day,
+@media (pwefews-cowow-scheme: wight) {
+  .day.wight-scheme {
+    b-backgwound: white;
+    cowow: #555;
+  }
+  .night.wight-scheme {
+    backgwound: #eee;
+    cowow: bwack;
+  }
+}
+
+.day, >_<
 .night {
-  display: inline-block;
+  dispway: i-inwine-bwock;
   padding: 1em;
-  width: 7em;
-  height: 2em;
-  vertical-align: middle;
+  w-width: 7em;
+  h-height: 2em;
+  v-vewticaw-awign: m-middwe;
 }
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample("Примеры")}}
+{{embedwivesampwe("Примеры")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Редизайн вашего продукта и сайта для тёмного режима](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)(en)
+- [Редизайн вашего продукта и сайта для тёмного режима](https://stuffandnonsense.co.uk/bwog/wedesigning-youw-pwoduct-and-website-fow-dawk-mode)(en)
 
-{{QuickLinksWithSubpages("/ru/docs/Web/CSS/@media/")}}
+{{quickwinkswithsubpages("/wu/docs/web/css/@media/")}}

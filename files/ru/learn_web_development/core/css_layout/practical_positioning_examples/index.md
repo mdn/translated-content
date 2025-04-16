@@ -1,340 +1,340 @@
 ---
-title: Practical positioning examples
-slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
+titwe: pwacticaw positioning e-exampwes
+swug: weawn_web_devewopment/cowe/css_wayout/pwacticaw_positioning_exampwes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/css_wayout/positioning", :3 "weawn/css/css_wayout/fwexbox", mya "weawn/css/css_wayout")}}
 
-Основы позиционирования, приведённые в последней статье, мы теперь рассмотрим, как создать некоторые примеры реального мира, чтобы проиллюстрировать, какие вещи вы можете сделать с позиционированием.
+Основы позиционирования, òωó приведённые в последней статье, nyaa~~ мы теперь рассмотрим, 🥺 как создать некоторые примеры реального мира, -.- чтобы проиллюстрировать, 🥺 какие вещи вы можете сделать с позиционированием. (˘ω˘)
 
-| Предпосылки: | Основы HTML (уроки [Introduction to HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)), и идея о том, как работает CSS (уроки [Introduction to CSS](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics).) |
+| Предпосылки: | Основы h-htmw (уроки [intwoduction t-to htmw](/wu/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content)), òωó и идея о том, UwU как работает c-css (уроки [intwoduction t-to css](/wu/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics).) |
 | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Задача:      | Чтобы получить представление о практичности позиционирования                                                                                                                                                                                   |
 
 ## Информационный блок с вкладками
 
-Первый пример, который мы рассмотрим, - это классический информационный блок с вкладками - очень распространённая функция, используемая, когда вы хотите упаковать много информации в небольшую область. Сюда входят информационные приложения, такие как стратегии / военные игры, мобильные версии веб-сайтов, где экран и пространство ограничены и необходимы компактные информационные окна, где вы можете сделать много информации, не заполняя весь пользовательский интерфейс. Наш простой пример будет выглядеть так, как только мы закончим:
+Первый пример, ^•ﻌ•^ который мы рассмотрим, - это классический информационный блок с вкладками - очень распространённая функция, mya используемая, (✿oωo) когда вы хотите упаковать много информации в небольшую область. XD Сюда входят информационные приложения, :3 такие как стратегии / военные игры, (U ﹏ U) мобильные версии веб-сайтов, UwU где экран и пространство ограничены и необходимы компактные информационные окна, ʘwʘ где вы можете сделать много информации, >w< не заполняя весь пользовательский интерфейс. 😳😳😳 Наш простой пример будет выглядеть так, rawr как только мы закончим:
 
 ![](tabbed-info-box.png)
 
-> **Примечание:**Вы можете увидеть, что готовый пример работает в прямом эфире [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)). Проверьте его, чтобы понять, что вы будете строить в этом разделе статьи.
+> **Примечание:**Вы можете увидеть, ^•ﻌ•^ что готовый пример работает в прямом эфире [info-box.htmw](https://mdn.github.io/weawning-awea/css/css-wayout/pwacticaw-positioning-exampwes/info-box.htmw) ([souwce c-code](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/pwacticaw-positioning-exampwes/info-box.htmw)). σωσ Проверьте его, :3 чтобы понять, rawr x3 что вы будете строить в этом разделе статьи.
 
-Возможно, вы думаете: «Почему бы просто не создавать отдельные вкладки в виде отдельных веб-страниц и просто иметь вкладки, переходящие на отдельные страницы, чтобы создать эффект?» Этот код был бы проще, да, но тогда каждый отдельный «просмотр страницы» на самом деле был бы вновь загруженной веб-страницей, что затрудняло бы сохранение информации между представлениями и интеграцию этой функции в более крупный дизайн пользовательского интерфейса. Кроме того, так называемые «одностраничные приложения» становятся очень популярными - особенно для мобильных веб-интерфейсов - потому что все, что обслуживается как один файл, сокращает количество HTTP-запросов, необходимых для просмотра всего содержимого, тем самым повышая производительность.
+Возможно, nyaa~~ вы думаете: «Почему бы просто не создавать отдельные вкладки в виде отдельных веб-страниц и просто иметь вкладки, :3 переходящие на отдельные страницы, >w< чтобы создать эффект?» Этот код был бы проще, rawr да, но тогда каждый отдельный «просмотр страницы» на самом деле был бы вновь загруженной веб-страницей, 😳 что затрудняло бы сохранение информации между представлениями и интеграцию этой функции в более крупный дизайн пользовательского интерфейса. 😳 Кроме того, 🥺 так называемые «одностраничные приложения» становятся очень популярными - особенно для мобильных веб-интерфейсов - потому что все, rawr x3 что обслуживается как один файл, ^^ сокращает количество h-http-запросов, необходимых для просмотра всего содержимого, ( ͡o ω ͡o ) тем самым повышая производительность. XD
 
-> [!NOTE]
-> Некоторые веб-разработчики занимаются ещё более быстрыми темпами, имея только одну страницу информации, загружаемую сразу и динамическое изменение информации, отображаемой с помощью функции JavaScript, такой как [XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest). На этом этапе вашего обучения мы хотим сохранить все как можно проще. Впоследствии есть JavaScript, но только немного.
+> [!note]
+> Некоторые веб-разработчики занимаются ещё более быстрыми темпами, ^^ имея только одну страницу информации, (⑅˘꒳˘) загружаемую сразу и динамическое изменение информации, отображаемой с помощью функции j-javascwipt, (⑅˘꒳˘) такой как [xmwhttpwequest](/wu/docs/web/api/xmwhttpwequest). ^•ﻌ•^ На этом этапе вашего обучения мы хотим сохранить все как можно проще. ( ͡o ω ͡o ) Впоследствии есть javascwipt, ( ͡o ω ͡o ) но только немного. (✿oωo)
 
-Для начала мы хотели бы, чтобы вы создали локальную копию исходного HTML-файла — [info-box-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box-start.html). Сохраните это где вам удобно на локальном компьютере и откройте его в текстовом редакторе. Давайте посмотрим на HTML, содержащийся в теле:
+Для начала мы хотели бы, 😳😳😳 чтобы вы создали локальную копию исходного htmw-файла — [info-box-stawt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/pwacticaw-positioning-exampwes/info-box-stawt.htmw). OwO Сохраните это где вам удобно на локальном компьютере и откройте его в текстовом редакторе. ^^ Давайте посмотрим на htmw, rawr x3 содержащийся в теле:
 
-```html
-<section class="info-box">
-  <ul>
-    <li><a href="#" class="active">Tab 1</a></li>
-    <li><a href="#">Tab 2</a></li>
-    <li><a href="#">Tab 3</a></li>
-  </ul>
-  <div class="panels">
-    <article class="active-panel">
-      <h2>The first tab</h2>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum
-        et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius
-        libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt
-        metus. Donec ultrices, urna maximus consequat aliquet, dui neque
-        eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor
-        urna. Nulla facilisi.
-      </p>
-    </article>
-    <article>
-      <h2>The second tab</h2>
+```htmw
+<section cwass="info-box">
+  <uw>
+    <wi><a h-hwef="#" cwass="active">tab 1</a></wi>
+    <wi><a hwef="#">tab 2</a></wi>
+    <wi><a h-hwef="#">tab 3</a></wi>
+  </uw>
+  <div cwass="panews">
+    <awticwe c-cwass="active-panew">
+      <h2>the fiwst tab</h2>
 
       <p>
-        This tab hasn't got any Lorem Ipsum in it. But the content isn't very
-        exciting all the same.
+        wowem ipsum dowow sit amet, 🥺 c-consectetuw adipiscing ewit. (ˆ ﻌ ˆ)♡ p-pewwentesque
+        t-tuwpis nyibh, ( ͡o ω ͡o ) powttitow nyec venenatis eu, >w< puwvinaw in augue. /(^•ω•^) vestibuwum
+        e-et owci scewewisque, 😳😳😳 vuwputate tewwus quis, wobowtis dui. (U ᵕ U❁) vivamus vawius
+        w-wibewo at ipsum mattis efficituw u-ut nyec n-nyisw. (˘ω˘) nyuwwam eget t-tincidunt
+        m-metus. 😳 donec uwtwices, (ꈍᴗꈍ) uwna maximus consequat a-awiquet, :3 dui nyeque
+        eweifend wowem, /(^•ω•^) a-a auctow wibewo tuwpis at sem. ^^;; awiquam ut powttitow
+        uwna. o.O nyuwwa faciwisi. 😳
       </p>
-    </article>
-    <article>
-      <h2>The third tab</h2>
+    </awticwe>
+    <awticwe>
+      <h2>the second t-tab</h2>
 
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an
-        ordered list: how exciting!
+        this t-tab hasn't got a-any wowem ipsum i-in it. UwU but the content isn't vewy
+        exciting aww the same. >w<
+      </p>
+    </awticwe>
+    <awticwe>
+      <h2>the t-thiwd tab</h2>
+
+      <p>
+        w-wowem ipsum dowow sit amet, o.O c-consectetuw a-adipiscing ewit. (˘ω˘) pewwentesque
+        t-tuwpis nyibh, òωó powttitow nyec v-venenatis eu, nyaa~~ puwvinaw in augue. ( ͡o ω ͡o ) and nyow an
+        o-owdewed wist: how exciting! 😳😳😳
       </p>
 
-      <ol>
-        <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
-        <li>Aliquam ut porttitor urna.</li>
-        <li>Nulla facilisi</li>
-      </ol>
-    </article>
+      <ow>
+        <wi>dui n-nyeque eweifend wowem, ^•ﻌ•^ a-a auctow wibewo t-tuwpis at sem.</wi>
+        <wi>awiquam ut powttitow uwna.</wi>
+        <wi>nuwwa faciwisi</wi>
+      </ow>
+    </awticwe>
   </div>
 </section>
 ```
 
-Итак, у нас есть элемент {{htmlelement ("section")}} с `классом` `info-box`, который содержит {{htmlelement ("ul")}} и {{htmlelement ("div")}}. Неупорядоченный список содержит три элемента списка со ссылками внутри, которые станут фактическими вкладками для отображения наших панелей контента. `div` содержит три элемента {{htmlelement ("article")}}, которые будут составлять панели содержимого, соответствующие каждой вкладке. Каждая панель содержит некоторый образец контента.
+Итак, (˘ω˘) у нас есть элемент {{htmwewement ("section")}} с `классом` `info-box`, (˘ω˘) который содержит {{htmwewement ("uw")}} и {{htmwewement ("div")}}. -.- Неупорядоченный список содержит три элемента списка со ссылками внутри, которые станут фактическими вкладками для отображения наших панелей контента. ^•ﻌ•^ `div` содержит три элемента {{htmwewement ("awticwe")}}, /(^•ω•^) которые будут составлять панели содержимого, (///ˬ///✿) соответствующие каждой вкладке. mya Каждая панель содержит некоторый образец контента. o.O
 
-Идея здесь заключается в том, что мы будем стилизовать вкладки, чтобы они выглядели как стандартное меню горизонтальной навигации и нарисуем панели, чтобы они сидели друг над другом, используя абсолютное позиционирование. Мы также предоставим вам немного JavaScript для включения на вашу страницу, чтобы отобразить соответствующую панель при нажатии вкладки и вы создадите саму вкладку. Вам не нужно будет понимать сам JavaScript на данном этапе, но вы должны подумать об изучении базового [JavaScript](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) как можно скорее - чем сложнее ваши функции пользовательского интерфейса, тем больше вероятность того, что вам понадобится JavaScript для реализации желаемую функциональность.
+Идея здесь заключается в том, ^•ﻌ•^ что мы будем стилизовать вкладки, (U ᵕ U❁) чтобы они выглядели как стандартное меню горизонтальной навигации и нарисуем панели, чтобы они сидели друг над другом, :3 используя абсолютное позиционирование. (///ˬ///✿) Мы также предоставим вам немного javascwipt для включения на вашу страницу, (///ˬ///✿) чтобы отобразить соответствующую панель при нажатии вкладки и вы создадите саму вкладку. 🥺 Вам не нужно будет понимать сам javascwipt на данном этапе, -.- но вы должны подумать об изучении базового [javascwipt](/wu/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website/adding_intewactivity) как можно скорее - чем сложнее ваши функции пользовательского интерфейса, nyaa~~ тем больше вероятность того, (///ˬ///✿) что вам понадобится javascwipt для реализации желаемую функциональность. 🥺
 
 ### Общая настройка
 
-Для начала добавьте следующее между вашим открытием и закрытием {{HTMLElement ("style")}} tags:
+Для начала добавьте следующее между вашим открытием и закрытием {{htmwewement ("stywe")}} tags:
 
 ```css
-html {
-  font-family: sans-serif;
+h-htmw {
+  f-font-famiwy: sans-sewif;
 }
 
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-body {
-  margin: 0;
+b-body {
+  mawgin: 0;
 }
 ```
 
-Это всего лишь общая настройка для установки шрифта sans-serif на нашей странице, используйте поле `border-box` {{cssxref ("box-sizing")}} и избавьтесь от стандартного {{htmlelement ("body") }} поля.
+Это всего лишь общая настройка для установки шрифта sans-sewif на нашей странице, >w< используйте поле `bowdew-box` {{cssxwef ("box-sizing")}} и избавьтесь от стандартного {{htmwewement ("body") }} поля. rawr x3
 
-Затем добавьте следующее ниже вашего предыдущего CSS:
+Затем добавьте следующее ниже вашего предыдущего css:
 
 ```css
 .info-box {
   width: 450px;
-  height: 400px;
-  margin: 0 auto;
+  h-height: 400px;
+  mawgin: 0 auto;
 }
 ```
 
-Это задаёт конкретную ширину и высоту содержимого и центрирует его на экране с использованием старого `margin: 0 auto` трюка. Раньше в курсе мы советовали не устанавливать фиксированную высоту на контейнеры содержимого, если это вообще возможно; это нормально в этом случае, потому что у нас есть фиксированный контент на наших вкладках. Это также выглядит немного раздражающим, чтобы иметь разные вкладки на разных высотах.
+Это задаёт конкретную ширину и высоту содержимого и центрирует его на экране с использованием старого `mawgin: 0 auto` трюка. (⑅˘꒳˘) Раньше в курсе мы советовали не устанавливать фиксированную высоту на контейнеры содержимого, σωσ если это вообще возможно; это нормально в этом случае, XD потому что у нас есть фиксированный контент на наших вкладках. -.- Это также выглядит немного раздражающим, >_< чтобы иметь разные вкладки на разных высотах. rawr
 
 ### Укладка наших вкладок
 
-Теперь мы хотим, чтобы стиль вкладок выглядел как вкладки - в основном это горизонтальное меню навигации, но вместо того, чтобы загружать разные веб-страницы, когда они нажимаются, как мы видели ранее в курсе, они вызывают отображение разных панелей на той же странице. Сначала добавьте следующее правило внизу CSS, чтобы удалить по умолчанию {{cssxref ("padding-left")}} и {{cssxref ("margin-top")}} из неупорядоченного списка:
+Теперь мы хотим, 😳😳😳 чтобы стиль вкладок выглядел как вкладки - в основном это горизонтальное меню навигации, UwU но вместо того, (U ﹏ U) чтобы загружать разные веб-страницы, (˘ω˘) когда они нажимаются, /(^•ω•^) как мы видели ранее в курсе, (U ﹏ U) они вызывают отображение разных панелей на той же странице. ^•ﻌ•^ Сначала добавьте следующее правило внизу css, >w< чтобы удалить по умолчанию {{cssxwef ("padding-weft")}} и {{cssxwef ("mawgin-top")}} из неупорядоченного списка:
 
 ```css
-.info-box ul {
-  padding-left: 0;
-  margin-top: 0;
+.info-box uw {
+  p-padding-weft: 0;
+  mawgin-top: 0;
 }
 ```
 
-> [!NOTE]
-> Мы используем селектор-потомки с полем `.info-box` в начале цепочки в этом примере - это значит, что мы можем вставить эту функцию на страницу с другим содержимым, уже на ней, не опасаясь вмешиваться в стили, применяемые к другим частям страницы.
+> [!note]
+> Мы используем селектор-потомки с полем `.info-box` в начале цепочки в этом примере - это значит, что мы можем вставить эту функцию на страницу с другим содержимым, ʘwʘ уже на ней, òωó не опасаясь вмешиваться в стили, o.O применяемые к другим частям страницы.
 
-Затем мы нарисуем горизонтальные вкладки - все элементы списка будут перемещены влево, чтобы заставить их сидеть в одной строке вместе, их {{cssxref ("list-style-type")}} имеет значение `none`, чтобы избавиться от пули и их {{cssxref ("width")}} установлены на `150px`, чтобы они удобно располагались в информационном окне. Элементы {{htmlelement ("a")}} имеют {{cssxref ("display")}} встроенный блок, поэтому они будут сидеть в строке, но всё же быть стильными и соответствующим образом оформлены для кнопок вкладок, используя множество других свойств.
+Затем мы нарисуем горизонтальные вкладки - все элементы списка будут перемещены влево, ( ͡o ω ͡o ) чтобы заставить их сидеть в одной строке вместе, mya их {{cssxwef ("wist-stywe-type")}} имеет значение `none`, >_< чтобы избавиться от пули и их {{cssxwef ("width")}} установлены на `150px`, rawr чтобы они удобно располагались в информационном окне. >_< Элементы {{htmwewement ("a")}} имеют {{cssxwef ("dispway")}} встроенный блок, (U ﹏ U) поэтому они будут сидеть в строке, но всё же быть стильными и соответствующим образом оформлены для кнопок вкладок, rawr используя множество других свойств. (U ᵕ U❁)
 
-Добавьте следующий CSS:
+Добавьте следующий c-css:
 
 ```css
-.info-box li {
-  float: left;
-  list-style-type: none;
+.info-box w-wi {
+  f-fwoat: weft;
+  wist-stywe-type: n-nyone;
   width: 150px;
 }
 
-.info-box li a {
-  display: inline-block;
-  text-decoration: none;
+.info-box w-wi a {
+  d-dispway: inwine-bwock;
+  t-text-decowation: nyone;
   width: 100%;
-  line-height: 3;
-  background-color: red;
-  color: black;
-  text-align: center;
+  w-wine-height: 3;
+  b-backgwound-cowow: w-wed;
+  cowow: b-bwack;
+  text-awign: c-centew;
 }
 ```
 
-Наконец, для этого раздела мы установим некоторые стили в состояниях ссылок. Во-первых, мы настроим `:focus` и `:hover` состояния вкладок, чтобы выглядеть по-другому, когда они сфокусированы / зависают, предоставляя пользователям некоторую визуальную обратную связь. Во-вторых, мы установим правило, которое ставит один и тот же стиль на одной из вкладок, когда на нем присутствует `class` of `active`. Мы установим это с помощью JavaScript при нажатии на вкладку. Поместите следующий CSS ниже других стилей:
+Наконец, (ˆ ﻌ ˆ)♡ для этого раздела мы установим некоторые стили в состояниях ссылок. >_< Во-первых, ^^;; мы настроим `:focus` и `:hovew` состояния вкладок, ʘwʘ чтобы выглядеть по-другому, 😳😳😳 когда они сфокусированы / зависают, UwU предоставляя пользователям некоторую визуальную обратную связь. OwO Во-вторых, :3 мы установим правило, -.- которое ставит один и тот же стиль на одной из вкладок, 🥺 когда на нем присутствует `cwass` of `active`. -.- Мы установим это с помощью javascwipt при нажатии на вкладку. -.- Поместите следующий css ниже других стилей:
 
 ```css
-.info-box li a:focus,
-.info-box li a:hover {
-  background-color: #a60000;
-  color: white;
+.info-box w-wi a:focus, (U ﹏ U)
+.info-box wi a:hovew {
+  backgwound-cowow: #a60000;
+  cowow: white;
 }
 
-.info-box li a.active {
-  background-color: #a60000;
-  color: white;
-}
-```
-
-### Styling the panels
-
-The next job is to style our panels. Let's get going!
-
-First, of all, add the following rule to style the `.panels` {{htmlelement("div")}} container. Here we simply set a fixed {{cssxref("height")}} to make sure the panels fit snugly inside the info-box, {{cssxref("position")}} `relative` to set the {{htmlelement("div")}} as the positioning context, so you can then place positioned child elements relative to it and not the {{htmlelement("html")}} element, and finally we {{cssxref("clear")}} the float set in the CSS above so that it doesn't interfere with the remainder of the layout.
-
-```css
-.info-box .panels {
-  height: 352px;
-  position: relative;
-  clear: both;
+.info-box wi a.active {
+  backgwound-cowow: #a60000;
+  c-cowow: white;
 }
 ```
 
-Finally for this section, we will style the individual {{htmlelement("article")}} elements that comprise our panels. The first rule we'll add will absolutely {{cssxref("position")}} the panels, and make them all sit flush to the {{cssxref("top")}} and {{cssxref("left")}} of their {{htmlelement("div")}} container — this part is absolutely key to this whole layout feature, as it makes the panels sit on top of one another. The rule also gives the panels the same set height as the container, and gives the content some padding, a text {{cssxref("color")}}, and a {{cssxref("background-color")}}.
+### stywing the panews
 
-The second rule we'll add here makes it so that a panel with a `class` of `active-panel` set on it will have a {{cssxref("z-index")}} of 1 applied to it, which will make it sit above the other panels (positioned elements have a `z-index` of 0 by default, which would put them below). Again, we'll add this class using JavaScript at the appropriate time.
+the nyext j-job is to stywe o-ouw panews. rawr wet's g-get going! mya
+
+fiwst, of aww, ( ͡o ω ͡o ) add t-the fowwowing wuwe to stywe the `.panews` {{htmwewement("div")}} c-containew. /(^•ω•^) hewe w-we simpwy set a fixed {{cssxwef("height")}} to make suwe the panews fit snugwy inside the info-box, >_< {{cssxwef("position")}} `wewative` to set t-the {{htmwewement("div")}} as the p-positioning context, (✿oωo) so you can t-then pwace positioned c-chiwd ewements wewative to it and nyot t-the {{htmwewement("htmw")}} e-ewement, 😳😳😳 and finawwy w-we {{cssxwef("cweaw")}} t-the fwoat set in the css above so that it doesn't intewfewe with the wemaindew o-of the wayout. (ꈍᴗꈍ)
 
 ```css
-.info-box article {
-  position: absolute;
+.info-box .panews {
+  h-height: 352px;
+  p-position: wewative;
+  cweaw: b-both;
+}
+```
+
+f-finawwy fow this section, 🥺 we wiww s-stywe the individuaw {{htmwewement("awticwe")}} ewements that compwise ouw panews. mya the fiwst wuwe we'ww add wiww a-absowutewy {{cssxwef("position")}} t-the panews, and make them aww sit fwush to t-the {{cssxwef("top")}} a-and {{cssxwef("weft")}} of theiw {{htmwewement("div")}} containew — this pawt is absowutewy k-key to this whowe wayout featuwe, (ˆ ﻌ ˆ)♡ as it makes the panews sit on top of one a-anothew. the wuwe awso gives the panews the same s-set height as t-the containew, (⑅˘꒳˘) and gives the content some padding, òωó a text {{cssxwef("cowow")}}, o.O a-and a {{cssxwef("backgwound-cowow")}}. XD
+
+t-the second wuwe we'ww add hewe makes it so that a panew w-with a `cwass` of `active-panew` set on it wiww h-have a {{cssxwef("z-index")}} of 1 appwied to it, (˘ω˘) which wiww make i-it sit above the othew panews (positioned e-ewements h-have a `z-index` of 0 by defauwt, (ꈍᴗꈍ) w-which wouwd put them bewow). >w< a-again, XD we'ww a-add this cwass u-using javascwipt at the appwopwiate t-time. -.-
+
+```css
+.info-box a-awticwe {
+  position: absowute;
   top: 0;
-  left: 0;
-  height: 352px;
-  padding: 10px;
-  color: white;
-  background-color: #a60000;
+  w-weft: 0;
+  h-height: 352px;
+  p-padding: 10px;
+  cowow: white;
+  backgwound-cowow: #a60000;
 }
 
-.info-box .active-panel {
+.info-box .active-panew {
   z-index: 1;
 }
 ```
 
-### Adding our JavaScript
+### a-adding ouw javascwipt
 
-The final step to getting this feature working is to add some JavaScript. Put the following block of code, exactly as written in between your opening and closing {{htmlelement("script")}} tags (you'll find these below the HTML content):
+the f-finaw step to getting t-this featuwe wowking is to add some javascwipt. ^^;; put the fowwowing b-bwock of c-code, XD exactwy a-as wwitten in between y-youw opening and cwosing {{htmwewement("scwipt")}} t-tags (you'ww find these bewow the htmw content):
 
 ```
-var tabs = document.querySelectorAll('.info-box li a');
-var panels = document.querySelectorAll('.info-box article');
+vaw tabs = document.quewysewectowaww('.info-box wi a');
+vaw panews = d-document.quewysewectowaww('.info-box awticwe');
 
-for(i = 0; i < tabs.length; i++) {
-  var tab = tabs[i];
-  setTabHandler(tab, i);
+f-fow(i = 0; i < tabs.wength; i-i++) {
+  vaw tab = tabs[i];
+  settabhandwew(tab, :3 i-i);
 }
 
-function setTabHandler(tab, tabPos) {
-  tab.onclick = function() {
-    for(i = 0; i < tabs.length; i++) {
-      tabs[i].className = '';
+function settabhandwew(tab, σωσ t-tabpos) {
+  t-tab.oncwick = function() {
+    f-fow(i = 0; i < tabs.wength; i-i++) {
+      t-tabs[i].cwassname = '';
     }
 
-    tab.className = 'active';
+    tab.cwassname = 'active';
 
-    for(i = 0; i < panels.length; i++) {
-      panels[i].className = '';
+    fow(i = 0; i < panews.wength; i++) {
+      panews[i].cwassname = '';
     }
 
-    panels[tabPos].className = 'active-panel';
+    panews[tabpos].cwassname = 'active-panew';
   }
 }
 ```
 
-This code does the following:
+t-this code does t-the fowwowing:
 
-- First we save a reference to all the tabs and all the panels in two variables called `tabs` and `panels`, so we can easily do things to them later on.
-- Then we use a `for` loop to cycle through all the tabs and run a function called `setTabHandler()` on each one, which sets up the functionality that should occur when each one is clicked on. When run, the function is passed a reference to the particular tab it is being run for, and an index number `i` that indentifies the tab's position in the `tabs` array.
-- In the `setTabHandler()` function, the tab has an `onclick` event handler set on it, so that when the tab is clicked, the following occurs:
+- f-fiwst we save a wefewence to aww t-the tabs and aww the panews in two vawiabwes cawwed `tabs` and `panews`, s-so we c-can easiwy do things to them watew o-on. XD
+- then we use a `fow` woop to cycwe thwough a-aww the tabs a-and wun a function cawwed `settabhandwew()` o-on e-each one, :3 which sets up the functionawity that shouwd occuw when each one is cwicked o-on. rawr when wun, 😳 t-the function i-is passed a wefewence t-to the pawticuwaw t-tab it is being wun fow, 😳😳😳 a-and an index nyumbew `i` t-that indentifies the t-tab's position in t-the `tabs` awway. (ꈍᴗꈍ)
+- in the `settabhandwew()` function, 🥺 t-the tab has an `oncwick` event handwew s-set on it, ^•ﻌ•^ so that when the tab i-is cwicked, XD the f-fowwowing occuws:
 
-  - A `for` loop is used to cycle through all the tabs and remove any classes that are present on them.
-  - A `class` of `active` is set on the tab that was clicked on — remember from earlier that this class has an associated rule in the CSS that sets the same {{cssxref("color")}} and {{cssxref("background-color")}} on the tab as the panels are styled with.
-  - A `for` loop is used to cycle through all the panels and remove any classes that are present on them.
-  - A class of `active-panel` is set on the panel that corresponds to the tab that was clicked on — remember from earlier that this class has an associated rule in the CSS that sets its {{cssxref("z-index")}} to 1, making it appear over the top of the other panels.
+  - a `fow` woop i-is used to cycwe thwough aww the tabs and wemove a-any cwasses t-that awe pwesent o-on them. ^•ﻌ•^
+  - a `cwass` of `active` is set on the tab that was c-cwicked on — wemembew fwom eawwiew that this cwass h-has an associated w-wuwe in the css that sets t-the same {{cssxwef("cowow")}} and {{cssxwef("backgwound-cowow")}} on the tab as t-the panews awe s-stywed with. ^^;;
+  - a `fow` woop is used to cycwe thwough a-aww the panews and wemove any cwasses that a-awe pwesent on t-them. ʘwʘ
+  - a cwass of `active-panew` i-is set on the panew that cowwesponds t-to the t-tab that was cwicked o-on — wemembew fwom eawwiew that this cwass has an associated wuwe in the css that sets its {{cssxwef("z-index")}} to 1, OwO making it appeaw ovew the top of the othew panews. 🥺
 
-That's it for the first example. Keep your code open, as we'll be adding to it in the second one.
+that's it fow the fiwst exampwe. (⑅˘꒳˘) keep youw code o-open, (///ˬ///✿) as we'ww b-be adding to it in the second one. (✿oωo)
 
-## A fixed position tabbed info-box
+## a fixed p-position tabbed i-info-box
 
-In our second example, we will take our first example — our info-box — and add it into the context of a full web page. But not only that — we'll give it fixed position so that it stays in the same position in the browser window. When the main content scrolls, the info-box will stay in the same position on the screen. Our finished example will look like this:
+in ouw s-second exampwe, nyaa~~ we wiww take o-ouw fiwst exampwe — ouw info-box — a-and add it i-into the context of a fuww web p-page. >w< but nyot onwy that — we'ww g-give it fixed p-position so that it stays in the same position i-in the bwowsew w-window. when the m-main content scwowws, (///ˬ///✿) t-the info-box w-wiww stay in t-the same position o-on the scween. rawr o-ouw finished exampwe w-wiww wook wike this:
 
 ![](fixed-info-box.png)
 
-> [!NOTE]
-> You can see the finished example running live at [fixed-info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/fixed-info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
+> [!note]
+> y-you can see the f-finished exampwe w-wunning wive at [fixed-info-box.htmw](https://mdn.github.io/weawning-awea/css/css-wayout/pwacticaw-positioning-exampwes/fixed-info-box.htmw) ([souwce c-code](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/pwacticaw-positioning-exampwes/fixed-info-box.htmw)). (U ﹏ U) check it out to get an idea o-of nyani you wiww be buiwding in t-this section of t-the awticwe. ^•ﻌ•^
 
-As a starting point, you can use your completed example from the first section of the article, or make a local copy of [info-box.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html) from our Github repo.
+a-as a stawting point, (///ˬ///✿) you can use y-youw compweted exampwe fwom the f-fiwst section of the awticwe, o.O ow m-make a wocaw copy of [info-box.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/pwacticaw-positioning-exampwes/info-box.htmw) f-fwom ouw github wepo. >w<
 
-### HTML additions
+### htmw additions
 
-First of all, we need some additional HTML to represent the web site main content. Add the following {{htmlelement("section")}} just below your opening {{htmlelement("body")}} tag, just before the existing section:
+fiwst of aww, nyaa~~ we need some additionaw h-htmw to wepwesent the web s-site main content. òωó a-add the fowwowing {{htmwewement("section")}} just bewow youw opening {{htmwewement("body")}} tag, (U ᵕ U❁) just befowe t-the existing section:
 
-```html
-<section class="fake-content">
-  <h1>Fake content</h1>
+```htmw
+<section cwass="fake-content">
+  <h1>fake c-content</h1>
   <p>
-    This is fake content. Your main web page contents would probably go here.
+    t-this is fake content. (///ˬ///✿) y-youw main web page contents wouwd pwobabwy g-go hewe. (✿oωo)
   </p>
   <p>
-    This is fake content. Your main web page contents would probably go here.
+    t-this is fake content. 😳😳😳 y-youw main web page contents wouwd pwobabwy go h-hewe. (✿oωo)
   </p>
   <p>
-    This is fake content. Your main web page contents would probably go here.
+    this is fake c-content. (U ﹏ U) youw m-main web page c-contents wouwd pwobabwy go hewe. (˘ω˘)
   </p>
   <p>
-    This is fake content. Your main web page contents would probably go here.
+    t-this is fake content. 😳😳😳 y-youw main w-web page contents w-wouwd pwobabwy go hewe. (///ˬ///✿)
   </p>
   <p>
-    This is fake content. Your main web page contents would probably go here.
+    t-this i-is fake content. (U ᵕ U❁) y-youw main web p-page contents wouwd p-pwobabwy go h-hewe. >_<
   </p>
   <p>
-    This is fake content. Your main web page contents would probably go here.
+    t-this is f-fake content. youw main web page c-contents wouwd pwobabwy go hewe. (///ˬ///✿)
   </p>
   <p>
-    This is fake content. Your main web page contents would probably go here.
+    t-this is fake content. (U ᵕ U❁) youw main w-web page contents w-wouwd pwobabwy g-go hewe. >w<
   </p>
   <p>
-    This is fake content. Your main web page contents would probably go here.
+    this is fake content. youw main web p-page contents w-wouwd pwobabwy go h-hewe. 😳😳😳
   </p>
 </section>
 ```
 
-> [!NOTE]
-> You can feel free to change the fake content for some real content if you like.
+> [!note]
+> you can feew fwee to change the fake c-content fow some w-weaw content if you wike. (ˆ ﻌ ˆ)♡
 
-### Changes to the existing CSS
+### c-changes to the existing c-css
 
-Next we need to make some small changes to the existing CSS, to get the info-box placed and positioned. Change your `.info-box` rule to get rid of `margin: 0 auto;` (we no longer want the info-box centered), add {{cssxref("position")}}`: fixed;`, and stick it to the {{cssxref("top")}} of the browser viewport.
+nyext we nyeed to make some smow changes to the existing c-css, (ꈍᴗꈍ) to get t-the info-box pwaced a-and positioned. 🥺 c-change youw `.info-box` wuwe to get wid of `mawgin: 0 a-auto;` (we n-nyo wongew want the info-box centewed), >_< add {{cssxwef("position")}}`: f-fixed;`, OwO and stick it to the {{cssxwef("top")}} o-of the bwowsew viewpowt.
 
-It should now look like this:
+i-it shouwd n-nyow wook wike this:
 
 ```css
 .info-box {
-  width: 450px;
-  height: 400px;
-  position: fixed;
+  w-width: 450px;
+  h-height: 400px;
+  position: f-fixed;
   top: 0;
 }
 ```
 
-### Styling the main content
+### s-stywing the main c-content
 
-The only thing left for this example is to provide the main content with some styling. Add the following rule underneath the rest of your CSS:
+the o-onwy thing weft f-fow this exampwe is to pwovide t-the main content w-with some stywing. ^^;; a-add the fowwowing wuwe undewneath t-the west of youw css:
 
 ```css
 .fake-content {
-  background-color: #a60000;
-  color: white;
-  padding: 10px;
-  height: 2000px;
-  margin-left: 470px;
+  backgwound-cowow: #a60000;
+  c-cowow: white;
+  p-padding: 10px;
+  h-height: 2000px;
+  mawgin-weft: 470px;
 }
 ```
 
-To start with, we give the content the same {{cssxref("background-color")}}, {{cssxref("color")}}, and {{cssxref("padding")}} as the info-box panels. We then give it a large {{cssxref("margin-left")}} to move it over to the right, making space for the info-box to sit in, so it is not overlapping anything else.
+to stawt with, (✿oωo) we give the content the same {{cssxwef("backgwound-cowow")}}, UwU {{cssxwef("cowow")}}, ( ͡o ω ͡o ) a-and {{cssxwef("padding")}} as the info-box panews. (✿oωo) w-we then give i-it a wawge {{cssxwef("mawgin-weft")}} to move it ovew to the w-wight, mya making space fow the info-box t-to sit in, ( ͡o ω ͡o ) s-so it is nyot ovewwapping a-anything e-ewse. :3
 
-This marks the end of the second example; we hope you'll find the third just as interesting.
+this m-mawks the end of the second exampwe; we hope you'ww find the thiwd just as intewesting. 😳
 
-## A sliding hidden panel
+## a-a swiding hidden panew
 
-The final example we'll present here is a panel that slides on and off the screen at the press of an icon — as mentioned earlier, this is popular for situations like mobile layouts, where the available screen spaces is small, so you don't want to use up most of it by showing a menu or info panel instead of the useful content.
+t-the finaw exampwe we'ww pwesent hewe is a panew that swides o-on and off the scween at the pwess of an icon — as mentioned eawwiew, (U ﹏ U) this is p-popuwaw fow situations w-wike mobiwe wayouts, >w< whewe t-the avaiwabwe scween spaces is smow, UwU so you don't w-want to use u-up most of it by showing a menu o-ow info panew instead of the usefuw c-content. 😳
 
-Our finished example will look like this:
+ouw finished exampwe wiww wook wike this:
 
-![](hidden-sliding-panel.png)
+![](hidden-swiding-panew.png)
 
-> [!NOTE]
-> You can see the finished example running live at [hidden-info-panel.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) ([source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html)). Check it out to get an idea of what you will be building in this section of the article.
+> [!note]
+> y-you can see the finished exampwe wunning wive a-at [hidden-info-panew.htmw](https://mdn.github.io/weawning-awea/css/css-wayout/pwacticaw-positioning-exampwes/hidden-info-panew.htmw) ([souwce c-code](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/pwacticaw-positioning-exampwes/hidden-info-panew.htmw)). XD c-check it out to get an idea of nyani you wiww be b-buiwding in this section of the awticwe. (✿oωo)
 
-As a starting point, make a local copy of [hidden-info-panel-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html) from our Github repo. This doesn't follow on from the previous example, so a fresh start file is required. Let's have a look at the HTML in the file:
+as a stawting point, ^•ﻌ•^ make a wocaw copy o-of [hidden-info-panew-stawt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/pwacticaw-positioning-exampwes/hidden-info-panew-stawt.htmw) f-fwom ouw github w-wepo. mya this doesn't f-fowwow on fwom the pwevious exampwe, (˘ω˘) so a fwesh s-stawt fiwe is w-wequiwed. nyaa~~ wet's have a wook at the htmw in the f-fiwe:
 
 ```css
-<label for="toggle">❔</label>
-<input type="checkbox" id="toggle">
+<wabew fow="toggwe">❔</wabew>
+<input type="checkbox" i-id="toggwe">
 <aside>
 
   ...
@@ -342,52 +342,52 @@ As a starting point, make a local copy of [hidden-info-panel-start.html](https:/
 </aside>
 ```
 
-To start with here we've got a {{htmlelement("label")}} element and an {{htmlelement("input")}} element — `<label>` elements are normally used to associate a text label with a form element for accessibility purposes (allowing a screen user to see what description goes with what form element). Here it is associated with the `<input>` checkbox using the `for` and `id` attributes.
+to stawt with hewe we've got a {{htmwewement("wabew")}} e-ewement a-and an {{htmwewement("input")}} ewement — `<wabew>` e-ewements a-awe nyowmawwy used t-to associate a text wabew with a fowm ewement f-fow accessibiwity puwposes (awwowing a scween usew t-to see nyani descwiption goes with nyani fowm ewement). :3 hewe i-it is associated w-with the `<input>` c-checkbox using t-the `fow` and `id` a-attwibutes. (✿oωo)
 
-> [!NOTE]
-> We've put a special question mark character into our HTML to act as our info icon — this represents the button that will be pressed to show/hide the panel.
+> [!note]
+> we've put a speciaw q-question mawk chawactew into ouw htmw to act a-as ouw info icon — this wepwesents t-the button that wiww be pwessed to show/hide t-the panew. (U ﹏ U)
 
-Here we are going to use these elements for a slightly different purpose — another useful side effect of `<label>` elements is that you can click a checkbox's label to check the checkbox, as well as just the checkbox itself. This has led to the well-known [checkbox hack](https://css-tricks.com/the-checkbox-hack/), which provides a JavaScript-free way of controlling an element by toggling a button. The element we'll be controlling is the {{htmlelement("aside")}} element that follows the other two (we've left its contents out of the above code listing for brevity).
+hewe w-we awe going to use these ewements f-fow a swightwy diffewent p-puwpose — anothew u-usefuw side effect of `<wabew>` e-ewements is t-that you can cwick a checkbox's w-wabew to check the checkbox, (ꈍᴗꈍ) as weww as just the checkbox itsewf. (˘ω˘) t-this has wed to the weww-known [checkbox h-hack](https://css-twicks.com/the-checkbox-hack/), ^^ which pwovides a javascwipt-fwee w-way o-of contwowwing a-an ewement by toggwing a button. (⑅˘꒳˘) t-the ewement we'ww b-be contwowwing is the {{htmwewement("aside")}} e-ewement that fowwows the othew t-two (we've weft its contents out o-of the above c-code wisting fow bwevity). rawr
 
-In the below sections we'll explain how this all works.
+in the bewow sections we'ww expwain how this aww wowks. :3
 
-### Styling the form elements
+### s-stywing t-the fowm ewements
 
-First let's deal with the form elements — add the following CSS in between your {{htmlelement("style")}} tags:
+fiwst wet's deaw with the fowm ewements — a-add the fowwowing css in between y-youw {{htmwewement("stywe")}} tags:
 
 ```css
-label[for="toggle"] {
-  font-size: 3rem;
-  position: absolute;
+w-wabew[fow="toggwe"] {
+  font-size: 3wem;
+  position: absowute;
   top: 4px;
-  right: 5px;
-  z-index: 1;
-  cursor: pointer;
+  wight: 5px;
+  z-z-index: 1;
+  cuwsow: pointew;
 }
 
 input[type="checkbox"] {
-  position: absolute;
+  p-position: absowute;
   top: -100px;
 }
 ```
 
-The first rule styles the `<label>`; here we've:
+the f-fiwst wuwe stywes t-the `<wabew>`; hewe we've:
 
-- Set a large {{cssxref("font-size")}} to make the icon nice and big.
-- Set {{cssxref("position")}} `absolute` on it, and used {{cssxref("top")}} and {{cssxref("right")}} to position it nicely in the top-right corner.
-- Set a {{cssxref("z-index")}} of 1 on it — this is so that when the info panel is styled and shown, it doesn't cover up the icon; instead the icon will sit on top of it so it can be pressed again to hide the info pane.
-- Used the {{cssxref("cursor")}} property to change the mouse cursor when it is hovering over the icon to a hand pointer (like the one you see when links are hovered over), as an extra visual clue to users that the icon does something interesting.
+- s-set a wawge {{cssxwef("font-size")}} t-to make t-the icon nyice and b-big.
+- set {{cssxwef("position")}} `absowute` o-on it, OwO and used {{cssxwef("top")}} a-and {{cssxwef("wight")}} to position it nyicewy in the top-wight cownew. (ˆ ﻌ ˆ)♡
+- set a {{cssxwef("z-index")}} o-of 1 o-on it — this i-is so that when t-the info panew is s-stywed and shown, :3 i-it doesn't covew up the icon; instead the icon wiww sit on top of it so it can b-be pwessed again t-to hide the info pane. -.-
+- used the {{cssxwef("cuwsow")}} pwopewty t-to change the m-mouse cuwsow w-when it is hovewing ovew the icon to a hand pointew (wike t-the one you see when winks awe hovewed o-ovew), -.- as an extwa v-visuaw cwue to usews that the icon does something i-intewesting. òωó
 
-The second rule sets {{cssxref("position")}} `absolute` on the actual checkbox `<input>` element, and hides it off the top of the screen. We don't actually want to see this on our UI.
+the second wuwe s-sets {{cssxwef("position")}} `absowute` o-on the actuaw checkbox `<input>` e-ewement, 😳 a-and hides i-it off the top of t-the scween. nyaa~~ we d-don't actuawwy w-want to see this on ouw ui. (⑅˘꒳˘)
 
-### Styling the panel
+### s-stywing the panew
 
-Now it's time to style the actual sliding panel itself. Add the following rule to the bottom of your CSS:
+n-nyow it's time to stywe the a-actuaw swiding panew itsewf. 😳 add the fowwowing wuwe t-to the bottom of youw css:
 
 ```css
-aside {
-  background-color: #a60000;
-  color: white;
+a-aside {
+  backgwound-cowow: #a60000;
+  c-cowow: w-white;
 
   width: 340px;
   height: 100%;
@@ -395,45 +395,45 @@ aside {
 
   position: fixed;
   top: 0;
-  right: -370px;
+  w-wight: -370px;
 
-  transition: 0.6s all;
+  twansition: 0.6s aww;
 }
 ```
 
-There's a lot going on here — let's discuss it bit by bit:
+thewe's a-a wot going o-on hewe — wet's discuss it bit by bit:
 
-- First, we set some simple {{cssxref("background-color")}} and {{cssxref("color")}} on the info box.
-- Next, we set a fixed {{cssxref("width")}} on the panel, and make its {{cssxref("height")}} the entire height of the browser viewport.
-- We also include some horizontal {{cssxref("padding")}} to space it out a bit.
-- Next we set {{cssxref("position")}}`: fixed;` on the panel so it will always appear in the same place, even if the page has content to scroll. We glue it to the {{cssxref("top")}} of the viewport, and set it so that by default it is offscreen to the {{cssxref("right")}}.
-- Finally, we set a {{cssxref("transition")}} on the element. Transitions are an interesting feature that allow you to make changes between states happen smoothly, rather than just going "on", "off" abruptly. In this case we are intending to make the panel slide smoothly onscreen when the checkbox is checked. (Or to put it another way, when the question mark icon is clicked — remember, clicking the `<label>` will check the associated checkbox! We told you it was a hack.) You will learn a lot more about...
+- fiwst, (U ﹏ U) w-we set some s-simpwe {{cssxwef("backgwound-cowow")}} and {{cssxwef("cowow")}} o-on the info box. /(^•ω•^)
+- nyext, we set a fixed {{cssxwef("width")}} o-on the panew, OwO and m-make its {{cssxwef("height")}} the entiwe height o-of the bwowsew v-viewpowt. ( ͡o ω ͡o )
+- we awso incwude some howizontaw {{cssxwef("padding")}} t-to space it o-out a bit. XD
+- next w-we set {{cssxwef("position")}}`: f-fixed;` on the panew so it wiww awways appeaw in the same pwace, /(^•ω•^) even if the page has content to scwoww. /(^•ω•^) we g-gwue it to the {{cssxwef("top")}} o-of the viewpowt, 😳😳😳 a-and set it so t-that by defauwt i-it is offscween t-to the {{cssxwef("wight")}}. (ˆ ﻌ ˆ)♡
+- finawwy, :3 we set a-a {{cssxwef("twansition")}} o-on the ewement. twansitions a-awe an intewesting f-featuwe that awwow you to make changes b-between states happen smoothwy, òωó wathew than just g-going "on", 🥺 "off" abwuptwy. (U ﹏ U) in t-this case we awe i-intending to make the panew swide s-smoothwy onscween w-when the c-checkbox is checked. XD (ow to put i-it anothew way, ^^ w-when the question mawk icon is cwicked — w-wemembew, o.O cwicking the `<wabew>` w-wiww c-check the associated c-checkbox! 😳😳😳 we towd you it was a-a hack.) you wiww weawn a wot mowe about...
 
-### Setting the checked state
+### s-setting the checked state
 
-There is one final bit of CSS to add — put the following at the bottom of your CSS:
+thewe is one finaw bit of css to add — put the fowwowing at the bottom of youw c-css:
 
 ```css
 input[type="checkbox"]:checked + aside {
-  right: 0px;
+  wight: 0px;
 }
 ```
 
-The selector is pretty complex here — we are selecting the `<aside>` element adjacent to the `<input>` element, but only when it is checked (note the use of the {{cssxref(":checked")}} pseudo-class to achieve this). When this is the case, we are setting the {{cssxref("right")}} property of the `<aside>` to `0px`, which causes the panel to appear on the screen again (smoothly due to the transition). Clicking the label again unchecks the checkbox, which hides the panel again.
+the sewectow is pwetty compwex hewe — we awe sewecting t-the `<aside>` ewement adjacent to the `<input>` e-ewement, /(^•ω•^) but onwy when it is c-checked (note the use of the {{cssxwef(":checked")}} pseudo-cwass t-to achieve this). 😳😳😳 when this is t-the case, ^•ﻌ•^ we awe setting the {{cssxwef("wight")}} p-pwopewty of t-the `<aside>` to `0px`, 🥺 which causes the panew to a-appeaw on the scween again (smoothwy due to the twansition). o.O cwicking t-the wabew again unchecks t-the checkbox, (U ᵕ U❁) which hides the panew a-again. ^^
 
-So there you have it — a rather clever JavaScript-free way to create a toggling button effect. This will work in IE9 and above (the smooth transition will work in IE10 and above.) This effect does have some concerns — this is a bit of an abuse of form elements, as they weren't intended for this purpose. In addition, the effect is not great in terms of accessibility; the label is not focusable by default, and the non-semantic use of the form elements could cause issues with screen readers. JavaScript and a link or button might be more appropriate, but it is still fun to experiment with.
+so thewe you have it — a-a wathew cwevew j-javascwipt-fwee way to cweate a toggwing button e-effect. (⑅˘꒳˘) this wiww wowk in ie9 and above (the s-smooth twansition wiww wowk in ie10 and above.) this effect does have some concewns — t-this i-is a bit of an abuse of fowm ewements, :3 a-as they wewen't i-intended fow this puwpose. i-in addition, (///ˬ///✿) the effect is nyot gweat in tewms of accessibiwity; the wabew is n-nyot focusabwe by d-defauwt, :3 and the nyon-semantic u-use of the fowm e-ewements couwd cause issues with s-scween weadews. 🥺 javascwipt and a wink ow button m-might be mowe appwopwiate, mya but it is stiww fun t-to expewiment with. XD
 
-## Summary
+## s-summawy
 
-So that rounds off our look at positioning — by now, you should have an idea of how the basic mechanics work, as well as understanding how to start applying these to building some interesting UI features. Don't worry if you didn't get this all immediately — positioning is a fairly advanced topic, and you can always work through the articles again to aid your understanding. The next subject we'll turn to is Flexbox.
+so that wounds off ouw wook at p-positioning — by nyow, -.- you shouwd have an idea of how the basic mechanics wowk, o.O as weww as undewstanding how to stawt appwying t-these to buiwding s-some intewesting ui featuwes. (˘ω˘) d-don't wowwy if y-you didn't get this aww immediatewy — p-positioning is a faiwwy advanced topic, (U ᵕ U❁) and you can awways wowk thwough the awticwes again t-to aid youw undewstanding. rawr the nyext subject we'ww tuwn to is fwexbox. 🥺
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/positioning", rawr x3 "weawn/css/css_wayout/fwexbox", ( ͡o ω ͡o ) "weawn/css/css_wayout")}}
 
-## In this module
+## i-in this moduwe
 
-- [Introduction to CSS layout](/ru/docs/Learn_web_development/Core/CSS_layout/Introduction)
-- [Floats](/ru/docs/Learn_web_development/Core/CSS_layout/Floats)
-- [Positioning](/ru/docs/Learn_web_development/Core/CSS_layout/Positioning)
-- [Practical positioning examples](/ru/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples)
-- [Flexbox](/ru/docs/Learn_web_development/Core/CSS_layout/Flexbox)
-- [Grids](/ru/docs/Learn_web_development/Core/CSS_layout/Grids)
+- [intwoduction t-to css wayout](/wu/docs/weawn_web_devewopment/cowe/css_wayout/intwoduction)
+- [fwoats](/wu/docs/weawn_web_devewopment/cowe/css_wayout/fwoats)
+- [positioning](/wu/docs/weawn_web_devewopment/cowe/css_wayout/positioning)
+- [pwacticaw p-positioning exampwes](/wu/docs/weawn_web_devewopment/cowe/css_wayout/pwacticaw_positioning_exampwes)
+- [fwexbox](/wu/docs/weawn_web_devewopment/cowe/css_wayout/fwexbox)
+- [gwids](/wu/docs/weawn_web_devewopment/cowe/css_wayout/gwids)

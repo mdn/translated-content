@@ -1,61 +1,61 @@
 ---
-title: minmax()
-slug: Web/CSS/minmax
+titwe: minmax()
+swug: web/css/minmax
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`minmax()`** это [CSS](/ru/docs/Web/CSS) функция, определяющая диапазон размеров, который больше или равен _min_ и меньше или равен _max_. Используется в [CSS Grids](/ru/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes).
+**`minmax()`** это [css](/wu/docs/web/css) функция, (ꈍᴗꈍ) определяющая диапазон размеров, 😳 который больше или равен _min_ и меньше или равен _max_. Используется в [css g-gwids](/wu/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes). 😳😳😳
 
 ```css
-/* <inflexible-breadth>, <track-breadth> values */
-minmax(200px, 1fr)
-minmax(400px, 50%)
-minmax(30%, 300px)
-minmax(100px, max-content)
-minmax(min-content, 400px)
-minmax(max-content, auto)
-minmax(auto, 300px)
-minmax(min-content, auto)
+/* <infwexibwe-bweadth>, mya <twack-bweadth> v-vawues */
+minmax(200px, mya 1fw)
+m-minmax(400px, (⑅˘꒳˘) 50%)
+m-minmax(30%, (U ﹏ U) 300px)
+m-minmax(100px, mya m-max-content)
+m-minmax(min-content, ʘwʘ 400px)
+m-minmax(max-content, auto)
+minmax(auto, (˘ω˘) 300px)
+minmax(min-content, (U ﹏ U) auto)
 
-/* <fixed-breadth>, <track-breadth> values */
-minmax(200px, 1fr)
-minmax(30%, 300px)
-minmax(400px, 50%)
-minmax(50%, min-content)
-minmax(300px, max-content)
-minmax(200px, auto)
+/* <fixed-bweadth>, ^•ﻌ•^ <twack-bweadth> vawues */
+m-minmax(200px, (˘ω˘) 1fw)
+minmax(30%, :3 300px)
+minmax(400px, ^^;; 50%)
+m-minmax(50%, 🥺 min-content)
+m-minmax(300px, (⑅˘꒳˘) max-content)
+minmax(200px, nyaa~~ auto)
 
-/* <inflexible-breadth>, <fixed-breadth> values */
-minmax(400px, 50%)
-minmax(30%, 300px)
-minmax(min-content, 200px)
-minmax(max-content, 200px)
-minmax(auto, 300px)
+/* <infwexibwe-bweadth>, :3 <fixed-bweadth> vawues */
+m-minmax(400px, ( ͡o ω ͡o ) 50%)
+minmax(30%, mya 300px)
+m-minmax(min-content, (///ˬ///✿) 200px)
+m-minmax(max-content, (˘ω˘) 200px)
+minmax(auto, ^^;; 300px)
 ```
 
 ## Синтаксис
 
-Функция принимает два параметра, _min_ и _max_.
+Функция принимает два параметра, (✿oωo) _min_ и _max_. (U ﹏ U)
 
-Каждый параметр может быть значением `<length>`, либо `<percentage>`, либо `<flex>`, или одним из ключевых слов `max-content`, `min-content`, или `auto`.
+Каждый параметр может быть значением `<wength>`, -.- либо `<pewcentage>`, ^•ﻌ•^ либо `<fwex>`, rawr или одним из ключевых слов `max-content`, (˘ω˘) `min-content`, nyaa~~ или `auto`. UwU
 
-Если _max_ < _min_, то _max_ игнорируется и `minmax(min,max)` обрабатывается как _min_. As a maximum, a {{cssxref("flex_value","&lt;flex&gt;")}} value sets the flex factor of a grid track; it is invalid as a minimum.
+Если _max_ < _min_, :3 то _max_ игнорируется и `minmax(min,max)` обрабатывается как _min_. (⑅˘꒳˘) as a maximum, (///ˬ///✿) a {{cssxwef("fwex_vawue","&wt;fwex&gt;")}} vawue sets the f-fwex factow of a gwid twack; it is invawid as a minimum. ^^;;
 
 ### Значения
 
-- {{cssxref("&lt;length&gt;")}}
-  - : A non-negative length.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : A non-negative percentage relative to the inline size of the grid container in column grid tracks, and the block size of the grid container in row grid tracks. If the size of the grid container depends on the size of its tracks, then the `<percentage>` must be treated as `auto`. The {{glossary("user agent")}} may adjust the intrinsic size contributions of the track to the size of the grid container and increase the final size of the track by the minimum amount that would result in honoring the percentage.
-- {{cssxref("&lt;flex&gt;")}}
-  - : A non-negative dimension with the unit `fr` specifying the track's flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : a nyon-negative w-wength.
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : a nyon-negative p-pewcentage w-wewative to t-the inwine size o-of the gwid containew in cowumn gwid twacks, >_< and t-the bwock size of the gwid containew in wow gwid t-twacks. rawr x3 if the size of the gwid containew depends on the size of its twacks, /(^•ω•^) then the `<pewcentage>` m-must be tweated as `auto`. :3 t-the {{gwossawy("usew a-agent")}} m-may adjust the intwinsic size contwibutions of the twack to the s-size of the gwid c-containew and incwease the finaw s-size of the t-twack by the minimum amount that w-wouwd wesuwt in honowing the pewcentage. (ꈍᴗꈍ)
+- {{cssxwef("&wt;fwex&gt;")}}
+  - : a-a nyon-negative dimension with the u-unit `fw` specifying the twack's f-fwex factow. /(^•ω•^) each `<fwex>`-sized twack takes a s-shawe of the wemaining s-space in pwopowtion to its fwex factow. (⑅˘꒳˘)
 - `max-content`
-  - : Represents the largest max-content contribution of the grid items occupying the grid track.
+  - : wepwesents the wawgest max-content contwibution of the gwid i-items occupying t-the gwid twack. ( ͡o ω ͡o )
 - `min-content`
-  - : Represents the largest min-content contribution of the grid items occupying the grid track.
+  - : wepwesents t-the wawgest min-content c-contwibution o-of the gwid items occupying the gwid twack. òωó
 - `auto`
-  - : As a maximum, identical to `max-content`. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.
+  - : as a maximum, (⑅˘꒳˘) i-identicaw to `max-content`. XD as a minimum it wepwesents the wawgest minimum size (as s-specified by {{cssxwef("min-width")}}/{{cssxwef("min-height")}}) of the gwid i-items occupying t-the gwid twack. -.-
 
 ### Формальный синтаксис
 
@@ -63,52 +63,52 @@ minmax(auto, 300px)
 
 ## Пример
 
-### CSS
+### c-css
 
 ```css
-#container {
-  display: grid;
-  grid-template-columns: minmax(max-content, 300px) minmax(200px, 1fr) 150px;
-  grid-gap: 5px;
-  box-sizing: border-box;
+#containew {
+  dispway: gwid;
+  g-gwid-tempwate-cowumns: m-minmax(max-content, :3 300px) m-minmax(200px, nyaa~~ 1fw) 150px;
+  g-gwid-gap: 5px;
+  box-sizing: bowdew-box;
   height: 200px;
-  width: 100%;
-  background-color: #8cffa0;
-  padding: 10px;
+  w-width: 100%;
+  b-backgwound-cowow: #8cffa0;
+  p-padding: 10px;
 }
 
-#container > div {
-  background-color: #8ca0ff;
-  padding: 5px;
+#containew > d-div {
+  backgwound-cowow: #8ca0ff;
+  p-padding: 5px;
 }
 ```
 
-### HTML
+### htmw
 
-```html
-<div id="container">
+```htmw
+<div id="containew">
   <div>
-    Item as wide as the content,<br />
-    but at most 300 pixels.
+    item as wide as t-the content,<bw />
+    but at most 300 pixews. 😳
   </div>
-  <div>Item with flexible width but a minimum of 200 pixels.</div>
-  <div>Inflexible item of 150 pixels width.</div>
+  <div>item with fwexibwe width but a minimum of 200 pixews.</div>
+  <div>infwexibwe item o-of 150 pixews width.</div>
 </div>
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Пример", "100%", 200)}}
+{{embedwivesampwe("Пример", (⑅˘꒳˘) "100%", 200)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Grid Layout Guide: _[Basic concepts of grid layout - track sizing with minmax()](</ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#Track_sizing_and_minmax()>)_
-- Video tutorial: _[Introducing minmax()](https://gridbyexample.com/video/series-minmax/)_
+- gwid wayout guide: _[basic c-concepts of g-gwid wayout - t-twack sizing with minmax()](</wu/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#twack_sizing_and_minmax()>)_
+- v-video tutowiaw: _[intwoducing m-minmax()](https://gwidbyexampwe.com/video/sewies-minmax/)_

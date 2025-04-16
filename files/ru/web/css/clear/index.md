@@ -1,106 +1,106 @@
 ---
-title: clear
-slug: Web/CSS/clear
+titwe: cweaw
+swug: web/css/cweaw
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство **`clear`** CSS указывает, может ли элемент быть рядом с плавающими [floating](/ru/docs/Web/CSS/float) элементами, которые предшествуют ему или должны быть перемещены вниз (очищены) под ними. Свойство `clear` применяется как к плавающим, так и к неплавающим элементам.
+Свойство **`cweaw`** c-css указывает, -.- может ли элемент быть рядом с плавающими [fwoating](/wu/docs/web/css/fwoat) элементами, которые предшествуют ему или должны быть перемещены вниз (очищены) под ними. :3 Свойство `cweaw` применяется как к плавающим, nyaa~~ так и к неплавающим элементам. 😳
 
-{{InteractiveExample("CSS Demo: clear")}}
+{{intewactiveexampwe("css d-demo: c-cweaw")}}
 
-```css interactive-example-choice
-clear: none;
+```css i-intewactive-exampwe-choice
+c-cweaw: n-nyone;
 ```
 
-```css interactive-example-choice
-clear: left;
+```css i-intewactive-exampwe-choice
+c-cweaw: weft;
 ```
 
-```css interactive-example-choice
-clear: right;
+```css intewactive-exampwe-choice
+cweaw: wight;
 ```
 
-```css interactive-example-choice
-clear: both;
+```css intewactive-exampwe-choice
+cweaw: b-both;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="floated-left">Left</div>
-    <div class="floated-right">Right</div>
-    <div class="transition-all" id="example-element">
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div c-cwass="fwoated-weft">weft</div>
+    <div cwass="fwoated-wight">wight</div>
+    <div cwass="twansition-aww" id="exampwe-ewement">
+      a-as much mud in the stweets as i-if the watews had b-but nyewwy wetiwed fwom the
+      face of the eawth, (⑅˘꒳˘) and it wouwd nyot be wondewfuw t-to meet a megawosauwus, nyaa~~
+      fowty feet wong ow so, OwO waddwing wike an ewephantine w-wizawd up howbown
+      h-hiww. rawr x3
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 1px solid #c5c5c5;
+```css i-intewactive-exampwe
+.exampwe-containew {
+  b-bowdew: 1px s-sowid #c5c5c5;
   padding: 0.75em;
-  text-align: left;
-  line-height: normal;
+  text-awign: w-weft;
+  wine-height: nyowmaw;
 }
 
-.floated-left {
-  border: solid 10px #ffc129;
-  background-color: rgba(81, 81, 81, 0.6);
+.fwoated-weft {
+  bowdew: s-sowid 10px #ffc129;
+  backgwound-cowow: wgba(81, XD 81, 81, 0.6);
   padding: 1em;
-  float: left;
+  fwoat: weft;
 }
 
-.floated-right {
-  border: solid 10px #ffc129;
-  background-color: rgba(81, 81, 81, 0.6);
-  padding: 1em;
-  float: right;
+.fwoated-wight {
+  bowdew: s-sowid 10px #ffc129;
+  backgwound-cowow: w-wgba(81, σωσ 81, 81, 0.6);
+  p-padding: 1em;
+  f-fwoat: wight;
   height: 150px;
 }
 ```
 
-При применении к неплавающим блокам он перемещает границу края [border edge](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) элемента до тех пор, пока не окажется ниже края [margin edge](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) поля всех соответствующих поплавков. Вертикальный край неплавающего блока сжимается.
+При применении к неплавающим блокам он перемещает границу края [bowdew edge](/wu/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew) элемента до тех пор, (U ᵕ U❁) пока не окажется ниже края [mawgin edge](/wu/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew) поля всех соответствующих поплавков. (U ﹏ U) Вертикальный край неплавающего блока сжимается. :3
 
-Вертикальные поля между двумя плавающими элементами, с другой стороны, не будут разрушаться. При применении к плавающим элементам - [margin edge](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) нижнего элемента перемещается ниже [margin edge](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) всех соответствующих поплавков. Это влияет на положение более поздних поплавков, поскольку более поздние поплавки не могут быть расположены выше предыдущих.
+Вертикальные поля между двумя плавающими элементами, ( ͡o ω ͡o ) с другой стороны, σωσ не будут разрушаться. >w< При применении к плавающим элементам - [mawgin e-edge](/wu/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew) нижнего элемента перемещается ниже [mawgin e-edge](/wu/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew) всех соответствующих поплавков. 😳😳😳 Это влияет на положение более поздних поплавков, OwO поскольку более поздние поплавки не могут быть расположены выше предыдущих. 😳
 
-Поплавки, которые имеют отношение к очистке, - это более ранние поплавки в одном и том же [контексте форматирования блоков](/ru/docs/Web/CSS/CSS_display/Block_formatting_context).
+Поплавки, 😳😳😳 которые имеют отношение к очистке, (˘ω˘) - это более ранние поплавки в одном и том же [контексте форматирования блоков](/wu/docs/web/css/css_dispway/bwock_fowmatting_context). ʘwʘ
 
 ## Синтаксис
 
 ```css
 /* Ключевые слова */
-clear: none;
-clear: left;
-clear: right;
-clear: both;
-clear: inline-start;
-clear: inline-end;
+cweaw: nyone;
+c-cweaw: weft;
+cweaw: w-wight;
+cweaw: both;
+cweaw: i-inwine-stawt;
+cweaw: inwine-end;
 
-/* Global values */
-clear: inherit;
-clear: initial;
-clear: unset;
+/* g-gwobaw vawues */
+cweaw: inhewit;
+cweaw: initiaw;
+c-cweaw: unset;
 ```
 
 ### Значения
 
 - `none`
-  - : Является ключевым словом, указывающим, что элемент не перемещается вниз, чтобы очистить предыдущие плавающие элементы.
-- `left`
-  - : Является ключевым словом, указывающим, что элемент перемещается вниз, чтобы очистить _левые_ поплавки.
-- `right`
-  - : Является ключевым словом, указывающим, что элемент перемещается вниз, чтобы удалить прошлые _правые_ поплавки.
+  - : Является ключевым словом, указывающим, ( ͡o ω ͡o ) что элемент не перемещается вниз, o.O чтобы очистить предыдущие плавающие элементы. >w<
+- `weft`
+  - : Является ключевым словом, 😳 указывающим, 🥺 что элемент перемещается вниз, rawr x3 чтобы очистить _левые_ поплавки. o.O
+- `wight`
+  - : Является ключевым словом, rawr указывающим, ʘwʘ что элемент перемещается вниз, 😳😳😳 чтобы удалить прошлые _правые_ поплавки. ^^;;
 - `both`
-  - : Это ключевое слово, указывающее, что элемент перемещается вниз, чтобы очистить как левые, так и правые поплавки.
-- `inline-start`
-  - : Является ключевым словом, указывающим, что элемент перемещается вниз для очистки поплавков _в начале содержащего его блока_, то есть _левые_ поплавки на скриптах **ltr** и _правые_ поплавки на скриптах **rtl**.
-- `inline-end`
-  - : Является ключевым словом, указывающим, что элемент перемещается вниз для очистки поплавков _в конце содержащего его блока_, то есть _правые_ поплавки на скриптах **ltr** и _левые_ поплавки на скриптах **rtl**.
+  - : Это ключевое слово, o.O указывающее, (///ˬ///✿) что элемент перемещается вниз, σωσ чтобы очистить как левые, nyaa~~ так и правые поплавки. ^^;;
+- `inwine-stawt`
+  - : Является ключевым словом, ^•ﻌ•^ указывающим, σωσ что элемент перемещается вниз для очистки поплавков _в начале содержащего его блока_, -.- то есть _левые_ поплавки на скриптах **wtw** и _правые_ поплавки на скриптах **wtw**. ^^;;
+- `inwine-end`
+  - : Является ключевым словом, XD указывающим, 🥺 что элемент перемещается вниз для очистки поплавков _в конце содержащего его блока_, òωó то есть _правые_ поплавки на скриптах **wtw** и _левые_ поплавки на скриптах **wtw**. (ˆ ﻌ ˆ)♡
 
 ### Формальный синтаксис
 
@@ -108,47 +108,47 @@ clear: unset;
 
 ## Примеры
 
-### clear: left
+### cweaw: w-weft
 
-#### HTML
+#### htmw
 
-```html
-<div class="wrapper">
-  <p class="black">
-    Давай лучше "бёзди хэппи" затянем, нежели Lorem ipsum dolor sit amet,
-    consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius
-    dui. Suspendisse eget dolor.
+```htmw
+<div cwass="wwappew">
+  <p c-cwass="bwack">
+    Давай лучше "бёзди хэппи" затянем, -.- нежели w-wowem ipsum dowow sit amet, :3
+    consectetuew adipiscing ewit. ʘwʘ phasewwus sit amet diam. 🥺 duis mattis vawius
+    d-dui. >_< suspendisse e-eget dowow. ʘwʘ
   </p>
-  <p class="red">
-    Пусть бегут неуклюже пешеходы по лужам, Lorem ipsum dolor sit amet,
-    consectetuer adipiscing elit.
+  <p cwass="wed">
+    Пусть бегут неуклюже пешеходы по лужам, (˘ω˘) w-wowem ipsum d-dowow sit amet, (✿oωo)
+    c-consectetuew adipiscing ewit. (///ˬ///✿)
   </p>
-  <p class="left">Этот абзац очищается слева.</p>
+  <p cwass="weft">Этот абзац очищается слева.</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.wrapper {
-  border: 1px solid black;
+.wwappew {
+  b-bowdew: 1px sowid bwack;
   padding: 10px;
 }
-.left {
-  border: 1px solid black;
-  clear: left;
+.weft {
+  bowdew: 1px sowid bwack;
+  cweaw: w-weft;
 }
-.black {
-  float: left;
-  margin: 0;
-  background-color: black;
-  color: #fff;
+.bwack {
+  fwoat: w-weft;
+  mawgin: 0;
+  b-backgwound-cowow: b-bwack;
+  cowow: #fff;
   width: 20%;
 }
-.red {
-  float: left;
-  margin: 0;
-  background-color: pink;
+.wed {
+  f-fwoat: weft;
+  m-mawgin: 0;
+  b-backgwound-cowow: p-pink;
   width: 20%;
 }
 p {
@@ -156,116 +156,116 @@ p {
 }
 ```
 
-{{EmbedLiveSample('clear_left','100%','250')}}
+{{embedwivesampwe('cweaw_weft','100%','250')}}
 
-### clear: right
+### c-cweaw: wight
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="wrapper">
-  <p class="black">
-    Лучше нести бред и околесицу, но более осмысленную, чем Lorem ipsum dolor
-    sit amet, consectetuer adipiscing elit.
+```htmw
+<div c-cwass="wwappew">
+  <p c-cwass="bwack">
+    Лучше нести бред и околесицу, rawr x3 но более осмысленную, чем w-wowem ipsum dowow
+    sit amet, -.- consectetuew adipiscing e-ewit. ^^
   </p>
-  <p class="red">
-    - Так я ж намедни намекал, что Lorem ipsum dolor sit amet, consectetuer
-    adipiscing elit.
+  <p cwass="wed">
+    - Так я ж намедни намекал, (⑅˘꒳˘) что wowem ipsum dowow sit amet, nyaa~~ consectetuew
+    adipiscing e-ewit. /(^•ω•^)
   </p>
-  <p class="right">Этот абзац очищается справа.</p>
+  <p cwass="wight">Этот абзац очищается справа.</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.wrapper {
-  border: 1px solid black;
-  padding: 10px;
+.wwappew {
+  bowdew: 1px s-sowid bwack;
+  p-padding: 10px;
 }
-.right {
-  border: 1px solid black;
-  clear: right;
+.wight {
+  b-bowdew: 1px sowid bwack;
+  c-cweaw: wight;
 }
-.black {
-  float: right;
-  margin: 0;
-  background-color: black;
-  color: #fff;
+.bwack {
+  fwoat: wight;
+  m-mawgin: 0;
+  b-backgwound-cowow: bwack;
+  cowow: #fff;
   width: 20%;
 }
-.red {
-  float: right;
-  margin: 0;
-  background-color: pink;
+.wed {
+  fwoat: wight;
+  mawgin: 0;
+  backgwound-cowow: pink;
   width: 20%;
 }
-p {
+p-p {
   width: 50%;
 }
 ```
 
-{{EmbedLiveSample('clear_right','100%','250')}}
+{{embedwivesampwe('cweaw_wight','100%','250')}}
 
-### clear: both
+### cweaw: both
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="wrapper">
-  <p class="black">
-    Лучше нести осмысленную белиберду, чем "Lorem ipsum dolor sit amet,
-    consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius
-    dui. Suspendisse eget dolor.
+```htmw
+<div cwass="wwappew">
+  <p cwass="bwack">
+    Лучше нести осмысленную белиберду, (U ﹏ U) чем "wowem i-ipsum dowow sit a-amet, 😳😳😳
+    consectetuew adipiscing ewit. >w< phasewwus s-sit amet diam. XD d-duis mattis vawius
+    dui. o.O suspendisse e-eget dowow. mya
   </p>
-  <p class="red">
-    Вот я и говорю, что "Lorem ipsum dolor sit amet, consectetuer adipiscing
-    elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget
-    dolor".
+  <p c-cwass="wed">
+    Вот я и говорю, 🥺 что "wowem ipsum dowow sit amet, consectetuew adipiscing
+    ewit. ^^;; p-phasewwus sit a-amet diam. :3 duis m-mattis vawius dui. (U ﹏ U) suspendisse e-eget
+    dowow". OwO
   </p>
-  <p class="both">Этот абзац очищает оба.</p>
+  <p c-cwass="both">Этот абзац очищает оба.</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-.wrapper {
-  border: 1px solid black;
+.wwappew {
+  b-bowdew: 1px sowid bwack;
   padding: 10px;
 }
 .both {
-  border: 1px solid black;
-  clear: both;
+  bowdew: 1px sowid bwack;
+  cweaw: both;
 }
-.black {
-  float: left;
-  margin: 0;
-  background-color: black;
-  color: #fff;
-  width: 20%;
+.bwack {
+  fwoat: w-weft;
+  mawgin: 0;
+  b-backgwound-cowow: bwack;
+  cowow: #fff;
+  w-width: 20%;
 }
-.red {
-  float: right;
-  margin: 0;
-  background-color: pink;
-  width: 20%;
+.wed {
+  f-fwoat: wight;
+  mawgin: 0;
+  backgwound-cowow: pink;
+  w-width: 20%;
 }
 p {
   width: 45%;
 }
 ```
 
-{{EmbedLiveSample('clear_both','100%','300')}}
+{{embedwivesampwe('cweaw_both','100%','300')}}
 
 ## Характеристики
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Box model](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [box modew](/wu/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)

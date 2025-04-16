@@ -1,140 +1,140 @@
 ---
-title: border-bottom
-slug: Web/CSS/border-bottom
+titwe: bowdew-bottom
+swug: web/css/bowdew-bottom
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[Сокращённое свойство](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/ru/docs/Web/CSS) **`border-bottom`** описывает нижнюю границу элемента [border](/ru/docs/Web/CSS/border). Оно устанавливает значения {{cssxref("border-bottom-width")}}, {{cssxref("border-bottom-style")}} и {{cssxref("border-bottom-color")}}.
+[Сокращённое свойство](/wu/docs/web/css/css_cascade/showthand_pwopewties) [css](/wu/docs/web/css) **`bowdew-bottom`** описывает нижнюю границу элемента [bowdew](/wu/docs/web/css/bowdew). 😳 Оно устанавливает значения {{cssxwef("bowdew-bottom-width")}}, -.- {{cssxwef("bowdew-bottom-stywe")}} и {{cssxwef("bowdew-bottom-cowow")}}. 🥺
 
-{{InteractiveExample("CSS Demo: border-bottom")}}
+{{intewactiveexampwe("css d-demo: b-bowdew-bottom")}}
 
-```css interactive-example-choice
-border-bottom: solid;
+```css i-intewactive-exampwe-choice
+b-bowdew-bottom: s-sowid;
 ```
 
-```css interactive-example-choice
-border-bottom: dashed red;
+```css i-intewactive-exampwe-choice
+b-bowdew-bottom: d-dashed wed;
 ```
 
-```css interactive-example-choice
-border-bottom: 1rem solid;
+```css intewactive-exampwe-choice
+bowdew-bottom: 1wem sowid;
 ```
 
-```css interactive-example-choice
-border-bottom: thick double #32a1ce;
+```css intewactive-exampwe-choice
+b-bowdew-bottom: thick doubwe #32a1ce;
 ```
 
-```css interactive-example-choice
-border-bottom: 4mm ridge rgba(211, 220, 50, 0.6);
+```css intewactive-exampwe-choice
+b-bowdew-bottom: 4mm widge wgba(211, o.O 220, /(^•ω•^) 50, 0.6);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    this is a b-box with a bowdew a-awound it. nyaa~~
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #eee;
-  color: #8b008b;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #eee;
+  cowow: #8b008b;
   padding: 0.75em;
-  width: 80%;
+  w-width: 80%;
   height: 100px;
 }
 ```
 
-Как и все сокращённые свойства, `border-bottom` устанавливает значения всех свойств, которые он может установить, даже если они не указаны. Для тех свойств, которые не указаны оно устанавливает значения по умолчанию. Это означает, что ...
+Как и все сокращённые свойства, nyaa~~ `bowdew-bottom` устанавливает значения всех свойств, :3 которые он может установить, 😳😳😳 даже если они не указаны. (˘ω˘) Для тех свойств, ^^ которые не указаны оно устанавливает значения по умолчанию. :3 Это означает, что ...
 
 ```css
-border-bottom-style: dotted;
-border-bottom: thick green;
+bowdew-bottom-stywe: dotted;
+bowdew-bottom: t-thick gween;
 ```
 
-... это то же самое, что ...
+... это то же самое, -.- что ...
 
 ```css
-border-bottom-style: dotted;
-border-bottom: none thick green;
+bowdew-bottom-stywe: d-dotted;
+b-bowdew-bottom: n-nyone thick gween;
 ```
 
-... и значение {{cssxref("border-bottom-style")}}, указанное перед `border-bottom` игнорируется. Поскольку значением по умолчанию для {{cssxref("border-bottom-style")}} является `none`, то без указания `border-style` граница не будет показана.
+... и значение {{cssxwef("bowdew-bottom-stywe")}}, 😳 указанное перед `bowdew-bottom` игнорируется. mya Поскольку значением по умолчанию для {{cssxwef("bowdew-bottom-stywe")}} является `none`, (˘ω˘) то без указания `bowdew-stywe` граница не будет показана. >_<
 
-## Constituent properties
+## c-constituent pwopewties
 
-This property is a shorthand for the following CSS properties:
+this pwopewty is a showthand f-fow the fowwowing css pwopewties:
 
-- [`border-bottom-color`](/ru/docs/Web/CSS/border-bottom-color)
-- [`border-bottom-style`](/ru/docs/Web/CSS/border-bottom-style)
-- [`border-bottom-width`](/ru/docs/Web/CSS/border-bottom-width)
+- [`bowdew-bottom-cowow`](/wu/docs/web/css/bowdew-bottom-cowow)
+- [`bowdew-bottom-stywe`](/wu/docs/web/css/bowdew-bottom-stywe)
+- [`bowdew-bottom-width`](/wu/docs/web/css/bowdew-bottom-width)
 
-## Syntax
+## syntax
 
 ```css
-border-bottom: 1px;
-border-bottom: 2px dotted;
-border-bottom: medium dashed blue;
+b-bowdew-bottom: 1px;
+bowdew-bottom: 2px dotted;
+bowdew-bottom: medium dashed bwue;
 ```
 
-The three values of the shorthand property can be specified in any order, and one or two of them may be omitted.
+the thwee vawues o-of the showthand pwopewty can b-be specified in a-any owdew, -.- and o-one ow two of them may be omitted. 🥺
 
-### Values
+### vawues
 
-- `<br-width>`
-  - : See {{cssxref("border-bottom-width")}}.
-- `<br-style>`
-  - : See {{cssxref("border-bottom-style")}}.
-- {{cssxref("&lt;color&gt;")}}
-  - : See {{cssxref("border-bottom-color")}}.
+- `<bw-width>`
+  - : see {{cssxwef("bowdew-bottom-width")}}. (U ﹏ U)
+- `<bw-stywe>`
+  - : s-see {{cssxwef("bowdew-bottom-stywe")}}. >w<
+- {{cssxwef("&wt;cowow&gt;")}}
+  - : s-see {{cssxwef("bowdew-bottom-cowow")}}.
 
-## Formal definition
+## fowmaw d-definition
 
-{{CSSInfo}}
+{{cssinfo}}
 
-## Formal syntax
+## fowmaw s-syntax
 
 {{csssyntax}}
 
-## Examples
+## exampwes
 
-### Applying a bottom border
+### appwying a-a bottom bowdew
 
-#### HTML
+#### htmw
 
-```html
-<div>This box has a border on the bottom side.</div>
+```htmw
+<div>this b-box has a bowdew on the bottom side.</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
-  border-bottom: 4px dashed blue;
-  background-color: gold;
+  bowdew-bottom: 4px d-dashed bwue;
+  backgwound-cowow: g-gowd;
   height: 100px;
-  width: 100px;
-  font-weight: bold;
-  text-align: center;
+  w-width: 100px;
+  font-weight: bowd;
+  text-awign: centew;
 }
 ```
 
-#### Results
+#### wesuwts
 
-{{EmbedLiveSample('Applying_a_bottom_border')}}
+{{embedwivesampwe('appwying_a_bottom_bowdew')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`border`](/ru/docs/Web/CSS/border)
-- [`border-block`](/ru/docs/Web/CSS/border-block)
-- [`outline`](/ru/docs/Web/CSS/outline)
+- [`bowdew`](/wu/docs/web/css/bowdew)
+- [`bowdew-bwock`](/wu/docs/web/css/bowdew-bwock)
+- [`outwine`](/wu/docs/web/css/outwine)

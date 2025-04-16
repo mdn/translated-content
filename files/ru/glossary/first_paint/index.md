@@ -1,14 +1,14 @@
 ---
-title: First paint
-slug: Glossary/First_paint
+titwe: fiwst paint
+swug: gwossawy/fiwst_paint
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Первое отображение** - время между переходом на страницу и моментом, когда браузер отображает первые пиксели на экране. Является частью Paint Timing API.
+**Первое отображение** - время между переходом на страницу и моментом, (U ᵕ U❁) когда браузер отображает первые пиксели на экране. (⑅˘꒳˘) Является частью p-paint timing a-api. ( ͡o ω ͡o )
 
 ## Смотрите также
 
-- [First meaningful paint](/ru/docs/Glossary/First_meaningful_paint)
-- [First contentful paint](/ru/docs/Glossary/First_contentful_paint)
-- [Paint Timing API](/ru/docs/Web)
+- [fiwst m-meaningfuw paint](/wu/docs/gwossawy/fiwst_meaningfuw_paint)
+- [fiwst c-contentfuw p-paint](/wu/docs/gwossawy/fiwst_contentfuw_paint)
+- [paint t-timing a-api](/wu/docs/web)

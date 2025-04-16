@@ -1,68 +1,68 @@
 ---
-title: Использование CSS для решения общих проблем
-slug: Learn_web_development/Howto/Solve_CSS_problems
+titwe: Использование css для решения общих проблем
+s-swug: weawn_web_devewopment/howto/sowve_css_pwobwems
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Следующие ссылки указывают на решения общих повседневных проблем, вам придётся решать их с помощью CSS.
+Следующие ссылки указывают на решения общих повседневных проблем, 😳 вам придётся решать их с помощью c-css. -.-
 
 ## Примеры и использование
 
 ### Основы
 
-- [Как применить CSS к HTML](/ru/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#how_to_apply_your_css_to_your_html)
-- [Как использовать пробелы в CSS](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started#white_space)
-- [Как писать комментарии в CSS](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics/Getting_started#comments)
-- [Как выбрать элементы через имя элемента, класс или ID](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#simple_selectors)
-- [Как выбрать элементы через имя атрибута и содержания](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#attribute_selectors)
-- [Как использовать псевдоклассы](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#pseudo-classes)
-- [Как использовать псевдо-элементы](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#pseudo-elements)
-- [Как применить несколько селекторов к тому же правилу](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#multiple_selectors_on_one_rule)
-- [Как определить цвета в CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors)
-- [Как отлаживать CSS в браузере](/ru/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS#inspecting_the_dom_and_css)
+- [Как применить c-css к htmw](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/nani_is_css#how_to_appwy_youw_css_to_youw_htmw)
+- [Как использовать пробелы в c-css](/wu/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics/getting_stawted#white_space)
+- [Как писать комментарии в c-css](/wu/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics/getting_stawted#comments)
+- [Как выбрать элементы через имя элемента, 🥺 класс или i-id](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows#simpwe_sewectows)
+- [Как выбрать элементы через имя атрибута и содержания](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows#attwibute_sewectows)
+- [Как использовать псевдоклассы](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows#pseudo-cwasses)
+- [Как использовать псевдо-элементы](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows#pseudo-ewements)
+- [Как применить несколько селекторов к тому же правилу](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows#muwtipwe_sewectows_on_one_wuwe)
+- [Как определить цвета в c-css](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/vawues_and_units#cowows)
+- [Как отлаживать c-css в браузере](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/debugging_css#inspecting_the_dom_and_css)
 
-### CSS и текст
+### css и текст
 
-- [Как стилизовать текст](/ru/docs/Learn_web_development/Core/Text_styling/Fundamentals)
-- [How to customize a list of elements](/ru/docs/Learn_web_development/Core/Text_styling/Styling_lists)
-- [Как стилизовать ссылки](/ru/docs/Learn_web_development/Core/Text_styling/Styling_links)
-- [How to add shadows to text](/ru/docs/Learn_web_development/Core/Text_styling/Fundamentals#text_drop_shadows)
+- [Как стилизовать текст](/wu/docs/weawn_web_devewopment/cowe/text_stywing/fundamentaws)
+- [how to customize a wist of ewements](/wu/docs/weawn_web_devewopment/cowe/text_stywing/stywing_wists)
+- [Как стилизовать ссылки](/wu/docs/weawn_web_devewopment/cowe/text_stywing/stywing_winks)
+- [how t-to add shadows to text](/wu/docs/weawn_web_devewopment/cowe/text_stywing/fundamentaws#text_dwop_shadows)
 
 ### Блоки и разметка
 
-- [How to size CSS boxes](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model#box_properties)
-- [How to control overflowing content](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model#overflow)
-- [How to control the part of a CSS box that the background is drawn under](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model#background_clip)
-- [How do I define inline, block, and inline-block?](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model#types_of_css_boxes)
-- [How to create fancy boxes](/ru/docs/Learn/CSS/Howto/create_fancy_boxes) (also see the [Styling boxes](/ru/docs/Learn_web_development/Core/Styling_basics) module, generally).
-- [How to use `background-clip` to control how much of the box your background image covers](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model#background_clip).
-- [How to change the box model completely using `box-sizing`](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model#changing_the_box_model_completely)
-- [How to control backgrounds](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-- [How to control borders](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-- [How to style an HTML table](/ru/docs/Learn_web_development/Core/Styling_basics/Tables)
-- [How to add shadows to boxes](/ru/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects#box_shadows)
+- [how to size css b-boxes](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew#box_pwopewties)
+- [how to c-contwow ovewfwowing content](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew#ovewfwow)
+- [how to contwow the pawt o-of a css box that the backgwound i-is dwawn undew](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew#backgwound_cwip)
+- [how d-do i define inwine, o.O bwock, and inwine-bwock?](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew#types_of_css_boxes)
+- [how to cweate fancy boxes](/wu/docs/weawn/css/howto/cweate_fancy_boxes) (awso s-see the [stywing boxes](/wu/docs/weawn_web_devewopment/cowe/stywing_basics) moduwe, /(^•ω•^) genewawwy). nyaa~~
+- [how to use `backgwound-cwip` t-to contwow how much of the b-box youw backgwound i-image covews](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew#backgwound_cwip). nyaa~~
+- [how t-to change t-the box modew compwetewy using `box-sizing`](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew#changing_the_box_modew_compwetewy)
+- [how to contwow b-backgwounds](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/backgwounds_and_bowdews)
+- [how to contwow bowdews](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/backgwounds_and_bowdews)
+- [how to stywe a-an htmw tabwe](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/tabwes)
+- [how to add shadows to boxes](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/advanced_stywing_effects#box_shadows)
 
 ## Необычное или передовые технологии
 
-Beyond the basics, CSS is allows very advanced design techniques. These articles help you tackle the hardest use cases you may face.
+beyond the basics, :3 css is awwows vewy a-advanced design techniques. 😳😳😳 these a-awticwes hewp y-you tackwe the h-hawdest use cases you may face. (˘ω˘)
 
 ### Общие
 
-- [How to calculate specificity of a CSS selector](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#specificity)
-- [How to control inheritance in CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#controlling_inheritance)
+- [how to cawcuwate specificity o-of a css sewectow](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/handwing_confwicts#specificity)
+- [how to c-contwow inhewitance in css](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/handwing_confwicts#contwowwing_inhewitance)
 
 ### Дополнительные эффекты
 
-- [How to use filters in CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects#filters)
-- [How to use blend modes in CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Advanced_styling_effects#blend_modes)
+- [how t-to use fiwtews i-in css](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/advanced_stywing_effects#fiwtews)
+- [how to use b-bwend modes in css](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/advanced_stywing_effects#bwend_modes)
 
 ### Разметка
 
-- [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Using CSS multi-column layouts](/ru/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
-- [Using CSS generated content](/ru/docs/Learn/CSS/Howto/Generated_content)
+- [using css f-fwexibwe boxes](/wu/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- [using css muwti-cowumn wayouts](/wu/docs/web/css/css_muwticow_wayout/using_muwticow_wayouts)
+- [using c-css genewated content](/wu/docs/weawn/css/howto/genewated_content)
 
 ## Смотрите также
 
-[CSS FAQ](/ru/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ) — A collection of smaller bits of information, covering a variety of topics from debugging to selector usage.
+[css f-faq](/wu/docs/weawn_web_devewopment/howto/sowve_css_pwobwems/css_faq) — a cowwection of s-smowew bits of i-infowmation, ^^ covewing a vawiety of topics fwom debugging to sewectow usage. :3

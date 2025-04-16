@@ -1,76 +1,76 @@
 ---
-title: skew()
-slug: Web/CSS/transform-function/skew
+titwe: skew()
+swug: web/css/twansfowm-function/skew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) функция **`skew()`** трансформирует элемент, наклоняя его в 2D-пространстве.
+[css](/wu/docs/web/css) функция **`skew()`** трансформирует элемент, ʘwʘ наклоняя его в 2d-пространстве. /(^•ω•^)
 
-{{InteractiveExample("CSS Demo: skew()")}}
+{{intewactiveexampwe("css d-demo: s-skew()")}}
 
-```css interactive-example-choice
-transform: skew(0);
+```css i-intewactive-exampwe-choice
+t-twansfowm: skew(0);
 ```
 
-```css interactive-example-choice
-transform: skew(15deg, 15deg);
+```css i-intewactive-exampwe-choice
+t-twansfowm: s-skew(15deg, 15deg);
 ```
 
-```css interactive-example-choice
-transform: skew(-0.06turn, 18deg);
+```css i-intewactive-exampwe-choice
+twansfowm: skew(-0.06tuwn, ʘwʘ 18deg);
 ```
 
-```css interactive-example-choice
-transform: skew(0.312rad);
+```css intewactive-exampwe-choice
+twansfowm: skew(0.312wad);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    i-id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-Данная трансформация является линейным преобразованием векторного пространства (трансвекция или [shear mapping](https://en.wikipedia.org/wiki/Shear_mapping)), которое деформирует каждую точку элемента на определённый угол по горизонтали или вертикали. Координаты каждой точки изменяются на величину, пропорциональную указанному углу и расстоянию до точки, относительно которой выполняется трансформация (origin); таким образом, чем больше расстояние до смещаемой точки элемента, тем больше она будет смещена по горизонтали или вертикали.
+Данная трансформация является линейным преобразованием векторного пространства (трансвекция или [sheaw m-mapping](https://en.wikipedia.owg/wiki/sheaw_mapping)), σωσ которое деформирует каждую точку элемента на определённый угол по горизонтали или вертикали. OwO Координаты каждой точки изменяются на величину, 😳😳😳 пропорциональную указанному углу и расстоянию до точки, 😳😳😳 относительно которой выполняется трансформация (owigin); таким образом, o.O чем больше расстояние до смещаемой точки элемента, ( ͡o ω ͡o ) тем больше она будет смещена по горизонтали или вертикали.
 
 ## Синтаксис
 
-Функция `skew()` задаётся одним или двумя значениями которые отображают наклон в каждом из направлений.
+Функция `skew()` задаётся одним или двумя значениями которые отображают наклон в каждом из направлений. (U ﹏ U)
 
 ```
 skew(ax)
 
-skew(ax, ay)
+skew(ax, (///ˬ///✿) ay)
 ```
 
 ### Значения
 
 - `ax`
-  - : Указывается значение {{cssxref("&lt;angle&gt;")}}, которое является углом наклона вдоль оси X.
+  - : Указывается значение {{cssxwef("&wt;angwe&gt;")}}, >w< которое является углом наклона вдоль оси x. rawr
 - `ay`
-  - : Указывается значение {{cssxref("&lt;angle&gt;")}}, которое является углом наклона вдоль оси Y. Если данное значение не задано, то по умолчанию оно равно `0`. В этом случае вертикального наклона не будет, а будет только горизонтальный.
+  - : Указывается значение {{cssxwef("&wt;angwe&gt;")}}, mya которое является углом наклона вдоль оси y-y. ^^ Если данное значение не задано, 😳😳😳 то по умолчанию оно равно `0`. mya В этом случае вертикального наклона не будет, а будет только горизонтальный. 😳
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
-      <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
-      <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
-      <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th s-scope="cow">cawtesian c-coowdinates on ℝ<sup>2</sup></th>
+      <th scope="cow">homogeneous coowdinates on ℝℙ<sup>2</sup></th>
+      <th s-scope="cow">cawtesian coowdinates on ℝ<sup>3</sup></th>
+      <th scope="cow">homogeneous coowdinates on ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="1" rowspan="2">
+    <tw>
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ax)</mtd></mtr
-              ><mtr>tan(ay)<mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>1<mtd>tan(ax)</mtd></mtw
+              ><mtw>tan(ay)<mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
@@ -78,108 +78,108 @@ skew(ax, ay)
       <td>
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtr
-              ><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ><mtr></mtr></mtable></mfenced
+            ><mtabwe
+              ><mtw>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtw
+              ><mtw>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ><mtw></mtw></mtabwe></mfenced
         ></math>
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtr
-              ><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtw
+              ><mtw>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" w-wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>1<mtd>tan(ax)</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>tan(ay)<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
-    <tr>
-      <td><code>[1 tan(ay) tan(ax) 1 0 0]</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>[1 t-tan(ay) tan(ax) 1 0 0]</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Примеры
 
-### Используя только наклон по оси x
+### Используя только наклон по оси x-x
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>Обычный</div>
-<div class="skewed">Наклонённый</div>
+<div cwass="skewed">Наклонённый</div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 div {
   width: 80px;
   height: 80px;
-  background-color: skyblue;
+  b-backgwound-cowow: skybwue;
 }
 
 .skewed {
-  transform: skew(10deg); /* Equal to skewX(10deg) */
-  background-color: pink;
+  twansfowm: skew(10deg); /* equaw to skewx(10deg) */
+  backgwound-cowow: p-pink;
 }
 ```
 
-#### Result
+#### wesuwt
 
-{{EmbedLiveSample("Используя_только_наклон_по_оси_x", 200, 200)}}
+{{embedwivesampwe("Используя_только_наклон_по_оси_x", 200, -.- 200)}}
 
 ### Используя два угла
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>Обычный</div>
-<div class="skewed">Наклонённый</div>
+<div c-cwass="skewed">Наклонённый</div>
 ```
 
-#### CSS
+#### css
 
 ```css
-div {
+d-div {
   width: 80px;
   height: 80px;
-  background-color: skyblue;
+  backgwound-cowow: s-skybwue;
 }
 
 .skewed {
-  transform: skew(10deg, 10deg);
-  background-color: pink;
+  t-twansfowm: skew(10deg, 🥺 10deg);
+  b-backgwound-cowow: pink;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample("Используя_два_угла", 200, 200)}}
+{{embedwivesampwe("Используя_два_угла", o.O 200, 200)}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("transform")}}
-- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}

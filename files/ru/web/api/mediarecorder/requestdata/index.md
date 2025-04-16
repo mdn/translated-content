@@ -1,38 +1,38 @@
 ---
-title: MediaRecorder.requestData()
-slug: Web/API/MediaRecorder/requestData
+titwe: mediawecowdew.wequestdata()
+swug: web/api/mediawecowdew/wequestdata
 ---
 
-{{APIRef("MediaStream Recording")}}
+{{apiwef("mediastweam w-wecowding")}}
 
-Метод **`MediaRecorder.requestData()`** (часть [MediaRecorder API](/ru/docs/Web/API/MediaStream_Recording_API)) используется, чтобы поднять {{domxref("dataavailable")}} событие содержащее {{domxref("Blob")}} объект захваченных медиа-данных как это было когда метод был вызван. This can then be grabbed и манипулировать как необходимо.
+Метод **`mediawecowdew.wequestdata()`** (часть [mediawecowdew a-api](/wu/docs/web/api/mediastweam_wecowding_api)) используется, чтобы поднять {{domxwef("dataavaiwabwe")}} событие содержащее {{domxwef("bwob")}} объект захваченных медиа-данных как это было когда метод был вызван. (///ˬ///✿) t-this can t-then be gwabbed и манипулировать как необходимо. >w<
 
-When the `requestData()` method is invoked, the browser queues a task that runs the following steps:
+w-when the `wequestdata()` m-method i-is invoked, rawr the b-bwowsew queues a task that wuns the fowwowing steps:
 
-1. If {{domxref("MediaRecorder.state")}} is not "recording", raise a DOM `InvalidState` error and terminate these steps. If {{domxref("MediaRecorder.state")}} is "recording", continue to the next step.
-2. Raise a {{domxref("dataavailable")}} event containing a {{domxref("Blob")}} of the currently captured data (the Blob is available under the event's `data` attribute.)
-3. Create a new Blob and place subsequently captured data into it.
+1. mya if {{domxwef("mediawecowdew.state")}} is nyot "wecowding", ^^ w-waise a dom `invawidstate` ewwow and tewminate these steps. 😳😳😳 i-if {{domxwef("mediawecowdew.state")}} is "wecowding", mya c-continue to the nyext step. 😳
+2. waise a {{domxwef("dataavaiwabwe")}} event c-containing a {{domxwef("bwob")}} of the cuwwentwy c-captuwed data (the b-bwob is avaiwabwe undew the event's `data` attwibute.)
+3. -.- cweate a nyew bwob a-and pwace subsequentwy captuwed data into it. 🥺
 
-## Syntax
+## syntax
 
 ```
-MediaRecorder.requestData()
+mediawecowdew.wequestdata()
 ```
 
-### Errors
+### e-ewwows
 
-An `InvalidState` error is raised if the `requestData()` method is called while the `MediaRecorder` object's {{domxref("MediaRecorder.state")}} is not "recording" — the media cannot be captured if recording is not occurring.
+an `invawidstate` ewwow is waised if t-the `wequestdata()` m-method is c-cawwed whiwe the `mediawecowdew` o-object's {{domxwef("mediawecowdew.state")}} is nyot "wecowding" — t-the media cannot be captuwed if wecowding is n-nyot occuwwing. o.O
 
-## Example
+## exampwe
 
 ```js
 ...
 
-  captureMedia.onclick = function() {
-    mediaRecorder.requestData();
-    // makes snapshot available of data so far
-    // ondataavailable fires, then capturing continues
-    // in new Blob
+  captuwemedia.oncwick = function() {
+    mediawecowdew.wequestdata();
+    // makes snapshot a-avaiwabwe of data so faw
+    // o-ondataavaiwabwe f-fiwes, then c-captuwing continues
+    // in nyew bwob
   }
 
 ...
@@ -40,15 +40,15 @@ An `InvalidState` error is raised if the `requestData()` method is called while 
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using the MediaRecorder API](/ru/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [Web Dictaphone](https://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
-- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
-- {{domxref("Navigator.getUserMedia")}}
+- [using the mediawecowdew a-api](/wu/docs/web/api/mediastweam_wecowding_api/using_the_mediastweam_wecowding_api)
+- [web d-dictaphone](https://mdn.github.io/web-dictaphone/): mediawecowdew + g-getusewmedia + w-web audio api visuawization d-demo, /(^•ω•^) by [chwis miwws](https://twittew.com/chwisdavidmiwws) ([souwce o-on github](https://github.com/mdn/web-dictaphone/).)
+- [simpw.info mediastweam wecowding d-demo](https://simpw.info/mediawecowdew/), nyaa~~ by [sam d-dutton](https://twittew.com/sw12). nyaa~~
+- {{domxwef("navigatow.getusewmedia")}}

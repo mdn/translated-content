@@ -1,77 +1,77 @@
 ---
-title: animation
-slug: Web/CSS/animation
+titwe: animation
+swug: web/css/animation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) свойство **`animation`** это [короткая запись](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) для {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}} и {{cssxref("animation-play-state")}}.
+[css](/wu/docs/web/css) свойство **`animation`** это [короткая запись](/wu/docs/web/css/css_cascade/showthand_pwopewties) для {{cssxwef("animation-name")}}, -.- {{cssxwef("animation-duwation")}}, ^•ﻌ•^ {{cssxwef("animation-timing-function")}}, rawr {{cssxwef("animation-deway")}}, (˘ω˘) {{cssxwef("animation-itewation-count")}}, nyaa~~ {{cssxwef("animation-diwection")}}, UwU {{cssxwef("animation-fiww-mode")}} и {{cssxwef("animation-pway-state")}}. :3
 
-{{InteractiveExample("CSS Demo: animation")}}
+{{intewactiveexampwe("css d-demo: animation")}}
 
-```css interactive-example-choice
-animation: 3s ease-in 1s infinite reverse both running slidein;
+```css i-intewactive-exampwe-choice
+a-animation: 3s e-ease-in 1s i-infinite w-wevewse both wunning s-swidein;
 ```
 
-```css interactive-example-choice
-animation: 3s linear 1s infinite running slidein;
+```css i-intewactive-exampwe-choice
+animation: 3s wineaw 1s infinite wunning swidein;
 ```
 
-```css interactive-example-choice
-animation: 3s linear 1s infinite alternate slidein;
+```css intewactive-exampwe-choice
+a-animation: 3s wineaw 1s infinite awtewnate s-swidein;
 ```
 
-```css interactive-example-choice
-animation: 0.5s linear 1s infinite alternate slidein;
+```css intewactive-exampwe-choice
+a-animation: 0.5s wineaw 1s infinite awtewnate swidein;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section cwass="fwex-cowumn" i-id="defauwt-exampwe">
+  <div i-id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #1766aa;
-  margin: 20px;
-  border: 5px solid #333;
-  width: 150px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #1766aa;
+  mawgin: 20px;
+  bowdew: 5px sowid #333;
+  w-width: 150px;
   height: 150px;
-  border-radius: 50%;
+  bowdew-wadius: 50%;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: -20%;
+@keyfwames swidein {
+  fwom {
+    mawgin-weft: -20%;
   }
-  to {
-    margin-left: 100%;
+  t-to {
+    mawgin-weft: 100%;
   }
 }
 ```
 
-[Описание того, какие свойства являются анимируемые](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#which_css_properties_are_animatable) доступно; стоит отметить, что это описание также подходит для [CSS переходов](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+[Описание того, (⑅˘꒳˘) какие свойства являются анимируемые](/wu/docs/web/css/css_twansitions/using_css_twansitions#which_css_pwopewties_awe_animatabwe) доступно; стоит отметить, (///ˬ///✿) что это описание также подходит для [css переходов](/wu/docs/web/css/css_twansitions/using_css_twansitions). ^^;;
 
 {{cssinfo}}
 
 ## Синтаксис
 
 ```css
-/* @keyframes duration | timing-function | delay |
-   iteration-count | direction | fill-mode | play-state | name */
-animation: 3s ease-in 1s 2 reverse both paused slidein;
+/* @keyfwames duwation | timing-function | d-deway |
+   i-itewation-count | d-diwection | f-fiww-mode | pway-state | nyame */
+animation: 3s e-ease-in 1s 2 wevewse both paused swidein;
 
-/* @keyframes duration | timing-function | delay | name */
-animation: 3s linear 1s slidein;
+/* @keyfwames d-duwation | timing-function | deway | nyame */
+animation: 3s wineaw 1s swidein;
 
-/* @keyframes duration | name */
-animation: 3s slidein;
+/* @keyfwames duwation | n-nyame */
+animation: 3s s-swidein;
 ```
 
-Порядок важен в каждом определении анимации: первое значение, которое может быть проанализировано как {{cssxref("&lt;time&gt;")}} присваивается {{cssxref("animation-duration")}}, и второй назначен {{cssxref("animation-delay")}}.
+Порядок важен в каждом определении анимации: первое значение, которое может быть проанализировано как {{cssxwef("&wt;time&gt;")}} присваивается {{cssxwef("animation-duwation")}}, >_< и второй назначен {{cssxwef("animation-deway")}}. rawr x3
 
-Note that order is also important within each animation definition for distinguishing {{cssxref("animation-name")}} values from other keywords. When parsing, keywords that are valid for properties other than {{cssxref("animation-name")}} whose values were not found earlier in the shorthand must be accepted for those properties rather than for {{cssxref("animation-name")}}. Furthermore, when serializing, default values of other properties must be output in at least the cases necessary to distinguish an {{cssxref("animation-name")}} that could be a value of another property, and may be output in additional cases.
+n-nyote that o-owdew is awso impowtant within each animation definition fow distinguishing {{cssxwef("animation-name")}} v-vawues f-fwom othew keywowds. when pawsing, /(^•ω•^) k-keywowds that a-awe vawid fow pwopewties othew t-than {{cssxwef("animation-name")}} whose vawues w-wewe nyot found eawwiew in the showthand must b-be accepted fow those pwopewties w-wathew than fow {{cssxwef("animation-name")}}. :3 fuwthewmowe, (ꈍᴗꈍ) when s-sewiawizing, /(^•ω•^) d-defauwt vawues of othew pwopewties must be output in at weast the cases nyecessawy to distinguish an {{cssxwef("animation-name")}} t-that couwd be a-a vawue of anothew pwopewty, (⑅˘꒳˘) and m-may be output i-in additionaw cases. ( ͡o ω ͡o )
 
 ### Формальный синтаксис
 
@@ -79,114 +79,114 @@ Note that order is also important within each animation definition for distingui
 
 ## Примеры
 
-Посмотрите примеры [CSS-анимаций.](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+Посмотрите примеры [css-анимаций.](/wu/docs/web/css/css_animations/using_css_animations)
 
-### Cylon Eye
+### c-cywon eye
 
-Учитывая все специфичные для браузеров префиксы, вот анимация цилиндрического глаза, включающая линейные градиенты и анимацию, которая работает во всех основных браузерах:
+Учитывая все специфичные для браузеров префиксы, òωó вот анимация цилиндрического глаза, (⑅˘꒳˘) включающая линейные градиенты и анимацию, XD которая работает во всех основных браузерах:
 
-```html
-<div class="view_port">
-  <div class="polling_message">Listening for dispatches</div>
-  <div class="cylon_eye"></div>
+```htmw
+<div cwass="view_powt">
+  <div cwass="powwing_message">wistening f-fow dispatches</div>
+  <div cwass="cywon_eye"></div>
 </div>
 ```
 
 ```css
-.polling_message {
-  color: white;
-  float: left;
-  margin-right: 2%;
+.powwing_message {
+  cowow: white;
+  fwoat: weft;
+  mawgin-wight: 2%;
 }
 
-.view_port {
-  background-color: black;
+.view_powt {
+  b-backgwound-cowow: bwack;
   height: 25px;
-  width: 100%;
-  overflow: hidden;
+  w-width: 100%;
+  o-ovewfwow: h-hidden;
 }
 
-.cylon_eye {
-  background-color: red;
-  background-image: -webkit-linear-gradient(
-    left,
-    rgba(0, 0, 0, 0.9) 25%,
-    rgba(0, 0, 0, 0.1) 50%,
-    rgba(0, 0, 0, 0.9) 75%
+.cywon_eye {
+  backgwound-cowow: w-wed;
+  backgwound-image: -webkit-wineaw-gwadient(
+    w-weft, -.-
+    w-wgba(0, :3 0, 0, 0.9) 25%, nyaa~~
+    w-wgba(0, 😳 0, 0, 0.1) 50%, (⑅˘꒳˘)
+    wgba(0, nyaa~~ 0, 0, 0.9) 75%
   );
-  background-image: -moz-linear-gradient(
-    left,
-    rgba(0, 0, 0, 0.9) 25%,
-    rgba(0, 0, 0, 0.1) 50%,
-    rgba(0, 0, 0, 0.9) 75%
+  backgwound-image: -moz-wineaw-gwadient(
+    w-weft, OwO
+    wgba(0, rawr x3 0, 0, 0.9) 25%, XD
+    w-wgba(0, σωσ 0, 0, 0.1) 50%, (U ᵕ U❁)
+    w-wgba(0, (U ﹏ U) 0, 0, 0.9) 75%
   );
-  background-image: -o-linear-gradient(
-    left,
-    rgba(0, 0, 0, 0.9) 25%,
-    rgba(0, 0, 0, 0.1) 50%,
-    rgba(0, 0, 0, 0.9) 75%
+  b-backgwound-image: -o-wineaw-gwadient(
+    w-weft,
+    wgba(0, :3 0, 0, ( ͡o ω ͡o ) 0.9) 25%,
+    wgba(0, σωσ 0, 0, 0.1) 50%, >w<
+    wgba(0, 😳😳😳 0, 0, 0.9) 75%
   );
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.9) 25%,
-    rgba(0, 0, 0, 0.1) 50%,
-    rgba(0, 0, 0, 0.9) 75%
+  b-backgwound-image: wineaw-gwadient(
+    to wight, OwO
+    wgba(0, 😳 0, 0, 0.9) 25%, 😳😳😳
+    wgba(0, (˘ω˘) 0, 0, 0.1) 50%, ʘwʘ
+    wgba(0, ( ͡o ω ͡o ) 0, 0, 0.9) 75%
   );
-  color: white;
+  c-cowow: white;
   height: 100%;
   width: 20%;
 
-  -webkit-animation: 4s linear 0s infinite alternate move_eye;
-  -moz-animation: 4s linear 0s infinite alternate move_eye;
-  -o-animation: 4s linear 0s infinite alternate move_eye;
-  animation: 4s linear 0s infinite alternate move_eye;
+  -webkit-animation: 4s wineaw 0s i-infinite awtewnate m-move_eye;
+  -moz-animation: 4s w-wineaw 0s infinite awtewnate m-move_eye;
+  -o-animation: 4s wineaw 0s infinite a-awtewnate move_eye;
+  a-animation: 4s wineaw 0s infinite awtewnate move_eye;
 }
 
-@-webkit-keyframes move_eye {
-  from {
-    margin-left: -20%;
+@-webkit-keyfwames move_eye {
+  fwom {
+    mawgin-weft: -20%;
   }
-  to {
-    margin-left: 100%;
-  }
-}
-@-moz-keyframes move_eye {
-  from {
-    margin-left: -20%;
-  }
-  to {
-    margin-left: 100%;
+  t-to {
+    mawgin-weft: 100%;
   }
 }
-@-o-keyframes move_eye {
-  from {
-    margin-left: -20%;
+@-moz-keyfwames m-move_eye {
+  fwom {
+    m-mawgin-weft: -20%;
   }
-  to {
-    margin-left: 100%;
+  t-to {
+    mawgin-weft: 100%;
   }
 }
-@keyframes move_eye {
-  from {
-    margin-left: -20%;
+@-o-keyfwames move_eye {
+  f-fwom {
+    m-mawgin-weft: -20%;
   }
   to {
-    margin-left: 100%;
+    m-mawgin-weft: 100%;
+  }
+}
+@keyfwames m-move_eye {
+  fwom {
+    mawgin-weft: -20%;
+  }
+  to {
+    mawgin-weft: 100%;
   }
 }
 ```
 
-{{EmbedLiveSample('Cylon_Eye')}}
+{{embedwivesampwe('cywon_eye')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- JavaScript {{domxref("AnimationEvent")}} API
+- [Использование c-css-анимации](/wu/docs/web/css/css_animations/using_css_animations)
+- j-javascwipt {{domxwef("animationevent")}} a-api

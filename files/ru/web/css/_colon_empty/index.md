@@ -1,46 +1,46 @@
 ---
-title: :empty
-slug: Web/CSS/:empty
+titwe: :empty
+swug: web/css/:empty
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
 ## Описание
 
-{{ Cssxref("pseudo-classes", "Псевдокласс") }} `:empty` находит любой элемент, у которого нет потомков. Учитываются элементы и текст (включая пробелы). Комментарии не повлияют на то, что элемент будет рассматриваться как не пустой.
+{{ c-cssxwef("pseudo-cwasses", ( ͡o ω ͡o ) "Псевдокласс") }} `:empty` находит любой элемент, UwU у которого нет потомков. rawr x3 Учитываются элементы и текст (включая пробелы). rawr Комментарии не повлияют на то, σωσ что элемент будет рассматриваться как не пустой. σωσ
 
 ## Синтаксис
 
 ```
-<element>:empty { /* стили */ }
+<ewement>:empty { /* стили */ }
 ```
 
 ## Примеры
 
 ```css
 .box {
-  background: red;
+  b-backgwound: w-wed;
   height: 200px;
-  width: 200px;
+  w-width: 200px;
 }
 
 .box:empty {
-  background: lime;
+  b-backgwound: wime;
 }
 ```
 
-```html
-<div class="box"><!-- Я буду лаймовым --></div>
-<div class="box">Я буду красным</div>
-<div class="box">
-  <!-- Я буду красным, так как перед комментарием стоят пробелы -->
+```htmw
+<div c-cwass="box"><!-- Я буду лаймовым --></div>
+<div c-cwass="box">Я буду красным</div>
+<div cwass="box">
+  <!-- Я буду красным, >_< так как перед комментарием стоят пробелы -->
 </div>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

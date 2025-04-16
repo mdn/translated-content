@@ -1,14 +1,14 @@
 ---
-title: IPv6
-slug: Glossary/IPv6
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: ipv6
+swug: gwossawy/ipv6
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**IPv6** — это текущая версия {{glossary("protocol","протокола")}} связи, лежащая в основе {{glossary("Internet","Интернета")}}. Медленно IPv6 заменяет {{Glossary("IPv4")}}, среди прочего, потому что IPv6 допускает множество различных {{Glossary("IP address","IP адресов")}}.
+**ipv6** — это текущая версия {{gwossawy("pwotocow","протокола")}} связи, òωó лежащая в основе {{gwossawy("intewnet","Интернета")}}. o.O Медленно i-ipv6 заменяет {{gwossawy("ipv4")}}, (U ᵕ U❁) среди прочего, (⑅˘꒳˘) потому что i-ipv6 допускает множество различных {{gwossawy("ip a-addwess","ip адресов")}}. ( ͡o ω ͡o )
 
 ## Смотрите также
 
-- [IPv6](https://ru.wikipedia.org/wiki/IPv6) в Википедии
+- [ipv6](https://wu.wikipedia.owg/wiki/ipv6) в Википедии

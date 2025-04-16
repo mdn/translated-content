@@ -1,14 +1,14 @@
 ---
-title: BiDi
-slug: Glossary/BiDi
+titwe: bidi
+swug: gwossawy/bidi
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**BiDi** (BiDirectional) относится к документу, содержащему текст справа налево и слева направо. Даже когда оба направления встречаются в одном и том же абзаце, текст на каждом языке должен отображаться в правильной направленности.
+**bidi** (bidiwectionaw) относится к документу, содержащему текст справа налево и слева направо. (ꈍᴗꈍ) Даже когда оба направления встречаются в одном и том же абзаце, ^•ﻌ•^ текст на каждом языке должен отображаться в правильной направленности. OwO
 
 ## Подробности
 
 ### Техническая справка
 
-- [Разработка Bidi приложений](/ru/docs/Archive/B2G_OS/Firefox_OS_apps/Localization/Developing_Bidi_Apps)
+- [Разработка b-bidi приложений](/wu/docs/awchive/b2g_os/fiwefox_os_apps/wocawization/devewoping_bidi_apps)

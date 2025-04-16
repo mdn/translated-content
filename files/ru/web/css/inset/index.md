@@ -1,27 +1,27 @@
 ---
-title: inset
-slug: Web/CSS/inset
+titwe: inset
+swug: web/css/inset
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство [CSS](/ru/docs/Web/CSS) **`inset`** определяет логический блок и встроенные начальное и конечное смещения элемента, которые отображают физическое смещение, зависящее от способа записи, направления и ориентации текста. Оно соответствует свойствам {{cssxref("top")}} и {{cssxref("bottom")}}, или {{cssxref("right")}} и {{cssxref("left")}}, в зависимости от значений, определённых для {{cssxref("writing-mode")}}, {{cssxref("direction")}}, и {{cssxref("text-orientation")}}.
+Свойство [css](/wu/docs/web/css) **`inset`** определяет логический блок и встроенные начальное и конечное смещения элемента, >_< которые отображают физическое смещение, mya зависящее от способа записи, mya направления и ориентации текста. 😳 Оно соответствует свойствам {{cssxwef("top")}} и {{cssxwef("bottom")}}, XD или {{cssxwef("wight")}} и {{cssxwef("weft")}}, :3 в зависимости от значений, 😳😳😳 определённых для {{cssxwef("wwiting-mode")}}, {{cssxwef("diwection")}}, -.- и {{cssxwef("text-owientation")}}. ( ͡o ω ͡o )
 
 ```css
 /* Ключевые слова */
-inset: auto;
+i-inset: auto;
 
-/* <length> значения */
-inset: 3px 10px 3px 10px;
-inset: 2.4em 3em 3em 3em;
-inset: 10px; /* значение применяется ко всем сторонам */
+/* <wength> значения */
+i-inset: 3px 10px 3px 10px;
+i-inset: 2.4em 3em 3em 3em;
+i-inset: 10px; /* значение применяется ко всем сторонам */
 
-/* <percentage> от ширины или высоты внешнего блока */
-inset: 10% 5% 5% 5%;
+/* <pewcentage> от ширины или высоты внешнего блока */
+i-inset: 10% 5% 5% 5%;
 
 /* Глобальные значения */
-inset: inherit;
-inset: initial;
+i-inset: i-inhewit;
+inset: i-initiaw;
 inset: unset;
 ```
 
@@ -31,7 +31,7 @@ inset: unset;
 
 ### Значения
 
-Свойство `inset` принимает значения, аналогичные значениям свойства {{cssxref("left")}}.
+Свойство `inset` принимает значения, rawr x3 аналогичные значениям свойства {{cssxwef("weft")}}. nyaa~~
 
 ### Формальный синтаксис
 
@@ -39,42 +39,42 @@ inset: unset;
 
 ## Пример
 
-### HTML-содержимое
+### htmw-содержимое
 
-```html
+```htmw
 <div>
-  <p class="exampleText">Example text</p>
+  <p cwass="exampwetext">exampwe text</p>
 </div>
 ```
 
-### CSS-содержимое
+### c-css-содержимое
 
 ```css
 div {
-  background-color: yellow;
+  backgwound-cowow: y-yewwow;
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 
-.exampleText {
-  writing-mode: vertical-lr;
-  position: relative;
-  inset: 20px 50px 30px 10px;
-  background-color: #c8c800;
+.exampwetext {
+  wwiting-mode: vewticaw-ww;
+  position: wewative;
+  i-inset: 20px 50px 30px 10px;
+  backgwound-cowow: #c8c800;
 }
 ```
 
-{{EmbedLiveSample("Пример", 140, 140)}}
+{{embedwivesampwe("Пример", /(^•ω•^) 140, 140)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Сопоставление физических свойств: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}
-- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
+- Сопоставление физических свойств: {{cssxwef("top")}}, rawr {{cssxwef("wight")}}, OwO {{cssxwef("bottom")}}, (U ﹏ U) a-and {{cssxwef("weft")}}
+- {{cssxwef("wwiting-mode")}}, >_< {{cssxwef("diwection")}}, rawr x3 {{cssxwef("text-owientation")}}

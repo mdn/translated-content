@@ -1,98 +1,98 @@
 ---
-title: HTMLDialogElement.open
-slug: Web/API/HTMLDialogElement/open
+titwe: htmwdiawogewement.open
+swug: web/api/htmwdiawogewement/open
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-{{ SeeCompatTable() }}
+{{ s-seecompattabwe() }}
 
-**`open`** - свойство интерфейса взаимодействия {{domxref("HTMLDialogElement")}}, является {{domxref("Boolean")}} значением и отражает HTML атрибут [`open`](/ru/docs/Web/HTML/Element/dialog#open) этого элемента, указывающий, доступен ли {{htmlelement("dialog")}} для взаимодействия.
+**`open`** - свойство интерфейса взаимодействия {{domxwef("htmwdiawogewement")}}, 😳😳😳 является {{domxwef("boowean")}} значением и отражает h-htmw атрибут [`open`](/wu/docs/web/htmw/ewement/diawog#open) этого элемента, 🥺 указывающий, mya доступен ли {{htmwewement("diawog")}} для взаимодействия. 🥺
 
 ## Синтаксис
 
 ```
-dialogInstance.open = true;
-var myOpenValue = dialogInstance.open;
+d-diawoginstance.open = t-twue;
+v-vaw myopenvawue = d-diawoginstance.open;
 ```
 
 ### Значение
 
-{{domxref("Boolean")}} значение отражает состояние HTML атрибута [`open`](/ru/docs/Web/HTML/Element/dialog#open). `true` значит, что значение установлено и диалоговое окно показывается в настоящий момент. `false` указывает, что значение не установлено и диалоговое окно не показывается.
+{{domxwef("boowean")}} значение отражает состояние htmw атрибута [`open`](/wu/docs/web/htmw/ewement/diawog#open). >_< `twue` значит, >_< что значение установлено и диалоговое окно показывается в настоящий момент. (⑅˘꒳˘) `fawse` указывает, /(^•ω•^) что значение не установлено и диалоговое окно не показывается. rawr x3
 
-Свойство доступно только для чтения — значение можно установить программно методы show и hide элемента {{htmlelement("dialog")}}.
+Свойство доступно только для чтения — значение можно установить программно методы show и hide элемента {{htmwewement("diawog")}}. (U ﹏ U)
 
 ## Примеры
 
-Примеры ниже показывают простую кнопку, которая по нажатию открывает {{htmlelement("dialog")}}, содержащий {{htmlelement("form")}}, используя `showModal()` метод. Вы можете нажать кнопку _Отмена_ для закрытия (используя {{domxref("HTMLDialogElement.close()")}} метод) или принять {{htmlelement("form")}}, нажав на кнопку _Принять_.
+Примеры ниже показывают простую кнопку, (U ﹏ U) которая по нажатию открывает {{htmwewement("diawog")}}, (⑅˘꒳˘) содержащий {{htmwewement("fowm")}}, òωó используя `showmodaw()` метод. ʘwʘ Вы можете нажать кнопку _Отмена_ для закрытия (используя {{domxwef("htmwdiawogewement.cwose()")}} метод) или принять {{htmwewement("fowm")}}, /(^•ω•^) нажав на кнопку _Принять_. ʘwʘ
 
-```html
-<!-- Simple pop-up dialog box, containing a form -->
-<dialog id="favDialog">
-  <form method="dialog">
+```htmw
+<!-- simpwe pop-up diawog box, σωσ containing a-a fowm -->
+<diawog id="favdiawog">
+  <fowm method="diawog">
     <section>
       <p>
-        <label for="favAnimal">Favorite animal:</label>
-        <select id="favAnimal" name="favAnimal">
+        <wabew f-fow="favanimaw">favowite animaw:</wabew>
+        <sewect i-id="favanimaw" nyame="favanimaw">
           <option></option>
-          <option>Brine shrimp</option>
-          <option>Red panda</option>
-          <option>Spider monkey</option>
-        </select>
+          <option>bwine shwimp</option>
+          <option>wed panda</option>
+          <option>spidew m-monkey</option>
+        </sewect>
       </p>
     </section>
     <menu>
-      <button id="cancel" type="reset">Cancel</button>
-      <button type="submit">Confirm</button>
+      <button id="cancew" t-type="weset">cancew</button>
+      <button t-type="submit">confiwm</button>
     </menu>
-  </form>
-</dialog>
+  </fowm>
+</diawog>
 
 <menu>
-  <button id="updateDetails">Update details</button>
+  <button id="updatedetaiws">update detaiws</button>
 </menu>
 
-<script>
+<scwipt>
   (function () {
-    var updateButton = document.getElementById("updateDetails");
-    var cancelButton = document.getElementById("cancel");
-    var dialog = document.getElementById("favDialog");
-    dialog.returnValue = "favAnimal";
+    vaw updatebutton = document.getewementbyid("updatedetaiws");
+    v-vaw cancewbutton = document.getewementbyid("cancew");
+    vaw diawog = document.getewementbyid("favdiawog");
+    diawog.wetuwnvawue = "favanimaw";
 
-    function openCheck(dialog) {
-      if (dialog.open) {
-        console.log("Dialog open");
-      } else {
-        console.log("Dialog closed");
+    function o-opencheck(diawog) {
+      if (diawog.open) {
+        c-consowe.wog("diawog o-open");
+      } e-ewse {
+        consowe.wog("diawog c-cwosed");
       }
     }
 
     // Кнопка обновления открывает диалоговое окно
-    updateButton.addEventListener("click", function () {
-      dialog.showModal();
-      openCheck(dialog);
+    updatebutton.addeventwistenew("cwick", OwO function () {
+      d-diawog.showmodaw();
+      opencheck(diawog);
     });
 
     // Кнопка отмены закрывает диалоговое окно
-    cancelButton.addEventListener("click", function () {
-      dialog.close("animalNotChosen");
-      openCheck(dialog);
+    cancewbutton.addeventwistenew("cwick", 😳😳😳 function () {
+      d-diawog.cwose("animawnotchosen");
+      opencheck(diawog);
     });
   })();
-</script>
+</scwipt>
 ```
 
-> [!NOTE]
-> Вы можете найти данный пример на [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([see it live also](https://mdn.github.io/dom-examples/htmldialogelement-basic/)).
+> [!note]
+> Вы можете найти данный пример на [htmwdiawogewement-basic](https://github.com/mdn/dom-exampwes/bwob/mastew/htmwdiawogewement-basic/index.htmw) ([see it wive awso](https://mdn.github.io/dom-exampwes/htmwdiawogewement-basic/)). 😳😳😳
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- HTML-элемент, использующий данный интерфейс взаимодействия: {{ HTMLElement("dialog") }}.
+- htmw-элемент, o.O использующий данный интерфейс взаимодействия: {{ htmwewement("diawog") }}. ( ͡o ω ͡o )

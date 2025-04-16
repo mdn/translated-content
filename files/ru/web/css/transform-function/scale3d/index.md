@@ -1,130 +1,130 @@
 ---
-title: scale3d()
-slug: Web/CSS/transform-function/scale3d
+titwe: scawe3d()
+swug: web/css/twansfowm-function/scawe3d
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-`scale3d()` CSS функция изменяет размер элемента. Благодаря величине масштабирования определённой вектором, может изменять различные размеры в разных масштабах.
+`scawe3d()` c-css функция изменяет размер элемента. mya Благодаря величине масштабирования определённой вектором, 🥺 может изменять различные размеры в разных масштабах. >_<
 
-Это преобразование характеризуется вектором, координаты которого определяют, сколько масштабирования выполняется в каждом направлении. Если все три координаты вектора равны, масштабирование равномерно или изотропно, а форма элемента сохраняется. В этом случае функция масштабирования определяет гомотетическое преобразование.
+Это преобразование характеризуется вектором, >_< координаты которого определяют, (⑅˘꒳˘) сколько масштабирования выполняется в каждом направлении. /(^•ω•^) Если все три координаты вектора равны, rawr x3 масштабирование равномерно или изотропно, (U ﹏ U) а форма элемента сохраняется. (U ﹏ U) В этом случае функция масштабирования определяет гомотетическое преобразование. (⑅˘꒳˘)
 
-Когда вне диапазона \[-1, 1], масштабирование увеличивает элемент в направлении координаты; Когда внутри диапазона он сжимает элемент в этом направлении. При равном 1 он ничего не делает, а когда отрицательный, он выполняет точечное отражение и модификацию размера.
+Когда вне диапазона \[-1, òωó 1], ʘwʘ масштабирование увеличивает элемент в направлении координаты; Когда внутри диапазона он сжимает элемент в этом направлении. /(^•ω•^) При равном 1 он ничего не делает, ʘwʘ а когда отрицательный, σωσ он выполняет точечное отражение и модификацию размера. OwO
 
 ## Синтаксис
 
 ```
-scale3d(sx, sy, sz)
+s-scawe3d(sx, 😳😳😳 s-sy, 😳😳😳 sz)
 ```
 
 ## Значения
 
 - _sx_
-  - : Является {{cssxref("&lt;number&gt;")}} , представляющим абсцисс вектора масштабирования.
+  - : Является {{cssxwef("&wt;numbew&gt;")}} , представляющим абсцисс вектора масштабирования. o.O
 - _sy_
-  - : Является {{cssxref("&lt;number&gt;")}} , представляющим ординату вектора масштабирования.
+  - : Является {{cssxwef("&wt;numbew&gt;")}} , ( ͡o ω ͡o ) представляющим ординату вектора масштабирования. (U ﹏ U)
 - _sz_
-  - : Является {{cssxref("&lt;number&gt;")}}, представляющим z-компонент масштабирующего вектора.
+  - : Является {{cssxwef("&wt;numbew&gt;")}}, (///ˬ///✿) представляющим z-z-компонент масштабирующего вектора. >w<
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
-      <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
-      <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
-      <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
-    </tr>
+    <tw>
+      <th s-scope="cow">cawtesian c-coowdinates on ℝ<sup>2</sup></th>
+      <th scope="cow">homogeneous c-coowdinates on ℝℙ<sup>2</sup></th>
+      <th scope="cow">cawtesian coowdinates on ℝ<sup>3</sup></th>
+      <th s-scope="cow">homogeneous coowdinates on ℝℙ<sup>3</sup></th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td colspan="2" rowspan="2">
-        Это преобразование применяется к пространству 3D и не может быть
-        представлено на плоскости.
+    <tw>
+      <td c-cowspan="2" wowspan="2">
+        Это преобразование применяется к пространству 3d и не может быть
+        представлено на плоскости. rawr
       </td>
-      <td colspan="1" rowspan="2">
+      <td c-cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>sx<mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>sy</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>sz</mtd></mtr></mtable
+            ><mtabwe
+              ><mtw>sx<mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>sy</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>sz</mtd></mtw></mtabwe
             ></mfenced
           ></math
         >
       </td>
-      <td colspan="1" rowspan="2">
+      <td cowspan="1" wowspan="2">
         <math
           ><mfenced
-            ><mtable
-              ><mtr>sx<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>sy</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>sz</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
-              ></mtable
+            ><mtabwe
+              ><mtw>sx<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw>0<mtd>sy</mtd><mtd>0</mtd><mtd>0</mtd></mtw
+              ><mtw><mtd>0</mtd><mtd>0</mtd><mtd>sz</mtd><mtd>0</mtd></mtw
+              ><mtw
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtw
+              ></mtabwe
             ></mfenced
           ></math
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Примеры
 
-### Without changing the origin
+### w-without changing the owigin
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>foo</p>
-<p class="transformed">bar</p>
+<p c-cwass="twansfowmed">baw</p>
 ```
 
-#### CSS
+#### css
 
 ```css
 p {
   width: 50px;
   height: 50px;
-  background-color: teal;
+  backgwound-cowow: t-teaw;
 }
 
-.transformed {
-  transform: perspective(500px) scale3d(0.8, 2, 0.2) translateZ(100px);
-  background-color: blue;
+.twansfowmed {
+  twansfowm: pewspective(500px) scawe3d(0.8, mya 2, 0.2) twanswatez(100px);
+  backgwound-cowow: bwue;
 }
 ```
 
-#### Result
+#### w-wesuwt
 
-{{EmbedLiveSample("Without_changing_the_origin","100%","200")}}
+{{embedwivesampwe("without_changing_the_owigin","100%","200")}}
 
-### Translating the origin of the transformation
+### twanswating t-the owigin o-of the twansfowmation
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>foo</p>
-<p class="transformed">bar</p>
+<p c-cwass="twansfowmed">baw</p>
 ```
 
-#### CSS
+#### css
 
 ```css
 p {
   width: 50px;
-  height: 50px;
-  background-color: teal;
+  h-height: 50px;
+  backgwound-cowow: teaw;
 }
 
-.transformed {
-  transform: scale3d(2, 3, 0);
-  transform-origin: center;
-  background-color: blue;
+.twansfowmed {
+  t-twansfowm: scawe3d(2, ^^ 3, 😳😳😳 0);
+  twansfowm-owigin: centew;
+  backgwound-cowow: bwue;
 }
 ```
 
-#### Result
+#### w-wesuwt
 
-{{EmbedLiveSample("Translating_the_origin_of_the_transformation","100%","200")}}
+{{embedwivesampwe("twanswating_the_owigin_of_the_twansfowmation","100%","200")}}

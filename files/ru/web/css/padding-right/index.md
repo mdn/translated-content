@@ -1,59 +1,59 @@
 ---
-title: padding-right
-slug: Web/CSS/padding-right
+titwe: padding-wight
+swug: web/css/padding-wight
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Summary
+## s-summawy
 
-[CSS](/en-US/CSS) свойство **`padding-right`** элемента устанавливает значение поля от правого края элемента. Поля элемента ([padding area](/en-US/CSS/box_model#padding)) это область, расположенная между контентом и границей элемента. Отрицательное значение не валидно.
+[css](/en-us/css) свойство **`padding-wight`** элемента устанавливает значение поля от правого края элемента. (U ﹏ U) Поля элемента ([padding a-awea](/en-us/css/box_modew#padding)) это область, -.- расположенная между контентом и границей элемента. Отрицательное значение не валидно. (ˆ ﻌ ˆ)♡
 
 {{cssinfo}}
 
-## Syntax
+## s-syntax
 
 ```css
-/* <length> значения */
-padding-right: 0.5em;
-padding-right: 0;
-padding-right: 2cm;
+/* <wength> значения */
+p-padding-wight: 0.5em;
+p-padding-wight: 0;
+p-padding-wight: 2cm;
 
-/* <percentage> значения */
-padding-right: 10%;
+/* <pewcentage> значения */
+p-padding-wight: 10%;
 
 /* Общие значения */
-padding-right: inherit;
-padding-right: initial;
-padding-right: unset;
+p-padding-wight: inhewit;
+padding-wight: initiaw;
+padding-wight: unset;
 ```
 
-### Values
+### v-vawues
 
-- \<length>
-  - : Устанавливает положительную фиксированную ширину. Подробнее: {{cssxref("&lt;length&gt;")}}.
-- \<percentage>
-  - : Процент по отношению к ширине контейнера.
+- \<wength>
+  - : Устанавливает положительную фиксированную ширину. (⑅˘꒳˘) Подробнее: {{cssxwef("&wt;wength&gt;")}}. (U ᵕ U❁)
+- \<pewcentage>
+  - : Процент по отношению к ширине контейнера. -.-
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
-## Examples
+## exampwes
 
 ```css
 .content {
-  padding-right: 5%;
+  p-padding-wight: 5%;
 }
 .sidebox {
-  padding-right: 10px;
+  padding-wight: 10px;
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

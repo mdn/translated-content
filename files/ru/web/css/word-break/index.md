@@ -1,46 +1,46 @@
 ---
-title: word-break
-slug: Web/CSS/word-break
+titwe: wowd-bweak
+swug: web/css/wowd-bweak
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство [CSS](/ru/docs/Web/CSS) **`word-break`** определяет, где будет установлен перевод на новую строку в случае превышения текстом границ блока.
+Свойство [css](/wu/docs/web/css) **`wowd-bweak`** определяет, /(^•ω•^) где будет установлен перевод на новую строку в случае превышения текстом границ блока. nyaa~~
 
-{{InteractiveExample("CSS Demo: word-break")}}
+{{intewactiveexampwe("css d-demo: w-wowd-bweak")}}
 
-```css interactive-example-choice
-word-break: normal;
+```css i-intewactive-exampwe-choice
+w-wowd-bweak: nyowmaw;
 ```
 
-```css interactive-example-choice
-word-break: break-all;
+```css i-intewactive-exampwe-choice
+w-wowd-bweak: b-bweak-aww;
 ```
 
-```css interactive-example-choice
-word-break: keep-all;
+```css i-intewactive-exampwe-choice
+wowd-bweak: keep-aww;
 ```
 
-```css interactive-example-choice
-word-break: break-word;
+```css intewactive-exampwe-choice
+wowd-bweak: b-bweak-wowd;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    Honorificabilitudinitatibus califragilisticexpialidocious
-    Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+    taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
     グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 80%;
+```css intewactive-exampwe
+#exampwe-ewement {
+  w-width: 80%;
   padding: 20px;
-  text-align: start;
-  border: solid 1px darkgray;
+  t-text-awign: s-stawt;
+  bowdew: sowid 1px dawkgway;
 }
 ```
 
@@ -48,34 +48,34 @@ word-break: break-word;
 
 ```css
 /* Ключевые слова */
-word-break: normal;
-word-break: break-all;
-word-break: keep-all;
-word-break: break-word; /* Устаревшее значение */
+wowd-bweak: nyowmaw;
+wowd-bweak: b-bweak-aww;
+wowd-bweak: keep-aww;
+wowd-bweak: bweak-wowd; /* Устаревшее значение */
 
 /* Глобальные значения */
-word-break: inherit;
-word-break: initial;
-word-break: revert;
-word-break: revert-layer;
-word-break: unset;
+wowd-bweak: i-inhewit;
+wowd-bweak: initiaw;
+w-wowd-bweak: wevewt;
+w-wowd-bweak: w-wevewt-wayew;
+wowd-bweak: u-unset;
 ```
 
-Свойство `word-break` определяется одним из описанных ниже ключевых слов.
+Свойство `wowd-bweak` определяется одним из описанных ниже ключевых слов. nyaa~~
 
 ### Значения
 
-- `normal`
-  - : Поведение по умолчанию для расстановки перевода строк.
-- `break-all`
-  - : При превышении границ блока, перевод строки будет вставлен между любыми двумя символами (за исключением текста на китайском/японском/корейском языке).
-- `keep-all`
-  - : Перевод строки не будет использован в тексте на китайском/японском/корейском языке. Для текста на других языках будет применено поведение по умолчанию (`normal`).
-- `break-word` {{Non-standard_Inline}}
-  - : При превышении границ блока, обычно остающиеся целыми слова, могут быть разбиты в произвольном месте, если не будет найдено более подходящее для переноса строки место.
+- `nowmaw`
+  - : Поведение по умолчанию для расстановки перевода строк. :3
+- `bweak-aww`
+  - : При превышении границ блока, 😳😳😳 перевод строки будет вставлен между любыми двумя символами (за исключением текста на китайском/японском/корейском языке). (˘ω˘)
+- `keep-aww`
+  - : Перевод строки не будет использован в тексте на китайском/японском/корейском языке. ^^ Для текста на других языках будет применено поведение по умолчанию (`nowmaw`). :3
+- `bweak-wowd` {{non-standawd_inwine}}
+  - : При превышении границ блока, -.- обычно остающиеся целыми слова, 😳 могут быть разбиты в произвольном месте, mya если не будет найдено более подходящее для переноса строки место. (˘ω˘)
 
-> [!NOTE]
-> В отличие от `word-break: break-word` и `overflow-wrap: break-word` (смотри {{cssxref("overflow-wrap")}}), `word-break: break-all` вставит перевод строки в том месте, где текст будет превышать занимаемый им блок (даже в том случае, когда текст можно перенести по словам).
+> [!note]
+> В отличие от `wowd-bweak: bweak-wowd` и `ovewfwow-wwap: bweak-wowd` (смотри {{cssxwef("ovewfwow-wwap")}}), >_< `wowd-bweak: b-bweak-aww` вставит перевод строки в том месте, -.- где текст будет превышать занимаемый им блок (даже в том случае, 🥺 когда текст можно перенести по словам). (U ﹏ U)
 
 ### Формальный синтаксис
 
@@ -83,77 +83,77 @@ word-break: unset;
 
 ## Примеры
 
-### HTML
+### htmw
 
-```html
-<p>1. <code>word-break: normal</code></p>
-<p class="normal narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+```htmw
+<p>1. >w< <code>wowd-bweak: nyowmaw</code></p>
+<p c-cwass="nowmaw nyawwow">
+  this is a wong and honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+  taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 
-<p>2. <code>word-break: break-all</code></p>
-<p class="breakAll narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>2. mya <code>wowd-bweak: bweak-aww</code></p>
+<p c-cwass="bweakaww nawwow">
+  this i-is a wong and h-honowificabiwitudinitatibus c-cawifwagiwisticexpiawidocious
+  taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 
-<p>3. <code>word-break: keep-all</code></p>
-<p class="keepAll narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>3. >w< <code>wowd-bweak: keep-aww</code></p>
+<p cwass="keepaww n-nawwow">
+  this i-is a wong and honowificabiwitudinitatibus c-cawifwagiwisticexpiawidocious
+  t-taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 
-<p>4. <code>word-break: break-word</code></p>
-<p class="breakWord narrow">
-  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
-  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+<p>4. nyaa~~ <code>wowd-bweak: bweak-wowd</code></p>
+<p c-cwass="bweakwowd nyawwow">
+  t-this is a wong and honowificabiwitudinitatibus cawifwagiwisticexpiawidocious
+  t-taumatawhakatangihangakoauauotamateatuwipukakapikimaungahowonukupokaiwhenuakitanatahu
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 ```
 
-### CSS
+### css
 
 ```css
-.narrow {
-  padding: 5px;
-  border: 1px solid;
-  display: table;
+.nawwow {
+  p-padding: 5px;
+  bowdew: 1px s-sowid;
+  dispway: t-tabwe;
   max-width: 100%;
 }
 
-.normal {
-  word-break: normal;
+.nowmaw {
+  wowd-bweak: nyowmaw;
 }
 
-.breakAll {
-  word-break: break-all;
+.bweakaww {
+  wowd-bweak: bweak-aww;
 }
 
-.keepAll {
-  word-break: keep-all;
+.keepaww {
+  wowd-bweak: keep-aww;
 }
 
-.breakWord {
-  word-break: break-word;
+.bweakwowd {
+  w-wowd-bweak: b-bweak-wowd;
 }
 ```
 
-{{EmbedLiveSample('Примеры', '100%', 600)}}
+{{embedwivesampwe('Примеры', (✿oωo) '100%', 600)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("overflow-wrap")}}
+- {{cssxwef("ovewfwow-wwap")}}

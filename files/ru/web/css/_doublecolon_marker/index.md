@@ -1,70 +1,70 @@
 ---
-title: ::marker
-slug: Web/CSS/::marker
+titwe: ::mawkew
+swug: web/css/::mawkew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Псевдоэлемент **`::marker`** применяет стили к маркеру элемента списка, которые обычно содержит значок или номер. Работает с любым элементом или псевдоэлементом, к которого установлен [`display: list-item`](/ru/docs/Web/CSS/display), например, у такого как {{HTMLElement("li")}} или {{HTMLElement("summary")}}.
+Псевдоэлемент **`::mawkew`** применяет стили к маркеру элемента списка, -.- которые обычно содержит значок или номер. (ˆ ﻌ ˆ)♡ Работает с любым элементом или псевдоэлементом, (⑅˘꒳˘) к которого установлен [`dispway: w-wist-item`](/wu/docs/web/css/dispway), (U ᵕ U❁) например, -.- у такого как {{htmwewement("wi")}} или {{htmwewement("summawy")}}. ^^;;
 
 ```css
-::marker {
-  color: blue;
+::mawkew {
+  c-cowow: b-bwue;
   font-size: 1.2em;
 }
 ```
 
 ## Разрешённые свойства
 
-Только некоторые CSS-свойства могут быть использованы с `::marker` в качестве селектора:
+Только некоторые c-css-свойства могут быть использованы с `::mawkew` в качестве селектора:
 
-- Все [свойства шрифтов](/ru/docs/Web/CSS/CSS_fonts)
-- {{CSSxRef("white-space")}}
-- {{CSSxRef("color")}}
-- {{CSSxRef("text-combine-upright")}}, {{CSSxRef("unicode-bidi")}} и {{CSSxRef("direction")}}
-- Свойство {{CSSxRef("content")}}
-- Все [animation](/ru/docs/Web/CSS/CSS_animations#css_properties) и [transition](/ru/docs/Web/CSS/CSS_Transitions#Properties) свойства
+- Все [свойства шрифтов](/wu/docs/web/css/css_fonts)
+- {{cssxwef("white-space")}}
+- {{cssxwef("cowow")}}
+- {{cssxwef("text-combine-upwight")}}, >_< {{cssxwef("unicode-bidi")}} и {{cssxwef("diwection")}}
+- Свойство {{cssxwef("content")}}
+- Все [animation](/wu/docs/web/css/css_animations#css_pwopewties) и [twansition](/wu/docs/web/css/css_twansitions#pwopewties) свойства
 
-> [!NOTE]
-> The specification states that additional CSS properties may be supported in future.
+> [!note]
+> t-the s-specification states t-that additionaw c-css pwopewties may be suppowted in futuwe. mya
 
-## Syntax
+## syntax
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Examples
+## exampwes
 
-### HTML
+### htmw
 
-```html
-<ul>
-  <li>Peaches</li>
-  <li>Apples</li>
-  <li>Plums</li>
-</ul>
+```htmw
+<uw>
+  <wi>peaches</wi>
+  <wi>appwes</wi>
+  <wi>pwums</wi>
+</uw>
 ```
 
-### CSS
+### c-css
 
 ```css
-ul li::marker {
-  color: red;
-  font-size: 1.5em;
+uw wi::mawkew {
+  cowow: wed;
+  f-font-size: 1.5em;
 }
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- HTML-элементы, у которые есть маркеры списка по умолчанию: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("summary")}}
+- h-htmw-элементы, mya у которые есть маркеры списка по умолчанию: {{htmwewement("ow")}}, 😳 {{htmwewement("wi")}}, XD {{htmwewement("summawy")}}

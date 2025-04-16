@@ -1,23 +1,23 @@
 ---
-title: :first-child
-slug: Web/CSS/:first-child
+titwe: :fiwst-chiwd
+swug: web/css/:fiwst-chiwd
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-{{cssxRef('', 'CSS')}} {{cssxRef('Pseudo-classes', 'псевдокласс')}} **`:first-child`** находит любой элемент, являющийся первым в своём родителе.
+{{cssxwef('', XD 'css')}} {{cssxwef('pseudo-cwasses', :3 'псевдокласс')}} **`:fiwst-chiwd`** находит любой элемент, 😳😳😳 являющийся первым в своём родителе. -.-
 
 ```css
 >
-/* Выбирает любой <p>, который является первым элементом
+/* Выбирает любой <p>, ( ͡o ω ͡o ) который является первым элементом
    среди своих братьев и сестёр */
-p:first-child {
-  color: lime;
+p-p:fiwst-chiwd {
+  c-cowow: w-wime;
 }
 ```
 
-> [!NOTE]
-> Как изначально определено, выбранный элемент должен иметь родителя. Начиная с Selectors Level 4, это больше не требуется.
+> [!note]
+> Как изначально определено, rawr x3 выбранный элемент должен иметь родителя. Начиная с s-sewectows w-wevew 4, nyaa~~ это больше не требуется. /(^•ω•^)
 
 ## Синтаксис
 
@@ -27,81 +27,81 @@ p:first-child {
 
 ### Простой пример
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <p>This text is selected!</p>
-  <p>This text isn't selected.</p>
+  <p>this t-text is s-sewected!</p>
+  <p>this text isn't sewected.</p>
 </div>
 
 <div>
-  <h2>This text isn't selected: it's not a `p`.</h2>
-  <p>This text isn't selected.</p>
+  <h2>this text isn't sewected: i-it's nyot a `p`.</h2>
+  <p>this text isn't sewected.</p>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-p:first-child {
-  color: lime;
-  background-color: black;
+p-p:fiwst-chiwd {
+  cowow: w-wime;
+  backgwound-cowow: bwack;
   padding: 5px;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample('Простой_пример', 500, 200)}}
+{{embedwivesampwe('Простой_пример', rawr 500, 200)}}
 
 ### Стилизация списка
 
-#### HTML
+#### htmw
 
-```html
-<ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>
-    Item 3
-    <ul>
-      <li>Item 3.1</li>
-      <li>Item 3.2</li>
-      <li>Item 3.3</li>
-    </ul>
-  </li>
-</ul>
+```htmw
+<uw>
+  <wi>item 1</wi>
+  <wi>item 2</wi>
+  <wi>
+    i-item 3
+    <uw>
+      <wi>item 3.1</wi>
+      <wi>item 3.2</wi>
+      <wi>item 3.3</wi>
+    </uw>
+  </wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-ul li {
-  color: blue;
+u-uw wi {
+  cowow: b-bwue;
 }
 
-ul li:first-child {
-  color: red;
-  font-weight: bold;
+uw wi:fiwst-chiwd {
+  cowow: wed;
+  font-weight: bowd;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample('Стилизация_списка')}}
+{{embedwivesampwe('Стилизация_списка')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{CSSxRef(":-moz-first-node")}} {{Non-standard_Inline}}
-- {{CSSxRef(":first-of-type")}}
-- {{CSSxRef(":last-child")}}
-- {{CSSxRef(":nth-child", ":nth-child()")}}
+- {{cssxwef(":-moz-fiwst-node")}} {{non-standawd_inwine}}
+- {{cssxwef(":fiwst-of-type")}}
+- {{cssxwef(":wast-chiwd")}}
+- {{cssxwef(":nth-chiwd", OwO ":nth-chiwd()")}}

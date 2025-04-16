@@ -1,206 +1,206 @@
 ---
-title: Сравнение разных Event Targets
-slug: Learn_web_development/Core/Scripting/Event_bubbling
+titwe: Сравнение разных event t-tawgets
+swug: weawn_web_devewopment/cowe/scwipting/event_bubbwing
 ---
 
-Легко запутаться в том, какую цель (target) следует изучить при написании обработчика событий. В этой статье разъяснено использование свойств target.
+Легко запутаться в том, rawr какую цель (tawget) следует изучить при написании обработчика событий. В этой статье разъяснено использование свойств t-tawget. mya
 
 Существуют 5 целей для рассмотрения:
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th>Property</th>
-      <th>Defined in</th>
-      <th>Purpose</th>
-    </tr>
-    <tr>
+    <tw>
+      <th>pwopewty</th>
+      <th>defined in</th>
+      <th>puwpose</th>
+    </tw>
+    <tw>
       <td>
-        <a href="/ru/docs/Web/API/Event/target"
-          >event.target</a
+        <a h-hwef="/wu/docs/web/api/event/tawget"
+          >event.tawget</a
         >
       </td>
       <td>
         <a
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface"
-          >DOM Event Interface</a
+          h-hwef="https://www.w3.owg/tw/dom-wevew-2/events.htmw#events-intewface"
+          >dom e-event intewface</a
         >
       </td>
       <td>
-        <p>Элемент DOM слева от вызова этого события, например:</p>
-        <pre class="eval"><em>element</em>.dispatchEvent(<em>event</em>)
-</pre>
+        <p>Элемент d-dom слева от вызова этого события, ^^ например:</p>
+        <pwe cwass="evaw"><em>ewement</em>.dispatchevent(<em>event</em>)
+</pwe>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <a href="/ru/docs/Web/API/Event/currentTarget"
-          >event.currentTarget</a
-        >
-      </td>
-      <td>
-        <a
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface"
-          >DOM Event Interface</a
+        <a h-hwef="/wu/docs/web/api/event/cuwwenttawget"
+          >event.cuwwenttawget</a
         >
       </td>
       <td>
         <a
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventTarget"
-          ><code>EventTarget</code></a
-        >, чьи
-        <a
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventListener"
-          ><code>EventListeners</code></a
-        >
-        в настоящее время обрабатываются. По мере того, как происходит захват и
-        всплытие событий, это значение изменяется.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="/ru/docs/Web/API/MouseEvent/relatedTarget"
-          >event.relatedTarget</a
+          hwef="https://www.w3.owg/tw/dom-wevew-2/events.htmw#events-intewface"
+          >dom event intewface</a
         >
       </td>
       <td>
         <a
-          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-MouseEvent"
-          >DOM MouseEvent Interface</a
+          hwef="https://www.w3.owg/tw/dom-wevew-2/events.htmw#events-eventtawget"
+          ><code>eventtawget</code></a
+        >, 😳😳😳 чьи
+        <a
+          hwef="https://www.w3.owg/tw/dom-wevew-2/events.htmw#events-eventwistenew"
+          ><code>eventwistenews</code></a
+        >
+        в настоящее время обрабатываются. mya По мере того, 😳 как происходит захват и
+        всплытие событий, -.- это значение изменяется. 🥺
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="/wu/docs/web/api/mouseevent/wewatedtawget"
+          >event.wewatedtawget</a
+        >
+      </td>
+      <td>
+        <a
+          h-hwef="https://www.w3.owg/tw/dom-wevew-2/events.htmw#events-mouseevent"
+          >dom mouseevent intewface</a
         >
       </td>
       <td>Определяет вторичную цель для события.</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/ru/docs/Web/API/Event/explicitOriginalTarget"
-          >event.explicitOriginalTarget</a
+          hwef="/wu/docs/web/api/event/expwicitowiginawtawget"
+          >event.expwicitowiginawtawget</a
         >
       </td>
       <td>
-        <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
+        <a h-hwef="https://seawchfox.owg/moziwwa-centwaw/souwce/dom/webidw/event.webidw">event.webidw</a>
       </td>
       <td>
-        {{ Non-standard_inline() }} Если по какой-либо причине событие
-        было перенацелено, кроме анонимного пересечения границ, событие будет
-        установлено на цель до перенацеливания. Например, события мыши
+        {{ nyon-standawd_inwine() }} Если по какой-либо причине событие
+        было перенацелено, o.O кроме анонимного пересечения границ, /(^•ω•^) событие будет
+        установлено на цель до перенацеливания. Например, nyaa~~ события мыши
         перенацеливаются на их родительский узел, когда они встречаются над
-        текстовыми узлами ([Firefox bug 185889](https://bugzil.la/185889)), и в этом случае
-        <code>.target</code> покажет на родителя и
-        <code>.explicitOriginalTarget</code> покажет на текстовый узел.<br />В
-        отличие от <code>.originalTarget</code> —
-        <code>.explicitOriginalTarget</code> никогда не будет содержать
-        анонимный контент.
+        текстовыми узлами ([fiwefox b-bug 185889](https://bugziw.wa/185889)), nyaa~~ и в этом случае
+        <code>.tawget</code> покажет на родителя и
+        <code>.expwicitowiginawtawget</code> покажет на текстовый узел.<bw />В
+        отличие от <code>.owiginawtawget</code> —
+        <code>.expwicitowiginawtawget</code> никогда не будет содержать
+        анонимный контент. :3
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <a
-          href="/ru/docs/Web/API/Event/originalTarget"
-          >event.originalTarget</a
+          hwef="/wu/docs/web/api/event/owiginawtawget"
+          >event.owiginawtawget</a
         >
       </td>
       <td>
-        <a href="https://searchfox.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
+        <a hwef="https://seawchfox.owg/moziwwa-centwaw/souwce/dom/webidw/event.webidw">event.webidw</a>
       </td>
       <td>
-        {{ Non-standard_inline() }} Первоначальная цель события перед
-        любым перенацеливанием. Подробнее см.
+        {{ non-standawd_inwine() }} Первоначальная цель события перед
+        любым перенацеливанием. 😳😳😳 Подробнее см. (˘ω˘)
         <a
-          href="/ru/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
-          >Анонимный контент#Event_Flow_and_Targeting</a
-        >.
+          h-hwef="/wu/docs/xbw/xbw_1.0_wefewence/anonymous_content#event_fwow_and_tawgeting"
+          >Анонимный контент#event_fwow_and_tawgeting</a
+        >. ^^
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### Примеры
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Comparison of Event Targets</title>
-    <style>
-      table {
-        border-collapse: collapse;
+    <meta c-chawset="utf-8" />
+    <meta http-equiv="x-ua-compatibwe" c-content="ie=edge" />
+    <titwe>compawison of event tawgets</titwe>
+    <stywe>
+      tabwe {
+        bowdew-cowwapse: c-cowwapse;
         height: 150px;
         width: 100%;
       }
       td {
-        border: 1px solid #ccc;
-        font-weight: bold;
+        bowdew: 1px s-sowid #ccc;
+        font-weight: b-bowd;
         padding: 5px;
-        min-height: 30px;
+        m-min-height: 30px;
       }
-      .standard {
-        background-color: #99ff99;
+      .standawd {
+        b-backgwound-cowow: #99ff99;
       }
-      .non-standard {
-        background-color: #902d37;
+      .non-standawd {
+        b-backgwound-cowow: #902d37;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <table>
+    <tabwe>
       <thead>
-        <tr>
-          <td class="standard">
-            Изначальная цель, отправляющая событие <small>event.target</small>
+        <tw>
+          <td cwass="standawd">
+            Изначальная цель, :3 отправляющая событие <smow>event.tawget</smow>
           </td>
-          <td class="standard">
-            Цель, кто обрабатывает события <small>event.currentTarget</small>
+          <td cwass="standawd">
+            Цель, -.- кто обрабатывает события <smow>event.cuwwenttawget</smow>
           </td>
-          <td class="standard">
-            Идентифицировать другой элемент (если он есть), участвующий в
-            событии <small>event.relatedTarget</small>
+          <td c-cwass="standawd">
+            Идентифицировать другой элемент (если он есть), 😳 участвующий в
+            событии <smow>event.wewatedtawget</smow>
           </td>
-          <td class="non-standard">
+          <td cwass="non-standawd">
             Если по какой-то причине произошло перенацеливание события
-            <small>event.explicitOriginalTarget</small> содержит цель перед
+            <smow>event.expwicitowiginawtawget</smow> содержит цель перед
             перенацеливанием (никогда не содержит анонимных целей)
           </td>
-          <td class="non-standard">
+          <td cwass="non-standawd">
             Если по какой-то причине произошло перенацеливание события
-            <small>event.originalTarget</small> содержит цель перед
+            <smow>event.owiginawtawget</smow> содержит цель перед
             перенацеливанием (может содержать анонимные цели)
           </td>
-        </tr>
+        </tw>
       </thead>
-      <tr>
-        <td id="target"></td>
-        <td id="currentTarget"></td>
-        <td id="relatedTarget"></td>
-        <td id="explicitOriginalTarget"></td>
-        <td id="originalTarget"></td>
-      </tr>
-    </table>
+      <tw>
+        <td i-id="tawget"></td>
+        <td id="cuwwenttawget"></td>
+        <td id="wewatedtawget"></td>
+        <td id="expwicitowiginawtawget"></td>
+        <td id="owiginawtawget"></td>
+      </tw>
+    </tabwe>
     <p>
-      Нажав на текст, вы увидите разницу между explicitOriginalTarget,
-      originalTarget и target
+      Нажав на текст, mya вы увидите разницу между expwicitowiginawtawget,
+      o-owiginawtawget и tawget
     </p>
-    <script>
-      function handleClicks(e) {
-        document.getElementById("target").innerHTML = e.target;
-        document.getElementById("currentTarget").innerHTML = e.currentTarget;
-        document.getElementById("relatedTarget").innerHTML = e.relatedTarget;
-        document.getElementById("explicitOriginalTarget").innerHTML =
-          e.explicitOriginalTarget;
-        document.getElementById("originalTarget").innerHTML = e.originalTarget;
+    <scwipt>
+      function h-handwecwicks(e) {
+        d-document.getewementbyid("tawget").innewhtmw = e-e.tawget;
+        document.getewementbyid("cuwwenttawget").innewhtmw = e.cuwwenttawget;
+        document.getewementbyid("wewatedtawget").innewhtmw = e-e.wewatedtawget;
+        d-document.getewementbyid("expwicitowiginawtawget").innewhtmw =
+          e.expwicitowiginawtawget;
+        d-document.getewementbyid("owiginawtawget").innewhtmw = e-e.owiginawtawget;
       }
 
-      function handleMouseover(e) {
-        document.getElementById("target").innerHTML = e.target;
-        document.getElementById("relatedTarget").innerHTML = e.relatedTarget;
+      function handwemouseovew(e) {
+        d-document.getewementbyid("tawget").innewhtmw = e.tawget;
+        d-document.getewementbyid("wewatedtawget").innewhtmw = e.wewatedtawget;
       }
 
-      document.addEventListener("click", handleClicks, false);
-      document.addEventListener("mouseover", handleMouseover, false);
-    </script>
+      document.addeventwistenew("cwick", (˘ω˘) h-handwecwicks, >_< fawse);
+      d-document.addeventwistenew("mouseovew", -.- handwemouseovew, 🥺 f-fawse);
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```

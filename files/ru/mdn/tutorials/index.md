@@ -1,132 +1,132 @@
 ---
-title: Учебники
-slug: MDN/Tutorials
+titwe: Учебники
+swug: m-mdn/tutowiaws
 ---
 
-Ссылки на этой странице ведут к целому ряду учебных пособий и материалов. Если вы только начинаете учить основы, или же вы уже бывалый веб-разработчик, то здесь вы сможете найти полезные ресурсы для получения передового практического опыта. Эти ресурсы создаются дальновидными компаниями и веб-разработчиками, включают открытые стандарты и лучшие практики для веб-разработки, предоставляют или позволяют переводы под открытой лицензией, такой, как Creative Commons.
+Ссылки на этой странице ведут к целому ряду учебных пособий и материалов. (˘ω˘) Если вы только начинаете учить основы, (U ﹏ U) или же вы уже бывалый веб-разработчик, ^•ﻌ•^ то здесь вы сможете найти полезные ресурсы для получения передового практического опыта. (˘ω˘) Эти ресурсы создаются дальновидными компаниями и веб-разработчиками, включают открытые стандарты и лучшие практики для веб-разработки, :3 предоставляют или позволяют переводы под открытой лицензией, ^^;; такой, 🥺 как c-cweative c-commons. (⑅˘꒳˘)
 
-## HTML учебники
+## h-htmw учебники
 
 ### Вводный уровень
 
-- [Введение в HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)
-  - : Что такое HTML, что он делает, его краткая история, и что представляет собой структура HTML документа. В последующих статьях мы подробнее рассмотрим отдельные части HTML.
-- [Базовая структура веб-страницы](https://reference.sitepoint.com/html/page-structure) (SitePoint)
-  - : Узнайте как HTML элементы сочетаются в общую картину.
-- [MDN HTML Element Reference](/ru/docs/Web/HTML/Element)
-  - : Комплексный справочник для HTML элементов, и, как различные браузеры поддерживают их.
-- [HTML Challenges](https://wikiversity.org/wiki/Web_Design/HTML_Challenges) (Wikiversity)
-  - : Используйте эти задачки, чтобы отточить свои HTML навыки (для примера, "Какой элемент нужно использовать - \<h2> или \<STRONG>?"), фокусируясь на смысле разметки.
+- [Введение в h-htmw](/wu/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content)
+  - : Что такое h-htmw, nyaa~~ что он делает, :3 его краткая история, ( ͡o ω ͡o ) и что представляет собой структура h-htmw документа. mya В последующих статьях мы подробнее рассмотрим отдельные части h-htmw. (///ˬ///✿)
+- [Базовая структура веб-страницы](https://wefewence.sitepoint.com/htmw/page-stwuctuwe) (sitepoint)
+  - : Узнайте как htmw элементы сочетаются в общую картину. (˘ω˘)
+- [mdn htmw ewement wefewence](/wu/docs/web/htmw/ewement)
+  - : Комплексный справочник для htmw элементов, ^^;; и, как различные браузеры поддерживают их. (✿oωo)
+- [htmw c-chawwenges](https://wikivewsity.owg/wiki/web_design/htmw_chawwenges) (wikivewsity)
+  - : Используйте эти задачки, чтобы отточить свои htmw навыки (для примера, (U ﹏ U) "Какой элемент нужно использовать - \<h2> или \<stwong>?"), -.- фокусируясь на смысле разметки. ^•ﻌ•^
 
 ### Продвинутый уровень
 
-- [Tips for Authoring Fast-Loading HTML Pages](/ru/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
+- [tips fow authowing f-fast-woading htmw pages](/wu/docs/weawn_web_devewopment/howto/sowve_htmw_pwobwems/authow_fast-woading_htmw_pages)
   - : Оптимизация веб-страниц, для большей адаптивности сайта и снижения нагрузки на веб-сервера и подключение к Интернету
-- [HTML5 Tutorials](https://www.html5rocks.com/tutorials/) (HTML5 Rocks)
-  - : Совершите экскурсию в код, который использует возможности HTML5.
-- [Semantics in HTML5](https://www.alistapart.com/articles/semanticsinhtml5/) (A List Apart)
-  - : Изучите рабочую разметку, обеспечивающую обратную совместимость, расширяемую и поддерживающую будущие изменения (совместимость вперёд).
-- [Canvas Tutorial](/ru/docs/Web/API/Canvas_API/Tutorial)
-  - : Узнайте, как рисовать с помощью скриптов, используя элемент `canvas`.
-- [HTML5 Doctor](https://html5doctor.com/)
-  - : Статьи о том, как используется HTML5 прямо сейчас.
-- [The Joy of HTML5 Audio](http://www.elated.com/articles/html5-audio/) (Elated)
-  - : Узнайте как использовать HTML аудио элемент для того, чтобы вставлять звуки в ваши веб-страницы. В учебнике представлено много примеров кода.
+- [htmw5 tutowiaws](https://www.htmw5wocks.com/tutowiaws/) (htmw5 w-wocks)
+  - : Совершите экскурсию в код, rawr который использует возможности htmw5. (˘ω˘)
+- [semantics in htmw5](https://www.awistapawt.com/awticwes/semanticsinhtmw5/) (a wist apawt)
+  - : Изучите рабочую разметку, nyaa~~ обеспечивающую обратную совместимость, UwU расширяемую и поддерживающую будущие изменения (совместимость вперёд). :3
+- [canvas t-tutowiaw](/wu/docs/web/api/canvas_api/tutowiaw)
+  - : Узнайте, (⑅˘꒳˘) как рисовать с помощью скриптов, (///ˬ///✿) используя элемент `canvas`. ^^;;
+- [htmw5 doctow](https://htmw5doctow.com/)
+  - : Статьи о том, >_< как используется h-htmw5 прямо сейчас. rawr x3
+- [the j-joy of htmw5 audio](http://www.ewated.com/awticwes/htmw5-audio/) (ewated)
+  - : Узнайте как использовать htmw аудио элемент для того, /(^•ω•^) чтобы вставлять звуки в ваши веб-страницы. :3 В учебнике представлено много примеров кода. (ꈍᴗꈍ)
 
-## Javascript учебники
-
-### Вводный уровень
-
-- **[JavaScript First Steps](/ru/docs/conflicting/Learn_web_development/Core/Scripting)**
-  - : JavaScript руководство, написанное как часть MDN [Learning Area](/ru/docs/Learn_web_development).
-- [Codecademy](https://www.codecademy.com/) (Codecademy)
-  - : Codecademy это простой способ изучить JavaScript. Он интерактивный, и вы можете делать это вместе с друзьями
-- [Getting Started with JavaScript](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
-  - : Что такое JavaScript и как он может пригодиться вам?
-- [JavaScript Best Practices](https://dev.opera.com/articles/view/javascript-best-practices/) (WebPlatform.org)
-  - : Узнайте о некоторых из очевидных (и не очень очевидных) лучших практиках для написания кода на JavaScript.
-
-### Средний уровень
-
-- [A Re-Introduction to JavaScript](/ru/docs/Web/JavaScript/Guide/Language_overview)
-  - : Повторение языка программирования JavaScript для разработчиков среднего уровня.
-- [Eloquent JavaScript](https://eloquentjavascript.net/contents.html)
-  - : Полное руководство по "средним" и "продвинутым" методикам JavaScript.
-- [Essential JavaScript Design Patterns](https://www.addyosmani.com/resources/essentialjsdesignpatterns/book/) (Addy Osmani)
-  - : Введение в основы шаблонов проектирования JavaScript.
-- [The JavaScript Programming Language](http://www.yuiblog.com/blog/2007/01/24/video-crockford-tjpl/) (YUI Blog)
-  - : Douglas Crockford исследует язык, какой он есть сегодня, и как он пришёл, чтобы быть.
-- [Introduction to Object-Oriented JavaScript](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
-  - : Узнайте об ООП в JavaScript.
-- **[Speaking JavaScript](http://speakingjs.com/es5/) (Dr. Axel Rauschmayer)**
-  - : Для тех программистов, кто хочет быстро и хорошо выучить JavaScript, а так же для тех, кто хочет углубить свои навыки или же изучить какие-то специфические темы.
-
-### Продвинутый уровень
-
-- [JavaScript Guide](/ru/docs/Web/JavaScript/Guide)
-  - : Полное, регулярно обновляемое руководство по JavaScript для всех уровней обучения от начального до продвинутого.
-- [Learning Advanced JavaScript](http://ejohn.org/apps/learn/) (John Resig)
-  - : Гид по "продвинутому" JavaScript от John Resig.
-- [Introducing the JavaScript DOM](http://www.elated.com/articles/javascript-dom-intro/) (Elated)
-  - : Что такое Document Object Model, и зачем она нужна? Эта статья даёт вам постепенное введение в эту мощную способность JavaScript.
-- [An Inconvenient API: The Theory of the DOM](http://yuiblog.com/blog/2006/10/20/video-crockford-domtheory/) (YUI Blog)
-  - : Douglas Crockford объясняет Document Object Model.
-- [Advanced JavaScript](http://yuiblog.com/blog/2006/11/27/video-crockford-advjs/) (YUI Blog)
-  - : Douglas Crockford пристально следит за шаблоном кода, который JavaScript программисты могут выбрать в авторстве своих приложений.
-- [JavaScript Garden](http://bonsaiden.github.com/JavaScript-Garden/)
-  - : Документация из самых необычных частей JavaScript
-- [Which JavaScript Framework?](http://webcache.googleusercontent.com/search?q=cache:CJYRO48hw9EJ:stackoverflow.com/questions/394601/which-javascript-framework-jquery-vs-dojo-vs) (StackOverflow)
-  - : Советы по выбору основы JavaScript..
-- [Non-Blocking JavaScript Downloads](http://yuiblog.com/blog/2008/07/22/non-blocking-scripts/) (YUI Blog)
-  - : Советы по улучшению производительности скачивания страниц, содержащих JavaScript
-- [JavaScript Patterns](http://shichuan.github.io/javascript-patterns)
-  - : Шаблоны и антишаблоны проектирования JavaScript, которые охватывают функциональные шаблоны, шаблоны JQuery, шаблоны плагинов JQuery, шаблоны проектирования, основные шаблоны, literal patterns и шаблоны конструирования, шаблоны создания объекта, переиспользуемый шаблонный код, DOM.
-- [How Browsers Work](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/)
-  - : Статья с подробным исследованием, описывающая различные современные браузеры, их движки, рендеринг страниц и пр.
-- **[Exploring ES6](https://exploringjs.com/es6/) (Dr. Axel Rauschmayer)**
-  - : Надёжная и подробная информация об ECMAScript 2015.
-- [JavaScript Videos](https://github.com/bolshchikov/js-must-watch) (GitHub)
-  - : Видео о JavaScript.
-
-## CSS учебники
+## javascwipt учебники
 
 ### Вводный уровень
 
-- [CSS Getting Started](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics)
-  - : Этот учебник познакомит вас с каскадными таблицами стилей (CSS). Он проведёт вас через основные особенности CSS и предложит практические примеры, которые можно попробовать на вашем компьютере.
-- [CSS Selector Classes](https://en.wikiversity.org/wiki/Web_Design/CSS_Classes) (Wikiversity)
-  - : Что такое классы в CSS?
-- [External CSS](https://en.wikiversity.org/wiki/Web_Design/External_CSS) (Wikiversity)
-  - : Использование CSS из внешних источников.
-- [Adding a Touch of Style](https://www.w3.org/MarkUp/Guide/Style) (W3C)
-  - : Краткое руководство для начинающих по стилизации веб-страниц с помощью CSS.
-- [Common CSS Questions](/ru/docs/Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ)
-  - : Общие вопросы и ответы для начинающих.
-- [CSS Selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-  - : Введение в CSS селекторы.
+- **[javascwipt fiwst steps](/wu/docs/confwicting/weawn_web_devewopment/cowe/scwipting)**
+  - : javascwipt руководство, /(^•ω•^) написанное как часть mdn [weawning a-awea](/wu/docs/weawn_web_devewopment). (⑅˘꒳˘)
+- [codecademy](https://www.codecademy.com/) (codecademy)
+  - : codecademy это простой способ изучить javascwipt. ( ͡o ω ͡o ) Он интерактивный, òωó и вы можете делать это вместе с друзьями
+- [getting stawted with javascwipt](/wu/docs/weawn_web_devewopment/getting_stawted/youw_fiwst_website/adding_intewactivity)
+  - : Что такое javascwipt и как он может пригодиться вам?
+- [javascwipt best p-pwactices](https://dev.opewa.com/awticwes/view/javascwipt-best-pwactices/) (webpwatfowm.owg)
+  - : Узнайте о некоторых из очевидных (и не очень очевидных) лучших практиках для написания кода на javascwipt. (⑅˘꒳˘)
 
 ### Средний уровень
 
-- [CSS Reference](/ru/docs/Web/CSS/Reference)
-  - : Полный справочник по CSS, с информацией о поддержке в Firefox и других браузерах.
-- [CSS Challenges](https://en.wikiversity.org/wiki/Web_Design/CSS_challenges) (Wikiversity)
-  - : Улучшите ваши навыки CSS, и обратите внимание на то, где вам нужно больше практики.
-- [Intermediate CSS Concepts](http://www.html.net/tutorials/css/) (HTML.net)
-  - : Группировка, псевдоклассы и многое другое.
-- [CSS Positioning 101](https://www.alistapart.com/articles/css-positioning-101/) (A List Apart)
-  - : Использование позиционирования в соответствии со стандартами, без использования таблиц.
-- [Progressive Enhancement with CSS](https://www.alistapart.com/articles/progressiveenhancementwithcss/) (A List Apart)
-  - : Прогрессивное улучшение в веб-страницы с помощью CSS.
-- [Fluid Grids](https://www.alistapart.com/articles/fluidgrids/) (A List Apart)
-  - : Дизайн вёрстки, который плавно изменяется вместе с размерами окна, основанный на сетке.
+- [a w-we-intwoduction t-to javascwipt](/wu/docs/web/javascwipt/guide/wanguage_ovewview)
+  - : Повторение языка программирования j-javascwipt для разработчиков среднего уровня. XD
+- [ewoquent j-javascwipt](https://ewoquentjavascwipt.net/contents.htmw)
+  - : Полное руководство по "средним" и "продвинутым" методикам javascwipt. -.-
+- [essentiaw javascwipt d-design pattewns](https://www.addyosmani.com/wesouwces/essentiawjsdesignpattewns/book/) (addy osmani)
+  - : Введение в основы шаблонов проектирования javascwipt. :3
+- [the javascwipt pwogwamming w-wanguage](http://www.yuibwog.com/bwog/2007/01/24/video-cwockfowd-tjpw/) (yui bwog)
+  - : dougwas cwockfowd исследует язык, nyaa~~ какой он есть сегодня, 😳 и как он пришёл, чтобы быть. (⑅˘꒳˘)
+- [intwoduction to object-owiented javascwipt](/wu/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects)
+  - : Узнайте об ООП в javascwipt. nyaa~~
+- **[speaking j-javascwipt](http://speakingjs.com/es5/) (dw. OwO axew wauschmayew)**
+  - : Для тех программистов, rawr x3 кто хочет быстро и хорошо выучить j-javascwipt, XD а так же для тех, σωσ кто хочет углубить свои навыки или же изучить какие-то специфические темы. (U ᵕ U❁)
 
 ### Продвинутый уровень
 
-- [Using CSS Transforms](/ru/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-  - : Как применять поворот, наклон, масштабирование и перемещение при помощи CSS
-- [CSS Transitions](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-  - : CSS переходы, спецификация CSS3 по этой теме, как анимировать изменения стилей в CSS, вместо того, чтобы делать их "сразу".
-- [Quick Guide to Implement Web Fonts with @font-face](https://www.html5rocks.com/tutorials/webfonts/quick/) (HTML5 Rocks)
-  - : Возможности @font-face в CSS3, создание собственных шрифтов и работа с ними.
-- [Starting to Write CSS](https://davidwalsh.name/starting-css) (David Walsh)
-  - : Введение в инструменты и методологии для разработки более краткого, масштабируемого и поддерживаемого CSS.
+- [javascwipt g-guide](/wu/docs/web/javascwipt/guide)
+  - : Полное, (U ﹏ U) регулярно обновляемое руководство по j-javascwipt для всех уровней обучения от начального до продвинутого. :3
+- [weawning advanced javascwipt](http://ejohn.owg/apps/weawn/) (john wesig)
+  - : Гид по "продвинутому" j-javascwipt от j-john wesig. ( ͡o ω ͡o )
+- [intwoducing the javascwipt d-dom](http://www.ewated.com/awticwes/javascwipt-dom-intwo/) (ewated)
+  - : Что такое d-document object modew, σωσ и зачем она нужна? Эта статья даёт вам постепенное введение в эту мощную способность j-javascwipt. >w<
+- [an inconvenient api: t-the theowy of the dom](http://yuibwog.com/bwog/2006/10/20/video-cwockfowd-domtheowy/) (yui bwog)
+  - : d-dougwas cwockfowd объясняет d-document object modew. 😳😳😳
+- [advanced j-javascwipt](http://yuibwog.com/bwog/2006/11/27/video-cwockfowd-advjs/) (yui b-bwog)
+  - : dougwas cwockfowd пристально следит за шаблоном кода, OwO который javascwipt программисты могут выбрать в авторстве своих приложений. 😳
+- [javascwipt gawden](http://bonsaiden.github.com/javascwipt-gawden/)
+  - : Документация из самых необычных частей javascwipt
+- [which javascwipt fwamewowk?](http://webcache.googweusewcontent.com/seawch?q=cache:cjywo48hw9ej:stackovewfwow.com/questions/394601/which-javascwipt-fwamewowk-jquewy-vs-dojo-vs) (stackovewfwow)
+  - : Советы по выбору основы j-javascwipt..
+- [non-bwocking j-javascwipt downwoads](http://yuibwog.com/bwog/2008/07/22/non-bwocking-scwipts/) (yui bwog)
+  - : Советы по улучшению производительности скачивания страниц, 😳😳😳 содержащих j-javascwipt
+- [javascwipt p-pattewns](http://shichuan.github.io/javascwipt-pattewns)
+  - : Шаблоны и антишаблоны проектирования j-javascwipt, (˘ω˘) которые охватывают функциональные шаблоны, ʘwʘ шаблоны jquewy, ( ͡o ω ͡o ) шаблоны плагинов jquewy, o.O шаблоны проектирования, >w< основные шаблоны, 😳 witewaw pattewns и шаблоны конструирования, 🥺 шаблоны создания объекта, rawr x3 переиспользуемый шаблонный код, o.O dom.
+- [how b-bwowsews wowk](https://www.htmw5wocks.com/en/tutowiaws/intewnaws/howbwowsewswowk/)
+  - : Статья с подробным исследованием, rawr описывающая различные современные браузеры, ʘwʘ их движки, 😳😳😳 рендеринг страниц и пр. ^^;;
+- **[expwowing es6](https://expwowingjs.com/es6/) (dw. o.O axew wauschmayew)**
+  - : Надёжная и подробная информация об e-ecmascwipt 2015. (///ˬ///✿)
+- [javascwipt videos](https://github.com/bowshchikov/js-must-watch) (github)
+  - : Видео о j-javascwipt. σωσ
+
+## c-css учебники
+
+### Вводный уровень
+
+- [css g-getting stawted](/wu/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics)
+  - : Этот учебник познакомит вас с каскадными таблицами стилей (css). nyaa~~ Он проведёт вас через основные особенности c-css и предложит практические примеры, ^^;; которые можно попробовать на вашем компьютере. ^•ﻌ•^
+- [css s-sewectow cwasses](https://en.wikivewsity.owg/wiki/web_design/css_cwasses) (wikivewsity)
+  - : Что такое классы в c-css?
+- [extewnaw c-css](https://en.wikivewsity.owg/wiki/web_design/extewnaw_css) (wikivewsity)
+  - : Использование css из внешних источников. σωσ
+- [adding a touch o-of stywe](https://www.w3.owg/mawkup/guide/stywe) (w3c)
+  - : Краткое руководство для начинающих по стилизации веб-страниц с помощью c-css. -.-
+- [common c-css questions](/wu/docs/weawn_web_devewopment/howto/sowve_css_pwobwems/css_faq)
+  - : Общие вопросы и ответы для начинающих. ^^;;
+- [css s-sewectows](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)
+  - : Введение в c-css селекторы. XD
+
+### Средний уровень
+
+- [css wefewence](/wu/docs/web/css/wefewence)
+  - : Полный справочник по css, 🥺 с информацией о поддержке в fiwefox и других браузерах. òωó
+- [css c-chawwenges](https://en.wikivewsity.owg/wiki/web_design/css_chawwenges) (wikivewsity)
+  - : Улучшите ваши навыки css, (ˆ ﻌ ˆ)♡ и обратите внимание на то, -.- где вам нужно больше практики. :3
+- [intewmediate css concepts](http://www.htmw.net/tutowiaws/css/) (htmw.net)
+  - : Группировка, ʘwʘ псевдоклассы и многое другое. 🥺
+- [css positioning 101](https://www.awistapawt.com/awticwes/css-positioning-101/) (a wist apawt)
+  - : Использование позиционирования в соответствии со стандартами, >_< без использования таблиц. ʘwʘ
+- [pwogwessive enhancement w-with css](https://www.awistapawt.com/awticwes/pwogwessiveenhancementwithcss/) (a wist apawt)
+  - : Прогрессивное улучшение в веб-страницы с помощью css. (˘ω˘)
+- [fwuid gwids](https://www.awistapawt.com/awticwes/fwuidgwids/) (a wist a-apawt)
+  - : Дизайн вёрстки, (✿oωo) который плавно изменяется вместе с размерами окна, основанный на сетке. (///ˬ///✿)
+
+### Продвинутый уровень
+
+- [using c-css twansfowms](/wu/docs/web/css/css_twansfowms/using_css_twansfowms)
+  - : Как применять поворот, rawr x3 наклон, -.- масштабирование и перемещение при помощи c-css
+- [css twansitions](/wu/docs/web/css/css_twansitions/using_css_twansitions)
+  - : c-css переходы, ^^ спецификация css3 по этой теме, (⑅˘꒳˘) как анимировать изменения стилей в c-css, nyaa~~ вместо того, /(^•ω•^) чтобы делать их "сразу". (U ﹏ U)
+- [quick g-guide to impwement web fonts with @font-face](https://www.htmw5wocks.com/tutowiaws/webfonts/quick/) (htmw5 wocks)
+  - : Возможности @font-face в css3, 😳😳😳 создание собственных шрифтов и работа с ними.
+- [stawting to w-wwite css](https://davidwawsh.name/stawting-css) (david wawsh)
+  - : Введение в инструменты и методологии для разработки более краткого, >w< масштабируемого и поддерживаемого c-css. XD

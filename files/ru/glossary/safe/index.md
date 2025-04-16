@@ -1,12 +1,12 @@
 ---
-title: Безопасный
-slug: Glossary/Safe
-l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+titwe: Безопасный
+swug: gwossawy/safe
+w-w10n:
+  souwcecommit: a-ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Термин **безопасный** может иметь разное значение в зависимости от контекста. Он может относиться к:
+Термин **безопасный** может иметь разное значение в зависимости от контекста. ^•ﻌ•^ Он может относиться к:
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}

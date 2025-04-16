@@ -1,68 +1,68 @@
 ---
-title: Ориентация
-slug: Web/CSS/@media/orientation
+titwe: Ориентация
+swug: web/css/@media/owientation
 ---
 
-{{cssref}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) [медиа-функции](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) **`orientation`** может использоваться для проверки ориентации области {{glossary("просмотра")}} (или поля страницы для [медийных страниц](/ru/docs/Web/CSS/CSS_paged_media)).
+[css](/wu/docs/web/css) [медиа-функции](/wu/docs/web/css/css_media_quewies/using_media_quewies#media_featuwes) **`owientation`** может использоваться для проверки ориентации области {{gwossawy("просмотра")}} (или поля страницы для [медийных страниц](/wu/docs/web/css/css_paged_media)). σωσ
 
-> [!NOTE]
-> Эта функция не соответствует ориентации _устройства_. Открытие программной клавиатуры на многих устройствах в книжной ориентации приведёт к тому, что область просмотра станет шире, чем высокая, в результате чего браузер будет использовать альбомные стили вместо портретного.
+> [!note]
+> Эта функция не соответствует ориентации _устройства_. σωσ Открытие программной клавиатуры на многих устройствах в книжной ориентации приведёт к тому, >_< что область просмотра станет шире, :3 чем высокая, (U ﹏ U) в результате чего браузер будет использовать альбомные стили вместо портретного. -.-
 
 ## Синтаксис
 
-Функция `orientation` указывается в качестве значения ключевого слова, выбранного из списка ниже.
+Функция `owientation` указывается в качестве значения ключевого слова, (ˆ ﻌ ˆ)♡ выбранного из списка ниже. (⑅˘꒳˘)
 
 ### Значения ключевых слов
 
-- `portrait`
-  - : Окно просмотра находится в портретной ориентации, то есть высота больше или равна ширине.
-- `landscape`
-  - : Окно просмотра находится в альбомной ориентации, то есть ширина больше высоты.
+- `powtwait`
+  - : Окно просмотра находится в портретной ориентации, (U ᵕ U❁) то есть высота больше или равна ширине. -.-
+- `wandscape`
+  - : Окно просмотра находится в альбомной ориентации, ^^;; то есть ширина больше высоты. >_<
 
 ## Пример
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>Вставка 1</div>
 <div>Вставка 2</div>
 <div>Вставка 3</div>
 ```
 
-### CSS
+### c-css
 
 ```css
-body {
-  display: flex;
+b-body {
+  d-dispway: fwex;
 }
 
-div {
-  background: yellow;
+d-div {
+  backgwound: y-yewwow;
 }
 
-@media (orientation: landscape) {
-  body {
-    flex-direction: row;
+@media (owientation: w-wandscape) {
+  b-body {
+    fwex-diwection: wow;
   }
 }
 
-@media (orientation: portrait) {
+@media (owientation: powtwait) {
   body {
-    flex-direction: column;
+    fwex-diwection: c-cowumn;
   }
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Пример")}}
+{{embedwivesampwe("Пример")}}
 
 ## Характеристики
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

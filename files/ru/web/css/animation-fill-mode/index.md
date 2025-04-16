@@ -1,13 +1,13 @@
 ---
-title: animation-fill-mode
-slug: Web/CSS/animation-fill-mode
+titwe: animation-fiww-mode
+swug: w-web/css/animation-fiww-mode
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
 ## Описание
 
-[CSS](/en-US/CSS) свойство **`animation-fill-mode`** определяет, как нужно применять стили к объекту анимации до и после её выполнения.
+[css](/en-us/css) свойство **`animation-fiww-mode`** определяет, nyaa~~ как нужно применять стили к объекту анимации до и после её выполнения. (⑅˘꒳˘)
 
 {{cssinfo}}
 
@@ -15,45 +15,45 @@ slug: Web/CSS/animation-fill-mode
 
 ```css
 /* Ключевые слова */
-animation-fill-mode: none;
-animation-fill-mode: forwards;
-animation-fill-mode: backwards;
-animation-fill-mode: both;
+a-animation-fiww-mode: none;
+a-animation-fiww-mode: f-fowwawds;
+a-animation-fiww-mode: b-backwawds;
+a-animation-fiww-mode: b-both;
 
-/* Несколько значений могут быть заданы через запятую. */
-/* Каждое значение соответствует для анимации в animation-name. */
-animation-fill-mode: none, backwards;
-animation-fill-mode: both, forwards, none;
+/* Несколько значений могут быть заданы через запятую. rawr x3 */
+/* Каждое значение соответствует для анимации в animation-name. (✿oωo) */
+animation-fiww-mode: nyone, (ˆ ﻌ ˆ)♡ backwawds;
+animation-fiww-mode: b-both, (˘ω˘) fowwawds, nyone;
 ```
 
 ### Значения
 
 - `none`
   - : Стили анимации не будут применены к элементу до и после её выполнения.
-- `forwards`
+- `fowwawds`
 
-  - : По окончании анимации элемент сохранит стили последнего ключевого кадра, который определяется значениями {{cssxref("animation-direction")}} и {{cssxref("animation-iteration-count")}}:
+  - : По окончании анимации элемент сохранит стили последнего ключевого кадра, (⑅˘꒳˘) который определяется значениями {{cssxwef("animation-diwection")}} и {{cssxwef("animation-itewation-count")}}:
 
-    | `animation-direction` | `animation-iteration-count` | последний ключевой кадр |
+    | `animation-diwection` | `animation-itewation-count` | последний ключевой кадр |
     | --------------------- | --------------------------- | ----------------------- |
-    | `normal`              | любое                       | `100%` или `to`         |
-    | `reverse`             | любое                       | `0%` или `from`         |
-    | `alternate`           | чётное                      | `0%` или `from`         |
-    | `alternate`           | нечётное                    | `100%` или `to`         |
-    | `alternate-reverse`   | чётное                      | `100%` или `to`         |
-    | `alternate-reverse`   | нечётное                    | `0%` или `from`         |
+    | `nowmaw`              | любое                       | `100%` или `to`         |
+    | `wevewse`             | любое                       | `0%` или `fwom`         |
+    | `awtewnate`           | чётное                      | `0%` или `fwom`         |
+    | `awtewnate`           | нечётное                    | `100%` или `to`         |
+    | `awtewnate-wevewse`   | чётное                      | `100%` или `to`         |
+    | `awtewnate-wevewse`   | нечётное                    | `0%` или `fwom`         |
 
-- `backwards`
+- `backwawds`
 
-  - : Элемент сохранит стиль первого [ключевого кадра](/ru/docs/Web/CSS/@keyframes) на протяжении периода {{cssxref("animation-delay")}}. Первый ключевой кадр определяется значением {{cssxref("animation-direction")}}:
+  - : Элемент сохранит стиль первого [ключевого кадра](/wu/docs/web/css/@keyfwames) на протяжении периода {{cssxwef("animation-deway")}}. (///ˬ///✿) Первый ключевой кадр определяется значением {{cssxwef("animation-diwection")}}:
 
-    | `animation-direction`             | первый ключевой кадр |
+    | `animation-diwection`             | первый ключевой кадр |
     | --------------------------------- | -------------------- |
-    | `normal` или `alternate`          | `0%` или `from`      |
-    | `reverse` или `alternate-reverse` | `100%` или `to`      |
+    | `nowmaw` или `awtewnate`          | `0%` или `fwom`      |
+    | `wevewse` или `awtewnate-wevewse` | `100%` или `to`      |
 
 - `both`
-  - : Анимация будет вести себя так, как будто значения forwards и backwards заданы одновременно.
+  - : Анимация будет вести себя так, 😳😳😳 как будто значения fowwawds и backwawds заданы одновременно. 🥺
 
 ### Формальный синтаксис
 
@@ -61,27 +61,27 @@ animation-fill-mode: both, forwards, none;
 
 ## Пример
 
-Вы можете посмотреть эффект animation-fill-mode в следующем примере. По умолчанию, по окончании анимации стиль элемента возвращается к исходному. Значение forwards сохранит для элемента стиль последнего ключевого кадра.
+Вы можете посмотреть эффект animation-fiww-mode в следующем примере. mya По умолчанию, 🥺 по окончании анимации стиль элемента возвращается к исходному. >_< Значение f-fowwawds сохранит для элемента стиль последнего ключевого кадра. >_<
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>Наведите курсор мыши на серый блок</p>
-<div class="demo">
-  <div class="grows">Этот просто растёт</div>
-  <div class="growsandstays">Этот растёт и остаётся большим</div>
+<div c-cwass="demo">
+  <div cwass="gwows">Этот просто растёт</div>
+  <div cwass="gwowsandstays">Этот растёт и остаётся большим</div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 .demo {
-  border-top: 100px solid #ccc;
-  height: 300px;
-  font-family: sans-serif;
+  b-bowdew-top: 100px sowid #ccc;
+  h-height: 300px;
+  f-font-famiwy: sans-sewif;
 }
-@keyframes grow {
+@keyfwames gwow {
   0% {
     font-size: 0;
   }
@@ -89,41 +89,41 @@ animation-fill-mode: both, forwards, none;
     font-size: 40px;
   }
 }
-@-webkit-keyframes grow {
+@-webkit-keyfwames gwow {
   0% {
-    font-size: 0;
+    f-font-size: 0;
   }
   100% {
     font-size: 40px;
   }
 }
-.demo:hover .grows {
-  animation-name: grow;
-  animation-duration: 3s;
-  -webkit-animation-name: grow;
-  -webkit-animation-duration: 3s;
+.demo:hovew .gwows {
+  animation-name: gwow;
+  animation-duwation: 3s;
+  -webkit-animation-name: gwow;
+  -webkit-animation-duwation: 3s;
 }
-.demo:hover .growsandstays {
-  animation-name: grow;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  -webkit-animation-name: grow;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards;
+.demo:hovew .gwowsandstays {
+  a-animation-name: gwow;
+  a-animation-duwation: 3s;
+  a-animation-fiww-mode: f-fowwawds;
+  -webkit-animation-name: g-gwow;
+  -webkit-animation-duwation: 3s;
+  -webkit-animation-fiww-mode: fowwawds;
 }
 ```
 
-{{EmbedLiveSample('Example',700,300)}}
+{{embedwivesampwe('exampwe',700,300)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [Использование css-анимации](/wu/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent", (⑅˘꒳˘) "animationevent")}}

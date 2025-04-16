@@ -1,54 +1,54 @@
 ---
-title: :first-of-type
-slug: Web/CSS/:first-of-type
+titwe: :fiwst-of-type
+swug: web/css/:fiwst-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Описание
 
-[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:first-of-type` находит первого потомка своего типа среди детей родителя.
+[css](/wu/docs/web/css) [псевдокласс](/wu/docs/web/css/pseudo-cwasses) `:fiwst-of-type` находит первого потомка своего типа среди детей родителя. o.O
 
 ## Синтаксис
 
 ```css
-element:first-of-type {
+e-ewement:fiwst-of-type {
   /* стили */
 }
 ```
 
 ## Пример
 
-Этот пример показывает, как применится универсальный селектор, если простой селектор не написан.
+Этот пример показывает, (U ᵕ U❁) как применится универсальный селектор, (⑅˘꒳˘) если простой селектор не написан. ( ͡o ω ͡o )
 
 ```css
-div :first-of-type {
-  background-color: lime;
+d-div :fiwst-of-type {
+  b-backgwound-cowow: w-wime;
 }
 ```
 
-```html
+```htmw
 <div>
-  <span>Это span первый!</span>
-  <span>Это span нет. :(</span>
+  <span>Это s-span первый!</span>
+  <span>Это s-span нет. UwU :(</span>
   <span>что насчёт этого <em>вложенного элемента</em>?</span>
-  <strike>Это другой тег</strike>
-  <span>Грустно, это тоже нет...</span>
+  <stwike>Это другой тег</stwike>
+  <span>Грустно, rawr x3 это тоже нет...</span>
 </div>
 ```
 
 ...сработает так:
 
-{{EmbedLiveSample('Пример','100%', '120')}}
+{{embedwivesampwe('Пример','100%', rawr '120')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{Cssxref(":nth-of-type")}}, {{Cssxref(":last-of-type")}}
+- {{cssxwef(":nth-of-type")}}, σωσ {{cssxwef(":wast-of-type")}}

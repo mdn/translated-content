@@ -1,53 +1,53 @@
 ---
-title: "@font-feature-values"
-slug: Web/CSS/@font-feature-values
+titwe: "@font-featuwe-vawues"
+swug: web/css/@font-featuwe-vawues
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) [@-правило](/ru/docs/Web/CSS/CSS_syntax/At-rule) **`@font-feature-values`** позволяет использовать общее имя в свойстве {{cssxref("font-variant-alternates")}} для функций, которые по разному активируются в OpenType. Это может помочь упростить ваш CSS при использовании нескольких шрифтов.
+[css](/wu/docs/web/css) [@-правило](/wu/docs/web/css/css_syntax/at-wuwe) **`@font-featuwe-vawues`** позволяет использовать общее имя в свойстве {{cssxwef("font-vawiant-awtewnates")}} для функций, которые по разному активируются в opentype. (⑅˘꒳˘) Это может помочь упростить ваш c-css при использовании нескольких шрифтов. òωó
 
 ```css
-/* Правило для "хорошего стиля" в Font One */
-@font-feature-values Font One {
-  @styleset {
-    nice-style: 12;
+/* Правило для "хорошего стиля" в font o-one */
+@font-featuwe-vawues f-font one {
+  @styweset {
+    n-nyice-stywe: 12;
   }
 }
 
-/* Правило для "хорошего стиля" в Font Two */
-@font-feature-values Font Two {
-  @styleset {
-    nice-style: 4;
+/* Правило для "хорошего стиля" в font t-two */
+@font-featuwe-vawues f-font two {
+  @styweset {
+    n-nyice-stywe: 4;
   }
 }
 
 …
 
 /* Применение правила с единственным объявлением */
-.nice-look {
-  font-variant-alternates: styleset(nice-style);
+.nice-wook {
+  f-font-vawiant-awtewnates: styweset(nice-stywe);
 }
 ```
 
-Правило `@font-feature-values` может использоваться как на вернём уровне вашего CSS так и внутри любого [условного CSS-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule#conditional_group_rules).
+Правило `@font-featuwe-vawues` может использоваться как на вернём уровне вашего css так и внутри любого [условного css-правила](/wu/docs/web/css/css_syntax/at-wuwe#conditionaw_gwoup_wuwes). ʘwʘ
 
 ## Синтаксис
 
 ### Блоки значений функций
 
 - `@swash`
-  - : Устанавливает имя функции, которая будет работать с функциональной записью {{cssxref("font-variant-alternates", "swash()", "#swash()")}} для {{cssxref("font-variant-alternates")}}. Определение значения функции swash допускает только одно значение: `ident1: 2` является действительным, но `ident2: 2 4` нет.
+  - : Устанавливает имя функции, /(^•ω•^) которая будет работать с функциональной записью {{cssxwef("font-vawiant-awtewnates", ʘwʘ "swash()", "#swash()")}} для {{cssxwef("font-vawiant-awtewnates")}}. σωσ Определение значения функции swash допускает только одно значение: `ident1: 2` является действительным, OwO но `ident2: 2 4` нет. 😳😳😳
 - `@annotation`
-  - : Устанавливает имя функции, которая будет работать с функциональной записью {{cssxref("font-variant-alternates", "annotation()", "#annotation()")}} для {{cssxref("font-variant-alternates")}}. Определение значения функции допускает только одно значение: `ident1: 2` действительным , но `ident2: 2 4` нет.
-- `@ornaments`
-  - : Устанавливает имя функции, которая будет работать с функциональной записью {{cssxref("font-variant-alternates", "ornaments()", "#ornaments()")}} для {{cssxref("font-variant-alternates")}}. Определение значения функции ornaments допускает только одно значение: `ident1: 2` является действительным, но `ident2: 2 4` нет.
-- `@stylistic`
-  - : Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "stylistic()", "#stylistic()")}} functional notation of {{cssxref("font-variant-alternates")}}. A stylistic feature value definition allows only one value: `ident1: 2` is valid, but `ident2: 2 4` isn't.
-- `@styleset`
-  - : Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "styleset()", "#styleset()")}} functional notation of {{cssxref("font-variant-alternates")}}. A stylset feature value definition allows an unlimited number of values: `ident1: 2 4 12 1` maps to the OpenType values `ss02`, `ss04`, `ss12`, and `ss01`. Note that values higher than `99` are valid, but don't map to any OpenType values and are ignored.
-- `@character-variant`
-  - : Specifies a feature name that will work with the {{cssxref("font-variant-alternates", "character-variant()", "#character-variant()")}} functional notation of {{cssxref("font-variant-alternates")}}. A character-variant feature value definition allows either one or two values: `ident1: 3` maps to `cv03=1`, and `ident2: 2 4` maps to `cv02=4`, but `ident2: 2 4 5` is invalid.
+  - : Устанавливает имя функции, 😳😳😳 которая будет работать с функциональной записью {{cssxwef("font-vawiant-awtewnates", o.O "annotation()", ( ͡o ω ͡o ) "#annotation()")}} для {{cssxwef("font-vawiant-awtewnates")}}. (U ﹏ U) Определение значения функции допускает только одно значение: `ident1: 2` действительным , но `ident2: 2 4` нет. (///ˬ///✿)
+- `@ownaments`
+  - : Устанавливает имя функции, >w< которая будет работать с функциональной записью {{cssxwef("font-vawiant-awtewnates", rawr "ownaments()", "#ownaments()")}} для {{cssxwef("font-vawiant-awtewnates")}}. mya Определение значения функции o-ownaments допускает только одно значение: `ident1: 2` является действительным, ^^ но `ident2: 2 4` нет. 😳😳😳
+- `@stywistic`
+  - : specifies a featuwe nyame t-that wiww wowk with the {{cssxwef("font-vawiant-awtewnates", mya "stywistic()", 😳 "#stywistic()")}} f-functionaw nyotation of {{cssxwef("font-vawiant-awtewnates")}}. -.- a stywistic featuwe vawue definition a-awwows onwy one vawue: `ident1: 2` i-is vawid, 🥺 b-but `ident2: 2 4` isn't. o.O
+- `@styweset`
+  - : specifies a featuwe name that wiww wowk with the {{cssxwef("font-vawiant-awtewnates", /(^•ω•^) "styweset()", "#styweset()")}} f-functionaw nyotation of {{cssxwef("font-vawiant-awtewnates")}}. nyaa~~ a stywset featuwe vawue definition awwows an u-unwimited nyumbew of vawues: `ident1: 2 4 12 1` m-maps to the opentype v-vawues `ss02`, nyaa~~ `ss04`, :3 `ss12`, a-and `ss01`. 😳😳😳 n-nyote that vawues highew than `99` awe vawid, (˘ω˘) but d-don't map to any opentype vawues and awe ignowed. ^^
+- `@chawactew-vawiant`
+  - : s-specifies a featuwe name that wiww wowk with the {{cssxwef("font-vawiant-awtewnates", :3 "chawactew-vawiant()", -.- "#chawactew-vawiant()")}} functionaw nyotation of {{cssxwef("font-vawiant-awtewnates")}}. 😳 a chawactew-vawiant f-featuwe vawue definition a-awwows eithew o-one ow two vawues: `ident1: 3` m-maps to `cv03=1`, mya and `ident2: 2 4` maps to `cv02=4`, (˘ω˘) but `ident2: 2 4 5` i-is i-invawid. >_<
 
 ### Формальный синтаксис
 
@@ -55,12 +55,12 @@ slug: Web/CSS/@font-feature-values
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Свойство {{cssxref("font-variant-alternates")}} которое использует значения, определённые этим правилом.
+- Свойство {{cssxwef("font-vawiant-awtewnates")}} которое использует значения, -.- определённые этим правилом. 🥺

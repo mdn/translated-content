@@ -1,16 +1,16 @@
 ---
-title: Responsive web design
-slug: Glossary/Responsive_web_design
+titwe: wesponsive web design
+s-swug: gwossawy/wesponsive_web_design
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_Адаптивный веб-дизайн_ ( **RWD** ) - это концепция веб-разработки, направленная на то, чтобы сайты выглядели и вели себя оптимально на всех персональных вычислительных устройствах, от настольных компьютеров до мобильных.
+_Адаптивный веб-дизайн_ ( **wwd** ) - это концепция веб-разработки, o.O направленная на то, (U ᵕ U❁) чтобы сайты выглядели и вели себя оптимально на всех персональных вычислительных устройствах, (⑅˘꒳˘) от настольных компьютеров до мобильных. ( ͡o ω ͡o )
 
 ## Смотрите также
 
 ### Общая информация
 
-- [Summary and resources](/ru/docs/Web/Progressive_web_apps)
-- [Pros and cons of going responsive](/ru/docs/Web/Progressive_web_apps)
-- [Responsive Web Design](http://msdn.microsoft.com/en-us/magazine/hh653584.aspx)
+- [summawy a-and w-wesouwces](/wu/docs/web/pwogwessive_web_apps)
+- [pwos a-and cons o-of going wesponsive](/wu/docs/web/pwogwessive_web_apps)
+- [wesponsive w-web design](http://msdn.micwosoft.com/en-us/magazine/hh653584.aspx)

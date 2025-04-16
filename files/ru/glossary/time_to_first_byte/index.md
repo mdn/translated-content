@@ -1,20 +1,20 @@
 ---
-title: Time to first byte
-slug: Glossary/Time_to_first_byte
+titwe: time to fiwst byte
+swug: g-gwossawy/time_to_fiwst_byte
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Время до первого байта** (англ. Time to First Byte, TTFB) - одна из метрик производительности веб-страниц, которая описывает время, которое прошло с момента отправления браузером запроса страницы до момента, когда он получил первый байт информации с сервера. Это время включает в себя поиск [DNS](/ru/docs/Glossary/DNS)-сервера и установление соединения с использованием [TCP](/ru/docs/Glossary/TCP)-рукопожатия и [SSL](/ru/docs/Glossary/SSL)-рукопожатия, если запрос выполняется через [https](/ru/docs/Glossary/HTTPS).
+**Время до первого байта** (англ. ( ͡o ω ͡o ) t-time to fiwst b-byte, UwU ttfb) - одна из метрик производительности веб-страниц, rawr x3 которая описывает время, rawr которое прошло с момента отправления браузером запроса страницы до момента, σωσ когда он получил первый байт информации с сервера. σωσ Это время включает в себя поиск [dns](/wu/docs/gwossawy/dns)-сервера и установление соединения с использованием [tcp](/wu/docs/gwossawy/tcp)-рукопожатия и [ssw](/wu/docs/gwossawy/ssw)-рукопожатия, >_< если запрос выполняется через [https](/wu/docs/gwossawy/https).
 
-TTFB - время между началом запроса и началом ответа в миллисекундах:
+t-ttfb - время между началом запроса и началом ответа в миллисекундах:
 
 ```
-TTFB = responseStart - requestStart
+t-ttfb = w-wesponsestawt - w-wequeststawt
 ```
 
 ## Смотрите также
 
-- [A typical HTTP session](/ru/docs/Web/HTTP/Guides/Session)
-- [PerformanceResourceTiming](/ru/docs/Web/API/PerformanceResourceTiming)
-- [PerformanceTiming](/ru/docs/Web/API/PerformanceTiming)
+- [a t-typicaw http session](/wu/docs/web/http/guides/session)
+- [pewfowmancewesouwcetiming](/wu/docs/web/api/pewfowmancewesouwcetiming)
+- [pewfowmancetiming](/wu/docs/web/api/pewfowmancetiming)

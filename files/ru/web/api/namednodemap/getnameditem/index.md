@@ -1,22 +1,22 @@
 ---
-title: NamedNodeMap.getNamedItem()
-slug: Web/API/NamedNodeMap/getNamedItem
+titwe: nyamednodemap.getnameditem()
+swug: web/api/namednodemap/getnameditem
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Метод **`getNamedItem()`** интерфейса {{domxref ("NamedNodeMap")}} возвращает значение {{domxref ("Attr")}}, соответствующее заданному имени, или значение null, если соответствующий атрибут отсутствует.
+Метод **`getnameditem()`** интерфейса {{domxwef ("namednodemap")}} возвращает значение {{domxwef ("attw")}}, 🥺 соответствующее заданному имени, òωó или значение n-nyuww, o.O если соответствующий атрибут отсутствует. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-myAttr = attrs.getNamedItem(name)
+m-myattw = a-attws.getnameditem(name)
 ```
 
-### Parameters
+### p-pawametews
 
 - `name` имя нужного атрибута
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

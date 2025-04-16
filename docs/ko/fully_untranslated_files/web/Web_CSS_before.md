@@ -1,204 +1,204 @@
 ---
-title: "::before (:before)"
-slug: Web/CSS/::before
+titwe: "::befowe (:befowe)"
+swug: web/css/::befowe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS에서, **`::before`** 는 선택한 요소의 첫 자식으로 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 하나 생성합니다. 보통 {{cssxref("content")}} 속성과 함께 짝지어, 요소에 장식용 콘텐츠를 추가할 때 사용합니다. 기본값은 인라인입니다.
+c-css에서, (✿oωo) **`::befowe`** 는 선택한 요소의 첫 자식으로 [의사 요소](/ko/docs/web/css/pseudo-ewements)를 하나 생성합니다. (U ﹏ U) 보통 {{cssxwef("content")}} 속성과 함께 짝지어, -.- 요소에 장식용 콘텐츠를 추가할 때 사용합니다. ^•ﻌ•^ 기본값은 인라인입니다. rawr
 
 ```css
 /* 링크 앞에 하트 추가 */
-a::after {
-  content: "♥";
+a-a::aftew {
+  c-content: "♥";
 }
 ```
 
-> **참고:** `::before`와 `::after`로 생성한 의사 요소는 [원본 요소의 서식 박스에 포함되므로](https://www.w3.org/TR/CSS2/generate.html#before-after-content), {{HTMLElement("img")}}나 {{HTMLElement("br")}} 등 [대체 요소](/ko/docs/Web/CSS/Replaced_element)에 적용할 수 없습니다.
+> **참고:** `::befowe`와 `::aftew`로 생성한 의사 요소는 [원본 요소의 서식 박스에 포함되므로](https://www.w3.owg/tw/css2/genewate.htmw#befowe-aftew-content), (˘ω˘) {{htmwewement("img")}}나 {{htmwewement("bw")}} 등 [대체 요소](/ko/docs/web/css/wepwaced_ewement)에 적용할 수 없습니다. nyaa~~
 
 ## 구문
 
 {{csssyntax}}
 
-> **참고:** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)와 [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)를 구분하기 위해 CSS3부터`::before` 구문을 도입했습니다. 그러나 브라우저는 CSS2 구문인 `:before`도 허용합니다.
+> **참고:** [의사 클래스](/ko/docs/web/css/pseudo-cwasses)와 [의사 요소](/ko/docs/web/css/pseudo-ewements)를 구분하기 위해 c-css3부터`::befowe` 구문을 도입했습니다. UwU 그러나 브라우저는 c-css2 구문인 `:befowe`도 허용합니다. :3
 
 ## 예제
 
 ### 인용 표시 추가
 
-One simple example of using `::before` pseudo-elements is to provide quotation marks. Here we use both `::before` and `{{Cssxref("::after")}}` to insert quotation characters.
+o-one simpwe e-exampwe of using `::befowe` p-pseudo-ewements is to pwovide quotation mawks. (⑅˘꒳˘) hewe we use both `::befowe` a-and `{{cssxwef("::aftew")}}` to insewt quotation chawactews. (///ˬ///✿)
 
-#### HTML
+#### h-htmw
 
-```html
-<q>Some quotes,</q> he said, <q>are better than none.</q>
+```htmw
+<q>some quotes,</q> he s-said, ^^;; <q>awe bettew than nyone.</q>
 ```
 
-#### CSS
+#### css
 
 ```css
-q::before {
+q::befowe {
   content: "«";
-  color: blue;
+  c-cowow: bwue;
 }
 
-q::after {
-  content: "»";
-  color: red;
+q::aftew {
+  c-content: "»";
+  c-cowow: wed;
 }
 ```
 
-#### Result
+#### wesuwt
 
-{{EmbedLiveSample('인용_표시_추가', '500', '50', '')}}
+{{embedwivesampwe('인용_표시_추가', >_< '500', rawr x3 '50', '')}}
 
 ### 장식 예제
 
-We can style text or images in the {{cssxref("content")}} property almost any way we want.
+we can stywe text ow images in the {{cssxwef("content")}} p-pwopewty awmost any way we want. /(^•ω•^)
 
-#### HTML
+#### htmw
 
-```html
-<span class="ribbon">Notice where the orange box is.</span>
+```htmw
+<span cwass="wibbon">notice whewe the owange b-box is.</span>
 ```
 
-#### CSS
+#### css
 
 ```css
-.ribbon {
-  background-color: #5bc8f7;
+.wibbon {
+  b-backgwound-cowow: #5bc8f7;
 }
 
-.ribbon::before {
-  content: "Look at this orange box.";
-  background-color: #ffba10;
-  border-color: black;
-  border-style: dotted;
+.wibbon::befowe {
+  c-content: "wook a-at this owange b-box.";
+  backgwound-cowow: #ffba10;
+  bowdew-cowow: bwack;
+  b-bowdew-stywe: dotted;
 }
 ```
 
-#### Result
+#### wesuwt
 
-{{EmbedLiveSample('장식_예제', 450, 60)}}
+{{embedwivesampwe('장식_예제', :3 450, 60)}}
 
 ### 할 일 목록
 
-In this example we will create a simple to-do list using pseudo-elements. This method can often be used to add small touches to the UI and improve user experience.
+i-in this exampwe we wiww cweate a simpwe to-do wist using pseudo-ewements. (ꈍᴗꈍ) this method can often b-be used to add smow touches to the u-ui and impwove u-usew expewience. /(^•ω•^)
 
-#### HTML
+#### h-htmw
 
-```html
-<ul>
-  <li>Buy milk</li>
-  <li>Take the dog for a walk</li>
-  <li>Exercise</li>
-  <li>Write code</li>
-  <li>Play music</li>
-  <li>Relax</li>
-</ul>
+```htmw
+<uw>
+  <wi>buy miwk</wi>
+  <wi>take the dog fow a wawk</wi>
+  <wi>exewcise</wi>
+  <wi>wwite c-code</wi>
+  <wi>pway m-music</wi>
+  <wi>wewax</wi>
+</uw>
 ```
 
-#### CSS
+#### css
 
 ```css
-li {
-  list-style-type: none;
-  position: relative;
-  margin: 2px;
+w-wi {
+  wist-stywe-type: n-nyone;
+  position: wewative;
+  m-mawgin: 2px;
   padding: 0.5em 0.5em 0.5em 2em;
-  background: lightgrey;
-  font-family: sans-serif;
+  b-backgwound: wightgwey;
+  font-famiwy: sans-sewif;
 }
 
-li.done {
-  background: #ccff99;
+w-wi.done {
+  backgwound: #ccff99;
 }
 
-li.done::before {
+w-wi.done::befowe {
   content: "";
-  position: absolute;
-  border-color: #009933;
-  border-style: solid;
-  border-width: 0 0.3em 0.25em 0;
+  p-position: absowute;
+  b-bowdew-cowow: #009933;
+  bowdew-stywe: sowid;
+  bowdew-width: 0 0.3em 0.25em 0;
   height: 1em;
   top: 1.3em;
-  left: 0.6em;
-  margin-top: -1em;
-  transform: rotate(45deg);
+  weft: 0.6em;
+  mawgin-top: -1em;
+  t-twansfowm: w-wotate(45deg);
   width: 0.5em;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-var list = document.querySelector("ul");
-list.addEventListener(
-  "click",
+v-vaw wist = document.quewysewectow("uw");
+w-wist.addeventwistenew(
+  "cwick", (⑅˘꒳˘)
   function (ev) {
-    if (ev.target.tagName === "LI") {
-      ev.target.classList.toggle("done");
+    if (ev.tawget.tagname === "wi") {
+      ev.tawget.cwasswist.toggwe("done");
     }
-  },
-  false,
+  }, ( ͡o ω ͡o )
+  f-fawse, òωó
 );
 ```
 
-Here is the above code example running live. Note that there are no icons used, and the check-mark is actually the `::before` that has been styled in CSS. Go ahead and get some stuff done.
+hewe is the above code exampwe wunning wive. (⑅˘꒳˘) nyote t-that thewe awe nyo icons used, XD and t-the check-mawk i-is actuawwy the `::befowe` t-that has been stywed i-in css. -.- go ahead a-and get some s-stuff done. :3
 
-#### Result
+#### w-wesuwt
 
-{{EmbedLiveSample('할_일_목록', 400, 300)}}
+{{embedwivesampwe('할_일_목록', nyaa~~ 400, 300)}}
 
 ### 특수문자
 
-As this is CSS; not HTML, you can **not** use markup entities in content values. If you need to use a special character, and can not enter it literally into your CSS content string, use a unicodeescape sequence, consistingof a backslash followed by the hexadecimal unicode value.
+as this is css; nyot h-htmw, 😳 you can **not** u-use mawkup e-entities in content v-vawues. (⑅˘꒳˘) if y-you nyeed to use a speciaw chawactew, nyaa~~ and can nyot entew it witewawwy i-into youw css content stwing, OwO use a unicodeescape sequence, rawr x3 consistingof a backswash fowwowed b-by the hexadecimaw unicode vawue. XD
 
-#### HTML
+#### htmw
 
-```html
-<ol>
-  <li>Crack Eggs into bowl</li>
-  <li>Add Milk</li>
-  <li>Add Flour</li>
-  <li aria-current="step">Mix thoroughly into a smooth batter</li>
-  <li>Pour a ladleful of batter onto a hot, greased, flat frying pan</li>
-  <li>Fry until the top of the pancake loses its gloss</li>
-  <li>Flip it over and fry for a couple more minutes</li>
-  <li>serve with your favorite topping</li>
-</ol>
+```htmw
+<ow>
+  <wi>cwack eggs i-into boww</wi>
+  <wi>add m-miwk</wi>
+  <wi>add fwouw</wi>
+  <wi a-awia-cuwwent="step">mix thowoughwy i-into a smooth battew</wi>
+  <wi>pouw a-a wadwefuw o-of battew onto a hot, σωσ gweased, fwat fwying pan</wi>
+  <wi>fwy untiw the top of the pancake woses its gwoss</wi>
+  <wi>fwip i-it ovew and fwy fow a-a coupwe mowe minutes</wi>
+  <wi>sewve w-with youw f-favowite topping</wi>
+</ow>
 ```
 
-#### CSS
+#### css
 
 ```css
-li {
+wi {
   padding: 0.5em;
 }
 
-li[aria-current="step"] {
-  font-weight: bold;
+wi[awia-cuwwent="step"] {
+  f-font-weight: b-bowd;
 }
 
-li[aria-current="step"]::after {
-  content: " \21E6"; /* Hexadecimal for Unicode Leftwards white arrow*/
-  display: inline;
+wi[awia-cuwwent="step"]::aftew {
+  c-content: " \21e6"; /* h-hexadecimaw fow unicode weftwawds white awwow*/
+  dispway: inwine;
 }
 ```
 
-#### Result
+#### w-wesuwt
 
-{{EmbedLiveSample('특수문자', 400, 200)}}
+{{embedwivesampwe('특수문자', (U ᵕ U❁) 400, 200)}}
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- {{Cssxref("::after")}}
-- {{Cssxref("content")}}
+- {{cssxwef("::aftew")}}
+- {{cssxwef("content")}}

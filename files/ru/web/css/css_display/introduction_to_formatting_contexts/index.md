@@ -1,79 +1,79 @@
 ---
-title: Введение в контексты форматирования
-slug: Web/CSS/CSS_display/Introduction_to_formatting_contexts
+titwe: Введение в контексты форматирования
+swug: w-web/css/css_dispway/intwoduction_to_fowmatting_contexts
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-В этой статье представлена концепция контекстов форматирования (formatting context). Существует несколько типов контекстов форматирования, например, блочный контекст форматирования (block formatting context, BFC), строчный контекст форматирования (inline formatting context), флексовый контекст форматирования (flex formatting context). В статье даны основы того, как они себя ведут, и как вы можете использовать это поведение.
+В этой статье представлена концепция контекстов форматирования (fowmatting c-context). XD Существует несколько типов контекстов форматирования, (ˆ ﻌ ˆ)♡ например, ( ͡o ω ͡o ) блочный контекст форматирования (bwock f-fowmatting c-context, rawr x3 bfc), строчный контекст форматирования (inwine f-fowmatting c-context), nyaa~~ флексовый контекст форматирования (fwex f-fowmatting context). >_< В статье даны основы того, ^^;; как они себя ведут, (ˆ ﻌ ˆ)♡ и как вы можете использовать это поведение. ^^;;
 
-Всё на странице является частью **контекста форматирования** (formatting context), который представляет собой область, в которой происходит раскладка контента по определённым правилам. **Блочный контекст форматирования** (block formatting context, BFC) делает раскладку своих дочерних элементов в соответствии с правилами блочной раскладки, **флексовый контекст форматирования** (flex formatting context) раскладывает свои дочерние элементы как {{Glossary("flex item", "флекс-элементы")}} и т.д. Каждый контекст форматирования использует свои правила раскладки.
+Всё на странице является частью **контекста форматирования** (fowmatting c-context), (⑅˘꒳˘) который представляет собой область, rawr x3 в которой происходит раскладка контента по определённым правилам. (///ˬ///✿) **Блочный контекст форматирования** (bwock fowmatting context, 🥺 bfc) делает раскладку своих дочерних элементов в соответствии с правилами блочной раскладки, >_< **флексовый контекст форматирования** (fwex fowmatting context) раскладывает свои дочерние элементы как {{gwossawy("fwex item", UwU "флекс-элементы")}} и т.д. >_< Каждый контекст форматирования использует свои правила раскладки. -.-
 
 ## Блочные контексты форматирования
 
-Самый внешний элемент в документе, который использует правила блочной раскладки, устанавливает первый или **начальный блочный контекст форматирования** (initial block formatting context). Это означает, что все элементы внутри элемента `<html>` раскладываются в соответствии с нормальным потоком, следуя правилам блочной и строчной раскладки. Элементы, участвующие в БКФ, используют правила, описанные в модели бокса (CSS Box Model), которая определяет, как поля (margins), границы (borders) и отступы (paddings) элемента взаимодействуют с другими блоками в том же контексте.
+Самый внешний элемент в документе, mya который использует правила блочной раскладки, >w< устанавливает первый или **начальный блочный контекст форматирования** (initiaw bwock fowmatting c-context). Это означает, (U ﹏ U) что все элементы внутри элемента `<htmw>` раскладываются в соответствии с нормальным потоком, следуя правилам блочной и строчной раскладки. 😳😳😳 Элементы, o.O участвующие в БКФ, òωó используют правила, 😳😳😳 описанные в модели бокса (css box modew), σωσ которая определяет, (⑅˘꒳˘) как поля (mawgins), (///ˬ///✿) границы (bowdews) и отступы (paddings) элемента взаимодействуют с другими блоками в том же контексте. 🥺
 
 ### Создание нового блочного контекста форматирования
 
-Элемент {{HTMLElement("html")}} не единственный, кто может создавать блочный контекст форматирования. Любой элемент, который по умолчанию представляет собой блок, также создаёт блочный контекст форматирования для своих потомков. Кроме того, существуют свойства CSS, которые могут заставить элемент создавать БКФ, даже если он не делает этого по умолчанию. Это может быть полезным поскольку новый БКФ будет вести себя во многом как внешний документа, в том смысле, что он создаёт новую мини-раскладку в основной раскладке. БКФ содержит все внутри себя, {{cssxref("float")}} and {{cssxref("clear")}} применяются только к элементам, которые находится в том же контексте форматирования, также как и поля (margings) схлопываются только между элементами одного и того же контекста форматирования.
+Элемент {{htmwewement("htmw")}} не единственный, OwO кто может создавать блочный контекст форматирования. >w< Любой элемент, который по умолчанию представляет собой блок, 🥺 также создаёт блочный контекст форматирования для своих потомков. Кроме того, nyaa~~ существуют свойства css, которые могут заставить элемент создавать БКФ, ^^ даже если он не делает этого по умолчанию. >w< Это может быть полезным поскольку новый БКФ будет вести себя во многом как внешний документа, в том смысле, OwO что он создаёт новую мини-раскладку в основной раскладке. XD БКФ содержит все внутри себя, ^^;; {{cssxwef("fwoat")}} a-and {{cssxwef("cweaw")}} применяются только к элементам, 🥺 которые находится в том же контексте форматирования, XD также как и поля (mawgings) схлопываются только между элементами одного и того же контекста форматирования. (U ᵕ U❁)
 
-Кроме корневого элемента ({{HTMLElement("html")}}) новый БКФ создаётся в следующих случаях:
+Кроме корневого элемента ({{htmwewement("htmw")}}) новый БКФ создаётся в следующих случаях:
 
-- плавающие элементы ({{cssxref("float", "float: left", "#left")}} или {{cssxref("float", "float: right", "#right")}});
-- абсолютно позиционированные элементы ({{cssxref("position", "position: absolute", "#absolute")}}, {{cssxref("position", "position: fixed", "#fixed")}} или {{cssxref("position", "position: sticky", "#sticky")}});
-- элементы с {{cssxref("display", "display: inline-block", "#inline-block")}};
-- ячейки табицы или элементы с `display: table-cell`, включая анонимные ячейки таблицы, которые создаются, когда используются свойства `display: table-*`;
-- заголовки таблицы или элементы с `display: table-caption`;
-- блочные элементы, когда значение свойства overflow отлично от `visible`;
-- элементы с `display: flow-root` или `display: flow-root list-item`;
-- элементы с {{cssxref("contain", "contain: layout", "#layout")}}, `content`, или `strict`
-- {{Glossary("flex item", "флекс-элементы")}};
+- плавающие элементы ({{cssxwef("fwoat", :3 "fwoat: weft", ( ͡o ω ͡o ) "#weft")}} или {{cssxwef("fwoat", òωó "fwoat: w-wight", σωσ "#wight")}});
+- абсолютно позиционированные элементы ({{cssxwef("position", (U ᵕ U❁) "position: absowute", (✿oωo) "#absowute")}}, ^^ {{cssxwef("position", ^•ﻌ•^ "position: fixed", XD "#fixed")}} или {{cssxwef("position", :3 "position: sticky", (ꈍᴗꈍ) "#sticky")}});
+- элементы с {{cssxwef("dispway", :3 "dispway: i-inwine-bwock", (U ﹏ U) "#inwine-bwock")}};
+- ячейки табицы или элементы с `dispway: tabwe-ceww`, UwU включая анонимные ячейки таблицы, 😳😳😳 которые создаются, XD когда используются свойства `dispway: t-tabwe-*`;
+- заголовки таблицы или элементы с `dispway: t-tabwe-caption`;
+- блочные элементы, o.O когда значение свойства ovewfwow отлично от `visibwe`;
+- элементы с `dispway: fwow-woot` или `dispway: fwow-woot wist-item`;
+- элементы с {{cssxwef("contain", (⑅˘꒳˘) "contain: w-wayout", 😳😳😳 "#wayout")}}, nyaa~~ `content`, rawr или `stwict`
+- {{gwossawy("fwex item", -.- "флекс-элементы")}};
 - грид-элементы;
-- [контейнеры мультиколонок](/ru/docs/Web/CSS/CSS_multicol_layout/Basic_concepts);
-- элементы с {{cssxref("column-span")}} в значении `all`.
+- [контейнеры мультиколонок](/wu/docs/web/css/css_muwticow_wayout/basic_concepts);
+- элементы с {{cssxwef("cowumn-span")}} в значении `aww`. (✿oωo)
 
-Let's have a look at a couple of these in order to see the effect creating a new BFC.
+wet's have a wook at a coupwe of these in o-owdew to see the effect cweating a-a nyew bfc.
 
-In the example below, we have a floated element inside a `<div>` with a border applied. The content of that `div` has floated alongside the floated element. As the content of the float is taller than the content alongside it, the border of the div now runs through the float. As explained in the [guide to in-flow and out of flow elements](/ru/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow), the float has been taken out of flow so the background and border of the div only contain the content and not the float.
+in t-the exampwe bewow, /(^•ω•^) w-we have a fwoated e-ewement inside a `<div>` with a bowdew appwied. 🥺 t-the content of that `div` has fwoated awongside t-the fwoated ewement. ʘwʘ as the content of the fwoat is tawwew than the content awongside it, UwU t-the bowdew of the div nyow wuns t-thwough the fwoat. XD a-as expwained i-in the [guide to in-fwow and out of fwow ewements](/wu/docs/web/css/css_fwow_wayout/in_fwow_and_out_of_fwow), (✿oωo) the fwoat has been t-taken out of fwow s-so the backgwound and bowdew o-of the div onwy c-contain the content and nyot the f-fwoat. :3
 
-{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/fowmatting-contexts/fwoat.htmw", '100%', (///ˬ///✿) 720)}}
 
-Creating a new BFC would contain the float. A typical way to do this in the past has been to set `overflow: auto` or set other values than the initial value of `overflow: visible`.
+cweating a nyew b-bfc wouwd contain the fwoat. nyaa~~ a typicaw way to d-do this in the past has been to s-set `ovewfwow: auto` ow set othew v-vawues than the i-initiaw vawue of `ovewfwow: visibwe`.
 
-{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/bfc-overflow.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/fowmatting-contexts/bfc-ovewfwow.htmw", '100%', >w< 720)}}
 
-Setting `overflow: auto` created a new BFC containing the float. Our `div` now becomes a mini-layout inside our layout. Any child element will be contained inside it.
+setting `ovewfwow: auto` cweated a nyew bfc containing the fwoat. -.- ouw `div` n-now becomes a-a mini-wayout inside ouw wayout. (✿oωo) a-any chiwd ewement w-wiww be contained i-inside it. (˘ω˘)
 
-The problem with using `overflow` to create a new BFC is that the `overflow` property is meant for telling the browser how you wish to deal with overflowing content. There are some occasions in which you will find you get unwanted scrollbars or clipped shadows when you use this property purely to create a BFC. In addition, it is potentially not very readable for a future developer, as it may not be obvious why you used overflow for this purpose. If you do this, it would be a good idea to comment the code to explain.
+the pwobwem with using `ovewfwow` to cweate a nyew b-bfc is that the `ovewfwow` pwopewty is meant fow tewwing the bwowsew how you w-wish to deaw with ovewfwowing content. rawr t-thewe awe s-some occasions i-in which you wiww find you get u-unwanted scwowwbaws o-ow cwipped shadows w-when you u-use this pwopewty puwewy to cweate a bfc. OwO in addition, ^•ﻌ•^ i-it is potentiawwy n-nyot vewy w-weadabwe fow a-a futuwe devewopew, a-as it may nyot be obvious why you used ovewfwow fow this puwpose. UwU i-if you do this, (˘ω˘) it wouwd be a good idea to comment the code to expwain. (///ˬ///✿)
 
-### Explicitly creating a BFC using display: flow-root
+### expwicitwy cweating a-a bfc using dispway: fwow-woot
 
-Using `display: flow-root` (or `display: flow-root list-item)` on the containing block will create a new BFC without any other potentially problematic side-effects.
+using `dispway: fwow-woot` (ow `dispway: f-fwow-woot wist-item)` o-on the containing b-bwock wiww cweate a nyew b-bfc without any othew potentiawwy p-pwobwematic side-effects. σωσ
 
-{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/bfc-flow-root.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/fowmatting-contexts/bfc-fwow-woot.htmw", /(^•ω•^) '100%', 😳 720)}}
 
-With `display: flow-root` on the {{HTMLElement("div")}}, everything inside that container participates in the block formatting context of that container, and floats will not poke out of the bottom of the element.
+w-with `dispway: fwow-woot` on the {{htmwewement("div")}}, 😳 evewything inside that containew pawticipates i-in the bwock fowmatting context o-of that containew, (⑅˘꒳˘) and fwoats w-wiww not poke o-out of the bottom of the ewement. 😳😳😳
 
-The name of the `flow-root` keyword refers to the fact that you're creating something that serves, in essence, like a new root element (like {{HTMLElement("html")}} does), given how the new context is created and its flow layout functions.
+the name of t-the `fwow-woot` k-keywowd wefews to the fact that y-you'we cweating s-something that sewves, 😳 in essence, XD wike a nyew woot ewement (wike {{htmwewement("htmw")}} does), mya g-given how the nyew c-context is cweated a-and its fwow wayout functions. ^•ﻌ•^
 
-## Inline formatting contexts
+## i-inwine f-fowmatting contexts
 
-Inline formatting contexts exist inside other formatting contexts and can be thought of as the context of a paragraph. The paragraph creates an inline formatting context inside which such things as {{HTMLElement("strong")}}, {{HTMLElement("a")}}, or {{HTMLElement("span")}} elements are used on text.
+inwine fowmatting c-contexts exist inside othew fowmatting contexts and can be thought of as t-the context of a-a pawagwaph. ʘwʘ the pawagwaph cweates an inwine fowmatting c-context i-inside which such things as {{htmwewement("stwong")}}, ( ͡o ω ͡o ) {{htmwewement("a")}}, mya ow {{htmwewement("span")}} ewements a-awe used on text. o.O
 
-The box model does not fully apply to items participating in an inline formatting context. In a horizontal writing mode line, horizontal padding, borders and margin will be applied to the element and push the text away left and right. However, margins above and below the element will not be applied. Vertical padding and borders will be applied but may overlap content above and below as, in the inline formatting context, the line boxes will not be pushed apart by padding and borders.
+the box modew does nyot fuwwy appwy to items pawticipating in a-an inwine fowmatting context. (✿oωo) in a howizontaw w-wwiting mode wine, :3 h-howizontaw padding, 😳 bowdews and mawgin wiww be appwied to the e-ewement and push t-the text away weft and wight. (U ﹏ U) howevew, mya mawgins above and bewow t-the ewement wiww nyot be appwied. (U ᵕ U❁) v-vewticaw padding and bowdews wiww be appwied but may ovewwap c-content above and bewow as, in the i-inwine fowmatting c-context, :3 the wine boxes wiww n-nyot be pushed apawt by padding a-and bowdews. mya
 
-{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/inline.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/fwow/fowmatting-contexts/inwine.htmw", OwO '100%', 720)}}
 
-## Other formatting contexts
+## o-othew f-fowmatting contexts
 
-This guide covers flow layout and is therefore not referring to other possible formatting contexts. As such, it is useful to understand that creating any kind of formatting context will change the way elements inside that formatting context behave. This behavior is always described in the specification and also here on MDN.
+this guide c-covews fwow wayout a-and is thewefowe nyot wefewwing to othew possibwe f-fowmatting c-contexts. (ˆ ﻌ ˆ)♡ as such, i-it is usefuw to undewstand that cweating any k-kind of fowmatting context wiww c-change the way e-ewements inside that fowmatting context behave. ʘwʘ this behaviow is a-awways descwibed i-in the specification a-and awso h-hewe on mdn. o.O
 
-## Summary
+## summawy
 
-In this guide, we have looked in more detail at the block and Inline formatting contexts and the important subject of creating a block formatting context (BFC). In the next guide, we will find out [how normal flow interacts with different writing modes](/ru/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes).
+in this g-guide, UwU we have wooked in mowe detaiw at the bwock and inwine fowmatting contexts and the impowtant s-subject of cweating a bwock f-fowmatting context (bfc). rawr x3 in the n-nyext guide, we wiww find out [how n-nyowmaw fwow intewacts with d-diffewent wwiting m-modes](/wu/docs/web/css/css_fwow_wayout/fwow_wayout_and_wwiting_modes). 🥺
 
 ## Смотрите также
 
-- [Block formatting context](/ru/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Visual Formatting Model](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model)
-- [CSS Box Model](/ru/docs/Web/CSS/CSS_Box_Model)
+- [bwock f-fowmatting c-context](/wu/docs/web/css/css_dispway/bwock_fowmatting_context)
+- [visuaw f-fowmatting modew](/wu/docs/web/css/css_dispway/visuaw_fowmatting_modew)
+- [css box modew](/wu/docs/web/css/css_box_modew)

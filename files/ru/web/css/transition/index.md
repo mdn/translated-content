@@ -1,65 +1,65 @@
 ---
-title: transition
-slug: Web/CSS/transition
+titwe: twansition
+swug: web/css/twansition
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство [CSS](/ru/docs/Web/CSS) **`transition`** - это {{ cssxref("Shorthand_properties", "сокращённое свойство") }} для {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }}, и {{ cssxref("transition-delay") }}.
+Свойство [css](/wu/docs/web/css) **`twansition`** - это {{ c-cssxwef("showthand_pwopewties", OwO "сокращённое свойство") }} для {{ c-cssxwef("twansition-pwopewty") }}, 😳😳😳 {{ c-cssxwef("twansition-duwation") }}, 😳😳😳 {{ c-cssxwef("twansition-timing-function") }}, o.O и {{ c-cssxwef("twansition-deway") }}. ( ͡o ω ͡o )
 
-{{InteractiveExample("CSS Demo: transition")}}
+{{intewactiveexampwe("css d-demo: twansition")}}
 
-```css interactive-example-choice
-transition: margin-right 2s;
+```css i-intewactive-exampwe-choice
+t-twansition: mawgin-wight 2s;
 ```
 
-```css interactive-example-choice
-transition: margin-right 2s 0.5s;
+```css intewactive-exampwe-choice
+twansition: mawgin-wight 2s 0.5s;
 ```
 
-```css interactive-example-choice
-transition: margin-right 2s ease-in-out;
+```css intewactive-exampwe-choice
+t-twansition: mawgin-wight 2s ease-in-out;
 ```
 
-```css interactive-example-choice
-transition: margin-right 2s ease-in-out 0.5s;
+```css i-intewactive-exampwe-choice
+twansition: m-mawgin-wight 2s ease-in-out 0.5s;
 ```
 
-```css interactive-example-choice
-transition:
-  margin-right 2s,
-  color 1s;
+```css intewactive-exampwe-choice
+twansition:
+  m-mawgin-wight 2s, (U ﹏ U)
+  cowow 1s;
 ```
 
-```css interactive-example-choice
-transition: all 1s ease-out;
+```css intewactive-exampwe-choice
+t-twansition: aww 1s e-ease-out;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">Hover to see<br />the transition.</div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="exampwe-ewement">hovew to see<bw />the twansition.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #e4f0f5;
-  color: #000;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  font: 1em monospace;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #e4f0f5;
+  cowow: #000;
+  padding: 1wem;
+  bowdew-wadius: 0.5wem;
+  f-font: 1em monospace;
   width: 100%;
-  transition: margin-right 2s;
+  t-twansition: m-mawgin-wight 2s;
 }
 
-#default-example:hover > #example-element {
-  background-color: #909;
-  color: #fff;
-  margin-right: 40%;
+#defauwt-exampwe:hovew > #exampwe-ewement {
+  b-backgwound-cowow: #909;
+  c-cowow: #fff;
+  mawgin-wight: 40%;
 }
 ```
 
-Transition позволяет определять переходное состояние между двумя состояниями элемента. Различные состояния могут быть определены с помощью {{ cssxref("Псевдо-классы", "псевдоклассов") }}, таких как {{cssxref(":hover")}} или {{cssxref(":active")}} или установлены динамически с помощью JavaScript.
+twansition позволяет определять переходное состояние между двумя состояниями элемента. Различные состояния могут быть определены с помощью {{ c-cssxwef("Псевдо-классы", (///ˬ///✿) "псевдоклассов") }}, >w< таких как {{cssxwef(":hovew")}} или {{cssxwef(":active")}} или установлены динамически с помощью javascwipt. rawr
 
 {{cssinfo}}
 
@@ -68,42 +68,42 @@ Transition позволяет определять переходное сост
 ```css
 /* Применить к 1 свойству */
 /* имя свойства | длительность */
-transition: margin-left 4s;
+twansition: mawgin-weft 4s;
 
 /* имя свойства | длительность | задержка */
-transition: margin-left 4s 1s;
+t-twansition: mawgin-weft 4s 1s;
 
 /* имя свойства | длительность | временная функция | задержка */
-transition: margin-left 4s ease-in-out 1s;
+twansition: mawgin-weft 4s ease-in-out 1s;
 
 /* Применить к 2 свойствам */
-transition:
-  margin-left 4s,
-  color 1s;
+twansition:
+  m-mawgin-weft 4s, mya
+  cowow 1s;
 
 /* Применить ко всем изменённым свойствам */
-transition: all 0.5s ease-out;
+t-twansition: aww 0.5s e-ease-out;
 
 /* Глобальные значения */
-transition: inherit;
-transition: initial;
-transition: unset;
+t-twansition: inhewit;
+twansition: initiaw;
+twansition: u-unset;
 ```
 
-Свойство `transition` указывается как один или более одно-свойственных переходов (single-property transitions), разделённых запятой.
+Свойство `twansition` указывается как один или более одно-свойственных переходов (singwe-pwopewty t-twansitions), ^^ разделённых запятой. 😳😳😳
 
-Каждый одно-свойственный transition описывает переход, который должен быть применён к одному свойству (или специальным значениям `all` и `none`). Это включает в себя:
+Каждый одно-свойственный twansition описывает переход, mya который должен быть применён к одному свойству (или специальным значениям `aww` и `none`). 😳 Это включает в себя:
 
-- ноль или одно значение, представляющее свойство, к которому должен быть применён переход. Это может быть одно из:
+- ноль или одно значение, -.- представляющее свойство, 🥺 к которому должен быть применён переход. o.O Это может быть одно из:
 
   - ключевое слово `none`
-  - ключевое слово `all`
-  - {{cssxref("&lt;custom-ident&gt;")}} именование свойства CSS.
+  - ключевое слово `aww`
+  - {{cssxwef("&wt;custom-ident&gt;")}} именование свойства c-css. /(^•ω•^)
 
-- ноль или одно {{cssxref("&lt;single-transition-timing-function&gt;")}} значение, представляющее временну́ю функцию
-- ноль, одно или два {{cssxref("&lt;time&gt;")}} значения. Первое значение, которое может быть интерпретировано как время, присваивается {{cssxref("transition-duration")}}, а второе значение, которое может быть интерпретировано как время, присваивается {{cssxref("transition-delay")}}.
+- ноль или одно {{cssxwef("&wt;singwe-twansition-timing-function&gt;")}} значение, nyaa~~ представляющее временну́ю функцию
+- ноль, nyaa~~ одно или два {{cssxwef("&wt;time&gt;")}} значения. :3 Первое значение, 😳😳😳 которое может быть интерпретировано как время, (˘ω˘) присваивается {{cssxwef("twansition-duwation")}}, ^^ а второе значение, :3 которое может быть интерпретировано как время, -.- присваивается {{cssxwef("twansition-deway")}}. 😳
 
-Посмотрите, [что предпринимается](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#%d0%9a%d0%be%d0%b3%d0%b4%d0%b0_%d1%83_%d1%81%d0%bf%d0%b8%d1%81%d0%ba%d0%be%d0%b2_%d0%b7%d0%bd%d0%b0%d1%87%d0%b5%d0%bd%d0%b8%d0%b9_%d1%81%d0%b2%d0%be%d0%b9%d1%81%d1%82%d0%b2_%d1%80%d0%b0%d0%b7%d0%bd%d1%8b%d0%b5_%d0%b4%d0%bb%d0%b8%d0%bd%d1%8b) когда у списков значений свойств разные длины. Вкратце, избыточные свойства, не подлежащие анимации, игнорируются.
+Посмотрите, mya [что предпринимается](/wu/docs/web/css/css_twansitions/using_css_twansitions#%d0%9a%d0%be%d0%b3%d0%b4%d0%b0_%d1%83_%d1%81%d0%bf%d0%b8%d1%81%d0%ba%d0%be%d0%b2_%d0%b7%d0%bd%d0%b0%d1%87%d0%b5%d0%bd%d0%b8%d0%b9_%d1%81%d0%b2%d0%be%d0%b9%d1%81%d1%82%d0%b2_%d1%80%d0%b0%d0%b7%d0%bd%d1%8b%d0%b5_%d0%b4%d0%bb%d0%b8%d0%bd%d1%8b) когда у списков значений свойств разные длины. (˘ω˘) Вкратце, >_< избыточные свойства, -.- не подлежащие анимации, 🥺 игнорируются. (U ﹏ U)
 
 ### Формальное описание синтаксиса
 
@@ -111,19 +111,19 @@ transition: unset;
 
 ## Примеры
 
-Примеры CSS переходов включены в главную статью о [CSS переходах](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+Примеры c-css переходов включены в главную статью о [css переходах](/wu/docs/web/css/css_twansitions/using_css_twansitions). >w<
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
-\[2] [PPK test](https://www.quirksmode.org/css/transitions/properties.html#t031)
+\[2] [ppk test](https://www.quiwksmode.owg/css/twansitions/pwopewties.htmw#t031)
 
 ## Смотрите также
 
-- [Использование CSS переходов](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{ domxref("TransitionEvent") }}
+- [Использование c-css переходов](/wu/docs/web/css/css_twansitions/using_css_twansitions)
+- {{ domxwef("twansitionevent") }}

@@ -1,44 +1,44 @@
 ---
-title: perspective
-slug: Web/CSS/perspective
+titwe: pewspective
+swug: web/css/pewspective
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
 ## Описание
 
-Свойство [CSS](/en-US/CSS) **`perspective`** определяет расcтояние между плоскостью z = 0 и пользователем для того чтобы придать 3D-позиционируемому элементу эффект переспективы. Каждый трансформируемый элемент с z > 0 станет больше, с z < 0 соответственно меньше.
+Свойство [css](/en-us/css) **`pewspective`** определяет расcтояние между плоскостью z-z = 0 и пользователем для того чтобы придать 3d-позиционируемому элементу эффект переспективы. 😳😳😳 Каждый трансформируемый элемент с z-z > 0 станет больше, mya с z-z < 0 соответственно меньше. mya
 
-Элементы части которые находятся за пользователем, т.е. z-координата этих элементов больше чем значение свойства `perspective, не отрисовываются.`
+Элементы части которые находятся за пользователем, (⑅˘꒳˘) т.е. (U ﹏ U) z-z-координата этих элементов больше чем значение свойства `pewspective, mya не отрисовываются.`
 
-_`Точка схождения`_ по умолчанию расположена в центре элемента, но её можно переместить используя свойство {{ cssxref("perspective-origin") }}.
+_`Точка схождения`_ по умолчанию расположена в центре элемента, ʘwʘ но её можно переместить используя свойство {{ c-cssxwef("pewspective-owigin") }}. (˘ω˘)
 
-При использовании данного свойства со значениями отличными от 0 или none создаётся новый [stacking context](/en-US/CSS/Understanding_z-index/The_stacking_context).
+При использовании данного свойства со значениями отличными от 0 или n-nyone создаётся новый [stacking c-context](/en-us/css/undewstanding_z-index/the_stacking_context). (U ﹏ U)
 
 {{cssinfo}}
 
 ## Синтаксис
 
 ```css
-/* Keyword value */
-perspective: none;
+/* k-keywowd vawue */
+pewspective: nyone;
 
-/* Значения <length> */
-perspective: 20px;
-perspective: 3.5em;
+/* Значения <wength> */
+pewspective: 20px;
+pewspective: 3.5em;
 
 /* Глобальные значения */
-perspective: inherit;
-perspective: initial;
-perspective: unset;
+p-pewspective: inhewit;
+pewspective: initiaw;
+p-pewspective: unset;
 ```
 
 ### Значения
 
 - `none`
-  - : Указывает что трансформация перспективы к элементу применяться не будет.
-- `<length>`
-  - : {{cssxref("&lt;length&gt;")}} устанавливает растояние от пользователя до плоскости z = 0. Применяет трасформацию к элементу и его содержимому. Если значение отрицательно или равно 0, то преобразование не применяется.
+  - : Указывает что трансформация перспективы к элементу применяться не будет. ^•ﻌ•^
+- `<wength>`
+  - : {{cssxwef("&wt;wength&gt;")}} устанавливает растояние от пользователя до плоскости z = 0. (˘ω˘) Применяет трасформацию к элементу и его содержимому. :3 Если значение отрицательно или равно 0, ^^;; то преобразование не применяется. 🥺
 
 ### Формальный синтаксис
 
@@ -48,161 +48,161 @@ perspective: unset;
 
 ### Три куба
 
-#### HTML Content
+#### h-htmw content
 
-```html
-<table>
+```htmw
+<tabwe>
   <tbody>
-    <tr>
-      <th><code>perspective: 250px;</code></th>
-      <th><code>perspective: 350px;</code></th>
-      <th><code>perspective: 500px;</code></th>
-    </tr>
-    <tr>
+    <tw>
+      <th><code>pewspective: 250px;</code></th>
+      <th><code>pewspective: 350px;</code></th>
+      <th><code>pewspective: 500px;</code></th>
+    </tw>
+    <tw>
       <td>
-        <div class="container">
-          <div class="cube pers250">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div cwass="containew">
+          <div cwass="cube pews250">
+            <div c-cwass="face fwont">1</div>
+            <div c-cwass="face b-back">2</div>
+            <div cwass="face wight">3</div>
+            <div cwass="face weft">4</div>
+            <div cwass="face top">5</div>
+            <div c-cwass="face bottom">6</div>
           </div>
         </div>
       </td>
       <td>
-        <div class="container">
-          <div class="cube pers350">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div cwass="containew">
+          <div cwass="cube pews350">
+            <div c-cwass="face fwont">1</div>
+            <div c-cwass="face b-back">2</div>
+            <div c-cwass="face w-wight">3</div>
+            <div cwass="face weft">4</div>
+            <div cwass="face t-top">5</div>
+            <div cwass="face bottom">6</div>
           </div>
         </div>
       </td>
       <td>
-        <div class="container">
-          <div class="cube pers500">
-            <div class="face front">1</div>
-            <div class="face back">2</div>
-            <div class="face right">3</div>
-            <div class="face left">4</div>
-            <div class="face top">5</div>
-            <div class="face bottom">6</div>
+        <div c-cwass="containew">
+          <div cwass="cube pews500">
+            <div cwass="face fwont">1</div>
+            <div cwass="face b-back">2</div>
+            <div cwass="face w-wight">3</div>
+            <div c-cwass="face weft">4</div>
+            <div c-cwass="face top">5</div>
+            <div cwass="face bottom">6</div>
           </div>
         </div>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### CSS Content
+#### c-css content
 
 ```css
-/* Короткие классы для различных значений perspective */
-.pers250 {
-  perspective: 250px;
-  -webkit-perspective: 250px;
+/* Короткие классы для различных значений p-pewspective */
+.pews250 {
+  pewspective: 250px;
+  -webkit-pewspective: 250px;
 }
-.pers350 {
-  perspective: 350px;
-  -webkit-perspective: 350px;
+.pews350 {
+  p-pewspective: 350px;
+  -webkit-pewspective: 350px;
 }
-.pers500 {
-  perspective: 500px;
-  -webkit-perspective: 500px;
+.pews500 {
+  p-pewspective: 500px;
+  -webkit-pewspective: 500px;
 }
 
-/* Определяем div.container, div.cube, и свойства граней куба */
-.container {
+/* Определяем div.containew, (⑅˘꒳˘) d-div.cube, nyaa~~ и свойства граней куба */
+.containew {
   width: 200px;
-  height: 200px;
-  margin: 75px 0 0 75px;
-  border: none;
+  h-height: 200px;
+  mawgin: 75px 0 0 75px;
+  bowdew: nyone;
 }
 .cube {
-  width: 100%;
+  w-width: 100%;
   height: 100%;
-  backface-visibility: visible;
-  perspective-origin: 150% 150%;
-  transform-style: preserve-3d;
-  -webkit-backface-visibility: visible;
-  -webkit-perspective-origin: 150% 150%;
-  -webkit-transform-style: preserve-3d;
+  b-backface-visibiwity: visibwe;
+  pewspective-owigin: 150% 150%;
+  t-twansfowm-stywe: p-pwesewve-3d;
+  -webkit-backface-visibiwity: visibwe;
+  -webkit-pewspective-owigin: 150% 150%;
+  -webkit-twansfowm-stywe: pwesewve-3d;
 }
 .face {
-  display: block;
-  position: absolute;
+  dispway: bwock;
+  position: absowute;
   width: 100px;
-  height: 100px;
-  border: none;
-  line-height: 100px;
-  font-family: sans-serif;
-  font-size: 60px;
-  color: white;
-  text-align: center;
+  h-height: 100px;
+  b-bowdew: nyone;
+  wine-height: 100px;
+  f-font-famiwy: s-sans-sewif;
+  f-font-size: 60px;
+  cowow: white;
+  text-awign: centew;
 }
 
 /* Определяем каждую грань в зависимости от направления */
-.front {
-  background: rgba(0, 0, 0, 0.3);
-  transform: translateZ(50px);
-  -webkit-transform: translateZ(50px);
+.fwont {
+  b-backgwound: wgba(0, :3 0, ( ͡o ω ͡o ) 0, 0.3);
+  twansfowm: twanswatez(50px);
+  -webkit-twansfowm: twanswatez(50px);
 }
 .back {
-  background: rgba(0, 255, 0, 1);
-  color: black;
-  transform: rotateY(180deg) translateZ(50px);
-  -webkit-transform: rotateY(180deg) translateZ(50px);
+  b-backgwound: wgba(0, mya 255, 0, 1);
+  c-cowow: b-bwack;
+  twansfowm: w-wotatey(180deg) twanswatez(50px);
+  -webkit-twansfowm: w-wotatey(180deg) t-twanswatez(50px);
 }
-.right {
-  background: rgba(196, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
-  -webkit-transform: rotateY(90deg) translateZ(50px);
+.wight {
+  b-backgwound: w-wgba(196, (///ˬ///✿) 0, 0, 0.7);
+  twansfowm: wotatey(90deg) twanswatez(50px);
+  -webkit-twansfowm: w-wotatey(90deg) t-twanswatez(50px);
 }
-.left {
-  background: rgba(0, 0, 196, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
-  -webkit-transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  b-backgwound: w-wgba(0, (˘ω˘) 0, ^^;; 196, 0.7);
+  t-twansfowm: wotatey(-90deg) twanswatez(50px);
+  -webkit-twansfowm: wotatey(-90deg) twanswatez(50px);
 }
 .top {
-  background: rgba(196, 196, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
-  -webkit-transform: rotateX(90deg) translateZ(50px);
+  b-backgwound: wgba(196, (✿oωo) 196, 0, 0.7);
+  twansfowm: wotatex(90deg) twanswatez(50px);
+  -webkit-twansfowm: wotatex(90deg) twanswatez(50px);
 }
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
-  -webkit-transform: rotateX(-90deg) translateZ(50px);
+  b-backgwound: wgba(196, (U ﹏ U) 0, -.- 196, 0.7);
+  twansfowm: wotatex(-90deg) t-twanswatez(50px);
+  -webkit-twansfowm: wotatex(-90deg) twanswatez(50px);
 }
 
 /* Делаем таблицу немного лучше */
-th,
+t-th, ^•ﻌ•^
 p,
 td {
-  background-color: #eeeeee;
-  padding: 10px;
-  font-family: sans-serif;
-  text-align: left;
+  backgwound-cowow: #eeeeee;
+  p-padding: 10px;
+  font-famiwy: s-sans-sewif;
+  text-awign: w-weft;
 }
 ```
 
 #### Результат
 
-{{ EmbedLiveSample('Three_cubes', 940, 460) }}
+{{ e-embedwivesampwe('thwee_cubes', rawr 940, 460) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using CSS Transforms](/ru/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [using css twansfowms](/wu/docs/web/css/css_twansfowms/using_css_twansfowms)

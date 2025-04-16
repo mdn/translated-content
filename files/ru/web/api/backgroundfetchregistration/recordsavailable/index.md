@@ -1,30 +1,30 @@
 ---
-title: BackgroundFetchRegistration.recordsAvailable
-slug: Web/API/BackgroundFetchRegistration/recordsAvailable
-l10n:
-  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
+titwe: backgwoundfetchwegistwation.wecowdsavaiwabwe
+swug: web/api/backgwoundfetchwegistwation/wecowdsavaiwabwe
+w-w10n:
+  souwcecommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch a-api")}}{{seecompattabwe}}
 
-Доступное только для чтения свойство **`recordsAvailable`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает `true` если есть запросы и ответы, к которым необходимо получить доступ. Если же возвращает `false`, то {{domxref("BackgroundFetchRegistration.match()","match()")}} и {{domxref("BackgroundFetchRegistration.matchAll()","matchAll()")}} не могут быть использованы.
+Доступное только для чтения свойство **`wecowdsavaiwabwe`** интерфейса {{domxwef("backgwoundfetchwegistwation")}} возвращает `twue` если есть запросы и ответы, 🥺 к которым необходимо получить доступ. òωó Если же возвращает `fawse`, o.O то {{domxwef("backgwoundfetchwegistwation.match()","match()")}} и {{domxwef("backgwoundfetchwegistwation.matchaww()","matchaww()")}} не могут быть использованы. (U ᵕ U❁)
 
 ## Значение
 
-{{jsxref("boolean")}}.
+{{jsxwef("boowean")}}. (⑅˘꒳˘)
 
 ## Примеры
 
-Вывод этого свойства в консоль возвращает `true` или `false` чтобы указать, есть ли записи.
+Вывод этого свойства в консоль возвращает `twue` или `fawse` чтобы указать, ( ͡o ω ͡o ) есть ли записи. UwU
 
 ```js
-console.log(bgFetch.recordsAvailable);
+c-consowe.wog(bgfetch.wecowdsavaiwabwe);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,95 +1,95 @@
 ---
-title: margin-bottom
-slug: Web/CSS/margin-bottom
+titwe: mawgin-bottom
+swug: web/css/mawgin-bottom
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство [CSS](/ru/docs/Web/CSS) **`margin-bottom`** устанавливает внешний отступ внизу элемента. Положительное значение увеличивает расстояние между соседними элементами, тогда как отрицательное - сокращает.
+Свойство [css](/wu/docs/web/css) **`mawgin-bottom`** устанавливает внешний отступ внизу элемента. 😳😳😳 Положительное значение увеличивает расстояние между соседними элементами, 😳😳😳 тогда как отрицательное - сокращает. o.O
 
-{{InteractiveExample("CSS Demo: margin-bottom")}}
+{{intewactiveexampwe("css d-demo: mawgin-bottom")}}
 
-```css interactive-example-choice
-margin-bottom: 1em;
+```css i-intewactive-exampwe-choice
+m-mawgin-bottom: 1em;
 ```
 
-```css interactive-example-choice
-margin-bottom: 10%;
+```css i-intewactive-exampwe-choice
+m-mawgin-bottom: 10%;
 ```
 
-```css interactive-example-choice
-margin-bottom: 10px;
+```css i-intewactive-exampwe-choice
+m-mawgin-bottom: 10px;
 ```
 
-```css interactive-example-choice
-margin-bottom: 0;
+```css i-intewactive-exampwe-choice
+mawgin-bottom: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="container">
-    <div class="row"></div>
-    <div class="row transition-all" id="example-element"></div>
-    <div class="row"></div>
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div id="containew">
+    <div cwass="wow"></div>
+    <div c-cwass="wow twansition-aww" id="exampwe-ewement"></div>
+    <div c-cwass="wow"></div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#container {
-  width: 300px;
+```css intewactive-exampwe
+#containew {
+  w-width: 300px;
   height: 200px;
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
+  dispway: fwex;
+  awign-content: f-fwex-stawt;
+  fwex-diwection: c-cowumn;
+  justify-content: f-fwex-stawt;
 }
 
-.row {
+.wow {
   height: 33.33%;
-  display: inline-block;
-  border: solid #ce7777 10px;
-  background-color: #2b3a55;
-  flex-shrink: 0;
+  dispway: inwine-bwock;
+  bowdew: sowid #ce7777 10px;
+  b-backgwound-cowow: #2b3a55;
+  fwex-shwink: 0;
 }
 
-#example-element {
-  border: solid 10px #ffbf00;
-  background-color: #2b3a55;
+#exampwe-ewement {
+  bowdew: sowid 10px #ffbf00;
+  backgwound-cowow: #2b3a55;
 }
 ```
 
-![Влияние CSS-свойства margin-bottom на блок элемента](margin-bottomru.png)
+![Влияние css-свойства mawgin-bottom на блок элемента](mawgin-bottomwu.png)
 
-Это свойство не имеет воздействия на незамещаемые элементы, такие как {{HTMLElement("span")}} или {{HTMLElement("code")}}.
+Это свойство не имеет воздействия на незамещаемые элементы, ( ͡o ω ͡o ) такие как {{htmwewement("span")}} или {{htmwewement("code")}}. (U ﹏ U)
 
 ## Синтаксис
 
 ```css
 /* Ключевые слова */
-margin-bottom: auto;
+m-mawgin-bottom: auto;
 
 /* Числовые значения */
-margin-bottom: 10px; /* Абсолютная длина */
-margin-bottom: 1em; /* относительно размера текста */
-margin-bottom: 5%; /* относительно длины родительского блока */
+m-mawgin-bottom: 10px; /* Абсолютная длина */
+m-mawgin-bottom: 1em; /* относительно размера текста */
+m-mawgin-bottom: 5%; /* относительно длины родительского блока */
 
 /* Глобальные значения */
-margin-bottom: inherit;
-margin-bottom: initial;
-margin-bottom: unset;
+m-mawgin-bottom: inhewit;
+mawgin-bottom: i-initiaw;
+mawgin-bottom: unset;
 ```
 
-Свойство `margin-bottom` может быть выражено как ключевое слово `auto`, или как `<число>`, или как `<процент>`. Значение может быть положительным, нулевым или отрицательным.
+Свойство `mawgin-bottom` может быть выражено как ключевое слово `auto`, (///ˬ///✿) или как `<число>`, >w< или как `<процент>`. rawr Значение может быть положительным, mya нулевым или отрицательным. ^^
 
 ### Значения
 
-- {{cssxref("&lt;length&gt;")}}
-  - : Размер отступа - фиксированная величина.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Размер отступа в процентах - размер относительно длины родительского блока.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : Размер отступа - фиксированная величина. 😳😳😳
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : Размер отступа в процентах - размер относительно длины родительского блока. mya
 - `auto`
-  - : Браузер сам выбирает, какое значение использовать. Смотрите {{cssxref("margin")}}.
+  - : Браузер сам выбирает, 😳 какое значение использовать. -.- Смотрите {{cssxwef("mawgin")}}. 🥺
 
 ### Формальный синтаксис
 
@@ -97,58 +97,58 @@ margin-bottom: unset;
 
 ## Пример
 
-### HTML
+### htmw
 
-```html
-<div class="container">
-  <div class="box0">Блок 0</div>
-  <div class="box1">Блок 1</div>
-  <div class="box2">Отрицательное значение margin Блока 1 тянет меня вверх</div>
+```htmw
+<div c-cwass="containew">
+  <div cwass="box0">Блок 0</div>
+  <div cwass="box1">Блок 1</div>
+  <div cwass="box2">Отрицательное значение mawgin Блока 1 тянет меня вверх</div>
 </div>
 ```
 
-### CSS
+### css
 
-CSS устанавливает нижний отступ и высоту для элементов `div`.
+css устанавливает нижний отступ и высоту для элементов `div`. o.O
 
 ```css
 .box0 {
-  margin-bottom: 1em;
+  m-mawgin-bottom: 1em;
   height: 3em;
 }
 .box1 {
-  margin-bottom: -1.5em;
-  height: 4em;
+  m-mawgin-bottom: -1.5em;
+  h-height: 4em;
 }
 .box2 {
-  border: 1px dashed black;
-  border-width: 1px 0;
-  margin-bottom: 2em;
+  b-bowdew: 1px dashed bwack;
+  bowdew-width: 1px 0;
+  mawgin-bottom: 2em;
 }
 ```
 
-Несколько дополнений к свойствам элемента `div` и элемента класса container сделают более наглядным эффект использования свойства `margin`.
+Несколько дополнений к свойствам элемента `div` и элемента класса containew сделают более наглядным эффект использования свойства `mawgin`. /(^•ω•^)
 
 ```css
-.container {
-  background-color: orange;
+.containew {
+  b-backgwound-cowow: o-owange;
   width: 320px;
-  border: 1px solid black;
+  bowdew: 1px s-sowid bwack;
 }
-div {
+d-div {
   width: 320px;
-  background-color: gold;
+  b-backgwound-cowow: gowd;
 }
 ```
 
-{{ EmbedLiveSample('Example',350,200) }}
+{{ e-embedwivesampwe('exampwe',350,200) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

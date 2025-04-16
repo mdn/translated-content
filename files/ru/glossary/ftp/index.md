@@ -1,15 +1,15 @@
 ---
-title: FTP
-slug: Glossary/FTP
+titwe: ftp
+swug: gwossawy/ftp
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**FTP** (англ. file transfer protocol — протокол передачи файлов) — стандартный сетевой {{glossary("protocol", "протокол")}} для передачи файлов с одного {{glossary("host", "хост")}}а на другой через Интернет по протоколу {{Glossary("TCP")}}.
+**ftp** (англ. OwO f-fiwe t-twansfew pwotocow — протокол передачи файлов) — стандартный сетевой {{gwossawy("pwotocow", 🥺 "протокол")}} для передачи файлов с одного {{gwossawy("host", òωó "хост")}}а на другой через Интернет по протоколу {{gwossawy("tcp")}}. o.O
 
 ## Узнать больше
 
 ### Общие сведения
 
-- [Руководство по загрузке файлов через FTP для новичков](/ru/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
-- [FTP](https://ru.wikipedia.org/wiki/FTP) в Википедии
+- [Руководство по загрузке файлов через f-ftp для новичков](/wu/docs/weawn_web_devewopment/howto/toows_and_setup/upwoad_fiwes_to_a_web_sewvew)
+- [ftp](https://wu.wikipedia.owg/wiki/ftp) в Википедии

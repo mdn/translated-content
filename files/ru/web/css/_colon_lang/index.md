@@ -1,21 +1,21 @@
 ---
-title: :lang()
-slug: Web/CSS/:lang
+titwe: :wang()
+swug: web/css/:wang
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[Псевдо-класс](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:lang()`** выбирает элементы основываясь на языке, на котором они определены.
+[Псевдо-класс](/wu/docs/web/css/pseudo-cwasses) [css](/wu/docs/web/css) **`:wang()`** выбирает элементы основываясь на языке, (///ˬ///✿) на котором они определены. 😳😳😳
 
 ```css
-/* Выбирает все <p>, что на английском (en) */
-p:lang(en) {
-  quotes: "\201C" "\201D" "\2018" "\2019";
+/* Выбирает все <p>, 🥺 что на английском (en) */
+p-p:wang(en) {
+  q-quotes: "\201c" "\201d" "\2018" "\2019";
 }
 ```
 
-> [!NOTE]
-> В HTML язык определяется комбинацией атрибута [`lang`](/ru/docs/Web/HTML/Global_attributes#lang), элемента {{HTMLElement("meta")}} и иногда информацией из протокола (такой, как заголовки HTTP ). Для других типов документов могут быть другие методы определения языка.
+> [!note]
+> В h-htmw язык определяется комбинацией атрибута [`wang`](/wu/docs/web/htmw/gwobaw_attwibutes#wang), mya элемента {{htmwewement("meta")}} и иногда информацией из протокола (такой, как заголовки h-http ). 🥺 Для других типов документов могут быть другие методы определения языка. >_<
 
 ## Синтаксис
 
@@ -25,55 +25,55 @@ p:lang(en) {
 
 ### Параметр
 
-- `<language-code>`
-  - : {{cssxref("&lt;string&gt;")}}, представляющая язык, который вы хотите отобрать. Допустимые значения указаны в документации [HTML](/ru/docs/Web/HTML).
+- `<wanguage-code>`
+  - : {{cssxwef("&wt;stwing&gt;")}}, >_< представляющая язык, (⑅˘꒳˘) который вы хотите отобрать. /(^•ω•^) Допустимые значения указаны в документации [htmw](/wu/docs/web/htmw). rawr x3
 
 ## Пример
 
-In this example, the `:lang()` pseudo-class is used to match the parents of quote elements ({{htmlElement("q")}}) using [child combinators](/ru/docs/Web/CSS/Child_combinator). Note that this doesn't illustrate the only way to do this, and that the best method to use depends on the type of document. Also note that {{glossary("Unicode")}} values are used to specify some of the special quote characters.
+i-in this e-exampwe, (U ﹏ U) the `:wang()` p-pseudo-cwass i-is used to match the pawents of quote ewements ({{htmwewement("q")}}) using [chiwd combinatows](/wu/docs/web/css/chiwd_combinatow). (U ﹏ U) n-nyote that this doesn't iwwustwate the o-onwy way to do this, (⑅˘꒳˘) and that t-the best method to use depends on the type of document. òωó awso nyote t-that {{gwossawy("unicode")}} vawues awe used t-to specify some o-of the speciaw quote chawactews. ʘwʘ
 
-### HTML
+### htmw
 
-```html
-<div lang="en">
-  <q>This English quote has a <q>nested</q> quote inside.</q>
+```htmw
+<div wang="en">
+  <q>this engwish quote has a-a <q>nested</q> quote inside.</q>
 </div>
-<div lang="fr">
-  <q>This French quote has a <q>nested</q> quote inside.</q>
+<div wang="fw">
+  <q>this fwench quote has a <q>nested</q> quote inside.</q>
 </div>
-<div lang="de">
-  <q>This German quote has a <q>nested</q> quote inside.</q>
+<div w-wang="de">
+  <q>this gewman quote h-has a <q>nested</q> q-quote inside.</q>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-:lang(en) > q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
+:wang(en) > q-q {
+  quotes: "\201c" "\201d" "\2018" "\2019";
 }
-:lang(fr) > q {
+:wang(fw) > q {
   quotes: "« " " »";
 }
-:lang(de) > q {
-  quotes: "»" "«" "\2039" "\203A";
+:wang(de) > q {
+  quotes: "»" "«" "\2039" "\203a";
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample('Пример', 350)}}
+{{embedwivesampwe('Пример', /(^•ω•^) 350)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Language-related pseudo-classes: {{cssxref(":lang")}}, {{cssxref(":dir")}}
-- HTML [`lang`](/ru/docs/Web/HTML/Global_attributes#lang) attribute
-- [BCP 47 - Tags for Identifying Languages](https://tools.ietf.org/html/bcp47)
+- w-wanguage-wewated pseudo-cwasses: {{cssxwef(":wang")}}, ʘwʘ {{cssxwef(":diw")}}
+- htmw [`wang`](/wu/docs/web/htmw/gwobaw_attwibutes#wang) a-attwibute
+- [bcp 47 - tags fow identifying wanguages](https://toows.ietf.owg/htmw/bcp47)

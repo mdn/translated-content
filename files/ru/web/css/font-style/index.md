@@ -1,119 +1,119 @@
 ---
-title: font-style
-slug: Web/CSS/font-style
+titwe: font-stywe
+swug: web/css/font-stywe
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`font-style`** это CSS-свойство определяющее каким образом шрифт должен быть стилизирован, будь то это normal, italic, или oblique face из его {{cssxref("font-family")}}.
+**`font-stywe`** это c-css-свойство определяющее каким образом шрифт должен быть стилизирован, 😳 будь то это nowmaw, -.- i-itawic, 🥺 или o-obwique face из его {{cssxwef("font-famiwy")}}. o.O
 
-{{InteractiveExample("CSS Demo: font-style")}}
+{{intewactiveexampwe("css d-demo: font-stywe")}}
 
-```css interactive-example-choice
-font-style: normal;
+```css i-intewactive-exampwe-choice
+f-font-stywe: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-font-style: italic;
+```css intewactive-exampwe-choice
+f-font-stywe: itawic;
 ```
 
-```css interactive-example-choice
-font-style: oblique;
+```css intewactive-exampwe-choice
+font-stywe: obwique;
 ```
 
-```css interactive-example-choice
-font-style: oblique 40deg;
+```css i-intewactive-exampwe-choice
+font-stywe: obwique 40deg;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    w-wondon. /(^•ω•^) michaewmas tewm watewy ovew, nyaa~~ and the wowd chancewwow s-sitting in
+    wincown's i-inn haww. nyaa~~ impwacabwe n-nyovembew weathew. :3 as much mud in the stweets
+    as if the watews had but n-newwy wetiwed fwom the face of the eawth, 😳😳😳 and it
+    wouwd nyot be wondewfuw to m-meet a megawosauwus, (˘ω˘) fowty feet w-wong ow so, ^^
+    w-waddwing wike an e-ewephantine wizawd u-up howbown hiww. :3
   </p>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
-  font-style: normal;
+  s-swc: uww("/shawed-assets/fonts/vawiabwe-fonts/amstewvawawpha-vf.ttf");
+  font-famiwy: amstewvaw;
+  font-stywe: n-nyowmaw;
 }
 
 section {
   font-size: 1.2em;
-  font-family: Amstelvar;
+  font-famiwy: amstewvaw;
 }
 ```
 
-**Italic** шрифты в общем курсивные по своей сути, обычно занимают меньше горизонтального пространства чем их нестилизированные копии, тогда как **oblique** шрифты обычно просто наклонная версия регулярного шрифта. Когда определённый стиль не доступен, оба italic и oblique шрифты симулируются искусственно наклоняя глифы регулярного шрифта (используйте {{cssxref("font-synthesis")}} для управления этим поведением).
+**itawic** шрифты в общем курсивные по своей сути, обычно занимают меньше горизонтального пространства чем их нестилизированные копии, -.- тогда как **obwique** шрифты обычно просто наклонная версия регулярного шрифта. 😳 Когда определённый стиль не доступен, mya оба itawic и obwique шрифты симулируются искусственно наклоняя глифы регулярного шрифта (используйте {{cssxwef("font-synthesis")}} для управления этим поведением). (˘ω˘)
 
-## Syntax
+## syntax
 
 ```css
-font-style: normal;
-font-style: italic;
-font-style: oblique;
+font-stywe: n-nyowmaw;
+font-stywe: i-itawic;
+font-stywe: o-obwique;
 
 /* Глобальные значения */
-font-style: inherit;
-font-style: initial;
-font-style: unset;
+f-font-stywe: inhewit;
+font-stywe: initiaw;
+font-stywe: u-unset;
 ```
 
-Свойство `font-style` определяется как единственное ключевое слово выбранное из списка значений внизу.
+Свойство `font-stywe` определяется как единственное ключевое слово выбранное из списка значений внизу. >_<
 
-### Values
+### v-vawues
 
-- `normal`
-  - : Выделяет шрифт который классифицирован как `normal` в {{Cssxref("font-family")}}.
-- `italic`
-  - : Выделяет шрифт который классифицирован как `italic`. Если не доступна курсивная версия шрифта, взамен используется `oblique` классификация. Если не одна версия не доступна, то стиль симулируется искусственно.
-- `oblique`
-  - : Выделяет шрифт который классифицирован как `oblique`. Если не доступна косая версия шрифта, взамен используется `italic` классификация. Если не одна версия не доступна, то стиль симулируется искусственно.
+- `nowmaw`
+  - : Выделяет шрифт который классифицирован как `nowmaw` в {{cssxwef("font-famiwy")}}.
+- `itawic`
+  - : Выделяет шрифт который классифицирован как `itawic`. -.- Если не доступна курсивная версия шрифта, 🥺 взамен используется `obwique` классификация. (U ﹏ U) Если не одна версия не доступна, то стиль симулируется искусственно. >w<
+- `obwique`
+  - : Выделяет шрифт который классифицирован как `obwique`. mya Если не доступна косая версия шрифта, >w< взамен используется `itawic` классификация. nyaa~~ Если не одна версия не доступна, (✿oωo) то стиль симулируется искусственно. ʘwʘ
 
-## Formal definition
+## fowmaw d-definition
 
 {{cssinfo}}
 
-## Formal syntax
+## f-fowmaw syntax
 
 {{csssyntax}}
 
-## Examples
+## exampwes
 
-### Font styles
+### f-font stywes
 
-```html hidden
-<p class="normal">This paragraph is normal.</p>
-<p class="italic">This paragraph is italic.</p>
-<p class="oblique">This paragraph is oblique.</p>
+```htmw h-hidden
+<p cwass="nowmaw">this pawagwaph is nyowmaw.</p>
+<p cwass="itawic">this p-pawagwaph is itawic.</p>
+<p cwass="obwique">this p-pawagwaph is obwique.</p>
 ```
 
 ```css
-.normal {
-  font-style: normal;
+.nowmaw {
+  font-stywe: n-nyowmaw;
 }
 
-.italic {
-  font-style: italic;
+.itawic {
+  f-font-stywe: itawic;
 }
 
-.oblique {
-  font-style: oblique;
+.obwique {
+  font-stywe: obwique;
 }
 ```
 
-{{ EmbedLiveSample('Font_styles') }}
+{{ embedwivesampwe('font_stywes') }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

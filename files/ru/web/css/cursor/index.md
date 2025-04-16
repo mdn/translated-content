@@ -1,60 +1,60 @@
 ---
-title: Курсор
-slug: Web/CSS/cursor
+titwe: Курсор
+swug: web/css/cuwsow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS-свойство `cursor` устанавливает курсор мыши, если таковой имеется, для отображения, когда указатель мыши находится над элементом.
+c-css-свойство `cuwsow` устанавливает курсор мыши, ^^;; если таковой имеется, (⑅˘꒳˘) для отображения, rawr x3 когда указатель мыши находится над элементом. (///ˬ///✿)
 
-Внешний вид курсора помогает информировать пользователей об операциях, которые можно выполнять при взаимодействии с элементом, включая: выделение текста, активацию справки или контекстного меню, копирование содержимого, изменение размера таблиц и так далее.
-Вы можете указать _тип_ курсора с помощью ключевого слова или загрузить свой значок (с дополнительными резервными изображениями и ключевым словом в качестве резервного варианта отображения).
+Внешний вид курсора помогает информировать пользователей об операциях, 🥺 которые можно выполнять при взаимодействии с элементом, >_< включая: выделение текста, UwU активацию справки или контекстного меню, >_< копирование содержимого, -.- изменение размера таблиц и так далее. mya
+Вы можете указать _тип_ курсора с помощью ключевого слова или загрузить свой значок (с дополнительными резервными изображениями и ключевым словом в качестве резервного варианта отображения). >w<
 
-{{InteractiveExample("CSS Demo: cursor")}}
+{{intewactiveexampwe("css d-demo: cuwsow")}}
 
-```css interactive-example-choice
-cursor: help;
+```css i-intewactive-exampwe-choice
+c-cuwsow: hewp;
 ```
 
-```css interactive-example-choice
-cursor: wait;
+```css i-intewactive-exampwe-choice
+c-cuwsow: w-wait;
 ```
 
-```css interactive-example-choice
-cursor: crosshair;
+```css i-intewactive-exampwe-choice
+cuwsow: cwosshaiw;
 ```
 
-```css interactive-example-choice
-cursor: not-allowed;
+```css intewactive-exampwe-choice
+cuwsow: nyot-awwowed;
 ```
 
-```css interactive-example-choice
-cursor: zoom-in;
+```css i-intewactive-exampwe-choice
+cuwsow: zoom-in;
 ```
 
-```css interactive-example-choice
-cursor: grab;
+```css i-intewactive-exampwe-choice
+cuwsow: gwab;
 ```
 
-```html interactive-example
-<section class="default-example container" id="default-example">
-  <div id="example-element">
-    Move over this element to see the cursor style.
+```htmw i-intewactive-exampwe
+<section cwass="defauwt-exampwe containew" id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    m-move ovew this ewement to see the c-cuwsow stywe. (U ﹏ U)
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  background-color: #1766aa;
-  color: white;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  backgwound-cowow: #1766aa;
+  cowow: white;
   height: 180px;
-  width: 360px;
-  justify-content: center;
-  align-items: center;
+  w-width: 360px;
+  justify-content: centew;
+  awign-items: centew;
   font-size: 14pt;
-  padding: 5px;
+  p-padding: 5px;
 }
 ```
 
@@ -62,321 +62,321 @@ cursor: grab;
 
 ```css
 /* Ключевые слова */
-cursor: auto;
-cursor: pointer;
+cuwsow: auto;
+c-cuwsow: pointew;
 /* … */
-cursor: zoom-out;
+c-cuwsow: z-zoom-out;
 
 /* Использование с обязательным резервным ключевым словом */
-cursor: url(hand.cur), pointer;
+c-cuwsow: uww(hand.cuw), 😳😳😳 pointew;
 
-/* Использование URL и координат с обязательным резервным ключевым словом */
-cursor:
-  url(cursor_1.png) 4 12,
-  auto;
-cursor:
-  url(cursor_2.png) 2 2,
-  pointer;
+/* Использование u-uww и координат с обязательным резервным ключевым словом */
+cuwsow:
+  uww(cuwsow_1.png) 4 12, o.O
+  a-auto;
+cuwsow:
+  uww(cuwsow_2.png) 2 2, òωó
+  pointew;
 
-/* Использование URL с резервными URL (иногда с координатами) с обязательным резервным ключевым словом */
-cursor:
-  url(cursor_1.svg) 4 5,
-  url(cursor_2.svg),
-  /* …, */ url(cursor_n.cur) 5 5,
-  progress;
+/* Использование uww с резервными uww (иногда с координатами) с обязательным резервным ключевым словом */
+cuwsow:
+  u-uww(cuwsow_1.svg) 4 5, 😳😳😳
+  uww(cuwsow_2.svg), σωσ
+  /* …, (⑅˘꒳˘) */ u-uww(cuwsow_n.cuw) 5 5,
+  p-pwogwess;
 
 /* Глобальные значения */
-cursor: inherit;
-cursor: initial;
-cursor: revert;
-cursor: revert-layer;
-cursor: unset;
+c-cuwsow: inhewit;
+cuwsow: initiaw;
+cuwsow: wevewt;
+cuwsow: w-wevewt-wayew;
+c-cuwsow: unset;
 ```
 
 ### Значения
 
-- `<url>` {{optional_inline}}
+- `<uww>` {{optionaw_inwine}}
 
-  - : {{cssxref("url", "url()")}} или разделенный запятыми список `url(), url(), …`, указывающий на файл изображения.
-    В качестве запасного варианта можно указать несколько `url()` на случай, если некоторые типы изображений курсора не поддерживаются.
-    Резервный вариант, отличный от URL-адреса (одно или несколько ключевых слов), должен находиться в конце резервного списка.
+  - : {{cssxwef("uww", (///ˬ///✿) "uww()")}} или разделенный запятыми список `uww(), 🥺 uww(), …`, OwO указывающий на файл изображения. >w<
+    В качестве запасного варианта можно указать несколько `uww()` на случай, 🥺 если некоторые типы изображений курсора не поддерживаются. nyaa~~
+    Резервный вариант, ^^ отличный от u-uww-адреса (одно или несколько ключевых слов), >w< должен находиться в конце резервного списка. OwO
 
-- `<x>`, `<y>` {{optional_inline}}
+- `<x>`, XD `<y>` {{optionaw_inwine}}
 
-  - : Необязательные координаты X и Y, задающие указательную точку курсора.
+  - : Необязательные координаты x-x и y, ^^;; задающие указательную точку курсора. 🥺
 
-    Эти значения необходимо указывать в координатах изображения.
-    Они располагаются относительно верхнего левого угла изображения (соответствует`0 0`) и ограничены размерами изображения курсора.
-    Если эти значения не указаны, они могут быть прочитаны из самого файла, в противном случае по умолчанию они будут находиться в верхнем левом углу изображения.
+    Эти значения необходимо указывать в координатах изображения. XD
+    Они располагаются относительно верхнего левого угла изображения (соответствует`0 0`) и ограничены размерами изображения курсора. (U ᵕ U❁)
+    Если эти значения не указаны, :3 они могут быть прочитаны из самого файла, ( ͡o ω ͡o ) в противном случае по умолчанию они будут находиться в верхнем левом углу изображения. òωó
 
-- `keyword`
+- `keywowd`
 
-  - : Ключевое слово _должно_ быть установлено для указания типа используемого курсора или резервного курсора, который будет использоваться, если не удастся загрузить указанные значки.
+  - : Ключевое слово _должно_ быть установлено для указания типа используемого курсора или резервного курсора, σωσ который будет использоваться, (U ᵕ U❁) если не удастся загрузить указанные значки.
 
-    Доступные ключевые слова перечислены в таблице ниже. Значения кроме `none` (что означает отсутствие курсора), являются изображением, которое будет использовано для отображения курсора. Вы можете навести указатель мыши на строки таблицы, чтобы увидеть эффект применения различных значений ключевых слов.
+    Доступные ключевые слова перечислены в таблице ниже. (✿oωo) Значения кроме `none` (что означает отсутствие курсора), ^^ являются изображением, ^•ﻌ•^ которое будет использовано для отображения курсора. XD Вы можете навести указатель мыши на строки таблицы, :3 чтобы увидеть эффект применения различных значений ключевых слов. (ꈍᴗꈍ)
 
-    <table class="standard-table">
+    <tabwe cwass="standawd-tabwe">
       <tbody>
-        <tr>
+        <tw>
           <th>Категория</th>
-          <th style="width: 7.5em">Значение</th>
+          <th stywe="width: 7.5em">Значение</th>
           <th>Вид</th>
           <th>Описание</th>
-        </tr>
-        <tr style="cursor: auto">
-          <td rowspan="3">Основные</td>
+        </tw>
+        <tw s-stywe="cuwsow: auto">
+          <td w-wowspan="3">Основные</td>
           <td><code>auto</code></td>
           <td></td>
           <td>
             Браузер самостоятельно определяет значение курсора в зависимости от
-            свойств элемента, на который наведена мышь.<br />Например: при наведении
-            на текст отобразит курсор <code>text</code>.
+            свойств элемента, на который наведена мышь.<bw />Например: при наведении
+            на текст отобразит курсор <code>text</code>. :3
           </td>
-        </tr>
-        <tr style="cursor: default">
-          <td><code>default</code></td>
-          <td><img alt="default.gif" src="default.gif" /></td>
-          <td>Основной курсор платформы, обычно стрелочка.</td>
-        </tr>
-        <tr style="cursor: none">
+        </tw>
+        <tw stywe="cuwsow: defauwt">
+          <td><code>defauwt</code></td>
+          <td><img a-awt="defauwt.gif" swc="defauwt.gif" /></td>
+          <td>Основной курсор платформы, (U ﹏ U) обычно стрелочка.</td>
+        </tw>
+        <tw stywe="cuwsow: n-nyone">
           <td><code>none</code></td>
           <td></td>
           <td>Курсор не отображается.</td>
-        </tr>
-        <tr style="cursor: context-menu">
-          <td rowspan="5" style="cursor: auto">
+        </tw>
+        <tw stywe="cuwsow: c-context-menu">
+          <td w-wowspan="5" stywe="cuwsow: auto">
             Ссылки и статусы выполнения задач
           </td>
           <td><code>context-menu</code></td>
-          <td><img alt="context-menu.png" src="context-menu.png" /></td>
+          <td><img awt="context-menu.png" swc="context-menu.png" /></td>
           <td>Доступно контекстное меню.</td>
-        </tr>
-        <tr style="cursor: help">
-          <td><code>help</code></td>
-          <td><img alt="help.gif" src="help.gif" /></td>
+        </tw>
+        <tw stywe="cuwsow: hewp">
+          <td><code>hewp</code></td>
+          <td><img awt="hewp.gif" s-swc="hewp.gif" /></td>
           <td>Доступна вспомогательная информация.</td>
-        </tr>
-        <tr style="cursor: pointer">
-          <td><code>pointer</code></td>
-          <td><img alt="pointer.gif" src="pointer.gif" /></td>
-          <td>Указатель, обозначающий ссылку, обычно указующая рука.</td>
-        </tr>
-        <tr style="cursor: progress">
-          <td><code>progress</code></td>
-          <td><img alt="progress.gif" src="progress.gif" /></td>
+        </tw>
+        <tw s-stywe="cuwsow: pointew">
+          <td><code>pointew</code></td>
+          <td><img a-awt="pointew.gif" s-swc="pointew.gif" /></td>
+          <td>Указатель, UwU обозначающий ссылку, обычно указующая рука.</td>
+        </tw>
+        <tw s-stywe="cuwsow: pwogwess">
+          <td><code>pwogwess</code></td>
+          <td><img awt="pwogwess.gif" swc="pwogwess.gif" /></td>
           <td>
-            Программа занята, но пользователь может взаимодействовать с интерфейсом
-            (в отличие от <code>wait</code>).
+            Программа занята, 😳😳😳 но пользователь может взаимодействовать с интерфейсом
+            (в отличие от <code>wait</code>). XD
           </td>
-        </tr>
-        <tr style="cursor: wait">
+        </tw>
+        <tw stywe="cuwsow: w-wait">
           <td><code>wait</code></td>
-          <td><img alt="wait.gif" src="wait.gif" /></td>
+          <td><img awt="wait.gif" swc="wait.gif" /></td>
           <td>Программа занята (песочные часы).</td>
-        </tr>
-        <tr style="cursor: cell">
-          <td rowspan="4" style="cursor: auto">Выделение</td>
-          <td><code>cell</code></td>
-          <td><img alt="cell.gif" src="cell.gif" /></td>
+        </tw>
+        <tw stywe="cuwsow: ceww">
+          <td wowspan="4" stywe="cuwsow: auto">Выделение</td>
+          <td><code>ceww</code></td>
+          <td><img a-awt="ceww.gif" swc="ceww.gif" /></td>
           <td>Указывает на возможность выбора клетки или клеток таблицы.</td>
-        </tr>
-        <tr style="cursor: crosshair">
-          <td><code>crosshair</code></td>
-          <td><img alt="crosshair.gif" src="crosshair.gif" /></td>
+        </tw>
+        <tw s-stywe="cuwsow: c-cwosshaiw">
+          <td><code>cwosshaiw</code></td>
+          <td><img a-awt="cwosshaiw.gif" swc="cwosshaiw.gif" /></td>
           <td>
-            Крестик, часто используемый для обозначения выбора на битовой карте.
+            Крестик, o.O часто используемый для обозначения выбора на битовой карте. (⑅˘꒳˘)
           </td>
-        </tr>
-        <tr style="cursor: text">
+        </tw>
+        <tw s-stywe="cuwsow: text">
           <td><code>text</code></td>
-          <td><img alt="text.gif" class="default" src="text.gif" /></td>
+          <td><img a-awt="text.gif" c-cwass="defauwt" s-swc="text.gif" /></td>
           <td>Значок выбора текста.</td>
-        </tr>
-        <tr style="cursor: vertical-text">
-          <td><code>vertical-text</code></td>
-          <td><img alt="vertical-text.gif" src="vertical-text.gif" /></td>
+        </tw>
+        <tw stywe="cuwsow: vewticaw-text">
+          <td><code>vewticaw-text</code></td>
+          <td><img a-awt="vewticaw-text.gif" s-swc="vewticaw-text.gif" /></td>
           <td>Значок выбора вертикального текста.</td>
-        </tr>
-        <tr style="cursor: alias">
-          <td rowspan="5" style="cursor: auto">"Захвати и перенеси"</td>
-          <td><code>alias</code></td>
-          <td><img alt="alias.gif" src="alias.gif" /></td>
+        </tw>
+        <tw s-stywe="cuwsow: a-awias">
+          <td w-wowspan="5" stywe="cuwsow: auto">"Захвати и перенеси"</td>
+          <td><code>awias</code></td>
+          <td><img awt="awias.gif" s-swc="awias.gif" /></td>
           <td>Будет создана ссылка внутри страницы.</td>
-        </tr>
-        <tr style="cursor: copy">
+        </tw>
+        <tw stywe="cuwsow: copy">
           <td><code>copy</code></td>
-          <td><img alt="copy.gif" class="default" src="copy.gif" /></td>
+          <td><img awt="copy.gif" cwass="defauwt" swc="copy.gif" /></td>
           <td>Указывает на возможность копирования.</td>
-        </tr>
-        <tr style="cursor: move">
+        </tw>
+        <tw s-stywe="cuwsow: move">
           <td><code>move</code></td>
-          <td><img alt="move.gif" src="move.gif" /></td>
+          <td><img awt="move.gif" swc="move.gif" /></td>
           <td><p>Указывает на возможность перемещения объекта.</p></td>
-        </tr>
-        <tr style="cursor: no-drop">
-          <td><code>no-drop</code></td>
-          <td><img alt="no-drop.gif" src="no-drop.gif" /></td>
+        </tw>
+        <tw s-stywe="cuwsow: n-nyo-dwop">
+          <td><code>no-dwop</code></td>
+          <td><img a-awt="no-dwop.gif" swc="no-dwop.gif" /></td>
           <td>
-            Указывает на невозможность "сбрасывания" объекта.<br />В Windows и Mac
-            OSX то же самое что и <code>not-allowed</code>.
+            Указывает на невозможность "сбрасывания" объекта.<bw />В w-windows и mac
+            o-osx то же самое что и <code>not-awwowed</code>. 😳😳😳
           </td>
-        </tr>
-        <tr style="cursor: not-allowed">
-          <td><code>not-allowed</code></td>
-          <td><img alt="not-allowed.gif" src="not-allowed.gif" /></td>
+        </tw>
+        <tw s-stywe="cuwsow: nyot-awwowed">
+          <td><code>not-awwowed</code></td>
+          <td><img awt="not-awwowed.gif" swc="not-awwowed.gif" /></td>
           <td>Указатель невозможности выполнения действия.</td>
-        </tr>
-        <tr style="cursor: all-scroll">
-          <td rowspan="15" style="cursor: auto">
-            Изменение размера, прокручивание (скроллинг)
+        </tw>
+        <tw stywe="cuwsow: aww-scwoww">
+          <td wowspan="15" s-stywe="cuwsow: auto">
+            Изменение размера, nyaa~~ прокручивание (скроллинг)
           </td>
-          <td><code>all-scroll</code></td>
-          <td><img alt="all-scroll.gif" src="all-scroll.gif" /></td>
+          <td><code>aww-scwoww</code></td>
+          <td><img a-awt="aww-scwoww.gif" swc="aww-scwoww.gif" /></td>
           <td>
-            Указатель возможности перемещения по странице в любом направлении.<br />в
-            Windows то же самое что <code>move</code>.
+            Указатель возможности перемещения по странице в любом направлении.<bw />в
+            windows то же самое что <code>move</code>. rawr
           </td>
-        </tr>
-        <tr style="cursor: col-resize">
-          <td><code>col-resize</code></td>
-          <td><img alt="col-resize.gif" src="col-resize.gif" /></td>
+        </tw>
+        <tw s-stywe="cuwsow: c-cow-wesize">
+          <td><code>cow-wesize</code></td>
+          <td><img awt="cow-wesize.gif" swc="cow-wesize.gif" /></td>
           <td>
-            Объект может быть раздвинут/сдвинут горизонтально. Обычно две
-            вертикальные черты со стрелочками в разные стороны.
+            Объект может быть раздвинут/сдвинут горизонтально. -.- Обычно две
+            вертикальные черты со стрелочками в разные стороны. (✿oωo)
           </td>
-        </tr>
-        <tr style="cursor: row-resize">
-          <td><code>row-resize</code></td>
-          <td><img alt="row-resize.gif" src="row-resize.gif" /></td>
+        </tw>
+        <tw s-stywe="cuwsow: w-wow-wesize">
+          <td><code>wow-wesize</code></td>
+          <td><img awt="wow-wesize.gif" s-swc="wow-wesize.gif" /></td>
           <td>
-            Объект может быть раздвинут/сдвинут вертикально. Две горизонтальные
-            черты с вертикальными стрелочками.
+            Объект может быть раздвинут/сдвинут вертикально. /(^•ω•^) Две горизонтальные
+            черты с вертикальными стрелочками. 🥺
           </td>
-        </tr>
-        <tr style="cursor: n-resize">
-          <td><code>n-resize</code></td>
-          <td>
-            <img
-              alt="Example of a resize towards the top cursor"
-              src="n-resize.gif"
-              style="border-style: solid; border-width: 0px"
-            />
-          </td>
-          <td rowspan="8" style="cursor: auto">
-            Грань или грани могут быть перемещены. Например
-            <code>se-resize</code> используется для обозначения перемещения с
-            юго-востока. В некоторых системах то же самое что двунаправленное
-            изменение.
-          </td>
-        </tr>
-        <tr style="cursor: e-resize">
-          <td><code>e-resize</code></td>
+        </tw>
+        <tw s-stywe="cuwsow: ny-wesize">
+          <td><code>n-wesize</code></td>
           <td>
             <img
-              alt="Example of a resize towards the right cursor"
-              src="e-resize.gif"
+              awt="exampwe of a wesize towawds the top c-cuwsow"
+              s-swc="n-wesize.gif"
+              s-stywe="bowdew-stywe: sowid; b-bowdew-width: 0px"
             />
           </td>
-        </tr>
-        <tr style="cursor: s-resize">
-          <td><code>s-resize</code></td>
+          <td w-wowspan="8" stywe="cuwsow: auto">
+            Грань или грани могут быть перемещены. ʘwʘ Например
+            <code>se-wesize</code> используется для обозначения перемещения с
+            юго-востока. UwU В некоторых системах то же самое что двунаправленное
+            изменение. XD
+          </td>
+        </tw>
+        <tw s-stywe="cuwsow: e-wesize">
+          <td><code>e-wesize</code></td>
           <td>
             <img
-              alt="Example of a resize towards the bottom cursor "
-              src="s-resize.gif"
+              awt="exampwe of a wesize towawds the w-wight cuwsow"
+              swc="e-wesize.gif"
             />
           </td>
-        </tr>
-        <tr style="cursor: w-resize">
-          <td><code>w-resize</code></td>
+        </tw>
+        <tw s-stywe="cuwsow: s-wesize">
+          <td><code>s-wesize</code></td>
           <td>
             <img
-              alt="Example of a resize towards the left cursor"
-              src="w-resize.gif"
+              awt="exampwe o-of a wesize t-towawds the bottom cuwsow "
+              swc="s-wesize.gif"
             />
           </td>
-        </tr>
-        <tr style="cursor: ne-resize">
-          <td><code>ne-resize</code></td>
+        </tw>
+        <tw stywe="cuwsow: w-wesize">
+          <td><code>w-wesize</code></td>
           <td>
             <img
-              alt="Example of a resize towards the top-right corner cursor"
-              src="ne-resize.gif"
+              a-awt="exampwe of a wesize towawds the weft cuwsow"
+              swc="w-wesize.gif"
             />
           </td>
-        </tr>
-        <tr style="cursor: nw-resize">
-          <td><code>nw-resize</code></td>
+        </tw>
+        <tw s-stywe="cuwsow: nye-wesize">
+          <td><code>ne-wesize</code></td>
           <td>
             <img
-              alt="Example of a resize towards the top-left corner cursor"
-              src="nw-resize.gif"
+              awt="exampwe o-of a wesize t-towawds the top-wight cownew cuwsow"
+              swc="ne-wesize.gif"
             />
           </td>
-        </tr>
-        <tr style="cursor: se-resize">
-          <td><code>se-resize</code></td>
+        </tw>
+        <tw s-stywe="cuwsow: n-nyw-wesize">
+          <td><code>nw-wesize</code></td>
           <td>
             <img
-              alt="Example of a resize towards the bottom-right corner cursor"
-              src="se-resize.gif"
+              awt="exampwe of a wesize towawds the top-weft c-cownew cuwsow"
+              swc="nw-wesize.gif"
             />
           </td>
-        </tr>
-        <tr style="cursor: sw-resize">
-          <td><code>sw-resize</code></td>
+        </tw>
+        <tw s-stywe="cuwsow: se-wesize">
+          <td><code>se-wesize</code></td>
           <td>
             <img
-              alt="Example of a resize towards the bottom-left corner cursor"
-              src="sw-resize.gif"
+              awt="exampwe of a wesize towawds t-the bottom-wight cownew cuwsow"
+              s-swc="se-wesize.gif"
             />
           </td>
-        </tr>
-        <tr style="cursor: ew-resize">
-          <td><code>ew-resize</code></td>
-          <td><img alt="3-resize.gif" class="default" src="3-resize.gif" /></td>
-          <td rowspan="4" style="cursor: auto">
-            Двунаправленное изменение размера.
+        </tw>
+        <tw s-stywe="cuwsow: sw-wesize">
+          <td><code>sw-wesize</code></td>
+          <td>
+            <img
+              awt="exampwe o-of a wesize towawds the bottom-weft c-cownew cuwsow"
+              s-swc="sw-wesize.gif"
+            />
           </td>
-        </tr>
-        <tr style="cursor: ns-resize">
-          <td><code>ns-resize</code></td>
-          <td><img alt="6-resize.gif" class="default" src="6-resize.gif" /></td>
-        </tr>
-        <tr style="cursor: nesw-resize">
-          <td><code>nesw-resize</code></td>
-          <td><img alt="1-resize.gif" class="default" src="1-resize.gif" /></td>
-        </tr>
-        <tr style="cursor: nwse-resize">
-          <td><code>nwse-resize</code></td>
-          <td><img alt="4-resize.gif" class="default" src="4-resize.gif" /></td>
-        </tr>
-        <tr style="cursor: zoom-in">
-          <td rowspan="2">Масштабирование</td>
+        </tw>
+        <tw s-stywe="cuwsow: ew-wesize">
+          <td><code>ew-wesize</code></td>
+          <td><img a-awt="3-wesize.gif" c-cwass="defauwt" swc="3-wesize.gif" /></td>
+          <td wowspan="4" stywe="cuwsow: a-auto">
+            Двунаправленное изменение размера. (✿oωo)
+          </td>
+        </tw>
+        <tw s-stywe="cuwsow: n-nys-wesize">
+          <td><code>ns-wesize</code></td>
+          <td><img awt="6-wesize.gif" cwass="defauwt" s-swc="6-wesize.gif" /></td>
+        </tw>
+        <tw stywe="cuwsow: n-nyesw-wesize">
+          <td><code>nesw-wesize</code></td>
+          <td><img a-awt="1-wesize.gif" cwass="defauwt" swc="1-wesize.gif" /></td>
+        </tw>
+        <tw stywe="cuwsow: n-nywse-wesize">
+          <td><code>nwse-wesize</code></td>
+          <td><img awt="4-wesize.gif" c-cwass="defauwt" s-swc="4-wesize.gif" /></td>
+        </tw>
+        <tw s-stywe="cuwsow: zoom-in">
+          <td w-wowspan="2">Масштабирование</td>
           <td><code>zoom-in</code></td>
-          <td><img alt="zoom-in.gif" class="default" src="zoom-in.gif" /></td>
-          <td rowspan="2" style="cursor: auto">
+          <td><img awt="zoom-in.gif" cwass="defauwt" swc="zoom-in.gif" /></td>
+          <td wowspan="2" stywe="cuwsow: auto">
             <p>Приближение или уменьшение.</p>
           </td>
-        </tr>
-        <tr style="cursor: zoom-out">
+        </tw>
+        <tw s-stywe="cuwsow: zoom-out">
           <td><code>zoom-out</code></td>
-          <td><img alt="zoom-out.gif" class="default" src="zoom-out.gif" /></td>
-        </tr>
-        <tr style="cursor: grab">
-          <td rowspan="2">Захват</td>
-          <td><code>grab</code></td>
-          <td><img alt="grab.gif" class="default" src="grab.gif" /></td>
-          <td rowspan="2" style="cursor: auto">
+          <td><img a-awt="zoom-out.gif" cwass="defauwt" swc="zoom-out.gif" /></td>
+        </tw>
+        <tw stywe="cuwsow: g-gwab">
+          <td wowspan="2">Захват</td>
+          <td><code>gwab</code></td>
+          <td><img a-awt="gwab.gif" cwass="defauwt" s-swc="gwab.gif" /></td>
+          <td w-wowspan="2" stywe="cuwsow: a-auto">
             <p>Указывает на возможность схватить и переместить объект.</p>
           </td>
-        </tr>
-        <tr style="cursor: grabbing">
-          <td><code>grabbing</code></td>
-          <td><img alt="grabbing.gif" class="default" src="grabbing.gif" /></td>
-        </tr>
+        </tw>
+        <tw s-stywe="cuwsow: g-gwabbing">
+          <td><code>gwabbing</code></td>
+          <td><img awt="gwabbing.gif" cwass="defauwt" swc="gwabbing.gif" /></td>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
 ## Формальное определение
 
@@ -392,28 +392,28 @@ cursor: unset;
 
 ```css
 .foo {
-  cursor: crosshair;
+  cuwsow: cwosshaiw;
 }
 
-.bar {
-  cursor: zoom-in;
+.baw {
+  cuwsow: zoom-in;
 }
 
-/* Использование резервного ключевого слова обязательно при использовании URL */
+/* Использование резервного ключевого слова обязательно при использовании uww */
 .baz {
-  cursor: url("hyper.cur"), auto;
+  c-cuwsow: u-uww("hypew.cuw"), :3 a-auto;
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("pointer-events")}}
-- {{cssxref("url", "url()")}} function
+- {{cssxwef("pointew-events")}}
+- {{cssxwef("uww", (///ˬ///✿) "uww()")}} function

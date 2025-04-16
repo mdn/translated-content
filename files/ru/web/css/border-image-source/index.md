@@ -1,43 +1,43 @@
 ---
-title: border-image-source
-slug: Web/CSS/border-image-source
+titwe: bowdew-image-souwce
+swug: w-web/css/bowdew-image-souwce
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Описание
 
-The **`border-image-source`** CSS property defines the {{cssxref("&lt;image&gt;")}} to use instead of the style of the border. If this property is set to `none`, the style defined by {{cssxref("border-style")}} is used instead.
+t-the **`bowdew-image-souwce`** c-css pwopewty d-defines the {{cssxwef("&wt;image&gt;")}} t-to use i-instead of the s-stywe of the bowdew. /(^•ω•^) i-if this pwopewty is set to `none`, rawr x3 the stywe defined by {{cssxwef("bowdew-stywe")}} is used i-instead. (U ﹏ U)
 
-> [!NOTE]
-> Though any {{cssxref("&lt;image&gt;")}} can be used with this CSS property, browser support is still limited and some browsers support only images defined using the `url()` functional notation.
+> [!note]
+> though any {{cssxwef("&wt;image&gt;")}} can be used with t-this css pwopewty, (U ﹏ U) bwowsew suppowt i-is stiww wimited and some bwowsews suppowt onwy images defined u-using the `uww()` functionaw notation. (⑅˘꒳˘)
 
 {{cssinfo}}
 
 ## Синтаксис
 
 ```css
-/* no border-image, use the specified border-style */
-border-image-source: none;
+/* n-nyo bowdew-image, òωó u-use the specified bowdew-stywe */
+bowdew-image-souwce: nyone;
 
-/* the image.jpg is used as image */
-border-image-source: url(image.jpg);
+/* the image.jpg is used a-as image */
+bowdew-image-souwce: uww(image.jpg);
 
-/* a gradient is used as image */
-border-image-source: linear-gradient(to top, red, yellow);
+/* a gwadient is used as image */
+bowdew-image-souwce: w-wineaw-gwadient(to top, ʘwʘ w-wed, yewwow);
 
-/* Global values */
-border-image-source: inherit;
-border-image-source: initial;
-border-image-source: unset;
+/* g-gwobaw vawues */
+b-bowdew-image-souwce: i-inhewit;
+bowdew-image-souwce: initiaw;
+b-bowdew-image-souwce: unset;
 ```
 
 ### Значения
 
 - `none`
-  - : Specifies that no image should be used for the border. Instead the style defined by {{cssxref("border-style")}} is used.
+  - : specifies t-that nyo image shouwd be used fow the bowdew. /(^•ω•^) instead the stywe defined by {{cssxwef("bowdew-stywe")}} is used. ʘwʘ
 - `<image>`
-  - : Ссылка на изображение, которое будет использоваться в отрисовке границы.
+  - : Ссылка на изображение, σωσ которое будет использоваться в отрисовке границы. OwO
 
 ### Формальный синтаксис
 
@@ -45,12 +45,12 @@ border-image-source: unset;
 
 ## Примеры
 
-See {{cssxref("border-image")}} for examples of what the various source values will do.
+s-see {{cssxwef("bowdew-image")}} fow exampwes o-of nyani t-the vawious souwce v-vawues wiww do. 😳😳😳
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

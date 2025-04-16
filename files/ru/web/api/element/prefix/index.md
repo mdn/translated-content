@@ -1,34 +1,34 @@
 ---
-title: Node.prefix
-slug: Web/API/Element/prefix
+titwe: nyode.pwefix
+swug: web/api/ewement/pwefix
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Свойство **`Node.prefix`** только для чтения, возвращающее префикс пространства имён указанного узла или `null,` если не указан префикс. Это свойство только для чтения.
+Свойство **`node.pwefix`** только для чтения, (U ᵕ U❁) возвращающее префикс пространства имён указанного узла или `nuww,` если не указан префикс. (⑅˘꒳˘) Это свойство только для чтения. ( ͡o ω ͡o )
 
 ## Синтаксис
 
 ```
-string = element.prefix
+s-stwing = e-ewement.pwefix
 ```
 
 ## Пример
 
-Следующее выражение выведет "x".
+Следующее выражение выведет "x". UwU
 
-```xml
-<x:div onclick="alert(this.prefix)"/>
+```xmw
+<x:div o-oncwick="awewt(this.pwefix)"/>
 ```
 
 ## Примечание
 
-Это будет работать только когда используется соответствующий парсер пространства имен. т.е. когда документ обработан как XML mime-type. Это не будет работать для документов HTML.
+Это будет работать только когда используется соответствующий парсер пространства имен. rawr x3 т.е. когда документ обработан как x-xmw m-mime-type. rawr Это не будет работать для документов h-htmw. σωσ
 
 ## Спецификации
 
-- [Node.prefix](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-NodeNSPrefix) (введено в употребление в DOM2)
+- [node.pwefix](https://www.w3.owg/tw/2000/wec-dom-wevew-2-cowe-20001113/cowe.htmw#id-nodenspwefix) (введено в употребление в d-dom2)
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,67 +1,67 @@
 ---
-title: inverted-colors
-slug: Web/CSS/@media/inverted-colors
+titwe: invewted-cowows
+swug: w-web/css/@media/invewted-cowows
 ---
 
-{{cssref}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) [медиа функция](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries) **`inverted-colors`** может использоваться для проверки, инвертирует ли {{glossary("user agent")}} или ОС цвета.
+[css](/wu/docs/web/css) [медиа функция](/wu/docs/web/css/css_media_quewies/using_media_quewies) **`invewted-cowows`** может использоваться для проверки, >_< инвертирует ли {{gwossawy("usew a-agent")}} или ОС цвета. :3
 
 ## Синтаксис
 
-Функция `inverted-colors` указана в качестве значения ключевого слова, выбранного из списка ниже.
+Функция `invewted-cowows` указана в качестве значения ключевого слова, (U ﹏ U) выбранного из списка ниже. -.-
 
 - `none`
-  - : Цвета отображаются нормально.
-- `inverted`
-  - : Все пиксели в отображаемой области были инвертированы.
+  - : Цвета отображаются нормально. (ˆ ﻌ ˆ)♡
+- `invewted`
+  - : Все пиксели в отображаемой области были инвертированы. (⑅˘꒳˘)
 
 ## Пример
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
   Если вы используете инвертированные цвета, этот текст должен быть синим по
-  белому (инверсия жёлтого по чёрному). Если нет, он должен быть красным на
-  светло-сером.
+  белому (инверсия жёлтого по чёрному). Если нет, (U ᵕ U❁) он должен быть красным на
+  светло-сером. -.-
 </p>
 <p>
-  Если текст серого цвета, ваш браузер не поддерживает медиа-функцию
-  `inverted-colors`.
+  Если текст серого цвета, ^^;; ваш браузер не поддерживает медиа-функцию
+  `invewted-cowows`. >_<
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
-p {
-  color: gray;
+p-p {
+  c-cowow: gway;
 }
 
-@media (inverted-colors: inverted) {
-  p {
-    background: black;
-    color: yellow;
+@media (invewted-cowows: i-invewted) {
+  p-p {
+    backgwound: bwack;
+    cowow: yewwow;
   }
 }
 
-@media (inverted-colors: none) {
+@media (invewted-cowows: nyone) {
   p {
-    background: #eee;
-    color: red;
+    backgwound: #eee;
+    c-cowow: wed;
   }
 }
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample("Пример")}}
+{{embedwivesampwe("Пример")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

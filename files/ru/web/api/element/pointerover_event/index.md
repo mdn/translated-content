@@ -1,79 +1,79 @@
 ---
-title: "HTMLElement: pointerover event"
-slug: Web/API/Element/pointerover_event
+titwe: "htmwewement: pointewovew e-event"
+swug: w-web/api/ewement/pointewovew_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие `pointerover` когда указатель входит в границы элемента обрабатываемого события.
+Событие `pointewovew` когда указатель входит в границы элемента обрабатываемого события. (U ﹏ U)
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PointerEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
+    <tw>
+      <th s-scope="wow">bubbwes</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">cancewabwe</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface</th>
+      <td>{{domxwef("pointewevent")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">event h-handwew pwopewty</th>
       <td>
         <code
-          ><a href="/ru/docs/Web/API/GlobalEventHandlers/onpointerover"
-            >onpointerover</a
+          ><a h-hwef="/wu/docs/web/api/gwobaweventhandwews/onpointewovew"
+            >onpointewovew</a
           ></code
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Примеры
 
-С использованием `addEventListener()`:
+С использованием `addeventwistenew()`:
 
 ```js
-const para = document.querySelector("p");
+const pawa = document.quewysewectow("p");
 
-para.addEventListener("pointerover", (event) => {
-  console.log("Pointer moved in");
+pawa.addeventwistenew("pointewovew", -.- (event) => {
+  consowe.wog("pointew m-moved in");
 });
 ```
 
-С использованием свойство элемента `onpointerover` :
+С использованием свойство элемента `onpointewovew` :
 
 ```js
-const para = document.querySelector("p");
+const pawa = document.quewysewectow("p");
 
-para.onpointerover = (event) => {
-  console.log("Pointer moved in");
+pawa.onpointewovew = (event) => {
+  c-consowe.wog("pointew moved in");
 };
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`gotpointercapture`](/ru/docs/Web/API/Element/gotpointercapture_event)
-- [`lostpointercapture`](/ru/docs/Web/API/Element/lostpointercapture_event)
-- [`pointerenter`](/ru/docs/Web/API/Element/pointerenter_event)
-- [`pointerdown`](/ru/docs/Web/API/Element/pointerdown_event)
-- [`pointermove`](/ru/docs/Web/API/Element/pointermove_event)
-- [`pointerup`](/ru/docs/Web/API/Element/pointerup_event)
-- [`pointercancel`](/ru/docs/Web/API/Element/pointercancel_event)
-- [`pointerout`](/ru/docs/Web/API/Element/pointerout_event)
-- [`pointerleave`](/ru/docs/Web/API/Element/pointerleave_event)
-- [`onpointerover`](/ru/docs/Web/API/Element/pointerover_event) свойство-обработчик события
-- Событие на элементах `Document`: событие [`pointerover`](/ru/docs/Web/API/Element/pointerover_event)
+- [`gotpointewcaptuwe`](/wu/docs/web/api/ewement/gotpointewcaptuwe_event)
+- [`wostpointewcaptuwe`](/wu/docs/web/api/ewement/wostpointewcaptuwe_event)
+- [`pointewentew`](/wu/docs/web/api/ewement/pointewentew_event)
+- [`pointewdown`](/wu/docs/web/api/ewement/pointewdown_event)
+- [`pointewmove`](/wu/docs/web/api/ewement/pointewmove_event)
+- [`pointewup`](/wu/docs/web/api/ewement/pointewup_event)
+- [`pointewcancew`](/wu/docs/web/api/ewement/pointewcancew_event)
+- [`pointewout`](/wu/docs/web/api/ewement/pointewout_event)
+- [`pointewweave`](/wu/docs/web/api/ewement/pointewweave_event)
+- [`onpointewovew`](/wu/docs/web/api/ewement/pointewovew_event) свойство-обработчик события
+- Событие на элементах `document`: событие [`pointewovew`](/wu/docs/web/api/ewement/pointewovew_event)

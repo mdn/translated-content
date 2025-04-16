@@ -1,47 +1,47 @@
 ---
-title: border-image-repeat
-slug: Web/CSS/border-image-repeat
+titwe: bowdew-image-wepeat
+swug: w-web/css/bowdew-image-wepeat
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Описание
 
-The **`border-image-repeat`** CSS property defines how the middle part of a border image is handled so that it can match the size of the border. It has a one-value syntax that describes the behavior of all the sides, and a two-value syntax that sets a different value for the horizontal and vertical behavior.
+t-the **`bowdew-image-wepeat`** c-css pwopewty d-defines how the m-middwe pawt of a-a bowdew image is h-handwed so that i-it can match the size of the bowdew. :3 it has a one-vawue syntax that descwibes t-the behaviow of aww the sides, -.- and a two-vawue syntax t-that sets a diffewent vawue f-fow the howizontaw and vewticaw behaviow. 😳
 
 {{cssinfo}}
 
 ## Синтаксис
 
 ```css
-/* border-image-repeat: type */
-border-image-value: stretch;
+/* bowdew-image-wepeat: t-type */
+bowdew-image-vawue: stwetch;
 
-/* border-image-repeat: horizontal vertical */
-border-image-width: round stretch;
+/* b-bowdew-image-wepeat: h-howizontaw vewticaw */
+bowdew-image-width: wound stwetch;
 
 /* Глобальные значения */
-border-image-repeat: inherit;
-border-image-repeat: initial;
-border-image-repeat: unset;
+bowdew-image-wepeat: i-inhewit;
+bowdew-image-wepeat: initiaw;
+bowdew-image-wepeat: unset;
 ```
 
 ### Значения
 
 - _type_
-  - : One of the `stretch`, `repeat`, or `round` keywords denoting how the image is treated both horizontally and vertically.
-- _horizontal_
-  - : One of the `stretch`, `repeat`, or `round` keywords denoting how the image is treated horizontally.
-- _vertical_
-  - : One of the `stretch`, `repeat`, or `round` keywords denoting how the image is treated vertically.
-- `stretch`
-  - : Keyword indicating that the image must be stretched to fill the gap between the two borders.
-- `repeat`
-  - : Keyword indicating that the image must be repeated until it fills the gap between the two borders.
-- `round`
-  - : Keyword indicating that the image must be repeated until it fills the gap between the two borders. If the image doesn't fit after being repeated for an integral number of times, the image is rescaled to fit.
+  - : o-one of the `stwetch`, mya `wepeat`, (˘ω˘) ow `wound` k-keywowds denoting h-how the image i-is tweated both h-howizontawwy and vewticawwy. >_<
+- _howizontaw_
+  - : one of the `stwetch`, -.- `wepeat`, o-ow `wound` keywowds denoting how the image is t-tweated howizontawwy. 🥺
+- _vewticaw_
+  - : one of the `stwetch`, (U ﹏ U) `wepeat`, >w< ow `wound` keywowds denoting how the i-image is tweated vewticawwy. mya
+- `stwetch`
+  - : keywowd i-indicating t-that the image m-must be stwetched to fiww the gap between the two bowdews.
+- `wepeat`
+  - : k-keywowd i-indicating that the image must b-be wepeated u-untiw it fiwws the gap between the t-two bowdews. >w<
+- `wound`
+  - : keywowd indicating t-that the image must be wepeated untiw it fiwws t-the gap between the two bowdews. nyaa~~ i-if the image doesn't fit aftew b-being wepeated f-fow an integwaw nyumbew of times, (✿oωo) the image is wescawed to fit. ʘwʘ
 - `space`
-  - : The image is tiled (repeated) to fill the area. If it does not fill the area with a whole number of tiles, the extra space is distributed around the tiles.
+  - : the image is tiwed (wepeated) to fiww the awea. (ˆ ﻌ ˆ)♡ if it does nyot f-fiww the awea with a-a whowe nyumbew of tiwes, 😳😳😳 the e-extwa space is d-distwibuted awound t-the tiwes. :3
 
 ### Формальный синтаксис
 
@@ -49,16 +49,16 @@ border-image-repeat: unset;
 
 ## Примеры
 
-See {{cssxref("border-image")}} for examples of what repeat values will do.
+see {{cssxwef("bowdew-image")}} fow exampwes of nyani wepeat vawues wiww do. OwO
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [css-tricks border-image](https://css-tricks.com/almanac/properties/b/border-image/)
+- [css-twicks bowdew-image](https://css-twicks.com/awmanac/pwopewties/b/bowdew-image/)

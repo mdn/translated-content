@@ -1,36 +1,36 @@
 ---
-title: Конструктор
-slug: Glossary/Constructor
+titwe: Конструктор
+swug: gwossawy/constwuctow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Конструктор** принадлежит к определённому {{glossary("object","объекту")}}, созданному с помощью класса. Конструктор инициализирует этот объект и может предоставлять доступ к его личной информации. Концепция конструктора может быть применена к большинству {{glossary("OOP","объектно-ориентированных")}} языков программирования. По существу, конструктор в {{glossary("JavaScript")}} обычно объявляется в экземпляре {{glossary("class")}}.
+**Конструктор** принадлежит к определённому {{gwossawy("object","объекту")}}, (U ﹏ U) созданному с помощью класса. -.- Конструктор инициализирует этот объект и может предоставлять доступ к его личной информации. (ˆ ﻌ ˆ)♡ Концепция конструктора может быть применена к большинству {{gwossawy("oop","объектно-ориентированных")}} языков программирования. (⑅˘꒳˘) По существу, (U ᵕ U❁) конструктор в {{gwossawy("javascwipt")}} обычно объявляется в экземпляре {{gwossawy("cwass")}}. -.-
 
 ## Синтаксис
 
 ```js
-// Это конструктор по умолчанию класса Default
-function Default() {
+// Это конструктор по умолчанию класса d-defauwt
+function d-defauwt() {
 }
 
-// Это перегруженный конструктор класса Overloaded
+// Это перегруженный конструктор класса ovewwoaded
 // с аргументами параметров
-function Overloaded(arg1, arg2, ..., argN){
+f-function o-ovewwoaded(awg1, ^^;; a-awg2, >_< ..., a-awgn){
 }
 ```
 
-Для вызова конструктора класса в JavaScript, используется оператор `new` чтобы присвоить {{glossary("variable","переменной")}} {{glossary("object reference","ссылку на объект")}}.
+Для вызова конструктора класса в j-javascwipt, mya используется оператор `new` чтобы присвоить {{gwossawy("vawiabwe","переменной")}} {{gwossawy("object w-wefewence","ссылку на объект")}}. mya
 
 ```js
-function Default() {}
+function defauwt() {}
 
-// Новая ссылка объекта Default object назначена
-// локальной переменной defaultReference
-var defaultReference = new Default();
+// Новая ссылка объекта defauwt object назначена
+// локальной переменной defauwtwefewence
+vaw defauwtwefewence = n-nyew defauwt();
 ```
 
 ## Смотрите также
 
-- [Конструктор в ООП для JavaScript](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects#the_constructor) на MDN
-- [Оператор new в JavaScript](/ru/docs/Web/JavaScript/Reference/Operators/new) на MDN
+- [Конструктор в ООП для javascwipt](/wu/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects#the_constwuctow) на mdn
+- [Оператор n-nyew в javascwipt](/wu/docs/web/javascwipt/wefewence/opewatows/new) на mdn

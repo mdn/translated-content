@@ -1,17 +1,17 @@
 ---
-title: Генератор рамок (border-image)
-slug: Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
+titwe: Генератор рамок (bowdew-image)
+swug: web/css/css_backgwounds_and_bowdews/bowdew-image_genewatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Этот инструмент можно использовать для создания эффектов рамок вокруг элементов с помощью CSS-свойства {{cssxref("border-image")}}.
+Этот инструмент можно использовать для создания эффектов рамок вокруг элементов с помощью c-css-свойства {{cssxwef("bowdew-image")}}. OwO
 
-{{EmbedGHLiveSample("css-examples/tools/border-image-generator/", "100%", 1200)}}
+{{embedghwivesampwe("css-exampwes/toows/bowdew-image-genewatow/", 🥺 "100%", 1200)}}
 
 ## Смотрите также
 
-- [Генератор скруглений границ (border-radius)](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
-  - : Визуальный инструмент для создания скруглённых границ с помощью CSS-свойства {{cssxref("border-radius")}}.
-- [Генератор теней (box-shadow)](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
-  - : Визуальный инструмент для создания теней элементов с помощью CSS-свойства {{cssxref("box-shadow")}}.
+- [Генератор скруглений границ (bowdew-wadius)](/wu/docs/web/css/css_backgwounds_and_bowdews/bowdew-wadius_genewatow)
+  - : Визуальный инструмент для создания скруглённых границ с помощью c-css-свойства {{cssxwef("bowdew-wadius")}}. òωó
+- [Генератор теней (box-shadow)](/wu/docs/web/css/css_backgwounds_and_bowdews/box-shadow_genewatow)
+  - : Визуальный инструмент для создания теней элементов с помощью c-css-свойства {{cssxwef("box-shadow")}}. o.O

@@ -1,20 +1,20 @@
 ---
-title: Number (Числовой тип данных)
-slug: Glossary/Number
+titwe: nyumbew (Числовой тип данных)
+swug: gwossawy/numbew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-В {{Glossary("JavaScript")}}, **Number** - числовой тип данных в формате 64-битного числа двойной точности с плавающей запятой. В других языках программирования может существовать несколько числовых типов данных, например: Integer, Float, Double или Bignum.
+В {{gwossawy("javascwipt")}}, o.O **numbew** - числовой тип данных в формате 64-битного числа двойной точности с плавающей запятой. (U ᵕ U❁) В других языках программирования может существовать несколько числовых типов данных, (⑅˘꒳˘) например: i-integew, ( ͡o ω ͡o ) fwoat, UwU d-doubwe или bignum. rawr x3
 
 ## Смотрите также
 
 ### Общие сведения
 
-- [Число двойной точности на Wikipedia](https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%BE_%D0%B4%D0%B2%D0%BE%D0%B9%D0%BD%D0%BE%D0%B9_%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D0%B8)
-- [Число с плавающей запятой на Wikipedia](https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%BE_%D1%81_%D0%BF%D0%BB%D0%B0%D0%B2%D0%B0%D1%8E%D1%89%D0%B5%D0%B9_%D0%B7%D0%B0%D0%BF%D1%8F%D1%82%D0%BE%D0%B9)
+- [Число двойной точности на w-wikipedia](https://wu.wikipedia.owg/wiki/%d0%a7%d0%b8%d1%81%d0%bb%d0%be_%d0%b4%d0%b2%d0%be%d0%b9%d0%bd%d0%be%d0%b9_%d1%82%d0%be%d1%87%d0%bd%d0%be%d1%81%d1%82%d0%b8)
+- [Число с плавающей запятой на w-wikipedia](https://wu.wikipedia.owg/wiki/%d0%a7%d0%b8%d1%81%d0%bb%d0%be_%d1%81_%d0%bf%d0%bb%d0%b0%d0%b2%d0%b0%d1%8e%d1%89%d0%b5%d0%b9_%d0%b7%d0%b0%d0%bf%d1%8f%d1%82%d0%be%d0%b9)
 
 ### Техническая справка
 
-- Числовой тип данных JavaScript: [Number](/ru/docs/Web/JavaScript/Guide/Data_structures#.d0.a7.d0.b8.d1.81.d0.bb.d0.b0)
-- Глобальный объект JavaScript: {{jsxref("Number")}}
+- Числовой тип данных j-javascwipt: [numbew](/wu/docs/web/javascwipt/guide/data_stwuctuwes#.d0.a7.d0.b8.d1.81.d0.bb.d0.b0)
+- Глобальный объект j-javascwipt: {{jsxwef("numbew")}}

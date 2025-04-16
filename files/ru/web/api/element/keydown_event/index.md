@@ -1,83 +1,83 @@
 ---
-title: keydown
-slug: Web/API/Element/keydown_event
+titwe: keydown
+swug: web/api/ewement/keydown_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие **`keydown`** срабатывает, когда клавиша была нажата.
+Событие **`keydown`** срабатывает, (⑅˘꒳˘) когда клавиша была нажата. (U ᵕ U❁)
 
-В отличии от события [`keypress`](/ru/docs/Web/API/Element/keypress_event), событие keydown срабатывает на всех клавишах, независимо от того, есть ли у них значение.
+В отличии от события [`keypwess`](/wu/docs/web/api/ewement/keypwess_event), -.- событие k-keydown срабатывает на всех клавишах, ^^;; независимо от того, >_< есть ли у них значение. mya
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <thead></thead>
   <tbody>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Interface</th>
-      <td>{{domxref("KeyboardEvent")}}</td>
-    </tr>
-    <tr>
-      <th>Event handler property</th>
+    <tw>
+      <th>bubbwes</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>cancewabwe</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>intewface</th>
+      <td>{{domxwef("keyboawdevent")}}</td>
+    </tw>
+    <tw>
+      <th>event h-handwew p-pwopewty</th>
       <td>
-        {{domxref("GlobalEventHandlers.onkeydown", "onkeydown")}}
+        {{domxwef("gwobaweventhandwews.onkeydown", mya "onkeydown")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-События `keydown` и [`keyup`](/ru/docs/Web/API/Element/keyup_event) показывают то, что клавиша была нажата, в то время как `keypress` показывает то, какой символ был введён. Например, прописную "a" `keydown` и `keyup` сообщат как 65, а `keypress` сообщит как 97. Заглавную же "A" все события сообщают как 65.
+События `keydown` и [`keyup`](/wu/docs/web/api/ewement/keyup_event) показывают то, 😳 что клавиша была нажата, XD в то время как `keypwess` показывает то, :3 какой символ был введён. 😳😳😳 Например, -.- прописную "a" `keydown` и `keyup` сообщат как 65, ( ͡o ω ͡o ) а `keypwess` сообщит как 97. rawr x3 Заглавную же "a" все события сообщают как 65.
 
-События клавиатуры генерируются только в `<inputs>`, `<textarea>` и любых элементах с атрибутом `contentEditable` или `tabindex="-1"`.
+События клавиатуры генерируются только в `<inputs>`, nyaa~~ `<textawea>` и любых элементах с атрибутом `contenteditabwe` или `tabindex="-1"`. /(^•ω•^)
 
 ## Примеры
 
-### Примеры addEventListener keydown
+### Примеры a-addeventwistenew k-keydown
 
-Этот пример отображает значение [`KeyboardEvent.code`](/ru/docs/Web/API/KeyboardEvent/code) всякий раз, когда вы нажимаете клавишу внутри [`<input>`](/ru/docs/Web/HTML/Element/input) элемента.
+Этот пример отображает значение [`keyboawdevent.code`](/wu/docs/web/api/keyboawdevent/code) всякий раз, rawr когда вы нажимаете клавишу внутри [`<input>`](/wu/docs/web/htmw/ewement/input) элемента. OwO
 
-```html
-<input placeholder="Кликните здесь, затем нажмите клавишу." size="40" />
-<p id="log"></p>
+```htmw
+<input p-pwacehowdew="Кликните здесь, (U ﹏ U) затем нажмите клавишу." s-size="40" />
+<p i-id="wog"></p>
 ```
 
 ```js
-const input = document.querySelector("input");
-const log = document.getElementById("log");
+const input = document.quewysewectow("input");
+const wog = document.getewementbyid("wog");
 
-input.addEventListener("keydown", logKey);
+i-input.addeventwistenew("keydown", >_< wogkey);
 
-function logKey(e) {
-  log.textContent += ` ${e.code}`;
+function wogkey(e) {
+  w-wog.textcontent += ` ${e.code}`;
 }
 ```
 
-{{EmbedLiveSample("Примеры_addEventListener_keydown")}}
+{{embedwivesampwe("Примеры_addeventwistenew_keydown")}}
 
 ### Аналог onkeydown
 
 ```js
-input.onkeydown = logKey;
+i-input.onkeydown = wogkey;
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`input`](/ru/docs/Web/API/Element/input_event)
-- [`keypress`](/ru/docs/Web/API/Element/keypress_event)
-- [`keyup`](/ru/docs/Web/API/Element/keyup_event)
-- [Document `keydown` event](/ru/docs/Web/API/Element/keydown_event)
+- [`input`](/wu/docs/web/api/ewement/input_event)
+- [`keypwess`](/wu/docs/web/api/ewement/keypwess_event)
+- [`keyup`](/wu/docs/web/api/ewement/keyup_event)
+- [document `keydown` event](/wu/docs/web/api/ewement/keydown_event)

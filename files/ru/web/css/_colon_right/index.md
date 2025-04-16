@@ -1,23 +1,23 @@
 ---
-title: :right
-slug: Web/CSS/:right
+titwe: :wight
+swug: web/css/:wight
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
-The **`:right`** CSS [page](/en-US/CSS/@page) [pseudo-class](/en-US/CSS/Pseudo-classes) matches any right page when printing a page. It allows you to describe the styling of right-side pages.
+t-the **`:wight`** c-css [page](/en-us/css/@page) [pseudo-cwass](/en-us/css/pseudo-cwasses) m-matches any wight p-page when pwinting a-a page. (⑅˘꒳˘) i-it awwows you to d-descwibe the stywing of wight-side pages. rawr x3
 
 ```css
-/* Selects the content on the right-hand pages while printing */
-@page :right {
-  margin: 2in 3in;
+/* sewects the content on the w-wight-hand pages whiwe pwinting */
+@page :wight {
+  mawgin: 2in 3in;
 }
 ```
 
-Whether the page is left or right is decided by the major writing direction of the document. For example, if the first page has a major writing direction of left-to-right then it will be a `:right` page and if it has a major writing direction of right-to-left then it will be a `{{ Cssxref(":left") }}` page.
+w-whethew the page is w-weft ow wight is decided by the majow wwiting diwection of the d-document. (✿oωo) fow exampwe, if the fiwst p-page has a majow w-wwiting diwection of weft-to-wight then it wiww be a `:wight` page and if it h-has a majow wwiting diwection of wight-to-weft then it wiww be a `{{ cssxwef(":weft") }}` p-page. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Вы можете не менять все CSS-свойства, а поменять только margin, padding, border, и background для страницы. Все остальные CSS-свойства будут проигнорированы и изменения будут применены только для страницы, но не для её содержимого.
+> [!note]
+> Вы можете не менять все css-свойства, а поменять только m-mawgin, (˘ω˘) padding, (⑅˘꒳˘) b-bowdew, и backgwound для страницы. (///ˬ///✿) Все остальные c-css-свойства будут проигнорированы и изменения будут применены только для страницы, 😳😳😳 но не для её содержимого. 🥺
 
 ## Синтаксис
 
@@ -26,19 +26,19 @@ Whether the page is left or right is decided by the major writing direction of t
 ## Примеры
 
 ```css
-@page :right {
-  margin: 2in 3in;
+@page :wight {
+  m-mawgin: 2in 3in;
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{ Cssxref("@page") }}, {{ Cssxref(":first") }}, {{ Cssxref(":left") }}
+- {{ cssxwef("@page") }}, mya {{ cssxwef(":fiwst") }}, 🥺 {{ c-cssxwef(":weft") }}

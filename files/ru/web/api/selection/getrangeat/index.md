@@ -1,49 +1,49 @@
 ---
-title: Selection.getRangeAt()
-slug: Web/API/Selection/getRangeAt
+titwe: sewection.getwangeat()
+swug: web/api/sewection/getwangeat
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Метод **`Selection.getRangeAt()`** возвращает объект диапазона, который представляет один из диапазонов, выделенного на данный момент.
+Метод **`sewection.getwangeat()`** возвращает объект диапазона, (⑅˘꒳˘) который представляет один из диапазонов, ( ͡o ω ͡o ) выделенного на данный момент. UwU
 
 ## Синтаксис
 
 ```
-range = sel.getRangeAt(index)
+w-wange = s-sew.getwangeat(index)
 ```
 
 ### Параметры
 
-- _`range`_
-  - : Объект {{domxref("Range")}}, который будет возвращён.
+- _`wange`_
+  - : Объект {{domxwef("wange")}}, rawr x3 который будет возвращён. rawr
 - _`index`_
-  - : Индекс диапазона, начинающийся с нуля, который необходимо вернуть. Отрицательное значение или значение выше или равное {{domxref("Selection.rangeCount")}} приведёт к ошибке.
+  - : Индекс диапазона, σωσ начинающийся с нуля, σωσ который необходимо вернуть. >_< Отрицательное значение или значение выше или равное {{domxwef("sewection.wangecount")}} приведёт к ошибке. :3
 
 ## Примеры
 
 ```js
-var ranges = [];
+v-vaw wanges = [];
 
-sel = window.getSelection();
+s-sew = window.getsewection();
 
-for (var i = 0; i < sel.rangeCount; i++) {
-  ranges[i] = sel.getRangeAt(i);
+f-fow (vaw i = 0; i-i < sew.wangecount; i-i++) {
+  w-wanges[i] = sew.getwangeat(i);
 }
 /* Каждый элемент в массиве диапазонов является
- * объектом диапазона, который представляет
+ * объектом диапазона, (U ﹏ U) который представляет
  * один из диапазонов текущего выделения */
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Selection")}}, интерфейс, к которому принадлежит метод.
-- [Tree Selection](/ru/docs/XUL_Tutorial/Tree_Selection) (для метода `getRangeAt()` в интерфейсе `nsITreeSelection`)
+- {{domxwef("sewection")}}, -.- интерфейс, к которому принадлежит метод. (ˆ ﻌ ˆ)♡
+- [twee sewection](/wu/docs/xuw_tutowiaw/twee_sewection) (для метода `getwangeat()` в интерфейсе `nsitweesewection`)

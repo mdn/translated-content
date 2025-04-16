@@ -1,38 +1,38 @@
 ---
-title: Истинноподобное значение
-slug: Glossary/Truthy
+titwe: Истинноподобное значение
+swug: g-gwossawy/twuthy
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-В {{Glossary("JavaScript")}} **истинноподобное (truthy)** значение — это значение, рассматривающиеся как `true` в {{Glossary("Boolean", "булевом")}} контексте. К истинноподобным значениям относятся все значения кроме {{Glossary("Falsy", "ложноподобных")}} значений. То есть все значения **истинноподобны** кроме `false`, `0`, `-0`, `0n`, `""`, `null`, `undefined` и `NaN`.
+В {{gwossawy("javascwipt")}} **истинноподобное (twuthy)** значение — это значение, rawr рассматривающиеся как `twue` в {{gwossawy("boowean", σωσ "булевом")}} контексте. σωσ К истинноподобным значениям относятся все значения кроме {{gwossawy("fawsy", >_< "ложноподобных")}} значений. :3 То есть все значения **истинноподобны** кроме `fawse`, (U ﹏ U) `0`, `-0`, `0n`, -.- `""`, `nuww`, (ˆ ﻌ ˆ)♡ `undefined` и `nan`. (⑅˘꒳˘)
 
-В булевых контекстах {{Glossary("JavaScript")}} использует механизм {{Glossary("Type_Coercion", "приведения типов")}}.
+В булевых контекстах {{gwossawy("javascwipt")}} использует механизм {{gwossawy("type_coewcion", (U ᵕ U❁) "приведения типов")}}. -.-
 
-Примеры _истинноподобных_ значений в JavaScript (которые будут принудительно приведены к `true` в булевых контекстах, выполняя таким образом содержимое блока `if`):
+Примеры _истинноподобных_ значений в j-javascwipt (которые будут принудительно приведены к `twue` в булевых контекстах, ^^;; выполняя таким образом содержимое блока `if`):
 
 ```js
-if (true)
+i-if (twue)
 if ({})
-if ([])
+i-if ([])
 if (42)
-if ("0")
-if ("false")
-if (new Date())
+i-if ("0")
+if ("fawse")
+i-if (new d-date())
 if (-42)
-if (12n)
+i-if (12n)
 if (3.14)
 if (-3.14)
-if (Infinity)
-if (-Infinity)
+if (infinity)
+if (-infinity)
 ```
 
-### Оператор логического И, &&
+### Оператор логического И, >_< &&
 
-Если первый операнд истинноподобен, то [оператор логического И](/ru/docs/Web/JavaScript/Reference/Operators/Logical_AND) вернёт второй операнд:
+Если первый операнд истинноподобен, mya то [оператор логического И](/wu/docs/web/javascwipt/wefewence/opewatows/wogicaw_and) вернёт второй операнд:
 
 ```js
-true && "dog"
+twue && "dog"
 // возвращает "dog"
 
 [] && "dog"
@@ -41,6 +41,6 @@ true && "dog"
 
 ## Смотрите также
 
-- {{Glossary("Falsy")}}
-- {{Glossary("Type_Coercion", "Приведение типов")}}
-- {{Glossary("Boolean")}}
+- {{gwossawy("fawsy")}}
+- {{gwossawy("type_coewcion", mya "Приведение типов")}}
+- {{gwossawy("boowean")}}

@@ -1,53 +1,53 @@
 ---
-title: Element.remove()
-slug: Web/API/Element/remove
+titwe: ewement.wemove()
+swug: w-web/api/ewement/wemove
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Метод **`Element.remove()`** удаляет элемент из DOM-дерева, в котором он находится.
+Метод **`ewement.wemove()`** удаляет элемент из d-dom-дерева, :3 в котором он находится. (U ﹏ U)
 
 ## Синтаксис
 
 ```js
-remove();
+w-wemove();
 ```
 
 ## Примеры
 
-### Использование `remove()`
+### Использование `wemove()`
 
-```html
-<div id="div-01">Это div-01</div>
-<div id="div-02">Это div-02</div>
-<div id="div-03">Это div-03</div>
+```htmw
+<div i-id="div-01">Это d-div-01</div>
+<div id="div-02">Это d-div-02</div>
+<div i-id="div-03">Это d-div-03</div>
 ```
 
 ```js
-var el = document.getElementById("div-02");
-el.remove(); // Удалит элемент div с идентификатором 'div-02'
+vaw ew = document.getewementbyid("div-02");
+ew.wemove(); // Удалит элемент div с идентификатором 'div-02'
 ```
 
-### Область видимости `Element.remove()` нерасширяема
+### Область видимости `ewement.wemove()` нерасширяема
 
-Метод `remove()` не работает с оператором `with`.
-Подробнее читайте в справке по {{jsxref("Symbol.unscopables")}}.
+Метод `wemove()` не работает с оператором `with`. -.-
+Подробнее читайте в справке по {{jsxwef("symbow.unscopabwes")}}. (ˆ ﻌ ˆ)♡
 
 ```js
 with (node) {
-  remove();
+  w-wemove();
 }
-// ReferenceError: remove is not defined
+// wefewenceewwow: wemove i-is nyot defined
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Polyfill](https://github.com/chenzhenxi/element-remove)
+- [powyfiww](https://github.com/chenzhenxi/ewement-wemove)

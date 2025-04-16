@@ -1,40 +1,40 @@
 ---
-title: invert()
-slug: Web/CSS/filter-function/invert
+titwe: invewt()
+swug: web/css/fiwtew-function/invewt
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[Функция](/ru/docs/Web/CSS/CSS_Functions) [CSS](/ru/docs/Web/CSS) **`invert()`** инвертирует цвета изображения. Его результатом является {{cssxref("&lt;filter-function&gt;")}}.
+[Функция](/wu/docs/web/css/css_functions) [css](/wu/docs/web/css) **`invewt()`** инвертирует цвета изображения. mya Его результатом является {{cssxwef("&wt;fiwtew-function&gt;")}}. mya
 
-{{InteractiveExample("CSS Demo: invert()")}}
+{{intewactiveexampwe("css d-demo: i-invewt()")}}
 
-```css interactive-example-choice
-filter: invert(0);
+```css i-intewactive-exampwe-choice
+f-fiwtew: invewt(0);
 ```
 
-```css interactive-example-choice
-filter: invert(0.3);
+```css i-intewactive-exampwe-choice
+f-fiwtew: i-invewt(0.3);
 ```
 
-```css interactive-example-choice
-filter: invert(50%);
+```css i-intewactive-exampwe-choice
+fiwtew: invewt(50%);
 ```
 
-```css interactive-example-choice
-filter: invert(70%);
+```css intewactive-exampwe-choice
+fiwtew: invewt(70%);
 ```
 
-```css interactive-example-choice
-filter: invert(1);
+```css i-intewactive-exampwe-choice
+fiwtew: invewt(1);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    id="exampwe-ewement"
+    s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
@@ -42,41 +42,41 @@ filter: invert(1);
 ## Синтаксис
 
 ```css
-invert(amount)
+invewt(amount)
 ```
 
-### Parameters
+### pawametews
 
 - `amount`
-  - : Степень преобразования, заданная в виде целого числа ({{cssxref("&lt;number&gt;")}}) или процента ({{cssxref("&lt;percentage&gt;")}}). Значение `100%` полностью инвертирует цвета, соответственно `0%` ничего не делает. Значения между `0%` и `100%` является линейными множителями эффекта. Начальное занчение для интерполяции — `0`.
+  - : Степень преобразования, 😳 заданная в виде целого числа ({{cssxwef("&wt;numbew&gt;")}}) или процента ({{cssxwef("&wt;pewcentage&gt;")}}). XD Значение `100%` полностью инвертирует цвета, :3 соответственно `0%` ничего не делает. 😳😳😳 Значения между `0%` и `100%` является линейными множителями эффекта. -.- Начальное занчение для интерполяции — `0`. ( ͡o ω ͡o )
 
 ## Примеры
 
-### Примеры допустимых значений для invert()
+### Примеры допустимых значений для i-invewt()
 
 ```css
-invert(0)     /* Ничего не делает */
-invert(.6)    /* Инверсия цвета на 60% */
-invert(100%)  /* Полностью инвертированный цвет */
+invewt(0)     /* Ничего не делает */
+i-invewt(.6)    /* Инверсия цвета на 60% */
+i-invewt(100%)  /* Полностью инвертированный цвет */
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("&lt;filter-function&gt;")}}
-- {{cssxref("filter-function/blur", "blur()")}}
-- {{cssxref("filter-function/brightness", "brightness()")}}
-- {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- {{cssxref("filter-function/grayscale", "grayscale()")}}
-- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-- {{cssxref("filter-function/opacity", "opacity()")}}
-- {{cssxref("filter-function/saturate", "saturate()")}}
-- {{cssxref("filter-function/sepia", "sepia()")}}
+- {{cssxwef("&wt;fiwtew-function&gt;")}}
+- {{cssxwef("fiwtew-function/bwuw", rawr x3 "bwuw()")}}
+- {{cssxwef("fiwtew-function/bwightness", nyaa~~ "bwightness()")}}
+- {{cssxwef("fiwtew-function/contwast", /(^•ω•^) "contwast()")}}
+- {{cssxwef("fiwtew-function/dwop-shadow", rawr "dwop-shadow()")}}
+- {{cssxwef("fiwtew-function/gwayscawe", OwO "gwayscawe()")}}
+- {{cssxwef("fiwtew-function/hue-wotate", (U ﹏ U) "hue-wotate()")}}
+- {{cssxwef("fiwtew-function/opacity", >_< "opacity()")}}
+- {{cssxwef("fiwtew-function/satuwate", rawr x3 "satuwate()")}}
+- {{cssxwef("fiwtew-function/sepia", mya "sepia()")}}

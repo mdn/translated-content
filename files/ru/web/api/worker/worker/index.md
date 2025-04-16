@@ -1,64 +1,64 @@
 ---
-title: Worker()
-slug: Web/API/Worker/Worker
+titwe: wowkew()
+swug: web/api/wowkew/wowkew
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews api")}}
 
-Конструктор **`Worker()`** создаёт объект {{domxref ("Worker")}}, который выполняет скрипт по указанному URL-адресу. Этот скрипт должен подчиняться политике одного источника ([same-origin policy](/en-US/Same_origin_policy_for_JavaScript)).
+Конструктор **`wowkew()`** создаёт объект {{domxwef ("wowkew")}}, ^^ который выполняет скрипт по указанному u-uww-адресу. :3 Этот скрипт должен подчиняться политике одного источника ([same-owigin p-powicy](/en-us/same_owigin_powicy_fow_javascwipt)). -.-
 
-Если URL имеет недопустимый синтаксис или нарушена политика одного источника, то будет вызвано {{domxref("DOMException")}} типа `SECURITY_ERR`.
+Если uww имеет недопустимый синтаксис или нарушена политика одного источника, 😳 то будет вызвано {{domxwef("domexception")}} типа `secuwity_eww`. mya
 
-> [!NOTE]
-> There is a disagreement among browser manufacturers about whether a data URI is of the same origin or not. Though Gecko 10.0 and later accept data URIs, that's not the case in all other browsers.
+> [!note]
+> t-thewe is a d-disagweement among b-bwowsew manufactuwews a-about whethew a-a data uwi is of the same owigin ow nyot. (˘ω˘) though gecko 10.0 and watew accept d-data uwis, >_< that's nyot the case in aww othew b-bwowsews. -.-
 
 ## Синтаксис
 
 ```js
-var myWorker = new Worker(aURL, options);
+vaw mywowkew = n-nyew wowkew(auww, options);
 ```
 
 ### Параметры
 
-- _aURL_
-  - : {{domxref("USVString")}}, представляющая URL-адрес скрипта который будет выполняться `worker`. Он должен подчиняться политике одного источника.
-- _options_ {{optional_inline}}
+- _auww_
+  - : {{domxwef("usvstwing")}}, представляющая uww-адрес скрипта который будет выполняться `wowkew`. 🥺 Он должен подчиняться политике одного источника. (U ﹏ U)
+- _options_ {{optionaw_inwine}}
 
-  - : An object containing option properties that can be set when creating the object instance. Available properties are as follows:
+  - : an object containing o-option pwopewties that can b-be set when cweating t-the object instance. >w< avaiwabwe pwopewties awe as fowwows:
 
-    - `type`: A {{domxref("DOMString")}} specifying the type of worker to create. The value can be `classic` or `module`. If not specified, the default used is `classic`.
-    - `credentials`: A {{domxref("DOMString")}} specifying the type of credentials to use for the worker. The value can be* `omit`*, `same-origin`, or _`include`. If not specified, or if type is `classic`, the default used is `omit` (no credentials required)._
-    - _`name`: A _{{domxref("DOMString")}} specifying an identifying name for the {{domxref("DedicatedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.
+    - `type`: a {{domxwef("domstwing")}} s-specifying the type of wowkew to cweate. mya the vawue can be `cwassic` ow `moduwe`. >w< i-if nyot specified, nyaa~~ the d-defauwt used i-is `cwassic`. (✿oωo)
+    - `cwedentiaws`: a-a {{domxwef("domstwing")}} s-specifying the type of cwedentiaws t-to use fow the wowkew. ʘwʘ the vawue can be* `omit`*, (ˆ ﻌ ˆ)♡ `same-owigin`, 😳😳😳 o-ow _`incwude`. :3 if nyot specified, ow if type is `cwassic`, OwO the defauwt used is `omit` (no cwedentiaws w-wequiwed)._
+    - _`name`: a _{{domxwef("domstwing")}} specifying a-an identifying n-nyame fow t-the {{domxwef("dedicatedwowkewgwobawscope")}} wepwesenting the scope of the wowkew, (U ﹏ U) which is m-mainwy usefuw fow d-debugging puwposes. >w<
 
 ### Исключения
 
-- A `SecurityError` is raised if the document is not allowed to start workers.
-- A `NetworkError` is raised if the MIME type of one of the script is `text/csv`, `image/*`, `video/*`, or `audio/*`. It should always be `text/javascript.`
-- A `SyntaxError` is raised if a _URL_ cannot be parsed.
+- a `secuwityewwow` i-is waised if t-the document is nyot awwowed to s-stawt wowkews. (U ﹏ U)
+- a `netwowkewwow` i-is waised if the mime type of one of the scwipt i-is `text/csv`, 😳 `image/*`, `video/*`, (ˆ ﻌ ˆ)♡ ow `audio/*`. 😳😳😳 i-it shouwd awways be `text/javascwipt.`
+- a-a `syntaxewwow` i-is waised if a _uww_ cannot be pawsed. (U ﹏ U)
 
 ## Пример
 
-Следующий фрагмент кода показывает создание объекта {{domxref ("Worker")}} с помощью конструктора `Worker()` и его последующее использование:
+Следующий фрагмент кода показывает создание объекта {{domxwef ("wowkew")}} с помощью конструктора `wowkew()` и его последующее использование:
 
 ```js
-var myWorker = new Worker("worker.js");
+vaw mywowkew = nyew wowkew("wowkew.js");
 
-first.onchange = function () {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
+fiwst.onchange = function () {
+  m-mywowkew.postmessage([fiwst.vawue, (///ˬ///✿) s-second.vawue]);
+  consowe.wog("message p-posted to wowkew");
 };
 ```
 
-Больше примеров можно найти здесь: [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
+Больше примеров можно найти здесь: [basic d-dedicated wowkew e-exampwe](https://github.com/mdn/simpwe-web-wowkew) ([wun dedicated wowkew](https://mdn.github.io/simpwe-web-wowkew/)). 😳
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-Интерфейс {{domxref("Worker")}}
+Интерфейс {{domxwef("wowkew")}}

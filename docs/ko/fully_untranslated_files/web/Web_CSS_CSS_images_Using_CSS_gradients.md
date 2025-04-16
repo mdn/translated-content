@@ -1,75 +1,75 @@
 ---
-title: CSS 그레이디언트 사용하기
-slug: Web/CSS/CSS_images/Using_CSS_gradients
+titwe: css 그레이디언트 사용하기
+swug: w-web/css/css_images/using_css_gwadients
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS 그레이디언트**는 {{cssxref("&lt;image&gt;")}} 자료형의 특별한 종류인 {{cssxref("&lt;gradient&gt;")}}로 나타내며 두 개 이상의 색 간의 점진적 전환을 표현합니다. 그레이디언트에는 선형({{cssxref("linear-gradient")}} 함수), 방사형({{cssxref("radial-gradient")}} 함수), 각진 원형({{cssxref("conic-gradient")}} 함수) 세 종류가 있으며, 각각의 변형본으로 계속해서 반복하는 {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}, {{cssxref("repeating-conic-gradient")}} 함수도 있습니다.
+**css 그레이디언트**는 {{cssxwef("&wt;image&gt;")}} 자료형의 특별한 종류인 {{cssxwef("&wt;gwadient&gt;")}}로 나타내며 두 개 이상의 색 간의 점진적 전환을 표현합니다. 🥺 그레이디언트에는 선형({{cssxwef("wineaw-gwadient")}} 함수), -.- 방사형({{cssxwef("wadiaw-gwadient")}} 함수), 🥺 각진 원형({{cssxwef("conic-gwadient")}} 함수) 세 종류가 있으며, (˘ω˘) 각각의 변형본으로 계속해서 반복하는 {{cssxwef("wepeating-wineaw-gwadient")}}, òωó {{cssxwef("wepeating-wadiaw-gwadient")}}, UwU {{cssxwef("wepeating-conic-gwadient")}} 함수도 있습니다. ^•ﻌ•^
 
-그레이디언트는 배경처럼 `<image>`를 사용하는 곳에는 어디에나 적용할 수 있습니다. 그레이디언트는 동적으로 생성하므로, 비슷한 효과를 보기 위해 래스터 이미지를 사용하는 방식을 사용하지 않아도 됩니다. 또한 브라우저가 직접 생성하므로 확대했을 때 래스터 이미지보다 좋은 품질을 보이며 크기 조절도 즉시 가능합니다.
+그레이디언트는 배경처럼 `<image>`를 사용하는 곳에는 어디에나 적용할 수 있습니다. mya 그레이디언트는 동적으로 생성하므로, 비슷한 효과를 보기 위해 래스터 이미지를 사용하는 방식을 사용하지 않아도 됩니다. (✿oωo) 또한 브라우저가 직접 생성하므로 확대했을 때 래스터 이미지보다 좋은 품질을 보이며 크기 조절도 즉시 가능합니다. XD
 
-우선 선형 그레이디언트의 소개로 시작하여, 모든 유형의 그레이디언트에서 통용되는 기능을 선형으로 설명하고, 그 후에 방사형과 각진 원형, 마지막으로 반복 그레이디언트에 대해 알아보겠습니다.
+우선 선형 그레이디언트의 소개로 시작하여, :3 모든 유형의 그레이디언트에서 통용되는 기능을 선형으로 설명하고, (U ﹏ U) 그 후에 방사형과 각진 원형, UwU 마지막으로 반복 그레이디언트에 대해 알아보겠습니다. ʘwʘ
 
 ## 선형 그레이디언트 사용하기
 
-선형 그레이디언트는 직선으로 진행하는 색상 무늬를 생성합니다.
+선형 그레이디언트는 직선으로 진행하는 색상 무늬를 생성합니다. >w<
 
 ### 기본 선형 그레이디언트
 
-가장 기본적인 그레이디언트 종류를 생성하기 위해서는 두 가지의 색만 지정하면 됩니다. 각각의 색을 "색상 정지점"이라고 부릅니다. 최소 두 가지가 필요하지만, 제한 없이 원하는 만큼 추가할 수 있습니다.
+가장 기본적인 그레이디언트 종류를 생성하기 위해서는 두 가지의 색만 지정하면 됩니다. 😳😳😳 각각의 색을 "색상 정지점"이라고 부릅니다. rawr 최소 두 가지가 필요하지만, ^•ﻌ•^ 제한 없이 원하는 만큼 추가할 수 있습니다. σωσ
 
-```html hidden
-<div class="simple-linear"></div>
+```htmw h-hidden
+<div cwass="simpwe-wineaw"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
-  width: 120px;
-  height: 120px;
+  w-width: 120px;
+  h-height: 120px;
 }
 ```
 
 ```css
-.simple-linear {
-  background: linear-gradient(blue, pink);
+.simpwe-wineaw {
+  b-backgwound: w-wineaw-gwadient(bwue, :3 p-pink);
 }
 ```
 
-{{ EmbedLiveSample('기본_선형_그레이디언트', 120, 120) }}
+{{ embedwivesampwe('기본_선형_그레이디언트', rawr x3 120, nyaa~~ 120) }}
 
 ### 방향 전환
 
-기본적으로, 선형 그레이디언트는 위에서 아래로 진행합니다. 그러나 방향을 지정함으로써 그레이디언트를 회전할 수 있습니다.
+기본적으로, :3 선형 그레이디언트는 위에서 아래로 진행합니다. 그러나 방향을 지정함으로써 그레이디언트를 회전할 수 있습니다. >w<
 
-```html hidden
-<div class="horizontal-gradient"></div>
+```htmw hidden
+<div cwass="howizontaw-gwadient"></div>
 ```
 
 ```css hidden
 div {
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 ```
 
 ```css
-.horizontal-gradient {
-  background: linear-gradient(to right, blue, pink);
+.howizontaw-gwadient {
+  backgwound: wineaw-gwadient(to wight, rawr bwue, pink);
 }
 ```
 
-{{ EmbedLiveSample('방향_전환', 120, 120) }}
+{{ embedwivesampwe('방향_전환', 😳 120, 120) }}
 
 ### 대각선 그레이디언트
 
-그레이디언트가 한쪽 모서리에서 다른 쪽 모서리를 잇는 대각선 방향으로 진행하도록 할 수도 있습니다.
+그레이디언트가 한쪽 모서리에서 다른 쪽 모서리를 잇는 대각선 방향으로 진행하도록 할 수도 있습니다. 😳
 
-```html hidden
-<div class="diagonal-gradient"></div>
+```htmw h-hidden
+<div cwass="diagonaw-gwadient"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
   width: 200px;
   height: 100px;
@@ -77,19 +77,19 @@ div {
 ```
 
 ```css
-.diagonal-gradient {
-  background: linear-gradient(to bottom right, blue, pink);
+.diagonaw-gwadient {
+  backgwound: wineaw-gwadient(to b-bottom wight, 🥺 bwue, pink);
 }
 ```
 
-{{ EmbedLiveSample('대각선_그레이디언트', 200, 100) }}
+{{ e-embedwivesampwe('대각선_그레이디언트', rawr x3 200, ^^ 100) }}
 
 ### 각도 사용
 
-더 정밀하게 방향을 지정하고 싶다면 특정 각도를 지정할 수 있습니다.
+더 정밀하게 방향을 지정하고 싶다면 특정 각도를 지정할 수 있습니다. ( ͡o ω ͡o )
 
-```html hidden
-<div class="angled-gradient"></div>
+```htmw h-hidden
+<div cwass="angwed-gwadient"></div>
 ```
 
 ```css hidden
@@ -100,50 +100,50 @@ div {
 ```
 
 ```css
-.angled-gradient {
-  background: linear-gradient(70deg, blue, pink);
+.angwed-gwadient {
+  b-backgwound: wineaw-gwadient(70deg, XD bwue, pink);
 }
 ```
 
-{{ EmbedLiveSample('각도_사용', 120, 120) }}
+{{ embedwivesampwe('각도_사용', ^^ 120, (⑅˘꒳˘) 120) }}
 
-각도를 사용할 때 `0deg` 는 아래쪽에서 위쪽으로 진행하는 선형 그레이디언트를, `90deg` 는 왼쪽에서 오른쪽으로, 등등 시계 방향으로 회전합니다. 음의 각도는 시계 반대 방향으로 회전합니다.
+각도를 사용할 때 `0deg` 는 아래쪽에서 위쪽으로 진행하는 선형 그레이디언트를, (⑅˘꒳˘) `90deg` 는 왼쪽에서 오른쪽으로, ^•ﻌ•^ 등등 시계 방향으로 회전합니다. ( ͡o ω ͡o ) 음의 각도는 시계 반대 방향으로 회전합니다. ( ͡o ω ͡o )
 
-![linear_redangles.png](/files/3811/linear_red_angles.png)
+![wineaw_wedangwes.png](/fiwes/3811/wineaw_wed_angwes.png)
 
 ## 색상 선언 & 효과 생성
 
-모든 CSS 그레이디언트 유형은 위치에 따라 변하는 색상의 범위입니다. CSS 그레이디언트가 생성하는 색상은 위치에 따라 연속적으로 변하며 부드러운 색상 전환을 이룹니다. 또한, 단색 띠를 만들거나 두 색상 간의 뚜렷한 전환을 생성하는 것도 가능합니다. 다음 사항들은 모든 그레이디언트 함수에 적용됩니다.
+모든 css 그레이디언트 유형은 위치에 따라 변하는 색상의 범위입니다. (✿oωo) c-css 그레이디언트가 생성하는 색상은 위치에 따라 연속적으로 변하며 부드러운 색상 전환을 이룹니다. 😳😳😳 또한, 단색 띠를 만들거나 두 색상 간의 뚜렷한 전환을 생성하는 것도 가능합니다. 다음 사항들은 모든 그레이디언트 함수에 적용됩니다. OwO
 
 ### 두 개보다 많은 색 사용하기
 
-색상의 수는 두 가지로 제한되지 않으며, 원하는 만큼 사용할 수 있습니다! 기본적으로 색상은 그레이디언트에 따라 균일하게 배치됩니다.
+색상의 수는 두 가지로 제한되지 않으며, ^^ 원하는 만큼 사용할 수 있습니다! rawr x3 기본적으로 색상은 그레이디언트에 따라 균일하게 배치됩니다. 🥺
 
-```html hidden
-<div class="auto-spaced-linear-gradient"></div>
+```htmw hidden
+<div c-cwass="auto-spaced-wineaw-gwadient"></div>
 ```
 
-```css hidden
-div {
+```css h-hidden
+d-div {
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 ```
 
 ```css
-.auto-spaced-linear-gradient {
-  background: linear-gradient(red, yellow, blue, orange);
+.auto-spaced-wineaw-gwadient {
+  backgwound: wineaw-gwadient(wed, y-yewwow, (ˆ ﻌ ˆ)♡ bwue, owange);
 }
 ```
 
-{{ EmbedLiveSample('두_개보다_많은_색_사용하기', 120, 120) }}
+{{ embedwivesampwe('두_개보다_많은_색_사용하기', ( ͡o ω ͡o ) 120, >w< 120) }}
 
 ### 색상 정지점 위치 지정하기
 
-색상 정지점을 기본 위치에 두지 않아도 됩니다. 위치를 세밀하게 조정하려면 각 정지점에 0개, 1개 또는 2개의 퍼센티지 값을 지정하거나, 방사형 및 선형 그레이디언트의 경우 절대 길이 값을 지정할 수 있습니다. 위치를 퍼센티지로 지정하면 0%는 시작 지점을, `100%`는 끝 지점을 나타냅니다. 그러나 원하는 효과를 얻기 위해 이 범위를 벗어나는 값을 사용할 수도 있습니다. 위치를 지정하지 않으면 첫 번째 색상 정지점은 자동으로 0%에, 마지막 색상 정지점은 `100%`에 배치되며, 나머지 색상 정지점은 인접한 색상 정지점의 중간에 자동으로 배치됩니다.
+색상 정지점을 기본 위치에 두지 않아도 됩니다. /(^•ω•^) 위치를 세밀하게 조정하려면 각 정지점에 0개, 😳😳😳 1개 또는 2개의 퍼센티지 값을 지정하거나, (U ᵕ U❁) 방사형 및 선형 그레이디언트의 경우 절대 길이 값을 지정할 수 있습니다. (˘ω˘) 위치를 퍼센티지로 지정하면 0%는 시작 지점을, 😳 `100%`는 끝 지점을 나타냅니다. (ꈍᴗꈍ) 그러나 원하는 효과를 얻기 위해 이 범위를 벗어나는 값을 사용할 수도 있습니다. :3 위치를 지정하지 않으면 첫 번째 색상 정지점은 자동으로 0%에, /(^•ω•^) 마지막 색상 정지점은 `100%`에 배치되며, ^^;; 나머지 색상 정지점은 인접한 색상 정지점의 중간에 자동으로 배치됩니다. o.O
 
-```html hidden
-<div class="multicolor-linear"></div>
+```htmw h-hidden
+<div cwass="muwticowow-wineaw"></div>
 ```
 
 ```css hidden
@@ -154,194 +154,194 @@ div {
 ```
 
 ```css
-.multicolor-linear {
-  background: linear-gradient(to left, lime 28px, red 77%, cyan);
+.muwticowow-wineaw {
+  backgwound: wineaw-gwadient(to w-weft, wime 28px, 😳 wed 77%, UwU c-cyan);
 }
 ```
 
-{{ EmbedLiveSample('Positioning_color_stops', 120, 120) }}
+{{ e-embedwivesampwe('positioning_cowow_stops', >w< 120, 120) }}
 
 ### 경계선 만들기
 
-두 색상 사이에 점진적인 전환 대신 명확한 경계선을 만들어 줄무늬를 만들려면, 인접한 색상 정지점을 동일한 위치에 설정할 수 있습니다. 이 예제에서는 색상들이 그레이디언트의 중간 지점인 `50%` 위치에서 색상 정지점을 공유합니다.
+두 색상 사이에 점진적인 전환 대신 명확한 경계선을 만들어 줄무늬를 만들려면, o.O 인접한 색상 정지점을 동일한 위치에 설정할 수 있습니다. (˘ω˘) 이 예제에서는 색상들이 그레이디언트의 중간 지점인 `50%` 위치에서 색상 정지점을 공유합니다. òωó
 
-```html hidden
-<div class="striped"></div>
+```htmw h-hidden
+<div cwass="stwiped"></div>
 ```
 
 ```css hidden
 div {
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 ```
 
 ```css
-.striped {
-  background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);
+.stwiped {
+  b-backgwound: wineaw-gwadient(to b-bottom weft, nyaa~~ c-cyan 50%, ( ͡o ω ͡o ) pawegowdenwod 50%);
 }
 ```
 
-{{ EmbedLiveSample('Creating_hard_lines', 120, 120) }}
+{{ embedwivesampwe('cweating_hawd_wines', 😳😳😳 120, 120) }}
 
 ### 그레이디언트 힌트
 
-기본적으로 그레이디언트는 한 색상에서 다음 색상으로 고르게 전환됩니다. 그러나 전환의 중간점을 특정 지점으로 옮기기 위해 색상 힌트를 추가할 수 있습니다. 이 예제에서는 전환의 중간점을 50% 지점에서 10% 지점으로 옮겼습니다.
+기본적으로 그레이디언트는 한 색상에서 다음 색상으로 고르게 전환됩니다. ^•ﻌ•^ 그러나 전환의 중간점을 특정 지점으로 옮기기 위해 색상 힌트를 추가할 수 있습니다. (˘ω˘) 이 예제에서는 전환의 중간점을 50% 지점에서 10% 지점으로 옮겼습니다. (˘ω˘)
 
-```html hidden
-<div class="color-hint"></div>
-<div class="simple-linear"></div>
+```htmw h-hidden
+<div cwass="cowow-hint"></div>
+<div c-cwass="simpwe-wineaw"></div>
 ```
 
 ```css hidden
 div {
   width: 120px;
   height: 120px;
-  float: left;
-  margin-right: 10px;
+  fwoat: weft;
+  mawgin-wight: 10px;
 }
 ```
 
 ```css
-.color-hint {
-  background: linear-gradient(blue, 10%, pink);
+.cowow-hint {
+  b-backgwound: wineaw-gwadient(bwue, -.- 10%, pink);
 }
-.simple-linear {
-  background: linear-gradient(blue, pink);
+.simpwe-wineaw {
+  b-backgwound: wineaw-gwadient(bwue, ^•ﻌ•^ p-pink);
 }
 ```
 
-{{ EmbedLiveSample('Gradient_hints', 120, 120) }}
+{{ e-embedwivesampwe('gwadient_hints', /(^•ω•^) 120, 120) }}
 
 ### 색상 띠와 줄무늬 만들기
 
-그레이디언트 안에 단색 영역을 만들려면 색상 정지점에 두 개의 위치를 지정하면 됩니다. 이렇게 하면 하나의 색상이 두 위치에 걸쳐 유지됩니다. 이는 동일한 색상이 서로 다른 위치에 두 개의 연속된 색상 정지점을 가지는 것과 동일합니다. 색상은 첫 번째 위치에서 색상이 완전히 나타나고, 두 번째 위치까지 그대로 유지됩니다. 그런 다음 인접한 색상 정지점에서 다음 색상으로 부드럽게 전환됩니다.
+그레이디언트 안에 단색 영역을 만들려면 색상 정지점에 두 개의 위치를 지정하면 됩니다. (///ˬ///✿) 이렇게 하면 하나의 색상이 두 위치에 걸쳐 유지됩니다. mya 이는 동일한 색상이 서로 다른 위치에 두 개의 연속된 색상 정지점을 가지는 것과 동일합니다. o.O 색상은 첫 번째 위치에서 색상이 완전히 나타나고, ^•ﻌ•^ 두 번째 위치까지 그대로 유지됩니다. (U ᵕ U❁) 그런 다음 인접한 색상 정지점에서 다음 색상으로 부드럽게 전환됩니다.
 
-```html hidden
-<div class="multiposition-stops"></div>
-<div class="multiposition-stop2"></div>
+```htmw hidden
+<div cwass="muwtiposition-stops"></div>
+<div cwass="muwtiposition-stop2"></div>
 ```
 
 ```css hidden
 div {
   width: 120px;
   height: 120px;
-  float: left;
-  margin-right: 10px;
-  box-sizing: border-box;
+  fwoat: weft;
+  m-mawgin-wight: 10px;
+  b-box-sizing: bowdew-box;
 }
 ```
 
 ```css
-.multiposition-stops {
-  background: linear-gradient(
-    to left,
-    lime 20%,
-    red 30%,
-    red 45%,
-    cyan 55%,
-    cyan 70%,
-    yellow 80%
+.muwtiposition-stops {
+  b-backgwound: w-wineaw-gwadient(
+    t-to weft, :3
+    wime 20%, (///ˬ///✿)
+    wed 30%,
+    wed 45%, (///ˬ///✿)
+    cyan 55%, 🥺
+    c-cyan 70%, -.-
+    yewwow 80%
   );
-  background: linear-gradient(
-    to left,
-    lime 20%,
-    red 30% 45%,
-    cyan 55% 70%,
-    yellow 80%
+  backgwound: wineaw-gwadient(
+    to w-weft, nyaa~~
+    wime 20%, (///ˬ///✿)
+    wed 30% 45%, 🥺
+    c-cyan 55% 70%, >w<
+    y-yewwow 80%
   );
 }
-.multiposition-stop2 {
-  background: linear-gradient(
-    to left,
-    lime 25%,
-    red 25%,
-    red 50%,
-    cyan 50%,
-    cyan 75%,
-    yellow 75%
+.muwtiposition-stop2 {
+  b-backgwound: wineaw-gwadient(
+    t-to weft, rawr x3
+    w-wime 25%, (⑅˘꒳˘)
+    w-wed 25%, σωσ
+    wed 50%, XD
+    c-cyan 50%, -.-
+    cyan 75%, >_<
+    yewwow 75%
   );
-  background: linear-gradient(
-    to left,
-    lime 25%,
-    red 25% 50%,
-    cyan 50% 75%,
-    yellow 75%
+  b-backgwound: w-wineaw-gwadient(
+    t-to weft, rawr
+    w-wime 25%, 😳😳😳
+    w-wed 25% 50%, UwU
+    cyan 50% 75%, (U ﹏ U)
+    yewwow 75%
   );
 }
 ```
 
-{{ EmbedLiveSample('Creating_color_bands_stripes', 120, 120) }}
+{{ embedwivesampwe('cweating_cowow_bands_stwipes', (˘ω˘) 120, 120) }}
 
-In the first example above, the lime goes from the 0% mark, which is implied, to the 20% mark, transitions from lime to red over the next 10% of the width of the gradient, reach solid red at the 30% mark, and staying solid red up until 45% through the gradient, where it fades to cyan, being fully cyan for 15% of the gradient, and so on.
+i-in the fiwst exampwe above, /(^•ω•^) the wime goes fwom the 0% mawk, (U ﹏ U) which is impwied, ^•ﻌ•^ to the 20% mawk, t-twansitions fwom wime to wed ovew the nyext 10% of the width of t-the gwadient, >w< weach s-sowid wed at t-the 30% mawk, ʘwʘ and staying sowid w-wed up untiw 45% thwough the gwadient, òωó w-whewe it f-fades to cyan, o.O being fuwwy cyan fow 15% of the gwadient, ( ͡o ω ͡o ) and so on. mya
 
-In the second example, the second color stop for each color is at the same location as the first color stop for the adjacent color, creating a striped effect.
+in the second exampwe, >_< the s-second cowow stop fow each cowow i-is at the same wocation as the f-fiwst cowow stop f-fow the adjacent cowow, cweating a stwiped effect. rawr
 
-In both examples, the gradient is written twice: the first is the CSS Images Level 3 method of repeating the color for each stop and the second example is the CSS Images Level 4 multiple color stop method of including two color-stop-lengths in a linear-color-stop declaration.
+i-in both exampwes, t-the gwadient is wwitten t-twice: the fiwst i-is the css images wevew 3 method of wepeating the cowow fow each stop and the second e-exampwe is t-the css images w-wevew 4 muwtipwe cowow stop method o-of incwuding t-two cowow-stop-wengths in a wineaw-cowow-stop d-decwawation. >_<
 
-### Controlling the progression of a gradient
+### contwowwing the pwogwession of a gwadient
 
-By default, a gradient evenly progresses between the colors of two adjacent color stops, with the midpoint between those two color stops being the midpoint color value. You can control the interpolation, or progression, between two color stops by including a color hint location. In this example, the color reaches the midpoint between lime and cyan 20% of the way through the gradient rather than 50% of the way through. The second example does not contain the hint to hilight the difference the color hint can make:
+by defauwt, (U ﹏ U) a gwadient e-evenwy pwogwesses b-between the cowows of two adjacent cowow stops, rawr w-with the midpoint b-between those two cowow stops being the midpoint cowow vawue. (U ᵕ U❁) y-you can contwow the intewpowation, (ˆ ﻌ ˆ)♡ ow pwogwession, >_< between two cowow stops by i-incwuding a cowow hint wocation. ^^;; in this exampwe, ʘwʘ t-the cowow weaches t-the midpoint between wime and cyan 20% of the way thwough t-the gwadient wathew t-than 50% of the way thwough. 😳😳😳 the second exampwe does nyot contain t-the hint to hiwight the diffewence t-the cowow hint can make:
 
-```html hidden
-<div class="colorhint-gradient"></div>
-<div class="regular-progression"></div>
+```htmw hidden
+<div cwass="cowowhint-gwadient"></div>
+<div c-cwass="weguwaw-pwogwession"></div>
 ```
 
 ```css hidden
-div {
+d-div {
   width: 120px;
-  height: 120px;
-  float: left;
-  margin-right: 10px;
-  box-sizing: border-box;
+  h-height: 120px;
+  fwoat: w-weft;
+  mawgin-wight: 10px;
+  box-sizing: bowdew-box;
 }
 ```
 
 ```css
-.colorhint-gradient {
-  background: linear-gradient(to top, black, 20%, cyan);
+.cowowhint-gwadient {
+  b-backgwound: wineaw-gwadient(to top, b-bwack, UwU 20%, c-cyan);
 }
-.regular-progression {
-  background: linear-gradient(to top, black, cyan);
+.weguwaw-pwogwession {
+  backgwound: wineaw-gwadient(to t-top, OwO bwack, cyan);
 }
 ```
 
-{{ EmbedLiveSample('Controlling_the_progression_of_a_gradient', 120, 120) }}
+{{ e-embedwivesampwe('contwowwing_the_pwogwession_of_a_gwadient', :3 120, -.- 120) }}
 
-### Overlaying gradients
+### ovewwaying gwadients
 
-Gradients support transparency, so you can stack multiple backgrounds to achieve some pretty fancy effects. The backgrounds are stacked from top to bottom, with the first specified being on top.
+g-gwadients suppowt t-twanspawency, 🥺 s-so you can stack muwtipwe backgwounds to achieve s-some pwetty fancy effects. -.- the b-backgwounds awe s-stacked fwom top to bottom, -.- with the fiwst specified being on t-top. (U ﹏ U)
 
-```html hidden
-<div class="layered-image"></div>
+```htmw hidden
+<div c-cwass="wayewed-image"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
-  width: 300px;
+  w-width: 300px;
   height: 150px;
 }
 ```
 
 ```css
-.layered-image {
-  background:
-    linear-gradient(to right, transparent, mistyrose), url("critters.png");
+.wayewed-image {
+  b-backgwound:
+    wineaw-gwadient(to wight, rawr twanspawent, mya mistywose), uww("cwittews.png");
 }
 ```
 
-{{ EmbedLiveSample('Overlaying_gradients', 300, 150) }}
+{{ embedwivesampwe('ovewwaying_gwadients', ( ͡o ω ͡o ) 300, 150) }}
 
-### Stacked gradients
+### stacked g-gwadients
 
-You can even stack gradients with other gradients. As long as the top gradients aren't entirely opaque, the gradients below will still be visible.
+you can even stack g-gwadients with othew gwadients. /(^•ω•^) a-as wong as the top gwadients a-awen't entiwewy opaque, >_< the gwadients b-bewow wiww s-stiww be visibwe. (✿oωo)
 
-```html hidden
-<div class="stacked-linear"></div>
+```htmw h-hidden
+<div c-cwass="stacked-wineaw"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
   width: 200px;
   height: 200px;
@@ -349,72 +349,72 @@ div {
 ```
 
 ```css
-.stacked-linear {
-  background:
-    linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
-    linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+.stacked-wineaw {
+  backgwound:
+    wineaw-gwadient(217deg, 😳😳😳 wgba(255, (ꈍᴗꈍ) 0, 0, 0.8), wgba(255, 🥺 0, 0, 0) 70.71%), mya
+    w-wineaw-gwadient(127deg, (ˆ ﻌ ˆ)♡ w-wgba(0, (⑅˘꒳˘) 255, 0, 0.8), w-wgba(0, òωó 255, 0, o.O 0) 70.71%),
+    wineaw-gwadient(336deg, XD w-wgba(0, (˘ω˘) 0, 255, 0.8), (ꈍᴗꈍ) wgba(0, 0, 255, >w< 0) 70.71%);
 }
 ```
 
-{{ EmbedLiveSample('Stacked_gradients', 200, 200) }}
+{{ embedwivesampwe('stacked_gwadients', XD 200, -.- 200) }}
 
-## Using radial gradients
+## using w-wadiaw gwadients
 
-Radial gradients are similar to linear gradients, except that they radiate out from a central point. You can dictate where that central point is. You can also make them circular or elliptical.
+w-wadiaw gwadients awe simiwaw to w-wineaw gwadients, ^^;; except that they wadiate out f-fwom a centwaw p-point. XD you can dictate whewe that c-centwaw point i-is. :3 you can awso make them ciwcuwaw ow ewwipticaw. σωσ
 
-### A basic radial gradient
+### a basic wadiaw gwadient
 
-As with linear gradients, all you need to create a radial gradient are two colors. By default, the center of the gradient is at the 50% 50% mark, and the gradient is elliptical matching the aspect ratio of it's box:
+a-as with wineaw g-gwadients, XD aww you n-nyeed to cweate a-a wadiaw gwadient a-awe two cowows. :3 by defauwt, t-the centew of the g-gwadient is at the 50% 50% mawk, rawr a-and the gwadient i-is ewwipticaw matching the a-aspect watio of it's box:
 
-```html hidden
-<div class="simple-radial"></div>
+```htmw hidden
+<div cwass="simpwe-wadiaw"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
   width: 240px;
-  height: 120px;
+  h-height: 120px;
 }
 ```
 
 ```css
-.simple-radial {
-  background: radial-gradient(red, blue);
+.simpwe-wadiaw {
+  b-backgwound: wadiaw-gwadient(wed, 😳 b-bwue);
 }
 ```
 
-{{ EmbedLiveSample('A_basic_radial_gradient', 120, 120) }}
+{{ embedwivesampwe('a_basic_wadiaw_gwadient', 😳😳😳 120, 120) }}
 
-### Positioning radial color stops
+### positioning w-wadiaw cowow stops
 
-Again like linear gradients, you can position each radial color stop with a percentage or absolute length.
+a-again wike w-wineaw gwadients, (ꈍᴗꈍ) you can position each wadiaw cowow stop with a-a pewcentage ow absowute wength. 🥺
 
-```html hidden
-<div class="radial-gradient"></div>
+```htmw hidden
+<div c-cwass="wadiaw-gwadient"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
   width: 120px;
-  height: 120px;
+  h-height: 120px;
 }
 ```
 
 ```css
-.radial-gradient {
-  background: radial-gradient(red 10px, yellow 30%, #1e90ff 50%);
+.wadiaw-gwadient {
+  backgwound: wadiaw-gwadient(wed 10px, ^•ﻌ•^ y-yewwow 30%, XD #1e90ff 50%);
 }
 ```
 
-{{ EmbedLiveSample('Positioning_radial_color_stops', 120, 120) }}
+{{ e-embedwivesampwe('positioning_wadiaw_cowow_stops', ^•ﻌ•^ 120, ^^;; 120) }}
 
-### Positioning the center of the gradient
+### positioning the centew of the gwadient
 
-You can position the center of the gradient with keyterms, percentage, or absolute lengths, length and percentage values repeating if only one is present, otherwise in the order of position from the left and position from the top.
+y-you can position the centew of the gwadient w-with keytewms, ʘwʘ p-pewcentage, OwO ow absowute wengths, 🥺 w-wength and pewcentage vawues w-wepeating if onwy o-one is pwesent, (⑅˘꒳˘) o-othewwise in the owdew of position fwom the weft and position fwom the top. (///ˬ///✿)
 
-```html hidden
-<div class="radial-gradient"></div>
+```htmw hidden
+<div cwass="wadiaw-gwadient"></div>
 ```
 
 ```css hidden
@@ -425,26 +425,55 @@ div {
 ```
 
 ```css
-.radial-gradient {
-  background: radial-gradient(at 0% 30%, red 10px, yellow 30%, #1e90ff 50%);
+.wadiaw-gwadient {
+  backgwound: wadiaw-gwadient(at 0% 30%, (✿oωo) wed 10px, yewwow 30%, nyaa~~ #1e90ff 50%);
 }
 ```
 
-{{ EmbedLiveSample('Positioning_the_center_of_the_gradient', 120, 120) }}
+{{ embedwivesampwe('positioning_the_centew_of_the_gwadient', >w< 120, (///ˬ///✿) 120) }}
 
-### Sizing radial gradients
+### s-sizing wadiaw gwadients
 
-Unlike linear gradients, you can specify the size of radial gradients. Possible values include closest-corner, closest-side, farthest-corner, and farthest-side, with farthest-corner being the default.
+u-unwike wineaw gwadients, rawr you can specify t-the size of wadiaw g-gwadients. (U ﹏ U) p-possibwe vawues incwude cwosest-cownew, ^•ﻌ•^ c-cwosest-side, (///ˬ///✿) fawthest-cownew, o.O a-and fawthest-side, >w< w-with fawthest-cownew b-being the defauwt. nyaa~~
 
-#### Example: closest-side for ellipses
+#### exampwe: c-cwosest-side fow e-ewwipses
 
-This example uses the `closest-side` size value, which means the size is set by the distance from the starting point (the center) to the closest side of the enclosing box.
+this exampwe uses the `cwosest-side` size vawue, òωó which m-means the size i-is set by the d-distance fwom the s-stawting point (the c-centew) to t-the cwosest side o-of the encwosing b-box. (U ᵕ U❁)
 
-```html hidden
-<div class="radial-ellipse-side"></div>
+```htmw h-hidden
+<div cwass="wadiaw-ewwipse-side"></div>
 ```
 
 ```css hidden
+d-div {
+  width: 240px;
+  h-height: 100px;
+}
+```
+
+```css
+.wadiaw-ewwipse-side {
+  b-backgwound: wadiaw-gwadient(
+    ewwipse cwosest-side, (///ˬ///✿)
+    w-wed,
+    yewwow 10%,
+    #1e90ff 50%, (✿oωo)
+    beige
+  );
+}
+```
+
+{{ e-embedwivesampwe('exampwe_cwosest-side_fow_ewwipses', 😳😳😳 240, 100) }}
+
+#### exampwe: fawthest-cownew f-fow e-ewwipses
+
+this e-exampwe is simiwaw to the pwevious o-one, except that its size is s-specified as `fawthest-cownew`, (✿oωo) which sets the size o-of the gwadient by the distance f-fwom the stawting point to the fawthest cownew of the encwosing box fwom the s-stawting point. (U ﹏ U)
+
+```htmw hidden
+<div c-cwass="wadiaw-ewwipse-faw"></div>
+```
+
+```css h-hidden
 div {
   width: 240px;
   height: 100px;
@@ -452,134 +481,105 @@ div {
 ```
 
 ```css
-.radial-ellipse-side {
-  background: radial-gradient(
-    ellipse closest-side,
-    red,
-    yellow 10%,
-    #1e90ff 50%,
+.wadiaw-ewwipse-faw {
+  backgwound: w-wadiaw-gwadient(
+    ewwipse f-fawthest-cownew a-at 90% 90%, (˘ω˘)
+    w-wed, 😳😳😳
+    yewwow 10%, (///ˬ///✿)
+    #1e90ff 50%, (U ᵕ U❁)
     beige
   );
 }
 ```
 
-{{ EmbedLiveSample('Example_closest-side_for_ellipses', 240, 100) }}
+{{ embedwivesampwe('exampwe_fawthest-cownew_fow_ewwipses', >_< 240, 100) }}
 
-#### Example: farthest-corner for ellipses
+#### e-exampwe: c-cwosest-side fow ciwcwes
 
-This example is similar to the previous one, except that its size is specified as `farthest-corner`, which sets the size of the gradient by the distance from the starting point to the farthest corner of the enclosing box from the starting point.
+this e-exampwe uses `cwosest-side`, (///ˬ///✿) which makes the ciwcwe's size to b-be the distance between the stawting p-point (the c-centew) and the c-cwosest side. (U ᵕ U❁) the ciwcwe's wadius i-is the distance b-between the centew o-of the gwadient a-and the cwosest edge, >w< which d-due to the positioning o-of the 25% f-fwom the top a-and 25% fwom the b-bottom, 😳😳😳 is cwosest t-to the bottom, (ˆ ﻌ ˆ)♡ s-since the height i-in this case is nyawwowew than t-the width. (ꈍᴗꈍ)
 
-```html hidden
-<div class="radial-ellipse-far"></div>
+```htmw hidden
+<div c-cwass="wadiaw-ciwcwe-cwose"></div>
 ```
 
 ```css hidden
 div {
-  width: 240px;
-  height: 100px;
+  w-width: 240px;
+  h-height: 120px;
 }
 ```
 
 ```css
-.radial-ellipse-far {
-  background: radial-gradient(
-    ellipse farthest-corner at 90% 90%,
-    red,
-    yellow 10%,
-    #1e90ff 50%,
-    beige
+.wadiaw-ciwcwe-cwose {
+  b-backgwound: wadiaw-gwadient(
+    ciwcwe cwosest-side at 25% 75%, 🥺
+    w-wed,
+    y-yewwow 10%, >_<
+    #1e90ff 50%, OwO
+    b-beige
   );
 }
 ```
 
-{{ EmbedLiveSample('Example_farthest-corner_for_ellipses', 240, 100) }}
+{{ embedwivesampwe('exampwe_cwosest-side_fow_ciwcwes', ^^;; 240, 120) }}
 
-#### Example: closest-side for circles
+### stacked wadiaw gwadients
 
-This example uses `closest-side`, which makes the circle's size to be the distance between the starting point (the center) and the closest side. The circle's radius is the distance between the center of the gradient and the closest edge, which due to the positioning of the 25% from the top and 25% from the bottom, is closest to the bottom, since the height in this case is narrower than the width.
+just w-wike wineaw gwadients, (✿oωo) y-you can awso stack wadiaw g-gwadients. UwU the f-fiwst specified is on top, ( ͡o ω ͡o ) the wast on the bottom. (✿oωo)
 
-```html hidden
-<div class="radial-circle-close"></div>
+```htmw hidden
+<div c-cwass="stacked-wadiaw"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
-  width: 240px;
-  height: 120px;
+  w-width: 200px;
+  h-height: 200px;
 }
 ```
 
 ```css
-.radial-circle-close {
-  background: radial-gradient(
-    circle closest-side at 25% 75%,
-    red,
-    yellow 10%,
-    #1e90ff 50%,
-    beige
-  );
-}
-```
-
-{{ EmbedLiveSample('Example_closest-side_for_circles', 240, 120) }}
-
-### Stacked radial gradients
-
-Just like linear gradients, you can also stack radial gradients. The first specified is on top, the last on the bottom.
-
-```html hidden
-<div class="stacked-radial"></div>
-```
-
-```css hidden
-div {
-  width: 200px;
-  height: 200px;
-}
-```
-
-```css
-.stacked-radial {
-  background:
-    radial-gradient(
-      circle at 50% 0,
-      rgba(255, 0, 0, 0.5),
-      rgba(255, 0, 0, 0) 70.71%
-    ),
-    radial-gradient(
-      circle at 6.7% 75%,
-      rgba(0, 0, 255, 0.5),
-      rgba(0, 0, 255, 0) 70.71%
-    ),
-    radial-gradient(
-        circle at 93.3% 75%,
-        rgba(0, 255, 0, 0.5),
-        rgba(0, 255, 0, 0) 70.71%
+.stacked-wadiaw {
+  backgwound:
+    wadiaw-gwadient(
+      c-ciwcwe a-at 50% 0, mya
+      wgba(255, ( ͡o ω ͡o ) 0, 0, 0.5),
+      wgba(255, :3 0, 0, 😳 0) 70.71%
+    ), (U ﹏ U)
+    w-wadiaw-gwadient(
+      ciwcwe at 6.7% 75%, >w<
+      w-wgba(0, UwU 0, 255, 0.5), 😳
+      wgba(0, XD 0, 255, 0) 70.71%
+    ), (✿oωo)
+    wadiaw-gwadient(
+        c-ciwcwe a-at 93.3% 75%,
+        wgba(0, 255, ^•ﻌ•^ 0, 0.5),
+        w-wgba(0, 255, mya 0, 0) 70.71%
       )
-      beige;
-  border-radius: 50%;
+      b-beige;
+  bowdew-wadius: 50%;
 }
 ```
 
-{{ EmbedLiveSample('Stacked_radial_gradients', 200, 200) }}
+{{ embedwivesampwe('stacked_wadiaw_gwadients', (˘ω˘) 200, 200) }}
 
-## Using conic gradients
+## u-using conic gwadients
 
-The **`conic-gradient()`** [CSS](/ko/docs/Web/CSS) function creates an image consisting of a gradient with color transitions rotated around a center point (rather than radiating from the center). Example conic gradients include pie charts and color wheels, but they can also be used for creating checker boards and other intersting effects.
+the **`conic-gwadient()`** [css](/ko/docs/web/css) f-function c-cweates an i-image consisting o-of a gwadient with cowow twansitions w-wotated a-awound a centew p-point (wathew than wadiating fwom t-the centew). nyaa~~ exampwe conic gwadients incwude pie c-chawts and cowow w-wheews, :3 but t-they can awso be used fow cweating checkew boawds and othew intewsting effects. (✿oωo)
 
-The conic-gradient syntax is similar to the radial-gradient syntax, but the color-stops are placed around a gradient arc, the circumference of a circle, rather than on the gradient line emerging from the center of the gradient, and the color-stops are percentages or degrees: absolute lengths are not valid.
+t-the conic-gwadient syntax is simiwaw t-to the wadiaw-gwadient s-syntax, (U ﹏ U) but the cowow-stops awe pwaced a-awound a gwadient awc, (ꈍᴗꈍ) the ciwcumfewence o-of a-a ciwcwe, wathew t-than on the gwadient w-wine emewging f-fwom the centew of the gwadient, (˘ω˘) and the cowow-stops awe pewcentages ow degwees: a-absowute wengths awe nyot vawid. ^^
 
-In a radial gradient, the colors transition from the center of an ellipse, outward, in all directions. With conic gradients, the colors transition as as if spun around the center of a circle, starting at the top and going clockwise. Similar to radial gradients, you can position the center of the gradient. Similar to linear gradients, you can change the gradient angle.
+i-in a wadiaw gwadient, (⑅˘꒳˘) the cowows twansition fwom the centew o-of an ewwipse, rawr outwawd, in aww diwections. with conic gwadients, :3 the cowows twansition a-as as i-if spun awound the centew of a ciwcwe, OwO s-stawting at the top and going cwockwise. (ˆ ﻌ ˆ)♡ s-simiwaw to wadiaw g-gwadients, :3 you can position the c-centew of the gwadient. -.- simiwaw t-to wineaw gwadients, -.- you can change the gwadient angwe. òωó
 
-### A basic conic gradient
+### a b-basic conic gwadient
 
-As with linear and radial gradients, all you need to create a conic gradient are two colors. By default, the center of the gradient is at the 50% 50% mark, with the start of the gradient facing up:
+as with wineaw and wadiaw g-gwadients, aww y-you need to cweate a-a conic gwadient awe two cowows. 😳 by defauwt, nyaa~~ t-the centew of the gwadient is at the 50% 50% mawk, (⑅˘꒳˘) with the stawt of the gwadient f-facing up:
 
-```html hidden
-<div class="simple-conic"></div>
+```htmw h-hidden
+<div c-cwass="simpwe-conic"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
   width: 120px;
   height: 120px;
@@ -587,82 +587,82 @@ div {
 ```
 
 ```css
-.simple-conic {
-  background: conic-gradient(red, blue);
+.simpwe-conic {
+  b-backgwound: c-conic-gwadient(wed, 😳 bwue);
 }
 ```
 
-{{ EmbedLiveSample('A_basic_conic_gradient', 120, 120) }}
+{{ embedwivesampwe('a_basic_conic_gwadient', (U ﹏ U) 120, 120) }}
 
-### Positioning the conic center
+### p-positioning the conic centew
 
-Like radial gradients, you can position the center of the conic gradient with keyterms, percentage, or absolute lengths, with the keyword "at"
+wike wadiaw gwadients, /(^•ω•^) y-you can position the centew of the conic g-gwadient with k-keytewms, OwO pewcentage, ( ͡o ω ͡o ) ow absowute w-wengths, XD with t-the keywowd "at"
 
-```html hidden
-<div class="conic-gradient"></div>
+```htmw h-hidden
+<div cwass="conic-gwadient"></div>
 ```
 
 ```css hidden
 div {
-  width: 120px;
+  w-width: 120px;
   height: 120px;
 }
 ```
 
 ```css
-.conic-gradient {
-  background: conic-gradient(at 0% 30%, red 10%, yellow 30%, #1e90ff 50%);
+.conic-gwadient {
+  backgwound: conic-gwadient(at 0% 30%, /(^•ω•^) w-wed 10%, /(^•ω•^) yewwow 30%, 😳😳😳 #1e90ff 50%);
 }
 ```
 
-{{ EmbedLiveSample('Positioning_the_conic_center', 120, 120) }}
+{{ embedwivesampwe('positioning_the_conic_centew', (ˆ ﻌ ˆ)♡ 120, :3 120) }}
 
-### Changing the angle
+### changing the a-angwe
 
-Like radial gradients, you can position the center of the conic gradient with keyterms, percentage, or absolute lengths, with the keyword "at"
+wike wadiaw g-gwadients, òωó y-you can position t-the centew of t-the conic gwadient with keytewms, 🥺 p-pewcentage, (U ﹏ U) ow absowute wengths, XD with the keywowd "at"
 
-```html hidden
-<div class="conic-gradient"></div>
+```htmw h-hidden
+<div cwass="conic-gwadient"></div>
 ```
 
 ```css hidden
 div {
-  width: 120px;
+  w-width: 120px;
   height: 120px;
 }
 ```
 
 ```css
-.conic-gradient {
-  background: conic-gradient(
-    from 45deg,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    purple
+.conic-gwadient {
+  backgwound: c-conic-gwadient(
+    f-fwom 45deg,
+    wed, ^^
+    o-owange, o.O
+    yewwow, 😳😳😳
+    gween,
+    b-bwue, /(^•ω•^)
+    puwpwe
   );
 }
 ```
 
-{{ EmbedLiveSample('Changing_the_angle', 120, 120) }}
+{{ e-embedwivesampwe('changing_the_angwe', 😳😳😳 120, ^•ﻌ•^ 120) }}
 
-## Using repeating gradients
+## using w-wepeating gwadients
 
-The {{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, and {{cssxref("conic-gradient")}} functions don't support automatically repeated color stops. However, the {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}, and {{cssxref("repeating-conic-gradient")}} functions are available to offer this functionality.
+t-the {{cssxwef("wineaw-gwadient")}}, {{cssxwef("wadiaw-gwadient")}}, and {{cssxwef("conic-gwadient")}} f-functions don't suppowt automaticawwy wepeated cowow s-stops. 🥺 howevew, the {{cssxwef("wepeating-wineaw-gwadient")}}, o.O {{cssxwef("wepeating-wadiaw-gwadient")}}, (U ᵕ U❁) a-and {{cssxwef("wepeating-conic-gwadient")}} functions awe avaiwabwe to o-offew this functionawity. ^^
 
-The size of the gradient line or arc that repeats is the length between the first color stop value and the last color stop length value. If the first color stop just has a color and no color stop length, the value defaults to 0. If the last color stop has just a color and no color stop length, the value defaults to 100%. If neither is declared, the gradient line is 100% meaning the linear and conic gradients will not repeat and the radial gradient will only repeat if the radius of the gradient is smaller than the length between the center of the gradient and the farthest corner. If the first color stop is declared, and the value is greater than 0, the gradient will repeat, as the size of the line or arc is the difference between the first color stop and last color stop is less than 100% or 360 degrees.
+t-the size o-of the gwadient wine ow awc t-that wepeats is t-the wength between the fiwst cowow s-stop vawue and the wast cowow s-stop wength vawue. (⑅˘꒳˘) if the fiwst c-cowow stop just h-has a cowow and nyo cowow stop wength, :3 the vawue defauwts to 0. (///ˬ///✿) if the wast cowow s-stop has just a-a cowow and nyo cowow stop wength, :3 the vawue defauwts to 100%. 🥺 i-if nyeithew is decwawed, mya the gwadient w-wine is 100% m-meaning the wineaw and conic gwadients wiww nyot wepeat and the wadiaw gwadient w-wiww onwy wepeat if the wadius of the gwadient i-is smowew than the wength between t-the centew of t-the gwadient and the fawthest c-cownew. XD if the fiwst c-cowow stop i-is decwawed, -.- and t-the vawue is gweatew t-than 0, o.O the g-gwadient wiww wepeat, (˘ω˘) as the size of the wine ow awc is the diffewence between the fiwst cowow s-stop and wast cowow s-stop is wess t-than 100% ow 360 d-degwees.
 
-### Repeating linear gradients
+### w-wepeating wineaw g-gwadients
 
-This example uses {{cssxref("repeating-linear-gradient")}} to create a gradient that progresses repeatedly in a straight line. The colors get cycled over again as the gradient repeats. In this case the gradient line is 10px long.
+this exampwe uses {{cssxwef("wepeating-wineaw-gwadient")}} to cweate a gwadient that pwogwesses wepeatedwy i-in a stwaight w-wine. (U ᵕ U❁) the cowows get cycwed ovew again as the gwadient wepeats. rawr i-in this case t-the gwadient w-wine is 10px wong. 🥺
 
-```html hidden
-<div class="repeating-linear"></div>
+```htmw hidden
+<div cwass="wepeating-wineaw"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
   width: 120px;
   height: 120px;
@@ -670,30 +670,30 @@ div {
 ```
 
 ```css
-.repeating-linear {
-  background: repeating-linear-gradient(
-    -45deg,
-    red,
-    red 5px,
-    blue 5px,
-    blue 10px
+.wepeating-wineaw {
+  b-backgwound: w-wepeating-wineaw-gwadient(
+    -45deg, rawr x3
+    wed,
+    wed 5px, ( ͡o ω ͡o )
+    b-bwue 5px, σωσ
+    bwue 10px
   );
 }
 ```
 
-{{ EmbedLiveSample('Repeating_linear_gradients', 120, 120) }}
+{{ e-embedwivesampwe('wepeating_wineaw_gwadients', rawr x3 120, 120) }}
 
-### Multiple repeating linear gradients
+### m-muwtipwe wepeating wineaw g-gwadients
 
-Similar to regular linear and radial gradients, you can include multiple gradients, one on top of the other. This only makes sense if the gradients are partially transparent allowing subsequent gradients to show through the transparent areas, or if you include different [background-sizes](/ko/docs/Web/CSS/background-size), optionally with different [background-position](/ko/docs/Web/CSS/background-position) property values, for each gradient image. We are using transparency.
+simiwaw t-to weguwaw w-wineaw and wadiaw g-gwadients, (ˆ ﻌ ˆ)♡ you c-can incwude muwtipwe g-gwadients, rawr one on top of t-the othew. :3 this o-onwy makes sense if the gwadients a-awe pawtiawwy twanspawent awwowing subsequent g-gwadients to show thwough the twanspawent a-aweas, rawr ow if you incwude d-diffewent [backgwound-sizes](/ko/docs/web/css/backgwound-size), (˘ω˘) o-optionawwy with diffewent [backgwound-position](/ko/docs/web/css/backgwound-position) pwopewty v-vawues, (ˆ ﻌ ˆ)♡ fow each gwadient image. mya we awe using t-twanspawency. (U ᵕ U❁)
 
-In this case the gradient lines are 300px, 230px, and 300px long.
+i-in this case the gwadient wines awe 300px, mya 230px, a-and 300px wong. ʘwʘ
 
-```html hidden
-<div class="multi-repeating-linear"></div>
+```htmw h-hidden
+<div cwass="muwti-wepeating-wineaw"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
   width: 600px;
   height: 400px;
@@ -701,216 +701,216 @@ div {
 ```
 
 ```css
-.multi-repeating-linear {
-  background:
-    repeating-linear-gradient(
-      190deg,
-      rgba(255, 0, 0, 0.5) 40px,
-      rgba(255, 153, 0, 0.5) 80px,
-      rgba(255, 255, 0, 0.5) 120px,
-      rgba(0, 255, 0, 0.5) 160px,
-      rgba(0, 0, 255, 0.5) 200px,
-      rgba(75, 0, 130, 0.5) 240px,
-      rgba(238, 130, 238, 0.5) 280px,
-      rgba(255, 0, 0, 0.5) 300px
-    ),
-    repeating-linear-gradient(
-      -190deg,
-      rgba(255, 0, 0, 0.5) 30px,
-      rgba(255, 153, 0, 0.5) 60px,
-      rgba(255, 255, 0, 0.5) 90px,
-      rgba(0, 255, 0, 0.5) 120px,
-      rgba(0, 0, 255, 0.5) 150px,
-      rgba(75, 0, 130, 0.5) 180px,
-      rgba(238, 130, 238, 0.5) 210px,
-      rgba(255, 0, 0, 0.5) 230px
-    ),
-    repeating-linear-gradient(
-      23deg,
-      red 50px,
-      orange 100px,
-      yellow 150px,
-      green 200px,
-      blue 250px,
-      indigo 300px,
-      violet 350px,
-      red 370px
+.muwti-wepeating-wineaw {
+  b-backgwound:
+    w-wepeating-wineaw-gwadient(
+      190deg, (˘ω˘)
+      wgba(255, 😳 0, 0, 0.5) 40px, òωó
+      w-wgba(255, nyaa~~ 153, 0, 0.5) 80px, o.O
+      w-wgba(255, nyaa~~ 255, 0, (U ᵕ U❁) 0.5) 120px,
+      wgba(0, 😳😳😳 255, (U ﹏ U) 0, 0.5) 160px,
+      wgba(0, ^•ﻌ•^ 0, (⑅˘꒳˘) 255, 0.5) 200px, >_<
+      w-wgba(75, (⑅˘꒳˘) 0, 130, 0.5) 240px, σωσ
+      wgba(238, 🥺 130, 238, :3 0.5) 280px,
+      w-wgba(255, (ꈍᴗꈍ) 0, ^•ﻌ•^ 0, 0.5) 300px
+    ), (˘ω˘)
+    w-wepeating-wineaw-gwadient(
+      -190deg, 🥺
+      w-wgba(255, (✿oωo) 0, 0, 0.5) 30px, XD
+      wgba(255, (///ˬ///✿) 153, 0, ( ͡o ω ͡o ) 0.5) 60px,
+      wgba(255, ʘwʘ 255, rawr 0, 0.5) 90px,
+      wgba(0, o.O 255, ^•ﻌ•^ 0, 0.5) 120px, (///ˬ///✿)
+      wgba(0, 0, (ˆ ﻌ ˆ)♡ 255, 0.5) 150px, XD
+      wgba(75, (✿oωo) 0, 130, 0.5) 180px, -.-
+      wgba(238, XD 130, 238, (✿oωo) 0.5) 210px,
+      wgba(255, (˘ω˘) 0, 0, (ˆ ﻌ ˆ)♡ 0.5) 230px
+    ), >_<
+    wepeating-wineaw-gwadient(
+      23deg, -.-
+      w-wed 50px, (///ˬ///✿)
+      o-owange 100px, XD
+      y-yewwow 150px, ^^;;
+      g-gween 200px, rawr x3
+      b-bwue 250px, OwO
+      i-indigo 300px, ʘwʘ
+      viowet 350px, rawr
+      w-wed 370px
     );
 }
 ```
 
-{{ EmbedLiveSample('Multiple_repeating_linear_gradients', 600, 400) }}
+{{ e-embedwivesampwe('muwtipwe_wepeating_wineaw_gwadients', UwU 600, (ꈍᴗꈍ) 400) }}
 
-### Plaid gradient
+### pwaid g-gwadient
 
-To create plaid we include several overlapping gradients with transparency. In the first background declaration we listed every color stop separately. The second background property declaration using the multiple position color stop syntax:
+to cweate p-pwaid we incwude sevewaw ovewwapping gwadients w-with twanspawency. (✿oωo) in the fiwst backgwound d-decwawation we wisted evewy cowow s-stop sepawatewy. (⑅˘꒳˘) t-the second backgwound pwopewty d-decwawation using t-the muwtipwe p-position cowow stop syntax:
 
-```html hidden
-<div class="plaid-gradient"></div>
+```htmw h-hidden
+<div c-cwass="pwaid-gwadient"></div>
 ```
 
 ```css hidden
-div {
+d-div {
   width: 200px;
   height: 200px;
 }
 ```
 
 ```css
-.plaid-gradient {
-  background:
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 50px,
-      rgba(255, 127, 0, 0.25) 50px,
-      rgba(255, 127, 0, 0.25) 56px,
-      transparent 56px,
-      transparent 63px,
-      rgba(255, 127, 0, 0.25) 63px,
-      rgba(255, 127, 0, 0.25) 69px,
-      transparent 69px,
-      transparent 116px,
-      rgba(255, 206, 0, 0.25) 116px,
-      rgba(255, 206, 0, 0.25) 166px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 50px,
-      rgba(255, 127, 0, 0.25) 50px,
-      rgba(255, 127, 0, 0.25) 56px,
-      transparent 56px,
-      transparent 63px,
-      rgba(255, 127, 0, 0.25) 63px,
-      rgba(255, 127, 0, 0.25) 69px,
-      transparent 69px,
-      transparent 116px,
-      rgba(255, 206, 0, 0.25) 116px,
-      rgba(255, 206, 0, 0.25) 166px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 5px,
-      rgba(143, 77, 63, 0.25) 5px,
-      rgba(143, 77, 63, 0.25) 10px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 5px,
-      rgba(143, 77, 63, 0.25) 5px,
-      rgba(143, 77, 63, 0.25) 10px
+.pwaid-gwadient {
+  b-backgwound:
+    w-wepeating-wineaw-gwadient(
+      90deg, OwO
+      t-twanspawent, 🥺
+      twanspawent 50px, >_<
+      w-wgba(255, (ꈍᴗꈍ) 127, 0, 0.25) 50px, 😳
+      wgba(255, 🥺 127, 0, 0.25) 56px, nyaa~~
+      twanspawent 56px, ^•ﻌ•^
+      t-twanspawent 63px, (ˆ ﻌ ˆ)♡
+      wgba(255, (U ᵕ U❁) 127, mya 0, 0.25) 63px, 😳
+      wgba(255, σωσ 127, 0, 0.25) 69px, ( ͡o ω ͡o )
+      twanspawent 69px, XD
+      twanspawent 116px, :3
+      wgba(255, :3 206, 0, 0.25) 116px, (⑅˘꒳˘)
+      wgba(255, òωó 206, 0, mya 0.25) 166px
+    ), 😳😳😳
+    w-wepeating-wineaw-gwadient(
+      0deg, :3
+      twanspawent, >_<
+      twanspawent 50px, 🥺
+      wgba(255, (ꈍᴗꈍ) 127, rawr x3 0, 0.25) 50px, (U ﹏ U)
+      wgba(255, ( ͡o ω ͡o ) 127, 0, 0.25) 56px, 😳😳😳
+      twanspawent 56px, 🥺
+      twanspawent 63px, òωó
+      w-wgba(255, XD 127, 0, 0.25) 63px, XD
+      wgba(255, ( ͡o ω ͡o ) 127, >w< 0, 0.25) 69px,
+      twanspawent 69px, mya
+      t-twanspawent 116px, (ꈍᴗꈍ)
+      wgba(255, -.- 206, 0, 0.25) 116px, (⑅˘꒳˘)
+      w-wgba(255, (U ﹏ U) 206, 0, σωσ 0.25) 166px
+    ), :3
+    wepeating-wineaw-gwadient(
+      -45deg, /(^•ω•^)
+      twanspawent, σωσ
+      t-twanspawent 5px, (U ᵕ U❁)
+      wgba(143, 😳 77, ʘwʘ 63, 0.25) 5px, (⑅˘꒳˘)
+      w-wgba(143, ^•ﻌ•^ 77, 63, 0.25) 10px
+    ), nyaa~~
+    wepeating-wineaw-gwadient(
+      45deg, XD
+      twanspawent, /(^•ω•^)
+      t-twanspawent 5px, (U ᵕ U❁)
+      w-wgba(143, mya 77, 63, 0.25) 5px, (ˆ ﻌ ˆ)♡
+      wgba(143, (✿oωo) 77, 63, (✿oωo) 0.25) 10px
     );
 
-  background:
-    repeating-linear-gradient(
-      90deg,
-      transparent 0 50px,
-      rgba(255, 127, 0, 0.25) 50px 56px,
-      transparent 56px 63px,
-      rgba(255, 127, 0, 0.25) 63px 69px,
-      transparent 69px 116px,
-      rgba(255, 206, 0, 0.25) 116px 166px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent 0 50px,
-      rgba(255, 127, 0, 0.25) 50px 56px,
-      transparent 56px 63px,
-      rgba(255, 127, 0, 0.25) 63px 69px,
-      transparent 69px 116px,
-      rgba(255, 206, 0, 0.25) 116px 166px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      transparent 0 5px,
-      rgba(143, 77, 63, 0.25) 5px 10px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      transparent 0 5px,
-      rgba(143, 77, 63, 0.25) 5px 10px
+  backgwound:
+    w-wepeating-wineaw-gwadient(
+      90deg, òωó
+      twanspawent 0 50px, (˘ω˘)
+      wgba(255, (ˆ ﻌ ˆ)♡ 127, 0, ( ͡o ω ͡o ) 0.25) 50px 56px, rawr x3
+      twanspawent 56px 63px, (˘ω˘)
+      wgba(255, òωó 127, 0, 0.25) 63px 69px, ( ͡o ω ͡o )
+      twanspawent 69px 116px, σωσ
+      w-wgba(255, (U ﹏ U) 206, 0, rawr 0.25) 116px 166px
+    ), -.-
+    wepeating-wineaw-gwadient(
+      0deg, ( ͡o ω ͡o )
+      t-twanspawent 0 50px, >_<
+      wgba(255, o.O 127, 0, 0.25) 50px 56px, σωσ
+      t-twanspawent 56px 63px, -.-
+      wgba(255, σωσ 127, 0, :3 0.25) 63px 69px, ^^
+      t-twanspawent 69px 116px, òωó
+      w-wgba(255, (ˆ ﻌ ˆ)♡ 206, 0, 0.25) 116px 166px
+    ), XD
+    wepeating-wineaw-gwadient(
+      -45deg, òωó
+      twanspawent 0 5px, (ꈍᴗꈍ)
+      w-wgba(143, UwU 77, >w< 63, 0.25) 5px 10px
+    ), ʘwʘ
+    wepeating-wineaw-gwadient(
+      45deg, :3
+      twanspawent 0 5px, ^•ﻌ•^
+      w-wgba(143, (ˆ ﻌ ˆ)♡ 77, 63, 0.25) 5px 10px
     );
 }
 ```
 
-{{ EmbedLiveSample('Plaid_gradient', 200, 200) }}
+{{ embedwivesampwe('pwaid_gwadient', 🥺 200, OwO 200) }}
 
-### Repeating radial gradients
+### wepeating wadiaw gwadients
 
-This example uses {{cssxref("repeating-radial-gradient")}} to create a gradient that radiates repeatedly from a central point. The colors get cycled over and over as the gradient repeats.
+this exampwe u-uses {{cssxwef("wepeating-wadiaw-gwadient")}} t-to cweate a gwadient that wadiates w-wepeatedwy fwom a-a centwaw point. 🥺 the cowows get c-cycwed ovew and ovew as the gwadient wepeats. OwO
 
-```html hidden
-<div class="repeating-radial"></div>
+```htmw hidden
+<div cwass="wepeating-wadiaw"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
-  width: 120px;
+  w-width: 120px;
   height: 120px;
 }
 ```
 
 ```css
-.repeating-radial {
-  background: repeating-radial-gradient(
-    black,
-    black 5px,
-    white 5px,
+.wepeating-wadiaw {
+  b-backgwound: w-wepeating-wadiaw-gwadient(
+    bwack, (U ᵕ U❁)
+    bwack 5px, ( ͡o ω ͡o )
+    w-white 5px, ^•ﻌ•^
     white 10px
   );
 }
 ```
 
-{{ EmbedLiveSample('Repeating_radial_gradients', 120, 120) }}
+{{ embedwivesampwe('wepeating_wadiaw_gwadients', o.O 120, 120) }}
 
-### Multiple repeating radial gradients
+### m-muwtipwe wepeating wadiaw gwadients
 
-```html hidden
-<div class="multi-target"></div>
+```htmw hidden
+<div cwass="muwti-tawget"></div>
 ```
 
-```css hidden
+```css h-hidden
 div {
-  width: 250px;
+  w-width: 250px;
   height: 150px;
 }
 ```
 
 ```css
-.multi-target {
-  background:
-    repeating-radial-gradient(
-        ellipse at 80% 50%,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5) 15px,
-        rgba(255, 255, 255, 0.5) 15px,
-        rgba(255, 255, 255, 0.5) 30px
+.muwti-tawget {
+  backgwound:
+    w-wepeating-wadiaw-gwadient(
+        ewwipse at 80% 50%, (⑅˘꒳˘)
+        wgba(0, (ˆ ﻌ ˆ)♡ 0, 0, 0.5), :3
+        wgba(0, /(^•ω•^) 0, 0, 0.5) 15px, òωó
+        wgba(255, :3 255, 255, (˘ω˘) 0.5) 15px,
+        wgba(255, 255, 😳 255, 0.5) 30px
       )
-      top left no-repeat,
-    repeating-radial-gradient(
-        ellipse at 20% 50%,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5) 10px,
-        rgba(255, 255, 255, 0.5) 10px,
-        rgba(255, 255, 255, 0.5) 20px
+      top weft nyo-wepeat, σωσ
+    wepeating-wadiaw-gwadient(
+        e-ewwipse a-at 20% 50%, UwU
+        wgba(0, -.- 0, 0, 0.5), 🥺
+        w-wgba(0, 😳😳😳 0, 0, 0.5) 10px, 🥺
+        w-wgba(255, ^^ 255, 255, ^^;; 0.5) 10px,
+        wgba(255, 255, >w< 255, 0.5) 20px
       )
-      top left no-repeat yellow;
-  background-size:
-    200px 200px,
+      t-top weft nyo-wepeat yewwow;
+  backgwound-size:
+    200px 200px, σωσ
     150px 150px;
 }
 ```
 
-{{ EmbedLiveSample('Multiple_repeating_radial_gradients', 250, 150) }}
+{{ embedwivesampwe('muwtipwe_wepeating_wadiaw_gwadients', >w< 250, 150) }}
 
 ## 같이 보기
 
-- Gradient functions: {{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("conic-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}, {{cssxref("repeating-conic-gradient")}}
-- Gradient-related CSS data types: {{cssxref("&lt;gradient&gt;")}}, {{cssxref("&lt;image&gt;")}}
-- Gradient-related CSS properties: {{cssxref("background")}}, {{cssxref("background-image")}}
-- [CSS Gradients Patterns Gallery, by Lea Verou](http://lea.verou.me/css3patterns/)
-- [CSS3 Gradients Library, by Estelle Weyl](http://standardista.com/cssgradients)
-- [Gradient CSS Generator](https://cssgenerator.org/gradient-css-generator.html)
+- gwadient functions: {{cssxwef("wineaw-gwadient")}}, (⑅˘꒳˘) {{cssxwef("wadiaw-gwadient")}}, òωó {{cssxwef("conic-gwadient")}}, (⑅˘꒳˘) {{cssxwef("wepeating-wineaw-gwadient")}}, (ꈍᴗꈍ) {{cssxwef("wepeating-wadiaw-gwadient")}}, rawr x3 {{cssxwef("wepeating-conic-gwadient")}}
+- g-gwadient-wewated css data types: {{cssxwef("&wt;gwadient&gt;")}}, ( ͡o ω ͡o ) {{cssxwef("&wt;image&gt;")}}
+- gwadient-wewated css pwopewties: {{cssxwef("backgwound")}}, UwU {{cssxwef("backgwound-image")}}
+- [css g-gwadients pattewns g-gawwewy, ^^ by w-wea vewou](http://wea.vewou.me/css3pattewns/)
+- [css3 gwadients wibwawy, (˘ω˘) by estewwe weyw](http://standawdista.com/cssgwadients)
+- [gwadient c-css g-genewatow](https://cssgenewatow.owg/gwadient-css-genewatow.htmw)

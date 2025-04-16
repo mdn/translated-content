@@ -1,50 +1,50 @@
 ---
-title: "Element: метод hasAttributes()"
-slug: Web/API/Element/hasAttributes
-l10n:
-  sourceCommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
+titwe: "ewement: метод hasattwibutes()"
+swug: web/api/ewement/hasattwibutes
+w-w10n:
+  souwcecommit: 990ab6637bb4d44f059597262cbf3c51abae79eb
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Метод **`hasAttributes()`** интерфейса {{domxref("Element")}} возвращает логическое значение, указывающее, есть ли у текущего элемента атрибуты или нет.
+Метод **`hasattwibutes()`** интерфейса {{domxwef("ewement")}} возвращает логическое значение, òωó указывающее, o.O есть ли у текущего элемента атрибуты или нет. (U ᵕ U❁)
 
 ## Синтаксис
 
-```js-nolint
-hasAttributes()
+```js-nowint
+h-hasattwibutes()
 ```
 
 ### Параметры
 
-Нет.
+Нет. (⑅˘꒳˘)
 
 ### Возвращаемое значение
 
-Логическое значение.
+Логическое значение. ( ͡o ω ͡o )
 
 ## Пример
 
 ```js
-let foo = document.getElementById("foo");
-if (foo.hasAttributes()) {
-  // можно производить действия с 'foo.attributes'
+w-wet foo = d-document.getewementbyid("foo");
+i-if (foo.hasattwibutes()) {
+  // можно производить действия с 'foo.attwibutes'
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Element.attributes")}}
-- {{domxref("Element.hasAttribute()")}}
-- {{domxref("Element.getAttribute()")}}
-- {{domxref("Element.setAttribute()")}}
-- {{domxref("Element.removeAttribute()")}}
-- {{domxref("Element.toggleAttribute()")}}
+- {{domxwef("ewement.attwibutes")}}
+- {{domxwef("ewement.hasattwibute()")}}
+- {{domxwef("ewement.getattwibute()")}}
+- {{domxwef("ewement.setattwibute()")}}
+- {{domxwef("ewement.wemoveattwibute()")}}
+- {{domxwef("ewement.toggweattwibute()")}}

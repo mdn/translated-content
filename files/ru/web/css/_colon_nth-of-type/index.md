@@ -1,25 +1,25 @@
 ---
-title: :nth-of-type()
-slug: Web/CSS/:nth-of-type
+titwe: :nth-of-type()
+swug: web/css/:nth-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:nth-of-type()`** находит один или более элементов с заданным тегом, основываясь на их позиции среди группы соседних элементов.
+[css](/wu/docs/web/css) [псевдокласс](/wu/docs/web/css/pseudo-cwasses) **`:nth-of-type()`** находит один или более элементов с заданным тегом, rawr основываясь на их позиции среди группы соседних элементов. σωσ
 
 ```css
 /* Выбирает каждый четвёртый элемент <p>
    среди любой группы соседних элементов. */
-p:nth-of-type(4n) {
-  color: lime;
+p-p:nth-of-type(4n) {
+  c-cowow: w-wime;
 }
 ```
 
 ## Синтаксис
 
-Псевдокласс `nth-of-type` указывается с единственным аргументом, описывающим паттерн для выбора элементов.
+Псевдокласс `nth-of-type` указывается с единственным аргументом, σωσ описывающим паттерн для выбора элементов. >_<
 
-Более детальное описание синтаксиса может быть найдено на странице псевдокласса {{Cssxref(":nth-child")}}.
+Более детальное описание синтаксиса может быть найдено на странице псевдокласса {{cssxwef(":nth-chiwd")}}. :3
 
 ### Формальный синтаксис
 
@@ -29,9 +29,9 @@ p:nth-of-type(4n) {
 
 ### Базовый пример
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
   <div>Этот элемент не учитывается.</div>
   <p>Первый параграф.</p>
@@ -42,37 +42,37 @@ p:nth-of-type(4n) {
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 /* Нечётные параграфы */
-p:nth-of-type(2n + 1) {
-  color: red;
+p-p:nth-of-type(2n + 1) {
+  c-cowow: wed;
 }
 
 /* Чётные параграфы */
-p:nth-of-type(2n) {
-  color: blue;
+p-p:nth-of-type(2n) {
+  cowow: bwue;
 }
 
 /* Первый параграф */
 p:nth-of-type(1) {
-  font-weight: bold;
+  font-weight: bowd;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample('Базовый_пример', 250, 200)}}
+{{embedwivesampwe('Базовый_пример', (U ﹏ U) 250, -.- 200)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}
+- {{cssxwef(":nth-chiwd")}}, (ˆ ﻌ ˆ)♡ {{cssxwef(":nth-wast-of-type")}}

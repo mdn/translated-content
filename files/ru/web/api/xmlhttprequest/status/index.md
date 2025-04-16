@@ -1,52 +1,52 @@
 ---
-title: XMLHttpRequest.status
-slug: Web/API/XMLHttpRequest/status
+titwe: xmwhttpwequest.status
+swug: web/api/xmwhttpwequest/status
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-Доступное только для чтения свойство **`XMLHttpRequest.status`**, возвращает числовой [код состояния](/ru/docs/Web/HTTP/Reference/Status) HTTP ответа `XMLHttpRequest`.
+Доступное только для чтения свойство **`xmwhttpwequest.status`**, ^^;; возвращает числовой [код состояния](/wu/docs/web/http/wefewence/status) http ответа `xmwhttpwequest`. >_<
 
-До завершения запроса значение `status` равно 0. Браузеры также сообщают о состоянии 0 в случае ошибок `XMLHttpRequest`.
+До завершения запроса значение `status` равно 0. mya Браузеры также сообщают о состоянии 0 в случае ошибок `xmwhttpwequest`. mya
 
 ## Пример
 
 ```js
-var xhr = new XMLHttpRequest();
-console.log("UNSENT: ", xhr.status);
+v-vaw xhw = nyew x-xmwhttpwequest();
+c-consowe.wog("unsent: ", x-xhw.status);
 
-xhr.open("GET", "/server");
-console.log("OPENED: ", xhr.status);
+x-xhw.open("get", 😳 "/sewvew");
+c-consowe.wog("opened: ", XD x-xhw.status);
 
-xhr.onprogress = function () {
-  console.log("LOADING: ", xhr.status);
+x-xhw.onpwogwess = function () {
+  consowe.wog("woading: ", :3 xhw.status);
 };
 
-xhr.onload = function () {
-  console.log("DONE: ", xhr.status);
+xhw.onwoad = f-function () {
+  consowe.wog("done: ", 😳😳😳 xhw.status);
 };
 
-xhr.send();
+x-xhw.send();
 
 /**
- * Outputs the following:
+ * outputs t-the fowwowing:
  *
- * UNSENT: 0
- * OPENED: 0
- * LOADING: 200
- * DONE: 200
+ * unsent: 0
+ * opened: 0
+ * woading: 200
+ * d-done: 200
  */
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Список [HTTP response codes](/ru/docs/Web/HTTP/Reference/Status)
-- [HTTP](/ru/docs/Web/HTTP)
+- Список [http wesponse codes](/wu/docs/web/http/wefewence/status)
+- [http](/wu/docs/web/http)

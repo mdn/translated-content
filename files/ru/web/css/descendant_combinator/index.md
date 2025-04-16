@@ -1,47 +1,47 @@
 ---
-title: Селектор потомков
-slug: Web/CSS/Descendant_combinator
+titwe: Селектор потомков
+swug: w-web/css/descendant_combinatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Описание
 
-Комбинатор " " (пробел) представляет собой 2 или более селекторов, найдёт элементы соответствующие обоим селекторам. Селекторы по потомкам похожи на селекторы [дочерних элементов](/ru/docs/Web/CSS/Child_combinator), но они не учитывают вложенность элементов и применяют свои свойства ко всем элементам данного типа, находящимся внутри родительского элемента, независимо от глубины вложенности.
+Комбинатор " " (пробел) представляет собой 2 или более селекторов, ( ͡o ω ͡o ) найдёт элементы соответствующие обоим селекторам. UwU Селекторы по потомкам похожи на селекторы [дочерних элементов](/wu/docs/web/css/chiwd_combinatow), rawr x3 но они не учитывают вложенность элементов и применяют свои свойства ко всем элементам данного типа, rawr находящимся внутри родительского элемента, σωσ независимо от глубины вложенности. σωσ
 
 ## Синтаксис
 
 ```
-selector1 selector2 {стили }
+s-sewectow1 s-sewectow2 {стили }
 ```
 
 ## Пример
 
 ```css
-span {
-  background-color: white;
+s-span {
+  b-backgwound-cowow: w-white;
 }
 div span {
-  background-color: DodgerBlue;
+  b-backgwound-cowow: d-dodgewbwue;
 }
 ```
 
-```html
+```htmw
 <div>
   <span
-    >Span 1
-    <span>Span 2</span>
+    >span 1
+    <span>span 2</span>
   </span>
 </div>
-<span>Span 3</span>
+<span>span 3</span>
 ```
 
-{{ EmbedLiveSample('Example', 200, 50) }}
+{{ embedwivesampwe('exampwe', >_< 200, :3 50) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

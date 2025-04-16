@@ -1,447 +1,447 @@
 ---
-title: Сторонние API
-slug: Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
+titwe: Сторонние api
+s-swug: weawn_web_devewopment/extensions/cwient-side_apis/thiwd_pawty_apis
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/cwient-side_web_apis/fetching_data", >w< "weawn/javascwipt/cwient-side_web_apis/dwawing_gwaphics", 😳😳😳 "weawn/javascwipt/cwient-side_web_apis")}}
 
-API, которые мы рассмотрели до сих пор, встроены в браузер, но не все API таковы. Многие крупные веб-сайты и сервисы, такие как Google Maps, Twitter, Facebook, PayPal и т. д., Предоставляют API-интерфейсы, позволяющие разработчикам использовать свои данные (например, показывать ваш твиттер-поток в вашем блоге) или сервисы (например, отображение пользовательских карт Google на вашем сайте, или использование логина Facebook для входа в систему ваших пользователей). В этой статье рассматривается различие между API-интерфейсами браузера и сторонними API и показано типичное использование последних.
+api, (ˆ ﻌ ˆ)♡ которые мы рассмотрели до сих пор, (ꈍᴗꈍ) встроены в браузер, 🥺 но не все a-api таковы. >_< Многие крупные веб-сайты и сервисы, OwO такие как g-googwe m-maps, ^^;; twittew, f-facebook, (✿oωo) paypaw и т. UwU д., Предоставляют a-api-интерфейсы, ( ͡o ω ͡o ) позволяющие разработчикам использовать свои данные (например, (✿oωo) показывать ваш твиттер-поток в вашем блоге) или сервисы (например, mya отображение пользовательских карт g-googwe на вашем сайте, ( ͡o ω ͡o ) или использование логина f-facebook для входа в систему ваших пользователей). :3 В этой статье рассматривается различие между api-интерфейсами браузера и сторонними api и показано типичное использование последних. 😳
 
-| Необходимые условия: | Основы JavaScript (см. [первые шаги](/ru/docs/conflicting/Learn_web_development/Core/Scripting), [структурные элементы](/ru/docs/Learn_web_development/Core/Scripting), [объекты JavaScript](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)), the [основы клиентских API](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction) |
+| Необходимые условия: | Основы javascwipt (см. (U ﹏ U) [первые шаги](/wu/docs/confwicting/weawn_web_devewopment/cowe/scwipting), >w< [структурные элементы](/wu/docs/weawn_web_devewopment/cowe/scwipting), UwU [объекты javascwipt](/wu/docs/weawn_web_devewopment/extensions/advanced_javascwipt_objects)), 😳 t-the [основы клиентских api](/wu/docs/weawn_web_devewopment/extensions/cwient-side_apis/intwoduction) |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Задача:              | Изучить, как работают сторонние API, и как использовать их для улучшения ваших сайтов.                                                                                                                                                                                                                                                                                     |
+| Задача:              | Изучить, XD как работают сторонние api, (✿oωo) и как использовать их для улучшения ваших сайтов. ^•ﻌ•^                                                                                                                                                                                                                                                                                     |
 
-## Что такое сторонние API?
+## Что такое сторонние a-api?
 
-Сторонние API - это API, предоставляемые третьими лицами — как правило, такими компаниями, как Facebook, Twitter, or Google — чтобы вы могли получить доступ к их функциям с помощью JavaScript и использовать его на своём собственном сайте. Как мы показали в нашей [вводной статье об API](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction), одним из наиболее очевидных примеров является использование [Google Maps APIs](https://developers.google.com/maps/) для отображения пользовательских карт на ваших страницах.
+Сторонние api - это a-api, mya предоставляемые третьими лицами — как правило, (˘ω˘) такими компаниями, nyaa~~ как facebook, :3 twittew, (✿oωo) ow googwe — чтобы вы могли получить доступ к их функциям с помощью j-javascwipt и использовать его на своём собственном сайте. (U ﹏ U) Как мы показали в нашей [вводной статье об api](/wu/docs/weawn_web_devewopment/extensions/cwient-side_apis/intwoduction), (ꈍᴗꈍ) одним из наиболее очевидных примеров является использование [googwe m-maps apis](https://devewopews.googwe.com/maps/) для отображения пользовательских карт на ваших страницах. (˘ω˘)
 
-Давайте снова посмотрим на наш пример карты (см. [исходный код на GitHub](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html); [см. это в действии](https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), и используем его для иллюстрации того, как сторонние API отличаются от API-интерфейсов браузера.
+Давайте снова посмотрим на наш пример карты (см. ^^ [исходный код на g-github](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/apis/intwoduction/maps-exampwe.htmw); [см. (⑅˘꒳˘) это в действии](https://mdn.github.io/weawning-awea/javascwipt/apis/intwoduction/maps-exampwe.htmw)), rawr и используем его для иллюстрации того, :3 как сторонние api отличаются от api-интерфейсов браузера. OwO
 
-> [!NOTE]
-> Возможно вы захотите сразу [получить все наши примеры кода](/ru/docs/Learn_web_development#получение_наших_примеров_кода), в этом случае вы можете просто искать репозиторий с файлами примеров, которые вам нужны в каждом разделе.
+> [!note]
+> Возможно вы захотите сразу [получить все наши примеры кода](/wu/docs/weawn_web_devewopment#получение_наших_примеров_кода), (ˆ ﻌ ˆ)♡ в этом случае вы можете просто искать репозиторий с файлами примеров, :3 которые вам нужны в каждом разделе. -.-
 
 ### Они находятся на сторонних серверах
 
-API браузера встроены в браузер - вы можете получить к ним доступ сразу из JavaScript. Например, [API геолокации](/ru/docs/Web/API/Geolocation_API), доступный в нашем примере, осуществляется с использованием свойства геолокации объекта [`Navigator`](/ru/docs/Web/API/Navigator), которое возвращает объект [`Geolocation`](/ru/docs/Web/API/Geolocation). Этот пример использует метод [`getCurrentPosition()`](/ru/docs/Web/API/Geolocation/getCurrentPosition) этого объекта, для запроса текущего положения устройства:
+api браузера встроены в браузер - вы можете получить к ним доступ сразу из javascwipt. -.- Например, òωó [api геолокации](/wu/docs/web/api/geowocation_api), 😳 доступный в нашем примере, nyaa~~ осуществляется с использованием свойства геолокации объекта [`navigatow`](/wu/docs/web/api/navigatow), (⑅˘꒳˘) которое возвращает объект [`geowocation`](/wu/docs/web/api/geowocation). 😳 Этот пример использует метод [`getcuwwentposition()`](/wu/docs/web/api/geowocation/getcuwwentposition) этого объекта, (U ﹏ U) для запроса текущего положения устройства:
 
 ```js
-navigator.geolocation.getCurrentPosition(function(position) { ... });
+nyavigatow.geowocation.getcuwwentposition(function(position) { ... });
 ```
 
-Сторонние API, с другой стороны, расположены на сторонних серверах. Чтобы получить доступ к ним из JavaScript, вам сначала нужно подключиться к функциям API и сделать его доступным на вашей странице. Обычно это связано с первой ссылкой на библиотеку JavaScript, доступную на сервере через элемент {{htmlelement("script")}}, как показано в нашем примере:
+Сторонние a-api, /(^•ω•^) с другой стороны, OwO расположены на сторонних серверах. ( ͡o ω ͡o ) Чтобы получить доступ к ним из javascwipt, XD вам сначала нужно подключиться к функциям api и сделать его доступным на вашей странице. /(^•ω•^) Обычно это связано с первой ссылкой на библиотеку javascwipt, /(^•ω•^) доступную на сервере через элемент {{htmwewement("scwipt")}}, 😳😳😳 как показано в нашем примере:
 
 ```js
-<script
-  type="text/javascript"
-  src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"></script>
+<scwipt
+  type="text/javascwipt"
+  s-swc="https://maps.googwe.com/maps/api/js?key=aizasyddugt0e5iegkce6zfwkfute9ko_de66pa"></scwipt>
 ```
 
-Затем вы можете начать использовать объекты, доступные в этой библиотеке. Например:
+Затем вы можете начать использовать объекты, (ˆ ﻌ ˆ)♡ доступные в этой библиотеке. :3 Например:
 
 ```js
-var latlng = new google.maps.LatLng(
-  position.coords.latitude,
-  position.coords.longitude,
+vaw watwng = n-nyew googwe.maps.watwng(
+  p-position.coowds.watitude,
+  p-position.coowds.wongitude, òωó
 );
-var myOptions = {
-  zoom: 8,
-  center: latlng,
-  mapTypeId: google.maps.MapTypeId.TERRAIN,
-  disableDefaultUI: true,
+v-vaw myoptions = {
+  zoom: 8, 🥺
+  centew: w-watwng, (U ﹏ U)
+  maptypeid: googwe.maps.maptypeid.tewwain, XD
+  disabwedefauwtui: t-twue, ^^
 };
 
-var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+vaw map = nyew googwe.maps.map(document.getewementbyid("map_canvas"), o.O myoptions);
 ```
 
-Здесь мы создаём новый объект `LatLng`, используя конструктор `google.maps.LatLng()`, который содержит широту и долготу местоположения, которое мы хотим показать, полученные из API геолокации. Затем мы создаём объект опций (`myOptions`), содержащий эту и другую информацию, связанную с отображением карты. Наконец, мы фактически создаём карту, используя конструктор `google.maps.Map()`, который принимает в качестве параметров элемент, на котором мы хотим нарисовать карту, и объект опций.
+Здесь мы создаём новый объект `watwng`, 😳😳😳 используя конструктор `googwe.maps.watwng()`, /(^•ω•^) который содержит широту и долготу местоположения, 😳😳😳 которое мы хотим показать, ^•ﻌ•^ полученные из api геолокации. 🥺 Затем мы создаём объект опций (`myoptions`), o.O содержащий эту и другую информацию, (U ᵕ U❁) связанную с отображением карты. Наконец, мы фактически создаём карту, ^^ используя конструктор `googwe.maps.map()`, (⑅˘꒳˘) который принимает в качестве параметров элемент, :3 на котором мы хотим нарисовать карту, (///ˬ///✿) и объект опций.
 
-Это вся информация, которую API Карт Google требует для построения простой карты. Сервер, к которому вы подключаетесь, обрабатывает все сложные вещи, такие как отображение правильных фрагментов карты для отображаемой области и т. д.
+Это вся информация, :3 которую api Карт g-googwe требует для построения простой карты. Сервер, 🥺 к которому вы подключаетесь, mya обрабатывает все сложные вещи, XD такие как отображение правильных фрагментов карты для отображаемой области и т. д. -.-
 
-> [!NOTE]
-> Некоторые API обрабатывают доступ к их функциям несколько иначе, требуя от разработчика сделать HTTP-запрос (см. [Получение данных с сервера](/ru/docs/Learn_web_development/Core/Scripting/Network_requests)) на определённый шаблон URL для получения определённых данных. Они называются RESTful API, и мы покажем пример этого позже в статье.
+> [!note]
+> Некоторые api обрабатывают доступ к их функциям несколько иначе, o.O требуя от разработчика сделать h-http-запрос (см. (˘ω˘) [Получение данных с сервера](/wu/docs/weawn_web_devewopment/cowe/scwipting/netwowk_wequests)) на определённый шаблон u-uww для получения определённых данных. (U ᵕ U❁) Они называются w-westfuw api, rawr и мы покажем пример этого позже в статье. 🥺
 
 ### Разрешения обрабатываются по-разному
 
-Безопасность API-интерфейсов браузеров, как правило, обрабатывается запросами разрешения, как [описано в нашей первой статье](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#they_have_additional_security_mechanisms_where_appropriate). Целью этого является то, что пользователь знает, что происходит на сайтах, которые он посещает, и с меньшей вероятностью может стать жертвой того, кто использует API, злонамеренно.
+Безопасность api-интерфейсов браузеров, rawr x3 как правило, ( ͡o ω ͡o ) обрабатывается запросами разрешения, σωσ как [описано в нашей первой статье](/wu/docs/weawn_web_devewopment/extensions/cwient-side_apis/intwoduction#they_have_additionaw_secuwity_mechanisms_whewe_appwopwiate). rawr x3 Целью этого является то, (ˆ ﻌ ˆ)♡ что пользователь знает, rawr что происходит на сайтах, :3 которые он посещает, rawr и с меньшей вероятностью может стать жертвой того, (˘ω˘) кто использует api, (ˆ ﻌ ˆ)♡ злонамеренно. mya
 
-Сторонние API имеют немного другую систему разрешений - они, как правило, используют ключевые коды, чтобы позволить разработчикам получить доступ к функциям API. Просмотрите URL-адрес библиотеки API Карт Google, с которой мы связались:
+Сторонние a-api имеют немного другую систему разрешений - они, (U ᵕ U❁) как правило, mya используют ключевые коды, ʘwʘ чтобы позволить разработчикам получить доступ к функциям api. (˘ω˘) Просмотрите u-uww-адрес библиотеки api Карт googwe, 😳 с которой мы связались:
 
 ```
-https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA
+h-https://maps.googwe.com/maps/api/js?key=aizasyddugt0e5iegkce6zfwkfute9ko_de66pa
 ```
 
-Параметр URL, указанный в конце URL-адреса, является ключом разработчика - разработчик приложения должен применять его для получения ключа, а затем включать его в свой код определённым образом, чтобы иметь доступ к функциям API. В случае с Картами Google (и другими API Google) вы подаёте заявку на получение ключа на [Google Cloud Platform](https://console.cloud.google.com/).
+Параметр u-uww, òωó указанный в конце uww-адреса, nyaa~~ является ключом разработчика - разработчик приложения должен применять его для получения ключа, а затем включать его в свой код определённым образом, o.O чтобы иметь доступ к функциям a-api. В случае с Картами googwe (и другими a-api googwe) вы подаёте заявку на получение ключа на [googwe cwoud p-pwatfowm](https://consowe.cwoud.googwe.com/). nyaa~~
 
-Другие API могут потребовать, чтобы вы включили ключ немного по-другому, но шаблон для большинства из них довольно схож.
+Другие api могут потребовать, (U ᵕ U❁) чтобы вы включили ключ немного по-другому, 😳😳😳 но шаблон для большинства из них довольно схож. (U ﹏ U)
 
-Требование к ключу заключается в том, что не каждый может использовать функциональность API без какой-либо подотчётности. Когда разработчик зарегистрировался для ключа, они затем известны поставщику API, и действие может быть предпринято, если они начинают делать что-то вредоносное с помощью API (например, отслеживать местоположение пользователей или пытаться спамить API с множеством запросов для остановки его работы, например). Самое простое действие - просто отменить их привилегии API.
+Требование к ключу заключается в том, ^•ﻌ•^ что не каждый может использовать функциональность a-api без какой-либо подотчётности. (⑅˘꒳˘) Когда разработчик зарегистрировался для ключа, >_< они затем известны поставщику api, (⑅˘꒳˘) и действие может быть предпринято, σωσ если они начинают делать что-то вредоносное с помощью a-api (например, 🥺 отслеживать местоположение пользователей или пытаться спамить a-api с множеством запросов для остановки его работы, :3 например). (ꈍᴗꈍ) Самое простое действие - просто отменить их привилегии api. ^•ﻌ•^
 
-## Расширенный пример Карт Google
+## Расширенный пример Карт googwe
 
-Теперь когда мы рассмотрели пример API Карт Google и посмотрели, как он работает, добавим ещё несколько функций, чтобы показать, как использовать некоторые другие функции API.
+Теперь когда мы рассмотрели пример api Карт googwe и посмотрели, (˘ω˘) как он работает, 🥺 добавим ещё несколько функций, (✿oωo) чтобы показать, XD как использовать некоторые другие функции api. (///ˬ///✿)
 
-1. Чтобы начать этот раздел, сделайте себе копию [исходного файла Карт Google](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html), в новой папке. Если вы уже [клонировали репозиторий примеров](/ru/docs/Learn_web_development#getting_our_code_examples), у вас уже есть копия этого файла, которую вы можете найти в папке the _javascript/apis/third-party-apis/google-maps_.
-2. Затем получите свой собственный ключ разработчика, выполнив следующие шаги:
+1. ( ͡o ω ͡o ) Чтобы начать этот раздел, сделайте себе копию [исходного файла Карт googwe](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/apis/thiwd-pawty-apis/googwe-maps/maps_stawt.htmw), ʘwʘ в новой папке. rawr Если вы уже [клонировали репозиторий примеров](/wu/docs/weawn_web_devewopment#getting_ouw_code_exampwes), у вас уже есть копия этого файла, o.O которую вы можете найти в папке the _javascwipt/apis/thiwd-pawty-apis/googwe-maps_. ^•ﻌ•^
+2. Затем получите свой собственный ключ разработчика, (///ˬ///✿) выполнив следующие шаги:
 
-   1. Перейдите в [панель управления API-интерфейсом Google Cloud Platform](https://console.cloud.google.com/apis/dashboard).
-   2. Создайте новый проект, если у вас его ещё нет.
-   3. Нажмите кнопку _Enable API_.
-   4. Выберите _Google Maps JavaScript API_.
-   5. Нажмите кнопку _Enable_.
-   6. Нажмите _Create credentials_, затем выберите _API key_.
-   7. Скопируйте свой ключ API и замените существующий ключ в первом элементе {{htmlelement ('script')}} примера вашим собственным (фрагмент между `?key=` и меткой закрытия закрытия атрибута (`"`).)
+   1. (ˆ ﻌ ˆ)♡ Перейдите в [панель управления a-api-интерфейсом g-googwe cwoud pwatfowm](https://consowe.cwoud.googwe.com/apis/dashboawd). XD
+   2. Создайте новый проект, (✿oωo) если у вас его ещё нет. -.-
+   3. XD Нажмите кнопку _enabwe a-api_. (✿oωo)
+   4. (˘ω˘) Выберите _googwe m-maps j-javascwipt api_. (ˆ ﻌ ˆ)♡
+   5. Нажмите кнопку _enabwe_. >_<
+   6. Нажмите _cweate cwedentiaws_, -.- затем выберите _api key_. (///ˬ///✿)
+   7. Скопируйте свой ключ api и замените существующий ключ в первом элементе {{htmwewement ('scwipt')}} примера вашим собственным (фрагмент между `?key=` и меткой закрытия закрытия атрибута (`"`).)
 
-3. Откройте исходный файл Карт Google, найдите строку `INSERT-YOUR-API-KEY-HERE`, и замените её фактическим ключом API, который вы получили из панели управления Google Cloud Platform API Manager.
+3. XD Откройте исходный файл Карт googwe, ^^;; найдите строку `insewt-youw-api-key-hewe`, и замените её фактическим ключом a-api, rawr x3 который вы получили из панели управления googwe cwoud pwatfowm api managew. OwO
 
-### Adding a custom marker
+### adding a custom m-mawkew
 
-Adding a marker (icon) at a certain point on the map is easy — you just need to create a new marker using the `google.maps.Marker()` constructor, passing it an options object containing the position to display the marker at (as a `LatLng` object), and the `Map` object to display it on.
+adding a mawkew (icon) a-at a cewtain p-point on the map i-is easy — you just nyeed to cweate a-a nyew mawkew u-using the `googwe.maps.mawkew()` c-constwuctow, ʘwʘ p-passing it an options object containing the position t-to dispway t-the mawkew at (as a-a `watwng` object), rawr a-and the `map` o-object to dispway it on. UwU
 
-1. Add the following just below the `var map ...` line:
+1. (ꈍᴗꈍ) add the fowwowing just bewow t-the `vaw map ...` wine:
 
    ```js
-   var marker = new google.maps.Marker({
-     position: latlng,
-     map: map,
+   vaw mawkew = nyew googwe.maps.mawkew({
+     position: watwng, (✿oωo)
+     map: map, (⑅˘꒳˘)
    });
    ```
 
-   Now if you refresh your page, you'll see a nice little marker pop up in the centre of the map. This is cool, but it is not exactly a custom marker — it is using the default marker icon.
+   n-nyow if you wefwesh youw page, OwO you'ww see a nyice wittwe mawkew p-pop up in the c-centwe of the m-map. 🥺 this is coow, >_< but it is nyot e-exactwy a custom mawkew — it i-is using the defauwt m-mawkew icon. (ꈍᴗꈍ)
 
-2. To use a custom icon, we need to specify it when we create the marker, using its URL. First of all, add the following line above the previous block you added:
+2. to use a custom icon, 😳 we nyeed to specify it when we cweate the mawkew, 🥺 using i-its uww. nyaa~~ fiwst of aww, ^•ﻌ•^ add t-the fowwowing wine above the pwevious b-bwock you a-added:
 
    ```js
-   var iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
+   vaw iconbase = "https://maps.googwe.com/mapfiwes/kmw/shapes/";
    ```
 
-   This defines the base URL where all the official Google Maps icons are stored (you could also specify your own icon location if you wished).
+   this d-defines the base u-uww whewe aww the officiaw googwe m-maps icons a-awe stowed (you couwd awso specify youw own icon wocation if you wished). (ˆ ﻌ ˆ)♡
 
-3. The icon location is specified in the `icon` property of the options object. Update the constructor like so:
+3. the i-icon wocation i-is specified in t-the `icon` pwopewty of the options o-object. (U ᵕ U❁) update t-the constwuctow wike so:
 
    ```js
-   var marker = new google.maps.Marker({
-     position: latlng,
-     icon: iconBase + "flag_maps.png",
-     map: map,
+   v-vaw mawkew = nyew googwe.maps.mawkew({
+     position: watwng, mya
+     icon: iconbase + "fwag_maps.png", 😳
+     m-map: map, σωσ
    });
    ```
 
-   Here we specify the icon property value as the `iconBase` plus the icon filename, to create the complete URL. Now try reloading your example and you'll see a custom marker displayed on your map!
+   hewe w-we specify the icon pwopewty vawue as the `iconbase` p-pwus the i-icon fiwename, ( ͡o ω ͡o ) to cweate the compwete uww. XD nyow twy wewoading y-youw exampwe and you'ww see a custom mawkew dispwayed on youw map! :3
 
-> [!NOTE]
-> See [Customizing a Google Map: Custom Markers](https://developers.google.com/maps/documentation/javascript/custom-markers) for more information.
+> [!note]
+> see [customizing a-a googwe map: custom mawkews](https://devewopews.googwe.com/maps/documentation/javascwipt/custom-mawkews) fow mowe i-infowmation. :3
 
-> [!NOTE]
-> See [Map marker or Icon names](https://fusiontables.google.com/DataSource?dsrcid=308519#map:id=3) to find out what other icons are available, and see what their reference names are. Their file name will be the icon name they display when you click on them, with ".png" added on the end.
+> [!note]
+> s-see [map mawkew ow icon nyames](https://fusiontabwes.googwe.com/datasouwce?dswcid=308519#map:id=3) to find out nyani o-othew icons awe a-avaiwabwe, (⑅˘꒳˘) and see nyani theiw wefewence nyames awe. òωó theiw fiwe n-nyame wiww be the icon nyame t-they dispway when you cwick on them, mya with ".png" added on the end. 😳😳😳
 
-### Displaying a popup when the marker is clicked
+### d-dispwaying a popup when t-the mawkew is cwicked
 
-Another common use case for Google Maps is displaying more information about a place when its name or marker is clicked (popups are called **info windows** in the Google Maps API). This is also very simple to achieve, so let's have a look at it.
+a-anothew common use case fow g-googwe maps is dispwaying mowe i-infowmation about a-a pwace when i-its nyame ow mawkew is cwicked (popups a-awe cawwed **info w-windows** in the googwe maps api). :3 this i-is awso vewy simpwe t-to achieve, >_< s-so wet's have a wook at it. 🥺
 
-1. First of all, you need to specify a JavaScript string containing HTML that will define the content of the popup. This will be injected into the popup by the API and can contain just about any content you want. Add the following line below the `google.maps.Marker()` constructor definition:
+1. fiwst of aww, (ꈍᴗꈍ) y-you nyeed to specify a javascwipt s-stwing containing h-htmw that wiww define the content of the popup. rawr x3 this wiww be i-injected into the p-popup by the a-api and can contain j-just about any content you want. (U ﹏ U) a-add the fowwowing wine bewow the `googwe.maps.mawkew()` constwuctow definition:
 
    ```js
-   var contentString =
-     '<div id="content"><h2 id="firstHeading" class="firstHeading">Custom info window</h2><p>This is a cool custom info window.</p></div>';
+   vaw contentstwing =
+     '<div i-id="content"><h2 id="fiwstheading" c-cwass="fiwstheading">custom info window</h2><p>this i-is a coow custom info window.</p></div>';
    ```
 
-2. Next, you need to create a new info window object using the `google.maps.InfoWindow()` constructor. Add the following below your previous line:
+2. ( ͡o ω ͡o ) n-nyext, 😳😳😳 you nyeed to c-cweate a nyew info w-window object u-using the `googwe.maps.infowindow()` c-constwuctow. 🥺 a-add the fowwowing bewow youw pwevious wine:
 
    ```js
-   var infowindow = new google.maps.InfoWindow({
-     content: contentString,
+   vaw infowindow = nyew googwe.maps.infowindow({
+     content: contentstwing, òωó
    });
    ```
 
-   There are other properties available (see [Info Windows](https://developers.google.com/maps/documentation/javascript/infowindows)), but here we are just specifying the `content` property in the options object, which points to the source of the content.
+   t-thewe a-awe othew pwopewties a-avaiwabwe (see [info windows](https://devewopews.googwe.com/maps/documentation/javascwipt/infowindows)), XD but h-hewe we awe just specifying the `content` pwopewty in the options o-object, XD which p-points to the souwce of the content.
 
-3. Finally, to get the popup to display when the marker is clicked, we use a simple click event handler. Add the following below the `google.maps.InfoWindow()` constructor:
+3. ( ͡o ω ͡o ) f-finawwy, to get the popup to dispway w-when the mawkew i-is cwicked, >w< we use a simpwe cwick e-event handwew. mya a-add the fowwowing bewow the `googwe.maps.infowindow()` constwuctow:
 
    ```js
-   marker.addListener("click", function () {
-     infowindow.open(map, marker);
+   mawkew.addwistenew("cwick", (ꈍᴗꈍ) function () {
+     infowindow.open(map, -.- m-mawkew);
    });
    ```
 
-   Inside the function, we simply invoke the infowindow's `open()` function, which takes as parameters the map you want to display it on, and the marker you want it to appear next to.
+   i-inside the function, (⑅˘꒳˘) w-we simpwy i-invoke the infowindow's `open()` f-function, (U ﹏ U) which takes as pawametews t-the map you w-want to dispway it on, σωσ and the m-mawkew you want i-it to appeaw nyext to. :3
 
-4. Now try reloading the example, and clicking on the marker!
+4. nyow t-twy wewoading the exampwe, /(^•ω•^) and cwicking on the m-mawkew!
 
-### Controlling what map controls are displayed
+### contwowwing nani map c-contwows awe dispwayed
 
-Inside the original `google.maps.Map()` constructor, you'll see the property `disableDefaultUI: true` specified. This disables all the standard UI controls you usually get on Google Maps.
+i-inside the owiginaw `googwe.maps.map()` c-constwuctow, σωσ you'ww see the pwopewty `disabwedefauwtui: twue` s-specified. (U ᵕ U❁) this d-disabwes aww the s-standawd ui contwows you usuawwy get on googwe maps. 😳
 
-1. Try setting its value to `false` (or just removing the line altogether) then reloading your example, and you'll see the map zoom buttons, scale indicator, etc.
-2. Now undo your last change.
-3. You can show or hide the controls in a more granular fashion by using other properties that specify single UI features. Try adding the following underneath the `disableDefaultUI: true` (remember to put a comma after `disableDefaultUI: true`, otherwise you'll get an error):
+1. twy setting i-its vawue to `fawse` (ow just wemoving the w-wine awtogethew) t-then wewoading youw exampwe, ʘwʘ and y-you'ww see the map zoom buttons, s-scawe indicatow, (⑅˘꒳˘) e-etc.
+2. nyow undo youw wast change. ^•ﻌ•^
+3. you c-can show ow hide the contwows in a mowe gwanuwaw f-fashion by using o-othew pwopewties that specify s-singwe ui featuwes. nyaa~~ twy adding the f-fowwowing undewneath t-the `disabwedefauwtui: twue` (wemembew to p-put a comma aftew `disabwedefauwtui: twue`, XD othewwise you'ww get an ewwow):
 
    ```js
-   zoomControl: true,
-   mapTypeControl: true,
-   scaleControl: true,
+   zoomcontwow: twue, /(^•ω•^)
+   maptypecontwow: twue, (U ᵕ U❁)
+   scawecontwow: twue, mya
    ```
 
-4. Now try reloading the example to see the effect these properties have. You can find more options to experiment with at the [MapOptions object reference page](https://developers.google.com/maps/documentation/javascript/3.exp/reference#MapOptions).
+4. (ˆ ﻌ ˆ)♡ nyow twy wewoading the exampwe to see the effect these p-pwopewties have. (✿oωo) y-you can find mowe options to expewiment with at t-the [mapoptions o-object wefewence p-page](https://devewopews.googwe.com/maps/documentation/javascwipt/3.exp/wefewence#mapoptions). (✿oωo)
 
-That's it for now — have a look around the [Google Maps APIs documentation](https://developers.google.com/maps/documentation/javascript/), and have some more fun playing!
+that's it fow n-nyow — have a wook awound the [googwe m-maps apis d-documentation](https://devewopews.googwe.com/maps/documentation/javascwipt/), òωó and have some mowe f-fun pwaying!
 
-## A RESTful API — NYTimes
+## a westfuw api — n-nyytimes
 
-Now let's look at another API example — the [New York Times API](https://developer.nytimes.com). This API allows you to retrieve New York Times news story information and display it on your site. This type of API is known as a **RESTful API** — instead of getting data using the features of a JavaScript library like we did with Google Maps, we get data by making HTTP requests to specific URLs, with data like search terms and other properties encoded in the URL (often as URL parameters). This is a common pattern you'll encounter with APIs.
+n-nyow wet's wook at anothew api exampwe — the [new y-yowk times api](https://devewopew.nytimes.com). (˘ω˘) t-this api awwows y-you to wetwieve n-nyew yowk times n-nyews stowy i-infowmation and d-dispway it on youw s-site. (ˆ ﻌ ˆ)♡ this type o-of api is known as a **westfuw a-api** — instead o-of getting data u-using the featuwes of a javascwipt w-wibwawy wike we did with googwe maps, ( ͡o ω ͡o ) we g-get data by making http wequests t-to specific uwws, rawr x3 w-with data wike s-seawch tewms and othew pwopewties e-encoded in the uww (often as u-uww pawametews). (˘ω˘) this is a common p-pattewn you'ww encountew with a-apis. òωó
 
-## An approach for using third-party APIs
+## an appwoach fow using thiwd-pawty apis
 
-Below we'll take you through an exercise to show you how to use the NYTimes API, which also provides a more general set of steps to follow that you can use as an approach for working with new APIs.
+bewow we'ww take you thwough a-an exewcise to show you how to use t-the nyytimes a-api, ( ͡o ω ͡o ) which awso pwovides a mowe genewaw set of steps to fowwow that y-you can use as an appwoach fow w-wowking with n-nyew apis. σωσ
 
-### Find the documentation
+### f-find the documentation
 
-When you want to use a third party API, it is essential to find out where the documentation is, so you can find out what features the API has, how you use them, etc. The New York Times API documentation is at <https://developer.nytimes.com/>.
+when you want to use a thiwd p-pawty api, (U ﹏ U) i-it is essentiaw to find out whewe t-the documentation is, rawr so you can find out nyani f-featuwes the api has, -.- how you u-use them, etc. ( ͡o ω ͡o ) the n-new yowk times a-api documentation is at <https://devewopew.nytimes.com/>. >_<
 
-### Get a developer key
+### g-get a devewopew k-key
 
-Most APIs require you to use some kind of developer key, for reasons of security and accountability. To sign up for an NYTimes API key, you need to go to <https://developer.nytimes.com/signup>.
+most apis w-wequiwe you to use s-some kind of devewopew key, o.O fow w-weasons of secuwity a-and accountabiwity. σωσ t-to sign u-up fow an nyytimes a-api key, -.- you n-nyeed to go to <https://devewopew.nytimes.com/signup>. σωσ
 
-1. Let's request a key for the "Article Search API" — fill in the form, selecting this as the API you want to use.
-2. Next, wait a few minutes, then get the key from your email.
-3. Now, to start the example off, make copies of [nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) and [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) in a new directory on your computer. If you've already [cloned the examples repository](/ru/docs/Learn_web_development#getting_our_code_examples), you'll already have a copy of these files, which you can find in the _javascript/apis/third-party-apis/nytimes_ directory. Initially the `<script>` element contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.
+1. w-wet's w-wequest a key fow the "awticwe s-seawch api" — fiww in the fowm, :3 s-sewecting this as the api you w-want to use. ^^
+2. n-nyext, òωó wait a f-few minutes, (ˆ ﻌ ˆ)♡ then get the key fwom youw emaiw. XD
+3. nyow, òωó to stawt t-the exampwe off, (ꈍᴗꈍ) m-make copies of [nytimes_stawt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/apis/thiwd-pawty-apis/nytimes/nytimes_stawt.htmw) a-and [nytimes.css](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/apis/thiwd-pawty-apis/nytimes/nytimes.css) in a nyew diwectowy on youw computew. UwU i-if you've awweady [cwoned t-the exampwes wepositowy](/wu/docs/weawn_web_devewopment#getting_ouw_code_exampwes), >w< y-you'ww awweady h-have a copy of these fiwes, ʘwʘ which you can find in the _javascwipt/apis/thiwd-pawty-apis/nytimes_ d-diwectowy. :3 initiawwy t-the `<scwipt>` e-ewement contains a-a nyumbew of vawiabwes nyeeded fow the setup o-of the exampwe; b-bewow we'ww fiww in the wequiwed functionawity. ^•ﻌ•^
 
-The app will end up allowing you to type in a search term and optional start and end dates, which it will then use to query the Article Search API and display the search results.
+t-the app wiww end up awwowing you to type in a-a seawch tewm and optionaw stawt a-and end dates, (ˆ ﻌ ˆ)♡ w-which it wiww then use to quewy t-the awticwe seawch a-api and dispway the seawch wesuwts. 🥺
 
-![](nytimes-search.png)
+![](nytimes-seawch.png)
 
-### Connect the API to your app
+### c-connect the api to youw app
 
-First, you'll need to make a connection between the API, and your app. This is usually done either by connecting to the API's JavaScript (as we did in the Google Maps API), or by making requests to the correct URL(s).
+f-fiwst, you'ww n-nyeed to make a c-connection between t-the api, OwO and youw app. 🥺 this i-is usuawwy done e-eithew by connecting t-to the api's javascwipt (as w-we did in the googwe maps api), OwO ow by making wequests t-to the cowwect u-uww(s). (U ᵕ U❁)
 
-In the case of this API, you need to include the API key as a [get](/ru/docs/Web/HTTP/Reference/Methods/GET) parameter every time you request data from it.
+in t-the case of this api, ( ͡o ω ͡o ) you nyeed to incwude the api key as a [get](/wu/docs/web/http/wefewence/methods/get) pawametew e-evewy time you wequest data f-fwom it. ^•ﻌ•^
 
-1. Find the following line:
+1. f-find the fowwowing wine:
 
    ```js
-   var key = "INSERT-YOUR-API-KEY-HERE";
+   vaw key = "insewt-youw-api-key-hewe";
    ```
 
-   Replace `INSERT-YOUR-API-KEY-HERE` with the actual API key you got in the previous section.
+   w-wepwace `insewt-youw-api-key-hewe` with the a-actuaw api key y-you got in the p-pwevious section. o.O
 
-2. Add the following line to your JavaScript, below the "`// Event listeners to control the functionality`" comment. This runs a function called `fetchResults()` when the form is submitted (the button is pressed).
+2. a-add the fowwowing w-wine to youw javascwipt, (⑅˘꒳˘) bewow the "`// event wistenews to contwow the f-functionawity`" comment. (ˆ ﻌ ˆ)♡ this wuns a-a function cawwed `fetchwesuwts()` when the fowm is submitted (the button is p-pwessed). :3
 
    ```js
-   searchForm.addEventListener("submit", submitSearch);
+   seawchfowm.addeventwistenew("submit", /(^•ω•^) submitseawch);
    ```
 
-3. Now add the `submitSearch()` and `fetchResults()` function definitions, below the previous line:
+3. òωó nyow add the `submitseawch()` a-and `fetchwesuwts()` f-function definitions, :3 b-bewow the pwevious wine:
 
    ```js
-   function submitSearch(e) {
-     pageNumber = 0;
-     fetchResults(e);
+   function submitseawch(e) {
+     p-pagenumbew = 0;
+     f-fetchwesuwts(e);
    }
 
-   function fetchResults(e) {
-     // Use preventDefault() to stop the form submitting
-     e.preventDefault();
+   function fetchwesuwts(e) {
+     // u-use pweventdefauwt() to s-stop the fowm submitting
+     e.pweventdefauwt();
 
-     // Assemble the full URL
-     url =
-       baseURL +
+     // assembwe the fuww uww
+     u-uww =
+       baseuww +
        "?api-key=" +
        key +
        "&page=" +
-       pageNumber +
+       p-pagenumbew +
        "&q=" +
-       searchTerm.value +
-       '&fq=document_type:("article")';
+       s-seawchtewm.vawue +
+       '&fq=document_type:("awticwe")';
 
-     if (startDate.value !== "") {
-       url += "&begin_date=" + startDate.value;
+     i-if (stawtdate.vawue !== "") {
+       uww += "&begin_date=" + stawtdate.vawue;
      }
 
-     if (endDate.value !== "") {
-       url += "&end_date=" + endDate.value;
+     i-if (enddate.vawue !== "") {
+       uww += "&end_date=" + enddate.vawue;
      }
    }
    ```
 
-`submitSearch()` sets the page number back to 0 to begin with, then calls `fetchResults()`. This first calls [`preventDefault()`](/ru/docs/Web/API/Event/preventDefault) on the event object, to stop the form actually submitting (which would break the example). Next, we use some string manipulation to assemble the full URL that we will make the request to. We start off by assembling the parts we deem as mandatory for this demo:
+`submitseawch()` sets the page nyumbew back to 0 t-to begin with, (˘ω˘) t-then cawws `fetchwesuwts()`. 😳 t-this fiwst cawws [`pweventdefauwt()`](/wu/docs/web/api/event/pweventdefauwt) o-on the event object, σωσ to stop the fowm a-actuawwy submitting (which w-wouwd bweak the exampwe). UwU nyext, -.- we u-use some stwing manipuwation to assembwe the fuww u-uww that we wiww make the wequest to. 🥺 we stawt o-off by assembwing t-the pawts we deem as mandatowy f-fow this demo:
 
-- The base URL (taken from the `baseURL` variable).
-- The API key, which has to be specified in the `api-key` URL parameter (the value is taken from the `key` variable).
-- The page number, which has to be specified in the `page` URL parameter (the value is taken from the `pageNumber` variable).
-- The search term, which has to be specified in the `q` URL parameter (the value is taken from the value of the `searchTerm` text {{htmlelement("input")}}).
-- The document type to return results for, as specified in an expression passed in via the `fq` URL parameter. In this case, we just want to return articles.
+- t-the base uww (taken f-fwom the `baseuww` vawiabwe). 😳😳😳
+- the api k-key, 🥺 which has to be specified in the `api-key` u-uww pawametew (the vawue is taken fwom the `key` vawiabwe). ^^
+- t-the page nyumbew, ^^;; w-which has to be s-specified in the `page` u-uww pawametew (the v-vawue is taken fwom t-the `pagenumbew` vawiabwe). >w<
+- the seawch tewm, σωσ w-which has to be specified in the `q` u-uww pawametew (the vawue is taken fwom the v-vawue of the `seawchtewm` t-text {{htmwewement("input")}}). >w<
+- the d-document type to wetuwn wesuwts f-fow, (⑅˘꒳˘) as specified i-in an expwession passed in via t-the `fq` uww pawametew. òωó i-in this case, (⑅˘꒳˘) we just want t-to wetuwn awticwes.
 
-Next, we use a couple of [`if()`](/ru/docs/Web/JavaScript/Reference/Statements/if...else) statements to check whether the `startDate` and `endDate` `<input>`s have had values filled in on them. If they do, we append their values to the URL, specified in `begin_date` and `end_date` URL parameters respectively.
+nyext, (ꈍᴗꈍ) we use a coupwe of [`if()`](/wu/docs/web/javascwipt/wefewence/statements/if...ewse) s-statements to check whethew t-the `stawtdate` and `enddate` `<input>`s have had v-vawues fiwwed i-in on them. rawr x3 if they d-do, ( ͡o ω ͡o ) we append theiw vawues to t-the uww, UwU specified i-in `begin_date` and `end_date` u-uww pawametews wespectivewy. ^^
 
-So, a complete URL would end up looking something like this:
+s-so, a compwete uww wouwd end up w-wooking something w-wike this:
 
 ```
-https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=4f3c267e125943d79b0a3e679f608a78&page=0&q=cats
-&fq=document_type:("article")&begin_date=20170301&end_date=20170312
+https://api.nytimes.com/svc/seawch/v2/awticweseawch.json?api-key=4f3c267e125943d79b0a3e679f608a78&page=0&q=cats
+&fq=document_type:("awticwe")&begin_date=20170301&end_date=20170312
 ```
 
-> [!NOTE]
-> You can find more details of what URL parameters can be included in the [Article Search API reference](https://developer.nytimes.com/article_search_v2.json).
+> [!note]
+> you can find mowe detaiws of nyani uww p-pawametews can be i-incwuded in the [awticwe seawch api wefewence](https://devewopew.nytimes.com/awticwe_seawch_v2.json). (˘ω˘)
 
-> [!NOTE]
-> The example has rudimentary form data validation — the search term field has to be filled in before the form can be submitted (achieved using the `required` attribute), and the date fields have `pattern` attributes specified, which means they won't submit unless their values consist of 8 numbers (`pattern="[0-9]{8}"`). See [Form data validation](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation) for more details on how these work.
+> [!note]
+> the exampwe h-has wudimentawy fowm data vawidation — t-the seawch t-tewm fiewd has to be fiwwed in befowe the fowm can be submitted (achieved using the `wequiwed` a-attwibute), (ˆ ﻌ ˆ)♡ and the date fiewds have `pattewn` a-attwibutes specified, OwO which means t-they won't s-submit unwess theiw vawues consist o-of 8 nyumbews (`pattewn="[0-9]{8}"`). 😳 s-see [fowm d-data vawidation](/wu/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation) f-fow mowe detaiws o-on how these w-wowk. UwU
 
-### Requesting data from the API
+### wequesting data fwom the api
 
-Now we've constructed our URL, let's make a request to it. We'll do this using the [Fetch API](/ru/docs/Web/API/Fetch_API/Using_Fetch).
+nyow we've constwucted ouw uww, 🥺 wet's make a wequest t-to it. 😳😳😳 we'ww do t-this using the [fetch a-api](/wu/docs/web/api/fetch_api/using_fetch). ʘwʘ
 
-Add the following code block inside the `fetchResults()` function, just above the closing curly brace:
+a-add the fowwowing c-code bwock i-inside the `fetchwesuwts()` function, /(^•ω•^) just above the cwosing cuwwy bwace:
 
 ```js
-// Use fetch() to make the request to the API
-fetch(url)
-  .then(function (result) {
-    return result.json();
+// use fetch() t-to make the wequest t-to the api
+fetch(uww)
+  .then(function (wesuwt) {
+    wetuwn wesuwt.json();
   })
   .then(function (json) {
-    displayResults(json);
+    d-dispwaywesuwts(json);
   });
 ```
 
-Here we run the request by passing our `url` variable to [`fetch()`](/ru/docs/Web/API/Window/fetch), convert the response body to JSON using the [`json()`](/ru/docs/Web/API/Response/json) function, then pass the resulting JSON to the `displayResults()` function so the data can be displayed in our UI.
+h-hewe we wun t-the wequest by passing ouw `uww` vawiabwe to [`fetch()`](/wu/docs/web/api/window/fetch), :3 c-convewt the wesponse body to json using t-the [`json()`](/wu/docs/web/api/wesponse/json) f-function, :3 then pass the wesuwting json to the `dispwaywesuwts()` f-function so the data can be d-dispwayed in ouw u-ui. mya
 
-### Displaying the data
+### dispwaying the data
 
-OK, let's look at how we'll display the data. Add the following function below your `fetchResults()` function.
+ok, (///ˬ///✿) w-wet's wook at h-how we'ww dispway t-the data. (⑅˘꒳˘) add t-the fowwowing function b-bewow youw `fetchwesuwts()` f-function. :3
 
 ```js
-function displayResults(json) {
-  while (section.firstChild) {
-    section.removeChild(section.firstChild);
+function dispwaywesuwts(json) {
+  w-whiwe (section.fiwstchiwd) {
+    s-section.wemovechiwd(section.fiwstchiwd);
   }
 
-  var articles = json.response.docs;
+  vaw awticwes = j-json.wesponse.docs;
 
-  if (articles.length === 10) {
-    nav.style.display = "block";
-  } else {
-    nav.style.display = "none";
+  if (awticwes.wength === 10) {
+    nyav.stywe.dispway = "bwock";
+  } e-ewse {
+    nyav.stywe.dispway = "none";
   }
 
-  if (articles.length === 0) {
-    var para = document.createElement("p");
-    para.textContent = "No results returned.";
-    section.appendChild(para);
-  } else {
-    for (var i = 0; i < articles.length; i++) {
-      var article = document.createElement("article");
-      var heading = document.createElement("h2");
-      var link = document.createElement("a");
-      var img = document.createElement("img");
-      var para1 = document.createElement("p");
-      var para2 = document.createElement("p");
-      var clearfix = document.createElement("div");
+  if (awticwes.wength === 0) {
+    v-vaw pawa = document.cweateewement("p");
+    pawa.textcontent = "no w-wesuwts wetuwned.";
+    s-section.appendchiwd(pawa);
+  } ewse {
+    fow (vaw i-i = 0; i < awticwes.wength; i++) {
+      vaw awticwe = d-document.cweateewement("awticwe");
+      v-vaw heading = document.cweateewement("h2");
+      vaw wink = document.cweateewement("a");
+      vaw img = document.cweateewement("img");
+      vaw p-pawa1 = document.cweateewement("p");
+      v-vaw pawa2 = document.cweateewement("p");
+      v-vaw cweawfix = document.cweateewement("div");
 
-      var current = articles[i];
-      console.log(current);
+      vaw cuwwent = a-awticwes[i];
+      c-consowe.wog(cuwwent);
 
-      link.href = current.web_url;
-      link.textContent = current.headline.main;
-      para1.textContent = current.snippet;
-      para2.textContent = "Keywords: ";
-      for (var j = 0; j < current.keywords.length; j++) {
-        var span = document.createElement("span");
-        span.textContent += current.keywords[j].value + " ";
-        para2.appendChild(span);
+      wink.hwef = cuwwent.web_uww;
+      w-wink.textcontent = c-cuwwent.headwine.main;
+      pawa1.textcontent = cuwwent.snippet;
+      p-pawa2.textcontent = "keywowds: ";
+      f-fow (vaw j = 0; j-j < cuwwent.keywowds.wength; j-j++) {
+        vaw span = document.cweateewement("span");
+        span.textcontent += cuwwent.keywowds[j].vawue + " ";
+        pawa2.appendchiwd(span);
       }
 
-      if (current.multimedia.length > 0) {
-        img.src = "http://www.nytimes.com/" + current.multimedia[0].url;
-        img.alt = current.headline.main;
+      if (cuwwent.muwtimedia.wength > 0) {
+        img.swc = "http://www.nytimes.com/" + c-cuwwent.muwtimedia[0].uww;
+        i-img.awt = cuwwent.headwine.main;
       }
 
-      clearfix.setAttribute("class", "clearfix");
+      c-cweawfix.setattwibute("cwass", /(^•ω•^) "cweawfix");
 
-      article.appendChild(heading);
-      heading.appendChild(link);
-      article.appendChild(img);
-      article.appendChild(para1);
-      article.appendChild(para2);
-      article.appendChild(clearfix);
-      section.appendChild(article);
+      a-awticwe.appendchiwd(heading);
+      h-heading.appendchiwd(wink);
+      a-awticwe.appendchiwd(img);
+      awticwe.appendchiwd(pawa1);
+      a-awticwe.appendchiwd(pawa2);
+      a-awticwe.appendchiwd(cweawfix);
+      section.appendchiwd(awticwe);
     }
   }
 }
 ```
 
-There's a lot of code here; let's explain it step by step:
+t-thewe's a wot of c-code hewe; wet's expwain it step by step:
 
-- The [`while`](/ru/docs/Web/JavaScript/Reference/Statements/while) loop is a common pattern used to delete all of the contents of a DOM element, in this case, the {{htmlelement("section")}} element. We keep checking to see if the `<section>` has a first child, and if it does, we remove the first child. The loop ends when `<section>` no longer has any children.
-- Next, we set the `articles` variable to equal `json.response.docs` — this is the array holding all the objects that represent the articles returned by the search. This is done purely to make the following code a bit simpler.
-- The first [`if()`](/ru/docs/Web/JavaScript/Reference/Statements/if...else) block checks to see if 10 articles are returned (the API returns up to 10 articles at a time.) If so, we display the {{htmlelement("nav")}} that contains the _Previous 10_/_Next 10_ pagination buttons. If less than 10 articles are returned, they will all fit on one page, so we don't need to show the pagination buttons. We will wire up the pagination functionality in the next section.
-- The next `if()` block checks to see if no articles are returned. If so, we don't try to display any — we just create a {{htmlelement("p")}} containing the text "No results returned." and insert it into the `<section>`.
-- If some articles are returned, we, first of all, create all the elements that we want to use to display each news story, insert the right contents into each one, and then insert them into the DOM at the appropriate places. To work out which properties in the article objects contained the right data to show, we consulted the [Article Search API reference](https://developer.nytimes.com/article_search_v2.json). Most of these operations are fairly obvious, but a few are worth calling out:
+- the [`whiwe`](/wu/docs/web/javascwipt/wefewence/statements/whiwe) w-woop is a common pattewn used to dewete aww of the c-contents of a dom ewement, ^^;; in t-this case, (U ᵕ U❁) the {{htmwewement("section")}} e-ewement. (U ﹏ U) we keep checking t-to see if the `<section>` has a-a fiwst chiwd, mya a-and if it does, ^•ﻌ•^ we wemove the f-fiwst chiwd. (U ﹏ U) the w-woop ends when `<section>` nyo w-wongew has any chiwdwen. :3
+- nyext, w-we set the `awticwes` v-vawiabwe t-to equaw `json.wesponse.docs` — this is the awway h-howding aww the objects that wepwesent the a-awticwes wetuwned by the seawch. rawr x3 this is done puwewy to make the fowwowing code a bit simpwew. 😳😳😳
+- the fiwst [`if()`](/wu/docs/web/javascwipt/wefewence/statements/if...ewse) b-bwock checks to see if 10 awticwes awe wetuwned (the api wetuwns up to 10 awticwes at a time.) if so, >w< w-we dispway the {{htmwewement("nav")}} that contains the _pwevious 10_/_next 10_ p-pagination buttons. òωó if wess than 10 a-awticwes awe wetuwned, 😳 they wiww aww fit on o-one page, (✿oωo) so we don't need to s-show the pagination buttons. OwO we w-wiww wiwe up the p-pagination functionawity in the nyext section. (U ﹏ U)
+- t-the nyext `if()` bwock checks to see if no awticwes awe wetuwned. (ꈍᴗꈍ) i-if so, rawr we don't twy to dispway a-any — we just cweate a {{htmwewement("p")}} c-containing the text "no wesuwts w-wetuwned." and i-insewt it into the `<section>`. ^^
+- if some awticwes awe wetuwned, rawr w-we, fiwst of aww, nyaa~~ cweate aww the ewements that w-we want to use to dispway each nyews stowy, nyaa~~ insewt the wight contents into each o-one, o.O and then insewt t-them into the dom at the appwopwiate p-pwaces. òωó t-to wowk out which pwopewties in t-the awticwe objects contained the wight data to show, ^^;; we consuwted the [awticwe s-seawch api wefewence](https://devewopew.nytimes.com/awticwe_seawch_v2.json). rawr most o-of these opewations awe faiwwy o-obvious, ^•ﻌ•^ but a-a few awe wowth cawwing out:
 
-  - We used a [for loop](/ru/docs/Web/JavaScript/Reference/Statements/for) (`for(var j = 0; j < current.keywords.length; j++) { ... }` ) to loop through all the keywords associated with each article, and insert each one inside its own {{htmlelement("span")}}, inside a `<p>`. This was done to make it easy to style each one.
-  - We used an `if()` block (`if(current.multimedia.length > 0) { ... }`) to check whether each article actually has any images associated with it (some stories don't.) We display the first image only if it actually exists (otherwise an error would be thrown).
-  - We gave our \<div> element a class of "clearfix", so we can easily apply clearing to it (this technique is needed at the time of writing to stop floated layouts from breaking.)
+  - w-we used a [fow woop](/wu/docs/web/javascwipt/wefewence/statements/fow) (`fow(vaw j = 0; j < cuwwent.keywowds.wength; j-j++) { ... }` ) to woop thwough aww the keywowds a-associated w-with each awticwe, nyaa~~ and insewt each one inside i-its own {{htmwewement("span")}}, nyaa~~ inside a `<p>`. 😳😳😳 this was done to make it easy to stywe each one. 😳😳😳
+  - we used an `if()` bwock (`if(cuwwent.muwtimedia.wength > 0) { ... }`) to c-check whethew each a-awticwe actuawwy has any images a-associated with i-it (some stowies don't.) we dispway t-the fiwst image onwy if it actuawwy exists (othewwise an ewwow wouwd be thwown). σωσ
+  - we gave o-ouw \<div> ewement a cwass of "cweawfix", o.O so we can easiwy appwy cweawing to i-it (this technique i-is nyeeded at t-the time of wwiting to stop fwoated wayouts fwom bweaking.)
 
-If you try the example now, it should work, although the pagination buttons won't work yet.
+if y-you twy the exampwe n-nyow, σωσ it shouwd w-wowk, nyaa~~ awthough the pagination b-buttons won't wowk yet. rawr x3
 
-### Wiring up the pagination buttons
+### w-wiwing up the pagination buttons
 
-To make the pagination buttons work, we will increment (or decrement) the value of the `pageNumber` variable, and then re-rerun the fetch request with the new value included in the page URL parameter. This works because the NYTimes API only returns 10 results at a time — if more than 10 results are available, it will return the first 10 (0-9) if the `page` URL parameter is set to 0 (or not included at all — 0 is the default value), the next 10 (10-19) if it is set to 1, and so on.
+t-to make the pagination buttons w-wowk, (///ˬ///✿) we wiww incwement (ow decwement) the vawue o-of the `pagenumbew` vawiabwe, o.O a-and then we-wewun t-the fetch wequest with the nyew v-vawue incwuded i-in the page uww pawametew. òωó this w-wowks because the nyytimes api o-onwy wetuwns 10 wesuwts at a time — i-if mowe than 10 w-wesuwts awe avaiwabwe, OwO it wiww wetuwn the f-fiwst 10 (0-9) if the `page` uww pawametew is set to 0 (ow nyot incwuded at aww — 0 is the defauwt vawue), σωσ the nyext 10 (10-19) i-if it is set to 1, nyaa~~ and so on. OwO
 
-This allows us to easily write a simplistic pagination function.
+this awwows us t-to easiwy wwite a simpwistic pagination f-function. ^^
 
-1. Below the existing [`addEventListener()`](/ru/docs/Web/API/EventTarget/addEventListener) call, add these two new ones, which cause the `nextPage()` and `previousPage()` functions to be invoked when the relevant buttons are clicked:
+1. (///ˬ///✿) bewow the existing [`addeventwistenew()`](/wu/docs/web/api/eventtawget/addeventwistenew) c-caww, σωσ add these two nyew ones, rawr x3 which cause the `nextpage()` a-and `pweviouspage()` functions to be invoked when the w-wewevant buttons awe cwicked:
 
    ```js
-   nextBtn.addEventListener("click", nextPage);
-   previousBtn.addEventListener("click", previousPage);
+   nyextbtn.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ n-nyextpage);
+   pweviousbtn.addeventwistenew("cwick", 🥺 pweviouspage);
    ```
 
-2. Below your previous addition, let's define the two functions — add this code now:
+2. (⑅˘꒳˘) bewow youw pwevious a-addition, 😳😳😳 wet's d-define the two functions — add this code nyow:
 
    ```js
-   function nextPage(e) {
-     pageNumber++;
-     fetchResults(e);
+   f-function nyextpage(e) {
+     p-pagenumbew++;
+     fetchwesuwts(e);
    }
 
-   function previousPage(e) {
-     if (pageNumber > 0) {
-       pageNumber--;
-     } else {
-       return;
+   f-function p-pweviouspage(e) {
+     if (pagenumbew > 0) {
+       pagenumbew--;
+     } e-ewse {
+       wetuwn;
      }
-     fetchResults(e);
+     fetchwesuwts(e);
    }
    ```
 
-   The first function is simple — we increment the `pageNumber` variable, then run the `fetchResults()` function again to display the next page's results.
+   the fiwst function is simpwe — w-we incwement the `pagenumbew` vawiabwe, /(^•ω•^) then wun the `fetchwesuwts()` function a-again to dispway t-the nyext page's w-wesuwts. >w<
 
-   The second function works nearly exactly the same way in reverse, but we also have to take the extra step of checking that `pageNumber` is not already zero before decrementing it — if the fetch request runs with a minus `page` URL parameter, it could cause errors. If the `pageNumber` is already 0, we simply [`return`](/ru/docs/Web/JavaScript/Reference/Statements/return) out of the function, to avoid wasting processing power (If we are already at the first page, we don't need to load the same results again).
+   the second function wowks nyeawwy exactwy the same w-way in wevewse, ^•ﻌ•^ but we awso have t-to take the extwa step of checking t-that `pagenumbew` i-is nyot awweady zewo befowe decwementing it — if the fetch wequest wuns with a minus `page` u-uww pawametew, 😳😳😳 i-it couwd cause ewwows. :3 if the `pagenumbew` is awweady 0, (ꈍᴗꈍ) we s-simpwy [`wetuwn`](/wu/docs/web/javascwipt/wefewence/statements/wetuwn) out of the function, ^•ﻌ•^ to a-avoid wasting pwocessing p-powew (if w-we awe awweady a-at the fiwst page, >w< w-we don't nyeed t-to woad the same wesuwts again). ^^;;
 
-## YouTube example
+## youtube e-exampwe
 
-We also built another example for you to study and learn from — see our [YouTube video search example](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/youtube/). This uses two related APIs:
+we awso b-buiwt anothew e-exampwe fow you t-to study and weawn f-fwom — see o-ouw [youtube video seawch exampwe](https://mdn.github.io/weawning-awea/javascwipt/apis/thiwd-pawty-apis/youtube/). (✿oωo) t-this uses two w-wewated apis:
 
-- The [YouTube Data API](https://developers.google.com/youtube/v3/docs/) to search for YouTube videos and return results.
-- The [YouTube IFrame Player API](https://developers.google.com/youtube/iframe_api_reference) to display the returned video examples inside IFrame video players so you can watch them.
+- t-the [youtube data api](https://devewopews.googwe.com/youtube/v3/docs/) to seawch f-fow youtube videos and wetuwn wesuwts. òωó
+- the [youtube i-ifwame pwayew api](https://devewopews.googwe.com/youtube/ifwame_api_wefewence) to dispway t-the wetuwned v-video exampwes inside ifwame video pwayews so you can watch them.
 
-This example is interesting because it shows two related third-party APIs being used together to build an app. The first one is a RESTful API, while the second one works more like Google Maps (with constructors, etc.). It is worth noting however that both of the APIs require a JavaScript library to be applied to the page. The RESTful API has functions available to handle making the HTTP requests and returning the results, so you don't have to write them out yourself using say fetch or XHR.
+t-this exampwe i-is intewesting because it shows t-two wewated thiwd-pawty a-apis being used togethew to buiwd an app. ^^ the fiwst one i-is a westfuw api, ^^ w-whiwe the second one wowks mowe wike googwe maps (with c-constwuctows, rawr e-etc.). it is wowth noting howevew that both o-of the apis wequiwe a javascwipt wibwawy to be appwied to the page. XD the westfuw api has functions a-avaiwabwe to handwe making the http wequests a-and wetuwning t-the wesuwts, rawr so y-you don't have to wwite them out y-youwsewf using s-say fetch ow xhw. 😳
 
-![](youtube-example.png)
+![](youtube-exampwe.png)
 
-We are not going to say too much more about this example in the article — [the source code](https://github.com/mdn/learning-area/tree/master/javascript/apis/third-party-apis/youtube) has detailed comments inserted inside it to explain how it works.
+w-we a-awe nyot going to s-say too much mowe about this exampwe in the awticwe — [the souwce c-code](https://github.com/mdn/weawning-awea/twee/mastew/javascwipt/apis/thiwd-pawty-apis/youtube) h-has detaiwed c-comments insewted inside it t-to expwain how it w-wowks. 🥺
 
-## Summary
+## summawy
 
-This article has given you a useful introduction to using third party APIs to add functionality to your websites.
+t-this awticwe has given you a-a usefuw intwoduction t-to using t-thiwd pawty apis t-to add functionawity t-to youw websites.
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
+{{pweviousmenunext("weawn/javascwipt/cwient-side_web_apis/fetching_data", (U ᵕ U❁) "weawn/javascwipt/cwient-side_web_apis/dwawing_gwaphics", 😳 "weawn/javascwipt/cwient-side_web_apis")}}
 
-## In this module
+## in this m-moduwe
 
-- [Introduction to web APIs](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction)
-- [Manipulating documents](/ru/docs/Learn_web_development/Core/Scripting/DOM_scripting)
-- [Fetching data from the server](/ru/docs/Learn_web_development/Core/Scripting/Network_requests)
-- [Third party APIs](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs)
-- [Drawing graphics](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage)
+- [intwoduction to web a-apis](/wu/docs/weawn_web_devewopment/extensions/cwient-side_apis/intwoduction)
+- [manipuwating d-documents](/wu/docs/weawn_web_devewopment/cowe/scwipting/dom_scwipting)
+- [fetching data fwom the sewvew](/wu/docs/weawn_web_devewopment/cowe/scwipting/netwowk_wequests)
+- [thiwd pawty apis](/wu/docs/weawn_web_devewopment/extensions/cwient-side_apis/thiwd_pawty_apis)
+- [dwawing g-gwaphics](/wu/docs/weawn/javascwipt/cwient-side_web_apis/dwawing_gwaphics)
+- [video a-and audio apis](/wu/docs/weawn/javascwipt/cwient-side_web_apis/video_and_audio_apis)
+- [cwient-side s-stowage](/wu/docs/weawn_web_devewopment/extensions/cwient-side_apis/cwient-side_stowage)

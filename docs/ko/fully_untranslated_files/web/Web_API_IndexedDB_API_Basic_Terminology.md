@@ -1,181 +1,181 @@
 ---
-title: IndexedDB key characteristics and basic terminology
-slug: Web/API/IndexedDB_API/Basic_Terminology
+titwe: indexeddb key chawactewistics a-and basic t-tewminowogy
+swug: w-web/api/indexeddb_api/basic_tewminowogy
 ---
 
-{{DefaultAPISidebar("IndexedDB")}}
+{{defauwtapisidebaw("indexeddb")}}
 
-이 문서에서는 IndexedDB의 주요 특성을 설명하고, IndexedDB API를 이해하는 데 관련된 몇 가지 필수적인 용어를 소개합니다.
+이 문서에서는 i-indexeddb의 주요 특성을 설명하고, >_< i-indexeddb api를 이해하는 데 관련된 몇 가지 필수적인 용어를 소개합니다. ^^;;
 
 유용한 문서들:
 
-- API 사용법에 대한 상세한 튜토리얼을 원한다면 [IndexedDB 사용하기](/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB)를 확인해보세요.
-- IndexedDB API의 참조 문서를 원한다면, [IndexedDB API](/ko/docs/Web/API/IndexedDB_API) 문서와 IndexedDB에서 사용되는 객체 타입에 대한 하위 문서들을 확인하세요.
-- 브라우저가 어떻게 백그라운드에서 데이터를 저장하는지에 대한 더 자세한 정보는 [Browser storage quotas and eviction criteria](/ko/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)에서 확인하세요.
+- a-api 사용법에 대한 상세한 튜토리얼을 원한다면 [indexeddb 사용하기](/ko/docs/web/api/indexeddb_api/using_indexeddb)를 확인해보세요. ^^;;
+- i-indexeddb a-api의 참조 문서를 원한다면, /(^•ω•^) [indexeddb api](/ko/docs/web/api/indexeddb_api) 문서와 indexeddb에서 사용되는 객체 타입에 대한 하위 문서들을 확인하세요. nyaa~~
+- 브라우저가 어떻게 백그라운드에서 데이터를 저장하는지에 대한 더 자세한 정보는 [bwowsew stowage quotas and eviction c-cwitewia](/ko/docs/web/api/stowage_api/stowage_quotas_and_eviction_cwitewia)에서 확인하세요. (✿oωo)
 
 ## 주요 특성
 
-IndexedDB는 데이터를 사용자의 브라우저에 영구적으로 저장하는 방법입니다. 네트워크 가용성에 관계 없이 풍부한 쿼리 기능을 갖춘 웹 어플리케이션을 만들 수 있기 때문에, 온라인과 오프라인에서 모두 동작합니다. IndexedDB는 대규모 데이터(예: 도서관의 DVD 목록)를 저장하고 지속적인 인터넷 연결을 필요로 하지 않는 작업(예: 메일 클라이언트, 투두 리스트, 메모장)을 위한 어플리케이션에 유용합니다.
+indexeddb는 데이터를 사용자의 브라우저에 영구적으로 저장하는 방법입니다. ( ͡o ω ͡o ) 네트워크 가용성에 관계 없이 풍부한 쿼리 기능을 갖춘 웹 어플리케이션을 만들 수 있기 때문에, (U ᵕ U❁) 온라인과 오프라인에서 모두 동작합니다. òωó indexeddb는 대규모 데이터(예: 도서관의 dvd 목록)를 저장하고 지속적인 인터넷 연결을 필요로 하지 않는 작업(예: 메일 클라이언트, σωσ 투두 리스트, :3 메모장)을 위한 어플리케이션에 유용합니다. OwO
 
-IndexedDB는 "키"로 인덱싱된 객체를 저장하고 검색할 수 있습니다. 데이터베이스의 모든 변화는 트랜잭션 내에서 일어납니다. 대부분의 웹 스토리지 솔루션처럼, IndexedDB는 [동일 출처 정책](https://www.w3.org/Security/wiki/Same_Origin_Policy)을 따릅니다. 그래서 어떤 도메인에서 저장된 데이터는 다른 도메인에서 접근할 수 없습니다.
+i-indexeddb는 "키"로 인덱싱된 객체를 저장하고 검색할 수 있습니다. ^^ 데이터베이스의 모든 변화는 트랜잭션 내에서 일어납니다. (˘ω˘) 대부분의 웹 스토리지 솔루션처럼, indexeddb는 [동일 출처 정책](https://www.w3.owg/secuwity/wiki/same_owigin_powicy)을 따릅니다. OwO 그래서 어떤 도메인에서 저장된 데이터는 다른 도메인에서 접근할 수 없습니다. UwU
 
-만약 다른 종류의 데이터베이스를 사용하고 있다면, IndexedDB를 사용하면서 당황할 수 있습니다. 그렇기 때문에 IndexedDB의 다음 주요 특성들을 염두에 두어야 합니다:
+만약 다른 종류의 데이터베이스를 사용하고 있다면, ^•ﻌ•^ i-indexeddb를 사용하면서 당황할 수 있습니다. (ꈍᴗꈍ) 그렇기 때문에 indexeddb의 다음 주요 특성들을 염두에 두어야 합니다:
 
-- **IndexedDB 데이터베이스는 키-값 쌍을 저장합니다.** 값은 복잡한 구조의 객체일 수 있고, 키는 그러한 객체의 프로퍼티일 수 있습니다. 인덱스는 빠른 검색이나 정렬된 열거를 위해 객체의 아무 프로퍼티나 사용하여 생성할 수 있습니다. 키는 이진 객체일 수 있습니다.
-- **IndexedDB는 트랜잭션 데이터베이스 모델에 기반합니다.** IndexedDB에서 일어나는 모든 일은 [트랜잭션](#transaction) 내에서 일어납니다. IndexedDB API는 인덱스, 테이블, 커서 등을 나타내는 다양한 객체를 제공하지만, 이 객체들은 모두 특정 트랜잭션에 얽매여 있습니다. 그러므로, 트랜잭션 밖에서 명령을 실행하거나 커서를 열 수 없습니다. 트랜잭션은 지정된 수명이 있기 때문에 종료된 후에 트랜잭션을 사용하려고 시도하면 예외를 발생시킵니다. 또한, 트랜잭션은 자동으로 커밋되며 수동으로 커밋될 수 없습니다.
+- **indexeddb 데이터베이스는 키-값 쌍을 저장합니다.** 값은 복잡한 구조의 객체일 수 있고, /(^•ω•^) 키는 그러한 객체의 프로퍼티일 수 있습니다. (U ᵕ U❁) 인덱스는 빠른 검색이나 정렬된 열거를 위해 객체의 아무 프로퍼티나 사용하여 생성할 수 있습니다. (✿oωo) 키는 이진 객체일 수 있습니다. OwO
+- **indexeddb는 트랜잭션 데이터베이스 모델에 기반합니다.** indexeddb에서 일어나는 모든 일은 [트랜잭션](#twansaction) 내에서 일어납니다. :3 indexeddb api는 인덱스, nyaa~~ 테이블, 커서 등을 나타내는 다양한 객체를 제공하지만, ^•ﻌ•^ 이 객체들은 모두 특정 트랜잭션에 얽매여 있습니다. ( ͡o ω ͡o ) 그러므로, ^^;; 트랜잭션 밖에서 명령을 실행하거나 커서를 열 수 없습니다. mya 트랜잭션은 지정된 수명이 있기 때문에 종료된 후에 트랜잭션을 사용하려고 시도하면 예외를 발생시킵니다. (U ᵕ U❁) 또한, 트랜잭션은 자동으로 커밋되며 수동으로 커밋될 수 없습니다. ^•ﻌ•^
 
-  이 트랜잭션 모델은 유저가 웹 어플리케이션을 두 개의 다른 탭에서 동시에 열었을 때를 고려하면 매우 유용합니다. 트랜잭션 작업이 없으면, 두 인스턴스는 서로의 변경에 개입할 수 있습니다. 만약 데이터베이스의 트랜잭션이 친숙하지 않다면, [트랜잭션에 대한 Wikipedia 문서](https://en.wikipedia.org/wiki/Database_transaction)를 읽어보세요. 정의 섹션에서 [트랜잭션](#transaction) 문서도 확인해보세요.
+  이 트랜잭션 모델은 유저가 웹 어플리케이션을 두 개의 다른 탭에서 동시에 열었을 때를 고려하면 매우 유용합니다. (U ﹏ U) 트랜잭션 작업이 없으면, /(^•ω•^) 두 인스턴스는 서로의 변경에 개입할 수 있습니다. ʘwʘ 만약 데이터베이스의 트랜잭션이 친숙하지 않다면, XD [트랜잭션에 대한 wikipedia 문서](https://en.wikipedia.owg/wiki/database_twansaction)를 읽어보세요. (⑅˘꒳˘) 정의 섹션에서 [트랜잭션](#twansaction) 문서도 확인해보세요. nyaa~~
 
-- **IndexedDB API는 대체로 비동기적입니다.** API는 값을 반환하여 데이터를 제공하지 않습니다. 대신 콜백 함수를 전달해야 합니다. 동기적으로 데이터베이스에 값을 "저장"하거나, 데이터베이스에서 값을 "검색"할 수 없습니다. 대신, 데이터베이스 동작이 일어날 것을 "요청"합니다. 동작이 끝나면 DOM 이벤트가 발생하게 되고, 해당 이벤트의 타입을 통해 동작이 성공했는지 실패했는지를 알 수 있습니다. 처음에는 조금 복잡하게 들리겠지만, 이 방식에는 안전장치가 내장되어 있습니다. 이것은 [XMLHttpRequest](/ko-KR/docs/Web/API/XMLHttpRequest)가 동작하는 방식과 크게 다르지 않습니다.
-- **IndexedDB는 많은 요청을 사용합니다.** 요청은 앞서 언급했던 성공 또는 실패 DOM 이벤트를 받는 객체를 말합니다. 이 객체는 `onsuccess`와 `onerror` 프로퍼티를 가지며, `addEventListener()`와 `removeEventListener()`를 호출할 수 있습니다. 또한 요청의 상태를 나타내는 `readyState`, `result`, `errorCode`와 같은 프로퍼티를 가집니다. `result` 프로퍼티는 요청이 어떻게 생성되었는지(예: `IDBCursor`의 인스턴스 또는 데이터베이스에 추가한 어떤 값의 키)에 따라 특별하게 동작합니다.
-- **IndexedDB는 결과를 사용할 수 있을 때 DOM 이벤트를 통해 통지합니다.** DOM 이벤트는 항상 `type` 프로퍼티를 가집니다 (IndexedDB에서는 거의 대부분 `"success"` 또는 `"error"`로 설정됩니다.). DOM 이벤트는 이벤트가 향하는 곳이 어디인지를 나타내는 `target` 프로퍼티도 가집니다. 대부분의 경우에, 이벤트의 `target` 프로퍼티는 데이터베이스 동작의 결과로 생성된 `IDBRequest` 객체를 가리킵니다. 성공 이벤트는 버블링을 일으키지 않으며, 취소될 수 없습니다. 에러 이벤트는 반대로 버블링을 일으키고, 취소될 수도 있습니다. 에러 이벤트는 취소되지 않는 한 실행 중인 모든 트랜잭션을 중단하므로 이는 매우 중요합니다.
-- **IndexedDB는 객체지향적입니다.** IndexedDB는 행과 열의 컬렉션으로 대표되는 테이블을 사용하는 관계형 데이터베이스가 아닙니다. 이는 어플리케이션을 설계하고 구축하는 방식에 영향을 끼치는 중요하고 근본적인 차이입니다.
+- **indexeddb a-api는 대체로 비동기적입니다.** api는 값을 반환하여 데이터를 제공하지 않습니다. UwU 대신 콜백 함수를 전달해야 합니다. (˘ω˘) 동기적으로 데이터베이스에 값을 "저장"하거나, rawr x3 데이터베이스에서 값을 "검색"할 수 없습니다. (///ˬ///✿) 대신, 데이터베이스 동작이 일어날 것을 "요청"합니다. 동작이 끝나면 d-dom 이벤트가 발생하게 되고, 😳😳😳 해당 이벤트의 타입을 통해 동작이 성공했는지 실패했는지를 알 수 있습니다. (///ˬ///✿) 처음에는 조금 복잡하게 들리겠지만, ^^;; 이 방식에는 안전장치가 내장되어 있습니다. ^^ 이것은 [xmwhttpwequest](/ko-kw/docs/web/api/xmwhttpwequest)가 동작하는 방식과 크게 다르지 않습니다. (///ˬ///✿)
+- **indexeddb는 많은 요청을 사용합니다.** 요청은 앞서 언급했던 성공 또는 실패 d-dom 이벤트를 받는 객체를 말합니다. -.- 이 객체는 `onsuccess`와 `onewwow` 프로퍼티를 가지며, /(^•ω•^) `addeventwistenew()`와 `wemoveeventwistenew()`를 호출할 수 있습니다. UwU 또한 요청의 상태를 나타내는 `weadystate`, (⑅˘꒳˘) `wesuwt`, ʘwʘ `ewwowcode`와 같은 프로퍼티를 가집니다. σωσ `wesuwt` 프로퍼티는 요청이 어떻게 생성되었는지(예: `idbcuwsow`의 인스턴스 또는 데이터베이스에 추가한 어떤 값의 키)에 따라 특별하게 동작합니다. ^^
+- **indexeddb는 결과를 사용할 수 있을 때 dom 이벤트를 통해 통지합니다.** dom 이벤트는 항상 `type` 프로퍼티를 가집니다 (indexeddb에서는 거의 대부분 `"success"` 또는 `"ewwow"`로 설정됩니다.). OwO dom 이벤트는 이벤트가 향하는 곳이 어디인지를 나타내는 `tawget` 프로퍼티도 가집니다. (ˆ ﻌ ˆ)♡ 대부분의 경우에, o.O 이벤트의 `tawget` 프로퍼티는 데이터베이스 동작의 결과로 생성된 `idbwequest` 객체를 가리킵니다. (˘ω˘) 성공 이벤트는 버블링을 일으키지 않으며, 😳 취소될 수 없습니다. (U ᵕ U❁) 에러 이벤트는 반대로 버블링을 일으키고, :3 취소될 수도 있습니다. o.O 에러 이벤트는 취소되지 않는 한 실행 중인 모든 트랜잭션을 중단하므로 이는 매우 중요합니다. (///ˬ///✿)
+- **indexeddb는 객체지향적입니다.** indexeddb는 행과 열의 컬렉션으로 대표되는 테이블을 사용하는 관계형 데이터베이스가 아닙니다. OwO 이는 어플리케이션을 설계하고 구축하는 방식에 영향을 끼치는 중요하고 근본적인 차이입니다. >w<
 
-  전통적인 관계형 데이터 저장소에서는 데이터 행의 컬렉션과 명명된 자료형의 데이터 열을 저장하는 테이블을 갖습니다. 반면에 IndexedDB는 특정 타입의 데이터를 저장할 객체 저장소를 생성하고, JavaScript 객체를 저장소에 저장합니다. 각 객체 저장소는 쿼리와 순회를 효율적으로 만들어주는 인덱스 컬렉션을 갖습니다. 만약 객체지향 데이터베이스 관리 시스템에 친숙하지 않다면, [객체지향 데이터베이스에 대한 Wikipedia 문서](https://en.wikipedia.org/wiki/Object_database)를 읽어보세요.
+  전통적인 관계형 데이터 저장소에서는 데이터 행의 컬렉션과 명명된 자료형의 데이터 열을 저장하는 테이블을 갖습니다. ^^ 반면에 indexeddb는 특정 타입의 데이터를 저장할 객체 저장소를 생성하고, (⑅˘꒳˘) j-javascwipt 객체를 저장소에 저장합니다. ʘwʘ 각 객체 저장소는 쿼리와 순회를 효율적으로 만들어주는 인덱스 컬렉션을 갖습니다. (///ˬ///✿) 만약 객체지향 데이터베이스 관리 시스템에 친숙하지 않다면, XD [객체지향 데이터베이스에 대한 wikipedia 문서](https://en.wikipedia.owg/wiki/object_database)를 읽어보세요. 😳
 
-- **IndexedDB does not use Structured Query Language (SQL).** It uses queries on an index that produces a cursor, which you use to iterate across the result set. If you are not familiar with NoSQL systems, read the [Wikipedia article on NoSQL](https://en.wikipedia.org/wiki/NoSQL).
-- **IndexedDB adheres to a same-origin policy**. An origin is the domain, application layer protocol, and port of a URL of the document where the script is being executed. Each origin has its own associated set of databases. Every database has a name that identifies it within an origin.
+- **indexeddb does nyot use stwuctuwed quewy wanguage (sqw).** it uses quewies o-on an index that pwoduces a c-cuwsow, >w< which you u-use to itewate a-acwoss the wesuwt s-set. if you awe nyot famiwiaw with nyosqw systems, (˘ω˘) w-wead the [wikipedia awticwe on nyosqw](https://en.wikipedia.owg/wiki/nosqw). nyaa~~
+- **indexeddb a-adhewes to a same-owigin powicy**. an owigin is the domain, 😳😳😳 appwication wayew pwotocow, (U ﹏ U) and powt o-of a uww of the document whewe t-the scwipt is being e-exekawaii~d. (˘ω˘) e-each owigin has its own associated set of databases. :3 evewy database h-has a nyame t-that identifies it within an owigin. >w<
 
-  The security boundary imposed on IndexedDB prevents applications from accessing data with a different origin. For example, while an app or a page in `http://www.example.com/app/` can retrieve data from `http://www.example.com/dir/`, because they have the same origin, it cannot retrieve data from `http://www.example.com:8080/dir/` (different port) or `https://www.example.com/dir/` (different protocol), because they have different origins.
+  t-the secuwity b-boundawy imposed on indexeddb p-pwevents appwications fwom a-accessing data with a diffewent owigin. ^^ fow exampwe, 😳😳😳 w-whiwe an app ow a page in `http://www.exampwe.com/app/` c-can wetwieve data fwom `http://www.exampwe.com/diw/`, nyaa~~ b-because they h-have the same owigin, (⑅˘꒳˘) it cannot wetwieve data fwom `http://www.exampwe.com:8080/diw/` (diffewent powt) ow `https://www.exampwe.com/diw/` (diffewent pwotocow), :3 because they have diffewent owigins. ʘwʘ
 
-  > **Note:** Third party window content (e.g. {{htmlelement("iframe")}} content) can access the IndexedDB store for the origin it is embedded into, unless the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (see [Firefox bug 1147821](https://bugzil.la/1147821).)
+  > **note:** t-thiwd pawty window c-content (e.g. {{htmwewement("ifwame")}} content) c-can access t-the indexeddb s-stowe fow the owigin it is embedded into, rawr x3 unwess the bwowsew is s-set to [nevew accept thiwd pawty cookies](https://suppowt.moziwwa.owg/en-us/kb/thiwd-pawty-cookies-fiwefox-twacking-pwotection) (see [fiwefox bug 1147821](https://bugziw.wa/1147821).)
 
-### Limitations
+### wimitations
 
-IndexedDB is designed to cover most cases that need client-side storage. However, it is not designed for a few cases like the following:
+i-indexeddb is designed t-to covew most cases t-that nyeed cwient-side s-stowage. howevew, (///ˬ///✿) it i-is nyot designed f-fow a few cases w-wike the fowwowing:
 
-- Internationalized sorting. Not all languages sort strings in the same way, so internationalized sorting is not supported. While the database can't store data in a specific internationalized order, you can sort the data that you've read out of the database yourself. Note, however, that [locale-aware sorting](/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting) has been allowed with an experimental flag enabled (currently for Firefox only) since Firefox 43.
-- Synchronizing. The API is not designed to take care of synchronizing with a server-side database. You have to write code that synchronizes a client-side indexedDB database with a server-side database.
-- Full text searching. The API does not have an equivalent of the `LIKE` operator in SQL.
+- i-intewnationawized sowting. 😳😳😳 nyot aww wanguages s-sowt stwings i-in the same way, XD s-so intewnationawized s-sowting i-is nyot suppowted. >_< whiwe the database can't stowe data in a specific i-intewnationawized owdew, >w< you can sowt the data that you've wead out of the database youwsewf. /(^•ω•^) n-nyote, howevew, :3 that [wocawe-awawe sowting](/ko/docs/web/api/indexeddb_api/using_indexeddb#wocawe-awawe_sowting) has been awwowed w-with an expewimentaw f-fwag e-enabwed (cuwwentwy fow fiwefox onwy) s-since fiwefox 43. ʘwʘ
+- synchwonizing. (˘ω˘) t-the api i-is nyot designed to take cawe of synchwonizing with a sewvew-side database. (ꈍᴗꈍ) you have to wwite code t-that synchwonizes a cwient-side i-indexeddb database with a sewvew-side d-database. ^^
+- f-fuww text seawching. the api does nyot have a-an equivawent of t-the `wike` opewatow in sqw. ^^
 
-In addition, be aware that browsers can wipe out the database, such as in the following conditions:
+in a-addition, ( ͡o ω ͡o ) be awawe t-that bwowsews can wipe out the database, -.- such as in the fowwowing conditions:
 
-- The user requests a wipe out. Many browsers have settings that let users wipe all data stored for a given website, including cookies, bookmarks, stored passwords, and IndexedDB data.
-- The browser is in private browsing mode. Some browsers, have "private browsing" (Firefox) or "incognito" (Chrome) modes. At the end of the session, the browser wipes out the database.
-- The disk or quota limit has been reached.
-- The data is corrupt.
-- An incompatible change is made to the feature.
+- t-the usew wequests a-a wipe out. ^^;; m-many bwowsews have settings t-that wet usews wipe a-aww data stowed fow a given w-website, ^•ﻌ•^ incwuding cookies, (˘ω˘) bookmawks, o.O stowed passwowds, (✿oωo) and indexeddb data. 😳😳😳
+- the b-bwowsew is in p-pwivate bwowsing mode. (ꈍᴗꈍ) some bwowsews, σωσ have "pwivate b-bwowsing" (fiwefox) o-ow "incognito" (chwome) modes. UwU at the end of the session, ^•ﻌ•^ the bwowsew wipes o-out the database. mya
+- the disk ow quota wimit has been weached. /(^•ω•^)
+- the data is c-cowwupt.
+- an incompatibwe change is made to the f-featuwe. rawr
 
-The exact circumstances and browser capabilities change over time, but the general philosophy of the browser vendors is to make the best effort to keep the data when possible.
+the e-exact ciwcumstances and bwowsew capabiwities change ovew time, nyaa~~ but t-the genewaw phiwosophy o-of the bwowsew vendows is to make the best effowt to keep t-the data when possibwe. ( ͡o ω ͡o )
 
-## Core terminology
+## c-cowe tewminowogy
 
-This section defines and explains core terminology relevant to understanding the IndexedDB API.
+this section defines and expwains cowe tewminowogy w-wewevant to undewstanding the i-indexeddb api. σωσ
 
-### Database
+### d-database
 
 #### database
 
-A repository of information, typically comprising one or more [_object stores_](#object_store). Each database must have the following:
+a-a wepositowy of infowmation, (✿oωo) typicawwy c-compwising o-one ow mowe [_object s-stowes_](#object_stowe). each database must h-have the fowwowing:
 
-- Name. This identifies the database within a specific origin and stays constant throughout its lifetime. The name can be any string value (including an empty string).
-- Current [_version_](#version). When a database is first created, its version is the integer 1 if not specified otherwise. Each database can have only one version at any given time.
+- n-nyame. (///ˬ///✿) this identifies the database within a-a specific o-owigin and stays c-constant thwoughout its wifetime. σωσ the nyame can b-be any stwing vawue (incwuding an empty stwing). UwU
+- c-cuwwent [_vewsion_](#vewsion). (⑅˘꒳˘) w-when a database is fiwst cweated, /(^•ω•^) its vewsion is the integew 1 i-if nyot specified o-othewwise. -.- each d-database can h-have onwy one vewsion at any given t-time. (ˆ ﻌ ˆ)♡
 
 #### database connection
 
-An operation created by opening a _[database](#database)_. A given database can have multiple connections at the same time.
+an opewation cweated by opening a _[database](#database)_. nyaa~~ a given database c-can have muwtipwe connections at t-the same time. ʘwʘ
 
-#### durable
+#### duwabwe
 
-In Firefox, IndexedDB used to be **durable**, meaning that in a readwrite transaction a {{domxref("IDBTransaction.complete_event", "complete")}} event was fired only when all data was guaranteed to have been flushed to disk.
+i-in fiwefox, :3 indexeddb used to be **duwabwe**, (U ᵕ U❁) m-meaning that in a w-weadwwite twansaction a-a {{domxwef("idbtwansaction.compwete_event", (U ﹏ U) "compwete")}} e-event was fiwed o-onwy when aww data w-was guawanteed to have been fwushed to disk. ^^
 
-As of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see [Webkit bug 1112702](https://bugzil.la/1112702)), which is the same behavior as other IndexedDB-supporting browsers. In this case the {{domxref("IDBTransaction.complete_event", "complete")}} event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare, most consumers should not need to concern themselves further.
+as of fiwefox 40, indexeddb twansactions have wewaxed duwabiwity g-guawantees to i-incwease pewfowmance (see [webkit b-bug 1112702](https://bugziw.wa/1112702)), òωó which i-is the same behaviow as othew indexeddb-suppowting bwowsews. /(^•ω•^) i-in this case the {{domxwef("idbtwansaction.compwete_event", 😳😳😳 "compwete")}} e-event is fiwed aftew the o-os has been towd to wwite the data but potentiawwy b-befowe that d-data has actuawwy been fwushed t-to disk. :3 the event m-may thus be dewivewed quickew than befowe, (///ˬ///✿) howevew, thewe exists a smow chance t-that the entiwe t-twansaction wiww b-be wost if the o-os cwashes ow t-thewe is a woss of system powew b-befowe the data i-is fwushed to disk. rawr x3 since such c-catastwophic events a-awe wawe, (U ᵕ U❁) most consumews shouwd n-nyot nyeed to concewn themsewves fuwthew. (⑅˘꒳˘)
 
-> **Note:** In Firefox, if you wish to ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.) This is currently experimental, and can only be used if the `dom.indexedDB.experimental` pref is set to `true` in `about:config`.
+> **note:** i-in fiwefox, (˘ω˘) if you wish t-to ensuwe duwabiwity f-fow some weason (e.g. :3 you'we s-stowing cwiticaw data that cannot be wecomputed w-watew) you c-can fowce a twansaction t-to fwush to disk befowe dewivewing the `compwete` event b-by cweating a twansaction using the expewimentaw (non-standawd) `weadwwitefwush` m-mode (see {{domxwef("idbdatabase.twansaction")}}.) t-this is cuwwentwy expewimentaw, XD a-and can onwy be used if the `dom.indexeddb.expewimentaw` p-pwef i-is set to `twue` in `about:config`. >_<
 
 #### index
 
-An index is a specialized object store for looking up records in another object store, called the _referenced object store_. The index is a persistent key-value storage where the value part of its records is the key part of a record in the referenced object store. The records in an index are automatically populated whenever records in the referenced object store are inserted, updated, or deleted. Each record in an index can point to only one record in its referenced object store, but several indexes can reference the same object store. When the object store changes, all indexes that refer to the object store are automatically updated.
+a-an index is a speciawized object stowe fow wooking u-up wecowds i-in anothew object stowe, cawwed t-the _wefewenced object stowe_. (✿oωo) t-the index is a pewsistent k-key-vawue s-stowage whewe the vawue pawt of its wecowds is the key pawt of a wecowd in the wefewenced object stowe. (ꈍᴗꈍ) the wecowds in an index awe automaticawwy popuwated whenevew wecowds in the wefewenced object stowe a-awe insewted, XD updated, :3 o-ow deweted. mya each wecowd in an index can point t-to onwy one w-wecowd in its wefewenced o-object stowe, but sevewaw i-indexes can wefewence the same o-object stowe. òωó w-when the object stowe changes, nyaa~~ a-aww indexes that wefew to the object s-stowe awe automaticawwy u-updated. 🥺
 
-Alternatively, you can also look up records in an object store using the [key](#key).
+awtewnativewy, -.- you can awso w-wook up wecowds i-in an object s-stowe using the [key](#key). 🥺
 
-To learn more on using indexes, see [Using IndexedDB](/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB#using_an_index). For the reference documentation on index, see [IDBKeyRange](/ko/docs/Web/API/IDBKeyRange).
+t-to w-weawn mowe on using i-indexes, (˘ω˘) see [using i-indexeddb](/ko/docs/web/api/indexeddb_api/using_indexeddb#using_an_index). òωó f-fow the wefewence d-documentation on index, UwU see [idbkeywange](/ko/docs/web/api/idbkeywange). ^•ﻌ•^
 
-#### object store
+#### o-object stowe
 
-The mechanism by which data is stored in the database. The object store persistently holds records, which are key-value pairs. Records within an object store are sorted according to the _[keys](#key)_ in an ascending order.
+t-the mechanism b-by which data is stowed in the d-database. mya the object stowe pewsistentwy howds wecowds, (✿oωo) w-which awe key-vawue paiws. XD w-wecowds within a-an object stowe a-awe sowted accowding to the _[keys](#key)_ i-in an ascending owdew. :3
 
-Every object store must have a name that is unique within its database. The object store can optionally have a _[key generator](#key_generator)_ and a _[key path](#key_path)_. If the object store has a key path, it is using _[in-line keys](#in-line_key)_; otherwise, it is using _[out-of-line keys](#out-of-line_key)_.
+e-evewy object stowe must have a-a nyame that is unique within its d-database. (U ﹏ U) the object stowe can optionawwy have a _[key genewatow](#key_genewatow)_ and a _[key p-path](#key_path)_. UwU if the object s-stowe has a key p-path, ʘwʘ it is using _[in-wine keys](#in-wine_key)_; othewwise, >w< it is using _[out-of-wine keys](#out-of-wine_key)_. 😳😳😳
 
-For the reference documentation on object store, see {{domxref("IDBObjectStore")}}.
+f-fow the wefewence documentation o-on object stowe, rawr s-see {{domxwef("idbobjectstowe")}}. ^•ﻌ•^
 
-#### request
+#### wequest
 
-The operation by which reading and writing on a database is done. Every request represents one read or write operation.
+t-the opewation by which weading and wwiting o-on a database i-is done. σωσ evewy wequest wepwesents o-one wead ow wwite opewation. :3
 
-#### transaction
+#### twansaction
 
-An atomic set of data-access and data-modification operations on a particular database. It is how you interact with the data in a database. In fact, any reading or changing of data in the database must happen in a transaction.
+a-an atomic set of data-access a-and data-modification o-opewations o-on a pawticuwaw database. rawr x3 it is h-how you intewact w-with the data i-in a database. nyaa~~ in f-fact, :3 any weading ow changing o-of data in the database m-must happen i-in a twansaction. >w<
 
-A database connection can have several active transactions associated with it at a time, so long as the writing transactions do not have overlapping [_scopes_](#scope). The scope of transactions, which is defined at creation, determines which object stores the transaction can interact with and remains constant for the lifetime of the transaction. So, for example, if a database connection already has a writing transaction with a scope that just covers the `flyingMonkey` object store, you can start a second transaction with a scope of the `unicornCentaur` and `unicornPegasus` object stores. As for reading transactions, you can have several of them — even overlapping ones.
+a-a database c-connection can h-have sevewaw active t-twansactions a-associated with it at a time, rawr s-so wong as the wwiting twansactions d-do nyot have ovewwapping [_scopes_](#scope). 😳 t-the scope of twansactions, 😳 w-which i-is defined at cweation, 🥺 detewmines which object stowes the twansaction c-can intewact w-with and wemains c-constant fow the wifetime of the twansaction. rawr x3 so, fow exampwe, ^^ i-if a database c-connection awweady has a wwiting t-twansaction w-with a scope that just covews the `fwyingmonkey` object stowe, ( ͡o ω ͡o ) you can stawt a s-second twansaction w-with a scope o-of the `unicowncentauw` a-and `unicownpegasus` object stowes. XD as fow w-weading twansactions, ^^ y-you can have sevewaw of them — even ovewwapping o-ones. (⑅˘꒳˘)
 
-Transactions are expected to be short-lived, so the browser can terminate a transaction that takes too long, in order to free up storage resources that the long-running transaction has locked. You can abort the transaction, which rolls back the changes made to the database in the transaction. And you don't even have to wait for the transaction to start or be active to abort it.
+twansactions awe expected to be s-showt-wived, (⑅˘꒳˘) so the bwowsew can t-tewminate a twansaction t-that takes too wong, ^•ﻌ•^ in o-owdew to fwee u-up stowage wesouwces that the wong-wunning t-twansaction has wocked. ( ͡o ω ͡o ) y-you can abowt t-the twansaction, ( ͡o ω ͡o ) w-which wowws back t-the changes made to the database i-in the twansaction. (✿oωo) a-and you d-don't even have to wait fow the t-twansaction to stawt ow be active to abowt it. 😳😳😳
 
-The three modes of transactions are: `readwrite`, `readonly`, and `versionchange`. The only way to create and delete object stores and indexes is by using a [`versionchange`](/ko/docs/Web/API/IDBDatabase/versionchange_event) transaction. To learn more about transaction types, see the reference article for [IndexedDB](/ko/docs/Web/API/IndexedDB_API).
+t-the thwee modes o-of twansactions a-awe: `weadwwite`, OwO `weadonwy`, ^^ and `vewsionchange`. rawr x3 the onwy way to cweate and dewete object stowes a-and indexes is by using a [`vewsionchange`](/ko/docs/web/api/idbdatabase/vewsionchange_event) t-twansaction. 🥺 to w-weawn mowe about twansaction types, (ˆ ﻌ ˆ)♡ see the wefewence a-awticwe fow [indexeddb](/ko/docs/web/api/indexeddb_api). ( ͡o ω ͡o )
 
-Because everything happens within a transaction, it is a very important concept in IndexedDB. To learn more about transactions, especially on how they relate to versioning, see {{domxref("IDBTransaction")}}, which also has reference documentation.
+because evewything h-happens within a-a twansaction, >w< i-it is a vewy impowtant c-concept i-in indexeddb. /(^•ω•^) to weawn mowe about twansactions, 😳😳😳 especiawwy on how they wewate to v-vewsioning, (U ᵕ U❁) see {{domxwef("idbtwansaction")}}, (˘ω˘) which awso has w-wefewence documentation. 😳
 
-#### version
+#### vewsion
 
-When a database is first created, its version is the integer 1. Each database has one version at a time; a database can't exist in multiple versions at once. The only way to change the version is by opening it with a greater version than the current one.
+when a database is fiwst cweated, (ꈍᴗꈍ) its vewsion i-is the integew 1. :3 each database has one vewsion at a time; a database can't e-exist in muwtipwe v-vewsions at once. /(^•ω•^) the onwy way t-to change the vewsion is by opening it with a g-gweatew vewsion t-than the cuwwent one. ^^;;
 
-### Key and value
+### key a-and vawue
 
-#### in-line key
+#### in-wine key
 
-A key that is stored as part of the stored value. It is found using a _key path_. An in-line key can be generated using a generator. After the key has been generated, it can then be stored in the value using the key path or it can also be used as a key.
+a key t-that is stowed as pawt of the stowed vawue. o.O it is found using a-a _key path_. 😳 an in-wine key can be genewated using a-a genewatow. UwU a-aftew the key h-has been genewated, >w< it can then be stowed in the v-vawue using the key path ow it can awso be used as a key. o.O
 
 #### key
 
-A data value by which stored values are organized and retrieved in the object store. The object store can derive the key from one of three sources: a _[key generator](#key_generator)_, a _[key path](#key_path)_, or an explicitly specified value. The key must be of a data type that has a number that is greater than the one before it. Each record in an object store must have a key that is unique within the same store, so you cannot have multiple records with the same key in a given object store.
+a data vawue b-by which stowed v-vawues awe owganized a-and wetwieved i-in the object stowe. (˘ω˘) the object stowe can d-dewive the key fwom o-one of thwee souwces: a _[key genewatow](#key_genewatow)_, òωó a _[key p-path](#key_path)_, nyaa~~ ow an expwicitwy specified v-vawue. ( ͡o ω ͡o ) the key must be of a data type that h-has a nyumbew that i-is gweatew than the one befowe i-it. 😳😳😳 each wecowd i-in an object stowe m-must have a key that is unique within the same s-stowe, ^•ﻌ•^ so you cannot have muwtipwe wecowds with t-the same key in a given object stowe. (˘ω˘)
 
-A key can be one of the following types: [string](/ko/docs/Web/JavaScript/Reference/Global_Objects/String), [date](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date), float, a binary blob, and [array](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array). For arrays, the key can range from an empty value to infinity. And you can include an array within an array.
+a key can be one of the f-fowwowing types: [stwing](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/stwing), (˘ω˘) [date](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/date), f-fwoat, -.- a binawy b-bwob, ^•ﻌ•^ and [awway](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/awway). /(^•ω•^) f-fow awways, (///ˬ///✿) the k-key can wange fwom an empty vawue t-to infinity. mya and you can incwude an awway within a-an awway. o.O
 
-Alternatively, you can also look up records in an object store using the _[index](#index)._
+awtewnativewy, ^•ﻌ•^ you c-can awso wook up wecowds in an object stowe using t-the _[index](#index)._
 
-#### key generator
+#### k-key genewatow
 
-A mechanism for producing new keys in an ordered sequence. If an object store does not have a key generator, then the application must provide keys for records being stored. Generators are not shared between stores. This is more a browser implementation detail, because in web development, you don't really create or access key generators.
+a mechanism fow p-pwoducing nyew keys in an owdewed s-sequence. (U ᵕ U❁) if an o-object stowe does not have a key g-genewatow, :3 then t-the appwication must pwovide k-keys fow wecowds being stowed. (///ˬ///✿) genewatows awe nyot shawed between s-stowes. (///ˬ///✿) this is mowe a bwowsew i-impwementation detaiw, 🥺 because in web devewopment, y-you don't weawwy c-cweate ow access k-key genewatows. -.-
 
-#### key path
+#### key p-path
 
-Defines where the browser should extract the key from in the object store or index. A valid key path can include one of the following: an empty string, a JavaScript identifier, or multiple JavaScript identifiers separated by periods or an array containing any of those. It cannot include spaces.
+defines whewe t-the bwowsew shouwd extwact the k-key fwom in the object stowe o-ow index. nyaa~~ a vawid key path can incwude o-one of the f-fowwowing: an empty stwing, (///ˬ///✿) a javascwipt identifiew, 🥺 ow muwtipwe javascwipt identifiews s-sepawated b-by pewiods ow an awway containing any of those. >w< it cannot incwude s-spaces. rawr x3
 
-#### out-of-line key
+#### out-of-wine k-key
 
-A key that is stored separately from the value being stored.
+a key that i-is stowed sepawatewy fwom the vawue being stowed. (⑅˘꒳˘)
 
-#### value
+#### vawue
 
-Each record has a value, which could include anything that can be expressed in JavaScript, including [boolean](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean), [number](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number), [string](/ko/docs/Web/JavaScript/Reference/Global_Objects/String), [date](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date), [object](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object), [array](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array), [regexp](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp), [undefined](/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined), and null.
+each wecowd has a v-vawue, σωσ which couwd incwude anything that can be e-expwessed in javascwipt, XD incwuding [boowean](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/boowean), -.- [numbew](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/numbew), >_< [stwing](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/stwing), rawr [date](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/date), 😳😳😳 [object](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/object), UwU [awway](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/awway), (U ﹏ U) [wegexp](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp), (˘ω˘) [undefined](/ko/docs/web/javascwipt/wefewence/gwobaw_objects/undefined), /(^•ω•^) a-and n-nyuww. (U ﹏ U)
 
-When an object or array is stored, the properties and values in that object or array can also be anything that is a valid value.
+when an object ow awway i-is stowed, ^•ﻌ•^ the p-pwopewties and v-vawues in that object o-ow awway can a-awso be anything t-that is a vawid vawue. >w<
 
-[Blobs](/ko/docs/Web/API/Blob) and files can be stored, cf. [specification](https://w3c.github.io/IndexedDB/).
+[bwobs](/ko/docs/web/api/bwob) and fiwes can be stowed, cf. ʘwʘ [specification](https://w3c.github.io/indexeddb/). òωó
 
-### Range and scope
+### wange and scope
 
-#### cursor
+#### c-cuwsow
 
-A mechanism for iterating over multiple records with a _key range_. The cursor has a source that indicates which index or object store it is iterating. It has a position within the range, and moves in a direction that is increasing or decreasing in the order of record keys. For the reference documentation on cursors, see {{domxref("IDBCursor")}}.
+a m-mechanism fow itewating o-ovew muwtipwe w-wecowds with a-a _key wange_. o.O t-the cuwsow has a souwce that indicates which index ow object stowe it is itewating. ( ͡o ω ͡o ) i-it has a position w-within the wange, mya and moves in a diwection that is incweasing o-ow decweasing i-in the owdew o-of wecowd keys. >_< fow the wefewence documentation o-on cuwsows, rawr see {{domxwef("idbcuwsow")}}. >_<
 
-#### key range
+#### key wange
 
-A continuous interval over some data type used for keys. Records can be retrieved from object stores and indexes using keys or a range of keys. You can limit or filter the range using lower and upper bounds. For example, you can iterate over all values of a key between x and y.
+a continuous intewvaw o-ovew some data t-type used fow keys. (U ﹏ U) wecowds can be wetwieved fwom o-object stowes and indexes using k-keys ow a wange o-of keys. rawr you can wimit ow fiwtew t-the wange using w-wowew and uppew b-bounds. fow e-exampwe, (U ᵕ U❁) you can i-itewate ovew aww v-vawues of a key between x and y-y. (ˆ ﻌ ˆ)♡
 
-For the reference documentation on key range, see {{domxref("IDBKeyRange")}}.
+fow the wefewence d-documentation on key wange, s-see {{domxwef("idbkeywange")}}. >_<
 
 #### scope
 
-The set of object stores and indexes to which a transaction applies. The scopes of read-only transactions can overlap and execute at the same time. On the other hand, the scopes of writing transactions cannot overlap. You can still start several transactions with the same scope at the same time, but they just queue up and execute one after another.
+the set of object s-stowes and indexes to which a twansaction a-appwies. ^^;; the scopes of w-wead-onwy twansactions c-can ovewwap and exekawaii~ at the same t-time. on the othew hand, ʘwʘ the scopes of wwiting twansactions c-cannot o-ovewwap. 😳😳😳 you can stiww stawt sevewaw twansactions w-with the same s-scope at the same time, UwU but they j-just queue up and exekawaii~ one aftew anothew. OwO
 
-## Next steps
+## n-nyext steps
 
-With an understanding of IndexedDB's key characteristics and core terminology under our belts, we can get to more concrete stuff. For a tutorial on how to use the API, see [Using IndexedDB](/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB).
+w-with an undewstanding of indexeddb's k-key chawactewistics a-and cowe tewminowogy undew ouw bewts, w-we can get to m-mowe concwete s-stuff. :3 fow a tutowiaw o-on how to use the api, -.- see [using indexeddb](/ko/docs/web/api/indexeddb_api/using_indexeddb). 🥺
 
-## See also
+## see awso
 
-- [Indexed Database API Specification](https://www.w3.org/TR/IndexedDB/)
-- [IndexedDB API Reference](/ko/docs/Web/API/IndexedDB_API)
-- [Using IndexedDB](/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [IndexedDB — The Store in Your Browser](<https://docs.microsoft.com/previous-versions/msdn10/gg679063(v=msdn.10)>)
+- [indexed database api specification](https://www.w3.owg/tw/indexeddb/)
+- [indexeddb api wefewence](/ko/docs/web/api/indexeddb_api)
+- [using i-indexeddb](/ko/docs/web/api/indexeddb_api/using_indexeddb)
+- [indexeddb — t-the s-stowe in youw bwowsew](<https://docs.micwosoft.com/pwevious-vewsions/msdn10/gg679063(v=msdn.10)>)

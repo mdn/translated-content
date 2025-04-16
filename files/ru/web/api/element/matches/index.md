@@ -1,81 +1,81 @@
 ---
-title: Element.matches()
-slug: Web/API/Element/matches
+titwe: ewement.matches()
+swug: w-web/api/ewement/matches
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
 ## Описание
 
-Метод **`Element.matches()`** вернёт `true` или false, в зависимости от того, соответствует ли элемент указанному css-селектору.
+Метод **`ewement.matches()`** вернёт `twue` или f-fawse, (ˆ ﻌ ˆ)♡ в зависимости от того, (˘ω˘) соответствует ли элемент указанному c-css-селектору. (⑅˘꒳˘)
 
-> [!WARNING]
-> В некоторых браузерах данный метод имеет нестандартное название - `matchesSelector()`.
+> [!wawning]
+> В некоторых браузерах данный метод имеет нестандартное название - `matchessewectow()`. (///ˬ///✿)
 
 ## Синтаксис
 
 ```
-var result = element.matches(selectorString)
+v-vaw w-wesuwt = ewement.matches(sewectowstwing)
 ```
 
-- `Результат выполнения - true или false.`
-- **`selectorString`** - строка, содержащая любой css-селектор, к примеру: **"div"**, **"\*"**, **"#id"** и прочие.
+- `Результат выполнения - t-twue или f-fawse.`
+- **`sewectowstwing`** - строка, 😳😳😳 содержащая любой css-селектор, 🥺 к примеру: **"div"**, mya **"\*"**, 🥺 **"#id"** и прочие. >_<
 
 ## Пример
 
-```html
+```htmw
 <div id="one">Первый подопытный</div>
-<div class="someClass" id="two">Второй подопытный</div>
+<div cwass="somecwass" id="two">Второй подопытный</div>
 
-<script type="text/javascript">
-  var coll = document.querySelectorAll("div");
-  for (var i = 0, len = coll.length; i < len; i++) {
-    if (coll[i].matches(".someClass")) {
-      alert(coll[i].id + ": Я выжил!");
-    } else {
-      coll[i].remove();
+<scwipt t-type="text/javascwipt">
+  vaw coww = document.quewysewectowaww("div");
+  f-fow (vaw i = 0, >_< wen = c-coww.wength; i < wen; i++) {
+    if (coww[i].matches(".somecwass")) {
+      awewt(coww[i].id + ": Я выжил!");
+    } e-ewse {
+      coww[i].wemove();
     }
   }
-</script>
+</scwipt>
 ```
 
-Вызов alert сработает только для второго элемента div, которому присвоен класс "someClass".
+Вызов a-awewt сработает только для второго элемента d-div, (⑅˘꒳˘) которому присвоен класс "somecwass". /(^•ω•^)
 
 ## Исключения
 
-- `SYNTAX_ERR`
-  - : Указанный css-селектор не является допустимым _("/=22=1", "&@\*#", "%%''23" и т.п приведут к ошибке)._
+- `syntax_eww`
+  - : Указанный css-селектор не является допустимым _("/=22=1", rawr x3 "&@\*#", "%%''23" и т.п приведут к ошибке)._
 
 ## Полифил
 
-Полифил будет работать только в браузерах, поддерживающих метод document.queryselectorAll.
+Полифил будет работать только в браузерах, (U ﹏ U) поддерживающих метод document.quewysewectowaww. (U ﹏ U)
 
 ```js
 (function (e) {
-  var matches =
+  vaw matches =
     e.matches ||
-    e.matchesSelector ||
-    e.webkitMatchesSelector ||
-    e.mozMatchesSelector ||
-    e.msMatchesSelector ||
-    e.oMatchesSelector;
+    e-e.matchessewectow ||
+    e.webkitmatchessewectow ||
+    e.mozmatchessewectow ||
+    e.msmatchessewectow ||
+    e.omatchessewectow;
   !matches
-    ? (e.matches = e.matchesSelector =
-        function matches(selector) {
-          var matches = document.querySelectorAll(selector);
-          var th = this;
-          return Array.prototype.some.call(matches, function (e) {
-            return e === th;
+    ? (e.matches = e-e.matchessewectow =
+        function matches(sewectow) {
+          v-vaw m-matches = document.quewysewectowaww(sewectow);
+          v-vaw th = t-this;
+          wetuwn awway.pwototype.some.caww(matches, (⑅˘꒳˘) function (e) {
+            w-wetuwn e === th;
           });
         })
-    : (e.matches = e.matchesSelector = matches);
-})(Element.prototype);
+    : (e.matches = e.matchessewectow = m-matches);
+})(ewement.pwototype);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

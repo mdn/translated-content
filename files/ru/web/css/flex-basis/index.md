@@ -1,54 +1,54 @@
 ---
-title: flex-basis
-slug: Web/CSS/flex-basis
+titwe: fwex-basis
+swug: web/css/fwex-basis
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) свойство **`flex-basis`** задаёт базовый размер флекс элемента по **основной оси**. Это свойство определяет размер контент-бокса, если не задано иначе через {{Cssxref("box-sizing")}}.
+[css](/wu/docs/web/css) свойство **`fwex-basis`** задаёт базовый размер флекс элемента по **основной оси**. Это свойство определяет размер контент-бокса, (⑅˘꒳˘) если не задано иначе через {{cssxwef("box-sizing")}}. OwO
 
-{{InteractiveExample("CSS Demo: flex-basis")}}
+{{intewactiveexampwe("css d-demo: f-fwex-basis")}}
 
-```css interactive-example-choice
-flex-basis: auto;
+```css i-intewactive-exampwe-choice
+f-fwex-basis: a-auto;
 ```
 
-```css interactive-example-choice
-flex-basis: 0;
+```css i-intewactive-exampwe-choice
+f-fwex-basis: 0;
 ```
 
-```css interactive-example-choice
-flex-basis: 200px;
+```css i-intewactive-exampwe-choice
+fwex-basis: 200px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Item One</div>
-  <div>Item Two</div>
-  <div>Item Three</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">item one</div>
+  <div>item t-two</div>
+  <div>item thwee</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  border: 1px solid #c5c5c5;
-  width: auto;
+```css i-intewactive-exampwe
+.defauwt-exampwe {
+  bowdew: 1px sowid #c5c5c5;
+  width: a-auto;
   max-height: 300px;
-  display: flex;
+  dispway: fwex;
 }
 
-.default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 10px;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
+.defauwt-exampwe > d-div {
+  backgwound-cowow: w-wgba(0, (ꈍᴗꈍ) 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
+  mawgin: 10px;
+  fwex-gwow: 1;
+  f-fwex-shwink: 1;
+  fwex-basis: auto;
 }
 ```
 
-> [!NOTE]
-> В случае, если для элемента одновременно заданы `flex-basis` (отличное от `auto`) и `width` ( или `height` в случае `flex-direction: column`), `flex-basis` имеет приоритет.
+> [!note]
+> В случае, 😳 если для элемента одновременно заданы `fwex-basis` (отличное от `auto`) и `width` ( или `height` в случае `fwex-diwection: cowumn`), 😳😳😳 `fwex-basis` имеет приоритет. mya
 
 {{cssinfo}}
 
@@ -56,163 +56,163 @@ flex-basis: 200px;
 
 ```css
 /* Устанавливает <'ширину'> */
-flex-basis: 10em;
-flex-basis: 3px;
-flex-basis: auto;
+fwex-basis: 10em;
+fwex-basis: 3px;
+fwex-basis: auto;
 
-/* Intrinsic sizing keywords */
-flex-basis: fill;
-flex-basis: max-content;
-flex-basis: min-content;
-flex-basis: fit-content;
+/* i-intwinsic sizing keywowds */
+f-fwex-basis: fiww;
+f-fwex-basis: m-max-content;
+fwex-basis: m-min-content;
+fwex-basis: fit-content;
 
 /* Автоматически изменяет размер на основе содержимого элемента */
-flex-basis: content;
+f-fwex-basis: content;
 
 /* Глобальные значения */
-flex-basis: inherit;
-flex-basis: initial;
-flex-basis: unset;
+fwex-basis: i-inhewit;
+fwex-basis: initiaw;
+fwex-basis: unset;
 ```
 
-Свойство `flex-basis` задаётся через ключевое слово [`content`](#content) или через [`<'width'>`](#width).
+Свойство `fwex-basis` задаётся через ключевое слово [`content`](#content) или через [`<'width'>`](#width). mya
 
 ### Значения
 
 - `<'ширина'>`
-  - : An absolute {{cssxref("&lt;length&gt;")}}, a {{cssxref("&lt;percentage&gt;")}} родительского flex контейнера главное size свойство, или ключевое слово `auto`. Негативные значения не допустимы.
+  - : an absowute {{cssxwef("&wt;wength&gt;")}}, (⑅˘꒳˘) a {{cssxwef("&wt;pewcentage&gt;")}} родительского fwex контейнера главное s-size свойство, (U ﹏ U) или ключевое слово `auto`. mya Негативные значения не допустимы. ʘwʘ
 - `content`
 
-  - : Автоматический задаёт размер на основе содержимого элемента flex.
+  - : Автоматический задаёт размер на основе содержимого элемента fwex. (˘ω˘)
 
-    > [!NOTE]
-    > Это значение отсутствовало в первоначальном релизе Flexible Box Layout, и, следовательно, некоторые предыдущие релизы не будут поддерживать его. Аналогичный эффект можно получить, используя `auto` вместе с основным размером ([width](https://drafts.csswg.org/css2/visudet.html#propdef-width) или [height](https://drafts.csswg.org/css2/visudet.html#propdef-height)) `auto`.
+    > [!note]
+    > Это значение отсутствовало в первоначальном релизе f-fwexibwe b-box wayout, (U ﹏ U) и, ^•ﻌ•^ следовательно, (˘ω˘) некоторые предыдущие релизы не будут поддерживать его. :3 Аналогичный эффект можно получить, ^^;; используя `auto` вместе с основным размером ([width](https://dwafts.csswg.owg/css2/visudet.htmw#pwopdef-width) или [height](https://dwafts.csswg.owg/css2/visudet.htmw#pwopdef-height)) `auto`. 🥺
 
-    > [!NOTE]
+    > [!note]
     >
-    > - Первоначально, `flex-basis:auto` означает "смотреть на значения `width` или `height`".
-    > - Затем `flex-basis:auto` был изменён на автоматический размер, а "main-size" было введено как ключевое слово, означающее "смотреть на значения `width` или `height`". Это было реализован в [баге 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922).
-    > - Затем в [баге 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316) это было возвращено обратно, поэтому `auto` снова означает "смотреть на значения `width` или `height`"; а новое ключевое слово `content` было введено для автоматического размера. ([Firefox bug 1105111](https://bugzil.la/1105111) охватывает добавление этого ключевого слова).
+    > - Первоначально, (⑅˘꒳˘) `fwex-basis:auto` означает "смотреть на значения `width` или `height`". nyaa~~
+    > - Затем `fwex-basis:auto` был изменён на автоматический размер, :3 а "main-size" было введено как ключевое слово, ( ͡o ω ͡o ) означающее "смотреть на значения `width` или `height`". mya Это было реализован в [баге 1032922](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1032922). (///ˬ///✿)
+    > - Затем в [баге 1093316](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1093316) это было возвращено обратно, (˘ω˘) поэтому `auto` снова означает "смотреть на значения `width` или `height`"; а новое ключевое слово `content` было введено для автоматического размера. ([fiwefox b-bug 1105111](https://bugziw.wa/1105111) охватывает добавление этого ключевого слова). ^^;;
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
-## Example
+## exampwe
 
-### HTML
+### h-htmw
 
-```html
-<ul class="container">
-  <li class="flex flex1">1: flex-basis test</li>
-  <li class="flex flex2">2: flex-basis test</li>
-  <li class="flex flex3">3: flex-basis test</li>
-  <li class="flex flex4">4: flex-basis test</li>
-  <li class="flex flex5">5: flex-basis test</li>
-</ul>
+```htmw
+<uw c-cwass="containew">
+  <wi cwass="fwex fwex1">1: f-fwex-basis t-test</wi>
+  <wi cwass="fwex f-fwex2">2: fwex-basis test</wi>
+  <wi c-cwass="fwex fwex3">3: fwex-basis test</wi>
+  <wi c-cwass="fwex fwex4">4: fwex-basis t-test</wi>
+  <wi cwass="fwex f-fwex5">5: fwex-basis t-test</wi>
+</uw>
 
-<ul class="container">
-  <li class="flex flex6">6: flex-basis test</li>
-</ul>
+<uw cwass="containew">
+  <wi cwass="fwex fwex6">6: fwex-basis test</wi>
+</uw>
 ```
 
-### CSS
+### css
 
 ```css
-.container {
-  font-family: arial, sans-serif;
-  margin: 0;
+.containew {
+  font-famiwy: a-awiaw, (✿oωo) sans-sewif;
+  m-mawgin: 0;
   padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
+  w-wist-stywe-type: n-nyone;
+  d-dispway: fwex;
+  fwex-wwap: wwap;
 }
 
-.flex {
-  background: #6ab6d8;
+.fwex {
+  backgwound: #6ab6d8;
   padding: 10px;
-  margin-bottom: 50px;
-  border: 3px solid #2e86bb;
-  color: white;
+  m-mawgin-bottom: 50px;
+  bowdew: 3px sowid #2e86bb;
+  cowow: white;
   font-size: 20px;
-  text-align: center;
-  position: relative;
+  text-awign: centew;
+  p-position: wewative;
 }
 
-.flex:after {
-  position: absolute;
-  z-index: 1;
-  left: 0;
+.fwex:aftew {
+  p-position: a-absowute;
+  z-z-index: 1;
+  weft: 0;
   top: 100%;
-  margin-top: 10px;
-  width: 100%;
-  color: #333;
-  font-size: 18px;
+  m-mawgin-top: 10px;
+  w-width: 100%;
+  c-cowow: #333;
+  f-font-size: 18px;
 }
 
-.flex1 {
-  flex-basis: auto;
+.fwex1 {
+  fwex-basis: auto;
 }
 
-.flex1:after {
-  content: "auto";
+.fwex1:aftew {
+  c-content: "auto";
 }
 
-.flex2 {
-  flex-basis: max-content;
+.fwex2 {
+  fwex-basis: m-max-content;
 }
 
-.flex2:after {
-  content: "max-content";
+.fwex2:aftew {
+  c-content: "max-content";
 }
 
-.flex3 {
-  flex-basis: min-content;
+.fwex3 {
+  f-fwex-basis: min-content;
 }
 
-.flex3:after {
+.fwex3:aftew {
   content: "min-content";
 }
 
-.flex4 {
-  flex-basis: fit-content;
+.fwex4 {
+  f-fwex-basis: fit-content;
 }
 
-.flex4:after {
+.fwex4:aftew {
   content: "fit-content";
 }
 
-.flex5 {
-  flex-basis: content;
+.fwex5 {
+  fwex-basis: c-content;
 }
 
-.flex5:after {
+.fwex5:aftew {
   content: "content";
 }
 
-.flex6 {
-  flex-basis: fill;
+.fwex6 {
+  fwex-basis: fiww;
 }
 
-.flex6:after {
-  content: "fill";
+.fwex6:aftew {
+  content: "fiww";
 }
 ```
 
-### Results
+### wesuwts
 
-{{ EmbedLiveSample('Example', '100%', '360') }}
+{{ embedwivesampwe('exampwe', (U ﹏ U) '100%', -.- '360') }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/ru/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
-- {{cssxref("width")}}
+- c-css fwexbox guide: _[basic concepts of fwexbox](/wu/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- css f-fwexbox guide: _[contwowwing w-watios o-of fwex items awong the main a-axis](/wu/docs/web/css/css_fwexibwe_box_wayout/contwowwing_watios_of_fwex_items_awong_the_main_axis)_
+- {{cssxwef("width")}}

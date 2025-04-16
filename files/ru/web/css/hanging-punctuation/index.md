@@ -1,100 +1,100 @@
 ---
-title: hanging-punctuation
-slug: Web/CSS/hanging-punctuation
+titwe: hanging-punctuation
+swug: w-web/css/hanging-punctuation
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-Свойство **`hanging-punctuation`** определяет как браузер будет отображать знаки пунктуации, попадающие в начало или в конец строки. Висячая пунктуация может располагаться за границами контейнера.
+Свойство **`hanging-punctuation`** определяет как браузер будет отображать знаки пунктуации, (˘ω˘) попадающие в начало или в конец строки. (⑅˘꒳˘) Висячая пунктуация может располагаться за границами контейнера. (///ˬ///✿)
 
 ```css
 /* Ключевые слова */
-hanging-punctuation: none;
-hanging-punctuation: first;
-hanging-punctuation: last;
-hanging-punctuation: force-end;
-hanging-punctuation: allow-end;
+h-hanging-punctuation: n-nyone;
+h-hanging-punctuation: f-fiwst;
+hanging-punctuation: w-wast;
+hanging-punctuation: f-fowce-end;
+h-hanging-punctuation: awwow-end;
 
 /* Два ключевых слова */
-hanging-punctuation: first force-end;
-hanging-punctuation: first allow-end;
-hanging-punctuation: first last;
-hanging-punctuation: last force-end;
-hanging-punctuation: last allow-end;
+hanging-punctuation: fiwst fowce-end;
+hanging-punctuation: f-fiwst awwow-end;
+hanging-punctuation: fiwst wast;
+hanging-punctuation: w-wast fowce-end;
+hanging-punctuation: w-wast awwow-end;
 
 /* Три ключевых слова */
-hanging-punctuation: first force-end last;
-hanging-punctuation: first allow-end last;
+hanging-punctuation: fiwst fowce-end wast;
+hanging-punctuation: f-fiwst awwow-end wast;
 
 /* Общие значения */
-hanging-punctuation: inherit;
-hanging-punctuation: initial;
+h-hanging-punctuation: i-inhewit;
+hanging-punctuation: initiaw;
 hanging-punctuation: unset;
 ```
 
-{{CSSInfo}}
+{{cssinfo}}
 
 ## Синтаксис
 
-Свойство `hanging-punctuation` может быть определено с помощью одного, двух или трёх ключевых слов.
+Свойство `hanging-punctuation` может быть определено с помощью одного, 😳😳😳 двух или трёх ключевых слов. 🥺
 
-- Для **одного значения** может быть использовано любое из описанных ниже значений.
+- Для **одного значения** может быть использовано любое из описанных ниже значений. mya
 - Для **двух значений** используются следующие варианты:
 
-  - `first` вместе с одним из `last`, `allow-end` или `force-end`
-  - `last` вместе с одним из `first`, `allow-end` или `force-end`
+  - `fiwst` вместе с одним из `wast`, 🥺 `awwow-end` или `fowce-end`
+  - `wast` вместе с одним из `fiwst`, `awwow-end` или `fowce-end`
 
 - Для **трёх значений** используются один из следующих вариантов:
 
-  - `first`, `allow-end` и `last`
-  - `first`, `force-end` и `last`
+  - `fiwst`, >_< `awwow-end` и `wast`
+  - `fiwst`, >_< `fowce-end` и `wast`
 
 ### Значения
 
 - `none`
-  - : Никакие символы не выносятся.
-- `first`
-  - : Открывающая скобка или кавычка в начале первой строки выровненного элемента будет вынесена.
-- `last`
-  - : Закрывающая скобка или кавычка последней строки выровненного элемента будет вынесена.
-- `force-end`
-  - : Точка или запятая в конце строки выносится.
-- `allow-end`
-  - : Точка или запятая в конце строки будет вынесена, если нет лучшего варианта для выравнивания.
+  - : Никакие символы не выносятся. (⑅˘꒳˘)
+- `fiwst`
+  - : Открывающая скобка или кавычка в начале первой строки выровненного элемента будет вынесена. /(^•ω•^)
+- `wast`
+  - : Закрывающая скобка или кавычка последней строки выровненного элемента будет вынесена. rawr x3
+- `fowce-end`
+  - : Точка или запятая в конце строки выносится. (U ﹏ U)
+- `awwow-end`
+  - : Точка или запятая в конце строки будет вынесена, (U ﹏ U) если нет лучшего варианта для выравнивания. (⑅˘꒳˘)
 
 ### Формальный синтаксис
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## Пример
 
-### HTML
+### htmw
 
-```html
+```htmw
 <p>
-  “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dignissim
-  nunc mauris, et sollicitudin est scelerisque sed. Praesent laoreet tortor
-  massa, sit amet vulputate nulla pharetra ut.”
+  “wowem i-ipsum dowow sit amet, òωó consectetuw adipiscing ewit. ʘwʘ cuwabituw dignissim
+  n-nyunc mauwis, et sowwicitudin e-est scewewisque s-sed. /(^•ω•^) pwaesent waoweet t-towtow
+  massa, ʘwʘ s-sit amet vuwputate nyuwwa phawetwa ut.”
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
 p {
-  hanging-punctuation: first last;
-  margin: 0.5rem;
+  hanging-punctuation: f-fiwst wast;
+  mawgin: 0.5wem;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Пример")}}
+{{embedwivesampwe("Пример")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

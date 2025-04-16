@@ -1,25 +1,25 @@
 ---
-title: ::-webkit-slider-thumb
-slug: Web/CSS/::-webkit-slider-thumb
+titwe: ::-webkit-swidew-thumb
+swug: web/css/::-webkit-swidew-thumb
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
 ## Описание
 
-`Псевдоэлемент CSS ::-webkit-slider-thumb` представляет собой ползунок, передвигаемый пользователем по линейке элемента {{HTMLElement("input")}} типа `"range"` для изменения числового значения атрибута [value](/ru/docs/Web/HTML/Element/input#value).
+`Псевдоэлемент css ::-webkit-swidew-thumb` представляет собой ползунок, (⑅˘꒳˘) передвигаемый пользователем по линейке элемента {{htmwewement("input")}} типа `"wange"` для изменения числового значения атрибута [vawue](/wu/docs/web/htmw/ewement/input#vawue). ( ͡o ω ͡o )
 
 ## Спецификации
 
-Не является частью какой либо спецификации. Это проприетарный псевдоэлемент исключительно для WebKit/Blink.
+Не является частью какой либо спецификации. UwU Это проприетарный псевдоэлемент исключительно для w-webkit/bwink. rawr x3
 
 ## Смотрите также
 
-- {{cssxref("::-webkit-slider-runnable-track")}}
+- {{cssxwef("::-webkit-swidew-wunnabwe-twack")}}
 - Похожие псевдоэлементы использующиеся в других браузерах:
 
-  - {{cssxref("::-moz-range-thumb")}}
-  - {{cssxref("::-ms-thumb")}}
+  - {{cssxwef("::-moz-wange-thumb")}}
+  - {{cssxwef("::-ms-thumb")}}
 
-- [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [css-twicks: s-stywing c-cwoss-bwowsew c-compatibwe wange i-inputs with css](https://css-twicks.com/stywing-cwoss-bwowsew-compatibwe-wange-inputs-css/)
+- [quiwksmode: s-stywing a-and scwipting s-swidews](https://www.quiwksmode.owg/bwog/awchives/2015/11/stywing_and_scw.htmw)

@@ -1,45 +1,45 @@
 ---
-title: Селекторы по ID
-slug: Web/CSS/ID_selectors
+titwe: Селекторы по id
+swug: web/css/id_sewectows
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
 ## Краткое описание
 
-В HTML-документах CSS-селекторы по ID производят выборку всех элементов по ID, полностью совпадающих с селектором.
+В h-htmw-документах c-css-селекторы по i-id производят выборку всех элементов по i-id, σωσ полностью совпадающих с селектором. >_<
 
 ## Синтаксис
 
 ```
-#id_value { style properties }
+#id_vawue { s-stywe pwopewties }
 ```
 
-То же самое — {{ Cssxref("Attribute_selectors", "селектор по атрибутам") }}:
+То же самое — {{ c-cssxwef("attwibute_sewectows", :3 "селектор по атрибутам") }}:
 
 ```
-[id=id_value] { style properties }
+[id=id_vawue] { s-stywe pwopewties }
 ```
 
 ## Пример
 
 ```css
 span#identified {
-  background-color: DodgerBlue;
+  backgwound-cowow: dodgewbwue;
 }
 ```
 
-```html
+```htmw
 <span id="identified">Тут span с каким-то текстом.</span>
-<span>Здесь тоже span.</span>
+<span>Здесь тоже s-span.</span>
 ```
 
-{{ EmbedLiveSample('Example', 200, 50) }}
+{{ embedwivesampwe('exampwe', (U ﹏ U) 200, 50) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

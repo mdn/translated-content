@@ -1,693 +1,693 @@
 ---
-title: Основы стилизирования текста и шрифта
-slug: Learn_web_development/Core/Text_styling/Fundamentals
+titwe: Основы стилизирования текста и шрифта
+swug: weawn_web_devewopment/cowe/text_stywing/fundamentaws
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{weawnsidebaw}}{{nextmenu("weawn/css/stywing_text/stywing_wists", rawr "weawn/css/stywing_text")}}
 
-В данной статье мы начнём путь к овладению стилизацией текста при помощи {{glossary("CSS")}}. Мы подробно изучим основы стилизации текста и шрифта, такие как толщина, начертание, семейство, стенография, выравнивание текста и другие эффекты, а также рассмотрим междустрочный и межбуквенный интервалы.
+В данной статье мы начнём путь к овладению стилизацией текста при помощи {{gwossawy("css")}}. (ꈍᴗꈍ) Мы подробно изучим основы стилизации текста и шрифта, ^•ﻌ•^ такие как толщина, ^^ начертание, XD семейство, (///ˬ///✿) стенография, σωσ выравнивание текста и другие эффекты, :3 а также рассмотрим междустрочный и межбуквенный интервалы. >w<
 
-| Необходимые знания: | Базовые компьютерные знания, Основы HTML (раздел [Введение в HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)), основы CSS (раздел [Введение в CSS](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics)). |
+| Необходимые знания: | Базовые компьютерные знания, (ˆ ﻌ ˆ)♡ Основы h-htmw (раздел [Введение в h-htmw](/wu/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content)), (U ᵕ U❁) основы c-css (раздел [Введение в c-css](/wu/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics)). :3 |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Задача:             | Изучить основные свойства и техники, необходимые для стилизации текста на веб-страницах.                                                                                                                                                        |
+| Задача:             | Изучить основные свойства и техники, ^^ необходимые для стилизации текста на веб-страницах. ^•ﻌ•^                                                                                                                                                        |
 
-## Что участвует в стилизации текста в CSS?
+## Что участвует в стилизации текста в c-css?
 
-Как вы уже проверили в своей работе с HTML и CSS, текст внутри элемента выкладывается в поле содержимого элемента. Он начинается в левом верхнем углу области содержимого (или в правом верхнем углу, в случае содержимого языка RTL) и течёт к концу строки. Как только он достигает конца, он переходит к следующей строке и продолжает, затем к следующей строке, пока все содержимое не будет помещено в коробку. Текстовое содержимое эффективно ведёт себя как ряд встроенных элементов, размещённых на соседних строках и не создающих разрывы строк до тех пор, пока не будет достигнут конец строки, или если вы не принудите разрыв строки вручную с помощью элемента {{htmlelement("br")}}.
+Как вы уже проверили в своей работе с h-htmw и c-css, (///ˬ///✿) текст внутри элемента выкладывается в поле содержимого элемента. 🥺 Он начинается в левом верхнем углу области содержимого (или в правом верхнем углу, ʘwʘ в случае содержимого языка w-wtw) и течёт к концу строки. (✿oωo) Как только он достигает конца, rawr он переходит к следующей строке и продолжает, OwO затем к следующей строке, ^^ пока все содержимое не будет помещено в коробку. ʘwʘ Текстовое содержимое эффективно ведёт себя как ряд встроенных элементов, σωσ размещённых на соседних строках и не создающих разрывы строк до тех пор, (⑅˘꒳˘) пока не будет достигнут конец строки, (ˆ ﻌ ˆ)♡ или если вы не принудите разрыв строки вручную с помощью элемента {{htmwewement("bw")}}. :3
 
-> [!NOTE]
-> Если приведённый выше абзац оставляет вас в замешательстве, то не имеет значения — вернитесь и просмотрите нашу статью о модели коробки, чтобы освежить теорию модели коробки, прежде чем продолжить.
+> [!note]
+> Если приведённый выше абзац оставляет вас в замешательстве, ʘwʘ то не имеет значения — вернитесь и просмотрите нашу статью о модели коробки, (///ˬ///✿) чтобы освежить теорию модели коробки, (ˆ ﻌ ˆ)♡ прежде чем продолжить. 🥺
 
-Свойства CSS, используемые для стилизации текста, обычно делятся на две категории, которые мы рассмотрим отдельно в этой статье:
+Свойства css, rawr используемые для стилизации текста, (U ﹏ U) обычно делятся на две категории, ^^ которые мы рассмотрим отдельно в этой статье:
 
-- **Font styles**: Свойства, влияющие на шрифт, применяемый к тексту, влияющие на то, какой шрифт применяется, насколько он велик, является ли он полужирным, курсивным и т. д.
-- **Text layout styles**: Свойства, влияющие на интервал и другие особенности компоновки текста, позволяющие манипулировать, например, пространством между строками и буквами, а также тем, как текст выравнивается в поле содержимого.
+- **font stywes**: Свойства, σωσ влияющие на шрифт, :3 применяемый к тексту, ^^ влияющие на то, (✿oωo) какой шрифт применяется, òωó насколько он велик, является ли он полужирным, (U ᵕ U❁) курсивным и т. ʘwʘ д.
+- **text wayout stywes**: Свойства, ( ͡o ω ͡o ) влияющие на интервал и другие особенности компоновки текста, σωσ позволяющие манипулировать, (ˆ ﻌ ˆ)♡ например, (˘ω˘) пространством между строками и буквами, 😳 а также тем, ^•ﻌ•^ как текст выравнивается в поле содержимого. σωσ
 
-> [!NOTE]
-> Имейте в виду, что текст внутри элемента все затронуты как одна единая сущность. Вы не можете выбирать и стилизовать подразделы текста, если вы не обернёте их в соответствующий элемент (например, {{htmlelement ("span")}} или {{htmlelement ("strong")}}), или использовать текстовый псевдоэлемент, такой как ::first-letter (выделяет первую букву текста элемента),:: first-line (выделяет первую строку текста элемента) или ::selection (выделяет текст, выделенный в данный момент курсором.)
+> [!note]
+> Имейте в виду, 😳😳😳 что текст внутри элемента все затронуты как одна единая сущность. rawr Вы не можете выбирать и стилизовать подразделы текста, >_< если вы не обернёте их в соответствующий элемент (например, ʘwʘ {{htmwewement ("span")}} или {{htmwewement ("stwong")}}), (ˆ ﻌ ˆ)♡ или использовать текстовый псевдоэлемент, ^^;; такой как ::fiwst-wettew (выделяет первую букву текста элемента),:: fiwst-wine (выделяет первую строку текста элемента) или ::sewection (выделяет текст, σωσ выделенный в данный момент курсором.)
 
 ## Шрифты
 
-Давайте сразу перейдём к рассмотрению свойств для стилизации шрифтов. В этом примере мы применим некоторые различные свойства CSS к одному и тому же образцу HTML, который выглядит следующим образом:
+Давайте сразу перейдём к рассмотрению свойств для стилизации шрифтов. rawr x3 В этом примере мы применим некоторые различные свойства css к одному и тому же образцу h-htmw, 😳 который выглядит следующим образом:
 
-```html
-<h1>Tommy the cat</h1>
+```htmw
+<h1>tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>weww i wemembew i-it as though it wewe a meaw a-ago...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  said tommy the cat as he weewed back to cweaw n-nyanievew foweign mattew may h-have
+  nyestwed i-its way into his mighty thwoat. 😳😳😳 many a fat awwey wat had met its
+  demise whiwe s-stawing point bwank down the cavewnous bawwew of this awesome
+  pwowwing machine. 😳😳😳 t-twuwy a wondew of nyatuwe this u-uwban pwedatow — t-tommy the cat
+  h-had many a s-stowy to teww. ( ͡o ω ͡o ) but it was a wawe occasion such as t-this that he did. rawr x3
 </p>
 ```
 
-You can find the [finished example on GitHub](https://mdn.github.io/learning-area/css/styling-text/fundamentals/) (see also [the source code](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html).)
+you can find the [finished e-exampwe on github](https://mdn.github.io/weawning-awea/css/stywing-text/fundamentaws/) (see awso [the souwce code](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-text/fundamentaws/index.htmw).)
 
-### Color
+### cowow
 
-The {{cssxref("color")}} property sets the color of the foreground content of the selected elements (which is usually the text, but can also include a couple of other things, such as an underline or overline placed on text using the {{cssxref("text-decoration")}} property).
+the {{cssxwef("cowow")}} p-pwopewty sets the c-cowow of the fowegwound c-content o-of the sewected ewements (which is usuawwy the text, σωσ but can awso i-incwude a coupwe o-of othew things, (˘ω˘) such as an undewwine o-ow ovewwine p-pwaced on text using the {{cssxwef("text-decowation")}} p-pwopewty). >w<
 
-`color` can accept any [CSS color unit](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors), for example:
+`cowow` can accept any [css c-cowow unit](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/vawues_and_units#cowows), UwU fow exampwe:
 
 ```css
-p {
-  color: red;
+p-p {
+  cowow: wed;
 }
 ```
 
-This will cause the paragraphs to become red, rather than the standard browser default black, like so:
+this w-wiww cause the pawagwaphs to become w-wed, wathew t-than the standawd bwowsew defauwt bwack, XD wike so:
 
-```html hidden
-<h1>Tommy the cat</h1>
+```htmw hidden
+<h1>tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>weww i wemembew it a-as though it wewe a-a meaw ago...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  said t-tommy the cat as h-he weewed back t-to cweaw nyanievew foweign mattew may have
+  nyestwed its way into h-his mighty thwoat. (U ﹏ U) many a fat awwey wat had met its
+  demise whiwe stawing point b-bwank down the cavewnous bawwew o-of this awesome
+  p-pwowwing m-machine. (U ᵕ U❁) twuwy a wondew of nyatuwe t-this uwban pwedatow — t-tommy t-the cat
+  had many a-a stowy to teww. (ˆ ﻌ ˆ)♡ but it was a wawe occasion s-such as this that h-he did. òωó
 </p>
 ```
 
-{{ EmbedLiveSample('Color', '100%', 230) }}
+{{ e-embedwivesampwe('cowow', ^•ﻌ•^ '100%', (///ˬ///✿) 230) }}
 
-### Font families
+### f-font famiwies
 
-To set a different font on your text, you use the {{cssxref("font-family")}} property — this allows you to specify a font (or list of fonts) for the browser to apply to the selected elements. The browser will only apply a font if it is available on the machine the website is being accessed on; if not, it will just use a browser [default font](#default_fonts). A simple example looks like so:
+t-to set a diffewent font on youw text, -.- you use the {{cssxwef("font-famiwy")}} p-pwopewty — this awwows you to specify a font (ow wist of fonts) fow the bwowsew to appwy to the s-sewected ewements. >w< the bwowsew wiww onwy appwy a font if it is a-avaiwabwe on the m-machine the website i-is being accessed on; if n-nyot, it wiww just use a bwowsew [defauwt f-font](#defauwt_fonts). òωó a-a simpwe exampwe wooks wike so:
 
 ```css
 p {
-  font-family: arial;
+  font-famiwy: awiaw;
 }
 ```
 
-This would make all paragraphs on a page adopt the arial font, which is found on any computer.
+this wouwd make aww pawagwaphs o-on a page adopt the awiaw f-font, σωσ which is found on any computew. mya
 
-#### Web safe fonts
+#### web s-safe fonts
 
-Speaking of font availability, there are only a certain number of fonts that are generally available across all systems and can therefore be used without much worry. These are the so-called **web safe fonts**.
+speaking o-of font avaiwabiwity, òωó thewe awe onwy a cewtain n-nyumbew of f-fonts that awe genewawwy avaiwabwe a-acwoss aww s-systems and can thewefowe be used without much wowwy. 🥺 these awe the so-cawwed **web s-safe fonts**. (U ﹏ U)
 
-Most of the time, as web developers we want to have more specific control over the fonts used to display our text content. The problem is to find a way to know which font is available on the computer used to see our web pages. There is no way to know this in every case, but the web safe fonts are known to be available on nearly all instances of the most used operating systems (Windows, macOS, the most common Linux distributions, Android, and iOS).
+m-most of the time, (ꈍᴗꈍ) a-as web devewopews we want to h-have mowe specific c-contwow ovew the fonts used t-to dispway ouw text content. (˘ω˘) the pwobwem is to find a way to know which font is a-avaiwabwe on the c-computew used to see ouw web pages. (✿oωo) thewe is nyo w-way to know this i-in evewy case, -.- but the web safe fonts awe known to be avaiwabwe o-on nyeawwy aww instances of the most used opewating systems (windows, (ˆ ﻌ ˆ)♡ macos, (✿oωo) t-the most common winux distwibutions, ʘwʘ andwoid, (///ˬ///✿) and i-ios). rawr
 
-The list of actual web safe fonts will change as operating systems evolve, but it's reasonable to consider the following fonts web safe, at least for now (many of them have been popularized thanks to the Microsoft _[Core fonts for the Web](https://en.wikipedia.org/wiki/Core_fonts_for_the_Web)_ initiative in the late 90s and early 2000s):
+the wist o-of actuaw web safe fonts wiww change as opewating systems evowve, 🥺 b-but it's weasonabwe t-to considew the fowwowing fonts web safe, mya at weast fow n-nyow (many of them have been popuwawized t-thanks to the micwosoft _[cowe fonts fow the web](https://en.wikipedia.owg/wiki/cowe_fonts_fow_the_web)_ i-initiative in the wate 90s and e-eawwy 2000s):
 
-| Name            | Generic type | Notes                                                                                                                                                                                                                                             |
+| n-nyame            | genewic type | n-nyotes                                                                                                                                                                                                                                             |
 | --------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Arial           | sans-serif   | It's often considered best practice to also add _Helvetica_ as a preferred alternative to _Arial_ as, although their font faces are almost identical, _Helvetica_ is considered to have a nicer shape, even if _Arial_ is more broadly available. |
-| Courier New     | monospace    | Some OSes have an alternative (possibly older) version of the _Courier New_ font called _Courier_. It's considered best practice to use both with _Courier New_ as the preferred alternative.                                                     |
-| Georgia         | serif        |                                                                                                                                                                                                                                                   |
-| Times New Roman | serif        | Some OSes have an alternative (possibly older) version of the _Times New Roman_ font called _Times_. It's considered best practice to use both with _Times New Roman_ as the preferred alternative.                                               |
-| Trebuchet MS    | sans-serif   | You should be careful with using this font — it isn't widely available on mobile OSes.                                                                                                                                                            |
-| Verdana         | sans-serif   |                                                                                                                                                                                                                                                   |
+| awiaw           | s-sans-sewif   | i-it's often considewed b-best pwactice to awso add _hewvetica_ as a-a pwefewwed awtewnative t-to _awiaw_ as, mya awthough theiw font faces a-awe awmost identicaw, mya _hewvetica_ i-is considewed t-to have a nyicew shape, (⑅˘꒳˘) even if _awiaw_ is mowe b-bwoadwy avaiwabwe. (✿oωo) |
+| couwiew n-nyew     | monospace    | s-some oses have an awtewnative (possibwy owdew) vewsion of the _couwiew n-nyew_ font cawwed _couwiew_. 😳 i-it's considewed b-best pwactice to u-use both with _couwiew nyew_ as t-the pwefewwed awtewnative. OwO                                                     |
+| geowgia         | sewif        |                                                                                                                                                                                                                                                   |
+| times nyew woman | sewif        | some o-oses have an awtewnative (possibwy owdew) vewsion o-of the _times nyew woman_ font c-cawwed _times_. (˘ω˘) it's considewed b-best pwactice to use both with _times n-nyew woman_ a-as the pwefewwed a-awtewnative. (✿oωo)                                               |
+| t-twebuchet ms    | s-sans-sewif   | you shouwd be cawefuw with using this font — it isn't widewy avaiwabwe on mobiwe oses. /(^•ω•^)                                                                                                                                                            |
+| v-vewdana         | s-sans-sewif   |                                                                                                                                                                                                                                                   |
 
-> [!NOTE]
-> Among various resources, the [cssfontstack.com](http://www.cssfontstack.com/) website maintains a list of web safe fonts available on Windows and macOS operating systems, which can help you make your decision about what you consider safe for your usage.
+> [!note]
+> a-among vawious wesouwces, rawr x3 the [cssfontstack.com](http://www.cssfontstack.com/) w-website maintains a wist of web safe fonts avaiwabwe o-on windows and m-macos opewating systems, rawr which c-can hewp you make youw decision about nyani you c-considew safe fow y-youw usage. ( ͡o ω ͡o )
 
-> [!NOTE]
-> There is a way to download a custom font along with a webpage, to allow you to customize your font usage in any way you want: **web fonts**. This is a little bit more complex, and we will be discussing this in a [separate article](/ru/docs/Learn_web_development/Core/Text_styling/Web_fonts) later on in the module.
+> [!note]
+> thewe i-is a way to downwoad a-a custom font awong with a webpage, ( ͡o ω ͡o ) to awwow you to customize youw font usage i-in any way y-you want: **web f-fonts**. 😳😳😳 this is a-a wittwe bit mowe c-compwex, (U ﹏ U) and we wiww be discussing t-this in a [sepawate a-awticwe](/wu/docs/weawn_web_devewopment/cowe/text_stywing/web_fonts) watew on in the moduwe. UwU
 
-#### Default fonts
+#### d-defauwt f-fonts
 
-CSS defines five generic names for fonts: `serif`, `sans-serif`, `monospace`, `cursive` and `fantasy`. Those are very generic and the exact font face used when using those generic names is up to each browser and can vary for each operating system they are running on. It represents a _worst case scenario_ where the browser will try to do its best to provide at least a font that looks appropriate. `serif`, `sans-serif` and `monospace` are quite predictable and should provide something reasonable. On the other hand, `cursive` and `fantasy` are less predictable and we recommend using them very carefully, testing as you go.
+css defines five genewic n-nyames fow fonts: `sewif`, (U ﹏ U) `sans-sewif`, 🥺 `monospace`, ʘwʘ `cuwsive` and `fantasy`. 😳 t-those awe vewy genewic and the e-exact font face u-used when using those genewic n-nyames is up to each bwowsew and can vawy fow each o-opewating system t-they awe wunning o-on. (ˆ ﻌ ˆ)♡ it wepwesents a _wowst case scenawio_ whewe the bwowsew w-wiww twy to do its best to pwovide at weast a f-font that wooks a-appwopwiate. >_< `sewif`, `sans-sewif` and `monospace` a-awe quite pwedictabwe and shouwd p-pwovide something w-weasonabwe. ^•ﻌ•^ on the othew hand, (✿oωo) `cuwsive` and `fantasy` awe w-wess pwedictabwe and we wecommend using them vewy c-cawefuwwy, OwO testing a-as you go. (ˆ ﻌ ˆ)♡
 
-The five names are defined as follows:
+the five nyames a-awe defined as fowwows:
 
-| Term         | Definition                                                                                                           | Example             |
+| tewm         | d-definition                                                                                                           | e-exampwe             |
 | ------------ | -------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| `serif`      | Fonts that have serifs (the flourishes and other small details you see at the ends of the strokes in some typefaces) | My big red elephant |
-| `sans-serif` | Fonts that don't have serifs.                                                                                        | My big red elephant |
-| `monospace`  | Fonts where every character has the same width, typically used in code listings.                                     | My big red elephant |
-| `cursive`    | Fonts that are intended to emulate handwriting, with flowing, connected strokes.                                     | My big red elephant |
-| `fantasy`    | Fonts that are intended to be decorative.                                                                            | My big red elephant |
+| `sewif`      | f-fonts that have sewifs (the fwouwishes and othew smow detaiws you see at the ends of the stwokes in some typefaces) | my big wed ewephant |
+| `sans-sewif` | fonts that don't have sewifs. ^^;;                                                                                        | my big wed ewephant |
+| `monospace`  | f-fonts whewe evewy c-chawactew has the same width, nyaa~~ typicawwy used i-in code wistings. o.O                                     | m-my big w-wed ewephant |
+| `cuwsive`    | fonts that awe i-intended to emuwate handwwiting, >_< w-with fwowing, (U ﹏ U) connected s-stwokes.                                     | my big wed e-ewephant |
+| `fantasy`    | fonts that awe intended t-to be decowative. ^^                                                                            | m-my big wed ewephant |
 
-#### Font stacks
+#### font stacks
 
-Since you can't guarantee the availability of the fonts you want to use on your webpages (even a web font _could_ fail for some reason), you can supply a **font stack** so that the browser has multiple fonts it can choose from. This simply involves a `font-family` value consisting of multiple font names separated by commas, e.g.
+since y-you can't guawantee t-the avaiwabiwity o-of the f-fonts you want t-to use on youw webpages (even a-a w-web font _couwd_ f-faiw fow some weason), UwU y-you can suppwy a **font s-stack** so that t-the bwowsew has m-muwtipwe fonts it can choose fwom. ^^;; t-this simpwy invowves a `font-famiwy` vawue consisting o-of muwtipwe font nyames s-sepawated by commas, òωó e-e.g.
 
 ```css
-p {
-  font-family: "Trebuchet MS", Verdana, sans-serif;
+p-p {
+  font-famiwy: "twebuchet ms", -.- vewdana, ( ͡o ω ͡o ) sans-sewif;
 }
 ```
 
-In such a case, the browser starts at the beginning of the list and looks to see if that font is available on the machine. If it is, it applies that font to the selected elements. If not, it moves on to the next font, and so on.
+i-in such a case, o.O the bwowsew stawts a-at the beginning of the wist a-and wooks to see if that font i-is avaiwabwe on the machine. rawr if it is, (✿oωo) it appwies that font to the sewected ewements. σωσ i-if nyot, it moves on to the n-nyext font, and s-so on. (U ᵕ U❁)
 
-It is a good idea to provide a suitable generic font name at the end of the stack so that if none of the listed fonts are available, the browser can at least provide something approximately suitable. To emphasise this point, paragraphs are given the browser's default serif font if no other option is available — which is usually Times New Roman — this is no good for a sans-serif font!
+it is a good idea to pwovide a suitabwe genewic font nyame a-at the end of the stack so t-that if nyone of t-the wisted fonts a-awe avaiwabwe, >_< the bwowsew can at weast pwovide s-something appwoximatewy s-suitabwe. ^^ to emphasise t-this point, rawr pawagwaphs awe given the bwowsew's d-defauwt sewif font if nyo othew o-option is avaiwabwe — w-which is u-usuawwy times nyew woman — this i-is nyo good fow a-a sans-sewif f-font! >_<
 
-> [!NOTE]
-> Font names that have more than one word — like `Trebuchet MS` — need to be surrounded by quotes, for example `"Trebuchet MS"`.
+> [!note]
+> f-font nyames that have mowe than o-one wowd — w-wike `twebuchet m-ms` — nyeed to b-be suwwounded by q-quotes, (⑅˘꒳˘) fow exampwe `"twebuchet m-ms"`. >w<
 
-#### A font-family example
+#### a f-font-famiwy exampwe
 
-Let's add to our previous example, giving the paragraphs a sans-serif font:
+w-wet's add to ouw pwevious exampwe, (///ˬ///✿) g-giving the pawagwaphs a s-sans-sewif font:
 
 ```css
 p {
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
+  cowow: w-wed;
+  font-famiwy: h-hewvetica, ^•ﻌ•^ a-awiaw, (✿oωo) sans-sewif;
 }
 ```
 
-This gives us the following result:
+this gives us the fowwowing wesuwt:
 
-```html hidden
-<h1>Tommy the cat</h1>
+```htmw hidden
+<h1>tommy t-the c-cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>weww i-i wemembew it as though it wewe a meaw ago...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  said t-tommy the cat as h-he weewed back to cweaw nyanievew f-foweign mattew m-may have
+  nyestwed its way into his mighty thwoat. ʘwʘ many a fat a-awwey wat had m-met its
+  demise w-whiwe stawing point b-bwank down the cavewnous bawwew of this awesome
+  p-pwowwing m-machine. >w< twuwy a wondew of nyatuwe this uwban pwedatow — t-tommy the cat
+  had many a stowy to teww. :3 b-but it was a wawe occasion s-such as this that h-he did. (ˆ ﻌ ˆ)♡
 </p>
 ```
 
-{{ EmbedLiveSample('A_font-family_example', '100%', 220) }}
+{{ embedwivesampwe('a_font-famiwy_exampwe', -.- '100%', rawr 220) }}
 
-### Font size
+### f-font size
 
-In our previous module's [CSS values and units](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units) article, we reviewed length and size units. Font size (set with the {{cssxref("font-size")}} property) can take values measured in most of these units (and others, such as [percentages](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units#percentages)), however the most common units you'll use to size text are:
+i-in ouw pwevious moduwe's [css vawues a-and units](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/vawues_and_units) awticwe, rawr x3 we w-weviewed wength a-and size units. (U ﹏ U) f-font size (set w-with the {{cssxwef("font-size")}} pwopewty) can t-take vawues measuwed i-in most of t-these units (and othews, (ˆ ﻌ ˆ)♡ such as [pewcentages](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/vawues_and_units#pewcentages)), :3 h-howevew the most common units you'ww use to size t-text awe:
 
-- `px` (pixels): The number of pixels high you want the text to be. This is an absolute unit — it results in the same final computed value for the font on the page in pretty much any situation.
-- `em`s: 1 `em` is equal to the font size set on the parent element of the current element we are styling (more specifically, the width of a capital letter M contained inside the parent element.) This can become tricky to work out if you have a lot of nested elements with different font sizes set, but it is doable, as you'll see below. Why bother? It is quite natural once you get used to it, and you can use `em` to size everything, not just text. You can have an entire website sized using `em`, which makes maintenance easy.
-- `rem`s: These work just like `em`, except that 1 `rem` is equal to the font size set on the root element of the document (i.e. {{htmlelement("html")}}), not the parent element. This makes doing the maths to work out your font sizes much easier, although if you want to support really old browsers, you might struggle — `rem` is not supported in Internet Explorer 8 and below.
+- `px` (pixews): the n-nyumbew of pixews h-high you want the text to be. òωó this is an absowute unit — it wesuwts in the s-same finaw computed vawue fow t-the font on the p-page in pwetty much any situation. /(^•ω•^)
+- `em`s: 1 `em` is equaw to the f-font size set on the pawent ewement o-of the cuwwent e-ewement we a-awe stywing (mowe s-specificawwy, >w< t-the width of a capitaw wettew m contained inside the pawent ewement.) this can b-become twicky to wowk out if you h-have a wot of nyested ewements with diffewent font sizes set, nyaa~~ but i-it is doabwe, mya as you'ww see bewow. mya why bothew? it is quite nyatuwaw once you g-get used to it, ʘwʘ a-and you can use `em` to size evewything, rawr n-nyot just text. (˘ω˘) you can have an entiwe w-website sized using `em`, /(^•ω•^) w-which makes maintenance e-easy. (˘ω˘)
+- `wem`s: these wowk just w-wike `em`, (///ˬ///✿) except that 1 `wem` is equaw to the font size set on t-the woot ewement of the document (i.e. (˘ω˘) {{htmwewement("htmw")}}), -.- nyot the pawent e-ewement. this m-makes doing the m-maths to wowk out youw font sizes much easiew, -.- a-awthough if you want to suppowt weawwy owd bwowsews, ^^ you might stwuggwe — `wem` is nyot suppowted i-in intewnet e-expwowew 8 and bewow. (ˆ ﻌ ˆ)♡
 
-The `font-size` of an element is inherited from that element's parent element. This all starts with the root element of the entire document — {{htmlelement("html")}} — the `font-size` of which is set to 16`px` as standard across browsers. Any paragraph (or another element that doesn't have a different size set by the browser) inside the root element will have a final size of 16 `px`. Other elements may have different default sizes, for example an {{htmlelement("h1")}} element has a size of 2 `em` set by default, so it will have a final size of 32 `px`.
+t-the `font-size` o-of an ewement is inhewited fwom that ewement's p-pawent ewement. UwU t-this aww stawts with the woot ewement of the e-entiwe document — {{htmwewement("htmw")}} — the `font-size` of which is set t-to 16`px` as standawd acwoss bwowsews. 🥺 any pawagwaph (ow a-anothew e-ewement that doesn't have a d-diffewent size set b-by the bwowsew) i-inside the woot ewement wiww have a finaw size o-of 16 `px`. 🥺 othew ewements may have diffewent d-defauwt sizes, 🥺 fow exampwe an {{htmwewement("h1")}} ewement has a size of 2 `em` s-set by defauwt, 🥺 s-so it wiww have a-a finaw size of 32 `px`. :3
 
-Things become more tricky when you start altering the font size of nested elements. For example, if you had an {{htmlelement("article")}} element in your page, and set its `font-size` to 1.5 `em` (which would compute to 24 `px` final size), and then wanted the paragraphs inside the `<article>` elements to have a computed font size of 20 `px`, what `em` value would you use?
+t-things b-become mowe twicky when you stawt a-awtewing the font size of nyested ewements. (˘ω˘) f-fow exampwe, ^^;; if you had an {{htmwewement("awticwe")}} e-ewement in youw page, (ꈍᴗꈍ) and set its `font-size` t-to 1.5 `em` (which w-wouwd compute to 24 `px` f-finaw size), ʘwʘ and then wanted the p-pawagwaphs inside t-the `<awticwe>` ewements to have a-a computed font s-size of 20 `px`, :3 nyani `em` v-vawue wouwd you use?
 
-```html
+```htmw
 <!-- document base font-size is 16px -->
-<article>
-  <!-- If my font-size is 1.5em -->
-  <p>My paragraph</p>
-  <!-- How do I compute to 20px font-size? -->
-</article>
+<awticwe>
+  <!-- i-if my font-size is 1.5em -->
+  <p>my p-pawagwaph</p>
+  <!-- how do i compute to 20px font-size? -->
+</awticwe>
 ```
 
-You would need to set its `em` value to 20/24, or 0.83333333 `em`. The maths can be complicated, so you need to be careful about how you style things. It is best to use `rem` where you can, to keep things simple, and avoid setting the `font-size` of container elements where possible.
+y-you wouwd n-nyeed to set i-its `em` vawue to 20/24, XD ow 0.83333333 `em`. t-the m-maths can be compwicated, UwU so you n-nyeed to be cawefuw about how y-you stywe things. rawr x3 it is best to u-use `wem` whewe y-you can, ( ͡o ω ͡o ) to keep things simpwe, :3 and avoid setting the `font-size` of containew e-ewements whewe possibwe. rawr
 
-#### A simple sizing example
+#### a s-simpwe sizing exampwe
 
-When sizing your text, it is usually a good idea to set the base `font-size` of the document to 10 `px`, so that then the maths is a lot easier to work out — required `(r)em` values are then the pixel font size divided by 10, not 16. After doing that, you can easily size the different types of text in your document to what you want. It is a good idea to list all your `font-size` rulesets in a designated area in your stylesheet, so they are easy to find.
+when sizing youw text, ^•ﻌ•^ it is usuawwy a good i-idea to set the base `font-size` o-of the document t-to 10 `px`, 🥺 so that then the maths is a wot easiew to wowk out — wequiwed `(w)em` v-vawues awe then the pixew font size divided b-by 10, (⑅˘꒳˘) nyot 16. :3 aftew doing t-that, (///ˬ///✿) you can easiwy s-size the diffewent types of t-text in youw document t-to nyani y-you want. 😳😳😳 it is a-a good idea to w-wist aww youw `font-size` w-wuwesets in a designated awea in youw stywesheet, 😳😳😳 so they awe easy to find. 😳😳😳
 
-Our new result is like so:
+ouw nyew w-wesuwt is wike so:
 
-```html hidden
-<h1>Tommy the cat</h1>
+```htmw h-hidden
+<h1>tommy t-the c-cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>weww i-i wemembew it a-as though it wewe a meaw ago...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  said tommy the cat as he weewed back t-to cweaw nyanievew f-foweign mattew may have
+  nyestwed its way into his mighty thwoat. nyaa~~ m-many a fat a-awwey wat had m-met its
+  demise whiwe stawing point bwank down t-the cavewnous bawwew of this awesome
+  pwowwing m-machine. UwU twuwy a w-wondew of nyatuwe this uwban pwedatow — tommy t-the cat
+  had many a stowy to teww. òωó b-but it was a-a wawe occasion such as this that h-he did. òωó
 </p>
 ```
 
 ```css
-html {
-  font-size: 10px;
+h-htmw {
+  f-font-size: 10px;
 }
 
-h1 {
-  font-size: 5rem;
+h-h1 {
+  font-size: 5wem;
 }
 
-p {
-  font-size: 1.5rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
+p-p {
+  font-size: 1.5wem;
+  c-cowow: wed;
+  font-famiwy: h-hewvetica, a-awiaw, UwU sans-sewif;
 }
 ```
 
-{{ EmbedLiveSample('A_simple_sizing_example', '100%', 260) }}
+{{ embedwivesampwe('a_simpwe_sizing_exampwe', (///ˬ///✿) '100%', ( ͡o ω ͡o ) 260) }}
 
-### Font style, font weight, text transform, and text decoration
+### f-font stywe, rawr font weight, :3 text twansfowm, >w< and text d-decowation
 
-CSS provides four common properties to alter the visual weight/emphasis of text:
+css pwovides fouw c-common pwopewties to awtew the v-visuaw weight/emphasis o-of text:
 
-- {{cssxref("font-style")}}: Used to turn italic text on and off. Possible values are as follows (you'll rarely use this, unless you want to turn some italic styling off for some reason):
+- {{cssxwef("font-stywe")}}: used to tuwn itawic t-text on and off. σωσ possibwe vawues awe as fowwows (you'ww w-wawewy u-use this, σωσ unwess you want to tuwn some itawic stywing o-off fow some w-weason):
 
-  - `normal`: Sets the text to the normal font (turns existing italics off.)
-  - `italic`: Sets the text to use the _italic version of the font_ if available; if not available, it will simulate italics with oblique instead.
-  - `oblique`: Sets the text to use a simulated version of an italic font, created by slanting the normal version.
+  - `nowmaw`: sets t-the text to the nyowmaw font (tuwns existing itawics o-off.)
+  - `itawic`: s-sets the text to use the _itawic v-vewsion o-of the font_ if avaiwabwe; if nyot avaiwabwe, >_< i-it wiww simuwate i-itawics with obwique i-instead. -.-
+  - `obwique`: sets t-the text to use a simuwated vewsion of an itawic font, 😳😳😳 cweated by swanting the nyowmaw vewsion. :3
 
-- {{cssxref("font-weight")}}: Sets how bold the text is. This has many values available in case you have many font variants available (such as _-light_, _-normal_, _-bold_, _-extrabold_, _-black_, etc.), but realistically you'll rarely use any of them except for `normal` and `bold`:
+- {{cssxwef("font-weight")}}: sets how bowd t-the text is. mya this h-has many vawues a-avaiwabwe in c-case you have many f-font vawiants a-avaiwabwe (such as _-wight_, (✿oωo) _-nowmaw_, 😳😳😳 _-bowd_, o.O _-extwabowd_, _-bwack_, (ꈍᴗꈍ) e-etc.), (ˆ ﻌ ˆ)♡ b-but weawisticawwy you'ww wawewy u-use any of them e-except fow `nowmaw` and `bowd`:
 
-  - `normal`, `bold`: Normal and **bold** font weight
-  - `lighter`, `bolder`: Sets the current element's boldness to be one step lighter or heavier than its parent element's boldness.
-  - `100`–`900`: Numeric boldness values that provide finer grained control than the above keywords, if needed.
+  - `nowmaw`, -.- `bowd`: nyowmaw a-and **bowd** font weight
+  - `wightew`, mya `bowdew`: sets the cuwwent e-ewement's bowdness to be one s-step wightew ow h-heaview than its pawent ewement's b-bowdness. :3
+  - `100`–`900`: nyumewic b-bowdness v-vawues that pwovide finew gwained c-contwow than t-the above keywowds, σωσ if nyeeded. 😳😳😳
 
-- {{cssxref("text-transform")}}: Allows you to set your font to be transformed. Values include:
+- {{cssxwef("text-twansfowm")}}: a-awwows you to set youw font to b-be twansfowmed. -.- v-vawues incwude:
 
-  - `none`: Prevents any transformation.
-  - `uppercase`: Transforms all text to capitals.
-  - `lowercase`: Transforms all text to lower case.
-  - `capitalize`: Transforms all words to have the first letter capitalized.
-  - `full-width`: Transforms all glyphs to be written inside a fixed-width square, similar to a monospace font, allowing aligning of e.g. Latin characters along with Asian language glyphs (like Chinese, Japanese, Korean).
+  - `none`: p-pwevents any twansfowmation. 😳😳😳
+  - `uppewcase`: t-twansfowms aww text to capitaws. rawr x3
+  - `wowewcase`: t-twansfowms aww text to wowew case. (///ˬ///✿)
+  - `capitawize`: twansfowms aww wowds to have the fiwst wettew capitawized. >w<
+  - `fuww-width`: t-twansfowms aww gwyphs to be wwitten inside a fixed-width squawe, o.O simiwaw to a monospace font, (˘ω˘) awwowing awigning o-of e.g. rawr watin chawactews awong with asian wanguage g-gwyphs (wike chinese, mya japanese, k-kowean). òωó
 
-- {{cssxref("text-decoration")}}: Sets/unsets text decorations on fonts (you'll mainly use this to unset the default underline on links when styling them.) Available values are:
+- {{cssxwef("text-decowation")}}: sets/unsets text decowations on fonts (you'ww m-mainwy use this to u-unset the defauwt undewwine on winks w-when stywing t-them.) avaiwabwe vawues awe:
 
-  - `none`: Unsets any text decorations already present.
-  - `underline`: **Underlines the text**.
-  - `overline`: Gives the text an overline.
-  - `line-through`: Puts a ~~strikethrough over the text~~.
+  - `none`: unsets a-any text decowations awweady pwesent. nyaa~~
+  - `undewwine`: **undewwines the text**. òωó
+  - `ovewwine`: g-gives the text an ovewwine. mya
+  - `wine-thwough`: p-puts a ~~stwikethwough ovew the t-text~~. ^^
 
-  You should note that {{cssxref("text-decoration")}} can accept multiple values at once, if you want to add multiple decorations simultaneously, for example `text-decoration: underline overline`. Also note that {{cssxref("text-decoration")}} is a shorthand property for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("text-decoration-color")}}. You can use combinations of these property values to create interesting effects, for example `text-decoration: line-through red wavy`.
+  you shouwd nyote that {{cssxwef("text-decowation")}} c-can accept muwtipwe v-vawues at once, ^•ﻌ•^ if you want to add muwtipwe d-decowations simuwtaneouswy, -.- fow exampwe `text-decowation: undewwine o-ovewwine`. UwU awso nyote that {{cssxwef("text-decowation")}} is a showthand pwopewty fow {{cssxwef("text-decowation-wine")}}, (˘ω˘) {{cssxwef("text-decowation-stywe")}}, UwU and {{cssxwef("text-decowation-cowow")}}. rawr y-you can use combinations o-of these pwopewty vawues t-to cweate intewesting e-effects, :3 fow exampwe `text-decowation: w-wine-thwough wed wavy`. nyaa~~
 
-Let's look at adding a couple of these properties to our example:
+wet's wook at adding a coupwe of these pwopewties to ouw e-exampwe:
 
-Our new result is like so:
+ouw n-nyew wesuwt is wike so:
 
-```html hidden
-<h1>Tommy the cat</h1>
+```htmw h-hidden
+<h1>tommy t-the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>weww i wemembew i-it as though it wewe a meaw ago...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  s-said tommy the cat as he weewed back to cweaw n-nyanievew foweign m-mattew may have
+  nyestwed its way into his mighty t-thwoat. rawr many a fat awwey wat had met its
+  demise whiwe stawing point bwank down the cavewnous bawwew of this awesome
+  pwowwing m-machine. (ˆ ﻌ ˆ)♡ twuwy a-a wondew of nyatuwe this uwban p-pwedatow — t-tommy the cat
+  had many a stowy t-to teww. (ꈍᴗꈍ) but it was a wawe occasion such as this that he did. (˘ω˘)
 </p>
 ```
 
 ```css
-html {
+htmw {
   font-size: 10px;
 }
 
 h1 {
-  font-size: 5rem;
-  text-transform: capitalize;
+  f-font-size: 5wem;
+  text-twansfowm: capitawize;
 }
 
 h1 + p {
-  font-weight: bold;
+  font-weight: bowd;
 }
 
-p {
-  font-size: 1.5rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
+p-p {
+  font-size: 1.5wem;
+  c-cowow: wed;
+  f-font-famiwy: hewvetica, (U ﹏ U) awiaw, >w< sans-sewif;
 }
 ```
 
-{{ EmbedLiveSample('Font_style_font_weight_text_transform_and_text_decoration', '100%', 260) }}
+{{ embedwivesampwe('font_stywe_font_weight_text_twansfowm_and_text_decowation', UwU '100%', 260) }}
 
-### Text drop shadows
+### t-text dwop s-shadows
 
-You can apply drop shadows to your text using the {{cssxref("text-shadow")}} property. This takes up to four values, as shown in the example below:
+you can a-appwy dwop shadows to youw text u-using the {{cssxwef("text-shadow")}} pwopewty. (ˆ ﻌ ˆ)♡ t-this takes up to fouw vawues, nyaa~~ a-as shown in the exampwe bewow:
 
 ```css
-text-shadow: 4px 4px 5px red;
+t-text-shadow: 4px 4px 5px wed;
 ```
 
-The four properties are as follows:
+the fouw pwopewties awe a-as fowwows:
 
-1. The horizontal offset of the shadow from the original text — this can take most available CSS [length and size units](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size), but you'll most commonly use `px`; positive values move the shadow right, and negative values left. This value has to be included.
-2. The vertical offset of the shadow from the original text; behaves basically just like the horizontal offset, except that it moves the shadow up/down, not left/right. This value has to be included.
-3. The blur radius — a higher value means the shadow is dispersed more widely. If this value is not included, it defaults to 0, which means no blur. This can take most available CSS [length and size units](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size).
-4. The base color of the shadow, which can take any [CSS color unit](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units#colors). If not included, it defaults to `black`.
+1. 🥺 the howizontaw o-offset of the shadow f-fwom the owiginaw text — t-this can take most a-avaiwabwe css [wength and size u-units](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/vawues_and_units#wength_and_size), >_< but you'ww most c-commonwy use `px`; positive vawues m-move the shadow w-wight, òωó and nyegative vawues weft. ʘwʘ this vawue h-has to be incwuded. mya
+2. the vewticaw offset of the shadow fwom the owiginaw text; behaves basicawwy just wike the howizontaw offset, σωσ e-except that it moves the shadow up/down, OwO nyot w-weft/wight. (✿oωo) this vawue has to b-be incwuded. ʘwʘ
+3. the bwuw wadius — a highew vawue m-means the shadow is dispewsed mowe widewy. mya if t-this vawue is nyot incwuded, -.- it defauwts to 0, w-which means nyo bwuw. -.- this can take most avaiwabwe c-css [wength and size units](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/vawues_and_units#wength_and_size). ^^;;
+4. the base c-cowow of the shadow, (ꈍᴗꈍ) w-which can take any [css cowow unit](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/vawues_and_units#cowows). rawr i-if nyot incwuded, ^^ i-it defauwts to `bwack`. nyaa~~
 
-#### Multiple shadows
+#### m-muwtipwe s-shadows
 
-You can apply multiple shadows to the same text by including multiple shadow values separated by commas, for example:
+you can appwy muwtipwe shadows to the same t-text by incwuding muwtipwe shadow vawues sepawated by commas, (⑅˘꒳˘) f-fow exampwe:
 
 ```css
 text-shadow:
-  1px 1px 1px red,
-  2px 2px 1px red;
+  1px 1px 1px wed, (U ᵕ U❁)
+  2px 2px 1px wed;
 ```
 
-If we applied this to the {{htmlelement("h1")}} element in our Tommy the cat example, we'd end up with this:
+if w-we appwied this t-to the {{htmwewement("h1")}} ewement i-in ouw tommy the cat exampwe, (ꈍᴗꈍ) we'd end up with this:
 
-```html hidden
-<h1>Tommy the cat</h1>
+```htmw h-hidden
+<h1>tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>weww i-i wemembew it as though i-it wewe a meaw a-ago...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  said tommy the cat as he weewed back to cweaw nyanievew foweign mattew may h-have
+  nyestwed i-its way into his mighty thwoat. (✿oωo) many a fat awwey w-wat had met its
+  demise whiwe stawing point bwank d-down the cavewnous b-bawwew of t-this awesome
+  p-pwowwing machine. UwU t-twuwy a wondew o-of nyatuwe this uwban pwedatow — tommy the cat
+  h-had many a stowy t-to teww. ^^ but i-it was a wawe o-occasion such as t-this that he did. :3
 </p>
 ```
 
-```css hidden
-html {
+```css h-hidden
+htmw {
   font-size: 10px;
 }
 
-h1 {
-  font-size: 5rem;
-  text-transform: capitalize;
+h-h1 {
+  font-size: 5wem;
+  t-text-twansfowm: c-capitawize;
   text-shadow:
-    1px 1px 1px red,
-    2px 2px 1px red;
+    1px 1px 1px wed, ( ͡o ω ͡o )
+    2px 2px 1px w-wed;
 }
 
 h1 + p {
-  font-weight: bold;
+  font-weight: bowd;
 }
 
 p {
-  font-size: 1.5rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
+  f-font-size: 1.5wem;
+  cowow: wed;
+  font-famiwy: h-hewvetica, ( ͡o ω ͡o ) awiaw, s-sans-sewif;
 }
 ```
 
-{{ EmbedLiveSample('Hidden_example1', '100%', 260) }}
+{{ embedwivesampwe('hidden_exampwe1', (U ﹏ U) '100%', -.- 260) }}
 
-> [!NOTE]
-> You can see more interesting examples of `text-shadow` usage in the Sitepoint article [Moonlighting with CSS text-shadow](https://www.sitepoint.com/moonlighting-css-text-shadow/).
+> [!note]
+> you can see mowe intewesting e-exampwes of `text-shadow` u-usage in the sitepoint awticwe [moonwighting w-with c-css text-shadow](https://www.sitepoint.com/moonwighting-css-text-shadow/). 😳😳😳
 
-## Text layout
+## text wayout
 
-With basic font properties out the way, let's now have a look at properties we can use to affect text layout.
+with basic font pwopewties out the w-way, UwU wet's nyow h-have a wook at pwopewties we can use to affect t-text wayout. >w<
 
-### Text alignment
+### t-text awignment
 
-The {{cssxref("text-align")}} property is used to control how text is aligned within its containing content box. The available values are as follows, and work in pretty much the same way as they do in a regular word processor application:
+the {{cssxwef("text-awign")}} pwopewty is used t-to contwow how text is awigned within its containing content box. mya the avaiwabwe vawues awe as fowwows, :3 a-and wowk in pwetty much the same way as t-they do in a weguwaw w-wowd pwocessow a-appwication:
 
-- `left`: Left-justifies the text.
-- `right`: Right-justifies the text.
-- `center`: Centers the text.
-- `justify`: Makes the text spread out, varying the gaps in between the words so that all lines of text are the same width. You need to use this carefully — it can look terrible, especially when applied to a paragraph with lots of long words in it. If you are going to use this, you should also think about using something else along with it, such as {{cssxref("hyphens")}}, to break some of the longer words across lines.
+- `weft`: weft-justifies t-the text. (ˆ ﻌ ˆ)♡
+- `wight`: w-wight-justifies t-the text. (U ﹏ U)
+- `centew`: c-centews the t-text. ʘwʘ
+- `justify`: makes the text spwead out, rawr v-vawying the gaps i-in between the w-wowds so that aww wines of text a-awe the same width. (ꈍᴗꈍ) y-you nyeed to u-use this cawefuwwy — it can wook t-tewwibwe, ( ͡o ω ͡o ) especiawwy w-when appwied t-to a pawagwaph w-with wots of w-wong wowds in it. 😳😳😳 if you awe going t-to use this, òωó you shouwd awso t-think about using s-something ewse awong with it, such as {{cssxwef("hyphens")}}, to bweak some o-of the wongew wowds a-acwoss wines. mya
 
-If we applied `text-align: center;` to the {{htmlelement("h1")}} in our example, we'd end up with this:
+if we appwied `text-awign: c-centew;` t-to the {{htmwewement("h1")}} in ouw exampwe, rawr x3 we'd end up w-with this:
 
-```html hidden
-<h1>Tommy the cat</h1>
+```htmw h-hidden
+<h1>tommy t-the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>weww i-i wemembew i-it as though i-it wewe a meaw ago...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  said tommy the c-cat as he weewed back to cweaw nyanievew foweign mattew may have
+  nyestwed its w-way into his m-mighty thwoat. XD many a fat awwey wat had met its
+  demise whiwe stawing p-point bwank d-down the cavewnous bawwew of this awesome
+  pwowwing m-machine. (ˆ ﻌ ˆ)♡ twuwy a wondew o-of nyatuwe this u-uwban pwedatow — t-tommy the cat
+  had many a stowy to teww. >w< but it was a wawe occasion s-such as this that he did. (ꈍᴗꈍ)
 </p>
 ```
 
-```css hidden
-html {
+```css h-hidden
+htmw {
   font-size: 10px;
 }
 
-h1 {
-  font-size: 5rem;
-  text-transform: capitalize;
+h-h1 {
+  font-size: 5wem;
+  text-twansfowm: capitawize;
   text-shadow:
-    1px 1px 1px red,
-    2px 2px 1px red;
-  text-align: center;
+    1px 1px 1px w-wed, (U ﹏ U)
+    2px 2px 1px wed;
+  text-awign: c-centew;
 }
 
 h1 + p {
-  font-weight: bold;
+  font-weight: bowd;
 }
 
-p {
-  font-size: 1.5rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
+p-p {
+  font-size: 1.5wem;
+  cowow: w-wed;
+  font-famiwy: hewvetica, >_< awiaw, sans-sewif;
 }
 ```
 
-{{ EmbedLiveSample('Text_alignment', '100%', 260) }}
+{{ embedwivesampwe('text_awignment', >_< '100%', 260) }}
 
-### Line height
+### wine height
 
-The {{cssxref("line-height")}} property sets the height of each line of text — this can take most [length and size units](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size), but can also take a unitless value, which acts as a multiplier and is generally considered the best option — the {{cssxref("font-size")}} is multiplied to get the `line-height`. Body text generally looks nicer and is easier to read when the lines are spaced apart; the recommended line height is around 1.5 – 2 (double spaced.) So to set our lines of text to 1.6 times the height of the font, you'd use this:
+the {{cssxwef("wine-height")}} pwopewty sets the h-height of each w-wine of text — t-this can take m-most [wength and size units](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/vawues_and_units#wength_and_size), -.- but can awso t-take a unitwess vawue, òωó which acts as a muwtipwiew and is genewawwy c-considewed the b-best option — t-the {{cssxwef("font-size")}} i-is muwtipwied to get the `wine-height`. o.O body text genewawwy wooks nyicew and is e-easiew to wead when t-the wines awe spaced apawt; the wecommended wine height is awound 1.5 – 2 (doubwe s-spaced.) so to set ouw wines o-of text to 1.6 t-times the height o-of the font, σωσ you'd use this:
 
 ```css
-line-height: 1.6;
+wine-height: 1.6;
 ```
 
-Applying this to the {{htmlelement("p")}} elements in our example would give us this result:
+appwying this to the {{htmwewement("p")}} ewements i-in ouw exampwe wouwd give us t-this wesuwt:
 
-```html hidden
-<h1>Tommy the cat</h1>
+```htmw hidden
+<h1>tommy the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>weww i w-wemembew it as though it wewe a m-meaw ago...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  said tommy the cat as he w-weewed back to cweaw n-nyanievew foweign m-mattew may h-have
+  nyestwed i-its way into his mighty thwoat. σωσ m-many a fat awwey w-wat had met its
+  demise whiwe s-stawing point bwank down the cavewnous bawwew o-of this awesome
+  pwowwing machine. mya t-twuwy a wondew o-of nyatuwe this uwban pwedatow — t-tommy the c-cat
+  had many a stowy to teww. o.O but it was a wawe occasion such a-as this that he d-did. XD
 </p>
 ```
 
-```css hidden
-html {
-  font-size: 10px;
+```css h-hidden
+htmw {
+  f-font-size: 10px;
 }
 
 h1 {
-  font-size: 5rem;
-  text-transform: capitalize;
+  font-size: 5wem;
+  text-twansfowm: c-capitawize;
   text-shadow:
-    1px 1px 1px red,
-    2px 2px 1px red;
-  text-align: center;
+    1px 1px 1px wed,
+    2px 2px 1px wed;
+  text-awign: c-centew;
 }
 
 h1 + p {
-  font-weight: bold;
+  font-weight: bowd;
 }
 
-p {
-  font-size: 1.5rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.6;
+p-p {
+  font-size: 1.5wem;
+  cowow: wed;
+  font-famiwy: hewvetica, XD a-awiaw, sans-sewif;
+  wine-height: 1.6;
 }
 ```
 
-{{ EmbedLiveSample('Hidden_example2', '100%', 300) }}
+{{ e-embedwivesampwe('hidden_exampwe2', (✿oωo) '100%', -.- 300) }}
 
-### Letter and word spacing
+### w-wettew a-and wowd spacing
 
-The {{cssxref("letter-spacing")}} and {{cssxref("word-spacing")}} properties allow you to set the spacing between letters and words in your text. You won't use these very often, but might find a use for them to get a certain look, or to improve the legibility of a particularly dense font. They can take most [length and size units](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units#length_and_size).
+the {{cssxwef("wettew-spacing")}} a-and {{cssxwef("wowd-spacing")}} p-pwopewties awwow you to s-set the spacing b-between wettews a-and wowds in youw t-text. (ꈍᴗꈍ) you won't use these vewy o-often, ( ͡o ω ͡o ) but might f-find a use fow t-them to get a cewtain wook, (///ˬ///✿) ow t-to impwove the wegibiwity of a pawticuwawwy dense font. 🥺 they can take most [wength and size units](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/vawues_and_units#wength_and_size). (ˆ ﻌ ˆ)♡
 
-So as an example, we could apply some word- and letter-spacing to the first line of each {{htmlelement("p")}} element in our example:
+s-so as a-an exampwe, ^•ﻌ•^ we couwd appwy some w-wowd- and wettew-spacing to the fiwst wine of each {{htmwewement("p")}} e-ewement i-in ouw exampwe:
 
 ```css
-p::first-line {
-  letter-spacing: 4px;
-  word-spacing: 4px;
+p-p::fiwst-wine {
+  w-wettew-spacing: 4px;
+  wowd-spacing: 4px;
 }
 ```
 
-Let's add some to our example, like so:
+w-wet's add some to ouw exampwe, rawr x3 wike so:
 
-```html hidden
-<h1>Tommy the cat</h1>
+```htmw h-hidden
+<h1>tommy t-the cat</h1>
 
-<p>Well I remember it as though it were a meal ago...</p>
+<p>weww i wemembew it as though it wewe a-a meaw ago...</p>
 
 <p>
-  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
-  nestled its way into his mighty throat. Many a fat alley rat had met its
-  demise while staring point blank down the cavernous barrel of this awesome
-  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
-  had many a story to tell. But it was a rare occasion such as this that he did.
+  said t-tommy the cat as he weewed back to cweaw nyanievew f-foweign mattew may have
+  nyestwed i-its way into his mighty thwoat. (U ﹏ U) many a fat a-awwey wat had met its
+  demise w-whiwe stawing point bwank down t-the cavewnous bawwew o-of this awesome
+  pwowwing machine. OwO twuwy a w-wondew of nyatuwe this uwban pwedatow — tommy t-the cat
+  had many a-a stowy to teww. (✿oωo) b-but it was a wawe occasion such as this that he did. (⑅˘꒳˘)
 </p>
 ```
 
 ```css hidden
-html {
+htmw {
   font-size: 10px;
 }
 
 h1 {
-  font-size: 5rem;
-  text-transform: capitalize;
-  text-shadow:
-    1px 1px 1px red,
-    2px 2px 1px red;
-  text-align: center;
-  letter-spacing: 2px;
+  f-font-size: 5wem;
+  text-twansfowm: capitawize;
+  t-text-shadow:
+    1px 1px 1px w-wed, UwU
+    2px 2px 1px wed;
+  text-awign: centew;
+  w-wettew-spacing: 2px;
 }
 
-h1 + p {
-  font-weight: bold;
+h-h1 + p {
+  font-weight: bowd;
 }
 
-p::first-line {
-  letter-spacing: 4px;
-  word-spacing: 4px;
+p::fiwst-wine {
+  wettew-spacing: 4px;
+  w-wowd-spacing: 4px;
 }
 
 p {
-  font-size: 1.5rem;
-  color: red;
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  letter-spacing: 1px;
+  f-font-size: 1.5wem;
+  cowow: wed;
+  font-famiwy: h-hewvetica, (ˆ ﻌ ˆ)♡ awiaw, s-sans-sewif;
+  wine-height: 1.6;
+  w-wettew-spacing: 1px;
 }
 ```
 
-{{ EmbedLiveSample('Letter_and_word_spacing', '100%', 330) }}
+{{ e-embedwivesampwe('wettew_and_wowd_spacing', '100%', /(^•ω•^) 330) }}
 
-### Other properties worth looking at
+### othew pwopewties w-wowth wooking at
 
-The above properties give you an idea of how to start styling text on a webpage, but there are many more properties you could use. We just wanted to cover the most important ones here. Once you've become used to using the above, you should also explore the following:
+the above p-pwopewties give y-you an idea o-of how to stawt s-stywing text on a-a webpage, (˘ω˘) but thewe awe many mowe p-pwopewties you c-couwd use. XD we just wanted to covew the most impowtant o-ones hewe. òωó once you've become u-used to using the above, UwU you shouwd awso expwowe the fowwowing:
 
-Font styles:
+font stywes:
 
-- {{cssxref("font-variant")}}: Switch between small caps and normal font alternatives.
-- {{cssxref("font-kerning")}}: Switch font kerning options on and off.
-- {{cssxref("font-feature-settings")}}: Switch various [OpenType](https://en.wikipedia.org/wiki/OpenType) font features on and off.
-- {{cssxref("font-variant-alternates")}}: Control the use of alternate glyphs for a given font-face.
-- {{cssxref("font-variant-caps")}}: Control the use of alternate capital glyphs.
-- {{cssxref("font-variant-east-asian")}}: Control the usage of alternate glyphs for East Asian scripts, like Japanese and Chinese.
-- {{cssxref("font-variant-ligatures")}}: Control which ligatures and contextual forms are used in text.
-- {{cssxref("font-variant-numeric")}}: Control the usage of alternate glyphs for numbers, fractions, and ordinal markers.
-- {{cssxref("font-variant-position")}}: Control the usage of alternate glyphs of smaller sizes positioned as superscript or subscript.
-- {{cssxref("font-size-adjust")}}: Adjust the visual size of the font independently of its actual font size.
-- {{cssxref("font-stretch")}}: Switch between possible alternative stretched versions of a given font.
-- {{cssxref("text-underline-position")}}: Specify the position of underlines set using the `text-decoration-line` property `underline` value.
-- {{cssxref("text-rendering")}}: Try to perform some text rendering optimization.
+- {{cssxwef("font-vawiant")}}: switch between smow caps and n-nyowmaw font awtewnatives.
+- {{cssxwef("font-kewning")}}: switch f-font kewning options on and off. -.-
+- {{cssxwef("font-featuwe-settings")}}: s-switch v-vawious [opentype](https://en.wikipedia.owg/wiki/opentype) font f-featuwes on and off. (ꈍᴗꈍ)
+- {{cssxwef("font-vawiant-awtewnates")}}: c-contwow the use of awtewnate gwyphs f-fow a given font-face. (⑅˘꒳˘)
+- {{cssxwef("font-vawiant-caps")}}: contwow the use of awtewnate capitaw gwyphs. 🥺
+- {{cssxwef("font-vawiant-east-asian")}}: contwow the usage of awtewnate g-gwyphs fow east asian scwipts, òωó wike japanese a-and chinese. 😳
+- {{cssxwef("font-vawiant-wigatuwes")}}: contwow w-which wigatuwes and contextuaw fowms awe used in text. òωó
+- {{cssxwef("font-vawiant-numewic")}}: contwow the usage of awtewnate gwyphs fow nyumbews, 🥺 fwactions, ( ͡o ω ͡o ) and owdinaw mawkews. UwU
+- {{cssxwef("font-vawiant-position")}}: c-contwow t-the usage of a-awtewnate gwyphs of smowew sizes p-positioned as supewscwipt o-ow subscwipt. 😳😳😳
+- {{cssxwef("font-size-adjust")}}: a-adjust the visuaw size of the font independentwy o-of i-its actuaw font size. ʘwʘ
+- {{cssxwef("font-stwetch")}}: s-switch between p-possibwe awtewnative s-stwetched v-vewsions of a g-given font. ^^
+- {{cssxwef("text-undewwine-position")}}: specify the p-position of undewwines s-set using t-the `text-decowation-wine` pwopewty `undewwine` v-vawue. >_<
+- {{cssxwef("text-wendewing")}}: t-twy t-to pewfowm some t-text wendewing optimization. (ˆ ﻌ ˆ)♡
 
-Text layout styles:
+t-text w-wayout stywes:
 
-- {{cssxref("text-indent")}}: Specify how much horizontal space should be left before the beginning of the first line of the text content.
-- {{cssxref("text-overflow")}}: Define how overflowed content that is not displayed is signaled to users.
-- {{cssxref("white-space")}}: Define how whitespace and associated line breaks inside the element are handled.
-- {{cssxref("word-break")}}: Specify whether to break lines within words.
-- {{cssxref("direction")}}: Define the text direction (This depends on the language and usually it's better to let HTML handle that part as it is tied to the text content.)
-- {{cssxref("hyphens")}}: Switch on and off hyphenation for supported languages.
-- {{cssxref("line-break")}}: Relax or strengthen line breaking for Asian languages.
-- {{cssxref("text-align-last")}}: Define how the last line of a block or a line, right before a forced line break, is aligned.
-- {{cssxref("text-orientation")}}: Define the orientation of the text in a line.
-- {{cssxref("overflow-wrap")}}: Specify whether or not the browser may break lines within words in order to prevent overflow.
-- {{cssxref("writing-mode")}}: Define whether lines of text are laid out horizontally or vertically and the direction in which subsequent lines flow.
+- {{cssxwef("text-indent")}}: s-specify how much howizontaw space shouwd be weft befowe the beginning o-of the fiwst wine of the t-text content. (ˆ ﻌ ˆ)♡
+- {{cssxwef("text-ovewfwow")}}: define how ovewfwowed c-content that i-is nyot dispwayed i-is signawed to usews. 🥺
+- {{cssxwef("white-space")}}: d-define how w-whitespace and associated wine bweaks inside the ewement awe handwed. ( ͡o ω ͡o )
+- {{cssxwef("wowd-bweak")}}: specify whethew to bweak wines w-within wowds. (ꈍᴗꈍ)
+- {{cssxwef("diwection")}}: define the text diwection (this depends o-on the wanguage a-and usuawwy it's bettew to w-wet htmw handwe t-that pawt as it i-is tied to the t-text content.)
+- {{cssxwef("hyphens")}}: s-switch o-on and off hyphenation f-fow suppowted wanguages. :3
+- {{cssxwef("wine-bweak")}}: wewax o-ow stwengthen wine bweaking fow a-asian wanguages. (✿oωo)
+- {{cssxwef("text-awign-wast")}}: define how t-the wast wine of a-a bwock ow a wine, (U ᵕ U❁) wight befowe a-a fowced wine bweak, UwU is awigned. ^^
+- {{cssxwef("text-owientation")}}: define the o-owientation of t-the text in a wine. /(^•ω•^)
+- {{cssxwef("ovewfwow-wwap")}}: s-specify whethew o-ow not the bwowsew may bweak w-wines within wowds i-in owdew to p-pwevent ovewfwow.
+- {{cssxwef("wwiting-mode")}}: define whethew w-wines of text awe waid out howizontawwy ow vewticawwy and the diwection in which subsequent wines fwow. (˘ω˘)
 
-## Font shorthand
+## font showthand
 
-Many font properties can also be set through the shorthand property {{cssxref("font")}}. These are written in the following order: {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}}, and {{cssxref("font-family")}}.
+many font pwopewties c-can awso be set t-thwough the showthand pwopewty {{cssxwef("font")}}. OwO these awe wwitten in the fowwowing owdew: {{cssxwef("font-stywe")}}, (U ᵕ U❁) {{cssxwef("font-vawiant")}}, (U ﹏ U) {{cssxwef("font-weight")}}, mya {{cssxwef("font-stwetch")}}, (⑅˘꒳˘) {{cssxwef("font-size")}}, (U ᵕ U❁) {{cssxwef("wine-height")}}, /(^•ω•^) a-and {{cssxwef("font-famiwy")}}. ^•ﻌ•^
 
-Among all those properties, only `font-size` and `font-family` are required when using the `font` shorthand property.
+a-among aww those pwopewties, (///ˬ///✿) onwy `font-size` and `font-famiwy` a-awe wequiwed w-when using the `font` showthand p-pwopewty. o.O
 
-A forward slash has to be put in between the {{cssxref("font-size")}} and {{cssxref("line-height")}} properties.
+a f-fowwawd swash has to be put in between t-the {{cssxwef("font-size")}} and {{cssxwef("wine-height")}} p-pwopewties. (ˆ ﻌ ˆ)♡
 
-A full example would look like this:
+a-a fuww exampwe wouwd wook wike this:
 
 ```css
 font:
-  italic normal bold normal 3em/1.5 Helvetica,
-  Arial,
-  sans-serif;
+  itawic nyowmaw b-bowd nyowmaw 3em/1.5 h-hewvetica, 😳
+  a-awiaw, òωó
+  sans-sewif;
 ```
 
-## Active learning: Playing with styling text
+## a-active weawning: pwaying with s-stywing text
 
-In this active learning session, we don't have any specific exercises for you to do: we'd just like you to have a good play with some font/text layout properties, and see what you can produce! You can either do this using offline HTML/CSS files, or enter your code into the live editable example below.
+in t-this active weawning s-session, (⑅˘꒳˘) w-we don't have any specific exewcises fow you to d-do: we'd just wike y-you to have a good pway with some font/text wayout pwopewties, rawr and see nyani y-you can pwoduce! (ꈍᴗꈍ) y-you can eithew do this using offwine h-htmw/css fiwes, ^^ ow entew youw code into the wive editabwe e-exampwe bewow. (ˆ ﻌ ˆ)♡
 
-If you make a mistake, you can always reset it using the _Reset_ button.
+i-if you make a mistake, /(^•ω•^) y-you can awways weset it using t-the _weset_ b-button. ^^
 
-```html hidden
+```htmw hidden
 <div
-  class="body-wrapper"
-  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>HTML Input</h2>
-  <textarea
-    id="code"
-    class="html-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-<p>Some sample text for your delight</p>
-  </textarea>
+  cwass="body-wwappew"
+  s-stywe="font-famiwy: 'open s-sans wight',hewvetica,awiaw,sans-sewif;">
+  <h2>htmw i-input</h2>
+  <textawea
+    i-id="code"
+    cwass="htmw-input"
+    s-stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px sowid #0095dd;">
+<p>some s-sampwe text fow youw dewight</p>
+  </textawea>
 
-  <h2>CSS Input</h2>
-  <textarea
+  <h2>css input</h2>
+  <textawea
     id="code"
-    class="css-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+    cwass="css-input"
+    stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px s-sowid #0095dd;">
 p {
 
 }
-</textarea
+</textawea
   >
 
-  <h2>Output</h2>
+  <h2>output</h2>
   <div
-    class="output"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
-  <div class="controls">
+    cwass="output"
+    s-stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px s-sowid #0095dd;"></div>
+  <div cwass="contwows">
     <input
-      id="reset"
+      id="weset"
       type="button"
-      value="Reset"
-      style="margin: 10px 10px 0 0;" />
+      v-vawue="weset"
+      s-stywe="mawgin: 10px 10px 0 0;" />
   </div>
 </div>
 ```
 
 ```js hidden
-const htmlInput = document.querySelector(".html-input");
-const cssInput = document.querySelector(".css-input");
-const reset = document.getElementById("reset");
-let htmlCode = htmlInput.value;
-let cssCode = cssInput.value;
-const output = document.querySelector(".output");
+const htmwinput = d-document.quewysewectow(".htmw-input");
+const cssinput = d-document.quewysewectow(".css-input");
+const weset = document.getewementbyid("weset");
+wet htmwcode = h-htmwinput.vawue;
+wet csscode = cssinput.vawue;
+const output = document.quewysewectow(".output");
 
-const styleElem = document.createElement("style");
-const headElem = document.querySelector("head");
-headElem.appendChild(styleElem);
+c-const s-styweewem = document.cweateewement("stywe");
+c-const h-headewem = document.quewysewectow("head");
+headewem.appendchiwd(styweewem);
 
-function drawOutput() {
-  output.innerHTML = htmlInput.value;
-  styleElem.textContent = cssInput.value;
+function dwawoutput() {
+  o-output.innewhtmw = htmwinput.vawue;
+  s-styweewem.textcontent = cssinput.vawue;
 }
 
-reset.addEventListener("click", function () {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+weset.addeventwistenew("cwick", o.O f-function () {
+  h-htmwinput.vawue = h-htmwcode;
+  cssinput.vawue = csscode;
+  d-dwawoutput();
 });
 
-htmlInput.addEventListener("input", drawOutput);
-cssInput.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
+htmwinput.addeventwistenew("input", 😳😳😳 dwawoutput);
+cssinput.addeventwistenew("input", XD dwawoutput);
+window.addeventwistenew("woad", nyaa~~ dwawoutput);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 800) }}
+{{ e-embedwivesampwe('pwayabwe_code', ^•ﻌ•^ 700, 800) }}
 
-## Test your skills!
+## t-test youw skiwws!
 
-You've reached the end of this article, and already did some skill testing in our Active Learning section, but can you remember the most important information going forward? You can find an assessment to verify that you've retained this information at the end of the module — see [Typesetting a community school homepage](/ru/docs/Learn_web_development/Core/Text_styling/Typesetting_a_homepage).
+you've weached the end of this awticwe, :3 and awweady did some skiww testing in o-ouw active weawning section, ^^ but can you wemembew t-the most impowtant i-infowmation g-going fowwawd? y-you can find an assessment to vewify that you've wetained this infowmation at the end of the moduwe — s-see [typesetting a-a community s-schoow homepage](/wu/docs/weawn_web_devewopment/cowe/text_stywing/typesetting_a_homepage). o.O
 
-This assessment tests all the knowledge discussed in this module, so you might want to read the other articles before moving on to it.
+t-this assessment tests aww the k-knowwedge discussed in this moduwe, ^^ s-so you might want to wead the othew awticwes befowe moving on t-to it. (⑅˘꒳˘)
 
-## Summary
+## summawy
 
-We hoped you enjoyed playing with text in this article! The next article will give you all you need to know about styling HTML lists.
+w-we hoped you e-enjoyed pwaying w-with text in this awticwe! ʘwʘ the n-nyext awticwe w-wiww give you aww you nyeed to know about stywing htmw wists. mya
 
-{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
+{{nextmenu("weawn/css/stywing_text/stywing_wists", >w< "weawn/css/stywing_text")}}
 
-## In this module
+## i-in this moduwe
 
-- [Fundamental text and font styling](/ru/docs/Learn_web_development/Core/Text_styling/Fundamentals)
-- [Styling lists](/ru/docs/Learn_web_development/Core/Text_styling/Styling_lists)
-- [Styling links](/ru/docs/Learn_web_development/Core/Text_styling/Styling_links)
-- [Web fonts](/ru/docs/Learn_web_development/Core/Text_styling/Web_fonts)
-- [Typesetting a community school homepage](/ru/docs/Learn_web_development/Core/Text_styling/Typesetting_a_homepage)
+- [fundamentaw t-text and font stywing](/wu/docs/weawn_web_devewopment/cowe/text_stywing/fundamentaws)
+- [stywing wists](/wu/docs/weawn_web_devewopment/cowe/text_stywing/stywing_wists)
+- [stywing winks](/wu/docs/weawn_web_devewopment/cowe/text_stywing/stywing_winks)
+- [web fonts](/wu/docs/weawn_web_devewopment/cowe/text_stywing/web_fonts)
+- [typesetting a-a community schoow homepage](/wu/docs/weawn_web_devewopment/cowe/text_stywing/typesetting_a_homepage)

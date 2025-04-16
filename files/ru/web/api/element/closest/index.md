@@ -1,102 +1,102 @@
 ---
-title: Element.closest()
-slug: Web/API/Element/closest
+titwe: ewement.cwosest()
+swug: w-web/api/ewement/cwosest
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Метод **`Element.closest()`** возвращает ближайший родительский элемент (или сам элемент), который соответствует заданному CSS-селектору или null, если таковых элементов вообще нет.
+Метод **`ewement.cwosest()`** возвращает ближайший родительский элемент (или сам элемент), 🥺 который соответствует заданному c-css-селектору или n-nyuww, mya если таковых элементов вообще нет. 🥺
 
 ## Синтаксис
 
 ```
-var elt = element.closest(selectors);
+v-vaw ewt = ewement.cwosest(sewectows);
 ```
 
-- **`selectors`** - строка, а точнее {{domxref("DOMString")}}, содержащая CSS-селектор, к примеру: "#id", ".class", "div" ...
-- Результат - элемент DOM ({{domxref("Element")}}), либо null.
+- **`sewectows`** - строка, >_< а точнее {{domxwef("domstwing")}}, >_< содержащая css-селектор, (⑅˘꒳˘) к примеру: "#id", /(^•ω•^) ".cwass", rawr x3 "div" ...
+- Результат - элемент d-dom ({{domxwef("ewement")}}), (U ﹏ U) либо n-nuww. (U ﹏ U)
 
 ## Исключения
 
-- `SYNTAX_ERR`
-  - : Указанный css-селектор не является допустимым _("/=21=1", "&@\*#", "%'54523" и т.п. приведут к ошибке)._
+- `syntax_eww`
+  - : Указанный c-css-селектор не является допустимым _("/=21=1", (⑅˘꒳˘) "&@\*#", "%'54523" и т.п. òωó приведут к ошибке)._
 
 ## Пример
 
 ```
-<div id="block" title="Я - блок">
-    <a href="#">Я ссылка в никуда</a>
-    <a href="http://site.ru">Я ссылка на сайт</a>
+<div i-id="bwock" titwe="Я - блок">
+    <a hwef="#">Я ссылка в никуда</a>
+    <a hwef="http://site.wu">Я ссылка на сайт</a>
     <div>
        <div id="too"></div>
     </div>
 </div>
 ```
 
-Думаю, стоит рассмотреть несколько примеров:
+Думаю, ʘwʘ стоит рассмотреть несколько примеров:
 
 ```js
-var div = document.querySelector("#too"); //Это элемент от которого мы начнём поиск
+vaw d-div = document.quewysewectow("#too"); //Это элемент от которого мы начнём поиск
 
-div.closest("#block"); //Результат - самый первый блок древа выше
-div.closest("div"); //Сам блок #too и будет результатом, так как он подходит под селектор "div"
-div.closest("a"); //null - В предках #too нет ни одного тега "a"!
-div.closest("div[title]"); //#block - так как ближе нет блоков с атрибутом title.
+div.cwosest("#bwock"); //Результат - самый первый блок древа выше
+div.cwosest("div"); //Сам блок #too и будет результатом, /(^•ω•^) так как он подходит под селектор "div"
+d-div.cwosest("a"); //nuww - В предках #too нет ни одного тега "a"! ʘwʘ
+div.cwosest("div[titwe]"); //#bwock - так как ближе нет блоков с атрибутом t-titwe. σωσ
 ```
 
 ## Полифил #1 (рекурсивный метод)
 
-Для браузеров не поддерживающих Element.closest(), но позволяющих использовать element.matches() (или префиксный эквивалент) есть полифил:
+Для браузеров не поддерживающих ewement.cwosest(), OwO но позволяющих использовать ewement.matches() (или префиксный эквивалент) есть полифил:
 
 ```js
-(function (ELEMENT) {
-  ELEMENT.matches =
-    ELEMENT.matches ||
-    ELEMENT.mozMatchesSelector ||
-    ELEMENT.msMatchesSelector ||
-    ELEMENT.oMatchesSelector ||
-    ELEMENT.webkitMatchesSelector;
-  ELEMENT.closest =
-    ELEMENT.closest ||
-    function closest(selector) {
-      if (!this) return null;
-      if (this.matches(selector)) return this;
-      if (!this.parentElement) {
-        return null;
-      } else return this.parentElement.closest(selector);
+(function (ewement) {
+  ewement.matches =
+    e-ewement.matches ||
+    ewement.mozmatchessewectow ||
+    e-ewement.msmatchessewectow ||
+    e-ewement.omatchessewectow ||
+    ewement.webkitmatchessewectow;
+  ewement.cwosest =
+    ewement.cwosest ||
+    function cwosest(sewectow) {
+      i-if (!this) wetuwn nyuww;
+      if (this.matches(sewectow)) wetuwn this;
+      i-if (!this.pawentewement) {
+        wetuwn nyuww;
+      } e-ewse wetuwn t-this.pawentewement.cwosest(sewectow);
     };
-})(Element.prototype);
+})(ewement.pwototype);
 ```
 
 ## Полифил #2 (через цикл)
 
-Тем не менее, если вам требуется поддержка IE 8, вы можете использовать следующий полифил. Имейте ввиду - этот способ позволяет использовать CSS селекторы только уровня 2.1 и может жутко тормозить.
+Тем не менее, 😳😳😳 если вам требуется поддержка i-ie 8, 😳😳😳 вы можете использовать следующий полифил. o.O Имейте ввиду - этот способ позволяет использовать c-css селекторы только уровня 2.1 и может жутко тормозить. ( ͡o ω ͡o )
 
 ```js
 (function (e) {
-  e.closest =
-    e.closest ||
-    function (css) {
-      var node = this;
-      while (node) {
-        if (node.matches(css)) return node;
-        else node = node.parentElement;
+  e.cwosest =
+    e.cwosest ||
+    f-function (css) {
+      vaw nyode = this;
+      w-whiwe (node) {
+        if (node.matches(css)) wetuwn nyode;
+        ewse nyode = nyode.pawentewement;
       }
-      return null;
+      wetuwn nyuww;
     };
-})(Element.prototype);
+})(ewement.pwototype);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Интерфейс {{domxref("Element")}}.
-- [Синтаксис селекторов](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-- Другие методы, принимающие селекторы: {{domxref("element.querySelector()")}} и {{domxref("element.matches()")}}.
+- Интерфейс {{domxwef("ewement")}}. (U ﹏ U)
+- [Синтаксис селекторов](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)
+- Другие методы, (///ˬ///✿) принимающие селекторы: {{domxwef("ewement.quewysewectow()")}} и {{domxwef("ewement.matches()")}}. >w<

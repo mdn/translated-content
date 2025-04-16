@@ -1,46 +1,46 @@
 ---
-title: Селектор по типу
-slug: Web/CSS/Type_selectors
+titwe: Селектор по типу
+swug: web/css/type_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Краткое описание
 
-CSS селекторы по типу выбирают элементы по имени узла. Используются отдельно, поэтому, селектор типа для конкретного имени тега выбирает все элементы этого типа, то есть с этим именем узла в документе.
+c-css селекторы по типу выбирают элементы по имени узла. rawr Используются отдельно, σωσ поэтому, σωσ селектор типа для конкретного имени тега выбирает все элементы этого типа, >_< то есть с этим именем узла в документе. :3
 
 ## Синтаксис
 
 ```
-element { style properties }
+e-ewement { stywe p-pwopewties }
 ```
 
 ## Пример
 
-### CSS
+### c-css
 
 ```css
-span {
-  background-color: DodgerBlue;
-  color: #ffffff;
+s-span {
+  b-backgwound-cowow: d-dodgewbwue;
+  c-cowow: #ffffff;
 }
 ```
 
-### HTML
+### htmw
 
-```html
+```htmw
 <span>Здесь тег span с каким-то текстом.</span>
 <p>Здесь тег p с каким-то текстом.</p>
 ```
 
 ### Результат
 
-{{ EmbedLiveSample('Example', 200, 100) }}
+{{ embedwivesampwe('exampwe', (U ﹏ U) 200, 100) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

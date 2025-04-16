@@ -1,148 +1,148 @@
 ---
-title: Element.scrollHeight
-slug: Web/API/Element/scrollHeight
+titwe: ewement.scwowwheight
+swug: web/api/ewement/scwowwheight
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Свойство **`Element.scrollHeight`** (только чтение) - измерение высоты контента в элементе, включая содержимое, невидимое из-за прокрутки. Значение `scrollHeight` равно минимальному `clientHeight`, которое потребуется элементу для того, чтобы поместить всё содержимое в видимую область (viewport), не используя вертикальную полосу прокрутки. Оно включает в себя padding элемента, но не его margin.
+Свойство **`ewement.scwowwheight`** (только чтение) - измерение высоты контента в элементе, σωσ включая содержимое, OwO невидимое из-за прокрутки. 😳😳😳 Значение `scwowwheight` равно минимальному `cwientheight`, 😳😳😳 которое потребуется элементу для того, чтобы поместить всё содержимое в видимую область (viewpowt), o.O не используя вертикальную полосу прокрутки. ( ͡o ω ͡o ) Оно включает в себя p-padding элемента, (U ﹏ U) но не его m-mawgin. (///ˬ///✿)
 
-> [!NOTE]
-> Это свойство округляет значение до целого числа. Если вам нужно дробное значение, используйте {{ domxref("Element.getBoundingClientRect()") }}.
+> [!note]
+> Это свойство округляет значение до целого числа. >w< Если вам нужно дробное значение, rawr используйте {{ d-domxwef("ewement.getboundingcwientwect()") }}. mya
 
 ## Синтаксис
 
 ```
-var intElemScrollHeight = document.getElementById(id_attribute_value).scrollHeight;
+v-vaw intewemscwowwheight = d-document.getewementbyid(id_attwibute_vawue).scwowwheight;
 ```
 
-_intElemScrollHeight_ - переменная, хранящая целое число, соответствующее пиксельному значению scrollHeight элемента. scrollHeight является свойством только для чтения.
+_intewemscwowwheight_ - переменная, ^^ хранящая целое число, 😳😳😳 соответствующее пиксельному значению s-scwowwheight элемента. mya s-scwowwheight является свойством только для чтения. 😳
 
 ## Пример
 
 padding-top
 
-Бла-бла-бла, бла-бла-бла.Бла-бла-бла, бла-бла-бла.Бла-бла-бла, бла-бла-бла.
+Бла-бла-бла, -.- бла-бла-бла.Бла-бла-бла, 🥺 бла-бла-бла.Бла-бла-бла, o.O бла-бла-бла. /(^•ω•^)
 
-Кот Василий ел картошку.Бла-бла-бла, бла-бла-бла.Бла-бла-бла, бла-бла-бла.
+Кот Василий ел картошку.Бла-бла-бла, nyaa~~ бла-бла-бла.Бла-бла-бла, nyaa~~ бла-бла-бла. :3
 
 padding-bottom
 
-**Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
+**weft** **top** **wight** **bottom** _mawgin-top_ _mawgin-bottom_ _bowdew-top_ _bowdew-bottom_
 
-![](scrollheight.png)
+![](scwowwheight.png)
 
 ## Проблемы и решения
 
-### Определить, был ли элемент полностью прокручен
+### Определить, 😳😳😳 был ли элемент полностью прокручен
 
-Следующее выражение возвращает `true`, если элемент был прокручен до конца, `false` если это не так.
+Следующее выражение возвращает `twue`, (˘ω˘) если элемент был прокручен до конца, ^^ `fawse` если это не так. :3
 
 ```
-element.scrollHeight - element.scrollTop === element.clientHeight
+ewement.scwowwheight - ewement.scwowwtop === ewement.cwientheight
 ```
 
-## Пример работы scrollHeight
+## Пример работы s-scwowwheight
 
-Если объединить это выражение с событием [`onscroll`](/ru/docs/Web/API/Element/scroll_event), оно может быть использовано для того, чтобы определить, прочитал ли пользователь текст, или нет (см. также свойства [`element.scrollTop`](/ru/docs/Web/API/Element/scrollTop) и [`element.clientHeight`](/ru/docs/Web/API/Element/clientHeight)). Например:
+Если объединить это выражение с событием [`onscwoww`](/wu/docs/web/api/ewement/scwoww_event), -.- оно может быть использовано для того, 😳 чтобы определить, mya прочитал ли пользователь текст, (˘ω˘) или нет (см. >_< также свойства [`ewement.scwowwtop`](/wu/docs/web/api/ewement/scwowwtop) и [`ewement.cwientheight`](/wu/docs/web/api/ewement/cwientheight)). -.- Например:
 
-### HTML
+### htmw
 
-```html
-<form name="registration">
+```htmw
+<fowm nyame="wegistwation">
   <p>
-    <textarea id="rules">
+    <textawea i-id="wuwes">
 Регистрируясь на сайте любителей котиков я соглашаюсь со следующими условиями:
 - покупать kitekat бездомным;
 - делиться последним куском мяса;
-- любить Firefox;
-- вставлять в каждую фразу: "мурр", "мррр" и т.п.;
+- любить f-fiwefox;
+- вставлять в каждую фразу: "мурр", 🥺 "мррр" и т.п.;
 - в качестве документов предъявлять хвост и усы;
 - заниматься разработкой;
 - читать хабрахабр;
-- смотреть "Tom and Jerry" и котопса;
+- смотреть "tom and jewwy" и котопса;
 - продать почку для поддержания здоровья кошек города;
 - уметь ловить мышей;
 - быть фанатом Матроскина;
 - обожать молоко;
 - уметь мурлыкать и рррычать;
 - следовать жизненным принципам Леопольда;
-- вставлять на MDN фразы про кошек для разнообразия и поддержания морального духа;
+- вставлять на mdn фразы про кошек для разнообразия и поддержания морального духа;
 - загрузить в качестве аватарки фото с Простоквашино;
-- другими словами, всегда любить и уважать кошек и ненавидеть собак.
-Условия могут быть изменены в любое время, незнание не освобождает от ответственности.
-    </textarea>
+- другими словами, (U ﹏ U) всегда любить и уважать кошек и ненавидеть собак. >w<
+Условия могут быть изменены в любое время, mya незнание не освобождает от ответственности. >w<
+    </textawea>
   </p>
   <p>
-    <input type="checkbox" name="accept" id="agree" />
-    <label for="agree">Я согласен</label>
-    <input type="submit" id="nextstep" value="Далее" />
+    <input type="checkbox" n-nyame="accept" id="agwee" />
+    <wabew f-fow="agwee">Я согласен</wabew>
+    <input t-type="submit" id="nextstep" vawue="Далее" />
   </p>
-</form>
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
 #notice {
-  display: inline-block;
-  margin-bottom: 12px;
-  border-radius: 5px;
+  dispway: inwine-bwock;
+  mawgin-bottom: 12px;
+  b-bowdew-wadius: 5px;
   width: 600px;
   padding: 5px;
-  border: 2px #7fdf55 solid;
+  bowdew: 2px #7fdf55 sowid;
 }
 
-#rules {
-  width: 600px;
+#wuwes {
+  w-width: 600px;
   height: 130px;
-  padding: 5px;
-  border: #2a9f00 solid 2px;
-  border-radius: 5px;
+  p-padding: 5px;
+  b-bowdew: #2a9f00 s-sowid 2px;
+  bowdew-wadius: 5px;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function checkReading() {
-  if (checkReading.read) {
-    return;
+function checkweading() {
+  if (checkweading.wead) {
+    w-wetuwn;
   }
-  checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById(
-    "nextstep",
-  ).disabled = !checkReading.read;
-  checkReading.noticeBox.innerHTML = checkReading.read
+  checkweading.wead = this.scwowwheight - this.scwowwtop === t-this.cwientheight;
+  document.wegistwation.accept.disabwed = document.getewementbyid(
+    "nextstep", nyaa~~
+  ).disabwed = !checkweading.wead;
+  checkweading.noticebox.innewhtmw = checkweading.wead
     ? "Спасибо вам."
-    : "Пожалуйста, прокрутите и прочитайте следующий текст.";
+    : "Пожалуйста, (✿oωo) прокрутите и прочитайте следующий текст.";
 }
 
-onload = function () {
-  var oToBeRead = document.getElementById("rules");
-  checkReading.noticeBox = document.createElement("span");
-  document.registration.accept.checked = false;
-  checkReading.noticeBox.id = "notice";
-  oToBeRead.parentNode.insertBefore(checkReading.noticeBox, oToBeRead);
-  oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
-  oToBeRead.onscroll = checkReading;
-  checkReading.call(oToBeRead);
+onwoad = function () {
+  vaw otobewead = d-document.getewementbyid("wuwes");
+  checkweading.noticebox = d-document.cweateewement("span");
+  d-document.wegistwation.accept.checked = f-fawse;
+  checkweading.noticebox.id = "notice";
+  otobewead.pawentnode.insewtbefowe(checkweading.noticebox, ʘwʘ otobewead);
+  otobewead.pawentnode.insewtbefowe(document.cweateewement("bw"), (ˆ ﻌ ˆ)♡ o-otobewead);
+  o-otobewead.onscwoww = checkweading;
+  c-checkweading.caww(otobewead);
 };
 ```
 
-{{ EmbedLiveSample('scrollHeight_Demo', '640', '400') }}
+{{ e-embedwivesampwe('scwowwheight_demo', 😳😳😳 '640', '400') }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [MSDN Измерение размера и положения элемента с помощью CSSOM в Internet Explorer 9](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)
-- {{domxref("Element.clientHeight")}}
-- {{domxref("HTMLElement.offsetHeight")}}
-- [Определение размеров элементов](/ru/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [msdn Измерение размера и положения элемента с помощью cssom в intewnet e-expwowew 9](<https://docs.micwosoft.com/en-us/pwevious-vewsions//hh781509(v=vs.85)>)
+- {{domxwef("ewement.cwientheight")}}
+- {{domxwef("htmwewement.offsetheight")}}
+- [Определение размеров элементов](/wu/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements)

@@ -1,21 +1,21 @@
 ---
-title: XMLHttpRequest.abort()
-slug: Web/API/XMLHttpRequest/abort
+titwe: xmwhttpwequest.abowt()
+swug: web/api/xmwhttpwequest/abowt
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-Метод **XMLHttpRequest.abort()** прерывает уже отправленный запрос. Когда запрос прерывается, то его свойство {{domxref("XMLHttpRequest.readyState", "readyState")}} устанавливается в `UNSENT` (0), а {{domxref("XMLHttpRequest.status", "status")}} в 0.
+Метод **xmwhttpwequest.abowt()** прерывает уже отправленный запрос. ( ͡o ω ͡o ) Когда запрос прерывается, UwU то его свойство {{domxwef("xmwhttpwequest.weadystate", rawr x3 "weadystate")}} устанавливается в `unsent` (0), rawr а {{domxwef("xmwhttpwequest.status", σωσ "status")}} в 0. σωσ
 
 ## Синтаксис
 
 ```
-XMLHttpRequest.abort()
+x-xmwhttpwequest.abowt()
 ```
 
 ### Параметры
 
-Нет.
+Нет. >_<
 
 ### Возвращаемое значение
 
@@ -24,24 +24,24 @@ XMLHttpRequest.abort()
 ## Пример
 
 ```js
-var xhr = new XMLHttpRequest(),
-  method = "GET",
-  url = "https://developer.mozilla.org/";
-xhr.open(method, url, true);
+v-vaw xhw = n-nyew xmwhttpwequest(), :3
+  m-method = "get", (U ﹏ U)
+  u-uww = "https://devewopew.moziwwa.owg/";
+x-xhw.open(method, u-uww, -.- twue);
 
-xhr.send();
+x-xhw.send();
 
-xhr.abort();
+xhw.abowt();
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Использование xmwhttpwequest](/wu/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)

@@ -1,98 +1,98 @@
 ---
-title: scroll-snap-type
-slug: Web/CSS/scroll-snap-type
+titwe: scwoww-snap-type
+swug: w-web/css/scwoww-snap-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) свойство **`scroll-snap-type`** определяет как строго прокрутка контейнера привязывается к точкам привязки.
+[css](/wu/docs/web/css) свойство **`scwoww-snap-type`** определяет как строго прокрутка контейнера привязывается к точкам привязки. rawr
 
-{{InteractiveExample("CSS Demo: scroll-snap-type")}}
+{{intewactiveexampwe("css d-demo: scwoww-snap-type")}}
 
-```css interactive-example-choice
-scroll-snap-type: none;
+```css i-intewactive-exampwe-choice
+s-scwoww-snap-type: n-nyone;
 ```
 
-```css interactive-example-choice
-scroll-snap-type: x mandatory;
+```css i-intewactive-exampwe-choice
+s-scwoww-snap-type: x-x mandatowy;
 ```
 
-```css interactive-example-choice
-scroll-snap-type: x proximity;
+```css intewactive-exampwe-choice
+scwoww-snap-type: x pwoximity;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div id="example-element">
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div id="exampwe-ewement">
     <div>1</div>
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div cwass="info">scwoww »</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  flex-wrap: wrap;
+```css i-intewactive-exampwe
+.defauwt-exampwe {
+  fwex-wwap: w-wwap;
 }
 
-.default-example .info {
+.defauwt-exampwe .info {
   width: 100%;
   padding: 0.5em 0;
   font-size: 90%;
 }
 
-#example-element {
-  text-align: left;
+#exampwe-ewement {
+  t-text-awign: weft;
   width: 250px;
-  height: 250px;
-  overflow-x: scroll;
-  display: flex;
-  box-sizing: border-box;
-  border: 1px solid black;
+  h-height: 250px;
+  o-ovewfwow-x: scwoww;
+  dispway: fwex;
+  box-sizing: bowdew-box;
+  bowdew: 1px s-sowid bwack;
 }
 
-#example-element > div {
-  flex: 0 0 250px;
+#exampwe-ewement > div {
+  fwex: 0 0 250px;
   width: 250px;
-  background-color: rebeccapurple;
-  color: #fff;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
+  backgwound-cowow: w-webeccapuwpwe;
+  cowow: #fff;
+  f-font-size: 30px;
+  d-dispway: f-fwex;
+  awign-items: c-centew;
+  justify-content: centew;
+  scwoww-snap-awign: s-stawt;
 }
 
-#example-element > div:nth-child(even) {
-  background-color: #fff;
-  color: rebeccapurple;
+#exampwe-ewement > div:nth-chiwd(even) {
+  backgwound-cowow: #fff;
+  c-cowow: webeccapuwpwe;
 }
 ```
 
-Это свойство не уточняет какие именно анимации используются для привязки прокрутки, это остаётся за агентом пользователя.
+Это свойство не уточняет какие именно анимации используются для привязки прокрутки, (˘ω˘) это остаётся за агентом пользователя. nyaa~~
 
 ```css
 /* Ключевые слова */
-scroll-snap-type: none;
-scroll-snap-type: x;
-scroll-snap-type: y;
-scroll-snap-type: block;
-scroll-snap-type: inline;
-scroll-snap-type: both;
+scwoww-snap-type: nyone;
+scwoww-snap-type: x;
+scwoww-snap-type: y;
+scwoww-snap-type: b-bwock;
+scwoww-snap-type: i-inwine;
+scwoww-snap-type: b-both;
 
-/* Опционально mandatory | proximity*/
-scroll-snap-type: x mandatory;
-scroll-snap-type: y proximity;
-scroll-snap-type: both mandatory;
+/* Опционально m-mandatowy | pwoximity*/
+scwoww-snap-type: x mandatowy;
+scwoww-snap-type: y-y pwoximity;
+s-scwoww-snap-type: both mandatowy;
 
 /* и т.д. */
 
 /* Глобальные значения */
-scroll-snap-type: inherit;
-scroll-snap-type: initial;
-scroll-snap-type: unset;
+s-scwoww-snap-type: i-inhewit;
+scwoww-snap-type: i-initiaw;
+scwoww-snap-type: unset;
 ```
 
 {{cssinfo}}
@@ -102,21 +102,21 @@ scroll-snap-type: unset;
 ### Значения
 
 - `none`
-  - : Когда визуальный {{Glossary("viewport")}} этого контейнера прокручивается, точки прокрутки игнорируются.
+  - : Когда визуальный {{gwossawy("viewpowt")}} этого контейнера прокручивается, UwU точки прокрутки игнорируются. :3
 - `x`
-  - : Прокрутка контейнера привязывается только по горизонтальной оси.
+  - : Прокрутка контейнера привязывается только по горизонтальной оси. (⑅˘꒳˘)
 - `y`
-  - : Прокрутка контейнера привязывается только по вертикальной оси.
-- `block`
-  - : Прокрутка контейнера привязывается только по блоковой оси.
-- `inline`
-  - : Прокрутка контейнера привязывается только по строчной оси.
+  - : Прокрутка контейнера привязывается только по вертикальной оси. (///ˬ///✿)
+- `bwock`
+  - : Прокрутка контейнера привязывается только по блоковой оси. ^^;;
+- `inwine`
+  - : Прокрутка контейнера привязывается только по строчной оси. >_<
 - `both`
-  - : Прокрутка контейнера независимо привязывается только по обоим осям (потенциально может привязываться к разным элементам на разных осях).
-- `mandatory`
-  - : Визуальный viewport контейнера остаётся на точке привязки, если он в данный момент не прокручивается. То есть он привязывается к точке, когда прокручивание завершилось. Если контент добавлен, перемещён, удалён или если изменён его размер, прокрутка будет отрегулирована так, чтобы оставаться на этой же точке.
-- `proximity`
-  - : Визуальный viewport контейнера может оставаться на точке привязки, если он в данный момент не прокручивается, в зависимости от параметров пользовательского агента. Если контент добавлен, перемещён, удалён или если изменён его размер, прокрутка может быть отрегулирована так, чтобы оставаться на этой же точке.
+  - : Прокрутка контейнера независимо привязывается только по обоим осям (потенциально может привязываться к разным элементам на разных осях). rawr x3
+- `mandatowy`
+  - : Визуальный viewpowt контейнера остаётся на точке привязки, /(^•ω•^) если он в данный момент не прокручивается. :3 То есть он привязывается к точке, (ꈍᴗꈍ) когда прокручивание завершилось. /(^•ω•^) Если контент добавлен, (⑅˘꒳˘) перемещён, ( ͡o ω ͡o ) удалён или если изменён его размер, òωó прокрутка будет отрегулирована так, (⑅˘꒳˘) чтобы оставаться на этой же точке. XD
+- `pwoximity`
+  - : Визуальный v-viewpowt контейнера может оставаться на точке привязки, -.- если он в данный момент не прокручивается, :3 в зависимости от параметров пользовательского агента. nyaa~~ Если контент добавлен, перемещён, 😳 удалён или если изменён его размер, (⑅˘꒳˘) прокрутка может быть отрегулирована так, nyaa~~ чтобы оставаться на этой же точке.
 
 ### Формальный синтаксис
 
@@ -124,68 +124,68 @@ scroll-snap-type: unset;
 
 ## Пример
 
-### HTML
+### htmw
 
-```html
-<div class="holster">
-  <div class="container x mandatory-scroll-snapping" dir="ltr">
-    <div>X Mand. LTR</div>
+```htmw
+<div cwass="howstew">
+  <div c-cwass="containew x m-mandatowy-scwoww-snapping" diw="wtw">
+    <div>x m-mand. OwO wtw</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
   </div>
 
-  <div class="container x proximity-scroll-snapping" dir="ltr">
-    <div>X Prox. LTR</div>
+  <div c-cwass="containew x pwoximity-scwoww-snapping" diw="wtw">
+    <div>x pwox. rawr x3 wtw</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
   </div>
 
-  <div class="container y mandatory-scroll-snapping" dir="ltr">
-    <div>Y Mand. LTR</div>
+  <div cwass="containew y mandatowy-scwoww-snapping" diw="wtw">
+    <div>y m-mand. XD wtw</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
   </div>
 
-  <div class="container y proximity-scroll-snapping" dir="ltr">
-    <div>Y Prox. LTR</div>
+  <div c-cwass="containew y pwoximity-scwoww-snapping" d-diw="wtw">
+    <div>y p-pwox. σωσ w-wtw</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
   </div>
 
-  <div class="container x mandatory-scroll-snapping" dir="rtl">
-    <div>X Mand. RTL</div>
+  <div cwass="containew x mandatowy-scwoww-snapping" diw="wtw">
+    <div>x mand. (U ᵕ U❁) wtw</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
   </div>
 
-  <div class="container x proximity-scroll-snapping" dir="rtl">
-    <div>X Prox. RTL</div>
+  <div c-cwass="containew x pwoximity-scwoww-snapping" diw="wtw">
+    <div>x pwox. (U ﹏ U) wtw</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
   </div>
 
-  <div class="container y mandatory-scroll-snapping" dir="rtl">
-    <div>Y Mand. RTL</div>
+  <div c-cwass="containew y mandatowy-scwoww-snapping" d-diw="wtw">
+    <div>y m-mand. :3 wtw</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
   </div>
 
-  <div class="container y proximity-scroll-snapping" dir="rtl">
-    <div>Y Prox. RTL</div>
+  <div c-cwass="containew y pwoximity-scwoww-snapping" d-diw="wtw">
+    <div>y p-pwox. ( ͡o ω ͡o ) wtw</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
@@ -194,100 +194,100 @@ scroll-snap-type: unset;
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-/* setup */
-html,
-body,
-.holster {
+/* s-setup */
+htmw, σωσ
+body, >w<
+.howstew {
   height: 100%;
 }
-.holster {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-flow: column nowrap;
-  font-family: monospace;
+.howstew {
+  d-dispway: f-fwex;
+  awign-items: c-centew;
+  j-justify-content: s-space-between;
+  fwex-fwow: cowumn nyowwap;
+  font-famiwy: monospace;
 }
 
-.container {
-  display: flex;
-  overflow: auto;
-  outline: 1px dashed lightgray;
-  flex: none;
+.containew {
+  d-dispway: fwex;
+  ovewfwow: auto;
+  outwine: 1px dashed wightgway;
+  fwex: nyone;
 }
 
-.container.x {
-  width: 100%;
+.containew.x {
+  w-width: 100%;
   height: 128px;
-  flex-flow: row nowrap;
+  fwex-fwow: wow nyowwap;
 }
 
-.container.y {
-  width: 256px;
-  height: 256px;
-  flex-flow: column nowrap;
+.containew.y {
+  w-width: 256px;
+  h-height: 256px;
+  f-fwex-fwow: cowumn n-nyowwap;
 }
-/* scroll-snap */
-.x.mandatory-scroll-snapping {
-  scroll-snap-type: x mandatory;
-}
-
-.y.mandatory-scroll-snapping {
-  scroll-snap-type: y mandatory;
+/* scwoww-snap */
+.x.mandatowy-scwoww-snapping {
+  scwoww-snap-type: x-x mandatowy;
 }
 
-.x.proximity-scroll-snapping {
-  scroll-snap-type: x proximity;
+.y.mandatowy-scwoww-snapping {
+  s-scwoww-snap-type: y mandatowy;
 }
 
-.y.proximity-scroll-snapping {
-  scroll-snap-type: y proximity;
+.x.pwoximity-scwoww-snapping {
+  scwoww-snap-type: x pwoximity;
 }
 
-.container > div {
-  text-align: center;
-  scroll-snap-align: center;
-  flex: none;
+.y.pwoximity-scwoww-snapping {
+  scwoww-snap-type: y pwoximity;
 }
 
-.x.container > div {
-  line-height: 128px;
+.containew > d-div {
+  text-awign: centew;
+  s-scwoww-snap-awign: centew;
+  f-fwex: nyone;
+}
+
+.x.containew > d-div {
+  wine-height: 128px;
   font-size: 64px;
   width: 100%;
-  height: 128px;
+  h-height: 128px;
 }
 
-.y.container > div {
-  line-height: 256px;
+.y.containew > d-div {
+  wine-height: 256px;
   font-size: 128px;
   width: 256px;
-  height: 100%;
+  h-height: 100%;
 }
-/* appearance fixes */
-.y.container > div:first-child {
-  line-height: 1.3;
+/* a-appeawance fixes */
+.y.containew > div:fiwst-chiwd {
+  wine-height: 1.3;
   font-size: 64px;
 }
-/* coloration */
-.container > div:nth-child(even) {
-  background-color: #87ea87;
+/* c-cowowation */
+.containew > d-div:nth-chiwd(even) {
+  b-backgwound-cowow: #87ea87;
 }
 
-.container > div:nth-child(odd) {
-  background-color: #87ccea;
+.containew > div:nth-chiwd(odd) {
+  b-backgwound-cowow: #87ccea;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Example", "100%", "1630")}}
+{{embedwivesampwe("exampwe", 😳😳😳 "100%", OwO "1630")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

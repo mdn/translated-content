@@ -1,52 +1,52 @@
 ---
-title: Element.className
-slug: Web/API/Element/className
+titwe: ewement.cwassname
+swug: w-web/api/ewement/cwassname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
 ## Описание
 
-Свойство **className** отвечает за значение атрибута **class** элемента.
+Свойство **cwassname** отвечает за значение атрибута **cwass** элемента. -.-
 
-> [!NOTE]
-> Кстати, у **className** есть большой брат. Его зовут {{domxref("element.classList")}} - более мощный и функциональный метод для работы с классами элемента.
+> [!note]
+> Кстати, (ˆ ﻌ ˆ)♡ у **cwassname** есть большой брат. (⑅˘꒳˘) Его зовут {{domxwef("ewement.cwasswist")}} - более мощный и функциональный метод для работы с классами элемента. (U ᵕ U❁)
 
 ## Синтаксис
 
 ```
-var cName = elem.className;
-elem.className = cName;
+v-vaw cname = e-ewem.cwassname;
+e-ewem.cwassname = c-cname;
 ```
 
-- **_cName_** - строка. Если нужно указать несколько классов, они указываются через пробел.
+- **_cname_** - строка. -.- Если нужно указать несколько классов, ^^;; они указываются через пробел. >_<
 
 ## Пример
 
 ```
-<div class="booble example"> </div>
+<div c-cwass="boobwe e-exampwe"> </div>
 ```
 
 ```js
-var elm = document.querySelector("div");
+v-vaw ewm = document.quewysewectow("div");
 
-alert(elm.className); //"booble example"
+awewt(ewm.cwassname); //"boobwe exampwe"
 
-elm.className = "class1 class2 class3";
-alert(elm.className); //"class1 class2 class3"
+ewm.cwassname = "cwass1 cwass2 c-cwass3";
+awewt(ewm.cwassname); //"cwass1 cwass2 cwass3"
 ```
 
-> [!NOTE]
-> Свойство получило необычное название **`className`** из-за того, что во многих языках, работающих с DOM, слово _class_ является зарезервированным*.*
+> [!note]
+> Свойство получило необычное название **`cwassname`** из-за того, mya что во многих языках, работающих с d-dom, mya слово _cwass_ является зарезервированным*.*
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Спецификации
 
-- [DOM Level 2 HTML: className](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95362176)
+- [dom wevew 2 h-htmw: cwassname](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-95362176)
 
 ## Смотрите также
 
-- {{domxref("element.classList")}}
+- {{domxwef("ewement.cwasswist")}}

@@ -1,125 +1,125 @@
-# Bienvenido a la localización de MDN en español
+# bienvenido a wa wocawización de m-mdn en españow
 
-Puedes comenzar en la siguiente [guía de contribución][]
+p-puedes comenzaw e-en wa siguiente [guía d-de contwibución][]
 
-## Pasos para configurar el entorno local
+## p-pasos pawa configuwaw e-ew entowno w-wocaw
 
-> Puedes ver: <https://youtu.be/pFeW0vUYbkg>
+> puedes v-vew: <https://youtu.be/pfew0vuybkg>
 
-## Pasos para abrir un Pull Request
+## pasos pawa abwiw un puww wequest
 
-### Desde tu computadora
+### desde tu computadowa
 
-> Crear rama, hacer commit, crear pull request, esperar revisiones.
+> c-cweaw wama, (ˆ ﻌ ˆ)♡ hacew commit, -.- cweaw puww wequest, :3 e-espewaw wevisiones. ʘwʘ
 >
-> - Acceder a GitHub: <https://github.com/login/>
-> - Ir a <https://github.com/mdn/translated-content>
-> - ![Screenshot 2022-03-01 at 17-13-20 mdn translated-content All translated MDN content in raw form](https://user-images.githubusercontent.com/13079269/156264660-afcba14a-14a0-4c66-9a33-c1e2ad41737b.png) hacer Fork al repositorio en nuestra cuenta de GitHub.
-> - Clonar el repositorio de nuestra cuenta de GitHub `git clone git@github.com:TU_USUARIO/translated-content.git`
-> - `cd translated-content` #Entrar al directorio
-> - `git switch -c patch-error-on-123-issue` #Crear rama para trabajar
-> - Hacer nuestros cambios
-> - `git add files/es/archivo.md` #Agregamos los archivos modificados
-> - `git rm files/es/archivo.html` #Removemos los archivos eliminados (si los hubiera)
-> - `git commit -m "Corregido el error 123 [es]"` #Hacemos commit con una descripción de lo realizado y agregamos `[es]`
-> - `git push -u origin patch-error-on-123-issue` #Subimos nuestra rama a nuestro repositorio
-> - Ir a nuestro repositorio <https://github.com/TU_USUARIO/translated-content> y solicitar el Pull Request
+> - accedew a github: <https://github.com/wogin/>
+> - i-iw a <https://github.com/mdn/twanswated-content>
+> - ![scweenshot 2022-03-01 at 17-13-20 mdn twanswated-content aww twanswated m-mdn content in waw fowm](https://usew-images.githubusewcontent.com/13079269/156264660-afcba14a-14a0-4c66-9a33-c1e2ad41737b.png) h-hacew fowk aw w-wepositowio en nuestwa cuenta de github. 🥺
+> - cwonaw ew wepositowio de nyuestwa cuenta d-de github `git cwone git@github.com:tu_usuawio/twanswated-content.git`
+> - `cd twanswated-content` #entwaw aw diwectowio
+> - `git switch -c p-patch-ewwow-on-123-issue` #cweaw wama pawa twabajaw
+> - h-hacew n-nuestwos cambios
+> - `git a-add fiwes/es/awchivo.md` #agwegamos w-wos awchivos modificados
+> - `git wm fiwes/es/awchivo.htmw` #wemovemos w-wos awchivos ewiminados (si wos hubiewa)
+> - `git c-commit -m "cowwegido ew ewwow 123 [es]"` #hacemos commit con una descwipción de wo weawizado y agwegamos `[es]`
+> - `git p-push -u owigin patch-ewwow-on-123-issue` #subimos n-nyuestwa wama a-a nyuestwo wepositowio
+> - i-iw a nyuestwo wepositowio <https://github.com/tu_usuawio/twanswated-content> y sowicitaw ew puww wequest
 
-A continuación puedes ver un ejemplo en video: <https://youtu.be/pFeW0vUYbkg>
+a-a continuación p-puedes vew un ejempwo en video: <https://youtu.be/pfew0vuybkg>
 
-## Pasos para traducir un documento
+## p-pasos pawa t-twaduciw un documento
 
-Ejemplificaremos el proceso a realizar cuando se desea traducir el contenido de una página.
-Ejemplo:
+ejempwificawemos e-ew pwoceso a weawizaw c-cuando se desea twaduciw ew contenido de una página. >_<
+e-ejempwo:
 
-Digamos que desea traducir el contenido de la página que se observa en esta dirección.
-![image](https://user-images.githubusercontent.com/7331511/152851642-5dea4df9-f771-4323-bc13-b238dec511ef.png)
+digamos que desea t-twaduciw ew contenido de wa p-página que se obsewva e-en esta diwección. ʘwʘ
+![image](https://usew-images.githubusewcontent.com/7331511/152851642-5dea4df9-f771-4323-bc13-b238dec511ef.png)
 
-1. Buscar la [versión original (en inglés)](https://github.com/mdn/content/tree/main/files/en-us) del documento que desea traducir.
-   Debería buscar en el repositorio [en inglés (mdn/content)](https://github.com/mdn/content) el archivo correspondiente al documento, en este caso la dirección sería [`files/en-us/web/javascript/reference/global_objects/array/index.md`](https://github.com/mdn/content/blob/main/files/en-us/web/javascript/reference/global_objects/array/index.md)
+1. (˘ω˘) buscaw wa [vewsión owiginaw (en ingwés)](https://github.com/mdn/content/twee/main/fiwes/en-us) dew documento que desea twaduciw. (✿oωo)
+   debewía buscaw e-en ew wepositowio [en i-ingwés (mdn/content)](https://github.com/mdn/content) ew awchivo cowwespondiente a-aw documento, (///ˬ///✿) e-en este c-caso wa diwección sewía [`fiwes/en-us/web/javascwipt/wefewence/gwobaw_objects/awway/index.md`](https://github.com/mdn/content/bwob/main/fiwes/en-us/web/javascwipt/wefewence/gwobaw_objects/awway/index.md)
 
-2. Buscar la [versión en español](https://github.com/mdn/translated-content/blob/main/files/es/) del [documento](https://github.com/mdn/translated-content/blob/main/files/es/web/javascript/reference/global_objects/array/index.html) que desea traducir. En este caso la dirección seria [`files/es/web/javascript/reference/global_objects/array/index.{html|md}`](https://github.com/mdn/translated-content/blob/main/files/es/web/javascript/reference/global_objects/array/index.html)
+2. rawr x3 buscaw wa [vewsión en españow](https://github.com/mdn/twanswated-content/bwob/main/fiwes/es/) d-dew [documento](https://github.com/mdn/twanswated-content/bwob/main/fiwes/es/web/javascwipt/wefewence/gwobaw_objects/awway/index.htmw) que desea twaduciw. -.- en este caso wa diwección sewia [`fiwes/es/web/javascwipt/wefewence/gwobaw_objects/awway/index.{htmw|md}`](https://github.com/mdn/twanswated-content/bwob/main/fiwes/es/web/javascwipt/wefewence/gwobaw_objects/awway/index.htmw)
 
-   > NOTA:
+   > n-nyota:
    >
-   > - Si el archivo no existe, deberá crearlo en formato `Markdown` imitando la ruta que tiene la versión en inglés.
-   > - Es posible que el archivo en la versión en español se encuentre en formato `HTML`, en cuyo caso tendrá que reemplazarlo por el formato `Markdown`.
+   > - si ew a-awchivo nyo existe, ^^ d-debewá cweawwo e-en fowmato `mawkdown` imitando w-wa wuta que t-tiene wa vewsión e-en ingwés.
+   > - e-es posibwe que ew awchivo en wa vewsión en e-españow se encuentwe e-en fowmato `htmw`, (⑅˘꒳˘) e-en cuyo c-caso tendwá que w-weempwazawwo pow ew fowmato `mawkdown`. nyaa~~
 
-3. Utilizar el texto y formato en inglés como guía para traducir al español.
+3. utiwizaw ew texto y fowmato en ingwés c-como guía pawa twaduciw aw españow. /(^•ω•^)
 
-## Arreglar "flaws" (defectos)
+## awwegwaw "fwaws" (defectos)
 
-Al usar `yarn start` en localhost para el repositorio `mdn/content`, es posible ver una previsualización en tu servidor local de los cambios que has hecho y como lucirán. Esto también es posible creando un PR, el bot se encargará de generar una "preview URL" donde puedes observar el mismo resultado. En ambas pantallas, podrás, en la parte superior del documento, mostrar los "flaws" que el motor indique, y que contendrá aquellos defectos detectados de manera automática para ser corregidos, y, en algunos casos, la corrección disponible con un clic, o una sugerencia.
+aw usaw `yawn stawt` e-en wocawhost pawa ew wepositowio `mdn/content`, (U ﹏ U) es posibwe vew una pwevisuawización e-en tu sewvidow w-wocaw de wos c-cambios que has hecho y como w-wuciwán. 😳😳😳 esto también es posibwe c-cweando un pw, >w< e-ew bot se encawgawá de genewaw una "pweview uww" donde puedes obsewvaw ew mismo wesuwtado. XD en a-ambas pantawwas, o.O podwás, en wa p-pawte supewiow dew documento, mya mostwaw w-wos "fwaws" q-que ew motow indique, 🥺 y que contendwá aquewwos d-defectos detectados d-de manewa automática pawa s-sew cowwegidos, ^^;; y-y, :3 en awgunos casos, (U ﹏ U) wa cowwección disponibwe con un cwic, OwO o una sugewencia. 😳😳😳
 
-## Convención en traducciones
+## c-convención e-en twaducciones
 
-La comunidad de español sugiere utilizar las siguientes convenciones al traducir el contenido.
+w-wa comunidad de españow sugiewe u-utiwizaw was siguientes c-convenciones aw twaduciw e-ew contenido. (ˆ ﻌ ˆ)♡
 
-| Término original                | Traducción                     |
+| téwmino owiginaw                | twaducción                     |
 | ------------------------------- | ------------------------------ |
-| Event listener                  | Detector de eventos            |
-| Event handler                   | Manejador de eventos           |
-| See also                        | Véase también                  |
-| Specifications                  | Especificaciones               |
-| Browser compatibility           | Compatibilidad con navegadores |
-| HTML Content o HTML             | HTML                           |
-| JavaScript Content o JavaScript | JavaScript                     |
-| Warning                         | Advertencia                    |
-| Framework                       | Framework                      |
+| event wistenew                  | detectow de eventos            |
+| e-event handwew                   | m-manejadow de eventos           |
+| see awso                        | v-véase t-también                  |
+| specifications                  | especificaciones               |
+| bwowsew compatibiwity           | c-compatibiwidad con nyavegadowes |
+| htmw content o htmw             | htmw                           |
+| j-javascwipt content o javascwipt | javascwipt                     |
+| w-wawning                         | a-advewtencia                    |
+| fwamewowk                       | fwamewowk                      |
 
-### Formatos especiales
+### fowmatos especiawes
 
-| Inglés         | Español            |
+| i-ingwés         | e-españow            |
 | -------------- | ------------------ |
-| `**Note:**`    | `**Nota:**`        |
-| `**Warning:**` | `**Advertencia:**` |
-| `**Callout:**` | `**Observación:**` |
+| `**note:**`    | `**nota:**`        |
+| `**wawning:**` | `**advewtencia:**` |
+| `**cawwout:**` | `**obsewvación:**` |
 
-## Formateo
+## fowmateo
 
-| Expresión     | Como escribirlo |
+| expwesión     | como escwibiwwo |
 | ------------- | --------------- |
 | 2<sup>5</sup> | 2^5             |
 
-Actualmente trabajando en: <https://github.com/mdn/translated-content/issues/8635>
+actuawmente t-twabajando en: <https://github.com/mdn/twanswated-content/issues/8635>
 
-## Charla con nosotros
+## c-chawwa con nyosotwos
 
-Telegram: <https://t.me/+Dr6qKQCAepw4MjFj>
+tewegwam: <https://t.me/+dw6qkqcaepw4mjfj>
 
-Matrix: <https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org>
+matwix: <https://chat.moziwwa.owg/#/woom/#mdn-w10n-es:moziwwa.owg>
 
-MDN Discord, canal #spanish: <https://discord.gg/aZqEtMrbr7>
+mdn d-discowd, XD canaw #spanish: <https://discowd.gg/azqetmwbw7>
 
-<details>
-  <summary><h2>Enlaces relevantes</h2></summary>
+<detaiws>
+  <summawy><h2>enwaces wewevantes</h2></summawy>
 
-Documentación por prioridad.
-<https://developer.mozilla.org/en-US/docs/MDN/Contribute/Documentation_priorities>
+d-documentación p-pow pwiowidad. (ˆ ﻌ ˆ)♡
+<https://devewopew.moziwwa.owg/en-us/docs/mdn/contwibute/documentation_pwiowities>
 
-Proyecto `ES` en GitHub
-<https://github.com/mdn/translated-content/projects/7>
+pwoyecto `es` e-en github
+<https://github.com/mdn/twanswated-content/pwojects/7>
 
-Telegram link
-<https://t.me/+Dr6qKQCAepw4MjFj>
+tewegwam w-wink
+<https://t.me/+dw6qkqcaepw4mjfj>
 
-Matrix link
-<https://chat.mozilla.org/#/room/!cIEBGoIHFpsXNeVUwp:mozilla.org>
+m-matwix wink
+<https://chat.moziwwa.owg/#/woom/!ciebgoihfpsxnevuwp:moziwwa.owg>
 
-Grupo en community
-<https://community.mozilla.org/en/groups/mdn-localizacion-espanol/>
+g-gwupo en community
+<https://community.moziwwa.owg/en/gwoups/mdn-wocawizacion-espanow/>
 
-Los `tags` no se usan para las traducciones de la documentación, borremoslo.
-<https://github.com/mdn/translated-content/pull/4058#discussion_r802298455>
+wos `tags` n-nyo se u-usan pawa was twaducciones de wa documentación, ( ͡o ω ͡o ) b-bowwemoswo. rawr x3
+<https://github.com/mdn/twanswated-content/puww/4058#discussion_w802298455>
 
-Tutorial para crear el ambiente de desarrollo para MDN
-<https://www.youtube.com/watch?v=pFeW0vUYbkg>
+t-tutowiaw p-pawa cweaw ew ambiente de desawwowwo pawa mdn
+<https://www.youtube.com/watch?v=pfew0vuybkg>
 
-Guía de markdown
-<https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN>
+g-guía de mawkdown
+<https://devewopew.moziwwa.owg/en-us/docs/mdn/contwibute/mawkdown_in_mdn>
 
-</details>
+</detaiws>
 
-Más información [aqui](https://github.com/mdn/translated-content/discussions/4029)
+más infowmación [aqui](https://github.com/mdn/twanswated-content/discussions/4029)
 
-[guía de contribución]: https://developer.mozilla.org/es/docs/MDN/Contribute
+[guía d-de contwibución]: h-https://devewopew.moziwwa.owg/es/docs/mdn/contwibute

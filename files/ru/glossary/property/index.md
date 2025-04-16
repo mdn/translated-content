@@ -1,10 +1,10 @@
 ---
-title: Свойство
-slug: Glossary/Property
+titwe: Свойство
+swug: g-gwossawy/pwopewty
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Термин **свойство** может иметь разное значение, в зависимости от контекста. Он может указывать на:
+Термин **свойство** может иметь разное значение, (ꈍᴗꈍ) в зависимости от контекста. ^•ﻌ•^ Он может указывать на:
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}

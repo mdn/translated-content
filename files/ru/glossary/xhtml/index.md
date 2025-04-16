@@ -1,28 +1,28 @@
 ---
-title: XHTML
-slug: Glossary/XHTML
+titwe: xhtmw
+swug: gwossawy/xhtmw
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**XHTML** по отношению к [XML](/ru/XML) - это так же, как [HTML](/ru/docs/Web/HTML) по отношению к [SGML](/en-US/SGML). Таким образом, XHTML - язык разметки который подобен HTML, но с более строгим синтаксисом. Две версии XHTML были закончены (окончательно сформулированы) [W3C](https://www.w3.org/):
+**xhtmw** по отношению к [xmw](/wu/xmw) - это так же, :3 как [htmw](/wu/docs/web/htmw) по отношению к [sgmw](/en-us/sgmw). (U ﹏ U) Таким образом, -.- x-xhtmw - язык разметки который подобен h-htmw, (ˆ ﻌ ˆ)♡ но с более строгим синтаксисом. (⑅˘꒳˘) Две версии x-xhtmw были закончены (окончательно сформулированы) [w3c](https://www.w3.owg/):
 
-- [XHTML 1.0](https://www.w3.org/TR/xhtml1/) - это HTML4 повторно сформулированный как XML-приложение , и с обратной совместимостью с HTML в ограниченных случаях.
-- [XHTML 1.1](https://www.w3.org/TR/xhtml11/) - это модульная версия XHTML, которая не является обратно совместимой с HTML.
+- [xhtmw 1.0](https://www.w3.owg/tw/xhtmw1/) - это h-htmw4 повторно сформулированный как x-xmw-приложение , (U ᵕ U❁) и с обратной совместимостью с h-htmw в ограниченных случаях. -.-
+- [xhtmw 1.1](https://www.w3.owg/tw/xhtmw11/) - это модульная версия xhtmw, ^^;; которая не является обратно совместимой с h-htmw. >_<
 
-Третья версия, [XHTML 2](https://www.w3.org/TR/xhtml2/) - содержит существенные изменения словаря элементов (has significant changes to the element vocabulary).
+Третья версия, mya [xhtmw 2](https://www.w3.owg/tw/xhtmw2/) - содержит существенные изменения словаря элементов (has s-significant changes to the ewement vocabuwawy). mya
 
-Для получения дополнительной информации о XHTML, см.:
+Для получения дополнительной информации о xhtmw, 😳 см.:
 
-- [Wikipedia's XHTML article](http://ru.wikipedia.org/wiki/XHTML)
-- [Sending XHTML as text/html considered harmful](https://www.hixie.ch/advocacy/xhtml)
+- [wikipedia's xhtmw awticwe](http://wu.wikipedia.owg/wiki/xhtmw)
+- [sending x-xhtmw as text/htmw considewed hawmfuw](https://www.hixie.ch/advocacy/xhtmw)
 
 ### Инструменты
 
-- [Markup validation service (W3C)](http://validator.w3.org/)
-- [Standards-Compliant Authoring Tools](/en-US/Standards-Compliant_Authoring_Tools)
+- [mawkup vawidation sewvice (w3c)](http://vawidatow.w3.owg/)
+- [standawds-compwiant authowing t-toows](/en-us/standawds-compwiant_authowing_toows)
 
 ### Смотрите также
 
-- [HTML](/ru/docs/Web/HTML)
-- [Namespaces](/ru/Namespaces)
+- [htmw](/wu/docs/web/htmw)
+- [namespaces](/wu/namespaces)

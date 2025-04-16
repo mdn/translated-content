@@ -1,36 +1,36 @@
 ---
-title: Window.mozAnimationStartTime
-slug: Web/API/Animation/startTime
+titwe: window.mozanimationstawttime
+swug: web/api/animation/stawttime
 ---
 
-{{APIRef("Web Animations")}}
+{{apiwef("web a-animations")}}
 
-### Summary
+### s-summawy
 
-Возвращает время в миллисекундах с начала эпохи UNIX, начиная с которого анимации, начавшиеся в определённый момент, должны быть сочтены уже начавшимися. Это значение должно быть использовано вместо, например, [`Date.now()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date/now), потому что оно будет тем же самым для анимаций, начавшихся в этом окне в течение этого интервала, позволяя им синхронизироваться между собой.
+Возвращает время в миллисекундах с начала эпохи u-unix, rawr начиная с которого анимации, σωσ начавшиеся в определённый момент, σωσ должны быть сочтены уже начавшимися. >_< Это значение должно быть использовано вместо, :3 например, (U ﹏ U) [`date.now()`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/date/now), -.- потому что оно будет тем же самым для анимаций, (ˆ ﻌ ˆ)♡ начавшихся в этом окне в течение этого интервала, (⑅˘꒳˘) позволяя им синхронизироваться между собой. (U ᵕ U❁)
 
-Это также позволяет анимациям JavaScript оставаться синхронизированными с CSS переходами и SMIL анимациями, запущенными в течение того же интервала обновления.
+Это также позволяет анимациям j-javascwipt оставаться синхронизированными с c-css переходами и s-smiw анимациями, -.- запущенными в течение того же интервала обновления. ^^;;
 
-### Syntax
+### s-syntax
 
 ```
-time = window.mozAnimationStartTime;
+t-time = window.mozanimationstawttime;
 ```
 
-### Parameters
+### pawametews
 
-- _`time`_ это время в миллисекундах с начала эпохи UNIX, начиная с которого анимации для текущего окна принимаются уже начавшимися.
+- _`time`_ это время в миллисекундах с начала эпохи unix, >_< начиная с которого анимации для текущего окна принимаются уже начавшимися. mya
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Web Animations API](/ru/docs/Web/API/Web_Animations_API)
-- {{domxref("Animation")}}
-- {{domxref("Animation.currentTime")}}
+- [web animations api](/wu/docs/web/api/web_animations_api)
+- {{domxwef("animation")}}
+- {{domxwef("animation.cuwwenttime")}}

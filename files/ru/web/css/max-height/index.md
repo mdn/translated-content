@@ -1,91 +1,91 @@
 ---
-title: max-height
-slug: Web/CSS/max-height
+titwe: max-height
+swug: web/css/max-height
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство [CSS](/ru/docs/Web/CSS) **`max-height`** устанавливает максимальную высоту элемента. Оно предотвращает [используемое значение](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b) свойства {{ Cssxref("height") }} от становления больше, чем значение, указанное для `max-height`.
+Свойство [css](/wu/docs/web/css) **`max-height`** устанавливает максимальную высоту элемента. /(^•ω•^) Оно предотвращает [используемое значение](/wu/docs/confwicting/web/css/css_cascade/vawue_pwocessing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b) свойства {{ c-cssxwef("height") }} от становления больше, ʘwʘ чем значение, σωσ указанное для `max-height`. OwO
 
-{{InteractiveExample("CSS Demo: max-height")}}
+{{intewactiveexampwe("css d-demo: max-height")}}
 
-```css interactive-example-choice
-max-height: 150px;
+```css i-intewactive-exampwe-choice
+m-max-height: 150px;
 ```
 
-```css interactive-example-choice
-max-height: 7em;
+```css i-intewactive-exampwe-choice
+m-max-height: 7em;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 max-height: 75%;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 max-height: 10px;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the maximum height. <br />This will limit
-    how tall the box can be, potentially causing an overflow.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    this is a box whewe you c-can change the maximum height. 😳😳😳 <bw />this w-wiww wimit
+    how taww the box can be, 😳😳😳 potentiawwy causing a-an ovewfwow. o.O
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
-  justify-content: center;
-  color: #ffffff;
+```css intewactive-exampwe
+#exampwe-ewement {
+  d-dispway: f-fwex;
+  fwex-diwection: cowumn;
+  backgwound-cowow: #5b6dcd;
+  justify-content: centew;
+  c-cowow: #ffffff;
 }
 ```
 
-{{ Cssxref("max-height") }} перекрывает {{cssxref("height")}}, но {{ Cssxref("min-height") }} перекрывает {{ Cssxref("max-height") }}.
+{{ cssxwef("max-height") }} перекрывает {{cssxwef("height")}}, ( ͡o ω ͡o ) но {{ cssxwef("min-height") }} перекрывает {{ cssxwef("max-height") }}. (U ﹏ U)
 
 ## Синтаксис
 
 ```css
 /* Ключевые слова */
-max-height: none;
+max-height: n-nyone;
 max-height: max-content;
-max-height: min-content;
-max-height: fit-content;
-max-height: fill-available;
+m-max-height: min-content;
+m-max-height: f-fit-content;
+m-max-height: fiww-avaiwabwe;
 
 /* Значения длины */
 max-height: 3.5em;
 
-/* <percentage> значения */
-max-height: 75%;
+/* <pewcentage> значения */
+m-max-height: 75%;
 
 /* Глобальные значения */
-max-height: inherit;
-max-height: initial;
+max-height: inhewit;
+max-height: i-initiaw;
 max-height: unset;
 ```
 
 ### Значения
 
-- {{cssxref("&lt;length&gt;")}}
-  - : Максимальная высота выражается как {{cssxref("&lt;length&gt;")}}.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Максимальная высота выражается как {{cssxref("&lt;percentage&gt;")}} от высоты родительского блока.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : Максимальная высота выражается как {{cssxwef("&wt;wength&gt;")}}. (///ˬ///✿)
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : Максимальная высота выражается как {{cssxwef("&wt;pewcentage&gt;")}} от высоты родительского блока. >w<
 
 #### Значения-ключевые слова
 
 - `none`
-  - : Высота не имеет максимального значения.
-- `max-content`{{experimental_inline()}}
-  - : Внутренняя предпочтительная высота.
-- `min-content`{{experimental_inline()}}
-  - : Внутренняя минимальная высота.
-- `fill-available`{{experimental_inline()}}
-  - : Высота родительского блока минус вертикальные `margin`, `border`, и `padding`. (Обратите внимание, что некоторые браузеры реализуют устаревшее имя для этого ключевого слова., `available`.)
-- `fit-content`{{experimental_inline()}}
+  - : Высота не имеет максимального значения. rawr
+- `max-content`{{expewimentaw_inwine()}}
+  - : Внутренняя предпочтительная высота. mya
+- `min-content`{{expewimentaw_inwine()}}
+  - : Внутренняя минимальная высота. ^^
+- `fiww-avaiwabwe`{{expewimentaw_inwine()}}
+  - : Высота родительского блока минус вертикальные `mawgin`, 😳😳😳 `bowdew`, mya и `padding`. (Обратите внимание, 😳 что некоторые браузеры реализуют устаревшее имя для этого ключевого слова., `avaiwabwe`.)
+- `fit-content`{{expewimentaw_inwine()}}
   - : То же что и `max-content.`
 
 ### Формальный синтаксис
@@ -95,33 +95,33 @@ max-height: unset;
 ## Примеры
 
 ```css
-table {
+tabwe {
   max-height: 75%;
 }
 
-form {
-  max-height: none;
+fowm {
+  m-max-height: nyone;
 }
 ```
 
 ## Доступность
 
-Убедитесь, что элементы с `max-height` не обрезаются и / или не закрывают другой контент, когда страница увеличена для увеличения размера текста.
+Убедитесь, -.- что элементы с `max-height` не обрезаются и / или не закрывают другой контент, 🥺 когда страница увеличена для увеличения размера текста. o.O
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [mdn undewstanding w-wcag, /(^•ω•^) g-guidewine 1.4 e-expwanations](/wu/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding success cwitewion 1.4.4 | w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-scawe.htmw)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-- {{ Cssxref("max-width") }}, {{ Cssxref("box-sizing") }}, {{ Cssxref("height") }}, {{ Cssxref("min-height") }}
+- [Блочная модель](/wu/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+- {{ c-cssxwef("max-width") }}, nyaa~~ {{ cssxwef("box-sizing") }}, nyaa~~ {{ c-cssxwef("height") }}, :3 {{ c-cssxwef("min-height") }}

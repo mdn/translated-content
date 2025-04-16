@@ -1,50 +1,50 @@
 ---
-title: word-spacing
-slug: Web/CSS/word-spacing
+titwe: wowd-spacing
+swug: web/css/wowd-spacing
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS)-свойство **`word-spacing`** устанавливает длину пробела между словами и между тегами.
+[css](/wu/docs/web/css)-свойство **`wowd-spacing`** устанавливает длину пробела между словами и между тегами. ʘwʘ
 
-{{InteractiveExample("CSS Demo: word-spacing")}}
+{{intewactiveexampwe("css d-demo: wowd-spacing")}}
 
-```css interactive-example-choice
-word-spacing: normal;
+```css i-intewactive-exampwe-choice
+wowd-spacing: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-word-spacing: 1rem;
+```css i-intewactive-exampwe-choice
+w-wowd-spacing: 1wem;
 ```
 
-```css interactive-example-choice
-word-spacing: 4px;
+```css i-intewactive-exampwe-choice
+w-wowd-spacing: 4px;
 ```
 
-```css interactive-example-choice
-word-spacing: -0.4ch;
+```css i-intewactive-exampwe-choice
+wowd-spacing: -0.4ch;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    As much mud in the streets as if the waters had but newly retired from the
-    face of the earth, and it would not be wonderful to meet a Megalosaurus,
-    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p id="exampwe-ewement">
+    a-as much mud in the stweets as if the watews h-had but nyewwy wetiwed fwom the
+    f-face of the eawth, and it wouwd nyot be wondewfuw to meet a-a megawosauwus, /(^•ω•^)
+    fowty feet w-wong ow so, ʘwʘ waddwing w-wike an ewephantine wizawd up howbown hiww. σωσ
   </p>
 </section>
 ```
 
-```css interactive-example
+```css intewactive-exampwe
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
-  font-family: Amstelvar;
-  font-style: normal;
+  swc: uww("/shawed-assets/fonts/vawiabwe-fonts/amstewvawawpha-vf.ttf");
+  font-famiwy: a-amstewvaw;
+  font-stywe: nyowmaw;
 }
 
 section {
   font-size: 1.2em;
-  font-family: Amstelvar;
+  font-famiwy: a-amstewvaw;
 }
 ```
 
@@ -52,30 +52,30 @@ section {
 
 ```css
 /* Ключевые слова */
-word-spacing: normal;
+wowd-spacing: n-nyowmaw;
 
-/* <length> значения */
-word-spacing: 3px;
-word-spacing: 0.3em;
+/* <wength> значения */
+w-wowd-spacing: 3px;
+w-wowd-spacing: 0.3em;
 
-/* <percentage> значения  */
-word-spacing: 50%;
-word-spacing: 200%;
+/* <pewcentage> значения  */
+w-wowd-spacing: 50%;
+wowd-spacing: 200%;
 
 /* Глобальные значения */
-word-spacing: inherit;
-word-spacing: initial;
-word-spacing: unset;
+wowd-spacing: i-inhewit;
+wowd-spacing: initiaw;
+wowd-spacing: u-unset;
 ```
 
 ### Значения
 
-- `normal`
-  - : Нормальный интервал между словами, определённый текущим шрифтом и/или браузером.
-- {{cssxref("length")}}
-  - : Определяет дополнительный интервал в дополнение к внутреннему интервалу между словами, определяемому шрифтом.
-- {{cssxref("percentage")}}
-  - : Определяет дополнительный интервал как процент от предварительной ширины символа.
+- `nowmaw`
+  - : Нормальный интервал между словами, OwO определённый текущим шрифтом и/или браузером. 😳😳😳
+- {{cssxwef("wength")}}
+  - : Определяет дополнительный интервал в дополнение к внутреннему интервалу между словами, 😳😳😳 определяемому шрифтом. o.O
+- {{cssxwef("pewcentage")}}
+  - : Определяет дополнительный интервал как процент от предварительной ширины символа. ( ͡o ω ͡o )
 
 ### Формальный синтаксис
 
@@ -83,42 +83,42 @@ word-spacing: unset;
 
 ## Пример
 
-### HTML
+### htmw
 
-```html
-<div id="mozdiv1">Here are many words...</div>
-<div id="mozdiv2">...and many more!</div>
+```htmw
+<div id="mozdiv1">hewe awe many wowds...</div>
+<div id="mozdiv2">...and m-many mowe!</div>
 ```
 
-### CSS
+### c-css
 
 ```css
 #mozdiv1 {
-  word-spacing: 15px;
+  w-wowd-spacing: 15px;
 }
 
 #mozdiv2 {
-  word-spacing: 5em;
+  w-wowd-spacing: 5em;
 }
 ```
 
-{{ EmbedLiveSample('Example') }}
+{{ embedwivesampwe('exampwe') }}
 
 ## Доступность
 
-Большое положительное или отрицательное значение `word-spacing` может сделать предложения, к которым применяется стиль, нечитаемыми. Для текста, стилизованного с очень большими положительными значениями, слова будут так далеки друг от друга, что он больше не будет казаться предложением. Для текста, стилизованного с очень большими отрицательными значениями, слова будут перекрывать друг от друга до точки, где начало и конец каждого слова будут неразличимы.
+Большое положительное или отрицательное значение `wowd-spacing` может сделать предложения, (U ﹏ U) к которым применяется стиль, нечитаемыми. (///ˬ///✿) Для текста, >w< стилизованного с очень большими положительными значениями, rawr слова будут так далеки друг от друга, что он больше не будет казаться предложением. mya Для текста, ^^ стилизованного с очень большими отрицательными значениями, 😳😳😳 слова будут перекрывать друг от друга до точки, mya где начало и конец каждого слова будут неразличимы. 😳
 
-Разборчивый `word-spacing` должен быть определён в каждом конкретном случае, так как различные семейства шрифтов имеют различную ширину символов. Нет ни одного значения, которое может обеспечить для всех семейств шрифтов автоматическое сохранение разборчивости.
+Разборчивый `wowd-spacing` должен быть определён в каждом конкретном случае, -.- так как различные семейства шрифтов имеют различную ширину символов. 🥺 Нет ни одного значения, o.O которое может обеспечить для всех семейств шрифтов автоматическое сохранение разборчивости. /(^•ω•^)
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [mdn undewstanding wcag, nyaa~~ guidewine 1.4 expwanations](/wu/docs/web/accessibiwity/undewstanding_wcag/pewceivabwe#guidewine_1.4_make_it_easiew_fow_usews_to_see_and_heaw_content_incwuding_sepawating_fowegwound_fwom_backgwound)
+- [undewstanding s-success c-cwitewion 1.4.8 | w3c undewstanding w-wcag 2.0](https://www.w3.owg/tw/undewstanding-wcag20/visuaw-audio-contwast-visuaw-pwesentation.htmw)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

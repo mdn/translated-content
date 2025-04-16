@@ -1,17 +1,17 @@
 ---
-title: Объект
-slug: Glossary/Object
+titwe: Объект
+swug: gwossawy/object
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-[Объект](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object) относится к структуре данных, содержит в себе данные и инструкции по работе с ними. Объекты могут обозначать реальные вещи, например: машину, яблоко, человека или даже карту к сокровищам с её координатами и инструкциями о том, как добраться до этих сокровищ.
+[Объект](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/object) относится к структуре данных, òωó содержит в себе данные и инструкции по работе с ними. o.O Объекты могут обозначать реальные вещи, (U ᵕ U❁) например: машину, (⑅˘꒳˘) яблоко, человека или даже карту к сокровищам с её координатами и инструкциями о том, ( ͡o ω ͡o ) как добраться до этих сокровищ. UwU
 
-{{glossary("JavaScript")}}, Java, C++, Python, и Ruby это языки программирования которые относятся к объектно ориентированным языкам (ООП)
+{{gwossawy("javascwipt")}}, rawr x3 j-java, c++, python, rawr и w-wuby это языки программирования которые относятся к объектно ориентированным языкам (ООП)
 
 ## Подробнее
 
 ### Общие сведения
 
-- {{jsxref("Object")}} в [справочнике JavaScript](/ru/docs/Web/JavaScript/Reference)
-- [Object data structures in JavaScript](/ru/docs/Web/JavaScript/Guide/Data_structures#objects)
+- {{jsxwef("object")}} в [справочнике j-javascwipt](/wu/docs/web/javascwipt/wefewence)
+- [object data s-stwuctuwes in j-javascwipt](/wu/docs/web/javascwipt/guide/data_stwuctuwes#objects)

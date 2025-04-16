@@ -1,34 +1,34 @@
 ---
-title: :read-only
-slug: Web/CSS/:read-only
+titwe: :wead-onwy
+swug: web/css/:wead-onwy
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:read-only` находит элементы, недоступные для редактирования пользователем.
+c-css [псевдокласс](/wu/docs/web/css/pseudo-cwasses) `:wead-onwy` находит элементы, (U ᵕ U❁) недоступные для редактирования пользователем. (⑅˘꒳˘)
 
 ## Пример
 
 ```css
-input:-moz-read-only {
-  background: #eee;
+i-input:-moz-wead-onwy {
+  b-backgwound: #eee;
 }
-input:read-only {
-  background: #eee;
+i-input:wead-onwy {
+  b-backgwound: #eee;
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [`:read-write`](/ru/docs/Web/CSS/:read-write)
-- HTML атрибут [`contenteditable`](/ru/docs/Web/HTML/Global_attributes/contenteditable)
+- [`:wead-wwite`](/wu/docs/web/css/:wead-wwite)
+- h-htmw атрибут [`contenteditabwe`](/wu/docs/web/htmw/gwobaw_attwibutes/contenteditabwe)

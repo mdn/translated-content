@@ -1,68 +1,68 @@
 ---
-title: :blank
-slug: Web/CSS/:-moz-only-whitespace
+titwe: :bwank
+swug: web/css/:-moz-onwy-whitespace
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-[CSS псевдо класс](/ru/docs/Web/CSS) **`:blank`** находит элементы, у которых либо вообще нет дочерних узлов, либо только пустые текстовые узлы, либо только текстовые узлы, содержащие только пробельные символы.
+[css псевдо класс](/wu/docs/web/css) **`:bwank`** находит элементы, (U ᵕ U❁) у которых либо вообще нет дочерних узлов, -.- либо только пустые текстовые узлы, ^^;; либо только текстовые узлы, >_< содержащие только пробельные символы. mya
 
-## Syntax
+## s-syntax
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## Пример
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div></div>
 ```
 
-### CSS
+### css
 
-```css hidden
-:root {
-  overflow: hidden;
-  max-width: 100vw;
-  max-height: 100vh;
+```css h-hidden
+:woot {
+  o-ovewfwow: h-hidden;
+  m-max-width: 100vw;
+  m-max-height: 100vh;
 }
 
-div {
-  background-color: #ccc;
-  box-sizing: border-box;
+d-div {
+  backgwound-cowow: #ccc;
+  box-sizing: bowdew-box;
   height: 100vh;
-  min-height: 16px;
-  min-height: 1rem;
+  m-min-height: 16px;
+  min-height: 1wem;
 }
 
-:-moz-only-whitespace {
-  border-color: lime;
+:-moz-onwy-whitespace {
+  bowdew-cowow: w-wime;
 }
 ```
 
 ```css
 div {
-  border: 4px solid red;
+  b-bowdew: 4px sowid wed;
 }
 
-:blank {
-  border-color: lime;
+:bwank {
+  bowdew-cowow: wime;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Пример", "100%", "50")}}
+{{embedwivesampwe("Пример", mya "100%", "50")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{CSSxRef(":empty")}}
+- {{cssxwef(":empty")}}

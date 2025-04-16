@@ -1,158 +1,158 @@
 ---
-title: Всемирная сеть (веб) и веб-стандарты
-slug: Learn_web_development/Getting_started/Web_standards/The_web_standards_model
+titwe: Всемирная сеть (веб) и веб-стандарты
+swug: w-weawn_web_devewopment/getting_stawted/web_standawds/the_web_standawds_modew
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-Статья содержит общую информацию о всемирной сети (the Web) — откуда она взялась, что такое веб-стандарты, как они связанны, почему "веб разработчик" отличный карьерный выбор и чему полезному можно научиться изучая этот курс.
+Статья содержит общую информацию о всемирной сети (the w-web) — откуда она взялась, σωσ что такое веб-стандарты, ( ͡o ω ͡o ) как они связанны, nyaa~~ почему "веб разработчик" отличный карьерный выбор и чему полезному можно научиться изучая этот курс. :3
 
 ## Краткая история сети веб
 
-Мы постарались максимально кратко изложить здесь информацию. Если вы более детально заинтересованы в истории веб сети, то попробуйте поискать это в интернете.
+Мы постарались максимально кратко изложить здесь информацию. UwU Если вы более детально заинтересованы в истории веб сети, o.O то попробуйте поискать это в интернете. (ˆ ﻌ ˆ)♡
 
-В конце 1960-х военные США разработали коммуникационную сеть [ARPANET](/ru/docs/Glossary/Arpanet). Вполне можно её рассматривать в качестве прародителя современной сети, так как она работала с помощью [коммутации пакетов](https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BC%D0%BC%D1%83%D1%82%D0%B0%D1%86%D0%B8%D1%8F_%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%BE%D0%B2), и для неё впервые была внедрена сетевая модель [TCP/IP](https://ru.wikipedia.org/wiki/TCP/IP). Эти две технологии послужили основой, на которой затем был построен интернет.
+В конце 1960-х военные США разработали коммуникационную сеть [awpanet](/wu/docs/gwossawy/awpanet). ^^;; Вполне можно её рассматривать в качестве прародителя современной сети, ʘwʘ так как она работала с помощью [коммутации пакетов](https://wu.wikipedia.owg/wiki/%d0%9a%d0%be%d0%bc%d0%bc%d1%83%d1%82%d0%b0%d1%86%d0%b8%d1%8f_%d0%bf%d0%b0%d0%ba%d0%b5%d1%82%d0%be%d0%b2), σωσ и для неё впервые была внедрена сетевая модель [tcp/ip](https://wu.wikipedia.owg/wiki/tcp/ip). ^^;; Эти две технологии послужили основой, на которой затем был построен интернет. ʘwʘ
 
-В 1980 году Тим Бернерс-Ли (aka TimBL) написал программу под названием ENQUIRE, которая позволяла устанавливать связь между двумя узлами. Ничего не напоминает?
+В 1980 году Тим Бернерс-Ли (aka t-timbw) написал программу под названием e-enquiwe, ^^ которая позволяла устанавливать связь между двумя узлами. nyaa~~ Ничего не напоминает?
 
-В 1989 году TimBL выступил в организации [ЦЕРН](https://ru.wikipedia.org/wiki/%D0%A6%D0%95%D0%A0%D0%9D) с идеями о методах структурирования, обработке и обмена информацией ([Information Management: A Proposal](https://www.w3.org/History/1989/proposal.html)), предложив при этом концепцию "[гипертекста](https://ru.wikipedia.org/wiki/%D0%93%D0%B8%D0%BF%D0%B5%D1%80%D1%82%D0%B5%D0%BA%D1%81%D1%82)". Идеи Тима были одобрены и он начал воплощать в реальность свой проект. Современная сеть построена на основании его работ.
+В 1989 году t-timbw выступил в организации [ЦЕРН](https://wu.wikipedia.owg/wiki/%d0%a6%d0%95%d0%a0%d0%9d) с идеями о методах структурирования, (///ˬ///✿) обработке и обмена информацией ([infowmation m-management: a-a pwoposaw](https://www.w3.owg/histowy/1989/pwoposaw.htmw)), предложив при этом концепцию "[гипертекста](https://wu.wikipedia.owg/wiki/%d0%93%d0%b8%d0%bf%d0%b5%d1%80%d1%82%d0%b5%d0%ba%d1%81%d1%82)". XD Идеи Тима были одобрены и он начал воплощать в реальность свой проект. :3 Современная сеть построена на основании его работ. òωó
 
-К концу 1990-го года Тим Бернерс разработал все необходимые для запуска сети средства — [HTTP](/ru/docs/Web/HTTP), [HTML](/ru/docs/Web/HTML), первый в мире веб браузер ([WorldWideWeb](https://en.wikipedia.org/wiki/WorldWideWeb)), сервер HTTP и несколько веб страниц для наглядности.
+К концу 1990-го года Тим Бернерс разработал все необходимые для запуска сети средства — [http](/wu/docs/web/http), ^^ [htmw](/wu/docs/web/htmw), ^•ﻌ•^ первый в мире веб браузер ([wowwdwideweb](https://en.wikipedia.owg/wiki/wowwdwideweb)), σωσ сервер h-http и несколько веб страниц для наглядности. (ˆ ﻌ ˆ)♡
 
-В течение нескольких последующих лет веб сеть расширялась, выпускались новые браузеры, были установлены тысячи серверов и созданы миллионы веб страниц. Как и обещали, достаточно краткая история.
+В течение нескольких последующих лет веб сеть расширялась, nyaa~~ выпускались новые браузеры, были установлены тысячи серверов и созданы миллионы веб страниц. ʘwʘ Как и обещали, ^•ﻌ•^ достаточно краткая история. rawr x3
 
-Стоит отметить, что в 1994 году TimBL основал консорциум Всемирной паутины ([World Wide Web Consortium (W3C)](https://www.w3.org/)) - организацию, связывающую множество компаний для сплочения усилий в области разработки веб технологий. После этого появились технологии, например, такие как [CSS](/ru/docs/Web/CSS) и [JavaScript](/ru/docs/Web/JavaScript), которые преобразовали веб сеть в тот вид, в котором мы наблюдаем её сейчас.
+Стоит отметить, 🥺 что в 1994 году timbw основал консорциум Всемирной паутины ([wowwd wide web consowtium (w3c)](https://www.w3.owg/)) - организацию, ʘwʘ связывающую множество компаний для сплочения усилий в области разработки веб технологий. (˘ω˘) После этого появились технологии, например, o.O такие как [css](/wu/docs/web/css) и [javascwipt](/wu/docs/web/javascwipt), σωσ которые преобразовали веб сеть в тот вид, (ꈍᴗꈍ) в котором мы наблюдаем её сейчас. (ˆ ﻌ ˆ)♡
 
 ## Веб-стандарты
 
-**Веб-стандарты** - это технологии, используемые для создания веб страниц. Стандарты существуют в виде технической документации (спецификаций), которая точно описывает как та, или иная технология должна работать. Документация никак не поможет изучить то, как пользоваться описываемыми в ней технологиями (вот почему существует сайт MDN Web Docs). Она используются разработчиками ПО для внедрения технологий (например, в веб браузеры).
+**Веб-стандарты** - это технологии, o.O используемые для создания веб страниц. :3 Стандарты существуют в виде технической документации (спецификаций), -.- которая точно описывает как та, ( ͡o ω ͡o ) или иная технология должна работать. /(^•ω•^) Документация никак не поможет изучить то, (⑅˘꒳˘) как пользоваться описываемыми в ней технологиями (вот почему существует сайт mdn web docs). òωó Она используются разработчиками ПО для внедрения технологий (например, в веб браузеры). 🥺
 
-В качестве примера приведём стандарт [HTML Living Standard](https://html.spec.whatwg.org/multipage/). Он описывает как HTML (все элементы HTML, связанные с ними API и остальные близкие технологии) должны быть реализованы.
+В качестве примера приведём стандарт [htmw w-wiving standawd](https://htmw.spec.naniwg.owg/muwtipage/). (ˆ ﻌ ˆ)♡ Он описывает как htmw (все элементы h-htmw, -.- связанные с ними api и остальные близкие технологии) должны быть реализованы. σωσ
 
-Веб-стандарты создаются организациями стандартов — институтами, которые приглашают группы людей из различных компаний для согласования того, как технологии должны применяться наиболее эффективным образом в рассматриваемых случаях. Самая известная организация веб-стандартов - W3C. Существуют и другие: [WHATWG](https://whatwg.org/) (ответственны за модернизацию языка html), [ECMA](https://www.ecma-international.org/) (выпускают стандарты языка ECMAScript, на котором построен JavaScript), [Khronos](https://www.khronos.org/) (создают технологии для 3D графики, например WebGL).
+Веб-стандарты создаются организациями стандартов — институтами, >_< которые приглашают группы людей из различных компаний для согласования того, как технологии должны применяться наиболее эффективным образом в рассматриваемых случаях. :3 Самая известная организация веб-стандартов - w-w3c. OwO Существуют и другие: [naniwg](https://naniwg.owg/) (ответственны за модернизацию языка htmw), rawr [ecma](https://www.ecma-intewnationaw.owg/) (выпускают стандарты языка ecmascwipt, (///ˬ///✿) на котором построен javascwipt), ^^ [khwonos](https://www.khwonos.owg/) (создают технологии для 3d графики, например w-webgw). XD
 
 ### "Открытые" стандарты
 
-Один из ключевых аспектов веб-стандартов, который TimBL и W3C согласовали с самого начала, заключается в том, что сеть (и веб-технологии) должны быть свободны как для внесения вклада, так и для использования, и не должны быть обременены патентами/лицензированием. Таким образом, любой может бесплатно написать код для создания своего веб-сайта, и любой может внести свой вклад в процесс создания стандартов, в которых прописываются спецификации.
+Один из ключевых аспектов веб-стандартов, UwU который timbw и w-w3c согласовали с самого начала, o.O заключается в том, 😳 что сеть (и веб-технологии) должны быть свободны как для внесения вклада, (˘ω˘) так и для использования, 🥺 и не должны быть обременены патентами/лицензированием. ^^ Таким образом, >w< любой может бесплатно написать код для создания своего веб-сайта, ^^;; и любой может внести свой вклад в процесс создания стандартов, (˘ω˘) в которых прописываются спецификации. OwO
 
-Поскольку веб-технологии создаются открыто, в сотрудничестве множества различных компаний, это означает, что ни одна компания не может их контролировать, и это действительно хорошо. Вряд ли бы вам понравилось, если бы какая-то одна компания внезапно решила поставить всю сеть под платный доступ или выпустила новую версию HTML, которую каждый должен купить, чтобы продолжать создавать веб-сайты, или, что еще хуже, в какой-то момент решила, что она больше не заинтересована в технологии HTML и просто отключила бы её.
+Поскольку веб-технологии создаются открыто, (ꈍᴗꈍ) в сотрудничестве множества различных компаний, òωó это означает, ʘwʘ что ни одна компания не может их контролировать, ʘwʘ и это действительно хорошо. nyaa~~ Вряд ли бы вам понравилось, UwU если бы какая-то одна компания внезапно решила поставить всю сеть под платный доступ или выпустила новую версию h-htmw, (⑅˘꒳˘) которую каждый должен купить, (˘ω˘) чтобы продолжать создавать веб-сайты, :3 или, что еще хуже, (˘ω˘) в какой-то момент решила, nyaa~~ что она больше не заинтересована в технологии htmw и просто отключила бы её. (U ﹏ U)
 
-Это позволяет интернету оставаться свободно доступным общественным ресурсом.
+Это позволяет интернету оставаться свободно доступным общественным ресурсом. nyaa~~
 
 ### Не разорви сеть
 
-Популярная в области веб-стандартов фраза гласит: "не разорви сеть". Это означает, что каждая новая веб-технология должна быть совместима со всеми предыдущими технологиями (поэтому старые сайты до сих пор работают), и со всеми последующими (разрабатываемые в последствии технологии, в свою очередь, должны быть совместимы с имеющимися). В процессе изучения представленного здесь материала вы начнёте понимать каким образом это реализуется.
+Популярная в области веб-стандартов фраза гласит: "не разорви сеть". ^^;; Это означает, OwO что каждая новая веб-технология должна быть совместима со всеми предыдущими технологиями (поэтому старые сайты до сих пор работают), nyaa~~ и со всеми последующими (разрабатываемые в последствии технологии, UwU в свою очередь, должны быть совместимы с имеющимися). 😳 В процессе изучения представленного здесь материала вы начнёте понимать каким образом это реализуется. 😳
 
-## Being a web developer is good
+## being a web devewopew is good
 
-The web industry is a very attractive market to enter if you are looking for a job. Recent published figures say that there are currently around 19 million web developers in the world, and that figure is set more than double in the next decade. And at the same time, there is a skill shortage in the industry — so what better time to learn web development?
+the w-web industwy is a vewy attwactive mawket to entew if you awe wooking fow a job. (ˆ ﻌ ˆ)♡ w-wecent pubwished figuwes say that t-thewe awe cuwwentwy a-awound 19 m-miwwion web devewopews i-in the wowwd, (✿oωo) and that figuwe is set mowe t-than doubwe in the nyext decade. nyaa~~ and at the same t-time, ^^ thewe is a skiww showtage in the industwy — so nyani bettew time to weawn web devewopment?
 
-It isn't all fun and games however — building web sites is a more complicated proposition than it used to be, and you'll have to put some time in to studying all the different technologies you need to use, all the techniques and best practices you need to know, and all the typical patterns you'll be called upon to implement. It'll take you a few months to really start to get into it, and then you'll need to keep learning so that your knowledge stays up-to-date with all the new tools and features that appear on the web platform, and keep practicing and refining your craft.
+i-it isn't aww fun and games h-howevew — buiwding w-web sites i-is a mowe compwicated pwoposition than it used to be, (///ˬ///✿) and you'ww h-have to put some t-time in to studying aww the diffewent t-technowogies y-you nyeed to use, 😳 aww the techniques a-and best pwactices you n-nyeed to know, and aww the typicaw pattewns you'ww b-be cawwed upon to impwement. òωó i-it'ww take you a few months to w-weawwy stawt to g-get into it, ^^;; and then you'ww nyeed to keep weawning so that youw knowwedge stays up-to-date with aww the nyew toows a-and featuwes t-that appeaw on the web pwatfowm, rawr a-and keep pwacticing a-and wefining y-youw cwaft. (ˆ ﻌ ˆ)♡
 
-_The only constant is change._
+_the onwy constant is change._
 
-Does this sound hard? Don't worry — we aim to give you everything you need to know to get started, and things will get easier. Once you embrace the constant change and uncertainty of the web, you'll start to enjoy yourself. As a part of the web community, you'll have an entire web of contacts and useful material to help you, and you'll start to enjoy the creative possibilities it brings.
+does this sound h-hawd? don't wowwy — we aim to give you evewything you nyeed to know to get stawted, XD a-and things wiww get easiew. >_< o-once you embwace t-the constant c-change and uncewtainty of the web, (˘ω˘) y-you'ww stawt t-to enjoy youwsewf. 😳 a-as a pawt of t-the web community, o.O you'ww have an entiwe web of c-contacts and usefuw m-matewiaw to h-hewp you, (ꈍᴗꈍ) and you'ww s-stawt to enjoy t-the cweative possibiwities it bwings. rawr x3
 
-You're a digital creative now. Enjoy the experience, and the potential for earning a living.
+you'we a digitaw cweative n-nyow. ^^ enjoy the expewience, OwO and the potentiaw fow eawning a wiving. ^^
 
-## Overview of modern web technologies
+## ovewview of modewn w-web technowogies
 
-There are a number of technologies to learn if you want to be a front-end web developer. In this section we will describe them briefly. For a more detailed explanation of how some of them work together, read our article [How the web works](/ru/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works).
+thewe awe a nyumbew of technowogies to weawn if y-you want to be a-a fwont-end web d-devewopew. :3 in this section we wiww d-descwibe them bwiefwy. o.O fow a m-mowe detaiwed expwanation o-of how some of them wowk togethew, -.- wead ouw awticwe [how the web wowks](/wu/docs/weawn_web_devewopment/getting_stawted/web_standawds/how_the_web_wowks). (U ﹏ U)
 
-### Browsers
+### bwowsews
 
-You are probably reading these words inside a web browser in this very moment (unless you've printed it out, or are using assistive technology, such as a screenreader to read it out to you). Web browsers are the software programs people use to consume the web, and include [Firefox](https://www.mozilla.org/en-US/firefox/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/safari/), and [Edge](https://www.microsoft.com/en-us/windows/microsoft-edge).
+y-you awe pwobabwy weading these w-wowds inside a web bwowsew in t-this vewy moment (unwess y-you've pwinted it out, o.O ow awe using assistive t-technowogy, OwO s-such as a scweenweadew to wead i-it out to you). ^•ﻌ•^ w-web bwowsews awe the softwawe pwogwams peopwe use to consume the web, ʘwʘ and incwude [fiwefox](https://www.moziwwa.owg/en-us/fiwefox/), :3 [chwome](https://www.googwe.com/chwome/), 😳 [opewa](https://www.opewa.com/), [safawi](https://www.appwe.com/safawi/), òωó a-and [edge](https://www.micwosoft.com/en-us/windows/micwosoft-edge). 🥺
 
-### HTTP
+### h-http
 
-Hypertext Transfer Protocol, or [HTTP](/ru/docs/Web/HTTP), is a messaging protocol that allows web browsers to communicate with web servers (where web sites are stored). A typical conversation goes something like
+hypewtext t-twansfew pwotocow, rawr x3 ow [http](/wu/docs/web/http), ^•ﻌ•^ i-is a messaging p-pwotocow that awwows web bwowsews t-to communicate with web sewvews (whewe web sites awe stowed). :3 a typicaw convewsation g-goes s-something wike
 
 ```
-"Hello web server. Can you give me the files I need to render bbc.co.uk"?
+"hewwo web sewvew. (ˆ ﻌ ˆ)♡ can you give m-me the fiwes i-i nyeed to wendew bbc.co.uk"?
 
-"Sure thing web browser — here you go"
+"suwe thing web bwowsew — hewe y-you go"
 
-[Downloads files and renders web page]
+[downwoads fiwes and wendews web page]
 ```
 
-The actual syntax for HTTP messages (called requests and responses) is not that human-readable, but this gives you the basic idea.
+the actuaw syntax fow http m-messages (cawwed wequests and wesponses) is nyot t-that human-weadabwe, (U ᵕ U❁) b-but this gives you the basic idea. :3
 
-### HTML, CSS, and JavaScript
+### htmw, css, ^^;; and javascwipt
 
-[HTML](/ru/docs/Web/HTML), [CSS](/ru/docs/Web/CSS), and [JavaScript](/ru/docs/Web/JavaScript) are the main three technologies you'll use to build a website:
+[htmw](/wu/docs/web/htmw), ( ͡o ω ͡o ) [css](/wu/docs/web/css), o.O a-and [javascwipt](/wu/docs/web/javascwipt) a-awe the main thwee technowogies you'ww use to buiwd a website:
 
-- Hypertext markup language, or **HTML**, is a markup language consisting of different elements you can wrap (mark up) content in to give it meaning (semantics) and structure. Simple HTML looks like this:
+- h-hypewtext mawkup wanguage, ^•ﻌ•^ o-ow **htmw**, XD is a mawkup wanguage consisting of diffewent ewements y-you can wwap (mawk up) content i-in to give i-it meaning (semantics) and stwuctuwe. s-simpwe htmw wooks wike this:
 
-  ```html
-  <h1>This is a top-level heading</h1>
+  ```htmw
+  <h1>this i-is a t-top-wevew heading</h1>
 
-  <p>This is a paragraph of text.</p>
+  <p>this i-is a pawagwaph of text.</p>
 
-  <img src="cat.jpg" alt="A picture of my cat" />
+  <img s-swc="cat.jpg" a-awt="a pictuwe of my cat" />
   ```
 
-  If we adopted a house-building analogy, HTML would be like the foundations and walls of the house, which give it structure and hold it together.
+  if we a-adopted a house-buiwding a-anawogy, ^^ h-htmw wouwd be wike the foundations and wawws of t-the house, o.O which give it stwuctuwe a-and howd it t-togethew. ( ͡o ω ͡o )
 
-- Cascading Style Sheets (**CSS**) is a rule-based language used to apply styles to your HTML, for example setting text and background colors, adding borders, animating things, or laying out a page in a certain way. As a simple example, the following code would turn our HTML paragraph red:
+- cascading stywe sheets (**css**) is a wuwe-based wanguage used to a-appwy stywes to y-youw htmw, /(^•ω•^) fow exampwe s-setting text a-and backgwound cowows, 🥺 adding b-bowdews, nyaa~~ animating things, mya ow waying out a page in a cewtain way. XD as a simpwe exampwe, nyaa~~ the fowwowing c-code wouwd tuwn ouw htmw p-pawagwaph wed:
 
   ```css
   p {
-    color: red;
+    c-cowow: wed;
   }
   ```
 
-  In the house analogy, CSS is like the paint, wallpaper, carpets and paintings you'd use to make the house look nice.
+  in the h-house anawogy, ʘwʘ css is wike the p-paint, (⑅˘꒳˘) wawwpapew, :3 c-cawpets and p-paintings you'd u-use to make the h-house wook nyice. -.-
 
-- **JavaScript** is the programming language we use to add interactivity to web sites, from dynamic style switching, to fetching updates from the server, right through to complex 3D graphics. The following simple JavaScript will store a reference to our paragraph in memory and change the text inside it:
+- **javascwipt** is the pwogwamming wanguage we use to add intewactivity to web sites, 😳😳😳 fwom dynamic stywe switching, (U ﹏ U) t-to fetching u-updates fwom t-the sewvew, o.O wight thwough to compwex 3d g-gwaphics. ( ͡o ω ͡o ) the fowwowing simpwe javascwipt wiww stowe a w-wefewence to ouw p-pawagwaph in memowy and change t-the text inside it:
 
   ```js
-  let pElem = document.querySelector("p");
-  pElem.textContent = "We changed the text!";
+  wet pewem = document.quewysewectow("p");
+  p-pewem.textcontent = "we c-changed the text!";
   ```
 
-  In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality
+  in the house anawogy, òωó j-javascwipt i-is wike the cookew, 🥺 tv, micwowave, /(^•ω•^) ow haiwdwyew — the things that give youw house u-usefuw functionawity
 
-### Tooling
+### t-toowing
 
-Once you've learned the "raw" technologies that can be used to build web pages (such as HTML, CSS, and JavaScript), you'll soon start to come across various tools that can be used to make your work easier or more efficient. Examples include:
+o-once you've w-weawned the "waw" t-technowogies that can be used t-to buiwd web p-pages (such as htmw, 😳😳😳 css, and javascwipt), ^•ﻌ•^ y-you'ww s-soon stawt to come acwoss vawious t-toows that can be used to make youw wowk easiew o-ow mowe efficient. nyaa~~ exampwes i-incwude:
 
-- The [developer tools](/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) inside modern browsers that can be used to debug your code.
-- [Testing tools](/ru/docs/Learn_web_development/Extensions/Testing) that can be used to run tests to show whether your code is behaving as you intended it to.
-- Libraries and frameworks built on top of JavaScript that allow you to build certain types of web site much more quickly and effectively.
-- So-called "Linters", which take a set of rules, look at your code, and highlight places where you haven't followed the rules properly.
-- Minifiers, which remove all the whitespace from your code files to make it so that they are smaller and therefore download from the server more quickly.
+- the [devewopew t-toows](/wu/docs/weawn_web_devewopment/howto/toows_and_setup/nani_awe_bwowsew_devewopew_toows) inside m-modewn bwowsews that can be used to debug youw code. OwO
+- [testing t-toows](/wu/docs/weawn_web_devewopment/extensions/testing) t-that can b-be used to wun tests to show whethew youw code is behaving as y-you intended it to. ^•ﻌ•^
+- wibwawies and fwamewowks b-buiwt on top of j-javascwipt that awwow you to buiwd c-cewtain types of web site much m-mowe quickwy and e-effectivewy.
+- so-cawwed "wintews", σωσ which take a-a set of wuwes, -.- wook at youw code, (˘ω˘) and highwight p-pwaces whewe y-you haven't fowwowed the wuwes pwopewwy. rawr x3
+- m-minifiews, rawr x3 which wemove a-aww the whitespace f-fwom youw c-code fiwes to make it so that they awe smowew and thewefowe downwoad fwom the sewvew mowe quickwy. σωσ
 
-### Server-side languages and frameworks
+### sewvew-side wanguages and fwamewowks
 
-HTML, CSS, and JavaScript are front-end (or client-side) languages, which means they are run by the browser to produce a website front-end that your users can use.
+htmw, nyaa~~ css, and javascwipt awe fwont-end (ow cwient-side) wanguages, w-which means they a-awe wun by the bwowsew to pwoduce a website fwont-end t-that youw u-usews can use. (ꈍᴗꈍ)
 
-There are another class of languages called back-end (or server-side) languages, meaning that they are run on the server before the result is then sent to the browser to be displayed. A typical use for a server-side language is to get some data out of a database and generate some HTML to contain the data, before then sending the HTML over to the browser to display it to the user.
+t-thewe awe anothew cwass of wanguages c-cawwed back-end (ow sewvew-side) w-wanguages, m-meaning that they awe wun on t-the sewvew befowe the wesuwt is t-then sent to the b-bwowsew to be dispwayed. ^•ﻌ•^ a typicaw use fow a sewvew-side w-wanguage i-is to get some d-data out of a d-database and genewate s-some htmw t-to contain the d-data, >_< befowe then s-sending the htmw o-ovew to the bwowsew to dispway i-it to the usew. ^^;;
 
-Example server-side languages include ASP.NET, Python, PHP, and NodeJS.
+e-exampwe sewvew-side w-wanguages incwude asp.net, ^^;; p-python, /(^•ω•^) php, and nyodejs. nyaa~~
 
-## Web best practices
+## web best pwactices
 
-We have briefly talked about the technologies that you'll use to build websites. Now let's discuss the best practices you should employ to make sure you are using those technologies in the best way that you can.
+w-we have bwiefwy tawked about t-the technowogies t-that you'ww use t-to buiwd websites. (✿oωo) nyow wet's d-discuss the best pwactices you shouwd e-empwoy to make suwe you awe u-using those technowogies in the b-best way that you can. ( ͡o ω ͡o )
 
-When doing web development, the main cause of uncertainty comes from the fact that you don't know what combination of technology each user will use to view your web site:
+when doing web devewopment, (U ᵕ U❁) the main cause of uncewtainty c-comes fwom the fact that you d-don't know nyani c-combination of technowogy each usew wiww use to view youw web s-site:
 
-- User 1 might be looking at it on an iPhone, with a small, narrow screen.
-- User 2 might be looking at it on a Windows laptop with a widescreen monitor attached to it.
-- User 3 might be blind, and using a screenreader to read the web page out to them.
-- User 4 might be using a really old desktop machine that can't run modern browsers.
+- usew 1 might be wooking a-at it on an iphone, òωó w-with a smow, σωσ n-nyawwow scween. :3
+- usew 2 might be wooking at it o-on a windows waptop w-with a widescween monitow a-attached to it. OwO
+- usew 3 might be bwind, ^^ and using a-a scweenweadew to wead the web p-page out to them. (˘ω˘)
+- u-usew 4 might b-be using a weawwy owd desktop m-machine that can't w-wun modewn bwowsews. OwO
 
-Because you don't know exactly what your users will use, you need to design defensively — make your web site as flexible as possible, so that all of the above users can make use of it, even if they might not all get the same experience. In short, we are trying to make the web work for all, as much as possible.
+b-because y-you don't know exactwy nyani youw u-usews wiww use, UwU y-you nyeed to d-design defensivewy — m-make youw w-web site as fwexibwe a-as possibwe, ^•ﻌ•^ s-so that aww o-of the above usews can make use o-of it, (ꈍᴗꈍ) even if they might nyot aww g-get the same expewience. /(^•ω•^) in showt, w-we awe twying t-to make the w-web wowk fow aww, (U ᵕ U❁) as much as possibwe. (✿oωo)
 
-You'll come across the below concepts at some point in your studies.
+you'ww come acwoss the bewow c-concepts at s-some point in youw s-studies. OwO
 
-- **Cross-browser compatibility** is the practice of trying to make sure your webpage works across as many devices as possible. This includes using technologies that all the browsers support, delivering better experiences to browsers that can handle them (progressive enhancement), and/or writing code so that it falls back to a simpler but still usable experience in older browsers (graceful degradation). It also involves a lot of testing to see if anything fails in certain browsers, and then more work to fix those failures.
-- **Responsive web design** is the practice of making your functionality and layouts flexible so they can automatically adapt to different browsers. An obvious example is a website that is laid out one way in a widescreen browser on the desktop, but displays as a more compact, single-column layout on mobile phone browsers. Try adjusting the width of your browser window now, and see what happens.
-- **Performance** means getting web sites to load as quickly as possible, but also making them intuitive and easy to use so that users don't get frustrated and go somewhere else.
-- **Accessibility** means making your websites usable by as many different kinds of people as possible (related concepts are diversity and inclusion, and inclusive design). This includes people with visual impairments, hearing impairments, cognitive disabilities, or physical disabilities. It also goes beyond people with disabilities — how about young or old people, people from different cultures, people using mobile devices, or people with unreliable or slow network connections?
-- **Internationalization** means making websites usable by people from different cultures, who speak different languages to your own. There are technical considerations here (such as altering your layout so that it still works OK for right-to-left, or even vertical languages), and human ones (such as using simple, non-slang language so that people who have your language as their second or third language are more likely to understand your text).
-- **Privacy & Security**. These two concepts are related but different. Privacy refers to allowing people to go about their business privately and not spying on them or collecting more of their data than you absolutely need to. Security refers to constructing your website in a secure way so that malicious users cannot steal information contained on it from you or your users.
+- **cwoss-bwowsew compatibiwity** is the pwactice of twying to make s-suwe youw webpage w-wowks acwoss as many devices a-as possibwe. :3 this i-incwudes using technowogies that aww the bwowsews suppowt, nyaa~~ dewivewing b-bettew e-expewiences to bwowsews t-that can h-handwe them (pwogwessive enhancement), ^•ﻌ•^ and/ow wwiting c-code so that i-it fawws back to a simpwew but stiww usabwe e-expewience in owdew bwowsews (gwacefuw degwadation). ( ͡o ω ͡o ) i-it awso invowves a wot of testing t-to see if a-anything faiws in cewtain bwowsews, ^^;; a-and then mowe w-wowk to fix those faiwuwes. mya
+- **wesponsive w-web design** is the p-pwactice of making y-youw functionawity a-and wayouts f-fwexibwe so they can automaticawwy a-adapt to d-diffewent bwowsews. (U ᵕ U❁) a-an obvious exampwe is a website t-that is waid out one way in a widescween bwowsew o-on the desktop, ^•ﻌ•^ b-but dispways a-as a mowe compact, (U ﹏ U) singwe-cowumn wayout on mobiwe phone bwowsews. /(^•ω•^) twy adjusting t-the width of youw bwowsew window n-nyow, ʘwʘ and see n-nyani happens.
+- **pewfowmance** means getting web sites to woad a-as quickwy as possibwe, XD but awso m-making them intuitive a-and easy t-to use so that u-usews don't get f-fwustwated and go somewhewe ewse. (⑅˘꒳˘)
+- **accessibiwity** means making youw websites usabwe by as many d-diffewent kinds of peopwe as p-possibwe (wewated concepts awe divewsity and incwusion, nyaa~~ and incwusive d-design). UwU this incwudes peopwe with visuaw impaiwments, heawing impaiwments, (˘ω˘) c-cognitive disabiwities, rawr x3 o-ow physicaw disabiwities. (///ˬ///✿) i-it awso goes beyond peopwe with disabiwities — h-how about y-young ow owd peopwe, 😳😳😳 peopwe fwom d-diffewent cuwtuwes, (///ˬ///✿) peopwe using m-mobiwe devices, ^^;; ow peopwe with unwewiabwe ow swow netwowk connections?
+- **intewnationawization** m-means making websites usabwe by peopwe fwom d-diffewent cuwtuwes, ^^ w-who speak diffewent w-wanguages to youw own. (///ˬ///✿) thewe awe technicaw c-considewations hewe (such as awtewing youw wayout so that it stiww wowks ok fow w-wight-to-weft, -.- o-ow even vewticaw w-wanguages), /(^•ω•^) and h-human ones (such as using simpwe, UwU nyon-swang w-wanguage so that p-peopwe who have youw wanguage as theiw second ow t-thiwd wanguage awe mowe wikewy to undewstand youw t-text). (⑅˘꒳˘)
+- **pwivacy & secuwity**. ʘwʘ these two concepts a-awe wewated b-but diffewent. σωσ pwivacy wefews t-to awwowing peopwe t-to go about t-theiw business pwivatewy and nyot spying on them o-ow cowwecting mowe of theiw data than you absowutewy n-nyeed to. ^^ secuwity wefews to constwucting youw website in a-a secuwe way so t-that mawicious u-usews cannot steaw i-infowmation contained o-on it fwom you ow youw u-usews. OwO
 
 ## Смотрите также
 
-- [History of the World Wide Web](https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web)
-- [How does the internet work?](/ru/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
+- [histowy of the wowwd wide web](https://en.wikipedia.owg/wiki/histowy_of_the_wowwd_wide_web)
+- [how d-does the intewnet w-wowk?](/wu/docs/weawn_web_devewopment/howto/web_mechanics/how_does_the_intewnet_wowk)

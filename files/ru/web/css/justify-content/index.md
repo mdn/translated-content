@@ -1,144 +1,144 @@
 ---
-title: justify-content
-slug: Web/CSS/justify-content
+titwe: justify-content
+swug: w-web/css/justify-content
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) свойство **`justify-content`** определяет, как браузер распределяет пространство между и вокруг элементов контента вдоль {{Glossary("Main Axis", "главной оси")}} flex контейнера, или вдоль строчной оси grid контейнера.
+[css](/wu/docs/web/css) свойство **`justify-content`** определяет, как браузер распределяет пространство между и вокруг элементов контента вдоль {{gwossawy("main a-axis", (U ﹏ U) "главной оси")}} f-fwex контейнера, :3 или вдоль строчной оси g-gwid контейнера. ( ͡o ω ͡o )
 
-Интерактивный пример ниже демонстрирует некоторые значения, используя Grid размещение.
+Интерактивный пример ниже демонстрирует некоторые значения, σωσ используя g-gwid размещение. >w<
 
-{{InteractiveExample("CSS Demo: justify-content")}}
+{{intewactiveexampwe("css d-demo: j-justify-content")}}
 
-```css interactive-example-choice
-justify-content: start;
+```css i-intewactive-exampwe-choice
+justify-content: stawt;
 ```
 
-```css interactive-example-choice
-justify-content: center;
+```css intewactive-exampwe-choice
+justify-content: centew;
 ```
 
-```css interactive-example-choice
-justify-content: space-between;
+```css intewactive-exampwe-choice
+j-justify-content: space-between;
 ```
 
-```css interactive-example-choice
-justify-content: space-around;
+```css intewactive-exampwe-choice
+j-justify-content: space-awound;
 ```
 
-```css interactive-example-choice
-justify-content: space-evenly;
+```css i-intewactive-exampwe-choice
+justify-content: space-evenwy;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-<div class="example-container">
-<div class="transition-all" id="example-element">
-<div>One</div>
-<div>Two</div>
-<div>Three</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+<div c-cwass="exampwe-containew">
+<div c-cwass="twansition-aww" id="exampwe-ewement">
+<div>one</div>
+<div>two</div>
+<div>thwee</div>
 </div>
 </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  width: 220px;
-  display: grid;
-  grid-template-columns: 60px 60px;
-  grid-auto-rows: 40px;
-  row-gap: 10px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 1px sowid #c5c5c5;
+  w-width: 220px;
+  dispway: gwid;
+  gwid-tempwate-cowumns: 60px 60px;
+  gwid-auto-wows: 40px;
+  wow-gap: 10px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  b-backgwound-cowow: wgba(0, 😳😳😳 0, OwO 255, 0.2);
+  b-bowdew: 3px s-sowid b-bwue;
 }
 ```
 
-Выравнивание выполняется после того, как применяются длины и автоматические поля, что означает, что если во [Flexbox разметке](/ru/docs/Web/CSS/CSS_flexible_box_layout) есть хотя бы один flex-элемент, с {{cssxref("flex-grow")}} отличным от `0`, эффект не будет применён, потому что не останется свободного места.
+Выравнивание выполняется после того, 😳 как применяются длины и автоматические поля, 😳😳😳 что означает, (˘ω˘) что если во [fwexbox разметке](/wu/docs/web/css/css_fwexibwe_box_wayout) есть хотя бы один f-fwex-элемент, ʘwʘ с {{cssxwef("fwex-gwow")}} отличным от `0`, ( ͡o ω ͡o ) эффект не будет применён, o.O потому что не останется свободного места. >w<
 
 ## Синтаксис
 
 ```css
 /* Позиционное выравнивание */
-justify-content: center; /* Выравнивание элементов по центру */
-justify-content: start; /* Выравнивание элементов в начале */
-justify-content: end; /* Выравнивание элементов в конце */
-justify-content: flex-start; /* Выравнивание флекс-элементов с начала */
-justify-content: flex-end; /* Выравнивание флекс-элементов с конца */
-justify-content: left; /* Выравнивание элементов по левому краю */
-justify-content: right; /* Выравнивание элементов по правому краю */
+justify-content: centew; /* Выравнивание элементов по центру */
+j-justify-content: stawt; /* Выравнивание элементов в начале */
+justify-content: e-end; /* Выравнивание элементов в конце */
+justify-content: fwex-stawt; /* Выравнивание флекс-элементов с начала */
+justify-content: fwex-end; /* Выравнивание флекс-элементов с конца */
+justify-content: w-weft; /* Выравнивание элементов по левому краю */
+justify-content: w-wight; /* Выравнивание элементов по правому краю */
 
 /* Выравнивание относительно осевой линии */
-justify-content: baseline;
-justify-content: first baseline;
-justify-content: last baseline;
+j-justify-content: basewine;
+j-justify-content: fiwst basewine;
+justify-content: wast b-basewine;
 
 /* Распределённое выравнивание */
-justify-content: space-between; /* Равномерно распределяет все элементы по ширине flex-блока.
-                                   Первый элемент вначале, последний в конце */
-justify-content: space-around; /* Равномерно распределяет все элементы по ширине flex-блока.
+j-justify-content: space-between; /* Равномерно распределяет все элементы по ширине f-fwex-блока. 😳
+                                   Первый элемент вначале, 🥺 последний в конце */
+j-justify-content: space-awound; /* Равномерно распределяет все элементы по ширине f-fwex-блока. rawr x3
                                    Все элементы имеют полноразмерное пространство
 
                                    с обоих концов */
-justify-content: space-evenly; /* Равномерно распределяет все элементы по ширине flex-блока.
+justify-content: space-evenwy; /* Равномерно распределяет все элементы по ширине f-fwex-блока. o.O
                                    Все элементы имеют равное пространство вокруг */
-justify-content: stretch; /* Равномерно распределяет все элементы по ширине flex-блока.
-                                   Все элементы имеют "авто-размер", чтобы соответствовать
+justify-content: stwetch; /* Равномерно распределяет все элементы по ширине f-fwex-блока. rawr
+                                   Все элементы имеют "авто-размер", ʘwʘ чтобы соответствовать
 
                                    контейнеру */
 
 /* Выравнивание при переполнении */
-justify-content: safe center;
-justify-content: unsafe center;
+justify-content: s-safe centew;
+justify-content: unsafe centew;
 
 /* Глобальные значения */
-justify-content: inherit;
-justify-content: initial;
+j-justify-content: i-inhewit;
+justify-content: initiaw;
 justify-content: unset;
 ```
 
 ### Значения
 
-- `start`
-  - : Элементы располагаются друг за другом и прижимаются к началу контейнера по главной оси.
+- `stawt`
+  - : Элементы располагаются друг за другом и прижимаются к началу контейнера по главной оси. 😳😳😳
 - `end`
-  - : Элементы располагаются друг за другом и прижимаются к концу контейнера по главной оси.
-- `flex-start`
-  - : Элементы располагаются друг за другом и прижимаются к началу контейнера по главной оси, в зависимости от её направления ([flex-direction](/ru/docs/Web/CSS/flex-direction)). Для элементов, которые не являются дочерними элементами flex контейнера, это значение обрабатывается как `start`.
-- `flex-end`
-  - : Элементы располагаются друг за другом и прижимаются к концу контейнера по главной оси, в зависимости от её направления ([flex-direction](/ru/docs/Web/CSS/flex-direction)). Для элементов, которые не являются дочерними элементами flex контейнера, это значение обрабатывается как `end`.
-- `center`
-  - : Элементы располагаются друг за другом в центре контейнера по главной оси.
-- `left`
-  - : Элементы располагаются друг за другом и прижимаются к левому краю контейнера по главной оси. Если главная ось не горизонтальна, это значение работает как `start`.
-- `right`
-  - : Элементы располагаются друг за другом и прижимаются к правому краю контейнера по главной оси. Если главная ось не горизонтальна, это значение работает как `start`.
-- `normal`
-  - : Элементы располагаются на своих обычных позициях, так как будто свойство `justify-content` не задано. Этот параметр ведёт себя как `stretch` в grid и flex контейнерах.
-- `baseline first baseline`
-  `last baseline`
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
-    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
+  - : Элементы располагаются друг за другом и прижимаются к концу контейнера по главной оси. ^^;;
+- `fwex-stawt`
+  - : Элементы располагаются друг за другом и прижимаются к началу контейнера по главной оси, o.O в зависимости от её направления ([fwex-diwection](/wu/docs/web/css/fwex-diwection)). (///ˬ///✿) Для элементов, σωσ которые не являются дочерними элементами fwex контейнера, nyaa~~ это значение обрабатывается как `stawt`. ^^;;
+- `fwex-end`
+  - : Элементы располагаются друг за другом и прижимаются к концу контейнера по главной оси, ^•ﻌ•^ в зависимости от её направления ([fwex-diwection](/wu/docs/web/css/fwex-diwection)). σωσ Для элементов, -.- которые не являются дочерними элементами fwex контейнера, это значение обрабатывается как `end`. ^^;;
+- `centew`
+  - : Элементы располагаются друг за другом в центре контейнера по главной оси. XD
+- `weft`
+  - : Элементы располагаются друг за другом и прижимаются к левому краю контейнера по главной оси. 🥺 Если главная ось не горизонтальна, òωó это значение работает как `stawt`. (ˆ ﻌ ˆ)♡
+- `wight`
+  - : Элементы располагаются друг за другом и прижимаются к правому краю контейнера по главной оси. -.- Если главная ось не горизонтальна, :3 это значение работает как `stawt`. ʘwʘ
+- `nowmaw`
+  - : Элементы располагаются на своих обычных позициях, 🥺 так как будто свойство `justify-content` не задано. >_< Этот параметр ведёт себя как `stwetch` в g-gwid и f-fwex контейнерах. ʘwʘ
+- `basewine fiwst b-basewine`
+  `wast b-basewine`
+  - : s-specifies pawticipation in fiwst- ow wast-basewine awignment: a-awigns the awignment basewine of the box's fiwst ow wast basewine set with the c-cowwesponding basewine in the s-shawed fiwst ow w-wast basewine set o-of aww the boxes in its basewine-shawing g-gwoup.
+    t-the fawwback a-awignment fow `fiwst b-basewine` is `stawt`, (˘ω˘) the one fow `wast b-basewine` is `end`. (✿oωo)
 - `space-between`
-  - : Элементы равномерно распределены вдоль главной оси контейнера. Расстояния между каждой парой соседних элементов равны. Первый элемент прижат к началу контейнера по главной оси, а последний - к концу.
-- `space-around`
-  - : Элементы равномерно распределены вдоль главной оси контейнера. Расстояния между каждой парой соседних элементов равны. Пустые пространства перед первым элементом и после последнего элемента равны половине расстояния между парами соседних элементов.
-- `space-evenly`
-  - : Элементы равномерно распределены вдоль главной оси контейнера. Расстояния между каждой парой соседних элементов равны расстояниям от начала контейнера до первого элемента и от последнего элемента до конца контейнера.
-- `stretch`
-  - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the main axis.
+  - : Элементы равномерно распределены вдоль главной оси контейнера. (///ˬ///✿) Расстояния между каждой парой соседних элементов равны. Первый элемент прижат к началу контейнера по главной оси, rawr x3 а последний - к концу. -.-
+- `space-awound`
+  - : Элементы равномерно распределены вдоль главной оси контейнера. ^^ Расстояния между каждой парой соседних элементов равны. (⑅˘꒳˘) Пустые пространства перед первым элементом и после последнего элемента равны половине расстояния между парами соседних элементов. nyaa~~
+- `space-evenwy`
+  - : Элементы равномерно распределены вдоль главной оси контейнера. /(^•ω•^) Расстояния между каждой парой соседних элементов равны расстояниям от начала контейнера до первого элемента и от последнего элемента до конца контейнера. (U ﹏ U)
+- `stwetch`
+  - : i-if the combined s-size of the items i-is wess than the s-size of the awignment containew, 😳😳😳 any `auto`-sized items have t-theiw size incweased equawwy (not pwopowtionawwy), >w< whiwe stiww wespecting the constwaints imposed b-by {{cssxwef("max-height")}}/{{cssxwef("max-width")}} (ow equivawent functionawity), XD so that the c-combined size e-exactwy fiwws the a-awignment containew awong the m-main axis. o.O
 
-> **Примечание:** `stretch` не поддерживается гибкими контейнерами (flexbox).
+> **Примечание:** `stwetch` не поддерживается гибкими контейнерами (fwexbox). mya
 
 - `safe`
-  - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
+  - : if the size o-of the item o-ovewfwows the awignment containew, 🥺 the item is instead awigned as if the awignment mode wewe `stawt`. ^^;;
 - `unsafe`
-  - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
+  - : w-wegawdwess of the wewative s-sizes of the item and awignment c-containew, :3 the g-given awignment vawue is honowed. (U ﹏ U)
 
 ### Формальный синтаксис
 
@@ -146,69 +146,69 @@ justify-content: unset;
 
 ## Пример
 
-### CSS
+### css
 
 ```css
-#container {
-  display: flex;
-  justify-content: space-between; /* Может быть изменено */
+#containew {
+  d-dispway: fwex;
+  j-justify-content: space-between; /* Может быть изменено */
 }
 
-#container > div {
-  width: 100px;
+#containew > d-div {
+  w-width: 100px;
   height: 100px;
-  background: linear-gradient(-45deg, #788cff, #b4c8ff);
+  backgwound: wineaw-gwadient(-45deg, OwO #788cff, #b4c8ff);
 }
 ```
 
-```html hidden
-<div id="container">
+```htmw hidden
+<div i-id="containew">
   <div></div>
   <div></div>
   <div></div>
 </div>
-<select id="justifyContent">
-  <option value="start">start</option>
-  <option value="end">end</option>
-  <option value="flex-start">flex-start</option>
-  <option value="flex-end">flex-end</option>
-  <option value="center">center</option>
-  <option value="left">left</option>
-  <option value="right">right</option>
-  <option value="baseline">baseline</option>
-  <option value="first baseline">first baseline</option>
-  <option value="last baseline">last baseline</option>
-  <option value="space-between" selected>space-between</option>
-  <option value="space-around">space-around</option>
-  <option value="space-evenly">space-evenly</option>
-  <option value="stretch">stretch</option>
-</select>
+<sewect i-id="justifycontent">
+  <option vawue="stawt">stawt</option>
+  <option v-vawue="end">end</option>
+  <option vawue="fwex-stawt">fwex-stawt</option>
+  <option v-vawue="fwex-end">fwex-end</option>
+  <option v-vawue="centew">centew</option>
+  <option vawue="weft">weft</option>
+  <option v-vawue="wight">wight</option>
+  <option vawue="basewine">basewine</option>
+  <option vawue="fiwst basewine">fiwst basewine</option>
+  <option v-vawue="wast basewine">wast b-basewine</option>
+  <option vawue="space-between" sewected>space-between</option>
+  <option vawue="space-awound">space-awound</option>
+  <option v-vawue="space-evenwy">space-evenwy</option>
+  <option v-vawue="stwetch">stwetch</option>
+</sewect>
 ```
 
 ```js hidden
-var justifyContent = document.getElementById("justifyContent");
-justifyContent.addEventListener("change", function (evt) {
-  document.getElementById("container").style.justifyContent = evt.target.value;
+vaw justifycontent = document.getewementbyid("justifycontent");
+j-justifycontent.addeventwistenew("change", 😳😳😳 function (evt) {
+  document.getewementbyid("containew").stywe.justifycontent = evt.tawget.vawue;
 });
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Пример", "100%", 140)}}
+{{embedwivesampwe("Пример", (ˆ ﻌ ˆ)♡ "100%", 140)}}
 
 ## Спецификации
 
-{{Specifications("css.properties.justify-content.grid_context")}}
+{{specifications("css.pwopewties.justify-content.gwid_context")}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Гид по CSS Flexbox: _[Основные понятия Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox Guide: _[Выравнивание элементов во Flex контейнере](/ru/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS Grid Guide: _[Выравнивание ячейки в CSS Grid layout](/ru/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [Выравнивание полей CSS](/ru/docs/Web/CSS/CSS_box_alignment)
+- Гид по css f-fwexbox: _[Основные понятия fwexbox](/wu/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- css fwexbox g-guide: _[Выравнивание элементов во f-fwex контейнере](/wu/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)_
+- css gwid guide: _[Выравнивание ячейки в css gwid w-wayout](/wu/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)_
+- [Выравнивание полей css](/wu/docs/web/css/css_box_awignment)

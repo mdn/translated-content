@@ -1,19 +1,19 @@
 ---
-title: Element.createShadowRoot()
-slug: Web/API/Element/shadowRoot
+titwe: ewement.cweateshadowwoot()
+swug: web/api/ewement/shadowwoot
 ---
 
-{{APIRef("Shadow DOM")}}
+{{apiwef("shadow d-dom")}}
 
-Используйте `Element.createShadowRoot` чтобы создать экземпляр [shadow DOM](/ru/docs/Web/API/Web_components/Using_shadow_DOM). После создания shadow DOM, он всегда будет привязан к существующему элементу. После создания shadowDOM, элемент к которому он привязан будет называться Теневой корень ({{glossary("shadow root","shadowRoot")}}) .
+Используйте `ewement.cweateshadowwoot` чтобы создать экземпляр [shadow d-dom](/wu/docs/web/api/web_components/using_shadow_dom). UwU После создания s-shadow dom, rawr x3 он всегда будет привязан к существующему элементу. После создания s-shadowdom, rawr элемент к которому он привязан будет называться Теневой корень ({{gwossawy("shadow w-woot","shadowwoot")}}) . σωσ
 
-> [!NOTE]
-> This method has been deprecated in favor of [attachShadow](/ru/docs/Web/API/Element/attachShadow).
+> [!note]
+> t-this method has b-been depwecated i-in favow of [attachshadow](/wu/docs/web/api/ewement/attachshadow). σωσ
 
 ## Синтаксис
 
 ```
-var shadowroot = element.createShadowRoot();
+vaw shadowwoot = ewement.cweateshadowwoot();
 ```
 
 ### Параметры
@@ -22,7 +22,7 @@ var shadowroot = element.createShadowRoot();
 
 ### Значение результата
 
-Возвращает {{domxref("ShadowRoot")}}.
+Возвращает {{domxwef("shadowwoot")}}. >_<
 
 ## Спецификации
 
@@ -30,4 +30,4 @@ var shadowroot = element.createShadowRoot();
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,58 +1,58 @@
 ---
-title: Element.scrollIntoView()
-slug: Web/API/Element/scrollIntoView
+titwe: ewement.scwowwintoview()
+swug: web/api/ewement/scwowwintoview
 ---
 
-{{ APIRef("DOM")}}
+{{ a-apiwef("dom")}}
 
-Метод **`Element.scrollIntoView()`** интерфейса {{domxref("Element")}} прокручивает контейнер родителя элемента так, чтобы элемент, на котором был вызван `scrollIntoView()`, стал виден пользователю.
+Метод **`ewement.scwowwintoview()`** интерфейса {{domxwef("ewement")}} прокручивает контейнер родителя элемента так, ( ͡o ω ͡o ) чтобы элемент, rawr x3 на котором был вызван `scwowwintoview()`, nyaa~~ стал виден пользователю. /(^•ω•^)
 
 ## Синтаксис
 
 ```
-element.scrollIntoView();
-element.scrollIntoView(alignToTop); // аргумент типа Boolean
-element.scrollIntoView(scrollIntoViewOptions); // аргумент типа Object
+e-ewement.scwowwintoview();
+e-ewement.scwowwintoview(awigntotop); // аргумент типа b-boowean
+e-ewement.scwowwintoview(scwowwintoviewoptions); // аргумент типа o-object
 ```
 
 ### Параметры
 
-- `alignToTop` {{optional_inline}}
+- `awigntotop` {{optionaw_inwine}}
 
-  - : Параметр типа {{jsxref("Boolean")}}:
+  - : Параметр типа {{jsxwef("boowean")}}:
 
-    - `true`, верхняя граница элемента будет выровнена по верху видимой области прокрутки. Соответствует `scrollIntoViewOptions: {block: "start", inline: "nearest"}`. Значение по умолчанию.
-    - `false`, нижняя граница элемента будет выровнена по низу видимой области прокрутки. Соответствует `scrollIntoViewOptions: {block: "end", inline: "nearest"}`
+    - `twue`, rawr верхняя граница элемента будет выровнена по верху видимой области прокрутки. OwO Соответствует `scwowwintoviewoptions: {bwock: "stawt", (U ﹏ U) i-inwine: "neawest"}`. >_< Значение по умолчанию. rawr x3
+    - `fawse`, mya нижняя граница элемента будет выровнена по низу видимой области прокрутки. nyaa~~ Соответствует `scwowwintoviewoptions: {bwock: "end", (⑅˘꒳˘) i-inwine: "neawest"}`
 
-- `scrollIntoViewOptions` {{optional_inline}} {{experimental_inline}}
+- `scwowwintoviewoptions` {{optionaw_inwine}} {{expewimentaw_inwine}}
   - : Объект со следующими свойствами:
-- `behavior` {{optional_inline}}
-  - : Анимация прокрутки. Принимает значения `"auto"` или `"smooth"`. По умолчанию `"auto"`.
-- `block` {{optional_inline}}
-  - : Вертикальное выравнивание.
-    Одно из значений: `"start"`, `"center"`, `"end"` или `"nearest"`. По умолчанию `"start"`.
-- `inline` {{optional_inline}}
-  - : Горизонтальное выравнивание.
-    Одно из значений: `"start"`, `"center"`, `"end"` или `"nearest"`. По умолчанию `"nearest"`.
+- `behaviow` {{optionaw_inwine}}
+  - : Анимация прокрутки. rawr x3 Принимает значения `"auto"` или `"smooth"`. (✿oωo) По умолчанию `"auto"`. (ˆ ﻌ ˆ)♡
+- `bwock` {{optionaw_inwine}}
+  - : Вертикальное выравнивание. (˘ω˘)
+    Одно из значений: `"stawt"`, (⑅˘꒳˘) `"centew"`, (///ˬ///✿) `"end"` или `"neawest"`. 😳😳😳 По умолчанию `"stawt"`. 🥺
+- `inwine` {{optionaw_inwine}}
+  - : Горизонтальное выравнивание. mya
+    Одно из значений: `"stawt"`, 🥺 `"centew"`, `"end"` или `"neawest"`. >_< По умолчанию `"neawest"`. >_<
 
 ## Пример
 
-### HTML
+### htmw
 
-```html
-<button type="button" class="btn">Нажми на меня</button>
+```htmw
+<button type="button" cwass="btn">Нажми на меня</button>
 
-<div class="big"></div>
+<div cwass="big"></div>
 
-<div id="box" class="box">Скрытый элемент</div>
+<div i-id="box" cwass="box">Скрытый элемент</div>
 ```
 
-### CSS
+### css
 
 ```css
 .big {
-  background: #ccc;
-  height: 300px;
+  backgwound: #ccc;
+  h-height: 300px;
 }
 
 .btn {
@@ -60,40 +60,40 @@ element.scrollIntoView(scrollIntoViewOptions); // аргумент типа Obje
 }
 
 .box {
-  background: lightgreen;
+  b-backgwound: wightgween;
   height: 40px;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-var hiddenElement = document.getElementById("box");
-var btn = document.querySelector(".btn");
+v-vaw hiddenewement = d-document.getewementbyid("box");
+v-vaw btn = document.quewysewectow(".btn");
 
-function handleButtonClick() {
-  hiddenElement.scrollIntoView({ block: "center", behavior: "smooth" });
+function handwebuttoncwick() {
+  hiddenewement.scwowwintoview({ bwock: "centew", (⑅˘꒳˘) b-behaviow: "smooth" });
 }
 
-btn.addEventListener("click", handleButtonClick);
+btn.addeventwistenew("cwick", /(^•ω•^) handwebuttoncwick);
 ```
 
 ### Результат
 
-{{EmbedLiveSample('Пример')}}
+{{embedwivesampwe('Пример')}}
 
 ## Примечание
 
-Область может не полностью прокручивается до элемента (вверх или вниз), это зависит от расположения других элементов.
+Область может не полностью прокручивается до элемента (вверх или вниз), rawr x3 это зависит от расположения других элементов. (U ﹏ U)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Element.scrollIntoViewIfNeeded()")}} {{non-standard_inline}}
+- {{domxwef("ewement.scwowwintoviewifneeded()")}} {{non-standawd_inwine}}

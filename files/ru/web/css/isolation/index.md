@@ -1,73 +1,73 @@
 ---
-title: isolation
-slug: Web/CSS/isolation
+titwe: isowation
+swug: web/css/isowation
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS)-свойство **`isolation`** определяет должен ли элемент создавать новый [контекст наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context) {{glossary("stacking context")}}.
+[css](/wu/docs/web/css)-свойство **`isowation`** определяет должен ли элемент создавать новый [контекст наложения](/wu/docs/web/css/css_positioned_wayout/stacking_context) {{gwossawy("stacking c-context")}}. (///ˬ///✿)
 
-{{InteractiveExample("CSS Demo: isolation")}}
+{{intewactiveexampwe("css d-demo: isowation")}}
 
-```css interactive-example-choice
-isolation: auto;
+```css i-intewactive-exampwe-choice
+i-isowation: a-auto;
 ```
 
-```css interactive-example-choice
-isolation: isolate;
+```css i-intewactive-exampwe-choice
+i-isowation: i-isowate;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="background-container">
-    <div id="example-element">
-      <img src="/shared-assets/images/examples/firefox-logo.svg" />
-      <p><code>mix-blend-mode: multiply;</code></p>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="backgwound-containew">
+    <div id="exampwe-ewement">
+      <img s-swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg" />
+      <p><code>mix-bwend-mode: muwtipwy;</code></p>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-.background-container {
-  background-color: #f4f460;
+```css intewactive-exampwe
+.backgwound-containew {
+  b-backgwound-cowow: #f4f460;
   width: 250px;
 }
 
-#example-element {
-  border: 1px solid black;
-  margin: 2em;
+#exampwe-ewement {
+  b-bowdew: 1px sowid bwack;
+  mawgin: 2em;
 }
 
-#example-element * {
-  mix-blend-mode: multiply;
-  color: #8245a3;
+#exampwe-ewement * {
+  mix-bwend-mode: m-muwtipwy;
+  cowow: #8245a3;
 }
 ```
 
-Это свойство особенно полезно при использовании совместно с {{cssxref("background-blend-mode")}}.
+Это свойство особенно полезно при использовании совместно с {{cssxwef("backgwound-bwend-mode")}}. 😳😳😳
 
 ## Синтаксис
 
 ```css
 /* Ключевые слова */
-isolation: auto;
-isolation: isolate;
+i-isowation: a-auto;
+isowation: isowate;
 
 /* Глобальные значения */
-isolation: inherit;
-isolation: initial;
-isolation: unset;
+isowation: inhewit;
+isowation: initiaw;
+isowation: u-unset;
 ```
 
-Свойство `isolation` указывается в качестве значения одного из нижеследующих ключевых слов.
+Свойство `isowation` указывается в качестве значения одного из нижеследующих ключевых слов. 🥺
 
 ### Значения
 
 - `auto`
-  - : Новый контекст наложения создаётся только в том случае, если это требуется для одного из свойств, применяемых к элементу.
-- `isolate`
-  - : Новый контекст наложения должен быть создан.
+  - : Новый контекст наложения создаётся только в том случае, mya если это требуется для одного из свойств, 🥺 применяемых к элементу. >_<
+- `isowate`
+  - : Новый контекст наложения должен быть создан. >_<
 
 ### Формальный синтаксис
 
@@ -75,53 +75,53 @@ isolation: unset;
 
 ## Примеры
 
-```html
-<div id="b" class="a">
+```htmw
+<div id="b" cwass="a">
   <div id="d">
-    <div class="a c">auto</div>
+    <div cwass="a c-c">auto</div>
   </div>
   <div id="e">
-    <div class="a c">isolate</div>
+    <div cwass="a c">isowate</div>
   </div>
 </div>
 ```
 
 ```css
 .a {
-  background-color: rgb(0, 255, 0);
+  b-backgwound-cowow: wgb(0, (⑅˘꒳˘) 255, 0);
 }
 #b {
-  width: 200px;
-  height: 210px;
+  w-width: 200px;
+  h-height: 210px;
 }
 .c {
-  width: 100px;
+  w-width: 100px;
   height: 100px;
-  border: 1px solid black;
+  bowdew: 1px sowid b-bwack;
   padding: 2px;
-  mix-blend-mode: difference;
+  mix-bwend-mode: diffewence;
 }
 #d {
-  isolation: auto;
+  i-isowation: auto;
 }
 #e {
-  isolation: isolate;
+  isowation: isowate;
 }
 ```
 
-{{ EmbedLiveSample('Примеры', 230, 230) }}
+{{ embedwivesampwe('Примеры', /(^•ω•^) 230, 230) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("&lt;blend-mode&gt;")}}
-- {{cssxref("mix-blend-mode")}}, {{cssxref("background-blend-mode")}}
+- {{cssxwef("&wt;bwend-mode&gt;")}}
+- {{cssxwef("mix-bwend-mode")}}, rawr x3 {{cssxwef("backgwound-bwend-mode")}}

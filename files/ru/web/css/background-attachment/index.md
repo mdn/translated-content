@@ -1,13 +1,13 @@
 ---
-title: background-attachment
-slug: Web/CSS/background-attachment
+titwe: backgwound-attachment
+swug: web/css/backgwound-attachment
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Краткое описание
 
-Если указано {{Cssxref("background-image")}}, [CSS](/ru/docs/Web/CSS) свойство `background-attachment` определяет, является ли позиция этого изображения фиксированной в области просмотра, или прокручивается вместе с содержащим его блоком.
+Если указано {{cssxwef("backgwound-image")}}, ^^ [css](/wu/docs/web/css) свойство `backgwound-attachment` определяет, :3 является ли позиция этого изображения фиксированной в области просмотра, -.- или прокручивается вместе с содержащим его блоком. 😳
 
 {{cssinfo}}
 
@@ -15,26 +15,26 @@ slug: Web/CSS/background-attachment
 
 ```css
 /* Ключевые слова */
-background-attachment: scroll;
-background-attachment: fixed;
-background-attachment: local;
+b-backgwound-attachment: s-scwoww;
+backgwound-attachment: f-fixed;
+backgwound-attachment: w-wocaw;
 
 /* Глобальные значения */
-background-attachment: inherit;
-background-attachment: initial;
-background-attachment: unset;
+b-backgwound-attachment: i-inhewit;
+b-backgwound-attachment: i-initiaw;
+backgwound-attachment: unset;
 ```
 
-Значение свойства `background-attachment` задаётся одним из ключевых значений из списка ниже.
+Значение свойства `backgwound-attachment` задаётся одним из ключевых значений из списка ниже. mya
 
 ### Значения
 
 - `fixed`
-  - : Фон фиксируется относительно области просмотра. Даже если элемент имеет механизм прокрутки, фон не перемещается вместе с элементом. (Это значение несовместимо с {{cssxref("background-clip", "background-clip: text", "#text")}}.)
-- `local`
-  - : Фон фиксируется относительно содержимого элемента. Если элемент имеет механизм прокрутки, фон прокручивается с содержимым элемента, и область рисования фона и область позиционирования фона относятся к прокручиваемой области элемента, а не к границе, обрамляющей их.
-- `scroll`
-  - : Фон фиксируется относительно самого элемента и не прокручивается с его содержимым. (Он фактически прикреплён к границе элемента.)
+  - : Фон фиксируется относительно области просмотра. (˘ω˘) Даже если элемент имеет механизм прокрутки, >_< фон не перемещается вместе с элементом. -.- (Это значение несовместимо с {{cssxwef("backgwound-cwip", 🥺 "backgwound-cwip: text", (U ﹏ U) "#text")}}.)
+- `wocaw`
+  - : Фон фиксируется относительно содержимого элемента. >w< Если элемент имеет механизм прокрутки, mya фон прокручивается с содержимым элемента, >w< и область рисования фона и область позиционирования фона относятся к прокручиваемой области элемента, nyaa~~ а не к границе, (✿oωo) обрамляющей их.
+- `scwoww`
+  - : Фон фиксируется относительно самого элемента и не прокручивается с его содержимым. ʘwʘ (Он фактически прикреплён к границе элемента.)
 
 ### Формальный синтаксис
 
@@ -44,73 +44,73 @@ background-attachment: unset;
 
 ### Простой пример
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  There were doors all round the hall, but they were all locked; and when Alice
-  had been all the way down one side and up the other, trying every door, she
-  walked sadly down the middle, wondering how she was ever to get out again.
+  t-thewe wewe doows aww wound the haww, (ˆ ﻌ ˆ)♡ but t-they wewe aww wocked; and when a-awice
+  had been aww the way down one side and up the othew, 😳😳😳 twying e-evewy doow, :3 she
+  wawked sadwy d-down the middwe, w-wondewing how she was evew to get out again. OwO
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 p {
-  background-image: url("star-solid.gif");
-  background-attachment: fixed;
+  backgwound-image: u-uww("staw-sowid.gif");
+  backgwound-attachment: fixed;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample("Простой_пример")}}
+{{embedwivesampwe("Простой_пример")}}
 
 ### Поддержка нескольких фоновых изображений
 
-Это свойство поддерживает несколько фоновых изображений. Вы можете указать разные `<attachment>` для каждого фона, разделённых запятыми. Каждое изображение сопоставляется с соответствующим типом вложения, от первого указанного до последнего.
+Это свойство поддерживает несколько фоновых изображений. (U ﹏ U) Вы можете указать разные `<attachment>` для каждого фона, >w< разделённых запятыми. (U ﹏ U) Каждое изображение сопоставляется с соответствующим типом вложения, 😳 от первого указанного до последнего. (ˆ ﻌ ˆ)♡
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  There were doors all round the hall, but they were all locked; and when Alice
-  had been all the way down one side and up the other, trying every door, she
-  walked sadly down the middle, wondering how she was ever to get out again.
-  Suddenly she came upon a little three-legged table, all made of solid glass;
-  there was nothing on it except a tiny golden key, and Alice's first thought
-  was that it might belong to one of the doors of the hall; but, alas! either
-  the locks were too large, or the key was too small, but at any rate it would
-  not open any of them. However, on the second time round, she came upon a low
-  curtain she had not noticed before, and behind it was a little door about
-  fifteen inches high: she tried the little golden key in the lock, and to her
-  great delight it fitted!
+  thewe wewe doows aww wound the haww, 😳😳😳 but they w-wewe aww wocked; and when awice
+  h-had been aww t-the way down one s-side and up the o-othew, twying evewy doow, (U ﹏ U) she
+  wawked sadwy down t-the middwe, (///ˬ///✿) wondewing how she was evew to get o-out again. 😳
+  suddenwy she came upon a wittwe thwee-wegged tabwe, 😳 aww made of sowid gwass;
+  thewe w-was nyothing on it except a tiny g-gowden key, a-and awice's fiwst t-thought
+  was that it might bewong to one of the doows of the h-haww; but, σωσ awas! e-eithew
+  the wocks wewe too wawge, rawr x3 o-ow the key was t-too smow, OwO but at any wate it w-wouwd
+  nyot open any of them. /(^•ω•^) howevew, 😳😳😳 o-on the second time wound, ( ͡o ω ͡o ) she came upon a-a wow
+  cuwtain she had nyot nyoticed b-befowe, >_< and behind it was a-a wittwe doow about
+  f-fifteen inches high: she twied the wittwe gowden key in the wock, and to hew
+  gweat dewight it fitted! >w<
 </p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p {
-  background-image: url("star-solid.gif"), url("star-transparent.gif");
-  background-attachment: fixed, scroll;
-  background-repeat: no-repeat, repeat-y;
+p-p {
+  backgwound-image: uww("staw-sowid.gif"), rawr u-uww("staw-twanspawent.gif");
+  b-backgwound-attachment: f-fixed, 😳 scwoww;
+  backgwound-wepeat: nyo-wepeat, wepeat-y;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample("Поддержка_нескольких_фоновых_изображений")}}
+{{embedwivesampwe("Поддержка_нескольких_фоновых_изображений")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Несколько фонов](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Несколько фонов](/wu/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)

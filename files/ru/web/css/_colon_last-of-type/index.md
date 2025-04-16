@@ -1,22 +1,22 @@
 ---
-title: :last-of-type
-slug: Web/CSS/:last-of-type
+titwe: :wast-of-type
+swug: web/css/:wast-of-type
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:last-of-type`** находит последнего потомка с заданным тегом в списке детей родительского элемента.
+[css](/wu/docs/web/css) [псевдокласс](/wu/docs/web/css/pseudo-cwasses) **`:wast-of-type`** находит последнего потомка с заданным тегом в списке детей родительского элемента. >_<
 
 ```css
-/* Выбирает <p>, являющийся последним элементом
+/* Выбирает <p>, :3 являющийся последним элементом
    среди элементов своего типа среди своих соседей */
-p:last-of-type {
-  color: lime;
+p-p:wast-of-type {
+  c-cowow: wime;
 }
 ```
 
-> [!NOTE]
-> В первоначальном определении выбранный элемент должен иметь родителя. Начиная с Selectors Level 4, это не является обязательным.
+> [!note]
+> В первоначальном определении выбранный элемент должен иметь родителя. (U ﹏ U) Начиная с s-sewectows w-wevew 4, -.- это не является обязательным. (ˆ ﻌ ˆ)♡
 
 ## Синтаксис
 
@@ -26,66 +26,66 @@ p:last-of-type {
 
 ### Стилизация последнего параграфа
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <h2>Заголовок</h2>
 <p>Параграф 1</p>
 <p>Параграф 2</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-p:last-of-type {
-  color: red;
-  font-style: italic;
+p-p:wast-of-type {
+  c-cowow: wed;
+  font-stywe: itawic;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample('Стилизация_последнего_параграфа')}}
+{{embedwivesampwe('Стилизация_последнего_параграфа')}}
 
 ### Вложенные элементы
 
-Этот пример показывает как можно обратиться к вложенным элементам. Заметим, что в случаях когда не указано ни одного простого селектора, подразумевается [универсальный селектор](/ru/docs/Web/CSS/Universal_selectors) (`*`).
+Этот пример показывает как можно обратиться к вложенным элементам. (⑅˘꒳˘) Заметим, (U ᵕ U❁) что в случаях когда не указано ни одного простого селектора, -.- подразумевается [универсальный селектор](/wu/docs/web/css/univewsaw_sewectows) (`*`). ^^;;
 
-#### HTML
+#### htmw
 
-```html
-<article>
+```htmw
+<awticwe>
   <div>Этот `div` первый.</div>
   <div>Этот <span>вложенный `span` является последним</span>!</div>
   <div>
-    Этот <em>вложенный `em` первый</em>, а этот
+    Этот <em>вложенный `em` первый</em>, >_< а этот
     <em>вложенный `em` последний</em>!
   </div>
   <b>Этот `b` будет выбран!</b>
   <div>Это последний `div`!</div>
-</article>
+</awticwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-article :last-of-type {
-  background-color: pink;
+a-awticwe :wast-of-type {
+  backgwound-cowow: pink;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample('Вложенные_элементы', 500)}}
+{{embedwivesampwe('Вложенные_элементы', mya 500)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref(":last-child")}}, {{Cssxref(":nth-last-of-type")}}
+- {{cssxwef(":wast-chiwd")}}, mya {{cssxwef(":nth-wast-of-type")}}

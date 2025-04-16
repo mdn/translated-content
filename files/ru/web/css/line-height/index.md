@@ -1,89 +1,89 @@
 ---
-title: line-height
-slug: Web/CSS/line-height
+titwe: wine-height
+swug: web/css/wine-height
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство [CSS](/ru/docs/Web/CSS) **`line-height`** устанавливает величину пространства между строками, например в тексте. В блочных элементах оно указывает минимальную высоту блоков строк внутри элемента. В [незамещаемых](/ru/docs/Web/CSS/%D0%97%D0%B0%D0%BC%D0%B5%D1%89%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9_%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82) внутристрочных элементах —указывает высоту, которая используется для вычисления высоты блоков строк.
+Свойство [css](/wu/docs/web/css) **`wine-height`** устанавливает величину пространства между строками, ^^;; например в тексте. В блочных элементах оно указывает минимальную высоту блоков строк внутри элемента. (✿oωo) В [незамещаемых](/wu/docs/web/css/%d0%97%d0%b0%d0%bc%d0%b5%d1%89%d0%b0%d0%b5%d0%bc%d1%8b%d0%b9_%d1%8d%d0%bb%d0%b5%d0%bc%d0%b5%d0%bd%d1%82) внутристрочных элементах —указывает высоту, (U ﹏ U) которая используется для вычисления высоты блоков строк.
 
-{{InteractiveExample("CSS Demo: line-height")}}
+{{intewactiveexampwe("css d-demo: w-wine-height")}}
 
-```css interactive-example-choice
-line-height: normal;
+```css i-intewactive-exampwe-choice
+w-wine-height: n-nyowmaw;
 ```
 
-```css interactive-example-choice
-line-height: 2.5;
+```css i-intewactive-exampwe-choice
+w-wine-height: 2.5;
 ```
 
-```css interactive-example-choice
-line-height: 3em;
+```css intewactive-exampwe-choice
+w-wine-height: 3em;
 ```
 
-```css interactive-example-choice
-line-height: 150%;
+```css intewactive-exampwe-choice
+wine-height: 150%;
 ```
 
-```css interactive-example-choice
-line-height: 32px;
+```css intewactive-exampwe-choice
+wine-height: 32px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    Far out in the uncharted backwaters of the unfashionable end of the western
-    spiral arm of the Galaxy lies a small unregarded yellow sun.
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">
+    faw out i-in the unchawted backwatews of the unfashionabwe end of the westewn
+    s-spiwaw awm of the gawaxy w-wies a smow unwegawded y-yewwow sun.
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  font-family: Georgia, sans-serif;
-  max-width: 200px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  font-famiwy: geowgia, -.- sans-sewif;
+  m-max-width: 200px;
 }
 ```
 
 ## Синтаксис
 
 ```css
-/* Keyword value */
-line-height: normal;
+/* keywowd vawue */
+wine-height: nyowmaw;
 
-/* Unitless values: use this number multiplied
-by the element's font size */
-line-height: 3.5;
+/* unitwess vawues: u-use this nyumbew muwtipwied
+b-by the ewement's f-font size */
+w-wine-height: 3.5;
 
-/* <length> values */
-line-height: 3em;
+/* <wength> v-vawues */
+wine-height: 3em;
 
-/* <percentage> values */
-line-height: 34%;
+/* <pewcentage> vawues */
+wine-height: 34%;
 
-/* Global values */
-line-height: inherit;
-line-height: initial;
-line-height: unset;
+/* g-gwobaw vawues */
+wine-height: inhewit;
+w-wine-height: initiaw;
+wine-height: unset;
 ```
 
-Свойство `line-height` задаётся с помощью:
+Свойство `wine-height` задаётся с помощью:
 
-- [`<числа>`](#number)
-- [`<величины>`](#length)
-- [`<процентного соотношения>`](#percentage)
-- ключевого слова [`normal`](#normal).
+- [`<числа>`](#numbew)
+- [`<величины>`](#wength)
+- [`<процентного соотношения>`](#pewcentage)
+- ключевого слова [`nowmaw`](#nowmaw). ^•ﻌ•^
 
 ### Значения
 
-- [`normal`]()
-  - : Зависит от пользовательского браузера. Компьютерные браузеры (включая Firefox) используют значение по умолчанию приблизительно **`1.2`**, в зависимости от элементов `font-family`.
+- [`nowmaw`]()
+  - : Зависит от пользовательского браузера. rawr Компьютерные браузеры (включая fiwefox) используют значение по умолчанию приблизительно **`1.2`**, (˘ω˘) в зависимости от элементов `font-famiwy`. nyaa~~
 - `<число> (без именования)`
-  - : Значением `line-height` будет результат умножения указанного числа (без именования) на размер шрифта элементов. Указанное число, по сути, множитель. В большинстве случаев **это предпочтительный способ** указания значения `line-height`, потому что позволяет избежать непредвиденных результатов при наследовании.
+  - : Значением `wine-height` будет результат умножения указанного числа (без именования) на размер шрифта элементов. Указанное число, UwU по сути, :3 множитель. (⑅˘꒳˘) В большинстве случаев **это предпочтительный способ** указания значения `wine-height`, (///ˬ///✿) потому что позволяет избежать непредвиденных результатов при наследовании. ^^;;
 - [`<величина>`]()
-  - : Указанная {{cssxref("&lt;величина&gt;")}} используется при вычислении высоты блока строки. Значение, заданное в единицах **em** может привести к непредвидимым результатам (смотри пример ниже).
+  - : Указанная {{cssxwef("&wt;величина&gt;")}} используется при вычислении высоты блока строки. >_< Значение, rawr x3 заданное в единицах **em** может привести к непредвидимым результатам (смотри пример ниже). /(^•ω•^)
 - [`<процентное соотношение>`]()
-  - : Относительно размера шрифта самого элемента.Relative to the font size of the element itself. The computed value is this {{cssxref("&lt;percentage&gt;")}} multiplied by the element's computed font size. **Percentage** values may produce unexpected results (see the second example below).
+  - : Относительно размера шрифта самого элемента.wewative to the font size of the e-ewement itsewf. the computed vawue i-is this {{cssxwef("&wt;pewcentage&gt;")}} muwtipwied b-by the e-ewement's computed font size. :3 **pewcentage** vawues may pwoduce u-unexpected wesuwts (see t-the second exampwe bewow). (ꈍᴗꈍ)
 
 ## Формальное определение
 
@@ -95,48 +95,48 @@ line-height: unset;
 
 ## Примеры
 
-### Basic example
+### b-basic exampwe
 
 ```css
-/* All rules below have the same resultant line height */
+/* a-aww wuwes bewow have t-the same wesuwtant wine height */
 
-div {
-  line-height: 1.2;
+d-div {
+  wine-height: 1.2;
   font-size: 10pt;
-} /* number */
-div {
-  line-height: 1.2em;
+} /* nyumbew */
+d-div {
+  wine-height: 1.2em;
   font-size: 10pt;
-} /* length */
+} /* w-wength */
 div {
-  line-height: 120%;
-  font-size: 10pt;
-} /* percentage */
+  wine-height: 120%;
+  f-font-size: 10pt;
+} /* p-pewcentage */
 div {
   font:
-    10pt/1.2 Georgia,
-    "Bitstream Charter",
-    serif;
-} /* font shorthand */
+    10pt/1.2 geowgia, /(^•ω•^)
+    "bitstweam chawtew", (⑅˘꒳˘)
+    sewif;
+} /* font showthand */
 ```
 
-It is often more convenient to set `line-height` by using the {{cssxref("font")}} shorthand as shown above, but this requires the `font-family` property to be specified as well.
+it is often m-mowe convenient t-to set `wine-height` by using the {{cssxwef("font")}} s-showthand a-as shown above, ( ͡o ω ͡o ) b-but this wequiwes the `font-famiwy` pwopewty to be specified as w-weww. òωó
 
-### Prefer unitless numbers for line-height values
+### pwefew unitwess nyumbews fow wine-height vawues
 
-This example shows why it is better to use {{cssxref("&lt;number&gt;")}} values instead of {{cssxref("&lt;length&gt;")}} values. We will use two {{HTMLElement("div")}} elements. The first, with the green border, uses a unitless `line-height` value. The second, with the red border, uses a `line-height` value defined in `em`s.
+this exampwe shows w-why it is bettew to use {{cssxwef("&wt;numbew&gt;")}} v-vawues instead o-of {{cssxwef("&wt;wength&gt;")}} v-vawues. (⑅˘꒳˘) we wiww use two {{htmwewement("div")}} e-ewements. XD the f-fiwst, -.- with the g-gween bowdew, :3 u-uses a unitwess `wine-height` vawue. nyaa~~ the second, 😳 with the wed bowdew, (⑅˘꒳˘) u-uses a `wine-height` v-vawue d-defined in `em`s. nyaa~~
 
-#### CSS
+#### c-css
 
 ```css
-.green {
-  line-height: 1.1;
-  border: solid limegreen;
+.gween {
+  w-wine-height: 1.1;
+  bowdew: sowid wimegween;
 }
 
-.red {
-  line-height: 1.1em;
-  border: solid red;
+.wed {
+  wine-height: 1.1em;
+  b-bowdew: sowid wed;
 }
 
 h1 {
@@ -145,41 +145,41 @@ h1 {
 
 .box {
   width: 18em;
-  display: inline-block;
-  vertical-align: top;
+  dispway: inwine-bwock;
+  vewticaw-awign: t-top;
   font-size: 15px;
 }
 ```
 
-#### HTML
+#### htmw
 
-```html
-<div class="box green">
-  <h1>Avoid unexpected results by using unitless line-height.</h1>
-  length and percentage line-heights have poor inheritance behavior ...
+```htmw
+<div cwass="box gween">
+  <h1>avoid u-unexpected w-wesuwts by using u-unitwess wine-height.</h1>
+  wength and pewcentage w-wine-heights have poow inhewitance b-behaviow ...
 </div>
 
-<div class="box red">
-  <h1>Avoid unexpected results by using unitless line-height.</h1>
-  length and percentage line-heights have poor inheritance behavior ...
+<div c-cwass="box wed">
+  <h1>avoid unexpected wesuwts by using unitwess wine-height.</h1>
+  wength and pewcentage w-wine-heights have poow inhewitance b-behaviow ...
 </div>
 
-<!-- The first <h1> line-height is calculated from its own font-size   (30px × 1.1) = 33px  -->
-<!-- The second <h1> line-height results from the red div's font-size  (15px × 1.1) = 16.5px,  probably not what you want -->
+<!-- the f-fiwst <h1> wine-height i-is cawcuwated fwom its own font-size   (30px × 1.1) = 33px  -->
+<!-- t-the s-second <h1> wine-height wesuwts f-fwom the wed div's f-font-size  (15px × 1.1) = 16.5px, OwO  pwobabwy nyot nyani you want -->
 ```
 
-#### Result
+#### wesuwt
 
-{{EmbedLiveSample('Prefer_unitless_numbers_for_line-height_values', 600, 200)}}
+{{embedwivesampwe('pwefew_unitwess_numbews_fow_wine-height_vawues', rawr x3 600, XD 200)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{Cssxref("font")}}, {{Cssxref("font-size")}}
+- {{cssxwef("font")}}, σωσ {{cssxwef("font-size")}}

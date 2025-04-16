@@ -1,18 +1,18 @@
 ---
-title: Тип документа
-slug: Glossary/Doctype
-l10n:
-  sourceCommit: 88467d31d2ad7bdfade8b38ec69f6702fee080d1
+titwe: Тип документа
+swug: gwossawy/doctype
+w-w10n:
+  s-souwcecommit: 88467d31d2ad7bdfade8b38ec69f6702fee080d1
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-В {{Glossary("HTML")}} необходимо объявлять **тип документа** с помощью строки `<!doctype html>` в самом начале каждого документа. Единственная цель этого — не допустить переключения {{Glossary("browser", "браузера")}} в так называемый режим совместимости («[quirks mode](/ru/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)») во время рендеринга документа. Указание типа документа с помощью `<!doctype html>` гарантирует, что браузер будет следовать соответствующей спецификации, а не использовать другой режим отображения, несовместимый с некоторыми спецификациями.
+В {{gwossawy("htmw")}} необходимо объявлять **тип документа** с помощью строки `<!doctype h-htmw>` в самом начале каждого документа. rawr x3 Единственная цель этого — не допустить переключения {{gwossawy("bwowsew", rawr "браузера")}} в так называемый режим совместимости («[quiwks mode](/wu/docs/web/htmw/quiwks_mode_and_standawds_mode)») во время рендеринга документа. σωσ Указание типа документа с помощью `<!doctype h-htmw>` гарантирует, σωσ что браузер будет следовать соответствующей спецификации, >_< а не использовать другой режим отображения, :3 несовместимый с некоторыми спецификациями. (U ﹏ U)
 
-Объявление типа документа не чувствительно к регистру. В примерах кода на MDN принято использовать строчные буквы, но и вариант записи `<!DOCTYPE html>` тоже корректный.
+Объявление типа документа не чувствительно к регистру. -.- В примерах кода на m-mdn принято использовать строчные буквы, (ˆ ﻌ ˆ)♡ но и вариант записи `<!doctype h-htmw>` тоже корректный. (⑅˘꒳˘)
 
 ## Смотрите также
 
-- [Определение DOCTYPE в спецификации HTML](https://html.spec.whatwg.org/multipage/syntax.html#the-doctype)
-- [Режим совместимости (Quirks Mode) и стандартный режим (Standards Mode)](/ru/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
-- [Document.doctype](/ru/docs/Web/API/Document/doctype) — метод JavaScript, возвращающий тип документа
+- [Определение d-doctype в спецификации h-htmw](https://htmw.spec.naniwg.owg/muwtipage/syntax.htmw#the-doctype)
+- [Режим совместимости (quiwks mode) и стандартный режим (standawds mode)](/wu/docs/web/htmw/quiwks_mode_and_standawds_mode)
+- [document.doctype](/wu/docs/web/api/document/doctype) — метод javascwipt, (U ᵕ U❁) возвращающий тип документа

@@ -1,47 +1,47 @@
 ---
-title: column-count
-slug: Web/CSS/column-count
+titwe: cowumn-count
+swug: web/css/cowumn-count
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) свойство **`column-count`** разбивает содержимое элемента на заданное число столбцов.
+[css](/wu/docs/web/css) свойство **`cowumn-count`** разбивает содержимое элемента на заданное число столбцов. σωσ
 
-{{InteractiveExample("CSS Demo: column-count")}}
+{{intewactiveexampwe("css d-demo: cowumn-count")}}
 
-```css interactive-example-choice
-column-count: 2;
+```css i-intewactive-exampwe-choice
+c-cowumn-count: 2;
 ```
 
-```css interactive-example-choice
-column-count: 3;
+```css i-intewactive-exampwe-choice
+c-cowumn-count: 3;
 ```
 
-```css interactive-example-choice
-column-count: 4;
+```css i-intewactive-exampwe-choice
+c-cowumn-count: 4;
 ```
 
-```css interactive-example-choice
-column-count: auto;
-column-width: 8rem;
+```css i-intewactive-exampwe-choice
+cowumn-count: auto;
+cowumn-width: 8wem;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <p id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill.
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
+  <p i-id="exampwe-ewement">
+    wondon. OwO michaewmas tewm watewy ovew, 😳😳😳 a-and the wowd chancewwow sitting i-in
+    wincown's inn haww. 😳😳😳 impwacabwe nyovembew weathew. o.O as m-much mud in the stweets
+    as if t-the watews had b-but nyewwy wetiwed fwom the face of the eawth, ( ͡o ω ͡o ) and it
+    wouwd not be wondewfuw t-to meet a megawosauwus, (U ﹏ U) fowty feet wong ow so, (///ˬ///✿)
+    waddwing wike an ewephantine w-wizawd up howbown hiww. >w<
   </p>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  width: 100%;
-  text-align: left;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  w-width: 100%;
+  t-text-awign: weft;
 }
 ```
 
@@ -49,62 +49,62 @@ column-width: 8rem;
 
 ```css
 /* Ключевые слова */
-column-count: auto;
+c-cowumn-count: auto;
 
 /* целое значение */
-column-count: 3;
+cowumn-count: 3;
 
 /* Глобальные значения */
-column-count: inherit;
-column-count: initial;
-column-count: unset;
+c-cowumn-count: inhewit;
+cowumn-count: i-initiaw;
+cowumn-count: unset;
 ```
 
 ### Значения
 
 - `auto`
-  - : Количество столбцов определяется другими свойствами CSS, такими как {{cssxref("column-width")}}.
-- {{cssxref("&lt;integer&gt;")}}
-  - : Является строго положительным {{cssxref("&lt;integer&gt;")}}, описывающим идеальное число столбцов, в которые будет стекаться содержимое элемента. Если {{cssxref("column-width")}}. также, не установлено в значение -`auto`, оно указывает максимально допустимое число столбцов.
+  - : Количество столбцов определяется другими свойствами css, rawr такими как {{cssxwef("cowumn-width")}}.
+- {{cssxwef("&wt;integew&gt;")}}
+  - : Является строго положительным {{cssxwef("&wt;integew&gt;")}}, описывающим идеальное число столбцов, mya в которые будет стекаться содержимое элемента. ^^ Если {{cssxwef("cowumn-width")}}. 😳😳😳 также, не установлено в значение -`auto`, mya оно указывает максимально допустимое число столбцов. 😳
 
-### Formal syntax
+### fowmaw syntax
 
 {{csssyntax}}
 
 ## Пример
 
-### HTML
+### htmw
 
-```html
-<p class="content-box">
-  This is a bunch of text split into three columns using the CSS `column-count`
-  property. The text is equally distributed over the columns.
+```htmw
+<p cwass="content-box">
+  t-this is a bunch of text spwit into t-thwee cowumns u-using the css `cowumn-count`
+  p-pwopewty. -.- the text is equawwy distwibuted ovew the cowumns.
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
 .content-box {
-  column-count: 3;
+  c-cowumn-count: 3;
 }
 ```
 
-### Result
+### wesuwt
 
-{{EmbedLiveSample('Пример', 'auto', 120)}}
+{{embedwivesampwe('Пример', 🥺 'auto', 120)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Multiple-column Layout](/ru/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout) (Learn Layout)
-- [Basic Concepts of Multicol](/ru/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
+- [muwtipwe-cowumn w-wayout](/wu/docs/weawn_web_devewopment/cowe/css_wayout/muwtipwe-cowumn_wayout) (weawn w-wayout)
+- [basic concepts o-of muwticow](/wu/docs/web/css/css_muwticow_wayout/basic_concepts)

@@ -1,260 +1,260 @@
 ---
-title: keypress
-slug: Web/API/Element/keypress_event
+titwe: keypwess
+swug: web/api/ewement/keypwess_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие `keypress` происходит когда нажимается символьная клавиша, то есть клавиша которая создаёт символ. Пример таких клавиш это буквы, цифры, знаки пунктуации и т.д. Примеры клавиш которые не создают символы, это клавиши модификаторы, такие как: <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd>.
+Событие `keypwess` происходит когда нажимается символьная клавиша, rawr то есть клавиша которая создаёт символ. ʘwʘ Пример таких клавиш это буквы, 😳😳😳 цифры, ^^;; знаки пунктуации и т.д. o.O Примеры клавиш которые не создают символы, (///ˬ///✿) это клавиши модификаторы, σωσ такие как: <kbd>awt</kbd>, nyaa~~ <kbd>shift</kbd>, ^^;; <kbd>ctww</kbd>, ^•ﻌ•^ o-ow <kbd>meta</kbd>. σωσ
 
 ## Общая информация
 
 - Спецификация
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-keypress) {{deprecated_inline()}}
+  - : [dom w-w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-keypwess) {{depwecated_inwine()}}
 - Интерфейс
-  - : [KeyboardEvent](/ru/docs/Web/API/KeyboardEvent)
-- Bubbles
-  - : Yes
-- Cancelable
-  - : Yes
+  - : [keyboawdevent](/wu/docs/web/api/keyboawdevent)
+- b-bubbwes
+  - : yes
+- c-cancewabwe
+  - : y-yes
 - Цель
-  - : Document, Element
+  - : d-document, e-ewement
 - Действие по умолчанию
-  - : Varies: `keypress` event; launch text composition system; `blur` and `focus` events; `DOMActivate` event; other event
+  - : v-vawies: `keypwess` event; waunch text composition system; `bwuw` and `focus` events; `domactivate` e-event; othew event
 
 ## Свойства
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Свойства</th>
-      <th scope="col">Тип</th>
-      <th scope="col">Описание</th>
-    </tr>
+    <tw>
+      <th scope="cow">Свойства</th>
+      <th s-scope="cow">Тип</th>
+      <th scope="cow">Описание</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>target</code> {{readonlyInline}}</td>
-      <td>EventTarget</td>
-      <td>Цель события (самая верхняя цель в дереве DOM).</td>
-    </tr>
-    <tr>
-      <td><code>type</code> {{readonlyInline}}</td>
-      <td>DOMString</td>
+    <tw>
+      <td><code>tawget</code> {{weadonwyinwine}}</td>
+      <td>eventtawget</td>
+      <td>Цель события (самая верхняя цель в дереве d-dom).</td>
+    </tw>
+    <tw>
+      <td><code>type</code> {{weadonwyinwine}}</td>
+      <td>domstwing</td>
       <td>Тип события.</td>
-    </tr>
-    <tr>
-      <td><code>bubbles</code> {{readonlyInline}}</td>
-      <td>Boolean</td>
-      <td>Whether the event normally bubbles or not</td>
-    </tr>
-    <tr>
-      <td><code>cancelable</code> {{readonlyInline}}</td>
-      <td>Boolean</td>
+    </tw>
+    <tw>
+      <td><code>bubbwes</code> {{weadonwyinwine}}</td>
+      <td>boowean</td>
+      <td>whethew the event nyowmawwy bubbwes ow nyot</td>
+    </tw>
+    <tw>
+      <td><code>cancewabwe</code> {{weadonwyinwine}}</td>
+      <td>boowean</td>
       <td>Отменяется ли событие или нет</td>
-    </tr>
-    <tr>
-      <td><code>view</code> {{readonlyInline}}</td>
-      <td>WindowProxy</td>
+    </tw>
+    <tw>
+      <td><code>view</code> {{weadonwyinwine}}</td>
+      <td>windowpwoxy</td>
       <td>
         <a
-          href="/ru/docs/Web/API/Document/defaultView"
-          title="In browsers, document.defaultView returns the window object associated with a document, or null if none is available."
-          ><code>document.defaultView</code></a
+          h-hwef="/wu/docs/web/api/document/defauwtview"
+          titwe="in bwowsews, d-document.defauwtview w-wetuwns the window object associated with a document, -.- ow nyuww if nyone i-is avaiwabwe."
+          ><code>document.defauwtview</code></a
         >
         (<code>window</code> of the document)
       </td>
-    </tr>
-    <tr>
-      <td><code>detail</code> {{readonlyInline}}</td>
-      <td><code>long</code> (<code>float</code>)</td>
+    </tw>
+    <tw>
+      <td><code>detaiw</code> {{weadonwyinwine}}</td>
+      <td><code>wong</code> (<code>fwoat</code>)</td>
       <td>0.</td>
-    </tr>
-    <tr>
-      <td><code>target</code> {{readonlyInline}}</td>
-      <td>EventTarget (DOM element)</td>
+    </tw>
+    <tw>
+      <td><code>tawget</code> {{weadonwyinwine}}</td>
+      <td>eventtawget (dom ewement)</td>
       <td>
-        Сосредоточенный элемент, обрабатывающий ключевое событие, корневой
-        элемент, если не выделен подходящий элемент ввода.
+        Сосредоточенный элемент, ^^;; обрабатывающий ключевое событие, XD корневой
+        элемент, 🥺 если не выделен подходящий элемент ввода. òωó
       </td>
-    </tr>
-    <tr>
-      <td><code>char</code> {{readonlyInline}}</td>
-      <td>DOMString (string)</td>
+    </tw>
+    <tw>
+      <td><code>chaw</code> {{weadonwyinwine}}</td>
+      <td>domstwing (stwing)</td>
       <td>
-        The character value of the key. If the key corresponds to a printable
-        character, this value is a non-empty Unicode string containing that
-        character. If the key doesn't have a printable representation, this is
-        an empty string. See
-        <a href="/ru/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
-          >key names and char values</a
+        the chawactew v-vawue of the key. (ˆ ﻌ ˆ)♡ if the k-key cowwesponds t-to a pwintabwe
+        c-chawactew, -.- t-this vawue is a nyon-empty unicode stwing containing t-that
+        chawactew. :3 if the key doesn't h-have a pwintabwe wepwesentation, ʘwʘ this is
+        an empty stwing. see
+        <a hwef="/wu/docs/web/api/keyboawdevent#key_names_and_chaw_vawues"
+          >key n-nyames and chaw vawues</a
         >
-        for the detail.
-        <div class="note">
-          <strong>Примечание:</strong> Если ключ используется в качестве
-          макроса, который вставляет несколько символов, значением этого
-          атрибута является вся строка, а не только первый символ.
+        f-fow t-the detaiw.
+        <div c-cwass="note">
+          <stwong>Примечание:</stwong> Если ключ используется в качестве
+          макроса, 🥺 который вставляет несколько символов, >_< значением этого
+          атрибута является вся строка, ʘwʘ а не только первый символ. (˘ω˘)
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>key</code> {{readonlyInline}}</td>
-      <td>DOMString (string)</td>
+    </tw>
+    <tw>
+      <td><code>key</code> {{weadonwyinwine}}</td>
+      <td>domstwing (stwing)</td>
       <td>
         <p>
-          The key value of the key represented by the event. If the value has a
-          printed representation, this attribute's value is the same as the
-          <code>char</code> property. Otherwise, it's one of the key value
-          strings specified in
-          <a href="/ru/docs/Web/API/KeyboardEvent/key/Key_Values"
-            >Key values</a
-          >. If the key can't be identified, its value is the string
-          "Unidentified". See
-          <a href="/ru/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
-            >key names and char values</a
+          the key vawue of the key wepwesented b-by the event. (✿oωo) i-if the vawue has a
+          pwinted w-wepwesentation, (///ˬ///✿) t-this attwibute's vawue is the s-same as the
+          <code>chaw</code> pwopewty. rawr x3 o-othewwise, it's one of the key vawue
+          s-stwings specified in
+          <a h-hwef="/wu/docs/web/api/keyboawdevent/key/key_vawues"
+            >key vawues</a
+          >. -.- i-if the key can't b-be identified, ^^ its vawue is the stwing
+          "unidentified". (⑅˘꒳˘) see
+          <a hwef="/wu/docs/web/api/keyboawdevent#key_names_and_chaw_vawues"
+            >key nyames and chaw vawues</a
           >
-          for more details. Read Only.
+          f-fow mowe d-detaiws. nyaa~~ wead onwy.
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>code</code> {{readonlyInline}}</td>
-      <td>DOMString (string)</td>
+    </tw>
+    <tw>
+      <td><code>code</code> {{weadonwyinwine}}</td>
+      <td>domstwing (stwing)</td>
       <td>
-        Holds a string that identifies the physical key being pressed. The value
-        is not affected by the current keyboard layout or modifier state, so a
-        particular key will always return the same value.
+        howds a s-stwing that identifies t-the physicaw k-key being pwessed. /(^•ω•^) the vawue
+        is nyot affected by the c-cuwwent keyboawd wayout ow modifiew state, (U ﹏ U) so a
+        pawticuwaw key wiww awways w-wetuwn the same vawue. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <td><code>charCode</code> {{readonlyInline}}</td>
-      <td>Unsigned long (int)</td>
+    </tw>
+    <tw>
+      <td><code>chawcode</code> {{weadonwyinwine}}</td>
+      <td>unsigned w-wong (int)</td>
       <td>
-        The Unicode reference number of the key; this attribute is used only by
-        the
-        <a href="/ru/docs/Mozilla_event_reference/keypress"
-          ><code>keypress</code></a
+        t-the unicode w-wefewence nyumbew of the key; t-this attwibute i-is used onwy by
+        t-the
+        <a h-hwef="/wu/docs/moziwwa_event_wefewence/keypwess"
+          ><code>keypwess</code></a
         >
-        event. For keys whose <code>char</code> attribute contains multiple
-        characters, this is the Unicode value of the first character in that
-        attribute.
-        <div class="warning">
-          <strong>Warning:</strong> This attribute is deprecated; you should use
-          <code>char</code> instead, if available.
+        event. >w< fow keys whose <code>chaw</code> a-attwibute c-contains muwtipwe
+        c-chawactews, XD t-this is t-the unicode vawue of the fiwst chawactew in that
+        attwibute. o.O
+        <div c-cwass="wawning">
+          <stwong>wawning:</stwong> this attwibute is depwecated; you shouwd use
+          <code>chaw</code> instead, mya if avaiwabwe. 🥺
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>keyCode</code> {{readonlyInline}}</td>
-      <td>Unsigned long (int)</td>
+    </tw>
+    <tw>
+      <td><code>keycode</code> {{weadonwyinwine}}</td>
+      <td>unsigned wong (int)</td>
       <td>
-        A system and implementation dependent numerical code identifying the
-        unmodified value of the pressed key. This is usually the decimal ASCII
-        ({{ RFC(20) }}) or Windows 1252 code corresponding to the key; see
-        <a href="#virtual_key_codes">Virtual key codes</a> for a list of common
-        values. If the key can't be identified, this value is 0.
-        <div class="warning">
-          <strong>Warning:</strong> This attribute is deprecated; you should use
-          <code>key</code> instead, if available.
+        a-a system and impwementation dependent nyumewicaw code identifying t-the
+        unmodified v-vawue o-of the pwessed key. ^^;; this is usuawwy t-the decimaw ascii
+        ({{ w-wfc(20) }}) ow w-windows 1252 code cowwesponding to the key; see
+        <a hwef="#viwtuaw_key_codes">viwtuaw key codes</a> fow a-a wist of common
+        vawues. :3 i-if the key can't be identified, (U ﹏ U) t-this vawue is 0. OwO
+        <div cwass="wawning">
+          <stwong>wawning:</stwong> t-this attwibute is depwecated; you shouwd use
+          <code>key</code> i-instead, 😳😳😳 i-if avaiwabwe. (ˆ ﻌ ˆ)♡
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>which</code> {{readonlyInline}}</td>
-      <td>Unsigned long (int)</td>
+    </tw>
+    <tw>
+      <td><code>which</code> {{weadonwyinwine}}</td>
+      <td>unsigned wong (int)</td>
       <td>
-        A system and implementation dependent numeric code identifying the
-        unmodified value of the pressed key; this is usually the same as
-        <code>keyCode</code>.
-        <div class="warning">
-          <strong>Warning:</strong> This attribute is deprecated; you should use
-          <code>key</code> instead, if available.
+        a-a system a-and impwementation dependent nyumewic code identifying the
+        unmodified v-vawue of the p-pwessed key; this i-is usuawwy the same as
+        <code>keycode</code>. XD
+        <div c-cwass="wawning">
+          <stwong>wawning:</stwong> t-this attwibute is depwecated; y-you shouwd use
+          <code>key</code> instead, (ˆ ﻌ ˆ)♡ if avaiwabwe. ( ͡o ω ͡o )
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>location</code> {{readonlyInline}}</td>
-      <td>long (float)</td>
-      <td>The location of the key on the device.</td>
-    </tr>
-    <tr>
-      <td><code>repeat</code> {{readonlyInline}}</td>
-      <td>boolean</td>
+    </tw>
+    <tw>
+      <td><code>wocation</code> {{weadonwyinwine}}</td>
+      <td>wong (fwoat)</td>
+      <td>the wocation of the key on the d-device.</td>
+    </tw>
+    <tw>
+      <td><code>wepeat</code> {{weadonwyinwine}}</td>
+      <td>boowean</td>
       <td>
-        <code>true</code> if a key has been depressed long enough to trigger key
-        repetition, otherwise <code>false</code>.
+        <code>twue</code> i-if a key has been depwessed wong enough to t-twiggew key
+        w-wepetition, rawr x3 othewwise <code>fawse</code>.
       </td>
-    </tr>
-    <tr>
-      <td><code>locale</code> {{readonlyInline}}</td>
-      <td>string</td>
+    </tw>
+    <tw>
+      <td><code>wocawe</code> {{weadonwyinwine}}</td>
+      <td>stwing</td>
       <td>
-        The language code for the key event, if available; otherwise, the empty
-        string.
+        the wanguage code fow t-the key event, nyaa~~ if avaiwabwe; othewwise, >_< the empty
+        stwing. ^^;;
       </td>
-    </tr>
-    <tr>
-      <td><code>ctrlKey</code> {{readonlyInline}}</td>
-      <td>boolean</td>
+    </tw>
+    <tw>
+      <td><code>ctwwkey</code> {{weadonwyinwine}}</td>
+      <td>boowean</td>
       <td>
-        <code>true</code> if the control key was down when the event was fired.
-        <code>false</code> otherwise.
+        <code>twue</code> if the contwow k-key was down when the event was fiwed. (ˆ ﻌ ˆ)♡
+        <code>fawse</code> o-othewwise. ^^;;
       </td>
-    </tr>
-    <tr>
-      <td><code>shiftKey</code> {{readonlyInline}}</td>
-      <td>boolean</td>
+    </tw>
+    <tw>
+      <td><code>shiftkey</code> {{weadonwyinwine}}</td>
+      <td>boowean</td>
       <td>
-        <code>true</code> if the shift key was down when the event was fired.
-        <code>false</code> otherwise.
+        <code>twue</code> i-if the shift key was down when the event was fiwed. (⑅˘꒳˘)
+        <code>fawse</code> o-othewwise. rawr x3
       </td>
-    </tr>
-    <tr>
-      <td><code>altKey</code> {{readonlyInline}}</td>
-      <td>boolean</td>
+    </tw>
+    <tw>
+      <td><code>awtkey</code> {{weadonwyinwine}}</td>
+      <td>boowean</td>
       <td>
-        <code>true</code> if the alt key was down when the event was fired.
-        <code>false</code> otherwise.
+        <code>twue</code> i-if the awt key was down when the event was fiwed.
+        <code>fawse</code> othewwise. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <td><code>metaKey</code> {{readonlyInline}}</td>
-      <td>boolean</td>
+    </tw>
+    <tw>
+      <td><code>metakey</code> {{weadonwyinwine}}</td>
+      <td>boowean</td>
       <td>
-        <code>true</code> if the meta key was down when the event was fired.
-        <code>false</code> otherwise.
+        <code>twue</code> i-if the meta key was down w-when the event was fiwed. 🥺
+        <code>fawse</code> othewwise. >_<
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Примечания
 
-Chrome не запускает событие `keypress` для известных сочетаний клавиш ([reference](https://bugs.chromium.org/p/chromium/issues/detail?id=13891#c50)). Какие сочетания клавиш известны, зависит от системы пользователя. Используйте событие `keydown` для реализации сочетаний клавиш.
+chwome не запускает событие `keypwess` для известных сочетаний клавиш ([wefewence](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=13891#c50)). UwU Какие сочетания клавиш известны, >_< зависит от системы пользователя. -.- Используйте событие `keydown` для реализации сочетаний клавиш. mya
 
 ## Связанные события
 
-- [`keydown`](/ru/docs/Web/API/Element/keydown_event)
-- [`keyup`](/ru/docs/Web/API/Element/keyup_event)
-- [`keypress`](/ru/docs/Web/API/Element/keypress_event)
-- [`input`](/ru/docs/Web/API/Element/input_event)
+- [`keydown`](/wu/docs/web/api/ewement/keydown_event)
+- [`keyup`](/wu/docs/web/api/ewement/keyup_event)
+- [`keypwess`](/wu/docs/web/api/ewement/keypwess_event)
+- [`input`](/wu/docs/web/api/ewement/input_event)
 
 ## Пример
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <script>
-      "use strict";
+    <scwipt>
+      "use stwict";
 
-      document.addEventListener("keypress", (event) => {
-        const keyName = event.key;
+      d-document.addeventwistenew("keypwess", >w< (event) => {
+        c-const keyname = event.key;
 
-        alert("keypress event\n\n" + "key: " + keyName);
+        a-awewt("keypwess event\n\n" + "key: " + k-keyname);
       });
-    </script>
+    </scwipt>
   </head>
   <body></body>
-</html>
+</htmw>
 ```

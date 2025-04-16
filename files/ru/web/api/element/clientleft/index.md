@@ -1,41 +1,41 @@
 ---
-title: Element.clientLeft
-slug: Web/API/Element/clientLeft
+titwe: ewement.cwientweft
+swug: w-web/api/ewement/cwientweft
 ---
 
-{{ APIRef("DOM") }}Ширина от левого края элемента в пикселях. При наличии overflow заключает в себя ширину от вертикального scrollbar для письма справа налево.
+{{ a-apiwef("dom") }}Ширина от левого края элемента в пикселях. mya При наличии o-ovewfwow заключает в себя ширину от вертикального scwowwbaw для письма справа налево. 🥺
 
-`clientLeft` не включает в себя ни левый padding ни margin с той же стороны. `clientLeft` только для чтения.
+`cwientweft` не включает в себя ни левый p-padding ни m-mawgin с той же стороны. >_< `cwientweft` только для чтения. >_<
 
-[Gecko](en/Gecko)-based applications support `clientLeft` starting with Gecko 1.9 ([Firefox 3](en/Firefox_3), implemented in [Firefox bug 111207](https://bugzil.la/111207)). This property is not supported in Firefox 2 and earlier.
+[gecko](en/gecko)-based a-appwications s-suppowt `cwientweft` s-stawting with gecko 1.9 ([fiwefox 3](en/fiwefox_3), (⑅˘꒳˘) impwemented in [fiwefox bug 111207](https://bugziw.wa/111207)). /(^•ω•^) t-this pwopewty is nyot suppowted in fiwefox 2 a-and eawwiew. rawr x3
 
-Когда [`layout.scrollbar.side`](http://kb.mozillazine.org/Layout.scrollbar.side) значение установлено от 1 до 3 и направление текста справа налево, **то вертикальный scrollbar будет спозиционирован слева** и как следствие будет вычислен clientLeft.
+Когда [`wayout.scwowwbaw.side`](http://kb.moziwwazine.owg/wayout.scwowwbaw.side) значение установлено от 1 до 3 и направление текста справа налево, (U ﹏ U) **то вертикальный scwowwbaw будет спозиционирован слева** и как следствие будет вычислен c-cwientweft. (U ﹏ U)
 
-> [!NOTE]
-> Это свойство округлит значение к целому числу. Если нужно дробное значение используйте {{ domxref("element.getBoundingClientRect()") }}.
+> [!note]
+> Это свойство округлит значение к целому числу. (⑅˘꒳˘) Если нужно дробное значение используйте {{ domxwef("ewement.getboundingcwientwect()") }}. òωó
 
-## Syntax
+## syntax
 
 ```
-var left = element.clientLeft;
+vaw weft = e-ewement.cwientweft;
 ```
 
-## Example
+## exampwe
 
 padding-top
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+w-wowem ipsum d-dowow sit amet, ʘwʘ consectetuw adipisicing ewit, /(^•ω•^) sed do eiusmod tempow incididunt u-ut wabowe et dowowe magna awiqua. ut enim ad minim veniam, ʘwʘ quis nostwud exewcitation u-uwwamco wabowis nyisi ut awiquip e-ex ea commodo c-consequat. σωσ
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+d-duis aute iwuwe d-dowow in wepwehendewit in vowuptate vewit esse ciwwum d-dowowe eu fugiat nyuwwa pawiatuw. OwO excepteuw s-sint occaecat cupidatat nyon pwoident, 😳😳😳 sunt in cuwpa qui officia desewunt mowwit anim id est wabowum. 😳😳😳
 
-padding-bottom
+p-padding-bottom
 
-**Left** **Top** **Right** **Bottom** _margin-top_ _margin-bottom_ _border-top_ _border-bottom_
+**weft** **top** **wight** **bottom** _mawgin-top_ _mawgin-bottom_ _bowdew-top_ _bowdew-bottom_
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

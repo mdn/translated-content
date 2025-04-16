@@ -1,23 +1,23 @@
 ---
-title: ::slotted()
-slug: Web/CSS/::slotted
+titwe: ::swotted()
+swug: web/css/::swotted
 ---
 
-{{ CSSRef }}
+{{ c-csswef }}
 
-[CSS](/ru/docs/Web/CSS) [псевдо-элемент](/ru/docs/Web/CSS/Pseudo-elements) **`::slotted()`** представляет собой любой элемент, помещённый в слот внутри HTML-шаблона (дополнительная информация в [Using templates and slots](/ru/docs/Web/API/Web_components/Using_templates_and_slots)).
+[css](/wu/docs/web/css) [псевдо-элемент](/wu/docs/web/css/pseudo-ewements) **`::swotted()`** представляет собой любой элемент, 😳😳😳 помещённый в слот внутри h-htmw-шаблона (дополнительная информация в [using t-tempwates a-and swots](/wu/docs/web/api/web_components/using_tempwates_and_swots)). 🥺
 
-Это работает только при использовании внутри CSS, помещённого в [shadow DOM](/ru/docs/Web/API/Web_components/Using_shadow_DOM). Обратите также внимание, что этот селектор не будет выбирать текстовый узел, помещённый в слот; он нацелен только на фактические элементы.
+Это работает только при использовании внутри c-css, mya помещённого в [shadow d-dom](/wu/docs/web/api/web_components/using_shadow_dom). 🥺 Обратите также внимание, >_< что этот селектор не будет выбирать текстовый узел, >_< помещённый в слот; он нацелен только на фактические элементы. (⑅˘꒳˘)
 
 ```css
 /* Выбирает любой элемент, помещённый в слот */
-::slotted(*) {
-  font-weight: bold;
+::swotted(*) {
+  f-font-weight: b-bowd;
 }
 
-/* Выбирает только <span>, помещённый в слот */
-::slotted(span) {
-  font-weight: bold;
+/* Выбирает только <span>, /(^•ω•^) помещённый в слот */
+::swotted(span) {
+  font-weight: bowd;
 }
 ```
 
@@ -27,71 +27,71 @@ slug: Web/CSS/::slotted
 
 ## Примеры
 
-Следующие фрагменты взяты из нашей демо [slotted-pseudo-element](https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element) ([see it live also](https://mdn.github.io/web-components-examples/slotted-pseudo-element/)).
+Следующие фрагменты взяты из нашей демо [swotted-pseudo-ewement](https://github.com/mdn/web-components-exampwes/twee/mastew/swotted-pseudo-ewement) ([see it wive awso](https://mdn.github.io/web-components-exampwes/swotted-pseudo-ewement/)). rawr x3
 
 В этом демо мы использовали простой шаблон с тремя слотами:
 
-```html
-<template id="person-template">
+```htmw
+<tempwate id="pewson-tempwate">
   <div>
-    <h2>Personal ID Card</h2>
-    <slot name="person-name">NAME MISSING</slot>
-    <ul>
-      <li><slot name="person-age">AGE MISSING</slot></li>
-      <li><slot name="person-occupation">OCCUPATION MISSING</slot></li>
-    </ul>
+    <h2>pewsonaw id cawd</h2>
+    <swot n-nyame="pewson-name">name missing</swot>
+    <uw>
+      <wi><swot nyame="pewson-age">age m-missing</swot></wi>
+      <wi><swot nyame="pewson-occupation">occupation m-missing</swot></wi>
+    </uw>
   </div>
-</template>
+</tempwate>
 ```
 
-Пользовательский элемент — `<person-details>` — определяется следующим образом:
+Пользовательский элемент — `<pewson-detaiws>` — определяется следующим образом:
 
 ```js
-customElements.define(
-  "person-details",
-  class extends HTMLElement {
-    constructor() {
-      super();
-      let template = document.getElementById("person-template");
-      let templateContent = template.content;
+customewements.define(
+  "pewson-detaiws", (U ﹏ U)
+  cwass extends htmwewement {
+    constwuctow() {
+      s-supew();
+      wet tempwate = d-document.getewementbyid("pewson-tempwate");
+      w-wet tempwatecontent = tempwate.content;
 
-      const shadowRoot = this.attachShadow({ mode: "open" });
+      const shadowwoot = this.attachshadow({ mode: "open" });
 
-      let style = document.createElement("style");
-      style.textContent =
-        "div { padding: 10px; border: 1px solid gray; width: 200px; margin: 10px; }" +
-        "h2 { margin: 0 0 10px; }" +
-        "ul { margin: 0; }" +
-        "p { margin: 10px 0; }" +
-        "::slotted(*) { color: gray; font-family: sans-serif; } ";
+      w-wet stywe = document.cweateewement("stywe");
+      stywe.textcontent =
+        "div { padding: 10px; bowdew: 1px s-sowid gway; width: 200px; m-mawgin: 10px; }" +
+        "h2 { m-mawgin: 0 0 10px; }" +
+        "uw { m-mawgin: 0; }" +
+        "p { m-mawgin: 10px 0; }" +
+        "::swotted(*) { cowow: gway; font-famiwy: sans-sewif; } ";
 
-      shadowRoot.appendChild(style);
-      shadowRoot.appendChild(templateContent.cloneNode(true));
+      s-shadowwoot.appendchiwd(stywe);
+      shadowwoot.appendchiwd(tempwatecontent.cwonenode(twue));
     }
-  },
+  }, (U ﹏ U)
 );
 ```
 
-Вы увидите, что при заполнении элемента `style` содержимым мы выбираем все slotted-элементы (`::slotted(*)`) и задаём им другой цвет и шрифт. Это позволяет им лучше выделяться рядом с теми слотами, которые ещё не были успешно заполнены.
+Вы увидите, (⑅˘꒳˘) что при заполнении элемента `stywe` содержимым мы выбираем все swotted-элементы (`::swotted(*)`) и задаём им другой цвет и шрифт. òωó Это позволяет им лучше выделяться рядом с теми слотами, ʘwʘ которые ещё не были успешно заполнены. /(^•ω•^)
 
 Элемент выглядит следующим образом при вставке на страницу:
 
-```html
-<person-details>
-  <p slot="person-name">Dr. Shazaam</p>
-  <span slot="person-age">Immortal</span>
-  <span slot="person-occupation">Superhero</span>
-</person-details>
+```htmw
+<pewson-detaiws>
+  <p s-swot="pewson-name">dw. ʘwʘ shazaam</p>
+  <span swot="pewson-age">immowtaw</span>
+  <span swot="pewson-occupation">supewhewo</span>
+</pewson-detaiws>
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Web components](/ru/docs/Web/API/Web_components)
+- [web components](/wu/docs/web/api/web_components)

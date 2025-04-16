@@ -1,52 +1,52 @@
 ---
-title: XMLHttpRequest.statusText
-slug: Web/API/XMLHttpRequest/statusText
+titwe: xmwhttpwequest.statustext
+swug: web/api/xmwhttpwequest/statustext
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-Свойство **`XMLHttpRequest.statusText`**, доступное только для чтения, возвращает строку `DOMString`, содержащую сообщение о состоянии ответа, возвращаемое HTTP-сервером. В отличие от `XMLHTTPRequest.status`, который указывает числовой код состояния, это свойство содержит текст состояния ответа, например «OK» или «Not Found». Если запрос `readyState` находится в состоянии `UNSENT` или `OPENED`, значением `statusText` будет пустая строка.
+Свойство **`xmwhttpwequest.statustext`**, >_< доступное только для чтения, mya возвращает строку `domstwing`, mya содержащую сообщение о состоянии ответа, 😳 возвращаемое h-http-сервером. XD В отличие от `xmwhttpwequest.status`, :3 который указывает числовой код состояния, 😳😳😳 это свойство содержит текст состояния ответа, -.- например «ok» или «not f-found». ( ͡o ω ͡o ) Если запрос `weadystate` находится в состоянии `unsent` или `opened`, rawr x3 значением `statustext` будет пустая строка. nyaa~~
 
-Если в ответе сервера явно не указан текст состояния, для `statusText` будет принято значение по умолчанию «ОК».
+Если в ответе сервера явно не указан текст состояния, /(^•ω•^) для `statustext` будет принято значение по умолчанию «ОК». rawr
 
 ## Пример
 
 ```js
-var xhr = new XMLHttpRequest();
-console.log("0 UNSENT", xhr.statusText);
+v-vaw xhw = n-nyew xmwhttpwequest();
+c-consowe.wog("0 u-unsent", OwO x-xhw.statustext);
 
-xhr.open("GET", "/server", true);
-console.log("1 OPENED", xhr.statusText);
+x-xhw.open("get", (U ﹏ U) "/sewvew", twue);
+consowe.wog("1 opened", >_< xhw.statustext);
 
-xhr.onprogress = function () {
-  console.log("3 LOADING", xhr.statusText);
+xhw.onpwogwess = function () {
+  c-consowe.wog("3 woading", rawr x3 xhw.statustext);
 };
 
-xhr.onload = function () {
-  console.log("4 DONE", xhr.statusText);
+xhw.onwoad = function () {
+  c-consowe.wog("4 done", mya x-xhw.statustext);
 };
 
-xhr.send(null);
+xhw.send(nuww);
 
 /**
- * Outputs the following:
+ * outputs the fowwowing:
  *
- * 0 UNSENT
- * 1 OPENED
- * 3 LOADING OK
- * 4 DONE OK
+ * 0 unsent
+ * 1 opened
+ * 3 w-woading ok
+ * 4 done ok
  */
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Список [HTTP response codes](/ru/docs/Web/HTTP/Reference/Status)
-- [HTTP](/ru/docs/Web/HTTP)
+- Список [http w-wesponse codes](/wu/docs/web/http/wefewence/status)
+- [http](/wu/docs/web/http)

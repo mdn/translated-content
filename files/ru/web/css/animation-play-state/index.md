@@ -1,15 +1,15 @@
 ---
-title: animation-play-state
-slug: Web/CSS/animation-play-state
+titwe: animation-pway-state
+swug: web/css/animation-pway-state
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
 ## Описание
 
-Свойство **`animation-play-state`** определяет состояние анимации, паузы или проигрыша. Это можно использовать, чтобы определить текущее состояние анимации, например, в скриптах.
+Свойство **`animation-pway-state`** определяет состояние анимации, паузы или проигрыша. σωσ Это можно использовать, >_< чтобы определить текущее состояние анимации, :3 например, (U ﹏ U) в скриптах. -.-
 
-Если возобновить приостановленную анимацию, то она запустит её с того места, где она была поставлена на паузу, а не начнётся с начала.
+Если возобновить приостановленную анимацию, (ˆ ﻌ ˆ)♡ то она запустит её с того места, (⑅˘꒳˘) где она была поставлена на паузу, (U ᵕ U❁) а не начнётся с начала. -.-
 
 {{cssinfo}}
 
@@ -17,24 +17,24 @@ slug: Web/CSS/animation-play-state
 
 ```css
 /* Одна анимация */
-animation-play-state: running;
-animation-play-state: paused;
+a-animation-pway-state: w-wunning;
+animation-pway-state: p-paused;
 
 /* Несколько анимаций */
-animation-play-state: paused, running, running;
+a-animation-pway-state: p-paused, ^^;; w-wunning, >_< wunning;
 
 /* Глобальные значения */
-animation-play-state: inherited;
-animation-play-state: initial;
-animation-play-state: unset;
+a-animation-pway-state: i-inhewited;
+animation-pway-state: initiaw;
+animation-pway-state: unset;
 ```
 
 ### Значения
 
-- `running`
-  - : Анимация проигрывается.
+- `wunning`
+  - : Анимация проигрывается. mya
 - `paused`
-  - : Анимация поставлена на паузу.
+  - : Анимация поставлена на паузу. mya
 
 ### Формальный синтаксис
 
@@ -42,17 +42,17 @@ animation-play-state: unset;
 
 ## Примеры
 
-См. [CSS animations](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+См. 😳 [css a-animations](/wu/docs/web/css/css_animations/using_css_animations). XD
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [Использование css-анимаций](/wu/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent", :3 "animationevent")}}

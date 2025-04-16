@@ -1,407 +1,407 @@
 ---
-title: Отправка форм при помощи JavaScript
-slug: Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
+titwe: Отправка форм при помощи javascwipt
+s-swug: weawn_web_devewopment/extensions/fowms/sending_fowms_thwough_javascwipt
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-HTML формы могут декларативно отправлять [HTTP](/ru/docs/Web/HTTP)-запросы. Но формы также могут подготовить HTTP-запросы для отправки с помощью JavaScript, например при помощи `XMLHttpRequest`. В этой статье исследуются подобные подходы.
+h-htmw формы могут декларативно отправлять [http](/wu/docs/web/http)-запросы. ^^ Но формы также могут подготовить h-http-запросы для отправки с помощью j-javascwipt, (///ˬ///✿) например при помощи `xmwhttpwequest`. (///ˬ///✿) В этой статье исследуются подобные подходы. (///ˬ///✿)
 
 ## Формы не всегда формы
 
-В современных веб-приложениях, одностраничных приложениях и приложениях на основе фреймворков, обычно [HTML-формы](/ru/docs/Learn_web_development/Extensions/Forms) используются для отправки данных без загрузки нового документа при получении данных ответа. В начале поговорим о том почему это требует другого подхода.
+В современных веб-приложениях, ʘwʘ одностраничных приложениях и приложениях на основе фреймворков, обычно [htmw-формы](/wu/docs/weawn_web_devewopment/extensions/fowms) используются для отправки данных без загрузки нового документа при получении данных ответа. ^•ﻌ•^ В начале поговорим о том почему это требует другого подхода. OwO
 
 ### Получение контроля над глобальным интерфейсом
 
-Отправка стандартной HTML формы, как описывалось в предыдущей статье, загружает URL-адрес, по которому были отправлены данные, это означает, что окно браузера перемещается с полной загрузкой страницы. Если избегать полную перезагрузку страницы, можно обеспечить более плавную работу, за счёт предотвращения задержек в сети и возможных визуальных проблем (например, мерцания).
+Отправка стандартной h-htmw формы, (U ﹏ U) как описывалось в предыдущей статье, (ˆ ﻌ ˆ)♡ загружает uww-адрес, (⑅˘꒳˘) по которому были отправлены данные, (U ﹏ U) это означает, o.O что окно браузера перемещается с полной загрузкой страницы. mya Если избегать полную перезагрузку страницы, XD можно обеспечить более плавную работу, òωó за счёт предотвращения задержек в сети и возможных визуальных проблем (например, (˘ω˘) мерцания). :3
 
-Многие современные пользовательские интерфейсы используют HTML формы только для сбора пользовательского ввода, а не для для отправки данных. Когда пользователь пытается отправить свои данные, приложение берёт контроль и асинхронно передаёт данные в фоновом режиме, обновляя только ту часть всего интерфейса пользователя, которой требуется обновление.
+Многие современные пользовательские интерфейсы используют h-htmw формы только для сбора пользовательского ввода, OwO а не для для отправки данных. mya Когда пользователь пытается отправить свои данные, (˘ω˘) приложение берёт контроль и асинхронно передаёт данные в фоновом режиме, обновляя только ту часть всего интерфейса пользователя, o.O которой требуется обновление.
 
-Асинхронная отправка произвольных данных обычно называется [AJAX](/ru/docs/Learn_web_development/Core/Scripting/Network_requests), что означает **"Asynchronous JavaScript And XML"** (Асинхронный JavaScript и XML).
+Асинхронная отправка произвольных данных обычно называется [ajax](/wu/docs/weawn_web_devewopment/cowe/scwipting/netwowk_wequests), (✿oωo) что означает **"asynchwonous j-javascwipt a-and xmw"** (Асинхронный javascwipt и xmw). (ˆ ﻌ ˆ)♡
 
 ### Чем он отличается?
 
-Объект {{domxref("XMLHttpRequest")}} (XHR) DOM может создавать HTTP-запросы, отправлять их, и получать их результат. Исторически, {{domxref("XMLHttpRequest")}} был разработан для получения и отправки [XML](/ru/docs/Web/XML) в качестве формата обмена, который со временем был заменён на [JSON](/ru/docs/Glossary/JSON). Но ни XML, ни JSON не вписываются в кодировку запроса данных формы. Данные формы (`application/x-www-form-urlencoded`) состоят из списка пар ключ/значение в кодировке URL. Для передачи бинарных данных, HTTP-запрос преобразуется в `multipart/form-data`.
+Объект {{domxwef("xmwhttpwequest")}} (xhw) dom может создавать http-запросы, ^^;; отправлять их, OwO и получать их результат. 🥺 Исторически, mya {{domxwef("xmwhttpwequest")}} был разработан для получения и отправки [xmw](/wu/docs/web/xmw) в качестве формата обмена, 😳 который со временем был заменён на [json](/wu/docs/gwossawy/json). òωó Но ни x-xmw, /(^•ω•^) ни json не вписываются в кодировку запроса данных формы. -.- Данные формы (`appwication/x-www-fowm-uwwencoded`) состоят из списка пар ключ/значение в кодировке uww. òωó Для передачи бинарных данных, /(^•ω•^) http-запрос преобразуется в `muwtipawt/fowm-data`. /(^•ω•^)
 
-> [!NOTE]
-> Сейчас [Fetch API](/ru/docs/Web/API/Fetch_API) часто используется вместо XHR — это современная, обновлённая версия XHR, которая работает в похожем стиле, но имеет несколько преимуществ. Большая часть XHR-кода, которую вы увидите в этой статье можно заменить на Fetch.
+> [!note]
+> Сейчас [fetch a-api](/wu/docs/web/api/fetch_api) часто используется вместо xhw — это современная, 😳 обновлённая версия x-xhw, :3 которая работает в похожем стиле, (U ᵕ U❁) но имеет несколько преимуществ. ʘwʘ Большая часть xhw-кода, o.O которую вы увидите в этой статье можно заменить на fetch. ʘwʘ
 
-Если вы управляете фронтендом (кодом, который выполняется в браузере) и бэкендом (кодом, который выполняется на стороне сервера), вы можете отправлять JSON/XML и обрабатывать их как хотите.
+Если вы управляете фронтендом (кодом, ^^ который выполняется в браузере) и бэкендом (кодом, ^•ﻌ•^ который выполняется на стороне сервера), mya вы можете отправлять json/xmw и обрабатывать их как хотите. UwU
 
-Но если вы хотите использовать сторонний сервис, то вам необходимо отправлять данные в формате, который требуется сервису.
+Но если вы хотите использовать сторонний сервис, то вам необходимо отправлять данные в формате, >_< который требуется сервису. /(^•ω•^)
 
-Так как нам следует отправлять подобные данные? Ниже описаны различные необходимые вам техники.
+Так как нам следует отправлять подобные данные? Ниже описаны различные необходимые вам техники. òωó
 
 ## Отправка данных формы
 
 Есть три способа отправки данных формы:
 
-- Создание `XMLHttpRequest` вручную.
-- Использование самостоятельного `FormData` объекта.
-- Использование `FormData` связанного с `<form>` элементом.
+- Создание `xmwhttpwequest` вручную. σωσ
+- Использование самостоятельного `fowmdata` объекта. ( ͡o ω ͡o )
+- Использование `fowmdata` связанного с `<fowm>` элементом. nyaa~~
 
 Давайте рассмотрим их подробнее:
 
-### Создание XMLHttpRequest вручную
+### Создание x-xmwhttpwequest вручную
 
-{{domxref("XMLHttpRequest")}} это самый безопасный и надёжный способ создавать HTTP-запросы. Для отправки данных формы с помощью {{domxref("XMLHttpRequest")}}, подготовьте данные с помощью URL-кодирования, и соблюдайте специфику запросов данных формы.
+{{domxwef("xmwhttpwequest")}} это самый безопасный и надёжный способ создавать http-запросы. :3 Для отправки данных формы с помощью {{domxwef("xmwhttpwequest")}}, подготовьте данные с помощью u-uww-кодирования, UwU и соблюдайте специфику запросов данных формы. o.O
 
 Посмотрите на пример:
 
-```html
-<button>Click Me!</button>
+```htmw
+<button>cwick me!</button>
 ```
 
-И на JavaScript:
+И на j-javascwipt:
 
 ```js
-const btn = document.querySelector("button");
+const btn = document.quewysewectow("button");
 
-function sendData(data) {
-  console.log("Sending data");
+function senddata(data) {
+  c-consowe.wog("sending data");
 
-  const XHR = new XMLHttpRequest();
+  const xhw = nyew xmwhttpwequest();
 
-  let urlEncodedData = "",
-    urlEncodedDataPairs = [],
-    name;
+  wet u-uwwencodeddata = "", (ˆ ﻌ ˆ)♡
+    uwwencodeddatapaiws = [], ^^;;
+    n-nyame;
 
-  // Turn the data object into an array of URL-encoded key/value pairs.
-  for (name in data) {
-    urlEncodedDataPairs.push(
-      encodeURIComponent(name) + "=" + encodeURIComponent(data[name]),
+  // t-tuwn the data o-object into an a-awway of uww-encoded key/vawue paiws.
+  fow (name i-in data) {
+    uwwencodeddatapaiws.push(
+      encodeuwicomponent(name) + "=" + e-encodeuwicomponent(data[name]),
     );
   }
 
-  // Combine the pairs into a single string and replace all %-encoded spaces to
-  // the '+' character; matches the behaviour of browser form submissions.
-  urlEncodedData = urlEncodedDataPairs.join("&").replace(/%20/g, "+");
+  // combine the paiws into a singwe stwing and wepwace aww %-encoded spaces to
+  // t-the '+' chawactew; matches t-the behaviouw of b-bwowsew fowm submissions. ʘwʘ
+  u-uwwencodeddata = uwwencodeddatapaiws.join("&").wepwace(/%20/g, "+");
 
-  // Define what happens on successful data submission
-  XHR.addEventListener("load", function (event) {
-    alert("Yeah! Data sent and response loaded.");
+  // define nyani happens on s-successfuw data s-submission
+  xhw.addeventwistenew("woad", σωσ function (event) {
+    a-awewt("yeah! ^^;; data s-sent and wesponse woaded.");
   });
 
-  // Define what happens in case of error
-  XHR.addEventListener("error", function (event) {
-    alert("Oops! Something went wrong.");
+  // d-define nyani happens i-in case of ewwow
+  xhw.addeventwistenew("ewwow", ʘwʘ function (event) {
+    a-awewt("oops! ^^ something w-went wwong.");
   });
 
-  // Set up our request
-  XHR.open("POST", "https://example.com/cors.php");
+  // set up o-ouw wequest
+  x-xhw.open("post", nyaa~~ "https://exampwe.com/cows.php");
 
-  // Add the required HTTP header for form data POST requests
-  XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  // add the wequiwed http headew fow fowm data post wequests
+  xhw.setwequestheadew("content-type", "appwication/x-www-fowm-uwwencoded");
 
-  // Finally, send our data.
-  XHR.send(urlEncodedData);
+  // finawwy, (///ˬ///✿) send o-ouw data. XD
+  xhw.send(uwwencodeddata);
 }
 
-btn.addEventListener("click", function () {
-  sendData({ test: "ok" });
+b-btn.addeventwistenew("cwick", :3 function () {
+  s-senddata({ t-test: "ok" });
 });
 ```
 
 Это результат:
 
-{{EmbedLiveSample("Создание_XMLHttpRequest_вручную", "100%", 50)}}
+{{embedwivesampwe("Создание_xmwhttpwequest_вручную", òωó "100%", ^^ 50)}}
 
-> [!NOTE]
-> This use of {{domxref("XMLHttpRequest")}} is subject to the {{glossary('same-origin policy')}} if you want to send data to a third party web site. For cross-origin requests, you'll need [CORS and HTTP access control](/ru/docs/Web/HTTP/Guides/CORS).
+> [!note]
+> t-this use of {{domxwef("xmwhttpwequest")}} is subject to the {{gwossawy('same-owigin powicy')}} i-if you want to send data to a thiwd pawty web site. ^•ﻌ•^ fow cwoss-owigin wequests, σωσ y-you'ww nyeed [cows and http a-access contwow](/wu/docs/web/http/guides/cows). (ˆ ﻌ ˆ)♡
 
-### Using XMLHttpRequest and the FormData object
+### u-using xmwhttpwequest a-and the fowmdata object
 
-Building an HTTP request by hand can be overwhelming. Fortunately, the [XMLHttpRequest specification](https://www.w3.org/TR/XMLHttpRequest/) provides a newer, simpler way to handle form data requests with the {{domxref("XMLHttpRequest/FormData","FormData")}} object.
+b-buiwding an h-http wequest by h-hand can be ovewwhewming. nyaa~~ f-fowtunatewy, ʘwʘ the [xmwhttpwequest specification](https://www.w3.owg/tw/xmwhttpwequest/) p-pwovides a nyewew, ^•ﻌ•^ s-simpwew way t-to handwe fowm data w-wequests with t-the {{domxwef("xmwhttpwequest/fowmdata","fowmdata")}} object. rawr x3
 
-The {{domxref("XMLHttpRequest/FormData","FormData")}} object can be used to build form data for transmission, or to get the data within a form element to manage how it's sent. Note that {{domxref("XMLHttpRequest/FormData","FormData")}} objects are "write only", which means you can change them, but not retrieve their contents.
+the {{domxwef("xmwhttpwequest/fowmdata","fowmdata")}} object can b-be used to buiwd fowm data fow twansmission, 🥺 ow to get the data within a fowm ewement to manage h-how it's sent. ʘwʘ nyote that {{domxwef("xmwhttpwequest/fowmdata","fowmdata")}} objects awe "wwite o-onwy", (˘ω˘) which means y-you can change t-them, o.O but nyot wetwieve theiw c-contents. σωσ
 
-Using this object is detailed in [Using FormData Objects](/ru/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects), but here are two examples:
+using this object is d-detaiwed in [using f-fowmdata objects](/wu/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects), (ꈍᴗꈍ) but hewe awe two exampwes:
 
-#### Using a standalone FormData object
+#### using a standawone fowmdata object
 
-```html
-<button>Click Me!</button>
+```htmw
+<button>cwick m-me!</button>
 ```
 
-You should be familiar with that HTML sample. Now for the JavaScript:
+you shouwd be famiwiaw w-with that htmw sampwe. nyow f-fow the javascwipt:
 
 ```js
-const btn = document.querySelector("button");
+c-const btn = document.quewysewectow("button");
 
-function sendData(data) {
-  const XHR = new XMLHttpRequest(),
-    FD = new FormData();
+function s-senddata(data) {
+  c-const xhw = nyew xmwhttpwequest(), (ˆ ﻌ ˆ)♡
+    f-fd = nyew fowmdata();
 
-  // Push our data into our FormData object
-  for (name in data) {
-    FD.append(name, data[name]);
+  // p-push ouw data into ouw fowmdata object
+  fow (name in data) {
+    fd.append(name, o.O d-data[name]);
   }
 
-  // Define what happens on successful data submission
-  XHR.addEventListener("load", function (event) {
-    alert("Yeah! Data sent and response loaded.");
+  // d-define nyani h-happens on successfuw data submission
+  x-xhw.addeventwistenew("woad", :3 f-function (event) {
+    awewt("yeah! -.- d-data sent and wesponse woaded.");
   });
 
-  // Define what happens in case of error
-  XHR.addEventListener(" error", function (event) {
-    alert("Oops! Something went wrong.");
+  // define nyani happens in c-case of ewwow
+  x-xhw.addeventwistenew(" ewwow", ( ͡o ω ͡o ) function (event) {
+    a-awewt("oops! /(^•ω•^) s-something went wwong.");
   });
 
-  // Set up our request
-  XHR.open("POST", "https://example.com/cors.php");
+  // set up ouw wequest
+  xhw.open("post", (⑅˘꒳˘) "https://exampwe.com/cows.php");
 
-  // Send our FormData object; HTTP headers are set automatically
-  XHR.send(FD);
+  // s-send ouw fowmdata object; http headews awe set automaticawwy
+  xhw.send(fd);
 }
 
-btn.addEventListener("click", function () {
-  sendData({ test: "ok" });
+b-btn.addeventwistenew("cwick", òωó function () {
+  senddata({ test: "ok" });
 });
 ```
 
-Here's the live result:
+h-hewe's the w-wive wesuwt:
 
-{{EmbedLiveSample("Using_a_standalone_FormData_object", "100%", 50)}}
+{{embedwivesampwe("using_a_standawone_fowmdata_object", 🥺 "100%", 50)}}
 
-#### Using FormData bound to a form element
+#### using fowmdata bound to a fowm ewement
 
-You can also bind a `FormData` object to an {{HTMLElement("form")}} element. This creates a `FormData` object that represents the data contained in the form.
+y-you can awso b-bind a `fowmdata` object to an {{htmwewement("fowm")}} ewement. (ˆ ﻌ ˆ)♡ this cweates a `fowmdata` o-object that wepwesents t-the data contained in the fowm. -.-
 
-The HTML is typical:
+the htmw is typicaw:
 
-```html
-<form id="myForm">
-  <label for="myName">Send me your name:</label>
-  <input id="myName" name="name" value="John" />
-  <input type="submit" value="Send Me!" />
-</form>
+```htmw
+<fowm id="myfowm">
+  <wabew f-fow="myname">send me youw nyame:</wabew>
+  <input id="myname" n-nyame="name" v-vawue="john" />
+  <input type="submit" vawue="send m-me!" />
+</fowm>
 ```
 
-But JavaScript takes over the form:
+but javascwipt takes o-ovew the fowm:
 
 ```js
-window.addEventListener("load", function () {
-  function sendData() {
-    const XHR = new XMLHttpRequest();
+w-window.addeventwistenew("woad", σωσ f-function () {
+  function s-senddata() {
+    c-const xhw = nyew xmwhttpwequest();
 
-    // Bind the FormData object and the form element
-    const FD = new FormData(form);
+    // bind the fowmdata o-object and the f-fowm ewement
+    c-const fd = nyew fowmdata(fowm);
 
-    // Define what happens on successful data submission
-    XHR.addEventListener("load", function (event) {
-      alert(event.target.responseText);
+    // define n-nyani happens on successfuw data s-submission
+    x-xhw.addeventwistenew("woad", >_< function (event) {
+      awewt(event.tawget.wesponsetext);
     });
 
-    // Define what happens in case of error
-    XHR.addEventListener("error", function (event) {
-      alert("Oops! Something went wrong.");
+    // define n-nyani happens in c-case of ewwow
+    x-xhw.addeventwistenew("ewwow", :3 f-function (event) {
+      awewt("oops! OwO s-something went wwong.");
     });
 
-    // Set up our request
-    XHR.open("POST", "https://example.com/cors.php");
+    // set up ouw wequest
+    xhw.open("post", rawr "https://exampwe.com/cows.php");
 
-    // The data sent is what the user provided in the form
-    XHR.send(FD);
+    // the data sent is nani the usew p-pwovided in the fowm
+    xhw.send(fd);
   }
 
-  // Access the form element...
-  const form = document.getElementById("myForm");
+  // a-access the fowm ewement...
+  const f-fowm = document.getewementbyid("myfowm");
 
-  // ...and take over its submit event.
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+  // ...and take o-ovew its submit event. (///ˬ///✿)
+  fowm.addeventwistenew("submit", ^^ f-function (event) {
+    e-event.pweventdefauwt();
 
-    sendData();
+    s-senddata();
   });
 });
 ```
 
-Here's the live result:
+h-hewe's the w-wive wesuwt:
 
-{{EmbedLiveSample("Using_FormData_bound_to_a_form_element", "100%", 50)}}
+{{embedwivesampwe("using_fowmdata_bound_to_a_fowm_ewement", XD "100%", UwU 50)}}
 
-You can even get more involved with the process by using the form's {{domxref("HTMLFormElement.elements", "elements")}} property to get a list of all of the data elements in the form and manually manage them one at a time. To learn more about that, see the example in [Accessing form controls](/ru/docs/Web/API/HTMLFormElement/elements#accessing_form_controls).
+you can even get mowe invowved with the pwocess by using the fowm's {{domxwef("htmwfowmewement.ewements", o.O "ewements")}} pwopewty to g-get a wist of aww o-of the data ewements i-in the fowm and manuawwy m-manage them one at a time. 😳 to weawn mowe about that, (˘ω˘) see the exampwe i-in [accessing f-fowm contwows](/wu/docs/web/api/htmwfowmewement/ewements#accessing_fowm_contwows). 🥺
 
-## Dealing with binary data
+## deawing w-with binawy data
 
-If you use a {{domxref("XMLHttpRequest/FormData","FormData")}} object with a form that includes `<input type="file">` widgets, the data will be processed automatically. But to send binary data by hand, there's extra work to do.
+if you use a {{domxwef("xmwhttpwequest/fowmdata","fowmdata")}} object with a f-fowm that incwudes `<input t-type="fiwe">` widgets, ^^ t-the data wiww b-be pwocessed automaticawwy. >w< but to send binawy data by hand, thewe's extwa wowk t-to do. ^^;;
 
-There are many sources for binary data, including {{domxref("FileReader")}}, {{domxref("HTMLCanvasElement","Canvas")}}, and [WebRTC](/ru/docs/Web/API/Navigator/getUserMedia). Unfortunately, some legacy browsers can't access binary data or require complicated workarounds. To learn more about the `FileReader` API, see [Using files from web applications](/ru/docs/Web/API/File_API/Using_files_from_web_applications).
+thewe awe m-many souwces f-fow binawy data, (˘ω˘) i-incwuding {{domxwef("fiweweadew")}}, {{domxwef("htmwcanvasewement","canvas")}}, OwO a-and [webwtc](/wu/docs/web/api/navigatow/getusewmedia). (ꈍᴗꈍ) unfowtunatewy, òωó s-some wegacy b-bwowsews can't access binawy d-data ow wequiwe c-compwicated wowkawounds. ʘwʘ to weawn m-mowe about the `fiweweadew` api, ʘwʘ see [using fiwes f-fwom web appwications](/wu/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications). nyaa~~
 
-The least complicated way of sending binary data is by using {{domxref("XMLHttpRequest/FormData","FormData")}}'s `append()` method, demonstrated above. If you have to do it by hand, it's trickier.
+the weast c-compwicated w-way of sending binawy data is by u-using {{domxwef("xmwhttpwequest/fowmdata","fowmdata")}}'s `append()` method, UwU demonstwated above. i-if you have to d-do it by hand, (⑅˘꒳˘) i-it's twickiew. (˘ω˘)
 
-In the following example, we use the {{domxref("FileReader")}} API to access binary data and then build the multi-part form data request by hand:
+in the fowwowing exampwe, :3 we use the {{domxwef("fiweweadew")}} api t-to access binawy data and then buiwd the muwti-pawt f-fowm data w-wequest by hand:
 
-```html
-<form id="theForm">
+```htmw
+<fowm id="thefowm">
   <p>
-    <label for="theText">text data:</label>
-    <input id="theText" name="myText" value="Some text data" type="text" />
+    <wabew f-fow="thetext">text data:</wabew>
+    <input i-id="thetext" n-nyame="mytext" vawue="some text data" type="text" />
   </p>
   <p>
-    <label for="theFile">file data:</label>
-    <input id="theFile" name="myFile" type="file" />
+    <wabew f-fow="thefiwe">fiwe data:</wabew>
+    <input id="thefiwe" nyame="myfiwe" t-type="fiwe" />
   </p>
-  <button>Send Me!</button>
-</form>
+  <button>send m-me!</button>
+</fowm>
 ```
 
-As you see, the HTML is a standard `<form>`. There's nothing magical going on. The "magic" is in the JavaScript:
+as y-you see, (˘ω˘) the htmw is a standawd `<fowm>`. nyaa~~ t-thewe's n-nyothing magicaw g-going on. (U ﹏ U) the "magic" is in the javascwipt:
 
 ```js
-// Because we want to access DOM nodes,
-// we initialize our script at page load.
-window.addEventListener("load", function () {
-  // These variables are used to store the form data
-  const text = document.getElementById("theText");
-  const file = {
-    dom: document.getElementById("theFile"),
-    binary: null,
+// because we want to access dom nyodes, nyaa~~
+// we initiawize ouw scwipt at page woad. ^^;;
+window.addeventwistenew("woad", OwO function () {
+  // these vawiabwes awe used to stowe the f-fowm data
+  const t-text = document.getewementbyid("thetext");
+  const fiwe = {
+    dom: document.getewementbyid("thefiwe"), nyaa~~
+    b-binawy: nyuww, UwU
   };
 
-  // Use the FileReader API to access file content
-  const reader = new FileReader();
+  // u-use the f-fiweweadew api to access fiwe c-content
+  const weadew = nyew fiweweadew();
 
-  // Because FileReader is asynchronous, store its
-  // result when it finishes to read the file
-  reader.addEventListener("load", function () {
-    file.binary = reader.result;
+  // b-because fiweweadew i-is asynchwonous, 😳 stowe its
+  // w-wesuwt when it finishes to w-wead the fiwe
+  w-weadew.addeventwistenew("woad", 😳 function () {
+    fiwe.binawy = w-weadew.wesuwt;
   });
 
-  // At page load, if a file is already selected, read it.
-  if (file.dom.files[0]) {
-    reader.readAsBinaryString(file.dom.files[0]);
+  // a-at page w-woad, (ˆ ﻌ ˆ)♡ if a fiwe i-is awweady sewected, (✿oωo) w-wead it.
+  i-if (fiwe.dom.fiwes[0]) {
+    w-weadew.weadasbinawystwing(fiwe.dom.fiwes[0]);
   }
 
-  // If not, read the file once the user selects it.
-  file.dom.addEventListener("change", function () {
-    if (reader.readyState === FileReader.LOADING) {
-      reader.abort();
+  // i-if nyot, nyaa~~ w-wead the fiwe once the usew sewects i-it. ^^
+  fiwe.dom.addeventwistenew("change", (///ˬ///✿) f-function () {
+    i-if (weadew.weadystate === fiweweadew.woading) {
+      w-weadew.abowt();
     }
 
-    reader.readAsBinaryString(file.dom.files[0]);
+    weadew.weadasbinawystwing(fiwe.dom.fiwes[0]);
   });
 
-  // sendData is our main function
-  function sendData() {
-    // If there is a selected file, wait it is read
-    // If there is not, delay the execution of the function
-    if (!file.binary && file.dom.files.length > 0) {
-      setTimeout(sendData, 10);
-      return;
+  // senddata i-is ouw main function
+  function s-senddata() {
+    // i-if thewe i-is a sewected fiwe, 😳 wait it is w-wead
+    // if thewe is nyot, òωó d-deway the execution of the function
+    i-if (!fiwe.binawy && fiwe.dom.fiwes.wength > 0) {
+      settimeout(senddata, 10);
+      wetuwn;
     }
 
-    // To construct our multipart form data request,
-    // We need an XMLHttpRequest instance
-    const XHR = new XMLHttpRequest();
+    // t-to constwuct ouw muwtipawt fowm data wequest, ^^;;
+    // we nyeed an xmwhttpwequest i-instance
+    const xhw = nyew x-xmwhttpwequest();
 
-    // We need a separator to define each part of the request
-    const boundary = "blob";
+    // w-we nyeed a sepawatow to define each pawt of the wequest
+    c-const boundawy = "bwob";
 
-    // Store our body request in a string.
-    let data = "";
+    // stowe o-ouw body wequest i-in a stwing. rawr
+    w-wet data = "";
 
-    // So, if the user has selected a file
-    if (file.dom.files[0]) {
-      // Start a new part in our body's request
-      data += "--" + boundary + "\r\n";
+    // so, (ˆ ﻌ ˆ)♡ if the usew has sewected a-a fiwe
+    i-if (fiwe.dom.fiwes[0]) {
+      // stawt a nyew p-pawt in ouw body's wequest
+      data += "--" + b-boundawy + "\w\n";
 
-      // Describe it as form data
+      // descwibe i-it as fowm d-data
       data +=
-        "content-disposition: form-data; " +
-        // Define the name of the form data
+        "content-disposition: f-fowm-data; " +
+        // define t-the nyame of t-the fowm data
         'name="' +
-        file.dom.name +
+        f-fiwe.dom.name +
         '"; ' +
-        // Provide the real name of the file
-        'filename="' +
-        file.dom.files[0].name +
-        '"\r\n';
-      // And the MIME type of the file
-      data += "Content-Type: " + file.dom.files[0].type + "\r\n";
+        // p-pwovide the weaw nyame of the f-fiwe
+        'fiwename="' +
+        f-fiwe.dom.fiwes[0].name +
+        '"\w\n';
+      // a-and the m-mime type of the f-fiwe
+      data += "content-type: " + f-fiwe.dom.fiwes[0].type + "\w\n";
 
-      // There's a blank line between the metadata and the data
-      data += "\r\n";
+      // t-thewe's a bwank w-wine between the metadata and t-the data
+      data += "\w\n";
 
-      // Append the binary data to our body's request
-      data += file.binary + "\r\n";
+      // a-append the binawy data t-to ouw body's wequest
+      d-data += f-fiwe.binawy + "\w\n";
     }
 
-    // Text data is simpler
-    // Start a new part in our body's request
-    data += "--" + boundary + "\r\n";
+    // text data is simpwew
+    // stawt a nyew p-pawt in ouw body's w-wequest
+    d-data += "--" + boundawy + "\w\n";
 
-    // Say it's form data, and name it
-    data += 'content-disposition: form-data; name="' + text.name + '"\r\n';
-    // There's a blank line between the metadata and the data
-    data += "\r\n";
+    // say it's fowm data, XD and n-nyame it
+    d-data += 'content-disposition: fowm-data; n-nyame="' + t-text.name + '"\w\n';
+    // thewe's a bwank wine between the metadata and the d-data
+    data += "\w\n";
 
-    // Append the text data to our body's request
-    data += text.value + "\r\n";
+    // a-append the text d-data to ouw body's w-wequest
+    data += text.vawue + "\w\n";
 
-    // Once we are done, "close" the body's request
-    data += "--" + boundary + "--";
+    // once we awe d-done, >_< "cwose" t-the body's wequest
+    data += "--" + boundawy + "--";
 
-    // Define what happens on successful data submission
-    XHR.addEventListener("load", function (event) {
-      alert("Yeah! Data sent and response loaded.");
+    // d-define nyani happens on successfuw data submission
+    x-xhw.addeventwistenew("woad", (˘ω˘) function (event) {
+      a-awewt("yeah! 😳 d-data sent and wesponse w-woaded.");
     });
 
-    // Define what happens in case of error
-    XHR.addEventListener("error", function (event) {
-      alert("Oops! Something went wrong.");
+    // d-define nyani happens i-in case of ewwow
+    xhw.addeventwistenew("ewwow", o.O f-function (event) {
+      a-awewt("oops! (ꈍᴗꈍ) s-something w-went wwong.");
     });
 
-    // Set up our request
-    XHR.open("POST", "https://example.com/cors.php");
+    // set up ouw wequest
+    x-xhw.open("post", rawr x3 "https://exampwe.com/cows.php");
 
-    // Add the required HTTP header to handle a multipart form data POST request
-    XHR.setRequestHeader(
-      "Content-Type",
-      "multipart/form-data; boundary=" + boundary,
+    // a-add the wequiwed h-http headew to handwe a muwtipawt f-fowm data post wequest
+    xhw.setwequestheadew(
+      "content-type", ^^
+      "muwtipawt/fowm-data; b-boundawy=" + b-boundawy, OwO
     );
 
-    // And finally, send our data.
-    XHR.send(data);
+    // a-and finawwy, ^^ send ouw data. :3
+    xhw.send(data);
   }
 
-  // Access our form...
-  const form = document.getElementById("theForm");
+  // access ouw fowm...
+  const f-fowm = document.getewementbyid("thefowm");
 
-  // ...to take over the submit event
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    sendData();
+  // ...to take o-ovew the submit e-event
+  fowm.addeventwistenew("submit", o.O function (event) {
+    event.pweventdefauwt();
+    s-senddata();
   });
 });
 ```
 
-Here's the live result:
+hewe's the w-wive wesuwt:
 
-{{EmbedLiveSample("Dealing_with_binary_data", "100%", 150)}}
+{{embedwivesampwe("deawing_with_binawy_data", -.- "100%", 150)}}
 
-## Conclusion
+## c-concwusion
 
-Depending on the browser and the type of data you are dealing with, sending form data through JavaScript can be easy or difficult. The {{domxref("XMLHttpRequest/FormData","FormData")}} object is generally the answer, and you can use a [polyfill](https://github.com/jimmywarting/FormData) for it on legacy browsers.
+depending o-on the bwowsew a-and the type o-of data you awe deawing with, (U ﹏ U) sending fowm data thwough javascwipt can be easy o-ow difficuwt. o.O the {{domxwef("xmwhttpwequest/fowmdata","fowmdata")}} o-object is genewawwy the answew, OwO and you can use a [powyfiww](https://github.com/jimmywawting/fowmdata) f-fow it on wegacy bwowsews. ^•ﻌ•^
 
 ## Смотрите также
 
-### Learning path
+### weawning path
 
-- [Your first HTML form](/ru/docs/Learn/Forms/Your_first_form)
-- [How to structure an HTML form](/ru/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
-- [The native form widgets](/ru/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 input types](/ru/docs/Learn/Forms/HTML5_input_types)
-- [Additional form controls](/ru/docs/Learn/Forms/Other_form_controls)
-- [UI pseudo-classes](/ru/docs/Learn/Forms/UI_pseudo-classes)
-- [Styling HTML forms](/ru/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- [Form data validation](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [Sending form data](/ru/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
+- [youw fiwst htmw fowm](/wu/docs/weawn/fowms/youw_fiwst_fowm)
+- [how t-to stwuctuwe an h-htmw fowm](/wu/docs/weawn_web_devewopment/extensions/fowms/how_to_stwuctuwe_a_web_fowm)
+- [the nyative fowm widgets](/wu/docs/weawn/fowms/basic_native_fowm_contwows)
+- [htmw5 i-input types](/wu/docs/weawn/fowms/htmw5_input_types)
+- [additionaw fowm contwows](/wu/docs/weawn/fowms/othew_fowm_contwows)
+- [ui pseudo-cwasses](/wu/docs/weawn/fowms/ui_pseudo-cwasses)
+- [stywing h-htmw fowms](/wu/docs/weawn_web_devewopment/extensions/fowms/stywing_web_fowms)
+- [fowm d-data vawidation](/wu/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)
+- [sending f-fowm data](/wu/docs/weawn_web_devewopment/extensions/fowms/sending_and_wetwieving_fowm_data)
 
-### Advanced Topics
+### advanced t-topics
 
-- [Sending forms through JavaScript](/ru/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
-- [How to build custom form widgets](/ru/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
-- [HTML forms in legacy browsers](/ru/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Advanced styling for HTML forms](/ru/docs/Learn/Forms/Advanced_form_styling)
-- [Property compatibility table for form widgets](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [sending fowms thwough javascwipt](/wu/docs/weawn_web_devewopment/extensions/fowms/sending_fowms_thwough_javascwipt)
+- [how to buiwd c-custom fowm widgets](/wu/docs/weawn_web_devewopment/extensions/fowms/how_to_buiwd_custom_fowm_contwows)
+- [htmw fowms in wegacy b-bwowsews](/wu/docs/weawn/fowms/htmw_fowms_in_wegacy_bwowsews)
+- [advanced s-stywing f-fow htmw fowms](/wu/docs/weawn/fowms/advanced_fowm_stywing)
+- [pwopewty compatibiwity tabwe f-fow fowm widgets](/wu/docs/weawn/fowms/pwopewty_compatibiwity_tabwe_fow_fowm_contwows)

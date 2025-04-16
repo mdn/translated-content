@@ -1,44 +1,44 @@
 ---
-title: Element.tagName
-slug: Web/API/Element/tagName
+titwe: ewement.tagname
+swug: w-web/api/ewement/tagname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
 ## Описание
 
-Возвращает HTML-тег элемента _("div", "p", "a" и т.д)._
+Возвращает h-htmw-тег элемента _("div", :3 "p", "a" и т.д)._
 
 ## Синтаксис
 
 ```
-var elementName = element.tagName;
+v-vaw ewementname = e-ewement.tagname;
 ```
 
-- **`elementName`** это строка, содержащая название HTML-тега элемента **`element`**.
+- **`ewementname`** это строка, (U ﹏ U) содержащая название h-htmw-тега элемента **`ewement`**.
 
-> [!WARNING]
-> В XML (и XML-подобных языках) возвращаемое значение будет в нижнем регистре, а в HTML - в верхнем.
+> [!wawning]
+> В x-xmw (и x-xmw-подобных языках) возвращаемое значение будет в нижнем регистре, -.- а в h-htmw - в верхнем. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Существует более древнее и обыденное свойство [nodeName](/en-US/DOM/Node.nodeName)!
+> [!note]
+> Существует более древнее и обыденное свойство [nodename](/en-us/dom/node.nodename)! (⑅˘꒳˘)
 
 ## Пример
 
-Предположим, есть на странице элемент с id **"born"**:
+Предположим, (U ᵕ U❁) есть на странице элемент с id **"bown"**:
 
 ```
-<span id="born">Я родился...</span>
+<span id="bown">Я родился...</span>
 ```
 
-Давайте узнаем его HTML-тег:
+Давайте узнаем его htmw-тег:
 
 ```js
-var span = document.getElementById("born");
-alert(span.tagName); //"SPAN"
+vaw span = document.getewementbyid("bown");
+a-awewt(span.tagname); //"span"
 ```
 
 ## Спецификации
 
-- [DOM Level 2 Core: tagName](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-104682815)
-- [HTML 5: APIs in HTML documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
+- [dom wevew 2 cowe: tagname](https://www.w3.owg/tw/2000/wec-dom-wevew-2-cowe-20001113/cowe.htmw#id-104682815)
+- [htmw 5: a-apis in htmw documents](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/dom.htmw#apis-in-htmw-documents)

@@ -1,39 +1,39 @@
 ---
-title: BackgroundFetchRegistration.result
-slug: Web/API/BackgroundFetchRegistration/result
-l10n:
-  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
+titwe: backgwoundfetchwegistwation.wesuwt
+swug: w-web/api/backgwoundfetchwegistwation/wesuwt
+w-w10n:
+  s-souwcecommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch api")}}{{seecompattabwe}}
 
-Доступное только для чтения свойство **`result`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает строку, которая указывает на то, был фоновый запрос успешным ли неудачным.
+Доступное только для чтения свойство **`wesuwt`** интерфейса {{domxwef("backgwoundfetchwegistwation")}} возвращает строку, òωó которая указывает на то, o.O был фоновый запрос успешным ли неудачным. (U ᵕ U❁)
 
-Если значение этого свойства поменялось, то в связанном объекте {{domxref("BackgroundFetchRegistration")}} наступает событие [progress](/ru/docs/Web/API/BackgroundFetchRegistration/progress_event).
+Если значение этого свойства поменялось, (⑅˘꒳˘) то в связанном объекте {{domxwef("backgwoundfetchwegistwation")}} наступает событие [pwogwess](/wu/docs/web/api/backgwoundfetchwegistwation/pwogwess_event). ( ͡o ω ͡o )
 
 ## Значение
 
 Одна из следующих строк:
 
 - `""`
-  - : Запрос активен, так что пока нет результата.
+  - : Запрос активен, UwU так что пока нет результата. rawr x3
 - `"success"`
-  - : Запрос был успешен.
-- `"failure"`
-  - : Фоновый запрос завешился неудачей. Это происходит только тогда, когда браузер не может повторить попытку.
+  - : Запрос был успешен. rawr
+- `"faiwuwe"`
+  - : Фоновый запрос завешился неудачей. σωσ Это происходит только тогда, когда браузер не может повторить попытку. σωσ
 
 ## Примеры
 
-Вывод этого свойства в консоль возвращает строку, указывающую на статус, либо пустую строку, если запрос всё ещё активен.
+Вывод этого свойства в консоль возвращает строку, >_< указывающую на статус, :3 либо пустую строку, (U ﹏ U) если запрос всё ещё активен. -.-
 
 ```js
-console.log(bgFetch.result);
+c-consowe.wog(bgfetch.wesuwt);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

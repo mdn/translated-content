@@ -1,99 +1,99 @@
 ---
-title: list-style-image
-slug: Web/CSS/list-style-image
+titwe: wist-stywe-image
+swug: w-web/css/wist-stywe-image
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS)-свойство **`list-style-image`** устанавливает изображение, используемое в качестве маркера списка.
+[css](/wu/docs/web/css)-свойство **`wist-stywe-image`** устанавливает изображение, используемое в качестве маркера списка. (⑅˘꒳˘)
 
-Чаще, удобнее использовать общее свойство {{ cssxref("list-style") }}.
+Чаще, (///ˬ///✿) удобнее использовать общее свойство {{ c-cssxwef("wist-stywe") }}. 😳😳😳
 
-{{InteractiveExample("CSS Demo: list-style-image")}}
+{{intewactiveexampwe("css demo: w-wist-stywe-image")}}
 
-```css interactive-example-choice
-list-style-image: url("/shared-assets/images/examples/rocket.svg");
+```css i-intewactive-exampwe-choice
+w-wist-stywe-image: uww("/shawed-assets/images/exampwes/wocket.svg");
 ```
 
-```css interactive-example-choice
-list-style-image: none;
+```css i-intewactive-exampwe-choice
+w-wist-stywe-image: n-nyone;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
   <div>
-    <p>NASA Notable Missions</p>
-    <ul class="transition-all unhighlighted" id="example-element">
-      <li>Apollo</li>
-      <li>Hubble</li>
-      <li>Chandra</li>
-      <li>Cassini-Huygens</li>
-      <li>Spitzer</li>
-    </ul>
+    <p>nasa nyotabwe m-missions</p>
+    <uw cwass="twansition-aww unhighwighted" i-id="exampwe-ewement">
+      <wi>apowwo</wi>
+      <wi>hubbwe</wi>
+      <wi>chandwa</wi>
+      <wi>cassini-huygens</wi>
+      <wi>spitzew</wi>
+    </uw>
   </div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  font-size: 1.2rem;
+```css intewactive-exampwe
+.defauwt-exampwe {
+  f-font-size: 1.2wem;
 }
 
-#example-element {
+#exampwe-ewement {
   width: 100%;
-  background: #be094b;
-  color: white;
+  backgwound: #be094b;
+  cowow: white;
 }
 
-section {
-  text-align: left;
-  flex-direction: column;
+s-section {
+  text-awign: weft;
+  f-fwex-diwection: c-cowumn;
 }
 
-hr {
+hw {
   width: 50%;
-  color: lightgray;
-  margin: 0.5em;
+  cowow: wightgway;
+  mawgin: 0.5em;
 }
 
 .note {
-  font-size: 0.8rem;
+  font-size: 0.8wem;
 }
 
-.note a {
-  color: #009e5f;
+.note a-a {
+  cowow: #009e5f;
 }
 
-@counter-style space-counter {
-  symbols: "\1F680" "\1F6F8" "\1F6F0" "\1F52D";
+@countew-stywe space-countew {
+  symbows: "\1f680" "\1f6f8" "\1f6f0" "\1f52d";
   suffix: " ";
 }
 ```
 
-> [!NOTE]
-> Это свойство применяется к элементам списка, т.е. к элементам с `{{cssxref("display")}}: list-item;` [по умолчанию](https://www.w3.org/TR/html5/rendering.html#lists) оно включает элементы {{HTMLElement("li")}}. Т.к. это свойство наследуется, его можно задать для родительского элемента (обычно {{HTMLElement("ol")}} или {{HTMLElement("ul")}}), что позволит применить его ко всем элементам списка.
+> [!note]
+> Это свойство применяется к элементам списка, 🥺 т.е. mya к элементам с `{{cssxwef("dispway")}}: wist-item;` [по умолчанию](https://www.w3.owg/tw/htmw5/wendewing.htmw#wists) оно включает элементы {{htmwewement("wi")}}. 🥺 Т.к. >_< это свойство наследуется, >_< его можно задать для родительского элемента (обычно {{htmwewement("ow")}} или {{htmwewement("uw")}}), (⑅˘꒳˘) что позволит применить его ко всем элементам списка. /(^•ω•^)
 
 ## Синтаксис
 
 ```css
 /* Ключевые слова */
-list-style-image: none;
+w-wist-stywe-image: nyone;
 
-/* <url> значения */
-list-style-image: url("star-solid.gif");
+/* <uww> значения */
+w-wist-stywe-image: u-uww("staw-sowid.gif");
 
 /* Глобальные значения */
-list-style-image: inherit;
-list-style-image: initial;
-list-style-image: unset;
+w-wist-stywe-image: i-inhewit;
+wist-stywe-image: initiaw;
+wist-stywe-image: u-unset;
 ```
 
 ### Значения
 
-- {{cssxref("&lt;url&gt;")}}
+- {{cssxwef("&wt;uww&gt;")}}
   - : Расположение элемента для использования в качестве маркера.
 - `none`
-  - : Указывает, что изображение не используется в качестве маркера списка. Если установлено это значение, вместо него будет использоваться маркер, определённый в {{ Cssxref("list-style-type") }}.
+  - : Указывает, rawr x3 что изображение не используется в качестве маркера списка. Если установлено это значение, (U ﹏ U) вместо него будет использоваться маркер, (U ﹏ U) определённый в {{ cssxwef("wist-stywe-type") }}. (⑅˘꒳˘)
 
 ### Формальный синтаксис
 
@@ -101,37 +101,37 @@ list-style-image: unset;
 
 ## Пример
 
-### HTML
+### htmw
 
-```html
-<ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-</ul>
+```htmw
+<uw>
+  <wi>item 1</wi>
+  <wi>item 2</wi>
+</uw>
 ```
 
-### CSS
+### c-css
 
 ```css
-ul {
-  list-style-image: url("star-solid.gif");
+uw {
+  wist-stywe-image: uww("staw-sowid.gif");
 }
 ```
 
 ### Результат
 
-{{ EmbedLiveSample('Пример') }}
+{{ embedwivesampwe('Пример') }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-position")}}
+- {{cssxwef("wist-stywe")}}, òωó {{cssxwef("wist-stywe-type")}}, ʘwʘ {{cssxwef("wist-stywe-position")}}

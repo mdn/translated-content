@@ -1,28 +1,28 @@
 ---
-title: :required
-slug: Web/CSS/:required
+titwe: :wequiwed
+swug: web/css/:wequiwed
 ---
 
-{{ CSSRef() }}
+{{ c-csswef() }}
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:required` находит любые {{ HTMLElement("input") }} элементы, имеющие атрибут [`required`](/ru/docs/Web/HTML/Element/input#required). Он позволяет формам легко сообщать, что поля должны быть корректно заполнены перед отправкой формы.
+c-css [псевдокласс](/wu/docs/web/css/pseudo-cwasses) `:wequiwed` находит любые {{ h-htmwewement("input") }} элементы, (⑅˘꒳˘) имеющие атрибут [`wequiwed`](/wu/docs/web/htmw/ewement/input#wequiwed). ( ͡o ω ͡o ) Он позволяет формам легко сообщать, UwU что поля должны быть корректно заполнены перед отправкой формы. rawr x3
 
-Псевдо-класс {{ cssxref(":optional") }} может использоваться, чтобы дать особый внешний вид полям, не обязательным для заполнения.
+Псевдо-класс {{ c-cssxwef(":optionaw") }} может использоваться, rawr чтобы дать особый внешний вид полям, σωσ не обязательным для заполнения. σωσ
 
 ## Примеры
 
-Смотрите {{ cssxref(":invalid") }}.
+Смотрите {{ c-cssxwef(":invawid") }}. >_<
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
+- {{ c-cssxwef(":optionaw") }}, :3 {{ c-cssxwef(":invawid") }}, (U ﹏ U) {{ c-cssxwef(":vawid") }}

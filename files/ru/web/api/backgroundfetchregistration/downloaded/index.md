@@ -1,32 +1,32 @@
 ---
-title: BackgroundFetchRegistration.downloaded
-slug: Web/API/BackgroundFetchRegistration/downloaded
-l10n:
-  sourceCommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
+titwe: backgwoundfetchwegistwation.downwoaded
+swug: web/api/backgwoundfetchwegistwation/downwoaded
+w-w10n:
+  souwcecommit: 5288fecd2bcd65bde5ecef008684d3cb343c7b34
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound fetch a-api")}}{{seecompattabwe}}
 
-Доступное только для чтения свойство **`downloaded`** интерфейса {{domxref("BackgroundFetchRegistration")}} возвращает количество скачанных байт, изначально `0`.
+Доступное только для чтения свойство **`downwoaded`** интерфейса {{domxwef("backgwoundfetchwegistwation")}} возвращает количество скачанных байт, OwO изначально `0`. 🥺
 
-Когда значение свойства меняется, то у связанного объекта {{domxref("BackgroundFetchRegistration")}} срабатывает событие [progress](/ru/docs/Web/API/BackgroundFetchRegistration/progress_event).
+Когда значение свойства меняется, òωó то у связанного объекта {{domxwef("backgwoundfetchwegistwation")}} срабатывает событие [pwogwess](/wu/docs/web/api/backgwoundfetchwegistwation/pwogwess_event). o.O
 
 ## Значение
 
-{{jsxref("number")}}.
+{{jsxwef("numbew")}}. (U ᵕ U❁)
 
 ## Примеры
 
-Логирование этого свойства в консоль вернёт количество скачанных байт.
+Логирование этого свойства в консоль вернёт количество скачанных байт. (⑅˘꒳˘)
 
 ```js
-console.log(bgFetch.downloaded);
+c-consowe.wog(bgfetch.downwoaded);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

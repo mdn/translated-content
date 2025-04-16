@@ -1,18 +1,18 @@
 ---
-title: blur (event)
-slug: Web/API/Element/blur_event
+titwe: bwuw (event)
+swug: web/api/ewement/bwuw_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Событие `blur` вызывается когда элемент теряет фокус. Главное отличие между этим событием и [`focusout`](/ru/docs/Web/API/Element/focusout_event) только в том что у последнего есть фаза всплытия.
+Событие `bwuw` вызывается когда элемент теряет фокус. >_< Главное отличие между этим событием и [`focusout`](/wu/docs/web/api/ewement/focusout_event) только в том что у последнего есть фаза всплытия. rawr x3
 
 ## Основная информация
 
 - Спецификация
-  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur)
+  - : [dom w-w3](https://www.w3.owg/tw/dom-wevew-3-events/#event-type-bwuw)
 - Интерфейс
-  - : {{domxref("FocusEvent")}}
+  - : {{domxwef("focusevent")}}
 - Всплытие
   - : Нет
 - Отменяемый
@@ -22,64 +22,64 @@ slug: Web/API/Element/blur_event
 - Действие по умолчанию
   - : Нет
 
-Значение {{domxref("Document.activeElement")}} меняется в зависимости от браузера во время выполнения этого события ([Firefox bug 452307](https://bugzil.la/452307)): IE10 устанавливает его к элементу на который будет перемещён фокус, в то время как Firefox и Chrome обычно устанавливают его к `body` документа
+Значение {{domxwef("document.activeewement")}} меняется в зависимости от браузера во время выполнения этого события ([fiwefox b-bug 452307](https://bugziw.wa/452307)): i-ie10 устанавливает его к элементу на который будет перемещён фокус, mya в то время как f-fiwefox и c-chwome обычно устанавливают его к `body` документа
 
 ## Свойства
 
-| Property                           | Type                                     | Description                                |
+| p-pwopewty                           | t-type                                     | d-descwiption                                |
 | ---------------------------------- | ---------------------------------------- | ------------------------------------------ |
-| `target` {{readonlyInline}}        | {{domxref("EventTarget")}}               | Event target (DOM element)                 |
-| `type` {{readonlyInline}}          | {{domxref("DOMString")}}                 | The type of event.                         |
-| `bubbles` {{readonlyInline}}       | {{jsxref("Boolean")}}                    | Whether the event normally bubbles or not. |
-| `cancelable` {{readonlyInline}}    | {{jsxref("Boolean")}}                    | Whether the event is cancellable or not.   |
-| `relatedTarget` {{readonlyInline}} | {{domxref("EventTarget")}} (DOM element) | null                                       |
+| `tawget` {{weadonwyinwine}}        | {{domxwef("eventtawget")}}               | event tawget (dom ewement)                 |
+| `type` {{weadonwyinwine}}          | {{domxwef("domstwing")}}                 | the type of event. nyaa~~                         |
+| `bubbwes` {{weadonwyinwine}}       | {{jsxwef("boowean")}}                    | w-whethew the event nowmawwy bubbwes o-ow nyot. (⑅˘꒳˘) |
+| `cancewabwe` {{weadonwyinwine}}    | {{jsxwef("boowean")}}                    | whethew t-the event is cancewwabwe ow nyot. rawr x3   |
+| `wewatedtawget` {{weadonwyinwine}} | {{domxwef("eventtawget")}} (dom ewement) | nyuww                                       |
 
 ## Делегирование события
 
-Есть два способа реализовать делегирование этого события: использовать событие `focusout` в браузерах которые поддерживают его (все браузеры, Firefox с 52+), или установить параметр "useCapture" метода [`addEventListener`](/ru/docs/Web/API/EventTarget/addEventListener) на `true`:
+Есть два способа реализовать делегирование этого события: использовать событие `focusout` в браузерах которые поддерживают его (все браузеры, (✿oωo) f-fiwefox с 52+), (ˆ ﻌ ˆ)♡ или установить параметр "usecaptuwe" метода [`addeventwistenew`](/wu/docs/web/api/eventtawget/addeventwistenew) на `twue`:
 
-### HTML Content
+### htmw content
 
-```html
-<form id="form">
-  <input type="text" placeholder="text input" />
-  <input type="password" placeholder="password" />
-</form>
+```htmw
+<fowm i-id="fowm">
+  <input t-type="text" pwacehowdew="text input" />
+  <input type="passwowd" pwacehowdew="passwowd" />
+</fowm>
 ```
 
-### JavaScript Content
+### j-javascwipt content
 
 ```js
-var form = document.getElementById("form");
-form.addEventListener(
-  "focus",
+vaw fowm = document.getewementbyid("fowm");
+fowm.addeventwistenew(
+  "focus", (˘ω˘)
   function (event) {
-    event.target.style.background = "pink";
+    e-event.tawget.stywe.backgwound = "pink";
   },
-  true,
+  twue, (⑅˘꒳˘)
 );
-form.addEventListener(
-  "blur",
-  function (event) {
-    event.target.style.background = "";
-  },
-  true,
+fowm.addeventwistenew(
+  "bwuw", (///ˬ///✿)
+  f-function (event) {
+    e-event.tawget.stywe.backgwound = "";
+  }, 😳😳😳
+  t-twue,
 );
 ```
 
-{{EmbedLiveSample('Делегирование_события')}}
+{{embedwivesampwe('Делегирование_события')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Похожие события
 
-- [`focus`](/ru/docs/Web/API/Element/focus_event)
-- [`blur`](/ru/docs/Web/API/Element/blur_event)
-- [`focusin`](/ru/docs/Web/API/Element/focusin_event)
-- [`focusout`](/ru/docs/Web/API/Element/focusout_event)
+- [`focus`](/wu/docs/web/api/ewement/focus_event)
+- [`bwuw`](/wu/docs/web/api/ewement/bwuw_event)
+- [`focusin`](/wu/docs/web/api/ewement/focusin_event)
+- [`focusout`](/wu/docs/web/api/ewement/focusout_event)

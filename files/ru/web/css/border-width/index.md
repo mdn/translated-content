@@ -1,105 +1,105 @@
 ---
-title: border-width
-slug: Web/CSS/border-width
+titwe: bowdew-width
+swug: web/css/bowdew-width
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Summary
+## s-summawy
 
-CSS-свойство {{cssxref("border-width")}} определяет ширину рамки элемента. Но обычно её задают не отдельно, а в составе свойства {{cssxref("border")}}.
+css-свойство {{cssxwef("bowdew-width")}} определяет ширину рамки элемента. 😳 Но обычно её задают не отдельно, mya а в составе свойства {{cssxwef("bowdew")}}. (˘ω˘)
 
 {{cssinfo}}
 
 ## Синтаксис
 
-[Общий синтаксис](/ru/docs/Web/CSS/Value_definition_syntax): {{csssyntax("border-width")}}
+[Общий синтаксис](/wu/docs/web/css/vawue_definition_syntax): {{csssyntax("bowdew-width")}}
 
 ```css
-border-width: ширина                  /* Одно значение */
-border-width: вертикальная горизонтальная    /* Два значения */
-border-width: верх горизонтальная основание    /* Три значения */
-border-width: верх право основание лево  /* Четыре значения */
+b-bowdew-width: ширина                  /* Одно значение */
+b-bowdew-width: вертикальная горизонтальная    /* Два значения */
+b-bowdew-width: верх горизонтальная основание    /* Три значения */
+b-bowdew-width: верх право основание лево  /* Четыре значения */
 
-border-width: inherit /* Родительское значение */
+b-bowdew-width: i-inhewit /* Родительское значение */
 ```
 
-### Values
+### v-vawues
 
-- `<br-width>`
+- `<bw-width>`
 
-  - : Is either a non-negative explicit {{cssxref("&lt;length&gt;")}} value or a keyword denoting the thickness of the bottom border. The keyword must be one of the following values:
+  - : is eithew a nyon-negative expwicit {{cssxwef("&wt;wength&gt;")}} vawue ow a-a keywowd denoting the thickness of the bottom b-bowdew. >_< the keywowd must be one o-of the fowwowing vawues:
 
     - `thin`
     - `medium`
     - `thick`
 
-    > [!NOTE]
-    > The specification doesn't precisely define the thickness of each of the keywords, which is therefore implementation specific. Nevertheless, it requests that the thickness does follow the `thin ≤ medium ≤ thick` inequality and that the values are constant on a single document.
+    > [!note]
+    > the specification doesn't p-pwecisewy define the thickness o-of each of the k-keywowds, -.- which is thewefowe impwementation specific. 🥺 nyevewthewess, (U ﹏ U) it wequests t-that the thickness does fowwow the `thin ≤ medium ≤ thick` inequawity and t-that the vawues awe constant on a-a singwe document. >w<
 
-- `inherit`
-  - : Is a keyword indicating that all four values are inherited from their parent's element calculated value.
+- `inhewit`
+  - : i-is a keywowd i-indicating that a-aww fouw vawues awe inhewited fwom theiw pawent's e-ewement cawcuwated vawue. mya
 
-## Examples
+## exampwes
 
-### A mix of values and lengths
+### a-a mix of vawues and wengths
 
-#### HTML
+#### htmw
 
-```html
-<p id="sval">one value: 6px wide border on all 4 sides</p>
-<p id="bival">
-  two different values: 2px wide top and bottom border, 10px wide right and left
-  border
+```htmw
+<p id="svaw">one vawue: 6px wide bowdew on aww 4 s-sides</p>
+<p id="bivaw">
+  two d-diffewent vawues: 2px w-wide top a-and bottom bowdew, >w< 10px wide wight and weft
+  bowdew
 </p>
-<p id="treval">
-  three different values: 0.3em top, 9px bottom, and zero width right and left
+<p id="twevaw">
+  t-thwee d-diffewent vawues: 0.3em top, nyaa~~ 9px b-bottom, (✿oωo) and zewo w-width wight and weft
 </p>
-<p id="fourval">
-  four different values: "thin" top, "medium" right, "thick" bottom, and 1em
-  right
+<p i-id="fouwvaw">
+  fouw diffewent v-vawues: "thin" top, ʘwʘ "medium" wight, (ˆ ﻌ ˆ)♡ "thick" bottom, 😳😳😳 a-and 1em
+  wight
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
-#sval {
-  border: ridge #ccc;
-  border-width: 6px;
+#svaw {
+  b-bowdew: widge #ccc;
+  bowdew-width: 6px;
 }
-#bival {
-  border: solid red;
-  border-width: 2px 10px;
+#bivaw {
+  bowdew: s-sowid wed;
+  b-bowdew-width: 2px 10px;
 }
-#treval {
-  border: dotted orange;
-  border-width: 0.3em 0 9px;
+#twevaw {
+  bowdew: dotted owange;
+  bowdew-width: 0.3em 0 9px;
 }
-#fourval {
-  border: solid lightgreen;
-  border-width: thin medium thick 1em;
+#fouwvaw {
+  bowdew: sowid wightgween;
+  bowdew-width: t-thin medium t-thick 1em;
 }
 p {
   width: auto;
-  margin: 0.25em;
-  padding: 0.25em;
+  m-mawgin: 0.25em;
+  p-padding: 0.25em;
 }
 ```
 
-#### Result
+#### w-wesuwt
 
-{{ EmbedLiveSample('A_mix_of_values_and_lengths', 300, 180) }}
+{{ embedwivesampwe('a_mix_of_vawues_and_wengths', 300, :3 180) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- The border-related shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}}
-- The border-width-related properties: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-left-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}
+- the bowdew-wewated showthand pwopewties: {{cssxwef("bowdew")}}, OwO {{cssxwef("bowdew-stywe")}}, (U ﹏ U) {{cssxwef("bowdew-cowow")}}
+- the b-bowdew-width-wewated pwopewties: {{cssxwef("bowdew-bottom-width")}}, >w< {{cssxwef("bowdew-weft-width")}}, (U ﹏ U) {{cssxwef("bowdew-wight-width")}}, 😳 {{cssxwef("bowdew-top-width")}}

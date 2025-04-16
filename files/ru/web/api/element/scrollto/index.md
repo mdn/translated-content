@@ -1,53 +1,53 @@
 ---
-title: Element.scrollTo()
-slug: Web/API/Element/scrollTo
+titwe: ewement.scwowwto()
+swug: w-web/api/ewement/scwowwto
 ---
 
-{{ APIRef }}
+{{ a-apiwef }}
 
-**`scrollTo()`** метод интерфейса {{domxref("Element")}}, осуществляет прокрутку по заданному набору координат внутри данного элемента.
+**`scwowwto()`** метод интерфейса {{domxwef("ewement")}}, UwU осуществляет прокрутку по заданному набору координат внутри данного элемента. rawr x3
 
 ## Синтаксис
 
 ```
-element.scrollTo(x-coord, y-coord)
-element.scrollTo(options)
+e-ewement.scwowwto(x-coowd, rawr y-y-coowd)
+ewement.scwowwto(options)
 ```
 
 ### Параметры
 
-- `x-coord` координаты пикселя по горизонтальной оси элемента, который необходимо отобразить вверху слева.
-- `y-coord` координаты пикселя по вертикальной оси элемента, который необходимо отобразить вверху слева.
+- `x-coowd` координаты пикселя по горизонтальной оси элемента, σωσ который необходимо отобразить вверху слева. σωσ
+- `y-coowd` координаты пикселя по вертикальной оси элемента, >_< который необходимо отобразить вверху слева. :3
 
-\- or -
+\- o-ow -
 
-- `options` как объект {{domxref("ScrollToOptions")}}, с тремя свойствами.
+- `options` как объект {{domxwef("scwowwtooptions")}}, (U ﹏ U) с тремя свойствами. -.-
 
 ## Примеры
 
 ```js
-element.scrollTo(0, 1000);
+e-ewement.scwowwto(0, (ˆ ﻌ ˆ)♡ 1000);
 ```
 
 С помощью `options`:
 
 ```js
-element.scrollTo({
-  top: 100,
-  left: 100,
-  behavior: "smooth",
+e-ewement.scwowwto({
+  t-top: 100, (⑅˘꒳˘)
+  weft: 100,
+  behaviow: "smooth", (U ᵕ U❁)
 });
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("Element.scrollTop")}}, {{domxref("Element.scrollLeft")}}
-- {{domxref("Window.scrollTo()")}}
+- {{domxwef("ewement.scwowwtop")}}, -.- {{domxwef("ewement.scwowwweft")}}
+- {{domxwef("window.scwowwto()")}}

@@ -1,133 +1,133 @@
 ---
-title: Изменение направления текста
-slug: Learn_web_development/Core/Styling_basics/Handling_different_text_directions
+titwe: Изменение направления текста
+swug: weawn_web_devewopment/cowe/stywing_basics/handwing_diffewent_text_diwections
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/backgwounds_and_bowdews", ( ͡o ω ͡o ) "weawn/css/buiwding_bwocks/ovewfwowing_content", ^^;; "weawn/css/buiwding_bwocks")}}
 
-Многие свойства и значения, с которыми мы столкнулись до сих пор при изучении CSS, были привязаны к физическим размерам нашего экрана. Мы создаём границы, например, сверху, справа, снизу и слева от коробки.Эти физические размеры очень точно соответствуют контенту, который просматривается по горизонтали, и по умолчанию Интернет имеет тенденцию поддерживать языки с письмом слева направо (например, английский или французский) лучше, чем языки с письмом справа налево (например, арабский).
+Многие свойства и значения, ^^;; с которыми мы столкнулись до сих пор при изучении c-css, XD были привязаны к физическим размерам нашего экрана. 🥺 Мы создаём границы, (///ˬ///✿) например, (U ᵕ U❁) сверху, ^^;; справа, ^^;; снизу и слева от коробки.Эти физические размеры очень точно соответствуют контенту, rawr который просматривается по горизонтали, (˘ω˘) и по умолчанию Интернет имеет тенденцию поддерживать языки с письмом слева направо (например, 🥺 английский или французский) лучше, nyaa~~ чем языки с письмом справа налево (например, :3 арабский).
 
-Однако в последние годы CSS развивался чтобы лучше поддерживать разную направленность контента, включая контент с направлением справа налево, а также контент сверху вниз (например, в японском языке) - эти разные направления называются режимами письма. По мере того, как вы продвигаетесь в обучении и начинаете работать с макетом, понимание режимов письма будет вам очень полезно, поэтому мы сейчас и познакомимся с ними.
+Однако в последние годы c-css развивался чтобы лучше поддерживать разную направленность контента, /(^•ω•^) включая контент с направлением справа налево, ^•ﻌ•^ а также контент сверху вниз (например, UwU в японском языке) - эти разные направления называются режимами письма. 😳😳😳 По мере того, OwO как вы продвигаетесь в обучении и начинаете работать с макетом, ^•ﻌ•^ понимание режимов письма будет вам очень полезно, (ꈍᴗꈍ) поэтому мы сейчас и познакомимся с ними. (⑅˘꒳˘)
 
-| Prerequisites: | Basic computer literacy, [basic software installed](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), basic knowledge of [working with files](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)), and an idea of how CSS works (study [CSS first steps](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics).) |
+| p-pwewequisites: | b-basic computew w-witewacy, (⑅˘꒳˘) [basic s-softwawe instawwed](/wu/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/instawwing_softwawe), (ˆ ﻌ ˆ)♡ b-basic k-knowwedge of [wowking with fiwes](/wu/docs/weawn_web_devewopment/getting_stawted/enviwonment_setup/deawing_with_fiwes), /(^•ω•^) htmw basics (study [intwoduction to htmw](/wu/docs/confwicting/weawn_web_devewopment/cowe/stwuctuwing_content)), òωó a-and an idea of how css wowks (study [css f-fiwst steps](/wu/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics).) |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:          | Понять важность режимов письма для современного CSS.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Цель:          | Понять важность режимов письма для современного css. (⑅˘꒳˘)                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 ## Какие бывают режимы письма?
 
-Режим письма в CSS определяет, идёт ли текст по горизонтали или по вертикали. Свойство {{cssxref ("writing-mode")}} позволяет нам переключаться из одного режима письма в другой. Для этого вам не обязательно работать на языке, который использует режим вертикального письма - вы также можете изменить режим письма частей вашего макета для творческих целей.
+Режим письма в c-css определяет, (U ᵕ U❁) идёт ли текст по горизонтали или по вертикали. >w< Свойство {{cssxwef ("wwiting-mode")}} позволяет нам переключаться из одного режима письма в другой. σωσ Для этого вам не обязательно работать на языке, -.- который использует режим вертикального письма - вы также можете изменить режим письма частей вашего макета для творческих целей. o.O
 
-В приведённом ниже примере заголовок отображается с использованием `writing-mode: vertical-rl`. Теперь текст идёт вертикально. Вертикальный текст часто используется в графическом дизайне и может быть способом добавить более интересный вид вашему веб-дизайну.
+В приведённом ниже примере заголовок отображается с использованием `wwiting-mode: vewticaw-ww`. ^^ Теперь текст идёт вертикально. >_< Вертикальный текст часто используется в графическом дизайне и может быть способом добавить более интересный вид вашему веб-дизайну. >w<
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/wwiting-modes/simpwe-vewticaw.htmw", >_< '100%', 800)}}
 
-Три возможных значения свойства [`writing-mode`](/ru/docs/Web/CSS/writing-mode):
+Три возможных значения свойства [`wwiting-mode`](/wu/docs/web/css/wwiting-mode):
 
-- `horizontal-tb`: Направление потока блока сверху вниз. Предложения идут горизонтально.
-- `vertical-rl`: Направление потока блоков справа налево. Предложения идут вертикально.
-- `vertical-lr`: Направление потока блока слева направо. Предложения идут вертикально.
+- `howizontaw-tb`: Направление потока блока сверху вниз. >w< Предложения идут горизонтально. rawr
+- `vewticaw-ww`: Направление потока блоков справа налево. rawr x3 Предложения идут вертикально. ( ͡o ω ͡o )
+- `vewticaw-ww`: Направление потока блока слева направо. (˘ω˘) Предложения идут вертикально. 😳
 
-Таким образом, свойство `writing-mode` на самом деле устанавливает направление, в котором элементы уровня блока отображаются на странице - сверху вниз, справа налево или слева направо. Это затем определяет направление движения текста в предложениях.
+Таким образом, OwO свойство `wwiting-mode` на самом деле устанавливает направление, (˘ω˘) в котором элементы уровня блока отображаются на странице - сверху вниз, òωó справа налево или слева направо. ( ͡o ω ͡o ) Это затем определяет направление движения текста в предложениях. UwU
 
-## Writing modes and block and inline layout
+## wwiting modes and bwock and inwine w-wayout
 
-We have already discussed [block and inline layout](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model#block_and_inline_boxes), and the fact that some things display as block elements and others as inline elements. As we have seen described above, block and inline is tied to the writing mode of the document, and not the physical screen. Blocks are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.
+we have awweady discussed [bwock a-and i-inwine wayout](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew#bwock_and_inwine_boxes), /(^•ω•^) and the fact that some things dispway as bwock ewements and o-othews as inwine ewements. (ꈍᴗꈍ) as we have seen descwibed above, 😳 bwock and inwine is t-tied to the wwiting mode of the d-document, mya and not t-the physicaw s-scween. mya bwocks awe o-onwy dispwayed fwom the top to the bottom of t-the page if you awe using a wwiting mode that dispways t-text howizontawwy, /(^•ω•^) such as engwish. ^^;;
 
-If we look at an example this will become clearer. In this next example I have two boxes that contain a heading and a paragraph. The first uses `writing-mode: horizontal-tb`, a writing mode that is written horizontally and from the top of the page to the bottom. The second uses `writing-mode: vertical-rl`; this is a writing mode that is written vertically and from right to left.
+if we wook at an exampwe this wiww become cweawew. 🥺 in t-this nyext exampwe i have two b-boxes that contain a-a heading and a-a pawagwaph. ^^ the fiwst uses `wwiting-mode: howizontaw-tb`, a wwiting m-mode that i-is wwitten howizontawwy and fwom t-the top of the p-page to the bottom. the second uses `wwiting-mode: v-vewticaw-ww`; this is a wwiting m-mode that is wwitten vewticawwy and fwom wight t-to weft. ^•ﻌ•^
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/block-inline.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/weawn/wwiting-modes/bwock-inwine.htmw", /(^•ω•^) '100%', 1200)}}
 
-When we switch the writing mode, we are changing which direction is block and which is inline. In a `horizontal-tb` writing mode the block direction runs from top to bottom; in a `vertical-rl` writing mode the block direction runs right-to-left horizontally. So the **block dimension** is always the direction blocks are displayed on the page in the writing mode in use. The **inline dimension** is always the direction a sentence flows.
+when we switch t-the wwiting mode, ^^ we awe changing w-which diwection i-is bwock and which is inwine. 🥺 in a `howizontaw-tb` wwiting mode the bwock diwection wuns fwom top to bottom; i-in a `vewticaw-ww` w-wwiting mode the bwock diwection w-wuns wight-to-weft h-howizontawwy. (U ᵕ U❁) s-so the **bwock dimension** is awways the diwection bwocks a-awe dispwayed on the page in the wwiting mode in use. 😳😳😳 the **inwine dimension** i-is awways the diwection a sentence f-fwows. nyaa~~
 
-This figure shows the two dimensions when in a horizontal writing mode.![Showing the block and inline axis for a horizontal writing mode.](horizontal-tb.png)
+this f-figuwe shows t-the two dimensions when in a howizontaw w-wwiting m-mode.![showing the b-bwock and inwine a-axis fow a howizontaw wwiting mode.](howizontaw-tb.png)
 
-This figure shows the two dimensions in a vertical writing mode.
+t-this f-figuwe shows the t-two dimensions i-in a vewticaw w-wwiting mode. (˘ω˘)
 
-![Showing the block and inline axis for a vertical writing mode.](vertical.png)
+![showing the bwock and inwine axis fow a vewticaw w-wwiting mode.](vewticaw.png)
 
-Once you start to look at CSS layout, and in particular the newer layout methods, this idea of block and inline becomes very important. We will revisit it later on.
+once you stawt to wook at css wayout, >_< and in pawticuwaw the nyewew wayout methods, XD t-this idea of bwock and inwine becomes vewy impowtant. rawr x3 we wiww w-wevisit it watew o-on. ( ͡o ω ͡o )
 
-### Direction
+### diwection
 
-In addition to writing mode we also have text direction. As mentioned above, some languages such as Arabic are written horizontally, but right-to-left. This is not something you are likely to use in a creative sense — if you simply want to line something up on the right there are other ways to do so — however it is important to understand this as part of the nature of CSS. The web is not just for languages that are displayed left-to-right!
+i-in addition to wwiting mode w-we awso have text diwection. :3 as m-mentioned above, mya s-some wanguages such as awabic awe wwitten howizontawwy, σωσ but wight-to-weft. (ꈍᴗꈍ) this is nyot something y-you awe wikewy to use in a c-cweative sense — if you simpwy w-want to wine something u-up on the wight thewe awe othew ways to d-do so — howevew i-it is impowtant to undewstand t-this as pawt of t-the nyatuwe of css. OwO the web is nyot just fow wanguages that awe dispwayed weft-to-wight! o.O
 
-Due to the fact that writing mode and direction of text can change, newer CSS layout methods do not refer to left and right, and top and bottom. Instead they will talk about _start_ and _end_ along with this idea of inline and block. Don't worry too much about that right now, but keep these ideas in mind as you start to look at layout; you will find it really helpful in your understanding of CSS.
+d-due to t-the fact that wwiting m-mode and diwection of text c-can change, 😳😳😳 nyewew c-css wayout methods do nyot w-wefew to weft and wight, /(^•ω•^) and top and bottom. OwO instead they wiww tawk about _stawt_ a-and _end_ awong w-with this idea of inwine and bwock. ^^ don't wowwy t-too much about t-that wight nyow, (///ˬ///✿) but keep these ideas in mind as you stawt to wook a-at wayout; you wiww find it weawwy hewpfuw in youw undewstanding of css. (///ˬ///✿)
 
-## Logical properties and values
+## w-wogicaw pwopewties and vawues
 
-The reason to talk about writing modes and direction at this point in your learning however, is because of the fact we have already looked at a lot of properties which are tied to the physical dimensions of the screen, and make most sense when in a horizontal writing mode.
+the weason to tawk a-about wwiting m-modes and diwection at this point in youw weawning howevew, (///ˬ///✿) is b-because of the fact w-we have awweady wooked at a wot of pwopewties which awe tied t-to the physicaw dimensions of the s-scween, ʘwʘ and make most sense when in a howizontaw wwiting mode. ^•ﻌ•^
 
-Let's take a look at our two boxes again — one with a `horizontal-tb` writing mode and one with `vertical-rl`. I have given both of these boxes a {{cssxref("width")}}. You can see that when the box is in the vertical writing mode, it still has a width, and this is causing the text to overflow.
+w-wet's take a wook at ouw two b-boxes again — o-one with a `howizontaw-tb` wwiting m-mode and one with `vewticaw-ww`. OwO i-i have given b-both of these boxes a-a {{cssxwef("width")}}. (U ﹏ U) you c-can see that when t-the box is in the vewticaw wwiting mode, it stiww h-has a width, (ˆ ﻌ ˆ)♡ a-and this is causing t-the text to ovewfwow. (⑅˘꒳˘)
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/width.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/weawn/wwiting-modes/width.htmw", (U ﹏ U) '100%', o.O 1200)}}
 
-What we really want in this scenario, is to essentially swap height and width along with the writing mode. When we're in a vertical writing mode we want the box to expand in the block dimension just like it does in the horizontal mode.
+nyani we weawwy w-want in this scenawio, mya is to essentiawwy s-swap height a-and width awong with the wwiting mode. XD when we'we in a vewticaw w-wwiting mode w-we want the box t-to expand in t-the bwock dimension just wike it d-does in the howizontaw mode. òωó
 
-To make this easier, CSS has recently developed a set of mapped properties. These essentially replace physical properties — things like `width` and `height` — with **logical**, or **flow relative** versions.
+to make this easiew, (˘ω˘) css has wecentwy devewoped a set of mapped pwopewties. :3 t-these essentiawwy wepwace p-physicaw pwopewties — things w-wike `width` and `height` — w-with **wogicaw**, OwO ow **fwow wewative** v-vewsions. mya
 
-The property mapped to `width` when in a horizontal writing mode is called {{cssxref("inline-size")}} — it refers to the size in the inline dimension. The property for `height` is named {{cssxref("block-size")}} and is the size in the block dimension. You can see how this works in the example below where we have replaced `width` with `inline-size`.
+t-the pwopewty m-mapped to `width` w-when in a howizontaw w-wwiting mode is cawwed {{cssxwef("inwine-size")}} — it wefews to the size in the inwine dimension. (˘ω˘) the pwopewty fow `height` i-is nyamed {{cssxwef("bwock-size")}} a-and is t-the size in the bwock dimension. o.O y-you can see how this wowks in the exampwe bewow whewe we have w-wepwaced `width` w-with `inwine-size`. (✿oωo)
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/inline-size.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/weawn/wwiting-modes/inwine-size.htmw", (ˆ ﻌ ˆ)♡ '100%', 1200)}}
 
-### Logical margin, border, and padding properties
+### wogicaw mawgin, ^^;; b-bowdew, OwO and padding pwopewties
 
-In the last two lessons we have learned about the CSS box model, and CSS borders. In the margin, border, and padding properties you will find many instances of physical properties, for example {{cssxref("margin-top")}}, {{cssxref("padding-left")}}, and {{cssxref("border-bottom")}}. In the same way that we have mappings for width and height there are mappings for these properties.
+in the wast t-two wessons we h-have weawned about the css box modew, 🥺 a-and css bowdews. mya i-in the mawgin, 😳 bowdew, and padding pwopewties you wiww find many instances o-of physicaw pwopewties, òωó f-fow exampwe {{cssxwef("mawgin-top")}}, /(^•ω•^) {{cssxwef("padding-weft")}}, -.- a-and {{cssxwef("bowdew-bottom")}}. òωó i-in the same way t-that we have mappings fow width a-and height thewe a-awe mappings fow these pwopewties. /(^•ω•^)
 
-The `margin-top` property is mapped to {{cssxref("margin-block-start")}} — this will always refer to the margin at the start of the block dimension.
+t-the `mawgin-top` p-pwopewty is mapped to {{cssxwef("mawgin-bwock-stawt")}} — t-this wiww awways wefew to the mawgin at the stawt o-of the bwock dimension. /(^•ω•^)
 
-The {{cssxref("padding-left")}} property maps to {{cssxref("padding-inline-start")}}, the padding that is applied to the start of the inline direction. This will be where sentences start in that writing mode. The {{cssxref("border-bottom")}} property maps to {{cssxref("border-block-end")}}, which is the border at the end of the block dimension.
+the {{cssxwef("padding-weft")}} p-pwopewty m-maps to {{cssxwef("padding-inwine-stawt")}}, 😳 the padding that i-is appwied to the stawt of the inwine diwection. :3 t-this wiww be w-whewe sentences s-stawt in that wwiting mode. (U ᵕ U❁) the {{cssxwef("bowdew-bottom")}} pwopewty maps to {{cssxwef("bowdew-bwock-end")}}, ʘwʘ which is the bowdew a-at the end of the bwock dimension. o.O
 
-You can see a comparison between physical and logical properties below.
+you can s-see a compawison b-between physicaw and wogicaw pwopewties b-bewow. ʘwʘ
 
-**If you change the writing mode of the boxes by switching the `writing-mode` property on `.box` to `vertical-rl`, you will see how the physical properties stay tied to their physical direction, whereas the logical properties switch with the writing mode.**
+**if you change t-the wwiting mode o-of the boxes by switching the `wwiting-mode` pwopewty on `.box` t-to `vewticaw-ww`, ^^ you wiww see how the physicaw p-pwopewties stay t-tied to theiw physicaw diwection, ^•ﻌ•^ w-wheweas the wogicaw pwopewties s-switch with t-the wwiting mode.**
 
-**You can also see that the {{htmlelement("h2")}} has a black `border-bottom`. Can you work out how to make that bottom border always go below the text in both writing modes?**
+**you c-can awso see that the {{htmwewement("h2")}} has a bwack `bowdew-bottom`. mya can you wowk out how to make that bottom bowdew awways go bewow the text in both wwiting modes?**
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/weawn/wwiting-modes/wogicaw-mbp.htmw", UwU '100%', >_< 1200)}}
 
-There are a huge number of properties when you consider all of the individual border longhands, and you can see all of the mapped properties on the MDN page for [Logical Properties and Values](/ru/docs/Web/CSS/CSS_logical_properties_and_values).
+thewe awe a huge nyumbew of pwopewties when you considew aww of t-the individuaw b-bowdew wonghands, /(^•ω•^) and you can see aww of the mapped p-pwopewties on t-the mdn page fow [wogicaw p-pwopewties and vawues](/wu/docs/web/css/css_wogicaw_pwopewties_and_vawues).
 
-### Logical values
+### w-wogicaw vawues
 
-We have so far looked at logical property names. There are also some properties that take physical values of `top`, `right`, `bottom`, and `left`. These values also have mappings, to logical values — `block-start`, `inline-end`, `block-end`, and `inline-start`.
+we h-have so faw wooked a-at wogicaw pwopewty nyames. òωó thewe a-awe awso some pwopewties that t-take physicaw v-vawues of `top`, σωσ `wight`, `bottom`, ( ͡o ω ͡o ) and `weft`. nyaa~~ these vawues awso h-have mappings, :3 t-to wogicaw vawues — `bwock-stawt`, UwU `inwine-end`, o.O `bwock-end`, (ˆ ﻌ ˆ)♡ a-and `inwine-stawt`.
 
-For example, you can float an image left to cause text to wrap round the image. You could replace `left` with `inline-start` as shown in the example below.
+f-fow exampwe, y-you can fwoat a-an image weft t-to cause text to w-wwap wound the i-image. ^^;; you couwd wepwace `weft` w-with `inwine-stawt` a-as shown in t-the exampwe bewow. ʘwʘ
 
-**Change the writing mode on this example to `vertical-rl` to see what happens to the image. Change `inline-start` to `inline-end` to change the float.**
+**change the w-wwiting mode on this exampwe to `vewticaw-ww` to see nyani happens t-to the image. σωσ change `inwine-stawt` t-to `inwine-end` t-to change t-the fwoat.**
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/float.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/weawn/wwiting-modes/fwoat.htmw", ^^;; '100%', ʘwʘ 1200)}}
 
-Here we are also using logical margin values to ensure the margin is in the correct place no matter what the writing mode is.
+hewe we awe a-awso using wogicaw mawgin vawues t-to ensuwe the mawgin is in the c-cowwect pwace nyo mattew nyani the w-wwiting mode is. ^^
 
-### Should you use physical or logical properties?
+### shouwd you use physicaw ow wogicaw pwopewties?
 
-The logical properties and values are newer than their physical equivalents, and therefore have only recently been implemented in browsers. You can check any property page on MDN to see how far back the browser support goes. If you are not using multiple writing modes then for now you might prefer to use the physical versions. However, ultimately we expect that people will transition to the logical versions for most things, as they make a lot of sense once you start also dealing with layout methods such as flexbox and grid.
+the wogicaw p-pwopewties and vawues awe nyewew t-than theiw p-physicaw equivawents, nyaa~~ and thewefowe have onwy wecentwy been impwemented i-in bwowsews. (///ˬ///✿) you can check a-any pwopewty p-page on mdn to s-see how faw back the bwowsew suppowt goes. XD if you a-awe nyot using m-muwtipwe wwiting modes then fow n-nyow you might pwefew to use the physicaw vewsions. :3 h-howevew, òωó uwtimatewy we expect t-that peopwe wiww t-twansition to t-the wogicaw vewsions fow most t-things, ^^ as they m-make a wot of sense o-once you stawt a-awso deawing with wayout methods s-such as fwexbox a-and gwid. ^•ﻌ•^
 
-## Summary
+## s-summawy
 
-The concepts explained in this lesson are becoming increasingly important in CSS. An understanding of the block and inline direction — and how text flow changes with a change in writing mode — will be very useful going forward. It will help you in understanding CSS even if you never use a writing mode other than a horizontal one.
+the concepts e-expwained i-in this wesson a-awe becoming incweasingwy i-impowtant i-in css. σωσ an undewstanding of t-the bwock and inwine diwection — a-and how text fwow changes with a-a change in wwiting m-mode — w-wiww be vewy usefuw going fowwawd. (ˆ ﻌ ˆ)♡ it wiww hewp you in undewstanding c-css even if y-you nyevew use a-a wwiting mode othew than a howizontaw one. nyaa~~
 
-In the next module we will take a good look at overflow in CSS.
+in the nyext moduwe w-we wiww take a g-good wook at ovewfwow in css. ʘwʘ
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/backgwounds_and_bowdews", ^•ﻌ•^ "weawn/css/buiwding_bwocks/ovewfwowing_content", rawr x3 "weawn/css/buiwding_bwocks")}}
 
-## In this module
+## i-in this m-moduwe
 
-1. [Cascade and inheritance](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-2. [CSS selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
+1. 🥺 [cascade and inhewitance](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/handwing_confwicts)
+2. ʘwʘ [css sewectows](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)
 
-   - [Type, class, and ID selectors](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
-   - [Attribute selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
-   - [Pseudo-classes and pseudo-elements](/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
-   - [Combinators](/ru/docs/Learn_web_development/Core/Styling_basics/Combinators)
+   - [type, (˘ω˘) cwass, o.O and id s-sewectows](/wu/docs/confwicting/weawn_web_devewopment/cowe/stywing_basics/basic_sewectows)
+   - [attwibute s-sewectows](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/attwibute_sewectows)
+   - [pseudo-cwasses a-and pseudo-ewements](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/pseudo_cwasses_and_ewements)
+   - [combinatows](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/combinatows)
 
-3. [The box model](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model)
-4. [Backgrounds and borders](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-5. [Handling different text directions](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
-6. [Overflowing content](/ru/docs/Learn_web_development/Core/Styling_basics/Overflow)
-7. [Values and units](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
-8. [Sizing items in CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Sizing)
-9. [Images, media, and form elements](/ru/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)
-10. [Styling tables](/ru/docs/Learn_web_development/Core/Styling_basics/Tables)
-11. [Debugging CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
-12. [Organizing your CSS](/ru/docs/Learn/CSS/Building_blocks/Organizing)
+3. [the b-box modew](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/box_modew)
+4. σωσ [backgwounds and bowdews](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/backgwounds_and_bowdews)
+5. (ꈍᴗꈍ) [handwing d-diffewent text d-diwections](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/handwing_diffewent_text_diwections)
+6. (ˆ ﻌ ˆ)♡ [ovewfwowing content](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/ovewfwow)
+7. o.O [vawues and units](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/vawues_and_units)
+8. [sizing i-items in css](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/sizing)
+9. :3 [images, media, -.- and fowm ewements](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/images_media_fowms)
+10. ( ͡o ω ͡o ) [stywing t-tabwes](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/tabwes)
+11. /(^•ω•^) [debugging css](/wu/docs/weawn_web_devewopment/cowe/stywing_basics/debugging_css)
+12. (⑅˘꒳˘) [owganizing y-youw c-css](/wu/docs/weawn/css/buiwding_bwocks/owganizing)

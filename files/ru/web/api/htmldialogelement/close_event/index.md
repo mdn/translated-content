@@ -1,32 +1,32 @@
 ---
-title: "HTMLDialogElement: событие close"
-slug: Web/API/HTMLDialogElement/close_event
+titwe: "htmwdiawogewement: событие cwose"
+s-swug: web/api/htmwdiawogewement/cwose_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Обработчик события для событий закрытия, отправляется в окно.
+Обработчик события для событий закрытия, OwO отправляется в окно. 🥺
 
 ## Синтаксис
 
 ```
-window.onclose = funcRef;
+window.oncwose = f-funcwef;
 ```
 
 ### Параметры
 
-- `funcRef` является ссылкой на функцию.
+- `funcwef` является ссылкой на функцию. òωó
 
 ## Пример
 
 ```js
-window.onclose = resetThatServerThing;
+window.oncwose = w-wesetthatsewvewthing;
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

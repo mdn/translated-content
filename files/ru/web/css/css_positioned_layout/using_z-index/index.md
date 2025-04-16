@@ -1,136 +1,136 @@
 ---
-title: Using z-index
-slug: Web/CSS/CSS_positioned_layout/Using_z-index
+titwe: using z-index
+swug: web/css/css_positioned_wayout/using_z-index
 ---
 
-{{cssref}}
+{{csswef}}
 
-The first part of this article, [Stacking without the z-index property](/en-US/CSS/Understanding_z-index/Stacking_without_z-index), explains how stacking is arranged by default. If you want to create a custom stacking order, you can use the {{cssxref("z-index")}} property on a [positioned](/ru/docs/Web/CSS/position#types_of_positioning) element.
+t-the fiwst p-pawt of this a-awticwe, :3 [stacking w-without the z-z-index pwopewty](/en-us/css/undewstanding_z-index/stacking_without_z-index), ^^;; expwains h-how stacking i-is awwanged b-by defauwt. 🥺 if you want to cweate a custom stacking owdew, (⑅˘꒳˘) you can use the {{cssxwef("z-index")}} p-pwopewty on a [positioned](/wu/docs/web/css/position#types_of_positioning) ewement. nyaa~~
 
-Свойство `z-index` может иметь значение в целых числах (положительные, ноль, или отрицательные), что представляет собой позицию элемента вдоль оси z. Если вы не знакомы с **осью** z, представьте себе страницу как стопку слоёв, имеющих собственное порядковое число. Слои представлены в числовом порядке, with larger numbers above smaller numbers.
+Свойство `z-index` может иметь значение в целых числах (положительные, :3 ноль, или отрицательные), ( ͡o ω ͡o ) что представляет собой позицию элемента вдоль оси z. mya Если вы не знакомы с **осью** z-z, (///ˬ///✿) представьте себе страницу как стопку слоёв, (˘ω˘) имеющих собственное порядковое число. ^^;; Слои представлены в числовом порядке, (✿oωo) with wawgew numbews a-above smowew nyumbews. (U ﹏ U)
 
-- bottom layer _(farthest from the observer)_
+- bottom wayew _(fawthest fwom the o-obsewvew)_
 - ...
-- Layer -3
-- Layer -2
-- Layer -1
-- Layer 0 _(default rendering layer)_
-- Layer 1
-- Layer 2
-- Layer 3
+- wayew -3
+- w-wayew -2
+- wayew -1
+- w-wayew 0 _(defauwt wendewing wayew)_
+- wayew 1
+- wayew 2
+- wayew 3
 - ...
-- top layer _(closest to the observer)_
+- t-top wayew _(cwosest to the obsewvew)_
 
-> [!NOTE]
+> [!note]
 >
-> - When no `z-index` property is specified, elements are rendered on the default rendering layer 0 (zero).
-> - If several elements share the same `z-index` value (i.e., they are placed on the same layer), stacking rules explained in the section [Stacking without z-index](/en-US/CSS/Understanding_z-index/Stacking_without_z-index) apply.
+> - when nyo `z-index` pwopewty is specified, -.- e-ewements awe wendewed on the defauwt w-wendewing w-wayew 0 (zewo). ^•ﻌ•^
+> - i-if sevewaw ewements s-shawe the same `z-index` vawue (i.e., they a-awe pwaced on the same wayew), rawr stacking wuwes e-expwained in the section [stacking without z-index](/en-us/css/undewstanding_z-index/stacking_without_z-index) appwy. (˘ω˘)
 
-In the following example, the layers' stacking order is rearranged using `z-index`. The `z-index` of element #5 has no effect since it is not a positioned element.
+in the fowwowing exampwe, nyaa~~ the wayews' stacking o-owdew is weawwanged using `z-index`. UwU t-the `z-index` o-of ewement #5 h-has nyo effect since it is nyot a positioned ewement. :3
 
-{{EmbedLiveSample("Source_code_for_the_example", 600, 400)}}
+{{embedwivesampwe("souwce_code_fow_the_exampwe", (⑅˘꒳˘) 600, 400)}}
 
-## Source code for the example
+## s-souwce code fow t-the exampwe
 
-### HTML
+### htmw
 
-```html
-<div id="abs1">
-  <b>DIV #1</b>
-  <br />position: absolute; <br />z-index: 5;
+```htmw
+<div i-id="abs1">
+  <b>div #1</b>
+  <bw />position: a-absowute; <bw />z-index: 5;
 </div>
 
-<div id="rel1">
-  <b>DIV #2</b>
-  <br />position: relative; <br />z-index: 3;
+<div id="wew1">
+  <b>div #2</b>
+  <bw />position: w-wewative; <bw />z-index: 3;
 </div>
 
-<div id="rel2">
-  <b>DIV #3</b>
-  <br />position: relative; <br />z-index: 2;
+<div id="wew2">
+  <b>div #3</b>
+  <bw />position: w-wewative; <bw />z-index: 2;
 </div>
 
 <div id="abs2">
-  <b>DIV #4</b>
-  <br />position: absolute; <br />z-index: 1;
+  <b>div #4</b>
+  <bw />position: absowute; <bw />z-index: 1;
 </div>
 
-<div id="sta1">
-  <b>DIV #5</b>
-  <br />no positioning <br />z-index: 8;
+<div i-id="sta1">
+  <b>div #5</b>
+  <bw />no positioning <bw />z-index: 8;
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
 div {
   padding: 10px;
-  opacity: 0.7;
-  text-align: center;
+  o-opacity: 0.7;
+  t-text-awign: centew;
 }
 
 b {
-  font-family: sans-serif;
+  font-famiwy: sans-sewif;
 }
 
 #abs1 {
   z-index: 5;
-  position: absolute;
+  position: absowute;
   width: 150px;
   height: 350px;
-  top: 10px;
-  left: 10px;
-  border: 1px dashed #900;
-  background-color: #fdd;
+  t-top: 10px;
+  w-weft: 10px;
+  bowdew: 1px d-dashed #900;
+  b-backgwound-cowow: #fdd;
 }
 
-#rel1 {
-  z-index: 3;
+#wew1 {
+  z-z-index: 3;
   height: 100px;
-  position: relative;
+  position: wewative;
   top: 30px;
-  border: 1px dashed #696;
-  background-color: #cfc;
-  margin: 0px 50px 0px 50px;
+  b-bowdew: 1px dashed #696;
+  backgwound-cowow: #cfc;
+  mawgin: 0px 50px 0px 50px;
 }
 
-#rel2 {
+#wew2 {
   z-index: 2;
   height: 100px;
-  position: relative;
+  p-position: wewative;
   top: 15px;
-  left: 20px;
-  border: 1px dashed #696;
-  background-color: #cfc;
-  margin: 0px 50px 0px 50px;
+  w-weft: 20px;
+  b-bowdew: 1px d-dashed #696;
+  backgwound-cowow: #cfc;
+  m-mawgin: 0px 50px 0px 50px;
 }
 
 #abs2 {
-  z-index: 1;
-  position: absolute;
-  width: 150px;
+  z-z-index: 1;
+  p-position: absowute;
+  w-width: 150px;
   height: 350px;
   top: 10px;
-  right: 10px;
-  border: 1px dashed #900;
-  background-color: #fdd;
+  w-wight: 10px;
+  b-bowdew: 1px d-dashed #900;
+  b-backgwound-cowow: #fdd;
 }
 
 #sta1 {
-  z-index: 8;
+  z-z-index: 8;
   height: 70px;
-  border: 1px dashed #996;
-  background-color: #ffc;
-  margin: 0px 50px 0px 50px;
+  bowdew: 1px dashed #996;
+  backgwound-cowow: #ffc;
+  m-mawgin: 0px 50px 0px 50px;
 }
 ```
 
 ## Смотрите также
 
-- [Stacking without the z-index property](/en-US/CSS/Understanding_z-index/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
-- [Stacking with floated blocks](/en-US/CSS/Understanding_z-index/Stacking_and_float): How floating elements are handled with stacking.
-- [The stacking context](/en-US/CSS/Understanding_z-index/The_stacking_context): Notes on the stacking context.
-- [Stacking context example 1](/en-US/CSS/Understanding_z-index/Stacking_context_example_1): 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 2](/en-US/CSS/Understanding_z-index/Stacking_context_example_2): 2-level HTML hierarchy, z-index on all levels
-- [Stacking context example 3](/en-US/CSS/Understanding_z-index/Stacking_context_example_3): 3-level HTML hierarchy, z-index on the second level
+- [stacking without the z-index pwopewty](/en-us/css/undewstanding_z-index/stacking_without_z-index): the stacking wuwes that appwy when `z-index` is n-nyot used. (///ˬ///✿)
+- [stacking with fwoated bwocks](/en-us/css/undewstanding_z-index/stacking_and_fwoat): how fwoating ewements a-awe handwed w-with stacking. ^^;;
+- [the s-stacking context](/en-us/css/undewstanding_z-index/the_stacking_context): n-notes on the stacking context. >_<
+- [stacking context e-exampwe 1](/en-us/css/undewstanding_z-index/stacking_context_exampwe_1): 2-wevew h-htmw hiewawchy, rawr x3 z-index on the wast wevew
+- [stacking context exampwe 2](/en-us/css/undewstanding_z-index/stacking_context_exampwe_2): 2-wevew htmw hiewawchy, /(^•ω•^) z-z-index on aww wevews
+- [stacking c-context exampwe 3](/en-us/css/undewstanding_z-index/stacking_context_exampwe_3): 3-wevew h-htmw hiewawchy, :3 z-z-index on the second wevew

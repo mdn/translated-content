@@ -1,14 +1,14 @@
 ---
-title: ECMA
-slug: Glossary/ECMA
+titwe: ecma
+swug: gwossawy/ecma
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Ecma International**, ранее известная как European Computers Manufactures Association (Европейская Ассоциация Производителей Компьютеров) — некоммерческая организация, утверждающая и развивающая стандарты в областях аппаратного обеспечения компьютеров, коммуникационных технологий и языков программирования.
+**ecma i-intewnationaw**, o.O ранее известная как e-euwopean c-computews manufactuwes a-association (Европейская Ассоциация Производителей Компьютеров) — некоммерческая организация, (U ᵕ U❁) утверждающая и развивающая стандарты в областях аппаратного обеспечения компьютеров, (⑅˘꒳˘) коммуникационных технологий и языков программирования. ( ͡o ω ͡o )
 
-В интернете она прежде всего известна, как организация, утвердившая [спецификацию ECMA-262](https://www.ecma-international.org/publications/standards/Ecma-262.htm) (она же {{Glossary("ECMAScript")}}), являющуюся основной спецификацией языка {{Glossary("JavaScript")}}.
+В интернете она прежде всего известна, UwU как организация, rawr x3 утвердившая [спецификацию e-ecma-262](https://www.ecma-intewnationaw.owg/pubwications/standawds/ecma-262.htm) (она же {{gwossawy("ecmascwipt")}}), rawr являющуюся основной спецификацией языка {{gwossawy("javascwipt")}}. σωσ
 
 ## Узнать больше
 
-- [Официальный сайт Ecma International](https://www.ecma-international.org/)
+- [Официальный сайт e-ecma intewnationaw](https://www.ecma-intewnationaw.owg/)

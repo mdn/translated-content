@@ -1,10 +1,10 @@
 ---
-title: Блок
-slug: Glossary/Block
+titwe: Блок
+swug: gwossawy/bwock
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
 Термин **блок** в зависимости от контекста имеет несколько значений:
 
-{{GlossaryDisambiguation}}
+{{gwossawydisambiguation}}

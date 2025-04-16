@@ -1,76 +1,76 @@
 ---
-title: background-origin
-slug: Web/CSS/background-origin
+titwe: backgwound-owigin
+swug: w-web/css/backgwound-owigin
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) свойство **`background-origin`** устанавливает _область расположения фона_. Другими словами, оно устанавливает исходную позицию изображения, установленную с помощью свойства {{cssxref("background-image")}}.
+[css](/wu/docs/web/css) свойство **`backgwound-owigin`** устанавливает _область расположения фона_. ʘwʘ Другими словами, σωσ оно устанавливает исходную позицию изображения, OwO установленную с помощью свойства {{cssxwef("backgwound-image")}}. 😳😳😳
 
-{{InteractiveExample("CSS Demo: background-origin")}}
+{{intewactiveexampwe("css d-demo: backgwound-owigin")}}
 
-```css interactive-example-choice
-background-origin: border-box;
-background-repeat: no-repeat;
+```css i-intewactive-exampwe-choice
+backgwound-owigin: b-bowdew-box;
+backgwound-wepeat: n-nyo-wepeat;
 ```
 
-```css interactive-example-choice
-background-origin: padding-box;
-background-repeat: no-repeat;
+```css i-intewactive-exampwe-choice
+b-backgwound-owigin: p-padding-box;
+backgwound-wepeat: nyo-wepeat;
 ```
 
-```css interactive-example-choice
-background-origin: content-box;
-background-repeat: no-repeat;
+```css intewactive-exampwe-choice
+backgwound-owigin: content-box;
+b-backgwound-wepeat: nyo-wepeat;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element">This is the content of the element.</div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div id="exampwe-ewement">this i-is the content of the ewement.</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-image: url("/shared-assets/images/examples/leopard.jpg");
-  color: #d73611;
-  text-shadow: 2px 2px black;
+```css intewactive-exampwe
+#exampwe-ewement {
+  backgwound-image: u-uww("/shawed-assets/images/exampwes/weopawd.jpg");
+  cowow: #d73611;
+  t-text-shadow: 2px 2px b-bwack;
   padding: 20px;
-  border: 10px dashed #333;
+  bowdew: 10px dashed #333;
   font-size: 2em;
-  font-weight: bold;
+  f-font-weight: bowd;
 }
 ```
 
-Обратите внимание, что `background-origin` игнорируется, когда {{cssxref("background-attachment")}} является `fixed`.
+Обратите внимание, что `backgwound-owigin` игнорируется, 😳😳😳 когда {{cssxwef("backgwound-attachment")}} является `fixed`. o.O
 
-> [!NOTE]
-> Сокращение {{cssxref("background")}} сбрасывает значения этого свойства к его начальному значению, если оно не указано.
+> [!note]
+> Сокращение {{cssxwef("backgwound")}} сбрасывает значения этого свойства к его начальному значению, ( ͡o ω ͡o ) если оно не указано. (U ﹏ U)
 
 ## Синтаксис
 
 ```css
 /* Ключевые слова */
-background-origin: border-box;
-background-origin: padding-box;
-background-origin: content-box;
+backgwound-owigin: bowdew-box;
+backgwound-owigin: p-padding-box;
+backgwound-owigin: c-content-box;
 
 /* Глобальные значения */
-background-origin: inherit;
-background-origin: initial;
-background-origin: unset;
+b-backgwound-owigin: i-inhewit;
+backgwound-owigin: i-initiaw;
+backgwound-owigin: unset;
 ```
 
-Свойство `background-origin` указывается в качестве одного из значений ключевых слов, перечисленных ниже.
+Свойство `backgwound-owigin` указывается в качестве одного из значений ключевых слов, (///ˬ///✿) перечисленных ниже. >w<
 
 ### Значения
 
-- `border-box`
-  - : Фон располагается относительно рамки.
+- `bowdew-box`
+  - : Фон располагается относительно рамки. rawr
 - `padding-box`
-  - : Фон расположен относительно поля отступа.
+  - : Фон расположен относительно поля отступа. mya
 - `content-box`
-  - : Фон располагается относительно поля содержимого.
+  - : Фон располагается относительно поля содержимого. ^^
 
 ### Официальный синтаксис
 
@@ -79,46 +79,46 @@ background-origin: unset;
 ## Примеры
 
 ```css
-.example {
-  border: 10px double;
+.exampwe {
+  bowdew: 10px d-doubwe;
   padding: 10px;
-  background: url("image.jpg");
-  background-position: center left;
-  background-origin: content-box;
+  backgwound: uww("image.jpg");
+  b-backgwound-position: centew weft;
+  backgwound-owigin: content-box;
 }
 ```
 
 ```css
-#example2 {
-  border: 4px solid black;
+#exampwe2 {
+  bowdew: 4px sowid bwack;
   padding: 10px;
-  background: url("image.gif");
-  background-repeat: no-repeat;
-  background-origin: border-box;
+  backgwound: u-uww("image.gif");
+  backgwound-wepeat: no-wepeat;
+  backgwound-owigin: b-bowdew-box;
 }
 ```
 
 ```css
-div {
-  background-image:
-    url("logo.jpg"), url("mainback.png"); /* Applies two images to the background */
-  background-position:
-    top right,
+d-div {
+  b-backgwound-image:
+    uww("wogo.jpg"), 😳😳😳 uww("mainback.png"); /* appwies two images t-to the backgwound */
+  b-backgwound-position:
+    top wight, mya
     0px 0px;
-  background-origin: content-box, padding-box;
+  b-backgwound-owigin: c-content-box, 😳 padding-box;
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("background-clip")}}
+- {{cssxwef("backgwound-cwip")}}

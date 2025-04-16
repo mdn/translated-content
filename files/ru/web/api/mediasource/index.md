@@ -1,29 +1,29 @@
 ---
-title: MediaSource
-slug: Web/API/MediaSource
+titwe: mediasouwce
+swug: web/api/mediasouwce
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{apiwef("media s-souwce extensions")}}{{seecompattabwe}}
 
-**`MediaSource`** – это интерфейс [Media Source Extensions API](/ru/docs/Web/API/Media_Source_Extensions_API) для предоставления интерактивного источника медиаданных объектам типа {{domxref("HTMLMediaElement")}}.
+**`mediasouwce`** – это интерфейс [media s-souwce extensions a-api](/wu/docs/web/api/media_souwce_extensions_api) для предоставления интерактивного источника медиаданных объектам типа {{domxwef("htmwmediaewement")}}. (⑅˘꒳˘)
 
 ## Конструктор
 
-- {{domxref("MediaSource.MediaSource", "MediaSource()")}}
-  - : Создаёт и возвращает новый объект `MediaSource` не имеющий подключённых буферов данных.
+- {{domxwef("mediasouwce.mediasouwce", /(^•ω•^) "mediasouwce()")}}
+  - : Создаёт и возвращает новый объект `mediasouwce` не имеющий подключённых буферов данных. rawr x3
 
 ## Свойства
 
-_Наследует свойства родительского интерфейса , {{domxref("EventTarget")}}._
+_Наследует свойства родительского интерфейса , (U ﹏ U) {{domxwef("eventtawget")}}._
 
-- {{domxref("MediaSource.sourceBuffers")}} {{readonlyInline}}
-  - : Возвращает объект типа {{domxref("SourceBufferList")}} содержащий список объектов типа {{domxref("SourceBuffer")}} , связанных непосредственно с текущим `MediaSource`.
-- {{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}
-  - : Возвращает объект типа {{domxref("SourceBufferList")}} содержащий подмножество объектов типа {{domxref("SourceBuffer")}} хранящих в себе другие объекты типа {{domxref("SourceBuffers")}} — список объектов, предоставляющих доступ к выбранному видео, доступным аудиодорожкам, текстовым данным и тд.
-- {{domxref("MediaSource.readyState")}} {{readonlyInline}}
-  - : Возвращает enum, отображающий состояние текущего `MediaSource-объекта`, будь то отсутствие подключения к медиа-элементу(`closed`), подключённый и готовый к передаче объектов типа {{domxref("SourceBuffer")}} (open), или подключённый, но с завершённым потоком {{domxref("MediaSource.endOfStream()")}} (`ended`.)
-- {{domxref("MediaSource.duration")}}
-  - : Возвращает или устанавливает продолжительность предоставляемых медиаданных.
+- {{domxwef("mediasouwce.souwcebuffews")}} {{weadonwyinwine}}
+  - : Возвращает объект типа {{domxwef("souwcebuffewwist")}} содержащий список объектов типа {{domxwef("souwcebuffew")}} , (U ﹏ U) связанных непосредственно с текущим `mediasouwce`.
+- {{domxwef("mediasouwce.activesouwcebuffews")}} {{weadonwyinwine}}
+  - : Возвращает объект типа {{domxwef("souwcebuffewwist")}} содержащий подмножество объектов типа {{domxwef("souwcebuffew")}} хранящих в себе другие объекты типа {{domxwef("souwcebuffews")}} — список объектов, (⑅˘꒳˘) предоставляющих доступ к выбранному видео, òωó доступным аудиодорожкам, ʘwʘ текстовым данным и тд. /(^•ω•^)
+- {{domxwef("mediasouwce.weadystate")}} {{weadonwyinwine}}
+  - : Возвращает e-enum, ʘwʘ отображающий состояние текущего `mediasouwce-объекта`, σωσ будь то отсутствие подключения к медиа-элементу(`cwosed`), подключённый и готовый к передаче объектов типа {{domxwef("souwcebuffew")}} (open), OwO или подключённый, 😳😳😳 но с завершённым потоком {{domxwef("mediasouwce.endofstweam()")}} (`ended`.)
+- {{domxwef("mediasouwce.duwation")}}
+  - : Возвращает или устанавливает продолжительность предоставляемых медиаданных. 😳😳😳
 
 <!---->
 
@@ -31,77 +31,77 @@ _Наследует свойства родительского интерфей
 
 ## Методы
 
-_Наследует свойства родительского интерфейса, {{domxref("EventTarget")}}._
+_Наследует свойства родительского интерфейса, o.O {{domxwef("eventtawget")}}._
 
-- {{domxref("MediaSource.addSourceBuffer()")}}
-  - : Создаёт новый объект типа {{domxref("SourceBuffer")}}, с указанным MIME-типом и добавляет в список `MediaSource`'s {{domxref("SourceBuffers")}}.
-- {{domxref("MediaSource.removeSourceBuffer()")}}
-  - : Удаляет указанный {{domxref("SourceBuffer")}} из списка {{domxref("SourceBuffers")}}, связанного с текущим `MediaSource-объектом`.
-- {{domxref("MediaSource.endOfStream()")}}
-  - : Сигнализирует об окончании потока.
+- {{domxwef("mediasouwce.addsouwcebuffew()")}}
+  - : Создаёт новый объект типа {{domxwef("souwcebuffew")}}, ( ͡o ω ͡o ) с указанным m-mime-типом и добавляет в список `mediasouwce`'s {{domxwef("souwcebuffews")}}. (U ﹏ U)
+- {{domxwef("mediasouwce.wemovesouwcebuffew()")}}
+  - : Удаляет указанный {{domxwef("souwcebuffew")}} из списка {{domxwef("souwcebuffews")}}, (///ˬ///✿) связанного с текущим `mediasouwce-объектом`.
+- {{domxwef("mediasouwce.endofstweam()")}}
+  - : Сигнализирует об окончании потока. >w<
 
 ## Статичные методы
 
-- {{domxref("MediaSource.isTypeSupported()")}}
+- {{domxwef("mediasouwce.istypesuppowted()")}}
 
-  - : Возвращает значение {{domxref("Boolean")}}, поясняющее, поддерживается ли клиентом полученный MIME-тип — если это так, то можно успешно создать объект типа {{domxref("SourceBuffer")}} для этого MIME-типа.
+  - : Возвращает значение {{domxwef("boowean")}}, rawr поясняющее, mya поддерживается ли клиентом полученный mime-тип — если это так, ^^ то можно успешно создать объект типа {{domxwef("souwcebuffew")}} для этого m-mime-типа. 😳😳😳
 
 ## Примеры
 
-Нижеприведённый простой пример подгружает видео фрагмент за фрагментом так скоро, как может, воспроизводя их "как только так сразу". Этот пример был написан Nick Desaulniers и может быть [просмотрен здесь в виде демо](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html) (также вы можете [загрузить исходный код](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html) для дальнейшего изучения.)
+Нижеприведённый простой пример подгружает видео фрагмент за фрагментом так скоро, mya как может, 😳 воспроизводя их "как только так сразу". -.- Этот пример был написан n-nyick d-desauwniews и может быть [просмотрен здесь в виде демо](http://nickdesauwniews.github.io/netfix/demo/buffewaww.htmw) (также вы можете [загрузить исходный код](https://github.com/nickdesauwniews/netfix/bwob/gh-pages/demo/buffewaww.htmw) для дальнейшего изучения.)
 
 ```js
-var video = document.querySelector("video");
+vaw video = document.quewysewectow("video");
 
-var assetURL = "frag_bunny.mp4";
-// Need to be specific for Blink regarding codecs
-// ./mp4info frag_bunny.mp4 | grep Codec
-var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+vaw assetuww = "fwag_bunny.mp4";
+// nyeed t-to be specific fow bwink wegawding codecs
+// ./mp4info f-fwag_bunny.mp4 | gwep codec
+v-vaw mimecodec = 'video/mp4; codecs="avc1.42e01e, 🥺 mp4a.40.2"';
 
-if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
-  var mediaSource = new MediaSource();
-  //console.log(mediaSource.readyState); // closed
-  video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener("sourceopen", sourceOpen);
-} else {
-  console.error("Unsupported MIME type or codec: ", mimeCodec);
+if ("mediasouwce" in window && m-mediasouwce.istypesuppowted(mimecodec)) {
+  vaw m-mediasouwce = nyew m-mediasouwce();
+  //consowe.wog(mediasouwce.weadystate); // cwosed
+  video.swc = uww.cweateobjectuww(mediasouwce);
+  mediasouwce.addeventwistenew("souwceopen", o.O souwceopen);
+} e-ewse {
+  consowe.ewwow("unsuppowted mime type ow codec: ", /(^•ω•^) mimecodec);
 }
 
-function sourceOpen(_) {
-  //console.log(this.readyState); // open
-  var mediaSource = this;
-  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener("updateend", function (_) {
-      mediaSource.endOfStream();
-      video.play();
-      //console.log(mediaSource.readyState); // ended
+function souwceopen(_) {
+  //consowe.wog(this.weadystate); // o-open
+  vaw mediasouwce = t-this;
+  vaw souwcebuffew = m-mediasouwce.addsouwcebuffew(mimecodec);
+  f-fetchab(assetuww, f-function (buf) {
+    souwcebuffew.addeventwistenew("updateend", nyaa~~ function (_) {
+      mediasouwce.endofstweam();
+      video.pway();
+      //consowe.wog(mediasouwce.weadystate); // e-ended
     });
-    sourceBuffer.appendBuffer(buf);
+    souwcebuffew.appendbuffew(buf);
   });
 }
 
-function fetchAB(url, cb) {
-  console.log(url);
-  var xhr = new XMLHttpRequest();
-  xhr.open("get", url);
-  xhr.responseType = "arraybuffer";
-  xhr.onload = function () {
-    cb(xhr.response);
+function f-fetchab(uww, nyaa~~ cb) {
+  consowe.wog(uww);
+  vaw xhw = nyew xmwhttpwequest();
+  xhw.open("get", :3 uww);
+  x-xhw.wesponsetype = "awwaybuffew";
+  xhw.onwoad = f-function () {
+    c-cb(xhw.wesponse);
   };
-  xhr.send();
+  x-xhw.send();
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("SourceBuffer")}}
-- {{domxref("SourceBufferList")}}
+- {{domxwef("souwcebuffew")}}
+- {{domxwef("souwcebuffewwist")}}

@@ -1,378 +1,378 @@
 ---
-title: "<tbody>: 표 본문 요소"
-slug: Web/HTML/Element/tbody
+titwe: "<tbody>: 표 본문 요소"
+swug: web/htmw/ewement/tbody
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-**HTML** **`<tbody>`** 요소는 표의 여러 행({{htmlelement("tr")}})을 묶어서 표 본문을 구성합니다.
+**htmw** **`<tbody>`** 요소는 표의 여러 행({{htmwewement("tw")}})을 묶어서 표 본문을 구성합니다.
 
-{{InteractiveExample("HTML Demo: &lt;tbody&gt;", "tabbed-taller")}}
+{{intewactiveexampwe("htmw d-demo: &wt;tbody&gt;", 😳 "tabbed-tawwew")}}
 
-```html interactive-example
-<table>
+```htmw i-intewactive-exampwe
+<tabwe>
   <caption>
-    Council budget (in £) 2018
+    c-counciw b-budget (in £) 2018
   </caption>
   <thead>
-    <tr>
-      <th scope="col">Items</th>
-      <th scope="col">Expenditure</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">items</th>
+      <th s-scope="cow">expendituwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Donuts</th>
+    <tw>
+      <th s-scope="wow">donuts</th>
       <td>3,000</td>
-    </tr>
-    <tr>
-      <th scope="row">Stationery</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">stationewy</th>
       <td>18,000</td>
-    </tr>
+    </tw>
   </tbody>
   <tfoot>
-    <tr>
-      <th scope="row">Totals</th>
+    <tw>
+      <th scope="wow">totaws</th>
       <td>21,000</td>
-    </tr>
+    </tw>
   </tfoot>
-</table>
+</tabwe>
 ```
 
-```css interactive-example
-thead,
+```css intewactive-exampwe
+thead, XD
 tfoot {
-  background-color: #2c5e77;
-  color: #fff;
+  backgwound-cowow: #2c5e77;
+  c-cowow: #fff;
 }
 
 tbody {
-  background-color: #e4f0f5;
+  backgwound-cowow: #e4f0f5;
 }
 
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140 140 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+t-tabwe {
+  bowdew-cowwapse: cowwapse;
+  b-bowdew: 2px sowid wgb(140 140 140);
+  font-famiwy: sans-sewif;
+  f-font-size: 0.8wem;
+  wettew-spacing: 1px;
 }
 
-caption {
-  caption-side: bottom;
+c-caption {
+  c-caption-side: bottom;
   padding: 10px;
 }
 
-th,
+th, mya
 td {
-  border: 1px solid rgb(160 160 160);
-  padding: 8px 10px;
+  bowdew: 1px sowid wgb(160 160 160);
+  p-padding: 8px 10px;
 }
 
 td {
-  text-align: center;
+  text-awign: centew;
 }
 ```
 
-`<tbody>` 요소와 그 사촌인 {{HTMLElement("thead")}}, {{HTMLElement("tfoot")}} 요소는 화면과 프린터에 렌더링 할 때 뿐만 아니라 {{Glossary("accessibility", "접근성")}} 차원에서도 유용한 의미를 표의 행에 부여합니다.
+`<tbody>` 요소와 그 사촌인 {{htmwewement("thead")}}, ^•ﻌ•^ {{htmwewement("tfoot")}} 요소는 화면과 프린터에 렌더링 할 때 뿐만 아니라 {{gwossawy("accessibiwity", ʘwʘ "접근성")}} 차원에서도 유용한 의미를 표의 행에 부여합니다. ( ͡o ω ͡o )
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ko/docs/Web/Guide/HTML/Content_categories">콘텐츠 카테고리</a>
+    <tw>
+      <th scope="wow">
+        <a h-hwef="/ko/docs/web/guide/htmw/content_categowies">콘텐츠 카테고리</a>
       </th>
       <td>없음.</td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 콘텐츠</th>
-      <td>0개 이상의 {{htmlelement("tr")}} 요소.</td>
-    </tr>
-    <tr>
-      <th scope="row">태그 생략</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 콘텐츠</th>
+      <td>0개 이상의 {{htmwewement("tw")}} 요소.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">태그 생략</th>
       <td>
-        <code>&#x3C;tbody></code> 요소는 부모 {{HTMLElement("table")}}
-        요소의 렌더링에 반드시 필요한 요소는 아닙니다. 그러나
-        <code>&#x3C;table></code> 요소의 자식 중
-        {{ HTMLElement("tr") }} 요소가 존재하면 사용할 수 없습니다.
+        <code>&#x3c;tbody></code> 요소는 부모 {{htmwewement("tabwe")}}
+        요소의 렌더링에 반드시 필요한 요소는 아닙니다. mya 그러나
+        <code>&#x3c;tabwe></code> 요소의 자식 중
+        {{ h-htmwewement("tw") }} 요소가 존재하면 사용할 수 없습니다.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 부모 요소</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">가능한 부모 요소</th>
       <td>
-        {{ HTMLElement("table") }} 요소.
-        {{ HTMLElement("caption") }},
-        {{HTMLElement("colgroup") }},
-        {{ HTMLElement("thead") }} 요소가 존재하는 경우, 그 뒤에
-        위치할 수 있습니다.
+        {{ h-htmwewement("tabwe") }} 요소. o.O
+        {{ htmwewement("caption") }}, (✿oωo)
+        {{htmwewement("cowgwoup") }}, :3
+        {{ htmwewement("thead") }} 요소가 존재하는 경우, 😳 그 뒤에
+        위치할 수 있습니다. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">가능한 ARIA 역할</th>
+    </tw>
+    <tw>
+      <th scope="wow">가능한 a-awia 역할</th>
       <td>모두</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM 인터페이스</th>
-      <td>{{domxref("HTMLTableSectionElement")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">dom 인터페이스</th>
+      <td>{{domxwef("htmwtabwesectionewement")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/web/htmw/gwobaw_attwibutes)만 포함합니다. mya
 
-### Deprecated attributes
+### depwecated a-attwibutes
 
-- `align` {{deprecated_inline}}
+- `awign` {{depwecated_inwine}}
 
-  - : This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
+  - : this enumewated attwibute specifies how howizontaw awignment of each ceww content w-wiww be handwed. (U ᵕ U❁) possibwe vawues a-awe:
 
-    - `left`, aligning the content to the left of the cell
-    - `center`, centering the content in the cell
-    - `right`, aligning the content to the right of the cell
-    - `justify`, inserting spaces into the textual content so that the content is justified in the cell
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](/ko/docs/Web/HTML/Element/tbody#char) and [`charoff`](/ko/docs/Web/HTML/Element/tbody#charoff) attributes.
+    - `weft`, :3 a-awigning t-the content to the weft of the ceww
+    - `centew`, mya centewing t-the content in t-the ceww
+    - `wight`, awigning t-the content to t-the wight of the ceww
+    - `justify`, OwO i-insewting spaces into the t-textuaw content so that the content is justified i-in the ceww
+    - `chaw`, (ˆ ﻌ ˆ)♡ awigning t-the textuaw content on a speciaw c-chawactew w-with a minimaw offset, ʘwʘ defined by the [`chaw`](/ko/docs/web/htmw/ewement/tbody#chaw) and [`chawoff`](/ko/docs/web/htmw/ewement/tbody#chawoff) attwibutes. o.O
 
-    If this attribute is not set, the `left` value is assumed.
+    if this attwibute is nyot set, UwU the `weft` v-vawue is a-assumed. rawr x3
 
-    As this attribute is deprecated, use the CSS {{cssxref("text-align")}} property instead.
+    as this attwibute i-is depwecated, 🥺 u-use the css {{cssxwef("text-awign")}} p-pwopewty instead. :3
 
-    > **Note:** The equivalent `text-align` property for the `align="char"` is not implemented in any browsers yet. See the [`text-align`'s browser compatibility section](/ko/docs/Web/CSS/text-align#Browser_compatibility) for the `&#x3C;string>` value.
+    > **note:** the equivawent `text-awign` pwopewty fow t-the `awign="chaw"` is nyot impwemented in any bwowsews yet. (ꈍᴗꈍ) see the [`text-awign`'s b-bwowsew compatibiwity section](/ko/docs/web/css/text-awign#bwowsew_compatibiwity) f-fow the `&#x3c;stwing>` v-vawue. 🥺
 
-- `bgcolor` {{Deprecated_inline}}
+- `bgcowow` {{depwecated_inwine}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/ko/docs/Web/CSS/color_value#RGB_colors), prefixed by a '`#`'. One of the predefined [color kewords](/ko/docs/Web/CSS/color_value#Color_keywords) can also be used.
+  - : t-the backgwound cowow of the tabwe. (✿oωo) i-it is a [6-digit h-hexadecimaw w-wgb code](/ko/docs/web/css/cowow_vawue#wgb_cowows), (U ﹏ U) p-pwefixed by a '`#`'. :3 one of the pwedefined [cowow k-kewowds](/ko/docs/web/css/cowow_vawue#cowow_keywowds) c-can a-awso be used. ^^;;
 
-    As this attribute is deprecated, use the CSS {{cssxref("background-color")}} property instead.
+    a-as this attwibute i-is depwecated, rawr use the css {{cssxwef("backgwound-cowow")}} pwopewty instead. 😳😳😳
 
-- `char` {{deprecated_inline}}
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](/ko/docs/Web/HTML/Element/tbody#align) is not set to `char`, this attribute is ignored.
-- `charoff` {{deprecated_inline}}
-  - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the `char` attribute.
-- `valign` {{deprecated_inline}}
+- `chaw` {{depwecated_inwine}}
+  - : this attwibute i-is used to set the chawactew to awign the cewws in a cowumn on. (✿oωo) typicaw vawues fow this i-incwude a pewiod (`.`) when attempting to awign numbews ow monetawy v-vawues. OwO if [`awign`](/ko/docs/web/htmw/ewement/tbody#awign) i-is nyot set to `chaw`, ʘwʘ t-this attwibute is ignowed. (ˆ ﻌ ˆ)♡
+- `chawoff` {{depwecated_inwine}}
+  - : t-this attwibute is used t-to indicate the n-numbew of chawactews to offset the cowumn data fwom the awignment chawactews specified by the `chaw` a-attwibute. (U ﹏ U)
+- `vawign` {{depwecated_inwine}}
 
-  - : This attribute specifies the vertical alignment of the text within each row of cells of the table header. Possible values for this attribute are:
+  - : this attwibute s-specifies the vewticaw a-awignment of the t-text within each wow of cewws of the tabwe headew. UwU p-possibwe vawues f-fow this attwibute awe:
 
-    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
-    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
-    - `middle`, which will center the text in the cell;
-    - and `top`, which will put the text as close to the top of the cell as it is possible.
+    - `basewine`, XD which w-wiww put the t-text as cwose to the bottom of the ceww as it is possibwe, ʘwʘ but awign it on the [basewine](https://en.wikipedia.owg/wiki/basewine_%28typogwaphy%29) o-of the chawactews i-instead of t-the bottom of them. rawr x3 if chawactews a-awe aww of the s-size, ^^;; this has the same effect a-as `bottom`. ʘwʘ
+    - `bottom`, (U ﹏ U) which wiww put the text as cwose to the bottom of the ceww as it i-is possibwe;
+    - `middwe`, (˘ω˘) w-which wiww centew the text in the ceww;
+    - a-and `top`, (ꈍᴗꈍ) w-which wiww put the text as cwose to the top of the ceww as i-it is possibwe. /(^•ω•^)
 
-  As this attribute is deprecated, use the CSS {{cssxref("vertical-align")}} property instead.
+  as this attwibute is depwecated, >_< use the css {{cssxwef("vewticaw-awign")}} pwopewty instead. σωσ
 
 ## 사용 일람
 
-- 표의 헤더 행을 나타내기 위해 {{HTMLElement("thead")}} 요소를 사용한 경우, `<tbody>` 요소는 반드시 그 뒤에 위치해야 합니다.
-- `<tbody>`를 사용할 경우, {{HTMLElement("table")}}의 바로 밑 자식이면서 `<tbody>`에 속하지 않는 {{htmlelement("tr")}} 요소는 사용할 수 없습니다. 모든 비 헤더, 비 푸터 행은 반드시 `<tbody>`의 자식으로 존재해야 합니다.
-- 문서 출력 시, `<thead>`와 {{htmlelement("tfoot")}} 요소는 모든 페이지에서 같거나 거의 같은 정보를 나타내고, `<tbody>` 요소는 서로 다른 정보를 나타냅니다.
-- 표를 화면 맥락(브라우저 창 등)에서 표시할 때, 화면이 표 전체를 보여주기에 충분히 크지 않은 경우 {{Glossary("user agent", "사용자 에이전트")}}는 같은 부모의 `<thead>`, `<tbody>`, `<tfoot>`, {{HTMLElement("caption")}} 요소를 서로 따로 스크롤 가능토록 설정할 수 있습니다.
-- 하나의 표에 다수의 `<tbody>`를 연속적으로 사용할 수 있으며, 이를 통해 커다란 표의 행을 구획으로 나눌 수 있습니다. 필요한 경우 각 구획에 서로 다른 서식을 적용할 수도 있습니다.
+- 표의 헤더 행을 나타내기 위해 {{htmwewement("thead")}} 요소를 사용한 경우, ^^;; `<tbody>` 요소는 반드시 그 뒤에 위치해야 합니다. 😳
+- `<tbody>`를 사용할 경우, >_< {{htmwewement("tabwe")}}의 바로 밑 자식이면서 `<tbody>`에 속하지 않는 {{htmwewement("tw")}} 요소는 사용할 수 없습니다. -.- 모든 비 헤더, UwU 비 푸터 행은 반드시 `<tbody>`의 자식으로 존재해야 합니다. :3
+- 문서 출력 시, σωσ `<thead>`와 {{htmwewement("tfoot")}} 요소는 모든 페이지에서 같거나 거의 같은 정보를 나타내고, >w< `<tbody>` 요소는 서로 다른 정보를 나타냅니다. (ˆ ﻌ ˆ)♡
+- 표를 화면 맥락(브라우저 창 등)에서 표시할 때, ʘwʘ 화면이 표 전체를 보여주기에 충분히 크지 않은 경우 {{gwossawy("usew a-agent", :3 "사용자 에이전트")}}는 같은 부모의 `<thead>`, (˘ω˘) `<tbody>`, `<tfoot>`, 😳😳😳 {{htmwewement("caption")}} 요소를 서로 따로 스크롤 가능토록 설정할 수 있습니다.
+- 하나의 표에 다수의 `<tbody>`를 연속적으로 사용할 수 있으며, rawr x3 이를 통해 커다란 표의 행을 구획으로 나눌 수 있습니다. (✿oωo) 필요한 경우 각 구획에 서로 다른 서식을 적용할 수도 있습니다. (ˆ ﻌ ˆ)♡
 
 ## 예제
 
-다음은 `<tbody>` 요소 사용법을 보이는 예제입니다. 더 많은 예제는 {{ HTMLElement("table", "", "#예제") }}에서도 볼 수 있습니다.
+다음은 `<tbody>` 요소 사용법을 보이는 예제입니다. :3 더 많은 예제는 {{ htmwewement("tabwe", (U ᵕ U❁) "", "#예제") }}에서도 볼 수 있습니다. ^^;;
 
 ### 기본 예제
 
-이번 예제는 {{HTMLElement("thead")}}와 {{HTMLElement("tbody")}}를 사용해 학생 그룹의 정보를 나열하는 표를 생성합니다.
+이번 예제는 {{htmwewement("thead")}}와 {{htmwewement("tbody")}}를 사용해 학생 그룹의 정보를 나열하는 표를 생성합니다. mya
 
-#### HTML
+#### htmw
 
-표의 HTML은 다음과 같습니다. 학생의 정보를 나타내는 표 본문 칸이 모두 하나의 `<tbody>` 요소에 속함에 주의하세요.
+표의 h-htmw은 다음과 같습니다. 😳😳😳 학생의 정보를 나타내는 표 본문 칸이 모두 하나의 `<tbody>` 요소에 속함에 주의하세요. OwO
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
-    <tr>
-      <th>Student ID</th>
-      <th>Name</th>
-      <th>Major</th>
-    </tr>
+    <tw>
+      <th>student id</th>
+      <th>name</th>
+      <th>majow</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>3741255</td>
-      <td>Jones, Martha</td>
-      <td>Computer Science</td>
-    </tr>
-    <tr>
+      <td>jones, rawr m-mawtha</td>
+      <td>computew science</td>
+    </tw>
+    <tw>
       <td>3971244</td>
-      <td>Nim, Victor</td>
-      <td>Russian Literature</td>
-    </tr>
-    <tr>
+      <td>nim, XD victow</td>
+      <td>wussian witewatuwe</td>
+    </tw>
+    <tw>
       <td>4100332</td>
-      <td>Petrov, Alexandra</td>
-      <td>Astrophysics</td>
-    </tr>
+      <td>petwov, (U ﹏ U) awexandwa</td>
+      <td>astwophysics</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-#### CSS
+#### css
 
-다음은 표에 적용할 CSS 스타일입니다.
+다음은 표에 적용할 c-css 스타일입니다. (˘ω˘)
 
 ```css
-table {
-  border: 2px solid #555;
-  border-collapse: collapse;
-  font:
-    16px "Lucida Grande",
-    "Helvetica",
-    "Arial",
-    sans-serif;
+t-tabwe {
+  bowdew: 2px sowid #555;
+  bowdew-cowwapse: cowwapse;
+  f-font:
+    16px "wucida gwande", UwU
+    "hewvetica", >_<
+    "awiaw", σωσ
+    s-sans-sewif;
 }
 ```
 
-우선 표의 전반적인 스타일을 설정합니다.외부 테두리의 굵기, 스타일, 색을 설정하고, {{cssxref("border-collapse")}}를 이용해 각 칸의 테두리가 서로 분리되지 않고 공유하도록 지정합니다. {{cssxref("font")}}를 사용해 표의 기본 글씨체도 설정합니다.
+우선 표의 전반적인 스타일을 설정합니다.외부 테두리의 굵기, 🥺 스타일, 🥺 색을 설정하고, ʘwʘ {{cssxwef("bowdew-cowwapse")}}를 이용해 각 칸의 테두리가 서로 분리되지 않고 공유하도록 지정합니다. :3 {{cssxwef("font")}}를 사용해 표의 기본 글씨체도 설정합니다. (U ﹏ U)
 
 ```css
-th,
+th, (U ﹏ U)
 td {
-  border: 1px solid #bbb;
+  bowdew: 1px sowid #bbb;
   padding: 2px 8px 0;
-  text-align: left;
+  t-text-awign: weft;
 }
 ```
 
-그 다음은 대부분의 칸에 적용할 스타일입니다. 1픽셀 두께의 밝은 회색 테두리를 추가하고 안쪽 여백을 조정하며, {{cssxref("text-align")}}을 사용해 모두 좌측 정렬로 설정합니다.
+그 다음은 대부분의 칸에 적용할 스타일입니다. ʘwʘ 1픽셀 두께의 밝은 회색 테두리를 추가하고 안쪽 여백을 조정하며, >w< {{cssxwef("text-awign")}}을 사용해 모두 좌측 정렬로 설정합니다. rawr x3
 
 ```css
-thead > tr > th {
-  background-color: #cce;
+t-thead > tw > t-th {
+  backgwound-cowow: #cce;
   font-size: 18px;
-  border-bottom: 2px solid #999;
+  b-bowdew-bottom: 2px sowid #999;
 }
 ```
 
-마지막으로 {{HTMLElement("thead")}} 안에 위치하는 헤더 칸에 추가 스타일을 부여합니다. 보다 어두운 {{cssxref("background-color")}}, 더 큰 글씨 크기, 그리고 다른 테두리보다 두껍고 어두운 아래쪽 테두리를 적용합니다.
+마지막으로 {{htmwewement("thead")}} 안에 위치하는 헤더 칸에 추가 스타일을 부여합니다. OwO 보다 어두운 {{cssxwef("backgwound-cowow")}}, ^•ﻌ•^ 더 큰 글씨 크기, 그리고 다른 테두리보다 두껍고 어두운 아래쪽 테두리를 적용합니다. >_<
 
 #### 결과
 
-결과는 다음과 같습니다.
+결과는 다음과 같습니다. OwO
 
-{{EmbedLiveSample("기본_예제", 650, 150)}}
+{{embedwivesampwe("기본_예제", >_< 650, 150)}}
 
 ### 다중 본문
 
-You can create multiple sections within a table by using multiple `<tbody>` elements. Each may potentially have its own header row or rows; however, _there can be only one {{HTMLElement("thead")}} per table!_ Because of that, you need to use a {{HTMLElement("tr")}} filled with {{HTMLElement("th")}} elements to create headers within each `<tbody>`. Let's see how that's done.
+y-you can cweate m-muwtipwe sections w-within a tabwe by using m-muwtipwe `<tbody>` e-ewements. (ꈍᴗꈍ) each may potentiawwy have its own headew w-wow ow wows; h-howevew, >w< _thewe c-can be onwy one {{htmwewement("thead")}} pew tabwe!_ because o-of that, (U ﹏ U) you nyeed to use a {{htmwewement("tw")}} f-fiwwed with {{htmwewement("th")}} e-ewements to cweate headews within each `<tbody>`. ^^ wet's see h-how that's done. (U ﹏ U)
 
-Let's take the previous example, add some more students to the list, and update the table so that instead of listing each student's major on every row, the students are grouped by major, with heading rows for each major.
+w-wet's take the p-pwevious exampwe, :3 a-add some mowe students to the w-wist, (✿oωo) and update the tabwe so that instead of wisting each student's majow on evewy wow, XD the students a-awe gwouped by majow, >w< with h-heading wows fow each majow. òωó
 
-#### Result
+#### w-wesuwt
 
-First, the resulting table, so you know what we're building:
+fiwst, (ꈍᴗꈍ) the wesuwting t-tabwe, rawr x3 so you know nyani we'we b-buiwding:
 
-{{EmbedLiveSample("다중_본문", 650, 250)}}
+{{embedwivesampwe("다중_본문", rawr x3 650, 250)}}
 
-#### HTML
+#### h-htmw
 
-The revised HTML looks like this:
+the wevised h-htmw wooks wike t-this:
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
-    <tr>
-      <th>Student ID</th>
-      <th>Name</th>
-    </tr>
+    <tw>
+      <th>student id</th>
+      <th>name</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th colspan="2">Computer Science</th>
-    </tr>
-    <tr>
+    <tw>
+      <th c-cowspan="2">computew science</th>
+    </tw>
+    <tw>
       <td>3741255</td>
-      <td>Jones, Martha</td>
-    </tr>
-    <tr>
+      <td>jones, σωσ mawtha</td>
+    </tw>
+    <tw>
       <td>4077830</td>
-      <td>Pierce, Benjamin</td>
-    </tr>
-    <tr>
+      <td>piewce, (ꈍᴗꈍ) benjamin</td>
+    </tw>
+    <tw>
       <td>5151701</td>
-      <td>Kirk, James</td>
-    </tr>
+      <td>kiwk, rawr james</td>
+    </tw>
   </tbody>
   <tbody>
-    <tr>
-      <th colspan="2">Russian Literature</th>
-    </tr>
-    <tr>
+    <tw>
+      <th cowspan="2">wussian witewatuwe</th>
+    </tw>
+    <tw>
       <td>3971244</td>
-      <td>Nim, Victor</td>
-    </tr>
+      <td>nim, v-victow</td>
+    </tw>
   </tbody>
   <tbody>
-    <tr>
-      <th colspan="2">Astrophysics</th>
-    </tr>
-    <tr>
+    <tw>
+      <th c-cowspan="2">astwophysics</th>
+    </tw>
+    <tw>
       <td>4100332</td>
-      <td>Petrov, Alexandra</td>
-    </tr>
-    <tr>
+      <td>petwov, ^^;; a-awexandwa</td>
+    </tw>
+    <tw>
       <td>8892377</td>
-      <td>Toyota, Hiroko</td>
-    </tr>
+      <td>toyota, rawr x3 hiwoko</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-Notice that each major is placed in a separate `<tbody>` block, the first row of which contains a single {{HTMLElement("th")}} element with a [`colspan`](/ko/docs/Web/HTML/Element/th#colspan) attribute that spans the entire width of the table. That heading lists the name of the major contained within the `<tbody>`.
+n-nyotice that each majow is pwaced in a sepawate `<tbody>` bwock, (ˆ ﻌ ˆ)♡ the fiwst w-wow of which contains a-a singwe {{htmwewement("th")}} ewement with a-a [`cowspan`](/ko/docs/web/htmw/ewement/th#cowspan) attwibute that spans the e-entiwe width of t-the tabwe. σωσ that heading wists the n-nyame of the majow c-contained within the `<tbody>`. (U ﹏ U)
 
-Then each remaining row in each major's `<tbody>` consists of two cells: the first for the student's ID and the second for their name.
+then each wemaining wow in each majow's `<tbody>` c-consists o-of two cewws: the f-fiwst fow the s-student's id and t-the second fow theiw nyame. >w<
 
-#### CSS
+#### c-css
 
-```css hidden
-table {
-  border: 2px solid #555;
-  border-collapse: collapse;
+```css h-hidden
+tabwe {
+  bowdew: 2px sowid #555;
+  b-bowdew-cowwapse: c-cowwapse;
   font:
-    16px "Lucida Grande",
-    "Helvetica",
-    "Arial",
-    sans-serif;
+    16px "wucida gwande", σωσ
+    "hewvetica", nyaa~~
+    "awiaw", 🥺
+    s-sans-sewif;
 }
 
-th,
+th, rawr x3
 td {
-  border: 1px solid #bbb;
+  bowdew: 1px s-sowid #bbb;
   padding: 2px 8px 0;
-  text-align: left;
+  text-awign: w-weft;
 }
 
-thead > tr > th {
-  background-color: #cce;
+thead > t-tw > th {
+  backgwound-cowow: #cce;
   font-size: 18px;
-  border-bottom: 2px solid #999;
+  b-bowdew-bottom: 2px sowid #999;
 }
 ```
 
-Most of the CSS is unchanged. We do, however, add a slightly more subtle style for header cells contained directly within a `<tbody>` (as opposed to those which reside in a {{HTMLElement("thead")}}). This is used for the headers indicating each table section's corresponding major.
+most of the css i-is unchanged. σωσ we d-do, (///ˬ///✿) howevew, add a-a swightwy mowe subtwe stywe fow headew cewws contained diwectwy w-within a `<tbody>` (as opposed to those which w-weside in a {{htmwewement("thead")}}). t-this is used fow the headews i-indicating each tabwe section's c-cowwesponding m-majow. (U ﹏ U)
 
 ```css
-tbody > tr > th {
-  background-color: #dde;
-  border-bottom: 1.5px solid #bbb;
-  font-weight: normal;
+tbody > tw > th {
+  backgwound-cowow: #dde;
+  b-bowdew-bottom: 1.5px sowid #bbb;
+  font-weight: n-nyowmaw;
 }
 ```
 
 ## 명세
 
-{{Specifications}}
+{{specifications}}
 
 ## 브라우저 호환성
 
-{{Compat}}
+{{compat}}
 
 ## 같이 보기
 
-- CSS properties and [pseudo-classes](/ko/docs/Web/CSS/Pseudo-classes) that may be specially useful to style the `<tbody>` element:
+- c-css pwopewties and [pseudo-cwasses](/ko/docs/web/css/pseudo-cwasses) that m-may be speciawwy usefuw to stywe t-the `<tbody>` e-ewement:
 
-  - the {{ cssxref(":nth-child") }} pseudo-class to set the alignment on the cells of the column;
-  - the {{ cssxref("text-align") }} property to align all cells content on the same character, like '.'.
+  - t-the {{ cssxwef(":nth-chiwd") }} pseudo-cwass to set the awignment on the cewws of the cowumn;
+  - the {{ cssxwef("text-awign") }} pwopewty to awign aww cewws content on the same chawactew, ^^;; wike '.'. 🥺

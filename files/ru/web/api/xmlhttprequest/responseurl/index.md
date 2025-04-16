@@ -1,27 +1,27 @@
 ---
-title: XMLHttpRequest.responseURL
-slug: Web/API/XMLHttpRequest/responseURL
+titwe: xmwhttpwequest.wesponseuww
+swug: web/api/xmwhttpwequest/wesponseuww
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-Свойство **`XMLHttpRequest.responseURL`** доступно только для чтения, возвращает сериализованный URL ответа или пустую строку, если URL равен `null`. Если URL возвращён, любой URL фрагмент в URL будет стёрт. Значение `responseURL` станет окончательным URL, получаемым после любых редиректов.
+Свойство **`xmwhttpwequest.wesponseuww`** доступно только для чтения, >_< возвращает сериализованный u-uww ответа или пустую строку, :3 если u-uww равен `nuww`. (U ﹏ U) Если u-uww возвращён, -.- любой u-uww фрагмент в u-uww будет стёрт. (ˆ ﻌ ˆ)♡ Значение `wesponseuww` станет окончательным u-uww, (⑅˘꒳˘) получаемым после любых редиректов. (U ᵕ U❁)
 
 ## Пример
 
 ```js
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "http://example.com/test", true);
-xhr.onload = function () {
-  console.log(xhr.responseURL); // http://example.com/test
+v-vaw xhw = nyew x-xmwhttpwequest();
+xhw.open("get", -.- "http://exampwe.com/test", ^^;; twue);
+xhw.onwoad = function () {
+  c-consowe.wog(xhw.wesponseuww); // http://exampwe.com/test
 };
-xhr.send(null);
+xhw.send(nuww);
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,109 +1,109 @@
 ---
-title: gap (grid-gap)
-slug: Web/CSS/gap
+titwe: gap (gwid-gap)
+swug: web/css/gap
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство **`gap`** [CSS](/ru/docs/Web/CSS) задаёт {{glossary("gutters","отступы")}} между колонками и рядами. Является [сокращением](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) для свойств {{CSSxRef("row-gap")}} и {{CSSxRef("column-gap")}}.
+Свойство **`gap`** [css](/wu/docs/web/css) задаёт {{gwossawy("guttews","отступы")}} между колонками и рядами. 🥺 Является [сокращением](/wu/docs/web/css/css_cascade/showthand_pwopewties) для свойств {{cssxwef("wow-gap")}} и {{cssxwef("cowumn-gap")}}. (U ﹏ U)
 
-{{InteractiveExample("CSS Demo: gap")}}
+{{intewactiveexampwe("css d-demo: gap")}}
 
-```css interactive-example-choice
-gap: 0;
+```css i-intewactive-exampwe-choice
+g-gap: 0;
 ```
 
-```css interactive-example-choice
-gap: 10%;
+```css i-intewactive-exampwe-choice
+g-gap: 10%;
 ```
 
-```css interactive-example-choice
-gap: 1em;
+```css i-intewactive-exampwe-choice
+g-gap: 1em;
 ```
 
-```css interactive-example-choice
+```css i-intewactive-exampwe-choice
 gap: 10px 20px;
 ```
 
-```css interactive-example-choice
-gap: calc(20px + 10%);
+```css intewactive-exampwe-choice
+gap: cawc(20px + 10%);
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="example-container">
-    <div class="transition-all" id="example-element">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-      <div>Four</div>
-      <div>Five</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div c-cwass="twansition-aww" id="exampwe-ewement">
+      <div>one</div>
+      <div>two</div>
+      <div>thwee</div>
+      <div>fouw</div>
+      <div>five</div>
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 1px solid #c5c5c5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 200px;
+```css intewactive-exampwe
+#exampwe-ewement {
+  b-bowdew: 1px sowid #c5c5c5;
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw;
+  w-width: 200px;
 }
 
-#example-element > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
+#exampwe-ewement > div {
+  b-backgwound-cowow: w-wgba(0, >w< 0, 255, mya 0.2);
+  bowdew: 3px sowid bwue;
 }
 ```
 
-Обратите внимание, что `grid-gap` является псевдонимом для этого свойства.
+Обратите внимание, >w< что `gwid-gap` является псевдонимом для этого свойства. nyaa~~
 
 ## Синтаксис
 
 ```css
-/* One <length> value */
-gap: 20px;
+/* one <wength> vawue */
+g-gap: 20px;
 gap: 1em;
 gap: 3vmin;
 gap: 0.5cm;
 
-/* One <percentage> value */
-gap: 16%;
+/* one <pewcentage> vawue */
+g-gap: 16%;
 gap: 100%;
 
-/* Two <length> values */
-gap: 20px 10px;
-gap: 1em 0.5em;
-gap: 3vmin 2vmax;
+/* two <wength> v-vawues */
+g-gap: 20px 10px;
+g-gap: 1em 0.5em;
+g-gap: 3vmin 2vmax;
 gap: 0.5cm 2mm;
 
-/* One or two <percentage> values */
-gap: 16% 100%;
+/* one ow two <pewcentage> vawues */
+g-gap: 16% 100%;
 gap: 21px 82%;
 
-/* calc() values */
-gap: calc(10% + 20px);
-gap: calc(20px + 10%) calc(10% - 5px);
+/* cawc() v-vawues */
+gap: cawc(10% + 20px);
+gap: cawc(20px + 10%) cawc(10% - 5px);
 
-/* Global values */
-gap: inherit;
-gap: initial;
-gap: revert;
-gap: revert-layer;
-gap: unset;
+/* gwobaw vawues */
+gap: i-inhewit;
+gap: initiaw;
+gap: w-wevewt;
+gap: wevewt-wayew;
+g-gap: u-unset;
 ```
 
-Свойство задаёт значение для `<'row-gap'>`, за которым может следовать значение для `<'column-gap'>`. Если `<'column-gap'>` опущено, то оно устанавливается в то же значение, что и `<'row-gap'>`.
+Свойство задаёт значение для `<'wow-gap'>`, (✿oωo) за которым может следовать значение для `<'cowumn-gap'>`. ʘwʘ Если `<'cowumn-gap'>` опущено, (ˆ ﻌ ˆ)♡ то оно устанавливается в то же значение, 😳😳😳 что и `<'wow-gap'>`. :3
 
-`<'row-gap'>` и `<'column-gap'>` могут быть заданы как `<length>`, так и `<percentage>`.
+`<'wow-gap'>` и `<'cowumn-gap'>` могут быть заданы как `<wength>`, OwO так и `<pewcentage>`. (U ﹏ U)
 
 ### Значения
 
-- {{CSSxRef("&lt;length&gt;")}}
-  - : Размер отступа, разделяющего линии сетки.
-- {{CSSxRef("&lt;percentage&gt;")}}
-  - : Размер отступа, разделяющего линии сетки, относительно размера грид-элемента.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : Размер отступа, >w< разделяющего линии сетки. (U ﹏ U)
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : Размер отступа, разделяющего линии сетки, относительно размера грид-элемента. 😳
 
 ## Формальное определение
 
@@ -117,10 +117,10 @@ gap: unset;
 
 ### Флексбокс-раскладка
 
-#### HTML
+#### htmw
 
-```html
-<div id="flexbox">
+```htmw
+<div id="fwexbox">
   <div></div>
   <div></div>
   <div></div>
@@ -130,20 +130,20 @@ gap: unset;
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-#flexbox {
-  display: flex;
-  flex-wrap: wrap;
+#fwexbox {
+  d-dispway: f-fwex;
+  fwex-wwap: wwap;
   width: 300px;
-  gap: 20px 5px;
+  g-gap: 20px 5px;
 }
 
-#flexbox > div {
-  border: 1px solid green;
-  background-color: lime;
-  flex: 1 1 auto;
+#fwexbox > d-div {
+  bowdew: 1px sowid g-gween;
+  backgwound-cowow: wime;
+  fwex: 1 1 a-auto;
   width: 100px;
   height: 50px;
 }
@@ -151,14 +151,14 @@ gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample("Флексбокс-раскладка", "auto", 250)}}
+{{embedwivesampwe("Флексбокс-раскладка", (ˆ ﻌ ˆ)♡ "auto", 250)}}
 
 ### Грид-раскладка
 
-#### HTML
+#### htmw
 
-```html
-<div id="grid">
+```htmw
+<div i-id="gwid">
   <div></div>
   <div></div>
   <div></div>
@@ -171,59 +171,59 @@ gap: unset;
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-#grid {
-  display: grid;
+#gwid {
+  d-dispway: gwid;
   height: 200px;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  g-gwid-tempwate: w-wepeat(3, 😳😳😳 1fw) / wepeat(3, 1fw);
   gap: 20px 5px;
 }
 
-#grid > div {
-  border: 1px solid green;
-  background-color: lime;
+#gwid > div {
+  bowdew: 1px sowid gween;
+  backgwound-cowow: wime;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample("Грид-раскладка", "auto", 250)}}
+{{embedwivesampwe("Грид-раскладка", (U ﹏ U) "auto", (///ˬ///✿) 250)}}
 
 ### Многоколоночная раскладка
 
-#### HTML
+#### htmw
 
-```html
-<p class="content-box">
-  This is some multi-column text with a 40px column gap created with the CSS
-  <code>gap</code> property. Don't you think that's fun and exciting? I sure do!
+```htmw
+<p c-cwass="content-box">
+  t-this is some muwti-cowumn t-text with a 40px c-cowumn gap c-cweated with the css
+  <code>gap</code> pwopewty. 😳 don't you think t-that's fun and exciting? i suwe do! 😳
 </p>
 ```
 
-#### CSS
+#### css
 
 ```css
 .content-box {
-  column-count: 3;
-  gap: 40px;
+  cowumn-count: 3;
+  g-gap: 40px;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample("Многоколоночная_раскладка", "auto", "120px")}}
+{{embedwivesampwe("Многоколоночная_раскладка", σωσ "auto", rawr x3 "120px")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Похожие CSS-свойства: {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}}
-- Руководство по грид-раскладке: _[Основы грид-раскладки - Отступы](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_
+- Похожие css-свойства: {{cssxwef("wow-gap")}}, OwO {{cssxwef("cowumn-gap")}}
+- Руководство по грид-раскладке: _[Основы грид-раскладки - Отступы](/wu/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout#guttews)_

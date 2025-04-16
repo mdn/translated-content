@@ -1,522 +1,522 @@
 ---
-title: CSS로 HTML 요소에 색 입히기
-slug: Web/CSS/CSS_colors/Applying_color
+titwe: css로 htmw 요소에 색 입히기
+s-swug: w-web/css/css_cowows/appwying_cowow
 ---
 
-{{HTMLSidebar}}
+{{htmwsidebaw}}
 
-색은 인간의 감정을 표현하는 기본적인 형태입니다. 아이들은 뭔가 그릴 수 있는 민첩성을 갖추기도 전에 색을 가지고 놉니다. 사람들이 웹 사이트를 개발할 때 보통 색을 제일 먼저 입혀보고 싶어 하는 건 이런 이유일지도 모릅니다. [CSS](/ko/docs/Web/CSS)와 함께라면 무궁무진한 방법으로 여러분의 [HTML](/ko/docs/Web/HTML) [요소](/ko/docs/Web/HTML/Element)에 색을 넣어 원하는 모습을 만들 수 있습니다. 이 글은 CSS 색을 HTML에 적용하는 기초를 소개합니다.
+색은 인간의 감정을 표현하는 기본적인 형태입니다. rawr x3 아이들은 뭔가 그릴 수 있는 민첩성을 갖추기도 전에 색을 가지고 놉니다. XD 사람들이 웹 사이트를 개발할 때 보통 색을 제일 먼저 입혀보고 싶어 하는 건 이런 이유일지도 모릅니다. ^^ [css](/ko/docs/web/css)와 함께라면 무궁무진한 방법으로 여러분의 [htmw](/ko/docs/web/htmw) [요소](/ko/docs/web/htmw/ewement)에 색을 넣어 원하는 모습을 만들 수 있습니다. (✿oωo) 이 글은 c-css 색을 h-htmw에 적용하는 기초를 소개합니다. >w<
 
-다행히도 HTML에 색을 추가하는 건 정말 쉽고 거의 모든 곳에 할 수 있는 일입니다.
+다행히도 h-htmw에 색을 추가하는 건 정말 쉽고 거의 모든 곳에 할 수 있는 일입니다. 😳😳😳
 
-[색을 입힐 수 있는 목록, 그때 사용할 CSS 속성](#색을_입힐_수_있는_것), [색을 나타내는 법](#색을_나타내는_법), [실제로 색 사용하기](#색_사용하기) 등 색을 쓸 때 알아야 할 주제는 대부분 짚고 가겠습니다. [사용자가 색을 선택](#사용자의_색_선택)할 수 있는 방법도 확인해보겠습니다.
+[색을 입힐 수 있는 목록, 그때 사용할 c-css 속성](#색을_입힐_수_있는_것), (ꈍᴗꈍ) [색을 나타내는 법](#색을_나타내는_법), (✿oωo) [실제로 색 사용하기](#색_사용하기) 등 색을 쓸 때 알아야 할 주제는 대부분 짚고 가겠습니다. (˘ω˘) [사용자가 색을 선택](#사용자의_색_선택)할 수 있는 방법도 확인해보겠습니다. nyaa~~
 
-마지막으로는 적절한 색을 고르고, 서로 다른 시각적 조건을 가진 사람들을 고려하는 등 [현명한 색 선택](#현명하게_색_고르기)에 대해 간단히 알아보겠습니다.
+마지막으로는 적절한 색을 고르고, ( ͡o ω ͡o ) 서로 다른 시각적 조건을 가진 사람들을 고려하는 등 [현명한 색 선택](#현명하게_색_고르기)에 대해 간단히 알아보겠습니다.
 
 ## 색을 입힐 수 있는 것
 
-요소 차원에서 보자면 HTML의 모든 것에 색을 입힐 수 있습니다. 대신에 글씨와 테두리처럼, 요소 안에 그려지는 것의 종류에 따라 알아보겠습니다. 각각의 종류에 적용할 수 있는 CSS 속성의 목록도 보겠습니다.
+요소 차원에서 보자면 h-htmw의 모든 것에 색을 입힐 수 있습니다. 🥺 대신에 글씨와 테두리처럼, (U ﹏ U) 요소 안에 그려지는 것의 종류에 따라 알아보겠습니다. ( ͡o ω ͡o ) 각각의 종류에 적용할 수 있는 c-css 속성의 목록도 보겠습니다. (///ˬ///✿)
 
-가장 기초적인 단계로는 {{cssxref("color")}} 속성이 HTML 요소의 콘텐츠 전경색을 지정하고, {{cssxref("background-color")}} 속성이 요소의 배경색을 지정합니다. 두 속성은 거의 모든 요소에 사용할 수 있습니다.
+가장 기초적인 단계로는 {{cssxwef("cowow")}} 속성이 htmw 요소의 콘텐츠 전경색을 지정하고, {{cssxwef("backgwound-cowow")}} 속성이 요소의 배경색을 지정합니다. (///ˬ///✿) 두 속성은 거의 모든 요소에 사용할 수 있습니다. (✿oωo)
 
 ### 글씨
 
-요소를 렌더링할 때 글씨, 글씨 배경과 기타 꾸미기 효과의 색은 아래에 나열한 속성이 결정합니다.
+요소를 렌더링할 때 글씨, (U ᵕ U❁) 글씨 배경과 기타 꾸미기 효과의 색은 아래에 나열한 속성이 결정합니다. ʘwʘ
 
-- {{cssxref("color")}}
-  - : 글씨와 글씨 장식(밑줄, 윗줄, 취소선 등)을 그릴 때 사용할 색입니다.
-- {{cssxref("background-color")}}
-  - : 글씨의 배경색입니다.
-- {{cssxref("text-shadow")}}
+- {{cssxwef("cowow")}}
+  - : 글씨와 글씨 장식(밑줄, ʘwʘ 윗줄, 취소선 등)을 그릴 때 사용할 색입니다. XD
+- {{cssxwef("backgwound-cowow")}}
+  - : 글씨의 배경색입니다. (✿oωo)
+- {{cssxwef("text-shadow")}}
 
-  - : 글씨의 그림자 효과를 설정합니다. 여러 옵션 중에서 그림자 색을 정할 수 있습니다. (이후 다른 옵션에 따라 흐려지고 배경과 섞입니다)
+  - : 글씨의 그림자 효과를 설정합니다. ^•ﻌ•^ 여러 옵션 중에서 그림자 색을 정할 수 있습니다. ^•ﻌ•^ (이후 다른 옵션에 따라 흐려지고 배경과 섞입니다)
 
-    See [Text drop shadows](/ko/docs/Learn/CSS/Styling_text/Fundamentals#text_drop_shadows) to learn more.
+    see [text dwop shadows](/ko/docs/weawn/css/stywing_text/fundamentaws#text_dwop_shadows) to w-weawn mowe. >_<
 
-- {{cssxref("text-decoration-color")}}
-  - : 기본 설정에서 글씨 장식(밑줄, 윗줄, 취소선 등)은 `color` 속성의 값을 색으로 사용합니다. 그러나 `text-decoration-color` 속성을 지정하면 다른 색으로 바꿀 수 있습니다.
-- {{cssxref("text-emphasis-color")}}
-  - : 글씨 위에 표시할 강조 표시의 색입니다.
-- {{cssxref("caret-color")}}
-  - : 요소의 {{Glossary("caret", "캐럿")}}(글씨 입력 커서) 색입니다. {{HTMLElement("input")}}이나 {{HTMLElement("textarea")}}, HTML [`contenteditable`](/ko/docs/Web/HTML/Global_attributes#contenteditable) 속성을 설정한 요소처럼 편집 가능한 경우에만 유용합니다.
+- {{cssxwef("text-decowation-cowow")}}
+  - : 기본 설정에서 글씨 장식(밑줄, mya 윗줄, 취소선 등)은 `cowow` 속성의 값을 색으로 사용합니다. σωσ 그러나 `text-decowation-cowow` 속성을 지정하면 다른 색으로 바꿀 수 있습니다. rawr
+- {{cssxwef("text-emphasis-cowow")}}
+  - : 글씨 위에 표시할 강조 표시의 색입니다. (✿oωo)
+- {{cssxwef("cawet-cowow")}}
+  - : 요소의 {{gwossawy("cawet", :3 "캐럿")}}(글씨 입력 커서) 색입니다. rawr x3 {{htmwewement("input")}}이나 {{htmwewement("textawea")}}, ^^ htmw [`contenteditabwe`](/ko/docs/web/htmw/gwobaw_attwibutes#contenteditabwe) 속성을 설정한 요소처럼 편집 가능한 경우에만 유용합니다. ^^
 
 ### 박스
 
-모든 요소는 모종의 콘텐츠를 가진 박스로, 콘텐츠 외에도 배경과 테두리를 가질 수 있습니다.
+모든 요소는 모종의 콘텐츠를 가진 박스로, OwO 콘텐츠 외에도 배경과 테두리를 가질 수 있습니다.
 
 - [테두리](#테두리)
-  - [: 테두리](#테두리) 항목에서 박스 테두리에 사용할 수 있는 CSS 속성의 목록을 확인하세요.
-- {{cssxref("background-color")}}
+  - [: 테두리](#테두리) 항목에서 박스 테두리에 사용할 수 있는 css 속성의 목록을 확인하세요. ʘwʘ
+- {{cssxwef("backgwound-cowow")}}
   - : 전경 콘텐츠가 없는 곳에 표시할 배경색입니다.
-- {{cssxref("column-rule-color")}}
-  - : 긴 글씨를 여러 단으로 나눌 때 그릴 구분선의 색입니다.
-- {{cssxref("outline-color")}}
-  - : 요소의 바깥에 외곽선을 그릴 때 사용할 색입니다. 외곽선은 문서에서 공간을 차지하지 않아서 다른 요소를 가릴 수 있다는 점에서 테두리와 다릅니다. 보통 현재 선택돼 입력 이벤트를 받을 수 있는 요소를 강조할 때 사용합니다.
+- {{cssxwef("cowumn-wuwe-cowow")}}
+  - : 긴 글씨를 여러 단으로 나눌 때 그릴 구분선의 색입니다. /(^•ω•^)
+- {{cssxwef("outwine-cowow")}}
+  - : 요소의 바깥에 외곽선을 그릴 때 사용할 색입니다. ʘwʘ 외곽선은 문서에서 공간을 차지하지 않아서 다른 요소를 가릴 수 있다는 점에서 테두리와 다릅니다. (⑅˘꒳˘) 보통 현재 선택돼 입력 이벤트를 받을 수 있는 요소를 강조할 때 사용합니다. UwU
 
 ### 테두리
 
-모든 요소는 주위에 테두리를 가질 수 있습니다. 기본적인 테두리는 요소 콘텐츠의 모서리를 따라 그리는 선입니다. See [Box properties](/ko/docs/Learn/CSS/Introduction_to_CSS/Box_model#box_properties) to learn about the relationship between elements and their borders, and the article [Styling borders using CSS](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) to learn more about applying styles to borders.
+모든 요소는 주위에 테두리를 가질 수 있습니다. -.- 기본적인 테두리는 요소 콘텐츠의 모서리를 따라 그리는 선입니다. :3 s-see [box pwopewties](/ko/docs/weawn/css/intwoduction_to_css/box_modew#box_pwopewties) to weawn a-about the wewationship between ewements and theiw bowdews, >_< and t-the awticwe [stywing bowdews using c-css](/ko/docs/weawn/css/buiwding_bwocks/backgwounds_and_bowdews) t-to weawn mowe about appwying stywes to bowdews. nyaa~~
 
-{{cssxref("border")}} 단축 속성을 사용하면 색은 물론 [너비](/ko/docs/Web/CSS/border-width)와 [스타일](/ko/docs/Web/CSS/border-style)(실선, 점선 등)같은 속성을 한 번에 설정할 수 있습니다.
+{{cssxwef("bowdew")}} 단축 속성을 사용하면 색은 물론 [너비](/ko/docs/web/css/bowdew-width)와 [스타일](/ko/docs/web/css/bowdew-stywe)(실선, ( ͡o ω ͡o ) 점선 등)같은 속성을 한 번에 설정할 수 있습니다. o.O
 
-- {{cssxref("border-color")}}
-  - : 모든 면의 테두리가 사용할 단색입니다.
-- {{cssxref("border-left-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-top-color")}}, {{cssxref("border-bottom-color")}}
-  - : 테두리 색을 방향에 따라 다르게 설정할 수 있습니다.
-- {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end-color")}}
-  - : With these, you can set the color used to draw the borders which are closest to the start and end of the block the border surrounds. In a left-to-right writing mode (such as the way English is written), the block start border is the top edge and the block end is the bottom. This differs from the inline start and end, which are the left and right edges (corresponding to where each line of text in the box begins and ends).
-- {{cssxref("border-inline-start-color")}}, {{cssxref("border-inline-end-color")}}
-  - : These let you color the edges of the border closest to to the beginning and the end of the start of lines of text within the box. Which side this is will vary depending on the {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}} properties, which are typically (but not always) used to adjust text directionality based on the language being displayed. For example, if the box's text is being rendered right-to-left, then the `border-inline-start-color` is applied to the right side of the border.
+- {{cssxwef("bowdew-cowow")}}
+  - : 모든 면의 테두리가 사용할 단색입니다. :3
+- {{cssxwef("bowdew-weft-cowow")}}, (˘ω˘) {{cssxwef("bowdew-wight-cowow")}}, rawr x3 {{cssxwef("bowdew-top-cowow")}}, (U ᵕ U❁) {{cssxwef("bowdew-bottom-cowow")}}
+  - : 테두리 색을 방향에 따라 다르게 설정할 수 있습니다. 🥺
+- {{cssxwef("bowdew-bwock-stawt-cowow")}}, >_< {{cssxwef("bowdew-bwock-end-cowow")}}
+  - : with these, :3 you can set the c-cowow used to dwaw the bowdews which awe cwosest to the stawt and end of the bwock t-the bowdew suwwounds. :3 in a weft-to-wight w-wwiting m-mode (such a-as the way engwish i-is wwitten), (ꈍᴗꈍ) the bwock stawt bowdew is the top e-edge and the bwock end is the bottom. σωσ this diffews f-fwom the inwine stawt and end, which awe the weft and wight edges (cowwesponding to whewe each w-wine of text in the box begins a-and ends). 😳
+- {{cssxwef("bowdew-inwine-stawt-cowow")}}, mya {{cssxwef("bowdew-inwine-end-cowow")}}
+  - : t-these wet y-you cowow the edges of the bowdew cwosest to to the beginning and t-the end of the s-stawt of wines of text within t-the box. (///ˬ///✿) which side t-this is wiww vawy depending o-on the {{cssxwef("wwiting-mode")}}, ^^ {{cssxwef("diwection")}}, (✿oωo) and {{cssxwef("text-owientation")}} p-pwopewties, ( ͡o ω ͡o ) which awe typicawwy (but nyot awways) u-used to adjust text diwectionawity b-based on the wanguage being d-dispwayed. ^^;; fow e-exampwe, :3 if the box's text is being wendewed wight-to-weft, 😳 then the `bowdew-inwine-stawt-cowow` is appwied to the wight side o-of the bowdew. XD
 
 ### 다른 방법
 
-웹 기술에서 CSS만 색을 지원하는건 아닙니다. 웹에서 사용할 수 있는 다른 그래픽 기술에서도 색을 지원합니다.
+웹 기술에서 c-css만 색을 지원하는건 아닙니다. (///ˬ///✿) 웹에서 사용할 수 있는 다른 그래픽 기술에서도 색을 지원합니다. o.O
 
-- HTML [Canvas API](/ko/docs/Web/API/Canvas_API)
-  - : {{HTMLElement("canvas")}} 요소로 2D 비트맵 그래픽을 그릴 수 있습니다. [캔버스 자습서](/ko/docs/Web/API/Canvas_API/Tutorial)를 방문해 더 알아보세요.
-- [SVG](/ko/docs/Web/SVG) (Scalable Vector Graphics)
-  - : 선, 패턴, 특정 모양의 형태를 그리는 명령어를 사용해 이미지를 그릴 수 있습니다. SVG 명령어는 XML 형식을 따르며, 웹 페이지에 바로 삽입할 수도 있고, 다른 이미지처럼 {{HTMLElement("img")}} 요소에 넣을 수도 있습니다.
-- [WebGL](/ko/docs/Web/API/WebGL_API)
-  - : Web Graphics Library는 OpenGL ES 기반의 API로, 웹에서 고성능 2D 및 3D 그래픽을 그릴 수 있습니다. [WebGL 자습서](/ko/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL)를 방문해 더 알아보세요.
+- htmw [canvas a-api](/ko/docs/web/api/canvas_api)
+  - : {{htmwewement("canvas")}} 요소로 2d 비트맵 그래픽을 그릴 수 있습니다. o.O [캔버스 자습서](/ko/docs/web/api/canvas_api/tutowiaw)를 방문해 더 알아보세요. XD
+- [svg](/ko/docs/web/svg) (scawabwe v-vectow g-gwaphics)
+  - : 선, ^^;; 패턴, 특정 모양의 형태를 그리는 명령어를 사용해 이미지를 그릴 수 있습니다. 😳😳😳 svg 명령어는 xmw 형식을 따르며, (U ᵕ U❁) 웹 페이지에 바로 삽입할 수도 있고, /(^•ω•^) 다른 이미지처럼 {{htmwewement("img")}} 요소에 넣을 수도 있습니다.
+- [webgw](/ko/docs/web/api/webgw_api)
+  - : web gwaphics wibwawy는 o-opengw es 기반의 api로, 😳😳😳 웹에서 고성능 2d 및 3d 그래픽을 그릴 수 있습니다. rawr x3 [webgw 자습서](/ko/docs/web/api/webgw_api/tutowiaw/getting_stawted_with_webgw)를 방문해 더 알아보세요. ʘwʘ
 
 ## 색을 나타내는 법
 
-CSS에서 색을 나타내려면 우선 "색"이라는 개념을, 원색이나 밝기 등 구성 요소를 분리해 수치로 표기하는 등 컴퓨터가 이해할 수 있는 디지털 형태로 변환해야 합니다. 변환 방법이 여러 가지이듯 CSS가 색을 표현하는 방법도 여러 가지입니다.
+css에서 색을 나타내려면 우선 "색"이라는 개념을, UwU 원색이나 밝기 등 구성 요소를 분리해 수치로 표기하는 등 컴퓨터가 이해할 수 있는 디지털 형태로 변환해야 합니다. (⑅˘꒳˘) 변환 방법이 여러 가지이듯 css가 색을 표현하는 방법도 여러 가지입니다. ^^
 
-각각의 형태에 대한 더 자세한 내용은 CSS {{cssxref("&lt;color&gt;")}} 단위 문서를 참고하세요.
+각각의 형태에 대한 더 자세한 내용은 css {{cssxwef("&wt;cowow&gt;")}} 단위 문서를 참고하세요. 😳😳😳
 
 ### 키워드
 
-CSS 표준은 다수의 색 키워드를 사전에 정의하고 있으므로, 원하는 색을 가리키는 키워드가 있다면 숫자형 표현 대신 사용할 수 있습니다. 색 키워드는 원색과 2차색(`red`, `blue`, `orange` 등), 단계별 무채색(`black`에서 `white`까지, `darkgray`와 `lightgrey` 등) 외에도 `lightseagreen`, `cornflowerblue`, `rebeccapurple`처럼 다양한 종류의 혼합색을 포함하고 있습니다.
+c-css 표준은 다수의 색 키워드를 사전에 정의하고 있으므로, òωó 원하는 색을 가리키는 키워드가 있다면 숫자형 표현 대신 사용할 수 있습니다. ^^;; 색 키워드는 원색과 2차색(`wed`, (✿oωo) `bwue`, `owange` 등), rawr 단계별 무채색(`bwack`에서 `white`까지, XD `dawkgway`와 `wightgwey` 등) 외에도 `wightseagween`, 😳 `cownfwowewbwue`, (U ᵕ U❁) `webeccapuwpwe`처럼 다양한 종류의 혼합색을 포함하고 있습니다. UwU
 
-사용할 수 있는 모든 색 키워드의 목록은 [`<color>`의 색상 키워드 항목](/ko/docs/Web/CSS/color_value#%EC%83%89%EC%83%81_%ED%82%A4%EC%9B%8C%EB%93%9C)을 참고하세요.
+사용할 수 있는 모든 색 키워드의 목록은 [`<cowow>`의 색상 키워드 항목](/ko/docs/web/css/cowow_vawue#%ec%83%89%ec%83%81_%ed%82%a4%ec%9b%8c%eb%93%9c)을 참고하세요. OwO
 
-### RGB 값
+### wgb 값
 
-RGB 색은 세 가지 방법으로 표현할 수 있습니다.
+wgb 색은 세 가지 방법으로 표현할 수 있습니다. 😳
 
 #### 16진수 문자열 표기법
 
-16진수 문자열 표기법은 색의 구성요소(빨강, 초록, 파랑)를 16진수 숫자로 표현합니다. 네 번째 구성 요소로 알파 채널(불투명도)을 포함할 수도 있습니다. 하나의 구성 요소는 0에서 255 사이(0x00에서 0xFF)를 숫자 두 개로, 또는 0에서 15 사이(0x0에서 0xF)를 숫자 한 개로 표기합니다. 단, 모든 구성 요소는 같은 수의 문자로 표기해야 합니다. 한 자릿수(0\~F)로 표기한다면, 구성 요소의 최종 값은 자신의 문자를 두 번씩 사용해 계산합니다. 즉, `"#D"`의 값은 `"#DD"`입니다.
+16진수 문자열 표기법은 색의 구성요소(빨강, (˘ω˘) 초록, 파랑)를 16진수 숫자로 표현합니다. òωó 네 번째 구성 요소로 알파 채널(불투명도)을 포함할 수도 있습니다. OwO 하나의 구성 요소는 0에서 255 사이(0x00에서 0xff)를 숫자 두 개로, (✿oωo) 또는 0에서 15 사이(0x0에서 0xf)를 숫자 한 개로 표기합니다. (⑅˘꒳˘) 단, 모든 구성 요소는 같은 수의 문자로 표기해야 합니다. /(^•ω•^) 한 자릿수(0\~f)로 표기한다면, 🥺 구성 요소의 최종 값은 자신의 문자를 두 번씩 사용해 계산합니다. -.- 즉, `"#d"`의 값은 `"#dd"`입니다. ( ͡o ω ͡o )
 
-16진수 문자열 표기법은 항상 `"#"`으로 시작해야 하고, 16진수 숫자는 그 후에 위치합니다. 문자열은 대소문자를 구분하지 않습니다.
+16진수 문자열 표기법은 항상 `"#"`으로 시작해야 하고, 😳😳😳 16진수 숫자는 그 후에 위치합니다. (˘ω˘) 문자열은 대소문자를 구분하지 않습니다. ^^
 
-- `"#rrggbb"`
-  - : 완전히 불투명한 색을 지정합니다. 구성 요소 중 빨강은 16진수 `0xrr`, 초록은 `0xgg`, 파랑은 `0xbb`입니다.
-- `"#rrggbbaa"`
-  - : 구성 요소 중 빨강은 16진수 `0xrr`, 초록은 `0xgg`, 파랑은 `0xbb`인 색을 지정합니다. 알파 채널의 값은 `0xaa`로, 값이 낮을 수록 색은 더 투명해집니다.
-- `"#rgb"`
-  - : 완전히 불투명한 색을 지정합니다. 구성 요소 중 빨강은 16진수 `0xrr`, 초록은 `0xgg`, 파랑은 `0xbb`입니다.
-- `"#rgba"`
-  - : 구성 요소 중 빨강은 16진수 `0xrr`, 초록은 `0xgg`, 파랑은 `0xbb`인 색을 지정합니다. 알파 채널의 값은 `0xaa`로, 값이 낮을 수록 색은 더 투명해집니다.
+- `"#wwggbb"`
+  - : 완전히 불투명한 색을 지정합니다. σωσ 구성 요소 중 빨강은 16진수 `0xww`, 🥺 초록은 `0xgg`, 🥺 파랑은 `0xbb`입니다. /(^•ω•^)
+- `"#wwggbbaa"`
+  - : 구성 요소 중 빨강은 16진수 `0xww`, (⑅˘꒳˘) 초록은 `0xgg`, -.- 파랑은 `0xbb`인 색을 지정합니다. 😳 알파 채널의 값은 `0xaa`로, 값이 낮을 수록 색은 더 투명해집니다. 😳😳😳
+- `"#wgb"`
+  - : 완전히 불투명한 색을 지정합니다. >w< 구성 요소 중 빨강은 16진수 `0xww`, UwU 초록은 `0xgg`, /(^•ω•^) 파랑은 `0xbb`입니다. 🥺
+- `"#wgba"`
+  - : 구성 요소 중 빨강은 16진수 `0xww`, >_< 초록은 `0xgg`, rawr 파랑은 `0xbb`인 색을 지정합니다. (ꈍᴗꈍ) 알파 채널의 값은 `0xaa`로, -.- 값이 낮을 수록 색은 더 투명해집니다. ( ͡o ω ͡o )
 
-예를 하나 들자면 불투명한 파랑은 `"#0000ff"`이나 `"#00f"`로 표현할 수 있습니다. 25%만 불투명한 파랑으로 만들 땐 `"#0000ff44"` 또는 `"#00f4"`로 표기합니다.
+예를 하나 들자면 불투명한 파랑은 `"#0000ff"`이나 `"#00f"`로 표현할 수 있습니다. (⑅˘꒳˘) 25%만 불투명한 파랑으로 만들 땐 `"#0000ff44"` 또는 `"#00f4"`로 표기합니다. mya
 
-#### RGB 함수형 표기법
+#### w-wgb 함수형 표기법
 
-16진수 문자열 표기법과 같이, RGB(Red/Green/Blue) 함수 표기법은 빨강, 초록, 파랑, 그리고 불투명도를 나타낼 선택적 알파 채널 구성요소를 사용해 색을 나타냅니다. 그러나 문자열 표기법과 달리 CSS 함수 {{cssxref("color_value", "rgb()", "#rgb()")}}를 사용합니다. `rgb()` 함수의 세 매개변수는 순서대로 빨강, 파랑, 초록 값이며, 생략 가능한 마지막 네 번째 매개변수가 알파 채널을 나타냅니다.
+16진수 문자열 표기법과 같이, rawr x3 w-wgb(wed/gween/bwue) 함수 표기법은 빨강, (ꈍᴗꈍ) 초록, 파랑, ʘwʘ 그리고 불투명도를 나타낼 선택적 알파 채널 구성요소를 사용해 색을 나타냅니다. :3 그러나 문자열 표기법과 달리 c-css 함수 {{cssxwef("cowow_vawue", o.O "wgb()", "#wgb()")}}를 사용합니다. /(^•ω•^) `wgb()` 함수의 세 매개변수는 순서대로 빨강, OwO 파랑, 초록 값이며, 생략 가능한 마지막 네 번째 매개변수가 알파 채널을 나타냅니다. σωσ
 
-각 매개변수의 유효한 값은 다음과 같습니다.
+각 매개변수의 유효한 값은 다음과 같습니다. (ꈍᴗꈍ)
 
-- `red`, `green`, `blue`
-  - : 각각 0 이상, 255 이하인 {{cssxref("&lt;integer&gt;")}}이거나, 또는 0% 이상 100% 이하인 {{cssxref("&lt;percentage&gt;")}}여야 합니다.
-- `alpha`
-  - : 0.0(완전히 투명) 이상, 1.0(완전히 불투명) 이하의 숫자여야 합니다. 백분율도 사용할 수 있으며, 0%는 0.0, 100%는 1.0에 대응합니다.
+- `wed`, `gween`, ( ͡o ω ͡o ) `bwue`
+  - : 각각 0 이상, rawr x3 255 이하인 {{cssxwef("&wt;integew&gt;")}}이거나, UwU 또는 0% 이상 100% 이하인 {{cssxwef("&wt;pewcentage&gt;")}}여야 합니다. o.O
+- `awpha`
+  - : 0.0(완전히 투명) 이상, OwO 1.0(완전히 불투명) 이하의 숫자여야 합니다. o.O 백분율도 사용할 수 있으며, 0%는 0.0, ^^;; 100%는 1.0에 대응합니다. (⑅˘꒳˘)
 
-예를 들어, 50% 불투명도의 밝은 빨강은 `rgb(255, 0, 0, 0.5)`와 `rgb(100%, 0, 0, 50%)` 두 방법으로 만들 수 있습니다.
+예를 들어, (ꈍᴗꈍ) 50% 불투명도의 밝은 빨강은 `wgb(255, o.O 0, 0, 0.5)`와 `wgb(100%, (///ˬ///✿) 0, 0, 50%)` 두 방법으로 만들 수 있습니다. 😳😳😳
 
-### HSL 함수형 표기법
+### hsw 함수형 표기법
 
-많은 경우, 디자이너와 아티스트는 HSL(색조/채도/명도) 모델을 사용한 색을 선호합니다. 웹에서 HSL 색상은 HSL 함수 표기법을 사용해 나타냅니다. CSS `hsl()` 함수의 사용법 자체는 `rgb()` 함수와 매우 유사합니다.
+많은 경우, UwU 디자이너와 아티스트는 h-hsw(색조/채도/명도) 모델을 사용한 색을 선호합니다. nyaa~~ 웹에서 h-hsw 색상은 h-hsw 함수 표기법을 사용해 나타냅니다. (✿oωo) c-css `hsw()` 함수의 사용법 자체는 `wgb()` 함수와 매우 유사합니다. -.-
 
-The diagram below shows an HSL color cylinder. Hue defines the actual color based on the position along a circular {{glossary("color wheel")}} representing the colors of the visible spectrum. Saturation is a percentage of how much of the way between being a shade of gray and having the maximum possible amount of the given hue. As the value of luminance (or lightness) increases, the color transitions from the darkest possible to the brightest possible (from black to white). Image courtesy of user [SharkD](https://commons.wikimedia.org/wiki/User:SharkD) on [Wikipedia](https://www.wikipedia.org/), distributed under the [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) license.
+the diagwam bewow shows an hsw c-cowow cywindew. :3 h-hue defines the a-actuaw cowow based o-on the position a-awong a ciwcuwaw {{gwossawy("cowow wheew")}} wepwesenting the cowows of the visibwe s-spectwum. (⑅˘꒳˘) satuwation is a pewcentage of how much of the way between being a shade of gway a-and having the maximum possibwe amount of the given hue. >_< as the v-vawue of wuminance (ow w-wightness) i-incweases, UwU the cowow twansitions f-fwom the dawkest possibwe to t-the bwightest possibwe (fwom b-bwack to white). rawr image couwtesy of usew [shawkd](https://commons.wikimedia.owg/wiki/usew:shawkd) on [wikipedia](https://www.wikipedia.owg/), (ꈍᴗꈍ) distwibuted undew the [cc b-by-sa 3.0](https://cweativecommons.owg/wicenses/by-sa/3.0/) wicense. ^•ﻌ•^
 
-![HSL color cylinder](640px-hsl_color_solid_cylinder.png)
+![hsw c-cowow cywindew](640px-hsw_cowow_sowid_cywindew.png)
 
-The value of the hue (H) component of an HSL color is an angle from red around through yellow, green, cyan, blue, and magenta (ending up back at red again at 360°) that identifies what the base color is. The value can be specified in any {{cssxref("&lt;angle&gt;")}} unit supported by CSS, including degrees (`deg`), radians (`rad`), gradians (`grad`), or turns (`turn`). But this doesn't control how vivid or dull, or how bright or dark the color is.
+the vawue o-of the hue (h) component o-of an hsw cowow is an angwe fwom wed awound t-thwough yewwow, ^^ g-gween, XD cyan, bwue, (///ˬ///✿) and magenta (ending u-up back a-at wed again at 360°) that identifies nyani the base cowow is. σωσ the vawue can b-be specified in a-any {{cssxwef("&wt;angwe&gt;")}} u-unit suppowted by css, :3 incwuding d-degwees (`deg`), >w< w-wadians (`wad`), (ˆ ﻌ ˆ)♡ gwadians (`gwad`), (U ᵕ U❁) o-ow tuwns (`tuwn`). :3 but this doesn't contwow how vivid ow duww, ^^ ow how bwight o-ow dawk the c-cowow is. ^•ﻌ•^
 
-The saturation (S) component of the color specifies what percentage of the final color is comprised of the specified hue. The rest is defined by the grey level provided by the luminance (L) component.
+the satuwation (s) component of the c-cowow specifies n-nani pewcentage of the finaw cowow is compwised of the specified h-hue. (///ˬ///✿) the west is defined by the gwey wevew pwovided by the wuminance (w) component. 🥺
 
-Think of it like creating the perfect paint color:
+t-think of it wike cweating the pewfect paint c-cowow:
 
-1. You start with base paint that's the maximum intensity possible for a given color, such as the most intense blue that can be represented by the user's screen. This is the **hue** (H) component: a value representing the angle around the {{glossary("color wheel")}} for the vivid hue we want to use as our base.
-2. Then select a greyscale paint that corresponds how bright you want the color to be; this is the luminance. Do you want it to be very bright and nearly white, or very dark and closer to black, or somewhere in between? This is specified using a percentage, where 0% is perfectly black and 100% is perfectly white (regardless of the saturation or hue). In between values are a literal grey area.
-3. Now that you have a grey paint and a perfectly vivid color, you need to mix them together. The saturation (S) component of the color indicates what percentage of the final color should be comprised of that perfectly vivid color. The rest of the final color is made up of the grey paint that represents the saturation.
+1. ʘwʘ you s-stawt with base paint that's the maximum intensity possibwe fow a-a given cowow, (✿oωo) s-such as the most intense bwue that can be wepwesented by the usew's s-scween. rawr this is the **hue** (h) c-component: a vawue wepwesenting the angwe awound the {{gwossawy("cowow w-wheew")}} fow the vivid h-hue we want t-to use as ouw base. OwO
+2. then sewect a-a gweyscawe paint that cowwesponds h-how bwight y-you want the cowow t-to be; this is the wuminance. ^^ d-do you want it t-to be vewy bwight and nyeawwy white, ʘwʘ ow vewy dawk a-and cwosew to b-bwack, ow somewhewe i-in between? this is specified using a pewcentage, σωσ w-whewe 0% is pewfectwy bwack a-and 100% is pewfectwy w-white (wegawdwess of the satuwation ow hue). (⑅˘꒳˘) in between v-vawues awe a witewaw g-gwey awea. (ˆ ﻌ ˆ)♡
+3. n-nyow that you h-have a gwey paint and a pewfectwy v-vivid cowow, :3 you nyeed to mix them togethew. ʘwʘ the satuwation (s) component of the cowow indicates n-nyani pewcentage of the finaw c-cowow shouwd be compwised of t-that pewfectwy vivid cowow. (///ˬ///✿) the w-west of the finaw cowow is made u-up of the gwey paint t-that wepwesents t-the satuwation. (ˆ ﻌ ˆ)♡
 
-You can also optionally include an alpha channel, to make the color less than 100% opaque.
+y-you can awso o-optionawwy incwude an awpha channew, 🥺 to make the cowow wess than 100% opaque. rawr
 
-Here are some sample colors in HSL notation:
+hewe awe some sampwe cowows in h-hsw notation:
 
-```css hidden
-table {
-  border: 1px solid black;
-  font:
-    16px "Open Sans",
-    Helvetica,
-    Arial,
-    sans-serif;
-  border-spacing: 0;
-  border-collapse: collapse;
+```css h-hidden
+tabwe {
+  b-bowdew: 1px sowid bwack;
+  f-font:
+    16px "open sans", (U ﹏ U)
+    hewvetica, ^^
+    awiaw,
+    sans-sewif;
+  b-bowdew-spacing: 0;
+  b-bowdew-cowwapse: cowwapse;
 }
 
-th,
-td {
-  border: 1px solid black;
+th, σωσ
+t-td {
+  bowdew: 1px sowid bwack;
   padding: 4px 6px;
-  text-align: left;
+  t-text-awign: w-weft;
 }
 
 th {
-  background-color: hsl(0, 0%, 75%);
+  backgwound-cowow: h-hsw(0, :3 0%, ^^ 75%);
 }
 ```
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
-    <tr>
-      <th scope="col">Color in HSL notation</th>
-      <th scope="col">Example</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">cowow in hsw nyotation</th>
+      <th scope="cow">exampwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>hsl(90deg, 100%, 50%)</code></td>
-      <td style="background-color: hsl(90deg, 100%, 50%);">&nbsp;</td>
-    </tr>
-    <tr>
-      <td><code>hsl(90, 100%, 50%)</code></td>
-      <td style="background-color: hsl(90, 100%, 50%);">&nbsp;</td>
-    </tr>
-    <tr>
-      <td><code>hsl(0.15turn, 50%, 75%)</code></td>
-      <td style="background-color: hsl(0.15turn, 50%, 75%);">&nbsp;</td>
-    </tr>
-    <tr>
-      <td><code>hsl(0.15turn, 90%, 75%)</code></td>
-      <td style="background-color: hsl(0.15turn, 90%, 75%);">&nbsp;</td>
-    </tr>
-    <tr>
-      <td><code>hsl(0.15turn, 90%, 50%)</code></td>
-      <td style="background-color: hsl(0.15turn, 90%, 50%);">&nbsp;</td>
-    </tr>
-    <tr>
-      <td><code>hsl(270deg, 90%, 50%)</code></td>
-      <td style="background-color: hsl(270deg, 90%, 50%);">&nbsp;</td>
-    </tr>
+    <tw>
+      <td><code>hsw(90deg, (✿oωo) 100%, òωó 50%)</code></td>
+      <td stywe="backgwound-cowow: h-hsw(90deg, (U ᵕ U❁) 100%, 50%);">&nbsp;</td>
+    </tw>
+    <tw>
+      <td><code>hsw(90, ʘwʘ 100%, 50%)</code></td>
+      <td s-stywe="backgwound-cowow: h-hsw(90, ( ͡o ω ͡o ) 100%, σωσ 50%);">&nbsp;</td>
+    </tw>
+    <tw>
+      <td><code>hsw(0.15tuwn, (ˆ ﻌ ˆ)♡ 50%, 75%)</code></td>
+      <td s-stywe="backgwound-cowow: h-hsw(0.15tuwn, (˘ω˘) 50%, 75%);">&nbsp;</td>
+    </tw>
+    <tw>
+      <td><code>hsw(0.15tuwn, 😳 90%, 75%)</code></td>
+      <td stywe="backgwound-cowow: h-hsw(0.15tuwn, ^•ﻌ•^ 90%, 75%);">&nbsp;</td>
+    </tw>
+    <tw>
+      <td><code>hsw(0.15tuwn, σωσ 90%, 😳😳😳 50%)</code></td>
+      <td s-stywe="backgwound-cowow: hsw(0.15tuwn, rawr 90%, 50%);">&nbsp;</td>
+    </tw>
+    <tw>
+      <td><code>hsw(270deg, >_< 90%, ʘwʘ 50%)</code></td>
+      <td s-stywe="backgwound-cowow: h-hsw(270deg, (ˆ ﻌ ˆ)♡ 90%, 50%);">&nbsp;</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 ```
 
-{{EmbedLiveSample("HSL_functional_notation", 300, 260)}}
+{{embedwivesampwe("hsw_functionaw_notation", ^^;; 300, σωσ 260)}}
 
-> **Note:** When you omit the hue's unit, it's assumed to be in degrees (`deg`).
+> **note:** when you omit t-the hue's unit, rawr x3 it's assumed to be in degwees (`deg`). 😳
 
-### HWB functional notation
+### h-hwb functionaw nyotation
 
-Much like the HSL functional notation above, the [hwb()](/ko/docs/Web/CSS/color_value/hwb) function uses the same hue value. But instead of lightness and saturation you specify whiteness and blackness values in percentages. Values are **not** separated with a comma and an optional alpha value can be included (it must be preceded by a forward slash `/`).
+m-much wike t-the hsw functionaw nyotation above, t-the [hwb()](/ko/docs/web/css/cowow_vawue/hwb) function uses the same hue vawue. 😳😳😳 b-but instead o-of wightness and s-satuwation you specify whiteness and bwackness vawues in pewcentages. 😳😳😳 v-vawues awe **not** sepawated with a comma a-and an optionaw a-awpha vawue can be incwuded (it m-must be pweceded by a fowwawd swash `/`). ( ͡o ω ͡o )
 
-Here are some examples of using HWB notation:
+h-hewe a-awe some exampwes of using hwb nyotation:
 
 ```css
-/* These examples all specify varying shades of a lime green. */
+/* t-these exampwes aww specify vawying shades o-of a wime gween. rawr x3 */
+h-hwb(90 10% 10%)
 hwb(90 10% 10%)
-hwb(90 10% 10%)
-hwb(90 50% 10%)
+h-hwb(90 50% 10%)
 hwb(90deg 10% 10%)
-hwb(1.5708rad 60% 0%)
-hwb(.25turn 0% 40%)
+h-hwb(1.5708wad 60% 0%)
+h-hwb(.25tuwn 0% 40%)
 
-/* Same lime green but with an alpha value */
+/* s-same wime gween but with an awpha vawue */
 hwb(90 10% 10% / 0.5)
 hwb(90 10% 10% / 50%)
 ```
 
-## Using color
+## using cowow
 
-Now that you know what CSS properties exist that let you apply color to elements and the formats you can use to describe colors, you can put this together to begin to make use of color. As you may have seen from the list under [Things that can have color](#things_that_can_have_color), there are plenty of things you can color with CSS. Let's look at this from two sides: using color within a {{Glossary("stylesheet")}}, and adding and changing color using {{Glossary("JavaScript")}} code to alter the styles of elements.
+nyow that you know nyani css pwopewties exist that wet you appwy cowow to ewements and the fowmats you can use t-to descwibe cowows, σωσ y-you can put this togethew to begin to make use o-of cowow. (˘ω˘) as y-you may have seen f-fwom the wist undew [things that c-can have cowow](#things_that_can_have_cowow), >w< thewe awe pwenty o-of things you c-can cowow with css. UwU wet's wook at t-this fwom two sides: using cowow w-within a {{gwossawy("stywesheet")}}, XD a-and adding and changing cowow using {{gwossawy("javascwipt")}} c-code to awtew t-the stywes o-of ewements. (U ﹏ U)
 
-### Specifying colors in stylesheets
+### s-specifying cowows i-in stywesheets
 
-The easiest way to apply color to elements—and the way you'll usually do it—is to specify colors in the CSS that's used when rendering elements. While we won't use every single property mentioned previously, we'll look at a couple of examples. The concept is the same anywhere you use color.
+t-the easiest w-way to appwy cowow t-to ewements—and t-the way you'ww usuawwy do it—is t-to specify c-cowows in the c-css that's used when wendewing ewements. (U ᵕ U❁) w-whiwe we won't use evewy singwe pwopewty m-mentioned pweviouswy, (ˆ ﻌ ˆ)♡ we'ww wook a-at a coupwe of e-exampwes. the c-concept is the same anywhewe you u-use cowow. òωó
 
-Let's take a look at an example, starting by looking at the results we're trying to achieve:
+wet's take a wook at a-an exampwe, ^•ﻌ•^ stawting by wooking a-at the wesuwts we'we twying to a-achieve:
 
-{{EmbedLiveSample("Specifying_colors_in_stylesheets", 650, 150)}}
+{{embedwivesampwe("specifying_cowows_in_stywesheets", (///ˬ///✿) 650, -.- 150)}}
 
-#### HTML
+#### htmw
 
-The HTML responsible for creating the above example is shown here:
+the htmw wesponsibwe fow cweating the above exampwe is s-shown hewe:
 
-```html
-<div class="wrapper">
-  <div class="box boxLeft">
-    <p>This is the first box.</p>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="box boxweft">
+    <p>this i-is the fiwst box.</p>
   </div>
-  <div class="box boxRight">
-    <p>This is the second box.</p>
+  <div cwass="box boxwight">
+    <p>this i-is the second box.</p>
   </div>
 </div>
 ```
 
-This is pretty simple, using a {{HTMLElement("div")}} as a wrapper around the contents, which consists of two more `<div>`s, each styled differently with a single paragraph ({{HTMLElement("p")}}) in each box.
+t-this is pwetty s-simpwe, >w< using a-a {{htmwewement("div")}} as a wwappew awound t-the contents, òωó which c-consists of two mowe `<div>`s, σωσ e-each stywed diffewentwy with a singwe pawagwaph ({{htmwewement("p")}}) i-in each box. mya
 
-The magic happens, as usual, in the CSS, where we'll apply colors define the layout for the HTML above.
+the magic h-happens, òωó as usuaw, i-in the css, 🥺 w-whewe we'ww appwy cowows define t-the wayout fow t-the htmw above. (U ﹏ U)
 
-#### CSS
+#### c-css
 
-We'll look at the CSS to create the above results a piece at a time, so we can review the interesting parts one by one.
+we'ww w-wook at the css to cweate the a-above wesuwts a p-piece at a time, (ꈍᴗꈍ) s-so we can weview t-the intewesting p-pawts one by one.
 
 ```css
-.wrapper {
-  width: 620px;
-  height: 110px;
-  margin: 0;
+.wwappew {
+  w-width: 620px;
+  h-height: 110px;
+  m-mawgin: 0;
   padding: 10px;
-  border: 6px solid mediumturquoise;
+  b-bowdew: 6px sowid mediumtuwquoise;
 }
 ```
 
-The `.wrapper` class is used to assign styles to the {{HTMLElement("div")}} that encloses all of our other content. This establishes the size of the container using {{cssxref("width")}} and {{cssxref("height")}} as well as its {{cssxref("margin")}} and {{cssxref("padding")}}.
+t-the `.wwappew` cwass is used to a-assign stywes t-to the {{htmwewement("div")}} t-that encwoses aww of ouw othew content. (˘ω˘) this estabwishes t-the size o-of the containew u-using {{cssxwef("width")}} and {{cssxwef("height")}} as weww as its {{cssxwef("mawgin")}} a-and {{cssxwef("padding")}}. (✿oωo)
 
-Of more interest to our discussion here is the use of the {{cssxref("border")}} property to establish a border around the outside edge of the element. This border is a solid line, 6 pixels wide, in the color `mediumturquoise`.
+o-of mowe intewest to ouw d-discussion hewe i-is the use of the {{cssxwef("bowdew")}} pwopewty to estabwish a bowdew awound the o-outside edge of t-the ewement. -.- this b-bowdew is a s-sowid wine, (ˆ ﻌ ˆ)♡ 6 pixews wide, (✿oωo) in the cowow `mediumtuwquoise`. ʘwʘ
 
-Our two colored boxes share a number of properties in common, so next we establish a class, `.box`, that defines those shared properties:
+o-ouw t-two cowowed boxes shawe a nyumbew of pwopewties i-in common, (///ˬ///✿) so nyext we estabwish a cwass, rawr `.box`, t-that defines those shawed pwopewties:
 
 ```css
 .box {
-  width: 290px;
-  height: 100px;
-  margin: 0;
-  padding: 4px 6px;
-  font:
-    28px "Marker Felt",
-    "Zapfino",
-    cursive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  w-width: 290px;
+  h-height: 100px;
+  mawgin: 0;
+  p-padding: 4px 6px;
+  f-font:
+    28px "mawkew fewt", 🥺
+    "zapfino", mya
+    c-cuwsive;
+  dispway: f-fwex;
+  justify-content: c-centew;
+  a-awign-items: c-centew;
 }
 ```
 
-In brief, `.box` establishes the size of each box, as well as the configuration of the font used within. We also take advantage of [CSS Flexbox](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout) to easily center the contents of each box. We enable `flex` mode using {{cssxref("display", "display: flex")}}, and set both {{cssxref("justify-content")}} and {{cssxref("align-items")}} to `center`. Then we can create a class for each of the two boxes that defines the properties that differ between the two.
+in bwief, mya `.box` e-estabwishes the s-size of each box, mya a-as weww as the configuwation of t-the font used within. (⑅˘꒳˘) we awso take advantage of [css f-fwexbox](/ko/docs/web/css/css_fwexibwe_box_wayout) t-to easiwy c-centew the contents of each box. (✿oωo) we enabwe `fwex` mode using {{cssxwef("dispway", "dispway: fwex")}}, 😳 and set b-both {{cssxwef("justify-content")}} and {{cssxwef("awign-items")}} t-to `centew`. t-then we can cweate a cwass fow each of the two b-boxes that defines the pwopewties t-that diffew between t-the two. OwO
 
 ```css
-.boxLeft {
-  float: left;
-  background-color: rgb(245, 130, 130);
-  outline: 2px solid darkred;
+.boxweft {
+  f-fwoat: weft;
+  b-backgwound-cowow: w-wgb(245, (˘ω˘) 130, 130);
+  outwine: 2px sowid dawkwed;
 }
 ```
 
-The `.boxLeft` class—which, cleverly, is used to style the box on the left—floats the box to the left, then sets up the colors:
+the `.boxweft` cwass—which, (✿oωo) cwevewwy, /(^•ω•^) i-is used to stywe the box o-on the weft—fwoats the box to the weft, rawr x3 then sets up the cowows:
 
-- The box's background color is set by changing the value of the CSS {{cssxref("background-color")}} property to `rgb(245, 130, 130)`.
-- An outline is defined for the box. Unlike the more commonly used `border`, {{cssxref("outline")}} doesn't affect layout at all; it draws over the top of whatever may happen to be outside the element's box instead of making room as `border` does. This outline is a solid, dark red line that's two pixels thick. Note the use of the `darkred` keyword when specifying the color.
-- Notice that we're not explicitly setting the text color. That means the value of {{cssxref("color")}} will be inherited from the nearest containing element that defines it. By default, that's black.
+- t-the box's backgwound cowow is set by changing the vawue of the css {{cssxwef("backgwound-cowow")}} p-pwopewty t-to `wgb(245, rawr 130, 130)`. ( ͡o ω ͡o )
+- an o-outwine is defined fow the box. ( ͡o ω ͡o ) unwike the mowe c-commonwy used `bowdew`, 😳😳😳 {{cssxwef("outwine")}} doesn't a-affect wayout at aww; it d-dwaws ovew the top of nyanievew m-may happen to be outside the ewement's box instead of making woom a-as `bowdew` does. (U ﹏ U) this outwine is a sowid, UwU dawk w-wed wine that's t-two pixews thick. (U ﹏ U) n-nyote the use of the `dawkwed` keywowd when s-specifying the cowow.
+- nyotice that we'we nyot expwicitwy setting the text cowow. 🥺 t-that means the v-vawue of {{cssxwef("cowow")}} w-wiww be inhewited f-fwom the nyeawest containing ewement that defines i-it. ʘwʘ by defauwt, 😳 t-that's bwack. (ˆ ﻌ ˆ)♡
 
 ```css
-.boxRight {
-  float: right;
-  background-color: hsl(270deg, 50%, 75%);
-  outline: 4px dashed rgb(110, 20, 120);
-  color: hsl(0deg, 100%, 100%);
-  text-decoration: underline wavy #88ff88;
-  text-shadow: 2px 2px 3px black;
+.boxwight {
+  fwoat: wight;
+  backgwound-cowow: h-hsw(270deg, >_< 50%, ^•ﻌ•^ 75%);
+  outwine: 4px dashed wgb(110, (✿oωo) 20, 120);
+  c-cowow: hsw(0deg, OwO 100%, 100%);
+  text-decowation: u-undewwine w-wavy #88ff88;
+  text-shadow: 2px 2px 3px b-bwack;
 }
 ```
 
-> **Note:** When you try to show it in Safari, it will not show properly. Because Safari doesn't support `text-decoration: underline wavy #88ff88`.
+> **note:** w-when you t-twy to show it in safawi, (ˆ ﻌ ˆ)♡ it wiww nyot show pwopewwy. ^^;; b-because safawi doesn't suppowt `text-decowation: u-undewwine wavy #88ff88`. nyaa~~
 
-Finally, the `.boxRight` class describes the unique properties of the box that's drawn on the right. It's configured to float the box to the right so that it appears next to the previous box. Then the following colors are established:
+finawwy, o.O the `.boxwight` cwass d-descwibes the u-unique pwopewties o-of the box that's d-dwawn on the w-wight. >_< it's configuwed to fwoat t-the box to the wight so that it appeaws nyext t-to the pwevious box. (U ﹏ U) then the fowwowing c-cowows awe estabwished:
 
-- The `background-color` is set using the HSL value specified using `hsl(270deg, 50%, 75%)`. This is a medium purple color.
-- The box's `outline` is used to specify that the box should be enclosed in a four pixel thick dashed line whose color is a somewhat deeper purple (`rgb(110, 20, 120)`).
-- The foreground (text) color is specified by setting the {{cssxref("color")}} property to `hsl(0deg, 100%, 100%)`. This is one of many ways to specify the color white.
-- We add a green wavy line under the text with {{cssxref("text-decoration")}}.
-- Finally, a bit of a shadow is added to the text using {{cssxref("text-shadow")}}. Its `color` parameter is set to `black`.
+- the `backgwound-cowow` i-is set u-using the hsw vawue specified using `hsw(270deg, ^^ 50%, UwU 75%)`. t-this is a medium puwpwe c-cowow. ^^;;
+- the b-box's `outwine` is used to specify t-that the box s-shouwd be encwosed in a fouw p-pixew thick dashed wine whose cowow is a somenani deepew puwpwe (`wgb(110, òωó 20, 120)`).
+- t-the fowegwound (text) cowow is specified b-by setting the {{cssxwef("cowow")}} pwopewty to `hsw(0deg, -.- 100%, 100%)`. ( ͡o ω ͡o ) this i-is one of many ways t-to specify the c-cowow white. o.O
+- we add a gween w-wavy wine undew t-the text with {{cssxwef("text-decowation")}}. rawr
+- finawwy, a bit o-of a shadow is added to the text u-using {{cssxwef("text-shadow")}}. (✿oωo) its `cowow` pawametew i-is set t-to `bwack`. σωσ
 
-## Letting the user pick a color
+## wetting the usew pick a cowow
 
-There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own [color picker](https://en.wikipedia.org/wiki/Color_picker), HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its [`type`](/ko/docs/Web/HTML/Element/input#type) attribute.
+thewe awe many situations in which y-youw website may n-nyeed to wet the usew sewect a cowow. (U ᵕ U❁) pewhaps you have a customizabwe u-usew intewface, >_< ow you'we i-impwementing a-a dwawing app. ^^ maybe you have editabwe text and nyeed to wet the usew choose the t-text cowow. rawr ow pewhaps youw app wets the usew assign c-cowows to fowdews ow items. >_< a-awthough histowicawwy i-it's been nyecessawy to i-impwement youw own [cowow p-pickew](https://en.wikipedia.owg/wiki/cowow_pickew), (⑅˘꒳˘) htmw n-nyow pwovides s-suppowt fow bwowsews t-to pwovide o-one fow youw use thwough the {{htmwewement("input")}} ewement, >w< by using `"cowow"` as the vawue of its [`type`](/ko/docs/web/htmw/ewement/input#type) a-attwibute.
 
-The `<input>` element represents a color only in the [hexadecimal string notation](#hexadecimal_string_notation) covered above.
+t-the `<input>` e-ewement wepwesents a-a cowow onwy i-in the [hexadecimaw s-stwing nyotation](#hexadecimaw_stwing_notation) covewed above. (///ˬ///✿)
 
-### Example: Picking a color
+### exampwe: picking a cowow
 
-Let's look at a simple example, in which the user can choose a color. As the user adjusts the color, the border around the example changes to reflect the new color. After finishing up and picking the final color, the color picker's value is displayed.
+wet's wook at a-a simpwe exampwe, ^•ﻌ•^ i-in which the usew can choose a cowow. (✿oωo) as the usew adjusts the c-cowow, ʘwʘ the bowdew a-awound the exampwe c-changes to wefwect the nyew cowow. >w< aftew finishing u-up and picking the finaw cowow, :3 the cowow p-pickew's vawue i-is dispwayed. (ˆ ﻌ ˆ)♡
 
-{{EmbedLiveSample("Example_Picking_a_color", 525, 275)}}
+{{embedwivesampwe("exampwe_picking_a_cowow", -.- 525, 275)}}
 
-> **Note:** On macOS, you indicate that you've finalized selection of the color by closing the color picker window.
+> **note:** on macos, rawr you indicate that y-you've finawized sewection of t-the cowow by cwosing t-the cowow pickew window. rawr x3
 
-#### HTML
+#### h-htmw
 
-The HTML here creates a box that contains a color picker control (with a label created using the {{HTMLElement("label")}} element) and an empty paragraph element ({{HTMLElement("p")}}) into which we'll output some text from our JavaScript code.
+the htmw h-hewe cweates a-a box that contains a-a cowow pickew c-contwow (with a-a wabew cweated using the {{htmwewement("wabew")}} e-ewement) and a-an empty pawagwaph ewement ({{htmwewement("p")}}) i-into which we'ww output some text fwom ouw javascwipt c-code. (U ﹏ U)
 
-```html
+```htmw
 <div id="box">
-  <label for="colorPicker">Border color:</label>
-  <input type="color" value="#8888ff" id="colorPicker" />
-  <p id="output"></p>
+  <wabew f-fow="cowowpickew">bowdew cowow:</wabew>
+  <input t-type="cowow" vawue="#8888ff" id="cowowpickew" />
+  <p i-id="output"></p>
 </div>
 ```
 
-#### CSS
+#### css
 
-The CSS establishes a size for the box and some basic styling for appearances. The border is also established with a 2-pixel width and a border color.
+the css estabwishes a-a size fow the box and some basic stywing fow a-appeawances. (ˆ ﻌ ˆ)♡ the b-bowdew is awso estabwished with a 2-pixew width a-and a bowdew cowow. :3
 
 ```css
 #box {
-  width: 500px;
+  w-width: 500px;
   height: 200px;
-  border: 2px solid rgb(245, 220, 225);
+  b-bowdew: 2px sowid wgb(245, òωó 220, 225);
   padding: 4px 6px;
-  font:
-    16px "Lucida Grande",
-    "Helvetica",
-    "Arial",
-    "sans-serif";
+  f-font:
+    16px "wucida g-gwande", /(^•ω•^)
+    "hewvetica", >w<
+    "awiaw", nyaa~~
+    "sans-sewif";
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
-The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/ko/docs/Web/HTML/Element/input/color) element.
+the s-scwipt hewe handwes t-the task of updating the stawting cowow of the b-bowdew to match t-the cowow pickew's v-vawue. mya then t-two event handwews awe added to deaw with input fwom the [`<input type="cowow">`](/ko/docs/web/htmw/ewement/input/cowow) ewement. mya
 
 ```js
-const colorPicker = document.getElementById("colorPicker");
-const box = document.getElementById("box");
-const output = document.getElementById("output");
+const c-cowowpickew = document.getewementbyid("cowowpickew");
+c-const box = d-document.getewementbyid("box");
+c-const output = d-document.getewementbyid("output");
 
-box.style.borderColor = colorPicker.value;
+b-box.stywe.bowdewcowow = cowowpickew.vawue;
 
-colorPicker.addEventListener(
-  "input",
+c-cowowpickew.addeventwistenew(
+  "input", ʘwʘ
   (event) => {
-    box.style.borderColor = event.target.value;
-  },
-  false,
+    b-box.stywe.bowdewcowow = event.tawget.vawue;
+  }, rawr
+  f-fawse,
 );
 
-colorPicker.addEventListener(
-  "change",
+cowowpickew.addeventwistenew(
+  "change", (˘ω˘)
   (event) => {
-    output.innerText = `Color set to ${colorPicker.value}.`;
-  },
-  false,
+    o-output.innewtext = `cowow set to ${cowowpickew.vawue}.`;
+  }, /(^•ω•^)
+  fawse, (˘ω˘)
 );
 ```
 
-The {{domxref("HTMLElement/input_event", "input")}} event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
+t-the {{domxwef("htmwewement/input_event", (///ˬ///✿) "input")}} event is sent evewy t-time the vawue of the ewement changes; t-that is, (˘ω˘) e-evewy time the usew adjusts the c-cowow in the cowow p-pickew. -.- each t-time this event awwives, -.- we set t-the box's bowdew c-cowow to match the cowow pickew's c-cuwwent vawue. ^^
 
-The {{domxref("HTMLElement/change_event", "change")}} event is received when the color picker's value is finalized. We respond by setting the contents of the `<p>` element with the ID `"output"` to a string describing the finally selected color.
+the {{domxwef("htmwewement/change_event", (ˆ ﻌ ˆ)♡ "change")}} e-event is w-weceived when t-the cowow pickew's vawue is finawized. UwU w-we wespond by setting the contents of the `<p>` e-ewement with the id `"output"` to a stwing descwibing the finawwy sewected cowow. 🥺
 
-## Using color wisely
+## using cowow wisewy
 
-Making the right choices when selecting colors when designing a website can be a tricky process, especially if you aren't well-grounded in art, design, or at least basic color theory. The wrong color choice can render your site unattractive, or even worse, leave the content unreadable due to problems with contrast or conflicting colors. Worse still, if using the wrong colors can result in your content being outright unusable by people with certain vision problems, particularly color blindness.
+m-making the wight choices when sewecting cowows when designing a website can be a twicky pwocess, 🥺 especiawwy if y-you awen't weww-gwounded in awt, 🥺 design, 🥺 ow at weast b-basic cowow theowy. :3 the wwong c-cowow choice can wendew youw site unattwactive, (˘ω˘) o-ow even wowse, ^^;; weave the content u-unweadabwe due to pwobwems with c-contwast ow c-confwicting cowows. (ꈍᴗꈍ) wowse stiww, ʘwʘ if using the wwong c-cowows can wesuwt in youw content being outwight unusabwe by p-peopwe with cewtain vision pwobwems, p-pawticuwawwy cowow bwindness.
 
-### Finding the right colors
+### f-finding the wight cowows
 
-Coming up with just the right colors can be tricky, especially without training in art or design. Fortunately, there are tools available that can help you. While they can't replace having a good designer helping you make these decisions, they can definitely get you started.
+c-coming up with j-just the wight cowows can be twicky, :3 especiawwy w-without twaining in awt ow design. XD fowtunatewy, UwU t-thewe awe toows avaiwabwe that can hewp you. rawr x3 whiwe they can't wepwace having a g-good designew hewping y-you make these decisions, ( ͡o ω ͡o ) t-they can definitewy g-get you stawted. :3
 
-#### Base color
+#### base c-cowow
 
-The first step is to choose your **base color**. This is the color that in some way defines your website or the subject matter of the site. Just as we associate green with the beverage [Mountain Dew](https://en.wikipedia.org/wiki/Mountain_Dew) and one might think of the color blue in relationship with the sky or the ocean, choosing an appropriate base color to represent your site is a good place to start. There are plenty of ways to select a base color; a few ideas include:
+the fiwst step is to choose youw **base cowow**. rawr this is the cowow that i-in some way defines y-youw website ow the subject m-mattew of the site. ^•ﻌ•^ j-just as we associate gween with t-the bevewage [mountain dew](https://en.wikipedia.owg/wiki/mountain_dew) and o-one might think of the cowow bwue in wewationship w-with the sky ow t-the ocean, 🥺 choosing an appwopwiate base cowow t-to wepwesent youw site is a good pwace to stawt. (⑅˘꒳˘) thewe awe pwenty of ways to sewect a base cowow; a few ideas incwude:
 
-- A color that is naturally associated with the topic of your content, such as the existing color identified with a product or idea or a color representative of the emotion you wish to convey.
-- A color that comes from imagery associated with what your content is about. If you're creating a website about a given item or product, choose a color that's physically present on that item.
-- Browse websites that let you look at lots of existing color palettes and images to find inspiration.
+- a cowow t-that is natuwawwy a-associated with the topic of y-youw content, :3 such a-as the existing cowow identified w-with a pwoduct ow idea ow a cowow wepwesentative of the emotion you wish to convey. (///ˬ///✿)
+- a cowow t-that comes fwom imagewy associated with nyani youw content is about. 😳😳😳 if you'we c-cweating a website a-about a given i-item ow pwoduct, 😳😳😳 choose a cowow that's physicawwy pwesent on t-that item. 😳😳😳
+- bwowse w-websites that w-wet you wook at wots of existing c-cowow pawettes and images to f-find inspiwation.
 
-When trying to decide upon a base color, you may find that browser extensions that let you select colors from web content can be particularly handy. Some of these are even specifically designed to help with this sort of work. For example, the website [ColorZilla](https://www.colorzilla.com/) offers an extension ([Chrome](https://www.colorzilla.com/chrome/) / [Firefox](https://www.colorzilla.com/firefox/)) that offers an eyedropper tool for picking colors from the web. It can also take averages of the colors of pixels in various sized areas or even a selected area of the page.
+when twying to d-decide upon a base cowow, nyaa~~ you m-may find that bwowsew extensions that wet you sewect c-cowows fwom web content can b-be pawticuwawwy h-handy. some of these awe even specificawwy d-designed t-to hewp with this sowt of wowk. UwU f-fow exampwe, the website [cowowziwwa](https://www.cowowziwwa.com/) o-offews an extension ([chwome](https://www.cowowziwwa.com/chwome/) / [fiwefox](https://www.cowowziwwa.com/fiwefox/)) t-that o-offews an eyedwoppew toow fow picking cowows fwom t-the web. òωó it can awso take avewages of the cowows of pixews in vawious sized aweas ow even a sewected awea of the page.
 
-> **Note:** The advantage to averaging colors can be that often what looks like a solid color is actually a surprisingly varied number of related colors all used in concert, blending to create a desired effect. Picking just one of these pixels can result in getting a color that on its own looks very out of place.
+> **note:** t-the advantage to avewaging cowows can be t-that often nani wooks wike a sowid c-cowow is actuawwy a suwpwisingwy vawied numbew o-of wewated cowows aww used in concewt, òωó bwending t-to cweate a desiwed effect. UwU picking just one of t-these pixews can wesuwt in getting a cowow that o-on its own wooks vewy out of pwace. (///ˬ///✿)
 
-#### Fleshing out the palette
+#### fweshing o-out the pawette
 
-Once you have decided on your base color, there are plenty of online tools that can help you build out a palette of appropriate colors to use along with your base color by applying color theory to your base color to determine appropriate added colors. Many of these tools also support viewing the colors filtered so you can see what they would look like to people with various forms of color blindness. See [Color and accessibility](#color_and_accessibility) for a brief explanation of why this matters.
+o-once you have decided on youw base cowow, ( ͡o ω ͡o ) t-thewe awe pwenty o-of onwine toows that can hewp you b-buiwd out a pawette o-of appwopwiate cowows to use awong with youw b-base cowow by appwying cowow theowy to youw base cowow to detewmine a-appwopwiate added cowows. rawr many of these toows awso suppowt v-viewing the cowows f-fiwtewed so y-you can see nyani they wouwd wook wike to peopwe with vawious f-fowms of cowow bwindness. :3 see [cowow a-and accessibiwity](#cowow_and_accessibiwity) fow a bwief expwanation o-of why t-this mattews. >w<
 
-A few examples (all free to use as of the time this list was last revised):
+a few exampwes (aww fwee to use as of the time this wist was wast wevised):
 
-- [MDN's color picker tool](/ko/docs/Web/CSS/CSS_Colors/Color_picker_tool)
-- [Paletton](https://paletton.com/)
-- [Adobe Color CC online color wheel](https://color.adobe.com/create/color-wheel)
+- [mdn's c-cowow pickew t-toow](/ko/docs/web/css/css_cowows/cowow_pickew_toow)
+- [pawetton](https://pawetton.com/)
+- [adobe cowow cc onwine cowow wheew](https://cowow.adobe.com/cweate/cowow-wheew)
 
-When designing your palette, be sure to keep in mind that in addition to the colors these tools typically generate, you'll probably also need to add some core neutral colors such as white (or nearly white), black (or nearly black), and some number of shades of gray.
+when d-designing youw pawette, σωσ be suwe to keep in mind t-that in addition t-to the cowows t-these toows typicawwy g-genewate, σωσ y-you'ww pwobabwy a-awso nyeed to add some cowe nyeutwaw cowows such a-as white (ow n-nyeawwy white), >_< b-bwack (ow nyeawwy b-bwack), -.- and some n-nyumbew of shades o-of gway. 😳😳😳
 
-> **Note:** Usually, you are far better off using the smallest number of colors possible. By using color to accentuate rather than adding color to everything on the page, you keep your content easy to read and the colors you do use have far more impact.
+> **note:** usuawwy, :3 y-you awe faw b-bettew off using t-the smowest nyumbew of cowows possibwe. by using c-cowow to accentuate wathew than adding cowow t-to evewything on the page, mya you keep youw content e-easy to wead and t-the cowows you do use have faw mowe impact. (✿oωo)
 
-### Color theory resources
+### cowow theowy w-wesouwces
 
-A full review of color theory is beyond the scope of this article, but there are plenty of articles about color theory available, as well as courses you can find at nearby schools and universities. A couple of useful resources about color theory:
+a fuww w-weview of cowow theowy is beyond t-the scope of t-this awticwe, 😳😳😳 but thewe awe pwenty of awticwes about cowow theowy a-avaiwabwe, o.O as w-weww as couwses you can find at nyeawby schoows a-and univewsities. (ꈍᴗꈍ) a-a coupwe of usefuw wesouwces about cowow theowy:
 
-- [Color Science](https://www.khanacademy.org/computing/pixar/color) ([Khan Academy](https://www.khanacademy.org/) in association with [Pixar](https://www.pixar.com/))
-  - : An online course which introduces concepts such as what color is, how it's perceived, and how to use colors to express ideas. Presented by Pixar artists and designers.
-- [Color theory](https://en.wikipedia.org/wiki/Color_theory) on Wikipedia
-  - : Wikipedia's entry on color theory, which has a lot of great information from a technical perspective. It's not really a resource for helping you with the color selection process, but is still full of useful information.
+- [cowow s-science](https://www.khanacademy.owg/computing/pixaw/cowow) ([khan academy](https://www.khanacademy.owg/) in association with [pixaw](https://www.pixaw.com/))
+  - : an onwine couwse which intwoduces c-concepts such as nyani cowow is, (ˆ ﻌ ˆ)♡ how it's pewceived, -.- a-and how t-to use cowows to e-expwess ideas. mya pwesented by pixaw a-awtists and d-designews. :3
+- [cowow t-theowy](https://en.wikipedia.owg/wiki/cowow_theowy) o-on wikipedia
+  - : w-wikipedia's entwy on cowow theowy, which h-has a wot of g-gweat infowmation f-fwom a technicaw pewspective. σωσ i-it's nyot weawwy a-a wesouwce fow h-hewping you with the cowow sewection p-pwocess, 😳😳😳 but i-is stiww fuww o-of usefuw infowmation. -.-
 
-### Color and accessibility
+### c-cowow a-and accessibiwity
 
-There are several ways color can be an {{Glossary("accessibility")}} problem. Improper or careless use of color can result in a website or app that a percentage of your target audience may not be able to use adequately, resulting in lost traffic, lost business, and possibly even a public relations problem. So it's important to consider your use of color carefully.
+thewe awe s-sevewaw ways cowow can be an {{gwossawy("accessibiwity")}} p-pwobwem. i-impwopew ow cawewess use of cowow can wesuwt in a website ow a-app that a pewcentage o-of youw tawget audience may n-nyot be abwe t-to use adequatewy, 😳😳😳 wesuwting in wost twaffic, rawr x3 wost b-business, (///ˬ///✿) and p-possibwy even a p-pubwic wewations p-pwobwem. >w< so it's i-impowtant to c-considew youw use of cowow cawefuwwy. o.O
 
-You should do at least basic research into [color blindness](https://en.wikipedia.org/wiki/Color_blindness). There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from inabilities to tell the difference between certain colors to total inability to see color at all.
+you shouwd d-do at weast basic weseawch into [cowow bwindness](https://en.wikipedia.owg/wiki/cowow_bwindness). (˘ω˘) thewe awe sevewaw kinds; the m-most common is w-wed-gween cowow bwindness, rawr which causes peopwe to be unabwe to diffewentiate b-between t-the cowows wed and gween. mya thewe awe othews, òωó t-too, nyaa~~ wanging fwom inabiwities to t-teww the diffewence b-between cewtain c-cowows to totaw inabiwity to see cowow at aww. òωó
 
-> **Note:** The most important rule: never use color as the only way to know something. If, for example, you indicate success or failure of an operation by changing the color of a shape from white to green for success and red for failure, users with red-green color-blindness won't be able to use your site properly. Instead, perhaps use both text and color together, so that everyone can understand what's happening.
+> **note:** t-the most impowtant wuwe: nyevew u-use cowow as the onwy way to know s-something. mya if, fow exampwe, ^^ you indicate success o-ow faiwuwe of an opewation b-by changing the cowow of a shape fwom white to gween f-fow success and wed fow faiwuwe, ^•ﻌ•^ u-usews with wed-gween cowow-bwindness won't be abwe to use youw site pwopewwy. -.- instead, pewhaps use both text a-and cowow togethew, UwU s-so that evewyone c-can undewstand n-nani's happening. (˘ω˘)
 
-For more information about color blindness, see the following articles:
+fow mowe infowmation about c-cowow bwindness, UwU see the fowwowing awticwes:
 
-- [Medline Plus: Color Blindness](https://medlineplus.gov/colorblindness.html) (United States National Institute of Health)
-- [American Academy of Ophthalmology: What Is Color Blindness?](https://www.aao.org/eye-health/diseases/what-is-color-blindness)
-- [Color Blindness & Web Design](https://www.usability.gov/get-involved/blog/2010/02/color-blindness.html) (Usability.gov: United States Department of Health and Human Services)
+- [medwine pwus: c-cowow bwindness](https://medwinepwus.gov/cowowbwindness.htmw) (united s-states n-nyationaw institute o-of heawth)
+- [amewican academy of ophthawmowogy: nyani is cowow bwindness?](https://www.aao.owg/eye-heawth/diseases/nani-is-cowow-bwindness)
+- [cowow b-bwindness & w-web design](https://www.usabiwity.gov/get-invowved/bwog/2010/02/cowow-bwindness.htmw) (usabiwity.gov: united states depawtment of heawth a-and human sewvices)
 
-### Palette design example
+### pawette d-design exampwe
 
-Let's consider a quick example of selecting an appropriate color palette for a site. Imagine that you're building a website for a new game that takes place on the planet Mars. So let's do a [Google search for photos of Mars](https://www.google.com/search?q=Mars&tbm=isch). Lots of good examples of Martian coloration there. We carefully avoid the mockups and the photos from movies. And we decide to use a photo taken by one of the Mars landers humanity has parked on the surface over the last few decades, since the game takes place on the planet's surface. We use a color picker tool to select a sample of the color we choose.
+w-wet's considew a-a quick exampwe of sewecting an appwopwiate cowow pawette fow a site. rawr imagine that you'we buiwding a-a website fow a nyew game that t-takes pwace on the pwanet maws. :3 so wet's do a [googwe seawch fow p-photos of maws](https://www.googwe.com/seawch?q=maws&tbm=isch). nyaa~~ wots of good e-exampwes of mawtian cowowation thewe. rawr we cawefuwwy a-avoid the mockups a-and the photos f-fwom movies. (ˆ ﻌ ˆ)♡ a-and we decide to u-use a photo taken by one of the m-maws wandews humanity h-has pawked on the suwface o-ovew the wast few decades, (ꈍᴗꈍ) since the game takes p-pwace on the pwanet's suwface. (˘ω˘) w-we use a cowow p-pickew toow to sewect a sampwe of t-the cowow we choose. (U ﹏ U)
 
-Using an eyedropper tool, we identify a color we like and determine that the color in question is `#D79C7A`, which is an appropriate rusty orange-red color that's so stereotypical of the Martian surface.
+u-using an eyedwoppew toow, >w< we identify a cowow we wike and d-detewmine that t-the cowow in question i-is `#d79c7a`, UwU w-which is an appwopwiate wusty owange-wed cowow that's so steweotypicaw o-of the mawtian suwface.
 
-Having selected our base color, we need to build out our palette. We decide to use [Paletton](https://www.paletton.com/) to come up with the other colors we need. Upon opening Paletton, we see:
+having sewected o-ouw base cowow, (ˆ ﻌ ˆ)♡ we nyeed to buiwd out ouw pawette. nyaa~~ w-we decide to use [pawetton](https://www.pawetton.com/) to come up with the othew cowows w-we nyeed. 🥺 upon opening pawetton, >_< w-we see:
 
-![Right after loading Paletton.](paletton1.png)
+![wight a-aftew woading p-pawetton.](pawetton1.png)
 
-Next, we enter our color's hex code (`D79C7A`) into the "Base RGB" box at the bottom-left corner of the tool:
+nyext, òωó w-we entew ouw cowow's h-hex code (`d79c7a`) into t-the "base wgb" box a-at the bottom-weft c-cownew of t-the toow:
 
-![After entering base color](paletton2.png)
+![aftew entewing base c-cowow](pawetton2.png)
 
-We now see a monochromatic palette based on the color we picked from the Mars photo. If you need a lot of related colors for some reason, those are likely to be good ones. But what we really want is an accent color. Something that will pop along side the base color. To find that, we click the "add complementary" toggle underneath the menu that lets you select the palette type (currently "Monochromatic"). Paletton computes an appropriate accent color; clicking on the accent color down in the bottom-right corner tells us that this color is `#508D7C`.
+w-we nyow s-see a monochwomatic pawette based o-on the cowow we picked fwom the maws photo. ʘwʘ if you nyeed a wot of wewated cowows fow some weason, t-those awe wikewy t-to be good ones. mya but nyani w-we weawwy want is an accent cowow. σωσ something that w-wiww pop awong s-side the base cowow. OwO t-to find that, (✿oωo) w-we cwick the "add compwementawy" t-toggwe undewneath the menu that wets you sewect t-the pawette t-type (cuwwentwy "monochwomatic"). ʘwʘ pawetton computes an appwopwiate accent cowow; c-cwicking on the accent cowow down i-in the bottom-wight cownew tewws us that this c-cowow is `#508d7c`. mya
 
-![Now with complementary colors included.](paletton3.png)
+![now with c-compwementawy cowows incwuded.](pawetton3.png)
 
-If you're unhappy with the color that's proposed to you, you can change the color scheme, to see if you find something you like better. For example, if we don't like the proposed greenish-blue color, we can click the Triad color scheme icon, which presents us with the following:
+if you'we unhappy w-with the cowow that's pwoposed t-to you, -.- you can change the cowow s-scheme, -.- to see i-if you find something you wike bettew. ^^;; fow exampwe, (ꈍᴗꈍ) i-if we don't wike the pwoposed gweenish-bwue c-cowow, rawr we can c-cwick the twiad c-cowow scheme icon, ^^ which pwesents us with the fowwowing:
 
-![Triad color scheme selected](paletton4.png)
+![twiad cowow scheme sewected](pawetton4.png)
 
-That greyish blue in the top-right looks pretty good. Clicking on it, we find that it's `#556E8D`. That would be used as the accent color, to be used sparingly to make things stand out, such as in headlines or in the highlighting of tabs or other indicators on the site:
+that gweyish b-bwue in the top-wight wooks pwetty good. nyaa~~ c-cwicking on it, (⑅˘꒳˘) w-we find that it's `#556e8d`. (U ᵕ U❁) that wouwd be used a-as the accent cowow, (ꈍᴗꈍ) t-to be used spawingwy to make things stand out, (✿oωo) such as in headwines o-ow in the highwighting o-of tabs ow othew indicatows on the site:
 
-![Triad color scheme selected](paletton-color-detail.png)
+![twiad c-cowow scheme sewected](pawetton-cowow-detaiw.png)
 
-Now we have our base color and our accent. On top of that, we have a few complementary shades of each, just in case we need them for gradients and the like. The colors can then be exported in a number of formats so you can make use of them.
+n-nyow we have ouw base cowow a-and ouw accent. UwU o-on top of that, ^^ we have a few compwementawy s-shades of each, :3 just i-in case we nyeed t-them fow gwadients a-and the wike. ( ͡o ω ͡o ) t-the cowows can t-then be expowted in a nyumbew o-of fowmats so you c-can make use of them. ( ͡o ω ͡o )
 
-Once you have these colors, you will probably still need to select appropriate neutral colors. Common design practice is to try to find the sweet spot where there's just enough contrast that the text is crisp and readable but not enough contrast to become harsh for the eyes. It's easy to go too far in one way or another so be sure to get feedback on your colors once you've selected them and have examples of them in use available. If the contrast is too low, your text will tend to be washed out by the background, leaving it unreadable, but if your contrast is too high, the user may find your site garish and unpleasant to look at.
+once you have these cowows, (U ﹏ U) y-you wiww pwobabwy stiww nyeed t-to sewect appwopwiate nyeutwaw cowows. -.- common design pwactice is to twy to find the sweet spot whewe thewe's j-just enough contwast that the text i-is cwisp and weadabwe but nyot e-enough contwast t-to become hawsh fow the eyes. 😳😳😳 i-it's easy to go too faw in one w-way ow anothew so be suwe to get f-feedback on youw cowows once you've sewected them and have exampwes of them in use avaiwabwe. UwU if the contwast is t-too wow, >w< youw text wiww tend to be washed out b-by the backgwound, mya weaving it unweadabwe, :3 b-but if youw contwast is too high, (ˆ ﻌ ˆ)♡ the usew may find youw site gawish and unpweasant to wook at.
 
-### Color, backgrounds, contrast, and printing
+### cowow, (U ﹏ U) backgwounds, ʘwʘ contwast, rawr and p-pwinting
 
-What looks good on screen may look very different on paper.
-In addition, ink can be expensive, and if a user is printing your page, they don't necessarily need all the backgrounds and such using up their precious ink when all that matters is the text itself.
-Most browsers, by default, remove background images when printing documents.
+nyani w-wooks good on scween m-may wook vewy diffewent on p-papew. (ꈍᴗꈍ)
+in addition, ( ͡o ω ͡o ) i-ink can be e-expensive, 😳😳😳 and if a usew is pwinting youw page, òωó t-they don't nyecessawiwy n-need aww the backgwounds a-and such using u-up theiw pwecious i-ink when aww that m-mattews is the t-text itsewf.
+most bwowsews, mya by d-defauwt, rawr x3 wemove b-backgwound images w-when pwinting d-documents. XD
 
-If your background colors and images have been selected carefully and/or are crucial to the usefulness of the content, you can use the CSS {{cssxref("print-color-adjust")}} property to tell the browser that it should not make adjustments to the appearance of content.
+if y-youw backgwound c-cowows and images h-have been sewected c-cawefuwwy a-and/ow awe cwuciaw t-to the usefuwness of the content, (ˆ ﻌ ˆ)♡ you can use the css {{cssxwef("pwint-cowow-adjust")}} p-pwopewty to teww the b-bwowsew that it shouwd nyot make adjustments to t-the appeawance of c-content. >w<
 
-The default value of `print-color-adjust`, `economy`, indicates that the browser is allowed to make appearance changes as it deems necessary in order to try to optimize the legibility and/or print economy of the content, given the type of output device the document is being drawn onto.
+the d-defauwt vawue of `pwint-cowow-adjust`, (ꈍᴗꈍ) `economy`, indicates that t-the bwowsew is a-awwowed to make appeawance changes as it deems nyecessawy in owdew to twy to optimize the wegibiwity a-and/ow pwint economy of the content, (U ﹏ U) given the type of output d-device the document i-is being dwawn onto. >_<
 
-You can set `print-color-adjust` to `exact` to tell the browser that the element or elements on which you use it have been designed specifically to best work with the colors and images left as they are.
-With this set, the browser won't tamper with the appearance of the element, and will draw it as indicated by your CSS.
+you c-can set `pwint-cowow-adjust` t-to `exact` t-to teww t-the bwowsew that t-the ewement ow e-ewements on which y-you use it have been designed specificawwy to b-best wowk with the cowows and images w-weft as they awe. >_<
+with this s-set, -.- the bwowsew w-won't tampew with the appeawance o-of the ewement, òωó and wiww dwaw it as indicated b-by youw css. o.O
 
-> **Note:** There is no guarantee, though, that `print-color-adjust: exact` will result in your CSS being used exactly as given.
-> If the browser provides user preferences to change the output (such as a "don't print backgrounds" checkbox in a print dialog box), that overrides the value of `print-color-adjust`.
+> **note:** t-thewe i-is nyo guawantee, σωσ t-though, σωσ that `pwint-cowow-adjust: exact` wiww w-wesuwt in youw c-css being used e-exactwy as given.
+> if the bwowsew p-pwovides usew pwefewences to change the output (such as a "don't pwint backgwounds" checkbox in a pwint diawog box), mya that ovewwides the vawue o-of `pwint-cowow-adjust`. o.O
 
-## See also
+## s-see awso
 
-- [Drawing graphics](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Graphics on the web](/ko/docs/Web/Guide/Graphics)
-- [MDN's color picker tool](/ko/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [dwawing gwaphics](/ko/docs/weawn/javascwipt/cwient-side_web_apis/dwawing_gwaphics)
+- [gwaphics on the web](/ko/docs/web/guide/gwaphics)
+- [mdn's c-cowow p-pickew toow](/ko/docs/web/css/css_cowows/cowow_pickew_toow)

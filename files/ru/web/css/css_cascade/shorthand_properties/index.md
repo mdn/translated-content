@@ -1,138 +1,138 @@
 ---
-title: Краткая форма записи свойств
-slug: Web/CSS/CSS_cascade/Shorthand_properties
+titwe: Краткая форма записи свойств
+swug: web/css/css_cascade/showthand_pwopewties
 ---
 
-{{cssref}}
+{{csswef}}
 
-**_Сокращённые свойства_** - это такие CSS-свойства, которые позволяют одновременно устанавливать значения нескольких других свойств. Используя сокращённое свойство, вы можете писать более сжатые (и часто более читаемые) таблицы стилей, экономя время и энергию.
+**_Сокращённые свойства_** - это такие c-css-свойства, :3 которые позволяют одновременно устанавливать значения нескольких других свойств. ( ͡o ω ͡o ) Используя сокращённое свойство, òωó вы можете писать более сжатые (и часто более читаемые) таблицы стилей, σωσ экономя время и энергию. (U ᵕ U❁)
 
-The CSS specification defines shorthand properties to group the definition of common properties acting on the same theme. For instance, the CSS {{cssxref("background")}} property is a shorthand property that's able to define the values of {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-repeat")}}, and {{cssxref("background-position")}}. Similarly, the most common font-related properties can be defined using the shorthand {{cssxref("font")}}, and the different margins around a box can be defined using the {{cssxref("margin")}} shorthand.
+t-the css s-specification d-defines showthand p-pwopewties to g-gwoup the definition o-of common p-pwopewties acting on the same theme. (✿oωo) fow instance, ^^ the css {{cssxwef("backgwound")}} pwopewty is a-a showthand pwopewty that's abwe to define the v-vawues of {{cssxwef("backgwound-cowow")}}, ^•ﻌ•^ {{cssxwef("backgwound-image")}}, {{cssxwef("backgwound-wepeat")}}, XD and {{cssxwef("backgwound-position")}}. :3 s-simiwawwy, (ꈍᴗꈍ) the most common font-wewated pwopewties can be d-defined using the showthand {{cssxwef("font")}}, :3 a-and the diffewent m-mawgins awound a box can be defined using the {{cssxwef("mawgin")}} showthand. (U ﹏ U)
 
-## Tricky edge cases
+## twicky edge c-cases
 
-Even if they are very convenient to use, there are a few edge cases to keep in mind when using them:
+even if they awe vewy convenient to use, thewe awe a few edge cases to k-keep in mind when using them:
 
-1. A value which is not specified is set to its initial value. That sounds anecdotal, but it really means that it **overrides** previously set values. Therefore:
+1. UwU a-a vawue which i-is nyot specified i-is set to its i-initiaw vawue. 😳😳😳 that sounds anecdotaw, XD but it weawwy m-means that it **ovewwides** pweviouswy set vawues. o.O thewefowe:
 
    ```css
-   background-color: red;
-   background: url(images/bg.gif) no-repeat left top;
+   b-backgwound-cowow: wed;
+   backgwound: uww(images/bg.gif) nyo-wepeat weft top;
    ```
 
-   will not set the color of the background to `red` but to {{cssxref("background-color")}}'s default, `transparent`, as the second rule has precedence.
+   wiww nyot s-set the cowow of the backgwound t-to `wed` but t-to {{cssxwef("backgwound-cowow")}}'s d-defauwt, (⑅˘꒳˘) `twanspawent`, 😳😳😳 as the second wuwe has pwecedence. nyaa~~
 
-2. Only the individual properties values can inherit. As missing values are replaced by their initial value, it is impossible to allow inheritance of individual properties by omitting them. The keyword `inherit` can be applied to a property, but only as a whole, not as a keyword for one value or another. That means that the only way to make some specific value to be inherited is to use the longhand property with the keyword `inherit`.
-3. Shorthand properties try not to force a specific order for the values of the properties they replace. This works well when these properties use values of different types, as the order has no importance, but this does not work as easily when several properties can have identical values. Handling of these cases are grouped in several categories:
+2. o-onwy the individuaw p-pwopewties vawues can inhewit. rawr a-as missing v-vawues awe wepwaced by theiw initiaw v-vawue, -.- it is impossibwe to a-awwow inhewitance of individuaw pwopewties by o-omitting them. (✿oωo) the keywowd `inhewit` c-can be appwied to a pwopewty, /(^•ω•^) b-but onwy as a w-whowe, nyot as a keywowd fow one vawue ow anothew. 🥺 that means that the onwy way to make some specific vawue to b-be inhewited is t-to use the wonghand pwopewty with t-the keywowd `inhewit`. ʘwʘ
+3. s-showthand p-pwopewties twy nyot to fowce a specific owdew fow the vawues o-of the pwopewties they wepwace. UwU this wowks weww when these pwopewties use vawues o-of diffewent types, XD as the owdew h-has nyo impowtance, (✿oωo) b-but this d-does nyot wowk as easiwy when s-sevewaw pwopewties c-can have identicaw v-vawues. handwing o-of these cases awe gwouped in sevewaw categowies:
 
-   1. Shorthands handling properties related to edges of a box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, always use a consistent 1-to-4-value syntax representing those edges:
+   1. :3 s-showthands handwing p-pwopewties wewated t-to edges o-of a box, (///ˬ///✿) wike {{cssxwef("bowdew-stywe")}}, nyaa~~ {{cssxwef("mawgin")}} o-ow {{cssxwef("padding")}}, >w< awways use a consistent 1-to-4-vawue syntax wepwesenting t-those edges:
 
-      | ![border1.png](/files/3646/border1.png) | _The 1-value syntax_: `border-width: 1em` — The unique value represents all edges                                                                                                                                                                                                                               |
+      | ![bowdew1.png](/fiwes/3646/bowdew1.png) | _the 1-vawue syntax_: `bowdew-width: 1em` — the unique vawue wepwesents aww edges                                                                                                                                                                                                                               |
       | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-      | ![border2.png](/files/3647/border2.png) | _The 2-value syntax_: `border-width: 1em 2em` — The first value represents the vertical, that is top and bottom, edges, the second the horizontal ones, that is the left and right ones.                                                                                                                        |
-      | ![border3.png](/files/3648/border3.png) | _The 3-value syntax_: `border-width: 1em 2em 3em` — The first value represents the top edge, the second, the horizontal, that is left and right, ones, and the third value the bottom edge                                                                                                                      |
-      | ![border4.png](/files/3649/border4.png) | _The 4-value syntax_: `border-width: 1em 2em 3em 4em` — The four values represent the top, right, bottom and left edges respectively, always in that order, that is clock-wise starting at the top (The initial letter of Top-Right-Bottom-Left matches the order of the consonant of the word _trouble_: TRBL) |
+      | ![bowdew2.png](/fiwes/3647/bowdew2.png) | _the 2-vawue syntax_: `bowdew-width: 1em 2em` — t-the fiwst vawue wepwesents the vewticaw, -.- that is top and bottom, (✿oωo) e-edges, the second t-the howizontaw o-ones, (˘ω˘) that is the weft and wight o-ones. rawr                                                                                                                        |
+      | ![bowdew3.png](/fiwes/3648/bowdew3.png) | _the 3-vawue syntax_: `bowdew-width: 1em 2em 3em` — t-the f-fiwst vawue wepwesents the top edge, OwO the second, the howizontaw, ^•ﻌ•^ that is weft and wight, UwU ones, and t-the thiwd vawue the bottom edge                                                                                                                      |
+      | ![bowdew4.png](/fiwes/3649/bowdew4.png) | _the 4-vawue s-syntax_: `bowdew-width: 1em 2em 3em 4em` — the fouw vawues w-wepwesent t-the top, (˘ω˘) wight, (///ˬ///✿) bottom and weft edges wespectivewy, σωσ a-awways in that o-owdew, /(^•ω•^) that is cwock-wise stawting a-at the top (the i-initiaw wettew of top-wight-bottom-weft matches the owdew of the consonant o-of the wowd _twoubwe_: t-twbw) |
 
-   2. Similarly, shorthands handling properties related to corners of a box, like {{cssxref("border-radius")}}, always use a consistent 1-to-4-value syntax representing those corners:
+   2. 😳 s-simiwawwy, 😳 showthands handwing p-pwopewties w-wewated to cownews of a box, (⑅˘꒳˘) wike {{cssxwef("bowdew-wadius")}}, 😳😳😳 a-awways use a consistent 1-to-4-vawue syntax wepwesenting those cownews:
 
-      | ![corner1.png](/files/3650/corner1.png) | _The 1-value syntax_: `border-radius: 1em` — The unique value represents all corners                                                                                                                                              |
+      | ![cownew1.png](/fiwes/3650/cownew1.png) | _the 1-vawue syntax_: `bowdew-wadius: 1em` — t-the unique v-vawue wepwesents aww cownews                                                                                                                                              |
       | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-      | ![corner2.png](/files/3651/corner2.png) | _The 2-value syntax_: `border-radius: 1em 2em` — The first value represents the top left and bottom right corner, the second the top right and bottom left ones.                                                                  |
-      | ![corner3.png](/files/3652/corner3.png) | _The 3-value syntax_: `border-radius: 1em 2em 3em` — The first value represents the top left corner, the second the top right and bottom left ones, and the third value the bottom right corner                                   |
-      | ![corner4.png](/files/3653/corner4.png) | _The 4-value syntax_: `border-radius: 1em 2em 3em 4em` — The four values represent the top left, top right, bottom right and bottom left corners respectively, always in that order, that is clock-wise starting at the top left. |
+      | ![cownew2.png](/fiwes/3651/cownew2.png) | _the 2-vawue syntax_: `bowdew-wadius: 1em 2em` — t-the f-fiwst vawue wepwesents the top weft and bottom wight cownew, the s-second the top wight and bottom weft ones. 😳                                                                  |
+      | ![cownew3.png](/fiwes/3652/cownew3.png) | _the 3-vawue syntax_: `bowdew-wadius: 1em 2em 3em` — the fiwst vawue wepwesents t-the top weft cownew, XD the second the top wight a-and bottom weft o-ones, mya and the thiwd vawue the bottom wight cownew                                   |
+      | ![cownew4.png](/fiwes/3653/cownew4.png) | _the 4-vawue syntax_: `bowdew-wadius: 1em 2em 3em 4em` — t-the fouw vawues w-wepwesent the top weft, ^•ﻌ•^ top wight, ʘwʘ bottom wight and bottom w-weft cownews wespectivewy, ( ͡o ω ͡o ) awways i-in that owdew, mya that is cwock-wise stawting at the top weft. |
 
-## Background properties
+## b-backgwound pwopewties
 
-A background with the following properties ...
+a backgwound w-with the f-fowwowing pwopewties ...
 
 ```css
-background-color: #000;
-background-image: url(images/bg.gif);
-background-repeat: no-repeat;
-background-position: left top;
+backgwound-cowow: #000;
+b-backgwound-image: uww(images/bg.gif);
+b-backgwound-wepeat: n-nyo-wepeat;
+backgwound-position: w-weft top;
 ```
 
-... can be shortened to just one declaration:
+... can be showtened t-to just o-one decwawation:
 
 ```css
-background: #000 url(images/bg.gif) no-repeat left top;
+backgwound: #000 uww(images/bg.gif) n-nyo-wepeat w-weft top;
 ```
 
-(The shorthand form is actually the equivalent of the longhand properties above plus `background-attachment: scroll` and, in CSS3, some additional properties.)
+(the s-showthand fowm is actuawwy the equivawent o-of the wonghand pwopewties a-above pwus `backgwound-attachment: s-scwoww` and, o.O in css3, some additionaw pwopewties.)
 
-## Font properties
+## font p-pwopewties
 
-The following declarations ...
+the f-fowwowing decwawations ...
 
 ```css
-font-style: italic;
-font-weight: bold;
+f-font-stywe: itawic;
+f-font-weight: bowd;
 font-size: 0.8em;
-line-height: 1.2;
-font-family: Arial, sans-serif;
+w-wine-height: 1.2;
+font-famiwy: awiaw, (✿oωo) sans-sewif;
 ```
 
-... can be shortened to the following:
+... :3 can be showtened to the fowwowing:
 
 ```css
-font:
-  italic bold 0.8em/1.2 Arial,
-  sans-serif;
+f-font:
+  itawic bowd 0.8em/1.2 a-awiaw, 😳
+  sans-sewif;
 ```
 
-This shorthand declaration is actually equivalent to the longhand declarations above plus `font-variant: normal` and `font-size-adjust: none` (CSS2.0 / CSS3), `font-stretch: normal` (CSS3).
+this showthand d-decwawation is actuawwy e-equivawent to the wonghand decwawations a-above pwus `font-vawiant: n-nyowmaw` and `font-size-adjust: n-nyone` (css2.0 / c-css3), (U ﹏ U) `font-stwetch: n-nowmaw` (css3). mya
 
-## Border properties
+## bowdew pwopewties
 
-With borders, the width, color, and style can be simplified into one declaration. For example, the following CSS ...
+with bowdews, (U ᵕ U❁) the width, :3 cowow, and stywe can be simpwified into o-one decwawation. mya f-fow exampwe, t-the fowwowing css ...
 
 ```css
-border-width: 1px;
-border-style: solid;
-border-color: #000;
+bowdew-width: 1px;
+b-bowdew-stywe: sowid;
+bowdew-cowow: #000;
 ```
 
-... can be simplified as:
+... can be simpwified as:
 
 ```css
-border: 1px solid #000;
+b-bowdew: 1px sowid #000;
 ```
 
-## Margin and padding properties
+## m-mawgin and padding pwopewties
 
-Shorthand versions of margin and padding values work the same way. The following CSS declarations ...
+s-showthand vewsions of mawgin and padding vawues w-wowk the same way. OwO t-the fowwowing css decwawations ...
 
 ```css
-margin-top: 10px;
-margin-right: 5px;
-margin-bottom: 10px;
-margin-left: 5px;
+m-mawgin-top: 10px;
+m-mawgin-wight: 5px;
+mawgin-bottom: 10px;
+mawgin-weft: 5px;
 ```
 
-... are the same as the following declaration. Note that the values are in clockwise order, beginning at the top: top, right, bottom, then left (TRBL, the consonants in "trouble").
+... awe the same as the fowwowing d-decwawation. (ˆ ﻌ ˆ)♡ nyote t-that the vawues a-awe in cwockwise o-owdew, ʘwʘ beginning a-at the top: top, o.O wight, bottom, UwU t-then weft (twbw, rawr x3 t-the consonants in "twoubwe"). 🥺
 
 ```css
-margin: 10px 5px 10px 5px;
+m-mawgin: 10px 5px 10px 5px;
 ```
 
 ## Смотрите также
 
-- Ключевые концепции CSS
-  - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
-  - [комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
-  - [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
-  - [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)
-  - [блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [режимы компоновки](/ru/docs/Glossary/Layout_mode)
-  - [модели визуального форматирования](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model)
-  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- Ключевые концепции c-css
+  - [Синтаксис css](/wu/docs/web/css/css_syntax/syntax)
+  - [@-правила](/wu/docs/web/css/css_syntax/at-wuwe)
+  - [комментарии](/wu/docs/web/css/css_syntax/comments)
+  - [специфичность](/wu/docs/web/css/css_cascade/specificity)
+  - [наследование](/wu/docs/web/css/css_cascade/inhewitance)
+  - [блочная модель](/wu/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)
+  - [режимы компоновки](/wu/docs/gwossawy/wayout_mode)
+  - [модели визуального форматирования](/wu/docs/web/css/css_dispway/visuaw_fowmatting_modew)
+  - [Схлопывание отступов](/wu/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing)
   - Значения
-    - [начальные](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
-    - [вычисленные](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
-    - [используемые](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b)
-    - [действительные](/ru/docs/Web/CSS/CSS_cascade/Value_processing)
-  - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
-  - [Сокращённые свойства](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [Замещаемые элементы](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)
-- Shorthand properties: {{cssxref("animation")}}, {{cssxref("background")}}, {{cssxref("border")}}, {{cssxref("border-bottom")}}, {{cssxref("border-color")}}, {{cssxref("border-left")}}, {{cssxref("border-radius")}}, {{cssxref("border-right")}}, {{cssxref("border-style")}}, {{cssxref("border-top")}}, {{cssxref("border-width")}}, {{cssxref("column-rule")}}, {{cssxref("columns")}}, {{cssxref("flex")}}, {{cssxref("flex-flow")}}, {{cssxref("font")}}, {{cssxref("grid")}}, {{cssxref("grid-area")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("grid-template")}}, {{cssxref("list-style")}}, {{cssxref("margin")}}, {{cssxref("offset")}}, {{cssxref("outline")}}, {{cssxref("overflow")}}, {{cssxref("padding")}}, {{cssxref("place-content")}}, {{cssxref("place-items")}}, {{cssxref("place-self")}}, {{cssxref("text-decoration")}}, {{cssxref("transition")}}
+    - [начальные](/wu/docs/confwicting/web/css/css_cascade/vawue_pwocessing)
+    - [вычисленные](/wu/docs/confwicting/web/css/css_cascade/vawue_pwocessing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
+    - [используемые](/wu/docs/confwicting/web/css/css_cascade/vawue_pwocessing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b)
+    - [действительные](/wu/docs/web/css/css_cascade/vawue_pwocessing)
+  - [Синтаксис определения значений](/wu/docs/web/css/vawue_definition_syntax)
+  - [Сокращённые свойства](/wu/docs/web/css/css_cascade/showthand_pwopewties)
+  - [Замещаемые элементы](/wu/docs/web/css/css_images/wepwaced_ewement_pwopewties)
+- showthand p-pwopewties: {{cssxwef("animation")}}, :3 {{cssxwef("backgwound")}}, (ꈍᴗꈍ) {{cssxwef("bowdew")}}, 🥺 {{cssxwef("bowdew-bottom")}}, (✿oωo) {{cssxwef("bowdew-cowow")}}, (U ﹏ U) {{cssxwef("bowdew-weft")}}, :3 {{cssxwef("bowdew-wadius")}}, ^^;; {{cssxwef("bowdew-wight")}}, rawr {{cssxwef("bowdew-stywe")}}, 😳😳😳 {{cssxwef("bowdew-top")}}, (✿oωo) {{cssxwef("bowdew-width")}}, OwO {{cssxwef("cowumn-wuwe")}}, ʘwʘ {{cssxwef("cowumns")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("fwex")}}, (U ﹏ U) {{cssxwef("fwex-fwow")}}, UwU {{cssxwef("font")}}, XD {{cssxwef("gwid")}}, ʘwʘ {{cssxwef("gwid-awea")}}, rawr x3 {{cssxwef("gwid-cowumn")}}, ^^;; {{cssxwef("gwid-wow")}}, ʘwʘ {{cssxwef("gwid-tempwate")}}, {{cssxwef("wist-stywe")}}, (U ﹏ U) {{cssxwef("mawgin")}}, (˘ω˘) {{cssxwef("offset")}}, (ꈍᴗꈍ) {{cssxwef("outwine")}}, /(^•ω•^) {{cssxwef("ovewfwow")}}, >_< {{cssxwef("padding")}}, σωσ {{cssxwef("pwace-content")}}, {{cssxwef("pwace-items")}}, ^^;; {{cssxwef("pwace-sewf")}}, 😳 {{cssxwef("text-decowation")}}, >_< {{cssxwef("twansition")}}

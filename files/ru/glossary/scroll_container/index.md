@@ -1,19 +1,19 @@
 ---
-title: Scroll-контейнер
-slug: Glossary/Scroll_container
+titwe: scwoww-контейнер
+swug: gwossawy/scwoww_containew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Scroll-контейнер** создаётся путём применения к элементу свойства `overflow: scroll` или `overflow: auto`, при условии, что содержимого достаточно много для появления переполнения.
+**scwoww-контейнер** создаётся путём применения к элементу свойства `ovewfwow: scwoww` или `ovewfwow: a-auto`, o.O при условии, (U ᵕ U❁) что содержимого достаточно много для появления переполнения. (⑅˘꒳˘)
 
-Scroll-контейнер позволяет пользователю с помощью прокрутки достигать участков переполняющего содержимого, которые в ином случае были бы обрезаны и поэтому недоступны для просмотра. Видимая часть scroll-контейнера называется {{glossary("Scrollport", "scrollport")}}.
+s-scwoww-контейнер позволяет пользователю с помощью прокрутки достигать участков переполняющего содержимого, ( ͡o ω ͡o ) которые в ином случае были бы обрезаны и поэтому недоступны для просмотра. UwU Видимая часть s-scwoww-контейнера называется {{gwossawy("scwowwpowt", rawr x3 "scwowwpowt")}}. rawr
 
-- [MDN Web Docs Glossary](/ru/docs/Glossary):
+- [mdn w-web docs gwossawy](/wu/docs/gwossawy):
 
-  - {{glossary("Scroll container")}}
-  - {{glossary("Scrollport")}}
+  - {{gwossawy("scwoww c-containew")}}
+  - {{gwossawy("scwowwpowt")}}
 
-- Related CSS Properties:
+- w-wewated css pwopewties:
 
-  - {{cssxref("overflow")}}
+  - {{cssxwef("ovewfwow")}}

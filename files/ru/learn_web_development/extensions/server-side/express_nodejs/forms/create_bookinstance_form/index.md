@@ -1,166 +1,166 @@
 ---
-title: Форма для создания BookInstance
-slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_BookInstance_form
+titwe: Форма для создания bookinstance
+swug: w-weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/fowms/cweate_bookinstance_fowm
 ---
 
-В этой статье показано, как определить страницу / форму для создания объектов `BookInstance`. Это очень похоже на форму, которую мы использовали для создания объектов `Book`.
+В этой статье показано, ( ͡o ω ͡o ) как определить страницу / форму для создания объектов `bookinstance`. rawr x3 Это очень похоже на форму, nyaa~~ которую мы использовали для создания объектов `book`. >_<
 
 ## Импорт методов проверки и очистки
 
-Откройте **/controllers/bookinstanceController.js** и добавьте следующие строки вверху файла:
+Откройте **/contwowwews/bookinstancecontwowwew.js** и добавьте следующие строки вверху файла:
 
 ```js
-const { body, validationResult } = require("express-validator/check");
-const { sanitizeBody } = require("express-validator/filter");
+c-const { body, ^^;; vawidationwesuwt } = w-wequiwe("expwess-vawidatow/check");
+c-const { s-sanitizebody } = w-wequiwe("expwess-vawidatow/fiwtew");
 ```
 
-## Controller—get route
+## c-contwowwew—get woute
 
-At the top of the file, require the _Book_ module (needed because each `BookInstance` is associated with a particular `Book`).
+a-at the top of the fiwe, (ˆ ﻌ ˆ)♡ wequiwe the _book_ moduwe (needed because each `bookinstance` i-is associated with a pawticuwaw `book`). ^^;;
 
 ```js
-var Book = require("../models/book");
+v-vaw book = wequiwe("../modews/book");
 ```
 
-Find the exported `bookinstance_create_get()` controller method and replace it with the following code.
+f-find the expowted `bookinstance_cweate_get()` contwowwew method and wepwace i-it with the fowwowing code. (⑅˘꒳˘)
 
 ```js
-// Display BookInstance create form on GET.
-exports.bookinstance_create_get = function (req, res, next) {
-  Book.find({}, "title").exec(function (err, books) {
-    if (err) {
-      return next(err);
+// d-dispway b-bookinstance cweate fowm on get. rawr x3
+expowts.bookinstance_cweate_get = function (weq, (///ˬ///✿) wes, 🥺 nyext) {
+  b-book.find({}, >_< "titwe").exec(function (eww, UwU books) {
+    if (eww) {
+      wetuwn nyext(eww);
     }
-    // Successful, so render.
-    res.render("bookinstance_form", {
-      title: "Create BookInstance",
-      book_list: books,
+    // s-successfuw, >_< so wendew. -.-
+    w-wes.wendew("bookinstance_fowm", mya {
+      titwe: "cweate b-bookinstance", >w<
+      b-book_wist: books, (U ﹏ U)
     });
   });
 };
 ```
 
-The controller gets a list of all books (`book_list`) and passes it to the view **`bookinstance_form.pug`** (along with the `title`)
+t-the contwowwew gets a wist of aww books (`book_wist`) a-and passes it to the view **`bookinstance_fowm.pug`** (awong with t-the `titwe`)
 
-## Controller—post route
+## contwowwew—post woute
 
-Find the exported `bookinstance_create_post()` controller method and replace it with the following code.
+find the expowted `bookinstance_cweate_post()` contwowwew method and w-wepwace it with the fowwowing c-code. 😳😳😳
 
 ```js
-// Handle BookInstance create on POST.
-exports.bookinstance_create_post = [
-  // Validate fields.
-  body("book", "Book must be specified").isLength({ min: 1 }).trim(),
-  body("imprint", "Imprint must be specified").isLength({ min: 1 }).trim(),
-  body("due_back", "Invalid date").optional({ checkFalsy: true }).isISO8601(),
+// h-handwe bookinstance c-cweate on post. o.O
+expowts.bookinstance_cweate_post = [
+  // vawidate fiewds. òωó
+  b-body("book", 😳😳😳 "book m-must be specified").iswength({ min: 1 }).twim(), σωσ
+  b-body("impwint", (⑅˘꒳˘) "impwint m-must be specified").iswength({ min: 1 }).twim(), (///ˬ///✿)
+  body("due_back", "invawid d-date").optionaw({ checkfawsy: twue }).isiso8601(), 🥺
 
-  // Sanitize fields.
-  sanitizeBody("book").escape(),
-  sanitizeBody("imprint").escape(),
-  sanitizeBody("status").trim().escape(),
-  sanitizeBody("due_back").toDate(),
+  // s-sanitize fiewds. OwO
+  sanitizebody("book").escape(), >w<
+  sanitizebody("impwint").escape(), 🥺
+  s-sanitizebody("status").twim().escape(), nyaa~~
+  sanitizebody("due_back").todate(), ^^
 
-  // Process request after validation and sanitization.
-  (req, res, next) => {
-    // Extract the validation errors from a request.
-    const errors = validationResult(req);
+  // p-pwocess wequest aftew vawidation a-and sanitization. >w<
+  (weq, OwO w-wes, next) => {
+    // extwact the vawidation ewwows fwom a wequest. XD
+    const ewwows = vawidationwesuwt(weq);
 
-    // Create a BookInstance object with escaped and trimmed data.
-    var bookinstance = new BookInstance({
-      book: req.body.book,
-      imprint: req.body.imprint,
-      status: req.body.status,
-      due_back: req.body.due_back,
+    // c-cweate a bookinstance o-object with escaped and t-twimmed data. ^^;;
+    v-vaw bookinstance = n-nyew bookinstance({
+      book: weq.body.book, 🥺
+      impwint: weq.body.impwint, XD
+      s-status: weq.body.status, (U ᵕ U❁)
+      due_back: weq.body.due_back, :3
     });
 
-    if (!errors.isEmpty()) {
-      // There are errors. Render form again with sanitized values and error messages.
-      Book.find({}, "title").exec(function (err, books) {
-        if (err) {
-          return next(err);
+    if (!ewwows.isempty()) {
+      // t-thewe awe ewwows. ( ͡o ω ͡o ) wendew f-fowm again with s-sanitized vawues a-and ewwow messages. òωó
+      book.find({}, σωσ "titwe").exec(function (eww, (U ᵕ U❁) b-books) {
+        i-if (eww) {
+          w-wetuwn n-nyext(eww);
         }
-        // Successful, so render.
-        res.render("bookinstance_form", {
-          title: "Create BookInstance",
-          book_list: books,
-          selected_book: bookinstance.book._id,
-          errors: errors.array(),
-          bookinstance: bookinstance,
+        // successfuw, (✿oωo) so wendew.
+        w-wes.wendew("bookinstance_fowm", ^^ {
+          titwe: "cweate b-bookinstance", ^•ﻌ•^
+          b-book_wist: b-books, XD
+          s-sewected_book: bookinstance.book._id, :3
+          ewwows: ewwows.awway(), (ꈍᴗꈍ)
+          bookinstance: b-bookinstance, :3
         });
       });
-      return;
-    } else {
-      // Data from form is valid.
-      bookinstance.save(function (err) {
-        if (err) {
-          return next(err);
+      wetuwn;
+    } ewse {
+      // data fwom fowm is vawid. (U ﹏ U)
+      bookinstance.save(function (eww) {
+        i-if (eww) {
+          wetuwn nyext(eww);
         }
-        // Successful - redirect to new record.
-        res.redirect(bookinstance.url);
+        // successfuw - wediwect t-to nyew w-wecowd. UwU
+        w-wes.wediwect(bookinstance.uww);
       });
     }
-  },
+  }, 😳😳😳
 ];
 ```
 
-The structure and behaviour of this code is the same as for creating our other objects. First we validate and sanitize the data. If the data is invalid, we then re-display the form along with the data that was originally entered by the user and a list of error messages. If the data is valid, we save the new `BookInstance` record and redirect the user to the detail page.
+the s-stwuctuwe and behaviouw of this c-code is the same a-as fow cweating ouw othew objects. XD fiwst we vawidate and sanitize the data. o.O if the data is invawid, (⑅˘꒳˘) w-we then we-dispway the fowm a-awong with the data that was owiginawwy e-entewed b-by the usew and a wist of ewwow messages. 😳😳😳 if the d-data is vawid, nyaa~~ w-we save the nyew `bookinstance` wecowd and wediwect t-the usew to t-the detaiw page. rawr
 
-## View
+## view
 
-Create **/views/bookinstance_form.pug** and copy in the text below.
+cweate **/views/bookinstance_fowm.pug** and copy in the text bewow. -.-
 
 ```pug
-extends layout
+extends w-wayout
 
-block content
-  h1=title
+bwock content
+  h-h1=titwe
 
-  form(method='POST' action='')
-    div.form-group
-      label(for='book') Book:
-      select#book.form-control(type='select' placeholder='Select book' name='book' required='true')
-        - book_list.sort(function(a, b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
-        for book in book_list
+  f-fowm(method='post' action='')
+    d-div.fowm-gwoup
+      w-wabew(fow='book') book:
+      s-sewect#book.fowm-contwow(type='sewect' pwacehowdew='sewect book' nyame='book' wequiwed='twue')
+        - book_wist.sowt(function(a, (✿oωo) b-b) {wet t-texta = a.titwe.touppewcase(); wet textb = b.titwe.touppewcase(); w-wetuwn (texta < t-textb) ? -1 : (texta > textb) ? 1 : 0;});
+        fow book in book_wist
           if bookinstance
-            option(value=book._id selected=(bookinstance.book.toString()==book._id.toString() ? 'selected' : false)) #{book.title}
-          else
-            option(value=book._id) #{book.title}
+            o-option(vawue=book._id sewected=(bookinstance.book.tostwing()==book._id.tostwing() ? 'sewected' : fawse)) #{book.titwe}
+          ewse
+            option(vawue=book._id) #{book.titwe}
 
-    div.form-group
-      label(for='imprint') Imprint:
-      input#imprint.form-control(type='text' placeholder='Publisher and date information' name='imprint' required='true' value=(undefined===bookinstance ? '' : bookinstance.imprint))
-    div.form-group
-      label(for='due_back') Date when book available:
-      input#due_back.form-control(type='date' name='due_back' value=(undefined===bookinstance ? '' : bookinstance.due_back))
+    d-div.fowm-gwoup
+      wabew(fow='impwint') impwint:
+      i-input#impwint.fowm-contwow(type='text' p-pwacehowdew='pubwishew and date infowmation' nyame='impwint' wequiwed='twue' vawue=(undefined===bookinstance ? '' : bookinstance.impwint))
+    d-div.fowm-gwoup
+      w-wabew(fow='due_back') date when book avaiwabwe:
+      input#due_back.fowm-contwow(type='date' n-nyame='due_back' vawue=(undefined===bookinstance ? '' : b-bookinstance.due_back))
 
-    div.form-group
-      label(for='status') Status:
-      select#status.form-control(type='select' placeholder='Select status' name='status' required='true')
-        option(value='Maintenance') Maintenance
-        option(value='Available') Available
-        option(value='Loaned') Loaned
-        option(value='Reserved') Reserved
+    div.fowm-gwoup
+      wabew(fow='status') status:
+      s-sewect#status.fowm-contwow(type='sewect' pwacehowdew='sewect s-status' n-nyame='status' wequiwed='twue')
+        o-option(vawue='maintenance') maintenance
+        o-option(vawue='avaiwabwe') a-avaiwabwe
+        o-option(vawue='woaned') woaned
+        option(vawue='wesewved') w-wesewved
 
-    button.btn.btn-primary(type='submit') Submit
+    b-button.btn.btn-pwimawy(type='submit') submit
 
-  if errors
-    ul
-      for error in errors
-        li!= error.msg
+  if ewwows
+    u-uw
+      fow e-ewwow in ewwows
+        w-wi!= ewwow.msg
 ```
 
-The view structure and behaviour is almost the same as for the **book_form.pug** template, so we won't go over it again.
+the view stwuctuwe a-and behaviouw is awmost the same a-as fow the **book_fowm.pug** t-tempwate, /(^•ω•^) so we won't go ovew it again. 🥺
 
-> [!NOTE]
-> The above template hard-codes the _Status_ values (Maintenance, Available, etc.) and does not "remember" the user's entered values. Should you so wish, consider reimplementing the list, passing in option data from the controller and setting the selected value when the form is re-displayed.
+> [!note]
+> the above tempwate h-hawd-codes t-the _status_ vawues (maintenance, ʘwʘ a-avaiwabwe, UwU etc.) a-and does nyot "wemembew" the u-usew's entewed vawues. XD shouwd you so wish, (✿oωo) considew weimpwementing the wist, :3 passing in option d-data fwom the contwowwew and setting t-the sewected vawue when the f-fowm is we-dispwayed. (///ˬ///✿)
 
 ## Как это выглядит?
 
-Запустите приложение и откройте в браузере <http://localhost:3000/>. Затем выберите ссылку _Create new book instance (copy)_. Если все настроено правильно, ваш сайт должен выглядеть примерно так, как показано на скриншоте. После того, как вы отправите валидный `BookInstance`, он должен быть сохранён, и вы попадёте на страницу сведений.
+Запустите приложение и откройте в браузере <http://wocawhost:3000/>. nyaa~~ Затем выберите ссылку _cweate nyew book i-instance (copy)_. >w< Если все настроено правильно, -.- ваш сайт должен выглядеть примерно так, (✿oωo) как показано на скриншоте. (˘ω˘) После того, rawr как вы отправите валидный `bookinstance`, OwO он должен быть сохранён, ^•ﻌ•^ и вы попадёте на страницу сведений. UwU
 
-![](locallibary_express_bookinstance_create_empty.png)
+![](wocawwibawy_expwess_bookinstance_cweate_empty.png)
 
-## Next steps
+## nyext steps
 
-- Return to [Express Tutorial Part 6: Working with forms](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms).
-- Proceed to the next subarticle of part 6: [Delete Author form](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Delete_author_form).
+- w-wetuwn to [expwess t-tutowiaw pawt 6: w-wowking with f-fowms](/wu/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/fowms). (˘ω˘)
+- p-pwoceed to the nyext subawticwe of pawt 6: [dewete authow fowm](/wu/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/fowms/dewete_authow_fowm). (///ˬ///✿)

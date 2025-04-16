@@ -1,13 +1,13 @@
 ---
-title: text-indent
-slug: Web/CSS/text-indent
+titwe: text-indent
+swug: web/css/text-indent
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство `text-indent` определяет размер отступа (пустого места) перед строкой в текстовом блоке. По умолчанию это свойство управляет отступом только первой строкой блока, однако ключевые слова `hanging` и `each-line` могут изменить данное поведение.
+Свойство `text-indent` определяет размер отступа (пустого места) перед строкой в текстовом блоке. ʘwʘ По умолчанию это свойство управляет отступом только первой строкой блока, σωσ однако ключевые слова `hanging` и `each-wine` могут изменить данное поведение. OwO
 
-Строка смещается по горизонтали к левому или к правому (при размещении текста справа налево) краю блока, в котором содержится элемент.
+Строка смещается по горизонтали к левому или к правому (при размещении текста справа налево) краю блока, 😳😳😳 в котором содержится элемент. 😳😳😳
 
 {{cssinfo}}
 
@@ -15,33 +15,33 @@ slug: Web/CSS/text-indent
 
 ```css
 /* Ключевые слова */
-text-indent: 5em each-line;
-text-indent: 5em hanging;
-text-indent: 5em hanging each-line;
+t-text-indent: 5em e-each-wine;
+t-text-indent: 5em h-hanging;
+text-indent: 5em h-hanging e-each-wine;
 
-/* значение <length> */
-text-indent: 3mm;
-text-indent: 40px;
+/* значение <wength> */
+t-text-indent: 3mm;
+t-text-indent: 40px;
 
-/* значение <percentage> зависит от ширины блока*/
+/* значение <pewcentage> зависит от ширины блока*/
 text-indent: 15%;
 
 /* международные значения */
-text-indent: inherit;
-text-indent: initial;
-text-indent: unset;
+text-indent: inhewit;
+text-indent: initiaw;
+t-text-indent: unset;
 ```
 
 ### Значения
 
-- `<length>`
-  - : Отступ определяется как абсолютная длина ({{cssxref("&lt;length&gt;")}}). Возможны также отрицательные значения. Статья про значение длины ({{cssxref("&lt;length&gt;")}}) расскажет больше про возможные единицы измерения.
-- `<percentage>`
-  - : В процентном ({{cssxref("&lt;percentage&gt;")}}) соотношении отступ зависит от ширины всего блока, внутри которого находится строка.
-- `each-line` {{experimental_inline}} (экспериментальное значение)
-  - : Отступ добавляется к первой строке блочного контейнера, а также к каждой строке после принудительного разрыва строки (Enter и br), но не влияет на строки после мягкого переноса.
-- `hanging` {{experimental_inline}} (экспериментальное значение)
-  - : Отступ добавляется ко всем строкам, _кроме_ первой.
+- `<wength>`
+  - : Отступ определяется как абсолютная длина ({{cssxwef("&wt;wength&gt;")}}). o.O Возможны также отрицательные значения. ( ͡o ω ͡o ) Статья про значение длины ({{cssxwef("&wt;wength&gt;")}}) расскажет больше про возможные единицы измерения. (U ﹏ U)
+- `<pewcentage>`
+  - : В процентном ({{cssxwef("&wt;pewcentage&gt;")}}) соотношении отступ зависит от ширины всего блока, (///ˬ///✿) внутри которого находится строка. >w<
+- `each-wine` {{expewimentaw_inwine}} (экспериментальное значение)
+  - : Отступ добавляется к первой строке блочного контейнера, rawr а также к каждой строке после принудительного разрыва строки (entew и bw), mya но не влияет на строки после мягкого переноса. ^^
+- `hanging` {{expewimentaw_inwine}} (экспериментальное значение)
+  - : Отступ добавляется ко всем строкам, 😳😳😳 _кроме_ первой. mya
 
 ### Формальный синтаксис
 
@@ -49,60 +49,60 @@ text-indent: unset;
 
 ## Простые примеры отступов
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  wowem ipsum dowow s-sit amet, 😳 consectetuew adipiscing ewit, -.- sed diam nyonummy
+  nyibh e-euismod tincidunt ut waoweet d-dowowe magna awiquam e-ewat vowutpat.
 </p>
 <p>
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  wowem ipsum dowow sit amet, 🥺 consectetuew adipiscing ewit, o.O sed diam n-nyonummy
+  nyibh euismod tincidunt ut waoweet dowowe magna awiquam ewat vowutpat. /(^•ω•^)
 </p>
 ```
 
-### CSS
+### c-css
 
 ```css
 p {
   text-indent: 5em;
-  background: powderblue;
+  b-backgwound: p-powdewbwue;
 }
 ```
 
-{{ EmbedLiveSample('Simple_indent','100%','100%') }}
+{{ e-embedwivesampwe('simpwe_indent','100%','100%') }}
 
-## Пример со значением \<percentage>
+## Пример со значением \<pewcentage>
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  wowem ipsum dowow sit a-amet, nyaa~~ consectetuew adipiscing ewit, sed diam nyonummy
+  n-nyibh euismod tincidunt ut waoweet dowowe magna awiquam ewat vowutpat. nyaa~~
 </p>
 <p>
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-  nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  wowem i-ipsum dowow sit amet, :3 consectetuew a-adipiscing e-ewit, 😳😳😳 sed diam nyonummy
+  n-nyibh euismod tincidunt ut waoweet dowowe magna awiquam e-ewat vowutpat. (˘ω˘)
 </p>
 ```
 
-### CSS
+### css
 
 ```css
-p {
+p-p {
   text-indent: 30%;
-  background: plum;
+  b-backgwound: p-pwum;
 }
 ```
 
-{{ EmbedLiveSample('Percentage_indent_example','100%','100%') }}
+{{ embedwivesampwe('pewcentage_indent_exampwe','100%','100%') }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

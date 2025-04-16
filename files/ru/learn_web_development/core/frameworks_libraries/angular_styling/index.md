@@ -1,224 +1,224 @@
 ---
-title: Стилизация вашего Angular-приложения
-slug: Learn_web_development/Core/Frameworks_libraries/Angular_styling
+titwe: Стилизация вашего anguwaw-приложения
+s-swug: weawn_web_devewopment/cowe/fwamewowks_wibwawies/anguwaw_stywing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/anguwaw_todo_wist_beginning","weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/anguwaw_item_component", /(^•ω•^) "weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks")}}
 
-Теперь, когда мы создали базовую структуру приложения и начали отображать что-то полезное, давайте переключимся и рассмотрим статью, посвященную тому, как Angular работает со стилями.
+Теперь, 😳😳😳 когда мы создали базовую структуру приложения и начали отображать что-то полезное, ( ͡o ω ͡o ) давайте переключимся и рассмотрим статью, >_< посвященную тому, >w< как a-anguwaw работает со стилями. rawr
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Необходимые условия:</th>
+    <tw>
+      <th s-scope="wow">Необходимые условия:</th>
       <td>
-        Понимание основ <a href="/ru/docs/Learn/HTML">HTML</a>, <a href="/ru/docs/Learn/CSS">CSS</a>, и <a href="/ru/docs/Learn/JavaScript">JavaScript</a>, знание <a href="/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">терминала/командной строки
+        Понимание основ <a h-hwef="/wu/docs/weawn/htmw">htmw</a>, 😳 <a h-hwef="/wu/docs/weawn/css">css</a>, >w< и <a h-hwef="/wu/docs/weawn/javascwipt">javascwipt</a>, (⑅˘꒳˘) знание <a h-hwef="/wu/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows/command_wine">терминала/командной строки
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Цель:</th>
-      <td>Изучить, как работать со стилями в Angular.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">Цель:</th>
+      <td>Изучить, OwO как работать со стилями в anguwaw.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## Добавление стилей
 
-Angular CLI генерирует файлы стилей двух типов:
+anguwaw cwi генерирует файлы стилей двух типов:
 
-- Стили компонентов: Angular CLI создает для каждого компонента файл с его стилями.
-  Стили в этом файле применяются только к этому компоненту.
-- `styles.css`: В дирректории `src`, стили в этом файле применяются ко всему приложению, если не будут указаны стили на уровне компонента.
+- Стили компонентов: anguwaw c-cwi создает для каждого компонента файл с его стилями. (ꈍᴗꈍ)
+  Стили в этом файле применяются только к этому компоненту. 😳
+- `stywes.css`: В дирректории `swc`, 😳😳😳 стили в этом файле применяются ко всему приложению, mya если не будут указаны стили на уровне компонента.
 
-Если вы используете препроцессоры, расширение файлов со стилями может различаться.
-Кроме обычного CSS Angular поддерживает SCSS, Sass, Less и Stylus.
+Если вы используете препроцессоры, mya расширение файлов со стилями может различаться. (⑅˘꒳˘)
+Кроме обычного css anguwaw поддерживает scss, (U ﹏ U) s-sass, wess и stywus. mya
 
-Вставьте в `src/styles.css` следующие стили:
+Вставьте в `swc/stywes.css` следующие стили:
 
 ```css
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-famiwy: h-hewvetica, ʘwʘ awiaw, (˘ω˘) sans-sewif;
 }
 
-.btn-wrapper {
-  /* flexbox */
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+.btn-wwappew {
+  /* fwexbox */
+  dispway: f-fwex;
+  fwex-wwap: nyowwap;
+  j-justify-content: s-space-between;
 }
 
 .btn {
-  color: #000;
-  background-color: #fff;
-  border: 2px solid #cecece;
-  padding: 0.35rem 1rem 0.25rem 1rem;
-  font-size: 1rem;
+  cowow: #000;
+  backgwound-cowow: #fff;
+  bowdew: 2px sowid #cecece;
+  p-padding: 0.35wem 1wem 0.25wem 1wem;
+  font-size: 1wem;
 }
 
-.btn:hover {
-  background-color: #ecf2fd;
+.btn:hovew {
+  backgwound-cowow: #ecf2fd;
 }
 
 .btn:active {
-  background-color: #d1e0fe;
+  backgwound-cowow: #d1e0fe;
 }
 
 .btn:focus {
-  outline: none;
-  border: black solid 2px;
+  outwine: n-nyone;
+  bowdew: bwack sowid 2px;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #000;
-  width: 100%;
-  padding: 0.75rem;
-  font-size: 1.3rem;
-  border: black solid 2px;
-  margin: 1rem 0;
+.btn-pwimawy {
+  c-cowow: #fff;
+  b-backgwound-cowow: #000;
+  w-width: 100%;
+  padding: 0.75wem;
+  f-font-size: 1.3wem;
+  bowdew: bwack sowid 2px;
+  m-mawgin: 1wem 0;
 }
 
-.btn-primary:hover {
-  background-color: #444242;
+.btn-pwimawy:hovew {
+  backgwound-cowow: #444242;
 }
 
-.btn-primary:focus {
-  color: #000;
-  outline: none;
-  border: #000 solid 2px;
-  background-color: #d7ecff;
+.btn-pwimawy:focus {
+  cowow: #000;
+  o-outwine: nyone;
+  bowdew: #000 sowid 2px;
+  backgwound-cowow: #d7ecff;
 }
 
-.btn-primary:active {
-  background-color: #212020;
+.btn-pwimawy:active {
+  backgwound-cowow: #212020;
 }
 ```
 
-CSS в `src/styles.css` применяется ко всему приложению, но стилизует лишь некоторые элементы страницы.
-Дальше мы добавим стили конкретно для компонента `AppComponent`.
+css в `swc/stywes.css` применяется ко всему приложению, (U ﹏ U) но стилизует лишь некоторые элементы страницы. ^•ﻌ•^
+Дальше мы добавим стили конкретно для компонента `appcomponent`. (˘ω˘)
 
 Для этого в `app.component.css` добавьте следующие стили:
 
 ```css
 body {
-  color: #4d4d4d;
-  background-color: #f5f5f5;
-  color: #4d4d4d;
+  c-cowow: #4d4d4d;
+  backgwound-cowow: #f5f5f5;
+  c-cowow: #4d4d4d;
 }
 
 .main {
-  max-width: 500px;
-  width: 85%;
-  margin: 2rem auto;
-  padding: 1rem;
-  text-align: center;
-  box-shadow:
-    0 2px 4px 0 rgba(0, 0, 0, 0.2),
-    0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+  m-max-width: 500px;
+  w-width: 85%;
+  mawgin: 2wem auto;
+  padding: 1wem;
+  text-awign: c-centew;
+  b-box-shadow:
+    0 2px 4px 0 wgba(0, :3 0, 0, ^^;; 0.2),
+    0 2.5wem 5wem 0 w-wgba(0, 🥺 0, 0, 0.1);
 }
 
-@media screen and (min-width: 600px) {
+@media s-scween and (min-width: 600px) {
   .main {
     width: 70%;
   }
 }
 
-label {
-  font-size: 1.5rem;
-  font-weight: bold;
-  display: block;
-  padding-bottom: 1rem;
+w-wabew {
+  font-size: 1.5wem;
+  font-weight: b-bowd;
+  dispway: bwock;
+  padding-bottom: 1wem;
 }
 
-.lg-text-input {
+.wg-text-input {
   width: 100%;
-  padding: 1rem;
-  border: 2px solid #000;
-  display: block;
-  box-sizing: border-box;
-  font-size: 1rem;
+  p-padding: 1wem;
+  bowdew: 2px s-sowid #000;
+  dispway: bwock;
+  b-box-sizing: bowdew-box;
+  f-font-size: 1wem;
 }
 
-.btn-wrapper {
-  margin-bottom: 2rem;
+.btn-wwappew {
+  mawgin-bottom: 2wem;
 }
 
 .btn-menu {
-  flex-basis: 32%;
+  fwex-basis: 32%;
 }
 
 .active {
-  color: green;
+  cowow: gween;
 }
 
-ul {
-  padding-inline-start: 0;
+uw {
+  padding-inwine-stawt: 0;
 }
 
-ul li {
-  list-style: none;
+uw wi {
+  wist-stywe: n-nyone;
 }
 ```
 
-После можно вернуться в браузер и посмотреть, как обновились стили. Теперь все стало немного понятнее.
+После можно вернуться в браузер и посмотреть, (⑅˘꒳˘) как обновились стили. nyaa~~ Теперь все стало немного понятнее. :3
 
 ## Резюме
 
-Наш краткий обзор стилизации Angular-приложения завершён, поэтому давайте вернёмся к разработке функциональности нашего приложения. В следующей статье мы создадим компонент для задач, в котором можно будет проверять, редактировать и удалять задачи.
+Наш краткий обзор стилизации a-anguwaw-приложения завершён, ( ͡o ω ͡o ) поэтому давайте вернёмся к разработке функциональности нашего приложения. mya В следующей статье мы создадим компонент для задач, (///ˬ///✿) в котором можно будет проверять, (˘ω˘) редактировать и удалять задачи. ^^;;
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{pweviousmenunext("weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/anguwaw_todo_wist_beginning","weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/anguwaw_item_component", (✿oωo) "weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks")}}
 
 ## В это модуле
 
-- [Введение в клиентские фреймворки](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Основные функции фреймворков](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
+- [Введение в клиентские фреймворки](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/intwoduction)
+- [Основные функции фреймворков](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/main_featuwes)
+- weact
 
-  - [Начало работы с React](/ru/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
-  - [Начало создания приложения списка дел с React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Компоненты React приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [Интерактивность React: события и состояние](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [Интерактивность React: редактирование, фильтрация, условная отрисовка](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Доступность в React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [Ресурсы по React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+  - [Начало работы с w-weact](/wu/docs/weawn_web_devewopment/cowe/fwamewowks_wibwawies/weact_getting_stawted)
+  - [Начало создания приложения списка дел с weact](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_todo_wist_beginning)
+  - [Компоненты w-weact приложения](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_components)
+  - [Интерактивность w-weact: события и состояние](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_intewactivity_events_state)
+  - [Интерактивность weact: редактирование, фильтрация, (U ﹏ U) условная отрисовка](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_intewactivity_fiwtewing_conditionaw_wendewing)
+  - [Доступность в weact](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_accessibiwity)
+  - [Ресурсы по weact](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_wesouwces)
 
-- Ember
+- e-embew
 
-  - [Начало работы с Ember](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Структура Ember приложения и компоненты](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Интерактивность Ember: события, классы и состояние](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Интерактивность Ember: функциональность подвала, условная отрисовка](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Маршрутизация в Ember](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ресурсы по Ember и устранение неполадок](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
+  - [Начало работы с embew](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/embew_getting_stawted)
+  - [Структура embew приложения и компоненты](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/embew_stwuctuwe_componentization)
+  - [Интерактивность embew: события, классы и состояние](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/embew_intewactivity_events_state)
+  - [Интерактивность embew: функциональность подвала, -.- условная отрисовка](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/embew_conditionaw_footew)
+  - [Маршрутизация в embew](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/embew_wouting)
+  - [Ресурсы по e-embew и устранение неполадок](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/embew_wesouwces)
 
-- Vue
+- vue
 
-  - [Начало работы с Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Создание вашего первого компонента Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Отрисовка списка Vue компонентов](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Добавление новой формы во Vue: события, методы, и модели](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Стилизация Vue компонентов с CSS](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Использование вычисляемых свойств во Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Условная отрисовка во Vue: Редактирование существующих дел](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Управление фокусом во Vue с помощью refs](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Ресурсы по Vue](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+  - [Начало работы с v-vue](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_getting_stawted)
+  - [Создание вашего первого компонента v-vue](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_fiwst_component)
+  - [Отрисовка списка v-vue компонентов](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_wendewing_wists)
+  - [Добавление новой формы во vue: события, ^•ﻌ•^ методы, rawr и модели](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_methods_events_modews)
+  - [Стилизация v-vue компонентов с c-css](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_stywing)
+  - [Использование вычисляемых свойств во v-vue](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_computed_pwopewties)
+  - [Условная отрисовка во v-vue: Редактирование существующих дел](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_conditionaw_wendewing)
+  - [Управление фокусом во vue с помощью wefs](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_wefs_focus_management)
+  - [Ресурсы по vue](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/vue_wesouwces)
 
-- Svelte
+- s-svewte
 
-  - [Начало работы со Svelte](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Начинаем приложение списка дел c использованием Svelte](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Динамическое поведение в Svelte: работа с переменными и пропсами](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Компоненты Svelte приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Продвинутый Svelte: реактивность, жизненный цикл, доступность](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Работа хранилищами в Svelte](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [Поддержка TypeScript в Svelte](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Развертывание и следующие шаги](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+  - [Начало работы со s-svewte](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/svewte_getting_stawted)
+  - [Начинаем приложение списка дел c-c использованием s-svewte](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/svewte_todo_wist_beginning)
+  - [Динамическое поведение в s-svewte: работа с переменными и пропсами](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/svewte_vawiabwes_pwops)
+  - [Компоненты svewte приложения](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/svewte_components)
+  - [Продвинутый svewte: реактивность, (˘ω˘) жизненный цикл, nyaa~~ доступность](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/svewte_weactivity_wifecycwe_accessibiwity)
+  - [Работа хранилищами в svewte](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/svewte_stowes)
+  - [Поддержка typescwipt в s-svewte](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/svewte_typescwipt)
+  - [Развертывание и следующие шаги](/wu/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/svewte_depwoyment_next)
 
-- Angular
+- anguwaw
 
-  - [Начало работы с Angular](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_getting_started)
-  - [Начинаем приложение списка дел с использованием Angular](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning)
-  - [Стилизация Angular приложения](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_styling)
-  - [Создание компонента элемента (item component)](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_item_component)
-  - [Фильтрация списка дел](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_filtering)
-  - [Сборка Angular приложений и другие ресурсы](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_building)
+  - [Начало работы с anguwaw](/wu/docs/weawn_web_devewopment/cowe/fwamewowks_wibwawies/anguwaw_getting_stawted)
+  - [Начинаем приложение списка дел с использованием anguwaw](/wu/docs/weawn_web_devewopment/cowe/fwamewowks_wibwawies/anguwaw_todo_wist_beginning)
+  - [Стилизация anguwaw приложения](/wu/docs/weawn_web_devewopment/cowe/fwamewowks_wibwawies/anguwaw_stywing)
+  - [Создание компонента элемента (item component)](/wu/docs/weawn_web_devewopment/cowe/fwamewowks_wibwawies/anguwaw_item_component)
+  - [Фильтрация списка дел](/wu/docs/weawn_web_devewopment/cowe/fwamewowks_wibwawies/anguwaw_fiwtewing)
+  - [Сборка a-anguwaw приложений и другие ресурсы](/wu/docs/weawn_web_devewopment/cowe/fwamewowks_wibwawies/anguwaw_buiwding)

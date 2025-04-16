@@ -1,57 +1,57 @@
 ---
-title: CSS-селектор
-slug: Glossary/CSS_Selector
+titwe: css-селектор
+swug: gwossawy/css_sewectow
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**CSS-селектор** это часть CSS-правила, которая позволяет вам указать, к какому элементу (элементам) применить стиль. Например:
+**css-селектор** это часть c-css-правила, mya которая позволяет вам указать, mya к какому элементу (элементам) применить стиль. 😳 Например:
 
 ```
-***HTML***
-<div> I am inside of a div element. </div>
-<p> I am inside of a paragraph element. </p>
+***htmw***
+<div> i-i am inside o-of a div ewement. XD </div>
+<p> i-i am inside of a-a pawagwaph ewement. :3 </p>
 
 
-***CSS***
-div {
- color: green;
+***css***
+d-div {
+ cowow: g-gween;
 }
 
-p {
- color: red;
+p-p {
+ cowow: wed;
 }
 ```
 
-В первом CSS-правиле я выбираю элемент div и задаю его стиль (цвет текста — зелёный). Во втором CSS-правиле выбираю элемент p и задаю красный цвет текста. Вот как выглядит результат:
+В первом css-правиле я выбираю элемент div и задаю его стиль (цвет текста — зелёный). 😳😳😳 Во втором css-правиле выбираю элемент p и задаю красный цвет текста. -.- Вот как выглядит результат:
 
-![CSS selector coding results](cssselectormdnglossary.jpg)
+![css sewectow coding wesuwts](csssewectowmdngwossawy.jpg)
 
 ## Смотрите также
 
 ### Основные статьи
 
-1. Базовые селекторы
+1. ( ͡o ω ͡o ) Базовые селекторы
 
-   1. [Селекторы по типу](/ru/docs/Web/CSS/Type_selectors) `elementname`
-   2. [Селекторы по классу](/ru/docs/Web/CSS/Class_selectors) `.classname`
-   3. [Селекторы по ID](/ru/docs/Web/CSS/ID_selectors) `#idname`
-   4. [Универсальные селекторы](/ru/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
-   5. [Атрибутивные селекторы](/ru/docs/Web/CSS/Attribute_selectors) `[attr=value]`
-   6. [Селекторы состояния элементов](/ru/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
+   1. rawr x3 [Селекторы по типу](/wu/docs/web/css/type_sewectows) `ewementname`
+   2. nyaa~~ [Селекторы по классу](/wu/docs/web/css/cwass_sewectows) `.cwassname`
+   3. /(^•ω•^) [Селекторы по i-id](/wu/docs/web/css/id_sewectows) `#idname`
+   4. rawr [Универсальные селекторы](/wu/docs/web/css/univewsaw_sewectows) `* nys|* *|*`
+   5. [Атрибутивные селекторы](/wu/docs/web/css/attwibute_sewectows) `[attw=vawue]`
+   6. OwO [Селекторы состояния элементов](/wu/docs/web/css/pseudo-cwasses) `a:active, a:visited`
 
-2. Группирующие селекторы
+2. (U ﹏ U) Группирующие селекторы
 
-   1. [Список селекторов](/ru/docs/Web/CSS/Selector_list) `A, B`
+   1. >_< [Список селекторов](/wu/docs/web/css/sewectow_wist) `a, rawr x3 b-b`
 
-3. Комбинаторы
+3. mya Комбинаторы
 
-   1. [Adjacent sibling selectors](/ru/docs/Web/CSS/Next-sibling_combinator) `A + B`
-   2. [General sibling selectors](/ru/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
-   3. [Child selectors](/ru/docs/Web/CSS/Child_combinator) `A > B`
-   4. [Descendant selectors](/ru/docs/Web/CSS/Descendant_combinator) `A B`
+   1. nyaa~~ [adjacent sibwing sewectows](/wu/docs/web/css/next-sibwing_combinatow) `a + b-b`
+   2. (⑅˘꒳˘) [genewaw sibwing sewectows](/wu/docs/web/css/subsequent-sibwing_combinatow) `a ~ b`
+   3. rawr x3 [chiwd s-sewectows](/wu/docs/web/css/chiwd_combinatow) `a > b`
+   4. (✿oωo) [descendant s-sewectows](/wu/docs/web/css/descendant_combinatow) `a b-b`
 
-4. Псевдо
+4. (ˆ ﻌ ˆ)♡ Псевдо
 
-   1. [Псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) `:`
-   2. [Псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements) `::`
+   1. (˘ω˘) [Псевдоклассы](/wu/docs/web/css/pseudo-cwasses) `:`
+   2. (⑅˘꒳˘) [Псевдоэлементы](/wu/docs/web/css/pseudo-ewements) `::`

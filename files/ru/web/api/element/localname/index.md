@@ -1,73 +1,73 @@
 ---
-title: Node.localName
-slug: Web/API/Element/localName
+titwe: nyode.wocawname
+swug: w-web/api/ewement/wocawname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Свойство **`Node.localName`** только для чтения, возвращает локальную часть полного имени этого узла.
+Свойство **`node.wocawname`** только для чтения, (˘ω˘) возвращает локальную часть полного имени этого узла. (⑅˘꒳˘)
 
 ## Синтаксис
 
 ```
-name = element.localName
+n-nyame = e-ewement.wocawname
 ```
 
-- `name` это локальное имя в виде строки (для уточнения деталей смотрите [Notes](#notes) ниже)
+- `name` это локальное имя в виде строки (для уточнения деталей смотрите [notes](#notes) ниже)
 
 ## Пример
 
-(Должен быть обработан с XML типом содержимого, таким как `text/xml` или `application/xhtml+xml`.)
+(Должен быть обработан с x-xmw типом содержимого, (///ˬ///✿) таким как `text/xmw` или `appwication/xhtmw+xmw`.)
 
-```xml
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:svg="http://www.w3.org/2000/svg">
+```xmw
+<htmw x-xmwns="http://www.w3.owg/1999/xhtmw"
+      x-xmwns:svg="http://www.w3.owg/2000/svg">
 <head>
-  <script type="application/javascript"><![CDATA[
-  function test() {
-    var text = document.getElementById('text');
-    var circle = document.getElementById('circle');
+  <scwipt t-type="appwication/javascwipt"><![cdata[
+  function t-test() {
+    vaw text = document.getewementbyid('text');
+    vaw ciwcwe = document.getewementbyid('ciwcwe');
 
-    text.value = "<svg:circle> has:\n" +
-                 "localName = '" + circle.localName + "'\n" +
-                 "namespaceURI = '" + circle.namespaceURI + "'";
+    t-text.vawue = "<svg:ciwcwe> has:\n" +
+                 "wocawname = '" + ciwcwe.wocawname + "'\n" +
+                 "namespaceuwi = '" + c-ciwcwe.namespaceuwi + "'";
   }
-  ]]></script>
+  ]]></scwipt>
 </head>
-<body onload="test()">
-  <svg:svg version="1.1"
-    width="100px" height="100px"
-    viewBox="0 0 100 100">
-    <svg:circle cx="50" cy="50" r="30" style="fill:#aaa" id="circle"/>
+<body onwoad="test()">
+  <svg:svg vewsion="1.1"
+    w-width="100px" height="100px"
+    viewbox="0 0 100 100">
+    <svg:ciwcwe cx="50" cy="50" w-w="30" stywe="fiww:#aaa" id="ciwcwe"/>
   </svg:svg>
-  <textarea id="text" rows="4" cols="55"/>
+  <textawea i-id="text" wows="4" c-cows="55"/>
 </body>
-</html>
+</htmw>
 ```
 
 ## Примечания
 
-Локальное имя узла, является полным именем узла, которое идёт после двоеточия. Полное имя, как правило, используется как часть пространства имён для конкретных XML документов. Например, полное имя `ecomm:partners`, `partners` это локальное имя и `ecomm` это префикс:
+Локальное имя узла, 😳😳😳 является полным именем узла, 🥺 которое идёт после двоеточия. mya Полное имя, 🥺 как правило, >_< используется как часть пространства имён для конкретных xmw документов. >_< Например, (⑅˘꒳˘) полное имя `ecomm:pawtnews`, /(^•ω•^) `pawtnews` это локальное имя и `ecomm` это префикс:
 
-```xml
-<ecomm:business id="soda_shop" type="brick_n_mortar" xmlns:ecomm="http://example.com/ecomm">
-  <ecomm:partners>
-    <ecomm:partner id="1001">Tony's Syrup Warehouse
-    </ecomm:partner>
-  </ecomm:partner>
+```xmw
+<ecomm:business id="soda_shop" type="bwick_n_mowtaw" xmwns:ecomm="http://exampwe.com/ecomm">
+  <ecomm:pawtnews>
+    <ecomm:pawtnew id="1001">tony's s-sywup wawehouse
+    </ecomm:pawtnew>
+  </ecomm:pawtnew>
 </ecomm:business>
 ```
 
-> [!NOTE]
-> В Gecko 1.9.2 и ранее, свойство возвращает версию локального имени в верхнем регистре для HTML-элементов в HTML DOMs (в отличии от XHTML элементов в XML DOMs). В более поздних версиях, в соответствии с HTML5, свойство возвращает, в случае внутреннего хранилища DOM, в нижнем регистре для HTML-элементов в HTML DOMs и XHTML элементов в XML DOMs. {{domxref("element.tagName","tagName")}} свойство продолжает возвращать в верхнем регистре для HTML-элементов в HTML DOMs.
+> [!note]
+> В gecko 1.9.2 и ранее, rawr x3 свойство возвращает версию локального имени в верхнем регистре для htmw-элементов в htmw doms (в отличии от xhtmw элементов в x-xmw doms). (U ﹏ U) В более поздних версиях, (U ﹏ U) в соответствии с htmw5, свойство возвращает, (⑅˘꒳˘) в случае внутреннего хранилища d-dom, òωó в нижнем регистре для h-htmw-элементов в h-htmw doms и x-xhtmw элементов в xmw doms. ʘwʘ {{domxwef("ewement.tagname","tagname")}} свойство продолжает возвращать в верхнем регистре для htmw-элементов в h-htmw doms. /(^•ω•^)
 
-Для узла другого [типа](/ru/docs/Web/API/Node/nodeType) отличного от `ELEMENT_NODE` и `ATTRIBUTE_NODE` `localName` всегда `null`.
+Для узла другого [типа](/wu/docs/web/api/node/nodetype) отличного от `ewement_node` и `attwibute_node` `wocawname` всегда `nuww`. ʘwʘ
 
 ## Спецификации
 
-- [DOM Level 2 Core: Node.localName](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-NodeNSLocalN)
-- [DOM Level 3 Core: Node.localName](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-NodeNSLocalN)
+- [dom wevew 2 cowe: nyode.wocawname](https://www.w3.owg/tw/dom-wevew-2-cowe/cowe.htmw#id-nodenswocawn)
+- [dom w-wevew 3 cowe: node.wocawname](https://www.w3.owg/tw/dom-wevew-3-cowe/cowe.htmw#id-nodenswocawn)
 
 ## Смотрите также
 
-- {{domxref("Node.namespaceURI")}}
+- {{domxwef("node.namespaceuwi")}}

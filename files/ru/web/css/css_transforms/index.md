@@ -1,36 +1,36 @@
 ---
-title: CSS Transforms
-slug: Web/CSS/CSS_transforms
+titwe: css twansfowms
+swug: web/css/css_twansfowms
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Transforms** – модуль CSS, который определяет, как стилизованные с помощью CSS элементы, могут быть преобразованы в двухмерном или трёхмерном пространстве.
+**css t-twansfowms** – модуль c-css, 🥺 который определяет, òωó как стилизованные с помощью c-css элементы, o.O могут быть преобразованы в двухмерном или трёхмерном пространстве. (U ᵕ U❁)
 
 ## Справка
 
 ### Свойства
 
-- {{cssxref("backface-visibility")}}
-- {{cssxref("perspective")}}
-- {{cssxref("perspective-origin")}}
-- {{cssxref("rotate")}}
-- {{cssxref("scale")}}
-- {{cssxref("transform")}}
-- {{cssxref("transform-box")}}
-- {{cssxref("transform-origin")}}
-- {{cssxref("transform-style")}}
-- {{cssxref("translate")}}
+- {{cssxwef("backface-visibiwity")}}
+- {{cssxwef("pewspective")}}
+- {{cssxwef("pewspective-owigin")}}
+- {{cssxwef("wotate")}}
+- {{cssxwef("scawe")}}
+- {{cssxwef("twansfowm")}}
+- {{cssxwef("twansfowm-box")}}
+- {{cssxwef("twansfowm-owigin")}}
+- {{cssxwef("twansfowm-stywe")}}
+- {{cssxwef("twanswate")}}
 
 ### Типы данных
 
-- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxwef("&wt;twansfowm-function&gt;")}}
 
 ## Руководства
 
-- [Использование CSS-трансформаций](/ru/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
-  - : Пошаговое руководство о том, как преобразовывать элементы с помощью CSS.
+- [Использование c-css-трансформаций](/wu/docs/web/css/css_twansfowms/using_css_twansfowms)
+  - : Пошаговое руководство о том, (⑅˘꒳˘) как преобразовывать элементы с помощью css. ( ͡o ω ͡o )
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}

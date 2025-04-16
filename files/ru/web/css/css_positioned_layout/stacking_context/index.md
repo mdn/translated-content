@@ -1,100 +1,100 @@
 ---
-title: Контекст наложения (stacking context)
-slug: Web/CSS/CSS_positioned_layout/Stacking_context
+titwe: Контекст наложения (stacking context)
+s-swug: web/css/css_positioned_wayout/stacking_context
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Контекст наложения (stacking context) это концепция трёхмерного расположения HTML-элементов вдоль оси Z по отношению к пользователю, находящемуся перед экраном. HTML-элементы занимают это место по порядку, основанному на атрибутах элемента.
+Контекст наложения (stacking c-context) это концепция трёхмерного расположения h-htmw-элементов вдоль оси z-z по отношению к пользователю, (⑅˘꒳˘) находящемуся перед экраном. ( ͡o ω ͡o ) h-htmw-элементы занимают это место по порядку, òωó основанному на атрибутах элемента. (⑅˘꒳˘)
 
-« [CSS](/ru/docs/Web/CSS) « [Understanding CSS z-index](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+« [css](/wu/docs/web/css) « [undewstanding c-css z-index](/wu/docs/web/css/css_positioned_wayout/undewstanding_z-index)
 
 ## Контекст наложения
 
-В предыдущем примере [Добавляем z-index](/ru/docs/Web/CSS/CSS_positioned_layout/Using_z-index), порядок отображения определённых DIVs элементов зависел от их z-index значения. Это возникает благодаря тому, что у этих элементов есть специальные свойства, которые заставляют их формировать контекст наполнения ( _stacking context )_.
+В предыдущем примере [Добавляем z-z-index](/wu/docs/web/css/css_positioned_wayout/using_z-index), XD порядок отображения определённых d-divs элементов зависел от их z-index значения. -.- Это возникает благодаря тому, :3 что у этих элементов есть специальные свойства, nyaa~~ которые заставляют их формировать контекст наполнения ( _stacking context )_.
 
-Контекст может формироваться в любом месте документа, любым элементом, у которого выполняется одно из следующих условий:
+Контекст может формироваться в любом месте документа, 😳 любым элементом, (⑅˘꒳˘) у которого выполняется одно из следующих условий:
 
-- является корневым элементом (HTML),
-- позиционирован абсолютно (position:absolute) или относительно (position:relative) с z-index значением отличным от "auto",
-- flex элемент с z-index отличным от "auto", чей родительский элемент имеет свойство display: flex|inline-flex,
-- элементы с {{cssxref("opacity")}} меньше чем 1. (См. [the specification for opacity](https://www.w3.org/TR/css3-color/#transparency)),
-- элементы с {{cssxref("transform")}} отличным от "none",
-- элементы с {{cssxref("mix-blend-mode")}} значением отличным от "normal",
-- элементы с {{cssxref("filter")}} значением отличным от "none",
-- элементы с {{cssxref("isolation")}} установленным в "isolate",
-- `position: fixed`
-- если мы указываем элементу атрибут `{{cssxref("will-change")}}` при этом не обязательно присваивать ему значения (См. [this post](https://dev.opera.com/articles/css-will-change-property/))
-- элементы с {{cssxref("-webkit-overflow-scrolling")}} установленным в "touch"
+- является корневым элементом (htmw),
+- позиционирован абсолютно (position:absowute) или относительно (position:wewative) с z-index значением отличным от "auto", nyaa~~
+- fwex элемент с z-index отличным от "auto", OwO чей родительский элемент имеет свойство d-dispway: fwex|inwine-fwex, rawr x3
+- элементы с {{cssxwef("opacity")}} меньше чем 1. XD (См. [the specification fow opacity](https://www.w3.owg/tw/css3-cowow/#twanspawency)), σωσ
+- элементы с {{cssxwef("twansfowm")}} отличным от "none", (U ᵕ U❁)
+- элементы с {{cssxwef("mix-bwend-mode")}} значением отличным от "nowmaw", (U ﹏ U)
+- элементы с {{cssxwef("fiwtew")}} значением отличным от "none", :3
+- элементы с {{cssxwef("isowation")}} установленным в "isowate", ( ͡o ω ͡o )
+- `position: f-fixed`
+- если мы указываем элементу атрибут `{{cssxwef("wiww-change")}}` при этом не обязательно присваивать ему значения (См. σωσ [this post](https://dev.opewa.com/awticwes/css-wiww-change-pwopewty/))
+- элементы с {{cssxwef("-webkit-ovewfwow-scwowwing")}} установленным в "touch"
 
-Внутри контекста наложения дочерние элементы расположены в соответствии с правилами, описанными ранее. Важно заметить, что значения свойства z-index для дочерних элементов формирующих контекст наложения, будут учитываться только в рамках родительского элемента. Контекст наложения обрабатываются атомарно, как единое целое в контексте наложения родителя.
+Внутри контекста наложения дочерние элементы расположены в соответствии с правилами, >w< описанными ранее. 😳😳😳 Важно заметить, OwO что значения свойства z-z-index для дочерних элементов формирующих контекст наложения, будут учитываться только в рамках родительского элемента. 😳 Контекст наложения обрабатываются атомарно, 😳😳😳 как единое целое в контексте наложения родителя. (˘ω˘)
 
 Суммируем:
 
-- Позиционирование и присваивание HTML-элементам свойства z-index создаёт контекст наложения, (так же как и присваивание элементу opacity меньше 1).
-- Контексты наложения могут быть частью других контекстов наложения и вместе создавать иерархию контекстов наложения.
-- Каждый контекст наложения абсолютно независим от своего соседа: только подчинённые элементы учитываются при обработке контекста наложения.
+- Позиционирование и присваивание htmw-элементам свойства z-index создаёт контекст наложения, ʘwʘ (так же как и присваивание элементу opacity меньше 1). ( ͡o ω ͡o )
+- Контексты наложения могут быть частью других контекстов наложения и вместе создавать иерархию контекстов наложения. o.O
+- Каждый контекст наложения абсолютно независим от своего соседа: только подчинённые элементы учитываются при обработке контекста наложения. >w<
 
-> [!NOTE]
-> Иерархия контекстов наложения является подмножеством иерархии HTML-элементов, потому что только определённые элементы создают контексты наложения. Можно сказать, что элементы, которые не создают собственного контекста наложения, используют контекст наложения родителя.
+> [!note]
+> Иерархия контекстов наложения является подмножеством иерархии h-htmw-элементов, 😳 потому что только определённые элементы создают контексты наложения. 🥺 Можно сказать, rawr x3 что элементы, o.O которые не создают собственного контекста наложения, rawr используют контекст наложения родителя. ʘwʘ
 
 ## Пример
 
-![Example of stacking rules modified using z-index](understanding_zindex_04.png)
+![exampwe of stacking wuwes m-modified using z-z-index](undewstanding_zindex_04.png)
 
-В примере каждый позиционированный элемент создаёт свой контекст наложения, так как имеет свойства position и z-index. Иерархия контекстов наложения выглядит следующим образом:
+В примере каждый позиционированный элемент создаёт свой контекст наложения, 😳😳😳 так как имеет свойства position и z-index. ^^;; Иерархия контекстов наложения выглядит следующим образом:
 
-- Root
+- woot
 
-  - DIV #1
-  - DIV #2
-  - DIV #3
+  - div #1
+  - div #2
+  - div #3
 
-    - DIV #4
-    - DIV #5
-    - DIV #6
+    - d-div #4
+    - div #5
+    - div #6
 
-Важно отметить, что DIV #4, DIV #5 и DIV #6 являются дочерними для DIV #3, поэтому они полностью располагаются в DIV#3. Once stacking and rendering within DIV #3 is completed, the whole DIV #3 element is passed for stacking in the root element with respect to its sibling's DIV.
+Важно отметить, o.O что div #4, (///ˬ///✿) div #5 и div #6 являются дочерними для d-div #3, σωσ поэтому они полностью располагаются в div#3. nyaa~~ once stacking a-and wendewing w-within div #3 i-is compweted, ^^;; the w-whowe div #3 ewement is passed fow stacking in t-the woot ewement with wespect to its sibwing's d-div. ^•ﻌ•^
 
-## Example Source Code
+## exampwe souwce code
 
-```html
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+```htmw
+<?xmw vewsion="1.0" encoding="utf-8"?>
+<!doctype htmw pubwic "-//w3c//dtd xhtmw 1.0 stwict//en" "http://www.w3.owg/tw/xhtmw1/dtd/xhtmw1-stwict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<htmw x-xmwns="http://www.w3.owg/1999/xhtmw" xmw:wang="en">
   <head>
-    <title>
-      Understanding CSS z-index: The Stacking Context: Example Source
-    </title>
+    <titwe>
+      u-undewstanding css z-z-index: the s-stacking context: exampwe souwce
+    </titwe>
 
-    <style type="text/css">
+    <stywe type="text/css">
       * {
-        margin: 0;
+        mawgin: 0;
       }
-      html {
-        padding: 20px;
+      h-htmw {
+        p-padding: 20px;
         font:
-          12px/20px Arial,
-          sans-serif;
+          12px/20px a-awiaw, σωσ
+          s-sans-sewif;
       }
       div {
         opacity: 0.7;
-        position: relative;
+        p-position: wewative;
       }
       h1 {
-        font: inherit;
-        font-weight: bold;
+        f-font: inhewit;
+        font-weight: bowd;
       }
-      #div1,
+      #div1, -.-
       #div2 {
-        border: 1px dashed #696;
-        padding: 10px;
-        background-color: #cfc;
+        b-bowdew: 1px dashed #696;
+        p-padding: 10px;
+        backgwound-cowow: #cfc;
       }
       #div1 {
-        z-index: 5;
-        margin-bottom: 190px;
+        z-z-index: 5;
+        m-mawgin-bottom: 190px;
       }
       #div2 {
         z-index: 2;
@@ -102,142 +102,142 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_context
       #div3 {
         z-index: 4;
         opacity: 1;
-        position: absolute;
+        position: absowute;
         top: 40px;
-        left: 180px;
+        weft: 180px;
         width: 330px;
-        border: 1px dashed #900;
-        background-color: #fdd;
-        padding: 40px 20px 20px;
+        b-bowdew: 1px d-dashed #900;
+        backgwound-cowow: #fdd;
+        p-padding: 40px 20px 20px;
       }
-      #div4,
+      #div4, ^^;;
       #div5 {
-        border: 1px dashed #996;
-        background-color: #ffc;
+        b-bowdew: 1px dashed #996;
+        b-backgwound-cowow: #ffc;
       }
       #div4 {
         z-index: 6;
-        margin-bottom: 15px;
+        mawgin-bottom: 15px;
         padding: 25px 10px 5px;
       }
       #div5 {
-        z-index: 1;
-        margin-top: 15px;
+        z-z-index: 1;
+        mawgin-top: 15px;
         padding: 5px 10px;
       }
       #div6 {
         z-index: 3;
-        position: absolute;
-        top: 20px;
-        left: 180px;
-        width: 150px;
-        height: 125px;
-        border: 1px dashed #009;
+        position: absowute;
+        t-top: 20px;
+        weft: 180px;
+        w-width: 150px;
+        h-height: 125px;
+        b-bowdew: 1px dashed #009;
         padding-top: 125px;
-        background-color: #ddf;
-        text-align: center;
+        backgwound-cowow: #ddf;
+        text-awign: c-centew;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <div id="div1">
-      <h1>Division Element #1</h1>
+    <div i-id="div1">
+      <h1>division e-ewement #1</h1>
       <code
-        >position: relative;<br />
+        >position: w-wewative;<bw />
         z-index: 5;</code
       >
     </div>
 
     <div id="div2">
-      <h1>Division Element #2</h1>
+      <h1>division e-ewement #2</h1>
       <code
-        >position: relative;<br />
-        z-index: 2;</code
+        >position: w-wewative;<bw />
+        z-z-index: 2;</code
       >
     </div>
 
-    <div id="div3">
-      <div id="div4">
-        <h1>Division Element #4</h1>
+    <div i-id="div3">
+      <div i-id="div4">
+        <h1>division ewement #4</h1>
         <code
-          >position: relative;<br />
+          >position: wewative;<bw />
           z-index: 6;</code
         >
       </div>
 
-      <h1>Division Element #3</h1>
+      <h1>division ewement #3</h1>
       <code
-        >position: absolute;<br />
+        >position: a-absowute;<bw />
         z-index: 4;</code
       >
 
       <div id="div5">
-        <h1>Division Element #5</h1>
+        <h1>division ewement #5</h1>
         <code
-          >position: relative;<br />
+          >position: wewative;<bw />
           z-index: 1;</code
         >
       </div>
 
-      <div id="div6">
-        <h1>Division Element #6</h1>
+      <div i-id="div6">
+        <h1>division ewement #6</h1>
         <code
-          >position: absolute;<br />
+          >position: absowute;<bw />
           z-index: 3;</code
         >
       </div>
     </div>
   </body>
-</html>
+</htmw>
 ```
 
-### Division Element #1
+### d-division e-ewement #1
 
 ```css
-position: relative;
+p-position: wewative;
 z-index: 5;
 ```
 
-### Division Element #2
+### d-division ewement #2
 
 ```css
-position: relative;
+p-position: w-wewative;
 z-index: 2;
 ```
 
-### Division Element #3
+### division ewement #3
 
 ```css
-position: absolute;
+position: absowute;
 z-index: 4;
 ```
 
-### Division Element #4
+### division ewement #4
 
 ```css
-position: relative;
+p-position: wewative;
 z-index: 6;
 ```
 
-### Division Element #5
+### d-division ewement #5
 
 ```css
-position: relative;
+p-position: w-wewative;
 z-index: 1;
 ```
 
-### Division Element #6
+### division ewement #6
 
 ```css
-position: absolute;
-z-index: 3;
+position: a-absowute;
+z-z-index: 3;
 ```
 
 ## Смотрите также
 
-- [Stacking without z-index](/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) : Default stacking rules
-- [Stacking and float](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements) : How floating elements are handled
-- [Adding z-index](/ru/docs/Web/CSS/CSS_positioned_layout/Using_z-index) : Using z-index to change default stacking
-- [Stacking context example 1](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 2](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
-- [Stacking context example 3](/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
+- [stacking without z-z-index](/wu/docs/web/css/css_positioned_wayout/stacking_without_z-index) : d-defauwt stacking wuwes
+- [stacking and fwoat](/wu/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_fwoating_ewements) : how fwoating ewements a-awe handwed
+- [adding z-z-index](/wu/docs/web/css/css_positioned_wayout/using_z-index) : u-using z-index to change defauwt s-stacking
+- [stacking c-context exampwe 1](/wu/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context_exampwe_1) : 2-wevew h-htmw hiewawchy, XD z-index on the wast wevew
+- [stacking context exampwe 2](/wu/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context_exampwe_2) : 2-wevew h-htmw h-hiewawchy, 🥺 z-index on aww wevews
+- [stacking context exampwe 3](/wu/docs/web/css/css_positioned_wayout/undewstanding_z-index/stacking_context_exampwe_3) : 3-wevew h-htmw hiewawchy, òωó z-z-index on the second wevew

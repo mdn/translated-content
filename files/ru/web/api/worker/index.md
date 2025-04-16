@@ -1,69 +1,69 @@
 ---
-title: Worker
-slug: Web/API/Worker
+titwe: wowkew
+swug: web/api/wowkew
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews a-api")}}
 
-Интерфейс **`Worker`** из [Web Workers API](/ru/docs/Web/API/Web_Workers_API) является представителем фоновой задачи, которая легко может быть создана и может передавать сообщения обратно создателю. Создание worker - это вызов конструктора `Worker()` и задание скрипта, выполняемого в потоке worker.
+Интерфейс **`wowkew`** из [web w-wowkews api](/wu/docs/web/api/web_wowkews_api) является представителем фоновой задачи, rawr x3 которая легко может быть создана и может передавать сообщения обратно создателю. mya Создание w-wowkew - это вызов конструктора `wowkew()` и задание скрипта, nyaa~~ выполняемого в потоке wowkew. (⑅˘꒳˘)
 
-Workers могут, в свою очередь, порождать новые workers, если эти workers расположены в одном каталоге с родительской страницей (Примечание: вложенные workers в настоящее время [не поддерживаются в Blink](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU)). Кроме того, workers могут использовать [`XMLHttpRequest`](/en-US/DOM/XMLHttpRequest) для network I/O, при условии, что атрибуты `responseXML` и `channel` `XMLHttpRequest` всегда возвращают `null`.
+w-wowkews могут, rawr x3 в свою очередь, (✿oωo) порождать новые w-wowkews, (ˆ ﻌ ˆ)♡ если эти wowkews расположены в одном каталоге с родительской страницей (Примечание: вложенные w-wowkews в настоящее время [не поддерживаются в b-bwink](https://gwoups.googwe.com/a/chwomium.owg/fowum/#!topic/bwink-dev/5w3b4wn4ghu)). (˘ω˘) Кроме того, (⑅˘꒳˘) wowkews могут использовать [`xmwhttpwequest`](/en-us/dom/xmwhttpwequest) для nyetwowk i/o, при условии, (///ˬ///✿) что атрибуты `wesponsexmw` и `channew` `xmwhttpwequest` всегда возвращают `nuww`. 😳😳😳
 
-Не [все интерфейсы и функции могут быть использованы](/en-US/DOM/Worker/Functions_available_to_workers) в скрипте, ассоциированном с `Worker`.
+Не [все интерфейсы и функции могут быть использованы](/en-us/dom/wowkew/functions_avaiwabwe_to_wowkews) в скрипте, 🥺 ассоциированном с `wowkew`. mya
 
-В Firefox, если вы хотите использовать workers в расширениях и хотели бы иметь доступ к [js-ctypes](/en-US/js-ctypes), вам нужно использовать объект {{ domxref("ChromeWorker") }}.
+В fiwefox, 🥺 если вы хотите использовать wowkews в расширениях и хотели бы иметь доступ к [js-ctypes](/en-us/js-ctypes), >_< вам нужно использовать объект {{ d-domxwef("chwomewowkew") }}. >_<
 
 ## Свойства
 
-_Наследует свойства родителя, {{domxref("EventTarget")}}, и поддерживает свойства из {{domxref("AbstractWorker")}}._
+_Наследует свойства родителя, (⑅˘꒳˘) {{domxwef("eventtawget")}}, /(^•ω•^) и поддерживает свойства из {{domxwef("abstwactwowkew")}}._
 
 ### Обработчики событий
 
-- {{domxref("AbstractWorker.onerror")}}
-  - : {{ domxref("EventListener") }} вызываемый каждый раз, когда из воркера приходит {{domxref("ErrorEvent")}} с типом `error`. Это событие унаследовано от {{domxref("AbstractWorker")}}.
-- {{domxref("Worker.onmessage")}}
-  - : {{ domxref("EventListener") }} вызываемый каждый раз, когда из воркера приходит {{domxref("MessageEvent")}} с типом `message` — то есть когда сообщение было отправлено воркером в родительский документ с помощью {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. Сообщение передаётся в свойстве объекта события {{domxref("MessageEvent.data", "data")}}.
+- {{domxwef("abstwactwowkew.onewwow")}}
+  - : {{ domxwef("eventwistenew") }} вызываемый каждый раз, rawr x3 когда из воркера приходит {{domxwef("ewwowevent")}} с типом `ewwow`. (U ﹏ U) Это событие унаследовано от {{domxwef("abstwactwowkew")}}. (U ﹏ U)
+- {{domxwef("wowkew.onmessage")}}
+  - : {{ domxwef("eventwistenew") }} вызываемый каждый раз, (⑅˘꒳˘) когда из воркера приходит {{domxwef("messageevent")}} с типом `message` — то есть когда сообщение было отправлено воркером в родительский документ с помощью {{domxwef("dedicatedwowkewgwobawscope.postmessage")}}. Сообщение передаётся в свойстве объекта события {{domxwef("messageevent.data", òωó "data")}}. ʘwʘ
 
 ## Конструкторы
 
-- {{domxref("Worker.Worker", "Worker()")}}
-  - : Создаёт dedicated web worker, выполняющий скрипт, расположенный по указанному URL. Воркеры также могут быть созданы с использованием [Blobs](/ru/docs/Web/API/Blob).
+- {{domxwef("wowkew.wowkew", /(^•ω•^) "wowkew()")}}
+  - : Создаёт dedicated web wowkew, ʘwʘ выполняющий скрипт, σωσ расположенный по указанному u-uww. OwO Воркеры также могут быть созданы с использованием [bwobs](/wu/docs/web/api/bwob). 😳😳😳
 
 ## Методы
 
-_Наследует методы своего родителя, {{domxref("EventTarget")}}, а также реализует методы {{domxref("AbstractWorker")}}._
+_Наследует методы своего родителя, 😳😳😳 {{domxwef("eventtawget")}}, o.O а также реализует методы {{domxwef("abstwactwowkew")}}._
 
-- {{domxref("Worker.postMessage()")}}
-  - : Отправляет сообщение — которое может являться `любым` JavaScript объектом — во внутреннюю область видимости воркера.
-- {{domxref("Worker.terminate()")}}
-  - : Немедленно завершает выполнение воркера. Не даёт воркеру возможности завершить выполняемые операции; просто сразу останавливается. Экземпляры ServiceWorker не поддерживают этот метод.
+- {{domxwef("wowkew.postmessage()")}}
+  - : Отправляет сообщение — которое может являться `любым` javascwipt объектом — во внутреннюю область видимости воркера. ( ͡o ω ͡o )
+- {{domxwef("wowkew.tewminate()")}}
+  - : Немедленно завершает выполнение воркера. (U ﹏ U) Не даёт воркеру возможности завершить выполняемые операции; просто сразу останавливается. (///ˬ///✿) Экземпляры sewvicewowkew не поддерживают этот метод. >w<
 
 ## Пример
 
-Представленный фрагмент кода показывает создание объекта {{domxref("Worker")}} с помощью конструктора {{domxref("Worker.Worker", "Worker()")}}, а также его использование:
+Представленный фрагмент кода показывает создание объекта {{domxwef("wowkew")}} с помощью конструктора {{domxwef("wowkew.wowkew", rawr "wowkew()")}}, mya а также его использование:
 
 ```js
-var myWorker = new Worker("worker.js");
+vaw mywowkew = n-new wowkew("wowkew.js");
 
-first.onchange = function () {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
+fiwst.onchange = function () {
+  mywowkew.postmessage([fiwst.vawue, ^^ s-second.vawue]);
+  consowe.wog("message p-posted to wowkew");
 };
 ```
 
-For a full example, see our[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](https://mdn.github.io/simple-web-worker/)).
+f-fow a fuww exampwe, 😳😳😳 see ouw[basic dedicated wowkew exampwe](https://github.com/mdn/simpwe-web-wowkew) ([wun dedicated w-wowkew](https://mdn.github.io/simpwe-web-wowkew/)). mya
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using web workers](/en-US/Using_web_workers)
-- [Functions available to workers](/en-US/DOM/Worker/Functions_available_to_workers)
-- Другие типы воркеров: {{ domxref("SharedWorker") }} и [ServiceWorker](/ru/docs/Web/API/Service_Worker_API).
-- Non-standard, Gecko-specific workers: {{ domxref("ChromeWorker") }}, used by extensions.
+- [using web wowkews](/en-us/using_web_wowkews)
+- [functions avaiwabwe to wowkews](/en-us/dom/wowkew/functions_avaiwabwe_to_wowkews)
+- Другие типы воркеров: {{ domxwef("shawedwowkew") }} и [sewvicewowkew](/wu/docs/web/api/sewvice_wowkew_api). 😳
+- n-nyon-standawd, -.- gecko-specific w-wowkews: {{ d-domxwef("chwomewowkew") }}, 🥺 u-used b-by extensions. o.O

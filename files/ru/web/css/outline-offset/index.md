@@ -1,70 +1,70 @@
 ---
-title: outline-offset
-slug: Web/CSS/outline-offset
-l10n:
-  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
+titwe: outwine-offset
+swug: web/css/outwine-offset
+w-w10n:
+  souwcecommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS-свойство **`outline-offset`** задаёт расстояние между [обводкой](/ru/docs/Web/CSS/outline) и краем или рамкой элемента.
+c-css-свойство **`outwine-offset`** задаёт расстояние между [обводкой](/wu/docs/web/css/outwine) и краем или рамкой элемента. (⑅˘꒳˘)
 
-{{InteractiveExample("CSS Demo: outline-offset")}}
+{{intewactiveexampwe("css d-demo: outwine-offset")}}
 
-```css interactive-example-choice
-outline-offset: 4px;
+```css i-intewactive-exampwe-choice
+o-outwine-offset: 4px;
 ```
 
-```css interactive-example-choice
-outline-offset: 0.6rem;
+```css i-intewactive-exampwe-choice
+o-outwine-offset: 0.6wem;
 ```
 
-```css interactive-example-choice
-outline-offset: 12px;
-outline: 5px dashed blue;
+```css i-intewactive-exampwe-choice
+outwine-offset: 12px;
+outwine: 5px dashed bwue;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box with an outline around it.
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a box with an outwine awound i-it. rawr x3
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 2px solid crimson;
-  outline: 0.75em solid;
-  padding: 0.75em;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 2px sowid cwimson;
+  outwine: 0.75em sowid;
+  p-padding: 0.75em;
   width: 80%;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
 ## Синтаксис
 
 ```css
-/* Значения <length> */
-outline-offset: 3px;
-outline-offset: 0.2em;
+/* Значения <wength> */
+o-outwine-offset: 3px;
+outwine-offset: 0.2em;
 
 /* Глобальные значения */
-outline-offset: inherit;
-outline-offset: initial;
-outline-offset: revert;
-outline-offset: revert-layer;
-outline-offset: unset;
+outwine-offset: inhewit;
+outwine-offset: initiaw;
+outwine-offset: w-wevewt;
+outwine-offset: wevewt-wayew;
+outwine-offset: unset;
 ```
 
 ### Значения
 
-- `{{cssxref("&lt;length&gt;")}}`
-  - : Размер расстояния между элементом и его обводкой. При отрицательном значении обводка располагается внутри элемента. Значение `0` размещает обводку вплотную к элементу.
+- `{{cssxwef("&wt;wength&gt;")}}`
+  - : Размер расстояния между элементом и его обводкой. (✿oωo) При отрицательном значении обводка располагается внутри элемента. (ˆ ﻌ ˆ)♡ Значение `0` размещает обводку вплотную к элементу. (˘ω˘)
 
 ## Описание
 
-Обводка — это линия вокруг элемента за пределами рамки. Расстояние между элементом и его обводкой прозрачно. Другими словами, оно будет таким же, как и фон родительского элемента.
+Обводка — это линия вокруг элемента за пределами рамки. (⑅˘꒳˘) Расстояние между элементом и его обводкой прозрачно. (///ˬ///✿) Другими словами, 😳😳😳 оно будет таким же, 🥺 как и фон родительского элемента. mya
 
 ## Формальное определение
 
@@ -78,39 +78,39 @@ outline-offset: unset;
 
 ### Расстояние обводки в пикселях
 
-#### HTML
+#### htmw
 
-```html
-<p>Gallia est omnis divisa in partes tres.</p>
+```htmw
+<p>gawwia e-est omnis divisa in pawtes twes.</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 p {
-  outline: 1px dashed red;
-  outline-offset: 10px;
-  background: yellow;
-  border: 1px solid blue;
-  margin: 15px;
+  o-outwine: 1px d-dashed wed;
+  outwine-offset: 10px;
+  b-backgwound: yewwow;
+  bowdew: 1px sowid bwue;
+  m-mawgin: 15px;
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample('Расстояние обводки в пикселях')}}
+{{embedwivesampwe('Расстояние обводки в пикселях')}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("outline")}}
-- {{cssxref("outline-color")}}
-- {{cssxref("outline-style")}}
-- {{cssxref("outline-width")}}
+- {{cssxwef("outwine")}}
+- {{cssxwef("outwine-cowow")}}
+- {{cssxwef("outwine-stywe")}}
+- {{cssxwef("outwine-width")}}

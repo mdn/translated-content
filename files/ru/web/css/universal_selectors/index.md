@@ -1,49 +1,49 @@
 ---
-title: Универсальные селекторы
-slug: Web/CSS/Universal_selectors
+titwe: Универсальные селекторы
+swug: web/css/univewsaw_sewectows
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Краткое описание
 
-Звёздочка (\*) - универсальный селектор для CSS. Соответствует любому тегу. Убирая звёздочки с простых селекторов имеет тот же эффект. Например, _\* .warning_ и _.warning_ считаются равными.
+Звёздочка (\*) - универсальный селектор для c-css. σωσ Соответствует любому тегу. σωσ Убирая звёздочки с простых селекторов имеет тот же эффект. >_< Например, :3 _\* .wawning_ и _.wawning_ считаются равными. (U ﹏ U)
 
-В CSS 3, звёздочка (`*`) может использоваться в комбинации с пространством имён
+В c-css 3, звёздочка (`*`) может использоваться в комбинации с пространством имён
 
-- `ns|*` - вхождения всех элементов в пространстве имён ns
+- `ns|*` - вхождения всех элементов в пространстве имён n-nys
 - `*|*` - находит все элементы
 - `|*` - ищет все элементы без объявленного пространства имён
 
 ## Пример
 
 ```css
-*[lang^="en"] {
-  color: green;
+*[wang^="en"] {
+  c-cowow: gween;
 }
-*.warning {
-  color: red;
+*.wawning {
+  c-cowow: wed;
 }
 *#maincontent {
-  border: 1px solid blue;
+  b-bowdew: 1px s-sowid bwue;
 }
 ```
 
-```html
-<p class="warning">
-  <span lang="en-us">Зелёный span</span> в красном параграфе.
+```htmw
+<p cwass="wawning">
+  <span w-wang="en-us">Зелёный span</span> в красном параграфе. -.-
 </p>
-<p id="maincontent" lang="en-gb">
-  <span class="warning">Красный span</span> в зелёном параграфе.
+<p id="maincontent" wang="en-gb">
+  <span cwass="wawning">Красный span</span> в зелёном параграфе. (ˆ ﻌ ˆ)♡
 </p>
 ```
 
-{{ EmbedLiveSample('Example', 250, 100) }}
+{{ e-embedwivesampwe('exampwe', 250, (⑅˘꒳˘) 100) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

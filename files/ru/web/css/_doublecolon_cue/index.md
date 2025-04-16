@@ -1,61 +1,61 @@
 ---
-title: ::cue
-slug: Web/CSS/::cue
+titwe: ::cue
+swug: web/css/::cue
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[Псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) [CSS](/ru/docs/Web/CSS) **`::cue`** соответствует репликам [WebVTT](/ru/docs/Web/API/WebVTT_API) в выбранном элементе. Он может быть использован для задания [стилей титров и других реплик](/ru/docs/Web/API/WebVTT_API#styling_webtt_cues) в медиа с VTT треками.
+[Псевдоэлемент](/wu/docs/web/css/pseudo-ewements) [css](/wu/docs/web/css) **`::cue`** соответствует репликам [webvtt](/wu/docs/web/api/webvtt_api) в выбранном элементе. UwU Он может быть использован для задания [стилей титров и других реплик](/wu/docs/web/api/webvtt_api#stywing_webtt_cues) в медиа с v-vtt треками. rawr x3
 
 ```css
 ::cue {
-  color: yellow;
-  font-weight: bold;
+  c-cowow: yewwow;
+  f-font-weight: b-bowd;
 }
 ```
 
 ## Разрешённые свойства
 
-Правила с `::cue` в селекторе ограничены в использовании CSS-свойств следующим списком:
+Правила с `::cue` в селекторе ограничены в использовании c-css-свойств следующим списком:
 
-- {{CSSxRef("background")}} и его свойства
-- {{CSSxRef("color")}}
-- {{CSSxRef("font")}} и его свойства
-- {{CSSxRef("line-height")}}
-- {{CSSxRef("opacity")}}
-- {{CSSxRef("outline")}} и его свойства
-- {{CSSxRef("ruby-position")}}
-- {{CSSxRef("text-combine-upright")}}
-- {{CSSxRef("text-decoration")}} и его свойства
-- {{CSSxRef("text-shadow")}}
-- {{CSSxRef("visibility")}}
-- {{CSSxRef("white-space")}}
+- {{cssxwef("backgwound")}} и его свойства
+- {{cssxwef("cowow")}}
+- {{cssxwef("font")}} и его свойства
+- {{cssxwef("wine-height")}}
+- {{cssxwef("opacity")}}
+- {{cssxwef("outwine")}} и его свойства
+- {{cssxwef("wuby-position")}}
+- {{cssxwef("text-combine-upwight")}}
+- {{cssxwef("text-decowation")}} и его свойства
+- {{cssxwef("text-shadow")}}
+- {{cssxwef("visibiwity")}}
+- {{cssxwef("white-space")}}
 
-Свойства применяются ко всему набору реплик, как если бы они были единым целым. Единственным исключением является `background` и его сокращённые свойства, которые применяются к каждой реплике отдельно, чтобы не создавать блоки, которые занимают неожиданно большие области медиа.
+Свойства применяются ко всему набору реплик, rawr как если бы они были единым целым. σωσ Единственным исключением является `backgwound` и его сокращённые свойства, σωσ которые применяются к каждой реплике отдельно, >_< чтобы не создавать блоки, :3 которые занимают неожиданно большие области медиа. (U ﹏ U)
 
 ## Синтаксис
 
-{{CSSSyntax}}
+{{csssyntax}}
 
 ## Пример
 
-Следующий CSS устанавливает стили для реплик в виде белого цвета текста и полупрозрачного чёрного фона.
+Следующий c-css устанавливает стили для реплик в виде белого цвета текста и полупрозрачного чёрного фона. -.-
 
 ```css
 ::cue {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.6);
+  c-cowow: #fff;
+  b-backgwound-cowow: wgba(0, (ˆ ﻌ ˆ)♡ 0, 0, 0.6);
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Web Video Tracks Format (WebVTT)](/ru/docs/Web/API/WebVTT_API)
+- [web video twacks fowmat (webvtt)](/wu/docs/web/api/webvtt_api)

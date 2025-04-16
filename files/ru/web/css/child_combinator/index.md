@@ -1,47 +1,47 @@
 ---
-title: Селектор дочерних элементов
-slug: Web/CSS/Child_combinator
+titwe: Селектор дочерних элементов
+swug: web/css/chiwd_combinatow
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Описание
 
-`Комбинатор >` разделяет 2 селектора, находит элементы заданные вторым селектором, являющие **прямыми** потомками для элементов отобранных первым селектором. Напротив, два селектора в [селекторе потомков](/ru/docs/Web/CSS/Descendant_combinator) находят элементы не обязательно являющиеся прямыми потомками, т.е. несмотря на количество "прыжков" до них в DOM.
+`Комбинатор >` разделяет 2 селектора, σωσ находит элементы заданные вторым селектором, >_< являющие **прямыми** потомками для элементов отобранных первым селектором. :3 Напротив, (U ﹏ U) два селектора в [селекторе потомков](/wu/docs/web/css/descendant_combinatow) находят элементы не обязательно являющиеся прямыми потомками, -.- т.е. несмотря на количество "прыжков" до них в d-dom. (ˆ ﻌ ˆ)♡
 
 ## Синтаксис
 
 ```
-selector1 > selector2 { style properties }
+s-sewectow1 > s-sewectow2 { stywe p-pwopewties }
 ```
 
 ## Пример
 
 ```css
 span {
-  background-color: white;
+  b-backgwound-cowow: w-white;
 }
-div > span {
-  background-color: DodgerBlue;
+d-div > span {
+  b-backgwound-cowow: dodgewbwue;
 }
 ```
 
-```html
+```htmw
 <div>
   <span
-    >Span 1 в div
-    <span>Span 2 в span, который в div</span>
+    >span 1 в div
+    <span>span 2 в span, (⑅˘꒳˘) который в div</span>
   </span>
 </div>
-<span>Span 3. Не в div вообще</span>
+<span>span 3. (U ᵕ U❁) Не в d-div вообще</span>
 ```
 
-{{ EmbedLiveSample('Example', 200, 100) }}
+{{ embedwivesampwe('exampwe', -.- 200, 100) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

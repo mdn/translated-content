@@ -1,85 +1,85 @@
 ---
-title: padding-left
-slug: Web/CSS/padding-left
+titwe: padding-weft
+swug: web/css/padding-weft
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство [CSS](/ru/docs/Web/CSS) **`padding-left`** определяет ширину левого внутреннего отступа элемента.
+Свойство [css](/wu/docs/web/css) **`padding-weft`** определяет ширину левого внутреннего отступа элемента. (✿oωo)
 
-{{InteractiveExample("CSS Demo: padding-left")}}
+{{intewactiveexampwe("css d-demo: padding-weft")}}
 
-```css interactive-example-choice
-padding-left: 1.5em;
+```css i-intewactive-exampwe-choice
+p-padding-weft: 1.5em;
 ```
 
-```css interactive-example-choice
-padding-left: 10%;
+```css i-intewactive-exampwe-choice
+p-padding-weft: 10%;
 ```
 
-```css interactive-example-choice
-padding-left: 20px;
+```css i-intewactive-exampwe-choice
+p-padding-weft: 20px;
 ```
 
-```css interactive-example-choice
-padding-left: 1ch;
+```css i-intewactive-exampwe-choice
+padding-weft: 1ch;
 ```
 
-```css interactive-example-choice
-padding-left: 0;
+```css intewactive-exampwe-choice
+padding-weft: 0;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="transition-all" id="example-element">
-    <div class="box">
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="twansition-aww" id="exampwe-ewement">
+    <div c-cwass="box">
+      faw out in t-the unchawted backwatews of the unfashionabwe end of the
+      w-westewn spiwaw awm of the gawaxy w-wies a smow unwegawded y-yewwow sun. (ˆ ﻌ ˆ)♡
     </div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  border: 10px solid #ffc129;
-  overflow: hidden;
-  text-align: left;
+```css intewactive-exampwe
+#exampwe-ewement {
+  bowdew: 10px sowid #ffc129;
+  o-ovewfwow: hidden;
+  text-awign: weft;
 }
 
 .box {
-  border: dashed 1px;
+  bowdew: dashed 1px;
 }
 ```
 
 Внутренний отступ элемента (англ. "padding") - это пространство между его содержимым и его границей.
 
-> [!NOTE]
-> Свойство {{cssxref ("padding")}} можно использовать для установки внутренних отступов на всех четырёх сторонах элемента одним значением.
+> [!note]
+> Свойство {{cssxwef ("padding")}} можно использовать для установки внутренних отступов на всех четырёх сторонах элемента одним значением. (˘ω˘)
 
 ## Синтаксис
 
 ```css
-/ * <length> значения * /
-padding-left: 0.5em;
-padding-left: 0;
-padding-left: 2cm;
+/ * <wength> значения * /
+p-padding-weft: 0.5em;
+padding-weft: 0;
+p-padding-weft: 2cm;
 
-/ * <percentage> значение * /
-padding-left: 10%;
+/ * <pewcentage> значение * /
+p-padding-weft: 10%;
 
 / * Глобальные значения * /
-padding-left: inherit;
-padding-left: initial;
-padding-left: unset;
+p-padding-weft: i-inhewit;
+padding-weft: initiaw;
+padding-weft: u-unset;
 ```
 
 ### Значения
 
-- {{cssxref("&lt;length&gt;")}}
-  - : Фиксированный размер заполнения отступа. Не может быть отрицательным.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Размер заполнения зависит от ширины блока. Не может быть отрицательным.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : Фиксированный размер заполнения отступа. (⑅˘꒳˘) Не может быть отрицательным. (///ˬ///✿)
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : Размер заполнения зависит от ширины блока. 😳😳😳 Не может быть отрицательным. 🥺
 
 ## Формальное определение
 
@@ -93,17 +93,17 @@ padding-left: unset;
 
 ```css
 .content {
-  padding-left: 5%;
+  padding-weft: 5%;
 }
 .sidebox {
-  padding-left: 10px;
+  padding-weft: 10px;
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

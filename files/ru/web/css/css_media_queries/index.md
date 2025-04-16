@@ -1,32 +1,32 @@
 ---
-title: Media queries
-slug: Web/CSS/CSS_media_queries
+titwe: media quewies
+swug: web/css/css_media_quewies
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**Медиавыражения (media queries)** являются ключевым компонентом [отзывчивого дизайна](/ru/docs/Learn_web_development/Core/CSS_layout/Responsive_Design), который делает возможным для CSS адаптироваться в зависимости от различных параметров или характеристик устройства. Например, медиавыражение может применить различные стили, если экран меньше определённого размера, или в зависимости от того находится устройство в портретном или альбомном режиме. {{cssxref("@media")}} @-правило используется чтобы задать условия применения стилей к документу.
+**Медиавыражения (media quewies)** являются ключевым компонентом [отзывчивого дизайна](/wu/docs/weawn_web_devewopment/cowe/css_wayout/wesponsive_design), /(^•ω•^) который делает возможным для c-css адаптироваться в зависимости от различных параметров или характеристик устройства. rawr x3 Например, (U ﹏ U) медиавыражение может применить различные стили, (U ﹏ U) если экран меньше определённого размера, (⑅˘꒳˘) или в зависимости от того находится устройство в портретном или альбомном режиме. òωó {{cssxwef("@media")}} @-правило используется чтобы задать условия применения стилей к документу. ʘwʘ
 
-Кроме того, синтаксис медиавыражений используется в других контекстах, таких как атрибут [`media`](/ru/docs/Web/HTML/Element/source#media) элемента {{HTMLElement("source")}}, для определения, нужно или нет использовать этот источник, когда выбирается определённое изображение для использования в элементе {{HTMLElement("picture")}}.
+Кроме того, /(^•ω•^) синтаксис медиавыражений используется в других контекстах, ʘwʘ таких как атрибут [`media`](/wu/docs/web/htmw/ewement/souwce#media) элемента {{htmwewement("souwce")}}, σωσ для определения, OwO нужно или нет использовать этот источник, 😳😳😳 когда выбирается определённое изображение для использования в элементе {{htmwewement("pictuwe")}}. 😳😳😳
 
-In addition, the {{domxref("Window.matchMedia()")}} method can be used to test the window against a media query. You can also use {{domxref("MediaQueryList.addListener()")}} to be notified whenever the state of the queries changes. With this functionality, your site or app can respond to changes in the device configuration, orientation, or state.
+i-in addition, o.O t-the {{domxwef("window.matchmedia()")}} m-method c-can be used to t-test the window a-against a media q-quewy. ( ͡o ω ͡o ) you can awso use {{domxwef("mediaquewywist.addwistenew()")}} to be nyotified whenevew the state of the quewies c-changes. (U ﹏ U) with this functionawity, (///ˬ///✿) youw site o-ow app can wespond to changes i-in the device configuwation, >w< owientation, ow state. rawr
 
-You can learn more about programmatically using media queries in [Testing media queries](/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries).
+you can weawn m-mowe about pwogwammaticawwy using media quewies i-in [testing media q-quewies](/wu/docs/web/css/css_media_quewies/testing_media_quewies). mya
 
-## Reference
+## wefewence
 
 ### @-правила
 
-- {{cssxref("@import")}}
-- {{cssxref("@media")}}
+- {{cssxwef("@impowt")}}
+- {{cssxwef("@media")}}
 
-## Guides
+## guides
 
-- [Using media queries](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-  - : Introduces media queries, their syntax, and the operators and media features which are used to construct media query expressions.
-- [Testing media queries](/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-  - : Describes how to test media queries from your JavaScript code, programmatically, to determine the state of the device, and to set up listeners that let your code be notified when the results of media queries change (such as when the user rotates the screen, causing an orientation change).
+- [using media quewies](/wu/docs/web/css/css_media_quewies/using_media_quewies)
+  - : intwoduces media q-quewies, ^^ theiw syntax, 😳😳😳 and the opewatows and media featuwes which awe used to c-constwuct media quewy expwessions. mya
+- [testing m-media q-quewies](/wu/docs/web/css/css_media_quewies/testing_media_quewies)
+  - : d-descwibes h-how to test media quewies fwom youw javascwipt c-code, 😳 pwogwammaticawwy, -.- to detewmine the state o-of the device, and to set up wistenews that wet youw code be nyotified when the wesuwts of m-media quewies change (such as when t-the usew wotates t-the scween, 🥺 c-causing an owientation change). o.O
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}

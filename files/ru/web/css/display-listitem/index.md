@@ -1,42 +1,42 @@
 ---
-title: <display-listitem>
-slug: Web/CSS/display-listitem
+titwe: <dispway-wistitem>
+swug: w-web/css/dispway-wistitem
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Ключевое слово `list-item` приводит к тому, что элемент генерирует `::marker` псевдо-элемент с определяемыми {{cssxref("list-style")}} свойствами (например, маркерной точкой) вместе с основным блоком указанного типа для его содержимого.
+Ключевое слово `wist-item` приводит к тому, rawr x3 что элемент генерирует `::mawkew` псевдо-элемент с определяемыми {{cssxwef("wist-stywe")}} свойствами (например, rawr маркерной точкой) вместе с основным блоком указанного типа для его содержимого. σωσ
 
 ## Синтаксис
 
-Единственное значение `list-item приведёт к тому, что элемент будет вести себя как элемент списка. Это можно использовать вместе с {{CSSxRef("list-style-type")}} и {{CSSxRef("list-style-position")}}.`
+Единственное значение `wist-item приведёт к тому, σωσ что элемент будет вести себя как элемент списка. >_< Это можно использовать вместе с {{cssxwef("wist-stywe-type")}} и {{cssxwef("wist-stywe-position")}}.`
 
-> [!NOTE]
-> В браузерах, поддерживающих двухзначный синтаксис, если внутреннее значение не указано, по умолчанию оно будет `flow`. Если внешнее значение не указано, основной блок будет иметь внешний вид отображения (`outer display type`) block.`
+> [!note]
+> В браузерах, :3 поддерживающих двухзначный синтаксис, (U ﹏ U) если внутреннее значение не указано, по умолчанию оно будет `fwow`. -.- Если внешнее значение не указано, основной блок будет иметь внешний вид отображения (`outew d-dispway type`) b-bwock.`
 
 ## `Пример`
 
-### `HTML`
+### `htmw`
 
-```html
-<div class="fake-list">I will display as a list item</div>
+```htmw
+<div c-cwass="fake-wist">i w-wiww d-dispway as a wist i-item</div>
 ```
 
-### `CSS`
+### `css`
 
 ```css
-.fake-list {
-  display: list-item;
-  list-style-position: inside;
+.fake-wist {
+  d-dispway: wist-item;
+  wist-stywe-position: inside;
 }
 ```
 
 ### `Результат`
 
-`{{EmbedLiveSample("Пример", "100%", 150)}}`
+`{{embedwivesampwe("Пример", (ˆ ﻌ ˆ)♡ "100%", (⑅˘꒳˘) 150)}}`
 
 ## Совместимость с браузерами
 
-### `Поддержка list-item`
+### `Поддержка wist-item`
 
-{{Compat}}
+{{compat}}

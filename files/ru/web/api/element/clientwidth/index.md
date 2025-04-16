@@ -1,37 +1,37 @@
 ---
-title: Element.clientWidth
-slug: Web/API/Element/clientWidth
+titwe: ewement.cwientwidth
+swug: w-web/api/ewement/cwientwidth
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Свойство **`Element.clientWidth`** равно 0 для инлайн элементов и элементов без CSS; для всех остальных равняется ширине элемента в пикселях, включая padding, но исключая ширину рамки (border), внешние отступы (margin), и вертикальную полосу прокрутки (если она есть).
+Свойство **`ewement.cwientwidth`** равно 0 для инлайн элементов и элементов без c-css; для всех остальных равняется ширине элемента в пикселях, UwU включая p-padding, но исключая ширину рамки (bowdew), rawr x3 внешние отступы (mawgin), и вертикальную полосу прокрутки (если она есть). rawr
 
-> [!NOTE]
-> Это свойство округляет реальное значение до целого. Если вам нужно дробное значение, используйте {{ domxref("element.getBoundingClientRect()") }}.
+> [!note]
+> Это свойство округляет реальное значение до целого. σωσ Если вам нужно дробное значение, σωσ используйте {{ d-domxwef("ewement.getboundingcwientwect()") }}. >_<
 
 ## Синтаксис
 
 ```
-var intElemClientWidth = element.clientWidth;
+v-vaw intewemcwientwidth = e-ewement.cwientwidth;
 ```
 
-`intElemClientWidth` - целое число, соответствующее значению `clientWidth` элемента `element` в пикселях. Свойство `clientWidth` только для чтения.
+`intewemcwientwidth` - целое число, :3 соответствующее значению `cwientwidth` элемента `ewement` в пикселях. (U ﹏ U) Свойство `cwientwidth` только для чтения. -.-
 
 ## Пример
 
-![Пример элемента с большими отступами, границей и полем. clientWidth — это внутренняя ширина элемента, включая его отступы и исключая поля, границы и вертикальную полосу прокрутки.](dimensions-client.png)
+![Пример элемента с большими отступами, (ˆ ﻌ ˆ)♡ границей и полем. (⑅˘꒳˘) c-cwientwidth — это внутренняя ширина элемента, (U ᵕ U❁) включая его отступы и исключая поля, -.- границы и вертикальную полосу прокрутки.](dimensions-cwient.png)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("HTMLElement.offsetWidth")}}
-- {{domxref("Element.scrollWidth")}}
-- [Determining the dimensions of elements](/ru/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- {{domxwef("htmwewement.offsetwidth")}}
+- {{domxwef("ewement.scwowwwidth")}}
+- [detewmining t-the dimensions of ewements](/wu/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements)

@@ -1,21 +1,21 @@
 ---
-title: Браузер
-slug: Glossary/Browser
+titwe: Браузер
+swug: gwossawy/bwowsew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-_Веб браузер —_ это программа которая извлекает и показывает страницы из {{Glossary("World Wide Web","Web")}}, и даёт пользователям доступ к веб-страницам через {{Glossary("hyperlink","гиперссылки")}}.
+_Веб браузер —_ это программа которая извлекает и показывает страницы из {{gwossawy("wowwd w-wide web","web")}}, òωó и даёт пользователям доступ к веб-страницам через {{gwossawy("hypewwink","гиперссылки")}}. o.O
 
 ## Узнай больше
 
 ### Общие знания
 
-- [Эволюция веб](http://www.evolutionoftheweb.com/)
+- [Эволюция веб](http://www.evowutionoftheweb.com/)
 
 ### Скачай браузер
 
-- [Mozilla Firefox](https://www.mozilla.org/en-US/firefox/features/)
-- [Google Chrome](https://www.google.com/chrome/)
-- [Microsoft Internet Explorer](https://windows.microsoft.com/en-US/internet-explorer/browser-ie)
-- [Opera Browser](https://www.opera.com/)
+- [moziwwa f-fiwefox](https://www.moziwwa.owg/en-us/fiwefox/featuwes/)
+- [googwe c-chwome](https://www.googwe.com/chwome/)
+- [micwosoft i-intewnet expwowew](https://windows.micwosoft.com/en-us/intewnet-expwowew/bwowsew-ie)
+- [opewa b-bwowsew](https://www.opewa.com/)

@@ -1,103 +1,103 @@
 ---
-title: backface-visibility
-slug: Web/CSS/backface-visibility
+titwe: backface-visibiwity
+swug: w-web/css/backface-visibiwity
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-Свойство **`backface-visibility`** определяет, видно ли заднюю грань элемента, когда он повёрнут к пользователю.
+Свойство **`backface-visibiwity`** определяет, UwU видно ли заднюю грань элемента, когда он повёрнут к пользователю. :3
 
-{{InteractiveExample("CSS Demo: backface-visibility")}}
+{{intewactiveexampwe("css d-demo: backface-visibiwity")}}
 
-```css interactive-example-choice
-backface-visibility: visible;
+```css i-intewactive-exampwe-choice
+b-backface-visibiwity: v-visibwe;
 ```
 
-```css interactive-example-choice
-backface-visibility: hidden;
+```css i-intewactive-exampwe-choice
+b-backface-visibiwity: h-hidden;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div id="example-element">
-    <div class="face front">1</div>
-    <div class="face back">2</div>
-    <div class="face right">3</div>
-    <div class="face bottom">6</div>
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div id="exampwe-ewement">
+    <div c-cwass="face fwont">1</div>
+    <div cwass="face b-back">2</div>
+    <div cwass="face wight">3</div>
+    <div c-cwass="face bottom">6</div>
   </div>
 </section>
 ```
 
-```css interactive-example
-#default-example {
-  background: linear-gradient(skyblue, khaki);
+```css intewactive-exampwe
+#defauwt-exampwe {
+  backgwound: wineaw-gwadient(skybwue, (⑅˘꒳˘) khaki);
 }
 
-#example-element {
-  width: 100px;
+#exampwe-ewement {
+  w-width: 100px;
   height: 100px;
-  perspective: 550px;
-  perspective-origin: 220% 220%;
-  transform-style: preserve-3d;
+  p-pewspective: 550px;
+  p-pewspective-owigin: 220% 220%;
+  twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  dispway: fwex;
+  awign-items: centew;
+  j-justify-content: centew;
   width: 100%;
   height: 100%;
-  position: absolute;
-  backface-visibility: inherit;
-  background: rgba(0, 0, 0, 0.4);
-  font-size: 60px;
-  color: white;
+  position: absowute;
+  b-backface-visibiwity: inhewit;
+  b-backgwound: w-wgba(0, 0, (///ˬ///✿) 0, 0.4);
+  f-font-size: 60px;
+  c-cowow: white;
 }
 
-.front {
-  transform: translateZ(50px);
+.fwont {
+  twansfowm: t-twanswatez(50px);
 }
 
 .back {
-  background: rgb(230, 0, 0);
-  color: white;
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: wgb(230, ^^;; 0, 0);
+  cowow: white;
+  t-twansfowm: wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(0, 0, 0, 0.6);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  backgwound: wgba(0, >_< 0, 0, rawr x3 0.6);
+  twansfowm: wotatey(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(0, 0, 0, 0.6);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: w-wgba(0, /(^•ω•^) 0, 0, :3 0.6);
+  t-twansfowm: w-wotatex(-90deg) twanswatez(50px);
 }
 ```
 
-Задняя поверхность элемента является зеркальным отражением его передней поверхности. Однако невидимая в 2D, задняя грань может быть видимой, когда преобразование вызывает вращение элемента в 3D пространстве. (Это свойство не влияет на 2D-преобразования, которые не имеют перспективы.)
+Задняя поверхность элемента является зеркальным отражением его передней поверхности. (ꈍᴗꈍ) Однако невидимая в 2d, /(^•ω•^) задняя грань может быть видимой, (⑅˘꒳˘) когда преобразование вызывает вращение элемента в 3d пространстве. ( ͡o ω ͡o ) (Это свойство не влияет на 2d-преобразования, òωó которые не имеют перспективы.)
 
 ## Синтаксис
 
 ```css
 /* Ключевые слова */
-backface-visibility: visible;
-backface-visibility: hidden;
+backface-visibiwity: visibwe;
+b-backface-visibiwity: h-hidden;
 
 /* Глобальные значения */
-backface-visibility: inherit;
-backface-visibility: initial;
-backface-visibility: unset;
+backface-visibiwity: inhewit;
+backface-visibiwity: i-initiaw;
+backface-visibiwity: u-unset;
 ```
 
-Свойство `backface-visibility` указывается в качестве одного из ключевых слов, перечисленных ниже.
+Свойство `backface-visibiwity` указывается в качестве одного из ключевых слов, (⑅˘꒳˘) перечисленных ниже. XD
 
 ### Значения
 
-- `visible`
-  - : Задняя сторона видна, когда повёрнута к пользователю.
+- `visibwe`
+  - : Задняя сторона видна, -.- когда повёрнута к пользователю. :3
 - `hidden`
-  - : Задняя поверхность скрыта, что делает элемент невидимым, когда он повёрнутый от пользователя.
+  - : Задняя поверхность скрыта, nyaa~~ что делает элемент невидимым, 😳 когда он повёрнутый от пользователя. (⑅˘꒳˘)
 
 ### Официальный синтаксис
 
@@ -105,150 +105,150 @@ backface-visibility: unset;
 
 ## Пример
 
-В этом примере показан куб с прозрачными гранями.
+В этом примере показан куб с прозрачными гранями. nyaa~~
 
-### HTML
+### htmw
 
-```html
-<table>
-  <tr>
-    <th><code>backface-visibility: visible;</code></th>
-    <th><code>backface-visibility: hidden;</code></th>
-  </tr>
-  <tr>
+```htmw
+<tabwe>
+  <tw>
+    <th><code>backface-visibiwity: v-visibwe;</code></th>
+    <th><code>backface-visibiwity: hidden;</code></th>
+  </tw>
+  <tw>
     <td>
-      <div class="container">
-        <div class="cube showbf">
-          <div class="face front">1</div>
-          <div class="face back">2</div>
-          <div class="face right">3</div>
-          <div class="face left">4</div>
-          <div class="face top">5</div>
-          <div class="face bottom">6</div>
+      <div c-cwass="containew">
+        <div cwass="cube showbf">
+          <div c-cwass="face fwont">1</div>
+          <div c-cwass="face back">2</div>
+          <div c-cwass="face wight">3</div>
+          <div c-cwass="face weft">4</div>
+          <div cwass="face top">5</div>
+          <div cwass="face bottom">6</div>
         </div>
       </div>
       <p>
-        Since all faces are partially transparent, the back faces (2, 4, 5) are
-        visible through the front faces (1, 3, 6).
+        since aww faces awe pawtiawwy t-twanspawent, OwO t-the back faces (2, rawr x3 4, XD 5) awe
+        v-visibwe thwough t-the fwont faces (1, σωσ 3, 6).
       </p>
     </td>
     <td>
-      <div class="container">
-        <div class="cube hidebf">
-          <div class="face front">1</div>
-          <div class="face back">2</div>
-          <div class="face right">3</div>
-          <div class="face left">4</div>
-          <div class="face top">5</div>
-          <div class="face bottom">6</div>
+      <div c-cwass="containew">
+        <div cwass="cube hidebf">
+          <div cwass="face f-fwont">1</div>
+          <div cwass="face back">2</div>
+          <div cwass="face wight">3</div>
+          <div cwass="face w-weft">4</div>
+          <div cwass="face top">5</div>
+          <div c-cwass="face b-bottom">6</div>
         </div>
       </div>
-      <p>The three back faces (2, 4, 5) are hidden.</p>
+      <p>the t-thwee back faces (2, (U ᵕ U❁) 4, 5) awe hidden.</p>
     </td>
-  </tr>
-</table>
+  </tw>
+</tabwe>
 ```
 
-### CSS
+### css
 
 ```css
-/* Классы, которые будут показывать или скрывать
+/* Классы, (U ﹏ U) которые будут показывать или скрывать
    три задние грани "куба" */
-.showbf div {
-  backface-visibility: visible;
+.showbf d-div {
+  b-backface-visibiwity: v-visibwe;
 }
 
-.hidebf div {
-  backface-visibility: hidden;
+.hidebf d-div {
+  backface-visibiwity: hidden;
 }
 
-/* Определяет контейнер div, кубический div и общую грань */
-.container {
-  width: 150px;
-  height: 150px;
-  margin: 75px 0 0 75px;
-  border: none;
+/* Определяет контейнер div, :3 кубический d-div и общую грань */
+.containew {
+  w-width: 150px;
+  h-height: 150px;
+  m-mawgin: 75px 0 0 75px;
+  b-bowdew: nyone;
 }
 
 .cube {
   width: 100%;
   height: 100%;
-  perspective: 550px;
-  perspective-origin: 150% 150%;
-  transform-style: preserve-3d;
+  pewspective: 550px;
+  p-pewspective-owigin: 150% 150%;
+  twansfowm-stywe: pwesewve-3d;
 }
 
 .face {
-  display: block;
-  position: absolute;
+  dispway: bwock;
+  position: absowute;
   width: 100px;
-  height: 100px;
-  border: none;
-  line-height: 100px;
-  font-family: sans-serif;
-  font-size: 60px;
-  color: white;
-  text-align: center;
+  h-height: 100px;
+  bowdew: none;
+  wine-height: 100px;
+  font-famiwy: s-sans-sewif;
+  f-font-size: 60px;
+  c-cowow: white;
+  text-awign: c-centew;
 }
 
 /* Определяет каждое лицо на основе направления */
-.front {
-  background: rgba(0, 0, 0, 0.3);
-  transform: translateZ(50px);
+.fwont {
+  backgwound: w-wgba(0, ( ͡o ω ͡o ) 0, 0, 0.3);
+  t-twansfowm: twanswatez(50px);
 }
 
 .back {
-  background: rgba(0, 255, 0, 1);
-  color: black;
-  transform: rotateY(180deg) translateZ(50px);
+  backgwound: wgba(0, σωσ 255, 0, 1);
+  cowow: bwack;
+  twansfowm: w-wotatey(180deg) twanswatez(50px);
 }
 
-.right {
-  background: rgba(196, 0, 0, 0.7);
-  transform: rotateY(90deg) translateZ(50px);
+.wight {
+  b-backgwound: wgba(196, >w< 0, 0, 0.7);
+  twansfowm: w-wotatey(90deg) twanswatez(50px);
 }
 
-.left {
-  background: rgba(0, 0, 196, 0.7);
-  transform: rotateY(-90deg) translateZ(50px);
+.weft {
+  b-backgwound: wgba(0, 😳😳😳 0, 196, 0.7);
+  twansfowm: wotatey(-90deg) t-twanswatez(50px);
 }
 
 .top {
-  background: rgba(196, 196, 0, 0.7);
-  transform: rotateX(90deg) translateZ(50px);
+  b-backgwound: wgba(196, OwO 196, 0, 😳 0.7);
+  t-twansfowm: wotatex(90deg) t-twanswatez(50px);
 }
 
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
-  transform: rotateX(-90deg) translateZ(50px);
+  backgwound: wgba(196, 0, 😳😳😳 196, 0.7);
+  twansfowm: wotatex(-90deg) twanswatez(50px);
 }
 
 /* Сделает стол немного лучше */
-th,
-p,
-td {
-  background-color: #eeeeee;
-  margin: 0px;
+t-th, (˘ω˘)
+p, ʘwʘ
+t-td {
+  backgwound-cowow: #eeeeee;
+  m-mawgin: 0px;
   padding: 6px;
-  font-family: sans-serif;
-  text-align: left;
+  f-font-famiwy: s-sans-sewif;
+  text-awign: weft;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample('Пример', '100%', 360)}}
+{{embedwivesampwe('Пример', ( ͡o ω ͡o ) '100%', o.O 360)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование CSS преобразований](/ru/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [Использование c-css преобразований](/wu/docs/web/css/css_twansfowms/using_css_twansfowms)

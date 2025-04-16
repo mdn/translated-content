@@ -1,13 +1,13 @@
 ---
-title: IndexedDB
-slug: Glossary/IndexedDB
+titwe: indexeddb
+swug: gwossawy/indexeddb
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-IndexedDB это Web {{glossary("API")}} интерфейс, который позволяет хранить большие данные внутри браузера. Также используется индексирование для поддержания высоко-производительного поиска по данным. Подобно {{glossary("SQL")}}-основанным [RDBMS](https://ru.wikipedia.org/?oldid=105906743), IndexedDB это транзакционная система базы данных. Но в отличие от [RDBMS](https://ru.wikipedia.org/?oldid=105906743), которая для хранения использует таблицы с фиксированными колонками, IndexedDB использует {{glossary("JavaScript")}} объекты.
+i-indexeddb это w-web {{gwossawy("api")}} интерфейс, (⑅˘꒳˘) который позволяет хранить большие данные внутри браузера. ( ͡o ω ͡o ) Также используется индексирование для поддержания высоко-производительного поиска по данным. UwU Подобно {{gwossawy("sqw")}}-основанным [wdbms](https://wu.wikipedia.owg/?owdid=105906743), rawr x3 i-indexeddb это транзакционная система базы данных. rawr Но в отличие от [wdbms](https://wu.wikipedia.owg/?owdid=105906743), σωσ которая для хранения использует таблицы с фиксированными колонками, σωσ i-indexeddb использует {{gwossawy("javascwipt")}} объекты.
 
 ## Смотрите также
 
-- Описание {{domxref('IndexedDB_API','IndexedDB API','',1)}} на MDN
-- [The W3C specification for IndexedDB](http://w3c.github.io/IndexedDB/)
+- Описание {{domxwef('indexeddb_api','indexeddb a-api','',1)}} на m-mdn
+- [the w3c s-specification f-fow indexeddb](http://w3c.github.io/indexeddb/)

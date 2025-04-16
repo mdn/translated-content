@@ -1,20 +1,20 @@
 ---
-title: XHR (XMLHttpRequest)
-slug: Glossary/XMLHttpRequest
+titwe: xhw (xmwhttpwequest)
+swug: gwossawy/xmwhttpwequest
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-{{domxref("XMLHttpRequest")}} (XHR) это {{Glossary("JavaScript")}} {{Glossary("API")}} для создания {{Glossary("AJAX")}} запросов. Методы этого объекта предоставляют возможность отправки сетевых запросов между {{Glossary("browser")}} и {{Glossary("server")}}.
+{{domxwef("xmwhttpwequest")}} (xhw) это {{gwossawy("javascwipt")}} {{gwossawy("api")}} для создания {{gwossawy("ajax")}} запросов. Методы этого объекта предоставляют возможность отправки сетевых запросов между {{gwossawy("bwowsew")}} и {{gwossawy("sewvew")}}. ^•ﻌ•^
 
 ## Узнать больше
 
 ### Общие знания
 
-- Полезная информация о [XMLHttpRequest](http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
-- [Разница между синхронной и асинхронной передачи сообщений](https://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
+- Полезная информация о [xmwhttpwequest](http://peopwesofttutowiaw.com/diffewence-between-synchwonous-and-asynchwonous-messaging/)
+- [Разница между синхронной и асинхронной передачи сообщений](https://peopwesofttutowiaw.com/diffewence-between-synchwonous-and-asynchwonous-messaging/)
 
 ### Техническая информация
 
-- Объект {{domxref("XMLHttpRequest")}}
-- [документация MDN о том, как использовать XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- Объект {{domxwef("xmwhttpwequest")}}
+- [документация m-mdn о том, OwO как использовать x-xmwhttpwequest](/wu/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)

@@ -1,122 +1,122 @@
 ---
-title: inline-size
-slug: Web/CSS/inline-size
+titwe: inwine-size
+swug: web/css/inwine-size
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Свойство [CSS](/ru/docs/Web/CSS) **`inline-size`** определяет горизонтальные или вертикальные размеры блока в зависимости от режима написания (writing mode). Оно соответствует свойствам {{cssxref("width")}} и {{cssxref("height")}} и зависит от свойства {{cssxref("writing-mode")}}.
+Свойство [css](/wu/docs/web/css) **`inwine-size`** определяет горизонтальные или вертикальные размеры блока в зависимости от режима написания (wwiting m-mode). 😳😳😳 Оно соответствует свойствам {{cssxwef("width")}} и {{cssxwef("height")}} и зависит от свойства {{cssxwef("wwiting-mode")}}. o.O
 
-{{InteractiveExample("CSS Demo: inline-size")}}
+{{intewactiveexampwe("css d-demo: i-inwine-size")}}
 
-```css interactive-example-choice
-inline-size: 150px;
-writing-mode: horizontal-tb;
+```css i-intewactive-exampwe-choice
+i-inwine-size: 150px;
+w-wwiting-mode: h-howizontaw-tb;
 ```
 
-```css interactive-example-choice
-inline-size: 150px;
-writing-mode: vertical-rl;
+```css i-intewactive-exampwe-choice
+inwine-size: 150px;
+wwiting-mode: vewticaw-ww;
 ```
 
-```css interactive-example-choice
-inline-size: auto;
-writing-mode: horizontal-tb;
+```css intewactive-exampwe-choice
+inwine-size: auto;
+w-wwiting-mode: howizontaw-tb;
 ```
 
-```css interactive-example-choice
-inline-size: auto;
-writing-mode: vertical-lr;
+```css intewactive-exampwe-choice
+i-inwine-size: auto;
+wwiting-mode: v-vewticaw-ww;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">
-    This is a box where you can change the inline-size.
+```htmw intewactive-exampwe
+<section cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div c-cwass="twansition-aww" id="exampwe-ewement">
+    t-this is a b-box whewe you can change the inwine-size. ( ͡o ω ͡o )
   </div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  display: flex;
-  flex-direction: column;
-  background-color: #5b6dcd;
+```css intewactive-exampwe
+#exampwe-ewement {
+  dispway: fwex;
+  fwex-diwection: c-cowumn;
+  backgwound-cowow: #5b6dcd;
   height: 80%;
-  justify-content: center;
-  color: #ffffff;
+  justify-content: centew;
+  cowow: #ffffff;
 }
 ```
 
-## Syntax
+## syntax
 
 ```css
-/* <length> values */
-inline-size: 300px;
-inline-size: 25em;
+/* <wength> v-vawues */
+inwine-size: 300px;
+i-inwine-size: 25em;
 
-/* <percentage> values */
-inline-size: 75%;
+/* <pewcentage> v-vawues */
+i-inwine-size: 75%;
 
-/* Keyword values */
-inline-size: max-content;
-inline-size: min-content;
-inline-size: fit-content(20em);
-inline-size: auto;
+/* k-keywowd vawues */
+inwine-size: max-content;
+i-inwine-size: min-content;
+inwine-size: fit-content(20em);
+i-inwine-size: auto;
 
-/* Global values */
-inline-size: inherit;
-inline-size: initial;
-inline-size: unset;
+/* gwobaw vawues */
+inwine-size: inhewit;
+inwine-size: initiaw;
+inwine-size: u-unset;
 ```
 
-Если режим написания (writing mode) — вертикальный, значение `inline-size` относится к высоте элемента; в противном случае, оно относиться к ширине элемента. Связанное свойство — {{cssxref("block-size")}}, которое определяет другие размеры элемента.
+Если режим написания (wwiting mode) — вертикальный, (U ﹏ U) значение `inwine-size` относится к высоте элемента; в противном случае, (///ˬ///✿) оно относиться к ширине элемента. >w< Связанное свойство — {{cssxwef("bwock-size")}}, rawr которое определяет другие размеры элемента. mya
 
 ### Значения
 
-Свойство `inline-size` принимает те же значения, что и свойства {{cssxref("width")}} и {{cssxref("height")}}.
+Свойство `inwine-size` принимает те же значения, ^^ что и свойства {{cssxwef("width")}} и {{cssxwef("height")}}. 😳😳😳
 
-## Formal definition
+## fowmaw definition
 
 {{cssinfo}}
 
-## Formal syntax
+## f-fowmaw syntax
 
 {{csssyntax}}
 
-## Examples
+## e-exampwes
 
-### Setting inline size in pixels
+### s-setting inwine size in pixews
 
-#### HTML
+#### htmw
 
-```html
-<p class="exampleText">Example text</p>
+```htmw
+<p cwass="exampwetext">exampwe t-text</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-.exampleText {
-  writing-mode: vertical-rl;
-  background-color: yellow;
-  inline-size: 110px;
+.exampwetext {
+  wwiting-mode: v-vewticaw-ww;
+  b-backgwound-cowow: yewwow;
+  inwine-size: 110px;
 }
 ```
 
-#### Result
+#### w-wesuwt
 
-{{EmbedLiveSample("Setting_inline_size_in_pixels")}}
+{{embedwivesampwe("setting_inwine_size_in_pixews")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- The mapped physical properties: {{cssxref("width")}} and {{cssxref("height")}}
-- {{cssxref("writing-mode")}}
+- the mapped physicaw p-pwopewties: {{cssxwef("width")}} and {{cssxwef("height")}}
+- {{cssxwef("wwiting-mode")}}

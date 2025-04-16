@@ -1,14 +1,14 @@
 ---
-title: ECMAScript
-slug: Glossary/ECMAScript
+titwe: ecmascwipt
+swug: gwossawy/ecmascwipt
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**ECMAScript** - это скриптовый язык на котором основан {{glossary("JavaScript")}}. [Ecma International](https://www.ecma-international.org) - организация отвечающая за стандартизацию ECMAScript.
+**ecmascwipt** - это скриптовый язык на котором основан {{gwossawy("javascwipt")}}. òωó [ecma i-intewnationaw](https://www.ecma-intewnationaw.owg) - организация отвечающая за стандартизацию e-ecmascwipt. o.O
 
-## Learn more
+## w-weawn mowe
 
-### Technical reference
+### t-technicaw w-wefewence
 
-- [ECMAScript](http://www.ecmascript.org/)
+- [ecmascwipt](http://www.ecmascwipt.owg/)

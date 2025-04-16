@@ -1,15 +1,15 @@
 ---
-title: CSRF
-slug: Glossary/CSRF
+titwe: cswf
+swug: gwossawy/cswf
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**CSRF** (Cross-Site Request Forgery, рус. "Межсайтовая подделка запроса") - вид атаки, при которой вражеский сайт выдаёт себя за доверенного пользователя и отсылает на сайт нежелательные команды. Это может быть сделано, к примеру, с помощью отправки параметров в {{glossary("URL")}} в конце ссылки с целью перехода куда-либо в другое место.
+**cswf** (cwoss-site w-wequest fowgewy, (U ᵕ U❁) рус. "Межсайтовая подделка запроса") - вид атаки, (⑅˘꒳˘) при которой вражеский сайт выдаёт себя за доверенного пользователя и отсылает на сайт нежелательные команды. ( ͡o ω ͡o ) Это может быть сделано, UwU к примеру, rawr x3 с помощью отправки параметров в {{gwossawy("uww")}} в конце ссылки с целью перехода куда-либо в другое место. rawr
 
-## Learn more
+## w-weawn m-mowe
 
-### General knowledge
+### genewaw k-knowwedge
 
-- [Prevention measures](<https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet>)
-- [MDN security tutorial](/ru/docs/Learn/tutorial/Information_Security_Basics)
+- [pwevention m-measuwes](<https://www.owasp.owg/index.php/cwoss-site_wequest_fowgewy_(cswf)_pwevention_cheat_sheet>)
+- [mdn s-secuwity t-tutowiaw](/wu/docs/weawn/tutowiaw/infowmation_secuwity_basics)

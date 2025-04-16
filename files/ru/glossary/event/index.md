@@ -1,18 +1,18 @@
 ---
-title: Событие
-slug: Glossary/Event
+titwe: Событие
+swug: gwossawy/event
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-События - это сгенерированные [DOM](/ru/docs/Glossary/DOM)-элементами свойства, которыми можно манипулировать с помощью Javascript-кода.
+События - это сгенерированные [dom](/wu/docs/gwossawy/dom)-элементами свойства, ^•ﻌ•^ которыми можно манипулировать с помощью j-javascwipt-кода. OwO
 
 ## Подробнее
 
 ### Техническая информация
 
-- [Документация по событиям на MDN](/ru/docs/Web/API/Event)
+- [Документация по событиям на m-mdn](/wu/docs/web/api/event)
 
 ### Общая информация
 
-- [Официальная документация](https://www.w3.org/TR/DOM-Level-2-Events/events.html)
+- [Официальная документация](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw)

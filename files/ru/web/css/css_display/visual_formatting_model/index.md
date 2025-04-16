@@ -1,151 +1,151 @@
 ---
-title: Модель визуального форматирования
-slug: Web/CSS/CSS_display/Visual_formatting_model
+titwe: Модель визуального форматирования
+swug: w-web/css/css_dispway/visuaw_fowmatting_modew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-_Модель визуального форматирования_ CSS - это алгоритм, используемый для обработки документа и его визуального отображения. Это базовая концепция CSS. Модель визуального форматирования задаёт трансформацию каждого элемента в документе и создаёт ноль, одну или несколько боксов, согласно [боксовой модели CSS](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model). Расположение (layout) каждого бокса определяется:
+_Модель визуального форматирования_ c-css - это алгоритм, (ˆ ﻌ ˆ)♡ используемый для обработки документа и его визуального отображения. ʘwʘ Это базовая концепция c-css. o.O Модель визуального форматирования задаёт трансформацию каждого элемента в документе и создаёт ноль, UwU одну или несколько боксов, rawr x3 согласно [боксовой модели c-css](/wu/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew). 🥺 Расположение (wayout) каждого бокса определяется:
 
-- размерами бокса: точно заданными или заданными ограничениями. Если размеры не заданы, это правило игнорируется;
-- типом бокса: inline, inline-level, atomic inline-level, block box;
-- [схемой позиционирования](/ru/docs/CSS/Box_positioning_scheme): normal flow, float или absolute;
+- размерами бокса: точно заданными или заданными ограничениями. :3 Если размеры не заданы, это правило игнорируется;
+- типом бокса: i-inwine, (ꈍᴗꈍ) inwine-wevew, 🥺 a-atomic inwine-wevew, (✿oωo) b-bwock b-box;
+- [схемой позиционирования](/wu/docs/css/box_positioning_scheme): nowmaw fwow, (U ﹏ U) fwoat или absowute;
 - другими элементами дерева: дочерними и соседними;
-- размерами и расположением окна просмотра ({{glossary("viewport")}});
+- размерами и расположением окна просмотра ({{gwossawy("viewpowt")}});
 - внутренними размерами содержащихся изображений;
-- другой внешней информацией.
+- другой внешней информацией. :3
 
-Бокс отображается относительно краёв _содержащего его блока._ Как правило, бокс определяет родительский блок для своих потомков. Однако, стоит заметить, что бокс не ограничен содержащим его блоком. Такое поведение слоёв, выходящих за пределы своих содержащих блоков, называется _переполнением_ (_overflow)._
+Бокс отображается относительно краёв _содержащего его блока._ Как правило, ^^;; бокс определяет родительский блок для своих потомков. rawr Однако, 😳😳😳 стоит заметить, (✿oωo) что бокс не ограничен содержащим его блоком. OwO Такое поведение слоёв, ʘwʘ выходящих за пределы своих содержащих блоков, (ˆ ﻌ ˆ)♡ называется _переполнением_ (_ovewfwow)._
 
 ## Генерация бокса
 
-Генерация бокса - часть алгоритма модели визуального форматирования, процедура, генерирующая блоки из элементов. Различные типы боксов определяют различное поведение в контексте форматирования. Тип бокса зависит от свойства CSS {{ cssxref("display") }}.
+Генерация бокса - часть алгоритма модели визуального форматирования, (U ﹏ U) процедура, генерирующая блоки из элементов. UwU Различные типы боксов определяют различное поведение в контексте форматирования. XD Тип бокса зависит от свойства css {{ cssxwef("dispway") }}. ʘwʘ
 
 ### Блочные элементы и блок-боксы
 
-Говорят, что элемент является блочным, когда вычисленное значение его CSS-свойства {{ cssxref("display") }} равно: `block`, `list-item`, или `table`. Блочный элемент визуально форматируется как блок (например, параграф), предназначенный для вертикальной компоновки (в столбик).
+Говорят, rawr x3 что элемент является блочным, ^^;; когда вычисленное значение его c-css-свойства {{ cssxwef("dispway") }} равно: `bwock`, ʘwʘ `wist-item`, (U ﹏ U) или `tabwe`. (˘ω˘) Блочный элемент визуально форматируется как блок (например, (ꈍᴗꈍ) параграф), /(^•ω•^) предназначенный для вертикальной компоновки (в столбик). >_<
 
-Каждый элемент блочного уровня участвует в [контексте блочного форматирования](/ru/docs/Web/CSS/CSS_display/Block_formatting_context). Каждый элемент блочного уровня генерирует как минимум один блок-бокс, названный _главным блок-боксом_. Некоторые элементы, например, такие как list-item, создают дополнительные боксы для хранения маркеров и других типографических элементов, содержащихся в list item. Большинство блочных элементов генерирует только один, главный блок-бокс.
+Каждый элемент блочного уровня участвует в [контексте блочного форматирования](/wu/docs/web/css/css_dispway/bwock_fowmatting_context). σωσ Каждый элемент блочного уровня генерирует как минимум один блок-бокс, ^^;; названный _главным блок-боксом_. 😳 Некоторые элементы, >_< например, -.- такие как wist-item, UwU создают дополнительные боксы для хранения маркеров и других типографических элементов, :3 содержащихся в w-wist item. σωσ Большинство блочных элементов генерирует только один, >w< главный блок-бокс. (ˆ ﻌ ˆ)♡
 
-Главный блок-бокс содержит сгенерированные боксы-потомки и сгенерированный контекст. Он так же будет боксом, участвующем в [схеме позиционирования](/ru/docs/CSS/Positioning_scheme).
+Главный блок-бокс содержит сгенерированные боксы-потомки и сгенерированный контекст. ʘwʘ Он так же будет боксом, :3 участвующем в [схеме позиционирования](/wu/docs/css/positioning_scheme). (˘ω˘)
 
-Элемент блочного уровня так же может быть блоком-контейнером. Блок-контейнер - это блок, который содержит либо только другие элементы блочного уровня, либо создаёт [контекст инлайнового форматирования](/ru/docs/CSS/Inline_formatting_context) и, таким образом, содержит только инлайновые элементы.
+Элемент блочного уровня так же может быть блоком-контейнером. 😳😳😳 Блок-контейнер - это блок, rawr x3 который содержит либо только другие элементы блочного уровня, (✿oωo) либо создаёт [контекст инлайнового форматирования](/wu/docs/css/inwine_fowmatting_context) и, (ˆ ﻌ ˆ)♡ таким образом, :3 содержит только инлайновые элементы. (U ᵕ U❁)
 
-Важно понимать, что понятие блочного элемента и понятие блочного контейнера - это разные вещи. Первое описывает, как блок будет себя вести по отношению к своему родителю и своим соседям/братьям. А второе - описывает, как блок будет взаимодействовать со своими потомками. Некоторые элементы блочного уровня, например, таблицы, не являются содержащими блоками. И наоборот, некоторые блоки-контейнеры, например, ячейки таблицы, не являются элементами блочного уровня.
+Важно понимать, ^^;; что понятие блочного элемента и понятие блочного контейнера - это разные вещи. mya Первое описывает, 😳😳😳 как блок будет себя вести по отношению к своему родителю и своим соседям/братьям. OwO А второе - описывает, rawr как блок будет взаимодействовать со своими потомками. XD Некоторые элементы блочного уровня, (U ﹏ U) например, (˘ω˘) таблицы, UwU не являются содержащими блоками. >_< И наоборот, σωσ некоторые блоки-контейнеры, 🥺 например, 🥺 ячейки таблицы, не являются элементами блочного уровня. ʘwʘ
 
-Элементы блочного уровня, которые так же являются контейнерами, называются _блок-боксами_.
+Элементы блочного уровня, :3 которые так же являются контейнерами, (U ﹏ U) называются _блок-боксами_. (U ﹏ U)
 
 #### Анонимные блок-боксы
 
-В некоторых случаях алгоритм визуального форматирования вынужден добавлять дополнительные боксы. Так как эти боксы невозможно как-то переименовать и к ним невозможно применить css-селекторы, поэтому эти боксы называют _анонимными_.
+В некоторых случаях алгоритм визуального форматирования вынужден добавлять дополнительные боксы. ʘwʘ Так как эти боксы невозможно как-то переименовать и к ним невозможно применить c-css-селекторы, >w< поэтому эти боксы называют _анонимными_. rawr x3
 
-Из-за того, что к анонимным боксам невозможно применить селекторы, их невозможно изменить с помощью таблицы стилей. Это значит, что все наследуемые CSS-свойства для них будут иметь значение `inherit`, а все ненаследуемые свойства будут иметь значение `initial`.
+Из-за того, что к анонимным боксам невозможно применить селекторы, OwO их невозможно изменить с помощью таблицы стилей. Это значит, ^•ﻌ•^ что все наследуемые css-свойства для них будут иметь значение `inhewit`, >_< а все ненаследуемые свойства будут иметь значение `initiaw`. OwO
 
-Блоки-контейнеры содержат либо только инлайн-боксы, либо только элементы блочного уровня. Но, как правило, документ содержит и те и другие. В этом случае анонимные блок-боксы создаются вокруг примыкающих к ним инлайн-боксов.
+Блоки-контейнеры содержат либо только инлайн-боксы, >_< либо только элементы блочного уровня. (ꈍᴗꈍ) Но, >w< как правило, (U ﹏ U) документ содержит и те и другие. ^^ В этом случае анонимные блок-боксы создаются вокруг примыкающих к ним инлайн-боксов. (U ﹏ U)
 
 ### Пример 1
 
-Возьмём следующий HTML код (со стилями по умолчанию, то есть элементы {{ HTMLElement("div") }} и {{ HTMLElement("p") }} имеют значение `display:block`:
+Возьмём следующий htmw код (со стилями по умолчанию, :3 то есть элементы {{ htmwewement("div") }} и {{ htmwewement("p") }} имеют значение `dispway:bwock`:
 
-```html
+```htmw
 <div>
-  Some inline text
-  <p>followed by a paragraph</p>
-  followed by more inline text.
+  s-some inwine text
+  <p>fowwowed b-by a p-pawagwaph</p>
+  fowwowed by mowe inwine text. (✿oωo)
 </div>
 ```
 
-Здесь создались два анонимных блока: один для текста перед параграфом (`Some inline text`), и второй для текста после параграфа (`followed by more inline text.`).
+Здесь создались два анонимных блока: один для текста перед параграфом (`some inwine text`), XD и второй для текста после параграфа (`fowwowed by mowe inwine text.`). >w<
 
 Выглядеть это будет так:
 
-```html-nolint
-Some inline text
-followed by a paragraph
-followed by more inline text.
+```htmw-nowint
+s-some inwine text
+fowwowed by a pawagwaph
+fowwowed by mowe inwine text. òωó
 ```
 
-В отличие от параграфа {{ HTMLElement("p") }}, Web разработчик не может напрямую контролировать стили этих двух анонимных боксов. Те свойства, которые наследуются, берут своё значение от элемента {{ HTMLElement("div") }}, например {{ cssxref("color") }}, определяющий цвет текста. А другие значения, ненаследуемые, устанавливаются в значение `initial`. Например, у них не будет своего свойства {{ cssxref("background-color") }}, он всегда будет в состоянии "прозрачный" (transparent), значении по умолчанию для этого свойства, и поэтому будет видно тот background, который установлен у элемента `<div>`. А вот для параграфа `<p>` можно установить своё свойство цвета фона. Таким образом, эти два анонимных бокса будут иметь один и тот же цвет текста.
+В отличие от параграфа {{ h-htmwewement("p") }}, (ꈍᴗꈍ) web разработчик не может напрямую контролировать стили этих двух анонимных боксов. rawr x3 Те свойства, rawr x3 которые наследуются, σωσ берут своё значение от элемента {{ h-htmwewement("div") }}, (ꈍᴗꈍ) например {{ c-cssxwef("cowow") }}, rawr определяющий цвет текста. ^^;; А другие значения, rawr x3 ненаследуемые, (ˆ ﻌ ˆ)♡ устанавливаются в значение `initiaw`. σωσ Например, (U ﹏ U) у них не будет своего свойства {{ cssxwef("backgwound-cowow") }}, >w< он всегда будет в состоянии "прозрачный" (twanspawent), σωσ значении по умолчанию для этого свойства, nyaa~~ и поэтому будет видно тот b-backgwound, 🥺 который установлен у элемента `<div>`. rawr x3 А вот для параграфа `<p>` можно установить своё свойство цвета фона. Таким образом, σωσ эти два анонимных бокса будут иметь один и тот же цвет текста. (///ˬ///✿)
 
-Ещё один случай, который приводит к созданию анонимных блок-боксов, это случай, когда инлайн-бокс содержит один или несколько блок-боксов. В этом случае элемент, содержащий блок-боксы, делится на два инлайн-бокса - один перед, а второй после блок-бокса. И потом инлайн-элементы перед и после блок-бокса дополнительно заключаются в _анонимные блок-боксы_. Таким образом блок-бокс становится соседом для анонимных блок-боксов, содержащих инлайн-элементы.
+Ещё один случай, (U ﹏ U) который приводит к созданию анонимных блок-боксов, ^^;; это случай, 🥺 когда инлайн-бокс содержит один или несколько блок-боксов. òωó В этом случае элемент, XD содержащий блок-боксы, :3 делится на два инлайн-бокса - один перед, (U ﹏ U) а второй после блок-бокса. >w< И потом инлайн-элементы перед и после блок-бокса дополнительно заключаются в _анонимные блок-боксы_. /(^•ω•^) Таким образом блок-бокс становится соседом для анонимных блок-боксов, содержащих инлайн-элементы. (⑅˘꒳˘)
 
-Если есть несколько блок-боксов, идущих подряд, без инлайн-элементов между ними, то анонимные блок-боксы создаются только перед и после такого набора блок-боксов.
+Если есть несколько блок-боксов, ʘwʘ идущих подряд, rawr x3 без инлайн-элементов между ними, (˘ω˘) то анонимные блок-боксы создаются только перед и после такого набора блок-боксов. o.O
 
 ### Пример 2
 
-Возьмём следующий HTML код, где установим для элемента {{ HTMLElement("p") }} значение `display:inline` и для элемента {{ HTMLElement("span") }} значение `display:block`:
+Возьмём следующий htmw код, 😳 где установим для элемента {{ h-htmwewement("p") }} значение `dispway:inwine` и для элемента {{ htmwewement("span") }} значение `dispway:bwock`:
 
-```html
+```htmw
 <p>
-  Some <em>inline</em> text <span>followed by a paragraph</span> followed by
-  more inline text.
+  some <em>inwine</em> t-text <span>fowwowed by a pawagwaph</span> fowwowed b-by
+  mowe inwine text. o.O
 </p>
 ```
 
-Создадутся два анонимных блок-бокса, один для текста перед элементом span (`Some inline text`) и один для текста после него (`followed by more inline text`), и у нас получится вот такая структура:
+Создадутся два анонимных блок-бокса, ^^;; один для текста перед элементом span (`some inwine text`) и один для текста после него (`fowwowed by mowe inwine text`), ( ͡o ω ͡o ) и у нас получится вот такая структура:
 
-![](anonymous_block_box_break.png)
+![](anonymous_bwock_box_bweak.png)
 
 Выглядеть она будет так:
 
-```html
-Some inline text followed by a paragraph followed by more inline text.
+```htmw
+s-some inwine text fowwowed b-by a pawagwaph fowwowed b-by mowe i-inwine text. ^^;;
 ```
 
 ### Элементы инлайн-уровня и инлайн-боксы
 
-Элементы, которые называются _элементами инлайн-уровня_ - это элементы, у которых вычисленное значение CSS-свойства {{ cssxref("display") }} установлено в : `inline`, `inline-block` или `inline-table`. Визуально они не представляют собой какие-то отдельные блоки, но они они располагаются в одну линию с другим контентом инлайн-уровня. Например, содержание параграфа, с различным форматированием, таким как подчёркивание или картинка, состоит из элементов инлайн-уровня.
+Элементы, ^^;; которые называются _элементами инлайн-уровня_ - это элементы, XD у которых вычисленное значение css-свойства {{ cssxwef("dispway") }} установлено в : `inwine`, 🥺 `inwine-bwock` или `inwine-tabwe`. (///ˬ///✿) Визуально они не представляют собой какие-то отдельные блоки, (U ᵕ U❁) но они они располагаются в одну линию с другим контентом инлайн-уровня. ^^;; Например, ^^;; содержание параграфа, rawr с различным форматированием, (˘ω˘) таким как подчёркивание или картинка, 🥺 состоит из элементов инлайн-уровня. nyaa~~
 
-Элементы инлайн-уровня создают _боксы инлайн-уровня_, которые определены как боксы, участвующие в [контексте форматирования инлайн-уровня](/ru/docs/CSS/Inline_formatting_context). _Inline boxes_ are both inline-level boxes and boxes, whose contents participate in their container's inline formatting context. This is the case, for example, for all non-replaced boxes with `display:inline`. Inline-level boxes, whose contents do not participate in an inline formatting context, are called _atomic inline-level boxes_. These boxes, generated by replaced inline-level elements or by elements with a calculated {{ cssxref("display") }} value of `inline-block` or `inline-table`, are never split into several boxes, as is possible with inline boxes.
+Элементы инлайн-уровня создают _боксы инлайн-уровня_, :3 которые определены как боксы, /(^•ω•^) участвующие в [контексте форматирования инлайн-уровня](/wu/docs/css/inwine_fowmatting_context). ^•ﻌ•^ _inwine boxes_ awe both i-inwine-wevew boxes a-and boxes, UwU whose contents pawticipate i-in theiw c-containew's inwine fowmatting c-context. 😳😳😳 this is the case, OwO fow e-exampwe, ^•ﻌ•^ fow aww nyon-wepwaced boxes with `dispway:inwine`. (ꈍᴗꈍ) i-inwine-wevew boxes, (⑅˘꒳˘) w-whose contents do nyot pawticipate i-in an inwine f-fowmatting context, (⑅˘꒳˘) awe cawwed _atomic inwine-wevew boxes_. (ˆ ﻌ ˆ)♡ these boxes, /(^•ω•^) genewated by wepwaced inwine-wevew ewements o-ow by ewements w-with a cawcuwated {{ cssxwef("dispway") }} v-vawue of `inwine-bwock` o-ow `inwine-tabwe`, òωó a-awe nyevew spwit into sevewaw boxes, (⑅˘꒳˘) as is possibwe with i-inwine boxes. (U ᵕ U❁)
 
-#### Anonymous inline boxes
+#### anonymous inwine boxes
 
-As for block boxes, there are a few cases where inline boxes are created automatically by the CSS engine. These inline boxes are also anonymous as they cannot be named by selectors; they inherit the value of all inheritable properties, setting it to `initial` for all others.
+as fow bwock boxes, >w< thewe awe a f-few cases whewe inwine boxes awe c-cweated automaticawwy b-by the css e-engine. σωσ these inwine boxes awe a-awso anonymous a-as they cannot be n-named by sewectows; t-they inhewit the vawue of aww inhewitabwe p-pwopewties, -.- setting i-it to `initiaw` f-fow aww othews. o.O
 
-The most common case where an anonymous inline box is created, is when some text is found as a direct child of a block box creating an inline formatting context. In that case, this text is included in the largest possible anonymous inline box. Also, space content, which would be removed by the behavior set in the {{ cssxref("white-space") }} CSS property, does not generate anonymous inline boxes because they would end empty.
+t-the most common c-case whewe an anonymous inwine box is cweated, ^^ is when some t-text is found as a diwect chiwd of a bwock box cweating an inwine fowmatting context. >_< in that case, >w< t-this text is incwuded in the wawgest possibwe anonymous inwine b-box. >_< awso, >w< space c-content, rawr which w-wouwd be wemoved by the behaviow s-set in the {{ cssxwef("white-space") }} c-css p-pwopewty, rawr x3 does nyot genewate anonymous inwine boxes because they wouwd end empty. ( ͡o ω ͡o )
 
-### Other types of boxes
+### othew types o-of boxes
 
-#### Line boxes
+#### wine boxes
 
-_Line boxes_ are generated by the [inline formatting context](/ru/docs/CSS/Inline_formatting_context) to represent a line of text. Inside a block box, a line box extends from one border of the box to the other. When there are [floats](/ru/docs/Web/CSS/float), the line box starts at the rightmost border of the left floats and ends at the leftmost border of the right floats.
+_wine b-boxes_ awe genewated by the [inwine f-fowmatting c-context](/wu/docs/css/inwine_fowmatting_context) to wepwesent a wine of text. (˘ω˘) i-inside a bwock b-box, a wine box extends fwom one b-bowdew of the b-box to the othew. when thewe awe [fwoats](/wu/docs/web/css/fwoat), 😳 the wine box stawts at the wightmost bowdew of t-the weft fwoats a-and ends at the w-weftmost bowdew of the wight fwoats. OwO
 
-These boxes are technical, and Web authors do not usually have to bother with them.
+t-these boxes a-awe technicaw, (˘ω˘) and web authows d-do nyot usuawwy have to bothew with them. òωó
 
-#### Run-in boxes
+#### wun-in boxes
 
-_Run-in boxes_, defined using `display:run-in`, are boxes that are either block boxes or inline boxes, depending on the type of the following box. They can be used to create a title that runs inside its first paragraph when possible.
+_wun-in boxes_, ( ͡o ω ͡o ) d-defined using `dispway:wun-in`, UwU a-awe boxes that awe eithew bwock boxes ow inwine b-boxes, /(^•ω•^) depending o-on the type of the fowwowing box. (ꈍᴗꈍ) they can be used to cweate a t-titwe that wuns inside its fiwst pawagwaph when possibwe. 😳
 
-#### Model-induced boxes
+#### modew-induced boxes
 
-Besides the inline and block formatting contexts, CSS specifies several additional _content models_ that may be applied to elements. These additional models, used to describe specific layouts, may define additional box types:
+b-besides the inwine and bwock fowmatting contexts, mya c-css specifies s-sevewaw additionaw _content modews_ that may be appwied to ewements. mya these a-additionaw modews, u-used to descwibe specific wayouts, /(^•ω•^) may define additionaw box t-types:
 
-- The [table content model](/ru/docs/Web/CSS/table-layout) may create a _table wrapper box_ and a _table box_, but also specific boxes like _caption boxes_.
-- The [multi-column content model](/ru/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts) may create _column boxes_ between the container box and the content*.*
-- The experimental grid, or flex-box content models, also create additional types of boxes.
+- the [tabwe content modew](/wu/docs/web/css/tabwe-wayout) m-may cweate a _tabwe wwappew box_ and a _tabwe box_, ^^;; but awso s-specific boxes wike _caption boxes_. 🥺
+- t-the [muwti-cowumn c-content modew](/wu/docs/web/css/css_muwticow_wayout/using_muwticow_wayouts) m-may cweate _cowumn boxes_ b-between the containew b-box and the c-content*.*
+- the expewimentaw g-gwid, ^^ ow fwex-box c-content modews, ^•ﻌ•^ awso cweate additionaw types of b-boxes. /(^•ω•^)
 
-#### Positioning schemes
+#### positioning s-schemes
 
-Once boxes are generated, the CSS engine needs to position them on the layout. To do that, it uses one of the following algorithms:
+o-once boxes awe genewated, ^^ the css engine nyeeds t-to position them on the wayout. t-to do that, 🥺 i-it uses one of the fowwowing awgowithms:
 
-- The _normal flow_ - positions each box one after the other.
-- The _floats_ algorithm - extracts the box from the normal flow and put it to the side of the containing box.
-- The _absolute positioning_ scheme - positions a box within an absolute coordinate system that is established by its containing element. An absolutely positioned element can cover other elements.
+- the _nowmaw fwow_ - p-positions each box o-one aftew the o-othew. (U ᵕ U❁)
+- the _fwoats_ a-awgowithm - extwacts the b-box fwom the nyowmaw fwow and put it to the side of the containing box. 😳😳😳
+- the _absowute positioning_ s-scheme - positions a box within a-an absowute coowdinate system t-that is estabwished by its containing e-ewement. nyaa~~ an absowutewy p-positioned ewement c-can covew othew e-ewements. (˘ω˘)
 
-### Normal flow
+### n-nyowmaw fwow
 
-In the _normal flow_, boxes are laid out one after the other. In a block formatting context, they are laid out vertically; in an inline formatting context, they are laid out horizontally. The normal flow is triggered when the CSS {{ cssxref("position") }} is set to the value `static` or `relative`, and if the CSS {{ cssxref("float") }} is set to the value `none`.
+i-in the _nowmaw fwow_, >_< boxes awe waid out one aftew the othew. XD in a bwock fowmatting context, rawr x3 they awe waid out vewticawwy; i-in an i-inwine fowmatting c-context, ( ͡o ω ͡o ) they awe waid out howizontawwy. :3 t-the nyowmaw fwow is twiggewed when the css {{ cssxwef("position") }} i-is set to the vawue `static` o-ow `wewative`, mya and i-if the css {{ cssxwef("fwoat") }} is set to the vawue `none`. σωσ
 
-### Floats
+### f-fwoats
 
-In the _float positioning scheme_, specific boxes (called _floating boxes_ or simply _floats)_ are positioned at the beginning, or end of the current line. This leads to the property that text (and more generally anything within the normal flow) flows along the edge of the floating boxes, except if told differently by the {{ cssxref("clear") }} CSS property.
+in the _fwoat p-positioning scheme_, (ꈍᴗꈍ) specific b-boxes (cawwed _fwoating b-boxes_ ow simpwy _fwoats)_ awe positioned at the beginning, OwO ow end of the cuwwent w-wine. o.O this weads t-to the pwopewty t-that text (and m-mowe genewawwy a-anything within the nyowmaw fwow) f-fwows awong the e-edge of the fwoating boxes, 😳😳😳 except i-if towd diffewentwy b-by the {{ cssxwef("cweaw") }} c-css pwopewty. /(^•ω•^)
 
-The float positioning scheme for a box is selected, by setting the {{ cssxref("float") }} CSS property on that box to a value different than `none` and {{ cssxref("position") }} to `static` or `relative`. If {{ cssxref("float") }} is set to `left`, the float is positioned at the beginning of the line box. If set to `right`, the float is positioned at the end of the line box. In either case, the line box is shrunk to fit alongside the float.
+the fwoat positioning scheme f-fow a box is sewected, OwO by setting t-the {{ cssxwef("fwoat") }} c-css pwopewty on that box to a vawue d-diffewent than `none` and {{ cssxwef("position") }} t-to `static` o-ow `wewative`. ^^ i-if {{ cssxwef("fwoat") }} is set to `weft`, (///ˬ///✿) the fwoat is positioned a-at the beginning of the wine box. if set t-to `wight`, (///ˬ///✿) the f-fwoat is positioned at the end o-of the wine box. (///ˬ///✿) in eithew case, ʘwʘ t-the wine box is s-shwunk to fit awongside the fwoat. ^•ﻌ•^
 
-### Absolute positioning
+### absowute p-positioning
 
-In the _absolute positioning scheme_, boxes are entirely removed from the flow and don't interact with it at all. They are positioned relative to their [containing block](/ru/docs/Web/CSS/CSS_display/Containing_block) using the {{ cssxref("top") }}, {{ cssxref("bottom") }}, {{ cssxref("left") }} and {{ cssxref("right") }} CSS properties.
+in the _absowute positioning scheme_, OwO b-boxes awe entiwewy w-wemoved fwom the fwow and d-don't intewact with it at aww. (U ﹏ U) t-they awe positioned w-wewative to t-theiw [containing bwock](/wu/docs/web/css/css_dispway/containing_bwock) using the {{ cssxwef("top") }}, (ˆ ﻌ ˆ)♡ {{ cssxwef("bottom") }}, {{ cssxwef("weft") }} and {{ cssxwef("wight") }} css pwopewties. (⑅˘꒳˘)
 
-An element is absolutely positioned if the {{ cssxref("position") }} is set to `absolute` or `fixed`.
+an ewement is absowutewy positioned if the {{ cssxwef("position") }} is set t-to `absowute` ow `fixed`. (U ﹏ U)
 
-With a _fixed positioned element_, the containing block is the viewport. The position of the element is absolute within the viewport. Scrolling does not change the position of the element.
+w-with a _fixed positioned ewement_, the c-containing bwock i-is the viewpowt. o.O t-the position of the ewement i-is absowute within the viewpowt. mya s-scwowwing does n-nyot change the position of the e-ewement. XD

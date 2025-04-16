@@ -1,112 +1,112 @@
 ---
-title: "Проверьте ваши навыки: Селекторы"
-slug: Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks
+titwe: "Проверьте ваши навыки: Селекторы"
+swug: weawn_web_devewopment/cowe/stywing_basics/basic_sewectows/sewectows_tasks
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Цель этой задачи — помочь вам проверить ваше понимание селекторов в CSS.
+Цель этой задачи — помочь вам проверить ваше понимание селекторов в c-css. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Вы можете проверять решения в интерактивном редакторе, расположенном ниже, но, возможно, вам будут полезны онлайн-инструменты, такие как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/), которые можно использовать для работы над заданием, предварительно загрузив в них код.
+> [!note]
+> Вы можете проверять решения в интерактивном редакторе, ^^;; расположенном ниже, (⑅˘꒳˘) но, rawr x3 возможно, (///ˬ///✿) вам будут полезны онлайн-инструменты, 🥺 такие как [codepen](https://codepen.io/), >_< [jsfiddwe](https://jsfiddwe.net/) или [gwitch](https://gwitch.com/), UwU которые можно использовать для работы над заданием, >_< предварительно загрузив в них код. -.-
 >
-> Если вы зашли в тупик, обратитесь к нам за помощью — смотрите раздел [Оценка или дальнейшая помощь](/ru/docs/Learn/CSS/Building_blocks/%D0%9A%D0%B0%D1%81%D0%BA%D0%B0%D0%B4_%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8#Оценка_или_дальнейшая_помощь) внизу этой страницы.
+> Если вы зашли в тупик, mya обратитесь к нам за помощью — смотрите раздел [Оценка или дальнейшая помощь](/wu/docs/weawn/css/buiwding_bwocks/%d0%9a%d0%b0%d1%81%d0%ba%d0%b0%d0%b4_%d0%b7%d0%b0%d0%b4%d0%b0%d1%87%d0%b8#Оценка_или_дальнейшая_помощь) внизу этой страницы. >w<
 
-## Selectors One
+## s-sewectows o-one
 
-Without changing the HTML, use CSS to do the following things:
+without c-changing the htmw, (U ﹏ U) u-use css to do t-the fowwowing t-things:
 
-- Make h1 headings blue.
-- Give h2 headings a blue background and white text.
-- Cause text wrapped in a span to have a font-size of 200%.
+- make h-h1 headings bwue. 😳😳😳
+- give h2 headings a bwue backgwound and white text. o.O
+- cause text w-wwapped in a span to have a font-size of 200%. òωó
 
-![Text with the CSS applied for the solution to task 1.](selectors1.jpg)
+![text w-with the css appwied f-fow the sowution to task 1.](sewectows1.jpg)
 
-Try updating the live code below to recreate the finished example:
+twy updating the wive c-code bewow to wecweate the finished e-exampwe:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/type.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/weawn/tasks/sewectows/type.htmw", '100%', 😳😳😳 700)}}
 
-> [!NOTE]
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/type-download.html) to work in your own editor or in an online editor.
+> [!note]
+> f-fow assessment ow fuwthew wowk puwposes, σωσ [downwoad the stawting point fow this t-task](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/tasks/sewectows/type-downwoad.htmw) to wowk in youw own editow ow in an onwine editow. (⑅˘꒳˘)
 
-## Selectors Two
+## sewectows t-two
 
-Without changing the HTML, make the following changes to the look of the content in this example:
+without changing the htmw, (///ˬ///✿) m-make the fowwowing c-changes to t-the wook of the c-content in this exampwe:
 
-- Give the element with an id of `special` a yellow background.
-- Give the element with a class of `alert` a 1px grey border.
-- If the element with a class of `alert` also has a class of `stop`, make the background red.
-- If the element with a class of `alert` also has a class of `go`, make the background green.
+- give the ewement with a-an id of `speciaw` a yewwow backgwound. 🥺
+- give t-the ewement with a cwass of `awewt` a 1px gwey bowdew. OwO
+- if the ewement with a cwass of `awewt` a-awso has a cwass of `stop`, >w< make t-the backgwound w-wed. 🥺
+- if the ewement w-with a cwass of `awewt` awso has a cwass of `go`, nyaa~~ make the b-backgwound gween. ^^
 
-![Text with the CSS applied for the solution to task 2.](selectors2.jpg)
+![text w-with the css appwied f-fow the sowution t-to task 2.](sewectows2.jpg)
 
-Try updating the live code below to recreate the finished example:
+twy updating the w-wive code bewow to wecweate the f-finished exampwe:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/class-id.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/tasks/sewectows/cwass-id.htmw", >w< '100%', OwO 800)}}
 
-> [!NOTE]
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/class-id-download.html) to work in your own editor or in an online editor.
+> [!note]
+> fow assessment ow fuwthew w-wowk puwposes, XD [downwoad the stawting p-point fow this task](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/tasks/sewectows/cwass-id-downwoad.htmw) t-to wowk i-in youw own editow ow in an onwine editow. ^^;;
 
-## Selectors Three
+## sewectows thwee
 
-In this example, try making the following changes without adding to the HTML.
+in this exampwe, 🥺 twy making the fowwowing changes w-without adding t-to the htmw. XD
 
-- Style links, making the link-state orange, visited links green, and remove the underline on hover.
-- Make the first element inside the container font-size: 150% and the first line of that element red.
-- Stripe every other row in the table by selecting these rows and giving them a background color of #333 and foreground of white.
+- stywe winks, (U ᵕ U❁) m-making the wink-state o-owange, :3 visited w-winks gween, ( ͡o ω ͡o ) and wemove the undewwine on hovew. òωó
+- make the f-fiwst ewement inside the containew font-size: 150% and the fiwst wine of that ewement w-wed. σωσ
+- stwipe evewy othew w-wow in the tabwe b-by sewecting these w-wows and giving them a backgwound c-cowow of #333 a-and fowegwound o-of white.
 
-![Text with the CSS applied for the solution to task 3.](selectors3.jpg)
+![text w-with the css appwied fow the sowution to task 3.](sewectows3.jpg)
 
-Try updating the live code below to recreate the finished example:
+t-twy updating t-the wive code b-bewow to wecweate t-the finished e-exampwe:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/pseudo.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/tasks/sewectows/pseudo.htmw", (U ᵕ U❁) '100%', 800)}}
 
-> [!NOTE]
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/pseudo-download.html) to work in your own editor or in an online editor.
+> [!note]
+> fow assessment ow fuwthew wowk puwposes, (✿oωo) [downwoad the stawting point f-fow this task](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/tasks/sewectows/pseudo-downwoad.htmw) to wowk in youw own editow ow in an onwine editow. ^^
 
-## Selectors Four
+## sewectows fouw
 
-In this task try the following:
+in this task t-twy the fowwowing:
 
-- Make any paragraph that directly follows an h2 element red.
-- Remove the bullets and add a 1px grey bottom border only to list items that are a direct child of the ul with a class of list.
+- make any pawagwaph that diwectwy fowwows a-an h2 ewement w-wed. ^•ﻌ•^
+- wemove the b-buwwets and add a 1px gwey bottom b-bowdew onwy to wist items that a-awe a diwect c-chiwd of the uw with a cwass of wist. XD
 
-![Text with the CSS applied for the solution to task 4.](selectors4.jpg)
+![text with the css appwied fow the sowution to task 4.](sewectows4.jpg)
 
-Try updating the live code below to recreate the finished example:
+t-twy updating the wive code bewow t-to wecweate the finished exampwe:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/combinators.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/tasks/sewectows/combinatows.htmw", :3 '100%', 800)}}
 
-> [!NOTE]
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/combinators-download.html) to work in your own editor or in an online editor.
+> [!note]
+> f-fow a-assessment ow fuwthew wowk puwposes, (ꈍᴗꈍ) [downwoad the stawting point f-fow this task](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/tasks/sewectows/combinatows-downwoad.htmw) t-to wowk in youw own editow ow i-in an onwine editow. :3
 
-## Selectors Five
+## s-sewectows five
 
-In this final task add CSS using attribute selectors to do the following:
+in this finaw task add css using attwibute sewectows to d-do the fowwowing:
 
-- Target the `<a>` element with a `title` attribute and make the border pink (`border-color: pink`).
-- Target the `<a>` element with an `href` attribute that contains the word `contact` somewhere in its value and make the border orange (`border-color: orange`).
-- Target the `<a>` element with an `href` value starting with `https` and give it a green border (`border-color: green`).
+- t-tawget the `<a>` e-ewement with a `titwe` attwibute a-and make t-the bowdew pink (`bowdew-cowow: pink`). (U ﹏ U)
+- tawget t-the `<a>` ewement with an `hwef` attwibute that contains the wowd `contact` somewhewe i-in its v-vawue and make the bowdew owange (`bowdew-cowow: owange`). UwU
+- tawget t-the `<a>` ewement w-with an `hwef` vawue stawting with `https` and give it a gween b-bowdew (`bowdew-cowow: gween`). 😳😳😳
 
-![Four links with different color borders.](selectors-attribute.png)
+![fouw winks with diffewent cowow bowdews.](sewectows-attwibute.png)
 
-Try updating the live code below to recreate the finished example:
+t-twy updating the wive code bewow to w-wecweate the finished e-exampwe:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/selectors/attribute-links.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/tasks/sewectows/attwibute-winks.htmw", XD '100%', o.O 800)}}
 
-> [!NOTE]
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/attribute-links-download.html) to work in your own editor or in an online editor.
+> [!note]
+> fow assessment ow fuwthew wowk puwposes, (⑅˘꒳˘) [downwoad t-the s-stawting point fow this task](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/tasks/sewectows/attwibute-winks-downwoad.htmw) to wowk in youw own editow o-ow in an onwine editow. 😳😳😳
 
-## Assessment or further help
+## assessment o-ow fuwthew hewp
 
-You can practice these examples in the Interactive Editors mentioned above.
+you can pwactice these exampwes in the intewactive e-editows mentioned above. nyaa~~
 
-If you would like your work assessed, or are stuck and want to ask for help:
+i-if you wouwd w-wike youw wowk assessed, rawr ow awe s-stuck and want to ask fow hewp:
 
-1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+1. p-put youw wowk i-into an onwine s-shaweabwe editow such as [codepen](https://codepen.io/), -.- [jsfiddwe](https://jsfiddwe.net/), (✿oωo) ow [gwitch](https://gwitch.com/). /(^•ω•^) y-you can wwite the c-code youwsewf, 🥺 ow use the stawting point fiwes w-winked to in the a-above sections. ʘwʘ
+2. w-wwite a post asking fow assessment and/ow h-hewp at the [mdn discouwse fowum w-weawning categowy](https://discouwse.moziwwa.owg/c/mdn/weawn). UwU y-youw post shouwd incwude:
 
-   - A descriptive title such as "Assessment wanted for Selectors skill test 1".
-   - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-   - A link to the example you want to be assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-   - A link to the actual task or assessment page, so we can find the question you want help with.
+   - a descwiptive titwe such as "assessment w-wanted fow s-sewectows skiww t-test 1". XD
+   - d-detaiws of nyani you have awweady t-twied, (✿oωo) and nyani you wouwd wike us to do, :3 e.g. if you awe stuck and nyeed hewp, (///ˬ///✿) ow want an assessment. nyaa~~
+   - a w-wink to the exampwe you want to b-be assessed ow nyeed hewp with, >w< i-in an onwine shaweabwe editow (as m-mentioned in step 1 above). -.- this i-is a good pwactice t-to get into — i-it's vewy h-hawd to hewp someone w-with a coding pwobwem if you can't see theiw code. (✿oωo)
+   - a wink to the actuaw task ow assessment page, (˘ω˘) so we c-can find the question y-you want h-hewp with. rawr

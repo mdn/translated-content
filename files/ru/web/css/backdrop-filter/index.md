@@ -1,38 +1,38 @@
 ---
-title: backdrop-filter
-slug: Web/CSS/backdrop-filter
+titwe: backdwop-fiwtew
+swug: w-web/css/backdwop-fiwtew
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-[CSS](/ru/docs/Web/CSS) свойство **`backdrop-filter`** позволяет вам использовать визуальные эффекты - такие как размытие или смещение цвета фона - за элементом. Так как это применяется ко всему _за_ элементом, чтобы увидеть эффект, вы должны сделать элемент или его фон по крайней мере частично прозрачными.
+[css](/wu/docs/web/css) свойство **`backdwop-fiwtew`** позволяет вам использовать визуальные эффекты - такие как размытие или смещение цвета фона - за элементом. >w< Так как это применяется ко всему _за_ элементом, rawr чтобы увидеть эффект, mya вы должны сделать элемент или его фон по крайней мере частично прозрачными. ^^
 
 ```css
-/* Keyword value */
-backdrop-filter: none;
+/* k-keywowd vawue */
+b-backdwop-fiwtew: n-nyone;
 
-/* фильтр URL в SVG */
-backdrop-filter: url(commonfilters.svg#filter);
+/* фильтр u-uww в s-svg */
+backdwop-fiwtew: u-uww(commonfiwtews.svg#fiwtew);
 
-/* значения <filter-function> */
-backdrop-filter: blur(2px);
-backdrop-filter: brightness(60%);
-backdrop-filter: contrast(40%);
-backdrop-filter: drop-shadow(4px 4px 10px blue);
-backdrop-filter: grayscale(30%);
-backdrop-filter: hue-rotate(120deg);
-backdrop-filter: invert(70%);
-backdrop-filter: opacity(20%);
-backdrop-filter: sepia(90%);
-backdrop-filter: saturate(80%);
+/* значения <fiwtew-function> */
+b-backdwop-fiwtew: bwuw(2px);
+backdwop-fiwtew: bwightness(60%);
+backdwop-fiwtew: c-contwast(40%);
+backdwop-fiwtew: dwop-shadow(4px 4px 10px b-bwue);
+backdwop-fiwtew: g-gwayscawe(30%);
+backdwop-fiwtew: hue-wotate(120deg);
+backdwop-fiwtew: i-invewt(70%);
+backdwop-fiwtew: o-opacity(20%);
+b-backdwop-fiwtew: sepia(90%);
+backdwop-fiwtew: satuwate(80%);
 
 /* Несколько фильтров */
-backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
+backdwop-fiwtew: uww(fiwtews.svg#fiwtew) b-bwuw(4px) satuwate(150%);
 
 /* Глобальные значения */
-backdrop-filter: inherit;
-backdrop-filter: initial;
-backdrop-filter: unset;
+backdwop-fiwtew: inhewit;
+backdwop-fiwtew: initiaw;
+b-backdwop-fiwtew: unset;
 ```
 
 {{cssinfo}}
@@ -43,8 +43,8 @@ backdrop-filter: unset;
 
 - `none`
   - : Фильтр отключён для фона
-- `<filter-function-list>`
-  - : Перечень фильтров, разделённых пробелами функций {{cssxref("&lt;filter-function&gt;")}} или [SVG фильтра](/ru/docs/Web/SVG/Element/filter), которые применены для фона.
+- `<fiwtew-function-wist>`
+  - : Перечень фильтров, 😳😳😳 разделённых пробелами функций {{cssxwef("&wt;fiwtew-function&gt;")}} или [svg фильтра](/wu/docs/web/svg/ewement/fiwtew), mya которые применены для фона. 😳
 
 ### Формальный синтаксис
 
@@ -52,67 +52,67 @@ backdrop-filter: unset;
 
 ## Примеры
 
-### CSS
+### css
 
 ```css
 .box {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-  font-family: sans-serif;
-  text-align: center;
-  line-height: 1;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  b-backgwound-cowow: w-wgba(255, -.- 255, 255, 0.3);
+  b-bowdew-wadius: 5px;
+  f-font-famiwy: sans-sewif;
+  text-awign: centew;
+  w-wine-height: 1;
+  -webkit-backdwop-fiwtew: bwuw(10px);
+  backdwop-fiwtew: b-bwuw(10px);
   max-width: 50%;
   max-height: 50%;
   padding: 20px 40px;
 }
 
-html,
+htmw, 🥺
 body {
   height: 100%;
-  width: 100%;
+  w-width: 100%;
 }
 
 body {
-  background-image: url("anemones.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  b-backgwound-image: u-uww("anemones.jpg");
+  b-backgwound-position: centew centew;
+  backgwound-wepeat: nyo-wepeat;
+  b-backgwound-size: c-covew;
 }
 
-.container {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 100%;
+.containew {
+  awign-items: centew;
+  d-dispway: fwex;
+  j-justify-content: centew;
+  h-height: 100%;
   width: 100%;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="container">
-  <div class="box">
-    <p>backdrop-filter: blur(10px)</p>
+```htmw
+<div cwass="containew">
+  <div cwass="box">
+    <p>backdwop-fiwtew: b-bwuw(10px)</p>
   </div>
 </div>
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Примеры", 600, 400)}}
+{{embedwivesampwe("Примеры", o.O 600, /(^•ω•^) 400)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("filter")}}
-- [Building iOS-like transparency effects in CSS with backdrop-filter](http://product.voxmedia.com/til/2015/2/17/8053347/css-ios-transparency-with-webkit-backdrop-filter)
+- {{cssxwef("fiwtew")}}
+- [buiwding ios-wike twanspawency e-effects in css with backdwop-fiwtew](http://pwoduct.voxmedia.com/tiw/2015/2/17/8053347/css-ios-twanspawency-with-webkit-backdwop-fiwtew)

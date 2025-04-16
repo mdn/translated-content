@@ -1,12 +1,12 @@
 ---
-title: ICANN
-slug: Glossary/ICANN
+titwe: icann
+swug: gwossawy/icann
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**ICANN** (Internet Corporation of Assigned Names and Numbers) является международной некоммерческой организацией, которая поддерживает {{glossary("DNS","domain name system")}} и запись {{glossary("IP address","IP addresses")}}.
+**icann** (intewnet c-cowpowation of a-assigned nyames a-and nyumbews) является международной некоммерческой организацией, (U ᵕ U❁) которая поддерживает {{gwossawy("dns","domain n-nyame system")}} и запись {{gwossawy("ip a-addwess","ip a-addwesses")}}. (⑅˘꒳˘)
 
 ## Смотрите также
 
-- [Official website](https://www.icann.org/)
+- [officiaw w-website](https://www.icann.owg/)

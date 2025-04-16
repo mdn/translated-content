@@ -1,121 +1,121 @@
 ---
-title: transform
-slug: Web/CSS/transform
+titwe: twansfowm
+swug: web/css/twansfowm
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS)-свойство **`transform`** позволяет вам поворачивать, масштабировать, наклонять или сдвигать элемент. Оно модифицирует координатное пространство для CSS [визуальной форматируемой модели](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model).
+[css](/wu/docs/web/css)-свойство **`twansfowm`** позволяет вам поворачивать, -.- масштабировать, 😳 наклонять или сдвигать элемент. mya Оно модифицирует координатное пространство для c-css [визуальной форматируемой модели](/wu/docs/web/css/css_dispway/visuaw_fowmatting_modew). (˘ω˘)
 
-{{InteractiveExample("CSS Demo: transform")}}
+{{intewactiveexampwe("css d-demo: twansfowm")}}
 
-```css interactive-example-choice
-transform: matrix(1, 2, 3, 4, 5, 6);
+```css i-intewactive-exampwe-choice
+t-twansfowm: m-matwix(1, >_< 2, 3, 4, 5, -.- 6);
 ```
 
-```css interactive-example-choice
-transform: translate(120px, 50%);
+```css i-intewactive-exampwe-choice
+t-twansfowm: twanswate(120px, 🥺 50%);
 ```
 
-```css interactive-example-choice
-transform: scale(2, 0.5);
+```css i-intewactive-exampwe-choice
+twansfowm: scawe(2, (U ﹏ U) 0.5);
 ```
 
-```css interactive-example-choice
-transform: rotate(0.5turn);
+```css intewactive-exampwe-choice
+twansfowm: w-wotate(0.5tuwn);
 ```
 
-```css interactive-example-choice
-transform: skew(30deg, 20deg);
+```css intewactive-exampwe-choice
+twansfowm: skew(30deg, >w< 20deg);
 ```
 
-```css interactive-example-choice
-transform: scale(0.5) translate(-100%, -100%);
+```css i-intewactive-exampwe-choice
+twansfowm: s-scawe(0.5) twanswate(-100%, mya -100%);
 ```
 
-```html interactive-example
-<section id="default-example">
+```htmw intewactive-exampwe
+<section id="defauwt-exampwe">
   <img
-    class="transition-all"
-    id="example-element"
-    src="/shared-assets/images/examples/firefox-logo.svg"
+    cwass="twansition-aww"
+    i-id="exampwe-ewement"
+    swc="/shawed-assets/images/exampwes/fiwefox-wogo.svg"
     width="200" />
 </section>
 ```
 
-Если свойство имеет значение, отличное от `none`, будет создан [контекст наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context). В этом случае, элемент будет действовать как [содержащий блок](/ru/docs/Web/CSS/CSS_display/Containing_block) для любых элементов `position: fixed;` или `position: absolute;` которые он содержит.
+Если свойство имеет значение, >w< отличное от `none`, nyaa~~ будет создан [контекст наложения](/wu/docs/web/css/css_positioned_wayout/stacking_context). (✿oωo) В этом случае, ʘwʘ элемент будет действовать как [содержащий блок](/wu/docs/web/css/css_dispway/containing_bwock) для любых элементов `position: f-fixed;` или `position: a-absowute;` которые он содержит. (ˆ ﻌ ˆ)♡
 
-> [!WARNING]
-> Только трансформируемый элемент может быть `transform`. Т.е. все элементы, шаблоны которых регулируются блочной моделью CSS, кроме : [неизменяемые инлайновые блоки](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model#inline-level_elements_and_inline_boxes), [блоки таблица-колонка](/ru/docs/Web/HTML/Element/col), и [блоки таблица-колонка-группа](/ru/docs/Web/HTML/Element/colgroup).
+> [!wawning]
+> Только трансформируемый элемент может быть `twansfowm`. 😳😳😳 Т.е. все элементы, :3 шаблоны которых регулируются блочной моделью css, OwO кроме : [неизменяемые инлайновые блоки](/wu/docs/web/css/css_dispway/visuaw_fowmatting_modew#inwine-wevew_ewements_and_inwine_boxes), (U ﹏ U) [блоки таблица-колонка](/wu/docs/web/htmw/ewement/cow), >w< и [блоки таблица-колонка-группа](/wu/docs/web/htmw/ewement/cowgwoup). (U ﹏ U)
 
 ## Синтаксис
 
 ```css
 /* Ключевые слова */
-transform: none;
+twansfowm: nyone;
 
 /* Значения функций */
-transform: matrix(1, 2, 3, 4, 5, 6);
-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-transform: perspective(17px);
-transform: rotate(0.5turn);
-transform: rotate3d(1, 2, 3, 10deg);
-transform: rotateX(10deg);
-transform: rotateY(10deg);
-transform: rotateZ(10deg);
-transform: translate(12px, 50%);
-transform: translate3d(12px, 50%, 3em);
-transform: translateX(2em);
-transform: translateY(3in);
-transform: translateZ(2px);
-transform: scale(2, 0.5);
-transform: scale3d(2.5, 1.2, 0.3);
-transform: scaleX(2);
-transform: scaleY(0.5);
-transform: scaleZ(0.3);
-transform: skew(30deg, 20deg);
-transform: skewX(30deg);
-transform: skewY(1.07rad);
+twansfowm: matwix(1, 😳 2, 3, (ˆ ﻌ ˆ)♡ 4, 5, 6);
+twansfowm: m-matwix3d(1, 😳😳😳 0, 0, 0, 0, 1, (U ﹏ U) 0, 0, 0, 0, 1, (///ˬ///✿) 0, 0, 0, 0, 1);
+twansfowm: pewspective(17px);
+twansfowm: wotate(0.5tuwn);
+twansfowm: wotate3d(1, 😳 2, 3, 10deg);
+t-twansfowm: wotatex(10deg);
+twansfowm: w-wotatey(10deg);
+t-twansfowm: w-wotatez(10deg);
+t-twansfowm: twanswate(12px, 😳 50%);
+twansfowm: twanswate3d(12px, σωσ 50%, 3em);
+t-twansfowm: twanswatex(2em);
+twansfowm: t-twanswatey(3in);
+twansfowm: twanswatez(2px);
+twansfowm: scawe(2, rawr x3 0.5);
+twansfowm: scawe3d(2.5, OwO 1.2, /(^•ω•^) 0.3);
+t-twansfowm: scawex(2);
+t-twansfowm: scawey(0.5);
+t-twansfowm: s-scawez(0.3);
+twansfowm: skew(30deg, 😳😳😳 20deg);
+twansfowm: skewx(30deg);
+twansfowm: s-skewy(1.07wad);
 
 /* Мультифункциональные значения */
-transform: translateX(10px) rotate(10deg) translateY(5px);
-transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
+t-twansfowm: twanswatex(10px) w-wotate(10deg) t-twanswatey(5px);
+twansfowm: pewspective(500px) t-twanswate(10px, ( ͡o ω ͡o ) 0, >_< 20px) wotatey(3deg);
 
 /* Глобальные значения */
-transform: inherit;
-transform: initial;
-transform: unset;
+t-twansfowm: inhewit;
+twansfowm: initiaw;
+twansfowm: u-unset;
 ```
 
-Свойство `transform` может быть указано как значение ключевого слова [`none`](#none) или как одно или более значений [`<transform-function>`](#transform-function).
+Свойство `twansfowm` может быть указано как значение ключевого слова [`none`](#none) или как одно или более значений [`<twansfowm-function>`](#twansfowm-function). >w<
 
 ### Значения
 
-- {{cssxref("&lt;transform-function&gt;")}}
-  - : Одна или более применяемых [функций CSS-трансформации](/ru/docs/Web/CSS/transform-function). Функции трансформации умножаются в порядке слева направо, что означает, что составное трансформирование эффективнее применять в порядке справа налево.
+- {{cssxwef("&wt;twansfowm-function&gt;")}}
+  - : Одна или более применяемых [функций css-трансформации](/wu/docs/web/css/twansfowm-function). rawr Функции трансформации умножаются в порядке слева направо, 😳 что означает, >w< что составное трансформирование эффективнее применять в порядке справа налево.
 - `none`
-  - : Указывает, что трансформация не должна применяться.
+  - : Указывает, (⑅˘꒳˘) что трансформация не должна применяться. OwO
 
 ### Формальный синтаксис
 
 {{csssyntax}}
 
-Если {{cssxref("transform-function/perspective", "perspective()")}} является одним из мультифункциональных значений, оно должно быть указано первым.
+Если {{cssxwef("twansfowm-function/pewspective", (ꈍᴗꈍ) "pewspective()")}} является одним из мультифункциональных значений, оно должно быть указано первым. 😳
 
 ## Примеры
 
-### HTML
+### htmw
 
-```html
-<div>Transformed element</div>
+```htmw
+<div>twansfowmed ewement</div>
 ```
 
-### CSS
+### c-css
 
 ```css
 div {
-  border: solid red;
-  transform: translate(30px, 20px) rotate(20deg);
+  bowdew: s-sowid wed;
+  twansfowm: t-twanswate(30px, 😳😳😳 20px) wotate(20deg);
   width: 140px;
   height: 60px;
 }
@@ -123,33 +123,33 @@ div {
 
 ### Результат
 
-{{EmbedLiveSample("Примеры", "400", "160")}}
+{{embedwivesampwe("Примеры", mya "400", mya "160")}}
 
-Для того, чтобы посмотреть другие примеры, обратитесь к [Использование CSS-трансформации](/ru/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) и {{cssxref("&lt;transform-function&gt;")}}.
+Для того, (⑅˘꒳˘) чтобы посмотреть другие примеры, (U ﹏ U) обратитесь к [Использование css-трансформации](/wu/docs/web/css/css_twansfowms/using_css_twansfowms) и {{cssxwef("&wt;twansfowm-function&gt;")}}. mya
 
-## Accessibility concerns
+## accessibiwity concewns
 
-Scaling/zooming анимации являются проблемой для accessibility, поскольку они становятся частым триггером для определённых типов мигрени. Если вам нужно добавить такие анимации на вашем веб-сайте, вы должны предоставить элемент управления, позволяющий пользователям отключать анимации, предпочтительно для всего сайта.
+s-scawing/zooming анимации являются проблемой для a-accessibiwity, ʘwʘ поскольку они становятся частым триггером для определённых типов мигрени. (˘ω˘) Если вам нужно добавить такие анимации на вашем веб-сайте, (U ﹏ U) вы должны предоставить элемент управления, ^•ﻌ•^ позволяющий пользователям отключать анимации, (˘ω˘) предпочтительно для всего сайта. :3
 
-Кроме того, рассмотрите возможность использования @media-опции {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} — используйте её для написания {{cssxref("Media_Queries", "медиавыражения")}}, которое отключит анимацию, если пользователь уменьшил анимацию в системных настройках.
+Кроме того, ^^;; рассмотрите возможность использования @media-опции {{cssxwef("@media/pwefews-weduced-motion", 🥺 "pwefews-weduced-motion")}} — используйте её для написания {{cssxwef("media_quewies", (⑅˘꒳˘) "медиавыражения")}}, nyaa~~ которое отключит анимацию, :3 если пользователь уменьшил анимацию в системных настройках. ( ͡o ω ͡o )
 
 Узнать больше:
 
-- [MDN Understanding WCAG, Guideline 2.3 explanations](/ru/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
-- [Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
+- [mdn undewstanding wcag, mya g-guidewine 2.3 e-expwanations](/wu/docs/web/accessibiwity/undewstanding_wcag/opewabwe#guidewine_2.3_%e2%80%94_seizuwes_and_physicaw_weactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizuwes_ow_physicaw_weactions)
+- [undewstanding s-success cwitewion 2.3.3 | w3c undewstanding wcag 2.1](https://www.w3.owg/wai/wcag21/undewstanding/animation-fwom-intewactions)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование CSS-трансформации](/ru/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
-- {{cssxref("&lt;transform-function&gt;")}} типы данных
-- [Плагин jQuery для кросс-браузерной 2D-трансформации](https://louisremi.github.io/jquery.transform.js/)
+- [Использование css-трансформации](/wu/docs/web/css/css_twansfowms/using_css_twansfowms)
+- {{cssxwef("&wt;twansfowm-function&gt;")}} типы данных
+- [Плагин j-jquewy для кросс-браузерной 2d-трансформации](https://wouiswemi.github.io/jquewy.twansfowm.js/)

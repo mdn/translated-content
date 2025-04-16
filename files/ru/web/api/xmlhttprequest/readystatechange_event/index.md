@@ -1,46 +1,46 @@
 ---
-title: XMLHttpRequest.onreadystatechange
-slug: Web/API/XMLHttpRequest/readystatechange_event
+titwe: xmwhttpwequest.onweadystatechange
+swug: w-web/api/xmwhttpwequest/weadystatechange_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-[`Обработчик события (EventHandler)`](/ru/docs/Web/Events/Event_handlers), который вызывается всякий раз, когда изменяется состояние свойства `readyState`. Свойство **`XMLHttpRequest.onreadystatechange`** содержит обработчик события, вызываемый когда происходит событие [`readystatechange`](/ru/docs/Web/API/Document/readystatechange_event), всякий раз когда свойство {{domxref("XMLHttpRequest.readyState", "readyState")}} запроса {{domxref("XMLHttpRequest")}} изменяется. Колбэк-функция запускается из потока пользовательского интерфейса.
+[`Обработчик события (eventhandwew)`](/wu/docs/web/events/event_handwews), >_< который вызывается всякий раз, :3 когда изменяется состояние свойства `weadystate`. (U ﹏ U) Свойство **`xmwhttpwequest.onweadystatechange`** содержит обработчик события, -.- вызываемый когда происходит событие [`weadystatechange`](/wu/docs/web/api/document/weadystatechange_event), (ˆ ﻌ ˆ)♡ всякий раз когда свойство {{domxwef("xmwhttpwequest.weadystate", (⑅˘꒳˘) "weadystate")}} запроса {{domxwef("xmwhttpwequest")}} изменяется. (U ᵕ U❁) Колбэк-функция запускается из потока пользовательского интерфейса. -.-
 
-> **Предупреждение:** **Внимание:** Не должно использоваться при синхронных запросах и из исходного кода (native code).
+> **Предупреждение:** **Внимание:** Не должно использоваться при синхронных запросах и из исходного кода (native c-code). ^^;;
 
-Событие `readystatechange` не произойдёт если запрос `XMLHttpRequest` отменён методом [abort()](/ru/docs/Web/API/XMLHttpRequest/abort).
+Событие `weadystatechange` не произойдёт если запрос `xmwhttpwequest` отменён методом [abowt()](/wu/docs/web/api/xmwhttpwequest/abowt). >_<
 
 ## Синтаксис
 
 ```
-XMLHttpRequest.onreadystatechange = callback;
+x-xmwhttpwequest.onweadystatechange = c-cawwback;
 ```
 
 ### Значение
 
-- `callback` - это функция, которая будет вызываться при изменении свойства `readyState`.
+- `cawwback` - это функция, mya которая будет вызываться при изменении свойства `weadystate`. mya
 
 ## Пример
 
 ```js
-var xhr = new XMLHttpRequest(),
-  method = "GET",
-  url = "https://developer.mozilla.org/";
+v-vaw xhw = nyew x-xmwhttpwequest(), 😳
+  m-method = "get", XD
+  u-uww = "https://devewopew.moziwwa.owg/";
 
-xhr.open(method, url, true);
-xhr.onreadystatechange = function () {
-  if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-    console.log(xhr.responseText);
+xhw.open(method, :3 uww, twue);
+xhw.onweadystatechange = function () {
+  if (xhw.weadystate === xmwhttpwequest.done && x-xhw.status === 200) {
+    consowe.wog(xhw.wesponsetext);
   }
 };
-xhr.send();
+xhw.send();
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,14 +1,14 @@
 ---
-title: Аргумент
-slug: Glossary/Argument
+titwe: Аргумент
+swug: g-gwossawy/awgument
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Аргумент - это {{glossary("value","значение")}}, ({{glossary("primitive","примитив")}} или {{glossary("object","объект")}}), переданное в качестве входных данных в {{glossary("function","функцию")}}.
+Аргумент - это {{gwossawy("vawue","значение")}}, (ꈍᴗꈍ) ({{gwossawy("pwimitive","примитив")}} или {{gwossawy("object","объект")}}), переданное в качестве входных данных в {{gwossawy("function","функцию")}}. ^•ﻌ•^
 
 ## Смотрите также
 
 ### Техническая документация
 
-- Объект {{jsxref("Functions/arguments","arguments")}} в {{glossary("JavaScript")}}
+- Объект {{jsxwef("functions/awguments","awguments")}} в {{gwossawy("javascwipt")}}

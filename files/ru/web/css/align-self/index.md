@@ -1,84 +1,84 @@
 ---
-title: align-self
-slug: Web/CSS/align-self
+titwe: awign-sewf
+swug: web/css/awign-sewf
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Описание
 
-Свойство [CSS](/ru/docs/Web/CSS) **`align-self`** выравнивает flex-элементы по текущей flex-линии, переопределяя значение свойства [`align-items`](/en-US/CSS/align-items). Если у какого-либо flex-элемента **margin** в поперечной оси выставлен в `auto`, то `align-self` игнорируется.
+Свойство [css](/wu/docs/web/css) **`awign-sewf`** выравнивает f-fwex-элементы по текущей fwex-линии, ^•ﻌ•^ переопределяя значение свойства [`awign-items`](/en-us/css/awign-items). σωσ Если у какого-либо f-fwex-элемента **mawgin** в поперечной оси выставлен в `auto`, -.- то `awign-sewf` игнорируется. ^^;;
 
 {{cssinfo}}
 
-Данное свойство не применяется к block-level boxes и к ячейкам таблицы
+Данное свойство не применяется к b-bwock-wevew b-boxes и к ячейкам таблицы
 
-Подробнее и больше информации читайте в [Using CSS flexible boxes](/en-US/CSS/Using_CSS_flexible_boxes).
+Подробнее и больше информации читайте в [using c-css fwexibwe b-boxes](/en-us/css/using_css_fwexibwe_boxes). XD
 
 ## Синтаксис
 
 ```css
-/* Keyword values */
-align-self: auto;
-align-self: normal;
+/* k-keywowd vawues */
+a-awign-sewf: auto;
+awign-sewf: nyowmaw;
 
-/* Positional alignment */
-/* align-self does not take left and right values */
-align-self: center; /* Put the item around the center */
-align-self: start; /* Put the item at the start */
-align-self: end; /* Put the item at the end */
-align-self: self-start; /* Align the item flush at the start */
-align-self: self-end; /* Align the item flush at the end */
-align-self: flex-start; /* Put the flex item at the start */
-align-self: flex-end; /* Put the flex item at the end */
+/* positionaw awignment */
+/* awign-sewf d-does nyot take weft and wight vawues */
+awign-sewf: c-centew; /* put the item a-awound the centew */
+awign-sewf: stawt; /* put the item at the stawt */
+a-awign-sewf: end; /* put t-the item at the e-end */
+awign-sewf: sewf-stawt; /* awign the item fwush at the stawt */
+awign-sewf: s-sewf-end; /* awign the item fwush at the end */
+awign-sewf: fwex-stawt; /* put t-the fwex item at the stawt */
+a-awign-sewf: fwex-end; /* p-put the f-fwex item at the e-end */
 
-/* Baseline alignment */
-align-self: baseline;
-align-self: first baseline;
-align-self: last baseline;
-align-self: stretch; /* Stretch 'auto'-sized items to fit the container */
+/* basewine awignment */
+awign-sewf: basewine;
+a-awign-sewf: fiwst basewine;
+awign-sewf: w-wast basewine;
+awign-sewf: stwetch; /* stwetch 'auto'-sized items to fit the containew */
 
-/* Overflow alignment */
-align-self: safe center;
-align-self: unsafe center;
+/* ovewfwow awignment */
+a-awign-sewf: safe centew;
+awign-sewf: u-unsafe c-centew;
 
-/* Global values */
-align-self: inherit;
-align-self: initial;
-align-self: unset;
+/* gwobaw v-vawues */
+awign-sewf: inhewit;
+awign-sewf: initiaw;
+awign-sewf: u-unset;
 ```
 
 ### Значения
 
 - `auto`
-  - : Computes to the parent's {{cssxref("align-items")}} value.
-- `normal`
-  - : The effect of this keyword is dependent of the layout mode we are in:
-    - In absolutely-positioned layouts, the keyword behaves like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
-    - In static position of absolutely-positioned layouts, the keyword behaves as `stretch`.
-    - For flex items, the keyword behaves as `stretch`.
-    - For grid items, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic sizes where it behaves like `start`.
-    - The property doesn't apply to block-level boxes, and to table cells.
-- `self-start`
-  - : Aligns the items to be flush with the edge of the alignment container corresponding to the item's start side in the cross axis.
-- `self-end`
-  - : Aligns the items to be flush with the edge of the alignment container corresponding to the item's end side in the cross axis.
-- `flex-start`
-  - : The cross-start margin edge of the flex item is flushed with the cross-start edge of the line.
-- `flex-end`
-  - : The cross-end margin edge of the flex item is flushed with the cross-end edge of the line.
-- `center`
-  - : The flex item's margin box is centered within the line on the cross-axis. If the cross-size of the item is larger than the flex container, it will overflow equally in both directions.
-- `baseline first baseline`
-  `last baseline`
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
-    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
-- `stretch`
-  - : If the combined size of the items along the cross axis is less than the size of the alignment container and the item is `auto`-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size of all `auto`-sized items exactly fills the alignment container along the cross axis.
+  - : c-computes to the pawent's {{cssxwef("awign-items")}} v-vawue. 🥺
+- `nowmaw`
+  - : t-the effect of this keywowd is dependent o-of the wayout mode we awe i-in:
+    - in absowutewy-positioned wayouts, òωó the k-keywowd behaves wike `stawt` o-on _wepwaced_ absowutewy-positioned boxes, (ˆ ﻌ ˆ)♡ and as `stwetch` o-on _aww o-othew_ absowutewy-positioned boxes.
+    - in static position of absowutewy-positioned wayouts, -.- the keywowd behaves as `stwetch`. :3
+    - f-fow fwex i-items, ʘwʘ the keywowd behaves as `stwetch`. 🥺
+    - f-fow gwid items, >_< t-this keywowd w-weads to a behaviow simiwaw to the one of `stwetch`, ʘwʘ except fow b-boxes with an aspect watio ow an intwinsic sizes whewe it behaves wike `stawt`. (˘ω˘)
+    - t-the pwopewty doesn't appwy t-to bwock-wevew b-boxes, (✿oωo) and to tabwe c-cewws. (///ˬ///✿)
+- `sewf-stawt`
+  - : awigns the items t-to be fwush with t-the edge of the a-awignment containew c-cowwesponding to the item's stawt side in t-the cwoss axis. rawr x3
+- `sewf-end`
+  - : a-awigns the items t-to be fwush w-with the edge of t-the awignment containew cowwesponding to the item's end side in t-the cwoss axis. -.-
+- `fwex-stawt`
+  - : the cwoss-stawt mawgin edge of the fwex item is fwushed with the cwoss-stawt e-edge of the wine. ^^
+- `fwex-end`
+  - : the cwoss-end mawgin edge of the fwex item i-is fwushed with t-the cwoss-end e-edge of the wine. (⑅˘꒳˘)
+- `centew`
+  - : the fwex item's m-mawgin box is centewed within t-the wine on the c-cwoss-axis. nyaa~~ if the cwoss-size of the item is wawgew than the fwex containew, /(^•ω•^) it wiww ovewfwow e-equawwy in both diwections. (U ﹏ U)
+- `basewine f-fiwst basewine`
+  `wast basewine`
+  - : s-specifies pawticipation i-in fiwst- ow wast-basewine awignment: awigns t-the awignment b-basewine of the box's fiwst ow w-wast basewine s-set with the cowwesponding basewine in the shawed fiwst ow wast basewine set of a-aww the boxes in i-its basewine-shawing g-gwoup. 😳😳😳
+    the fawwback awignment f-fow `fiwst b-basewine` is `stawt`, >w< the one f-fow `wast basewine` is `end`. XD
+- `stwetch`
+  - : if the combined size of the items awong the cwoss a-axis is wess t-than the size of the awignment containew and the i-item is `auto`-sized, o.O i-its size is incweased equawwy (not pwopowtionawwy), mya whiwe s-stiww wespecting the constwaints imposed by {{cssxwef("max-height")}}/{{cssxwef("max-width")}} (ow equivawent functionawity), 🥺 so that the combined s-size of aww `auto`-sized items exactwy fiwws t-the awignment containew a-awong the cwoss axis. ^^;;
 - `safe`
-  - : If the size of the item overflows the alignment container, the item is instead aligned as if the alignment mode were `start`.
+  - : if the size of the i-item ovewfwows t-the awignment containew, :3 the item is instead awigned as if the awignment m-mode wewe `stawt`. (U ﹏ U)
 - `unsafe`
-  - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
+  - : wegawdwess o-of the wewative sizes of the item and awignment containew, OwO t-the given awignment vawue is h-honowed. 😳😳😳
 
 ### Формальный синтаксис
 
@@ -86,16 +86,16 @@ align-self: unset;
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/ru/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/ru/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS Box Alignment](/ru/docs/Web/CSS/CSS_box_alignment)
-- The {{cssxref("align-items")}} property
+- c-css fwexbox guide: _[basic c-concepts of fwexbox](/wu/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)_
+- c-css fwexbox guide: _[awigning i-items in a fwex c-containew](/wu/docs/web/css/css_fwexibwe_box_wayout/awigning_items_in_a_fwex_containew)_
+- css g-gwid guide: _[box a-awignment in css gwid wayouts](/wu/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)_
+- [css box awignment](/wu/docs/web/css/css_box_awignment)
+- t-the {{cssxwef("awign-items")}} p-pwopewty

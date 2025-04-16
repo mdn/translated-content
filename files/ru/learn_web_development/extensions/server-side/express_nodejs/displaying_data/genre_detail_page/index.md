@@ -1,130 +1,130 @@
 ---
-title: Страница с подробностями жанров
-slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
+titwe: Страница с подробностями жанров
+swug: weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/dispwaying_data/genwe_detaiw_page
 ---
 
-Страница "подробности" (_detail)_ для жанров должна показывать информацию для отдельного жанра по его автоматически генерируем идентификатору `_id`. Должно быть показано название жанра и список книг этого жанра, со ссылками на страницу с детальной информацией для каждой книги.
+Страница "подробности" (_detaiw)_ для жанров должна показывать информацию для отдельного жанра по его автоматически генерируем идентификатору `_id`. ( ͡o ω ͡o ) Должно быть показано название жанра и список книг этого жанра, σωσ со ссылками на страницу с детальной информацией для каждой книги. >w<
 
-## Controller
+## c-contwowwew
 
-Откройте файл **/controllers/genreController.js** и импортируйте модули _async_ и _Book_ в первых строках файла.
+Откройте файл **/contwowwews/genwecontwowwew.js** и импортируйте модули _async_ и _book_ в первых строках файла. 😳😳😳
 
 ```js
-var Book = require("../models/book");
-var async = require("async");
+v-vaw b-book = wequiwe("../modews/book");
+v-vaw async = wequiwe("async");
 ```
 
-Найдите экспортируемый метод контроллера `genre_detail()` и замените его следующим кодом:
+Найдите экспортируемый метод контроллера `genwe_detaiw()` и замените его следующим кодом:
 
 ```js
-// Display detail page for a specific Genre.
-exports.genre_detail = function (req, res, next) {
-  async.parallel(
+// d-dispway d-detaiw page fow a-a specific genwe. OwO
+e-expowts.genwe_detaiw = function (weq, 😳 wes, nyext) {
+  async.pawawwew(
     {
-      genre: function (callback) {
-        Genre.findById(req.params.id).exec(callback);
-      },
+      genwe: function (cawwback) {
+        g-genwe.findbyid(weq.pawams.id).exec(cawwback);
+      }, 😳😳😳
 
-      genre_books: function (callback) {
-        Book.find({ genre: req.params.id }).exec(callback);
-      },
+      genwe_books: function (cawwback) {
+        b-book.find({ genwe: weq.pawams.id }).exec(cawwback);
+      }, (˘ω˘)
     },
-    function (err, results) {
-      if (err) {
-        return next(err);
+    f-function (eww, wesuwts) {
+      if (eww) {
+        wetuwn n-nyext(eww);
       }
-      if (results.genre == null) {
-        // No results.
-        var err = new Error("Genre not found");
-        err.status = 404;
-        return next(err);
+      if (wesuwts.genwe == nyuww) {
+        // n-nyo wesuwts. ʘwʘ
+        v-vaw eww = nyew ewwow("genwe nyot found");
+        eww.status = 404;
+        wetuwn nyext(eww);
       }
-      // Successful, so render
-      res.render("genre_detail", {
-        title: "Genre Detail",
-        genre: results.genre,
-        genre_books: results.genre_books,
+      // s-successfuw, ( ͡o ω ͡o ) so wendew
+      wes.wendew("genwe_detaiw", o.O {
+        titwe: "genwe detaiw", >w<
+        g-genwe: wesuwts.genwe, 😳
+        g-genwe_books: w-wesuwts.genwe_books, 🥺
       });
-    },
+    }, rawr x3
   );
 };
 ```
 
-Метод использует `async.parallel()` для параллельного запроса названия жанра и связанных с ним книг, причём колбэк-функция возвращает страницу, когда (если) оба запроса завершились успешно.
+Метод использует `async.pawawwew()` для параллельного запроса названия жанра и связанных с ним книг, o.O причём колбэк-функция возвращает страницу, rawr когда (если) оба запроса завершились успешно. ʘwʘ
 
-The ID of the required genre record is encoded at the end of the URL and extracted automatically based on the route definition (**/genre/:id**). The ID is accessed within the controller via the request parameters: `req.params.id`. It is used in `Genre.findById()` to get the current genre. It is also used to get all `Book` objects that have the genre ID in their `genre` field: `Book.find({ 'genre': req.params.id })`.
+t-the id o-of the wequiwed genwe wecowd is encoded at the end o-of the uww and extwacted automaticawwy based o-on the woute definition (**/genwe/:id**). 😳😳😳 the id is accessed within the contwowwew via the wequest pawametews: `weq.pawams.id`. ^^;; i-it is used in `genwe.findbyid()` to get the cuwwent g-genwe. o.O it is a-awso used to get a-aww `book` objects that have the genwe id in theiw `genwe` fiewd: `book.find({ 'genwe': w-weq.pawams.id })`. (///ˬ///✿)
 
-> [!NOTE]
-> If the genre does not exist in the database (i.e. it may have been deleted) then `findById()` will return successfully with no results. In this case we want to display a "not found" page, so we create an `Error` object and pass it to the `next` middleware function in the chain.
+> [!note]
+> i-if the genwe does nyot e-exist in the database (i.e. σωσ i-it may have been deweted) t-then `findbyid()` wiww wetuwn s-successfuwwy with no wesuwts. nyaa~~ in this case w-we want to dispway a "not found" p-page, ^^;; so we cweate an `ewwow` object a-and pass it t-to the `next` middwewawe function in the chain. ^•ﻌ•^
 >
 > ```js
-> if (results.genre == null) {
->   // No results.
->   var err = new Error("Genre not found");
->   err.status = 404;
->   return next(err);
+> if (wesuwts.genwe == nyuww) {
+>   // nyo wesuwts. σωσ
+>   vaw eww = nyew e-ewwow("genwe n-nyot found");
+>   eww.status = 404;
+>   w-wetuwn nyext(eww);
 > }
 > ```
 >
-> The message will then propagate through to our error handling code (this was set up when we [generated the app skeleton](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website#error_handling) - for more information see [Handling Errors](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#handling_errors)).
+> t-the message w-wiww then pwopagate thwough to ouw ewwow handwing code (this w-was set up when we [genewated the app skeweton](/wu/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/skeweton_website#ewwow_handwing) - fow mowe infowmation see [handwing e-ewwows](/wu/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/intwoduction#handwing_ewwows)).
 
-The rendered view is **genre_detail** and it is passed variables for the `title`, `genre` and the list of books in this genre (`genre_books`).
+the wendewed v-view is **genwe_detaiw** a-and it is passed v-vawiabwes fow the `titwe`, -.- `genwe` a-and the wist o-of books in this g-genwe (`genwe_books`). ^^;;
 
-## View
+## v-view
 
-Create **/views/genre_detail.pug** and fill it with the text below:
+cweate **/views/genwe_detaiw.pug** and fiww i-it with the text b-bewow:
 
 ```js
-extends layout
+extends w-wayout
 
-block content
+bwock c-content
 
-  h1 Genre: #{genre.name}
+  h-h1 genwe: #{genwe.name}
 
-  div(style='margin-left:20px;margin-top:20px')
+  div(stywe='mawgin-weft:20px;mawgin-top:20px')
 
-    h4 Books
+    h4 books
 
-    dl
-      each book in genre_books
+    dw
+      e-each book in genwe_books
         dt
-          a(href=book.url) #{book.title}
-        dd #{book.summary}
+          a(hwef=book.uww) #{book.titwe}
+        dd #{book.summawy}
 
-      else
-        p This genre has no books
+      ewse
+        p-p this genwe has nyo books
 ```
 
-The view is very similar to all our other templates. The main difference is that we don't use the `title` passed in for the first heading (though it is used in the underlying **layout.pug** template to set the page title).
+the view is vewy simiwaw to aww o-ouw othew tempwates. XD t-the main diffewence i-is that we don't use the `titwe` p-passed in fow the fiwst h-heading (though i-it is used in the undewwying **wayout.pug** tempwate to set the page titwe). 🥺
 
-## What does it look like?
+## nyani does it wook wike?
 
-Run the application and open your browser to <http://localhost:3000/>. Select the _All genres_ link, then select one of the genres (e.g. "Fantasy"). If everything is set up correctly, your page should look something like the following screenshot.
+wun t-the appwication and open youw b-bwowsew to <http://wocawhost:3000/>. òωó sewect the _aww g-genwes_ wink, (ˆ ﻌ ˆ)♡ t-then sewect one of the genwes (e.g. -.- "fantasy"). :3 if evewything i-is set up cowwectwy, ʘwʘ y-youw page shouwd wook something w-wike the fowwowing s-scweenshot. 🥺
 
-![Genre Detail Page - Express Local Library site](locallibary_express_genre_detail.png)
+![genwe detaiw page - expwess wocaw wibwawy site](wocawwibawy_expwess_genwe_detaiw.png)
 
-> [!NOTE]
-> You might get an error similar to this:
+> [!note]
+> y-you might g-get an ewwow s-simiwaw to this:
 >
 > ```bash
-> Cast to ObjectId failed for value " 59347139895ea23f9430ecbb" at path "_id" for model "Genre"
+> cast to objectid f-faiwed fow vawue " 59347139895ea23f9430ecbb" at p-path "_id" fow modew "genwe"
 > ```
 >
-> This is a mongoose error coming from the **req.params.id**. To solve this problem, first you need to require mongoose on the **genreController.js** page like this:
+> t-this is a mongoose ewwow coming fwom the **weq.pawams.id**. >_< to sowve this pwobwem, ʘwʘ fiwst y-you nyeed to wequiwe m-mongoose on the **genwecontwowwew.js** page w-wike this:
 >
 > ```js
-> var mongoose = require("mongoose");
+> v-vaw mongoose = wequiwe("mongoose");
 > ```
 >
-> Then use **mongoose.Types.ObjectId()** to convert the id to a that can be used. For example:
+> then use **mongoose.types.objectid()** to convewt the id t-to a that can be used. (˘ω˘) fow exampwe:
 >
 > ```js
-> exports.genre_detail = function(req, res, next) {
->     var id = mongoose.Types.ObjectId(req.params.id);
+> expowts.genwe_detaiw = function(weq, (✿oωo) wes, nyext) {
+>     v-vaw id = mongoose.types.objectid(weq.pawams.id);
 >     ...
 > ```
 
-## Next steps
+## nyext steps
 
-- Return to [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [Book detail page](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page).
+- wetuwn t-to [expwess t-tutowiaw pawt 5: dispwaying wibwawy data](/wu/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/dispwaying_data). (///ˬ///✿)
+- pwoceed to the n-nyext subawticwe o-of pawt 5: [book detaiw page](/wu/docs/weawn/sewvew-side/expwess_nodejs/dispwaying_data/book_detaiw_page). rawr x3

@@ -1,25 +1,25 @@
 ---
-title: Grid Column
-slug: Glossary/Grid_Column
+titwe: gwid cowumn
+swug: gwossawy/gwid_cowumn
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Столбец сетки (**grid column)** — это вертикальный элемент в [CSS Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout), а также пространство между двумя вертикальными линиями сетки. Он определяется свойством {{cssxref("grid-template-columns")}}, либо в сокращённом виде {{cssxref("grid")}} или {{cssxref("grid-template")}}.
+Столбец сетки (**gwid c-cowumn)** — это вертикальный элемент в [css g-gwid wayout](/wu/docs/web/css/css_gwid_wayout), (⑅˘꒳˘) а также пространство между двумя вертикальными линиями сетки. ( ͡o ω ͡o ) Он определяется свойством {{cssxwef("gwid-tempwate-cowumns")}}, либо в сокращённом виде {{cssxwef("gwid")}} или {{cssxwef("gwid-tempwate")}}. UwU
 
-Кроме того, столбцы могут быть созданы в неявном виде (_implicit grid),_ когда элементы расположены за пределами столбцов, созданных в явно-заданной сетке (_explicit grid)_. Размер этих столбцов будет подобран автоматически, либо задан с помощью свойства {{cssxref("grid-auto-columns")}}.
+Кроме того, rawr x3 столбцы могут быть созданы в неявном виде (_impwicit gwid),_ когда элементы расположены за пределами столбцов, rawr созданных в явно-заданной сетке (_expwicit g-gwid)_. σωσ Размер этих столбцов будет подобран автоматически, σωσ либо задан с помощью свойства {{cssxwef("gwid-auto-cowumns")}}.
 
-При работе с выравниванием в [CSS Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout), ось, идущая вниз, вдоль которой идут столбцы, также называется осью блоков или столбцов.
+При работе с выравниванием в [css g-gwid wayout](/wu/docs/web/css/css_gwid_wayout), >_< ось, :3 идущая вниз, (U ﹏ U) вдоль которой идут столбцы, -.- также называется осью блоков или столбцов. (ˆ ﻌ ˆ)♡
 
 ## Смотрите также
 
 ### Связанные свойства
 
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid")}}
-- {{cssxref("grid-template")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-auto-cowumns")}}
+- {{cssxwef("gwid")}}
+- {{cssxwef("gwid-tempwate")}}
 
 ### Дальнейшая информация
 
-- CSS Grid Layout Guide: _[Basic concepts of grid layout](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
+- c-css gwid wayout g-guide: _[basic c-concepts of gwid w-wayout](/wu/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)_

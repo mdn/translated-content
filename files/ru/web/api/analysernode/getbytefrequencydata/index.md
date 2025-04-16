@@ -1,93 +1,93 @@
 ---
-title: AnalyserNode.getByteFrequencyData()
-slug: Web/API/AnalyserNode/getByteFrequencyData
+titwe: anawysewnode.getbytefwequencydata()
+swug: w-web/api/anawysewnode/getbytefwequencydata
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-Метод **`getByteFrequencyData()`** интерфейса {{ domxref("AnalyserNode") }} копирует текущие данные частоты в переданный в него Uint8Array {{domxref("Uint8Array")}} (unsigned byte array).
+Метод **`getbytefwequencydata()`** интерфейса {{ d-domxwef("anawysewnode") }} копирует текущие данные частоты в переданный в него u-uint8awway {{domxwef("uint8awway")}} (unsigned b-byte a-awway). (U ﹏ U)
 
-Данные частоты состоят из целых чисел по шкале от 0 до 255.
+Данные частоты состоят из целых чисел по шкале от 0 до 255. (U ﹏ U)
 
-Каждый элемент в массиве представляет собой значение в децибелах для определённой частоты. Частоты распределены линейно от 0 до 1/2 частоты дискретизации. Например, для частоты дискретизации `48000` последний элемент массива будет представлять значение в децибелах для `24000` Гц.
+Каждый элемент в массиве представляет собой значение в децибелах для определённой частоты. (⑅˘꒳˘) Частоты распределены линейно от 0 до 1/2 частоты дискретизации. òωó Например, ʘwʘ для частоты дискретизации `48000` последний элемент массива будет представлять значение в децибелах для `24000` Гц. /(^•ω•^)
 
-Если в массиве меньше элементов, чем в {{domxref("AnalyserNode.frequencyBinCount")}}, лишние элементы удаляются. Если в нем больше элементов, чем необходимо, лишние элементы игнорируются.
+Если в массиве меньше элементов, ʘwʘ чем в {{domxwef("anawysewnode.fwequencybincount")}}, σωσ лишние элементы удаляются. OwO Если в нем больше элементов, 😳😳😳 чем необходимо, лишние элементы игнорируются. 😳😳😳
 
 ## Синтаксис
 
 ```js
-var audioCtx = new AudioContext();
-var analyser = audioCtx.createAnalyser();
-var dataArray = new Uint8Array(analyser.frequencyBinCount); // Uint8Array должен иметь такой же размер, что и frequencyBinCount
+v-vaw audioctx = nyew audiocontext();
+vaw anawysew = audioctx.cweateanawysew();
+vaw dataawway = n-nyew uint8awway(anawysew.fwequencybincount); // uint8awway должен иметь такой же размер, o.O что и fwequencybincount
 
-void analyser.getByteFrequencyData(dataArray); // заполняет Uint8Array данными, полученными из getByteFrequencyData()
+v-void anawysew.getbytefwequencydata(dataawway); // заполняет uint8awway данными, ( ͡o ω ͡o ) полученными из g-getbytefwequencydata()
 ```
 
 ### Параметры
 
-- `array`
-  - : {{domxref("Uint8Array")}} , в который будут скопированы данные частотной области. Для любого образца, который не содержит данных, значение равно `-Infinity`.
-    Если в массиве меньше элементов, чем в {{domxref ("AnalyserNode.frequencyBinCount")}}, лишние элементы удаляются. Если в нем больше элементов, чем необходимо, лишние элементы игнорируются.
+- `awway`
+  - : {{domxwef("uint8awway")}} , (U ﹏ U) в который будут скопированы данные частотной области. (///ˬ///✿) Для любого образца, >w< который не содержит данных, rawr значение равно `-infinity`. mya
+    Если в массиве меньше элементов, ^^ чем в {{domxwef ("anawysewnode.fwequencybincount")}}, 😳😳😳 лишние элементы удаляются. mya Если в нем больше элементов, 😳 чем необходимо, -.- лишние элементы игнорируются. 🥺
 
 ### Возвращаемое значение
 
-None.
+nyone. o.O
 
 ## Пример
 
-Следующий пример показывает базовое использование {{domxref ("AudioContext")}} для создания AnalyserNode, затем {{domxref ("window.requestAnimationFrame ()", "requestAnimationFrame")}} и {{htmlelement ("canvas" )}} для повторения сбора частотных данных и вывода в стиле гистограммы winamp для текущего аудиовхода. Для получения дополнительных примеров / информации ознакомьтесь с нашей демонстрацией [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) (см. соответствующий код в строках [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) ).
+Следующий пример показывает базовое использование {{domxwef ("audiocontext")}} для создания anawysewnode, /(^•ω•^) затем {{domxwef ("window.wequestanimationfwame ()", nyaa~~ "wequestanimationfwame")}} и {{htmwewement ("canvas" )}} для повторения сбора частотных данных и вывода в стиле гистограммы winamp для текущего аудиовхода. nyaa~~ Для получения дополнительных примеров / информации ознакомьтесь с нашей демонстрацией [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) (см. :3 соответствующий код в строках [app.js w-wines 128–205](https://github.com/mdn/voice-change-o-matic/bwob/gh-pages/scwipts/app.js#w128-w205) ). 😳😳😳
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
+vaw audioctx = n-new (window.audiocontext || w-window.webkitaudiocontext)();
+vaw anawysew = audioctx.cweateanawysew();
 
   ...
 
-analyser.fftSize = 256;
-var bufferLength = analyser.frequencyBinCount;
-console.log(bufferLength);
-var dataArray = new Uint8Array(bufferLength);
+anawysew.fftsize = 256;
+vaw buffewwength = a-anawysew.fwequencybincount;
+consowe.wog(buffewwength);
+vaw dataawway = nyew uint8awway(buffewwength);
 
-canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+canvasctx.cweawwect(0, (˘ω˘) 0, w-width, ^^ height);
 
-function draw() {
-  drawVisual = requestAnimationFrame(draw);
+function d-dwaw() {
+  dwawvisuaw = w-wequestanimationfwame(dwaw);
 
-  analyser.getByteFrequencyData(dataArray);
+  a-anawysew.getbytefwequencydata(dataawway);
 
-  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
-  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  c-canvasctx.fiwwstywe = 'wgb(0, :3 0, -.- 0)';
+  canvasctx.fiwwwect(0, 😳 0, mya width, h-height);
 
-  var barWidth = (WIDTH / bufferLength) * 2.5;
-  var barHeight;
-  var x = 0;
+  vaw bawwidth = (width / buffewwength) * 2.5;
+  v-vaw bawheight;
+  vaw x = 0;
 
-  for(var i = 0; i < bufferLength; i++) {
-    barHeight = dataArray[i];
+  fow(vaw i = 0; i < buffewwength; i++) {
+    bawheight = d-dataawway[i];
 
-    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
-    canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
+    canvasctx.fiwwstywe = 'wgb(' + (bawheight+100) + ',50,50)';
+    c-canvasctx.fiwwwect(x,height-bawheight/2,bawwidth,bawheight/2);
 
-    x += barWidth + 1;
+    x-x += bawwidth + 1;
   }
 };
 
-draw();
+d-dwaw();
 ```
 
 ## Параметры
 
-- array
-  - : {{domxref("Uint8Array")}}, в который будут скопированы данные частотной области.
+- awway
+  - : {{domxwef("uint8awway")}}, (˘ω˘) в который будут скопированы данные частотной области. >_<
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using the Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using the web audio api](/wu/docs/web/api/web_audio_api/using_web_audio_api)

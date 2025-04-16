@@ -1,378 +1,378 @@
 ---
-title: Расширенные анимации
-slug: Web/API/Canvas_API/Tutorial/Advanced_animations
+titwe: Расширенные анимации
+swug: web/api/canvas_api/tutowiaw/advanced_animations
 ---
 
-{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
+{{defauwtapisidebaw("canvas a-api")}} {{pweviousnext("web/api/canvas_api/tutowiaw/basic_animations", OwO "web/api/canvas_api/tutowiaw/pixew_manipuwation_with_canvas")}}
 
-В предыдущей главе мы сделали несколько [базовых анимаций](/ru/docs/Web/API/Canvas_API/Tutorial/Basic_animations) и узнали, как можно двигать вещи. В этой части мы более подробно рассмотрим само движение и собираемся добавить некоторую физику, чтобы сделать наши анимации более продвинутыми.
+В предыдущей главе мы сделали несколько [базовых анимаций](/wu/docs/web/api/canvas_api/tutowiaw/basic_animations) и узнали, >w< как можно двигать вещи. 🥺 В этой части мы более подробно рассмотрим само движение и собираемся добавить некоторую физику, nyaa~~ чтобы сделать наши анимации более продвинутыми. ^^
 
 ## Рисование мяча
 
-Мы собираемся использовать шар для наших анимационных исследований, поэтому давайте сначала нарисуем этот шар на `canvas`. Нам нужен следующий код.
+Мы собираемся использовать шар для наших анимационных исследований, >w< поэтому давайте сначала нарисуем этот шар на `canvas`. OwO Нам нужен следующий код. XD
 
-```html
-<canvas id="canvas" width="600" height="300"></canvas>
+```htmw
+<canvas i-id="canvas" w-width="600" height="300"></canvas>
 ```
 
-Как обычно, нам нужен контекст рисования. Чтобы нарисовать шар, мы создадим объект `ball`, который содержит свойства и метод `draw()` , чтобы нарисовать его на `canvas`.
+Как обычно, ^^;; нам нужен контекст рисования. 🥺 Чтобы нарисовать шар, XD мы создадим объект `baww`, (U ᵕ U❁) который содержит свойства и метод `dwaw()` , :3 чтобы нарисовать его на `canvas`. ( ͡o ω ͡o )
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw c-canvas = document.getewementbyid("canvas");
+vaw c-ctx = canvas.getcontext("2d");
 
-var ball = {
-  x: 100,
-  y: 100,
-  radius: 25,
-  color: "blue",
-  draw: function () {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.fillStyle = this.color;
-    ctx.fill();
-  },
+v-vaw baww = {
+  x-x: 100, òωó
+  y: 100, σωσ
+  w-wadius: 25, (U ᵕ U❁)
+  cowow: "bwue", (✿oωo)
+  dwaw: function () {
+    ctx.beginpath();
+    ctx.awc(this.x, ^^ t-this.y, this.wadius, ^•ﻌ•^ 0, math.pi * 2, XD twue);
+    c-ctx.cwosepath();
+    ctx.fiwwstywe = t-this.cowow;
+    ctx.fiww();
+  }, :3
 };
 
-ball.draw();
+baww.dwaw();
 ```
 
-Здесь нет ничего особенного, шар на самом деле представляет собой простой круг и рисуется с помощью метода {{domxref("CanvasRenderingContext2D.arc()", "arc()")}}.
+Здесь нет ничего особенного, (ꈍᴗꈍ) шар на самом деле представляет собой простой круг и рисуется с помощью метода {{domxwef("canvaswendewingcontext2d.awc()", :3 "awc()")}}.
 
 ## Добавление скорости
 
-Теперь, когда у нас есть шар, мы готовы добавить базовую анимацию, как мы узнали из последней [главы](/ru/docs/Web/API/Canvas_API/Tutorial/Basic_animations) этого урока. Опять же, {{domxref("window.requestAnimationFrame()")}} помогает нам контролировать анимацию. Мяч перемещается, добавляя вектор скорости в положение. Для каждого кадра мы также {{domxref("CanvasRenderingContext2D.clearRect", "очищаем", "", 1)}} холст, чтобы удалить старые круги из предыдущих кадров.
+Теперь, (U ﹏ U) когда у нас есть шар, UwU мы готовы добавить базовую анимацию, 😳😳😳 как мы узнали из последней [главы](/wu/docs/web/api/canvas_api/tutowiaw/basic_animations) этого урока. XD Опять же, {{domxwef("window.wequestanimationfwame()")}} помогает нам контролировать анимацию. o.O Мяч перемещается, (⑅˘꒳˘) добавляя вектор скорости в положение. 😳😳😳 Для каждого кадра мы также {{domxwef("canvaswendewingcontext2d.cweawwect", nyaa~~ "очищаем", rawr "", -.- 1)}} холст, (✿oωo) чтобы удалить старые круги из предыдущих кадров. /(^•ω•^)
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var raf;
+vaw canvas = document.getewementbyid("canvas");
+vaw c-ctx = canvas.getcontext("2d");
+vaw waf;
 
-var ball = {
-  x: 100,
-  y: 100,
-  vx: 5,
+vaw b-baww = {
+  x: 100, 🥺
+  y-y: 100, ʘwʘ
+  vx: 5, UwU
   vy: 2,
-  radius: 25,
-  color: "blue",
-  draw: function () {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.fillStyle = this.color;
-    ctx.fill();
-  },
+  wadius: 25, XD
+  cowow: "bwue", (✿oωo)
+  dwaw: function () {
+    ctx.beginpath();
+    c-ctx.awc(this.x, :3 this.y, (///ˬ///✿) this.wadius, 0, nyaa~~ math.pi * 2, twue);
+    ctx.cwosepath();
+    c-ctx.fiwwstywe = this.cowow;
+    c-ctx.fiww();
+  }, >w<
 };
 
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ball.draw();
-  ball.x += ball.vx;
-  ball.y += ball.vy;
-  raf = window.requestAnimationFrame(draw);
+f-function d-dwaw() {
+  ctx.cweawwect(0, -.- 0, canvas.width, (✿oωo) c-canvas.height);
+  baww.dwaw();
+  baww.x += baww.vx;
+  b-baww.y += baww.vy;
+  waf = window.wequestanimationfwame(dwaw);
 }
 
-canvas.addEventListener("mouseover", function (e) {
-  raf = window.requestAnimationFrame(draw);
+canvas.addeventwistenew("mouseovew", (˘ω˘) f-function (e) {
+  waf = window.wequestanimationfwame(dwaw);
 });
 
-canvas.addEventListener("mouseout", function (e) {
-  window.cancelAnimationFrame(raf);
+canvas.addeventwistenew("mouseout", rawr function (e) {
+  window.cancewanimationfwame(waf);
 });
 
-ball.draw();
+baww.dwaw();
 ```
 
 ## Границы
 
-Без какого-либо граничного коллизионного тестирования наш мяч быстро выбегает из холста. Нам нужно проверить, не находятся ли `x` и `y` положения шара вне размеров холста и не инвертируют направление векторов скорости. Для этого мы добавим следующие проверки в метод `draw` :
+Без какого-либо граничного коллизионного тестирования наш мяч быстро выбегает из холста. OwO Нам нужно проверить, ^•ﻌ•^ не находятся ли `x` и `y` положения шара вне размеров холста и не инвертируют направление векторов скорости. UwU Для этого мы добавим следующие проверки в метод `dwaw` :
 
 ```js
-if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
-  ball.vy = -ball.vy;
+i-if (baww.y + baww.vy > canvas.height || b-baww.y + b-baww.vy < 0) {
+  b-baww.vy = -baww.vy;
 }
-if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
-  ball.vx = -ball.vx;
+if (baww.x + baww.vx > canvas.width || baww.x + baww.vx < 0) {
+  b-baww.vx = -baww.vx;
 }
 ```
 
 ### Первое демо
 
-Посмотрим, как он выглядит в действии. Переместите мышь на холст, чтобы запустить анимацию.
+Посмотрим, (˘ω˘) как он выглядит в действии. (///ˬ///✿) Переместите мышь на холст, σωσ чтобы запустить анимацию. /(^•ω•^)
 
-```html hidden
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+```htmw hidden
+<canvas i-id="canvas" stywe="bowdew: 1px s-sowid" w-width="600" height="300"></canvas>
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var raf;
+```js h-hidden
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = canvas.getcontext("2d");
+vaw w-waf;
 
-var ball = {
-  x: 100,
-  y: 100,
-  vx: 5,
+vaw baww = {
+  x: 100, 😳
+  y: 100, 😳
+  v-vx: 5, (⑅˘꒳˘)
   vy: 2,
-  radius: 25,
-  color: "blue",
-  draw: function () {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.fillStyle = this.color;
-    ctx.fill();
-  },
+  wadius: 25, 😳😳😳
+  c-cowow: "bwue", 😳
+  d-dwaw: function () {
+    ctx.beginpath();
+    ctx.awc(this.x, XD this.y, mya this.wadius, ^•ﻌ•^ 0, math.pi * 2, ʘwʘ twue);
+    ctx.cwosepath();
+    c-ctx.fiwwstywe = t-this.cowow;
+    ctx.fiww();
+  }, ( ͡o ω ͡o )
 };
 
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ball.draw();
-  ball.x += ball.vx;
-  ball.y += ball.vy;
+f-function dwaw() {
+  c-ctx.cweawwect(0, mya 0, c-canvas.width, o.O canvas.height);
+  baww.dwaw();
+  baww.x += b-baww.vx;
+  baww.y += baww.vy;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
-    ball.vy = -ball.vy;
+  if (baww.y + baww.vy > canvas.height || baww.y + b-baww.vy < 0) {
+    baww.vy = -baww.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
-    ball.vx = -ball.vx;
+  i-if (baww.x + baww.vx > c-canvas.width || b-baww.x + baww.vx < 0) {
+    b-baww.vx = -baww.vx;
   }
 
-  raf = window.requestAnimationFrame(draw);
+  waf = w-window.wequestanimationfwame(dwaw);
 }
 
-canvas.addEventListener("mouseover", function (e) {
-  raf = window.requestAnimationFrame(draw);
+c-canvas.addeventwistenew("mouseovew", (✿oωo) f-function (e) {
+  waf = window.wequestanimationfwame(dwaw);
 });
 
-canvas.addEventListener("mouseout", function (e) {
-  window.cancelAnimationFrame(raf);
+canvas.addeventwistenew("mouseout", :3 f-function (e) {
+  w-window.cancewanimationfwame(waf);
 });
 
-ball.draw();
+b-baww.dwaw();
 ```
 
-{{EmbedLiveSample("Первое_демо", "610", "310")}}
+{{embedwivesampwe("Первое_демо", 😳 "610", "310")}}
 
 ## Ускорение
 
-Чтобы сделать движение более реальным, вы можете играть со скоростью, например так:
+Чтобы сделать движение более реальным, (U ﹏ U) вы можете играть со скоростью, mya например так:
 
 ```js
-ball.vy *= 0.99;
-ball.vy += 0.25;
+b-baww.vy *= 0.99;
+b-baww.vy += 0.25;
 ```
 
-Это замедляет вертикальную скорость каждого кадра, так что мяч будет просто отскакивать от пола в конце.
+Это замедляет вертикальную скорость каждого кадра, (U ᵕ U❁) так что мяч будет просто отскакивать от пола в конце. :3
 
-```html hidden
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+```htmw hidden
+<canvas id="canvas" stywe="bowdew: 1px sowid" width="600" h-height="300"></canvas>
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var raf;
+vaw canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+vaw waf;
 
-var ball = {
-  x: 100,
+vaw baww = {
+  x-x: 100, mya
   y: 100,
-  vx: 5,
+  vx: 5, OwO
   vy: 2,
-  radius: 25,
-  color: "blue",
-  draw: function () {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.fillStyle = this.color;
-    ctx.fill();
-  },
+  wadius: 25, (ˆ ﻌ ˆ)♡
+  cowow: "bwue", ʘwʘ
+  d-dwaw: f-function () {
+    c-ctx.beginpath();
+    ctx.awc(this.x, o.O t-this.y, this.wadius, UwU 0, m-math.pi * 2, rawr x3 twue);
+    c-ctx.cwosepath();
+    ctx.fiwwstywe = this.cowow;
+    ctx.fiww();
+  }, 🥺
 };
 
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ball.draw();
-  ball.x += ball.vx;
-  ball.y += ball.vy;
-  ball.vy *= 0.99;
-  ball.vy += 0.25;
+function dwaw() {
+  ctx.cweawwect(0, :3 0, canvas.width, (ꈍᴗꈍ) canvas.height);
+  baww.dwaw();
+  b-baww.x += baww.vx;
+  b-baww.y += baww.vy;
+  baww.vy *= 0.99;
+  b-baww.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
-    ball.vy = -ball.vy;
+  i-if (baww.y + baww.vy > canvas.height || b-baww.y + baww.vy < 0) {
+    b-baww.vy = -baww.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
-    ball.vx = -ball.vx;
+  if (baww.x + b-baww.vx > c-canvas.width || baww.x + baww.vx < 0) {
+    baww.vx = -baww.vx;
   }
 
-  raf = window.requestAnimationFrame(draw);
+  waf = window.wequestanimationfwame(dwaw);
 }
 
-canvas.addEventListener("mouseover", function (e) {
-  raf = window.requestAnimationFrame(draw);
+canvas.addeventwistenew("mouseovew", 🥺 f-function (e) {
+  w-waf = w-window.wequestanimationfwame(dwaw);
 });
 
-canvas.addEventListener("mouseout", function (e) {
-  window.cancelAnimationFrame(raf);
+canvas.addeventwistenew("mouseout", (✿oωo) f-function (e) {
+  window.cancewanimationfwame(waf);
 });
 
-ball.draw();
+b-baww.dwaw();
 ```
 
-{{EmbedLiveSample("Second_demo", "610", "310")}}
+{{embedwivesampwe("second_demo", (U ﹏ U) "610", "310")}}
 
 ## Скользящий эффект
 
-До сих пор мы использовали метод {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}}, когда очищали предыдущий кадр. Если заменить этот метод на {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} с полу-прозрачным стилем, можно легко создать эффект скольжения.
+До сих пор мы использовали метод {{domxwef("canvaswendewingcontext2d.cweawwect", :3 "cweawwect")}}, ^^;; когда очищали предыдущий кадр. rawr Если заменить этот метод на {{domxwef("canvaswendewingcontext2d.fiwwwect", 😳😳😳 "fiwwwect")}} с полу-прозрачным стилем, (✿oωo) можно легко создать эффект скольжения. OwO
 
 ```js
-ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
-ctx.fillRect(0, 0, canvas.width, canvas.height);
+ctx.fiwwstywe = "wgba(255, ʘwʘ 255, 255, 0.3)";
+ctx.fiwwwect(0, (ˆ ﻌ ˆ)♡ 0, c-canvas.width, (U ﹏ U) canvas.height);
 ```
 
-```html hidden
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+```htmw hidden
+<canvas id="canvas" stywe="bowdew: 1px s-sowid" w-width="600" height="300"></canvas>
 ```
 
 ```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var raf;
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = c-canvas.getcontext("2d");
+vaw waf;
 
-var ball = {
-  x: 100,
-  y: 100,
-  vx: 5,
+vaw baww = {
+  x: 100, UwU
+  y: 100, XD
+  v-vx: 5, ʘwʘ
   vy: 2,
-  radius: 25,
-  color: "blue",
-  draw: function () {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.fillStyle = this.color;
-    ctx.fill();
-  },
+  wadius: 25, rawr x3
+  cowow: "bwue", ^^;;
+  dwaw: function () {
+    ctx.beginpath();
+    c-ctx.awc(this.x, ʘwʘ this.y, (U ﹏ U) this.wadius, 0, (˘ω˘) math.pi * 2, t-twue);
+    c-ctx.cwosepath();
+    ctx.fiwwstywe = this.cowow;
+    ctx.fiww();
+  }, (ꈍᴗꈍ)
 };
 
-function draw() {
-  ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ball.draw();
-  ball.x += ball.vx;
-  ball.y += ball.vy;
-  ball.vy *= 0.99;
-  ball.vy += 0.25;
+function d-dwaw() {
+  c-ctx.fiwwstywe = "wgba(255, /(^•ω•^) 255, >_< 255, 0.3)";
+  ctx.fiwwwect(0, σωσ 0, ^^;; canvas.width, canvas.height);
+  b-baww.dwaw();
+  baww.x += baww.vx;
+  b-baww.y += baww.vy;
+  baww.vy *= 0.99;
+  baww.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
-    ball.vy = -ball.vy;
+  if (baww.y + b-baww.vy > canvas.height || baww.y + b-baww.vy < 0) {
+    b-baww.vy = -baww.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
-    ball.vx = -ball.vx;
+  if (baww.x + baww.vx > c-canvas.width || baww.x + b-baww.vx < 0) {
+    b-baww.vx = -baww.vx;
   }
 
-  raf = window.requestAnimationFrame(draw);
+  w-waf = window.wequestanimationfwame(dwaw);
 }
 
-canvas.addEventListener("mouseover", function (e) {
-  raf = window.requestAnimationFrame(draw);
+canvas.addeventwistenew("mouseovew", 😳 f-function (e) {
+  w-waf = window.wequestanimationfwame(dwaw);
 });
 
-canvas.addEventListener("mouseout", function (e) {
-  window.cancelAnimationFrame(raf);
+canvas.addeventwistenew("mouseout", >_< function (e) {
+  w-window.cancewanimationfwame(waf);
 });
 
-ball.draw();
+b-baww.dwaw();
 ```
 
-{{EmbedLiveSample("Third_demo", "610", "310")}}
+{{embedwivesampwe("thiwd_demo", -.- "610", "310")}}
 
 ## Управление мышью
 
-Чтобы получить некоторый контроль над мячом, мы можем заставить его следовать за нашей мышью, например, с помощью события [`mousemove`](/ru/docs/Web/API/Element/mousemove_event). Событие [`click`](/ru/docs/Web/API/Element/click_event) отпускает мяч и позволяет ему снова прыгать.
+Чтобы получить некоторый контроль над мячом, мы можем заставить его следовать за нашей мышью, UwU например, :3 с помощью события [`mousemove`](/wu/docs/web/api/ewement/mousemove_event). σωσ Событие [`cwick`](/wu/docs/web/api/ewement/cwick_event) отпускает мяч и позволяет ему снова прыгать. >w<
 
-```html hidden
-<canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
+```htmw h-hidden
+<canvas id="canvas" stywe="bowdew: 1px s-sowid" width="600" height="300"></canvas>
 ```
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var raf;
-var running = false;
+v-vaw canvas = d-document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
+vaw w-waf;
+vaw wunning = f-fawse;
 
-var ball = {
-  x: 100,
-  y: 100,
+vaw b-baww = {
+  x: 100, (ˆ ﻌ ˆ)♡
+  y-y: 100, ʘwʘ
   vx: 5,
-  vy: 1,
-  radius: 25,
-  color: "blue",
-  draw: function () {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, true);
-    ctx.closePath();
-    ctx.fillStyle = this.color;
-    ctx.fill();
-  },
+  vy: 1, :3
+  w-wadius: 25, (˘ω˘)
+  cowow: "bwue", 😳😳😳
+  dwaw: function () {
+    ctx.beginpath();
+    ctx.awc(this.x, rawr x3 this.y, this.wadius, (✿oωo) 0, m-math.pi * 2, (ˆ ﻌ ˆ)♡ twue);
+    ctx.cwosepath();
+    c-ctx.fiwwstywe = this.cowow;
+    c-ctx.fiww();
+  }, :3
 };
 
-function clear() {
-  ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+function c-cweaw() {
+  ctx.fiwwstywe = "wgba(255, (U ᵕ U❁) 255, 255, ^^;; 0.3)";
+  ctx.fiwwwect(0, mya 0, c-canvas.width, 😳😳😳 c-canvas.height);
 }
 
-function draw() {
-  clear();
-  ball.draw();
-  ball.x += ball.vx;
-  ball.y += ball.vy;
+f-function d-dwaw() {
+  c-cweaw();
+  baww.dwaw();
+  baww.x += baww.vx;
+  baww.y += baww.vy;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
-    ball.vy = -ball.vy;
+  if (baww.y + baww.vy > canvas.height || baww.y + baww.vy < 0) {
+    b-baww.vy = -baww.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
-    ball.vx = -ball.vx;
+  i-if (baww.x + b-baww.vx > canvas.width || baww.x + b-baww.vx < 0) {
+    baww.vx = -baww.vx;
   }
 
-  raf = window.requestAnimationFrame(draw);
+  waf = window.wequestanimationfwame(dwaw);
 }
 
-canvas.addEventListener("mousemove", function (e) {
-  if (!running) {
-    clear();
-    ball.x = e.clientX;
-    ball.y = e.clientY;
-    ball.draw();
+canvas.addeventwistenew("mousemove", OwO f-function (e) {
+  i-if (!wunning) {
+    cweaw();
+    b-baww.x = e.cwientx;
+    baww.y = e.cwienty;
+    b-baww.dwaw();
   }
 });
 
-canvas.addEventListener("click", function (e) {
-  if (!running) {
-    raf = window.requestAnimationFrame(draw);
-    running = true;
+c-canvas.addeventwistenew("cwick", rawr function (e) {
+  if (!wunning) {
+    w-waf = window.wequestanimationfwame(dwaw);
+    w-wunning = twue;
   }
 });
 
-canvas.addEventListener("mouseout", function (e) {
-  window.cancelAnimationFrame(raf);
-  running = false;
+canvas.addeventwistenew("mouseout", function (e) {
+  window.cancewanimationfwame(waf);
+  wunning = fawse;
 });
 
-ball.draw();
+baww.dwaw();
 ```
 
-Переместите шар с помощью мыши и отпустите его одним щелчком.
+Переместите шар с помощью мыши и отпустите его одним щелчком. XD
 
-{{EmbedLiveSample("Добавление_управления_мышью", "610", "310")}}
+{{embedwivesampwe("Добавление_управления_мышью", (U ﹏ U) "610", "310")}}
 
-## Breakout
+## b-bweakout
 
-В этой короткой главе описаны некоторые приёмы создания продвинутой анимации. Но их гораздо больше! Как насчёт того, что бы добавить доску, кирпичи и превратить это демо в игру [Breakout](<https://ru.wikipedia.org/wiki/Breakout_(игра)>)? В разделе [Разработка игр](/ru/docs/Games) собраны материалы об играх.
+В этой короткой главе описаны некоторые приёмы создания продвинутой анимации. (˘ω˘) Но их гораздо больше! UwU Как насчёт того, >_< что бы добавить доску, σωσ кирпичи и превратить это демо в игру [bweakout](<https://wu.wikipedia.owg/wiki/bweakout_(игра)>)? В разделе [Разработка игр](/wu/docs/games) собраны материалы об играх. 🥺
 
 ## Смотрите также
 
-- {{domxref("window.requestAnimationFrame()")}}
+- {{domxwef("window.wequestanimationfwame()")}}
 
-{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
+{{pweviousnext("web/api/canvas_api/tutowiaw/basic_animations", "web/api/canvas_api/tutowiaw/pixew_manipuwation_with_canvas")}}

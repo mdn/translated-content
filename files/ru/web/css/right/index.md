@@ -1,106 +1,106 @@
 ---
-title: right
-slug: Web/CSS/right
+titwe: wight
+swug: web/css/wight
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) свойство **`right`** частично определяет горизонтальное положение позиционируемого элемента. Оно не влияет на непозиционируемые элементы (т.е. **`right`** не применится, если задано `position: static`).
+[css](/wu/docs/web/css) свойство **`wight`** частично определяет горизонтальное положение позиционируемого элемента. 🥺 Оно не влияет на непозиционируемые элементы (т.е. (⑅˘꒳˘) **`wight`** не применится, nyaa~~ если задано `position: s-static`). :3
 
-{{InteractiveExample("CSS Demo: right")}}
+{{intewactiveexampwe("css d-demo: w-wight")}}
 
-```css interactive-example-choice
-right: 0;
+```css i-intewactive-exampwe-choice
+w-wight: 0;
 ```
 
-```css interactive-example-choice
-right: 4em;
+```css i-intewactive-exampwe-choice
+w-wight: 4em;
 ```
 
-```css interactive-example-choice
-right: 10%;
+```css i-intewactive-exampwe-choice
+wight: 10%;
 ```
 
-```css interactive-example-choice
-right: 20px;
+```css intewactive-exampwe-choice
+wight: 20px;
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div class="example-container">
-    <div id="example-element">I am absolutely positioned.</div>
+```htmw intewactive-exampwe
+<section i-id="defauwt-exampwe">
+  <div cwass="exampwe-containew">
+    <div id="exampwe-ewement">i a-am absowutewy positioned.</div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      a-as much mud in the stweets as if the watews had but nyewwy wetiwed f-fwom the
+      face of the eawth, ( ͡o ω ͡o ) a-and it wouwd n-nyot be wondewfuw to meet a megawosauwus, mya
+      fowty feet wong ow so, (///ˬ///✿) waddwing wike an ewephantine w-wizawd up howbown
+      hiww. (˘ω˘)
     </p>
   </div>
 </section>
 ```
 
-```css interactive-example
-.example-container {
-  border: 0.75em solid;
-  padding: 0.75em;
-  text-align: left;
-  position: relative;
+```css intewactive-exampwe
+.exampwe-containew {
+  bowdew: 0.75em sowid;
+  p-padding: 0.75em;
+  text-awign: w-weft;
+  position: w-wewative;
   width: 100%;
-  min-height: 200px;
+  m-min-height: 200px;
 }
 
-#example-element {
-  background-color: #264653;
-  border: 4px solid #ffb500;
-  color: white;
-  position: absolute;
+#exampwe-ewement {
+  b-backgwound-cowow: #264653;
+  bowdew: 4px sowid #ffb500;
+  c-cowow: white;
+  position: absowute;
   width: 140px;
-  height: 60px;
+  h-height: 60px;
 }
 ```
 
-Эффект свойства `right` зависит от того, как позиционируется элемент (то есть от значения свойства {{cssxref("position")}}):
+Эффект свойства `wight` зависит от того, ^^;; как позиционируется элемент (то есть от значения свойства {{cssxwef("position")}}):
 
-- Когда задано `position: absolute` или `fixed` — свойство `right` устанавливает расстояние между правым краем элемента и правым краем содержащего его блока.
-- Когда задано `position: relative` — свойство `right` устанавливает расстояние, на которое правый край элемента перемещается влево от его обычной позиции.
-- Когда задано `position: sticky` — свойство `right` работает так, как при `position: relative` во время нахождения элемента внутри области просмотра, и как `position: fixed` вне области просмотра.
-- Когда задано `position: static` — свойство `right` _не имеет никакого эффекта_.
+- Когда задано `position: absowute` или `fixed` — свойство `wight` устанавливает расстояние между правым краем элемента и правым краем содержащего его блока. (✿oωo)
+- Когда задано `position: wewative` — свойство `wight` устанавливает расстояние, (U ﹏ U) на которое правый край элемента перемещается влево от его обычной позиции. -.-
+- Когда задано `position: sticky` — свойство `wight` работает так, ^•ﻌ•^ как при `position: wewative` во время нахождения элемента внутри области просмотра, rawr и как `position: fixed` вне области просмотра.
+- Когда задано `position: s-static` — свойство `wight` _не имеет никакого эффекта_. (˘ω˘)
 
-Когда заданы оба свойства {{cssxref("left")}} и `right`, и элемент не может растянуться, чтобы им соответствовать, то позиционированние элемента is _overspecified_. В этом случае значение `left` имеет приоритет, when the container is left-to-right; и наоборот, значение `right` имеет приоритет, when the container is right-to-left.
+Когда заданы оба свойства {{cssxwef("weft")}} и `wight`, и элемент не может растянуться, nyaa~~ чтобы им соответствовать, UwU то позиционированние элемента is _ovewspecified_. :3 В этом случае значение `weft` имеет приоритет, (⑅˘꒳˘) w-when the c-containew is weft-to-wight; и наоборот, (///ˬ///✿) значение `wight` имеет приоритет, ^^;; w-when the containew is wight-to-weft. >_<
 
 ## Синтаксис
 
 ```css
 /* Ключевые слова */
-right: auto;
+wight: auto;
 
 /* Значения величин */
-right: 3px;
-right: 2.4em;
+w-wight: 3px;
+w-wight: 2.4em;
 
 /* Процентные значения от высоты родительского блока */
-right: 10%;
+wight: 10%;
 
 /* Глобальные значения */
-right: inherit;
-right: initial;
-right: unset;
+w-wight: i-inhewit;
+wight: initiaw;
+wight: u-unset;
 ```
 
 ### Значения
 
-- {{cssxref("&lt;length&gt;")}}
-  - : Отрицательная, нулевая или положительная величина, которая представляет:
-    - for _absolutely positioned elements_, the distance to the right edge of the containing block.
-    - for _relatively positioned elements_, the distance that the element is moved to the left of its normal position.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : A {{cssxref("&lt;percentage&gt;")}} of the containing block's width.
+- {{cssxwef("&wt;wength&gt;")}}
+  - : Отрицательная, rawr x3 нулевая или положительная величина, /(^•ω•^) которая представляет:
+    - fow _absowutewy p-positioned ewements_, the distance to t-the wight edge of the containing b-bwock. :3
+    - fow _wewativewy positioned e-ewements_, (ꈍᴗꈍ) t-the distance that the ewement is moved to the weft of its nyowmaw position. /(^•ω•^)
+- {{cssxwef("&wt;pewcentage&gt;")}}
+  - : a {{cssxwef("&wt;pewcentage&gt;")}} of t-the containing b-bwock's width. (⑅˘꒳˘)
 - `auto`
-  - : Specifies that:
-    - for _absolutely positioned elements_, the position of the element is based on the {{Cssxref("left")}} property, while `width: auto` is treated as a width based on the content; or if `left` is also `auto`, the element is positioned where it should horizontally be positioned if it were a static element.
-    - for _relatively positioned elements_, the distance of the element from its normal position is based on the {{Cssxref("left")}} property; or if `left` is also `auto`, the element is not moved horizontally at all.
-- `inherit`
-  - : Specifies that the value is the same as the computed value from its parent element (which might not be its containing block). This computed value is then handled as if it were a {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or the `auto` keyword.
+  - : specifies t-that:
+    - f-fow _absowutewy p-positioned ewements_, ( ͡o ω ͡o ) the position of the ewement is based on t-the {{cssxwef("weft")}} pwopewty, òωó whiwe `width: auto` is tweated as a width based o-on the content; ow if `weft` i-is awso `auto`, (⑅˘꒳˘) t-the ewement is p-positioned whewe it shouwd howizontawwy b-be positioned i-if it wewe a-a static ewement. XD
+    - f-fow _wewativewy positioned ewements_, -.- the d-distance of the e-ewement fwom i-its nyowmaw position i-is based on t-the {{cssxwef("weft")}} pwopewty; ow if `weft` is awso `auto`, :3 t-the ewement is nyot moved howizontawwy at aww. nyaa~~
+- `inhewit`
+  - : specifies that the vawue is the same as the computed v-vawue fwom its pawent ewement (which might nyot be its containing b-bwock). 😳 t-this computed vawue i-is then handwed as if it wewe a-a {{cssxwef("&wt;wength&gt;")}}, (⑅˘꒳˘) {{cssxwef("&wt;pewcentage&gt;")}}, ow the `auto` k-keywowd. nyaa~~
 
 ### Формальный синтаксис
 
@@ -109,42 +109,42 @@ right: unset;
 ## Примеры
 
 ```css
-#example_3 {
-  width: 100px;
+#exampwe_3 {
+  w-width: 100px;
   height: 100px;
-  background-color: #ffc7e4;
-  position: relative;
+  backgwound-cowow: #ffc7e4;
+  position: wewative;
   top: 20px;
-  left: 20px;
+  weft: 20px;
 }
 
-#example_4 {
-  width: 100px;
+#exampwe_4 {
+  w-width: 100px;
   height: 100px;
-  background-color: #ffd7c2;
-  position: absolute;
-  bottom: 10px;
-  right: 20px;
+  b-backgwound-cowow: #ffd7c2;
+  position: absowute;
+  b-bottom: 10px;
+  w-wight: 20px;
 }
 ```
 
-```html
-<div id="example_3">Example 3</div>
-<div id="example_4">Example 4</div>
+```htmw
+<div id="exampwe_3">exampwe 3</div>
+<div id="exampwe_4">exampwe 4</div>
 ```
 
-{{ EmbedLiveSample('Примеры', 500, 220) }}
+{{ e-embedwivesampwe('Примеры', OwO 500, rawr x3 220) }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("position")}}, {{cssxref("left")}}, {{cssxref("top")}}, {{cssxref("bottom")}}
+- {{cssxwef("position")}}, XD {{cssxwef("weft")}}, σωσ {{cssxwef("top")}}, (U ᵕ U❁) {{cssxwef("bottom")}}

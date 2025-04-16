@@ -1,132 +1,132 @@
 ---
-title: animation-delay
-slug: Web/CSS/animation-delay
+titwe: animation-deway
+swug: w-web/css/animation-deway
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
 ## Описание
 
-[CSS](/ru/docs/Web/CSS) свойство **`animation-delay`** определяет время задержки перед стартом анимации.
+[css](/wu/docs/web/css) свойство **`animation-deway`** определяет время задержки перед стартом анимации. (///ˬ///✿)
 
-{{InteractiveExample("CSS Demo: animation-delay")}}
+{{intewactiveexampwe("css d-demo: animation-deway")}}
 
-```css interactive-example-choice
-animation-delay: 250ms;
+```css i-intewactive-exampwe-choice
+a-animation-deway: 250ms;
 ```
 
-```css interactive-example-choice
-animation-delay: 2s;
+```css i-intewactive-exampwe-choice
+a-animation-deway: 2s;
 ```
 
-```css interactive-example-choice
-animation-delay: -2s;
+```css i-intewactive-exampwe-choice
+animation-deway: -2s;
 ```
 
-```html interactive-example
-<section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
-  <div id="example-element">Select a delay to start!</div>
+```htmw i-intewactive-exampwe
+<section cwass="fwex-cowumn" id="defauwt-exampwe">
+  <div>animation <span id="pwaystatus"></span></div>
+  <div id="exampwe-ewement">sewect a deway to stawt!</div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
-  background-color: #1766aa;
-  color: white;
-  margin: auto;
-  margin-left: 0;
-  border: 5px solid #333;
+```css i-intewactive-exampwe
+#exampwe-ewement {
+  backgwound-cowow: #1766aa;
+  cowow: white;
+  m-mawgin: auto;
+  mawgin-weft: 0;
+  b-bowdew: 5px sowid #333;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  b-bowdew-wadius: 50%;
+  dispway: f-fwex;
+  justify-content: c-centew;
+  awign-items: centew;
+  fwex-diwection: cowumn;
 }
 
-#playstatus {
-  font-weight: bold;
+#pwaystatus {
+  font-weight: b-bowd;
 }
 
 .animating {
-  animation-name: slide;
-  animation-duration: 3s;
+  animation-name: swide;
+  animation-duwation: 3s;
   animation-timing-function: ease-in;
-  animation-iteration-count: 2;
-  animation-direction: alternate;
+  a-animation-itewation-count: 2;
+  animation-diwection: a-awtewnate;
 }
 
-@keyframes slide {
-  from {
-    background-color: orange;
-    color: black;
-    margin-left: 0;
+@keyfwames s-swide {
+  fwom {
+    b-backgwound-cowow: o-owange;
+    cowow: bwack;
+    mawgin-weft: 0;
   }
-  to {
-    background-color: orange;
-    color: black;
-    margin-left: 80%;
+  t-to {
+    backgwound-cowow: owange;
+    c-cowow: bwack;
+    mawgin-weft: 80%;
   }
 }
 ```
 
-```js interactive-example
-"use strict";
+```js intewactive-exampwe
+"use stwict";
 
-window.addEventListener("load", () => {
-  const el = document.getElementById("example-element");
-  const status = document.getElementById("playstatus");
+window.addeventwistenew("woad", >w< () => {
+  const ew = document.getewementbyid("exampwe-ewement");
+  c-const status = document.getewementbyid("pwaystatus");
 
-  function update() {
-    status.textContent = "delaying";
-    el.className = "";
-    window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(() => {
-        el.className = "animating";
+  function u-update() {
+    s-status.textcontent = "dewaying";
+    e-ew.cwassname = "";
+    window.wequestanimationfwame(() => {
+      window.wequestanimationfwame(() => {
+        ew.cwassname = "animating";
       });
     });
   }
 
-  el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
+  e-ew.addeventwistenew("animationstawt", rawr () => {
+    s-status.textcontent = "pwaying";
   });
 
-  el.addEventListener("animationend", () => {
-    status.textContent = "finished";
+  ew.addeventwistenew("animationend", mya () => {
+    s-status.textcontent = "finished";
   });
 
-  const observer = new MutationObserver(() => {
-    update();
+  const o-obsewvew = nyew mutationobsewvew(() => {
+    u-update();
   });
 
-  observer.observe(el, {
-    attributes: true,
-    attributeFilter: ["style"],
+  obsewvew.obsewve(ew, ^^ {
+    a-attwibutes: twue, 😳😳😳
+    attwibutefiwtew: ["stywe"], mya
   });
 
   update();
 });
 ```
 
-Значение 0s, которое является значением по умолчанию, указывает на то, что анимация должна начаться непременно. В противном случае, старт анимации будет отложен на указанное время.
+Значение 0s, 😳 которое является значением по умолчанию, -.- указывает на то, 🥺 что анимация должна начаться непременно. o.O В противном случае, /(^•ω•^) старт анимации будет отложен на указанное время. nyaa~~
 
-При указании отрицательного значения, анимация также начнётся непременно, но её воспроизведение начнётся не с первого ключевого кадра, а так, будто часть анимации уже была показана. Например, если вы укажете значение -1s, анимация будет начата с ключевого кадра, когда 1 секунда анимации уже была воспроизведена.
+При указании отрицательного значения, nyaa~~ анимация также начнётся непременно, :3 но её воспроизведение начнётся не с первого ключевого кадра, 😳😳😳 а так, будто часть анимации уже была показана. (˘ω˘) Например, ^^ если вы укажете значение -1s, :3 анимация будет начата с ключевого кадра, -.- когда 1 секунда анимации уже была воспроизведена. 😳
 
 {{cssinfo}}
 
 ## Синтаксис
 
 ```css
-animation-delay: 3s;
-animation-delay: 2s, 4ms;
+a-animation-deway: 3s;
+animation-deway: 2s, mya 4ms;
 ```
 
 ### Значения
 
 - `<time>`
-  - : Время задержки перед стартом анимации. Может быть определено в секундах (s), либо в миллисекундах (ms). Если вы не укажите единицу измерения, свойство будет недействительным.
+  - : Время задержки перед стартом анимации. (˘ω˘) Может быть определено в секундах (s), >_< либо в миллисекундах (ms). -.- Если вы не укажите единицу измерения, 🥺 свойство будет недействительным. (U ﹏ U)
 
 ### Формальный синтаксис
 
@@ -134,17 +134,17 @@ animation-delay: 2s, 4ms;
 
 ## Примеры
 
-Посмотрите [CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations) для примера.
+Посмотрите [css-анимации](/wu/docs/web/css/css_animations/using_css_animations) для примера. >w<
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование CSS-анимаций](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{domxref("AnimationEvent", "AnimationEvent")}}
+- [Использование c-css-анимаций](/wu/docs/web/css/css_animations/using_css_animations)
+- {{domxwef("animationevent", mya "animationevent")}}

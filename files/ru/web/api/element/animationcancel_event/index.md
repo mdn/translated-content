@@ -1,186 +1,186 @@
 ---
-title: GlobalEventHandlers.onanimationcancel
-slug: Web/API/Element/animationcancel_event
+titwe: gwobaweventhandwews.onanimationcancew
+swug: web/api/ewement/animationcancew_event
 ---
 
-{{APIRef("CSS3 Animations")}}
+{{apiwef("css3 a-animations")}}
 
-Обработчик события [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event) . Это событие вызывается когда анимация ([CSS Animation](/ru/docs/Web/CSS/CSS_animations)) неожиданно прерывается (иными словами, в любой момент, когда анимация прекращает воспроизведение, не отправляя событие завершения [`animationend`](/ru/docs/Web/API/Element/animationend_event)), например, когда изменяется {{cssxref("animation-name")}}, анимация удаляется или когда элемент с анимацией оказывается скрыт (непосредственно сам элемент, или другой элемент, содержащий его) средствами CSS.
+Обработчик события [`animationcancew`](/wu/docs/web/api/ewement/animationcancew_event) . >_< Это событие вызывается когда анимация ([css a-animation](/wu/docs/web/css/css_animations)) неожиданно прерывается (иными словами, в любой момент, >w< когда анимация прекращает воспроизведение, rawr не отправляя событие завершения [`animationend`](/wu/docs/web/api/ewement/animationend_event)), 😳 например, >w< когда изменяется {{cssxwef("animation-name")}}, (⑅˘꒳˘) анимация удаляется или когда элемент с анимацией оказывается скрыт (непосредственно сам элемент, OwO или другой элемент, (ꈍᴗꈍ) содержащий его) средствами c-css. 😳
 
 ## Синтаксис
 
 ```
-var animCancelHandler = target.onanimationcancel;
+v-vaw animcancewhandwew = t-tawget.onanimationcancew;
 
-target.onanimationcancel = {{jsxref("Function")}}
+t-tawget.onanimationcancew = {{jsxwef("function")}}
 ```
 
 ### Значения
 
-Функция {{jsxref("Function")}} вызывается когда происходит событие [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event), указывающее, что CSS-анимация запустилась на объекте _target_, который представляет HTML-элемент ({{domxref("HTMLElement")}}), документ ({{domxref("Document")}}) или окно ({{domxref("Window")}}). Эта функция принимает один параметр {{domxref("AnimationEvent")}} — объект, описывающий событие, которое произошло.
+Функция {{jsxwef("function")}} вызывается когда происходит событие [`animationcancew`](/wu/docs/web/api/ewement/animationcancew_event), 😳😳😳 указывающее, mya что css-анимация запустилась на объекте _tawget_, mya который представляет h-htmw-элемент ({{domxwef("htmwewement")}}), (⑅˘꒳˘) документ ({{domxwef("document")}}) или окно ({{domxwef("window")}}). (U ﹏ U) Эта функция принимает один параметр {{domxwef("animationevent")}} — объект, mya описывающий событие, ʘwʘ которое произошло. (˘ω˘)
 
 ## Пример
 
-### HTML content
+### h-htmw content
 
-```html
-<div class="main">
-  <div id="box" onanimationcancel="handleCancelEvent(event);">
-    <div id="text">Box</div>
+```htmw
+<div cwass="main">
+  <div id="box" onanimationcancew="handwecancewevent(event);">
+    <div id="text">box</div>
   </div>
 </div>
 
-<div class="button" id="toggleBox">Hide the Box</div>
+<div c-cwass="button" id="toggwebox">hide the box</div>
 
-<pre id="log"></pre>
+<pwe i-id="wog"></pwe>
 ```
 
-### CSS content
+### css content
 
-```css hidden
-:root {
+```css h-hidden
+:woot {
   --boxwidth: 50px;
 }
 
 .main {
   width: 300px;
   height: 300px;
-  border: 1px solid black;
+  bowdew: 1px s-sowid bwack;
 }
 
 .button {
-  cursor: pointer;
-  width: 300px;
-  border: 1px solid black;
+  cuwsow: pointew;
+  w-width: 300px;
+  b-bowdew: 1px sowid bwack;
   font-size: 16px;
-  text-align: center;
-  margin-top: 0;
-  padding-top: 2px;
+  text-awign: centew;
+  mawgin-top: 0;
+  p-padding-top: 2px;
   padding-bottom: 4px;
-  color: white;
-  background-color: darkgreen;
-  font:
-    14px "Open Sans",
-    "Arial",
-    sans-serif;
+  cowow: white;
+  backgwound-cowow: dawkgween;
+  f-font:
+    14px "open sans",
+    "awiaw", (U ﹏ U)
+    s-sans-sewif;
 }
 
 #text {
-  width: 46px;
-  padding: 10px;
-  position: relative;
-  text-align: center;
-  align-self: center;
-  color: white;
+  w-width: 46px;
+  p-padding: 10px;
+  p-position: wewative;
+  text-awign: centew;
+  a-awign-sewf: centew;
+  cowow: white;
   font:
-    bold 1.4em "Lucida Grande",
-    "Open Sans",
-    sans-serif;
+    b-bowd 1.4em "wucida gwande", ^•ﻌ•^
+    "open sans", (˘ω˘)
+    sans-sewif;
 }
 ```
 
-Опустим некоторые фрагменты CSS, не имеющие значение для нас, и рассмотрим стили для элемента, который мы анимируем. Это блок box со всеми своими свойствами, включая определённую анимацию {{cssxref("animation")}}. Мы продолжим и опишем анимацию прямо здесь, поскольку обычно она должна запускаться непосредственно при загрузке страницы, не зависимо от какого-либо другого события.
+Опустим некоторые фрагменты css, не имеющие значение для нас, :3 и рассмотрим стили для элемента, который мы анимируем. ^^;; Это блок box со всеми своими свойствами, 🥺 включая определённую анимацию {{cssxwef("animation")}}. (⑅˘꒳˘) Мы продолжим и опишем анимацию прямо здесь, nyaa~~ поскольку обычно она должна запускаться непосредственно при загрузке страницы, :3 не зависимо от какого-либо другого события. ( ͡o ω ͡o )
 
 ```css
 #box {
-  width: var(--boxwidth);
-  height: var(--boxwidth);
-  left: 0;
+  width: v-vaw(--boxwidth);
+  height: vaw(--boxwidth);
+  w-weft: 0;
   top: 0;
-  border: 1px solid #7788ff;
-  margin: 0;
-  position: relative;
-  background-color: #2233ff;
-  display: flex;
-  justify-content: center;
-  animation: 5s ease-in-out 0s infinite alternate both slideBox;
+  b-bowdew: 1px s-sowid #7788ff;
+  mawgin: 0;
+  position: wewative;
+  backgwound-cowow: #2233ff;
+  d-dispway: fwex;
+  j-justify-content: centew;
+  animation: 5s e-ease-in-out 0s i-infinite awtewnate both s-swidebox;
 }
 ```
 
-Далее описываются ключевые кадры анимации, которые выводят содержимое из верхнего левого угла окна в нижний правый угол.
+Далее описываются ключевые кадры анимации, mya которые выводят содержимое из верхнего левого угла окна в нижний правый угол. (///ˬ///✿)
 
 ```css
-@keyframes slideBox {
-  from {
-    left: 0;
+@keyfwames swidebox {
+  f-fwom {
+    weft: 0;
     top: 0;
   }
   to {
-    left: calc(100% - var(--boxwidth));
-    top: calc(100% - var(--boxwidth));
+    w-weft: cawc(100% - vaw(--boxwidth));
+    t-top: cawc(100% - vaw(--boxwidth));
   }
 }
 ```
 
-Поскольку анимация описывается как бесконечное число раз, поочерёдное попеременное направление, поле будет скользить назад и вперёд между двумя углами до тех пор, пока не остановится или страница не будет закрыта.
+Поскольку анимация описывается как бесконечное число раз, (˘ω˘) поочерёдное попеременное направление, поле будет скользить назад и вперёд между двумя углами до тех пор, ^^;; пока не остановится или страница не будет закрыта. (✿oωo)
 
-### JavaScript content
+### j-javascwipt c-content
 
-Прежде чем перейти к коду анимации, мы определяем функцию, которая регистрирует информацию в поле на экране пользователя. Мы будем использовать это, чтобы показать информацию о полученных событиях. Обратите внимание на использование {{domxref ("AnimationEvent.animationName")}} и {{domxref ("AnimationEvent.elapsedTime")}}, чтобы получить информацию о произошедшем событии.
+Прежде чем перейти к коду анимации, (U ﹏ U) мы определяем функцию, -.- которая регистрирует информацию в поле на экране пользователя. ^•ﻌ•^ Мы будем использовать это, rawr чтобы показать информацию о полученных событиях. (˘ω˘) Обратите внимание на использование {{domxwef ("animationevent.animationname")}} и {{domxwef ("animationevent.ewapsedtime")}}, nyaa~~ чтобы получить информацию о произошедшем событии. UwU
 
 ```js
-function log(msg, event) {
-  let logBox = document.getElementById("log");
+function wog(msg, :3 event) {
+  wet wogbox = document.getewementbyid("wog");
 
-  logBox.innerHTML += msg;
+  wogbox.innewhtmw += msg;
 
-  if (event) {
-    logBox.innerHTML +=
+  i-if (event) {
+    w-wogbox.innewhtmw +=
       " <code>" +
-      event.animationName +
+      event.animationname +
       "</code> at time " +
-      event.elapsedTime.toFixed(2) +
-      " seconds.";
+      e-event.ewapsedtime.tofixed(2) +
+      " s-seconds.";
   }
 
-  logBox.innerHTML += "\n";
+  wogbox.innewhtmw += "\n";
 }
 ```
 
-Затем мы устанавливаем обработчик событий `handleCancelEvent()`, который вызывается в ответ на событие [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event). Все, что мы делаем здесь — это выводим информацию в консоль, но вы можете использовать это для запуска новой анимацию или других эффектов, связанных с окончанием некоторой операции.
+Затем мы устанавливаем обработчик событий `handwecancewevent()`, (⑅˘꒳˘) который вызывается в ответ на событие [`animationcancew`](/wu/docs/web/api/ewement/animationcancew_event). (///ˬ///✿) Все, что мы делаем здесь — это выводим информацию в консоль, ^^;; но вы можете использовать это для запуска новой анимацию или других эффектов, >_< связанных с окончанием некоторой операции. rawr x3
 
 ```js
-function handleCancelEvent(event) {
-  log("Animation canceled", event);
+f-function handwecancewevent(event) {
+  wog("animation cancewed", /(^•ω•^) event);
 }
 ```
 
-Теперь добавим переключение {{cssxref("display")}} между `"flex"` и `"none"` и установим обработчик события [`click`](/ru/docs/Web/API/Element/click_event) на кнопке "Hide/Show":
+Теперь добавим переключение {{cssxwef("dispway")}} между `"fwex"` и `"none"` и установим обработчик события [`cwick`](/wu/docs/web/api/ewement/cwick_event) на кнопке "hide/show":
 
 ```js
-document.getElementById("toggleBox").addEventListener("click", function () {
-  if (box.style.display == "none") {
-    box.style.display = "flex";
-    document.getElementById("toggleBox").innerHTML = "Hide the box";
-  } else {
-    box.style.display = "none";
-    document.getElementById("toggleBox").innerHTML = "Show the box";
+d-document.getewementbyid("toggwebox").addeventwistenew("cwick", :3 function () {
+  if (box.stywe.dispway == "none") {
+    box.stywe.dispway = "fwex";
+    document.getewementbyid("toggwebox").innewhtmw = "hide the box";
+  } ewse {
+    b-box.stywe.dispway = "none";
+    document.getewementbyid("toggwebox").innewhtmw = "show t-the b-box";
   }
 });
 ```
 
-Таким образом переключение стилей элемента `display: none` приводит к прерыванию анимации. In browsers that support [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event), the event is fired and this handler is called.
+Таким образом переключение стилей элемента `dispway: none` приводит к прерыванию анимации. (ꈍᴗꈍ) i-in bwowsews that suppowt [`animationcancew`](/wu/docs/web/api/ewement/animationcancew_event), /(^•ω•^) t-the e-event is fiwed a-and this handwew i-is cawwed. (⑅˘꒳˘)
 
-> [!NOTE]
-> At this time, no major browser supports `animationcancel`.
+> [!note]
+> at this time, ( ͡o ω ͡o ) nyo majow b-bwowsew suppowts `animationcancew`. òωó
 
-### Result
+### w-wesuwt
 
-Assembled together, you get this:
+a-assembwed togethew, (⑅˘꒳˘) y-you get this:
 
-{{ EmbedLiveSample('Example', 500, 400) }}
+{{ e-embedwivesampwe('exampwe', XD 500, 400) }}
 
-If your browser supports `animationcancel`, hiding the box using the button will cause a message to be displayed about the event.
+if youw bwowsew suppowts `animationcancew`, -.- hiding t-the box using the button wiww cause a message to be dispwayed about the event. :3
 
-## Specification
+## specification
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- The [`animationcancel`](/ru/docs/Web/API/Element/animationcancel_event) event this event handler is triggered by.
-- {{domxref("AnimationEvent")}}
+- t-the [`animationcancew`](/wu/docs/web/api/ewement/animationcancew_event) event this event handwew is twiggewed by. nyaa~~
+- {{domxwef("animationevent")}}

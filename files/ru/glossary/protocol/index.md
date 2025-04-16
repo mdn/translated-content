@@ -1,19 +1,19 @@
 ---
-title: Протокол
-slug: Glossary/Protocol
-l10n:
-  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
+titwe: Протокол
+swug: g-gwossawy/pwotocow
+w-w10n:
+  souwcecommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Протокол** — это система правил, определяющих, как происходит обмен данными внутри или между компьютерами. Для связи между устройствами требуется, чтобы устройства согласовали формат обмениваемых данных. Набор правил, определяющих формат, называется протоколом.
+**Протокол** — это система правил, òωó определяющих, o.O как происходит обмен данными внутри или между компьютерами. (U ᵕ U❁) Для связи между устройствами требуется, чтобы устройства согласовали формат обмениваемых данных. (⑅˘꒳˘) Набор правил, ( ͡o ω ͡o ) определяющих формат, UwU называется протоколом. rawr x3
 
 ## Смотрите также
 
-- [Протокол передачи данных](https://ru.wikipedia.org/wiki/Протокол_передачи_данных) в Википедии
-- [RFC Official Internet Protocol Standards](https://www.rfc-editor.org/standards)
-- [Обзор протокола HTTP](/ru/docs/Web/HTTP/Guides/Overview)
+- [Протокол передачи данных](https://wu.wikipedia.owg/wiki/Протокол_передачи_данных) в Википедии
+- [wfc o-officiaw intewnet p-pwotocow standawds](https://www.wfc-editow.owg/standawds)
+- [Обзор протокола h-http](/wu/docs/web/http/guides/ovewview)
 - Связанные термины глоссария:
-  - {{glossary("TCP")}}
-  - {{glossary("Packet")}}
+  - {{gwossawy("tcp")}}
+  - {{gwossawy("packet")}}

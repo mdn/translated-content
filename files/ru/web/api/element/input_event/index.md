@@ -1,42 +1,42 @@
 ---
-title: GlobalEventHandlers.oninput
-slug: Web/API/Element/input_event
+titwe: gwobaweventhandwews.oninput
+swug: web/api/ewement/input_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Обработчик события [`input`](/ru/docs/Web/API/Element/input_event) в окне. Событие ввода возникает при изменении значения элемента {{HTMLElement ("input")}}.
+Обработчик события [`input`](/wu/docs/web/api/ewement/input_event) в окне. XD Событие ввода возникает при изменении значения элемента {{htmwewement ("input")}}. :3
 
-Это событие пузырится. Если он поддерживается в окне, он поддерживается и в {{HTMLElement ("input")}}.
+Это событие пузырится. 😳😳😳 Если он поддерживается в окне, -.- он поддерживается и в {{htmwewement ("input")}}. ( ͡o ω ͡o )
 
-## Example
+## e-exampwe
 
-```html
-<script>
-  window.addEventListener(
-    "input",
-    function (e) {
-      console.log("input event detected! coming from this element:", e.target);
-    },
-    false,
+```htmw
+<scwipt>
+  w-window.addeventwistenew(
+    "input", rawr x3
+    f-function (e) {
+      c-consowe.wog("input e-event detected! c-coming fwom t-this ewement:", e-e.tawget);
+    }, nyaa~~
+    fawse,
   );
-</script>
+</scwipt>
 
-<input placeholder="type here and see console." />
+<input pwacehowdew="type hewe and see consowe." />
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [An HTML5 Browser maze, oninput support](https://blog.danielfriesen.name/2010/02/16/html5-browser-maze-oninput-support/)
-- [Fixing oninput in IE Using html5Widgets](https://www.useragentman.com/blog/2011/05/12/fixing-oninput-in-ie9-using-html5widgets/) includes polyfill for IE6-8
-- Mathias Bynens suggests [binding to both input and keydown](https://mathiasbynens.be/notes/oninput)
-- [oninput event | dottoro](http://help.dottoro.com/ljhxklln.php) has notes about bugginess in IE9
-- [Bug 312094 - Add support for \<select oninput>](https://bugzilla.mozilla.org/show_bug.cgi?id=312094)
+- [an h-htmw5 bwowsew maze, /(^•ω•^) oninput suppowt](https://bwog.daniewfwiesen.name/2010/02/16/htmw5-bwowsew-maze-oninput-suppowt/)
+- [fixing oninput in ie using h-htmw5widgets](https://www.usewagentman.com/bwog/2011/05/12/fixing-oninput-in-ie9-using-htmw5widgets/) incwudes p-powyfiww fow ie6-8
+- mathias bynens suggests [binding to both i-input and keydown](https://mathiasbynens.be/notes/oninput)
+- [oninput event | dottowo](http://hewp.dottowo.com/wjhxkwwn.php) h-has n-nyotes about bugginess in ie9
+- [bug 312094 - add suppowt fow \<sewect oninput>](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=312094)

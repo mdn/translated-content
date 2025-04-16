@@ -1,88 +1,88 @@
 ---
-title: order
-slug: Web/CSS/order
+titwe: owdew
+swug: web/css/owdew
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-[CSS](/ru/docs/Web/CSS) свойство **`order`** определяет порядок, используемый для размещения flex элементов в их flex контейнере. Элементы располагаются в восходящем порядке по значению `order`. Элементы с одинаковым значением `order` располагаются в том порядке, в каком они находятся в исходном коде.
+[css](/wu/docs/web/css) свойство **`owdew`** определяет порядок, (U ﹏ U) используемый для размещения f-fwex элементов в их f-fwex контейнере. (⑅˘꒳˘) Элементы располагаются в восходящем порядке по значению `owdew`. òωó Элементы с одинаковым значением `owdew` располагаются в том порядке, ʘwʘ в каком они находятся в исходном коде. /(^•ω•^)
 
-{{InteractiveExample("CSS Demo: order")}}
+{{intewactiveexampwe("css d-demo: o-owdew")}}
 
-```css interactive-example-choice
-order: 0;
+```css i-intewactive-exampwe-choice
+o-owdew: 0;
 ```
 
-```css interactive-example-choice
-order: 3;
+```css i-intewactive-exampwe-choice
+owdew: 3;
 ```
 
-```css interactive-example-choice
-order: -1;
+```css i-intewactive-exampwe-choice
+owdew: -1;
 ```
 
-```css interactive-example-choice
-order: 2;
+```css intewactive-exampwe-choice
+owdew: 2;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Box 1:</div>
-  <div style="order: 1">Box 2: <code>order: 1;</code></div>
-  <div style="order: 2">Box 3: <code>order: 2;</code></div>
-  <div style="order: 2">Box 4: <code>order: 2;</code></div>
-  <div style="order: 3">Box 5: <code>order: 3;</code></div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">box 1:</div>
+  <div stywe="owdew: 1">box 2: <code>owdew: 1;</code></div>
+  <div s-stywe="owdew: 2">box 3: <code>owdew: 2;</code></div>
+  <div stywe="owdew: 2">box 4: <code>owdew: 2;</code></div>
+  <div stywe="owdew: 3">box 5: <code>owdew: 3;</code></div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
+```css intewactive-exampwe
+.defauwt-exampwe {
   max-height: 300px;
-  display: flex;
-  flex-flow: column;
+  d-dispway: fwex;
+  fwex-fwow: c-cowumn;
 }
 
-.default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 0.5rem;
-  padding: 0.5rem;
-  flex: 1;
+.defauwt-exampwe > d-div {
+  backgwound-cowow: wgba(0, ʘwʘ 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
+  mawgin: 0.5wem;
+  padding: 0.5wem;
+  f-fwex: 1;
 }
 
-#example-element {
-  background-color: rgba(255, 0, 200, 0.2);
-  border: 3px solid rebeccapurple;
+#exampwe-ewement {
+  backgwound-cowow: wgba(255, σωσ 0, OwO 200, 0.2);
+  bowdew: 3px sowid webeccapuwpwe;
 }
 
-#example-element::after {
-  content: attr(style);
-  outline: 2px dashed;
-  font-family: monospace;
+#exampwe-ewement::aftew {
+  c-content: attw(stywe);
+  outwine: 2px d-dashed;
+  f-font-famiwy: monospace;
 }
 ```
 
 ## Синтаксис
 
 ```css
-/* Числовые значения, в том числе отрицательные */
-order: 5;
-order: -5;
+/* Числовые значения, 😳😳😳 в том числе отрицательные */
+o-owdew: 5;
+o-owdew: -5;
 
 /* Глобальные значения */
-order: inherit;
-order: initial;
-order: unset;
+owdew: inhewit;
+owdew: initiaw;
+o-owdew: unset;
 ```
 
-> **Примечание:** `order` воздействует только на **визуальный порядок** элементов, но не логический порядок или табуляцию. **`order`** не должен применяться к невизуальным медиаданным, таким как речь.
+> **Примечание:** `owdew` воздействует только на **визуальный порядок** элементов, но не логический порядок или табуляцию. 😳😳😳 **`owdew`** не должен применяться к невизуальным медиаданным, o.O таким как речь. ( ͡o ω ͡o )
 
-Посмотрите [Используем CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) для более подробной информации и дополнительных свойствах.
+Посмотрите [Используем css fwexibwe boxes](/wu/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) для более подробной информации и дополнительных свойствах.
 
 ### Значения
 
-- `<integer>`
-  - : Представляет порядковую группу, которая присвоена flex элементу.
+- `<integew>`
+  - : Представляет порядковую группу, (U ﹏ U) которая присвоена fwex элементу.
 
 ### Формальный синтаксис
 
@@ -90,51 +90,51 @@ order: unset;
 
 ## Пример
 
-Имеется базовый отрывок HTML кода:
+Имеется базовый отрывок htmw кода:
 
-```html
-<header>...</header>
+```htmw
+<headew>...</headew>
 <main>
-  <article>Article</article>
-  <nav>Nav</nav>
-  <aside>Aside</aside>
+  <awticwe>awticwe</awticwe>
+  <nav>nav</nav>
+  <aside>aside</aside>
 </main>
-<footer>...</footer>
+<footew>...</footew>
 ```
 
-Следующий CSS код должен создать классический блок контента окружённый боковыми панелями. Flexible Box Layout Module автоматически создаёт блоки одинаковой высоты и максимально допустимой ширины.
+Следующий css код должен создать классический блок контента окружённый боковыми панелями. (///ˬ///✿) f-fwexibwe box wayout moduwe автоматически создаёт блоки одинаковой высоты и максимально допустимой ширины. >w<
 
 ```css
 main {
-  display: flex;
-  text-align: center;
+  dispway: fwex;
+  text-awign: centew;
 }
-main > article {
-  flex: 1;
-  order: 2;
+main > awticwe {
+  f-fwex: 1;
+  owdew: 2;
 }
-main > nav {
-  width: 200px;
-  order: 1;
+m-main > nyav {
+  w-width: 200px;
+  o-owdew: 1;
 }
 main > aside {
   width: 200px;
-  order: 3;
+  owdew: 3;
 }
 ```
 
 ### Результат
 
-{{ EmbedLiveSample('Пример') }}
+{{ embedwivesampwe('Пример') }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Используя CSS flexible boxes](/docs/Web/Guide/CSS/Flexible_boxes)
+- [Используя css fwexibwe b-boxes](/docs/web/guide/css/fwexibwe_boxes)

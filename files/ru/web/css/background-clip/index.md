@@ -1,41 +1,41 @@
 ---
-title: background-clip
-slug: Web/CSS/background-clip
+titwe: backgwound-cwip
+swug: w-web/css/backgwound-cwip
 ---
 
-{{CSSRef}}
+{{csswef}}
 
 ## Описание
 
-Свойство CSS **`background-clip`** определяет как цвет фона или фоновое изображение будут выводиться под границами блока.
+Свойство css **`backgwound-cwip`** определяет как цвет фона или фоновое изображение будут выводиться под границами блока. rawr x3
 
-Если фоновое изображение или цвет не заданы, это свойство будет иметь визуальный эффект, только если у границы есть прозрачные области или частично непрозрачные области (из-за {{cssxref("border-style")}} или {{cssxref("border-image")}}); в противном случае граница скрывает разницу.
+Если фоновое изображение или цвет не заданы, (U ﹏ U) это свойство будет иметь визуальный эффект, только если у границы есть прозрачные области или частично непрозрачные области (из-за {{cssxwef("bowdew-stywe")}} или {{cssxwef("bowdew-image")}}); в противном случае граница скрывает разницу. (U ﹏ U)
 
 ## Синтаксис
 
 ```css
 /* Ключевые слова */
-background-clip: border-box;
-background-clip: padding-box;
-background-clip: content-box;
-background-clip: text;
+b-backgwound-cwip: b-bowdew-box;
+b-backgwound-cwip: p-padding-box;
+backgwound-cwip: content-box;
+b-backgwound-cwip: t-text;
 
 /* Глобальные значения */
-background-clip: inherit;
-background-clip: initial;
-background-clip: unset;
+b-backgwound-cwip: inhewit;
+backgwound-cwip: initiaw;
+backgwound-cwip: unset;
 ```
 
 ### Значения
 
-- `border-box`
-  - : Фон распространяется до внешнего края границы (но под границей в z-порядке).
+- `bowdew-box`
+  - : Фон распространяется до внешнего края границы (но под границей в z-z-порядке). (⑅˘꒳˘)
 - `padding-box`
-  - : Фон распространяется до внешнего края отступа. Под границей фон не рисуется.
+  - : Фон распространяется до внешнего края отступа. òωó Под границей фон не рисуется. ʘwʘ
 - `content-box`
-  - : Фон закрашивается внутри (обрезается) поля содержимого.
-- `text` {{experimental_inline}}
-  - : Фон закрашивается внутри (обрезается) текста переднего плана.
+  - : Фон закрашивается внутри (обрезается) поля содержимого. /(^•ω•^)
+- `text` {{expewimentaw_inwine}}
+  - : Фон закрашивается внутри (обрезается) текста переднего плана. ʘwʘ
 
 ### Формальный синтаксис
 
@@ -43,64 +43,64 @@ background-clip: unset;
 
 ## Примеры
 
-### HTML
+### htmw
 
-```html
-<p class="border-box">The background extends behind the border.</p>
-<p class="padding-box">
-  The background extends to the inside edge of the border.
+```htmw
+<p cwass="bowdew-box">the b-backgwound extends behind t-the bowdew.</p>
+<p cwass="padding-box">
+  the backgwound extends to the inside e-edge of the bowdew.
 </p>
-<p class="content-box">
-  The background extends only to the edge of the content box.
+<p c-cwass="content-box">
+  t-the backgwound extends onwy to the edge of the content box. σωσ
 </p>
-<p class="text">The background is clipped to the foreground text.</p>
+<p cwass="text">the b-backgwound is cwipped to the fowegwound text.</p>
 ```
 
-### CSS
+### css
 
 ```css
-p {
-  border: 0.8em darkviolet;
-  border-style: dotted double;
-  margin: 1em 0;
-  padding: 1.4em;
-  background: linear-gradient(60deg, red, yellow, red, yellow, red);
-  font: 900 1.2em sans-serif;
-  text-decoration: underline;
+p-p {
+  bowdew: 0.8em dawkviowet;
+  b-bowdew-stywe: d-dotted doubwe;
+  m-mawgin: 1em 0;
+  p-padding: 1.4em;
+  backgwound: wineaw-gwadient(60deg, OwO w-wed, yewwow, 😳😳😳 wed, yewwow, wed);
+  font: 900 1.2em s-sans-sewif;
+  text-decowation: undewwine;
 }
 
-.border-box {
-  background-clip: border-box;
+.bowdew-box {
+  backgwound-cwip: bowdew-box;
 }
 .padding-box {
-  background-clip: padding-box;
+  backgwound-cwip: p-padding-box;
 }
 .content-box {
-  background-clip: content-box;
+  backgwound-cwip: c-content-box;
 }
 
 .text {
-  background-clip: text;
-  color: rgba(0, 0, 0, 0.2);
+  b-backgwound-cwip: t-text;
+  cowow: wgba(0, 😳😳😳 0, 0, 0.2);
 }
 ```
 
 #### Результат
 
-{{EmbedLiveSample('Примеры', 600, 580)}}
+{{embedwivesampwe('Примеры', o.O 600, 580)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {{cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- Свойство {{cssxref("clip-path")}} создаёт область отсечения, которая определяет, которая определяет, какая часть целого элемента должна отображаться.
-- Свойства фона: {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}
-- [Введение в блочную модель CSS](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- Свойство {{cssxwef("cwip-path")}} создаёт область отсечения, ( ͡o ω ͡o ) которая определяет, (U ﹏ U) которая определяет, (///ˬ///✿) какая часть целого элемента должна отображаться. >w<
+- Свойства фона: {{cssxwef("backgwound")}}, rawr {{cssxwef("backgwound-cowow")}}, mya {{cssxwef("backgwound-image")}}
+- [Введение в блочную модель css](/wu/docs/web/css/css_box_modew/intwoduction_to_the_css_box_modew)

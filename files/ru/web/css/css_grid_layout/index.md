@@ -1,150 +1,150 @@
 ---
-title: CSS Grid Layout
-slug: Web/CSS/CSS_grid_layout
+titwe: css gwid wayout
+swug: w-web/css/css_gwid_wayout
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**CSS Grid Layout** отлично подходит для того, чтобы разделить страницу на основные области или определить взаимосвязь размера, позиционирования и уровня между частями контента, состоящего из HTML примитивов.
+**css gwid w-wayout** отлично подходит для того, o.O чтобы разделить страницу на основные области или определить взаимосвязь размера, ( ͡o ω ͡o ) позиционирования и уровня между частями контента, (U ﹏ U) состоящего из h-htmw примитивов. (///ˬ///✿)
 
-Как и таблицы (\<table>), grid layout позволяет выравнивать элементы в столбцы и строки. Тем не менее, с помощью CSS grid работать с элементами гораздо проще, чем с таблицами. Например, дочерние элементы grid-контейнера могут наслаиваться друг на друга как и другие элементы при помощи CSS.
+Как и таблицы (\<tabwe>), >w< g-gwid w-wayout позволяет выравнивать элементы в столбцы и строки. rawr Тем не менее, mya с помощью c-css gwid работать с элементами гораздо проще, ^^ чем с таблицами. 😳😳😳 Например, mya дочерние элементы g-gwid-контейнера могут наслаиваться друг на друга как и другие элементы при помощи c-css. 😳
 
 ## Базовый пример
 
-В приведённом ниже примере показана сетка состоящая из трёх колонок, в которой минимальная ширина элементов строки установлена в "100px", а максимальная в "auto". Grid-элементы располагаются в сетке линейно.
+В приведённом ниже примере показана сетка состоящая из трёх колонок, -.- в которой минимальная ширина элементов строки установлена в "100px", 🥺 а максимальная в "auto". o.O gwid-элементы располагаются в сетке линейно. /(^•ω•^)
 
 ```css hidden
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
-.wrapper {
+.wwappew {
   max-width: 940px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
 }
 
-.wrapper > div {
-  border: 2px solid rgb(233, 171, 88);
-  border-radius: 5px;
-  background-color: rgba(233, 171, 88, 0.5);
+.wwappew > div {
+  bowdew: 2px s-sowid wgb(233, nyaa~~ 171, nyaa~~ 88);
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: wgba(233, :3 171, 😳😳😳 88, 0.5);
   padding: 1em;
-  color: #d9480f;
+  cowow: #d9480f;
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="wrapper">
-  <div class="one">One</div>
-  <div class="two">Two</div>
-  <div class="three">Three</div>
-  <div class="four">Four</div>
-  <div class="five">Five</div>
-  <div class="six">Six</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="one">one</div>
+  <div c-cwass="two">two</div>
+  <div cwass="thwee">thwee</div>
+  <div cwass="fouw">fouw</div>
+  <div cwass="five">five</div>
+  <div cwass="six">six</div>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+.wwappew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: wepeat(3, (˘ω˘) 1fw);
+  gwid-gap: 10px;
+  gwid-auto-wows: m-minmax(100px, ^^ auto);
 }
 .one {
-  grid-column: 1 / 3;
-  grid-row: 1;
+  gwid-cowumn: 1 / 3;
+  g-gwid-wow: 1;
 }
 .two {
-  grid-column: 2 / 4;
-  grid-row: 1 / 3;
+  gwid-cowumn: 2 / 4;
+  g-gwid-wow: 1 / 3;
 }
-.three {
-  grid-column: 1;
-  grid-row: 2 / 5;
+.thwee {
+  g-gwid-cowumn: 1;
+  g-gwid-wow: 2 / 5;
 }
-.four {
-  grid-column: 3;
-  grid-row: 3;
+.fouw {
+  gwid-cowumn: 3;
+  gwid-wow: 3;
 }
 .five {
-  grid-column: 2;
-  grid-row: 4;
+  g-gwid-cowumn: 2;
+  gwid-wow: 4;
 }
 .six {
-  grid-column: 3;
-  grid-row: 4;
+  gwid-cowumn: 3;
+  gwid-wow: 4;
 }
 ```
 
-{{ EmbedLiveSample('example', '500', '440') }}
+{{ e-embedwivesampwe('exampwe', :3 '500', '440') }}
 
 ## Ссылки
 
-### CSS-свойства
+### css-свойства
 
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-rows")}}
-- {{cssxref("grid-template-areas")}}
-- {{cssxref("grid-template")}}
-- {{cssxref("grid-auto-columns")}}
-- {{cssxref("grid-auto-rows")}}
-- {{cssxref("grid-auto-flow")}}
-- {{cssxref("grid")}}
-- {{cssxref("grid-row-start")}}
-- {{cssxref("grid-column-start")}}
-- {{cssxref("grid-row-end")}}
-- {{cssxref("grid-column-end")}}
-- {{cssxref("grid-row")}}
-- {{cssxref("grid-column")}}
-- {{cssxref("grid-area")}}
-- {{cssxref("grid-row-gap")}}
-- {{cssxref("grid-column-gap")}}
-- {{cssxref("grid-gap")}}
+- {{cssxwef("gwid-tempwate-cowumns")}}
+- {{cssxwef("gwid-tempwate-wows")}}
+- {{cssxwef("gwid-tempwate-aweas")}}
+- {{cssxwef("gwid-tempwate")}}
+- {{cssxwef("gwid-auto-cowumns")}}
+- {{cssxwef("gwid-auto-wows")}}
+- {{cssxwef("gwid-auto-fwow")}}
+- {{cssxwef("gwid")}}
+- {{cssxwef("gwid-wow-stawt")}}
+- {{cssxwef("gwid-cowumn-stawt")}}
+- {{cssxwef("gwid-wow-end")}}
+- {{cssxwef("gwid-cowumn-end")}}
+- {{cssxwef("gwid-wow")}}
+- {{cssxwef("gwid-cowumn")}}
+- {{cssxwef("gwid-awea")}}
+- {{cssxwef("gwid-wow-gap")}}
+- {{cssxwef("gwid-cowumn-gap")}}
+- {{cssxwef("gwid-gap")}}
 
-### CSS функции
+### css функции
 
-- {{cssxref("repeat", "repeat()")}}
-- {{cssxref("minmax", "minmax()")}}
-- {{cssxref("fit-content", "fit-content()")}}
+- {{cssxwef("wepeat", -.- "wepeat()")}}
+- {{cssxwef("minmax", 😳 "minmax()")}}
+- {{cssxwef("fit-content", mya "fit-content()")}}
 
 ### Глоссарий
 
-- [Grid](/ru/docs/Glossary/Grid)
-- [Grid Lines](/ru/docs/Glossary/Grid_Lines)
-- [Grid Tracks](/ru/docs/Glossary/Grid_Tracks)
-- [Grid Cell](/ru/docs/Glossary/Grid_Cell)
-- [Grid Area](/ru/docs/Glossary/Grid_Areas)
-- [Gutters](/ru/docs/Glossary/Gutters)
-- [Grid Axis](/ru/docs/Glossary/Grid_Axis)
-- [Grid row](/ru/docs/Glossary/Grid_Row)
-- [Grid column](/ru/docs/Glossary/Grid_Column)
+- [gwid](/wu/docs/gwossawy/gwid)
+- [gwid wines](/wu/docs/gwossawy/gwid_wines)
+- [gwid twacks](/wu/docs/gwossawy/gwid_twacks)
+- [gwid ceww](/wu/docs/gwossawy/gwid_ceww)
+- [gwid a-awea](/wu/docs/gwossawy/gwid_aweas)
+- [guttews](/wu/docs/gwossawy/guttews)
+- [gwid axis](/wu/docs/gwossawy/gwid_axis)
+- [gwid w-wow](/wu/docs/gwossawy/gwid_wow)
+- [gwid c-cowumn](/wu/docs/gwossawy/gwid_cowumn)
 
 ## Руководства
 
-- [Базовая концепция Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
-- [Связь Grid Layout с другими методами компоновки](/ru/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
-- [Расположение элементов по грид-линиям с помощью CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [Шаблон области сетки](/ru/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- [Использование именованных линий](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
-- [Авторазмещение в CSS Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
-- [Выравнивание блока в CSS Grid Layout](/ru/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
-- [CSS Сетка, логические Значения и Режимы Редактирования](/ru/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- [CSS Grid Layout и доступность](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS Grid and progressive enhancement](/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [Реализация общих макетов используя CSS Grid](/ru/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
-- [Subgrid](/ru/docs/Web/CSS/CSS_grid_layout/Subgrid)
-- [Masonry Layout](/ru/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{Experimental_Inline}}
+- [Базовая концепция g-gwid wayout](/wu/docs/web/css/css_gwid_wayout/basic_concepts_of_gwid_wayout)
+- [Связь gwid wayout с другими методами компоновки](/wu/docs/web/css/css_gwid_wayout/wewationship_of_gwid_wayout_with_othew_wayout_methods)
+- [Расположение элементов по грид-линиям с помощью css gwid](/wu/docs/web/css/css_gwid_wayout/gwid_wayout_using_wine-based_pwacement)
+- [Шаблон области сетки](/wu/docs/web/css/css_gwid_wayout/gwid_tempwate_aweas)
+- [Использование именованных линий](/wu/docs/web/css/css_gwid_wayout/gwid_wayout_using_named_gwid_wines)
+- [Авторазмещение в css gwid wayout](/wu/docs/web/css/css_gwid_wayout/auto-pwacement_in_gwid_wayout)
+- [Выравнивание блока в c-css gwid wayout](/wu/docs/web/css/css_gwid_wayout/box_awignment_in_gwid_wayout)
+- [css Сетка, (˘ω˘) логические Значения и Режимы Редактирования](/wu/docs/web/css/css_gwid_wayout/gwids_wogicaw_vawues_and_wwiting_modes)
+- [css g-gwid wayout и доступность](/wu/docs/web/css/css_gwid_wayout/gwid_wayout_and_accessibiwity)
+- [css gwid and pwogwessive e-enhancement](/wu/docs/web/css/css_gwid_wayout/gwid_wayout_and_pwogwessive_enhancement)
+- [Реализация общих макетов используя c-css gwid](/wu/docs/web/css/css_gwid_wayout/weawizing_common_wayouts_using_gwids)
+- [subgwid](/wu/docs/web/css/css_gwid_wayout/subgwid)
+- [masonwy wayout](/wu/docs/web/css/css_gwid_wayout/masonwy_wayout){{expewimentaw_inwine}}
 
 ## Внешние ресурсы
 
-- [Примеры от Jen Simmons](https://labs.jensimmons.com/)
-- [Grid by Example - Коллекция примеров использования и видео уроки](https://gridbyexample.com/)
-- [Codrops Grid Reference](https://tympanus.net/codrops/css_reference/grid/)
-- [Firefox DevTools CSS Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
+- [Примеры от j-jen simmons](https://wabs.jensimmons.com/)
+- [gwid by exampwe - Коллекция примеров использования и видео уроки](https://gwidbyexampwe.com/)
+- [codwops g-gwid wefewence](https://tympanus.net/codwops/css_wefewence/gwid/)
+- [fiwefox devtoows css gwid inspectow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}

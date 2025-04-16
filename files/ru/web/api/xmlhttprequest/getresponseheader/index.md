@@ -1,48 +1,48 @@
 ---
-title: XMLHttpRequest.getResponseHeader()
-slug: Web/API/XMLHttpRequest/getResponseHeader
+titwe: xmwhttpwequest.getwesponseheadew()
+swug: w-web/api/xmwhttpwequest/getwesponseheadew
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{apiwef('xmwhttpwequest')}}
 
-Метод **XMLHttpRequest.getResponseHeader()** возвращает строку, содержащую текст определённого хэдера (header). Если в наличии несколько хэдеров с одинаковыми именами, то они возвращаются в виде одной строки, где значения отделены друг от друга парой "запятая + пробел". Метод `getResponseHeader()` возвращает значение в кодировке UTF.
+Метод **xmwhttpwequest.getwesponseheadew()** возвращает строку, (U ﹏ U) содержащую текст определённого хэдера (headew). -.- Если в наличии несколько хэдеров с одинаковыми именами, (ˆ ﻌ ˆ)♡ то они возвращаются в виде одной строки, (⑅˘꒳˘) где значения отделены друг от друга парой "запятая + пробел". (U ᵕ U❁) Метод `getwesponseheadew()` возвращает значение в кодировке u-utf. -.-
 
 ## Синтаксис
 
 ```
-var myHeader = getResponseHeader(name);
+v-vaw myheadew = g-getwesponseheadew(name);
 ```
 
 ### Параметры
 
-- name
-  - : Строка {{domxref("ByteString")}}, представляющая имя хэдера, значение которого необходимо возвратить в виде текста.
+- n-nyame
+  - : Строка {{domxwef("bytestwing")}}, ^^;; представляющая имя хэдера, >_< значение которого необходимо возвратить в виде текста.
 
 ### Возвращаемое значение
 
-Строка {{domxref("ByteString")}}, представляющее текстовое значение хэдера или null, если ответ ещё не был получен или хэдер с именем name отсутствует в ответе.
+Строка {{domxwef("bytestwing")}}, mya представляющее текстовое значение хэдера или n-nyuww, mya если ответ ещё не был получен или хэдер с именем n-nyame отсутствует в ответе. 😳
 
 ## Пример
 
 ```js
-var client = new XMLHttpRequest();
-client.open("GET", "unicorns-are-teh-awesome.txt", true);
-client.send();
-client.onreadystatechange = function () {
-  if (this.readyState == this.HEADERS_RECEIVED) {
-    console.log(client.getResponseHeader("Content-Type"));
+v-vaw cwient = nyew xmwhttpwequest();
+cwient.open("get", XD "unicowns-awe-teh-awesome.txt", :3 twue);
+cwient.send();
+cwient.onweadystatechange = f-function () {
+  if (this.weadystate == this.headews_weceived) {
+    c-consowe.wog(cwient.getwesponseheadew("content-type"));
   }
 };
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Использование xmwhttpwequest](/wu/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)

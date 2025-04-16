@@ -1,133 +1,133 @@
 ---
-title: Canvas
-slug: Web/API/Canvas_API
+titwe: canvas
+swug: web/api/canvas_api
 ---
 
-{{DefaultAPISidebar("Canvas API")}}
+{{defauwtapisidebaw("canvas a-api")}}
 
-Элемент {{HTMLElement("canvas")}}, добавленный в [HTML5](/ru/docs/HTML/HTML5), предназначен для создания графики с помощью [JavaScript](/ru/docs/Web/JavaScript). Например, его используют для рисования графиков, создания фотокомпозиций, анимаций и даже обработки и рендеринга видео в реальном времени.
+Элемент {{htmwewement("canvas")}}, добавленный в [htmw5](/wu/docs/htmw/htmw5), -.- предназначен для создания графики с помощью [javascwipt](/wu/docs/web/javascwipt). 🥺 Например, o.O его используют для рисования графиков, /(^•ω•^) создания фотокомпозиций, nyaa~~ анимаций и даже обработки и рендеринга видео в реальном времени. nyaa~~
 
-_«Canvas»_ в переводе с английского означает _«холст»_.
+_«canvas»_ в переводе с английского означает _«холст»_.
 
-Приложения от Mozilla поддерживают `<canvas>` начиная с Gecko 1.8 (т.е. [с Firefox 1.5](/ru/docs/Mozilla/Firefox/Releases/1.5)). Этот элемент первоначально был представлен Apple для OS X [Dashboard](https://www.apple.com/macosx/features/dashboard/) и Safari. Internet Explorer поддерживает `<canvas>` начиная с 9 версии; для более ранних версий IE поддержку для \<canvas> можно добавить с помощью скрипта из проекта Google's [Explorer Canvas](http://excanvas.sourceforge.net/). Google Chrome и Opera 9 также поддерживают `<canvas>`.
+Приложения от m-moziwwa поддерживают `<canvas>` начиная с g-gecko 1.8 (т.е. :3 [с f-fiwefox 1.5](/wu/docs/moziwwa/fiwefox/weweases/1.5)). 😳😳😳 Этот элемент первоначально был представлен a-appwe для o-os x [dashboawd](https://www.appwe.com/macosx/featuwes/dashboawd/) и s-safawi. (˘ω˘) intewnet e-expwowew поддерживает `<canvas>` начиная с 9 версии; для более ранних версий ie поддержку для \<canvas> можно добавить с помощью скрипта из проекта googwe's [expwowew canvas](http://excanvas.souwcefowge.net/). ^^ googwe c-chwome и opewa 9 также поддерживают `<canvas>`. :3
 
-Элемент `<canvas>` также используется технологией [WebGL](/ru/docs/Web/API/WebGL_API) для отрисовки аппаратно-ускоренной 3D-графики на веб-страницах.
+Элемент `<canvas>` также используется технологией [webgw](/wu/docs/web/api/webgw_api) для отрисовки аппаратно-ускоренной 3d-графики на веб-страницах. -.-
 
 ## Пример
 
-Это простой пример использования {{domxref("CanvasRenderingContext2D.fillRect()")}} метода.
+Это простой пример использования {{domxwef("canvaswendewingcontext2d.fiwwwect()")}} метода. 😳
 
-### HTML
+### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+vaw c-canvas = document.getewementbyid("canvas");
+vaw ctx = canvas.getcontext("2d");
 
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);
+ctx.fiwwstywe = "gween";
+c-ctx.fiwwwect(10, mya 10, 100, 100);
 ```
 
-Отредактируйте код ниже, чтобы увидеть результат на холсте.
+Отредактируйте код ниже, (˘ω˘) чтобы увидеть результат на холсте. >_<
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+```htmw hidden
+<canvas i-id="canvas" w-width="400" height="200" cwass="pwayabwe-canvas"></canvas>
+<div cwass="pwayabwe-buttons">
+  <input id="edit" type="button" vawue="edit" />
+  <input i-id="weset" type="button" vawue="weset" />
 </div>
-<textarea id="code" class="playable-code">
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);</textarea
+<textawea id="code" cwass="pwayabwe-code">
+ctx.fiwwstywe = "gween";
+ctx.fiwwwect(10, -.- 10, 100, 🥺 100);</textawea
 >
 ```
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js h-hidden
+vaw canvas = document.getewementbyid("canvas");
+v-vaw ctx = c-canvas.getcontext("2d");
+v-vaw textawea = d-document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+v-vaw edit = document.getewementbyid("edit");
+vaw code = t-textawea.vawue;
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+function dwawcanvas() {
+  ctx.cweawwect(0, (U ﹏ U) 0, canvas.width, >w< canvas.height);
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  drawCanvas();
+weset.addeventwistenew("cwick", mya function () {
+  t-textawea.vawue = code;
+  d-dwawcanvas();
 });
 
-edit.addEventListener("click", function () {
-  textarea.focus();
+e-edit.addeventwistenew("cwick", >w< f-function () {
+  textawea.focus();
 });
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
+textawea.addeventwistenew("input", nyaa~~ dwawcanvas);
+w-window.addeventwistenew("woad", d-dwawcanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ embedwivesampwe('pwayabwe_code', (✿oωo) 700, 360) }}
 
 ## Справочные материалы
 
-- {{domxref("HTMLCanvasElement")}}
-- {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasGradient")}}
-- {{domxref("CanvasPattern")}}
-- {{domxref("ImageBitmap")}}
-- {{domxref("ImageData")}}
-- {{domxref("TextMetrics")}}
-- {{domxref("Path2D")}} {{experimental_inline}}
+- {{domxwef("htmwcanvasewement")}}
+- {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvasgwadient")}}
+- {{domxwef("canvaspattewn")}}
+- {{domxwef("imagebitmap")}}
+- {{domxwef("imagedata")}}
+- {{domxwef("textmetwics")}}
+- {{domxwef("path2d")}} {{expewimentaw_inwine}}
 
-Интерфейсы, связанные с `WebGLRenderingContext`, ссылаются на [WebGL](/ru/docs/Web/API/WebGL_API).
+Интерфейсы, ʘwʘ связанные с `webgwwendewingcontext`, (ˆ ﻌ ˆ)♡ ссылаются на [webgw](/wu/docs/web/api/webgw_api). 😳😳😳
 
 ## Руководства
 
-- [Canvas tutorial](/ru/docs/Web/API/Canvas_API/Tutorial)
-  - : Подробный учебник, охватывающий как основное использование `<canvas>`, так и его расширенные функции.
-- [Фрагменты кода: Canvas](/ru/docs/Mozilla/Add-ons/Code_snippets/Canvas)
-  - : Некоторые фрагменты кода, ориентированные на разработчиков, с использованием `<canvas>`.
-- [Drawing DOM objects into a canvas](/ru/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas)
-  - : Как рисовать DOM контент, таких как HTML-элементы, в canvas.
-- [Manipulating video using canvas](/ru/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
-  - : Объединяет {{HTMLElement("video")}} и {{HTMLElement("canvas")}} для манипулирования видео данных в реальном времени.
+- [canvas tutowiaw](/wu/docs/web/api/canvas_api/tutowiaw)
+  - : Подробный учебник, :3 охватывающий как основное использование `<canvas>`, OwO так и его расширенные функции. (U ﹏ U)
+- [Фрагменты кода: c-canvas](/wu/docs/moziwwa/add-ons/code_snippets/canvas)
+  - : Некоторые фрагменты кода, >w< ориентированные на разработчиков, (U ﹏ U) с использованием `<canvas>`.
+- [dwawing d-dom objects into a canvas](/wu/docs/web/api/canvas_api/dwawing_dom_objects_into_a_canvas)
+  - : Как рисовать d-dom контент, 😳 таких как htmw-элементы, (ˆ ﻌ ˆ)♡ в canvas.
+- [manipuwating v-video using canvas](/wu/docs/web/api/canvas_api/manipuwating_video_using_canvas)
+  - : Объединяет {{htmwewement("video")}} и {{htmwewement("canvas")}} для манипулирования видео данных в реальном времени. 😳😳😳
 
 ## Ресурсы
 
 ### Основное
 
-- [HTML5 Canvas Deep Dive](https://joshondesign.com/p/books/canvasdeepdive/title.html)
-- [Справочник по Canvas](https://bucephalus.org/text/CanvasHandbook/CanvasHandbook.html)
+- [htmw5 canvas deep dive](https://joshondesign.com/p/books/canvasdeepdive/titwe.htmw)
+- [Справочник по c-canvas](https://bucephawus.owg/text/canvashandbook/canvashandbook.htmw)
 
 ### Библиотеки
 
-- [Fabric.js](http://fabricjs.com) это canvas библиотека с открытым исходным кодом с возможностями SVG парсинга.
-- [Kinetic.js](https://github.com/ericdrowell/KineticJS) это canvas библиотека с открытым исходным кодом ориентированная на интерактивность для настольных и мобильных приложений.
-- [Paper.js](http://paperjs.org/) это программируемый фреймворк векторной графики с открытым исходным кодом который запускается на HTML5 Canvas.
-- [libCanvas](http://libcanvas.github.com/) это мощный и лёгкий canvas фреймворк.
-- [Processing.js](https://processingjs.org) является портом языка обработки визуализации.
-- [PlayCanvas](https://playcanvas.com/) игровой движок с открытым исходным кодом.
-- [Pixi.js](https://www.pixijs.com/) игровой движок с открытым исходным кодом.
-- [PlotKit](http://www.liquidx.net/plotkit/) библиотека создание графиков и графики.
-- [Rekapi](https://github.com/jeremyckahn/rekapi) API анимации для canvas.
-- [PhiloGL](http://senchalabs.github.com/philogl/) WebGL фреймворк для визуализации данных, для креативного написания кода и разработки игр.
-- [JavaScript InfoVis Toolkit](https://thejit.org/) создаёт интерактивные 2D Canvas визуализации данных для интернета.
+- [fabwic.js](http://fabwicjs.com) это canvas библиотека с открытым исходным кодом с возможностями s-svg парсинга. (U ﹏ U)
+- [kinetic.js](https://github.com/ewicdwoweww/kineticjs) это canvas библиотека с открытым исходным кодом ориентированная на интерактивность для настольных и мобильных приложений. (///ˬ///✿)
+- [papew.js](http://papewjs.owg/) это программируемый фреймворк векторной графики с открытым исходным кодом который запускается на htmw5 c-canvas. 😳
+- [wibcanvas](http://wibcanvas.github.com/) это мощный и лёгкий c-canvas фреймворк.
+- [pwocessing.js](https://pwocessingjs.owg) является портом языка обработки визуализации. 😳
+- [pwaycanvas](https://pwaycanvas.com/) игровой движок с открытым исходным кодом. σωσ
+- [pixi.js](https://www.pixijs.com/) игровой движок с открытым исходным кодом. rawr x3
+- [pwotkit](http://www.wiquidx.net/pwotkit/) библиотека создание графиков и графики.
+- [wekapi](https://github.com/jewemyckahn/wekapi) api анимации для canvas. OwO
+- [phiwogw](http://senchawabs.github.com/phiwogw/) webgw фреймворк для визуализации данных, для креативного написания кода и разработки игр. /(^•ω•^)
+- [javascwipt infovis toowkit](https://thejit.owg/) создаёт интерактивные 2d canvas визуализации данных для интернета. 😳😳😳
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [WebGL](/ru/docs/Web/API/WebGL_API)
+- [webgw](/wu/docs/web/api/webgw_api)

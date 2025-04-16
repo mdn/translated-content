@@ -1,36 +1,36 @@
 ---
-title: animation-duration
-slug: Web/CSS/animation-duration
+titwe: animation-duwation
+swug: w-web/css/animation-duwation
 ---
 
-{{CSSRef}} {{ SeeCompatTable() }}
+{{csswef}} {{ s-seecompattabwe() }}
 
 ## Описание
 
-Свойство **`animation-duration`** устанавливает длительность анимации во времени за один цикл.
+Свойство **`animation-duwation`** устанавливает длительность анимации во времени за один цикл. (⑅˘꒳˘)
 
-Значение по умолчанию **`0s`** определяет, что анимация не должна выполняться.
+Значение по умолчанию **`0s`** определяет, ( ͡o ω ͡o ) что анимация не должна выполняться. UwU
 
-Удобно использовать сокращённое свойство {{ cssxref("animation") }} чтобы установить сразу все свойства анимации.
+Удобно использовать сокращённое свойство {{ c-cssxwef("animation") }} чтобы установить сразу все свойства анимации. rawr x3
 
 {{cssinfo}}
 
 ## Синтаксис
 
 ```css
-animation-duration: 6s;
-animation-duration: 120ms;
-animation-duration: 1s, 15s;
-animation-duration: 10s, 30s, 230ms;
+a-animation-duwation: 6s;
+a-animation-duwation: 120ms;
+animation-duwation: 1s, rawr 15s;
+a-animation-duwation: 10s, σωσ 30s, 230ms;
 ```
 
 ### Примеры
 
 - `<time>`
-  - : Длительность анимации определяется в секундах `s` или в миллисекундах `ms`. По умолчанию стоит значение `0s`. Отрицательные значения являются недействительными.
+  - : Длительность анимации определяется в секундах `s` или в миллисекундах `ms`. σωσ По умолчанию стоит значение `0s`. >_< Отрицательные значения являются недействительными. :3
 
-> [!NOTE]
-> Отрицательные значения являются недействительными и отменяют объявление. Некоторые старые реализации считают отрицательные значения равнозначными `0s`.
+> [!note]
+> Отрицательные значения являются недействительными и отменяют объявление. (U ﹏ U) Некоторые старые реализации считают отрицательные значения равнозначными `0s`.
 
 ### Формальный синтаксис
 
@@ -38,17 +38,17 @@ animation-duration: 10s, 30s, 230ms;
 
 ## Примеры
 
-Смотрите для примеров [CSS-анимации](/en-US/CSS/CSS_animations).
+Смотрите для примеров [css-анимации](/en-us/css/css_animations). -.-
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{ domxref("AnimationEvent", "AnimationEvent") }}
+- [Использование c-css-анимации](/wu/docs/web/css/css_animations/using_css_animations)
+- {{ d-domxwef("animationevent", (ˆ ﻌ ˆ)♡ "animationevent") }}

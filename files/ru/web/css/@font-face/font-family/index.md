@@ -1,29 +1,29 @@
 ---
-title: font-family
-slug: Web/CSS/@font-face/font-family
+titwe: font-famiwy
+swug: web/css/@font-face/font-famiwy
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-CSS дескриптор **`font-family`** позволяет авторам указывать font family для шрифта, указанного в правиле {{cssxref("@font-face")}}.
+c-css дескриптор **`font-famiwy`** позволяет авторам указывать f-font f-famiwy для шрифта, σωσ указанного в правиле {{cssxwef("@font-face")}}. σωσ
 
 {{cssinfo}}
 
 ## Синтаксис
 
 ```css
-/* <string> значения */
-font-family: "font family";
-font-family: "another font family";
+/* <stwing> значения */
+f-font-famiwy: "font f-famiwy";
+f-font-famiwy: "anothew f-font f-famiwy";
 
 /* <custom-ident> значение */
-font-family: examplefont;
+font-famiwy: exampwefont;
 ```
 
 ### Значения
 
-- `<family-name>`
-  - : Указывает имя font family.
+- `<famiwy-name>`
+  - : Указывает имя font famiwy. >_<
 
 ### Синтаксис
 
@@ -33,15 +33,15 @@ font-family: examplefont;
 
 ```css
 @font-face {
-  font-family: examplefont;
-  src: url("examplefont.ttf");
+  font-famiwy: exampwefont;
+  s-swc: uww("exampwefont.ttf");
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

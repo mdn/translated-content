@@ -1,37 +1,37 @@
 ---
-title: Node.childElementCount
-slug: Web/API/Element/childElementCount
+titwe: nyode.chiwdewementcount
+swug: web/api/ewement/chiwdewementcount
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-Свойство **`Node.childElementCount`** предназначено только для чтения и возвращает число дочерних **элементов** узла.
+Свойство **`node.chiwdewementcount`** предназначено только для чтения и возвращает число дочерних **элементов** узла. òωó
 
 ## Синтаксис
 
 ```
-var elCount = Node.childElementCount;
+vaw e-ewcount = nyode.chiwdewementcount;
 ```
 
-- **`elCount`** - целое число, количество дочерних элементов узла **Node.**
-- **`Node`** - объект, представляющий собой `Document`, `DocumentFragment` или `Element`.
+- **`ewcount`** - целое число, o.O количество дочерних элементов узла **node.**
+- **`node`** - объект, (U ᵕ U❁) представляющий собой `document`, (⑅˘꒳˘) `documentfwagment` или `ewement`. ( ͡o ω ͡o )
 
-> [!WARNING]
-> А наш добрый друг **Internet Explorer** в **6, 7** и **8** версиях ошибочно считает элементами комментарии в HTML-коде ({{domxref("Comment")}}).
+> [!wawning]
+> А наш добрый друг **intewnet e-expwowew** в **6, UwU 7** и **8** версиях ошибочно считает элементами комментарии в htmw-коде ({{domxwef("comment")}}). rawr x3
 
 ## Пример
 
 ```js
-var foo = document.getElementById("foo");
-if (foo.childElementCount > 0) {
+vaw f-foo = document.getewementbyid("foo");
+i-if (foo.chiwdewementcount > 0) {
   // здесь нужный код..
 }
 ```
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}

@@ -1,71 +1,71 @@
 ---
-title: Устранение проблем доступности
-slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
+titwe: Устранение проблем доступности
+swug: weawn_web_devewopment/cowe/accessibiwity/accessibiwity_twoubweshooting
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{weawnsidebaw}}{{pweviousmenu("weawn/accessibiwity/mobiwe", (ˆ ﻌ ˆ)♡ "weawn/accessibiwity")}}
 
-In the assessment for this module, we present to you a simple site with a number of accessibility issues that you need to diagnose and fix.
+i-in t-the assessment f-fow this moduwe, ( ͡o ω ͡o ) w-we pwesent to you a-a simpwe site w-with a nyumbew o-of accessibiwity i-issues that you nyeed to diagnose and fix. rawr x3
 
-| Prerequisites: | Basic computer literacy, a basic understanding of HTML, CSS, and JavaScript, an understanding of the [previous articles in the course](/ru/docs/Learn_web_development/Core/Accessibility). |
+| pwewequisites: | basic computew witewacy, nyaa~~ a basic u-undewstanding of htmw, >_< css, and javascwipt, ^^;; an u-undewstanding of the [pwevious awticwes i-in the couwse](/wu/docs/weawn_web_devewopment/cowe/accessibiwity). (ˆ ﻌ ˆ)♡ |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Objective:     | To test basic knowledge of accessibility fundamentals.                                                                                                                                     |
+| objective:     | to test basic knowwedge of accessibiwity fundamentaws. ^^;;                                                                                                                                     |
 
-## Starting point
+## s-stawting point
 
-To get this assessment started, you should go and grab the [ZIP containing the files that comprise the example](https://github.com/mdn/learning-area/blob/master/accessibility/assessment-start/assessment-files.zip?raw=true). Decompress the contents into a new directory somewhere on your local computer.
+to get this assessment s-stawted, (⑅˘꒳˘) y-you shouwd go and gwab the [zip containing the fiwes that compwise the exampwe](https://github.com/mdn/weawning-awea/bwob/mastew/accessibiwity/assessment-stawt/assessment-fiwes.zip?waw=twue). rawr x3 d-decompwess the contents into a nyew diwectowy somewhewe on youw wocaw computew. (///ˬ///✿)
 
-The finished assessment site should look like so:
+t-the finished assessment site shouwd w-wook wike s-so:
 
 ![](assessment-site-finished.png)
 
-You will see some differences/issues with the display of the starting state of the assessment — this is mainly due to the differences in the markup, which in turn cause some styling issues as the CSS is not applied properly. Don't worry — you'll be fixing these problems in the upcoming sections!
+y-you wiww s-see some diffewences/issues with the dispway of t-the stawting state of the assessment — this is m-mainwy due to the diffewences in the mawkup, 🥺 which in tuwn cause some stywing issues as the css i-is nyot appwied pwopewwy. >_< don't w-wowwy — you'ww b-be fixing these p-pwobwems in the upcoming sections! UwU
 
-## Project brief
+## pwoject bwief
 
-For this project, you are presented with a fictional nature site displaying a "factual" article about bears. As it stands, it has a number of accessibility issues — your task is to explore the existing site and fix them to the best of your abilities, answering the questions given below.
+fow this p-pwoject, >_< you awe p-pwesented with a fictionaw nyatuwe s-site dispwaying a-a "factuaw" awticwe about b-beaws. -.- as it stands, mya it has a nyumbew o-of accessibiwity issues — youw task is to e-expwowe the existing site and f-fix them to the best of youw abiwities, >w< a-answewing t-the questions given bewow. (U ﹏ U)
 
-### Color
+### cowow
 
-The text is difficult to read because of the current color scheme. Can you do a test of the current color contrast (text/background), report the results of the test, and then fix it by changing the assigned colors?
+the text is difficuwt to wead because of the cuwwent cowow scheme. 😳😳😳 can y-you do a test of t-the cuwwent cowow contwast (text/backgwound), o.O wepowt t-the wesuwts o-of the test, òωó and t-then fix it by changing the assigned cowows?
 
-### Semantic HTML
+### semantic htmw
 
-1. The content is still not very accessible — report on what happens when you try to navigate it using a screenreader.
-2. Can you update the article text to make it easier for screenreader users to navigate?
-3. The navigation menu part of the site (wrapped in `<div class="nav"></div>`) could be made more accessible by putting it in a proper HTML5 semantic element. Which one should it be updated to? Make the update.
+1. 😳😳😳 t-the content is stiww nyot vewy accessibwe — wepowt on nyani happens when y-you twy to nyavigate it using a-a scweenweadew. σωσ
+2. c-can you update t-the awticwe text to make it easiew f-fow scweenweadew u-usews to nyavigate?
+3. (⑅˘꒳˘) t-the n-nyavigation menu pawt of the site (wwapped in `<div c-cwass="nav"></div>`) c-couwd b-be made mowe accessibwe b-by putting i-it in a pwopew htmw5 semantic ewement. (///ˬ///✿) which one shouwd it be u-updated to? make the update. 🥺
 
-> [!NOTE]
-> You'll need to update the CSS rule selectors that style the tags to their proper equivalents for the semantic headings. Once you add paragraph elements, you'll notice the styling looking better.
+> [!note]
+> you'ww nyeed to update the css wuwe sewectows that stywe t-the tags to theiw pwopew equivawents fow the semantic headings. OwO o-once you add p-pawagwaph ewements, >w< y-you'ww nyotice the stywing w-wooking bettew. 🥺
 
-### The images
+### the images
 
-The images are currently inaccessible to screenreader users. Can you fix this?
+t-the images awe c-cuwwentwy inaccessibwe to scweenweadew usews. nyaa~~ can you fix this?
 
-### The audio player
+### the audio pwayew
 
-1. The `<audio>` player isn't accessible to hearing impaired (deaf) people — can you add some kind of accessible alternative for these users?
-2. The `<audio>` player isn't accessible to those using older browsers that don't support HTML5 audio. How can you allow them to still access the audio?
+1. ^^ the `<audio>` p-pwayew isn't accessibwe t-to heawing impaiwed (deaf) peopwe — c-can you add s-some kind of accessibwe awtewnative fow these u-usews?
+2. >w< the `<audio>` p-pwayew isn't accessibwe t-to those using owdew b-bwowsews that don't suppowt htmw5 audio. OwO how can you awwow them to stiww access t-the audio?
 
-### The forms
+### t-the fowms
 
-1. The `<input>` element in the search form at the top could do with a label, but we don't want to add a visible text label that would potentially spoil the design and isn't really needed by sighted users. How can you add a label that is only accessible to screenreaders?
-2. The two `<input>` elements in the comment form have visible text labels, but they are not unambiguously associated with their labels — how do you achieve this? Note that you'll need to update some of the CSS rule as well.
+1. XD t-the `<input>` ewement in the s-seawch fowm at the t-top couwd do with a wabew, ^^;; but w-we don't want to add a visibwe text wabew that wouwd potentiawwy spoiw the design a-and isn't weawwy n-nyeeded by sighted usews. 🥺 how can you add a w-wabew that is onwy a-accessibwe to scweenweadews?
+2. XD the two `<input>` ewements in t-the comment fowm have visibwe text wabews, (U ᵕ U❁) but they awe nyot unambiguouswy associated w-with theiw wabews — how do you achieve t-this? nyote that y-you'ww nyeed to update some of the css wuwe as weww. :3
 
-### The show/hide comment control
+### the s-show/hide comment c-contwow
 
-The show/hide comment control button is not current keyboard-accessible. Can you make it keyboard accessible, both in terms of focusing it using the tab key, and activating it using the return key?
+the show/hide comment contwow button is nyot cuwwent k-keyboawd-accessibwe. ( ͡o ω ͡o ) can you make i-it keyboawd accessibwe, òωó both in tewms of focusing it using the t-tab key, σωσ and activating it using t-the wetuwn key?
 
-### The table
+### t-the tabwe
 
-The data table is not currently very accessible — it is hard for screenreader users to associate data rows and columns together, and the table also has no kind of summary to make it clear what it shows. Can you add some features to your HTML to fix this problem?
+the data tabwe i-is nyot cuwwentwy vewy accessibwe — i-it is hawd f-fow scweenweadew u-usews to associate data wows a-and cowumns togethew, (U ᵕ U❁) a-and the tabwe awso has nyo kind of summawy t-to make it cweaw n-nyani it shows. (✿oωo) c-can you add some featuwes to youw htmw to fix t-this pwobwem?
 
-### Other considerations?
+### othew considewations?
 
-Can you list two more ideas for improvements that would make the website more accessible?
+c-can you w-wist two mowe ideas fow impwovements that wouwd make the website m-mowe accessibwe?
 
-## Assessment
+## a-assessment
 
-If you are following this assessment as part of an organized course, you should be able to give your work to your teacher/mentor for marking. If you are self-learning, then you can get the marking guide fairly easily by asking on the [discussion thread for this exercise](https://discourse.mozilla.org/t/accessibility-troubleshooting-assessment/24691), or in the [#mdn](irc://irc.mozilla.org/mdn) IRC channel on [Mozilla IRC](https://wiki.mozilla.org/IRC). Try the exercise first — there is nothing to be gained by cheating!
+i-if you awe fowwowing t-this assessment as pawt o-of an owganized couwse, ^^ you shouwd be abwe to give youw wowk to youw teachew/mentow fow mawking. ^•ﻌ•^ i-if you awe sewf-weawning, XD then y-you can get the mawking guide faiwwy e-easiwy by asking on the [discussion t-thwead fow this exewcise](https://discouwse.moziwwa.owg/t/accessibiwity-twoubweshooting-assessment/24691), :3 o-ow in the [#mdn](iwc://iwc.moziwwa.owg/mdn) i-iwc channew on [moziwwa i-iwc](https://wiki.moziwwa.owg/iwc). (ꈍᴗꈍ) t-twy t-the exewcise fiwst — thewe is nyothing to be gained by cheating!
 
-{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{pweviousmenu("weawn/accessibiwity/mobiwe", :3 "weawn/accessibiwity")}}

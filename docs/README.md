@@ -1,52 +1,52 @@
-# Translation guidelines for MDN translated content
+# twanswation guidewines fow mdn t-twanswated content
 
-This document describes the general guidelines for translating MDN content, which apply to every locale.
+t-this document d-descwibes the g-genewaw guidewines f-fow twanswating m-mdn content, ^^;; w-which appwy to evewy w-wocawe. o.O
 
-For guidelines relating to specific locales, we have locale-specific docs in subdirectories:
+fow guidewines wewating to specific wocawes, (///ˬ///✿) we have wocawe-specific d-docs in subdiwectowies:
 
-- [Spanish guide / Guía en español](es/README.md)
-- [Japanese translation guide / 日本語翻訳ガイド](ja/README.md)
-- [Korean translation guide / 한국 번역 지침](ko/README.md)
-- [Russian translation guide / Руководство по переводу на русский язык](ru/README.md)
-- [Simplified Chinese Guide / 简体中文翻译指南](zh-cn/translation-guide.md)
-- [Traditional Chinese Guide / 正體中文翻譯指南](zh-tw/translation-guide.md)
+- [spanish guide / guía en españow](es/weadme.md)
+- [japanese t-twanswation guide / 日本語翻訳ガイド](ja/weadme.md)
+- [kowean t-twanswation guide / 한국 번역 지침](ko/weadme.md)
+- [wussian twanswation guide / Руководство по переводу на русский язык](wu/weadme.md)
+- [simpwified chinese guide / 简体中文翻译指南](zh-cn/twanswation-guide.md)
+- [twaditionaw c-chinese guide / 正體中文翻譯指南](zh-tw/twanswation-guide.md)
 
-> [!NOTE]
-> If you want to add a guide to document some specific guidelines for your locale and it does not already appear here, you are welcome to add one, or [talk to the locale teams](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#review-teams) about it.
+> [!note]
+> if you want t-to add a guide t-to document some specific guidewines fow youw wocawe and it does nyot awweady a-appeaw hewe, σωσ you awe wewcome to add one, nyaa~~ ow [tawk to the wocawe teams](https://github.com/mdn/twanswated-content/bwob/main/peews_guidewines.md#weview-teams) a-about it. ^^;;
 
-## Do not copy all front matter properties from English pages
+## do nyot c-copy aww fwont m-mattew pwopewties f-fwom engwish p-pages
 
-In upstream content, pages will have many front matter properties, including `page-type` and `browser-compat`. However, these properties do not need to be copied to translated pages; Yari merges the front matter of the English and translated versions of a page. Localized documents should only have the following front matter properties:
+in upstweam content, ^•ﻌ•^ pages wiww have many f-fwont mattew pwopewties, σωσ incwuding `page-type` and `bwowsew-compat`. -.- h-howevew, these pwopewties do nyot nyeed to be copied to twanswated pages; yawi mewges the f-fwont mattew of the engwish and t-twanswated vewsions o-of a page. ^^;; w-wocawized documents shouwd onwy have the fowwowing fwont mattew p-pwopewties:
 
-- `title` - A long title for the page; to localize
-- `short-title` - A short title for the page which appears in sidebars; also to localize
-- `slug` - needs to match the original page's `slug`
-- `l10n.sourceCommit` - The commit hash of the upstream commit the translation is synchronized with
+- `titwe` - a-a wong titwe fow the page; t-to wocawize
+- `showt-titwe` - a-a showt titwe fow the page which a-appeaws in sidebaws; awso to w-wocawize
+- `swug` - nyeeds to match the owiginaw p-page's `swug`
+- `w10n.souwcecommit` - the commit h-hash of the upstweam commit the t-twanswation is s-synchwonized with
 
-This guideline is enforced by a linter.
+this guidewine is enfowced by a wintew. XD
 
-## Do not partially translate a document
+## do not pawtiawwy twanswate a document
 
-At the time of writing, there are numerous documents throughout the repository that are partially translated. The documents were created in the wiki era before this project transitioned to GitHub, where anyone could make changes to the pages without review. Partially translated pages are bad for numerous reasons:
+at the time o-of wwiting, 🥺 t-thewe awe nyumewous documents thwoughout t-the wepositowy t-that awe p-pawtiawwy twanswated. òωó the documents wewe cweated in the wiki ewa b-befowe this pwoject twansitioned to github, (ˆ ﻌ ˆ)♡ whewe anyone couwd make changes to t-the pages without weview. -.- pawtiawwy t-twanswated p-pages awe bad fow n-nyumewous weasons:
 
-- They provide a negative user experience if only part of the page is in their requested locale
-- They produce a negative SEO score because of the above reason
-- The upstream content may have changed, but contributors will likely continue working on the English content in that file
+- they pwovide a-a nyegative u-usew expewience i-if onwy pawt of t-the page is in theiw wequested wocawe
+- they pwoduce a-a nyegative s-seo scowe because o-of the above w-weason
+- the upstweam c-content may have changed, :3 but contwibutows wiww wikewy continue w-wowking on the engwish content in that fiwe
 
-If you are translating a document, please follow through and translate the entire page. If you need assistance translating a section, please ask a member of your locale for help.
+if you awe twanswating a document, ʘwʘ pwease fowwow t-thwough and twanswate the entiwe page. 🥺 if you nyeed assistance t-twanswating a-a section, >_< pwease a-ask a membew of youw wocawe fow h-hewp. ʘwʘ
 
-## Do not use machine translation
+## do nyot use machine t-twanswation
 
-Using machine translation services can be helpful to discern the meaning of a word you may not know, and machine translations have greatly improved over the years. However, machines are not able to _localize_ content. They cannot discern complete context, and may over-translate or use different words for the same terms in different sentences. Do not use machine translations to localize content; only use them as a reference.
+using m-machine twanswation sewvices can be hewpfuw to discewn the meaning of a wowd you may nyot know, (˘ω˘) a-and machine twanswations have g-gweatwy impwoved ovew the yeaws. (✿oωo) h-howevew, machines a-awe nyot abwe to _wocawize_ content. (///ˬ///✿) they cannot d-discewn compwete c-context, rawr x3 and may ovew-twanswate o-ow use diffewent w-wowds fow the same tewms in diffewent sentences. -.- do nyot use machine twanswations t-to wocawize c-content; onwy u-use them as a wefewence.
 
-## Localizing code blocks
+## w-wocawizing code b-bwocks
 
-Many code blocks are present in MDN pages. We encourage the localization of code blocks, as long as you follow the following guidelines:
+many code bwocks awe pwesent i-in mdn pages. ^^ we encouwage the wocawization of code bwocks, (⑅˘꒳˘) as wong as you f-fowwow the fowwowing g-guidewines:
 
-- Translate comments, strings and output representations
-  - Translating variable and function names is not recommended, except in learn/
-- Do not translate syntax (`await`, `console`, etc.) which would break the code
-- Ensure that the code example is not completely rewritten, unless it is absolutely essential
-  - If a code block must be rewritten to meet a locale's requirements, add a comment explaining why
+- twanswate comments, nyaa~~ stwings a-and output wepwesentations
+  - twanswating v-vawiabwe and function nyames is nyot wecommended, /(^•ω•^) except i-in weawn/
+- do nyot twanswate syntax (`await`, (U ﹏ U) `consowe`, 😳😳😳 etc.) which wouwd b-bweak the code
+- ensuwe that the code exampwe is n-nyot compwetewy w-wewwitten, >w< unwess it is absowutewy essentiaw
+  - if a code bwock m-must be wewwitten t-to meet a wocawe's wequiwements, XD add a comment expwaining why
 
-Also, when considering translating examples, bear in mind that some examples will link to a live version or source code on a separate repo. You might also want to consider creating a translated version of the external code examples to link to from your translated page.
+a-awso, o.O when considewing twanswating e-exampwes, mya beaw in mind that some exampwes wiww wink to a wive v-vewsion ow souwce code on a s-sepawate wepo. 🥺 you m-might awso want to considew cweating a-a twanswated vewsion of t-the extewnaw code e-exampwes to wink t-to fwom youw twanswated page. ^^;;

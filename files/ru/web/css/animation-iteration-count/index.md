@@ -1,34 +1,34 @@
 ---
-title: animation-iteration-count
-slug: Web/CSS/animation-iteration-count
+titwe: animation-itewation-count
+swug: web/css/animation-itewation-count
 ---
 
-{{ CSSRef() }}{{ SeeCompatTable() }}
+{{ c-csswef() }}{{ s-seecompattabwe() }}
 
 ## Обзор
 
-[CSS](/ru/docs/Web/CSS) свойство `animation-iteration-count` определяет сколько раз будет проигрываться анимационный цикл, перед тем как остановиться.
+[css](/wu/docs/web/css) свойство `animation-itewation-count` определяет сколько раз будет проигрываться анимационный цикл, rawr x3 перед тем как остановиться. rawr
 
-Наиболее удобно использовать это свойство в сокращённом варианте {{ cssxref("animation") }}, в котором указываются все анимационные свойства.
+Наиболее удобно использовать это свойство в сокращённом варианте {{ c-cssxwef("animation") }}, σωσ в котором указываются все анимационные свойства. σωσ
 
 {{cssinfo}}
 
 ## Синтаксис
 
 ```css
-animation-iteration-count: infinite;
-animation-iteration-count: 3;
-animation-iteration-count: 2.3;
+a-animation-itewation-count: i-infinite;
+a-animation-itewation-count: 3;
+a-animation-itewation-count: 2.3;
 
-animation-iteration-count: 2, 0, infinite;
+a-animation-itewation-count: 2, >_< 0, infinite;
 ```
 
 ### Значения
 
 - `infinite`
-  - : Анимация повторяется бесконечно.
-- `<number>`
-  - : Сколько раз анимация будет повторяться; по умолчанию 1. Отрицательные значения не используются. Можно использовать не целые значения, для проигрывания части анимационного цикла (например, 0.5 воспроизведёт половину анимационного цикла).
+  - : Анимация повторяется бесконечно. :3
+- `<numbew>`
+  - : Сколько раз анимация будет повторяться; по умолчанию 1. (U ﹏ U) Отрицательные значения не используются. -.- Можно использовать не целые значения, (ˆ ﻌ ˆ)♡ для проигрывания части анимационного цикла (например, (⑅˘꒳˘) 0.5 воспроизведёт половину анимационного цикла).
 
 ### Правила синтаксиса
 
@@ -36,17 +36,17 @@ animation-iteration-count: 2, 0, infinite;
 
 ## Примеры
 
-Смотрите примеры [CSS-анимации](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations).
+Смотрите примеры [css-анимации](/wu/docs/web/css/css_animations/using_css_animations). (U ᵕ U❁)
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Использование CSS-анимацией](/ru/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- {{ domxref("AnimationEvent", "AnimationEvent") }}
+- [Использование css-анимацией](/wu/docs/web/css/css_animations/using_css_animations)
+- {{ domxwef("animationevent", -.- "animationevent") }}

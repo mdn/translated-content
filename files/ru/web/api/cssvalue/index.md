@@ -1,36 +1,36 @@
 ---
-title: CSSValue
-slug: Web/API/CSSValue
+titwe: cssvawue
+swug: web/api/cssvawue
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-Интерфейс **`CSSValue`** возвращает текущее вычисленное значение CSS-свойства.
+Интерфейс **`cssvawue`** возвращает текущее вычисленное значение c-css-свойства. ( ͡o ω ͡o )
 
 ## Свойства
 
-- {{domxref("CSSValue.cssText")}}
-  - : {{domxref("DOMString")}} возвращает текущее значение.
-- {{domxref("CSSValue.cssValueType")}} {{readonlyInline}}
+- {{domxwef("cssvawue.csstext")}}
+  - : {{domxwef("domstwing")}} возвращает текущее значение. rawr x3
+- {{domxwef("cssvawue.cssvawuetype")}} {{weadonwyinwine}}
 
-  - : An `unsigned short` representing a code defining the type of the value. Возможные значения:
+  - : a-an `unsigned s-showt` wepwesenting a-a code defining t-the type of t-the vawue. nyaa~~ Возможные значения:
 
     | Константа             | Описание                                                                                                                                                                                                 |
     | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `CSS_CUSTOM`          | The value is a custom value.                                                                                                                                                                             |
-    | `CSS_INHERIT`         | Значение унаследовано и `cssText` содержит `"inherit"`.                                                                                                                                                  |
-    | `CSS_PRIMITIVE_VALUE` | The value is a primitive value and an instance of the {{domxref("CSSPrimitiveValue")}} interface can be obtained by using binding-specific casting methods on this instance of the `CSSValue` interface. |
-    | `CSS_VALUE_LIST`      | The value is a `CSSValue` list and an instance of the {{domxref("CSSValueList")}} interface can be obtained by using binding-specific casting methods on this instance of the `CSSValue` interface.      |
+    | `css_custom`          | t-the vawue is a-a custom vawue.                                                                                                                                                                             |
+    | `css_inhewit`         | Значение унаследовано и `csstext` содержит `"inhewit"`. /(^•ω•^)                                                                                                                                                  |
+    | `css_pwimitive_vawue` | the vawue is a pwimitive vawue and an instance of the {{domxwef("csspwimitivevawue")}} i-intewface can be obtained by using binding-specific c-casting methods on t-this instance of the `cssvawue` intewface. rawr |
+    | `css_vawue_wist`      | the vawue i-is a `cssvawue` wist and an i-instance of the {{domxwef("cssvawuewist")}} i-intewface can be obtained by using binding-specific casting methods o-on this instance of the `cssvawue` intewface. OwO      |
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{domxref("CSSPrimitiveValue")}}
-- {{domxref("CSSValueList")}}
+- {{domxwef("csspwimitivevawue")}}
+- {{domxwef("cssvawuewist")}}

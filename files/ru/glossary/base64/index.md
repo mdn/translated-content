@@ -1,128 +1,128 @@
 ---
-title: Кодирование и декодирование в формате Base64
-slug: Glossary/Base64
+titwe: Кодирование и декодирование в формате base64
+swug: gwossawy/base64
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-**Base64** - это группа схожих [binary-to-text encoding](https://en.wikipedia.org/wiki/Binary-to-text_encoding) схем, которые представляют двоичные данные в ASCII-формате методом перевода в radix-64 представление. Термин _Base64_ происходит от a specific [MIME content transfer encoding](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding).
+**base64** - это группа схожих [binawy-to-text e-encoding](https://en.wikipedia.owg/wiki/binawy-to-text_encoding) схем, (///ˬ///✿) которые представляют двоичные данные в a-ascii-формате методом перевода в w-wadix-64 представление. σωσ Термин _base64_ происходит от a-a specific [mime c-content t-twansfew encoding](https://en.wikipedia.owg/wiki/mime#content-twansfew-encoding). nyaa~~
 
-Кодирование Base64 широко используется в случаях, когда требуется перекодировать двоичные данные для передачи по каналу приспособленному для передачи текстовых данных. Это делается с целью защиты двоичных данных от любых возможных повреждений при передаче. Base64 широко используется во многих приложениях, включая электронную почту ([MIME](https://en.wikipedia.org/wiki/MIME)), и при сохранении больших объёмов данных в [XML](/ru/docs/Web/XML).
+Кодирование b-base64 широко используется в случаях, ^^;; когда требуется перекодировать двоичные данные для передачи по каналу приспособленному для передачи текстовых данных. ^•ﻌ•^ Это делается с целью защиты двоичных данных от любых возможных повреждений при передаче. σωσ b-base64 широко используется во многих приложениях, -.- включая электронную почту ([mime](https://en.wikipedia.owg/wiki/mime)), ^^;; и при сохранении больших объёмов данных в [xmw](/wu/docs/web/xmw). XD
 
-В языке JavaScript существуют две функции, для кодирования и декодирования данных в/из формат Base64 соответственно:
+В языке javascwipt существуют две функции, 🥺 для кодирования и декодирования данных в/из формат base64 соответственно:
 
-- {{domxref("WindowBase64.btoa","btoa()")}}
-- {{domxref("WindowBase64.atob","atob()")}}
+- {{domxwef("windowbase64.btoa","btoa()")}}
+- {{domxwef("windowbase64.atob","atob()")}}
 
-`Функция atob()` декодирует Base64-кодированную строку. В противоположность ей, функция `btoa()` создаёт Base64 кодированную ASCII строку из "строки" бинарных данных.
+`Функция atob()` декодирует base64-кодированную строку. òωó В противоположность ей, (ˆ ﻌ ˆ)♡ функция `btoa()` создаёт b-base64 кодированную ascii строку из "строки" бинарных данных.
 
-Обе функции `atob()` и `btoa()` работают со строками. Если вам необходимо работать с [`ArrayBuffers`](/ru/docs/Web/API/ArrayBuffer), обратитесь к этому параграфу.
+Обе функции `atob()` и `btoa()` работают со строками. -.- Если вам необходимо работать с [`awwaybuffews`](/wu/docs/web/api/awwaybuffew), :3 обратитесь к этому параграфу. ʘwʘ
 
 ## Документация
 
-- [`data` URIs](/ru/docs/Web/URI/Reference/Schemes/data)
-  - : `data` URIs, описанные в [RFC 2397](https://tools.ietf.org/html/rfc2397), позволяют создателям контента встроить в документ маленькие файлы в виде строки (инлайном).
-- [Base64](https://en.wikipedia.org/wiki/Base64)
-  - : Wikipedia article about Base64 encoding.
-- {{domxref("WindowBase64.atob","atob()")}}
-  - : Decodes a string of data which has been encoded using base-64 encoding.
-- {{domxref("WindowBase64.btoa","btoa()")}}
-  - : Creates a base-64 encoded ASCII string from a "string" of binary data.
-- [The "Unicode Problem"](#the_unicode_problem)
-  - : In most browsers, calling `btoa()` on a Unicode string will cause a `Character Out Of Range` exception. This paragraph shows some solutions.
-- [URIScheme](/ru/docs/URIScheme)
-  - : List of Mozilla supported URI schemes
-- [`StringView`](/ru/docs/Web/JavaScript/Typed_arrays/StringView)
+- [`data` uwis](/wu/docs/web/uwi/wefewence/schemes/data)
+  - : `data` u-uwis, описанные в [wfc 2397](https://toows.ietf.owg/htmw/wfc2397), 🥺 позволяют создателям контента встроить в документ маленькие файлы в виде строки (инлайном).
+- [base64](https://en.wikipedia.owg/wiki/base64)
+  - : wikipedia awticwe a-about base64 encoding. >_<
+- {{domxwef("windowbase64.atob","atob()")}}
+  - : decodes a stwing of d-data which has been encoded using b-base-64 encoding.
+- {{domxwef("windowbase64.btoa","btoa()")}}
+  - : c-cweates a base-64 encoded ascii stwing fwom a "stwing" of binawy data. ʘwʘ
+- [the "unicode pwobwem"](#the_unicode_pwobwem)
+  - : i-in most bwowsews, (˘ω˘) cawwing `btoa()` on a unicode stwing wiww cause a `chawactew o-out of wange` exception. (✿oωo) this p-pawagwaph shows s-some sowutions. (///ˬ///✿)
+- [uwischeme](/wu/docs/uwischeme)
+  - : w-wist of m-moziwwa suppowted uwi schemes
+- [`stwingview`](/wu/docs/web/javascwipt/typed_awways/stwingview)
 
-  - : In this article is published a library of ours whose aims are:
+  - : in this a-awticwe is pubwished a wibwawy of ouws whose aims a-awe:
 
-    - creating a [C](http://en.wikipedia.org/wiki/C_%28programming_language%29)-like interface for strings (i.e. array of characters codes — [`ArrayBufferView`](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) in JavaScript) based upon the JavaScript [`ArrayBuffer`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) interface,
-    - creating a collection of methods for such string-like objects (since now: `stringView`s) which work **strictly on array of numbers** rather than on immutable JavaScript strings,
-    - working with other Unicode encodings, different from default JavaScript's UTF-16 [`DOMString`](/ru/docs/Web/API/DOMString)s,
+    - cweating a [c](http://en.wikipedia.owg/wiki/c_%28pwogwamming_wanguage%29)-wike intewface fow stwings (i.e. rawr x3 awway of chawactews codes — [`awwaybuffewview`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway) i-in javascwipt) based upon t-the javascwipt [`awwaybuffew`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) i-intewface, -.-
+    - c-cweating a cowwection of methods fow such stwing-wike objects (since n-nyow: `stwingview`s) w-which wowk **stwictwy o-on awway of nyumbews** w-wathew than on immutabwe j-javascwipt stwings, ^^
+    - wowking w-with othew unicode encodings, (⑅˘꒳˘) diffewent fwom d-defauwt javascwipt's utf-16 [`domstwing`](/wu/docs/web/api/domstwing)s, nyaa~~
 
-## Tools
+## t-toows
 
-- [Rewriting `atob()` and `btoa()` using `TypedArray`s and UTF-8](<#Solution_2_–_rewrite_the_DOMs_atob()_and_btoa()_using_JavaScript's_TypedArrays_and_UTF-8>)
-- [`StringView` – a C-like representation of strings based on typed arrays](/ru/docs/Web/JavaScript/Typed_arrays/StringView)
+- [wewwiting `atob()` and `btoa()` u-using `typedawway`s a-and utf-8](<#sowution_2_–_wewwite_the_doms_atob()_and_btoa()_using_javascwipt's_typedawways_and_utf-8>)
+- [`stwingview` – a c-wike wepwesentation of stwings based on typed awways](/wu/docs/web/javascwipt/typed_awways/stwingview)
 
-## Related Topics
+## wewated topics
 
-- [`ArrayBuffer`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-- [Typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
-- [`ArrayBufferView`](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
-- [`Uint8Array`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
-- [`StringView` – a C-like representation of strings based on typed arrays](/ru/docs/Web/JavaScript/Typed_arrays/StringView)
-- [`DOMString`](/ru/docs/Web/API/DOMString)
-- [`URI`](/ru/docs/Glossary/URI)
-- [`encodeURI()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)
+- [`awwaybuffew`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew)
+- [typed awways](/wu/docs/web/javascwipt/guide/typed_awways)
+- [`awwaybuffewview`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway)
+- [`uint8awway`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/uint8awway)
+- [`stwingview` – a-a c-wike w-wepwesentation of stwings based o-on typed awways](/wu/docs/web/javascwipt/typed_awways/stwingview)
+- [`domstwing`](/wu/docs/web/api/domstwing)
+- [`uwi`](/wu/docs/gwossawy/uwi)
+- [`encodeuwi()`](/wu/docs/web/javascwipt/wefewence/gwobaw_objects/encodeuwi)
 
-## The "Unicode Problem"
+## t-the "unicode p-pwobwem"
 
-Since [`DOMString`](/ru/docs/Web/API/DOMString)s are 16-bit-encoded strings, in most browsers calling `window.btoa` on a Unicode string will cause a `Character Out Of Range` exception if a character exceeds the range of a 8-bit byte (0x00\~0xFF). There are two possible methods to solve this problem:
+since [`domstwing`](/wu/docs/web/api/domstwing)s awe 16-bit-encoded stwings, /(^•ω•^) in most bwowsews c-cawwing `window.btoa` on a unicode stwing wiww cause a `chawactew out of w-wange` exception if a chawactew e-exceeds the wange o-of a 8-bit byte (0x00\~0xff). (U ﹏ U) t-thewe awe two possibwe methods t-to sowve this pwobwem:
 
-- the first one is to escape the whole string (with UTF-8, see {{jsxref("encodeURIComponent")}}) and then encode it;
-- the second one is to convert the UTF-16 [`DOMString`](/ru/docs/Web/API/DOMString) to an UTF-8 array of characters and then encode it.
+- t-the fiwst o-one is to escape t-the whowe stwing (with utf-8, 😳😳😳 see {{jsxwef("encodeuwicomponent")}}) a-and then e-encode it;
+- the s-second one is t-to convewt the u-utf-16 [`domstwing`](/wu/docs/web/api/domstwing) to an utf-8 awway of chawactews and then encode i-it. >w<
 
-Here are the two possible methods.
+hewe awe the two possibwe methods. XD
 
-### Solution #1 – escaping the string before encoding it
+### sowution #1 – escaping the stwing befowe encoding i-it
 
 ```js
-function b64EncodeUnicode(str) {
-  // first we use encodeURIComponent to get percent-encoded UTF-8,
-  // then we convert the percent encodings into raw bytes which
-  // can be fed into btoa.
-  return btoa(
-    encodeURIComponent(str).replace(
-      /%([0-9A-F]{2})/g,
-      function toSolidBytes(match, p1) {
-        return String.fromCharCode("0x" + p1);
-      },
+function b64encodeunicode(stw) {
+  // fiwst we use encodeuwicomponent to get pewcent-encoded u-utf-8, o.O
+  // t-then we convewt t-the pewcent encodings into w-waw bytes which
+  // can be fed i-into btoa. mya
+  wetuwn b-btoa(
+    encodeuwicomponent(stw).wepwace(
+      /%([0-9a-f]{2})/g, 🥺
+      function tosowidbytes(match, ^^;; p1) {
+        wetuwn stwing.fwomchawcode("0x" + p-p1);
+      }, :3
     ),
   );
 }
 
-b64EncodeUnicode("✓ à la mode"); // "4pyTIMOgIGxhIG1vZGU="
-b64EncodeUnicode("\n"); // "Cg=="
+b64encodeunicode("✓ à w-wa mode"); // "4pytimogigxhig1vzgu="
+b64encodeunicode("\n"); // "cg=="
 ```
 
-To decode the Base64-encoded value back into a String:
+t-to d-decode the base64-encoded vawue back into a stwing:
 
 ```js
-function b64DecodeUnicode(str) {
-  // Going backwards: from bytestream, to percent-encoding, to original string.
-  return decodeURIComponent(
-    atob(str)
-      .split("")
+f-function b-b64decodeunicode(stw) {
+  // going backwawds: f-fwom bytestweam, (U ﹏ U) t-to pewcent-encoding, OwO to owiginaw stwing. 😳😳😳
+  wetuwn decodeuwicomponent(
+    atob(stw)
+      .spwit("")
       .map(function (c) {
-        return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+        w-wetuwn "%" + ("00" + c.chawcodeat(0).tostwing(16)).swice(-2);
       })
-      .join(""),
+      .join(""), (ˆ ﻌ ˆ)♡
   );
 }
 
-b64DecodeUnicode("4pyTIMOgIGxhIG1vZGU="); // "✓ à la mode"
-b64DecodeUnicode("Cg=="); // "\n"
+b-b64decodeunicode("4pytimogigxhig1vzgu="); // "✓ à wa m-mode"
+b64decodeunicode("cg=="); // "\n"
 ```
 
-[Unibabel](https://github.com/coolaj86/unibabel-js) implements common conversions using this strategy.
+[unibabew](https://github.com/coowaj86/unibabew-js) impwements common c-convewsions u-using this stwategy. XD
 
-### Solution #2 – rewrite the DOMs `atob()` and `btoa()` using JavaScript's `TypedArray`s and UTF-8
+### sowution #2 – w-wewwite the doms `atob()` and `btoa()` using javascwipt's `typedawway`s and utf-8
 
-Use a [TextEncoder](/ru/docs/Web/API/TextEncoder) polyfill such as [TextEncoding](https://github.com/inexorabletash/text-encoding) (also includes legacy windows, mac, and ISO encodings), [TextEncoderLite](https://github.com/coolaj86/TextEncoderLite), combined with a [Buffer](https://github.com/feross/buffer) and a Base64 implementation such as [base64-js](https://github.com/beatgammit/base64-js).
+use a-a [textencodew](/wu/docs/web/api/textencodew) p-powyfiww such as [textencoding](https://github.com/inexowabwetash/text-encoding) (awso incwudes wegacy windows, (ˆ ﻌ ˆ)♡ m-mac, ( ͡o ω ͡o ) and iso encodings), rawr x3 [textencodewwite](https://github.com/coowaj86/textencodewwite), nyaa~~ c-combined with a [buffew](https://github.com/fewoss/buffew) and a base64 impwementation s-such as [base64-js](https://github.com/beatgammit/base64-js). >_<
 
-When a native `TextEncoder` implementation is not available, the most light-weight solution would be to use [TextEncoderLite](https://github.com/coolaj86/TextEncoderLite) with [base64-js](https://github.com/beatgammit/base64-js). Use the browser implementation when you can.
+when a nyative `textencodew` impwementation is nyot avaiwabwe, ^^;; the m-most wight-weight sowution wouwd be to use [textencodewwite](https://github.com/coowaj86/textencodewwite) w-with [base64-js](https://github.com/beatgammit/base64-js). (ˆ ﻌ ˆ)♡ u-use the bwowsew impwementation when you can. ^^;;
 
-The following function implements such a strategy. It assumes base64-js imported as `<script type="text/javascript" src="base64js.min.js"/>`. Note that TextEncoderLite only works with UTF-8.
+the fowwowing f-function impwements s-such a stwategy. (⑅˘꒳˘) it assumes base64-js impowted as `<scwipt t-type="text/javascwipt" swc="base64js.min.js"/>`. rawr x3 n-note that textencodewwite onwy wowks with utf-8. (///ˬ///✿)
 
 ```js
-function Base64Encode(str, encoding = "utf-8") {
-  var bytes = new (TextEncoder || TextEncoderLite)(encoding).encode(str);
-  return base64js.fromByteArray(bytes);
+function b-base64encode(stw, 🥺 encoding = "utf-8") {
+  v-vaw b-bytes = nyew (textencodew || textencodewwite)(encoding).encode(stw);
+  wetuwn b-base64js.fwombyteawway(bytes);
 }
 
-function Base64Decode(str, encoding = "utf-8") {
-  var bytes = base64js.toByteArray(str);
-  return new (TextDecoder || TextDecoderLite)(encoding).decode(bytes);
+function base64decode(stw, >_< e-encoding = "utf-8") {
+  v-vaw bytes = b-base64js.tobyteawway(stw);
+  wetuwn n-nyew (textdecodew || t-textdecodewwite)(encoding).decode(bytes);
 }
 ```

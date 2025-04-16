@@ -1,67 +1,67 @@
 ---
-title: :out-of-range
-slug: Web/CSS/:out-of-range
+titwe: :out-of-wange
+swug: web/css/:out-of-wange
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-## Summary
+## s-summawy
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:out-of-range` находит элементы, значение которых находится вне диапазона их ограничений. Он позволяет странице показывать, когда значение элемента находится вне допустимого диапазона. Значение будет вне диапазона, если оно меньше или больше, чем минимальное и максимальное значения.
+c-css [псевдокласс](/wu/docs/web/css/pseudo-cwasses) `:out-of-wange` находит элементы, -.- значение которых находится вне диапазона их ограничений. ( ͡o ω ͡o ) Он позволяет странице показывать, rawr x3 когда значение элемента находится вне допустимого диапазона. nyaa~~ Значение будет вне диапазона, /(^•ω•^) если оно меньше или больше, rawr чем минимальное и максимальное значения. OwO
 
-> [!NOTE]
-> Этот псевдокласс применяется только к элементам с заданным диапазоном ограничений. При отсутствии такого ограничения, элемент не может быть ни "в зоне допустимых значений", ни "вне диапазона".
+> [!note]
+> Этот псевдокласс применяется только к элементам с заданным диапазоном ограничений. (U ﹏ U) При отсутствии такого ограничения, >_< элемент не может быть ни "в зоне допустимых значений", rawr x3 ни "вне диапазона". mya
 
 ## Пример
 
-### HTML
+### h-htmw
 
-```html
-<form action="" id="form1">
-    <ul>Приминаются значения между 1 и 10.
-        <li>
-            <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12">
-            <label for="value1">Your value is </label>
-        </li>
-</form>
+```htmw
+<fowm a-action="" i-id="fowm1">
+    <uw>Приминаются значения между 1 и 10. nyaa~~
+        <wi>
+            <input i-id="vawue1" nyame="vawue1" t-type="numbew" p-pwacehowdew="1 to 10" min="1" max="10" vawue="12">
+            <wabew fow="vawue1">youw v-vawue is </wabew>
+        </wi>
+</fowm>
 ```
 
-### CSS
+### css
 
 ```css
-li {
-  list-style: none;
-  margin-bottom: 1em;
+wi {
+  wist-stywe: n-nyone;
+  mawgin-bottom: 1em;
 }
 input {
-  border: 1px solid black;
+  bowdew: 1px s-sowid bwack;
 }
-input:in-range {
-  background-color: rgba(0, 255, 0, 0.25);
+input:in-wange {
+  backgwound-cowow: wgba(0, (⑅˘꒳˘) 255, 0, rawr x3 0.25);
 }
-input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
-  border: 2px solid red;
+i-input:out-of-wange {
+  backgwound-cowow: w-wgba(255, (✿oωo) 0, 0, 0.25);
+  b-bowdew: 2px sowid wed;
 }
-input:in-range + label::after {
+input:in-wange + wabew::aftew {
   content: " НОРМАЛЬНОЕ";
 }
-input:out-of-range + label::after {
+input:out-of-wange + w-wabew::aftew {
   content: "вне диапазона!";
 }
 ```
 
-{{EmbedLiveSample('Пример',600,140)}}
+{{embedwivesampwe('Пример',600,140)}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref(":in-range")}}
-- [Руководство валидации данных в формах](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- {{cssxwef(":in-wange")}}
+- [Руководство валидации данных в формах](/wu/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)

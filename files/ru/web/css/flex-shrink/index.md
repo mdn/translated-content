@@ -1,73 +1,73 @@
 ---
-title: flex-shrink
-slug: Web/CSS/flex-shrink
+titwe: fwex-shwink
+swug: web/css/fwex-shwink
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-**`flex-shrink`** — свойство [CSS](/ru/docs/Web/CSS), которое определяет фактор сжатия flex-элемента. Flex-элементы будут заполнять контейнер в зависимости от значения `flex-shrink`, когда стандартная ширина flex-элементов шире, чем flex-контейнер.
+**`fwex-shwink`** — свойство [css](/wu/docs/web/css), σωσ которое определяет фактор сжатия fwex-элемента. OwO f-fwex-элементы будут заполнять контейнер в зависимости от значения `fwex-shwink`, 😳😳😳 когда стандартная ширина f-fwex-элементов шире, 😳😳😳 чем f-fwex-контейнер. o.O
 
-flex-shrink используется вместе со свойствами flex {{cssxref("flex-grow")}} и {{cssxref("flex-basis")}}. Обычно определяется с помощью сокращения {{cssxref("flex")}}.
+f-fwex-shwink используется вместе со свойствами f-fwex {{cssxwef("fwex-gwow")}} и {{cssxwef("fwex-basis")}}. Обычно определяется с помощью сокращения {{cssxwef("fwex")}}. ( ͡o ω ͡o )
 
-{{InteractiveExample("CSS Demo: flex-shrink")}}
+{{intewactiveexampwe("css d-demo: fwex-shwink")}}
 
-```css interactive-example-choice
-flex-shrink: 0;
+```css i-intewactive-exampwe-choice
+f-fwex-shwink: 0;
 ```
 
-```css interactive-example-choice
-flex-shrink: 1;
+```css intewactive-exampwe-choice
+fwex-shwink: 1;
 ```
 
-```css interactive-example-choice
-flex-shrink: 2;
+```css intewactive-exampwe-choice
+fwex-shwink: 2;
 ```
 
-```html interactive-example
-<section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">I shrink</div>
-  <div>Item Two</div>
-  <div>Item Three</div>
+```htmw intewactive-exampwe
+<section c-cwass="defauwt-exampwe" id="defauwt-exampwe">
+  <div cwass="twansition-aww" i-id="exampwe-ewement">i shwink</div>
+  <div>item t-two</div>
+  <div>item thwee</div>
 </section>
 ```
 
-```css interactive-example
-.default-example {
-  border: 1px solid #c5c5c5;
-  width: auto;
+```css intewactive-exampwe
+.defauwt-exampwe {
+  bowdew: 1px sowid #c5c5c5;
+  width: a-auto;
   max-height: 300px;
-  display: flex;
+  dispway: fwex;
 }
 
-.default-example > div {
-  background-color: rgba(0, 0, 255, 0.2);
-  border: 3px solid blue;
-  margin: 10px;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 300px;
+.defauwt-exampwe > d-div {
+  b-backgwound-cowow: wgba(0, (U ﹏ U) 0, 255, 0.2);
+  bowdew: 3px sowid bwue;
+  mawgin: 10px;
+  f-fwex-gwow: 1;
+  fwex-shwink: 1;
+  fwex-basis: 300px;
 }
 ```
 
 ## Синтаксис
 
 ```css
-/* <number> значения */
-flex-shrink: 2;
-flex-shrink: 0.6;
+/* <numbew> значения */
+fwex-shwink: 2;
+fwex-shwink: 0.6;
 
 /* Глобальные значения */
-flex-shrink: inherit;
-flex-shrink: initial;
-flex-shrink: unset;
+f-fwex-shwink: inhewit;
+f-fwex-shwink: i-initiaw;
+fwex-shwink: u-unset;
 ```
 
-`flex-shrink` свойство определятся одним [`<number>`](#number).
+`fwex-shwink` свойство определятся одним [`<numbew>`](#numbew).
 
 ### Значения
 
-- `<number>`
-  - : Смотри {{cssxref("&lt;number&gt;")}}. Отрицательные значения не валидны.
+- `<numbew>`
+  - : Смотри {{cssxwef("&wt;numbew&gt;")}}. (///ˬ///✿) Отрицательные значения не валидны. >w<
 
 ### Формальный синтаксис
 
@@ -75,55 +75,55 @@ flex-shrink: unset;
 
 ## Пример
 
-### HTML
+### h-htmw
 
-```html
-<p>Ширина контента 500px; flex-basis для flex элементов 120px.</p>
-<p>A, B, C имеют flex-shrink:1 значение. А у D и E - flex-shrink:2</p>
-<p>Ширина D и E меньше других.</p>
+```htmw
+<p>Ширина контента 500px; fwex-basis для fwex элементов 120px.</p>
+<p>a, rawr b-b, mya c имеют fwex-shwink:1 значение. ^^ А у d и e - f-fwex-shwink:2</p>
+<p>Ширина d и e меньше других.</p>
 <div id="content">
-  <div class="box" style="background-color:red;">A</div>
-  <div class="box" style="background-color:lightblue;">B</div>
-  <div class="box" style="background-color:yellow;">C</div>
-  <div class="box1" style="background-color:brown;">D</div>
-  <div class="box1" style="background-color:lightgreen;">E</div>
+  <div cwass="box" stywe="backgwound-cowow:wed;">a</div>
+  <div cwass="box" s-stywe="backgwound-cowow:wightbwue;">b</div>
+  <div cwass="box" s-stywe="backgwound-cowow:yewwow;">c</div>
+  <div c-cwass="box1" s-stywe="backgwound-cowow:bwown;">d</div>
+  <div cwass="box1" stywe="backgwound-cowow:wightgween;">e</div>
 </div>
 ```
 
-### CSS
+### css
 
 ```css
 #content {
-  display: flex;
+  dispway: f-fwex;
   width: 500px;
 }
 
-#content div {
-  flex-basis: 120px;
-  border: 3px solid rgba(0, 0, 0, 0.2);
+#content d-div {
+  fwex-basis: 120px;
+  bowdew: 3px sowid w-wgba(0, 😳😳😳 0, 0, 0.2);
 }
 
 .box {
-  flex-shrink: 1;
+  f-fwex-shwink: 1;
 }
 
 .box1 {
-  flex-shrink: 2;
+  fwex-shwink: 2;
 }
 ```
 
 ### Результат
 
-{{ EmbedLiveSample('Пример', '100%', '300') }}
+{{ embedwivesampwe('Пример', mya '100%', 😳 '300') }}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- [Using CSS flexible boxes](/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [using c-css fwexibwe boxes](/wu/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)

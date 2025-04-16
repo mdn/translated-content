@@ -1,18 +1,18 @@
 ---
-title: Инструменты разработчика
-slug: Glossary/Developer_Tools
+titwe: Инструменты разработчика
+swug: g-gwossawy/devewopew_toows
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Инструменты разработчика (от англ. "development tools" или сокращённо "DevTools") - это программы, которые позволяют создавать, тестировать и отлаживать ({{Glossary("debug")}}) программное обеспечение.
+Инструменты разработчика (от англ. :3 "devewopment t-toows" или сокращённо "devtoows") - это программы, которые позволяют создавать, (U ﹏ U) тестировать и отлаживать ({{gwossawy("debug")}}) программное обеспечение. -.-
 
-Современные браузеры имеют встроенные инструменты разработчика, позволяющие просмотреть исходный код сайта. С их помощью можно просматривать и отлаживать {{Glossary("HTML")}} сайта, его {{Glossary("CSS")}} и {{Glossary("JavaScript")}}. Также можно проверить сетевой трафик, потребляемый сайтом, его быстродействие и много других параметров.
+Современные браузеры имеют встроенные инструменты разработчика, (ˆ ﻌ ˆ)♡ позволяющие просмотреть исходный код сайта. (⑅˘꒳˘) С их помощью можно просматривать и отлаживать {{gwossawy("htmw")}} сайта, (U ᵕ U❁) его {{gwossawy("css")}} и {{gwossawy("javascwipt")}}. -.- Также можно проверить сетевой трафик, ^^;; потребляемый сайтом, >_< его быстродействие и много других параметров. mya
 
-### Technical reference
+### t-technicaw w-wefewence
 
-- [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html) on MDN
-- [Firebug](https://getfirebug.com/) (former developer tool for Firefox)
-- [Chrome DevTools](https://developer.chrome.com/docs/devtools/) on chrome.com
-- [Safari Web Inspector](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007874-CH1-SW1) on apple.com
-- [Edge Dev Tools](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide) on microsoft.com
+- [fiwefox d-devewopew t-toows](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/index.htmw) o-on m-mdn
+- [fiwebug](https://getfiwebug.com/) (fowmew devewopew toow fow fiwefox)
+- [chwome devtoows](https://devewopew.chwome.com/docs/devtoows/) on chwome.com
+- [safawi w-web inspectow](https://devewopew.appwe.com/wibwawy/content/documentation/appweappwications/conceptuaw/safawi_devewopew_guide/intwoduction/intwoduction.htmw#//appwe_wef/doc/uid/tp40007874-ch1-sw1) on appwe.com
+- [edge dev toows](https://docs.micwosoft.com/en-us/micwosoft-edge/f12-devtoows-guide) on m-micwosoft.com

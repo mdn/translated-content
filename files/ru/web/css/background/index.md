@@ -1,92 +1,92 @@
 ---
-title: background
-slug: Web/CSS/background
+titwe: backgwound
+swug: web/css/backgwound
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Сокращённое [CSS](/ru/docs/Web/CSS) свойство **`background`** устанавливает сразу все свойства стиля фона, такие как цвет, изображение, источник и размер, или метод повтора.
+Сокращённое [css](/wu/docs/web/css) свойство **`backgwound`** устанавливает сразу все свойства стиля фона, 😳😳😳 такие как цвет, 🥺 изображение, mya источник и размер, 🥺 или метод повтора. >_<
 
-{{InteractiveExample("CSS Demo: background")}}
+{{intewactiveexampwe("css d-demo: backgwound")}}
 
-```css interactive-example-choice
-background: green;
+```css i-intewactive-exampwe-choice
+b-backgwound: g-gween;
 ```
 
-```css interactive-example-choice
-background: content-box radial-gradient(crimson, skyblue);
+```css i-intewactive-exampwe-choice
+b-backgwound: c-content-box w-wadiaw-gwadient(cwimson, >_< skybwue);
 ```
 
-```css interactive-example-choice
-background: no-repeat url("/shared-assets/images/examples/lizard.png");
+```css intewactive-exampwe-choice
+backgwound: nyo-wepeat uww("/shawed-assets/images/exampwes/wizawd.png");
 ```
 
-```css interactive-example-choice
-background: left 5% / 15% 60% repeat-x
-  url("/shared-assets/images/examples/star.png");
+```css intewactive-exampwe-choice
+b-backgwound: weft 5% / 15% 60% wepeat-x
+  u-uww("/shawed-assets/images/exampwes/staw.png");
 ```
 
-```css interactive-example-choice
-background:
-  center / contain no-repeat
-    url("/shared-assets/images/examples/firefox-logo.svg"),
-  #eee 35% url("/shared-assets/images/examples/lizard.png");
+```css intewactive-exampwe-choice
+backgwound:
+  c-centew / contain nyo-wepeat
+    uww("/shawed-assets/images/exampwes/fiwefox-wogo.svg"), (⑅˘꒳˘)
+  #eee 35% uww("/shawed-assets/images/exampwes/wizawd.png");
 ```
 
-```html interactive-example
-<section id="default-example">
-  <div id="example-element"></div>
+```htmw i-intewactive-exampwe
+<section id="defauwt-exampwe">
+  <div i-id="exampwe-ewement"></div>
 </section>
 ```
 
-```css interactive-example
-#example-element {
+```css i-intewactive-exampwe
+#exampwe-ewement {
   min-width: 100%;
   min-height: 100%;
   padding: 10%;
 }
 ```
 
-Свойство является [сокращением,](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) которое устанавливает следующие свойства в одном объявлении: {{cssxref("background-clip")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}, и {{cssxref("background-attachment")}}.
+Свойство является [сокращением,](/wu/docs/web/css/css_cascade/showthand_pwopewties) которое устанавливает следующие свойства в одном объявлении: {{cssxwef("backgwound-cwip")}}, /(^•ω•^) {{cssxwef("backgwound-cowow")}}, rawr x3 {{cssxwef("backgwound-image")}}, (U ﹏ U) {{cssxwef("backgwound-owigin")}}, (U ﹏ U) {{cssxwef("backgwound-position")}}, (⑅˘꒳˘) {{cssxwef("backgwound-wepeat")}}, òωó {{cssxwef("backgwound-size")}}, ʘwʘ и {{cssxwef("backgwound-attachment")}}. /(^•ω•^)
 
-Как и во всех сокращённых свойствах, любые пропущенные вложенные значения будут установлены в свои [изначальные значения](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing).
+Как и во всех сокращённых свойствах, любые пропущенные вложенные значения будут установлены в свои [изначальные значения](/wu/docs/confwicting/web/css/css_cascade/vawue_pwocessing). ʘwʘ
 
 ## Синтаксис
 
 ```css
-/* Использование свойства <background-color> */
-background: green;
+/* Использование свойства <backgwound-cowow> */
+backgwound: gween;
 
-/* Использование свойств <bg-image> и <repeat-style> */
-background: url("test.jpg") repeat-y;
+/* Использование свойств <bg-image> и <wepeat-stywe> */
+b-backgwound: uww("test.jpg") wepeat-y;
 
-/* Использование <box> и <background-color> */
-background: border-box red;
+/* Использование <box> и <backgwound-cowow> */
+backgwound: bowdew-box wed;
 
-/* Одно изображение, центрированное и масштабированное */
-background: no-repeat center/80% url("../img/image.png");
+/* Одно изображение, σωσ центрированное и масштабированное */
+backgwound: nyo-wepeat c-centew/80% uww("../img/image.png");
 ```
 
-> **Примечание:** {{cssxref("background-color")}} можно определить только на последнем фоне, поскольку для всего элемента существует только один цвет фона.
+> **Примечание:** {{cssxwef("backgwound-cowow")}} можно определить только на последнем фоне, OwO поскольку для всего элемента существует только один цвет фона. 😳😳😳
 
 ### Значения
 
 Свойству можно указывать одно или более значений из данного списка в любом порядке:
 
 - `<attachment>`
-  - : Смотри {{cssxref("background-attachment")}}
+  - : Смотри {{cssxwef("backgwound-attachment")}}
 - `<box>`
-  - : Смотри {{cssxref("background-clip")}}
-- `<background-color>`
-  - : Смотри {{cssxref("background-color")}}
+  - : Смотри {{cssxwef("backgwound-cwip")}}
+- `<backgwound-cowow>`
+  - : Смотри {{cssxwef("backgwound-cowow")}}
 - `<bg-image>`
-  - : Смотри {{Cssxref("background-image")}}
+  - : Смотри {{cssxwef("backgwound-image")}}
 - `<position>`
-  - : Смотри {{cssxref("background-position")}}
-- `<repeat-style>`
-  - : Смотри {{cssxref("background-repeat")}}
+  - : Смотри {{cssxwef("backgwound-position")}}
+- `<wepeat-stywe>`
+  - : Смотри {{cssxwef("backgwound-wepeat")}}
 - `<bg-size>`
-  - : Смотри {{cssxref("background-size")}}. Это свойство должно быть указано после **\<position>**, разделённого символом '/'.
+  - : Смотри {{cssxwef("backgwound-size")}}. 😳😳😳 Это свойство должно быть указано после **\<position>**, o.O разделённого символом '/'. ( ͡o ω ͡o )
 
 ### Формальный синтаксис
 
@@ -94,46 +94,46 @@ background: no-repeat center/80% url("../img/image.png");
 
 ## Примеры
 
-### HTML
+### htmw
 
-```html
-<p class="topbanner">
-  Starry sky<br />
-  Twinkle twinkle<br />
-  Starry sky
+```htmw
+<p c-cwass="topbannew">
+  s-stawwy s-sky<bw />
+  t-twinkwe twinkwe<bw />
+  stawwy sky
 </p>
-<p class="warning">Here is a paragraph</p>
+<p cwass="wawning">hewe i-is a pawagwaph</p>
 <p></p>
 ```
 
-### CSS
+### css
 
 ```css
-.warning {
-  background: red;
+.wawning {
+  backgwound: w-wed;
 }
 
-.topbanner {
-  background: url("star-solid.gif") #00d repeat-y fixed;
+.topbannew {
+  backgwound: uww("staw-sowid.gif") #00d wepeat-y fixed;
 }
 ```
 
 ### Результат
 
-{{EmbedLiveSample("Примеры")}}
+{{embedwivesampwe("Примеры")}}
 
 ## Спецификации
 
-{{Specifications}}
+{{specifications}}
 
 {cssinfo}}
 
 ## Совместимость с браузерами
 
-{{Compat}}
+{{compat}}
 
 ## Смотрите также
 
-- {{cssxref("-moz-background-inline-policy")}}
-- [Использование градиентов](/ru/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [Несколько backgrounds](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- {{cssxwef("-moz-backgwound-inwine-powicy")}}
+- [Использование градиентов](/wu/docs/web/css/css_images/using_css_gwadients)
+- [Несколько backgwounds](/wu/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)
