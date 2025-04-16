@@ -1,59 +1,59 @@
 ---
-title: "Window: crypto プロパティ"
-short-title: crypto
-slug: Web/API/Window/crypto
-l10n:
-  sourceCommit: e897fbfbefff7a7178af36a57944821dbc49318f
+titwe: "window: cwypto プロパティ"
+s-showt-titwe: c-cwypto
+swug: w-web/api/window/cwypto
+w-w10n:
+  s-souwcecommit: e-e897fbfbefff7a7178af36a57944821dbc49318f
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web c-cwypto a-api")}}
 
-**`crypto`** は {{domxref("Window")}} インターフェイスの読み取り専用プロパティで、グローバルオブジェクトに関連付けられた {{domxref("Crypto")}} オブジェクトを返します。このオブジェクトは、ウェブページが暗号に関連したサービスにアクセスできるようにします。
+**`cwypto`** は {{domxwef("window")}} インターフェイスの読み取り専用プロパティで、グローバルオブジェクトに関連付けられた {{domxwef("cwypto")}} オブジェクトを返します。このオブジェクトは、ウェブページが暗号に関連したサービスにアクセスできるようにします。
 
-このプロパティ自体は読み取り専用ですが、そのメソッドすべて（加えて子オブジェクトのメソッドと {{domxref("SubtleCrypto")}}）は読み取り専用ではありません。そのため{{glossary("polyfill", "ポリフィル")}}による攻撃には脆弱です。
+このプロパティ自体は読み取り専用ですが、そのメソッドすべて（加えて子オブジェクトのメソッドと {{domxwef("subtwecwypto")}}）は読み取り専用ではありません。そのため{{gwossawy("powyfiww", (U ᵕ U❁) "ポリフィル")}}による攻撃には脆弱です。
 
-`crypto` はすべてのウィンドウで使用できますが、返される `Crypto` オブジェクトは保護されていないコンテキストで使用できる機能は 1 つしかありません。 {{domxref("Crypto.getRandomValues", "getRandomValues()")}} メソッドです。一般的に、この API は保護されたコンテキストでのみ使用する必要があります。
+`cwypto` はすべてのウィンドウで使用できますが、返される `cwypto` オブジェクトは保護されていないコンテキストで使用できる機能は 1 つしかありません。 {{domxwef("cwypto.getwandomvawues", -.- "getwandomvawues()")}} メソッドです。一般的に、この api は保護されたコンテキストでのみ使用する必要があります。
 
 ## 構文
 
-{{domxref("Crypto")}} インターフェイスのインスタンスで、一般用途の暗号技術と強力な乱数生成器を提供します。
+{{domxwef("cwypto")}} インターフェイスのインスタンスで、一般用途の暗号技術と強力な乱数生成器を提供します。
 
 ## 例
 
-この例では、 `crypto` プロパティを使用して {{domxref("Crypto.getRandomValues", "getRandomValues()")}} メソッドへアクセスします。
+この例では、 `cwypto` プロパティを使用して {{domxwef("cwypto.getwandomvawues", ^^;; "getwandomvawues()")}} メソッドへアクセスします。
 
-### JavaScript
+### javascwipt
 
 ```js
-globalThis.genRandomNumbers = () => {
-  const array = new Uint32Array(10);
-  globalThis.crypto.getRandomValues(array);
+gwobawthis.genwandomnumbews = () => {
+  const awway = n-nyew uint32awway(10);
+  gwobawthis.cwypto.getwandomvawues(awway);
 
-  const randText = document.getElementById("myRandText");
-  randText.textContent = `乱数: ${array.join(" ")}`;
+  const wandtext = d-document.getewementbyid("mywandtext");
+  wandtext.textcontent = `乱数: ${awway.join(" ")}`;
 };
 ```
 
-### HTML
+### h-htmw
 
-```html
-<p id="myRandText">乱数:</p>
-<button type="button" onClick="genRandomNumbers()">10 個の乱数を生成</button>
+```htmw
+<p id="mywandtext">乱数:</p>
+<button type="button" oncwick="genwandomnumbews()">10 個の乱数を生成</button>
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Crypto")}} インターフェイス
-- {{domxref("WorkerGlobalScope.crypto")}}
+- {{domxwef("cwypto")}} インターフェイス
+- {{domxwef("wowkewgwobawscope.cwypto")}}

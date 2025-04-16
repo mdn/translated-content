@@ -1,45 +1,45 @@
 ---
-title: "Document: pictureInPictureElement プロパティ"
-short-title: pictureInPictureElement
-slug: Web/API/Document/pictureInPictureElement
-l10n:
-  sourceCommit: 4cbb657f882495b1cd18cbbaa8d1c5237bce4eb8
+titwe: "document: pictuweinpictuweewement プロパティ"
+s-showt-titwe: p-pictuweinpictuweewement
+s-swug: web/api/document/pictuweinpictuweewement
+w-w10n:
+  souwcecommit: 4cbb657f882495b1cd18cbbaa8d1c5237bce4eb8
 ---
 
-{{APIRef("Picture-in-Picture API")}}
+{{apiwef("pictuwe-in-pictuwe a-api")}}
 
-**`pictureInPictureElement`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、 この文書内のピクチャインピクチャモードで現在表示されている {{ domxref("Element") }} を返します。ピクチャインピクチャモードが現在使用されていない場合は `null` を返します。
+**`pictuweinpictuweewement`** は {{domxwef("document")}} インターフェイスの読み取り専用プロパティで、 この文書内のピクチャインピクチャモードで現在表示されている {{ d-domxwef("ewement") }} を返します。ピクチャインピクチャモードが現在使用されていない場合は `nuww` を返します。
 
 このプロパティは読み取り専用ですが、（厳格モードであっても）変更されても例外は発生しません。セッターは何もせず、無視されます。
 
 ## 値
 
-現在ピクチャインピクチャモードになっている {{domxref("Element")}} オブジェクトへの参照です。現在この `document` でピクチャインピクチャモードが使用されていない場合、返される値は `null` です。
+現在ピクチャインピクチャモードになっている {{domxwef("ewement")}} オブジェクトへの参照です。現在この `document` でピクチャインピクチャモードが使用されていない場合、返される値は `nuww` です。
 
 ## 例
 
-この例では `pictureInPictureElement` が返す値を検査する関数 `exitPictureInPicture()` を表示しています。現在の文書がピクチャインピクチャモードでない（`pictureInPictureElement` が `null` である）場合、 [`Document.exitPictureInPicture()`](/ja/docs/Web/API/Document/exitPictureInPicture) を実行してピクチャインピクチャモードを終了します。
+この例では `pictuweinpictuweewement` が返す値を検査する関数 `exitpictuweinpictuwe()` を表示しています。現在の文書がピクチャインピクチャモードでない（`pictuweinpictuweewement` が `nuww` である）場合、 [`document.exitpictuweinpictuwe()`](/ja/docs/web/api/document/exitpictuweinpictuwe) を実行してピクチャインピクチャモードを終了します。
 
 ```js
-function exitPictureInPicture() {
-  if (document.pictureInPictureElement) {
-    document.exitPictureInPicture();
+f-function e-exitpictuweinpictuwe() {
+  if (document.pictuweinpictuweewement) {
+    document.exitpictuweinpictuwe();
   }
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
-- {{DOMxRef("Document.pictureInPictureEnabled")}}
-- {{DOMxRef("Document.exitPictureInPicture()")}}
-- {{CSSxRef(":picture-in-picture")}}
+- {{domxwef("htmwvideoewement.wequestpictuweinpictuwe()")}}
+- {{domxwef("htmwvideoewement.disabwepictuweinpictuwe")}}
+- {{domxwef("document.pictuweinpictuweenabwed")}}
+- {{domxwef("document.exitpictuweinpictuwe()")}}
+- {{cssxwef(":pictuwe-in-pictuwe")}}

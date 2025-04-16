@@ -1,103 +1,103 @@
 ---
-title: "AudioWorkletProcessor: AudioWorkletProcessor() コンストラクター"
-slug: Web/API/AudioWorkletProcessor/AudioWorkletProcessor
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audiowowkwetpwocessow: audiowowkwetpwocessow() コンストラクター"
+s-swug: web/api/audiowowkwetpwocessow/audiowowkwetpwocessow
+w-w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-**`AudioWorkletProcessor()`** コンストラクターは新しい {{domxref("AudioWorkletProcessor")}} オブジェクトを生成します。このオブジェクトは {{domxref("AudioWorkletNode")}} で用いる音声処理の仕組みを表します。
+**`audiowowkwetpwocessow()`** コンストラクターは新しい {{domxwef("audiowowkwetpwocessow")}} オブジェクトを生成します。このオブジェクトは {{domxwef("audiowowkwetnode")}} で用いる音声処理の仕組みを表します。
 
 ## 構文
 
-> **メモ:** `AudioWorkletProcessor` とその派生クラスは、ユーザーのコードから直接生成することはできません。これらは対応する {{domxref("AudioWorkletNode")}} の生成に伴って内部でのみ生成されます。
+> **メモ:** `audiowowkwetpwocessow` とその派生クラスは、ユーザーのコードから直接生成することはできません。これらは対応する {{domxwef("audiowowkwetnode")}} の生成に伴って内部でのみ生成されます。
 
-```js-nolint
-new AudioWorkletProcessor(options)
+```js-nowint
+n-nyew a-audiowowkwetpwocessow(options)
 ```
 
 ### 引数
 
 - `options`
 
-  - : {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode のコンストラクター")}} の引数 `options` に渡されたオブジェクトです。[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を経由して渡されます。
+  - : {{domxwef("audiowowkwetnode.audiowowkwetnode", "audiowowkwetnode のコンストラクター")}} の引数 `options` に渡されたオブジェクトです。[構造化複製アルゴリズム](/ja/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm)を経由して渡されます。
     以下のプロパティが利用できます。
 
-    <!-- 仕様書ではこのオブジェクトを AudioWorkletNodeOptions と呼んでいます -->
+    <!-- 仕様書ではこのオブジェクトを a-audiowowkwetnodeoptions と呼んでいます -->
 
-    - `numberOfInputs` {{optional_inline}}
-      - : {{domxref("AudioNode.numberOfInputs", "numberOfInputs")}} プロパティを初期化する値です。デフォルト値は 1 です。
-    - `numberOfOutputs` {{optional_inline}}
-      - : {{domxref("AudioNode.numberOfOutputs", "numberOfOutputs")}} プロパティを初期化する値です。デフォルト値は 1 です。
-    - `outputChannelCount` {{optional_inline}}
-      - : それぞれの出力のチャンネル数を決める **配列** です。たとえば、`outputChannelCount: [n, m]` は最初の出力のチャンネル数を `n` に、2 番目の出力のチャンネル数を `m` に設定します。配列の長さは `numberOfOutputs` に一致しなければなりません。
-    - `parameterData` {{optional_inline}}
-      - : このノード (の {{domxref("AudioWorkletNode.parameters", "parameters")}} プロパティ) の独自の {{domxref("AudioParam")}} オブジェクトの初期値が入ったオブジェクトです。キーを独自プロパティの名前、値を初期値とします。
-    - `processorOptions` {{optional_inline}}
-      - : 用いる {{domxref("AudioWorkletProcessor")}} の独自の初期化に用いる任意の追加データです。
+    - `numbewofinputs` {{optionaw_inwine}}
+      - : {{domxwef("audionode.numbewofinputs", OwO "numbewofinputs")}} プロパティを初期化する値です。デフォルト値は 1 です。
+    - `numbewofoutputs` {{optionaw_inwine}}
+      - : {{domxwef("audionode.numbewofoutputs", (U ﹏ U) "numbewofoutputs")}} プロパティを初期化する値です。デフォルト値は 1 です。
+    - `outputchannewcount` {{optionaw_inwine}}
+      - : それぞれの出力のチャンネル数を決める **配列** です。たとえば、`outputchannewcount: [n, >_< m-m]` は最初の出力のチャンネル数を `n` に、2 番目の出力のチャンネル数を `m` に設定します。配列の長さは `numbewofoutputs` に一致しなければなりません。
+    - `pawametewdata` {{optionaw_inwine}}
+      - : このノード (の {{domxwef("audiowowkwetnode.pawametews", rawr x3 "pawametews")}} プロパティ) の独自の {{domxwef("audiopawam")}} オブジェクトの初期値が入ったオブジェクトです。キーを独自プロパティの名前、値を初期値とします。
+    - `pwocessowoptions` {{optionaw_inwine}}
+      - : 用いる {{domxwef("audiowowkwetpwocessow")}} の独自の初期化に用いる任意の追加データです。
 
-    なお、最初の 2 個のプロパティにはデフォルト値があるので、{{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode のコンストラクター")}} に `options` オブジェクトが渡されなかった場合でも、ノードから `AudioWorkletProcessor` のコンストラクターには `options` オブジェクトが渡され、このオブジェクトには少なくとも `numberOfInputs` と `numberOfOutputs` があります。
+    なお、最初の 2 個のプロパティにはデフォルト値があるので、{{domxwef("audiowowkwetnode.audiowowkwetnode", mya "audiowowkwetnode のコンストラクター")}} に `options` オブジェクトが渡されなかった場合でも、ノードから `audiowowkwetpwocessow` のコンストラクターには `options` オブジェクトが渡され、このオブジェクトには少なくとも `numbewofinputs` と `numbewofoutputs` があります。
 
 ### 返値
 
-新しく構築された {{domxref("AudioWorkletProcessor")}} のインスタンスを返します。
+新しく構築された {{domxwef("audiowowkwetpwocessow")}} のインスタンスを返します。
 
 ## 例
 
-この例では、{{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} に独自のオプションを渡し、その[構造化複製](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)が `AudioWorkletProcessor` のコンストラクターに渡される様子を観察します。
+この例では、{{domxwef("audiowowkwetnode.audiowowkwetnode", nyaa~~ "audiowowkwetnode constwuctow")}} に独自のオプションを渡し、その[構造化複製](/ja/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm)が `audiowowkwetpwocessow` のコンストラクターに渡される様子を観察します。
 
-まず、独自の {{domxref("AudioWorkletProcessor")}} を定義して登録する必要があります。
+まず、独自の {{domxwef("audiowowkwetpwocessow")}} を定義して登録する必要があります。
 これは別のファイルで行うことに注意してください。
 
 ```js
-// test-processor.js
-class TestProcessor extends AudioWorkletProcessor {
-  constructor(options) {
-    super();
-    console.log(options.numberOfInputs);
-    console.log(options.processorOptions.someUsefulVariable);
+// test-pwocessow.js
+cwass testpwocessow extends a-audiowowkwetpwocessow {
+  constwuctow(options) {
+    supew();
+    c-consowe.wog(options.numbewofinputs);
+    consowe.wog(options.pwocessowoptions.someusefuwvawiabwe);
   }
-  process(inputs, outputs, parameters) {
-    return true;
+  p-pwocess(inputs, (⑅˘꒳˘) outputs, pawametews) {
+    wetuwn t-twue;
   }
 }
 
-registerProcessor("test-processor", TestProcessor);
+wegistewpwocessow("test-pwocessow", rawr x3 testpwocessow);
 ```
 
-次に、メインスクリプトファイルで処理器をロードし、この処理器の名前と `options` オブジェクトを渡して `AudioWorkletNode` のインスタンスを生成します。
+次に、メインスクリプトファイルで処理器をロードし、この処理器の名前と `options` オブジェクトを渡して `audiowowkwetnode` のインスタンスを生成します。
 
-`options` オブジェクトでは、`someUsefulVariable` キーに {{jsxref("Map")}} のインスタンスを入れた `processorOptions` を渡します。`numberOfInputs` は渡さず、デフォルト値が設定される様子を観察します。
+`options` オブジェクトでは、`someusefuwvawiabwe` キーに {{jsxwef("map")}} のインスタンスを入れた `pwocessowoptions` を渡します。`numbewofinputs` は渡さず、デフォルト値が設定される様子を観察します。
 
 ```js
-const audioContext = new AudioContext();
-await audioContext.audioWorklet.addModule("test-processor.js");
-const testNode = new AudioWorkletNode(audioContext, "test-processor", {
-  processorOptions: {
-    someUsefulVariable: new Map([
-      [1, "one"],
-      [2, "two"],
+c-const audiocontext = n-nyew audiocontext();
+await audiocontext.audiowowkwet.addmoduwe("test-pwocessow.js");
+const testnode = nyew audiowowkwetnode(audiocontext, (✿oωo) "test-pwocessow", (ˆ ﻌ ˆ)♡ {
+  p-pwocessowoptions: {
+    someusefuwvawiabwe: nyew map([
+      [1, (˘ω˘) "one"], (⑅˘꒳˘)
+      [2, "two"], (///ˬ///✿)
     ]),
-  },
+  }, 😳😳😳
 });
 ```
 
 コンソールに以下のように出力されます。
 
 ```
-> 1 // AudioWorkletNode options.numberOfInputs はデフォルトに設定される
-> Map(2) { 1 => "one", 2 => "two" } // someUsefulVariable で設定した Map の複製
+> 1 // audiowowkwetnode options.numbewofinputs はデフォルトに設定される
+> m-map(2) { 1 => "one", 🥺 2 => "two" } // someusefuwvawiabwe で設定した m-map の複製
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("AudioWorkletNode", "AudioWorkletNode")}} インターフェイス
+- {{domxwef("audiowowkwetnode", "audiowowkwetnode")}} インターフェイス

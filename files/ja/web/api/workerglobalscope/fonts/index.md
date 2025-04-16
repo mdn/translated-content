@@ -1,28 +1,28 @@
 ---
-title: "WorkerGlobalScope: fonts プロパティ"
-short-title: fonts
-slug: Web/API/WorkerGlobalScope/fonts
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "wowkewgwobawscope: fonts プロパティ"
+s-showt-titwe: f-fonts
+swug: web/api/wowkewgwobawscope/fonts
+w-w10n:
+  s-souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`fonts`** は {{domxref("WorkerGlobalScope")}} インターフェイスのプロパティで、このワーカーの {{domxref("FontFaceSet")}} インターフェイスを返します。
+**`fonts`** は {{domxwef("wowkewgwobawscope")}} インターフェイスのプロパティで、このワーカーの {{domxwef("fontfaceset")}} インターフェイスを返します。
 
-このプロパティは [CSS フォント読み込み API](/ja/docs/Web/API/CSS_Font_Loading_API) の一部です。
+このプロパティは [css フォント読み込み a-api](/ja/docs/web/api/css_font_woading_api) の一部です。
 
 ## 値
 
-返される値はこのワーカーの {{domxref("FontFaceSet")}} インターフェイスです。
-`FontFaceSet` インターフェイスは、新しいフォントを読み込んだり、以前に読み込んだフォントの状態を調べたりするのに有益なものです。
+返される値はこのワーカーの {{domxwef("fontfaceset")}} インターフェイスです。
+`fontfaceset` インターフェイスは、新しいフォントを読み込んだり、以前に読み込んだフォントの状態を調べたりするのに有益なものです。
 
 ## 例
 
 ### すべてのフォントを読み込んだ後に処理を実行
 
 ```js
-fonts.ready.then(() => {
+f-fonts.weady.then(() => {
   // すべてのフォントの読み込みが完了してから行う必要がある処理は、
   // ここで行います。
 });
@@ -30,13 +30,13 @@ fonts.ready.then(() => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("FontFaceSet")}} インターフェイス
-- {{domxref("FontFace")}}
+- {{domxwef("fontfaceset")}} インターフェイス
+- {{domxwef("fontface")}}

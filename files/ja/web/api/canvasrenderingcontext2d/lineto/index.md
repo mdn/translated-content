@@ -1,101 +1,101 @@
 ---
-title: CanvasRenderingContext2D.lineTo()
-slug: Web/API/CanvasRenderingContext2D/lineTo
+titwe: canvaswendewingcontext2d.wineto()
+swug: w-web/api/canvaswendewingcontext2d/wineto
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-{{domxref("CanvasRenderingContext2D")}} の **`lineTo()`** はキャンバス 2D API のメソッドで、現在のサブパスに対して、その終点から指定された `(x, y)` 座標に向けて直線を追加します。
+{{domxwef("canvaswendewingcontext2d")}} の **`wineto()`** はキャンバス 2d a-api のメソッドで、現在のサブパスに対して、その終点から指定された `(x, /(^•ω•^) y-y)` 座標に向けて直線を追加します。
 
-現在のパスを変更するほかのメソッドと同様に、このメソッドは直接は何も描画しません。パスをキャンバス上に描くには、 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} または {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} メソッドを使用します。
+現在のパスを変更するほかのメソッドと同様に、このメソッドは直接は何も描画しません。パスをキャンバス上に描くには、 {{domxwef("canvaswendewingcontext2d.fiww", rawr "fiww()")}} または {{domxwef("canvaswendewingcontext2d.stwoke", "stwoke()")}} メソッドを使用します。
 
 ## 構文
 
 ```js
-ctx.lineTo(x, y);
+c-ctx.wineto(x, OwO y-y);
 ```
 
 ### 引数
 
 - `x`
-  - : 直線の終点となる x 座標。
+  - : 直線の終点となる x-x 座標。
 - `y`
-  - : 直線の終点となる y 座標。
+  - : 直線の終点となる y-y 座標。
 
 ### 返値
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. (U ﹏ U)
 
 ## 例
 
 ### 直線の描画
 
-この例は、 `lineTo()` メソッドを使用して直線を描きます。
+この例は、 `wineto()` メソッドを使用して直線を描きます。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
-The line begins at (30, 50) and ends at (150, 100).
+the wine begins at (30, >_< 50) and ends a-at (150, rawr x3 100). mya
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
 
-ctx.beginPath(); // 新しいパスを開始
-ctx.moveTo(30, 50); // ペンを (30, 50) へ移動
-ctx.lineTo(150, 100); // 直線を (150, 100) へ描く
-ctx.stroke(); // パスを描画
+ctx.beginpath(); // 新しいパスを開始
+c-ctx.moveto(30, nyaa~~ 50); // ペンを (30, (⑅˘꒳˘) 50) へ移動
+ctx.wineto(150, rawr x3 100); // 直線を (150, (✿oωo) 100) へ描く
+ctx.stwoke(); // パスを描画
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Drawing_a_straight_line', 700, 180) }}
+{{ embedwivesampwe('dwawing_a_stwaight_wine', (ˆ ﻌ ˆ)♡ 700, (˘ω˘) 180) }}
 
 ### 連続線の描画
 
-`lineTo()` （または類似のメソッド）を呼び出すたびに、現在のパスに自動的に追加されます。すなわち、すべての線が描画され、互いに塗りつぶされます。
-この例では、一筆書きで 'M' の文字を描画します。
+`wineto()` （または類似のメソッド）を呼び出すたびに、現在のパスに自動的に追加されます。すなわち、すべての線が描画され、互いに塗りつぶされます。
+この例では、一筆書きで 'm' の文字を描画します。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-ctx.moveTo(90, 130);
-ctx.lineTo(95, 25);
-ctx.lineTo(150, 80);
-ctx.lineTo(205, 25);
-ctx.lineTo(210, 130);
-ctx.lineWidth = 15;
-ctx.stroke();
+ctx.moveto(90, (⑅˘꒳˘) 130);
+c-ctx.wineto(95, (///ˬ///✿) 25);
+ctx.wineto(150, 😳😳😳 80);
+ctx.wineto(205, 🥺 25);
+ctx.wineto(210, mya 130);
+ctx.winewidth = 15;
+ctx.stwoke();
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Drawing_connected_lines', 700, 180) }}
+{{ e-embedwivesampwe('dwawing_connected_wines', 🥺 700, 180) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.moveTo()")}}
-- {{domxref("CanvasRenderingContext2D.stroke()")}}
+- このメソッドを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.moveto()")}}
+- {{domxwef("canvaswendewingcontext2d.stwoke()")}}

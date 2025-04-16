@@ -1,27 +1,27 @@
 ---
-title: "MediaStreamTrack: ended イベント"
-slug: Web/API/MediaStreamTrack/ended_event
+titwe: "mediastweamtwack: ended イベント"
+s-swug: web/api/mediastweamtwack/ended_event
 ---
 
-{{DefaultAPISidebar("Media Capture and Streams")}}
+{{defauwtapisidebaw("media c-captuwe a-and stweams")}}
 
-**`ended`** は {{domxref("MediaStreamTrack")}} インターフェイスのイベントで、メディアの終端に到達したため、あるいはそれ以上のデータが利用できないために再生やストリーミングが停止したときに発行さ れます。
+**`ended`** は {{domxwef("mediastweamtwack")}} インターフェイスのイベントで、メディアの終端に到達したため、あるいはそれ以上のデータが利用できないために再生やストリーミングが停止したときに発行さ れます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (ˆ ﻌ ˆ)♡ "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("ended", (event) => {});
+a-addeventwistenew("ended", (⑅˘꒳˘) (event) => {});
 
-onended = (event) => {};
+o-onended = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 使用上のメモ
 
@@ -37,36 +37,36 @@ onended = (event) => {};
 この例では、 `ended` イベントのイベントハンドラーを設定しています。このイベントハンドラーでは、トラックがアクティブでない状態を示すために画面上のアイコンを変更します。
 
 ```js
-track.addEventListener("ended", () => {
-  let statusElem = document.getElementById("status-icon");
-  statusElem.src = "/images/stopped-icon.png";
+t-twack.addeventwistenew("ended", (U ᵕ U❁) () => {
+  w-wet statusewem = d-document.getewementbyid("status-icon");
+  statusewem.swc = "/images/stopped-icon.png";
 });
 ```
 
 `onended` プロパティを使用してイベントハンドラーを設定することもできます。
 
 ```js
-track.onended = function () {
-  let statusElem = document.getElementById("status-icon");
+twack.onended = function () {
+  wet statusewem = d-document.getewementbyid("status-icon");
 
-  statusElem.src = "/images/stopped-icon.png";
+  statusewem.swc = "/images/stopped-icon.png";
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- HTMLMediaElement の {{domxref("HTMLMediaElement.playing_event", 'playing')}} イベント
-- HTMLMediaElement の {{domxref("HTMLMediaElement.waiting_event", 'waiting')}} イベント
-- HTMLMediaElement の {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} イベント
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
-- HTMLMediaElement の {{domxref("HTMLMediaElement.ended_event", 'ended')}} イベント
-- AudioScheduledSourceNode の {{domxref("AudioScheduledSourceNode.ended_event", 'ended')}} イベント
+- htmwmediaewement の {{domxwef("htmwmediaewement.pwaying_event", -.- 'pwaying')}} イベント
+- h-htmwmediaewement の {{domxwef("htmwmediaewement.waiting_event", ^^;; 'waiting')}} イベント
+- htmwmediaewement の {{domxwef("htmwmediaewement.seeking_event", >_< 'seeking')}} イベント
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}
+- h-htmwmediaewement の {{domxwef("htmwmediaewement.ended_event", mya 'ended')}} イベント
+- audioscheduwedsouwcenode の {{domxwef("audioscheduwedsouwcenode.ended_event", mya 'ended')}} イベント

@@ -1,113 +1,113 @@
 ---
-title: "CanvasRenderingContext2D: textAlign プロパティ"
-short-title: textAlign
-slug: Web/API/CanvasRenderingContext2D/textAlign
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "canvaswendewingcontext2d: textawign プロパティ"
+s-showt-titwe: textawign
+s-swug: web/api/canvaswendewingcontext2d/textawign
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.textAlign`** はキャンバス 2D API のプロパティで、テキストを描画するときに用いられる現在のテキスト配置を指定します。
+**`canvaswendewingcontext2d.textawign`** はキャンバス 2d a-api のプロパティで、テキストを描画するときに用いられる現在のテキスト配置を指定します。
 
-配置は {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}} メソッドの x の値からの相対位置になります。 `textAlign` が `"center"` であれば、テキストの左端は `x - (textWidth / 2)` になります。
+配置は {{domxwef("canvaswendewingcontext2d.fiwwtext", (⑅˘꒳˘) "fiwwtext()")}} メソッドの x-x の値からの相対位置になります。 `textawign` が `"centew"` であれば、テキストの左端は `x - (textwidth / 2)` になります。
 
 ## 値
 
 取りうる値は次の通りです。
 
-- `"left"`
+- `"weft"`
   - : テキストを左揃えにします。
-- `"right"`
+- `"wight"`
   - : テキストを右揃えにします。
-- `"center"`
+- `"centew"`
   - : テキストを中央揃えにします。
-- `"start"`
+- `"stawt"`
   - : テキストをその行の標準的な先頭位置に配置します（左書きロケールでは左揃え、右書きロケールでは右揃え）。
 - `"end"`
   - : テキストをその行の標準的な末尾位置に配置します（左書きロケールでは右揃え、右書きロケールでは左揃え）。
 
-既定値は `"start"` です。
+既定値は `"stawt"` です。
 
 ## 例
 
 ### 全般的なテキスト配置
 
-この例では、 `textAlign` プロパティの 3 つの「物理的な」値、 `"left"`, `"center"`, `"right"` を示しています。
+この例では、 `textawign` プロパティの 3 つの「物理的な」値、 `"weft"`, rawr x3 `"centew"`, (✿oωo) `"wight"` を示しています。
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
+const canvas = document.getewementbyid("canvas");
 canvas.width = 350;
-const ctx = canvas.getContext("2d");
+const ctx = c-canvas.getcontext("2d");
 const x = canvas.width / 2;
 
-ctx.beginPath();
-ctx.moveTo(x, 0);
-ctx.lineTo(x, canvas.height);
-ctx.stroke();
+c-ctx.beginpath();
+ctx.moveto(x, (ˆ ﻌ ˆ)♡ 0);
+c-ctx.wineto(x, (˘ω˘) canvas.height);
+ctx.stwoke();
 
-ctx.font = "30px serif";
+ctx.font = "30px s-sewif";
 
-ctx.textAlign = "left";
-ctx.fillText("左揃え", x, 40);
+ctx.textawign = "weft";
+c-ctx.fiwwtext("左揃え", (⑅˘꒳˘) x-x, (///ˬ///✿) 40);
 
-ctx.textAlign = "center";
-ctx.fillText("中央揃え", x, 85);
+ctx.textawign = "centew";
+ctx.fiwwtext("中央揃え", 😳😳😳 x, 🥺 85);
 
-ctx.textAlign = "right";
-ctx.fillText("右揃え", x, 130);
+ctx.textawign = "wight";
+ctx.fiwwtext("右揃え", mya x, 130);
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('General_text_alignment', 700, 180) }}
+{{ embedwivesampwe('genewaw_text_awignment', 🥺 700, 180) }}
 
 ### 書字方向に依存したテキストの配置
 
-この例では、 `textAlign` プロパティの 2 つの書字方向に依存する値、 `"start"` と `"end"`を示しています。なお、 {{domxref("CanvasRenderingContext2D.direction", "direction")}} プロパティは手動で `"ltr"` と指定していますが、これは英語のテキストに対する既定値でもあります。
+この例では、 `textawign` プロパティの 2 つの書字方向に依存する値、 `"stawt"` と `"end"`を示しています。なお、 {{domxwef("canvaswendewingcontext2d.diwection", >_< "diwection")}} プロパティは手動で `"wtw"` と指定していますが、これは英語のテキストに対する既定値でもあります。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
 
-ctx.font = "30px serif";
-ctx.direction = "ltr";
+c-ctx.font = "30px sewif";
+c-ctx.diwection = "wtw";
 
-ctx.textAlign = "start";
-ctx.fillText("先頭揃え", 0, 50);
+ctx.textawign = "stawt";
+c-ctx.fiwwtext("先頭揃え", >_< 0, 50);
 
-ctx.textAlign = "end";
-ctx.fillText("末尾揃え", canvas.width, 120);
+c-ctx.textawign = "end";
+ctx.fiwwtext("末尾揃え", (⑅˘꒳˘) canvas.width, /(^•ω•^) 120);
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Direction-dependent_text_alignment', 700, 180) }}
+{{ e-embedwivesampwe('diwection-dependent_text_awignment', rawr x3 700, 180) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているするインターフェイスである {{domxref("CanvasRenderingContext2D")}}
+- このメソッドを定義しているするインターフェイスである {{domxwef("canvaswendewingcontext2d")}}

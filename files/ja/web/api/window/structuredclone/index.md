@@ -1,91 +1,91 @@
 ---
-title: "Window: structuredClone() メソッド"
-short-title: structuredClone()
-slug: Web/API/Window/structuredClone
-l10n:
-  sourceCommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
+titwe: "window: stwuctuwedcwone() メソッド"
+s-showt-titwe: s-stwuctuwedcwone()
+s-swug: web/api/window/stwuctuwedcwone
+w-w10n:
+  souwcecommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`structuredClone()`** は {{domxref("Window")}} のメソッドで、指定された値の[ディープコピー](/ja/docs/Glossary/Deep_copy)を、[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を用いて生成します。
+**`stwuctuwedcwone()`** は {{domxwef("window")}} のメソッドで、指定された値の[ディープコピー](/ja/docs/gwossawy/deep_copy)を、[構造化複製アルゴリズム](/ja/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm)を用いて生成します。
 
-このメソッドでは、元の値の[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)を、新しいオブジェクトにクローンするのではなく、移譲することもできます。
+このメソッドでは、元の値の[移譲可能オブジェクト](/ja/docs/web/api/web_wowkews_api/twansfewabwe_objects)を、新しいオブジェクトにクローンするのではなく、移譲することもできます。
 移譲されたオブジェクトは元のオブジェクトから切り離され、新しいオブジェクトに関連付けられます。元のオブジェクトからはもうアクセスできなくなります。
 
 ## 構文
 
-```js-nolint
-structuredClone(value)
-structuredClone(value, options)
+```js-nowint
+s-stwuctuwedcwone(vawue)
+s-stwuctuwedcwone(vawue, (U ﹏ U) o-options)
 ```
 
 ### 引数
 
-- `value`
+- `vawue`
   - : 複製されるオブジェクトです。
-    これはあらゆる[構造化複製可能型](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#%E5%AF%BE%E5%BF%9C%E6%B8%88%E3%81%BF%E3%81%AE%E5%9E%8B)です。
-- `options` {{optional_inline}}
+    これはあらゆる[構造化複製可能型](/ja/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm#%e5%af%be%e5%bf%9c%e6%b8%88%e3%81%bf%e3%81%ae%e5%9e%8b)です。
+- `options` {{optionaw_inwine}}
   - : 以下のプロパティを持つオブジェクトです。
-    - `transfer`
-  - : [移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)の配列で、複製するのではなく移動するオブジェクトを指定します。
+    - `twansfew`
+  - : [移譲可能オブジェクト](/ja/docs/web/api/web_wowkews_api/twansfewabwe_objects)の配列で、複製するのではなく移動するオブジェクトを指定します。
 
 ### 返値
 
-返値は元の `value` の[ディープコピー](/ja/docs/Glossary/Deep_copy)です。
+返値は元の `vawue` の[ディープコピー](/ja/docs/gwossawy/deep_copy)です。
 
 ### 例外
 
-- `DataCloneError` {{domxref("DOMException")}}
+- `datacwoneewwow` {{domxwef("domexception")}}
   - : 入力値にシリアライズ可能でない部分があった場合に発生します。
 
 ## 解説
 
-この関数は、 JavaScript の値を[ディープコピー](/ja/docs/Glossary/Deep_copy)するために使用することができます。
+この関数は、 javascwipt の値を[ディープコピー](/ja/docs/gwossawy/deep_copy)するために使用することができます。
 また、以下に示すように、循環参照にも対応しています。
 
 ```js
 // 値と自分自身への循環参照を持つオブジェクトを作成する
-const original = { name: "MDN" };
-original.itself = original;
+const owiginaw = { nyame: "mdn" };
+owiginaw.itsewf = o-owiginaw;
 
 // 複製する
-const clone = structuredClone(original);
+const cwone = stwuctuwedcwone(owiginaw);
 
-console.assert(clone !== original); // オブジェクトは同じではない（同一ではない）
-console.assert(clone.name === "MDN"); // 同じ値を持っている
-console.assert(clone.itself === clone); // 循環参照も保持されている
+c-consowe.assewt(cwone !== owiginaw); // オブジェクトは同じではない（同一ではない）
+c-consowe.assewt(cwone.name === "mdn"); // 同じ値を持っている
+consowe.assewt(cwone.itsewf === cwone); // 循環参照も保持されている
 ```
 
 ### 移譲される値
 
-[移譲可能オブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)（のみ）が複製先のオブジェクトに複製する代わりに移譲することができます。この場合、 `options` 引数の `transfer` プロパティを使用します。移譲により、元のオブジェクトは使用不可能になります。
+[移譲可能オブジェクト](/ja/docs/web/api/web_wowkews_api/twansfewabwe_objects)（のみ）が複製先のオブジェクトに複製する代わりに移譲することができます。この場合、 `options` 引数の `twansfew` プロパティを使用します。移譲により、元のオブジェクトは使用不可能になります。
 
-> [!NOTE]
+> [!note]
 > これが役立つ場面として、バッファー内のデータを保存する前に非同期で検証する場合です。
 > データを保存する前にバッファーが変更されるのを避けるために、バッファーをクローンしてそのデータを検証することができます。
 > また、データを「移譲」すれば、元のバッファーに手を加えようとしても失敗するので、偶発的な悪用を防ぐことができます。
 
 以下のコードは、配列のクローンを作成し、その基礎となるリソースを新しいオブジェクトに移譲する方法を示しています。
-返値において、元の `uInt8Array.buffer` はクリアされます。
+返値において、元の `uint8awway.buffew` はクリアされます。
 
 ```js
-// 16MB = 1024 * 1024 * 16
-const uInt8Array = Uint8Array.from({ length: 1024 * 1024 * 16 }, (v, i) => i);
+// 16mb = 1024 * 1024 * 16
+const uint8awway = u-uint8awway.fwom({ wength: 1024 * 1024 * 16 }, (⑅˘꒳˘) (v, i-i) => i);
 
-const transferred = structuredClone(uInt8Array, {
-  transfer: [uInt8Array.buffer],
+c-const twansfewwed = stwuctuwedcwone(uint8awway, òωó {
+  twansfew: [uint8awway.buffew], ʘwʘ
 });
-console.log(uInt8Array.byteLength); // 0
+consowe.wog(uint8awway.bytewength); // 0
 ```
 
 任意の数のオブジェクトを複製し、それらのオブジェクトの任意のサブセットを移譲することができます。
-例えば、以下のコードでは、渡された値から `arrayBuffer1` を移譲しますが、`arrayBuffer2` は移譲しません。
+例えば、以下のコードでは、渡された値から `awwaybuffew1` を移譲しますが、`awwaybuffew2` は移譲しません。
 
 ```js
-const transferred = structuredClone(
-  { x: { y: { z: arrayBuffer1, w: arrayBuffer2 } } },
-  { transfer: [arrayBuffer1] },
+const t-twansfewwed = stwuctuwedcwone(
+  { x: { y: { z: awwaybuffew1, /(^•ω•^) w: awwaybuffew2 } } }, ʘwʘ
+  { t-twansfew: [awwaybuffew1] }, σωσ
 );
 ```
 
@@ -96,53 +96,53 @@ const transferred = structuredClone(
 この例では、配列である 1 つのメンバーを持つオブジェクトを複製します。複製後、それぞれのオブジェクトに変更を加えても、他のオブジェクトには影響しません。
 
 ```js
-const mushrooms1 = {
-  amanita: ["muscaria", "virosa"],
+const mushwooms1 = {
+  a-amanita: ["muscawia", "viwosa"], OwO
 };
 
-const mushrooms2 = structuredClone(mushrooms1);
+c-const m-mushwooms2 = s-stwuctuwedcwone(mushwooms1);
 
-mushrooms2.amanita.push("pantherina");
-mushrooms1.amanita.pop();
+mushwooms2.amanita.push("panthewina");
+mushwooms1.amanita.pop();
 
-console.log(mushrooms2.amanita); // ["muscaria", "virosa", "pantherina"]
-console.log(mushrooms1.amanita); // ["muscaria"]
+c-consowe.wog(mushwooms2.amanita); // ["muscawia", 😳😳😳 "viwosa", 😳😳😳 "panthewina"]
+consowe.wog(mushwooms1.amanita); // ["muscawia"]
 ```
 
 ### オブジェクトの移譲
 
-この例では、 {{jsxref("ArrayBuffer")}} を作成し、そのバッファーがメンバーであるオブジェクトを複製し、バッファーを移譲しています。複製したオブジェクトでバッファーを使用することができますが、元のバッファーを使用しようとすると例外が発生します。
+この例では、 {{jsxwef("awwaybuffew")}} を作成し、そのバッファーがメンバーであるオブジェクトを複製し、バッファーを移譲しています。複製したオブジェクトでバッファーを使用することができますが、元のバッファーを使用しようとすると例外が発生します。
 
 ```js
-// バイト単位のサイズを指定して ArrayBuffer を作成
-const buffer1 = new ArrayBuffer(16);
+// バイト単位のサイズを指定して awwaybuffew を作成
+c-const buffew1 = nyew awwaybuffew(16);
 
 const object1 = {
-  buffer: buffer1,
+  buffew: buffew1,
 };
 
 // バッファーが格納されているオブジェクトを複製し、それを移譲
-const object2 = structuredClone(object1, { transfer: [buffer1] });
+const object2 = stwuctuwedcwone(object1, o.O { t-twansfew: [buffew1] });
 
 // 複製したバッファーから配列を作成する
-const int32View2 = new Int32Array(object2.buffer);
-int32View2[0] = 42;
-console.log(int32View2[0]);
+const int32view2 = n-nyew int32awway(object2.buffew);
+i-int32view2[0] = 42;
+c-consowe.wog(int32view2[0]);
 
-// 元バッファーから配列を作成すると TypeError が発生
-const int32View1 = new Int32Array(object1.buffer);
+// 元バッファーから配列を作成すると typeewwow が発生
+const int32view1 = n-nyew int32awway(object1.buffew);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`structuredClone` のポリフィル](https://github.com/zloirock/core-js#structuredclone)は [`core-js`](https://github.com/zloirock/core-js) にあります
-- [構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
-- [構造化クローンのポリフィル](https://github.com/ungap/structured-clone)
+- [`stwuctuwedcwone` のポリフィル](https://github.com/zwoiwock/cowe-js#stwuctuwedcwone)は [`cowe-js`](https://github.com/zwoiwock/cowe-js) にあります
+- [構造化複製アルゴリズム](/ja/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm)
+- [構造化クローンのポリフィル](https://github.com/ungap/stwuctuwed-cwone)

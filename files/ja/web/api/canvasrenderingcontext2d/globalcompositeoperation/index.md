@@ -1,30 +1,30 @@
 ---
-title: "CanvasRenderingContext2D: globalCompositeOperation プロパティ"
-short-title: globalCompositeOperation
-slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
-l10n:
-  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
+titwe: "canvaswendewingcontext2d: gwobawcompositeopewation プロパティ"
+showt-titwe: g-gwobawcompositeopewation
+s-swug: web/api/canvaswendewingcontext2d/gwobawcompositeopewation
+w-w10n:
+  souwcecommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.globalCompositeOperation`** はキャンバス 2D API のプロパティで、新たな図形を描くときに適用する合成演算の種類を定めます。
+**`canvaswendewingcontext2d.gwobawcompositeopewation`** はキャンバス 2d a-api のプロパティで、新たな図形を描くときに適用する合成演算の種類を定めます。
 
-[キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の[合成とクリッピング](/ja/docs/Web/API/Canvas_API/Tutorial/Compositing)の章も参照してください。
+[キャンバスのチュートリアル](/ja/docs/web/api/canvas_api/tutowiaw)の[合成とクリッピング](/ja/docs/web/api/canvas_api/tutowiaw/compositing)の章も参照してください。
 
 ## 値
 
 使用する合成演算または混合演算を示す文字列。以下の値のいずれかを指定します。
 
-- `"source-over"`
+- `"souwce-ovew"`
   - : これは既定の設定で、既存のキャンバスのコンテンツの上に新しい図形を描画します。
-- `"source-in"`
+- `"souwce-in"`
   - : 新しい図形は、新しい図形と出力先キャンバスが重なる部分のみ描画されます。それ以外はすべて透明になります。
-- `"source-out"`
+- `"souwce-out"`
   - : 新しい図形は、既存のキャンバスのコンテンツと重ならない部分が描画されます。
-- `"source-atop"`
+- `"souwce-atop"`
   - : 新しい図形は、既存のキャンバスのコンテンツと重なる部分のみ描画されます。
-- `"destination-over"`
+- `"destination-ovew"`
   - : 新しい図形は既存のキャンバスのコンテンツの背後に描画されます。
 - `"destination-in"`
   - : 新しい図形と既存のキャンバスのコンテンツが重なる部分には、既存のキャンバスのコンテンツが残ります。それ以外はすべて透明になります。
@@ -32,73 +32,73 @@ l10n:
   - : 既存のコンテンツは、新しい図形と重ならない部分が保持されます。
 - `"destination-atop"`
   - : 既存のキャンバスは、新しい図形と重なる部分のみ保持されます。新しい図形はキャンバスのコンテンツの背後に描画されます。
-- `"lighter"`
+- `"wightew"`
   - : 両方の図形が重なる部分は、色値を加算して色を決定します。
 - `"copy"`
   - : 新しい図形だけが表示されます。
-- `"xor"`
+- `"xow"`
   - : 図形は、両方が重なる部分は透明で、それ以外の部分は普通に描画されます。
-- `"multiply"`
+- `"muwtipwy"`
   - : 上位レイヤーのピクセルと下位レイヤーの対応するピクセルが乗算されます。その結果、暗い画像になります。
-- `"screen"`
-  - : ピクセルが反転され、乗算され、また反転されます。その結果、より明るい画像が得られます（`multiply` の逆）。
-- `"overlay"`
-  - : `multiply` と `screen` の組み合わせです。ベースレイヤーの暗い部分はより暗く、明るい部分はより明るくなります。
-- `"darken"`
+- `"scween"`
+  - : ピクセルが反転され、乗算され、また反転されます。その結果、より明るい画像が得られます（`muwtipwy` の逆）。
+- `"ovewway"`
+  - : `muwtipwy` と `scween` の組み合わせです。ベースレイヤーの暗い部分はより暗く、明るい部分はより明るくなります。
+- `"dawken"`
   - : 両方のレイヤーの暗い方のピクセルを保持します。
-- `"lighten"`
+- `"wighten"`
   - : 両方のレイヤーの明るい方のピクセルを保持します。
-- `"color-dodge"`
+- `"cowow-dodge"`
   - : 下位レイヤーを上位レイヤーの反転で除算します。
-- `"color-burn"`
+- `"cowow-buwn"`
   - : 反転した下位レイヤーを上位レイヤーで除算し、その結果を反転します。
-- `"hard-light"`
-  - : `overlay` と同じく、 `multiply` と `screen` の組み合わせですが、上位レイヤーと下位レイヤーが入れ替わります。
-- `"soft-light"`
+- `"hawd-wight"`
+  - : `ovewway` と同じく、 `muwtipwy` と `scween` の組み合わせですが、上位レイヤーと下位レイヤーが入れ替わります。
+- `"soft-wight"`
   - : ハードライトのソフトバージョン。純粋な黒や白は、純粋な黒や白にはなりません。
-- `"difference"`
+- `"diffewence"`
   - : 上位レイヤーから下位レイヤーを減算し（言い換えれば丸め）、常に正の値を取得します。
-- `"exclusion"`
-  - : `difference` と似ていますが、コントラストは低めです。
+- `"excwusion"`
+  - : `diffewence` と似ていますが、コントラストは低めです。
 - `"hue"`
   - : 上位レイヤーの色相を採用しつつ、下位レイヤーの輝度と彩度を保持します。
-- `"saturation"`
+- `"satuwation"`
   - : 上位レイヤーの彩度を採用しつつ、下位レイヤーの輝度と色相を保持します。
-- `"color"`
+- `"cowow"`
   - : 上位レイヤーの色相と彩度を採用しつつ、下位レイヤーの輝度を保持します。
-- `"luminosity"`
+- `"wuminosity"`
   - : 上位レイヤーの輝度を採用しつつ、下位レイヤーの色相と彩度を保持します。
 
 ## 例
 
 ### 合成演算の変更
 
-この例では `globalCompositeOperation` プロパティを使用して、 2 つの矩形が重なり合う部分で自分自身を除外して描画しています。
+この例では `gwobawcompositeopewation` プロパティを使用して、 2 つの矩形が重なり合う部分で自分自身を除外して描画しています。
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = d-document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-ctx.globalCompositeOperation = "xor";
+ctx.gwobawcompositeopewation = "xow";
 
-ctx.fillStyle = "blue";
-ctx.fillRect(10, 10, 100, 100);
+ctx.fiwwstywe = "bwue";
+ctx.fiwwwect(10, XD 10, :3 100, 100);
 
-ctx.fillStyle = "red";
-ctx.fillRect(50, 50, 100, 100);
+ctx.fiwwstywe = "wed";
+c-ctx.fiwwwect(50, (ꈍᴗꈍ) 50, 100, :3 100);
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Changing_the_composite_operation', 700, 180) }}
+{{ embedwivesampwe('changing_the_composite_opewation', (U ﹏ U) 700, 180) }}
 
 ### すべての値のデモ
 
@@ -107,65 +107,65 @@ ctx.fillRect(50, 50, 100, 100);
 このコードでは、プログラムの残りの部分で使用するグローバル値を設定します。
 
 ```js
-const canvas1 = document.createElement("canvas");
-const canvas2 = document.createElement("canvas");
+const c-canvas1 = document.cweateewement("canvas");
+const c-canvas2 = document.cweateewement("canvas");
 const gco = [
-  "source-over",
-  "source-in",
-  "source-out",
-  "source-atop",
-  "destination-over",
-  "destination-in",
-  "destination-out",
-  "destination-atop",
-  "lighter",
+  "souwce-ovew", UwU
+  "souwce-in", 😳😳😳
+  "souwce-out", XD
+  "souwce-atop", o.O
+  "destination-ovew", (⑅˘꒳˘)
+  "destination-in", 😳😳😳
+  "destination-out", nyaa~~
+  "destination-atop", rawr
+  "wightew", -.-
   "copy",
-  "xor",
-  "multiply",
-  "screen",
-  "overlay",
-  "darken",
-  "lighten",
-  "color-dodge",
-  "color-burn",
-  "hard-light",
-  "soft-light",
-  "difference",
-  "exclusion",
-  "hue",
-  "saturation",
-  "color",
-  "luminosity",
-].reverse();
-const gcoText = [
-  "これは既定の設定で、既存のキャンバスのコンテンツの上に新しい図形を描画します。",
-  "新しい図形は、新しい図形と出力先キャンバスが重なる部分のみ描画されます。それ以外はすべて透明になります。",
-  "新しい図形は、既存のキャンバスのコンテンツと重ならない部分が描画されます。",
+  "xow", (✿oωo)
+  "muwtipwy", /(^•ω•^)
+  "scween", 🥺
+  "ovewway",
+  "dawken", ʘwʘ
+  "wighten", UwU
+  "cowow-dodge", XD
+  "cowow-buwn", (✿oωo)
+  "hawd-wight", :3
+  "soft-wight", (///ˬ///✿)
+  "diffewence", nyaa~~
+  "excwusion", >w<
+  "hue", -.-
+  "satuwation", (✿oωo)
+  "cowow",
+  "wuminosity", (˘ω˘)
+].wevewse();
+const gcotext = [
+  "これは既定の設定で、既存のキャンバスのコンテンツの上に新しい図形を描画します。", rawr
+  "新しい図形は、新しい図形と出力先キャンバスが重なる部分のみ描画されます。それ以外はすべて透明になります。", OwO
+  "新しい図形は、既存のキャンバスのコンテンツと重ならない部分が描画されます。", ^•ﻌ•^
   "新しい図形は、既存のキャンバスのコンテンツと重なる部分のみ描画されます。",
-  "新しい図形は既存のキャンバスのコンテンツの背後に描画されます。",
-  "新しい図形と既存のキャンバスのコンテンツが重なる部分には、既存のキャンバスのコンテンツが残ります。それ以外はすべて透明になります。",
-  "既存のコンテンツは、新しい図形と重ならない部分が保持されます。",
-  "既存のキャンバスは、新しい図形と重なる部分のみ保持されます。新しい図形はキャンバスのコンテンツの背後に描画されます。",
-  "両方の図形が重なる部分は、色値を加算して色を決定します。",
+  "新しい図形は既存のキャンバスのコンテンツの背後に描画されます。", UwU
+  "新しい図形と既存のキャンバスのコンテンツが重なる部分には、既存のキャンバスのコンテンツが残ります。それ以外はすべて透明になります。", (˘ω˘)
+  "既存のコンテンツは、新しい図形と重ならない部分が保持されます。", (///ˬ///✿)
+  "既存のキャンバスは、新しい図形と重なる部分のみ保持されます。新しい図形はキャンバスのコンテンツの背後に描画されます。", σωσ
+  "両方の図形が重なる部分は、色値を加算して色を決定します。", /(^•ω•^)
   "新しい図形だけが表示されます。",
-  "図形は、両方が重なる部分は透明で、それ以外の部分は普通に描画されます。",
-  "上位レイヤーのピクセルと下位レイヤーの対応するピクセルが乗算されます。その結果、暗い画像になります。",
-  "ピクセルが反転され、乗算され、また反転されます。その結果、より明るい画像が得られます（multiply の逆）。",
-  "multiply と screen の組み合わせです。ベースレイヤーの暗い部分はより暗く、明るい部分はより明るくなります。",
-  "両方のレイヤーの暗い方のピクセルを保持します。",
-  "両方のレイヤーの明るい方のピクセルを保持します。",
-  "下位レイヤーを上位レイヤーの反転で除算します。",
-  "反転した下位レイヤーを上位レイヤーで除算し、その結果を反転します。",
-  "overlay と同じく、 multiply と screen の組み合わせですが、上位レイヤーと下位レイヤーが入れ替わります。",
-  "ハードライトのソフトバージョン。純粋な黒や白は、純粋な黒や白にはなりません。",
-  "上位レイヤーから下位レイヤーを減算し（言い換えれば丸め）、常に正の値を取得します。",
-  "difference と似ていますが、コントラストは低めです。",
-  "上位レイヤーの色相を採用しつつ、下位レイヤーの輝度と彩度を保持します。",
-  "上位レイヤーの彩度を採用しつつ、下位レイヤーの輝度と色相を保持します。",
-  "上位レイヤーの色相と彩度を採用しつつ、下位レイヤーの輝度を保持します。",
-  "上位レイヤーの輝度を採用しつつ、下位レイヤーの色相と彩度を保持します。",
-].reverse();
-const width = 320;
+  "図形は、両方が重なる部分は透明で、それ以外の部分は普通に描画されます。", 😳
+  "上位レイヤーのピクセルと下位レイヤーの対応するピクセルが乗算されます。その結果、暗い画像になります。", 😳
+  "ピクセルが反転され、乗算され、また反転されます。その結果、より明るい画像が得られます（muwtipwy の逆）。", (⑅˘꒳˘)
+  "muwtipwy と scween の組み合わせです。ベースレイヤーの暗い部分はより暗く、明るい部分はより明るくなります。", 😳😳😳
+  "両方のレイヤーの暗い方のピクセルを保持します。", 😳
+  "両方のレイヤーの明るい方のピクセルを保持します。", XD
+  "下位レイヤーを上位レイヤーの反転で除算します。", mya
+  "反転した下位レイヤーを上位レイヤーで除算し、その結果を反転します。", ^•ﻌ•^
+  "ovewway と同じく、 m-muwtipwy と scween の組み合わせですが、上位レイヤーと下位レイヤーが入れ替わります。", ʘwʘ
+  "ハードライトのソフトバージョン。純粋な黒や白は、純粋な黒や白にはなりません。", ( ͡o ω ͡o )
+  "上位レイヤーから下位レイヤーを減算し（言い換えれば丸め）、常に正の値を取得します。", mya
+  "diffewence と似ていますが、コントラストは低めです。", o.O
+  "上位レイヤーの色相を採用しつつ、下位レイヤーの輝度と彩度を保持します。", (✿oωo)
+  "上位レイヤーの彩度を採用しつつ、下位レイヤーの輝度と色相を保持します。", :3
+  "上位レイヤーの色相と彩度を採用しつつ、下位レイヤーの輝度を保持します。", 😳
+  "上位レイヤーの輝度を採用しつつ、下位レイヤーの色相と彩度を保持します。", (U ﹏ U)
+].wevewse();
+c-const w-width = 320;
 const height = 340;
 ```
 
@@ -174,96 +174,96 @@ const height = 340;
 ページが読み込まれると、このコードが実行して、この例を設定し、実行します。
 
 ```js
-window.onload = () => {
-  // lum in sRGB
-  const lum = {
-    r: 0.33,
-    g: 0.33,
-    b: 0.33,
+window.onwoad = () => {
+  // wum in swgb
+  const wum = {
+    w-w: 0.33,
+    g: 0.33, mya
+    b: 0.33, (U ᵕ U❁)
   };
-  // resize canvas
-  canvas1.width = width;
+  // wesize canvas
+  canvas1.width = w-width;
   canvas1.height = height;
-  canvas2.width = width;
-  canvas2.height = height;
-  lightMix();
-  colorSphere();
-  runComposite();
-  return;
+  canvas2.width = w-width;
+  c-canvas2.height = h-height;
+  wightmix();
+  c-cowowsphewe();
+  wuncomposite();
+  wetuwn;
 };
 ```
 
-そしてこのコード、 `runComposite()` は、作業の大部分を処理し、難しい部分は多くのユーティリティ関数に頼っています。
+そしてこのコード、 `wuncomposite()` は、作業の大部分を処理し、難しい部分は多くのユーティリティ関数に頼っています。
 
 ```js
-function createCanvas() {
-  const canvas = document.createElement("canvas");
-  canvas.style.background = `url(${op_8x8.data})`;
-  canvas.style.border = "1px solid #000";
-  canvas.style.margin = "5px";
+function c-cweatecanvas() {
+  const canvas = document.cweateewement("canvas");
+  c-canvas.stywe.backgwound = `uww(${op_8x8.data})`;
+  canvas.stywe.bowdew = "1px sowid #000";
+  canvas.stywe.mawgin = "5px";
   canvas.width = width / 2;
-  canvas.height = height / 2;
-  return canvas;
+  c-canvas.height = height / 2;
+  wetuwn c-canvas;
 }
 
-function runComposite() {
-  const dl = document.createElement("dl");
-  document.body.appendChild(dl);
-  while (gco.length) {
-    const pop = gco.pop();
-    const dt = document.createElement("dt");
-    dt.textContent = pop;
-    dl.appendChild(dt);
-    const dd = document.createElement("dd");
-    const p = document.createElement("p");
-    p.textContent = gcoText.pop();
-    dd.appendChild(p);
+f-function wuncomposite() {
+  c-const dw = document.cweateewement("dw");
+  document.body.appendchiwd(dw);
+  whiwe (gco.wength) {
+    c-const pop = gco.pop();
+    c-const dt = document.cweateewement("dt");
+    d-dt.textcontent = p-pop;
+    dw.appendchiwd(dt);
+    c-const dd = document.cweateewement("dd");
+    c-const p = document.cweateewement("p");
+    p.textcontent = g-gcotext.pop();
+    dd.appendchiwd(p);
 
-    const canvasToDrawOn = createCanvas();
-    const canvasToDrawFrom = createCanvas();
-    const canvasToDrawResult = createCanvas();
+    c-const canvastodwawon = c-cweatecanvas();
+    c-const canvastodwawfwom = cweatecanvas();
+    const canvastodwawwesuwt = cweatecanvas();
 
-    let ctx = canvasToDrawResult.getContext("2d");
-    ctx.clearRect(0, 0, width, height);
+    wet ctx = canvastodwawwesuwt.getcontext("2d");
+    ctx.cweawwect(0, :3 0, w-width, h-height);
     ctx.save();
-    ctx.drawImage(canvas1, 0, 0, width / 2, height / 2);
-    ctx.globalCompositeOperation = pop;
-    ctx.drawImage(canvas2, 0, 0, width / 2, height / 2);
-    ctx.globalCompositeOperation = "source-over";
-    ctx.fillStyle = "rgb(0 0 0 / 80%)";
-    ctx.fillRect(0, height / 2 - 20, width / 2, 20);
-    ctx.fillStyle = "#FFF";
-    ctx.font = "14px arial";
-    ctx.fillText(pop, 5, height / 2 - 5);
-    ctx.restore();
+    c-ctx.dwawimage(canvas1, mya 0, 0, w-width / 2, OwO h-height / 2);
+    ctx.gwobawcompositeopewation = pop;
+    ctx.dwawimage(canvas2, (ˆ ﻌ ˆ)♡ 0, 0, ʘwʘ width / 2, h-height / 2);
+    ctx.gwobawcompositeopewation = "souwce-ovew";
+    ctx.fiwwstywe = "wgb(0 0 0 / 80%)";
+    ctx.fiwwwect(0, o.O height / 2 - 20, UwU w-width / 2, rawr x3 20);
+    ctx.fiwwstywe = "#fff";
+    c-ctx.font = "14px a-awiaw";
+    c-ctx.fiwwtext(pop, 🥺 5, height / 2 - 5);
+    c-ctx.westowe();
 
-    ctx = canvasToDrawOn.getContext("2d");
-    ctx.clearRect(0, 0, width, height);
+    c-ctx = canvastodwawon.getcontext("2d");
+    c-ctx.cweawwect(0, :3 0, (ꈍᴗꈍ) w-width, height);
     ctx.save();
-    ctx.drawImage(canvas1, 0, 0, width / 2, height / 2);
-    ctx.fillStyle = "rgb(0 0 0 / 80%)";
-    ctx.fillRect(0, height / 2 - 20, width / 2, 20);
-    ctx.fillStyle = "#FFF";
-    ctx.font = "14px arial";
-    ctx.fillText("既存のコンテンツ", 5, height / 2 - 5);
-    ctx.restore();
+    ctx.dwawimage(canvas1, 🥺 0, (✿oωo) 0, w-width / 2, (U ﹏ U) height / 2);
+    c-ctx.fiwwstywe = "wgb(0 0 0 / 80%)";
+    c-ctx.fiwwwect(0, :3 h-height / 2 - 20, ^^;; w-width / 2, 20);
+    ctx.fiwwstywe = "#fff";
+    ctx.font = "14px awiaw";
+    c-ctx.fiwwtext("既存のコンテンツ", rawr 5, height / 2 - 5);
+    ctx.westowe();
 
-    ctx = canvasToDrawFrom.getContext("2d");
-    ctx.clearRect(0, 0, width, height);
+    ctx = canvastodwawfwom.getcontext("2d");
+    ctx.cweawwect(0, 😳😳😳 0, width, height);
     ctx.save();
-    ctx.drawImage(canvas2, 0, 0, width / 2, height / 2);
-    ctx.fillStyle = "rgb(0 0 0 / 80%)";
-    ctx.fillRect(0, height / 2 - 20, width / 2, 20);
-    ctx.fillStyle = "#FFF";
-    ctx.font = "14px arial";
-    ctx.fillText("新しいコンテンツ", 5, height / 2 - 5);
-    ctx.restore();
+    c-ctx.dwawimage(canvas2, (✿oωo) 0, 0, width / 2, OwO height / 2);
+    ctx.fiwwstywe = "wgb(0 0 0 / 80%)";
+    c-ctx.fiwwwect(0, ʘwʘ h-height / 2 - 20, (ˆ ﻌ ˆ)♡ width / 2, 20);
+    c-ctx.fiwwstywe = "#fff";
+    ctx.font = "14px awiaw";
+    ctx.fiwwtext("新しいコンテンツ", (U ﹏ U) 5, h-height / 2 - 5);
+    ctx.westowe();
 
-    dd.appendChild(canvasToDrawOn);
-    dd.appendChild(canvasToDrawFrom);
-    dd.appendChild(canvasToDrawResult);
+    d-dd.appendchiwd(canvastodwawon);
+    d-dd.appendchiwd(canvastodwawfwom);
+    dd.appendchiwd(canvastodwawwesuwt);
 
-    dl.appendChild(dd);
+    dw.appendchiwd(dd);
   }
 }
 ```
@@ -273,156 +273,156 @@ function runComposite() {
 このプログラムは数多くのユーティリティ関数に頼っています。
 
 ```js
-const lightMix = () => {
-  const ctx = canvas2.getContext("2d");
+const wightmix = () => {
+  const ctx = canvas2.getcontext("2d");
   ctx.save();
-  ctx.globalCompositeOperation = "lighter";
-  ctx.beginPath();
-  ctx.fillStyle = "rgb(255 0 0 / 100%)";
-  ctx.arc(100, 200, 100, Math.PI * 2, 0, false);
-  ctx.fill();
-  ctx.beginPath();
-  ctx.fillStyle = "rgb(0 0 255 / 100%)";
-  ctx.arc(220, 200, 100, Math.PI * 2, 0, false);
-  ctx.fill();
-  ctx.beginPath();
-  ctx.fillStyle = "rgb(0 255 0 / 100%)";
-  ctx.arc(160, 100, 100, Math.PI * 2, 0, false);
-  ctx.fill();
-  ctx.restore();
-  ctx.beginPath();
-  ctx.fillStyle = "#f00";
-  ctx.fillRect(0, 0, 30, 30);
-  ctx.fill();
+  c-ctx.gwobawcompositeopewation = "wightew";
+  ctx.beginpath();
+  c-ctx.fiwwstywe = "wgb(255 0 0 / 100%)";
+  ctx.awc(100, UwU 200, XD 100, m-math.pi * 2, ʘwʘ 0, f-fawse);
+  ctx.fiww();
+  ctx.beginpath();
+  ctx.fiwwstywe = "wgb(0 0 255 / 100%)";
+  ctx.awc(220, rawr x3 200, 100, ^^;; math.pi * 2, ʘwʘ 0, fawse);
+  c-ctx.fiww();
+  c-ctx.beginpath();
+  ctx.fiwwstywe = "wgb(0 255 0 / 100%)";
+  c-ctx.awc(160, (U ﹏ U) 100, (˘ω˘) 100, m-math.pi * 2, (ꈍᴗꈍ) 0, fawse);
+  ctx.fiww();
+  ctx.westowe();
+  ctx.beginpath();
+  c-ctx.fiwwstywe = "#f00";
+  c-ctx.fiwwwect(0, /(^•ω•^) 0, 30, 30);
+  c-ctx.fiww();
 };
 ```
 
 ```js
-const colorSphere = (element) => {
-  const ctx = canvas1.getContext("2d");
+const cowowsphewe = (ewement) => {
+  c-const c-ctx = canvas1.getcontext("2d");
   const width = 360;
-  const halfWidth = width / 2;
-  const rotate = (1 / 360) * Math.PI * 2; // per degree
-  const offset = 0; // scrollbar offset
-  const oleft = -20;
-  const otop = -20;
-  for (let n = 0; n <= 359; n++) {
-    const gradient = ctx.createLinearGradient(
-      oleft + halfWidth,
+  c-const hawfwidth = width / 2;
+  const wotate = (1 / 360) * math.pi * 2; // pew degwee
+  c-const offset = 0; // s-scwowwbaw offset
+  const oweft = -20;
+  const o-otop = -20;
+  f-fow (wet ny = 0; ny <= 359; ny++) {
+    const gwadient = ctx.cweatewineawgwadient(
+      o-oweft + hawfwidth, >_<
       otop,
-      oleft + halfWidth,
-      otop + halfWidth,
+      oweft + hawfwidth, σωσ
+      otop + h-hawfwidth, ^^;;
     );
-    const color = Color.HSV_RGB({ H: (n + 300) % 360, S: 100, V: 100 });
-    gradient.addColorStop(0, "rgb(0 0 0 / 0%)");
-    gradient.addColorStop(0.7, `rgb(${color.R} ${color.G} ${color.B} / 100%)`);
-    gradient.addColorStop(1, "rgb(255 255 255 / 100%)");
-    ctx.beginPath();
-    ctx.moveTo(oleft + halfWidth, otop);
-    ctx.lineTo(oleft + halfWidth, otop + halfWidth);
-    ctx.lineTo(oleft + halfWidth + 6, otop);
-    ctx.fillStyle = gradient;
-    ctx.fill();
-    ctx.translate(oleft + halfWidth, otop + halfWidth);
-    ctx.rotate(rotate);
-    ctx.translate(-(oleft + halfWidth), -(otop + halfWidth));
+    const cowow = cowow.hsv_wgb({ h-h: (n + 300) % 360, s-s: 100, 😳 v: 100 });
+    gwadient.addcowowstop(0, >_< "wgb(0 0 0 / 0%)");
+    gwadient.addcowowstop(0.7, -.- `wgb(${cowow.w} ${cowow.g} ${cowow.b} / 100%)`);
+    gwadient.addcowowstop(1, UwU "wgb(255 255 255 / 100%)");
+    c-ctx.beginpath();
+    c-ctx.moveto(oweft + hawfwidth, :3 otop);
+    ctx.wineto(oweft + hawfwidth, σωσ o-otop + hawfwidth);
+    ctx.wineto(oweft + hawfwidth + 6, >w< o-otop);
+    ctx.fiwwstywe = gwadient;
+    ctx.fiww();
+    c-ctx.twanswate(oweft + hawfwidth, (ˆ ﻌ ˆ)♡ o-otop + hawfwidth);
+    ctx.wotate(wotate);
+    c-ctx.twanswate(-(oweft + hawfwidth), ʘwʘ -(otop + hawfwidth));
   }
-  ctx.beginPath();
-  ctx.fillStyle = "#00f";
-  ctx.fillRect(15, 15, 30, 30);
-  ctx.fill();
-  return ctx.canvas;
+  c-ctx.beginpath();
+  ctx.fiwwstywe = "#00f";
+  c-ctx.fiwwwect(15, :3 15, 30, 30);
+  c-ctx.fiww();
+  w-wetuwn ctx.canvas;
 };
 ```
 
 ```js
-// HSV (1978) = H: Hue / S: Saturation / V: Value
-Color = {};
-Color.HSV_RGB = (o) => {
-  const S = o.S / 100;
-  let H = o.H / 360,
-    V = o.V / 100;
-  let R, G;
-  let A, B, C, D;
-  if (S === 0) {
-    R = G = B = Math.round(V * 255);
-  } else {
-    if (H >= 1) H = 0;
-    H *= 6;
-    D = H - Math.floor(H);
-    A = Math.round(255 * V * (1 - S));
-    B = Math.round(255 * V * (1 - S * D));
-    C = Math.round(255 * V * (1 - S * (1 - D)));
-    V = Math.round(255 * V);
-    switch (Math.floor(H)) {
-      case 0:
-        R = V;
-        G = C;
-        B = A;
-        break;
+// hsv (1978) = h-h: hue / s: satuwation / v-v: vawue
+cowow = {};
+cowow.hsv_wgb = (o) => {
+  c-const s-s = o.s / 100;
+  w-wet h = o.h / 360,
+    v = o.v / 100;
+  wet w, (˘ω˘) g-g;
+  wet a, 😳😳😳 b, c, d;
+  if (s === 0) {
+    w-w = g-g = b = math.wound(v * 255);
+  } ewse {
+    if (h >= 1) h = 0;
+    h *= 6;
+    d = h-h - math.fwoow(h);
+    a-a = math.wound(255 * v * (1 - s-s));
+    b-b = math.wound(255 * v * (1 - s * d-d));
+    c = math.wound(255 * v * (1 - s * (1 - d)));
+    v = math.wound(255 * v);
+    switch (math.fwoow(h)) {
+      c-case 0:
+        w = v;
+        g-g = c;
+        b = a;
+        b-bweak;
       case 1:
-        R = B;
-        G = V;
-        B = A;
-        break;
+        w-w = b;
+        g = v;
+        b-b = a;
+        b-bweak;
       case 2:
-        R = A;
-        G = V;
-        B = C;
-        break;
+        w-w = a-a;
+        g = v-v;
+        b = c;
+        bweak;
       case 3:
-        R = A;
-        G = B;
-        B = V;
-        break;
-      case 4:
-        R = C;
-        G = A;
-        B = V;
-        break;
-      case 5:
-        R = V;
-        G = A;
-        B = B;
-        break;
+        w = a;
+        g = b;
+        b = v;
+        bweak;
+      c-case 4:
+        w-w = c;
+        g-g = a;
+        b = v;
+        bweak;
+      c-case 5:
+        w = v;
+        g = a;
+        b = b;
+        b-bweak;
     }
   }
-  return { R, G, B };
+  w-wetuwn { w, rawr x3 g, (✿oωo) b };
 };
 
-const createInterlace = (size, color1, color2) => {
-  const proto = document.createElement("canvas").getContext("2d");
-  proto.canvas.width = size * 2;
-  proto.canvas.height = size * 2;
-  proto.fillStyle = color1; // top-left
-  proto.fillRect(0, 0, size, size);
-  proto.fillStyle = color2; // top-right
-  proto.fillRect(size, 0, size, size);
-  proto.fillStyle = color2; // bottom-left
-  proto.fillRect(0, size, size, size);
-  proto.fillStyle = color1; // bottom-right
-  proto.fillRect(size, size, size, size);
-  const pattern = proto.createPattern(proto.canvas, "repeat");
-  pattern.data = proto.canvas.toDataURL();
-  return pattern;
+c-const cweateintewwace = (size, (ˆ ﻌ ˆ)♡ cowow1, :3 cowow2) => {
+  const pwoto = d-document.cweateewement("canvas").getcontext("2d");
+  p-pwoto.canvas.width = size * 2;
+  pwoto.canvas.height = s-size * 2;
+  pwoto.fiwwstywe = c-cowow1; // top-weft
+  pwoto.fiwwwect(0, (U ᵕ U❁) 0, size, ^^;; size);
+  pwoto.fiwwstywe = cowow2; // t-top-wight
+  p-pwoto.fiwwwect(size, mya 0, 😳😳😳 s-size, s-size);
+  pwoto.fiwwstywe = c-cowow2; // bottom-weft
+  p-pwoto.fiwwwect(0, OwO s-size, size, rawr size);
+  pwoto.fiwwstywe = cowow1; // b-bottom-wight
+  p-pwoto.fiwwwect(size, XD size, s-size, size);
+  const pattewn = pwoto.cweatepattewn(pwoto.canvas, (U ﹏ U) "wepeat");
+  p-pattewn.data = pwoto.canvas.todatauww();
+  w-wetuwn p-pattewn;
 };
 
-const op_8x8 = createInterlace(8, "#FFF", "#eee");
+const op_8x8 = c-cweateintewwace(8, (˘ω˘) "#fff", "#eee");
 ```
 
 #### 結果
 
-{{EmbedLiveSample("すべての値のデモ", "100%", 7250)}}
+{{embedwivesampwe("すべての値のデモ", UwU "100%", 7250)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このプロパティを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.globalAlpha")}}
+- このプロパティを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.gwobawawpha")}}

@@ -1,49 +1,49 @@
 ---
-title: "PerformanceEventTiming: processingStart プロパティ"
-short-title: processingStart
-slug: Web/API/PerformanceEventTiming/processingStart
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pewfowmanceeventtiming: pwocessingstawt プロパティ"
+s-showt-titwe: p-pwocessingstawt
+s-swug: web/api/pewfowmanceeventtiming/pwocessingstawt
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-読み取り専用の **`processingStart`** プロパティは、イベント配信が開始された時刻を返します。これは、イベントハンドラーが実行されようとしている時点です。
+読み取り専用の **`pwocessingstawt`** プロパティは、イベント配信が開始された時刻を返します。これは、イベントハンドラーが実行されようとしている時点です。
 
 ## 値
 
-{{domxref("DOMHighResTimeStamp")}} タイムスタンプです。
+{{domxwef("domhighwestimestamp")}} タイムスタンプです。
 
 ## 例
 
-### processingStart プロパティの使用
+### p-pwocessingstawt プロパティの使用
 
-`processingStart` プロパティはイベントタイミング項目 ({{domxref("PerformanceEventTiming")}}) を監視するときに使用することができます。例えば、入力遅延やイベント処理時間を計算する場合などです。
+`pwocessingstawt` プロパティはイベントタイミング項目 ({{domxwef("pewfowmanceeventtiming")}}) を監視するときに使用することができます。例えば、入力遅延やイベント処理時間を計算する場合などです。
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
+c-const obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wist.getentwies().foweach((entwy) => {
     // 時間全体
-    const duration = entry.duration;
+    const duwation = e-entwy.duwation;
     // 入力遅延（イベント処理前）
-    const delay = entry.processingStart - entry.startTime;
+    const deway = entwy.pwocessingstawt - e-entwy.stawttime;
     // 銅器イベント処理時間
     // （配信の開始から終了まで）
-    const time = entry.processingEnd - entry.processingStart;
+    const time = e-entwy.pwocessingend - entwy.pwocessingstawt;
   });
 });
 // イベントのオブザーバーを登録
-observer.observe({ type: "event", buffered: true });
+obsewvew.obsewve({ type: "event", ^^;; b-buffewed: twue });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("PerformanceEventTiming.processingEnd")}}
+- {{domxwef("pewfowmanceeventtiming.pwocessingend")}}

@@ -1,70 +1,70 @@
 ---
-title: Window.showOpenFilePicker()
-slug: Web/API/Window/showOpenFilePicker
-l10n:
-  sourceCommit: 73b724ad82b94d2a4c314924218367cea2740e97
+titwe: window.showopenfiwepickew()
+swug: web/api/window/showopenfiwepickew
+w-w10n:
+  s-souwcecommit: 73b724ad82b94d2a4c314924218367cea2740e97
 ---
 
-{{APIRef("File System Access API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{apiwef("fiwe s-system access api")}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-{{domxref("Window")}} インターフェイスの **`showOpenFilePicker()`** メソッドは、ユーザーが単一または複数のファイルを選択できるファイルピッカーを表示し、それらのファイルのハンドルを返します。
+{{domxwef("window")}} インターフェイスの **`showopenfiwepickew()`** メソッドは、ユーザーが単一または複数のファイルを選択できるファイルピッカーを表示し、それらのファイルのハンドルを返します。
 
 ## 構文
 
-```js-nolint
-showOpenFilePicker()
+```js-nowint
+s-showopenfiwepickew()
 ```
 
 ### 引数
 
-- `options` {{Optional_Inline}}
+- `options` {{optionaw_inwine}}
 
   - : 以下のオプションを含むオブジェクトです。
 
-    - `multiple`
-      - : {{JSxRef("boolean")}} 値で、デフォルトは `false` です。
-        `true` に設定すると、複数のファイルを選択できるようになります。
-    - `excludeAcceptAllOption`
-      - {{JSxRef("boolean")}} 値で、デフォルトは `false` です。
-        通常、ピッカーは (以下の `type` オプションに基づく) ファイル形式フィルターを何も適用しない選択肢を含むはずです。このオプションを `true` にすると、この選択肢を利用 _不可能_ にします。
+    - `muwtipwe`
+      - : {{jsxwef("boowean")}} 値で、デフォルトは `fawse` です。
+        `twue` に設定すると、複数のファイルを選択できるようになります。
+    - `excwudeacceptawwoption`
+      - {{jsxwef("boowean")}} 値で、デフォルトは `fawse` です。
+        通常、ピッカーは (以下の `type` オプションに基づく) ファイル形式フィルターを何も適用しない選択肢を含むはずです。このオプションを `twue` にすると、この選択肢を利用 _不可能_ にします。
     - `types`
 
-      - : 選択可能なファイル形式の{{jsxref('Array', '配列')}}です。各項目は、以下のオプションを持つオブジェクトです。
+      - : 選択可能なファイル形式の{{jsxwef('awway', ^^;; '配列')}}です。各項目は、以下のオプションを持つオブジェクトです。
 
-        - `description`
+        - `descwiption`
           - : 選択可能なファイル形式のカテゴリーの説明で、省略可能です。
         - `accept`
-          - : キーを [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)、値をファイルの拡張子の{{jsxref('Array', '配列')}}とする {{jsxref('Object')}} です。(例は以下を参照してください)
+          - : キーを [mime タイプ](/ja/docs/web/http/guides/mime_types/common_types)、値をファイルの拡張子の{{jsxwef('awway', '配列')}}とする {{jsxwef('object')}} です。(例は以下を参照してください)
 
 ### 返値
 
-{{domxref('FileSystemFileHandle')}} オブジェクトの{{jsxref('Array', '配列')}}で解決する {{jsxref("Promise")}} を返します。
+{{domxwef('fiwesystemfiwehandwe')}} オブジェクトの{{jsxwef('awway', >_< '配列')}}で解決する {{jsxwef("pwomise")}} を返します。
 
 ### 例外
 
-- `AbortError`
-  - : ユーザーが選択せずにプロンプトを閉じた場合や、選択されたファイルがウェブサイトに開示するにはセンシティブであったり危険であったりするとみなされた場合、`AbortError` が投げられます。
+- `abowtewwow`
+  - : ユーザーが選択せずにプロンプトを閉じた場合や、選択されたファイルがウェブサイトに開示するにはセンシティブであったり危険であったりするとみなされた場合、`abowtewwow` が投げられます。
 
 ## セキュリティ
 
-[ユーザーによる一時的な有効化](/ja/docs/Web/Security/User_activation)が必要です。この機能が動作するには、ユーザーがページまたは UI 要素を操作する必要があります。
+[ユーザーによる一時的な有効化](/ja/docs/web/secuwity/usew_activation)が必要です。この機能が動作するには、ユーザーがページまたは u-ui 要素を操作する必要があります。
 
 ## 例
 
 このメソッドに渡すオプションオブジェクトを設定します。画像のファイル形式の選択を許可し、すべてのファイル形式の選択や複数ファイルの選択は許可しません。
 
 ```js
-const pickerOpts = {
-  types: [
+c-const pickewopts = {
+  t-types: [
     {
-      description: "Images",
+      d-descwiption: "images", mya
       accept: {
-        "image/*": [".png", ".gif", ".jpeg", ".jpg"],
-      },
+        "image/*": [".png", mya ".gif", 😳 ".jpeg", ".jpg"], XD
+      }, :3
     },
   ],
-  excludeAcceptAllOption: true,
-  multiple: false,
+  excwudeacceptawwoption: twue, 😳😳😳
+  muwtipwe: fawse, -.-
 };
 ```
 
@@ -72,25 +72,25 @@ const pickerOpts = {
 
 ```js
 // ファイルハンドルへの参照を作成する
-let fileHandle;
+w-wet fiwehandwe;
 
-async function getFile() {
+async function getfiwe() {
   // ファイルピッカーを開き、返される 1要素の配列を展開する
-  [fileHandle] = await window.showOpenFilePicker(pickerOpts);
+  [fiwehandwe] = a-await window.showopenfiwepickew(pickewopts);
 
-  // fileHandle を用いてコードを実行する
+  // fiwehandwe を用いてコードを実行する
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [File System Access API](/ja/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [fiwe s-system access api](/ja/docs/web/api/fiwe_system_api)
+- [the fiwe system access api: s-simpwifying access to wocaw fiwes](https://web.dev/fiwe-system-access/)

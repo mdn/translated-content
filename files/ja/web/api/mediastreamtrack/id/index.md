@@ -1,29 +1,29 @@
 ---
-title: "MediaStreamTrack: id プロパティ"
-short-title: id
-slug: Web/API/MediaStreamTrack/id
-l10n:
-  sourceCommit: ac67e6f05d337e52e39f02a978b8c00bc43d583b
+titwe: "mediastweamtwack: id プロパティ"
+s-showt-titwe: id
+s-swug: web/api/mediastweamtwack/id
+w-w10n:
+  souwcecommit: a-ac67e6f05d337e52e39f02a978b8c00bc43d583b
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe and s-stweams")}}
 
-**`id`** は {{domxref("MediaStreamTrack")}} インターフェイスの読み取り専用のプロパティで、このトラックのための固有識別子 (GUID) を含む文字列を返します。この値は{{glossary("user agent", "ユーザーエージェント")}}によって生成されます。
+**`id`** は {{domxwef("mediastweamtwack")}} インターフェイスの読み取り専用のプロパティで、このトラックのための固有識別子 (guid) を含む文字列を返します。この値は{{gwossawy("usew a-agent", ( ͡o ω ͡o ) "ユーザーエージェント")}}によって生成されます。
 
 ## 構文
 
-```js-nolint
-const id = track.id
+```js-nowint
+c-const id = twack.id
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebRTC](/ja/docs/Web/API/WebRTC_API)
+- [webwtc](/ja/docs/web/api/webwtc_api)

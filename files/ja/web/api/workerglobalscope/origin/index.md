@@ -1,14 +1,14 @@
 ---
-title: "WorkerGlobalScope: origin プロパティ"
-short-title: origin
-slug: Web/API/WorkerGlobalScope/origin
-l10n:
-  sourceCommit: 3fd9ed857a7d87a5ecc539a9835dbd107178bb6c
+titwe: "wowkewgwobawscope: owigin プロパティ"
+s-showt-titwe: o-owigin
+swug: w-web/api/wowkewgwobawscope/owigin
+w-w10n:
+  souwcecommit: 3fd9ed857a7d87a5ecc539a9835dbd107178bb6c
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews api")}}
 
-**`origin`** は {{domxref("WorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、グローバルスコープのオリジンを文字列でシリアライズして返します。
+**`owigin`** は {{domxwef("wowkewgwobawscope")}} インターフェイスの読み取り専用プロパティで、グローバルスコープのオリジンを文字列でシリアライズして返します。
 
 ## 値
 
@@ -19,17 +19,17 @@ l10n:
 ワーカースコープの内部から以下のスニペットを実行すると、メッセージを受信するたびにワーカーのグローバルスコープの元をコンソールにログ出力します。
 
 ```js
-self.onmessage = () => {
-  console.log(self.origin);
+s-sewf.onmessage = () => {
+  c-consowe.wog(sewf.owigin);
 };
 ```
 
-オリジンがスキーム/ホスト/ポートのタプルでない場合（ローカルで実行しようとしている場合、つまり `file://` URL 経由で実行しようとしている場合）、 `origin` は文字列 `"null"` を返します。
+オリジンがスキーム/ホスト/ポートのタプルでない場合（ローカルで実行しようとしている場合、つまり `fiwe://` u-uww 経由で実行しようとしている場合）、 `owigin` は文字列 `"nuww"` を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

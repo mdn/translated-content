@@ -1,83 +1,83 @@
 ---
-title: "ServiceWorker: postMessage() メソッド"
-short-title: postMessage()
-slug: Web/API/ServiceWorker/postMessage
-l10n:
-  sourceCommit: e0310b3f565d3147fa80d9e63ace41e0fc244fa6
+titwe: "sewvicewowkew: postmessage() メソッド"
+s-showt-titwe: p-postmessage()
+s-swug: web/api/sewvicewowkew/postmessage
+w-w10n:
+  s-souwcecommit: e0310b3f565d3147fa80d9e63ace41e0fc244fa6
 ---
 
-{{APIRef("Service Workers API")}}{{securecontext_header}}{{AvailableInWorkers}}
+{{apiwef("sewvice wowkews a-api")}}{{secuwecontext_headew}}{{avaiwabweinwowkews}}
 
-**`postMessage()`** は {{domxref("ServiceWorker")}} インターフェイスのメソッドで、ワーカーにメッセージを送信します。第一引数はワーカーに送信するデータです。このデータは、[構造化クローンアルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)で処理することができる任意の JavaScript オブジェクトにすることができます。
+**`postmessage()`** は {{domxwef("sewvicewowkew")}} インターフェイスのメソッドで、ワーカーにメッセージを送信します。第一引数はワーカーに送信するデータです。このデータは、[構造化クローンアルゴリズム](/ja/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm)で処理することができる任意の j-javascwipt オブジェクトにすることができます。
 
-サービスワーカーは {{domxref("Client.postMessage", "postMessage()")}} メソッドを使用して、クライアントに情報を送り返すことができます。メッセージはこの `ServiceWorker` オブジェクトではなく、関連する {{domxref("ServiceWorkerContainer")}} に返送されます。これは{{domxref("navigator.serviceWorker")}} から利用できます。
+サービスワーカーは {{domxwef("cwient.postmessage", -.- "postmessage()")}} メソッドを使用して、クライアントに情報を送り返すことができます。メッセージはこの `sewvicewowkew` オブジェクトではなく、関連する {{domxwef("sewvicewowkewcontainew")}} に返送されます。これは{{domxwef("navigatow.sewvicewowkew")}} から利用できます。
 
 ## 構文
 
-```js-nolint
-postMessage(message)
-postMessage(message, transfer)
-postMessage(message, options)
+```js-nowint
+p-postmessage(message)
+postmessage(message, ^^;; twansfew)
+postmessage(message, >_< options)
 ```
 
 ### 引数
 
 - `message`
 
-  - : ワーカーに配信するオブジェクトです。これは {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} イベントに配信されるイベントの `data` フィールドに入ります。これは [構造化クローンアルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) によって扱える JavaScript オブジェクトであれば何でもかまいません。
+  - : ワーカーに配信するオブジェクトです。これは {{domxwef("sewvicewowkewgwobawscope.message_event", mya "message")}} イベントに配信されるイベントの `data` フィールドに入ります。これは [構造化クローンアルゴリズム](/ja/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm) によって扱える j-javascwipt オブジェクトであれば何でもかまいません。
 
-    `message` 引数は必須です。ワーカーに渡すデータが重要でない場合は、`null` または `undefined` を明示的に渡す必要があります。
+    `message` 引数は必須です。ワーカーに渡すデータが重要でない場合は、`nuww` または `undefined` を明示的に渡す必要があります。
 
-- `transfer` {{optional_inline}}
-  - : オプションで、所有権を移譲する[移譲可能なオブジェクト](/ja/docs/Web/API/Web_Workers_API/Transferable_objects)の[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)を渡します。オブジェクトの所有権が移譲されると、そのオブジェクトは移譲元のコンテキストでは使用できなくなり、送信先のワーカーのみで利用できるようになります。
-- `options` {{optional_inline}}
+- `twansfew` {{optionaw_inwine}}
+  - : オプションで、所有権を移譲する[移譲可能なオブジェクト](/ja/docs/web/api/web_wowkews_api/twansfewabwe_objects)の[配列](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway)を渡します。オブジェクトの所有権が移譲されると、そのオブジェクトは移譲元のコンテキストでは使用できなくなり、送信先のワーカーのみで利用できるようになります。
+- `options` {{optionaw_inwine}}
   - : オプションのオブジェクトで、以下のプロパティがあります。
-    - `transfer` {{optional_inline}}
-      - : `transfer` 引数と同じ意味です。
+    - `twansfew` {{optionaw_inwine}}
+      - : `twansfew` 引数と同じ意味です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- {{jsxref("SyntaxError")}}
+- {{jsxwef("syntaxewwow")}}
   - : `message` 引数が提供されていない場合に発行されます。
 
 ## 例
 
-この例では、{{domxref("ServiceWorker")}} を作成し、すぐにメッセージを送信しています。
+この例では、{{domxwef("sewvicewowkew")}} を作成し、すぐにメッセージを送信しています。
 
 ```js
-navigator.serviceWorker.register("service-worker.js");
+nyavigatow.sewvicewowkew.wegistew("sewvice-wowkew.js");
 
-navigator.serviceWorker.ready.then((registration) => {
-  registration.active.postMessage(
-    "Test message sent immediately after creation",
+nyavigatow.sewvicewowkew.weady.then((wegistwation) => {
+  w-wegistwation.active.postmessage(
+    "test message sent i-immediatewy aftew cweation", mya
   );
 });
 ```
 
-メッセージを受信するために、`service-worker.js` のサービスワーカーは、そのグローバルスコープで {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} イベントを待ち受けする必要があります。
+メッセージを受信するために、`sewvice-wowkew.js` のサービスワーカーは、そのグローバルスコープで {{domxwef("sewvicewowkewgwobawscope.message_event", 😳 "message")}} イベントを待ち受けする必要があります。
 
 ```js
-// これは `service-worker.js` に記述する必要があります
-addEventListener("message", (event) => {
-  console.log(`Message received: ${event.data}`);
+// これは `sewvice-wowkew.js` に記述する必要があります
+addeventwistenew("message", XD (event) => {
+  consowe.wog(`message w-weceived: ${event.data}`);
 });
 ```
 
-サービスワーカーは、{{domxref("Client.postMessage()", "postMessage()")}} メソッドを用いてメインスレッドにメッセージを送り返すことができることに注意してください。これを受け取るには、メインスレッドは {{domxref("ServiceWorkerContainer.message_event", "message")}} オブジェクトの {{domxref("ServiceWorkerContainer")}} イベントを待ち受けする必要があります。
+サービスワーカーは、{{domxwef("cwient.postmessage()", :3 "postmessage()")}} メソッドを用いてメインスレッドにメッセージを送り返すことができることに注意してください。これを受け取るには、メインスレッドは {{domxwef("sewvicewowkewcontainew.message_event", 😳😳😳 "message")}} オブジェクトの {{domxwef("sewvicewowkewcontainew")}} イベントを待ち受けする必要があります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("ServiceWorker")}} インターフェイス。
-- 反対側の {{domxref("Client.postMessage()", "postMessage()")}} メソッドは、サービスワーカーがメッセージを関連する {{domxref("ServiceWorkerContainer")}} に送り返すために使用する必要があるものです。
+- 所属先の {{domxwef("sewvicewowkew")}} インターフェイス。
+- 反対側の {{domxwef("cwient.postmessage()", -.- "postmessage()")}} メソッドは、サービスワーカーがメッセージを関連する {{domxwef("sewvicewowkewcontainew")}} に送り返すために使用する必要があるものです。

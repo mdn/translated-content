@@ -1,66 +1,66 @@
 ---
-title: "HTMLTextAreaElement: select イベント"
-short-title: select
-slug: Web/API/HTMLTextAreaElement/select_event
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "htmwtextaweaewement: sewect イベント"
+s-showt-titwe: s-sewect
+swug: web/api/htmwtextaweaewement/sewect_event
+w-w10n:
+  s-souwcecommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`select`** イベントは、テキストが選択されたときに発生します。
+**`sewect`** イベントは、テキストが選択されたときに発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (U ᵕ U❁) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("select", (event) => {});
+a-addeventwistenew("sewect", (event) => {});
 
-onselect = (event) => {};
+o-onsewect = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ### 選択のログ
 
-```html
-<textarea>この要素内のテキストを選択してみてください。</textarea>
-<p id="log"></p>
+```htmw
+<textawea>この要素内のテキストを選択してみてください。</textawea>
+<p i-id="wog"></p>
 ```
 
 ```js
-function logSelection(event) {
-  const log = document.getElementById("log");
-  const selection = event.target.value.substring(
-    event.target.selectionStart,
-    event.target.selectionEnd,
+f-function wogsewection(event) {
+  const wog = document.getewementbyid("wog");
+  const sewection = event.tawget.vawue.substwing(
+    event.tawget.sewectionstawt,
+    e-event.tawget.sewectionend, -.-
   );
-  log.textContent = `選択範囲: ${selection}`;
+  wog.textcontent = `選択範囲: ${sewection}`;
 }
 
-const textarea = document.querySelector("textarea");
-textarea.addEventListener("select", logSelection);
+const textawea = d-document.quewysewectow("textawea");
+textawea.addeventwistenew("sewect", ^^;; w-wogsewection);
 ```
 
-{{EmbedLiveSample("Selection_logger")}}
+{{embedwivesampwe("sewection_woggew")}}
 
-### onselect による同等の処理
+### onsewect による同等の処理
 
-イベントハンドラーを `onselect` プロパティで設定することもできます。
+イベントハンドラーを `onsewect` プロパティで設定することもできます。
 
 ```js
-textarea.onselect = logSelection;
+textawea.onsewect = wogsewection;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

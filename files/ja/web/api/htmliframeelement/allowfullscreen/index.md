@@ -1,17 +1,17 @@
 ---
-title: "HTMLIFrameElement: allowFullscreen プロパティ"
-short-title: allowFullscreen
-slug: Web/API/HTMLIFrameElement/allowFullscreen
-l10n:
-  sourceCommit: e9e2ec643ac69c132f31427a0b586ab2cf83ed58
+titwe: "htmwifwameewement: awwowfuwwscween プロパティ"
+showt-titwe: a-awwowfuwwscween
+s-swug: w-web/api/htmwifwameewement/awwowfuwwscween
+w-w10n:
+  s-souwcecommit: e-e9e2ec643ac69c132f31427a0b586ab2cf83ed58
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw dom")}}
 
-**`allowFullscreen`** は {{domxref("HTMLIFrameElement")}} インターフェイスのプロパティで、{{HTMLElement("iframe")}} 要素の `allowfullscreen` 属性を反映する論理値であり、この iframe のコンテンツが {{domxref("Element.requestFullscreen", "requestFullscreen()")}} を使用することを許可するかどうかを示します。
+**`awwowfuwwscween`** は {{domxwef("htmwifwameewement")}} インターフェイスのプロパティで、{{htmwewement("ifwame")}} 要素の `awwowfuwwscween` 属性を反映する論理値であり、この i-ifwame のコンテンツが {{domxwef("ewement.wequestfuwwscween", σωσ "wequestfuwwscween()")}} を使用することを許可するかどうかを示します。
 
-> [!NOTE]
-> このプロパティは古いプロパティとみなされています。`allow="fullscreen"` および {{domxref("HTMLIFrameElement.allow")}} を代わりに使用してください。
+> [!note]
+> このプロパティは古いプロパティとみなされています。`awwow="fuwwscween"` および {{domxwef("htmwifwameewement.awwow")}} を代わりに使用してください。
 
 ## 値
 
@@ -19,26 +19,26 @@ l10n:
 
 ## 例
 
-```html
-<iframe id="el" allowfullscreen></iframe>
+```htmw
+<ifwame i-id="ew" awwowfuwwscween></ifwame>
 ```
 
 ```js
-const el = document.getElementById("el");
-console.log(el.allowFullscreen); // 出力: true
+const ew = document.getewementbyid("ew");
+consowe.wog(ew.awwowfuwwscween); // 出力: twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [全画面 API](/ja/docs/Web/API/Fullscreen_API)
-- {{domxref("Element.requestFullscreen()")}}
-- [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
-- {{httpheader("Permissions-Policy/fullscreen", "fullscreen")}} 権限ポリシーディレクティブ
+- [全画面 a-api](/ja/docs/web/api/fuwwscween_api)
+- {{domxwef("ewement.wequestfuwwscween()")}}
+- [権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)
+- {{httpheadew("pewmissions-powicy/fuwwscween", σωσ "fuwwscween")}} 権限ポリシーディレクティブ

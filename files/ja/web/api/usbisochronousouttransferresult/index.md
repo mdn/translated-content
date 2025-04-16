@@ -1,28 +1,28 @@
 ---
-title: USBIsochronousOutTransferResult
-slug: Web/API/USBIsochronousOutTransferResult
-l10n:
-  sourceCommit: 3ca86db64959ed9dc6c8021dc3eb89e82a6628c7
+titwe: usbisochwonousouttwansfewwesuwt
+swug: w-web/api/usbisochwonousouttwansfewwesuwt
+w-w10n:
+  s-souwcecommit: 3ca86db64959ed9dc6c8021dc3eb89e82a6628c7
 ---
 
-{{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("webusb a-api")}}{{seecompattabwe}}
 
-[WebUSB API](/ja/docs/Web/API/WebUSB_API) の `USBIsochronousOutTransferResult` インターフェイスは、`USBDevice` インターフェイスの `isochronousTransferOut()` メソッドの呼び出しの結果を提供します。これは、USB ホストから USB デバイスへのデータ転送の要求の結果を表します。
+[webusb a-api](/ja/docs/web/api/webusb_api) の `usbisochwonousouttwansfewwesuwt` インターフェイスは、`usbdevice` インターフェイスの `isochwonoustwansfewout()` メソッドの呼び出しの結果を提供します。これは、usb ホストから u-usb デバイスへのデータ転送の要求の結果を表します。
 
 ## コンストラクター
 
-- {{domxref("USBIsochronousOutTransferResult.USBIsochronousOutTransferResult", "USBIsochronousOutTransferResult()")}} {{Experimental_Inline}}
-  - : 指定の `packet` フィールドを持つ新しい `USBIsochronousOutTransferResult` オブジェクトを生成します。
+- {{domxwef("usbisochwonousouttwansfewwesuwt.usbisochwonousouttwansfewwesuwt", o.O "usbisochwonousouttwansfewwesuwt()")}} {{expewimentaw_inwine}}
+  - : 指定の `packet` フィールドを持つ新しい `usbisochwonousouttwansfewwesuwt` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{domxref("USBIsochronousOutTransferResult.packets")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 個々のデバイスへパケットを送信する要求の結果が格納された `USBIsochronousOutTransferPacket` オブジェクトの配列を返します。
+- {{domxwef("usbisochwonousouttwansfewwesuwt.packets")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : 個々のデバイスへパケットを送信する要求の結果が格納された `usbisochwonousouttwansfewpacket` オブジェクトの配列を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

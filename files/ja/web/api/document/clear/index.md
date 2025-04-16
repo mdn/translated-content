@@ -1,19 +1,19 @@
 ---
-title: "Document: clear() メソッド"
-short-title: clear()
-slug: Web/API/Document/clear
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: cweaw() メソッド"
+s-showt-titwe: c-cweaw()
+s-swug: web/api/document/cweaw
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-**`Document.clear()`** メソッドは何も行わず、何もエラーを発生しません。
+**`document.cweaw()`** メソッドは何も行わず、何もエラーを発生しません。
 
 ## 構文
 
-```js-nolint
-clear()
+```js-nowint
+c-cweaw()
 ```
 
 ### 引数
@@ -22,12 +22,12 @@ clear()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

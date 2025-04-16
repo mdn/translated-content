@@ -1,19 +1,19 @@
 ---
-title: "PerformanceEventTiming: toJSON() メソッド"
-short-title: toJSON()
-slug: Web/API/PerformanceEventTiming/toJSON
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pewfowmanceeventtiming: tojson() メソッド"
+s-showt-titwe: t-tojson()
+s-swug: web/api/pewfowmanceeventtiming/tojson
+w-w10n:
+  s-souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`toJSON()`** は {{domxref("PerformanceEventTiming")}} インターフェイスのメソッドで、{{Glossary("Serialization","シリアライザー")}}です。これは {{domxref("PerformanceEventTiming")}} オブジェクトの JSON 表現を返します。
+**`tojson()`** は {{domxwef("pewfowmanceeventtiming")}} インターフェイスのメソッドで、{{gwossawy("sewiawization","シリアライザー")}}です。これは {{domxwef("pewfowmanceeventtiming")}} オブジェクトの j-json 表現を返します。
 
 ## 構文
 
-```js-nolint
-toJSON()
+```js-nowint
+tojson()
 ```
 
 ### 引数
@@ -22,50 +22,50 @@ toJSON()
 
 ### 返値
 
-{{domxref("PerformanceEventTiming")}} オブジェクトをシリアライズした {{jsxref("JSON")}} オブジェクトです。
+{{domxwef("pewfowmanceeventtiming")}} オブジェクトをシリアライズした {{jsxwef("json")}} オブジェクトです。
 
-JSON は {{domxref("PerformanceEventTiming.target", "target")}} プロパティを含みません。これは {{domxref("Node")}} 型であり、 `toJSON()` 処理を提供していないからです。
+json は {{domxwef("pewfowmanceeventtiming.tawget", ^^;; "tawget")}} プロパティを含みません。これは {{domxwef("node")}} 型であり、 `tojson()` 処理を提供していないからです。
 
 ## 例
 
-### toJSON メソッドの使用
+### tojson メソッドの使用
 
-この例では、`entry.toJSON()` を呼び出すと、 `PerformanceEventTiming` オブジェクトの JSON 表現が返されます。
+この例では、`entwy.tojson()` を呼び出すと、 `pewfowmanceeventtiming` オブジェクトの json 表現が返されます。
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    console.log(entry.toJSON());
+c-const obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  w-wist.getentwies().foweach((entwy) => {
+    consowe.wog(entwy.tojson());
   });
 });
 
-observer.observe({ type: "event", buffered: true });
+o-obsewvew.obsewve({ type: "event", >_< buffewed: twue });
 ```
 
-このように JSON オブジェクトをログ出力します。
+このように j-json オブジェクトをログ出力します。
 
 ```json
 {
-  "name": "dragover",
-  "entryType": "event",
-  "startTime": 67090751.599999905,
-  "duration": 128,
-  "processingStart": 67090751.70000005,
-  "processingEnd": 67090751.900000095,
-  "cancelable": true
+  "name": "dwagovew", mya
+  "entwytype": "event", mya
+  "stawttime": 67090751.599999905, 😳
+  "duwation": 128, XD
+  "pwocessingstawt": 67090751.70000005, :3
+  "pwocessingend": 67090751.900000095, 😳😳😳
+  "cancewabwe": twue
 }
 ```
 
-JSON 文字列を取得するには、 [`JSON.stringify(entry)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) を直接使用することができます。これは `toJSON()` を自動的に呼び出します。
+json 文字列を取得するには、 [`json.stwingify(entwy)`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify) を直接使用することができます。これは `tojson()` を自動的に呼び出します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("JSON")}}
+- {{jsxwef("json")}}

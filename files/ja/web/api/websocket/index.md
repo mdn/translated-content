@@ -1,89 +1,89 @@
 ---
-title: WebSocket
-slug: Web/API/WebSocket
-l10n:
-  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
+titwe: websocket
+swug: web/api/websocket
+w-w10n:
+  s-souwcecommit: f-fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
+{{apiwef("websockets a-api")}}{{avaiwabweinwowkews}}
 
-`WebSocket` オブジェクトは、サーバーへの [WebSocket](/ja/docs/Web/API/WebSockets_API) 接続の作成と管理、および接続上のデータの送受信に使用する API を提供します。
+`websocket` オブジェクトは、サーバーへの [websocket](/ja/docs/web/api/websockets_api) 接続の作成と管理、および接続上のデータの送受信に使用する a-api を提供します。
 
-`WebSocket` を構築するには、 [`WebSocket()`](/ja/docs/Web/API/WebSocket/WebSocket) コンストラクターを使用してください。
+`websocket` を構築するには、 [`websocket()`](/ja/docs/web/api/websocket/websocket) コンストラクターを使用してください。
 
-> **メモ:** `WebSocket` API には[背圧](/ja/docs/Web/API/Streams_API/Concepts#背圧)を適用する方法がないため、メッセージがアプリケーションの処理速度よりも速く到着すると、アプリケーションはメッセージをバッファリングすることで端末のメモリーを一杯にしたり、 CPU 使用率が 100% になって応答不能になったり、あるいはその両方になったりします。自動的に背圧を提供する代替案については、 {{domxref("WebSocketStream")}} を参照してください。
+> **メモ:** `websocket` a-api には[背圧](/ja/docs/web/api/stweams_api/concepts#背圧)を適用する方法がないため、メッセージがアプリケーションの処理速度よりも速く到着すると、アプリケーションはメッセージをバッファリングすることで端末のメモリーを一杯にしたり、 c-cpu 使用率が 100% になって応答不能になったり、あるいはその両方になったりします。自動的に背圧を提供する代替案については、 {{domxwef("websocketstweam")}} を参照してください。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("WebSocket.WebSocket", "WebSocket()")}}
-  - : 新しく作成された `WebSocket` オブジェクトを返します。
+- {{domxwef("websocket.websocket", (ˆ ﻌ ˆ)♡ "websocket()")}}
+  - : 新しく作成された `websocket` オブジェクトを返します。
 
 ## インスタンスプロパティ
 
-- {{domxref("WebSocket.binaryType")}}
+- {{domxwef("websocket.binawytype")}}
   - : 接続で使用されるバイナリデータ型。
-- {{domxref("WebSocket.bufferedAmount")}} {{ReadOnlyInline}}
+- {{domxwef("websocket.buffewedamount")}} {{weadonwyinwine}}
   - : キューに入れられたデータのバイト数。
-- {{domxref("WebSocket.extensions")}} {{ReadOnlyInline}}
+- {{domxwef("websocket.extensions")}} {{weadonwyinwine}}
   - : サーバーによって選択された拡張機能。
-- {{domxref("WebSocket.protocol")}} {{ReadOnlyInline}}
+- {{domxwef("websocket.pwotocow")}} {{weadonwyinwine}}
   - : サーバーによって選択されたサブプロトコル。
-- {{domxref("WebSocket.readyState")}} {{ReadOnlyInline}}
+- {{domxwef("websocket.weadystate")}} {{weadonwyinwine}}
   - : 接続の現在の状態。
-- {{domxref("WebSocket.url")}} {{ReadOnlyInline}}
-  - : WebSocket の絶対 URL。
+- {{domxwef("websocket.uww")}} {{weadonwyinwine}}
+  - : w-websocket の絶対 uww。
 
 ## インスタンスメソッド
 
-- {{domxref("WebSocket.close()")}}
+- {{domxwef("websocket.cwose()")}}
   - : 接続を閉じます。
-- {{domxref("WebSocket.send()")}}
+- {{domxwef("websocket.send()")}}
   - : 送信するデータをキューに入れます。
 
 ## イベント
 
-これらのイベントを待ち受けするには、 `addEventListener()` を使用するか、イベントリスナーをこのインターフェイスの `onイベント名` プロパティへ代入するかします。
+これらのイベントを待ち受けするには、 `addeventwistenew()` を使用するか、イベントリスナーをこのインターフェイスの `onイベント名` プロパティへ代入するかします。
 
-- {{domxref("WebSocket/close_event", "close")}}
-  - : `WebSocket` による接続が閉じられたときに発生します。
-    `onclose` プロパティからも利用できます。
-- {{domxref("WebSocket/error_event", "error")}}
-  - : `WebSocket` による接続が、データの一部が送信できなかったなどのエラーのために閉じた時に発生します。
-    `onerror` プロパティからも利用できます。
-- {{domxref("WebSocket/message_event", "message")}}
-  - : `WebSocket` を通じてデータを受信したときに発生します。
+- {{domxwef("websocket/cwose_event", (⑅˘꒳˘) "cwose")}}
+  - : `websocket` による接続が閉じられたときに発生します。
+    `oncwose` プロパティからも利用できます。
+- {{domxwef("websocket/ewwow_event", (U ᵕ U❁) "ewwow")}}
+  - : `websocket` による接続が、データの一部が送信できなかったなどのエラーのために閉じた時に発生します。
+    `onewwow` プロパティからも利用できます。
+- {{domxwef("websocket/message_event", -.- "message")}}
+  - : `websocket` を通じてデータを受信したときに発生します。
     `onmessage` プロパティからも利用できます。
-- {{domxref("WebSocket/open_event", "open")}}
-  - : `WebSocket` による接続が開いたときに発生します。
+- {{domxwef("websocket/open_event", ^^;; "open")}}
+  - : `websocket` による接続が開いたときに発生します。
     `onopen` プロパティからも利用できます。
 
 ## 例
 
 ```js
-// WebSocket 接続を作成
-const socket = new WebSocket("ws://localhost:8080");
+// websocket 接続を作成
+const socket = nyew websocket("ws://wocawhost:8080");
 
 // 接続が開いたときのイベント
-socket.addEventListener("open", (event) => {
-  socket.send("Hello Server!");
+s-socket.addeventwistenew("open", >_< (event) => {
+  socket.send("hewwo sewvew!");
 });
 
 // メッセージの待ち受け
-socket.addEventListener("message", (event) => {
-  console.log("Message from server ", event.data);
+s-socket.addeventwistenew("message", mya (event) => {
+  consowe.wog("message f-fwom sewvew ", mya event.data);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebSocket クライアントアプリケーションを書く](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [websocket クライアントアプリケーションを書く](/ja/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)

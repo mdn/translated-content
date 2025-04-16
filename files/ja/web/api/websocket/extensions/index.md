@@ -1,14 +1,14 @@
 ---
-title: "WebSocket: extensions プロパティ"
-short-title: extensions
-slug: Web/API/WebSocket/extensions
-l10n:
-  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
+titwe: "websocket: extensions プロパティ"
+s-showt-titwe: extensions
+s-swug: w-web/api/websocket/extensions
+w-w10n:
+  s-souwcecommit: f-fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef("Web Sockets API")}}{{AvailableInWorkers}}
+{{apiwef("web sockets a-api")}}{{avaiwabweinwowkews}}
 
-**`WebSocket.extensions`** は読み取り専用のプロパティで、サーバーによって選択された拡張機能を返します。現在は、空文字列か、接続によってネゴシエートされた拡張機能のリストのみを返します。
+**`websocket.extensions`** は読み取り専用のプロパティで、サーバーによって選択された拡張機能を返します。現在は、空文字列か、接続によってネゴシエートされた拡張機能のリストのみを返します。
 
 ## 値
 
@@ -16,8 +16,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

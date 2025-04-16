@@ -1,40 +1,40 @@
 ---
-title: PictureInPictureEvent
-slug: Web/API/PictureInPictureEvent
-l10n:
-  sourceCommit: 95dff5ec1195f072b8e48a2273294933670b1e99
+titwe: pictuweinpictuweevent
+swug: web/api/pictuweinpictuweevent
+w-w10n:
+  souwcecommit: 95dff5ec1195f072b8e48a2273294933670b1e99
 ---
 
-{{APIRef("Picture-in-Picture API")}}
+{{apiwef("pictuwe-in-pictuwe a-api")}}
 
-**`PictureInPictureEvent`** インターフェイスはピクチャインピクチャに関するイベント、例えば {{domxref("HTMLVideoElement/enterpictureinpicture_event", "enterpictureinpicture")}}、{{domxref("HTMLVideoElement/leavepictureinpicture_event", "leavepictureinpicture")}}、{{domxref("PictureInPictureWindow/resize_event", "resize")}} を表します。
+**`pictuweinpictuweevent`** インターフェイスはピクチャインピクチャに関するイベント、例えば {{domxwef("htmwvideoewement/entewpictuweinpictuwe_event", ^•ﻌ•^ "entewpictuweinpictuwe")}}、{{domxwef("htmwvideoewement/weavepictuweinpictuwe_event", OwO "weavepictuweinpictuwe")}}、{{domxwef("pictuweinpictuwewindow/wesize_event", 🥺 "wesize")}} を表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("PictureInPictureEvent.PictureInPictureEvent", "PictureInPictureEvent()")}}
-  - : 指定された引数で `PictureInPictureEvent` イベントを作成します。
+- {{domxwef("pictuweinpictuweevent.pictuweinpictuweevent", òωó "pictuweinpictuweevent()")}}
+  - : 指定された引数で `pictuweinpictuweevent` イベントを作成します。
 
 ## インスタンスプロパティ
 
-_このインターフェイスには、親である {{domxref("Event")}} から継承したプロパティもあります_。
+_このインターフェイスには、親である {{domxwef("event")}} から継承したプロパティもあります_。
 
-- {{domxref("PictureInPictureEvent.pictureInPictureWindow")}}
-  - : このイベントが関連する {{domxref("PictureInPictureWindow")}} を返します。
+- {{domxwef("pictuweinpictuweevent.pictuweinpictuwewindow")}}
+  - : このイベントが関連する {{domxwef("pictuweinpictuwewindow")}} を返します。
 
 ## インスタンスメソッド
 
-_このインターフェイスには、親である {{domxref("Event")}} から継承したメソッドもあります_。
+_このインターフェイスには、親である {{domxwef("event")}} から継承したメソッドもあります_。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 基底インターフェイスである {{domxref("Event")}}
+- 基底インターフェイスである {{domxwef("event")}}

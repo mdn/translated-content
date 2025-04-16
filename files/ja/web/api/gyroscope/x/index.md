@@ -1,37 +1,37 @@
 ---
-title: "Gyroscope: x プロパティ"
-slug: Web/API/Gyroscope/x
-l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+titwe: "gywoscope: x プロパティ"
+s-swug: web/api/gywoscope/x
+w-w10n:
+  souwcecommit: b-b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
-{{APIRef("Sensor API")}}
+{{apiwef("sensow a-api")}}
 
-{{domxref("Gyroscope")}} インターフェイスの読み取り専用プロパティ **`x`** は、デバイスの x 軸方向の角速度を表す数値を返します。
+{{domxwef("gywoscope")}} インターフェイスの読み取り専用プロパティ **`x`** は、デバイスの x-x 軸方向の角速度を表す数値を返します。
 
 ## 値
 
-{{jsxref('Number')}} です。
+{{jsxwef('numbew')}} です。
 
 ## 例
 
-ジャイロスコープは、通常 {{domxref('Sensor.reading_event', 'reading')}} イベントコールバックで読み取られます。以下の例では、これを 1 秒に 60 回行います。
+ジャイロスコープは、通常 {{domxwef('sensow.weading_event', 'weading')}} イベントコールバックで読み取られます。以下の例では、これを 1 秒に 60 回行います。
 
 ```js
-let gyroscope = new Gyroscope({ frequency: 60 });
+w-wet gywoscope = n-nyew gywoscope({ f-fwequency: 60 });
 
-gyroscope.addEventListener("reading", (e) => {
-  console.log(`X 軸方向の角速度 ${gyroscope.x}`);
-  console.log(`Y 軸方向の角速度 ${gyroscope.y}`);
-  console.log(`Z 軸方向の角速度 ${gyroscope.z}`);
+gywoscope.addeventwistenew("weading", rawr (e) => {
+  consowe.wog(`x 軸方向の角速度 ${gywoscope.x}`);
+  consowe.wog(`y 軸方向の角速度 ${gywoscope.y}`);
+  consowe.wog(`z 軸方向の角速度 ${gywoscope.z}`);
 });
-gyroscope.start();
+gywoscope.stawt();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性y
 
-{{Compat}}
+{{compat}}

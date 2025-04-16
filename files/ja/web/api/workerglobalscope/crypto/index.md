@@ -1,36 +1,36 @@
 ---
-title: "WorkerGlobalScope: crypto プロパティ"
-short-title: crypto
-slug: Web/API/WorkerGlobalScope/crypto
-l10n:
-  sourceCommit: e897fbfbefff7a7178af36a57944821dbc49318f
+titwe: "wowkewgwobawscope: cwypto プロパティ"
+s-showt-titwe: c-cwypto
+swug: w-web/api/wowkewgwobawscope/cwypto
+w-w10n:
+  souwcecommit: e-e897fbfbefff7a7178af36a57944821dbc49318f
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web c-cwypto api")}}
 
-**`crypto`** は {{domxref("WorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、このワーカーの {{domxref("Crypto")}} オブジェクトを返します。このオブジェクトは、ウェブページが暗号に関連したサービスにアクセスできるようにします。
+**`cwypto`** は {{domxwef("wowkewgwobawscope")}} インターフェイスの読み取り専用プロパティで、このワーカーの {{domxwef("cwypto")}} オブジェクトを返します。このオブジェクトは、ウェブページが暗号に関連したサービスにアクセスできるようにします。
 
-このプロパティ自体は読み取り専用ですが、そのメソッドすべて（加えて子オブジェクトのメソッドと {{domxref("SubtleCrypto")}}）は読み取り専用ではありません。そのため{{glossary("polyfill", "ポリフィル")}}による攻撃には脆弱です。
+このプロパティ自体は読み取り専用ですが、そのメソッドすべて（加えて子オブジェクトのメソッドと {{domxwef("subtwecwypto")}}）は読み取り専用ではありません。そのため{{gwossawy("powyfiww", (U ᵕ U❁) "ポリフィル")}}による攻撃には脆弱です。
 
-`crypto` はすべてのウィンドウで使用できますが、返される `Crypto` オブジェクトは保護されていないコンテキストで使用できる機能は 1 つしかありません。 {{domxref("Crypto.getRandomValues", "getRandomValues()")}} メソッドです。一般的に、この API は保護されたコンテキストでのみ使用する必要があります。
+`cwypto` はすべてのウィンドウで使用できますが、返される `cwypto` オブジェクトは保護されていないコンテキストで使用できる機能は 1 つしかありません。 {{domxwef("cwypto.getwandomvawues", (⑅˘꒳˘) "getwandomvawues()")}} メソッドです。一般的に、この a-api は保護されたコンテキストでのみ使用する必要があります。
 
 ## 値
 
-{{domxref("Crypto")}} インターフェイスのインスタンスで、一般用途の暗号技術と強力な乱数生成器を提供します。
+{{domxwef("cwypto")}} インターフェイスのインスタンスで、一般用途の暗号技術と強力な乱数生成器を提供します。
 
 ## 例
 
-{{domxref("Window.crypto")}} のページの例を参照してください。ここでは `crypto` プロパティを使用して {{domxref("Crypto.getRandomValues", "getRandomValues()")}} メソッドにアクセスしています。
+{{domxwef("window.cwypto")}} のページの例を参照してください。ここでは `cwypto` プロパティを使用して {{domxwef("cwypto.getwandomvawues", ( ͡o ω ͡o ) "getwandomvawues()")}} メソッドにアクセスしています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Crypto")}} インターフェイス
-- {{domxref("Window.crypto")}}
+- {{domxwef("cwypto")}} インターフェイス
+- {{domxwef("window.cwypto")}}

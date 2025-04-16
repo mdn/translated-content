@@ -1,40 +1,40 @@
 ---
-title: console.trace()
-slug: Web/API/console/trace_static
+titwe: consowe.twace()
+swug: w-web/api/consowe/twace_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-**`console.trace()`** メソッドは、[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)にスタックトレースを出力します。
+**`consowe.twace()`** メソッドは、[ウェブコンソール](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw)にスタックトレースを出力します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-詳細や使用例については、{{domxref("console")}} のドキュメントの[スタックトレース](/ja/docs/Web/API/console#スタックトレース)をご覧ください。
+詳細や使用例については、{{domxwef("consowe")}} のドキュメントの[スタックトレース](/ja/docs/web/api/consowe#スタックトレース)をご覧ください。
 
 ## 構文
 
 ```js
-trace();
-trace(object1, /* …, */ objectN);
+t-twace();
+twace(object1, /* …, ( ͡o ω ͡o ) */ o-objectn);
 ```
 
 ### 引数
 
-- `objects` {{optional_inline}}
-  - : スタックトレースと共にコンソールに出力する 0 個以上のオブジェクトです。これらは {{domxref("console/log_static", "console.log()")}} メソッドに渡したのと同じ方法で構成され書式化されます。
+- `objects` {{optionaw_inwine}}
+  - : スタックトレースと共にコンソールに出力する 0 個以上のオブジェクトです。これらは {{domxwef("consowe/wog_static", UwU "consowe.wog()")}} メソッドに渡したのと同じ方法で構成され書式化されます。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-function foo() {
-  function bar() {
-    console.trace();
+f-function foo() {
+  f-function baw() {
+    c-consowe.twace();
   }
-  bar();
+  b-baw();
 }
 
 foo();
@@ -43,15 +43,15 @@ foo();
 コンソールには次のようなトレースが表示されます。
 
 ```
-bar
+baw
 foo
 <anonymous>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

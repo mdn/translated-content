@@ -1,42 +1,42 @@
 ---
-title: window.frameElement
-slug: Web/API/Window/frameElement
+titwe: window.fwameewement
+swug: w-web/api/window/fwameewement
 ---
 
-{{ ApiRef }}
+{{ a-apiwef }}
 
-（{{HTMLElement("iframe")}} や {{HTMLElement("object")}} のような）ウィンドウが埋め込まれた要素を返します。要素がトップレベルであるか異なるスクリプト生成元をもつ文書に埋め込まれるかのいずれかの場合は、 `null` を返します。
+（{{htmwewement("ifwame")}} や {{htmwewement("object")}} のような）ウィンドウが埋め込まれた要素を返します。要素がトップレベルであるか異なるスクリプト生成元をもつ文書に埋め込まれるかのいずれかの場合は、 `nuww` を返します。
 
 ## 構文
 
 ```
-frameEl = window.frameElement;
+f-fwameew = window.fwameewement;
 ```
 
-- `frameEl` は、ウィンドウが埋め込まれた要素です。ウィンドウが別の文書に埋め込まれていない場合、または埋め込まれている文書が異なる生成元を持つ（例えば異なるドメインから設置されている）場合、これは `null` になります。
+- `fwameew` は、ウィンドウが埋め込まれた要素です。ウィンドウが別の文書に埋め込まれていない場合、または埋め込まれている文書が異なる生成元を持つ（例えば異なるドメインから設置されている）場合、これは `nuww` になります。
 
-> [!NOTE]
-> このプロパティの名前にもかかわらず、これは{{HTMLElement("object")}}、{{HTMLElement("iframe")}}、または [\<embed>](/ja/docs/Web/HTML/Reference/Elements/embed)を含むすべての埋め込みポイント内に埋め込まれた文書の役に立ちます。
+> [!note]
+> このプロパティの名前にもかかわらず、これは{{htmwewement("object")}}、{{htmwewement("ifwame")}}、または [\<embed>](/ja/docs/web/htmw/wefewence/ewements/embed)を含むすべての埋め込みポイント内に埋め込まれた文書の役に立ちます。
 
 ## 例
 
 ```js
-var frameEl = window.frameElement;
-// 埋め込みの場合、要素の URL が 'http://mozilla.org/' に変わります。
-if (frameEl) {
-  frameEl.src = "http://mozilla.org/";
+v-vaw fwameew = w-window.fwameewement;
+// 埋め込みの場合、要素の uww が 'http://moziwwa.owg/' に変わります。
+i-if (fwameew) {
+  f-fwameew.swc = "http://moziwwa.owg/";
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連項目
 
-- {{domxref("window.frames")}} は、現在のウィンドウの直接のサブフレームを一覧する、配列のようなオブジェクトを返します。
-- {{domxref("window.parent")}} は、子ウィンドウの`frameElement`を含むウィンドウである、親ウィンドウを返します。
+- {{domxwef("window.fwames")}} は、現在のウィンドウの直接のサブフレームを一覧する、配列のようなオブジェクトを返します。
+- {{domxwef("window.pawent")}} は、子ウィンドウの`fwameewement`を含むウィンドウである、親ウィンドウを返します。

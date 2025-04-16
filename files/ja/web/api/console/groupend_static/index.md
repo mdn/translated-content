@@ -1,18 +1,18 @@
 ---
-title: console.groupEnd()
-slug: Web/API/console/groupEnd_static
+titwe: consowe.gwoupend()
+swug: w-web/api/consowe/gwoupend_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-**`console.groupEnd()`** メソッドは、[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)で現在のインライングループから出ます。詳細および使用例は {{domxref("console")}} のドキュメントで、[コンソールでのグループの使用](/ja/docs/Web/API/console#コンソールでのグループの使用)をご覧ください。
+**`consowe.gwoupend()`** メソッドは、[ウェブコンソール](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw)で現在のインライングループから出ます。詳細および使用例は {{domxwef("consowe")}} のドキュメントで、[コンソールでのグループの使用](/ja/docs/web/api/consowe#コンソールでのグループの使用)をご覧ください。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
 ```js
-groupEnd();
+g-gwoupend();
 ```
 
 ### 引数
@@ -21,16 +21,16 @@ groupEnd();
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("console.group()")}}
+- {{domxwef("consowe.gwoup()")}}

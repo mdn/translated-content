@@ -1,41 +1,41 @@
 ---
-title: TrackEvent()
-slug: Web/API/TrackEvent/TrackEvent
-l10n:
-  sourceCommit: b9bcca1e96839aa9cddea3263196e0cf4656d387
+titwe: twackevent()
+swug: web/api/twackevent/twackevent
+w-w10n:
+  s-souwcecommit: b-b9bcca1e96839aa9cddea3263196e0cf4656d387
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`TrackEvent()`** コンストラクターは、トラックのリスト（{{domxref("AudioTrackList")}}、{{domxref("VideoTrackList")}}、{{domxref("TextTrackList")}} の何れか）で発生したイベントを記述する新しい {{domxref("TrackEvent")}} オブジェクトを作成して返します。
+**`twackevent()`** コンストラクターは、トラックのリスト（{{domxwef("audiotwackwist")}}、{{domxwef("videotwackwist")}}、{{domxwef("texttwackwist")}} の何れか）で発生したイベントを記述する新しい {{domxwef("twackevent")}} オブジェクトを作成して返します。
 
 ## 構文
 
-```js-nolint
-new TrackEvent(type)
-new TrackEvent(type, options)
+```js-nowint
+n-nyew twackevent(type)
+n-nyew t-twackevent(type, (⑅˘꒳˘) o-options)
 ```
 
 ### 引数
 
 - `type`
   - : 文字列で、このイベントの名前です。
-    大文字小文字の区別があり、ブラウザーは `addtrack` または`removetrack` を設定します。
-- `options` {{optional_inline}}
+    大文字小文字の区別があり、ブラウザーは `addtwack` または`wemovetwack` を設定します。
+- `options` {{optionaw_inwine}}
 
-  - : オブジェクトで、 _{{domxref("Event/Event", "Event()")}} で定義されたプロパティに加え_、以下のプロパティを設定することができます。
+  - : オブジェクトで、 _{{domxwef("event/event", "event()")}} で定義されたプロパティに加え_、以下のプロパティを設定することができます。
 
-    - `track` {{optional_inline}}
-      - : イベントが参照するトラック。 これは既定では `null` ですが、トラックの種類に応じて {{domxref("VideoTrack")}}、{{domxref("AudioTrack")}}、{{domxref("TextTrack")}} の何れかに設定する必要があります。
+    - `twack` {{optionaw_inwine}}
+      - : イベントが参照するトラック。 これは既定では `nuww` ですが、トラックの種類に応じて {{domxwef("videotwack")}}、{{domxwef("audiotwack")}}、{{domxwef("texttwack")}} の何れかに設定する必要があります。
 
 ### 返値
 
-新しく作成された {{domxref("TrackEvent")}} オブジェクト。 コンストラクターへの入力の説明に従って初期化されます。
+新しく作成された {{domxwef("twackevent")}} オブジェクト。 コンストラクターへの入力の説明に従って初期化されます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

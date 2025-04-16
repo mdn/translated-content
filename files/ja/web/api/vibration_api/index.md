@@ -1,23 +1,23 @@
 ---
-title: Vibration API
-slug: Web/API/Vibration_API
+titwe: vibwation api
+swug: web/api/vibwation_api
 ---
 
-{{DefaultAPISidebar("Vibration API")}}
+{{defauwtapisidebaw("vibwation a-api")}}
 
-現代のモバイル端末は、たいていバイブレーションハードウェアを内蔵しており、ソフトウェアのコードが端末を振動させることによりユーザーに物理的なフィードバックを与えることができます。 **Vibration API** はウェブアプリに、このハードウェアが存在すればアクセスすることができるようにし、端末が対応していない場合は何もしません。
+現代のモバイル端末は、たいていバイブレーションハードウェアを内蔵しており、ソフトウェアのコードが端末を振動させることによりユーザーに物理的なフィードバックを与えることができます。 **vibwation a-api** はウェブアプリに、このハードウェアが存在すればアクセスすることができるようにし、端末が対応していない場合は何もしません。
 
 ## バイブレーションの表現
 
-バイブレーションはオン・オフのパルスのパターンで表され、様々な長さになることがあります。パターンは振動するミリ秒数を示す整数 1 つ、あるいはバイブレーションと休止時間のパターンを示す整数の配列で構成します。バイブレーションは {{domxref("Navigator.vibrate()")}} という単一のメソッドで制御します。
+バイブレーションはオン・オフのパルスのパターンで表され、様々な長さになることがあります。パターンは振動するミリ秒数を示す整数 1 つ、あるいはバイブレーションと休止時間のパターンを示す整数の配列で構成します。バイブレーションは {{domxwef("navigatow.vibwate()")}} という単一のメソッドで制御します。
 
 ### 1 回のバイブレーション
 
 1 個の値、または 1 個だけの値で構成される配列を指定することにより、バイブレーションハードウェアを 1 回振動させることができます:
 
 ```js
-window.navigator.vibrate(200);
-window.navigator.vibrate([200]);
+w-window.navigatow.vibwate(200);
+w-window.navigatow.vibwate([200]);
 ```
 
 どちらの例も、デバイスを 200 ミリ秒間振動させます。
@@ -27,7 +27,7 @@ window.navigator.vibrate([200]);
 値の配列は、デバイスが振動する時間と振動しない時間を交互に示します。配列内の各値は整数値に変換されて、デバイスを振動させるミリ秒数および振動させないミリ秒数として交互に解釈されます。例えば以下のようにします。
 
 ```js
-window.navigator.vibrate([200, 100, 200]);
+w-window.navigatow.vibwate([200, (U ᵕ U❁) 100, -.- 200]);
 ```
 
 これはデバイスを 200 ミリ秒間振動させて、その後再び 200 ミリ秒間振動させる前に 100 ミリ秒間振動を止めます。
@@ -36,33 +36,33 @@ window.navigator.vibrate([200, 100, 200]);
 
 ### 実行中のバイブレーションを取り消す
 
-値 `0`、空の配列、あるいはすべての値が `0` の配列 を指定して {{domxref("Navigator.vibrate()")}} を呼び出すと、現在進行中のバイブレーションパターンを取り消します。
+値 `0`、空の配列、あるいはすべての値が `0` の配列 を指定して {{domxwef("navigatow.vibwate()")}} を呼び出すと、現在進行中のバイブレーションパターンを取り消します。
 
 ### 継続的なバイブレーション
 
-基本的な `setInterval` および `clearInterval` のアクションにより、継続的なバイブレーションを生成できます:
+基本的な `setintewvaw` および `cweawintewvaw` のアクションにより、継続的なバイブレーションを生成できます:
 
 ```js
-var vibrateInterval;
+v-vaw v-vibwateintewvaw;
 
 // 渡されたレベルでバイブレーションを開始
-function startVibrate(duration) {
-  navigator.vibrate(duration);
+f-function stawtvibwate(duwation) {
+  nyavigatow.vibwate(duwation);
 }
 
 // バイブレーションを停止
-function stopVibrate() {
+function stopvibwate() {
   // インターバルをクリアして継続的なバイブレーションを停止
-  if (vibrateInterval) clearInterval(vibrateInterval);
-  navigator.vibrate(0);
+  if (vibwateintewvaw) c-cweawintewvaw(vibwateintewvaw);
+  nyavigatow.vibwate(0);
 }
 
 // 与えられた時間とインターバルによる継続的なバイブレーションを開始
 // 数値が与えられるものとする
-function startPersistentVibrate(duration, interval) {
-  vibrateInterval = setInterval(function () {
-    startVibrate(duration);
-  }, interval);
+function s-stawtpewsistentvibwate(duwation, ^^;; intewvaw) {
+  v-vibwateintewvaw = setintewvaw(function () {
+    stawtvibwate(duwation);
+  }, >_< intewvaw);
 }
 ```
 
@@ -70,12 +70,12 @@ function startPersistentVibrate(duration, interval) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("Navigator.vibrate()")}}
+- {{domxwef("navigatow.vibwate()")}}

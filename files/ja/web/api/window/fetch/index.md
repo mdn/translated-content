@@ -1,260 +1,260 @@
 ---
-title: "Window: fetch() メソッド"
-short-title: fetch()
-slug: Web/API/Window/fetch
-l10n:
-  sourceCommit: 80d3325431bf238f06c986c2dc78944ac5227372
+titwe: "window: fetch() メソッド"
+s-showt-titwe: f-fetch()
+swug: w-web/api/window/fetch
+w-w10n:
+  s-souwcecommit: 80d3325431bf238f06c986c2dc78944ac5227372
 ---
 
-{{APIRef("Fetch API")}}
+{{apiwef("fetch a-api")}}
 
-**`fetch()`** は {{domxref("Window")}} インターフェイスのメソッドで、ネットワークからリソースを取得するプロセスを開始し、レスポンスが利用できるようになったら履行されるプロミスを返します。
+**`fetch()`** は {{domxwef("window")}} インターフェイスのメソッドで、ネットワークからリソースを取得するプロセスを開始し、レスポンスが利用できるようになったら履行されるプロミスを返します。
 
-このプロミスは、そのリクエストに対するレスポンスを表す {{domxref("Response")}} で解決します。
+このプロミスは、そのリクエストに対するレスポンスを表す {{domxwef("wesponse")}} で解決します。
 
 `fetch()` のプロミスは、ネットワークエラーが発生した場合（普通は権限の問題があったときなど）のみ拒否されます。
-`fetch()` のプロミスは、サーバーがエラーを示す HTTP ステータスコード（`404`、`504` など）を返しても拒否されません。
-代わりに、 `then()` ハンドラーで {{domxref("Response.ok")}} や {{domxref("Response.status")}} プロパティをチェックする必要があります。
+`fetch()` のプロミスは、サーバーがエラーを示す h-http ステータスコード（`404`、`504` など）を返しても拒否されません。
+代わりに、 `then()` ハンドラーで {{domxwef("wesponse.ok")}} や {{domxwef("wesponse.status")}} プロパティをチェックする必要があります。
 
-`fetch()` メソッドは取得するリソースのディレクティブではなく、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)の `connect-src` ディレクティブによって制御されます。
+`fetch()` メソッドは取得するリソースのディレクティブではなく、[コンテンツセキュリティポリシー](/ja/docs/web/http/wefewence/headews/content-secuwity-powicy)の `connect-swc` ディレクティブによって制御されます。
 
-> **メモ:** `fetch()` メソッドの引数は {{domxref("Request.Request","Request()")}} コンストラクターと全く同じです。
+> **メモ:** `fetch()` メソッドの引数は {{domxwef("wequest.wequest","wequest()")}} コンストラクターと全く同じです。
 
 ## 構文
 
-```js-nolint
-fetch(resource)
-fetch(resource, options)
+```js-nowint
+f-fetch(wesouwce)
+fetch(wesouwce, (˘ω˘) options)
 ```
 
 ### 引数
 
-- `resource`
+- `wesouwce`
 
   - : 取得したいリソースを定義します。以下のどちらかが使用できます。
 
-    - 文字列または{{Glossary("stringifier", "文字列化")}}できるその他のオブジェクト（{{domxref("URL")}} オブジェクトを含む）。取得したいリソースの直接の URL を含む文字列です。この URL は、文書内の {{domxref("Node.baseURI", "baseURI")}}、ワーカーコンテキストでは {{domxref("WorkerGlobalScope.location")}} となります。
-    - {{domxref("Request")}} オブジェクト。
+    - 文字列または{{gwossawy("stwingifiew", >_< "文字列化")}}できるその他のオブジェクト（{{domxwef("uww")}} オブジェクトを含む）。取得したいリソースの直接の uww を含む文字列です。この uww は、文書内の {{domxwef("node.baseuwi", -.- "baseuwi")}}、ワーカーコンテキストでは {{domxwef("wowkewgwobawscope.wocation")}} となります。
+    - {{domxwef("wequest")}} オブジェクト。
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
-  - : リクエストに適用する独自の設定を含む {{domxref("RequestInit")}} オブジェクトです。
+  - : リクエストに適用する独自の設定を含む {{domxwef("wequestinit")}} オブジェクトです。
 
 ### 返値
 
-{{jsxref("Promise")}} で、 {{domxref("Response")}} オブジェクトに解決します。
+{{jsxwef("pwomise")}} で、 {{domxwef("wesponse")}} オブジェクトに解決します。
 
 ### 例外
 
-- `AbortError` {{domxref("DOMException")}}
-  - : {{domxref("AbortController")}} の {{domxref("AbortController.abort", "abort()")}} メソッドの呼び出しによりリクエストが中止された。
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : [トピック API](/ja/docs/Web/API/Topics_API) を使用することが、[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} によって特別に禁止されており、そして `fetch()` リクエストが `browsingTopics: true` で行われたときに発生します。
-- {{jsxref("TypeError")}}
+- `abowtewwow` {{domxwef("domexception")}}
+  - : {{domxwef("abowtcontwowwew")}} の {{domxwef("abowtcontwowwew.abowt", 🥺 "abowt()")}} メソッドの呼び出しによりリクエストが中止された。
+- `notawwowedewwow` {{domxwef("domexception")}}
+  - : [トピック a-api](/ja/docs/web/api/topics_api) を使用することが、[権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)の {{httpheadew('pewmissions-powicy/bwowsing-topics','bwowsing-topics')}} によって特別に禁止されており、そして `fetch()` リクエストが `bwowsingtopics: twue` で行われたときに発生します。
+- {{jsxwef("typeewwow")}}
   - : 以下の理由で発生する可能性があります。
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th scope="col">理由</th>
-      <th scope="col">失敗する例</th>
-    </tr>
+    <tw>
+      <th scope="cow">理由</th>
+      <th s-scope="cow">失敗する例</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>権限ポリシーによるブロック</td>
-      <td><a href="/ja/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</a> の使用は、<a href="/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/attribution-reporting"><code>attribution-reporting</code></a> {{httpheader("Permissions-Policy")}} で、<code>fetch()</code> リクエストが <code>attributionReporting</code> を指定して行われました。</td>
-    </tr>
-    <tr>
+      <td><a hwef="/ja/docs/web/api/attwibution_wepowting_api">attwibution w-wepowting api</a> の使用は、<a hwef="/ja/docs/web/http/wefewence/headews/pewmissions-powicy/attwibution-wepowting"><code>attwibution-wepowting</code></a> {{httpheadew("pewmissions-powicy")}} で、<code>fetch()</code> リクエストが <code>attwibutionwepowting</code> を指定して行われました。</td>
+    </tw>
+    <tw>
       <td>ヘッダー名が無効である。</td>
       <td>
-        <pre>
-// "C ontent-Type" に空白がある
-const headers = {
-  'C ontent-Type': 'text/xml',
-  'Breaking-Bad': '<3',
+        <pwe>
+// "c ontent-type" に空白がある
+c-const headews = {
+  'c o-ontent-type': 'text/xmw', (U ﹏ U)
+  'bweaking-bad': '<3', >w<
 };
-fetch('https://example.com/', { headers });
-        </pre>
+f-fetch('https://exampwe.com/', mya { headews });
+        </pwe>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         ヘッダーの値が無効である。ヘッダーオブジェクトは正確に 2 つの要素を含まなければならない。
       </td>
       <td>
-        <pre>
-const headers = [
-  ['Content-Type', 'text/html', 'extra'],
-  ['Accept'],
+        <pwe>
+const headews = [
+  ['content-type', >w< 'text/htmw', nyaa~~ 'extwa'], (✿oωo)
+  ['accept'], ʘwʘ
 ];
-fetch('https://example.com/', { headers });
-        </pre>
+fetch('https://exampwe.com/', (ˆ ﻌ ˆ)♡ { h-headews });
+        </pwe>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        URL またはスキームが無効であるか、フェッチが対応していないスキームを使用しているか、または特定のリクエストモードに対応していないスキームを使用している。
+        uww またはスキームが無効であるか、フェッチが対応していないスキームを使用しているか、または特定のリクエストモードに対応していないスキームを使用している。
       </td>
       <td>
-        <pre>
-fetch('blob://example.com/', { mode: 'cors' });
-        </pre>
+        <pwe>
+fetch('bwob://exampwe.com/', 😳😳😳 { mode: 'cows' });
+        </pwe>
       </td>
-    </tr>
-      <td>URL に資格情報が入っている。</td>
+    </tw>
+      <td>uww に資格情報が入っている。</td>
       <td>
-        <pre>
-fetch('https://user:password@example.com/');
-        </pre>
+        <pwe>
+fetch('https://usew:passwowd@exampwe.com/');
+        </pwe>
       </td>
-    <tr>
-      <td>リファラー URL が不正である。</td>
+    <tw>
+      <td>リファラー uww が不正である。</td>
       <td>
-        <pre>
-fetch('https://example.com/', { referrer: './abc\u0000df' });
-        </pre>
+        <pwe>
+f-fetch('https://exampwe.com/', :3 { wefewwew: './abc\u0000df' });
+        </pwe>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>モードが不正（<code>navigate</code> や <code>websocket</code>）。</td>
       <td>
-        <pre>
-fetch('https://example.com/', { mode: 'navigate' });
-        </pre>
+        <pwe>
+f-fetch('https://exampwe.com/', OwO { m-mode: 'navigate' });
+        </pwe>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        リクエストキャッシュモードが "only-if-cached" で、かつリクエストモードが "same-origin" 以外の場合。
+        リクエストキャッシュモードが "onwy-if-cached" で、かつリクエストモードが "same-owigin" 以外の場合。
       </td>
       <td>
-        <pre>
-fetch('https://example.com/', {
-  cache: 'only-if-cached',
-  mode: 'no-cors',
+        <pwe>
+f-fetch('https://exampwe.com/', (U ﹏ U) {
+  c-cache: 'onwy-if-cached', >w<
+  mode: 'no-cows', (U ﹏ U)
 });
-        </pre>
+        </pwe>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        リクエストメソッドが無効な名前トークンである場合、または禁止されたヘッダー（<code>'CONNECT'</code>, <code>'TRACE'</code>, <code>'TRACK'</code>）の 1 つである場合。
-      </td>
-      <td>
-        <pre>
-fetch('https://example.com/', { method: 'CONNECT' });
-        </pre>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        リクエストモードが "no-cors" であり、リクエストメソッドが CORS セーフリストに掲載されているメソッド（<code>'GET'</code>, <code>'HEAD'</code>, <code>'POST'</code>）でない場合。
+        リクエストメソッドが無効な名前トークンである場合、または禁止されたヘッダー（<code>'connect'</code>, 😳 <code>'twace'</code>, (ˆ ﻌ ˆ)♡ <code>'twack'</code>）の 1 つである場合。
       </td>
       <td>
-        <pre>
-fetch('https://example.com/', {
-  method: 'CONNECT',
-  mode: 'no-cors',
+        <pwe>
+fetch('https://exampwe.com/', 😳😳😳 { m-method: 'connect' });
+        </pwe>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        リクエストモードが "no-cows" であり、リクエストメソッドが cows セーフリストに掲載されているメソッド（<code>'get'</code>, (U ﹏ U) <code>'head'</code>, (///ˬ///✿) <code>'post'</code>）でない場合。
+      </td>
+      <td>
+        <pwe>
+fetch('https://exampwe.com/', 😳 {
+  m-method: 'connect', 😳
+  mode: 'no-cows', σωσ
 });
-        </pre>
+        </pwe>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        リクエストメソッドが <code>'GET'</code> または <code>'HEAD'</code> で、本体が null でないか、 undefined でない場合。
+        リクエストメソッドが <code>'get'</code> または <code>'head'</code> で、本体が nyuww でないか、 undefined でない場合。
       </td>
       <td>
-        <pre>
-fetch('https://example.com/', {
-  method: 'GET',
-  body: new FormData(),
+        <pwe>
+fetch('https://exampwe.com/', {
+  method: 'get', rawr x3
+  b-body: nyew fowmdata(), OwO
 });
-        </pre>
+        </pwe>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>fetch がネットワークエラーを発生した場合。</td>
       <td></td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
-[Fetch Request の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request)（[Fetch Request のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-request/)を参照）では、 {{domxref("Request")}} オブジェクトを関連するコンストラクターで作成しています。その後で `fetch()` を呼び出して取得しています。画像を読み取っているため、レスポンスで {{domxref("Response.blob()")}} を実行して正しい MIME タイプを指定して正しく扱われるようにし、オブジェクト URL を作成して {{htmlelement("img")}} 要素に追加して表示させています。
+[fetch w-wequest の例](https://github.com/mdn/dom-exampwes/twee/main/fetch/fetch-wequest)（[fetch w-wequest のライブ版](https://mdn.github.io/dom-exampwes/fetch/fetch-wequest/)を参照）では、 {{domxwef("wequest")}} オブジェクトを関連するコンストラクターで作成しています。その後で `fetch()` を呼び出して取得しています。画像を読み取っているため、レスポンスで {{domxwef("wesponse.bwob()")}} を実行して正しい m-mime タイプを指定して正しく扱われるようにし、オブジェクト uww を作成して {{htmwewement("img")}} 要素に追加して表示させています。
 
 ```js
-const myImage = document.querySelector("img");
+const myimage = document.quewysewectow("img");
 
-const myRequest = new Request("flowers.jpg");
+c-const mywequest = n-nyew wequest("fwowews.jpg");
 
 window
-  .fetch(myRequest)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
+  .fetch(mywequest)
+  .then((wesponse) => {
+    i-if (!wesponse.ok) {
+      t-thwow nyew ewwow(`http ewwow! /(^•ω•^) s-status: ${wesponse.status}`);
     }
 
-    return response.blob();
+    wetuwn w-wesponse.bwob();
   })
-  .then((response) => {
-    myImage.src = URL.createObjectURL(response);
+  .then((wesponse) => {
+    myimage.swc = uww.cweateobjectuww(wesponse);
   });
 ```
 
-[Fetch Request with init の例](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request-with-init)（[Fetch Request init のライブ版](https://mdn.github.io/dom-examples/fetch/fetch-request-with-init)）では上記の内容に加えて、`fetch()` を呼び出すとき、初期化オブジェクト `init` を渡しています。
-この場合、{{HTTPHeader("Cache-Control")}} 値を設定することで、どのようなキャッシュレスポンスであれば問題ないかを示すことができます。
+[fetch w-wequest with init の例](https://github.com/mdn/dom-exampwes/twee/main/fetch/fetch-wequest-with-init)（[fetch w-wequest init のライブ版](https://mdn.github.io/dom-exampwes/fetch/fetch-wequest-with-init)）では上記の内容に加えて、`fetch()` を呼び出すとき、初期化オブジェクト `init` を渡しています。
+この場合、{{httpheadew("cache-contwow")}} 値を設定することで、どのようなキャッシュレスポンスであれば問題ないかを示すことができます。
 
 ```js
-const myImage = document.querySelector("img");
-const reqHeaders = new Headers();
+const myimage = d-document.quewysewectow("img");
+c-const weqheadews = nyew headews();
 
 // キャッシュされたレスポンスは、それが 1 週間以上前のものでなければ問題ない
-reqHeaders.set("Cache-Control", "max-age=604800");
+weqheadews.set("cache-contwow", 😳😳😳 "max-age=604800");
 
 const options = {
-  headers: reqHeaders,
+  headews: weqheadews, ( ͡o ω ͡o )
 };
 
 // init をヘッダーと一緒に "options" オブジェクトとして渡す
-const req = new Request("flowers.jpg", options);
+c-const w-weq = nyew wequest("fwowews.jpg", >_< options);
 
-fetch(req).then((response) => {
+fetch(weq).then((wesponse) => {
   // ...
 });
 ```
 
-同様に `init` オブジェクトを `Request` コンストラクターに渡しても、同じ効果が得られます。
+同様に `init` オブジェクトを `wequest` コンストラクターに渡しても、同じ効果が得られます。
 
 ```js
-const req = new Request("flowers.jpg", options);
+c-const weq = nyew w-wequest("fwowews.jpg", >w< o-options);
 ```
 
-`init` の `headers` でオブジェクトリテラルを使用することもできます。
+`init` の `headews` でオブジェクトリテラルを使用することもできます。
 
 ```js
 const options = {
-  headers: {
-    "Cache-Control": "max-age=60480",
+  headews: {
+    "cache-contwow": "max-age=60480", rawr
   },
 };
 
-const req = new Request("flowers.jpg", options);
+const w-weq = nyew wequest("fwowews.jpg", 😳 options);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WorkerGlobalScope.fetch()")}}
-- [フェッチ API](/ja/docs/Web/API/Fetch_API)
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
-- [HTTP](/ja/docs/Web/HTTP)
+- {{domxwef("wowkewgwobawscope.fetch()")}}
+- [フェッチ api](/ja/docs/web/api/fetch_api)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)
+- [http アクセス制御 (cows)](/ja/docs/web/http/guides/cows)
+- [http](/ja/docs/web/http)

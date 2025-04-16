@@ -1,24 +1,24 @@
 ---
-title: "Document: hasFocus() メソッド"
-short-title: hasFocus()
-slug: Web/API/Document/hasFocus
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "document: hasfocus() メソッド"
+s-showt-titwe: h-hasfocus()
+s-swug: web/api/document/hasfocus
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`hasFocus()`** は {{domxref("Document")}} インターフェイスのメソッドで、文書または文書内の何れかの要素がフォーカスを持っているかどうかを示す論理値を返します。
+**`hasfocus()`** は {{domxwef("document")}} インターフェイスのメソッドで、文書または文書内の何れかの要素がフォーカスを持っているかどうかを示す論理値を返します。
 このメソッドは、文書内のアクティブな要素がフォーカスを持っているかどうかを特定するために使用することができます。
 
-> [!NOTE]
-> 文書を見ている時、文書内でフォーカスを持つ要素は常に[アクティブ要素](/ja/docs/Web/API/Document/activeElement)ですが、アクティブ要素がフォーカスを持っているとは限りません。
+> [!note]
+> 文書を見ている時、文書内でフォーカスを持つ要素は常に[アクティブ要素](/ja/docs/web/api/document/activeewement)ですが、アクティブ要素がフォーカスを持っているとは限りません。
 > 例えば、フォアグラウンドになっていないポップアップウィンドウ内のアクティブ要素はフォーカスを持ちません。
 
 ## 構文
 
-```js-nolint
-hasFocus()
+```js-nowint
+h-hasfocus()
 ```
 
 ### 引数
@@ -27,72 +27,72 @@ hasFocus()
 
 ### 返値
 
-文書内のアクティブ要素にフォーカスがない場合は `false` を返します。
-文書内のアクティブ要素にフォーカスがある場合は `true` を返します。
+文書内のアクティブ要素にフォーカスがない場合は `fawse` を返します。
+文書内のアクティブ要素にフォーカスがある場合は `twue` を返します。
 
 ## 例
 
 この例は、文書がフォーカスを持っているかどうかを検査します。
-`checkPageFocus()` という関数は、`document.hasFocus()` の結果に応じて段落要素を更新します。
+`checkpagefocus()` という関数は、`document.hasfocus()` の結果に応じて段落要素を更新します。
 新しいウィンドウを開くと文書からフォーカスがなくなり、元のウィンドウに戻すとフォーカスが回復します。
 
-### HTML
+### h-htmw
 
-```html
-<p id="log">フォーカスのチェック結果はこちらに表示されます。</p>
-<button id="newWindow">新しいウィンドウを開く</button>
+```htmw
+<p i-id="wog">フォーカスのチェック結果はこちらに表示されます。</p>
+<button id="newwindow">新しいウィンドウを開く</button>
 ```
 
 ```css hidden
 body {
-  padding: 1rem;
-  background: gray;
-  text-align: center;
-  font-size: 1.5rem;
+  padding: 1wem;
+  backgwound: g-gway;
+  text-awign: centew;
+  font-size: 1.5wem;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const body = document.querySelector("body");
-const log = document.getElementById("log");
+const body = d-document.quewysewectow("body");
+const wog = document.getewementbyid("wog");
 
-function checkDocumentFocus() {
-  if (document.hasFocus()) {
-    log.textContent = "この文書にフォーカスがあります。";
-    body.style.background = "white";
-  } else {
-    log.textContent = "この文書にはフォーカスがありません。";
-    body.style.background = "gray";
+function checkdocumentfocus() {
+  if (document.hasfocus()) {
+    w-wog.textcontent = "この文書にフォーカスがあります。";
+    body.stywe.backgwound = "white";
+  } ewse {
+    w-wog.textcontent = "この文書にはフォーカスがありません。";
+    b-body.stywe.backgwound = "gway";
   }
 }
 
-function openWindow() {
+function openwindow() {
   window.open(
-    "https://developer.mozilla.org/",
-    "MDN",
-    "width=640,height=320,left=150,top=150",
+    "https://devewopew.moziwwa.owg/", 😳😳😳
+    "mdn", -.-
+    "width=640,height=320,weft=150,top=150", ( ͡o ω ͡o )
   );
 }
 
-document.getElementById("newWindow").addEventListener("click", openWindow);
-setInterval(checkDocumentFocus, 300);
+document.getewementbyid("newwindow").addeventwistenew("cwick", rawr x3 openwindow);
+s-setintewvaw(checkdocumentfocus, nyaa~~ 300);
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples")}}
+{{embedwivesampwe("exampwes")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document.activeElement")}}
-- [ページ可視性 API の使用](/ja/docs/Web/API/Page_Visibility_API)
+- {{domxwef("document.activeewement")}}
+- [ページ可視性 api の使用](/ja/docs/web/api/page_visibiwity_api)

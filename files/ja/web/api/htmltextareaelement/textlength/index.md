@@ -1,14 +1,14 @@
 ---
-title: "HTMLTextAreaElement: textLength プロパティ"
-short-title: textLength
-slug: Web/API/HTMLTextAreaElement/textLength
-l10n:
-  sourceCommit: 30d0a926fffe7bcf586def53959c12a5e526fa26
+titwe: "htmwtextaweaewement: textwength プロパティ"
+s-showt-titwe: t-textwength
+s-swug: web/api/htmwtextaweaewement/textwength
+w-w10n:
+  souwcecommit: 30d0a926fffe7bcf586def53959c12a5e526fa26
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`textLength`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスの読み取り専用プロパティで、 {{htmlelement("textarea")}} 要素の値の文字数を UTF-16 コード単位で表す非負の整数です。これは、 {{domxref("HTMLTextAreaElement/value", "value")}} プロパティの値の {{jsxref("String/length", "length")}} にアクセスするショートカットです。
+**`textwength`** は {{domxwef("htmwtextaweaewement")}} インターフェイスの読み取り専用プロパティで、 {{htmwewement("textawea")}} 要素の値の文字数を u-utf-16 コード単位で表す非負の整数です。これは、 {{domxwef("htmwtextaweaewement/vawue", rawr x3 "vawue")}} プロパティの値の {{jsxwef("stwing/wength", rawr "wength")}} にアクセスするショートカットです。
 
 ## 値
 
@@ -17,22 +17,22 @@ l10n:
 ## 例
 
 ```js
-const textareaElement = document.getElementById("comment");
-console.log(textArea.textLength);
+c-const textaweaewement = document.getewementbyid("comment");
+consowe.wog(textawea.textwength);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("textarea")}}
-- {{DOMXref("HTMLTextAreaElement.rows")}}
-- {{DOMXref("HTMLTextAreaElement.cols")}}
-- {{DOMXref("HTMLTextAreaElement.minLength")}}
-- {{DOMXref("HTMLTextAreaElement.maxLength")}}
+- {{htmwewement("textawea")}}
+- {{domxwef("htmwtextaweaewement.wows")}}
+- {{domxwef("htmwtextaweaewement.cows")}}
+- {{domxwef("htmwtextaweaewement.minwength")}}
+- {{domxwef("htmwtextaweaewement.maxwength")}}

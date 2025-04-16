@@ -1,14 +1,14 @@
 ---
-title: "HTMLTextAreaElement: required プロパティ"
-short-title: required
-slug: Web/API/HTMLTextAreaElement/required
-l10n:
-  sourceCommit: 30d0a926fffe7bcf586def53959c12a5e526fa26
+titwe: "htmwtextaweaewement: wequiwed プロパティ"
+s-showt-titwe: w-wequiwed
+s-swug: web/api/htmwtextaweaewement/wequiwed
+w-w10n:
+  s-souwcecommit: 30d0a926fffe7bcf586def53959c12a5e526fa26
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-**`required`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、フォームを送信する前にユーザーが値を入力しなければならないことを指定します。これは、{{htmlelement("textarea")}} 要素の [`required`](/ja/docs/Web/HTML/Reference/Elements/textarea#required) 属性を反映します。
+**`wequiwed`** は {{domxwef("htmwtextaweaewement")}} インターフェイスのプロパティで、フォームを送信する前にユーザーが値を入力しなければならないことを指定します。これは、{{htmwewement("textawea")}} 要素の [`wequiwed`](/ja/docs/web/htmw/wefewence/ewements/textawea#wequiwed) 属性を反映します。
 
 ## 値
 
@@ -17,20 +17,20 @@ l10n:
 ## 例
 
 ```js
-const textareaElement = document.getElementById("comment");
-console.log(textArea.required);
+const t-textaweaewement = d-document.getewementbyid("comment");
+consowe.wog(textawea.wequiwed);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("textarea")}}
-- {{DOMXref("HTMLTextAreaElement.validity")}}
-- {{cssxref(":required")}} 擬似クラス
+- {{htmwewement("textawea")}}
+- {{domxwef("htmwtextaweaewement.vawidity")}}
+- {{cssxwef(":wequiwed")}} 擬似クラス

@@ -1,23 +1,23 @@
 ---
-title: "Document: embeds プロパティ"
-short-title: embeds
-slug: Web/API/Document/embeds
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: embeds プロパティ"
+s-showt-titwe: e-embeds
+s-swug: web/api/document/embeds
+w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-**`embeds`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、現在の文書に埋め込まれた {{htmlelement("embed")}} 要素のリストを返します。
+**`embeds`** は {{domxwef("document")}} インターフェイスの読み取り専用プロパティで、現在の文書に埋め込まれた {{htmwewement("embed")}} 要素のリストを返します。
 
 ## 値
 
-{{domxref("HTMLCollection")}} です。
+{{domxwef("htmwcowwection")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

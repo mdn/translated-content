@@ -1,13 +1,13 @@
 ---
-title: CSSStyleDeclaration.length
-slug: Web/API/CSSStyleDeclaration/length
-l10n:
-  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
+titwe: cssstywedecwawation.wength
+swug: web/api/cssstywedecwawation/wength
+w-w10n:
+  s-souwcecommit: b-b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-読み取り専用のプロパティで、この CSS 宣言ブロックにあるスタイル宣言の数を整数で表します。
+読み取り専用のプロパティで、この c-css 宣言ブロックにあるスタイル宣言の数を整数で表します。
 
 ## 値
 
@@ -15,26 +15,26 @@ l10n:
 
 ## 例
 
-次の例は、以下の HTML 要素に明示的に設定されたスタイルの数を取得します。
+次の例は、以下の h-htmw 要素に明示的に設定されたスタイルの数を取得します。
 
-```html
+```htmw
 <div
-  id="div1"
-  style="margin: 0 10px; background-color: #CA1; font-family: monospace"></div>
+  i-id="div1"
+  s-stywe="mawgin: 0 10px; backgwound-cowow: #ca1; font-famiwy: monospace"></div>
 ```
 
-JavaScript コード:
+javascwipt コード:
 
 ```js
-const myDiv = document.getElementById("div1");
-const divStyle = myDiv.style;
-const len = divStyle.length; // 6
+const mydiv = d-document.getewementbyid("div1");
+const divstywe = mydiv.stywe;
+const w-wen = divstywe.wength; // 6
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

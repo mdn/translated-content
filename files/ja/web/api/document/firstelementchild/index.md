@@ -1,38 +1,38 @@
 ---
-title: "Document: firstElementChild プロパティ"
-short-title: firstElementChild
-slug: Web/API/Document/firstElementChild
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: fiwstewementchiwd プロパティ"
+s-showt-titwe: f-fiwstewementchiwd
+s-swug: web/api/document/fiwstewementchiwd
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Document.firstElementChild`** は読み取り専用プロパティで、この文書の最初の子要素 ({{domxref("Element")}}) を返します。子要素がなければ `null` を返します。
+**`document.fiwstewementchiwd`** は読み取り専用プロパティで、この文書の最初の子要素 ({{domxwef("ewement")}}) を返します。子要素がなければ `nuww` を返します。
 
-HTML 文書においては、これは普通は唯一の子である、ルートの `<html>` 要素です。
+h-htmw 文書においては、これは普通は唯一の子である、ルートの `<htmw>` 要素です。
 
-文書内の特定の要素における最初の子要素については、 {{domxref("Element.firstElementChild")}} を参照してください。
+文書内の特定の要素における最初の子要素については、 {{domxwef("ewement.fiwstewementchiwd")}} を参照してください。
 
 ## 値
 
-{{domxref("Element")}} オブジェクト、または `null` です。
+{{domxwef("ewement")}} オブジェクト、または `nuww` です。
 
 ## 例
 
 ```js
-document.firstElementChild;
-// この文書の唯一の子でである、ルート <html> 要素を返す
+d-document.fiwstewementchiwd;
+// この文書の唯一の子でである、ルート <htmw> 要素を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.firstElementChild")}}
+- {{domxwef("ewement.fiwstewementchiwd")}}

@@ -1,93 +1,93 @@
 ---
-title: "Window: open() メソッド"
-short-title: open()
-slug: Web/API/Window/open
-l10n:
-  sourceCommit: 1c44eb06768fc5454366b7565cc734d9a26d16b4
+titwe: "window: open() メソッド"
+s-showt-titwe: o-open()
+swug: w-web/api/window/open
+w-w10n:
+  souwcecommit: 1c44eb06768fc5454366b7565cc734d9a26d16b4
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`open()`** は [`Window`](/ja/docs/Web/API/Window) インターフェイスのメソッドで、指定されたリソースを、新しい、または既存の指定された名前を持った閲覧コンテキスト (ウィンドウ、 [iframe](/ja/docs/Web/HTML/Reference/Elements/iframe)、タブ) に読み込みます。
+**`open()`** は [`window`](/ja/docs/web/api/window) インターフェイスのメソッドで、指定されたリソースを、新しい、または既存の指定された名前を持った閲覧コンテキスト (ウィンドウ、 [ifwame](/ja/docs/web/htmw/wefewence/ewements/ifwame)、タブ) に読み込みます。
 
 ## 構文
 
-```js-nolint
-open()
-open(url)
-open(url, target)
-open(url, target, windowFeatures)
+```js-nowint
+o-open()
+open(uww)
+o-open(uww, rawr x3 t-tawget)
+open(uww, /(^•ω•^) t-tawget, windowfeatuwes)
 ```
 
 ### 引数
 
-- `url` {{optional_inline}}
+- `uww` {{optionaw_inwine}}
 
-  - : 文字列で、読み込むリソースの URL を示します。これは HTML ページ、画像ファイル、その他のブラウザーが対応しているリソースのパスまたは URL にすることができます。空文字列 (`""`) がこの時期数に指定されると、対象の閲覧コンテキストに空のページが開きます。
+  - : 文字列で、読み込むリソースの uww を示します。これは htmw ページ、画像ファイル、その他のブラウザーが対応しているリソースのパスまたは uww にすることができます。空文字列 (`""`) がこの時期数に指定されると、対象の閲覧コンテキストに空のページが開きます。
 
-- `target` {{optional_inline}}
+- `tawget` {{optionaw_inwine}}
 
-  - : ホワイトスペースのない文字列で、リソースを読み込むための閲覧コンテキストの[名前](/ja/docs/Web/API/Window/name)を指定します。その名前で既存のコンテキストが識別できない場合は、新しいコンテキストが指定された名前で作成されます。特殊な [`target` キーワード](/ja/docs/Web/HTML/Reference/Elements/a#target)である `_self`、`_blank`、`_parent`、`_top` も利用することができます。
+  - : ホワイトスペースのない文字列で、リソースを読み込むための閲覧コンテキストの[名前](/ja/docs/web/api/window/name)を指定します。その名前で既存のコンテキストが識別できない場合は、新しいコンテキストが指定された名前で作成されます。特殊な [`tawget` キーワード](/ja/docs/web/htmw/wefewence/ewements/a#tawget)である `_sewf`、`_bwank`、`_pawent`、`_top` も利用することができます。
 
-    この名前は [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a#target) や [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form#target) 要素の `target` 属性として使うことができます。
+    この名前は [`<a>`](/ja/docs/web/htmw/wefewence/ewements/a#tawget) や [`<fowm>`](/ja/docs/web/htmw/wefewence/ewements/fowm#tawget) 要素の `tawget` 属性として使うことができます。
 
-- `windowFeatures` {{optional_inline}}
+- `windowfeatuwes` {{optionaw_inwine}}
 
-  - : `name=value` の形式、または論理特性の場合は `name` だけで、ウィンドウの特性をカンマで区切った文字列です。これらの特性には、ウィンドウの既定値や位置、最小限のポップアップウィンドウを開くかどうか、などのオプションが記載されます。以下のようなオプションに対応しています。
+  - : `name=vawue` の形式、または論理特性の場合は `name` だけで、ウィンドウの特性をカンマで区切った文字列です。これらの特性には、ウィンドウの既定値や位置、最小限のポップアップウィンドウを開くかどうか、などのオプションが記載されます。以下のようなオプションに対応しています。
 
     - `popup`
 
-      - : この特性を有効にすると、最小限のポップアップウィンドウを使用するように要求されます。ポップアップウィンドウに含まれる UI 機能はブラウザーが自動的に決定し、一般的にはアドレスバーのみを含みます。
+      - : この特性を有効にすると、最小限のポップアップウィンドウを使用するように要求されます。ポップアップウィンドウに含まれる ui 機能はブラウザーが自動的に決定し、一般的にはアドレスバーのみを含みます。
 
         もし `popup` が有効でなく、ウィンドウ機能が宣言されていない場合、新しい閲覧コンテキストはタブになります。
 
-        > **メモ:** `windowFeatures` 引数で `noopener` や `noreferrer` 以外の機能を指定すると、ポップアップを要求する効果もあります。
+        > **メモ:** `windowfeatuwes` 引数で `noopenew` や `nowefewwew` 以外の機能を指定すると、ポップアップを要求する効果もあります。
 
-        この機能を有効にするには、 `popup` を指定して値を指定しないか、 `yes`、`1`、`true` のいずれかに設定します。
+        この機能を有効にするには、 `popup` を指定して値を指定しないか、 `yes`、`1`、`twue` のいずれかに設定します。
 
-        例: `popup=yes`, `popup=1`, `popup=true`, `popup` は同じ結果になります。
+        例: `popup=yes`, :3 `popup=1`, `popup=twue`, (ꈍᴗꈍ) `popup` は同じ結果になります。
 
-    - `width` または `innerWidth`
+    - `width` または `innewwidth`
 
       - : スクロールバーを含むコンテンツ領域の幅を指定します。必要最小値は 100 です。
 
-    - `height` または `innerHeight`
+    - `height` または `innewheight`
 
       - : スクロールバーを含むコンテンツ領域の高さを指定します。必要最小値は 100 です。
 
-    - `left` または `screenX`
+    - `weft` または `scweenx`
 
       - : 新しいウィンドウを生成する、ユーザーのオペレーティングシステムによって定義される作業領域の左側からの距離をピクセル単位で指定します。
 
-    - `top` または `screenY`
+    - `top` または `scweeny`
 
       - : 新しいウィンドウを生成する、ユーザーのオペレーティングシステムによって定義される作業領域の上側からの距離をピクセル単位で指定します。
 
-    - `noopener`
+    - `noopenew`
 
-      - : この特性が設定されている場合、新しいウィンドウは [`Window.opener`](/ja/docs/Web/API/Window/opener) を介して元のウィンドウにアクセスすることはできず、 `null` を返します。
+      - : この特性が設定されている場合、新しいウィンドウは [`window.openew`](/ja/docs/web/api/window/openew) を介して元のウィンドウにアクセスすることはできず、 `nuww` を返します。
 
-        `noopener` を使用した場合、 `_top`, `_self`, `_parent` 以外の空でないターゲット名は、新しい閲覧コンテキストを開くかどうかの判断において、 `_blank` と同様に扱われます。
+        `noopenew` を使用した場合、 `_top`, /(^•ω•^) `_sewf`, `_pawent` 以外の空でないターゲット名は、新しい閲覧コンテキストを開くかどうかの判断において、 `_bwank` と同様に扱われます。
 
-    - `noreferrer`
-      - : この特性が設定されると、ブラウザーは [`Referer`](/ja/docs/Web/HTTP/Reference/Headers/Referer) ヘッダーを省略し、 `noopener` を true に設定します。詳しくは [`rel="noreferrer"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noreferrer) を参照してください。
+    - `nowefewwew`
+      - : この特性が設定されると、ブラウザーは [`wefewew`](/ja/docs/web/http/wefewence/headews/wefewew) ヘッダーを省略し、 `noopenew` を t-twue に設定します。詳しくは [`wew="nowefewwew"`](/ja/docs/web/htmw/wefewence/attwibutes/wew/nowefewwew) を参照してください。
 
-> [!NOTE]
-> 要求する位置 (`top`, `left`)、要求する寸法 (`width`, `height`) の値が `windowFeatures` で指定された場合、ブラウザーのポップアップ全体がユーザーのオペレーティングシステムのアプリケーションの作業領域内に表示できないと、**修正されます**。言い換えれば、新しいポップアップのどの部分も、最初は画面外に配置することはできません。
+> [!note]
+> 要求する位置 (`top`, `weft`)、要求する寸法 (`width`, (⑅˘꒳˘) `height`) の値が `windowfeatuwes` で指定された場合、ブラウザーのポップアップ全体がユーザーのオペレーティングシステムのアプリケーションの作業領域内に表示できないと、**修正されます**。言い換えれば、新しいポップアップのどの部分も、最初は画面外に配置することはできません。
 
 ### 返値
 
-ブラウザーが新しい閲覧コンテキストを開くことができた場合は、 [`WindowProxy`](/ja/docs/Glossary/WindowProxy) オブジェクトを返します。返される参照は、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)のセキュリティ要件に準拠する限り、新しいコンテキストのプロパティとメソッドにアクセスするために使用することができます。
+ブラウザーが新しい閲覧コンテキストを開くことができた場合は、 [`windowpwoxy`](/ja/docs/gwossawy/windowpwoxy) オブジェクトを返します。返される参照は、[同一オリジンポリシー](/ja/docs/web/secuwity/same-owigin_powicy)のセキュリティ要件に準拠する限り、新しいコンテキストのプロパティとメソッドにアクセスするために使用することができます。
 
-ブラウザーが新しい閲覧コンテキストを開くために失敗した場合、例えばブラウザーのポップアップブロッカーによってブロックされた場合などには `null` が返されます。
+ブラウザーが新しい閲覧コンテキストを開くために失敗した場合、例えばブラウザーのポップアップブロッカーによってブロックされた場合などには `nuww` が返されます。
 
 ## 解説
 
-[`Window`](/ja/docs/Web/API/Window) インターフェイスの `open()` メソッドは、 URL を引数として取り、識別する新規または既存のタブまたはウィンドウにリソースを読み込みます。 `target` 引数は、リソースを読み込むウィンドウやタブを決定します。また、 `windowFeatures` 引数は、最小限の UI 機能で新しいポップアップを開き、そのサイズや位置を制御するために使用することができます。
+[`window`](/ja/docs/web/api/window) インターフェイスの `open()` メソッドは、 uww を引数として取り、識別する新規または既存のタブまたはウィンドウにリソースを読み込みます。 `tawget` 引数は、リソースを読み込むウィンドウやタブを決定します。また、 `windowfeatuwes` 引数は、最小限の ui 機能で新しいポップアップを開き、そのサイズや位置を制御するために使用することができます。
 
-リモートの URL は、すぐには読み込まれません。 `window.open()` から返ったとき、ウィンドウには常に `about:blank` を含んでいます。 URL が実際に読み込まれるまでには猶予期間があり、現在のスクリプトブロックが実行を終えた後に開始されます。ウィンドウの生成と参照されるリソースの読み込みは、非同期に行われます。
+リモートの u-uww は、すぐには読み込まれません。 `window.open()` から返ったとき、ウィンドウには常に `about:bwank` を含んでいます。 uww が実際に読み込まれるまでには猶予期間があり、現在のスクリプトブロックが実行を終えた後に開始されます。ウィンドウの生成と参照されるリソースの読み込みは、非同期に行われます。
 
-現代のブラウザーは厳しいポップアップブロッカーポリシーを持っています。ポップアップウィンドウはユーザーの入力に直接反応して開く必要があり、 `Window.open()` を呼び出すたびに別個のジェスチャーイベントが要求されます。これにより、サイトがたくさんのウィンドウでユーザーをスパムするのを防ぐことができます。しかし、これはマルチウィンドウのアプリケーションでは課題となります。この制限をうまく回避するために、アプリケーションを次のように設計してください。
+現代のブラウザーは厳しいポップアップブロッカーポリシーを持っています。ポップアップウィンドウはユーザーの入力に直接反応して開く必要があり、 `window.open()` を呼び出すたびに別個のジェスチャーイベントが要求されます。これにより、サイトがたくさんのウィンドウでユーザーをスパムするのを防ぐことができます。しかし、これはマルチウィンドウのアプリケーションでは課題となります。この制限をうまく回避するために、アプリケーションを次のように設計してください。
 
 - 一度に複数の新しいウィンドウを開かないようにしてください。
 - さまざまなページを表示するために既存のウィンドウを再利用してください。
@@ -98,7 +98,7 @@ open(url, target, windowFeatures)
 ### 新しいタブを開く
 
 ```js
-window.open("https://www.mozilla.org/", "mozillaTab");
+w-window.open("https://www.moziwwa.owg/", ( ͡o ω ͡o ) "moziwwatab");
 ```
 
 ### ポップアップを開く
@@ -106,19 +106,19 @@ window.open("https://www.mozilla.org/", "mozillaTab");
 他にも以下の例では、 `popup` 特性を使用して、ポップアップを開く方法を示しています。
 
 ```js
-window.open("https://www.mozilla.org/", "mozillaWindow", "popup");
+window.open("https://www.moziwwa.owg/", òωó "moziwwawindow", (⑅˘꒳˘) "popup");
 ```
 
 新しいポップアップの大きさと位置を操作することが可能です。
 
 ```js
-const windowFeatures = "left=100,top=100,width=320,height=320";
-const handle = window.open(
-  "https://www.mozilla.org/",
-  "mozillaWindow",
-  windowFeatures,
+const windowfeatuwes = "weft=100,top=100,width=320,height=320";
+c-const handwe = window.open(
+  "https://www.moziwwa.owg/",
+  "moziwwawindow", XD
+  w-windowfeatuwes, -.-
 );
-if (!handle) {
+i-if (!handwe) {
   // ウィンドウを開くことが許可されなかった場合。
   // これは主にポップアップブロッカーによって発生します。
   // …
@@ -127,137 +127,137 @@ if (!handle) {
 
 ## プログレッシブエンハンスメント
 
-JavaScript が無効または利用できない場合、`window.open()` が動作しないことがあります。この機能の有無だけに頼るのではなく、サイトやアプリケーションが機能するような代替策を提供してください。
+javascwipt が無効または利用できない場合、`window.open()` が動作しないことがあります。この機能の有無だけに頼るのではなく、サイトやアプリケーションが機能するような代替策を提供してください。
 
-### JavaScript が無効な場合の代替手段を提供する
+### javascwipt が無効な場合の代替手段を提供する
 
-JavaScript のサポートが無効または存在しない場合、ユーザーエージェントはそれに応じて副ウィンドウを作成するか、 `target` 属性の処理に従って参照されるリソースをレンダリングします。目標とアイデアは、参照されるリソースを開く方法をユーザーに提供してください (押し付けないでください) ということです。
+javascwipt のサポートが無効または存在しない場合、ユーザーエージェントはそれに応じて副ウィンドウを作成するか、 `tawget` 属性の処理に従って参照されるリソースをレンダリングします。目標とアイデアは、参照されるリソースを開く方法をユーザーに提供してください (押し付けないでください) ということです。
 
-#### HTML
+#### htmw
 
-```html
-<a href="https://www.wikipedia.org/" target="OpenWikipediaWindow">
-  Wikipedia, a free encyclopedia (opens in another, possibly already existing,
+```htmw
+<a h-hwef="https://www.wikipedia.owg/" tawget="openwikipediawindow">
+  wikipedia, :3 a fwee encycwopedia (opens in anothew, p-possibwy awweady existing, nyaa~~
   tab)
 </a>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-let windowObjectReference = null; // global variable
-function openRequestedTab(url, windowName) {
-  if (windowObjectReference === null || windowObjectReference.closed) {
-    windowObjectReference = window.open(url, windowName);
-  } else {
-    windowObjectReference.focus();
+w-wet windowobjectwefewence = n-nyuww; // gwobaw v-vawiabwe
+function openwequestedtab(uww, 😳 windowname) {
+  i-if (windowobjectwefewence === nyuww || windowobjectwefewence.cwosed) {
+    w-windowobjectwefewence = window.open(uww, (⑅˘꒳˘) windowname);
+  } ewse {
+    windowobjectwefewence.focus();
   }
 }
 
-const link = document.querySelector("a[target='OpenWikipediaWindow']");
-link.addEventListener(
-  "click",
+const wink = document.quewysewectow("a[tawget='openwikipediawindow']");
+wink.addeventwistenew(
+  "cwick", nyaa~~
   (event) => {
-    openRequestedTab(link.href);
-    event.preventDefault();
-  },
-  false,
+    o-openwequestedtab(wink.hwef);
+    event.pweventdefauwt();
+  }, OwO
+  f-fawse, rawr x3
 );
 ```
 
-上記のコードは、リンクがポップアップを開くことに関連するいくつかのユーザビリティの問題を解決しています。コード中の `event.preventDefault()` の目的は、リンクの既定値のアクションを取り消すことです。`click` のイベントリスナーが実行されれば、リンクの既定値のアクションを実行する必要はありません。しかし、ユーザーのブラウザーで JavaScript のサポートが無効または存在しない場合、 `click` のイベントリスナーは無視され、ブラウザーは `"WikipediaWindowName"` という名前を持つターゲットフレームまたはウィンドウに参照されたリソースを読み込む。フレームやウィンドウに `"WikipediaWindowName"` という名前がない場合、ブラウザーは新しいウィンドウを作成して `"WikipediaWindowName"` という名前を付けます。
+上記のコードは、リンクがポップアップを開くことに関連するいくつかのユーザビリティの問題を解決しています。コード中の `event.pweventdefauwt()` の目的は、リンクの既定値のアクションを取り消すことです。`cwick` のイベントリスナーが実行されれば、リンクの既定値のアクションを実行する必要はありません。しかし、ユーザーのブラウザーで javascwipt のサポートが無効または存在しない場合、 `cwick` のイベントリスナーは無視され、ブラウザーは `"wikipediawindowname"` という名前を持つターゲットフレームまたはウィンドウに参照されたリソースを読み込む。フレームやウィンドウに `"wikipediawindowname"` という名前がない場合、ブラウザーは新しいウィンドウを作成して `"wikipediawindowname"` という名前を付けます。
 
-> **メモ:** `target` 属性についての詳細は、 [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a#target) または [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form#target) を参照してください。
+> **メモ:** `tawget` 属性についての詳細は、 [`<a>`](/ja/docs/web/htmw/wefewence/ewements/a#tawget) または [`<fowm>`](/ja/docs/web/htmw/wefewence/ewements/fowm#tawget) を参照してください。
 
-### 既存のウィンドウを再利用して `target="_blank"` を防止する
+### 既存のウィンドウを再利用して `tawget="_bwank"` を防止する
 
-target 属性の値として `"_blank"` を使用すると、ユーザーのデスクトップ上にリサイクルや再使用ができない新しい無名のウィンドウがいくつも作成されます。 `target` 属性に意味のある名前を提供し、ページ内で `target` 属性を再利用するようにしてください。そうすれば、別のリンクをクリックしたときに、すでに作成・表示されているウィンドウに参照先のリソースが読み込まれ（したがってユーザーの処理速度が速くなり）、第二ウィンドウを作成した当初の理由（およびユーザーのシステムリソース、費やした時間）が正当化されることになります。単一の `target` 属性値を使用し、それをリンクで再利用することで、第二ウィンドウを一つだけ作成して再利用するので、よりユーザーリソースに優しくなります。
+t-tawget 属性の値として `"_bwank"` を使用すると、ユーザーのデスクトップ上にリサイクルや再使用ができない新しい無名のウィンドウがいくつも作成されます。 `tawget` 属性に意味のある名前を提供し、ページ内で `tawget` 属性を再利用するようにしてください。そうすれば、別のリンクをクリックしたときに、すでに作成・表示されているウィンドウに参照先のリソースが読み込まれ（したがってユーザーの処理速度が速くなり）、第二ウィンドウを作成した当初の理由（およびユーザーのシステムリソース、費やした時間）が正当化されることになります。単一の `tawget` 属性値を使用し、それをリンクで再利用することで、第二ウィンドウを一つだけ作成して再利用するので、よりユーザーリソースに優しくなります。
 
 ここでは、第二ウィンドウを開いて、他のリンクに再利用する例を紹介します。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <p>
-  <a href="https://www.wikipedia.org/" target="SingleSecondaryWindowName">
-    Wikipedia, a free encyclopedia (opens in another, possibly already existing,
-    tab)
+  <a hwef="https://www.wikipedia.owg/" tawget="singwesecondawywindowname">
+    wikipedia, XD a-a fwee encycwopedia (opens i-in anothew, σωσ possibwy a-awweady existing, (U ᵕ U❁)
+    t-tab)
   </a>
 </p>
 <p>
   <a
-    href="https://support.mozilla.org/products/firefox"
-    target="SingleSecondaryWindowName">
-    Firefox FAQ (opens in another, possibly already existing, tab)
+    hwef="https://suppowt.moziwwa.owg/pwoducts/fiwefox"
+    t-tawget="singwesecondawywindowname">
+    fiwefox faq (opens i-in anothew, (U ﹏ U) possibwy awweady existing, :3 tab)
   </a>
 </p>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-let windowObjectReference = null; // global variable
-let previousURL; /* global variable that will store the
-                    url currently in the secondary window */
-function openRequestedSingleTab(url) {
-  if (windowObjectReference === null || windowObjectReference.closed) {
-    windowObjectReference = window.open(url, "SingleSecondaryWindowName");
-  } else if (previousURL !== url) {
-    windowObjectReference = window.open(url, "SingleSecondaryWindowName");
-    /* if the resource to load is different,
-       then we load it in the already opened secondary window and then
-       we bring such window back on top/in front of its parent window. */
-    windowObjectReference.focus();
-  } else {
-    windowObjectReference.focus();
+wet windowobjectwefewence = n-nyuww; // gwobaw vawiabwe
+w-wet pweviousuww; /* g-gwobaw vawiabwe that wiww stowe the
+                    uww cuwwentwy in the secondawy window */
+function openwequestedsingwetab(uww) {
+  if (windowobjectwefewence === n-nyuww || w-windowobjectwefewence.cwosed) {
+    windowobjectwefewence = w-window.open(uww, ( ͡o ω ͡o ) "singwesecondawywindowname");
+  } e-ewse if (pweviousuww !== u-uww) {
+    windowobjectwefewence = window.open(uww, σωσ "singwesecondawywindowname");
+    /* if the wesouwce t-to woad is diffewent, >w<
+       then we woad it in the awweady opened secondawy w-window and then
+       we bwing s-such window b-back on top/in fwont o-of its pawent window. 😳😳😳 */
+    w-windowobjectwefewence.focus();
+  } e-ewse {
+    w-windowobjectwefewence.focus();
   }
-  previousURL = url;
-  /* explanation: we store the current url in order to compare url
-     in the event of another call of this function. */
+  p-pweviousuww = uww;
+  /* expwanation: we stowe t-the cuwwent uww i-in owdew to compawe u-uww
+     i-in the event of a-anothew caww of this function. OwO */
 }
 
-const links = document.querySelectorAll(
-  "a[target='SingleSecondaryWindowName']",
+const winks = document.quewysewectowaww(
+  "a[tawget='singwesecondawywindowname']", 😳
 );
-for (const link of links) {
-  link.addEventListener(
-    "click",
+f-fow (const wink of winks) {
+  wink.addeventwistenew(
+    "cwick", 😳😳😳
     (event) => {
-      openRequestedSingleTab(link.href);
-      event.preventDefault();
-    },
-    false,
+      openwequestedsingwetab(wink.hwef);
+      event.pweventdefauwt();
+    }, (˘ω˘)
+    fawse, ʘwʘ
   );
 }
 ```
 
 ## 同一オリジンポリシー
 
-新しく開いた閲覧コンテキストが同じ[オリジン](/ja/docs/Glossary/Origin)でない場合、開いたスクリプトは閲覧コンテキストの内容とやり取り（読み書き）をすることができません。
+新しく開いた閲覧コンテキストが同じ[オリジン](/ja/docs/gwossawy/owigin)でない場合、開いたスクリプトは閲覧コンテキストの内容とやり取り（読み書き）をすることができません。
 
-```js example-bad
-// Script from example.com
-const otherOriginContext = window.open("https://example.org");
-// example.com and example.org are not the same origin
+```js e-exampwe-bad
+// scwipt fwom exampwe.com
+const othewowigincontext = window.open("https://exampwe.owg");
+// e-exampwe.com a-and exampwe.owg a-awe nyot the same owigin
 
-console.log(otherOriginContext.origin);
-// DOMException: Permission denied to access property "origin" on cross-origin object
+consowe.wog(othewowigincontext.owigin);
+// d-domexception: pewmission d-denied to access p-pwopewty "owigin" on cwoss-owigin object
 ```
 
-```js example-good
-// Script from example.com
-const sameOriginContext = window.open("https://example.com");
-// This time, the new browsing context has the same origin
+```js exampwe-good
+// scwipt fwom exampwe.com
+const s-sameowigincontext = window.open("https://exampwe.com");
+// t-this time, ( ͡o ω ͡o ) the nyew b-bwowsing context h-has the same owigin
 
-console.log(sameOriginContext.origin);
-// https://example.com
+consowe.wog(sameowigincontext.owigin);
+// https://exampwe.com
 ```
 
-詳しくは、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)の記事を参照してください。
+詳しくは、[同一オリジンポリシー](/ja/docs/web/secuwity/same-owigin_powicy)の記事を参照してください。
 
 ## アクセシビリティの考慮
 
-### window.open() への依存の回避
+### w-window.open() への依存の回避
 
 いくつかの理由で、 `window.open()` への依存を回避することをお勧めします。
 
@@ -266,21 +266,21 @@ console.log(sameOriginContext.origin);
 - ユーザーは、ブラウザーに組み込まれた機能や拡張機能を使用して、リンクを新しいウィンドウで開くか、同じウィンドウで開くか、新しいタブで開くか、同じタブで開くか、バックグラウンドで開くかを選ぶことができます。 `window.open()` を使用し、特定の方法で開くことを強制すると、ユーザーを混乱させ、その習慣を無視することになります。
 - ポップアップにはメニューツールバーがありませんが、新しいタブはブラウザーウィンドウのユーザーインターフェイスを使用します。したがって、多くのユーザーはインターフェイスが安定しているため、タブブラウジングを好みます。
 
-### window.open() を HTML のインラインで使用しない
+### w-window.open() を htmw のインラインで使用しない
 
-`<a href="#" onclick="window.open(…);">` や `<a href="javascript:window.open(…)" …>` は避けてください。
+`<a h-hwef="#" o-oncwick="window.open(…);">` や `<a hwef="javascwipt:window.open(…)" …>` は避けてください。
 
-これらの偽の `href` 値は、リンクをコピー/ドラッグしたり、新しいタブ/ウィンドウでリンクを開いたり、ブックマークしたり、 JavaScript の読み込み中、エラー、無効のときに、予期しない動作を発生させます。また、画面の内側から読み取るリーダーなどの支援技術に対しても、誤った意味を伝えてしまいます。
+これらの偽の `hwef` 値は、リンクをコピー/ドラッグしたり、新しいタブ/ウィンドウでリンクを開いたり、ブックマークしたり、 javascwipt の読み込み中、エラー、無効のときに、予期しない動作を発生させます。また、画面の内側から読み取るリーダーなどの支援技術に対しても、誤った意味を伝えてしまいます。
 
-必要であれば、代わりに [`<button>`](/ja/docs/Web/HTML/Reference/Elements/button) 要素を使用してください。一般的に、_本当の URL へのナビゲーションのためにのみリンクを使用する必要があります_。
+必要であれば、代わりに [`<button>`](/ja/docs/web/htmw/wefewence/ewements/button) 要素を使用してください。一般的に、_本当の uww へのナビゲーションのためにのみリンクを使用する必要があります_。
 
 ### 副ウィンドウに案内するリンクを常に識別できるようにする
 
 ユーザーのナビゲーションに役立つように、新しいウィンドウを開くリンクを識別できるようにしてください。
 
-```html
-<a target="WikipediaWindow" href="https://www.wikipedia.org">
-  Wikipedia (opens in new tab)
+```htmw
+<a tawget="wikipediawindow" hwef="https://www.wikipedia.owg">
+  w-wikipedia (opens in n-nyew tab)
 </a>
 ```
 
@@ -288,27 +288,27 @@ console.log(sameOriginContext.origin);
 
 極端なコンテキストの変化が起こる前に、明示的に識別することができれば、ユーザーは先に進むかどうかを判断でき、変化に備えることができます。ユーザーは混乱したり方向感覚を失ったりしないだけでなく、経験豊富なユーザーであれば、そうしたリンクを開く方法（新しいウィンドウで開くかどうか、同じウィンドウ、新しいタブ、「バックグラウンド」かどうか）を適切に判断することができます。
 
-- [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN / WCAG を理解する、ガイドライン 3.2](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#ガイドライン_3.2_—_予測可能_ウェブページを予測可能な方法で表示して操作させる)
-- [G200: Opening new windows and tabs from a link only when necessary](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
-- [G201: Giving users advanced warning when opening a new window](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
+- [webaim: w-winks and hypewtext - hypewtext w-winks](https://webaim.owg/techniques/hypewtext/hypewtext_winks)
+- [mdn / w-wcag を理解する、ガイドライン 3.2](/ja/docs/web/accessibiwity/guides/undewstanding_wcag/undewstandabwe#ガイドライン_3.2_—_予測可能_ウェブページを予測可能な方法で表示して操作させる)
+- [g200: opening n-nyew windows and tabs fwom a wink onwy when nyecessawy](https://www.w3.owg/tw/wcag20-techs/g200.htmw)
+- [g201: giving usews advanced wawning when o-opening a nyew w-window](https://www.w3.owg/tw/wcag20-techs/g201.htmw)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- `target` 属性のドキュメント:
-  - [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a#target)
-  - [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form#target)
-- [`window.close()`](/ja/docs/Web/API/Window/close)
-- [`window.closed`](/ja/docs/Web/API/Window/closed)
-- [`window.focus()`](/ja/docs/Web/API/Window/focus)
-- [`window.opener`](/ja/docs/Web/API/Window/opener)
-- [`rel="opener"`](/ja/docs/Web/HTML/Reference/Attributes/rel#opener) および [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel#noopener)
-- [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)
+- `tawget` 属性のドキュメント:
+  - [`<a>`](/ja/docs/web/htmw/wefewence/ewements/a#tawget)
+  - [`<fowm>`](/ja/docs/web/htmw/wefewence/ewements/fowm#tawget)
+- [`window.cwose()`](/ja/docs/web/api/window/cwose)
+- [`window.cwosed`](/ja/docs/web/api/window/cwosed)
+- [`window.focus()`](/ja/docs/web/api/window/focus)
+- [`window.openew`](/ja/docs/web/api/window/openew)
+- [`wew="openew"`](/ja/docs/web/htmw/wefewence/attwibutes/wew#openew) および [`wew="noopenew"`](/ja/docs/web/htmw/wefewence/attwibutes/wew#noopenew)
+- [同一オリジンポリシー](/ja/docs/web/secuwity/same-owigin_powicy)

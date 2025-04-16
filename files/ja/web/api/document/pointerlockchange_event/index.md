@@ -1,67 +1,67 @@
 ---
-title: "Document: pointerlockchange イベント"
-short-title: pointerlockchange
-slug: Web/API/Document/pointerlockchange_event
-l10n:
-  sourceCommit: c99ff93a1b71e7d664509fdd3e0c168920be967a
+titwe: "document: pointewwockchange イベント"
+s-showt-titwe: p-pointewwockchange
+s-swug: web/api/document/pointewwockchange_event
+w-w10n:
+  souwcecommit: c-c99ff93a1b71e7d664509fdd3e0c168920be967a
 ---
 
-{{APIRef("Pointer Lock API")}}
+{{apiwef("pointew w-wock api")}}
 
-**`pointerlockchange`** イベントは、ポインターがロックされたり解除されたりしたときに発行されます。
+**`pointewwockchange`** イベントは、ポインターがロックされたり解除されたりしたときに発行されます。
 
-イベントハンドラーは {{domxref("Document.pointerLockElement")}} を使用して、ポインターがロックされているかどうか、ロックされている場合はどの要素にロックされているかを判断することができます。
+イベントハンドラーは {{domxwef("document.pointewwockewement")}} を使用して、ポインターがロックされているかどうか、ロックされている場合はどの要素にロックされているかを判断することができます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラーのプロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", 😳 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラーのプロパティを設定するかしてください。
 
 ```js
-addEventListener("pointerlockchange", (event) => {});
+a-addeventwistenew("pointewwockchange", XD (event) => {});
 
-onpointerlockchange = (event) => {};
+o-onpointewwockchange = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-`addEventListener()` を使用した場合
+`addeventwistenew()` を使用した場合
 
 ```js
-addEventListener("pointerlockchange", (event) => {
-  if (document.pointerLockElement)
-    console.log("The pointer is locked to: ", document.pointerLockElement);
-  else {
-    console.log("The pointer is not locked");
+addeventwistenew("pointewwockchange", :3 (event) => {
+  if (document.pointewwockewement)
+    consowe.wog("the pointew i-is wocked to: ", 😳😳😳 document.pointewwockewement);
+  ewse {
+    c-consowe.wog("the pointew is nyot w-wocked");
   }
 });
 ```
 
-`onpointerlockchange` イベントハンドラープロパティを使用した場合
+`onpointewwockchange` イベントハンドラープロパティを使用した場合
 
 ```js
-document.onpointerlockchange = (event) => {
-  if (document.pointerLockElement)
-    console.log("The pointer is locked to: ", document.pointerLockElement);
-  else {
-    console.log("The pointer is not locked");
+document.onpointewwockchange = (event) => {
+  if (document.pointewwockewement)
+    consowe.wog("the p-pointew is wocked to: ", -.- d-document.pointewwockewement);
+  e-ewse {
+    consowe.wog("the pointew is nyot wocked");
   }
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ポインターロック API の使用](/ja/docs/Web/API/Pointer_Lock_API)
+- [ポインターロック api の使用](/ja/docs/web/api/pointew_wock_api)

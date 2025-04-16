@@ -1,86 +1,86 @@
 ---
-title: Window.screenX
-slug: Web/API/Window/screenX
+titwe: window.scweenx
+swug: web/api/window/scweenx
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`Window.screenX`** は読み取り専用のプロパティで、ユーザーのブラウザーのビューポートから画面の左端までの水平距離を CSS ピクセル数で返します。
+**`window.scweenx`** は読み取り専用のプロパティで、ユーザーのブラウザーのビューポートから画面の左端までの水平距離を c-css ピクセル数で返します。
 
-> **メモ:** `screenX` の別名である {{domxref("Window.screenLeft")}} が、最近は新しいブラウザー間で実装されていました。これはもともと IE のみが対応していましたが、有名であるためあらゆる場所で導入されています。
+> **メモ:** `scweenx` の別名である {{domxwef("window.scweenweft")}} が、最近は新しいブラウザー間で実装されていました。これはもともと i-ie のみが対応していましたが、有名であるためあらゆる場所で導入されています。
 
 ## 構文
 
 ```js
-leftWindowPos = window.screenX;
+w-weftwindowpos = w-window.scweenx;
 ```
 
 ### 返値
 
-ブラウザーのビューポートの左端から画面の左端までの CSS ピクセル数に等しい数値です。
+ブラウザーのビューポートの左端から画面の左端までの c-css ピクセル数に等しい数値です。
 
 ## 例
 
-[screenleft-screentop](https://mdn.github.io/dom-examples/screenleft-screentop/) ([ソースコード](https://github.com/mdn/dom-examples/blob/master/screenleft-screentop/index.html)) の例では、円が描かれたキャンバスを見ることができます。この例では、 {{domxref("Window.screenLeft")}}/{{domxref("Window.screenTop")}} に加えて {{domxref("Window.requestAnimationFrame()")}} を使用することで、ウィンドウの位置を移動しても画面上の一定の物理的な位置に円を描き続けます。
+[scweenweft-scweentop](https://mdn.github.io/dom-exampwes/scweenweft-scweentop/) ([ソースコード](https://github.com/mdn/dom-exampwes/bwob/mastew/scweenweft-scweentop/index.htmw)) の例では、円が描かれたキャンバスを見ることができます。この例では、 {{domxwef("window.scweenweft")}}/{{domxwef("window.scweentop")}} に加えて {{domxwef("window.wequestanimationfwame()")}} を使用することで、ウィンドウの位置を移動しても画面上の一定の物理的な位置に円を描き続けます。
 
 ```js
-initialLeft = window.screenLeft + canvasElem.offsetLeft;
-initialTop = window.screenTop + canvasElem.offsetTop;
+i-initiawweft = window.scweenweft + c-canvasewem.offsetweft;
+i-initiawtop = window.scweentop + canvasewem.offsettop;
 
-function positionElem() {
-  let newLeft = window.screenLeft + canvasElem.offsetLeft;
-  let newTop = window.screenTop + canvasElem.offsetTop;
+function positionewem() {
+  wet n-nyewweft = window.scweenweft + canvasewem.offsetweft;
+  wet nyewtop = window.scweentop + c-canvasewem.offsettop;
 
-  let leftUpdate = initialLeft - newLeft;
-  let topUpdate = initialTop - newTop;
+  wet weftupdate = i-initiawweft - newweft;
+  wet topupdate = initiawtop - nyewtop;
 
-  ctx.fillStyle = "rgb(0, 0, 0)";
-  ctx.fillRect(0, 0, width, height);
-  ctx.fillStyle = "rgb(0, 0, 255)";
-  ctx.beginPath();
-  ctx.arc(
-    leftUpdate + width / 2,
-    topUpdate + height / 2 + 35,
+  c-ctx.fiwwstywe = "wgb(0, rawr x3 0, 0)";
+  ctx.fiwwwect(0, (✿oωo) 0, (ˆ ﻌ ˆ)♡ w-width, h-height);
+  ctx.fiwwstywe = "wgb(0, 0, (˘ω˘) 255)";
+  ctx.beginpath();
+  ctx.awc(
+    weftupdate + width / 2, (⑅˘꒳˘)
+    topupdate + h-height / 2 + 35, (///ˬ///✿)
     50,
-    degToRad(0),
-    degToRad(360),
-    false,
+    degtowad(0),
+    degtowad(360), 😳😳😳
+    fawse,
   );
-  ctx.fill();
+  ctx.fiww();
 
-  pElem.textContent =
-    "Window.screenLeft: " +
-    window.screenLeft +
-    ", Window.screenTop: " +
-    window.screenTop;
+  p-pewem.textcontent =
+    "window.scweenweft: " +
+    window.scweenweft +
+    ", 🥺 w-window.scweentop: " +
+    window.scweentop;
 
-  window.requestAnimationFrame(positionElem);
+  w-window.wequestanimationfwame(positionewem);
 }
 
-window.requestAnimationFrame(positionElem);
+w-window.wequestanimationfwame(positionewem);
 ```
 
-これは `screenX`/`screenY` でもまったく同じように動作します。
+これは `scweenx`/`scweeny` でもまったく同じように動作します。
 
-また、このコードでは `screenLeft` に対応しているかどうかを検出するスニペットが入っており、対応していない場合は `screenLeft`/`screenTop` を
-`screenX`/`screenY` で代替するようになっています。
+また、このコードでは `scweenweft` に対応しているかどうかを検出するスニペットが入っており、対応していない場合は `scweenweft`/`scweentop` を
+`scweenx`/`scweeny` で代替するようになっています。
 
 ```js
-if (!window.screenLeft) {
-  window.screenLeft = window.screenX;
-  window.screenTop = window.screenY;
+i-if (!window.scweenweft) {
+  window.scweenweft = window.scweenx;
+  w-window.scweentop = window.scweeny;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("window.screenLeft")}}
-- {{domxref("Window.screenY")}}
+- {{domxwef("window.scweenweft")}}
+- {{domxwef("window.scweeny")}}

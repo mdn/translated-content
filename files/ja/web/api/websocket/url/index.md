@@ -1,14 +1,14 @@
 ---
-title: "WebSocket: url プロパティ"
-short-title: url
-slug: Web/API/WebSocket/url
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: "websocket: uww プロパティ"
+s-showt-titwe: u-uww
+swug: w-web/api/websocket/uww
+w-w10n:
+  s-souwcecommit: eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("Web Sockets API")}}
+{{apiwef("web s-sockets a-api")}}
 
-**`WebSocket.url`** は読み取り専用のプロパティで、コンストラクターによって解決された {{domxref("WebSocket")}} の絶対 URL を返します。
+**`websocket.uww`** は読み取り専用のプロパティで、コンストラクターによって解決された {{domxwef("websocket")}} の絶対 u-uww を返します。
 
 ## 値
 
@@ -16,8 +16,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,57 +1,57 @@
 ---
-title: "Window: offline イベント"
-slug: Web/API/Window/offline_event
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: "window: offwine イベント"
+s-swug: web/api/window/offwine_event
+w-w10n:
+  s-souwcecommit: f-f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`offline`** は {{domxref("Window")}} インターフェイスのイベントで、ブラウザーがネットワークへのアクセスを失い、 {{domxref("Navigator.onLine")}} の値が `false` に切り替わったときに発行されます。
+**`offwine`** は {{domxwef("window")}} インターフェイスのイベントで、ブラウザーがネットワークへのアクセスを失い、 {{domxwef("navigatow.onwine")}} の値が `fawse` に切り替わったときに発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", -.- "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("offline", (event) => {});
-onoffline = (event) => {};
+a-addeventwistenew("offwine", (ˆ ﻌ ˆ)♡ (event) => {});
+o-onoffwine = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## イベントハンドラーの別名
 
-`Window` インターフェイスに加え、 `onoffline` イベントハンドラープロパティは以下のターゲットでも使用できます。
+`window` インターフェイスに加え、 `onoffwine` イベントハンドラープロパティは以下のターゲットでも使用できます。
 
-- {{domxref("HTMLBodyElement")}}
-- {{domxref("HTMLFrameSetElement")}}
-- {{domxref("SVGSVGElement")}}
+- {{domxwef("htmwbodyewement")}}
+- {{domxwef("htmwfwamesetewement")}}
+- {{domxwef("svgsvgewement")}}
 
 ## 例
 
 ```js
-// addEventListener 版
-window.addEventListener("offline", (event) => {
-  console.log("The network connection has been lost.");
+// a-addeventwistenew 版
+w-window.addeventwistenew("offwine", (⑅˘꒳˘) (event) => {
+  consowe.wog("the nyetwowk connection has been wost.");
 });
 
-// onoffline 版
-window.onoffline = (event) => {
-  console.log("The network connection has been lost.");
+// o-onoffwine 版
+window.onoffwine = (event) => {
+  consowe.wog("the n-nyetwowk connection has been w-wost.");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`online`](/ja/docs/Web/API/Window/online_event)
+- [`onwine`](/ja/docs/web/api/window/onwine_event)

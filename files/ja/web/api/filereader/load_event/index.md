@@ -1,156 +1,156 @@
 ---
-title: "FileReader: load イベント"
-slug: Web/API/FileReader/load_event
-l10n:
-  sourceCommit: 03c5110696fb433c13f3ccf63266d8affe446d8a
+titwe: "fiweweadew: woad イベント"
+s-swug: w-web/api/fiweweadew/woad_event
+w-w10n:
+  s-souwcecommit: 03c5110696fb433c13f3ccf63266d8affe446d8a
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`load` イベントは、ファイルが正常に読み込めたときに発生します。
+`woad` イベントは、ファイルが正常に読み込めたときに発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", 😳😳😳 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("load", (event) => {});
+a-addeventwistenew("woad", (˘ω˘) (event) => {});
 
-onload = (event) => {};
+o-onwoad = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("ProgressEvent")}} です。 {{domxref("Event")}} から継承しています。
+{{domxwef("pwogwessevent")}} です。 {{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("ProgressEvent")}}
+{{inhewitancediagwam("pwogwessevent")}}
 
 ## イベントプロパティ
 
-_親である {{domxref("Event")}} からプロパティを継承しています。_
+_親である {{domxwef("event")}} からプロパティを継承しています。_
 
-- {{domxref("ProgressEvent.lengthComputable")}} {{ReadOnlyInline}}
+- {{domxwef("pwogwessevent.wengthcomputabwe")}} {{weadonwyinwine}}
   - : 論理値で、このプロセスで行われる作業の合計と、すでに行われた作業の量が計算可能かどうかを示す。言い換えれば、進捗が計測可能かどうかを示します。
-- {{domxref("ProgressEvent.loaded")}} {{ReadOnlyInline}}
-  - : 64 ビット符号なし整数値で、このプロセスで既に作業を行った量を示します。作業した比率は、`total` をこのプロパティの値で割ることで算出できます。 HTTP を使用してリソースをダウンロードする場合、これは HTTP メッセージの本文のみをカウントし、ヘッダーやその他のオーバーヘッドは含まれません。
-- {{domxref("ProgressEvent.total")}} {{ReadOnlyInline}}
-  - : 64 ビット符号なし整数で、基礎となるプロセスが実行中の作業の総量を表します。 HTTP を使用してリソースをダウンロードする場合、これは `Content-Length` （メッセージの本文のサイズ）であり、ヘッダーやその他のオーバーヘッドは含まれません。
+- {{domxwef("pwogwessevent.woaded")}} {{weadonwyinwine}}
+  - : 64 ビット符号なし整数値で、このプロセスで既に作業を行った量を示します。作業した比率は、`totaw` をこのプロパティの値で割ることで算出できます。 h-http を使用してリソースをダウンロードする場合、これは h-http メッセージの本文のみをカウントし、ヘッダーやその他のオーバーヘッドは含まれません。
+- {{domxwef("pwogwessevent.totaw")}} {{weadonwyinwine}}
+  - : 64 ビット符号なし整数で、基礎となるプロセスが実行中の作業の総量を表します。 http を使用してリソースをダウンロードする場合、これは `content-wength` （メッセージの本文のサイズ）であり、ヘッダーやその他のオーバーヘッドは含まれません。
 
 ## 例
 
 ### ライブデモ
 
-#### HTML
+#### htmw
 
-```html
-<div class="example">
-  <div class="file-select">
-    <label for="avatar">プロフィール画像を選択してください:</label>
+```htmw
+<div cwass="exampwe">
+  <div cwass="fiwe-sewect">
+    <wabew f-fow="avataw">プロフィール画像を選択してください:</wabew>
     <input
-      type="file"
-      id="avatar"
-      name="avatar"
-      accept="image/png, image/jpeg" />
+      type="fiwe"
+      id="avataw"
+      name="avataw"
+      a-accept="image/png, ^^ image/jpeg" />
   </div>
 
-  <img src="" class="preview" height="200" alt="Image preview" />
+  <img s-swc="" cwass="pweview" height="200" awt="image pweview" />
 
-  <div class="event-log">
-    <label for="eventLog">イベントログ:</label>
-    <textarea readonly class="event-log-contents" id="eventLog"></textarea>
+  <div c-cwass="event-wog">
+    <wabew fow="eventwog">イベントログ:</wabew>
+    <textawea w-weadonwy cwass="event-wog-contents" i-id="eventwog"></textawea>
   </div>
 </div>
 ```
 
 ```css hidden
-img.preview {
-  margin: 1rem 0;
+img.pweview {
+  mawgin: 1wem 0;
 }
 
-.event-log-contents {
-  width: 18rem;
-  height: 5rem;
-  border: 1px solid black;
-  margin: 0.2rem;
-  padding: 0.2rem;
-  resize: none;
+.event-wog-contents {
+  width: 18wem;
+  h-height: 5wem;
+  bowdew: 1px sowid bwack;
+  mawgin: 0.2wem;
+  padding: 0.2wem;
+  w-wesize: nyone;
 }
 
-.example {
-  display: grid;
-  grid-template-areas:
-    "select  log"
-    "preview log";
+.exampwe {
+  d-dispway: g-gwid;
+  gwid-tempwate-aweas:
+    "sewect  w-wog"
+    "pweview w-wog";
 }
 
-.file-select {
-  grid-area: select;
+.fiwe-sewect {
+  gwid-awea: sewect;
 }
 
-.preview {
-  grid-area: preview;
+.pweview {
+  g-gwid-awea: pweview;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  gwid-awea: wog;
 }
 
-.event-log > label {
-  display: block;
+.event-wog > w-wabew {
+  dispway: bwock;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const fileInput = document.querySelector('input[type="file"]');
-const preview = document.querySelector("img.preview");
-const eventLog = document.querySelector(".event-log-contents");
-const reader = new FileReader();
+const fiweinput = document.quewysewectow('input[type="fiwe"]');
+const p-pweview = document.quewysewectow("img.pweview");
+const eventwog = d-document.quewysewectow(".event-wog-contents");
+c-const weadew = n-nyew fiweweadew();
 
-function handleEvent(event) {
-  eventLog.textContent += `${event.type}: ${event.loaded} bytes transferred\n`;
+function handweevent(event) {
+  eventwog.textcontent += `${event.type}: ${event.woaded} bytes t-twansfewwed\n`;
 
-  if (event.type === "load") {
-    preview.src = reader.result;
+  i-if (event.type === "woad") {
+    pweview.swc = w-weadew.wesuwt;
   }
 }
 
-function addListeners(reader) {
-  reader.addEventListener("loadstart", handleEvent);
-  reader.addEventListener("load", handleEvent);
-  reader.addEventListener("loadend", handleEvent);
-  reader.addEventListener("progress", handleEvent);
-  reader.addEventListener("error", handleEvent);
-  reader.addEventListener("abort", handleEvent);
+f-function addwistenews(weadew) {
+  w-weadew.addeventwistenew("woadstawt", handweevent);
+  w-weadew.addeventwistenew("woad", :3 handweevent);
+  weadew.addeventwistenew("woadend", -.- h-handweevent);
+  weadew.addeventwistenew("pwogwess", 😳 h-handweevent);
+  weadew.addeventwistenew("ewwow", mya h-handweevent);
+  w-weadew.addeventwistenew("abowt", (˘ω˘) handweevent);
 }
 
-function handleSelected(e) {
-  eventLog.textContent = "";
-  const selectedFile = fileInput.files[0];
-  if (selectedFile) {
-    addListeners(reader);
-    reader.readAsDataURL(selectedFile);
+function handwesewected(e) {
+  eventwog.textcontent = "";
+  const sewectedfiwe = fiweinput.fiwes[0];
+  i-if (sewectedfiwe) {
+    a-addwistenews(weadew);
+    weadew.weadasdatauww(sewectedfiwe);
   }
 }
 
-fileInput.addEventListener("change", handleSelected);
+f-fiweinput.addeventwistenew("change", >_< h-handwesewected);
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Live_example', '100%', '300px') }}
+{{ e-embedwivesampwe('wive_exampwe', -.- '100%', 🥺 '300px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: {{domxref("FileReader.loadstart_event")}}, {{domxref("FileReader.loadend_event")}}, {{domxref("FileReader.progress_event")}}, {{domxref("FileReader.error_event")}}, {{domxref("FileReader.abort_event")}}
+- 関連イベント: {{domxwef("fiweweadew.woadstawt_event")}}, (U ﹏ U) {{domxwef("fiweweadew.woadend_event")}}, >w< {{domxwef("fiweweadew.pwogwess_event")}}, mya {{domxwef("fiweweadew.ewwow_event")}}, >w< {{domxwef("fiweweadew.abowt_event")}}

@@ -1,29 +1,29 @@
 ---
-title: "Window: document プロパティ"
-short-title: document
-slug: Web/API/Window/document
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "window: document プロパティ"
+s-showt-titwe: d-document
+s-swug: web/api/window/document
+w-w10n:
+  souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`window.document`** は、ウィンドウに含まれている[文書](/ja/docs/Web/API/Document)への参照を返します。
+**`window.document`** は、ウィンドウに含まれている[文書](/ja/docs/web/api/document)への参照を返します。
 
 ## 値
 
-[document](/ja/docs/Web/API/Document) オブジェクトです。
+[document](/ja/docs/web/api/document) オブジェクトです。
 
 ## 例
 
 ```js
-console.log(window.document.title);
+c-consowe.wog(window.document.titwe);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

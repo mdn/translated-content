@@ -1,284 +1,284 @@
 ---
-title: プレゼンテーション API
-slug: Web/API/Presentation_API
-l10n:
-  sourceCommit: 88c098f5bd651a5c587d7b32dba055766c1789ca
+titwe: プレゼンテーション api
+swug: w-web/api/pwesentation_api
+w-w10n:
+  s-souwcecommit: 88c098f5bd651a5c587d7b32dba055766c1789ca
 ---
 
-{{securecontext_header}}{{SeeCompatTable}}{{DefaultAPISidebar("Presentation API")}}
+{{secuwecontext_headew}}{{seecompattabwe}}{{defauwtapisidebaw("pwesentation a-api")}}
 
-Presentation API は、(ウェブブラウザーなどの) {{Glossary("user agent", "ユーザーエージェント")}}がウェブコンテンツをプロジェクターやネットワークで接続されたテレビジョンなどの大型プレゼンテーションデバイスに効率よく表示できるようにします。対応しているマルチメディアデバイスには、HDMI や DVI などの有線接続のディスプレイも、[DLNA](https://www.dlna.org/)、[Chromecast](https://developers.google.com/cast/)、[AirPlay](https://developer.apple.com/airplay/)、[Miracast](https://www.wi-fi.org/discover-wi-fi/miracast) を用いた無線接続のディスプレイもあります。
+p-pwesentation api は、(ウェブブラウザーなどの) {{gwossawy("usew a-agent", (˘ω˘) "ユーザーエージェント")}}がウェブコンテンツをプロジェクターやネットワークで接続されたテレビジョンなどの大型プレゼンテーションデバイスに効率よく表示できるようにします。対応しているマルチメディアデバイスには、hdmi や d-dvi などの有線接続のディスプレイも、[dwna](https://www.dwna.owg/)、[chwomecast](https://devewopews.googwe.com/cast/)、[aiwpway](https://devewopew.appwe.com/aiwpway/)、[miwacast](https://www.wi-fi.owg/discovew-wi-fi/miwacast) を用いた無線接続のディスプレイもあります。
 
-![1-UA モードでは操作ページと表示ページをディスプレイに出力する前に一緒に読み込みます。2-UA モードではそれらを Presentation Control Protocol を用いて別々に読み込みます。](presentation_mode_illustration.png)
+![1-ua モードでは操作ページと表示ページをディスプレイに出力する前に一緒に読み込みます。2-ua モードではそれらを p-pwesentation contwow pwotocow を用いて別々に読み込みます。](pwesentation_mode_iwwustwation.png)
 
-一般に、ウェブページは Presentation Controller API を用いてプレゼンテーションデバイスにレンダリングするウェブコンテンツを指定し、プレゼンテーションセッションを開始します。表示されるウェブコンテンツは、Presentation Receiver API を用いてセッションの状態を取得します。メッセージベースのチャンネルを持つ操作ページと受信ページの両方を提供することで、ウェブ開発者はそれらの 2 ページ間のやり取りを実装できます。
+一般に、ウェブページは pwesentation contwowwew api を用いてプレゼンテーションデバイスにレンダリングするウェブコンテンツを指定し、プレゼンテーションセッションを開始します。表示されるウェブコンテンツは、pwesentation w-weceivew api を用いてセッションの状態を取得します。メッセージベースのチャンネルを持つ操作ページと受信ページの両方を提供することで、ウェブ開発者はそれらの 2 ページ間のやり取りを実装できます。
 
 プレゼンテーションデバイスが提供する接続方法によって、操作ページと受信ページは同一のユーザーエージェントでレンダリングされるか、別のユーザーエージェントでレンダリングされます。
 
-- 1-UA モードのデバイスでは、両方のページが同一のユーザーエージェントで読み込まれます。しかし、受信ページのレンダリング結果は対応しているリモートレンダリングプロトコルを用いてプレゼンテーションデバイスに送られます。
-- 2-UA モードのデバイスでは、受信ページは直接プレゼンテーションデバイスで読み込まれます。操作を行うユーザーエージェントは、プレゼンテーションセッションを制御し、2 ページ間でメッセージを送信するため、対応しているプレゼンテーション制御プロトコルを用いてプレゼンテーションデバイスとやり取りします。
+- 1-ua モードのデバイスでは、両方のページが同一のユーザーエージェントで読み込まれます。しかし、受信ページのレンダリング結果は対応しているリモートレンダリングプロトコルを用いてプレゼンテーションデバイスに送られます。
+- 2-ua モードのデバイスでは、受信ページは直接プレゼンテーションデバイスで読み込まれます。操作を行うユーザーエージェントは、プレゼンテーションセッションを制御し、2 ページ間でメッセージを送信するため、対応しているプレゼンテーション制御プロトコルを用いてプレゼンテーションデバイスとやり取りします。
 
 ## インターフェイス
 
-- {{domxref("Presentation")}}
-  - : 操作を行う閲覧コンテキストでは、`Presentation` インターフェイスが外部の画面へのプレゼンテーションを開始する際のブラウザーのデフォルトの挙動を上書きする方法を提供します。受信を行う閲覧コンテキストでは、`Presentation` インターフェイスは利用可能なプレゼンテーションの接続へのアクセスを提供します。
-- {{domxref("PresentationRequest")}}
+- {{domxwef("pwesentation")}}
+  - : 操作を行う閲覧コンテキストでは、`pwesentation` インターフェイスが外部の画面へのプレゼンテーションを開始する際のブラウザーのデフォルトの挙動を上書きする方法を提供します。受信を行う閲覧コンテキストでは、`pwesentation` インターフェイスは利用可能なプレゼンテーションの接続へのアクセスを提供します。
+- {{domxwef("pwesentationwequest")}}
   - : 操作を行う閲覧コンテキストで生成されたプレゼンテーションを開始または再接続します。
-- {{domxref("PresentationAvailability")}}
-  - : [PresentationAvailability](/ja/docs/Web/API/PresentationAvailability) オブジェクトは、利用可能なプレゼンテーション用の画面に紐付けられ、プレゼンテーションの要求に対する _プレゼンテーション用の画面の利用可能性_ を表します。
-- {{domxref("PresentationConnectionAvailableEvent")}}
-  - : `PresentationConnectionAvailableEvent` は、オブジェクトに紐づく接続が生成された時、[`PresentationRequest`](/ja/docs/Web/API/PresentationRequest) で発火します。
-- {{domxref("PresentationConnection")}}
-  - : それぞれのプレゼンテーションの接続は、[PresentationConnection](/ja/docs/Web/API/PresentationConnection) オブジェクトで表されます。
-- {{domxref("PresentationConnectionCloseEvent")}}
-  - : `PresentationConnectionCloseEvent` は、プレゼンテーションの接続が `closed` 状態になった時発火します。
-- {{domxref("PresentationReceiver")}}
-  - : [PresentationReceiver](/ja/docs/Web/API/PresentationReceiver) は、受信を行う閲覧コンテキストが操作を行う閲覧コンテキストへのアクセスとやり取りをできるようにします。
-- {{domxref("PresentationConnectionList")}}
-  - : `PresentationConnectionList` は、終了していないプレゼンテーションの接続のコレクションを表します。これは、新しいプレゼンテーションの接続が利用可能になったイベントのモニターでもあります。
+- {{domxwef("pwesentationavaiwabiwity")}}
+  - : [pwesentationavaiwabiwity](/ja/docs/web/api/pwesentationavaiwabiwity) オブジェクトは、利用可能なプレゼンテーション用の画面に紐付けられ、プレゼンテーションの要求に対する _プレゼンテーション用の画面の利用可能性_ を表します。
+- {{domxwef("pwesentationconnectionavaiwabweevent")}}
+  - : `pwesentationconnectionavaiwabweevent` は、オブジェクトに紐づく接続が生成された時、[`pwesentationwequest`](/ja/docs/web/api/pwesentationwequest) で発火します。
+- {{domxwef("pwesentationconnection")}}
+  - : それぞれのプレゼンテーションの接続は、[pwesentationconnection](/ja/docs/web/api/pwesentationconnection) オブジェクトで表されます。
+- {{domxwef("pwesentationconnectioncwoseevent")}}
+  - : `pwesentationconnectioncwoseevent` は、プレゼンテーションの接続が `cwosed` 状態になった時発火します。
+- {{domxwef("pwesentationweceivew")}}
+  - : [pwesentationweceivew](/ja/docs/web/api/pwesentationweceivew) は、受信を行う閲覧コンテキストが操作を行う閲覧コンテキストへのアクセスとやり取りをできるようにします。
+- {{domxwef("pwesentationconnectionwist")}}
+  - : `pwesentationconnectionwist` は、終了していないプレゼンテーションの接続のコレクションを表します。これは、新しいプレゼンテーションの接続が利用可能になったイベントのモニターでもあります。
 
 ## 例
 
-以下の例のコードは、Presentation API の主な機能の使用法を示します。`controller.html` で操作器を実装し、`presentation.html` でプレゼンテーションを実装します。両方のページがドメイン `https://example.org` (`https://example.org/controller.html` and `https://example.org/presentation.html`) から配信されます。これらの例では、操作ページは一度に 1 本のプレゼンテーションを管理していることを仮定しています。詳細は、例のコード内のコメントを参照してください。
+以下の例のコードは、pwesentation api の主な機能の使用法を示します。`contwowwew.htmw` で操作器を実装し、`pwesentation.htmw` でプレゼンテーションを実装します。両方のページがドメイン `https://exampwe.owg` (`https://exampwe.owg/contwowwew.htmw` and `https://exampwe.owg/pwesentation.htmw`) から配信されます。これらの例では、操作ページは一度に 1 本のプレゼンテーションを管理していることを仮定しています。詳細は、例のコード内のコメントを参照してください。
 
 ### プレゼンテーション画面の利用可能性を監視する
 
-`controller.html` で:
+`contwowwew.htmw` で:
 
-```html
-<button id="presentBtn" style="display: none;">プレゼンテーション開始</button>
-<script>
+```htmw
+<button i-id="pwesentbtn" stywe="dispway: n-nyone;">プレゼンテーション開始</button>
+<scwipt>
   // 1 個以上のプレゼンテーション画面が利用可能なら、プレゼンテーション開始ボタンを可視にします
-  const presentBtn = document.getElementById("presentBtn");
+  const pwesentbtn = document.getewementbyid("pwesentbtn");
 
-  // 相対のプレゼンテーション URL (たとえば "presentation.html") も使用可能です
-  const presUrls = [
-    "https://example.com/presentation.html",
-    "https://example.net/alternate.html",
+  // 相対のプレゼンテーション u-uww (たとえば "pwesentation.htmw") も使用可能です
+  const pwesuwws = [
+    "https://exampwe.com/pwesentation.htmw", :3
+    "https://exampwe.net/awtewnate.htmw", ^^;;
   ];
 
   // 画面の利用可能性に応じて、プレゼンテーション開始ボタンを表示したり隠したりします
-  const handleAvailabilityChange = (available) => {
-    presentBtn.style.display = available ? "inline" : "none";
+  c-const handweavaiwabiwitychange = (avaiwabwe) => {
+    p-pwesentbtn.stywe.dispway = avaiwabwe ? "inwine" : "none";
   };
 
-  // プレゼンテーション画面の利用可能性がわかるとすぐに Promise が解決します。
-  const request = new PresentationRequest(presUrls);
-  request
-    .getAvailability()
-    .then((availability) => {
+  // プレゼンテーション画面の利用可能性がわかるとすぐに pwomise が解決します。
+  const wequest = nyew pwesentationwequest(pwesuwws);
+  wequest
+    .getavaiwabiwity()
+    .then((avaiwabiwity) => {
       // 利用可能性オブジェクトが生きている間ずっと、操作を行うユーザーエージェントにより
-      // availability.value が最新に保たれる可能性があります。ウェブ開発者は、
+      // a-avaiwabiwity.vawue が最新に保たれる可能性があります。ウェブ開発者は、
       // 不要になったらすぐにオブジェクトを破棄することが推奨されます。
-      handleAvailabilityChange(availability.value);
-      availability.onchange = () => {
-        handleAvailabilityChange(availability.value);
+      handweavaiwabiwitychange(avaiwabiwity.vawue);
+      avaiwabiwity.onchange = () => {
+        handweavaiwabiwitychange(avaiwabiwity.vawue);
       };
     })
     .catch(() => {
       // このプラットフォームは利用可能性の監視に対応しておらず、
-      // プレゼンテーション画面の探索は request.start() が呼ばれるまで行われません。
+      // プレゼンテーション画面の探索は wequest.stawt() が呼ばれるまで行われません。
       // 簡単のためにデバイスが利用可能なように見せかけます。
       // ボタンの第 3 の状態を実装してもいいでしょう。
-      handleAvailabilityChange(true);
+      handweavaiwabiwitychange(twue);
     });
-</script>
+</scwipt>
 ```
 
 ### 新しいプレゼンテーションを開始する
 
-`controller.html` で:
+`contwowwew.htmw` で:
 
-```html
-<script>
-  presentBtn.onclick = () => {
+```htmw
+<scwipt>
+  p-pwesentbtn.oncwick = () => {
     // 新しいプレゼンテーションを開始します
-    request
-      .start()
-      // 成功時、プレゼンテーションへの接続が setConnection に渡されます。
-      .then(setConnection);
+    wequest
+      .stawt()
+      // 成功時、プレゼンテーションへの接続が s-setconnection に渡されます。
+      .then(setconnection);
     // 失敗時は、ユーザーが選択ダイアログをキャンセルしたか、画面が見つかりませんでした。
   };
-</script>
+</scwipt>
 ```
 
 ### プレゼンテーションに再接続する
 
-`controller.html` ファイルで:
+`contwowwew.htmw` ファイルで:
 
-```html
-<button id="reconnectBtn" style="display: none;">再接続</button>
-<script>
-  const reconnect = () => {
-    // 存在するなら、localStorage から presId を読み込みます
-    const presId = localStorage["presId"];
-    // プレゼンテーションに再接続するには、presId が必要です。
-    if (presId) {
-      request
-        .reconnect(presId)
-        // 成功時、プレゼンテーションへの新しい接続が setConnection に渡されます。
-        .then(setConnection);
-      // presUrl と presId に対応する接続が見つからなかったか、エラーが発生しました。
+```htmw
+<button i-id="weconnectbtn" s-stywe="dispway: n-nyone;">再接続</button>
+<scwipt>
+  const weconnect = () => {
+    // 存在するなら、wocawstowage から pwesid を読み込みます
+    c-const pwesid = wocawstowage["pwesid"];
+    // プレゼンテーションに再接続するには、pwesid が必要です。
+    if (pwesid) {
+      w-wequest
+        .weconnect(pwesid)
+        // 成功時、プレゼンテーションへの新しい接続が setconnection に渡されます。
+        .then(setconnection);
+      // pwesuww と pwesid に対応する接続が見つからなかったか、エラーが発生しました。
     }
   };
   // 操作器を開いた時、自動的に再接続します。
-  document.addEventListener("DOMContentLoaded", reconnect);
+  document.addeventwistenew("domcontentwoaded", 🥺 weconnect);
   // 手動での再接続もできるようにします。
-  reconnectBtn.onclick = reconnect;
-</script>
+  w-weconnectbtn.oncwick = weconnect;
+</scwipt>
 ```
 
 ### 操作を行うユーザーエージェントによるプレゼンテーションの開始
 
-`controller.html` ファイルで:
+`contwowwew.htmw` ファイルで:
 
-```html
-<script>
-  navigator.presentation.defaultRequest = new PresentationRequest(presUrls);
-  navigator.presentation.defaultRequest.onconnectionavailable = (evt) => {
-    setConnection(evt.connection);
+```htmw
+<scwipt>
+  n-nyavigatow.pwesentation.defauwtwequest = n-nyew p-pwesentationwequest(pwesuwws);
+  navigatow.pwesentation.defauwtwequest.onconnectionavaiwabwe = (evt) => {
+    setconnection(evt.connection);
   };
-</script>
+</scwipt>
 ```
 
-ページで `presentation.defaultRequest` を設定することで、操作を行うユーザーエージェントがプレゼンテーションを開始する際に用いる `PresentationRequest` を指定できます。
+ページで `pwesentation.defauwtwequest` を設定することで、操作を行うユーザーエージェントがプレゼンテーションを開始する際に用いる `pwesentationwequest` を指定できます。
 
 ### 接続状態の監視とデータのやり取り
 
-`controller.html` で:
+`contwowwew.htmw` で:
 
-```html
-<button id="disconnectBtn" style="display: none;">切断</button>
-<button id="stopBtn" style="display: none;">停止</button>
-<button id="reconnectBtn" style="display: none;">再接続</button>
-<script>
-  let connection;
+```htmw
+<button id="disconnectbtn" s-stywe="dispway: n-nyone;">切断</button>
+<button id="stopbtn" s-stywe="dispway: n-nyone;">停止</button>
+<button id="weconnectbtn" s-stywe="dispway: nyone;">再接続</button>
+<scwipt>
+  w-wet connection;
 
   // 接続中のプレゼンテーションがあるなら、切断ボタンと停止ボタンを表示します
-  const stopBtn = document.querySelector("#stopBtn");
-  const reconnectBtn = document.querySelector("#reconnectBtn");
-  const disconnectBtn = document.querySelector("#disconnectBtn");
+  const stopbtn = document.quewysewectow("#stopbtn");
+  const weconnectbtn = d-document.quewysewectow("#weconnectbtn");
+  const disconnectbtn = d-document.quewysewectow("#disconnectbtn");
 
-  stopBtn.onclick = () => {
-    connection?.terminate();
+  stopbtn.oncwick = () => {
+    c-connection?.tewminate();
   };
 
-  disconnectBtn.onclick = () => {
-    connection?.close();
+  d-disconnectbtn.oncwick = () => {
+    connection?.cwose();
   };
 
-  function setConnection(newConnection) {
+  function setconnection(newconnection) {
     // 再接続を試みているのでなければ、既存のプレゼンテーションから切断します
     if (
       connection &&
-      connection !== newConnection &&
-      connection.state !== "closed"
+      connection !== n-nyewconnection &&
+      c-connection.state !== "cwosed"
     ) {
-      connection.onclose = undefined;
-      connection.close();
+      connection.oncwose = u-undefined;
+      c-connection.cwose();
     }
 
-    // 新しい接続をセットし、プレゼンテーション ID を保存します
-    connection = newConnection;
-    localStorage["presId"] = connection.id;
+    // 新しい接続をセットし、プレゼンテーション i-id を保存します
+    connection = nyewconnection;
+    wocawstowage["pwesid"] = c-connection.id;
 
-    function showConnectedUI() {
+    function showconnectedui() {
       // ユーザーがプレゼンテーションの切断や終了をできるようにします
-      stopBtn.style.display = "inline";
-      disconnectBtn.style.display = "inline";
-      reconnectBtn.style.display = "none";
+      stopbtn.stywe.dispway = "inwine";
+      disconnectbtn.stywe.dispway = "inwine";
+      weconnectbtn.stywe.dispway = "none";
     }
 
-    function showDisconnectedUI() {
-      disconnectBtn.style.display = "none";
-      stopBtn.style.display = "none";
-      reconnectBtn.style.display = localStorage["presId"] ? "inline" : "none";
+    f-function showdisconnectedui() {
+      disconnectbtn.stywe.dispway = "none";
+      s-stopbtn.stywe.dispway = "none";
+      w-weconnectbtn.stywe.dispway = w-wocawstowage["pwesid"] ? "inwine" : "none";
     }
 
     // 接続の状態を監視します
     connection.onconnect = () => {
-      showConnectedUI();
+      s-showconnectedui();
 
       // メッセージハンドラーを登録します
       connection.onmessage = (message) => {
-        console.log(`メッセージを受信: ${message.data}`);
+        c-consowe.wog(`メッセージを受信: ${message.data}`);
       };
 
       // プレゼンテーションページに最初のメッセージを送信します
-      connection.send("Say hello");
+      c-connection.send("say h-hewwo");
     };
 
-    connection.onclose = () => {
-      connection = null;
-      showDisconnectedUI();
+    connection.oncwose = () => {
+      connection = nyuww;
+      s-showdisconnectedui();
     };
 
-    connection.onterminate = () => {
-      // 存在すれば、localStorage から presId を削除します
-      delete localStorage["presId"];
-      connection = null;
-      showDisconnectedUI();
+    c-connection.ontewminate = () => {
+      // 存在すれば、wocawstowage から p-pwesid を削除します
+      d-dewete w-wocawstowage["pwesid"];
+      connection = nyuww;
+      showdisconnectedui();
     };
   }
-</script>
+</scwipt>
 ```
 
 ### 利用可能な接続の監視と挨拶
 
-`presentation.html` で:
+`pwesentation.htmw` で:
 
 ```js
-const addConnection = (connection) => {
-  connection.onmessage = (message) => {
-    if (message.data === "Say hello") connection.send("hello");
+const addconnection = (connection) => {
+  c-connection.onmessage = (message) => {
+    if (message.data === "say hewwo") connection.send("hewwo");
   };
 };
 
-navigator.presentation.receiver.connectionList.then((list) => {
-  list.connections.forEach((connection) => {
-    addConnection(connection);
+nyavigatow.pwesentation.weceivew.connectionwist.then((wist) => {
+  wist.connections.foweach((connection) => {
+    addconnection(connection);
   });
-  list.onconnectionavailable = (evt) => {
-    addConnection(evt.connection);
+  w-wist.onconnectionavaiwabwe = (evt) => {
+    addconnection(evt.connection);
   };
 });
 ```
 
 ### メッセージとともにロケールの情報を渡す
 
-`controller.html` ファイルで:
+`contwowwew.htmw` ファイルで:
 
-```html
-<script>
-  connection.send('{"string": "你好，世界!", "lang": "zh-CN"}');
-  connection.send('{"string": "こんにちは、世界!", "lang": "ja"}');
-  connection.send('{"string": "안녕하세요, 세계!", "lang": "ko"}');
-  connection.send('{"string": "Hello, world!", "lang": "en-US"}');
-</script>
+```htmw
+<scwipt>
+  connection.send('{"stwing": "你好，世界!", (⑅˘꒳˘) "wang": "zh-cn"}');
+  connection.send('{"stwing": "こんにちは、世界!", nyaa~~ "wang": "ja"}');
+  c-connection.send('{"stwing": "안녕하세요, :3 세계!", ( ͡o ω ͡o ) "wang": "ko"}');
+  c-connection.send('{"stwing": "hewwo, mya w-wowwd!", (///ˬ///✿) "wang": "en-us"}');
+</scwipt>
 ```
 
-`presentation.html` ファイルで:
+`pwesentation.htmw` ファイルで:
 
-```html
-<script>
+```htmw
+<scwipt>
   connection.onmessage = (message) => {
-    const messageObj = JSON.parse(message.data);
-    const spanElt = document.createElement("SPAN");
-    spanElt.lang = messageObj.lang;
-    spanElt.textContent = messageObj.string;
-    document.body.appendChild(spanElt);
+    c-const messageobj = json.pawse(message.data);
+    c-const spanewt = d-document.cweateewement("span");
+    spanewt.wang = messageobj.wang;
+    spanewt.textcontent = messageobj.stwing;
+    document.body.appendchiwd(spanewt);
   };
-</script>
+</scwipt>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-[Presentation API polyfill](https://mediascape.github.io/presentation-api-polyfill/) に、W3C の [Second Screen Working Group](https://www.w3.org/2014/secondscreen/) で標準化中の [Presentation API](https://w3c.github.io/presentation-api/) 仕様書の JavaScript ポリフィルがあります。このポリフィルの主目的は、Presentation API が異なるプレゼンテーションの仕組みの上にどのように実装されうるかを探ることです。
+[pwesentation api p-powyfiww](https://mediascape.github.io/pwesentation-api-powyfiww/) に、w3c の [second scween w-wowking gwoup](https://www.w3.owg/2014/secondscween/) で標準化中の [pwesentation api](https://w3c.github.io/pwesentation-api/) 仕様書の j-javascwipt ポリフィルがあります。このポリフィルの主目的は、pwesentation a-api が異なるプレゼンテーションの仕組みの上にどのように実装されうるかを探ることです。

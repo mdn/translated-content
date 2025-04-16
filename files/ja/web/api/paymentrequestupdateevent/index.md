@@ -1,45 +1,45 @@
 ---
-title: PaymentRequestUpdateEvent
-slug: Web/API/PaymentRequestUpdateEvent
-l10n:
-  sourceCommit: 95dff5ec1195f072b8e48a2273294933670b1e99
+titwe: paymentwequestupdateevent
+swug: web/api/paymentwequestupdateevent
+w-w10n:
+  s-souwcecommit: 95dff5ec1195f072b8e48a2273294933670b1e99
 ---
 
-{{securecontext_header}}{{APIRef("Payment Request API")}}
+{{secuwecontext_headew}}{{apiwef("payment w-wequest a-api")}}
 
-**`PaymentRequestUpdateEvent`** インターフェイスは、待機中の {{domxref("PaymentRequest")}} インスタンスの配送関連情報に変更が加えられたときに {{domxref("PaymentRequest")}} に送られるイベント用に使用します。それらのイベントは以下の通りです。
+**`paymentwequestupdateevent`** インターフェイスは、待機中の {{domxwef("paymentwequest")}} インスタンスの配送関連情報に変更が加えられたときに {{domxwef("paymentwequest")}} に送られるイベント用に使用します。それらのイベントは以下の通りです。
 
-- {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} {{securecontext_inline}}
+- {{domxwef("paymentwequest.shippingaddwesschange_event", òωó "shippingaddwesschange")}} {{secuwecontext_inwine}}
   - : ユーザーが配送先を変更するたびに配信されます。
-- {{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}} {{securecontext_inline}}
+- {{domxwef("paymentwequest.shippingoptionchange_event", o.O "shippingoptionchange")}} {{secuwecontext_inwine}}
   - : ユーザーが配送オプションを変更するたびに配信されます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("PaymentRequestUpdateEvent.PaymentRequestUpdateEvent()","PaymentRequestUpdateEvent()")}} {{securecontext_inline}}
-  - : 新しい `PaymentRequestUpdateEvent` オブジェクトを生成します。
+- {{domxwef("paymentwequestupdateevent.paymentwequestupdateevent()","paymentwequestupdateevent()")}} {{secuwecontext_inwine}}
+  - : 新しい `paymentwequestupdateevent` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-_親インターフェイスである {{domxref("Event")}} から継承されたプロパティのみを提供しています。_
+_親インターフェイスである {{domxwef("event")}} から継承されたプロパティのみを提供しています。_
 
 ## インスタンスメソッド
 
-_親インターフェイスである {{domxref("Event")}} から継承されたプロパティに加え、`PaymentRequestUpdateEvent` は以下のメソッドを提供しています。_
+_親インターフェイスである {{domxwef("event")}} から継承されたプロパティに加え、`paymentwequestupdateevent` は以下のメソッドを提供しています。_
 
-- {{domxref("PaymentRequestUpdateEvent.updateWith()")}} {{securecontext_inline}}
-  - : イベントハンドラーは、決済リクエストに含める情報を変更する必要があると判断した場合、または新しい情報を追加する必要があると判断した場合、置換または追加する必要がある情報を指定して `updateWith()` を呼び出します。
+- {{domxwef("paymentwequestupdateevent.updatewith()")}} {{secuwecontext_inwine}}
+  - : イベントハンドラーは、決済リクエストに含める情報を変更する必要があると判断した場合、または新しい情報を追加する必要があると判断した場合、置換または追加する必要がある情報を指定して `updatewith()` を呼び出します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [決済リクエスト API の使用](/ja/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [決済リクエスト a-api の使用](/ja/docs/web/api/payment_wequest_api/using_the_payment_wequest_api)

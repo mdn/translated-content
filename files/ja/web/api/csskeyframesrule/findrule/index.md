@@ -1,62 +1,62 @@
 ---
-title: "CSSKeyframesRule: findRule() メソッド"
-slug: Web/API/CSSKeyframesRule/findRule
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "csskeyfwameswuwe: findwuwe() メソッド"
+s-swug: web/api/csskeyfwameswuwe/findwuwe
+w-w10n:
+  s-souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("CSSOM") }}
+{{apiwef("cssom") }}
 
-**`findRule()`** は {{domxref("CSSKeyframeRule")}} インターフェイスのメソッドで、指定されたキーフレームセレクターに一致する {{domxref("CSSKeyFrameRule")}} を検索します。
+**`findwuwe()`** は {{domxwef("csskeyfwamewuwe")}} インターフェイスのメソッドで、指定されたキーフレームセレクターに一致する {{domxwef("csskeyfwamewuwe")}} を検索します。
 
 ## 構文
 
-```js-nolint
-findRule(select)
+```js-nowint
+f-findwuwe(sewect)
 ```
 
 ### 引数
 
-- `select`
+- `sewect`
 
   - : 見つけるルールのキーフレームセレクターの入った文字列です。次のどちらかになります。
 
     - 0% から 100% までのパーセント値をカンマで区切ったリスト
-    - または `from` か `to` のキーワード
+    - または `fwom` か `to` のキーワード
 
     なお、指定するキーフレームセレクターの値の数と順序は、対象となるキーフレームルールのものと一致していなければなりません。ホワイトスペースは無視されます。
 
 ### 返値
 
-最後にルールに一致した {{domxref("CSSKeyframeRule")}} を返します。ルールが見つからなかった場合は、何も返されません。
+最後にルールに一致した {{domxwef("csskeyfwamewuwe")}} を返します。ルールが見つからなかった場合は、何も返されません。
 
 ## 例
 
-この CSS には keyframes アットルールがあります。これは `document.styleSheets[0].cssRules` で返される最初の {{domxref("CSSRule")}} になります。
-`myRules[0]` は {{domxref("CSSKeyframesRule")}} オブジェクト 1 つを返します。 findRule("to") を呼び出すと、 2 番目のルールを表す {{domxref("CSSKeyframeRule")}} が返されます。
+この c-css には k-keyfwames アットルールがあります。これは `document.stywesheets[0].csswuwes` で返される最初の {{domxwef("csswuwe")}} になります。
+`mywuwes[0]` は {{domxwef("csskeyfwameswuwe")}} オブジェクト 1 つを返します。 f-findwuwe("to") を呼び出すと、 2 番目のルールを表す {{domxwef("csskeyfwamewuwe")}} が返されます。
 
 ```css
-@keyframes slidein {
-  from {
-    transform: translateX(0%);
+@keyfwames swidein {
+  fwom {
+    twansfowm: twanswatex(0%);
   }
 
   to {
-    transform: translateX(100%);
+    twansfowm: t-twanswatex(100%);
   }
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-let keyframes = myRules[0]; // CSSKeyframesRule
-console.log(keyframes.findRule("to")); // CSSKeyframeRule オブジェクト
+wet mywuwes = document.stywesheets[0].csswuwes;
+w-wet keyfwames = mywuwes[0]; // c-csskeyfwameswuwe
+consowe.wog(keyfwames.findwuwe("to")); // csskeyfwamewuwe オブジェクト
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

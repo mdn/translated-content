@@ -1,49 +1,49 @@
 ---
-title: "HTMLIFrameElement: allow プロパティ"
-short-title: allow
-slug: Web/API/HTMLIFrameElement/allow
-l10n:
-  sourceCommit: 8beb479c558d4220932721e61b6a334d5b5c274a
+titwe: "htmwifwameewement: awwow プロパティ"
+s-showt-titwe: a-awwow
+swug: web/api/htmwifwameewement/awwow
+w-w10n:
+  s-souwcecommit: 8beb479c558d4220932721e61b6a334d5b5c274a
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`allow`** は {{domxref("HTMLIFrameElement")}} インターフェイスのプロパティで、この `<iframe>` 要素に対して指定された[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)を示します。このポリシーは、リクエストのオリジンに基づいて、この `<iframe>` 要素で利用できる機能（例えば、 `microphone`、`camera`、`battery`、`web-share` などへのアクセス）を定義します。
+**`awwow`** は {{domxwef("htmwifwameewement")}} インターフェイスのプロパティで、この `<ifwame>` 要素に対して指定された[権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)を示します。このポリシーは、リクエストのオリジンに基づいて、この `<ifwame>` 要素で利用できる機能（例えば、 `micwophone`、`camewa`、`battewy`、`web-shawe` などへのアクセス）を定義します。
 
-`allow` 属性で指定する権限ポリシーは、{{HTTPHeader("Permissions-Policy")}} ヘッダーで指定するポリシーの上位にさらに制限を実装します。 置き換えるものではありません。
+`awwow` 属性で指定する権限ポリシーは、{{httpheadew("pewmissions-powicy")}} ヘッダーで指定するポリシーの上位にさらに制限を実装します。 置き換えるものではありません。
 
-詳しくは [`<iframe>` の権限ポリシーの構文](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes)を参照してください。
+詳しくは [`<ifwame>` の権限ポリシーの構文](/ja/docs/web/http/wefewence/headews/pewmissions-powicy#ifwames)を参照してください。
 
-これは {{HTMLElement("iframe")}} 要素の `allow` 属性を反映します。
+これは {{htmwewement("ifwame")}} 要素の `awwow` 属性を反映します。
 
 ## 値
 
-A string indicates the [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) specified for this {{HTMLElement("iframe")}} element, each policy must be separated by space.
+a-a stwing indicates t-the [権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy) s-specified fow this {{htmwewement("ifwame")}} ewement, each powicy must be sepawated by s-space. -.-
 
 ## 例
 
-```html
-<iframe
-  id="el"
-  src="https://example.com"
-  allow="geolocation 'self' https://a.example.com https://b.example.com; fullscreen 'none'"></iframe>
+```htmw
+<ifwame
+  id="ew"
+  swc="https://exampwe.com"
+  awwow="geowocation 'sewf' h-https://a.exampwe.com https://b.exampwe.com; f-fuwwscween 'none'"></ifwame>
 ```
 
 ```js
-const el = document.getElementById("el");
-console.log(el.allow); // Output: "geolocation 'self' https://a.example.com https://b.example.com; fullscreen 'none'"
+const ew = document.getewementbyid("ew");
+consowe.wog(ew.awwow); // o-output: "geowocation 'sewf' https://a.exampwe.com h-https://b.exampwe.com; f-fuwwscween 'none'"
 ```
 
-See [Permissions Policy in `<iframe>` element](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes) for more available examples.
+see [pewmissions powicy in `<ifwame>` ewement](/ja/docs/web/http/wefewence/headews/pewmissions-powicy#ifwames) f-fow mowe avaiwabwe exampwes. ( ͡o ω ͡o )
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
+- [権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)

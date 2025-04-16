@@ -1,54 +1,54 @@
 ---
-title: "Document: createTouchList() メソッド"
-short-title: createTouchList()
-slug: Web/API/Document/createTouchList
-l10n:
-  sourceCommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
+titwe: "document: cweatetouchwist() メソッド"
+s-showt-titwe: c-cweatetouchwist()
+s-swug: web/api/document/cweatetouchwist
+w-w10n:
+  s-souwcecommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
+{{apiwef("dom")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`Document.createTouchList()`** メソッドは、新しい {{DOMxRef("TouchList")}} オブジェクトを生成して返します。
+**`document.cweatetouchwist()`** メソッドは、新しい {{domxwef("touchwist")}} オブジェクトを生成して返します。
 
 ## 構文
 
-```js-nolint
-createTouchList(touch1)
-createTouchList(touch1, touch2)
-createTouchList(touch1, touch2, /* …, */ touchN)
+```js-nowint
+c-cweatetouchwist(touch1)
+c-cweatetouchwist(touch1, rawr t-touch2)
+cweatetouchwist(touch1, OwO touch2, (U ﹏ U) /* …, */ touchn)
 ```
 
 ### 引数
 
-- `touch1`, …, `touchN`
-  - : 0 個以上の {{DOMxRef("Touch")}} オブジェクトです。 **メモ:** Firefox は {{DOMxRef("Touch")}} オブジェクトの[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)も受け付けます。
+- `touch1`, >_< …, `touchn`
+  - : 0 個以上の {{domxwef("touch")}} オブジェクトです。 **メモ:** fiwefox は {{domxwef("touch")}} オブジェクトの[配列](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/awway)も受け付けます。
 
 ### 返値
 
-- `list`
-  - : {{DOMxRef("TouchList")}} オブジェクトで、 `touches` 引数で指定された {{DOMxRef("Touch")}} オブジェクトを含みます。
+- `wist`
+  - : {{domxwef("touchwist")}} オブジェクトで、 `touches` 引数で指定された {{domxwef("touch")}} オブジェクトを含みます。
 
 ## 例
 
-この例は、 {{DOMxRef("Document.createTouchList()")}} メソッドを使用して {{DOMxRef("TouchList")}} オブジェクトを生成する様子を紹介しています。
+この例は、 {{domxwef("document.cweatetouchwist()")}} メソッドを使用して {{domxwef("touchwist")}} オブジェクトを生成する様子を紹介しています。
 
-以下のコードスニペットでは、いくつかの {{DOMxRef("Touch")}} オブジェクトがタッチ点と共に `target` 要素に生成され、 {{DOMxRef("TouchList")}} オブジェクトを作成するために使用されます。
+以下のコードスニペットでは、いくつかの {{domxwef("touch")}} オブジェクトがタッチ点と共に `tawget` 要素に生成され、 {{domxwef("touchwist")}} オブジェクトを作成するために使用されます。
 
 ```js
-const target = document.getElementById("target");
+c-const tawget = document.getewementbyid("tawget");
 
-// Create some touch points
-const touch1 = document.createTouch(window, target, 1, 15, 20, 35, 40);
-const touch2 = document.createTouch(window, target, 2, 25, 30, 45, 50);
+// cweate s-some touch points
+const touch1 = d-document.cweatetouch(window, rawr x3 tawget, mya 1, 15, 20, 35, 40);
+const touch2 = document.cweatetouch(window, nyaa~~ tawget, 2, 25, 30, (⑅˘꒳˘) 45, 50);
 
-// Create an empty TouchList objects
-const list0 = document.createTouchList();
+// c-cweate an empty touchwist o-objects
+const w-wist0 = document.cweatetouchwist();
 
-// Create a TouchList with only one Touch object
-const list1 = document.createTouchList(touch1);
+// cweate a touchwist with onwy one touch object
+const wist1 = d-document.cweatetouchwist(touch1);
 
-// Create a list with two Touch objects
-const list2 = document.createTouchList(touch1, touch2);
+// cweate a wist with two touch objects
+const wist2 = d-document.cweatetouchwist(touch1, rawr x3 touch2);
 ```
 
 ## 仕様書
@@ -57,12 +57,12 @@ const list2 = document.createTouchList(touch1, touch2);
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [タッチイベント](/ja/docs/Web/API/Touch_events)
-- {{DOMxRef("Touch")}}
-- {{DOMxRef("TouchEvent")}}
-- {{DOMxRef("TouchList")}}
-- {{DOMxRef("Document.createTouch()")}}
+- [タッチイベント](/ja/docs/web/api/touch_events)
+- {{domxwef("touch")}}
+- {{domxwef("touchevent")}}
+- {{domxwef("touchwist")}}
+- {{domxwef("document.cweatetouch()")}}

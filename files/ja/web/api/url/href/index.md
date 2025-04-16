@@ -1,16 +1,16 @@
 ---
-title: "URL: href プロパティ"
-short-title: href
-slug: Web/API/URL/href
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "uww: hwef プロパティ"
+s-showt-titwe: h-hwef
+swug: web/api/uww/hwef
+w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-**`href`** は {{domxref("URL")}} インターフェイスのプロパティで、URL 全体の入った文字列です。
+**`hwef`** は {{domxwef("uww")}} インターフェイスのプロパティで、uww 全体の入った文字列です。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 値
 
@@ -19,18 +19,18 @@ l10n:
 ## 例
 
 ```js
-const url = new URL("https://developer.mozilla.org/ja/docs/Web/API/URL/href");
-console.log(url.href); // 'https://developer.mozilla.org/ja/docs/Web/API/URL/href' とログ出力
+c-const uww = n-nyew uww("https://devewopew.moziwwa.owg/ja/docs/web/api/uww/hwef");
+c-consowe.wog(uww.hwef); // 'https://devewopew.moziwwa.owg/ja/docs/web/api/uww/hwef' とログ出力
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("URL")}} インターフェイス
+- 所属先の {{domxwef("uww")}} インターフェイス

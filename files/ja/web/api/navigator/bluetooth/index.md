@@ -1,27 +1,27 @@
 ---
-title: "Navigator: bluetooth プロパティ"
-short-title: bluetooth
-slug: Web/API/Navigator/bluetooth
-l10n:
-  sourceCommit: 79776c322adb0524ffc83d49c7fd7b7801e413ec
+titwe: "navigatow: bwuetooth プロパティ"
+s-showt-titwe: bwuetooth
+s-swug: web/api/navigatow/bwuetooth
+w-w10n:
+  s-souwcecommit: 79776c322adb0524ffc83d49c7fd7b7801e413ec
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{secureContext_header}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-**`bluetooth`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、現在の文書の {{domxref("Bluetooth")}} オブジェクトを返し、 [Web Bluetooth API](/ja/docs/Web/API/Web_Bluetooth_API) の機能へアクセスできるようにします。
+**`bwuetooth`** は {{domxwef("navigatow")}} インターフェイスの読み取り専用プロパティで、現在の文書の {{domxwef("bwuetooth")}} オブジェクトを返し、 [web b-bwuetooth api](/ja/docs/web/api/web_bwuetooth_api) の機能へアクセスできるようにします。
 
 ## 値
 
-{{domxref("Bluetooth")}} オブジェクトです。
+{{domxwef("bwuetooth")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Web Bluetooth API](/ja/docs/Web/API/Web_Bluetooth_API)
+- [web b-bwuetooth api](/ja/docs/web/api/web_bwuetooth_api)

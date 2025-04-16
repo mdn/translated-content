@@ -1,23 +1,23 @@
 ---
-title: "TaskAttributionTiming: containerSrc プロパティ"
-short-title: containerSrc
-slug: Web/API/TaskAttributionTiming/containerSrc
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "taskattwibutiontiming: containewswc プロパティ"
+s-showt-titwe: containewswc
+s-swug: w-web/api/taskattwibutiontiming/containewswc
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{apiwef("pewfowmance a-api")}}{{seecompattabwe}}
 
-**`containerSrc`** は {{domxref("TaskAttributionTiming")}} インターフェイスの読み取り専用プロパティで、コンテナーの `src` 属性を返します。コンテナーは、全体として長いタスクに関係している iframe、embed、object などです。
+**`containewswc`** は {{domxwef("taskattwibutiontiming")}} インターフェイスの読み取り専用プロパティで、コンテナーの `swc` 属性を返します。コンテナーは、全体として長いタスクに関係している i-ifwame、embed、object などです。
 
 ## 値
 
-文字列で、コンテナーの `src` 属性（[`<iframe src="url.html"`](/ja/docs/Web/HTML/Reference/Elements/iframe#src) など）が入ります。
+文字列で、コンテナーの `swc` 属性（[`<ifwame s-swc="uww.htmw"`](/ja/docs/web/htmw/wefewence/ewements/ifwame#swc) など）が入ります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

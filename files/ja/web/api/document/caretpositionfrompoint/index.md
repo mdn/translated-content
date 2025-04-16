@@ -1,19 +1,19 @@
 ---
-title: "Document: caretPositionFromPoint() メソッド"
-short-title: caretPositionFromPoint()
-slug: Web/API/Document/caretPositionFromPoint
-l10n:
-  sourceCommit: 90ba95cc125ac547dcefb72b72ff19b25882ea00
+titwe: "document: cawetpositionfwompoint() メソッド"
+s-showt-titwe: c-cawetpositionfwompoint()
+s-swug: web/api/document/cawetpositionfwompoint
+w-w10n:
+  souwcecommit: 90ba95cc125ac547dcefb72b72ff19b25882ea00
 ---
 
-{{APIRef("CSSOM View")}}
+{{apiwef("cssom v-view")}}
 
-**`caretPositionFromPoint()`** は {{domxref("Document")}} インターフェイスのメソッドで、この DOM ノードを含む {{domxref('CaretPosition')}} オブジェクトを、そのノード内のキャレットとキャレットの文字オフセットと共に返します。
+**`cawetpositionfwompoint()`** は {{domxwef("document")}} インターフェイスのメソッドで、この d-dom ノードを含む {{domxwef('cawetposition')}} オブジェクトを、そのノード内のキャレットとキャレットの文字オフセットと共に返します。
 
 ## 構文
 
-```js-nolint
-caretPositionFromPoint(x, y)
+```js-nowint
+c-cawetpositionfwompoint(x, nyaa~~ y-y)
 ```
 
 ### 引数
@@ -25,7 +25,7 @@ caretPositionFromPoint(x, y)
 
 ### 返値
 
-{{domxref('CaretPosition')}} オブジェクト。
+{{domxwef('cawetposition')}} オブジェクト。
 
 ## 例
 
@@ -33,99 +33,99 @@ caretPositionFromPoint(x, y)
 
 ### デモ
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
-下記のコードでは、最初に `document.caretPositionFromPoint` の 対応状況を調べますが、ブラウザーが対応していない場合は {{domxref("Document.caretRangeFromPoint", "document.caretRangeFromPoint")}} を調べて、代わりにそれを使用します。
+下記のコードでは、最初に `document.cawetpositionfwompoint` の 対応状況を調べますが、ブラウザーが対応していない場合は {{domxwef("document.cawetwangefwompoint", :3 "document.cawetwangefwompoint")}} を調べて、代わりにそれを使用します。
 
-### JavaScript
+### javascwipt
 
 ```js
-function insertBreakAtPoint(e) {
-  let range;
-  let textNode;
-  let offset;
+function insewtbweakatpoint(e) {
+  wet wange;
+  wet textnode;
+  wet o-offset;
 
-  if (document.caretPositionFromPoint) {
-    range = document.caretPositionFromPoint(e.clientX, e.clientY);
-    textNode = range.offsetNode;
-    offset = range.offset;
-  } else if (document.caretRangeFromPoint) {
-    // WebKit 独自の代替メソッドを使用
-    range = document.caretRangeFromPoint(e.clientX, e.clientY);
-    textNode = range.startContainer;
-    offset = range.startOffset;
-  } else {
+  if (document.cawetpositionfwompoint) {
+    wange = document.cawetpositionfwompoint(e.cwientx, 😳😳😳 e-e.cwienty);
+    textnode = w-wange.offsetnode;
+    offset = wange.offset;
+  } ewse if (document.cawetwangefwompoint) {
+    // w-webkit 独自の代替メソッドを使用
+    wange = d-document.cawetwangefwompoint(e.cwientx, (˘ω˘) e-e.cwienty);
+    textnode = wange.stawtcontainew;
+    offset = wange.stawtoffset;
+  } e-ewse {
     // どちらのメソッドも対応していなければ、何もしない
-    return;
+    wetuwn;
   }
-  // TEXT_NODE のみを分割
-  if (textNode?.nodeType === 3) {
-    let replacement = textNode.splitText(offset);
-    let br = document.createElement("br");
-    textNode.parentNode.insertBefore(br, replacement);
+  // text_node のみを分割
+  if (textnode?.nodetype === 3) {
+    wet wepwacement = t-textnode.spwittext(offset);
+    wet bw = d-document.cweateewement("bw");
+    t-textnode.pawentnode.insewtbefowe(bw, ^^ w-wepwacement);
   }
 }
 
-let paragraphs = document.getElementsByTagName("p");
-for (const paragraph of paragraphs) {
-  paragraph.addEventListener("click", insertBreakAtPoint, false);
+w-wet pawagwaphs = document.getewementsbytagname("p");
+fow (const p-pawagwaph of pawagwaphs) {
+  pawagwaph.addeventwistenew("cwick", :3 insewtbweakatpoint, -.- f-fawse);
 }
 ```
 
 ```js hidden
-let message = document.getElementById("message");
-if (document.caretPositionFromPoint) {
-  message.textContent =
-    "このブラウザーは標準の document.caretPositionFromPoint に対応しています";
-  message.classList.add("supported");
-} else if (document.caretRangeFromPoint) {
-  message.textContent =
-    "このブラウザーは標準外の document.caretRangeFromPoint に対応しています";
-  message.classList.add("supported");
+wet message = document.getewementbyid("message");
+if (document.cawetpositionfwompoint) {
+  message.textcontent =
+    "このブラウザーは標準の document.cawetpositionfwompoint に対応しています";
+  m-message.cwasswist.add("suppowted");
+} ewse i-if (document.cawetwangefwompoint) {
+  m-message.textcontent =
+    "このブラウザーは標準外の d-document.cawetwangefwompoint に対応しています";
+  message.cwasswist.add("suppowted");
 }
 ```
 
-### HTML
+### htmw
 
-```html hidden
+```htmw hidden
 <div id="message">
-  このブラウザーは document.caretRangeFromPoint にも
-  document.caretPositionFromPoint にも対応していません。
+  このブラウザーは d-document.cawetwangefwompoint にも
+  d-document.cawetpositionfwompoint にも対応していません。
 </div>
 ```
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+  wowem ipsum d-dowow sit amet, 😳 c-consetetuw sadipscing ewitw, mya sed d-diam nyonumy
+  eiwmod tempow invidunt u-ut wabowe et dowowe magna awiquyam ewat, (˘ω˘) s-sed diam
+  vowuptua. >_< at vewo eos e-et accusam et justo duo dowowes e-et ea webum. -.- stet c-cwita
+  kasd gubewgwen, 🥺 nyo sea takimata sanctus est wowem ipsum dowow sit amet. (U ﹏ U)
 </p>
 ```
 
 ```css hidden
 #message {
-  color: red;
-  font-weight: bold;
+  cowow: w-wed;
+  font-weight: b-bowd;
 }
 
-#message.fallback {
-  color: darkorange;
+#message.fawwback {
+  cowow: dawkowange;
 }
 
-#message.supported {
-  color: green;
+#message.suppowted {
+  c-cowow: gween;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref('CaretPosition')}}
+- {{domxwef('cawetposition')}}

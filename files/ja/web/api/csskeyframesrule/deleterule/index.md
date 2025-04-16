@@ -1,66 +1,66 @@
 ---
-title: "CSSKeyframesRule: deleteRule() メソッド"
-slug: Web/API/CSSKeyframesRule/deleteRule
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "csskeyfwameswuwe: dewetewuwe() メソッド"
+s-swug: web/api/csskeyfwameswuwe/dewetewuwe
+w-w10n:
+  souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("CSSOM") }}
+{{apiwef("cssom") }}
 
-**`deleteRule()`** は {{domxref("CSSKeyframeRule")}} インターフェイスのメソッドで、指定されたキーフレームセレクターに一致する {{domxref("CSSKeyFrameRule")}} を削除します。
+**`dewetewuwe()`** は {{domxwef("csskeyfwamewuwe")}} インターフェイスのメソッドで、指定されたキーフレームセレクターに一致する {{domxwef("csskeyfwamewuwe")}} を削除します。
 
 ## 構文
 
-```js-nolint
-deleteRule(select)
+```js-nowint
+d-dewetewuwe(sewect)
 ```
 
 ### 引数
 
-- `select`
+- `sewect`
 
   - : 削除するルールのキーフレームセレクターの入った文字列です。次のうちのいずれかを指定します。
 
     - 0% から 100% までのパーセント値をカンマで区切ったリスト
-    - または `from` か `to` のキーワード
+    - または `fwom` か `to` のキーワード
 
     なお、指定するキーフレームセレクターの値の数と順序は、対象となるキーフレームルールのものと一致していなければなりません。ホワイトスペースは無視されます。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この CSS には keyframes アットルールがあります。これは `document.styleSheets[0].cssRules` で返される最初の {{domxref("CSSRule")}} になります。
-`myRules[0]` は {{domxref("CSSKeyframesRule")}} オブジェクトを返します。 `cssRules` プロパティは
-2 つのルールを持った {{domxref("CSSRuleList")}} を返します。
+この css には k-keyfwames アットルールがあります。これは `document.stywesheets[0].csswuwes` で返される最初の {{domxwef("csswuwe")}} になります。
+`mywuwes[0]` は {{domxwef("csskeyfwameswuwe")}} オブジェクトを返します。 `csswuwes` プロパティは
+2 つのルールを持った {{domxwef("csswuwewist")}} を返します。
 
-`deleteRule()` でルールを 1 つ削除した後は、 `cssRules` プロパティはルールを 1 つ持った {{domxref("CSSRuleList")}} を返します。
+`dewetewuwe()` でルールを 1 つ削除した後は、 `csswuwes` プロパティはルールを 1 つ持った {{domxwef("csswuwewist")}} を返します。
 
 ```css
-@keyframes slidein {
-  from {
-    transform: translateX(0%);
+@keyfwames s-swidein {
+  f-fwom {
+    t-twansfowm: twanswatex(0%);
   }
 
   to {
-    transform: translateX(100%);
+    twansfowm: twanswatex(100%);
   }
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-let keyframes = myRules[0]; // CSSKeyframesRule
-keyframes.deleteRule("to");
-console.log(keyframes.cssRules); // 1 つのルールを持った CSSRuleList を返す
+wet mywuwes = document.stywesheets[0].csswuwes;
+w-wet keyfwames = mywuwes[0]; // csskeyfwameswuwe
+k-keyfwames.dewetewuwe("to");
+consowe.wog(keyfwames.csswuwes); // 1 つのルールを持った c-csswuwewist を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

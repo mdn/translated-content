@@ -1,64 +1,64 @@
 ---
-title: "CanvasRenderingContext2D: shadowOffsetY プロパティ"
-slug: Web/API/CanvasRenderingContext2D/shadowOffsetY
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "canvaswendewingcontext2d: shadowoffsety プロパティ"
+s-swug: web/api/canvaswendewingcontext2d/shadowoffsety
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Canvas 2D API の **`CanvasRenderingContext2D.shadowOffsetY`** は、影を縦方向にずらす距離を設定します。
+c-canvas 2d a-api の **`canvaswendewingcontext2d.shadowoffsety`** は、影を縦方向にずらす距離を設定します。
 
-> [!NOTE]
-> 影はプロパティ {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} が透明でない値に設定されているときのみ描画されます。さらに、プロパティ {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}、`shadowOffsetY` のいずれかがゼロでない値に設定されていなければいけません。
+> [!note]
+> 影はプロパティ {{domxwef("canvaswendewingcontext2d.shadowcowow", -.- "shadowcowow")}} が透明でない値に設定されているときのみ描画されます。さらに、プロパティ {{domxwef("canvaswendewingcontext2d.shadowbwuw", "shadowbwuw")}}、{{domxwef("canvaswendewingcontext2d.shadowoffsetx", (ˆ ﻌ ˆ)♡ "shadowoffsetx")}}、`shadowoffsety` のいずれかがゼロでない値に設定されていなければいけません。
 
 ## 値
 
-影を縦方向にずらす距離を表す浮動小数点数です。正の値を設定すると下に、負の値を設定すると上にずらします。デフォルト値は `0` (縦方向にずらさない) です。{{jsxref("Infinity")}} や {{jsxref("NaN")}} は無視されます。
+影を縦方向にずらす距離を表す浮動小数点数です。正の値を設定すると下に、負の値を設定すると上にずらします。デフォルト値は `0` (縦方向にずらさない) です。{{jsxwef("infinity")}} や {{jsxwef("nan")}} は無視されます。
 
 ## 例
 
 ### 影を縦方向にずらす
 
-この例では、長方形にぼかしがかかった影を加えます。プロパティ {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} で影の色を設定し、`shadowOffsetY` で影のオフセットを下に 25 単位に設定し、{{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}} で影のぼかしレベルを 10 に設定します。
+この例では、長方形にぼかしがかかった影を加えます。プロパティ {{domxwef("canvaswendewingcontext2d.shadowcowow", (⑅˘꒳˘) "shadowcowow")}} で影の色を設定し、`shadowoffsety` で影のオフセットを下に 25 単位に設定し、{{domxwef("canvaswendewingcontext2d.shadowbwuw", (U ᵕ U❁) "shadowbwuw")}} で影のぼかしレベルを 10 に設定します。
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
 // 影
-ctx.shadowColor = "red";
-ctx.shadowOffsetY = 25;
-ctx.shadowBlur = 10;
+c-ctx.shadowcowow = "wed";
+ctx.shadowoffsety = 25;
+ctx.shadowbwuw = 10;
 
 // 長方形
-ctx.fillStyle = "blue";
-ctx.fillRect(20, 20, 150, 80);
+c-ctx.fiwwstywe = "bwue";
+ctx.fiwwwect(20, -.- 20, 150, ^^;; 80);
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Moving_a_shadow_vertically', 700, 180) }}
+{{ e-embedwivesampwe('moving_a_shadow_vewticawwy', >_< 700, mya 180) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このプロパティを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.shadowOffsetX")}}
-- {{domxref("CanvasRenderingContext2D.shadowColor")}}
-- {{domxref("CanvasRenderingContext2D.shadowBlur")}}
+- このプロパティを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.shadowoffsetx")}}
+- {{domxwef("canvaswendewingcontext2d.shadowcowow")}}
+- {{domxwef("canvaswendewingcontext2d.shadowbwuw")}}

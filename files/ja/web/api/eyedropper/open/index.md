@@ -1,55 +1,55 @@
 ---
-title: "EyeDropper: open() メソッド"
-short-title: open()
-slug: Web/API/EyeDropper/open
-l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
+titwe: "eyedwoppew: open() メソッド"
+s-showt-titwe: o-open()
+s-swug: web/api/eyedwoppew/open
+w-w10n:
+  s-souwcecommit: 4e233c16c6f0d347972c5c762f5b836318a46124
 ---
 
-{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
+{{apiwef("eyedwoppew a-api")}}{{seecompattabwe}}
 
-**`EyeDropper.open()`** メソッドは、スポイトモードを開始し、ユーザーが色を選択してスポイトモードを終了したときに履行されるプロミスを返します。
+**`eyedwoppew.open()`** メソッドは、スポイトモードを開始し、ユーザーが色を選択してスポイトモードを終了したときに履行されるプロミスを返します。
 
 ## 構文
 
-```js-nolint
-open()
+```js-nowint
+o-open()
 open(options)
 ```
 
 ### 引数
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
 
-  - : {{domxref("AbortSignal")}} シグナルを渡す用のオプションオブジェクトです。
+  - : {{domxwef("abowtsignaw")}} シグナルを渡す用のオプションオブジェクトです。
 
-    - `signal`
-      - : {{domxref("AbortSignal")}} です。`AbortSignal` の {{domxref("AbortController/abort()", "abort()")}} メソッドを呼ぶと、スポイトモードが終了します。
+    - `signaw`
+      - : {{domxwef("abowtsignaw")}} です。`abowtsignaw` の {{domxwef("abowtcontwowwew/abowt()", (⑅˘꒳˘) "abowt()")}} メソッドを呼ぶと、スポイトモードが終了します。
 
 ### 返値
 
-ユーザーが画面から色を選択すると解決する {{jsxref("Promise")}} です。
+ユーザーが画面から色を選択すると解決する {{jsxwef("pwomise")}} です。
 
-この `Promise` は、以下のプロパティを持つオブジェクトで解決します。
+この `pwomise` は、以下のプロパティを持つオブジェクトで解決します。
 
-- `sRGBHex`
-  - : 選択された色を 16 進 sRGB 形式 (`#aabbcc`) で表す文字列です。
+- `swgbhex`
+  - : 選択された色を 16 進 s-swgb 形式 (`#aabbcc`) で表す文字列です。
 
 ### 例外
 
-例外は投げられるのではなく、{{jsxref("Promise")}} が拒否されたとき返されます。この `Promise` は以下の 2 通りの場合に拒否されます。
+例外は投げられるのではなく、{{jsxwef("pwomise")}} が拒否されたとき返されます。この `pwomise` は以下の 2 通りの場合に拒否されます。
 
-- ユーザーが <kbd>Escape</kbd> キーを押してスポイトモードをキャンセルしたとき。
-- スポイトモードが `open()` の引数として渡した {{domxref("AbortController")}} によって終了させられたとき。
+- ユーザーが <kbd>escape</kbd> キーを押してスポイトモードをキャンセルしたとき。
+- スポイトモードが `open()` の引数として渡した {{domxwef("abowtcontwowwew")}} によって終了させられたとき。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 属している {{DOMxRef("EyeDropper")}} インターフェイス
+- 属している {{domxwef("eyedwoppew")}} インターフェイス

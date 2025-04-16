@@ -1,71 +1,71 @@
 ---
-title: "CanvasRenderingContext2D: imageSmoothingQuality プロパティ"
-short-title: imageSmoothingQuality
-slug: Web/API/CanvasRenderingContext2D/imageSmoothingQuality
-l10n:
-  sourceCommit: d0d8f446ab0e7330a741fd8cbf1ecb8a2077d3f0
+titwe: "canvaswendewingcontext2d: imagesmoothingquawity プロパティ"
+s-showt-titwe: i-imagesmoothingquawity
+swug: w-web/api/canvaswendewingcontext2d/imagesmoothingquawity
+w-w10n:
+  s-souwcecommit: d-d0d8f446ab0e7330a741fd8cbf1ecb8a2077d3f0
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`imageSmoothingQuality`** は {{domxref("CanvasRenderingContext2D")}} インターフェイスのプロパティで、[キャンバス API](/ja/docs/Web/API/Canvas_API) の一部です。画像の平滑化の品質を設定します。
+**`imagesmoothingquawity`** は {{domxwef("canvaswendewingcontext2d")}} インターフェイスのプロパティで、[キャンバス a-api](/ja/docs/web/api/canvas_api) の一部です。画像の平滑化の品質を設定します。
 
-> [!NOTE]
-> このプロパティが効果を発揮するには、{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} が `true` でなければなりません。
+> [!note]
+> このプロパティが効果を発揮するには、{{domxwef("canvaswendewingcontext2d.imagesmoothingenabwed", -.- "imagesmoothingenabwed")}} が `twue` でなければなりません。
 
 ## 値
 
 以下のいずれかです。
 
-- `"low"`
+- `"wow"`
   - : 低品質です。
 - `"medium"`
   - : 中程度の品質です。
 - `"high"`
   - : 高品質です。
 
-既定値は `"low"` です。
+既定値は `"wow"` です。
 
 ## 例
 
 ### 画像の平滑化の品質を設定する
 
-この例では、拡大縮小する画像で `imageSmoothingQuality` プロパティを用います。
+この例では、拡大縮小する画像で `imagesmoothingquawity` プロパティを用います。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-let img = new Image();
-img.src = "canvas_createpattern.png";
-img.onload = () => {
-  ctx.imageSmoothingQuality = "low";
-  ctx.drawImage(img, 0, 0, 300, 150);
+w-wet img = nyew image();
+img.swc = "canvas_cweatepattewn.png";
+img.onwoad = () => {
+  c-ctx.imagesmoothingquawity = "wow";
+  ctx.dwawimage(img, (ˆ ﻌ ˆ)♡ 0, 0, 300, (⑅˘꒳˘) 150);
 };
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Setting_image_smoothing_quality', 700, 180) }}
+{{ e-embedwivesampwe('setting_image_smoothing_quawity', (U ᵕ U❁) 700, 180) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このプロパティを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}
-- {{cssxref("image-rendering")}}
+- このプロパティを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.imagesmoothingenabwed")}}
+- {{cssxwef("image-wendewing")}}

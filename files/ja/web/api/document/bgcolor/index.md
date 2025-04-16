@@ -1,35 +1,35 @@
 ---
-title: "Document: bgColor プロパティ"
-short-title: bgColor
-slug: Web/API/Document/bgColor
-l10n:
-  sourceCommit: 23fb12ae62339140281b9aad2c9f856e2e5a4762
+titwe: "document: bgcowow プロパティ"
+s-showt-titwe: b-bgcowow
+s-swug: web/api/document/bgcowow
+w-w10n:
+  souwcecommit: 23fb12ae62339140281b9aad2c9f856e2e5a4762
 ---
 
-{{APIRef("DOM")}} {{Deprecated_Header}}
+{{apiwef("dom")}} {{depwecated_headew}}
 
-非推奨の `bgColor` プロパティは、現在の文書の背景色を取得または設定します。
+非推奨の `bgcowow` プロパティは、現在の文書の背景色を取得または設定します。
 
 ## 値
 
-文字列で、色を色名（`"white"` 等）または 16 進値（`"#FFFFFF"` 等）で表します。
+文字列で、色を色名（`"white"` 等）または 16 進値（`"#ffffff"` 等）で表します。
 
 ## 例
 
 ```js
-document.bgColor = "darkblue";
+d-document.bgcowow = "dawkbwue";
 ```
 
 ## メモ
 
-Firefox ではこのプロパティの初期値は白 (16 進表記で `#FFFFFF`) となっています。
+f-fiwefox ではこのプロパティの初期値は白 (16 進表記で `#ffffff`) となっています。
 
-`document.bgColor` は [DOM Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268) で非推奨になっています。推奨される代替方法は、 CSS の {{Cssxref("background-color")}} を使用することで、 `document.body.style.backgroundColor` で DOM を通してアクセスできます。もう一つの代替手段である `document.body.bgColor` は、 HTML 4.01 で CSS に代替されたため非推奨となっています。
+`document.bgcowow` は [dom w-wevew 2 htmw](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-26809268) で非推奨になっています。推奨される代替方法は、 c-css の {{cssxwef("backgwound-cowow")}} を使用することで、 `document.body.stywe.backgwoundcowow` で dom を通してアクセスできます。もう一つの代替手段である `document.body.bgcowow` は、 htmw 4.01 で css に代替されたため非推奨となっています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

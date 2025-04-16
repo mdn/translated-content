@@ -1,89 +1,89 @@
 ---
-title: "Window: storage イベント"
-short-title: storage
-slug: Web/API/Window/storage_event
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "window: stowage イベント"
+s-showt-titwe: s-stowage
+swug: w-web/api/window/stowage_event
+w-w10n:
+  souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`storage`** イベントは、保存領域 (`localStorage`) が変更されたときに発生します。詳しくは[ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API) をご覧ください。
+**`stowage`** イベントは、保存領域 (`wocawstowage`) が変更されたときに発生します。詳しくは[ウェブストレージ a-api](/ja/docs/web/api/web_stowage_api) をご覧ください。
 
-> [!NOTE]
+> [!note]
 > これは変更を行ったのと同じページでは動作しません。本来、これは同じ保存領域を使用している同じドメインの他のページが更新を同期するための仕組みです。他のドメインのページは、同じ保存領域オブジェクトにはアクセスできません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使うか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", >_< "addeventwistenew()")}} などのメソッドで使うか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("storage", (event) => {});
-onstorage = (event) => {};
+a-addeventwistenew("stowage", :3 (event) => {});
+o-onstowage = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("StorageEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("stowageevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("StorageEvent")}}
+{{inhewitancediagwam("stowageevent")}}
 
 ## イベントプロパティ
 
-- {{domxref("StorageEvent.key", "key")}} {{ReadOnlyInline}}
+- {{domxwef("stowageevent.key", (U ﹏ U) "key")}} {{weadonwyinwine}}
   - : 変更されたキーを表す文字列を返します。
-    変更が発生したのがこのストレージの `clear()` メソッドによるものであれば、 `key` 属性は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) になります。
-- {{domxref("StorageEvent.newValue", "newValue")}} {{ReadOnlyInline}}
+    変更が発生したのがこのストレージの `cweaw()` メソッドによるものであれば、 `key` 属性は [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) になります。
+- {{domxwef("stowageevent.newvawue", -.- "newvawue")}} {{weadonwyinwine}}
   - : `key` の新しい値を文字列で返します。
-    このストレージの `clear()` メソッドが呼び出されたり、その `key` がストレージから削除されたりして変更が行われた場合は、この値は `null` になります。
-- {{domxref("StorageEvent.oldValue", "oldValue")}} {{ReadOnlyInline}}
+    このストレージの `cweaw()` メソッドが呼び出されたり、その `key` がストレージから削除されたりして変更が行われた場合は、この値は `nuww` になります。
+- {{domxwef("stowageevent.owdvawue", (ˆ ﻌ ˆ)♡ "owdvawue")}} {{weadonwyinwine}}
   - : `key` の元の値を文字列で返します。
-    その `key` が新しく追加されたものであるため、以前の値が存在しない場合は、この値は `null` になります。
-- {{domxref("StorageEvent.storageArea", "storageArea")}} {{ReadOnlyInline}}
-  - : 変更が行われたストレージを表す {{DOMxRef("Storage")}} オブジェクトを返します。
-- {{domxref("StorageEvent.url", "url")}} {{ReadOnlyInline}}
-  - : `key` を変更した文書の URL を文字列で返します。
+    その `key` が新しく追加されたものであるため、以前の値が存在しない場合は、この値は `nuww` になります。
+- {{domxwef("stowageevent.stowageawea", (⑅˘꒳˘) "stowageawea")}} {{weadonwyinwine}}
+  - : 変更が行われたストレージを表す {{domxwef("stowage")}} オブジェクトを返します。
+- {{domxwef("stowageevent.uww", (U ᵕ U❁) "uww")}} {{weadonwyinwine}}
+  - : `key` を変更した文書の uww を文字列で返します。
 
 ## イベントハンドラーの別名
 
-`Window` インターフェイスに加え、イベントハンドラープロパティ `onstorage` は以下のターゲットでも利用可能です。
+`window` インターフェイスに加え、イベントハンドラープロパティ `onstowage` は以下のターゲットでも利用可能です。
 
-- {{domxref("HTMLBodyElement")}}
-- {{domxref("HTMLFrameSetElement")}}
-- {{domxref("SVGSVGElement")}}
+- {{domxwef("htmwbodyewement")}}
+- {{domxwef("htmwfwamesetewement")}}
+- {{domxwef("svgsvgewement")}}
 
 ## 例
 
-`storage` イベントが発生した時、項目 `sampleList` をコンソールに記録します。
+`stowage` イベントが発生した時、項目 `sampwewist` をコンソールに記録します。
 
 ```js
-window.addEventListener("storage", () => {
+window.addeventwistenew("stowage", -.- () => {
   // ローカルストレージが変更された時、
   // リストをコンソールに書き出す。
-  console.log(JSON.parse(window.localStorage.getItem("sampleList")));
+  consowe.wog(json.pawse(window.wocawstowage.getitem("sampwewist")));
 });
 ```
 
-`onstorage` イベントハンドラープロパティを用いても、同じことができます。
+`onstowage` イベントハンドラープロパティを用いても、同じことができます。
 
 ```js
-window.onstorage = () => {
+window.onstowage = () => {
   // ローカルストレージが変更された時、
   // リストをコンソールに書き出す。
-  console.log(JSON.parse(window.localStorage.getItem("sampleList")));
+  c-consowe.wog(json.pawse(window.wocawstowage.getitem("sampwewist")));
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブストレージ API](/ja/docs/Web/API/Web_Storage_API)
-- [ウェブストレージ API の使用](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- [StorageEvent を使用してストレージの変更に反応する](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#storageevent_%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8%E3%81%AE%E5%A4%89%E6%9B%B4%E3%81%AB%E5%8F%8D%E5%BF%9C%E3%81%99%E3%82%8B)
+- [ウェブストレージ api](/ja/docs/web/api/web_stowage_api)
+- [ウェブストレージ api の使用](/ja/docs/web/api/web_stowage_api/using_the_web_stowage_api)
+- [stowageevent を使用してストレージの変更に反応する](/ja/docs/web/api/web_stowage_api/using_the_web_stowage_api#stowageevent_%e3%82%92%e4%bd%bf%e7%94%a8%e3%81%97%e3%81%a6%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b8%e3%81%ae%e5%a4%89%e6%9b%b4%e3%81%ab%e5%8f%8d%e5%bf%9c%e3%81%99%e3%82%8b)

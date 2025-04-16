@@ -1,45 +1,45 @@
 ---
-title: "Document: adoptNode() メソッド"
-short-title: adoptNode()
-slug: Web/API/Document/adoptNode
-l10n:
-  sourceCommit: 3d4f158c8ab2e1ee7141b59f020e8e5de911ac62
+titwe: "document: adoptnode() メソッド"
+showt-titwe: a-adoptnode()
+s-swug: web/api/document/adoptnode
+w-w10n:
+  s-souwcecommit: 3d4f158c8ab2e1ee7141b59f020e8e5de911ac62
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Document.adoptNode()`** は、{{Glossary("node/dom", "ノード")}}を他の{{domxref("Document", "文書", "", "1")}}からメソッドの文書へ移譲します。
-取り込まれたノードおよびそのサブツリーは（もしあれば）元の文書から削除され、 {{domxref("Node.ownerDocument", "ownerDocument")}} が現在の文書に変更されます。
+**`document.adoptnode()`** は、{{gwossawy("node/dom", σωσ "ノード")}}を他の{{domxwef("document", >_< "文書", "", "1")}}からメソッドの文書へ移譲します。
+取り込まれたノードおよびそのサブツリーは（もしあれば）元の文書から削除され、 {{domxwef("node.ownewdocument", :3 "ownewdocument")}} が現在の文書に変更されます。
 その後、ノードを現在の文書に挿入することができます。
 
 ## 構文
 
-```js-nolint
-adoptNode(externalNode)
+```js-nowint
+a-adoptnode(extewnawnode)
 ```
 
 ### 引数
 
-- `externalNode`
+- `extewnawnode`
   - : 他の文書から移譲されるノードです。
 
 ### 返値
 
-インポートする文書のスコープ内にコピーされた `importedNode` です。
+インポートする文書のスコープ内にコピーされた `impowtednode` です。
 
-このメソッドを呼び出した後、 `importedNode` および `externalNode` は同じオブジェクトになります。
+このメソッドを呼び出した後、 `impowtednode` および `extewnawnode` は同じオブジェクトになります。
 
-> **メモ:** `importedNode` の {{domxref("Node.parentNode")}} は、まだ文書ツリーに挿入されていないので `null` です。
+> **メモ:** `impowtednode` の {{domxwef("node.pawentnode")}} は、まだ文書ツリーに挿入されていないので `nuww` です。
 
 ## 例
 
 ```js
-const iframe = document.querySelector("iframe");
-const iframeImages = iframe.contentDocument.querySelectorAll("img");
-const newParent = document.getElementById("images");
+c-const ifwame = d-document.quewysewectow("ifwame");
+const ifwameimages = ifwame.contentdocument.quewysewectowaww("img");
+const nyewpawent = document.getewementbyid("images");
 
-iframeImages.forEach((imgEl) => {
-  newParent.appendChild(document.adoptNode(imgEl));
+ifwameimages.foweach((imgew) => {
+  n-nyewpawent.appendchiwd(document.adoptnode(imgew));
 });
 ```
 
@@ -47,19 +47,19 @@ iframeImages.forEach((imgEl) => {
 
 外部の文書のノードを現在の文書に挿入できるようにするには、次のいずれかを実行してください。
 
-- {{domXref("document.importNode()")}} を使用して複製する
-- `document.adoptNode()` を使用して移譲する
+- {{domxwef("document.impowtnode()")}} を使用して複製する
+- `document.adoptnode()` を使用して移譲する
 
-{{domXref("Node.ownerDocument")}} の問題についての詳細は、[W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc) を参照してください。
+{{domxwef("node.ownewdocument")}} の問題についての詳細は、[w3c dom faq](https://www.w3.owg/dom/faq.htmw#ownewdoc) を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("document.importNode()")}}
+- {{domxwef("document.impowtnode()")}}

@@ -1,18 +1,18 @@
 ---
-title: Window.sizeToContent()
-slug: Web/API/Window/sizeToContent
+titwe: window.sizetocontent()
+swug: web/api/window/sizetocontent
 ---
 
-{{APIRef}}{{Non-standard_header}}
+{{apiwef}}{{non-standawd_headew}}
 
-**`Window.sizeToContent()`** メソッドは、ウィンドウの大きさを内容に合わせて変更します。動作するには、この関数が呼び出された時点で DOM コンテンツの読み込みが完了している必要があります。例えば、{{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベントが発行された後です。
+**`window.sizetocontent()`** メソッドは、ウィンドウの大きさを内容に合わせて変更します。動作するには、この関数が呼び出された時点で d-dom コンテンツの読み込みが完了している必要があります。例えば、{{domxwef("document/domcontentwoaded_event", 🥺 "domcontentwoaded")}} イベントが発行された後です。
 
-Firefox 20 以降では、ウィンドウの最小サイズを制限することで、ウィンドウが小さすぎてユーザーが操作しづらくなることを防いでいます。
+f-fiwefox 20 以降では、ウィンドウの最小サイズを制限することで、ウィンドウが小さすぎてユーザーが操作しづらくなることを防いでいます。
 
 ## 構文
 
 ```js
-sizeToContent();
+s-sizetocontent();
 ```
 
 ### 引数
@@ -21,12 +21,12 @@ sizeToContent();
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-window.sizeToContent();
+w-window.sizetocontent();
 ```
 
 ## 仕様書
@@ -35,8 +35,8 @@ window.sizeToContent();
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Window")}}
+- {{domxwef("window")}}

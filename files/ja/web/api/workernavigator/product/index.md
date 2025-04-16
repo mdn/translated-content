@@ -1,31 +1,31 @@
 ---
-title: "WorkerNavigator: product プロパティ"
-short-title: product
-slug: Web/API/WorkerNavigator/product
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "wowkewnavigatow: pwoduct プロパティ"
+s-showt-titwe: p-pwoduct
+swug: w-web/api/wowkewnavigatow/pwoduct
+w-w10n:
+  souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{apiwef("htmw d-dom")}} {{depwecated_headew}}
 
-**`WorkerNavigator.product`** プロパティの値は、どのブラウザーでも常に "`Gecko`" です。このプロパティは互換性のためにのみ残されています。
+**`wowkewnavigatow.pwoduct`** プロパティの値は、どのブラウザーでも常に "`gecko`" です。このプロパティは互換性のためにのみ残されています。
 
-> [!NOTE]
-> このプロパティが実際の製品名を返すことを頼りにしないでください。すべてのブラウザーが、このプロパティの値として "`Gecko`" を返します。
+> [!note]
+> このプロパティが実際の製品名を返すことを頼りにしないでください。すべてのブラウザーが、このプロパティの値として "`gecko`" を返します。
 
 ## 値
 
-"`Gecko`" という文字列です。
+"`gecko`" という文字列です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WorkerNavigator.appCodeName")}}
-- {{domxref("WorkerNavigator.appName")}}
+- {{domxwef("wowkewnavigatow.appcodename")}}
+- {{domxwef("wowkewnavigatow.appname")}}

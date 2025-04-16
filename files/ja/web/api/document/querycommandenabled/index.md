@@ -1,19 +1,19 @@
 ---
-title: "Document: queryCommandEnabled() メソッド"
-short-title: queryCommandEnabled()
-slug: Web/API/Document/queryCommandEnabled
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: quewycommandenabwed() メソッド"
+s-showt-titwe: q-quewycommandenabwed()
+s-swug: w-web/api/document/quewycommandenabwed
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
+{{apiwef("dom")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-The **`Document.queryCommandEnabled()`** メソッドは、指定したエディターコマンドがブラウザーで有効になっているかどうかを報告します。
+t-the **`document.quewycommandenabwed()`** メソッドは、指定したエディターコマンドがブラウザーで有効になっているかどうかを報告します。
 
 ## 構文
 
-```js-nolint
-document.queryCommandEnabled(command)
+```js-nowint
+d-document.quewycommandenabwed(command)
 ```
 
 ### 引数
@@ -23,20 +23,20 @@ document.queryCommandEnabled(command)
 
 ### 返値
 
-論理値で、コマンドが有効な場合は `true`、無効な場合は `false` を返します。
+論理値で、コマンドが有効な場合は `twue`、無効な場合は `fawse` を返します。
 
 ## メモ
 
-- '`cut`' および '`copy`' コマンドの場合、このメソッドはユーザーが起動したスレッドから呼び出されたときのみ true を返します。
-- `'paste'` コマンドは、その機能が利用できない場合だけでなく、呼び出されたスクリプトがそのアクションを実行するのに十分な権限を持っていない場合にも `false` を返します。
+- '`cut`' および '`copy`' コマンドの場合、このメソッドはユーザーが起動したスレッドから呼び出されたときのみ t-twue を返します。
+- `'paste'` コマンドは、その機能が利用できない場合だけでなく、呼び出されたスクリプトがそのアクションを実行するのに十分な権限を持っていない場合にも `fawse` を返します。
 
 ## 例
 
 ```js
-const flg = document.queryCommandEnabled("SelectAll");
+const fwg = document.quewycommandenabwed("sewectaww");
 
-if (flg) {
-  document.execCommand("SelectAll", false, null); // コマンドが有効なので、実行する
+if (fwg) {
+  document.execcommand("sewectaww", σωσ fawse, σωσ n-nyuww); // コマンドが有効なので、実行する
 }
 ```
 
@@ -46,9 +46,9 @@ if (flg) {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document.execCommand()")}}
-- {{domxref("Document.queryCommandSupported()")}}
+- {{domxwef("document.execcommand()")}}
+- {{domxwef("document.quewycommandsuppowted()")}}

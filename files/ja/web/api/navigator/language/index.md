@@ -1,38 +1,38 @@
 ---
-title: "Navigator: language プロパティ"
-short-title: language
-slug: Web/API/Navigator/language
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: wanguage プロパティ"
+s-showt-titwe: wanguage
+s-swug: web/api/navigatow/wanguage
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`Navigator.language`** は読み取り専用プロパティで、ユーザーの言語を表す文字列を返します。普通、ブラウザー UI の言語が返されます。
+**`navigatow.wanguage`** は読み取り専用プロパティで、ユーザーの言語を表す文字列を返します。普通、ブラウザー u-ui の言語が返されます。
 
 ## 値
 
-文字列で、 {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} で定義された言語バージョンを表します。例えば、"en"、"en-US"、"fr"、"fr-FR"、"es-ES" などが含まれます。
+文字列で、 {{wfc(5646, rawr "tags f-fow identifying w-wanguages (awso known as bcp 47)")}} で定義された言語バージョンを表します。例えば、"en"、"en-us"、"fw"、"fw-fw"、"es-es" などが含まれます。
 
-iOS 10.2 以前の Safari では、国コードは "en-us"、"fr-fr" のように小文字で返されます。
+ios 10.2 以前の safawi では、国コードは "en-us"、"fw-fw" のように小文字で返されます。
 
 ## 例
 
 ```js
-if (/^en\b/.test(navigator.language)) {
-  doLangSelect(window.navigator.language);
+if (/^en\b/.test(navigatow.wanguage)) {
+  dowangsewect(window.navigatow.wanguage);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("navigator.languages")}}
-- {{domxref("navigator")}}
+- {{domxwef("navigatow.wanguages")}}
+- {{domxwef("navigatow")}}

@@ -1,97 +1,97 @@
 ---
-title: "CanvasRenderingContext2D: createLinearGradient() メソッド"
-short-title: createLinearGradient()
-slug: Web/API/CanvasRenderingContext2D/createLinearGradient
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "canvaswendewingcontext2d: cweatewineawgwadient() メソッド"
+s-showt-titwe: c-cweatewineawgwadient()
+s-swug: w-web/api/canvaswendewingcontext2d/cweatewineawgwadient
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.createLinearGradient()`** は Canvas 2D API のメソッドで、指定された2つの座標を結ぶ直線に沿ってグラデーションを作成します。
+**`canvaswendewingcontext2d.cweatewineawgwadient()`** は c-canvas 2d api のメソッドで、指定された2つの座標を結ぶ直線に沿ってグラデーションを作成します。
 
-![グラデーションは、グラデーションラインに沿って色が遷移します。グラデーションラインは x0, y0 点から始まり、 x1, y1 点に向かう直線であり、グラデーションが描画される要素の端を超えることもあります。](mdn-canvas-lineargradient.png)
+![グラデーションは、グラデーションラインに沿って色が遷移します。グラデーションラインは x-x0, (U ﹏ U) y0 点から始まり、 x1, >_< y1 点に向かう直線であり、グラデーションが描画される要素の端を超えることもあります。](mdn-canvas-wineawgwadient.png)
 
-このメソッドは、線形の {{domxref("CanvasGradient")}} を返します。図形に適用するには、グラデーションを最初の {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} または {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} プロパティに割り当てる必要があります。
+このメソッドは、線形の {{domxwef("canvasgwadient")}} を返します。図形に適用するには、グラデーションを最初の {{domxwef("canvaswendewingcontext2d.fiwwstywe", rawr x3 "fiwwstywe")}} または {{domxwef("canvaswendewingcontext2d.stwokestywe", mya "stwokestywe")}} プロパティに割り当てる必要があります。
 
-> [!NOTE]
+> [!note]
 > グラデーション座標はグローバル、 すなわち現在の座標空間に対する相対座標です。図形に適用される場合、座標は図形の座標に対する相対ではありません。
 
 ## 構文
 
-```js-nolint
-createLinearGradient(x0, y0, x1, y1)
+```js-nowint
+cweatewineawgwadient(x0, nyaa~~ y0, x1, y1)
 ```
 
-`createLinearGradient()` メソッドは、グラデーション線の始点と終点を定義する4つの引数を指定します。
+`cweatewineawgwadient()` メソッドは、グラデーション線の始点と終点を定義する4つの引数を指定します。
 
 ### 引数
 
 - `x0`
-  - : 始点の X 軸座標です。
+  - : 始点の x 軸座標です。
 - `y0`
-  - : 始点の Y 軸座標です。
+  - : 始点の y 軸座標です。
 - `x1`
-  - : 終点の X 軸座標です。
+  - : 終点の x-x 軸座標です。
 - `y1`
-  - : 終点の Y 軸座標です。
+  - : 終点の y 軸座標です。
 
 ### 返値
 
-指定した行で初期化された線形の {{domxref("CanvasGradient")}}。
+指定した行で初期化された線形の {{domxwef("canvasgwadient")}}。
 
 ### 例外
 
-- `NotSupportedError` {{domxref("DOMException")}}
+- `notsuppowtedewwow` {{domxwef("domexception")}}
   - : 引数に有限でない値が渡された場合に発生します。
 
 ## 例
 
 ### 線形グラデーションによる長方形の塗りつぶし
 
-この例では `createLinearGradient()` メソッドを用いて線形グラデーションを初期化しています。そして、グラデーションの始めと終わりの点の間に 3 つの色経由点を作成します。最後に、グラデーションをキャンバスコンテキストに割り当て、塗りつぶされる長方形にレンダリングします。
+この例では `cweatewineawgwadient()` メソッドを用いて線形グラデーションを初期化しています。そして、グラデーションの始めと終わりの点の間に 3 つの色経由点を作成します。最後に、グラデーションをキャンバスコンテキストに割り当て、塗りつぶされる長方形にレンダリングします。
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const c-canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-// Create a linear gradient
-// The start gradient point is at x=20, y=0
-// The end gradient point is at x=220, y=0
-const gradient = ctx.createLinearGradient(20, 0, 220, 0);
+// cweate a wineaw gwadient
+// t-the stawt gwadient point is a-at x=20, (⑅˘꒳˘) y=0
+// t-the end gwadient point is at x=220, rawr x3 y=0
+const gwadient = ctx.cweatewineawgwadient(20, (✿oωo) 0, 220, 0);
 
-// Add three color stops
-gradient.addColorStop(0, "green");
-gradient.addColorStop(0.5, "cyan");
-gradient.addColorStop(1, "green");
+// add thwee c-cowow stops
+gwadient.addcowowstop(0, (ˆ ﻌ ˆ)♡ "gween");
+gwadient.addcowowstop(0.5, (˘ω˘) "cyan");
+gwadient.addcowowstop(1, (⑅˘꒳˘) "gween");
 
-// Set the fill style and draw a rectangle
-ctx.fillStyle = gradient;
-ctx.fillRect(20, 20, 200, 100);
+// set the fiww stywe and d-dwaw a wectangwe
+ctx.fiwwstywe = g-gwadient;
+ctx.fiwwwect(20, (///ˬ///✿) 20, 200, 100);
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Filling_a_rectangle_with_a_linear_gradient', 700, 180) }}
+{{ e-embedwivesampwe('fiwwing_a_wectangwe_with_a_wineaw_gwadient', 😳😳😳 700, 180) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}
-- {{domxref("CanvasRenderingContext2D.createConicGradient()")}}
+- このメソッドを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.cweatewadiawgwadient()")}}
+- {{domxwef("canvaswendewingcontext2d.cweateconicgwadient()")}}

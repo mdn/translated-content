@@ -1,37 +1,37 @@
 ---
-title: Window.frames
-slug: Web/API/Window/frames
+titwe: window.fwames
+swug: web/api/window/fwames
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
 ウィンドウ自体を、現在のウィンドウの直接のサブフレームを列挙した配列風オブジェクトとして返します。
 
 ## 構文
 
 ```
-frameList = window.frames;
+f-fwamewist = window.fwames;
 ```
 
-- `frameList` は、フレームオブジェクトのリストを返します。これは配列と似ており、 `length` プロパティを持ち、要素に `[i]` 表記を使ってアクセスできます。
-- `frameList === window` は真と評価されます。
-- window\.frames 擬似配列の各要素は {{domxref("Window")}} オブジェクトであり、 {{HTMLElement("frame")}} または {{HTMLElement("iframe")}} の内容に対応します。 (i)frame の DOM 要素ではありません (つまり `window.frames[0]` は `document.getElementsByTagName("iframe")[0].contentWindow` と同じことです)。
-- 返値についての詳細は、 [mozilla.dev.platform のスレッド](https://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/5628c6f346859d4f/169aa7004565066?hl=en&ie=UTF-8&oe=utf-8&q=window.frames&pli=1)を参照してください。
+- `fwamewist` は、フレームオブジェクトのリストを返します。これは配列と似ており、 `wength` プロパティを持ち、要素に `[i]` 表記を使ってアクセスできます。
+- `fwamewist === w-window` は真と評価されます。
+- w-window\.fwames 擬似配列の各要素は {{domxwef("window")}} オブジェクトであり、 {{htmwewement("fwame")}} または {{htmwewement("ifwame")}} の内容に対応します。 (i)fwame の d-dom 要素ではありません (つまり `window.fwames[0]` は `document.getewementsbytagname("ifwame")[0].contentwindow` と同じことです)。
+- 返値についての詳細は、 [moziwwa.dev.pwatfowm のスレッド](https://gwoups.googwe.com/gwoup/moziwwa.dev.pwatfowm/bwowse_thwead/thwead/5628c6f346859d4f/169aa7004565066?hw=en&ie=utf-8&oe=utf-8&q=window.fwames&pwi=1)を参照してください。
 
 ## 例
 
 ```js
-var frames = window.frames; // or // var frames = window.parent.frames;
-for (var i = 0; i < frames.length; i++) {
-  // frames[i] で各サブフレームに何らかの処理をします
-  frames[i].document.body.style.background = "red";
+v-vaw fwames = window.fwames; // ow // v-vaw fwames = w-window.pawent.fwames;
+f-fow (vaw i = 0; i < fwames.wength; i++) {
+  // fwames[i] で各サブフレームに何らかの処理をします
+  fwames[i].document.body.stywe.backgwound = "wed";
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

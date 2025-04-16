@@ -1,86 +1,86 @@
 ---
-title: Window.screenY
-slug: Web/API/Window/screenY
+titwe: window.scweeny
+swug: web/api/window/scweeny
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`Window.screenY`** は読み取り専用のプロパティで、ユーザーのブラウザーのビューポートの上端から画面の上端までの垂直距離を CSS ピクセル数で返します。
+**`window.scweeny`** は読み取り専用のプロパティで、ユーザーのブラウザーのビューポートの上端から画面の上端までの垂直距離を c-css ピクセル数で返します。
 
-> **メモ:** `screenY` の別名である {{domxref("Window.screenTop")}} が、最近は新しいブラウザー間で実装されていました。これはもともと IE のみが対応していましたが、有名であるためあらゆる場所で導入されています。
+> **メモ:** `scweeny` の別名である {{domxwef("window.scweentop")}} が、最近は新しいブラウザー間で実装されていました。これはもともと i-ie のみが対応していましたが、有名であるためあらゆる場所で導入されています。
 
 ## 構文
 
 ```js
-topWindowPos = window.screenY;
+t-topwindowpos = w-window.scweeny;
 ```
 
 ### 返値
 
-ブラウザーのビューポートの上端から画面の上端までの CSS ピクセル数に等しい数値です。
+ブラウザーのビューポートの上端から画面の上端までの c-css ピクセル数に等しい数値です。
 
 ## 例
 
-[screenleft-screentop](https://mdn.github.io/dom-examples/screenleft-screentop/) の例では、円が描かれたキャンバスを見ることができます。この例では、 {{domxref("Window.screenLeft")}}/{{domxref("Window.screenTop")}} に加えて {{domxref("Window.requestAnimationFrame()")}} を使用することで、ウィンドウの位置を移動しても画面上の一定の物理的な位置に円を描き続けます。
+[scweenweft-scweentop](https://mdn.github.io/dom-exampwes/scweenweft-scweentop/) の例では、円が描かれたキャンバスを見ることができます。この例では、 {{domxwef("window.scweenweft")}}/{{domxwef("window.scweentop")}} に加えて {{domxwef("window.wequestanimationfwame()")}} を使用することで、ウィンドウの位置を移動しても画面上の一定の物理的な位置に円を描き続けます。
 
 ```js
-initialLeft = window.screenLeft + canvasElem.offsetLeft;
-initialTop = window.screenTop + canvasElem.offsetTop;
+initiawweft = w-window.scweenweft + c-canvasewem.offsetweft;
+i-initiawtop = window.scweentop + canvasewem.offsettop;
 
-function positionElem() {
-  let newLeft = window.screenLeft + canvasElem.offsetLeft;
-  let newTop = window.screenTop + canvasElem.offsetTop;
+function positionewem() {
+  wet newweft = w-window.scweenweft + canvasewem.offsetweft;
+  wet nyewtop = w-window.scweentop + canvasewem.offsettop;
 
-  let leftUpdate = initialLeft - newLeft;
-  let topUpdate = initialTop - newTop;
+  w-wet weftupdate = initiawweft - nyewweft;
+  wet topupdate = initiawtop - n-nyewtop;
 
-  ctx.fillStyle = "rgb(0, 0, 0)";
-  ctx.fillRect(0, 0, width, height);
-  ctx.fillStyle = "rgb(0, 0, 255)";
-  ctx.beginPath();
-  ctx.arc(
-    leftUpdate + width / 2,
-    topUpdate + height / 2 + 35,
+  ctx.fiwwstywe = "wgb(0, (✿oωo) 0, 0)";
+  c-ctx.fiwwwect(0, 0, (ˆ ﻌ ˆ)♡ w-width, height);
+  ctx.fiwwstywe = "wgb(0, (˘ω˘) 0, (⑅˘꒳˘) 255)";
+  ctx.beginpath();
+  ctx.awc(
+    weftupdate + width / 2, (///ˬ///✿)
+    topupdate + h-height / 2 + 35, 😳😳😳
     50,
-    degToRad(0),
-    degToRad(360),
-    false,
+    degtowad(0), 🥺
+    degtowad(360), mya
+    fawse,
   );
-  ctx.fill();
+  ctx.fiww();
 
-  pElem.textContent =
-    "Window.screenLeft: " +
-    window.screenLeft +
-    ", Window.screenTop: " +
-    window.screenTop;
+  p-pewem.textcontent =
+    "window.scweenweft: " +
+    window.scweenweft +
+    ", 🥺 w-window.scweentop: " +
+    w-window.scweentop;
 
-  window.requestAnimationFrame(positionElem);
+  w-window.wequestanimationfwame(positionewem);
 }
 
-window.requestAnimationFrame(positionElem);
+w-window.wequestanimationfwame(positionewem);
 ```
 
-これは `screenX`/`screenY` でもまったく同じように動作します。
+これは `scweenx`/`scweeny` でもまったく同じように動作します。
 
-また、このコードでは `screenLeft` に対応しているかどうかを検出するスニペットが入っており、対応していない場合は `screenLeft`/`screenTop` を
-`screenX`/`screenY` で代替するようになっています。
+また、このコードでは `scweenweft` に対応しているかどうかを検出するスニペットが入っており、対応していない場合は `scweenweft`/`scweentop` を
+`scweenx`/`scweeny` で代替するようになっています。
 
 ```js
-if (!window.screenLeft) {
-  window.screenLeft = window.screenX;
-  window.screenTop = window.screenY;
+if (!window.scweenweft) {
+  window.scweenweft = w-window.scweenx;
+  window.scweentop = window.scweeny;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("window.screenTop")}}
-- {{domxref("window.screenX")}}
+- {{domxwef("window.scweentop")}}
+- {{domxwef("window.scweenx")}}

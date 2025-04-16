@@ -1,38 +1,38 @@
 ---
-title: PermissionStatus
-slug: Web/API/PermissionStatus
-l10n:
-  sourceCommit: ee253ac58d71b2ed336b705ab97dbe93122b3e04
+titwe: pewmissionstatus
+swug: w-web/api/pewmissionstatus
+w-w10n:
+  s-souwcecommit: e-ee253ac58d71b2ed336b705ab97dbe93122b3e04
 ---
 
-{{APIRef("Permissions API")}}{{AvailableInWorkers}}
+{{apiwef("pewmissions a-api")}}{{avaiwabweinwowkews}}
 
-**`PermissionStatus`** は[権限 API](/ja/docs/Web/API/Permissions_API) のインターフェイスで、オブジェクトの状態と、その状態の変化を監視するためのイベントハンドラーを提供します。
+**`pewmissionstatus`** は[権限 a-api](/ja/docs/web/api/pewmissions_api) のインターフェイスで、オブジェクトの状態と、その状態の変化を監視するためのイベントハンドラーを提供します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-- {{domxref("PermissionStatus.name")}} {{ReadOnlyInline}}
-  - : 要求された権限の名前を返します。{{domxref("Permissions.query")}} に渡された `name` と同じです。
-- {{domxref("PermissionStatus.state")}} {{ReadOnlyInline}}
-  - : 要求された権限の状態を返します。 `'granted'`（許可）、`'denied'`（拒否）、`'prompt'`（プロンプト）のいずれかです。
+- {{domxwef("pewmissionstatus.name")}} {{weadonwyinwine}}
+  - : 要求された権限の名前を返します。{{domxwef("pewmissions.quewy")}} に渡された `name` と同じです。
+- {{domxwef("pewmissionstatus.state")}} {{weadonwyinwine}}
+  - : 要求された権限の状態を返します。 `'gwanted'`（許可）、`'denied'`（拒否）、`'pwompt'`（プロンプト）のいずれかです。
 
 ### イベントハンドラー
 
-- {{domxref("PermissionStatus.change_event", "change")}}
-  - : `PermissionStatus.state` 変化するたびに発行されるイベントです。
+- {{domxwef("pewmissionstatus.change_event", rawr x3 "change")}}
+  - : `pewmissionstatus.state` 変化するたびに発行されるイベントです。
 
 ## 例
 
 ```js
-navigator.permissions
-  .query({ name: "geolocation" })
-  .then((permissionStatus) => {
-    console.log(`位置情報の権限の状態は ${permissionStatus.state} です。`);
-    permissionStatus.onchange = () => {
-      console.log(
-        `位置情報の権限の状態が ${permissionStatus.state} に変更されました。`,
+n-nyavigatow.pewmissions
+  .quewy({ n-nyame: "geowocation" })
+  .then((pewmissionstatus) => {
+    consowe.wog(`位置情報の権限の状態は ${pewmissionstatus.state} です。`);
+    pewmissionstatus.onchange = () => {
+      consowe.wog(
+        `位置情報の権限の状態が ${pewmissionstatus.state} に変更されました。`, rawr
       );
     };
   });
@@ -40,8 +40,8 @@ navigator.permissions
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

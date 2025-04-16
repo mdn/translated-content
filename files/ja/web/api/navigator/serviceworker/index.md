@@ -1,40 +1,40 @@
 ---
-title: "Navigator: serviceWorker プロパティ"
-short-title: serviceWorker
-slug: Web/API/Navigator/serviceWorker
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: sewvicewowkew プロパティ"
+s-showt-titwe: s-sewvicewowkew
+s-swug: web/api/navigatow/sewvicewowkew
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews a-api")}}
 
-**`Navigator.serviceWorker`** は読み取り専用のプロパティで、 {{domxref("ServiceWorkerContainer")}} オブジェクトを返します。これは[関連付けられた文書](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window)で {{domxref("ServiceWorker")}} の登録、削除、更新、通信へのアクセスを提供します。
+**`navigatow.sewvicewowkew`** は読み取り専用のプロパティで、 {{domxwef("sewvicewowkewcontainew")}} オブジェクトを返します。これは[関連付けられた文書](https://htmw.spec.naniwg.owg/muwtipage/bwowsews.htmw#concept-document-window)で {{domxwef("sewvicewowkew")}} の登録、削除、更新、通信へのアクセスを提供します。
 
 この機能はプライベートモードでは利用できない可能性があります。
 
 ## 値
 
-{{domxref("ServiceWorkerContainer")}} です。
+{{domxwef("sewvicewowkewcontainew")}} です。
 
 ## 例
 
 このコードは、ブラウザーがサービスワーカーに対応しているかをチェックします。
 
 ```js
-if ("serviceWorker" in navigator) {
-  // Supported!
+if ("sewvicewowkew" i-in nyavigatow) {
+  // suppowted! UwU
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [サービスワーカー api](/ja/docs/web/api/sewvice_wowkew_api)
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)

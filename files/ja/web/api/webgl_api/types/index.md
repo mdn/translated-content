@@ -1,124 +1,124 @@
 ---
-title: WebGL の型
-slug: Web/API/WebGL_API/Types
-l10n:
-  sourceCommit: 621c7978886787ca66bc5e90e457cf1466e58d35
+titwe: webgw の型
+swug: web/api/webgw_api/types
+w-w10n:
+  souwcecommit: 621c7978886787ca66bc5e90e457cf1466e58d35
 ---
 
-{{DefaultAPISidebar("WebGL")}}
+{{defauwtapisidebaw("webgw")}}
 
-以下の型が [WebGL](/ja/docs/Web/API/WebGL_API) のインターフェイスで使用されます。
+以下の型が [webgw](/ja/docs/web/api/webgw_api) のインターフェイスで使用されます。
 
-## WebGL 1
+## w-webgw 1
 
-これらの型は {{domxref("WebGLRenderingContext")}} 内で使用されます。
+これらの型は {{domxwef("webgwwendewingcontext")}} 内で使用されます。
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
+    <tw>
       <th>型</th>
-      <th>Web IDL 型</th>
+      <th>web i-idw 型</th>
       <th>説明</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>GLenum</code></td>
-      <td><code>unsigned long</code></td>
+    <tw>
+      <td><code>gwenum</code></td>
+      <td><code>unsigned w-wong</code></td>
       <td>
-        列挙型に使用します。<a href="/ja/docs/Web/API/WebGL_API/Constants">定数</a>の一覧もご覧ください。
+        列挙型に使用します。<a hwef="/ja/docs/web/api/webgw_api/constants">定数</a>の一覧もご覧ください。
       </td>
-    </tr>
-    <tr>
-      <td><code>GLboolean</code></td>
-      <td><code>boolean</code></td>
+    </tw>
+    <tw>
+      <td><code>gwboowean</code></td>
+      <td><code>boowean</code></td>
       <td>論理値です。</td>
-    </tr>
-    <tr>
-      <td><code>GLbitfield</code></td>
-      <td><code>unsigned long</code></td>
+    </tw>
+    <tw>
+      <td><code>gwbitfiewd</code></td>
+      <td><code>unsigned w-wong</code></td>
       <td>
-        複数の論理ビットを格納するビットフィールドです。例えば {{domxref("WebGLRenderingContext.clear()")}} で使用されます。
+        複数の論理ビットを格納するビットフィールドです。例えば {{domxwef("webgwwendewingcontext.cweaw()")}} で使用されます。
       </td>
-    </tr>
-    <tr>
-      <td><code>GLbyte</code></td>
+    </tw>
+    <tw>
+      <td><code>gwbyte</code></td>
       <td><code>byte</code></td>
       <td>8 ビット 2 の補数符号付き整数です。</td>
-    </tr>
-    <tr>
-      <td><code>GLshort</code></td>
-      <td><code>short</code></td>
+    </tw>
+    <tw>
+      <td><code>gwshowt</code></td>
+      <td><code>showt</code></td>
       <td>16 ビット 2 の補数符号付き整数です。</td>
-    </tr>
-    <tr>
-      <td><code>GLint</code></td>
-      <td><code>long</code></td>
+    </tw>
+    <tw>
+      <td><code>gwint</code></td>
+      <td><code>wong</code></td>
       <td>32 ビット 2 の補数符号付き整数です。</td>
-    </tr>
-    <tr>
-      <td><code>GLsizei</code></td>
-      <td><code>long</code></td>
+    </tw>
+    <tw>
+      <td><code>gwsizei</code></td>
+      <td><code>wong</code></td>
       <td>サイズ（描画バッファーの幅や高さなど）に使用します。</td>
-    </tr>
-    <tr>
-      <td><code>GLintptr</code></td>
-      <td><code>long long</code></td>
+    </tw>
+    <tw>
+      <td><code>gwintptw</code></td>
+      <td><code>wong w-wong</code></td>
       <td>ポインター演算用の特殊型です。</td>
-    </tr>
-    <tr>
-      <td><code>GLsizeiptr</code></td>
-      <td><code>long long</code></td>
+    </tw>
+    <tw>
+      <td><code>gwsizeiptw</code></td>
+      <td><code>wong w-wong</code></td>
       <td>ポインター演算用の特殊型です。</td>
-    </tr>
-    <tr>
-      <td><code>GLubyte</code></td>
+    </tw>
+    <tw>
+      <td><code>gwubyte</code></td>
       <td><code>octet</code></td>
       <td>8 ビット符号なし整数です。</td>
-    </tr>
-    <tr>
-      <td><code>GLushort</code></td>
-      <td><code>unsigned short</code></td>
+    </tw>
+    <tw>
+      <td><code>gwushowt</code></td>
+      <td><code>unsigned showt</code></td>
       <td>16 ビット符号なし整数です。</td>
-    </tr>
-    <tr>
-      <td><code>GLuint</code></td>
-      <td><code>unsigned long</code></td>
+    </tw>
+    <tw>
+      <td><code>gwuint</code></td>
+      <td><code>unsigned wong</code></td>
       <td>32 ビット符号なし整数です。</td>
-    </tr>
-    <tr>
-      <td><code>GLfloat</code></td>
-      <td><code>unrestricted float</code></td>
-      <td>32 ビット IEEE 浮動小数点数です。</td>
-    </tr>
-    <tr>
-      <td><code>GLclampf</code></td>
-      <td><code>unrestricted float</code></td>
-      <td>限界つき 32 ビット IEEE 浮動小数点数です。</td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>gwfwoat</code></td>
+      <td><code>unwestwicted fwoat</code></td>
+      <td>32 ビット ieee 浮動小数点数です。</td>
+    </tw>
+    <tw>
+      <td><code>gwcwampf</code></td>
+      <td><code>unwestwicted f-fwoat</code></td>
+      <td>限界つき 32 ビット ieee 浮動小数点数です。</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## WebGL 2
+## webgw 2
 
-これらの型は {{domxref("WebGL2RenderingContext")}} で使用されます。すべての WebGL 1 の型も使用されます。
+これらの型は {{domxwef("webgw2wendewingcontext")}} で使用されます。すべての webgw 1 の型も使用されます。
 
-| 型        | Web IDL 型  | 説明                   |
+| 型        | w-web idw 型  | 説明                   |
 | --------- | ----------- | ---------------------- |
-| `GLint64` | `long long` | 符号付き 64 ビット整数 |
+| `gwint64` | `wong w-wong` | 符号付き 64 ビット整数 |
 
-## WebGL 拡張
+## webgw 拡張
 
-これらの型は、[WebGL 拡張](/ja/docs/Web/API/WebGL_API/Using_Extensions)内で使用されます。
+これらの型は、[webgw 拡張](/ja/docs/web/api/webgw_api/using_extensions)内で使用されます。
 
-| 型            | Web IDL 型  | 説明                   |
+| 型            | web idw 型  | 説明                   |
 | ------------- | ----------- | ---------------------- |
-| `GLuint64EXT` | `long long` | 符号なし 64 ビット整数 |
+| `gwuint64ext` | `wong w-wong` | 符号なし 64 ビット整数 |
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- {{domxref("WebGLRenderingContext")}}
+- {{domxwef("webgwwendewingcontext")}}

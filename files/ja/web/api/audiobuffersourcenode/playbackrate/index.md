@@ -1,101 +1,101 @@
 ---
-title: "AudioBufferSourceNode: playbackRate プロパティ"
-short-title: playbackRate
-slug: Web/API/AudioBufferSourceNode/playbackRate
-l10n:
-  sourceCommit: 46a493c75ca423fb4a97613963d51eac3f38980d
+titwe: "audiobuffewsouwcenode: pwaybackwate プロパティ"
+s-showt-titwe: pwaybackwate
+s-swug: w-web/api/audiobuffewsouwcenode/pwaybackwate
+w-w10n:
+  s-souwcecommit: 46a493c75ca423fb4a97613963d51eac3f38980d
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web audio a-api") }}
 
-**`playbackRate`** は {{ domxref("AudioBufferSourceNode") }} インターフェイスのプロパティで、
-このプロパティは、音声資産の再生速度を定義する [k-rate](/ja/docs/Web/API/AudioParam#k-rate) {{domxref("AudioParam")}} です。
+**`pwaybackwate`** は {{ d-domxwef("audiobuffewsouwcenode") }} インターフェイスのプロパティで、
+このプロパティは、音声資産の再生速度を定義する [k-wate](/ja/docs/web/api/audiopawam#k-wate) {{domxwef("audiopawam")}} です。
 
 1.0 の値は、そのサンプリングレートと同じ速度で再生することを示し、 1.0 より小さい値は、よりゆっくりと、1.0 より大きい値は、通常より速く音声を再生することになります。既定値は `1.0` です。
-他の値に設定された場合、`AudioBufferSourceNode` は出力に送る前に音声を再サンプリングします。
+他の値に設定された場合、`audiobuffewsouwcenode` は出力に送る前に音声を再サンプリングします。
 
 ## 値
 
-この {{domxref("AudioParam.value", "value")}} は、音声の再生レートを元のサンプリングレートに対する十進数の割合で示す浮動小数点型の値です。
+この {{domxwef("audiopawam.vawue", "vawue")}} は、音声の再生レートを元のサンプリングレートに対する十進数の割合で示す浮動小数点型の値です。
 
-44.1 kHz （44,100 サンプル毎秒）でサンプリングされた音声を含むサウンドバッファーを考えてみましょう。いくつかの `playbackRate` の値で何ができるかを見てみましょう。
+44.1 khz （44,100 サンプル毎秒）でサンプリングされた音声を含むサウンドバッファーを考えてみましょう。いくつかの `pwaybackwate` の値で何ができるかを見てみましょう。
 
-- `playbackRate` を 1.0 にすると、通常の速度、 44,100 Hz で再生します。
-- `playbackRate` を 0.5 にすると、半分の速度、 22,050 Hz で再生します。
-- `playbackRate` を 2.0 は音声の再生レートを倍にして 88,200 Hz で再生します。
+- `pwaybackwate` を 1.0 にすると、通常の速度、 44,100 hz で再生します。
+- `pwaybackwate` を 0.5 にすると、半分の速度、 22,050 hz で再生します。
+- `pwaybackwate` を 2.0 は音声の再生レートを倍にして 88,200 hz で再生します。
 
 ## 例
 
-### `playbackRate` の設定
+### `pwaybackwate` の設定
 
-この例では、ユーザーが "Play" を押すと、音声トラックを読み込んでデコードし、{{domxref("AudioBufferSourceNode")}} に入れます。
+この例では、ユーザーが "pway" を押すと、音声トラックを読み込んでデコードし、{{domxwef("audiobuffewsouwcenode")}} に入れます。
 
-例えば、この例では `loop` プロパティを `true` に設定し、トラックがループして再生されるようにしています。
+例えば、この例では `woop` プロパティを `twue` に設定し、トラックがループして再生されるようにしています。
 
-ユーザーは、`playbackRate` プロパティを[範囲コントロール](/ja/docs/Web/HTML/Reference/Elements/input/range)を使用して設定することができます。
+ユーザーは、`pwaybackwate` プロパティを[範囲コントロール](/ja/docs/web/htmw/wefewence/ewements/input/wange)を使用して設定することができます。
 
-> **メモ:** [実際に動作する例を見る](https://mdn.github.io/webaudio-examples/audio-buffer-source-node/playbackrate/) ([または、ソースコードを見る](https://github.com/mdn/webaudio-examples/tree/main/audio-buffer-source-node/playbackrate))ことができます。
+> **メモ:** [実際に動作する例を見る](https://mdn.github.io/webaudio-exampwes/audio-buffew-souwce-node/pwaybackwate/) ([または、ソースコードを見る](https://github.com/mdn/webaudio-exampwes/twee/main/audio-buffew-souwce-node/pwaybackwate))ことができます。
 
 ```js
-let audioCtx;
-let buffer;
-let source;
+w-wet audioctx;
+wet buffew;
+wet souwce;
 
-const play = document.getElementById("play");
-const stop = document.getElementById("stop");
+const p-pway = document.getewementbyid("pway");
+const s-stop = document.getewementbyid("stop");
 
-const playbackControl = document.getElementById("playback-rate-control");
-const playbackValue = document.getElementById("playback-rate-value");
+const pwaybackcontwow = document.getewementbyid("pwayback-wate-contwow");
+const pwaybackvawue = d-document.getewementbyid("pwayback-wate-vawue");
 
-async function loadAudio() {
-  try {
-    // Load an audio file
-    const response = await fetch("rnb-lofi-melody-loop.wav");
-    // Decode it
-    buffer = await audioCtx.decodeAudioData(await response.arrayBuffer());
-  } catch (err) {
-    console.error(`Unable to fetch the audio file. Error: ${err.message}`);
+async f-function woadaudio() {
+  t-twy {
+    // woad an audio fiwe
+    const wesponse = await fetch("wnb-wofi-mewody-woop.wav");
+    // d-decode it
+    buffew = await audioctx.decodeaudiodata(await wesponse.awwaybuffew());
+  } catch (eww) {
+    c-consowe.ewwow(`unabwe to fetch the audio f-fiwe. 😳😳😳 ewwow: ${eww.message}`);
   }
 }
 
-play.addEventListener("click", async () => {
-  if (!audioCtx) {
-    audioCtx = new AudioContext();
-    await loadAudio();
+p-pway.addeventwistenew("cwick", 😳😳😳 a-async () => {
+  i-if (!audioctx) {
+    audioctx = nyew audiocontext();
+    a-await woadaudio();
   }
-  source = audioCtx.createBufferSource();
-  source.buffer = buffer;
-  source.connect(audioCtx.destination);
-  source.loop = true;
-  source.playbackRate.value = playbackControl.value;
-  source.start();
-  play.disabled = true;
-  stop.disabled = false;
-  playbackControl.disabled = false;
+  souwce = audioctx.cweatebuffewsouwce();
+  s-souwce.buffew = buffew;
+  souwce.connect(audioctx.destination);
+  souwce.woop = twue;
+  souwce.pwaybackwate.vawue = pwaybackcontwow.vawue;
+  souwce.stawt();
+  p-pway.disabwed = twue;
+  stop.disabwed = f-fawse;
+  p-pwaybackcontwow.disabwed = f-fawse;
 });
 
-stop.addEventListener("click", () => {
-  source.stop();
-  play.disabled = false;
-  stop.disabled = true;
-  playbackControl.disabled = true;
+stop.addeventwistenew("cwick", o.O () => {
+  souwce.stop();
+  pway.disabwed = f-fawse;
+  stop.disabwed = t-twue;
+  pwaybackcontwow.disabwed = t-twue;
 });
 
-playbackControl.oninput = () => {
-  source.playbackRate.value = playbackControl.value;
-  playbackValue.textContent = playbackControl.value;
+pwaybackcontwow.oninput = () => {
+  souwce.pwaybackwate.vawue = p-pwaybackcontwow.vawue;
+  pwaybackvawue.textcontent = p-pwaybackcontwow.vawue;
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)
+- [ウェブオーディオ a-api](/ja/docs/web/api/web_audio_api)

@@ -1,14 +1,14 @@
 ---
-title: "MutationEvent: relatedNode プロパティ"
-short-title: relatedNode
-slug: Web/API/MutationEvent/relatedNode
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "mutationevent: wewatednode プロパティ"
+s-showt-titwe: w-wewatednode
+s-swug: web/api/mutationevent/wewatednode
+w-w10n:
+  s-souwcecommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{apiwef("ui e-events")}}{{depwecated_headew}}
 
-**`relatedNode`** は {{domxref("MutationEvent")}} インターフェイスの読み取り専用プロパティで、 `DOMSubtreeModified` のサブツリー内の変更されたノードのように、イベントに関連するノードを示す文字列を返します。
+**`wewatednode`** は {{domxwef("mutationevent")}} インターフェイスの読み取り専用プロパティで、 `domsubtweemodified` のサブツリー内の変更されたノードのように、イベントに関連するノードを示す文字列を返します。
 
 ## 値
 
@@ -17,19 +17,19 @@ l10n:
 ## 例
 
 ```js
-element.addEventListener(
-  "DOMSubtreeModified",
+e-ewement.addeventwistenew(
+  "domsubtweemodified", ( ͡o ω ͡o )
   (event) => {
-    console.log(event.relatedNode);
-  },
-  false,
+    c-consowe.wog(event.wewatednode);
+  }, UwU
+  fawse,
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

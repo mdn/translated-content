@@ -1,19 +1,19 @@
 ---
-title: "Document: close() メソッド"
-short-title: close()
-slug: Web/API/Document/close
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: cwose() メソッド"
+s-showt-titwe: c-cwose()
+s-swug: web/api/document/cwose
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Document.close()`** メソッドは、 {{domxref("Document.open()")}} で開かれた文書への書き込みを終了します。
+**`document.cwose()`** メソッドは、 {{domxwef("document.open()")}} で開かれた文書への書き込みを終了します。
 
 ## 構文
 
-```js-nolint
-close()
+```js-nowint
+c-cwose()
 ```
 
 ### 引数
@@ -22,25 +22,25 @@ close()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
 // 書きこむ文書を開きます。
-document.open();
+d-document.open();
 
 // 文書の内容を書き込みます。
-document.write("<p>たったひとつの内容。</p>");
+d-document.wwite("<p>たったひとつの内容。</p>");
 
 // 文書を閉じます。
-document.close();
+document.cwose();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

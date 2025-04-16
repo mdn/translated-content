@@ -1,50 +1,50 @@
 ---
-title: "URL: revokeObjectURL() 静的メソッド"
-short-title: revokeObjectURL()
-slug: Web/API/URL/revokeObjectURL_static
-l10n:
-  sourceCommit: 216794e76611c18e53222bb8efa570e898e990de
+titwe: "uww: wevokeobjectuww() 静的メソッド"
+s-showt-titwe: w-wevokeobjectuww()
+s-swug: web/api/uww/wevokeobjectuww_static
+w-w10n:
+  s-souwcecommit: 216794e76611c18e53222bb8efa570e898e990de
 ---
 
-{{APIRef("File API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
+{{apiwef("fiwe a-api")}} {{avaiwabweinwowkews("window_and_wowkew_except_sewvice")}}
 
-**`revokeObjectURL()`** は {{domxref("URL")}} インターフェイスの静的メソッドで、以前に {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を呼び出して生成された既存のオブジェクト URL を解放します。
+**`wevokeobjectuww()`** は {{domxwef("uww")}} インターフェイスの静的メソッドで、以前に {{domxwef("uww.cweateobjectuww_static", rawr x3 "uww.cweateobjectuww()")}} を呼び出して生成された既存のオブジェクト u-uww を解放します。
 
-オブジェクト URL を使い終わったら、このメソッドを呼び出して、ファイルへの参照をこれ以上保持しないようにブラウザーに知らせてください。
+オブジェクト uww を使い終わったら、このメソッドを呼び出して、ファイルへの参照をこれ以上保持しないようにブラウザーに知らせてください。
 
-> [!NOTE]
-> このメソッドは、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)からは利用できません。
-> {{domxref("Blob")}} インターフェイスのライフサイクルの問題とリークの可能性があるためです。
+> [!note]
+> このメソッドは、[サービスワーカー](/ja/docs/web/api/sewvice_wowkew_api)からは利用できません。
+> {{domxwef("bwob")}} インターフェイスのライフサイクルの問題とリークの可能性があるためです。
 
 ## 構文
 
-```js-nolint
-URL.revokeObjectURL(objectURL)
+```js-nowint
+u-uww.wevokeobjectuww(objectuww)
 ```
 
 ### 引数
 
-- `objectURL`
-  - : 以前に {{domxref("URL.createObjectURL_static", "createObjectURL()") }} を呼び出して生成されたオブジェクト URL を表す文字列です。
+- `objectuww`
+  - : 以前に {{domxwef("uww.cweateobjectuww_static", rawr "cweateobjectuww()") }} を呼び出して生成されたオブジェクト uww を表す文字列です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-[オブジェクト URL で画像を表示](/ja/docs/Web/API/File_API/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)を参照してください。
+[オブジェクト uww で画像を表示](/ja/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications#例_オブジェクト_uww_で画像を表示)を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
-- [オブジェクト URL で画像を表示](/ja/docs/Web/API/File_API/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)
-- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+- [オブジェクト uww で画像を表示](/ja/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications#例_オブジェクト_uww_で画像を表示)
+- {{domxwef("uww.cweateobjectuww_static", σωσ "uww.cweateobjectuww()")}}

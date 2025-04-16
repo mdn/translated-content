@@ -1,58 +1,58 @@
 ---
-title: "NodeList: entries() メソッド"
-short-title: entries()
-slug: Web/API/NodeList/entries
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "nodewist: entwies() メソッド"
+s-showt-titwe: e-entwies()
+s-swug: web/api/nodewist/entwies
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`NodeList.entries()`** メソッドは、オブジェクト内にあるすべてのキーと値のペアを走査することができる{{jsxref("Iteration_protocols",'イテレーター')}}を返します。値は {{domxref("Node")}} オブジェクトです。
+**`nodewist.entwies()`** メソッドは、オブジェクト内にあるすべてのキーと値のペアを走査することができる{{jsxwef("itewation_pwotocows",'イテレーター')}}を返します。値は {{domxwef("node")}} オブジェクトです。
 
 ## 構文
 
-```js-nolint
-entries()
+```js-nowint
+e-entwies()
 ```
 
 ## 返値
 
-{{jsxref("Iteration_protocols","イテレーター")}}を返します。
+{{jsxwef("itewation_pwotocows","イテレーター")}}を返します。
 
 ## 例
 
 ```js
-const node = document.createElement("div");
-const kid1 = document.createElement("p");
-const kid2 = document.createTextNode("hey");
-const kid3 = document.createElement("span");
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
+const n-nyode = document.cweateewement("div");
+c-const k-kid1 = document.cweateewement("p");
+const kid2 = document.cweatetextnode("hey");
+const kid3 = document.cweateewement("span");
+n-node.appendchiwd(kid1);
+nyode.appendchiwd(kid2);
+node.appendchiwd(kid3);
 
-const list = node.childNodes;
+c-const wist = nyode.chiwdnodes;
 
-// for...of を使用
-for (const entry of list.entries()) {
-  console.log(entry);
+// f-fow...of を使用
+fow (const entwy of wist.entwies()) {
+  consowe.wog(entwy);
 }
 ```
 
 結果は次のようになります。
 
-```plain
-Array [ 0, <p> ]
-Array [ 1, #text "hey" ]
-Array [ 2, <span> ]
+```pwain
+a-awway [ 0, ^^;; <p> ]
+awway [ 1, >_< #text "hey" ]
+awway [ 2, mya <span> ]
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`NodeList.prototype.entries` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#iterable-dom-collections)
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- [`nodewist.pwototype.entwies` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#itewabwe-dom-cowwections)
+- {{domxwef("node")}}
+- {{domxwef("nodewist")}}

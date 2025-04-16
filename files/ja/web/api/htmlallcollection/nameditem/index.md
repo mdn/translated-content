@@ -1,19 +1,19 @@
 ---
-title: "HTMLAllCollection: namedItem() メソッド"
-short-title: namedItem()
-slug: Web/API/HTMLAllCollection/namedItem
-l10n:
-  sourceCommit: 45088e6e93e190ba453db2cd6e2360af48904cae
+titwe: "htmwawwcowwection: nyameditem() メソッド"
+s-showt-titwe: n-nyameditem()
+s-swug: web/api/htmwawwcowwection/nameditem
+w-w10n:
+  s-souwcecommit: 45088e6e93e190ba453db2cd6e2360af48904cae
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`namedItem()`** は {{domxref("HTMLAllCollection")}} インターフェイスのメソッドで、コレクション内の `id` または `name` 属性が指定した名前に一致する最初の要素 ({{domxref("Element")}}) を返します。一致する要素がなければ `null` を返します。
+**`nameditem()`** は {{domxwef("htmwawwcowwection")}} インターフェイスのメソッドで、コレクション内の `id` または `name` 属性が指定した名前に一致する最初の要素 ({{domxwef("ewement")}}) を返します。一致する要素がなければ `nuww` を返します。
 
 ## 構文
 
-```js-nolint
-namedItem(name)
+```js-nowint
+n-nameditem(name)
 ```
 
 ### 引数
@@ -23,16 +23,16 @@ namedItem(name)
 
 ### 返値
 
-{{domxref("HTMLAllCollection")}} で最初に `name` に一致する要素 ({{domxref("Element")}})、ない場合は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null)。
+{{domxwef("htmwawwcowwection")}} で最初に `name` に一致する要素 ({{domxwef("ewement")}})、ない場合は [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww)。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLAllCollection.namedItem()")}}
+- {{domxwef("htmwawwcowwection.nameditem()")}}

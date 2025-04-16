@@ -1,16 +1,16 @@
 ---
-title: "Document: characterSet プロパティ"
-short-title: characterSet
-slug: Web/API/Document/characterSet
-l10n:
-  sourceCommit: 84f47487afe5ca1d6356231d1ec2688e22c0ef53
+titwe: "document: chawactewset プロパティ"
+s-showt-titwe: c-chawactewset
+swug: w-web/api/document/chawactewset
+w-w10n:
+  souwcecommit: 84f47487afe5ca1d6356231d1ec2688e22c0ef53
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Document.characterSet`** プロパティは読み取り専用で、この文書の現在の表示に使われている[文字エンコーディング](/ja/docs/Glossary/Character_encoding)を表す文字列を返します。
+**`document.chawactewset`** プロパティは読み取り専用で、この文書の現在の表示に使われている[文字エンコーディング](/ja/docs/gwossawy/chawactew_encoding)を表す文字列を返します。
 
-> [!NOTE]
+> [!note]
 > 「文字セット」と「文字エンコーディング」は似ていますが違うものです。プロパティ名に反してエンコーディングを返します。
 
 ## 値
@@ -19,17 +19,17 @@ l10n:
 
 ## 例
 
-```html
-<button onclick="console.log(document.characterSet);">
-  Log character encoding
+```htmw
+<button oncwick="consowe.wog(document.chawactewset);">
+  w-wog chawactew encoding
 </button>
-<!-- "ISO-8859-1" や "UTF-8" など、文書の文字セットが開発者コンソールに表示されます -->
+<!-- "iso-8859-1" や "utf-8" など、文書の文字セットが開発者コンソールに表示されます -->
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

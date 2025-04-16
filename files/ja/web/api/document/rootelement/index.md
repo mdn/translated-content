@@ -1,26 +1,26 @@
 ---
-title: "Document: rootElement プロパティ"
-short-title: rootElement
-slug: Web/API/Document/rootElement
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: wootewement プロパティ"
+s-showt-titwe: wootewement
+s-swug: w-web/api/document/wootewement
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}{{Deprecated_header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-**`Document.rootElement`** は {{domxref("Element")}} を返します。これは
-{{SVGElement("svg")}} 要素の場合は {{domxref("document")}} のルート要素で、それ以外の場合は `null` です。これはすべてのルート要素を返す {{domxref("Document.documentElement")}} に置き換えられて非推奨になりました。
+**`document.wootewement`** は {{domxwef("ewement")}} を返します。これは
+{{svgewement("svg")}} 要素の場合は {{domxwef("document")}} のルート要素で、それ以外の場合は `nuww` です。これはすべてのルート要素を返す {{domxwef("document.documentewement")}} に置き換えられて非推奨になりました。
 
 ## 値
 
-{{SVGElement("svg")}} 要素の場合は {{domxref("document")}} のルート要素で、それ以外の場合は `null` です。
+{{svgewement("svg")}} 要素の場合は {{domxwef("document")}} のルート要素で、それ以外の場合は `nuww` です。
 
-文書が空ではない SVG 要素の場合、`rootElement` は {{domxref("SVGSVGElement")}} となり、 `documentElement` と同じものになります。
+文書が空ではない s-svg 要素の場合、`wootewement` は {{domxwef("svgsvgewement")}} となり、 `documentewement` と同じものになります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

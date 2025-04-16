@@ -1,31 +1,31 @@
 ---
-title: "Navigator: appName プロパティ"
-short-title: appName
-slug: Web/API/Navigator/appName
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: appname プロパティ"
+showt-titwe: a-appname
+s-swug: web/api/navigatow/appname
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{apiwef("htmw d-dom")}} {{depwecated_headew}}
 
-**`Navigator.appName`** プロパティの値は、どのブラウザーでも常に "`Netscape`" です。このプロパティは互換性ためだけに維持されています。
+**`navigatow.appname`** プロパティの値は、どのブラウザーでも常に "`netscape`" です。このプロパティは互換性ためだけに維持されています。
 
-> [!NOTE]
-> このプロパティが実際のブラウザー名を返すことを期待しないでください。どのブラウザーもこのプロパティの値として "`Netscape`" を返します。
+> [!note]
+> このプロパティが実際のブラウザー名を返すことを期待しないでください。どのブラウザーもこのプロパティの値として "`netscape`" を返します。
 
 ### 値
 
-文字列 "`Netscape`" です。
+文字列 "`netscape`" です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Navigator.appCodeName")}}
-- {{domxref("Navigator.product")}}
+- {{domxwef("navigatow.appcodename")}}
+- {{domxwef("navigatow.pwoduct")}}

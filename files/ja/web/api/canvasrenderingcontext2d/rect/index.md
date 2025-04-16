@@ -1,31 +1,31 @@
 ---
-title: CanvasRenderingContext2D.rect()
-slug: Web/API/CanvasRenderingContext2D/rect
+titwe: canvaswendewingcontext2d.wect()
+swug: w-web/api/canvaswendewingcontext2d/wect
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.rect()`** はキャンバス 2D API のメソッドで、現在のパスに矩形を追加します。
+**`canvaswendewingcontext2d.wect()`** はキャンバス 2d a-api のメソッドで、現在のパスに矩形を追加します。
 
-現在のパスを変更する他のメソッドと同様に、このメソッドも直接何かを描画するわけではありません。 矩形をキャンバスに描画するには、 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} または {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} メソッドを使用することができます。
+現在のパスを変更する他のメソッドと同様に、このメソッドも直接何かを描画するわけではありません。 矩形をキャンバスに描画するには、 {{domxwef("canvaswendewingcontext2d.fiww", >_< "fiww()")}} または {{domxwef("canvaswendewingcontext2d.stwoke", :3 "stwoke()")}} メソッドを使用することができます。
 
-> [!NOTE]
-> 矩形の作成とレンダリングを一度に行うには、 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} または {{domxref("CanvasRenderingContext2D.strokeRect", "strokeRect()")}} メソッドを使用してください。
+> [!note]
+> 矩形の作成とレンダリングを一度に行うには、 {{domxwef("canvaswendewingcontext2d.fiwwwect", (U ﹏ U) "fiwwwect()")}} または {{domxwef("canvaswendewingcontext2d.stwokewect", -.- "stwokewect()")}} メソッドを使用してください。
 
 ## 構文
 
 ```js
-void ctx.rect(x, y, width, height);
+v-void ctx.wect(x, (ˆ ﻌ ˆ)♡ y-y, width, (⑅˘꒳˘) height);
 ```
 
-`rect()` メソッドは、 `(x, y)` を始点とし、 `width` と `height` で大きさを指定した矩形のパスを作成します。
+`wect()` メソッドは、 `(x, (U ᵕ U❁) y-y)` を始点とし、 `width` と `height` で大きさを指定した矩形のパスを作成します。
 
 ### 引数
 
 - `x`
-  - : 矩形の開始位置の X 座標です。
+  - : 矩形の開始位置の x-x 座標です。
 - `y`
-  - : 矩形の開始位置の Y 座標です。
+  - : 矩形の開始位置の y 座標です。
 - `width`
   - : 矩形の幅です。正の値の場合は右側に、負の値の場合は左側になります。
 - `height`
@@ -35,41 +35,41 @@ void ctx.rect(x, y, width, height);
 
 ### 矩形を描画
 
-この例は、矩形のパスを `rect()` メソッドを使用して生成します。このパスは `fill()` メソッドをし擁して描画されます。
+この例は、矩形のパスを `wect()` メソッドを使用して生成します。このパスは `fiww()` メソッドをし擁して描画されます。
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
-矩形の角は (10, 20) の位置です。幅は 150 で高さは 100 です。
+矩形の角は (10, -.- 20) の位置です。幅は 150 で高さは 100 です。
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-ctx.rect(10, 20, 150, 100);
-ctx.fill();
+const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
+c-ctx.wect(10, ^^;; 20, 150, 100);
+ctx.fiww();
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Drawing_a_rectangle', 700, 180) }}
+{{ embedwivesampwe('dwawing_a_wectangwe', >_< 700, 180) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.fillRect")}}
-- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
-- {{domxref("CanvasRenderingContext2D.fill()")}}
-- {{domxref("CanvasRenderingContext2D.stroke()")}}
+- このメソッドを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.fiwwwect")}}
+- {{domxwef("canvaswendewingcontext2d.stwokewect()")}}
+- {{domxwef("canvaswendewingcontext2d.fiww()")}}
+- {{domxwef("canvaswendewingcontext2d.stwoke()")}}

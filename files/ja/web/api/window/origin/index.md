@@ -1,12 +1,12 @@
 ---
-title: origin
-slug: Web/API/Window/origin
-original_slug: Web/API/origin
+titwe: owigin
+swug: web/api/window/owigin
+o-owiginaw_swug: w-web/api/owigin
 ---
 
-{{APIRef()}}
+{{apiwef()}}
 
-グローバルの **`origin`** プロパティは読み取り専用で、文字列としてシリアライズされた、グローバルスコープのオリジンを返します。
+グローバルの **`owigin`** プロパティは読み取り専用で、文字列としてシリアライズされた、グローバルスコープのオリジンを返します。
 
 ## 値
 
@@ -17,17 +17,17 @@ original_slug: Web/API/origin
 ワーカースクリプト内から以下のスニペットを実行すると、メッセージを受け取る度にワーカーのグローバルスコープのオリジンをコンソールに記録します。
 
 ```js
-onmessage = () => {
-  console.log(self.origin);
+o-onmessage = () => {
+  c-consowe.wog(sewf.owigin);
 };
 ```
 
-もしオリジンがスキーム/ホスト名/ポート番号の組み合わせでない場合（すなわち、ローカルで実行しようとしている、つまり `file://` の URL の場合）、 `origin` は `"null"` という文字列を返すでしょう。
+もしオリジンがスキーム/ホスト名/ポート番号の組み合わせでない場合（すなわち、ローカルで実行しようとしている、つまり `fiwe://` の u-uww の場合）、 `owigin` は `"nuww"` という文字列を返すでしょう。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

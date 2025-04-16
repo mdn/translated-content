@@ -1,61 +1,61 @@
 ---
-title: CSSScopeRule
-slug: Web/API/CSSScopeRule
-l10n:
-  sourceCommit: 0fe8f4d7e9cd5b1b6a39e9fa047468206d3c3ca2
+titwe: cssscopewuwe
+swug: web/api/cssscopewuwe
+w-w10n:
+  souwcecommit: 0fe8f4d7e9cd5b1b6a39e9fa047468206d3c3ca2
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`CSSScopeRule`** は [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)のインターフェイスで、 {{CSSxRef("@scope")}} アットルールを表します。
+**`cssscopewuwe`** は [css オブジェクトモデル](/ja/docs/web/api/css_object_modew)のインターフェイスで、 {{cssxwef("@scope")}} アットルールを表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_このインターフェイスには親である {{domxref("CSSGroupingRule")}} から継承したプロパティがあります。_
+_このインターフェイスには親である {{domxwef("cssgwoupingwuwe")}} から継承したプロパティがあります。_
 
-- {{domxref("CSSScopeRule.end", "end")}}
+- {{domxwef("cssscopewuwe.end", rawr x3 "end")}}
   - : `@scope` アットルールのスコープリミットの値を格納した文字列を返します。
-- {{domxref("CSSScopeRule.start", "start")}}
+- {{domxwef("cssscopewuwe.stawt", rawr "stawt")}}
   - : `@scope` アットルールのスコープルートの値を格納した文字列を返します。
 
 ## インスタンスメソッド
 
-_このインターフェイスには親である {{domxref("CSSGroupingRule")}} から継承したメソッドがあります。_
+_このインターフェイスには親である {{domxwef("cssgwoupingwuwe")}} から継承したメソッドがあります。_
 
 ## 例
 
-### JavaScript で @scope 情報にアクセス
+### j-javascwipt で @scope 情報にアクセス
 
 以下のものが文書に添付されている唯一のスタイルシートであるとします。
 
 ```css
-@scope (.outer) to (.inner) {
+@scope (.outew) t-to (.innew) {
   :scope {
-    background: yellow;
+    b-backgwound: y-yewwow;
   }
 }
 ```
 
-以下の JavaScript を使用することで、内包された `@scope` ブロックの情報にアクセスすることができます。
+以下の j-javascwipt を使用することで、内包された `@scope` ブロックの情報にアクセスすることができます。
 
 ```js
-const scopeBlock = document.styleSheets[0].cssRules[0];
+c-const scopebwock = document.stywesheets[0].csswuwes[0];
 
-console.log(scopeBlock.start); // ".outer" を返す
-console.log(scopeBlock.end); // ".inner" を返す
+consowe.wog(scopebwock.stawt); // ".outew" を返す
+consowe.wog(scopebwock.end); // ".innew" を返す
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("@scope")}}
-- {{CSSxRef(":scope")}}
+- {{cssxwef("@scope")}}
+- {{cssxwef(":scope")}}

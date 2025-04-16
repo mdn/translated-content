@@ -1,27 +1,27 @@
 ---
-title: "Window: gamepadconnected イベント"
-short-title: gamepadconnected
-slug: Web/API/Window/gamepadconnected_event
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "window: gamepadconnected イベント"
+s-showt-titwe: gamepadconnected
+s-swug: web/api/window/gamepadconnected_event
+w-w10n:
+  s-souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 `gamepadconnected` イベントは、ゲームパッドが接続されたことをブラウザーが検出したとき、またはゲームパッドのボタン/軸が初めて使用されたときに発生します。
 
-このイベントは、文書の {{httpheader('Permissions-Policy/gamepad','gamepad')}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)が不許可になっている場合には発生しません。
+このイベントは、文書の {{httpheadew('pewmissions-powicy/gamepad','gamepad')}} [権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)が不許可になっている場合には発生しません。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 例
 
-ゲームパッドが接続されたことを通知するには、{{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用してウィンドウにハンドラーを追加します。
+ゲームパッドが接続されたことを通知するには、{{domxwef("eventtawget.addeventwistenew", rawr "addeventwistenew()")}} を使用してウィンドウにハンドラーを追加します。
 
 ```js
-window.addEventListener("gamepadconnected", (event) => {
+w-window.addeventwistenew("gamepadconnected", σωσ (event) => {
   // すべてのボタンと軸の値は、次の方法でアクセスできます。
-  const gamepad = event.gamepad;
+  c-const g-gamepad = event.gamepad;
 });
 ```
 
@@ -36,13 +36,13 @@ window.ongamepadconnected = (event) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [gamepaddisconnected](/ja/docs/Web/API/Window/gamepaddisconnected_event)
-- [Gamepad API の使用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+- [gamepaddisconnected](/ja/docs/web/api/window/gamepaddisconnected_event)
+- [gamepad api の使用](/ja/docs/web/api/gamepad_api/using_the_gamepad_api)

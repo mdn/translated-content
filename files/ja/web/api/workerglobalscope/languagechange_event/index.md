@@ -1,59 +1,59 @@
 ---
-title: "WorkerGlobalScope: languagechange イベント"
-short-title: languagechange
-slug: Web/API/WorkerGlobalScope/languagechange_event
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "wowkewgwobawscope: wanguagechange イベント"
+s-showt-titwe: w-wanguagechange
+s-swug: web/api/wowkewgwobawscope/wanguagechange_event
+w-w10n:
+  s-souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`languagechange`** イベントは、ユーザーの推奨言語が変更されたときにグローバルスコープオブジェクトで発生します。
+**`wanguagechange`** イベントは、ユーザーの推奨言語が変更されたときにグローバルスコープオブジェクトで発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", >_< "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("languagechange", (event) => {});
+a-addeventwistenew("wanguagechange", :3 (event) => {});
 
-onlanguagechange = (event) => {};
+o-onwanguagechange = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-`languagechange` は {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドで使用することができます。
+`wanguagechange` は {{domxwef("eventtawget/addeventwistenew", (U ﹏ U) "addeventwistenew")}} メソッドで使用することができます。
 
 ```js
-worker.addEventListener("languagechange", () => {
-  console.log("languagechange event detected!");
+wowkew.addeventwistenew("wanguagechange", -.- () => {
+  consowe.wog("wanguagechange event detected!");
 });
 ```
 
-または、 `onlanguagechange` イベントハンドラープロパティを使用します。
+または、 `onwanguagechange` イベントハンドラープロパティを使用します。
 
 ```js
-worker.onlanguagechange = (event) => {
-  console.log("languagechange event detected!");
+w-wowkew.onwanguagechange = (event) => {
+  consowe.wog("wanguagechange event detected!");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WorkerNavigator.language", "navigator.language")}}
-- {{domxref("WorkerNavigator.languages", "navigator.languages")}}
-- {{domxref("Navigator")}}
+- {{domxwef("wowkewnavigatow.wanguage", (ˆ ﻌ ˆ)♡ "navigatow.wanguage")}}
+- {{domxwef("wowkewnavigatow.wanguages", (⑅˘꒳˘) "navigatow.wanguages")}}
+- {{domxwef("navigatow")}}

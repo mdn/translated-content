@@ -1,14 +1,14 @@
 ---
-title: "ShadowRoot: innerHTML プロパティ"
-short-title: innerHTML
-slug: Web/API/ShadowRoot/innerHTML
-l10n:
-  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
+titwe: "shadowwoot: innewhtmw プロパティ"
+s-showt-titwe: innewhtmw
+s-swug: web/api/shadowwoot/innewhtmw
+w-w10n:
+  s-souwcecommit: f-f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{APIRef("Shadow DOM")}}
+{{apiwef("shadow d-dom")}}
 
-**`innerHTML`** は {{domxref("ShadowRoot")}} インターフェイスのプロパティで、 `ShadowRoot` の内部の DOM ツリーに対する参照を設定したり返したりします。
+**`innewhtmw`** は {{domxwef("shadowwoot")}} インターフェイスのプロパティで、 `shadowwoot` の内部の d-dom ツリーに対する参照を設定したり返したりします。
 
 ## 値
 
@@ -17,16 +17,16 @@ l10n:
 ## 例
 
 ```js
-let customElem = document.querySelector("my-shadow-dom-element");
-let shadow = customElem.shadowRoot;
+w-wet customewem = document.quewysewectow("my-shadow-dom-ewement");
+wet shadow = customewem.shadowwoot;
 
-shadow.innerHTML = "<strong>This element should be more important!</strong>";
+shadow.innewhtmw = "<stwong>this ewement shouwd be m-mowe impowtant!</stwong>";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,31 +1,31 @@
 ---
-title: "ShadowRoot: styleSheets プロパティ"
-short-title: styleSheets
-slug: Web/API/ShadowRoot/styleSheets
-l10n:
-  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
+titwe: "shadowwoot: stywesheets プロパティ"
+s-showt-titwe: s-stywesheets
+swug: w-web/api/shadowwoot/stywesheets
+w-w10n:
+  souwcecommit: f-f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`styleSheets`** は {{domxref("ShadowRoot")}} インターフェイスの読み取り専用プロパティで、シャドウツリーに明示的にリンクされるか埋め込まれたスタイルシートを表す {{domxref('CSSStyleSheet')}} オブジェクトの {{domxref('StyleSheetList')}} を返します。
+**`stywesheets`** は {{domxwef("shadowwoot")}} インターフェイスの読み取り専用プロパティで、シャドウツリーに明示的にリンクされるか埋め込まれたスタイルシートを表す {{domxwef('cssstywesheet')}} オブジェクトの {{domxwef('stywesheetwist')}} を返します。
 
 ### 値
 
-{{domxref('CSSStyleSheet')}} オブジェクトの {{domxref('StyleSheetList')}} です。
+{{domxwef('cssstywesheet')}} オブジェクトの {{domxwef('stywesheetwist')}} です。
 
 ## 例
 
 ```js
-let customElem = document.querySelector("my-shadow-dom-element");
-let shadow = customElem.shadowRoot;
-let styleSheets = shadow.styleSheets;
+wet c-customewem = d-document.quewysewectow("my-shadow-dom-ewement");
+w-wet shadow = customewem.shadowwoot;
+wet stywesheets = shadow.stywesheets;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

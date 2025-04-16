@@ -1,74 +1,74 @@
 ---
-title: "Document: mozSetImageElement() メソッド"
-short-title: mozSetImageElement()
-slug: Web/API/Document/mozSetImageElement
-l10n:
-  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
+titwe: "document: mozsetimageewement() メソッド"
+s-showt-titwe: m-mozsetimageewement()
+s-swug: w-web/api/document/mozsetimageewement
+w-w10n:
+  souwcecommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
-{{ ApiRef("DOM") }}{{ non-standard_header() }}
+{{ a-apiwef("dom") }}{{ n-nyon-standawd_headew() }}
 
-**`Document.mozSetImageElement()`** メソッドは、指定された background 要素 ID を持つ背景の CSS 背景として使用する要素を変更します。
+**`document.mozsetimageewement()`** メソッドは、指定された backgwound 要素 i-id を持つ背景の css 背景として使用する要素を変更します。
 
 ## 構文
 
-```js-nolint
-mozSetImageElement(imageElementId, imageElement)
+```js-nowint
+mozsetimageewement(imageewementid, (///ˬ///✿) imageewement)
 ```
 
 ### 引数
 
-- `imageElementId` は文字列で、{{ cssxref("element", "-moz-element") }} 関数を使用して背景画像を指定する要素の名前を示します。
-- `imageElement` はその画像要素文字列に対応する背景として使用する新しい要素です。`null`を指定すると背景要素を除去します。
+- `imageewementid` は文字列で、{{ cssxwef("ewement", 😳😳😳 "-moz-ewement") }} 関数を使用して背景画像を指定する要素の名前を示します。
+- `imageewement` はその画像要素文字列に対応する背景として使用する新しい要素です。`nuww`を指定すると背景要素を除去します。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この例は、{{ HTMLElement("div") }} ブロックの背景を、ユーザーがブロックをクリックするたびに変更します。
+この例は、{{ h-htmwewement("div") }} ブロックの背景を、ユーザーがブロックをクリックするたびに変更します。
 
-[この例をライブで見る](https://mdn.dev/archives/media/samples/domref/mozSetImageElement.html).
+[この例をライブで見る](https://mdn.dev/awchives/media/sampwes/domwef/mozsetimageewement.htmw). 🥺
 
-```html
-<style>
+```htmw
+<stywe>
   #mybox {
-    background-image: -moz-element(#canvasbg);
-    text-align: center;
+    backgwound-image: -moz-ewement(#canvasbg);
+    text-awign: c-centew;
     width: 400px;
-    height: 400px;
-    cursor: pointer;
+    h-height: 400px;
+    cuwsow: pointew;
   }
-</style>
+</stywe>
 ```
 
-The CSS defined by the {{ HTMLElement("style") }} block above is used by our {{HTMLElement("div")}} to use an element with the id "canvasbg" as its background.
+the css defined by the {{ h-htmwewement("stywe") }} bwock a-above is used b-by ouw {{htmwewement("div")}} to use an ewement with the id "canvasbg" as its backgwound. mya
 
 ```js
-let c = 0x00;
-function clicked() {
-  const canvas = document.createElement("canvas");
-  canvas.setAttribute("width", 100);
-  canvas.setAttribute("height", 100);
+w-wet c = 0x00;
+function cwicked() {
+  const canvas = document.cweateewement("canvas");
+  canvas.setattwibute("width", 🥺 100);
+  c-canvas.setattwibute("height", >_< 100);
 
-  const ctx = canvas.getContext("2d");
-  ctx.fillStyle = `#${c.toString(16)}0000`;
-  ctx.fillRect(25, 25, 75, 75);
+  const ctx = c-canvas.getcontext("2d");
+  c-ctx.fiwwstywe = `#${c.tostwing(16)}0000`;
+  c-ctx.fiwwwect(25, >_< 25, (⑅˘꒳˘) 75, 75);
 
-  c += 0x11;
+  c-c += 0x11;
   if (c > 0xff) {
     c = 0x00;
   }
 
-  document.mozSetImageElement("canvasbg", canvas);
+  d-document.mozsetimageewement("canvasbg", /(^•ω•^) canvas);
 }
 ```
 
-このコードは、ユーザーが {{ HTMLElement("div") }} 要素をクリックするたびに呼び出されます。
-幅と高さを 100 ピクセルに設定した新しい {{ HTMLElement("canvas") }} を作成し、そこに 50 × 50 ピクセルの正方形を描画します。この関数が呼び出されるたびに、正方形は異なる色（赤の部品は毎回増えます）になるので、背景は赤のタイルのパターンで、ユーザーが要素をクリックするたびにだんだん明るく塗りつぶされます。
+このコードは、ユーザーが {{ htmwewement("div") }} 要素をクリックするたびに呼び出されます。
+幅と高さを 100 ピクセルに設定した新しい {{ h-htmwewement("canvas") }} を作成し、そこに 50 × 50 ピクセルの正方形を描画します。この関数が呼び出されるたびに、正方形は異なる色（赤の部品は毎回増えます）になるので、背景は赤のタイルのパターンで、ユーザーが要素をクリックするたびにだんだん明るく塗りつぶされます。
 
-キャンバスが描画されると、`document.mozSetImageElement()` が呼び出され、背景要素の ID として "canvasbg" を使用している CSS の背景が新しいキャンバスに設定されます。
+キャンバスが描画されると、`document.mozsetimageewement()` が呼び出され、背景要素の id として "canvasbg" を使用している css の背景が新しいキャンバスに設定されます。
 
 ## 仕様書
 
@@ -76,8 +76,8 @@ function clicked() {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ cssxref("element", "-moz-element") }}
+- {{ cssxwef("ewement", rawr x3 "-moz-ewement") }}

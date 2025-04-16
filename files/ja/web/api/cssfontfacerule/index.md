@@ -1,50 +1,50 @@
 ---
-title: CSSFontFaceRule
-slug: Web/API/CSSFontFaceRule
-l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+titwe: cssfontfacewuwe
+swug: w-web/api/cssfontfacewuwe
+w-w10n:
+  s-souwcecommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`CSSFontFaceRule`** インターフェイスは {{cssxref("@font-face")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を表します。
+**`cssfontfacewuwe`** インターフェイスは {{cssxwef("@font-face")}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)を表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_祖先である {{domxref("CSSRule")}} からプロパティを継承しています。_
+_祖先である {{domxwef("csswuwe")}} からプロパティを継承しています。_
 
-- {{domxref("CSSFontFaceRule.style")}} {{ReadOnlyInline}}
-  - : {{domxref("CSSStyleDeclaration")}} を返します。
+- {{domxwef("cssfontfacewuwe.stywe")}} {{weadonwyinwine}}
+  - : {{domxwef("cssstywedecwawation")}} を返します。
 
 ## インスタンスメソッド
 
-_祖先である {{domxref("CSSRule")}} からメソッドを継承しています。_
+_祖先である {{domxwef("csswuwe")}} からメソッドを継承しています。_
 
 ## 例
 
-この例では、 {{cssxref("@font-face")}} ページに例として挙げられている CSS を使用しています。最初に返される {{domxref("CSSRule")}} は `CSSFontFaceRule` になります。
+この例では、 {{cssxwef("@font-face")}} ページに例として挙げられている c-css を使用しています。最初に返される {{domxwef("csswuwe")}} は `cssfontfacewuwe` になります。
 
 ```css
 @font-face {
-  font-family: MyHelvetica;
-  src:
-    local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
-    url(MgOpenModernaBold.ttf);
-  font-weight: bold;
+  f-font-famiwy: m-myhewvetica;
+  s-swc:
+    wocaw("hewvetica n-nyeue bowd"), :3 wocaw("hewveticaneue-bowd"), (U ﹏ U)
+    uww(mgopenmodewnabowd.ttf);
+  font-weight: bowd;
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); //a CSSFontFaceRule
+w-wet mywuwes = document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0]); //a c-cssfontfacewuwe
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

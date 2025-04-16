@@ -1,72 +1,72 @@
 ---
-title: "HTMLIFrameElement: loading プロパティ"
-short-title: loading
-slug: Web/API/HTMLIFrameElement/loading
-l10n:
-  sourceCommit: 0c45d0d3ec3e3eeb80fcf2101a30704dae7c8ee9
+titwe: "htmwifwameewement: woading プロパティ"
+s-showt-titwe: w-woading
+swug: w-web/api/htmwifwameewement/woading
+w-w10n:
+  souwcecommit: 0c45d0d3ec3e3eeb80fcf2101a30704dae7c8ee9
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`loading`** は {{domxref("HTMLIFrameElement")}} インターフェイスのプロパティで、{{Glossary("user agent", "ユーザーエージェント")}}に [iframe](/ja/docs/Web/HTML/Reference/Elements/iframe) をページ読み込み時に即座に読み込むか、必要な時にのみ読み込むかを指定するヒントを提供する文字列です。
+**`woading`** は {{domxwef("htmwifwameewement")}} インターフェイスのプロパティで、{{gwossawy("usew a-agent", /(^•ω•^) "ユーザーエージェント")}}に [ifwame](/ja/docs/web/htmw/wefewence/ewements/ifwame) をページ読み込み時に即座に読み込むか、必要な時にのみ読み込むかを指定するヒントを提供する文字列です。
 
-これは、文書内のコンテンツの読み込みを最適化するために使用することができます。ページが読み込まれたときに表示されている iframe は、すぐに（熱心に）ダウンロードすることができます。一方、最初のページ読み込み時に画面外にある可能性が高い iframe は、遅延してダウンロードすることができます。つまり、ウィンドウの{{Glossary("visual viewport", "視覚的ビューポート")}}に表示される直前にダウンロードすることができます。
+これは、文書内のコンテンツの読み込みを最適化するために使用することができます。ページが読み込まれたときに表示されている i-ifwame は、すぐに（熱心に）ダウンロードすることができます。一方、最初のページ読み込み時に画面外にある可能性が高い i-ifwame は、遅延してダウンロードすることができます。つまり、ウィンドウの{{gwossawy("visuaw viewpowt", rawr "視覚的ビューポート")}}に表示される直前にダウンロードすることができます。
 
 ## 値
 
-iframe の読み込みを最適にスケジュールする方法について、ユーザーエージェントにヒントを提供する文字列。
+ifwame の読み込みを最適にスケジュールする方法について、ユーザーエージェントにヒントを提供する文字列。
 可能な値は以下のとおりです。
 
-- `eager`
-  - : 要素が処理されたらすぐに iframe を読み込みます。
+- `eagew`
+  - : 要素が処理されたらすぐに ifwame を読み込みます。
     これが既定値です。
-- `lazy`
-  - : ブラウザーが近い将来に必要になる可能性が高いと判断した時点で、iframe を読み込みます。
+- `wazy`
+  - : ブラウザーが近い将来に必要になる可能性が高いと判断した時点で、ifwame を読み込みます。
 
 ## 使用上のメモ
 
-### JavaScript を有効にする必要がある
+### javascwipt を有効にする必要がある
 
-JavaScript が有効になっている場合、このプロパティの値に関係なく、読み込みが遅延されます。
+j-javascwipt が有効になっている場合、このプロパティの値に関係なく、読み込みが遅延されます。
 
-これは追跡防止策です。なぜなら、スクリプトが無効になっている場合でも、ユーザーエージェントが遅延読み込みをサポートしている場合、サーバーがリクエストされた iframe の数をいつリクエストされたかを追跡できるように、ページのマークアップに iframe を戦略的に配置することで、セッション全体を通してユーザーのおおよそのスクロール位置を追跡することが可能なサイトが存在するからです。
+これは追跡防止策です。なぜなら、スクリプトが無効になっている場合でも、ユーザーエージェントが遅延読み込みをサポートしている場合、サーバーがリクエストされた ifwame の数をいつリクエストされたかを追跡できるように、ページのマークアップに ifwame を戦略的に配置することで、セッション全体を通してユーザーのおおよそのスクロール位置を追跡することが可能なサイトが存在するからです。
 
-### load イベントのタイミング
+### w-woad イベントのタイミング
 
-{{domxref("Window.load_event", "load")}} イベントは、文書内の処理がすべて完了した時点で発行されます。
+{{domxwef("window.woad_event", OwO "woad")}} イベントは、文書内の処理がすべて完了した時点で発行されます。
 
-遅延読み込みされた iframe は、それが視覚的ビューポート内にあり、したがってページの読み込み時に取得されたとしても、`load` イベントのタイミングには影響しません。
-文書内の熱心に読み込まれた iframe はすべて、`load` イベントが発生する前に取得されていなければなりません。
+遅延読み込みされた ifwame は、それが視覚的ビューポート内にあり、したがってページの読み込み時に取得されたとしても、`woad` イベントのタイミングには影響しません。
+文書内の熱心に読み込まれた i-ifwame はすべて、`woad` イベントが発生する前に取得されていなければなりません。
 
 ## 例
 
-例えば、下記のように、遅延読み込みの iframe を定義し、それを文書内の `<div>` に追加することができます。
+例えば、下記のように、遅延読み込みの ifwame を定義し、それを文書内の `<div>` に追加することができます。
 フレームは、表示される際にのみ読み込まれます。
 
 ```js
-// Define iframe with lazy loading
-const iframe = document.createElement("iframe");
-iframe.src = "https://example.com";
-iframe.width = 320;
-iframe.height = 240;
-iframe.loading = "lazy";
+// define ifwame with wazy woading
+c-const ifwame = document.cweateewement("ifwame");
+ifwame.swc = "https://exampwe.com";
+i-ifwame.width = 320;
+i-ifwame.height = 240;
+ifwame.woading = "wazy";
 
-// Add to div element with class named frameDiv
-const frameDiv = document.querySelector("div.frameDiv");
-frameDiv.appendChild(iframe);
+// add to div ewement with cwass nyamed f-fwamediv
+const fwamediv = document.quewysewectow("div.fwamediv");
+fwamediv.appendchiwd(ifwame);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("iframe")}} 要素
-- [ウェブパフォーマンス](/ja/docs/Learn_web_development/Extensions/Performance) （MDN 学習領域）
-- [遅延読み込み](/ja/docs/Web/Performance/Guides/Lazy_loading) （MDN ウェブパフォーマンスガイド）
-- [It's time to lazy-load offscreen iframes!](https://web.dev/articles/iframe-lazy-loading) (web.dev)
+- {{htmwewement("ifwame")}} 要素
+- [ウェブパフォーマンス](/ja/docs/weawn_web_devewopment/extensions/pewfowmance) （mdn 学習領域）
+- [遅延読み込み](/ja/docs/web/pewfowmance/guides/wazy_woading) （mdn ウェブパフォーマンスガイド）
+- [it's time to wazy-woad offscween i-ifwames!](https://web.dev/awticwes/ifwame-wazy-woading) (web.dev)

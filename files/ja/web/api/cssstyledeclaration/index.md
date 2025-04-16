@@ -1,70 +1,70 @@
 ---
-title: CSSStyleDeclaration
-slug: Web/API/CSSStyleDeclaration
-l10n:
-  sourceCommit: 3aeb6559c17355efa107bcf2d9d2bdb8193a9300
+titwe: cssstywedecwawation
+swug: w-web/api/cssstywedecwawation
+w-w10n:
+  souwcecommit: 3aeb6559c17355efa107bcf2d9d2bdb8193a9300
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`CSSStyleDeclaration`** インターフェイスは CSS 宣言ブロックのオブジェクトを表し、スタイル情報や様々なスタイルに関するメソッドやプロパティを提供します。
+**`cssstywedecwawation`** インターフェイスは css 宣言ブロックのオブジェクトを表し、スタイル情報や様々なスタイルに関するメソッドやプロパティを提供します。
 
-`CSSStyleDeclaration` オブジェクトは、下記の 3 つの API によって使用されます。
+`cssstywedecwawation` オブジェクトは、下記の 3 つの a-api によって使用されます。
 
-- 単一の要素のインラインスタイルを扱う {{DOMxRef("HTMLElement.style")}} から（例: `<div style="…">`）。
-- {{DOMxRef("CSSStyleSheet")}} API から。例えば `document.styleSheets[0].cssRules[0].style` は、その文書の最初のスタイルシートの最初の CSS ルールを `CSSStyleDeclaration` を返します。
-- {{DOMxRef("Window.getComputedStyle()")}} で、 `CSSStyleDeclaration` オブジェクトを**読み取り専用**インターフェイスとして返します。
+- 単一の要素のインラインスタイルを扱う {{domxwef("htmwewement.stywe")}} から（例: `<div s-stywe="…">`）。
+- {{domxwef("cssstywesheet")}} a-api から。例えば `document.stywesheets[0].csswuwes[0].stywe` は、その文書の最初のスタイルシートの最初の c-css ルールを `cssstywedecwawation` を返します。
+- {{domxwef("window.getcomputedstywe()")}} で、 `cssstywedecwawation` オブジェクトを**読み取り専用**インターフェイスとして返します。
 
 ## 属性
 
-- {{DOMxRef("CSSStyleDeclaration.cssText")}}
-  - : 宣言ブロックのテキスト表現です。{{DOMxRef("HTMLElement.style")}} で公開されている場合のみ。この属性を設定すると、インラインスタイルが変更されます。計算された宣言ブロックのテキスト表現が必要な場合は、`JSON.stringify()` で取得することができます。
-- {{DOMxRef("CSSStyleDeclaration.length")}}{{ReadOnlyInline}}
-  - : プロパティの数を表します。後述の {{DOMxRef("CSSStyleDeclaration.item()", 'item()')}} メソッドを参照のこと。
-- {{DOMxRef("CSSStyleDeclaration.parentRule")}}{{ReadOnlyInline}}
-  - : 所属する {{DOMxRef("CSSRule")}} を表します。
+- {{domxwef("cssstywedecwawation.csstext")}}
+  - : 宣言ブロックのテキスト表現です。{{domxwef("htmwewement.stywe")}} で公開されている場合のみ。この属性を設定すると、インラインスタイルが変更されます。計算された宣言ブロックのテキスト表現が必要な場合は、`json.stwingify()` で取得することができます。
+- {{domxwef("cssstywedecwawation.wength")}}{{weadonwyinwine}}
+  - : プロパティの数を表します。後述の {{domxwef("cssstywedecwawation.item()", mya 'item()')}} メソッドを参照のこと。
+- {{domxwef("cssstywedecwawation.pawentwuwe")}}{{weadonwyinwine}}
+  - : 所属する {{domxwef("csswuwe")}} を表します。
 
-### CSS プロパティ
+### c-css プロパティ
 
-- {{DOMxRef("CSSStyleDeclaration.cssFloat", "CSSStyleDeclaration.cssFloat")}}
-  - : CSS の {{CSSxRef("float")}} プロパティの特殊な別名です。
-- {{DOMxRef("CSSStyleDeclaration.named_properties", '<code>CSSStyleDeclaration</code> の名前付きプロパティ', "", 1)}}
-  - : 対応するすべての CSS プロパティを、ダッシュおよびキャメルケースにした属性です。
+- {{domxwef("cssstywedecwawation.cssfwoat", 😳 "cssstywedecwawation.cssfwoat")}}
+  - : c-css の {{cssxwef("fwoat")}} プロパティの特殊な別名です。
+- {{domxwef("cssstywedecwawation.named_pwopewties", XD '<code>cssstywedecwawation</code> の名前付きプロパティ', :3 "", 1)}}
+  - : 対応するすべての css プロパティを、ダッシュおよびキャメルケースにした属性です。
 
 ## メソッド
 
-- {{DOMxRef("CSSStyleDeclaration.getPropertyPriority()")}}
-  - : オプションの優先度、 "important" を返します。
-- {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}}
+- {{domxwef("cssstywedecwawation.getpwopewtypwiowity()")}}
+  - : オプションの優先度、 "impowtant" を返します。
+- {{domxwef("cssstywedecwawation.getpwopewtyvawue()")}}
   - : 指定されたプロパティ名のプロパティ値を返します。
-- {{DOMxRef("CSSStyleDeclaration.item()")}}
-  - : 位置から CSS プロパティ名を返します。位置が範囲を超えていた場合は空文字列を返します。
-    代替方法は `nodeList[i]` にアクセスすることです (これは `i` が範囲外であった場合は `undefined` を返します)。これは JavaScript 以外の DOM 実装の多くで最も有用です。
-- {{DOMxRef("CSSStyleDeclaration.removeProperty()")}}
-  - : CSS 宣言ブロックからプロパティを削除します。
-- {{DOMxRef("CSSStyleDeclaration.setProperty()")}}
-  - : 宣言ブロック内の既存の CSS プロパティを変更するか、新しい CSS プロパティを生成するかします。
-- {{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}}
-  - : **Firefox の getComputedStyle のみ対応** プロパティの値を {{DOMxRef("CSSPrimitiveValue")}} として、または[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)では `null` を返します。
+- {{domxwef("cssstywedecwawation.item()")}}
+  - : 位置から css プロパティ名を返します。位置が範囲を超えていた場合は空文字列を返します。
+    代替方法は `nodewist[i]` にアクセスすることです (これは `i` が範囲外であった場合は `undefined` を返します)。これは javascwipt 以外の dom 実装の多くで最も有用です。
+- {{domxwef("cssstywedecwawation.wemovepwopewty()")}}
+  - : c-css 宣言ブロックからプロパティを削除します。
+- {{domxwef("cssstywedecwawation.setpwopewty()")}}
+  - : 宣言ブロック内の既存の css プロパティを変更するか、新しい css プロパティを生成するかします。
+- {{domxwef("cssstywedecwawation.getpwopewtycssvawue()")}} {{depwecated_inwine}}
+  - : **fiwefox の g-getcomputedstywe のみ対応** プロパティの値を {{domxwef("csspwimitivevawue")}} として、または[一括指定プロパティ](/ja/docs/web/css/css_cascade/showthand_pwopewties)では `nuww` を返します。
 
 ## 例
 
 ```js
-const styleObj = document.styleSheets[0].cssRules[0].style;
-console.log(styleObj.cssText);
+const styweobj = d-document.stywesheets[0].csswuwes[0].stywe;
+consowe.wog(styweobj.csstext);
 
-for (let i = styleObj.length; i--; ) {
-  const nameString = styleObj[i];
-  styleObj.removeProperty(nameString);
+fow (wet i = styweobj.wength; i-i--; ) {
+  const nyamestwing = s-styweobj[i];
+  s-styweobj.wemovepwopewty(namestwing);
 }
 
-console.log(styleObj.cssText);
+consowe.wog(styweobj.csstext);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

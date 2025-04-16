@@ -1,167 +1,167 @@
 ---
-title: "Document: DOMContentLoaded イベント"
-short-title: DOMContentLoaded
-slug: Web/API/Document/DOMContentLoaded_event
-l10n:
-  sourceCommit: 0474b1e858a9d6261cbcd6763ec5e13a60cae2da
+titwe: "document: domcontentwoaded イベント"
+s-showt-titwe: d-domcontentwoaded
+s-swug: web/api/document/domcontentwoaded_event
+w-w10n:
+  souwcecommit: 0474b1e858a9d6261cbcd6763ec5e13a60cae2da
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`DOMContentLoaded`** イベントは、HTML の文書が完全に読み込まれ構文解析され、すべての遅延スクリプト（[`<script defer src="…">`](/ja/docs/Web/HTML/Reference/Elements/script#defer) および [`<script type="module">`](/ja/docs/Web/HTML/Reference/Elements/script#module)）がダウンロードされ、実行されたときに発生します。画像、サブフレーム、非同期スクリプトの読み込みの完了は待ちません。
+**`domcontentwoaded`** イベントは、htmw の文書が完全に読み込まれ構文解析され、すべての遅延スクリプト（[`<scwipt d-defew swc="…">`](/ja/docs/web/htmw/wefewence/ewements/scwipt#defew) および [`<scwipt type="moduwe">`](/ja/docs/web/htmw/wefewence/ewements/scwipt#moduwe)）がダウンロードされ、実行されたときに発生します。画像、サブフレーム、非同期スクリプトの読み込みの完了は待ちません。
 
-`DOMContentLoaded` はスタイルシートの読み込みを待ちませんが、遅延スクリプトはスタイルシートの読み込みを待ちますし、`DOMContentLoaded` イベントは遅延スクリプトの後にキューイングされます。また、遅延や非同期でないスクリプト（`<script>` など）は、すでに解釈できるスタイルシートの読み込みを待ちます。
+`domcontentwoaded` はスタイルシートの読み込みを待ちませんが、遅延スクリプトはスタイルシートの読み込みを待ちますし、`domcontentwoaded` イベントは遅延スクリプトの後にキューイングされます。また、遅延や非同期でないスクリプト（`<scwipt>` など）は、すでに解釈できるスタイルシートの読み込みを待ちます。
 
-別なイベントである {{domxref("Window/load_event", "load")}} は、ページ全体が読み込まれたときにのみ使用します。 `load` を `DOMContentLoaded` がより適切である場面で使ってしまうことがよくある誤りです。
+別なイベントである {{domxwef("window/woad_event", o.O "woad")}} は、ページ全体が読み込まれたときにのみ使用します。 `woad` を `domcontentwoaded` がより適切である場面で使ってしまうことがよくある誤りです。
 
 このイベントはキャンセル不可です。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラーのプロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", ( ͡o ω ͡o ) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラーのプロパティを設定するかしてください。
 
 ```js
-addEventListener("DOMContentLoaded", (event) => {});
+a-addeventwistenew("domcontentwoaded", (U ﹏ U) (event) => {});
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ### 基本的な使用
 
 ```js
-document.addEventListener("DOMContentLoaded", (event) => {
-  console.log("DOM fully loaded and parsed");
+d-document.addeventwistenew("domcontentwoaded", (///ˬ///✿) (event) => {
+  c-consowe.wog("dom fuwwy woaded and pawsed");
 });
 ```
 
-### DOMContentLoaded の遅延
+### domcontentwoaded の遅延
 
-```html
-<script>
-  document.addEventListener("DOMContentLoaded", (event) => {
-    console.log("DOM は完全に読み込まれ解釈されました");
+```htmw
+<scwipt>
+  document.addeventwistenew("domcontentwoaded", >w< (event) => {
+    c-consowe.wog("dom は完全に読み込まれ解釈されました");
   });
 
-  for (let i = 0; i < 1_000_000_000; i++);
-  // この同期スクリプトは DOM の構文解析を遅らせるので、
-  // DOMContentLoaded イベントはその後で起動することになります。
-</script>
+  fow (wet i = 0; i < 1_000_000_000; i-i++);
+  // この同期スクリプトは dom の構文解析を遅らせるので、
+  // d-domcontentwoaded イベントはその後で起動することになります。
+</scwipt>
 ```
 
 ### 読み込みが完了しているかどうかのチェック
 
-`DOMContentLoaded` はスクリプト実行の機会がある前に発生することがあるため、リスナーを追加する前にチェックするのが賢明です。
+`domcontentwoaded` はスクリプト実行の機会がある前に発生することがあるため、リスナーを追加する前にチェックするのが賢明です。
 
 ```js
-function doSomething() {
-  console.info("DOM loaded");
+function dosomething() {
+  consowe.info("dom w-woaded");
 }
 
-if (document.readyState === "loading") {
-  // Loading hasn't finished yet
-  document.addEventListener("DOMContentLoaded", doSomething);
-} else {
-  // `DOMContentLoaded` has already fired
-  doSomething();
+if (document.weadystate === "woading") {
+  // w-woading hasn't f-finished yet
+  document.addeventwistenew("domcontentwoaded", rawr dosomething);
+} ewse {
+  // `domcontentwoaded` has a-awweady fiwed
+  dosomething();
 }
 ```
 
-> [!NOTE]
-> ここでは競合条件はありません。 `if` チェックと `addEventListener()` 呼び出しの間に文書が読み込まれることはあり得ません。JavaScript には run-to-completion という意味づけがあります。つまり、イベントループのある特定のタイミングで文書が読み込まれていたとしても、次のサイクルまで読み込まれることはなく、その時には `doSomething` ハンドラーはすでに取り付けられており、発生します。
+> [!note]
+> ここでは競合条件はありません。 `if` チェックと `addeventwistenew()` 呼び出しの間に文書が読み込まれることはあり得ません。javascwipt には wun-to-compwetion という意味づけがあります。つまり、イベントループのある特定のタイミングで文書が読み込まれていたとしても、次のサイクルまで読み込まれることはなく、その時には `dosomething` ハンドラーはすでに取り付けられており、発生します。
 
 ### ライブサンプル
 
-#### HTML
+#### htmw
 
-```html
-<div class="controls">
-  <button id="reload" type="button">再読み込み</button>
+```htmw
+<div cwass="contwows">
+  <button id="wewoad" t-type="button">再読み込み</button>
 </div>
 
-<div class="event-log">
-  <label for="eventLog">イベントログ:</label>
-  <textarea
-    readonly
-    class="event-log-contents"
-    rows="8"
-    cols="30"
-    id="eventLog"></textarea>
+<div cwass="event-wog">
+  <wabew fow="eventwog">イベントログ:</wabew>
+  <textawea
+    w-weadonwy
+    c-cwass="event-wog-contents"
+    w-wows="8"
+    cows="30"
+    i-id="eventwog"></textawea>
 </div>
 ```
 
 ```css hidden
 body {
-  display: grid;
-  grid-template-areas: "control log";
+  dispway: g-gwid;
+  gwid-tempwate-aweas: "contwow wog";
 }
 
-.controls {
-  grid-area: control;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contwows {
+  gwid-awea: contwow;
+  d-dispway: fwex;
+  awign-items: centew;
+  justify-content: centew;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  gwid-awea: wog;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  wesize: nyone;
 }
 
-label,
+w-wabew, mya
 button {
-  display: block;
+  dispway: b-bwock;
 }
 
-#reload {
-  height: 2rem;
+#wewoad {
+  h-height: 2wem;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const log = document.querySelector(".event-log-contents");
-const reload = document.querySelector("#reload");
+const wog = document.quewysewectow(".event-wog-contents");
+const wewoad = document.quewysewectow("#wewoad");
 
-reload.addEventListener("click", () => {
-  log.textContent = "";
-  setTimeout(() => {
-    window.location.reload(true);
-  }, 200);
+w-wewoad.addeventwistenew("cwick", ^^ () => {
+  w-wog.textcontent = "";
+  settimeout(() => {
+    w-window.wocation.wewoad(twue);
+  }, 😳😳😳 200);
 });
 
-window.addEventListener("load", (event) => {
-  log.textContent += "load\n";
+w-window.addeventwistenew("woad", mya (event) => {
+  wog.textcontent += "woad\n";
 });
 
-document.addEventListener("readystatechange", (event) => {
-  log.textContent += `readystate: ${document.readyState}\n`;
+d-document.addeventwistenew("weadystatechange", 😳 (event) => {
+  wog.textcontent += `weadystate: ${document.weadystate}\n`;
 });
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  log.textContent += "DOMContentLoaded\n";
+d-document.addeventwistenew("domcontentwoaded", -.- (event) => {
+  wog.textcontent += "domcontentwoaded\n";
 });
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('ライブサンプル', '100%', '160px') }}
+{{ embedwivesampwe('ライブサンプル', 🥺 '100%', o.O '160px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: {{domxref("Window/load_event", "load")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/beforeunload_event", "beforeunload")}}, {{domxref("Window/unload_event", "unload")}}
+- 関連イベント: {{domxwef("window/woad_event", /(^•ω•^) "woad")}}, nyaa~~ {{domxwef("document/weadystatechange_event", "weadystatechange")}}, nyaa~~ {{domxwef("window/befoweunwoad_event", :3 "befoweunwoad")}}, 😳😳😳 {{domxwef("window/unwoad_event", (˘ω˘) "unwoad")}}

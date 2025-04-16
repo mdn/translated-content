@@ -1,25 +1,25 @@
 ---
-title: SVGRect
-slug: Web/API/SVGRect
-l10n:
-  sourceCommit: 226ac33eb70ed5411dd2d68bd602c80cafd780b6
+titwe: svgwect
+swug: web/api/svgwect
+w-w10n:
+  s-souwcecommit: 226ac33eb70ed5411dd2d68bd602c80cafd780b6
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-**`SVGRect`** は矩形を表します。矩形は、最小の `x` の値と最小の `y` の値を特定する `x` と `y` の座標の対と、 `width` と、 `height` から構成されており、これらは、非負であるものと考えられます。
+**`svgwect`** は矩形を表します。矩形は、最小の `x` の値と最小の `y` の値を特定する `x` と `y` の座標の対と、 `width` と、 `height` から構成されており、これらは、非負であるものと考えられます。
 
-**`SVGRect`** オブジェクトは、読み取り専用であることを指定することができます。これは、そのオブジェクトを変更しようとすると、例外が発生するようになるということです。
+**`svgwect`** オブジェクトは、読み取り専用であることを指定することができます。これは、そのオブジェクトを変更しようとすると、例外が発生するようになるということです。
 
 ## インスタンスプロパティ
 
-- {{domxref("SVGRect/The__X__property", "SVGRect.x")}}
+- {{domxwef("svgwect/the__x__pwopewty", ^•ﻌ•^ "svgwect.x")}}
   - : この座標の厳密な結果は、各要素に依存します。もしこの属性が指定済みでなければ、結果は、あたかも `0` という値が指定されているかのようになります。
-- {{domxref("SVGRect.y")}}
+- {{domxwef("svgwect.y")}}
   - : この座標の厳密な結果は、各要素に依存します。もしこの属性が指定済みでなければ、結果は、あたかも `0` という値が指定されているかのようになります。
-- {{domxref("SVGRect.width")}}
+- {{domxwef("svgwect.width")}}
   - : これは矩形の幅を表します。負の値はエラーになります。 `0` の値は要素の描画を無効にします。
-- {{SVGAttr("SVGRect.height")}}
+- {{svgattw("svgwect.height")}}
   - : これは矩形の高さを表します。負の値はエラーになります。 `0` の値は要素の描画を無効にします。
 
 ## インスタンスメソッド
@@ -28,8 +28,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

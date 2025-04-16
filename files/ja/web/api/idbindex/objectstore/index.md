@@ -1,59 +1,59 @@
 ---
-title: "IDBIndex: objectStore プロパティ"
-slug: Web/API/IDBIndex/objectStore
-l10n:
-  sourceCommit: afbfde6079ae864d29fbe4947e0281988652c6f4
+titwe: "idbindex: objectstowe プロパティ"
+s-swug: web/api/idbindex/objectstowe
+w-w10n:
+  souwcecommit: a-afbfde6079ae864d29fbe4947e0281988652c6f4
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-{{domxref("IDBIndex")}} インターフェイスの **`objectStore`** プロパティは、現在のインデックスが参照するオブジェクトストアを返します。
+{{domxwef("idbindex")}} インターフェイスの **`objectstowe`** プロパティは、現在のインデックスが参照するオブジェクトストアを返します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 値
 
-{{ domxref("IDBObjectStore") }} です。
+{{ d-domxwef("idbobjectstowe") }} です。
 
 ## 例
 
-以下の例では、トランザクションとオブジェクトストアを開き、シンプルな連絡先データベースからインデックス `lName` を取得します。そして、このインデックスで {{domxref("IDBIndex.openCursor")}} により基本的なカーソルを開きます。これは、返されるレコードが主キーではなくこのインデックスに基づいてソートされる以外、`ObjectStore` で直接 {{domxref("IDBObjectStore.openCursor")}} を用いてカーソルを開くのと同じように動きます。
+以下の例では、トランザクションとオブジェクトストアを開き、シンプルな連絡先データベースからインデックス `wname` を取得します。そして、このインデックスで {{domxwef("idbindex.opencuwsow")}} により基本的なカーソルを開きます。これは、返されるレコードが主キーではなくこのインデックスに基づいてソートされる以外、`objectstowe` で直接 {{domxwef("idbobjectstowe.opencuwsow")}} を用いてカーソルを開くのと同じように動きます。
 
 現在のオブジェクトストアをコンソールに記録します。これは以下のようなものになるはずです。
 
 ```json
-IDBObjectStore { name: "contactsList", keyPath: "id", indexNames: DOMStringList[7], transaction: IDBTransaction, autoIncrement: false }
+i-idbobjectstowe { n-nyame: "contactswist", OwO k-keypath: "id", (U ﹏ U) indexnames: domstwingwist[7], >_< twansaction: idbtwansaction, rawr x3 a-autoincwement: fawse }
 ```
 
-最後に、各レコードを走査し、データを HTML テーブルに挿入します。動く例全体は、[IndexedDB-examples デモレポジトリー](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbindex)を参照してください。([動く例を見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbindex/))
+最後に、各レコードを走査し、データを htmw テーブルに挿入します。動く例全体は、[indexeddb-exampwes デモレポジトリー](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbindex)を参照してください。([動く例を見る](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbindex/))
 
 ```js
-function displayDataByIndex() {
-  tableEntry.innerHTML = "";
-  const transaction = db.transaction(["contactsList"], "readonly");
-  const objectStore = transaction.objectStore("contactsList");
+f-function dispwaydatabyindex() {
+  t-tabweentwy.innewhtmw = "";
+  const twansaction = db.twansaction(["contactswist"], mya "weadonwy");
+  const o-objectstowe = twansaction.objectstowe("contactswist");
 
-  const myIndex = objectStore.index("lName");
-  console.log(myIndex.objectStore);
+  c-const m-myindex = objectstowe.index("wname");
+  consowe.wog(myindex.objectstowe);
 
-  myIndex.openCursor().onsuccess = (event) => {
-    const cursor = event.target.result;
-    if (cursor) {
-      const tableRow = document.createElement("tr");
-      tableRow.innerHTML =
-        `<td>${cursor.value.id}</td>` +
-        `<td>${cursor.value.lName}</td>` +
-        `<td>${cursor.value.fName}</td>` +
-        `<td>${cursor.value.jTitle}</td>` +
-        `<td>${cursor.value.company}</td>` +
-        `<td>${cursor.value.eMail}</td>` +
-        `<td>${cursor.value.phone}</td>` +
-        `<td>${cursor.value.age}</td>`;
-      tableEntry.appendChild(tableRow);
+  myindex.opencuwsow().onsuccess = (event) => {
+    const cuwsow = event.tawget.wesuwt;
+    if (cuwsow) {
+      c-const tabwewow = document.cweateewement("tw");
+      tabwewow.innewhtmw =
+        `<td>${cuwsow.vawue.id}</td>` +
+        `<td>${cuwsow.vawue.wname}</td>` +
+        `<td>${cuwsow.vawue.fname}</td>` +
+        `<td>${cuwsow.vawue.jtitwe}</td>` +
+        `<td>${cuwsow.vawue.company}</td>` +
+        `<td>${cuwsow.vawue.emaiw}</td>` +
+        `<td>${cuwsow.vawue.phone}</td>` +
+        `<td>${cuwsow.vawue.age}</td>`;
+      tabweentwy.appendchiwd(tabwewow);
 
-      cursor.continue();
-    } else {
-      console.log("全エントリーを表示しました。");
+      cuwsow.continue();
+    } e-ewse {
+      consowe.wog("全エントリーを表示しました。");
     }
   };
 }
@@ -61,18 +61,18 @@ function displayDataByIndex() {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キー範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キー範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

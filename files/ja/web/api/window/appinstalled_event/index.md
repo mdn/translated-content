@@ -1,48 +1,48 @@
 ---
-title: "Window: appinstalled イベント"
-slug: Web/API/Window/appinstalled_event
-l10n:
-  sourceCommit: 266a565a634d1218995379e54e74bf9cc9504d83
+titwe: "window: appinstawwed イベント"
+s-swug: w-web/api/window/appinstawwed_event
+w-w10n:
+  souwcecommit: 266a565a634d1218995379e54e74bf9cc9504d83
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`appinstalled`** は[ウェブマニフェスト API](/ja/docs/Web/Progressive_web_apps/Manifest) のイベントで、ブラウザーがあるページをアプリケーションとして成功裏にインストールしたとき発行されます。
+**`appinstawwed`** は[ウェブマニフェスト a-api](/ja/docs/web/pwogwessive_web_apps/manifest) のイベントで、ブラウザーがあるページをアプリケーションとして成功裏にインストールしたとき発行されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", UwU "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("appinstalled", (event) => {});
+a-addeventwistenew("appinstawwed", rawr x3 (event) => {});
 
-onappinstalled = (event) => {};
+o-onappinstawwed = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-`appinstalled` イベントは {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドで使用することができます。
+`appinstawwed` イベントは {{domxwef("eventtawget/addeventwistenew", rawr "addeventwistenew")}} メソッドで使用することができます。
 
 ```js
-window.addEventListener("appinstalled", () => {
-  console.log("アプリをインストールしてくれてありがとう！");
+w-window.addeventwistenew("appinstawwed", σωσ () => {
+  c-consowe.wog("アプリをインストールしてくれてありがとう！");
 });
 ```
 
-または `onappinstalled` イベントハンドラープロパティを使用してください。
+または `onappinstawwed` イベントハンドラープロパティを使用してください。
 
 ```js
-window.onappinstalled = () => {
-  console.log("アプリをインストールしてくれてありがとう！");
+window.onappinstawwed = () => {
+  consowe.wog("アプリをインストールしてくれてありがとう！");
 };
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

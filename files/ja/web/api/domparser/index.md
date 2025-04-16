@@ -1,47 +1,47 @@
 ---
-title: DOMParser
-slug: Web/API/DOMParser
-l10n:
-  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
+titwe: dompawsew
+swug: web/api/dompawsew
+w-w10n:
+  s-souwcecommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DOMParser`** インターフェイスは、 {{Glossary("XML")}} や {{Glossary("HTML")}} ソースコードを文字列から DOM の {{domxref("Document")}} に解釈する機能を提供します。
+**`dompawsew`** インターフェイスは、 {{gwossawy("xmw")}} や {{gwossawy("htmw")}} ソースコードを文字列から d-dom の {{domxwef("document")}} に解釈する機能を提供します。
 
-{{domxref("XMLSerializer")}} インターフェイスを使い、DOM ツリーを XML もしく HTML ソースに転換する、逆の操作を行うことができます。
+{{domxwef("xmwsewiawizew")}} インターフェイスを使い、dom ツリーを x-xmw もしく h-htmw ソースに転換する、逆の操作を行うことができます。
 
-HTML 文書の場合、{{domxref("Element.innerHTML")}} や {{domxref("Element.outerHTML", "outerHTML")}} プロパティの値を設定することで、HTML から構築された新しい DOM ツリーに一部分を置き換えることもできます。DOM のサブツリーに対応した HTML の要素を取り込むために、これらのプロパティを読み込むことも可能です。
+htmw 文書の場合、{{domxwef("ewement.innewhtmw")}} や {{domxwef("ewement.outewhtmw", rawr "outewhtmw")}} プロパティの値を設定することで、htmw から構築された新しい d-dom ツリーに一部分を置き換えることもできます。dom のサブツリーに対応した h-htmw の要素を取り込むために、これらのプロパティを読み込むことも可能です。
 
-なお、 {{domxref("XMLHttpRequest")}}は、 URL アドレスが指定できるリソースから直接 XML や HTML を解釈でき、その {{domxref("XMLHttpRequest.response", "response")}} プロパティで `Document` を返すことに注意してください。
+なお、 {{domxwef("xmwhttpwequest")}}は、 u-uww アドレスが指定できるリソースから直接 xmw や htmw を解釈でき、その {{domxwef("xmwhttpwequest.wesponse", σωσ "wesponse")}} プロパティで `document` を返すことに注意してください。
 
-> **メモ:** [ブロックレベル要素](/ja/docs/Glossary/Block-level_content)、例えば `<p>` の中に別のブロックレベル要素が入れ子になっている場合、自動的に閉じられ、その結果、閉じられた `</p>` タグの前に解釈されることになります。
+> **メモ:** [ブロックレベル要素](/ja/docs/gwossawy/bwock-wevew_content)、例えば `<p>` の中に別のブロックレベル要素が入れ子になっている場合、自動的に閉じられ、その結果、閉じられた `</p>` タグの前に解釈されることになります。
 
 ## コンストラクター
 
-- {{domxref("DOMParser.DOMParser","DOMParser()")}}
-  - : 新しい `DOMParser` オブジェクト作成します。
+- {{domxwef("dompawsew.dompawsew","dompawsew()")}}
+  - : 新しい `dompawsew` オブジェクト作成します。
 
 ## インスタンスメソッド
 
-- {{domxref("DOMParser.parseFromString()")}}
-  - : HTML パーサーまたは XML パーサーを使用して文字列を解釈し、 {{domxref("HTMLDocument")}} または {{domxref("XMLDocument")}} を返します。
+- {{domxwef("dompawsew.pawsefwomstwing()")}}
+  - : htmw パーサーまたは xmw パーサーを使用して文字列を解釈し、 {{domxwef("htmwdocument")}} または {{domxwef("xmwdocument")}} を返します。
 
 ## 例
 
-このインターフェイスの唯一のメソッドである {{domxref("DOMParser.parseFromString()")}} のドキュメントには、XML、SVG、HTML 文字列を解釈する例が含まれています。
+このインターフェイスの唯一のメソッドである {{domxwef("dompawsew.pawsefwomstwing()")}} のドキュメントには、xmw、svg、htmw 文字列を解釈する例が含まれています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [XML の構文解析とシリアライズ](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)
-- {{domxref("XMLHttpRequest")}}
-- {{domxref("XMLSerializer")}}
-- {{jsxref("JSON.parse()")}} - {{jsxref("JSON")}} 文書で対応するもの。
+- [xmw の構文解析とシリアライズ](/ja/docs/web/xmw/guides/pawsing_and_sewiawizing_xmw)
+- {{domxwef("xmwhttpwequest")}}
+- {{domxwef("xmwsewiawizew")}}
+- {{jsxwef("json.pawse()")}} - {{jsxwef("json")}} 文書で対応するもの。

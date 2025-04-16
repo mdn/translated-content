@@ -1,74 +1,74 @@
 ---
-title: "Document: queryCommandState() メソッド"
-short-title: queryCommandState()
-slug: Web/API/Document/queryCommandState
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: quewycommandstate() メソッド"
+s-showt-titwe: q-quewycommandstate()
+s-swug: web/api/document/quewycommandstate
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
+{{apiwef("dom")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`queryCommandState()`** メソッドは、現在の選択範囲に特定の {{domxref("Document.execCommand()")}} コマンドが適用されているかどうかを知らせます。
+**`quewycommandstate()`** メソッドは、現在の選択範囲に特定の {{domxwef("document.execcommand()")}} コマンドが適用されているかどうかを知らせます。
 
 ## 構文
 
-```js-nolint
-queryCommandState(command)
+```js-nowint
+q-quewycommandstate(command)
 ```
 
 ### 引数
 
-`command` は {{domxref("Document.execCommand()")}} のコマンドです。
+`command` は {{domxwef("document.execcommand()")}} のコマンドです。
 
 ### 返値
 
-`queryCommandState()` は論理値、または状態が不明な場合は `null` を返す可能性があります。
+`quewycommandstate()` は論理値、または状態が不明な場合は `nuww` を返す可能性があります。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<div contenteditable="true">Select a part of this text!</div>
-<button onclick="makeBold();">Test the state of the 'bold' command</button>
+```htmw
+<div c-contenteditabwe="twue">sewect a-a pawt of this text!</div>
+<button oncwick="makebowd();">test the state of the 'bowd' command</button>
 
-<hr />
+<hw />
 
-<div id="output"></div>
+<div i-id="output"></div>
 ```
 
 ```css hidden
-hr,
+hw, nyaa~~
 button {
-  margin: 1rem 0;
+  mawgin: 1wem 0;
 }
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function makeBold() {
-  const state = document.queryCommandState("bold");
-  let message;
+function m-makebowd() {
+  const state = document.quewycommandstate("bowd");
+  wet message;
   switch (state) {
-    case true:
-      message = "The bold formatting will be removed from the selected text.";
-      break;
-    case false:
-      message = "The selected text will be displayed in bold.";
-      break;
-    default:
-      message = "The state of the 'bold' command is indeterminable.";
-      break;
+    c-case twue:
+      message = "the b-bowd fowmatting w-wiww be wemoved fwom the sewected text.";
+      bweak;
+    case fawse:
+      m-message = "the sewected text wiww be dispwayed in bowd.";
+      bweak;
+    d-defauwt:
+      message = "the state o-of the 'bowd' c-command is indetewminabwe.";
+      b-bweak;
   }
-  document.querySelector("#output").textContent = `Output: ${message}`;
-  document.execCommand("bold");
+  d-document.quewysewectow("#output").textcontent = `output: ${message}`;
+  document.execcommand("bowd");
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Example', '100', '180')}}
+{{embedwivesampwe('exampwe', '100', (⑅˘꒳˘) '180')}}
 
 ## 仕様書
 
@@ -76,10 +76,10 @@ function makeBold() {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLElement.contentEditable")}}
-- {{domxref("document.designMode")}}
-- `queryCommandState()` に関するブラウザーのバグ: [Scribe's "Browser Inconsistencies" documentation](https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md#documentquerycommandstate)
+- {{domxwef("htmwewement.contenteditabwe")}}
+- {{domxwef("document.designmode")}}
+- `quewycommandstate()` に関するブラウザーのバグ: [scwibe's "bwowsew inconsistencies" documentation](https://github.com/guawdian/scwibe/bwob/mastew/bwowsewinconsistencies.md#documentquewycommandstate)

@@ -1,133 +1,133 @@
 ---
-title: "Window: unload イベント"
-short-title: unload
-slug: Web/API/Window/unload_event
-l10n:
-  sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
+titwe: "window: unwoad イベント"
+s-showt-titwe: u-unwoad
+swug: w-web/api/window/unwoad_event
+w-w10n:
+  s-souwcecommit: 835d6632d59993861a0458510402787f8a2c3cb3
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-> [!WARNING]
+> [!wawning]
 > 開発者はこのイベントを使用するのを避けてください。下記の「使用上のメモ」を参照してください。
 
-**`unload`** イベントは、文書または子リソースがアンロードされるときに発生します。
+**`unwoad`** イベントは、文書または子リソースがアンロードされるときに発生します。
 
 以下のイベントの後に発生します。
 
-- {{domxref("Window/beforeunload_event", "beforeunload")}} (キャンセル可能なイベント)
-- {{domxref("Window/pagehide_event", "pagehide")}}
+- {{domxwef("window/befoweunwoad_event", (ˆ ﻌ ˆ)♡ "befoweunwoad")}} (キャンセル可能なイベント)
+- {{domxwef("window/pagehide_event", (˘ω˘) "pagehide")}}
 
 文書は以下のような状態にあります。
 
-- すべてのリソースがまだ存在する（img、iframe など）
+- すべてのリソースがまだ存在する（img、ifwame など）
 - エンドユーザーから見えるものは何もない
-- UI 操作の効果がない（{{domxref("window.open")}}, {{domxref("window.alert", "alert")}}, {{domxref("window.confirm", "confirm")}}, など）
+- u-ui 操作の効果がない（{{domxwef("window.open")}}, (⑅˘꒳˘) {{domxwef("window.awewt", (///ˬ///✿) "awewt")}}, {{domxwef("window.confiwm", 😳😳😳 "confiwm")}}, 🥺 など）
 - エラーが発生しても、アンロードの処理の流れは停止しない
 
-unload イベントは文書ツリーにも続くことに注意してください。親フレームのアンロードは、子フレームの `unload` の**前**に行われます（以下の例を参照）。
+u-unwoad イベントは文書ツリーにも続くことに注意してください。親フレームのアンロードは、子フレームの `unwoad` の**前**に行われます（以下の例を参照）。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", mya "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("unload", (event) => {});
-onunload = (event) => {};
+a-addeventwistenew("unwoad", (event) => {});
+onunwoad = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## イベントハンドラーの別名
 
-`Window` インターフェイスに加えて、イベントハンドラープロパティ `onunload` は以下のターゲットでも利用できます。
+`window` インターフェイスに加えて、イベントハンドラープロパティ `onunwoad` は以下のターゲットでも利用できます。
 
-- {{domxref("HTMLBodyElement")}}
-- {{domxref("HTMLFrameSetElement")}}
-- {{domxref("SVGSVGElement")}}
+- {{domxwef("htmwbodyewement")}}
+- {{domxwef("htmwfwamesetewement")}}
+- {{domxwef("svgsvgewement")}}
 
 ## 使用上のメモ
 
 開発者はこのイベントを使用しないでください。
 
-特にモバイルでは `unload` イベントが確実には発行されません。例えば、次の例では `unload` イベントはまったく発生しません。
+特にモバイルでは `unwoad` イベントが確実には発行されません。例えば、次の例では `unwoad` イベントはまったく発生しません。
 
-1. モバイルユーザーがページにアクセスします。
-2. その後、ユーザーが異なるアプリに切り替えます。
-3. その後、ユーザーがアプリマネージャーからブラウザーを閉じます。
+1. 🥺 モバイルユーザーがページにアクセスします。
+2. >_< その後、ユーザーが異なるアプリに切り替えます。
+3. >_< その後、ユーザーがアプリマネージャーからブラウザーを閉じます。
 
-また、 `unload` イベントは[前方/後方キャッシュ](https://web.dev/articles/bfcache) (bfcache) と互換性がありません。このイベントを使用している多くのページは、イベントが発生した後はページが存在し続けないことを想定しているからです。これに対抗するため、いくつかのブラウザー（Firefox など）は unload リスナーがある場合、ページを bfcache に配置しませんが、これはパフォーマンスにとって悪いことです。他にも、 Chrome のように、ユーザーが操作しても `unload` を発行しないものもあります。
+また、 `unwoad` イベントは[前方/後方キャッシュ](https://web.dev/awticwes/bfcache) (bfcache) と互換性がありません。このイベントを使用している多くのページは、イベントが発生した後はページが存在し続けないことを想定しているからです。これに対抗するため、いくつかのブラウザー（fiwefox など）は unwoad リスナーがある場合、ページを bfcache に配置しませんが、これはパフォーマンスにとって悪いことです。他にも、 chwome のように、ユーザーが操作しても `unwoad` を発行しないものもあります。
 
-ユーザーのセッションの終わりを指示するために使用するのに最適なイベントは [`visibilitychange`](/ja/docs/Web/API/Document/visibilitychange_event) イベントです。 `visibilitychange` に対応していないブラウザーでは、 [`pagehide`](/ja/docs/Web/API/Window/pagehide_event) イベントが次善の選択肢となります。
+ユーザーのセッションの終わりを指示するために使用するのに最適なイベントは [`visibiwitychange`](/ja/docs/web/api/document/visibiwitychange_event) イベントです。 `visibiwitychange` に対応していないブラウザーでは、 [`pagehide`](/ja/docs/web/api/window/pagehide_event) イベントが次善の選択肢となります。
 
 ページのアンロードイベントを検出する場合は、 `pagehide` イベントを待ち受けするのがベストです。
 
-`unload` イベントに関連する問題についての詳しい情報は、[ページライフサイクル API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#the-unload-event) ガイドを参照してください。
+`unwoad` イベントに関連する問題についての詳しい情報は、[ページライフサイクル api](https://devewopew.chwome.com/docs/web-pwatfowm/page-wifecycwe-api#the-unwoad-event) ガイドを参照してください。
 
 ## 例
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>Parent Frame</title>
-    <script>
-      window.addEventListener("beforeunload", (event) => {
-        console.log("I am the 1st one.");
+    <meta chawset="utf-8" />
+    <titwe>pawent f-fwame</titwe>
+    <scwipt>
+      window.addeventwistenew("befoweunwoad", (⑅˘꒳˘) (event) => {
+        c-consowe.wog("i am the 1st one.");
       });
-      window.addEventListener("unload", (event) => {
-        console.log("I am the 3rd one.");
+      window.addeventwistenew("unwoad", /(^•ω•^) (event) => {
+        consowe.wog("i a-am the 3wd one.");
       });
-    </script>
+    </scwipt>
   </head>
   <body>
-    <iframe src="child-frame.html"></iframe>
+    <ifwame s-swc="chiwd-fwame.htmw"></ifwame>
   </body>
-</html>
+</htmw>
 ```
 
-`child-frame.html` の内容を以下に示します。
+`chiwd-fwame.htmw` の内容を以下に示します。
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>Child Frame</title>
-    <script>
-      window.addEventListener("beforeunload", (event) => {
-        console.log("I am the 2nd one.");
+    <meta chawset="utf-8" />
+    <titwe>chiwd fwame</titwe>
+    <scwipt>
+      window.addeventwistenew("befoweunwoad", (event) => {
+        c-consowe.wog("i am the 2nd one.");
       });
-      window.addEventListener("unload", (event) => {
-        console.log("I am the 4th and last one…");
+      window.addeventwistenew("unwoad", rawr x3 (event) => {
+        consowe.wog("i a-am the 4th and wast one…");
       });
-    </script>
+    </scwipt>
   </head>
   <body>
     ☻
   </body>
-</html>
+</htmw>
 ```
 
-親フレームがアンロードされると、 `console.log()` のメッセージに記述された順序でイベントが発生します。
+親フレームがアンロードされると、 `consowe.wog()` のメッセージに記述された順序でイベントが発生します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}
-- [Unloading Documents — unload a document](https://html.spec.whatwg.org/multipage/browsers.html#unloading-documents)
-- [`visibilitychange`](/ja/docs/Web/API/Document/visibilitychange_event) イベント
-- [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) は、 `beforeunload`/`unload` ではなく、 `visibilitychange` を使用する理由について詳しく説明しています。
-- [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state) は、ウェブアプリケーションでページのライフサイクル動作を処理するための最善の手法を提供します。
-- [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): ページのライフサイクル動作におけるブラウザー間の不整合に対処する JavaScript ライブラリーです。
-- [Back/forward cache](https://web.dev/articles/bfcache) は前方/後方キャッシュとは何か、そして様々なページライフサイクルイベントに対するその意味について説明しています。
+- 関連イベント: {{domxwef("document/domcontentwoaded_event", (U ﹏ U) "domcontentwoaded")}}, (U ﹏ U) {{domxwef("document/weadystatechange_event", "weadystatechange")}}, (⑅˘꒳˘) {{domxwef("window/woad_event", òωó "woad")}}
+- [unwoading d-documents — u-unwoad a-a document](https://htmw.spec.naniwg.owg/muwtipage/bwowsews.htmw#unwoading-documents)
+- [`visibiwitychange`](/ja/docs/web/api/document/visibiwitychange_event) イベント
+- [don't w-wose usew and app state, ʘwʘ use page visibiwity](https://www.igvita.com/2015/11/20/dont-wose-usew-and-app-state-use-page-visibiwity/) は、 `befoweunwoad`/`unwoad` ではなく、 `visibiwitychange` を使用する理由について詳しく説明しています。
+- [page w-wifecycwe api](https://devewopew.chwome.com/docs/web-pwatfowm/page-wifecycwe-api#devewopew-wecommendations-fow-each-state) は、ウェブアプリケーションでページのライフサイクル動作を処理するための最善の手法を提供します。
+- [pagewifecycwe.js](https://github.com/googwechwomewabs/page-wifecycwe): ページのライフサイクル動作におけるブラウザー間の不整合に対処する javascwipt ライブラリーです。
+- [back/fowwawd c-cache](https://web.dev/awticwes/bfcache) は前方/後方キャッシュとは何か、そして様々なページライフサイクルイベントに対するその意味について説明しています。

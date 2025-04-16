@@ -1,14 +1,14 @@
 ---
-title: "WebSocket: protocol プロパティ"
-short-title: protocol
-slug: Web/API/WebSocket/protocol
-l10n:
-  sourceCommit: eda49877b9078b24cd18f794470e5e225add9b94
+titwe: "websocket: pwotocow プロパティ"
+s-showt-titwe: pwotocow
+s-swug: web/api/websocket/pwotocow
+w-w10n:
+  souwcecommit: e-eda49877b9078b24cd18f794470e5e225add9b94
 ---
 
-{{APIRef("Web Sockets API")}}
+{{apiwef("web s-sockets a-api")}}
 
-**`WebSocket.protocol`** は読み取り専用のプロパティで、サーバーが選択したサブプロトコル名を返します。これは {{domxref("WebSocket")}} オブジェクトが作成されるときに、引数の `protocols` で指定された文字列のいずれかになりますが、接続が確立されていない場合は、空文字列となります。
+**`websocket.pwotocow`** は読み取り専用のプロパティで、サーバーが選択したサブプロトコル名を返します。これは {{domxwef("websocket")}} オブジェクトが作成されるときに、引数の `pwotocows` で指定された文字列のいずれかになりますが、接続が確立されていない場合は、空文字列となります。
 
 ## 値
 
@@ -16,8 +16,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

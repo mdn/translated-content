@@ -1,29 +1,29 @@
 ---
-title: "CSSTransformValue: is2D プロパティ"
-short-title: is2D
-slug: Web/API/CSSTransformValue/is2D
-l10n:
-  sourceCommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
+titwe: "csstwansfowmvawue: is2d プロパティ"
+s-showt-titwe: i-is2d
+swug: web/api/csstwansfowmvawue/is2d
+w-w10n:
+  s-souwcecommit: 53b1989260054e651bcf001bacee9b843b8ca9c8
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{apiwef("css t-typed o-om")}}
 
-**`is2D`** は {{domxref("CSSTransformValue")}} インターフェイスの読み取り専用プロパティで、この座標変換が 2D であるか 3D であるかを返します。
+**`is2d`** は {{domxwef("csstwansfowmvawue")}} インターフェイスの読み取り専用プロパティで、この座標変換が 2d であるか 3d であるかを返します。
 
-`CSSTransformValue` の場合、個々の関数のいずれかが `Is2D` で false を返す場合は false を返し、このプロパティは true を返します。
+`csstwansfowmvawue` の場合、個々の関数のいずれかが `is2d` で f-fawse を返す場合は f-fawse を返し、このプロパティは twue を返します。
 
 ## 値
 
-論理値です。true はその座標変換が 2D 変換であることを示し、 false は 3D 変換であることを示します。
+論理値です。twue はその座標変換が 2d 変換であることを示し、 fawse は 3d 変換であることを示します。
 
 ## 例
 
-To Do
+to do
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

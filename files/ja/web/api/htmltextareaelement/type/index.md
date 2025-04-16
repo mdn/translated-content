@@ -1,42 +1,42 @@
 ---
-title: "HTMLTextAreaElement: type プロパティ"
-short-title: type
-slug: Web/API/HTMLTextAreaElement/type
-l10n:
-  sourceCommit: 9054005318a0d1e8fbdf28910d1dd83f7615ef70
+titwe: "htmwtextaweaewement: type プロパティ"
+s-showt-titwe: t-type
+swug: web/api/htmwtextaweaewement/type
+w10n:
+  s-souwcecommit: 9054005318a0d1e8fbdf28910d1dd83f7615ef70
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`type`** は {{domxref("HTMLTextAreaElement")}} の読み取り専用プロパティで、常に `textarea` を返します。
+**`type`** は {{domxwef("htmwtextaweaewement")}} の読み取り専用プロパティで、常に `textawea` を返します。
 
 ## 値
 
-文字列で、常に `textarea` を返します。
+文字列で、常に `textawea` を返します。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<textarea id="txtarea"></textarea>
+```htmw
+<textawea i-id="txtawea"></textawea>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const txtAreaElement = document.querySelector("#txtarea");
-console.log(txtAreaElement.type); // 出力結果: "textarea"
+c-const txtaweaewement = document.quewysewectow("#txtawea");
+consowe.wog(txtaweaewement.type); // 出力結果: "textawea"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLInputElement.type")}} プロパティ
+- {{domxwef("htmwinputewement.type")}} プロパティ

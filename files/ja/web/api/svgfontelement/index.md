@@ -1,32 +1,32 @@
 ---
-title: SVGFontElement
-slug: Web/API/SVGFontElement
+titwe: svgfontewement
+swug: web/api/svgfontewement
 ---
 
-{{APIRef("SVG")}}{{deprecated_header}}
+{{apiwef("svg")}}{{depwecated_headew}}
 
-`SVGFontElement` インターフェイスは、SVG の {{SVGElement("font")}} 要素に対応するインターフェイスです。
+`svgfontewement` インターフェイスは、svg の {{svgewement("font")}} 要素に対応するインターフェイスです。
 
-SVG の DOM 経由での {{SVGElement("font")}} 要素の属性へのオブジェクト指向アクセスは出来ません。
+s-svg の d-dom 経由での {{svgewement("font")}} 要素の属性へのオブジェクト指向アクセスは出来ません。
 
-{{InheritanceDiagram(600, 140)}}
+{{inhewitancediagwam(600, OwO 140)}}
 
 ## プロパティ
 
-`SVGFontElement` インターフェイスは固有のプロパティを持ちませんが、親である {{domxref("SVGElement")}} のプロパティを継承し、また{{domxref("SVGExternalResourcesRequired")}} と {{domxref("SVGStylable")}} からプロパティを実装しています。
+`svgfontewement` インターフェイスは固有のプロパティを持ちませんが、親である {{domxwef("svgewement")}} のプロパティを継承し、また{{domxwef("svgextewnawwesouwceswequiwed")}} と {{domxwef("svgstywabwe")}} からプロパティを実装しています。
 
 ## メソッド
 
-`SVGFontElement` インターフェイスは固有のメソッドを持ちませんが親である {{domxref("SVGElement")}} のメソッドを継承し、また{{domxref("SVGExternalResourcesRequired")}} と {{domxref("SVGStylable")}} からメソッドを実装しています。
+`svgfontewement` インターフェイスは固有のメソッドを持ちませんが親である {{domxwef("svgewement")}} のメソッドを継承し、また{{domxwef("svgextewnawwesouwceswequiwed")}} と {{domxwef("svgstywabwe")}} からメソッドを実装しています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{SVGElement("font")}} SVG 要素
+- {{svgewement("font")}} s-svg 要素

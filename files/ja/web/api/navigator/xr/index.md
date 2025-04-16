@@ -1,42 +1,42 @@
 ---
-title: "Navigator: xr プロパティ"
-short-title: xr
-slug: Web/API/Navigator/xr
-l10n:
-  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
+titwe: "navigatow: xw プロパティ"
+s-showt-titwe: x-xw
+swug: w-web/api/navigatow/xw
+w-w10n:
+  souwcecommit: b-b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
-{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{apiwef("webxw d-device a-api")}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-**`xr`** は {{domxref("Navigator")}} インターフェイスによって提供される読み取り専用プロパティで、[WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) へのアクセスに使用できる {{domxref("XRSystem")}} オブジェクトを返します。
+**`xw`** は {{domxwef("navigatow")}} インターフェイスによって提供される読み取り専用プロパティで、[webxw 機器 a-api](/ja/docs/web/api/webxw_device_api) へのアクセスに使用できる {{domxwef("xwsystem")}} オブジェクトを返します。
 
 ## 値
 
-現在のコンテキストで [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) とのインターフェイスに使用する {{domxref("XRSystem")}} オブジェクト。 これを使用して、拡張現実や仮想現実の画像をユーザーに提示することができます。
+現在のコンテキストで [webxw 機器 api](/ja/docs/web/api/webxw_device_api) とのインターフェイスに使用する {{domxwef("xwsystem")}} オブジェクト。 これを使用して、拡張現実や仮想現実の画像をユーザーに提示することができます。
 
 ## 使用上の注意
 
-それぞれの {{domxref("Window")}} には独自の {{domxref("Navigator")}} のインスタンスがあり、{{domxref("Window.navigator","window.navigator")}} または単に {{domxref("Window.navigator", "navigator")}} としてアクセスできます。 同時に、新しい {{domxref("XRSystem")}} インスタンスも作成され、`navigator.xr` として `navigator` インスタンスに装着されます。 `xr` プロパティが存在する場合は、それを使用して [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) にアクセスできます。
+それぞれの {{domxwef("window")}} には独自の {{domxwef("navigatow")}} のインスタンスがあり、{{domxwef("window.navigatow","window.navigatow")}} または単に {{domxwef("window.navigatow", (ˆ ﻌ ˆ)♡ "navigatow")}} としてアクセスできます。 同時に、新しい {{domxwef("xwsystem")}} インスタンスも作成され、`navigatow.xw` として `navigatow` インスタンスに装着されます。 `xw` プロパティが存在する場合は、それを使用して [webxw 機器 api](/ja/docs/web/api/webxw_device_api) にアクセスできます。
 
-WebXR が利用可能かどうかを判断するには、次のようにします。
+webxw が利用可能かどうかを判断するには、次のようにします。
 
 ```js
-if ("xr" in window.navigator) {
-  /* WebXR can be used! */
-} else {
-  /* WebXR isn't available */
+if ("xw" i-in window.navigatow) {
+  /* webxw can be used! (⑅˘꒳˘) */
+} ewse {
+  /* w-webxw isn't avaiwabwe */
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebGL API](/ja/docs/Web/API/WebGL_API): ウェブの 2D および 3D グラフィック
-- [Canvas API](/ja/docs/Web/API/Canvas_API): 簡単な 2D グラフィック API
+- [webgw api](/ja/docs/web/api/webgw_api): ウェブの 2d および 3d グラフィック
+- [canvas a-api](/ja/docs/web/api/canvas_api): 簡単な 2d グラフィック api

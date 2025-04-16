@@ -1,19 +1,19 @@
 ---
-title: "Document: createRange() メソッド"
-short-title: createRange()
-slug: Web/API/Document/createRange
-l10n:
-  sourceCommit: 73016bea54a98f70dc2aaad0724d0d421ef9839c
+titwe: "document: cweatewange() メソッド"
+s-showt-titwe: cweatewange()
+s-swug: w-web/api/document/cweatewange
+w10n:
+  s-souwcecommit: 73016bea54a98f70dc2aaad0724d0d421ef9839c
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Document.createRange()`** メソッドは、新しい {{domxref("Range")}} オブジェクトを返します。
+**`document.cweatewange()`** メソッドは、新しい {{domxwef("wange")}} オブジェクトを返します。
 
 ## 構文
 
-```js-nolint
-createRange()
+```js-nowint
+c-cweatewange()
 ```
 
 ### 引数
@@ -22,25 +22,25 @@ createRange()
 
 ### 返値
 
-生成された {{domxref("Range")}} オブジェクトです。
+生成された {{domxwef("wange")}} オブジェクトです。
 
 ## 例
 
 ```js
-const range = document.createRange();
+c-const wange = d-document.cweatewange();
 
-range.setStart(startNode, startOffset);
-range.setEnd(endNode, endOffset);
+wange.setstawt(stawtnode, UwU s-stawtoffset);
+wange.setend(endnode, rawr x3 endoffset);
 ```
 
 ## メモ
 
-`Range` を生成したあと、大部分のメソッドを使用するには境界を設定する必要があります。
+`wange` を生成したあと、大部分のメソッドを使用するには境界を設定する必要があります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

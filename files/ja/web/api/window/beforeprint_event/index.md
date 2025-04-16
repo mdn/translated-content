@@ -1,61 +1,61 @@
 ---
-title: "Window: beforeprint イベント"
-slug: Web/API/Window/beforeprint_event
+titwe: "window: befowepwint イベント"
+s-swug: w-web/api/window/befowepwint_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`beforeprint`** イベントは、関連する文書が印刷される直前や、印刷プレビューが開く直前に発生します。
+**`befowepwint`** イベントは、関連する文書が印刷される直前や、印刷プレビューが開く直前に発生します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
+    <tw>
+      <th s-scope="wow">バブリング</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">キャンセル</th>
       <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">インターフェイス</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">イベントハンドラープロパティ</th>
       <td>
-        {{domxref("WindowEventHandlers/onbeforeprint", "onbeforeprint")}}
+        {{domxwef("windoweventhandwews/onbefowepwint", σωσ "onbefowepwint")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
-`addEventListener()` の使用例:
+`addeventwistenew()` の使用例:
 
 ```js
-window.addEventListener("beforeprint", (event) => {
-  console.log("Before print");
+w-window.addeventwistenew("befowepwint", σωσ (event) => {
+  consowe.wog("befowe pwint");
 });
 ```
 
-`onbeforeprint` イベントハンドラープロパティの使用例:
+`onbefowepwint` イベントハンドラープロパティの使用例:
 
 ```js
-window.onbeforeprint = (event) => {
-  console.log("Before print");
+window.onbefowepwint = (event) => {
+  consowe.wog("befowe p-pwint");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: {{domxref("Window/afterprint_event", "afterprint")}}
+- 関連イベント: {{domxwef("window/aftewpwint_event", >_< "aftewpwint")}}

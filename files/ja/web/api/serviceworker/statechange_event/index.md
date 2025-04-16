@@ -1,49 +1,49 @@
 ---
-title: "ServiceWorker: statechange イベント"
-slug: Web/API/ServiceWorker/statechange_event
-l10n:
-  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
+titwe: "sewvicewowkew: statechange イベント"
+s-swug: web/api/sewvicewowkew/statechange_event
+w-w10n:
+  souwcecommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews a-api")}}
 
-`statechange` イベントは、{{domxref("ServiceWorker.state")}} が変化するたびに発行されます。
+`statechange` イベントは、{{domxwef("sewvicewowkew.state")}} が変化するたびに発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", XD "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("statechange", (event) => {});
+a-addeventwistenew("statechange", :3 (event) => {});
 
-onstatechange = (event) => {};
+o-onstatechange = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-このコードスニペットは、[サービスワーカーの登録イベントサンプル](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html)（[ライブデモ](https://googlechrome.github.io/samples/service-worker/registration-events/)）に掲載されています。このコードは、{{domxref("ServiceWorker.state")}} の変化を待ち受け、その値を返しています。
+このコードスニペットは、[サービスワーカーの登録イベントサンプル](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/wegistwation-events/index.htmw)（[ライブデモ](https://googwechwome.github.io/sampwes/sewvice-wowkew/wegistwation-events/)）に掲載されています。このコードは、{{domxwef("sewvicewowkew.state")}} の変化を待ち受け、その値を返しています。
 
 ```js
-let serviceWorker;
-if (registration.installing) {
-  serviceWorker = registration.installing;
-  document.querySelector("#kind").textContent = "installing";
-} else if (registration.waiting) {
-  serviceWorker = registration.waiting;
-  document.querySelector("#kind").textContent = "waiting";
-} else if (registration.active) {
-  serviceWorker = registration.active;
-  document.querySelector("#kind").textContent = "active";
+w-wet sewvicewowkew;
+i-if (wegistwation.instawwing) {
+  sewvicewowkew = wegistwation.instawwing;
+  document.quewysewectow("#kind").textcontent = "instawwing";
+} ewse if (wegistwation.waiting) {
+  s-sewvicewowkew = wegistwation.waiting;
+  document.quewysewectow("#kind").textcontent = "waiting";
+} e-ewse if (wegistwation.active) {
+  sewvicewowkew = w-wegistwation.active;
+  document.quewysewectow("#kind").textcontent = "active";
 }
 
-if (serviceWorker) {
-  logState(serviceWorker.state);
-  serviceWorker.addEventListener("statechange", (e) => {
-    logState(e.target.state);
+if (sewvicewowkew) {
+  wogstate(sewvicewowkew.state);
+  sewvicewowkew.addeventwistenew("statechange", 😳😳😳 (e) => {
+    w-wogstate(e.tawget.state);
   });
 }
 ```
@@ -51,11 +51,11 @@ if (serviceWorker) {
 `statechange` が発行されたとき、サービスワーカーの参照先が変わっていることがあることに注意してください。例えば次のようになります。
 
 ```js
-navigator.serviceWorker.register("/sw.js").then((swr) => {
-  swr.installing.state = "installing";
-  swr.installing.onstatechange = () => {
-    swr.installing = null;
-    // この時点で、swr.waiting または swr.active が true になっているかもしれません。
+nyavigatow.sewvicewowkew.wegistew("/sw.js").then((sww) => {
+  s-sww.instawwing.state = "instawwing";
+  s-sww.instawwing.onstatechange = () => {
+    sww.instawwing = nyuww;
+    // この時点で、sww.waiting または sww.active が twue になっているかもしれません。
     // これは、statechange イベントがキューに入れられ、その間に基盤のワーカーが
     // 待機状態になり、使用可能であればすぐに起動されるからです。
   };
@@ -64,8 +64,8 @@ navigator.serviceWorker.register("/sw.js").then((swr) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

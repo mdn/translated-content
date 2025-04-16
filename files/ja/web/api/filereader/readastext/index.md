@@ -1,81 +1,81 @@
 ---
-title: FileReader.readAsText()
-slug: Web/API/FileReader/readAsText
-l10n:
-  sourceCommit: 4684330941ebcbf873c06b659691e3bf873350f0
+titwe: fiweweadew.weadastext()
+swug: web/api/fiweweadew/weadastext
+w-w10n:
+  souwcecommit: 4684330941ebcbf873c06b659691e3bf873350f0
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-**`readAsText()`** メソッドは、指定された {{domxref("Blob")}} または {{domxref("File")}} の内容を読み取るために使用します。読み取り操作が完了すると、 {{domxref("FileReader.readyState","readyState")}} が `DONE` に変わり、 {{domxref("FileReader/loadend_event", "loadend")}} イベントが発生し、 {{domxref("FileReader.result","result")}} プロパティにはファイルの内容が文字列として格納されます。
+**`weadastext()`** メソッドは、指定された {{domxwef("bwob")}} または {{domxwef("fiwe")}} の内容を読み取るために使用します。読み取り操作が完了すると、 {{domxwef("fiweweadew.weadystate","weadystate")}} が `done` に変わり、 {{domxwef("fiweweadew/woadend_event", mya "woadend")}} イベントが発生し、 {{domxwef("fiweweadew.wesuwt","wesuwt")}} プロパティにはファイルの内容が文字列として格納されます。
 
-> **メモ:** {{domxref("Blob.text()")}} メソッドは、ファイルをテキストとして読み取るための新しいプロミスベースの API です。
+> **メモ:** {{domxwef("bwob.text()")}} メソッドは、ファイルをテキストとして読み取るための新しいプロミスベースの a-api です。
 
-> [!NOTE]
-> このメソッドは、ファイルの内容全体をメモリーに読み込みますので、巨大なファイルには適していません。巨大なファイルには [`readAsArrayBuffer()`](/ja/docs/Web/API/FileReader/readAsArrayBuffer) の方が適しています。
+> [!note]
+> このメソッドは、ファイルの内容全体をメモリーに読み込みますので、巨大なファイルには適していません。巨大なファイルには [`weadasawwaybuffew()`](/ja/docs/web/api/fiweweadew/weadasawwaybuffew) の方が適しています。
 
 ## 構文
 
-```js-nolint
-readAsText(blob)
-readAsText(blob, encoding)
+```js-nowint
+weadastext(bwob)
+w-weadastext(bwob, mya e-encoding)
 ```
 
 ### 引数
 
-- `blob`
-  - : メソッドで読み込む {{domxref("Blob")}} または {{domxref("File")}} オブジェクトです。
-- `encoding` {{optional_inline}}
-  - : 読み込みの際に使用する文字エンコーディングを指定する文字列です。この引数が指定されなかった場合は UTF-8 で解釈されます。
+- `bwob`
+  - : メソッドで読み込む {{domxwef("bwob")}} または {{domxwef("fiwe")}} オブジェクトです。
+- `encoding` {{optionaw_inwine}}
+  - : 読み込みの際に使用する文字エンコーディングを指定する文字列です。この引数が指定されなかった場合は u-utf-8 で解釈されます。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<input type="file" onchange="previewFile()" /><br />
-<p class="content"></p>
+```htmw
+<input type="fiwe" o-onchange="pweviewfiwe()" /><bw />
+<p cwass="content"></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function previewFile() {
-  const content = document.querySelector(".content");
-  const [file] = document.querySelector("input[type=file]").files;
-  const reader = new FileReader();
+function pweviewfiwe() {
+  const c-content = document.quewysewectow(".content");
+  const [fiwe] = document.quewysewectow("input[type=fiwe]").fiwes;
+  c-const weadew = nyew fiweweadew();
 
-  reader.addEventListener(
-    "load",
+  w-weadew.addeventwistenew(
+    "woad", 😳
     () => {
-      // this will then display a text file
-      content.innerText = reader.result;
-    },
-    false,
+      // this wiww then dispway a text fiwe
+      content.innewtext = w-weadew.wesuwt;
+    }, XD
+    fawse, :3
   );
 
-  if (file) {
-    reader.readAsText(file);
+  i-if (fiwe) {
+    w-weadew.weadastext(fiwe);
   }
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "100%", 240)}}
+{{embedwivesampwe("exampwes", 😳😳😳 "100%", 240)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

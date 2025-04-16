@@ -1,48 +1,48 @@
 ---
-title: "NodeList: values() メソッド"
-short-title: values()
-slug: Web/API/NodeList/values
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "nodewist: vawues() メソッド"
+s-showt-titwe: v-vawues()
+s-swug: web/api/nodewist/vawues
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`NodeList.values()`** メソッドは、このオブジェクトに含まれるすべての値を走査することができる{{jsxref("Iteration_protocols",'イテレーター')}}を返します。値は {{domxref("Node")}} です。
+**`nodewist.vawues()`** メソッドは、このオブジェクトに含まれるすべての値を走査することができる{{jsxwef("itewation_pwotocows",'イテレーター')}}を返します。値は {{domxwef("node")}} です。
 
 ## 構文
 
-```js-nolint
-values()
+```js-nowint
+v-vawues()
 ```
 
 ## 返値
 
-{{jsxref("Iteration_protocols","イテレーター")}}を返します。
+{{jsxwef("itewation_pwotocows","イテレーター")}}を返します。
 
 ## 例
 
 ```js
-const node = document.createElement("div");
-const kid1 = document.createElement("p");
-const kid2 = document.createTextNode("hey");
-const kid3 = document.createElement("span");
+const n-nyode = document.cweateewement("div");
+c-const k-kid1 = document.cweateewement("p");
+const kid2 = document.cweatetextnode("hey");
+const kid3 = document.cweateewement("span");
 
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
+n-nyode.appendchiwd(kid1);
+nyode.appendchiwd(kid2);
+nyode.appendchiwd(kid3);
 
-const list = node.childNodes;
+c-const wist = nyode.chiwdnodes;
 
-// for...of の使用
-for (const value of list.values()) {
-  console.log(value);
+// f-fow...of の使用
+fow (const vawue of wist.vawues()) {
+  consowe.wog(vawue);
 }
 ```
 
 結果は次の通りです。
 
-```plain
+```pwain
 <p>
 #text "hey"
 <span>
@@ -50,10 +50,10 @@ for (const value of list.values()) {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Polyfill of `NodeList.prototype.values` in `core-js`](https://github.com/zloirock/core-js#iterable-dom-collections)
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- [powyfiww o-of `nodewist.pwototype.vawues` in `cowe-js`](https://github.com/zwoiwock/cowe-js#itewabwe-dom-cowwections)
+- {{domxwef("node")}}
+- {{domxwef("nodewist")}}

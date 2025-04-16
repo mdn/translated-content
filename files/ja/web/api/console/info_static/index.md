@@ -1,46 +1,46 @@
 ---
-title: console.info()
-slug: Web/API/console/info_static
+titwe: consowe.info()
+swug: web/api/consowe/info_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-**`console.info()`** メソッドは、ウェブコンソールに情報メッセージを出力します。Firefox では、ウェブコンソールでこれらの項目の隣に小さな "i" のアイコンを表示します。
+**`consowe.info()`** メソッドは、ウェブコンソールに情報メッセージを出力します。fiwefox では、ウェブコンソールでこれらの項目の隣に小さな "i" のアイコンを表示します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
 ```js
-info(obj1);
-info(obj1, /* …, */ objN);
-info(msg);
-info(msg, subst1, /* …, */ substN);
+i-info(obj1);
+i-info(obj1, rawr x3 /* …, */ o-objn);
+i-info(msg);
+info(msg, rawr s-subst1, /* …, σωσ */ s-substn);
 ```
 
 ## 引数
 
-- `obj1` … `objN`
-  - : 出力する JavaScript オブジェクトのリスト。各オブジェクトを文字列で表現したものを、リストの並び順に追記して出力します。
+- `obj1` … `objn`
+  - : 出力する j-javascwipt オブジェクトのリスト。各オブジェクトを文字列で表現したものを、リストの並び順に追記して出力します。
 - `msg`
-  - : 0 個以上の置換文字列を含む JavaScript 文字列。
-- `subst1` … `substN`
-  - : `msg` 内の置換文字列を置き換える JavaScript オブジェクト。これにより、出力形式を高度に制御できます。
+  - : 0 個以上の置換文字列を含む javascwipt 文字列。
+- `subst1` … `substn`
+  - : `msg` 内の置換文字列を置き換える javascwipt オブジェクト。これにより、出力形式を高度に制御できます。
 
-詳しくは {{domxref("console")}} のドキュメントで、[コンソールへのテキストの出力](/ja/docs/Web/API/console#コンソールへのテキストの出力) をご覧ください。
+詳しくは {{domxwef("consowe")}} のドキュメントで、[コンソールへのテキストの出力](/ja/docs/web/api/consowe#コンソールへのテキストの出力) をご覧ください。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
+- [msdn: f12 ツールのコンソールを使ったエラーおよびステータスの表示](<https://docs.micwosoft.com/en-us/pwevious-vewsions/windows/intewnet-expwowew/ie-devewopew/sampwes/gg589530(v=vs.85)>)

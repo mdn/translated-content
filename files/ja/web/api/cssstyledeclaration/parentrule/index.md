@@ -1,31 +1,31 @@
 ---
-title: CSSStyleDeclaration.parentRule
-slug: Web/API/CSSStyleDeclaration/parentRule
-l10n:
-  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
+titwe: cssstywedecwawation.pawentwuwe
+swug: web/api/cssstywedecwawation/pawentwuwe
+w-w10n:
+  souwcecommit: b-b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**CSSStyleDeclaration.parentRule** は読み取り専用のプロパティで、このスタイルブロックの親である {{domxref('CSSRule')}} を返します。例えば、 CSS セレクターのスタイルを表す {{domxref('CSSStyleRule')}} です。
+**cssstywedecwawation.pawentwuwe** は読み取り専用のプロパティで、このスタイルブロックの親である {{domxwef('csswuwe')}} を返します。例えば、 c-css セレクターのスタイルを表す {{domxwef('cssstywewuwe')}} です。
 
 ## 値
 
-この宣言ブロックを含む CSS ルール、またはこの {{domxref('CSSStyleDeclaration')}} が {{domxref('CSSRule')}} に割り当てられていない場合は `null` を返します。
+この宣言ブロックを含む c-css ルール、またはこの {{domxwef('cssstywedecwawation')}} が {{domxwef('csswuwe')}} に割り当てられていない場合は `nuww` を返します。
 
 ## 例
 
-次の JavaScript コードは、 {{domxref('CSSStyleDeclaration')}} から親の CSS スタイルルールを取得します。
+次の j-javascwipt コードは、 {{domxwef('cssstywedecwawation')}} から親の c-css スタイルルールを取得します。
 
 ```js
-const declaration = document.styleSheets[0].rules[0].style;
-const rule = declaration.parentRule;
+c-const decwawation = document.stywesheets[0].wuwes[0].stywe;
+const wuwe = decwawation.pawentwuwe;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

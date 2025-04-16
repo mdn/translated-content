@@ -1,20 +1,20 @@
 ---
-title: "PictureInPictureEvent: PictureInPictureEvent() コンストラクター"
-short-title: PictureInPictureEvent()
-slug: Web/API/PictureInPictureEvent/PictureInPictureEvent
-l10n:
-  sourceCommit: c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
+titwe: "pictuweinpictuweevent: pictuweinpictuweevent() コンストラクター"
+s-showt-titwe: p-pictuweinpictuweevent()
+s-swug: web/api/pictuweinpictuweevent/pictuweinpictuweevent
+w-w10n:
+  souwcecommit: c-c58e8c1dd6ecbcb63894c7dd17fb9495b9511b4e
 ---
 
-{{APIRef("Picture-in-Picture API")}}
+{{apiwef("pictuwe-in-pictuwe a-api")}}
 
-**`PictureInPictureEvent()`** コンストラクターは、新しい {{domxref("PictureInPictureEvent")}} オブジェクトをオプションの {{domxref("EventTarget")}} と共に作成して返します。
-イベントに入力と出力の両方がある場合、`relatedTarget` 値には他にも対象とするものを設定する必要があります。
+**`pictuweinpictuweevent()`** コンストラクターは、新しい {{domxwef("pictuweinpictuweevent")}} オブジェクトをオプションの {{domxwef("eventtawget")}} と共に作成して返します。
+イベントに入力と出力の両方がある場合、`wewatedtawget` 値には他にも対象とするものを設定する必要があります。
 
 ## 構文
 
-```js-nolint
-new PictureInPictureEvent(type, options)
+```js-nowint
+n-nyew pictuweinpictuweevent(type, o-options)
 ```
 
 ### 引数
@@ -22,22 +22,22 @@ new PictureInPictureEvent(type, options)
 - `type`
   - : イベント名を表す文字列。
 - `options`
-  - : オブジェクトで、 _{{domxref("Event/Event", "Event()")}} で定義されているプロパティに加え_、以下のプロパティを持つことができるオブジェクトです。
-    - `relatedTarget` {{optional_inline}}
-      - : 関連する {{domxref("EventTarget")}}、または `null` （既定値）です。
+  - : オブジェクトで、 _{{domxwef("event/event", (⑅˘꒳˘) "event()")}} で定義されているプロパティに加え_、以下のプロパティを持つことができるオブジェクトです。
+    - `wewatedtawget` {{optionaw_inwine}}
+      - : 関連する {{domxwef("eventtawget")}}、または `nuww` （既定値）です。
 
 ### 返値
 
-新しい {{domxref("PictureInPictureEvent")}} オブジェクトです。
+新しい {{domxwef("pictuweinpictuweevent")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("PictureInPictureEvent")}} インターフェイス
+- 所属先の {{domxwef("pictuweinpictuweevent")}} インターフェイス

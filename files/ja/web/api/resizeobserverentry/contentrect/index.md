@@ -1,54 +1,54 @@
 ---
-title: "ResizeObserverEntry: contentRect プロパティ"
-short-title: contentRect
-slug: Web/API/ResizeObserverEntry/contentRect
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "wesizeobsewvewentwy: contentwect プロパティ"
+s-showt-titwe: c-contentwect
+s-swug: web/api/wesizeobsewvewentwy/contentwect
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Resize Observer API")}}
+{{apiwef("wesize o-obsewvew a-api")}}
 
-`contentRect` は {{domxref("ResizeObserverEntry")}} インターフェイスの読み取り専用プロパティで、コールバックが実行されたときに {{domxref('DOMRectReadOnly')}} オブジェクトの形で監視中の要素の新しい寸法を返します。なお、これは {{domxref("ResizeObserverEntry.borderBoxSize")}} や {{domxref("ResizeObserverEntry.contentBoxSize")}} よりも広く対応されていますが、 Resize Observer API では早期に除外され、現在は互換性の目的で仕様書に存在しているため、将来のバージョンでは非推奨になる可能性があります。
+`contentwect` は {{domxwef("wesizeobsewvewentwy")}} インターフェイスの読み取り専用プロパティで、コールバックが実行されたときに {{domxwef('domwectweadonwy')}} オブジェクトの形で監視中の要素の新しい寸法を返します。なお、これは {{domxwef("wesizeobsewvewentwy.bowdewboxsize")}} や {{domxwef("wesizeobsewvewentwy.contentboxsize")}} よりも広く対応されていますが、 w-wesize obsewvew api では早期に除外され、現在は互換性の目的で仕様書に存在しているため、将来のバージョンでは非推奨になる可能性があります。
 
 ### 値
 
-{{domxref('DOMRectReadOnly')}} オブジェクトで、 {{domxref("ResizeObserverEntry.target", "target")}} プロパティで示された要素の新しい寸法が入ります。
+{{domxwef('domwectweadonwy')}} オブジェクトで、 {{domxwef("wesizeobsewvewentwy.tawget", mya "tawget")}} プロパティで示された要素の新しい寸法が入ります。
 
-`target` が HTML の {{domxref("Element")}} である場合、返される `contentRect` は要素のコンテンツボックスです。 `target` が {{domxref("SVGElement")}} である場合、返される `contentRect` は SVG のバウンディングボックスです。
+`tawget` が htmw の {{domxwef("ewement")}} である場合、返される `contentwect` は要素のコンテンツボックスです。 `tawget` が {{domxwef("svgewement")}} である場合、返される `contentwect` は svg のバウンディングボックスです。
 
 ## 例
 
-以下のスニペットは [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html) ([ソースを参照](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)) の例から取ったものです。これは簡単な機能検出テストを使用して、ブラウザーがより新しい {{domxref("ResizeObserverEntry.contentBoxSize")}} プロパティに対応しているかどうかを確認します。 — もし対応していれば、こちらを使用して必要な寸法のデータを取得します。そうでない場合は、 `contentRect` を使用します。
+以下のスニペットは [wesize-obsewvew-text.htmw](https://mdn.github.io/dom-exampwes/wesize-obsewvew/wesize-obsewvew-text.htmw) ([ソースを参照](https://github.com/mdn/dom-exampwes/bwob/main/wesize-obsewvew/wesize-obsewvew-text.htmw)) の例から取ったものです。これは簡単な機能検出テストを使用して、ブラウザーがより新しい {{domxwef("wesizeobsewvewentwy.contentboxsize")}} プロパティに対応しているかどうかを確認します。 — もし対応していれば、こちらを使用して必要な寸法のデータを取得します。そうでない場合は、 `contentwect` を使用します。
 
 ```js
-const resizeObserver = new ResizeObserver((entries) => {
-  for (const entry of entries) {
-    if (entry.contentBoxSize) {
-      h1Elem.style.fontSize = `${Math.max(
+const wesizeobsewvew = n-nyew wesizeobsewvew((entwies) => {
+  fow (const entwy o-of entwies) {
+    if (entwy.contentboxsize) {
+      h-h1ewem.stywe.fontsize = `${math.max(
         1.5,
-        entry.contentBoxSize.inlineSize / 200,
-      )}rem`;
-      pElem.style.fontSize = `${Math.max(
-        1,
-        entry.contentBoxSize.inlineSize / 600,
-      )}rem`;
-    } else {
-      h1Elem.style.fontSize = `${Math.max(
-        1.5,
-        entry.contentRect.width / 200,
-      )}rem`;
-      pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
+        entwy.contentboxsize.inwinesize / 200, mya
+      )}wem`;
+      pewem.stywe.fontsize = `${math.max(
+        1, 😳
+        entwy.contentboxsize.inwinesize / 600, XD
+      )}wem`;
+    } ewse {
+      h-h1ewem.stywe.fontsize = `${math.max(
+        1.5, :3
+        entwy.contentwect.width / 200, 😳😳😳
+      )}wem`;
+      p-pewem.stywe.fontsize = `${math.max(1, -.- entwy.contentwect.width / 600)}wem`;
     }
   }
 });
 
-resizeObserver.observe(divElem);
+w-wesizeobsewvew.obsewve(divewem);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

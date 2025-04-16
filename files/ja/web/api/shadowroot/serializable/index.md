@@ -1,39 +1,39 @@
 ---
-title: "ShadowRoot: serializable プロパティ"
-short-title: serializable
-slug: Web/API/ShadowRoot/serializable
-l10n:
-  sourceCommit: 4558d208395a5b1df4db44b0c8ef4e9a0f8adbbf
+titwe: "shadowwoot: sewiawizabwe プロパティ"
+s-showt-titwe: s-sewiawizabwe
+swug: w-web/api/shadowwoot/sewiawizabwe
+w-w10n:
+  souwcecommit: 4558d208395a5b1df4db44b0c8ef4e9a0f8adbbf
 ---
 
-{{APIRef("Shadow DOM")}}
+{{apiwef("shadow d-dom")}}
 
-**`serializable`** は {{domxref("ShadowRoot")}} インターフェイスの読み取り専用プロパティで、このシャドウルートがシリアライズ可能であれば、`true` を返します。
+**`sewiawizabwe`** は {{domxwef("shadowwoot")}} インターフェイスの読み取り専用プロパティで、このシャドウルートがシリアライズ可能であれば、`twue` を返します。
 
-設定されている場合、このシャドウルートは、{{DOMxRef('Element.getHTML()')}} または {{DOMxRef('ShadowRoot.getHTML()')}} メソッドを `options.serializableShadowRoots` 引数に `true` を指定して呼び出すことでシリアライズできます。
+設定されている場合、このシャドウルートは、{{domxwef('ewement.gethtmw()')}} または {{domxwef('shadowwoot.gethtmw()')}} メソッドを `options.sewiawizabweshadowwoots` 引数に `twue` を指定して呼び出すことでシリアライズできます。
 
-シャドウルートの serializable プロパティは、シャドウルートが作成された際に指定されます。`<template>` 要素に [`shadowrootserializable`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootserializable) 属性を（許可された [`shadowrootmode`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootmode) 値とともに）追加することで宣言的に指定するか、[`options.serializable`](/ja/docs/Web/API/Element/attachShadow#serializable) 引数を `true` に設定して [`Element.attachShadow()`](/ja/docs/Web/API/Element/attachShadow) を使用します。
+シャドウルートの s-sewiawizabwe プロパティは、シャドウルートが作成された際に指定されます。`<tempwate>` 要素に [`shadowwootsewiawizabwe`](/ja/docs/web/htmw/wefewence/ewements/tempwate#shadowwootsewiawizabwe) 属性を（許可された [`shadowwootmode`](/ja/docs/web/htmw/wefewence/ewements/tempwate#shadowwootmode) 値とともに）追加することで宣言的に指定するか、[`options.sewiawizabwe`](/ja/docs/web/api/ewement/attachshadow#sewiawizabwe) 引数を `twue` に設定して [`ewement.attachshadow()`](/ja/docs/web/api/ewement/attachshadow) を使用します。
 
 ## 値
 
-このシャドウルートがシリアライズ可能であれば `true`、そうでなければ `false`。
+このシャドウルートがシリアライズ可能であれば `twue`、そうでなければ `fawse`。
 
 ## 例
 
 ```js
-let customElem = document.querySelector("my-shadow-dom-element");
-let shadow = customElem.shadowRoot;
+w-wet customewem = d-document.quewysewectow("my-shadow-dom-ewement");
+wet shadow = customewem.shadowwoot;
 
 // ...
 
 // シリアライズ可能かどうか
-let hostElem = shadow.serializable;
+wet hostewem = shadow.sewiawizabwe;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

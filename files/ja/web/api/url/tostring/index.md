@@ -1,21 +1,21 @@
 ---
-title: "URL: toString() メソッド"
-short-title: toString()
-slug: Web/API/URL/toString
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "uww: tostwing() メソッド"
+s-showt-titwe: t-tostwing()
+s-swug: web/api/uww/tostwing
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-**`URL.toString()`** は{{Glossary("stringifier", "文字列化")}}メソッドで、URL 全体が入った文字列を返します。 これは事実上、{{domxref("URL.href")}} の読み取り専用バージョンです。
+**`uww.tostwing()`** は{{gwossawy("stwingifiew", rawr "文字列化")}}メソッドで、uww 全体が入った文字列を返します。 これは事実上、{{domxwef("uww.hwef")}} の読み取り専用バージョンです。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
-```js-nolint
-toString()
+```js-nowint
+t-tostwing()
 ```
 
 ### 引数
@@ -29,20 +29,20 @@ toString()
 ## 例
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/ja/docs/Web/API/URL/toString",
+const uww = nyew uww(
+  "https://devewopew.moziwwa.owg/ja/docs/web/api/uww/tostwing", σωσ
 );
-url.toString(); // URL を文字列として返します
+uww.tostwing(); // uww を文字列として返します
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("URL")}} インターフェイス
+- 所属先の {{domxwef("uww")}} インターフェイス

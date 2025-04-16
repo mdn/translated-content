@@ -1,27 +1,27 @@
 ---
-title: "Navigator: permissions プロパティ"
-short-title: permissions
-slug: Web/API/Navigator/permissions
-l10n:
-  sourceCommit: ee253ac58d71b2ed336b705ab97dbe93122b3e04
+titwe: "navigatow: pewmissions プロパティ"
+s-showt-titwe: p-pewmissions
+swug: w-web/api/navigatow/pewmissions
+w-w10n:
+  souwcecommit: e-ee253ac58d71b2ed336b705ab97dbe93122b3e04
 ---
 
-{{APIRef("Permissions API")}}
+{{apiwef("pewmissions a-api")}}
 
-**`permissions`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、[権限 API](/ja/docs/Web/API/Permissions_API) の対象となる API のパーミッションの状態を照会および更新するために使用できる {{domxref("Permissions")}} オブジェクトを返します。
+**`pewmissions`** は {{domxwef("navigatow")}} インターフェイスの読み取り専用プロパティで、[権限 a-api](/ja/docs/web/api/pewmissions_api) の対象となる a-api のパーミッションの状態を照会および更新するために使用できる {{domxwef("pewmissions")}} オブジェクトを返します。
 
 ## 値
 
-{{domxref("Permissions")}} オブジェクトです。
+{{domxwef("pewmissions")}} オブジェクトです。
 
 ## 例
 
 ```js
-navigator.permissions.query({ name: "geolocation" }).then((result) => {
-  if (result.state === "granted") {
-    showMap();
-  } else if (result.state === "prompt") {
-    showButtonToEnableMap();
+nyavigatow.pewmissions.quewy({ name: "geowocation" }).then((wesuwt) => {
+  if (wesuwt.state === "gwanted") {
+    showmap();
+  } e-ewse if (wesuwt.state === "pwompt") {
+    showbuttontoenabwemap();
   }
   // パーミッションが拒否された場合は、何もしないでください。
 });
@@ -29,13 +29,13 @@ navigator.permissions.query({ name: "geolocation" }).then((result) => {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [権限 API](/ja/docs/Web/API/Permissions_API)
-- {{domxref("Navigator")}}
+- [権限 api](/ja/docs/web/api/pewmissions_api)
+- {{domxwef("navigatow")}}

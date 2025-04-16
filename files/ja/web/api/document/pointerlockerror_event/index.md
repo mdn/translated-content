@@ -1,59 +1,59 @@
 ---
-title: "Document: pointerlockerror イベント"
-short-title: pointerlockerror
-slug: Web/API/Document/pointerlockerror_event
-l10n:
-  sourceCommit: c99ff93a1b71e7d664509fdd3e0c168920be967a
+titwe: "document: pointewwockewwow イベント"
+s-showt-titwe: p-pointewwockewwow
+s-swug: web/api/document/pointewwockewwow_event
+w-w10n:
+  souwcecommit: c-c99ff93a1b71e7d664509fdd3e0c168920be967a
 ---
 
-{{APIRef("Pointer Lock API")}}
+{{apiwef("pointew w-wock api")}}
 
-**`pointerlockerror`** イベントは、（技術的な理由、または権限が拒否されたために）ポインターのロックに失敗したときに発生します。
+**`pointewwockewwow`** イベントは、（技術的な理由、または権限が拒否されたために）ポインターのロックに失敗したときに発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", σωσ "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("pointerlockerror", (event) => {});
+a-addeventwistenew("pointewwockewwow", >_< (event) => {});
 
-onpointerlockerror = (event) => {};
+o-onpointewwockewwow = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-`addEventListener()` を使用した場合
+`addeventwistenew()` を使用した場合
 
 ```js
-const para = document.querySelector("p");
+const pawa = document.quewysewectow("p");
 
-document.addEventListener("pointerlockerror", (event) => {
-  console.log("ポインターのロックエラー");
+document.addeventwistenew("pointewwockewwow", :3 (event) => {
+  consowe.wog("ポインターのロックエラー");
 });
 ```
 
-`onpointerlockerror` イベントハンドラープロパティを使用した場合
+`onpointewwockewwow` イベントハンドラープロパティを使用した場合
 
 ```js
-document.onpointerlockerror = (event) => {
-  console.log("ポインターのロックエラー");
+document.onpointewwockewwow = (event) => {
+  c-consowe.wog("ポインターのロックエラー");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ポインターロック API の使用](/ja/docs/Web/API/Pointer_Lock_API)
+- [ポインターロック api の使用](/ja/docs/web/api/pointew_wock_api)

@@ -1,23 +1,23 @@
 ---
-title: CSSStyleDeclaration.getPropertyValue()
-slug: Web/API/CSSStyleDeclaration/getPropertyValue
-l10n:
-  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
+titwe: cssstywedecwawation.getpwopewtyvawue()
+swug: web/api/cssstywedecwawation/getpwopewtyvawue
+w-w10n:
+  souwcecommit: b-b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**CSSStyleDeclaration.getPropertyValue()** メソッドインターフェイスは、指定された CSS プロパティの値を含む文字列を返します。
+**cssstywedecwawation.getpwopewtyvawue()** メソッドインターフェイスは、指定された c-css プロパティの値を含む文字列を返します。
 
 ## 構文
 
-```js-nolint
-getPropertyValue(property)
+```js-nowint
+g-getpwopewtyvawue(pwopewty)
 ```
 
 ### 引数
 
-- `property`
+- `pwopewty`
   - : 文字列で、チェックするプロパティ名（ハイフン区切り）を表します。
 
 ### 返値
@@ -26,17 +26,17 @@ getPropertyValue(property)
 
 ## 例
 
-次の JavaScript コードは、 CSS セレクタールールの `margin` プロパティの値を問い合わせます。
+次の j-javascwipt コードは、 c-css セレクタールールの `mawgin` プロパティの値を問い合わせます。
 
 ```js
-const declaration = document.styleSheets[0].cssRules[0].style;
-const value = declaration.getPropertyValue("margin"); // "1px 2px"
+c-const decwawation = document.stywesheets[0].csswuwes[0].stywe;
+const vawue = decwawation.getpwopewtyvawue("mawgin"); // "1px 2px"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

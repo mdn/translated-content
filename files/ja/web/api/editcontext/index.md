@@ -1,68 +1,68 @@
 ---
-title: EditContext
-slug: Web/API/EditContext
-l10n:
-  sourceCommit: a6f2a5b313727d983c369dec91c4c7418b1b4f74
+titwe: editcontext
+swug: web/api/editcontext
+w-w10n:
+  souwcecommit: a-a6f2a5b313727d983c369dec91c4c7418b1b4f74
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-**`EditContext`** インターフェイスは、{{domxref("EditContext API", "", "", "nocode")}} を用いて、編集可能になった要素のテキスト編集コンテキストを表します。
+**`editcontext`** インターフェイスは、{{domxwef("editcontext a-api", UwU "", "", rawr x3 "nocode")}} を用いて、編集可能になった要素のテキスト編集コンテキストを表します。
 
-{{domxref("EditContext API", "", "", "nocode")}} は、{{glossary("Input Method Editor", "インプットメソッドエディター")}} (IME) による変換、絵文字ピッカー、その他のプラットフォーム固有の編集関係の UI などの高度なテキスト入力体験に対応したリッチなテキストエディターをウェブ上で構築するのに利用できます。
+{{domxwef("editcontext a-api", rawr "", "", "nocode")}} は、{{gwossawy("input m-method editow", σωσ "インプットメソッドエディター")}} (ime) による変換、絵文字ピッカー、その他のプラットフォーム固有の編集関係の u-ui などの高度なテキスト入力体験に対応したリッチなテキストエディターをウェブ上で構築するのに利用できます。
 
 ## コンストラクター
 
-- {{domxref("EditContext.EditContext", "EditContext()")}} {{experimental_inline}}
-  - : 新しい `EditContext` のインスタンスを返します。
+- {{domxwef("editcontext.editcontext", σωσ "editcontext()")}} {{expewimentaw_inwine}}
+  - : 新しい `editcontext` のインスタンスを返します。
 
 ## インスタンスプロパティ
 
-- {{domxref("EditContext.text")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxwef("editcontext.text")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : 要素の編集可能なコンテンツです。
-- {{domxref("EditContext.selectionStart")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxwef("editcontext.sewectionstawt")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : 編集可能なテキストコンテンツ内での、現在選択されている範囲の始点のオフセットです。
-- {{domxref("EditContext.selectionEnd")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxwef("editcontext.sewectionend")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
   - : 編集可能なテキストコンテンツ内での、現在選択されている範囲の終点のオフセットです。
-- {{domxref("EditContext.characterBoundsRangeStart")}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : 編集可能なテキストコンテンツ内での、IME による変換が最後に開始された場所のオフセットです。
+- {{domxwef("editcontext.chawactewboundswangestawt")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : 編集可能なテキストコンテンツ内での、ime による変換が最後に開始された場所のオフセットです。
 
 ## インスタンスメソッド
 
-_`EditContext` は {{domxref("EventTarget")}} インターフェイスがもととなっており、そのメソッドを含みます。_
+_`editcontext` は {{domxwef("eventtawget")}} インターフェイスがもととなっており、そのメソッドを含みます。_
 
-- {{domxref("EditContext.attachedElements()")}} {{experimental_inline}}
-  - : この `EditContext` オブジェクトに関係する要素である {{domxref("HTMLElement")}} オブジェクト 1 個が格納された {{jsxref("Array")}} です。
-- {{domxref("EditContext.characterBounds()")}} {{experimental_inline}}
-  - : `EditContext` オブジェクト内の各文字を囲む長方形のリストです。
-- {{domxref("EditContext.updateText()")}} {{experimental_inline}}
-  - : `EditContext` オブジェクト内部のテキストコンテンツを更新します。
-- {{domxref("EditContext.updateSelection()")}} {{experimental_inline}}
+- {{domxwef("editcontext.attachedewements()")}} {{expewimentaw_inwine}}
+  - : この `editcontext` オブジェクトに関係する要素である {{domxwef("htmwewement")}} オブジェクト 1 個が格納された {{jsxwef("awway")}} です。
+- {{domxwef("editcontext.chawactewbounds()")}} {{expewimentaw_inwine}}
+  - : `editcontext` オブジェクト内の各文字を囲む長方形のリストです。
+- {{domxwef("editcontext.updatetext()")}} {{expewimentaw_inwine}}
+  - : `editcontext` オブジェクト内部のテキストコンテンツを更新します。
+- {{domxwef("editcontext.updatesewection()")}} {{expewimentaw_inwine}}
   - : 編集可能なテキストコンテンツ内の選択の内部状態を更新します。
-- {{domxref("EditContext.updateControlBounds()")}} {{experimental_inline}}
+- {{domxwef("editcontext.updatecontwowbounds()")}} {{expewimentaw_inwine}}
   - : オペレーティングシステムに、編集可能なテキスト領域の位置と大きさを知らせます。
-- {{domxref("EditContext.updateSelectionBounds()")}} {{experimental_inline}}
+- {{domxwef("editcontext.updatesewectionbounds()")}} {{expewimentaw_inwine}}
   - : オペレーティングシステムに、編集可能なテキスト領域内で選択されている部分の位置と大きさを知らせます。
-- {{domxref("EditContext.updateCharacterBounds()")}} {{experimental_inline}}
-  - : オペレーティングシステムに、`EditContext` オブジェクト内の各文字の位置と大きさを知らせます。
+- {{domxwef("editcontext.updatechawactewbounds()")}} {{expewimentaw_inwine}}
+  - : オペレーティングシステムに、`editcontext` オブジェクト内の各文字の位置と大きさを知らせます。
 
 ## イベント
 
-- {{domxref("EditContext.textupdate_event", "textupdate")}} {{experimental_inline}}
+- {{domxwef("editcontext.textupdate_event", >_< "textupdate")}} {{expewimentaw_inwine}}
   - : ユーザーがテキストまたは選択範囲を変更した時発火します。
-- {{domxref("EditContext.textformatupdate_event", "textformatupdate")}} {{experimental_inline}}
-  - : {{glossary("Input Method Editor", "インプットメソッドエディター")}} (IME) ウィンドウを用いた変換を実行中であり、IME が変換の状態を表すためテキストの変換中の部分を別の書式で表示するべきだと判断した時発火します。
-- {{domxref("EditContext.characterboundsupdate_event", "characterboundsupdate")}} {{experimental_inline}}
-  - : オペレーティングシステムが、IME ウィンドウを表示するため、`EditContext` オブジェクトの編集可能なテキスト領域内にある特定の各文字の大きさと位置を知る必要がある時発火します。
-- {{domxref("EditContext.compositionstart_event", "compositionstart")}} {{experimental_inline}}
-  - : IME ウィンドウを用いた変換が開始する時発火します。
-- {{domxref("EditContext.compositionend_event", "compositionend")}} {{experimental_inline}}
-  - : IME ウィンドウを用いた変換が終了する時発火します。
+- {{domxwef("editcontext.textfowmatupdate_event", :3 "textfowmatupdate")}} {{expewimentaw_inwine}}
+  - : {{gwossawy("input m-method editow", (U ﹏ U) "インプットメソッドエディター")}} (ime) ウィンドウを用いた変換を実行中であり、ime が変換の状態を表すためテキストの変換中の部分を別の書式で表示するべきだと判断した時発火します。
+- {{domxwef("editcontext.chawactewboundsupdate_event", -.- "chawactewboundsupdate")}} {{expewimentaw_inwine}}
+  - : オペレーティングシステムが、ime ウィンドウを表示するため、`editcontext` オブジェクトの編集可能なテキスト領域内にある特定の各文字の大きさと位置を知る必要がある時発火します。
+- {{domxwef("editcontext.compositionstawt_event", (ˆ ﻌ ˆ)♡ "compositionstawt")}} {{expewimentaw_inwine}}
+  - : ime ウィンドウを用いた変換が開始する時発火します。
+- {{domxwef("editcontext.compositionend_event", (⑅˘꒳˘) "compositionend")}} {{expewimentaw_inwine}}
+  - : ime ウィンドウを用いた変換が終了する時発火します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

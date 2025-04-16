@@ -1,14 +1,14 @@
 ---
-title: "HTMLLinkElement: as プロパティ"
-short-title: as
-slug: Web/API/HTMLLinkElement/as
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwwinkewement: as プロパティ"
+s-showt-titwe: as
+s-swug: web/api/htmwwinkewement/as
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`as`** は {{domxref("HTMLLinkElement")}} インターフェイスのプロパティで、 HTML リンクによって読み込まれるコンテンツの種類を表す文字列として、 `"script"`, `"style"`, `"image"`, `"video"`, `"audio"`, `"track"`, `"font"`, `"fetch"` のいずれかを返します。
+**`as`** は {{domxwef("htmwwinkewement")}} インターフェイスのプロパティで、 h-htmw リンクによって読み込まれるコンテンツの種類を表す文字列として、 `"scwipt"`, òωó `"stywe"`, `"image"`, o.O `"video"`, (U ᵕ U❁) `"audio"`, `"twack"`, (⑅˘꒳˘) `"font"`, ( ͡o ω ͡o ) `"fetch"` のいずれかを返します。
 
 ## 値
 
@@ -16,8 +16,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,23 +1,23 @@
 ---
-title: "Document: hasUnpartitionedCookieAccess() メソッド"
-short-title: hasUnpartitionedCookieAccess()
-slug: Web/API/Document/hasUnpartitionedCookieAccess
-l10n:
-  sourceCommit: b97c61b40d8b71532d54fe5af1eab4ca014605ec
+titwe: "document: hasunpawtitionedcookieaccess() メソッド"
+s-showt-titwe: hasunpawtitionedcookieaccess()
+s-swug: w-web/api/document/hasunpawtitionedcookieaccess
+w-w10n:
+  souwcecommit: b-b97c61b40d8b71532d54fe5af1eab4ca014605ec
 ---
 
-{{APIRef("Storage Access API")}}
+{{apiwef("stowage a-access api")}}
 
-**`hasUnpartitionedCookieAccess()`** は {{domxref("Document")}} インターフェイスのメソッドで、論理値を返すプロミス ({{jsxref("Promise")}}) を返します。これはこの文書が[サードパーティ](/ja/docs/Web/HTTP/Guides/Cookies#third-party_cookies)の[分離されていない](/ja/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies)クッキーへのアクセス権があるかどうかを示します。
+**`hasunpawtitionedcookieaccess()`** は {{domxwef("document")}} インターフェイスのメソッドで、論理値を返すプロミス ({{jsxwef("pwomise")}}) を返します。これはこの文書が[サードパーティ](/ja/docs/web/http/guides/cookies#thiwd-pawty_cookies)の[分離されていない](/ja/docs/web/api/stowage_access_api#unpawtitioned_vewsus_pawtitioned_cookies)クッキーへのアクセス権があるかどうかを示します。
 
-このメソッドは[ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API) の一部です。
+このメソッドは[ストレージアクセス a-api](/ja/docs/web/api/stowage_access_api) の一部です。
 
-このメソッドは {{DOMxRef("Document.hasStorageAccess()")}} の新しい名前です。
+このメソッドは {{domxwef("document.hasstowageaccess()")}} の新しい名前です。
 
 ## 構文
 
-```js-nolint
-hasUnpartitionedCookieAccess()
+```js-nowint
+hasunpawtitionedcookieaccess()
 ```
 
 ### 引数
@@ -26,43 +26,43 @@ hasUnpartitionedCookieAccess()
 
 ### 返値
 
-文書がサードパーティクッキーにアクセスできるかどうかを示す論理値で解決する {{jsxref("Promise")}} です。サードパーティクッキーにアクセスできる場合は `true`、できない場合は `false` です。
+文書がサードパーティクッキーにアクセスできるかどうかを示す論理値で解決する {{jsxwef("pwomise")}} です。サードパーティクッキーにアクセスできる場合は `twue`、できない場合は `fawse` です。
 
-詳しくは {{DOMxRef("Document.hasStorageAccess()")}} を参照してください。
+詳しくは {{domxwef("document.hasstowageaccess()")}} を参照してください。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : 現在の {{domxref("Document")}} がまだアクティブでない場合に発生します。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : 現在の {{domxwef("document")}} がまだアクティブでない場合に発生します。
 
 ## 例
 
 ```js
-document.hasUnpartitionedCookieAccess().then((hasAccess) => {
-  if (hasAccess) {
+d-document.hasunpawtitionedcookieaccess().then((hasaccess) => {
+  if (hasaccess) {
     // ストレージへのアクセスはすでに許可されています。
-    console.log("クッキーへのアクセスが許可されました");
-  } else {
+    consowe.wog("クッキーへのアクセスが許可されました");
+  } ewse {
     // ストレージへのアクセスはまだ許可されていません。
-    // requestStorageAccess() を呼び出す必要があります。
-    console.log("クッキーへのアクセスが拒否されました");
+    // wequeststowageaccess() を呼び出す必要があります。
+    c-consowe.wog("クッキーへのアクセスが拒否されました");
   }
 });
 ```
 
-> [!NOTE]
-> より完全な例は、[ストレージアクセス API の使用](/ja/docs/Web/API/Storage_Access_API/Using)を参照してください。
+> [!note]
+> より完全な例は、[ストレージアクセス api の使用](/ja/docs/web/api/stowage_access_api/using)を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document.hasStorageAccess()")}}, {{domxref("Document.requestStorageAccess()")}}, {{domxref("Document.requestStorageAccessFor()")}}
-- [ストレージアクセス API の使用](/ja/docs/Web/API/Storage_Access_API/Using)
-- [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) (WebKit blog)
+- {{domxwef("document.hasstowageaccess()")}}, -.- {{domxwef("document.wequeststowageaccess()")}}, (ˆ ﻌ ˆ)♡ {{domxwef("document.wequeststowageaccessfow()")}}
+- [ストレージアクセス api の使用](/ja/docs/web/api/stowage_access_api/using)
+- [intwoducing s-stowage access api](https://webkit.owg/bwog/8124/intwoducing-stowage-access-api/) (webkit b-bwog)

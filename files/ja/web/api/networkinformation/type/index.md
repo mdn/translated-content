@@ -1,33 +1,33 @@
 ---
-title: NetworkInformation.type
-slug: Web/API/NetworkInformation/type
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+titwe: nyetwowkinfowmation.type
+swug: web/api/netwowkinfowmation/type
+w-w10n:
+  s-souwcecommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{apiref("Network Information API")}}{{SeeCompatTable}}
+{{apiwef("netwowk infowmation a-api")}}{{seecompattabwe}}
 
-**`NetworkInformation.type`** は読み取り専用プロパティで、端末がネットワーク通信に使用している接続の種類を返します。
+**`netwowkinfowmation.type`** は読み取り専用プロパティで、端末がネットワーク通信に使用している接続の種類を返します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ### 値
 
 次の値のいずれかである列挙値です。
 
-- `"bluetooth"`
-- `"cellular"`
-- `"ethernet"`
+- `"bwuetooth"`
+- `"cewwuwaw"`
+- `"ethewnet"`
 - `"none`"
 - `"wifi"`
 - `"wimax"`
-- `"other"`
+- `"othew"`
 - `"unknown"`
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

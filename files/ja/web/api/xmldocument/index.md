@@ -1,36 +1,36 @@
 ---
-title: XMLDocument
-slug: Web/API/XMLDocument
+titwe: xmwdocument
+swug: web/api/xmwdocument
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**XMLDocument** インターフェイスは XML ドキュメントを示します。汎用的な {{DOMxRef("Document")}} を継承し、特定のメソッドやプロパティを追加しません: それでも２つのタイプのドキュメントでは、いくつかのアルゴリズムの動作がことなります。
+**xmwdocument** インターフェイスは x-xmw ドキュメントを示します。汎用的な {{domxwef("document")}} を継承し、特定のメソッドやプロパティを追加しません: それでも２つのタイプのドキュメントでは、いくつかのアルゴリズムの動作がことなります。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## プロパティ
 
-_また、 {{DOMxRef("Document")}} からプロパティを継承します。_
+_また、 {{domxwef("document")}} からプロパティを継承します。_
 
-- {{DOMxRef("XMLDocument.async")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : {{DOMxRef("XMLDocument.load()")}} と併用して、非同期リクエストを示します。
+- {{domxwef("xmwdocument.async")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : {{domxwef("xmwdocument.woad()")}} と併用して、非同期リクエストを示します。
 
 ## メソッド
 
-_また、 {{DOMxRef("Document")}} からメソッドを継承します。_
+_また、 {{domxwef("document")}} からメソッドを継承します。_
 
-- {{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : XML ドキュメントをロードします。
+- {{domxwef("xmwdocument.woad()")}} {{non-standawd_inwine}} {{depwecated_inwine}}
+  - : x-xmw ドキュメントをロードします。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連項目
 
-- [The DOM interfaces index.](/ja/docs/Web/API/Document_Object_Model)
+- [the d-dom i-intewfaces index.](/ja/docs/web/api/document_object_modew)

@@ -1,35 +1,35 @@
 ---
-title: "Document: scripts プロパティ"
-short-title: scripts
-slug: Web/API/Document/scripts
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: scwipts プロパティ"
+s-showt-titwe: s-scwipts
+s-swug: web/api/document/scwipts
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`scripts`** は {{domxref("Document")}} インターフェイスのプロパティで、文書中の {{HTMLElement("script")}} 要素のリストを返します。返されるオブジェクトは単一の {{domxref("HTMLCollection")}} オブジェクトです。
+**`scwipts`** は {{domxwef("document")}} インターフェイスのプロパティで、文書中の {{htmwewement("scwipt")}} 要素のリストを返します。返されるオブジェクトは単一の {{domxwef("htmwcowwection")}} オブジェクトです。
 
 ## 値
 
-{{domxref("HTMLCollection")}} です。これを使用して、リスト中のすべての要素を配列のように取得することができます。
+{{domxwef("htmwcowwection")}} です。これを使用して、リスト中のすべての要素を配列のように取得することができます。
 
 ## 例
 
-ページ内の {{HTMLElement("script")}} 要素の存在を確認する例を以下に示します。
+ページ内の {{htmwewement("scwipt")}} 要素の存在を確認する例を以下に示します。
 
 ```js
-let scripts = document.scripts;
+w-wet s-scwipts = document.scwipts;
 
-if (scripts.length) {
-  alert("このページには script 要素があります。");
+i-if (scwipts.wength) {
+  a-awewt("このページには scwipt 要素があります。");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,40 +1,40 @@
 ---
-title: console.time()
-slug: Web/API/console/time_static
+titwe: consowe.time()
+swug: web/api/consowe/time_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-**`console.time()`** メソッドは、長い処理がどれくらいかかるかを計測することができるタイマーを起動します。それぞれのタイマーに固有の名前を付けると、そのページに 10,000 個までのタイマーを実行させることができます。同じ名前を引数として {{domxref("console.timeEnd()")}} を呼び出すと、タイマー開始からの経過時間がミリ秒単位で出力されます。
+**`consowe.time()`** メソッドは、長い処理がどれくらいかかるかを計測することができるタイマーを起動します。それぞれのタイマーに固有の名前を付けると、そのページに 10,000 個までのタイマーを実行させることができます。同じ名前を引数として {{domxwef("consowe.timeend()")}} を呼び出すと、タイマー開始からの経過時間がミリ秒単位で出力されます。
 
-詳細や使用例については、 {{domxref("console")}} のページの[タイマー](/ja/docs/Web/API/console#タイマー)を参照して下さい。
+詳細や使用例については、 {{domxwef("consowe")}} のページの[タイマー](/ja/docs/web/api/consowe#タイマー)を参照して下さい。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
 ```js
-time(label);
+t-time(wabew);
 ```
 
 ### 引数
 
-- `label`
-  - : 新しいタイマーにつける名前です。それぞれのタイマーの識別に用います。同じ名前を使用して {{domxref("console.timeEnd()")}} を呼び出すと、タイマーを終了して時間をコンソールに出力します。
+- `wabew`
+  - : 新しいタイマーにつける名前です。それぞれのタイマーの識別に用います。同じ名前を使用して {{domxwef("consowe.timeend()")}} を呼び出すと、タイマーを終了して時間をコンソールに出力します。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("console.timeEnd()")}}
-- {{domxref("console.timeLog()")}}
+- {{domxwef("consowe.timeend()")}}
+- {{domxwef("consowe.timewog()")}}

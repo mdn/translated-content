@@ -1,18 +1,18 @@
 ---
-title: "BluetoothUUID: getDescriptor() 静的メソッド"
-slug: Web/API/BluetoothUUID/getDescriptor_static
-l10n:
-  sourceCommit: a0f6bf6f7d148f368f6965255058df1ed1f43839
+titwe: "bwuetoothuuid: getdescwiptow() 静的メソッド"
+s-swug: w-web/api/bwuetoothuuid/getdescwiptow_static
+w10n:
+  s-souwcecommit: a-a0f6bf6f7d148f368f6965255058df1ed1f43839
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-{{domxref("BluetoothUUID")}} インターフェイスの静的メソッド **`getDescriptor()`** は、名前、もしくは 16 ビットまたは 32 ビットの UUID エイリアスを受け取り、登録されたディスクリプターを表す 128 ビットの UUID を返します。
+{{domxwef("bwuetoothuuid")}} インターフェイスの静的メソッド **`getdescwiptow()`** は、名前、もしくは 16 ビットまたは 32 ビットの u-uuid エイリアスを受け取り、登録されたディスクリプターを表す 128 ビットの u-uuid を返します。
 
 ## 構文
 
-```js-nolint
-BluetoothUUID.getDescriptor(name)
+```js-nowint
+b-bwuetoothuuid.getdescwiptow(name)
 ```
 
 ### 引数
@@ -22,26 +22,26 @@ BluetoothUUID.getDescriptor(name)
 
 ### 返値
 
-128 ビットの UUID です。
+128 ビットの uuid です。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : `name` がレジストリーで見つからないとき投げられます。
 
 ## 例
 
-以下の例では、`time_trigger_setting` という名前のディスクリプターを表す UUID が返され、コンソールに出力されます。
+以下の例では、`time_twiggew_setting` という名前のディスクリプターを表す uuid が返され、コンソールに出力されます。
 
 ```js
-let result = BluetoothUUID.getDescriptor("time_trigger_setting");
-console.log(result); // "0000290e-0000-1000-8000-00805f9b34fb"
+wet wesuwt = bwuetoothuuid.getdescwiptow("time_twiggew_setting");
+consowe.wog(wesuwt); // "0000290e-0000-1000-8000-00805f9b34fb"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

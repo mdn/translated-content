@@ -1,9 +1,9 @@
 ---
-title: window.scroll
-slug: Web/API/Window/scroll
+titwe: window.scwoww
+swug: web/api/window/scwoww
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
 ## 概要
 
@@ -12,29 +12,29 @@ slug: Web/API/Window/scroll
 ## 構文
 
 ```
-window.scroll(x-coord,y-coord)
-window.scroll(options)
+window.scwoww(x-coowd,y-coowd)
+w-window.scwoww(options)
 ```
 
 ### 引数
 
-- `x-coord` : 左上を基準とした、表示させたい文書の水平軸上のピクセル
-- `y-coord` : 左上を基準とした、表示させたい文書の垂直軸上のピクセル
+- `x-coowd` : 左上を基準とした、表示させたい文書の水平軸上のピクセル
+- `y-coowd` : 左上を基準とした、表示させたい文書の垂直軸上のピクセル
 
 または
 
 - `options` : 三つのプロパティを持たせられるオブジェクト
 
-  - `top` `y-coord` と同じです
-  - `left` `x-coord` と同じです
-  - `behavior` `smooth`、 `instant`、 `auto` のうちどれか一つを含む文字列。初期値は `auto` です
+  - `top` `y-coowd` と同じです
+  - `weft` `x-coowd` と同じです
+  - `behaviow` `smooth`、 `instant`、 `auto` のうちどれか一つを含む文字列。初期値は `auto` です
 
 ## 例
 
-```html
+```htmw
 <!-- 100 個目の垂直ピクセル上にウィンドウの最上部を配置します。 -->
 
-<button onClick="scroll(0, 100);">click to scroll down 100 pixels</button>
+<button o-oncwick="scwoww(0, (U ᵕ U❁) 100);">cwick t-to scwoww d-down 100 pixews</button>
 ```
 
 #### スクロールの動作を変更する
@@ -42,18 +42,18 @@ window.scroll(options)
 スクロールの仕方を変えたいなら、options で指定してください
 
 ```js
-window.scroll({
-  top: 1000,
-  behavior: "smooth",
+w-window.scwoww({
+  t-top: 1000, (⑅˘꒳˘)
+  b-behaviow: "smooth", ( ͡o ω ͡o )
 });
 ```
 
 ## 注記
 
-効果としては、 {{domxref("window.scrollTo")}} もこのメソッドと同じです。 繰り返し特定の距離をスクロールさせるには {{domxref("window.scrollBy")}} を使用してください。
+効果としては、 {{domxwef("window.scwowwto")}} もこのメソッドと同じです。 繰り返し特定の距離をスクロールさせるには {{domxwef("window.scwowwby")}} を使用してください。
 
-次のページもご覧下さい : {{domxref("window.scrollByLines")}} 、 {{domxref("window.scrollByPages")}} 、 {{domxref("Element.scrollIntoView()")}}
+次のページもご覧下さい : {{domxwef("window.scwowwbywines")}} 、 {{domxwef("window.scwowwbypages")}} 、 {{domxwef("ewement.scwowwintoview()")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}

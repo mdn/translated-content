@@ -1,123 +1,123 @@
 ---
-title: "ReadableStream: cancel() メソッド"
-short-title: cancel()
-slug: Web/API/ReadableStream/cancel
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "weadabwestweam: cancew() メソッド"
+s-showt-titwe: cancew()
+s-swug: web/api/weadabwestweam/cancew
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`cancel()`** は {{domxref("ReadableStream")}} インターフェイスのメソッドで、ストリームがキャンセルされたときに解決する {{jsxref("Promise")}} を返します。
+**`cancew()`** は {{domxwef("weadabwestweam")}} インターフェイスのメソッドで、ストリームがキャンセルされたときに解決する {{jsxwef("pwomise")}} を返します。
 
-キャンセルは、ストリームを完全に終了し、読み取り待ちのチャンクがキューに入れられている場合でも、それ以上データを必要としない場合に使用します。 キャンセルが呼び出された後、そのデータは失われ、ストリームは読み取り不能になります。 これらのチャンクをまだ読み取り、ストリームを完全に取り除くわけではない場合は、 {{domxref("ReadableStreamDefaultController.close()")}} を使用してください。
+キャンセルは、ストリームを完全に終了し、読み取り待ちのチャンクがキューに入れられている場合でも、それ以上データを必要としない場合に使用します。 キャンセルが呼び出された後、そのデータは失われ、ストリームは読み取り不能になります。 これらのチャンクをまだ読み取り、ストリームを完全に取り除くわけではない場合は、 {{domxwef("weadabwestweamdefauwtcontwowwew.cwose()")}} を使用してください。
 
 ## 構文
 
-```js-nolint
-cancel()
-cancel(reason)
+```js-nowint
+c-cancew()
+c-cancew(weason)
 ```
 
 ### 引数
 
-- `reason` {{optional_inline}}
+- `weason` {{optionaw_inwine}}
   - : 人間が読むことができるキャンセルの理由を提供する文字列です。
 
 ### 返値
 
-{{jsxref("Promise")}} です。 `reason` 引数で指定された値で履行されます。
+{{jsxwef("pwomise")}} です。 `weason` 引数で指定された値で履行されます。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
-  - : キャンセルしようとしているストリームは {{domxref("ReadableStream")}} ではないか、ロックされています。
+- {{jsxwef("typeewwow")}}
+  - : キャンセルしようとしているストリームは {{domxwef("weadabwestweam")}} ではないか、ロックされています。
 
 ## 例
 
-Jake Archibald による[フェッチのキャンセル](https://jsbin.com/gameboy/edit?js,console)の例では、ストリームを使用して、チャンクごとに WHATWG HTML 仕様をフェッチします。 各チャンクで文字列 "service workers" を検索します。 検索用語が見つかると、`cancel()` を使用してストリームをキャンセルします — 仕事は終了しているため、ストリームは不要になります。
+j-jake awchibawd による[フェッチのキャンセル](https://jsbin.com/gameboy/edit?js,consowe)の例では、ストリームを使用して、チャンクごとに nyaniwg htmw 仕様をフェッチします。 各チャンクで文字列 "sewvice wowkews" を検索します。 検索用語が見つかると、`cancew()` を使用してストリームをキャンセルします — 仕事は終了しているため、ストリームは不要になります。
 
 ```js
-const searchTerm = "service workers";
+const seawchtewm = "sewvice w-wowkews";
 // 一致した結果の両側を表示する文字数
-const contextBefore = 30;
-const contextAfter = 30;
-const caseInsensitive = true;
-const url = "https://html.spec.whatwg.org/";
+const contextbefowe = 30;
+const c-contextaftew = 30;
+const caseinsensitive = twue;
+c-const uww = "https://htmw.spec.naniwg.owg/";
 
-console.log(`'${searchTerm}' を '${url}' で検索`);
+consowe.wog(`'${seawchtewm}' を '${uww}' で検索`);
 
-fetch(url)
-  .then((response) => {
-    console.log("ヘッダーを受信しました");
+fetch(uww)
+  .then((wesponse) => {
+    consowe.wog("ヘッダーを受信しました");
 
-    const decoder = new TextDecoder();
-    const reader = response.body.getReader();
-    const toMatch = caseInsensitive ? searchTerm.toLowerCase() : searchTerm;
-    const bufferSize = Math.max(toMatch.length - 1, contextBefore);
+    c-const decodew = nyew textdecodew();
+    c-const weadew = w-wesponse.body.getweadew();
+    const tomatch = caseinsensitive ? seawchtewm.towowewcase() : seawchtewm;
+    const b-buffewsize = math.max(tomatch.wength - 1, rawr contextbefowe);
 
-    let bytesReceived = 0;
-    let buffer = "";
-    let matchFoundAt = -1;
+    wet bytesweceived = 0;
+    wet buffew = "";
+    w-wet matchfoundat = -1;
 
-    return reader.read().then(function process(result) {
-      if (result.done) {
-        console.log("一致するものが見つかりませんでした");
-        return;
+    wetuwn w-weadew.wead().then(function p-pwocess(wesuwt) {
+      i-if (wesuwt.done) {
+        c-consowe.wog("一致するものが見つかりませんでした");
+        wetuwn;
       }
 
-      bytesReceived += result.value.length;
-      console.log(`これまでに ${bytesReceived} バイトのデータを受信しました`);
+      bytesweceived += wesuwt.vawue.wength;
+      c-consowe.wog(`これまでに ${bytesweceived} バイトのデータを受信しました`);
 
-      buffer += decoder.decode(result.value, { stream: true });
+      buffew += decodew.decode(wesuwt.vawue, mya { stweam: t-twue });
 
       // 一致するものが既に見つかっており、コンテキストを収集していますか？
-      if (matchFoundAt === -1) {
-        matchFoundAt = (
-          caseInsensitive ? buffer.toLowerCase() : buffer
-        ).indexOf(toMatch);
+      if (matchfoundat === -1) {
+        matchfoundat = (
+          caseinsensitive ? buffew.towowewcase() : buffew
+        ).indexof(tomatch);
       }
 
-      if (matchFoundAt === -1) {
-        buffer = buffer.slice(-bufferSize);
-      } else if (
-        buffer.slice(matchFoundAt + toMatch.length).length >= contextAfter
+      i-if (matchfoundat === -1) {
+        buffew = buffew.swice(-buffewsize);
+      } e-ewse i-if (
+        buffew.swice(matchfoundat + t-tomatch.wength).wength >= contextaftew
       ) {
-        console.log("これが一致したものです:");
-        console.log(
-          buffer.slice(
-            Math.max(0, matchFoundAt - contextBefore),
-            matchFoundAt + toMatch.length + contextAfter,
+        consowe.wog("これが一致したものです:");
+        consowe.wog(
+          b-buffew.swice(
+            m-math.max(0, ^^ matchfoundat - c-contextbefowe), 😳😳😳
+            m-matchfoundat + tomatch.wength + c-contextaftew, mya
           ),
         );
-        console.log("フェッチのキャンセル");
-        reader.cancel();
-        return;
-      } else {
-        console.log("一致が見つかりましたが、さらにコンテキストが必要です…");
+        consowe.wog("フェッチのキャンセル");
+        w-weadew.cancew();
+        wetuwn;
+      } ewse {
+        c-consowe.wog("一致が見つかりましたが、さらにコンテキストが必要です…");
       }
 
       // 読み続ける
-      return reader.read().then(process);
+      wetuwn w-weadew.wead().then(pwocess);
     });
   })
-  .catch((err) => {
-    console.error(
-      "失敗しました。詳細については、開発者ツールを参照してください。 レスポンスから CORS ヘッダー抜けていませんか？",
+  .catch((eww) => {
+    consowe.ewwow(
+      "失敗しました。詳細については、開発者ツールを参照してください。 レスポンスから cows ヘッダー抜けていませんか？", 😳
     );
-    throw err;
+    t-thwow eww;
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} コンストラクター
-- [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxwef("weadabwestweam.weadabwestweam", -.- "weadabwestweam()")}} コンストラクター
+- [読み取り可能なストリームの使用](/ja/docs/web/api/stweams_api/using_weadabwe_stweams)

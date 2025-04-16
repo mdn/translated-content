@@ -1,51 +1,51 @@
 ---
-title: DOMError
-slug: Web/API/DOMError
-l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+titwe: domewwow
+swug: web/api/domewwow
+w-w10n:
+  s-souwcecommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-**`DOMError`** インターフェイスは、エラー名を含んでいるエラーオブジェクトを表します。
+**`domewwow`** インターフェイスは、エラー名を含んでいるエラーオブジェクトを表します。
 
 ## インスタンスプロパティ
 
-- {{domxref("DOMError.name")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxwef("domewwow.name")}} {{weadonwyinwine}} {{depwecated_inwine}}
   - : 文字列で、このエラーの型名のひとつを返します（下記参照）。
-- {{domxref("DOMError.message")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxwef("domewwow.message")}} {{weadonwyinwine}} {{depwecated_inwine}}
   - : 文字列で、このエラーの型の名前に関連付けられたメッセージまたは説明を返します。
 
 ## エラーの型
 
 | 型                           | 説明                                                                                      |
 | ---------------------------- | ----------------------------------------------------------------------------------------- |
-| `IndexSizeError`             | 許可された範囲内にありません（例えば、{{domxref("range")}} オブジェクト内で発生します）。 |
-| `HierarchyRequestError`      | ノードのツリー階層指定が正しくありません。                                                |
-| `WrongDocumentError`         | オブジェクトが誤った {{domxref("document")}} 内にあります。                               |
-| `InvalidCharacterError`      | 文字列が不正な文字を含んでいます。                                                        |
-| `NoModificationAllowedError` | オブジェクトは変更不可能です。                                                            |
-| `NotFoundError`              | オブジェクトを見つけられませんでした。                                                    |
-| `NotSupportedError`          | その操作に対応していません。                                                              |
-| `InvalidStateError`          | オブジェクトが不正な状態です。                                                            |
-| `SyntaxError`                | 文字列が期待されたパターンに一致しませんでした。                                          |
-| `InvalidModificationError`   | オブジェクトはこの方法では変更不可能です。                                                |
-| `NamespaceError`             | この操作は XML の名前空間により許可されていません。                                       |
-| `InvalidAccessError`         | そのオブジェクトは指定した操作または引数に対応していません。                              |
-| `TypeMismatchError`          | オブジェクトの型が期待された型と一致しません。                                            |
-| `SecurityError`              | 操作が安全ではありません。                                                                |
-| `NetworkError`               | ネットワークエラーが発生しました。                                                        |
-| `AbortError`                 | この操作が中止されました。                                                                |
-| `URLMismatchError`           | 指定した URL がもう 1 つの URL に一致しません。                                           |
-| `QuotaExceededError`         | クォータの容量を超えました。                                                              |
-| `TimeoutError`               | 操作がタイムアウトしました。                                                              |
-| `InvalidNodeTypeError`       | そのノードが不正、あるいは、この命令では不正な祖先ノードを持っています。                  |
-| `DataCloneError`             | そのオブジェクトはクローン不可能です。                                                    |
+| `indexsizeewwow`             | 許可された範囲内にありません（例えば、{{domxwef("wange")}} オブジェクト内で発生します）。 |
+| `hiewawchywequestewwow`      | ノードのツリー階層指定が正しくありません。                                                |
+| `wwongdocumentewwow`         | オブジェクトが誤った {{domxwef("document")}} 内にあります。                               |
+| `invawidchawactewewwow`      | 文字列が不正な文字を含んでいます。                                                        |
+| `nomodificationawwowedewwow` | オブジェクトは変更不可能です。                                                            |
+| `notfoundewwow`              | オブジェクトを見つけられませんでした。                                                    |
+| `notsuppowtedewwow`          | その操作に対応していません。                                                              |
+| `invawidstateewwow`          | オブジェクトが不正な状態です。                                                            |
+| `syntaxewwow`                | 文字列が期待されたパターンに一致しませんでした。                                          |
+| `invawidmodificationewwow`   | オブジェクトはこの方法では変更不可能です。                                                |
+| `namespaceewwow`             | この操作は x-xmw の名前空間により許可されていません。                                       |
+| `invawidaccessewwow`         | そのオブジェクトは指定した操作または引数に対応していません。                              |
+| `typemismatchewwow`          | オブジェクトの型が期待された型と一致しません。                                            |
+| `secuwityewwow`              | 操作が安全ではありません。                                                                |
+| `netwowkewwow`               | ネットワークエラーが発生しました。                                                        |
+| `abowtewwow`                 | この操作が中止されました。                                                                |
+| `uwwmismatchewwow`           | 指定した uww がもう 1 つの u-uww に一致しません。                                           |
+| `quotaexceededewwow`         | クォータの容量を超えました。                                                              |
+| `timeoutewwow`               | 操作がタイムアウトしました。                                                              |
+| `invawidnodetypeewwow`       | そのノードが不正、あるいは、この命令では不正な祖先ノードを持っています。                  |
+| `datacwoneewwow`             | そのオブジェクトはクローン不可能です。                                                    |
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("DOMException") }}
+- {{ d-domxwef("domexception") }}

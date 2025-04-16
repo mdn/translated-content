@@ -1,26 +1,26 @@
 ---
-title: FileReader.error
-slug: Web/API/FileReader/error
-l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+titwe: fiweweadew.ewwow
+swug: w-web/api/fiweweadew/ewwow
+w-w10n:
+  s-souwcecommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-{{domxref("FileReader")}} の **`error`** プロパティは、ファイルの読み取り中に発生したエラーを返します。
+{{domxwef("fiweweadew")}} の **`ewwow`** プロパティは、ファイルの読み取り中に発生したエラーを返します。
 
 ## 値
 
-{{domxref("DOMError")}} に関連するエラーが含まれています。 Chrome 48 以降/Firefox 58 以降では、 `DOMError` が DOM 標準から削除されているため、このプロパティは {{domxref("DOMException")}} を返します。
+{{domxwef("domewwow")}} に関連するエラーが含まれています。 c-chwome 48 以降/fiwefox 58 以降では、 `domewwow` が d-dom 標準から削除されているため、このプロパティは {{domxwef("domexception")}} を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

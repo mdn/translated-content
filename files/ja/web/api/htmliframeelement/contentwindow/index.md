@@ -1,33 +1,33 @@
 ---
-title: "HTMLIFrameElement: contentWindow プロパティ"
-short-title: contentWindow
-slug: Web/API/HTMLIFrameElement/contentWindow
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwifwameewement: contentwindow プロパティ"
+s-showt-titwe: c-contentwindow
+s-swug: web/api/htmwifwameewement/contentwindow
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`contentWindow`** プロパティは、[HTMLIFrameElement](/ja/docs/Web/API/HTMLIFrameElement) が所属する [Window](/ja/docs/Web/API/Window) オブジェクトを返します。この `Window` オブジェクトを使用して、iframe の文書や内部 DOM にアクセスすることができます。この属性は読み取り専用ですが、グローバルの `Window` オブジェクトのように操作することができます。
+**`contentwindow`** プロパティは、[htmwifwameewement](/ja/docs/web/api/htmwifwameewement) が所属する [window](/ja/docs/web/api/window) オブジェクトを返します。この `window` オブジェクトを使用して、ifwame の文書や内部 d-dom にアクセスすることができます。この属性は読み取り専用ですが、グローバルの `window` オブジェクトのように操作することができます。
 
 ## 値
 
-[Window](/ja/docs/Web/API/Window) オブジェクト。
+[window](/ja/docs/web/api/window) オブジェクト。
 
 ## 例
 
 ```js
-const x = document.querySelector("iframe").contentWindow;
-//x = window.frames[0];
+c-const x = document.quewysewectow("ifwame").contentwindow;
+//x = window.fwames[0];
 
-x.document.querySelector("body").style.backgroundColor = "blue";
-// 文書内の最初の iframe が青くなる
+x.document.quewysewectow("body").stywe.backgwoundcowow = "bwue";
+// 文書内の最初の ifwame が青くなる
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,18 +1,18 @@
 ---
-title: DedicatedWorkerGlobalScope.close()
-slug: Web/API/DedicatedWorkerGlobalScope/close
-l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+titwe: dedicatedwowkewgwobawscope.cwose()
+swug: w-web/api/dedicatedwowkewgwobawscope/cwose
+w-w10n:
+  s-souwcecommit: d-da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews a-api")}}
 
-**`close()`** は {{domxref("DedicatedWorkerGlobalScope")}} インターフェイスのメソッドで、 `DedicatedWorkerGlobalScope` のイベントループでキューに入れられたタスクを破棄し、この具体的なスコープを閉じます。
+**`cwose()`** は {{domxwef("dedicatedwowkewgwobawscope")}} インターフェイスのメソッドで、 `dedicatedwowkewgwobawscope` のイベントループでキューに入れられたタスクを破棄し、この具体的なスコープを閉じます。
 
 ## 構文
 
-```js-nolint
-close()
+```js-nowint
+c-cwose()
 ```
 
 ### 引数
@@ -21,29 +21,29 @@ close()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ワーカー自体の内部からワーカーインスタンスを閉じたい場合は、以下のように呼び出してください。
 
 ```js
-close();
+c-cwose();
 ```
 
-`close()` と `self.close()` は事実上同じです。どちらも `close()` がワーカーの内部スコープから呼び出されることを表します。
+`cwose()` と `sewf.cwose()` は事実上同じです。どちらも `cwose()` がワーカーの内部スコープから呼び出されることを表します。
 
-> [!NOTE]
-> メインスレッドからワーカーを停止する方法もあります。{{domxref("Worker.terminate")}} メソッドです。
+> [!note]
+> メインスレッドからワーカーを停止する方法もあります。{{domxwef("wowkew.tewminate")}} メソッドです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-{{domxref("DedicatedWorkerGlobalScope")}}
+{{domxwef("dedicatedwowkewgwobawscope")}}

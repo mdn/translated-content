@@ -1,50 +1,50 @@
 ---
-title: "WebSocket: binaryType プロパティ"
-short-title: binaryType
-slug: Web/API/WebSocket/binaryType
-l10n:
-  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
+titwe: "websocket: binawytype プロパティ"
+s-showt-titwe: binawytype
+s-swug: w-web/api/websocket/binawytype
+w-w10n:
+  s-souwcecommit: f-fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
+{{apiwef("websockets a-api")}}{{avaiwabweinwowkews}}
 
-**`WebSocket.binaryType`** プロパティは、この WebSocke 接続によって受信されているバイナリーデータの型を制御します。
+**`websocket.binawytype`** プロパティは、この w-websocke 接続によって受信されているバイナリーデータの型を制御します。
 
 ## 値
 
 文字列です。
 
-- `"blob"`
-  - : バイナリーデータに {{domxref("Blob")}} オブジェクトを使用します。これが既定値です。
-- `"arraybuffer"`
-  - : バイナリーデータに {{jsxref("ArrayBuffer")}} オブジェクトを使用します。
+- `"bwob"`
+  - : バイナリーデータに {{domxwef("bwob")}} オブジェクトを使用します。これが既定値です。
+- `"awwaybuffew"`
+  - : バイナリーデータに {{jsxwef("awwaybuffew")}} オブジェクトを使用します。
 
 ## 例
 
 ```js
-// WebSocket 接続を作成
-const socket = new WebSocket("ws://localhost:8080");
+// websocket 接続を作成
+const socket = nyew websocket("ws://wocawhost:8080");
 
-// バイナリーの型を "blob" から "arraybuffer" に変更
-socket.binaryType = "arraybuffer";
+// バイナリーの型を "bwob" から "awwaybuffew" に変更
+socket.binawytype = "awwaybuffew";
 
 // メッセージを待ち受け
-socket.addEventListener("message", (event) => {
-  if (event.data instanceof ArrayBuffer) {
+s-socket.addeventwistenew("message", (⑅˘꒳˘) (event) => {
+  if (event.data instanceof awwaybuffew) {
     // バイナリーフレーム
-    const view = new DataView(event.data);
-    console.log(view.getInt32(0));
-  } else {
+    c-const view = nyew dataview(event.data);
+    c-consowe.wog(view.getint32(0));
+  } ewse {
     // テキストフレーム
-    console.log(event.data);
+    consowe.wog(event.data);
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

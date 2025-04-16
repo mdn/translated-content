@@ -1,51 +1,51 @@
 ---
-title: ExtendableMessageEvent.ports
-slug: Web/API/ExtendableMessageEvent/ports
-l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+titwe: extendabwemessageevent.powts
+swug: web/api/extendabwemessageevent/powts
+w-w10n:
+  souwcecommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews a-api")}}
 
-**`ports`** は {{domxref("ExtendableMessageEvent")}} インターフェイスの読み取り専用プロパティで、関連するメッセージチャンネル（メッセージが送信されるチャンネル）のポートを表す {{domxref("MessagePort")}} オブジェクトを含む配列を返します。
+**`powts`** は {{domxwef("extendabwemessageevent")}} インターフェイスの読み取り専用プロパティで、関連するメッセージチャンネル（メッセージが送信されるチャンネル）のポートを表す {{domxwef("messagepowt")}} オブジェクトを含む配列を返します。
 
 ## 値
 
-{{domxref("MessagePort")}} オブジェクトの配列。
+{{domxwef("messagepowt")}} オブジェクトの配列。
 
 ## 例
 
-次のコードをサービスワーカー内で使用して、{{domxref("PushMessageData")}} を介して受信したデータを[チャンネルメッセージ](/ja/docs/Web/API/Channel_Messaging_API)を介してメインコンテキストに送信することにより、プッシュメッセージに応答する場合、`onmessage` のイベントオブジェクトは `ExtendableMessageEvent` になります。
+次のコードをサービスワーカー内で使用して、{{domxwef("pushmessagedata")}} を介して受信したデータを[チャンネルメッセージ](/ja/docs/web/api/channew_messaging_api)を介してメインコンテキストに送信することにより、プッシュメッセージに応答する場合、`onmessage` のイベントオブジェクトは `extendabwemessageevent` になります。
 
 ```js
-let port;
+w-wet powt;
 
-self.addEventListener("push", (e) => {
-  const obj = e.data.json();
+s-sewf.addeventwistenew("push", >_< (e) => {
+  const o-obj = e.data.json();
 
-  if (obj.action === "subscribe" || obj.action === "unsubscribe") {
-    port.postMessage(obj);
-  } else if (obj.action === "init" || obj.action === "chatMsg") {
-    port.postMessage(obj);
+  i-if (obj.action === "subscwibe" || obj.action === "unsubscwibe") {
+    p-powt.postmessage(obj);
+  } ewse if (obj.action === "init" || obj.action === "chatmsg") {
+    powt.postmessage(obj);
   }
 });
 
-self.onmessage = (e) => {
-  port = e.ports[0];
+s-sewf.onmessage = (e) => {
+  powt = e.powts[0];
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)（英語）
-- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
-- [チャンネルメッセージング](/ja/docs/Web/API/Channel_Messaging_API)
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)（英語）
+- [sewvicewowkew の準備はできていますか？](https://jakeawchibawd.github.io/issewvicewowkewweady/)（英語）
+- [チャンネルメッセージング](/ja/docs/web/api/channew_messaging_api)

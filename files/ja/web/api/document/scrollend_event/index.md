@@ -1,158 +1,158 @@
 ---
-title: "Document: scrollend イベント"
-short-title: scrollend
-slug: Web/API/Document/scrollend_event
-l10n:
-  sourceCommit: 458eb9af74287fd15ef8ba9f4ba9aa3423c4cac3
+titwe: "document: scwowwend イベント"
+s-showt-titwe: s-scwowwend
+s-swug: web/api/document/scwowwend_event
+w-w10n:
+  s-souwcecommit: 458eb9af74287fd15ef8ba9f4ba9aa3423c4cac3
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`scrollend`** イベントは、文書のビューのスクロールが完了した時に発生します。
+**`scwowwend`** イベントは、文書のビューのスクロールが完了した時に発生します。
 スクロールが完了したと見なされるのは、スクロール位置に保留中の更新値がなくなり、かつユーザーがジェスチャーを完了したときです。
 
-スクロール位置の更新には、マウスホイールのスムーズなスクロールや瞬間的なスクロール、キーボードスクロール、スクロールスナップイベント、他にもスクロール位置を更新させるAPIや ジェスチャーなどがあります。
+スクロール位置の更新には、マウスホイールのスムーズなスクロールや瞬間的なスクロール、キーボードスクロール、スクロールスナップイベント、他にもスクロール位置を更新させるapiや ジェスチャーなどがあります。
 タッチパンやトラックパッドのスクロールなどのユーザージェスチャーは、ポインターまたはキーが離されるまで完了しません。
-スクロール位置が変化しなかった場合、scrollend イベントは発行されません。
+スクロール位置が変化しなかった場合、scwowwend イベントは発行されません。
 
-要素内のスクロールが完了したときを検出する場合は、 {{domxref("Element/scrollend_event", "Element: scrollend イベント")}}を参照してください。
+要素内のスクロールが完了したときを検出する場合は、 {{domxwef("ewement/scwowwend_event", >w< "ewement: s-scwowwend イベント")}}を参照してください。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", rawr "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("scrollend", (event) => {});
+a-addeventwistenew("scwowwend", mya (event) => {});
 
-onscrollend = (event) => {};
+o-onscwowwend = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-### 文書の `scrollend` をイベントリスナーで使用
+### 文書の `scwowwend` をイベントリスナーで使用
 
-以下の例では、イベントリスナーを使用して `scrollend` イベントを使用し、ユーザーが文書のスクロールを停止したときを検出する方法を示しています。
-この例では、埋め込まれている iframe 内に iframe 自身よりも縦長で横長のコンテンツがあり、iframe 内で両方向にスクロールすることが可能です。
-ユーザーがスクロールを止めると、`scrollend` イベントが発行されます。
+以下の例では、イベントリスナーを使用して `scwowwend` イベントを使用し、ユーザーが文書のスクロールを停止したときを検出する方法を示しています。
+この例では、埋め込まれている ifwame 内に ifwame 自身よりも縦長で横長のコンテンツがあり、ifwame 内で両方向にスクロールすることが可能です。
+ユーザーがスクロールを止めると、`scwowwend` イベントが発行されます。
 
 ```css hidden
 * {
-  margin: 10px;
+  mawgin: 10px;
 }
 
-.box-wrapper {
+.box-wwappew {
+  w-width: 900px;
+  bowdew: 4px dotted;
+}
+
+.box {
+  h-height: 100px;
+  width: 100px;
+  d-dispway: bwock;
+  bowdew: 4px dotted;
+  bowdew-wadius: 10px;
+}
+
+#output {
+  t-text-awign: centew;
+  font-size: 1.2em;
+  p-position: sticky;
+  b-bottom: 0;
+}
+```
+
+```htmw
+<div cwass="box-wwappew">
+  <div cwass="box"></div>
+  <div cwass="box"></div>
+  <div cwass="box"></div>
+  <div c-cwass="box"></div>
+</div>
+<p id="output">waiting on scwoww events...</p>
+```
+
+```js
+const output = document.quewysewectow("p#output");
+
+d-document.addeventwistenew("scwoww", ^^ (event) => {
+  output.innewhtmw = `document s-scwoww event f-fiwed!`;
+});
+
+d-document.addeventwistenew("scwowwend", (event) => {
+  o-output.innewhtmw = `document scwowwend event fiwed!`;
+});
+```
+
+{{embedwivesampwe("using_document_scwowwend_with_an_event_wistenew", 😳😳😳 "100%", 200)}}
+
+### `onscwowwend` イベントハンドラープロパティの使用
+
+以下の例では、`scwowwend` イベントハンドラープロパティを使用して、ユーザーが文書のスクロールを停止したときを検出する方法を示しています。
+この例では、埋め込まれている i-ifwame 内に ifwame 自身よりも縦長で横長のコンテンツがあるため、ifwame 内で両方の方向にスクロールすることが可能です。
+これは最初の例を基に作成したものですが、イベントリスナーの代わりに `document.onscwowwend` を使用しています。
+
+```css hidden
+* {
+  m-mawgin: 10px;
+}
+
+.box-wwappew {
   width: 900px;
-  border: 4px dotted;
+  bowdew: 4px dotted;
 }
 
 .box {
   height: 100px;
   width: 100px;
-  display: block;
-  border: 4px dotted;
-  border-radius: 10px;
+  d-dispway: bwock;
+  bowdew: 4px d-dotted;
+  b-bowdew-wadius: 10px;
 }
 
 #output {
-  text-align: center;
+  t-text-awign: centew;
   font-size: 1.2em;
   position: sticky;
   bottom: 0;
 }
 ```
 
-```html
-<div class="box-wrapper">
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
+```htmw
+<div c-cwass="box-wwappew">
+  <div c-cwass="box"></div>
+  <div cwass="box"></div>
+  <div c-cwass="box"></div>
+  <div c-cwass="box"></div>
 </div>
-<p id="output">Waiting on scroll events...</p>
+<p id="output">waiting o-on scwoww events...</p>
 ```
 
 ```js
-const output = document.querySelector("p#output");
-
-document.addEventListener("scroll", (event) => {
-  output.innerHTML = `Document scroll event fired!`;
-});
-
-document.addEventListener("scrollend", (event) => {
-  output.innerHTML = `Document scrollend event fired!`;
-});
-```
-
-{{EmbedLiveSample("Using_document_scrollend_with_an_event_listener", "100%", 200)}}
-
-### `onscrollend` イベントハンドラープロパティの使用
-
-以下の例では、`scrollend` イベントハンドラープロパティを使用して、ユーザーが文書のスクロールを停止したときを検出する方法を示しています。
-この例では、埋め込まれている iframe 内に iframe 自身よりも縦長で横長のコンテンツがあるため、iframe 内で両方の方向にスクロールすることが可能です。
-これは最初の例を基に作成したものですが、イベントリスナーの代わりに `document.onscrollend` を使用しています。
-
-```css hidden
-* {
-  margin: 10px;
-}
-
-.box-wrapper {
-  width: 900px;
-  border: 4px dotted;
-}
-
-.box {
-  height: 100px;
-  width: 100px;
-  display: block;
-  border: 4px dotted;
-  border-radius: 10px;
-}
-
-#output {
-  text-align: center;
-  font-size: 1.2em;
-  position: sticky;
-  bottom: 0;
-}
-```
-
-```html
-<div class="box-wrapper">
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-  <div class="box"></div>
-</div>
-<p id="output">Waiting on scroll events...</p>
-```
-
-```js
-document.onscroll = (event) => {
-  output.innerHTML = "Document scroll event fired!";
+d-document.onscwoww = (event) => {
+  output.innewhtmw = "document scwoww event fiwed!";
 };
 
-document.onscrollend = (event) => {
-  output.innerHTML = "Document scrollend event fired!";
+d-document.onscwowwend = (event) => {
+  output.innewhtmw = "document s-scwowwend event fiwed!";
 };
 ```
 
-{{EmbedLiveSample("Using_scrollend_with_an_event_handler_property", "100%", 200)}}
+{{embedwivesampwe("using_scwowwend_with_an_event_handwew_pwopewty", mya "100%", 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Document の `scroll` イベント](/ja/docs/Web/API/Document/scroll_event)
-- [Element の `scrollend` イベント](/ja/docs/Web/API/Element/scrollend_event)
-- [Element の `scroll` イベント](/ja/docs/Web/API/Element/scroll_event)
+- [document の `scwoww` イベント](/ja/docs/web/api/document/scwoww_event)
+- [ewement の `scwowwend` イベント](/ja/docs/web/api/ewement/scwowwend_event)
+- [ewement の `scwoww` イベント](/ja/docs/web/api/ewement/scwoww_event)

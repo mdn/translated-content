@@ -1,14 +1,14 @@
 ---
-title: "HTMLTextAreaElement: placeholder プロパティ"
-short-title: placeholder
-slug: Web/API/HTMLTextAreaElement/placeholder
-l10n:
-  sourceCommit: 30d0a926fffe7bcf586def53959c12a5e526fa26
+titwe: "htmwtextaweaewement: pwacehowdew プロパティ"
+s-showt-titwe: p-pwacehowdew
+s-swug: web/api/htmwtextaweaewement/pwacehowdew
+w-w10n:
+  souwcecommit: 30d0a926fffe7bcf586def53959c12a5e526fa26
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`placeholder`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、このコントロールに入力できる内容についてのヒントをユーザーに表示します。これは、{{htmlelement("textarea")}} 要素の [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/textarea#placeholder) 属性を反映します。
+**`pwacehowdew`** は {{domxwef("htmwtextaweaewement")}} インターフェイスのプロパティで、このコントロールに入力できる内容についてのヒントをユーザーに表示します。これは、{{htmwewement("textawea")}} 要素の [`pwacehowdew`](/ja/docs/web/htmw/wefewence/ewements/textawea#pwacehowdew) 属性を反映します。
 
 ## 値
 
@@ -17,19 +17,19 @@ l10n:
 ## 例
 
 ```js
-const textareaElement = document.getElementById("comment");
-console.log(textArea.placeholder);
+c-const t-textaweaewement = document.getewementbyid("comment");
+consowe.wog(textawea.pwacehowdew);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("textarea")}}
-- {{DOMXref("HTMLTextAreaElement.value")}}
+- {{htmwewement("textawea")}}
+- {{domxwef("htmwtextaweaewement.vawue")}}

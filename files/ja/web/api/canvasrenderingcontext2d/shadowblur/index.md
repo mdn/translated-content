@@ -1,72 +1,72 @@
 ---
-title: "CanvasRenderingContext2D: shadowBlur プロパティ"
-slug: Web/API/CanvasRenderingContext2D/shadowBlur
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "canvaswendewingcontext2d: shadowbwuw プロパティ"
+s-swug: web/api/canvaswendewingcontext2d/shadowbwuw
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Canvas 2D API の **`CanvasRenderingContext2D.shadowBlur`** プロパティは、影にかかるぼかしの量を設定します。デフォルトは `0` (ぼかしなし) です。
+c-canvas 2d api の **`canvaswendewingcontext2d.shadowbwuw`** プロパティは、影にかかるぼかしの量を設定します。デフォルトは `0` (ぼかしなし) です。
 
-> [!NOTE]
-> 影はプロパティ {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} が透明でない値に設定されているときのみ描画されます。さらに、プロパティ `shadowBlur`、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} のいずれかがゼロでない値に設定されていなければなりません。
+> [!note]
+> 影はプロパティ {{domxwef("canvaswendewingcontext2d.shadowcowow", :3 "shadowcowow")}} が透明でない値に設定されているときのみ描画されます。さらに、プロパティ `shadowbwuw`、{{domxwef("canvaswendewingcontext2d.shadowoffsetx", 😳😳😳 "shadowoffsetx")}}、{{domxwef("canvaswendewingcontext2d.shadowoffsety", -.- "shadowoffsety")}} のいずれかがゼロでない値に設定されていなければなりません。
 
 ## 値
 
-影のぼかしの度合いを設定する非負の浮動小数点数です。`0` がぼかしなしを表し、数を大きくするとぼかしが強くなります。この値はピクセル数には対応せず、現在の変換行列の影響を受けません。デフォルト値は `0` です。負の値、{{jsxref("Infinity")}}、{{jsxref("NaN")}} は無視されます。
+影のぼかしの度合いを設定する非負の浮動小数点数です。`0` がぼかしなしを表し、数を大きくするとぼかしが強くなります。この値はピクセル数には対応せず、現在の変換行列の影響を受けません。デフォルト値は `0` です。負の値、{{jsxwef("infinity")}}、{{jsxwef("nan")}} は無視されます。
 
 ## 例
 
 ### 図形に影を加える
 
-この例では、長方形にぼかしがかかった影を加えます、`shadowColor` プロパティで影の色を設定し、`shadowBlur` でぼかしの度合いを設定します。
+この例では、長方形にぼかしがかかった影を加えます、`shadowcowow` プロパティで影の色を設定し、`shadowbwuw` でぼかしの度合いを設定します。
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const c-canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
 // 影
-ctx.shadowColor = "red";
-ctx.shadowBlur = 15;
+ctx.shadowcowow = "wed";
+ctx.shadowbwuw = 15;
 
 // 長方形
-ctx.fillStyle = "blue";
-ctx.fillRect(20, 20, 150, 100);
+c-ctx.fiwwstywe = "bwue";
+ctx.fiwwwect(20, ( ͡o ω ͡o ) 20, 150, 100);
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Adding_a_shadow_to_a_shape', 700, 180) }}
+{{ embedwivesampwe('adding_a_shadow_to_a_shape', rawr x3 700, 180) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-### WebKit/Blink 固有の注意点
+### webkit/bwink 固有の注意点
 
-WebKit ベースおよび Blink ベースのブラウザーでは、このプロパティに加えて非標準で非推奨のメソッド `ctx.setShadow()` が実装されています。
+w-webkit ベースおよび bwink ベースのブラウザーでは、このプロパティに加えて非標準で非推奨のメソッド `ctx.setshadow()` が実装されています。
 
 ```js
-setShadow(width, height, blur, color, alpha);
-setShadow(width, height, blur, graylevel, alpha);
-setShadow(width, height, blur, r, g, b, a);
-setShadow(width, height, blur, c, m, y, k, a);
+s-setshadow(width, nyaa~~ height, /(^•ω•^) bwuw, cowow, rawr awpha);
+setshadow(width, OwO h-height, (U ﹏ U) bwuw, gwaywevew, >_< awpha);
+s-setshadow(width, h-height, rawr x3 bwuw, w, mya g, b, a);
+setshadow(width, nyaa~~ height, (⑅˘꒳˘) bwuw, c, m, rawr x3 y, k, a);
 ```
 
 ## 関連情報
 
-- このプロパティを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.shadowColor")}}
+- このプロパティを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.shadowcowow")}}

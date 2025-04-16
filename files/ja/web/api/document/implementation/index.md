@@ -1,42 +1,42 @@
 ---
-title: "Document: implementation プロパティ"
-short-title: implementation
-slug: Web/API/Document/implementation
-l10n:
-  sourceCommit: f24f8634cb73e3a608f0fb49202d52a4a9dc7ce3
+titwe: "document: impwementation プロパティ"
+s-showt-titwe: i-impwementation
+s-swug: web/api/document/impwementation
+w-w10n:
+  souwcecommit: f-f24f8634cb73e3a608f0fb49202d52a4a9dc7ce3
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Document.implementation`** プロパティは、現在の文書に関連付けられた {{domxref("DOMImplementation")}} オブジェクトを返します。
+**`document.impwementation`** プロパティは、現在の文書に関連付けられた {{domxwef("domimpwementation")}} オブジェクトを返します。
 
 ## 値
 
-{{domxref("DOMImplementation")}} オブジェクトです。
+{{domxwef("domimpwementation")}} オブジェクトです。
 
 ## 例
 
 ```js
-const modName = "HTML";
-const modVer = "2.0";
-const conformTest = document.implementation.hasFeature(modName, modVer);
+c-const modname = "htmw";
+c-const modvew = "2.0";
+const confowmtest = document.impwementation.hasfeatuwe(modname, ^^;; modvew);
 
-console.log(`DOM ${modName} ${modVer} supported?: ${conformTest}`);
+consowe.wog(`dom ${modname} ${modvew} s-suppowted?: ${confowmtest}`);
 
-// ログ: "DOM HTML 2.0 supported?: true" （hasFeature は常に true を返す）
+// ログ: "dom htmw 2.0 suppowted?: twue" （hasfeatuwe は常に t-twue を返す）
 ```
 
-> [!WARNING]
-> これを昨日検出に使用しないでください。 `hasFeature()` メソッドは常に true を返します。
+> [!wawning]
+> これを昨日検出に使用しないでください。 `hasfeatuwe()` メソッドは常に twue を返します。
 
 ## メモ
 
-W3C's DOM Level 1 勧告では `hasFeature` メソッドのみが定義されているので、ブラウザーが DOM モジュールに対応しているかどうかを判断する方法の一つです。 (上記の例と [What does your user agent claim to support?](https://www.w3.org/2003/02/06-dom-support.html) を参照してください)。利用できるのであれば、 `DOMImplementation` の他のメソッドが、単一文書の外のものを制御するサービスを提供します。例えば、 `DOMImplementation` インターフェイスは `createDocumentType` メソッドを含んでおり、実装によって管理された 1 つ以上の文書に DTD が作成されます。
+w3c's d-dom wevew 1 勧告では `hasfeatuwe` メソッドのみが定義されているので、ブラウザーが dom モジュールに対応しているかどうかを判断する方法の一つです。 (上記の例と [nani does youw usew agent cwaim to s-suppowt?](https://www.w3.owg/2003/02/06-dom-suppowt.htmw) を参照してください)。利用できるのであれば、 `domimpwementation` の他のメソッドが、単一文書の外のものを制御するサービスを提供します。例えば、 `domimpwementation` インターフェイスは `cweatedocumenttype` メソッドを含んでおり、実装によって管理された 1 つ以上の文書に dtd が作成されます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

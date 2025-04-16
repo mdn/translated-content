@@ -1,30 +1,30 @@
 ---
-title: WorkerNavigator.appName
-slug: Web/API/WorkerNavigator/appName
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: wowkewnavigatow.appname
+swug: web/api/wowkewnavigatow/appname
+w-w10n:
+  s-souwcecommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{apiwef("htmw d-dom")}} {{depwecated_headew}}
 
-**`WorkerNavigator.appName`** プロパティの値は、どのブラウザーでも常に "`Netscape`" です。 このプロパティは互換性のためにのみ残されています。
+**`wowkewnavigatow.appname`** プロパティの値は、どのブラウザーでも常に "`netscape`" です。 このプロパティは互換性のためにのみ残されています。
 
-> [!NOTE]
-> このプロパティが実際のブラウザー名を返すことに頼ってはいけません。すべてのブラウザーがこのプロパティの値として "`Netscape`" を返します。
+> [!note]
+> このプロパティが実際のブラウザー名を返すことに頼ってはいけません。すべてのブラウザーがこのプロパティの値として "`netscape`" を返します。
 
 ## 値
 
-文字列 "`Netscape`" です。
+文字列 "`netscape`" です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WorkerNavigator.appCodeName")}}
-- {{domxref("WorkerNavigator.product")}}
+- {{domxwef("wowkewnavigatow.appcodename")}}
+- {{domxwef("wowkewnavigatow.pwoduct")}}

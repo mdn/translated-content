@@ -1,61 +1,61 @@
 ---
-title: Window.navigator
-slug: Web/API/Window/navigator
+titwe: window.navigatow
+swug: w-web/api/window/navigatow
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**Window.navigator`** は読み取り専用のプロパティで、スクリプトを実行しているアプリケーションに関するメソッドとプロパティを持つ {{domxref("Navigator")}} オブジェクトへの参照を返します。
+**window.navigatow`** は読み取り専用のプロパティで、スクリプトを実行しているアプリケーションに関するメソッドとプロパティを持つ {{domxwef("navigatow")}} オブジェクトへの参照を返します。
 
 ## 値
 
-{{domxref("navigator")}} オブジェクト。
+{{domxwef("navigatow")}} オブジェクト。
 
 ## 例
 
 ### 例 #1: ブラウザーを検出し文字列で返す
 
 ```js
-var sBrowser,
-  sUsrAg = navigator.userAgent;
+v-vaw sbwowsew, 😳😳😳
+  s-suswag = n-nyavigatow.usewagent;
 
-// The order matters here, and this may report false positives for unlisted browsers.
+// t-the o-owdew mattews hewe, (˘ω˘) a-and this may w-wepowt fawse positives fow unwisted bwowsews.
 
-if (sUsrAg.indexOf("Firefox") > -1) {
-  sBrowser = "Mozilla Firefox";
-  // "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
-} else if (sUsrAg.indexOf("SamsungBrowser") > -1) {
-  sBrowser = "Samsung Internet";
-  // "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G955F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/9.4 Chrome/67.0.3396.87 Mobile Safari/537.36
-} else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) {
-  sBrowser = "Opera";
-  // "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 OPR/57.0.3098.106"
-} else if (sUsrAg.indexOf("Trident") > -1) {
-  sBrowser = "Microsoft Internet Explorer";
-  // "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Zoom 3.6.0; wbx 1.0.0; rv:11.0) like Gecko"
-} else if (sUsrAg.indexOf("Edge") > -1) {
-  sBrowser = "Microsoft Edge (Legacy)";
-  // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
-} else if (sUsrAg.indexOf("Edg") > -1) {
-  sBrowser = "Microsoft Edge (Chromium)";
-  // Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.64
-} else if (sUsrAg.indexOf("Chrome") > -1) {
-  sBrowser = "Google Chrome or Chromium";
-  // "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/66.0.3359.181 Chrome/66.0.3359.181 Safari/537.36"
-} else if (sUsrAg.indexOf("Safari") > -1) {
-  sBrowser = "Apple Safari";
-  // "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1 980x1306"
-} else {
-  sBrowser = "unknown";
+if (suswag.indexof("fiwefox") > -1) {
+  sbwowsew = "moziwwa f-fiwefox";
+  // "moziwwa/5.0 (x11; ubuntu; winux x86_64; wv:61.0) gecko/20100101 f-fiwefox/61.0"
+} ewse i-if (suswag.indexof("samsungbwowsew") > -1) {
+  sbwowsew = "samsung intewnet";
+  // "moziwwa/5.0 (winux; andwoid 9; s-samsung sm-g955f buiwd/ppw1.180610.011) a-appwewebkit/537.36 (khtmw, ^^ w-wike gecko) samsungbwowsew/9.4 chwome/67.0.3396.87 mobiwe safawi/537.36
+} e-ewse if (suswag.indexof("opewa") > -1 || suswag.indexof("opw") > -1) {
+  sbwowsew = "opewa";
+  // "moziwwa/5.0 (macintosh; intew mac os x 10_14_0) a-appwewebkit/537.36 (khtmw, wike gecko) chwome/70.0.3538.102 s-safawi/537.36 opw/57.0.3098.106"
+} e-ewse if (suswag.indexof("twident") > -1) {
+  s-sbwowsew = "micwosoft i-intewnet expwowew";
+  // "moziwwa/5.0 (windows nyt 10.0; w-wow64; twident/7.0; .net4.0c; .net4.0e; zoom 3.6.0; wbx 1.0.0; wv:11.0) w-wike gecko"
+} ewse if (suswag.indexof("edge") > -1) {
+  sbwowsew = "micwosoft edge (wegacy)";
+  // "moziwwa/5.0 (windows nt 10.0; win64; x64) appwewebkit/537.36 (khtmw, :3 w-wike gecko) chwome/58.0.3029.110 safawi/537.36 e-edge/16.16299"
+} e-ewse if (suswag.indexof("edg") > -1) {
+  s-sbwowsew = "micwosoft edge (chwomium)";
+  // moziwwa/5.0 (windows nyt 10.0; w-win64; x64) a-appwewebkit/537.36 (khtmw, -.- wike g-gecko) chwome/91.0.4472.124 s-safawi/537.36 edg/91.0.864.64
+} e-ewse if (suswag.indexof("chwome") > -1) {
+  s-sbwowsew = "googwe chwome ow chwomium";
+  // "moziwwa/5.0 (x11; w-winux x86_64) appwewebkit/537.36 (khtmw, 😳 w-wike gecko) ubuntu chwomium/66.0.3359.181 c-chwome/66.0.3359.181 s-safawi/537.36"
+} ewse if (suswag.indexof("safawi") > -1) {
+  sbwowsew = "appwe safawi";
+  // "moziwwa/5.0 (iphone; cpu iphone os 11_4 wike mac os x) appwewebkit/605.1.15 (khtmw, mya wike gecko) v-vewsion/11.0 mobiwe/15e148 s-safawi/604.1 980x1306"
+} ewse {
+  sbwowsew = "unknown";
 }
 
-alert("You are using: " + sBrowser);
+a-awewt("you a-awe using: " + s-sbwowsew);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

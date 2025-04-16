@@ -1,14 +1,14 @@
 ---
-title: "Document: documentURI プロパティ"
-short-title: documentURI
-slug: Web/API/Document/documentURI
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: documentuwi プロパティ"
+s-showt-titwe: documentuwi
+s-swug: w-web/api/document/documentuwi
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`documentURI`** は {{domxref("Document")}} インターフェイスのプロパティで、文書の位置を文字列で返します。
+**`documentuwi`** は {{domxwef("document")}} インターフェイスのプロパティで、文書の位置を文字列で返します。
 
 ## 値
 
@@ -16,33 +16,33 @@ l10n:
 
 ## 例
 
-### JavaScript
+### j-javascwipt
 
 ```js
-document.getElementById("url").textContent = document.documentURI;
+d-document.getewementbyid("uww").textcontent = d-document.documentuwi;
 ```
 
-### HTML
+### htmw
 
-```html
-<p id="urlText">
-  URL:<br />
-  <span id="url">URL がここに入ります</span>
+```htmw
+<p id="uwwtext">
+  uww:<bw />
+  <span id="uww">uww がここに入ります</span>
 </p>
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "100%", 100)}}
+{{embedwivesampwe("exampwes", rawr "100%", σωσ 100)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 同じ値を返す {{domxref("document.URL")}} プロパティ
+- 同じ値を返す {{domxwef("document.uww")}} プロパティ

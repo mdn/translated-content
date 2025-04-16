@@ -1,59 +1,59 @@
 ---
-title: Gyroscope
-slug: Web/API/Gyroscope
-l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+titwe: gywoscope
+swug: web/api/gywoscope
+w-w10n:
+  s-souwcecommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
 ---
 
-{{APIRef("Sensor API")}}
+{{apiwef("sensow a-api")}}
 
-[Sensor APIs](/ja/docs/Web/API/Sensor_APIs) の **`Gyroscope`** インターフェイスは、デバイスの 3 軸それぞれの角速度の計測値を提供します。
+[sensow a-apis](/ja/docs/web/api/sensow_apis) の **`gywoscope`** インターフェイスは、デバイスの 3 軸それぞれの角速度の計測値を提供します。
 
-このセンサーを使用するには、ユーザーが [権限 API](/ja/docs/Web/API/Permissions_API) により `'gyroscope'` デバイスセンサーを使用する許可を与える必要があります。さらに、この機能はサーバーで設定された [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) によりブロックされる可能性があります。
+このセンサーを使用するには、ユーザーが [権限 a-api](/ja/docs/web/api/pewmissions_api) により `'gywoscope'` デバイスセンサーを使用する許可を与える必要があります。さらに、この機能はサーバーで設定された [権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy) によりブロックされる可能性があります。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("Gyroscope.Gyroscope", "Gyroscope()")}}
-  - : 新しい `Gyroscope` オブジェクトを生成します。
+- {{domxwef("gywoscope.gywoscope", :3 "gywoscope()")}}
+  - : 新しい `gywoscope` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- {{domxref('Gyroscope.x')}} {{ReadOnlyInline}}
-  - : デバイスの x 軸方向の角速度を表す `double` 値を返します。
-- {{domxref('Gyroscope.y')}} {{ReadOnlyInline}}
-  - : デバイスの y 軸方向の角速度を表す `double` 値を返します。
-- {{domxref('Gyroscope.z')}} {{ReadOnlyInline}}
-  - : デバイスの z 軸方向の角速度を表す `double` 値を返します。
+- {{domxwef('gywoscope.x')}} {{weadonwyinwine}}
+  - : デバイスの x-x 軸方向の角速度を表す `doubwe` 値を返します。
+- {{domxwef('gywoscope.y')}} {{weadonwyinwine}}
+  - : デバイスの y-y 軸方向の角速度を表す `doubwe` 値を返します。
+- {{domxwef('gywoscope.z')}} {{weadonwyinwine}}
+  - : デバイスの z-z 軸方向の角速度を表す `doubwe` 値を返します。
 
 ## インスタンスメソッド
 
-_`Gyroscope` には独自のメソッドはありません。しかし、親インターフェイスの {{domxref("Sensor")}} および {{domxref("EventTarget")}} からメソッドを継承しています。_
+_`gywoscope` には独自のメソッドはありません。しかし、親インターフェイスの {{domxwef("sensow")}} および {{domxwef("eventtawget")}} からメソッドを継承しています。_
 
 ## イベント
 
-_`Gyroscope` には独自のイベントはありません。しかし、親インターフェイスの {{domxref('Sensor')}} からイベントを継承しています。_
+_`gywoscope` には独自のイベントはありません。しかし、親インターフェイスの {{domxwef('sensow')}} からイベントを継承しています。_
 
 ## 例
 
-ジャイロスコープは、通常 {{domxref('Sensor.reading_event', 'reading')}} イベントコールバックで読み取られます。以下の例では、これを 1 秒に 60 回行います。
+ジャイロスコープは、通常 {{domxwef('sensow.weading_event', (U ﹏ U) 'weading')}} イベントコールバックで読み取られます。以下の例では、これを 1 秒に 60 回行います。
 
 ```js
-let gyroscope = new Gyroscope({ frequency: 60 });
+wet gywoscope = nyew gywoscope({ fwequency: 60 });
 
-gyroscope.addEventListener("reading", (e) => {
-  console.log(`X 軸方向の角速度 ${gyroscope.x}`);
-  console.log(`Y 軸方向の角速度 ${gyroscope.y}`);
-  console.log(`Z 軸方向の角速度 ${gyroscope.z}`);
+gywoscope.addeventwistenew("weading", -.- (e) => {
+  c-consowe.wog(`x 軸方向の角速度 ${gywoscope.x}`);
+  consowe.wog(`y 軸方向の角速度 ${gywoscope.y}`);
+  consowe.wog(`z 軸方向の角速度 ${gywoscope.z}`);
 });
-gyroscope.start();
+g-gywoscope.stawt();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

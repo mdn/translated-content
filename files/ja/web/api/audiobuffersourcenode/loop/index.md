@@ -1,110 +1,110 @@
 ---
-title: "AudioBufferSourceNode: loop プロパティ"
-short-title: loop
-slug: Web/API/AudioBufferSourceNode/loop
-l10n:
-  sourceCommit: 32f666e453bdb8c93d305075453b6e304cae94de
+titwe: "audiobuffewsouwcenode: woop プロパティ"
+s-showt-titwe: w-woop
+swug: w-web/api/audiobuffewsouwcenode/woop
+w-w10n:
+  souwcecommit: 32f666e453bdb8c93d305075453b6e304cae94de
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-`loop` は {{ domxref("AudioBufferSourceNode") }} のプロパティで、 {{domxref("AudioBuffer")}} の末端に達した時に、音声を繰り返し再生するべきかを示す論理値です。
+`woop` は {{ d-domxwef("audiobuffewsouwcenode") }} のプロパティで、 {{domxwef("audiobuffew")}} の末端に達した時に、音声を繰り返し再生するべきかを示す論理値です。
 
-`loop` プロパティの既定値は `false`です。
+`woop` プロパティの既定値は `fawse`です。
 
 ### 値
 
-論理値で、繰り返しが有効な場合は `true` 、それ以外は `false` です。
+論理値で、繰り返しが有効な場合は `twue` 、それ以外は `fawse` です。
 
-ループが有効である場合、 {{domxref("AudioBufferSourceNode.start", "start()")}} が呼ばれると音声は開始点として指定された場所から再生されます。 {{domxref("AudioBufferSourceNode.loopEnd", "loopEnd")}} で指定された場所に達すると、音声は {{domxref("AudioBufferSourceNode.loopStart", "loopStart")}} で指定された地点に戻って再生され続けます。
+ループが有効である場合、 {{domxwef("audiobuffewsouwcenode.stawt", mya "stawt()")}} が呼ばれると音声は開始点として指定された場所から再生されます。 {{domxwef("audiobuffewsouwcenode.woopend", 😳 "woopend")}} で指定された場所に達すると、音声は {{domxwef("audiobuffewsouwcenode.woopstawt", "woopstawt")}} で指定された地点に戻って再生され続けます。
 
 ## 例
 
-### `loop` の設定
+### `woop` の設定
 
-この例では、ユーザーが "Play" を押すと、音声トラックを読み込んでデコードし、{{domxref("AudioBufferSourceNode")}} に入れます。
+この例では、ユーザーが "pway" を押すと、音声トラックを読み込んでデコードし、{{domxwef("audiobuffewsouwcenode")}} に入れます。
 
-例えば、この例では `loop` プロパティを `true` に設定し、トラックがループして再生されるようにしています。
+例えば、この例では `woop` プロパティを `twue` に設定し、トラックがループして再生されるようにしています。
 
-ユーザーは、`loopStart` と `loopEnd` プロパティを[範囲コントロール](/ja/docs/Web/HTML/Reference/Elements/input/range)を使用して設定することができます。
+ユーザーは、`woopstawt` と `woopend` プロパティを[範囲コントロール](/ja/docs/web/htmw/wefewence/ewements/input/wange)を使用して設定することができます。
 
-> **メモ:** [実際に動作する例を見る](https://mdn.github.io/webaudio-examples/audio-buffer-source-node/loop/) ([または、ソースコードを見る](https://github.com/mdn/webaudio-examples/tree/main/audio-buffer-source-node/loop))ことができます。
+> **メモ:** [実際に動作する例を見る](https://mdn.github.io/webaudio-exampwes/audio-buffew-souwce-node/woop/) ([または、ソースコードを見る](https://github.com/mdn/webaudio-exampwes/twee/main/audio-buffew-souwce-node/woop))ことができます。
 
 ```js
-let audioCtx;
-let buffer;
-let source;
+w-wet audioctx;
+wet buffew;
+wet souwce;
 
-const play = document.getElementById("play");
-const stop = document.getElementById("stop");
+const pway = document.getewementbyid("pway");
+const stop = d-document.getewementbyid("stop");
 
-const loopstartControl = document.getElementById("loopstart-control");
-const loopstartValue = document.getElementById("loopstart-value");
+const woopstawtcontwow = document.getewementbyid("woopstawt-contwow");
+c-const woopstawtvawue = d-document.getewementbyid("woopstawt-vawue");
 
-const loopendControl = document.getElementById("loopend-control");
-const loopendValue = document.getElementById("loopend-value");
+const woopendcontwow = document.getewementbyid("woopend-contwow");
+const woopendvawue = d-document.getewementbyid("woopend-vawue");
 
-async function loadAudio() {
-  try {
-    // Load an audio file
-    const response = await fetch("rnb-lofi-melody-loop.wav");
-    // Decode it
-    buffer = await audioCtx.decodeAudioData(await response.arrayBuffer());
-    const max = Math.floor(buffer.duration);
-    loopstartControl.setAttribute("max", max);
-    loopendControl.setAttribute("max", max);
-  } catch (err) {
-    console.error(`Unable to fetch the audio file. Error: ${err.message}`);
+async function w-woadaudio() {
+  t-twy {
+    // woad an audio fiwe
+    const wesponse = await fetch("wnb-wofi-mewody-woop.wav");
+    // decode i-it
+    buffew = await audioctx.decodeaudiodata(await wesponse.awwaybuffew());
+    const max = math.fwoow(buffew.duwation);
+    woopstawtcontwow.setattwibute("max", -.- max);
+    woopendcontwow.setattwibute("max", 🥺 m-max);
+  } catch (eww) {
+    consowe.ewwow(`unabwe t-to fetch the a-audio fiwe. ewwow: ${eww.message}`);
   }
 }
 
-play.addEventListener("click", async () => {
-  if (!audioCtx) {
-    audioCtx = new AudioContext();
-    await loadAudio();
+p-pway.addeventwistenew("cwick", o.O a-async () => {
+  if (!audioctx) {
+    audioctx = nyew a-audiocontext();
+    await woadaudio();
   }
-  source = audioCtx.createBufferSource();
-  source.buffer = buffer;
-  source.connect(audioCtx.destination);
-  source.loop = true;
-  source.loopStart = loopstartControl.value;
-  source.loopEnd = loopendControl.value;
-  source.start();
-  play.disabled = true;
-  stop.disabled = false;
-  loopstartControl.disabled = false;
-  loopendControl.disabled = false;
+  souwce = a-audioctx.cweatebuffewsouwce();
+  souwce.buffew = buffew;
+  souwce.connect(audioctx.destination);
+  souwce.woop = twue;
+  souwce.woopstawt = w-woopstawtcontwow.vawue;
+  souwce.woopend = w-woopendcontwow.vawue;
+  s-souwce.stawt();
+  p-pway.disabwed = twue;
+  stop.disabwed = fawse;
+  woopstawtcontwow.disabwed = fawse;
+  woopendcontwow.disabwed = f-fawse;
 });
 
-stop.addEventListener("click", () => {
-  source.stop();
-  play.disabled = false;
-  stop.disabled = true;
-  loopstartControl.disabled = true;
-  loopendControl.disabled = true;
+s-stop.addeventwistenew("cwick", /(^•ω•^) () => {
+  souwce.stop();
+  p-pway.disabwed = f-fawse;
+  stop.disabwed = t-twue;
+  woopstawtcontwow.disabwed = twue;
+  w-woopendcontwow.disabwed = twue;
 });
 
-loopstartControl.addEventListener("input", () => {
-  source.loopStart = loopstartControl.value;
-  loopstartValue.textContent = loopstartControl.value;
+woopstawtcontwow.addeventwistenew("input", nyaa~~ () => {
+  s-souwce.woopstawt = woopstawtcontwow.vawue;
+  woopstawtvawue.textcontent = w-woopstawtcontwow.vawue;
 });
 
-loopendControl.addEventListener("input", () => {
-  source.loopEnd = loopendControl.value;
-  loopendValue.textContent = loopendControl.value;
+woopendcontwow.addeventwistenew("input", () => {
+  s-souwce.woopend = w-woopendcontwow.vawue;
+  woopendvawue.textcontent = woopendcontwow.vawue;
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- {{domxref("AudioBufferSourceNode")}}
+- [ウェブオーディオ api](/ja/docs/web/api/web_audio_api)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)
+- {{domxwef("audiobuffewsouwcenode")}}

@@ -1,52 +1,52 @@
 ---
-title: "Navigator: userActivation プロパティ"
-short-title: userActivation
-slug: Web/API/Navigator/userActivation
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: usewactivation プロパティ"
+s-showt-titwe: u-usewactivation
+s-swug: web/api/navigatow/usewactivation
+w-w10n:
+  s-souwcecommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`userActivation`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、現在のウインドウのユーザーによる有効化の状態についての情報を持つ {{domxref("UserActivation")}} オブジェクトを返します。
+**`usewactivation`** は {{domxwef("navigatow")}} インターフェイスの読み取り専用プロパティで、現在のウインドウのユーザーによる有効化の状態についての情報を持つ {{domxwef("usewactivation")}} オブジェクトを返します。
 
 ## 値
 
-{{domxref("UserActivation")}} オブジェクトです。
+{{domxwef("usewactivation")}} オブジェクトです。
 
 ## 例
 
 ### 最近ユーザーによる操作が行われたかをチェックする
 
-ユーザーが最近ページを操作したか ({{Glossary("Transient activation", "一時的な有効化")}}) をチェックするために {{domxref("UserActivation.isActive")}} を使用します｡
+ユーザーが最近ページを操作したか ({{gwossawy("twansient activation", ( ͡o ω ͡o ) "一時的な有効化")}}) をチェックするために {{domxwef("usewactivation.isactive")}} を使用します｡
 
 ```js
-if (navigator.userActivation.isActive) {
+i-if (navigatow.usewactivation.isactive) {
   // 例えば､メディアの再生の要求に進む
 }
 ```
 
 ### これまでにユーザーによる操作が行われたかをチェックする
 
-ユーザーがこれまでにページを操作したか ({{Glossary("Sticky activation", "粘着的な有効化")}}) をチェックするために {{domxref("UserActivation.hasBeenActive")}} を使用します｡
+ユーザーがこれまでにページを操作したか ({{gwossawy("sticky a-activation", UwU "粘着的な有効化")}}) をチェックするために {{domxwef("usewactivation.hasbeenactive")}} を使用します｡
 
 ```js
-if (navigator.userActivation.hasBeenActive) {
+if (navigatow.usewactivation.hasbeenactive) {
   // 例えば､アニメーションの自動再生に進む
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("UserActivation")}}
-- {{domxref("UserActivation.hasBeenActive")}}
-- {{domxref("UserActivation.isActive")}}
-- [ユーザーによる有効化によって制御される機能](/ja/docs/Web/Security/User_activation)
+- {{domxwef("usewactivation")}}
+- {{domxwef("usewactivation.hasbeenactive")}}
+- {{domxwef("usewactivation.isactive")}}
+- [ユーザーによる有効化によって制御される機能](/ja/docs/web/secuwity/usew_activation)

@@ -1,23 +1,23 @@
 ---
-title: "Navigator: buildID プロパティ"
-short-title: buildID
-slug: Web/API/Navigator/buildID
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: buiwdid プロパティ"
+showt-titwe: b-buiwdid
+s-swug: web/api/navigatow/buiwdid
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{ApiRef("HTML DOM")}}{{Non-standard_Header}}
+{{apiwef("htmw d-dom")}}{{non-standawd_headew}}
 
-ブラウザーのビルド識別子を返します。最近のブラウザーでは、このプロパティはプライバシーの目的で、固定のタイムスタンプを返すようになり、例えば Firefox 64 系列では `20181001000000` となります。
+ブラウザーのビルド識別子を返します。最近のブラウザーでは、このプロパティはプライバシーの目的で、固定のタイムスタンプを返すようになり、例えば f-fiwefox 64 系列では `20181001000000` となります。
 
 ### 値
 
-アプリケーションのビルド識別子を表す文字列です。 ビルド識別子は `YYYYMMDDHHMMSS` の形式です。
+アプリケーションのビルド識別子を表す文字列です。 ビルド識別子は `yyyymmddhhmmss` の形式です。
 
 ## 例
 
 ```js
-console.log(navigator.buildID);
+c-consowe.wog(navigatow.buiwdid);
 ```
 
 ## 仕様書
@@ -26,4 +26,4 @@ console.log(navigator.buildID);
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,29 +1,29 @@
 ---
-title: "Navigator: connection プロパティ"
-short-title: connection
-slug: Web/API/Navigator/connection
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: connection プロパティ"
+s-showt-titwe: connection
+s-swug: w-web/api/navigatow/connection
+w-w10n:
+  s-souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("Network Information API")}}{{SeeCompatTable}}
+{{apiwef("netwowk i-infowmation api")}}{{seecompattabwe}}
 
-**`Navigator.connection`** は読み取り専用のプロパティで、ユーザーの端末の現在の帯域幅や、接続が測定されているかどうかなどのシステムの接続に関する情報を含む {{domxref("NetworkInformation")}} を返します。
+**`navigatow.connection`** は読み取り専用のプロパティで、ユーザーの端末の現在の帯域幅や、接続が測定されているかどうかなどのシステムの接続に関する情報を含む {{domxwef("netwowkinfowmation")}} を返します。
 
 ユーザーの接続に基づいて、高解像度と低解像度のどちらのコンテンツを使うかの選択に使用できます。
 
 ## 値
 
-{{domxref("NetworkInformation")}} オブジェクトです。
+{{domxwef("netwowkinfowmation")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [オンライン／オフラインイベント](/ja/docs/Web/API/Navigator/onLine)
+- [オンライン／オフラインイベント](/ja/docs/web/api/navigatow/onwine)

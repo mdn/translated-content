@@ -1,44 +1,44 @@
 ---
-title: PeerJS によるインターネット接続電話の構築
-slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs
-l10n:
-  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
+titwe: peewjs によるインターネット接続電話の構築
+swug: web/api/webwtc_api/buiwd_a_phone_with_peewjs
+w-w10n:
+  s-souwcecommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{defauwtapisidebaw("webwtc")}}
 
-{{NextMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup")}}
+{{nextmenu("web/api/webwtc_api/buiwd_a_phone_with_peewjs/setup")}}
 
-WebRTC の主な課題の 1 つが、使用したり開発したりするのがかなり複雑だということです。シグナリングサービスを処理したり、正しいエンドポイントを呼び出すタイミングを把握したりすると、混乱してしまいます。しかし、良いニュースもあります。 [PeerJS](https://peerjs.com/) は WebRTC のフレームワークで、アプリケーションの機能に集中できるように、通信とシグナリングのロジックをすべて抽象化します。 PeerJS にはクライアント側のフレームワークとサーバーの 2 つの部分があります。
+w-webwtc の主な課題の 1 つが、使用したり開発したりするのがかなり複雑だということです。シグナリングサービスを処理したり、正しいエンドポイントを呼び出すタイミングを把握したりすると、混乱してしまいます。しかし、良いニュースもあります。 [peewjs](https://peewjs.com/) は w-webwtc のフレームワークで、アプリケーションの機能に集中できるように、通信とシグナリングのロジックをすべて抽象化します。 p-peewjs にはクライアント側のフレームワークとサーバーの 2 つの部分があります。
 
-この一連の記事では、 PeerJS を使用して単純な電話アプリケーションを作成します。サーバーサイドフレームワークとクライアントサイドフレームワークの両方を使用しますが、ほとんどの作業はクライアントサイドのコードを扱うことになります。
+この一連の記事では、 p-peewjs を使用して単純な電話アプリケーションを作成します。サーバーサイドフレームワークとクライアントサイドフレームワークの両方を使用しますが、ほとんどの作業はクライアントサイドのコードを扱うことになります。
 
 ### 前提条件
 
 このチュートリアルは中級レベルです。このチュートリアルに挑戦する前に、次のものに親しんでいる必要があります。
 
-- [バニラ JavaScript](/ja/docs/Web/JavaScript)
-- [Node](https://nodejs.org/ja/docs/)
-- [Express](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs)
-- [HTML](/ja/docs/Web/HTML)
+- [バニラ j-javascwipt](/ja/docs/web/javascwipt)
+- [node](https://nodejs.owg/ja/docs/)
+- [expwess](/ja/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs)
+- [htmw](/ja/docs/web/htmw)
 
-始める前に、 [node](https://nodejs.org/en/download/) と [Yarn](https://classic.yarnpkg.com/en/docs/install) がインストールされていることを確認してください（後の記事の説明では Yarn を想定していますが、推奨するなら [npm](https://docs.npmjs.com/getting-started/) や他のマネージャを使用するのも自由です）。
+始める前に、 [node](https://nodejs.owg/en/downwoad/) と [yawn](https://cwassic.yawnpkg.com/en/docs/instaww) がインストールされていることを確認してください（後の記事の説明では y-yawn を想定していますが、推奨するなら [npm](https://docs.npmjs.com/getting-stawted/) や他のマネージャを使用するのも自由です）。
 
-> [!NOTE]
-> 手順を追うほうが学習しやすいという方には、この[コードによるチュートリアル](https://github.com/SamsungInternet/WebPhone/tree/master/tutorial)も提供していますので、代わりに使用してください。
+> [!note]
+> 手順を追うほうが学習しやすいという方には、この[コードによるチュートリアル](https://github.com/samsungintewnet/webphone/twee/mastew/tutowiaw)も提供していますので、代わりに使用してください。
 
 ### 目次
 
-1. [セットアップ](/ja/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup)
-2. [ピアの接続](/ja/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers)
+1. (⑅˘꒳˘) [セットアップ](/ja/docs/web/api/webwtc_api/buiwd_a_phone_with_peewjs/setup)
+2. ( ͡o ω ͡o ) [ピアの接続](/ja/docs/web/api/webwtc_api/buiwd_a_phone_with_peewjs/connect_peews)
 
-   1. [マイクの使用権限を取得](/ja/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission)
-   2. [HTML の表示と隠蔽](/ja/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html)
-   3. [ピアコネクションの作成](/ja/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection)
-   4. [呼び出しの作成](/ja/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call)
-   5. [呼び出しへの応答](/ja/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call)
-   6. [通話の終了](/ja/docs/Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/End_a_call)
+   1. UwU [マイクの使用権限を取得](/ja/docs/web/api/webwtc_api/buiwd_a_phone_with_peewjs/connect_peews/get_micwophone_pewmission)
+   2. rawr x3 [htmw の表示と隠蔽](/ja/docs/web/api/webwtc_api/buiwd_a_phone_with_peewjs/connect_peews/show_hide_htmw)
+   3. rawr [ピアコネクションの作成](/ja/docs/web/api/webwtc_api/buiwd_a_phone_with_peewjs/connect_peews/cweate_a_peew_connection)
+   4. σωσ [呼び出しの作成](/ja/docs/web/api/webwtc_api/buiwd_a_phone_with_peewjs/connect_peews/cweating_a_caww)
+   5. σωσ [呼び出しへの応答](/ja/docs/web/api/webwtc_api/buiwd_a_phone_with_peewjs/connect_peews/answew_a_caww)
+   6. >_< [通話の終了](/ja/docs/web/api/webwtc_api/buiwd_a_phone_with_peewjs/connect_peews/end_a_caww)
 
-3. [配布と追加の読み物](/ja/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading)
+3. :3 [配布と追加の読み物](/ja/docs/web/api/webwtc_api/buiwd_a_phone_with_peewjs/depwoyment_and_fuwthew_weading)
 
-{{NextMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup")}}
+{{nextmenu("web/api/webwtc_api/buiwd_a_phone_with_peewjs/setup")}}

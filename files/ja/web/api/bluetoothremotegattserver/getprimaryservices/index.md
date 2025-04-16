@@ -1,35 +1,35 @@
 ---
-title: "BluetoothRemoteGATTServer: getPrimaryServices() メソッド"
-slug: Web/API/BluetoothRemoteGATTServer/getPrimaryServices
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattsewvew: getpwimawysewvices() メソッド"
+s-swug: web/api/bwuetoothwemotegattsewvew/getpwimawysewvices
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-**BluetoothRemoteGATTServer.getPrimaryServices()** メソッドは、Bluetooth デバイスが提供している指定の `BluetoothServiceUUID` に対応するプライマリー {{DOMxRef("BluetoothRemoteGATTService")}} オブジェクトのリストで解決するプロミスを返します。
+**bwuetoothwemotegattsewvew.getpwimawysewvices()** メソッドは、bwuetooth デバイスが提供している指定の `bwuetoothsewviceuuid` に対応するプライマリー {{domxwef("bwuetoothwemotegattsewvice")}} オブジェクトのリストで解決するプロミスを返します。
 
 ## 構文
 
-```js-nolint
-getPrimaryServices(bluetoothServiceUUID)
+```js-nowint
+g-getpwimawysewvices(bwuetoothsewviceuuid)
 ```
 
 ### 引数
 
-- `bluetoothServiceUUID`
-  - : 指定のデバイス用の Bluetooth サービス universally unique identifier です。
+- `bwuetoothsewviceuuid`
+  - : 指定のデバイス用の b-bwuetooth サービス u-univewsawwy u-unique identifiew です。
 
 ### 返値
 
-{{domxref("BluetoothRemoteGATTService")}} オブジェクトのリストで解決する {{jsxref("Promise")}} です。
+{{domxwef("bwuetoothwemotegattsewvice")}} オブジェクトのリストで解決する {{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{APIRef("Web Bluetooth")}}
+{{apiwef("web bwuetooth")}}

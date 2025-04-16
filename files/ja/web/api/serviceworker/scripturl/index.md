@@ -1,14 +1,14 @@
 ---
-title: ServiceWorker.scriptURL
-slug: Web/API/ServiceWorker/scriptURL
-l10n:
-  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
+titwe: sewvicewowkew.scwiptuww
+swug: web/api/sewvicewowkew/scwiptuww
+w-w10n:
+  s-souwcecommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews a-api")}}
 
-[`ServiceWorkerRegistration`](/ja/docs/Web/API/ServiceWorkerRegistration) の一部として定義された `ServiceWorker` シリアライズスクリプトの URL を返します。
-`ServiceWorker` を登録した文書と同じオリジンである必要があります。
+[`sewvicewowkewwegistwation`](/ja/docs/web/api/sewvicewowkewwegistwation) の一部として定義された `sewvicewowkew` シリアライズスクリプトの u-uww を返します。
+`sewvicewowkew` を登録した文書と同じオリジンである必要があります。
 
 ## 値
 
@@ -17,15 +17,15 @@ l10n:
 ## 例
 
 ```js
-const sw = navigator.serviceWorker.controller;
-console.log(sw.scriptURL);
-// https://example.com/scripts/service-worker.js
+c-const s-sw = nyavigatow.sewvicewowkew.contwowwew;
+c-consowe.wog(sw.scwiptuww);
+// https://exampwe.com/scwipts/sewvice-wowkew.js
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

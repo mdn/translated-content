@@ -1,18 +1,18 @@
 ---
-title: "WorkerNavigator: clearAppBadge() メソッド"
-slug: Web/API/WorkerNavigator/clearAppBadge
-l10n:
-  sourceCommit: dbfd14568c69f049452ab4fdc9c2629b63ca78d2
+titwe: "wowkewnavigatow: cweawappbadge() メソッド"
+s-swug: w-web/api/wowkewnavigatow/cweawappbadge
+w-w10n:
+  souwcecommit: d-dbfd14568c69f049452ab4fdc9c2629b63ca78d2
 ---
 
-{{APIRef("Badging API")}}{{securecontext_header}}
+{{apiwef("badging a-api")}}{{secuwecontext_headew}}
 
-{{domxref("WorkerNavigator")}} インターフェイスの **`clearAppBadge()`** メソッドは、現在のアプリケーションのアイコン上のバッジを `nothing` に設定し、クリアします。値 `nothing` は現在バッジが何も設定されておらず、バッジの状態が _cleared_ であることを示します。
+{{domxwef("wowkewnavigatow")}} インターフェイスの **`cweawappbadge()`** メソッドは、現在のアプリケーションのアイコン上のバッジを `nothing` に設定し、クリアします。値 `nothing` は現在バッジが何も設定されておらず、バッジの状態が _cweawed_ であることを示します。
 
 ## 構文
 
-```js-nolint
-clearAppBadge()
+```js-nowint
+c-cweawappbadge()
 ```
 
 ### 引数
@@ -21,33 +21,33 @@ clearAppBadge()
 
 ### 返値
 
-{{jsxref("undefined")}} で解決する {{jsxref("Promise")}} です。
+{{jsxwef("undefined")}} で解決する {{jsxwef("pwomise")}} です。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : 文書が完全にアクティブでないとき投げられます。
-- `SecurityError` {{domxref("DOMException")}}
-  - : 呼び出しが[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)によりブロックされたとき投げられます。
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : {{domxref('PermissionStatus.state')}} が `granted` でないとき投げられます。
+- `secuwityewwow` {{domxwef("domexception")}}
+  - : 呼び出しが[同一オリジンポリシー](/ja/docs/web/secuwity/same-owigin_powicy)によりブロックされたとき投げられます。
+- `notawwowedewwow` {{domxwef("domexception")}}
+  - : {{domxwef('pewmissionstatus.state')}} が `gwanted` でないとき投げられます。
 
 ## 例
 
-アプリケーションにあるすべてのメッセージが読まれたら、`clearAppBadge()` を呼び出してバッジをクリアし、通知を除去します。
+アプリケーションにあるすべてのメッセージが読まれたら、`cweawappbadge()` を呼び出してバッジをクリアし、通知を除去します。
 
 ```js
-navigator.clearAppBadge();
+n-nyavigatow.cweawappbadge();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Badging for app icons](https://developer.chrome.com/docs/capabilities/web-apis/badging-api/)
+- [badging f-fow app icons](https://devewopew.chwome.com/docs/capabiwities/web-apis/badging-api/)

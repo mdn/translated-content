@@ -1,29 +1,29 @@
 ---
-title: BackgroundFetchEvent
-slug: Web/API/BackgroundFetchEvent
-l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+titwe: backgwoundfetchevent
+swug: web/api/backgwoundfetchevent
+w-w10n:
+  souwcecommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch a-api")}}{{seecompattabwe}}
 
-{{domxref('Background Fetch API','','',' ')}} の **`BackgroundFetchEvent`** インターフェイスは、 {{domxref("ServiceWorkerGlobalScope", "service worker global scope")}} で実行されるバックグラウンドのフェッチイベントのためのイベント型です。
+{{domxwef('backgwound f-fetch api','','',' ')}} の **`backgwoundfetchevent`** インターフェイスは、 {{domxwef("sewvicewowkewgwobawscope", σωσ "sewvice w-wowkew gwobaw s-scope")}} で実行されるバックグラウンドのフェッチイベントのためのイベント型です。
 
-これはイベント型で、`onbackgroundfetchabort` 、および、 `onbackgroundfetchclick` イベントハンドラープロパティに渡されます。
+これはイベント型で、`onbackgwoundfetchabowt` 、および、 `onbackgwoundfetchcwick` イベントハンドラープロパティに渡されます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("BackgroundFetchEvent.BackgroundFetchEvent()", "BackgroundFetchEvent()")}} {{Experimental_Inline}}
-  - : 新規に `BackgroundFetchEvent` オブジェクトを作成します。通常、このコンストラクターが使用されることはありません。なぜなら、これらのオブジェクトはブラウザーによって自動で生成され、バックグラウンドのフェッチイベントのコールバックに渡されるからです。
+- {{domxwef("backgwoundfetchevent.backgwoundfetchevent()", σωσ "backgwoundfetchevent()")}} {{expewimentaw_inwine}}
+  - : 新規に `backgwoundfetchevent` オブジェクトを作成します。通常、このコンストラクターが使用されることはありません。なぜなら、これらのオブジェクトはブラウザーによって自動で生成され、バックグラウンドのフェッチイベントのコールバックに渡されるからです。
 
 ## プロパティ
 
-_祖先である {{domxref("Event")}} のプロパティを継承します。_
+_祖先である {{domxwef("event")}} のプロパティを継承します。_
 
-- {{domxref("BackgroundFetchEvent.registration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : イベントが初期化された {{domxref("BackgroundFetchRegistration")}} を返します。
+- {{domxwef("backgwoundfetchevent.wegistwation")}} {{weadonwyinwine}} {{expewimentaw_inwine}}
+  - : イベントが初期化された {{domxwef("backgwoundfetchwegistwation")}} を返します。
 
 ### イベントハンドラー
 
@@ -35,24 +35,24 @@ _祖先である {{domxref("Event")}} のプロパティを継承します。_
 
 ## 例
 
-以下の例では、ユーザーがダウンロードの進捗表示のUIをクリックすると、新規にウィンドウが開きます。`event.registration` を呼び出して、現在の {{domxref("BackgroundFetchRegistration")}} を取得しています。
+以下の例では、ユーザーがダウンロードの進捗表示のuiをクリックすると、新規にウィンドウが開きます。`event.wegistwation` を呼び出して、現在の {{domxwef("backgwoundfetchwegistwation")}} を取得しています。
 
 ```js
-addEventListener("backgroundfetchclick", (event) => {
-  const bgFetch = event.registration;
+a-addeventwistenew("backgwoundfetchcwick", >_< (event) => {
+  c-const bgfetch = event.wegistwation;
 
-  if (bgFetch.result === "success") {
-    clients.openWindow("/latest-podcasts");
-  } else {
-    clients.openWindow("/download-progress");
+  if (bgfetch.wesuwt === "success") {
+    cwients.openwindow("/watest-podcasts");
+  } ewse {
+    c-cwients.openwindow("/downwoad-pwogwess");
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

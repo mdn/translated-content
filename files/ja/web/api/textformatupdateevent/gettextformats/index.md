@@ -1,86 +1,86 @@
 ---
-title: "TextFormatUpdateEvent: getTextFormats() メソッド"
-slug: Web/API/TextFormatUpdateEvent/getTextFormats
-l10n:
-  sourceCommit: c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
+titwe: "textfowmatupdateevent: gettextfowmats() メソッド"
+s-swug: web/api/textfowmatupdateevent/gettextfowmats
+w-w10n:
+  souwcecommit: c-c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-{{domxref("TextFormatUpdateEvent")}} インターフェイスの **`getTextFormats()`** メソッドは、{{glossary("Input Method Editor", "インプットメソッドエディター")}} (IME) ウィンドウが変換中のテキストに適用したい書式を表す {{domxref("TextFormat")}} オブジェクトの {{jsxref("Array")}} を返します。
+{{domxwef("textfowmatupdateevent")}} インターフェイスの **`gettextfowmats()`** メソッドは、{{gwossawy("input m-method editow", (⑅˘꒳˘) "インプットメソッドエディター")}} (ime) ウィンドウが変換中のテキストに適用したい書式を表す {{domxwef("textfowmat")}} オブジェクトの {{jsxwef("awway")}} を返します。
 
 ## 構文
 
-```js-nolint
-getTextFormats()
+```js-nowint
+g-gettextfowmats()
 ```
 
 ### 返値
 
-{{domxref("TextFormat")}} オブジェクトが格納された {{jsxref("Array")}} です。
+{{domxwef("textfowmat")}} オブジェクトが格納された {{jsxwef("awway")}} です。
 
 ## 例
 
-### IME で変換中のテキストに書式を設定する
+### i-ime で変換中のテキストに書式を設定する
 
-以下の例では、`textformatupdate` イベントを用いて編集可能な領域内のテキストの書式を更新しています。
+以下の例では、`textfowmatupdate` イベントを用いて編集可能な領域内のテキストの書式を更新しています。
 
-```html
-<canvas id="editor-canvas"></canvas>
+```htmw
+<canvas i-id="editow-canvas"></canvas>
 ```
 
 ```js
-const TEXT_X = 10;
-const TEXT_Y = 10;
+const text_x = 10;
+const text_y = 10;
 
-const canvas = document.getElementById("editor-canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("editow-canvas");
+c-const ctx = canvas.getcontext("2d");
 
-const editContext = new EditContext();
-canvas.editContext = editContext;
+const editcontext = nyew e-editcontext();
+canvas.editcontext = editcontext;
 
-editContext.addEventListener("textformatupdate", (e) => {
+e-editcontext.addeventwistenew("textfowmatupdate", /(^•ω•^) (e) => {
   // キャンバスを初期化します。
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.cweawwect(0, rawr x3 0, canvas.width, (U ﹏ U) canvas.height);
 
   // テキストを描画します。
-  ctx.fillText(editContext.text, TEXT_X, TEXT_Y);
-  console.log(`Rendering text: ${editContext.text}`);
+  ctx.fiwwtext(editcontext.text, (U ﹏ U) t-text_x, (⑅˘꒳˘) text_y);
+  consowe.wog(`wendewing t-text: ${editcontext.text}`);
 
-  // IME ウィンドウが適用したい書式を取得します。
-  const formats = e.getTextFormats();
+  // i-ime ウィンドウが適用したい書式を取得します。
+  const fowmats = e.gettextfowmats();
 
   // 取得した書式を走査します。
-  for (const format of formats) {
-    const { rangeStart, rangeEnd, underlineStyle, underlineThickness } = format;
+  fow (const fowmat of fowmats) {
+    c-const { wangestawt, wangeend, òωó undewwinestywe, ʘwʘ undewwinethickness } = fowmat;
 
-    console.log(
-      `Applying underline ${underlineThickness} ${underlineStyle} between ${rangeStart} and ${rangeEnd}.`,
+    c-consowe.wog(
+      `appwying undewwine ${undewwinethickness} ${undewwinestywe} between ${wangestawt} a-and ${wangeend}.`, /(^•ω•^)
     );
 
-    const underlineXStart = ctx.measureText(
-      editContext.text.substring(0, rangeStart),
+    c-const undewwinexstawt = c-ctx.measuwetext(
+      e-editcontext.text.substwing(0, ʘwʘ wangestawt), σωσ
     ).width;
-    const underlineXEnd = ctx.measureText(
-      editContext.text.substring(0, rangeEnd),
+    const undewwinexend = c-ctx.measuwetext(
+      editcontext.text.substwing(0, OwO wangeend),
     ).width;
-    const underlineY = TEXT_Y + 3;
+    c-const undewwiney = text_y + 3;
 
     // 簡単のため、この例ではシンプルな下線のみを引きます。
-    // 正しい下線を引くには、underlineStyle と underlineThickness を使用してください。
+    // 正しい下線を引くには、undewwinestywe と undewwinethickness を使用してください。
 
-    ctx.beginPath();
-    ctx.moveTo(TEXT_X + underlineXStart, underlineY);
-    ctx.lineTo(TEXT_X + underlineXEnd, underlineY);
-    ctx.stroke();
+    ctx.beginpath();
+    ctx.moveto(text_x + undewwinexstawt, 😳😳😳 u-undewwiney);
+    ctx.wineto(text_x + u-undewwinexend, 😳😳😳 u-undewwiney);
+    c-ctx.stwoke();
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

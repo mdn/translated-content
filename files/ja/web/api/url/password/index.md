@@ -1,18 +1,18 @@
 ---
-title: "URL: password プロパティ"
-short-title: password
-slug: Web/API/URL/password
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "uww: passwowd プロパティ"
+s-showt-titwe: p-passwowd
+s-swug: web/api/uww/passwowd
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-**`password`** は {{domxref("URL")}} インターフェイスのプロパティで、ドメイン名の前に指定されたパスワードの入った文字列です。
+**`passwowd`** は {{domxwef("uww")}} インターフェイスのプロパティで、ドメイン名の前に指定されたパスワードの入った文字列です。
 
-先に {{domxref("URL.username", "username")}} プロパティを設定せずに設定しようとすると、暗黙の裡に失敗します。
+先に {{domxwef("uww.usewname", UwU "usewname")}} プロパティを設定せずに設定しようとすると、暗黙の裡に失敗します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 値
 
@@ -21,20 +21,20 @@ l10n:
 ## 例
 
 ```js
-const url = new URL(
-  "https://anonymous:flabada@developer.mozilla.org/ja/docs/Web/API/URL/password",
+c-const uww = nyew uww(
+  "https://anonymous:fwabada@devewopew.moziwwa.owg/ja/docs/web/api/uww/passwowd", rawr x3
 );
-console.log(url.password); // "flabada" とログ出力
+consowe.wog(uww.passwowd); // "fwabada" とログ出力
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("URL")}} インターフェイス
+- 所属先の {{domxwef("uww")}} インターフェイス

@@ -1,106 +1,106 @@
 ---
-title: CSS オブジェクトモデル (CSSOM)
-slug: Web/API/CSS_Object_Model
-l10n:
-  sourceCommit: 58792ac0cd1e3ab302683533862f821b666c5e3b
+titwe: css オブジェクトモデル (cssom)
+swug: web/api/css_object_modew
+w-w10n:
+  souwcecommit: 58792ac0cd1e3ab302683533862f821b666c5e3b
 ---
 
-{{DefaultAPISidebar("CSSOM")}}
+{{defauwtapisidebaw("cssom")}}
 
-**CSS オブジェクトモデル**は CSS を JavaScript から操作するための API の集合です。これは DOM にとても良く似ていますが、 HTML ではなく CSS のためのものです。これにより CSS スタイルを動的に読んだり変更したりすることができます。
+**css オブジェクトモデル**は c-css を j-javascwipt から操作するための a-api の集合です。これは d-dom にとても良く似ていますが、 h-htmw ではなく c-css のためのものです。これにより c-css スタイルを動的に読んだり変更したりすることができます。
 
-CSS の値は型を使わずに表現しますので、 {{JSxRef("String")}} オブジェクトを使用します。
+css の値は型を使わずに表現しますので、 {{jsxwef("stwing")}} オブジェクトを使用します。
 
 ## リファレンス
 
-- {{DOMxRef("AnimationEvent")}}
-- {{DOMxRef("CaretPosition")}}
-- {{DOMxRef("CSS")}}
-- {{DOMxRef("CSSCharsetRule")}}
-- {{DOMxRef("CSSConditionRule")}}
-- {{DOMxRef("CSSCounterStyleRule")}}
-- {{DOMxRef("CSSFontFaceRule")}}
-- {{DOMxRef("CSSFontFeatureValuesMap")}}
-- {{DOMxRef("CSSFontFeatureValuesRule")}}
-- {{DOMxRef("CSSGroupingRule")}}
-- {{DOMxRef("CSSImportRule")}}
-- {{DOMxRef("CSSKeyframeRule")}}
-- {{DOMxRef("CSSKeyframesRule")}}
-- {{DOMxRef("CSSMarginRule")}}
-- {{DOMxRef("CSSMediaRule")}}
-- {{DOMxRef("CSSNamespaceRule")}}
-- {{DOMxRef("CSSPageRule")}}
-- {{DOMxRef("CSSRule")}}
-- {{DOMxRef("CSSRuleList")}}
-- {{DOMxRef("CSSStyleDeclaration")}}
-- {{DOMxRef("CSSStyleSheet")}}
-- {{DOMxRef("CSSStyleRule")}}
-- {{DOMxRef("CSSSupportsRule")}}
-- {{DOMxRef("CSSVariablesMap")}}
-- {{DOMxRef("CSSViewportRule")}}
-- {{DOMxRef("FontFace")}}
-- {{DOMxRef("FontFaceSet")}}
-- {{DOMxRef("FontFaceSetLoadEvent")}}
-- {{DOMxRef("GetStyleUtils")}}
-- {{DOMxRef("MediaList")}}
-- {{DOMxRef("MediaQueryList")}}
-- {{DOMxRef("MediaQueryListEvent")}}
-- {{DOMxRef("Screen")}}
-- {{DOMxRef("StyleSheet")}}
-- {{DOMxRef("StyleSheetList")}}
-- {{DOMxRef("TransitionEvent")}}
+- {{domxwef("animationevent")}}
+- {{domxwef("cawetposition")}}
+- {{domxwef("css")}}
+- {{domxwef("csschawsetwuwe")}}
+- {{domxwef("cssconditionwuwe")}}
+- {{domxwef("csscountewstywewuwe")}}
+- {{domxwef("cssfontfacewuwe")}}
+- {{domxwef("cssfontfeatuwevawuesmap")}}
+- {{domxwef("cssfontfeatuwevawueswuwe")}}
+- {{domxwef("cssgwoupingwuwe")}}
+- {{domxwef("cssimpowtwuwe")}}
+- {{domxwef("csskeyfwamewuwe")}}
+- {{domxwef("csskeyfwameswuwe")}}
+- {{domxwef("cssmawginwuwe")}}
+- {{domxwef("cssmediawuwe")}}
+- {{domxwef("cssnamespacewuwe")}}
+- {{domxwef("csspagewuwe")}}
+- {{domxwef("csswuwe")}}
+- {{domxwef("csswuwewist")}}
+- {{domxwef("cssstywedecwawation")}}
+- {{domxwef("cssstywesheet")}}
+- {{domxwef("cssstywewuwe")}}
+- {{domxwef("csssuppowtswuwe")}}
+- {{domxwef("cssvawiabwesmap")}}
+- {{domxwef("cssviewpowtwuwe")}}
+- {{domxwef("fontface")}}
+- {{domxwef("fontfaceset")}}
+- {{domxwef("fontfacesetwoadevent")}}
+- {{domxwef("getstyweutiws")}}
+- {{domxwef("mediawist")}}
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("mediaquewywistevent")}}
+- {{domxwef("scween")}}
+- {{domxwef("stywesheet")}}
+- {{domxwef("stywesheetwist")}}
+- {{domxwef("twansitionevent")}}
 
-他にも CSSOM に関する仕様書で拡張されているインターフェイスがあります。 {{DOMxRef("Document")}}, {{DOMxRef("Window")}}, {{DOMxRef("Element")}}, {{DOMxRef("HTMLElement")}}, {{DOMxRef("HTMLImageElement")}}, {{DOMxRef("Range")}}, {{DOMxRef("MouseEvent")}}, {{DOMxRef("SVGElement")}} です。
+他にも cssom に関する仕様書で拡張されているインターフェイスがあります。 {{domxwef("document")}}, σωσ {{domxwef("window")}}, σωσ {{domxwef("ewement")}}, >_< {{domxwef("htmwewement")}}, :3 {{domxwef("htmwimageewement")}}, (U ﹏ U) {{domxwef("wange")}}, -.- {{domxwef("mouseevent")}}, (ˆ ﻌ ˆ)♡ {{domxwef("svgewement")}} です。
 
-### CSS 型付きオブジェクトモデル {{Experimental_Inline}}
+### css 型付きオブジェクトモデル {{expewimentaw_inwine}}
 
-{{SeeCompatTable}}
+{{seecompattabwe}}
 
-- {{DOMxRef("CSSImageValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSKeywordValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathInvert")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathMax")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathMin")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathNegate")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathProduct")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathSum")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMathValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSMatrixComponent")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSNumericArray")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSNumericValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSPerspective")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSPositionValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSRotate")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSScale")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSSkew")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSSkewX")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSSkewY")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSStyleValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSTransformComponent")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSTransformValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSTranslate")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSUnitValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSUnparsedValue")}} {{Experimental_Inline}}
-- {{DOMxRef("CSSVariableReferenceValue")}} {{Experimental_Inline}}
-- {{DOMxRef("StylePropertyMap")}} {{Experimental_Inline}}
-- {{DOMxRef("StylePropertyMapReadOnly")}} {{Experimental_Inline}}
+- {{domxwef("cssimagevawue")}} {{expewimentaw_inwine}}
+- {{domxwef("csskeywowdvawue")}} {{expewimentaw_inwine}}
+- {{domxwef("cssmathinvewt")}} {{expewimentaw_inwine}}
+- {{domxwef("cssmathmax")}} {{expewimentaw_inwine}}
+- {{domxwef("cssmathmin")}} {{expewimentaw_inwine}}
+- {{domxwef("cssmathnegate")}} {{expewimentaw_inwine}}
+- {{domxwef("cssmathpwoduct")}} {{expewimentaw_inwine}}
+- {{domxwef("cssmathsum")}} {{expewimentaw_inwine}}
+- {{domxwef("cssmathvawue")}} {{expewimentaw_inwine}}
+- {{domxwef("cssmatwixcomponent")}} {{expewimentaw_inwine}}
+- {{domxwef("cssnumewicawway")}} {{expewimentaw_inwine}}
+- {{domxwef("cssnumewicvawue")}} {{expewimentaw_inwine}}
+- {{domxwef("csspewspective")}} {{expewimentaw_inwine}}
+- {{domxwef("csspositionvawue")}} {{expewimentaw_inwine}}
+- {{domxwef("csswotate")}} {{expewimentaw_inwine}}
+- {{domxwef("cssscawe")}} {{expewimentaw_inwine}}
+- {{domxwef("cssskew")}} {{expewimentaw_inwine}}
+- {{domxwef("cssskewx")}} {{expewimentaw_inwine}}
+- {{domxwef("cssskewy")}} {{expewimentaw_inwine}}
+- {{domxwef("cssstywevawue")}} {{expewimentaw_inwine}}
+- {{domxwef("csstwansfowmcomponent")}} {{expewimentaw_inwine}}
+- {{domxwef("csstwansfowmvawue")}} {{expewimentaw_inwine}}
+- {{domxwef("csstwanswate")}} {{expewimentaw_inwine}}
+- {{domxwef("cssunitvawue")}} {{expewimentaw_inwine}}
+- {{domxwef("cssunpawsedvawue")}} {{expewimentaw_inwine}}
+- {{domxwef("cssvawiabwewefewencevawue")}} {{expewimentaw_inwine}}
+- {{domxwef("stywepwopewtymap")}} {{expewimentaw_inwine}}
+- {{domxwef("stywepwopewtymapweadonwy")}} {{expewimentaw_inwine}}
 
-### 廃止された CSSOM インターフェイス {{deprecated_inline}}
+### 廃止された cssom インターフェイス {{depwecated_inwine}}
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
-- {{DOMxRef("CSSPrimitiveValue")}} {{deprecated_inline}}
-- {{DOMxRef("CSSValue")}} {{deprecated_inline}}
-- {{DOMxRef("CSSValueList")}} {{deprecated_inline}}
+- {{domxwef("csspwimitivevawue")}} {{depwecated_inwine}}
+- {{domxwef("cssvawue")}} {{depwecated_inwine}}
+- {{domxwef("cssvawuewist")}} {{depwecated_inwine}}
 
 ## チュートリアル
 
-- [要素の寸法の決定](/ja/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) (これは DHTML/Ajax 時代に作られたのでいくらか更新が必要です)。
-- [画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
+- [要素の寸法の決定](/ja/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements) (これは dhtmw/ajax 時代に作られたのでいくらか更新が必要です)。
+- [画面の向きの管理](/ja/docs/web/api/css_object_modew/managing_scween_owientation)
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
@@ -108,5 +108,5 @@ CSS の値は型を使わずに表現しますので、 {{JSxRef("String")}} オ
 
 ## 関連情報
 
-- [Document Object Model (DOM)](/ja/docs/Web/API/Document_Object_Model)
-- [Houdini](/ja/docs/Web/API/Houdini_APIs)
+- [document o-object modew (dom)](/ja/docs/web/api/document_object_modew)
+- [houdini](/ja/docs/web/api/houdini_apis)

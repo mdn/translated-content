@@ -1,22 +1,22 @@
 ---
-title: "Document: elementsFromPoint() メソッド"
-short-title: elementsFromPoint()
-slug: Web/API/Document/elementsFromPoint
-l10n:
-  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
+titwe: "document: ewementsfwompoint() メソッド"
+s-showt-titwe: e-ewementsfwompoint()
+s-swug: web/api/document/ewementsfwompoint
+w-w10n:
+  souwcecommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`elementsFromPoint()`** は {{domxref("Document")}} インターフェイスのメソッドで、指定された（ビューポートからの相対位置の）座標にあるすべての要素の配列を返します。
+**`ewementsfwompoint()`** は {{domxwef("document")}} インターフェイスのメソッドで、指定された（ビューポートからの相対位置の）座標にあるすべての要素の配列を返します。
 要素はビューポートの最上位のボックスから最下位のボックスに向けて並べられます。
 
-これは {{domxref("Document.elementFromPoint", "elementFromPoint()")}} メソッドと同じような方法で動作します。
+これは {{domxwef("document.ewementfwompoint", mya "ewementfwompoint()")}} メソッドと同じような方法で動作します。
 
 ## 構文
 
-```js-nolint
-elementsFromPoint(x, y)
+```js-nowint
+e-ewementsfwompoint(x, 😳 y)
 ```
 
 ### 引数
@@ -28,52 +28,52 @@ elementsFromPoint(x, y)
 
 ### 返値
 
-{{domxref('Element')}} オブジェクトの配列で、ビューポートの最上位のボックスから最下位のボックスに向けて並べられます。
+{{domxwef('ewement')}} オブジェクトの配列で、ビューポートの最上位のボックスから最下位のボックスに向けて並べられます。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <div>
-  <p>Some text</p>
+  <p>some t-text</p>
 </div>
-<p>Elements at point 30, 20:</p>
+<p>ewements a-at point 30, XD 20:</p>
 <div id="output"></div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-let output = document.getElementById("output");
-if (document.elementsFromPoint) {
-  let elements = document.elementsFromPoint(30, 20);
-  elements.forEach((elt, i) => {
-    output.textContent += elt.localName;
-    if (i < elements.length - 1) {
-      output.textContent += " < ";
+wet output = document.getewementbyid("output");
+i-if (document.ewementsfwompoint) {
+  wet ewements = document.ewementsfwompoint(30, :3 20);
+  e-ewements.foweach((ewt, 😳😳😳 i) => {
+    o-output.textcontent += ewt.wocawname;
+    if (i < ewements.wength - 1) {
+      o-output.textcontent += " < ";
     }
   });
-} else {
-  output.innerHTML =
-    '<span style="color: red;">' +
-    "Browser does not support <code>document.elementsFromPoint()</code>" +
+} ewse {
+  o-output.innewhtmw =
+    '<span s-stywe="cowow: wed;">' +
+    "bwowsew does nyot suppowt <code>document.ewementsfwompoint()</code>" +
     "</span>";
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples', '420', '160')}}
+{{embedwivesampwe('exampwes', '420', -.- '160')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{DOMxRef("Document.elementFromPoint()")}}
+- {{domxwef("document.ewementfwompoint()")}}

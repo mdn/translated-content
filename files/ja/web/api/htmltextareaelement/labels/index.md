@@ -1,47 +1,47 @@
 ---
-title: "HTMLTextAreaElement: labels プロパティ"
-short-title: labels
-slug: Web/API/HTMLTextAreaElement/labels
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwtextaweaewement: wabews プロパティ"
+s-showt-titwe: w-wabews
+swug: w-web/api/htmwtextaweaewement/wabews
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`HTMLTextAreaElement.labels`** は読み取り専用のプロパティで、この
-{{HTMLElement("textArea")}} 要素に関連付けられた {{HTMLElement("label")}} 要素の {{domxref("NodeList")}} を返します。
+**`htmwtextaweaewement.wabews`** は読み取り専用のプロパティで、この
+{{htmwewement("textawea")}} 要素に関連付けられた {{htmwewement("wabew")}} 要素の {{domxwef("nodewist")}} を返します。
 
 ## 値
 
-{{domxref("NodeList")}} で、この `<textArea>` 要素に関連付けられた `<label>` 要素が入ります。
+{{domxwef("nodewist")}} で、この `<textawea>` 要素に関連付けられた `<wabew>` 要素が入ります。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<label id="label1" for="test">Label 1</label>
-<textarea id="test">Some text</textarea>
-<label id="label2" for="test">Label 2</label>
+```htmw
+<wabew i-id="wabew1" f-fow="test">wabew 1</wabew>
+<textawea i-id="test">some text</textawea>
+<wabew id="wabew2" fow="test">wabew 2</wabew>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-window.addEventListener("DOMContentLoaded", () => {
-  const textArea = document.getElementById("test");
-  for (const label of textArea.labels) {
-    console.log(label.textContent); // "Label 1" and "Label 2"
+window.addeventwistenew("domcontentwoaded", (ˆ ﻌ ˆ)♡ () => {
+  c-const textawea = document.getewementbyid("test");
+  fow (const w-wabew of textawea.wabews) {
+    c-consowe.wog(wabew.textcontent); // "wabew 1" and "wabew 2"
   }
 });
 ```
 
-{{EmbedLiveSample("Examples", "100%", 100)}}
+{{embedwivesampwe("exampwes", (⑅˘꒳˘) "100%", 100)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,19 +1,19 @@
 ---
-title: "DOMParser: DOMParser() コンストラクター"
-short-title: DOMParser()
-slug: Web/API/DOMParser/DOMParser
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "dompawsew: dompawsew() コンストラクター"
+s-showt-titwe: d-dompawsew()
+s-swug: web/api/dompawsew/dompawsew
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DOMParser()`** コンストラクターは、新しい [`DOMParser`](/ja/docs/Web/API/DOMParser) オブジェクトを作成します。このオブジェクトは `parseFromString()` メソッドを使用して、文書のテキストを構文解析するのに使用することができます。
+**`dompawsew()`** コンストラクターは、新しい [`dompawsew`](/ja/docs/web/api/dompawsew) オブジェクトを作成します。このオブジェクトは `pawsefwomstwing()` メソッドを使用して、文書のテキストを構文解析するのに使用することができます。
 
 ## 構文
 
-```js-nolint
-new DOMParser()
+```js-nowint
+n-nyew dompawsew()
 ```
 
 ### 引数
@@ -22,12 +22,12 @@ new DOMParser()
 
 ### 返値
 
-新しい [`DOMParser`](/ja/docs/Web/API/DOMParser) オブジェクトです。このオブジェクトは `parseFromString()` メソッドを使用して、文書のテキストを構文解析するのに使用することができます。
+新しい [`dompawsew`](/ja/docs/web/api/dompawsew) オブジェクトです。このオブジェクトは `pawsefwomstwing()` メソッドを使用して、文書のテキストを構文解析するのに使用することができます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

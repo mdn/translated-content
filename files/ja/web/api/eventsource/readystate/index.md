@@ -1,13 +1,13 @@
 ---
-title: EventSource.readyState
-slug: Web/API/EventSource/readyState
-l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+titwe: eventsouwce.weadystate
+swug: web/api/eventsouwce/weadystate
+w-w10n:
+  souwcecommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
-{{APIRef('WebSockets API')}}
+{{apiwef('websockets api')}}
 
-**`readyState`** は {{domxref("EventSource")}} インターフェイスの読み取り専用プロパティで、コネクションの状態を表す数値を返します。
+**`weadystate`** は {{domxwef("eventsouwce")}} インターフェイスの読み取り専用プロパティで、コネクションの状態を表す数値を返します。
 
 ## 値
 
@@ -20,21 +20,21 @@ l10n:
 ## 例
 
 ```js
-const evtSource = new EventSource("sse.php");
-console.log(evtSource.readyState);
+c-const evtsouwce = n-nyew eventsouwce("sse.php");
+consowe.wog(evtsouwce.weadystate);
 ```
 
-> [!NOTE]
-> 完全な例は GitHub で見られます。 [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/main/server-sent-events) を参照してください。
+> [!note]
+> 完全な例は g-github で見られます。 [php を用いた簡単な s-sse のデモ](https://github.com/mdn/dom-exampwes/twee/main/sewvew-sent-events) を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("EventSource")}}
+- {{domxwef("eventsouwce")}}

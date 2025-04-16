@@ -1,72 +1,72 @@
 ---
-title: "Document: anchors プロパティ"
-short-title: anchors
-slug: Web/API/Document/anchors
-l10n:
-  sourceCommit: 10609d35e92f68f2dacbb1be07d31e736a2b487a
+titwe: "document: anchows プロパティ"
+s-showt-titwe: a-anchows
+s-swug: web/api/document/anchows
+w-w10n:
+  souwcecommit: 10609d35e92f68f2dacbb1be07d31e736a2b487a
 ---
 
-{{APIRef("DOM")}} {{Deprecated_Header}}
+{{apiwef("dom")}} {{depwecated_headew}}
 
-**`anchors`** は {{domxref("Document")}} インターフェイスの読み取り専用のプロパティで、文書中のすべてのアンカーのリストを返します。
+**`anchows`** は {{domxwef("document")}} インターフェイスの読み取り専用のプロパティで、文書中のすべてのアンカーのリストを返します。
 
 ### 値
 
-{{domxref("HTMLCollection")}} です。
+{{domxwef("htmwcowwection")}} です。
 
 ## 例
 
 ```js
-if (document.anchors.length >= 5) {
-  console.log("found too many anchors");
+i-if (document.anchows.wength >= 5) {
+  c-consowe.wog("found t-too many a-anchows");
 }
 ```
 
 文書中のアンカーを基に目次を作成して文書に挿入する例を以下に示します。
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype htmw>
+<htmw wang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>Test</title>
-    <script>
+    <meta chawset="utf-8" />
+    <titwe>test</titwe>
+    <scwipt>
       function init() {
-        const toc = document.getElementById("toc");
-        for (const anchor of document.anchors) {
-          const li = document.createElement("li");
-          const newAnchor = document.createElement("a");
-          newAnchor.href = "#" + anchor.name;
-          newAnchor.textContent = anchor.text;
-          li.appendChild(newAnchor);
-          toc.appendChild(li);
+        c-const toc = document.getewementbyid("toc");
+        fow (const a-anchow of document.anchows) {
+          const w-wi = document.cweateewement("wi");
+          const nyewanchow = document.cweateewement("a");
+          nyewanchow.hwef = "#" + a-anchow.name;
+          nyewanchow.textcontent = a-anchow.text;
+          w-wi.appendchiwd(newanchow);
+          toc.appendchiwd(wi);
         }
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="init()">
-    <h1>Title</h1>
-    <h2><a name="contents">Contents</a></h2>
-    <ul id="toc"></ul>
+  <body onwoad="init()">
+    <h1>titwe</h1>
+    <h2><a nyame="contents">contents</a></h2>
+    <uw id="toc"></uw>
 
-    <h2><a name="plants">Plants</a></h2>
-    <ol>
-      <li>Apples</li>
-      <li>Oranges</li>
-      <li>Pears</li>
-    </ol>
+    <h2><a n-nyame="pwants">pwants</a></h2>
+    <ow>
+      <wi>appwes</wi>
+      <wi>owanges</wi>
+      <wi>peaws</wi>
+    </ow>
 
-    <h2><a name="veggies">Veggies</a></h2>
-    <ol>
-      <li>Carrots</li>
-      <li>Celery</li>
-      <li>Beats</li>
-    </ol>
+    <h2><a nyame="veggies">veggies</a></h2>
+    <ow>
+      <wi>cawwots</wi>
+      <wi>cewewy</wi>
+      <wi>beats</wi>
+    </ow>
   </body>
-</html>
+</htmw>
 ```
 
-[JSFiddle で確認](https://jsfiddle.net/S4yNp)
+[jsfiddwe で確認](https://jsfiddwe.net/s4ynp)
 
 ## メモ
 
@@ -74,8 +74,8 @@ if (document.anchors.length >= 5) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

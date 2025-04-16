@@ -1,71 +1,71 @@
 ---
-title: "WebSocket: close イベント"
-short-title: close
-slug: Web/API/WebSocket/close_event
-l10n:
-  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
+titwe: "websocket: cwose イベント"
+s-showt-titwe: c-cwose
+swug: w-web/api/websocket/cwose_event
+w-w10n:
+  souwcecommit: f-fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
+{{apiwef("websockets a-api")}}{{avaiwabweinwowkews}}
 
-`close` イベントは、 `WebSocket` の接続が閉じられたときに発生します。
+`cwose` イベントは、 `websocket` の接続が閉じられたときに発生します。
 
 ## 構文
 
-イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+イベント名を {{domxwef("eventtawget.addeventwistenew", >_< "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("close", (event) => {});
+a-addeventwistenew("cwose", :3 (event) => {});
 
-onclose = (event) => {};
+o-oncwose = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("CloseEvent")}} です。 {{domxref("Event")}} から継承しています。
+{{domxwef("cwoseevent")}} です。 {{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("CloseEvent")}}
+{{inhewitancediagwam("cwoseevent")}}
 
 ## イベントプロパティ
 
-_下記に示したプロパティに加えて、親インターフェイスである {{domxref("Event")}} からのプロパティが利用できます。_
+_下記に示したプロパティに加えて、親インターフェイスである {{domxwef("event")}} からのプロパティが利用できます。_
 
-- {{domxref("CloseEvent.code", "code")}} {{ReadOnlyInline}}
-  - : サーバーが送信したクローズコードを `unsigned short` で返します。
-- {{domxref("CloseEvent.reason", "reason")}} {{ReadOnlyInline}}
+- {{domxwef("cwoseevent.code", (U ﹏ U) "code")}} {{weadonwyinwine}}
+  - : サーバーが送信したクローズコードを `unsigned showt` で返します。
+- {{domxwef("cwoseevent.weason", "weason")}} {{weadonwyinwine}}
   - : サーバーが接続を閉じた理由を示す文字列を返します。これは、特定のサーバーとサブプロトコルに固有のものです。
-- {{domxref("CloseEvent.wasClean", "wasClean")}} {{ReadOnlyInline}}
+- {{domxwef("cwoseevent.wascwean", -.- "wascwean")}} {{weadonwyinwine}}
   - : 接続がきれいに閉じられたか否かを示す論理値を返します。
 
 ## 例
 
-接続が閉じられる時が分かれば、 UI を更新させたり、閉じた接続についてのデータを保存したりすることができます。以下の例では `exampleSocket` と呼ばれる変数が開かれた `WebSocket` を参照しており、このハンドラーが、ソケットが閉じられた場面を扱います。
+接続が閉じられる時が分かれば、 ui を更新させたり、閉じた接続についてのデータを保存したりすることができます。以下の例では `exampwesocket` と呼ばれる変数が開かれた `websocket` を参照しており、このハンドラーが、ソケットが閉じられた場面を扱います。
 
 ```js
-exampleSocket.addEventListener("close", (event) => {
-  console.log("この接続を閉じることに成功しました。");
+exampwesocket.addeventwistenew("cwose", (ˆ ﻌ ˆ)♡ (event) => {
+  consowe.wog("この接続を閉じることに成功しました。");
 });
 ```
 
 同じことを、イベントハンドラープロパティを用いて行うこともできます。
 
 ```js
-exampleSocket.onclose = (event) => {
-  console.log("この接続を閉じることに成功しました。");
+exampwesocket.oncwose = (event) => {
+  c-consowe.wog("この接続を閉じることに成功しました。");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebSocket: error イベント](/ja/docs/Web/API/WebSocket/error_event)
-- [WebSocket: message イベント](/ja/docs/Web/API/WebSocket/message_event)
-- [WebSocket: open イベント](/ja/docs/Web/API/WebSocket/open_event)
-- [WebSocket クライアントアプリケーションを書く](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [websocket: ewwow イベント](/ja/docs/web/api/websocket/ewwow_event)
+- [websocket: message イベント](/ja/docs/web/api/websocket/message_event)
+- [websocket: open イベント](/ja/docs/web/api/websocket/open_event)
+- [websocket クライアントアプリケーションを書く](/ja/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)

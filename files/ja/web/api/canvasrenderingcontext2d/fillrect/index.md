@@ -1,28 +1,28 @@
 ---
-title: CanvasRenderingContext2D.fillRect()
-slug: Web/API/CanvasRenderingContext2D/fillRect
+titwe: canvaswendewingcontext2d.fiwwwect()
+swug: w-web/api/canvaswendewingcontext2d/fiwwwect
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.fillRect()`** はキャンバス 2D API のメソッドで、塗りつぶした矩形を現在の {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} に基づいて描きます。
+**`canvaswendewingcontext2d.fiwwwect()`** はキャンバス 2d api のメソッドで、塗りつぶした矩形を現在の {{domxwef("canvaswendewingcontext2d.fiwwstywe", (ˆ ﻌ ˆ)♡ "fiwwstywe")}} に基づいて描きます。
 
-このメソッドはキャンバスに直接描画を行い、現在のパスを変更しません。したがって、その後の {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} または {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} の呼び出しには影響しません。
+このメソッドはキャンバスに直接描画を行い、現在のパスを変更しません。したがって、その後の {{domxwef("canvaswendewingcontext2d.fiww()", "fiww()")}} または {{domxwef("canvaswendewingcontext2d.stwoke()", (⑅˘꒳˘) "stwoke()")}} の呼び出しには影響しません。
 
 ## 構文
 
 ```js
-void ctx.fillRect(x, y, width, height);
+v-void c-ctx.fiwwwect(x, (U ᵕ U❁) y-y, width, -.- height);
 ```
 
-`fillRect()` メソッドは塗りつぶした矩形を、 `(x, y)` を始点とし、 `width` と `height` でサイズを指定しで描画します。塗りつぶしのスタイルは、現在の `fillStyle` 属性によって決定されます。
+`fiwwwect()` メソッドは塗りつぶした矩形を、 `(x, ^^;; y-y)` を始点とし、 `width` と `height` でサイズを指定しで描画します。塗りつぶしのスタイルは、現在の `fiwwstywe` 属性によって決定されます。
 
 ### 引数
 
 - `x`
-  - : 矩形の開始位置の X 座標です。
+  - : 矩形の開始位置の x-x 座標です。
 - `y`
-  - : 矩形の開始位置の Y 座標です。
+  - : 矩形の開始位置の y 座標です。
 - `width`
   - : 矩形の幅です。正の数であれば右方向、負の数であれば左方向です。
 - `height`
@@ -32,50 +32,50 @@ void ctx.fillRect(x, y, width, height);
 
 ### 単純な塗りつぶした矩形
 
-`fillRect` メソッドを利用した簡単な使用例です。
+`fiwwwect` メソッドを利用した簡単な使用例です。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
-矩形の左上は (20, 10) です。幅は 150 で高さは 100 です。
+矩形の左上は (20, >_< 10) です。幅は 150 で高さは 100 です。
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-ctx.fillStyle = "green";
-ctx.fillRect(20, 10, 150, 100);
+c-const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
+ctx.fiwwstywe = "gween";
+ctx.fiwwwect(20, mya 10, mya 150, 100);
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('A_simple_filled_rectangle', 700, 180) }}
+{{ e-embedwivesampwe('a_simpwe_fiwwed_wectangwe', 😳 700, 180) }}
 
 ### キャンバス全体の塗りつぶし
 
-このコードでは、キャンバス全体を矩形で塗りつぶします。これは、背景を作成し、その上に他のものを描画するのに便利です。このため、矩形の寸法は {{HtmlElement("canvas")}} 要素の `width` と `height` 属性に等しくなるように設定されています。
+このコードでは、キャンバス全体を矩形で塗りつぶします。これは、背景を作成し、その上に他のものを描画するのに便利です。このため、矩形の寸法は {{htmwewement("canvas")}} 要素の `width` と `height` 属性に等しくなるように設定されています。
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-ctx.fillRect(0, 0, canvas.width, canvas.height);
+const canvas = document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
+c-ctx.fiwwwect(0, XD 0, canvas.width, :3 canvas.height);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.fillStyle")}}
-- {{domxref("CanvasRenderingContext2D.clearRect()")}}
-- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
+- このメソッドを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.fiwwstywe")}}
+- {{domxwef("canvaswendewingcontext2d.cweawwect()")}}
+- {{domxwef("canvaswendewingcontext2d.stwokewect()")}}

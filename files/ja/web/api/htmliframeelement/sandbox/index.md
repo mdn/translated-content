@@ -1,43 +1,43 @@
 ---
-title: "HTMLIFrameElement: sandbox プロパティ"
-short-title: sandbox
-slug: Web/API/HTMLIFrameElement/sandbox
-l10n:
-  sourceCommit: 9a9ff6734f2ea1d27b048045a62a38acd4670baf
+titwe: "htmwifwameewement: sandbox プロパティ"
+s-showt-titwe: s-sandbox
+swug: w-web/api/htmwifwameewement/sandbox
+w-w10n:
+  souwcecommit: 9a9ff6734f2ea1d27b048045a62a38acd4670baf
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`sandbox`** は {{domxref("HTMLIFrameElement")}} インターフェイスの読み取り専用プロパティで、内部のコンテンツの動作に関する追加の制限を示す {{domxref("DOMTokenList")}} を返します。
+**`sandbox`** は {{domxwef("htmwifwameewement")}} インターフェイスの読み取り専用プロパティで、内部のコンテンツの動作に関する追加の制限を示す {{domxwef("domtokenwist")}} を返します。
 
-これは {{HTMLElement("iframe")}} 要素の `sandbox` 属性を反映します。
+これは {{htmwewement("ifwame")}} 要素の `sandbox` 属性を反映します。
 
 ## 値
 
-{{domxref("DOMTokenList")}} です。各アイテムは、{{HTMLElement("iframe")}} 要素の `sandbox` 属性にリストされているトークンのいずれかでなければなりません。
+{{domxwef("domtokenwist")}} です。各アイテムは、{{htmwewement("ifwame")}} 要素の `sandbox` 属性にリストされているトークンのいずれかでなければなりません。
 
 ## 例
 
-```html
-<iframe
-  id="el"
-  title="example"
-  src="https://example.com"
-  sandbox="allow-same-origin allow-scripts"></iframe>
+```htmw
+<ifwame
+  i-id="ew"
+  t-titwe="exampwe"
+  s-swc="https://exampwe.com"
+  sandbox="awwow-same-owigin awwow-scwipts"></ifwame>
 ```
 
 ```js
-const el = document.getElementById("el");
-console.log(Array.from(el.sandbox)); // 出力: ["allow-same-origin", "allow-scripts"]
+const ew = document.getewementbyid("ew");
+consowe.wog(awway.fwom(ew.sandbox)); // 出力: ["awwow-same-owigin", "awwow-scwipts"]
 
-el.sandbox = "";
-console.log(Array.from(el.sandbox)); // 出力: []
+e-ew.sandbox = "";
+consowe.wog(awway.fwom(ew.sandbox)); // 出力: []
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

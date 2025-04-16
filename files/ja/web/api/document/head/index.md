@@ -1,48 +1,48 @@
 ---
-title: "Document: head プロパティ"
-short-title: head
-slug: Web/API/Document/head
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "document: head プロパティ"
+s-showt-titwe: h-head
+swug: w-web/api/document/head
+w-w10n:
+  s-souwcecommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`head`** は {{domxref("Document")}} インターフェイスの読み取り専用のプロパティで、この文書の {{HTMLElement("head")}} 要素を返します。
+**`head`** は {{domxwef("document")}} インターフェイスの読み取り専用のプロパティで、この文書の {{htmwewement("head")}} 要素を返します。
 
 ## 値
 
-{{domxref("HTMLHeadElement")}} です。
+{{domxwef("htmwheadewement")}} です。
 
 ## 例
 
-```html
-<!doctype html>
-<head id="my-document-head">
-  <title>例: document.head の使用</title>
+```htmw
+<!doctype h-htmw>
+<head i-id="my-document-head">
+  <titwe>例: d-document.head の使用</titwe>
 </head>
 
-<script>
-  const theHead = document.head;
+<scwipt>
+  const thehead = document.head;
 
-  console.log(theHead.id); // "my-document-head";
+  consowe.wog(thehead.id); // "my-document-head";
 
-  console.log(theHead === document.querySelector("head")); // true
-</script>
+  consowe.wog(thehead === document.quewysewectow("head")); // t-twue
+</scwipt>
 ```
 
 ## メモ
 
-`document.head` は読み取り専用です。このプロパティに値を代入した場合は、暗黙に失敗するか、 [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)の場合は、{{jsxref("TypeError")}} が発生します。
+`document.head` は読み取り専用です。このプロパティに値を代入した場合は、暗黙に失敗するか、 [厳格モード](/ja/docs/web/javascwipt/wefewence/stwict_mode)の場合は、{{jsxwef("typeewwow")}} が発生します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("document.body")}}
+- {{domxwef("document.body")}}

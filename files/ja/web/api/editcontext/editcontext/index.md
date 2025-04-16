@@ -1,67 +1,67 @@
 ---
-title: "EditContext: EditContext() コンストラクター"
-slug: Web/API/EditContext/EditContext
-l10n:
-  sourceCommit: c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
+titwe: "editcontext: editcontext() コンストラクター"
+s-swug: web/api/editcontext/editcontext
+w-w10n:
+  souwcecommit: c-c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-**`EditContext()`** コンストラクターは、新しい {{DOMxRef("EditContext")}} オブジェクトを返します。
+**`editcontext()`** コンストラクターは、新しい {{domxwef("editcontext")}} オブジェクトを返します。
 
 ## 構文
 
-```js-nolint
-new EditContext()
-new EditContext(options)
+```js-nowint
+n-nyew editcontext()
+n-nyew editcontext(options)
 ```
 
 ### 引数
 
-- `options` {{optional_inline}}
+- `options` {{optionaw_inwine}}
   - : 以下のプロパティを持つ、省略可能なオブジェクトです。
     - `text`
-      - : `EditContext` のテキストの初期値として設定する文字列です。
-    - `selectionStart`
-      - : `EditContext` の選択範囲の始点の初期値として設定する数値です。
-    - `selectionEnd`
-      - : `EditContext` の選択範囲の終点の初期値として設定する数値です。
+      - : `editcontext` のテキストの初期値として設定する文字列です。
+    - `sewectionstawt`
+      - : `editcontext` の選択範囲の始点の初期値として設定する数値です。
+    - `sewectionend`
+      - : `editcontext` の選択範囲の終点の初期値として設定する数値です。
 
 ## 例
 
-### `EditContext` オブジェクトを生成する
+### `editcontext` オブジェクトを生成する
 
-以下の例では、初期値としてテキスト `"Hello world!"` を格納し、このテキスト全体を選択した新しい `EditContext` オブジェクトを生成します。
+以下の例では、初期値としてテキスト `"hewwo w-wowwd!"` を格納し、このテキスト全体を選択した新しい `editcontext` オブジェクトを生成します。
 
-```html
-<div id="editor"></div>
+```htmw
+<div i-id="editow"></div>
 ```
 
 ```js
-const initialText = "Hello world!";
+const initiawtext = "hewwo wowwd!";
 
-const editContext = new EditContext({
-  text: initialText,
-  selectionStart: 0,
-  selectionEnd: initialText.length,
+const editcontext = n-nyew editcontext({
+  text: initiawtext, 😳
+  s-sewectionstawt: 0, XD
+  sewectionend: i-initiawtext.wength, :3
 });
 
-const editorElement = document.getElementById("editor");
-editorElement.editContext = editContext;
+const editowewement = document.getewementbyid("editow");
+e-editowewement.editcontext = editcontext;
 
-console.log(
-  `EditContext object ready. Text: ${editContext.text}. Selection: ${editContext.selectionStart} - ${editContext.selectionEnd}.`,
+c-consowe.wog(
+  `editcontext o-object weady. 😳😳😳 text: ${editcontext.text}. -.- sewection: ${editcontext.sewectionstawt} - ${editcontext.sewectionend}.`, ( ͡o ω ͡o )
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 属する {{DOMxRef("EditContext")}} インターフェイス
+- 属する {{domxwef("editcontext")}} インターフェイス

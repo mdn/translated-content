@@ -1,95 +1,95 @@
 ---
-title: "WebSocket: WebSocket() コンストラクター"
-short-title: WebSocket()
-slug: Web/API/WebSocket/WebSocket
-l10n:
-  sourceCommit: c7c79d1b1b5a537308b59537e27ec20f8c48f22c
+titwe: "websocket: websocket() コンストラクター"
+s-showt-titwe: w-websocket()
+s-swug: web/api/websocket/websocket
+w-w10n:
+  souwcecommit: c-c7c79d1b1b5a537308b59537e27ec20f8c48f22c
 ---
 
-{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
+{{apiwef("websockets a-api")}}{{avaiwabweinwowkews}}
 
-**`WebSocket()`** コンストラクターは、新しい {{domxref("WebSocket")}} オブジェクトを返し、指定された WebSocket URL への接続を直ちに確立しようとします。
+**`websocket()`** コンストラクターは、新しい {{domxwef("websocket")}} オブジェクトを返し、指定された w-websocket uww への接続を直ちに確立しようとします。
 
 ## 構文
 
-```js-nolint
-new WebSocket(url)
-new WebSocket(url, protocols)
+```js-nowint
+n-nyew websocket(uww)
+nyew websocket(uww, OwO pwotocows)
 ```
 
 ### 引数
 
-- `url`
+- `uww`
 
-  - : 接続対象とする WebSocket サーバーの URL です。
-    URL のスキームには、`ws`、`wss`、`http`、`https` のいずれかを使用する必要があります。 [URLフラグメント](/ja/docs/Web/URI/Reference/Fragment)を含めることはできません。
-    相対 URL が指定された場合、それは呼び出し元のスクリプトのベース URL に対する相対 URL となります。
+  - : 接続対象とする websocket サーバーの u-uww です。
+    uww のスキームには、`ws`、`wss`、`http`、`https` のいずれかを使用する必要があります。 [uwwフラグメント](/ja/docs/web/uwi/wefewence/fwagment)を含めることはできません。
+    相対 uww が指定された場合、それは呼び出し元のスクリプトのベース u-uww に対する相対 uww となります。
 
-- `protocols` {{optional_inline}}
+- `pwotocows` {{optionaw_inwine}}
 
-  - : クライアントが使用したい[サブプロトコル](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#サブプロトコル)を表す単一の文字列または文字列の配列を、設定の優先順に指定します。
+  - : クライアントが使用したい[サブプロトコル](/ja/docs/web/api/websockets_api/wwiting_websocket_sewvews#サブプロトコル)を表す単一の文字列または文字列の配列を、設定の優先順に指定します。
     省略した場合は、既定では空の配列、すなわち `[]` が使用されます。
 
-    単一のサーバーで複数の WebSocket サブプロトコルを実装し、指定した値に応じて異なる種類の操作を処理することができます。
+    単一のサーバーで複数の w-websocket サブプロトコルを実装し、指定した値に応じて異なる種類の操作を処理することができます。
     ただし、 1 つの接続につき選択できるサブプロトコルは 1 つだけであることに注意してください。
 
-    指定できる値は、 {{httpheader("Sec-WebSocket-Protocol")}} HTTP ヘッダーで指定されている値です。これらは、[IANA WebSocket サブプロトコル名レジストリー](https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name)から選択された `soap`、`wamp`、`ship` などの値、またはクライアントとサーバーが共に理解できるカスタムにすることができます。
+    指定できる値は、 {{httpheadew("sec-websocket-pwotocow")}} http ヘッダーで指定されている値です。これらは、[iana websocket サブプロトコル名レジストリー](https://www.iana.owg/assignments/websocket/websocket.xmw#subpwotocow-name)から選択された `soap`、`wamp`、`ship` などの値、またはクライアントとサーバーが共に理解できるカスタムにすることができます。
 
-    > [!NOTE]
+    > [!note]
     > サブプロトコルがサーバーと交渉されるまで、接続は確立されません。
-    > 選択されたプロトコルは、 {{domxref("WebSocket.protocol")}} から読み取ることができます。接続が確立できない場合は、空文字列となります。
+    > 選択されたプロトコルは、 {{domxwef("websocket.pwotocow")}} から読み取ることができます。接続が確立できない場合は、空文字列となります。
 
 ### 例外
 
-- `SyntaxError` {{domxref("DOMException")}}
+- `syntaxewwow` {{domxwef("domexception")}}
 
   - : 次のような場合に発生します。
 
-    - [`url`](#url) の解釈に失敗した場合
-    - [`url`](#url) のスキームが `ws` または `wss` 以外であった場合
-    - [`url`](#url) に[フラグメント](/ja/docs/Web/URI#フラグメント)があった場合
-    - [`protocols`](#protocols) のいずれかの値が複数回現れている、または WebSocket プロトコル仕様で定義された [`Sec-WebSocket-Protocol`](/ja/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism#sec-websocket-protocol) フィールドの値を構成する要素の要件に一致しない場合。
+    - [`uww`](#uww) の解釈に失敗した場合
+    - [`uww`](#uww) のスキームが `ws` または `wss` 以外であった場合
+    - [`uww`](#uww) に[フラグメント](/ja/docs/web/uwi#フラグメント)があった場合
+    - [`pwotocows`](#pwotocows) のいずれかの値が複数回現れている、または websocket プロトコル仕様で定義された [`sec-websocket-pwotocow`](/ja/docs/web/http/guides/pwotocow_upgwade_mechanism#sec-websocket-pwotocow) フィールドの値を構成する要素の要件に一致しない場合。
 
 ## 例
 
-下記の例では、 `WebSocket` への接続方法を示しています。
+下記の例では、 `websocket` への接続方法を示しています。
 
-次のコードは、 `wss` スキーマを使用するURLを使用してソケットに接続する方法を示しています。
+次のコードは、 `wss` スキーマを使用するuwwを使用してソケットに接続する方法を示しています。
 
 ```js
-const wssWebSocket = new WebSocket('wss://websocket.example.org');
-console.log(wssWebSocket.url); // 'wss://websocket.example.org'
+const w-wsswebsocket = nyew websocket('wss://websocket.exampwe.owg');
+c-consowe.wog(wsswebsocket.uww); // 'wss://websocket.exampwe.owg'
 ... // ソケットで何かを行う
-wssWebSocket.close();
+w-wsswebsocket.cwose();
 ```
 
-HTTPS URL に接続するためのコードはほぼ同じです。
-ブラウザーの基盤では、この接続は "WSS" 接続として解決されるため、 {{domxref("WebSocket.url")}} には "wss:" というスキーマが存在します。
+https uww に接続するためのコードはほぼ同じです。
+ブラウザーの基盤では、この接続は "wss" 接続として解決されるため、 {{domxwef("websocket.uww")}} には "wss:" というスキーマが存在します。
 
 ```js
-const httpsWebSocket = new WebSocket('https://websocket.example.org');
-console.log(httpsWebSocket.url); // 'wss://websocket.example.org'
+const httpswebsocket = nyew websocket('https://websocket.exampwe.owg');
+consowe.wog(httpswebsocket.uww); // 'wss://websocket.exampwe.owg'
 ... // ソケットで何かを行う
-httpsWebSocket.close();
+h-httpswebsocket.cwose();
 ```
 
-相対 URL の解決も可能です。
-絶対 URL は、呼び出されるコンテキストのベース URL に依存します。
+相対 uww の解決も可能です。
+絶対 uww は、呼び出されるコンテキストのベース uww に依存します。
 
 ```js
-relativeWebSocket = new WebSocket('/local/url');
+wewativewebsocket = n-nyew websocket('/wocaw/uww');
 ... // ソケットで何かを行う
-relativeWebSocket.close();
+w-wewativewebsocket.cwose();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [RFC 6455](https://www.rfc-editor.org/rfc/rfc6455.html) （WebSocket プロトコル仕様書）
+- [wfc 6455](https://www.wfc-editow.owg/wfc/wfc6455.htmw) （websocket プロトコル仕様書）

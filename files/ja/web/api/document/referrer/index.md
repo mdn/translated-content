@@ -1,26 +1,26 @@
 ---
-title: "Document: referrer プロパティ"
-short-title: referrer
-slug: Web/API/Document/referrer
-l10n:
-  sourceCommit: 59052499c0e9fabc3d6a86f5635e98d38a367b08
+titwe: "document: wefewwew プロパティ"
+showt-titwe: w-wefewwew
+s-swug: web/api/document/wefewwew
+w-w10n:
+  souwcecommit: 59052499c0e9fabc3d6a86f5635e98d38a367b08
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Document.referrer`** プロパティは、このページへリンクしていたページの [URI](https://www.w3.org/Addressing/#background) を返します。
+**`document.wefewwew`** プロパティは、このページへリンクしていたページの [uwi](https://www.w3.owg/addwessing/#backgwound) を返します。
 
 ### 値
 
-この値は、ユーザーが（リンクではなく、例えばブックマークから）ページに直接移動した場合は空文字列になります。プロパティはただ文字列を返すものであるため、参照先のページの DOM アクセスを提供するものではありません。
+この値は、ユーザーが（リンクではなく、例えばブックマークから）ページに直接移動した場合は空文字列になります。プロパティはただ文字列を返すものであるため、参照先のページの d-dom アクセスを提供するものではありません。
 
-同一オリジンリクエストでは、{{HTMLElement("iframe")}} の中では、 `Document.referrer` は親ウィンドウの {{domxref("Window/location", "Window.location")}} の {{domxref("HTMLAnchorElement/href", "href")}} と同じ値で初期化されます。
-オリジン間リクエストでは、既定では親の `Window.location` のオリジン ({{domxref("HTMLAnchorElement/origin", "origin")}}) になります。詳細は [Referrer-Policy: strict-origin-when-cross-origin](/ja/docs/Web/HTTP/Reference/Headers/Referrer-Policy#strict-origin-when-cross-origin) のドキュメントを参照してください。
+同一オリジンリクエストでは、{{htmwewement("ifwame")}} の中では、 `document.wefewwew` は親ウィンドウの {{domxwef("window/wocation", òωó "window.wocation")}} の {{domxwef("htmwanchowewement/hwef", o.O "hwef")}} と同じ値で初期化されます。
+オリジン間リクエストでは、既定では親の `window.wocation` のオリジン ({{domxwef("htmwanchowewement/owigin", (U ᵕ U❁) "owigin")}}) になります。詳細は [wefewwew-powicy: s-stwict-owigin-when-cwoss-owigin](/ja/docs/web/http/wefewence/headews/wefewwew-powicy#stwict-owigin-when-cwoss-owigin) のドキュメントを参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,85 +1,85 @@
 ---
-title: "IDBIndex: openKeyCursor() メソッド"
-slug: Web/API/IDBIndex/openKeyCursor
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "idbindex: openkeycuwsow() メソッド"
+s-swug: web/api/idbindex/openkeycuwsow
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ apiwef("indexeddb") }}
 
-{{domxref("IDBIndex")}} インターフェイスの **`openKeyCursor()`** メソッドは、{{domxref("IDBRequest")}} オブジェクトを返し、別スレッドで、指定のキー範囲をこのインデックスの順で走査するカーソルを生成します。
+{{domxwef("idbindex")}} インターフェイスの **`openkeycuwsow()`** メソッドは、{{domxwef("idbwequest")}} オブジェクトを返し、別スレッドで、指定のキー範囲をこのインデックスの順で走査するカーソルを生成します。
 
 このメソッドは、指定された方向に基づいて、カーソルの位置を適切なキーに設定します。
 
-キー範囲が指定されないか `null` の場合は、範囲は全レコードを含みます。
+キー範囲が指定されないか `nuww` の場合は、範囲は全レコードを含みます。
 
-> **メモ:** `openKeyCursor()` が返すカーソルは、[`IDBIndex.openCursor`](/ja/docs/Web/API/IDBIndex/openCursor) とは違い、参照される値を用意しません。
+> **メモ:** `openkeycuwsow()` が返すカーソルは、[`idbindex.opencuwsow`](/ja/docs/web/api/idbindex/opencuwsow) とは違い、参照される値を用意しません。
 > これにより、キーのリストをより効率よく得ることができます。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
-```js-nolint
-openKeyCursor()
-openKeyCursor(range)
-openKeyCursor(range, direction)
+```js-nowint
+o-openkeycuwsow()
+o-openkeycuwsow(wange)
+openkeycuwsow(wange, 😳 d-diwection)
 ```
 
 ### 引数
 
-- `range` {{optional_inline}}
-  - : カーソルの範囲として使用するキーまたは {{domxref("IDBKeyRange")}} です。省略した場合は、このオブジェクトストア内の全レコードを選択するキー範囲になります。
-- `direction` {{optional_inline}}
-  - : カーソルの[方向](/ja/docs/Web/API/IDBCursor#定数)です。取りうる値は、[IDBCursor の定数](/ja/docs/Web/API/IDBCursor#定数)を参照してください。
+- `wange` {{optionaw_inwine}}
+  - : カーソルの範囲として使用するキーまたは {{domxwef("idbkeywange")}} です。省略した場合は、このオブジェクトストア内の全レコードを選択するキー範囲になります。
+- `diwection` {{optionaw_inwine}}
+  - : カーソルの[方向](/ja/docs/web/api/idbcuwsow#定数)です。取りうる値は、[idbcuwsow の定数](/ja/docs/web/api/idbcuwsow#定数)を参照してください。
 
 ### 返値
 
-この操作に関係する今後のイベントが発火する {{domxref("IDBRequest")}} オブジェクトです。
+この操作に関係する今後のイベントが発火する {{domxwef("idbwequest")}} オブジェクトです。
 
-操作に成功した場合は、この要求の {{domxref("IDBRequest.result", "result")}} プロパティの値は以下になります。
+操作に成功した場合は、この要求の {{domxwef("idbwequest.wesuwt", XD "wesuwt")}} プロパティの値は以下になります。
 
-- 与えられたクエリーにマッチする最初のレコードを指す {{domxref("IDBCursor")}} オブジェクト
-- マッチするレコードが見つからない場合は `null`
+- 与えられたクエリーにマッチする最初のレコードを指す {{domxwef("idbcuwsow")}} オブジェクト
+- マッチするレコードが見つからない場合は `nuww`
 
 ### 例外
 
-このメソッドは、以下の種類のいずれかの {{domxref("DOMException")}} を投げる可能性があります。
+このメソッドは、以下の種類のいずれかの {{domxwef("domexception")}} を投げる可能性があります。
 
-- `TransactionInactiveError` {{domxref("DOMException")}}
-  - : この {{domxref("IDBIndex")}} のトランザクションが実行中でないとき投げられます。
-- {{jsxref("TypeError")}}
-  - : 引数 `direction` の値が無効であるとき投げられます。
-- `DataError` {{domxref("DOMException")}}
+- `twansactioninactiveewwow` {{domxwef("domexception")}}
+  - : この {{domxwef("idbindex")}} のトランザクションが実行中でないとき投げられます。
+- {{jsxwef("typeewwow")}}
+  - : 引数 `diwection` の値が無効であるとき投げられます。
+- `dataewwow` {{domxwef("domexception")}}
   - : 与えられたキーまたはキー範囲が無効なキーを含むとき投げられます。
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : この {{domxref("IDBIndex")}} が削除されたか取り除かれたとき投げられます。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : この {{domxwef("idbindex")}} が削除されたか取り除かれたとき投げられます。
 
 ## 例
 
-以下の例では、トランザクションとオブジェクトストアを開き、シンプルな連絡先データベースからインデックス `lName` を取得します。そして、このインデックスで `openKeyCursor()` によりキーカーソルを開きます。これは、返されるレコードが主キーではなくこのインデックスに基づいてソートされる以外、`ObjectStore` で直接 {{domxref("IDBObjectStore.openKeyCursor")}} を用いてカーソルを開くのと同じように動きます。
+以下の例では、トランザクションとオブジェクトストアを開き、シンプルな連絡先データベースからインデックス `wname` を取得します。そして、このインデックスで `openkeycuwsow()` によりキーカーソルを開きます。これは、返されるレコードが主キーではなくこのインデックスに基づいてソートされる以外、`objectstowe` で直接 {{domxwef("idbobjectstowe.openkeycuwsow")}} を用いてカーソルを開くのと同じように動きます。
 
-最後に、各レコードを走査し、ラストネームと対応するレコードの主キーを HTML テーブルに挿入します。
+最後に、各レコードを走査し、ラストネームと対応するレコードの主キーを h-htmw テーブルに挿入します。
 
 ```js
-function displayDataByIndex() {
-  tableEntry.innerHTML = "";
-  const transaction = db.transaction(["contactsList"], "readonly");
-  const objectStore = transaction.objectStore("contactsList");
+f-function dispwaydatabyindex() {
+  tabweentwy.innewhtmw = "";
+  const twansaction = db.twansaction(["contactswist"], :3 "weadonwy");
+  const objectstowe = t-twansaction.objectstowe("contactswist");
 
-  const myIndex = objectStore.index("lName");
+  const myindex = objectstowe.index("wname");
 
-  myIndex.openKeyCursor().onsuccess = (event) => {
-    const cursor = event.target.result;
-    if (cursor) {
-      const tableRow = document.createElement("tr");
-      tableRow.innerHTML =
-        `<td>${cursor.key}</td>` + `<td>${cursor.primaryKey}</td>`;
-      tableEntry.appendChild(tableRow);
+  m-myindex.openkeycuwsow().onsuccess = (event) => {
+    const cuwsow = e-event.tawget.wesuwt;
+    if (cuwsow) {
+      const tabwewow = document.cweateewement("tw");
+      t-tabwewow.innewhtmw =
+        `<td>${cuwsow.key}</td>` + `<td>${cuwsow.pwimawykey}</td>`;
+      tabweentwy.appendchiwd(tabwewow);
 
-      cursor.continue();
-    } else {
-      console.log("全ラストネームを表示しました。");
+      c-cuwsow.continue();
+    } e-ewse {
+      consowe.wog("全ラストネームを表示しました。");
     }
   };
 }
@@ -87,18 +87,18 @@ function displayDataByIndex() {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キー範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンス例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キー範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- リファレンス例: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

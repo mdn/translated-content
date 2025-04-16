@@ -1,17 +1,17 @@
 ---
-title: CSSStyleDeclaration.cssText
-slug: Web/API/CSSStyleDeclaration/cssText
-l10n:
-  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
+titwe: cssstywedecwawation.csstext
+swug: web/api/cssstywedecwawation/csstext
+w-w10n:
+  souwcecommit: b-b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`cssText`** は {{domxref("CSSStyleDeclaration")}} インターフェイスのプロパティで、その要素の**インライン**スタイル宣言のみのテキストを返したり設定したりします。
+**`csstext`** は {{domxwef("cssstywedecwawation")}} インターフェイスのプロパティで、その要素の**インライン**スタイル宣言のみのテキストを返したり設定したりします。
 
-**スタイルシート**のルールを動的に設定するためには、[動的なスタイル情報の利用](/ja/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)を参照してください。
+**スタイルシート**のルールを動的に設定するためには、[動的なスタイル情報の利用](/ja/docs/web/api/css_object_modew/using_dynamic_stywing_infowmation)を参照してください。
 
-スタイルシートのスタイルルールである {{domxref("CSSRule.cssText")}} と混同しないようにしてください。
+スタイルシートのスタイルルールである {{domxwef("csswuwe.csstext")}} と混同しないようにしてください。
 
 ## 値
 
@@ -19,19 +19,19 @@ l10n:
 
 ## 例
 
-```html
-<span id="s1" style="color: red;"> Some text </span>
+```htmw
+<span i-id="s1" stywe="cowow: w-wed;"> some t-text </span>
 
-<script>
-  const elem = document.getElementById("s1");
-  alert(elem.style.cssText); // "color: red;"
-</script>
+<scwipt>
+  c-const e-ewem = document.getewementbyid("s1");
+  a-awewt(ewem.stywe.csstext); // "cowow: wed;"
+</scwipt>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

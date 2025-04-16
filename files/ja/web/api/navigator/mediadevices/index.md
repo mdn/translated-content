@@ -1,34 +1,34 @@
 ---
-title: "Navigator: mediaDevices プロパティ"
-short-title: mediaDevices
-slug: Web/API/Navigator/mediaDevices
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: mediadevices プロパティ"
+s-showt-titwe: m-mediadevices
+swug: w-web/api/navigatow/mediadevices
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{securecontext_header}}{{APIRef("Media Capture and Streams")}}
+{{secuwecontext_headew}}{{apiwef("media captuwe a-and stweams")}}
 
-**`Navigator.mediaDevices`** 読み取り専用プロパティは、カメラやマイク、画面共有のような接続されたメディア入力装置へのアクセスを提供する {{domxref("MediaDevices")}} オブジェクトを返します。
+**`navigatow.mediadevices`** 読み取り専用プロパティは、カメラやマイク、画面共有のような接続されたメディア入力装置へのアクセスを提供する {{domxwef("mediadevices")}} オブジェクトを返します。
 
 ## 構文
 
-```js-nolint
-navigator.mediaDevices
+```js-nowint
+navigatow.mediadevices
 ```
 
 ### 返値
 
-{{domxref("MediaDevices")}} シングルトンオブジェクト。例えば {{domxref("navigator.mediaDevices.getUserMedia()")}} などを呼び出すなど、通常は、このオブジェクトのメンバーを直接使用するだけです。
+{{domxwef("mediadevices")}} シングルトンオブジェクト。例えば {{domxwef("navigatow.mediadevices.getusewmedia()")}} などを呼び出すなど、通常は、このオブジェクトのメンバーを直接使用するだけです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API): すべてのメディアストリーム API についてのドキュメントのエントリーポイント。
-- [WebRTC API](/ja/docs/Web/API/WebRTC_API): 密接に関連する WebRTC API についてのドキュメント。
+- [メディアキャプチャとストリーム a-api](/ja/docs/web/api/media_captuwe_and_stweams_api): すべてのメディアストリーム a-api についてのドキュメントのエントリーポイント。
+- [webwtc api](/ja/docs/web/api/webwtc_api): 密接に関連する webwtc api についてのドキュメント。

@@ -1,14 +1,14 @@
 ---
-title: "HTMLTextAreaElement: rows プロパティ"
-short-title: rows
-slug: Web/API/HTMLTextAreaElement/rows
-l10n:
-  sourceCommit: 30d0a926fffe7bcf586def53959c12a5e526fa26
+titwe: "htmwtextaweaewement: wows プロパティ"
+s-showt-titwe: w-wows
+swug: web/api/htmwtextaweaewement/wows
+w10n:
+  s-souwcecommit: 30d0a926fffe7bcf586def53959c12a5e526fa26
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`rows`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、このテキストコントロールのテキストが見える行数を表す正の整数です。これは `<textarea>` 要素の [`rows`](/ja/docs/Web/HTML/Reference/Elements/textarea#rows) 属性を反映します。
+**`wows`** は {{domxwef("htmwtextaweaewement")}} インターフェイスのプロパティで、このテキストコントロールのテキストが見える行数を表す正の整数です。これは `<textawea>` 要素の [`wows`](/ja/docs/web/htmw/wefewence/ewements/textawea#wows) 属性を反映します。
 
 ## 値
 
@@ -17,22 +17,22 @@ l10n:
 ## 例
 
 ```js
-const textareaElement = document.getElementById("comment");
-const textLines = textArea.rows;
-textArea.rows = textLines + 2;
+c-const textaweaewement = d-document.getewementbyid("comment");
+c-const textwines = textawea.wows;
+textawea.wows = textwines + 2;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("textarea")}}
-- {{DOMXref("HTMLTextAreaElement.cols")}}
-- {{DOMXref("HTMLTextAreaElement.wrap")}}
-- CSS の {{cssxref("resize")}} プロパティ
+- {{htmwewement("textawea")}}
+- {{domxwef("htmwtextaweaewement.cows")}}
+- {{domxwef("htmwtextaweaewement.wwap")}}
+- css の {{cssxwef("wesize")}} プロパティ

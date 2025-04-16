@@ -1,18 +1,18 @@
 ---
-title: "GPUValidationError: GPUValidationError() コンストラクター"
-slug: Web/API/GPUValidationError/GPUValidationError
-l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+titwe: "gpuvawidationewwow: gpuvawidationewwow() コンストラクター"
+swug: w-web/api/gpuvawidationewwow/gpuvawidationewwow
+w-w10n:
+  souwcecommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{apiwef("webgpu a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-**`GPUValidationError()`** コンストラクターは、新しい {{domxref("GPUValidationError")}} オブジェクトのインスタンスを生成します。
+**`gpuvawidationewwow()`** コンストラクターは、新しい {{domxwef("gpuvawidationewwow")}} オブジェクトのインスタンスを生成します。
 
 ## 構文
 
-```js-nolint
-new GPUValidationError(message)
+```js-nowint
+n-nyew gpuvawidationewwow(message)
 ```
 
 ### 引数
@@ -22,19 +22,19 @@ new GPUValidationError(message)
 
 ## 例
 
-開発者は、自分でこのコンストラクターを用いて `GPUValidationError` オブジェクトを生成することはないでしょう。ユーザーエージェントは、{{domxref("GPUDevice.popErrorScope")}} または {{domxref("GPUDevice.uncapturederror_event", "uncapturederror")}} イベントでバリデーションエラーが浮かび上がったとき、このコンストラクターを用いて適切なオブジェクトを生成します。
+開発者は、自分でこのコンストラクターを用いて `gpuvawidationewwow` オブジェクトを生成することはないでしょう。ユーザーエージェントは、{{domxwef("gpudevice.popewwowscope")}} または {{domxwef("gpudevice.uncaptuwedewwow_event", (U ᵕ U❁) "uncaptuwedewwow")}} イベントでバリデーションエラーが浮かび上がったとき、このコンストラクターを用いて適切なオブジェクトを生成します。
 
-`GPUValidationError` オブジェクトのインスタンスを扱う具体的な例は、メインの [`GPUValidationError`](/ja/docs/Web/API/GPUValidationError#例) のページを参照してください。
+`gpuvawidationewwow` オブジェクトのインスタンスを扱う具体的な例は、メインの [`gpuvawidationewwow`](/ja/docs/web/api/gpuvawidationewwow#例) のページを参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
-- [WebGPU Error Handling best practices](https://toji.dev/webgpu-best-practices/error-handling)
+- [webgpu a-api](/ja/docs/web/api/webgpu_api)
+- [webgpu e-ewwow handwing b-best pwactices](https://toji.dev/webgpu-best-pwactices/ewwow-handwing)

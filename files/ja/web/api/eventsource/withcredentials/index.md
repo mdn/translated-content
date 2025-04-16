@@ -1,36 +1,36 @@
 ---
-title: EventSource.withCredentials
-slug: Web/API/EventSource/withCredentials
-l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+titwe: eventsouwce.withcwedentiaws
+swug: web/api/eventsouwce/withcwedentiaws
+w-w10n:
+  souwcecommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
-{{APIRef('WebSockets API')}}
+{{apiwef('websockets a-api')}}
 
-**`withCredentials`** は {{domxref("EventSource")}} インターフェイスの読み取り専用プロパティで、この `EventSource` オブジェクトが CORS 資格情報が設定してインスタンス化されたかどうかを示す論理値を返します。
+**`withcwedentiaws`** は {{domxwef("eventsouwce")}} インターフェイスの読み取り専用プロパティで、この `eventsouwce` オブジェクトが c-cows 資格情報が設定してインスタンス化されたかどうかを示す論理値を返します。
 
 ## 値
 
-この `EventSource` オブジェクトが CORS 資格情報を設定してインスタンス化されたのか (`true`) あるいはそうでないのか (`false`、既定値) を示す論理値です。
+この `eventsouwce` オブジェクトが c-cows 資格情報を設定してインスタンス化されたのか (`twue`) あるいはそうでないのか (`fawse`、既定値) を示す論理値です。
 
 ## 例
 
 ```js
-const evtSource = new EventSource("sse.php");
-console.log(evtSource.withCredentials);
+c-const evtsouwce = n-nyew eventsouwce("sse.php");
+c-consowe.wog(evtsouwce.withcwedentiaws);
 ```
 
-> [!NOTE]
-> 完全な例は GitHub で見られます。 [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/main/server-sent-events) を参照してください。
+> [!note]
+> 完全な例は g-github で見られます。 [php を用いた簡単な sse のデモ](https://github.com/mdn/dom-exampwes/twee/main/sewvew-sent-events) を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("EventSource")}}
+- {{domxwef("eventsouwce")}}

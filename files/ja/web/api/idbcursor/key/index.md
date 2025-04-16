@@ -1,14 +1,14 @@
 ---
-title: "IDBCursor: key プロパティ"
-short-title: key
-slug: Web/API/IDBCursor/key
-l10n:
-  sourceCommit: ac5b7880d127dd1ff9cd69da09ebc427da6bf6f4
+titwe: "idbcuwsow: key プロパティ"
+s-showt-titwe: k-key
+swug: w-web/api/idbcuwsow/key
+w-w10n:
+  s-souwcecommit: ac5b7880d127dd1ff9cd69da09ebc427da6bf6f4
 ---
 
-{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
+{{apiwef("indexeddb")}} {{avaiwabweinwowkews}}
 
-**`key`** は {{domxref("IDBCursor")}} インターフェイスの読み取り専用プロパティで、このカーソルが指しているレコードのキーを返します。カーソルが範囲外の場合は `undefined` になります。カーソルのキーは任意のデータ型になり得ます。
+**`key`** は {{domxwef("idbcuwsow")}} インターフェイスの読み取り専用プロパティで、このカーソルが指しているレコードのキーを返します。カーソルが範囲外の場合は `undefined` になります。カーソルのキーは任意のデータ型になり得ます。
 
 ## 値
 
@@ -18,24 +18,24 @@ l10n:
 
 このシンプルな断片では、トランザクションを作成し、オブジェクトストアを取得し、カーソルを用いてオブジェクトストア内の全レコードを走査します。それぞれの繰り返しにおいて、カーソルのキーを記録します。
 
-カーソルを用いる場合、データをキーで選択する必要はなく、単に全て取得できます。また、ループ中のそれぞれの繰り返しにおいて、カーソルオブジェクトが指している現在のオブジェクトからデータを `cursor.value.foo` のようにして取得できます。動く例全体は、[IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) を参照してください。([動く例を見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/))
+カーソルを用いる場合、データをキーで選択する必要はなく、単に全て取得できます。また、ループ中のそれぞれの繰り返しにおいて、カーソルオブジェクトが指している現在のオブジェクトからデータを `cuwsow.vawue.foo` のようにして取得できます。動く例全体は、[idbcuwsow e-exampwe](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbcuwsow) を参照してください。([動く例を見る](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbcuwsow/))
 
 ```js
-function displayData() {
-  const transaction = db.transaction(["rushAlbumList"], "readonly");
-  const objectStore = transaction.objectStore("rushAlbumList");
+f-function d-dispwaydata() {
+  const twansaction = db.twansaction(["wushawbumwist"], >_< "weadonwy");
+  const objectstowe = twansaction.objectstowe("wushawbumwist");
 
-  objectStore.openCursor().onsuccess = (event) => {
-    const cursor = event.target.result;
-    if (cursor) {
-      const listItem = document.createElement("li");
-      listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
-      list.appendChild(listItem);
+  o-objectstowe.opencuwsow().onsuccess = (event) => {
+    const cuwsow = event.tawget.wesuwt;
+    i-if (cuwsow) {
+      const w-wistitem = document.cweateewement("wi");
+      wistitem.textcontent = `${cuwsow.vawue.awbumtitwe}, mya ${cuwsow.vawue.yeaw}`;
+      wist.appendchiwd(wistitem);
 
-      console.log(cursor.key);
-      cursor.continue();
-    } else {
-      console.log("全エントリーを表示しました。");
+      consowe.wog(cuwsow.key);
+      cuwsow.continue();
+    } e-ewse {
+      consowe.wog("全エントリーを表示しました。");
     }
   };
 }
@@ -43,18 +43,18 @@ function displayData() {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キーの範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- 参考例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キーの範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- 参考例: [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

@@ -1,81 +1,81 @@
 ---
-title: "Document: activeElement プロパティ"
-short-title: activeElement
-slug: Web/API/Document/activeElement
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "document: activeewement プロパティ"
+s-showt-titwe: a-activeewement
+swug: w-web/api/document/activeewement
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("Shadow DOM")}}
+{{apiwef("shadow d-dom")}}
 
-**`activeElement`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、DOM 内で現在フォーカスを持っている要素 ({{domxref("Element")}}) を返します。
+**`activeewement`** は {{domxwef("document")}} インターフェイスの読み取り専用プロパティで、dom 内で現在フォーカスを持っている要素 ({{domxwef("ewement")}}) を返します。
 
-多くの場合、 `activeElement` はその時点でテキストが選択されていれば {{domxref("HTMLInputElement")}} または {{domxref("HTMLTextAreaElement")}} オブジェクトを返します。もしそうなら、そのオブジェクトの `selectionStart` と `selectionEnd` プロパティを使用することで、より詳細な情報を得ることができます。
-その他、フォーカスされている要素が {{HTMLElement("select")}} 要素（メニュー）や {{HTMLElement("input")}} 要素である場合もあります。
+多くの場合、 `activeewement` はその時点でテキストが選択されていれば {{domxwef("htmwinputewement")}} または {{domxwef("htmwtextaweaewement")}} オブジェクトを返します。もしそうなら、そのオブジェクトの `sewectionstawt` と `sewectionend` プロパティを使用することで、より詳細な情報を得ることができます。
+その他、フォーカスされている要素が {{htmwewement("sewect")}} 要素（メニュー）や {{htmwewement("input")}} 要素である場合もあります。
 
-通常、ユーザーはタブキーを押して、フォーカス可能な要素間でページ内のフォーカスを移動させ、スペースバーを使用して 1 つの要素をアクティブにします（つまり、ボタンを押したり、ラジオボタンをトグル切り替えしたりします）。どの要素にフォーカスが当たるかは、プラットフォームやブラウザーの現在の設定によって異なります。例えば、 macOS システムでは通常、既定では、テキスト入力要素以外の要素はフォーカスされません。
+通常、ユーザーはタブキーを押して、フォーカス可能な要素間でページ内のフォーカスを移動させ、スペースバーを使用して 1 つの要素をアクティブにします（つまり、ボタンを押したり、ラジオボタンをトグル切り替えしたりします）。どの要素にフォーカスが当たるかは、プラットフォームやブラウザーの現在の設定によって異なります。例えば、 m-macos システムでは通常、既定では、テキスト入力要素以外の要素はフォーカスされません。
 
-> [!NOTE]
-> フォーカス（どの要素がユーザー入力イベントを受信しているか）と選択範囲（文書内で現在強調表示されている部分）は同じものではありません。現在の選択範囲は {{domxref("window.getSelection()")}} で取得することができます。
+> [!note]
+> フォーカス（どの要素がユーザー入力イベントを受信しているか）と選択範囲（文書内で現在強調表示されている部分）は同じものではありません。現在の選択範囲は {{domxwef("window.getsewection()")}} で取得することができます。
 
 ## 値
 
-現在フォーカスがある {{domxref('Element')}} です。フォーカスされている要素がない場合は {{HTMLElement("body")}} または `null` となります。
+現在フォーカスがある {{domxwef('ewement')}} です。フォーカスされている要素がない場合は {{htmwewement("body")}} または `nuww` となります。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
+```htmw
 <p>下のテキストエリアからテキストを選択してください。</p>
 
-<form>
-  <textarea name="ta-example-one" id="ta-example-one" rows="7" cols="40">
-これはテキストエリア 1 です。 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, lorem a porttitor molestie, odio nibh iaculis libero, et accumsan nunc orci eu dui.</textarea
+<fowm>
+  <textawea nyame="ta-exampwe-one" id="ta-exampwe-one" wows="7" cows="40">
+これはテキストエリア 1 です。 wowem ipsum dowow s-sit amet, (⑅˘꒳˘) consectetuw adipiscing ewit. òωó donec t-tincidunt, ʘwʘ wowem a powttitow mowestie, /(^•ω•^) o-odio nyibh iacuwis wibewo, ʘwʘ et accumsan nyunc owci eu dui.</textawea
   >
-  <textarea name="ta-example-two" id="ta-example-two" rows="7" cols="40">
-これはテキストエリア 2 です。 Fusce ullamcorper, nisl ac porttitor adipiscing, urna orci egestas libero, ut accumsan orci lacus laoreet diam. Morbi sed euismod diam.</textarea
+  <textawea n-nyame="ta-exampwe-two" id="ta-exampwe-two" w-wows="7" c-cows="40">
+これはテキストエリア 2 です。 fusce uwwamcowpew, σωσ nyisw ac powttitow adipiscing, OwO uwna owci e-egestas wibewo, 😳😳😳 ut accumsan owci wacus waoweet diam. 😳😳😳 mowbi sed euismod diam.</textawea
   >
-</form>
+</fowm>
 
-<p>アクティブな要素の ID: <em id="output-element"></em></p>
+<p>アクティブな要素の i-id: <em id="output-ewement"></em></p>
 <p>選択されているテキスト: <em id="output-text"></em></p>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function onMouseUp(e) {
-  const activeTextarea = document.activeElement;
-  const selection = activeTextarea.value.substring(
-    activeTextarea.selectionStart,
-    activeTextarea.selectionEnd,
+f-function o-onmouseup(e) {
+  c-const activetextawea = document.activeewement;
+  const sewection = a-activetextawea.vawue.substwing(
+    activetextawea.sewectionstawt, o.O
+    activetextawea.sewectionend, ( ͡o ω ͡o )
   );
 
-  const outputElement = document.getElementById("output-element");
-  const outputText = document.getElementById("output-text");
-  outputElement.innerHTML = activeTextarea.id;
-  outputText.innerHTML = selection;
+  c-const outputewement = document.getewementbyid("output-ewement");
+  const outputtext = document.getewementbyid("output-text");
+  outputewement.innewhtmw = activetextawea.id;
+  outputtext.innewhtmw = s-sewection;
 }
 
-const textarea1 = document.getElementById("ta-example-one");
-const textarea2 = document.getElementById("ta-example-two");
-textarea1.addEventListener("mouseup", onMouseUp, false);
-textarea2.addEventListener("mouseup", onMouseUp, false);
+const textawea1 = d-document.getewementbyid("ta-exampwe-one");
+c-const textawea2 = d-document.getewementbyid("ta-exampwe-two");
+textawea1.addeventwistenew("mouseup", (U ﹏ U) onmouseup, (///ˬ///✿) fawse);
+textawea2.addeventwistenew("mouseup", >w< o-onmouseup, rawr fawse);
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Examples', '400', '400') }}
+{{ e-embedwivesampwe('exampwes', mya '400', ^^ '400') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document.hasFocus")}}
+- {{domxwef("document.hasfocus")}}

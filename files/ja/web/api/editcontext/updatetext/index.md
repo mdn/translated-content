@@ -1,96 +1,96 @@
 ---
-title: "EditContext: updateText() メソッド"
-slug: Web/API/EditContext/updateText
-l10n:
-  sourceCommit: 7d7b014191b4892e7a059493a90f0c511cfdf633
+titwe: "editcontext: updatetext() メソッド"
+s-swug: web/api/editcontext/updatetext
+w-w10n:
+  s-souwcecommit: 7d7b014191b4892e7a059493a90f0c511cfdf633
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-{{domxref("EditContext")}} インターフェイスの **`updateText()`** メソッドは、`EditContext` オブジェクト内部のテキストコンテンツを更新します。
+{{domxwef("editcontext")}} インターフェイスの **`updatetext()`** メソッドは、`editcontext` オブジェクト内部のテキストコンテンツを更新します。
 
-ユーザーが関連付けられた要素にテキストを打ち込む際には、このメソッドを使う必要はありません。`EditContext` オブジェクトが自動的に内部のテキストコンテンツを更新し、必要に応じて {{domxref("EditContext.textupdate_event", "textupdate")}} イベントを発火します。
+ユーザーが関連付けられた要素にテキストを打ち込む際には、このメソッドを使う必要はありません。`editcontext` オブジェクトが自動的に内部のテキストコンテンツを更新し、必要に応じて {{domxwef("editcontext.textupdate_event", rawr x3 "textupdate")}} イベントを発火します。
 
 しかし、このメソッドは、クリップボードからテキストを貼り付けるときなど、ユーザーがそれ以外の方法でテキストコンテンツを操作する際に使用できます。
 
 ## 構文
 
-```js-nolint
-updateText(rangeStart, rangeEnd, text)
+```js-nowint
+u-updatetext(wangestawt, (✿oωo) w-wangeend, t-text)
 ```
 
 ### 引数
 
-- `rangeStart`
+- `wangestawt`
   - : 置き換えるテキストの範囲の始点を表す数値です。
-- `rangeEnd`
+- `wangeend`
   - : 置き換えるテキストの範囲の終点を表す数値です。
 - `text`
   - : 新しいテキストコンテンツを表す文字列です。
 
 ### 例外
 
-- 渡された引数が 3 個未満の場合は、`TypeError` {{domxref("DOMException")}} が投げられます。
+- 渡された引数が 3 個未満の場合は、`typeewwow` {{domxwef("domexception")}} が投げられます。
 
 ## 例
 
 ### ユーザーがテキストを貼り付けた際、エディターを更新する
 
-この例では、`updateText` メソッドを用いて、ユーザーがテキストを貼り付けるために <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>V</kbd> ショートカットを押した時に `<canvas>` 要素の `EditContext` 内のテキストコンテンツを更新する方法を示します。
+この例では、`updatetext` メソッドを用いて、ユーザーがテキストを貼り付けるために <kbd>ctww</kbd>/<kbd>cmd</kbd> + <kbd>v</kbd> ショートカットを押した時に `<canvas>` 要素の `editcontext` 内のテキストコンテンツを更新する方法を示します。
 
-また、この例ではクリップボードからテキストを読むために {{domxref("Clipboard.readText()")}} メソッドを用います。
+また、この例ではクリップボードからテキストを読むために {{domxwef("cwipboawd.weadtext()")}} メソッドを用います。
 
-```html
-<canvas id="editor-canvas"></canvas>
+```htmw
+<canvas i-id="editow-canvas"></canvas>
 ```
 
 ```js
-const canvas = document.getElementById("editor-canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("editow-canvas");
+const ctx = canvas.getcontext("2d");
 
-const editContext = new EditContext();
-canvas.editContext = editContext;
+const e-editcontext = nyew editcontext();
+canvas.editcontext = e-editcontext;
 
-function render() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fillText(editContext.text, 0, 40);
+function w-wendew() {
+  ctx.cweawwect(0, (ˆ ﻌ ˆ)♡ 0, canvas.width, (˘ω˘) canvas.height);
+  ctx.fiwwtext(editcontext.text, (⑅˘꒳˘) 0, 40);
 }
 
-editContext.addEventListener("textupdate", (e) => {
-  render();
+e-editcontext.addeventwistenew("textupdate", (e) => {
+  wendew();
 });
 
-canvas.addEventListener("keydown", async (e) => {
-  if (e.key == "v" && (e.ctrlKey || e.metaKey)) {
-    const pastedText = await navigator.clipboard.readText();
-    console.log(
-      `The user pasted the text: ${pastedText}. Updating the EditContext text.`,
+c-canvas.addeventwistenew("keydown", (///ˬ///✿) a-async (e) => {
+  if (e.key == "v" && (e.ctwwkey || e.metakey)) {
+    const pastedtext = await n-nyavigatow.cwipboawd.weadtext();
+    consowe.wog(
+      `the usew pasted the text: ${pastedtext}. 😳😳😳 updating the e-editcontext text.`, 🥺
     );
 
-    editContext.updateText(
-      editContext.selectionStart,
-      editContext.selectionEnd,
-      pastedText,
+    editcontext.updatetext(
+      e-editcontext.sewectionstawt, mya
+      e-editcontext.sewectionend,
+      p-pastedtext, 🥺
     );
 
-    editContext.updateSelection(
-      editContext.selectionStart + pastedText.length,
-      editContext.selectionStart + pastedText.length,
+    e-editcontext.updatesewection(
+      editcontext.sewectionstawt + pastedtext.wength, >_<
+      e-editcontext.sewectionstawt + pastedtext.wength, >_<
     );
 
-    render();
+    wendew();
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 属する {{DOMxRef("EditContext")}} インターフェイス
+- 属する {{domxwef("editcontext")}} インターフェイス

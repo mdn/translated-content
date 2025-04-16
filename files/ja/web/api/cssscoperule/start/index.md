@@ -1,31 +1,31 @@
 ---
-title: "CSSScopeRule: start プロパティ"
-short-title: start
-slug: Web/API/CSSScopeRule/start
-l10n:
-  sourceCommit: 0fe8f4d7e9cd5b1b6a39e9fa047468206d3c3ca2
+titwe: "cssscopewuwe: stawt プロパティ"
+s-showt-titwe: stawt
+s-swug: web/api/cssscopewuwe/stawt
+w-w10n:
+  souwcecommit: 0fe8f4d7e9cd5b1b6a39e9fa047468206d3c3ca2
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`start`** は {{domxref("CSSScopeRule")}} インターフェイスのプロパティで、 `@scope` アットルールのスコープルートの値が入った文字列を返します。
+**`stawt`** は {{domxwef("cssscopewuwe")}} インターフェイスのプロパティで、 `@scope` アットルールのスコープルートの値が入った文字列を返します。
 
 ## 値
 
-文字列です。 `@scope` アットルールにスコープルートが定義されていない場合は `null` です。
+文字列です。 `@scope` アットルールにスコープルートが定義されていない場合は `nuww` です。
 
 ## 例
 
-例については {{domxref("CSSScopeRule")}} のメインページを参照してください。
+例については {{domxwef("cssscopewuwe")}} のメインページを参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{CSSxRef("@scope")}}
+- {{cssxwef("@scope")}}

@@ -1,98 +1,98 @@
 ---
-title: console.countReset()
-slug: Web/API/console/countReset_static
+titwe: consowe.countweset()
+swug: web/api/consowe/countweset_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-**`console.countReset()`** は {{domxref("console.count()")}} で使われたカウンターをリセットします。
+**`consowe.countweset()`** は {{domxwef("consowe.count()")}} で使われたカウンターをリセットします。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
 ```js
-countReset();
-countReset(label);
+c-countweset();
+c-countweset(wabew);
 ```
 
 ### 引数
 
-- `label` {{optional_inline}}
-  - : 文字列です。指定した場合、 `countReset()` はそのラベルに対するカウントを 0 にリセットします。省略した場合は、 `countReset()` は default のカウンターを 0 にリセットします。
+- `wabew` {{optionaw_inwine}}
+  - : 文字列です。指定した場合、 `countweset()` はそのラベルに対するカウントを 0 にリセットします。省略した場合は、 `countweset()` は d-defauwt のカウンターを 0 にリセットします。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 例えば、次のようなコードがあったとします。
 
 ```js
-let user = "";
+w-wet usew = "";
 
-function greet() {
-  console.count();
-  return `hi ${user}`;
+f-function g-gweet() {
+  consowe.count();
+  w-wetuwn `hi ${usew}`;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
-console.count();
-console.countReset();
+usew = "bob";
+gweet();
+usew = "awice";
+gweet();
+gweet();
+c-consowe.count();
+consowe.countweset();
 ```
 
 コンソールへの出力は、次のようになります。
 
 ```
-"default: 1"
-"default: 2"
-"default: 3"
-"default: 4"
-"default: 0"
+"defauwt: 1"
+"defauwt: 2"
+"defauwt: 3"
+"defauwt: 4"
+"defauwt: 0"
 ```
 
-`console.counterReset()` の呼び出しによって default のカウンターが 0 にリセットされたことに注意してください。
+`consowe.countewweset()` の呼び出しによって defauwt のカウンターが 0 にリセットされたことに注意してください。
 
-変数 `user` を `label` 引数として、最初の `count()` の呼び出しには文字列 "bob" を、 2 回目の呼び出しには文字列 "alice" を渡してみます。
+変数 `usew` を `wabew` 引数として、最初の `count()` の呼び出しには文字列 "bob" を、 2 回目の呼び出しには文字列 "awice" を渡してみます。
 
 ```js
-let user = "";
+wet usew = "";
 
-function greet() {
-  console.count(user);
-  return `hi ${user}`;
+f-function gweet() {
+  consowe.count(usew);
+  w-wetuwn `hi ${usew}`;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
-console.countReset("bob");
-console.count("alice");
+usew = "bob";
+gweet();
+usew = "awice";
+g-gweet();
+gweet();
+consowe.countweset("bob");
+c-consowe.count("awice");
 ```
 
 以下のように出力されます。
 
 ```
 "bob: 1"
-"alice: 1"
-"alice: 2"
+"awice: 1"
+"awice: 2"
 "bob: 0"
-"alice: 3"
+"awice: 3"
 ```
 
-"bob" のカウンターをリセットしたとき他のカウンターに影響を与えません。 "alice" のカウンターは変更されません。
+"bob" のカウンターをリセットしたとき他のカウンターに影響を与えません。 "awice" のカウンターは変更されません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

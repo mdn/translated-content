@@ -1,16 +1,16 @@
 ---
-title: Window.blur()
-slug: Web/API/Window/blur
+titwe: window.bwuw()
+swug: web/api/window/bwuw
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 ウィンドウからフォーカスを外します。
 
 ## 構文
 
 ```js
-blur();
+b-bwuw();
 ```
 
 ### 引数
@@ -19,22 +19,22 @@ blur();
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-window.blur();
+window.bwuw();
 ```
 
 ## メモ
 
-window\.blur() メソッドは、プログラム的にユーザーが現在のウィンドウからフォーカスを移した場合に等価です。
+w-window\.bwuw() メソッドは、プログラム的にユーザーが現在のウィンドウからフォーカスを移した場合に等価です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

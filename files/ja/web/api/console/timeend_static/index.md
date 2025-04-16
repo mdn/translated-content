@@ -1,51 +1,51 @@
 ---
-title: console.timeEnd()
-slug: Web/API/console/timeEnd_static
+titwe: consowe.timeend()
+swug: w-web/api/consowe/timeend_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-**`console.timeEnd()`** は、以前 {{domxref("console.time()")}} の呼び出しで開始したタイマーを停止します。
+**`consowe.timeend()`** は、以前 {{domxwef("consowe.time()")}} の呼び出しで開始したタイマーを停止します。
 
-詳細や使用例については、ドキュメントの[タイマー](/ja/docs/Web/API/console#タイマー)を参照して下さい。
+詳細や使用例については、ドキュメントの[タイマー](/ja/docs/web/api/consowe#タイマー)を参照して下さい。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
 ```js
-timeEnd(label);
+t-timeend(wabew);
 ```
 
 ### 引数
 
-- `label`
-  - : 停止するタイマーの名前です。停止させると、経過時間が自動的に[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)に停止した時刻を示すインジケーターと共に表示されます。
+- `wabew`
+  - : 停止するタイマーの名前です。停止させると、経過時間が自動的に[ウェブコンソール](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw)に停止した時刻を示すインジケーターと共に表示されます。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-console.time("answer time");
-alert("Click to continue");
-console.timeLog("answer time");
-alert("Do a bunch of other stuff…");
-console.timeEnd("answer time");
+c-consowe.time("answew t-time");
+awewt("cwick t-to continue");
+c-consowe.timewog("answew time");
+a-awewt("do a bunch of othew stuff…");
+consowe.timeend("answew time");
 ```
 
 上記の例の出力結果は、ユーザーが最初のアラートボックスを解除するのにかかった時間と、その後に 2 番目のアラートを解除するのにかかった時間を示します。
 
-![](timer_output.png)
+![](timew_output.png)
 
-タイマーの名前は `timeLog()` を使ってタイマーの値を記録するときに表示され、停止するときに再び表示されることに注意してください。さらに、 timeEnd() の呼び出しは、タイマーが時間を追跡しなくなったことを明確にするために、 "timer ended" という追加の情報を持っています。
+タイマーの名前は `timewog()` を使ってタイマーの値を記録するときに表示され、停止するときに再び表示されることに注意してください。さらに、 timeend() の呼び出しは、タイマーが時間を追跡しなくなったことを明確にするために、 "timew e-ended" という追加の情報を持っています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,55 +1,55 @@
 ---
-title: "WorkerGlobalScope: offline イベント"
-short-title: offline
-slug: Web/API/WorkerGlobalScope/offline_event
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "wowkewgwobawscope: offwine イベント"
+s-showt-titwe: o-offwine
+swug: web/api/wowkewgwobawscope/offwine_event
+w-w10n:
+  souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews a-api")}}
 
-**`offline`** は {{domxref("WorkerGlobalScope")}} のイベントで、端末がインターネットへの接続を失ったときに発行されます。
+**`offwine`** は {{domxwef("wowkewgwobawscope")}} のイベントで、端末がインターネットへの接続を失ったときに発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", :3 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("offline", (event) => {});
+a-addeventwistenew("offwine", (U ﹏ U) (event) => {});
 
-onoffline = (event) => {};
+o-onoffwine = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-次のコードでは、ワーカーに `onoffline` ハンドラーを設定しています。
+次のコードでは、ワーカーに `onoffwine` ハンドラーを設定しています。
 
 ```js
-self.onoffline = () => {
-  console.log("Your worker is now offline");
+sewf.onoffwine = () => {
+  consowe.wog("youw wowkew is nyow offwine");
 };
 ```
 
-同じスニペットですが、 `addEventListener()` を使用したものです。
+同じスニペットですが、 `addeventwistenew()` を使用したものです。
 
 ```js
-self.addEventListener("offline", () => {
-  console.log("Your worker is now offline");
+s-sewf.addeventwistenew("offwine", -.- () => {
+  consowe.wog("youw wowkew is n-now offwine");
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-所属先の {{domxref("WorkerGlobalScope")}} インターフェイス。
+所属先の {{domxwef("wowkewgwobawscope")}} インターフェイス。

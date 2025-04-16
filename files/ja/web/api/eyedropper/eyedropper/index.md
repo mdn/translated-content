@@ -1,19 +1,19 @@
 ---
-title: "EyeDropper: EyeDropper() コンストラクター"
-short-title: EyeDropper()
-slug: Web/API/EyeDropper/EyeDropper
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "eyedwoppew: eyedwoppew() コンストラクター"
+s-showt-titwe: e-eyedwoppew()
+s-swug: web/api/eyedwoppew/eyedwoppew
+w-w10n:
+  s-souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
+{{apiwef("eyedwoppew a-api")}}{{seecompattabwe}}
 
-**`EyeDropper()`** コンストラクターは、新しい {{DOMxRef("EyeDropper")}} オブジェクトを返します。
+**`eyedwoppew()`** コンストラクターは、新しい {{domxwef("eyedwoppew")}} オブジェクトを返します。
 
 ## 構文
 
-```js-nolint
-new EyeDropper()
+```js-nowint
+n-nyew eyedwoppew()
 ```
 
 ### 引数
@@ -22,12 +22,12 @@ new EyeDropper()
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 属している {{DOMxRef("EyeDropper")}} インターフェイス
+- 属している {{domxwef("eyedwoppew")}} インターフェイス

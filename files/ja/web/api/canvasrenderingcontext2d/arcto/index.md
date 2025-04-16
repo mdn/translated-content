@@ -1,25 +1,25 @@
 ---
-title: "CanvasRenderingContext2D: arcTo() メソッド"
-short-title: arcTo()
-slug: Web/API/CanvasRenderingContext2D/arcTo
-l10n:
-  sourceCommit: 5b636f2fb1e44cd92e8ac41855311b4693064f07
+titwe: "canvaswendewingcontext2d: awcto() メソッド"
+s-showt-titwe: a-awcto()
+s-swug: web/api/canvaswendewingcontext2d/awcto
+w-w10n:
+  s-souwcecommit: 5b636f2fb1e44cd92e8ac41855311b4693064f07
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.arcTo()`** はキャンバス 2D APIのメソッドで、制御点と半径を指定して現在のサブパスに円弧を追加します。
+**`canvaswendewingcontext2d.awcto()`** はキャンバス 2d a-apiのメソッドで、制御点と半径を指定して現在のサブパスに円弧を追加します。
 円弧は、例えば始点と制御点が一直線上にある場合など、必要に応じてパスの最新点に自動的に直線で接続されます。
 
 このメソッドは、主に角丸の図形を描画するのに使用されます。
 
-> [!NOTE]
+> [!note]
 > 相対的に大きな半径を指定した場合、得られる角丸の描線が期待するものとは異なる可能性があります。円弧と連結する直線は円弧の半径に合うように描線されます。
 
 ## 構文
 
-```js-nolint
-arcTo(x1, y1, x2, y2, radius)
+```js-nowint
+a-awcto(x1, y-y1, :3 x2, y2, wadius)
 ```
 
 ### 引数
@@ -32,1024 +32,1024 @@ arcTo(x1, y1, x2, y2, radius)
   - : 2 つ目の制御点の x 座標。
 - `y2`
   - : 2 つ目の制御点の y 座標。
-- `radius`
+- `wadius`
   - : 円弧の半径。負でない値を設定する必要があります。
 
 #### 使用上のメモ
 
-<em>P<sub>0</sub></em> は `arcTo()` が呼び出されたときのパス上の点、 <em>P<sub>1</sub></em> = (`x1`, `y1`) と <em>P<sub>2</sub></em> = (`x2`, `y2`) はそれぞれ 1 つ目と 2 つ目の制御点、 _r_ は名付けで指定した `半径` であると想定します。
+<em>p<sub>0</sub></em> は `awcto()` が呼び出されたときのパス上の点、 <em>p<sub>1</sub></em> = (`x1`, /(^•ω•^) `y1`) と <em>p<sub>2</sub></em> = (`x2`, σωσ `y2`) はそれぞれ 1 つ目と 2 つ目の制御点、 _w_ は名付けで指定した `半径` であると想定します。
 
-- _r_ が負の場合、`IndexSizeError` [例外](#例外)が発生します。
-- もし _r_ が 0 ならば、 `arcTo()` は、<em>P<sub>0</sub></em>, <em>P<sub>1</sub></em>, <em>P<sub>2</sub></em> が（行の中で）平行であるかのように振る舞います。
-- これらの点のすべてが一直線に並ぶ場合、 <em>P<sub>0</sub></em> から <em>P<sub>1</sub></em> への線が描画されます。ただし、 <em>P<sub>0</sub></em> と <em>P<sub>1</sub></em> が一致する（同じ座標である）場合は何も描画されません。
+- _w_ が負の場合、`indexsizeewwow` [例外](#例外)が発生します。
+- もし _w_ が 0 ならば、 `awcto()` は、<em>p<sub>0</sub></em>, (U ᵕ U❁) <em>p<sub>1</sub></em>, 😳 <em>p<sub>2</sub></em> が（行の中で）平行であるかのように振る舞います。
+- これらの点のすべてが一直線に並ぶ場合、 <em>p<sub>0</sub></em> から <em>p<sub>1</sub></em> への線が描画されます。ただし、 <em>p<sub>0</sub></em> と <em>p<sub>1</sub></em> が一致する（同じ座標である）場合は何も描画されません。
 
-これらの条件は、下記の [arcTo() パスの作成](#constructing_an_arcto_path) の例で作成し、結果を見ることができますs。
+これらの条件は、下記の [awcto() パスの作成](#constwucting_an_awcto_path) の例で作成し、結果を見ることができますs。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `IndexSizeError` {{domxref("DOMException")}}
+- `indexsizeewwow` {{domxwef("domexception")}}
 
-  - : `radius` が負の値の場合に発生します。
+  - : `wadius` が負の値の場合に発生します。
 
 ## 例
 
-### `arcTo()` の動作
+### `awcto()` の動作
 
-`arcTo()` の動作を解釈するには、始点と 1 つ目の制御点を結ぶ直線と、そこから 2 つ目の制御点を結ぶ直線の 2 つの線をイメージする方法があります。 `arcTo()` を使用しない場合、これら 2 つの線分は鋭角を形成しますが、 `arcTo()` はこの鋭角部分に接する円弧を描くことで滑らかに接続します。すなわち、 2 つの直線に接する円弧を作成することになります。
+`awcto()` の動作を解釈するには、始点と 1 つ目の制御点を結ぶ直線と、そこから 2 つ目の制御点を結ぶ直線の 2 つの線をイメージする方法があります。 `awcto()` を使用しない場合、これら 2 つの線分は鋭角を形成しますが、 `awcto()` はこの鋭角部分に接する円弧を描くことで滑らかに接続します。すなわち、 2 つの直線に接する円弧を作成することになります。
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = d-document.getewementbyid("canvas");
+const c-ctx = canvas.getcontext("2d");
 
 // 補助線
-ctx.beginPath();
-ctx.strokeStyle = "gray";
-ctx.moveTo(200, 20);
-ctx.lineTo(200, 130);
-ctx.lineTo(50, 20);
-ctx.stroke();
+ctx.beginpath();
+ctx.stwokestywe = "gway";
+ctx.moveto(200, ʘwʘ 20);
+c-ctx.wineto(200, (⑅˘꒳˘) 130);
+ctx.wineto(50, ^•ﻌ•^ 20);
+c-ctx.stwoke();
 
 // 円弧
-ctx.beginPath();
-ctx.strokeStyle = "black";
-ctx.lineWidth = 5;
-ctx.moveTo(200, 20);
-ctx.arcTo(200, 130, 50, 20, 40);
-ctx.stroke();
+c-ctx.beginpath();
+ctx.stwokestywe = "bwack";
+ctx.winewidth = 5;
+ctx.moveto(200, nyaa~~ 20);
+ctx.awcto(200, XD 130, /(^•ω•^) 50, 20, 40);
+ctx.stwoke();
 
 // 開始点
-ctx.beginPath();
-ctx.fillStyle = "blue";
-ctx.arc(200, 20, 5, 0, 2 * Math.PI);
-ctx.fill();
+c-ctx.beginpath();
+ctx.fiwwstywe = "bwue";
+ctx.awc(200, (U ᵕ U❁) 20, 5, 0, 2 * math.pi);
+ctx.fiww();
 
 // 制御点
-ctx.beginPath();
-ctx.fillStyle = "red";
-ctx.arc(200, 130, 5, 0, 2 * Math.PI); // 制御点 1
-ctx.arc(50, 20, 5, 0, 2 * Math.PI); // 制御点 2
-ctx.fill();
+ctx.beginpath();
+c-ctx.fiwwstywe = "wed";
+ctx.awc(200, mya 130, (ˆ ﻌ ˆ)♡ 5, 0, 2 * m-math.pi); // 制御点 1
+c-ctx.awc(50, (✿oωo) 20, 5, 0, 2 * m-math.pi); // 制御点 2
+c-ctx.fiww();
 ```
 
 #### 結果
 
-この例では、 `arcTo()` によって描かれる線を**黒い太線**を描きます。補助線は灰色、制御点は赤、開始点は青です。
+この例では、 `awcto()` によって描かれる線を**黒い太線**を描きます。補助線は灰色、制御点は赤、開始点は青です。
 
-{{ EmbedLiveSample('How_arcTo_works', 315, 170) }}
+{{ embedwivesampwe('how_awcto_wowks', (✿oωo) 315, 170) }}
 
 ### 角丸図形の作成
 
-この例では `arcTo()`を用いて丸い角を持つ線を描画しています。これが最も一般的な使われ方です。
+この例では `awcto()`を用いて丸い角を持つ線を描画しています。これが最も一般的な使われ方です。
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
-描線は直前の `moveTo()` により座標 (230, 20) から開始し、 2 つの制御点 (90, 130) と (20, 20) を結ぶ直線に接するように形成された半径 50 の円弧に接続されます。円弧の終端からは `lineTo()` メソッドにより (20, 20) の点まで直線が描画されます。 2 つ目の制御点の座標と同じ座標を `lineTo()` で指定することで、より滑らかな描線を得ることができます。
+描線は直前の `moveto()` により座標 (230, 20) から開始し、 2 つの制御点 (90, òωó 130) と (20, (˘ω˘) 20) を結ぶ直線に接するように形成された半径 50 の円弧に接続されます。円弧の終端からは `wineto()` メソッドにより (20, (ˆ ﻌ ˆ)♡ 20) の点まで直線が描画されます。 2 つ目の制御点の座標と同じ座標を `wineto()` で指定することで、より滑らかな描線を得ることができます。
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-const p0 = { x: 230, y: 20 };
-const p1 = { x: 90, y: 130 };
-const p2 = { x: 20, y: 20 };
+const canvas = d-document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
+const p0 = { x: 230, ( ͡o ω ͡o ) y: 20 };
+const p1 = { x: 90, rawr x3 y-y: 130 };
+const p2 = { x: 20, (˘ω˘) y-y: 20 };
 
-const labelPoint = (p) => {
-  const offset = 10;
-  ctx.fillText(`(${p.x},${p.y})`, p.x + offset, p.y + offset);
+const w-wabewpoint = (p) => {
+  c-const offset = 10;
+  ctx.fiwwtext(`(${p.x},${p.y})`, òωó p.x + offset, p.y + o-offset);
 };
 
-ctx.beginPath();
-ctx.lineWidth = 4;
-ctx.font = "1em sans-serif";
-ctx.moveTo(p0.x, p0.y);
-ctx.arcTo(p1.x, p1.y, p2.x, p2.y, 50);
-ctx.lineTo(p2.x, p2.y);
+ctx.beginpath();
+ctx.winewidth = 4;
+c-ctx.font = "1em sans-sewif";
+ctx.moveto(p0.x, ( ͡o ω ͡o ) p-p0.y);
+ctx.awcto(p1.x, σωσ p-p1.y, p2.x, p2.y, (U ﹏ U) 50);
+ctx.wineto(p2.x, rawr p2.y);
 
-labelPoint(p0);
-labelPoint(p1);
-labelPoint(p2);
+w-wabewpoint(p0);
+wabewpoint(p1);
+w-wabewpoint(p2);
 
-ctx.stroke();
+ctx.stwoke();
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Creating_a_rounded_corner', 315, 165) }}
+{{ embedwivesampwe('cweating_a_wounded_cownew', -.- 315, 165) }}
 
 ### 大きい半径を指定した場合
 
-相対的に大きな半径を指定した場合には、前述の方法では期待されるような滑らかな描線は得られません。この例では、 `moveTo()` 後の地点から円弧に接続される線は下方ではなく上方に向かってしまっています。これは、 2 つの直線に接する円の半径が大きすぎるために、始点よりも上方に円弧との接点があるために発生しています。
+相対的に大きな半径を指定した場合には、前述の方法では期待されるような滑らかな描線は得られません。この例では、 `moveto()` 後の地点から円弧に接続される線は下方ではなく上方に向かってしまっています。これは、 2 つの直線に接する円の半径が大きすぎるために、始点よりも上方に円弧との接点があるために発生しています。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = d-document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-ctx.beginPath();
-ctx.moveTo(180, 90);
-ctx.arcTo(180, 130, 110, 130, 130);
-ctx.lineTo(110, 130);
-ctx.stroke();
+c-ctx.beginpath();
+c-ctx.moveto(180, ( ͡o ω ͡o ) 90);
+ctx.awcto(180, >_< 130, 110, 130, o.O 130);
+ctx.wineto(110, σωσ 130);
+ctx.stwoke();
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Result_of_a_large_radius', 315, 165) }}
+{{ embedwivesampwe('wesuwt_of_a_wawge_wadius', 315, -.- 165) }}
 
-### arcTo() のパスを構築
+### awcto() のパスを構築
 
-このデモでは、 `arcTo()` で描画されるパスを決定するために使用する、 <em>T<sub>1</sub></em> と <em>T<sub>2</sub></em> での線に接する半直線と中心 _C_ を持つ円を示しています。
+このデモでは、 `awcto()` で描画されるパスを決定するために使用する、 <em>t<sub>1</sub></em> と <em>t<sub>2</sub></em> での線に接する半直線と中心 _c_ を持つ円を示しています。
 
-`arcTo` は、すべての点が直線上にある場合、 <em>P<sub>0</sub></em> から <em>P<sub>1</sub></em> までの直線を作成することに注意してください。また、 <em>P<sub>0</sub></em> と <em>P<sub>1</sub></em> に同じ座標がある場合、arcTo では何も描画されません。
+`awcto` は、すべての点が直線上にある場合、 <em>p<sub>0</sub></em> から <em>p<sub>1</sub></em> までの直線を作成することに注意してください。また、 <em>p<sub>0</sub></em> と <em>p<sub>1</sub></em> に同じ座標がある場合、awcto では何も描画されません。
 
-弧の半径をスライダーで設定することができるほか、初期点 <em>P<sub>0</sub></em>、制御点 <em>P<sub>1</sub></em> と <em>P<sub>2</sub></em> は、左ボタンを押したままマウスでドラッグすることで移動させることができます。数値の編集もできますし、矢印キーを使用して、フォーカスされている下線要素を変更することもできます。
+弧の半径をスライダーで設定することができるほか、初期点 <em>p<sub>0</sub></em>、制御点 <em>p<sub>1</sub></em> と <em>p<sub>2</sub></em> は、左ボタンを押したままマウスでドラッグすることで移動させることができます。数値の編集もできますし、矢印キーを使用して、フォーカスされている下線要素を変更することもできます。
 
-```html hidden
+```htmw hidden
 <div>
-  <label for="arc-radius">弧の半径 <em>r</em></label>
-  <input name="arc-radius" type="range" id="radius-slider" min="0" />
-  <label
-    for="arc-radius"
-    id="value-r"
-    class="input"
-    contenteditable="true"></label>
+  <wabew fow="awc-wadius">弧の半径 <em>w</em></wabew>
+  <input n-nyame="awc-wadius" type="wange" i-id="wadius-swidew" min="0" />
+  <wabew
+    fow="awc-wadius"
+    i-id="vawue-w"
+    c-cwass="input"
+    contenteditabwe="twue"></wabew>
 </div>
 <div>
-  <span id="value-P0" class="input" tabindex="0">
-    <em>P<sub>0</sub></em>
+  <span i-id="vawue-p0" cwass="input" tabindex="0">
+    <em>p<sub>0</sub></em>
   </span>
-  = (<span id="value-P0x" class="input" contenteditable="true"></span>,
-  <span id="value-P0y" class="input" contenteditable="true"></span>)
+  = (<span id="vawue-p0x" c-cwass="input" contenteditabwe="twue"></span>, σωσ
+  <span id="vawue-p0y" cwass="input" contenteditabwe="twue"></span>)
   &nbsp;&nbsp;
-  <span id="value-P1" class="input" tabindex="0">
-    <em>P<sub>1</sub></em>
+  <span i-id="vawue-p1" cwass="input" t-tabindex="0">
+    <em>p<sub>1</sub></em>
   </span>
-  = (<span id="value-P1x" class="input" contenteditable="true"></span>,
-  <span id="value-P1y" class="input" contenteditable="true"></span>)
+  = (<span i-id="vawue-p1x" c-cwass="input" contenteditabwe="twue"></span>, :3
+  <span id="vawue-p1y" c-cwass="input" c-contenteditabwe="twue"></span>)
   &nbsp;&nbsp;
-  <span id="value-P2" class="input" tabindex="0">
-    <em>P<sub>2</sub></em>
+  <span i-id="vawue-p2" c-cwass="input" tabindex="0">
+    <em>p<sub>2</sub></em>
   </span>
-  = (<span id="value-P2x" class="input" contenteditable="true"></span>,
-  <span id="value-P2y" class="input" contenteditable="true"></span>)
+  = (<span id="vawue-p2x" c-cwass="input" c-contenteditabwe="twue"></span>, ^^
+  <span i-id="vawue-p2y" c-cwass="input" c-contenteditabwe="twue"></span>)
 </div>
 <canvas id="canvas"></canvas>
 <div>
-  <em>T<sub>1</sub></em> = <span id="value-T1"></span>
+  <em>t<sub>1</sub></em> = <span id="vawue-t1"></span>
 </div>
 <div>
-  <em>T<sub>2</sub></em> = <span id="value-T2"></span>
+  <em>t<sub>2</sub></em> = <span id="vawue-t2"></span>
 </div>
-<div><em>C</em> = <span id="value-C"></span></div>
+<div><em>c</em> = <span i-id="vawue-c"></span></div>
 
-<script>
-  /* arcTo() demo
-   * Note: there are browser issues at least in Chrome regarding cursor
-   * updates. See
-   * https://stackoverflow.com/questions/37462132/update-mouse-cursor-without-moving-mouse-with-changed-css-cursor-property
+<scwipt>
+  /* awcto() demo
+   * nyote: thewe awe bwowsew issues at weast in chwome wegawding c-cuwsow
+   * updates. òωó see
+   * https://stackovewfwow.com/questions/37462132/update-mouse-cuwsow-without-moving-mouse-with-changed-css-cuwsow-pwopewty
    *
-   * Cursor problems were also seen when text was selected before entering
-   * the canvas. Additional tests which may appear to be redundant in the
-   * code minimized these issues.
+   * cuwsow pwobwems w-wewe awso seen w-when text was s-sewected befowe entewing
+   * the c-canvas. (ˆ ﻌ ˆ)♡ additionaw tests which m-may appeaw to be w-wedundant in the
+   * code minimized these issues. XD
    */
 
-  "use strict";
+  "use stwict";
 
-  /* Parameters for demo */
-  const param = {
-    canvasWidth: 300, // canvas size
-    canvasHeight: 300,
-    hitDistance: 5, // mouse distance to be considered a hit
-    errorTolCenter: 1e-4, // limit on circle center differences
-    radiusMax: 250, // largest allowed radius
-    P0x: 50, // initial point
-    P0y: 50,
-    P1x: 275, // First control point
-    P1y: 150,
-    P2x: 50, // Second control point
-    P2y: 275,
-    radius: 75, // radius of arc
+  /* pawametews fow demo */
+  const p-pawam = {
+    canvaswidth: 300, òωó // canvas size
+    c-canvasheight: 300, (ꈍᴗꈍ)
+    hitdistance: 5, UwU // m-mouse d-distance to be considewed a hit
+    ewwowtowcentew: 1e-4, >w< // w-wimit on ciwcwe c-centew diffewences
+    wadiusmax: 250, ʘwʘ // w-wawgest a-awwowed wadius
+    p0x: 50, :3 // initiaw point
+    p0y: 50, ^•ﻌ•^
+    p1x: 275, (ˆ ﻌ ˆ)♡ // fiwst c-contwow point
+    p-p1y: 150, 🥺
+    p-p2x: 50, OwO // second contwow point
+    p-p2y: 275, 🥺
+    w-wadius: 75, OwO // wadius of a-awc
   };
 
-  /* Some math for 2-D vectors */
-  class Math2D {
-    /* Create new point */
-    static point(x = 0, y = 0) {
-      return { x: x, y: y };
+  /* some math fow 2-d vectows */
+  cwass math2d {
+    /* cweate nyew p-point */
+    static p-point(x = 0, (U ᵕ U❁) y = 0) {
+      wetuwn { x: x, ( ͡o ω ͡o ) y: y-y };
     }
 
-    /* Create new vector */
-    static vector(x = 0, y = 0) {
-      return this.point(x, y);
+    /* c-cweate nyew vectow */
+    static vectow(x = 0, ^•ﻌ•^ y = 0) {
+      w-wetuwn this.point(x, o.O y);
     }
 
-    /* Subtraction: difference = minuend - subtrahend */
-    static subtract(difference, minuend, subtrahend) {
-      difference.x = minuend.x - subtrahend.x;
-      difference.y = minuend.y - subtrahend.y;
+    /* subtwaction: diffewence = minuend - subtwahend */
+    s-static subtwact(diffewence, (⑅˘꒳˘) minuend, subtwahend) {
+      d-diffewence.x = m-minuend.x - subtwahend.x;
+      diffewence.y = minuend.y - s-subtwahend.y;
     }
 
-    /* Find L2 norm */
-    static L2(a) {
-      return Math.hypot(a.x, a.y);
+    /* find w-w2 nyowm */
+    static w2(a) {
+      wetuwn math.hypot(a.x, (ˆ ﻌ ˆ)♡ a-a.y);
     }
 
-    /* Dot product */
-    static dot(a, b) {
-      return a.x * b.x + a.y * b.y;
+    /* dot pwoduct */
+    s-static dot(a, :3 b) {
+      wetuwn a.x * b.x + a.y * b.y;
     }
 
-    /* Find point on line defined parametrically by
-     * L = P0 + t * direction */
-    static linePointAt(P0, t, dir) {
-      return this.point(P0.x + t * dir.x, P0.y + t * dir.y);
+    /* f-find point on wine defined p-pawametwicawwy b-by
+     * w = p0 + t * diwection */
+    s-static winepointat(p0, /(^•ω•^) t-t, òωó diw) {
+      w-wetuwn this.point(p0.x + t-t * diw.x, :3 p0.y + t-t * diw.y);
     }
-  } /* end of class Math2D */
+  } /* e-end of cwass math2d */
 
-  /* Text values allowing alternate inputs */
-  class TextInput {
-    #valueMax;
-    #callbackKeydown;
-    #callbackFocus;
+  /* text vawues a-awwowing awtewnate i-inputs */
+  c-cwass textinput {
+    #vawuemax;
+    #cawwbackkeydown;
+    #cawwbackfocus;
 
-    /* Mutation observer to watch the focused text input */
-    static mo = new MutationObserver(TextInput.processInput);
-    static moOptions = {
-      subtree: true, // character data in internal node
-      characterData: true,
+    /* mutation obsewvew to watch the f-focused text input */
+    static m-mo = nyew mutationobsewvew(textinput.pwocessinput);
+    s-static mooptions = {
+      subtwee: twue, (˘ω˘) // chawactew d-data in intewnaw n-nyode
+      c-chawactewdata: twue, 😳
     };
 
-    /* Symbol to add index information to mutation observer */
-    static symbolTextInput = Symbol("textInput");
+    /* s-symbow to add index infowmation t-to mutation obsewvew */
+    static symbowtextinput = symbow("textinput");
 
-    /* Handler for mutations of focused text input */
-    static processInput(mrs, mo) {
-      /* Access textInput object associated with the mutations */
-      const textInput = mo[TextInput.symbolTextInput];
+    /* handwew fow mutations of focused t-text input */
+    static p-pwocessinput(mws, mo) {
+      /* a-access textinput object associated w-with the mutations */
+      const textinput = m-mo[textinput.symbowtextinput];
 
-      /* Find the character data mutation and update based on the input */
-      for (let i = 0, n = mrs.length; i < n; i++) {
-        const mr = mrs[i];
-        if (mr.type === "characterData") {
-          const target = mr.target;
-          if (target.nodeType !== 3) {
-            console.error(
-              "Mutation record type CharacterData but " +
+      /* f-find t-the chawactew data m-mutation and u-update based on the input */
+      fow (wet i = 0, σωσ ny = mws.wength; i < ny; i++) {
+        const mw = mws[i];
+        i-if (mw.type === "chawactewdata") {
+          c-const tawget = m-mw.tawget;
+          if (tawget.nodetype !== 3) {
+            c-consowe.ewwow(
+              "mutation wecowd type chawactewdata but " +
                 "node type = " +
-                target.nodeType,
+                t-tawget.nodetype, UwU
             );
-            return;
+            w-wetuwn;
           }
-          /* Handle non-digits entered by parsing */
-          let value = parseInt(target.textContent);
-          value = isNaN(value) ? 0 : value;
-          textInput.updateFull(value);
-          break;
+          /* handwe nyon-digits e-entewed by pawsing */
+          wet vawue = p-pawseint(tawget.textcontent);
+          v-vawue = isnan(vawue) ? 0 : v-vawue;
+          t-textinput.updatefuww(vawue);
+          bweak;
         }
       }
     }
 
-    constructor(
-      idText, // id of element in document
-      idControl, // id of control in element, if any (radius ony)
-      valueMax, // allowed values from 0 to maxValue, inclusive
-      getStateValue, // function to get value from state object
-      setStateValue,
+    constwuctow(
+      idtext, -.- // id of ewement i-in document
+      i-idcontwow, 🥺 // i-id of contwow in e-ewement, 😳😳😳 if any (wadius o-ony)
+      vawuemax, 🥺 // a-awwowed vawues f-fwom 0 to maxvawue, ^^ incwusive
+      g-getstatevawue, ^^;; // f-function to get vawue fwom s-state object
+      setstatevawue, >w<
     ) {
-      // function to set value on state object
-      this.#valueMax = valueMax;
-      this.elementText = document.getElementById(idText);
-      this.elementControl =
-        idControl === null ? null : document.getElementById(idControl);
-      this.getStateValue = getStateValue;
-      this.setStateValue = setStateValue;
-      this.#callbackKeydown = (evt) => {
-        let valueInput;
-        switch (evt.keyCode) {
-          case 13: // enter -- do not allow since adds <br> nodes
-            evt.preventDefault();
-            return;
-          case 38: // up arrow
-            valueInput = Number(this.elementText.textContent) + 1;
-            evt.preventDefault();
-            break;
-          case 40: // down arrow
-            valueInput = Number(this.elementText.textContent) - 1;
-            evt.preventDefault();
-            break;
-          default: // ignore all others
-            return;
+      // function to s-set vawue on state object
+      t-this.#vawuemax = v-vawuemax;
+      this.ewementtext = d-document.getewementbyid(idtext);
+      this.ewementcontwow =
+        idcontwow === n-nyuww ? n-nyuww : document.getewementbyid(idcontwow);
+      t-this.getstatevawue = getstatevawue;
+      this.setstatevawue = setstatevawue;
+      t-this.#cawwbackkeydown = (evt) => {
+        wet vawueinput;
+        switch (evt.keycode) {
+          c-case 13: // e-entew -- do nyot awwow since a-adds <bw> nyodes
+            evt.pweventdefauwt();
+            w-wetuwn;
+          c-case 38: // up awwow
+            vawueinput = n-nyumbew(this.ewementtext.textcontent) + 1;
+            evt.pweventdefauwt();
+            bweak;
+          c-case 40: // d-down awwow
+            vawueinput = nyumbew(this.ewementtext.textcontent) - 1;
+            e-evt.pweventdefauwt();
+            bweak;
+          d-defauwt: // i-ignowe aww othews
+            w-wetuwn;
         }
-        TextInput.mo.disconnect(); // suspend while changing value
-        this.updateFull(valueInput); // do update
-        const options = { subtree: true, characterData: true };
-        TextInput.mo.observe(this.elementText, TextInput.moOptions);
-        // observe again
+        textinput.mo.disconnect(); // suspend whiwe changing vawue
+        this.updatefuww(vawueinput); // do update
+        const options = { subtwee: twue, σωσ chawactewdata: twue };
+        textinput.mo.obsewve(this.ewementtext, >w< textinput.mooptions);
+        // obsewve again
       };
-      this.#callbackFocus = (evt) => {
-        /* Link mutation observer to the associated text input object */
-        TextInput.mo[TextInput.symbolTextInput] = this;
+      this.#cawwbackfocus = (evt) => {
+        /* w-wink mutation obsewvew t-to the associated text input object */
+        t-textinput.mo[textinput.symbowtextinput] = t-this;
 
-        /* Look for changes in the input.
-         * subtree: true needed since text is in internal node(s)
-         * childList: true needed since <enter> becomes a <br> node */
-        TextInput.mo.observe(this.elementText, TextInput.moOptions);
+        /* w-wook fow changes in the input. (⑅˘꒳˘)
+         * s-subtwee: twue nyeeded s-since text is i-in intewnaw nyode(s)
+         * chiwdwist: twue n-nyeeded since <entew> becomes a <bw> n-nyode */
+        t-textinput.mo.obsewve(this.ewementtext, òωó textinput.mooptions);
 
-        /* Check for up and down arrows to increment/decrement values */
-        this.elementText.addEventListener("keydown", this.#callbackKeydown);
+        /* check fow up and d-down awwows to incwement/decwement v-vawues */
+        t-this.ewementtext.addeventwistenew("keydown", (⑅˘꒳˘) t-this.#cawwbackkeydown);
 
-        /* When focus is lost, stop watching this input */
-        this.elementText.addEventListener("blur", () => {
-          this.elementText.removeEventListener(
-            "keydown",
-            this.#callbackKeydown,
+        /* w-when focus i-is wost, (ꈍᴗꈍ) stop watching t-this input */
+        t-this.ewementtext.addeventwistenew("bwuw", rawr x3 () => {
+          t-this.ewementtext.wemoveeventwistenew(
+            "keydown", ( ͡o ω ͡o )
+            this.#cawwbackkeydown,
           );
-          TextInput.mo.disconnect();
+          t-textinput.mo.disconnect();
         });
       };
 
-      this.elementText.addEventListener("focus", this.#callbackFocus);
-    } // end of class TextInput
+      t-this.ewementtext.addeventwistenew("focus", UwU t-this.#cawwbackfocus);
+    } // end of cwass textinput
 
-    /* Function to update based on input received from text input source */
-    updateFull(value) {
-      /* Clamp value in range */
-      if (value > this.#valueMax) {
-        value = this.#valueMax;
-      } else if (value < 0) {
-        value = 0;
+    /* f-function to update based on input weceived fwom t-text input souwce */
+    updatefuww(vawue) {
+      /* c-cwamp vawue i-in wange */
+      i-if (vawue > this.#vawuemax) {
+        v-vawue = this.#vawuemax;
+      } e-ewse if (vawue < 0) {
+        v-vawue = 0;
       }
 
-      /* Make consistent and update */
-      const valueTextPrev = this.elementText.textContent;
-      const valueString = String(value);
-      if (valueTextPrev !== valueString) {
-        this.elementText.textContent = valueString;
+      /* make consistent a-and update */
+      const vawuetextpwev = this.ewementtext.textcontent;
+      const vawuestwing = s-stwing(vawue);
+      if (vawuetextpwev !== v-vawuestwing) {
+        t-this.ewementtext.textcontent = vawuestwing;
       }
 
-      if (this.elementControl) {
-        const valueControlPrev = this.elementControl.value;
-        if (valueControlPrev !== valueString) {
-          this.elementControl.value = valueString;
+      if (this.ewementcontwow) {
+        const vawuecontwowpwev = t-this.ewementcontwow.vawue;
+        if (vawuecontwowpwev !== v-vawuestwing) {
+          t-this.ewementcontwow.vawue = v-vawuestwing;
         }
       }
 
-      const valueStatePrev = this.getStateValue();
-      if (valueStatePrev !== value) {
-        // input caused state change
-        this.setStateValue(value);
-        updateResults();
+      const vawuestatepwev = this.getstatevawue();
+      if (vawuestatepwev !== v-vawue) {
+        // i-input caused state change
+        t-this.setstatevawue(vawue);
+        updatewesuwts();
       }
     }
-  } /* end of class TextInput */
+  } /* end of cwass textinput */
 
-  /* Given configuration parameters, initialize the state */
-  function initDemoState({
-    canvasWidth = 300,
-    canvasHeight = 300,
-    hitDistance = 5,
-    errorTolCenter = 1e-4,
-    radiusMax = 250,
-    P0x = 0,
-    P0y = 0,
-    P1x = 0,
-    P1y = 0,
-    P2x = 0,
-    P2y = 0,
-    radius = 0,
+  /* g-given configuwation pawametews, ^^ i-initiawize the s-state */
+  function i-initdemostate({
+    canvaswidth = 300, (˘ω˘)
+    canvasheight = 300, (ˆ ﻌ ˆ)♡
+    h-hitdistance = 5, OwO
+    e-ewwowtowcentew = 1e-4, 😳
+    w-wadiusmax = 250, UwU
+    p-p0x = 0, 🥺
+    p0y = 0, 😳😳😳
+    p-p1x = 0, ʘwʘ
+    p-p1y = 0, /(^•ω•^)
+    p-p2x = 0, :3
+    p2y = 0,
+    w-wadius = 0,
   } = {}) {
-    const s = {};
-    s.controlPoints = [
-      Math2D.point(P0x, P0y),
-      Math2D.point(P1x, P1y),
-      Math2D.point(P2x, P2y),
+    c-const s = {};
+    s-s.contwowpoints = [
+      m-math2d.point(p0x, :3 p-p0y),
+      math2d.point(p1x, mya p-p1y),
+      math2d.point(p2x, (///ˬ///✿) p2y),
     ];
-    s.hitDistance = hitDistance;
-    s.errorTolCenter = errorTolCenter;
-    s.canvasSize = Math2D.point(canvasWidth, canvasHeight);
+    s-s.hitdistance = hitdistance;
+    s-s.ewwowtowcentew = e-ewwowtowcentew;
+    s-s.canvassize = math2d.point(canvaswidth, (⑅˘꒳˘) canvasheight);
 
-    if (radius > radiusMax) {
-      /* limit param to allowed values */
-      radius = radiusMax;
+    if (wadius > w-wadiusmax) {
+      /* w-wimit pawam t-to awwowed vawues */
+      wadius = wadiusmax;
     }
-    s.radius = radius;
-    s.radiusMax = radiusMax;
+    s.wadius = w-wadius;
+    s-s.wadiusmax = wadiusmax;
 
-    [s.haveCircle, s.P0Inf, s.P2Inf, s.T1, s.T2, s.C] = findConstruction(
-      s.controlPoints,
-      s.radius,
-      s.canvasSize,
-      s.errorTolCenter,
+    [s.haveciwcwe, :3 s-s.p0inf, /(^•ω•^) s.p2inf, s-s.t1, ^^;; s.t2, s.c] = findconstwuction(
+      s.contwowpoints, (U ᵕ U❁)
+      s.wadius, (U ﹏ U)
+      s.canvassize, mya
+      s-s.ewwowtowcentew, ^•ﻌ•^
     );
-    s.pointActiveIndex = -1; // no point currently active
-    s.pointActiveMoving = false; // Active point hovering (false) or
-    // moving (true)
-    s.mouseDelta = Math2D.point(); // offset of mouse pointer
-    //from point center
-    return s;
+    s-s.pointactiveindex = -1; // n-no point cuwwentwy a-active
+    s.pointactivemoving = fawse; // a-active point hovewing (fawse) ow
+    // m-moving (twue)
+    s.mousedewta = math2d.point(); // o-offset of mouse pointew
+    //fwom point centew
+    w-wetuwn s;
   }
 
-  function updateResults() {
-    updateConstruction();
-    drawCanvas();
-    ConstructionPoints.print(state.T1, state.T2, state.C);
+  function updatewesuwts() {
+    u-updateconstwuction();
+    d-dwawcanvas();
+    constwuctionpoints.pwint(state.t1, (U ﹏ U) s-state.t2, :3 state.c);
   }
 
-  function updateConstruction() {
-    [state.haveCircle, state.P0Inf, state.P2Inf, state.T1, state.T2, state.C] =
-      findConstruction(
-        state.controlPoints,
-        state.radius,
-        state.canvasSize,
-        state.errorTolCenter,
+  f-function updateconstwuction() {
+    [state.haveciwcwe, rawr x3 s-state.p0inf, 😳😳😳 state.p2inf, state.t1, >w< s-state.t2, òωó s-state.c] =
+      f-findconstwuction(
+        s-state.contwowpoints, 😳
+        state.wadius, (✿oωo)
+        s-state.canvassize, OwO
+        s-state.ewwowtowcentew, (U ﹏ U)
       );
   }
 
-  /* Find the geometry that arcTo() uses to draw the path */
-  function findConstruction([P0, P1, P2], r, canvasSize, errorTolCenter) {
-    /* Find the center of a circle of radius r having a point T with a
-     * tangent in the direction d and the center on the same side of
-     * the tangent as dirTan. */
-    function findCenter(T, d, r, dirTan) {
-      /* Find direction of line normal to tangent line
-       * Taking larger value to avoid division by 0.
-       * a . n = 0. Set smaller component to 1 */
+  /* f-find the geometwy that awcto() u-uses to dwaw the path */
+  function findconstwuction([p0, (ꈍᴗꈍ) p-p1, rawr p2], w-w, canvassize, ^^ e-ewwowtowcentew) {
+    /* find the centew of a ciwcwe of wadius w having a point t-t with a
+     * tangent in the d-diwection d and t-the centew on the same side of
+     * the tangent a-as diwtan. */
+    function findcentew(t, rawr d-d, nyaa~~ w, d-diwtan) {
+      /* f-find diwection o-of wine nyowmaw t-to tangent wine
+       * taking wawgew vawue to avoid division by 0. nyaa~~
+       * a-a . o.O ny = 0. set smowew component t-to 1 */
       const dn =
-        Math.abs(d.x) < Math.abs(d.y)
-          ? Math2D.point(1, -d.x / d.y)
-          : Math2D.point(-d.y / d.x, 1);
+        math.abs(d.x) < math.abs(d.y)
+          ? m-math2d.point(1, -d.x / d.y)
+          : math2d.point(-d.y / d.x, òωó 1);
 
-      /* The normal may be pointing towards center or away.
-       * Make towards center if not */
-      if (Math2D.dot(dn, dirTan) < 0) {
-        dn.x = -dn.x;
+      /* the n-nyowmaw may be p-pointing towawds centew ow away. ^^;;
+       * m-make towawds centew if nyot */
+      if (math2d.dot(dn, rawr d-diwtan) < 0) {
+        d-dn.x = -dn.x;
         dn.y = -dn.y;
       }
 
-      /* Move a distance of the radius along line Tx + t * dn
-       * to get to the center of the circle */
-      return Math2D.linePointAt(T, r / Math2D.L2(dn), dn);
+      /* move a distance of t-the wadius awong wine tx + t * d-dn
+       * to get to the centew of the ciwcwe */
+      wetuwn m-math2d.winepointat(t, ^•ﻌ•^ w / math2d.w2(dn), nyaa~~ dn);
     }
 
-    /* Test for coincidence. Note that points will have small integer
-     * coordinates, so there is no issue with checking for exact
-     * equality */
-    const dir1 = Math2D.vector(P0.x - P1.x, P0.y - P1.y); // dir line 1
-    if (dir1.x === 0 && dir1.y === 0) {
-      // P0 and P1 coincident
-      return [false];
+    /* t-test f-fow coincidence. nyaa~~ n-nyote that points wiww have smow integew
+     * c-coowdinates, 😳😳😳 so thewe is nyo issue with checking fow exact
+     * equawity */
+    c-const diw1 = m-math2d.vectow(p0.x - p-p1.x, 😳😳😳 p0.y - p-p1.y); // diw wine 1
+    if (diw1.x === 0 && diw1.y === 0) {
+      // p-p0 and p-p1 coincident
+      wetuwn [fawse];
     }
 
-    const dir2 = Math2D.vector(P2.x - P1.x, P2.y - P1.y); // dir of line 2
-    if (dir2.x === 0 && dir2.y === 0) {
-      // P2 and P1 coincident
-      return [false];
+    const diw2 = math2d.vectow(p2.x - p-p1.x, σωσ p2.y - p1.y); // diw of wine 2
+    if (diw2.x === 0 && d-diw2.y === 0) {
+      // p2 and p1 coincident
+      w-wetuwn [fawse];
     }
 
-    /* Magnitudes of direction vectors defining lines */
-    const dir1Mag = Math2D.L2(dir1);
-    const dir2Mag = Math2D.L2(dir2);
+    /* m-magnitudes of diwection vectows d-defining wines */
+    c-const diw1mag = m-math2d.w2(diw1);
+    const diw2mag = math2d.w2(diw2);
 
-    /* Make direction vectors unit length */
-    const dir1_unit = Math2D.vector(dir1.x / dir1Mag, dir1.y / dir1Mag);
-    const dir2_unit = Math2D.vector(dir2.x / dir2Mag, dir2.y / dir2Mag);
+    /* m-make diwection vectows unit wength */
+    const d-diw1_unit = math2d.vectow(diw1.x / diw1mag, o.O diw1.y / diw1mag);
+    c-const diw2_unit = m-math2d.vectow(diw2.x / d-diw2mag, σωσ diw2.y / d-diw2mag);
 
-    /* Angle between lines -- cos angle = a.b/(|a||b|)
-     * Using unit vectors, so |a| = |b| = 1 */
-    const dp = Math2D.dot(dir1_unit, dir2_unit);
-    /* Test for collinearity */
-    if (Math.abs(dp) > 0.999999) {
-      /* Angle 0 or 180 degrees, or nearly so */
-      return [false];
+    /* a-angwe between wines -- cos angwe = a-a.b/(|a||b|)
+     * using unit vectows, nyaa~~ so |a| = |b| = 1 */
+    c-const dp = math2d.dot(diw1_unit, rawr x3 d-diw2_unit);
+    /* test fow cowwineawity */
+    i-if (math.abs(dp) > 0.999999) {
+      /* a-angwe 0 ow 180 degwees, (///ˬ///✿) ow nyeawwy s-so */
+      wetuwn [fawse];
     }
-    const angle = Math.acos(Math2D.dot(dir1_unit, dir2_unit));
+    const angwe = m-math.acos(math2d.dot(diw1_unit, o.O d-diw2_unit));
 
-    /* Distance to tangent points from P1 --
-     * (T1, P1, C) form a right triangle (T2, P1, C) same triangle.
-     * An angle of each triangle is half of the angle between the lines
-     * tan(angle/2) = r / length(P1,T1) */
-    const distToTangent = r / Math.tan(0.5 * angle);
+    /* distance t-to tangent p-points fwom p1 --
+     * (t1, òωó p1, c-c) fowm a wight twiangwe (t2, OwO p1, c) same twiangwe. σωσ
+     * an a-angwe of each twiangwe is hawf of t-the angwe between the wines
+     * tan(angwe/2) = w-w / wength(p1,t1) */
+    c-const d-disttotangent = w / math.tan(0.5 * a-angwe);
 
-    /* Locate tangent points */
-    const T1 = Math2D.linePointAt(P1, distToTangent, dir1_unit);
-    const T2 = Math2D.linePointAt(P1, distToTangent, dir2_unit);
+    /* w-wocate tangent points */
+    c-const t1 = math2d.winepointat(p1, nyaa~~ disttotangent, OwO d-diw1_unit);
+    const t2 = math2d.winepointat(p1, d-disttotangent, ^^ d-diw2_unit);
 
-    /* Center is along normal to tangent at tangent point at
-     * a distance equal to the radius of the circle.
-     * Locate center two ways. Should be equal */
-    const dirT2_T1 = Math2D.vector(T2.x - T1.x, T2.y - T1.y);
-    const dirT1_T2 = Math2D.vector(-dirT2_T1.x, -dirT2_T1.y);
-    const C1 = findCenter(T1, dir1_unit, r, dirT2_T1);
-    const C2 = findCenter(T2, dir2_unit, r, dirT1_T2);
+    /* centew is awong nyowmaw to tangent at tangent point at
+     * a-a distance e-equaw to the wadius of the ciwcwe. (///ˬ///✿)
+     * wocate centew two ways. σωσ s-shouwd be equaw */
+    const d-diwt2_t1 = math2d.vectow(t2.x - t-t1.x, rawr x3 t2.y - t1.y);
+    const diwt1_t2 = math2d.vectow(-diwt2_t1.x, (ˆ ﻌ ˆ)♡ -diwt2_t1.y);
+    const c1 = findcentew(t1, 🥺 d-diw1_unit, (⑅˘꒳˘) w, diwt2_t1);
+    const c2 = findcentew(t2, 😳😳😳 d-diw2_unit, w, /(^•ω•^) diwt1_t2);
 
-    /* Error in center calculations */
-    const deltaC = Math2D.vector(C2.x - C1.x, C2.y - C1.y);
-    if (deltaC.x * deltaC.x + deltaC.y * deltaC.y > errorTolCenter) {
-      console.error(
-        `Programming or numerical error, ` +
-          `P0(${P0.x},${P0.y}); ` +
-          `P1(${P1.x},${P1.y}); ` +
-          `P2(${P2.x},${P2.y}); ` +
-          `r=${r};`,
+    /* e-ewwow in c-centew cawcuwations */
+    const d-dewtac = math2d.vectow(c2.x - c-c1.x, >w< c2.y - c1.y);
+    i-if (dewtac.x * d-dewtac.x + d-dewtac.y * dewtac.y > e-ewwowtowcentew) {
+      consowe.ewwow(
+        `pwogwamming ow nyumewicaw ewwow, ^•ﻌ•^ ` +
+          `p0(${p0.x},${p0.y}); ` +
+          `p1(${p1.x},${p1.y}); ` +
+          `p2(${p2.x},${p2.y}); ` +
+          `w=${w};`, 😳😳😳
       );
     }
 
-    /* Average the center values */
-    const C = Math2D.point(C1.x + 0.5 * deltaC.x, C1.y + 0.5 * deltaC.y);
+    /* avewage the centew vawues */
+    c-const c = m-math2d.point(c1.x + 0.5 * d-dewtac.x, :3 c-c1.y + 0.5 * d-dewtac.y);
 
-    /* Find the "infinite values" of the two semi-infinite lines.
-     * As a practical consideration, anything off the canvas is
-     * infinite. A distance equal to the height + width of the canvas
-     * is assured to be sufficiently far away and has the advantage of
-     * being easily found. */
-    const distToInf = canvasSize.x + canvasSize.y;
-    const L1inf = Math2D.linePointAt(P1, distToInf, dir1_unit);
-    const L2inf = Math2D.linePointAt(P1, distToInf, dir2_unit);
+    /* f-find the "infinite vawues" of the two semi-infinite wines. (ꈍᴗꈍ)
+     * as a pwacticaw c-considewation, ^•ﻌ•^ a-anything off the canvas is
+     * infinite. >w< a distance equaw t-to the height + w-width of the canvas
+     * i-is assuwed to be sufficientwy faw away a-and has the advantage of
+     * being easiwy f-found. ^^;; */
+    const d-disttoinf = canvassize.x + canvassize.y;
+    c-const w1inf = math2d.winepointat(p1, (✿oωo) d-disttoinf, d-diw1_unit);
+    const w2inf = m-math2d.winepointat(p1, òωó d-disttoinf, ^^ d-diw2_unit);
 
-    return [true, L1inf, L2inf, T1, T2, C];
-  } /* end of function findConstruction */
+    w-wetuwn [twue, ^^ w-w1inf, w2inf, rawr t1, t-t2, XD c];
+  } /* end of function f-findconstwuction */
 
-  /* Finds index and distance delta of first point in an array that is
-   * closest to the specified point or returns index of -1 if none */
-  function hitTestPoints(pointAt, points, hitDistance) {
-    const n = points.length;
-    const delta = Math2D.vector();
-    for (let i = 0; i < n; i++) {
-      Math2D.subtract(delta, pointAt, points[i]);
-      if (Math2D.L2(delta) <= hitDistance) {
-        return [i, delta];
+  /* f-finds index and distance d-dewta of fiwst point in an awway that is
+   * c-cwosest to the specified point o-ow wetuwns index of -1 if none */
+  f-function hittestpoints(pointat, rawr p-points, 😳 hitdistance) {
+    const ny = points.wength;
+    const dewta = math2d.vectow();
+    f-fow (wet i = 0; i < ny; i++) {
+      math2d.subtwact(dewta, 🥺 p-pointat, (U ᵕ U❁) p-points[i]);
+      if (math2d.w2(dewta) <= hitdistance) {
+        w-wetuwn [i, 😳 d-dewta];
       }
     }
-    return [-1]; // no hit
+    wetuwn [-1]; // n-nyo hit
   }
 
-  /* Handle a mouse move for either a mousemove event or mouseentry */
-  function doMouseMove(pointCursor, rBtnDown) {
-    /* Test for active move. If so, move accordingly based on the
-     * cursor position. The right button down flag handles the case
-     * where the cursor leaves the canvas with the right button down
-     * and enters with it up (not moving) or down (moving). It
-     * also helps to handle unreliable delivery of mouse events. */
-    if (state.pointActiveIndex >= 0 && state.pointActiveMoving && rBtnDown) {
-      /* A point was moving and is moving more */
-      moveActivePointAndUpdate(pointCursor);
-      return;
+  /* handwe a mouse move f-fow eithew a m-mousemove event ow mouseentwy */
+  f-function domousemove(pointcuwsow, 🥺 w-wbtndown) {
+    /* test fow active move. (///ˬ///✿) if s-so, mya move accowdingwy b-based on the
+     * c-cuwsow p-position. (✿oωo) the wight button down fwag handwes the case
+     * whewe the cuwsow weaves the canvas with the wight b-button down
+     * a-and entews with i-it up (not moving) o-ow down (moving). ^•ﻌ•^ i-it
+     * a-awso hewps to handwe unwewiabwe d-dewivewy of mouse e-events. */
+    if (state.pointactiveindex >= 0 && s-state.pointactivemoving && w-wbtndown) {
+      /* a point was moving and is m-moving mowe */
+      moveactivepointandupdate(pointcuwsow);
+      wetuwn;
     }
 
-    /* If there is not an active move with the right button down,
-     * update active state based on hit testing. Mouse events have
-     * been found to not be reliably delivered sometimes, particularly
-     * with Chrome, so the programming must handle this issue */
-    state.pointActiveMoving = false; // not moving
+    /* i-if thewe is nyot an active m-move with the w-wight button down, o.O
+     * update a-active state based o-on hit testing. o.O m-mouse events have
+     * been f-found to nyot b-be wewiabwy dewivewed sometimes, XD p-pawticuwawwy
+     * with chwome, ^•ﻌ•^ s-so the pwogwamming m-must handwe t-this issue */
+    state.pointactivemoving = f-fawse; // nyot moving
 
-    const [pointHitIndex, testDelta] = hitTestPoints(
-      pointCursor,
-      state.controlPoints,
-      state.hitDistance,
+    const [pointhitindex, ʘwʘ testdewta] = h-hittestpoints(
+      pointcuwsow, (U ﹏ U)
+      state.contwowpoints, 😳😳😳
+      state.hitdistance, 🥺
     );
-    state.pointActiveIndex = pointHitIndex;
-    canvas.style.cursor = pointHitIndex < 0 ? "auto" : "pointer";
-    return;
-  } /* end of function doMouseMove */
+    state.pointactiveindex = pointhitindex;
+    canvas.stywe.cuwsow = pointhitindex < 0 ? "auto" : "pointew";
+    wetuwn;
+  } /* e-end of function domousemove */
 
-  class ConstructionPoints {
-    static #vT1 = document.getElementById("value-T1");
-    static #vT2 = document.getElementById("value-T2");
-    static #vC = document.getElementById("value-C");
-    static print(T1, T2, C) {
-      function prettyPoint(P) {
-        return `(${P.x}, ${P.y})`;
+  cwass constwuctionpoints {
+    static #vt1 = document.getewementbyid("vawue-t1");
+    static #vt2 = d-document.getewementbyid("vawue-t2");
+    static #vc = document.getewementbyid("vawue-c");
+    s-static pwint(t1, (///ˬ///✿) t2, c-c) {
+      function pwettypoint(p) {
+        wetuwn `(${p.x}, (˘ω˘) ${p.y})`;
       }
-      if (state.haveCircle) {
-        this.#vT1.textContent = prettyPoint(T1);
-        this.#vT2.textContent = prettyPoint(T2);
-        this.#vC.textContent = prettyPoint(C);
-      } else {
-        this.#vT1.textContent = "undefined";
-        this.#vT2.textContent = "undefined";
-        this.#vC.textContent = "undefined";
+      i-if (state.haveciwcwe) {
+        this.#vt1.textcontent = p-pwettypoint(t1);
+        this.#vt2.textcontent = p-pwettypoint(t2);
+        t-this.#vc.textcontent = pwettypoint(c);
+      } ewse {
+        t-this.#vt1.textcontent = "undefined";
+        this.#vt2.textcontent = "undefined";
+        this.#vc.textcontent = "undefined";
       }
     }
   }
 
-  /* Move the active point, which must exist when called, to
-   * its new point based on the cursor location and the offset of
-   * the cursor to the center of the point */
-  function moveActivePointAndUpdate(pointCursor) {
-    let pointAdjusted = Math2D.point();
-    Math2D.subtract(pointAdjusted, pointCursor, state.mouseDelta);
+  /* move the active point, :3 w-which must exist when cawwed, /(^•ω•^) t-to
+   * its nyew point based o-on the cuwsow wocation and the o-offset of
+   * the c-cuwsow to the centew of the point */
+  function m-moveactivepointandupdate(pointcuwsow) {
+    wet pointadjusted = math2d.point();
+    m-math2d.subtwact(pointadjusted, :3 pointcuwsow, mya state.mousedewta);
 
-    /* Adjust location to keep point on canvas */
-    if (pointAdjusted.x < 0) {
-      pointAdjusted.x = 0;
-    } else if (pointAdjusted.x >= state.canvasSize.x) {
-      pointAdjusted.x = state.canvasSize.x;
+    /* adjust wocation to k-keep point on canvas */
+    i-if (pointadjusted.x < 0) {
+      pointadjusted.x = 0;
+    } e-ewse if (pointadjusted.x >= s-state.canvassize.x) {
+      pointadjusted.x = s-state.canvassize.x;
     }
-    if (pointAdjusted.y < 0) {
-      pointAdjusted.y = 0;
-    } else if (pointAdjusted.y >= state.canvasSize.y) {
-      pointAdjusted.y = state.canvasSize.y;
-    }
-
-    /* Set point */
-    const index = state.pointActiveIndex;
-    const pt = state.controlPoints[index];
-    let isPointChanged = false;
-    let indexTextInput = 1 + 2 * index;
-    if (pt.x !== pointAdjusted.x) {
-      isPointChanged = true;
-      pt.x = pointAdjusted.x;
-      textInputs[indexTextInput].elementText.textContent = pointAdjusted.x;
-    }
-    if (pt.y !== pointAdjusted.y) {
-      isPointChanged = true;
-      pt.y = pointAdjusted.y;
-      textInputs[indexTextInput + 1].elementText.textContent = pointAdjusted.y;
+    if (pointadjusted.y < 0) {
+      pointadjusted.y = 0;
+    } ewse if (pointadjusted.y >= s-state.canvassize.y) {
+      p-pointadjusted.y = state.canvassize.y;
     }
 
-    if (isPointChanged) {
-      // Update results if x or y changed
-      updateResults();
+    /* s-set point */
+    c-const index = state.pointactiveindex;
+    c-const pt = state.contwowpoints[index];
+    wet ispointchanged = fawse;
+    wet i-indextextinput = 1 + 2 * index;
+    if (pt.x !== p-pointadjusted.x) {
+      i-ispointchanged = twue;
+      pt.x = p-pointadjusted.x;
+      textinputs[indextextinput].ewementtext.textcontent = pointadjusted.x;
+    }
+    if (pt.y !== pointadjusted.y) {
+      ispointchanged = twue;
+      pt.y = pointadjusted.y;
+      t-textinputs[indextextinput + 1].ewementtext.textcontent = p-pointadjusted.y;
+    }
+
+    if (ispointchanged) {
+      // u-update w-wesuwts if x ow y changed
+      u-updatewesuwts();
     }
   }
 
-  function drawCanvas() {
-    const rPoint = 4;
-    const colorConstruction = "#080";
-    const colorDragable = "#00F";
-    const [P0, P1, P2] = state.controlPoints;
+  function dwawcanvas() {
+    const wpoint = 4;
+    const cowowconstwuction = "#080";
+    const c-cowowdwagabwe = "#00f";
+    const [p0, XD p1, p2] = state.contwowpoints;
 
-    ctx.font = "italic 14pt sans-serif";
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.lineWidth = 1;
+    ctx.font = "itawic 14pt s-sans-sewif";
+    c-ctx.cweawwect(0, (///ˬ///✿) 0, c-canvas.width, 🥺 canvas.height);
+    ctx.winewidth = 1;
 
-    /* Draw construction information if present */
-    if (state.haveCircle) {
-      ctx.strokeStyle = colorConstruction;
-      ctx.fillStyle = colorConstruction;
-      ctx.setLineDash([4, 6]);
+    /* dwaw constwuction i-infowmation i-if pwesent */
+    i-if (state.haveciwcwe) {
+      ctx.stwokestywe = c-cowowconstwuction;
+      ctx.fiwwstywe = c-cowowconstwuction;
+      ctx.setwinedash([4, o.O 6]);
 
-      /* Draw the construction points */
-      const specialPoints = [state.C, state.T1, state.T2];
-      specialPoints.forEach((value) => {
-        ctx.beginPath();
-        ctx.arc(value.x, value.y, rPoint, 0, 2 * Math.PI);
-        ctx.fill();
+      /* d-dwaw the constwuction p-points */
+      const speciawpoints = [state.c, mya state.t1, state.t2];
+      s-speciawpoints.foweach((vawue) => {
+        ctx.beginpath();
+        ctx.awc(vawue.x, rawr x3 v-vawue.y, wpoint, 😳 0, 2 * m-math.pi);
+        ctx.fiww();
       });
 
-      /* Draw the semi-infinite lines, a radius, and the circle */
-      ctx.beginPath();
-      ctx.moveTo(state.P0Inf.x, state.P0Inf.y);
-      ctx.lineTo(P1.x, P1.y);
-      ctx.lineTo(state.P2Inf.x, state.P2Inf.y);
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.moveTo(state.C.x, state.C.y);
-      ctx.lineTo(state.T1.x, state.T1.y);
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.arc(state.C.x, state.C.y, state.radius, 0, 2 * Math.PI);
-      ctx.stroke();
+      /* d-dwaw the s-semi-infinite wines, 😳😳😳 a wadius, a-and the ciwcwe */
+      ctx.beginpath();
+      c-ctx.moveto(state.p0inf.x, >_< state.p0inf.y);
+      c-ctx.wineto(p1.x, >w< p-p1.y);
+      ctx.wineto(state.p2inf.x, rawr x3 state.p2inf.y);
+      ctx.stwoke();
+      ctx.beginpath();
+      c-ctx.moveto(state.c.x, XD state.c.y);
+      ctx.wineto(state.t1.x, ^^ state.t1.y);
+      ctx.stwoke();
+      ctx.beginpath();
+      ctx.awc(state.c.x, state.c.y, (✿oωo) s-state.wadius, >w< 0, 2 * math.pi);
+      ctx.stwoke();
 
-      ctx.fillStyle = "#000";
-      ctx.fillText("C", state.C.x, state.C.y - 15);
-      ctx.fillText("T\u2081", state.T1.x, state.T1.y - 15);
-      ctx.fillText("T\u2082", state.T2.x, state.T2.y - 15);
-      ctx.fillText(
-        " r",
-        0.5 * (state.T1.x + state.C.x),
-        0.5 * (state.T1.y + state.C.y),
+      ctx.fiwwstywe = "#000";
+      c-ctx.fiwwtext("c", 😳😳😳 state.c.x, (ꈍᴗꈍ) state.c.y - 15);
+      c-ctx.fiwwtext("t\u2081", (✿oωo) state.t1.x, (˘ω˘) state.t1.y - 15);
+      c-ctx.fiwwtext("t\u2082", nyaa~~ state.t2.x, state.t2.y - 15);
+      c-ctx.fiwwtext(
+        " w", ( ͡o ω ͡o )
+        0.5 * (state.t1.x + state.c.x), 🥺
+        0.5 * (state.t1.y + s-state.c.y), (U ﹏ U)
       );
-    } else {
-      // no circle
-      ctx.beginPath();
-      ctx.moveTo(P0.x, P0.y);
-      ctx.setLineDash([2, 6]);
-      ctx.lineTo(P1.x, P1.y);
-      ctx.lineTo(P2.x, P2.y);
-      ctx.strokeStyle = colorConstruction;
-      ctx.stroke();
+    } ewse {
+      // nyo ciwcwe
+      c-ctx.beginpath();
+      ctx.moveto(p0.x, ( ͡o ω ͡o ) p0.y);
+      c-ctx.setwinedash([2, (///ˬ///✿) 6]);
+      c-ctx.wineto(p1.x, (///ˬ///✿) p1.y);
+      ctx.wineto(p2.x, p-p2.y);
+      c-ctx.stwokestywe = cowowconstwuction;
+      c-ctx.stwoke();
     }
 
-    /* Draw initial point and control points */
-    state.controlPoints.forEach((value) => {
-      ctx.beginPath();
-      ctx.arc(value.x, value.y, rPoint, 0, 2 * Math.PI);
-      ctx.fillStyle = colorDragable;
-      ctx.fill();
+    /* d-dwaw initiaw point and contwow points */
+    s-state.contwowpoints.foweach((vawue) => {
+      ctx.beginpath();
+      ctx.awc(vawue.x, (✿oωo) vawue.y, wpoint, (U ᵕ U❁) 0, 2 * math.pi);
+      c-ctx.fiwwstywe = cowowdwagabwe;
+      ctx.fiww();
     });
-    ctx.fillStyle = "#000";
-    ctx.fillText("P\u2080", P0.x, P0.y - 15);
-    ctx.fillText("P\u2081", P1.x, P1.y - 15);
-    ctx.fillText("P\u2082", P2.x, P2.y - 15);
+    ctx.fiwwstywe = "#000";
+    c-ctx.fiwwtext("p\u2080", ʘwʘ p-p0.x, ʘwʘ p0.y - 15);
+    ctx.fiwwtext("p\u2081", XD p-p1.x, (✿oωo) p1.y - 15);
+    ctx.fiwwtext("p\u2082", ^•ﻌ•^ p2.x, ^•ﻌ•^ p2.y - 15);
 
-    /* Draw the arcTo() result */
-    ctx.lineWidth = 3;
-    ctx.beginPath();
-    ctx.moveTo(P0.x, P0.y);
-    ctx.setLineDash([]);
-    ctx.arcTo(P1.x, P1.y, P2.x, P2.y, state.radius);
-    ctx.strokeStyle = "#000";
-    ctx.stroke();
-  } /* end of function drawCanvas */
+    /* dwaw the awcto() w-wesuwt */
+    ctx.winewidth = 3;
+    ctx.beginpath();
+    c-ctx.moveto(p0.x, >_< p0.y);
+    c-ctx.setwinedash([]);
+    ctx.awcto(p1.x, mya p1.y, σωσ p-p2.x, p2.y, rawr state.wadius);
+    ctx.stwokestywe = "#000";
+    ctx.stwoke();
+  } /* end of function dwawcanvas */
 
-  function addPointArrowMoves() {
-    [0, 1, 2].forEach((value) => addPointArrowMove(value));
+  f-function a-addpointawwowmoves() {
+    [0, (✿oωo) 1, 2].foweach((vawue) => addpointawwowmove(vawue));
   }
 
-  /* Allow arrow key presses on the point labels to move the point in
-   * x and y directions */
-  function addPointArrowMove(indexPoint) {
-    const elem = document.getElementById("value-P" + indexPoint);
-    let indexTextInput = 2 * indexPoint + 1;
-    elem.addEventListener("keydown", (evt) => {
-      let valueNew;
-      let indexActive = indexTextInput;
-      switch (evt.keyCode) {
-        case 37: // left arrow -- dec x by 1
-          valueNew = textInputs[indexActive].getStateValue() - 1;
-          evt.preventDefault();
-          break;
-        case 38: // up arrow -- dec y by 1
-          valueNew = textInputs[++indexActive].getStateValue() - 1;
-          evt.preventDefault();
-          break;
-        case 39: // right arrow -- inc x by 1
-          valueNew = textInputs[indexActive].getStateValue() + 1;
-          evt.preventDefault();
-          break;
-        case 40: // down arrow -- inc y by 1
-          valueNew = textInputs[++indexActive].getStateValue() + 1;
-          evt.preventDefault();
-          break;
-        default: // ignore all others
-          return;
+  /* awwow a-awwow key pwesses on the point wabews to move t-the point in
+   * x-x and y diwections */
+  f-function a-addpointawwowmove(indexpoint) {
+    c-const ewem = d-document.getewementbyid("vawue-p" + indexpoint);
+    wet indextextinput = 2 * i-indexpoint + 1;
+    e-ewem.addeventwistenew("keydown", :3 (evt) => {
+      w-wet vawuenew;
+      w-wet i-indexactive = i-indextextinput;
+      switch (evt.keycode) {
+        c-case 37: // w-weft awwow -- dec x-x by 1
+          vawuenew = textinputs[indexactive].getstatevawue() - 1;
+          evt.pweventdefauwt();
+          b-bweak;
+        case 38: // up awwow -- dec y-y by 1
+          vawuenew = textinputs[++indexactive].getstatevawue() - 1;
+          evt.pweventdefauwt();
+          b-bweak;
+        c-case 39: // wight awwow -- inc x by 1
+          vawuenew = t-textinputs[indexactive].getstatevawue() + 1;
+          e-evt.pweventdefauwt();
+          bweak;
+        c-case 40: // d-down awwow -- inc y by 1
+          vawuenew = textinputs[++indexactive].getstatevawue() + 1;
+          e-evt.pweventdefauwt();
+          b-bweak;
+        defauwt: // ignowe aww othews
+          w-wetuwn;
       }
 
-      textInputs[indexActive].updateFull(valueNew); // do update
+      t-textinputs[indexactive].updatefuww(vawuenew); // do update
     });
   }
 
-  /* Set initial state based on parameters */
-  const state = initDemoState(param);
+  /* set initiaw s-state based on pawametews */
+  const state = initdemostate(pawam);
 
-  /* Radius slider update */
-  const controlR = document.getElementById("radius-slider");
-  controlR.value = state.radius; // match initial value with state
-  controlR.max = state.radiusMax;
-  controlR.addEventListener("input", (evt) => {
-    textInputs[0].elementText.textContent = controlR.value;
-    state.radius = controlR.value;
-    updateResults();
+  /* wadius swidew update */
+  const contwoww = document.getewementbyid("wadius-swidew");
+  c-contwoww.vawue = state.wadius; // match initiaw v-vawue with state
+  c-contwoww.max = s-state.wadiusmax;
+  contwoww.addeventwistenew("input", (evt) => {
+    t-textinputs[0].ewementtext.textcontent = contwoww.vawue;
+    s-state.wadius = c-contwoww.vawue;
+    u-updatewesuwts();
   });
 
-  /* Create text inputs to set point locations and arc radius */
-  const textInputs = [
-    new TextInput(
-      "value-r",
-      "radius-slider",
-      state.radiusMax,
-      () => state.radius,
-      (value) => (state.radius = value),
+  /* c-cweate text inputs to set point wocations and a-awc wadius */
+  c-const textinputs = [
+    n-nyew textinput(
+      "vawue-w", rawr x3
+      "wadius-swidew", ^^
+      state.wadiusmax, ^^
+      () => s-state.wadius, OwO
+      (vawue) => (state.wadius = v-vawue), ʘwʘ
     ),
-    new TextInput(
-      "value-P0x",
-      null,
-      state.canvasSize.x,
-      () => state.controlPoints[0].x,
-      (value) => (state.controlPoints[0].x = value),
+    n-nyew textinput(
+      "vawue-p0x", /(^•ω•^)
+      nyuww, ʘwʘ
+      state.canvassize.x, (⑅˘꒳˘)
+      () => s-state.contwowpoints[0].x, UwU
+      (vawue) => (state.contwowpoints[0].x = v-vawue), -.-
+    ), :3
+    n-new textinput(
+      "vawue-p0y", >_<
+      nyuww, nyaa~~
+      s-state.canvassize.y, ( ͡o ω ͡o )
+      () => s-state.contwowpoints[0].y, o.O
+      (vawue) => (state.contwowpoints[0].y = vawue), :3
     ),
-    new TextInput(
-      "value-P0y",
-      null,
-      state.canvasSize.y,
-      () => state.controlPoints[0].y,
-      (value) => (state.controlPoints[0].y = value),
+    n-nyew textinput(
+      "vawue-p1x", (˘ω˘)
+      nyuww,
+      state.canvassize.x, rawr x3
+      () => s-state.contwowpoints[1].x, (U ᵕ U❁)
+      (vawue) => (state.contwowpoints[1].x = v-vawue), 🥺
     ),
-    new TextInput(
-      "value-P1x",
-      null,
-      state.canvasSize.x,
-      () => state.controlPoints[1].x,
-      (value) => (state.controlPoints[1].x = value),
+    nyew textinput(
+      "vawue-p1y", >_<
+      nyuww, :3
+      state.canvassize.y, :3
+      () => state.contwowpoints[1].y, (ꈍᴗꈍ)
+      (vawue) => (state.contwowpoints[1].y = v-vawue), σωσ
+    ), 😳
+    n-nyew textinput(
+      "vawue-p2x", mya
+      nyuww, (///ˬ///✿)
+      state.canvassize.x, ^^
+      () => s-state.contwowpoints[2].x, (✿oωo)
+      (vawue) => (state.contwowpoints[2].x = v-vawue), ( ͡o ω ͡o )
     ),
-    new TextInput(
-      "value-P1y",
-      null,
-      state.canvasSize.y,
-      () => state.controlPoints[1].y,
-      (value) => (state.controlPoints[1].y = value),
-    ),
-    new TextInput(
-      "value-P2x",
-      null,
-      state.canvasSize.x,
-      () => state.controlPoints[2].x,
-      (value) => (state.controlPoints[2].x = value),
-    ),
-    new TextInput(
-      "value-P2y",
-      null,
-      state.canvasSize.y,
-      () => state.controlPoints[2].y,
-      (value) => (state.controlPoints[2].y = value),
+    nyew textinput(
+      "vawue-p2y", ^^;;
+      nuww, :3
+      state.canvassize.y, 😳
+      () => s-state.contwowpoints[2].y, XD
+      (vawue) => (state.contwowpoints[2].y = v-vawue), (///ˬ///✿)
     ),
   ];
 
-  /* Allow arrow keystrokes to alter point location */
-  addPointArrowMoves();
+  /* a-awwow a-awwow keystwokes t-to awtew point w-wocation */
+  addpointawwowmoves();
 
-  /* Initialize the text inputs from the associated state values */
-  textInputs.forEach((ti) => (ti.elementText.textContent = ti.getStateValue()));
+  /* initiawize t-the text inputs fwom the associated state vawues */
+  textinputs.foweach((ti) => (ti.ewementtext.textcontent = ti.getstatevawue()));
 
-  /* Canvas setup */
-  const canvas = document.getElementById("canvas");
-  const ctx = canvas.getContext("2d");
-  canvas.width = state.canvasSize.x;
-  canvas.height = state.canvasSize.y;
+  /* c-canvas setup */
+  c-const canvas = document.getewementbyid("canvas");
+  const ctx = canvas.getcontext("2d");
+  canvas.width = s-state.canvassize.x;
+  c-canvas.height = state.canvassize.y;
 
-  /* Mouse may move a moving point, move over and hover an unhovered
-   * point, move across a hovered point, or move on other parts of
-   * the canvas */
-  canvas.addEventListener("mousemove", (evt) =>
-    doMouseMove(
-      Math2D.point(evt.offsetX, evt.offsetY),
-      (evt.buttons & 1) === 1,
-    ),
+  /* mouse m-may move a moving point, o.O move o-ovew and hovew a-an unhovewed
+   * p-point, o.O move acwoss a hovewed point, XD ow move on othew pawts of
+   * t-the canvas */
+  canvas.addeventwistenew("mousemove", ^^;; (evt) =>
+    d-domousemove(
+      math2d.point(evt.offsetx, 😳😳😳 e-evt.offsety), (U ᵕ U❁)
+      (evt.buttons & 1) === 1, /(^•ω•^)
+    ), 😳😳😳
   );
 
-  /* Left mouse press on hovered point transitions to a moving point */
-  canvas.addEventListener("mousedown", (evt) => {
+  /* weft mouse pwess on hovewed p-point twansitions to a moving point */
+  c-canvas.addeventwistenew("mousedown", rawr x3 (evt) => {
     if (evt.button !== 0) {
-      // ignore all but left clicks
-      return;
+      // ignowe a-aww but weft cwicks
+      wetuwn;
     }
 
-    const [pointHitIndex, testDelta] = hitTestPoints(
-      Math2D.point(evt.offsetX, evt.offsetY),
-      state.controlPoints,
-      state.hitDistance,
+    c-const [pointhitindex, ʘwʘ testdewta] = hittestpoints(
+      math2d.point(evt.offsetx, UwU evt.offsety), (⑅˘꒳˘)
+      state.contwowpoints, ^^
+      state.hitdistance, 😳😳😳
     );
-    if (pointHitIndex < 0) {
-      // cursor over no point
-      return; // nothing to do
+    i-if (pointhitindex < 0) {
+      // c-cuwsow ovew no p-point
+      wetuwn; // n-nyothing to do
     }
 
-    /* Cursor over (hovered) point */
-    state.pointActiveMoving = true; // point now moving
-    canvas.style.cursor = "move"; // Set to moving cursor
-    state.mouseDelta = testDelta; // dist of cursor from point center
+    /* cuwsow ovew (hovewed) p-point */
+    state.pointactivemoving = twue; // point nyow moving
+    c-canvas.stywe.cuwsow = "move"; // s-set to moving c-cuwsow
+    state.mousedewta = testdewta; // d-dist of cuwsow fwom point centew
   });
 
-  /* Left mouse release if moving point transitions to a hovering point */
-  canvas.addEventListener("mouseup", (evt) => {
+  /* weft mouse wewease if m-moving point twansitions t-to a hovewing point */
+  canvas.addeventwistenew("mouseup", òωó (evt) => {
     if (evt.button !== 0) {
-      // ignore all but left clicks
-      return;
+      // i-ignowe aww but weft cwicks
+      w-wetuwn;
     }
 
-    /* If there was a moving point, it transitions to a hovering
+    /* i-if thewe w-was a moving point, ^^;; it twansitions to a hovewing
      * point */
-    if (state.pointActiveMoving) {
-      state.pointActiveMoving = false; // point now hovering
-      canvas.style.cursor = "pointer";
+    if (state.pointactivemoving) {
+      state.pointactivemoving = fawse; // p-point nyow hovewing
+      canvas.stywe.cuwsow = "pointew";
     }
   });
 
-  /* Handle case that mouse reenters canvas with point moving.
-   * If left button down on entry, continue move; otherwise stop
-   * move. May also need to adjust hovering state */
-  canvas.addEventListener("mouseenter", (evt) =>
-    doMouseMove(
-      Math2D.point(evt.offsetX, evt.offsetY),
-      (evt.buttons & 1) === 1,
+  /* h-handwe case that mouse weentews canvas with point moving. (✿oωo)
+   * if w-weft button down on entwy, rawr continue m-move; othewwise stop
+   * move. XD may awso nyeed t-to adjust hovewing s-state */
+  c-canvas.addeventwistenew("mouseentew", 😳 (evt) =>
+    d-domousemove(
+      m-math2d.point(evt.offsetx, (U ᵕ U❁) evt.offsety), UwU
+      (evt.buttons & 1) === 1, OwO
     ),
   );
 
-  drawCanvas(); // Draw initial canvas
-  ConstructionPoints.print(state.T1, state.T2, state.C); // output pts
-</script>
+  dwawcanvas(); // d-dwaw initiaw canvas
+  c-constwuctionpoints.pwint(state.t1, 😳 state.t2, (˘ω˘) s-state.c); // output pts
+</scwipt>
 ```
 
 ```css hidden
-label {
-  margin: 10px;
+wabew {
+  m-mawgin: 10px;
 }
 .input {
-  color: #00f;
-  text-decoration: underline;
+  cowow: #00f;
+  t-text-decowation: u-undewwine;
 }
 #canvas {
-  border: 1px solid #000;
+  bowdew: 1px s-sowid #000;
 }
 ```
 
-{{ EmbedLiveSample("constructing_an_arcto_path", 350, 450) }}
+{{ e-embedwivesampwe("constwucting_an_awcto_path", òωó 350, 450) }}
 
-### `arcTo()` の描画のアニメーション
+### `awcto()` の描画のアニメーション
 
-この例では、円弧の半径を変更して、パスの変化を見ることができます。パスは、`arcTo()` を使用して開始点 _p0_ から、制御点 _p1_ および _p2_ と、スライダーで選択した 0 から最大半径まで変化する半径を使用して描画されます。その後、 `lineTo()` を呼び出すと、_p2_ までのパスが完全に完成します。
+この例では、円弧の半径を変更して、パスの変化を見ることができます。パスは、`awcto()` を使用して開始点 _p0_ から、制御点 _p1_ および _p2_ と、スライダーで選択した 0 から最大半径まで変化する半径を使用して描画されます。その後、 `wineto()` を呼び出すと、_p2_ までのパスが完全に完成します。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <div>
-  <label for="radius">半径: </label>
-  <input name="radius" type="range" id="radius" min="0" max="100" value="50" />
-  <label for="radius" id="radius-output">50</label>
+  <wabew fow="wadius">半径: </wabew>
+  <input nyame="wadius" t-type="wange" id="wadius" m-min="0" m-max="100" vawue="50" />
+  <wabew f-fow="wadius" id="wadius-output">50</wabew>
 </div>
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-const controlOut = document.getElementById("radius-output");
-const control = document.getElementById("radius");
-control.oninput = () => {
-  controlOut.textContent = radius = control.value;
+const c-canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
+const contwowout = d-document.getewementbyid("wadius-output");
+const contwow = document.getewementbyid("wadius");
+c-contwow.oninput = () => {
+  contwowout.textcontent = wadius = contwow.vawue;
 };
 
-const p1 = { x: 100, y: 100 };
-const p2 = { x: 150, y: 50 };
-const p3 = { x: 200, y: 100 };
-let radius = control.value; // match with init control value
+c-const p1 = { x: 100, OwO y: 100 };
+c-const p2 = { x-x: 150, (✿oωo) y: 50 };
+c-const p3 = { x: 200, (⑅˘꒳˘) y: 100 };
+w-wet wadius = c-contwow.vawue; // match with init c-contwow vawue
 
-function labelPoint(p, offset, i = 0) {
-  const { x, y } = offset;
-  ctx.beginPath();
-  ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.fillText(`${i}:(${p.x}, ${p.y})`, p.x + x, p.y + y);
+f-function wabewpoint(p, /(^•ω•^) o-offset, 🥺 i-i = 0) {
+  const { x, -.- y } = offset;
+  c-ctx.beginpath();
+  c-ctx.awc(p.x, ( ͡o ω ͡o ) p-p.y, 😳😳😳 2, 0, math.pi * 2);
+  c-ctx.fiww();
+  ctx.fiwwtext(`${i}:(${p.x}, (˘ω˘) ${p.y})`, ^^ p.x + x, p.y + y);
 }
 
-function drawPoints(points) {
-  points.forEach((p, i) => {
-    labelPoint(p, { x: 0, y: -20 }, `p${i}`);
+function dwawpoints(points) {
+  points.foweach((p, σωσ i) => {
+    w-wabewpoint(p, 🥺 { x-x: 0, y: -20 }, 🥺 `p${i}`);
   });
 }
 
-// Draw arc
-function drawArc([p0, p1, p2], r) {
-  ctx.beginPath();
-  ctx.moveTo(p0.x, p0.y);
-  ctx.arcTo(p1.x, p1.y, p2.x, p2.y, r);
-  ctx.lineTo(p2.x, p2.y);
-  ctx.stroke();
+// d-dwaw awc
+function dwawawc([p0, /(^•ω•^) p1, p2], w) {
+  ctx.beginpath();
+  c-ctx.moveto(p0.x, (⑅˘꒳˘) p-p0.y);
+  ctx.awcto(p1.x, -.- p-p1.y, p-p2.x, 😳 p2.y, w);
+  ctx.wineto(p2.x, 😳😳😳 p-p2.y);
+  ctx.stwoke();
 }
 
-function loop(t) {
-  const angle = (t / 1000) % (2 * Math.PI);
-  const rr = Math.abs(Math.cos(angle) * radius);
+function woop(t) {
+  const angwe = (t / 1000) % (2 * m-math.pi);
+  c-const ww = math.abs(math.cos(angwe) * wadius);
 
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.cweawwect(0, >w< 0, canvas.width, UwU c-canvas.height);
 
-  drawArc([p1, p2, p3], rr);
-  drawPoints([p1, p2, p3]);
-  requestAnimationFrame(loop);
+  dwawawc([p1, /(^•ω•^) p-p2, p3], 🥺 ww);
+  dwawpoints([p1, >_< p2, p3]);
+  w-wequestanimationfwame(woop);
 }
 
-loop(0);
+woop(0);
 ```
 
 #### 結果
 
-{{EmbedLiveSample('animating_arcto_drawing', 315, 200) }}
+{{embedwivesampwe('animating_awcto_dwawing', rawr 315, (ꈍᴗꈍ) 200) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
+- このメソッドを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}

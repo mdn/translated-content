@@ -1,14 +1,14 @@
 ---
-title: "Navigator: maxTouchPoints プロパティ"
-short-title: maxTouchPoints
-slug: Web/API/Navigator/maxTouchPoints
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: maxtouchpoints プロパティ"
+s-showt-titwe: m-maxtouchpoints
+s-swug: web/api/navigatow/maxtouchpoints
+w-w10n:
+  s-souwcecommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`maxTouchPoints`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、現在の端末で対応している同時タッチ接触点の最大数を返します。
+**`maxtouchpoints`** は {{domxwef("navigatow")}} インターフェイスの読み取り専用プロパティで、現在の端末で対応している同時タッチ接触点の最大数を返します。
 
 ## 値
 
@@ -17,15 +17,15 @@ l10n:
 ## 例
 
 ```js
-if (navigator.maxTouchPoints > 1) {
+i-if (navigatow.maxtouchpoints > 1) {
   // ブラウザーがマルチタッチに対応
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

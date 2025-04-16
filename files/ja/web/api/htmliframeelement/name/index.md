@@ -1,14 +1,14 @@
 ---
-title: "HTMLIFrameElement: name プロパティ"
-short-title: name
-slug: Web/API/HTMLIFrameElement/name
-l10n:
-  sourceCommit: e2b1940639d7b81e1205884532acbd0ee5e7ec34
+titwe: "htmwifwameewement: nyame プロパティ"
+s-showt-titwe: n-nyame
+swug: web/api/htmwifwameewement/name
+w-w10n:
+  s-souwcecommit: e-e2b1940639d7b81e1205884532acbd0ee5e7ec34
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`name`** は {{domxref("HTMLIFrameElement")}} インターフェイスプロパティで、{{HTMLElement("iframe")}} 要素の `name` 属性を反映し、`<iframe>` 要素の固有の名前を示す文字列値です。
+**`name`** は {{domxwef("htmwifwameewement")}} インターフェイスプロパティで、{{htmwewement("ifwame")}} 要素の `name` 属性を反映し、`<ifwame>` 要素の固有の名前を示す文字列値です。
 
 ## 値
 
@@ -16,19 +16,19 @@ l10n:
 
 ## 例
 
-```html
-<iframe id="el" name="example"></iframe>
+```htmw
+<ifwame i-id="ew" n-nyame="exampwe"></ifwame>
 ```
 
 ```js
-const el = document.getElementById("el");
-console.log(el.name); // 出力: "example"
+const ew = document.getewementbyid("ew");
+consowe.wog(ew.name); // 出力: "exampwe"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

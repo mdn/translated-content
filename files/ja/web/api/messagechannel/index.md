@@ -1,68 +1,68 @@
 ---
-title: MessageChannel
-slug: Web/API/MessageChannel
-l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+titwe: messagechannew
+swug: web/api/messagechannew
+w-w10n:
+  souwcecommit: e-e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
+{{apiwef("channew m-messaging a-api")}} {{avaiwabweinwowkews}}
 
-**`MessageChannel`** は[チャンネルメッセージング API](/ja/docs/Web/API/Channel_Messaging_API) のインターフェイスで、新しいメッセージチャンネルを作成し、2 つの {{domxref("MessagePort")}} プロパティを通して、その間でデータを送信できます。
+**`messagechannew`** は[チャンネルメッセージング a-api](/ja/docs/web/api/channew_messaging_api) のインターフェイスで、新しいメッセージチャンネルを作成し、2 つの {{domxwef("messagepowt")}} プロパティを通して、その間でデータを送信できます。
 
 ## コンストラクター
 
-- {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}
-  - : 2 つの新しい {{domxref("MessagePort")}} オブジェクトを持つ新しい `MessageChannel` オブジェクトを返します。
+- {{domxwef("messagechannew.messagechannew", ( ͡o ω ͡o ) "messagechannew()")}}
+  - : 2 つの新しい {{domxwef("messagepowt")}} オブジェクトを持つ新しい `messagechannew` オブジェクトを返します。
 
 ## プロパティ
 
-- {{domxref("MessageChannel.port1")}} {{ReadOnlyInline}}
-  - : チャンネルの port1 を返します。
-- {{domxref("MessageChannel.port2")}} {{ReadOnlyInline}}
-  - : チャンネルの port2 を返します。
+- {{domxwef("messagechannew.powt1")}} {{weadonwyinwine}}
+  - : チャンネルの p-powt1 を返します。
+- {{domxwef("messagechannew.powt2")}} {{weadonwyinwine}}
+  - : チャンネルの p-powt2 を返します。
 
 ## 例
 
-次の例では、{{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} コンストラクターを使用して新しいチャンネルを作成する様子を見ることができます。
+次の例では、{{domxwef("messagechannew.messagechannew", rawr x3 "messagechannew()")}} コンストラクターを使用して新しいチャンネルを作成する様子を見ることができます。
 
-iframe が読み込まれると、{{domxref("MessagePort/message_event","onmessage")}} ハンドラーを {{domxref("MessageChannel.port1")}} に登録し、{{domxref("MessageChannel.port2")}} を {{domxref("window.postMessage")}} メソッドを使用して iframe へ転送します。
+i-ifwame が読み込まれると、{{domxwef("messagepowt/message_event","onmessage")}} ハンドラーを {{domxwef("messagechannew.powt1")}} に登録し、{{domxwef("messagechannew.powt2")}} を {{domxwef("window.postmessage")}} メソッドを使用して ifwame へ転送します。
 
-IFrame からメッセージが返送されると、`onMessage` 関数はそのメッセージを段落に出力します。
+ifwame からメッセージが返送されると、`onmessage` 関数はそのメッセージを段落に出力します。
 
 ```js
-const channel = new MessageChannel();
-const output = document.querySelector(".output");
-const iframe = document.querySelector("iframe");
+const channew = nyew messagechannew();
+c-const output = document.quewysewectow(".output");
+const ifwame = d-document.quewysewectow("ifwame");
 
-// iframe が読み込まれるのを待つ
-iframe.addEventListener("load", onLoad);
+// ifwame が読み込まれるのを待つ
+i-ifwame.addeventwistenew("woad", nyaa~~ onwoad);
 
-function onLoad() {
-  // port1 のメッセージを待ち受けする
-  channel.port1.onmessage = onMessage;
+function onwoad() {
+  // powt1 のメッセージを待ち受けする
+  c-channew.powt1.onmessage = onmessage;
 
-  // port2 を iframe へ転送する
-  iframe.contentWindow.postMessage("メインページからこんにちは！", "*", [
-    channel.port2,
+  // powt2 を i-ifwame へ転送する
+  i-ifwame.contentwindow.postmessage("メインページからこんにちは！", /(^•ω•^) "*", rawr [
+    channew.powt2, OwO
   ]);
 }
 
-// port1 で受け取ったメッセージを処理する
-function onMessage(e) {
-  output.innerHTML = e.data;
+// powt1 で受け取ったメッセージを処理する
+function onmessage(e) {
+  o-output.innewhtmw = e.data;
 }
 ```
 
-完全に動作する例は、Github 上の [channel messaging basic demo](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic) を参照してください ([実際のデモも実行できます](https://mdn.github.io/dom-examples/channel-messaging-basic/))。
+完全に動作する例は、github 上の [channew messaging basic demo](https://github.com/mdn/dom-exampwes/twee/main/channew-messaging-basic) を参照してください ([実際のデモも実行できます](https://mdn.github.io/dom-exampwes/channew-messaging-basic/))。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [チャンネルメッセージングの使用](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [チャンネルメッセージングの使用](/ja/docs/web/api/channew_messaging_api/using_channew_messaging)

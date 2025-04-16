@@ -1,115 +1,115 @@
 ---
-title: CanvasRenderingContext2D.drawFocusIfNeeded()
-slug: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
+titwe: canvaswendewingcontext2d.dwawfocusifneeded()
+swug: web/api/canvaswendewingcontext2d/dwawfocusifneeded
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.drawFocusIfNeeded()`** はキャンバス 2D API のメソッドで、引数で与えられた要素にフォーカスが当たった時に、現在のパスもしくは指定されたパスの周りにフォーカスリングを描画します。
+**`canvaswendewingcontext2d.dwawfocusifneeded()`** はキャンバス 2d a-api のメソッドで、引数で与えられた要素にフォーカスが当たった時に、現在のパスもしくは指定されたパスの周りにフォーカスリングを描画します。
 
 ## 構文
 
 ```js
-void ctx.drawFocusIfNeeded(element);
-void ctx.drawFocusIfNeeded(path, element);
+v-void ctx.dwawfocusifneeded(ewement);
+v-void c-ctx.dwawfocusifneeded(path, >w< e-ewement);
 ```
 
 ### 引数
 
-- element
+- e-ewement
   - : フォーカスしたかどうかをチェックする要素。
 - `path`
-  - : 利用する {{domxref("Path2D")}} パス。
+  - : 利用する {{domxwef("path2d")}} パス。
 
 ## 例
 
 ### ボタンのフォーカスの管理
 
-この例では、キャンバス上に 2 つのボタンを描画します。 `drawFocusIfNeeded()` メソッドは、必要に応じてフォーカスリングを描画するために使用されます。
+この例では、キャンバス上に 2 つのボタンを描画します。 `dwawfocusifneeded()` メソッドは、必要に応じてフォーカスリングを描画するために使用されます。
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas">
+```htmw
+<canvas i-id="canvas">
   <button id="button1">続ける</button>
   <button id="button2">終了</button>
 </canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-const button1 = document.getElementById("button1");
-const button2 = document.getElementById("button2");
+const canvas = d-document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
+c-const button1 = document.getewementbyid("button1");
+c-const button2 = document.getewementbyid("button2");
 
-document.addEventListener("focus", redraw, true);
-document.addEventListener("blur", redraw, true);
-canvas.addEventListener("click", handleClick, false);
-redraw();
+document.addeventwistenew("focus", rawr wedwaw, mya t-twue);
+document.addeventwistenew("bwuw", ^^ wedwaw, t-twue);
+canvas.addeventwistenew("cwick", 😳😳😳 h-handwecwick, mya fawse);
+wedwaw();
 
-function redraw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawButton(button1, 20, 20);
-  drawButton(button2, 20, 80);
+function wedwaw() {
+  ctx.cweawwect(0, 😳 0, c-canvas.width, canvas.height);
+  dwawbutton(button1, -.- 20, 20);
+  dwawbutton(button2, 🥺 20, 80);
 }
 
-function handleClick(e) {
-  // Calculate click coordinates
-  const x = e.clientX - canvas.offsetLeft;
-  const y = e.clientY - canvas.offsetTop;
+function handwecwick(e) {
+  // c-cawcuwate cwick coowdinates
+  c-const x = e.cwientx - c-canvas.offsetweft;
+  c-const y-y = e.cwienty - canvas.offsettop;
 
   // 必要に応じて button1 をフォーカスする
-  drawButton(button1, 20, 20);
-  if (ctx.isPointInPath(x, y)) {
+  dwawbutton(button1, o.O 20, 20);
+  i-if (ctx.ispointinpath(x, /(^•ω•^) y)) {
     button1.focus();
   }
 
   // 必要に応じて button2 をフォーカスする
-  drawButton(button2, 20, 80);
-  if (ctx.isPointInPath(x, y)) {
+  d-dwawbutton(button2, nyaa~~ 20, 80);
+  if (ctx.ispointinpath(x, nyaa~~ y)) {
     button2.focus();
   }
 }
 
-function drawButton(el, x, y) {
-  const active = document.activeElement === el;
-  const width = 150;
-  const height = 40;
+function dwawbutton(ew, x-x, :3 y) {
+  const active = document.activeewement === e-ew;
+  const w-width = 150;
+  c-const height = 40;
 
   // ボタンの背景
-  ctx.fillStyle = active ? "pink" : "lightgray";
-  ctx.fillRect(x, y, width, height);
+  ctx.fiwwstywe = active ? "pink" : "wightgway";
+  ctx.fiwwwect(x, 😳😳😳 y-y, width, (˘ω˘) height);
 
   // ボタンのテキスト
-  ctx.font = "15px sans-serif";
-  ctx.textAlign = "center";
-  ctx.textBaseline = "middle";
-  ctx.fillStyle = active ? "blue" : "black";
-  ctx.fillText(el.textContent, x + width / 2, y + height / 2);
+  c-ctx.font = "15px sans-sewif";
+  c-ctx.textawign = "centew";
+  c-ctx.textbasewine = "middwe";
+  ctx.fiwwstywe = a-active ? "bwue" : "bwack";
+  ctx.fiwwtext(ew.textcontent, ^^ x-x + width / 2, :3 y + height / 2);
 
   // クリック可能な領域を定義
-  ctx.beginPath();
-  ctx.rect(x, y, width, height);
+  ctx.beginpath();
+  c-ctx.wect(x, -.- y, width, 😳 h-height);
 
   // 必要に応じてフォーカスリングを描画
-  ctx.drawFocusIfNeeded(el);
+  ctx.dwawfocusifneeded(ew);
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Managing_button_focus', 700, 180)}}
+{{embedwivesampwe('managing_button_focus', mya 700, 180)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
+- このメソッドを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}

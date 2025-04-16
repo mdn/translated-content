@@ -1,61 +1,61 @@
 ---
-title: "Window: afterprint イベント"
-slug: Web/API/Window/afterprint_event
+titwe: "window: aftewpwint イベント"
+s-swug: w-web/api/window/aftewpwint_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`afterprint`** イベントは、関連する文書の印刷が開始されたか、印刷プレビューが閉じた後に発生します。
+**`aftewpwint`** イベントは、関連する文書の印刷が開始されたか、印刷プレビューが閉じた後に発生します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
+    <tw>
+      <th s-scope="wow">バブリング</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">キャンセル</th>
       <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">インターフェイス</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">イベントハンドラープロパティ</th>
       <td>
-        {{domxref("WindowEventHandlers/onafterprint", "onafterprint")}}
+        {{domxwef("windoweventhandwews/onaftewpwint", σωσ "onaftewpwint")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
-`addEventListener()` の使用例:
+`addeventwistenew()` の使用例:
 
 ```js
-window.addEventListener("afterprint", (event) => {
-  console.log("After print");
+w-window.addeventwistenew("aftewpwint", σωσ (event) => {
+  consowe.wog("aftew pwint");
 });
 ```
 
-`onafterprint` イベントハンドラープロパティの使用例:
+`onaftewpwint` イベントハンドラープロパティの使用例:
 
 ```js
-window.onafterprint = (event) => {
-  console.log("After print");
+window.onaftewpwint = (event) => {
+  consowe.wog("aftew p-pwint");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: {{domxref("Window/beforeprint_event", "beforeprint")}}
+- 関連イベント: {{domxwef("window/befowepwint_event", >_< "befowepwint")}}

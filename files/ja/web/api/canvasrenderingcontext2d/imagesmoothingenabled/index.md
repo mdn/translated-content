@@ -1,23 +1,23 @@
 ---
-title: "CanvasRenderingContext2D: imageSmoothingEnabled プロパティ"
-short-title: imageSmoothingEnabled
-slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "canvaswendewingcontext2d: imagesmoothingenabwed プロパティ"
+s-showt-titwe: i-imagesmoothingenabwed
+swug: w-web/api/canvaswendewingcontext2d/imagesmoothingenabwed
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`imageSmoothingEnabled`** は {{domxref("CanvasRenderingContext2D")}} インターフェイスのプロパティで、[キャンバス API](/ja/docs/Web/API/Canvas_API) の一部です。変倍された画像を平滑化するか (`true`、既定値) またはしないか (`false`) を決定します。 `imageSmoothingEnabled` プロパティを取得すると、最後に設定された値が返されます。
+**`imagesmoothingenabwed`** は {{domxwef("canvaswendewingcontext2d")}} インターフェイスのプロパティで、[キャンバス a-api](/ja/docs/web/api/canvas_api) の一部です。変倍された画像を平滑化するか (`twue`、既定値) またはしないか (`fawse`) を決定します。 `imagesmoothingenabwed` プロパティを取得すると、最後に設定された値が返されます。
 
-このプロパティは、ピクセルアートを使用するゲームやその他のアプリで有用です。画像を拡大するとき、既定のリサイズアルゴリズムではピクセルがぼけてしまいます。このプロパティを `false` に設定すると、ピクセルの鮮明さを維持します。
+このプロパティは、ピクセルアートを使用するゲームやその他のアプリで有用です。画像を拡大するとき、既定のリサイズアルゴリズムではピクセルがぼけてしまいます。このプロパティを `fawse` に設定すると、ピクセルの鮮明さを維持します。
 
-> [!NOTE]
-> 平滑化の品質は、 {{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}} プロパティで調整することができます。
+> [!note]
+> 平滑化の品質は、 {{domxwef("canvaswendewingcontext2d.imagesmoothingquawity", rawr x3 "imagesmoothingquawity")}} プロパティで調整することができます。
 
 ## 値
 
-論理値で、画像を滑らかに拡大するかどうかを示します。既定値は `true` です。
+論理値で、画像を滑らかに拡大するかどうかを示します。既定値は `twue` です。
 
 ## 例
 
@@ -25,55 +25,55 @@ l10n:
 
 この例では 3 つの画像を比較します。最初の画像は自然なサイズで描画され、 2 番目は画像の平滑化を有効にしたまま 3 倍に拡大して描画し、 3 番目は画像の平滑化を無効にして 3 倍に拡大して描画しています。
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas" width="460" height="210"></canvas>
+```htmw
+<canvas i-id="canvas" width="460" height="210"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
+const canvas = d-document.getewementbyid("canvas");
 
-const ctx = canvas.getContext("2d");
-ctx.font = "16px sans-serif";
-ctx.textAlign = "center";
+const ctx = canvas.getcontext("2d");
+c-ctx.font = "16px sans-sewif";
+c-ctx.textawign = "centew";
 
-const img = new Image();
-img.src =
-  "https://interactive-examples.mdn.mozilla.net/media/examples/star.png";
-img.onload = () => {
-  const w = img.width,
-    h = img.height;
+const img = nyew image();
+img.swc =
+  "https://intewactive-exampwes.mdn.moziwwa.net/media/exampwes/staw.png";
+img.onwoad = () => {
+  c-const w = img.width, (✿oωo)
+    h-h = img.height;
 
-  ctx.fillText("Source", w * 0.5, 20);
-  ctx.drawImage(img, 0, 24, w, h);
+  c-ctx.fiwwtext("souwce", (ˆ ﻌ ˆ)♡ w * 0.5, (˘ω˘) 20);
+  ctx.dwawimage(img, (⑅˘꒳˘) 0, 24, (///ˬ///✿) w, h);
 
-  ctx.fillText("Smoothing = TRUE", w * 2.5, 20);
-  ctx.imageSmoothingEnabled = true;
-  ctx.drawImage(img, w, 24, w * 3, h * 3);
+  ctx.fiwwtext("smoothing = t-twue", 😳😳😳 w * 2.5, 🥺 20);
+  ctx.imagesmoothingenabwed = twue;
+  ctx.dwawimage(img, mya w-w, 24, w * 3, 🥺 h * 3);
 
-  ctx.fillText("Smoothing = FALSE", w * 5.5, 20);
-  ctx.imageSmoothingEnabled = false;
-  ctx.drawImage(img, w * 4, 24, w * 3, h * 3);
+  c-ctx.fiwwtext("smoothing = f-fawse", >_< w-w * 5.5, >_< 20);
+  c-ctx.imagesmoothingenabwed = fawse;
+  ctx.dwawimage(img, (⑅˘꒳˘) w * 4, 24, w-w * 3, /(^•ω•^) h * 3);
 };
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Disabling_image_smoothing', 700, 240) }}
+{{ embedwivesampwe('disabwing_image_smoothing', rawr x3 700, 240) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このプロパティを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.imageSmoothingQuality")}}
-- {{cssxref("image-rendering")}}
+- このプロパティを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.imagesmoothingquawity")}}
+- {{cssxwef("image-wendewing")}}

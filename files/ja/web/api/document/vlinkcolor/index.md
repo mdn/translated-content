@@ -1,30 +1,30 @@
 ---
-title: "Document: vlinkColor プロパティ"
-short-title: vlinkColor
-slug: Web/API/Document/vlinkColor
-l10n:
-  sourceCommit: 157a449e2e8bf009fd316480c0d535d4a21527b0
+titwe: "document: vwinkcowow プロパティ"
+s-showt-titwe: vwinkcowow
+s-swug: web/api/document/vwinkcowow
+w-w10n:
+  s-souwcecommit: 157a449e2e8bf009fd316480c0d535d4a21527b0
 ---
 
-{{APIRef("DOM")}} {{Deprecated_Header}}
+{{apiwef("dom")}} {{depwecated_headew}}
 
-**`Document.vlinkColor`** プロパティは、文書内のユーザーが訪問済みのリンクの色を取得または設定します。
+**`document.vwinkcowow`** プロパティは、文書内のユーザーが訪問済みのリンクの色を取得または設定します。
 
 ## 値
 
-文字列で、色を表す単語 (`red` など) または 16 進値 (`#ff0000` など) です。
+文字列で、色を表す単語 (`wed` など) または 16 進値 (`#ff0000` など) です。
 
 ## メモ
 
-- Mozilla Firefox ではこのプロパティの初期値は紫 (16 進で `#551a8b`) です。
-- `Document.vlinkColor` は [DOM Level 2 HTML では非推奨です](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268)。
-- 推奨される代替方法は、 HTML の {{HtmlElement("a")}} 要素において CSS で {{Cssxref(":visited")}} 擬似クラスの色を設定または取得する方法です (例えば `a:visited {color:red;}`)。
-- 他の代替方法に `document.body.vLink` がありますが、これは [HTML 4.01 で非推奨](https://www.w3.org/TR/html401/struct/global.html#adef-vlink)となり、 CSS で代替されました。
+- m-moziwwa f-fiwefox ではこのプロパティの初期値は紫 (16 進で `#551a8b`) です。
+- `document.vwinkcowow` は [dom w-wevew 2 h-htmw では非推奨です](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-26809268)。
+- 推奨される代替方法は、 htmw の {{htmwewement("a")}} 要素において css で {{cssxwef(":visited")}} 擬似クラスの色を設定または取得する方法です (例えば `a:visited {cowow:wed;}`)。
+- 他の代替方法に `document.body.vwink` がありますが、これは [htmw 4.01 で非推奨](https://www.w3.owg/tw/htmw401/stwuct/gwobaw.htmw#adef-vwink)となり、 css で代替されました。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

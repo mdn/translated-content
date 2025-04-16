@@ -1,42 +1,42 @@
 ---
-title: "NodeList: keys() メソッド"
-short-title: keys()
-slug: Web/API/NodeList/keys
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "nodewist: keys() メソッド"
+s-showt-titwe: k-keys()
+swug: w-web/api/nodewist/keys
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`NodeList.keys()`** メソッドは、このオブジェクトに含まれるすべてのキーを走査することができる{{jsxref("Iteration_protocols",'イテレーター')}}を返します。キーは `unsigned integer` です。
+**`nodewist.keys()`** メソッドは、このオブジェクトに含まれるすべてのキーを走査することができる{{jsxwef("itewation_pwotocows",'イテレーター')}}を返します。キーは `unsigned integew` です。
 
 ## 構文
 
-```js-nolint
-keys()
+```js-nowint
+k-keys()
 ```
 
 ## 返値
 
-{{jsxref("Iteration_protocols","イテレーター")}}を返します。
+{{jsxwef("itewation_pwotocows","イテレーター")}}を返します。
 
 ## 例
 
 ```js
-const node = document.createElement("div");
-const kid1 = document.createElement("p");
-const kid2 = document.createTextNode("hey");
-const kid3 = document.createElement("span");
+c-const n-nyode = document.cweateewement("div");
+const kid1 = document.cweateewement("p");
+const kid2 = document.cweatetextnode("hey");
+const k-kid3 = document.cweateewement("span");
 
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
+nyode.appendchiwd(kid1);
+nyode.appendchiwd(kid2);
+n-nyode.appendchiwd(kid3);
 
-let list = node.childNodes;
+wet wist = n-node.chiwdnodes;
 
-// for...of の使用
-for (const key of list.keys()) {
-  console.log(key);
+// fow...of の使用
+fow (const key of wist.keys()) {
+  c-consowe.wog(key);
 }
 ```
 
@@ -50,10 +50,10 @@ for (const key of list.keys()) {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`NodeList.prototype.keys` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#iterable-dom-collections)
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- [`nodewist.pwototype.keys` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#itewabwe-dom-cowwections)
+- {{domxwef("node")}}
+- {{domxwef("nodewist")}}

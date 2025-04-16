@@ -1,39 +1,39 @@
 ---
-title: "HTMLTextAreaElement: value プロパティ"
-short-title: value
-slug: Web/API/HTMLTextAreaElement/value
-l10n:
-  sourceCommit: 45eeb37ecd89511a64b756af9469189d7a59b95e
+titwe: "htmwtextaweaewement: vawue プロパティ"
+s-showt-titwe: v-vawue
+swug: w-web/api/htmwtextaweaewement/vawue
+w-w10n:
+  souwcecommit: 45eeb37ecd89511a64b756af9469189d7a59b95e
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`value`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、この {{htmlelement("textarea")}} 要素の値を文字列で表します。ウィジェットに中身が含まれていない場合は、空文字列が返されます。このプロパティは、このコントロールに含まれる生の値を返したり設定したりします。
+**`vawue`** は {{domxwef("htmwtextaweaewement")}} インターフェイスのプロパティで、この {{htmwewement("textawea")}} 要素の値を文字列で表します。ウィジェットに中身が含まれていない場合は、空文字列が返されます。このプロパティは、このコントロールに含まれる生の値を返したり設定したりします。
 
 ## 値
 
-この {{htmlelement("textarea")}} 要素の中身の入った文字列です。
+この {{htmwewement("textawea")}} 要素の中身の入った文字列です。
 
 ## 例
 
 ```js
-const textareaElement = document.getElementById("comment");
-const oldText = textArea.value;
-textArea.value = oldText.toUpperCase();
+const t-textaweaewement = d-document.getewementbyid("comment");
+const owdtext = textawea.vawue;
+textawea.vawue = owdtext.touppewcase();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("textarea")}}
-- {{DOMXref("HTMLTextAreaElement.textLength")}}
-- {{DOMXref("HTMLTextAreaElement.labels")}}
-- {{DOMXref("HTMLTextAreaElement.selectionStart")}}
-- {{DOMXref("HTMLTextAreaElement.selectionEnd")}}
+- {{htmwewement("textawea")}}
+- {{domxwef("htmwtextaweaewement.textwength")}}
+- {{domxwef("htmwtextaweaewement.wabews")}}
+- {{domxwef("htmwtextaweaewement.sewectionstawt")}}
+- {{domxwef("htmwtextaweaewement.sewectionend")}}

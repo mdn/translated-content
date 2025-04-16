@@ -1,44 +1,44 @@
 ---
-title: MediaRecorderErrorEvent()
-slug: Web/API/MediaRecorderErrorEvent/MediaRecorderErrorEvent
-l10n:
-  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
+titwe: mediawecowdewewwowevent()
+swug: web/api/mediawecowdewewwowevent/mediawecowdewewwowevent
+w-w10n:
+  souwcecommit: b-b7556b71e1fc3e89057671b372871e9f33d3f0b8
 ---
 
-{{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("mediastweam w-wecowding")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`MediaRecorderErrorEvent()`** コンストラクターは、新しい {{domxref("MediaRecorderErrorEvent")}} オブジェクトを作成します。これは、[MediaStream 収録 API](/ja/docs/Web/API/MediaStream_Recording_API) によるメディアの記録中に発生したエラーを表します。
+**`mediawecowdewewwowevent()`** コンストラクターは、新しい {{domxwef("mediawecowdewewwowevent")}} オブジェクトを作成します。これは、[mediastweam 収録 a-api](/ja/docs/web/api/mediastweam_wecowding_api) によるメディアの記録中に発生したエラーを表します。
 
-> [!NOTE]
-> 一般に、これらを自分で作成することはありません。 メディアの記録中にエラーが発生すると、 {{domxref("MediaRecorder.error_event", "onerror")}} の実装に配信されます。
+> [!note]
+> 一般に、これらを自分で作成することはありません。 メディアの記録中にエラーが発生すると、 {{domxwef("mediawecowdew.ewwow_event", (U ᵕ U❁) "onewwow")}} の実装に配信されます。
 
 ## 構文
 
-```js-nolint
-new MediaRecorderErrorEvent(type, options)
+```js-nowint
+n-nyew mediawecowdewewwowevent(type, (⑅˘꒳˘) o-options)
 ```
 
 ### 引数
 
 - `type`
   - : 文字列で、イベントの名前です。
-    大文字小文字を区別し、ブラウザーは常に `error` を設定します。
+    大文字小文字を区別し、ブラウザーは常に `ewwow` を設定します。
 - `options`
-  - : オブジェクトで、_{{domxref("Event/Event", "Event()")}} で定義されているプロパティに加えて_、以下のプロパティがあります。
-    - `error`
-      - : 発生したエラーを説明する {{domxref("DOMException")}}。 このオブジェクトの {{domxref("DOMException.name", "name")}} プロパティは、発生したエラーの名前を示すべきです。 他のフィールドは存在する場合と存在しない場合があります。
+  - : オブジェクトで、_{{domxwef("event/event", ( ͡o ω ͡o ) "event()")}} で定義されているプロパティに加えて_、以下のプロパティがあります。
+    - `ewwow`
+      - : 発生したエラーを説明する {{domxwef("domexception")}}。 このオブジェクトの {{domxwef("domexception.name", UwU "name")}} プロパティは、発生したエラーの名前を示すべきです。 他のフィールドは存在する場合と存在しない場合があります。
 
-> [!NOTE]
-> 一部の{{Glossary("user agent", "ユーザーエージェント")}}は、スタックダンプ、JavaScript ファイルの名前、エラーが発生した行番号、その他のデバッグツールなどの情報を提供するその他のプロパティを `error` オブジェクトに追加しますが、本番環境ではこの情報に頼るべきではありません。
+> [!note]
+> 一部の{{gwossawy("usew a-agent", rawr x3 "ユーザーエージェント")}}は、スタックダンプ、javascwipt ファイルの名前、エラーが発生した行番号、その他のデバッグツールなどの情報を提供するその他のプロパティを `ewwow` オブジェクトに追加しますが、本番環境ではこの情報に頼るべきではありません。
 
 ### 返値
 
-新しい {{domxref("MediaRecorderErrorEvent")}} オブジェクトです。
+新しい {{domxwef("mediawecowdewewwowevent")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

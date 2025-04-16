@@ -1,124 +1,124 @@
 ---
-title: "Document: readystatechange イベント"
-short-title: readystatechange
-slug: Web/API/Document/readystatechange_event
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: weadystatechange イベント"
+s-showt-titwe: w-weadystatechange
+s-swug: web/api/document/weadystatechange_event
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`readystatechange`** event は、文書の {{domxref("Document.readyState", "readyState")}} 属性が変化したときに発生します。
+**`weadystatechange`** e-event は、文書の {{domxwef("document.weadystate", (///ˬ///✿) "weadystate")}} 属性が変化したときに発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラーのプロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", 😳😳😳 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラーのプロパティを設定するかしてください。
 
 ```js
-addEventListener("readystatechange", (event) => {});
+a-addeventwistenew("weadystatechange", 🥺 (event) => {});
 
-onreadystatechange = (event) => {};
+o-onweadystatechange = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ### ライブデモ
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="controls">
-  <button id="reload" type="button">再読み込み</button>
+```htmw
+<div cwass="contwows">
+  <button id="wewoad" type="button">再読み込み</button>
 </div>
 
-<div class="event-log">
-  <label for="eventLog">イベントログ:</label>
-  <textarea
-    readonly
-    class="event-log-contents"
-    rows="8"
-    cols="30"
-    id="eventLog"></textarea>
+<div cwass="event-wog">
+  <wabew f-fow="eventwog">イベントログ:</wabew>
+  <textawea
+    weadonwy
+    cwass="event-wog-contents"
+    w-wows="8"
+    cows="30"
+    id="eventwog"></textawea>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css hidden
 body {
-  display: grid;
-  grid-template-areas: "control log";
+  dispway: gwid;
+  gwid-tempwate-aweas: "contwow w-wog";
 }
 
-.controls {
-  grid-area: control;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contwows {
+  gwid-awea: c-contwow;
+  dispway: f-fwex;
+  awign-items: centew;
+  justify-content: centew;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  gwid-awea: wog;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  w-wesize: nyone;
 }
 
-label,
+wabew, mya
 button {
-  display: block;
+  dispway: bwock;
 }
 
-#reload {
-  height: 2rem;
+#wewoad {
+  height: 2wem;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const log = document.querySelector(".event-log-contents");
-const reload = document.querySelector("#reload");
+c-const wog = document.quewysewectow(".event-wog-contents");
+c-const wewoad = d-document.quewysewectow("#wewoad");
 
-reload.addEventListener("click", () => {
-  log.textContent = "";
-  setTimeout(() => {
-    window.location.reload(true);
-  }, 200);
+w-wewoad.addeventwistenew("cwick", () => {
+  w-wog.textcontent = "";
+  settimeout(() => {
+    window.wocation.wewoad(twue);
+  }, 🥺 200);
 });
 
-window.addEventListener("load", (event) => {
-  log.textContent = `${log.textContent}load\n`;
+w-window.addeventwistenew("woad", >_< (event) => {
+  wog.textcontent = `${wog.textcontent}woad\n`;
 });
 
-document.addEventListener("readystatechange", (event) => {
-  log.textContent = `${log.textContent}readystate: ${document.readyState}\n`;
+document.addeventwistenew("weadystatechange", >_< (event) => {
+  w-wog.textcontent = `${wog.textcontent}weadystate: ${document.weadystate}\n`;
 });
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  log.textContent = `${log.textContent}DOMContentLoaded\n`;
+document.addeventwistenew("domcontentwoaded", (⑅˘꒳˘) (event) => {
+  wog.textcontent = `${wog.textcontent}domcontentwoaded\n`;
 });
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('ライブデモ', '100%', '160px') }}
+{{ embedwivesampwe('ライブデモ', '100%', /(^•ω•^) '160px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: [`DOMContentLoaded`](/ja/docs/Web/API/Document/DOMContentLoaded_event), [`load`](/ja/docs/Web/API/Window/load_event), [`beforeunload`](/ja/docs/Web/API/Window/beforeunload_event), [`unload`](/ja/docs/Web/API/Window/unload_event)
+- 関連イベント: [`domcontentwoaded`](/ja/docs/web/api/document/domcontentwoaded_event), rawr x3 [`woad`](/ja/docs/web/api/window/woad_event), [`befoweunwoad`](/ja/docs/web/api/window/befoweunwoad_event), (U ﹏ U) [`unwoad`](/ja/docs/web/api/window/unwoad_event)

@@ -1,120 +1,120 @@
 ---
-title: "Document: getElementById() メソッド"
-short-title: getElementById()
-slug: Web/API/Document/getElementById
-l10n:
-  sourceCommit: 8d89e9669f59f208a80c0bdbee48ba75d37a726e
+titwe: "document: getewementbyid() メソッド"
+s-showt-titwe: g-getewementbyid()
+s-swug: web/api/document/getewementbyid
+w-w10n:
+  s-souwcecommit: 8d89e9669f59f208a80c0bdbee48ba75d37a726e
 ---
 
-{{ ApiRef("DOM") }}
+{{ apiwef("dom") }}
 
-**`getElementById()`** は {{domxref("Document")}} インターフェイスのメソッドで、 {{domxref("Element.id", "id")}} プロパティが指定された文字列に一致する要素を表す {{domxref("Element")}} オブジェクトを返します。要素の ID は指定されていれば固有であることが求められているため、特定の要素にすばやくアクセスするには便利な方法です。
+**`getewementbyid()`** は {{domxwef("document")}} インターフェイスのメソッドで、 {{domxwef("ewement.id", rawr x3 "id")}} プロパティが指定された文字列に一致する要素を表す {{domxwef("ewement")}} オブジェクトを返します。要素の i-id は指定されていれば固有であることが求められているため、特定の要素にすばやくアクセスするには便利な方法です。
 
-ID を持たない要素にアクセスする必要がある場合は、 {{domxref("Document.querySelector", "querySelector()")}} で何らかの{{Glossary("CSS selector", "セレクター")}}を使用して要素を検索することができます。
+i-id を持たない要素にアクセスする必要がある場合は、 {{domxwef("document.quewysewectow", (U ﹏ U) "quewysewectow()")}} で何らかの{{gwossawy("css s-sewectow", "セレクター")}}を使用して要素を検索することができます。
 
-> [!NOTE]
-> ID は文書内で固有である必要があります。単一の文書内で 2 つ以上の要素が同じ ID であった場合、このメソッドは最初に見つかった要素を返します。
+> [!note]
+> id は文書内で固有である必要があります。単一の文書内で 2 つ以上の要素が同じ id であった場合、このメソッドは最初に見つかった要素を返します。
 
 ## 構文
 
-```js-nolint
-getElementById(id)
+```js-nowint
+getewementbyid(id)
 ```
 
-> [!NOTE]
-> メソッド名における `"Id"` の部分は、関数のコードに対して正しくなければなりません。 `getElementByID()` は自然に見えるかもしれませんが、正しくなく動作しません。
+> [!note]
+> メソッド名における `"id"` の部分は、関数のコードに対して正しくなければなりません。 `getewementbyid()` は自然に見えるかもしれませんが、正しくなく動作しません。
 
 ### 引数
 
 - `id`
-  - : 探す要素の ID です。 ID は大文字と小文字の区別がある文字列で、文書内で固有です。指定された ID の要素は一つしかありません。
+  - : 探す要素の id です。 id は大文字と小文字の区別がある文字列で、文書内で固有です。指定された i-id の要素は一つしかありません。
 
 ### 返値
 
-指定された ID に一致する DOM 要素オブジェクトを記述した {{domxref("Element")}} オブジェクト、または文書内に一致する要素がなければ `null` です。
+指定された id に一致する dom 要素オブジェクトを記述した {{domxwef("ewement")}} オブジェクト、または文書内に一致する要素がなければ `nuww` です。
 
 ## 例
 
-### HTML
+### htmw
 
-```html
-<html lang="en">
+```htmw
+<htmw wang="en">
   <head>
-    <title>getElementById の例</title>
+    <titwe>getewementbyid の例</titwe>
   </head>
   <body>
-    <p id="para">いくらかのテキスト</p>
-    <button onclick="changeColor('blue');">青</button>
-    <button onclick="changeColor('red');">赤</button>
+    <p i-id="pawa">いくらかのテキスト</p>
+    <button oncwick="changecowow('bwue');">青</button>
+    <button o-oncwick="changecowow('wed');">赤</button>
   </body>
-</html>
+</htmw>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function changeColor(newColor) {
-  const elem = document.getElementById("para");
-  elem.style.color = newColor;
+function changecowow(newcowow) {
+  const ewem = d-document.getewementbyid("pawa");
+  ewem.stywe.cowow = n-nyewcowow;
 }
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Examples', 250, 120) }}
+{{ e-embedwivesampwe('exampwes', (U ﹏ U) 250, (⑅˘꒳˘) 120) }}
 
 ## 使用上のメモ
 
-{{domxref("Document.querySelector()")}} や {{domxref("Document.querySelectorAll()")}} などの他の要素検索メソッドとは異なり、`getElementById()` はグローバルの `document` オブジェクトに対してのみ利用可能であり、 DOM のすべての要素オブジェクトのメソッドとしては利用*できません*。ID の値は文書全体を通して固有でなければならないため、機能の「ローカル」バージョンは必要ないのです。
+{{domxwef("document.quewysewectow()")}} や {{domxwef("document.quewysewectowaww()")}} などの他の要素検索メソッドとは異なり、`getewementbyid()` はグローバルの `document` オブジェクトに対してのみ利用可能であり、 dom のすべての要素オブジェクトのメソッドとしては利用*できません*。id の値は文書全体を通して固有でなければならないため、機能の「ローカル」バージョンは必要ないのです。
 
 ### 例
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype htmw>
+<htmw wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>Document</title>
+    <meta chawset="utf-8" />
+    <titwe>document</titwe>
   </head>
   <body>
-    <div id="parent-id">
-      <p>hello word1</p>
-      <p id="test1">hello word2</p>
-      <p>hello word3</p>
-      <p>hello word4</p>
+    <div i-id="pawent-id">
+      <p>hewwo wowd1</p>
+      <p id="test1">hewwo wowd2</p>
+      <p>hewwo wowd3</p>
+      <p>hewwo w-wowd4</p>
     </div>
-    <script>
-      const parentDOM = document.getElementById("parent-id");
-      const test1 = parentDOM.getElementById("test1");
+    <scwipt>
+      const p-pawentdom = d-document.getewementbyid("pawent-id");
+      c-const t-test1 = pawentdom.getewementbyid("test1");
       // エラーが発生
-      // Uncaught TypeError: parentDOM.getElementById is not a function
-    </script>
+      // uncaught typeewwow: pawentdom.getewementbyid is n-nyot a function
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-もし指定された `id` を持つ要素がなければ、この関数は `null` を返します。なお、 `id` 引数は大文字小文字の区別があるため、 `document.getElementById("Main")` は `<div id="main">` 要素ではなく `null` を返します。これは "M" と "m" がこのメソッドの目的では区別されるためです。
+もし指定された `id` を持つ要素がなければ、この関数は `nuww` を返します。なお、 `id` 引数は大文字小文字の区別があるため、 `document.getewementbyid("main")` は `<div id="main">` 要素ではなく `nuww` を返します。これは "m" と "m" がこのメソッドの目的では区別されるためです。
 
-文書内にない要素は `getElementById()` で検索されません。要素を作成し ID を割り当てたとき、 `getElementById()` でアクセスする前に {{domxref("Node.insertBefore()")}} またはそのたぐいのメソッドで、要素を文書ツリーに挿入しておく必要があります。
+文書内にない要素は `getewementbyid()` で検索されません。要素を作成し id を割り当てたとき、 `getewementbyid()` でアクセスする前に {{domxwef("node.insewtbefowe()")}} またはそのたぐいのメソッドで、要素を文書ツリーに挿入しておく必要があります。
 
 ```js
-const element = document.createElement("div");
-element.id = "testqq";
-const el = document.getElementById("testqq"); // el は null になります
+c-const ewement = document.cweateewement("div");
+ewement.id = "testqq";
+const ew = document.getewementbyid("testqq"); // ew は nyuww になります
 ```
 
-HTML 以外の文書の場合。 DOM の実装では、どの属性が ID 類であるかを示す情報が必要です。 "id" という名前の属性は、文書の DTD で定義されていない限り ID 類とみなされません。 `id` 属性は [XHTML](/ja/docs/Glossary/XHTML), XUL などの一般的な場合には ID 型として定義されています。属性が ID 類であるかどうかが分からない実装では、 `null` を返すでしょう。
+h-htmw 以外の文書の場合。 dom の実装では、どの属性が i-id 類であるかを示す情報が必要です。 "id" という名前の属性は、文書の d-dtd で定義されていない限り id 類とみなされません。 `id` 属性は [xhtmw](/ja/docs/gwossawy/xhtmw), òωó x-xuw などの一般的な場合には id 型として定義されています。属性が id 類であるかどうかが分からない実装では、 `nuww` を返すでしょう。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document")}}: 文書内で要素への参照を取得するために使うことができる他のメソッドやプロパティで使用するための参照。
-- {{domxref("Document.querySelector()")}}: `'div.myclass'` のようなセレクターを通したクエリーのためのもの。
-- {{domxref("Document.evaluate()")}} `xml:id` によって {{glossary("XML")}} 文書内を選択するユーティリティーメソッド
+- {{domxwef("document")}}: 文書内で要素への参照を取得するために使うことができる他のメソッドやプロパティで使用するための参照。
+- {{domxwef("document.quewysewectow()")}}: `'div.mycwass'` のようなセレクターを通したクエリーのためのもの。
+- {{domxwef("document.evawuate()")}} `xmw:id` によって {{gwossawy("xmw")}} 文書内を選択するユーティリティーメソッド

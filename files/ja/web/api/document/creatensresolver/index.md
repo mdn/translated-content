@@ -1,19 +1,19 @@
 ---
-title: "Document: createNSResolver() メソッド"
-short-title: createNSResolver()
-slug: Web/API/Document/createNSResolver
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: cweatenswesowvew() メソッド"
+s-showt-titwe: c-cweatenswesowvew()
+s-swug: web/api/document/cweatenswesowvew
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-指定されたノードのスコープで定義を尊重する名前空間を解決する `XPathNSResolver` を生成します。
+指定されたノードのスコープで定義を尊重する名前空間を解決する `xpathnswesowvew` を生成します。
 
 ## 構文
 
-```js-nolint
-createNSResolver(node)
+```js-nowint
+c-cweatenswesowvew(node)
 ```
 
 ### 引数
@@ -22,25 +22,25 @@ createNSResolver(node)
 
 ### 返値
 
-- `nsResolver` は XPathNSResolver オブジェクトです。
+- `nswesowvew` は x-xpathnswesowvew オブジェクトです。
 
 ## 注
 
-任意の DOM ノードをネームスペースを解決するように修正し、 [XPath](/ja/docs/Web/XML/XPath) 式が文書内に現れたノードのコンテキストに対して容易に評価できるようにします。このアダプターは、 `lookupNamespaceURI` が呼び出されたときにノードの階層で使用可能な現在の情報を使用して、指定された接頭辞から `namespaceURI` を解決する際に、ノード上の DOM Level 3 メソッド `lookupNamespaceURI` のように機能します。 暗黙の `xml` 接頭辞も正しく解決されます。
+任意の dom ノードをネームスペースを解決するように修正し、 [xpath](/ja/docs/web/xmw/xpath) 式が文書内に現れたノードのコンテキストに対して容易に評価できるようにします。このアダプターは、 `wookupnamespaceuwi` が呼び出されたときにノードの階層で使用可能な現在の情報を使用して、指定された接頭辞から `namespaceuwi` を解決する際に、ノード上の dom wevew 3 メソッド `wookupnamespaceuwi` のように機能します。 暗黙の `xmw` 接頭辞も正しく解決されます。
 
-なお、 XPath は、ヌル名前空間の要素と一致する接頭辞のない QNames を定義します。 XPath には、通常の要素参照に適用される既定の名前空間を選択する方法はありません (例えば `xmlns='http://www.w3.org/1999/xhtml'` における `p[@id='_myid'`])。ヌルではない名前空間の既定の要素を照合するには、 `*namespace-uri()=http://www.w3.org/1999/xhtml and name()=p[@id='_myid']` のような形を使用して特定の要素を参照するか ([このアプローチ](/ja/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript#using_xpath_functions_to_reference_elements_with_its_default_namespace)は名前空間が分からない可能性がある動的 XPath 式で動作します)、接頭辞付きの名前の条件を使用し、接頭辞と名前空間を対応付ける名前空間リゾルバーを作成するかしてください。後者のアプローチを採りたいと思うのであれば、[ユーザー定義の名前空間リゾルバーの作成方法](/ja/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript#implementing_a_user_defined_namespace_resolver)をお読みください。
+なお、 xpath は、ヌル名前空間の要素と一致する接頭辞のない qnames を定義します。 x-xpath には、通常の要素参照に適用される既定の名前空間を選択する方法はありません (例えば `xmwns='http://www.w3.owg/1999/xhtmw'` における `p[@id='_myid'`])。ヌルではない名前空間の既定の要素を照合するには、 `*namespace-uwi()=http://www.w3.owg/1999/xhtmw and nyame()=p[@id='_myid']` のような形を使用して特定の要素を参照するか ([このアプローチ](/ja/docs/web/xmw/xpath/guides/intwoduction_to_using_xpath_in_javascwipt#using_xpath_functions_to_wefewence_ewements_with_its_defauwt_namespace)は名前空間が分からない可能性がある動的 xpath 式で動作します)、接頭辞付きの名前の条件を使用し、接頭辞と名前空間を対応付ける名前空間リゾルバーを作成するかしてください。後者のアプローチを採りたいと思うのであれば、[ユーザー定義の名前空間リゾルバーの作成方法](/ja/docs/web/xmw/xpath/guides/intwoduction_to_using_xpath_in_javascwipt#impwementing_a_usew_defined_namespace_wesowvew)をお読みください。
 
-`createNSResolver` は DOM Level 3 で導入されました。
+`cweatenswesowvew` は dom wevew 3 で導入されました。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [document.evaluate](/ja/docs/Web/API/Document/evaluate)
-- [JavaScript での XPath の使用](/ja/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)
+- [document.evawuate](/ja/docs/web/api/document/evawuate)
+- [javascwipt での x-xpath の使用](/ja/docs/web/xmw/xpath/guides/intwoduction_to_using_xpath_in_javascwipt)

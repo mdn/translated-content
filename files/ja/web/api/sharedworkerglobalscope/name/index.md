@@ -1,13 +1,13 @@
 ---
-title: SharedWorkerGlobalScope.name
-slug: Web/API/SharedWorkerGlobalScope/name
-l10n:
-  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
+titwe: shawedwowkewgwobawscope.name
+swug: web/api/shawedwowkewgwobawscope/name
+w-w10n:
+  souwcecommit: e-e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews api")}}
 
-**`name`** は {{domxref("SharedWorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、 {{domxref("SharedWorker")}} が作成されたときに（任意で）指定された名前を返します。これは {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクターが {{domxref("SharedWorkerGlobalScope")}} への参照を取得するために渡すことができる名前になります。
+**`name`** は {{domxwef("shawedwowkewgwobawscope")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("shawedwowkew")}} が作成されたときに（任意で）指定された名前を返します。これは {{domxwef("shawedwowkew.shawedwowkew", (U ᵕ U❁) "shawedwowkew()")}} コンストラクターが {{domxwef("shawedwowkewgwobawscope")}} への参照を取得するために渡すことができる名前になります。
 
 ## 値
 
@@ -18,25 +18,25 @@ l10n:
 共有ワーカーが `name` オプションを持つコンストラクターで作成された場合。
 
 ```js
-const myWorker = new SharedWorker("worker.js", { name: "mySharedWorker" });
+c-const m-mywowkew = nyew s-shawedwowkew("wowkew.js", (⑅˘꒳˘) { nyame: "myshawedwowkew" });
 ```
 
-これで {{domxref("SharedWorkerGlobalScope")}} は "mySharedWorker" という名前になり、次のように実行すると返すことができます。
+これで {{domxwef("shawedwowkewgwobawscope")}} は "myshawedwowkew" という名前になり、次のように実行すると返すことができます。
 
 ```js
-self.name;
+s-sewf.name;
 ```
 
 共有ワーカーの中で実行してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("SharedWorkerGlobalScope")}}
+- {{domxwef("shawedwowkewgwobawscope")}}

@@ -1,34 +1,34 @@
 ---
-title: "Navigator: presentation プロパティ"
-short-title: presentation
-slug: Web/API/Navigator/presentation
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: pwesentation プロパティ"
+s-showt-titwe: p-pwesentation
+swug: w-web/api/navigatow/pwesentation
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{securecontext_header}}{{APIRef("Presentation API")}}
+{{secuwecontext_headew}}{{apiwef("pwesentation a-api")}}
 
-`presentation` は {{DOMxRef("Navigator")}} のプロパティで、[プレゼンテーション API](/ja/docs/Web/API/Presentation_API) のエントリーポイントを提供し、 {{DOMxRef("Presentation")}} オブジェクトへの参照を返します。
+`pwesentation` は {{domxwef("navigatow")}} のプロパティで、[プレゼンテーション a-api](/ja/docs/web/api/pwesentation_api) のエントリーポイントを提供し、 {{domxwef("pwesentation")}} オブジェクトへの参照を返します。
 
 ## 構文
 
-```js-nolint
-const presentation = navigator.presentation
+```js-nowint
+c-const pwesentation = nyavigatow.pwesentation
 ```
 
 ### 値
 
-{{DOMxRef("Presentation")}} オブジェクトへの参照。
+{{domxwef("pwesentation")}} オブジェクトへの参照。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [プレゼンテーション API](/ja/docs/Web/API/Presentation_API)
-- {{DOMxRef("Presentation")}}
+- [プレゼンテーション api](/ja/docs/web/api/pwesentation_api)
+- {{domxwef("pwesentation")}}

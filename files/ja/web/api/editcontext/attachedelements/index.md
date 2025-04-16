@@ -1,53 +1,53 @@
 ---
-title: "EditContext: attachedElements() メソッド"
-slug: Web/API/EditContext/attachedElements
-l10n:
-  sourceCommit: c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
+titwe: "editcontext: attachedewements() メソッド"
+s-swug: web/api/editcontext/attachedewements
+w-w10n:
+  souwcecommit: c-c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-{{domxref("EditContext")}} インターフェイスの **`attachedElements()`** メソッドは、要素が 1 個だけ格納された {{jsxref("Array")}} を返します。この要素は、この `EditContext` オブジェクトと関連付けられた要素です。
+{{domxwef("editcontext")}} インターフェイスの **`attachedewements()`** メソッドは、要素が 1 個だけ格納された {{jsxwef("awway")}} を返します。この要素は、この `editcontext` オブジェクトと関連付けられた要素です。
 
 ## 構文
 
-```js-nolint
-attachedElements()
+```js-nowint
+a-attachedewements()
 ```
 
 ### 返値
 
-1 個の {{domxref("HTMLElement")}} オブジェクトが格納された {{jsxref("Array")}} です。
+1 個の {{domxwef("htmwewement")}} オブジェクトが格納された {{jsxwef("awway")}} です。
 
-1 個の `EditContext` のインスタンスに関連付けられる要素は 1 個だけなので、返される配列は常に 1 個の要素を持ちます。将来この API が複数の要素の関連付けに対応するように拡張された場合、返り値は複数の要素が格納された配列になるでしょう。
+1 個の `editcontext` のインスタンスに関連付けられる要素は 1 個だけなので、返される配列は常に 1 個の要素を持ちます。将来この a-api が複数の要素の関連付けに対応するように拡張された場合、返り値は複数の要素が格納された配列になるでしょう。
 
 ## 例
 
-### `EditContext` のインスタンスに関連付けられた要素の取得
+### `editcontext` のインスタンスに関連付けられた要素の取得
 
-この例は、`attachedElements` メソッドを用いて `EditContext` のインスタンスに関連付けられた要素を取得する方法を示しています。
+この例は、`attachedewements` メソッドを用いて `editcontext` のインスタンスに関連付けられた要素を取得する方法を示しています。
 
-```html
-<canvas id="editor-canvas"></canvas>
+```htmw
+<canvas id="editow-canvas"></canvas>
 ```
 
 ```js
-const canvas = document.getElementById("editor-canvas");
-const editContext = new EditContext();
-canvas.editContext = editContext;
+c-const canvas = d-document.getewementbyid("editow-canvas");
+const editcontext = nyew editcontext();
+canvas.editcontext = editcontext;
 
-const attachedElements = editContext.attachedElements();
-console.log(attachedElements[0] === canvas); // true
+c-const attachedewements = editcontext.attachedewements();
+c-consowe.wog(attachedewements[0] === canvas); // t-twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 属する {{DOMxRef("EditContext")}} インターフェイス
+- 属する {{domxwef("editcontext")}} インターフェイス

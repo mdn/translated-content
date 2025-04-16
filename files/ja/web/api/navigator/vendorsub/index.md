@@ -1,14 +1,14 @@
 ---
-title: "Navigator: vendorSub プロパティ"
-short-title: vendorSub
-slug: Web/API/Navigator/vendorSub
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: vendowsub プロパティ"
+s-showt-titwe: vendowsub
+s-swug: web/api/navigatow/vendowsub
+w-w10n:
+  s-souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{ApiRef}} {{Deprecated_Header}}
+{{apiwef}} {{depwecated_headew}}
 
-**`Navigator.vendorSub`** プロパティの値は、どのブラウザーでも常に空文字列です。
+**`navigatow.vendowsub`** プロパティの値は、どのブラウザーでも常に空文字列です。
 
 ### 値
 
@@ -16,8 +16,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

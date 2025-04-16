@@ -1,156 +1,156 @@
 ---
-title: "CanvasRenderingContext2D: putImageData() メソッド"
-slug: Web/API/CanvasRenderingContext2D/putImageData
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "canvaswendewingcontext2d: putimagedata() メソッド"
+s-swug: web/api/canvaswendewingcontext2d/putimagedata
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Canvas 2D API の **`CanvasRenderingContext2D.putImageData()`** メソッドは、指定の {{domxref("ImageData")}} オブジェクトのデータをキャンバスに描画します。更新対象の矩形が指定された場合は、その矩形内のピクセルのみが描画されます。このメソッドは、キャンバスの変換行列の影響を受けません。
+c-canvas 2d a-api の **`canvaswendewingcontext2d.putimagedata()`** メソッドは、指定の {{domxwef("imagedata")}} オブジェクトのデータをキャンバスに描画します。更新対象の矩形が指定された場合は、その矩形内のピクセルのみが描画されます。このメソッドは、キャンバスの変換行列の影響を受けません。
 
-> **メモ:** {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}} メソッドを用いて、キャンバスから画像データを取得できます。
+> **メモ:** {{domxwef("canvaswendewingcontext2d.getimagedata()", mya "getimagedata()")}} メソッドを用いて、キャンバスから画像データを取得できます。
 
-記事[キャンバスとピクセル操作](/ja/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)に、`putImageData()` およびキャンバスの内容の一般的な操作に関するさらなる情報があります。
+記事[キャンバスとピクセル操作](/ja/docs/web/api/canvas_api/tutowiaw/pixew_manipuwation_with_canvas)に、`putimagedata()` およびキャンバスの内容の一般的な操作に関するさらなる情報があります。
 
 ## 構文
 
-```js-nolint
-putImageData(imageData, dx, dy)
-putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight)
+```js-nowint
+p-putimagedata(imagedata, >w< d-dx, dy)
+putimagedata(imagedata, nyaa~~ d-dx, dy, diwtyx, (✿oωo) diwtyy, diwtywidth, ʘwʘ diwtyheight)
 ```
 
 ### 引数
 
-- `imageData`
-  - : ピクセル値の配列を持った {{domxref("ImageData")}} オブジェクトです。
+- `imagedata`
+  - : ピクセル値の配列を持った {{domxwef("imagedata")}} オブジェクトです。
 - `dx`
   - : 描画先キャンバスに画像データを配置する横位置 (x 座標) です。
 - `dy`
   - : 描画先キャンバスに画像データを配置する縦位置 (y 座標) です。
-- `dirtyX` {{optional_inline}}
+- `diwtyx` {{optionaw_inwine}}
   - : 画像データを取り出し始める左上の角の横位置 (x 座標) です。デフォルト値は `0` です。
-- `dirtyY` {{optional_inline}}
+- `diwtyy` {{optionaw_inwine}}
   - : 画像データを取り出し始める左上の角の縦位置 (y 座標) です。デフォルト値は `0` です。
-- `dirtyWidth` {{optional_inline}}
+- `diwtywidth` {{optionaw_inwine}}
   - : 描画する矩形の幅です。デフォルト値は画像データの幅です。
-- `dirtyHeight` {{optional_inline}}
+- `diwtyheight` {{optionaw_inwine}}
   - : 描画する矩形の高さです。デフォルト値は画像データの高さです。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})
+なし ({{jsxwef("undefined")}})
 
 ### 例外
 
-- `NotSupportedError` {{domxref("DOMException")}}
+- `notsuppowtedewwow` {{domxwef("domexception")}}
   - : 引数のいずれかが無限のとき投げられます。
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : 指定された `ImageData` オブジェクトのデータがデタッチされているとき投げられます。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : 指定された `imagedata` オブジェクトのデータがデタッチされているとき投げられます。
 
 ## 例
 
-### putImageData を理解する
+### putimagedata を理解する
 
-このアルゴリズムが中で何をやっているかを理解するために、{{domxref("CanvasRenderingContext2D.fillRect()")}} を用いた実装を用意しました。
+このアルゴリズムが中で何をやっているかを理解するために、{{domxwef("canvaswendewingcontext2d.fiwwwect()")}} を用いた実装を用意しました。
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = d-document.getewementbyid("canvas");
+const ctx = c-canvas.getcontext("2d");
 
-function putImageData(
-  ctx,
-  imageData,
-  dx,
+function putimagedata(
+  ctx, (ˆ ﻌ ˆ)♡
+  imagedata, 😳😳😳
+  d-dx, :3
   dy,
-  dirtyX,
-  dirtyY,
-  dirtyWidth,
-  dirtyHeight,
+  diwtyx, OwO
+  diwtyy,
+  d-diwtywidth, (U ﹏ U)
+  d-diwtyheight, >w<
 ) {
-  const data = imageData.data;
-  const height = imageData.height;
-  const width = imageData.width;
-  dirtyX = dirtyX || 0;
-  dirtyY = dirtyY || 0;
-  dirtyWidth = dirtyWidth !== undefined ? dirtyWidth : width;
-  dirtyHeight = dirtyHeight !== undefined ? dirtyHeight : height;
-  const limitBottom = dirtyY + dirtyHeight;
-  const limitRight = dirtyX + dirtyWidth;
-  for (let y = dirtyY; y < limitBottom; y++) {
-    for (let x = dirtyX; x < limitRight; x++) {
-      const pos = y * width + x;
-      ctx.fillStyle = `rgba(${data[pos * 4 + 0]}, ${data[pos * 4 + 1]}, ${
+  const data = imagedata.data;
+  const height = imagedata.height;
+  c-const width = imagedata.width;
+  diwtyx = diwtyx || 0;
+  diwtyy = diwtyy || 0;
+  d-diwtywidth = diwtywidth !== u-undefined ? d-diwtywidth : w-width;
+  diwtyheight = d-diwtyheight !== undefined ? diwtyheight : h-height;
+  const wimitbottom = diwtyy + diwtyheight;
+  c-const wimitwight = diwtyx + diwtywidth;
+  fow (wet y = diwtyy; y < wimitbottom; y++) {
+    f-fow (wet x = diwtyx; x < wimitwight; x-x++) {
+      c-const pos = y-y * width + x;
+      ctx.fiwwstywe = `wgba(${data[pos * 4 + 0]}, (U ﹏ U) ${data[pos * 4 + 1]}, 😳 ${
         data[pos * 4 + 2]
-      }, ${data[pos * 4 + 3] / 255})`;
-      ctx.fillRect(x + dx, y + dy, 1, 1);
+      }, (ˆ ﻌ ˆ)♡ ${data[pos * 4 + 3] / 255})`;
+      ctx.fiwwwect(x + d-dx, 😳😳😳 y + dy, (U ﹏ U) 1, 1);
     }
   }
 }
 
 // 内容をキャンバスに描画する
-ctx.fillRect(0, 0, 100, 100);
-// 描画内容から ImageData オブジェクトを生成する
-const imagedata = ctx.getImageData(0, 0, 100, 100);
-// putImageData の動作の説明用の putImageData 関数を用いる
-putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);
+c-ctx.fiwwwect(0, (///ˬ///✿) 0, 100, 100);
+// 描画内容から imagedata オブジェクトを生成する
+c-const i-imagedata = ctx.getimagedata(0, 0, 😳 100, 100);
+// p-putimagedata の動作の説明用の putimagedata 関数を用いる
+p-putimagedata(ctx, 😳 imagedata, σωσ 150, 0, 50, rawr x3 50, 25, 25);
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Understanding_putImageData', 700, 180) }}
+{{ embedwivesampwe('undewstanding_putimagedata', OwO 700, 180) }}
 
 ### ブラウザーの最適化によるデータの消失
 
-> [!WARNING]
-> 乗算済みアルファカラー値との変換ではデータが劣化するため、`putImageData()` でピクセルを設定した直後でも、対応する `getImageData()` で異なる値として読み込まれる可能性があります。
+> [!wawning]
+> 乗算済みアルファカラー値との変換ではデータが劣化するため、`putimagedata()` でピクセルを設定した直後でも、対応する `getimagedata()` で異なる値として読み込まれる可能性があります。
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.createElement("canvas");
+const c-canvas = document.cweateewement("canvas");
 canvas.width = 1;
 canvas.height = 1;
-const context = canvas.getContext("2d");
-const imgData = context.getImageData(0, 0, canvas.width, canvas.height);
-const pixels = imgData.data;
-pixels[0 + 0] = 1;
-pixels[0 + 1] = 127;
-pixels[0 + 2] = 255;
-pixels[0 + 3] = 1;
-console.log("before:", pixels);
-context.putImageData(imgData, 0, 0);
-const imgData2 = context.getImageData(0, 0, canvas.width, canvas.height);
-const pixels2 = imgData2.data;
-console.log("after:", pixels2);
+c-const context = c-canvas.getcontext("2d");
+const imgdata = context.getimagedata(0, /(^•ω•^) 0, canvas.width, 😳😳😳 canvas.height);
+const pixews = imgdata.data;
+p-pixews[0 + 0] = 1;
+p-pixews[0 + 1] = 127;
+pixews[0 + 2] = 255;
+p-pixews[0 + 3] = 1;
+c-consowe.wog("befowe:", ( ͡o ω ͡o ) p-pixews);
+context.putimagedata(imgdata, >_< 0, 0);
+const imgdata2 = context.getimagedata(0, >w< 0, c-canvas.width, rawr canvas.height);
+const pixews2 = imgdata2.data;
+consowe.wog("aftew:", 😳 p-pixews2);
 ```
 
 以下のような出力になるかもしれません。
 
-```plain
-before: Uint8ClampedArray(4) [ 1, 127, 255, 1 ]
-after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]
+```pwain
+befowe: u-uint8cwampedawway(4) [ 1, >w< 127, 255, 1 ]
+a-aftew: u-uint8cwampedawway(4) [ 255, (⑅˘꒳˘) 255, 255, OwO 1 ]
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("ImageData")}} オブジェクト
-- {{domxref("CanvasRenderingContext2D.getImageData()")}}
-- [キャンバスとピクセル操作](/ja/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+- このメソッドを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("imagedata")}} オブジェクト
+- {{domxwef("canvaswendewingcontext2d.getimagedata()")}}
+- [キャンバスとピクセル操作](/ja/docs/web/api/canvas_api/tutowiaw/pixew_manipuwation_with_canvas)

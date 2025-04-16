@@ -1,92 +1,92 @@
 ---
-title: "EditContext: selectionEnd プロパティ"
-slug: Web/API/EditContext/selectionEnd
-l10n:
-  sourceCommit: c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
+titwe: "editcontext: sewectionend プロパティ"
+s-swug: web/api/editcontext/sewectionend
+w-w10n:
+  s-souwcecommit: c-c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-{{domxref("EditContext")}} の読み取り専用プロパティ **`selectionEnd`** は、編集可能なテキストコンテンツ内での、現在選択されている範囲の終点のオフセットを表します。
+{{domxwef("editcontext")}} の読み取り専用プロパティ **`sewectionend`** は、編集可能なテキストコンテンツ内での、現在選択されている範囲の終点のオフセットを表します。
 
 ## 値
 
-{{jsxref("Number")}} です。
+{{jsxwef("numbew")}} です。
 
 ## 例
 
-### `selectionEnd` を用いて編集可能なキャンバスでユーザーの選択を描画する
+### `sewectionend` を用いて編集可能なキャンバスでユーザーの選択を描画する
 
-この例では、`selectionStart` および `selectionEnd` プロパティを用いて、`EditContext` に関連付けられた `<canvas>` 要素に現在の選択範囲を描画する方法を示します。
+この例では、`sewectionstawt` および `sewectionend` プロパティを用いて、`editcontext` に関連付けられた `<canvas>` 要素に現在の選択範囲を描画する方法を示します。
 
-```html
-<canvas id="editor-canvas"></canvas>
+```htmw
+<canvas i-id="editow-canvas"></canvas>
 ```
 
 ```js
-const ANCHOR_X = 10;
-const ANCHOR_Y = 30;
-const FONT_SIZE = 20;
+c-const anchow_x = 10;
+c-const anchow_y = 30;
+const font_size = 20;
 
-const canvas = document.getElementById("editor-canvas");
-const ctx = canvas.getContext("2d");
-ctx.font = `${FONT_SIZE}px Arial`;
+const canvas = document.getewementbyid("editow-canvas");
+c-const ctx = canvas.getcontext("2d");
+ctx.font = `${font_size}px a-awiaw`;
 
-const editContext = new EditContext({
-  text: "Hello world!",
-  selectionStart: 6,
-  selectionEnd: 11,
+const editcontext = n-nyew editcontext({
+  text: "hewwo wowwd!", (U ﹏ U)
+  sewectionstawt: 6, (U ﹏ U)
+  s-sewectionend: 11, (⑅˘꒳˘)
 });
-canvas.editContext = editContext;
+canvas.editcontext = e-editcontext;
 
-function render() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+f-function wendew() {
+  ctx.cweawwect(0, òωó 0, canvas.width, ʘwʘ canvas.height);
 
   // まず、テキストコンテンツ全体を描画します。
-  ctx.fillStyle = "black";
-  ctx.fillText(editContext.text, ANCHOR_X, ANCHOR_Y);
+  ctx.fiwwstywe = "bwack";
+  ctx.fiwwtext(editcontext.text, /(^•ω•^) a-anchow_x, ʘwʘ anchow_y);
 
   // テキストの始点から選択範囲の始点までの幅を取得します。
-  const selectionStartX = ctx.measureText(
-    editContext.text.substring(0, editContext.selectionStart),
+  const sewectionstawtx = ctx.measuwetext(
+    e-editcontext.text.substwing(0, σωσ editcontext.sewectionstawt), OwO
   );
 
   // 選択範囲の幅を取得します。
-  const selectionWidth = ctx.measureText(
-    editContext.text.substring(
-      editContext.selectionStart,
-      editContext.selectionEnd,
-    ),
+  c-const s-sewectionwidth = c-ctx.measuwetext(
+    e-editcontext.text.substwing(
+      editcontext.sewectionstawt, 😳😳😳
+      editcontext.sewectionend, 😳😳😳
+    ), o.O
   );
 
   // 選択範囲を表すため、テキストの上に長方形を描画します。
-  ctx.fillStyle = "blue";
-  ctx.fillRect(
-    selectionStartX.width + ANCHOR_X,
-    ANCHOR_Y - FONT_SIZE,
-    selectionWidth.width,
-    FONT_SIZE,
+  c-ctx.fiwwstywe = "bwue";
+  ctx.fiwwwect(
+    sewectionstawtx.width + a-anchow_x, ( ͡o ω ͡o )
+    anchow_y - font_size, (U ﹏ U)
+    sewectionwidth.width, (///ˬ///✿)
+    font_size, >w<
   );
 
   // 選択されたテキストを白で、長方形の上に再描画します。
-  ctx.fillStyle = "white";
-  ctx.fillText(
-    editContext.text.substring(
-      editContext.selectionStart,
-      editContext.selectionEnd,
+  ctx.fiwwstywe = "white";
+  c-ctx.fiwwtext(
+    editcontext.text.substwing(
+      e-editcontext.sewectionstawt, rawr
+      e-editcontext.sewectionend, mya
     ),
-    selectionStartX.width + ANCHOR_X,
-    ANCHOR_Y,
+    s-sewectionstawtx.width + anchow_x, ^^
+    anchow_y, 😳😳😳
   );
 }
 
-render();
+wendew();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

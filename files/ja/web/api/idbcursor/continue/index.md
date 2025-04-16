@@ -1,64 +1,64 @@
 ---
-title: "IDBCursor: continue() メソッド"
-short-title: continue()
-slug: Web/API/IDBCursor/continue
-l10n:
-  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
+titwe: "idbcuwsow: continue() メソッド"
+showt-titwe: c-continue()
+s-swug: web/api/idbcuwsow/continue
+w-w10n:
+  s-souwcecommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
+{{apiwef("indexeddb")}} {{avaiwabweinwowkews}}
 
-**`continue()`** は {{domxref("IDBCursor")}} インターフェイスのメソッドで、カーソルを現在の方向に次の位置、任意のキーパラメーターに一致するキーを持つアイテムまで進めます。キーを指定しない場合、カーソルはその方向に基づいて、すぐ隣の位置へ進みます。
+**`continue()`** は {{domxwef("idbcuwsow")}} インターフェイスのメソッドで、カーソルを現在の方向に次の位置、任意のキーパラメーターに一致するキーを持つアイテムまで進めます。キーを指定しない場合、カーソルはその方向に基づいて、すぐ隣の位置へ進みます。
 
 ## 構文
 
-```js-nolint
-continue()
+```js-nowint
+c-continue()
 continue(key)
 ```
 
 ### 引数
 
-- `key` {{optional_inline}}
+- `key` {{optionaw_inwine}}
   - : このカーソルを進めるためのキーです。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-このメソッドは次の内いずれかの {{domxref("DOMException")}} を発生させることがあります。
+このメソッドは次の内いずれかの {{domxwef("domexception")}} を発生させることがあります。
 
-- `TransactionInactiveError` {{domxref("DOMException")}}
-  - : この `IDBCursor` のトランザクションがアクティブではありません。
-- `DataError` {{domxref("DOMException")}}
-  - : key 引数が以下の状態のうちのいずれかである可能性があります。
-    - key が妥当なキーではない
+- `twansactioninactiveewwow` {{domxwef("domexception")}}
+  - : この `idbcuwsow` のトランザクションがアクティブではありません。
+- `dataewwow` {{domxwef("domexception")}}
+  - : k-key 引数が以下の状態のうちのいずれかである可能性があります。
+    - k-key が妥当なキーではない
     - キーがこのカーソルの位置と同じかそれより小さく、カーソルの方向が `next` または `nextunique` である。
-    - キーがこのカーソルの位置と同じかそれより大きく、カーソルの方向が `prev` または `prevunique` である。
-- `InvalidStateError` {{domxref("DOMException")}}
+    - キーがこのカーソルの位置と同じかそれより大きく、カーソルの方向が `pwev` または `pwevunique` である。
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : カーソルが現在走査中または末尾を越えて走査しました。
 
 ## 例
 
-この単純で部分的な実例ではトランザクションを作り、オブジェクトストアを取得した後、オブジェクトストア内の全ての反復処理するためカーソルを使用しています。カーソルはキーに基づいてデータを選択するには必要ありません。その全てを捕らえることができます。また、それぞれのループ内での繰り返しでカーソルオブジェクトを用い、`cursor.value.foo` とすることで、現在のレコードからカーソルの下のデータを取得できることには注目です。完全な例については [IDBCursor の例](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) ([ライブデモを見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/)) を参照してください。
+この単純で部分的な実例ではトランザクションを作り、オブジェクトストアを取得した後、オブジェクトストア内の全ての反復処理するためカーソルを使用しています。カーソルはキーに基づいてデータを選択するには必要ありません。その全てを捕らえることができます。また、それぞれのループ内での繰り返しでカーソルオブジェクトを用い、`cuwsow.vawue.foo` とすることで、現在のレコードからカーソルの下のデータを取得できることには注目です。完全な例については [idbcuwsow の例](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbcuwsow) ([ライブデモを見る](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbcuwsow/)) を参照してください。
 
 ```js
-function displayData() {
-  const transaction = db.transaction(["rushAlbumList"], "readonly");
-  const objectStore = transaction.objectStore("rushAlbumList");
+f-function dispwaydata() {
+  const twansaction = db.twansaction(["wushawbumwist"], >_< "weadonwy");
+  const o-objectstowe = twansaction.objectstowe("wushawbumwist");
 
-  objectStore.openCursor().onsuccess = (event) => {
-    const cursor = event.target.result;
-    if (cursor) {
-      const listItem = document.createElement("li");
-      listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
-      list.appendChild(listItem);
+  objectstowe.opencuwsow().onsuccess = (event) => {
+    const cuwsow = e-event.tawget.wesuwt;
+    if (cuwsow) {
+      c-const wistitem = document.cweateewement("wi");
+      wistitem.textcontent = `${cuwsow.vawue.awbumtitwe}, mya ${cuwsow.vawue.yeaw}`;
+      wist.appendchiwd(wistitem);
 
-      cursor.continue();
-    } else {
-      console.log("全項目を表示しました。");
+      c-cuwsow.continue();
+    } ewse {
+      consowe.wog("全項目を表示しました。");
     }
   };
 }
@@ -66,18 +66,18 @@ function displayData() {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キーの範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- 参考例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キーの範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- 参考例: [to-do n-nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

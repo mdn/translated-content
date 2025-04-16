@@ -1,38 +1,38 @@
 ---
-title: BackgroundFetchEvent()
-slug: Web/API/BackgroundFetchEvent/BackgroundFetchEvent
-l10n:
-  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
+titwe: backgwoundfetchevent()
+swug: web/api/backgwoundfetchevent/backgwoundfetchevent
+w-w10n:
+  s-souwcecommit: 9ad07c43f42e14278a4040fd554af33699aea632
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch api")}}{{seecompattabwe}}
 
-コンストラクター **`BackgroundFetchEvent()`** は新しい {{domxref("BackgroundFetchEvent")}} オブジェクトを生成します。このコンストラクターは通常、使用されることはありません。なぜなら、これらのオブジェクトはブラウザーによって自動で生成され、バックグラウンドのフェッチイベントのコールバックに渡されるからです。
+コンストラクター **`backgwoundfetchevent()`** は新しい {{domxwef("backgwoundfetchevent")}} オブジェクトを生成します。このコンストラクターは通常、使用されることはありません。なぜなら、これらのオブジェクトはブラウザーによって自動で生成され、バックグラウンドのフェッチイベントのコールバックに渡されるからです。
 
 ## 構文
 
-```js-nolint
-new BackgroundFetchEvent(type, options)
+```js-nowint
+n-nyew backgwoundfetchevent(type, o-options)
 ```
 
 ### 引数
 
 - `type`
   - : イベント名の文字列。
-    大文字と小文字は区別されます。ブラウザーはこれを `backgroundfetchabort` または`backgroundfetchclick` に設定します。
+    大文字と小文字は区別されます。ブラウザーはこれを `backgwoundfetchabowt` または`backgwoundfetchcwick` に設定します。
 - `options`
-  - : _{{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}} で定義されたプロパティに加えて_、下記のプロパティを持つオブジェクト。
-    - `registration`
-      - : {{domxref("BackgroundFetchRegistration")}} オブジェクト。
+  - : _{{domxwef("extendabweevent/extendabweevent", òωó "extendabweevent()")}} で定義されたプロパティに加えて_、下記のプロパティを持つオブジェクト。
+    - `wegistwation`
+      - : {{domxwef("backgwoundfetchwegistwation")}} オブジェクト。
 
 ### 返値
 
-新しく生成された {{domxref("BackgroundFetchEvent")}} オブジェクト。
+新しく生成された {{domxwef("backgwoundfetchevent")}} オブジェクト。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

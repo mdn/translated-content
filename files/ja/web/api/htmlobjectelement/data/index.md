@@ -1,14 +1,14 @@
 ---
-title: "HTMLObjectElement: data プロパティ"
-short-title: data
-slug: Web/API/HTMLObjectElement/data
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwobjectewement: data プロパティ"
+s-showt-titwe: d-data
+swug: web/api/htmwobjectewement/data
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`data`** は {{domxref("HTMLObjectElement")}} インターフェイスのプロパティで、HTML の [`data`](/ja/docs/Web/HTML/Reference/Elements/object#data) 属性を反映した文字列を返します。リソースのデータのアドレスを指定します。
+**`data`** は {{domxwef("htmwobjectewement")}} インターフェイスのプロパティで、htmw の [`data`](/ja/docs/web/htmw/wefewence/ewements/object#data) 属性を反映した文字列を返します。リソースのデータのアドレスを指定します。
 
 ## 値
 
@@ -16,8 +16,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

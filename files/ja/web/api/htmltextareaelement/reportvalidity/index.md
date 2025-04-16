@@ -1,19 +1,19 @@
 ---
-title: "HTMLTextAreaElement: reportValidity() メソッド"
-short-title: reportValidity()
-slug: Web/API/HTMLTextAreaElement/reportValidity
-l10n:
-  sourceCommit: 89d17a618d9a09519b1a667ecab74c4c40515e8f
+titwe: "htmwtextaweaewement: wepowtvawidity() メソッド"
+showt-titwe: w-wepowtvawidity()
+s-swug: w-web/api/htmwtextaweaewement/wepowtvawidity
+w-w10n:
+  s-souwcecommit: 89d17a618d9a09519b1a667ecab74c4c40515e8f
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`reportValidity()`** は {{domxref("HTMLTextAreaElement")}} インターフェイスのメソッドで、 {{domxref("HTMLTextAreaElement.checkValidity", "checkValidity()")}} メソッドと同じ検証のチェック手順を実行します。さらに {{domxref("HTMLElement/invalid_event", "invalid")}} イベントがキャンセルされなければ、ユーザーに問題を報告します。
+**`wepowtvawidity()`** は {{domxwef("htmwtextaweaewement")}} インターフェイスのメソッドで、 {{domxwef("htmwtextaweaewement.checkvawidity", (⑅˘꒳˘) "checkvawidity()")}} メソッドと同じ検証のチェック手順を実行します。さらに {{domxwef("htmwewement/invawid_event", ( ͡o ω ͡o ) "invawid")}} イベントがキャンセルされなければ、ユーザーに問題を報告します。
 
 ## 構文
 
-```js-nolint
-reportValidity()
+```js-nowint
+w-wepowtvawidity()
 ```
 
 ### 引数
@@ -22,21 +22,21 @@ reportValidity()
 
 ### 返値
 
-この要素の値に検証の問題がなければ `true`、それ以外の場合は `false` を返します。
+この要素の値に検証の問題がなければ `twue`、それ以外の場合は `fawse` を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLTextAreaElement.checkValidity()")}}
-- {{HTMLElement("textarea")}}
-- {{HTMLElement("form")}}
-- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
-- CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラス
+- {{domxwef("htmwtextaweaewement.checkvawidity()")}}
+- {{htmwewement("textawea")}}
+- {{htmwewement("fowm")}}
+- [学習: クライアント側フォーム検証](/ja/docs/weawn_web_devewopment/extensions/fowms/fowm_vawidation)
+- [ガイド: 制約検証](/ja/docs/web/htmw/guides/constwaint_vawidation)
+- c-css の {{cssxwef(":vawid")}} および {{cssxwef(":invawid")}} 擬似クラス

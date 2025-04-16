@@ -1,13 +1,13 @@
 ---
-title: "HTMLTextAreaElement: name プロパティ"
-slug: Web/API/HTMLTextAreaElement/name
-l10n:
-  sourceCommit: d064784c78ec30c87ec3c3d9681b147999fd782f
+titwe: "htmwtextaweaewement: nyame プロパティ"
+s-swug: web/api/htmwtextaweaewement/name
+w-w10n:
+  s-souwcecommit: d-d064784c78ec30c87ec3c3d9681b147999fd782f
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLTextAreaElement")}} インターフェイスの **`name`** プロパティは、{{HTMLElement("textarea")}} 要素の名前を表します。要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/textarea#name) 属性を反映します。
+{{domxwef("htmwtextaweaewement")}} インターフェイスの **`name`** プロパティは、{{htmwewement("textawea")}} 要素の名前を表します。要素の [`name`](/ja/docs/web/htmw/wefewence/ewements/textawea#name) 属性を反映します。
 
 ## 値
 
@@ -16,20 +16,20 @@ l10n:
 ## 例
 
 ```js
-const textareaElement = document.querySelector("#message");
-console.log(`Element's name: ${textareaElement.name}`);
-textareaElement.name = "response"; // 要素の名前を設定または更新する
+c-const t-textaweaewement = d-document.quewysewectow("#message");
+consowe.wog(`ewement's nyame: ${textaweaewement.name}`);
+textaweaewement.name = "wesponse"; // 要素の名前を設定または更新する
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLTextAreaElement.value")}}
-- {{domxref("HTMLTextAreaElement.textLength")}}
+- {{domxwef("htmwtextaweaewement.vawue")}}
+- {{domxwef("htmwtextaweaewement.textwength")}}

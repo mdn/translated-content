@@ -1,47 +1,47 @@
 ---
-title: window.matchMedia
-slug: Web/API/Window/matchMedia
+titwe: window.matchmedia
+swug: w-web/api/window/matchmedia
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
 ## 概要
 
-指定された [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)文字列のパース結果を表す、新しい {{domxref("MediaQueryList")}} オブジェクトを返します。
+指定された [メディアクエリー](/ja/docs/web/css/css_media_quewies/using_media_quewies)文字列のパース結果を表す、新しい {{domxwef("mediaquewywist")}} オブジェクトを返します。
 
 ## 構文
 
 ```
-mql = window.matchMedia(mediaQueryString)
+m-mqw = w-window.matchmedia(mediaquewystwing)
 ```
 
-`mediaQueryString` は、新しい {{domxref("MediaQueryList")}} オブジェクトを返すための、メディアクエリー文字列です。
+`mediaquewystwing` は、新しい {{domxwef("mediaquewywist")}} オブジェクトを返すための、メディアクエリー文字列です。
 
 ## 例
 
 ```js
-if (window.matchMedia("(min-width: 400px)").matches) {
+if (window.matchmedia("(min-width: 400px)").matches) {
   /* ビューポートの幅が 400 ピクセル以上の場合のコードをここに */
-} else {
+} e-ewse {
   /* ビューポートの幅は 400 ピクセル未満の場合のコードをここに */
 }
 ```
 
 このコードでは、ウィンドウが非常に狭いときに、何か別の処理を行うことができます。
 
-他にも『[コード内でのメディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)』にいくつか例があります。
+他にも『[コード内でのメディアクエリーの使用](/ja/docs/web/css/css_media_quewies/testing_media_quewies)』にいくつか例があります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連記事
 
-- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [コード内でのメディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-- {{domxref("MediaQueryList")}}
-- {{domxref("MediaQueryListListener")}}
+- [メディアクエリー](/ja/docs/web/css/css_media_quewies/using_media_quewies)
+- [コード内でのメディアクエリーの使用](/ja/docs/web/css/css_media_quewies/testing_media_quewies)
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("mediaquewywistwistenew")}}

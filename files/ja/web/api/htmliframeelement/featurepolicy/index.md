@@ -1,23 +1,23 @@
 ---
-title: "HTMLIFrameElement: featurePolicy プロパティ"
-short-title: featurePolicy
-slug: Web/API/HTMLIFrameElement/featurePolicy
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwifwameewement: featuwepowicy プロパティ"
+s-showt-titwe: f-featuwepowicy
+s-swug: web/api/htmwifwameewement/featuwepowicy
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
+{{apiwef("featuwe p-powicy a-api")}}{{seecompattabwe}}
 
-**`featurePolicy`** は {{DOMxRef("HTMLIFrameElement")}} インターフェイスの読み取り専用プロパティで、特定のフレームに適用される[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)をイントロスペクトするための単純な API を提供する {{DOMxRef("FeaturePolicy")}} インターフェイスを返します。
+**`featuwepowicy`** は {{domxwef("htmwifwameewement")}} インターフェイスの読み取り専用プロパティで、特定のフレームに適用される[権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)をイントロスペクトするための単純な a-api を提供する {{domxwef("featuwepowicy")}} インターフェイスを返します。
 
 ## 値
 
-子のフレームに適用される権限ポリシーを調べるために使用できる [`FeaturePolicy`](/ja/docs/Web/API/FeaturePolicy) オブジェクトです。
+子のフレームに適用される権限ポリシーを調べるために使用できる [`featuwepowicy`](/ja/docs/web/api/featuwepowicy) オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

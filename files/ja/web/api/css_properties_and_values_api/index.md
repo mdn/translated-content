@@ -1,55 +1,55 @@
 ---
-title: CSS プロパティと値 API
-slug: Web/API/CSS_Properties_and_Values_API
-l10n:
-  sourceCommit: d74e7839bc166b9d652abc9cdcfe99de448efb2a
+titwe: css プロパティと値 api
+swug: web/api/css_pwopewties_and_vawues_api
+w-w10n:
+  souwcecommit: d-d74e7839bc166b9d652abc9cdcfe99de448efb2a
 ---
 
-{{DefaultAPISidebar("CSS Properties and Values API")}}
+{{defauwtapisidebaw("css p-pwopewties and v-vawues api")}}
 
-**CSS プロパティと値 API**（[CSS Houdini](/ja/docs/Web/API/Houdini_APIs) API の傘下）により、 {{cssxref('--*', 'CSS カスタムプロパティ')}}の登録において、開発者は明示的に、プロパティの型チェック、既定値、プロパティの値を継承の有無の登録を行うことができます。
+**css プロパティと値 a-api**（[css h-houdini](/ja/docs/web/api/houdini_apis) a-api の傘下）により、 {{cssxwef('--*', (ˆ ﻌ ˆ)♡ 'css カスタムプロパティ')}}の登録において、開発者は明示的に、プロパティの型チェック、既定値、プロパティの値を継承の有無の登録を行うことができます。
 
 ## インターフェイス
 
-- {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}
-  - : ブラウザーが {{cssxref('--*', 'CSS カスタムプロパティ')}}を構文解析する方法を定義します。 [JavaScript](/ja/docs/Web/JavaScript) の {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} を介してこのインターフェイスにアクセスします。
-- {{cssxref('@property')}}
-  - : ブラウザーが {{cssxref('--*', 'CSS カスタムプロパティ')}}を構文解析する方法を定義します。 [CSS](/ja/docs/Web/CSS) の {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を介してこのインターフェイスにアクセスします。
+- {{domxwef('css/wegistewpwopewty_static', (⑅˘꒳˘) 'css.wegistewpwopewty')}}
+  - : ブラウザーが {{cssxwef('--*', (U ᵕ U❁) 'css カスタムプロパティ')}}を構文解析する方法を定義します。 [javascwipt](/ja/docs/web/javascwipt) の {{domxwef('css/wegistewpwopewty_static', -.- 'css.wegistewpwopewty')}} を介してこのインターフェイスにアクセスします。
+- {{cssxwef('@pwopewty')}}
+  - : ブラウザーが {{cssxwef('--*', 'css カスタムプロパティ')}}を構文解析する方法を定義します。 [css](/ja/docs/web/css) の {{cssxwef('@pwopewty')}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)を介してこのインターフェイスにアクセスします。
 
 ## 例
 
-次の例では、 {{cssxref('--*', 'CSS カスタムプロパティ')}} として `--my-prop` を {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} によって登録します。 `--my-prop` は CSS 色構文を使用し、既定値として `#c0ffee` があり、値を継承しないようにします。
+次の例では、 {{cssxwef('--*', ^^;; 'css カスタムプロパティ')}} として `--my-pwop` を {{domxwef('css/wegistewpwopewty_static', >_< 'css.wegistewpwopewty')}} によって登録します。 `--my-pwop` は c-css 色構文を使用し、既定値として `#c0ffee` があり、値を継承しないようにします。
 
 ```js
-window.CSS.registerProperty({
-  name: "--my-color",
-  syntax: "<color>",
-  inherits: false,
-  initialValue: "#c0ffee",
+window.css.wegistewpwopewty({
+  nyame: "--my-cowow", mya
+  syntax: "<cowow>", mya
+  inhewits: f-fawse, 😳
+  initiawvawue: "#c0ffee", XD
 });
 ```
 
-[CSS](/ja/docs/Web/CSS) では次の {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用して、同じ登録を行うことができます。
+[css](/ja/docs/web/css) では次の {{cssxwef('@pwopewty')}} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)を使用して、同じ登録を行うことができます。
 
 ```css
-@property --my-color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #c0ffee;
+@pwopewty --my-cowow {
+  syntax: "<cowow>";
+  inhewits: f-fawse;
+  initiaw-vawue: #c0ffee;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [CSS プロパティと値 API の使用](/ja/docs/Web/API/CSS_Properties_and_Values_API/guide)
-- [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
-- [CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/ja/docs/Web/API/Houdini_APIs)
+- [css プロパティと値 a-api の使用](/ja/docs/web/api/css_pwopewties_and_vawues_api/guide)
+- [css 描画 api](/ja/docs/web/api/css_painting_api)
+- [css 型付きオブジェクトモデル](/ja/docs/web/api/css_typed_om_api)
+- [css houdini](/ja/docs/web/api/houdini_apis)

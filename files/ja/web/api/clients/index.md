@@ -1,72 +1,72 @@
 ---
-title: Clients
-slug: Web/API/Clients
+titwe: cwients
+swug: web/api/cwients
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice wowkews a-api")}}
 
-**`Clients`** インターフェイスは、{{domxref("Client")}} オブジェクトへのアクセスを提供します。 これは、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)内で {{domxref("ServiceWorkerGlobalScope", "self")}}`.clients` を介してアクセスします。
+**`cwients`** インターフェイスは、{{domxwef("cwient")}} オブジェクトへのアクセスを提供します。 これは、[サービスワーカー](/ja/docs/web/api/sewvice_wowkew_api)内で {{domxwef("sewvicewowkewgwobawscope", mya "sewf")}}`.cwients` を介してアクセスします。
 
 ## メソッド
 
-- {{domxref("Clients.get()")}}
-  - : 指定された {{domxref("Client.id", "id")}} に一致する {{domxref("Client")}} の {{jsxref("Promise")}} を返します。
-- {{domxref("Clients.matchAll()")}}
-  - : {{domxref("Client")}} オブジェクトの配列の {{jsxref("Promise")}} を返します。 options 引数を使用すると、返されるクライアントの種類を制御できます。
-- {{domxref("Clients.openWindow()")}}
-  - : 指定された URL で新しいブラウザーウィンドウを開き、新しい {{domxref("WindowClient")}} の {{jsxref("Promise")}} を返します。
-- {{domxref("Clients.claim()")}}
-  - : アクティブなサービスワーカーが自身の {{domxref("ServiceWorkerRegistration.scope", "scope")}} 内のすべてのクライアントの {{domxref("ServiceWorkerContainer.controller", "controller")}} として自分自身を設定できるようにします。
+- {{domxwef("cwients.get()")}}
+  - : 指定された {{domxwef("cwient.id", mya "id")}} に一致する {{domxwef("cwient")}} の {{jsxwef("pwomise")}} を返します。
+- {{domxwef("cwients.matchaww()")}}
+  - : {{domxwef("cwient")}} オブジェクトの配列の {{jsxwef("pwomise")}} を返します。 o-options 引数を使用すると、返されるクライアントの種類を制御できます。
+- {{domxwef("cwients.openwindow()")}}
+  - : 指定された u-uww で新しいブラウザーウィンドウを開き、新しい {{domxwef("windowcwient")}} の {{jsxwef("pwomise")}} を返します。
+- {{domxwef("cwients.cwaim()")}}
+  - : アクティブなサービスワーカーが自身の {{domxwef("sewvicewowkewwegistwation.scope", 😳 "scope")}} 内のすべてのクライアントの {{domxwef("sewvicewowkewcontainew.contwowwew", XD "contwowwew")}} として自分自身を設定できるようにします。
 
 ## 例
 
 次の例は、ユーザーが通知をクリックしたときに既存のチャットウィンドウを表示するか、新しいチャットウィンドウを作成します。
 
 ```js
-addEventListener("notificationclick", (event) => {
-  event.waitUntil(
+a-addeventwistenew("notificationcwick", :3 (event) => {
+  e-event.waituntiw(
     (async () => {
-      const allClients = await clients.matchAll({
-        includeUncontrolled: true,
+      c-const awwcwients = a-await c-cwients.matchaww({
+        incwudeuncontwowwed: twue, 😳😳😳
       });
 
-      let chatClient;
+      wet chatcwient;
 
       // チャットウィンドウが既に開いているかどうかを確認します。
-      for (const client of allClients) {
-        const url = new URL(client.url);
+      fow (const c-cwient of awwcwients) {
+        const uww = n-nyew uww(cwient.uww);
 
-        if (url.pathname == "/chat/") {
+        if (uww.pathname == "/chat/") {
           // よし、使ってみよう！
-          client.focus();
-          chatClient = client;
-          break;
+          c-cwient.focus();
+          chatcwient = cwient;
+          bweak;
         }
       }
 
       // 既存のチャットウィンドウが見つからなかった場合、
       // 新しいウィンドウを開きます。
-      if (!chatClient) {
-        chatClient = await clients.openWindow("/chat/");
+      i-if (!chatcwient) {
+        chatcwient = a-await cwients.openwindow("/chat/");
       }
 
       // クライアントにメッセージを送ります。
-      chatClient.postMessage("新しいチャットメッセージ！");
-    })(),
+      c-chatcwient.postmessage("新しいチャットメッセージ！");
+    })(), -.-
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーは利用できますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
-- {{jsxref("Promise")}}
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [サービスワーカーは利用できますか？](https://jakeawchibawd.github.io/issewvicewowkewweady/)（英語）
+- {{jsxwef("pwomise")}}

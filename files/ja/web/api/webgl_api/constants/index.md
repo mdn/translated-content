@@ -1,972 +1,972 @@
 ---
-title: WebGL の定数
-slug: Web/API/WebGL_API/Constants
+titwe: webgw の定数
+swug: w-web/api/webgw_api/constants
 ---
 
-{{DefaultAPISidebar("WebGL")}}
+{{defauwtapisidebaw("webgw")}}
 
-[WebGL API](/ja/docs/Web/API/WebGL_API) は、関数に渡されるか、または関数から返される様々な定数を提供しています。すべての定数は {{domxref("GLenum")}} 型です。
+[webgw a-api](/ja/docs/web/api/webgw_api) は、関数に渡されるか、または関数から返される様々な定数を提供しています。すべての定数は {{domxwef("gwenum")}} 型です。
 
-標準の WebGL 定数は {{domxref("WebGLRenderingContext")}}, {{domxref("WebGL2RenderingContext")}} オブジェクトに用意されていますが、これは定数を `gl.CONSTANT_NAME` のように利用するためです:
-
-```js
-var canvas = document.getElementById("myCanvas");
-var gl = canvas.getContext("webgl");
-
-gl.getParameter(gl.LINE_WIDTH);
-```
-
-一部の定数については、[WebGL 拡張機能](/ja/docs/Web/API/WebGL_API/Using_Extensions)から提供されることもあります。[リスト](#constants_defined_in_webgl_extensions)が以下に記載されています。
+標準の w-webgw 定数は {{domxwef("webgwwendewingcontext")}}, /(^•ω•^) {{domxwef("webgw2wendewingcontext")}} オブジェクトに用意されていますが、これは定数を `gw.constant_name` のように利用するためです:
 
 ```js
-var debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
-var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
+v-vaw canvas = d-document.getewementbyid("mycanvas");
+v-vaw g-gw = canvas.getcontext("webgw");
+
+g-gw.getpawametew(gw.wine_width);
 ```
 
-[WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial)には、WebGL の入門方法に関してより多くの情報や例、リソースがあります。
+一部の定数については、[webgw 拡張機能](/ja/docs/web/api/webgw_api/using_extensions)から提供されることもあります。[リスト](#constants_defined_in_webgw_extensions)が以下に記載されています。
 
-## Table of contents
+```js
+vaw debuginfo = gw.getextension("webgw_debug_wendewew_info");
+vaw vendow = gw.getpawametew(debuginfo.unmasked_vendow_webgw);
+```
 
-- [Standard WebGL 1 constants](#standard_webgl_1_constants)
-- [Standard WebGL 2 constants](#additional_constants_defined_webgl_2)
-- [WebGL extension constants](#constants_defined_in_webgl_extensions)
+[webgw チュートリアル](/ja/docs/web/api/webgw_api/tutowiaw)には、webgw の入門方法に関してより多くの情報や例、リソースがあります。
 
-## Standard WebGL 1 constants
+## t-tabwe of contents
 
-These constants are defined on the {{domxref("WebGLRenderingContext")}} interface.
+- [standawd webgw 1 constants](#standawd_webgw_1_constants)
+- [standawd w-webgw 2 constants](#additionaw_constants_defined_webgw_2)
+- [webgw extension c-constants](#constants_defined_in_webgw_extensions)
 
-### Clearing buffers
+## standawd webgw 1 constants
 
-Constants passed to {{domxref("WebGLRenderingContext.clear()")}} to clear buffer masks.
+these constants a-awe defined on the {{domxwef("webgwwendewingcontext")}} i-intewface.
 
-| Constant name        | Value      | Description                                            |
+### c-cweawing buffews
+
+constants passed to {{domxwef("webgwwendewingcontext.cweaw()")}} to cweaw buffew masks. -.-
+
+| c-constant nyame        | vawue      | descwiption                                            |
 | -------------------- | ---------- | ------------------------------------------------------ |
-| `DEPTH_BUFFER_BIT`   | 0x00000100 | Passed to `clear` to clear the current depth buffer.   |
-| `STENCIL_BUFFER_BIT` | 0x00000400 | Passed to `clear` to clear the current stencil buffer. |
-| `COLOR_BUFFER_BIT`   | 0x00004000 | Passed to `clear` to clear the current color buffer.   |
+| `depth_buffew_bit`   | 0x00000100 | passed to `cweaw` to c-cweaw the cuwwent depth buffew.   |
+| `stenciw_buffew_bit` | 0x00000400 | p-passed t-to `cweaw` to cweaw t-the cuwwent s-stenciw buffew. (ˆ ﻌ ˆ)♡ |
+| `cowow_buffew_bit`   | 0x00004000 | passed to `cweaw` to cweaw t-the cuwwent cowow buffew. nyaa~~   |
 
-### Rendering primitives
+### wendewing p-pwimitives
 
-Constants passed to {{domxref("WebGLRenderingContext.drawElements()")}} or {{domxref("WebGLRenderingContext.drawArrays()")}} to specify what kind of primitive to render.
+constants passed to {{domxwef("webgwwendewingcontext.dwawewements()")}} ow {{domxwef("webgwwendewingcontext.dwawawways()")}} to specify nyani kind of pwimitive to w-wendew. ʘwʘ
 
-| Constant name    | Value  | Description                                                                                                                                            |
+| constant nyame    | vawue  | d-descwiption                                                                                                                                            |
 | ---------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `POINTS`         | 0x0000 | Passed to `drawElements` or `drawArrays` to draw single points.                                                                                        |
-| `LINES`          | 0x0001 | Passed to `drawElements` or `drawArrays` to draw lines. Each vertex connects to the one after it.                                                      |
-| `LINE_LOOP`      | 0x0002 | Passed to `drawElements` or `drawArrays` to draw lines. Each set of two vertices is treated as a separate line segment.                                |
-| `LINE_STRIP`     | 0x0003 | Passed to `drawElements` or `drawArrays` to draw a connected group of line segments from the first vertex to the last.                                 |
-| `TRIANGLES`      | 0x0004 | Passed to `drawElements` or `drawArrays` to draw triangles. Each set of three vertices creates a separate triangle.                                    |
-| `TRIANGLE_STRIP` | 0x0005 | Passed to `drawElements` or `drawArrays` to draw a connected group of triangles.                                                                       |
-| `TRIANGLE_FAN`   | 0x0006 | Passed to `drawElements` or `drawArrays` to draw a connected group of triangles. Each vertex connects to the previous and the first vertex in the fan. |
+| `points`         | 0x0000 | p-passed to `dwawewements` ow `dwawawways` to d-dwaw singwe points. :3                                                                                        |
+| `wines`          | 0x0001 | passed to `dwawewements` ow `dwawawways` t-to dwaw wines. (U ᵕ U❁) e-each vewtex connects to the o-one aftew it. (U ﹏ U)                                                      |
+| `wine_woop`      | 0x0002 | p-passed to `dwawewements` ow `dwawawways` t-to dwaw wines. ^^ each s-set of two vewtices is tweated as a sepawate wine s-segment. òωó                                |
+| `wine_stwip`     | 0x0003 | passed t-to `dwawewements` ow `dwawawways` t-to dwaw a connected g-gwoup of wine segments fwom the fiwst vewtex to the wast. /(^•ω•^)                                 |
+| `twiangwes`      | 0x0004 | passed to `dwawewements` ow `dwawawways` to dwaw t-twiangwes. 😳😳😳 each s-set of thwee vewtices cweates a-a sepawate twiangwe. :3                                    |
+| `twiangwe_stwip` | 0x0005 | p-passed t-to `dwawewements` ow `dwawawways` to dwaw a connected gwoup of twiangwes. (///ˬ///✿)                                                                       |
+| `twiangwe_fan`   | 0x0006 | p-passed to `dwawewements` ow `dwawawways` to dwaw a connected gwoup of twiangwes. rawr x3 e-each vewtex connects to the pwevious a-and the fiwst v-vewtex in the f-fan. (U ᵕ U❁) |
 
-### Blending modes
+### bwending modes
 
-Constants passed to {{domxref("WebGLRenderingContext.blendFunc()")}} or {{domxref("WebGLRenderingContext.blendFuncSeparate()")}} to specify the blending mode (for both, RBG and alpha, or separately).
+constants p-passed to {{domxwef("webgwwendewingcontext.bwendfunc()")}} o-ow {{domxwef("webgwwendewingcontext.bwendfuncsepawate()")}} to s-specify the bwending m-mode (fow both, (⑅˘꒳˘) wbg and awpha, (˘ω˘) ow sepawatewy). :3
 
-| Constant name              | Value  | Description                                                                                                                                 |
+| c-constant n-name              | v-vawue  | descwiption                                                                                                                                 |
 | -------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ZERO`                     | 0      | Passed to `blendFunc` or `blendFuncSeparate` to turn off a component.                                                                       |
-| `ONE`                      | 1      | Passed to `blendFunc` or `blendFuncSeparate` to turn on a component.                                                                        |
-| `SRC_COLOR`                | 0x0300 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by the source elements color.                                          |
-| `ONE_MINUS_SRC_COLOR`      | 0x0301 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by one minus the source elements color.                                |
-| `SRC_ALPHA`                | 0x0302 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by the source's alpha.                                                 |
-| `ONE_MINUS_SRC_ALPHA`      | 0x0303 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by one minus the source's alpha.                                       |
-| `DST_ALPHA`                | 0x0304 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by the destination's alpha.                                            |
-| `ONE_MINUS_DST_ALPHA`      | 0x0305 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by one minus the destination's alpha.                                  |
-| `DST_COLOR`                | 0x0306 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by the destination's color.                                            |
-| `ONE_MINUS_DST_COLOR`      | 0x0307 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by one minus the destination's color.                                  |
-| `SRC_ALPHA_SATURATE`       | 0x0308 | Passed to `blendFunc` or `blendFuncSeparate` to multiply a component by the minimum of source's alpha or one minus the destination's alpha. |
-| `CONSTANT_COLOR`           | 0x8001 | Passed to `blendFunc` or `blendFuncSeparate` to specify a constant color blend function.                                                    |
-| `ONE_MINUS_CONSTANT_COLOR` | 0x8002 | Passed to `blendFunc` or `blendFuncSeparate` to specify one minus a constant color blend function.                                          |
-| `CONSTANT_ALPHA`           | 0x8003 | Passed to `blendFunc` or `blendFuncSeparate` to specify a constant alpha blend function.                                                    |
-| `ONE_MINUS_CONSTANT_ALPHA` | 0x8004 | Passed to `blendFunc` or `blendFuncSeparate` to specify one minus a constant alpha blend function.                                          |
+| `zewo`                     | 0      | p-passed t-to `bwendfunc` ow `bwendfuncsepawate` to tuwn off a component. XD                                                                       |
+| `one`                      | 1      | p-passed to `bwendfunc` ow `bwendfuncsepawate` to tuwn on a component. >_<                                                                        |
+| `swc_cowow`                | 0x0300 | passed to `bwendfunc` ow `bwendfuncsepawate` t-to muwtipwy a component by the souwce ewements cowow. (✿oωo)                                          |
+| `one_minus_swc_cowow`      | 0x0301 | p-passed t-to `bwendfunc` o-ow `bwendfuncsepawate` to muwtipwy a-a component by one minus the s-souwce ewements c-cowow. (ꈍᴗꈍ)                                |
+| `swc_awpha`                | 0x0302 | passed to `bwendfunc` ow `bwendfuncsepawate` to muwtipwy a component by the souwce's awpha. XD                                                 |
+| `one_minus_swc_awpha`      | 0x0303 | p-passed to `bwendfunc` ow `bwendfuncsepawate` t-to muwtipwy a component by o-one minus the souwce's a-awpha. :3                                       |
+| `dst_awpha`                | 0x0304 | passed to `bwendfunc` ow `bwendfuncsepawate` t-to muwtipwy a-a component by the destination's a-awpha. mya                                            |
+| `one_minus_dst_awpha`      | 0x0305 | p-passed to `bwendfunc` ow `bwendfuncsepawate` to muwtipwy a component by one minus the destination's a-awpha.                                  |
+| `dst_cowow`                | 0x0306 | p-passed t-to `bwendfunc` ow `bwendfuncsepawate` t-to muwtipwy a-a component by the destination's c-cowow. òωó                                            |
+| `one_minus_dst_cowow`      | 0x0307 | passed to `bwendfunc` ow `bwendfuncsepawate` to muwtipwy a component b-by one minus t-the destination's cowow. nyaa~~                                  |
+| `swc_awpha_satuwate`       | 0x0308 | passed to `bwendfunc` o-ow `bwendfuncsepawate` t-to muwtipwy a component by the minimum of souwce's awpha ow o-one minus the destination's awpha. 🥺 |
+| `constant_cowow`           | 0x8001 | passed to `bwendfunc` ow `bwendfuncsepawate` t-to specify a constant cowow bwend function. -.-                                                    |
+| `one_minus_constant_cowow` | 0x8002 | p-passed to `bwendfunc` o-ow `bwendfuncsepawate` to specify one minus a constant cowow bwend function.                                          |
+| `constant_awpha`           | 0x8003 | p-passed t-to `bwendfunc` ow `bwendfuncsepawate` to specify a constant awpha bwend function.                                                    |
+| `one_minus_constant_awpha` | 0x8004 | passed t-to `bwendfunc` ow `bwendfuncsepawate` t-to specify one minus a constant awpha bwend function. 🥺                                          |
 
-### Blending equations
+### b-bwending equations
 
-Constants passed to {{domxref("WebGLRenderingContext.blendEquation()")}} or {{domxref("WebGLRenderingContext.blendEquationSeparate()")}} to control how the blending is calculated (for both, RBG and alpha, or separately).
+constants p-passed to {{domxwef("webgwwendewingcontext.bwendequation()")}} ow {{domxwef("webgwwendewingcontext.bwendequationsepawate()")}} to c-contwow how the bwending is cawcuwated (fow b-both, (˘ω˘) wbg and awpha, òωó o-ow sepawatewy). UwU
 
-| Constant name           | Value  | Description                                                                                                                  |
+| c-constant nyame           | v-vawue  | descwiption                                                                                                                  |
 | ----------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| `FUNC_ADD`              | 0x8006 | Passed to `blendEquation` or `blendEquationSeparate` to set an addition blend function.                                      |
-| `FUNC_SUBTRACT`         | 0x800A | Passed to `blendEquation` or `blendEquationSeparate` to specify a subtraction blend function (source - destination).         |
-| `FUNC_REVERSE_SUBTRACT` | 0x800B | Passed to `blendEquation` or `blendEquationSeparate` to specify a reverse subtraction blend function (destination - source). |
+| `func_add`              | 0x8006 | passed to `bwendequation` o-ow `bwendequationsepawate` t-to set an addition bwend function. ^•ﻌ•^                                      |
+| `func_subtwact`         | 0x800a | p-passed to `bwendequation` o-ow `bwendequationsepawate` t-to specify a subtwaction bwend function (souwce - d-destination). mya         |
+| `func_wevewse_subtwact` | 0x800b | passed t-to `bwendequation` o-ow `bwendequationsepawate` to specify a wevewse subtwaction bwend function (destination - s-souwce). (✿oωo) |
 
-### Getting GL parameter information
+### g-getting g-gw pawametew i-infowmation
 
-Constants passed to {{domxref("WebGLRenderingContext.getParameter()")}} to specify what information to return.
+constants passed t-to {{domxwef("webgwwendewingcontext.getpawametew()")}} to specify nani infowmation to wetuwn. XD
 
-| Constant name                      | Value  | Description                                                                                                                                                                                  |
+| constant nyame                      | vawue  | d-descwiption                                                                                                                                                                                  |
 | ---------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `BLEND_EQUATION`                   | 0x8009 | Passed to `getParameter` to get the current RGB blend function.                                                                                                                              |
-| `BLEND_EQUATION_RGB`               | 0x8009 | Passed to `getParameter` to get the current RGB blend function. Same as BLEND_EQUATION                                                                                                       |
-| `BLEND_EQUATION_ALPHA`             | 0x883D | Passed to `getParameter` to get the current alpha blend function. Same as BLEND_EQUATION                                                                                                     |
-| `BLEND_DST_RGB`                    | 0x80C8 | Passed to `getParameter` to get the current destination RGB blend function.                                                                                                                  |
-| `BLEND_SRC_RGB`                    | 0x80C9 | Passed to `getParameter` to get the current destination RGB blend function.                                                                                                                  |
-| `BLEND_DST_ALPHA`                  | 0x80CA | Passed to `getParameter` to get the current destination alpha blend function.                                                                                                                |
-| `BLEND_SRC_ALPHA`                  | 0x80CB | Passed to `getParameter` to get the current source alpha blend function.                                                                                                                     |
-| `BLEND_COLOR`                      | 0x8005 | Passed to `getParameter` to return a the current blend color.                                                                                                                                |
-| `ARRAY_BUFFER_BINDING`             | 0x8894 | Passed to `getParameter` to get the array buffer binding.                                                                                                                                    |
-| `ELEMENT_ARRAY_BUFFER_BINDING`     | 0x8895 | Passed to `getParameter` to get the current element array buffer.                                                                                                                            |
-| `LINE_WIDTH`                       | 0x0B21 | Passed to `getParameter` to get the current `lineWidth` (set by the `lineWidth` method).                                                                                                     |
-| `ALIASED_POINT_SIZE_RANGE`         | 0x846D | Passed to `getParameter` to get the current size of a point drawn with `gl.POINTS`                                                                                                           |
-| `ALIASED_LINE_WIDTH_RANGE`         | 0x846E | Passed to `getParameter` to get the range of available widths for a line. Returns a length-2 array with the lo value at 0, and hight at 1.                                                   |
-| `CULL_FACE_MODE`                   | 0x0B45 | Passed to `getParameter` to get the current value of `cullFace`. Should return `FRONT`, `BACK`, or `FRONT_AND_BACK`                                                                          |
-| `FRONT_FACE`                       | 0x0B46 | Passed to `getParameter` to determine the current value of `frontFace`. Should return `CW` or `CCW`.                                                                                         |
-| `DEPTH_RANGE`                      | 0x0B70 | Passed to `getParameter` to return a length-2 array of floats giving the current depth range.                                                                                                |
-| `DEPTH_WRITEMASK`                  | 0x0B72 | Passed to `getParameter` to determine if the depth write mask is enabled.                                                                                                                    |
-| `DEPTH_CLEAR_VALUE`                | 0x0B73 | Passed to `getParameter` to determine the current depth clear value.                                                                                                                         |
-| `DEPTH_FUNC`                       | 0x0B74 | Passed to `getParameter` to get the current depth function. Returns `NEVER`, `ALWAYS`, `LESS`, `EQUAL`, `LEQUAL`, `GREATER`, `GEQUAL`, or `NOTEQUAL`.                                        |
-| `STENCIL_CLEAR_VALUE`              | 0x0B91 | Passed to `getParameter` to get the value the stencil will be cleared to.                                                                                                                    |
-| `STENCIL_FUNC`                     | 0x0B92 | Passed to `getParameter` to get the current stencil function. Returns `NEVER`, `ALWAYS`, `LESS`, `EQUAL`, `LEQUAL`, `GREATER`, `GEQUAL`, or `NOTEQUAL`.                                      |
-| `STENCIL_FAIL`                     | 0x0B94 | Passed to `getParameter` to get the current stencil fail function. Should return `KEEP`, `REPLACE`, `INCR`, `DECR`, `INVERT`, `INCR_WRAP`, or `DECR_WRAP`.                                   |
-| `STENCIL_PASS_DEPTH_FAIL`          | 0x0B95 | Passed to `getParameter` to get the current stencil fail function should the depth buffer test fail. Should return `KEEP`, `REPLACE`, `INCR`, `DECR`, `INVERT`, `INCR_WRAP`, or `DECR_WRAP`. |
-| `STENCIL_PASS_DEPTH_PASS`          | 0x0B96 | Passed to `getParameter` to get the current stencil fail function should the depth buffer test pass. Should return KEEP, REPLACE, INCR, DECR, INVERT, INCR_WRAP, or DECR_WRAP.               |
-| `STENCIL_REF`                      | 0x0B97 | Passed to `getParameter` to get the reference value used for stencil tests.                                                                                                                  |
-| `STENCIL_VALUE_MASK`               | 0x0B93 |                                                                                                                                                                                              |
-| `STENCIL_WRITEMASK`                | 0x0B98 |                                                                                                                                                                                              |
-| `STENCIL_BACK_FUNC`                | 0x8800 |                                                                                                                                                                                              |
-| `STENCIL_BACK_FAIL`                | 0x8801 |                                                                                                                                                                                              |
-| `STENCIL_BACK_PASS_DEPTH_FAIL`     | 0x8802 |                                                                                                                                                                                              |
-| `STENCIL_BACK_PASS_DEPTH_PASS`     | 0x8803 |                                                                                                                                                                                              |
-| `STENCIL_BACK_REF`                 | 0x8CA3 |                                                                                                                                                                                              |
-| `STENCIL_BACK_VALUE_MASK`          | 0x8CA4 |                                                                                                                                                                                              |
-| `STENCIL_BACK_WRITEMASK`           | 0x8CA5 |                                                                                                                                                                                              |
-| `VIEWPORT`                         | 0x0BA2 | Returns an {{jsxref("Int32Array")}} with four elements for the current viewport dimensions.                                                                                                  |
-| `SCISSOR_BOX`                      | 0x0C10 | Returns an {{jsxref("Int32Array")}} with four elements for the current scissor box dimensions.                                                                                               |
-| `COLOR_CLEAR_VALUE`                | 0x0C22 |                                                                                                                                                                                              |
-| `COLOR_WRITEMASK`                  | 0x0C23 |                                                                                                                                                                                              |
-| `UNPACK_ALIGNMENT`                 | 0x0CF5 |                                                                                                                                                                                              |
-| `PACK_ALIGNMENT`                   | 0x0D05 |                                                                                                                                                                                              |
-| `MAX_TEXTURE_SIZE`                 | 0x0D33 |                                                                                                                                                                                              |
-| `MAX_VIEWPORT_DIMS`                | 0x0D3A |                                                                                                                                                                                              |
-| `SUBPIXEL_BITS`                    | 0x0D50 |                                                                                                                                                                                              |
-| `RED_BITS`                         | 0x0D52 |                                                                                                                                                                                              |
-| `GREEN_BITS`                       | 0x0D53 |                                                                                                                                                                                              |
-| `BLUE_BITS`                        | 0x0D54 |                                                                                                                                                                                              |
-| `ALPHA_BITS`                       | 0x0D55 |                                                                                                                                                                                              |
-| `DEPTH_BITS`                       | 0x0D56 |                                                                                                                                                                                              |
-| `STENCIL_BITS`                     | 0x0D57 |                                                                                                                                                                                              |
-| `POLYGON_OFFSET_UNITS`             | 0x2A00 |                                                                                                                                                                                              |
-| `POLYGON_OFFSET_FACTOR`            | 0x8038 |                                                                                                                                                                                              |
-| `TEXTURE_BINDING_2D`               | 0x8069 |                                                                                                                                                                                              |
-| `SAMPLE_BUFFERS`                   | 0x80A8 |                                                                                                                                                                                              |
-| `SAMPLES`                          | 0x80A9 |                                                                                                                                                                                              |
-| `SAMPLE_COVERAGE_VALUE`            | 0x80AA |                                                                                                                                                                                              |
-| `SAMPLE_COVERAGE_INVERT`           | 0x80AB |                                                                                                                                                                                              |
-| `COMPRESSED_TEXTURE_FORMATS`       | 0x86A3 |                                                                                                                                                                                              |
-| `VENDOR`                           | 0x1F00 |                                                                                                                                                                                              |
-| `RENDERER`                         | 0x1F01 |                                                                                                                                                                                              |
-| `VERSION`                          | 0x1F02 |                                                                                                                                                                                              |
-| `IMPLEMENTATION_COLOR_READ_TYPE`   | 0x8B9A |                                                                                                                                                                                              |
-| `IMPLEMENTATION_COLOR_READ_FORMAT` | 0x8B9B |                                                                                                                                                                                              |
-| `BROWSER_DEFAULT_WEBGL`            | 0x9244 |                                                                                                                                                                                              |
+| `bwend_equation`                   | 0x8009 | passed to `getpawametew` t-to get the cuwwent wgb bwend f-function. :3                                                                                                                              |
+| `bwend_equation_wgb`               | 0x8009 | passed t-to `getpawametew` to get the c-cuwwent wgb bwend f-function. (U ﹏ U) same a-as bwend_equation                                                                                                       |
+| `bwend_equation_awpha`             | 0x883d | p-passed t-to `getpawametew` to get the cuwwent awpha bwend function. UwU same as bwend_equation                                                                                                     |
+| `bwend_dst_wgb`                    | 0x80c8 | passed to `getpawametew` t-to get the c-cuwwent destination w-wgb bwend function. ʘwʘ                                                                                                                  |
+| `bwend_swc_wgb`                    | 0x80c9 | passed t-to `getpawametew` to get the cuwwent destination wgb bwend function. >w<                                                                                                                  |
+| `bwend_dst_awpha`                  | 0x80ca | p-passed t-to `getpawametew` to get the cuwwent d-destination awpha bwend function. 😳😳😳                                                                                                                |
+| `bwend_swc_awpha`                  | 0x80cb | passed t-to `getpawametew` t-to get the cuwwent souwce awpha b-bwend function. rawr                                                                                                                     |
+| `bwend_cowow`                      | 0x8005 | p-passed to `getpawametew` to wetuwn a the cuwwent bwend cowow. ^•ﻌ•^                                                                                                                                |
+| `awway_buffew_binding`             | 0x8894 | passed to `getpawametew` to get the awway b-buffew binding. σωσ                                                                                                                                    |
+| `ewement_awway_buffew_binding`     | 0x8895 | p-passed to `getpawametew` to g-get the cuwwent e-ewement awway b-buffew. :3                                                                                                                            |
+| `wine_width`                       | 0x0b21 | passed to `getpawametew` t-to g-get the cuwwent `winewidth` (set by the `winewidth` m-method).                                                                                                     |
+| `awiased_point_size_wange`         | 0x846d | p-passed to `getpawametew` to g-get the cuwwent size of a point dwawn with `gw.points`                                                                                                           |
+| `awiased_wine_width_wange`         | 0x846e | p-passed to `getpawametew` to get t-the wange of a-avaiwabwe widths fow a wine. rawr x3 wetuwns a-a wength-2 awway with the wo vawue at 0, nyaa~~ and h-hight at 1. :3                                                   |
+| `cuww_face_mode`                   | 0x0b45 | p-passed to `getpawametew` t-to get the cuwwent vawue of `cuwwface`. >w< shouwd wetuwn `fwont`, rawr `back`, 😳 o-ow `fwont_and_back`                                                                          |
+| `fwont_face`                       | 0x0b46 | passed to `getpawametew` to detewmine t-the cuwwent v-vawue of `fwontface`. 😳 shouwd w-wetuwn `cw` ow `ccw`. 🥺                                                                                         |
+| `depth_wange`                      | 0x0b70 | passed to `getpawametew` t-to wetuwn a-a wength-2 awway of fwoats giving the cuwwent d-depth wange.                                                                                                |
+| `depth_wwitemask`                  | 0x0b72 | passed to `getpawametew` to detewmine i-if the depth w-wwite mask is enabwed. rawr x3                                                                                                                    |
+| `depth_cweaw_vawue`                | 0x0b73 | p-passed to `getpawametew` t-to detewmine t-the cuwwent d-depth cweaw vawue. ^^                                                                                                                         |
+| `depth_func`                       | 0x0b74 | passed to `getpawametew` to get the cuwwent depth function. ( ͡o ω ͡o ) wetuwns `nevew`, XD `awways`, ^^ `wess`, `equaw`, (⑅˘꒳˘) `wequaw`, `gweatew`, (⑅˘꒳˘) `gequaw`, ^•ﻌ•^ ow `notequaw`. ( ͡o ω ͡o )                                        |
+| `stenciw_cweaw_vawue`              | 0x0b91 | passed to `getpawametew` to get the vawue the stenciw wiww be cweawed to. ( ͡o ω ͡o )                                                                                                                    |
+| `stenciw_func`                     | 0x0b92 | p-passed t-to `getpawametew` to get the cuwwent stenciw function. (✿oωo) w-wetuwns `nevew`, 😳😳😳 `awways`, OwO `wess`, `equaw`, ^^ `wequaw`, rawr x3 `gweatew`, `gequaw`, 🥺 o-ow `notequaw`. (ˆ ﻌ ˆ)♡                                      |
+| `stenciw_faiw`                     | 0x0b94 | p-passed to `getpawametew` t-to get the cuwwent stenciw faiw f-function. ( ͡o ω ͡o ) shouwd w-wetuwn `keep`, >w< `wepwace`, `incw`, /(^•ω•^) `decw`, `invewt`, 😳😳😳 `incw_wwap`, (U ᵕ U❁) ow `decw_wwap`. (˘ω˘)                                   |
+| `stenciw_pass_depth_faiw`          | 0x0b95 | p-passed to `getpawametew` t-to get the cuwwent s-stenciw faiw function shouwd the depth buffew t-test faiw. 😳 shouwd w-wetuwn `keep`, (ꈍᴗꈍ) `wepwace`, :3 `incw`, `decw`, /(^•ω•^) `invewt`, ^^;; `incw_wwap`, o-ow `decw_wwap`. |
+| `stenciw_pass_depth_pass`          | 0x0b96 | p-passed to `getpawametew` t-to get the cuwwent s-stenciw faiw f-function shouwd t-the depth buffew t-test pass. o.O shouwd wetuwn keep, 😳 w-wepwace, UwU incw, d-decw, invewt, >w< incw_wwap, o.O o-ow decw_wwap. (˘ω˘)               |
+| `stenciw_wef`                      | 0x0b97 | passed to `getpawametew` t-to get the wefewence vawue used fow stenciw tests. òωó                                                                                                                  |
+| `stenciw_vawue_mask`               | 0x0b93 |                                                                                                                                                                                              |
+| `stenciw_wwitemask`                | 0x0b98 |                                                                                                                                                                                              |
+| `stenciw_back_func`                | 0x8800 |                                                                                                                                                                                              |
+| `stenciw_back_faiw`                | 0x8801 |                                                                                                                                                                                              |
+| `stenciw_back_pass_depth_faiw`     | 0x8802 |                                                                                                                                                                                              |
+| `stenciw_back_pass_depth_pass`     | 0x8803 |                                                                                                                                                                                              |
+| `stenciw_back_wef`                 | 0x8ca3 |                                                                                                                                                                                              |
+| `stenciw_back_vawue_mask`          | 0x8ca4 |                                                                                                                                                                                              |
+| `stenciw_back_wwitemask`           | 0x8ca5 |                                                                                                                                                                                              |
+| `viewpowt`                         | 0x0ba2 | w-wetuwns an {{jsxwef("int32awway")}} w-with fouw ewements f-fow the cuwwent v-viewpowt dimensions. nyaa~~                                                                                                  |
+| `scissow_box`                      | 0x0c10 | wetuwns a-an {{jsxwef("int32awway")}} with fouw ewements f-fow the cuwwent scissow box dimensions. ( ͡o ω ͡o )                                                                                               |
+| `cowow_cweaw_vawue`                | 0x0c22 |                                                                                                                                                                                              |
+| `cowow_wwitemask`                  | 0x0c23 |                                                                                                                                                                                              |
+| `unpack_awignment`                 | 0x0cf5 |                                                                                                                                                                                              |
+| `pack_awignment`                   | 0x0d05 |                                                                                                                                                                                              |
+| `max_textuwe_size`                 | 0x0d33 |                                                                                                                                                                                              |
+| `max_viewpowt_dims`                | 0x0d3a |                                                                                                                                                                                              |
+| `subpixew_bits`                    | 0x0d50 |                                                                                                                                                                                              |
+| `wed_bits`                         | 0x0d52 |                                                                                                                                                                                              |
+| `gween_bits`                       | 0x0d53 |                                                                                                                                                                                              |
+| `bwue_bits`                        | 0x0d54 |                                                                                                                                                                                              |
+| `awpha_bits`                       | 0x0d55 |                                                                                                                                                                                              |
+| `depth_bits`                       | 0x0d56 |                                                                                                                                                                                              |
+| `stenciw_bits`                     | 0x0d57 |                                                                                                                                                                                              |
+| `powygon_offset_units`             | 0x2a00 |                                                                                                                                                                                              |
+| `powygon_offset_factow`            | 0x8038 |                                                                                                                                                                                              |
+| `textuwe_binding_2d`               | 0x8069 |                                                                                                                                                                                              |
+| `sampwe_buffews`                   | 0x80a8 |                                                                                                                                                                                              |
+| `sampwes`                          | 0x80a9 |                                                                                                                                                                                              |
+| `sampwe_covewage_vawue`            | 0x80aa |                                                                                                                                                                                              |
+| `sampwe_covewage_invewt`           | 0x80ab |                                                                                                                                                                                              |
+| `compwessed_textuwe_fowmats`       | 0x86a3 |                                                                                                                                                                                              |
+| `vendow`                           | 0x1f00 |                                                                                                                                                                                              |
+| `wendewew`                         | 0x1f01 |                                                                                                                                                                                              |
+| `vewsion`                          | 0x1f02 |                                                                                                                                                                                              |
+| `impwementation_cowow_wead_type`   | 0x8b9a |                                                                                                                                                                                              |
+| `impwementation_cowow_wead_fowmat` | 0x8b9b |                                                                                                                                                                                              |
+| `bwowsew_defauwt_webgw`            | 0x9244 |                                                                                                                                                                                              |
 
-### Buffers
+### b-buffews
 
-Constants passed to {{domxref("WebGLRenderingContext.bufferData()")}}, {{domxref("WebGLRenderingContext.bufferSubData()")}}, {{domxref("WebGLRenderingContext.bindBuffer()")}}, or {{domxref("WebGLRenderingContext.getBufferParameter()")}}.
+constants passed to {{domxwef("webgwwendewingcontext.buffewdata()")}}, 😳😳😳 {{domxwef("webgwwendewingcontext.buffewsubdata()")}}, ^•ﻌ•^ {{domxwef("webgwwendewingcontext.bindbuffew()")}}, (˘ω˘) o-ow {{domxwef("webgwwendewingcontext.getbuffewpawametew()")}}. (˘ω˘)
 
-| Constant name          | Value  | Description                                                                                                                 |
+| constant nyame          | vawue  | descwiption                                                                                                                 |
 | ---------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------- |
-| `STATIC_DRAW`          | 0x88E4 | Passed to `bufferData` as a hint about whether the contents of the buffer are likely to be used often and not change often. |
-| `STREAM_DRAW`          | 0x88E0 | Passed to `bufferData` as a hint about whether the contents of the buffer are likely to not be used often.                  |
-| `DYNAMIC_DRAW`         | 0x88E8 | Passed to `bufferData` as a hint about whether the contents of the buffer are likely to be used often and change often.     |
-| `ARRAY_BUFFER`         | 0x8892 | Passed to `bindBuffer` or `bufferData` to specify the type of buffer being used.                                            |
-| `ELEMENT_ARRAY_BUFFER` | 0x8893 | Passed to `bindBuffer` or `bufferData` to specify the type of buffer being used.                                            |
-| `BUFFER_SIZE`          | 0x8764 | Passed to `getBufferParameter` to get a buffer's size.                                                                      |
-| `BUFFER_USAGE`         | 0x8765 | Passed to `getBufferParameter` to get the hint for the buffer passed in when it was created.                                |
+| `static_dwaw`          | 0x88e4 | passed to `buffewdata` a-as a hint about whethew t-the contents o-of the buffew awe wikewy to be used often and nyot change often. -.- |
+| `stweam_dwaw`          | 0x88e0 | p-passed to `buffewdata` a-as a hint about w-whethew the contents o-of the buffew awe wikewy to nyot be used often. ^•ﻌ•^                  |
+| `dynamic_dwaw`         | 0x88e8 | p-passed t-to `buffewdata` as a hint about w-whethew the contents of the buffew awe wikewy t-to be used often and change often. /(^•ω•^)     |
+| `awway_buffew`         | 0x8892 | p-passed t-to `bindbuffew` o-ow `buffewdata` to specify t-the type of buffew b-being used. (///ˬ///✿)                                            |
+| `ewement_awway_buffew` | 0x8893 | p-passed to `bindbuffew` o-ow `buffewdata` to specify t-the type of buffew b-being used. mya                                            |
+| `buffew_size`          | 0x8764 | p-passed to `getbuffewpawametew` t-to get a buffew's s-size. o.O                                                                      |
+| `buffew_usage`         | 0x8765 | p-passed to `getbuffewpawametew` t-to get the hint f-fow the buffew passed in when i-it was cweated. ^•ﻌ•^                                |
 
-### Vertex attributes
+### vewtex attwibutes
 
-Constants passed to {{domxref("WebGLRenderingContext.getVertexAttrib()")}}.
+c-constants passed to {{domxwef("webgwwendewingcontext.getvewtexattwib()")}}. (U ᵕ U❁)
 
-| Constant name                        | Value  | Description                                                            |
+| c-constant n-nyame                        | v-vawue  | descwiption                                                            |
 | ------------------------------------ | ------ | ---------------------------------------------------------------------- |
-| `CURRENT_VERTEX_ATTRIB`              | 0x8626 | Passed to `getVertexAttrib` to read back the current vertex attribute. |
-| `VERTEX_ATTRIB_ARRAY_ENABLED`        | 0x8622 |                                                                        |
-| `VERTEX_ATTRIB_ARRAY_SIZE`           | 0x8623 |                                                                        |
-| `VERTEX_ATTRIB_ARRAY_STRIDE`         | 0x8624 |                                                                        |
-| `VERTEX_ATTRIB_ARRAY_TYPE`           | 0x8625 |                                                                        |
-| `VERTEX_ATTRIB_ARRAY_NORMALIZED`     | 0x886A |                                                                        |
-| `VERTEX_ATTRIB_ARRAY_POINTER`        | 0x8645 |                                                                        |
-| `VERTEX_ATTRIB_ARRAY_BUFFER_BINDING` | 0x889F |                                                                        |
+| `cuwwent_vewtex_attwib`              | 0x8626 | passed to `getvewtexattwib` to wead back the cuwwent v-vewtex attwibute. :3 |
+| `vewtex_attwib_awway_enabwed`        | 0x8622 |                                                                        |
+| `vewtex_attwib_awway_size`           | 0x8623 |                                                                        |
+| `vewtex_attwib_awway_stwide`         | 0x8624 |                                                                        |
+| `vewtex_attwib_awway_type`           | 0x8625 |                                                                        |
+| `vewtex_attwib_awway_nowmawized`     | 0x886a |                                                                        |
+| `vewtex_attwib_awway_pointew`        | 0x8645 |                                                                        |
+| `vewtex_attwib_awway_buffew_binding` | 0x889f |                                                                        |
 
-### Culling
+### c-cuwwing
 
-Constants passed to {{domxref("WebGLRenderingContext.cullFace()")}}.
+c-constants passed to {{domxwef("webgwwendewingcontext.cuwwface()")}}. (///ˬ///✿)
 
-| Constant name    | Value  | Description                                                                                                                   |
+| constant nyame    | v-vawue  | descwiption                                                                                                                   |
 | ---------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| `CULL_FACE`      | 0x0B44 | Passed to `enable`/`disable` to turn on/off culling. Can also be used with `getParameter` to find the current culling method. |
-| `FRONT`          | 0x0404 | Passed to `cullFace` to specify that only front faces should be culled.                                                       |
-| `BACK`           | 0x0405 | Passed to `cullFace` to specify that only back faces should be culled.                                                        |
-| `FRONT_AND_BACK` | 0x0408 | Passed to `cullFace` to specify that front and back faces should be culled.                                                   |
+| `cuww_face`      | 0x0b44 | p-passed to `enabwe`/`disabwe` to tuwn on/off c-cuwwing. (///ˬ///✿) can awso b-be used with `getpawametew` to find the cuwwent cuwwing method. 🥺 |
+| `fwont`          | 0x0404 | passed to `cuwwface` t-to specify t-that onwy fwont f-faces shouwd b-be cuwwed. -.-                                                       |
+| `back`           | 0x0405 | passed to `cuwwface` to specify t-that onwy back f-faces shouwd be cuwwed. nyaa~~                                                        |
+| `fwont_and_back` | 0x0408 | passed to `cuwwface` t-to specify that fwont and back faces shouwd b-be cuwwed. (///ˬ///✿)                                                   |
 
 ### 有効化と無効化
 
-Constants passed to {{domxref("WebGLRenderingContext.enable()")}} or {{domxref("WebGLRenderingContext.disable()")}}.
+constants p-passed to {{domxwef("webgwwendewingcontext.enabwe()")}} o-ow {{domxwef("webgwwendewingcontext.disabwe()")}}. 🥺
 
-| Constant name              | Value  | Description                                                                                                                                                                                                            |
+| constant nyame              | v-vawue  | descwiption                                                                                                                                                                                                            |
 | -------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `BLEND`                    | 0x0BE2 | Passed to `enable`/`disable` to turn on/off blending. Can also be used with `getParameter` to find the current blending method.                                                                                        |
-| `DEPTH_TEST`               | 0x0B71 | Passed to `enable`/`disable` to turn on/off the depth test. Can also be used with `getParameter` to query the depth test.                                                                                              |
-| `DITHER`                   | 0x0BD0 | Passed to `enable`/`disable` to turn on/off dithering. Can also be used with `getParameter` to find the current dithering method.                                                                                      |
-| `POLYGON_OFFSET_FILL`      | 0x8037 | Passed to `enable`/`disable` to turn on/off the polygon offset. Useful for rendering hidden-line images, decals, and or solids with highlighted edges. Can also be used with `getParameter` to query the scissor test. |
-| `SAMPLE_ALPHA_TO_COVERAGE` | 0x809E | Passed to `enable`/`disable` to turn on/off the alpha to coverage. Used in multi-sampling alpha channels.                                                                                                              |
-| `SAMPLE_COVERAGE`          | 0x80A0 | Passed to `enable`/`disable` to turn on/off the sample coverage. Used in multi-sampling.                                                                                                                               |
-| `SCISSOR_TEST`             | 0x0C11 | Passed to `enable`/`disable` to turn on/off the scissor test. Can also be used with `getParameter` to query the scissor test.                                                                                          |
-| `STENCIL_TEST`             | 0x0B90 | Passed to `enable`/`disable` to turn on/off the stencil test. Can also be used with `getParameter` to query the stencil test.                                                                                          |
+| `bwend`                    | 0x0be2 | p-passed to `enabwe`/`disabwe` t-to tuwn on/off bwending. >w< c-can awso be used w-with `getpawametew` t-to find the c-cuwwent bwending method. rawr x3                                                                                        |
+| `depth_test`               | 0x0b71 | p-passed t-to `enabwe`/`disabwe` t-to tuwn on/off the depth t-test. (⑅˘꒳˘) can awso be used with `getpawametew` to q-quewy the depth t-test. σωσ                                                                                              |
+| `dithew`                   | 0x0bd0 | p-passed to `enabwe`/`disabwe` to tuwn on/off dithewing. XD can awso be u-used with `getpawametew` to find t-the cuwwent dithewing m-method.                                                                                      |
+| `powygon_offset_fiww`      | 0x8037 | passed to `enabwe`/`disabwe` to tuwn o-on/off the powygon offset. -.- usefuw f-fow wendewing h-hidden-wine i-images, decaws, >_< a-and ow sowids with h-highwighted edges. rawr can awso be used with `getpawametew` to quewy the scissow t-test. 😳😳😳 |
+| `sampwe_awpha_to_covewage` | 0x809e | passed to `enabwe`/`disabwe` t-to tuwn on/off the awpha to covewage. UwU used in muwti-sampwing a-awpha channews. (U ﹏ U)                                                                                                              |
+| `sampwe_covewage`          | 0x80a0 | passed to `enabwe`/`disabwe` to tuwn on/off the s-sampwe covewage. (˘ω˘) u-used in muwti-sampwing.                                                                                                                               |
+| `scissow_test`             | 0x0c11 | passed to `enabwe`/`disabwe` to t-tuwn on/off the scissow test. /(^•ω•^) can awso be used w-with `getpawametew` t-to quewy the scissow test. (U ﹏ U)                                                                                          |
+| `stenciw_test`             | 0x0b90 | p-passed to `enabwe`/`disabwe` to tuwn on/off the s-stenciw test. ^•ﻌ•^ can awso be used with `getpawametew` to quewy the s-stenciw test. >w<                                                                                          |
 |                            |        |                                                                                                                                                                                                                        |
 
 ### エラー
 
-Constants returned from {{domxref("WebGLRenderingContext.getError()")}}.
+constants wetuwned f-fwom {{domxwef("webgwwendewingcontext.getewwow()")}}. ʘwʘ
 
-| Constant name        | Value  | Description               |
+| c-constant n-nyame        | vawue  | descwiption               |
 | -------------------- | ------ | ------------------------- |
-| `NO_ERROR`           | 0      | Returned from `getError`. |
-| `INVALID_ENUM`       | 0x0500 | Returned from `getError`. |
-| `INVALID_VALUE`      | 0x0501 | Returned from `getError`. |
-| `INVALID_OPERATION`  | 0x0502 | Returned from `getError`. |
-| `OUT_OF_MEMORY`      | 0x0505 | Returned from `getError`. |
-| `CONTEXT_LOST_WEBGL` | 0x9242 | Returned from `getError`. |
+| `no_ewwow`           | 0      | wetuwned fwom `getewwow`. òωó |
+| `invawid_enum`       | 0x0500 | w-wetuwned fwom `getewwow`. o.O |
+| `invawid_vawue`      | 0x0501 | wetuwned fwom `getewwow`. ( ͡o ω ͡o ) |
+| `invawid_opewation`  | 0x0502 | wetuwned fwom `getewwow`. mya |
+| `out_of_memowy`      | 0x0505 | wetuwned fwom `getewwow`. >_< |
+| `context_wost_webgw` | 0x9242 | w-wetuwned f-fwom `getewwow`. rawr |
 
-### Front face directions
+### f-fwont f-face diwections
 
-Constants passed to {{domxref("WebGLRenderingContext.frontFace()")}}.
+constants passed to {{domxwef("webgwwendewingcontext.fwontface()")}}. >_<
 
-| Constant name | Value  | Description                                                                                              |
+| c-constant n-nyame | vawue  | descwiption                                                                                              |
 | ------------- | ------ | -------------------------------------------------------------------------------------------------------- |
-| `CW`          | 0x0900 | Passed to `frontFace` to specify the front face of a polygon is drawn in the clockwise direction         |
-| `CCW`         | 0x0901 | Passed to `frontFace` to specify the front face of a polygon is drawn in the counter clockwise direction |
+| `cw`          | 0x0900 | passed to `fwontface` t-to specify the fwont face of a powygon i-is dwawn in the cwockwise diwection         |
+| `ccw`         | 0x0901 | passed t-to `fwontface` to s-specify the fwont face of a powygon i-is dwawn in t-the countew cwockwise d-diwection |
 
-### Hints
+### hints
 
-Constants passed to {{domxref("WebGLRenderingContext.hint()")}}
+constants passed t-to {{domxwef("webgwwendewingcontext.hint()")}}
 
-| Constant name          | Value  | Description                                                                                                                 |
+| constant name          | vawue  | d-descwiption                                                                                                                 |
 | ---------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------- |
-| `DONT_CARE`            | 0x1100 | There is no preference for this behavior.                                                                                   |
-| `FASTEST`              | 0x1101 | The most efficient behavior should be used.                                                                                 |
-| `NICEST`               | 0x1102 | The most correct or the highest quality option should be used.                                                              |
-| `GENERATE_MIPMAP_HINT` | 0x8192 | Hint for the quality of filtering when generating mipmap images with {{domxref("WebGLRenderingContext.generateMipmap()")}}. |
+| `dont_cawe`            | 0x1100 | thewe is nyo pwefewence fow this behaviow. (U ﹏ U)                                                                                   |
+| `fastest`              | 0x1101 | t-the m-most efficient behaviow s-shouwd be u-used. rawr                                                                                 |
+| `nicest`               | 0x1102 | t-the most cowwect ow t-the highest quawity option shouwd be used. (U ᵕ U❁)                                                              |
+| `genewate_mipmap_hint` | 0x8192 | h-hint fow the quawity of fiwtewing w-when genewating mipmap images with {{domxwef("webgwwendewingcontext.genewatemipmap()")}}. (ˆ ﻌ ˆ)♡ |
 
 ### データ型
 
-| Constant name    | Value  | Description |
+| c-constant nyame    | v-vawue  | descwiption |
 | ---------------- | ------ | ----------- |
-| `BYTE`           | 0x1400 |             |
-| `UNSIGNED_BYTE`  | 0x1401 |             |
-| `SHORT`          | 0x1402 |             |
-| `UNSIGNED_SHORT` | 0x1403 |             |
-| `INT`            | 0x1404 |             |
-| `UNSIGNED_INT`   | 0x1405 |             |
-| `FLOAT`          | 0x1406 |             |
+| `byte`           | 0x1400 |             |
+| `unsigned_byte`  | 0x1401 |             |
+| `showt`          | 0x1402 |             |
+| `unsigned_showt` | 0x1403 |             |
+| `int`            | 0x1404 |             |
+| `unsigned_int`   | 0x1405 |             |
+| `fwoat`          | 0x1406 |             |
 
-### Pixel formats
+### p-pixew fowmats
 
-| Constant name     | Value  | Description |
+| constant nyame     | v-vawue  | d-descwiption |
 | ----------------- | ------ | ----------- |
-| `DEPTH_COMPONENT` | 0x1902 |             |
-| `ALPHA`           | 0x1906 |             |
-| `RGB`             | 0x1907 |             |
-| `RGBA`            | 0x1908 |             |
-| `LUMINANCE`       | 0x1909 |             |
-| `LUMINANCE_ALPHA` | 0x190A |             |
+| `depth_component` | 0x1902 |             |
+| `awpha`           | 0x1906 |             |
+| `wgb`             | 0x1907 |             |
+| `wgba`            | 0x1908 |             |
+| `wuminance`       | 0x1909 |             |
+| `wuminance_awpha` | 0x190a |             |
 
-### Pixel types
+### pixew types
 
-| Constant name            | Value  | Description |
+| constant n-nyame            | v-vawue  | descwiption |
 | ------------------------ | ------ | ----------- |
-| `UNSIGNED_BYTE`          | 0x1401 |             |
-| `UNSIGNED_SHORT_4_4_4_4` | 0x8033 |             |
-| `UNSIGNED_SHORT_5_5_5_1` | 0x8034 |             |
-| `UNSIGNED_SHORT_5_6_5`   | 0x8363 |             |
+| `unsigned_byte`          | 0x1401 |             |
+| `unsigned_showt_4_4_4_4` | 0x8033 |             |
+| `unsigned_showt_5_5_5_1` | 0x8034 |             |
+| `unsigned_showt_5_6_5`   | 0x8363 |             |
 
 ### シェーダー
 
-Constants passed to {{domxref("WebGLRenderingContext.createShader()")}} or {{domxref("WebGLRenderingContext.getShaderParameter()")}}
+c-constants passed to {{domxwef("webgwwendewingcontext.cweateshadew()")}} ow {{domxwef("webgwwendewingcontext.getshadewpawametew()")}}
 
-| Constant name                      | Value  | Description                                                                                                                                                                                             |
+| constant nyame                      | v-vawue  | descwiption                                                                                                                                                                                             |
 | ---------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `FRAGMENT_SHADER`                  | 0x8B30 | Passed to `createShader` to define a fragment shader.                                                                                                                                                   |
-| `VERTEX_SHADER`                    | 0x8B31 | Passed to `createShader` to define a vertex shader                                                                                                                                                      |
-| `COMPILE_STATUS`                   | 0x8B81 | コンパイルの状態を取得するために `getShaderParamter` に渡されます。シェーダーがコンパイルされなかった場合、false が返ります。その場合は `getShaderInfoLog` に問い合わせて正確なエラーを見つけられます。 |
-| `DELETE_STATUS`                    | 0x8B80 | Passed to `getShaderParamter` to determine if a shader was deleted via `deleteShader`. Returns true if it was, false otherwise.                                                                         |
-| `LINK_STATUS`                      | 0x8B82 | Passed to `getProgramParameter` after calling `linkProgram` to determine if a program was linked correctly. Returns false if there were errors. Use `getProgramInfoLog` to find the exact error.        |
-| `VALIDATE_STATUS`                  | 0x8B83 | Passed to `getProgramParameter` after calling `validateProgram` to determine if it is valid. Returns false if errors were found.                                                                        |
-| `ATTACHED_SHADERS`                 | 0x8B85 | Passed to `getProgramParameter` after calling `attachShader` to determine if the shader was attached correctly. Returns false if errors occurred.                                                       |
-| `ACTIVE_ATTRIBUTES`                | 0x8B89 | Passed to `getProgramParameter` to get the number of attributes active in a program.                                                                                                                    |
-| `ACTIVE_UNIFORMS`                  | 0x8B86 | Passed to `getProgramParamter` to get the number of uniforms active in a program.                                                                                                                       |
-| `MAX_VERTEX_ATTRIBS`               | 0x8869 | The maximum number of entries possible in the vertex attribute list.                                                                                                                                    |
-| `MAX_VERTEX_UNIFORM_VECTORS`       | 0x8DFB |                                                                                                                                                                                                         |
-| `MAX_VARYING_VECTORS`              | 0x8DFC |                                                                                                                                                                                                         |
-| `MAX_COMBINED_TEXTURE_IMAGE_UNITS` | 0x8B4D |                                                                                                                                                                                                         |
-| `MAX_VERTEX_TEXTURE_IMAGE_UNITS`   | 0x8B4C |                                                                                                                                                                                                         |
-| `MAX_TEXTURE_IMAGE_UNITS`          | 0x8872 | Implementation dependent number of maximum texture units. At least 8.                                                                                                                                   |
-| `MAX_FRAGMENT_UNIFORM_VECTORS`     | 0x8DFD |                                                                                                                                                                                                         |
-| `SHADER_TYPE`                      | 0x8B4F |                                                                                                                                                                                                         |
-| `SHADING_LANGUAGE_VERSION`         | 0x8B8C |                                                                                                                                                                                                         |
-| `CURRENT_PROGRAM`                  | 0x8B8D |                                                                                                                                                                                                         |
+| `fwagment_shadew`                  | 0x8b30 | p-passed to `cweateshadew` to define a fwagment shadew. >_<                                                                                                                                                   |
+| `vewtex_shadew`                    | 0x8b31 | p-passed to `cweateshadew` t-to define a-a vewtex shadew                                                                                                                                                      |
+| `compiwe_status`                   | 0x8b81 | コンパイルの状態を取得するために `getshadewpawamtew` に渡されます。シェーダーがコンパイルされなかった場合、fawse が返ります。その場合は `getshadewinfowog` に問い合わせて正確なエラーを見つけられます。 |
+| `dewete_status`                    | 0x8b80 | passed to `getshadewpawamtew` to d-detewmine if a s-shadew was deweted via `deweteshadew`. ^^;; w-wetuwns twue if it was, ʘwʘ f-fawse othewwise. 😳😳😳                                                                         |
+| `wink_status`                      | 0x8b82 | passed t-to `getpwogwampawametew` a-aftew cawwing `winkpwogwam` to detewmine if a pwogwam was winked cowwectwy. UwU w-wetuwns fawse i-if thewe wewe ewwows. OwO use `getpwogwaminfowog` to find the exact ewwow. :3        |
+| `vawidate_status`                  | 0x8b83 | p-passed to `getpwogwampawametew` aftew cawwing `vawidatepwogwam` t-to detewmine i-if it is vawid. -.- wetuwns fawse if ewwows wewe found. 🥺                                                                        |
+| `attached_shadews`                 | 0x8b85 | passed to `getpwogwampawametew` aftew cawwing `attachshadew` t-to detewmine if the shadew was attached c-cowwectwy. -.- wetuwns fawse if e-ewwows occuwwed. -.-                                                       |
+| `active_attwibutes`                | 0x8b89 | p-passed to `getpwogwampawametew` t-to get t-the nyumbew of attwibutes a-active i-in a pwogwam. (U ﹏ U)                                                                                                                    |
+| `active_unifowms`                  | 0x8b86 | p-passed to `getpwogwampawamtew` t-to get the nyumbew of unifowms active in a pwogwam. rawr                                                                                                                       |
+| `max_vewtex_attwibs`               | 0x8869 | the maximum nyumbew of entwies possibwe in the vewtex a-attwibute wist. mya                                                                                                                                    |
+| `max_vewtex_unifowm_vectows`       | 0x8dfb |                                                                                                                                                                                                         |
+| `max_vawying_vectows`              | 0x8dfc |                                                                                                                                                                                                         |
+| `max_combined_textuwe_image_units` | 0x8b4d |                                                                                                                                                                                                         |
+| `max_vewtex_textuwe_image_units`   | 0x8b4c |                                                                                                                                                                                                         |
+| `max_textuwe_image_units`          | 0x8872 | i-impwementation d-dependent nyumbew o-of maximum textuwe u-units. ( ͡o ω ͡o ) at w-weast 8. /(^•ω•^)                                                                                                                                   |
+| `max_fwagment_unifowm_vectows`     | 0x8dfd |                                                                                                                                                                                                         |
+| `shadew_type`                      | 0x8b4f |                                                                                                                                                                                                         |
+| `shading_wanguage_vewsion`         | 0x8b8c |                                                                                                                                                                                                         |
+| `cuwwent_pwogwam`                  | 0x8b8d |                                                                                                                                                                                                         |
 
-### Depth or stencil tests
+### depth ow stenciw tests
 
-Constants passed to {{domxref("WebGLRenderingContext.depthFunc()")}} or {{domxref("WebGLRenderingContext.stencilFunc()")}}.
+constants passed to {{domxwef("webgwwendewingcontext.depthfunc()")}} o-ow {{domxwef("webgwwendewingcontext.stenciwfunc()")}}. >_<
 
-| Constant name | Value  | Description                                                                                                                                                     |
+| c-constant nyame | vawue  | descwiption                                                                                                                                                     |
 | ------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `NEVER`       | 0x0200 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will never pass. i.e. Nothing will be drawn.                                   |
-| `LESS`        | 0x0201 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is less than the stored value.                |
-| `EQUAL`       | 0x0202 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is equals to the stored value.                |
-| `LEQUAL`      | 0x0203 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is less than or equal to the stored value.    |
-| `GREATER`     | 0x0204 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is greater than the stored value.             |
-| `NOTEQUAL`    | 0x0205 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is not equal to the stored value.             |
-| `GEQUAL`      | 0x0206 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will pass if the new depth value is greater than or equal to the stored value. |
-| `ALWAYS`      | 0x0207 | Passed to `depthFunction` or `stencilFunction` to specify depth or stencil tests will always pass. i.e. Pixels will be drawn in the order they are drawn.       |
+| `nevew`       | 0x0200 | passed to `depthfunction` ow `stenciwfunction` to specify depth o-ow stenciw t-tests wiww nyevew p-pass. (✿oωo) i.e. nyothing wiww be dwawn. 😳😳😳                                   |
+| `wess`        | 0x0201 | passed to `depthfunction` o-ow `stenciwfunction` to specify depth ow stenciw tests w-wiww pass if t-the nyew depth vawue is wess than the stowed vawue. (ꈍᴗꈍ)                |
+| `equaw`       | 0x0202 | p-passed to `depthfunction` ow `stenciwfunction` t-to specify depth o-ow stenciw tests wiww pass if t-the nyew depth vawue i-is equaws to t-the stowed vawue. 🥺                |
+| `wequaw`      | 0x0203 | p-passed to `depthfunction` o-ow `stenciwfunction` to s-specify depth ow stenciw tests w-wiww pass if the n-nyew depth vawue is wess than o-ow equaw to the stowed vawue. mya    |
+| `gweatew`     | 0x0204 | passed t-to `depthfunction` ow `stenciwfunction` t-to specify depth ow s-stenciw tests wiww p-pass if the nyew depth vawue is gweatew than t-the stowed vawue. (ˆ ﻌ ˆ)♡             |
+| `notequaw`    | 0x0205 | passed to `depthfunction` o-ow `stenciwfunction` t-to specify depth ow stenciw tests wiww p-pass if the nyew d-depth vawue is nyot equaw to t-the stowed vawue. (⑅˘꒳˘)             |
+| `gequaw`      | 0x0206 | passed to `depthfunction` o-ow `stenciwfunction` t-to specify depth ow stenciw t-tests wiww p-pass if the nyew depth vawue is gweatew than ow e-equaw to the stowed v-vawue. òωó |
+| `awways`      | 0x0207 | p-passed t-to `depthfunction` ow `stenciwfunction` to specify depth ow stenciw tests wiww awways pass. i.e. o.O pixews wiww be d-dwawn in the owdew t-they awe dwawn. XD       |
 
-### Stencil actions
+### s-stenciw actions
 
-Constants passed to {{domxref("WebGLRenderingContext.stencilOp()")}}.
+c-constants passed t-to {{domxwef("webgwwendewingcontext.stenciwop()")}}. (˘ω˘)
 
-| Constant name | Value  | Description |
+| c-constant nyame | vawue  | d-descwiption |
 | ------------- | ------ | ----------- |
-| `KEEP`        | 0x1E00 |             |
-| `REPLACE`     | 0x1E01 |             |
-| `INCR`        | 0x1E02 |             |
-| `DECR`        | 0x1E03 |             |
-| `INVERT`      | 0x150A |             |
-| `INCR_WRAP`   | 0x8507 |             |
-| `DECR_WRAP`   | 0x8508 |             |
+| `keep`        | 0x1e00 |             |
+| `wepwace`     | 0x1e01 |             |
+| `incw`        | 0x1e02 |             |
+| `decw`        | 0x1e03 |             |
+| `invewt`      | 0x150a |             |
+| `incw_wwap`   | 0x8507 |             |
+| `decw_wwap`   | 0x8508 |             |
 
-### Textures
+### textuwes
 
-Constants passed to {{domxref("WebGLRenderingContext.texParameteri()")}}, {{domxref("WebGLRenderingContext.texParameterf()")}}, {{domxref("WebGLRenderingContext.bindTexture()")}}, {{domxref("WebGLRenderingContext.texImage2D()")}}, and others.
+c-constants passed to {{domxwef("webgwwendewingcontext.texpawametewi()")}}, (ꈍᴗꈍ) {{domxwef("webgwwendewingcontext.texpawametewf()")}}, >w< {{domxwef("webgwwendewingcontext.bindtextuwe()")}}, XD {{domxwef("webgwwendewingcontext.teximage2d()")}}, -.- a-and othews. ^^;;
 
-| Constant name                 | Value           | Description                      |
+| constant n-nyame                 | vawue           | descwiption                      |
 | ----------------------------- | --------------- | -------------------------------- |
-| `NEAREST`                     | 0x2600          |                                  |
-| `LINEAR`                      | 0x2601          |                                  |
-| `NEAREST_MIPMAP_NEAREST`      | 0x2700          |                                  |
-| `LINEAR_MIPMAP_NEAREST`       | 0x2701          |                                  |
-| `NEAREST_MIPMAP_LINEAR`       | 0x2702          |                                  |
-| `LINEAR_MIPMAP_LINEAR`        | 0x2703          |                                  |
-| `TEXTURE_MAG_FILTER`          | 0x2800          |                                  |
-| `TEXTURE_MIN_FILTER`          | 0x2801          |                                  |
-| `TEXTURE_WRAP_S`              | 0x2802          |                                  |
-| `TEXTURE_WRAP_T`              | 0x2803          |                                  |
-| `TEXTURE_2D`                  | 0x0DE1          |                                  |
-| `TEXTURE`                     | 0x1702          |                                  |
-| `TEXTURE_CUBE_MAP`            | 0x8513          |                                  |
-| `TEXTURE_BINDING_CUBE_MAP`    | 0x8514          |                                  |
-| `TEXTURE_CUBE_MAP_POSITIVE_X` | 0x8515          |                                  |
-| `TEXTURE_CUBE_MAP_NEGATIVE_X` | 0x8516          |                                  |
-| `TEXTURE_CUBE_MAP_POSITIVE_Y` | 0x8517          |                                  |
-| `TEXTURE_CUBE_MAP_NEGATIVE_Y` | 0x8518          |                                  |
-| `TEXTURE_CUBE_MAP_POSITIVE_Z` | 0x8519          |                                  |
-| `TEXTURE_CUBE_MAP_NEGATIVE_Z` | 0x851A          |                                  |
-| `MAX_CUBE_MAP_TEXTURE_SIZE`   | 0x851C          |                                  |
-| `TEXTURE0 - 31`               | 0x84C0 - 0x84DF | A texture unit.                  |
-| `ACTIVE_TEXTURE`              | 0x84E0          | The current active texture unit. |
-| `REPEAT`                      | 0x2901          |                                  |
-| `CLAMP_TO_EDGE`               | 0x812F          |                                  |
-| `MIRRORED_REPEAT`             | 0x8370          |                                  |
+| `neawest`                     | 0x2600          |                                  |
+| `wineaw`                      | 0x2601          |                                  |
+| `neawest_mipmap_neawest`      | 0x2700          |                                  |
+| `wineaw_mipmap_neawest`       | 0x2701          |                                  |
+| `neawest_mipmap_wineaw`       | 0x2702          |                                  |
+| `wineaw_mipmap_wineaw`        | 0x2703          |                                  |
+| `textuwe_mag_fiwtew`          | 0x2800          |                                  |
+| `textuwe_min_fiwtew`          | 0x2801          |                                  |
+| `textuwe_wwap_s`              | 0x2802          |                                  |
+| `textuwe_wwap_t`              | 0x2803          |                                  |
+| `textuwe_2d`                  | 0x0de1          |                                  |
+| `textuwe`                     | 0x1702          |                                  |
+| `textuwe_cube_map`            | 0x8513          |                                  |
+| `textuwe_binding_cube_map`    | 0x8514          |                                  |
+| `textuwe_cube_map_positive_x` | 0x8515          |                                  |
+| `textuwe_cube_map_negative_x` | 0x8516          |                                  |
+| `textuwe_cube_map_positive_y` | 0x8517          |                                  |
+| `textuwe_cube_map_negative_y` | 0x8518          |                                  |
+| `textuwe_cube_map_positive_z` | 0x8519          |                                  |
+| `textuwe_cube_map_negative_z` | 0x851a          |                                  |
+| `max_cube_map_textuwe_size`   | 0x851c          |                                  |
+| `textuwe0 - 31`               | 0x84c0 - 0x84df | a-a textuwe unit. XD                  |
+| `active_textuwe`              | 0x84e0          | the cuwwent active textuwe u-unit. :3 |
+| `wepeat`                      | 0x2901          |                                  |
+| `cwamp_to_edge`               | 0x812f          |                                  |
+| `miwwowed_wepeat`             | 0x8370          |                                  |
 
-### Uniform types
+### unifowm types
 
-| Constant name  | Value  | Description |
+| c-constant n-name  | vawue  | descwiption |
 | -------------- | ------ | ----------- |
-| `FLOAT_VEC2`   | 0x8B50 |             |
-| `FLOAT_VEC3`   | 0x8B51 |             |
-| `FLOAT_VEC4`   | 0x8B52 |             |
-| `INT_VEC2`     | 0x8B53 |             |
-| `INT_VEC3`     | 0x8B54 |             |
-| `INT_VEC4`     | 0x8B55 |             |
-| `BOOL`         | 0x8B56 |             |
-| `BOOL_VEC2`    | 0x8B57 |             |
-| `BOOL_VEC3`    | 0x8B58 |             |
-| `BOOL_VEC4`    | 0x8B59 |             |
-| `FLOAT_MAT2`   | 0x8B5A |             |
-| `FLOAT_MAT3`   | 0x8B5B |             |
-| `FLOAT_MAT4`   | 0x8B5C |             |
-| `SAMPLER_2D`   | 0x8B5E |             |
-| `SAMPLER_CUBE` | 0x8B60 |             |
+| `fwoat_vec2`   | 0x8b50 |             |
+| `fwoat_vec3`   | 0x8b51 |             |
+| `fwoat_vec4`   | 0x8b52 |             |
+| `int_vec2`     | 0x8b53 |             |
+| `int_vec3`     | 0x8b54 |             |
+| `int_vec4`     | 0x8b55 |             |
+| `boow`         | 0x8b56 |             |
+| `boow_vec2`    | 0x8b57 |             |
+| `boow_vec3`    | 0x8b58 |             |
+| `boow_vec4`    | 0x8b59 |             |
+| `fwoat_mat2`   | 0x8b5a |             |
+| `fwoat_mat3`   | 0x8b5b |             |
+| `fwoat_mat4`   | 0x8b5c |             |
+| `sampwew_2d`   | 0x8b5e |             |
+| `sampwew_cube` | 0x8b60 |             |
 
-### Shader precision-specified types
+### s-shadew pwecision-specified t-types
 
-| Constant name  | Value  | Description |
+| constant n-nyame  | vawue  | descwiption |
 | -------------- | ------ | ----------- |
-| `LOW_FLOAT`    | 0x8DF0 |             |
-| `MEDIUM_FLOAT` | 0x8DF1 |             |
-| `HIGH_FLOAT`   | 0x8DF2 |             |
-| `LOW_INT`      | 0x8DF3 |             |
-| `MEDIUM_INT`   | 0x8DF4 |             |
-| `HIGH_INT`     | 0x8DF5 |             |
+| `wow_fwoat`    | 0x8df0 |             |
+| `medium_fwoat` | 0x8df1 |             |
+| `high_fwoat`   | 0x8df2 |             |
+| `wow_int`      | 0x8df3 |             |
+| `medium_int`   | 0x8df4 |             |
+| `high_int`     | 0x8df5 |             |
 
-### Framebuffers and renderbuffers
+### f-fwamebuffews a-and wendewbuffews
 
-| Constant name                                  | Value  | Description |
+| constant nyame                                  | v-vawue  | descwiption |
 | ---------------------------------------------- | ------ | ----------- |
-| `FRAMEBUFFER`                                  | 0x8D40 |             |
-| `RENDERBUFFER`                                 | 0x8D41 |             |
-| `RGBA4`                                        | 0x8056 |             |
-| `RGB5_A1`                                      | 0x8057 |             |
-| `RGB565`                                       | 0x8D62 |             |
-| `DEPTH_COMPONENT16`                            | 0x81A5 |             |
-| `STENCIL_INDEX8`                               | 0x8D48 |             |
-| `DEPTH_STENCIL`                                | 0x84F9 |             |
-| `RENDERBUFFER_WIDTH`                           | 0x8D42 |             |
-| `RENDERBUFFER_HEIGHT`                          | 0x8D43 |             |
-| `RENDERBUFFER_INTERNAL_FORMAT`                 | 0x8D44 |             |
-| `RENDERBUFFER_RED_SIZE`                        | 0x8D50 |             |
-| `RENDERBUFFER_GREEN_SIZE`                      | 0x8D51 |             |
-| `RENDERBUFFER_BLUE_SIZE`                       | 0x8D52 |             |
-| `RENDERBUFFER_ALPHA_SIZE`                      | 0x8D53 |             |
-| `RENDERBUFFER_DEPTH_SIZE`                      | 0x8D54 |             |
-| `RENDERBUFFER_STENCIL_SIZE`                    | 0x8D55 |             |
-| `FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE`           | 0x8CD0 |             |
-| `FRAMEBUFFER_ATTACHMENT_OBJECT_NAME`           | 0x8CD1 |             |
-| `FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL`         | 0x8CD2 |             |
-| `FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE` | 0x8CD3 |             |
-| `COLOR_ATTACHMENT0`                            | 0x8CE0 |             |
-| `DEPTH_ATTACHMENT`                             | 0x8D00 |             |
-| `STENCIL_ATTACHMENT`                           | 0x8D20 |             |
-| `DEPTH_STENCIL_ATTACHMENT`                     | 0x821A |             |
-| `NONE`                                         | 0      |             |
-| `FRAMEBUFFER_COMPLETE`                         | 0x8CD5 |             |
-| `FRAMEBUFFER_INCOMPLETE_ATTACHMENT`            | 0x8CD6 |             |
-| `FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT`    | 0x8CD7 |             |
-| `FRAMEBUFFER_INCOMPLETE_DIMENSIONS`            | 0x8CD9 |             |
-| `FRAMEBUFFER_UNSUPPORTED`                      | 0x8CDD |             |
-| `FRAMEBUFFER_BINDING`                          | 0x8CA6 |             |
-| `RENDERBUFFER_BINDING`                         | 0x8CA7 |             |
-| `MAX_RENDERBUFFER_SIZE`                        | 0x84E8 |             |
-| `INVALID_FRAMEBUFFER_OPERATION`                | 0x0506 |             |
+| `fwamebuffew`                                  | 0x8d40 |             |
+| `wendewbuffew`                                 | 0x8d41 |             |
+| `wgba4`                                        | 0x8056 |             |
+| `wgb5_a1`                                      | 0x8057 |             |
+| `wgb565`                                       | 0x8d62 |             |
+| `depth_component16`                            | 0x81a5 |             |
+| `stenciw_index8`                               | 0x8d48 |             |
+| `depth_stenciw`                                | 0x84f9 |             |
+| `wendewbuffew_width`                           | 0x8d42 |             |
+| `wendewbuffew_height`                          | 0x8d43 |             |
+| `wendewbuffew_intewnaw_fowmat`                 | 0x8d44 |             |
+| `wendewbuffew_wed_size`                        | 0x8d50 |             |
+| `wendewbuffew_gween_size`                      | 0x8d51 |             |
+| `wendewbuffew_bwue_size`                       | 0x8d52 |             |
+| `wendewbuffew_awpha_size`                      | 0x8d53 |             |
+| `wendewbuffew_depth_size`                      | 0x8d54 |             |
+| `wendewbuffew_stenciw_size`                    | 0x8d55 |             |
+| `fwamebuffew_attachment_object_type`           | 0x8cd0 |             |
+| `fwamebuffew_attachment_object_name`           | 0x8cd1 |             |
+| `fwamebuffew_attachment_textuwe_wevew`         | 0x8cd2 |             |
+| `fwamebuffew_attachment_textuwe_cube_map_face` | 0x8cd3 |             |
+| `cowow_attachment0`                            | 0x8ce0 |             |
+| `depth_attachment`                             | 0x8d00 |             |
+| `stenciw_attachment`                           | 0x8d20 |             |
+| `depth_stenciw_attachment`                     | 0x821a |             |
+| `none`                                         | 0      |             |
+| `fwamebuffew_compwete`                         | 0x8cd5 |             |
+| `fwamebuffew_incompwete_attachment`            | 0x8cd6 |             |
+| `fwamebuffew_incompwete_missing_attachment`    | 0x8cd7 |             |
+| `fwamebuffew_incompwete_dimensions`            | 0x8cd9 |             |
+| `fwamebuffew_unsuppowted`                      | 0x8cdd |             |
+| `fwamebuffew_binding`                          | 0x8ca6 |             |
+| `wendewbuffew_binding`                         | 0x8ca7 |             |
+| `max_wendewbuffew_size`                        | 0x84e8 |             |
+| `invawid_fwamebuffew_opewation`                | 0x0506 |             |
 
-### Pixel storage modes
+### pixew stowage m-modes
 
-Constants passed to {{domxref("WebGLRenderingContext.pixelStorei()")}}.
+constants p-passed to {{domxwef("webgwwendewingcontext.pixewstowei()")}}. σωσ
 
-| Constant name                        | Value  | Description |
+| c-constant nyame                        | vawue  | d-descwiption |
 | ------------------------------------ | ------ | ----------- |
-| `UNPACK_FLIP_Y_WEBGL`                | 0x9240 |             |
-| `UNPACK_PREMULTIPLY_ALPHA_WEBGL`     | 0x9241 |             |
-| `UNPACK_COLORSPACE_CONVERSION_WEBGL` | 0x9243 |             |
+| `unpack_fwip_y_webgw`                | 0x9240 |             |
+| `unpack_pwemuwtipwy_awpha_webgw`     | 0x9241 |             |
+| `unpack_cowowspace_convewsion_webgw` | 0x9243 |             |
 
-## Additional constants defined WebGL 2
+## additionaw constants defined w-webgw 2
 
-These constants are defined on the {{domxref("WebGL2RenderingContext")}} interface. All WebGL 1 constants are also available in a WebGL 2 context.
+these constants awe defined on the {{domxwef("webgw2wendewingcontext")}} intewface. XD aww webgw 1 constants awe awso avaiwabwe in a w-webgw 2 context. :3
 
-### Getting GL parameter information
+### getting gw pawametew infowmation
 
-Constants passed to {{domxref("WebGLRenderingContext.getParameter()")}} to specify what information to return.
+constants passed to {{domxwef("webgwwendewingcontext.getpawametew()")}} to specify nyani infowmation to w-wetuwn. rawr
 
-| Constant name                     | Value  | Description |
+| constant nyame                     | vawue  | descwiption |
 | --------------------------------- | ------ | ----------- |
-| `READ_BUFFER`                     | 0x0C02 |             |
-| `UNPACK_ROW_LENGTH`               | 0x0CF2 |             |
-| `UNPACK_SKIP_ROWS`                | 0x0CF3 |             |
-| `UNPACK_SKIP_PIXELS`              | 0x0CF4 |             |
-| `PACK_ROW_LENGTH`                 | 0x0D02 |             |
-| `PACK_SKIP_ROWS`                  | 0x0D03 |             |
-| `PACK_SKIP_PIXELS`                | 0x0D04 |             |
-| `TEXTURE_BINDING_3D`              | 0x806A |             |
-| `UNPACK_SKIP_IMAGES`              | 0x806D |             |
-| `UNPACK_IMAGE_HEIGHT`             | 0x806E |             |
-| `MAX_3D_TEXTURE_SIZE`             | 0x8073 |             |
-| `MAX_ELEMENTS_VERTICES`           | 0x80E8 |             |
-| `MAX_ELEMENTS_INDICES`            | 0x80E9 |             |
-| `MAX_TEXTURE_LOD_BIAS`            | 0x84FD |             |
-| `MAX_FRAGMENT_UNIFORM_COMPONENTS` | 0x8B49 |             |
-| `MAX_VERTEX_UNIFORM_COMPONENTS`   | 0x8B4A |             |
-| `MAX_ARRAY_TEXTURE_LAYERS`        | 0x88FF |             |
-| `MIN_PROGRAM_TEXEL_OFFSET`        | 0x8904 |             |
-| `MAX_PROGRAM_TEXEL_OFFSET`        | 0x8905 |             |
-| `MAX_VARYING_COMPONENTS`          | 0x8B4B |             |
-| `FRAGMENT_SHADER_DERIVATIVE_HINT` | 0x8B8B |             |
-| `RASTERIZER_DISCARD`              | 0x8C89 |             |
-| `VERTEX_ARRAY_BINDING`            | 0x85B5 |             |
-| `MAX_VERTEX_OUTPUT_COMPONENTS`    | 0x9122 |             |
-| `MAX_FRAGMENT_INPUT_COMPONENTS`   | 0x9125 |             |
-| `MAX_SERVER_WAIT_TIMEOUT`         | 0x9111 |             |
-| `MAX_ELEMENT_INDEX`               | 0x8D6B |             |
+| `wead_buffew`                     | 0x0c02 |             |
+| `unpack_wow_wength`               | 0x0cf2 |             |
+| `unpack_skip_wows`                | 0x0cf3 |             |
+| `unpack_skip_pixews`              | 0x0cf4 |             |
+| `pack_wow_wength`                 | 0x0d02 |             |
+| `pack_skip_wows`                  | 0x0d03 |             |
+| `pack_skip_pixews`                | 0x0d04 |             |
+| `textuwe_binding_3d`              | 0x806a |             |
+| `unpack_skip_images`              | 0x806d |             |
+| `unpack_image_height`             | 0x806e |             |
+| `max_3d_textuwe_size`             | 0x8073 |             |
+| `max_ewements_vewtices`           | 0x80e8 |             |
+| `max_ewements_indices`            | 0x80e9 |             |
+| `max_textuwe_wod_bias`            | 0x84fd |             |
+| `max_fwagment_unifowm_components` | 0x8b49 |             |
+| `max_vewtex_unifowm_components`   | 0x8b4a |             |
+| `max_awway_textuwe_wayews`        | 0x88ff |             |
+| `min_pwogwam_texew_offset`        | 0x8904 |             |
+| `max_pwogwam_texew_offset`        | 0x8905 |             |
+| `max_vawying_components`          | 0x8b4b |             |
+| `fwagment_shadew_dewivative_hint` | 0x8b8b |             |
+| `wastewizew_discawd`              | 0x8c89 |             |
+| `vewtex_awway_binding`            | 0x85b5 |             |
+| `max_vewtex_output_components`    | 0x9122 |             |
+| `max_fwagment_input_components`   | 0x9125 |             |
+| `max_sewvew_wait_timeout`         | 0x9111 |             |
+| `max_ewement_index`               | 0x8d6b |             |
 
-### Textures
+### t-textuwes
 
-Constants passed to {{domxref("WebGLRenderingContext.texParameteri()")}}, {{domxref("WebGLRenderingContext.texParameterf()")}}, {{domxref("WebGLRenderingContext.bindTexture()")}}, {{domxref("WebGLRenderingContext.texImage2D()")}}, and others.
+constants passed t-to {{domxwef("webgwwendewingcontext.texpawametewi()")}}, 😳 {{domxwef("webgwwendewingcontext.texpawametewf()")}}, {{domxwef("webgwwendewingcontext.bindtextuwe()")}}, 😳😳😳 {{domxwef("webgwwendewingcontext.teximage2d()")}}, (ꈍᴗꈍ) and othews. 🥺
 
-| Constant name              | Value  | Description |
+| constant n-nyame              | vawue  | descwiption |
 | -------------------------- | ------ | ----------- |
-| `RED`                      | 0x1903 |             |
-| `RGB8`                     | 0x8051 |             |
-| `RGBA8`                    | 0x8058 |             |
-| `RGB10_A2`                 | 0x8059 |             |
-| `TEXTURE_3D`               | 0x806F |             |
-| `TEXTURE_WRAP_R`           | 0x8072 |             |
-| `TEXTURE_MIN_LOD`          | 0x813A |             |
-| `TEXTURE_MAX_LOD`          | 0x813B |             |
-| `TEXTURE_BASE_LEVEL`       | 0x813C |             |
-| `TEXTURE_MAX_LEVEL`        | 0x813D |             |
-| `TEXTURE_COMPARE_MODE`     | 0x884C |             |
-| `TEXTURE_COMPARE_FUNC`     | 0x884D |             |
-| `SRGB`                     | 0x8C40 |             |
-| `SRGB8`                    | 0x8C41 |             |
-| `SRGB8_ALPHA8`             | 0x8C43 |             |
-| `COMPARE_REF_TO_TEXTURE`   | 0x884E |             |
-| `RGBA32F`                  | 0x8814 |             |
-| `RGB32F`                   | 0x8815 |             |
-| `RGBA16F`                  | 0x881A |             |
-| `RGB16F`                   | 0x881B |             |
-| `TEXTURE_2D_ARRAY`         | 0x8C1A |             |
-| `TEXTURE_BINDING_2D_ARRAY` | 0x8C1D |             |
-| `R11F_G11F_B10F`           | 0x8C3A |             |
-| `RGB9_E5`                  | 0x8C3D |             |
-| `RGBA32UI`                 | 0x8D70 |             |
-| `RGB32UI`                  | 0x8D71 |             |
-| `RGBA16UI`                 | 0x8D76 |             |
-| `RGB16UI`                  | 0x8D77 |             |
-| `RGBA8UI`                  | 0x8D7C |             |
-| `RGB8UI`                   | 0x8D7D |             |
-| `RGBA32I`                  | 0x8D82 |             |
-| `RGB32I`                   | 0x8D83 |             |
-| `RGBA16I`                  | 0x8D88 |             |
-| `RGB16I`                   | 0x8D89 |             |
-| `RGBA8I`                   | 0x8D8E |             |
-| `RGB8I`                    | 0x8D8F |             |
-| `RED_INTEGER`              | 0x8D94 |             |
-| `RGB_INTEGER`              | 0x8D98 |             |
-| `RGBA_INTEGER`             | 0x8D99 |             |
-| `R8`                       | 0x8229 |             |
-| `RG8`                      | 0x822B |             |
-| R16F                       | 0x822D |             |
-| R32F                       | 0x822E |             |
-| RG16F                      | 0x822F |             |
-| RG32F                      | 0x8230 |             |
-| R8I                        | 0x8231 |             |
-| R8UI                       | 0x8232 |             |
-| R16I                       | 0x8233 |             |
-| R16UI                      | 0x8234 |             |
-| R32I                       | 0x8235 |             |
-| R32UI                      | 0x8236 |             |
-| RG8I                       | 0x8237 |             |
-| RG8UI                      | 0x8238 |             |
-| RG16I                      | 0x8239 |             |
-| RG16UI                     | 0x823A |             |
-| RG32I                      | 0x823B |             |
-| RG32UI                     | 0x823C |             |
-| R8_SNORM                   | 0x8F94 |             |
-| RG8_SNORM                  | 0x8F95 |             |
-| RGB8_SNORM                 | 0x8F96 |             |
-| RGBA8_SNORM                | 0x8F97 |             |
-| `RGB10_A2UI`               | 0x906F |             |
-| `TEXTURE_IMMUTABLE_FORMAT` | 0x912F |             |
-| `TEXTURE_IMMUTABLE_LEVELS` | 0x82DF |             |
+| `wed`                      | 0x1903 |             |
+| `wgb8`                     | 0x8051 |             |
+| `wgba8`                    | 0x8058 |             |
+| `wgb10_a2`                 | 0x8059 |             |
+| `textuwe_3d`               | 0x806f |             |
+| `textuwe_wwap_w`           | 0x8072 |             |
+| `textuwe_min_wod`          | 0x813a |             |
+| `textuwe_max_wod`          | 0x813b |             |
+| `textuwe_base_wevew`       | 0x813c |             |
+| `textuwe_max_wevew`        | 0x813d |             |
+| `textuwe_compawe_mode`     | 0x884c |             |
+| `textuwe_compawe_func`     | 0x884d |             |
+| `swgb`                     | 0x8c40 |             |
+| `swgb8`                    | 0x8c41 |             |
+| `swgb8_awpha8`             | 0x8c43 |             |
+| `compawe_wef_to_textuwe`   | 0x884e |             |
+| `wgba32f`                  | 0x8814 |             |
+| `wgb32f`                   | 0x8815 |             |
+| `wgba16f`                  | 0x881a |             |
+| `wgb16f`                   | 0x881b |             |
+| `textuwe_2d_awway`         | 0x8c1a |             |
+| `textuwe_binding_2d_awway` | 0x8c1d |             |
+| `w11f_g11f_b10f`           | 0x8c3a |             |
+| `wgb9_e5`                  | 0x8c3d |             |
+| `wgba32ui`                 | 0x8d70 |             |
+| `wgb32ui`                  | 0x8d71 |             |
+| `wgba16ui`                 | 0x8d76 |             |
+| `wgb16ui`                  | 0x8d77 |             |
+| `wgba8ui`                  | 0x8d7c |             |
+| `wgb8ui`                   | 0x8d7d |             |
+| `wgba32i`                  | 0x8d82 |             |
+| `wgb32i`                   | 0x8d83 |             |
+| `wgba16i`                  | 0x8d88 |             |
+| `wgb16i`                   | 0x8d89 |             |
+| `wgba8i`                   | 0x8d8e |             |
+| `wgb8i`                    | 0x8d8f |             |
+| `wed_integew`              | 0x8d94 |             |
+| `wgb_integew`              | 0x8d98 |             |
+| `wgba_integew`             | 0x8d99 |             |
+| `w8`                       | 0x8229 |             |
+| `wg8`                      | 0x822b |             |
+| w-w16f                       | 0x822d |             |
+| w32f                       | 0x822e |             |
+| w-wg16f                      | 0x822f |             |
+| w-wg32f                      | 0x8230 |             |
+| w8i                        | 0x8231 |             |
+| w8ui                       | 0x8232 |             |
+| w16i                       | 0x8233 |             |
+| w-w16ui                      | 0x8234 |             |
+| w32i                       | 0x8235 |             |
+| w32ui                      | 0x8236 |             |
+| wg8i                       | 0x8237 |             |
+| w-wg8ui                      | 0x8238 |             |
+| wg16i                      | 0x8239 |             |
+| w-wg16ui                     | 0x823a |             |
+| wg32i                      | 0x823b |             |
+| wg32ui                     | 0x823c |             |
+| w-w8_snowm                   | 0x8f94 |             |
+| wg8_snowm                  | 0x8f95 |             |
+| w-wgb8_snowm                 | 0x8f96 |             |
+| w-wgba8_snowm                | 0x8f97 |             |
+| `wgb10_a2ui`               | 0x906f |             |
+| `textuwe_immutabwe_fowmat` | 0x912f |             |
+| `textuwe_immutabwe_wevews` | 0x82df |             |
 
-### Pixel types
+### pixew types
 
-| Constant name                    | Value  | Description |
+| constant n-nyame                    | vawue  | descwiption |
 | -------------------------------- | ------ | ----------- |
-| `UNSIGNED_INT_2_10_10_10_REV`    | 0x8368 |             |
-| `UNSIGNED_INT_10F_11F_11F_REV`   | 0x8C3B |             |
-| `UNSIGNED_INT_5_9_9_9_REV`       | 0x8C3E |             |
-| `FLOAT_32_UNSIGNED_INT_24_8_REV` | 0x8DAD |             |
-| UNSIGNED_INT_24_8                | 0x84FA |             |
-| `HALF_FLOAT`                     | 0x140B |             |
-| `RG`                             | 0x8227 |             |
-| `RG_INTEGER`                     | 0x8228 |             |
-| `INT_2_10_10_10_REV`             | 0x8D9F |             |
+| `unsigned_int_2_10_10_10_wev`    | 0x8368 |             |
+| `unsigned_int_10f_11f_11f_wev`   | 0x8c3b |             |
+| `unsigned_int_5_9_9_9_wev`       | 0x8c3e |             |
+| `fwoat_32_unsigned_int_24_8_wev` | 0x8dad |             |
+| u-unsigned_int_24_8                | 0x84fa |             |
+| `hawf_fwoat`                     | 0x140b |             |
+| `wg`                             | 0x8227 |             |
+| `wg_integew`                     | 0x8228 |             |
+| `int_2_10_10_10_wev`             | 0x8d9f |             |
 
-### Queries
+### quewies
 
-| Constant name                     | Value  | Description |
+| constant nyame                     | vawue  | descwiption |
 | --------------------------------- | ------ | ----------- |
-| `CURRENT_QUERY`                   | 0x8865 |             |
-| `QUERY_RESULT`                    | 0x8866 |             |
-| `QUERY_RESULT_AVAILABLE`          | 0x8867 |             |
-| `ANY_SAMPLES_PASSED`              | 0x8C2F |             |
-| `ANY_SAMPLES_PASSED_CONSERVATIVE` | 0x8D6A |             |
+| `cuwwent_quewy`                   | 0x8865 |             |
+| `quewy_wesuwt`                    | 0x8866 |             |
+| `quewy_wesuwt_avaiwabwe`          | 0x8867 |             |
+| `any_sampwes_passed`              | 0x8c2f |             |
+| `any_sampwes_passed_consewvative` | 0x8d6a |             |
 
-### Draw buffers
+### dwaw buffews
 
-| Constant name           | Value  | Description |
+| c-constant n-nyame           | vawue  | descwiption |
 | ----------------------- | ------ | ----------- |
-| `MAX_DRAW_BUFFERS`      | 0x8824 |             |
-| `DRAW_BUFFER0`          | 0x8825 |             |
-| `DRAW_BUFFER1`          | 0x8826 |             |
-| `DRAW_BUFFER2`          | 0x8827 |             |
-| `DRAW_BUFFER3`          | 0x8828 |             |
-| `DRAW_BUFFER4`          | 0x8829 |             |
-| `DRAW_BUFFER5`          | 0x882A |             |
-| `DRAW_BUFFER6`          | 0x882B |             |
-| `DRAW_BUFFER7`          | 0x882C |             |
-| `DRAW_BUFFER8`          | 0x882D |             |
-| `DRAW_BUFFER9`          | 0x882E |             |
-| `DRAW_BUFFER10`         | 0x882F |             |
-| `DRAW_BUFFER11`         | 0x8830 |             |
-| `DRAW_BUFFER12`         | 0x8831 |             |
-| `DRAW_BUFFER13`         | 0x8832 |             |
-| `DRAW_BUFFER14`         | 0x8833 |             |
-| `DRAW_BUFFER15`         | 0x8834 |             |
-| `MAX_COLOR_ATTACHMENTS` | 0x8CDF |             |
-| `COLOR_ATTACHMENT1`     | 0x8CE1 |             |
-| `COLOR_ATTACHMENT2`     | 0x8CE2 |             |
-| `COLOR_ATTACHMENT3`     | 0x8CE3 |             |
-| `COLOR_ATTACHMENT4`     | 0x8CE4 |             |
-| `COLOR_ATTACHMENT5`     | 0x8CE5 |             |
-| `COLOR_ATTACHMENT6`     | 0x8CE6 |             |
-| `COLOR_ATTACHMENT7`     | 0x8CE7 |             |
-| `COLOR_ATTACHMENT8`     | 0x8CE8 |             |
-| `COLOR_ATTACHMENT9`     | 0x8CE9 |             |
-| `COLOR_ATTACHMENT10`    | 0x8CEA |             |
-| `COLOR_ATTACHMENT11`    | 0x8CEB |             |
-| `COLOR_ATTACHMENT12`    | 0x8CEC |             |
-| `COLOR_ATTACHMENT13`    | 0x8CED |             |
-| `COLOR_ATTACHMENT14`    | 0x8CEE |             |
-| `COLOR_ATTACHMENT15`    | 0x8CEF |             |
+| `max_dwaw_buffews`      | 0x8824 |             |
+| `dwaw_buffew0`          | 0x8825 |             |
+| `dwaw_buffew1`          | 0x8826 |             |
+| `dwaw_buffew2`          | 0x8827 |             |
+| `dwaw_buffew3`          | 0x8828 |             |
+| `dwaw_buffew4`          | 0x8829 |             |
+| `dwaw_buffew5`          | 0x882a |             |
+| `dwaw_buffew6`          | 0x882b |             |
+| `dwaw_buffew7`          | 0x882c |             |
+| `dwaw_buffew8`          | 0x882d |             |
+| `dwaw_buffew9`          | 0x882e |             |
+| `dwaw_buffew10`         | 0x882f |             |
+| `dwaw_buffew11`         | 0x8830 |             |
+| `dwaw_buffew12`         | 0x8831 |             |
+| `dwaw_buffew13`         | 0x8832 |             |
+| `dwaw_buffew14`         | 0x8833 |             |
+| `dwaw_buffew15`         | 0x8834 |             |
+| `max_cowow_attachments` | 0x8cdf |             |
+| `cowow_attachment1`     | 0x8ce1 |             |
+| `cowow_attachment2`     | 0x8ce2 |             |
+| `cowow_attachment3`     | 0x8ce3 |             |
+| `cowow_attachment4`     | 0x8ce4 |             |
+| `cowow_attachment5`     | 0x8ce5 |             |
+| `cowow_attachment6`     | 0x8ce6 |             |
+| `cowow_attachment7`     | 0x8ce7 |             |
+| `cowow_attachment8`     | 0x8ce8 |             |
+| `cowow_attachment9`     | 0x8ce9 |             |
+| `cowow_attachment10`    | 0x8cea |             |
+| `cowow_attachment11`    | 0x8ceb |             |
+| `cowow_attachment12`    | 0x8cec |             |
+| `cowow_attachment13`    | 0x8ced |             |
+| `cowow_attachment14`    | 0x8cee |             |
+| `cowow_attachment15`    | 0x8cef |             |
 
-### Samplers
+### s-sampwews
 
-| Constant name                   | Value  | Description |
+| c-constant nyame                   | vawue  | descwiption |
 | ------------------------------- | ------ | ----------- |
-| `SAMPLER_3D`                    | 0x8B5F |             |
-| `SAMPLER_2D_SHADOW`             | 0x8B62 |             |
-| `SAMPLER_2D_ARRAY`              | 0x8DC1 |             |
-| `SAMPLER_2D_ARRAY_SHADOW`       | 0x8DC4 |             |
-| `SAMPLER_CUBE_SHADOW`           | 0x8DC5 |             |
-| `INT_SAMPLER_2D`                | 0x8DCA |             |
-| `INT_SAMPLER_3D`                | 0x8DCB |             |
-| `INT_SAMPLER_CUBE`              | 0x8DCC |             |
-| `INT_SAMPLER_2D_ARRAY`          | 0x8DCF |             |
-| `UNSIGNED_INT_SAMPLER_2D`       | 0x8DD2 |             |
-| `UNSIGNED_INT_SAMPLER_3D`       | 0x8DD3 |             |
-| `UNSIGNED_INT_SAMPLER_CUBE`     | 0x8DD4 |             |
-| `UNSIGNED_INT_SAMPLER_2D_ARRAY` | 0x8DD7 |             |
-| `MAX_SAMPLES`                   | 0x8D57 |             |
-| `SAMPLER_BINDING`               | 0x8919 |             |
+| `sampwew_3d`                    | 0x8b5f |             |
+| `sampwew_2d_shadow`             | 0x8b62 |             |
+| `sampwew_2d_awway`              | 0x8dc1 |             |
+| `sampwew_2d_awway_shadow`       | 0x8dc4 |             |
+| `sampwew_cube_shadow`           | 0x8dc5 |             |
+| `int_sampwew_2d`                | 0x8dca |             |
+| `int_sampwew_3d`                | 0x8dcb |             |
+| `int_sampwew_cube`              | 0x8dcc |             |
+| `int_sampwew_2d_awway`          | 0x8dcf |             |
+| `unsigned_int_sampwew_2d`       | 0x8dd2 |             |
+| `unsigned_int_sampwew_3d`       | 0x8dd3 |             |
+| `unsigned_int_sampwew_cube`     | 0x8dd4 |             |
+| `unsigned_int_sampwew_2d_awway` | 0x8dd7 |             |
+| `max_sampwes`                   | 0x8d57 |             |
+| `sampwew_binding`               | 0x8919 |             |
 
-### Buffers
+### b-buffews
 
-| Constant name                 | Value  | Description |
+| constant nyame                 | vawue  | descwiption |
 | ----------------------------- | ------ | ----------- |
-| `PIXEL_PACK_BUFFER`           | 0x88EB |             |
-| `PIXEL_UNPACK_BUFFER`         | 0x88EC |             |
-| `PIXEL_PACK_BUFFER_BINDING`   | 0x88ED |             |
-| `PIXEL_UNPACK_BUFFER_BINDING` | 0x88EF |             |
-| `COPY_READ_BUFFER`            | 0x8F36 |             |
-| `COPY_WRITE_BUFFER`           | 0x8F37 |             |
-| `COPY_READ_BUFFER_BINDING`    | 0x8F36 |             |
-| `COPY_WRITE_BUFFER_BINDING`   | 0x8F37 |             |
+| `pixew_pack_buffew`           | 0x88eb |             |
+| `pixew_unpack_buffew`         | 0x88ec |             |
+| `pixew_pack_buffew_binding`   | 0x88ed |             |
+| `pixew_unpack_buffew_binding` | 0x88ef |             |
+| `copy_wead_buffew`            | 0x8f36 |             |
+| `copy_wwite_buffew`           | 0x8f37 |             |
+| `copy_wead_buffew_binding`    | 0x8f36 |             |
+| `copy_wwite_buffew_binding`   | 0x8f37 |             |
 
-### Data types
+### data types
 
-| Constant name         | Value  | Description |
+| c-constant n-nyame         | vawue  | descwiption |
 | --------------------- | ------ | ----------- |
-| `FLOAT_MAT2x3`        | 0x8B65 |             |
-| `FLOAT_MAT2x4`        | 0x8B66 |             |
-| `FLOAT_MAT3x2`        | 0x8B67 |             |
-| `FLOAT_MAT3x4`        | 0x8B68 |             |
-| `FLOAT_MAT4x2`        | 0x8B69 |             |
-| `FLOAT_MAT4x3`        | 0x8B6A |             |
-| `UNSIGNED_INT_VEC2`   | 0x8DC6 |             |
-| `UNSIGNED_INT_VEC3`   | 0x8DC7 |             |
-| `UNSIGNED_INT_VEC4`   | 0x8DC8 |             |
-| `UNSIGNED_NORMALIZED` | 0x8C17 |             |
-| `SIGNED_NORMALIZED`   | 0x8F9C |             |
+| `fwoat_mat2x3`        | 0x8b65 |             |
+| `fwoat_mat2x4`        | 0x8b66 |             |
+| `fwoat_mat3x2`        | 0x8b67 |             |
+| `fwoat_mat3x4`        | 0x8b68 |             |
+| `fwoat_mat4x2`        | 0x8b69 |             |
+| `fwoat_mat4x3`        | 0x8b6a |             |
+| `unsigned_int_vec2`   | 0x8dc6 |             |
+| `unsigned_int_vec3`   | 0x8dc7 |             |
+| `unsigned_int_vec4`   | 0x8dc8 |             |
+| `unsigned_nowmawized` | 0x8c17 |             |
+| `signed_nowmawized`   | 0x8f9c |             |
 
-### Vertex attributes
+### v-vewtex a-attwibutes
 
-| Constant name                 | Value  | Description |
+| constant nyame                 | vawue  | d-descwiption |
 | ----------------------------- | ------ | ----------- |
-| `VERTEX_ATTRIB_ARRAY_INTEGER` | 0x88FD |             |
-| `VERTEX_ATTRIB_ARRAY_DIVISOR` | 0x88FE |             |
+| `vewtex_attwib_awway_integew` | 0x88fd |             |
+| `vewtex_attwib_awway_divisow` | 0x88fe |             |
 
-### Transform feedback
+### twansfowm feedback
 
-| Constant name                                   | Value  | Description |
+| constant n-nyame                                   | vawue  | descwiption |
 | ----------------------------------------------- | ------ | ----------- |
-| `TRANSFORM_FEEDBACK_BUFFER_MODE`                | 0x8C7F |             |
-| `MAX_TRANSFORM_FEEDBACK_SEPARATE_COMPONENTS`    | 0x8C80 |             |
-| `TRANSFORM_FEEDBACK_VARYINGS`                   | 0x8C83 |             |
-| `TRANSFORM_FEEDBACK_BUFFER_START`               | 0x8C84 |             |
-| `TRANSFORM_FEEDBACK_BUFFER_SIZE`                | 0x8C85 |             |
-| `TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN`         | 0x8C88 |             |
-| `MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS` | 0x8C8A |             |
-| `MAX_TRANSFORM_FEEDBACK_SEPARATE_ATTRIBS`       | 0x8C8B |             |
-| `INTERLEAVED_ATTRIBS`                           | 0x8C8C |             |
-| `SEPARATE_ATTRIBS`                              | 0x8C8D |             |
-| `TRANSFORM_FEEDBACK_BUFFER`                     | 0x8C8E |             |
-| `TRANSFORM_FEEDBACK_BUFFER_BINDING`             | 0x8C8F |             |
-| `TRANSFORM_FEEDBACK`                            | 0x8E22 |             |
-| `TRANSFORM_FEEDBACK_PAUSED`                     | 0x8E23 |             |
-| `TRANSFORM_FEEDBACK_ACTIVE`                     | 0x8E24 |             |
-| `TRANSFORM_FEEDBACK_BINDING`                    | 0x8E25 |             |
+| `twansfowm_feedback_buffew_mode`                | 0x8c7f |             |
+| `max_twansfowm_feedback_sepawate_components`    | 0x8c80 |             |
+| `twansfowm_feedback_vawyings`                   | 0x8c83 |             |
+| `twansfowm_feedback_buffew_stawt`               | 0x8c84 |             |
+| `twansfowm_feedback_buffew_size`                | 0x8c85 |             |
+| `twansfowm_feedback_pwimitives_wwitten`         | 0x8c88 |             |
+| `max_twansfowm_feedback_intewweaved_components` | 0x8c8a |             |
+| `max_twansfowm_feedback_sepawate_attwibs`       | 0x8c8b |             |
+| `intewweaved_attwibs`                           | 0x8c8c |             |
+| `sepawate_attwibs`                              | 0x8c8d |             |
+| `twansfowm_feedback_buffew`                     | 0x8c8e |             |
+| `twansfowm_feedback_buffew_binding`             | 0x8c8f |             |
+| `twansfowm_feedback`                            | 0x8e22 |             |
+| `twansfowm_feedback_paused`                     | 0x8e23 |             |
+| `twansfowm_feedback_active`                     | 0x8e24 |             |
+| `twansfowm_feedback_binding`                    | 0x8e25 |             |
 
-### Framebuffers and renderbuffers
+### fwamebuffews a-and wendewbuffews
 
-| Constant name                           | Value  | Description |
+| c-constant nyame                           | vawue  | descwiption |
 | --------------------------------------- | ------ | ----------- |
-| `FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING` | 0x8210 |             |
-| `FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE` | 0x8211 |             |
-| `FRAMEBUFFER_ATTACHMENT_RED_SIZE`       | 0x8212 |             |
-| `FRAMEBUFFER_ATTACHMENT_GREEN_SIZE`     | 0x8213 |             |
-| `FRAMEBUFFER_ATTACHMENT_BLUE_SIZE`      | 0x8214 |             |
-| `FRAMEBUFFER_ATTACHMENT_ALPHA_SIZE`     | 0x8215 |             |
-| `FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE`     | 0x8216 |             |
-| `FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE`   | 0x8217 |             |
-| `FRAMEBUFFER_DEFAULT`                   | 0x8218 |             |
-| `DEPTH_STENCIL_ATTACHMENT`              | 0x821A |             |
-| `DEPTH_STENCIL`                         | 0x84F9 |             |
-| `DEPTH24_STENCIL8`                      | 0x88F0 |             |
-| `DRAW_FRAMEBUFFER_BINDING`              | 0x8CA6 |             |
-| `READ_FRAMEBUFFER`                      | 0x8CA8 |             |
-| `DRAW_FRAMEBUFFER`                      | 0x8CA9 |             |
-| `READ_FRAMEBUFFER_BINDING`              | 0x8CAA |             |
-| `RENDERBUFFER_SAMPLES`                  | 0x8CAB |             |
-| `FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER`  | 0x8CD4 |             |
-| `FRAMEBUFFER_INCOMPLETE_MULTISAMPLE`    | 0x8D56 |             |
+| `fwamebuffew_attachment_cowow_encoding` | 0x8210 |             |
+| `fwamebuffew_attachment_component_type` | 0x8211 |             |
+| `fwamebuffew_attachment_wed_size`       | 0x8212 |             |
+| `fwamebuffew_attachment_gween_size`     | 0x8213 |             |
+| `fwamebuffew_attachment_bwue_size`      | 0x8214 |             |
+| `fwamebuffew_attachment_awpha_size`     | 0x8215 |             |
+| `fwamebuffew_attachment_depth_size`     | 0x8216 |             |
+| `fwamebuffew_attachment_stenciw_size`   | 0x8217 |             |
+| `fwamebuffew_defauwt`                   | 0x8218 |             |
+| `depth_stenciw_attachment`              | 0x821a |             |
+| `depth_stenciw`                         | 0x84f9 |             |
+| `depth24_stenciw8`                      | 0x88f0 |             |
+| `dwaw_fwamebuffew_binding`              | 0x8ca6 |             |
+| `wead_fwamebuffew`                      | 0x8ca8 |             |
+| `dwaw_fwamebuffew`                      | 0x8ca9 |             |
+| `wead_fwamebuffew_binding`              | 0x8caa |             |
+| `wendewbuffew_sampwes`                  | 0x8cab |             |
+| `fwamebuffew_attachment_textuwe_wayew`  | 0x8cd4 |             |
+| `fwamebuffew_incompwete_muwtisampwe`    | 0x8d56 |             |
 
-### Uniforms
+### u-unifowms
 
-| Constant name                                 | Value  | Description |
+| constant name                                 | vawue  | descwiption |
 | --------------------------------------------- | ------ | ----------- |
-| `UNIFORM_BUFFER`                              | 0x8A11 |             |
-| `UNIFORM_BUFFER_BINDING`                      | 0x8A28 |             |
-| `UNIFORM_BUFFER_START`                        | 0x8A29 |             |
-| `UNIFORM_BUFFER_SIZE`                         | 0x8A2A |             |
-| `MAX_VERTEX_UNIFORM_BLOCKS`                   | 0x8A2B |             |
-| `MAX_FRAGMENT_UNIFORM_BLOCKS`                 | 0x8A2D |             |
-| `MAX_COMBINED_UNIFORM_BLOCKS`                 | 0x8A2E |             |
-| `MAX_UNIFORM_BUFFER_BINDINGS`                 | 0x8A2F |             |
-| `MAX_UNIFORM_BLOCK_SIZE`                      | 0x8A30 |             |
-| `MAX_COMBINED_VERTEX_UNIFORM_COMPONENTS`      | 0x8A31 |             |
-| `MAX_COMBINED_FRAGMENT_UNIFORM_COMPONENTS`    | 0x8A33 |             |
-| `UNIFORM_BUFFER_OFFSET_ALIGNMENT`             | 0x8A34 |             |
-| `ACTIVE_UNIFORM_BLOCKS`                       | 0x8A36 |             |
-| `UNIFORM_TYPE`                                | 0x8A37 |             |
-| `UNIFORM_SIZE`                                | 0x8A38 |             |
-| `UNIFORM_BLOCK_INDEX`                         | 0x8A3A |             |
-| `UNIFORM_OFFSET`                              | 0x8A3B |             |
-| `UNIFORM_ARRAY_STRIDE`                        | 0x8A3C |             |
-| `UNIFORM_MATRIX_STRIDE`                       | 0x8A3D |             |
-| `UNIFORM_IS_ROW_MAJOR`                        | 0x8A3E |             |
-| `UNIFORM_BLOCK_BINDING`                       | 0x8A3F |             |
-| `UNIFORM_BLOCK_DATA_SIZE`                     | 0x8A40 |             |
-| `UNIFORM_BLOCK_ACTIVE_UNIFORMS`               | 0x8A42 |             |
-| `UNIFORM_BLOCK_ACTIVE_UNIFORM_INDICES`        | 0x8A43 |             |
-| `UNIFORM_BLOCK_REFERENCED_BY_VERTEX_SHADER`   | 0x8A44 |             |
-| `UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER` | 0x8A46 |             |
+| `unifowm_buffew`                              | 0x8a11 |             |
+| `unifowm_buffew_binding`                      | 0x8a28 |             |
+| `unifowm_buffew_stawt`                        | 0x8a29 |             |
+| `unifowm_buffew_size`                         | 0x8a2a |             |
+| `max_vewtex_unifowm_bwocks`                   | 0x8a2b |             |
+| `max_fwagment_unifowm_bwocks`                 | 0x8a2d |             |
+| `max_combined_unifowm_bwocks`                 | 0x8a2e |             |
+| `max_unifowm_buffew_bindings`                 | 0x8a2f |             |
+| `max_unifowm_bwock_size`                      | 0x8a30 |             |
+| `max_combined_vewtex_unifowm_components`      | 0x8a31 |             |
+| `max_combined_fwagment_unifowm_components`    | 0x8a33 |             |
+| `unifowm_buffew_offset_awignment`             | 0x8a34 |             |
+| `active_unifowm_bwocks`                       | 0x8a36 |             |
+| `unifowm_type`                                | 0x8a37 |             |
+| `unifowm_size`                                | 0x8a38 |             |
+| `unifowm_bwock_index`                         | 0x8a3a |             |
+| `unifowm_offset`                              | 0x8a3b |             |
+| `unifowm_awway_stwide`                        | 0x8a3c |             |
+| `unifowm_matwix_stwide`                       | 0x8a3d |             |
+| `unifowm_is_wow_majow`                        | 0x8a3e |             |
+| `unifowm_bwock_binding`                       | 0x8a3f |             |
+| `unifowm_bwock_data_size`                     | 0x8a40 |             |
+| `unifowm_bwock_active_unifowms`               | 0x8a42 |             |
+| `unifowm_bwock_active_unifowm_indices`        | 0x8a43 |             |
+| `unifowm_bwock_wefewenced_by_vewtex_shadew`   | 0x8a44 |             |
+| `unifowm_bwock_wefewenced_by_fwagment_shadew` | 0x8a46 |             |
 
-### Sync objects
+### sync objects
 
-| Constant name                | Value      | Description |
+| constant nyame                | v-vawue      | d-descwiption |
 | ---------------------------- | ---------- | ----------- |
-| `OBJECT_TYPE`                | 0x9112     |             |
-| `SYNC_CONDITION`             | 0x9113     |             |
-| `SYNC_STATUS`                | 0x9114     |             |
-| `SYNC_FLAGS`                 | 0x9115     |             |
-| `SYNC_FENCE`                 | 0x9116     |             |
-| `SYNC_GPU_COMMANDS_COMPLETE` | 0x9117     |             |
-| `UNSIGNALED`                 | 0x9118     |             |
-| `SIGNALED`                   | 0x9119     |             |
-| `ALREADY_SIGNALED`           | 0x911A     |             |
-| `TIMEOUT_EXPIRED`            | 0x911B     |             |
-| `CONDITION_SATISFIED`        | 0x911C     |             |
-| `WAIT_FAILED`                | 0x911D     |             |
-| `SYNC_FLUSH_COMMANDS_BIT`    | 0x00000001 |             |
+| `object_type`                | 0x9112     |             |
+| `sync_condition`             | 0x9113     |             |
+| `sync_status`                | 0x9114     |             |
+| `sync_fwags`                 | 0x9115     |             |
+| `sync_fence`                 | 0x9116     |             |
+| `sync_gpu_commands_compwete` | 0x9117     |             |
+| `unsignawed`                 | 0x9118     |             |
+| `signawed`                   | 0x9119     |             |
+| `awweady_signawed`           | 0x911a     |             |
+| `timeout_expiwed`            | 0x911b     |             |
+| `condition_satisfied`        | 0x911c     |             |
+| `wait_faiwed`                | 0x911d     |             |
+| `sync_fwush_commands_bit`    | 0x00000001 |             |
 
-### Miscellaneous constants
+### m-miscewwaneous c-constants
 
-| Constant name                   | Value      | Description |
+| c-constant n-nyame                   | v-vawue      | d-descwiption |
 | ------------------------------- | ---------- | ----------- |
-| `COLOR`                         | 0x1800     |             |
-| DEPTH                           | 0x1801     |             |
-| `STENCIL`                       | 0x1802     |             |
-| `MIN`                           | 0x8007     |             |
-| MAX                             | 0x8008     |             |
-| `DEPTH_COMPONENT24`             | 0x81A6     |             |
-| `STREAM_READ`                   | 0x88E1     |             |
-| `STREAM_COPY`                   | 0x88E2     |             |
-| `STATIC_READ`                   | 0x88E5     |             |
-| `STATIC_COPY`                   | 0x88E6     |             |
-| `DYNAMIC_READ`                  | 0x88E9     |             |
-| `DYNAMIC_COPY`                  | 0x88EA     |             |
-| `DEPTH_COMPONENT32F`            | 0x8CAC     |             |
-| `DEPTH32F_STENCIL8`             | 0x8CAD     |             |
-| `INVALID_INDEX`                 | 0xFFFFFFFF |             |
-| `TIMEOUT_IGNORED`               | -1         |             |
-| `MAX_CLIENT_WAIT_TIMEOUT_WEBGL` | 0x9247     |             |
+| `cowow`                         | 0x1800     |             |
+| depth                           | 0x1801     |             |
+| `stenciw`                       | 0x1802     |             |
+| `min`                           | 0x8007     |             |
+| max                             | 0x8008     |             |
+| `depth_component24`             | 0x81a6     |             |
+| `stweam_wead`                   | 0x88e1     |             |
+| `stweam_copy`                   | 0x88e2     |             |
+| `static_wead`                   | 0x88e5     |             |
+| `static_copy`                   | 0x88e6     |             |
+| `dynamic_wead`                  | 0x88e9     |             |
+| `dynamic_copy`                  | 0x88ea     |             |
+| `depth_component32f`            | 0x8cac     |             |
+| `depth32f_stenciw8`             | 0x8cad     |             |
+| `invawid_index`                 | 0xffffffff |             |
+| `timeout_ignowed`               | -1         |             |
+| `max_cwient_wait_timeout_webgw` | 0x9247     |             |
 
-## Constants defined in WebGL extensions
+## constants defined in webgw e-extensions
 
-### {{domxref("ANGLE_instanced_arrays")}}
+### {{domxwef("angwe_instanced_awways")}}
 
-| Constant name                       | Value  | Description                                                   |
+| constant nyame                       | v-vawue  | descwiption                                                   |
 | ----------------------------------- | ------ | ------------------------------------------------------------- |
-| `VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE` | 0x88FE | Describes the frequency divisor used for instanced rendering. |
+| `vewtex_attwib_awway_divisow_angwe` | 0x88fe | descwibes t-the fwequency divisow used fow instanced wendewing. mya |
 
-### {{domxref("WEBGL_debug_renderer_info")}}
+### {{domxwef("webgw_debug_wendewew_info")}}
 
-| Constant name             | Value  | Description                                                                 |
+| constant n-nyame             | vawue  | d-descwiption                                                                 |
 | ------------------------- | ------ | --------------------------------------------------------------------------- |
-| `UNMASKED_VENDOR_WEBGL`   | 0x9245 | Passed to `getParameter` to get the vendor string of the graphics driver.   |
-| `UNMASKED_RENDERER_WEBGL` | 0x9246 | Passed to `getParameter` to get the renderer string of the graphics driver. |
+| `unmasked_vendow_webgw`   | 0x9245 | passed t-to `getpawametew` to get the vendow stwing of the gwaphics dwivew. ^•ﻌ•^   |
+| `unmasked_wendewew_webgw` | 0x9246 | p-passed to `getpawametew` to get the wendewew stwing of the gwaphics dwivew. ʘwʘ |
 
-### {{domxref("EXT_texture_filter_anisotropic")}}
+### {{domxwef("ext_textuwe_fiwtew_anisotwopic")}}
 
-| Constant name                    | Value  | Description                                                                   |
+| c-constant nyame                    | v-vawue  | d-descwiption                                                                   |
 | -------------------------------- | ------ | ----------------------------------------------------------------------------- |
-| `MAX_TEXTURE_MAX_ANISOTROPY_EXT` | 0x84FF | Returns the maximum available anisotropy.                                     |
-| `TEXTURE_MAX_ANISOTROPY_EXT`     | 0x84FE | Passed to `texParameter` to set the desired maximum anisotropy for a texture. |
+| `max_textuwe_max_anisotwopy_ext` | 0x84ff | w-wetuwns the maximum a-avaiwabwe anisotwopy. ( ͡o ω ͡o )                                     |
+| `textuwe_max_anisotwopy_ext`     | 0x84fe | passed to `texpawametew` to set the d-desiwed maximum anisotwopy fow a textuwe. mya |
 
-### {{domxref("WEBGL_compressed_texture_s3tc")}}
+### {{domxwef("webgw_compwessed_textuwe_s3tc")}}
 
-| Constant name                   | Value  | Description                                                                                                                                                    |
+| c-constant nyame                   | vawue  | descwiption                                                                                                                                                    |
 | ------------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `COMPRESSED_RGB_S3TC_DXT1_EXT`  | 0x83F0 | A DXT1-compressed image in an RGB image format.                                                                                                                |
-| `COMPRESSED_RGBA_S3TC_DXT1_EXT` | 0x83F1 | A DXT1-compressed image in an RGB image format with a simple on/off alpha value.                                                                               |
-| `COMPRESSED_RGBA_S3TC_DXT3_EXT` | 0x83F2 | A DXT3-compressed image in an RGBA image format. Compared to a 32-bit RGBA texture, it offers 4:1 compression.                                                 |
-| `COMPRESSED_RGBA_S3TC_DXT5_EXT` | 0x83F3 | A DXT5-compressed image in an RGBA image format. It also provides a 4:1 compression, but differs to the DXT3 compression in how the alpha compression is done. |
+| `compwessed_wgb_s3tc_dxt1_ext`  | 0x83f0 | a dxt1-compwessed image in an wgb image f-fowmat. o.O                                                                                                                |
+| `compwessed_wgba_s3tc_dxt1_ext` | 0x83f1 | a dxt1-compwessed i-image i-in an wgb image f-fowmat with a simpwe on/off awpha vawue. (✿oωo)                                                                               |
+| `compwessed_wgba_s3tc_dxt3_ext` | 0x83f2 | a dxt3-compwessed i-image i-in an wgba image fowmat. :3 compawed t-to a 32-bit wgba t-textuwe, 😳 it offews 4:1 compwession. (U ﹏ U)                                                 |
+| `compwessed_wgba_s3tc_dxt5_ext` | 0x83f3 | a-a dxt5-compwessed image in a-an wgba image fowmat. mya it awso pwovides a 4:1 compwession, (U ᵕ U❁) b-but diffews to the dxt3 c-compwession in how the awpha c-compwession is done. :3 |
 
-### {{domxref("WEBGL_compressed_texture_etc")}}
+### {{domxwef("webgw_compwessed_textuwe_etc")}}
 
-| Constant name                               | Value  | Description                                                                                                                           |
+| c-constant nyame                               | vawue  | descwiption                                                                                                                           |
 | ------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `COMPRESSED_R11_EAC`                        | 0x9270 | One-channel (red) unsigned format compression.                                                                                        |
-| `COMPRESSED_SIGNED_R11_EAC`                 | 0x9271 | One-channel (red) signed format compression.                                                                                          |
-| `COMPRESSED_RG11_EAC`                       | 0x9272 | Two-channel (red and green) unsigned format compression.                                                                              |
-| `COMPRESSED_SIGNED_RG11_EAC`                | 0x9273 | Two-channel (red and green) signed format compression.                                                                                |
-| `COMPRESSED_RGB8_ETC2`                      | 0x9274 | Compresses RBG8 data with no alpha channel.                                                                                           |
-| `COMPRESSED_RGBA8_ETC2_EAC`                 | 0x9275 | Compresses RGBA8 data. The RGB part is encoded the same as `RGB_ETC2`, but the alpha part is encoded separately.                      |
-| `COMPRESSED_SRGB8_ETC2`                     | 0x9276 | Compresses sRBG8 data with no alpha channel.                                                                                          |
-| `COMPRESSED_SRGB8_ALPHA8_ETC2_EAC`          | 0x9277 | Compresses sRGBA8 data. The sRGB part is encoded the same as `SRGB_ETC2`, but the alpha part is encoded separately.                   |
-| `COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2`  | 0x9278 | Similar to `RGB8_ETC`, but with ability to punch through the alpha channel, which means to make it completely opaque or transparent.  |
-| `COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2` | 0x9279 | Similar to `SRGB8_ETC`, but with ability to punch through the alpha channel, which means to make it completely opaque or transparent. |
+| `compwessed_w11_eac`                        | 0x9270 | one-channew (wed) unsigned fowmat compwession. mya                                                                                        |
+| `compwessed_signed_w11_eac`                 | 0x9271 | o-one-channew (wed) s-signed fowmat compwession. OwO                                                                                          |
+| `compwessed_wg11_eac`                       | 0x9272 | t-two-channew (wed a-and gween) u-unsigned fowmat compwession. (ˆ ﻌ ˆ)♡                                                                              |
+| `compwessed_signed_wg11_eac`                | 0x9273 | two-channew (wed and gween) s-signed fowmat compwession. ʘwʘ                                                                                |
+| `compwessed_wgb8_etc2`                      | 0x9274 | compwesses wbg8 data with nyo awpha channew. o.O                                                                                           |
+| `compwessed_wgba8_etc2_eac`                 | 0x9275 | c-compwesses wgba8 data. UwU t-the wgb pawt is e-encoded the same a-as `wgb_etc2`, rawr x3 but the awpha p-pawt is encoded s-sepawatewy. 🥺                      |
+| `compwessed_swgb8_etc2`                     | 0x9276 | c-compwesses s-swbg8 data with no awpha channew. :3                                                                                          |
+| `compwessed_swgb8_awpha8_etc2_eac`          | 0x9277 | c-compwesses s-swgba8 data. (ꈍᴗꈍ) t-the swgb pawt i-is encoded the s-same as `swgb_etc2`, 🥺 but the awpha pawt is encoded sepawatewy. (✿oωo)                   |
+| `compwessed_wgb8_punchthwough_awpha1_etc2`  | 0x9278 | s-simiwaw to `wgb8_etc`, (U ﹏ U) but with abiwity to punch thwough the awpha channew, :3 which m-means to make it compwetewy opaque ow twanspawent. ^^;;  |
+| `compwessed_swgb8_punchthwough_awpha1_etc2` | 0x9279 | simiwaw to `swgb8_etc`, rawr b-but with a-abiwity to punch t-thwough the awpha channew, 😳😳😳 which m-means to make it compwetewy opaque o-ow twanspawent. (✿oωo) |
 
-### {{domxref("WEBGL_compressed_texture_pvrtc")}}
+### {{domxwef("webgw_compwessed_textuwe_pvwtc")}}
 
-| Constant name                      | Value  | Description                                                    |
+| c-constant nyame                      | vawue  | descwiption                                                    |
 | ---------------------------------- | ------ | -------------------------------------------------------------- |
-| `COMPRESSED_RGB_PVRTC_4BPPV1_IMG`  | 0x8C00 | RGB compression in 4-bit mode. One block for each 4×4 pixels.  |
-| `COMPRESSED_RGBA_PVRTC_4BPPV1_IMG` | 0x8C02 | RGBA compression in 4-bit mode. One block for each 4×4 pixels. |
-| `COMPRESSED_RGB_PVRTC_2BPPV1_IMG`  | 0x8C01 | RGB compression in 2-bit mode. One block for each 8×4 pixels.  |
-| `COMPRESSED_RGBA_PVRTC_2BPPV1_IMG` | 0x8C03 | RGBA compression in 2-bit mode. One block for each 8×4 pixe    |
+| `compwessed_wgb_pvwtc_4bppv1_img`  | 0x8c00 | wgb compwession in 4-bit mode. OwO one b-bwock fow each 4×4 pixews. ʘwʘ  |
+| `compwessed_wgba_pvwtc_4bppv1_img` | 0x8c02 | w-wgba compwession in 4-bit mode. (ˆ ﻌ ˆ)♡ o-one bwock fow each 4×4 p-pixews. (U ﹏ U) |
+| `compwessed_wgb_pvwtc_2bppv1_img`  | 0x8c01 | wgb compwession in 2-bit mode. UwU o-one bwock fow each 8×4 p-pixews. XD  |
+| `compwessed_wgba_pvwtc_2bppv1_img` | 0x8c03 | wgba compwession i-in 2-bit mode. o-one bwock fow each 8×4 pixe    |
 
-### {{domxref("WEBGL_compressed_texture_etc1")}}
+### {{domxwef("webgw_compwessed_textuwe_etc1")}}
 
-| Constant name               | Value  | Description                                       |
+| constant nyame               | vawue  | d-descwiption                                       |
 | --------------------------- | ------ | ------------------------------------------------- |
-| `COMPRESSED_RGB_ETC1_WEBGL` | 0x8D64 | Compresses 24-bit RGB data with no alpha channel. |
+| `compwessed_wgb_etc1_webgw` | 0x8d64 | c-compwesses 24-bit wgb d-data with nyo awpha channew. ʘwʘ |
 
-### {{domxref("WEBGL_compressed_texture_atc")}}
+### {{domxwef("webgw_compwessed_textuwe_atc")}}
 
-| Constant name                                  | Value  | Description                                                                                              |
+| c-constant nyame                                  | v-vawue  | descwiption                                                                                              |
 | ---------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------- |
-| `COMPRESSED_RGB_ATC_WEBGL`                     | 0x8C92 | Compresses RGB textures with no alpha channel.                                                           |
-| `COMPRESSED_RGBA_ATC_EXPLICIT_ALPHA_WEBGL`     | 0x8C92 | Compresses RGBA textures using explicit alpha encoding (useful when alpha transitions are sharp).        |
-| `COMPRESSED_RGBA_ATC_INTERPOLATED_ALPHA_WEBGL` | 0x87EE | Compresses RGBA textures using interpolated alpha encoding (useful when alpha transitions are gradient). |
+| `compwessed_wgb_atc_webgw`                     | 0x8c92 | compwesses w-wgb textuwes with nyo awpha channew. rawr x3                                                           |
+| `compwessed_wgba_atc_expwicit_awpha_webgw`     | 0x8c92 | compwesses wgba textuwes u-using expwicit awpha e-encoding (usefuw when awpha twansitions awe s-shawp). ^^;;        |
+| `compwessed_wgba_atc_intewpowated_awpha_webgw` | 0x87ee | c-compwesses wgba textuwes using intewpowated awpha e-encoding (usefuw when awpha twansitions awe gwadient). ʘwʘ |
 
-### {{domxref("WEBGL_depth_texture")}}
+### {{domxwef("webgw_depth_textuwe")}}
 
-| Constant name             | Value  | Description                                          |
+| constant nyame             | vawue  | descwiption                                          |
 | ------------------------- | ------ | ---------------------------------------------------- |
-| `UNSIGNED_INT_24_8_WEBGL` | 0x84FA | Unsigned integer type for 24-bit depth texture data. |
+| `unsigned_int_24_8_webgw` | 0x84fa | u-unsigned integew type fow 24-bit depth textuwe d-data. (U ﹏ U) |
 
-### {{domxref("OES_texture_half_float")}}
+### {{domxwef("oes_textuwe_hawf_fwoat")}}
 
-| Constant name    | Value  | Description                        |
+| c-constant nyame    | vawue  | descwiption                        |
 | ---------------- | ------ | ---------------------------------- |
-| `HALF_FLOAT_OES` | 0x8D61 | Half floating-point type (16-bit). |
+| `hawf_fwoat_oes` | 0x8d61 | hawf f-fwoating-point t-type (16-bit). (˘ω˘) |
 
-### {{domxref("WEBGL_color_buffer_float")}}
+### {{domxwef("webgw_cowow_buffew_fwoat")}}
 
-| Constant name                               | Value  | Description                                         |
+| constant nyame                               | vawue  | descwiption                                         |
 | ------------------------------------------- | ------ | --------------------------------------------------- |
-| `RGBA32F_EXT`                               | 0x8814 | RGBA 32-bit floating-point color-renderable format. |
-| `RGB32F_EXT`                                | 0x8815 | RGB 32-bit floating-point color-renderable format.  |
-| `FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT` | 0x8211 |                                                     |
-| `UNSIGNED_NORMALIZED_EXT`                   | 0x8C17 |                                                     |
+| `wgba32f_ext`                               | 0x8814 | wgba 32-bit f-fwoating-point cowow-wendewabwe f-fowmat. (ꈍᴗꈍ) |
+| `wgb32f_ext`                                | 0x8815 | wgb 32-bit fwoating-point cowow-wendewabwe f-fowmat. /(^•ω•^)  |
+| `fwamebuffew_attachment_component_type_ext` | 0x8211 |                                                     |
+| `unsigned_nowmawized_ext`                   | 0x8c17 |                                                     |
 
-### {{domxref("EXT_blend_minmax")}}
+### {{domxwef("ext_bwend_minmax")}}
 
-| Constant name | Value  | Description                                                                 |
+| constant nyame | v-vawue  | descwiption                                                                 |
 | ------------- | ------ | --------------------------------------------------------------------------- |
-| `MIN_EXT`     | 0x8007 | Produces the minimum color components of the source and destination colors. |
-| `MAX_EXT`     | 0x8008 | Produces the maximum color components of the source and destination colors. |
+| `min_ext`     | 0x8007 | p-pwoduces the minimum cowow components o-of the souwce and destination c-cowows. >_< |
+| `max_ext`     | 0x8008 | p-pwoduces t-the maximum cowow components of t-the souwce and d-destination cowows. σωσ |
 
-### {{domxref("EXT_sRGB")}}
+### {{domxwef("ext_swgb")}}
 
-| Constant name                               | Value  | Description                                                     |
+| constant name                               | v-vawue  | descwiption                                                     |
 | ------------------------------------------- | ------ | --------------------------------------------------------------- |
-| `SRGB_EXT`                                  | 0x8C40 | Unsized sRGB format that leaves the precision up to the driver. |
-| `SRGB_ALPHA_EXT`                            | 0x8C42 | Unsized sRGB format with unsized alpha component.               |
-| `SRGB8_ALPHA8_EXT`                          | 0x8C43 | Sized (8-bit) sRGB and alpha formats.                           |
-| `FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT` | 0x8210 | Returns the framebuffer color encoding.                         |
+| `swgb_ext`                                  | 0x8c40 | u-unsized swgb f-fowmat that weaves the pwecision up to the dwivew. ^^;; |
+| `swgb_awpha_ext`                            | 0x8c42 | unsized s-swgb fowmat with unsized a-awpha component. 😳               |
+| `swgb8_awpha8_ext`                          | 0x8c43 | s-sized (8-bit) swgb and awpha fowmats.                           |
+| `fwamebuffew_attachment_cowow_encoding_ext` | 0x8210 | wetuwns the f-fwamebuffew cowow e-encoding. >_<                         |
 
-### {{domxref("OES_standard_derivatives")}}
+### {{domxwef("oes_standawd_dewivatives")}}
 
-| Constant name                         | Value  | Description                                                                                                         |
+| c-constant n-name                         | vawue  | descwiption                                                                                                         |
 | ------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
-| `FRAGMENT_SHADER_DERIVATIVE_HINT_OES` | 0x8B8B | Indicates the accuracy of the derivative calculation for the GLSL built-in functions: `dFdx`, `dFdy`, and `fwidth`. |
+| `fwagment_shadew_dewivative_hint_oes` | 0x8b8b | i-indicates the accuwacy of the dewivative cawcuwation fow the gwsw buiwt-in functions: `dfdx`, -.- `dfdy`, a-and `fwidth`. UwU |
 
-### {{domxref("WEBGL_draw_buffers")}}
+### {{domxwef("webgw_dwaw_buffews")}}
 
-| Constant name                 | Value  | Description                                           |
+| constant n-nyame                 | vawue  | d-descwiption                                           |
 | ----------------------------- | ------ | ----------------------------------------------------- |
-| `COLOR_ATTACHMENT0_WEBGL`     | 0x8CE0 | Framebuffer color attachment point                    |
-| `COLOR_ATTACHMENT1_WEBGL`     | 0x8CE1 | Framebuffer color attachment point                    |
-| `COLOR_ATTACHMENT2_WEBGL`     | 0x8CE2 | Framebuffer color attachment point                    |
-| `COLOR_ATTACHMENT3_WEBGL`     | 0x8CE3 | Framebuffer color attachment point                    |
-| `COLOR_ATTACHMENT4_WEBGL`     | 0x8CE4 | Framebuffer color attachment point                    |
-| `COLOR_ATTACHMENT5_WEBGL`     | 0x8CE5 | Framebuffer color attachment point                    |
-| `COLOR_ATTACHMENT6_WEBGL`     | 0x8CE6 | Framebuffer color attachment point                    |
-| `COLOR_ATTACHMENT7_WEBGL`     | 0x8CE7 | Framebuffer color attachment point                    |
-| `COLOR_ATTACHMENT8_WEBGL`     | 0x8CE8 | Framebuffer color attachment point                    |
-| `COLOR_ATTACHMENT9_WEBGL`     | 0x8CE9 | Framebuffer color attachment point                    |
-| `COLOR_ATTACHMENT10_WEBGL`    | 0x8CEA | Framebuffer color attachment point                    |
-| `COLOR_ATTACHMENT11_WEBGL`    | 0x8CEB | Framebuffer color attachment point                    |
-| `COLOR_ATTACHMENT12_WEBGL`    | 0x8CEC | Framebuffer color attachment point                    |
-| `COLOR_ATTACHMENT13_WEBGL`    | 0x8CED | Framebuffer color attachment point                    |
-| `COLOR_ATTACHMENT14_WEBGL`    | 0x8CEE | Framebuffer color attachment point                    |
-| `COLOR_ATTACHMENT15_WEBGL`    | 0x8CEF | Framebuffer color attachment point                    |
-| `DRAW_BUFFER0_WEBGL`          | 0x8825 | Draw buffer                                           |
-| `DRAW_BUFFER1_WEBGL`          | 0x8826 | Draw buffer                                           |
-| `DRAW_BUFFER2_WEBGL`          | 0x8827 | Draw buffer                                           |
-| `DRAW_BUFFER3_WEBGL`          | 0x8828 | Draw buffer                                           |
-| `DRAW_BUFFER4_WEBGL`          | 0x8829 | Draw buffer                                           |
-| `DRAW_BUFFER5_WEBGL`          | 0x882A | Draw buffer                                           |
-| `DRAW_BUFFER6_WEBGL`          | 0x882B | Draw buffer                                           |
-| `DRAW_BUFFER7_WEBGL`          | 0x882C | Draw buffer                                           |
-| `DRAW_BUFFER8_WEBGL`          | 0x882D | Draw buffer                                           |
-| `DRAW_BUFFER9_WEBGL`          | 0x882E | Draw buffer                                           |
-| `DRAW_BUFFER10_WEBGL`         | 0x882F | Draw buffer                                           |
-| `DRAW_BUFFER11_WEBGL`         | 0x8830 | Draw buffer                                           |
-| `DRAW_BUFFER12_WEBGL`         | 0x8831 | Draw buffer                                           |
-| `DRAW_BUFFER13_WEBGL`         | 0x8832 | Draw buffer                                           |
-| `DRAW_BUFFER14_WEBGL`         | 0x8833 | Draw buffer                                           |
-| `DRAW_BUFFER15_WEBGL`         | 0x8834 | Draw buffer                                           |
-| `MAX_COLOR_ATTACHMENTS_WEBGL` | 0x8CDF | Maximum number of framebuffer color attachment points |
-| `MAX_DRAW_BUFFERS_WEBGL`      | 0x8824 | Maximum number of draw buffers                        |
+| `cowow_attachment0_webgw`     | 0x8ce0 | fwamebuffew c-cowow attachment point                    |
+| `cowow_attachment1_webgw`     | 0x8ce1 | f-fwamebuffew c-cowow attachment p-point                    |
+| `cowow_attachment2_webgw`     | 0x8ce2 | f-fwamebuffew cowow a-attachment point                    |
+| `cowow_attachment3_webgw`     | 0x8ce3 | fwamebuffew cowow attachment point                    |
+| `cowow_attachment4_webgw`     | 0x8ce4 | fwamebuffew cowow attachment point                    |
+| `cowow_attachment5_webgw`     | 0x8ce5 | f-fwamebuffew c-cowow attachment p-point                    |
+| `cowow_attachment6_webgw`     | 0x8ce6 | fwamebuffew c-cowow attachment point                    |
+| `cowow_attachment7_webgw`     | 0x8ce7 | fwamebuffew cowow attachment point                    |
+| `cowow_attachment8_webgw`     | 0x8ce8 | f-fwamebuffew cowow a-attachment point                    |
+| `cowow_attachment9_webgw`     | 0x8ce9 | fwamebuffew c-cowow attachment point                    |
+| `cowow_attachment10_webgw`    | 0x8cea | fwamebuffew c-cowow attachment p-point                    |
+| `cowow_attachment11_webgw`    | 0x8ceb | fwamebuffew c-cowow attachment p-point                    |
+| `cowow_attachment12_webgw`    | 0x8cec | fwamebuffew cowow attachment point                    |
+| `cowow_attachment13_webgw`    | 0x8ced | fwamebuffew cowow a-attachment point                    |
+| `cowow_attachment14_webgw`    | 0x8cee | f-fwamebuffew c-cowow attachment p-point                    |
+| `cowow_attachment15_webgw`    | 0x8cef | f-fwamebuffew cowow attachment p-point                    |
+| `dwaw_buffew0_webgw`          | 0x8825 | d-dwaw buffew                                           |
+| `dwaw_buffew1_webgw`          | 0x8826 | dwaw b-buffew                                           |
+| `dwaw_buffew2_webgw`          | 0x8827 | d-dwaw buffew                                           |
+| `dwaw_buffew3_webgw`          | 0x8828 | dwaw buffew                                           |
+| `dwaw_buffew4_webgw`          | 0x8829 | d-dwaw buffew                                           |
+| `dwaw_buffew5_webgw`          | 0x882a | dwaw buffew                                           |
+| `dwaw_buffew6_webgw`          | 0x882b | dwaw b-buffew                                           |
+| `dwaw_buffew7_webgw`          | 0x882c | dwaw buffew                                           |
+| `dwaw_buffew8_webgw`          | 0x882d | d-dwaw buffew                                           |
+| `dwaw_buffew9_webgw`          | 0x882e | d-dwaw buffew                                           |
+| `dwaw_buffew10_webgw`         | 0x882f | dwaw buffew                                           |
+| `dwaw_buffew11_webgw`         | 0x8830 | d-dwaw buffew                                           |
+| `dwaw_buffew12_webgw`         | 0x8831 | dwaw b-buffew                                           |
+| `dwaw_buffew13_webgw`         | 0x8832 | d-dwaw buffew                                           |
+| `dwaw_buffew14_webgw`         | 0x8833 | d-dwaw buffew                                           |
+| `dwaw_buffew15_webgw`         | 0x8834 | dwaw buffew                                           |
+| `max_cowow_attachments_webgw` | 0x8cdf | maximum nyumbew of fwamebuffew c-cowow attachment points |
+| `max_dwaw_buffews_webgw`      | 0x8824 | maximum n-nyumbew of d-dwaw buffews                        |
 
-### {{domxref("OES_vertex_array_object")}}
+### {{domxwef("oes_vewtex_awway_object")}}
 
-| Constant name              | Value  | Description                          |
+| constant nyame              | v-vawue  | descwiption                          |
 | -------------------------- | ------ | ------------------------------------ |
-| `VERTEX_ARRAY_BINDING_OES` | 0x85B5 | The bound vertex array object (VAO). |
+| `vewtex_awway_binding_oes` | 0x85b5 | the bound v-vewtex awway o-object (vao). |
 
-### {{domxref("EXT_disjoint_timer_query")}}
+### {{domxwef("ext_disjoint_timew_quewy")}}
 
-| Constant name                | Value  | Description                                                                   |
+| constant nyame                | vawue  | descwiption                                                                   |
 | ---------------------------- | ------ | ----------------------------------------------------------------------------- |
-| `QUERY_COUNTER_BITS_EXT`     | 0x8864 | The number of bits used to hold the query result for the given target.        |
-| `CURRENT_QUERY_EXT`          | 0x8865 | The currently active query.                                                   |
-| `QUERY_RESULT_EXT`           | 0x8866 | The query result.                                                             |
-| `QUERY_RESULT_AVAILABLE_EXT` | 0x8867 | A Boolean indicating whether or not a query result is available.              |
-| `TIME_ELAPSED_EXT`           | 0x88BF | Elapsed time (in nanoseconds).                                                |
-| `TIMESTAMP_EXT`              | 0x8E28 | The current time.                                                             |
-| `GPU_DISJOINT_EXT`           | 0x8FBB | A Boolean indicating whether or not the GPU performed any disjoint operation. |
+| `quewy_countew_bits_ext`     | 0x8864 | the n-nyumbew of bits used to howd the quewy wesuwt f-fow the given tawget. :3        |
+| `cuwwent_quewy_ext`          | 0x8865 | t-the cuwwentwy active quewy. σωσ                                                   |
+| `quewy_wesuwt_ext`           | 0x8866 | t-the quewy wesuwt. >w<                                                             |
+| `quewy_wesuwt_avaiwabwe_ext` | 0x8867 | a b-boowean indicating w-whethew ow nyot a-a quewy wesuwt is avaiwabwe. (ˆ ﻌ ˆ)♡              |
+| `time_ewapsed_ext`           | 0x88bf | ewapsed time (in nyanoseconds). ʘwʘ                                                |
+| `timestamp_ext`              | 0x8e28 | the cuwwent time. :3                                                             |
+| `gpu_disjoint_ext`           | 0x8fbb | a boowean indicating whethew ow nyot the gpu pewfowmed any disjoint opewation. (˘ω˘) |
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- {{domxref("WebGLRenderingContext")}}
+- {{domxwef("webgwwendewingcontext")}}

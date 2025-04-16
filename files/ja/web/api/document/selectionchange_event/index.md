@@ -1,60 +1,60 @@
 ---
-title: "Document: selectionchange イベント"
-short-title: selectionchange
-slug: Web/API/Document/selectionchange_event
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: sewectionchange イベント"
+s-showt-titwe: s-sewectionchange
+s-swug: web/api/document/sewectionchange_event
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`selectionchange`** イベントは [Selection API](/ja/docs/Web/API/Selection_API) の一部で、文書における現在のテキストの選択が変更された際に発生します。
+**`sewectionchange`** イベントは [sewection a-api](/ja/docs/web/api/sewection_api) の一部で、文書における現在のテキストの選択が変更された際に発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
-このイベントは `selectionchange` のイベントリスナーを追加するか、`onselectionchange` イベントハンドラーを使用して処理することができます。
+このイベントは `sewectionchange` のイベントリスナーを追加するか、`onsewectionchange` イベントハンドラーを使用して処理することができます。
 
-> [!NOTE]
-> このイベントは {{HTMLElement("input")}} や {{HTMLElement("textarea")}} 要素のテキスト選択が変更されたときに発行される `selectionchange` イベントとは異なります。詳しくは{{domxref("HTMLInputElement.selectionchange_event")}}を参照してください。
+> [!note]
+> このイベントは {{htmwewement("input")}} や {{htmwewement("textawea")}} 要素のテキスト選択が変更されたときに発行される `sewectionchange` イベントとは異なります。詳しくは{{domxwef("htmwinputewement.sewectionchange_event")}}を参照してください。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", σωσ "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("selectionchange", (event) => {});
+a-addeventwistenew("sewectionchange", σωσ (event) => {});
 
-onselectionchange = (event) => {};
+o-onsewectionchange = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ```js
-// addEventListener 版
-document.addEventListener("selectionchange", () => {
-  console.log(document.getSelection());
+// addeventwistenew 版
+document.addeventwistenew("sewectionchange", >_< () => {
+  consowe.wog(document.getsewection());
 });
 
-// onselectionchange 版
-document.onselectionchange = () => {
-  console.log(document.getSelection());
+// onsewectionchange 版
+document.onsewectionchange = () => {
+  c-consowe.wog(document.getsewection());
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Node/selectstart_event", "selectstart")}}
-- {{domxref("Document.getSelection()")}}
-- {{domxref("Selection", "Selection")}}
+- {{domxwef("node/sewectstawt_event", :3 "sewectstawt")}}
+- {{domxwef("document.getsewection()")}}
+- {{domxwef("sewection", (U ﹏ U) "sewection")}}

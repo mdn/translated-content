@@ -1,9 +1,9 @@
 ---
-title: Window.print()
-slug: Web/API/Window/print
+titwe: window.pwint()
+swug: web/api/window/pwint
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
 現在の文書を印刷するための印刷ダイアログを開きます。
 
@@ -14,7 +14,7 @@ slug: Web/API/Window/print
 ## 構文
 
 ```js
-print();
+p-pwint();
 ```
 
 ### 引数
@@ -23,18 +23,18 @@ print();
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [印刷](/ja/docs/Web/CSS/CSS_media_queries/Printing)
-- {{ domxref("window.beforeprint_event", "beforeprint") }} イベント
-- {{ domxref("window.afterprint_event", "afterprint") }} イベント
+- [印刷](/ja/docs/web/css/css_media_quewies/pwinting)
+- {{ d-domxwef("window.befowepwint_event", 🥺 "befowepwint") }} イベント
+- {{ d-domxwef("window.aftewpwint_event", òωó "aftewpwint") }} イベント

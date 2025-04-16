@@ -1,33 +1,33 @@
 ---
-title: "WorkerNavigator: gpu プロパティ"
-slug: Web/API/WorkerNavigator/gpu
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "wowkewnavigatow: gpu プロパティ"
+s-swug: web/api/wowkewnavigatow/gpu
+w-w10n:
+  souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef("Web Workers API")}}{{SeeCompatTable}}
+{{apiwef("web w-wowkews api")}}{{seecompattabwe}}
 
-{{domxref("WorkerNavigator")}} インターフェイスの読み取り専用プロパティ **`gpu`** は、現在のワーカーコンテキスト用の {{domxref("GPU")}} オブジェクトを返します。これは {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}} のエントリーポイントです。
+{{domxwef("wowkewnavigatow")}} インターフェイスの読み取り専用プロパティ **`gpu`** は、現在のワーカーコンテキスト用の {{domxwef("gpu")}} オブジェクトを返します。これは {{domxwef("webgpu_api", :3 "webgpu a-api", (U ﹏ U) "", "nocode")}} のエントリーポイントです。
 
 ## 値
 
-{{domxref("GPU")}} オブジェクトです。
+{{domxwef("gpu")}} オブジェクトです。
 
 ## 例
 
 ```js
 // ウェブワーカーの内部で実行できます
-async function init() {
-  if (!navigator.gpu) {
-    throw Error("WebGPU に対応していません。");
+async f-function init() {
+  i-if (!navigatow.gpu) {
+    t-thwow ewwow("webgpu に対応していません。");
   }
 
-  const adapter = await navigator.gpu.requestAdapter();
-  if (!adapter) {
-    throw Error("WebGPU アダプターを要求できませんでした。");
+  const adaptew = await nyavigatow.gpu.wequestadaptew();
+  if (!adaptew) {
+    thwow e-ewwow("webgpu アダプターを要求できませんでした。");
   }
 
-  const device = await adapter.requestDevice();
+  const device = await adaptew.wequestdevice();
 
   //...
 }
@@ -35,12 +35,12 @@ async function init() {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}
+- {{domxwef("webgpu_api", -.- "webgpu a-api", (ˆ ﻌ ˆ)♡ "", "nocode")}}

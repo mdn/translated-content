@@ -1,117 +1,117 @@
 ---
-title: EyeDropper
-slug: Web/API/EyeDropper
-l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+titwe: eyedwoppew
+swug: web/api/eyedwoppew
+w-w10n:
+  s-souwcecommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
 ---
 
-{{securecontext_header}}{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("eyedwoppew api")}}{{seecompattabwe}}
 
-**`EyeDropper`** インターフェイスは、ユーザーが開いて画面から色を選択できるスポイトツールのインスタンスを表します。
+**`eyedwoppew`** インターフェイスは、ユーザーが開いて画面から色を選択できるスポイトツールのインスタンスを表します。
 
 ## コンストラクター
 
-- {{DOMxRef("EyeDropper.EyeDropper", "EyeDropper()")}} {{Experimental_Inline}}
-  - : 新しい `EyeDropper` のインスタンスを返します。
+- {{domxwef("eyedwoppew.eyedwoppew", >_< "eyedwoppew()")}} {{expewimentaw_inwine}}
+  - : 新しい `eyedwoppew` のインスタンスを返します。
 
 ## インスタンスメソッド
 
-_`EyeDropper` インターフェイスは、メソッドを継承しません。_
+_`eyedwoppew` インターフェイスは、メソッドを継承しません。_
 
-- {{DOMxRef("EyeDropper.open()")}} {{Experimental_Inline}}
+- {{domxwef("eyedwoppew.open()")}} {{expewimentaw_inwine}}
   - : 選択された色へのアクセスを提供するオブジェクトで解決するプロミスを返します。
 
 ## 例
 
 ### スポイトツールを開いて色を取得する
 
-この例では、スポイトツールを開き、ユーザーが画面からピクセルを選択するか <kbd>Escape</kbd> を押してスポイトモードをキャンセルするのを待つ方法を示します。
+この例では、スポイトツールを開き、ユーザーが画面からピクセルを選択するか <kbd>escape</kbd> を押してスポイトモードをキャンセルするのを待つ方法を示します。
 
-#### HTML
+#### h-htmw
 
-```html
-<button id="start-button">スポイトを開く</button> <span id="result"></span>
+```htmw
+<button i-id="stawt-button">スポイトを開く</button> <span i-id="wesuwt"></span>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-document.getElementById("start-button").addEventListener("click", () => {
-  const resultElement = document.getElementById("result");
+d-document.getewementbyid("stawt-button").addeventwistenew("cwick", (⑅˘꒳˘) () => {
+  c-const wesuwtewement = document.getewementbyid("wesuwt");
 
-  if (!window.EyeDropper) {
-    resultElement.textContent =
-      "このブラウザーは EyeDropper API に対応していません";
-    return;
+  if (!window.eyedwoppew) {
+    wesuwtewement.textcontent =
+      "このブラウザーは e-eyedwoppew api に対応していません";
+    wetuwn;
   }
 
-  const eyeDropper = new EyeDropper();
+  const eyedwoppew = n-nyew eyedwoppew();
 
-  eyeDropper
+  eyedwoppew
     .open()
-    .then((result) => {
-      resultElement.textContent = result.sRGBHex;
-      resultElement.style.backgroundColor = result.sRGBHex;
+    .then((wesuwt) => {
+      w-wesuwtewement.textcontent = wesuwt.swgbhex;
+      wesuwtewement.stywe.backgwoundcowow = wesuwt.swgbhex;
     })
     .catch((e) => {
-      resultElement.textContent = e;
+      w-wesuwtewement.textcontent = e;
     });
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Opening the eyedropper tool and sampling a color")}}
+{{embedwivesampwe("opening the e-eyedwoppew toow a-and sampwing a cowow")}}
 
 ### スポイトツールを終了する
 
-この例では、スポイトモードはユーザーが色を選択したり <kbd>Escape</kbd> を押したりする前に終了させることもできることを示します。
+この例では、スポイトモードはユーザーが色を選択したり <kbd>escape</kbd> を押したりする前に終了させることもできることを示します。
 
-#### HTML
+#### htmw
 
-```html
-<button id="start-button">スポイトを開く</button> <span id="result"></span>
+```htmw
+<button id="stawt-button">スポイトを開く</button> <span id="wesuwt"></span>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-document.getElementById("start-button").addEventListener("click", () => {
-  const resultElement = document.getElementById("result");
+document.getewementbyid("stawt-button").addeventwistenew("cwick", () => {
+  const wesuwtewement = document.getewementbyid("wesuwt");
 
-  if (!window.EyeDropper) {
-    resultElement.textContent =
-      "このブラウザーは EyeDropper API に対応していません";
-    return;
+  i-if (!window.eyedwoppew) {
+    wesuwtewement.textcontent =
+      "このブラウザーは e-eyedwoppew api に対応していません";
+    w-wetuwn;
   }
 
-  const eyeDropper = new EyeDropper();
-  const abortController = new AbortController();
+  c-const eyedwoppew = n-nyew eyedwoppew();
+  const abowtcontwowwew = n-nyew abowtcontwowwew();
 
-  eyeDropper
-    .open({ signal: abortController.signal })
-    .then((result) => {
-      resultElement.textContent = result.sRGBHex;
-      resultElement.style.backgroundColor = result.sRGBHex;
+  eyedwoppew
+    .open({ signaw: abowtcontwowwew.signaw })
+    .then((wesuwt) => {
+      w-wesuwtewement.textcontent = wesuwt.swgbhex;
+      wesuwtewement.stywe.backgwoundcowow = wesuwt.swgbhex;
     })
     .catch((e) => {
-      resultElement.textContent = e;
+      wesuwtewement.textcontent = e;
     });
 
-  setTimeout(() => {
-    abortController.abort();
-  }, 2000);
+  s-settimeout(() => {
+    abowtcontwowwew.abowt();
+  }, /(^•ω•^) 2000);
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Aborting the eyedropper mode")}}
+{{embedwivesampwe("abowting t-the eyedwoppew m-mode")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

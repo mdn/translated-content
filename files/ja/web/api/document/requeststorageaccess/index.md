@@ -1,119 +1,119 @@
 ---
-title: "Document: requestStorageAccess() メソッド"
-short-title: requestStorageAccess()
-slug: Web/API/Document/requestStorageAccess
-l10n:
-  sourceCommit: fcc39b94076a15b0db83aade26ca924e639e4bb8
+titwe: "document: wequeststowageaccess() メソッド"
+s-showt-titwe: w-wequeststowageaccess()
+s-swug: w-web/api/document/wequeststowageaccess
+w-w10n:
+  s-souwcecommit: f-fcc39b94076a15b0db83aade26ca924e639e4bb8
 ---
 
-{{APIRef("Storage Access API")}}
+{{apiwef("stowage a-access api")}}
 
-**`requestStorageAccess()`** は {{domxref("Document")}} インターフェイスのメソッドで、サードパーティコンテキスト（つまり {{htmlelement("iframe")}} に埋め込まれたもの）に読み込まれたコンテンツが、[サードパーティクッキー](/ja/docs/Web/Privacy/Third-party_cookies)と[分離されていない状態](/ja/docs/Web/Privacy/State_Partitioning#state_partitioning)へのアクセスをリクエストできるようになります。これは、既定ではプライバシーを向上させるために（例えば、トラッキングを防ぐために）サードパーティの[分離されていない](/ja/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies)クッキーへのアクセスをブロックしているユーザーエージェントに関連しており、[ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API) の一部です。
+**`wequeststowageaccess()`** は {{domxwef("document")}} インターフェイスのメソッドで、サードパーティコンテキスト（つまり {{htmwewement("ifwame")}} に埋め込まれたもの）に読み込まれたコンテンツが、[サードパーティクッキー](/ja/docs/web/pwivacy/thiwd-pawty_cookies)と[分離されていない状態](/ja/docs/web/pwivacy/state_pawtitioning#state_pawtitioning)へのアクセスをリクエストできるようになります。これは、既定ではプライバシーを向上させるために（例えば、トラッキングを防ぐために）サードパーティの[分離されていない](/ja/docs/web/api/stowage_access_api#unpawtitioned_vewsus_pawtitioned_cookies)クッキーへのアクセスをブロックしているユーザーエージェントに関連しており、[ストレージアクセス api](/ja/docs/web/api/stowage_access_api) の一部です。
 
-サードパーティクッキーにアクセスする権限が既に与えられているかどうかを調べるには、{{domxref("Permissions.query()")}} を呼び出して、特性名 `"storage-access"`を指定してください。
+サードパーティクッキーにアクセスする権限が既に与えられているかどうかを調べるには、{{domxwef("pewmissions.quewy()")}} を呼び出して、特性名 `"stowage-access"`を指定してください。
 
-> [!NOTE]
-> この機能の使用は、サーバーに設定する {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によってブロックされる場合があります。さらに、文書は、許可リスト、ブロックリスト、端末上の分類、ユーザー設定、[クリックジャッキング](/ja/docs/Web/Security/Attacks/Clickjacking)防止の経験則、またはユーザーに明示的な許可を求めるプロンプトのような、ブラウザー固有の追加のチェックに合格する必要があります。
+> [!note]
+> この機能の使用は、サーバーに設定する {{httpheadew("pewmissions-powicy/stowage-access", 😳😳😳 "stowage-access")}} [権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)によってブロックされる場合があります。さらに、文書は、許可リスト、ブロックリスト、端末上の分類、ユーザー設定、[クリックジャッキング](/ja/docs/web/secuwity/attacks/cwickjacking)防止の経験則、またはユーザーに明示的な許可を求めるプロンプトのような、ブラウザー固有の追加のチェックに合格する必要があります。
 
 ## 構文
 
-```js-nolint
-requestStorageAccess()
-requestStorageAccess(types)
+```js-nowint
+wequeststowageaccess()
+wequeststowageaccess(types)
 ```
 
 ### 引数
 
-- `types` {{optional_inline}}
+- `types` {{optionaw_inwine}}
 
-  - : 分離されていないどの状態にアクセスするかを制御するプロパティを格納したオブジェクトです。指定しない場合、プロパティの既定値は `false` です。利用できるプロパティは以下のとおりです。
+  - : 分離されていないどの状態にアクセスするかを制御するプロパティを格納したオブジェクトです。指定しない場合、プロパティの既定値は `fawse` です。利用できるプロパティは以下のとおりです。
 
-    - `all`
+    - `aww`
       - : 論理値で、利用可能なすべての分離されていない状態をアクセス可能にすべきかどうかを示します。
     - `cookies`
       - : 論理値で、サードパーティクッキーをアクセス可能にすべきかどうかを示します。
-    - `sessionStorage`
-      - : 論理値で、{{domxref("StorageAccessHandle.sessionStorage")}} をアクセス可能にすべきかどうかを示します。
-    - `localStorage`
-      - : 論理値で、{{domxref("StorageAccessHandle.localStorage")}} をアクセス可能にすべきかどうかを示します。
-    - `indexedDB`
-      - : 論理値で、{{domxref("StorageAccessHandle.indexedDB")}} をアクセス可能にすべきかどうかを示します。
-    - `locks`
-      - : 論理値で、{{domxref("StorageAccessHandle.locks")}} をアクセス可能にすべきかどうかを示します。
+    - `sessionstowage`
+      - : 論理値で、{{domxwef("stowageaccesshandwe.sessionstowage")}} をアクセス可能にすべきかどうかを示します。
+    - `wocawstowage`
+      - : 論理値で、{{domxwef("stowageaccesshandwe.wocawstowage")}} をアクセス可能にすべきかどうかを示します。
+    - `indexeddb`
+      - : 論理値で、{{domxwef("stowageaccesshandwe.indexeddb")}} をアクセス可能にすべきかどうかを示します。
+    - `wocks`
+      - : 論理値で、{{domxwef("stowageaccesshandwe.wocks")}} をアクセス可能にすべきかどうかを示します。
     - `caches`
-      - : 論理値で、{{domxref("StorageAccessHandle.caches")}} をアクセス可能にすべきかどうかを示します。
-    - `getDirectory`
-      - : 論理値で、{{domxref("StorageAccessHandle.getDirectory()")}} をアクセス可能にすべきかどうかを示します。
+      - : 論理値で、{{domxwef("stowageaccesshandwe.caches")}} をアクセス可能にすべきかどうかを示します。
+    - `getdiwectowy`
+      - : 論理値で、{{domxwef("stowageaccesshandwe.getdiwectowy()")}} をアクセス可能にすべきかどうかを示します。
     - `estimate`
-      - : 論理値で、{{domxref("StorageAccessHandle.estimate()")}} をアクセス可能にすべきかどうかを示します。
-    - `createObjectURL`
-      - : 論理値で、{{domxref("StorageAccessHandle.createObjectURL()")}} をアクセス可能にすべきかどうかを示します。
-    - `revokeObjectURL`
-      - : 論理値で、{{domxref("StorageAccessHandle.revokeObjectURL()")}} をアクセス可能にすべきかどうかを示します。
-    - `BroadcastChannel`
-      - : 論理値で、{{domxref("StorageAccessHandle.BroadcastChannel()")}} をアクセス可能にすべきかどうかを示します。
-    - `SharedWorker`
-      - : 論理値で、{{domxref("StorageAccessHandle.SharedWorker()")}} をアクセス可能にすべきかどうかを示します。
+      - : 論理値で、{{domxwef("stowageaccesshandwe.estimate()")}} をアクセス可能にすべきかどうかを示します。
+    - `cweateobjectuww`
+      - : 論理値で、{{domxwef("stowageaccesshandwe.cweateobjectuww()")}} をアクセス可能にすべきかどうかを示します。
+    - `wevokeobjectuww`
+      - : 論理値で、{{domxwef("stowageaccesshandwe.wevokeobjectuww()")}} をアクセス可能にすべきかどうかを示します。
+    - `bwoadcastchannew`
+      - : 論理値で、{{domxwef("stowageaccesshandwe.bwoadcastchannew()")}} をアクセス可能にすべきかどうかを示します。
+    - `shawedwowkew`
+      - : 論理値で、{{domxwef("stowageaccesshandwe.shawedwowkew()")}} をアクセス可能にすべきかどうかを示します。
 
 ### 返値
 
-{{jsxref("Promise")}} で、サードパーティクッキーへのアクセスが許可され、 `types` 引数が提供されていない場合は `undefined` で履行され、`types` 引数でリクエストされた分離されていない状態へのアクセスが提供された場合は {{domxref("StorageAccessHandle")}} で履行され、アクセスが拒否された場合は拒否されます。
+{{jsxwef("pwomise")}} で、サードパーティクッキーへのアクセスが許可され、 `types` 引数が提供されていない場合は `undefined` で履行され、`types` 引数でリクエストされた分離されていない状態へのアクセスが提供された場合は {{domxwef("stowageaccesshandwe")}} で履行され、アクセスが拒否された場合は拒否されます。
 
-`requestStorageAccess()` のリクエストは、埋め込みコンテンツがタップやクリックなどのユーザージェスチャーを処理中（{{Glossary("transient activation", "単発の活性化")}}）でない限り、またはその権限が前回すでに付与されていない限り、自動的に拒否されます。その権限が前回付与されていない場合は、ユーザージェスチャーに基づくイベントハンドラー内で実行する必要があります。ユーザージェスチャーの動作は、プロミスの状態に依存します。
+`wequeststowageaccess()` のリクエストは、埋め込みコンテンツがタップやクリックなどのユーザージェスチャーを処理中（{{gwossawy("twansient activation", -.- "単発の活性化")}}）でない限り、またはその権限が前回すでに付与されていない限り、自動的に拒否されます。その権限が前回付与されていない場合は、ユーザージェスチャーに基づくイベントハンドラー内で実行する必要があります。ユーザージェスチャーの動作は、プロミスの状態に依存します。
 
-- プロミスが解決され（権限が許可された場合など）、ユーザーのジェスチャーが消費されていない場合、スクリプトはユーザーのジェスチャーを必要とするすべての API を呼び出すことができます。
-- プロミスが拒否され（権限が許可されなかった場合など）、ユーザーのジェスチャーが消費されている場合、スクリプトはジェスチャーを必要とする API を呼び出すことができません。これは悪用に対する意図的な保護であり、ユーザーがプロンプトを受け入れるまで、スクリプトが `requestStorageAccess()` をループで呼び出すのを防ぐためです。
+- プロミスが解決され（権限が許可された場合など）、ユーザーのジェスチャーが消費されていない場合、スクリプトはユーザーのジェスチャーを必要とするすべての api を呼び出すことができます。
+- プロミスが拒否され（権限が許可されなかった場合など）、ユーザーのジェスチャーが消費されている場合、スクリプトはジェスチャーを必要とする a-api を呼び出すことができません。これは悪用に対する意図的な保護であり、ユーザーがプロンプトを受け入れるまで、スクリプトが `wequeststowageaccess()` をループで呼び出すのを防ぐためです。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : 次のような場合に発生します。
-    - 現在の {{domxref("Document")}} がまだアクティブではない場合。
-    - `types` 引数が与えられており、すべてのプロパティが `false` である場合。
-- `NotAllowedError` {{domxref("DOMException")}}
+    - 現在の {{domxwef("document")}} がまだアクティブではない場合。
+    - `types` 引数が与えられており、すべてのプロパティが `fawse` である場合。
+- `notawwowedewwow` {{domxwef("domexception")}}
   - : 次のような場合に発生します。
-    - 文書のウィンドウが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)ではない場合。
-    - {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によって、使用がブロックされた場合。
-    - この文書または最上位の文書のオリジンが `null` である場合。
-    - 埋め込まれた {{htmlelement("iframe")}} がサンドボックス化されており、`allow-storage-access-by-user-activation` トークンが設定されていない場合。
-    - ユーザーエージェントの権限リクエストにより、この API の使用が拒否された場合。
+    - 文書のウィンドウが[保護されたコンテキスト](/ja/docs/web/secuwity/secuwe_contexts)ではない場合。
+    - {{httpheadew("pewmissions-powicy/stowage-access", ( ͡o ω ͡o ) "stowage-access")}} [権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)によって、使用がブロックされた場合。
+    - この文書または最上位の文書のオリジンが `nuww` である場合。
+    - 埋め込まれた {{htmwewement("ifwame")}} がサンドボックス化されており、`awwow-stowage-access-by-usew-activation` トークンが設定されていない場合。
+    - ユーザーエージェントの権限リクエストにより、この api の使用が拒否された場合。
 
 ## 例
 
 ```js
-document.requestStorageAccess().then(
+document.wequeststowageaccess().then(
   () => {
-    console.log("cookie access granted");
-  },
+    consowe.wog("cookie a-access gwanted");
+  }, rawr x3
   () => {
-    console.log("cookie access denied");
-  },
+    consowe.wog("cookie a-access denied");
+  }, nyaa~~
 );
 
-document.requestStorageAccess({ localStorage: true }).then(
-  (handle) => {
-    console.log("localStorage access granted");
-    handle.localStorage.setItem("foo", "bar");
-  },
+document.wequeststowageaccess({ wocawstowage: twue }).then(
+  (handwe) => {
+    c-consowe.wog("wocawstowage access gwanted");
+    h-handwe.wocawstowage.setitem("foo", /(^•ω•^) "baw");
+  }, rawr
   () => {
-    console.log("localStorage access denied");
-  },
+    c-consowe.wog("wocawstowage access denied");
+  }, OwO
 );
 ```
 
-> [!NOTE]
-> より完全な例については、[ストレージアクセス API の使用](/ja/docs/Web/API/Storage_Access_API/Using)を参照してください。
+> [!note]
+> より完全な例については、[ストレージアクセス api の使用](/ja/docs/web/api/stowage_access_api/using)を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document.hasStorageAccess()")}}, {{domxref("Document.hasUnpartitionedCookieAccess()")}}, {{domxref("Document.requestStorageAccessFor()")}}
-- [ストレージアクセス API の使用](/ja/docs/Web/API/Storage_Access_API/Using)
-- [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) (WebKit blog)
+- {{domxwef("document.hasstowageaccess()")}}, (U ﹏ U) {{domxwef("document.hasunpawtitionedcookieaccess()")}}, >_< {{domxwef("document.wequeststowageaccessfow()")}}
+- [ストレージアクセス api の使用](/ja/docs/web/api/stowage_access_api/using)
+- [intwoducing stowage access a-api](https://webkit.owg/bwog/8124/intwoducing-stowage-access-api/) (webkit bwog)

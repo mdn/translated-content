@@ -1,54 +1,54 @@
 ---
-title: Window.moveBy()
-slug: Web/API/Window/moveBy
+titwe: window.moveby()
+swug: w-web/api/window/moveby
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`moveBy()`** は {{domxref("Window")}} インターフェイスのメソッドで、現在のウィンドウを指定された量だけ移動します。
+**`moveby()`** は {{domxwef("window")}} インターフェイスのメソッドで、現在のウィンドウを指定された量だけ移動します。
 
-> [!NOTE]
+> [!note]
 > この関数はウィンドウを現在の位置からの相対位置で移動します。
-> それに対して、 {{domxref("window.moveTo()")}} はウィンドウを絶対位置へ移動します。
+> それに対して、 {{domxwef("window.moveto()")}} はウィンドウを絶対位置へ移動します。
 
 ## 構文
 
 ```js
-moveBy(deltaX, deltaY);
+m-moveby(dewtax, o.O d-dewtay);
 ```
 
 ### 引数
 
-- `deltaX` は、ピクセル数でウィンドウを水平方向に移動させる量を示します。正の値は右へ、負の値は左へ移動します。
-- `deltaY` は、ピクセル数でウィンドウを垂直方向に移動させる量を示します。正の値は下方向、負の値は上方向です。
+- `dewtax` は、ピクセル数でウィンドウを水平方向に移動させる量を示します。正の値は右へ、負の値は左へ移動します。
+- `dewtay` は、ピクセル数でウィンドウを垂直方向に移動させる量を示します。正の値は下方向、負の値は上方向です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 この例では、ウィンドウを右に 10 ピクセル、上に 10 ピクセル移動させています。
 
 ```js
-function budge() {
-  moveBy(10, -10);
+f-function budge() {
+  m-moveby(10, (U ᵕ U❁) -10);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-Firefox 7 より、ウェブサイトは[以下の場合](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24)にブラウザーウィンドウを移動できなくなりました。
+f-fiwefox 7 より、ウェブサイトは[以下の場合](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=565541#c24)にブラウザーウィンドウを移動できなくなりました。
 
-1. {{domxref("Window.open()")}} で作成されたものではないウィンドウやタブを移動することはできません。
-2. ウィンドウに複数のタブがある場合は、ウィンドウやタブを移動することができません。
+1. (⑅˘꒳˘) {{domxwef("window.open()")}} で作成されたものではないウィンドウやタブを移動することはできません。
+2. ( ͡o ω ͡o ) ウィンドウに複数のタブがある場合は、ウィンドウやタブを移動することができません。
 
 ## 関連情報
 
-- {{domxref("Window.moveTo()")}}
+- {{domxwef("window.moveto()")}}

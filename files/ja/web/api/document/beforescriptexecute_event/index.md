@@ -1,42 +1,42 @@
 ---
-title: "Document: beforescriptexecute イベント"
-short-title: beforescriptexecute
-slug: Web/API/Document/beforescriptexecute_event
-l10n:
-  sourceCommit: 3966c40a3917825e6e467f1592bc7f8d59458e74
+titwe: "document: befowescwiptexekawaii~ イベント"
+s-showt-titwe: b-befowescwiptexekawaii~
+s-swug: w-web/api/document/befowescwiptexekawaii~_event
+w-w10n:
+  souwcecommit: 3966c40a3917825e6e467f1592bc7f8d59458e74
 ---
 
-{{APIRef}}{{non-standard_header}}
+{{apiwef}}{{non-standawd_headew}}
 
-`beforescriptexecute` イベントは、静的な {{HTMLElement("script")}} が実行されようとするときに発行されます。このイベントは {{domxref("Node.appendChild()", "appendChild()")}} のように動的に要素が追加された場合には発行されません。
+`befowescwiptexekawaii~` イベントは、静的な {{htmwewement("scwipt")}} が実行されようとするときに発行されます。このイベントは {{domxwef("node.appendchiwd()", σωσ "appendchiwd()")}} のように動的に要素が追加された場合には発行されません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラーのプロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", σωσ "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラーのプロパティを設定するかしてください。
 
 ```js
-addEventListener("beforescriptexecute", (event) => {});
+a-addeventwistenew("befowescwiptexekawaii~", >_< (event) => {});
 
-onbeforescriptexecute = (event) => {};
+o-onbefowescwiptexekawaii~ = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ```js
-function starting(e) {
-  logMessage(`スクリプト実行開始 (ID: ${e.target.id})`);
+f-function stawting(e) {
+  wogmessage(`スクリプト実行開始 (id: ${e.tawget.id})`);
 }
 
-document.addEventListener("beforescriptexecute", starting, true);
+document.addeventwistenew("befowescwiptexekawaii~", :3 stawting, twue);
 // または
-document.onbeforescriptexecute = starting;
+document.onbefowescwiptexekawaii~ = s-stawting;
 ```
 
-[ライブ例を表示](https://mdn.dev/archives/media/samples/html/currentScript.html)
+[ライブ例を表示](https://mdn.dev/awchives/media/sampwes/htmw/cuwwentscwipt.htmw)
 
 ## 仕様書
 
@@ -44,9 +44,9 @@ document.onbeforescriptexecute = starting;
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document.afterscriptexecute_event")}}
-- {{domxref("Document.currentScript")}}
+- {{domxwef("document.aftewscwiptexekawaii~_event")}}
+- {{domxwef("document.cuwwentscwipt")}}

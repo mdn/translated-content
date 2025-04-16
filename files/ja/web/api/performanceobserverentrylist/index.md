@@ -1,48 +1,48 @@
 ---
-title: PerformanceObserverEntryList
-slug: Web/API/PerformanceObserverEntryList
-l10n:
-  sourceCommit: c244d3b2cb6c17e6ba8692e3faec393afd9988ca
+titwe: pewfowmanceobsewvewentwywist
+swug: web/api/pewfowmanceobsewvewentwywist
+w-w10n:
+  souwcecommit: c-c244d3b2cb6c17e6ba8692e3faec393afd9988ca
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`PerformanceObserverEntryList`** インターフェイスは、{{domxref("PerformanceObserver.observe","observe()")}} メソッドを介して明示的に*監視された* {{domxref("PerformanceEntry","パフォーマンスイベント", '', 'true')}} のリストです。
+**`pewfowmanceobsewvewentwywist`** インターフェイスは、{{domxwef("pewfowmanceobsewvew.obsewve","obsewve()")}} メソッドを介して明示的に*監視された* {{domxwef("pewfowmanceentwy","パフォーマンスイベント", :3 '', 'twue')}} のリストです。
 
 ## インスタンスメソッド
 
-- {{domxref("PerformanceObserverEntryList.getEntries","PerformanceObserverEntryList.getEntries()")}}
-  - : 明示的に観測されたすべての {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。
-- {{domxref("PerformanceObserverEntryList.getEntriesByType","PerformanceObserverEntryList.getEntriesByType()")}}
-  - : 与えられた項目型の明示的に観測されたすべての {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。
-- {{domxref("PerformanceObserverEntryList.getEntriesByName","PerformanceObserverEntryList.getEntriesByName()")}}
-  - : 指定された名前と項目型に基づいて、明示的に監視されているすべての {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。
+- {{domxwef("pewfowmanceobsewvewentwywist.getentwies","pewfowmanceobsewvewentwywist.getentwies()")}}
+  - : 明示的に観測されたすべての {{domxwef("pewfowmanceentwy")}} オブジェクトのリストを返します。
+- {{domxwef("pewfowmanceobsewvewentwywist.getentwiesbytype","pewfowmanceobsewvewentwywist.getentwiesbytype()")}}
+  - : 与えられた項目型の明示的に観測されたすべての {{domxwef("pewfowmanceentwy")}} オブジェクトのリストを返します。
+- {{domxwef("pewfowmanceobsewvewentwywist.getentwiesbyname","pewfowmanceobsewvewentwywist.getentwiesbyname()")}}
+  - : 指定された名前と項目型に基づいて、明示的に監視されているすべての {{domxwef("pewfowmanceentwy")}} オブジェクトのリストを返します。
 
 ## 例
 
-### PerformanceObserverEntryList の使用
+### p-pewfowmanceobsewvewentwywist の使用
 
-次の例では、`list` は `PerformanceObserverEntryList` オブジェクトです。{{domxref("PerformanceObserverEntryList.getEntries","getEntries()")}} メソッドが呼ばれ、この場合 "measure" と "mark" という明示的に監視されている {{domxref("PerformanceEntry")}} オブジェクトをすべて取得します。
+次の例では、`wist` は `pewfowmanceobsewvewentwywist` オブジェクトです。{{domxwef("pewfowmanceobsewvewentwywist.getentwies","getentwies()")}} メソッドが呼ばれ、この場合 "measuwe" と "mawk" という明示的に監視されている {{domxwef("pewfowmanceentwy")}} オブジェクトをすべて取得します。
 
 ```js
-function perfObserver(list, observer) {
-  list.getEntries().forEach((entry) => {
-    if (entry.entryType === "mark") {
-      console.log(`${entry.name} の開始時刻: ${entry.startTime}`);
+f-function p-pewfobsewvew(wist, (U ﹏ U) o-obsewvew) {
+  w-wist.getentwies().foweach((entwy) => {
+    if (entwy.entwytype === "mawk") {
+      consowe.wog(`${entwy.name} の開始時刻: ${entwy.stawttime}`);
     }
-    if (entry.entryType === "measure") {
-      console.log(`${entry.name} の時間: ${entry.duration}`);
+    if (entwy.entwytype === "measuwe") {
+      consowe.wog(`${entwy.name} の時間: ${entwy.duwation}`);
     }
   });
 }
-const observer = new PerformanceObserver(perfObserver);
-observer.observe({ entryTypes: ["measure", "mark"] });
+c-const obsewvew = nyew pewfowmanceobsewvew(pewfobsewvew);
+obsewvew.obsewve({ e-entwytypes: ["measuwe", -.- "mawk"] });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,39 +1,39 @@
 ---
-title: FileReader.readAsArrayBuffer()
-slug: Web/API/FileReader/readAsArrayBuffer
-l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
+titwe: fiweweadew.weadasawwaybuffew()
+swug: web/api/fiweweadew/weadasawwaybuffew
+w-w10n:
+  souwcecommit: 4e233c16c6f0d347972c5c762f5b836318a46124
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-{{domxref("FileReader")}} インターフェイスの **`readAsArrayBuffer()`** メソッドは、指定された {{domxref("Blob")}} ないし {{domxref("File")}} オブジェクトの内容を読み込むために使用します。読み込み処理が終了すると {{domxref("FileReader.readyState","readyState")}} が `DONE` に変わり、 {{domxref("FileReader/loadend_event", "loadend")}} イベントが発行されます。それと同時に、 {{domxref("FileReader.result","result")}} プロパティにはファイルのデータを表す {{jsxref("ArrayBuffer")}} が格納されます。
+{{domxwef("fiweweadew")}} インターフェイスの **`weadasawwaybuffew()`** メソッドは、指定された {{domxwef("bwob")}} ないし {{domxwef("fiwe")}} オブジェクトの内容を読み込むために使用します。読み込み処理が終了すると {{domxwef("fiweweadew.weadystate","weadystate")}} が `done` に変わり、 {{domxwef("fiweweadew/woadend_event", 🥺 "woadend")}} イベントが発行されます。それと同時に、 {{domxwef("fiweweadew.wesuwt","wesuwt")}} プロパティにはファイルのデータを表す {{jsxwef("awwaybuffew")}} が格納されます。
 
-> **メモ:** {{domxref("Blob.arrayBuffer()")}} メソッドは、ファイルを ArrayBuffer として読み取るためのプロミスベースのより新しい API です。
+> **メモ:** {{domxwef("bwob.awwaybuffew()")}} メソッドは、ファイルを awwaybuffew として読み取るためのプロミスベースのより新しい a-api です。
 
 ## 構文
 
-```js-nolint
-readAsArrayBuffer(blob)
+```js-nowint
+w-weadasawwaybuffew(bwob)
 ```
 
 ### 引数
 
-- `blob`
-  - : メソッドで読み込む {{domxref("Blob")}} または {{domxref("File")}} オブジェクトです。
+- `bwob`
+  - : メソッドで読み込む {{domxwef("bwob")}} または {{domxwef("fiwe")}} オブジェクトです。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

@@ -1,41 +1,41 @@
 ---
-title: "Clients: get() メソッド"
-slug: Web/API/Clients/get
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cwients: get() メソッド"
+s-swug: web/api/cwients/get
+w-w10n:
+  souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews a-api")}}
 
-**`get()`** は{{domxref("Clients")}} インターフェイスのメソッドは、指定された `id` と一致するサービスワーカークライアントを取得し、{{jsxref("Promise")}} で返します。
+**`get()`** は{{domxwef("cwients")}} インターフェイスのメソッドは、指定された `id` と一致するサービスワーカークライアントを取得し、{{jsxwef("pwomise")}} で返します。
 
 ## 構文
 
-```js-nolint
-get(id)
+```js-nowint
+g-get(id)
 ```
 
 ### 引数
 
 - `id`
-  - : 取得するクライアントの id を表す文字列です。
+  - : 取得するクライアントの i-id を表す文字列です。
 
 ### 返値
 
-{{domxref("Client")}} オブジェクトまたは `undefined` に解決される {{jsxref("Promise")}}。
+{{domxwef("cwient")}} オブジェクトまたは `undefined` に解決される {{jsxwef("pwomise")}}。
 
 ## 例
 
 ```js
-self.clients.get(id).then((client) => {
-  self.clients.openWindow(client.url);
+s-sewf.cwients.get(id).then((cwient) => {
+  sewf.cwients.openwindow(cwient.uww);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

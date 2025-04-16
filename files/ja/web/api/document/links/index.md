@@ -1,34 +1,34 @@
 ---
-title: "Document: links プロパティ"
-short-title: links
-slug: Web/API/Document/links
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: winks プロパティ"
+s-showt-titwe: w-winks
+swug: w-web/api/document/winks
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`links`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、文書中のすべての {{HTMLElement("area")}} 要素および {{HTMLElement("a")}} 要素のうち、[href](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性の値があるものの集合を返します。
+**`winks`** は {{domxwef("document")}} インターフェイスの読み取り専用プロパティで、文書中のすべての {{htmwewement("awea")}} 要素および {{htmwewement("a")}} 要素のうち、[hwef](/ja/docs/web/htmw/wefewence/ewements/a#hwef) 属性の値があるものの集合を返します。
 
 ## 値
 
-{{domxref("HTMLCollection")}} です。
+{{domxwef("htmwcowwection")}} です。
 
 ## 例
 
 ```js
-for (const link of document.links) {
-  const linkHref = document.createTextNode(link.href);
-  const lineBreak = document.createElement("br");
-  document.body.appendChild(linkHref);
-  document.body.appendChild(lineBreak);
+f-fow (const wink o-of document.winks) {
+  const winkhwef = document.cweatetextnode(wink.hwef);
+  const winebweak = document.cweateewement("bw");
+  d-document.body.appendchiwd(winkhwef);
+  document.body.appendchiwd(winebweak);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

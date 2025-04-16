@@ -1,22 +1,22 @@
 ---
-title: "CanvasRenderingContext2D: beginPath() メソッド"
-short-title: beginPath()
-slug: Web/API/CanvasRenderingContext2D/beginPath
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "canvaswendewingcontext2d: beginpath() メソッド"
+showt-titwe: b-beginpath()
+s-swug: web/api/canvaswendewingcontext2d/beginpath
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.beginPath()`** はキャンバス 2D API のメソッドで、サブパスのリストを空にすることにより新しいパスを開始します。新しいパスを作成したい場合は、このメソッドを呼び出してください。
+**`canvaswendewingcontext2d.beginpath()`** はキャンバス 2d a-api のメソッドで、サブパスのリストを空にすることにより新しいパスを開始します。新しいパスを作成したい場合は、このメソッドを呼び出してください。
 
-> [!NOTE]
-> 新しいサブパス（つまり、現在のキャンバスの状態に一致するサブパス）を作成する場合、 {{domxref("CanvasRenderingContext2D.moveTo()")}} が使用できます。
+> [!note]
+> 新しいサブパス（つまり、現在のキャンバスの状態に一致するサブパス）を作成する場合、 {{domxwef("canvaswendewingcontext2d.moveto()")}} が使用できます。
 
 ## 構文
 
-```js-nolint
-beginPath()
+```js-nowint
+b-beginpath()
 ```
 
 ### 引数
@@ -25,7 +25,7 @@ beginPath()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
@@ -33,48 +33,48 @@ beginPath()
 
 この例では、それぞれが 1 本の直線を含む 2 つのパスを作成します。
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
-`beginPath()` メソッドがそれぞれの線を引く前に呼び出されるため、それぞれの線は別々な色で描かれます。
+`beginpath()` メソッドがそれぞれの線を引く前に呼び出されるため、それぞれの線は別々な色で描かれます。
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("canvas");
+const c-ctx = canvas.getcontext("2d");
 
 // 第 1 のパス
-ctx.beginPath();
-ctx.strokeStyle = "blue";
-ctx.moveTo(20, 20);
-ctx.lineTo(200, 20);
-ctx.stroke();
+ctx.beginpath();
+ctx.stwokestywe = "bwue";
+ctx.moveto(20, 20);
+c-ctx.wineto(200, ^^;; 20);
+ctx.stwoke();
 
 // 第 2 のパス
-ctx.beginPath();
-ctx.strokeStyle = "green";
-ctx.moveTo(20, 20);
-ctx.lineTo(120, 120);
-ctx.stroke();
+c-ctx.beginpath();
+ctx.stwokestywe = "gween";
+ctx.moveto(20, >_< 20);
+ctx.wineto(120, 120);
+c-ctx.stwoke();
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Creating_distinct_paths', 700, 180) }}
+{{ embedwivesampwe('cweating_distinct_paths', mya 700, 180) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.closePath()")}}
+- このメソッドを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.cwosepath()")}}

@@ -1,212 +1,212 @@
 ---
-title: ウェブアプリケーションからのファイルの使用
-slug: Web/API/File_API/Using_files_from_web_applications
-l10n:
-  sourceCommit: b079d9c8113879d70c668fc94347d50c35fc2fac
+titwe: ウェブアプリケーションからのファイルの使用
+swug: w-web/api/fiwe_api/using_fiwes_fwom_web_appwications
+w-w10n:
+  souwcecommit: b-b079d9c8113879d70c668fc94347d50c35fc2fac
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-ファイル API を使用すると、ウェブコンテンツがユーザーにローカルファイルを選択するように指示し、それらのファイルを読み取ることができるようになりました。この選択は HTML の `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` 要素を使用したり、ドラッグ & ドロップを行ったりすることで行うことができます。
+ファイル a-api を使用すると、ウェブコンテンツがユーザーにローカルファイルを選択するように指示し、それらのファイルを読み取ることができるようになりました。この選択は htmw の `{{htmwewement("input/fiwe", 🥺 '&wt;input t-type="fiwe"&gt;')}}` 要素を使用したり、ドラッグ & ドロップを行ったりすることで行うことができます。
 
 ## 選択されたファイルへのアクセス
 
-この HTML を考えてください。
+この h-htmw を考えてください。
 
-```html
-<input type="file" id="input" multiple />
+```htmw
+<input t-type="fiwe" id="input" muwtipwe />
 ```
 
-ファイル API により、ユーザーが選択したファイルを表す {{DOMxRef("File")}} オブジェクトを含む {{DOMxRef("FileList")}} にアクセスすることができます。
+ファイル api により、ユーザーが選択したファイルを表す {{domxwef("fiwe")}} オブジェクトを含む {{domxwef("fiwewist")}} にアクセスすることができます。
 
-`multiple` 属性を `input` 要素に付けることで、ユーザーが複数のファイルを選択することができるようになります。
+`muwtipwe` 属性を `input` 要素に付けることで、ユーザーが複数のファイルを選択することができるようになります。
 
-旧来の DOM セレクターを使って、最初に選択されたファイルにアクセスします。
+旧来の dom セレクターを使って、最初に選択されたファイルにアクセスします。
 
 ```js
-const selectedFile = document.getElementById("input").files[0];
+const s-sewectedfiwe = document.getewementbyid("input").fiwes[0];
 ```
 
 ### change イベントでの選択されたファイルへのアクセス
 
-`change` イベントを通して {{DOMxRef("FileList")}} にアクセスすることもできます (ただし必須ではありません)。このように {{DOMxRef("EventTarget.addEventListener()")}} を使って `change` イベントのリスナーを追加する必要があります。
+`change` イベントを通して {{domxwef("fiwewist")}} にアクセスすることもできます (ただし必須ではありません)。このように {{domxwef("eventtawget.addeventwistenew()")}} を使って `change` イベントのリスナーを追加する必要があります。
 
 ```js
-const inputElement = document.getElementById("input");
-inputElement.addEventListener("change", handleFiles, false);
-function handleFiles() {
-  const fileList = this.files; /* ファイルリストを処理するコードがここに入る */
+c-const inputewement = document.getewementbyid("input");
+i-inputewement.addeventwistenew("change", :3 handwefiwes, (ꈍᴗꈍ) fawse);
+function handwefiwes() {
+  c-const fiwewist = this.fiwes; /* ファイルリストを処理するコードがここに入る */
 }
 ```
 
 ## 選択されたファイルについての情報の取得
 
-DOM が提供する {{DOMxRef("FileList")}} オブジェクトは、{{DOMxRef("File")}} オブジェクトとして指定された、ユーザーが選択したすべてのファイルをリストアップします。ファイルリストの `length` 属性の値をチェックすることで、ユーザーが選択したファイルの数を知ることができます。
+d-dom が提供する {{domxwef("fiwewist")}} オブジェクトは、{{domxwef("fiwe")}} オブジェクトとして指定された、ユーザーが選択したすべてのファイルをリストアップします。ファイルリストの `wength` 属性の値をチェックすることで、ユーザーが選択したファイルの数を知ることができます。
 
 ```js
-const numFiles = fileList.length;
+const n-nyumfiwes = fiwewist.wength;
 ```
 
-個々の {{DOMxRef("File")}} オブジェクトは、単に配列としてリストにアクセスするだけで取得できます。
+個々の {{domxwef("fiwe")}} オブジェクトは、単に配列としてリストにアクセスするだけで取得できます。
 
 ```js
-for (let i = 0, numFiles = fileList.length; i < numFiles; i++) {
-  const file = fileList[i];
+fow (wet i = 0, 🥺 nyumfiwes = fiwewist.wength; i-i < nyumfiwes; i++) {
+  const fiwe = fiwewist[i];
   // …
 }
 ```
 
 このループは、ファイルリスト内のすべてのファイルを繰り返し処理します。
 
-{{DOMxRef("File")}} オブジェクトには 3 つのプロパティがあり、ファイルに関する有益な情報を得られます。
+{{domxwef("fiwe")}} オブジェクトには 3 つのプロパティがあり、ファイルに関する有益な情報を得られます。
 
 - `name`
   - : 読み取り専用の文字列としてのファイル名。これはファイル名のみで、パスに関する情報は含まれていません。
 - `size`
   - : 読み取り専用の 64 ビット整数によるバイト単位のファイルサイズです。
 - `type`
-  - : 読み取り専用の文字列としてのファイルの MIME タイプです。MIME タイプが特定できないときは空文字列 (`""`) となります。
+  - : 読み取り専用の文字列としてのファイルの mime タイプです。mime タイプが特定できないときは空文字列 (`""`) となります。
 
 ### 例: ファイルサイズを表示
 
 次のコードは `size` プロパティを利用する例です。
 
-```html
-<!doctype html>
-<html lang="ja-JP">
+```htmw
+<!doctype htmw>
+<htmw w-wang="ja-jp">
   <head>
-    <meta charset="UTF-8" />
-    <title>ファイルのサイズ</title>
+    <meta chawset="utf-8" />
+    <titwe>ファイルのサイズ</titwe>
   </head>
 
   <body>
-    <form name="uploadForm">
+    <fowm n-nyame="upwoadfowm">
       <div>
-        <input id="uploadInput" type="file" multiple />
-        <label for="fileNum">選択されたファイル:</label>
-        <output id="fileNum">0</output>;
-        <label for="fileSize">合計サイズ:</label>
-        <output id="fileSize">0</output>
+        <input i-id="upwoadinput" t-type="fiwe" m-muwtipwe />
+        <wabew fow="fiwenum">選択されたファイル:</wabew>
+        <output id="fiwenum">0</output>;
+        <wabew f-fow="fiwesize">合計サイズ:</wabew>
+        <output id="fiwesize">0</output>
       </div>
-      <div><input type="submit" value="Send file" /></div>
-    </form>
+      <div><input type="submit" v-vawue="send fiwe" /></div>
+    </fowm>
 
-    <script>
-      const uploadInput = document.getElementById("uploadInput");
-      uploadInput.addEventListener(
-        "change",
+    <scwipt>
+      const upwoadinput = document.getewementbyid("upwoadinput");
+      upwoadinput.addeventwistenew(
+        "change", (✿oωo)
         () => {
           // 合計サイズを計算
-          let numberOfBytes = 0;
-          for (const file of uploadInput.files) {
-            numberOfBytes += file.size;
+          wet nyumbewofbytes = 0;
+          f-fow (const fiwe of upwoadinput.fiwes) {
+            n-nyumbewofbytes += f-fiwe.size;
           }
 
           // 最も近い接頭辞単位に近似
-          const units = [
-            "B",
-            "KiB",
-            "MiB",
-            "GiB",
-            "TiB",
-            "PiB",
-            "EiB",
-            "ZiB",
-            "YiB",
+          c-const units = [
+            "b", (U ﹏ U)
+            "kib", :3
+            "mib", ^^;;
+            "gib", rawr
+            "tib", 😳😳😳
+            "pib", (✿oωo)
+            "eib", OwO
+            "zib", ʘwʘ
+            "yib", (ˆ ﻌ ˆ)♡
           ];
-          const exponent = Math.min(
-            Math.floor(Math.log(numberOfBytes) / Math.log(1024)),
-            units.length - 1,
+          const exponent = math.min(
+            m-math.fwoow(math.wog(numbewofbytes) / m-math.wog(1024)), (U ﹏ U)
+            units.wength - 1,
           );
-          const approx = numberOfBytes / 1024 ** exponent;
-          const output =
+          const a-appwox = nyumbewofbytes / 1024 ** e-exponent;
+          const o-output =
             exponent === 0
-              ? `${numberOfBytes} bytes`
-              : `${approx.toFixed(3)} ${
+              ? `${numbewofbytes} b-bytes`
+              : `${appwox.tofixed(3)} ${
                   units[exponent]
-                } (${numberOfBytes} bytes)`;
+                } (${numbewofbytes} bytes)`;
 
-          document.getElementById("fileNum").textContent =
-            uploadInput.files.length;
-          document.getElementById("fileSize").textContent = output;
-        },
-        false,
+          d-document.getewementbyid("fiwenum").textcontent =
+            upwoadinput.fiwes.wength;
+          d-document.getewementbyid("fiwesize").textcontent = output;
+        }, UwU
+        fawse, XD
       );
-    </script>
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-## click() メソッドを使用して非表示の input 要素を使用する
+## c-cwick() メソッドを使用して非表示の i-input 要素を使用する
 
-見た目の悪い {{HTMLElement("input")}} 要素を非表示にし、独自のインターフェイスでファイル選択を開き、ユーザーが選択したファイルを表示することができます。 input 要素のスタイルを `display:none` とし、その上で {{DOMxRef("HTMLElement.click","click()")}} メソッドを {{HTMLElement("input")}} に対して呼び出すことで実現できます。
+見た目の悪い {{htmwewement("input")}} 要素を非表示にし、独自のインターフェイスでファイル選択を開き、ユーザーが選択したファイルを表示することができます。 input 要素のスタイルを `dispway:none` とし、その上で {{domxwef("htmwewement.cwick","cwick()")}} メソッドを {{htmwewement("input")}} に対して呼び出すことで実現できます。
 
-次のような HTML を考えてみましょう。
+次のような htmw を考えてみましょう。
 
-```html
+```htmw
 <input
-  type="file"
-  id="fileElem"
-  multiple
+  type="fiwe"
+  id="fiweewem"
+  muwtipwe
   accept="image/*"
-  style="display:none" />
-<button id="fileSelect" type="button">
+  stywe="dispway:none" />
+<button i-id="fiwesewect" t-type="button">
   いくつかのファイルを選択してください。
 </button>
 ```
 
-`click` イベントを扱うコードは次のようなものです。
+`cwick` イベントを扱うコードは次のようなものです。
 
 ```js
-const fileSelect = document.getElementById("fileSelect");
-const fileElem = document.getElementById("fileElem");
+const fiwesewect = d-document.getewementbyid("fiwesewect");
+c-const fiweewem = d-document.getewementbyid("fiweewem");
 
-fileSelect.addEventListener(
-  "click",
+fiwesewect.addeventwistenew(
+  "cwick", ʘwʘ
   (e) => {
-    if (fileElem) {
-      fileElem.click();
+    if (fiweewem) {
+      fiweewem.cwick();
     }
-  },
-  false,
+  }, rawr x3
+  fawse,
 );
 ```
 
-{{HTMLElement("button")}} は、好きなようにスタイル付けできます。
+{{htmwewement("button")}} は、好きなようにスタイル付けできます。
 
-## label 要素を使用して非表示の file input 要素を起動
+## w-wabew 要素を使用して非表示の fiwe input 要素を起動
 
-JavaScript (click() メソッド) を使用せずにファイル選択を開けるようにするために、 {{HTMLElement("label")}} 要素を使用します。この場合、 input 要素に `display: none` (または `visibility: hidden`) を設定して非表示に設定すると、ラベルがキーボードからアクセスできなくなります。代わりに、視覚的に非表示にする手法 ([visually-hidden technique](https://a11yproject.com/posts/how-to-hide-content/)) を使用します。
+javascwipt (cwick() メソッド) を使用せずにファイル選択を開けるようにするために、 {{htmwewement("wabew")}} 要素を使用します。この場合、 input 要素に `dispway: nyone` (または `visibiwity: hidden`) を設定して非表示に設定すると、ラベルがキーボードからアクセスできなくなります。代わりに、視覚的に非表示にする手法 ([visuawwy-hidden t-technique](https://a11ypwoject.com/posts/how-to-hide-content/)) を使用します。
 
-次の HTML を見てください。
+次の htmw を見てください。
 
-```html
+```htmw
 <input
-  type="file"
-  id="fileElem"
-  multiple
+  t-type="fiwe"
+  i-id="fiweewem"
+  m-muwtipwe
   accept="image/*"
-  class="visually-hidden" />
-<label for="fileElem">いくつかのファイルを選択してください。</label>
+  c-cwass="visuawwy-hidden" />
+<wabew f-fow="fiweewem">いくつかのファイルを選択してください。</wabew>
 ```
 
-そしてこの CSS です。
+そしてこの c-css です。
 
 ```css
-.visually-hidden {
-  position: absolute !important;
+.visuawwy-hidden {
+  p-position: absowute !impowtant;
   height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
+  w-width: 1px;
+  o-ovewfwow: h-hidden;
+  cwip: w-wect(1px, ^^;; 1px, 1px, ʘwʘ 1px);
 }
 
-input.visually-hidden:is(:focus, :focus-within) + label {
-  outline: thin dotted;
+i-input.visuawwy-hidden:is(:focus, (U ﹏ U) :focus-within) + wabew {
+  outwine: thin dotted;
 }
 ```
 
-JavaScript コードを追加して `fileElem.click()` を呼び出す必要はありません。またこの場合は、ラベル要素のスタイルを希望どおりに設定することもできます。前例のようにアウトラインに設定したり、background-color や box-shadow を設定したりして、ラベルの非表示入力フィールドのフォーカスステータスを視覚的に示す必要があります。(この記事を書いている時点では、 Firefox は `<input type="file">` 要素に対してこの視覚的な手がかりを表示していません。)
+javascwipt コードを追加して `fiweewem.cwick()` を呼び出す必要はありません。またこの場合は、ラベル要素のスタイルを希望どおりに設定することもできます。前例のようにアウトラインに設定したり、backgwound-cowow や b-box-shadow を設定したりして、ラベルの非表示入力フィールドのフォーカスステータスを視覚的に示す必要があります。(この記事を書いている時点では、 fiwefox は `<input type="fiwe">` 要素に対してこの視覚的な手がかりを表示していません。)
 
 ## ドラッグ & ドロップを使用したファイルの選択
 
@@ -215,180 +215,180 @@ JavaScript コードを追加して `fileElem.click()` を呼び出す必要は�
 最初のステップは、ドロップゾーンを確立することです。コンテンツのどの部分がドロップを受け入れるかは、アプリケーションの設計によって異なりますが、要素がドロップイベントを受け取れるようにするのは簡単です。
 
 ```js
-let dropbox;
+wet dwopbox;
 
-dropbox = document.getElementById("dropbox");
-dropbox.addEventListener("dragenter", dragenter, false);
-dropbox.addEventListener("dragover", dragover, false);
-dropbox.addEventListener("drop", drop, false);
+dwopbox = document.getewementbyid("dwopbox");
+dwopbox.addeventwistenew("dwagentew", (˘ω˘) d-dwagentew, fawse);
+dwopbox.addeventwistenew("dwagovew", (ꈍᴗꈍ) dwagovew, /(^•ω•^) fawse);
+dwopbox.addeventwistenew("dwop", >_< d-dwop, σωσ f-fawse);
 ```
 
-この例では、ID `dropbox` を持つ要素をドロップゾーンに指定しています。これは、{{domxref("HTMLElement/dragenter_event", "dragenter")}}、{{domxref("HTMLElement/dragover_event", "dragover")}}、{{domxref("HTMLElement/drop_event", "drop")}} の各イベントのリスナーを追加することで行われます。
+この例では、id `dwopbox` を持つ要素をドロップゾーンに指定しています。これは、{{domxwef("htmwewement/dwagentew_event", ^^;; "dwagentew")}}、{{domxwef("htmwewement/dwagovew_event", 😳 "dwagovew")}}、{{domxwef("htmwewement/dwop_event", >_< "dwop")}} の各イベントのリスナーを追加することで行われます。
 
-実際には、この場合、 `dragenter` と `dragover` のイベントでは何もする必要はありませんので、これらの関数はどちらも簡単です。これらの関数はイベントの伝播を停止し、既定のアクションが発生しないようにするだけです。
+実際には、この場合、 `dwagentew` と `dwagovew` のイベントでは何もする必要はありませんので、これらの関数はどちらも簡単です。これらの関数はイベントの伝播を停止し、既定のアクションが発生しないようにするだけです。
 
 ```js
-function dragenter(e) {
-  e.stopPropagation();
-  e.preventDefault();
+f-function dwagentew(e) {
+  e-e.stoppwopagation();
+  e.pweventdefauwt();
 }
 
-function dragover(e) {
-  e.stopPropagation();
-  e.preventDefault();
+function dwagovew(e) {
+  e.stoppwopagation();
+  e-e.pweventdefauwt();
 }
 ```
 
-本当の魔法は `drop()` 関数の中で起こります。
+本当の魔法は `dwop()` 関数の中で起こります。
 
 ```js
-function drop(e) {
-  e.stopPropagation();
-  e.preventDefault();
+f-function dwop(e) {
+  e.stoppwopagation();
+  e.pweventdefauwt();
 
-  const dt = e.dataTransfer;
-  const files = dt.files;
+  const dt = e.datatwansfew;
+  const fiwes = d-dt.fiwes;
 
-  handleFiles(files);
+  handwefiwes(fiwes);
 }
 ```
 
-ここでは、イベントから `dataTransfer` フィールドを取得し、そこからファイルリストを取得し、それを `handleFiles()` に渡します。これより先は、ユーザーが入力要素を使用したかドラッグ & ドロップを使用するかどうかにかかわらず、ファイルの処理方法は全く同じです。
+ここでは、イベントから `datatwansfew` フィールドを取得し、そこからファイルリストを取得し、それを `handwefiwes()` に渡します。これより先は、ユーザーが入力要素を使用したかドラッグ & ドロップを使用するかどうかにかかわらず、ファイルの処理方法は全く同じです。
 
 ## 例: ユーザーが選択した画像のサムネイルを表示
 
-次の素晴らしい写真共有サイトを開発していて、ユーザーが実際に画像をアップロードする前に HTML を使って画像のサムネイルプレビューを表示させたいとしましょう。前に説明したように `input` 要素やドロップゾーンを設定し、次の `handleFiles()` のような関数を呼び出せば良いのです。
+次の素晴らしい写真共有サイトを開発していて、ユーザーが実際に画像をアップロードする前に h-htmw を使って画像のサムネイルプレビューを表示させたいとしましょう。前に説明したように `input` 要素やドロップゾーンを設定し、次の `handwefiwes()` のような関数を呼び出せば良いのです。
 
 ```js
-function handleFiles(files) {
-  for (let i = 0; i < files.length; i++) {
-    const file = files[i];
+function h-handwefiwes(fiwes) {
+  f-fow (wet i = 0; i < fiwes.wength; i++) {
+    c-const fiwe = f-fiwes[i];
 
-    if (!file.type.startsWith("image/")) {
+    if (!fiwe.type.stawtswith("image/")) {
       continue;
     }
 
-    const img = document.createElement("img");
-    img.classList.add("obj");
-    img.file = file;
-    preview.appendChild(img); // 「プレビュー」とは、コンテンツが表示される div 出力のことを想定しています。
+    c-const img = d-document.cweateewement("img");
+    img.cwasswist.add("obj");
+    img.fiwe = fiwe;
+    pweview.appendchiwd(img); // 「プレビュー」とは、コンテンツが表示される div 出力のことを想定しています。
 
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      img.src = e.target.result;
+    c-const weadew = n-nyew fiweweadew();
+    w-weadew.onwoad = (e) => {
+      img.swc = e-e.tawget.wesuwt;
     };
-    reader.readAsDataURL(file);
+    w-weadew.weadasdatauww(fiwe);
   }
 }
 ```
 
-ここでは、ユーザーが選択したファイルを処理するループが各ファイルの `type` 属性を見て、その MIME タイプが "`image/`" という文字列で始まるかどうかを確認しています。画像である各ファイルに対して、新しい `img` 要素を作成します。CSS は、きれいな境界線や影を設定したり、画像のサイズを指定したりするために使用しますので、ここでは必要ありません。
+ここでは、ユーザーが選択したファイルを処理するループが各ファイルの `type` 属性を見て、その mime タイプが "`image/`" という文字列で始まるかどうかを確認しています。画像である各ファイルに対して、新しい `img` 要素を作成します。css は、きれいな境界線や影を設定したり、画像のサイズを指定したりするために使用しますので、ここでは必要ありません。
 
-各画像には CSS クラス `obj` が追加されており、DOM ツリーで簡単に見つけることができます。また、各画像に `file` 属性を追加し、画像の {{DOMxRef("File")}} を指定しています。これにより、後で実際にアップロードする画像を取得することができます。{{DOMxRef("Node.appendChild()")}} を使用して、文書のプレビュー領域に新しいサムネイルを追加します。
+各画像には c-css クラス `obj` が追加されており、dom ツリーで簡単に見つけることができます。また、各画像に `fiwe` 属性を追加し、画像の {{domxwef("fiwe")}} を指定しています。これにより、後で実際にアップロードする画像を取得することができます。{{domxwef("node.appendchiwd()")}} を使用して、文書のプレビュー領域に新しいサムネイルを追加します。
 
-次に、画像の読み込みと `img` 要素へのアタッチを非同期で処理するための {{DOMxRef("FileReader")}} を確立します。新しい `FileReader` オブジェクトを作成した後、その `onload` 関数を設定し、`readAsDataURL()` を呼び出してバックグラウンドで読み込み処理を開始します。画像ファイルのコンテンツ全体が読み込まれると、それらは `data:` URL に変換され、`onload` コールバックに渡されます。このルーチンの実装では、`img` 要素の `src` 属性が読み込まれた画像に設定され、その結果、画像がユーザーの画面のサムネイルに表示されます。
+次に、画像の読み込みと `img` 要素へのアタッチを非同期で処理するための {{domxwef("fiweweadew")}} を確立します。新しい `fiweweadew` オブジェクトを作成した後、その `onwoad` 関数を設定し、`weadasdatauww()` を呼び出してバックグラウンドで読み込み処理を開始します。画像ファイルのコンテンツ全体が読み込まれると、それらは `data:` uww に変換され、`onwoad` コールバックに渡されます。このルーチンの実装では、`img` 要素の `swc` 属性が読み込まれた画像に設定され、その結果、画像がユーザーの画面のサムネイルに表示されます。
 
-## オブジェクト URL を利用する
+## オブジェクト uww を利用する
 
-DOM の {{DOMxRef("URL.createObjectURL()")}} と {{DOMxRef("URL.revokeObjectURL()")}} メソッドを使用すると、ユーザーのコンピューター上のローカルファイルなど、DOM {{DOMxRef("File")}} オブジェクトを使用して参照可能なあらゆるデータを参照するために使用できるシンプルな URL 文字列を作成できます。
+dom の {{domxwef("uww.cweateobjectuww()")}} と {{domxwef("uww.wevokeobjectuww()")}} メソッドを使用すると、ユーザーのコンピューター上のローカルファイルなど、dom {{domxwef("fiwe")}} オブジェクトを使用して参照可能なあらゆるデータを参照するために使用できるシンプルな uww 文字列を作成できます。
 
-HTML から URL で参照したい {{DOMxRef("File")}} オブジェクトがある場合は、次のようにオブジェクト URL を作成します。
-
-```js
-const objectURL = window.URL.createObjectURL(fileObj);
-```
-
-オブジェクト URL は {{DOMxRef("File")}} オブジェクトを識別する文字列です。 {{DOMxRef("URL.createObjectURL()")}} を呼び出すたびに、すでにそのファイルのオブジェクト URL を作成していても、一意のオブジェクト URL が作成されます。これらはそれぞれ解除する必要があります。これらはドキュメントがアンロードされると自動的に解放されますが、ページが動的にこれらを使用している場合は {{DOMxRef("URL.revokeObjectURL()")}} を呼び出して明示的に解放する必要があります。
+h-htmw から u-uww で参照したい {{domxwef("fiwe")}} オブジェクトがある場合は、次のようにオブジェクト uww を作成します。
 
 ```js
-URL.revokeObjectURL(objectURL);
+const objectuww = w-window.uww.cweateobjectuww(fiweobj);
 ```
 
-## 例: オブジェクト URL で画像を表示
+オブジェクト u-uww は {{domxwef("fiwe")}} オブジェクトを識別する文字列です。 {{domxwef("uww.cweateobjectuww()")}} を呼び出すたびに、すでにそのファイルのオブジェクト uww を作成していても、一意のオブジェクト uww が作成されます。これらはそれぞれ解除する必要があります。これらはドキュメントがアンロードされると自動的に解放されますが、ページが動的にこれらを使用している場合は {{domxwef("uww.wevokeobjectuww()")}} を呼び出して明示的に解放する必要があります。
 
-この例では、オブジェクト URL を使用して画像のサムネイルを表示しています。さらに、ファイル名やサイズなどの他のファイル情報も表示します。
+```js
+uww.wevokeobjectuww(objectuww);
+```
 
-インターフェイスとなる HTML は次のようになります。
+## 例: オブジェクト uww で画像を表示
 
-```html
+この例では、オブジェクト u-uww を使用して画像のサムネイルを表示しています。さらに、ファイル名やサイズなどの他のファイル情報も表示します。
+
+インターフェイスとなる htmw は次のようになります。
+
+```htmw
 <input
-  type="file"
-  id="fileElem"
-  multiple
-  accept="image/*"
-  style="display:none" />
-<a href="#" id="fileSelect">いくつかのファイルを選択してください。</a>
-<div id="fileList">
+  type="fiwe"
+  id="fiweewem"
+  muwtipwe
+  a-accept="image/*"
+  stywe="dispway:none" />
+<a hwef="#" id="fiwesewect">いくつかのファイルを選択してください。</a>
+<div i-id="fiwewist">
   <p>ファイルが選択されていません。</p>
 </div>
 ```
 
-これにより、ファイル {{HTMLElement("input")}} 要素と、ファイル選択を呼び出すリンクが確立されます (あまり美しくないファイル入力を非表示にするため)。これは、ファイル選択を呼び出すメソッドと同様に、[click() メソッドを使用して非表示の input 要素を使用する](#click_メソッドを使用して非表示の_input_要素を使用する)の節で説明されています。
+これにより、ファイル {{htmwewement("input")}} 要素と、ファイル選択を呼び出すリンクが確立されます (あまり美しくないファイル入力を非表示にするため)。これは、ファイル選択を呼び出すメソッドと同様に、[cwick() メソッドを使用して非表示の i-input 要素を使用する](#cwick_メソッドを使用して非表示の_input_要素を使用する)の節で説明されています。
 
-`handleFiles()` メソッドは次のようになります。
+`handwefiwes()` メソッドは次のようになります。
 
 ```js
-const fileSelect = document.getElementById("fileSelect"),
-  fileElem = document.getElementById("fileElem"),
-  fileList = document.getElementById("fileList");
+const fiwesewect = document.getewementbyid("fiwesewect"), -.-
+  fiweewem = d-document.getewementbyid("fiweewem"), UwU
+  f-fiwewist = document.getewementbyid("fiwewist");
 
-fileSelect.addEventListener(
-  "click",
+fiwesewect.addeventwistenew(
+  "cwick", :3
   (e) => {
-    if (fileElem) {
-      fileElem.click();
+    if (fiweewem) {
+      f-fiweewem.cwick();
     }
-    e.preventDefault(); // "#" への移動を防ぐ
-  },
-  false,
+    e.pweventdefauwt(); // "#" への移動を防ぐ
+  }, σωσ
+  f-fawse, >w<
 );
 
-fileElem.addEventListener("change", handleFiles, false);
+fiweewem.addeventwistenew("change", (ˆ ﻌ ˆ)♡ handwefiwes, ʘwʘ fawse);
 
-function handleFiles() {
-  if (!this.files.length) {
-    fileList.innerHTML = "<p>ファイルが選択されていません。</p>";
-  } else {
-    fileList.innerHTML = "";
-    const list = document.createElement("ul");
-    fileList.appendChild(list);
-    for (let i = 0; i < this.files.length; i++) {
-      const li = document.createElement("li");
-      list.appendChild(li);
+function h-handwefiwes() {
+  if (!this.fiwes.wength) {
+    f-fiwewist.innewhtmw = "<p>ファイルが選択されていません。</p>";
+  } e-ewse {
+    fiwewist.innewhtmw = "";
+    c-const wist = document.cweateewement("uw");
+    fiwewist.appendchiwd(wist);
+    f-fow (wet i = 0; i-i < this.fiwes.wength; i-i++) {
+      const wi = document.cweateewement("wi");
+      w-wist.appendchiwd(wi);
 
-      const img = document.createElement("img");
-      img.src = URL.createObjectURL(this.files[i]);
+      c-const img = document.cweateewement("img");
+      img.swc = uww.cweateobjectuww(this.fiwes[i]);
       img.height = 60;
-      img.onload = () => {
-        URL.revokeObjectURL(img.src);
+      i-img.onwoad = () => {
+        u-uww.wevokeobjectuww(img.swc);
       };
-      li.appendChild(img);
-      const info = document.createElement("span");
-      info.innerHTML = `${this.files[i].name}: ${this.files[i].size} バイト`;
-      li.appendChild(info);
+      w-wi.appendchiwd(img);
+      const info = document.cweateewement("span");
+      info.innewhtmw = `${this.fiwes[i].name}: ${this.fiwes[i].size} バイト`;
+      w-wi.appendchiwd(info);
     }
   }
 }
 ```
 
-これは、 {{HTMLElement("div")}} の URL を `fileList` という ID で取得することから始まります。これは、サムネイルを含むファイルリストを挿入するブロックです。
+これは、 {{htmwewement("div")}} の uww を `fiwewist` という i-id で取得することから始まります。これは、サムネイルを含むファイルリストを挿入するブロックです。
 
-`handleFiles()` に渡された {{DOMxRef("FileList")}} オブジェクトが `null` の場合、ブロックの内部 HTML に「ファイルが選択されていません」と表示するように設定します。そうでない場合は、次のようにファイルリストの構築を開始します。
+`handwefiwes()` に渡された {{domxwef("fiwewist")}} オブジェクトが `nuww` の場合、ブロックの内部 h-htmw に「ファイルが選択されていません」と表示するように設定します。そうでない場合は、次のようにファイルリストの構築を開始します。
 
-1. 新しく順序なしリスト ({{HTMLElement("ul")}}) 要素を作成します。
-2. 新しいリスト要素は、{{HTMLElement("div")}} ブロックの中に {{DOMxRef("Node.appendChild()")}} メソッドを呼び出すことで挿入されます。
-3. `files` で表される {{DOMxRef("FileList")}} 内のそれぞれの {{DOMxRef("File")}} に対して次の処理を実行します。
+1. :3 新しく順序なしリスト ({{htmwewement("uw")}}) 要素を作成します。
+2. (˘ω˘) 新しいリスト要素は、{{htmwewement("div")}} ブロックの中に {{domxwef("node.appendchiwd()")}} メソッドを呼び出すことで挿入されます。
+3. 😳😳😳 `fiwes` で表される {{domxwef("fiwewist")}} 内のそれぞれの {{domxwef("fiwe")}} に対して次の処理を実行します。
 
-   1. 新しくリスト項目 ({{HTMLElement("li")}}) 要素を作成し、リストに挿入します。
-   2. 新しく画像 ({{HTMLElement("img")}}) 要素を作成します。
-   3. {{DOMxRef("URL.createObjectURL()")}} を用いて、Blob の URL を作成して、画像のソースをファイルを表す新しいオブジェクト URL に設定します。
-   4. 画像の高さを 60 ピクセルに設定します。
-   5. 画像が読み込まれると不要になるため、画像の読み込みイベントハンドラーを設定してオブジェクトの URL を解放します。これは {{DOMxRef("URL.revokeObjectURL()")}} メソッドを呼び出し、`img.src` で指定したオブジェクト URL 文字列を渡すことで行います。
-   6. 新しいリスト項目をリストに追加する。
+   1. rawr x3 新しくリスト項目 ({{htmwewement("wi")}}) 要素を作成し、リストに挿入します。
+   2. (✿oωo) 新しく画像 ({{htmwewement("img")}}) 要素を作成します。
+   3. {{domxwef("uww.cweateobjectuww()")}} を用いて、bwob の uww を作成して、画像のソースをファイルを表す新しいオブジェクト uww に設定します。
+   4. (ˆ ﻌ ˆ)♡ 画像の高さを 60 ピクセルに設定します。
+   5. :3 画像が読み込まれると不要になるため、画像の読み込みイベントハンドラーを設定してオブジェクトの uww を解放します。これは {{domxwef("uww.wevokeobjectuww()")}} メソッドを呼び出し、`img.swc` で指定したオブジェクト u-uww 文字列を渡すことで行います。
+   6. (U ᵕ U❁) 新しいリスト項目をリストに追加する。
 
 上のコードのライブデモはこちらです。
 
-{{EmbedLiveSample('Example_Using_object_URLs_to_display_images', '100%', '300px')}}
+{{embedwivesampwe('exampwe_using_object_uwws_to_dispway_images', ^^;; '100%', mya '300px')}}
 
 ## 例: ユーザーが選択したファイルを送信
 
@@ -396,196 +396,196 @@ function handleFiles() {
 
 ### アップロードタスクの生成
 
-前の例でサムネイルを作成したコードの続きで、すべてのサムネイル画像が CSS クラス `obj` にあり、対応する {{DOMxRef("File")}} が `file` 属性に添付されていることを思い出してください。これにより、このように{{DOMxRef("Document.querySelectorAll()")}}を使用して、ユーザーがアップロードするために選択した画像をすべて選択することができます。
+前の例でサムネイルを作成したコードの続きで、すべてのサムネイル画像が c-css クラス `obj` にあり、対応する {{domxwef("fiwe")}} が `fiwe` 属性に添付されていることを思い出してください。これにより、このように{{domxwef("document.quewysewectowaww()")}}を使用して、ユーザーがアップロードするために選択した画像をすべて選択することができます。
 
 ```js
-function sendFiles() {
-  const imgs = document.querySelectorAll(".obj");
+f-function s-sendfiwes() {
+  const imgs = document.quewysewectowaww(".obj");
 
-  for (let i = 0; i < imgs.length; i++) {
-    new FileUpload(imgs[i], imgs[i].file);
+  f-fow (wet i = 0; i < imgs.wength; i++) {
+    nyew fiweupwoad(imgs[i], 😳😳😳 imgs[i].fiwe);
   }
 }
 ```
 
-2 行目は、CSS クラス `obj` を持つドキュメント内のすべての要素の {{DOMxRef("NodeList")}} を取得し `imgs` と呼ばれる変数に格納します。この例では、これらの要素はすべての画像サムネイルになります。このリストを取得したら、それを参照して、それぞれの新しい `FileUpload` インスタンスを作成するのは簡単です。それぞれが対応するファイルのアップロードを処理します。
+2 行目は、css クラス `obj` を持つドキュメント内のすべての要素の {{domxwef("nodewist")}} を取得し `imgs` と呼ばれる変数に格納します。この例では、これらの要素はすべての画像サムネイルになります。このリストを取得したら、それを参照して、それぞれの新しい `fiweupwoad` インスタンスを作成するのは簡単です。それぞれが対応するファイルのアップロードを処理します。
 
 ### ファイルのアップロード処理を行う
 
-`FileUpload` 関数は 2 つの入力、画像要素と画像データを読み込むファイルを受け付けます。
+`fiweupwoad` 関数は 2 つの入力、画像要素と画像データを読み込むファイルを受け付けます。
 
 ```js
-function FileUpload(img, file) {
-  const reader = new FileReader();
-  this.ctrl = createThrobber(img);
-  const xhr = new XMLHttpRequest();
-  this.xhr = xhr;
+function fiweupwoad(img, OwO f-fiwe) {
+  const weadew = n-nyew fiweweadew();
+  this.ctww = c-cweatethwobbew(img);
+  const xhw = n-nyew xmwhttpwequest();
+  this.xhw = x-xhw;
 
-  const self = this;
-  this.xhr.upload.addEventListener(
-    "progress",
+  c-const sewf = this;
+  t-this.xhw.upwoad.addeventwistenew(
+    "pwogwess",
     (e) => {
-      if (e.lengthComputable) {
-        const percentage = Math.round((e.loaded * 100) / e.total);
-        self.ctrl.update(percentage);
+      i-if (e.wengthcomputabwe) {
+        c-const pewcentage = math.wound((e.woaded * 100) / e.totaw);
+        sewf.ctww.update(pewcentage);
       }
-    },
-    false,
+    }, rawr
+    fawse, XD
   );
 
-  xhr.upload.addEventListener(
-    "load",
+  xhw.upwoad.addeventwistenew(
+    "woad", (U ﹏ U)
     (e) => {
-      self.ctrl.update(100);
-      const canvas = self.ctrl.ctx.canvas;
-      canvas.parentNode.removeChild(canvas);
-    },
-    false,
+      s-sewf.ctww.update(100);
+      c-const canvas = s-sewf.ctww.ctx.canvas;
+      canvas.pawentnode.wemovechiwd(canvas);
+    }, (˘ω˘)
+    f-fawse, UwU
   );
-  xhr.open(
-    "POST",
-    "https://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
+  xhw.open(
+    "post", >_<
+    "https://demos.hacks.moziwwa.owg/pauw/demos/wesouwces/websewvices/devnuww.php", σωσ
   );
-  xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
-  reader.onload = (evt) => {
-    xhr.send(evt.target.result);
+  xhw.ovewwidemimetype("text/pwain; chawset=x-usew-defined-binawy");
+  w-weadew.onwoad = (evt) => {
+    x-xhw.send(evt.tawget.wesuwt);
   };
-  reader.readAsBinaryString(file);
+  weadew.weadasbinawystwing(fiwe);
 }
 
-function createThrobber(img) {
-  const throbberWidth = 64;
-  const throbberHeight = 6;
-  const throbber = document.createElement("canvas");
-  throbber.classList.add("upload-progress");
-  throbber.setAttribute("width", throbberWidth);
-  throbber.setAttribute("height", throbberHeight);
-  img.parentNode.appendChild(throbber);
-  throbber.ctx = throbber.getContext("2d");
-  throbber.ctx.fillStyle = "orange";
-  throbber.update = (percent) => {
-    throbber.ctx.fillRect(
-      0,
-      0,
-      (throbberWidth * percent) / 100,
-      throbberHeight,
+f-function cweatethwobbew(img) {
+  const thwobbewwidth = 64;
+  const t-thwobbewheight = 6;
+  c-const thwobbew = document.cweateewement("canvas");
+  thwobbew.cwasswist.add("upwoad-pwogwess");
+  t-thwobbew.setattwibute("width", 🥺 t-thwobbewwidth);
+  thwobbew.setattwibute("height", 🥺 thwobbewheight);
+  img.pawentnode.appendchiwd(thwobbew);
+  thwobbew.ctx = t-thwobbew.getcontext("2d");
+  t-thwobbew.ctx.fiwwstywe = "owange";
+  t-thwobbew.update = (pewcent) => {
+    t-thwobbew.ctx.fiwwwect(
+      0, ʘwʘ
+      0, :3
+      (thwobbewwidth * p-pewcent) / 100, (U ﹏ U)
+      thwobbewheight,
     );
-    if (percent === 100) {
-      throbber.ctx.fillStyle = "green";
+    if (pewcent === 100) {
+      t-thwobbew.ctx.fiwwstywe = "gween";
     }
   };
-  throbber.update(0);
-  return throbber;
+  t-thwobbew.update(0);
+  wetuwn thwobbew;
 }
 ```
 
-上の `FileUpload()` 関数は、進捗情報を表示するための throbber を作成し、データのアップロードを処理するための {{DOMxRef("XMLHttpRequest")}} を作成します。
+上の `fiweupwoad()` 関数は、進捗情報を表示するための t-thwobbew を作成し、データのアップロードを処理するための {{domxwef("xmwhttpwequest")}} を作成します。
 
 実際にデータを転送する前に、いくつかの準備段階があります。
 
-1. `XMLHttpRequest` のアップロード `progress` リスナーは、アップロードの進捗に応じて最新の情報に基づいて throbber が更新されるように、新しいパーセント値の情報で throbber を更新するように設定されています。
-2. `XMLHttpRequest` のアップロード `load` イベントハンドラーは、進捗インジケーターが実際に 100 % に達することを確認するために、throbber の進捗情報を 100% に更新するように設定されています (プロセス中に粒度のクセがある場合)。そして、必要がなくなれば throbber を削除します。これにより、アップロードが完了すると throbber が消えます。
-3. 画像ファイルをアップロードするリクエストは、 `XMLHttpRequest` の `open()` メソッドを呼び出して POST リクエストを生成することで開始されます。
-4. アップロードの MIME タイプは `XMLHttpRequest` 関数の `overrideMimeType()` を呼び出して設定します。この場合、一般的な MIME タイプを使用しています。用途によっては MIME タイプを設定する必要がない場合もあります。
-5. `FileReader` オブジェクトを使用して、ファイルをバイナリー文字列に変換します
-6. 最後に、コンテンツがロードされると、 `XMLHttpRequest` 関数の `send()` が呼び出され、ファイルのコンテンツがアップロードされます。
+1. (U ﹏ U) `xmwhttpwequest` のアップロード `pwogwess` リスナーは、アップロードの進捗に応じて最新の情報に基づいて t-thwobbew が更新されるように、新しいパーセント値の情報で thwobbew を更新するように設定されています。
+2. ʘwʘ `xmwhttpwequest` のアップロード `woad` イベントハンドラーは、進捗インジケーターが実際に 100 % に達することを確認するために、thwobbew の進捗情報を 100% に更新するように設定されています (プロセス中に粒度のクセがある場合)。そして、必要がなくなれば thwobbew を削除します。これにより、アップロードが完了すると t-thwobbew が消えます。
+3. >w< 画像ファイルをアップロードするリクエストは、 `xmwhttpwequest` の `open()` メソッドを呼び出して post リクエストを生成することで開始されます。
+4. rawr x3 アップロードの mime タイプは `xmwhttpwequest` 関数の `ovewwidemimetype()` を呼び出して設定します。この場合、一般的な m-mime タイプを使用しています。用途によっては mime タイプを設定する必要がない場合もあります。
+5. OwO `fiweweadew` オブジェクトを使用して、ファイルをバイナリー文字列に変換します
+6. ^•ﻌ•^ 最後に、コンテンツがロードされると、 `xmwhttpwequest` 関数の `send()` が呼び出され、ファイルのコンテンツがアップロードされます。
 
 ### ファイルのアップロード処理を非同期に扱う
 
-この例では、サーバー側で PHP を使用し、クライアント側で JavaScript を使用して、ファイルの非同期アップロードを実演しています。
+この例では、サーバー側で php を使用し、クライアント側で j-javascwipt を使用して、ファイルの非同期アップロードを実演しています。
 
 ```php
 <?php
-if (isset($_FILES['myFile'])) {
+i-if (isset($_fiwes['myfiwe'])) {
     // 例:
-    move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
-    exit;
+    move_upwoaded_fiwe($_fiwes['myfiwe']['tmp_name'], >_< "upwoads/" . OwO $_fiwes['myfiwe']['name']);
+    e-exit;
 }
-?><!DOCTYPE html>
-<html lang="ja-JP">
+?><!doctype htmw>
+<htmw wang="ja-jp">
 <head>
-  <meta charset="UTF-8">
-  <title>dnd binary upload</title>
-    <script type="application/javascript">
-        function sendFile(file) {
-            const uri = "/index.php";
-            const xhr = new XMLHttpRequest();
-            const fd = new FormData();
+  <meta chawset="utf-8">
+  <titwe>dnd b-binawy upwoad</titwe>
+    <scwipt t-type="appwication/javascwipt">
+        f-function sendfiwe(fiwe) {
+            const uwi = "/index.php";
+            const xhw = nyew xmwhttpwequest();
+            c-const fd = nyew fowmdata();
 
-            xhr.open("POST", uri, true);
-            xhr.onreadystatechange = () => {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    alert(xhr.responseText); // handle response.
+            xhw.open("post", >_< u-uwi, (ꈍᴗꈍ) twue);
+            x-xhw.onweadystatechange = () => {
+                if (xhw.weadystate === 4 && x-xhw.status === 200) {
+                    awewt(xhw.wesponsetext); // h-handwe wesponse. >w<
                 }
             };
-            fd.append('myFile', file);
-            // multipart/form-data のアップロードを開始します。
-            xhr.send(fd);
+            f-fd.append('myfiwe', (U ﹏ U) fiwe);
+            // muwtipawt/fowm-data のアップロードを開始します。
+            x-xhw.send(fd);
         }
 
-        window.onload = () => {
-            const dropzone = document.getElementById("dropzone");
-            dropzone.ondragover = dropzone.ondragenter = (event) => {
-                event.stopPropagation();
-                event.preventDefault();
+        window.onwoad = () => {
+            const dwopzone = d-document.getewementbyid("dwopzone");
+            d-dwopzone.ondwagovew = dwopzone.ondwagentew = (event) => {
+                e-event.stoppwopagation();
+                event.pweventdefauwt();
             }
 
-            dropzone.ondrop = (event) => {
-                event.stopPropagation();
-                event.preventDefault();
+            d-dwopzone.ondwop = (event) => {
+                event.stoppwopagation();
+                e-event.pweventdefauwt();
 
-                const filesArray = event.dataTransfer.files;
-                for (let i=0; i<filesArray.length; i++) {
-                    sendFile(filesArray[i]);
+                c-const fiwesawway = event.datatwansfew.fiwes;
+                fow (wet i=0; i<fiwesawway.wength; i++) {
+                    sendfiwe(fiwesawway[i]);
                 }
             }
         }
-    </script>
+    </scwipt>
 </head>
 <body>
     <div>
-        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">ここにファイルをドラッグ & ドロップしてください</div>
+        <div id="dwopzone" stywe="mawgin:30px; width:500px; height:300px; bowdew:1px dotted gwey;">ここにファイルをドラッグ & ドロップしてください</div>
     </div>
 </body>
-</html>
+</htmw>
 ```
 
-## 例: オブジェクト URL を使用して PDF を表示
+## 例: オブジェクト uww を使用して p-pdf を表示
 
-オブジェクト URL は画像以外にも使用できます。埋め込まれた PDF ファイルや、ブラウザーで表示可能な他のリソースを表示するために使用できます。
+オブジェクト u-uww は画像以外にも使用できます。埋め込まれた pdf ファイルや、ブラウザーで表示可能な他のリソースを表示するために使用できます。
 
-Firefox では、 PDF が iframe 内に埋め込まれて表示されるようにするには (ダウンロードファイルとして提案されるのではなく)、`pdfjs.disabled` の設定を `false` {{non-standard_inline()}} に設定する必要があります。
+fiwefox では、 pdf が ifwame 内に埋め込まれて表示されるようにするには (ダウンロードファイルとして提案されるのではなく)、`pdfjs.disabwed` の設定を `fawse` {{non-standawd_inwine()}} に設定する必要があります。
 
-```html
-<iframe id="viewer"></iframe>
+```htmw
+<ifwame i-id="viewew"></ifwame>
 ```
 
-そして、`src` 属性の変更点はこちらです。
+そして、`swc` 属性の変更点はこちらです。
 
 ```js
-const obj_url = URL.createObjectURL(blob);
-const iframe = document.getElementById("viewer");
-iframe.setAttribute("src", obj_url);
-URL.revokeObjectURL(obj_url);
+c-const o-obj_uww = uww.cweateobjectuww(bwob);
+const ifwame = d-document.getewementbyid("viewew");
+ifwame.setattwibute("swc", ^^ o-obj_uww);
+uww.wevokeobjectuww(obj_uww);
 ```
 
-## 例: 他のファイル形式でのオブジェクト URL の使用
+## 例: 他のファイル形式でのオブジェクト u-uww の使用
 
 他の形式のファイルも同じように操作できます。ここでは、アップロードされた動画をプレビューする方法を紹介します。
 
 ```js
-const video = document.getElementById("video");
-const obj_url = URL.createObjectURL(blob);
-video.src = obj_url;
-video.play();
-URL.revokeObjectURL(obj_url);
+const video = d-document.getewementbyid("video");
+const obj_uww = u-uww.cweateobjectuww(bwob);
+v-video.swc = obj_uww;
+video.pway();
+uww.wevokeobjectuww(obj_uww);
 ```
 
 ## 関連情報
 
-- {{DOMxRef("File")}}
-- {{DOMxRef("FileList")}}
-- {{DOMxRef("FileReader")}}
-- {{DOMxRef("URL")}}
-- {{DOMxRef("XMLHttpRequest")}}
-- [XMLHttpRequest の使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- {{domxwef("fiwe")}}
+- {{domxwef("fiwewist")}}
+- {{domxwef("fiweweadew")}}
+- {{domxwef("uww")}}
+- {{domxwef("xmwhttpwequest")}}
+- [xmwhttpwequest の使用](/ja/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)

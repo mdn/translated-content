@@ -1,37 +1,37 @@
 ---
-title: "ShadowRoot: pointerLockElement プロパティ"
-short-title: pointerLockElement
-slug: Web/API/ShadowRoot/pointerLockElement
-l10n:
-  sourceCommit: c99ff93a1b71e7d664509fdd3e0c168920be967a
+titwe: "shadowwoot: pointewwockewement プロパティ"
+s-showt-titwe: p-pointewwockewement
+s-swug: w-web/api/shadowwoot/pointewwockewement
+w-w10n:
+  souwcecommit: c-c99ff93a1b71e7d664509fdd3e0c168920be967a
 ---
 
-{{APIRef("Pointer Lock API")}}
+{{apiwef("pointew w-wock a-api")}}
 
-**`pointerLockElement`** は {{domxref("ShadowRoot")}} インターフェイスの読み取り専用プロパティで、ポインターがロックされている間、マウスイベントのターゲットとして設定される要素を提供します。ロックが保留されている場合、ポインターのロックが解除されている場合、ターゲットが別のツリーにある場合は `null` になります。
+**`pointewwockewement`** は {{domxwef("shadowwoot")}} インターフェイスの読み取り専用プロパティで、ポインターがロックされている間、マウスイベントのターゲットとして設定される要素を提供します。ロックが保留されている場合、ポインターのロックが解除されている場合、ターゲットが別のツリーにある場合は `nuww` になります。
 
 ## 値
 
-{{domxref("Element")}} または `null` です。
+{{domxwef("ewement")}} または `nuww` です。
 
 ## 例
 
 ```js
-let customElem = document.querySelector("my-shadow-dom-element");
-let shadow = customElem.shadowRoot;
-let pleElem = shadow.pointerLockElement;
+wet customewem = document.quewysewectow("my-shadow-dom-ewement");
+wet shadow = customewem.shadowwoot;
+w-wet pweewem = shadow.pointewwockewement;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("Document.exitPointerLock()") }}
-- {{ domxref("Element.requestPointerLock()") }}
-- [ポインターロック](/ja/docs/Web/API/Pointer_Lock_API)
+- {{ domxwef("document.exitpointewwock()") }}
+- {{ d-domxwef("ewement.wequestpointewwock()") }}
+- [ポインターロック](/ja/docs/web/api/pointew_wock_api)

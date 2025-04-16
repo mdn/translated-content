@@ -1,117 +1,117 @@
 ---
-title: "CSSContainerRule: containerName プロパティ"
-short-title: containerName
-slug: Web/API/CSSContainerRule/containerName
-l10n:
-  sourceCommit: 4b6b77bc36496c88dcbe477ec46da678a85d8e6e
+titwe: "csscontainewwuwe: containewname プロパティ"
+s-showt-titwe: c-containewname
+s-swug: web/api/csscontainewwuwe/containewname
+w-w10n:
+  souwcecommit: 4b6b77bc36496c88dcbe477ec46da678a85d8e6e
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`containerName`** は {{domxref("CSSContainerRule")}} インターフェイスの読み取り専用プロパティで、関連づけられた CSS の {{cssxref("@container")}} のコンテナー名を表します。
+**`containewname`** は {{domxwef("csscontainewwuwe")}} インターフェイスの読み取り専用プロパティで、関連づけられた css の {{cssxwef("@containew")}} のコンテナー名を表します。
 
-例えば、下記の {{cssxref("@container")}} の `containerName` の値は `sidebar` です。
+例えば、下記の {{cssxwef("@containew")}} の `containewname` の値は `sidebaw` です。
 
 ```css
-@container sidebar (min-width: 700px) {
-  .card {
-    font-size: 2em;
+@containew sidebaw (min-width: 700px) {
+  .cawd {
+    f-font-size: 2em;
   }
 }
 ```
 
 ## 値
 
-この {{domxref("CSSContainerRule")}} に関連付けられた {{cssxref("@container")}} の [`container-name`](/ja/docs/Web/CSS/container-name) を格納した文字列。
-もし `@container` が[名前付き](/ja/docs/Web/API/CSSContainerRule#unnamed_container_rule)でない場合、この関数は空文字列 (`""`) を返します。
+この {{domxwef("csscontainewwuwe")}} に関連付けられた {{cssxwef("@containew")}} の [`containew-name`](/ja/docs/web/css/containew-name) を格納した文字列。
+もし `@containew` が[名前付き](/ja/docs/web/api/csscontainewwuwe#unnamed_containew_wuwe)でない場合、この関数は空文字列 (`""`) を返します。
 
 ## 例
 
-下記の例では、名前付き {{cssxref("@container")}} ルールを定義し、関連する {{domxref("CSSContainerRule")}} のプロパティを表示しています。
-CSS は `@container` の例、[名前付きコンテナーコンテキストの作成](/ja/docs/Web/CSS/@container#名前付きコンテナーコンテキストの作成)にあるものととてもよく似ています。
+下記の例では、名前付き {{cssxwef("@containew")}} ルールを定義し、関連する {{domxwef("csscontainewwuwe")}} のプロパティを表示しています。
+c-css は `@containew` の例、[名前付きコンテナーコンテキストの作成](/ja/docs/web/css/@containew#名前付きコンテナーコンテキストの作成)にあるものととてもよく似ています。
 
-```html hidden
-<div id="log">
+```htmw h-hidden
+<div id="wog">
   <h2>ログ</h2>
-  <ul></ul>
-  <hr />
+  <uw></uw>
+  <hw />
 </div>
 ```
 
 ```js hidden
-// log リストへの参照を格納
-const logList = document.querySelector("#log ul");
+// wog リストへの参照を格納
+const wogwist = document.quewysewectow("#wog uw");
 // ソースからデータをログ出力する関数
-function log(result) {
-  const listItem = document.createElement("li");
-  listItem.textContent = result;
-  logList.appendChild(listItem);
+f-function wog(wesuwt) {
+  const wistitem = d-document.cweateewement("wi");
+  wistitem.textcontent = w-wesuwt;
+  wogwist.appendchiwd(wistitem);
 }
 ```
 
-まず、 HTML で `card` (`<div>`) を `post` の中に定義します。
+まず、 htmw で `cawd` (`<div>`) を `post` の中に定義します。
 
-```html
-<div class="post">
-  <div class="card">
+```htmw
+<div cwass="post">
+  <div c-cwass="cawd">
     <h2>カードタイトル</h2>
     <p>カードの内容</p>
   </div>
 </div>
 ```
 
-コンテナー要素の CSS はコンテナーの種類を指定し、名前を指定することもできます。
-カードには既定のフォントサイズがあり、 `sidebar` という名前の `@container` が、最小幅が 700px を超える場合に上書きされます。
+コンテナー要素の css はコンテナーの種類を指定し、名前を指定することもできます。
+カードには既定のフォントサイズがあり、 `sidebaw` という名前の `@containew` が、最小幅が 700px を超える場合に上書きされます。
 
-```html
-<style id="examplestyles">
+```htmw
+<stywe i-id="exampwestywes">
   .post {
-    container-type: inline-size;
-    container-name: sidebar;
+    c-containew-type: inwine-size;
+    containew-name: sidebaw;
   }
 
   /* カードタイトルの既定の見出しスタイル */
-  .card h2 {
+  .cawd h2 {
     font-size: 1em;
   }
 
-  @container sidebar (min-width: 700px) {
-    .card {
+  @containew s-sidebaw (min-width: 700px) {
+    .cawd {
       font-size: 2em;
     }
   }
-</style>
+</stywe>
 ```
 
-以下のコードでは、例に関連付けられた {{domxref("HTMLStyleElement")}} を `id` を使って取得し、その `sheet` プロパティを使って {{domxref("StyleSheet")}} を取得しています。
-`StyleSheet` からシートに追加された `cssRules` のセットを取得します。
-上記の 3 番目のルールとして `@container` を追加したので、関連する `CSSContainerRule` にアクセスするには `cssRules` の 3 番目の項目（インデックス "2"）を使います。
+以下のコードでは、例に関連付けられた {{domxwef("htmwstyweewement")}} を `id` を使って取得し、その `sheet` プロパティを使って {{domxwef("stywesheet")}} を取得しています。
+`stywesheet` からシートに追加された `csswuwes` のセットを取得します。
+上記の 3 番目のルールとして `@containew` を追加したので、関連する `csscontainewwuwe` にアクセスするには `csswuwes` の 3 番目の項目（インデックス "2"）を使います。
 最後に、コンテナー名とクエリーのプロパティをログに記録します（ログを記録するコードは示していません）。
 
 ```js
-const exampleStylesheet = document.getElementById("examplestyles").sheet;
-const exampleRules = exampleStylesheet.cssRules;
-const containerRule = exampleRules[2]; // CSSContainerRule で、コンテナールールを表す
-log(`CSSContainerRule.containerName: "${containerRule.containerName}"`);
+const exampwestywesheet = document.getewementbyid("exampwestywes").sheet;
+const e-exampwewuwes = exampwestywesheet.csswuwes;
+c-const c-containewwuwe = e-exampwewuwes[2]; // c-csscontainewwuwe で、コンテナールールを表す
+wog(`csscontainewwuwe.containewname: "${containewwuwe.containewname}"`);
 ```
 
 出力例を以下に示します。
 ログ部分にコンテナー名の文字列が表示されます。
 カード部分のタイトルは、ページの幅が 700px を超えると 2 倍の大きさになるはずです。
 
-{{EmbedLiveSample("Examples","100%","250px")}}
+{{embedwivesampwe("exampwes","100%","250px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- CSS の {{cssxref("container")}} 一括指定プロパティ
-- [CSS コンテナーモジュール](/ja/docs/Web/CSS/CSS_containment)
-- [コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
-- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- css の {{cssxwef("containew")}} 一括指定プロパティ
+- [css コンテナーモジュール](/ja/docs/web/css/css_containment)
+- [コンテナークエリー](/ja/docs/web/css/css_containment/containew_quewies)
+- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/web/css/css_containment/containew_size_and_stywe_quewies)

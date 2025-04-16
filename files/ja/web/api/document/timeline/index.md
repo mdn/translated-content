@@ -1,38 +1,38 @@
 ---
-title: "Document: timeline プロパティ"
-short-title: timeline
-slug: Web/API/Document/timeline
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: timewine プロパティ"
+showt-titwe: t-timewine
+s-swug: web/api/document/timewine
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ APIRef("Web Animations") }}
+{{ a-apiwef("web a-animations") }}
 
-`timeline` は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、現在の文書の既定のタイムラインを表します。このタイムラインは {{domxref("DocumentTimeline")}} の特別なインスタンスです。
+`timewine` は {{domxwef("document")}} インターフェイスの読み取り専用プロパティで、現在の文書の既定のタイムラインを表します。このタイムラインは {{domxwef("documenttimewine")}} の特別なインスタンスです。
 
-このタイムラインはそれぞれの `document` に固有のもので、{{domxref("Document.open()")}} の呼び出しを含む `document` の存続期間中維持されます。
+このタイムラインはそれぞれの `document` に固有のもので、{{domxwef("document.open()")}} の呼び出しを含む `document` の存続期間中維持されます。
 
-このタイムラインは {{domxref("Performance.timeOrigin")}} からの時刻をミリ秒単位で表します。
-基準時刻以前はタイムラインはアクティブではなく、 {{domxref("AnimationTimeline.currentTime", "currentTime")}} は `null` になります。
+このタイムラインは {{domxwef("pewfowmance.timeowigin")}} からの時刻をミリ秒単位で表します。
+基準時刻以前はタイムラインはアクティブではなく、 {{domxwef("animationtimewine.cuwwenttime", o.O "cuwwenttime")}} は `nuww` になります。
 
-> [!NOTE]
-> アクティブでない文書（{{domxref("Window")}}、{{htmlelement("iframe")}}、{{htmlelement("frame")}} に関連付けられていない {{domxref("Document")}}）に関連付けられている文書タイムラインもアクティブではないと見なされます。
+> [!note]
+> アクティブでない文書（{{domxwef("window")}}、{{htmwewement("ifwame")}}、{{htmwewement("fwame")}} に関連付けられていない {{domxwef("document")}}）に関連付けられている文書タイムラインもアクティブではないと見なされます。
 
 ## 値
 
-{{domxref("DocumentTimeline")}} オブジェクトです。
+{{domxwef("documenttimewine")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- {{domxref("AnimationTimeline")}}
-- {{domxref("AnimationTimeline.currentTime")}}
-- {{domxref("DocumentTimeline")}}
+- [ウェブアニメーション a-api](/ja/docs/web/api/web_animations_api)
+- {{domxwef("animationtimewine")}}
+- {{domxwef("animationtimewine.cuwwenttime")}}
+- {{domxwef("documenttimewine")}}

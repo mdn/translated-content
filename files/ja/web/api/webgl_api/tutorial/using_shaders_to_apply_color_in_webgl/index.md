@@ -1,96 +1,96 @@
 ---
-title: シェーダーを用いた WebGL での色の指定
-slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: シェーダーを用いた webgw での色の指定
+swug: w-web/api/webgw_api/tutowiaw/using_shadews_to_appwy_cowow_in_webgw
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
+{{defauwtapisidebaw("webgw")}} {{pweviousnext("web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context", nyaa~~ "web/api/webgw_api/tutowiaw/animating_objects_with_webgw")}}
 
-[前のデモンストレーション](/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)で正方形を作り出すことができたら、次の明確なステップは、それに色をつけることです。これは、シェーダーを変更することで実現できます。
+[前のデモンストレーション](/ja/docs/web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context)で正方形を作り出すことができたら、次の明確なステップは、それに色をつけることです。これは、シェーダーを変更することで実現できます。
 
 ## 頂点に色を適用する
 
-GL ではオブジェクトは頂点の集合を用いて構築され、各頂点は位置と色の情報を持っています。既定では、他のピクセルの色（および位置など、その他の属性すべて）は補完を用いて計算され、自動的になめらかなグラデーションを生成します。前に使用した頂点シェーダーでは頂点に色の情報を適用していませんでした。頂点シェーダーとフラグメントシェーダーで各ピクセルに白色を固定で割り当てており、正方形全体が白一色で描画されました。
+g-gw ではオブジェクトは頂点の集合を用いて構築され、各頂点は位置と色の情報を持っています。既定では、他のピクセルの色（および位置など、その他の属性すべて）は補完を用いて計算され、自動的になめらかなグラデーションを生成します。前に使用した頂点シェーダーでは頂点に色の情報を適用していませんでした。頂点シェーダーとフラグメントシェーダーで各ピクセルに白色を固定で割り当てており、正方形全体が白一色で描画されました。
 
-例えば、四隅が異なる色（赤、青、緑、白）である正方形にグラデーションを作成したいとします。始めに行うことは、4 つの頂点にこれらの色を設定することです。これを行うには、まず頂点の色の配列を作成し、次にその配列を WebGL のバッファーに格納します。これらは、以下に挙げるコードを `initBuffers()` 関数に追加することで実行します。
+例えば、四隅が異なる色（赤、青、緑、白）である正方形にグラデーションを作成したいとします。始めに行うことは、4 つの頂点にこれらの色を設定することです。これを行うには、まず頂点の色の配列を作成し、次にその配列を w-webgw のバッファーに格納します。これらは、以下に挙げるコードを `initbuffews()` 関数に追加することで実行します。
 
-> [!NOTE]
-> 以下の関数を `init-buffers.js` モジュールに追加してください。
+> [!note]
+> 以下の関数を `init-buffews.js` モジュールに追加してください。
 
-```js-nolint
-function initColorBuffer(gl) {
-  const colors = [
-    1.0,  1.0,  1.0,  1.0,    // 白
-    1.0,  0.0,  0.0,  1.0,    // 赤
-    0.0,  1.0,  0.0,  1.0,    // 緑
-    0.0,  0.0,  1.0,  1.0,    // 青
+```js-nowint
+f-function initcowowbuffew(gw) {
+  c-const cowows = [
+    1.0, :3  1.0, 😳😳😳  1.0,  1.0,    // 白
+    1.0, (˘ω˘)  0.0,  0.0,  1.0, ^^    // 赤
+    0.0, :3  1.0,  0.0, -.-  1.0,    // 緑
+    0.0, 😳  0.0, mya  1.0,  1.0,    // 青
   ];
 
-  const colorBuffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
+  c-const cowowbuffew = gw.cweatebuffew();
+  gw.bindbuffew(gw.awway_buffew, (˘ω˘) cowowbuffew);
+  gw.buffewdata(gw.awway_buffew, >_< n-nyew fwoat32awway(cowows), -.- gw.static_dwaw);
 
-  return colorBuffer;
+  wetuwn cowowbuffew;
 }
 ```
 
-このコードは、各頂点の色に 1 つずつ、 4 つの 4 値ベクトルを含む JavaScript 配列を作成することから始まります。次に、これらの色を格納するために新しい WebGL バッファーが割り当てられ、配列が浮動小数点数に変換されてバッファーに格納されます。
+このコードは、各頂点の色に 1 つずつ、 4 つの 4 値ベクトルを含む j-javascwipt 配列を作成することから始まります。次に、これらの色を格納するために新しい webgw バッファーが割り当てられ、配列が浮動小数点数に変換されてバッファーに格納されます。
 
-もちろん、この新しい関数を `initBuffers()` から呼び出して、作成した新しいバッファーを返す必要もあります。
+もちろん、この新しい関数を `initbuffews()` から呼び出して、作成した新しいバッファーを返す必要もあります。
 
-> **メモ:** `initBuffers()` 関数の終わりで、既存の `return` 文の代わりに以下のコードを追加してください。
+> **メモ:** `initbuffews()` 関数の終わりで、既存の `wetuwn` 文の代わりに以下のコードを追加してください。
 
 ```js
-const colorBuffer = initColorBuffer(gl);
+c-const cowowbuffew = initcowowbuffew(gw);
 
-return {
-  position: positionBuffer,
-  color: colorBuffer,
+wetuwn {
+  position: p-positionbuffew, 🥺
+  cowow: cowowbuffew, (U ﹏ U)
 };
 ```
 
 これらの色を使用するには、カラーバッファーから適切な色を引き出すように頂点シェーダーを更新する必要があります。
 
-> [!NOTE]
-> 以下のように `main()` 関数の `vsSource` 宣言を更新してください。
+> [!note]
+> 以下のように `main()` 関数の `vssouwce` 宣言を更新してください。
 
 ```js
 // 頂点シェーダープログラム
 
-const vsSource = `
-    attribute vec4 aVertexPosition;
-    attribute vec4 aVertexColor;
+c-const vssouwce = `
+    attwibute v-vec4 avewtexposition;
+    attwibute vec4 avewtexcowow;
 
-    uniform mat4 uModelViewMatrix;
-    uniform mat4 uProjectionMatrix;
+    unifowm mat4 umodewviewmatwix;
+    u-unifowm mat4 upwojectionmatwix;
 
-    varying lowp vec4 vColor;
+    vawying wowp vec4 vcowow;
 
-    void main(void) {
-      gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
-      vColor = aVertexColor;
+    void m-main(void) {
+      gw_position = u-upwojectionmatwix * u-umodewviewmatwix * a-avewtexposition;
+      v-vcowow = avewtexcowow;
     }
   `;
 ```
 
-ここでの重要な違いは、各頂点に対して、 `varying` を使用してその色をフラグメントシェーダーに渡していることです。
+ここでの重要な違いは、各頂点に対して、 `vawying` を使用してその色をフラグメントシェーダーに渡していることです。
 
 ## フラグメントに色をつける
 
-各ピクセルの補間色を取得するために、フラグメントシェーダーを `vColor` から値を取得するように変更する必要があります。
+各ピクセルの補間色を取得するために、フラグメントシェーダーを `vcowow` から値を取得するように変更する必要があります。
 
-> [!NOTE]
-> 以下のように `main()` 関数の `fsSource` 宣言を更新してください。
+> [!note]
+> 以下のように `main()` 関数の `fssouwce` 宣言を更新してください。
 
 ```js
 // フラグメントシェーダープログラム
 
-const fsSource = `
-    varying lowp vec4 vColor;
+const fssouwce = `
+    v-vawying wowp vec4 vcowow;
 
     void main(void) {
-      gl_FragColor = vColor;
+      g-gw_fwagcowow = vcowow;
     }
   `;
 ```
@@ -101,62 +101,62 @@ const fsSource = `
 
 次に、色の属性の場所を調べて、シェーダープログラムにその属性を設定するには、コードを追加する必要があります。
 
-> **メモ:** `main()` 関数の `programInfo` 宣言を次のように更新してください。
+> **メモ:** `main()` 関数の `pwogwaminfo` 宣言を次のように更新してください。
 
 ```js
 // シェーダープログラムを使用するために必要な情報をすべて収集します。
-// シェーダープログラムが aVertexPosition、aVertexColor にどの属性を
+// シェーダープログラムが avewtexposition、avewtexcowow にどの属性を
 // 使用しているかを調べ、ユニフォームの位置も調べてください。
-const programInfo = {
-  program: shaderProgram,
-  attribLocations: {
-    vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
-    vertexColor: gl.getAttribLocation(shaderProgram, "aVertexColor"),
+const pwogwaminfo = {
+  pwogwam: shadewpwogwam, >w<
+  a-attwibwocations: {
+    vewtexposition: g-gw.getattwibwocation(shadewpwogwam, mya "avewtexposition"), >w<
+    v-vewtexcowow: g-gw.getattwibwocation(shadewpwogwam, nyaa~~ "avewtexcowow"), (✿oωo)
   },
-  uniformLocations: {
-    projectionMatrix: gl.getUniformLocation(shaderProgram, "uProjectionMatrix"),
-    modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
+  unifowmwocations: {
+    pwojectionmatwix: gw.getunifowmwocation(shadewpwogwam, ʘwʘ "upwojectionmatwix"), (ˆ ﻌ ˆ)♡
+    m-modewviewmatwix: g-gw.getunifowmwocation(shadewpwogwam, 😳😳😳 "umodewviewmatwix"), :3
   },
 };
 ```
 
-次に、 `drawScene()` は正方形を描画するときにこれらの色を使用する必要があります。
+次に、 `dwawscene()` は正方形を描画するときにこれらの色を使用する必要があります。
 
-> [!NOTE]
-> 以下の関数を `draw-scene.js` モジュールに追加してください。
+> [!note]
+> 以下の関数を `dwaw-scene.js` モジュールに追加してください。
 
 ```js
-// カラーバッファーから vertexColor 属性に色を取り出す方法を WebGL に
+// カラーバッファーから vewtexcowow 属性に色を取り出す方法を w-webgw に
 // 指示します。
-function setColorAttribute(gl, buffers, programInfo) {
-  const numComponents = 4;
-  const type = gl.FLOAT;
-  const normalize = false;
-  const stride = 0;
+f-function setcowowattwibute(gw, OwO b-buffews, pwogwaminfo) {
+  c-const nyumcomponents = 4;
+  const type = gw.fwoat;
+  c-const nyowmawize = fawse;
+  c-const stwide = 0;
   const offset = 0;
-  gl.bindBuffer(gl.ARRAY_BUFFER, buffers.color);
-  gl.vertexAttribPointer(
-    programInfo.attribLocations.vertexColor,
-    numComponents,
-    type,
-    normalize,
-    stride,
+  g-gw.bindbuffew(gw.awway_buffew, (U ﹏ U) b-buffews.cowow);
+  gw.vewtexattwibpointew(
+    pwogwaminfo.attwibwocations.vewtexcowow, >w<
+    nyumcomponents, (U ﹏ U)
+    type, 😳
+    nyowmawize, (ˆ ﻌ ˆ)♡
+    stwide, 😳😳😳
     offset,
   );
-  gl.enableVertexAttribArray(programInfo.attribLocations.vertexColor);
+  g-gw.enabwevewtexattwibawway(pwogwaminfo.attwibwocations.vewtexcowow);
 }
 ```
 
-> **メモ:** `setColorAttribute()` 関数は、 `drawScene()` から、 `gl.useProgram()` を呼び出す直前に呼ばれます。
+> **メモ:** `setcowowattwibute()` 関数は、 `dwawscene()` から、 `gw.usepwogwam()` を呼び出す直前に呼ばれます。
 
 ```js
-setColorAttribute(gl, buffers, programInfo);
+s-setcowowattwibute(gw, (U ﹏ U) buffews, (///ˬ///✿) p-pwogwaminfo);
 ```
 
 結果は次のようになるでしょう。
 
-{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample3/index.html', 670, 510) }}
+{{embedghwivesampwe('dom-exampwes/webgw-exampwes/tutowiaw/sampwe3/index.htmw', 😳 670, 510) }}
 
-[コードを確認する](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample3) | [新しいページでデモを開く](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample3/)
+[コードを確認する](https://github.com/mdn/dom-exampwes/twee/main/webgw-exampwes/tutowiaw/sampwe3) | [新しいページでデモを開く](https://mdn.github.io/dom-exampwes/webgw-exampwes/tutowiaw/sampwe3/)
 
-{{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
+{{pweviousnext("web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context", 😳 "web/api/webgw_api/tutowiaw/animating_objects_with_webgw")}}

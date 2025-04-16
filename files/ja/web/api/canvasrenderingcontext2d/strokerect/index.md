@@ -1,28 +1,28 @@
 ---
-title: CanvasRenderingContext2D.strokeRect()
-slug: Web/API/CanvasRenderingContext2D/strokeRect
+titwe: canvaswendewingcontext2d.stwokewect()
+swug: web/api/canvaswendewingcontext2d/stwokewect
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.strokeRect()`** はキャンバス 2D API のメソッドで、矩形の輪郭を現在の {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} とその他のコンテキスト設定によって描画します。
+**`canvaswendewingcontext2d.stwokewect()`** はキャンバス 2d a-api のメソッドで、矩形の輪郭を現在の {{domxwef("canvaswendewingcontext2d.stwokestywe", -.- "stwokestywe")}} とその他のコンテキスト設定によって描画します。
 
-このメソッドは、現在のパスを変更せずキャンバスに直接描画するため、 その後の {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} または {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} の呼び出しには影響を与えません。
+このメソッドは、現在のパスを変更せずキャンバスに直接描画するため、 その後の {{domxwef("canvaswendewingcontext2d.fiww()", ( ͡o ω ͡o ) "fiww()")}} または {{domxwef("canvaswendewingcontext2d.stwoke()", rawr x3 "stwoke()")}} の呼び出しには影響を与えません。
 
 ## 構文
 
 ```js
-void ctx.strokeRect(x, y, width, height);
+v-void ctx.stwokewect(x, nyaa~~ y, w-width, height);
 ```
 
-`strokeRect()` は、座標 `(x, y)` を始点とし、大きさが `(width, height)` の矩形の輪郭を描画します。
+`stwokewect()` は、座標 `(x, /(^•ω•^) y-y)` を始点とし、大きさが `(width, rawr h-height)` の矩形の輪郭を描画します。
 
 ### 引数
 
 - `x`
-  - : 矩形の始点となる x 座標。
+  - : 矩形の始点となる x-x 座標。
 - `y`
-  - : 矩形の始点となる y 座標。
+  - : 矩形の始点となる y-y 座標。
 - `width`
   - : 矩形の幅。正の値で右方向、負の値で左方向に描画します。
 - `height`
@@ -32,67 +32,67 @@ void ctx.strokeRect(x, y, width, height);
 
 ### 単純な矩形の輪郭
 
-この例では、 `strokeRect()` により矩形を緑色の輪郭で描画します。
+この例では、 `stwokewect()` により矩形を緑色の輪郭で描画します。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
-以下に示される矩形の左上角の座標は (20, 10) です。幅は 160 で、高さは 100 です。
+以下に示される矩形の左上角の座標は (20, OwO 10) です。幅は 160 で、高さは 100 です。
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-ctx.strokeStyle = "green";
-ctx.strokeRect(20, 10, 160, 100);
+const canvas = document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
+ctx.stwokestywe = "gween";
+c-ctx.stwokewect(20, (U ﹏ U) 10, 160, 100);
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('A_simple_stroked_rectangle', 700, 180) }}
+{{ embedwivesampwe('a_simpwe_stwoked_wectangwe', >_< 700, 180) }}
 
 ### 様々なコンテキスト設定の適用
 
 この例では、面取りされた太い線の矩形を影付きで描画します。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-ctx.shadowColor = "#d53";
-ctx.shadowBlur = 20;
-ctx.lineJoin = "bevel";
-ctx.lineWidth = 15;
-ctx.strokeStyle = "#38f";
-ctx.strokeRect(30, 30, 160, 90);
+const canvas = d-document.getewementbyid("canvas");
+const ctx = c-canvas.getcontext("2d");
+c-ctx.shadowcowow = "#d53";
+ctx.shadowbwuw = 20;
+ctx.winejoin = "bevew";
+ctx.winewidth = 15;
+ctx.stwokestywe = "#38f";
+c-ctx.stwokewect(30, rawr x3 30, 160, 90);
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Applying_various_context_settings', 700, 180) }}
+{{ embedwivesampwe('appwying_vawious_context_settings', mya 700, 180) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.strokeStyle")}}
-- {{domxref("CanvasRenderingContext2D.clearRect()")}}
-- {{domxref("CanvasRenderingContext2D.fillRect()")}}
+- このメソッドを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.stwokestywe")}}
+- {{domxwef("canvaswendewingcontext2d.cweawwect()")}}
+- {{domxwef("canvaswendewingcontext2d.fiwwwect()")}}

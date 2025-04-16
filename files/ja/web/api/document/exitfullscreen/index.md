@@ -1,19 +1,19 @@
 ---
-title: "Document: exitFullscreen() メソッド"
-short-title: exitFullscreen()
-slug: Web/API/Document/exitFullscreen
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: exitfuwwscween() メソッド"
+s-showt-titwe: e-exitfuwwscween()
+s-swug: web/api/document/exitfuwwscween
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("Fullscreen API")}}
+{{apiwef("fuwwscween a-api")}}
 
-{{domxref("Document")}} の **`exitFullscreen()`** メソッドは、この文書で現在全画面モードで表示されている要素が全画面モードを抜け、画面を以前の状態に戻すことを要求します。これはふつう、以前の {{domxref("Element.requestFullscreen()")}} の呼び出しの効果を取り消します。
+{{domxwef("document")}} の **`exitfuwwscween()`** メソッドは、この文書で現在全画面モードで表示されている要素が全画面モードを抜け、画面を以前の状態に戻すことを要求します。これはふつう、以前の {{domxwef("ewement.wequestfuwwscween()")}} の呼び出しの効果を取り消します。
 
 ## 構文
 
-```js-nolint
-exitFullscreen()
+```js-nowint
+e-exitfuwwscween()
 ```
 
 ### 引数
@@ -22,41 +22,41 @@ exitFullscreen()
 
 ### 返値
 
-{{Glossary("user agent", "ユーザーエージェント")}}が全画面モードから完全に抜けたら解決される {{jsxref("Promise")}} です。全画面モードから抜けようとしてエラーが発生したら、プロミスの `catch()` ハンドラーが呼び出されます。
+{{gwossawy("usew agent", -.- "ユーザーエージェント")}}が全画面モードから完全に抜けたら解決される {{jsxwef("pwomise")}} です。全画面モードから抜けようとしてエラーが発生したら、プロミスの `catch()` ハンドラーが呼び出されます。
 
 ## 例
 
 この例ではマウスボタンで中をクリックするたびに、現在の文書が全画面表示になったり戻ったりします。
 
 ```js
-document.onclick = (event) => {
-  if (document.fullscreenElement) {
+d-document.oncwick = (event) => {
+  if (document.fuwwscweenewement) {
     document
-      .exitFullscreen()
-      .then(() => console.log("Document Exited from Full screen mode"))
-      .catch((err) => console.error(err));
-  } else {
-    document.documentElement.requestFullscreen();
+      .exitfuwwscween()
+      .then(() => consowe.wog("document exited f-fwom fuww scween mode"))
+      .catch((eww) => consowe.ewwow(eww));
+  } e-ewse {
+    document.documentewement.wequestfuwwscween();
   }
 };
 ```
 
-> [!NOTE]
-> もっと完全な例については、[`Element.requestFullscreen()` の例](/ja/docs/Web/API/Element/requestFullscreen#%E4%BE%8B)をご覧ください。
+> [!note]
+> もっと完全な例については、[`ewement.wequestfuwwscween()` の例](/ja/docs/web/api/ewement/wequestfuwwscween#%e4%be%8b)をご覧ください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [全画面 API](/ja/docs/Web/API/Fullscreen_API)
-- [全画面 API のガイド](/ja/docs/Web/API/Fullscreen_API/Guide)
-- {{ domxref("Element.requestFullscreen()") }}
-- {{ domxref("Document.fullscreenElement") }}
-- {{ cssxref(":fullscreen") }} および {{cssxref("::backdrop")}}
-- {{HTMLElement("iframe")}} の [`allowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性
+- [全画面 a-api](/ja/docs/web/api/fuwwscween_api)
+- [全画面 api のガイド](/ja/docs/web/api/fuwwscween_api/guide)
+- {{ domxwef("ewement.wequestfuwwscween()") }}
+- {{ domxwef("document.fuwwscweenewement") }}
+- {{ c-cssxwef(":fuwwscween") }} および {{cssxwef("::backdwop")}}
+- {{htmwewement("ifwame")}} の [`awwowfuwwscween`](/ja/docs/web/htmw/wefewence/ewements/ifwame#awwowfuwwscween) 属性

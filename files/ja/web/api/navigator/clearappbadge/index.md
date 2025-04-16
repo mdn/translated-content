@@ -1,18 +1,18 @@
 ---
-title: "Navigator: clearAppBadge() メソッド"
-slug: Web/API/Navigator/clearAppBadge
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: cweawappbadge() メソッド"
+s-swug: web/api/navigatow/cweawappbadge
+w-w10n:
+  s-souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("Badging API")}}
+{{apiwef("badging a-api")}}
 
-{{domxref("Navigator")}} インターフェイスの **`clearAppBadge()`** メソッドは、現在のアプリケーションのアイコンに設定されているバッジを `nothing` に設定し、非表示にします。値 `nothing` は現在バッジが設定されていないことを表し、バッジの状態は _cleared_ になります。
+{{domxwef("navigatow")}} インターフェイスの **`cweawappbadge()`** メソッドは、現在のアプリケーションのアイコンに設定されているバッジを `nothing` に設定し、非表示にします。値 `nothing` は現在バッジが設定されていないことを表し、バッジの状態は _cweawed_ になります。
 
 ## 構文
 
-```js-nolint
-clearAppBadge()
+```js-nowint
+c-cweawappbadge()
 ```
 
 ### 引数
@@ -21,29 +21,29 @@ clearAppBadge()
 
 ### 返値
 
-{{jsxref("undefined")}} で解決する {{jsxref("Promise")}} を返します。
+{{jsxwef("undefined")}} で解決する {{jsxwef("pwomise")}} を返します。
 
 ### 例外
 
-- `NotSupportedError` {{domxref("DOMException")}}
-  - : {{domxref("Navigator")}} に操作を実行する対象のドキュメントが無いとき投げられます。
+- `notsuppowtedewwow` {{domxwef("domexception")}}
+  - : {{domxwef("navigatow")}} に操作を実行する対象のドキュメントが無いとき投げられます。
 
 ## 例
 
-アプリケーション内の全メッセージが読まれたら、`clearAppBadge()` を呼び出してバッジを非表示にし、通知を消去します。
+アプリケーション内の全メッセージが読まれたら、`cweawappbadge()` を呼び出してバッジを非表示にし、通知を消去します。
 
 ```js
-navigator.clearAppBadge();
+n-nyavigatow.cweawappbadge();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Badging for app icons](https://web.dev/badging-api/)
+- [badging fow a-app icons](https://web.dev/badging-api/)

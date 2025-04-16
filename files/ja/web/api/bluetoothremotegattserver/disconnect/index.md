@@ -1,18 +1,18 @@
 ---
-title: "BluetoothRemoteGATTServer: disconnect() メソッド"
-slug: Web/API/BluetoothRemoteGATTServer/disconnect
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattsewvew: disconnect() メソッド"
+s-swug: web/api/bwuetoothwemotegattsewvew/disconnect
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-**`BluetoothRemoteGATTServer.disconnect()`** メソッドは、このスクリプト実行環境を `this.device` から切断させます。
+**`bwuetoothwemotegattsewvew.disconnect()`** メソッドは、このスクリプト実行環境を `this.device` から切断させます。
 
 ## 構文
 
-```js-nolint
-disconnect()
+```js-nowint
+d-disconnect()
 ```
 
 ### 引数
@@ -21,14 +21,14 @@ disconnect()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})
+なし ({{jsxwef("undefined")}})
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{APIRef("Web Bluetooth")}}
+{{apiwef("web b-bwuetooth")}}

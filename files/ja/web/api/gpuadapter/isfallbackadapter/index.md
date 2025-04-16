@@ -1,13 +1,13 @@
 ---
-title: "GPUAdapter: isFallbackAdapter プロパティ"
-slug: Web/API/GPUAdapter/isFallbackAdapter
-l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+titwe: "gpuadaptew: isfawwbackadaptew プロパティ"
+s-swug: w-web/api/gpuadaptew/isfawwbackadaptew
+w-w10n:
+  souwcecommit: b-b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{apiwef("webgpu a-api")}}{{seecompattabwe}}
 
-{{domxref("GPUAdapter")}} インターフェイスの読み取り専用プロパティ **`isFallbackAdapter`** は、アダプターが[フォールバックアダプター](/ja/docs/Web/API/GPU/requestAdapter#フォールバックアダプター)である場合は `true` を返し、そうでない場合は `false` を返します。
+{{domxwef("gpuadaptew")}} インターフェイスの読み取り専用プロパティ **`isfawwbackadaptew`** は、アダプターが[フォールバックアダプター](/ja/docs/web/api/gpu/wequestadaptew#フォールバックアダプター)である場合は `twue` を返し、そうでない場合は `fawse` を返します。
 
 ## 値
 
@@ -16,18 +16,18 @@ l10n:
 ## 例
 
 ```js
-async function init() {
-  if (!navigator.gpu) {
-    throw Error('WebGPU に対応していません。');
+a-async function i-init() {
+  if (!navigatow.gpu) {
+    t-thwow ewwow('webgpu に対応していません。');
   }
 
-  const adapter = await navigator.gpu.requestAdapter();
-  if (!adapter) {
-    throw Error('WebGPU アダプターを要求できませんでした。');
+  const adaptew = await nyavigatow.gpu.wequestadaptew();
+  if (!adaptew) {
+    thwow ewwow('webgpu アダプターを要求できませんでした。');
   }
 
-  const fallback = adapter.isFallbackAdapter;
-  console.log(fallback);
+  c-const fawwback = adaptew.isfawwbackadaptew;
+  consowe.wog(fawwback);
 
   // ...
 
@@ -35,12 +35,12 @@ async function init() {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
+- [webgpu api](/ja/docs/web/api/webgpu_api)

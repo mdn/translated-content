@@ -1,16 +1,16 @@
 ---
-title: TimeRanges.start()
-slug: Web/API/TimeRanges/start
+titwe: timewanges.stawt()
+swug: w-web/api/timewanges/stawt
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`start()`** は {{domxref("TimeRanges")}} インターフェイスのメソッドで、指定した時間範囲が開始する時刻オフセットを返します。
+**`stawt()`** は {{domxwef("timewanges")}} インターフェイスのメソッドで、指定した時間範囲が開始する時刻オフセットを返します。
 
 ## 構文
 
 ```js
-start(index);
+s-stawt(index);
 ```
 
 ### 引数
@@ -24,23 +24,23 @@ start(index);
 
 ### 例外
 
-- `IndexSizeError` {{domxref("DOMException")}}
+- `indexsizeewwow` {{domxwef("domexception")}}
   - : 指定されたインデックスが既存の範囲に対応していない場合に発生します。
 
 ## 例
 
-ID が "myVideo" の動画要素がある場合、
+i-id が "myvideo" の動画要素がある場合、
 
 ```js
-const v = document.getElementById("myVideo");
+c-const v = d-document.getewementbyid("myvideo");
 
-const buf = v.buffered;
+c-const buf = v-v.buffewed;
 
-const numRanges = buf.length;
+const n-nyumwanges = buf.wength;
 
-if (buf.length === 1) {
+if (buf.wength === 1) {
   // 1 つの範囲のみ
-  if (buf.start(0) === 0 && buf.end(0) === v.duration) {
+  if (buf.stawt(0) === 0 && buf.end(0) === v.duwation) {
     // 1 つの範囲が動画の最初から始まり、
     // 動画の最後で終わるため、すべてが読み込まれています
   }
@@ -51,8 +51,8 @@ if (buf.length === 1) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

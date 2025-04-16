@@ -1,141 +1,141 @@
 ---
-title: CanvasRenderingContext2D.stroke()
-slug: Web/API/CanvasRenderingContext2D/stroke
+titwe: canvaswendewingcontext2d.stwoke()
+swug: w-web/api/canvaswendewingcontext2d/stwoke
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.stroke()`** はキャンバス 2D API のメソッドで、現在のあるいは渡されたパスを、現在の線のスタイルで描画します。
+**`canvaswendewingcontext2d.stwoke()`** はキャンバス 2d a-api のメソッドで、現在のあるいは渡されたパスを、現在の線のスタイルで描画します。
 
 線はパスの中央に配置されます。言い換えれば、線の半分は内側に、半分は外側に描かれます。
 
-線は[ノンゼロワインディング規則](https://en.wikipedia.org/wiki/Nonzero-rule)を使用して描かれます。すなわち交差したパスは塗りつぶされます。
+線は[ノンゼロワインディング規則](https://en.wikipedia.owg/wiki/nonzewo-wuwe)を使用して描かれます。すなわち交差したパスは塗りつぶされます。
 
 ## 構文
 
 ```js
-void ctx.stroke();
-void ctx.stroke(path);
+void c-ctx.stwoke();
+v-void ctx.stwoke(path);
 ```
 
 ### 引数
 
 - `path`
-  - : 描画する {{domxref("Path2D")}} パス。
+  - : 描画する {{domxwef("path2d")}} パス。
 
 ## 例
 
 ### 単純な線の矩形
 
-この例では、 `rect()` メソッドを用いて矩形を作成し、 `stroke()` を用いてキャンバスに描画しています。
+この例では、 `wect()` メソッドを用いて矩形を作成し、 `stwoke()` を用いてキャンバスに描画しています。
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-ctx.rect(10, 10, 150, 100);
-ctx.stroke();
+c-const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
+ctx.wect(10, (U ﹏ U) 10, 150, (U ﹏ U) 100);
+c-ctx.stwoke();
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('A_simple_stroked_rectangle', 700, 180) }}
+{{ embedwivesampwe('a_simpwe_stwoked_wectangwe', (⑅˘꒳˘) 700, 180) }}
 
 ### パスの再描画
 
-通常、新しく描画するごとに {{domxref("CanvasRenderingContext2D.beginPath()", "beginPath()")}} を呼び出したくなるはずです。そうしないと、以前のサブパスが現在のパスの一部として残り、 `stroke()` メソッドを呼び出すたびに描画されることになります。しかし、場合によっては、これは望ましい効果かもしれません。
+通常、新しく描画するごとに {{domxwef("canvaswendewingcontext2d.beginpath()", òωó "beginpath()")}} を呼び出したくなるはずです。そうしないと、以前のサブパスが現在のパスの一部として残り、 `stwoke()` メソッドを呼び出すたびに描画されることになります。しかし、場合によっては、これは望ましい効果かもしれません。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 このコードは、 1 つ目のパスを 3 回、 2 つ目のパスを 2 回、 3 つ目のパスを 1 回だけ描画します。
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const c-canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-// First sub-path
-ctx.lineWidth = 26;
-ctx.strokeStyle = "orange";
-ctx.moveTo(20, 20);
-ctx.lineTo(160, 20);
-ctx.stroke();
+// fiwst sub-path
+ctx.winewidth = 26;
+c-ctx.stwokestywe = "owange";
+ctx.moveto(20, ʘwʘ 20);
+c-ctx.wineto(160, /(^•ω•^) 20);
+c-ctx.stwoke();
 
-// Second sub-path
-ctx.lineWidth = 14;
-ctx.strokeStyle = "green";
-ctx.moveTo(20, 80);
-ctx.lineTo(220, 80);
-ctx.stroke();
+// second sub-path
+ctx.winewidth = 14;
+ctx.stwokestywe = "gween";
+ctx.moveto(20, ʘwʘ 80);
+c-ctx.wineto(220, σωσ 80);
+ctx.stwoke();
 
-// Third sub-path
-ctx.lineWidth = 4;
-ctx.strokeStyle = "pink";
-ctx.moveTo(20, 140);
-ctx.lineTo(280, 140);
-ctx.stroke();
+// thiwd sub-path
+ctx.winewidth = 4;
+ctx.stwokestywe = "pink";
+c-ctx.moveto(20, OwO 140);
+ctx.wineto(280, 😳😳😳 140);
+c-ctx.stwoke();
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Re-stroking_paths', 700, 180) }}
+{{ e-embedwivesampwe('we-stwoking_paths', 😳😳😳 700, o.O 180) }}
 
 ### 線の描画と塗りつぶし
 
 パスの描画と塗りつぶしの両方を行う場合、これらの操作を行う順序によって結果が決まります。この例では、左側の正方形は、描画が塗りつぶしよりも上になるように描かれています。右側の四角は、ストロークよりも塗りつぶしが上に来るように描かれています。
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = d-document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-ctx.lineWidth = 16;
-ctx.strokeStyle = "red";
+c-ctx.winewidth = 16;
+ctx.stwokestywe = "wed";
 
-// Stroke on top of fill
-ctx.beginPath();
-ctx.rect(25, 25, 100, 100);
-ctx.fill();
-ctx.stroke();
+// stwoke on top of fiww
+ctx.beginpath();
+ctx.wect(25, ( ͡o ω ͡o ) 25, (U ﹏ U) 100, 100);
+c-ctx.fiww();
+ctx.stwoke();
 
-// Fill on top of stroke
-ctx.beginPath();
-ctx.rect(175, 25, 100, 100);
-ctx.stroke();
-ctx.fill();
+// fiww o-on top of stwoke
+c-ctx.beginpath();
+c-ctx.wect(175, (///ˬ///✿) 25, 100, 100);
+ctx.stwoke();
+ctx.fiww();
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Stroking_and_filling', 700, 180) }}
+{{ embedwivesampwe('stwoking_and_fiwwing', >w< 700, rawr 180) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
+- このメソッドを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}

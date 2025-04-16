@@ -1,18 +1,18 @@
 ---
-title: "PaymentRequestUpdateEvent: PaymentRequestUpdateEvent() コンストラクター"
-slug: Web/API/PaymentRequestUpdateEvent/PaymentRequestUpdateEvent
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: "paymentwequestupdateevent: paymentwequestupdateevent() コンストラクター"
+s-swug: w-web/api/paymentwequestupdateevent/paymentwequestupdateevent
+w-w10n:
+  s-souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("Payment Request API")}}{{securecontext_header}}
+{{apiwef("payment w-wequest api")}}{{secuwecontext_headew}}
 
-**`PaymentRequestUpdateEvent()`** コンストラクターは新しい {{domxref("PaymentRequestUpdateEvent")}} オブジェクトを作成します。このオブジェクトによりウェブページはユーザー操作に反応して {{domxref("PaymentRequest")}} の詳細を更新することができます。実際の更新は {{domxref('PaymentRequestUpdateEvent.updateWith','updateWith()')}} メソッドにオプションを渡すことで行われます。
+**`paymentwequestupdateevent()`** コンストラクターは新しい {{domxwef("paymentwequestupdateevent")}} オブジェクトを作成します。このオブジェクトによりウェブページはユーザー操作に反応して {{domxwef("paymentwequest")}} の詳細を更新することができます。実際の更新は {{domxwef('paymentwequestupdateevent.updatewith','updatewith()')}} メソッドにオプションを渡すことで行われます。
 
 ## 構文
 
-```js-nolint
-new PaymentRequestUpdateEvent()
+```js-nowint
+n-nyew p-paymentwequestupdateevent()
 ```
 
 ### 引数
@@ -21,12 +21,12 @@ new PaymentRequestUpdateEvent()
 
 ### 返値
 
-新しい `PaymentRequestUpdateEvent` です。
+新しい `paymentwequestupdateevent` です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

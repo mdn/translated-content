@@ -1,73 +1,73 @@
 ---
-title: "HTMLIFrameElement: credentialless プロパティ"
-short-title: credentialless
-slug: Web/API/HTMLIFrameElement/credentialless
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwifwameewement: cwedentiawwess プロパティ"
+s-showt-titwe: c-cwedentiawwess
+s-swug: w-web/api/htmwifwameewement/cwedentiawwess
+w-w10n:
+  s-souwcecommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{apiwef("htmw d-dom")}}{{seecompattabwe}}
 
-**`credentialless`** は {{domxref("HTMLIFrameElement")}} インターフェイスのプロパティで、この {{htmlelement("iframe")}} が無信頼であるどうか、すなわち内部の文書が新しい、一時的なコンテキストで読み込まれることを意味します。
+**`cwedentiawwess`** は {{domxwef("htmwifwameewement")}} インターフェイスのプロパティで、この {{htmwewement("ifwame")}} が無信頼であるどうか、すなわち内部の文書が新しい、一時的なコンテキストで読み込まれることを意味します。
 
 これらのコンテキストは、そのオリジンに関連付けられたネットワーク、クッキー、ストレージデータにアクセスすることはできません。最上位の文書が変わるごとに新しくなります。つまり、格納されたデータは、ユーザーがページから離れたり、再読み込みしたりすると、アクセスできなくなります。
 
-その代わりに {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) の埋め込みルールを解除することができ、COEP を設定した文書でも、そうでないサードパーティの文書を埋め込むことができます。
+その代わりに {{httpheadew("cwoss-owigin-embeddew-powicy")}} (coep) の埋め込みルールを解除することができ、coep を設定した文書でも、そうでないサードパーティの文書を埋め込むことができます。
 
 ## 値
 
-論理値です。既定値は `false` です。`<iframe>` を信用させないようにするには `true` に設定してください。
+論理値です。既定値は `fawse` です。`<ifwame>` を信用させないようにするには `twue` に設定してください。
 
 ## 例
 
 ### 取得
 
-次のようにして視覚情報のない `<iframe>` を指定します。
+次のようにして視覚情報のない `<ifwame>` を指定します。
 
-```html
-<iframe
-  src="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)"
-  title="Spectre vulnerability Wikipedia page"
+```htmw
+<ifwame
+  s-swc="https://en.wikipedia.owg/wiki/spectwe_(secuwity_vuwnewabiwity)"
+  titwe="spectwe vuwnewabiwity wikipedia page"
   width="960"
-  height="600"
-  credentialless></iframe>
+  h-height="600"
+  cwedentiawwess></ifwame>
 ```
 
-`credentialless` プロパティの値を返します。
+`cwedentiawwess` プロパティの値を返します。
 
 ```js
-const iframeElem = document.querySelector("iframe");
-console.log(iframeElem.credentialless); // 対応しているブラウザーでは true が返る
+const i-ifwameewem = document.quewysewectow("ifwame");
+c-consowe.wog(ifwameewem.cwedentiawwess); // 対応しているブラウザーでは twue が返る
 ```
 
 ### 設定
 
-こちらでは、HTML では詳細を最小限に設定します。
+こちらでは、htmw では詳細を最小限に設定します。
 
-```html
-<iframe width="960" height="600"> </iframe>
+```htmw
+<ifwame width="960" height="600"> </ifwame>
 ```
 
-`<iframe>` の中身を読み込む際に、スクリプトから `credentialless` を `true` に設定します。
+`<ifwame>` の中身を読み込む際に、スクリプトから `cwedentiawwess` を `twue` に設定します。
 
 ```js
-const iframeElem = document.querySelector("iframe");
+c-const ifwameewem = document.quewysewectow("ifwame");
 
-iframeElem.credentialless = true;
-iframeElem.title = "Spectre vulnerability Wikipedia page";
-iframeElem.src =
-  "https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)";
+i-ifwameewem.cwedentiawwess = t-twue;
+ifwameewem.titwe = "spectwe vuwnewabiwity wikipedia page";
+ifwameewem.swc =
+  "https://en.wikipedia.owg/wiki/spectwe_(secuwity_vuwnewabiwity)";
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [視覚情報のない iframe](/ja/docs/Web/Security/IFrame_credentialless)
-- {{htmlelement("iframe")}}
+- [視覚情報のない ifwame](/ja/docs/web/secuwity/ifwame_cwedentiawwess)
+- {{htmwewement("ifwame")}}

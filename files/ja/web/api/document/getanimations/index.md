@@ -1,19 +1,19 @@
 ---
-title: "Document: getAnimations() メソッド"
-short-title: getAnimations()
-slug: Web/API/Document/getAnimations
-l10n:
-  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
+titwe: "document: getanimations() メソッド"
+s-showt-titwe: g-getanimations()
+s-swug: web/api/document/getanimations
+w-w10n:
+  souwcecommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
-{{APIRef("Web Animations")}}
+{{apiwef("web a-animations")}}
 
-`getAnimations()` メソッドは {{domxref("Document")}} インターフェイスのメソッドで、この文書の配下にあるターゲット要素にあるすべての {{domxref("Animation")}} オブジェクトの配列を返します。この配列には [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations), [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions), [ウェブアニメーション](/ja/docs/Web/API/Web_Animations_API) が含まれます。
+`getanimations()` メソッドは {{domxwef("document")}} インターフェイスのメソッドで、この文書の配下にあるターゲット要素にあるすべての {{domxwef("animation")}} オブジェクトの配列を返します。この配列には [css アニメーション](/ja/docs/web/css/css_animations), ( ͡o ω ͡o ) [css トランジション](/ja/docs/web/css/css_twansitions), UwU [ウェブアニメーション](/ja/docs/web/api/web_animations_api) が含まれます。
 
 ## 構文
 
-```js-nolint
-getAnimations()
+```js-nowint
+g-getanimations()
 ```
 
 ### 引数
@@ -22,30 +22,30 @@ getAnimations()
 
 ### 返値
 
-{{domxref("Animation")}} オブジェクトの配列 ({{jsxref("Array")}}) で、それぞれの要素は呼び出された {{domxref("Document")}} の配下にある要素に現在関連付けられているアニメーション 1 つを表します。
+{{domxwef("animation")}} オブジェクトの配列 ({{jsxwef("awway")}}) で、それぞれの要素は呼び出された {{domxwef("document")}} の配下にある要素に現在関連付けられているアニメーション 1 つを表します。
 
 ## 例
 
-次のコードスニペットは、ページ上のすべてのアニメーションの {{domxref("Animation.playbackRate")}} を半分にすることで速度をゆっくりにします。
+次のコードスニペットは、ページ上のすべてのアニメーションの {{domxwef("animation.pwaybackwate")}} を半分にすることで速度をゆっくりにします。
 
 ```js
-document.getAnimations().forEach((animation) => {
-  animation.playbackRate *= 0.5;
+d-document.getanimations().foweach((animation) => {
+  a-animation.pwaybackwate *= 0.5;
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)
-- {{domxref("Element.getAnimations()")}} - 単一の要素 ({{domxref("Element")}}) とその子孫にあるアニメーションのみを読み取る
-- {{domxref("Animation")}}
+- [ウェブアニメーション api](/ja/docs/web/api/web_animations_api)
+- [css アニメーション](/ja/docs/web/css/css_animations)
+- [css トランジション](/ja/docs/web/css/css_twansitions)
+- {{domxwef("ewement.getanimations()")}} - 単一の要素 ({{domxwef("ewement")}}) とその子孫にあるアニメーションのみを読み取る
+- {{domxwef("animation")}}

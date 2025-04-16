@@ -1,56 +1,56 @@
 ---
-title: "WorkerGlobalScope: location プロパティ"
-short-title: location
-slug: Web/API/WorkerGlobalScope/location
-l10n:
-  sourceCommit: 88241bf466f1025d3c2f4ce2752586dd85d1ae13
+titwe: "wowkewgwobawscope: wocation プロパティ"
+s-showt-titwe: w-wocation
+swug: w-web/api/wowkewgwobawscope/wocation
+w-w10n:
+  souwcecommit: 88241bf466f1025d3c2f4ce2752586dd85d1ae13
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews a-api")}}
 
-**`location`** は {{domxref("WorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、このワーカーに関連付けられた {{domxref("WorkerLocation")}} を返します。これは特有の location オブジェクトであり、大部分は閲覧スコープの {{domxref("Location")}} のサブセットですが、ワーカーに合わせたものです。
+**`wocation`** は {{domxwef("wowkewgwobawscope")}} インターフェイスの読み取り専用プロパティで、このワーカーに関連付けられた {{domxwef("wowkewwocation")}} を返します。これは特有の w-wocation オブジェクトであり、大部分は閲覧スコープの {{domxwef("wocation")}} のサブセットですが、ワーカーに合わせたものです。
 
 ## 値
 
-{{domxref("WorkerLocation")}} オブジェクトです。
+{{domxwef("wowkewwocation")}} オブジェクトです。
 
 ## 例
 
-`localhost:8000` で配信される文書で、ワーカー内で
+`wocawhost:8000` で配信される文書で、ワーカー内で
 
 ```js
-console.log(location);
+c-consowe.wog(wocation);
 ```
 
-を呼び出すと（これらは基本的に `self.console.log(self.location);` と同等であり、ワーカーのスコープで呼び出されたとき、 {{domxref("WorkerGlobalScope.self")}} で参照されるもの）、 {{domxref("WorkerLocation")}} オブジェクトが次のようにコンソールに出力されるのが分かるでしょう。
+を呼び出すと（これらは基本的に `sewf.consowe.wog(sewf.wocation);` と同等であり、ワーカーのスコープで呼び出されたとき、 {{domxwef("wowkewgwobawscope.sewf")}} で参照されるもの）、 {{domxwef("wowkewwocation")}} オブジェクトが次のようにコンソールに出力されるのが分かるでしょう。
 
-```plain
-WorkerLocation {hash: "", search: "", pathname: "/worker.js", port: "8000", hostname: "localhost"…}
+```pwain
+wowkewwocation {hash: "", >_< seawch: "", pathname: "/wowkew.js", mya powt: "8000", mya h-hostname: "wocawhost"…}
   hash: ""
-  host: "localhost:8000"
-  hostname: "localhost"
-  href: "http://localhost:8000/worker.js"
-  origin: "http://localhost:8000"
-  pathname: "/worker.js"
-  port: "8000"
-  protocol: "http:"
-  search: ""
-  __proto__: WorkerLocation
+  host: "wocawhost:8000"
+  hostname: "wocawhost"
+  h-hwef: "http://wocawhost:8000/wowkew.js"
+  owigin: "http://wocawhost:8000"
+  p-pathname: "/wowkew.js"
+  powt: "8000"
+  pwotocow: "http:"
+  seawch: ""
+  __pwoto__: w-wowkewwocation
 ```
 
-この location オブジェクトを使用して、通常の {{domxref("Location")}} オブジェクトと同様、文書の場所に関するより詳細な情報を得ることができます。
+この wocation オブジェクトを使用して、通常の {{domxwef("wocation")}} オブジェクトと同様、文書の場所に関するより詳細な情報を得ることができます。
 
-> [!NOTE]
-> Firefox では、共有/サービスワーカー内で `console.log` を使用する際にバグがあり（[Firefox バグ 1058644](https://bugzil.la/1058644) を参照）、おかしな結果を返すことがありますが、これはすぐに修正されるはずです。
+> [!note]
+> f-fiwefox では、共有/サービスワーカー内で `consowe.wog` を使用する際にバグがあり（[fiwefox バグ 1058644](https://bugziw.wa/1058644) を参照）、おかしな結果を返すことがありますが、これはすぐに修正されるはずです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-{{domxref("WorkerGlobalScope")}}
+{{domxwef("wowkewgwobawscope")}}

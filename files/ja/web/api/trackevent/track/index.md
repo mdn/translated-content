@@ -1,24 +1,24 @@
 ---
-title: TrackEvent.track
-slug: Web/API/TrackEvent/track
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: twackevent.twack
+swug: w-web/api/twackevent/twack
+w-w10n:
+  s-souwcecommit: f-f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`track`** は {{domxref("TrackEvent")}} インターフェイスの読み取り専用プロパティで、イベントが適用されるメディアトラックオブジェクトを指定します。
+**`twack`** は {{domxwef("twackevent")}} インターフェイスの読み取り専用プロパティで、イベントが適用されるメディアトラックオブジェクトを指定します。
 
-メディアトラックは {{domxref("AudioTrack")}}、{{domxref("VideoTrack")}}、{{domxref("TextTrack")}} のいずれかのオブジェクトになります。
+メディアトラックは {{domxwef("audiotwack")}}、{{domxwef("videotwack")}}、{{domxwef("texttwack")}} のいずれかのオブジェクトになります。
 
 ## 値
 
-トラックで表されるメディアの種類に応じて、{{domxref("AudioTrack")}}、{{domxref("VideoTrack")}}、{{domxref("TextTrack")}} のいずれかの型のオブジェクトです。 これは、イベントが適用されるトラックを識別します。
+トラックで表されるメディアの種類に応じて、{{domxwef("audiotwack")}}、{{domxwef("videotwack")}}、{{domxwef("texttwack")}} のいずれかの型のオブジェクトです。 これは、イベントが適用されるトラックを識別します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

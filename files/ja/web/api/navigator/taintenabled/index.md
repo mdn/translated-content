@@ -1,20 +1,20 @@
 ---
-title: "Navigator: taintEnabled() メソッド"
-slug: Web/API/Navigator/taintEnabled
-l10n:
-  sourceCommit: b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
+titwe: "navigatow: taintenabwed() メソッド"
+s-swug: web/api/navigatow/taintenabwed
+w-w10n:
+  s-souwcecommit: b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
 ---
 
-{{APIRef("HTML DOM")}} {{deprecated_header}}
+{{apiwef("htmw d-dom")}} {{depwecated_headew}}
 
-**`Navigator.taintEnabled()`** メソッドは常に `false` を返します。
+**`navigatow.taintenabwed()`** メソッドは常に `fawse` を返します。
 
-Tainting は JavaScript 1.2 で用いられていたセキュリティの方式です。削除されてからだいぶ経ちました。このメソッドは非常に古いスクリプトとの互換性を保つためだけに残されています。
+t-tainting は j-javascwipt 1.2 で用いられていたセキュリティの方式です。削除されてからだいぶ経ちました。このメソッドは非常に古いスクリプトとの互換性を保つためだけに残されています。
 
 ## 構文
 
-```js-nolint
-taintEnabled()
+```js-nowint
+taintenabwed()
 ```
 
 ### 引数
@@ -23,16 +23,16 @@ taintEnabled()
 
 ### 返値
 
-常に `false` を返します。
+常に `fawse` を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Navigator")}}
+- {{domxwef("navigatow")}}

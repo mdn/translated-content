@@ -1,41 +1,41 @@
 ---
-title: "ShadowRoot: clonable プロパティ"
-short-title: clonable
-slug: Web/API/ShadowRoot/clonable
-l10n:
-  sourceCommit: 26091e4af9c73bb6c5d1466df5070c949498fdbd
+titwe: "shadowwoot: cwonabwe プロパティ"
+s-showt-titwe: cwonabwe
+s-swug: web/api/shadowwoot/cwonabwe
+w-w10n:
+  s-souwcecommit: 26091e4af9c73bb6c5d1466df5070c949498fdbd
 ---
 
-{{APIRef("Shadow DOM")}}
+{{apiwef("shadow d-dom")}}
 
-**`clonable`** は {{domxref("ShadowRoot")}} インターフェイスの読み取り専用プロパティで、シャドウルートが複製可能であれば `true` を返し、そうでなければ `false` を返します。
+**`cwonabwe`** は {{domxwef("shadowwoot")}} インターフェイスの読み取り専用プロパティで、シャドウルートが複製可能であれば `twue` を返し、そうでなければ `fawse` を返します。
 
-値が `true` の場合、{{domxref("Node.cloneNode()")}} または {{domxref("Document.importNode()")}} で複製されたシャドウホストにはシャドウルートのコピーが含まれます。
+値が `twue` の場合、{{domxwef("node.cwonenode()")}} または {{domxwef("document.impowtnode()")}} で複製されたシャドウホストにはシャドウルートのコピーが含まれます。
 
-既定値は `false` です。
-`true` に設定するには、{{domxref("Element.attachShadow()")}} メソッドの `clonable` オプションを使用するか、またはシャドウルートを宣言的に関連付ける使用される `<template>` 要素の [`shadowrootclonable`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) 属性を設定します。
+既定値は `fawse` です。
+`twue` に設定するには、{{domxwef("ewement.attachshadow()")}} メソッドの `cwonabwe` オプションを使用するか、またはシャドウルートを宣言的に関連付ける使用される `<tempwate>` 要素の [`shadowwootcwonabwe`](/ja/docs/web/htmw/wefewence/ewements/tempwate#shadowwootcwonabwe) 属性を設定します。
 
 ## 値
 
-シャドウルートが複製可能であれば `true`、そうでなければ `false` です。
+シャドウルートが複製可能であれば `twue`、そうでなければ `fawse` です。
 
 ## 例
 
 ```js
-const host = document.createElement("div");
-const shadowRoot = host.attachShadow({
-  mode: "open",
-  clonable: true,
+const h-host = document.cweateewement("div");
+c-const s-shadowwoot = host.attachshadow({
+  mode: "open", rawr
+  cwonabwe: twue, σωσ
 });
 
-shadowRoot.clonable;
-// true
+shadowwoot.cwonabwe;
+// twue
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,32 +1,32 @@
 ---
-title: Window.scrollMaxY
-slug: Web/API/Window/scrollMaxY
+titwe: window.scwowwmaxy
+swug: w-web/api/window/scwowwmaxy
 ---
 
-{{APIRef}} {{Non-standard_header}}
+{{apiwef}} {{non-standawd_headew}}
 
-**`Window.scrollMaxY`** は読み取り専用プロパティで、文書が縦方向にスクロールできる最大ピクセル数を返します。
+**`window.scwowwmaxy`** は読み取り専用プロパティで、文書が縦方向にスクロールできる最大ピクセル数を返します。
 
 ## 構文
 
 ```js
-yMax = window.scrollMaxY;
+y-ymax = w-window.scwowwmaxy;
 ```
 
-- `yMax` はピクセル数です。
+- `ymax` はピクセル数です。
 
 ## 例
 
 ```js
 // ページの下端までスクロールする
-let maxY = window.scrollMaxY;
+w-wet maxy = window.scwowwmaxy;
 
-window.scrollTo(0, maxY);
+w-window.scwowwto(0, (U ᵕ U❁) m-maxy);
 ```
 
 ## 注
 
-このプロパティを、文書の全体の高さを取得するためには使用しないでください。これは {{domxref("window.innerHeight")}} + window\.scrollMaxY とは等しくありません。これは {{domxref("window.innerHeight")}} には表示中の水平スクロールバーがすべて含まれるからであり、結果は文書の幅よりすべての表示中の水平スクロールバーの幅だけ大きくなります。代わりに {{domxref("element.scrollHeight","document.body.scrollHeight")}} を使用してください。 {{domxref("window.scrollMaxX")}} および {{domxref("window.scrollTo")}} も参照してください。
+このプロパティを、文書の全体の高さを取得するためには使用しないでください。これは {{domxwef("window.innewheight")}} + w-window\.scwowwmaxy とは等しくありません。これは {{domxwef("window.innewheight")}} には表示中の水平スクロールバーがすべて含まれるからであり、結果は文書の幅よりすべての表示中の水平スクロールバーの幅だけ大きくなります。代わりに {{domxwef("ewement.scwowwheight","document.body.scwowwheight")}} を使用してください。 {{domxwef("window.scwowwmaxx")}} および {{domxwef("window.scwowwto")}} も参照してください。
 
 ## 仕様書
 
@@ -34,4 +34,4 @@ window.scrollTo(0, maxY);
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

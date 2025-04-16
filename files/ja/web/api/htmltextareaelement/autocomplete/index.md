@@ -1,37 +1,37 @@
 ---
-title: "HTMLTextAreaElement: autocomplete プロパティ"
-short-title: autocomplete
-slug: Web/API/HTMLTextAreaElement/autocomplete
-l10n:
-  sourceCommit: 050bcdba594e759c0a4dde172de5d334f5a3b20f
+titwe: "htmwtextaweaewement: autocompwete プロパティ"
+s-showt-titwe: a-autocompwete
+s-swug: web/api/htmwtextaweaewement/autocompwete
+w-w10n:
+  souwcecommit: 050bcdba594e759c0a4dde172de5d334f5a3b20f
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`autocomplete`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、ブラウザーによってコントロールの値が自動的に補完できるかどうかを示します。これは、`<textarea>` 要素の [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/textarea#autocomplete) 属性を反映します。
+**`autocompwete`** は {{domxwef("htmwinputewement")}} インターフェイスのプロパティで、ブラウザーによってコントロールの値が自動的に補完できるかどうかを示します。これは、`<textawea>` 要素の [`autocompwete`](/ja/docs/web/htmw/wefewence/ewements/textawea#autocompwete) 属性を反映します。
 
 ## 値
 
-文字列です。`autocomplete` 属性の値 (`"on"`, `"off"`, [`<token-list>`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete#token_list_tokens))、または指定されていない場合は空文字列 `""` です。
+文字列です。`autocompwete` 属性の値 (`"on"`, rawr x3 `"off"`, [`<token-wist>`](/ja/docs/web/htmw/wefewence/attwibutes/autocompwete#token_wist_tokens))、または指定されていない場合は空文字列 `""` です。
 
 ## 例
 
 ```js
-const textareaElement = document.getElementById("comment");
-console.log(textArea.autocomplete);
+c-const textaweaewement = d-document.getewementbyid("comment");
+consowe.wog(textawea.autocompwete);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("textarea")}}
-- HTML の [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) 属性
-- ARIA の [`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) 属性
-- [自動補完の無効化](/ja/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion)
+- {{htmwewement("textawea")}}
+- htmw の [`autocompwete`](/ja/docs/web/htmw/wefewence/attwibutes/autocompwete) 属性
+- awia の [`awia-autocompwete`](/ja/docs/web/accessibiwity/awia/wefewence/attwibutes/awia-autocompwete) 属性
+- [自動補完の無効化](/ja/docs/web/secuwity/pwacticaw_impwementation_guides/tuwning_off_fowm_autocompwetion)

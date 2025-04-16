@@ -1,46 +1,46 @@
 ---
-title: "Window: gamepaddisconnected イベント"
-short-title: gamepaddisconnected
-slug: Web/API/Window/gamepaddisconnected_event
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "window: gamepaddisconnected イベント"
+s-showt-titwe: g-gamepaddisconnected
+s-swug: web/api/window/gamepaddisconnected_event
+w-w10n:
+  souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 `gamepaddisconnected` イベントは、ゲームパッドが切断されたことをブラウザーが検出したときに発行されます。
 
-このイベントは、文書の {{httpheader('Permissions-Policy/gamepad','gamepad')}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)が不許可になっている場合には発生しません。
+このイベントは、文書の {{httpheadew('pewmissions-powicy/gamepad','gamepad')}} [権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)が不許可になっている場合には発生しません。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 例
 
-ゲームパッドが切断されたことを通知するには、{{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用してウィンドウにハンドラーを追加します。
+ゲームパッドが切断されたことを通知するには、{{domxwef("eventtawget.addeventwistenew", UwU "addeventwistenew()")}} を使用してウィンドウにハンドラーを追加します。
 
 ```js
-window.addEventListener("gamepaddisconnected", (event) => {
-  console.log("ゲームパッドの接続が失われました。");
+w-window.addeventwistenew("gamepaddisconnected", rawr x3 (event) => {
+  c-consowe.wog("ゲームパッドの接続が失われました。");
 });
 ```
 
 また、`window.ongamepaddisconnected` イベントハンドラプロパティを使用して、`gamepaddisconnected` イベントのハンドラーを確立することもできます。
 
 ```js
-window.ongamepaddisconnected = (event) => {
-  console.log("ゲームパッドの接続が失われました。");
+w-window.ongamepaddisconnected = (event) => {
+  consowe.wog("ゲームパッドの接続が失われました。");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [gamepadconnected](/ja/docs/Web/API/Window/gamepadconnected_event)
-- [Gamepad API の利用](/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
+- [gamepadconnected](/ja/docs/web/api/window/gamepadconnected_event)
+- [gamepad api の利用](/ja/docs/web/api/gamepad_api/using_the_gamepad_api)

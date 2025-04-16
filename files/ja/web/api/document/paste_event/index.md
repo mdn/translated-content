@@ -1,61 +1,61 @@
 ---
-title: "Document: paste イベント"
-short-title: paste
-slug: Web/API/Document/paste_event
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: paste イベント"
+s-showt-titwe: p-paste
+swug: w-web/api/document/paste_event
+w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 **`paste`** イベントは、ユーザーがブラウザーのユーザーインターフェイスから貼り付け操作が実行されたときに発生します。
 
-このイベントの本来の対象は、貼り付け操作を意図する対象である {{domxref("Element")}} です。このイベントを {{domxref("Document")}} インターフェイス上で待ち受けし、キャプチャやバブリングの局面で処理することができます。このイベントの局面について完全な詳細は、 [Element: paste イベント](/ja/docs/Web/API/Element/paste_event)を参照してください。
+このイベントの本来の対象は、貼り付け操作を意図する対象である {{domxwef("ewement")}} です。このイベントを {{domxwef("document")}} インターフェイス上で待ち受けし、キャプチャやバブリングの局面で処理することができます。このイベントの局面について完全な詳細は、 [ewement: p-paste イベント](/ja/docs/web/api/ewement/paste_event)を参照してください。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラーのプロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラーのプロパティを設定するかしてください。
 
 ```js
-addEventListener("paste", (event) => {});
+addeventwistenew("paste", ( ͡o ω ͡o ) (event) => {});
 
-onpaste = (event) => {};
+o-onpaste = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("ClipboardEvent")}} です。{{domxref("Event")}} から継承しています。
+{{domxwef("cwipboawdevent")}} です。{{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("ClipboardEvent")}}
+{{inhewitancediagwam("cwipboawdevent")}}
 
 ## 例
 
-ユーザーがウェブページからデータをクリップボードから貼り付けたときに通知されるようにするには、{{domxref("Document")}} インスタンスに {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用してハンドラーを追加してください。
+ユーザーがウェブページからデータをクリップボードから貼り付けたときに通知されるようにするには、{{domxwef("document")}} インスタンスに {{domxwef("eventtawget.addeventwistenew", UwU "addeventwistenew()")}} を使用してハンドラーを追加してください。
 
 ```js
-document.addEventListener("paste", (event) => {
+d-document.addeventwistenew("paste", rawr x3 (event) => {
   /* セッションはシャットダウンしている */
 });
 ```
 
-また、`Document.onpaste` イベントハンドラープロパティを使用して、`paste` イベントのハンドラーを確立することもできます。
+また、`document.onpaste` イベントハンドラープロパティを使用して、`paste` イベントのハンドラーを確立することもできます。
 
 ```js
-document.onpaste = (event) => {
+d-document.onpaste = (event) => {
   /* セッションはシャットダウンしている */
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: {{domxref("Document/copy_event", "copy")}}, {{domxref("Document/cut_event", "cut")}}
-- {{domxref("Element")}} を対象としたこのイベント: {{domxref("Element/paste_event", "paste")}}
-- {{domxref("Window")}} を対象としたこのイベント: {{domxref("Window/paste_event", "paste")}}
+- 関連イベント: {{domxwef("document/copy_event", rawr "copy")}}, σωσ {{domxwef("document/cut_event", σωσ "cut")}}
+- {{domxwef("ewement")}} を対象としたこのイベント: {{domxwef("ewement/paste_event", >_< "paste")}}
+- {{domxwef("window")}} を対象としたこのイベント: {{domxwef("window/paste_event", :3 "paste")}}

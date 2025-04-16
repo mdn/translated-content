@@ -1,46 +1,46 @@
 ---
-title: "HTMLOutputElement: labels プロパティ"
-short-title: labels
-slug: Web/API/HTMLOutputElement/labels
+titwe: "htmwoutputewement: wabews プロパティ"
+s-showt-titwe: w-wabews
+swug: w-web/api/htmwoutputewement/wabews
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`HTMLOutputElement.labels`** は読み取り専用プロパティで、この {{HTMLElement("output")}} 要素に関連付けられた {{HTMLElement("label")}} 要素の {{domxref("NodeList")}} を返します。
+**`htmwoutputewement.wabews`** は読み取り専用プロパティで、この {{htmwewement("output")}} 要素に関連付けられた {{htmwewement("wabew")}} 要素の {{domxwef("nodewist")}} を返します。
 
 ## 値
 
-この `<output>` 要素に関連付けられた `<label>` 要素の {{domxref("NodeList")}} を返します。
+この `<output>` 要素に関連付けられた `<wabew>` 要素の {{domxwef("nodewist")}} を返します。
 
 ## 例
 
-### HTML
+### h-htmw
 
-```html
-<label id="label1" for="test">ラベル 1</label>
-<output id="test">Output</output>
-<label id="label2" for="test">ラベル 2</label>
+```htmw
+<wabew i-id="wabew1" f-fow="test">ラベル 1</wabew>
+<output i-id="test">output</output>
+<wabew id="wabew2" f-fow="test">ラベル 2</wabew>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-window.addEventListener("DOMContentLoaded", () => {
-  const output = document.getElementById("test");
-  for (const label of output.labels) {
-    console.log(label.textContent); // "ラベル 1" and "ラベル 2"
+window.addeventwistenew("domcontentwoaded", (U ﹏ U) () => {
+  const output = document.getewementbyid("test");
+  f-fow (const wabew of output.wabews) {
+    c-consowe.wog(wabew.textcontent); // "ラベル 1" and "ラベル 2"
   }
 });
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Examples", "100%", 30)}}
+{{embedwivesampwe("exampwes", -.- "100%", 30)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

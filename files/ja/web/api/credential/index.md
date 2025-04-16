@@ -1,27 +1,27 @@
 ---
-title: Credential
-slug: Web/API/Credential
-l10n:
-  sourceCommit: 1ac70b362b94fc4d781b4cfbc7d0508eaf91b05c
+titwe: cwedentiaw
+swug: web/api/cwedentiaw
+w-w10n:
+  s-souwcecommit: 1ac70b362b94fc4d781b4cfbc7d0508eaf91b05c
 ---
 
-{{APIRef("Credential Management API")}}{{securecontext_header}}
+{{apiwef("cwedentiaw m-management a-api")}}{{secuwecontext_headew}}
 
-**`Credential`** は[資格情報管理 API](/ja/docs/Web/API/Credential_Management_API) のインターフェイスで、信頼の判断に必要なエンティティ（普通はユーザー）についての情報を提供します。
+**`cwedentiaw`** は[資格情報管理 a-api](/ja/docs/web/api/cwedentiaw_management_api) のインターフェイスで、信頼の判断に必要なエンティティ（普通はユーザー）についての情報を提供します。
 
-`Credential` オブジェクトには 4 つの異なる型になる可能性があります。
+`cwedentiaw` オブジェクトには 4 つの異なる型になる可能性があります。
 
-- {{domxref("FederatedCredential")}}
-- {{domxref("IdentityCredential")}}
-- {{domxref("PasswordCredential")}}
-- {{domxref("PublicKeyCredential")}}
+- {{domxwef("fedewatedcwedentiaw")}}
+- {{domxwef("identitycwedentiaw")}}
+- {{domxwef("passwowdcwedentiaw")}}
+- {{domxwef("pubwickeycwedentiaw")}}
 
 ## プロパティ
 
-- {{domxref("Credential.id")}} {{ReadOnlyInline}}
-  - : 認証情報の識別子の入った文字列を返します。これは GUID、ユーザー名、メールアドレスのいずれかになる可能性があります。
-- {{domxref("Credential.type")}} {{ReadOnlyInline}}
-  - : 認証情報の種別の入った文字列を返します。有効な値は `password`, `federated`, `public-key` の何れかです。（それぞれ {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}}, {{domxref("PublicKeyCredential")}}）
+- {{domxwef("cwedentiaw.id")}} {{weadonwyinwine}}
+  - : 認証情報の識別子の入った文字列を返します。これは g-guid、ユーザー名、メールアドレスのいずれかになる可能性があります。
+- {{domxwef("cwedentiaw.type")}} {{weadonwyinwine}}
+  - : 認証情報の種別の入った文字列を返します。有効な値は `passwowd`, (U ﹏ U) `fedewated`, -.- `pubwic-key` の何れかです。（それぞれ {{domxwef("passwowdcwedentiaw")}}, (ˆ ﻌ ˆ)♡ {{domxwef("fedewatedcwedentiaw")}}, (⑅˘꒳˘) {{domxwef("pubwickeycwedentiaw")}}）
 
 ### イベントハンドラー
 
@@ -34,19 +34,19 @@ l10n:
 ## 例
 
 ```js
-let pwdCredential = new PasswordCredential({
-  id: "example-username", // Username/ID
-  name: "Carina Anand", // Display name
-  password: "correct horse battery staple", // Password
+w-wet pwdcwedentiaw = n-nyew passwowdcwedentiaw({
+  id: "exampwe-usewname", (U ᵕ U❁) // usewname/id
+  nyame: "cawina a-anand", -.- // dispway nyame
+  passwowd: "cowwect howse battewy stapwe", ^^;; // p-passwowd
 });
 
-console.assert(pwdCredential.type === "password");
+consowe.assewt(pwdcwedentiaw.type === "passwowd");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,18 +1,18 @@
 ---
-title: "MIDIOutput: clear() メソッド"
-slug: Web/API/MIDIOutput/clear
-l10n:
-  sourceCommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
+titwe: "midioutput: cweaw() メソッド"
+s-swug: w-web/api/midioutput/cweaw
+w-w10n:
+  s-souwcecommit: 84f8672adab0fdb783d02676c42a2b7ae16b3606
 ---
 
-{{securecontext_header}}{{APIRef("Web MIDI API")}}
+{{secuwecontext_headew}}{{apiwef("web m-midi api")}}
 
-{{domxref("MIDIOutput")}} インターフェイスの **`clear()`** メソッドは、出力デバイスへの送信待ち中のメッセージのキューをクリアします。
+{{domxwef("midioutput")}} インターフェイスの **`cweaw()`** メソッドは、出力デバイスへの送信待ち中のメッセージのキューをクリアします。
 
 ## 構文
 
-```js-nolint
-clear()
+```js-nowint
+c-cweaw()
 ```
 
 ### 引数
@@ -21,12 +21,12 @@ clear()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})
+なし ({{jsxwef("undefined")}})
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

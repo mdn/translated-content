@@ -1,94 +1,94 @@
 ---
-title: "SVGRect: x プロパティ"
-short-title: x
-slug: Web/API/SVGRect/x
-l10n:
-  sourceCommit: cf331ccff0dd88648dc9fe22a14f9aaa595ec4bf
+titwe: "svgwect: x プロパティ"
+s-showt-titwe: x-x
+swug: web/api/svgwect/x
+w-w10n:
+  s-souwcecommit: c-cf331ccff0dd88648dc9fe22a14f9aaa595ec4bf
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-[x](https://svgwg.org/svg2-draft/geometry.html#XProperty) プロパティは、要素の位置の水平座標を記述します。
+[x](https://svgwg.owg/svg2-dwaft/geometwy.htmw#xpwopewty) プロパティは、要素の位置の水平座標を記述します。
 
 ## 使用コンテキスト
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
+    <tw>
       <th>名前</th>
       <th>x</th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>値</td>
       <td>
-        <a href="https://www.w3.org/TR/css3-values/#lengths">&#x3C;length></a
-        > | <a href="https://www.w3.org/TR/css3-values/#percentages"
-          >&#x3C;percentage></a
+        <a h-hwef="https://www.w3.owg/tw/css3-vawues/#wengths">&#x3c;wength></a
+        > | <a hwef="https://www.w3.owg/tw/css3-vawues/#pewcentages"
+          >&#x3c;pewcentage></a
         >
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>初期値</td>
       <td>0</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>適用先</td>
       <td>
-        {{ SVGElement("mask") }}, '<a
-          href="https://svgwg.org/svg2-draft/struct.html#SVGElement"
+        {{ s-svgewement("mask") }}, mya '<a
+          hwef="https://svgwg.owg/svg2-dwaft/stwuct.htmw#svgewement"
           >svg</a
-        >', '<a href="https://svgwg.org/svg2-draft/shapes.html#RectElement"
-          >rect</a
-        >', '<a href="https://svgwg.org/svg2-draft/embedded.html#ImageElement"
+        >', 😳 '<a hwef="https://svgwg.owg/svg2-dwaft/shapes.htmw#wectewement"
+          >wect</a
+        >', XD '<a hwef="https://svgwg.owg/svg2-dwaft/embedded.htmw#imageewement"
           >image</a
-        >', '<a
-          href="https://svgwg.org/svg2-draft/embedded.html#ForeignObjectElement"
-          >foreignObject</a
+        >', :3 '<a
+          hwef="https://svgwg.owg/svg2-dwaft/embedded.htmw#foweignobjectewement"
+          >foweignobject</a
         >'
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>継承</td>
       <td>なし</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>パーセント値</td>
       <td>
         現在のビューポートの大きさを参照（<a
-          href="https://svgwg.org/svg2-draft/coords.html#Units"
+          hwef="https://svgwg.owg/svg2-dwaft/coowds.htmw#units"
           >単位</a
         >を参照）
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>メディア</td>
       <td>視覚</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>計算値</td>
       <td>絶対長またはパーセント値</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>アニメーション</td>
       <td>可</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## シンプルな使用法
 
-\<coordinate> はユーザー座標系での長さで、指定された軸方向（X 座標の場合は X 軸、 Y 座標の場合は Y 軸）のユーザー座標系の原点からの距離です。構文は [\<length>](https://www.w3.org/TR/SVG11/types.html#DataTypeLength) と同じです。
+\<coowdinate> はユーザー座標系での長さで、指定された軸方向（x 座標の場合は x-x 軸、 y 座標の場合は y 軸）のユーザー座標系の原点からの距離です。構文は [\<wength>](https://www.w3.owg/tw/svg11/types.htmw#datatypewength) と同じです。
 
-```html
-<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="0" width="40" height="40" fill="blue"></rect>
+```htmw
+<svg w-width="100" height="50" xmwns="http://www.w3.owg/2000/svg">
+  <wect x-x="10" y="0" width="40" height="40" fiww="bwue"></wect>
 </svg>
 
-<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg">
-  <rect x="40" y="0" width="40" height="40" fill="green"></rect>
+<svg width="100" height="50" x-xmwns="http://www.w3.owg/2000/svg">
+  <wect x="40" y="0" w-width="40" height="40" f-fiww="gween"></wect>
 </svg>
 ```
 
-{{EmbedLiveSample("Simple usage", "100%", "100")}}
+{{embedwivesampwe("simpwe usage", 😳😳😳 "100%", "100")}}

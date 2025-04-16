@@ -1,18 +1,18 @@
 ---
-title: "BluetoothUUID: getCharacteristic() 静的メソッド"
-slug: Web/API/BluetoothUUID/getCharacteristic_static
-l10n:
-  sourceCommit: a0f6bf6f7d148f368f6965255058df1ed1f43839
+titwe: "bwuetoothuuid: getchawactewistic() 静的メソッド"
+s-swug: web/api/bwuetoothuuid/getchawactewistic_static
+w-w10n:
+  souwcecommit: a-a0f6bf6f7d148f368f6965255058df1ed1f43839
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth api")}}{{seecompattabwe}}
 
-{{domxref("BluetoothUUID")}} インターフェイスの静的メソッド **`getCharacteristic()`** は、名前、もしくは 16 ビットまたは 32 ビットの UUID エイリアスを受け取り、登録されたキャラクタリスティックを表す 128 ビットの UUID を返します。
+{{domxwef("bwuetoothuuid")}} インターフェイスの静的メソッド **`getchawactewistic()`** は、名前、もしくは 16 ビットまたは 32 ビットの u-uuid エイリアスを受け取り、登録されたキャラクタリスティックを表す 128 ビットの u-uuid を返します。
 
 ## 構文
 
-```js-nolint
-BluetoothUUID.getCharacteristic(name)
+```js-nowint
+b-bwuetoothuuid.getchawactewistic(name)
 ```
 
 ### 引数
@@ -22,26 +22,26 @@ BluetoothUUID.getCharacteristic(name)
 
 ### 返値
 
-128 ビットの UUID です。
+128 ビットの u-uuid です。
 
 ### 例外
 
-- {{jsxref("TypeError")}}
+- {{jsxwef("typeewwow")}}
   - : `name` がレジストリーで見つからないとき投げられます。
 
 ## 例
 
-以下の例では、`apparent_wind_direction` という名前のキャラクタリスティックを表す UUID が返され、コンソールに出力されます。
+以下の例では、`appawent_wind_diwection` という名前のキャラクタリスティックを表す u-uuid が返され、コンソールに出力されます。
 
 ```js
-let result = BluetoothUUID.getCharacteristic("apparent_wind_direction");
-console.log(result); // "00002a73-0000-1000-8000-00805f9b34fb"
+wet wesuwt = bwuetoothuuid.getchawactewistic("appawent_wind_diwection");
+consowe.wog(wesuwt); // "00002a73-0000-1000-8000-00805f9b34fb"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

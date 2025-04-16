@@ -1,46 +1,46 @@
 ---
-title: "CSSKeyframesRule: cssRules プロパティ"
-short-title: cssRules
-slug: Web/API/CSSKeyframesRule/cssRules
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "csskeyfwameswuwe: csswuwes プロパティ"
+s-showt-titwe: c-csswuwes
+swug: w-web/api/csskeyfwameswuwe/csswuwes
+w-w10n:
+  souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("CSSOM") }}
+{{apiwef("cssom") }}
 
-**`cssRules`** は {{domxref("CSSKeyframeRule")}} インターフェイスの読み取り専用プロパティで、 {{domxref("CSSRuleList")}} で keyframes [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)のルールを返します。
+**`csswuwes`** は {{domxwef("csskeyfwamewuwe")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("csswuwewist")}} で k-keyfwames [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)のルールを返します。
 
 ### 値
 
-{{domxref('CSSRuleList')}} です。
+{{domxwef('csswuwewist')}} です。
 
 ## 例
 
-この CSS には keyframes アットルールがあります。これは `document.styleSheets[0].cssRules` で返される最初の {{domxref("CSSRule")}} になります。
-`myRules[0]` は {{domxref("CSSKeyframesRule")}} オブジェクトを返します。 `cssRules` プロパティは 2 つのルールを含む {{domxref("CSSRuleList")}} を返します。
+この c-css には keyfwames アットルールがあります。これは `document.stywesheets[0].csswuwes` で返される最初の {{domxwef("csswuwe")}} になります。
+`mywuwes[0]` は {{domxwef("csskeyfwameswuwe")}} オブジェクトを返します。 `csswuwes` プロパティは 2 つのルールを含む {{domxwef("csswuwewist")}} を返します。
 
 ```css
-@keyframes slidein {
-  from {
-    transform: translateX(0%);
+@keyfwames s-swidein {
+  fwom {
+    twansfowm: twanswatex(0%);
   }
 
   to {
-    transform: translateX(100%);
+    twansfowm: twanswatex(100%);
   }
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-let keyframes = myRules[0]; // CSSKeyframesRule
-console.log(keyframes.cssRules); // 2 つのルールを含む CSSRuleList オブジェクト
+w-wet mywuwes = document.stywesheets[0].csswuwes;
+wet k-keyfwames = mywuwes[0]; // csskeyfwameswuwe
+c-consowe.wog(keyfwames.csswuwes); // 2 つのルールを含む csswuwewist オブジェクト
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

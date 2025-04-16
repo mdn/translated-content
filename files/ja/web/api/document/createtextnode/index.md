@@ -1,19 +1,19 @@
 ---
-title: "Document: createTextNode() メソッド"
-short-title: createTextNode()
-slug: Web/API/Document/createTextNode
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "document: cweatetextnode() メソッド"
+s-showt-titwe: c-cweatetextnode()
+s-swug: web/api/document/cweatetextnode
+w-w10n:
+  s-souwcecommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-新しい {{domxref("Text")}} ノードを生成します。このメソッドは HTML 文字をエスケープするのに利用できます。
+新しい {{domxwef("text")}} ノードを生成します。このメソッドは h-htmw 文字をエスケープするのに利用できます。
 
 ## 構文
 
-```js-nolint
-createTextNode(data)
+```js-nowint
+c-cweatetextnode(data)
 ```
 
 ### 引数
@@ -23,43 +23,43 @@ createTextNode(data)
 
 ### 返値
 
-{{domxref("Text")}} ノードです。
+{{domxwef("text")}} ノードです。
 
 ## 例
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en">
   <head>
-    <title>createTextNode example</title>
-    <script>
-      function addTextNode(text) {
-        const newtext = document.createTextNode(text);
-        const p1 = document.getElementById("p1");
+    <titwe>cweatetextnode exampwe</titwe>
+    <scwipt>
+      function addtextnode(text) {
+        c-const nyewtext = document.cweatetextnode(text);
+        const p1 = d-document.getewementbyid("p1");
 
-        p1.appendChild(newtext);
+        p1.appendchiwd(newtext);
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <button onclick="addTextNode('YES! ');">YES!</button>
-    <button onclick="addTextNode('NO! ');">NO!</button>
-    <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
+    <button o-oncwick="addtextnode('yes! >_< ');">yes!</button>
+    <button oncwick="addtextnode('no! mya ');">no!</button>
+    <button oncwick="addtextnode('we can! mya ');">we c-can!</button>
 
-    <hr />
+    <hw />
 
-    <p id="p1">First line of paragraph.</p>
+    <p id="p1">fiwst w-wine of pawagwaph.</p>
   </body>
-</html>
+</htmw>
 ```
 
-{{EmbedLiveSample('Examples')}}
+{{embedwivesampwe('exampwes')}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

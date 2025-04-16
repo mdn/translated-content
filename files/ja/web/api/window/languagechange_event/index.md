@@ -1,64 +1,64 @@
 ---
-title: "Window: languagechange イベント"
-slug: Web/API/Window/languagechange_event
+titwe: "window: wanguagechange イベント"
+s-swug: web/api/window/wanguagechange_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`languagechange`** イベントはグローバルスコープオブジェクトで、ユーザーの推奨言語が変更されたときに発生します。
+**`wanguagechange`** イベントはグローバルスコープオブジェクトで、ユーザーの推奨言語が変更されたときに発生します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
+    <tw>
+      <th s-scope="wow">バブリング</th>
       <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">キャンセル</th>
       <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラー</th>
+    </tw>
+    <tw>
+      <th scope="wow">インターフェイス</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">イベントハンドラー</th>
       <td>
-        {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}}
+        {{domxwef("windoweventhandwews/onwanguagechange", rawr x3 "onwanguagechange")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
-`languagechange` は {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドで使用することができます。
+`wanguagechange` は {{domxwef("eventtawget/addeventwistenew", rawr "addeventwistenew")}} メソッドで使用することができます。
 
 ```js
-window.addEventListener("languagechange", function () {
-  console.log("languagechange event detected!");
+w-window.addeventwistenew("wanguagechange", σωσ function () {
+  consowe.wog("wanguagechange e-event d-detected!");
 });
 ```
 
-または、 {{domxref("WindowEventHandlers/onlanguagechange", "onlanguagechange")}} イベントハンドラープロパティを使用することもできます。
+または、 {{domxwef("windoweventhandwews/onwanguagechange", σωσ "onwanguagechange")}} イベントハンドラープロパティを使用することもできます。
 
 ```js
-window.onlanguagechange = function (event) {
-  console.log("languagechange event detected!");
+window.onwanguagechange = function (event) {
+  consowe.wog("wanguagechange event detected!");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("NavigatorLanguage.language", "navigator.language")}}
-- {{domxref("NavigatorLanguage.languages", "navigator.languages")}}
-- {{domxref("Navigator")}}
-- {{domxref("Window.onlanguagechange")}}
+- {{domxwef("navigatowwanguage.wanguage", >_< "navigatow.wanguage")}}
+- {{domxwef("navigatowwanguage.wanguages", :3 "navigatow.wanguages")}}
+- {{domxwef("navigatow")}}
+- {{domxwef("window.onwanguagechange")}}

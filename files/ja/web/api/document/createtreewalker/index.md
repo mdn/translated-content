@@ -1,172 +1,172 @@
 ---
-title: "Document: createTreeWalker() メソッド"
-short-title: createTreeWalker()
-slug: Web/API/Document/createTreeWalker
-l10n:
-  sourceCommit: cbfc561e5e577975a51acceadbd7d2fec9b8e45e
+titwe: "document: cweatetweewawkew() メソッド"
+s-showt-titwe: c-cweatetweewawkew()
+s-swug: web/api/document/cweatetweewawkew
+w-w10n:
+  s-souwcecommit: c-cbfc561e5e577975a51acceadbd7d2fec9b8e45e
 ---
 
-{{ApiRef("Document")}}
+{{apiwef("document")}}
 
-**`Document.createTreeWalker()`** 作成メソッドは、新しく作成された {{domxref("TreeWalker")}} オブジェクトを返します。
+**`document.cweatetweewawkew()`** 作成メソッドは、新しく作成された {{domxwef("tweewawkew")}} オブジェクトを返します。
 
 ## 構文
 
-```js-nolint
-createTreeWalker(root)
-createTreeWalker(root, whatToShow)
-createTreeWalker(root, whatToShow, filter)
+```js-nowint
+c-cweatetweewawkew(woot)
+c-cweatetweewawkew(woot, 😳 nyanitoshow)
+cweatetweewawkew(woot, -.- nyanitoshow, 🥺 fiwtew)
 ```
 
 ### 引数
 
-- `root`
+- `woot`
 
-  - : {{domxref("Node")}} で、{{domxref("TreeWalker.currentNode")}} の初期値である`TreeWalker` オブジェクトのルートを表します。
+  - : {{domxwef("node")}} で、{{domxwef("tweewawkew.cuwwentnode")}} の初期値である`tweewawkew` オブジェクトのルートを表します。
 
-- `whatToShow` {{optional_inline}}
+- `nanitoshow` {{optionaw_inwine}}
 
-  - : `unsigned long` で、[`NodeFilter`](https://dom.spec.whatwg.org/#interface-nodefilter) の定数プロパティを組み合わせて作成したビットマスクを表します。特定の型のノードをフィルタリングする便利な方法です。既定値は `0xFFFFFFFF` で、これは `NodeFilter.SHOW_ALL` 定数を表します。
+  - : `unsigned w-wong` で、[`nodefiwtew`](https://dom.spec.naniwg.owg/#intewface-nodefiwtew) の定数プロパティを組み合わせて作成したビットマスクを表します。特定の型のノードをフィルタリングする便利な方法です。既定値は `0xffffffff` で、これは `nodefiwtew.show_aww` 定数を表します。
 
     | 定数                                                     | 数値         | 説明                                                      |
     | -------------------------------------------------------- | ------------ | --------------------------------------------------------- |
-    | `NodeFilter.SHOW_ALL`                                    | `0xFFFFFFFF` | すべてのノードを出力します。                              |
-    | `NodeFilter.SHOW_ATTRIBUTE`                              | `0x2`        | {{domxref("Attr")}} ノードを出力します。                  |
-    | `NodeFilter.SHOW_CDATA_SECTION`                          | `0x8`        | {{domxref("CDATASection")}} ノードを出力します。          |
-    | `NodeFilter.SHOW_COMMENT`                                | `0x80`       | {{domxref("Comment")}} ノードを出力します。               |
-    | `NodeFilter.SHOW_DOCUMENT`                               | `0x100`      | {{domxref("Document")}} ノードを出力します。              |
-    | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                      | `0x400`      | {{domxref("DocumentFragment")}} ノードを出力します。      |
-    | `NodeFilter.SHOW_DOCUMENT_TYPE`                          | `0x200`      | {{domxref("DocumentType")}} ノードを出力します。          |
-    | `NodeFilter.SHOW_ELEMENT`                                | `0x1`        | {{domxref("Element")}} ノードを出力します。               |
-    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `0x20`       | 古いものであり、効果はありません。                        |
-    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `0x10`       | 古いものであり、効果はありません。                        |
-    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `0x800`      | 古いものであり、効果はありません。                        |
-    | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | `0x40`       | {{domxref("ProcessingInstruction")}} ノードを出力します。 |
-    | `NodeFilter.SHOW_TEXT`                                   | `0x4`        | {{domxref("Text")}} ノードを出力します。                  |
+    | `nodefiwtew.show_aww`                                    | `0xffffffff` | すべてのノードを出力します。                              |
+    | `nodefiwtew.show_attwibute`                              | `0x2`        | {{domxwef("attw")}} ノードを出力します。                  |
+    | `nodefiwtew.show_cdata_section`                          | `0x8`        | {{domxwef("cdatasection")}} ノードを出力します。          |
+    | `nodefiwtew.show_comment`                                | `0x80`       | {{domxwef("comment")}} ノードを出力します。               |
+    | `nodefiwtew.show_document`                               | `0x100`      | {{domxwef("document")}} ノードを出力します。              |
+    | `nodefiwtew.show_document_fwagment`                      | `0x400`      | {{domxwef("documentfwagment")}} ノードを出力します。      |
+    | `nodefiwtew.show_document_type`                          | `0x200`      | {{domxwef("documenttype")}} ノードを出力します。          |
+    | `nodefiwtew.show_ewement`                                | `0x1`        | {{domxwef("ewement")}} ノードを出力します。               |
+    | `nodefiwtew.show_entity` {{depwecated_inwine}}           | `0x20`       | 古いものであり、効果はありません。                        |
+    | `nodefiwtew.show_entity_wefewence` {{depwecated_inwine}} | `0x10`       | 古いものであり、効果はありません。                        |
+    | `nodefiwtew.show_notation` {{depwecated_inwine}}         | `0x800`      | 古いものであり、効果はありません。                        |
+    | `nodefiwtew.show_pwocessing_instwuction`                 | `0x40`       | {{domxwef("pwocessinginstwuction")}} ノードを出力します。 |
+    | `nodefiwtew.show_text`                                   | `0x4`        | {{domxwef("text")}} ノードを出力します。                  |
 
-    > **メモ:** `Attr` ノードの親は常に `null` であるため、{{DOMXref("TreeWalker.nextNode()")}} や {{DOMXref("TreeWalker.previousNode()")}} が `Attr` ノードを返すことはありません。`Attr` ノードを走査するには、{{DOMXref("Element.attributes")}} を使用してください。
+    > **メモ:** `attw` ノードの親は常に `nuww` であるため、{{domxwef("tweewawkew.nextnode()")}} や {{domxwef("tweewawkew.pweviousnode()")}} が `attw` ノードを返すことはありません。`attw` ノードを走査するには、{{domxwef("ewement.attwibutes")}} を使用してください。
 
-- `filter` {{optional_inline}}
+- `fiwtew` {{optionaw_inwine}}
 
-  - : コールバック関数または `acceptNode()` メソッドを持つオブジェクトで、`NodeFilter.FILTER_ACCEPT`、`NodeFilter.FILTER_REJECT`、`NodeFilter.FILTER_SKIP` のいずれかを返します。この関数またはメソッドは、`whatToShow` フラグによって含まれるものとして受け入れられた `root` を基点とするサブツリーの各ノードに対して呼び出され、反復可能オブジェクトのリストに含めるかどうかを決定します。
+  - : コールバック関数または `acceptnode()` メソッドを持つオブジェクトで、`nodefiwtew.fiwtew_accept`、`nodefiwtew.fiwtew_weject`、`nodefiwtew.fiwtew_skip` のいずれかを返します。この関数またはメソッドは、`nanitoshow` フラグによって含まれるものとして受け入れられた `woot` を基点とするサブツリーの各ノードに対して呼び出され、反復可能オブジェクトのリストに含めるかどうかを決定します。
 
-    - 返値が `NodeFilter.FILTER_ACCEPT` の場合、このノードが含まれます。
-    - 返値が `NodeFilter.FILTER_REJECT` の場合、このノードの配下のサブツリーにあるすべてのノードが含まれません。
-    - 返値が `NodeFilter.FILTER_SKIP` の場合、このノードは含まれません。
+    - 返値が `nodefiwtew.fiwtew_accept` の場合、このノードが含まれます。
+    - 返値が `nodefiwtew.fiwtew_weject` の場合、このノードの配下のサブツリーにあるすべてのノードが含まれません。
+    - 返値が `nodefiwtew.fiwtew_skip` の場合、このノードは含まれません。
 
 ### 返値
 
-新しい {{domxref("TreeWalker")}} オブジェクトです。
+新しい {{domxwef("tweewawkew")}} オブジェクトです。
 
 ## 例
 
-### whatToShow の使用
+### nyanitoshow の使用
 
-この例では、`whatToShow` を使用してテキストコンテンツを大文字に変換しています。なお、`#root` 要素の子ノードではないにもかかわらず、`#root` 要素の子孫のテキストノードも走査されます。
+この例では、`nanitoshow` を使用してテキストコンテンツを大文字に変換しています。なお、`#woot` 要素の子ノードではないにもかかわらず、`#woot` 要素の子孫のテキストノードも走査されます。
 
-#### HTML
+#### htmw
 
-```html
-<div id="root">
+```htmw
+<div i-id="woot">
   これはテキストノードです。
   <span>そして、これは <code>span</code> 要素です。</span>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
-span {
-  background-color: aqua;
+s-span {
+  backgwound-cowow: aqua;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const treeWalker = document.createTreeWalker(
-  document.querySelector("#root"),
-  NodeFilter.SHOW_TEXT,
+const tweewawkew = d-document.cweatetweewawkew(
+  document.quewysewectow("#woot"), o.O
+  n-nyodefiwtew.show_text, /(^•ω•^)
 );
 
-while (treeWalker.nextNode()) {
-  const node = treeWalker.currentNode;
-  node.data = node.data.toUpperCase();
+w-whiwe (tweewawkew.nextnode()) {
+  const nyode = tweewawkew.cuwwentnode;
+  nyode.data = nyode.data.touppewcase();
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("using_whattoshow", "100%", 100)}}
+{{embedwivesampwe("using_nanitoshow", nyaa~~ "100%", 100)}}
 
-### filter の使用
+### fiwtew の使用
 
-この例では `filter` を使用してテキストコンテンツをエスケープします。テキストノードが `.escape` 要素の子孫であり、かつ `.no-escape` 要素の子孫でない場合、そのコンテンツは {{JSXref("encodeURI()")}} を使用してエスケープされます。
+この例では `fiwtew` を使用してテキストコンテンツをエスケープします。テキストノードが `.escape` 要素の子孫であり、かつ `.no-escape` 要素の子孫でない場合、そのコンテンツは {{jsxwef("encodeuwi()")}} を使用してエスケープされます。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
   <div>
-    This is not escaped. <span class="escape">But this is escaped.</span>
+    this is nyot escaped. <span cwass="escape">but this i-is escaped.</span>
   </div>
-  <div class="escape">This is escaped.</div>
-  <div class="no-escape">This is not escaped.</div>
+  <div cwass="escape">this i-is escaped.</div>
+  <div c-cwass="no-escape">this i-is nyot escaped.</div>
 </div>
-<hr />
-<div class="escape">
+<hw />
+<div c-cwass="escape">
   <div>
-    This is escaped. <span class="no-escape">But this is not escaped.</span>
+    this is escaped. nyaa~~ <span c-cwass="no-escape">but this is nyot escaped.</span>
   </div>
-  <div class="no-escape">This is not escaped.</div>
+  <div c-cwass="no-escape">this is nyot escaped.</div>
 </div>
-<hr />
-<div class="no-escape">
-  <div>This is not escaped.</div>
-  <div class="escape">This is not escaped.</div>
+<hw />
+<div cwass="no-escape">
+  <div>this is not escaped.</div>
+  <div cwass="escape">this i-is nyot escaped.</div>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css hidden
-div {
-  margin: 0.25em 0;
+d-div {
+  mawgin: 0.25em 0;
   padding: 0.25em;
 }
-span {
-  display: inline-block;
+s-span {
+  dispway: inwine-bwock;
 }
 ```
 
 ```css
 .escape {
-  border: dashed;
+  bowdew: dashed;
 }
 .no-escape {
-  border: solid;
+  b-bowdew: s-sowid;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const treeWalker = document.createTreeWalker(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+c-const t-tweewawkew = document.cweatetweewawkew(
+  document.body, :3
+  n-nodefiwtew.show_ewement, 😳😳😳
   (node) =>
-    node.classList.contains("no-escape")
-      ? NodeFilter.FILTER_REJECT
-      : node.closest(".escape")
-        ? NodeFilter.FILTER_ACCEPT
-        : NodeFilter.FILTER_SKIP,
+    nyode.cwasswist.contains("no-escape")
+      ? n-nyodefiwtew.fiwtew_weject
+      : nyode.cwosest(".escape")
+        ? nyodefiwtew.fiwtew_accept
+        : n-nyodefiwtew.fiwtew_skip, (˘ω˘)
 );
 
-while (treeWalker.nextNode()) {
-  for (const node of treeWalker.currentNode.childNodes) {
-    if (node.nodeType === Node.TEXT_NODE && /\S/.test(node.data)) {
-      // Exclude whitespace-only text nodes
-      node.data = encodeURI(node.data.replace(/\s+/g, " "));
+whiwe (tweewawkew.nextnode()) {
+  f-fow (const nyode of tweewawkew.cuwwentnode.chiwdnodes) {
+    i-if (node.nodetype === n-nyode.text_node && /\s/.test(node.data)) {
+      // excwude whitespace-onwy text nyodes
+      nyode.data = encodeuwi(node.data.wepwace(/\s+/g, ^^ " "));
     }
   }
 }
@@ -174,16 +174,16 @@ while (treeWalker.nextNode()) {
 
 #### 結果
 
-{{EmbedLiveSample("using_filter", "100%", 400)}}
+{{embedwivesampwe("using_fiwtew", :3 "100%", -.- 400)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("TreeWalker")}}: 関連インターフェイス
+- {{domxwef("tweewawkew")}}: 関連インターフェイス

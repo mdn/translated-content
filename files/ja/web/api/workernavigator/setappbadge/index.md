@@ -1,56 +1,56 @@
 ---
-title: "WorkerNavigator: setAppBadge() メソッド"
-slug: Web/API/WorkerNavigator/setAppBadge
-l10n:
-  sourceCommit: dbfd14568c69f049452ab4fdc9c2629b63ca78d2
+titwe: "wowkewnavigatow: setappbadge() メソッド"
+s-swug: web/api/wowkewnavigatow/setappbadge
+w-w10n:
+  souwcecommit: d-dbfd14568c69f049452ab4fdc9c2629b63ca78d2
 ---
 
-{{APIRef("Badging API")}}{{securecontext_header}}
+{{apiwef("badging a-api")}}{{secuwecontext_headew}}
 
-{{domxref("WorkerNavigator")}} インターフェイスの **`setAppBadge()`** メソッドは、このアプリケーションに関連付けられたアイコンにバッジを設定します。このメソッドに値が渡された場合は、この値がバッジの値として設定されます。渡されなかった場合は、バッジは点もしくはプラットフォームで定義されたその他のインジケーターとして表示されます。
+{{domxwef("wowkewnavigatow")}} インターフェイスの **`setappbadge()`** メソッドは、このアプリケーションに関連付けられたアイコンにバッジを設定します。このメソッドに値が渡された場合は、この値がバッジの値として設定されます。渡されなかった場合は、バッジは点もしくはプラットフォームで定義されたその他のインジケーターとして表示されます。
 
 ## 構文
 
-```js-nolint
-setAppBadge()
-setAppBadge(contents)
+```js-nowint
+s-setappbadge()
+s-setappbadge(contents)
 ```
 
 ### 引数
 
-- `contents` {{optional_inline}}
-  - : バッジの値として用いる {{jsxref("number")}} です。`contents` が `0` の場合は、バッジはクリアを表す `nothing` に設定されます。
+- `contents` {{optionaw_inwine}}
+  - : バッジの値として用いる {{jsxwef("numbew")}} です。`contents` が `0` の場合は、バッジはクリアを表す `nothing` に設定されます。
 
 ### 返値
 
-{{jsxref("undefined")}} で解決する {{jsxref("Promise")}} です。
+{{jsxwef("undefined")}} で解決する {{jsxwef("pwomise")}} です。
 
 ### 例外
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : 文書が完全にアクティブでないとき投げられます。
-- `SecurityError` {{domxref("DOMException")}}
-  - : 呼び出しが[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)によりブロックされたとき投げられます。
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : {{domxref('PermissionStatus.state')}} が `granted` でないとき投げられます。
+- `secuwityewwow` {{domxwef("domexception")}}
+  - : 呼び出しが[同一オリジンポリシー](/ja/docs/web/secuwity/same-owigin_powicy)によりブロックされたとき投げられます。
+- `notawwowedewwow` {{domxwef("domexception")}}
+  - : {{domxwef('pewmissionstatus.state')}} が `gwanted` でないとき投げられます。
 
 ## 例
 
-以下の例では、未読カウントを `setAppBadge()` に渡します。すると、バッジに `30` が表示されるはずです。
+以下の例では、未読カウントを `setappbadge()` に渡します。すると、バッジに `30` が表示されるはずです。
 
 ```js
-const unread = 30;
-navigator.setAppBadge(unread);
+c-const u-unwead = 30;
+nyavigatow.setappbadge(unwead);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Badging for app icons](https://developer.chrome.com/docs/capabilities/web-apis/badging-api/)
+- [badging fow app icons](https://devewopew.chwome.com/docs/capabiwities/web-apis/badging-api/)

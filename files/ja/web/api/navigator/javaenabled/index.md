@@ -1,18 +1,18 @@
 ---
-title: "Navigator: javaEnabled() メソッド"
-slug: Web/API/Navigator/javaEnabled
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: javaenabwed() メソッド"
+s-swug: web/api/navigatow/javaenabwed
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{apiwef("htmw d-dom")}}{{depwecated_headew}}
 
-このメソッドは常に false を返します。
+このメソッドは常に f-fawse を返します。
 
 ## 構文
 
-```js-nolint
-javaEnabled()
+```js-nowint
+j-javaenabwed()
 ```
 
 ### 引数
@@ -21,20 +21,20 @@ javaEnabled()
 
 ### 返値
 
-論理値 `false` です。
+論理値 `fawse` です。
 
 ## 例
 
 ```js
-if (window.navigator.javaEnabled()) {
-  // コードが実行されることはありません。条件は常に false です
+i-if (window.navigatow.javaenabwed()) {
+  // コードが実行されることはありません。条件は常に f-fawse です
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

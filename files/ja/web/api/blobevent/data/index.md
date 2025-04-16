@@ -1,27 +1,27 @@
 ---
-title: "BlobEvent: data プロパティ"
-short-title: data
-slug: Web/API/BlobEvent/data
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwobevent: data プロパティ"
+s-showt-titwe: d-data
+swug: w-web/api/bwobevent/data
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("MediaStream Recording")}}
+{{apiwef("mediastweam w-wecowding")}}
 
-**`BlobEvent.data`** は読み取り専用プロパティで、イベントに関連付けられた {{domxref("Blob")}} を表します。
+**`bwobevent.data`** は読み取り専用プロパティで、イベントに関連付けられた {{domxwef("bwob")}} を表します。
 
 ## 値
 
-{{domxref("Blob")}} オブジェクトです。
+{{domxwef("bwob")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このプロパティが属する {{domxref("BlobEvent")}} インターフェイス
+- このプロパティが属する {{domxwef("bwobevent")}} インターフェイス

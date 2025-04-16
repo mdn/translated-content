@@ -1,14 +1,14 @@
 ---
-title: "MediaStreamTrack: kind プロパティ"
-short-title: kind
-slug: Web/API/MediaStreamTrack/kind
-l10n:
-  sourceCommit: ac67e6f05d337e52e39f02a978b8c00bc43d583b
+titwe: "mediastweamtwack: kind プロパティ"
+s-showt-titwe: k-kind
+swug: web/api/mediastweamtwack/kind
+w-w10n:
+  s-souwcecommit: ac67e6f05d337e52e39f02a978b8c00bc43d583b
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{apiwef("media c-captuwe a-and stweams")}}
 
-**`kind`** は {{domxref("MediaStreamTrack")}} インターフェイスの読み取り専用のプロパティであり、トラックの種類を示す文字列を返します。トラックが音声トラックの場合は `"audio"` を返し、映像トラックの場合は `"video"` を返します。トラックがソースから切り離されている場合は、何も変更されません。
+**`kind`** は {{domxwef("mediastweamtwack")}} インターフェイスの読み取り専用のプロパティであり、トラックの種類を示す文字列を返します。トラックが音声トラックの場合は `"audio"` を返し、映像トラックの場合は `"video"` を返します。トラックがソースから切り離されている場合は、何も変更されません。
 
 ## 値
 
@@ -19,12 +19,12 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebRTC](/ja/docs/Web/API/WebRTC_API)
+- [webwtc](/ja/docs/web/api/webwtc_api)

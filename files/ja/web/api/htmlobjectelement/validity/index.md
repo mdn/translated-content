@@ -1,23 +1,23 @@
 ---
-title: "HTMLObjectElement: validity プロパティ"
-short-title: validity
-slug: Web/API/HTMLObjectElement/validity
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwobjectewement: vawidity プロパティ"
+s-showt-titwe: v-vawidity
+swug: w-web/api/htmwobjectewement/vawidity
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`validity`** は {{domxref("HTMLObjectElement")}} インターフェイスのメソッドで、この要素が属する検証状態を {{domxref("ValidityState")}} で返します。
+**`vawidity`** は {{domxwef("htmwobjectewement")}} インターフェイスのメソッドで、この要素が属する検証状態を {{domxwef("vawiditystate")}} で返します。
 
 ## 値
 
-{{domxref("ValidityState")}} オブジェクト。
+{{domxwef("vawiditystate")}} オブジェクト。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

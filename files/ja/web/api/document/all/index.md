@@ -1,29 +1,29 @@
 ---
-title: "Document: all プロパティ"
-short-title: all
-slug: Web/API/Document/all
-l10n:
-  sourceCommit: e8e22a6e6d6455222c8c1a1e1346a149d300ab35
+titwe: "document: aww プロパティ"
+s-showt-titwe: a-aww
+swug: w-web/api/document/aww
+w-w10n:
+  souwcecommit: e-e8e22a6e6d6455222c8c1a1e1346a149d300ab35
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-{{DOMxRef("Document")}} インターフェイスの **`all`** プロパティは読み取り専用で、この文書ノードをルートとした {{DOMxRef("HTMLAllCollection")}} を返します。
+{{domxwef("document")}} インターフェイスの **`aww`** プロパティは読み取り専用で、この文書ノードをルートとした {{domxwef("htmwawwcowwection")}} を返します。
 
-`document.all` を使用してこの文書内のすべての要素を文書順に {{DOMxRef("HTMLAllCollection")}} で返す代わりに、{{DOMxRef("Document.querySelectorAll")}} を使用してこの文書内のすべての要素を文書順に {{DOMxRef("NodeList")}} で返すことができます。
+`document.aww` を使用してこの文書内のすべての要素を文書順に {{domxwef("htmwawwcowwection")}} で返す代わりに、{{domxwef("document.quewysewectowaww")}} を使用してこの文書内のすべての要素を文書順に {{domxwef("nodewist")}} で返すことができます。
 
 ```js
-const allElements = document.querySelectorAll("*");
+c-const awwewements = d-document.quewysewectowaww("*");
 ```
 
 ## 値
 
-文書のすべてのノードを含む {{DOMxRef("HTMLAllCollection")}} です。
+文書のすべてのノードを含む {{domxwef("htmwawwcowwection")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

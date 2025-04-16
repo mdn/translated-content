@@ -1,41 +1,41 @@
 ---
-title: PeriodicWave
-slug: Web/API/PeriodicWave
-l10n:
-  sourceCommit: 95dff5ec1195f072b8e48a2273294933670b1e99
+titwe: pewiodicwave
+swug: web/api/pewiodicwave
+w-w10n:
+  souwcecommit: 95dff5ec1195f072b8e48a2273294933670b1e99
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-**`PeriodicWave`** インターフェイスは、{{domxref("OscillatorNode")}} の出力を形成するのに利用できる周期的な波形を定義します。
+**`pewiodicwave`** インターフェイスは、{{domxwef("osciwwatownode")}} の出力を形成するのに利用できる周期的な波形を定義します。
 
-`PeriodicWave` には入力も出力もありません。これは、{{domxref("OscillatorNode.setPeriodicWave()")}} を呼ぶ際にカスタム発振器を定義するために用います。`PeriodicWave` 自体は {{domxref("BaseAudioContext.createPeriodicWave")}} により作成され、返されます。
+`pewiodicwave` には入力も出力もありません。これは、{{domxwef("osciwwatownode.setpewiodicwave()")}} を呼ぶ際にカスタム発振器を定義するために用います。`pewiodicwave` 自体は {{domxwef("baseaudiocontext.cweatepewiodicwave")}} により作成され、返されます。
 
 ## コンストラクター
 
-- {{domxref("PeriodicWave.PeriodicWave", "PeriodicWave()")}}
-  - : 全てのプロパティについてデフォルトの値を使用し、新しい `PeriodicWave` を作成します。最初からプロパティの値をカスタムしたい場合は、かわりに {{domxref("BaseAudioContext.createPeriodicWave")}} ファクトリーメソッドを使ってください。
+- {{domxwef("pewiodicwave.pewiodicwave", òωó "pewiodicwave()")}}
+  - : 全てのプロパティについてデフォルトの値を使用し、新しい `pewiodicwave` を作成します。最初からプロパティの値をカスタムしたい場合は、かわりに {{domxwef("baseaudiocontext.cweatepewiodicwave")}} ファクトリーメソッドを使ってください。
 
 ## インスタンスプロパティ
 
-なし。`PeriodicWave` はプロパティの継承もしません。
+なし。`pewiodicwave` はプロパティの継承もしません。
 
 ## インスタンスメソッド
 
-なし。`PeriodicWave` はメソッドの継承もしません。
+なし。`pewiodicwave` はメソッドの継承もしません。
 
 ## 例
 
-単純な正弦波を表す `PeriodicWave` オブジェクトを作成する方法のサンプルコードは、{{domxref("BaseAudioContext.createPeriodicWave")}} を参照してください。
+単純な正弦波を表す `pewiodicwave` オブジェクトを作成する方法のサンプルコードは、{{domxwef("baseaudiocontext.cweatepewiodicwave")}} を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Web Audio API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [web a-audio a-api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)

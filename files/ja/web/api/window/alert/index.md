@@ -1,40 +1,40 @@
 ---
-title: window.alert
-slug: Web/API/Window/alert
+titwe: window.awewt
+swug: web/api/window/awewt
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
-**`Window.alert()`** は、任意のメッセージを含むダイアログを表示し、ユーザーがそのダイアログを閉じるまで待機します。
+**`window.awewt()`** は、任意のメッセージを含むダイアログを表示し、ユーザーがそのダイアログを閉じるまで待機します。
 
 一部の条件下（ユーザーがタブを切り替えた場合など）では、ブラウザーが実際にダイアログを表示しない場合や、ユーザーがダイアログを閉じるのを待たない場合があります。
 
 ## 構文
 
-```js-nolint
-alert()
-alert(message)
+```js-nowint
+a-awewt()
+awewt(message)
 ```
 
 ### パラメーター
 
-- `message` {{optional_inline}}
+- `message` {{optionaw_inwine}}
   - : ダイアログに表示したい文字列、または、文字列に変換されて表示されるオブジェクト。
 
 ### 戻り値
 
-なし（{{jsxref("undefined")}}）
+なし（{{jsxwef("undefined")}}）
 
 ## 例
 
 ```js
-window.alert("Hello world!");
-alert("Hello world!");
+w-window.awewt("hewwo w-wowwd!");
+a-awewt("hewwo w-wowwd!");
 ```
 
 いずれも、以下のように表示されます。
 
-![黒いダイアログボックス。左上の小さな丸いアイコンに続いて、白い開き括弧と閉じ括弧があり、白いテキスト「JavaScript Application」が含まれています。その下の左側には「Hello world!」という白いテキストがあります。そして、右下には小さな水色のボタンがあります。ボタンのテキストは黒で「OK」です](alerthelloworld.png)
+![黒いダイアログボックス。左上の小さな丸いアイコンに続いて、白い開き括弧と閉じ括弧があり、白いテキスト「javascwipt appwication」が含まれています。その下の左側には「hewwo w-wowwd!」という白いテキストがあります。そして、右下には小さな水色のボタンがあります。ボタンのテキストは黒で「ok」です](awewthewwowowwd.png)
 
 ## 注意事項
 
@@ -44,10 +44,10 @@ alert("Hello world!");
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 関連情報
 
-- {{HTMLElement("dialog")}} element
-- {{domxref("window.confirm","confirm")}}
-- {{domxref("window.prompt","prompt")}}
+- {{htmwewement("diawog")}} e-ewement
+- {{domxwef("window.confiwm","confiwm")}}
+- {{domxwef("window.pwompt","pwompt")}}

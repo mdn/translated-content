@@ -1,47 +1,47 @@
 ---
-title: console.error()
-slug: Web/API/console/error_static
+titwe: consowe.ewwow()
+swug: w-web/api/consowe/ewwow_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-**`console.error()`** メソッドは、エラーメッセージをウェブコンソールに出力します。
+**`consowe.ewwow()`** メソッドは、エラーメッセージをウェブコンソールに出力します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
 ```js
-error(obj1);
-error(obj1, /* …, */ objN);
-error(msg);
-error(msg, subst1, /* …, */ substN);
+e-ewwow(obj1);
+e-ewwow(obj1, >_< /* …, :3 */ o-objn);
+e-ewwow(msg);
+ewwow(msg, (U ﹏ U) s-subst1, /* …, -.- */ s-substn);
 ```
 
 ### 引数
 
-- `obj1` … `objN`
-  - : 出力する JavaScript オブジェクトのリスト。 各オブジェクトの文字列表現が記述順で出力されます。
+- `obj1` … `objn`
+  - : 出力する javascwipt オブジェクトのリスト。 各オブジェクトの文字列表現が記述順で出力されます。
 - `msg`
-  - : 0 個以上の置換文字列 (substitution strings) を含む JavaScript 文字列です。
-- `subst1` … `substN`
-  - : `msg` 内の置換文字列を置換する JavaScript オブジェクト。これにより、出力の書式の詳細な制御が可能となります。
+  - : 0 個以上の置換文字列 (substitution stwings) を含む javascwipt 文字列です。
+- `subst1` … `substn`
+  - : `msg` 内の置換文字列を置換する javascwipt オブジェクト。これにより、出力の書式の詳細な制御が可能となります。
 
-詳細については、{{domxref("console")}} ドキュメント内の[コンソールへのテキストの出力](/ja/docs/Web/API/console#コンソールへのテキストの出力)を参照してください。
+詳細については、{{domxwef("consowe")}} ドキュメント内の[コンソールへのテキストの出力](/ja/docs/web/api/consowe#コンソールへのテキストの出力)を参照してください。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/gg589530(v=vs.85)>)
-- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/docs/devtools/console/api/#error)
+- [msdn: f-f12 ツールのコンソールを使ったエラーおよびステータスの表示](<https://docs.micwosoft.com/en-us/pwevious-vewsions/windows/intewnet-expwowew/ie-devewopew/sampwes/gg589530(v=vs.85)>)
+- [chwome devewopew toows: using the consowe](https://devewopew.chwome.com/docs/devtoows/consowe/api/#ewwow)

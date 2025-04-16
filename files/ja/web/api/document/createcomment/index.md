@@ -1,19 +1,19 @@
 ---
-title: "Document: createComment() メソッド"
-short-title: createComment()
-slug: Web/API/Document/createComment
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "document: cweatecomment() メソッド"
+s-showt-titwe: c-cweatecomment()
+s-swug: web/api/document/cweatecomment
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`createComment()`** は新たにコメントノードを作成し、返します。
+**`cweatecomment()`** は新たにコメントノードを作成し、返します。
 
 ## 構文
 
-```js-nolint
-createComment(data)
+```js-nowint
+c-cweatecomment(data)
 ```
 
 ### 引数
@@ -23,26 +23,26 @@ createComment(data)
 
 ### 返値
 
-新しい {{domxref("Comment")}} オブジェクトです。
+新しい {{domxwef("comment")}} オブジェクトです。
 
 ## 例
 
 ```js
-const docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
-const comment = docu.createComment(
-  "This is a not-so-secret comment in your document",
+c-const docu = nyew d-dompawsew().pawsefwomstwing("<xmw></xmw>", (⑅˘꒳˘) "appwication/xmw");
+const comment = docu.cweatecomment(
+  "this is a nyot-so-secwet c-comment in youw document", (U ᵕ U❁)
 );
 
-docu.querySelector("xml").appendChild(comment);
+docu.quewysewectow("xmw").appendchiwd(comment);
 
-console.log(new XMLSerializer().serializeToString(docu));
-// 表示結果: <xml><!--This is a not-so-secret comment in your document--></xml>
+c-consowe.wog(new xmwsewiawizew().sewiawizetostwing(docu));
+// 表示結果: <xmw><!--this i-is a nyot-so-secwet comment in youw document--></xmw>
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

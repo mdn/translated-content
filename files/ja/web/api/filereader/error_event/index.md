@@ -1,75 +1,75 @@
 ---
-title: "FileReader: error イベント"
-slug: Web/API/FileReader/error_event
-l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+titwe: "fiweweadew: ewwow イベント"
+s-swug: w-web/api/fiweweadew/ewwow_event
+w-w10n:
+  souwcecommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`error` イベントは、エラーによって読み取りが失敗したとき (例えば、ファイルが見つからなかった場合や読み取り可能ではなかった場合) に発生します。
+`ewwow` イベントは、エラーによって読み取りが失敗したとき (例えば、ファイルが見つからなかった場合や読み取り可能ではなかった場合) に発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", 😳 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("error", (event) => {});
+a-addeventwistenew("ewwow", XD (event) => {});
 
-onerror = (event) => {};
+o-onewwow = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("ProgressEvent")}} です。 {{domxref("Event")}} から継承しています。
+{{domxwef("pwogwessevent")}} です。 {{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("ProgressEvent")}}
+{{inhewitancediagwam("pwogwessevent")}}
 
 ## イベントプロパティ
 
-_親である {{domxref("Event")}} からプロパティを継承しています。_
+_親である {{domxwef("event")}} からプロパティを継承しています。_
 
-- {{domxref("ProgressEvent.lengthComputable")}} {{ReadOnlyInline}}
+- {{domxwef("pwogwessevent.wengthcomputabwe")}} {{weadonwyinwine}}
   - : 論理値で、このプロセスで行われる作業の合計と、すでに行われた作業の量が計算可能かどうかを示す。言い換えれば、進捗が計測可能かどうかを示します。
-- {{domxref("ProgressEvent.loaded")}} {{ReadOnlyInline}}
-  - : 64 ビット符号なし整数値で、このプロセスで既に作業を行った量を示します。作業した比率は、`total` をこのプロパティの値で割ることで算出できます。 HTTP を使用してリソースをダウンロードする場合、これは HTTP メッセージの本文のみをカウントし、ヘッダーやその他のオーバーヘッドは含まれません。
-- {{domxref("ProgressEvent.total")}} {{ReadOnlyInline}}
-  - : 64 ビット符号なし整数で、基礎となるプロセスが実行中の作業の総量を表します。 HTTP を使用してリソースをダウンロードする場合、これは `Content-Length` （メッセージの本文のサイズ）であり、ヘッダーやその他のオーバーヘッドは含まれません。
+- {{domxwef("pwogwessevent.woaded")}} {{weadonwyinwine}}
+  - : 64 ビット符号なし整数値で、このプロセスで既に作業を行った量を示します。作業した比率は、`totaw` をこのプロパティの値で割ることで算出できます。 http を使用してリソースをダウンロードする場合、これは h-http メッセージの本文のみをカウントし、ヘッダーやその他のオーバーヘッドは含まれません。
+- {{domxwef("pwogwessevent.totaw")}} {{weadonwyinwine}}
+  - : 64 ビット符号なし整数で、基礎となるプロセスが実行中の作業の総量を表します。 h-http を使用してリソースをダウンロードする場合、これは `content-wength` （メッセージの本文のサイズ）であり、ヘッダーやその他のオーバーヘッドは含まれません。
 
 ## 例
 
 ```js
-const fileInput = document.querySelector('input[type="file"]');
-const reader = new FileReader();
+c-const fiweinput = document.quewysewectow('input[type="fiwe"]');
+const weadew = nyew fiweweadew();
 
-function handleSelected(e) {
-  const selectedFile = fileInput.files[0];
-  if (selectedFile) {
-    reader.addEventListener("error", () => {
-      console.error(`Error occurred reading file: ${selectedFile.name}`);
+function h-handwesewected(e) {
+  const sewectedfiwe = f-fiweinput.fiwes[0];
+  if (sewectedfiwe) {
+    w-weadew.addeventwistenew("ewwow", :3 () => {
+      consowe.ewwow(`ewwow occuwwed weading fiwe: ${sewectedfiwe.name}`);
     });
 
-    reader.addEventListener("load", () => {
-      console.error(`File: ${selectedFile.name} read successfully`);
+    w-weadew.addeventwistenew("woad", 😳😳😳 () => {
+      consowe.ewwow(`fiwe: ${sewectedfiwe.name} w-wead successfuwwy`);
     });
 
-    reader.readAsDataURL(selectedFile);
+    w-weadew.weadasdatauww(sewectedfiwe);
   }
 }
 
-fileInput.addEventListener("change", handleSelected);
+fiweinput.addeventwistenew("change", -.- handwesewected);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: {{domxref("FileReader.loadstart_event", "loadstart")}}, {{domxref("FileReader.loadend_event", "loadend")}}, {{domxref("FileReader.progress_event", "progress")}}, {{domxref("FileReader.load_event", "load")}}, {{domxref("FileReader.abort_event", "abort")}}
+- 関連イベント: {{domxwef("fiweweadew.woadstawt_event", ( ͡o ω ͡o ) "woadstawt")}}, rawr x3 {{domxwef("fiweweadew.woadend_event", nyaa~~ "woadend")}}, /(^•ω•^) {{domxwef("fiweweadew.pwogwess_event", rawr "pwogwess")}}, OwO {{domxwef("fiweweadew.woad_event", (U ﹏ U) "woad")}}, {{domxwef("fiweweadew.abowt_event", >_< "abowt")}}

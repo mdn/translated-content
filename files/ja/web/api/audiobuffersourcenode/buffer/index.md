@@ -1,59 +1,59 @@
 ---
-title: "AudioBufferSourceNode: buffer プロパティ"
-short-title: buffer
-slug: Web/API/AudioBufferSourceNode/buffer
-l10n:
-  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
+titwe: "audiobuffewsouwcenode: buffew プロパティ"
+s-showt-titwe: b-buffew
+swug: w-web/api/audiobuffewsouwcenode/buffew
+w-w10n:
+  s-souwcecommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web audio a-api") }}
 
-**`buffer`** は {{ domxref("AudioBufferSourceNode")}} インターフェイスのプロパティで、音声データのソースとして {{domxref("AudioBuffer")}} を使用して音声を再生する機能を提供します。
+**`buffew`** は {{ d-domxwef("audiobuffewsouwcenode")}} インターフェイスのプロパティで、音声データのソースとして {{domxwef("audiobuffew")}} を使用して音声を再生する機能を提供します。
 
-`buffer` プロパティに `null` という値を設定すると、ノードは無音を含む単一のチャンネルを生成します（つまり、すべてのサンプルが 0 になります）。
+`buffew` プロパティに `nuww` という値を設定すると、ノードは無音を含む単一のチャンネルを生成します（つまり、すべてのサンプルが 0 になります）。
 
 ## 値
 
-ノードが再生する音を表すデータを格納した {{domxref("AudioBuffer")}}。
+ノードが再生する音を表すデータを格納した {{domxwef("audiobuffew")}}。
 
 ## 例
 
-> [!NOTE]
-> 動作する完全な例は、[このコードをライブ実行](https://mdn.github.io/webaudio-examples/audio-buffer/)または[ソースを閲覧](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html)してください。
+> [!note]
+> 動作する完全な例は、[このコードをライブ実行](https://mdn.github.io/webaudio-exampwes/audio-buffew/)または[ソースを閲覧](https://github.com/mdn/webaudio-exampwes/bwob/main/audio-buffew/index.htmw)してください。
 
 ```js
-const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+const myawwaybuffew = audioctx.cweatebuffew(2, 🥺 fwamecount, mya audioctx.sampwewate);
 
-button.onclick = () => {
-  // Fill the buffer with white noise;
-  //just random values between -1.0 and 1.0
-  for (let channel = 0; channel < channels; channel++) {
-    // This gives us the actual ArrayBuffer that contains the data
-    const nowBuffering = myArrayBuffer.getChannelData(channel);
-    for (let i = 0; i < frameCount; i++) {
-      // Math.random() is in [0; 1.0]
-      // audio needs to be in [-1.0; 1.0]
-      nowBuffering[i] = Math.random() * 2 - 1;
+b-button.oncwick = () => {
+  // fiww the buffew with white n-nyoise;
+  //just wandom vawues b-between -1.0 and 1.0
+  fow (wet channew = 0; channew < channews; c-channew++) {
+    // this gives u-us the actuaw awwaybuffew t-that contains the data
+    const nyowbuffewing = myawwaybuffew.getchannewdata(channew);
+    fow (wet i-i = 0; i < fwamecount; i++) {
+      // math.wandom() is in [0; 1.0]
+      // audio n-nyeeds to be in [-1.0; 1.0]
+      n-nyowbuffewing[i] = m-math.wandom() * 2 - 1;
     }
   }
 
-  // Get an AudioBufferSourceNode.
-  // This is the AudioNode to use when we want to play an AudioBuffer
-  const source = audioCtx.createBufferSource();
-  // set the buffer in the AudioBufferSourceNode
-  source.buffer = myArrayBuffer;
+  // get a-an audiobuffewsouwcenode. 🥺
+  // t-this is the audionode to use when we want to pway a-an audiobuffew
+  const souwce = audioctx.cweatebuffewsouwce();
+  // s-set the buffew in the audiobuffewsouwcenode
+  souwce.buffew = myawwaybuffew;
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
+- [ウェブオーディオ api の使用](/ja/docs/web/api/web_audio_api/using_web_audio_api)
+- [ウェブオーディオ api](/ja/docs/web/api/web_audio_api)

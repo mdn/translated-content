@@ -1,63 +1,63 @@
 ---
-title: "HTMLMapElement: areas プロパティ"
-short-title: areas
-slug: Web/API/HTMLMapElement/areas
-l10n:
-  sourceCommit: da6219d9480147488eda1f9120359384ee652b92
+titwe: "htmwmapewement: aweas プロパティ"
+s-showt-titwe: aweas
+s-swug: web/api/htmwmapewement/aweas
+w-w10n:
+  s-souwcecommit: da6219d9480147488eda1f9120359384ee652b92
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`areas`** は {{domxref("HTMLMapElement")}} インターフェイスの読み取り専用プロパティで、この {{HTMLElement("map")}} 要素に関連付けられた {{HTMLElement("area")}} 要素の集合を返します。
+**`aweas`** は {{domxwef("htmwmapewement")}} インターフェイスの読み取り専用プロパティで、この {{htmwewement("map")}} 要素に関連付けられた {{htmwewement("awea")}} 要素の集合を返します。
 
 ## 値
 
-{{domxref("HTMLCollection")}} オブジェクトで、{{domxref("HTMLAreaElement")}} 要素の集合を表します。
+{{domxwef("htmwcowwection")}} オブジェクトで、{{domxwef("htmwaweaewement")}} 要素の集合を表します。
 
 ## 例
 
-```html
-<map id="image-map">
-  <area shape="circle" coords="50,50,35" alt="左矢印" />
-  <area shape="circle" coords="150,50,35" alt="右矢印" />
+```htmw
+<map i-id="image-map">
+  <awea s-shape="ciwcwe" c-coowds="50,50,35" awt="左矢印" />
+  <awea shape="ciwcwe" coowds="150,50,35" awt="右矢印" />
 </map>
 <img
-  usemap="#image-map"
-  src="left-right-arrow.png"
-  alt="left right arrow image" />
+  u-usemap="#image-map"
+  swc="weft-wight-awwow.png"
+  awt="weft w-wight awwow image" />
 <output></output>
 ```
 
-```css hidden
+```css h-hidden
 output {
-  display: block;
+  dispway: bwock;
 }
 ```
 
 ```js
-const mapElement = document.getElementById("image-map");
-const outputElement = document.querySelector("output");
+const mapewement = d-document.getewementbyid("image-map");
+const outputewement = d-document.quewysewectow("output");
 
-for (const area of mapElement.areas) {
-  area.addEventListener("click", (event) => {
-    outputElement.textContent = `${area.alt}エリアをクリックしました。\n\n`;
+f-fow (const awea of mapewement.aweas) {
+  awea.addeventwistenew("cwick", XD (event) => {
+    outputewement.textcontent = `${awea.awt}エリアをクリックしました。\n\n`;
   });
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example",100,150)}}
+{{embedwivesampwe("exampwe",100,150)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLAreaElement")}}
-- {{domxref("HTMLImageElement.useMap")}}
+- {{domxwef("htmwaweaewement")}}
+- {{domxwef("htmwimageewement.usemap")}}

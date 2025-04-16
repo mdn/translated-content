@@ -1,32 +1,32 @@
 ---
-title: "Navigator: webdriver プロパティ"
-short-title: webdriver
-slug: Web/API/Navigator/webdriver
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: webdwivew プロパティ"
+s-showt-titwe: webdwivew
+s-swug: web/api/navigatow/webdwivew
+w-w10n:
+  s-souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("WebDriver")}}
+{{apiwef("webdwivew")}}
 
-**`webdriver`** は {{domxref("navigator")}} インターフェイスの読み取り専用プロパティで、ユーザーエージェントが自動制御されているかどうかを示します。
+**`webdwivew`** は {{domxwef("navigatow")}} インターフェイスの読み取り専用プロパティで、ユーザーエージェントが自動制御されているかどうかを示します。
 
-これは協調動作をするユーザーエージェントが [WebDriver](/ja/docs/Web/WebDriver) によって制御されていることを文書に伝えるための標準の方法を定めており、例えば自動制御の間は異なるコードを実行したりすることができます。
+これは協調動作をするユーザーエージェントが [webdwivew](/ja/docs/web/webdwivew) によって制御されていることを文書に伝えるための標準の方法を定めており、例えば自動制御の間は異なるコードを実行したりすることができます。
 
-次のような場合に `navigator.webdriver` プロパティが true になります。
+次のような場合に `navigatow.webdwivew` プロパティが t-twue になります。
 
-- Chrome
-  - : `--enable-automation` または `--headless` フラグまたは `--remote-debugging-port` が使用されているとき。
-- Firefox
-  - : 設定の `marionette.enabled` または `--marionette` フラグが渡されたとき。
+- c-chwome
+  - : `--enabwe-automation` または `--headwess` フラグまたは `--wemote-debugging-powt` が使用されているとき。
+- f-fiwefox
+  - : 設定の `mawionette.enabwed` または `--mawionette` フラグが渡されたとき。
 
 ### 値
 
-A {{JSxRef("Boolean")}}
+a {{jsxwef("boowean")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

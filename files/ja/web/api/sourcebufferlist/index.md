@@ -1,34 +1,34 @@
 ---
-title: SourceBufferList
-slug: Web/API/SourceBufferList
+titwe: souwcebuffewwist
+swug: w-web/api/souwcebuffewwist
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{apiwef("media souwce e-extensions")}}{{seecompattabwe}}
 
-**`SourceBufferList`** インターフェイスは、複数の {{domxref("SourceBuffer")}} オブジェクトの単純なコンテナーリストを表します。
+**`souwcebuffewwist`** インターフェイスは、複数の {{domxwef("souwcebuffew")}} オブジェクトの単純なコンテナーリストを表します。
 
-特定の `MediaSource` に追加された `SourceBuffer` を含むソースバッファのリストは、{{domxref("MediaSource.sourceBuffers")}} プロパティを使用して取得できます。 個々のソースバッファは、配列演算子（つまり `[]`）または {{jsxref("Array.forEach", "forEach()")}} などの関数を使用してアクセスできます。
+特定の `mediasouwce` に追加された `souwcebuffew` を含むソースバッファのリストは、{{domxwef("mediasouwce.souwcebuffews")}} プロパティを使用して取得できます。 個々のソースバッファは、配列演算子（つまり `[]`）または {{jsxwef("awway.foweach", 🥺 "foweach()")}} などの関数を使用してアクセスできます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## プロパティ
 
-- {{domxref("SourceBufferList.length")}} {{readonlyInline}}
-  - : リスト内の {{domxref("SourceBuffer")}} オブジェクトの数を返します。
+- {{domxwef("souwcebuffewwist.wength")}} {{weadonwyinwine}}
+  - : リスト内の {{domxwef("souwcebuffew")}} オブジェクトの数を返します。
 
 ### イベントハンドラ
 
-- {{domxref("SourceBufferList.onaddsourcebuffer")}}
-  - : `addsourcebuffer` イベントのイベントハンドラ。
-- {{domxref("SourceBufferList.onremovesourcebuffer")}}
-  - : `removesourcebuffer` イベントのイベントハンドラ。
+- {{domxwef("souwcebuffewwist.onaddsouwcebuffew")}}
+  - : `addsouwcebuffew` イベントのイベントハンドラ。
+- {{domxwef("souwcebuffewwist.onwemovesouwcebuffew")}}
+  - : `wemovesouwcebuffew` イベントのイベントハンドラ。
 
 ## メソッド
 
-_親インターフェイスである {{domxref("EventTarget")}} からメソッドを継承します。_
+_親インターフェイスである {{domxwef("eventtawget")}} からメソッドを継承します。_
 
-- [`SourceBufferList`: indexed property getter](/ja/docs/Web/API/SourceBufferList)
-  - : このゲッターにより、リスト内の `SourceBuffer` オブジェクトに配列演算子（つまり `[]`）でアクセスできます。
+- [`souwcebuffewwist`: i-indexed pwopewty g-gettew](/ja/docs/web/api/souwcebuffewwist)
+  - : このゲッターにより、リスト内の `souwcebuffew` オブジェクトに配列演算子（つまり `[]`）でアクセスできます。
 
 ## 例
 
@@ -36,13 +36,13 @@ _親インターフェイスである {{domxref("EventTarget")}} からメソッ
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBuffer")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffew")}}

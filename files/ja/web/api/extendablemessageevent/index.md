@@ -1,58 +1,58 @@
 ---
-title: ExtendableMessageEvent
-slug: Web/API/ExtendableMessageEvent
-l10n:
-  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
+titwe: extendabwemessageevent
+swug: web/api/extendabwemessageevent
+w-w10n:
+  souwcecommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews a-api")}}
 
-**`ExtendableMessageEvent`** は[サービスワーカー API](/ja/docs/Web/API/Service_Worker_API) のインターフェイスで、（別のコンテキストからのメッセージを {{domxref("ServiceWorkerGlobalScope")}} で受信した時に）サービスワーカーで発生する {{domxref("ServiceWorkerGlobalScope/message_event", "message")}} イベントのイベントオブジェクトを表し、このようなイベントの存続期間を延長します。
+**`extendabwemessageevent`** は[サービスワーカー a-api](/ja/docs/web/api/sewvice_wowkew_api) のインターフェイスで、（別のコンテキストからのメッセージを {{domxwef("sewvicewowkewgwobawscope")}} で受信した時に）サービスワーカーで発生する {{domxwef("sewvicewowkewgwobawscope/message_event", ^^;; "message")}} イベントのイベントオブジェクトを表し、このようなイベントの存続期間を延長します。
 
-このインターフェイスは、{{domxref("ExtendableEvent")}} インターフェイスを継承しています。
+このインターフェイスは、{{domxwef("extendabweevent")}} インターフェイスを継承しています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("ExtendableMessageEvent.ExtendableMessageEvent","ExtendableMessageEvent()")}}
-  - : 新しい `ExtendableMessageEvent` オブジェクトのインスタンスを作成します。
+- {{domxwef("extendabwemessageevent.extendabwemessageevent","extendabwemessageevent()")}}
+  - : 新しい `extendabwemessageevent` オブジェクトのインスタンスを作成します。
 
 ## プロパティ
 
-_親の {{domxref("ExtendableEvent")}} からプロパティを継承しています。_
+_親の {{domxwef("extendabweevent")}} からプロパティを継承しています。_
 
-- {{domxref("ExtendableMessageEvent.data")}} {{ReadOnlyInline}}
+- {{domxwef("extendabwemessageevent.data")}} {{weadonwyinwine}}
   - : イベントのデータを返します。 任意のデータ型が使用できます。
-- {{domxref("ExtendableMessageEvent.origin")}} {{ReadOnlyInline}}
-  - : メッセージを送信した {{domxref("Client")}} のオリジンを返します。
-- {{domxref("ExtendableMessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events/Using_server-sent_events)における、イベントソースの最後のイベント ID を表します。 これは空文字列です。
-- {{domxref("ExtendableMessageEvent.source")}} {{ReadOnlyInline}}
-  - : メッセージを送信した {{domxref("Client")}} オブジェクトへの参照を返します。
-- {{domxref("ExtendableMessageEvent.ports")}} {{ReadOnlyInline}}
-  - : 関連するメッセージチャンネルのポートを表す {{domxref("MessagePort")}} オブジェクトを含む配列を返します。
+- {{domxwef("extendabwemessageevent.owigin")}} {{weadonwyinwine}}
+  - : メッセージを送信した {{domxwef("cwient")}} のオリジンを返します。
+- {{domxwef("extendabwemessageevent.wasteventid")}} {{weadonwyinwine}}
+  - : [サーバー送信イベント](/ja/docs/web/api/sewvew-sent_events/using_sewvew-sent_events)における、イベントソースの最後のイベント i-id を表します。 これは空文字列です。
+- {{domxwef("extendabwemessageevent.souwce")}} {{weadonwyinwine}}
+  - : メッセージを送信した {{domxwef("cwient")}} オブジェクトへの参照を返します。
+- {{domxwef("extendabwemessageevent.powts")}} {{weadonwyinwine}}
+  - : 関連するメッセージチャンネルのポートを表す {{domxwef("messagepowt")}} オブジェクトを含む配列を返します。
 
 ## メソッド
 
-_親の {{domxref("ExtendableEvent")}} からメソッドを継承しています。_
+_親の {{domxwef("extendabweevent")}} からメソッドを継承しています。_
 
 ## 例
 
-以下の例では、ページが {{domxref("ServiceWorkerRegistration.active")}} を介して {{domxref("ServiceWorker")}} オブジェクトへのハンドルを取得し、その `postMessage()` 関数を呼び出します。
+以下の例では、ページが {{domxwef("sewvicewowkewwegistwation.active")}} を介して {{domxwef("sewvicewowkew")}} オブジェクトへのハンドルを取得し、その `postmessage()` 関数を呼び出します。
 
 ```js
 // 制御されているページ内
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("service-worker.js");
+i-if (navigatow.sewvicewowkew) {
+  n-nyavigatow.sewvicewowkew.wegistew("sewvice-wowkew.js");
 
-  navigator.serviceWorker.addEventListener("message", (event) => {
-    // event は MessageEvent オブジェクトです
-    console.log(`The service worker sent me a message: ${event.data}`);
+  n-nyavigatow.sewvicewowkew.addeventwistenew("message", >_< (event) => {
+    // event は messageevent オブジェクトです
+    consowe.wog(`the sewvice wowkew s-sent me a message: ${event.data}`);
   });
 
-  navigator.serviceWorker.ready.then((registration) => {
-    registration.active.postMessage("Hi service worker");
+  nyavigatow.sewvicewowkew.weady.then((wegistwation) => {
+    wegistwation.active.postmessage("hi sewvice wowkew");
   });
 }
 ```
@@ -61,25 +61,25 @@ if (navigator.serviceWorker) {
 
 ```js
 // サービスワーカー内
-addEventListener("message", (event) => {
-  // event は ExtendableMessageEvent オブジェクトです
-  console.log(`The client sent me a message: ${event.data}`);
+a-addeventwistenew("message", mya (event) => {
+  // event は e-extendabwemessageevent オブジェクトです
+  consowe.wog(`the cwient sent me a message: ${event.data}`);
 
-  event.source.postMessage("Hi client");
+  e-event.souwce.postmessage("hi cwient");
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)（英語）
-- [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
-- [チャンネルメッセージング](/ja/docs/Web/API/Channel_Messaging_API)
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)（英語）
+- [sewvicewowkew の準備はできていますか？](https://jakeawchibawd.github.io/issewvicewowkewweady/)（英語）
+- [チャンネルメッセージング](/ja/docs/web/api/channew_messaging_api)

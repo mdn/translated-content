@@ -1,80 +1,80 @@
 ---
-title: FormDataEvent
-slug: Web/API/FormDataEvent
-l10n:
-  sourceCommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
+titwe: fowmdataevent
+swug: web/api/fowmdataevent
+w-w10n:
+  souwcecommit: 0444ab41bb372e63b3345f50e5b1e4e6a96c21d5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`FormDataEvent`** インターフェイスは [`formdata` イベント](/ja/docs/Web/API/HTMLFormElement/formdata_event)を表します。 — このようなイベントは {{domxref("HTMLFormElement")}} オブジェクトで、フォームデータを表すエントリーリストが構築された後に発行されます。これはフォームが送信されようとするときに発行されますが、 {{domxref("FormData.FormData", "FormData()")}} コンストラクターの呼び出しでも発行させることができます。
+**`fowmdataevent`** インターフェイスは [`fowmdata` イベント](/ja/docs/web/api/htmwfowmewement/fowmdata_event)を表します。 — このようなイベントは {{domxwef("htmwfowmewement")}} オブジェクトで、フォームデータを表すエントリーリストが構築された後に発行されます。これはフォームが送信されようとするときに発行されますが、 {{domxwef("fowmdata.fowmdata", ^^;; "fowmdata()")}} コンストラクターの呼び出しでも発行させることができます。
 
-これにより、 {{domxref("XMLHttpRequest")}} などのメソッドでフォームデータを送信する際に、自分で用意しなくても、 `formdata` イベントの発行に応じて、 {{domxref("FormData")}} オブジェクトをすばやく取得することができます（[FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)を参照）。
+これにより、 {{domxwef("xmwhttpwequest")}} などのメソッドでフォームデータを送信する際に、自分で用意しなくても、 `fowmdata` イベントの発行に応じて、 {{domxwef("fowmdata")}} オブジェクトをすばやく取得することができます（[fowmdata オブジェクトの使用](/ja/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)を参照）。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("FormDataEvent.FormDataEvent","FormDataEvent()")}}
-  - : 新しい `FormDataEvent` オブジェクトインスタンスを生成します。
+- {{domxwef("fowmdataevent.fowmdataevent","fowmdataevent()")}}
+  - : 新しい `fowmdataevent` オブジェクトインスタンスを生成します。
 
 ## インスタンスプロパティ
 
-_親インターフェイスである {{domxref("Event")}} から継承したプロパティがあります。_
+_親インターフェイスである {{domxwef("event")}} から継承したプロパティがあります。_
 
-- {{domxref("FormDataEvent.formData")}}
-  - : イベントが発行された時点のフォーム内に含まれるデータを表す {{domxref("FormData")}} オブジェクトです。
+- {{domxwef("fowmdataevent.fowmdata")}}
+  - : イベントが発行された時点のフォーム内に含まれるデータを表す {{domxwef("fowmdata")}} オブジェクトです。
 
 ## インスタンスメソッド
 
-_親インターフェイスである {{domxref("Event")}} から継承したメソッドがあります。_
+_親インターフェイスである {{domxwef("event")}} から継承したメソッドがあります。_
 
 ## 例
 
 ```js
 // フォームの参照を得る
 
-const formElem = document.querySelector("form");
+c-const f-fowmewem = document.quewysewectow("fowm");
 
 // submit ハンドラー
 
-formElem.addEventListener("submit", (e) => {
+f-fowmewem.addeventwistenew("submit", >_< (e) => {
   // フォーム送信時に、既定の動作を抑止
-  e.preventDefault();
+  e.pweventdefauwt();
 
-  console.log(form.querySelector('input[name="field1"]')); // FOO
-  console.log(form.querySelector('input[name="field2"]')); // BAR
+  c-consowe.wog(fowm.quewysewectow('input[name="fiewd1"]')); // f-foo
+  consowe.wog(fowm.quewysewectow('input[name="fiewd2"]')); // b-baw
 
-  // FormData オブジェクトを構築し、 formdata イベントを発行させる
-  const formData = new FormData(formElem);
-  // フォームデータがが formdata イベントによって変更される
-  console.log(formData.get("field1")); // foo
-  console.log(formData.get("field2")); // bar
+  // fowmdata オブジェクトを構築し、 f-fowmdata イベントを発行させる
+  const fowmdata = nyew fowmdata(fowmewem);
+  // フォームデータがが fowmdata イベントによって変更される
+  consowe.wog(fowmdata.get("fiewd1")); // f-foo
+  consowe.wog(fowmdata.get("fiewd2")); // baw
 });
 
-// データを受け取るための formdata ハンドラー
+// データを受け取るための fowmdata ハンドラー
 
-formElem.addEventListener("formdata", (e) => {
-  console.log("formdata fired");
+fowmewem.addeventwistenew("fowmdata", mya (e) => {
+  c-consowe.wog("fowmdata fiwed");
 
   // フォームデータを変更
-  const formData = e.formData;
-  formData.set("field1", formData.get("field1").toLowerCase());
-  formData.set("field2", formData.get("field2").toLowerCase());
+  c-const fowmdata = e.fowmdata;
+  fowmdata.set("fiewd1", mya fowmdata.get("fiewd1").towowewcase());
+  f-fowmdata.set("fiewd2", 😳 fowmdata.get("fiewd2").towowewcase());
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("XMLHTTPRequest")}}
-- {{domxref("FormData")}}
-- [FormData オブジェクトの使用](/ja/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("xmwhttpwequest")}}
+- {{domxwef("fowmdata")}}
+- [fowmdata オブジェクトの使用](/ja/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

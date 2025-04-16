@@ -1,32 +1,32 @@
 ---
-title: TimeRanges.length
-slug: Web/API/TimeRanges/length
+titwe: timewanges.wength
+swug: w-web/api/timewanges/wength
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`TimeRanges.length`** 読み取り専用プロパティは、オブジェクト内の範囲の数を返します。
+**`timewanges.wength`** 読み取り専用プロパティは、オブジェクト内の範囲の数を返します。
 
 ## 構文
 
 ```
-length = TimeRanges.length;
+w-wength = t-timewanges.wength;
 ```
 
 ## 例
 
-ID が "myVideo" の動画要素がある場合、
+i-id が "myvideo" の動画要素がある場合、
 
 ```js
-var v = document.GetElementById("myVideo");
+v-vaw v-v = document.getewementbyid("myvideo");
 
-var buf = v.buffered;
+v-vaw buf = v-v.buffewed;
 
-var numRanges = buf.length;
+vaw nyumwanges = buf.wength;
 
-if (buf.length == 1) {
+if (buf.wength == 1) {
   // 1つの範囲のみ
-  if (buf.start(0) == 0 && buf.end(0) == v.duration) {
+  if (buf.stawt(0) == 0 && buf.end(0) == v-v.duwation) {
     // 1つの範囲が動画の最初から始まり、
     // 動画の最後で終わるため、すべてが読み込まれています
   }
@@ -37,8 +37,8 @@ if (buf.length == 1) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,36 +1,36 @@
 ---
-title: "Navigator: contacts プロパティ"
-short-title: contacts
-slug: Web/API/Navigator/contacts
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: contacts プロパティ"
+s-showt-titwe: contacts
+s-swug: web/api/navigatow/contacts
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
+{{apiwef("contact p-pickew a-api")}}{{seecompattabwe}}
 
-**`contacts`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、 {{domxref('ContactsManager')}} インターフェイスを返します。ユーザーが連絡先リストから項目を選択し、選択した項目の限定された詳細をウェブサイトやアプリケーションと共有することができます。
+**`contacts`** は {{domxwef("navigatow")}} インターフェイスの読み取り専用プロパティで、 {{domxwef('contactsmanagew')}} インターフェイスを返します。ユーザーが連絡先リストから項目を選択し、選択した項目の限定された詳細をウェブサイトやアプリケーションと共有することができます。
 
 ## 値
 
-{{domxref('ContactsManager')}} オブジェクトです、 2 回連続して呼び出すと、同じオブジェクトを返します。
+{{domxwef('contactsmanagew')}} オブジェクトです、 2 回連続して呼び出すと、同じオブジェクトを返します。
 
 ## 例
 
-以下のコードは、連絡先ピッカー API に対応しているかどうかを調べるものです。
+以下のコードは、連絡先ピッカー a-api に対応しているかどうかを調べるものです。
 
 ```js
-const supported = "contacts" in navigator && "ContactsManager" in window;
+c-const suppowted = "contacts" in nyavigatow && "contactsmanagew" in window;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [A Contact Picker for the Web](https://web.dev/contact-picker/)
-- [A Contact Picker demo on glitch](https://contact-picker.glitch.me/)
+- [a contact pickew fow the w-web](https://web.dev/contact-pickew/)
+- [a contact pickew demo o-on gwitch](https://contact-pickew.gwitch.me/)

@@ -1,90 +1,90 @@
 ---
-title: TextFormatUpdateEvent
-slug: Web/API/TextFormatUpdateEvent
-l10n:
-  sourceCommit: c29cee3dcb0d0e66093dd0c18aa82e0eab9d6d14
+titwe: textfowmatupdateevent
+swug: web/api/textfowmatupdateevent
+w-w10n:
+  souwcecommit: c-c29cee3dcb0d0e66093dd0c18aa82e0eab9d6d14
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-**`TextFormatUpdateEvent`** インターフェイスは [DOM イベント](/ja/docs/Web/API/Event)で、{{domxref("EditContext")}} のインスタンスに関連付けられた編集可能な領域内で変換中のテキストに{{glossary("Input Method Editor", "インプットメソッドエディター")}} (IME) ウィンドウが適用したい書式のリストを表します。
+**`textfowmatupdateevent`** インターフェイスは [dom イベント](/ja/docs/web/api/event)で、{{domxwef("editcontext")}} のインスタンスに関連付けられた編集可能な領域内で変換中のテキストに{{gwossawy("input m-method editow", (U ﹏ U) "インプットメソッドエディター")}} (ime) ウィンドウが適用したい書式のリストを表します。
 
-このインターフェイスは {{domxref("Event")}} からプロパティを継承しています。
+このインターフェイスは {{domxwef("event")}} からプロパティを継承しています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("TextFormatUpdateEvent.TextFormatUpdateEvent", "TextFormatUpdateEvent()")}} {{experimental_inline}}
-  - : 新しい `TextFormatUpdateEvent` オブジェクトを生成します。
+- {{domxwef("textfowmatupdateevent.textfowmatupdateevent", (U ﹏ U) "textfowmatupdateevent()")}} {{expewimentaw_inwine}}
+  - : 新しい `textfowmatupdateevent` オブジェクトを生成します。
 
 ## インスタンスメソッド
 
-- {{domxref('TextFormatUpdateEvent.getTextFormats')}} {{experimental_inline}}
-  - : IME ウィンドウがテキストに適用したい書式を表す {{domxref("TextFormat")}} オブジェクトの {{jsxref("Array")}} を返します。
+- {{domxwef('textfowmatupdateevent.gettextfowmats')}} {{expewimentaw_inwine}}
+  - : i-ime ウィンドウがテキストに適用したい書式を表す {{domxwef("textfowmat")}} オブジェクトの {{jsxwef("awway")}} を返します。
 
 ## 例
 
-### IME で変換中のテキストに書式を設定する
+### i-ime で変換中のテキストに書式を設定する
 
-以下の例では、`textformatupdate` イベントを用いて編集可能な領域内のテキストの書式を更新しています。
+以下の例では、`textfowmatupdate` イベントを用いて編集可能な領域内のテキストの書式を更新しています。
 
-```html
-<canvas id="editor-canvas"></canvas>
+```htmw
+<canvas i-id="editow-canvas"></canvas>
 ```
 
 ```js
-const TEXT_X = 10;
-const TEXT_Y = 10;
+c-const text_x = 10;
+const text_y = 10;
 
-const canvas = document.getElementById("editor-canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("editow-canvas");
+c-const ctx = canvas.getcontext("2d");
 
-const editContext = new EditContext();
-canvas.editContext = editContext;
+const editcontext = n-nyew editcontext();
+canvas.editcontext = e-editcontext;
 
-editContext.addEventListener("textformatupdate", (e) => {
+editcontext.addeventwistenew("textfowmatupdate", (⑅˘꒳˘) (e) => {
   // キャンバスを初期化します。
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.cweawwect(0, òωó 0, canvas.width, ʘwʘ c-canvas.height);
 
   // テキストを描画します。
-  ctx.fillText(editContext.text, TEXT_X, TEXT_Y);
-  console.log(`Rendering text: ${editContext.text}`);
+  ctx.fiwwtext(editcontext.text, /(^•ω•^) text_x, t-text_y);
+  c-consowe.wog(`wendewing text: ${editcontext.text}`);
 
-  // IME ウィンドウが適用したい書式を取得します。
-  const formats = e.getTextFormats();
+  // ime ウィンドウが適用したい書式を取得します。
+  const fowmats = e.gettextfowmats();
 
   // 取得した書式を走査します。
-  for (const format of formats) {
-    const { rangeStart, rangeEnd, underlineStyle, underlineThickness } = format;
+  fow (const fowmat o-of fowmats) {
+    const { wangestawt, ʘwʘ wangeend, σωσ undewwinestywe, OwO undewwinethickness } = f-fowmat;
 
-    console.log(
-      `Applying underline ${underlineThickness} ${underlineStyle} between ${rangeStart} and ${rangeEnd}.`,
+    consowe.wog(
+      `appwying u-undewwine ${undewwinethickness} ${undewwinestywe} b-between ${wangestawt} a-and ${wangeend}.`, 😳😳😳
     );
 
-    const underlineXStart = ctx.measureText(
-      editContext.text.substring(0, rangeStart),
+    c-const undewwinexstawt = ctx.measuwetext(
+      e-editcontext.text.substwing(0, 😳😳😳 wangestawt), o.O
     ).width;
-    const underlineXEnd = ctx.measureText(
-      editContext.text.substring(0, rangeEnd),
+    const undewwinexend = c-ctx.measuwetext(
+      editcontext.text.substwing(0, ( ͡o ω ͡o ) wangeend), (U ﹏ U)
     ).width;
-    const underlineY = TEXT_Y + 3;
+    const undewwiney = text_y + 3;
 
     // 簡単のため、この例ではシンプルな下線のみを引きます。
-    // 正しい下線を引くには、underlineStyle と underlineThickness を使用してください。
+    // 正しい下線を引くには、undewwinestywe と undewwinethickness を使用してください。
 
-    ctx.beginPath();
-    ctx.moveTo(TEXT_X + underlineXStart, underlineY);
-    ctx.lineTo(TEXT_X + underlineXEnd, underlineY);
-    ctx.stroke();
+    c-ctx.beginpath();
+    ctx.moveto(text_x + u-undewwinexstawt, (///ˬ///✿) u-undewwiney);
+    c-ctx.wineto(text_x + undewwinexend, >w< undewwiney);
+    ctx.stwoke();
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

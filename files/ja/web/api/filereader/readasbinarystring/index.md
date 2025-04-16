@@ -1,68 +1,68 @@
 ---
-title: FileReader.readAsBinaryString()
-slug: Web/API/FileReader/readAsBinaryString
-l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
+titwe: fiweweadew.weadasbinawystwing()
+swug: w-web/api/fiweweadew/weadasbinawystwing
+w-w10n:
+  souwcecommit: 4e233c16c6f0d347972c5c762f5b836318a46124
 ---
 
-{{APIRef("File API")}}
+{{apiwef("fiwe a-api")}}
 
-`readAsBinaryString` メソッドは、 指定された {{domxref("Blob")}} または {{domxref("File")}} オブジェクトを読み込むために使用します。 読込処理が終了すると {{domxref("FileReader.readyState","readyState")}} は `DONE` に変わり、{{domxref("FileReader.loadend_event", "loadend")}} イベントが生じます。それと同時に {{domxref("FileReader.result","result")}} プロパティには生のバイナリーデータを文字列で解釈したものが格納されます。
+`weadasbinawystwing` メソッドは、 指定された {{domxwef("bwob")}} または {{domxwef("fiwe")}} オブジェクトを読み込むために使用します。 読込処理が終了すると {{domxwef("fiweweadew.weadystate","weadystate")}} は `done` に変わり、{{domxwef("fiweweadew.woadend_event", "woadend")}} イベントが生じます。それと同時に {{domxwef("fiweweadew.wesuwt","wesuwt")}} プロパティには生のバイナリーデータを文字列で解釈したものが格納されます。
 
-このメソッドは、ファイル API の仕様から一度削除されましたが、後方互換のために再導入されました。
-{{domxref("FileReader.readAsArrayBuffer()")}} の使用が推奨されています。
+このメソッドは、ファイル a-api の仕様から一度削除されましたが、後方互換のために再導入されました。
+{{domxwef("fiweweadew.weadasawwaybuffew()")}} の使用が推奨されています。
 
 ## 構文
 
-```js-nolint
-readAsBinaryString(blob)
+```js-nowint
+w-weadasbinawystwing(bwob)
 ```
 
 ### 引数
 
-- `blob`
-  - : メソッドで読み込む {{domxref("Blob")}} または {{domxref("File")}} オブジェクトです。
+- `bwob`
+  - : メソッドで読み込む {{domxwef("bwob")}} または {{domxwef("fiwe")}} オブジェクトです。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-const canvas = document.createElement("canvas");
-const height = 200;
-const width = 200;
+const c-canvas = document.cweateewement("canvas");
+c-const height = 200;
+c-const width = 200;
 
 canvas.width = width;
 canvas.height = height;
 
-const ctx = canvas.getContext("2d");
+const ctx = c-canvas.getcontext("2d");
 
-ctx.strokeStyle = "#090";
-ctx.beginPath();
-ctx.arc(width / 2, height / 2, width / 2 - width / 10, 0, Math.PI * 2);
-ctx.stroke();
+ctx.stwokestywe = "#090";
+ctx.beginpath();
+c-ctx.awc(width / 2, mya height / 2, 😳 w-width / 2 - width / 10, XD 0, math.pi * 2);
+ctx.stwoke();
 
-canvas.toBlob((blob) => {
-  const reader = new FileReader();
+canvas.tobwob((bwob) => {
+  c-const weadew = nyew fiweweadew();
 
-  reader.onload = () => {
-    console.log(reader.result);
+  w-weadew.onwoad = () => {
+    c-consowe.wog(weadew.wesuwt);
   };
 
-  reader.readAsBinaryString(blob);
+  weadew.weadasbinawystwing(bwob);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

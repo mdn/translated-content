@@ -1,35 +1,35 @@
 ---
-title: "Navigator: userAgentData プロパティ"
-short-title: userAgentData
-slug: Web/API/Navigator/userAgentData
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: usewagentdata プロパティ"
+s-showt-titwe: u-usewagentdata
+s-swug: web/api/navigatow/usewagentdata
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{securecontext_header}}{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("usew-agent c-cwient hints a-api")}}{{seecompattabwe}}
 
-**`userAgentData`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、 {{domxref("NavigatorUAData")}} オブジェクトを返します。これを使用して、{{domxref("User-Agent Client Hints API", "ユーザーエージェントクライアントヒント API", "", 1)}} へアクセスすることができます。
+**`usewagentdata`** は {{domxwef("navigatow")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("navigatowuadata")}} オブジェクトを返します。これを使用して、{{domxwef("usew-agent c-cwient hints api", >_< "ユーザーエージェントクライアントヒント api", :3 "", 1)}} へアクセスすることができます。
 
 ## 値
 
-{{domxref("NavigatorUAData")}} オブジェクトです。
+{{domxwef("navigatowuadata")}} オブジェクトです。
 
 ## 例
 
-以下の例は、 {{domxref("NavigatorUAData.brands")}} の値をコンソールに表示するものです。
+以下の例は、 {{domxwef("navigatowuadata.bwands")}} の値をコンソールに表示するものです。
 
 ```js
-console.log(navigator.userAgentData.brands);
+consowe.wog(navigatow.usewagentdata.bwands);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/)
+- [impwoving usew pwivacy and d-devewopew expewience with usew-agent cwient hints](https://web.dev/usew-agent-cwient-hints/)

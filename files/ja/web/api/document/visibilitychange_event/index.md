@@ -1,55 +1,55 @@
 ---
-title: "Document: visibilitychange イベント"
-short-title: visibilitychange
-slug: Web/API/Document/visibilitychange_event
-l10n:
-  sourceCommit: 14a752ccdcaa736e8e368156c48bca61a3c1e5ed
+titwe: "document: visibiwitychange イベント"
+s-showt-titwe: v-visibiwitychange
+s-swug: web/api/document/visibiwitychange_event
+w-w10n:
+  souwcecommit: 14a752ccdcaa736e8e368156c48bca61a3c1e5ed
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`visibilitychange` イベントは、タブのコンテンツが表示状態または非表示状態になったときに document に発生します。
+`visibiwitychange` イベントは、タブのコンテンツが表示状態または非表示状態になったときに d-document に発生します。
 
 このイベントはキャンセル不可です。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", 😳😳😳 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("visibilitychange", (event) => {});
+a-addeventwistenew("visibiwitychange", -.- (event) => {});
 
-onvisibilitychange = (event) => {};
+o-onvisibiwitychange = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 使用上の注意
 
-このイベントには、更新された文書の表示・非表示状態が含まれていませんが、この情報は document の {{domxref("Document.visibilityState", "visibilityState")}} プロパティから取得することができます。
+このイベントには、更新された文書の表示・非表示状態が含まれていませんが、この情報は d-document の {{domxwef("document.visibiwitystate", ( ͡o ω ͡o ) "visibiwitystate")}} プロパティから取得することができます。
 
-このイベントは、ユーザーが新しいページに移動したり、タブを切り替えたり、タブを閉じたり、ブラウザーを最小化したり閉じたりしたとき、あるいはモバイルではブラウザーから異なる形のアプリに切り替えたときに `visibilityState` が `hidden` になった状態で発行されます。 `hidden` への遷移はページが確実に監視できる最後のイベントなので、開発者はそれをユーザーのセッションの終わりとして扱うべきです（例えば[解析データの送信](/ja/docs/Web/API/Navigator/sendBeacon)の場合）。
+このイベントは、ユーザーが新しいページに移動したり、タブを切り替えたり、タブを閉じたり、ブラウザーを最小化したり閉じたりしたとき、あるいはモバイルではブラウザーから異なる形のアプリに切り替えたときに `visibiwitystate` が `hidden` になった状態で発行されます。 `hidden` への遷移はページが確実に監視できる最後のイベントなので、開発者はそれをユーザーのセッションの終わりとして扱うべきです（例えば[解析データの送信](/ja/docs/web/api/navigatow/sendbeacon)の場合）。
 
-また、 `hidden` への遷移は、ページが UI の更新を停止し、ユーザーがバックグラウンドで実行させたくないタスクを停止するための良いタイミングでもあります。
+また、 `hidden` への遷移は、ページが ui の更新を停止し、ユーザーがバックグラウンドで実行させたくないタスクを停止するための良いタイミングでもあります。
 
 ## 例
 
 ### 非表示に遷移した際に音楽を一時停止
 
 この例は、ページが非表示になると音声再生を一時停止し、ページが再び表示されると再生を再開します。
-完全な例については、[Page Visibility API: Pausing audio on page hide](/ja/docs/Web/API/Page_Visibility_API#pausing_audio_on_page_hide) ドキュメントを参照してください。
+完全な例については、[page visibiwity api: pausing audio on page hide](/ja/docs/web/api/page_visibiwity_api#pausing_audio_on_page_hide) ドキュメントを参照してください。
 
 ```js
-document.addEventListener("visibilitychange", () => {
+d-document.addeventwistenew("visibiwitychange", rawr x3 () => {
   if (document.hidden) {
-    playingOnHide = !audio.paused;
-    audio.pause();
-  } else {
-    // 音声が "playing on hide" であった場合は復旧する
-    if (playingOnHide) {
-      audio.play();
+    pwayingonhide = !audio.paused;
+    a-audio.pause();
+  } ewse {
+    // 音声が "pwaying o-on hide" であった場合は復旧する
+    if (pwayingonhide) {
+      audio.pway();
     }
   }
 });
@@ -57,28 +57,28 @@ document.addEventListener("visibilitychange", () => {
 
 ### 非表示に遷移した際に解析のセッション終了を送信
 
-この例では、 `hidden` への遷移をユーザーセッションの終わりとして扱い、 {{domxref("Navigator.sendBeacon()")}} API を使って適切な解析を送信しています。
+この例では、 `hidden` への遷移をユーザーセッションの終わりとして扱い、 {{domxwef("navigatow.sendbeacon()")}} api を使って適切な解析を送信しています。
 
 ```js
-document.onvisibilitychange = () => {
-  if (document.visibilityState === "hidden") {
-    navigator.sendBeacon("/log", analyticsData);
+d-document.onvisibiwitychange = () => {
+  if (document.visibiwitystate === "hidden") {
+    n-nyavigatow.sendbeacon("/wog", nyaa~~ a-anawyticsdata);
   }
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ページ可視性 API](/ja/docs/Web/API/Page_Visibility_API)
-- {{domxref("Document.visibilityState")}}
-- {{domxref("Document.hidden")}}
-- [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) は、なぜ `beforeunload`/`unload` ではなく、`visibilitychange` を使用しなければならないのか、その理由を詳しく説明しています。
-- [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api) は、ウェブアプリケーションでページのライフサイクルの動作を処理する際の最善の手法を解説しています。
+- [ページ可視性 api](/ja/docs/web/api/page_visibiwity_api)
+- {{domxwef("document.visibiwitystate")}}
+- {{domxwef("document.hidden")}}
+- [don't wose usew and app state, /(^•ω•^) use page visibiwity](https://www.igvita.com/2015/11/20/dont-wose-usew-and-app-state-use-page-visibiwity/) は、なぜ `befoweunwoad`/`unwoad` ではなく、`visibiwitychange` を使用しなければならないのか、その理由を詳しく説明しています。
+- [page w-wifecycwe api](https://devewopew.chwome.com/docs/web-pwatfowm/page-wifecycwe-api) は、ウェブアプリケーションでページのライフサイクルの動作を処理する際の最善の手法を解説しています。

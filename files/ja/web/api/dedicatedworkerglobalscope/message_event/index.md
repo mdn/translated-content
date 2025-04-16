@@ -1,109 +1,109 @@
 ---
-title: "DedicatedWorkerGlobalScope: message イベント"
-slug: Web/API/DedicatedWorkerGlobalScope/message_event
-l10n:
-  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
+titwe: "dedicatedwowkewgwobawscope: message イベント"
+s-swug: w-web/api/dedicatedwowkewgwobawscope/message_event
+w-w10n:
+  souwcecommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`message` イベントは、ワーカーが親からメッセージを受け取ったとき（つまり、親が [`Worker.postMessage()`](/ja/docs/Web/API/Worker/postMessage) を使用してメッセージを送信したとき） {{domxref('DedicatedWorkerGlobalScope')}} オブジェクトで発生します。
+`message` イベントは、ワーカーが親からメッセージを受け取ったとき（つまり、親が [`wowkew.postmessage()`](/ja/docs/web/api/wowkew/postmessage) を使用してメッセージを送信したとき） {{domxwef('dedicatedwowkewgwobawscope')}} オブジェクトで発生します。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", rawr "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("message", (event) => {});
+a-addeventwistenew("message", OwO (event) => {});
 
-onmessage = (event) => {};
+o-onmessage = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("MessageEvent")}} です。 {{domxref("Event")}} を継承しています。
+{{domxwef("messageevent")}} です。 {{domxwef("event")}} を継承しています。
 
-{{InheritanceDiagram("MessageEvent")}}
+{{inhewitancediagwam("messageevent")}}
 
 ## イベントプロパティ
 
-_このインターフェイスには、親である {{domxref("Event")}} から継承したプロパティもあります。_
+_このインターフェイスには、親である {{domxwef("event")}} から継承したプロパティもあります。_
 
-- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.data")}} {{weadonwyinwine}}
   - : メッセージ送信者から送信されたデータです。
-- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.owigin")}} {{weadonwyinwine}}
   - : 文字列で、メッセージ送信者のオリジンを表します。
-- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : 文字列で、このイベントの固有の ID を表します。
-- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : `MessageEventSource` （{{domxref("Window")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} の何れかのオブジェクトがなれる）で、メッセージ送信者を表します。
-- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : {{domxref("MessagePort")}} オブジェクトの配列で、メッセージが送信されるチャネルに関連するポートを表します（チャネルメッセージングや共有ワーカーにメッセージを送信する場合など、必要に応じて）。
+- {{domxwef("messageevent.wasteventid")}} {{weadonwyinwine}}
+  - : 文字列で、このイベントの固有の i-id を表します。
+- {{domxwef("messageevent.souwce")}} {{weadonwyinwine}}
+  - : `messageeventsouwce` （{{domxwef("window")}}, (U ﹏ U) {{domxwef("messagepowt")}}, >_< {{domxwef("sewvicewowkew")}} の何れかのオブジェクトがなれる）で、メッセージ送信者を表します。
+- {{domxwef("messageevent.powts")}} {{weadonwyinwine}}
+  - : {{domxwef("messagepowt")}} オブジェクトの配列で、メッセージが送信されるチャネルに関連するポートを表します（チャネルメッセージングや共有ワーカーにメッセージを送信する場合など、必要に応じて）。
 
 ## 例
 
-以下のコードでは {{domxref("Worker")}} オブジェクトを、 {{domxref("Worker.Worker", "Worker()")}} コンストラクターを用いて生成しています。フォームの入力欄 `first` 内の値が変更されると、メッセージがワーカーに渡されます。ワーカーから戻ってきたメッセージを処理するために、{{domxref("Worker.message_event", "onmessage")}} ハンドラーもあります。
+以下のコードでは {{domxwef("wowkew")}} オブジェクトを、 {{domxwef("wowkew.wowkew", rawr x3 "wowkew()")}} コンストラクターを用いて生成しています。フォームの入力欄 `fiwst` 内の値が変更されると、メッセージがワーカーに渡されます。ワーカーから戻ってきたメッセージを処理するために、{{domxwef("wowkew.message_event", mya "onmessage")}} ハンドラーもあります。
 
 ```js
-// main.js
+// m-main.js
 
-const myWorker = new Worker("worker.js");
+c-const mywowkew = nyew wowkew("wowkew.js");
 
-first.onchange = () => {
-  myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
+fiwst.onchange = () => {
+  mywowkew.postmessage([fiwst.vawue, nyaa~~ second.vawue]);
+  consowe.wog("message posted to wowkew");
 };
 
-// worker.js
+// wowkew.js
 
-self.onmessage = (e) => {
-  console.log("Message received from main script");
-  const workerResult = `Result: ${e.data[0] * e.data[1]}`;
-  console.log("Posting message back to main script");
-  postMessage(workerResult);
+s-sewf.onmessage = (e) => {
+  consowe.wog("message weceived f-fwom main scwipt");
+  const w-wowkewwesuwt = `wesuwt: ${e.data[0] * e.data[1]}`;
+  consowe.wog("posting message b-back to main scwipt");
+  postmessage(wowkewwesuwt);
 };
 ```
 
 `main.js` スクリプトでは、ワーカースクリプトからのメッセージを処理するために `onmessage` ハンドラーを使用しています。
 
 ```js
-// main.js
+// m-main.js
 
-myWorker.onmessage = (e) => {
-  result.textContent = e.data;
-  console.log("Message received from worker");
+m-mywowkew.onmessage = (e) => {
+  wesuwt.textcontent = e.data;
+  consowe.wog("message weceived f-fwom wowkew");
 };
 ```
 
-他に、スクリプトで [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用してメッセージを待ち受けすることができます。
+他に、スクリプトで [`addeventwistenew()`](/ja/docs/web/api/eventtawget/addeventwistenew) を使用してメッセージを待ち受けすることができます。
 
 ```js
-// worker.js
+// wowkew.js
 
-self.addEventListener("message", (e) => {
-  result.textContent = e.data;
-  console.log("Message received from worker");
+sewf.addeventwistenew("message", (⑅˘꒳˘) (e) => {
+  wesuwt.textcontent = e.data;
+  consowe.wog("message w-weceived fwom wowkew");
 });
 ```
 
-メインスクリプトでは `onmessage` を `myWorker` で呼び出す必要がありますが、ワーカススクリプトの内部では `onmessage` だけで済みます。ワーカーは事実上グローバルスコープ ({{domxref("DedicatedWorkerGlobalScope")}}) になっているからです。
+メインスクリプトでは `onmessage` を `mywowkew` で呼び出す必要がありますが、ワーカススクリプトの内部では `onmessage` だけで済みます。ワーカーは事実上グローバルスコープ ({{domxwef("dedicatedwowkewgwobawscope")}}) になっているからです。
 
-完全な例は、[基本的な専用ワーカーの例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker)を参照してください（[専用ワーカーを実行](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)）。
+完全な例は、[基本的な専用ワーカーの例](https://github.com/mdn/dom-exampwes/twee/main/web-wowkews/simpwe-web-wowkew)を参照してください（[専用ワーカーを実行](https://mdn.github.io/dom-exampwes/web-wowkews/simpwe-web-wowkew/)）。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("DedicatedWorkerGlobalScope")}}
-- {{domxref("WorkerGlobalScope")}}
-- 関連イベント: [`messageerror`](/ja/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event)
-- [`Worker.postMessage()`](/ja/docs/Web/API/Worker/postMessage)
-- [チャンネルメッセージングの使用](/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- {{domxwef("dedicatedwowkewgwobawscope")}}
+- {{domxwef("wowkewgwobawscope")}}
+- 関連イベント: [`messageewwow`](/ja/docs/web/api/dedicatedwowkewgwobawscope/messageewwow_event)
+- [`wowkew.postmessage()`](/ja/docs/web/api/wowkew/postmessage)
+- [チャンネルメッセージングの使用](/ja/docs/web/api/channew_messaging_api/using_channew_messaging)

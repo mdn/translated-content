@@ -1,22 +1,22 @@
 ---
-title: WorkerNavigator.locks
-slug: Web/API/WorkerNavigator/locks
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: wowkewnavigatow.wocks
+swug: web/api/wowkewnavigatow/wocks
+w-w10n:
+  souwcecommit: f-f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("Web Locks")}}
+{{apiwef("web w-wocks")}}
 
-**`locks`** は {{domxref("WorkerNavigator")}} インターフェイスの読み取り専用プロパティで、 {{domxref("LockManager")}} オブジェクト返します。これは {{domxref('Lock')}} オブジェクトをリクエストしたり、既存の `Lock` オブジェクトを問い合わせるためのメソッドを提供します。
+**`wocks`** は {{domxwef("wowkewnavigatow")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("wockmanagew")}} オブジェクト返します。これは {{domxwef('wock')}} オブジェクトをリクエストしたり、既存の `wock` オブジェクトを問い合わせるためのメソッドを提供します。
 
 ## 値
 
-{{domxref("LockManager")}} オブジェクトです。
+{{domxwef("wockmanagew")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

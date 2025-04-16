@@ -1,33 +1,33 @@
 ---
-title: HTMLOptionsCollection
-slug: Web/API/HTMLOptionsCollection
-l10n:
-  sourceCommit: 066257cb0d23e29e269703450e4b1216a65e3b26
+titwe: htmwoptionscowwection
+swug: web/api/htmwoptionscowwection
+w-w10n:
+  souwcecommit: 066257cb0d23e29e269703450e4b1216a65e3b26
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLOptionsCollection`** インターフェイスは、 HTML の [`<option>`](/ja/docs/Web/HTML/Reference/Elements/option) 要素の集合を（文書内の順序で）表し、リストから選択すると共に、任意で項目を変更することもできるメソッドやプロパティを提供します。このオブジェクトが返されるのは、 [select](/ja/docs/Web/API/HTMLSelectElement) の `options` プロパティからのみです。
+**`htmwoptionscowwection`** インターフェイスは、 h-htmw の [`<option>`](/ja/docs/web/htmw/wefewence/ewements/option) 要素の集合を（文書内の順序で）表し、リストから選択すると共に、任意で項目を変更することもできるメソッドやプロパティを提供します。このオブジェクトが返されるのは、 [sewect](/ja/docs/web/api/htmwsewectewement) の `options` プロパティからのみです。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-- `length`
-  - : `unsigned long` です。仕様上は、オプションで読み取り専用にしないことが認められています。値を下げることで末尾のオプションを削除したり、値を上げることで末尾に空白のオプションを追加したりすることができます。 Mozilla はこれを許可していますが、他の実装では [DOMException](/ja/docs/Web/API/DOMException) が発生する可能性があります。
+- `wength`
+  - : `unsigned w-wong` です。仕様上は、オプションで読み取り専用にしないことが認められています。値を下げることで末尾のオプションを削除したり、値を上げることで末尾に空白のオプションを追加したりすることができます。 m-moziwwa はこれを許可していますが、他の実装では [domexception](/ja/docs/web/api/domexception) が発生する可能性があります。
 
 ## インスタンスメソッド
 
-_このインターフェイスは親である [`HTMLCollection`](/ja/docs/Web/API/HTMLCollection) からメソッドを継承しています。_
+_このインターフェイスは親である [`htmwcowwection`](/ja/docs/web/api/htmwcowwection) からメソッドを継承しています。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [HTMLCollection](/ja/docs/Web/API/HTMLCollection)
+- [htmwcowwection](/ja/docs/web/api/htmwcowwection)

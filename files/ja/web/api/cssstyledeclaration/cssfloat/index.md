@@ -1,15 +1,15 @@
 ---
-title: CSSStyleDeclaration.cssFloat
-slug: Web/API/CSSStyleDeclaration/cssFloat
-l10n:
-  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
+titwe: cssstywedecwawation.cssfwoat
+swug: web/api/cssstywedecwawation/cssfwoat
+w-w10n:
+  souwcecommit: b-b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`cssFloat`** は {{domxref("CSSStyleDeclaration")}} インターフェイスのプロパティで、 {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} を `float` を引数として呼び出したときの結果を返します。
+**`cssfwoat`** は {{domxwef("cssstywedecwawation")}} インターフェイスのプロパティで、 {{domxwef("cssstywedecwawation.getpwopewtyvawue()")}} を `fwoat` を引数として呼び出したときの結果を返します。
 
-設定したときは、 {{DOMxRef("CSSStyleDeclaration.setProperty()")}} を `float` を第一引数、指定された値を第二引数として呼び出します。指定された値は {{cssxref("float")}} プロパティで有効な値でなければなりません。
+設定したときは、 {{domxwef("cssstywedecwawation.setpwopewty()")}} を `fwoat` を第一引数、指定された値を第二引数として呼び出します。指定された値は {{cssxwef("fwoat")}} プロパティで有効な値でなければなりません。
 
 ## 値
 
@@ -17,27 +17,27 @@ l10n:
 
 ## 例
 
-以下の例では、スタイルシートには、 1 つだけのルール `.box` に {{cssxref("float")}} プロパティの値が `left` と設定されています。この値は `cssFloat` から返されます。次に、 `cssFloat` を使用して値を "right" に設定し、新しい値を返します。
+以下の例では、スタイルシートには、 1 つだけのルール `.box` に {{cssxwef("fwoat")}} プロパティの値が `weft` と設定されています。この値は `cssfwoat` から返されます。次に、 `cssfwoat` を使用して値を "wight" に設定し、新しい値を返します。
 
 ```css
 .box {
-  float: left;
-  inline-size: 300px;
+  f-fwoat: w-weft;
+  inwine-size: 300px;
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-let rule = myRules[0];
-console.log(rule.style.cssFloat); // "left"
-rule.style.cssFloat = "right";
-console.log(rule.style.cssFloat); //right
+w-wet mywuwes = d-document.stywesheets[0].csswuwes;
+w-wet wuwe = m-mywuwes[0];
+consowe.wog(wuwe.stywe.cssfwoat); // "weft"
+wuwe.stywe.cssfwoat = "wight";
+consowe.wog(wuwe.stywe.cssfwoat); //wight
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,28 +1,28 @@
 ---
-title: GPU
-slug: Web/API/GPU
-l10n:
-  sourceCommit: ced28062a310010c347dae055bd53760b10293ba
+titwe: gpu
+swug: web/api/gpu
+w-w10n:
+  souwcecommit: c-ced28062a310010c347dae055bd53760b10293ba
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{apiwef("webgpu a-api")}}{{seecompattabwe}}
 
-{{domxref("WebGPU API", "WebGPU API", "", "nocode")}} の **`GPU`** インターフェイスは、WebGPU を使用するためのスタート地点です。デバイスの要求、機能や制限の設定、などを行える {{domxref("GPUAdapter")}} を取得するのに使用できます。
+{{domxwef("webgpu a-api", "webgpu a-api", "", 😳 "nocode")}} の **`gpu`** インターフェイスは、webgpu を使用するためのスタート地点です。デバイスの要求、機能や制限の設定、などを行える {{domxwef("gpuadaptew")}} を取得するのに使用できます。
 
-現在のコンテキスト用の `GPU` オブジェクトには、{{domxref("Navigator.gpu")}} または {{domxref("WorkerNavigator.gpu")}} プロパティからアクセスできます。
+現在のコンテキスト用の `gpu` オブジェクトには、{{domxwef("navigatow.gpu")}} または {{domxwef("wowkewnavigatow.gpu")}} プロパティからアクセスできます。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-- {{domxref("GPU.wgslLanguageFeatures", "wgslLanguageFeatures")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : この WebGPU の実装が対応している [WGSL 言語の拡張](https://gpuweb.github.io/gpuweb/wgsl/#language-extension)を報告する {{domxref("WGSLLanguageFeatures")}} オブジェクトです。
+- {{domxwef("gpu.wgswwanguagefeatuwes", XD "wgswwanguagefeatuwes")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : この webgpu の実装が対応している [wgsw 言語の拡張](https://gpuweb.github.io/gpuweb/wgsw/#wanguage-extension)を報告する {{domxwef("wgswwanguagefeatuwes")}} オブジェクトです。
 
 ## インスタンスメソッド
 
-- {{domxref("GPU.requestAdapter", "requestAdapter()")}} {{Experimental_Inline}}
-  - : {{domxref("GPUAdapter")}} オブジェクトのインスタンスで解決する {{jsxref("Promise")}} を返します。これを用いて、WebGPU の機能を用いるための第一のインターフェイスである {{domxref("GPUDevice")}} を要求できます。
-- {{domxref("GPU.getPreferredCanvasFormat", "getPreferredCanvasFormat()")}} {{Experimental_Inline}}
+- {{domxwef("gpu.wequestadaptew", :3 "wequestadaptew()")}} {{expewimentaw_inwine}}
+  - : {{domxwef("gpuadaptew")}} オブジェクトのインスタンスで解決する {{jsxwef("pwomise")}} を返します。これを用いて、webgpu の機能を用いるための第一のインターフェイスである {{domxwef("gpudevice")}} を要求できます。
+- {{domxwef("gpu.getpwefewwedcanvasfowmat", 😳😳😳 "getpwefewwedcanvasfowmat()")}} {{expewimentaw_inwine}}
   - : 現在のシステムにおける、8 ビット深度で通常のダイナミックレンジのコンテンツを表示するために最適なキャンバステクスチャーの形式を返します。
 
 ## 例
@@ -30,43 +30,43 @@ l10n:
 ### アダプターとデバイスを要求する
 
 ```js
-async function init() {
-  if (!navigator.gpu) {
-    throw Error("WebGPU に対応していません。");
+a-async function i-init() {
+  i-if (!navigatow.gpu) {
+    thwow ewwow("webgpu に対応していません。");
   }
 
-  const adapter = await navigator.gpu.requestAdapter();
-  if (!adapter) {
-    throw Error("WebGPU アダプターを要求できませんでした。");
+  const adaptew = await nyavigatow.gpu.wequestadaptew();
+  i-if (!adaptew) {
+    thwow ewwow("webgpu アダプターを要求できませんでした。");
   }
 
-  const device = await adapter.requestDevice();
+  const device = a-await adaptew.wequestdevice();
 
   //...
 }
 ```
 
-### GPUCanvasContext を最適なテクスチャー形式で設定する
+### gpucanvascontext を最適なテクスチャー形式で設定する
 
 ```js
-const canvas = document.querySelector("#gpuCanvas");
-const context = canvas.getContext("webgpu");
+c-const canvas = document.quewysewectow("#gpucanvas");
+const context = canvas.getcontext("webgpu");
 
-context.configure({
-  device: device,
-  format: navigator.gpu.getPreferredCanvasFormat(),
-  alphaMode: "premultiplied",
+c-context.configuwe({
+  device: d-device, -.-
+  f-fowmat: nyavigatow.gpu.getpwefewwedcanvasfowmat(), ( ͡o ω ͡o )
+  awphamode: "pwemuwtipwied", rawr x3
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
+- [webgpu api](/ja/docs/web/api/webgpu_api)

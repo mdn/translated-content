@@ -1,53 +1,53 @@
 ---
-title: Window.captureEvents()
-slug: Web/API/Window/captureEvents
+titwe: window.captuweevents()
+swug: web/api/window/captuweevents
 ---
 
-{{ ApiRef() }} {{Deprecated_Header}} {{Non-standard_header}}
+{{ a-apiwef() }} {{depwecated_headew}} {{non-standawd_headew}}
 
-**`Window.captureEvents()`** メソッドは、指定した種類のすべてのイベントをキャプチャするように、そのウィンドウを登録します。
+**`window.captuweevents()`** メソッドは、指定した種類のすべてのイベントをキャプチャするように、そのウィンドウを登録します。
 
 ## 構文
 
 ```js
-window.captureEvents(eventType);
+w-window.captuweevents(eventtype);
 ```
 
-`eventType` は、 `Event.ABORT`, `Event.BLUR`, `Event.CLICK`, `Event.CHANGE`, `Event.DBLCLICK`, `Event.DRAGDDROP`, `Event.ERROR`, `Event.FOCUS`, `Event.KEYDOWN`, `Event.KEYPRESS`, `Event.KEYUP`, `Event.LOAD`, `Event.MOUSEDOWN`, `Event.MOUSEMOVE`, `Event.MOUSEOUT`, `Event.MOUSEOVER`, `Event.MOUSEUP`, `Event.MOVE`, `Event.RESET`, `Event.RESIZE`, `Event.SELECT`, `Event.SUBMIT`, `Event.UNLOAD` の値の組み合わせを取ります。
+`eventtype` は、 `event.abowt`, `event.bwuw`, (ˆ ﻌ ˆ)♡ `event.cwick`, (⑅˘꒳˘) `event.change`, (U ᵕ U❁) `event.dbwcwick`, -.- `event.dwagddwop`, ^^;; `event.ewwow`, >_< `event.focus`, `event.keydown`, mya `event.keypwess`, mya `event.keyup`, 😳 `event.woad`, `event.mousedown`, XD `event.mousemove`, :3 `event.mouseout`, 😳😳😳 `event.mouseovew`, -.- `event.mouseup`, ( ͡o ω ͡o ) `event.move`, rawr x3 `event.weset`, nyaa~~ `event.wesize`, /(^•ω•^) `event.sewect`, rawr `event.submit`, OwO `event.unwoad` の値の組み合わせを取ります。
 
 ## 例
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="en">
   <head>
     <!-- ... -->
-    <script>
-      function reg() {
-        window.captureEvents(Event.CLICK);
-        window.onclick = page_click;
+    <scwipt>
+      f-function w-weg() {
+        w-window.captuweevents(event.cwick);
+        w-window.oncwick = page_cwick;
       }
 
-      function page_click() {
-        alert("ページクリックイベントが検出されました！");
+      function page_cwick() {
+        awewt("ページクリックイベントが検出されました！");
       }
-    </script>
+    </scwipt>
   </head>
 
-  <body onload="reg();">
-    <p>click anywhere on this page.</p>
+  <body o-onwoad="weg();">
+    <p>cwick anywhewe on this page.</p>
   </body>
-</html>
+</htmw>
 ```
 
 ### 注
 
-ユーザーの操作によって DOM 内で発生したイベント (ボタンのクリックや現在の文書からのフォーカス移動など) は、通常、イベントを開始したオブジェクトに到達する前に、まず高レベルの [`window`](/ja/docs/Web/API/Window) や [`document`](/ja/docs/Web/API/Document) オブジェクトを通過します。
+ユーザーの操作によって d-dom 内で発生したイベント (ボタンのクリックや現在の文書からのフォーカス移動など) は、通常、イベントを開始したオブジェクトに到達する前に、まず高レベルの [`window`](/ja/docs/web/api/window) や [`document`](/ja/docs/web/api/document) オブジェクトを通過します。
 
-[`window`](/ja/docs/Web/API/Window) の `captureEvents()` メソッドを呼び出すと、指定した種類のイベント (例えば `Event.CLICK`) は、階層内の「下位」オブジェクトに通過しなくなります。イベントを通常のように「バブルアップ」させるためには、 [`window.releaseEvents()`](/ja/docs/Web/API/Window/releaseEvents) ({{deprecated_inline}}) を window 上で呼び出し、イベントをトラップしないようにしなければなりません。
+[`window`](/ja/docs/web/api/window) の `captuweevents()` メソッドを呼び出すと、指定した種類のイベント (例えば `event.cwick`) は、階層内の「下位」オブジェクトに通過しなくなります。イベントを通常のように「バブルアップ」させるためには、 [`window.weweaseevents()`](/ja/docs/web/api/window/weweaseevents) ({{depwecated_inwine}}) を window 上で呼び出し、イベントをトラップしないようにしなければなりません。
 
 なお、次の構文を使用することでこのメソッドにイベントのリストを渡すことができます。
-`window.captureEvents(Event.KEYPRESS | Event.KEYDOWN | Event.KEYUP)`.
+`window.captuweevents(event.keypwess | e-event.keydown | event.keyup)`. (U ﹏ U)
 
 ## 仕様書
 

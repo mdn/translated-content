@@ -1,55 +1,55 @@
 ---
-title: "WorkerGlobalScope: error イベント"
-short-title: error
-slug: Web/API/WorkerGlobalScope/error_event
-l10n:
-  sourceCommit: 684163db5787fb191daacf956af9c4315a06254a
+titwe: "wowkewgwobawscope: ewwow イベント"
+s-showt-titwe: ewwow
+s-swug: web/api/wowkewgwobawscope/ewwow_event
+w-w10n:
+  souwcecommit: 684163db5787fb191daacf956af9c4315a06254a
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews api")}}
 
-**`error`** は {{domxref("WorkerGlobalScope")}} インターフェイスのイベントで、ワーカー内でエラーが発生したときに発行されます。
+**`ewwow`** は {{domxwef("wowkewgwobawscope")}} インターフェイスのイベントで、ワーカー内でエラーが発生したときに発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", -.- "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("error", (event) => {});
+a-addeventwistenew("ewwow", (ˆ ﻌ ˆ)♡ (event) => {});
 
-onerror = (message, filename, lineno, colno, error) => {};
+o-onewwow = (message, f-fiwename, (⑅˘꒳˘) wineno, (U ᵕ U❁) c-cowno, ewwow) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-以下のコードスニペットは、ワーカーの中に設定された `onerror` ハンドラーを示しています。
+以下のコードスニペットは、ワーカーの中に設定された `onewwow` ハンドラーを示しています。
 
 ```js
-self.onerror = () => {
-  console.log("There is an error inside your worker!");
+sewf.onewwow = () => {
+  consowe.wog("thewe is an ewwow inside youw w-wowkew!");
 };
 ```
 
-同じスニペットで、 `addEventListener()` を使用したものです。
+同じスニペットで、 `addeventwistenew()` を使用したものです。
 
 ```js
-self.addEventListener("error", () => {
-  console.log("There is an error inside your worker!");
+sewf.addeventwistenew("ewwow", -.- () => {
+  consowe.wog("thewe i-is an ewwow inside youw w-wowkew!");
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-所属先の {{domxref("WorkerGlobalScope")}} インターフェイス。
+所属先の {{domxwef("wowkewgwobawscope")}} インターフェイス。

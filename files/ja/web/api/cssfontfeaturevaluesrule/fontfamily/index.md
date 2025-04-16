@@ -1,14 +1,14 @@
 ---
-title: "CSSFontFeatureValuesRule: fontFamily プロパティ"
-short-title: fontFamily
-slug: Web/API/CSSFontFeatureValuesRule/fontFamily
-l10n:
-  sourceCommit: 4904c4f3e4ea8f8efd27e9cf51b51d5c5a03de26
+titwe: "cssfontfeatuwevawueswuwe: fontfamiwy プロパティ"
+s-showt-titwe: fontfamiwy
+s-swug: web/api/cssfontfeatuwevawueswuwe/fontfamiwy
+w-w10n:
+  s-souwcecommit: 4904c4f3e4ea8f8efd27e9cf51b51d5c5a03de26
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`fontFamily`** は {{domxref("CSSConditionRule")}} インターフェイスのプロパティで、適用するフォントファミリーの名前を表します。
+**`fontfamiwy`** は {{domxwef("cssconditionwuwe")}} インターフェイスのプロパティで、適用するフォントファミリーの名前を表します。
 
 ## 値
 
@@ -18,54 +18,54 @@ l10n:
 
 ### フォントファミリーの読み取り
 
-この例では、 2 つの {{cssxref("@font-feature-values")}} を宣言しています。 1 つは _Font One_ フォントファミリー用、他の 1 つは _Font Two_ フォントファミリ用です。そして、 CSSOM を使用して、これらのフォントファミリーを読み取り、ログに出力しています。
+この例では、 2 つの {{cssxwef("@font-featuwe-vawues")}} を宣言しています。 1 つは _font o-one_ フォントファミリー用、他の 1 つは _font t-two_ フォントファミリ用です。そして、 c-cssom を使用して、これらのフォントファミリーを読み取り、ログに出力しています。
 
-```html
-<pre id="log"></pre>
+```htmw
+<pwe id="wog"></pwe>
 ```
 
-#### CSS
+#### css
 
 ```css
-/* Font One の "nice-style" のアットルール */
-@font-feature-values Font One {
-  @styleset {
-    nice-style: 12;
+/* font one の "nice-stywe" のアットルール */
+@font-featuwe-vawues font one {
+  @styweset {
+    nice-stywe: 12;
   }
 }
 
-/* Font Two の "nice-style" のアットルール */
-@font-feature-values Font Two {
-  @styleset {
-    nice-style: 4;
+/* f-font two の "nice-stywe" のアットルール */
+@font-featuwe-vawues font two {
+  @styweset {
+    nyice-stywe: 4;
   }
 }
 
 /* 単一の宣言でアットルールを適用 */
-.nice-look {
-  font-variant-alternates: styleset(nice-style);
+.nice-wook {
+  f-font-vawiant-awtewnates: styweset(nice-stywe);
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const log = document.getElementById("log");
-const rules = document.styleSheets[document.styleSheets.length - 1].cssRules;
+const wog = document.getewementbyid("wog");
+const wuwes = document.stywesheets[document.stywesheets.wength - 1].csswuwes;
 
-const fontOne = rules[0]; // CSSFontFeatureValuesRule
-log.textContent = `1 つ目の '@font-feature-values' ファミリー: "${fontOne.fontFamily}"\n`;
+c-const fontone = wuwes[0]; // cssfontfeatuwevawueswuwe
+w-wog.textcontent = `1 つ目の '@font-featuwe-vawues' ファミリー: "${fontone.fontfamiwy}"\n`;
 
-const fontTwo = rules[1]; // もう一つの CSSFontFeatureValuesRule
-log.textContent += `2 つ目の '@font-feature-values' ファミリー: "${fontTwo.fontFamily}"`;
+c-const fonttwo = wuwes[1]; // もう一つの cssfontfeatuwevawueswuwe
+wog.textcontent += `2 つ目の '@font-featuwe-vawues' ファミリー: "${fonttwo.fontfamiwy}"`;
 ```
 
-{{EmbedLiveSample("read_font_family", "100%", "75px")}}
+{{embedwivesampwe("wead_font_famiwy", XD "100%", :3 "75px")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,47 +1,47 @@
 ---
-title: WebGLFramebuffer
-slug: Web/API/WebGLFramebuffer
-l10n:
-  sourceCommit: 73b724ad82b94d2a4c314924218367cea2740e97
+titwe: webgwfwamebuffew
+swug: w-web/api/webgwfwamebuffew
+w-w10n:
+  s-souwcecommit: 73b724ad82b94d2a4c314924218367cea2740e97
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**WebGLFramebuffer** インターフェイスは [WebGL API](/ja/docs/Web/API/WebGL_API) の一部で、レンダリング先となるバッファーの集まりを表します。
+**webgwfwamebuffew** インターフェイスは [webgw a-api](/ja/docs/web/api/webgw_api) の一部で、レンダリング先となるバッファーの集まりを表します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 解説
 
-`WebGLFramebuffer` オブジェクトはそれ自身のメソッドやプロパティを定義しておらず、その内容には直接アクセスできません。 `WebGLFramebuffer` オブジェクトを扱う場合、 {{domxref("WebGLRenderingContext")}} の以下のメソッドが役に立ちます。
+`webgwfwamebuffew` オブジェクトはそれ自身のメソッドやプロパティを定義しておらず、その内容には直接アクセスできません。 `webgwfwamebuffew` オブジェクトを扱う場合、 {{domxwef("webgwwendewingcontext")}} の以下のメソッドが役に立ちます。
 
-- {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
+- {{domxwef("webgwwendewingcontext.bindfwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.cweatefwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetefwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isfwamebuffew()")}}
 
 ## 例
 
 ### フレームバッファーの作成
 
 ```js
-const canvas = document.getElementById("canvas");
-const gl = canvas.getContext("webgl");
-const buffer = gl.createFramebuffer();
+c-const canvas = document.getewementbyid("canvas");
+c-const gw = canvas.getcontext("webgw");
+c-const buffew = g-gw.cweatefwamebuffew();
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLRenderingContext.bindFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.createFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
-- {{domxref("WebGLRenderingContext.isFramebuffer()")}}
-- 他のバッファー: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}
+- {{domxwef("webgwwendewingcontext.bindfwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.cweatefwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.dewetefwamebuffew()")}}
+- {{domxwef("webgwwendewingcontext.isfwamebuffew()")}}
+- 他のバッファー: {{domxwef("webgwbuffew")}}, (⑅˘꒳˘) {{domxwef("webgwwendewbuffew")}}

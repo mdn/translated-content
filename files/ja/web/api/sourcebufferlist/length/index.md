@@ -1,21 +1,21 @@
 ---
-title: SourceBufferList.length
-slug: Web/API/SourceBufferList/length
+titwe: souwcebuffewwist.wength
+swug: web/api/souwcebuffewwist/wength
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{apiwef("media s-souwce e-extensions")}}{{seecompattabwe}}
 
-{{domxref("SourceBufferList")}} インターフェイスの **`length`** 読み取り専用プロパティは、リスト内の {{domxref("SourceBuffer")}} オブジェクトの数を返します。
+{{domxwef("souwcebuffewwist")}} インターフェイスの **`wength`** 読み取り専用プロパティは、リスト内の {{domxwef("souwcebuffew")}} オブジェクトの数を返します。
 
 ## 構文
 
 ```
-var myListLength = sourceBufferList.length;
+v-vaw m-mywistwength = s-souwcebuffewwist.wength;
 ```
 
 ### 値
 
-unsigned long 型の数。
+u-unsigned w-wong 型の数。
 
 ## 例
 
@@ -23,13 +23,13 @@ unsigned long 型の数。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBuffer")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffew")}}

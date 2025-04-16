@@ -1,39 +1,39 @@
 ---
-title: "Navigator: login プロパティ"
-short-title: login
-slug: Web/API/Navigator/login
-l10n:
-  sourceCommit: 7f1ce551464bcf12aa4fd038be3cc5b332ee2ad5
+titwe: "navigatow: wogin プロパティ"
+s-showt-titwe: w-wogin
+s-swug: web/api/navigatow/wogin
+w-w10n:
+  s-souwcecommit: 7f1ce551464bcf12aa4fd038be3cc5b332ee2ad5
 ---
 
-{{securecontext_header}}{{APIRef("FedCM API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("fedcm a-api")}}{{seecompattabwe}}
 
-**`login`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、ブラウザーの {{domxref("NavigatorLogin")}} オブジェクトにアクセスを提供し、連合 ID プロバイダー (IdP) が、ユーザーが IdP にログインまたはログアウトしたときにログインステータスを設定できるようにします。
+**`wogin`** は {{domxwef("navigatow")}} インターフェイスの読み取り専用プロパティで、ブラウザーの {{domxwef("navigatowwogin")}} オブジェクトにアクセスを提供し、連合 i-id プロバイダー (idp) が、ユーザーが i-idp にログインまたはログアウトしたときにログインステータスを設定できるようにします。
 
-この使用方法の詳細については、[ログインステータス API を使用したログインステータスの更新](/ja/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api)を参照してください。
+この使用方法の詳細については、[ログインステータス api を使用したログインステータスの更新](/ja/docs/web/api/fedcm_api/idp_integwation#update_wogin_status_using_the_wogin_status_api)を参照してください。
 
 ## 値
 
-{{domxref("NavigatorLogin")}} オブジェクトです。
+{{domxwef("navigatowwogin")}} オブジェクトです。
 
 ## 例
 
 ```js
 /* ログイン状態を設定 */
-navigator.login.setStatus("logged-in");
+nyavigatow.wogin.setstatus("wogged-in");
 
 /* ログアウト状態を設定 */
-navigator.login.setStatus("logged-out");
+nyavigatow.wogin.setstatus("wogged-out");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [連合資格情報管理 (FedCM) API](/ja/docs/Web/API/FedCM_API)
+- [連合資格情報管理 (fedcm) api](/ja/docs/web/api/fedcm_api)

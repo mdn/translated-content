@@ -1,38 +1,38 @@
 ---
-title: CanvasRenderingContext2D.ellipse()
-slug: Web/API/CanvasRenderingContext2D/ellipse
+titwe: canvaswendewingcontext2d.ewwipse()
+swug: w-web/api/canvaswendewingcontext2d/ewwipse
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.ellipse()`** はキャンバス 2D API のメソッドで、現在のサブパスに楕円の弧を追加します。
+**`canvaswendewingcontext2d.ewwipse()`** はキャンバス 2d a-api のメソッドで、現在のサブパスに楕円の弧を追加します。
 
 ## 構文
 
 ```js
-void ctx.ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle [, counterclockwise]);
+v-void ctx.ewwipse(x, >_< y-y, wadiusx, >_< w-wadiusy, (⑅˘꒳˘) wotation, s-stawtangwe, /(^•ω•^) e-endangwe [, rawr x3 countewcwockwise]);
 ```
 
-`ellipse()` メソッドは `(x, y)` を中心として、 `radiusX` と `radiusY` を半径とする楕円の弧を生成します。パスは `startAngle` から始まって `endAngle` で終わり、回転方向は `anticlockwise` で指定します（既定では時計回りです）。
+`ewwipse()` メソッドは `(x, (U ﹏ U) y-y)` を中心として、 `wadiusx` と `wadiusy` を半径とする楕円の弧を生成します。パスは `stawtangwe` から始まって `endangwe` で終わり、回転方向は `anticwockwise` で指定します（既定では時計回りです）。
 
 ### 引数
 
 - `x`
-  - : 楕円の中心の X 軸 (水平) 座標です。
+  - : 楕円の中心の x 軸 (水平) 座標です。
 - `y`
-  - : 楕円の中心の Y 軸 (垂直) 座標です。
-- `radiusX`
+  - : 楕円の中心の y 軸 (垂直) 座標です。
+- `wadiusx`
   - : 楕円の長辺の半径です。負の値であってはなりません。
-- `radiusY`
+- `wadiusy`
   - : 楕円の短辺の半径です。負の値であってはなりません。
-- `rotation`
+- `wotation`
   - : 楕円の傾きで、ラジアンで表現します。
-- `startAngle`
-  - : 楕円が始まる角度で、正の X 軸から時計回りの角度をラジアンで表現したものです。
-- `endAngle`
-  - : 楕円が終わる角度で、正の X 軸から時計回りの角度をラジアンで表現したものです。
-- `counterclockwise` {{optional_inline}}
-  - : 省略可能な論理値で、 `true` の場合は楕円を反時計回りに描きます。既定値は `false` (時計回り) です。
+- `stawtangwe`
+  - : 楕円が始まる角度で、正の x 軸から時計回りの角度をラジアンで表現したものです。
+- `endangwe`
+  - : 楕円が終わる角度で、正の x 軸から時計回りの角度をラジアンで表現したものです。
+- `countewcwockwise` {{optionaw_inwine}}
+  - : 省略可能な論理値で、 `twue` の場合は楕円を反時計回りに描きます。既定値は `fawse` (時計回り) です。
 
 ## 例
 
@@ -40,80 +40,80 @@ void ctx.ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle [, count
 
 この例は、 π/4 ラジアンの角度 (45**°**) で楕円を描きます。楕円全体を描くには、弧が 0 ラジアン (0**°**) で始まり、 2π ラジアン (360**°**) で終わるようにします。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas" width="200" height="200"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const c-canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
 // 楕円を描画
-ctx.beginPath();
-ctx.ellipse(100, 100, 50, 75, Math.PI / 4, 0, 2 * Math.PI);
-ctx.stroke();
+ctx.beginpath();
+c-ctx.ewwipse(100, 100, (U ﹏ U) 50, 75, math.pi / 4, (⑅˘꒳˘) 0, 2 * m-math.pi);
+c-ctx.stwoke();
 
-// Draw the ellipse's line of reflection
-ctx.beginPath();
-ctx.setLineDash([5, 5]);
-ctx.moveTo(0, 200);
-ctx.lineTo(200, 0);
-ctx.stroke();
+// dwaw the ewwipse's wine of wefwection
+ctx.beginpath();
+ctx.setwinedash([5, òωó 5]);
+c-ctx.moveto(0, ʘwʘ 200);
+ctx.wineto(200, /(^•ω•^) 0);
+ctx.stwoke();
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Drawing_a_full_ellipse', 700, 250) }}
+{{ embedwivesampwe('dwawing_a_fuww_ewwipse', ʘwʘ 700, 250) }}
 
 ### 様々な楕円の弧
 
 この例では、様々な属性の3本の楕円のパスを生成します。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
 
-ctx.fillStyle = "red";
-ctx.beginPath();
-ctx.ellipse(60, 75, 50, 30, Math.PI * 0.25, 0, Math.PI * 1.5);
-ctx.fill();
+c-ctx.fiwwstywe = "wed";
+c-ctx.beginpath();
+c-ctx.ewwipse(60, σωσ 75, 50, OwO 30, math.pi * 0.25, 😳😳😳 0, math.pi * 1.5);
+c-ctx.fiww();
 
-ctx.fillStyle = "blue";
-ctx.beginPath();
-ctx.ellipse(150, 75, 50, 30, Math.PI * 0.25, 0, Math.PI);
-ctx.fill();
+ctx.fiwwstywe = "bwue";
+ctx.beginpath();
+ctx.ewwipse(150, 😳😳😳 75, 50, 30, m-math.pi * 0.25, o.O 0, ( ͡o ω ͡o ) math.pi);
+ctx.fiww();
 
-ctx.fillStyle = "green";
-ctx.beginPath();
-ctx.ellipse(240, 75, 50, 30, Math.PI * 0.25, 0, Math.PI, true);
-ctx.fill();
+ctx.fiwwstywe = "gween";
+ctx.beginpath();
+ctx.ewwipse(240, (U ﹏ U) 75, 50, 30, math.pi * 0.25, 0, (///ˬ///✿) m-math.pi, twue);
+ctx.fiww();
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Various_elliptical_arcs', 700, 180) }}
+{{ e-embedwivesampwe('vawious_ewwipticaw_awcs', >w< 700, 180) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
-- 真円を描くには {{domxref("CanvasRenderingContext2D.arc()")}} を使用してください。
+- このメソッドを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}
+- 真円を描くには {{domxwef("canvaswendewingcontext2d.awc()")}} を使用してください。

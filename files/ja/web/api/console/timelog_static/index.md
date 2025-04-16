@@ -1,36 +1,36 @@
 ---
-title: console.timeLog()
-slug: Web/API/console/timeLog_static
+titwe: consowe.timewog()
+swug: w-web/api/consowe/timewog_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-**`console.timeLog()`** メソッドは、前回 {{domxref("console.time()")}} を呼び出すことで起動したタイマーの現在の値をコンソールに記録します。
+**`consowe.timewog()`** メソッドは、前回 {{domxwef("consowe.time()")}} を呼び出すことで起動したタイマーの現在の値をコンソールに記録します。
 
-詳細や例のドキュメントについては[タイマー](/ja/docs/Web/API/console#タイマー)を参照してください。
+詳細や例のドキュメントについては[タイマー](/ja/docs/web/api/consowe#タイマー)を参照してください。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
 ```js
-timeLog(label);
+t-timewog(wabew);
 ```
 
 ### 引数
 
-- `label`
+- `wabew`
   - : コンソールに記録するタイマーの名前。
 
 ### 返値
 
-label 引数が含まれなかった場合:
+w-wabew 引数が含まれなかった場合:
 
 ```
-default: 1042ms
+d-defauwt: 1042ms
 ```
 
-既存の `label` が指定された場合:
+既存の `wabew` が指定された場合:
 
 ```
 タイマー名: 1242ms
@@ -38,38 +38,38 @@ default: 1042ms
 
 ### 例外
 
-動作中のタイマーがなかった場合、 `timeLog()` は次の警告を返します。
+動作中のタイマーがなかった場合、 `timewog()` は次の警告を返します。
 
 ```
-Timer "default" doesn't exist.
+timew "defauwt" doesn't e-exist. (⑅˘꒳˘)
 ```
 
-label 引数が指定されているものの、対応するタイマーがない場合:
+w-wabew 引数が指定されているものの、対応するタイマーがない場合:
 
 ```
-Timer "timer name" doesn't exist.
+t-timew "timew nyame" doesn't exist. (U ᵕ U❁)
 ```
 
 ## 例
 
 ```js
-console.time("answer time");
-alert("Click to continue");
-console.timeLog("answer time");
-alert("Do a bunch of other stuff…");
-console.timeEnd("answer time");
+consowe.time("answew time");
+awewt("cwick t-to continue");
+consowe.timewog("answew time");
+a-awewt("do a bunch of othew stuff…");
+c-consowe.timeend("answew time");
 ```
 
 上記の例の出力は、ユーザーが最初のアラートボックスを解除するのにかかった時間と、続いて 2 つ目のアラートを解除するのにかかった時間を示しています。
 
-![](timer_output.png)
+![](timew_output.png)
 
-`timeLog()` を使用してタイマーの値を記録したとき、そして停止するしたに再びタイマーの名前が表示されることに注意してください。さらに、 timeEnd() を呼び出すと、タイマーが時間を追跡していないことを明らかにするために、 "timer ended" という追加の情報を保有しています。
+`timewog()` を使用してタイマーの値を記録したとき、そして停止するしたに再びタイマーの名前が表示されることに注意してください。さらに、 timeend() を呼び出すと、タイマーが時間を追跡していないことを明らかにするために、 "timew ended" という追加の情報を保有しています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,21 +1,21 @@
 ---
-title: Clipboard.read()
-slug: Web/API/Clipboard/read
+titwe: cwipboawd.wead()
+swug: w-web/api/cwipboawd/wead
 ---
 
-{{APIRef("Clipboard API")}}
+{{apiwef("cwipboawd a-api")}}
 
-**`read()`** は {{domxref("Clipboard")}} インターフェイスのメソッドで、クリップボードの内容のコピーを要求し、返されたプロミス ({{jsxref("Promise")}}) が解決されるとそのデータを取得できます。 {{domxref("Clipboard.readText", "readText()")}} とは異なり、 `read()` メソッドは画像など任意のデータを取得することができます。
+**`wead()`** は {{domxwef("cwipboawd")}} インターフェイスのメソッドで、クリップボードの内容のコピーを要求し、返されたプロミス ({{jsxwef("pwomise")}}) が解決されるとそのデータを取得できます。 {{domxwef("cwipboawd.weadtext", >_< "weadtext()")}} とは異なり、 `wead()` メソッドは画像など任意のデータを取得することができます。
 
-クリップボードから読み込みを行うためには、まず `"clipboard-read"` 権限を取得する必要があります。
+クリップボードから読み込みを行うためには、まず `"cwipboawd-wead"` 権限を取得する必要があります。
 
-> [!NOTE]
-> 非同期のクリップボード API と[権限 API](/ja/docs/Web/API/Permissions_API) は、ほとんどのブラウザーでは組み込み途中の状態です。そのため、権限などが公式仕様とは異なっていることがよくあります。これらのメソッドを使う前に[互換性一覧表](#ブラウザーの互換性)を確認してください。
+> [!note]
+> 非同期のクリップボード a-api と[権限 api](/ja/docs/web/api/pewmissions_api) は、ほとんどのブラウザーでは組み込み途中の状態です。そのため、権限などが公式仕様とは異なっていることがよくあります。これらのメソッドを使う前に[互換性一覧表](#ブラウザーの互換性)を確認してください。
 
 ## 構文
 
 ```js
-read();
+w-wead();
 ```
 
 ### 引数
@@ -24,81 +24,81 @@ read();
 
 ### 返値
 
-クリップボードの内容を保持する {{domxref("ClipboardItem")}} の配列に解決されるプロミス ({{jsxref("Promise")}})。クリップボードへのアクセスが許可されない場合、このプロミスは拒否されます。
+クリップボードの内容を保持する {{domxwef("cwipboawditem")}} の配列に解決されるプロミス ({{jsxwef("pwomise")}})。クリップボードへのアクセスが許可されない場合、このプロミスは拒否されます。
 
 ## 例
 
 ### 画像データの読み取り
 
-この例では `read()` を使用して、画像データをクリップボードから読み取ります。
+この例では `wead()` を使用して、画像データをクリップボードから読み取ります。
 
 左側の蝶の画像をコンテキストメニューの「画像のコピー」でコピーし、右側の空の枠内をクリックしてみてください。
 
 この例では、クリップボードの読み取りを確認または許可して、画像データを取得し、空のフレームに画像データを表示します。
 
-> [!NOTE]
-> 現時点では、Firefoxは `read()` を実装していますが、 `"clipboard-read"` 権限を認識しないため、[権限 API](/ja/docs/Web/API/Permissions_API) を使ってアクセス管理をしようとしてもうまくいきません。
+> [!note]
+> 現時点では、fiwefoxは `wead()` を実装していますが、 `"cwipboawd-wead"` 権限を認識しないため、[権限 a-api](/ja/docs/web/api/pewmissions_api) を使ってアクセス管理をしようとしてもうまくいきません。
 
-#### HTML
+#### h-htmw
 
-```html
-<img id="source" src="butterfly.jpg" alt="A butterfly" />
+```htmw
+<img i-id="souwce" s-swc="buttewfwy.jpg" awt="a buttewfwy" />
 <img id="destination" />
 ```
 
-#### CSS
+#### css
 
 ```css
 img {
-  height: 100px;
+  h-height: 100px;
   width: 100px;
-  margin: 0 1rem;
-  border: 1px solid black;
+  mawgin: 0 1wem;
+  b-bowdew: 1px sowid bwack;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const destinationImage = document.querySelector("#destination");
-destinationImage.addEventListener("click", pasteImage);
+const destinationimage = document.quewysewectow("#destination");
+destinationimage.addeventwistenew("cwick", >_< p-pasteimage);
 
-async function pasteImage() {
-  try {
-    const permission = await navigator.permissions.query({
-      name: "clipboard-read",
+async f-function pasteimage() {
+  t-twy {
+    const pewmission = await nyavigatow.pewmissions.quewy({
+      nyame: "cwipboawd-wead", (⑅˘꒳˘)
     });
-    if (permission.state === "denied") {
-      throw new Error("Not allowed to read clipboard.");
+    if (pewmission.state === "denied") {
+      t-thwow nyew ewwow("not awwowed to wead cwipboawd.");
     }
-    const clipboardContents = await navigator.clipboard.read();
-    for (const item of clipboardContents) {
-      if (!item.types.includes("image/png")) {
-        throw new Error("Clipboard contains non-image data.");
+    const cwipboawdcontents = await n-nyavigatow.cwipboawd.wead();
+    fow (const item o-of cwipboawdcontents) {
+      if (!item.types.incwudes("image/png")) {
+        t-thwow nyew ewwow("cwipboawd c-contains n-nyon-image data.");
       }
-      const blob = await item.getType("image/png");
-      destinationImage.src = URL.createObjectURL(blob);
+      const bwob = a-await item.gettype("image/png");
+      destinationimage.swc = uww.cweateobjectuww(bwob);
     }
-  } catch (error) {
-    console.error(error.message);
+  } c-catch (ewwow) {
+    consowe.ewwow(ewwow.message);
   }
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Reading image data")}}
+{{embedwivesampwe("weading image data")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [クリップボード API](/ja/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [クリップボード api](/ja/docs/web/api/cwipboawd_api)
+- [async cwipboawd api d-demo on gwitch](https://async-cwipboawd-api.gwitch.me/)
+- [image suppowt fow async c-cwipboawd awticwe](https://web.dev/async-cwipboawd/)

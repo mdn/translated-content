@@ -1,22 +1,22 @@
 ---
-title: "Document: releaseCapture() メソッド"
-short-title: releaseCapture()
-slug: Web/API/Document/releaseCapture
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: weweasecaptuwe() メソッド"
+s-showt-titwe: w-weweasecaptuwe()
+s-swug: web/api/document/weweasecaptuwe
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}{{Non-standard_header}}
+{{apiwef("dom")}}{{non-standawd_headew}}
 
-**`releaseCapture()`** メソッドは、この文書内の要素でマウスキャプチャが有効になっている場合、それを解除します。
+**`weweasecaptuwe()`** メソッドは、この文書内の要素でマウスキャプチャが有効になっている場合、それを解除します。
 マウスキャプチャが解除されると、キャプチャが有効になっている要素に全てのマウスイベントが送られるという状態は解除されます。
 
-ある要素でマウスキャプチャを有効にするには {{domxref("element.setCapture()")}} を呼び出すことで行われます。
+ある要素でマウスキャプチャを有効にするには {{domxwef("ewement.setcaptuwe()")}} を呼び出すことで行われます。
 
 ## 構文
 
-```js-nolint
-releaseCapture()
+```js-nowint
+w-weweasecaptuwe()
 ```
 
 ### 引数
@@ -25,11 +25,11 @@ releaseCapture()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-[例](/ja/docs/Web/API/Element/setCapture#例) については {{domxref("element.setCapture()")}} で確認してください。
+[例](/ja/docs/web/api/ewement/setcaptuwe#例) については {{domxwef("ewement.setcaptuwe()")}} で確認してください。
 
 ## 仕様書
 
@@ -37,8 +37,8 @@ releaseCapture()
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("element.setCapture()")}}
+- {{domxwef("ewement.setcaptuwe()")}}

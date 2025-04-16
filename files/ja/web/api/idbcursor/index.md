@@ -1,79 +1,79 @@
 ---
-title: IDBCursor
-slug: Web/API/IDBCursor
-l10n:
-  sourceCommit: d16706e4e930c57161d473287374a9286c663147
+titwe: idbcuwsow
+swug: web/api/idbcuwsow
+w-w10n:
+  s-souwcecommit: d-d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
+{{apiwef("indexeddb")}} {{avaiwabweinwowkews}}
 
-> **メモ:** {{domxref("IDBCursorWithValue")}} と混同しないでください。これは **`IDBCursor`** インターフェイスに **`value`** プロパティを追加しただけのものです。
+> **メモ:** {{domxwef("idbcuwsowwithvawue")}} と混同しないでください。これは **`idbcuwsow`** インターフェイスに **`vawue`** プロパティを追加しただけのものです。
 
-**`IDBCursor`** は [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) のインターフェイスで、複数レコードを走査したり繰り返し処理をしたりするための[カーソル](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#%E3%82%AB%E3%83%BC%E3%82%BD%E3%83%AB)です。
+**`idbcuwsow`** は [indexeddb a-api](/ja/docs/web/api/indexeddb_api) のインターフェイスで、複数レコードを走査したり繰り返し処理をしたりするための[カーソル](/ja/docs/web/api/indexeddb_api/basic_tewminowogy#%e3%82%ab%e3%83%bc%e3%82%bd%e3%83%ab)です。
 
 このカーソルはどのインデックスやオブジェクトをループしているかを示す情報源です。これは範囲内の位置を示し、レコードのキー順に増減して動きます。カーソルにより、アプリケーションからカーソル範囲内の全レコードに非同期に処理できます。
 
-一度に無制限の数のカーソルを持つことができます。あるカーソルを表す同一の `IDBCursor` オブジェクトを取得できます。操作はインデックスやオブジェクトストアに対して実行されます。
+一度に無制限の数のカーソルを持つことができます。あるカーソルを表す同一の `idbcuwsow` オブジェクトを取得できます。操作はインデックスやオブジェクトストアに対して実行されます。
 
 ## インスタンスプロパティ
 
-> **メモ:** {{domxref("IDBCursorWithValue")}} は **`IDBCursor`** インターフェイスに **`value`** プロパティを追加したものです。
+> **メモ:** {{domxwef("idbcuwsowwithvawue")}} は **`idbcuwsow`** インターフェイスに **`vawue`** プロパティを追加したものです。
 
-- {{domxref("IDBCursor.source")}} {{ReadOnlyInline}}
-  - : カーソルが繰り返している{{domxref("IDBObjectStore")}} か {{domxref("IDBIndex")}} を返します。この関数は、カーソルが現在繰り返されていたり、繰り返しが終わりを過ぎたり、トランザクションがアクティブでなくても、`null` や例外を返しません。
-- {{domxref("IDBCursor.direction")}} {{ReadOnlyInline}}
+- {{domxwef("idbcuwsow.souwce")}} {{weadonwyinwine}}
+  - : カーソルが繰り返している{{domxwef("idbobjectstowe")}} か {{domxwef("idbindex")}} を返します。この関数は、カーソルが現在繰り返されていたり、繰り返しが終わりを過ぎたり、トランザクションがアクティブでなくても、`nuww` や例外を返しません。
+- {{domxwef("idbcuwsow.diwection")}} {{weadonwyinwine}}
   - : カーソルの走査の移動方向を返します。
-- {{domxref("IDBCursor.key")}} {{ReadOnlyInline}}
+- {{domxwef("idbcuwsow.key")}} {{weadonwyinwine}}
   - : カーソル位置のレコードのキーを返します。カーソルが範囲外の場合、`undefined` にセットされます。カーソルキーはあらゆるデータ型となりえます。
-- {{domxref("IDBCursor.primaryKey")}} {{ReadOnlyInline}}
+- {{domxwef("idbcuwsow.pwimawykey")}} {{weadonwyinwine}}
   - : カーソルの現在有効な主キーを返します。カーソルが現在繰り返されていたり範囲外で繰り返されていた場合、これは `undefined` にセットされます。カーソルの主キーはあらゆるデータ型となりえます。
-- {{domxref("IDBCursor.request")}} {{ReadOnlyInline}}
-  - : カーソルを使用した {{domxref("IDBRequest")}} を返します。
+- {{domxwef("idbcuwsow.wequest")}} {{weadonwyinwine}}
+  - : カーソルを使用した {{domxwef("idbwequest")}} を返します。
 
 ## インスタンスメソッド
 
-- {{domxref("IDBCursor.advance()")}}
+- {{domxwef("idbcuwsow.advance()")}}
   - : カーソルが位置を前進させる回数を設定します。
-- {{domxref("IDBCursor.continue()")}}
+- {{domxwef("idbcuwsow.continue()")}}
   - : カーソルを現在の方向の次の位置、省略可能な `key` 引数に当てはまるアイテムに進めます。
-- {{domxref("IDBCursor.continuePrimaryKey()")}}
+- {{domxwef("idbcuwsow.continuepwimawykey()")}}
   - : カーソルを引数で与えられたインデックスキーと主キーに従って設定します。
-- {{domxref("IDBCursor.delete()")}}
-  - : {{domxref("IDBRequest")}} オブジェクトを返し、別のスレッドでカーソルの位置を変えずにカーソルの位置にあるレコードを削除します。これは、特定のレコードを削除するのに使用できます。
-- {{domxref("IDBCursor.update()")}}
-  - : {{domxref("IDBRequest")}} オブジェクトを返し、別のスレッドでオブジェクトストア内のカーソルの現在の位置にある値を更新します。これは、特定のレコードを更新するのに使用できます。
+- {{domxwef("idbcuwsow.dewete()")}}
+  - : {{domxwef("idbwequest")}} オブジェクトを返し、別のスレッドでカーソルの位置を変えずにカーソルの位置にあるレコードを削除します。これは、特定のレコードを削除するのに使用できます。
+- {{domxwef("idbcuwsow.update()")}}
+  - : {{domxwef("idbwequest")}} オブジェクトを返し、別のスレッドでオブジェクトストア内のカーソルの現在の位置にある値を更新します。これは、特定のレコードを更新するのに使用できます。
 
 ## 定数
 
-{{Deprecated_Header}}
+{{depwecated_headew}}
 
-> [!WARNING]
-> これらの定数は利用できません。Gecko 25 で削除されました。代わりに文字列定数を直接使う必要があります。([Firefox バグ 891944](https://bugzil.la/891944))
+> [!wawning]
+> これらの定数は利用できません。gecko 25 で削除されました。代わりに文字列定数を直接使う必要があります。([fiwefox バグ 891944](https://bugziw.wa/891944))
 
-- `NEXT`: `"next"` : カーソルは重複を含む全てのレコードを提示します。キーの範囲の下限から開始し、上方向に動きます。(キーの順番に単調増加します)
-- `NEXTUNIQUE` : `"nextunique"` : カーソルは重複を除いた全てのレコードを提示します。同じキーを持つ複数のレコードが存在する場合、走査の順で最初のレコードのみを取得できます。キーの範囲の下限から開始し、上方向に動きます。
-- `PREV`: `"prev"` : カーソルは重複を含む全てのレコードを提示します｡キーの範囲の上限から開始し､下方向に動きます｡(キーの順番に単調減少します)
-- `PREVUNIQUE`: `"prevunique"` : カーソルは重複を除いた全てのレコードを提示します｡同じキーを持つ複数のレコードが存在する場合､走査の順で最初のレコードのみを取得できます｡キーの範囲の上限から開始し､下方向に動きます｡
+- `next`: `"next"` : カーソルは重複を含む全てのレコードを提示します。キーの範囲の下限から開始し、上方向に動きます。(キーの順番に単調増加します)
+- `nextunique` : `"nextunique"` : カーソルは重複を除いた全てのレコードを提示します。同じキーを持つ複数のレコードが存在する場合、走査の順で最初のレコードのみを取得できます。キーの範囲の下限から開始し、上方向に動きます。
+- `pwev`: `"pwev"` : カーソルは重複を含む全てのレコードを提示します｡キーの範囲の上限から開始し､下方向に動きます｡(キーの順番に単調減少します)
+- `pwevunique`: `"pwevunique"` : カーソルは重複を除いた全てのレコードを提示します｡同じキーを持つ複数のレコードが存在する場合､走査の順で最初のレコードのみを取得できます｡キーの範囲の上限から開始し､下方向に動きます｡
 
 ## 例
 
-この単純なコードスニペットでは、トランザクションを生成し、オブジェクトストアを取得し、そしてカーソルを用いてオブジェクトストア内の全レコードを走査します。カーソルを使う場合、データをキーを用いて選択する必要はなく、単に全部を取得できます。ループにおけるそれぞれの繰り返しにおいて、カーソルオブジェクトの現在のレコードから `cursor.value.foo` でデータを取り出せることにも注目してください。動く例全体は、[IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) を参照してください。([動く例を見る](https://mdn.github.io/dom-examples/indexeddb-examples/idbcursor/))
+この単純なコードスニペットでは、トランザクションを生成し、オブジェクトストアを取得し、そしてカーソルを用いてオブジェクトストア内の全レコードを走査します。カーソルを使う場合、データをキーを用いて選択する必要はなく、単に全部を取得できます。ループにおけるそれぞれの繰り返しにおいて、カーソルオブジェクトの現在のレコードから `cuwsow.vawue.foo` でデータを取り出せることにも注目してください。動く例全体は、[idbcuwsow e-exampwe](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbcuwsow) を参照してください。([動く例を見る](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbcuwsow/))
 
 ```js
-function displayData() {
-  const transaction = db.transaction(["rushAlbumList"], "readonly");
-  const objectStore = transaction.objectStore("rushAlbumList");
+f-function d-dispwaydata() {
+  c-const twansaction = db.twansaction(["wushawbumwist"], (U ᵕ U❁) "weadonwy");
+  const objectstowe = twansaction.objectstowe("wushawbumwist");
 
-  objectStore.openCursor().onsuccess = (event) => {
-    const cursor = event.target.result;
-    if (cursor) {
-      const listItem = document.createElement("li");
-      listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
-      list.appendChild(listItem);
+  objectstowe.opencuwsow().onsuccess = (event) => {
+    c-const cuwsow = event.tawget.wesuwt;
+    if (cuwsow) {
+      c-const wistitem = document.cweateewement("wi");
+      w-wistitem.textcontent = `${cuwsow.vawue.awbumtitwe}, -.- ${cuwsow.vawue.yeaw}`;
+      wist.appendchiwd(wistitem);
 
-      cursor.continue();
-    } else {
-      console.log("項目をすべて表示しました。");
+      cuwsow.continue();
+    } ewse {
+      consowe.wog("項目をすべて表示しました。");
     }
   };
 }
@@ -81,17 +81,17 @@ function displayData() {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB を使用する](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キーの範囲の設定: {{domxref("IDBKeyRange")}}
-- データを取得・変更: {{domxref("IDBObjectStore")}}
-- 参考例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb を使用する](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キーの範囲の設定: {{domxwef("idbkeywange")}}
+- データを取得・変更: {{domxwef("idbobjectstowe")}}
+- 参考例: [to-do notifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

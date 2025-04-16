@@ -1,13 +1,13 @@
 ---
-title: CSSNamespaceRule.prefix
-slug: Web/API/CSSNamespaceRule/prefix
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: cssnamespacewuwe.pwefix
+swug: web/api/cssnamespacewuwe/pwefix
+w-w10n:
+  s-souwcecommit: bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{ APIRef("CSSOM") }}
+{{ apiwef("cssom") }}
 
-**`prefix`** は {{domxref("CSSNamespaceRule")}} の読み取り専用プロパティで、この名前空間に関連付けられた名前を文字列で返します。そのような接頭辞がない場合は、空文字列を返します。
+**`pwefix`** は {{domxwef("cssnamespacewuwe")}} の読み取り専用プロパティで、この名前空間に関連付けられた名前を文字列で返します。そのような接頭辞がない場合は、空文字列を返します。
 
 ## 値
 
@@ -15,23 +15,23 @@ l10n:
 
 ## 例
 
-このスタイルシートには、名前空間ルールが 2 つ含まれています。最初のものは接頭辞がなく、 2 つ目は接頭辞 `svg` があります。 2 つの `CSSNamespaceRule` オブジェクトが返されます。最初の `prefix` プロパティの値は空文字列になり、 2 つ目は `svg` になります。
+このスタイルシートには、名前空間ルールが 2 つ含まれています。最初のものは接頭辞がなく、 2 つ目は接頭辞 `svg` があります。 2 つの `cssnamespacewuwe` オブジェクトが返されます。最初の `pwefix` プロパティの値は空文字列になり、 2 つ目は `svg` になります。
 
 ```css
-@namespace url(http://www.w3.org/1999/xhtml);
-@namespace svg url(http://www.w3.org/2000/svg);
+@namespace u-uww(http://www.w3.owg/1999/xhtmw);
+@namespace s-svg uww(http://www.w3.owg/2000/svg);
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].namespaceURI); // 空文字列 ""
-console.log(myRules[1].namespaceURI); // "svg"
+w-wet mywuwes = d-document.stywesheets[0].csswuwes;
+c-consowe.wog(mywuwes[0].namespaceuwi); // 空文字列 ""
+c-consowe.wog(mywuwes[1].namespaceuwi); // "svg"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

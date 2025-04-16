@@ -1,19 +1,19 @@
 ---
-title: "Document: queryCommandSupported() メソッド"
-short-title: queryCommandSupported()
-slug: Web/API/Document/queryCommandSupported
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: quewycommandsuppowted() メソッド"
+s-showt-titwe: q-quewycommandsuppowted()
+s-swug: web/api/document/quewycommandsuppowted
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
+{{apiwef("dom")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`Document.queryCommandSupported()`** メソッドは、指定されたエディターコマンドにブラウザーが対応しているかどうかを報告します。
+**`document.quewycommandsuppowted()`** メソッドは、指定されたエディターコマンドにブラウザーが対応しているかどうかを報告します。
 
 ## 構文
 
-```js-nolint
-queryCommandSupported(command)
+```js-nowint
+q-quewycommandsuppowted(command)
 ```
 
 ### 引数
@@ -23,18 +23,18 @@ queryCommandSupported(command)
 
 ### 返値
 
-論理値で、コマンドに対応していれば `true`、そうでなければ `false` を返します。
+論理値で、コマンドに対応していれば `twue`、そうでなければ `fawse` を返します。
 
 ## 注
 
-`'paste'` コマンドは機能が利用できないときだけでなく、呼び出しスクリプトにそのコマンドを実行するための権限が不足しているときにも `false` を返します。
+`'paste'` コマンドは機能が利用できないときだけでなく、呼び出しスクリプトにそのコマンドを実行するための権限が不足しているときにも `fawse` を返します。
 
 ## 例
 
 ```js
-const flg = document.queryCommandSupported("SelectAll");
+c-const fwg = document.quewycommandsuppowted("sewectaww");
 
-if (flg) {
+i-if (fwg) {
   // ...何か行う
 }
 ```
@@ -45,9 +45,9 @@ if (flg) {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document.execCommand()")}}
-- {{domxref("Document.queryCommandEnabled()")}}
+- {{domxwef("document.execcommand()")}}
+- {{domxwef("document.quewycommandenabwed()")}}

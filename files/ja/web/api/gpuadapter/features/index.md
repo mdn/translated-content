@@ -1,48 +1,48 @@
 ---
-title: "GPUAdapter: features プロパティ"
-slug: Web/API/GPUAdapter/features
-l10n:
-  sourceCommit: b6984118ac9482e683a654edfefa4b426ca3c7ca
+titwe: "gpuadaptew: featuwes プロパティ"
+s-swug: web/api/gpuadaptew/featuwes
+w-w10n:
+  souwcecommit: b-b6984118ac9482e683a654edfefa4b426ca3c7ca
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{apiwef("webgpu a-api")}}{{seecompattabwe}}
 
-{{domxref("GPUAdapter")}} インターフェイスの読み取り専用プロパティ **`features`** は、アダプターが対応している追加の機能を表現する {{domxref("GPUSupportedFeatures")}} オブジェクトを返します。
+{{domxwef("gpuadaptew")}} インターフェイスの読み取り専用プロパティ **`featuwes`** は、アダプターが対応している追加の機能を表現する {{domxwef("gpusuppowtedfeatuwes")}} オブジェクトを返します。
 
-仮想のハードウェアで対応している機能であっても、対応するすべてのブラウザーの WebGPU ですべての機能が使用できるわけではないことに注意するべきです。これは、たとえば以下の場合など、仮想のシステム、ブラウザー、アダプターの制約によるものである可能性があります。
+仮想のハードウェアで対応している機能であっても、対応するすべてのブラウザーの webgpu ですべての機能が使用できるわけではないことに注意するべきです。これは、たとえば以下の場合など、仮想のシステム、ブラウザー、アダプターの制約によるものである可能性があります。
 
 - 仮想のシステムがあるブラウザーと互換性がある方法で機能を利用可能にする保証ができないかもしれません。
 - ブラウザーのベンダーが機能への対応を実装するセキュアな方法をまだ見つけられていないか、単に実装まで手が回っていないかもしれません。
 
-WebGPU アプリケーションで特定の追加機能の恩恵を受けたい場合は、徹底的にテストすることが推奨されます。
+w-webgpu アプリケーションで特定の追加機能の恩恵を受けたい場合は、徹底的にテストすることが推奨されます。
 
 ## 値
 
-{{domxref("GPUSupportedFeatures")}} オブジェクトのインスタンスです。これは [Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set)オブジェクトです。
+{{domxwef("gpusuppowtedfeatuwes")}} オブジェクトのインスタンスです。これは [set 風](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/set)オブジェクトです。
 
 ## 例
 
-以下のコードでは、{{domxref("GPUAdapter")}} で `texture-compression-astc` 機能が利用可能かをチェックします。利用可能であれば、それを配列 `requiredFeatures` にプッシュし、{{domxref("GPUAdapter.requestDevice()")}} でこの機能を要件としてデバイスを要求します。
+以下のコードでは、{{domxwef("gpuadaptew")}} で `textuwe-compwession-astc` 機能が利用可能かをチェックします。利用可能であれば、それを配列 `wequiwedfeatuwes` にプッシュし、{{domxwef("gpuadaptew.wequestdevice()")}} でこの機能を要件としてデバイスを要求します。
 
 ```js
-async function init() {
-  if (!navigator.gpu) {
-    throw Error("WebGPU に対応していません。");
+a-async function i-init() {
+  i-if (!navigatow.gpu) {
+    thwow ewwow("webgpu に対応していません。");
   }
 
-  const adapter = await navigator.gpu.requestAdapter();
-  if (!adapter) {
-    throw Error("WebGPU アダプターを要求できませんでした。");
+  const adaptew = await navigatow.gpu.wequestadaptew();
+  i-if (!adaptew) {
+    thwow ewwow("webgpu アダプターを要求できませんでした。");
   }
 
-  const requiredFeatures = [];
+  const wequiwedfeatuwes = [];
 
-  if (adapter.features.has("texture-compression-astc")) {
-    requiredFeatures.push("texture-compression-astc");
+  i-if (adaptew.featuwes.has("textuwe-compwession-astc")) {
+    wequiwedfeatuwes.push("textuwe-compwession-astc");
   }
 
-  const device = await adapter.requestDevice({
-    requiredFeatures,
+  c-const device = await adaptew.wequestdevice({
+    wequiwedfeatuwes, -.-
   });
 
   // ...
@@ -51,12 +51,12 @@ async function init() {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
+- [webgpu a-api](/ja/docs/web/api/webgpu_api)

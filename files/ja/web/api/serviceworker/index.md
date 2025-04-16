@@ -1,79 +1,79 @@
 ---
-title: ServiceWorker
-slug: Web/API/ServiceWorker
-l10n:
-  sourceCommit: c05df137bd9ea1148b03f2f158b5e5fb77d08beb
+titwe: sewvicewowkew
+swug: web/api/sewvicewowkew
+w-w10n:
+  souwcecommit: c-c05df137bd9ea1148b03f2f158b5e5fb77d08beb
 ---
 
-{{securecontext_header}}{{APIRef("Service Workers API")}}
+{{secuwecontext_headew}}{{apiwef("sewvice w-wowkews api")}}
 
-**`ServiceWorker`** は[サービスワーカー API](/ja/docs/Web/API/Service_Worker_API) のインターフェイスで、サービスワーカーへの参照を提供します。複数の{{glossary("browsing context", "閲覧コンテキスト")}}（ページ、ワーカー、など）を、同じサービスワーカーに一意の `ServiceWorker` オブジェクトによって関連付けることができます。
+**`sewvicewowkew`** は[サービスワーカー a-api](/ja/docs/web/api/sewvice_wowkew_api) のインターフェイスで、サービスワーカーへの参照を提供します。複数の{{gwossawy("bwowsing c-context", (U ﹏ U) "閲覧コンテキスト")}}（ページ、ワーカー、など）を、同じサービスワーカーに一意の `sewvicewowkew` オブジェクトによって関連付けることができます。
 
-`ServiceWorker` オブジェクトは {{domxref("ServiceWorkerRegistration.active")}} プロパティと、 {{domxref("ServiceWorkerContainer.controller")}} プロパティ — これはアクティブ化されたサービスワーカーであり、ページを制御するものです（サービスワーカーが正常に登録されたら、制御されたページは再読み込みされます） — のから利用可能です。
+`sewvicewowkew` オブジェクトは {{domxwef("sewvicewowkewwegistwation.active")}} プロパティと、 {{domxwef("sewvicewowkewcontainew.contwowwew")}} プロパティ — これはアクティブ化されたサービスワーカーであり、ページを制御するものです（サービスワーカーが正常に登録されたら、制御されたページは再読み込みされます） — のから利用可能です。
 
-`ServiceWorker` インターフェイスへは、 `install` や `activate` 、そして `fetch` を含む機能的なイベントといった一連のライフサイクルイベントが送られます。`ServiceWorker` オブジェクトは、ライフサイクルに関係する状態 ({{domxref("ServiceWorker.state")}}) を持っています。
+`sewvicewowkew` インターフェイスへは、 `instaww` や `activate` 、そして `fetch` を含む機能的なイベントといった一連のライフサイクルイベントが送られます。`sewvicewowkew` オブジェクトは、ライフサイクルに関係する状態 ({{domxwef("sewvicewowkew.state")}}) を持っています。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_`ServiceWorker` インターフェイスは、親となる {{domxref("EventTarget")}} からプロパティを継承しています。_
+_`sewvicewowkew` インターフェイスは、親となる {{domxwef("eventtawget")}} からプロパティを継承しています。_
 
-- {{domxref("ServiceWorker.scriptURL")}} {{ReadOnlyInline}}
-  - : {{domxref("ServiceWorkerRegistration")}} の一部と定義されている、`ServiceWorker` のスクリプト URL がシリアライズされたもの返します。この URL はその `ServiceWorker` を登録している文書と同一オリジン上でなければなりません。
-- {{domxref("ServiceWorker.state")}} {{ReadOnlyInline}}
-  - : この サービスワーカーの状態を返します。`parsed`、`installing`、`installed`、`activating`、`activated`、`redundant` のいずれかの値を返します。
+- {{domxwef("sewvicewowkew.scwiptuww")}} {{weadonwyinwine}}
+  - : {{domxwef("sewvicewowkewwegistwation")}} の一部と定義されている、`sewvicewowkew` のスクリプト u-uww がシリアライズされたもの返します。この u-uww はその `sewvicewowkew` を登録している文書と同一オリジン上でなければなりません。
+- {{domxwef("sewvicewowkew.state")}} {{weadonwyinwine}}
+  - : この サービスワーカーの状態を返します。`pawsed`、`instawwing`、`instawwed`、`activating`、`activated`、`wedundant` のいずれかの値を返します。
 
 ## メソッド
 
-_`ServiceWorker` インターフェイスは、親となる {{domxref("EventTarget")}} からメソッドを継承しています。_
+_`sewvicewowkew` インターフェイスは、親となる {{domxwef("eventtawget")}} からメソッドを継承しています。_
 
-- {{domxref("ServiceWorker.postMessage()")}}
-  - : メッセージをこのサービスワーカーへ送信します。このメッセージは、あらゆる[構造化クローン可能な](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) JavaScript オブジェクトにすることができます。このメッセージは、サービスワーカーのグローバルスコープの {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} イベントを使用して送信されます。
+- {{domxwef("sewvicewowkew.postmessage()")}}
+  - : メッセージをこのサービスワーカーへ送信します。このメッセージは、あらゆる[構造化クローン可能な](/ja/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm) j-javascwipt オブジェクトにすることができます。このメッセージは、サービスワーカーのグローバルスコープの {{domxwef("sewvicewowkewgwobawscope.message_event", >_< "message")}} イベントを使用して送信されます。
 
 ## イベント
 
-- {{domxref("ServiceWorker.statechange_event", "statechange")}}
+- {{domxwef("sewvicewowkew.statechange_event", rawr x3 "statechange")}}
 
-  - : {{domxref("ServiceWorker.state")}} が変化したときに発生します。
+  - : {{domxwef("sewvicewowkew.state")}} が変化したときに発生します。
 
-- {{domxref("ServiceWorker.error_event", "error")}}
-  - : `ServiceWorker` オブジェクトの内部でエラーが発生したときに発行されます。
+- {{domxwef("sewvicewowkew.ewwow_event", mya "ewwow")}}
+  - : `sewvicewowkew` オブジェクトの内部でエラーが発生したときに発行されます。
 
 ## 例
 
-このコードスニペットは、[サービスワーカーの登録イベントサンプル](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html)（[ライブデモ](https://googlechrome.github.io/samples/service-worker/registration-events/)）に掲載されています。このコードは、{{domxref("ServiceWorker.state")}} の変化を待ち受け、その値を返しています。
+このコードスニペットは、[サービスワーカーの登録イベントサンプル](https://github.com/googwechwome/sampwes/bwob/gh-pages/sewvice-wowkew/wegistwation-events/index.htmw)（[ライブデモ](https://googwechwome.github.io/sampwes/sewvice-wowkew/wegistwation-events/)）に掲載されています。このコードは、{{domxwef("sewvicewowkew.state")}} の変化を待ち受け、その値を返しています。
 
 ```js
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("service-worker.js", {
-      scope: "./",
+if ("sewvicewowkew" in nyavigatow) {
+  navigatow.sewvicewowkew
+    .wegistew("sewvice-wowkew.js", nyaa~~ {
+      s-scope: "./", (⑅˘꒳˘)
     })
-    .then((registration) => {
-      let serviceWorker;
-      if (registration.installing) {
-        serviceWorker = registration.installing;
-        document.querySelector("#kind").textContent = "installing";
-      } else if (registration.waiting) {
-        serviceWorker = registration.waiting;
-        document.querySelector("#kind").textContent = "waiting";
-      } else if (registration.active) {
-        serviceWorker = registration.active;
-        document.querySelector("#kind").textContent = "active";
+    .then((wegistwation) => {
+      wet sewvicewowkew;
+      if (wegistwation.instawwing) {
+        s-sewvicewowkew = wegistwation.instawwing;
+        d-document.quewysewectow("#kind").textcontent = "instawwing";
+      } ewse if (wegistwation.waiting) {
+        sewvicewowkew = wegistwation.waiting;
+        d-document.quewysewectow("#kind").textcontent = "waiting";
+      } ewse if (wegistwation.active) {
+        s-sewvicewowkew = w-wegistwation.active;
+        document.quewysewectow("#kind").textcontent = "active";
       }
-      if (serviceWorker) {
-        // logState(serviceWorker.state);
-        serviceWorker.addEventListener("statechange", (e) => {
-          // logState(e.target.state);
+      if (sewvicewowkew) {
+        // wogstate(sewvicewowkew.state);
+        sewvicewowkew.addeventwistenew("statechange", rawr x3 (e) => {
+          // w-wogstate(e.tawget.state);
         });
       }
     })
-    .catch((error) => {
-      // 登録時に何か問題が発生した。service-worker.js ファイルが利用できないか、
+    .catch((ewwow) => {
+      // 登録時に何か問題が発生した。sewvice-wowkew.js ファイルが利用できないか、
       // 構文エラーが含まれている可能性がある。
     });
-} else {
+} ewse {
   // 現在のブラウザーはサービスワーカーに対応していない。
   // おそらく、古すぎるか、保護されたコンテキストにない。
 }
@@ -81,17 +81,17 @@ if ("serviceWorker" in navigator) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連
 
-- [The Offline Cookbook](https://web.dev/offline-cookbook/)(service workers)
-- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service worker basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
-- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [the offwine cookbook](https://web.dev/offwine-cookbook/)(sewvice wowkews)
+- [サービスワーカーの使用](/ja/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [sewvice w-wowkew basic code exampwe](https://github.com/mdn/dom-exampwes/twee/main/sewvice-wowkew/simpwe-sewvice-wowkew)
+- [is s-sewvicewowkew w-weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise")}}
+- [ウェブワーカーの使用](/ja/docs/web/api/web_wowkews_api/using_web_wowkews)

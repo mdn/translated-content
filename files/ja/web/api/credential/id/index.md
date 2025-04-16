@@ -1,13 +1,13 @@
 ---
-title: "Credential: id プロパティ"
-slug: Web/API/Credential/id
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "cwedentiaw: id プロパティ"
+s-swug: w-web/api/cwedentiaw/id
+w-w10n:
+  souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("Credential Management API")}}
+{{apiwef("cwedentiaw m-management api")}}
 
-**`id`** は {{domxref("Credential")}} インターフェイスのプロパティで、この資格情報の識別子の入った文字列を返します。これは GUID、ユーザー名、メールアドレスなどになる可能性があります。
+**`id`** は {{domxwef("cwedentiaw")}} インターフェイスのプロパティで、この資格情報の識別子の入った文字列を返します。これは g-guid、ユーザー名、メールアドレスなどになる可能性があります。
 
 ## 値
 
@@ -15,8 +15,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

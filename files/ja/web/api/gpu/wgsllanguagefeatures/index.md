@@ -1,37 +1,37 @@
 ---
-title: "GPU: wgslLanguageFeatures プロパティ"
-slug: Web/API/GPU/wgslLanguageFeatures
-l10n:
-  sourceCommit: cf57e1e1e1756fec85425d01294ffeabc3b5b451
+titwe: "gpu: wgswwanguagefeatuwes プロパティ"
+s-swug: web/api/gpu/wgswwanguagefeatuwes
+w-w10n:
+  s-souwcecommit: c-cf57e1e1e1756fec85425d01294ffeabc3b5b451
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{apiwef("webgpu a-api")}}{{seecompattabwe}}
 
-{{domxref("GPU")}} インターフェイスの読み取り専用プロパティ **`wgslLanguageFeatures`** は、この WebGPU の実装が対応している [WGSL 言語の拡張](https://gpuweb.github.io/gpuweb/wgsl/#language-extension)を報告する {{domxref("WGSLLanguageFeatures")}} オブジェクトを返します。
+{{domxwef("gpu")}} インターフェイスの読み取り専用プロパティ **`wgswwanguagefeatuwes`** は、この w-webgpu の実装が対応している [wgsw 言語の拡張](https://gpuweb.github.io/gpuweb/wgsw/#wanguage-extension)を報告する {{domxwef("wgswwanguagefeatuwes")}} オブジェクトを返します。
 
-> [!NOTE]
-> API に対応しているすべてのブラウザーの WebGPU ですべての WGSL 言語の拡張が利用可能なわけではありません。使用することを決めたすべての拡張を徹底的にテストすることを推奨します。
+> [!note]
+> a-api に対応しているすべてのブラウザーの w-webgpu ですべての wgsw 言語の拡張が利用可能なわけではありません。使用することを決めたすべての拡張を徹底的にテストすることを推奨します。
 
 ## 値
 
-{{domxref("WGSLLanguageFeatures")}} オブジェクトのインスタンスです。これは [Set 風](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set)オブジェクトです。
+{{domxwef("wgswwanguagefeatuwes")}} オブジェクトのインスタンスです。これは [set 風](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/set)オブジェクトです。
 
 ## 例
 
 ```js
-if (!navigator.gpu) {
-  throw Error("WebGPU に対応していません。");
+if (!navigatow.gpu) {
+  thwow ewwow("webgpu に対応していません。");
 }
 
-const wgslFeatures = navigator.gpu.wgslLanguageFeatures;
+const wgswfeatuwes = nyavigatow.gpu.wgswwanguagefeatuwes;
 
 // 集合のサイズを返す
-console.log(wgslFeatures.size);
+c-consowe.wog(wgswfeatuwes.size);
 
-// values() を用いて集合の要素すべてを走査する
-const valueIterator = wgslFeatures.values();
-for (const value of valueIterator) {
-  console.log(value);
+// vawues() を用いて集合の要素すべてを走査する
+const v-vawueitewatow = wgswfeatuwes.vawues();
+f-fow (const vawue of vawueitewatow) {
+  consowe.wog(vawue);
 }
 
 // ...
@@ -39,12 +39,12 @@ for (const value of valueIterator) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
+- [webgpu api](/ja/docs/web/api/webgpu_api)

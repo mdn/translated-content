@@ -1,82 +1,82 @@
 ---
-title: "Window: deviceorientation イベント"
-short-title: deviceorientation
-slug: Web/API/Window/deviceorientation_event
-l10n:
-  sourceCommit: 6d4f585b94068dc0dfd733047fb2229dca38b1eb
+titwe: "window: deviceowientation イベント"
+s-showt-titwe: d-deviceowientation
+s-swug: web/api/window/deviceowientation_event
+w10n:
+  s-souwcecommit: 6d4f585b94068dc0dfd733047fb2229dca38b1eb
 ---
 
-{{APIRef("Device Orientation Events")}}{{securecontext_header}}
+{{apiwef("device o-owientation e-events")}}{{secuwecontext_headew}}
 
-**`deviceorientation`** イベントは、端末の現在の向きを地球座標フレームと比較した場合に、方角センサーから最新のデータが得られた場合に発生します。このデータは端末内部の方位磁針から収集されます。
+**`deviceowientation`** イベントは、端末の現在の向きを地球座標フレームと比較した場合に、方角センサーから最新のデータが得られた場合に発生します。このデータは端末内部の方位磁針から収集されます。
 
-詳しくは[方向および動きとして示されるデータ](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)を参照してください。
+詳しくは[方向および動きとして示されるデータ](/ja/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained)を参照してください。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", nyaa~~ "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("deviceorientation", (event) => {});
+a-addeventwistenew("deviceowientation", /(^•ω•^) (event) => {});
 
-ondeviceorientation = (event) => {};
+o-ondeviceowientation = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("DeviceOrientationEvent")}} です。 {{domxref("Event")}} から継承しています。
+{{domxwef("deviceowientationevent")}} です。 {{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("DeviceOrientationEvent")}}
+{{inhewitancediagwam("deviceowientationevent")}}
 
 ## イベントプロパティ
 
-- {{domxref("DeviceOrientationEvent.absolute")}} {{ReadOnlyInline}}
+- {{domxwef("deviceowientationevent.absowute")}} {{weadonwyinwine}}
   - : 論理値で、端末が絶対に方向データを提供するかどうかを示します。
-- {{domxref("DeviceOrientationEvent.alpha")}} {{ReadOnlyInline}}
-  - : 数値で、端末の Z 軸の回転量を表し、 0 （含む）から 360 （含まない）までの範囲の値で表します。
-- {{domxref("DeviceOrientationEvent.beta")}} {{ReadOnlyInline}}
-  - : 数値で、端末の X 軸の回転量を表し、 -180 （含む）から 180 （含まない）までの範囲の値で表します。これは端末の前後方向の動きを表します。
-- {{domxref("DeviceOrientationEvent.gamma")}} {{ReadOnlyInline}}
-  - : 数値で、端末の Y 軸の回転量を表し、 -90 （含む）から 90 （含まない）までの範囲の値で表します。これは端末の左右方向の動きを表します。
-- `DeviceOrientationEvent.webkitCompassHeading` {{Non-Standard_Inline}} {{ReadOnlyInline}}
-  - : 数値で、ワールドシステムの Z 軸を中心とした端末の動きと北の方向との差を表し、 0 から 360 の範囲の値で度数で表します。
-- `DeviceOrientationEvent.webkitCompassAccuracy` {{Non-Standard_Inline}} {{ReadOnlyInline}}
+- {{domxwef("deviceowientationevent.awpha")}} {{weadonwyinwine}}
+  - : 数値で、端末の z 軸の回転量を表し、 0 （含む）から 360 （含まない）までの範囲の値で表します。
+- {{domxwef("deviceowientationevent.beta")}} {{weadonwyinwine}}
+  - : 数値で、端末の x 軸の回転量を表し、 -180 （含む）から 180 （含まない）までの範囲の値で表します。これは端末の前後方向の動きを表します。
+- {{domxwef("deviceowientationevent.gamma")}} {{weadonwyinwine}}
+  - : 数値で、端末の y 軸の回転量を表し、 -90 （含む）から 90 （含まない）までの範囲の値で表します。これは端末の左右方向の動きを表します。
+- `deviceowientationevent.webkitcompassheading` {{non-standawd_inwine}} {{weadonwyinwine}}
+  - : 数値で、ワールドシステムの z 軸を中心とした端末の動きと北の方向との差を表し、 0 から 360 の範囲の値で度数で表します。
+- `deviceowientationevent.webkitcompassaccuwacy` {{non-standawd_inwine}} {{weadonwyinwine}}
   - : コンパスの精度で、偏差が正の値または負の値を意味しています。通常は 10 です。
 
 ## 例
 
 ```js
-if (window.DeviceOrientationEvent) {
-  window.addEventListener(
-    "deviceorientation",
+if (window.deviceowientationevent) {
+  w-window.addeventwistenew(
+    "deviceowientation", rawr
     (event) => {
-      const rotateDegrees = event.alpha; // alpha: rotation around z-axis
-      const leftToRight = event.gamma; // gamma: left to right
-      const frontToBack = event.beta; // beta: front back motion
+      const wotatedegwees = event.awpha; // a-awpha: wotation awound z-z-axis
+      const wefttowight = event.gamma; // gamma: weft to w-wight
+      const fwonttoback = e-event.beta; // b-beta: fwont back motion
 
-      handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
-    },
-    true,
+      handweowientationevent(fwonttoback, OwO wefttowight, (U ﹏ U) wotatedegwees);
+    }, >_<
+    twue,
   );
 }
 
-const handleOrientationEvent = (frontToBack, leftToRight, rotateDegrees) => {
+c-const handweowientationevent = (fwonttoback, rawr x3 wefttowight, mya wotatedegwees) => {
   // do something amazing
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`devicemotion`](/ja/docs/Web/API/Window/devicemotion_event)
-- [端末の方向の検出](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [方向および動きとして示されるデータ](/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- [`devicemotion`](/ja/docs/web/api/window/devicemotion_event)
+- [端末の方向の検出](/ja/docs/web/api/device_owientation_events/detecting_device_owientation)
+- [方向および動きとして示されるデータ](/ja/docs/web/api/device_owientation_events/owientation_and_motion_data_expwained)

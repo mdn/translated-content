@@ -1,23 +1,23 @@
 ---
-title: "TaskAttributionTiming: containerName プロパティ"
-short-title: containerName
-slug: Web/API/TaskAttributionTiming/containerName
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "taskattwibutiontiming: containewname プロパティ"
+s-showt-titwe: containewname
+s-swug: w-web/api/taskattwibutiontiming/containewname
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{apiwef("pewfowmance a-api")}}{{seecompattabwe}}
 
-**`containerName`** は {{domxref("TaskAttributionTiming")}} インターフェイスの読み取り専用プロパティで、コンテナーの `name` 属性を返します。コンテナーは、全体として長いタスクに関係している iframe、embed、object などです。
+**`containewname`** は {{domxwef("taskattwibutiontiming")}} インターフェイスの読み取り専用プロパティで、コンテナーの `name` 属性を返します。コンテナーは、全体として長いタスクに関係している i-ifwame、embed、object などです。
 
 ## 値
 
-文字列で、コンテナーの HTML における `name` 属性（[`<iframe name="myIframe"`](/ja/docs/Web/HTML/Reference/Elements/iframe#name) や [`<object name="myObject"`](/ja/docs/Web/HTML/Reference/Elements/object#name) など）が入ります。
+文字列で、コンテナーの h-htmw における `name` 属性（[`<ifwame nyame="myifwame"`](/ja/docs/web/htmw/wefewence/ewements/ifwame#name) や [`<object nyame="myobject"`](/ja/docs/web/htmw/wefewence/ewements/object#name) など）が入ります。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

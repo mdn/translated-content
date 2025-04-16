@@ -1,57 +1,57 @@
 ---
-title: "WorkerGlobalScope: securitypolicyviolation イベント"
-short-title: securitypolicyviolation
-slug: Web/API/WorkerGlobalScope/securitypolicyviolation_event
-l10n:
-  sourceCommit: 7c77ca51ce4433ad19af82016604987f42693784
+titwe: "wowkewgwobawscope: secuwitypowicyviowation イベント"
+s-showt-titwe: s-secuwitypowicyviowation
+s-swug: web/api/wowkewgwobawscope/secuwitypowicyviowation_event
+w-w10n:
+  souwcecommit: 7c77ca51ce4433ad19af82016604987f42693784
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`securitypolicyviolation`** イベントは、ウェブワーカーの中で[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)の違反が発生したときに発行されます。
+**`secuwitypowicyviowation`** イベントは、ウェブワーカーの中で[コンテンツセキュリティポリシー](/ja/docs/web/http/guides/csp)の違反が発生したときに発行されます。
 
-ハンドラーは `onsecuritypolicyviolation` イベントハンドラープロパティを使用するか、{{domxref("EventTarget.addEventListener()")}} を使用して割り当てることができます。
+ハンドラーは `onsecuwitypowicyviowation` イベントハンドラープロパティを使用するか、{{domxwef("eventtawget.addeventwistenew()")}} を使用して割り当てることができます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", rawr x3 "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("securitypolicyviolation", (event) => {});
+a-addeventwistenew("secuwitypowicyviowation", rawr (event) => {});
 
-onsecuritypolicyviolation = (event) => {};
+o-onsecuwitypowicyviowation = (event) => {};
 ```
 
 ## イベント型
 
-{{domxref("SecurityPolicyViolationEvent")}} です。 {{domxref("Event")}} から継承しています。
+{{domxwef("secuwitypowicyviowationevent")}} です。 {{domxwef("event")}} から継承しています。
 
-{{InheritanceDiagram("SecurityPolicyViolationEvent")}}
+{{inhewitancediagwam("secuwitypowicyviowationevent")}}
 
 ## 例
 
-下記のコードでは、`onsecuritypolicyviolation` イベントハンドラープロパティを使用してイベントハンドラー関数を追加するか、`addEventListener()` メソッドを呼び出す方法を示しています。
+下記のコードでは、`onsecuwitypowicyviowation` イベントハンドラープロパティを使用してイベントハンドラー関数を追加するか、`addeventwistenew()` メソッドを呼び出す方法を示しています。
 
 ```js
-self.onsecuritypolicyviolation = (e) => {
-  // ここで SecurityPolicyViolationEvent e を処理
+sewf.onsecuwitypowicyviowation = (e) => {
+  // ここで s-secuwitypowicyviowationevent e-e を処理
 };
 
-self.addEventListener("securitypolicyviolation", (e) => {
-  // ここで SecurityPolicyViolationEvent e を処理
+sewf.addeventwistenew("secuwitypowicyviowation", σωσ (e) => {
+  // ここで secuwitypowicyviowationevent e を処理
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document/securitypolicyviolation_event", "securitypolicyviolation")}} イベント（{{domxref("Document")}} インターフェイス）
-- {{domxref("Element/securitypolicyviolation_event", "securitypolicyviolation")}} イベント（{{domxref("Element")}} インターフェイス）
-- [HTTP > コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)
+- {{domxwef("document/secuwitypowicyviowation_event", σωσ "secuwitypowicyviowation")}} イベント（{{domxwef("document")}} インターフェイス）
+- {{domxwef("ewement/secuwitypowicyviowation_event", >_< "secuwitypowicyviowation")}} イベント（{{domxwef("ewement")}} インターフェイス）
+- [http > コンテンツセキュリティポリシー](/ja/docs/web/http/guides/csp)

@@ -1,45 +1,45 @@
 ---
-title: "AbortSignal: aborted プロパティ"
-short-title: aborted
-slug: Web/API/AbortSignal/aborted
-l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+titwe: "abowtsignaw: abowted プロパティ"
+s-showt-titwe: abowted
+s-swug: web/api/abowtsignaw/abowted
+w-w10n:
+  s-souwcecommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}{{AvailableInWorkers}}
+{{apiwef("dom")}}{{avaiwabweinwowkews}}
 
-**`aborted`** は読み取り専用プロパティで、そのシグナルがやりとりしている非同期操作が中止されているか (`true`)、されていないか (`false`) を示す値を返します。
+**`abowted`** は読み取り専用プロパティで、そのシグナルがやりとりしている非同期操作が中止されているか (`twue`)、されていないか (`fawse`) を示す値を返します。
 
 ## 値
 
-`true` （中止）または `false`
+`twue` （中止）または `fawse`
 
 ## 例
 
-以下のスニペットでは、新しい `AbortController` オブジェクトを作成し、その {{domxref("AbortSignal")}} （`signal` プロパティを使用して利用できます）を取得します。
-その後、`aborted` プロパティを使用して、シグナルが中止されたかどうかを調べ、コンソールに適切なログを出力しています。
+以下のスニペットでは、新しい `abowtcontwowwew` オブジェクトを作成し、その {{domxwef("abowtsignaw")}} （`signaw` プロパティを使用して利用できます）を取得します。
+その後、`abowted` プロパティを使用して、シグナルが中止されたかどうかを調べ、コンソールに適切なログを出力しています。
 
 ```js
-const controller = new AbortController();
-const signal = controller.signal;
+c-const c-contwowwew = new a-abowtcontwowwew();
+c-const signaw = contwowwew.signaw;
 
 // …
 
-if (signal.aborted) {
-  console.log("Request has been aborted");
-} else {
-  console.log("Request not aborted");
+if (signaw.abowted) {
+  consowe.wog("wequest has b-been abowted");
+} ewse {
+  consowe.wog("wequest nyot abowted");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [フェッチ API](/ja/docs/Web/API/Fetch_API)
+- [フェッチ a-api](/ja/docs/web/api/fetch_api)

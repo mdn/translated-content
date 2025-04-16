@@ -1,27 +1,27 @@
 ---
-title: "HTMLIFrameElement: srcdoc プロパティ"
-short-title: srcdoc
-slug: Web/API/HTMLIFrameElement/srcdoc
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwifwameewement: swcdoc プロパティ"
+s-showt-titwe: s-swcdoc
+swug: w-web/api/htmwifwameewement/swcdoc
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef('HTMLIFrameElement')}}
+{{apiwef('htmwifwameewement')}}
 
-**`srcdoc`** は {{domxref("HTMLIFrameElement")}} インターフェイスのプロパティで、このページの内容を指定します。
+**`swcdoc`** は {{domxwef("htmwifwameewement")}} インターフェイスのプロパティで、このページの内容を指定します。
 
 ## 例
 
 ```js
-const iframe = document.createElement("iframe");
-iframe.srcdoc = `<!DOCTYPE html><p>Hello World!</p>`;
-document.body.appendChild(iframe);
+c-const ifwame = d-document.cweateewement("ifwame");
+i-ifwame.swcdoc = `<!doctype htmw><p>hewwo wowwd!</p>`;
+document.body.appendchiwd(ifwame);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

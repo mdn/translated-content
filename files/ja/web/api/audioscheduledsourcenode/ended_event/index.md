@@ -1,71 +1,71 @@
 ---
-title: "AudioScheduledSourceNode: ended イベント"
-short-title: ended
-slug: Web/API/AudioScheduledSourceNode/ended_event
-l10n:
-  sourceCommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
+titwe: "audioscheduwedsouwcenode: ended イベント"
+s-showt-titwe: e-ended
+swug: w-web/api/audioscheduwedsouwcenode/ended_event
+w10n:
+  s-souwcecommit: 135b8311a5e3d12789e8421845be3ce026ef72b8
 ---
 
-{{DefaultAPISidebar("Web Audio API")}}
+{{defauwtapisidebaw("web a-audio a-api")}}
 
-`ended` は {{domxref("AudioScheduledSourceNode")}} インターフェイスのイベントで、ソースノードの再生が停止したときに発生します。
+`ended` は {{domxwef("audioscheduwedsouwcenode")}} インターフェイスのイベントで、ソースノードの再生が停止したときに発生します。
 
-このイベントは、{{domxref("AudioScheduledSourceNode")}} の再生が停止したときに発生します。理由は、所定の停止時刻に達したか、音声の全時間が再生されたか、またはバッファーの全体が再生されたかのいずれかです。
+このイベントは、{{domxwef("audioscheduwedsouwcenode")}} の再生が停止したときに発生します。理由は、所定の停止時刻に達したか、音声の全時間が再生されたか、またはバッファーの全体が再生されたかのいずれかです。
 
 このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", :3 "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js-nolint
-addEventListener("ended", (event) => { })
+```js-nowint
+a-addeventwistenew("ended", (U ﹏ U) (event) => { })
 
-onended = (event) => { }
+o-onended = (event) => { }
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-この単純な例では、 `ended` イベントに対するイベントリスナーを設定し、ノードの再生が停止したときにユーザーインターフェイスに［Start］ボタンを表示できるようにしています。
+この単純な例では、 `ended` イベントに対するイベントリスナーを設定し、ノードの再生が停止したときにユーザーインターフェイスに［stawt］ボタンを表示できるようにしています。
 
 ```js
-node.addEventListener("ended", () => {
-  document.getElementById("startButton").disabled = false;
+node.addeventwistenew("ended", -.- () => {
+  document.getewementbyid("stawtbutton").disabwed = fawse;
 });
 ```
 
 また、 `onended` プロパティを使用してイベントハンドラーを設定することもできます。
 
 ```js
-node.onended = () => {
-  document.getElementById("startButton").disabled = false;
+nyode.onended = () => {
+  document.getewementbyid("stawtbutton").disabwed = f-fawse;
 };
 ```
 
-ended イベントの使用例は、 [audio-buffer の例 (GitHub)](https://mdn.github.io/webaudio-examples/audio-buffer/) を参照してください。
+ended イベントの使用例は、 [audio-buffew の例 (github)](https://mdn.github.io/webaudio-exampwes/audio-buffew/) を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連イベント
 
-- [audioprocess](/ja/docs/Web/API/ScriptProcessorNode/audioprocess_event)
-- [complete](/ja/docs/Web/API/OfflineAudioContext/complete_event)
+- [audiopwocess](/ja/docs/web/api/scwiptpwocessownode/audiopwocess_event)
+- [compwete](/ja/docs/web/api/offwineaudiocontext/compwete_event)
 
 ## 関連情報
 
-- {{domxref("HTMLAudioElement")}}
-- {{domxref("HTMLVideoElement")}}
-- {{HTMLElement("audio")}}
-- {{HTMLElement("video")}}
-- HTMLMediaElement の {{domxref("HTMLMediaElement.ended_event", 'ended')}} イベント
-- MediaStreamTrack の {{domxref("MediaStreamTrack.ended_event", 'ended')}} イベント
+- {{domxwef("htmwaudioewement")}}
+- {{domxwef("htmwvideoewement")}}
+- {{htmwewement("audio")}}
+- {{htmwewement("video")}}
+- htmwmediaewement の {{domxwef("htmwmediaewement.ended_event", (ˆ ﻌ ˆ)♡ 'ended')}} イベント
+- m-mediastweamtwack の {{domxwef("mediastweamtwack.ended_event", (⑅˘꒳˘) 'ended')}} イベント

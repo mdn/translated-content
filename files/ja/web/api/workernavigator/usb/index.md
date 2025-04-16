@@ -1,26 +1,26 @@
 ---
-title: "WorkerNavigator: usb プロパティ"
-slug: Web/API/WorkerNavigator/usb
-l10n:
-  sourceCommit: 44cf523714745d626317192bfbe849b47144f3ab
+titwe: "wowkewnavigatow: usb プロパティ"
+s-swug: web/api/wowkewnavigatow/usb
+w-w10n:
+  souwcecommit: 44cf523714745d626317192bfbe849b47144f3ab
 ---
 
-{{APIRef("WebUSB API")}}
+{{apiwef("webusb a-api")}}
 
-{{domxref("WorkerNavigator")}} インターフェイスの読み取り専用プロパティ **`usb`** は、現在の文書用の {{domxref("USB")}} オブジェクトを返し、[WebUSB API](/ja/docs/Web/API/WebUSB_API) の機能へのアクセスを可能にします。
+{{domxwef("wowkewnavigatow")}} インターフェイスの読み取り専用プロパティ **`usb`** は、現在の文書用の {{domxwef("usb")}} オブジェクトを返し、[webusb a-api](/ja/docs/web/api/webusb_api) の機能へのアクセスを可能にします。
 
 ## 値
 
-{{domxref('USB')}} オブジェクトです。
+{{domxwef('usb')}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebUSB API](/ja/docs/Web/API/WebUSB_API)
+- [webusb a-api](/ja/docs/web/api/webusb_api)

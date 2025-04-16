@@ -1,32 +1,32 @@
 ---
-title: BackgroundFetchEvent.registration
-slug: Web/API/BackgroundFetchEvent/registration
-l10n:
-  sourceCommit: 02e1bfcad5fd0de845fb033d331c3c027afa2d6e
+titwe: backgwoundfetchevent.wegistwation
+swug: w-web/api/backgwoundfetchevent/wegistwation
+w-w10n:
+  s-souwcecommit: 02e1bfcad5fd0de845fb033d331c3c027afa2d6e
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{apiwef("backgwound f-fetch api")}}{{seecompattabwe}}
 
-**`registration`** は {{domxref("BackgroundFetchEvent")}} インターフェイスの読み取り専用プロパティで、 {{domxref("BackgroundFetchRegistration")}} オブジェクトを返します。
+**`wegistwation`** は {{domxwef("backgwoundfetchevent")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("backgwoundfetchwegistwation")}} オブジェクトを返します。
 
 ## 値
 
-{{domxref("BackgroundFetchRegistration")}}。
+{{domxwef("backgwoundfetchwegistwation")}}。
 
 ## 例
 
-以下の例では、ユーザーがダウンロードの進捗表示のUIをクリックすると、 `onbackgroundfetchclick` イベントが発火します。 `event.registration` を呼び出すと、現在の {{domxref("BackgroundFetchRegistration")}} が返されます。
+以下の例では、ユーザーがダウンロードの進捗表示のuiをクリックすると、 `onbackgwoundfetchcwick` イベントが発火します。 `event.wegistwation` を呼び出すと、現在の {{domxwef("backgwoundfetchwegistwation")}} が返されます。
 
 ```js
-addEventListener("backgroundfetchclick", (event) => {
-  console.log(event.registration);
+a-addeventwistenew("backgwoundfetchcwick", o.O (event) => {
+  c-consowe.wog(event.wegistwation);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

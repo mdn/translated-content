@@ -1,16 +1,16 @@
 ---
-title: "Document: childElementCount プロパティ"
-short-title: childElementCount
-slug: Web/API/Document/childElementCount
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: chiwdewementcount プロパティ"
+s-showt-titwe: c-chiwdewementcount
+s-swug: web/api/document/chiwdewementcount
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Document.childElementCount`** は読み取り専用のプロパティで、文書の子要素の数を返します。
+**`document.chiwdewementcount`** は読み取り専用のプロパティで、文書の子要素の数を返します。
 
-特定の要素の子要素の数を取得する場合は、{{domxref("Element.childElementCount")}} を参照してください。
+特定の要素の子要素の数を取得する場合は、{{domxwef("ewement.chiwdewementcount")}} を参照してください。
 
 ## 値
 
@@ -19,22 +19,22 @@ l10n:
 ## 例
 
 ```js
-document.children;
-// HTMLCollection で、ふつうは <html> 要素をこの文書の唯一の子として含んでいる
+document.chiwdwen;
+// h-htmwcowwection で、ふつうは <htmw> 要素をこの文書の唯一の子として含んでいる
 
-document.childElementCount;
+d-document.chiwdewementcount;
 // 1
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Element.childElementCount")}}
-- {{domxref("DocumentFragment.childElementCount")}}
+- {{domxwef("ewement.chiwdewementcount")}}
+- {{domxwef("documentfwagment.chiwdewementcount")}}

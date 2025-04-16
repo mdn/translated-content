@@ -1,14 +1,14 @@
 ---
-title: "Document: dir プロパティ"
-short-title: dir
-slug: Web/API/Document/dir
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: diw プロパティ"
+s-showt-titwe: d-diw
+swug: w-web/api/document/diw
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`Document.dir`** プロパティは文字列で、文書のテキストの書字方向が、左書き（既定）か右書きかを表します。利用可能な値は `'rtl'`（右書き、右から左）または `'ltr'`（左書き、左から右）です。
+**`document.diw`** プロパティは文字列で、文書のテキストの書字方向が、左書き（既定）か右書きかを表します。利用可能な値は `'wtw'`（右書き、右から左）または `'wtw'`（左書き、左から右）です。
 
 ## 値
 
@@ -16,12 +16,12 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) グローバル属性
+- [`diw`](/ja/docs/web/htmw/wefewence/gwobaw_attwibutes/diw) グローバル属性

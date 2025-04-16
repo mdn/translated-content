@@ -1,14 +1,14 @@
 ---
-title: "HTMLObjectElement: useMap プロパティ"
-short-title: useMap
-slug: Web/API/HTMLObjectElement/useMap
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwobjectewement: usemap プロパティ"
+s-showt-titwe: u-usemap
+swug: w-web/api/htmwobjectewement/usemap
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`useMap`** は {{domxref("HTMLObjectElement")}} インターフェイスのプロパティで、 HTML の [`usemap`](/ja/docs/Web/HTML/Reference/Elements/object#usemap) 属性を反映する文字列を返します。使用する{{HTMLElement("map")}} 要素を指定します。
+**`usemap`** は {{domxwef("htmwobjectewement")}} インターフェイスのプロパティで、 h-htmw の [`usemap`](/ja/docs/web/htmw/wefewence/ewements/object#usemap) 属性を反映する文字列を返します。使用する{{htmwewement("map")}} 要素を指定します。
 
 ## 値
 
@@ -16,8 +16,8 @@ l10n:
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

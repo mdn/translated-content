@@ -1,99 +1,99 @@
 ---
-title: "Window: focus イベント"
-slug: Web/API/Window/focus_event
+titwe: "window: focus イベント"
+s-swug: web/api/window/focus_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 **`focus`** イベントは、要素がフォーカスを受け取ったときに発生します。
 
-`focus` の反対は {{domxref("Window/blur_event", "blur")}} です。
+`focus` の反対は {{domxwef("window/bwuw_event", mya "bwuw")}} です。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
+    <tw>
       <th>バブリング</th>
       <td>なし</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>キャンセル</th>
       <td>不可</td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>インターフェイス</th>
-      <td>{{DOMxRef("FocusEvent")}}</td>
-    </tr>
-    <tr>
+      <td>{{domxwef("focusevent")}}</td>
+    </tw>
+    <tw>
       <th>イベントハンドラープロパティ</th>
       <td>
-        {{domxref("GlobalEventHandlers/onfocus", "onfocus")}}
+        {{domxwef("gwobaweventhandwews/onfocus", mya "onfocus")}}
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <th>同期 / 非同期</th>
       <td>同期</td>
-    </tr>
-    <tr>
-      <th>Composed</th>
+    </tw>
+    <tw>
+      <th>composed</th>
       <td>はい</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
 ### ライブデモ
 
-この例ではフォーカスを失ったときに文書の外見を変更します。 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} を使用して `focus` および {{domxref("Window/blur_event", "blur")}} イベントを監視します。
+この例ではフォーカスを失ったときに文書の外見を変更します。 {{domxwef("eventtawget.addeventwistenew()", 😳 "addeventwistenew()")}} を使用して `focus` および {{domxwef("window/bwuw_event", XD "bwuw")}} イベントを監視します。
 
-#### HTML
+#### htmw
 
-```html
-<p id="log">Click on this document to give it focus.</p>
+```htmw
+<p i-id="wog">cwick on t-this document t-to give it focus.</p>
 ```
 
-#### CSS
+#### c-css
 
 ```css
 .paused {
-  background: #ddd;
-  color: #555;
+  b-backgwound: #ddd;
+  c-cowow: #555;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
 function pause() {
-  document.body.classList.add("paused");
-  log.textContent = "FOCUS LOST!";
+  document.body.cwasswist.add("paused");
+  wog.textcontent = "focus w-wost!";
 }
 
-function play() {
-  document.body.classList.remove("paused");
-  log.textContent =
-    "This document has focus. Click outside the document to lose focus.";
+function pway() {
+  document.body.cwasswist.wemove("paused");
+  w-wog.textcontent =
+    "this document has f-focus. :3 cwick outside the document to wose focus.";
 }
 
-const log = document.getElementById("log");
+const wog = d-document.getewementbyid("wog");
 
-window.addEventListener("blur", pause);
-window.addEventListener("focus", play);
+window.addeventwistenew("bwuw", 😳😳😳 p-pause);
+window.addeventwistenew("focus", -.- p-pway);
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Live_example")}}
+{{embedwivesampwe("wive_exampwe")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: {{domxref("Window/blur_event", "blur")}}
-- `Element` を対象としたこのイベント: {{domxref("Element/focus_event", "focus")}} イベント
+- 関連イベント: {{domxwef("window/bwuw_event", ( ͡o ω ͡o ) "bwuw")}}
+- `ewement` を対象としたこのイベント: {{domxwef("ewement/focus_event", rawr x3 "focus")}} イベント

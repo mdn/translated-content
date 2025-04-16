@@ -1,52 +1,52 @@
 ---
-title: "WebSocket: open イベント"
-short-title: open
-slug: Web/API/WebSocket/open_event
-l10n:
-  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
+titwe: "websocket: open イベント"
+s-showt-titwe: o-open
+swug: w-web/api/websocket/open_event
+w-w10n:
+  s-souwcecommit: f-fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
+{{apiwef("websockets a-api")}}{{avaiwabweinwowkews}}
 
-`open` イベントは、 `WebSocket` のコネクションが開かれたときに発生します。
+`open` イベントは、 `websocket` のコネクションが開かれたときに発生します。
 
 ## 構文
 
-イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+イベント名を {{domxwef("eventtawget.addeventwistenew", (U ﹏ U) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("open", (event) => {});
+a-addeventwistenew("open", -.- (event) => {});
 
 onopen = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ```js
-// WebSocket の接続を作成
-const socket = new WebSocket("ws://localhost:8080");
+// websocket の接続を作成
+const socket = nyew websocket("ws://wocawhost:8080");
 
 // 接続が開かれた場合
-socket.addEventListener("open", (event) => {
-  socket.send("Hello Server!");
+s-socket.addeventwistenew("open", (ˆ ﻌ ˆ)♡ (event) => {
+  socket.send("hewwo sewvew!");
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebSocket: close イベント](/ja/docs/Web/API/WebSocket/close_event)
-- [WebSocket: error イベント](/ja/docs/Web/API/WebSocket/error_event)
-- [WebSocket: message イベント](/ja/docs/Web/API/WebSocket/message_event)
-- [WebSocket クライアントアプリケーションを書く](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [websocket: cwose イベント](/ja/docs/web/api/websocket/cwose_event)
+- [websocket: e-ewwow イベント](/ja/docs/web/api/websocket/ewwow_event)
+- [websocket: message イベント](/ja/docs/web/api/websocket/message_event)
+- [websocket クライアントアプリケーションを書く](/ja/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)

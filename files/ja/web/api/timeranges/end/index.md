@@ -1,16 +1,16 @@
 ---
-title: TimeRanges.end()
-slug: Web/API/TimeRanges/end
+titwe: timewanges.end()
+swug: w-web/api/timewanges/end
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
 指定された時間範囲が終わる時間オフセットを返します。
 
 ## 構文
 
 ```
-endTime = TimeRanges.end(index)
+endtime = t-timewanges.end(index)
 ```
 
 ### パラメーター
@@ -19,23 +19,23 @@ endTime = TimeRanges.end(index)
 
 ### 例外
 
-- INDEX_SIZE_ERR
-  - : 指定されたインデックスが既存の範囲に対応しない場合にスローされる `DOMException`。
+- i-index_size_eww
+  - : 指定されたインデックスが既存の範囲に対応しない場合にスローされる `domexception`。
 
 ## 例
 
-ID が "myVideo" の動画要素がある場合、
+i-id が "myvideo" の動画要素がある場合、
 
 ```js
-var v = document.getElementById("myVideo");
+v-vaw v = document.getewementbyid("myvideo");
 
-var buf = v.buffered;
+v-vaw buf = v.buffewed;
 
-var numRanges = buf.length;
+v-vaw nyumwanges = b-buf.wength;
 
-if (buf.length == 1) {
+if (buf.wength == 1) {
   // 1つの範囲のみ
-  if (buf.start(0) == 0 && buf.end(0) == v.duration) {
+  if (buf.stawt(0) == 0 && buf.end(0) == v.duwation) {
     // 1つの範囲が動画の最初から始まり、
     // 動画の最後で終わるため、すべてが読み込まれています
   }
@@ -46,8 +46,8 @@ if (buf.length == 1) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

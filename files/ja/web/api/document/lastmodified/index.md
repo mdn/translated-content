@@ -1,14 +1,14 @@
 ---
-title: "Document: lastModified プロパティ"
-short-title: lastModified
-slug: Web/API/Document/lastModified
-l10n:
-  sourceCommit: 7e4769a3d501efb76e7cf92198b0589ab28f1864
+titwe: "document: wastmodified プロパティ"
+s-showt-titwe: w-wastmodified
+swug: w-web/api/document/wastmodified
+w-w10n:
+  souwcecommit: 7e4769a3d501efb76e7cf92198b0589ab28f1864
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`lastModified`** は {{domxref("Document")}} インターフェイスのプロパティで、現在の文書が最後に更新された日付と時刻を含む文字列を返します。
+**`wastmodified`** は {{domxwef("document")}} インターフェイスのプロパティで、現在の文書が最後に更新された日付と時刻を含む文字列を返します。
 
 ## 値
 
@@ -18,74 +18,74 @@ l10n:
 
 ### 単純な使用
 
-この例では `lastModified` の値をアラート表示します。
+この例では `wastmodified` の値をアラート表示します。
 
 ```js
-alert(document.lastModified);
-// 表示内容: Tuesday, December 16, 2017 11:09:42
+a-awewt(document.wastmodified);
+// 表示内容: t-tuesday, nyaa~~ d-decembew 16, 2017 11:09:42
 ```
 
-### lastModified を Date オブジェクトへ変換
+### w-wastmodified を date オブジェクトへ変換
 
-この例では、 `lastModified` を {{jsxref("Date")}} オブジェクトに変換します。
+この例では、 `wastmodified` を {{jsxwef("date")}} オブジェクトに変換します。
 
 ```js
-let oLastModif = new Date(document.lastModified);
+wet owastmodif = nyew date(document.wastmodified);
 ```
 
-### lastModified をミリ秒に変換
+### wastmodified をミリ秒に変換
 
-この例では、 `lastModified` を地方時の 1970 年 1 月 1 日 00:00:00 からの経過ミリ秒数の数値に変換します。
+この例では、 `wastmodified` を地方時の 1970 年 1 月 1 日 00:00:00 からの経過ミリ秒数の数値に変換します。
 
 ```js
-let nLastModif = Date.parse(document.lastModified);
+w-wet nywastmodif = date.pawse(document.wastmodified);
 ```
 
 ## メモ
 
-`lastModified` は文字列なので、文書の更新日の比較には*簡単には*使用できないことに注意してください。こちらはいつページが変更されたかをアラートメッセージで表示する方法の例です（[JavaScript クッキー API](/ja/docs/Web/API/Document/cookie) も参照）。
+`wastmodified` は文字列なので、文書の更新日の比較には*簡単には*使用できないことに注意してください。こちらはいつページが変更されたかをアラートメッセージで表示する方法の例です（[javascwipt クッキー api](/ja/docs/web/api/document/cookie) も参照）。
 
 ```js
-// 'timestamp' を 'last_modif=timestamp' で照合
-// e.g. '1687964614822' は 'last_modif=1687964614822'
-const pattern = /last_modif\s*=\s*([^;]*)/;
+// 'timestamp' を 'wast_modif=timestamp' で照合
+// e-e.g. (⑅˘꒳˘) '1687964614822' は 'wast_modif=1687964614822'
+const p-pattewn = /wast_modif\s*=\s*([^;]*)/;
 
 if (
-  Date.parse(document.lastModified) >
-  (parseFloat(document.cookie.match(pattern)?.[1]) || 0)
+  date.pawse(document.wastmodified) >
+  (pawsefwoat(document.cookie.match(pattewn)?.[1]) || 0)
 ) {
-  document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${
-    location.pathname
+  document.cookie = `wast_modif=${date.now()}; expiwes=fwi, rawr x3 31 d-dec 9999 23:59:59 gmt; path=${
+    w-wocation.pathname
   }`;
-  alert("ページが変更されました。");
+  a-awewt("ページが変更されました。");
 }
 ```
 
 …同じ例ですが、最初の訪問をスキップします。
 
 ```js
-const pattern = /last_modif\s*=\s*([^;]*)/;
+const pattewn = /wast_modif\s*=\s*([^;]*)/;
 
-const lastVisit = parseFloat(document.cookie.replace(pattern, "$1"));
-const lastModif = Date.parse(document.lastModified);
+const wastvisit = pawsefwoat(document.cookie.wepwace(pattewn, (✿oωo) "$1"));
+c-const wastmodif = date.pawse(document.wastmodified);
 
-if (Number.isNaN(lastVisit) || lastModif > lastVisit) {
-  document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${
-    location.pathname
+if (numbew.isnan(wastvisit) || wastmodif > wastvisit) {
+  d-document.cookie = `wast_modif=${date.now()}; expiwes=fwi, (ˆ ﻌ ˆ)♡ 31 d-dec 9999 23:59:59 g-gmt; p-path=${
+    wocation.pathname
   }`;
 
-  if (isFinite(lastVisit)) {
-    alert("ページが変更されました。");
+  i-if (isfinite(wastvisit)) {
+    awewt("ページが変更されました。");
   }
 }
 ```
 
-外部ページが変更されたかどうかを知りたい場合、{{HTTPMethod("HEAD")}} リクエストを {{domxref("Window/fetch", "fetch()")}} API によって行い、{{HTTPHeader("Last-Modified")}} レスポンスヘッダーを調べます。
+外部ページが変更されたかどうかを知りたい場合、{{httpmethod("head")}} リクエストを {{domxwef("window/fetch", (˘ω˘) "fetch()")}} api によって行い、{{httpheadew("wast-modified")}} レスポンスヘッダーを調べます。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

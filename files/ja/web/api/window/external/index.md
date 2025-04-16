@@ -1,47 +1,47 @@
 ---
-title: "Window: external プロパティ"
-slug: Web/API/Window/external
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "window: extewnaw プロパティ"
+s-swug: w-web/api/window/extewnaw
+w-w10n:
+  s-souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}} {{Deprecated_Header}}
+{{apiwef}} {{depwecated_headew}}
 
-`external` は {{domxref("Window")}} API のプロパティで、`External` インターフェイスのインスタンスを返します。このインターフェイスは外部の検索プロバイダーをブラウザーに追加する関連の関数を格納するように意図されていました。しかし、これは現在非推奨のものであり、含まれるメソッドは仕様通り何もしないダミー関数になっています。
+`extewnaw` は {{domxwef("window")}} a-api のプロパティで、`extewnaw` インターフェイスのインスタンスを返します。このインターフェイスは外部の検索プロバイダーをブラウザーに追加する関連の関数を格納するように意図されていました。しかし、これは現在非推奨のものであり、含まれるメソッドは仕様通り何もしないダミー関数になっています。
 
 ## インスタンスメソッド
 
-`External` オブジェクトで、以下のメソッドがあります。
+`extewnaw` オブジェクトで、以下のメソッドがあります。
 
-<table class="fullwidth-table">
+<tabwe c-cwass="fuwwwidth-tabwe">
   <tbody>
-    <tr>
+    <tw>
       <th>メソッド</th>
       <th>説明</th>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <code>AddSearchProvider(<em>descriptionURL)</em></code>
+        <code>addseawchpwovidew(<em>descwiptionuww)</em></code>
       </td>
       <td>
         ダミー関数。何もしません。
-        <a href="/ja/docs/Web/XML/Guides/OpenSearch#autodiscovery_of_search_plugins"
+        <a h-hwef="/ja/docs/web/xmw/guides/openseawch#autodiscovewy_of_seawch_pwugins"
           >検索プラグインの自動発見</a
         >を参照してください。
       </td>
-    </tr>
-    <tr>
-      <td><code>IsSearchProviderInstalled()</code></td>
+    </tw>
+    <tw>
+      <td><code>isseawchpwovidewinstawwed()</code></td>
       <td>ダミー関数。何もしません。</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 仕様書
 
-Mozilla 固有です。どの標準にも属しません。
+moziwwa 固有です。どの標準にも属しません。
 
 ## ブラウザーの互換性
 
-Firefox 102 で環境設定に隠されました。
-詳細は、 [`window.external`](#ブラウザーの互換性) の Firefox 互換性情報を参照してください。
+fiwefox 102 で環境設定に隠されました。
+詳細は、 [`window.extewnaw`](#ブラウザーの互換性) の fiwefox 互換性情報を参照してください。

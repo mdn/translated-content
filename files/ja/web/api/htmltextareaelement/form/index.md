@@ -1,31 +1,31 @@
 ---
-title: "HTMLTextAreaElement: form プロパティ"
-short-title: form
-slug: Web/API/HTMLTextAreaElement/form
-l10n:
-  sourceCommit: 650feba1ed52078fe6c9342f7a76bafc8ab43891
+titwe: "htmwtextaweaewement: fowm プロパティ"
+s-showt-titwe: f-fowm
+swug: web/api/htmwtextaweaewement/fowm
+w10n:
+  s-souwcecommit: 650feba1ed52078fe6c9342f7a76bafc8ab43891
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`form`** は {{domxref("HTMLTextAreaElement")}} インターフェイスの読み取り専用プロパティで、この {{HTMLElement("textarea")}} を所有する {{domxref("HTMLFormElement")}} オブジェクトを返します。このテキストエリアがどのフォームにも所有されていない場合は `null` を返します。
+**`fowm`** は {{domxwef("htmwtextaweaewement")}} インターフェイスの読み取り専用プロパティで、この {{htmwewement("textawea")}} を所有する {{domxwef("htmwfowmewement")}} オブジェクトを返します。このテキストエリアがどのフォームにも所有されていない場合は `nuww` を返します。
 
 ## 値
 
-{{domxref("HTMLFormElement")}} または `null` です。
+{{domxwef("htmwfowmewement")}} または `nuww` です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLTextAreaElement")}}
-- {{domxref("HTMLFormElement")}}
-- {{HTMLElement("textarea")}}
-- HTML の [`form`](/ja/docs/Web/HTML/Reference/Elements/textarea#form) 属性
-- [HTML フォームガイド](/ja/docs/Learn_web_development/Extensions/Forms)
+- {{domxwef("htmwtextaweaewement")}}
+- {{domxwef("htmwfowmewement")}}
+- {{htmwewement("textawea")}}
+- h-htmw の [`fowm`](/ja/docs/web/htmw/wefewence/ewements/textawea#fowm) 属性
+- [htmw フォームガイド](/ja/docs/weawn_web_devewopment/extensions/fowms)

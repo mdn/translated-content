@@ -1,18 +1,18 @@
 ---
-title: CSSTransformValue.keys()
-slug: Web/API/CSSTransformValue/keys
-l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+titwe: csstwansfowmvawue.keys()
+swug: web/api/csstwansfowmvawue/keys
+w-w10n:
+  s-souwcecommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{apiwef("css t-typed o-om")}}{{seecompattabwe}}
 
-**`CSSTransformValue.keys()`** メソッドは、配列の各インデックスに対応するキーを格納した新しい _配列イテレーター_ オブジェクトを返します。
+**`csstwansfowmvawue.keys()`** メソッドは、配列の各インデックスに対応するキーを格納した新しい _配列イテレーター_ オブジェクトを返します。
 
 ## 構文
 
-```js-nolint
-keys()
+```js-nowint
+k-keys()
 ```
 
 ### 引数
@@ -21,16 +21,16 @@ keys()
 
 ### 返値
 
-新しい {{jsxref("Array")}} です。
+新しい {{jsxwef("awway")}} です。
 
 ## 例
 
-To Do
+t-to do
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

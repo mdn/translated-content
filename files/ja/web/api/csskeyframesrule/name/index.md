@@ -1,14 +1,14 @@
 ---
-title: "CSSKeyframesRule: name プロパティ"
-short-title: name
-slug: Web/API/CSSKeyframesRule/name
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "csskeyfwameswuwe: nyame プロパティ"
+s-showt-titwe: n-nyame
+swug: web/api/csskeyfwameswuwe/name
+w-w10n:
+  s-souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("CSSOM") }}
+{{apiwef("cssom") }}
 
-**`name`** は {{domxref("CSSKeyframeRule")}} インターフェイスのプロパティで、 {{cssxref("animation-name")}} プロパティで使用されるアニメーションの名前を取得したり設定したりします。
+**`name`** は {{domxwef("csskeyfwamewuwe")}} インターフェイスのプロパティで、 {{cssxwef("animation-name")}} プロパティで使用されるアニメーションの名前を取得したり設定したりします。
 
 ### 値
 
@@ -16,31 +16,31 @@ l10n:
 
 ## 例
 
-この CSS には keyframes アットルールがあります。これは `document.styleSheets[0].cssRules` で返される最初の {{domxref("CSSRule")}} になります。
-`myRules[0]` は {{domxref("CSSKeyframesRule")}} オブジェクトを返し、 `name` は "slidein" に設定されます。
+この c-css には k-keyfwames アットルールがあります。これは `document.stywesheets[0].csswuwes` で返される最初の {{domxwef("csswuwe")}} になります。
+`mywuwes[0]` は {{domxwef("csskeyfwameswuwe")}} オブジェクトを返し、 `name` は "swidein" に設定されます。
 
 ```css
-@keyframes slidein {
-  from {
-    transform: translateX(0%);
+@keyfwames s-swidein {
+  fwom {
+    twansfowm: twanswatex(0%);
   }
 
   to {
-    transform: translateX(100%);
+    twansfowm: twanswatex(100%);
   }
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-let keyframes = myRules[0]; // CSSKeyframesRule
-console.log(keyframes.name); // "slidein"
+w-wet mywuwes = document.stywesheets[0].csswuwes;
+wet keyfwames = m-mywuwes[0]; // csskeyfwameswuwe
+c-consowe.wog(keyfwames.name); // "swidein"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,21 +1,21 @@
 ---
-title: EventSource.close()
-slug: Web/API/EventSource/close
-l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
+titwe: eventsouwce.cwose()
+swug: w-web/api/eventsouwce/cwose
+w-w10n:
+  s-souwcecommit: 4e233c16c6f0d347972c5c762f5b836318a46124
 ---
 
-{{APIRef('WebSockets API')}}
+{{apiwef('websockets a-api')}}
 
-**`close()`** は {{domxref("EventSource")}} インターフェイスのメソッドで、コネクションが構築されていればそれを閉じ、 {{domxref("EventSource.readyState")}} 属性を `2` （接続終了）に設定します。
+**`cwose()`** は {{domxwef("eventsouwce")}} インターフェイスのメソッドで、コネクションが構築されていればそれを閉じ、 {{domxwef("eventsouwce.weadystate")}} 属性を `2` （接続終了）に設定します。
 
-> [!NOTE]
+> [!note]
 > コネクションが既に閉じられていた場合、このメソッドは何も行いません。
 
 ## 構文
 
-```js-nolint
-close()
+```js-nowint
+c-cwose()
 ```
 
 ### 引数
@@ -24,31 +24,31 @@ close()
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-const button = document.querySelector("button");
-const evtSource = new EventSource("sse.php");
+c-const button = d-document.quewysewectow("button");
+c-const evtsouwce = nyew eventsouwce("sse.php");
 
-button.onclick = () => {
-  console.log("Connection closed");
-  evtSource.close();
+button.oncwick = () => {
+  consowe.wog("connection cwosed");
+  e-evtsouwce.cwose();
 };
 ```
 
-> [!NOTE]
-> 完全な例は GitHub で見られます。 [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/main/server-sent-events) を参照してください。
+> [!note]
+> 完全な例は github で見られます。 [php を用いた簡単な sse のデモ](https://github.com/mdn/dom-exampwes/twee/main/sewvew-sent-events) を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("EventSource")}}
+- {{domxwef("eventsouwce")}}

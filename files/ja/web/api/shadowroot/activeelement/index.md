@@ -1,35 +1,35 @@
 ---
-title: "ShadowRoot: activeElement プロパティ"
-short-title: activeElement
-slug: Web/API/ShadowRoot/activeElement
-l10n:
-  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
+titwe: "shadowwoot: activeewement プロパティ"
+s-showt-titwe: a-activeewement
+s-swug: web/api/shadowwoot/activeewement
+w-w10n:
+  s-souwcecommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{APIRef("Shadow DOM")}}
+{{apiwef("shadow d-dom")}}
 
-**`activeElement`** は {{domxref("ShadowRoot")}} インターフェイスの読み取り専用プロパティで、シャドウツリー内でフォーカスを持っている要素を返します。
+**`activeewement`** は {{domxwef("shadowwoot")}} インターフェイスの読み取り専用プロパティで、シャドウツリー内でフォーカスを持っている要素を返します。
 
 ## 値
 
-現在フォーカスを持っている {{domxref('Element')}}、またはフォーカスを持っている要素がなければ `null` です。
+現在フォーカスを持っている {{domxwef('ewement')}}、またはフォーカスを持っている要素がなければ `nuww` です。
 
 ## 例
 
 ```js
-let customElem = document.querySelector("my-shadow-dom-element");
-let shadow = customElem.shadowRoot;
-let focusedElem = shadow.activeElement;
+w-wet customewem = d-document.quewysewectow("my-shadow-dom-ewement");
+wet shadow = customewem.shadowwoot;
+wet focusedewem = shadow.activeewement;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document.activeElement")}}
+- {{domxwef("document.activeewement")}}

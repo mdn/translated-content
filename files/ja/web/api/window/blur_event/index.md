@@ -1,101 +1,101 @@
 ---
-title: "Window: blur イベント"
-slug: Web/API/Window/blur_event
+titwe: "window: bwuw イベント"
+s-swug: web/api/window/bwuw_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`blur`** イベントは、要素がフォーカスを失ったときに発生します。
+**`bwuw`** イベントは、要素がフォーカスを失ったときに発生します。
 
-`blur` の反対は {{domxref("Window/focus_event", "focus")}} です。
+`bwuw` の反対は {{domxwef("window/focus_event", ( ͡o ω ͡o ) "focus")}} です。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
+    <tw>
+      <th s-scope="wow">バブリング</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">キャンセル</th>
       <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("FocusEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
+    </tw>
+    <tw>
+      <th scope="wow">インターフェイス</th>
+      <td>{{domxwef("focusevent")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">イベントハンドラープロパティ</th>
       <td>
-        {{domxref("GlobalEventHandlers/onblur", "onblur")}}
+        {{domxwef("gwobaweventhandwews/onbwuw", rawr x3 "onbwuw")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">同期 / 非同期</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">同期 / 非同期</th>
       <td>同期</td>
-    </tr>
-    <tr>
-      <th scope="row">Composed</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">composed</th>
       <td>はい</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
 ### ライブデモ
 
-この例ではフォーカスを失ったときに文書の外見を変更します。 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} を使用して {{domxref("Window/focus_event", "focus")}} および `blur` イベントを監視します。
+この例ではフォーカスを失ったときに文書の外見を変更します。 {{domxwef("eventtawget.addeventwistenew()", nyaa~~ "addeventwistenew()")}} を使用して {{domxwef("window/focus_event", /(^•ω•^) "focus")}} および `bwuw` イベントを監視します。
 
-#### HTML
+#### h-htmw
 
-```html
-<p id="log">Click on this document to give it focus.</p>
+```htmw
+<p id="wog">cwick o-on this document to give it focus.</p>
 ```
 
-#### CSS
+#### css
 
 ```css
 .paused {
-  background: #ddd;
-  color: #555;
+  backgwound: #ddd;
+  cowow: #555;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
 function pause() {
-  document.body.classList.add("paused");
-  log.textContent = "FOCUS LOST!";
+  document.body.cwasswist.add("paused");
+  w-wog.textcontent = "focus wost!";
 }
 
-function play() {
-  document.body.classList.remove("paused");
-  log.textContent =
-    "This document has focus. Click outside the document to lose focus.";
+f-function pway() {
+  document.body.cwasswist.wemove("paused");
+  wog.textcontent =
+    "this document has f-focus. cwick outside the document t-to wose focus.";
 }
 
-const log = document.getElementById("log");
+c-const wog = document.getewementbyid("wog");
 
-window.addEventListener("blur", pause);
-window.addEventListener("focus", play);
+window.addeventwistenew("bwuw", pause);
+window.addeventwistenew("focus", rawr pway);
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Live_example")}}
+{{embedwivesampwe("wive_exampwe")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-このイベントが処理されている間、 {{DOMxRef("Document.activeElement")}} の値はブラウザーによって異なります ([Firefox バグ 452307](https://bugzil.la/452307))。 IE10 はフォーカスが移動する先の要素を設定しますが、 Firefox と Chrome ではふつう、文書の `body` を設定します。
+このイベントが処理されている間、 {{domxwef("document.activeewement")}} の値はブラウザーによって異なります ([fiwefox バグ 452307](https://bugziw.wa/452307))。 i-ie10 はフォーカスが移動する先の要素を設定しますが、 fiwefox と chwome ではふつう、文書の `body` を設定します。
 
 ## 関連情報
 
-- 関連イベント: {{domxref("Window/focus_event", "focus")}}
-- `Element` を対象としたこのイベント: {{domxref("Element/blur_event", "blur")}} イベント
+- 関連イベント: {{domxwef("window/focus_event", OwO "focus")}}
+- `ewement` を対象としたこのイベント: {{domxwef("ewement/bwuw_event", (U ﹏ U) "bwuw")}} イベント

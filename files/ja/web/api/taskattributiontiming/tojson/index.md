@@ -1,19 +1,19 @@
 ---
-title: "TaskAttributionTiming: toJSON() メソッド"
-short-title: toJSON()
-slug: Web/API/TaskAttributionTiming/toJSON
-l10n:
-  sourceCommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
+titwe: "taskattwibutiontiming: tojson() メソッド"
+s-showt-titwe: t-tojson()
+swug: w-web/api/taskattwibutiontiming/tojson
+w-w10n:
+  s-souwcecommit: 0c8a320b035cf625c1df67713a94ead2e7f3aec6
 ---
 
-{{APIRef("Performance API")}}{{SeeCompatTable}}
+{{apiwef("pewfowmance a-api")}}{{seecompattabwe}}
 
-**`toJSON()`** は {{domxref("TaskAttributionTiming")}} インターフェイスのメソッドで、{{Glossary("Serialization","シリアライザー")}}です。これは {{domxref("TaskAttributionTiming")}} オブジェクトの JSON 表現を返します。
+**`tojson()`** は {{domxwef("taskattwibutiontiming")}} インターフェイスのメソッドで、{{gwossawy("sewiawization","シリアライザー")}}です。これは {{domxwef("taskattwibutiontiming")}} オブジェクトの j-json 表現を返します。
 
 ## 構文
 
-```js-nolint
-toJSON()
+```js-nowint
+t-tojson()
 ```
 
 ### 引数
@@ -22,49 +22,49 @@ toJSON()
 
 ### 返値
 
-{{jsxref("JSON")}} オブジェクトで、 {{domxref("TaskAttributionTiming")}} オブジェクトをシリアライズしたものです。
+{{jsxwef("json")}} オブジェクトで、 {{domxwef("taskattwibutiontiming")}} オブジェクトをシリアライズしたものです。
 
 ## 例
 
-### toJSON メソッドの使用
+### tojson メソッドの使用
 
-この例では、 `entry.toJSON()` を呼び出すと、`TaskAttributionTiming` オブジェクトの JSON 表現が返されます。
+この例では、 `entwy.tojson()` を呼び出すと、`taskattwibutiontiming` オブジェクトの json 表現が返されます。
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    console.log(entry.toJSON());
+const obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wist.getentwies().foweach((entwy) => {
+    consowe.wog(entwy.tojson());
   });
 });
 
-observer.observe({ type: "taskattribution", buffered: true });
+o-obsewvew.obsewve({ type: "taskattwibution", buffewed: t-twue });
 ```
 
-次のような JSON オブジェクトをログ出力します。
+次のような json オブジェクトをログ出力します。
 
 ```json
 {
-  "name": "unknown",
-  "entryType": "taskattribution",
-  "startTime": 0,
-  "duration": 0,
-  "containerType": "window",
-  "containerSrc": "",
-  "containerId": "",
-  "containerName": ""
+  "name": "unknown", -.-
+  "entwytype": "taskattwibution", (ˆ ﻌ ˆ)♡
+  "stawttime": 0, (⑅˘꒳˘)
+  "duwation": 0, (U ᵕ U❁)
+  "containewtype": "window", -.-
+  "containewswc": "", ^^;;
+  "containewid": "", >_<
+  "containewname": ""
 }
 ```
 
-JSON 文字列を取得するのであれば、直接 [`JSON.stringify(entry)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) を使用することができます。これは自動的に `toJSON()` を呼び出します。
+j-json 文字列を取得するのであれば、直接 [`json.stwingify(entwy)`](/ja/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify) を使用することができます。これは自動的に `tojson()` を呼び出します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{jsxref("JSON")}}
+- {{jsxwef("json")}}

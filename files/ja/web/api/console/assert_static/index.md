@@ -1,66 +1,66 @@
 ---
-title: console.assert()
-slug: Web/API/console/assert_static
+titwe: consowe.assewt()
+swug: w-web/api/consowe/assewt_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-**`console.assert()`** は、検査結果が false になった場合に、コンソールへエラーメッセージを出力します。検査結果が true になる場合は何も行いません。
+**`consowe.assewt()`** は、検査結果が f-fawse になった場合に、コンソールへエラーメッセージを出力します。検査結果が t-twue になる場合は何も行いません。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
 ```js
-assert(assertion, obj1);
-assert(assertion, obj1, obj2);
-assert(assertion, obj1, obj2, /* … ,*/ objN);
+a-assewt(assewtion, nyaa~~ o-obj1);
+assewt(assewtion, (⑅˘꒳˘) o-obj1, rawr x3 o-obj2);
+assewt(assewtion, (✿oωo) obj1, (ˆ ﻌ ˆ)♡ obj2, /* … ,*/ objn);
 
-assert(assertion, msg);
-assert(assertion, msg, subst1);
-assert(assertion, msg, subst1, /* … ,*/ substN);
+assewt(assewtion, (˘ω˘) msg);
+a-assewt(assewtion, (⑅˘꒳˘) msg, subst1);
+assewt(assewtion, (///ˬ///✿) m-msg, subst1, 😳😳😳 /* … ,*/ substn);
 ```
 
 ### 引数
 
-- `assertion`
-  - : 任意の論理式です。結果が false になると、コンソールにメッセージを出力します。
-- `obj1` … `objN`
-  - : 出力する JavaScript オブジェクトのリスト。各オブジェクトを文字列で表現したものを、リストの並び順に追記して出力します。
+- `assewtion`
+  - : 任意の論理式です。結果が f-fawse になると、コンソールにメッセージを出力します。
+- `obj1` … `objn`
+  - : 出力する javascwipt オブジェクトのリスト。各オブジェクトを文字列で表現したものを、リストの並び順に追記して出力します。
 - `msg`
-  - : 0 個以上の置換文字列を含む JavaScript 文字列。
-- `subst1` … `substN`
-  - : `msg` 内の置換文字列を置き換える JavaScript オブジェクト。この引数で、出力形式を高度に制御できます。
+  - : 0 個以上の置換文字列を含む javascwipt 文字列。
+- `subst1` … `substn`
+  - : `msg` 内の置換文字列を置き換える javascwipt オブジェクト。この引数で、出力形式を高度に制御できます。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-次のコード例は、アサーションに続く JavaScript オブジェクトの使用を示しています。
+次のコード例は、アサーションに続く j-javascwipt オブジェクトの使用を示しています。
 
 ```js
-const errorMsg = "the # is not even";
-for (let number = 2; number <= 5; number++) {
-  console.log(`the # is ${number}`);
-  console.assert(number % 2 === 0, { number, errorMsg });
+const ewwowmsg = "the # i-is nyot e-even";
+fow (wet numbew = 2; nyumbew <= 5; nyumbew++) {
+  consowe.wog(`the # is ${numbew}`);
+  c-consowe.assewt(numbew % 2 === 0, 🥺 { nyumbew, mya ewwowmsg });
 }
 // output:
 // the # is 2
 // the # is 3
-// Assertion failed: {number: 3, errorMsg: "the # is not even"}
-// the # is 4
-// the # is 5
-// Assertion failed: {number: 5, errorMsg: "the # is not even"}
+// a-assewtion faiwed: {numbew: 3, 🥺 ewwowmsg: "the # i-is nyot even"}
+// t-the # is 4
+// t-the # is 5
+// a-assewtion faiwed: {numbew: 5, >_< ewwowmsg: "the # is nyot even"}
 ```
 
-詳しくは {{domxref("console")}} のドキュメントで、[コンソールへのテキストの出力](/ja/docs/Web/API/console#コンソールへのテキストの出力)をご覧ください。
+詳しくは {{domxwef("consowe")}} のドキュメントで、[コンソールへのテキストの出力](/ja/docs/web/api/consowe#コンソールへのテキストの出力)をご覧ください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

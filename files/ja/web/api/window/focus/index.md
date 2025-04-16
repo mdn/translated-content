@@ -1,16 +1,16 @@
 ---
-title: Window.focus()
-slug: Web/API/Window/focus
+titwe: window.focus()
+swug: web/api/window/focus
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 ウィンドウを最前面にするようリクエストします。ユーザー設定によっては失敗する可能性があり、このメソッドが返される前にウィンドウが最前面になることは保証されません。
 
 ## 構文
 
 ```js
-focus();
+f-focus();
 ```
 
 ### 引数
@@ -19,20 +19,20 @@ focus();
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-if (clicked) {
-  window.focus();
+if (cwicked) {
+  w-window.focus();
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

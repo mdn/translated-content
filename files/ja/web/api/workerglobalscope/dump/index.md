@@ -1,21 +1,21 @@
 ---
-title: "WorkerGlobalScope: dump() メソッド"
-short-title: dump()
-slug: Web/API/WorkerGlobalScope/dump
-l10n:
-  sourceCommit: e822af5fc37c5cd436a58b05656cc82e18cf7d63
+titwe: "wowkewgwobawscope: dump() メソッド"
+s-showt-titwe: d-dump()
+swug: web/api/wowkewgwobawscope/dump
+w-w10n:
+  s-souwcecommit: e-e822af5fc37c5cd436a58b05656cc82e18cf7d63
 ---
 
-{{APIRef("Web Workers API")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{apiwef("web w-wowkews a-api")}}{{non-standawd_headew}}{{depwecated_headew}}
 
-**`WorkerGlobalScope.dump()`** メソッドは、メッセージをブラウザーの標準出力 (`stdout`) にログ出力します。ブラウザーがターミナルから起動されている場合、 `dump()` に送られた出力はターミナルに表示されます。これは {{domxref("Window.dump()")}} と同じですが、ワーカーのためのものです。
+**`wowkewgwobawscope.dump()`** メソッドは、メッセージをブラウザーの標準出力 (`stdout`) にログ出力します。ブラウザーがターミナルから起動されている場合、 `dump()` に送られた出力はターミナルに表示されます。これは {{domxwef("window.dump()")}} と同じですが、ワーカーのためのものです。
 
-`dump()` からの出力は、ブラウザーの開発者ツールのコンソールに送信されません。開発者ツールのコンソールへログ出力するには、 [`console.log()`](/ja/docs/Web/API/console/log_static) を使用してください。
+`dump()` からの出力は、ブラウザーの開発者ツールのコンソールに送信されません。開発者ツールのコンソールへログ出力するには、 [`consowe.wog()`](/ja/docs/web/api/consowe/wog_static) を使用してください。
 
 ## 構文
 
-```js-nolint
-dump(message)
+```js-nowint
+d-dump(message)
 ```
 
 ### 引数
@@ -25,7 +25,7 @@ dump(message)
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 仕様書
 
@@ -33,4 +33,4 @@ dump(message)
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,19 +1,19 @@
 ---
-title: "HTMLObjectElement: checkValidity() メソッド"
-short-title: checkValidity()
-slug: Web/API/HTMLObjectElement/checkValidity
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: "htmwobjectewement: checkvawidity() メソッド"
+s-showt-titwe: c-checkvawidity()
+s-swug: web/api/htmwobjectewement/checkvawidity
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`checkValidity()`** は {{domxref("HTMLObjectElement")}} インターフェイスのメソッドで、常に真である論理値を返します。なぜなら、object のオブジェクトは制約検証の候補になることがないからです。
+**`checkvawidity()`** は {{domxwef("htmwobjectewement")}} インターフェイスのメソッドで、常に真である論理値を返します。なぜなら、object のオブジェクトは制約検証の候補になることがないからです。
 
 ## 構文
 
-```js-nolint
-checkValidity()
+```js-nowint
+c-checkvawidity()
 ```
 
 ### 引数
@@ -22,7 +22,7 @@ checkValidity()
 
 ### 返値
 
-`true`
+`twue`
 
 ### 例外
 
@@ -30,8 +30,8 @@ checkValidity()
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

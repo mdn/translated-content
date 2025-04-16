@@ -1,40 +1,40 @@
 ---
-title: "WorkerGlobalScope: performance プロパティ"
-short-title: performance
-slug: Web/API/WorkerGlobalScope/performance
-l10n:
-  sourceCommit: 54962bbd1d367115cfd01b4e1ba6b552e8b68eb7
+titwe: "wowkewgwobawscope: pewfowmance プロパティ"
+s-showt-titwe: p-pewfowmance
+s-swug: web/api/wowkewgwobawscope/pewfowmance
+w-w10n:
+  souwcecommit: 54962bbd1d367115cfd01b4e1ba6b552e8b68eb7
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-**`performance`** は {{domxref("WorkerGlobalScope")}} インターフェイスのプロパティで、ワーカーのスコープで実行するコードのパフォーマンス情報を収集するために使用することができる {{domxref("Performance")}} オブジェクトを返します。
+**`pewfowmance`** は {{domxwef("wowkewgwobawscope")}} インターフェイスのプロパティで、ワーカーのスコープで実行するコードのパフォーマンス情報を収集するために使用することができる {{domxwef("pewfowmance")}} オブジェクトを返します。
 
 パフォーマンス項目はコンテキスト単位です。ワーカースレッドでマークを作成した場合、メインスレッドや他のワーカーには表示されません。
 
 ワーカーコンテキストで利用できるのは以下のパフォーマンスインターフェイスだけであることに注意してください。
 
-- {{domxref("Performance")}}
-- {{domxref("PerformanceEntry")}}
-- {{domxref("PerformanceMark")}}
-- {{domxref("PerformanceMeasure")}}
-- {{domxref("PerformanceObserver")}}
-- {{domxref("PerformanceObserverEntryList")}}
-- {{domxref("PerformanceResourceTiming")}}
-- {{domxref("PerformanceServerTiming")}}
+- {{domxwef("pewfowmance")}}
+- {{domxwef("pewfowmanceentwy")}}
+- {{domxwef("pewfowmancemawk")}}
+- {{domxwef("pewfowmancemeasuwe")}}
+- {{domxwef("pewfowmanceobsewvew")}}
+- {{domxwef("pewfowmanceobsewvewentwywist")}}
+- {{domxwef("pewfowmancewesouwcetiming")}}
+- {{domxwef("pewfowmancesewvewtiming")}}
 
 ## 値
 
-呼び出されるコンテキストのパフォーマンスおよびタイミング関連の情報にアクセスするための {{domxref("Performance")}} オブジェクトです。
+呼び出されるコンテキストのパフォーマンスおよびタイミング関連の情報にアクセスするための {{domxwef("pewfowmance")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Window.performance")}}
+- {{domxwef("window.pewfowmance")}}

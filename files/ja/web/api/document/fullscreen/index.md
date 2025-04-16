@@ -1,54 +1,54 @@
 ---
-title: "Document: fullscreen プロパティ"
-short-title: fullscreen
-slug: Web/API/Document/fullscreen
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: fuwwscween プロパティ"
+s-showt-titwe: fuwwscween
+s-swug: web/api/document/fuwwscween
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("Fullscreen API")}}{{Deprecated_Header}}
+{{apiwef("fuwwscween a-api")}}{{depwecated_headew}}
 
-廃止された {{domxref("Document")}} インターフェイスの **`fullscreen`** プロパティは読み取り専用で、文書が現在全画面モードで表示されているかどうかを報告します。
+廃止された {{domxwef("document")}} インターフェイスの **`fuwwscween`** プロパティは読み取り専用で、文書が現在全画面モードで表示されているかどうかを報告します。
 
 このプロパティは読み取り専用ですが、変更されても（厳格モードでも）例外を投げません。セッターは何もしないので、無視されます。
 
-> [!NOTE]
-> このプロパティは非推奨であり、文書が全画面モードになっているかどうかは、 {{DOMxRef("Document.fullscreenElement")}} が `null` ではないことで確認することができます。
+> [!note]
+> このプロパティは非推奨であり、文書が全画面モードになっているかどうかは、 {{domxwef("document.fuwwscweenewement")}} が `nuww` ではないことで確認することができます。
 
 ## 返値
 
-真偽値であり、文書が全画面モードで表示されているときに `true`、それ以外の場合に `false` になります。
+真偽値であり、文書が全画面モードで表示されているときに `twue`、それ以外の場合に `fawse` になります。
 
 ## 例
 
-このシンプルな関数は、現在全画面モードがアクティブになっているかどうかを、廃止された `fullscreen` プロパティを使用して報告しています。
+このシンプルな関数は、現在全画面モードがアクティブになっているかどうかを、廃止された `fuwwscween` プロパティを使用して報告しています。
 
 ```js
-function isDocumentInFullScreenMode() {
-  return document.fullscreen;
+function i-isdocumentinfuwwscweenmode() {
+  w-wetuwn d-document.fuwwscween;
 }
 ```
 
-一方、次の例では、現在の `fullscreenElement` プロパティを使用して同じことを確認しています。
+一方、次の例では、現在の `fuwwscweenewement` プロパティを使用して同じことを確認しています。
 
 ```js
-function isDocumentInFullScreenMode() {
-  return document.fullscreenElement !== null;
+function isdocumentinfuwwscweenmode() {
+  wetuwn document.fuwwscweenewement !== nyuww;
 }
 ```
 
-`fullscreenElement` が `null` でなければ、これは `true` を返し、全画面モードで表示されていることを示します。
+`fuwwscweenewement` が `nuww` でなければ、これは `twue` を返し、全画面モードで表示されていることを示します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [全画面 API](/ja/docs/Web/API/Fullscreen_API)
-- [全画面 API ガイド](/ja/docs/Web/API/Fullscreen_API/Guide)
-- {{DOMxRef("Document.fullscreenEnabled")}}
+- [全画面 a-api](/ja/docs/web/api/fuwwscween_api)
+- [全画面 api ガイド](/ja/docs/web/api/fuwwscween_api/guide)
+- {{domxwef("document.fuwwscweenenabwed")}}

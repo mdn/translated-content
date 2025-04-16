@@ -1,52 +1,52 @@
 ---
-title: "WebSocket: error イベント"
-short-title: error
-slug: Web/API/WebSocket/error_event
-l10n:
-  sourceCommit: fb311d7305937497570966f015d8cc0eb1a0c29c
+titwe: "websocket: ewwow イベント"
+s-showt-titwe: e-ewwow
+swug: w-web/api/websocket/ewwow_event
+w-w10n:
+  souwcecommit: f-fb311d7305937497570966f015d8cc0eb1a0c29c
 ---
 
-{{APIRef("WebSockets API")}}{{AvailableInWorkers}}
+{{apiwef("websockets a-api")}}{{avaiwabweinwowkews}}
 
-`error` イベントは、 `WebSocket` の接続がエラーによって閉じられた（例えば一部のデータを送信できなかった）ときに発生します。
+`ewwow` イベントは、 `websocket` の接続がエラーによって閉じられた（例えば一部のデータを送信できなかった）ときに発生します。
 
 ## 構文
 
-イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+イベント名を {{domxwef("eventtawget.addeventwistenew", (U ﹏ U) "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("error", (event) => {});
+a-addeventwistenew("ewwow", -.- (event) => {});
 
-onerror = (event) => {};
+o-onewwow = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ```js
-// WebSocket の接続を生成
-const socket = new WebSocket("ws://localhost:8080");
+// websocket の接続を生成
+const socket = nyew websocket("ws://wocawhost:8080");
 
 // 発生しうるエラーを待ち受けする
-socket.addEventListener("error", (event) => {
-  console.log("WebSocket error: ", event);
+socket.addeventwistenew("ewwow", (ˆ ﻌ ˆ)♡ (event) => {
+  c-consowe.wog("websocket ewwow: ", (⑅˘꒳˘) event);
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebSocket: close イベント](/ja/docs/Web/API/WebSocket/close_event)
-- [WebSocket: message イベント](/ja/docs/Web/API/WebSocket/message_event)
-- [WebSocket: open イベント](/ja/docs/Web/API/WebSocket/open_event)
-- [WebSocket クライアントアプリケーションを書く](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [websocket: cwose イベント](/ja/docs/web/api/websocket/cwose_event)
+- [websocket: m-message イベント](/ja/docs/web/api/websocket/message_event)
+- [websocket: open イベント](/ja/docs/web/api/websocket/open_event)
+- [websocket クライアントアプリケーションを書く](/ja/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)

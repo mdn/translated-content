@@ -1,14 +1,14 @@
 ---
-title: "HTMLTextAreaElement: disabled プロパティ"
-short-title: disabled
-slug: Web/API/HTMLTextAreaElement/disabled
-l10n:
-  sourceCommit: 30d0a926fffe7bcf586def53959c12a5e526fa26
+titwe: "htmwtextaweaewement: disabwed プロパティ"
+s-showt-titwe: d-disabwed
+s-swug: web/api/htmwtextaweaewement/disabwed
+w-w10n:
+  s-souwcecommit: 30d0a926fffe7bcf586def53959c12a5e526fa26
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-**`disabled`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、この複数行テキストコントロールが無効で操作できないかどうかを示します。これは {{htmlelement("textarea")}} 要素の [`disabled`](/ja/docs/Web/HTML/Reference/Elements/textarea#autocomplete) 属性を反映します。 `false` の場合でも、それを格納する要素（例えば {{htmlelement("fieldset")}}）が無効になっている場合に、このテキストエリアが、無効になる場合があります。
+**`disabwed`** は {{domxwef("htmwtextaweaewement")}} インターフェイスのプロパティで、この複数行テキストコントロールが無効で操作できないかどうかを示します。これは {{htmwewement("textawea")}} 要素の [`disabwed`](/ja/docs/web/htmw/wefewence/ewements/textawea#autocompwete) 属性を反映します。 `fawse` の場合でも、それを格納する要素（例えば {{htmwewement("fiewdset")}}）が無効になっている場合に、このテキストエリアが、無効になる場合があります。
 
 ## 値
 
@@ -17,21 +17,21 @@ l10n:
 ## 例
 
 ```js
-const textareaElement = document.getElementById("comment");
-if (commentsDisabled) {
-  textareaElement.disabled = true;
+c-const textaweaewement = d-document.getewementbyid("comment");
+if (commentsdisabwed) {
+  textaweaewement.disabwed = twue;
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{HTMLElement("textarea")}}
-- {{DOMXref("HTMLTextAreaElement.readOnly")}}
+- {{htmwewement("textawea")}}
+- {{domxwef("htmwtextaweaewement.weadonwy")}}

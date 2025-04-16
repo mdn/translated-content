@@ -1,46 +1,46 @@
 ---
-title: CSSNamespaceRule
-slug: Web/API/CSSNamespaceRule
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: cssnamespacewuwe
+swug: w-web/api/cssnamespacewuwe
+w-w10n:
+  s-souwcecommit: b-bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{APIRef("CSSOM")}}
+{{apiwef("cssom")}}
 
-**`CSSNamespaceRule`** インターフェイスは単一の CSS {{ cssxref("@namespace") }} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を記述します。
+**`cssnamespacewuwe`** インターフェイスは単一の css {{ c-cssxwef("@namespace") }} [アットルール](/ja/docs/web/css/css_syntax/at-wuwe)を記述します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## プロパティ
 
-_祖先である {{domxref("CSSRule")}} からプロパティを継承しています。_
+_祖先である {{domxwef("csswuwe")}} からプロパティを継承しています。_
 
-- {{domxref("CSSNamespaceRule.namespaceURI")}}
-  - : 指定された名前空間の URI のテキストを含む文字列を返します。
-- {{domxref("CSSNamespaceRule.prefix")}}
+- {{domxwef("cssnamespacewuwe.namespaceuwi")}}
+  - : 指定された名前空間の u-uwi のテキストを含む文字列を返します。
+- {{domxwef("cssnamespacewuwe.pwefix")}}
   - : この名前空間に関連付けられた接頭辞の名前を文字列で返します。そのような接頭辞がない場合は、空文字列を返します。
 
 ## メソッド
 
-_祖先である {{domxref("CSSRule")}} からメソッドを継承しています。_
+_祖先である {{domxwef("csswuwe")}} からメソッドを継承しています。_
 
 ## 例
 
-このスタイルシートは、唯一のルールとして名前空間を記載しています。したがって、最初に返される {{domxref("CSSRule")}} は `CSSNamespaceRule` となります。
+このスタイルシートは、唯一のルールとして名前空間を記載しています。したがって、最初に返される {{domxwef("csswuwe")}} は `cssnamespacewuwe` となります。
 
 ```css
-@namespace url(http://www.w3.org/1999/xhtml);
+@namespace u-uww(http://www.w3.owg/1999/xhtmw);
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0]); //a CSSNamespaceRule
+w-wet mywuwes = document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0]); //a cssnamespacewuwe
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

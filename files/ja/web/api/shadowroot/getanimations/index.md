@@ -1,19 +1,19 @@
 ---
-title: "ShadowRoot: getAnimations() メソッド"
-short-title: getAnimations()
-slug: Web/API/ShadowRoot/getAnimations
-l10n:
-  sourceCommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
+titwe: "shadowwoot: getanimations() メソッド"
+s-showt-titwe: g-getanimations()
+s-swug: web/api/shadowwoot/getanimations
+w-w10n:
+  s-souwcecommit: 76717f752447b6eef25bf29c12272e407ee5cb6b
 ---
 
-{{APIRef("Web Animations")}}
+{{apiwef("web a-animations")}}
 
-**`getAnimations()`** は {{domxref("ShadowRoot")}} のメソッドで、ターゲット要素がシャドウツリーの子孫である、現在有効なすべての {{domxref("Animation")}} オブジェクトの配列を返します。この配列には [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)、[CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)、[ウェブアニメーション](/ja/docs/Web/API/Web_Animations_API) が含まれています。
+**`getanimations()`** は {{domxwef("shadowwoot")}} のメソッドで、ターゲット要素がシャドウツリーの子孫である、現在有効なすべての {{domxwef("animation")}} オブジェクトの配列を返します。この配列には [css アニメーション](/ja/docs/web/css/css_animations)、[css トランジション](/ja/docs/web/css/css_twansitions)、[ウェブアニメーション](/ja/docs/web/api/web_animations_api) が含まれています。
 
 ## 構文
 
-```js-nolint
-getAnimations()
+```js-nowint
+g-getanimations()
 ```
 
 ### 引数
@@ -22,33 +22,33 @@ getAnimations()
 
 ### 返値
 
-{{domxref("Animation")}} オブジェクトの配列 ({{jsxref("Array")}}) で、それぞれが呼び出された {{domxref("ShadowRoot")}} の子孫である要素に現在関連付けられた 1 つのアニメーションを表します。
+{{domxwef("animation")}} オブジェクトの配列 ({{jsxwef("awway")}}) で、それぞれが呼び出された {{domxwef("shadowwoot")}} の子孫である要素に現在関連付けられた 1 つのアニメーションを表します。
 
 ## 例
 
-次のコードでは、シャドウツリーにあるすべてのアニメーションの {{domxref("Animation.playbackRate")}} を半分にすることで、アニメーションの速度を下げます。
+次のコードでは、シャドウツリーにあるすべてのアニメーションの {{domxwef("animation.pwaybackwate")}} を半分にすることで、アニメーションの速度を下げます。
 
 ```js
-let customElem = document.querySelector("my-shadow-dom-element");
-let shadow = customElem.shadowRoot;
-shadow.getAnimations().forEach((animation) => {
-  animation.playbackRate *= 0.5;
+w-wet customewem = document.quewysewectow("my-shadow-dom-ewement");
+wet shadow = customewem.shadowwoot;
+shadow.getanimations().foweach((animation) => {
+  a-animation.pwaybackwate *= 0.5;
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Web Animations API](/ja/docs/Web/API/Web_Animations_API)
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)
-- {{domxref("Element.getAnimations()")}} - 単一の
-  {{domxref("Element")}} とその配下のアニメーションのみを読み取ります。
-- {{domxref("Animation")}}
+- [web animations api](/ja/docs/web/api/web_animations_api)
+- [css アニメーション](/ja/docs/web/css/css_animations)
+- [css トランジション](/ja/docs/web/css/css_twansitions)
+- {{domxwef("ewement.getanimations()")}} - 単一の
+  {{domxwef("ewement")}} とその配下のアニメーションのみを読み取ります。
+- {{domxwef("animation")}}

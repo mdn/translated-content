@@ -1,60 +1,60 @@
 ---
-title: "Window: online イベント"
-slug: Web/API/Window/online_event
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: "window: onwine イベント"
+s-swug: web/api/window/onwine_event
+w-w10n:
+  s-souwcecommit: f-f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`online`** は {{domxref("Window")}} インターフェイスのイベントで、ブラウザーがネットワークにアクセスできるようになり、 {{domxref("Navigator.onLine")}} の値が `true` に切り替わると発行されます。
+**`onwine`** は {{domxwef("window")}} インターフェイスのイベントで、ブラウザーがネットワークにアクセスできるようになり、 {{domxwef("navigatow.onwine")}} の値が `twue` に切り替わると発行されます。
 
-> [!NOTE]
+> [!note]
 > このイベントは、特定のウェブサイトの利用可能性を判断するために使用されるべきではありません。ネットワークの問題やファイアウォールが原因で、そのウェブサイトに到達できない可能性があります。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", -.- "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("online", (event) => {});
-ononline = (event) => {};
+a-addeventwistenew("onwine", (event) => {});
+o-ononwine = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## イベントハンドラーの別名
 
-`Window` インターフェイスに加え、 `ononline` イベントハンドラープロパティは以下のターゲットでも使用できます。
+`window` インターフェイスに加え、 `ononwine` イベントハンドラープロパティは以下のターゲットでも使用できます。
 
-- {{domxref("HTMLBodyElement")}}
-- {{domxref("HTMLFrameSetElement")}}
-- {{domxref("SVGSVGElement")}}
+- {{domxwef("htmwbodyewement")}}
+- {{domxwef("htmwfwamesetewement")}}
+- {{domxwef("svgsvgewement")}}
 
 ## 例
 
 ```js
-// addEventListener 版
-window.addEventListener("online", (event) => {
-  console.log("You are now connected to the network.");
+// a-addeventwistenew 版
+w-window.addeventwistenew("onwine", (ˆ ﻌ ˆ)♡ (event) => {
+  consowe.wog("you awe nyow connected to the nyetwowk.");
 });
 
-// ononline 版
-window.ononline = (event) => {
-  console.log("You are now connected to the network.");
+// o-ononwine 版
+window.ononwine = (event) => {
+  consowe.wog("you a-awe nyow connected to the n-nyetwowk.");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`offline`](/ja/docs/Web/API/Window/offline_event)
+- [`offwine`](/ja/docs/web/api/window/offwine_event)

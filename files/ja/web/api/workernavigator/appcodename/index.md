@@ -1,30 +1,30 @@
 ---
-title: WorkerNavigator.appCodeName
-slug: Web/API/WorkerNavigator/appCodeName
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: wowkewnavigatow.appcodename
+swug: web/api/wowkewnavigatow/appcodename
+w-w10n:
+  souwcecommit: f-f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{apiwef("htmw d-dom")}} {{depwecated_headew}}
 
-**`WorkerNavigator.appCodeName`** プロパティの値は、どのブラウザーでも常に "`Mozilla`" となります。このプロパティは互換性のためにのみ残されています。
+**`wowkewnavigatow.appcodename`** プロパティの値は、どのブラウザーでも常に "`moziwwa`" となります。このプロパティは互換性のためにのみ残されています。
 
-> [!NOTE]
-> このプロパティが実際の製品名を返すことに頼らないでください。すべてのブラウザーが、このプロパティの値として "`Mozilla`" を返します。
+> [!note]
+> このプロパティが実際の製品名を返すことに頼らないでください。すべてのブラウザーが、このプロパティの値として "`moziwwa`" を返します。
 
 ## 値
 
-文字列 "`Mozilla`" です。
+文字列 "`moziwwa`" です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WorkerNavigator.appName")}}
-- {{domxref("WorkerNavigator.product")}}
+- {{domxwef("wowkewnavigatow.appname")}}
+- {{domxwef("wowkewnavigatow.pwoduct")}}

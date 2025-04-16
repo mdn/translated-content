@@ -1,29 +1,29 @@
 ---
-title: "Navigator: hid プロパティ"
-short-title: hid
-slug: Web/API/Navigator/hid
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: hid プロパティ"
+s-showt-titwe: h-hid
+swug: w-web/api/navigatow/hid
+w-w10n:
+  s-souwcecommit: ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{apiwef("webhid a-api")}}{{seecompattabwe}}
 
-**`Navigator.hid`** は読み取り専用のプロパティで、{{domxref("HID")}} オブジェクトを返します。このオブジェクトは、HID デバイスへの接続およびアタッチした HID デバイスのリストアップを行うメソッドと、HID デバイスの接続を扱うイベントハンドラーを提供します。
+**`navigatow.hid`** は読み取り専用のプロパティで、{{domxwef("hid")}} オブジェクトを返します。このオブジェクトは、hid デバイスへの接続およびアタッチした h-hid デバイスのリストアップを行うメソッドと、hid デバイスの接続を扱うイベントハンドラーを提供します。
 
-定義されている[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)が WebHID の使用をブロックしている場合、 `Navigator.hid` プロパティは利用できません。
+定義されている[権限ポリシー](/ja/docs/web/http/guides/pewmissions_powicy)が w-webhid の使用をブロックしている場合、 `navigatow.hid` プロパティは利用できません。
 
 ## 値
 
-{{domxref("HID")}} オブジェクトです。
+{{domxwef("hid")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [WebHID API](/ja/docs/Web/API/WebHID_API)
+- [webhid api](/ja/docs/web/api/webhid_api)

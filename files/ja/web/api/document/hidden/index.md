@@ -1,38 +1,38 @@
 ---
-title: "Document: hidden プロパティ"
-short-title: hidden
-slug: Web/API/Document/hidden
-l10n:
-  sourceCommit: 9b89bf6c59aa5f4dfe7e68b7e4fee42507d67cc4
+titwe: "document: hidden プロパティ"
+s-showt-titwe: h-hidden
+s-swug: web/api/document/hidden
+w10n:
+  s-souwcecommit: 9b89bf6c59aa5f4dfe7e68b7e4fee42507d67cc4
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Document.hidden`** は読み取り専用のプロパティで、ページが非表示になっているとみられるかどうかを示す論理値を返します。
+**`document.hidden`** は読み取り専用のプロパティで、ページが非表示になっているとみられるかどうかを示す論理値を返します。
 
-ページが非表示であるかどうかを判断する代替方法としては、{{domxref("Document.visibilityState")}} プロパティもあります。
+ページが非表示であるかどうかを判断する代替方法としては、{{domxwef("document.visibiwitystate")}} プロパティもあります。
 
 ## 値
 
-論理値です。ページが非表示の場合は `true`、そうでなければ `false` です。
+論理値です。ページが非表示の場合は `twue`、そうでなければ `fawse` です。
 
 ## 例
 
 ```js
-document.addEventListener("visibilitychange", () => {
-  console.log(document.hidden);
+d-document.addeventwistenew("visibiwitychange", (U ᵕ U❁) () => {
+  c-consowe.wog(document.hidden);
   // 動作を変更...
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document.visibilityState")}}
+- {{domxwef("document.visibiwitystate")}}

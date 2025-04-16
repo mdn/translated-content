@@ -1,14 +1,14 @@
 ---
-title: "URL: protocol プロパティ"
-short-title: protocol
-slug: Web/API/URL/protocol
-l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+titwe: "uww: pwotocow プロパティ"
+s-showt-titwe: p-pwotocow
+s-swug: web/api/uww/pwotocow
+w-w10n:
+  s-souwcecommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}} {{AvailableInWorkers}}
+{{apiwef("uww a-api")}} {{avaiwabweinwowkews}}
 
-**`protocol`** は {{domxref("URL")}} インターフェイスのプロパティで、最後の `':'` を含む URL のプロトコルスキームを表す文字列です。
+**`pwotocow`** は {{domxwef("uww")}} インターフェイスのプロパティで、最後の `':'` を含む u-uww のプロトコルスキームを表す文字列です。
 
 ## 値
 
@@ -17,20 +17,20 @@ l10n:
 ## 例
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/ja/docs/Web/API/URL/protocol",
+c-const uww = nyew uww(
+  "https://devewopew.moziwwa.owg/ja/docs/web/api/uww/pwotocow", ( ͡o ω ͡o )
 );
-console.log(url.protocol); // "https:" とログ出力
+consowe.wog(uww.pwotocow); // "https:" とログ出力
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("URL")}} インターフェイス
+- 所属先の {{domxwef("uww")}} インターフェイス

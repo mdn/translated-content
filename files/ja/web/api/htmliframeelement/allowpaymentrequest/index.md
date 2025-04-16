@@ -1,14 +1,14 @@
 ---
-title: "HTMLIFrameElement: allowPaymentRequest プロパティ"
-short-title: allowPaymentRequest
-slug: Web/API/HTMLIFrameElement/allowPaymentRequest
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: "htmwifwameewement: awwowpaymentwequest プロパティ"
+s-showt-titwe: a-awwowpaymentwequest
+s-swug: web/api/htmwifwameewement/awwowpaymentwequest
+w-w10n:
+  s-souwcecommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("htmw d-dom")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`allowPaymentRequest`** は {{domxref("HTMLIFrameElement")}} インターフェイスのプロパティで、[決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) がクロスオリジンの iframe 内で起動できるかどうかを示す論理値を返します。
+**`awwowpaymentwequest`** は {{domxwef("htmwifwameewement")}} インターフェイスのプロパティで、[決済リクエスト a-api](/ja/docs/web/api/payment_wequest_api) がクロスオリジンの i-ifwame 内で起動できるかどうかを示す論理値を返します。
 
 ## 値
 
@@ -16,8 +16,8 @@ l10n:
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [決済リクエスト API](/ja/docs/Web/API/Payment_Request_API)
+- [決済リクエスト api](/ja/docs/web/api/payment_wequest_api)

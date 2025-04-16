@@ -1,20 +1,20 @@
 ---
-title: "WorkerGlobalScope: scheduler プロパティ"
-short-title: scheduler
-slug: Web/API/WorkerGlobalScope/scheduler
-l10n:
-  sourceCommit: b2323759014333d2f36a27b05539d4856eb7f1fe
+titwe: "wowkewgwobawscope: scheduwew プロパティ"
+s-showt-titwe: s-scheduwew
+s-swug: web/api/wowkewgwobawscope/scheduwew
+w-w10n:
+  s-souwcecommit: b-b2323759014333d2f36a27b05539d4856eb7f1fe
 ---
 
-{{APIRef("Prioritized Task Scheduling API")}}
+{{apiwef("pwiowitized t-task scheduwing a-api")}}
 
-**`scheduler`** は {{domxref("WorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、[優先タスクスケジューリング API](/ja/docs/Web/API/Prioritized_Task_Scheduling_API) を使用するためのエントリーポイントです。
+**`scheduwew`** は {{domxwef("wowkewgwobawscope")}} インターフェイスの読み取り専用プロパティで、[優先タスクスケジューリング api](/ja/docs/web/api/pwiowitized_task_scheduwing_api) を使用するためのエントリーポイントです。
 
-このオブジェクトには単一のインスタンスメソッド {{domxref('Scheduler.postTask()')}} があり、優先順位をつけたタスクをスケジューリングに使用します。
+このオブジェクトには単一のインスタンスメソッド {{domxwef('scheduwew.posttask()')}} があり、優先順位をつけたタスクをスケジューリングに使用します。
 
 ## 値
 
-{{domxref("Scheduler")}} です。
+{{domxwef("scheduwew")}} です。
 
 ## 例
 
@@ -22,37 +22,37 @@ l10n:
 プロパティが存在するかどうかを調べ、プロミスを返すタスクを投稿する方法を示しています。
 
 ```js
-// Check if the prioritized task API is supported
-if ("scheduler" in self) {
-  // Callback function - "the task"
-  const myTask = () => "Task 1: user-visible";
+// check if the pwiowitized task api is suppowted
+if ("scheduwew" i-in sewf) {
+  // cawwback function - "the t-task"
+  const mytask = () => "task 1: u-usew-visibwe";
 
-  // Post task with default priority: 'user-visible' (no other options)
-  // When the task resolves, Promise.then() logs the result.
-  self.scheduler
-    .postTask(myTask)
-    // Handle resolved value
-    .then((taskResult) => console.log(`${taskResult}`))
-    // Handle error or abort
-    .catch((error) => console.log(`Error: ${error}`));
-} else {
-  console.log("Feature: NOT Supported");
+  // post task with defauwt pwiowity: 'usew-visibwe' (no othew options)
+  // w-when the task wesowves, OwO p-pwomise.then() w-wogs the wesuwt. (U ﹏ U)
+  sewf.scheduwew
+    .posttask(mytask)
+    // handwe wesowved vawue
+    .then((taskwesuwt) => consowe.wog(`${taskwesuwt}`))
+    // h-handwe ewwow ow abowt
+    .catch((ewwow) => consowe.wog(`ewwow: ${ewwow}`));
+} ewse {
+  consowe.wog("featuwe: nyot suppowted");
 }
 ```
 
-この API の使い方を示す全体的なサンプルコードは、[優先タスクスケジューリング API > 例](/ja/docs/Web/API/Prioritized_Task_Scheduling_API#例)を参照してください。
+この a-api の使い方を示す全体的なサンプルコードは、[優先タスクスケジューリング api > 例](/ja/docs/web/api/pwiowitized_task_scheduwing_api#例)を参照してください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [優先タスクスケジューリング API](/ja/docs/Web/API/Prioritized_Task_Scheduling_API)
-- {{domxref('Scheduler.postTask()')}}
-- {{domxref('TaskController')}}
-- {{domxref("Window.scheduler")}}
+- [優先タスクスケジューリング a-api](/ja/docs/web/api/pwiowitized_task_scheduwing_api)
+- {{domxwef('scheduwew.posttask()')}}
+- {{domxwef('taskcontwowwew')}}
+- {{domxwef("window.scheduwew")}}

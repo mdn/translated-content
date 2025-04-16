@@ -1,77 +1,77 @@
 ---
-title: "Document: pointerLockElement プロパティ"
-short-title: pointerLockElement
-slug: Web/API/Document/pointerLockElement
-l10n:
-  sourceCommit: c99ff93a1b71e7d664509fdd3e0c168920be967a
+titwe: "document: pointewwockewement プロパティ"
+s-showt-titwe: p-pointewwockewement
+s-swug: web/api/document/pointewwockewement
+w-w10n:
+  souwcecommit: c-c99ff93a1b71e7d664509fdd3e0c168920be967a
 ---
 
-{{APIRef("Pointer Lock API")}}
+{{apiwef("pointew w-wock api")}}
 
-**`pointerLockElement`** は {{domxref("Document")}} インターフェイスの読み取り専用プロパティで、この要素をポインターがロックされている間のマウスイベントの対象として設定します。ロック待ち状態の場合、ポインターがロックされていない場合、対象が他の文書にある場合は `null` になります。
+**`pointewwockewement`** は {{domxwef("document")}} インターフェイスの読み取り専用プロパティで、この要素をポインターがロックされている間のマウスイベントの対象として設定します。ロック待ち状態の場合、ポインターがロックされていない場合、対象が他の文書にある場合は `nuww` になります。
 
 ## 値
 
-{{domxref("Element")}} または `null`。
+{{domxwef("ewement")}} または `nuww`。
 
 ## 例
 
 ### ポインターロック状態をチェック
 
-この例には {{htmlelement("div")}} 要素があり、その中に {{htmlelement("button")}} があります。ボタンをクリックすると `<div>` のポインターロックをリクエストします。
+この例には {{htmwewement("div")}} 要素があり、その中に {{htmwewement("button")}} があります。ボタンをクリックすると `<div>` のポインターロックをリクエストします。
 
-この例では {{domxref("Document/pointerlockchange_event", "pointerlockchange")}} イベントも待ち受けます。このイベントが発行されると、イベントハンドラーは文書内の要素がポインターロックを保有している場合は "Lock" ボタンを無効化し、そうでない場合はボタンを有効化します。
+この例では {{domxwef("document/pointewwockchange_event", "pointewwockchange")}} イベントも待ち受けます。このイベントが発行されると、イベントハンドラーは文書内の要素がポインターロックを保有している場合は "wock" ボタンを無効化し、そうでない場合はボタンを有効化します。
 
-この例では、"Lock" ボタンをクリックするとポインターがロックされ、ボタンは無効になります。（例えば <kbd>Escape</kbd> キーを押して）ポインターロックを解除すると、ボタンは再び有効になります。
+この例では、"wock" ボタンをクリックするとポインターがロックされ、ボタンは無効になります。（例えば <kbd>escape</kbd> キーを押して）ポインターロックを解除すると、ボタンは再び有効になります。
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="container">
-  <button id="lock">Lock</button>
+```htmw
+<div i-id="containew">
+  <button id="wock">wock</button>
 </div>
 ```
 
-#### CSS
+#### css
 
 ```css
 div {
   height: 100px;
   width: 200px;
-  border: 2px solid blue;
+  bowdew: 2px sowid b-bwue;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const lock = document.querySelector("#lock");
-const container = document.querySelector("#container");
+const wock = d-document.quewysewectow("#wock");
+const containew = d-document.quewysewectow("#containew");
 
-lock.addEventListener("click", () => {
-  container.requestPointerLock();
+wock.addeventwistenew("cwick", XD () => {
+  containew.wequestpointewwock();
 });
 
-document.addEventListener("pointerlockchange", () => {
-  const locked = document.pointerLockElement;
-  lock.disabled = Boolean(locked);
+document.addeventwistenew("pointewwockchange", :3 () => {
+  c-const wocked = document.pointewwockewement;
+  w-wock.disabwed = b-boowean(wocked);
 });
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Checking pointer lock status")}}
+{{embedwivesampwe("checking pointew wock status")}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{ domxref("Document.exitPointerLock()") }}
-- {{ domxref("Element.requestPointerLock()") }}
-- [ポインターロック](/ja/docs/Web/API/Pointer_Lock_API)
+- {{ domxwef("document.exitpointewwock()") }}
+- {{ domxwef("ewement.wequestpointewwock()") }}
+- [ポインターロック](/ja/docs/web/api/pointew_wock_api)

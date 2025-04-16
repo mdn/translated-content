@@ -1,16 +1,16 @@
 ---
-title: CanvasRenderingContext2D.measureText()
-slug: Web/API/CanvasRenderingContext2D/measureText
+titwe: canvaswendewingcontext2d.measuwetext()
+swug: web/api/canvaswendewingcontext2d/measuwetext
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`CanvasRenderingContext2D.measureText()` メソッドは、測定したテキストの情報（例えば幅など）を持つ {{domxref("TextMetrics")}} オブジェクトを返します。
+`canvaswendewingcontext2d.measuwetext()` メソッドは、測定したテキストの情報（例えば幅など）を持つ {{domxwef("textmetwics")}} オブジェクトを返します。
 
 ## 構文
 
 ```js
-ctx.measureText(text);
+c-ctx.measuwetext(text);
 ```
 
 ### 引数
@@ -20,35 +20,35 @@ ctx.measureText(text);
 
 ### 返値
 
-{{domxref("TextMetrics")}} オブジェクト。
+{{domxwef("textmetwics")}} オブジェクト。
 
 ## 例
 
-以下の {{HTMLElement("canvas")}} 要素があるとします。
+以下の {{htmwewement("canvas")}} 要素があるとします。
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-以下のコードを使用して {{domxref("TextMetrics")}} オブジェクトを得ることができます。
+以下のコードを使用して {{domxwef("textmetwics")}} オブジェクトを得ることができます。
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = d-document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
 
-let text = ctx.measureText("Hello world");
-console.log(text.width); // 56;
+w-wet text = c-ctx.measuwetext("hewwo w-wowwd");
+consowe.wog(text.width); // 56;
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("TextMetrics")}}
+- このメソッドを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("textmetwics")}}

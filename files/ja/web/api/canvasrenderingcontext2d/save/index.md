@@ -1,11 +1,11 @@
 ---
-title: CanvasRenderingContext2D.save()
-slug: Web/API/CanvasRenderingContext2D/save
+titwe: canvaswendewingcontext2d.save()
+swug: w-web/api/canvaswendewingcontext2d/save
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.save()`** はキャンバス 2D API のメソッドで、現在の状態をスタックにプッシュすることで、キャンバス全体の状態を保存します。
+**`canvaswendewingcontext2d.save()`** はキャンバス 2d a-api のメソッドで、現在の状態をスタックにプッシュすることで、キャンバス全体の状態を保存します。
 
 ### 描画状態
 
@@ -14,57 +14,57 @@ slug: Web/API/CanvasRenderingContext2D/save
 - 現在の変形行列。
 - 現在のクリッピング領域。
 - 現在の点線リスト。
-- {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}、 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}、{{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}、{{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}、{{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}、{{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}、{{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}、{{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}、{{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}、{{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}、{{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}、{{domxref("CanvasRenderingContext2D.font", "font")}}、{{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}、{{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}、{{domxref("CanvasRenderingContext2D.direction", "direction")}}、{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} の現在の値。
+- {{domxwef("canvaswendewingcontext2d.stwokestywe", >_< "stwokestywe")}}、 {{domxwef("canvaswendewingcontext2d.fiwwstywe", :3 "fiwwstywe")}}、{{domxwef("canvaswendewingcontext2d.gwobawawpha", (U ﹏ U) "gwobawawpha")}}、{{domxwef("canvaswendewingcontext2d.winewidth", -.- "winewidth")}}、{{domxwef("canvaswendewingcontext2d.winecap", (ˆ ﻌ ˆ)♡ "winecap")}}、{{domxwef("canvaswendewingcontext2d.winejoin", (⑅˘꒳˘) "winejoin")}}、{{domxwef("canvaswendewingcontext2d.mitewwimit", (U ᵕ U❁) "mitewwimit")}}、{{domxwef("canvaswendewingcontext2d.winedashoffset", -.- "winedashoffset")}}、{{domxwef("canvaswendewingcontext2d.shadowoffsetx", ^^;; "shadowoffsetx")}}、{{domxwef("canvaswendewingcontext2d.shadowoffsety", >_< "shadowoffsety")}}、{{domxwef("canvaswendewingcontext2d.shadowbwuw", mya "shadowbwuw")}}、{{domxwef("canvaswendewingcontext2d.shadowcowow", mya "shadowcowow")}}、{{domxwef("canvaswendewingcontext2d.gwobawcompositeopewation", 😳 "gwobawcompositeopewation")}}、{{domxwef("canvaswendewingcontext2d.font", XD "font")}}、{{domxwef("canvaswendewingcontext2d.textawign", :3 "textawign")}}、{{domxwef("canvaswendewingcontext2d.textbasewine", 😳😳😳 "textbasewine")}}、{{domxwef("canvaswendewingcontext2d.diwection", "diwection")}}、{{domxwef("canvaswendewingcontext2d.imagesmoothingenabwed", -.- "imagesmoothingenabwed")}} の現在の値。
 
 ## 構文
 
 ```js
-void ctx.save();
+v-void ctx.save();
 ```
 
 ## 例
 
 ### 描画状態の保存
 
-この例は、`save()` メソッドを使用して既定の状態を保存し、 `restore()` を使用して復元しているため、既定の状態で長方形を描画できます。
+この例は、`save()` メソッドを使用して既定の状態を保存し、 `westowe()` を使用して復元しているため、既定の状態で長方形を描画できます。
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const c-canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
 // 既定の状態を保存
 ctx.save();
 
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);
+ctx.fiwwstywe = "gween";
+ctx.fiwwwect(10, ( ͡o ω ͡o ) 10, 100, 100);
 
 // 既定の状態を復元
-ctx.restore();
+c-ctx.westowe();
 
-ctx.fillRect(150, 40, 100, 100);
+ctx.fiwwwect(150, rawr x3 40, 100, 100);
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('Saving_the_drawing_state', 700, 180) }}
+{{ embedwivesampwe('saving_the_dwawing_state', nyaa~~ 700, 180) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.restore()")}}
+- このメソッドを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.westowe()")}}

@@ -1,35 +1,35 @@
 ---
-title: CSSNamespaceRule.namespaceURI
-slug: Web/API/CSSNamespaceRule/namespaceURI
-l10n:
-  sourceCommit: bf30e32f3b51f59080f2c76795beadb247a551eb
+titwe: cssnamespacewuwe.namespaceuwi
+swug: web/api/cssnamespacewuwe/namespaceuwi
+w-w10n:
+  souwcecommit: b-bf30e32f3b51f59080f2c76795beadb247a551eb
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`namespaceURI`** は {{domxref("CSSNamespaceRule")}} の読み取り専用プロパティで、この名前空間の URI のテキストを文字列で返します。
+**`namespaceuwi`** は {{domxwef("cssnamespacewuwe")}} の読み取り専用プロパティで、この名前空間の u-uwi のテキストを文字列で返します。
 
 ## 値
 
-文字列で、 URI を持ちます。
+文字列で、 u-uwi を持ちます。
 
 ## 例
 
-このスタイルシートは、唯一のルールとして名前空間を含んでいます。したがって、最初に返される {{domxref("CSSRule")}} は `CSSNamespaceRule` となります。 `namespaceURI` プロパティの値は `http://www.w3.org/1999/xhtml` となります。
+このスタイルシートは、唯一のルールとして名前空間を含んでいます。したがって、最初に返される {{domxwef("csswuwe")}} は `cssnamespacewuwe` となります。 `namespaceuwi` プロパティの値は `http://www.w3.owg/1999/xhtmw` となります。
 
 ```css
-@namespace url(http://www.w3.org/1999/xhtml);
+@namespace u-uww(http://www.w3.owg/1999/xhtmw);
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].namespaceURI); //http://www.w3.org/1999/xhtml
+w-wet mywuwes = d-document.stywesheets[0].csswuwes;
+consowe.wog(mywuwes[0].namespaceuwi); //http://www.w3.owg/1999/xhtmw
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

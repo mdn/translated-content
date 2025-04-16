@@ -1,39 +1,39 @@
 ---
-title: WorkerNavigator.permissions
-slug: Web/API/WorkerNavigator/permissions
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: wowkewnavigatow.pewmissions
+swug: web/api/wowkewnavigatow/pewmissions
+w-w10n:
+  souwcecommit: f-f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("Web Workers API")}}{{SeeCompatTable}}
+{{apiwef("web w-wowkews api")}}{{seecompattabwe}}
 
-**`WorkerNavigator.permissions`** は読み取り専用のプロパティで、 {{domxref("Permissions")}} オブジェクトを返します。これは[権限 API](/ja/docs/Web/API/Permissions_API) に応じた API の許可状況を照会・更新するために使用することができます。
+**`wowkewnavigatow.pewmissions`** は読み取り専用のプロパティで、 {{domxwef("pewmissions")}} オブジェクトを返します。これは[権限 a-api](/ja/docs/web/api/pewmissions_api) に応じた a-api の許可状況を照会・更新するために使用することができます。
 
 ## 値
 
-{{domxref("Permissions")}} オブジェクトです。
+{{domxwef("pewmissions")}} オブジェクトです。
 
 ## 例
 
 ```js
-navigator.permissions.query({ name: "notifications" }).then((result) => {
-  if (result.state === "granted") {
-    showNotification();
-  } else if (result.state === "prompt") {
-    requestNotificationPermission();
+n-nyavigatow.pewmissions.quewy({ n-name: "notifications" }).then((wesuwt) => {
+  i-if (wesuwt.state === "gwanted") {
+    shownotification();
+  } ewse if (wesuwt.state === "pwompt") {
+    wequestnotificationpewmission();
   }
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [権限 API](/ja/docs/Web/API/Permissions_API)
-- [ウェブワーカー API](/ja/docs/Web/API/Web_Workers_API)
+- [権限 a-api](/ja/docs/web/api/pewmissions_api)
+- [ウェブワーカー api](/ja/docs/web/api/web_wowkews_api)

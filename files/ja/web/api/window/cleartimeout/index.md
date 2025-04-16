@@ -1,81 +1,81 @@
 ---
-title: "Window: clearTimeout() メソッド"
-short-title: clearTimeout()
-slug: Web/API/Window/clearTimeout
-l10n:
-  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
+titwe: "window: cweawtimeout() メソッド"
+s-showt-titwe: cweawtimeout()
+s-swug: w-web/api/window/cweawtimeout
+w-w10n:
+  s-souwcecommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`clearTimeout()`** は {{domxref("Window")}} インターフェイスのメソッドで、{{domxref("Window.setTimeout()")}} の呼び出しによって以前に確立されたタイムアウトを解除します。
+**`cweawtimeout()`** は {{domxwef("window")}} インターフェイスのメソッドで、{{domxwef("window.settimeout()")}} の呼び出しによって以前に確立されたタイムアウトを解除します。
 
 指定された引数で前回確立されたアクションを識別できなかった場合、このメソッドは何も行いません。
 
 ## 構文
 
-```js-nolint
-clearTimeout(timeoutID)
+```js-nowint
+c-cweawtimeout(timeoutid)
 ```
 
 ### 引数
 
-- `timeoutID`
-  - : 解除したいタイムアウトの識別子です。この ID は対応する `setTimeout()` から返されたものです。
+- `timeoutid`
+  - : 解除したいタイムアウトの識別子です。この i-id は対応する `settimeout()` から返されたものです。
 
-注目すべきは、 {{domxref("Window.setTimeout", "setTimeout()")}} および {{domxref("Window.setInterval", "setInterval()")}} で使用される ID のプールは共有されますので、技術的には `clearTimeout()` および {{domxref("Window.clearInterval", "clearInterval()")}} は互いに交換できます。しかし、明確化のため、そのようなことは避けてください。
+注目すべきは、 {{domxwef("window.settimeout", "settimeout()")}} および {{domxwef("window.setintewvaw", mya "setintewvaw()")}} で使用される id のプールは共有されますので、技術的には `cweawtimeout()` および {{domxwef("window.cweawintewvaw", mya "cweawintewvaw()")}} は互いに交換できます。しかし、明確化のため、そのようなことは避けてください。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ウェブページのコンテキストで以下のスクリプトを実行し、ページを一度クリックしてください。1 秒後にメッセージがポップアップします。1 秒間に複数回ページをクリックしても、アラートは一度しか表示されません。
 
 ```js
-const alarm = {
-  remind(aMessage) {
-    alert(aMessage);
-    this.timeoutID = undefined;
-  },
+const awawm = {
+  wemind(amessage) {
+    awewt(amessage);
+    t-this.timeoutid = undefined;
+  }, 😳
 
   setup() {
-    if (typeof this.timeoutID === "number") {
-      this.cancel();
+    if (typeof this.timeoutid === "numbew") {
+      t-this.cancew();
     }
 
-    this.timeoutID = setTimeout(
+    this.timeoutid = s-settimeout(
       (msg) => {
-        this.remind(msg);
-      },
+        this.wemind(msg);
+      }, XD
       1000,
-      "Wake up!",
+      "wake up!", :3
     );
-  },
+  }, 😳😳😳
 
-  cancel() {
-    clearTimeout(this.timeoutID);
-  },
+  cancew() {
+    c-cweawtimeout(this.timeoutid);
+  }, -.-
 };
-window.addEventListener("click", () => alarm.setup());
+window.addeventwistenew("cwick", ( ͡o ω ͡o ) () => a-awawm.setup());
 ```
 
 ## メモ
 
-`clearTimeout()` へ妥当ではない ID を渡しても、何の効果もありません。例外は発生しません。
+`cweawtimeout()` へ妥当ではない i-id を渡しても、何の効果もありません。例外は発生しません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Window.setTimeout()")}}
-- {{domxref("WorkerGlobalScope.clearTimeout()")}}
-- {{domxref("Window.clearInterval()")}}
-- {{domxref("Window.cancelAnimationFrame()")}}
+- {{domxwef("window.settimeout()")}}
+- {{domxwef("wowkewgwobawscope.cweawtimeout()")}}
+- {{domxwef("window.cweawintewvaw()")}}
+- {{domxwef("window.cancewanimationfwame()")}}

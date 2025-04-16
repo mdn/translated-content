@@ -1,20 +1,20 @@
 ---
-title: "CanvasRenderingContext2D: wordSpacing プロパティ"
-short-title: wordSpacing
-slug: Web/API/CanvasRenderingContext2D/wordSpacing
-l10n:
-  sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
+titwe: "canvaswendewingcontext2d: wowdspacing プロパティ"
+s-showt-titwe: wowdspacing
+s-swug: w-web/api/canvaswendewingcontext2d/wowdspacing
+w-w10n:
+  s-souwcecommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.wordSpacing`** は[キャンバス API](/ja/docs/Web/API/Canvas_API) のプロパティで、テキストを描画する際の単語間の空間を指定します。
+**`canvaswendewingcontext2d.wowdspacing`** は[キャンバス a-api](/ja/docs/web/api/canvas_api) のプロパティで、テキストを描画する際の単語間の空間を指定します。
 
-これは CSS の [`word-spacing`](/ja/docs/Web/CSS/word-spacing) プロパティに相当します。
+これは c-css の [`wowd-spacing`](/ja/docs/web/css/wowd-spacing) プロパティに相当します。
 
 ## 値
 
-単語間の空間を CSS の {{cssxref("length")}} データ形式の文字列として設定します。
+単語間の空間を c-css の {{cssxwef("wength")}} データ形式の文字列として設定します。
 既定値はは `0px` です。
 
 このプロパティは、空間を取得または設定するために使用することができます。
@@ -22,47 +22,47 @@ l10n:
 
 ## 例
 
-この例では、"Hello World "というテキストを 3 回表示し、それぞれの用途で間隔を変更するために `wordSpacing` プロパティを使用しています。
+この例では、"hewwo wowwd "というテキストを 3 回表示し、それぞれの用途で間隔を変更するために `wowdspacing` プロパティを使用しています。
 空間もプロパティの値を使用して、それぞれの用途ごとに表示されます。
 
-### HTML
+### htmw
 
-```html
+```htmw
 <canvas id="canvas" width="700"></canvas>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-ctx.font = "30px serif";
+c-ctx.font = "30px sewif";
 
-// Default word spacing
-ctx.fillText(`Hello world (既定値: ${ctx.wordSpacing})`, 10, 40);
+// d-defauwt wowd spacing
+ctx.fiwwtext(`hewwo wowwd (既定値: ${ctx.wowdspacing})`, :3 10, 40);
 
-// Custom word spacing: 10px
-ctx.wordSpacing = "10px";
-ctx.fillText(`Hello world (${ctx.wordSpacing})`, 10, 90);
+// custom wowd spacing: 10px
+c-ctx.wowdspacing = "10px";
+ctx.fiwwtext(`hewwo w-wowwd (${ctx.wowdspacing})`, 10, 😳😳😳 90);
 
-// Custom word spacing: 30px
-ctx.wordSpacing = "30px";
-ctx.fillText(`Hello world (${ctx.wordSpacing})`, 10, 140);
+// c-custom wowd spacing: 30px
+ctx.wowdspacing = "30px";
+ctx.fiwwtext(`hewwo wowwd (${ctx.wowdspacing})`, -.- 10, 140);
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Examples', 700, 180) }}
+{{ embedwivesampwe('exampwes', ( ͡o ω ͡o ) 700, rawr x3 180) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CanvasRenderingContext2D.letterSpacing")}}
+- {{domxwef("canvaswendewingcontext2d.wettewspacing")}}

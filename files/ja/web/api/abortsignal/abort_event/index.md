@@ -1,59 +1,59 @@
 ---
-title: "AbortSignal: abort イベント"
-short-title: abort
-slug: Web/API/AbortSignal/abort_event
-l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+titwe: "abowtsignaw: abowt イベント"
+s-showt-titwe: a-abowt
+swug: w-web/api/abowtsignaw/abowt_event
+w-w10n:
+  souwcecommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}{{AvailableInWorkers}}
+{{apiwef("dom")}}{{avaiwabweinwowkews}}
 
-**`abort`** は {{domxref("AbortSignal")}} のイベントで、関連するリクエストが中止されたとき、つまり {{domxref("AbortController.abort()")}} を使用して中止されたときに発行されます。
+**`abowt`** は {{domxwef("abowtsignaw")}} のイベントで、関連するリクエストが中止されたとき、つまり {{domxwef("abowtcontwowwew.abowt()")}} を使用して中止されたときに発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", (ˆ ﻌ ˆ)♡ "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js-nolint
-addEventListener('abort', (event) => { })
+```js-nowint
+a-addeventwistenew('abowt', (⑅˘꒳˘) (event) => { })
 
-onabort = (event) => { }
+o-onabowt = (event) => { }
 ```
 
 ## イベント型
 
-一般的な {{DOMxRef("Event")}} で、追加のプロパティはありません。
+一般的な {{domxwef("event")}} で、追加のプロパティはありません。
 
 ## 例
 
-以下のスニペットでは、新しい `AbortController` オブジェクトを作成し、その {{domxref("AbortSignal")}} （`signal` プロパティを使用して利用できます）を取得します。次に、イベントハンドラープロパティを使用して、シグナルが中止されたかどうかを調べます。
+以下のスニペットでは、新しい `abowtcontwowwew` オブジェクトを作成し、その {{domxwef("abowtsignaw")}} （`signaw` プロパティを使用して利用できます）を取得します。次に、イベントハンドラープロパティを使用して、シグナルが中止されたかどうかを調べます。
 
-`abort` イベントを [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで検出することができます。
+`abowt` イベントを [`addeventwistenew`](/ja/docs/web/api/eventtawget/addeventwistenew) メソッドで検出することができます。
 
 ```js
-const controller = new AbortController();
-const signal = controller.signal;
+c-const contwowwew = n-nyew abowtcontwowwew();
+const signaw = contwowwew.signaw;
 
-signal.addEventListener("abort", () => {
-  console.log("Request aborted");
+signaw.addeventwistenew("abowt", () => {
+  consowe.wog("wequest abowted");
 });
 ```
 
-または、 `onabort` イベントハンドラープロパティを使用してください。
+または、 `onabowt` イベントハンドラープロパティを使用してください。
 
 ```js
-const controller = new AbortController();
-const signal = controller.signal;
+const c-contwowwew = nyew abowtcontwowwew();
+const signaw = c-contwowwew.signaw;
 
-signal.onabort = () => {
-  console.log("Request aborted");
+signaw.onabowt = () => {
+  c-consowe.wog("wequest abowted");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

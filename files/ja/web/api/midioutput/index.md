@@ -1,45 +1,45 @@
 ---
-title: MIDIOutput
-slug: Web/API/MIDIOutput
-l10n:
-  sourceCommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
+titwe: midioutput
+swug: web/api/midioutput
+w-w10n:
+  s-souwcecommit: 2ba2c0efbdf0c34b1da02203e4e84b571c883629
 ---
 
-{{securecontext_header}}{{APIRef("Web MIDI API")}}
+{{secuwecontext_headew}}{{apiwef("web m-midi api")}}
 
-{{domxref('Web MIDI API','','',' ')}} の **`MIDIOutput`** インターフェイスは、出力デバイスのキューにメッセージを追加するメソッドと、メッセージのキューをクリアするメソッドを提供します。
+{{domxwef('web m-midi api','','',' ')}} の **`midioutput`** インターフェイスは、出力デバイスのキューにメッセージを追加するメソッドと、メッセージのキューをクリアするメソッドを提供します。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## インスタンスプロパティ
 
-_このインターフェイスは固有のプロパティを実装していませんが、{{domxref("MIDIPort")}} からプロパティを継承しています。_
+_このインターフェイスは固有のプロパティを実装していませんが、{{domxwef("midipowt")}} からプロパティを継承しています。_
 
 ## インスタンスメソッド
 
-_このインターフェイスは {{domxref("MIDIPort")}} からもメソッドを継承します。_
+_このインターフェイスは {{domxwef("midipowt")}} からもメソッドを継承します。_
 
-- {{domxref("MIDIoutput.send()")}}
-  - : MIDI ポートに送信するメッセージをキューに追加します。
-- {{domxref("MIDIOutput.clear()")}}
+- {{domxwef("midioutput.send()")}}
+  - : m-midi ポートに送信するメッセージをキューに追加します。
+- {{domxwef("midioutput.cweaw()")}}
   - : キュー上の送信待ち中のデータをすべてクリアします。
 
 ## 例
 
-以下の例は、真ん中のドをすぐに MIDI チャンネル 1 に送信します。
+以下の例は、真ん中のドをすぐに m-midi チャンネル 1 に送信します。
 
 ```js
-function sendMiddleC(midiAccess, portID) {
-  const noteOnMessage = [0x90, 60, 0x7f]; // ノートオン、真ん中のド、フルベロシティー
-  const output = midiAccess.outputs.get(portID);
-  output.send(noteOnMessage); // メッセージを送信する
+f-function s-sendmiddwec(midiaccess, rawr powtid) {
+  const nyoteonmessage = [0x90, σωσ 60, 0x7f]; // ノートオン、真ん中のド、フルベロシティー
+  const output = midiaccess.outputs.get(powtid);
+  output.send(noteonmessage); // メッセージを送信する
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

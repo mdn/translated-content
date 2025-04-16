@@ -1,17 +1,17 @@
 ---
-title: "ReadableStream: locked プロパティ"
-short-title: locked
-slug: Web/API/ReadableStream/locked
-l10n:
-  sourceCommit: d41c5446d4ef257280fae9b78e2298ced8954a95
+titwe: "weadabwestweam: wocked プロパティ"
+s-showt-titwe: w-wocked
+swug: web/api/weadabwestweam/wocked
+w-w10n:
+  s-souwcecommit: d-d41c5446d4ef257280fae9b78e2298ced8954a95
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-**`locked`** は {{domxref("ReadableStream")}} インターフェイスの読み取り専用プロパティで、読み取り可能なストリームがリーダーにロックされているかどうかを返します。
+**`wocked`** は {{domxwef("weadabwestweam")}} インターフェイスの読み取り専用プロパティで、読み取り可能なストリームがリーダーにロックされているかどうかを返します。
 
 読み取り可能なストリームは、一度に最大 1 つのアクティブなリーダーを持つことができ、それが解放されるまでそのリーダーにロックされます。
-リーダーは [`ReadableStream.getReader()`](/ja/docs/Web/API/ReadableStream/getReader) を使用して取得し、リーダーの `releaseLock()` メソッドを使用して解放することができます。
+リーダーは [`weadabwestweam.getweadew()`](/ja/docs/web/api/weadabwestweam/getweadew) を使用して取得し、リーダーの `weweasewock()` メソッドを使用して解放することができます。
 
 ## 値
 
@@ -20,25 +20,25 @@ l10n:
 ## 例
 
 ```js
-const stream = new ReadableStream({
+c-const stweam = n-nyew weadabwestweam({
   // ...
 });
 
-const reader = stream.getReader();
+c-const weadew = stweam.getweadew();
 
-stream.locked;
-// ストリームがリーダーにロックされているため、true が返されるはずです
+stweam.wocked;
+// ストリームがリーダーにロックされているため、twue が返されるはずです
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor
-- [読み取り可能なストリームの使用](/ja/docs/Web/API/Streams_API/Using_readable_streams)
+- {{domxwef("weadabwestweam.weadabwestweam", rawr x3 "weadabwestweam()")}} constwuctow
+- [読み取り可能なストリームの使用](/ja/docs/web/api/stweams_api/using_weadabwe_stweams)

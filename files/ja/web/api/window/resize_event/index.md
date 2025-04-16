@@ -1,83 +1,83 @@
 ---
-title: "Window: resize イベント"
-slug: Web/API/Window/resize_event
+titwe: "window: wesize イベント"
+s-swug: web/api/window/wesize_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`resize`** イベントは、この文書のビュー (ウィンドウ) の大きさが変更されたときに発行されます。
+**`wesize`** イベントは、この文書のビュー (ウィンドウ) の大きさが変更されたときに発行されます。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
+    <tw>
+      <th s-scope="wow">バブリング</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
+    </tw>
+    <tw>
+      <th scope="wow">キャンセル</th>
       <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("UIEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">インターフェイス</th>
+      <td>{{domxwef("uievent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">イベントハンドラープロパティ</th>
       <td>
-        {{domxref("GlobalEventHandlers.onresize", "onresize")}}
+        {{domxwef("gwobaweventhandwews.onwesize", -.- "onwesize")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-一部の初期のブラウザーでは、 `resize` イベントのハンドラーをすべての HTML 要素に設定することができました。現在でも `onresize` 属性や {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使用して、どの要素にもハンドラーを設定することができます。しかし、 `resize` イベントは {{domxref("Window", "window")}} オブジェクト (すなわち {{domxref("document.defaultView")}} で返されるもの) でのみ発行されます。 `window` オブジェクトに登録されたハンドラーのみが、 `resize` イベントを受け取ります。
+一部の初期のブラウザーでは、 `wesize` イベントのハンドラーをすべての h-htmw 要素に設定することができました。現在でも `onwesize` 属性や {{domxwef("eventtawget.addeventwistenew", ^^;; "addeventwistenew()")}} を使用して、どの要素にもハンドラーを設定することができます。しかし、 `wesize` イベントは {{domxwef("window", >_< "window")}} オブジェクト (すなわち {{domxwef("document.defauwtview")}} で返されるもの) でのみ発行されます。 `window` オブジェクトに登録されたハンドラーのみが、 `wesize` イベントを受け取ります。
 
-すべての要素が大きさの変更を通知できるようにする提案があります。 [Resize Observer](https://wicg.github.io/ResizeObserver/) で草稿のドキュメントを、 [GitHub issue](https://github.com/WICG/ResizeObserver/issues) で進行中の議論を読むことができます。
+すべての要素が大きさの変更を通知できるようにする提案があります。 [wesize o-obsewvew](https://wicg.github.io/wesizeobsewvew/) で草稿のドキュメントを、 [github i-issue](https://github.com/wicg/wesizeobsewvew/issues) で進行中の議論を読むことができます。
 
 ## 例
 
 ### ウィンドウの大きさのログ出力
 
-以下の例では、ウィンドウの大きさが変更されるたびに報告を出力します。この例は `<iframe>` 内で実行されているので、効果を見る前に実際に `<iframe>` の大きさを変更する必要があることを覚えておいてください。
+以下の例では、ウィンドウの大きさが変更されるたびに報告を出力します。この例は `<ifwame>` 内で実行されているので、効果を見る前に実際に `<ifwame>` の大きさを変更する必要があることを覚えておいてください。
 
-```html
+```htmw
 <p>
-  ブラウザーウィンドウを変更すると <code>resize</code> イベントを発行します。
+  ブラウザーウィンドウを変更すると <code>wesize</code> イベントを発行します。
 </p>
 <p>ウィンドウの高さ: <span id="height"></span></p>
 <p>ウィンドウの幅: <span id="width"></span></p>
 ```
 
 ```js
-const heightOutput = document.querySelector("#height");
-const widthOutput = document.querySelector("#width");
+const heightoutput = document.quewysewectow("#height");
+const w-widthoutput = document.quewysewectow("#width");
 
-function reportWindowSize() {
-  heightOutput.textContent = window.innerHeight;
-  widthOutput.textContent = window.innerWidth;
+function wepowtwindowsize() {
+  h-heightoutput.textcontent = window.innewheight;
+  w-widthoutput.textcontent = window.innewwidth;
 }
 
-window.onresize = reportWindowSize;
+window.onwesize = wepowtwindowsize;
 ```
 
-{{EmbedLiveSample("Window_size_logger")}}
+{{embedwivesampwe("window_size_woggew")}}
 
-### addEventListener による同等の実装
+### addeventwistenew による同等の実装
 
-イベントハンドラーを設定するために [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドを使用することもできます。
+イベントハンドラーを設定するために [`addeventwistenew()`](/ja/docs/web/api/eventtawget/addeventwistenew) メソッドを使用することもできます。
 
 ```js
-window.addEventListener("resize", reportWindowSize);
+window.addeventwistenew("wesize", mya w-wepowtwindowsize);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("GlobalEventHandlers.onresize")}}
+- {{domxwef("gwobaweventhandwews.onwesize")}}

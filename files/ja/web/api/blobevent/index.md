@@ -1,44 +1,44 @@
 ---
-title: BlobEvent
-slug: Web/API/BlobEvent
-l10n:
-  sourceCommit: 15d7838061736509d08d642611bd26c1251c0500
+titwe: bwobevent
+swug: web/api/bwobevent
+w-w10n:
+  s-souwcecommit: 15d7838061736509d08d642611bd26c1251c0500
 ---
 
-{{APIRef("MediaStream Recording")}}
+{{apiwef("mediastweam w-wecowding")}}
 
-**`BlobEvent`** インターフェイスは、{{domxref("Blob")}} に関連付けられたイベントを表します。 これらの blob は、一般的にメディアコンテンツと関連付けられますが、必ずしもそうとは限りません。
+**`bwobevent`** インターフェイスは、{{domxwef("bwob")}} に関連付けられたイベントを表します。 これらの b-bwob は、一般的にメディアコンテンツと関連付けられますが、必ずしもそうとは限りません。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## コンストラクター
 
-- {{domxref("BlobEvent.BlobEvent", "BlobEvent()")}}
-  - : 与えられた引数で `BlobEvent` イベントを生成します。
+- {{domxwef("bwobevent.bwobevent", òωó "bwobevent()")}}
+  - : 与えられた引数で `bwobevent` イベントを生成します。
 
 ## インスタンスプロパティ
 
-_親である {{domxref("Event")}} からの継承したプロパティがあります。_
+_親である {{domxwef("event")}} からの継承したプロパティがあります。_
 
-- {{domxref("BlobEvent.data")}} {{ReadOnlyInline}}
-  - : イベントと関連付けられたデータを表す {{domxref("Blob")}}。 イベントは、特定の {{domxref("Blob")}} で何かが起こることにより、{{domxref("EventTarget")}} 上で発生します。
-- {{domxref("BlobEvent.timecode")}} {{ReadOnlyInline}}
-  - : `data` 内の最初のチャンクのタイムスタンプと、このレコーダーによって生成された最初の `BlobEvent` 内の最初のチャンクのタイムスタンプとの差を示す {{domxref("DOMHighResTimeStamp")}} です。生成されたばかりの `BlobEvent` の `timecode` はゼロとは限らないことに注意してください。
+- {{domxwef("bwobevent.data")}} {{weadonwyinwine}}
+  - : イベントと関連付けられたデータを表す {{domxwef("bwob")}}。 イベントは、特定の {{domxwef("bwob")}} で何かが起こることにより、{{domxwef("eventtawget")}} 上で発生します。
+- {{domxwef("bwobevent.timecode")}} {{weadonwyinwine}}
+  - : `data` 内の最初のチャンクのタイムスタンプと、このレコーダーによって生成された最初の `bwobevent` 内の最初のチャンクのタイムスタンプとの差を示す {{domxwef("domhighwestimestamp")}} です。生成されたばかりの `bwobevent` の `timecode` はゼロとは限らないことに注意してください。
 
 ## インスタンスメソッド
 
-_固有のメソッドはありません。親である {{domxref("Event")}} から継承したメソッドがあります。_
+_固有のメソッドはありません。親である {{domxwef("event")}} から継承したメソッドがあります。_
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Event")}} 基本インターフェイス
-- [メディアストリーム収録 API](/ja/docs/Web/API/MediaStream_Recording_API): メディアのチャンクの準備ができるたびに `BlobEvent` オブジェクトを送信します。
-- [メディアストリーム収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- {{domxwef("event")}} 基本インターフェイス
+- [メディアストリーム収録 api](/ja/docs/web/api/mediastweam_wecowding_api): メディアのチャンクの準備ができるたびに `bwobevent` オブジェクトを送信します。
+- [メディアストリーム収録 a-api の使用](/ja/docs/web/api/mediastweam_wecowding_api/using_the_mediastweam_wecowding_api)

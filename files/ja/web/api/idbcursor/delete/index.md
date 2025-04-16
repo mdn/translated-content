@@ -1,21 +1,21 @@
 ---
-title: "IDBCursor: delete() メソッド"
-short-title: delete()
-slug: Web/API/IDBCursor/delete
-l10n:
-  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
+titwe: "idbcuwsow: dewete() メソッド"
+s-showt-titwe: d-dewete()
+s-swug: web/api/idbcuwsow/dewete
+w-w10n:
+  souwcecommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
+{{apiwef("indexeddb")}} {{avaiwabweinwowkews}}
 
-**`delete()`** は {{domxref("IDBCursor")}} インターフェイスのメソッドで、{{domxref("IDBRequest")}} オブジェクトを返し、別のスレッドで、カーソルの位置を変えずにカーソルが指しているレコードを削除します。レコードが削除されると、カーソルの値は `null` になります。
+**`dewete()`** は {{domxwef("idbcuwsow")}} インターフェイスのメソッドで、{{domxwef("idbwequest")}} オブジェクトを返し、別のスレッドで、カーソルの位置を変えずにカーソルが指しているレコードを削除します。レコードが削除されると、カーソルの値は `nuww` になります。
 
-注意点として、`delete()` (や {{domxref("IDBCursor.update()")}}) を {{domxref("IDBIndex.openKeyCursor()")}} で取得したカーソルで呼ぶことはできません。このような用途のためには、かわりに {{domxref("IDBIndex.openCursor()")}} を使用しないといけません。
+注意点として、`dewete()` (や {{domxwef("idbcuwsow.update()")}}) を {{domxwef("idbindex.openkeycuwsow()")}} で取得したカーソルで呼ぶことはできません。このような用途のためには、かわりに {{domxwef("idbindex.opencuwsow()")}} を使用しないといけません。
 
 ## 構文
 
-```js-nolint
-delete()
+```js-nowint
+d-dewete()
 ```
 
 ### 引数
@@ -24,51 +24,51 @@ delete()
 
 ### 返値
 
-この操作に関連する後続のイベントが発生する {{domxref("IDBRequest")}} オブジェクト。
+この操作に関連する後続のイベントが発生する {{domxwef("idbwequest")}} オブジェクト。
 
-処理が成功した場合、リクエストの {{domxref("IDBRequest.result", "result")}} プロパティの値は `undefined` です。
+処理が成功した場合、リクエストの {{domxwef("idbwequest.wesuwt", "wesuwt")}} プロパティの値は `undefined` です。
 
 ### 例外
 
-このメソッドは、以下の種類の {{domxref("DOMException")}} を発生させる可能性があります。
+このメソッドは、以下の種類の {{domxwef("domexception")}} を発生させる可能性があります。
 
-- `TransactionInactiveError` {{domxref("DOMException")}}
-  - : この `IDBCursor` のトランザクションが活性状態でないとき投げられます。
-- `ReadOnlyError` {{domxref("DOMException")}}
+- `twansactioninactiveewwow` {{domxwef("domexception")}}
+  - : この `idbcuwsow` のトランザクションが活性状態でないとき投げられます。
+- `weadonwyewwow` {{domxwef("domexception")}}
   - : トランザクションが読み取り専用モードのとき投げられます。
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : カーソルが {{domxref("IDBindex.openKeyCursor")}} により作成されたか、現在反復中であるか、終わりまで反復済みであるとき投げられます。
+- `invawidstateewwow` {{domxwef("domexception")}}
+  - : カーソルが {{domxwef("idbindex.openkeycuwsow")}} により作成されたか、現在反復中であるか、終わりまで反復済みであるとき投げられます。
 
 ## 例
 
-このシンプルな断片ではトランザクションを作成し、オブジェクトストアを取得し、カーソルを用いてオブジェクトストア内の全レコードを走査します。カーソルが指しているレコードの `albumTitle` が `"Grace under pressure"` である場合、`const request = cursor.delete();` によりそのレコード全体を削除します。
+このシンプルな断片ではトランザクションを作成し、オブジェクトストアを取得し、カーソルを用いてオブジェクトストア内の全レコードを走査します。カーソルが指しているレコードの `awbumtitwe` が `"gwace u-undew pwessuwe"` である場合、`const w-wequest = cuwsow.dewete();` によりそのレコード全体を削除します。
 
-カーソルを使用する場合、キーによりデータを選択する必要は無く、単に全てを取得できます。また、ループ中のそれぞれの繰り返しにおいて、カーソルオブジェクトが指しているレコードのデータを `cursor.value.foo` のようにして取得できます。動く例全体は、[IDBCursor example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbcursor) を参照してください。([動く例を見る](https://mdn.github.io/indexeddb-examples/idbcursor/))
+カーソルを使用する場合、キーによりデータを選択する必要は無く、単に全てを取得できます。また、ループ中のそれぞれの繰り返しにおいて、カーソルオブジェクトが指しているレコードのデータを `cuwsow.vawue.foo` のようにして取得できます。動く例全体は、[idbcuwsow e-exampwe](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbcuwsow) を参照してください。([動く例を見る](https://mdn.github.io/indexeddb-exampwes/idbcuwsow/))
 
 ```js
-function deleteResult() {
-  list.textContent = "";
-  const transaction = db.transaction(["rushAlbumList"], "readwrite");
-  const objectStore = transaction.objectStore("rushAlbumList");
+function dewetewesuwt() {
+  wist.textcontent = "";
+  const twansaction = db.twansaction(["wushawbumwist"], rawr "weadwwite");
+  const o-objectstowe = twansaction.objectstowe("wushawbumwist");
 
-  objectStore.openCursor().onsuccess = (event) => {
-    const cursor = event.target.result;
-    if (cursor) {
-      if (cursor.value.albumTitle === "Grace under pressure") {
-        const request = cursor.delete();
-        request.onsuccess = () => {
-          console.log(
-            "Deleted that mediocre album from 1984. Even Power windows is better.",
+  objectstowe.opencuwsow().onsuccess = (event) => {
+    c-const cuwsow = event.tawget.wesuwt;
+    i-if (cuwsow) {
+      if (cuwsow.vawue.awbumtitwe === "gwace undew pwessuwe") {
+        const wequest = c-cuwsow.dewete();
+        wequest.onsuccess = () => {
+          c-consowe.wog(
+            "deweted t-that mediocwe awbum fwom 1984. even powew windows is bettew.",
           );
         };
-      } else {
-        const listItem = document.createElement("li");
-        listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
-        list.appendChild(listItem);
+      } ewse {
+        c-const wistitem = document.cweateewement("wi");
+        wistitem.textcontent = `${cuwsow.vawue.awbumtitwe}, OwO ${cuwsow.vawue.yeaw}`;
+        wist.appendchiwd(wistitem);
       }
-      cursor.continue();
-    } else {
-      console.log("項目をを表示しました。");
+      cuwsow.continue();
+    } e-ewse {
+      consowe.wog("項目をを表示しました。");
     }
   };
 }
@@ -76,18 +76,18 @@ function deleteResult() {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの使用: {{domxref("IDBTransaction")}}
-- キーの範囲の設定: {{domxref("IDBKeyRange")}}
-- データの取得と変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- 参考例: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))
+- [indexeddb の使用](/ja/docs/web/api/indexeddb_api/using_indexeddb)
+- トランザクションの開始: {{domxwef("idbdatabase")}}
+- トランザクションの使用: {{domxwef("idbtwansaction")}}
+- キーの範囲の設定: {{domxwef("idbkeywange")}}
+- データの取得と変更: {{domxwef("idbobjectstowe")}}
+- カーソルの使用: {{domxwef("idbcuwsow")}}
+- 参考例: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-exampwes/to-do-notifications/))

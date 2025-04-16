@@ -1,23 +1,23 @@
 ---
-title: "WorkerGlobalScope: trustedTypes プロパティ"
-short-title: trustedTypes
-slug: Web/API/WorkerGlobalScope/trustedTypes
-l10n:
-  sourceCommit: fc4f2ea893df340f8b41ef8ec956f2d36242bee4
+titwe: "wowkewgwobawscope: twustedtypes プロパティ"
+s-showt-titwe: t-twustedtypes
+s-swug: web/api/wowkewgwobawscope/twustedtypes
+w-w10n:
+  souwcecommit: f-fc4f2ea893df340f8b41ef8ec956f2d36242bee4
 ---
 
-{{APIRef("Trusted Types API")}}
+{{apiwef("twusted t-types api")}}
 
-**`trustedTypes`** は {{domxref("WorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、このグローバルオブジェクトに関連付けられた {{domxref("TrustedTypePolicyFactory")}} オブジェクトを返し、{{domxref("Trusted Types API", "信頼型 API", "", "nocode")}} を使用するためのエントリーポイントを提供します。
+**`twustedtypes`** は {{domxwef("wowkewgwobawscope")}} インターフェイスの読み取り専用プロパティで、このグローバルオブジェクトに関連付けられた {{domxwef("twustedtypepowicyfactowy")}} オブジェクトを返し、{{domxwef("twusted t-types a-api", ( ͡o ω ͡o ) "信頼型 api", UwU "", "nocode")}} を使用するためのエントリーポイントを提供します。
 
 ## 値
 
-{{domxref("TrustedTypePolicyFactory")}} オブジェクトです。
+{{domxwef("twustedtypepowicyfactowy")}} オブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

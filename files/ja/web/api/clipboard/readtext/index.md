@@ -1,18 +1,18 @@
 ---
-title: Clipboard.readText()
-slug: Web/API/Clipboard/readText
+titwe: cwipboawd.weadtext()
+swug: web/api/cwipboawd/weadtext
 ---
 
-{{APIRef("Clipboard API")}}
+{{apiwef("cwipboawd a-api")}}
 
-**{{domxref("Clipboard")}}** インターフェイスの **`readText()`** メソッドは、システムクリップボードのテキストの内容のコピーに解決されるプロミス ({{jsxref("Promise")}}) を返します。
+**{{domxwef("cwipboawd")}}** インターフェイスの **`weadtext()`** メソッドは、システムクリップボードのテキストの内容のコピーに解決されるプロミス ({{jsxwef("pwomise")}}) を返します。
 
-クリップボードからデータを読み込むには、[権限 API](/ja/docs/Web/API/Permissions_API) の `"clipboard-read"` 権限を得る必要があります。
+クリップボードからデータを読み込むには、[権限 a-api](/ja/docs/web/api/pewmissions_api) の `"cwipboawd-wead"` 権限を得る必要があります。
 
 ## 構文
 
 ```js
-readText();
+w-weadtext();
 ```
 
 ### 引数
@@ -21,32 +21,32 @@ readText();
 
 ### 返値
 
-クリップボードのテキストの内容を持つ文字列に解決される、プロミス ({{jsxref("Promise")}}) オブジェクト。クリップボードが空であったり、テキストがないか、クリップボードの内容を表す {{domxref("DataTransfer")}} オブジェクトがテキストの表現を持たない場合は、空文字列を返します。
+クリップボードのテキストの内容を持つ文字列に解決される、プロミス ({{jsxwef("pwomise")}}) オブジェクト。クリップボードが空であったり、テキストがないか、クリップボードの内容を表す {{domxwef("datatwansfew")}} オブジェクトがテキストの表現を持たない場合は、空文字列を返します。
 
-テキストでない内容をクリップボードから読むためには、代わりに {{domxref("Clipboard.read", "read()")}} メソッドを使ってください。クリップボードへのテキストの書き込みには、{{domxref("Clipboard.writeText", "writeText()")}} を使ってください。
+テキストでない内容をクリップボードから読むためには、代わりに {{domxwef("cwipboawd.wead", UwU "wead()")}} メソッドを使ってください。クリップボードへのテキストの書き込みには、{{domxwef("cwipboawd.wwitetext", rawr x3 "wwitetext()")}} を使ってください。
 
 ## 例
 
 この使用例は、クリップボードからテキストの内容を取得し、ある要素の内容にその取得されたテキストを設定します。
 
 ```js
-navigator.clipboard
-  .readText()
-  .then((clipText) => (document.getElementById("outbox").innerText = clipText));
+n-nyavigatow.cwipboawd
+  .weadtext()
+  .then((cwiptext) => (document.getewementbyid("outbox").innewtext = cwiptext));
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [クリップボード API](/ja/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
-- {{domxref("Clipboard.writeText()")}}
-- {{domxref("Clipboard.write()")}}
+- [クリップボード a-api](/ja/docs/web/api/cwipboawd_api)
+- [async c-cwipboawd a-api demo on gwitch](https://async-cwipboawd-api.gwitch.me/)
+- [image s-suppowt fow async cwipboawd awticwe](https://web.dev/async-cwipboawd/)
+- {{domxwef("cwipboawd.wwitetext()")}}
+- {{domxwef("cwipboawd.wwite()")}}

@@ -1,43 +1,43 @@
 ---
-title: "HTMLIFrameElement: width プロパティ"
-short-title: width
-slug: Web/API/HTMLIFrameElement/width
-l10n:
-  sourceCommit: d8a52569d8d465eb626af3d33600c8c638a7a322
+titwe: "htmwifwameewement: width プロパティ"
+s-showt-titwe: w-width
+swug: web/api/htmwifwameewement/width
+w-w10n:
+  s-souwcecommit: d-d8a52569d8d465eb626af3d33600c8c638a7a322
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`width`** は {{domxref("HTMLIFrameElement")}} インターフェイスのプロパティで、この {{HTMLElement("iframe")}} 要素の `width` 属性を反映し、フレームの幅を CSS ピクセル数で示す文字列を返します。
+**`width`** は {{domxwef("htmwifwameewement")}} インターフェイスのプロパティで、この {{htmwewement("ifwame")}} 要素の `width` 属性を反映し、フレームの幅を c-css ピクセル数で示す文字列を返します。
 
 ## 値
 
-CSS ピクセルでフレームの高さを示す文字列です。
+c-css ピクセルでフレームの高さを示す文字列です。
 
 ## 例
 
-```html
-<iframe id="el" width="800" height="600"></iframe>
+```htmw
+<ifwame id="ew" width="800" height="600"></ifwame>
 ```
 
 ```js
-const el = document.getElementById("el");
-console.log(el.width); // 出力: '800'
+const ew = document.getewementbyid("ew");
+c-consowe.wog(ew.width); // 出力: '800'
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("HTMLCanvasElement.width")}}
-- {{domxref("HTMLEmbedElement.width")}}
-- {{domxref("HTMLImageElement.width")}}
-- {{domxref("HTMLObjectElement.width")}}
-- {{domxref("HTMLSourceElement.width")}}
-- {{domxref("HTMLVideoElement.width")}}
+- {{domxwef("htmwcanvasewement.width")}}
+- {{domxwef("htmwembedewement.width")}}
+- {{domxwef("htmwimageewement.width")}}
+- {{domxwef("htmwobjectewement.width")}}
+- {{domxwef("htmwsouwceewement.width")}}
+- {{domxwef("htmwvideoewement.width")}}

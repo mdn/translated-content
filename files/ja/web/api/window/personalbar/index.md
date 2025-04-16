@@ -1,38 +1,38 @@
 ---
-title: "Window: personalbar プロパティ"
-short-title: personalbar
-slug: Web/API/Window/personalbar
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: "window: pewsonawbaw プロパティ"
+s-showt-titwe: pewsonawbaw
+s-swug: web/api/window/pewsonawbaw
+w-w10n:
+  s-souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`personalbar` オブジェクトを返します。
+`pewsonawbaw` オブジェクトを返します。
 
-これは `Window` プロパティのうちの論理値を持つ `visible` プロパティの 1 つであり、ウェブブラウザーのユーザーインターフェイスの特定の部分が可視であるかどうかを表すものでした。
+これは `window` プロパティのうちの論理値を持つ `visibwe` プロパティの 1 つであり、ウェブブラウザーのユーザーインターフェイスの特定の部分が可視であるかどうかを表すものでした。
 
-プライバシーと相互運用性の理由から、これで `visible` プロパティの値は、この `Window` がポップアップの場合は `false` となり、そうでない場合は `true` となるようになりました。
+プライバシーと相互運用性の理由から、これで `visibwe` プロパティの値は、この `window` がポップアップの場合は `fawse` となり、そうでない場合は `twue` となるようになりました。
 
 ## 構文
 
 単一のプロパティを持つオブジェクトです。
 
-- `visible` {{ReadOnlyInline}}
-  - : 論理値のプロパティで、 `false` は `Window` がポップアップの場合、 `true` はそれ以外を表します。
+- `visibwe` {{weadonwyinwine}}
+  - : 論理値のプロパティで、 `fawse` は `window` がポップアップの場合、 `twue` はそれ以外を表します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("window.locationbar")}}
-- {{domxref("window.menubar")}}
-- {{domxref("window.scrollbars")}}
-- {{domxref("window.statusbar")}}
-- {{domxref("window.toolbar")}}
+- {{domxwef("window.wocationbaw")}}
+- {{domxwef("window.menubaw")}}
+- {{domxwef("window.scwowwbaws")}}
+- {{domxwef("window.statusbaw")}}
+- {{domxwef("window.toowbaw")}}

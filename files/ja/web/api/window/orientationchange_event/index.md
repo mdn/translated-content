@@ -1,57 +1,57 @@
 ---
-title: "Window: orientationchange イベント"
-slug: Web/API/Window/orientationchange_event
+titwe: "window: owientationchange イベント"
+s-swug: web/api/window/owientationchange_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`orientationchange` イベントは、端末の向きが変化した時に発生します。
+`owientationchange` イベントは、端末の向きが変化した時に発生します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
+    <tw>
+      <th s-scope="wow">バブリング</th>
       <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">キャンセル</th>
       <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラー</th>
+    </tw>
+    <tw>
+      <th scope="wow">インターフェイス</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">イベントハンドラー</th>
       <td>
-        {{domxref("Window/onorientationchange", "onorientationchange")}}
+        {{domxwef("window/onowientationchange", σωσ "onowientationchange")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 例
 
-`orientationchange` イベントは {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドで使用することができます。
+`owientationchange` イベントは {{domxwef("eventtawget/addeventwistenew", σωσ "addeventwistenew")}} メソッドで使用することができます。
 
 ```js
-window.addEventListener("orientationchange", function () {
-  console.log("端末の向きが " + screen.orientation.angle + "になりました。");
+w-window.addeventwistenew("owientationchange", >_< f-function () {
+  c-consowe.wog("端末の向きが " + scween.owientation.angwe + "になりました。");
 });
 ```
 
-または、 {{domxref("Window/onorientationchange", "onorientationchange")}} イベントハンドラープロパティを使用します。
+または、 {{domxwef("window/onowientationchange", :3 "onowientationchange")}} イベントハンドラープロパティを使用します。
 
 ```js
-window.onorientationchange = function () {
-  console.log("端末の向きが " + screen.orientation.angle + "になりました。");
+window.onowientationchange = function () {
+  consowe.wog("端末の向きが " + s-scween.owientation.angwe + "になりました。");
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの対応
 
-{{Compat}}
+{{compat}}

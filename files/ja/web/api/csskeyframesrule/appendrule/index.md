@@ -1,55 +1,55 @@
 ---
-title: "CSSKeyframesRule: appendRule() メソッド"
-slug: Web/API/CSSKeyframesRule/appendRule
-l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+titwe: "csskeyfwameswuwe: appendwuwe() メソッド"
+s-swug: web/api/csskeyfwameswuwe/appendwuwe
+w-w10n:
+  souwcecommit: d-d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
-{{APIRef("CSSOM") }}
+{{apiwef("cssom") }}
 
-**`appendRule()`** は {{domxref("CSSKeyframeRule")}} インターフェイスのメソッドで、 {{domxref("CSSKeyFrameRule")}} をルールの末尾に追加します。
+**`appendwuwe()`** は {{domxwef("csskeyfwamewuwe")}} インターフェイスのメソッドで、 {{domxwef("csskeyfwamewuwe")}} をルールの末尾に追加します。
 
 ## 構文
 
-```js-nolint
-appendRule(rule)
+```js-nowint
+a-appendwuwe(wuwe)
 ```
 
 ### 引数
 
-- `rule`
-  - : keyframe ルールの入った文字列です。
+- `wuwe`
+  - : k-keyfwame ルールの入った文字列です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-この CSS には keyframes アットルールがあります。これは `document.styleSheets[0].cssRules` で返される最初の {{domxref("CSSRule")}} になります。
-`myRules[0]` は {{domxref("CSSKeyframesRule")}} オブジェクトを返します。その `cssRules` プロパティは 1 つのルールの入った {{domxref("CSSRuleList")}} を返します。
+この c-css には k-keyfwames アットルールがあります。これは `document.stywesheets[0].csswuwes` で返される最初の {{domxwef("csswuwe")}} になります。
+`mywuwes[0]` は {{domxwef("csskeyfwameswuwe")}} オブジェクトを返します。その `csswuwes` プロパティは 1 つのルールの入った {{domxwef("csswuwewist")}} を返します。
 
-`appendRule` でもう 1 つのルールを追加すると、 `cssRules` プロパティは 2 つのルールが入った {{domxref("CSSRuleList")}} を返します。
+`appendwuwe` でもう 1 つのルールを追加すると、 `csswuwes` プロパティは 2 つのルールが入った {{domxwef("csswuwewist")}} を返します。
 
 ```css
-@keyframes slidein {
-  from {
-    transform: translateX(0%);
+@keyfwames s-swidein {
+  fwom {
+    twansfowm: twanswatex(0%);
   }
 }
 ```
 
 ```js
-let myRules = document.styleSheets[0].cssRules;
-let keyframes = myRules[0]; // a CSSKeyframesRule
-keyframes.appendRule("to {transform: translateX(100%);}");
-console.log(keyframes.cssRules); // 2 つのルールが入った CSSRuleList オブジェクト
+wet mywuwes = document.stywesheets[0].csswuwes;
+w-wet keyfwames = mywuwes[0]; // a csskeyfwameswuwe
+k-keyfwames.appendwuwe("to {twansfowm: twanswatex(100%);}");
+c-consowe.wog(keyfwames.csswuwes); // 2 つのルールが入った csswuwewist オブジェクト
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

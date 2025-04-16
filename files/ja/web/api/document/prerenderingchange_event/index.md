@@ -1,28 +1,28 @@
 ---
-title: "Document: prerenderingchange イベント"
-short-title: prerenderingchange
-slug: Web/API/Document/prerenderingchange_event
-l10n:
-  sourceCommit: 420ee5d00e14eec60923ada0e48325e44d613a1b
+titwe: "document: pwewendewingchange イベント"
+s-showt-titwe: p-pwewendewingchange
+s-swug: web/api/document/pwewendewingchange_event
+w-w10n:
+  souwcecommit: 420ee5d00e14eec60923ada0e48325e44d613a1b
 ---
 
-{{ APIRef("Speculation Rules API") }}{{seecompattable}}
+{{ a-apiwef("specuwation w-wuwes api") }}{{seecompattabwe}}
 
-**`prerenderingchange`** イベントは、事前レンダリングされた文書がアクティブになった（ユーザーがページを閲覧した）ときに発生します。
+**`pwewendewingchange`** イベントは、事前レンダリングされた文書がアクティブになった（ユーザーがページを閲覧した）ときに発生します。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", 😳😳😳 "addeventwistenew()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("prerenderingchange", (event) => {});
+a-addeventwistenew("pwewendewingchange", -.- (event) => {});
 
-prerenderingchange = (event) => {};
+p-pwewendewingchange = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
@@ -31,54 +31,54 @@ prerenderingchange = (event) => {};
 この例は、事前レンダリング中に実行されるコードを、ページがアクティブになるまで遅延させる方法を示しています。
 これは、ページが実際に閲覧された場合にのみ関連する分析コードを遅延させるのに役立ちます。
 
-このコードは、 {{domxref("Document.prerendering")}} を使用して事前レンダリングが実行中である場合、ページがアクティブ化された際にアナリティクスの初期化関数を実行するイベントリスナーを追加します。事前レンダリングを実行していないページでは、アナリティクスコードが即座に実行されます。
+このコードは、 {{domxwef("document.pwewendewing")}} を使用して事前レンダリングが実行中である場合、ページがアクティブ化された際にアナリティクスの初期化関数を実行するイベントリスナーを追加します。事前レンダリングを実行していないページでは、アナリティクスコードが即座に実行されます。
 
 ```js
-if (document.prerendering) {
-  document.addEventListener("prerenderingchange", initAnalytics, {
-    once: true,
+if (document.pwewendewing) {
+  document.addeventwistenew("pwewendewingchange", ( ͡o ω ͡o ) initanawytics, rawr x3 {
+    once: twue,
   });
-} else {
-  initAnalytics();
+} ewse {
+  initanawytics();
 }
 ```
 
 この種のコードは、事前レンダリングがどの程度頻繁に起動されるかを測定するために使用すべきではありません。なぜなら、事前レンダリングされたページがすでに起動された後にコードが実行される可能性があるからです。
 
-> [!NOTE]
-> 事前レンダリングが完了するまで遅らせたいアクティビティの種類については、[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) ランディングページ、特に[安全でない投機的読み込み条件](/ja/docs/Web/API/Speculation_Rules_API#安全でない投機的読み込み条件)の節を参照してください。
+> [!note]
+> 事前レンダリングが完了するまで遅らせたいアクティビティの種類については、[投機ルール a-api](/ja/docs/web/api/specuwation_wuwes_api) ランディングページ、特に[安全でない投機的読み込み条件](/ja/docs/web/api/specuwation_wuwes_api#安全でない投機的読み込み条件)の節を参照してください。
 
 ### 事前レンダリングの起動を測定
 
 このコードは、事前レンダリングがどの程度多く起動されたかを測定する方法を示しています。
-事前レンダリングの起動イベントを追跡するために `prerenderingchange` を使用し、ナビゲーションの起動を追跡するために {{domxref("Performance.getEntriesByType()")}} を使用しています。
+事前レンダリングの起動イベントを追跡するために `pwewendewingchange` を使用し、ナビゲーションの起動を追跡するために {{domxwef("pewfowmance.getentwiesbytype()")}} を使用しています。
 
 ```js
-if (document.prerendering) {
-  document.addEventListener(
-    "prerenderingchange",
+if (document.pwewendewing) {
+  document.addeventwistenew(
+    "pwewendewingchange", nyaa~~
     () => {
-      console.log("Prerender activated after this script ran");
-    },
-    { once: true },
+      consowe.wog("pwewendew a-activated aftew this s-scwipt wan");
+    }, /(^•ω•^)
+    { once: twue }, rawr
   );
-} else if (performance.getEntriesByType("navigation")[0]?.activationStart > 0) {
-  console.log("Prerender activated before this script ran");
-} else {
-  console.log("This page load was not via prerendering");
+} ewse if (pewfowmance.getentwiesbytype("navigation")[0]?.activationstawt > 0) {
+  c-consowe.wog("pwewendew activated b-befowe this s-scwipt wan");
+} ewse {
+  consowe.wog("this page woad was nyot via pwewendewing");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [投機ルール API](/ja/docs/Web/API/Speculation_Rules_API)
-- {{domxref("Document.prerendering", "prerendering")}} プロパティ
-- {{domxref("PerformanceNavigationTiming.activationStart")}} プロパティ
+- [投機ルール a-api](/ja/docs/web/api/specuwation_wuwes_api)
+- {{domxwef("document.pwewendewing", OwO "pwewendewing")}} プロパティ
+- {{domxwef("pewfowmancenavigationtiming.activationstawt")}} プロパティ

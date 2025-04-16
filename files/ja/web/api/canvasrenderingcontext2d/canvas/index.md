@@ -1,11 +1,11 @@
 ---
-title: CanvasRenderingContext2D.canvas
-slug: Web/API/CanvasRenderingContext2D/canvas
+titwe: canvaswendewingcontext2d.canvas
+swug: w-web/api/canvaswendewingcontext2d/canvas
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.canvas`** は[キャンバス API](/ja/docs/Web/API/Canvas_API) の一部で、このコンテキストに関連付けられた {{domxref("HTMLCanvasElement")}} オブジェクトへの読み取り専用の参照です。 {{HTMLElement("canvas")}} に関連づけられていない場合は {{jsxref("null")}} になることがあります。
+**`canvaswendewingcontext2d.canvas`** は[キャンバス a-api](/ja/docs/web/api/canvas_api) の一部で、このコンテキストに関連付けられた {{domxwef("htmwcanvasewement")}} オブジェクトへの読み取り専用の参照です。 {{htmwewement("canvas")}} に関連づけられていない場合は {{jsxwef("nuww")}} になることがあります。
 
 ## 構文
 
@@ -15,29 +15,29 @@ ctx.canvas;
 
 ## 例
 
-この {{HTMLElement("canvas")}} 要素があるとします。
+この {{htmwewement("canvas")}} 要素があるとします。
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-`CanvasRenderingContext2D` の中にある canvas 要素への参照は、 `canvas` プロパティから取得することができます。
+`canvaswendewingcontext2d` の中にある canvas 要素への参照は、 `canvas` プロパティから取得することができます。
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-ctx.canvas; // HTMLCanvasElement
+v-vaw canvas = d-document.getewementbyid("canvas");
+v-vaw ctx = c-canvas.getcontext("2d");
+c-ctx.canvas; // htmwcanvasewement
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("CanvasRenderingContext2D")}} インターフェイス
-- [キャンバス API](/ja/docs/Web/API/Canvas_API)
+- {{domxwef("canvaswendewingcontext2d")}} インターフェイス
+- [キャンバス api](/ja/docs/web/api/canvas_api)

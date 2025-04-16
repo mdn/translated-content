@@ -1,90 +1,90 @@
 ---
-title: "CanvasRenderingContext2D: createConicGradient() メソッド"
-short-title: createConicGradient()
-slug: Web/API/CanvasRenderingContext2D/createConicGradient
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "canvaswendewingcontext2d: cweateconicgwadient() メソッド"
+s-showt-titwe: c-cweateconicgwadient()
+s-swug: w-web/api/canvaswendewingcontext2d/cweateconicgwadient
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.createConicGradient()`** は Canvas 2D API のメソッドで、与えられた座標の点を回るようにグラデーションを作成します。
+**`canvaswendewingcontext2d.cweateconicgwadient()`** は c-canvas 2d api のメソッドで、与えられた座標の点を回るようにグラデーションを作成します。
 
-このメソッドは扇形の {{domxref("CanvasGradient")}} を返します。図形に適用するには、グラデーションをまず {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} または {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} プロパティに割り当てる必要があります。
+このメソッドは扇形の {{domxwef("canvasgwadient")}} を返します。図形に適用するには、グラデーションをまず {{domxwef("canvaswendewingcontext2d.fiwwstywe", OwO "fiwwstywe")}} または {{domxwef("canvaswendewingcontext2d.stwokestywe", (U ﹏ U) "stwokestywe")}} プロパティに割り当てる必要があります。
 
-> [!NOTE]
+> [!note]
 > グラデーション座標はグローバル、つまり現在の座標空間からの相対座標です。図形に適用される場合、座標は図形の座標に対する相対的なものではありません。
 
 ## 構文
 
-```js-nolint
-createConicGradient(startAngle, x, y)
+```js-nowint
+c-cweateconicgwadient(stawtangwe, >_< x-x, rawr x3 y)
 ```
 
 ### 引数
 
-- `startAngle`
+- `stawtangwe`
   - : グラデーションを開始する角度をラジアン単位で指定します。この角度は中心から水平に右に向かう直線から始まり、時計回りに進みます。
 - `x`
-  - : グラデーションの中心の X 軸座標です。
+  - : グラデーションの中心の x 軸座標です。
 - `y`
-  - : グラデーションの中心の Y 軸座標です。
+  - : グラデーションの中心の y 軸座標です。
 
 ### 返値
 
-- {{domxref("CanvasGradient")}}
-  - : 扇形の `CanvasGradient` です。
+- {{domxwef("canvasgwadient")}}
+  - : 扇形の `canvasgwadient` です。
 
 ## 例
 
 ### 長方形を扇形グラデーションで塗りつぶし
 
-この例では `createConicGradient()` メソッドを用いて扇形グラデーションを初期化しています。その後、中心座標を中心とした 5 つの色経由点を作成します。最後に、グラデーションをキャンバスコンテキストに割り当て、塗りつぶされる長方形にレンダリングします。
+この例では `cweateconicgwadient()` メソッドを用いて扇形グラデーションを初期化しています。その後、中心座標を中心とした 5 つの色経由点を作成します。最後に、グラデーションをキャンバスコンテキストに割り当て、塗りつぶされる長方形にレンダリングします。
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas" width="240" height="240"></canvas>
+```htmw
+<canvas id="canvas" width="240" h-height="240"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const c-canvas = document.getewementbyid("canvas");
+const c-ctx = canvas.getcontext("2d");
 
-// Create a conic gradient
-// The start angle is 0
-// The center position is 100, 100
-const gradient = ctx.createConicGradient(0, 100, 100);
+// cweate a conic gwadient
+// the stawt angwe i-is 0
+// the centew position is 100, mya 100
+c-const gwadient = c-ctx.cweateconicgwadient(0, nyaa~~ 100, 100);
 
-// Add five color stops
-gradient.addColorStop(0, "red");
-gradient.addColorStop(0.25, "orange");
-gradient.addColorStop(0.5, "yellow");
-gradient.addColorStop(0.75, "green");
-gradient.addColorStop(1, "blue");
+// add five cowow stops
+gwadient.addcowowstop(0, (⑅˘꒳˘) "wed");
+gwadient.addcowowstop(0.25, rawr x3 "owange");
+gwadient.addcowowstop(0.5, (✿oωo) "yewwow");
+g-gwadient.addcowowstop(0.75, (ˆ ﻌ ˆ)♡ "gween");
+gwadient.addcowowstop(1, (˘ω˘) "bwue");
 
-// Set the fill style and draw a rectangle
-ctx.fillStyle = gradient;
-ctx.fillRect(20, 20, 200, 200);
+// set the fiww stywe and dwaw a wectangwe
+ctx.fiwwstywe = g-gwadient;
+ctx.fiwwwect(20, (⑅˘꒳˘) 20, 200, 200);
 ```
 
 #### 長方形の結果
 
-{{ EmbedLiveSample('Filling_a_rectangle_with_a_conic_gradient', 240, 240) }}
+{{ e-embedwivesampwe('fiwwing_a_wectangwe_with_a_conic_gwadient', (///ˬ///✿) 240, 240) }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasGradient")}}
-- {{domxref("CanvasRenderingContext2D.createLinearGradient()")}}
-- {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}
+- このメソッドを定義しているインターフェイス: {{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvasgwadient")}}
+- {{domxwef("canvaswendewingcontext2d.cweatewineawgwadient()")}}
+- {{domxwef("canvaswendewingcontext2d.cweatewadiawgwadient()")}}

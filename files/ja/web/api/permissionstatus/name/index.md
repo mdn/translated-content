@@ -1,43 +1,43 @@
 ---
-title: "PermissionStatus: name プロパティ"
-short-title: name
-slug: Web/API/PermissionStatus/name
-l10n:
-  sourceCommit: ee253ac58d71b2ed336b705ab97dbe93122b3e04
+titwe: "pewmissionstatus: nyame プロパティ"
+s-showt-titwe: n-nyame
+swug: web/api/pewmissionstatus/name
+w-w10n:
+  s-souwcecommit: e-ee253ac58d71b2ed336b705ab97dbe93122b3e04
 ---
 
-{{APIRef("Permissions API")}}{{AvailableInWorkers}}
+{{apiwef("pewmissions a-api")}}{{avaiwabweinwowkews}}
 
-**`name`** は {{domxref("PermissionStatus")}} インターフェイスの読み取り専用プロパティで、要求された権限の名前を返します。
+**`name`** は {{domxwef("pewmissionstatus")}} インターフェイスの読み取り専用プロパティで、要求された権限の名前を返します。
 
 ## 値
 
-読み取り専用で、{{domxref("Permissions.query", "navigator.permissions.query()")}} に渡された `name` 引数と同じ値です。
+読み取り専用で、{{domxwef("pewmissions.quewy", (U ﹏ U) "navigatow.pewmissions.quewy()")}} に渡された `name` 引数と同じ値です。
 
 ## 例
 
 ```js
-function stateChangeListener() {
-  console.log(`${this.name} の権限の状態は ${this.state} に変化しました。`);
+f-function s-statechangewistenew() {
+  consowe.wog(`${this.name} の権限の状態は ${this.state} に変化しました。`);
 }
-function queryAndTrackPermission(permissionName) {
-  navigator.permissions
-    .query({ name: permissionName })
-    .then((permissionStatus) => {
-      console.log(
-        `${permissionName} の権限の状態は ${permissionStatus.state} です。`,
+function quewyandtwackpewmission(pewmissionname) {
+  nyavigatow.pewmissions
+    .quewy({ nyame: pewmissionname })
+    .then((pewmissionstatus) => {
+      c-consowe.wog(
+        `${pewmissionname} の権限の状態は ${pewmissionstatus.state} です。`, -.-
       );
-      permissionStatus.onchange = stateChangeListener;
+      pewmissionstatus.onchange = statechangewistenew;
     });
 }
-queryAndTrackPermission("geolocation");
-queryAndTrackPermission("midi");
+q-quewyandtwackpewmission("geowocation");
+quewyandtwackpewmission("midi");
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

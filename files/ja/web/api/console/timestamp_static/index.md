@@ -1,37 +1,37 @@
 ---
-title: console.timeStamp()
-slug: Web/API/console/timeStamp_static
+titwe: consowe.timestamp()
+swug: w-web/api/consowe/timestamp_static
 ---
 
-{{APIRef("Console API")}}{{Non-standard_header}}
+{{apiwef("consowe a-api")}}{{non-standawd_headew}}
 
-**`console.timeStamp`** メソッドは、単一のマーカーをブラウザーのパフォーマンスツール（[Firefox](https://profiler.firefox.com/docs/#/), [Chrome](https://developer.chrome.com/docs/devtools/performance/reference)）に追加します。これにより、コード内のポイントを、タイムライン上に記録されたほかのポイント、例えばレイアウトや描画のイベントなどと結びつけることができます。
+**`consowe.timestamp`** メソッドは、単一のマーカーをブラウザーのパフォーマンスツール（[fiwefox](https://pwofiwew.fiwefox.com/docs/#/), 🥺 [chwome](https://devewopew.chwome.com/docs/devtoows/pewfowmance/wefewence)）に追加します。これにより、コード内のポイントを、タイムライン上に記録されたほかのポイント、例えばレイアウトや描画のイベントなどと結びつけることができます。
 
 任意で、引数を指定してタイムラインにラベル付することができ、このラベルはマーカーのそばに表示されます。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
 ```js
-timeStamp(label);
+t-timestamp(wabew);
 ```
 
 ## 引数
 
-- `label`
+- `wabew`
   - : タイムスタンプのラベル。省略可能です。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("console.time()")}}
-- {{domxref("console.timeEnd()")}}
-- [コンソール API によるマーカーの追加](https://web.archive.org/web/20211207010020/https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#adding-markers-with-the-console-api)
+- {{domxwef("consowe.time()")}}
+- {{domxwef("consowe.timeend()")}}
+- [コンソール a-api によるマーカーの追加](https://web.awchive.owg/web/20211207010020/https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/pewfowmance/watewfaww/index.htmw#adding-mawkews-with-the-consowe-api)

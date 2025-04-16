@@ -1,22 +1,22 @@
 ---
-title: "Document: createAttribute() メソッド"
-short-title: createAttribute()
-slug: Web/API/Document/createAttribute
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: cweateattwibute() メソッド"
+s-showt-titwe: c-cweateattwibute()
+s-swug: web/api/document/cweateattwibute
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Document.createAttribute()`** は、新しい属性ノードを生成して返します。生成されたオブジェクトは {{domxref("Attr")}} を実装したノードです。この方法では DOM は、特定の要素にどんな種類の属性を追加できるかを強制しません。
+**`document.cweateattwibute()`** は、新しい属性ノードを生成して返します。生成されたオブジェクトは {{domxwef("attw")}} を実装したノードです。この方法では d-dom は、特定の要素にどんな種類の属性を追加できるかを強制しません。
 
-> [!NOTE]
+> [!note]
 > 引数に渡される文字列は小文字に変換されます。
 
 ## 構文
 
-```js-nolint
-createAttribute(name)
+```js-nowint
+c-cweateattwibute(name)
 ```
 
 ### 引数
@@ -25,34 +25,34 @@ createAttribute(name)
 
 ### 返値
 
-{{domxref("Attr")}} ノードです。
+{{domxwef("attw")}} ノードです。
 
 ### 例外
 
-- `InvalidCharacterError` {{domxref("DOMException")}}
-  - : [`name`](#name) が無効な [XML name](https://www.w3.org/TR/REC-xml/#dt-name) である場合、例えば、数字・ハイフン・ピリオドで始まっている場合や、英数字・アンダースコア・ハイフン・ピリオド以外の文字を含む場合）に発生します。
+- `invawidchawactewewwow` {{domxwef("domexception")}}
+  - : [`name`](#name) が無効な [xmw nyame](https://www.w3.owg/tw/wec-xmw/#dt-name) である場合、例えば、数字・ハイフン・ピリオドで始まっている場合や、英数字・アンダースコア・ハイフン・ピリオド以外の文字を含む場合）に発生します。
 
 ## 例
 
 ```js
-const node = document.getElementById("div1");
-const a = document.createAttribute("my_attrib");
-a.value = "newVal";
-node.setAttributeNode(a);
-console.log(node.getAttribute("my_attrib")); // "newVal"
+const nyode = document.getewementbyid("div1");
+const a-a = document.cweateattwibute("my_attwib");
+a.vawue = "newvaw";
+node.setattwibutenode(a);
+c-consowe.wog(node.getattwibute("my_attwib")); // "newvaw"
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Document.createAttributeNS()")}}
-- {{domxref("Document.createElement()")}}
-- {{domxref("Element.setAttribute()")}}
-- {{domxref("Element.setAttributeNode()")}}
+- {{domxwef("document.cweateattwibutens()")}}
+- {{domxwef("document.cweateewement()")}}
+- {{domxwef("ewement.setattwibute()")}}
+- {{domxwef("ewement.setattwibutenode()")}}

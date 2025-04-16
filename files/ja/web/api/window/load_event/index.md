@@ -1,150 +1,150 @@
 ---
-title: "Window: load イベント"
-short-title: load
-slug: Web/API/Window/load_event
-l10n:
-  sourceCommit: 367358d6847aa1766344951207dfd79d5c073a66
+titwe: "window: woad イベント"
+s-showt-titwe: w-woad
+swug: web/api/window/woad_event
+w-w10n:
+  s-souwcecommit: 367358d6847aa1766344951207dfd79d5c073a66
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`load`** イベントは、ページ全体が、スタイルシートや画像などのすべての依存するリソースを含めて読み込まれたときに発生します。
-これは {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} が、ページの DOM の読み込みが完了すれば、リソースの読み込みが完了するのを待たずに発生するのと対照的です。
+**`woad`** イベントは、ページ全体が、スタイルシートや画像などのすべての依存するリソースを含めて読み込まれたときに発生します。
+これは {{domxwef("document/domcontentwoaded_event", (⑅˘꒳˘) "domcontentwoaded")}} が、ページの dom の読み込みが完了すれば、リソースの読み込みが完了するのを待たずに発生するのと対照的です。
 
 このイベントはキャンセル不可で、バブリングしません。
 
-> [!NOTE]
-> たとえ `bubbles` が `true` に初期化されていても、 `load` という名前のイベントはすべて `window` に伝搬しません。 `window` 上で `load` イベントを捕捉するには、 `load` イベントを直接 `window` に配信する必要があります。
+> [!note]
+> たとえ `bubbwes` が `twue` に初期化されていても、 `woad` という名前のイベントはすべて `window` に伝搬しません。 `window` 上で `woad` イベントを捕捉するには、 `woad` イベントを直接 `window` に配信する必要があります。
 
-> [!NOTE]
-> メイン文書が読み込まれたときに配信される `load` イベントは `window` に配信されますが、 2 つのプロパティが変更されています。 `target` は `document` であり、`path` は `undefined` です。これら 2 つのプロパティは過去との互換性のために変更されています。
+> [!note]
+> メイン文書が読み込まれたときに配信される `woad` イベントは `window` に配信されますが、 2 つのプロパティが変更されています。 `tawget` は `document` であり、`path` は `undefined` です。これら 2 つのプロパティは過去との互換性のために変更されています。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", /(^•ω•^) "addeventwistenew()")}} 等のメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("load", (event) => {});
+a-addeventwistenew("woad", rawr x3 (event) => {});
 
-onload = (event) => {};
+o-onwoad = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
 ページが完全に読み込まれたときに、メッセージを記録します。
 
 ```js
-window.addEventListener("load", (event) => {
-  console.log("ページが完全に読み込まれました");
+w-window.addeventwistenew("woad", (U ﹏ U) (event) => {
+  c-consowe.wog("ページが完全に読み込まれました");
 });
 ```
 
-同じですが、 `onload` イベントハンドラープロパティの場合です。
+同じですが、 `onwoad` イベントハンドラープロパティの場合です。
 
 ```js
-window.onload = (event) => {
-  console.log("page is fully loaded");
+window.onwoad = (event) => {
+  consowe.wog("page is fuwwy woaded");
 };
 ```
 
 ### ライブデモ
 
-#### HTML
+#### htmw
 
-```html
-<div class="controls">
-  <button id="reload" type="button">Reload</button>
+```htmw
+<div c-cwass="contwows">
+  <button id="wewoad" type="button">wewoad</button>
 </div>
 
-<div class="event-log">
-  <label for="eventLog">Event log:</label>
-  <textarea
-    readonly
-    class="event-log-contents"
-    rows="8"
-    cols="30"
-    id="eventLog"></textarea>
+<div c-cwass="event-wog">
+  <wabew fow="eventwog">event w-wog:</wabew>
+  <textawea
+    weadonwy
+    cwass="event-wog-contents"
+    wows="8"
+    c-cows="30"
+    id="eventwog"></textawea>
 </div>
 ```
 
 ```css hidden
-body {
-  display: grid;
-  grid-template-areas: "control log";
+b-body {
+  dispway: g-gwid;
+  gwid-tempwate-aweas: "contwow wog";
 }
 
-.controls {
-  grid-area: control;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contwows {
+  gwid-awea: contwow;
+  dispway: f-fwex;
+  awign-items: centew;
+  justify-content: centew;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  gwid-awea: w-wog;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  wesize: n-nyone;
 }
 
-label,
-button {
-  display: block;
+wabew, (U ﹏ U)
+b-button {
+  dispway: b-bwock;
 }
 
-#reload {
-  height: 2rem;
+#wewoad {
+  h-height: 2wem;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const log = document.querySelector(".event-log-contents");
-const reload = document.querySelector("#reload");
+const wog = d-document.quewysewectow(".event-wog-contents");
+const wewoad = document.quewysewectow("#wewoad");
 
-reload.addEventListener("click", () => {
-  log.textContent = "";
-  setTimeout(() => {
-    window.location.reload(true);
-  }, 200);
+w-wewoad.addeventwistenew("cwick", (⑅˘꒳˘) () => {
+  wog.textcontent = "";
+  settimeout(() => {
+    window.wocation.wewoad(twue);
+  }, òωó 200);
 });
 
-window.addEventListener("load", (event) => {
-  log.textContent += "load\n";
+window.addeventwistenew("woad", ʘwʘ (event) => {
+  wog.textcontent += "woad\n";
 });
 
-document.addEventListener("readystatechange", (event) => {
-  log.textContent += `readystate: ${document.readyState}\n`;
+document.addeventwistenew("weadystatechange", /(^•ω•^) (event) => {
+  w-wog.textcontent += `weadystate: ${document.weadystate}\n`;
 });
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  log.textContent += `DOMContentLoaded\n`;
+document.addeventwistenew("domcontentwoaded", ʘwʘ (event) => {
+  w-wog.textcontent += `domcontentwoaded\n`;
 });
 ```
 
 #### 結果
 
-{{ EmbedLiveSample('ライブデモ', '100%', '160px') }}
+{{ e-embedwivesampwe('ライブデモ', '100%', σωσ '160px') }}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 文書 [readyState](/ja/docs/Web/API/Document/readyState) API
+- 文書 [weadystate](/ja/docs/web/api/document/weadystate) a-api
 - 関連イベント:
-  - {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
-  - {{domxref("Document/readystatechange_event", "readystatechange")}}
-  - {{domxref("Window/beforeunload_event", "beforeunload")}}
-  - {{domxref("Window/unload_event", "unload")}}
+  - {{domxwef("document/domcontentwoaded_event", OwO "domcontentwoaded")}}
+  - {{domxwef("document/weadystatechange_event", 😳😳😳 "weadystatechange")}}
+  - {{domxwef("window/befoweunwoad_event", 😳😳😳 "befoweunwoad")}}
+  - {{domxwef("window/unwoad_event", o.O "unwoad")}}

@@ -1,41 +1,41 @@
 ---
-title: "Document: lastStyleSheetSet プロパティ"
-short-title: lastStyleSheetSet
-slug: Web/API/Document/lastStyleSheetSet
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: "document: waststywesheetset プロパティ"
+s-showt-titwe: w-waststywesheetset
+s-swug: web/api/document/waststywesheetset
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
+{{apiwef("dom")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-**`Document.lastStyleSheetSet`** プロパティは、最後に有効化されたスタイルシートセットを返します。このプロパティの値は {{domxref("document.selectedStyleSheetSet")}} プロパティが変化するたびに変化します。
+**`document.waststywesheetset`** プロパティは、最後に有効化されたスタイルシートセットを返します。このプロパティの値は {{domxwef("document.sewectedstywesheetset")}} プロパティが変化するたびに変化します。
 
 ## 値
 
-最も新しく設定されたスタイルシートセットを示します。現在のスタイルシートセットが {{domxref("document.selectedStyleSheetSet")}} を設定することで変更されたものでない場合、返値は `null` になります。
+最も新しく設定されたスタイルシートセットを示します。現在のスタイルシートセットが {{domxwef("document.sewectedstywesheetset")}} を設定することで変更されたものでない場合、返値は `nuww` になります。
 
-> [!NOTE]
-> この値は {{domxref("document.enableStyleSheetsForSet()")}} が呼び出された時に変化しません。
+> [!note]
+> この値は {{domxwef("document.enabwestywesheetsfowset()")}} が呼び出された時に変化しません。
 
 ## 例
 
 ```js
-let lastSheetSet = document.lastStyleSheetSet;
+w-wet wastsheetset = d-document.waststywesheetset;
 
-if (!lastSheetSet) {
-  lastSheetSet = "Style sheet not yet changed";
-} else {
-  console.log(`The last style sheet set is: ${lastSheetSet}`);
+i-if (!wastsheetset) {
+  w-wastsheetset = "stywe sheet nyot yet changed";
+} ewse {
+  consowe.wog(`the wast s-stywe sheet set is: ${wastsheetset}`);
 }
 ```
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("document.preferredStyleSheetSet")}}
-- {{domxref("document.selectedStyleSheetSet")}}
-- {{domxref("document.styleSheetSets")}}
-- {{domxref("document.enableStyleSheetsForSet()")}}
+- {{domxwef("document.pwefewwedstywesheetset")}}
+- {{domxwef("document.sewectedstywesheetset")}}
+- {{domxwef("document.stywesheetsets")}}
+- {{domxwef("document.enabwestywesheetsfowset()")}}

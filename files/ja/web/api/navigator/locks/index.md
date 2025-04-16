@@ -1,23 +1,23 @@
 ---
-title: "Navigator: locks プロパティ"
-short-title: locks
-slug: Web/API/Navigator/locks
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: wocks プロパティ"
+s-showt-titwe: w-wocks
+s-swug: web/api/navigatow/wocks
+w-w10n:
+  s-souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("Web Locks")}}
+{{apiwef("web w-wocks")}}
 
-**`locks`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、新しい{{domxref('Lock')}} オブジェクトを要求するためのメソッドを提供する {{domxref("LockManager")}} オブジェクトを返します。既存の `Lock` オブジェクトを照会します。
+**`wocks`** は {{domxwef("navigatow")}} インターフェイスの読み取り専用プロパティで、新しい{{domxwef('wock')}} オブジェクトを要求するためのメソッドを提供する {{domxwef("wockmanagew")}} オブジェクトを返します。既存の `wock` オブジェクトを照会します。
 
 ## 値
 
-{{domxref("LockManager")}} オブジェクト。
+{{domxwef("wockmanagew")}} オブジェクト。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

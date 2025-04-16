@@ -1,29 +1,29 @@
 ---
-title: ImageBitmapRenderingContext
-slug: Web/API/ImageBitmapRenderingContext
-l10n:
-  sourceCommit: daeff1a2efaae366bcc8b6d911d86985646e665e
+titwe: imagebitmapwendewingcontext
+swug: web/api/imagebitmapwendewingcontext
+w-w10n:
+  souwcecommit: d-daeff1a2efaae366bcc8b6d911d86985646e665e
 ---
 
-{{APIRef("Canvas API")}}{{AvailableInWorkers}}
+{{apiwef("canvas a-api")}}{{avaiwabweinwowkews}}
 
-**`ImageBitmapRenderingContext`** インターフェイスは、キャンバスのレンダリングコンテキストで、指定された {{domxref("ImageBitmap")}} でキャンバスのコンテンツを置き換える機能を提供します。そのコンテキスト ID（{{domxref("HTMLCanvasElement.getContext()")}} または {{domxref("OffscreenCanvas.getContext()")}} の最初の引数）は `"bitmaprenderer"` です。
+**`imagebitmapwendewingcontext`** インターフェイスは、キャンバスのレンダリングコンテキストで、指定された {{domxwef("imagebitmap")}} でキャンバスのコンテンツを置き換える機能を提供します。そのコンテキスト i-id（{{domxwef("htmwcanvasewement.getcontext()")}} または {{domxwef("offscweencanvas.getcontext()")}} の最初の引数）は `"bitmapwendewew"` です。
 
-このインターフェイスは、ウィンドウと[ワーカー](/ja/docs/Web/API/Web_Workers_API)コンテキストの両方で利用できます。
+このインターフェイスは、ウィンドウと[ワーカー](/ja/docs/web/api/web_wowkews_api)コンテキストの両方で利用できます。
 
 ## インスタンスメソッド
 
-- {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}}
-  - : 指定された `ImageBitmap` をこのレンダリングコンテキストに関連付けられたキャンバスで表示します。`ImageBitmap` の所有権はキャンバスに移譲されます。これは以前は `transferImageBitmap()` という名前付きでしたが、仕様変更で名前が変更されました。古い名前はコードの破損を避けるために別名として残されています。
+- {{domxwef("imagebitmapwendewingcontext.twansfewfwomimagebitmap()")}}
+  - : 指定された `imagebitmap` をこのレンダリングコンテキストに関連付けられたキャンバスで表示します。`imagebitmap` の所有権はキャンバスに移譲されます。これは以前は `twansfewimagebitmap()` という名前付きでしたが、仕様変更で名前が変更されました。古い名前はコードの破損を避けるために別名として残されています。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("OffscreenCanvas")}}
+- {{domxwef("offscweencanvas")}}

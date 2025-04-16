@@ -1,55 +1,55 @@
 ---
-title: "WorkerGlobalScope: atob() メソッド"
-short-title: atob()
-slug: Web/API/WorkerGlobalScope/atob
-l10n:
-  sourceCommit: dd3048a4eb74a53395c9a2015baefaa46ef77a56
+titwe: "wowkewgwobawscope: atob() メソッド"
+s-showt-titwe: a-atob()
+swug: web/api/wowkewgwobawscope/atob
+w-w10n:
+  s-souwcecommit: d-dd3048a4eb74a53395c9a2015baefaa46ef77a56
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw dom")}}
 
-**`atob()`** は {{domxref("WorkerGlobalScope")}} インターフェイスのメソッドで、 {{glossary("Base64")}} エンコーディングでエンコードされたデータの文字列をデコードします。 {{domxref("WorkerGlobalScope.btoa()")}} メソッドを使用して、通信に問題が発生する可能性のあるデータをエンコードして送信し、送信した後に `atob()` メソッドを使用して再度デコードすることができます。例えば、{{Glossary("ASCII")}} の 0 から 31 までのコードような制御文字をエンコードして送信し、デコードすることができます。
+**`atob()`** は {{domxwef("wowkewgwobawscope")}} インターフェイスのメソッドで、 {{gwossawy("base64")}} エンコーディングでエンコードされたデータの文字列をデコードします。 {{domxwef("wowkewgwobawscope.btoa()")}} メソッドを使用して、通信に問題が発生する可能性のあるデータをエンコードして送信し、送信した後に `atob()` メソッドを使用して再度デコードすることができます。例えば、{{gwossawy("ascii")}} の 0 から 31 までのコードような制御文字をエンコードして送信し、デコードすることができます。
 
-任意の Unicode 文字列で使用する場合は、用語集の {{Glossary("Base64")}} の項目の 「Unicode 問題」を参照してください。
+任意の u-unicode 文字列で使用する場合は、用語集の {{gwossawy("base64")}} の項目の 「unicode 問題」を参照してください。
 
 ## 構文
 
-```js-nolint
-atob(encodedData)
+```js-nowint
+a-atob(encodeddata)
 ```
 
 ### 引数
 
-- `encodedData`
-  - : base64 でエンコードされたデータが入っているバイナリー文字列（すなわち、文字列のそれぞれの文字がバイナリーデータの各バイトとして扱われる文字列）です。
+- `encodeddata`
+  - : b-base64 でエンコードされたデータが入っているバイナリー文字列（すなわち、文字列のそれぞれの文字がバイナリーデータの各バイトとして扱われる文字列）です。
 
 ### 返値
 
-`encodedData` をデコードしたデータを含む ASCII 文字列です。
+`encodeddata` をデコードしたデータを含む ascii 文字列です。
 
 ### 例外
 
-- `InvalidCharacterError` {{domxref("DOMException")}}
-  - : `encodedData` が妥当な base64 ではない場合に発行されます。
+- `invawidchawactewewwow` {{domxwef("domexception")}}
+  - : `encodeddata` が妥当な base64 ではない場合に発行されます。
 
 ## 例
 
 ```js
-const encodedData = self.btoa("Hello, world"); // 文字列をエンコード
-const decodedData = self.atob(encodedData); // 文字列をデコード
+const encodeddata = sewf.btoa("hewwo, :3 wowwd"); // 文字列をエンコード
+c-const decodeddata = sewf.atob(encodeddata); // 文字列をデコード
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`atob` のポリフィル](https://github.com/zloirock/core-js#base64-utility-methods) は [`core-js`](https://github.com/zloirock/core-js) にあります
-- [`data` URL](/ja/docs/Web/URI/Reference/Schemes/data)
-- {{domxref("Window.atob()")}}: 同じメソッドですが、ウィンドウのスコープのものです。
-- {{domxref("WorkerGlobalScope.btoa()")}}
+- [`atob` のポリフィル](https://github.com/zwoiwock/cowe-js#base64-utiwity-methods) は [`cowe-js`](https://github.com/zwoiwock/cowe-js) にあります
+- [`data` u-uww](/ja/docs/web/uwi/wefewence/schemes/data)
+- {{domxwef("window.atob()")}}: 同じメソッドですが、ウィンドウのスコープのものです。
+- {{domxwef("wowkewgwobawscope.btoa()")}}

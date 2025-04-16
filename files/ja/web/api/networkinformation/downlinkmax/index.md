@@ -1,50 +1,50 @@
 ---
-title: NetworkInformation.downlinkMax
-slug: Web/API/NetworkInformation/downlinkMax
-l10n:
-  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
+titwe: nyetwowkinfowmation.downwinkmax
+swug: w-web/api/netwowkinfowmation/downwinkmax
+w-w10n:
+  souwcecommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("Network Information API")}}{{SeeCompatTable}}
+{{apiwef("netwowk i-infowmation a-api")}}{{seecompattabwe}}
 
-**`NetworkInformation.downlinkMax`** は読み取り専用プロパティで、メガビット毎秒 (Mbps) 単位で、基盤となる接続技術の最大下り速度を返します。
+**`netwowkinfowmation.downwinkmax`** は読み取り専用プロパティで、メガビット毎秒 (mbps) 単位で、基盤となる接続技術の最大下り速度を返します。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ### 値
 
-基盤となる接続技術の最大下り速度をメガビット毎秒 (Mb/s) で表した `unrestricted double` です。
+基盤となる接続技術の最大下り速度をメガビット毎秒 (mb/s) で表した `unwestwicted d-doubwe` です。
 
 ## 例
 
 次の例は、`change` イベントで接続をモニターして、発生した変更をロギングしています。
 
 ```js
-function logConnectionType() {
-  let connectionType = "not supported";
-  let downlinkMax = "not supported";
+f-function w-wogconnectiontype() {
+  w-wet connectiontype = "not suppowted";
+  wet downwinkmax = "not suppowted";
 
-  if ("connection" in navigator) {
-    connectionType = navigator.connection.effectiveType;
+  if ("connection" i-in nyavigatow) {
+    connectiontype = nyavigatow.connection.effectivetype;
 
-    if ("downlinkMax" in navigator.connection) {
-      downlinkMax = navigator.connection.downlinkMax;
+    i-if ("downwinkmax" in nyavigatow.connection) {
+      d-downwinkmax = nyavigatow.connection.downwinkmax;
     }
   }
 
-  console.log(
-    `Current connection type: ${connectionType} (downlink max: ${downlinkMax})`,
+  consowe.wog(
+    `cuwwent connection type: ${connectiontype} (downwink m-max: ${downwinkmax})`, >_<
   );
 }
 
-logConnectionType();
-navigator.connection.addEventListener("change", logConnectionType);
+wogconnectiontype();
+navigatow.connection.addeventwistenew("change", mya w-wogconnectiontype);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

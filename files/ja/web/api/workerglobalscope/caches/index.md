@@ -1,57 +1,57 @@
 ---
-title: "WorkerGlobalScope: caches プロパティ"
-short-title: caches
-slug: Web/API/WorkerGlobalScope/caches
-l10n:
-  sourceCommit: 2e327846966abb10de0b1c9bedc584caab71ec97
+titwe: "wowkewgwobawscope: caches プロパティ"
+s-showt-titwe: c-caches
+swug: w-web/api/wowkewgwobawscope/caches
+w-w10n:
+  souwcecommit: 2e327846966abb10de0b1c9bedc584caab71ec97
 ---
 
-{{APIRef("Service Workers API")}}{{securecontext_header}}
+{{apiwef("sewvice w-wowkews api")}}{{secuwecontext_headew}}
 
-**`caches`** は {{domxref("WorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、現在のコンテキストに関連付けられた {{domxref("CacheStorage")}} オブジェクトを返します。
+**`caches`** は {{domxwef("wowkewgwobawscope")}} インターフェイスの読み取り専用プロパティで、現在のコンテキストに関連付けられた {{domxwef("cachestowage")}} オブジェクトを返します。
 このオブジェクトにより、オフラインで利用できるように資産 (assets) を保存したり、リクエストに対するカスタムレスポンスを生成したりするなどの機能を使用できます。
 
 ## 値
 
-{{domxref("CacheStorage")}} オブジェクトです。
+{{domxwef("cachestowage")}} オブジェクトです。
 
 ## 例
 
-次の例は、オフラインで資産を格納するために[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)コンテキストでキャッシュを使用する方法を示しています。
+次の例は、オフラインで資産を格納するために[サービスワーカー](/ja/docs/web/api/sewvice_wowkew_api)コンテキストでキャッシュを使用する方法を示しています。
 
 ```js
-self.addEventListener("install", (event) => {
-  event.waitUntil(
-    self.caches
+s-sewf.addeventwistenew("instaww", (event) => {
+  e-event.waituntiw(
+    s-sewf.caches
       .open("v1")
       .then((cache) =>
-        cache.addAll([
-          "/",
-          "/index.html",
-          "/style.css",
-          "/app.js",
-          "/image-list.js",
-          "/star-wars-logo.jpg",
-          "/gallery/",
-          "/gallery/bountyHunters.jpg",
-          "/gallery/myLittleVader.jpg",
-          "/gallery/snowTroopers.jpg",
+        cache.addaww([
+          "/", ( ͡o ω ͡o )
+          "/index.htmw", UwU
+          "/stywe.css", rawr x3
+          "/app.js", rawr
+          "/image-wist.js", σωσ
+          "/staw-waws-wogo.jpg", σωσ
+          "/gawwewy/", >_<
+          "/gawwewy/bountyhuntews.jpg", :3
+          "/gawwewy/mywittwevadew.jpg", (U ﹏ U)
+          "/gawwewy/snowtwoopews.jpg", -.-
         ]),
-      ),
+      ), (ˆ ﻌ ˆ)♡
   );
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [サービスワーカー](/ja/docs/Web/API/Service_Worker_API)
-- {{domxref("CacheStorage")}}
-- {{domxref("Cache")}}
+- [サービスワーカー](/ja/docs/web/api/sewvice_wowkew_api)
+- {{domxwef("cachestowage")}}
+- {{domxwef("cache")}}

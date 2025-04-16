@@ -1,14 +1,14 @@
 ---
-title: "MutationEvent: newValue プロパティ"
-short-title: newValue
-slug: Web/API/MutationEvent/newValue
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "mutationevent: nyewvawue プロパティ"
+s-showt-titwe: n-nyewvawue
+swug: w-web/api/mutationevent/newvawue
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}
+{{apiwef("ui e-events")}}{{depwecated_headew}}
 
-**`newValue`** は {{domxref("MutationEvent")}} インターフェイスの読み取り専用プロパティで、文字列を返します。 `DOMAttrModified` イベントでは、 {{domxref("Attr")}} ノードの新しい値を表します。 `DOMCharacterDataModified` イベントでは、{{domxref("CharacterData")}} ノードの新しい値を表します。それ以外の場合は、空文字列 (`""`) を返します。
+**`newvawue`** は {{domxwef("mutationevent")}} インターフェイスの読み取り専用プロパティで、文字列を返します。 `domattwmodified` イベントでは、 {{domxwef("attw")}} ノードの新しい値を表します。 `domchawactewdatamodified` イベントでは、{{domxwef("chawactewdata")}} ノードの新しい値を表します。それ以外の場合は、空文字列 (`""`) を返します。
 
 ## 値
 
@@ -17,19 +17,19 @@ l10n:
 ## 例
 
 ```js
-element.addEventListener(
-  "DOMAttrModified",
+e-ewement.addeventwistenew(
+  "domattwmodified", ( ͡o ω ͡o )
   (event) => {
-    console.log(event.newValue);
+    c-consowe.wog(event.newvawue);
   },
-  false,
+  fawse, UwU
 );
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

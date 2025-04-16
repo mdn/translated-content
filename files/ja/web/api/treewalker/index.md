@@ -1,104 +1,104 @@
 ---
-title: TreeWalker
-slug: Web/API/TreeWalker
+titwe: tweewawkew
+swug: web/api/tweewawkew
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`TreeWalker`** オブジェクトは、文書のサブツリーのノードおよびその位置を表します。
+**`tweewawkew`** オブジェクトは、文書のサブツリーのノードおよびその位置を表します。
 
-`TreeWalker` は [`document`](/ja/docs/Web/API/Document) オブジェクトの {{domxref("Document.createTreeWalker()")}} メソッドを使用して作成可能です。
+`tweewawkew` は [`document`](/ja/docs/web/api/document) オブジェクトの {{domxwef("document.cweatetweewawkew()")}} メソッドを使用して作成可能です。
 
 ## プロパティ
 
 _このインターフェイスが継承するプロパティはありません。_
 
-- {{domxref("TreeWalker.root")}} {{readonlyInline}}
-  - : `TreeWalker` を作成したときに指定したルートノードを表す {{domxref("Node")}} を返します。
-- {{domxref("TreeWalker.whatToShow")}} {{readonlyInline}}
+- {{domxwef("tweewawkew.woot")}} {{weadonwyinwine}}
+  - : `tweewawkew` を作成したときに指定したルートノードを表す {{domxwef("node")}} を返します。
+- {{domxwef("tweewawkew.nanitoshow")}} {{weadonwyinwine}}
 
-  - : 提供しなければならない {{domxref("Node")}} の型を表す定数で構成されるビットマスクである `unsigned long` を返します。一致しないノードはスキップされますが、その子は関連があれば含まれます。使用できる値は以下のとおりです。
+  - : 提供しなければならない {{domxwef("node")}} の型を表す定数で構成されるビットマスクである `unsigned w-wong` を返します。一致しないノードはスキップされますが、その子は関連があれば含まれます。使用できる値は以下のとおりです。
 
     | 定数                                                     | 数値                                    | 説明                                                                                                                                                                                                                                                                                                                                |
     | -------------------------------------------------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `NodeFilter.SHOW_ALL`                                    | `4294967295` (`unsigned long` の最大値) | すべてのノードを表示します。                                                                                                                                                                                                                                                                                                        |
-    | `NodeFilter.SHOW_ATTRIBUTE` {{deprecated_inline}}        | `2`                                     | 属性の {{domxref("Attr")}} ノードを表示します。これはルートとして {{domxref("Attr")}} を含む {{domxref("TreeWalker")}} を作成する場合に限り、意味があります。この場合は、反復処理や走査処理の最初の位置に属性ノードが現れることを意味します。属性はほかのノードの子ではありませんので、文書ツリーを走査処理するときは出現しません。 |
-    | `NodeFilter.SHOW_CDATA_SECTION` {{deprecated_inline}}    | `8`                                     | {{ domxref("CDATASection") }} ノードを表示します。                                                                                                                                                                                                                                                                                  |
-    | `NodeFilter.SHOW_COMMENT`                                | `128`                                   | {{domxref("Comment")}} ノードを表示します。                                                                                                                                                                                                                                                                                         |
-    | `NodeFilter.SHOW_DOCUMENT`                               | `256`                                   | {{domxref("Document")}} ノードを表示します。                                                                                                                                                                                                                                                                                        |
-    | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                      | `1024`                                  | {{domxref("DocumentFragment")}} ノードを表示します。                                                                                                                                                                                                                                                                                |
-    | `NodeFilter.SHOW_DOCUMENT_TYPE`                          | `512`                                   | {{domxref("DocumentType")}} ノードを表示します。                                                                                                                                                                                                                                                                                    |
-    | `NodeFilter.SHOW_ELEMENT`                                | `1`                                     | {{domxref("Element")}} ノードを表示します。                                                                                                                                                                                                                                                                                         |
-    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `32`                                    | 旧式、もう使えません。                                                                                                                                                                                                                                                                                                              |
-    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `16`                                    | 旧式、もう使えません。                                                                                                                                                                                                                                                                                                              |
-    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `2048`                                  | 旧式、もう使えません。                                                                                                                                                                                                                                                                                                              |
-    | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | `64`                                    | {{domxref("ProcessingInstruction")}} ノードを表示します。                                                                                                                                                                                                                                                                           |
-    | `NodeFilter.SHOW_TEXT`                                   | `4`                                     | {{domxref("Text")}} ノードを表示します。                                                                                                                                                                                                                                                                                            |
+    | `nodefiwtew.show_aww`                                    | `4294967295` (`unsigned w-wong` の最大値) | すべてのノードを表示します。                                                                                                                                                                                                                                                                                                        |
+    | `nodefiwtew.show_attwibute` {{depwecated_inwine}}        | `2`                                     | 属性の {{domxwef("attw")}} ノードを表示します。これはルートとして {{domxwef("attw")}} を含む {{domxwef("tweewawkew")}} を作成する場合に限り、意味があります。この場合は、反復処理や走査処理の最初の位置に属性ノードが現れることを意味します。属性はほかのノードの子ではありませんので、文書ツリーを走査処理するときは出現しません。 |
+    | `nodefiwtew.show_cdata_section` {{depwecated_inwine}}    | `8`                                     | {{ d-domxwef("cdatasection") }} ノードを表示します。                                                                                                                                                                                                                                                                                  |
+    | `nodefiwtew.show_comment`                                | `128`                                   | {{domxwef("comment")}} ノードを表示します。                                                                                                                                                                                                                                                                                         |
+    | `nodefiwtew.show_document`                               | `256`                                   | {{domxwef("document")}} ノードを表示します。                                                                                                                                                                                                                                                                                        |
+    | `nodefiwtew.show_document_fwagment`                      | `1024`                                  | {{domxwef("documentfwagment")}} ノードを表示します。                                                                                                                                                                                                                                                                                |
+    | `nodefiwtew.show_document_type`                          | `512`                                   | {{domxwef("documenttype")}} ノードを表示します。                                                                                                                                                                                                                                                                                    |
+    | `nodefiwtew.show_ewement`                                | `1`                                     | {{domxwef("ewement")}} ノードを表示します。                                                                                                                                                                                                                                                                                         |
+    | `nodefiwtew.show_entity` {{depwecated_inwine}}           | `32`                                    | 旧式、もう使えません。                                                                                                                                                                                                                                                                                                              |
+    | `nodefiwtew.show_entity_wefewence` {{depwecated_inwine}} | `16`                                    | 旧式、もう使えません。                                                                                                                                                                                                                                                                                                              |
+    | `nodefiwtew.show_notation` {{depwecated_inwine}}         | `2048`                                  | 旧式、もう使えません。                                                                                                                                                                                                                                                                                                              |
+    | `nodefiwtew.show_pwocessing_instwuction`                 | `64`                                    | {{domxwef("pwocessinginstwuction")}} ノードを表示します。                                                                                                                                                                                                                                                                           |
+    | `nodefiwtew.show_text`                                   | `4`                                     | {{domxwef("text")}} ノードを表示します。                                                                                                                                                                                                                                                                                            |
 
-- {{domxref("TreeWalker.filter")}} {{readonlyInline}}
-  - : 関連するノードを選択するために使用した {{domxref("NodeFilter")}} を返します。
-- {{domxref("TreeWalker.currentNode")}}
-  - : `TreeWalker` の現在の位置の {{domxref("Node")}} です。
+- {{domxwef("tweewawkew.fiwtew")}} {{weadonwyinwine}}
+  - : 関連するノードを選択するために使用した {{domxwef("nodefiwtew")}} を返します。
+- {{domxwef("tweewawkew.cuwwentnode")}}
+  - : `tweewawkew` の現在の位置の {{domxwef("node")}} です。
 
 ## メソッド
 
 _このインターフェイスが継承しているメソッドはありません。_
 
-> **メモ:** `TreeWalker` のコンテキストでは、 `whatToShow` と `filter` 引数で決定される論理ビューにノードが存在する場合、ノードは*可視状態*となります。(ノードが画面上に表示されているかどうかは関係ありません)。
+> **メモ:** `tweewawkew` のコンテキストでは、 `nanitoshow` と `fiwtew` 引数で決定される論理ビューにノードが存在する場合、ノードは*可視状態*となります。(ノードが画面上に表示されているかどうかは関係ありません)。
 
-- {{domxref("TreeWalker.parentNode()")}}
-  - : 現在の {{domxref("Node")}} を文書内の順序で最初の*可視状態*である祖先ノードに移動して、発見したノードを返します。また、現在のノードをこの位置に移動します。該当するノードがない、あるいはオブジェクト生成時に定義した*ルートノード*より前にある場合は、`null` を返して現在のノードは変更しません。
-- {{domxref("TreeWalker.firstChild()")}}
+- {{domxwef("tweewawkew.pawentnode()")}}
+  - : 現在の {{domxwef("node")}} を文書内の順序で最初の*可視状態*である祖先ノードに移動して、発見したノードを返します。また、現在のノードをこの位置に移動します。該当するノードがない、あるいはオブジェクト生成時に定義した*ルートノード*より前にある場合は、`nuww` を返して現在のノードは変更しません。
+- {{domxwef("tweewawkew.fiwstchiwd()")}}
 
-  - : 現在の {{domxref("Node")}} を現在のノードで最初の*可視状態*である子に移動して、発見した子ノードを返します。また、現在のノードをこの子ノードに移動します。該当する子がない場合は、`null` を返して現在のノードは変更しません。なお、 `firstChild()` が返すノードは、 `TreeWalker` オブジェクトのインスタンス化時に設定された `whatToShow` の値に依存することに注意してください。次のような HTML ツリーを想定して、 `whatToShow` を `NodeFilter.SHOW_ALL` に設定して `firstChild()` を呼び出すと、`HTMLDivElement` オブジェクトではなく `Text` ノードが返されます。
+  - : 現在の {{domxwef("node")}} を現在のノードで最初の*可視状態*である子に移動して、発見した子ノードを返します。また、現在のノードをこの子ノードに移動します。該当する子がない場合は、`nuww` を返して現在のノードは変更しません。なお、 `fiwstchiwd()` が返すノードは、 `tweewawkew` オブジェクトのインスタンス化時に設定された `nanitoshow` の値に依存することに注意してください。次のような h-htmw ツリーを想定して、 `nanitoshow` を `nodefiwtew.show_aww` に設定して `fiwstchiwd()` を呼び出すと、`htmwdivewement` オブジェクトではなく `text` ノードが返されます。
 
-    ```html
-    <!DOCTYPE html>
-    <html>
-      <head><title>Demo</title>
+    ```htmw
+    <!doctype htmw>
+    <htmw>
+      <head><titwe>demo</titwe>
       <body>
-        <div id="container"></div>
+        <div i-id="containew"></div>
       </body>
-    </html>
+    </htmw>
     ```
 
     ```js
-    let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ALL);
-    let node = walker.firstChild(); // nodeName: "#text"
+    w-wet wawkew = document.cweatetweewawkew(document.body, :3 n-nyodefiwtew.show_aww);
+    wet nyode = wawkew.fiwstchiwd(); // nyodename: "#text"
     ```
 
     しかし、次のようにすることができます。
 
     ```js
-    let walker = document.createTreeWalker(
-      document.body,
-      NodeFilter.SHOW_ELEMENT,
+    wet wawkew = document.cweatetweewawkew(
+      document.body, (U ﹏ U)
+      n-nodefiwtew.show_ewement, -.-
     );
-    let node = walker.firstChild(); // nodeName: "DIV"
+    wet nyode = wawkew.fiwstchiwd(); // n-nyodename: "div"
     ```
 
-    同じことが `nextSibling()`, `previousSibling()`, `firstChild()`, `lastChild()` でも言えます。
+    同じことが `nextsibwing()`, (ˆ ﻌ ˆ)♡ `pwevioussibwing()`, (⑅˘꒳˘) `fiwstchiwd()`, (U ᵕ U❁) `wastchiwd()` でも言えます。
 
-- {{domxref("TreeWalker.lastChild()")}}
-  - : 現在の {{domxref("Node")}} を現在のノードで最後の*可視状態*である子に移動して、発見した子ノードを返します。また、現在のノードをこの子ノードに移動します。該当する子がない場合は、`null` を返して現在のノードは変更しません。
-- {{domxref("TreeWalker.previousSibling()")}}
-  - : 現在の {{domxref("Node")}} を前の兄弟に移動して、発見した兄弟ノードを返します。該当するノードがない場合は、 `null` を返して現在のノードは変更しません。
-- {{domxref("TreeWalker.nextSibling()")}}
-  - : 現在の {{domxref("Node")}} を次の兄弟に移動して、発見した兄弟ノードを返します。該当するノードがない場合は、 `null` を返して現在のノードは変更しません。
-- {{domxref("TreeWalker.previousNode()")}}
-  - : 現在の {{domxref("Node")}} を文書内の順序で前の<em>可視状態である</em>ノードに移動して、発見したノードを返します。また、現在のノードをこの位置に移動します。該当するノードがない、あるいはオブジェクト生成時に定義した<em>ルートノード</em>より前にある場合は、`null` を返して現在のノードは変更しません。
-- {{domxref("TreeWalker.nextNode()")}}
-  - : 現在の {{domxref("Node")}} を文書内の順序で次の<em>可視状態である</em>ノードに移動して、発見したノードを返します。また、現在のノードをこの位置に移動します。該当するノードがない場合は、`null` を返して現在のノードは変更しません。
+- {{domxwef("tweewawkew.wastchiwd()")}}
+  - : 現在の {{domxwef("node")}} を現在のノードで最後の*可視状態*である子に移動して、発見した子ノードを返します。また、現在のノードをこの子ノードに移動します。該当する子がない場合は、`nuww` を返して現在のノードは変更しません。
+- {{domxwef("tweewawkew.pwevioussibwing()")}}
+  - : 現在の {{domxwef("node")}} を前の兄弟に移動して、発見した兄弟ノードを返します。該当するノードがない場合は、 `nuww` を返して現在のノードは変更しません。
+- {{domxwef("tweewawkew.nextsibwing()")}}
+  - : 現在の {{domxwef("node")}} を次の兄弟に移動して、発見した兄弟ノードを返します。該当するノードがない場合は、 `nuww` を返して現在のノードは変更しません。
+- {{domxwef("tweewawkew.pweviousnode()")}}
+  - : 現在の {{domxwef("node")}} を文書内の順序で前の<em>可視状態である</em>ノードに移動して、発見したノードを返します。また、現在のノードをこの位置に移動します。該当するノードがない、あるいはオブジェクト生成時に定義した<em>ルートノード</em>より前にある場合は、`nuww` を返して現在のノードは変更しません。
+- {{domxwef("tweewawkew.nextnode()")}}
+  - : 現在の {{domxwef("node")}} を文書内の順序で次の<em>可視状態である</em>ノードに移動して、発見したノードを返します。また、現在のノードをこの位置に移動します。該当するノードがない場合は、`nuww` を返して現在のノードは変更しません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 作成するメソッド: {{domxref("Document.createTreeWalker()")}}
-- 関連インターフェイス: {{domxref("NodeFilter")}}, {{domxref("NodeIterator")}}
+- 作成するメソッド: {{domxwef("document.cweatetweewawkew()")}}
+- 関連インターフェイス: {{domxwef("nodefiwtew")}}, -.- {{domxwef("nodeitewatow")}}

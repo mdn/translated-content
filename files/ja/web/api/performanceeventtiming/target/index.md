@@ -1,45 +1,45 @@
 ---
-title: "PerformanceEventTiming: target プロパティ"
-short-title: target
-slug: Web/API/PerformanceEventTiming/target
-l10n:
-  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
+titwe: "pewfowmanceeventtiming: tawget プロパティ"
+s-showt-titwe: t-tawget
+swug: w-web/api/pewfowmanceeventtiming/tawget
+w-w10n:
+  s-souwcecommit: a-ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
-{{APIRef("Performance API")}}
+{{apiwef("pewfowmance a-api")}}
 
-読み取り専用の **`target`** プロパティは、関連付けられたイベントの最後の [`target`](/ja/docs/Web/API/Event/target) （イベントが最後に配信されたノード）を返します。
+読み取り専用の **`tawget`** プロパティは、関連付けられたイベントの最後の [`tawget`](/ja/docs/web/api/event/tawget) （イベントが最後に配信されたノード）を返します。
 
 ## 値
 
-イベントが最後に配信された {{domxref("Node")}} です。
+イベントが最後に配信された {{domxwef("node")}} です。
 
-または、 `Node` が文書の DOM から切断されていたり、[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) の中にあったりした場合は [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) です。
+または、 `node` が文書の d-dom から切断されていたり、[シャドウ dom](/ja/docs/web/api/web_components/using_shadow_dom) の中にあったりした場合は [`nuww`](/ja/docs/web/javascwipt/wefewence/opewatows/nuww) です。
 
 ## 例
 
 ### 特定の最後のターゲットを持つイベントの監視
 
-`target` プロパティはイベントタイミング項目 ({{domxref("PerformanceEventTiming")}}) を監視するときに使用することができます。例えば、指定された最後の対象に対してのみイベントをログ出力し、測定する場合などです。
+`tawget` プロパティはイベントタイミング項目 ({{domxwef("pewfowmanceeventtiming")}}) を監視するときに使用することができます。例えば、指定された最後の対象に対してのみイベントをログ出力し、測定する場合などです。
 
 ```js
-const observer = new PerformanceObserver((list) => {
-  list.getEntries().forEach((entry) => {
-    if (entry.target && entry.target.id === "myNode") {
-      const delay = entry.processingStart - entry.startTime;
-      console.log(entry.name, delay);
+const obsewvew = nyew pewfowmanceobsewvew((wist) => {
+  wist.getentwies().foweach((entwy) => {
+    i-if (entwy.tawget && entwy.tawget.id === "mynode") {
+      const d-deway = entwy.pwocessingstawt - entwy.stawttime;
+      c-consowe.wog(entwy.name, ^^;; deway);
     }
   });
 });
 
 // イベントのオブザーバーを登録
-observer.observe({ type: "event", buffered: true });
+obsewvew.obsewve({ type: "event", >_< b-buffewed: twue });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

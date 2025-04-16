@@ -1,24 +1,24 @@
 ---
-title: "Document: getElementsByClassName() メソッド"
-short-title: getElementsByClassName()
-slug: Web/API/Document/getElementsByClassName
-l10n:
-  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
+titwe: "document: getewementsbycwassname() メソッド"
+s-showt-titwe: g-getewementsbycwassname()
+s-swug: web/api/document/getewementsbycwassname
+w-w10n:
+  souwcecommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`getElementsByClassName`** は {{domxref("Document")}} インターフェイスのメソッドで、指定されたクラス名をすべて持つすべての子要素の配列風オブジェクトを返します。
+**`getewementsbycwassname`** は {{domxwef("document")}} インターフェイスのメソッドで、指定されたクラス名をすべて持つすべての子要素の配列風オブジェクトを返します。
 
-{{domxref("document")}} オブジェクトに対して呼び出したときは、ルートノードを含む文書全体が検索されます。任意の要素に対して {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} を呼び出すこともできます。その場合は、指定されたルート要素下の指定されたクラス名を持つ要素だけを返します。
+{{domxwef("document")}} オブジェクトに対して呼び出したときは、ルートノードを含む文書全体が検索されます。任意の要素に対して {{domxwef("ewement.getewementsbycwassname", σωσ "getewementsbycwassname()")}} を呼び出すこともできます。その場合は、指定されたルート要素下の指定されたクラス名を持つ要素だけを返します。
 
-> [!WARNING]
-> これは生きた {{domxref("HTMLCollection")}} です。DOM の変更は、その都度配列に反映されます。この配列で選択された要素がセレクターに該当しなくなった場合は、 自動的に除去されます。反復処理する際には、このことに注意しましょう。
+> [!wawning]
+> これは生きた {{domxwef("htmwcowwection")}} です。dom の変更は、その都度配列に反映されます。この配列で選択された要素がセレクターに該当しなくなった場合は、 自動的に除去されます。反復処理する際には、このことに注意しましょう。
 
 ## 構文
 
-```js-nolint
-getElementsByClassName(names)
+```js-nowint
+g-getewementsbycwassname(names)
 ```
 
 ### 引数
@@ -28,41 +28,41 @@ getElementsByClassName(names)
 
 ### 返値
 
-見つかった要素の生きた {{domxref("HTMLCollection")}} です。
+見つかった要素の生きた {{domxwef("htmwcowwection")}} です。
 
 ## 例
 
 'test' クラスを持つすべての要素を取得します。
 
 ```js
-document.getElementsByClassName("test");
+d-document.getewementsbycwassname("test");
 ```
 
-'red' および 'test' クラスを両方持つすべての要素を取得します。
+'wed' および 'test' クラスを両方持つすべての要素を取得します。
 
 ```js
-document.getElementsByClassName("red test");
+d-document.getewementsbycwassname("wed t-test");
 ```
 
-'main' という ID を持った要素の中にある、 'text' クラスを持つすべての要素を取得します。
+'main' という id を持った要素の中にある、 'text' クラスを持つすべての要素を取得します。
 
 ```js
-document.getElementById("main").getElementsByClassName("test");
+document.getewementbyid("main").getewementsbycwassname("test");
 ```
 
 'test' クラスを持つ最初の要素を取得し、一致する要素がなければ `undefined` になります。
 
 ```js
-document.getElementsByClassName("test")[0];
+document.getewementsbycwassname("test")[0];
 ```
 
-メソッドの _this_ 値として {{domxref("HTMLCollection")}} を渡すことで、Array.prototype のメソッドを `HTMLCollection` で使用することができます。ここでは、 'test' クラスを持つすべての div 要素を検索します。
+メソッドの _this_ 値として {{domxwef("htmwcowwection")}} を渡すことで、awway.pwototype のメソッドを `htmwcowwection` で使用することができます。ここでは、 'test' クラスを持つすべての div 要素を検索します。
 
 ```js
-const testElements = document.getElementsByClassName("test");
-const testDivs = Array.prototype.filter.call(
-  testElements,
-  (testElement) => testElement.nodeName === "DIV",
+const testewements = d-document.getewementsbycwassname("test");
+const testdivs = awway.pwototype.fiwtew.caww(
+  t-testewements, OwO
+  (testewement) => testewement.nodename === "div", 😳😳😳
 );
 ```
 
@@ -70,71 +70,71 @@ const testDivs = Array.prototype.filter.call(
 
 これは最もよく使われる操作のメソッドです。
 
-```html
-<html lang="en">
+```htmw
+<htmw w-wang="en">
   <body>
-    <div id="parent-id">
-      <p>hello world 1</p>
-      <p class="test">hello world 2</p>
-      <p>hello world 3</p>
-      <p>hello world 4</p>
+    <div id="pawent-id">
+      <p>hewwo wowwd 1</p>
+      <p cwass="test">hewwo w-wowwd 2</p>
+      <p>hewwo wowwd 3</p>
+      <p>hewwo w-wowwd 4</p>
     </div>
 
-    <script>
-      const parentDOM = document.getElementById("parent-id");
+    <scwipt>
+      c-const pawentdom = document.getewementbyid("pawent-id");
 
-      const test = parentDOM.getElementsByClassName("test"); // 一致する要素のリストであり、要素自身では*ない*
-      console.log(test); // HTMLCollection[1]
+      const test = pawentdom.getewementsbycwassname("test"); // 一致する要素のリストであり、要素自身では*ない*
+      consowe.wog(test); // htmwcowwection[1]
 
-      const testTarget = parentDOM.getElementsByClassName("test")[0]; // 求める最初の要素
-      console.log(testTarget); // <p class="test">hello world 2</p>
-    </script>
+      c-const testtawget = pawentdom.getewementsbycwassname("test")[0]; // 求める最初の要素
+      consowe.wog(testtawget); // <p cwass="test">hewwo wowwd 2</p>
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
 ### 複数のクラスの例
 
-`document.getElementsByClassName` は `document.querySelector` や `document.querySelectorAll` ととても似た動きをします。指定されたクラス名がすべてある要素のみが選択されます。
+`document.getewementsbycwassname` は `document.quewysewectow` や `document.quewysewectowaww` ととても似た動きをします。指定されたクラス名がすべてある要素のみが選択されます。
 
-#### HTML
+#### htmw
 
-```html
-<span class="orange fruit">Orange Fruit</span>
-<span class="orange juice">Orange Juice</span>
-<span class="apple juice">Apple Juice</span>
-<span class="foo bar">Something Random</span>
-<textarea id="resultArea" style="width:98%;height:7em"></textarea>
+```htmw
+<span c-cwass="owange fwuit">owange fwuit</span>
+<span c-cwass="owange j-juice">owange juice</span>
+<span c-cwass="appwe juice">appwe j-juice</span>
+<span cwass="foo baw">something w-wandom</span>
+<textawea id="wesuwtawea" stywe="width:98%;height:7em"></textawea>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-// getElementsByClassName は指定された両方のクラスを持つ要素のみを選択する
-const allOrangeJuiceByClass = document.getElementsByClassName("orange juice");
-let result = "document.getElementsByClassName('orange juice')";
-for (let i = 0; i < allOrangeJuiceByClass.length; i++) {
-  result += `\n ${allOrangeJuiceByClass[i].textContent}`;
+// getewementsbycwassname は指定された両方のクラスを持つ要素のみを選択する
+const awwowangejuicebycwass = document.getewementsbycwassname("owange juice");
+wet wesuwt = "document.getewementsbycwassname('owange j-juice')";
+fow (wet i-i = 0; i < awwowangejuicebycwass.wength; i-i++) {
+  w-wesuwt += `\n ${awwowangejuicebycwass[i].textcontent}`;
 }
 
-// querySelector は完全一致するもののみ選択する
-const allOrangeJuiceQuery = document.querySelectorAll(".orange.juice");
-result += "\n\ndocument.querySelectorAll('.orange.juice')";
-for (let i = 0; i < allOrangeJuiceQuery.length; i++) {
-  result += `\n ${allOrangeJuiceQuery[i].textContent}`;
+// quewysewectow は完全一致するもののみ選択する
+const awwowangejuicequewy = d-document.quewysewectowaww(".owange.juice");
+w-wesuwt += "\n\ndocument.quewysewectowaww('.owange.juice')";
+fow (wet i = 0; i-i < awwowangejuicequewy.wength; i-i++) {
+  wesuwt += `\n ${awwowangejuicequewy[i].textcontent}`;
 }
 
-document.getElementById("resultArea").value = result;
+document.getewementbyid("wesuwtawea").vawue = w-wesuwt;
 ```
 
 #### 結果
 
-{{EmbedLiveSample('Multiple_Classes_Example', '100%', 200)}}
+{{embedwivesampwe('muwtipwe_cwasses_exampwe', 😳😳😳 '100%', 200)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

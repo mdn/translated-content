@@ -1,57 +1,57 @@
 ---
-title: "FormDataEvent: FormDataEvent() コンストラクター"
-short-title: FormDataEvent()
-slug: Web/API/FormDataEvent/FormDataEvent
-l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+titwe: "fowmdataevent: fowmdataevent() コンストラクター"
+s-showt-titwe: f-fowmdataevent()
+s-swug: web/api/fowmdataevent/fowmdataevent
+w-w10n:
+  s-souwcecommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`FormDataEvent()`** コンストラクターは、新しい {{domxref("FormDataEvent")}} オブジェクトインスタンスを生成します。
+**`fowmdataevent()`** コンストラクターは、新しい {{domxwef("fowmdataevent")}} オブジェクトインスタンスを生成します。
 
 ## 構文
 
-```js-nolint
-new FormDataEvent(type, formEventInit)
+```js-nowint
+n-nyew fowmdataevent(type, :3 f-fowmeventinit)
 ```
 
 ### 引数
 
 - `type`
   - : 文字列で、このイベントの名前を表します。
-    大文字小文字を区別し、ブラウザーは常に `formdata` に設定します。
+    大文字小文字を区別し、ブラウザーは常に `fowmdata` に設定します。
 - `options`
-  - : オブジェクトで、_{{domxref("Event/Event", "Event()")}} で定義されているプロパティに加え_、以下のプロパティを持つことができます。
-    - `formData`
-      - : {{domxref("FormDataEvent")}} に事前に入力する {{domxref("FormData")}} オブジェクトです。
-        これには、 {{domxref("FormDataEvent.formData")}} プロパティを介してアクセスします。
+  - : オブジェクトで、_{{domxwef("event/event", (U ﹏ U) "event()")}} で定義されているプロパティに加え_、以下のプロパティを持つことができます。
+    - `fowmdata`
+      - : {{domxwef("fowmdataevent")}} に事前に入力する {{domxwef("fowmdata")}} オブジェクトです。
+        これには、 {{domxwef("fowmdataevent.fowmdata")}} プロパティを介してアクセスします。
 
 ### 返値
 
-新しい {{domxref("FormDataEvent")}} オブジェクトです。
+新しい {{domxwef("fowmdataevent")}} オブジェクトです。
 
 ## 例
 
 ```js
-const fd = new FormData();
-fd.append("test", "test");
+c-const fd = nyew fowmdata();
+fd.append("test", -.- "test");
 
-const fdEv = new FormDataEvent("formdata", { formData: fd });
+const fdev = nyew fowmdataevent("fowmdata", (ˆ ﻌ ˆ)♡ { fowmdata: f-fd });
 
-for (const value of fdEv.formData.values()) {
-  console.log(value);
+fow (const vawue of fdev.fowmdata.vawues()) {
+  c-consowe.wog(vawue);
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("FormDataEvent")}}
+- {{domxwef("fowmdataevent")}}

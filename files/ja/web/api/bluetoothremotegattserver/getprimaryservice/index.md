@@ -1,35 +1,35 @@
 ---
-title: "BluetoothRemoteGATTServer: getPrimaryService() メソッド"
-slug: Web/API/BluetoothRemoteGATTServer/getPrimaryService
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattsewvew: getpwimawysewvice() メソッド"
+s-swug: web/api/bwuetoothwemotegattsewvew/getpwimawysewvice
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-**`BluetoothRemoteGATTServer.getPrimaryService()`** メソッドは、Bluetooth デバイスが提供している指定の Bluetooth サービス UUID に対応するプライマリー {{DOMxRef("BluetoothRemoteGATTService")}} で解決するプロミスを返します。
+**`bwuetoothwemotegattsewvew.getpwimawysewvice()`** メソッドは、bwuetooth デバイスが提供している指定の b-bwuetooth サービス u-uuid に対応するプライマリー {{domxwef("bwuetoothwemotegattsewvice")}} で解決するプロミスを返します。
 
 ## 構文
 
-```js-nolint
-getPrimaryService(bluetoothServiceUUID)
+```js-nowint
+getpwimawysewvice(bwuetoothsewviceuuid)
 ```
 
 ### 引数
 
-- `bluetoothServiceUUID`
-  - : 指定のデバイス用の Bluetooth サービス universally unique identifier です。128 ビットの UUID か、16 ビットまたは 32 ビットの UUID エイリアスか、[GATT で割り当てられるサービス](https://github.com/WebBluetoothCG/registries/blob/master/gatt_assigned_services.txt)のキーのリストにある文字列です。
+- `bwuetoothsewviceuuid`
+  - : 指定のデバイス用の b-bwuetooth サービス u-univewsawwy u-unique identifiew です。128 ビットの uuid か、16 ビットまたは 32 ビットの uuid エイリアスか、[gatt で割り当てられるサービス](https://github.com/webbwuetoothcg/wegistwies/bwob/mastew/gatt_assigned_sewvices.txt)のキーのリストにある文字列です。
 
 ### 返値
 
-{{domxref("BluetoothRemoteGATTService")}} オブジェクトで解決する {{jsxref("Promise")}} です。
+{{domxwef("bwuetoothwemotegattsewvice")}} オブジェクトで解決する {{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{APIRef("Web Bluetooth")}}
+{{apiwef("web bwuetooth")}}

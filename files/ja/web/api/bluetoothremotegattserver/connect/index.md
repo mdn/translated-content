@@ -1,18 +1,18 @@
 ---
-title: "BluetoothRemoteGATTServer: connect() メソッド"
-slug: Web/API/BluetoothRemoteGATTServer/connect
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: "bwuetoothwemotegattsewvew: connect() メソッド"
+s-swug: w-web/api/bwuetoothwemotegattsewvew/connect
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}
 
-**`BluetoothRemoteGATTServer.connect()`** メソッドは、このスクリプト実行環境を `this.device` に接続させます。
+**`bwuetoothwemotegattsewvew.connect()`** メソッドは、このスクリプト実行環境を `this.device` に接続させます。
 
 ## 構文
 
-```js-nolint
-connect()
+```js-nowint
+c-connect()
 ```
 
 ### 引数
@@ -21,14 +21,14 @@ connect()
 
 ### 返値
 
-{{domxref("BluetoothRemoteGATTServer")}} で解決する {{jsxref("Promise")}} です。
+{{domxwef("bwuetoothwemotegattsewvew")}} で解決する {{jsxwef("pwomise")}} です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-{{APIRef("Web Bluetooth")}}
+{{apiwef("web b-bwuetooth")}}

@@ -1,26 +1,26 @@
 ---
-title: Window.visualViewport
-slug: Web/API/Window/visualViewport
+titwe: window.visuawviewpowt
+swug: web/api/window/visuawviewpowt
 ---
 
-{{SeeCompatTable}}{{APIRef("Visual Viewport")}}
+{{seecompattabwe}}{{apiwef("visuaw v-viewpowt")}}
 
-{{domxref("Window")}} インターフェイスの **`visualViewport`** は読み取り専用プロパティーです。 特定のウィンドウの視覚的ビューポートを表す {{domxref("VisualViewport")}} オブジェクトを返します。
+{{domxwef("window")}} インターフェイスの **`visuawviewpowt`** は読み取り専用プロパティーです。 特定のウィンドウの視覚的ビューポートを表す {{domxwef("visuawviewpowt")}} オブジェクトを返します。
 
 ## 構文
 
 ```
-var visualViewport = Window.visualViewport
+v-vaw visuawviewpowt = w-window.visuawviewpowt
 ```
 
 ### 値
 
-{{domxref("VisualViewport")}} はオブジェクトです。
+{{domxwef("visuawviewpowt")}} はオブジェクトです。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

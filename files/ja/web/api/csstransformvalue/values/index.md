@@ -1,18 +1,18 @@
 ---
-title: CSSTransformValue.values()
-slug: Web/API/CSSTransformValue/values
-l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+titwe: csstwansfowmvawue.vawues()
+swug: web/api/csstwansfowmvawue/vawues
+w-w10n:
+  s-souwcecommit: d-da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{apiwef("css t-typed o-om")}}{{seecompattabwe}}
 
-**`CSSTransformValue.values()`** は、 CSSTransformValue オブジェクトの各位置に対応する値を格納した新しい _配列イテレーター_ オブジェクトを返します。
+**`csstwansfowmvawue.vawues()`** は、 c-csstwansfowmvawue オブジェクトの各位置に対応する値を格納した新しい _配列イテレーター_ オブジェクトを返します。
 
 ## 構文
 
-```js-nolint
-values()
+```js-nowint
+v-vawues()
 ```
 
 ### 引数
@@ -21,16 +21,16 @@ values()
 
 ### 返値
 
-新しい {{jsxref("Array")}} です。
+新しい {{jsxwef("awway")}} です。
 
 ## 例
 
-To Do
+t-to do
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

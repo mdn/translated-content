@@ -1,56 +1,56 @@
 ---
-title: WEBGL_color_buffer_float
-slug: Web/API/WEBGL_color_buffer_float
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: webgw_cowow_buffew_fwoat
+swug: web/api/webgw_cowow_buffew_fwoat
+w-w10n:
+  s-souwcecommit: f-f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`WEBGL_color_buffer_float`** 拡張は [WebGL API](/ja/docs/Web/API/WebGL_API) の一部で、 32 ビット浮動小数点数の色バッファーにレンダリングする機能を追加します。
+**`webgw_cowow_buffew_fwoat`** 拡張は [webgw a-api](/ja/docs/web/api/webgw_api) の一部で、 32 ビット浮動小数点数の色バッファーにレンダリングする機能を追加します。
 
-WebGL 拡張は {{domxref("WebGLRenderingContext.getExtension()")}} メソッドを使用することで利用することができます。詳細な情報については、[WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Using_Extensions)の [Using Extensions](/ja/docs/Web/API/WebGL_API/Tutorial) も参照してください。
+webgw 拡張は {{domxwef("webgwwendewingcontext.getextension()")}} メソッドを使用することで利用することができます。詳細な情報については、[webgw チュートリアル](/ja/docs/web/api/webgw_api/using_extensions)の [using e-extensions](/ja/docs/web/api/webgw_api/tutowiaw) も参照してください。
 
-> [!NOTE]
-> この拡張機能は {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}} コンテキストでのみ利用することができます。 {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} では {{domxref("EXT_color_buffer_float")}} 拡張を使用してください。
+> [!note]
+> この拡張機能は {{domxwef("webgwwendewingcontext", UwU "webgw 1", "", 1)}} コンテキストでのみ利用することができます。 {{domxwef("webgw2wendewingcontext", rawr x3 "webgw 2", rawr "", 1)}} では {{domxwef("ext_cowow_buffew_fwoat")}} 拡張を使用してください。
 >
-> {{domxref("OES_texture_float")}} 拡張は、暗黙にこの拡張を有効にします。
+> {{domxwef("oes_textuwe_fwoat")}} 拡張は、暗黙にこの拡張を有効にします。
 
 ## 定数
 
-- `ext.RGBA32F_EXT`
-  - : RGBA 32 ビット浮動小数点数でカラーレンダリング可能な形式。
-- `ext.RGB32F_EXT` ({{deprecated_inline}})
-  - : RGB 32 ビット浮動小数点数で、カラーレンダリング可能な形式。
-- `ext.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT`
+- `ext.wgba32f_ext`
+  - : w-wgba 32 ビット浮動小数点数でカラーレンダリング可能な形式。
+- `ext.wgb32f_ext` ({{depwecated_inwine}})
+  - : wgb 32 ビット浮動小数点数で、カラーレンダリング可能な形式。
+- `ext.fwamebuffew_attachment_component_type_ext`
   - : ?
-- `ext.UNSIGNED_NORMALIZED_EXT`
+- `ext.unsigned_nowmawized_ext`
   - : ?
 
 ## 拡張されるメソッド
 
-この拡張機能は {{domxref("WebGLRenderingContext.renderbufferStorage()")}} を拡張します。
+この拡張機能は {{domxwef("webgwwendewingcontext.wendewbuffewstowage()")}} を拡張します。
 
-- `internalformat` 引数が `ext.RGBA32F_EXT` および `ext.RGB32F_EXT` ({{deprecated_inline}}) を受け付けるようになります。
+- `intewnawfowmat` 引数が `ext.wgba32f_ext` および `ext.wgb32f_ext` ({{depwecated_inwine}}) を受け付けるようになります。
 
 ## 例
 
 ```js
-const ext = gl.getExtension("WEBGL_color_buffer_float");
+c-const e-ext = gw.getextension("webgw_cowow_buffew_fwoat");
 
-gl.renderbufferStorage(gl.RENDERBUFFER, ext.RGBA32F_EXT, 256, 256);
+gw.wendewbuffewstowage(gw.wendewbuffew, σωσ ext.wgba32f_ext, σωσ 256, >_< 256);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("WebGLRenderingContext.getExtension()")}}
-- {{domxref("WebGLRenderingContext.renderbufferStorage()")}}
-- {{domxref("OES_texture_float")}}
+- {{domxwef("webgwwendewingcontext.getextension()")}}
+- {{domxwef("webgwwendewingcontext.wendewbuffewstowage()")}}
+- {{domxwef("oes_textuwe_fwoat")}}

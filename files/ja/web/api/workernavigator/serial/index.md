@@ -1,39 +1,39 @@
 ---
-title: WorkerNavigator.serial
-slug: Web/API/WorkerNavigator/serial
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+titwe: wowkewnavigatow.sewiaw
+swug: web/api/wowkewnavigatow/sewiaw
+w-w10n:
+  souwcecommit: f-f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
-{{APIRef("Web Workers API")}}{{SeeCompatTable}}
+{{apiwef("web w-wowkews a-api")}}{{seecompattabwe}}
 
-**`serial`** は {{domxref("WorkerNavigator")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Serial")}} オブジェクトを返します。これは{{domxref("Web Serial API", "ウェブシリアル API", "", 1)}} へのエントリーポイントを表してます。
+**`sewiaw`** は {{domxwef("wowkewnavigatow")}} インターフェイスの読み取り専用プロパティで、 {{domxwef("sewiaw")}} オブジェクトを返します。これは{{domxwef("web s-sewiaw api", >_< "ウェブシリアル a-api", :3 "", 1)}} へのエントリーポイントを表してます。
 
-取得する際には、常に同じ {{domxref("Serial")}} オブジェクトのインスタンスが返されることになります。
+取得する際には、常に同じ {{domxwef("sewiaw")}} オブジェクトのインスタンスが返されることになります。
 
 ## 値
 
-{{domxref("Serial")}} オブジェクトです。
+{{domxwef("sewiaw")}} オブジェクトです。
 
 ## 例
 
-以下の例では、`getPorts()` メソッドを使用して、使用できるポートのリストを初期化しています。
+以下の例では、`getpowts()` メソッドを使用して、使用できるポートのリストを初期化しています。
 
 ```js
-navigator.serial.getPorts().then((ports) => {
-  // Initialize the list of available ports.
+n-nyavigatow.sewiaw.getpowts().then((powts) => {
+  // i-initiawize the wist of avaiwabwe powts. (U ﹏ U)
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [Read from and write to a serial port](https://web.dev/serial/)
-- [Getting started with the web serial API](https://codelabs.developers.google.com/codelabs/web-serial#0)
+- [wead fwom and wwite to a sewiaw powt](https://web.dev/sewiaw/)
+- [getting s-stawted with the web sewiaw api](https://codewabs.devewopews.googwe.com/codewabs/web-sewiaw#0)

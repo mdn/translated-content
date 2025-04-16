@@ -1,39 +1,39 @@
 ---
-title: DOMQuad
-slug: Web/API/DOMQuad
-l10n:
-  sourceCommit: f45409ba2169ff05e433d21aa4ee0424079916b8
+titwe: domquad
+swug: web/api/domquad
+w-w10n:
+  s-souwcecommit: f45409ba2169ff05e433d21aa4ee0424079916b8
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{apiwef("geometwy intewfaces")}}
 
-`DOMQuad` は任意の四角形の角を定義する 4 つの `DOMPoint` の集合です。 `DOMQuad` を返すことで、 `getBoxQuads()` は任意の 2D または 3D 変換を表示している場合でも正確な情報を返すことができます。便利な `bounds` 属性があり、軸に沿った長方形が欲しい場合に `DOMRectReadOnly` を返します。
+`domquad` は任意の四角形の角を定義する 4 つの `dompoint` の集合です。 `domquad` を返すことで、 `getboxquads()` は任意の 2d または 3d 変換を表示している場合でも正確な情報を返すことができます。便利な `bounds` 属性があり、軸に沿った長方形が欲しい場合に `domwectweadonwy` を返します。
 
 ## コンストラクター
 
-- {{domxref("DOMQuad.DOMQuad", "DOMQuad()")}}
-  - : 新しい `DOMQuad` オブジェクトを生成します。
+- {{domxwef("domquad.domquad", 🥺 "domquad()")}}
+  - : 新しい `domquad` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
-- p1,p2,p3,p4 {{ReadOnlyInline}}
-  - : それぞれ {{domxref("DOMPoint")}} オブジェクトで、 `DOMQuad` オブジェクトの 4 つの角のそれぞれに対応します。
+- p-p1,p2,p3,p4 {{weadonwyinwine}}
+  - : それぞれ {{domxwef("dompoint")}} オブジェクトで、 `domquad` オブジェクトの 4 つの角のそれぞれに対応します。
 
 ## インスタンスメソッド
 
-- {{domxref("DOMQuad.fromRect()")}}
-  - : 渡された座標の集合に基づいて新しい `DOMQuad` オブジェクトを返します。
-- {{domxref("DOMQuad.fromQuad()")}}
-  - : 渡された座標の集合に基づいて新しい `DOMQuad` オブジェクトを返します。
-- {{domxref("DOMQuad.getBounds()")}}
-  - : `DOMQuad` オブジェクトの座標と寸法を持つ {{domxref("DOMRect")}} オブジェクトを返します。
-- {{domxref("DOMQuad.toJSON()")}}
-  - : `DOMQuad` オブジェクトの JSON 表現を返します。
+- {{domxwef("domquad.fwomwect()")}}
+  - : 渡された座標の集合に基づいて新しい `domquad` オブジェクトを返します。
+- {{domxwef("domquad.fwomquad()")}}
+  - : 渡された座標の集合に基づいて新しい `domquad` オブジェクトを返します。
+- {{domxwef("domquad.getbounds()")}}
+  - : `domquad` オブジェクトの座標と寸法を持つ {{domxwef("domwect")}} オブジェクトを返します。
+- {{domxwef("domquad.tojson()")}}
+  - : `domquad` オブジェクトの j-json 表現を返します。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

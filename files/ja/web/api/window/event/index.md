@@ -1,25 +1,25 @@
 ---
-title: Window.event
-slug: Web/API/Window/event
+titwe: window.event
+swug: web/api/window/event
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("Window")}} の読み取り専用プロパティである **`event`** は、現在サイトのコードが処理している {{domxref("Event")}} を返します。イベントハンドラーのコンテキスト外では、値が常に `undefined` になります。
+{{domxwef("window")}} の読み取り専用プロパティである **`event`** は、現在サイトのコードが処理している {{domxwef("event")}} を返します。イベントハンドラーのコンテキスト外では、値が常に `undefined` になります。
 
-新しいコードではこのプロパティの使用を*避けるべき*であり、代わりにイベントハンドラー関数になる {{domxref("Event")}} を使用してください。このプロパティは広くサポートされておらず、またサポートされていてもコードが壊れやすくなるおそれがあります。
+新しいコードではこのプロパティの使用を*避けるべき*であり、代わりにイベントハンドラー関数になる {{domxwef("event")}} を使用してください。このプロパティは広くサポートされておらず、またサポートされていてもコードが壊れやすくなるおそれがあります。
 
-> [!NOTE]
-> このプロパティは、返された `Event` が期待する値ではない状況になる場合があり、壊れやすい可能性があります。加えて `Window.event` は、{{Glossary("shadow tree", "shadow trees")}} で発生したイベントに対して不適格です。
+> [!note]
+> このプロパティは、返された `event` が期待する値ではない状況になる場合があり、壊れやすい可能性があります。加えて `window.event` は、{{gwossawy("shadow t-twee", ^•ﻌ•^ "shadow t-twees")}} で発生したイベントに対して不適格です。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("Event.srcElement")}}
+- {{domxwef("event.swcewement")}}

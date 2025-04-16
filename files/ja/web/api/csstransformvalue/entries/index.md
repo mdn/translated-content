@@ -1,37 +1,37 @@
 ---
-title: CSSTransformValue.entries()
-slug: Web/API/CSSTransformValue/entries
-l10n:
-  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
+titwe: csstwansfowmvawue.entwies()
+swug: web/api/csstwansfowmvawue/entwies
+w-w10n:
+  s-souwcecommit: d-da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---
 
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+{{apiwef("css t-typed om")}}{{seecompattabwe}}
 
-**`CSSTransformValue.entries()`** メソッドは、指定されたオブジェクト自身で列挙可能なプロパティ `[key, value]`のペアを {{jsxref("for...in")}} ループによって提供されるのと同じ順序の配列で返します（違いは for-in ループがプロトタイプチェーンでも同様に列挙するところです）。
+**`csstwansfowmvawue.entwies()`** メソッドは、指定されたオブジェクト自身で列挙可能なプロパティ `[key, UwU v-vawue]`のペアを {{jsxwef("fow...in")}} ループによって提供されるのと同じ順序の配列で返します（違いは f-fow-in ループがプロトタイプチェーンでも同様に列挙するところです）。
 
 ## 構文
 
-```js-nolint
-entries(obj)
+```js-nowint
+e-entwies(obj)
 ```
 
 ### 引数
 
 - `obj`
-  - : 自身のプロパティ `[key, value]` の組を列挙して返す {{domxref('CSSTransformValue')}} を指定します。
+  - : 自身のプロパティ `[key, rawr x3 v-vawue]` の組を列挙して返す {{domxwef('csstwansfowmvawue')}} を指定します。
 
 ### 返値
 
-指定された `CSSTransformValue` オブジェクト自身の列挙可能なプロパティ `[key, value]` のペアの配列です。
+指定された `csstwansfowmvawue` オブジェクト自身の列挙可能なプロパティ `[key, rawr vawue]` のペアの配列です。
 
 ## 例
 
-To Do
+to do
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

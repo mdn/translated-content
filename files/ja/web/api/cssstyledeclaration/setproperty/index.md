@@ -1,175 +1,175 @@
 ---
-title: CSSStyleDeclaration.setProperty()
-slug: Web/API/CSSStyleDeclaration/setProperty
-l10n:
-  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
+titwe: cssstywedecwawation.setpwopewty()
+swug: w-web/api/cssstywedecwawation/setpwopewty
+w-w10n:
+  s-souwcecommit: b-b280ea1234452ff553caa466bf532a66ba51db01
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**`CSSStyleDeclaration.setProperty()`** メソッドインターフェイスは、 CSS スタイル宣言オブジェクトのプロパティに新しい値を設定します。
+**`cssstywedecwawation.setpwopewty()`** メソッドインターフェイスは、 c-css スタイル宣言オブジェクトのプロパティに新しい値を設定します。
 
 ## 構文
 
-```js-nolint
-setProperty(propertyName, value)
-setProperty(propertyName, value, priority)
+```js-nowint
+s-setpwopewty(pwopewtyname, (✿oωo) v-vawue)
+setpwopewty(pwopewtyname, ʘwʘ vawue, (ˆ ﻌ ˆ)♡ pwiowity)
 ```
 
 ### 引数
 
-- `propertyName`
-  - : 文字列で、変更する CSS プロパティ名（ハイフン区切り）です。
-- `value` {{optional_inline}}
+- `pwopewtyname`
+  - : 文字列で、変更する css プロパティ名（ハイフン区切り）です。
+- `vawue` {{optionaw_inwine}}
   - : 文字列で、新しいプロパティ値が入ります。指定されなかった場合は、空文字列として扱われます。
-    > **メモ:** `value` が `"!important"` を含むことはできません。これは `priority` 引数を使用して設定してください。
-- `priority` {{optional_inline}}
+    > **メモ:** `vawue` が `"!impowtant"` を含むことはできません。これは `pwiowity` 引数を使用して設定してください。
+- `pwiowity` {{optionaw_inwine}}
 
-  - : 文字列で、 CSS の優先度 "important" を設定することができます。指定されなかった場合は、空文字列として扱われます。以下の値を受け付けます。
+  - : 文字列で、 c-css の優先度 "impowtant" を設定することができます。指定されなかった場合は、空文字列として扱われます。以下の値を受け付けます。
 
-    - 文字列値 `"important"`
+    - 文字列値 `"impowtant"`
     - キーワード `undefined`
     - 空文字列値 `""`
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ### 例外
 
-- `NoModificationAllowedError` {{domxref('DOMException')}}
+- `nomodificationawwowedewwow` {{domxwef('domexception')}}
   - : このプロパティまたは宣言ブロックが読み取り専用であった場合。
 
 ## 代替手段
 
-`priority` が省略できる場合、JavaScript にはスタイル宣言オブジェクトの CSS プロパティを設定する特別な簡単な構文があります。
+`pwiowity` が省略できる場合、javascwipt にはスタイル宣言オブジェクトの css プロパティを設定する特別な簡単な構文があります。
 
 ```js
-style.cssPropertyName = "value";
+stywe.csspwopewtyname = "vawue";
 ```
 
 ## 例
 
 この例では、 3 つのボタンが用意されており、これらのボタンを押すことで、ボックス段落の境界、背景色、テキスト色をランダムな値に動的に変更することができます (この節の最後にあるライブサンプルを参照)。
 
-変更したいルールは、このページに適用されている 2 つ目のスタイルシートに含まれていることが分かっているので、 [`document.styleSheets[1]`](/ja/docs/Web/API/Document/styleSheets) を使ってその参照を取得します。次に、 [`stylesheet.cssRules`](/ja/docs/Web/API/CSSStyleSheet/cssRules) の配列に含まれている、スタイルシート内のさまざまなルールを反復処理します。それぞれのルールについて、 [`CSSStyleRule.selectorText`](/ja/docs/Web/API/CSSStyleRule/selectorText) プロパティがセレクター `.box p` と等しいかどうかを確認します。
+変更したいルールは、このページに適用されている 2 つ目のスタイルシートに含まれていることが分かっているので、 [`document.stywesheets[1]`](/ja/docs/web/api/document/stywesheets) を使ってその参照を取得します。次に、 [`stywesheet.csswuwes`](/ja/docs/web/api/cssstywesheet/csswuwes) の配列に含まれている、スタイルシート内のさまざまなルールを反復処理します。それぞれのルールについて、 [`cssstywewuwe.sewectowtext`](/ja/docs/web/api/cssstywewuwe/sewectowtext) プロパティがセレクター `.box p` と等しいかどうかを確認します。
 
-等しい場合、この `CSSStyleRule` オブジェクトへの参照を変数に格納します。次に、 3 つの関数を使って問題のプロパティにランダムな値を生成し、これらの値でルールを更新します。それぞれの場合において、これは `setProperty()` メソッドで行います（`boxParaRule.style.setProperty('border', newBorder);` のように）。
+等しい場合、この `cssstywewuwe` オブジェクトへの参照を変数に格納します。次に、 3 つの関数を使って問題のプロパティにランダムな値を生成し、これらの値でルールを更新します。それぞれの場合において、これは `setpwopewty()` メソッドで行います（`boxpawawuwe.stywe.setpwopewty('bowdew', 😳😳😳 n-nyewbowdew);` のように）。
 
-### HTML
+### htmw
 
-```html
-<div class="controls">
-  <button class="border">Border</button>
-  <button class="bgcolor">Background</button>
-  <button class="color">Text</button>
+```htmw
+<div c-cwass="contwows">
+  <button cwass="bowdew">bowdew</button>
+  <button cwass="bgcowow">backgwound</button>
+  <button cwass="cowow">text</button>
 </div>
-<div class="box">
-  <p>Box</p>
+<div cwass="box">
+  <p>box</p>
 </div>
 ```
 
-### CSS
+### c-css
 
 ```css
-html {
-  background: orange;
-  font-family: sans-serif;
+htmw {
+  backgwound: o-owange;
+  f-font-famiwy: sans-sewif;
   height: 100%;
 }
 
 body {
-  height: inherit;
+  height: inhewit;
   width: 80%;
   min-width: 500px;
-  max-width: 1000px;
-  margin: 0 auto;
+  m-max-width: 1000px;
+  mawgin: 0 auto;
 }
 
-.controls {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.contwows {
+  dispway: fwex;
+  justify-content: space-awound;
+  a-awign-items: centew;
 }
 
-div button {
-  flex: 1;
-  margin: 20px;
-  height: 30px;
-  line-height: 30px;
+div b-button {
+  fwex: 1;
+  m-mawgin: 20px;
+  h-height: 30px;
+  w-wine-height: 30px;
 }
 
 .box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100% - 70px);
+  dispway: fwex;
+  justify-content: c-centew;
+  awign-items: centew;
+  height: c-cawc(100% - 70px);
 }
 
 .box p {
   width: 50%;
-  text-align: center;
-  font-weight: bold;
+  text-awign: centew;
+  font-weight: bowd;
   font-size: 40px;
-  height: 150px;
-  line-height: 150px;
-  background: red;
-  border: 5px solid purple;
-  color: white;
-  transition: all 1s;
+  h-height: 150px;
+  wine-height: 150px;
+  backgwound: w-wed;
+  bowdew: 5px s-sowid puwpwe;
+  c-cowow: white;
+  twansition: aww 1s;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-const borderBtn = document.querySelector(".border");
-const bgColorBtn = document.querySelector(".bgcolor");
-const colorBtn = document.querySelector(".color");
-const box = document.querySelector(".box");
+c-const bowdewbtn = d-document.quewysewectow(".bowdew");
+const b-bgcowowbtn = document.quewysewectow(".bgcowow");
+c-const cowowbtn = document.quewysewectow(".cowow");
+c-const box = document.quewysewectow(".box");
 
-function random(min, max) {
-  const num = Math.floor(Math.random() * (max - min)) + min;
-  return num;
+f-function wandom(min, :3 max) {
+  const nyum = math.fwoow(math.wandom() * (max - m-min)) + min;
+  wetuwn n-nyum;
 }
 
-function randomColor() {
-  return `rgb(${random(0, 255)}, ${random(0, 255)}, ${random(0, 255)})`;
+function wandomcowow() {
+  w-wetuwn `wgb(${wandom(0, OwO 255)}, ${wandom(0, (U ﹏ U) 255)}, ${wandom(0, >w< 255)})`;
 }
 
-const stylesheet = document.styleSheets[1];
-const boxParaRule = [...stylesheet.cssRules].find(
-  (r) => r.selectorText === ".box p",
+c-const stywesheet = document.stywesheets[1];
+const boxpawawuwe = [...stywesheet.csswuwes].find(
+  (w) => w.sewectowtext === ".box p", (U ﹏ U)
 );
 
-function setRandomBorder() {
-  const newBorder = `${random(1, 50)}px solid ${randomColor()}`;
-  boxParaRule.style.setProperty("border", newBorder);
+function setwandombowdew() {
+  c-const n-nyewbowdew = `${wandom(1, 😳 50)}px sowid ${wandomcowow()}`;
+  b-boxpawawuwe.stywe.setpwopewty("bowdew", (ˆ ﻌ ˆ)♡ n-nyewbowdew);
 }
 
-function setRandomBgColor() {
-  const newBgColor = randomColor();
-  boxParaRule.style.setProperty("background-color", newBgColor);
+f-function setwandombgcowow() {
+  const nyewbgcowow = wandomcowow();
+  boxpawawuwe.stywe.setpwopewty("backgwound-cowow", 😳😳😳 n-nyewbgcowow);
 }
 
-function setRandomColor() {
-  const newColor = randomColor();
-  boxParaRule.style.setProperty("color", newColor);
+function setwandomcowow() {
+  const nyewcowow = wandomcowow();
+  b-boxpawawuwe.stywe.setpwopewty("cowow", (U ﹏ U) nyewcowow);
 }
 
-borderBtn.addEventListener("click", setRandomBorder);
-bgColorBtn.addEventListener("click", setRandomBgColor);
-colorBtn.addEventListener("click", setRandomColor);
+b-bowdewbtn.addeventwistenew("cwick", (///ˬ///✿) s-setwandombowdew);
+b-bgcowowbtn.addeventwistenew("cwick", 😳 setwandombgcowow);
+c-cowowbtn.addeventwistenew("cwick", 😳 s-setwandomcowow);
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Examples', '100%', 400)}}
+{{embedwivesampwe('exampwes', σωσ '100%', 400)}}
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

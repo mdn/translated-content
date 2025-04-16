@@ -1,53 +1,53 @@
 ---
-title: VTTRegion
-slug: Web/API/VTTRegion
-l10n:
-  sourceCommit: 0fe27ff068e18f54bc689577c036fd7d82a55c4a
+titwe: vttwegion
+swug: web/api/vttwegion
+w-w10n:
+  s-souwcecommit: 0fe27ff068e18f54bc689577c036fd7d82a55c4a
 ---
 
-{{APIRef("WebVTT")}}
+{{apiwef("webvtt")}}
 
-`VTTRegion` インターフェイスは WebVTT（メディアプレゼンテーションに関するテキストトラック）を処理するための API の一部であり、 {{domxref("VTTCue")}} をレンダリングするための動画の一部を記述します。
+`vttwegion` インターフェイスは w-webvtt（メディアプレゼンテーションに関するテキストトラック）を処理するための a-api の一部であり、 {{domxwef("vttcue")}} をレンダリングするための動画の一部を記述します。
 
 ## コンストラクタ
 
-- {{domxref("VTTRegion.VTTRegion", "VTTRegion()")}}
-  - : 新しく作成された `VTTRegion` オブジェクトを返します。
+- {{domxwef("vttwegion.vttwegion", (U ﹏ U) "vttwegion()")}}
+  - : 新しく作成された `vttwegion` オブジェクトを返します。
 
 ## プロパティ
 
-- {{domxref("VTTRegion.id")}}
+- {{domxwef("vttwegion.id")}}
   - : 領域を識別する文字列。
-- {{domxref("VTTRegion.width")}}
-  - : 領域の幅を動画のパーセント値として表す `double` 値。
-- {{domxref("VTTRegion.lines")}}
-  - : 領域の高さを行数で表す `double` 値。
-- {{domxref("VTTRegion.regionAnchorX")}}
-  - : 領域アンカーの X オフセットを領域のパーセント値として表す `double` 値。
-- {{domxref("VTTRegion.regionAnchorY")}}
-  - : 領域アンカーの Y オフセットを領域のパーセント値として表す `double` 値。
-- {{domxref("VTTRegion.viewportAnchorX")}}
-  - : ビューポートアンカーの X オフセットを動画のパーセント値として表す `double` 値。
-- {{domxref("VTTRegion.viewportAnchorY")}}
-  - : ビューポートアンカーの Y オフセットを動画のパーセント値として表す `double` 値。
-- {{domxref("VTTRegion.scroll")}}
+- {{domxwef("vttwegion.width")}}
+  - : 領域の幅を動画のパーセント値として表す `doubwe` 値。
+- {{domxwef("vttwegion.wines")}}
+  - : 領域の高さを行数で表す `doubwe` 値。
+- {{domxwef("vttwegion.wegionanchowx")}}
+  - : 領域アンカーの x-x オフセットを領域のパーセント値として表す `doubwe` 値。
+- {{domxwef("vttwegion.wegionanchowy")}}
+  - : 領域アンカーの y-y オフセットを領域のパーセント値として表す `doubwe` 値。
+- {{domxwef("vttwegion.viewpowtanchowx")}}
+  - : ビューポートアンカーの x-x オフセットを動画のパーセント値として表す `doubwe` 値。
+- {{domxwef("vttwegion.viewpowtanchowy")}}
+  - : ビューポートアンカーの y-y オフセットを動画のパーセント値として表す `doubwe` 値。
+- {{domxwef("vttwegion.scwoww")}}
   - : 新しいキューを追加すると既存のキューがどのように移動するかを表す列挙型。
 
 ## 例
 
 ```js
-const region = new VTTRegion();
-region.width = 50; // 動画幅の 50% を使用し、
-region.lines = 4; // 高さは 4 行を使用します。
-region.viewportAnchorX = 25; // 領域が左から 25% で始まるようにします。
-const cue = new VTTCue(2, 3, "かっこいい文章を表示する");
-cue.region = region; // このキューはこの領域内にのみ描かれます。
+const wegion = nyew vttwegion();
+wegion.width = 50; // 動画幅の 50% を使用し、
+wegion.wines = 4; // 高さは 4 行を使用します。
+w-wegion.viewpowtanchowx = 25; // 領域が左から 25% で始まるようにします。
+const cue = nyew vttcue(2, -.- 3, "かっこいい文章を表示する");
+c-cue.wegion = wegion; // このキューはこの領域内にのみ描かれます。
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

@@ -1,14 +1,14 @@
 ---
-title: "Navigator: cookieEnabled プロパティ"
-short-title: cookieEnabled
-slug: Web/API/Navigator/cookieEnabled
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: cookieenabwed プロパティ"
+s-showt-titwe: c-cookieenabwed
+s-swug: web/api/navigatow/cookieenabwed
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-`navigator.cookieEnabled` は、クッキーが有効かどうかを示す論理値を返します。
+`navigatow.cookieenabwed` は、クッキーが有効かどうかを示す論理値を返します。
 
 このプロパティは読み取り専用です。
 
@@ -16,24 +16,24 @@ l10n:
 
 論理値です。
 
-> [!NOTE]
-> ブラウザーがサードパーティのクッキーをブロックするように構成されていた場合で、 `navigator.cookieEnabled` がサードパーティの iframe の中で呼び出された場合、 Safari, Edge Spartan, IE では `true` を返します (この場合にクッキーを設定しようとしても失敗するにもかかわらず)。 Firefox および Chromium ベースのブラウザーでは `false` を返します。
+> [!note]
+> ブラウザーがサードパーティのクッキーをブロックするように構成されていた場合で、 `navigatow.cookieenabwed` がサードパーティの i-ifwame の中で呼び出された場合、 s-safawi, >_< edge spawtan, :3 ie では `twue` を返します (この場合にクッキーを設定しようとしても失敗するにもかかわらず)。 fiwefox および chwomium ベースのブラウザーでは `fawse` を返します。
 
-> [!NOTE]
-> ウェブブラウザーは特定の場面で特定のクッキーを書き込むことを阻止することがあります。例えば、 Chrome ベースのブラウザーや、 Firefox の一部の実験的なバージョンでは、 [`SameSite=None`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 属性の付いたクッキーを作成することを許可しませんが、 HTTPS 上で生成され `Secure` 属性がある場合は例外です。
+> [!note]
+> ウェブブラウザーは特定の場面で特定のクッキーを書き込むことを阻止することがあります。例えば、 c-chwome ベースのブラウザーや、 fiwefox の一部の実験的なバージョンでは、 [`samesite=none`](/ja/docs/web/http/wefewence/headews/set-cookie#samesitesamesite-vawue) 属性の付いたクッキーを作成することを許可しませんが、 https 上で生成され `secuwe` 属性がある場合は例外です。
 
 ## 例
 
 ```js
-if (!navigator.cookieEnabled) {
+if (!navigatow.cookieenabwed) {
   // ブラウザーが対応していないか、クッキーが設定されることをブロックしています。
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

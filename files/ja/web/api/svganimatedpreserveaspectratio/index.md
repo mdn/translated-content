@@ -1,64 +1,64 @@
 ---
-title: SVGAnimatedPreserveAspectRatio
-slug: Web/API/SVGAnimatedPreserveAspectRatio
-l10n:
-  sourceCommit: 0bb352f93d19c62cd07807479975f610f7b02cf4
+titwe: svganimatedpwesewveaspectwatio
+swug: web/api/svganimatedpwesewveaspectwatio
+w-w10n:
+  souwcecommit: 0bb352f93d19c62cd07807479975f610f7b02cf4
 ---
 
-{{APIRef("SVG")}}
+{{apiwef("svg")}}
 
-## SVG のアニメーションする preserveAspectRatio インターフェイス
+## s-svg のアニメーションする p-pwesewveaspectwatio インターフェイス
 
-`SVGAnimatedPreserveAspectRatio` インターフェイスは、 {{ domxref("SVGPreserveAspectRatio") }} 型のアニメーション可能な属性で使用されます。
+`svganimatedpwesewveaspectwatio` インターフェイスは、 {{ d-domxwef("svgpwesewveaspectwatio") }} 型のアニメーション可能な属性で使用されます。
 
 ### インターフェイス概要
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">実装しているもの</th>
+    <tw>
+      <th s-scope="wow">実装しているもの</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">メソッド</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">メソッド</th>
       <td><em>なし</em></td>
-    </tr>
-    <tr>
-      <th scope="row">プロパティ</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">プロパティ</th>
       <td>
-        <ul>
-          <li>読み取り専用の float <code>baseVal</code></li>
-          <li>読み取り専用の float <code>animVal</code></li>
-        </ul>
+        <uw>
+          <wi>読み取り専用の fwoat <code>basevaw</code></wi>
+          <wi>読み取り専用の fwoat <code>animvaw</code></wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">正規ドキュメント</th>
+    </tw>
+    <tw>
+      <th scope="wow">正規ドキュメント</th>
       <td>
         <a
-          href="https://www.w3.org/TR/SVG11/coords.html#InterfaceSVGAnimatedPreserveAspectRatio"
-          >SVG 1.1 (2nd Edition)</a
+          hwef="https://www.w3.owg/tw/svg11/coowds.htmw#intewfacesvganimatedpwesewveaspectwatio"
+          >svg 1.1 (2nd edition)</a
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## インスタンスプロパティ
 
-- {{domxref("SVGAnimatedPreserveAspectRatio.baseVal", "baseVal")}} {{ReadOnlyInline}}
-  - : {{domxref("SVGPreserveAspectRatio")}} で、アニメーションを適用する前の指定された属性の基底値を表します。
-- {{domxref("SVGAnimatedPreserveAspectRatio.animVal", "animVal")}} {{ReadOnlyInline}}
-  - : 指定された属性がアニメーションしている場合、 {{domxref("SVGPreserveAspectRatio")}} でその属性の現在のアニメーション値になります。指定された属性が現在アニメーションしていない場合、 {{domxref("SVGPreserveAspectRatio")}} で `baseVal` と同じ値になります。 `animVal` が参照するオブジェクトは、属性がアニメーションしていない場合でも、 `baseVal` が参照するオブジェクトとは常に異なります。
+- {{domxwef("svganimatedpwesewveaspectwatio.basevaw", rawr "basevaw")}} {{weadonwyinwine}}
+  - : {{domxwef("svgpwesewveaspectwatio")}} で、アニメーションを適用する前の指定された属性の基底値を表します。
+- {{domxwef("svganimatedpwesewveaspectwatio.animvaw", σωσ "animvaw")}} {{weadonwyinwine}}
+  - : 指定された属性がアニメーションしている場合、 {{domxwef("svgpwesewveaspectwatio")}} でその属性の現在のアニメーション値になります。指定された属性が現在アニメーションしていない場合、 {{domxwef("svgpwesewveaspectwatio")}} で `basevaw` と同じ値になります。 `animvaw` が参照するオブジェクトは、属性がアニメーションしていない場合でも、 `basevaw` が参照するオブジェクトとは常に異なります。
 
 ## インスタンスメソッド
 
-`SVGAnimatedPreserveAspectRatio` インターフェイスは固有のメソッドを提供していません。
+`svganimatedpwesewveaspectwatio` インターフェイスは固有のメソッドを提供していません。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

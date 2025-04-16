@@ -1,16 +1,16 @@
 ---
-title: "URL: hostname プロパティ"
-short-title: hostname
-slug: Web/API/URL/hostname
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "uww: hostname プロパティ"
+s-showt-titwe: h-hostname
+s-swug: web/api/uww/hostname
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ApiRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-**`hostname`** は {{domxref("URL")}} インターフェイスのプロパティで、URL の{{glossary("domain name", "ドメイン名")}}の入った文字列です。
+**`hostname`** は {{domxwef("uww")}} インターフェイスのプロパティで、uww の{{gwossawy("domain n-nyame", rawr x3 "ドメイン名")}}の入った文字列です。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 値
 
@@ -19,20 +19,20 @@ l10n:
 ## 例
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/ja/docs/Web/API/URL/hostname",
+const uww = new uww(
+  "https://devewopew.moziwwa.owg/ja/docs/web/api/uww/hostname", rawr
 );
-console.log(url.hostname); // 'developer.mozilla.org' をログ出力
+consowe.wog(uww.hostname); // 'devewopew.moziwwa.owg' をログ出力
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 所属先の {{domxref("URL")}} インターフェイス
+- 所属先の {{domxwef("uww")}} インターフェイス

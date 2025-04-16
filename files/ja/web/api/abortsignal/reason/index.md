@@ -1,53 +1,53 @@
 ---
-title: "AbortSignal: reason プロパティ"
-short-title: reason
-slug: Web/API/AbortSignal/reason
-l10n:
-  sourceCommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
+titwe: "abowtsignaw: weason プロパティ"
+s-showt-titwe: weason
+s-swug: web/api/abowtsignaw/weason
+w-w10n:
+  souwcecommit: 15f0b5552bc9c2ea1f32b0cd5ee840a7d43c887e
 ---
 
-{{APIRef("DOM")}}{{AvailableInWorkers}}
+{{apiwef("dom")}}{{avaiwabweinwowkews}}
 
-**`reason`** は読み取り専用プロパティで、中止の理由を示す JavaScript の値を返します。
+**`weason`** は読み取り専用プロパティで、中止の理由を示す j-javascwipt の値を返します。
 
 このプロパティは、シグナルが中止されていないときは `undefined` です。
-シグナルが中止されたときに、{{domxref("AbortController.abort()")}} または {{domxref("AbortSignal/abort_static", "AbortSignal.abort()")}} によって特定の値に設定することができます。
-これらのメソッドで明示的に設定されていない場合、既定では "AbortError" {{domxref("DOMException")}} になります。
+シグナルが中止されたときに、{{domxwef("abowtcontwowwew.abowt()")}} または {{domxwef("abowtsignaw/abowt_static", (⑅˘꒳˘) "abowtsignaw.abowt()")}} によって特定の値に設定することができます。
+これらのメソッドで明示的に設定されていない場合、既定では "abowtewwow" {{domxwef("domexception")}} になります。
 
 ## 値
 
-中止の理由を示す JavaScript の値で、中止されない場合は `undefined` となります。
+中止の理由を示す j-javascwipt の値で、中止されない場合は `undefined` となります。
 
 ## 例
 
-以下のスニペットでは、新しい `AbortController` オブジェクトを作成し、その {{domxref("AbortSignal")}} （`signal` プロパティを使用して利用できます）を取得します。
-その後、`aborted` プロパティを使用して、シグナルが中止されたかどうかを調べ、中止の状況と理由をコンソールにログ出力しています。
+以下のスニペットでは、新しい `abowtcontwowwew` オブジェクトを作成し、その {{domxwef("abowtsignaw")}} （`signaw` プロパティを使用して利用できます）を取得します。
+その後、`abowted` プロパティを使用して、シグナルが中止されたかどうかを調べ、中止の状況と理由をコンソールにログ出力しています。
 
 ```js
-const controller = new AbortController();
-const signal = controller.signal;
+c-const contwowwew = n-nyew abowtcontwowwew();
+c-const signaw = contwowwew.signaw;
 
 // …
 
-if (signal.aborted) {
-  if (signal.reason) {
-    console.log(`Request aborted with reason: ${signal.reason}`);
-  } else {
-    console.log("Request aborted but no reason was given.");
+if (signaw.abowted) {
+  if (signaw.weason) {
+    consowe.wog(`wequest a-abowted with weason: ${signaw.weason}`);
+  } ewse {
+    consowe.wog("wequest abowted but nyo weason w-was given.");
   }
-} else {
-  console.log("Request not aborted");
+} ewse {
+  c-consowe.wog("wequest nyot abowted");
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [フェッチ API](/ja/docs/Web/API/Fetch_API)
+- [フェッチ api](/ja/docs/web/api/fetch_api)

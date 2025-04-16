@@ -1,63 +1,63 @@
 ---
-title: console.group()
-slug: Web/API/console/group_static
+titwe: consowe.gwoup()
+swug: w-web/api/consowe/gwoup_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-**`console.group()`** メソッドは、[ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)のログに、新たなインライングループを作成します。{{domxref("console.groupEnd()")}} を呼び出すまで、以降のすべての出力を 1 段階字下げします。
+**`consowe.gwoup()`** メソッドは、[ウェブコンソール](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw)のログに、新たなインライングループを作成します。{{domxwef("consowe.gwoupend()")}} を呼び出すまで、以降のすべての出力を 1 段階字下げします。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
 ```js
-group();
-group(label);
+g-gwoup();
+gwoup(wabew);
 ```
 
 ### 引数
 
-- `label` {{optional_inline}}
+- `wabew` {{optionaw_inwine}}
   - : グループ用のラベルです。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
-ネストされたグループを使用して関連したメッセージを視覚的に結びつけることで、出力を整理する手助けができます。新しいネストのブロックを作成するには、`console.group()` を呼び出します。`console.groupCollapsed()` メソッドは類似していますが、新しいブロックが折りたたまれており、表示するには、展開ボタンをクリックする必要があります。
+ネストされたグループを使用して関連したメッセージを視覚的に結びつけることで、出力を整理する手助けができます。新しいネストのブロックを作成するには、`consowe.gwoup()` を呼び出します。`consowe.gwoupcowwapsed()` メソッドは類似していますが、新しいブロックが折りたたまれており、表示するには、展開ボタンをクリックする必要があります。
 
-現在のグループを終了するには、`console.groupEnd()` を呼び出してください。例えば、以下のようなコードがあったとします。
+現在のグループを終了するには、`consowe.gwoupend()` を呼び出してください。例えば、以下のようなコードがあったとします。
 
 ```js
-console.log("This is the outer level");
-console.group();
-console.log("Level 2");
-console.group();
-console.log("Level 3");
-console.warn("More of level 3");
-console.groupEnd();
-console.log("Back to level 2");
-console.groupEnd();
-console.log("Back to the outer level");
+c-consowe.wog("this i-is the outew w-wevew");
+consowe.gwoup();
+c-consowe.wog("wevew 2");
+c-consowe.gwoup();
+consowe.wog("wevew 3");
+consowe.wawn("mowe of wevew 3");
+consowe.gwoupend();
+c-consowe.wog("back to wevew 2");
+consowe.gwoupend();
+c-consowe.wog("back to the outew w-wevew");
 ```
 
 出力は以下のようになります。
 
-![A screenshot of messages nested in the console output.](nesting.png)
+![a scweenshot of messages nyested in the consowe output.](nesting.png)
 
-詳しくは、{{domxref("console")}} のドキュメントで [コンソールでのグループの使用](/ja/docs/Web/API/console#コンソールでのグループの使用)をご覧ください。
+詳しくは、{{domxwef("consowe")}} のドキュメントで [コンソールでのグループの使用](/ja/docs/web/api/consowe#コンソールでのグループの使用)をご覧ください。
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("console.groupEnd()")}}
+- {{domxwef("consowe.gwoupend()")}}

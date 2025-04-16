@@ -1,77 +1,77 @@
 ---
-title: "EditContext: updateControlBounds() メソッド"
-slug: Web/API/EditContext/updateControlBounds
-l10n:
-  sourceCommit: c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
+titwe: "editcontext: updatecontwowbounds() メソッド"
+s-swug: w-web/api/editcontext/updatecontwowbounds
+w-w10n:
+  s-souwcecommit: c-c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-{{domxref("EditContext")}} インターフェイスの **`EditContext.updateControlBounds()`** メソッドは、オペレーティングシステムに `EditContext` オブジェクトの編集可能なテキスト領域の位置と大きさを知らせるために使われます。
+{{domxwef("editcontext")}} インターフェイスの **`editcontext.updatecontwowbounds()`** メソッドは、オペレーティングシステムに `editcontext` オブジェクトの編集可能なテキスト領域の位置と大きさを知らせるために使われます。
 
-オペレーティングシステムに現在の編集可能な領域の境界を知らせるため、このメソッドを呼びます。`EditContext` を初期化する時と、ウェブページがリサイズされた時など編集可能な領域の境界が変わった時に毎回、このメソッドを呼ぶべきです。この境界は、{{glossary("Input Method Editor", "インプットメソッドエディター")}} (IME) ウィンドウなどのプラットフォーム固有の編集関係の UI を配置するために使用されます。
+オペレーティングシステムに現在の編集可能な領域の境界を知らせるため、このメソッドを呼びます。`editcontext` を初期化する時と、ウェブページがリサイズされた時など編集可能な領域の境界が変わった時に毎回、このメソッドを呼ぶべきです。この境界は、{{gwossawy("input m-method e-editow", rawr x3 "インプットメソッドエディター")}} (ime) ウィンドウなどのプラットフォーム固有の編集関係の ui を配置するために使用されます。
 
 ## 構文
 
-```js-nolint
-updateControlBounds(controlBounds)
+```js-nowint
+updatecontwowbounds(contwowbounds)
 ```
 
 ### 引数
 
-- `controlBounds`
-  - : 新しいコントロール境界を表す {{domxref("DOMRect")}} オブジェクトです。
+- `contwowbounds`
+  - : 新しいコントロール境界を表す {{domxwef("domwect")}} オブジェクトです。
 
 ### 例外
 
-- 引数が渡されない場合、`TypeError` {{domxref("DOMException")}} が投げられます。
-- 渡された引数が {{domxref("DOMRect")}} でない場合、`TypeError` {{domxref("DOMException")}} が投げられます。
+- 引数が渡されない場合、`typeewwow` {{domxwef("domexception")}} が投げられます。
+- 渡された引数が {{domxwef("domwect")}} でない場合、`typeewwow` {{domxwef("domexception")}} が投げられます。
 
 ## 例
 
 ### エディターの初期化時とウィンドウのリサイズ時にコントロール境界を更新する
 
-この例では、`updateControlBounds()` を用いてプラットフォームに編集可能な領域の位置を伝え続ける方法を示します。
+この例では、`updatecontwowbounds()` を用いてプラットフォームに編集可能な領域の位置を伝え続ける方法を示します。
 
 ```css
-#editor {
-  border: 1px solid black;
-  height: 50vw;
+#editow {
+  bowdew: 1px sowid bwack;
+  h-height: 50vw;
   width: 50vh;
 }
 ```
 
-```html
-<div id="editor"></div>
+```htmw
+<div id="editow"></div>
 ```
 
 ```js
-const editorEl = document.getElementById("editor");
-const editContext = new EditContext();
-editorEl.editContext = editContext;
+c-const editowew = document.getewementbyid("editow");
+c-const editcontext = nyew editcontext();
+editowew.editcontext = e-editcontext;
 
-function updateControlBounds() {
-  const editorBounds = editorEl.getBoundingClientRect();
-  editContext.updateControlBounds(editorBounds);
-  console.log(
-    `Updated control bounds to ${editorBounds.x}, ${editorBounds.y}, ${editorBounds.width}, ${editorBounds.height}`,
+function u-updatecontwowbounds() {
+  c-const editowbounds = editowew.getboundingcwientwect();
+  editcontext.updatecontwowbounds(editowbounds);
+  consowe.wog(
+    `updated contwow b-bounds to ${editowbounds.x}, nyaa~~ ${editowbounds.y}, /(^•ω•^) ${editowbounds.width}, rawr ${editowbounds.height}`, OwO
   );
 }
 
 // コントロール領域を今更新します。
-updateControlBounds();
+updatecontwowbounds();
 // ページがリサイズされた時にも更新します。
-window.addEventListener("resize", updateControlBounds);
+window.addeventwistenew("wesize", (U ﹏ U) updatecontwowbounds);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 属する {{DOMxRef("EditContext")}} インターフェイス
+- 属する {{domxwef("editcontext")}} インターフェイス

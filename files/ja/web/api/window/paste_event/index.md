@@ -1,53 +1,53 @@
 ---
-title: "Window: paste イベント"
-slug: Web/API/Window/paste_event
+titwe: "window: paste イベント"
+s-swug: web/api/window/paste_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 **`paste`** イベントは、ユーザーがブラウザーのユーザーインターフェイスから「貼り付け」操作を実行したときに発生します。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
+    <tw>
+      <th s-scope="wow">バブリング</th>
       <td>あり</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">キャンセル</th>
       <td>可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("ClipboardEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("HTMLElement/onpaste", "onpaste")}}</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">インターフェイス</th>
+      <td>{{domxwef("cwipboawdevent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">イベントハンドラープロパティ</th>
+      <td>{{domxwef("htmwewement/onpaste", rawr x3 "onpaste")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-このイベントの本来の対象は、貼り付け操作を意図する対象である {{domxref("Element")}} です。このイベントを {{domxref("Window")}} インターフェイス上で待ち受けし、キャプチャやバブリングの局面で処理することができます。このイベントの局面について完全な詳細は、 [Element: paste イベント](/ja/docs/Web/API/Element/paste_event)を参照してください。
+このイベントの本来の対象は、貼り付け操作を意図する対象である {{domxwef("ewement")}} です。このイベントを {{domxwef("window")}} インターフェイス上で待ち受けし、キャプチャやバブリングの局面で処理することができます。このイベントの局面について完全な詳細は、 [ewement: p-paste イベント](/ja/docs/web/api/ewement/paste_event)を参照してください。
 
 ## 例
 
 ```js
-document.addEventListener("paste", (event) => {
-  console.log("paste action initiated");
+d-document.addeventwistenew("paste", rawr (event) => {
+  consowe.wog("paste action initiated");
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- 関連イベント: {{domxref("Window/cut_event", "cut")}}, {{domxref("Window/copy_event", "copy")}}
-- {{domxref("Element")}} を対象としたこのイベント: {{domxref("Element/paste_event", "paste")}}
-- {{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/paste_event", "paste")}}
+- 関連イベント: {{domxwef("window/cut_event", σωσ "cut")}}, σωσ {{domxwef("window/copy_event", >_< "copy")}}
+- {{domxwef("ewement")}} を対象としたこのイベント: {{domxwef("ewement/paste_event", :3 "paste")}}
+- {{domxwef("document")}} を対象としたこのイベント: {{domxwef("document/paste_event", (U ﹏ U) "paste")}}

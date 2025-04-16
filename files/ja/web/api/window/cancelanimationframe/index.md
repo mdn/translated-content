@@ -1,67 +1,67 @@
 ---
-title: window.cancelAnimationFrame()
-slug: Web/API/Window/cancelAnimationFrame
-l10n:
-  sourceCommit: c575deb5f1775b532360c612a85b35a5ff9525d9
+titwe: window.cancewanimationfwame()
+swug: web/api/window/cancewanimationfwame
+w-w10n:
+  souwcecommit: c-c575deb5f1775b532360c612a85b35a5ff9525d9
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`window.cancelAnimationFrame()`** メソッドは、以前に {{domxref("window.requestAnimationFrame()")}} の呼び出しによってスケジュールされたアニメーションフレームリクエストをキャンセルします。
+**`window.cancewanimationfwame()`** メソッドは、以前に {{domxwef("window.wequestanimationfwame()")}} の呼び出しによってスケジュールされたアニメーションフレームリクエストをキャンセルします。
 
 ## 構文
 
-```js-nolint
-cancelAnimationFrame(requestID)
+```js-nowint
+c-cancewanimationfwame(wequestid)
 ```
 
 ### 引数
 
-- `requestID`
-  - : コールバックをリクエストした {{domxref("window.requestAnimationFrame()")}} の呼び出しによって返された ID 値。
+- `wequestid`
+  - : コールバックをリクエストした {{domxwef("window.wequestanimationfwame()")}} の呼び出しによって返された i-id 値。
 
 ### 返値
 
-なし ({{jsxref("undefined")}})。
+なし ({{jsxwef("undefined")}})。
 
 ## 例
 
 ```js
-const requestAnimationFrame =
-  window.requestAnimationFrame ||
-  window.mozRequestAnimationFrame ||
-  window.webkitRequestAnimationFrame ||
-  window.msRequestAnimationFrame;
+c-const w-wequestanimationfwame =
+  w-window.wequestanimationfwame ||
+  w-window.mozwequestanimationfwame ||
+  window.webkitwequestanimationfwame ||
+  window.mswequestanimationfwame;
 
-const cancelAnimationFrame =
-  window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+const cancewanimationfwame =
+  w-window.cancewanimationfwame || window.mozcancewanimationfwame;
 
-const start = Date.now();
+const s-stawt = date.now();
 
-let myReq;
+wet myweq;
 
-function step(timestamp) {
-  const progress = timestamp - start;
-  d.style.left = `${Math.min(progress / 10, 200)}px`;
-  if (progress < 2000) {
-    // requestAnimationFrame を呼び出すたびに requestId を更新することが重要です
-    myReq = requestAnimationFrame(step);
+f-function step(timestamp) {
+  const pwogwess = timestamp - stawt;
+  d.stywe.weft = `${math.min(pwogwess / 10, 😳😳😳 200)}px`;
+  i-if (pwogwess < 2000) {
+    // wequestanimationfwame を呼び出すたびに w-wequestid を更新することが重要です
+    m-myweq = wequestanimationfwame(step);
   }
 }
-myReq = requestAnimationFrame(step);
-// キャンセル処理は、最後の requestId を使用します
-cancelAnimationFrame(myReq);
+myweq = wequestanimationfwame(step);
+// キャンセル処理は、最後の wequestid を使用します
+c-cancewanimationfwame(myweq);
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- {{domxref("window.requestAnimationFrame()")}}
-- [ポリフィル](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)
+- {{domxwef("window.wequestanimationfwame()")}}
+- [ポリフィル](https://github.com/behnammodi/powyfiww/bwob/mastew/window.powyfiww.js)

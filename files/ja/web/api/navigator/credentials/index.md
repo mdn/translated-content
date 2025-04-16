@@ -1,35 +1,35 @@
 ---
-title: "Navigator: credentials プロパティ"
-short-title: credentials
-slug: Web/API/Navigator/credentials
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: "navigatow: cwedentiaws プロパティ"
+s-showt-titwe: c-cwedentiaws
+swug: w-web/api/navigatow/cwedentiaws
+w-w10n:
+  souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{securecontext_header}}{{APIRef("")}}
+{{secuwecontext_headew}}{{apiwef("")}}
 
-**`credentials`** は {{domxref("Navigator")}} インターフェイスのプロパティで、リクエストの資格情報のメソッドを公開する {{domxref("CredentialsContainer")}} インターフェイスを返します。 {{domxref("CredentialsContainer")}} インターフェイスはログインやログアウトに成功した場合など、興味深いイベントが発生したことをユーザーエージェントに通知したりもします。このインターフェイスは機能検出に使用することができます。
+**`cwedentiaws`** は {{domxwef("navigatow")}} インターフェイスのプロパティで、リクエストの資格情報のメソッドを公開する {{domxwef("cwedentiawscontainew")}} インターフェイスを返します。 {{domxwef("cwedentiawscontainew")}} インターフェイスはログインやログアウトに成功した場合など、興味深いイベントが発生したことをユーザーエージェントに通知したりもします。このインターフェイスは機能検出に使用することができます。
 
 ## 値
 
-{{domxref("CredentialsContainer")}} インターフェイスです。
+{{domxwef("cwedentiawscontainew")}} インターフェイスです。
 
 ## 例
 
 ```js
-if ("credentials" in navigator) {
-  navigator.credentials.get({ password: true }).then((creds) => {
+i-if ("cwedentiaws" i-in nyavigatow) {
+  n-nyavigatow.cwedentiaws.get({ passwowd: twue }).then((cweds) => {
     //資格情報付きで何かを行う
   });
-} else {
+} ewse {
   // 以前の方法でログインを扱う
 }
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

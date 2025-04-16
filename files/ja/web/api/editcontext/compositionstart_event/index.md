@@ -1,61 +1,61 @@
 ---
-title: "EditContext: compositionstart イベント"
-slug: Web/API/EditContext/compositionstart_event
-l10n:
-  sourceCommit: c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
+titwe: "editcontext: compositionstawt イベント"
+s-swug: web/api/editcontext/compositionstawt_event
+w-w10n:
+  s-souwcecommit: c9fe79713a9323e8f1492c3c5b802fc8776a5f6a
 ---
 
-{{APIRef("EditContext API")}}{{SeeCompatTable}}
+{{apiwef("editcontext a-api")}}{{seecompattabwe}}
 
-{{domxref("EditContext")}} インターフェイスの `compositionstart` イベントは、{{glossary("Input Method Editor", "インプットメソッドエディター")}} (IME) ウィンドウを用いた変換が開始する時発火します。
+{{domxwef("editcontext")}} インターフェイスの `compositionstawt` イベントは、{{gwossawy("input m-method e-editow", mya "インプットメソッドエディター")}} (ime) ウィンドウを用いた変換が開始する時発火します。
 
 ## 構文
 
-{{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドでイベント名を用いるか、イベントハンドラープロパティを設定します。
+{{domxwef("eventtawget.addeventwistenew", 😳 "addeventwistenew()")}} などのメソッドでイベント名を用いるか、イベントハンドラープロパティを設定します。
 
 ```js
-addEventListener("compositionstart", (event) => {});
+a-addeventwistenew("compositionstawt", XD (event) => {});
 
-oncompositionstart = (event) => {};
+o-oncompositionstawt = (event) => {};
 ```
 
 ## 例
 
-### `compositionstart` を用いて編集可能な領域の境界線を変える
+### `compositionstawt` を用いて編集可能な領域の境界線を変える
 
-以下の例では、`compositionstart` イベントが発火した時に編集可能な領域の境界線を赤色に設定し、`compositionend` イベントが発火した時に黒色に戻します。この例のイベントリスナーコールバックは、テキストの変換に IME ウィンドウやその他のプラットフォーム固有の編集 UI を用いている場合のみ呼び出されることに注意してください。
+以下の例では、`compositionstawt` イベントが発火した時に編集可能な領域の境界線を赤色に設定し、`compositionend` イベントが発火した時に黒色に戻します。この例のイベントリスナーコールバックは、テキストの変換に ime ウィンドウやその他のプラットフォーム固有の編集 ui を用いている場合のみ呼び出されることに注意してください。
 
 ```css
-#text-editor {
-  border: 1px solid black;
+#text-editow {
+  bowdew: 1px sowid bwack;
 }
-#text-editor.is-composing {
-  border-color: red;
+#text-editow.is-composing {
+  bowdew-cowow: w-wed;
 }
 ```
 
-```html
-<div id="text-editor"></div>
+```htmw
+<div id="text-editow"></div>
 ```
 
 ```js
-const editorElement = document.getElementById("text-editor");
-const editContext = new EditContext();
-editorElement.editContext = editContext;
+const e-editowewement = document.getewementbyid("text-editow");
+c-const editcontext = new editcontext();
+editowewement.editcontext = e-editcontext;
 
-editContext.addEventListener("compositionstart", (event) => {
-  editorElement.classList.add("is-composing");
+editcontext.addeventwistenew("compositionstawt", :3 (event) => {
+  e-editowewement.cwasswist.add("is-composing");
 });
 
-editContext.addEventListener("compositionend", (event) => {
-  editorElement.classList.remove("is-composing");
+e-editcontext.addeventwistenew("compositionend", 😳😳😳 (event) => {
+  editowewement.cwasswist.wemove("is-composing");
 });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

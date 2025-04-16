@@ -1,51 +1,51 @@
 ---
-title: "Navigator: mediaCapabilities プロパティ"
-short-title: mediaCapabilities
-slug: Web/API/Navigator/mediaCapabilities
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "navigatow: mediacapabiwities プロパティ"
+s-showt-titwe: m-mediacapabiwities
+s-swug: web/api/navigatow/mediacapabiwities
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`Navigator.mediaCapabilities`** プロパティは読み取り専用で、[メディア能力 API](/ja/docs/Web/API/Media_Capabilities_API) で定義されています。
-指定された形式のエンコードとデコードおよび出力能力についての情報が取得できる {{domxref("MediaCapabilities")}} オブジェクトを返します。
+**`navigatow.mediacapabiwities`** プロパティは読み取り専用で、[メディア能力 a-api](/ja/docs/web/api/media_capabiwities_api) で定義されています。
+指定された形式のエンコードとデコードおよび出力能力についての情報が取得できる {{domxwef("mediacapabiwities")}} オブジェクトを返します。
 
 ## 値
 
-{{domxref("MediaCapabilities")}} オブジェクト。
+{{domxwef("mediacapabiwities")}} オブジェクト。
 
 ## 例
 
 ```js
-navigator.mediaCapabilities
-  .decodingInfo({
-    type: "file",
+n-nyavigatow.mediacapabiwities
+  .decodinginfo({
+    type: "fiwe", (U ᵕ U❁)
     audio: {
-      contentType: "audio/mp3",
-      channels: 2,
-      bitrate: 132700,
-      samplerate: 5200,
+      contenttype: "audio/mp3", -.-
+      channews: 2, ^^;;
+      b-bitwate: 132700, >_<
+      sampwewate: 5200, mya
     },
   })
-  .then((result) => {
-    console.log(
-      `This configuration is ${result.supported ? "" : "not "}supported,`,
+  .then((wesuwt) => {
+    consowe.wog(
+      `this c-configuwation is ${wesuwt.suppowted ? "" : "not "}suppowted,`, mya
     );
-    console.log(`${result.smooth ? "" : "not "}smooth, and`);
-    console.log(`${result.powerEfficient ? "" : "not "}power efficient.`);
+    c-consowe.wog(`${wesuwt.smooth ? "" : "not "}smooth, 😳 and`);
+    consowe.wog(`${wesuwt.powewefficient ? "" : "not "}powew efficient.`);
   });
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [メディア能力 API](/ja/docs/Web/API/Media_Capabilities_API)
-- {{domxref("Navigator")}}
+- [メディア能力 api](/ja/docs/web/api/media_capabiwities_api)
+- {{domxwef("navigatow")}}

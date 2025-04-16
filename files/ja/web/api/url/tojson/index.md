@@ -1,21 +1,21 @@
 ---
-title: "URL: toJSON() メソッド"
-short-title: toJSON()
-slug: Web/API/URL/toJSON
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: "uww: tojson() メソッド"
+s-showt-titwe: t-tojson()
+swug: w-web/api/uww/tojson
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("URL API")}}
+{{apiwef("uww a-api")}}
 
-**`toJSON()`** は {{domxref("URL")}} インターフェイスのメソッドで、URL のシリアル化されたバージョンの入った文字列を返しますが、実際には {{domxref("URL.toString()")}} と同じ効果があるようです。
+**`tojson()`** は {{domxwef("uww")}} インターフェイスのメソッドで、uww のシリアル化されたバージョンの入った文字列を返しますが、実際には {{domxwef("uww.tostwing()")}} と同じ効果があるようです。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 構文
 
-```js-nolint
-toJSON()
+```js-nowint
+t-tojson()
 ```
 
 ### 引数
@@ -29,20 +29,20 @@ toJSON()
 ## 例
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/ja/docs/Web/API/URL/toString",
+c-const uww = new uww(
+  "https://devewopew.moziwwa.owg/ja/docs/web/api/uww/tostwing", rawr x3
 );
-url.toJSON(); // URL を文字列として返します。
+uww.tojson(); // uww を文字列として返します。
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [`URL.prototype.toJSON` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [`uww.pwototype.tojson` のポリフィル (`cowe-js`)](https://github.com/zwoiwock/cowe-js#uww-and-uwwseawchpawams)

@@ -1,88 +1,88 @@
 ---
-title: Web API
-slug: Web/API
-l10n:
-  sourceCommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
+titwe: web api
+swug: web/api
+w-w10n:
+  souwcecommit: 387d0d4d8690c0d2c9db1b85eae28ffea0f3ac1f
 ---
 
-ウェブのコードを書く時は、数多くの Web API が利用できます。以下に、ウェブアプリやサイトを開発する際に利用することができる可能性があるすべてのインターフェイス（オブジェクト型）のリストを挙げます。
+ウェブのコードを書く時は、数多くの w-web api が利用できます。以下に、ウェブアプリやサイトを開発する際に利用することができる可能性があるすべてのインターフェイス（オブジェクト型）のリストを挙げます。
 
-Web API は通常 JavaScript とともに使用されますが、常にそうとは限りません。
+w-web api は通常 j-javascwipt とともに使用されますが、常にそうとは限りません。
 
-## API 仕様書日本語索引
+## a-api 仕様書日本語索引
 
 ### ア
 
-- [位置情報 API](/ja/docs/Web/API/Geolocation_API)
-- [IndexedDB](/ja/docs/Web/API/IndexedDB_API)
-- [ウィンドウ制御 API](/ja/docs/Web/API/Window_Management_API)
-- [ウィンドウ制御オーバーレイ API](/ja/docs/Web/API/Window_Controls_Overlay_API)
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
-- [ウェブ共有 API](/ja/docs/Web/API/Web_Share_API)
-- [ウェブシリアル API](/ja/docs/Web/API/Web_Serial_API)
-- [ウェブ定期バックグラウンド同期 API](/ja/docs/Web/API/Web_Periodic_Background_Synchronization_API)
-- [WebVTT API](/ja/docs/Web/API/WebVTT_API)
-- [ウェブ MIDI API](/ja/docs/Web/API/Web_MIDI_API)
+- [位置情報 a-api](/ja/docs/web/api/geowocation_api)
+- [indexeddb](/ja/docs/web/api/indexeddb_api)
+- [ウィンドウ制御 a-api](/ja/docs/web/api/window_management_api)
+- [ウィンドウ制御オーバーレイ a-api](/ja/docs/web/api/window_contwows_ovewway_api)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)
+- [ウェブ共有 api](/ja/docs/web/api/web_shawe_api)
+- [ウェブシリアル api](/ja/docs/web/api/web_sewiaw_api)
+- [ウェブ定期バックグラウンド同期 api](/ja/docs/web/api/web_pewiodic_backgwound_synchwonization_api)
+- [webvtt a-api](/ja/docs/web/api/webvtt_api)
+- [ウェブ midi api](/ja/docs/web/api/web_midi_api)
 
 ### カ
 
-- [画面起動ロック API](/ja/docs/Web/API/Screen_Wake_Lock_API)
-- [画面キャプチャ API](/ja/docs/Web/API/Screen_Capture_API)
-- [画面方向 API](/ja/docs/Web/API/Screen_Orientation_API)
-- [決済ハンドラー API](/ja/docs/Web/API/Payment_Handler_API)
-- [決済リクエスト API](/ja/docs/Web/API/Payment_Request_API)
-- [権限 API](/ja/docs/Web/API/Permissions_API)
-- [交差オブザーバー API](/ja/docs/Web/API/Intersection_Observer_API)
+- [画面起動ロック a-api](/ja/docs/web/api/scween_wake_wock_api)
+- [画面キャプチャ api](/ja/docs/web/api/scween_captuwe_api)
+- [画面方向 a-api](/ja/docs/web/api/scween_owientation_api)
+- [決済ハンドラー api](/ja/docs/web/api/payment_handwew_api)
+- [決済リクエスト api](/ja/docs/web/api/payment_wequest_api)
+- [権限 api](/ja/docs/web/api/pewmissions_api)
+- [交差オブザーバー api](/ja/docs/web/api/intewsection_obsewvew_api)
 
 ### サ
 
-- [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)
-- [サービスワーカー API](Web/API/Service_Worker_API)
-- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)
-- [ストレージ API](/ja/docs/Web/API/Storage_API)
-- [ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API)
-- [センサー API 群](/ja/docs/Web/API/Sensor_APIs)
+- [サーバー送信イベント](/ja/docs/web/api/sewvew-sent_events)
+- [サービスワーカー a-api](web/api/sewvice_wowkew_api)
+- [css カウンタースタイル](/ja/docs/web/css/css_countew_stywes)
+- [ストレージ api](/ja/docs/web/api/stowage_api)
+- [ストレージアクセス a-api](/ja/docs/web/api/stowage_access_api)
+- [センサー a-api 群](/ja/docs/web/api/sensow_apis)
 
 ### タ
 
-- [通知 API](/ja/docs/Web/API/Notifications_API)
-- [DOM](/ja/docs/Web/API/Document_Object_Model)
+- [通知 api](/ja/docs/web/api/notifications_api)
+- [dom](/ja/docs/web/api/document_object_modew)
 
 ### ナ
 
-- [ネットワーク情報 API](/ja/docs/Web/API/Network_Information_API)
+- [ネットワーク情報 api](/ja/docs/web/api/netwowk_infowmation_api)
 
 ### ハ
 
-- [バックグラウンド同期 API](/ja/docs/Web/API/Background_Synchronization_API)
-- [バックグラウンドフェッチ API](/ja/docs/Web/API/Background_Fetch_API)
-- [バッジ API](/ja/docs/Web/API/Badging_API)
-- [パフォーマンス API](/ja/docs/Web/API/Performance_API)
-- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
-- [フェッチ API](/ja/docs/Web/API/Fetch_API)
-- [プッシュ通知 API](/ja/docs/Web/API/Push_API)
-- [プレゼンテーション API](/ja/docs/Web/API/Presentation_API)
+- [バックグラウンド同期 api](/ja/docs/web/api/backgwound_synchwonization_api)
+- [バックグラウンドフェッチ api](/ja/docs/web/api/backgwound_fetch_api)
+- [バッジ api](/ja/docs/web/api/badging_api)
+- [パフォーマンス a-api](/ja/docs/web/api/pewfowmance_api)
+- [ビュー遷移 api](/ja/docs/web/api/view_twansition_api)
+- [フェッチ api](/ja/docs/web/api/fetch_api)
+- [プッシュ通知 api](/ja/docs/web/api/push_api)
+- [プレゼンテーション api](/ja/docs/web/api/pwesentation_api)
 
 ### マ
 
-- [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
+- [メディアキャプチャとストリーム a-api](/ja/docs/web/api/media_captuwe_and_stweams_api)
 
 ### ヤ
 
-- [URL API](/ja/docs/Web/API/URL_API)
+- [uww api](/ja/docs/web/api/uww_api)
 
-## API 仕様書英語索引
+## api 仕様書英語索引
 
-利用可能なすべての API の一覧です。
+利用可能なすべての a-api の一覧です。
 
-{{ListGroups}}
+{{wistgwoups}}
 
 ## インターフェイス
 
 利用可能なすべてのインターフェイス (すなわちオブジェクトの型) の一覧です。
 
-{{APIListAlpha}}
+{{apiwistawpha}}
 
 ## ブラウザーの互換性
 
-- [Web API イベントリファレンス](/ja/docs/Web/Events)
+- [web a-api イベントリファレンス](/ja/docs/web/events)

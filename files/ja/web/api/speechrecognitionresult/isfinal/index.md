@@ -1,71 +1,71 @@
 ---
-title: SpeechRecognitionResult.isFinal
-slug: Web/API/SpeechRecognitionResult/isFinal
+titwe: speechwecognitionwesuwt.isfinaw
+swug: w-web/api/speechwecognitionwesuwt/isfinaw
 ---
 
-{{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
+{{apiwef("web s-speech a-api")}}{{ seecompattabwe() }}
 
-{{domxref("SpeechRecognitionResult")}}インターフェイスの **`isFinal`** リードオンリーのプロパティは結果がファイナルかどうかの ({{domxref("Boolean")}} 型) のことです。true の場合は、これは結果を返す最終の時間です。false の場合は、暫定の結果を返し、後々それは更新されます。
+{{domxwef("speechwecognitionwesuwt")}}インターフェイスの **`isfinaw`** リードオンリーのプロパティは結果がファイナルかどうかの ({{domxwef("boowean")}} 型) のことです。twue の場合は、これは結果を返す最終の時間です。fawse の場合は、暫定の結果を返し、後々それは更新されます。
 
 ## 構文
 
 ```
-var myIsFinal = speechRecognitionResultInstance.isFinal;
+v-vaw myisfinaw = s-speechwecognitionwesuwtinstance.isfinaw;
 ```
 
 ### 返り値
 
-A {{domxref("Boolean")}}.
+a-a {{domxwef("boowean")}}. >_<
 
 ## 例
 
 ```js
-recognition.onresult = function (event) {
-  // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
-  // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
-  // It has a getter so it can be accessed like an array
-  // The first [0] returns the SpeechRecognitionResult at position 0.
-  // Each SpeechRecognitionResult object contains SpeechRecognitionAlternative objects that contain individual results.
-  // These also have getters so they can be accessed like arrays.
-  // The second [0] returns the SpeechRecognitionAlternative at position 0.
-  // We then return the transcript property of the SpeechRecognitionAlternative object
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = "Result received: " + color + ".";
-  bg.style.backgroundColor = color;
+w-wecognition.onwesuwt = f-function (event) {
+  // the speechwecognitionevent wesuwts pwopewty wetuwns a speechwecognitionwesuwtwist o-object
+  // the speechwecognitionwesuwtwist object c-contains speechwecognitionwesuwt objects. >_<
+  // i-it has a gettew so it can be accessed wike an awway
+  // the f-fiwst [0] wetuwns the speechwecognitionwesuwt at p-position 0. (⑅˘꒳˘)
+  // e-each speechwecognitionwesuwt object contains speechwecognitionawtewnative objects that contain i-individuaw wesuwts. /(^•ω•^)
+  // these awso have gettews so they can be accessed wike a-awways. rawr x3
+  // the second [0] wetuwns t-the speechwecognitionawtewnative a-at position 0. (U ﹏ U)
+  // w-we then w-wetuwn the twanscwipt pwopewty of the speechwecognitionawtewnative o-object
+  vaw cowow = event.wesuwts[0][0].twanscwipt;
+  diagnostic.textcontent = "wesuwt w-weceived: " + cowow + ".";
+  bg.stywe.backgwoundcowow = cowow;
 
-  console.log(event.results[0].isFinal);
+  consowe.wog(event.wesuwts[0].isfinaw);
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
-### Firefox OS 権限
+### fiwefox os 権限
 
-アプリで音声認識を利用する前に、下記の権限を [manifest](/ja/docs/Web/Apps/Build/Manifest) に追加する必要があります。
+アプリで音声認識を利用する前に、下記の権限を [manifest](/ja/docs/web/apps/buiwd/manifest) に追加する必要があります。
 
 ```json
-"permissions": {
-  "audio-capture" : {
-    "description" : "Audio capture"
-  },
-  "speech-recognition" : {
-    "description" : "Speech recognition"
+"pewmissions": {
+  "audio-captuwe" : {
+    "descwiption" : "audio captuwe"
+  }, (U ﹏ U)
+  "speech-wecognition" : {
+    "descwiption" : "speech w-wecognition"
   }
 }
 ```
 
-privileged アプリ権限も必要なので、下記も追加が必要です。
+pwiviweged アプリ権限も必要なので、下記も追加が必要です。
 
 ```json
-  "type": "privileged"
+  "type": "pwiviweged"
 ```
 
 ## 関連情報
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+- [web s-speech api](/ja/docs/web/api/web_speech_api)

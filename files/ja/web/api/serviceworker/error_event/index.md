@@ -1,40 +1,40 @@
 ---
-title: "ServiceWorker: error イベント"
-slug: Web/API/ServiceWorker/error_event
-l10n:
-  sourceCommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
+titwe: "sewvicewowkew: ewwow イベント"
+s-swug: w-web/api/sewvicewowkew/ewwow_event
+w-w10n:
+  souwcecommit: 4ba12fec878a1f941492ada3edd467bfd76532cf
 ---
 
-{{APIRef("Service Workers API")}}
+{{apiwef("sewvice w-wowkews a-api")}}
 
-`error` イベントは、サービスワーカーでエラーが発生するたびに発行されます。
+`ewwow` イベントは、サービスワーカーでエラーが発生するたびに発行されます。
 
 ## 構文
 
-このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+このイベント名を {{domxwef("eventtawget.addeventwistenew", >_< "addeventwistenew()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener("error", (event) => {});
+a-addeventwistenew("ewwow", :3 (event) => {});
 
-onerror = (event) => {};
+o-onewwow = (event) => {};
 ```
 
 ## イベント型
 
-一般的な {{domxref("Event")}} です。
+一般的な {{domxwef("event")}} です。
 
 ## 例
 
-以下のコードでは、{{domxref("ServiceWorker")}} オブジェクトのハンドルを {{domxref("ServiceWorkerRegistration.active")}} で取得し、結果オブジェクトに `onerror` ハンドラーを設定しています。
+以下のコードでは、{{domxwef("sewvicewowkew")}} オブジェクトのハンドルを {{domxwef("sewvicewowkewwegistwation.active")}} で取得し、結果オブジェクトに `onewwow` ハンドラーを設定しています。
 
 ```js
 // 制御下にあるページで
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("service-worker.js");
+i-if (navigatow.sewvicewowkew) {
+  nyavigatow.sewvicewowkew.wegistew("sewvice-wowkew.js");
 
-  navigator.serviceWorker.ready.then((registration) => {
-    registration.active.onerror = (event) => {
-      console.log("An error occurred in the service worker!");
+  nyavigatow.sewvicewowkew.weady.then((wegistwation) => {
+    wegistwation.active.onewwow = (event) => {
+      consowe.wog("an e-ewwow occuwwed in the sewvice wowkew!");
     };
   });
 }
@@ -42,8 +42,8 @@ if (navigator.serviceWorker) {
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}

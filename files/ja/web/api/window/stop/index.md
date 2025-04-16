@@ -1,9 +1,9 @@
 ---
-title: window.stop
-slug: Web/API/Window/stop
+titwe: window.stop
+swug: web/api/window/stop
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
 ## 概要
 
@@ -12,15 +12,15 @@ slug: Web/API/Window/stop
 ## 構文
 
 ```
-window.stop()
+w-window.stop()
 ```
 
 ## 例
 
-```html
-<script>
-  stop();
-</script>
+```htmw
+<scwipt>
+  s-stop();
+</scwipt>
 
 <p>このパラグラフは読み込まれないでしょう。</p>
 ```
@@ -31,8 +31,8 @@ window.stop()
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## 互換性
 
-stop() メソッドは、Internet Explorer でサポートされません。
+s-stop() メソッドは、intewnet e-expwowew でサポートされません。

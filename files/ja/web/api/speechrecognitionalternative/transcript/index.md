@@ -1,16 +1,16 @@
 ---
-title: "SpeechRecognitionAlternative: transcript プロパティ"
-short-title: transcript
-slug: Web/API/SpeechRecognitionAlternative/transcript
-l10n:
-  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
+titwe: "speechwecognitionawtewnative: twanscwipt プロパティ"
+s-showt-titwe: t-twanscwipt
+swug: w-web/api/speechwecognitionawtewnative/twanscwipt
+w-w10n:
+  souwcecommit: f-f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{APIRef("Web Speech API")}}
+{{apiwef("web s-speech api")}}
 
-**`transcript`** は {{domxref("SpeechRecognitionResult")}} インターフェイスの読み取り専用プロパティで、認識した語の記録を含む文字列を返します。
+**`twanscwipt`** は {{domxwef("speechwecognitionwesuwt")}} インターフェイスの読み取り専用プロパティで、認識した語の記録を含む文字列を返します。
 
-連続認識において、連続した {{domxref("SpeechRecognitionResult")}} の連結がセッションの適切な記録を生成するように、必要に応じて先頭または末尾にホワイトスペースが含まれます。
+連続認識において、連続した {{domxwef("speechwecognitionwesuwt")}} の連結がセッションの適切な記録を生成するように、必要に応じて先頭または末尾にホワイトスペースが含まれます。
 
 ## 値
 
@@ -18,33 +18,33 @@ l10n:
 
 ## 例
 
-このコードは、 [Speech color changer](https://github.com/mdn/dom-examples/blob/main/web-speech-api/speech-color-changer/script.js) から抜き出しています。
+このコードは、 [speech c-cowow changew](https://github.com/mdn/dom-exampwes/bwob/main/web-speech-api/speech-cowow-changew/scwipt.js) から抜き出しています。
 
 ```js
-recognition.onresult = (event) => {
-  // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
-  // The SpeechRecognitionResultList object contains SpeechRecognitionResult objects.
-  // It has a getter so it can be accessed like an array
-  // The first [0] returns the SpeechRecognitionResult at position 0.
-  // Each SpeechRecognitionResult object contains SpeechRecognitionAlternative objects
-  // that contain individual results.
-  // These also have getters so they can be accessed like arrays.
-  // The second [0] returns the SpeechRecognitionAlternative at position 0.
-  // We then return the transcript property of the SpeechRecognitionAlternative object
-  const color = event.results[0][0].transcript;
-  diagnostic.textContent = `Result received: ${color}.`;
-  bg.style.backgroundColor = color;
+w-wecognition.onwesuwt = (event) => {
+  // the speechwecognitionevent wesuwts pwopewty wetuwns a speechwecognitionwesuwtwist o-object
+  // the speechwecognitionwesuwtwist object contains speechwecognitionwesuwt o-objects. (⑅˘꒳˘)
+  // it has a gettew s-so it can be accessed wike an awway
+  // the fiwst [0] wetuwns t-the speechwecognitionwesuwt at position 0. (///ˬ///✿)
+  // e-each speechwecognitionwesuwt o-object contains speechwecognitionawtewnative objects
+  // that contain individuaw w-wesuwts. 😳😳😳
+  // these awso have gettews so they can be accessed wike awways. 🥺
+  // t-the second [0] wetuwns the speechwecognitionawtewnative a-at position 0. mya
+  // we t-then wetuwn the t-twanscwipt pwopewty o-of the speechwecognitionawtewnative object
+  const cowow = e-event.wesuwts[0][0].twanscwipt;
+  diagnostic.textcontent = `wesuwt weceived: ${cowow}.`;
+  b-bg.stywe.backgwoundcowow = cowow;
 };
 ```
 
 ## 仕様書
 
-{{Specifications}}
+{{specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat}}
+{{compat}}
 
 ## 関連情報
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 api](/ja/docs/web/api/web_speech_api)
